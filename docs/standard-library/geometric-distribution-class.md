@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 44b624995ed274212a2699cb457c91dfa4530f03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688014"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370646"
 ---
 # <a name="geometric_distribution-class"></a>Classe geometric_distribution
 
@@ -66,11 +66,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *IntType*
-O tipo de resultado inteiro, o padrão é **int**. Para possíveis tipos, consulte [\<random >](../standard-library/random.md).
+*IntType*\
+O tipo de resultado inteiro, padrão para **int**. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
 
-@No__t_1 *URNG*
-O mecanismo do gerador de número aleatório uniforme. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG*\
+O motor do gerador de números aleatórios uniforme. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -91,7 +91,7 @@ A função membro `reset()` descarta qualquer valor armazenado em cache, de form
 
 As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
 
-Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
+Para obter mais informações sobre as aulas de distribuição e seus membros, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 Para obter informações detalhadas sobre a distribuição qui-quadrado, consulte o artigo da Wolfram MathWorld [Geometric Distribution](https://go.microsoft.com/fwlink/p/?linkid=400529) (Distribuição geométrica).
 
@@ -209,7 +209,7 @@ Distribution for 100 samples:
 
 **Namespace:** std
 
-## <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution:geometric_distribution
 
 Constrói a distribuição.
 
@@ -220,21 +220,21 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*p* \
+*P*\
 O parâmetro de distribuição `p`.
 
-\ de *parâmetros*
+*Parm*\
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 < p && p < 1.0`
+**Pré-condição:**`0.0 < p && p < 1.0`
 
 o primeiro construtor constrói um objeto cujo valor `p` armazenado contém o valor *p*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="param_type"></a>  geometric_distribution::param_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::param_type
 
 Armazena os parâmetros da distribuição.
 
@@ -251,18 +251,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*p* \
+*P*\
 O parâmetro de distribuição `p`.
 
-\ *à direita*
+*Certo*\
 O instância de `param_type` a ser comparada com isto.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 < p && p < 1.0`
+**Pré-condição:**`0.0 < p && p < 1.0`
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<random>](../standard-library/random.md)
+[\<>aleatório](../standard-library/random.md)

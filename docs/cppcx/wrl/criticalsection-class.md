@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: dd34206741ba8fee8b283e22b6e8eefb3b3efb0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5deb89e795d1886ca316886ae1ea260ce1f36fd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398583"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372595"
 ---
 # <a name="criticalsection-class"></a>Classe CriticalSection
 
@@ -42,22 +42,22 @@ class CriticalSection;
 
 Nome                                                        | Descrição
 ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::CriticalSection](#criticalsection)        | Inicializa um objeto de sincronização que é semelhante a um objeto de mutex, mas pode ser usado por apenas os threads de um único processo.
-[CriticalSection::~CriticalSection](#tilde-criticalsection) | Realiza o desligamento e destrói atual `CriticalSection` objeto.
+[''''''''''''''''''''](#criticalsection)        | Inicializa um objeto de sincronização que é semelhante a um objeto mutex, mas pode ser usado apenas pelos segmentos de um único processo.
+['''''''''''''''''''''''](#tilde-criticalsection) | Desinicializa e destrói `CriticalSection` o objeto atual.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                                 | Descrição
 ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::IsValid](#isvalid) | Indica se a seção crítica atual é válida.
-[CriticalSection::Lock](#lock)       | Aguarda até que propriedade do objeto especificado de seção crítica. A função retorna quando o thread de chamada é concedido a propriedade.
-[CriticalSection::TryLock](#trylock) | Tenta inserir uma seção crítica sem bloqueio. Se a chamada for bem-sucedida, o thread de chamada se apropria de seção crítica.
+[''''''''''''''''''''](#isvalid) | Indica se a seção crítica atual é válida.
+[Seção crítica::bloqueio](#lock)       | Aguarda a propriedade do objeto de seção crítica especificado. A função retorna quando o segmento de chamada é concedido.
+[Seção crítica::Trylock](#trylock) | Tentativas de entrar em uma seção crítica sem bloquear. Se a chamada for bem sucedida, o segmento de chamada toma posse da seção crítica.
 
-### <a name="protected-data-members"></a>Membros de dados protegidos
+### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
 Nome                        | Descrição
 --------------------------- | ----------------------------------------
-[CriticalSection::cs_](#cs) | Declara um membro de dados da seção crítica.
+[Seção crítica::cs_](#cs) | Declara um membro de dados de seção crítica.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -65,21 +65,21 @@ Nome                        | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** corewrappers. h
+**Cabeçalho:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Espaço de nome:** Microsoft::WRL::Wrappers
 
-## <a name="tilde-criticalsection"></a>CriticalSection::~CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>'''''''''''''''''''''''
 
-Realiza o desligamento e destrói atual `CriticalSection` objeto.
+Desinicializa e destrói `CriticalSection` o objeto atual.
 
 ```cpp
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsection"></a>CriticalSection::CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>''''''''''''''''''''
 
-Inicializa um objeto de sincronização que é semelhante a um objeto de mutex, mas pode ser usado por apenas os threads de um único processo.
+Inicializa um objeto de sincronização que é semelhante a um objeto mutex, mas pode ser usado apenas pelos segmentos de um único processo.
 
 ```cpp
 explicit CriticalSection(
@@ -89,16 +89,16 @@ explicit CriticalSection(
 
 ### <a name="parameters"></a>Parâmetros
 
-*spincount*<br/>
-A contagem de rotação para o objeto de seção crítica. O valor padrão é 0.
+*contagem de spincount*<br/>
+A contagem de giros para o objeto da seção crítica. O valor padrão é 0.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre as seções críticas e spincounts, consulte o `InitializeCriticalSectionAndSpinCount` funcionar a `Synchronization` seção da documentação de API do Windows.
+Para obter mais informações sobre seções `InitializeCriticalSectionAndSpinCount` críticas `Synchronization` e contagem de spincounts, consulte a função na seção de documenação da API do Windows.
 
-## <a name="cs"></a>CriticalSection::cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a>Seção crítica::cs_
 
-Declara um membro de dados da seção crítica.
+Declara um membro de dados de seção crítica.
 
 ```cpp
 CRITICAL_SECTION cs_;
@@ -108,7 +108,7 @@ CRITICAL_SECTION cs_;
 
 Este membro de dados está protegido.
 
-## <a name="isvalid"></a>CriticalSection::IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>''''''''''''''''''''
 
 Indica se a seção crítica atual é válida.
 
@@ -116,13 +116,13 @@ Indica se a seção crítica atual é válida.
 bool IsValid() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Por padrão, sempre retorna **verdadeira**.
+Por padrão, sempre retorna **verdadeiro.**
 
-## <a name="lock"></a>CriticalSection::Lock
+## <a name="criticalsectionlock"></a><a name="lock"></a>Seção crítica::bloqueio
 
-Aguarda até que propriedade do objeto especificado de seção crítica. A função retorna quando o thread de chamada é concedido a propriedade.
+Aguarda a propriedade do objeto de seção crítica especificado. A função retorna quando o segmento de chamada é concedido.
 
 ```cpp
 SyncLock Lock();
@@ -134,20 +134,20 @@ SyncLock Lock();
 
 ### <a name="parameters"></a>Parâmetros
 
-*cs*<br/>
+*Cs*<br/>
 Um objeto de seção crítica especificado pelo usuário.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto de bloqueio que pode ser usado para desbloquear a seção crítica atual.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira `Lock` function afeta o objeto atual de seção crítica. O segundo `Lock` function afeta uma seção crítica especificado pelo usuário.
+A `Lock` primeira função afeta o objeto da seção crítica atual. A `Lock` segunda função afeta uma seção crítica especificada pelo usuário.
 
-## <a name="trylock"></a>CriticalSection::TryLock
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a>Seção crítica::Trylock
 
-Tenta inserir uma seção crítica sem bloqueio. Se a chamada for bem-sucedida, o thread de chamada se apropria de seção crítica.
+Tentativas de entrar em uma seção crítica sem bloquear. Se a chamada for bem sucedida, o segmento de chamada toma posse da seção crítica.
 
 ```cpp
 SyncLock TryLock();
@@ -159,13 +159,13 @@ static SyncLock TryLock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*cs*<br/>
+*Cs*<br/>
 Um objeto de seção crítica especificado pelo usuário.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor diferente de zero se a seção crítica for inserida com êxito ou o thread atual já possui a seção crítica. Zero se outro thread já possui a seção crítica.
+Um valor não zero se a seção crítica for inserida com sucesso ou o segmento atual já possuir a seção crítica. Zero se outro segmento já possuir a seção crítica.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira `TryLock` function afeta o objeto atual de seção crítica. O segundo `TryLock` function afeta uma seção crítica especificado pelo usuário.
+A `TryLock` primeira função afeta o objeto da seção crítica atual. A `TryLock` segunda função afeta uma seção crítica especificada pelo usuário.

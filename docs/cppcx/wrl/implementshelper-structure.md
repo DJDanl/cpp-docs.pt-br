@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: 250a59152e9b41eb48c453caaa696fdc8ca3d3b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e33842f574df5617fb40c5b3f6bb8324d5ba7c1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398219"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371391"
 ---
 # <a name="implementshelper-structure"></a>Estrutura ImplementsHelper
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,19 +36,19 @@ friend struct Details::ImplementsHelper;
 ### <a name="parameters"></a>Parâmetros
 
 *RuntimeClassFlagsT*<br/>
-Um campo de sinalizadores que especifica um ou mais [RuntimeClassType](runtimeclasstype-enumeration.md) enumeradores.
+Um campo de bandeiras que especifica um ou mais enumeradores [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 *ILst*<br/>
 Uma lista de IDs de interface.
 
-*IsDelegateToClass*<br/>
-Especificar **verdadeira** se a instância atual do `Implements` é uma classe base da primeira ID de interface no *ILst*; caso contrário, **false**.
+*isdelegatetoclass*<br/>
+Especifique **verdadeiro** `Implements` se a instância atual de é uma classe base do primeiro ID de interface no *ILst*; caso contrário, **falso**.
 
 ## <a name="remarks"></a>Comentários
 
-Ajuda a implementar o [implementa](implements-structure.md) estrutura.
+Ajuda a implementar a estrutura [de Implementos.](implements-structure.md)
 
-Esse modelo percorre uma lista de interfaces e os adiciona como classes base e como as informações necessárias para habilitar `QueryInterface`.
+Este modelo atravessa uma lista de interfaces e as adiciona como `QueryInterface`classes base e como informações necessárias para habilitar .
 
 ## <a name="members"></a>Membros
 
@@ -56,10 +56,10 @@ Esse modelo percorre uma lista de interfaces e os adiciona como classes base e c
 
 Nome                                                    | Descrição
 ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[ImplementsHelper::CanCastTo](#cancastto)               | Obtém um ponteiro para a ID de interface especificado.
-[ImplementsHelper::CastToUnknown](#casttounknown)       | Obtém um ponteiro para subjacente `IUnknown` interface atual `Implements` estrutura.
-[ImplementsHelper::FillArrayWithIid](#fillarraywithiid) | Insere a ID de interface especificada pelo parâmetro de modelo inicial atual para o elemento da matriz especificada.
-[ImplementsHelper::IidCount](#iidcount)                 | Contém o número de IDs de interface implementada no atual `Implements` objeto.
+[ImplementaHelper::CanCastTo](#cancastto)               | Obtém um ponteiro para o ID de interface especificado.
+[ImplementaHelper::CastToUnknown](#casttounknown)       | Obtém um ponteiro `IUnknown` para a `Implements` interface subjacente para a estrutura atual.
+[ImplementaHelper::FillArrayWithIid](#fillarraywithiid) | Insere o ID de interface especificado pelo parâmetro atual do modelo zeroth no elemento de matriz especificado.
+[ImplementaHelper::IidCount](#iidcount)                 | Contém o número de IDs `Implements` de interface implementados no objeto atual.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -67,13 +67,13 @@ Nome                                                    | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Implements. h
+**Cabeçalho:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Espaço de nome:** Microsoft::WRL::Details
 
-## <a name="cancastto"></a>ImplementsHelper::CanCastTo
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementaHelper::CanCastTo
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 HRESULT CanCastTo(
@@ -90,41 +90,41 @@ HRESULT CanCastTo(
 ### <a name="parameters"></a>Parâmetros
 
 *riid*<br/>
-Referência a uma ID de interface.
+Referência a um ID de interface.
 
-*ppv*<br/>
-Se essa operação for bem-sucedida, um ponteiro para a interface especificada por *riid* ou *iid*.
+*Ppv*<br/>
+Se esta operação for bem sucedida, um ponteiro para a interface especificada por *riid* ou *iid*.
 
-*iid*<br/>
-Referência a uma ID de interface.
+*Iid*<br/>
+Referência a um ID de interface.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
 
 ### <a name="remarks"></a>Comentários
 
-Obtém um ponteiro para a ID de interface especificado.
+Obtém um ponteiro para o ID de interface especificado.
 
-## <a name="casttounknown"></a>ImplementsHelper::CastToUnknown
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementaHelper::CastToUnknown
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 IUnknown* CastToUnknown();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro subjacente `IUnknown` interface.
+Ponteiro para a `IUnknown` interface subjacente.
 
 ### <a name="remarks"></a>Comentários
 
-Obtém um ponteiro para subjacente `IUnknown` interface atual `Implements` estrutura.
+Obtém um ponteiro `IUnknown` para a `Implements` interface subjacente para a estrutura atual.
 
-## <a name="fillarraywithiid"></a>ImplementsHelper::FillArrayWithIid
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementaHelper::FillArrayWithIid
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 void FillArrayWithIid(
@@ -134,19 +134,19 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parâmetros
 
-*index*<br/>
-Um índice baseado em zero que indica o elemento de matriz inicial para esta operação. Quando essa operação for concluída, *índice* é incrementado em 1.
+*Índice*<br/>
+Um índice baseado em zero que indica o elemento de matriz inicial para esta operação. Quando esta operação é concluída, *o índice* é incrementado em 1.
 
-*iids*<br/>
-Uma matriz do tipo IIDs.
+*Iids*<br/>
+Uma matriz de IIDs tipo.
 
 ### <a name="remarks"></a>Comentários
 
-Insere a ID de interface especificada pelo parâmetro de modelo inicial atual para o elemento da matriz especificada.
+Insere o ID de interface especificado pelo parâmetro atual do modelo zeroth no elemento de matriz especificado.
 
-## <a name="iidcount"></a>ImplementsHelper::IidCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementaHelper::IidCount
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 static const unsigned long IidCount;
@@ -154,4 +154,4 @@ static const unsigned long IidCount;
 
 ### <a name="remarks"></a>Comentários
 
-Contém o número de IDs de interface implementada no atual `Implements` objeto.
+Contém o número de IDs `Implements` de interface implementados no objeto atual.

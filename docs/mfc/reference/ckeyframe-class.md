@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-ms.openlocfilehash: c2c6add30757e1d83b70001679b37a7a22b9d7d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f535503338a82c7cc70455ae6a08cdab0f13c624
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392603"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372288"
 ---
 # <a name="ckeyframe-class"></a>Classe CKeyFrame
 
@@ -49,36 +49,36 @@ class CKeyFrame : public CBaseKeyFrame;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CKeyFrame::CKeyFrame](#ckeyframe)|Sobrecarregado. Constrói um quadro-chave que depende de outro quadro-chave.|
+|[ckeyframe::CkeyFrame](#ckeyframe)|Sobrecarregado. Constrói um quadro-chave que depende de outro quadro-chave.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Adiciona um quadro-chave a um storyboard. (Substitui [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Adiciona um quadro-chave para criar um storyboard depois de transição.|
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Adiciona um quadro-chave para criar um storyboard no deslocamento.|
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Retorna um ponteiro para um quadro-chave que depende de seu quadro-chave.|
-|[CKeyFrame::GetOffset](#getoffset)|Retorna um deslocamento de outro quadro-chave.|
-|[CKeyFrame::GetTransition](#gettransition)|Retorna um ponteiro para uma transição que depende de seu quadro-chave.|
+|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Adiciona um quadro-chave a um storyboard. (Substitui [cbasekeyframe::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
+|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Adiciona um quadro-chave ao storyboard após a transição.|
+|[CkeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Adiciona um quadro-chave ao storyboard no offset.|
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Devolve um ponteiro a um quadro-chave do qual este quadro-chave depende.|
+|[ckeyframe::getOffset](#getoffset)|Retorna um deslocamento de outro quadro-chave.|
+|[CkeyFrame::GetTransition](#gettransition)|Retorna um ponteiro para uma transição que depende deste quadro-chave.|
 
-### <a name="protected-data-members"></a>Membros de dados protegidos
+### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CKeyFrame::m_offset](#m_offset)|Especifica o deslocamento do seu quadro-chave de um quadro-chave armazenado no m_pExistingKeyFrame.|
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Armazena um ponteiro para um keframe existente. Este quadro-chave é adicionado ao storyboard com m_offset ao quadro chave existente.|
-|[CKeyFrame::m_pTransition](#m_ptransition)|Armazena um ponteiro para transtion que começa em seu quadro-chave.|
+|[CKeyFrame::m_offset](#m_offset)|Especifica a compensação deste quadro-chave de um quadro-chave armazenado em m_pExistingKeyFrame.|
+|[CkeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Armazena um ponteiro para um keframe existente. Este quadro-chave é adicionado ao storyboard com m_offset ao quadro-chave existente.|
+|[CKeyFrame::m_pTransition](#m_ptransition)|Armazena um ponteiro para transação que começa neste quadro-chave.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe implementa um quadro-chave de animação. Um quadro-chave representa um momento específico dentro de um storyboard e pode ser usado para especificar os horários de início e término de transições. Um quadro-chave pode ser baseado em outro quadros-chave e têm um deslocamento (em segundos) a partir dele, ou pode se basear em uma transição e representa um ponto no tempo quando termina a essa transição.
+Esta classe implementa um quadro-chave de animação. Um quadro-chave representa um momento no tempo dentro de um storyboard e pode ser usado para especificar os tempos de início e fim das transições. Um quadro-chave pode ser baseado em outro quadro-chave e ter um deslocamento (em segundos) a partir dele, ou pode ser baseado em uma transição e representar um momento no tempo em que essa transição termina.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CBaseKeyFrame](../../mfc/reference/cbasekeyframe-class.md)
+[CBaseKeyframe](../../mfc/reference/cbasekeyframe-class.md)
 
 [CKeyFrame](../../mfc/reference/ckeyframe-class.md)
 
@@ -86,7 +86,7 @@ Essa classe implementa um quadro-chave de animação. Um quadro-chave representa
 
 **Cabeçalho:** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard
+## <a name="ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard
 
 Adiciona um quadro-chave a um storyboard.
 
@@ -102,19 +102,19 @@ virtual BOOL AddToStoryboard(
 Um ponteiro para um storyboard.
 
 *bDeepAdd*<br/>
-Especifica se deve adicionar o quadro-chave ou fazer a transição de recursivamente.
+Especifica se deve adicionar quadro-chave ou transição recursivamente.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se o quadro-chave foi adicionada com êxito.
+TRUE, se o quadro-chave foi adicionado com sucesso.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método adiciona um quadro-chave para criar um storyboard. Se ele depende de outro quadro-chave ou uma transição e bDeepAdd for TRUE, esse método tentará adicioná-los recursivamente.
+Este método adiciona um quadro-chave ao storyboard. Se depender de outro quadro-chave ou transição e bDeepAdd for TRUE, este método tentará adicioná-los recursivamente.
 
-##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition
+## <a name="ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition
 
-Adiciona um quadro-chave para criar um storyboard depois de transição.
+Adiciona um quadro-chave ao storyboard após a transição.
 
 ```
 BOOL AddToStoryboardAfterTransition(
@@ -130,17 +130,17 @@ Um ponteiro para um storyboard.
 *bDeepAdd*<br/>
 Especifica se deve adicionar uma transição recursivamente.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se o quadro-chave foi adicionada com êxito.
+TRUE, se o quadro-chave foi adicionado com sucesso.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função é chamada pelo framework para adicionar um quadro-chave para criar um storyboard depois de transição.
+Esta função é chamada pela estrutura para adicionar um quadro-chave ao storyboard após a transição.
 
-##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset
+## <a name="ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>CkeyFrame::AddToStoryboardAtOffset
 
-Adiciona um quadro-chave para criar um storyboard no deslocamento.
+Adiciona um quadro-chave ao storyboard no offset.
 
 ```
 virtual BOOL AddToStoryboardAtOffset(
@@ -154,17 +154,17 @@ virtual BOOL AddToStoryboardAtOffset(
 Um ponteiro para um storyboard.
 
 *bDeepAdd*<br/>
-Especifica se adicionar um quadro-chave esse quadro-chave dependem recursivamente.
+Especifica se adicionar um quadro-chave este quadro-chave depende recursivamente.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se o quadro-chave foi adicionada com êxito.
+TRUE, se o quadro-chave foi adicionado com sucesso.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função é chamada pelo framework para adicionar um quadro-chave para criar um storyboard no deslocamento.
+Esta função é chamada pela estrutura para adicionar um quadro-chave ao storyboard no offset.
 
-##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame
+## <a name="ckeyframeckeyframe"></a><a name="ckeyframe"></a>ckeyframe::CkeyFrame
 
 Constrói um quadro-chave que depende de uma transição.
 
@@ -178,36 +178,36 @@ CKeyFrame(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pTransition*<br/>
+*pTransição*<br/>
 Um ponteiro para uma transição.
 
 *pKeyframe*<br/>
 Um ponteiro para o quadro-chave.
 
 *deslocamento*<br/>
-Deslocamento, em segundos, de quadro-chave especificada pelo pKeyframe.
+Deslocamento, em segundos, do quadro-chave especificado por pKeyframe.
 
 ### <a name="remarks"></a>Comentários
 
-O quadro-chave construído representará um momento específico dentro de um storyboard quando termina a transição especificada.
+O quadro-chave construído representará um momento no tempo dentro de um storyboard quando a transição especificada terminar.
 
-##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe
+## <a name="ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe
 
-Retorna um ponteiro para um quadro-chave que depende de seu quadro-chave.
+Devolve um ponteiro a um quadro-chave do qual este quadro-chave depende.
 
 ```
 CBaseKeyFrame* GetExistingKeyframe();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro válido para o quadro-chave, ou nulo se esse quadro-chave não depende de outro quadro-chave.
+Um ponteiro válido para quadro-chave ou NULL se este quadro-chave não depender de outro quadro-chave.
 
 ### <a name="remarks"></a>Comentários
 
-Esse é um acessador para um quadro-chave que depende de seu quadro-chave.
+Este é um acessório para um quadro-chave do qual este quadro-chave depende.
 
-##  <a name="getoffset"></a>  CKeyFrame::GetOffset
+## <a name="ckeyframegetoffset"></a><a name="getoffset"></a>ckeyframe::getOffset
 
 Retorna um deslocamento de outro quadro-chave.
 
@@ -215,54 +215,54 @@ Retorna um deslocamento de outro quadro-chave.
 UI_ANIMATION_SECONDS GetOffset();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um deslocamento em segundos a partir de outro quadro-chave.
+Um deslocamento em segundos de outro quadro-chave.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método deve ser chamado para determinar um deslocamento em segundos a partir de outro quadro-chave.
+Este método deve ser chamado para determinar um deslocamento em segundos de outro quadro-chave.
 
-##  <a name="gettransition"></a>  CKeyFrame::GetTransition
+## <a name="ckeyframegettransition"></a><a name="gettransition"></a>CkeyFrame::GetTransition
 
-Retorna um ponteiro para uma transição que depende de seu quadro-chave.
+Retorna um ponteiro para uma transição que depende deste quadro-chave.
 
 ```
 CBaseTransition* GetTransition();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro válido para a transição, ou nulo se esse quadro-chave não depende de transição.
+Um ponteiro válido para transição, ou NULL se este quadro-chave não depender da transição.
 
 ### <a name="remarks"></a>Comentários
 
-Esse é um acessador para uma transição que depende de seu quadro-chave.
+Este é um acessório para uma transição que este quadro-chave depende.
 
-##  <a name="m_offset"></a>  CKeyFrame::m_offset
+## <a name="ckeyframem_offset"></a><a name="m_offset"></a>CKeyFrame::m_offset
 
-Especifica o deslocamento do seu quadro-chave de um quadro-chave armazenado no m_pExistingKeyFrame.
+Especifica a compensação deste quadro-chave de um quadro-chave armazenado em m_pExistingKeyFrame.
 
 ```
 UI_ANIMATION_SECONDS m_offset;
 ```
 
-##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame
+## <a name="ckeyframem_pexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>CkeyFrame::m_pExistingKeyFrame
 
-Armazena um ponteiro para um keframe existente. Este quadro-chave é adicionado ao storyboard com m_offset ao quadro chave existente.
+Armazena um ponteiro para um keframe existente. Este quadro-chave é adicionado ao storyboard com m_offset ao quadro-chave existente.
 
 ```
 CBaseKeyFrame* m_pExistingKeyFrame;
 ```
 
-##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition
+## <a name="ckeyframem_ptransition"></a><a name="m_ptransition"></a>CKeyFrame::m_pTransition
 
-Armazena um ponteiro para transtion que começa em seu quadro-chave.
+Armazena um ponteiro para transação que começa neste quadro-chave.
 
 ```
 CBaseTransition* m_pTransition;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes](../../mfc/reference/mfc-classes.md)

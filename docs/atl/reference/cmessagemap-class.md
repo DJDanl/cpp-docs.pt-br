@@ -10,19 +10,19 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-ms.openlocfilehash: 617b7b4592c96625b44fbe5c2b93da971a423128
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a822f36d6b6fd49301d8240324e27f0ad9ce52e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326716"
 ---
 # <a name="cmessagemap-class"></a>Classe CMessageMap
 
-Essa classe permite que os mapas de mensagem de um objeto para ser acessado por outro objeto.
+Esta classe permite que os mapas de mensagem de um objeto sejam acessados por outro objeto.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,31 +32,31 @@ class ATL_NO_VTABLE CMessageMap
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Acessa um mapa de mensagem no `CMessageMap`-classe derivada.|
+|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Acessa um mapa `CMessageMap`de mensagens na classe derivada.|
 
 ## <a name="remarks"></a>Comentários
 
-`CMessageMap` é uma classe base abstrata que permite que a mensagem de um objeto é mapeado para ser acessado por outro objeto. Para um objeto exponha seus mapas de mensagem que, sua classe deve derivar de `CMessageMap`.
+`CMessageMap`é uma classe base abstrata que permite que os mapas de mensagem de um objeto sejam acessados por outro objeto. Para que um objeto exponha seus mapas de `CMessageMap`mensagem, sua classe deve derivar de .
 
-Usa o ATL `CMessageMap` contido de suporte ao windows e o encadeamento de mapa de mensagem dinâmica. Por exemplo, qualquer classe que contém um [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objeto deve derivar de `CMessageMap`. O código a seguir é retirado do [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) exemplo. Por meio [CComControl](../../atl/reference/ccomcontrol-class.md), o `CAtlEdit` classe automaticamente deriva `CMessageMap`.
+O ATL usa `CMessageMap` para suportar janelas contidas e acadeia de mapa de mensagens dinâmicas. Por exemplo, qualquer classe que contenha um `CMessageMap`objeto [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) deve derivar de . O código a seguir é retirado da amostra [SUBEDIT.](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) Através do [CComControl,](../../atl/reference/ccomcontrol-class.md)a `CAtlEdit` classe `CMessageMap`deriva automaticamente de .
 
 [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]
 
-Porque a janela de independente `m_EditCtrl`, usará um mapa de mensagens na classe recipiente, `CAtlEdit` deriva `CMessageMap`.
+Como a janela `m_EditCtrl`contida, usará um mapa de `CAtlEdit` mensagem `CMessageMap`na classe contendo, deriva de .
 
-Para obter mais informações sobre mapas de mensagem, consulte [mapas de mensagem](../../atl/message-maps-atl.md) no artigo "Classes de janela ATL".
+Para obter mais informações sobre mapas de mensagens, consulte [Mapas de mensagens](../../atl/message-maps-atl.md) no artigo "CLASSES DE JANELA ATL".
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin
+**Cabeçalho:** atlwin.h
 
-##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage
+## <a name="cmessagemapprocesswindowmessage"></a><a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage
 
-Acessa o mapa de mensagem identificado por *dwMsgMapID* em um `CMessageMap`-classe derivada.
+Acessa o mapa de mensagens identificado por `CMessageMap` *dwMsgMapID* em uma classe derivada.
 
 ```
 virtual BOOL ProcessWindowMessage(
@@ -71,34 +71,34 @@ virtual BOOL ProcessWindowMessage(
 ### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
-[in] O identificador para a janela de recebimento da mensagem.
+[em] A alça da janela recebendo a mensagem.
 
-*uMsg*<br/>
-[in] A mensagem enviada para a janela.
+*Umsg*<br/>
+[em] A mensagem enviada para a janela.
 
 *wParam*<br/>
-[in] Obter informações adicionais específicas de mensagem.
+[em] Informações específicas de mensagem adicionais.
 
 *lParam*<br/>
-[in] Obter informações adicionais específicas de mensagem.
+[em] Informações específicas de mensagem adicionais.
 
-*lResult*<br/>
-[out] O resultado do processamento da mensagem.
+*Lresult*<br/>
+[fora] O resultado do processamento de mensagens.
 
 *dwMsgMapID*<br/>
-[in] O identificador do mapa de mensagens que processará a mensagem. O mapa da mensagem padrão declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), é identificado por 0. Um mapa de mensagens alternativos, declarado com [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), é identificado por `msgMapID`.
+[em] O identificador do mapa de mensagem que processará a mensagem. O mapa de mensagem padrão, declarado com [BEGIN_MSG_MAP,](message-map-macros-atl.md#begin_msg_map)é identificado por 0. Um mapa de mensagem alternativo, declarado com [ALT_MSG_MAP(msgMapID),](message-map-macros-atl.md#alt_msg_map)é identificado por `msgMapID`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a mensagem é totalmente tratada; Caso contrário, FALSE.
+VERDADE se a mensagem for totalmente manuseada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chamada pelo procedimento de janela de um [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) de objeto ou de um objeto que está encadeando dinamicamente para o mapa da mensagem.
+Chamado pelo procedimento de janela de um objeto [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) ou de um objeto que está acorrentado dinamicamente ao mapa da mensagem.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Classe CDynamicChain](../../atl/reference/cdynamicchain-class.md)<br/>
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[Classe CdynamicChain](../../atl/reference/cdynamicchain-class.md)<br/>
+[Begin_msg_map](message-map-macros-atl.md#begin_msg_map)<br/>
 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

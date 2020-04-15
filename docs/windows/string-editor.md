@@ -1,5 +1,5 @@
 ---
-title: Editor de cadeiaC++de caracteres ()
+title: Editor de cordas (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.string.F1
@@ -32,137 +32,137 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b0fb077752cf1912e07175c68cdc8acfe758b0c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214403"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370235"
 ---
-# <a name="string-editor-c"></a>Editor de cadeiaC++de caracteres ()
+# <a name="string-editor-c"></a>Editor de cordas (C++)
 
-Uma tabela de cadeia de caracteres é um recurso do Windows que contém uma lista de IDs, valores e legendas para todas as cadeias de caracteres do seu aplicativo. Por exemplo, os prompts da barra de status estão localizados na tabela de cadeia de caracteres.
+Uma tabela de strings é um recurso do Windows que contém uma lista de IDs, valores e legendas para todas as strings do seu aplicativo. Por exemplo, as solicitações de barra de status estão localizadas na tabela de strings.
 
-Ao desenvolver um aplicativo, você pode ter várias tabelas de cadeia de caracteres — uma para cada idioma ou condição. No entanto, um módulo executável tem apenas uma tabela de cadeia de caracteres. Um aplicativo em execução pode fazer referência a várias tabelas de cadeias de caracteres se você colocar as tabelas em DLLs diferentes.
+Ao desenvolver um aplicativo, você pode ter várias tabelas de strings - uma para cada idioma ou condição. No entanto, um módulo executável tem apenas uma tabela de strings. Um aplicativo em execução pode referenciar várias tabelas de strings se você colocar as tabelas em DLLs diferentes.
 
-As tabelas de cadeia de caracteres facilitam a localização do aplicativo em diferentes idiomas. Se todas as cadeias de caracteres estiverem em uma tabela de cadeia, você poderá localizar o aplicativo traduzindo as cadeias de caracteres (e outros recursos) sem alterar o código-fonte. Essa situação é mais desejável do que localizar e substituir manualmente várias cadeias de caracteres em arquivos de origem.
+Tabelas de strings facilitam a localização do seu aplicativo em diferentes idiomas. Se todas as strings estiverem em uma tabela de strings, você pode localizar o aplicativo traduzindo as strings (e outros recursos) sem alterar o código-fonte. Esta situação é mais desejável do que encontrar e substituir manualmente várias strings em arquivos de origem.
 
 > [!NOTE]
-> O Windows não permite a criação de tabelas de cadeia de caracteres vazias. Se você criar uma tabela de cadeia de caracteres sem entradas, ela será excluída automaticamente quando você salvar o arquivo de recurso.
+> O Windows não permite a criação de tabelas de strings vazias. Se você criar uma tabela de strings sem entradas, ela será excluída automaticamente quando você salvar o arquivo de recursos.
 
 ## <a name="how-to"></a>Instruções
 
-O **Editor de cadeia de caracteres** permite:
+O **Editor de strings** permite:
 
-### <a name="to-find-a-string-resource-in-the-string-table"></a>Para localizar um recurso de cadeia de caracteres na tabela de cadeias de caracteres
+### <a name="to-find-a-string-resource-in-the-string-table"></a>Para encontrar um recurso de string na tabela de strings
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra a tabela de strings clicando duas vezes em seu ícone na [Exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Vá para o menu **editar** > **Localizar e substituir** e escolha **Localizar**.
+1. Vá para o menu **Editar** > **Encontrar e Substituir** e escolher **Encontrar**.
 
-1. Na caixa **Localizar** , selecione uma cadeia de caracteres de pesquisa anterior na lista suspensa ou digite o texto da legenda ou o identificador de recurso da cadeia de caracteres que você deseja localizar.
+1. Na caixa Encontrar o **quê,** selecione uma seqüência de pesquisa anterior na lista de desímpara das listas gotas ou digite o texto da legenda ou o identificador de recursos da string que deseja encontrar.
 
-1. Selecione qualquer uma das opções de **localização** e selecione **Localizar próximo**.
+1. Selecione qualquer uma das opções **Encontrar** e selecione **Encontrar a seguir**.
 
 > [!TIP]
-> Para usar [expressões regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) ao pesquisar arquivos, use o comando **localizar nos arquivos** no menu **Editar** .
+> Para usar [expressões regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) ao pesquisar arquivos, use o comando **Encontrar em Arquivos** no menu **Editar.**
 >
-> Digite uma expressão regular para corresponder a um padrão ou selecione o botão à direita da caixa **Localizar** para exibir uma lista de expressões de pesquisa regulares. Quando você seleciona uma expressão nessa lista, ela é substituída como o texto de pesquisa na caixa **Localizar** .
+> Digite uma expressão regular para corresponder a um padrão ou selecione o botão à direita da caixa **Encontrar o que** é para exibir uma lista de expressões de pesquisa regulares. Quando você seleciona uma expressão desta lista, ela é substituída como o texto de pesquisa na caixa **Encontrar o que** é.
 >
-> Se você usar expressões regulares, certifique-se de que a caixa de seleção **usar: expressões regulares** esteja marcada.
+> Se você usar expressões regulares, certifique-se de que a caixa de seleção **Use: Regular Expressões** será selecionada.
 
-### <a name="to-add-or-delete-a-string-resource"></a>Para adicionar ou excluir um recurso de cadeia de caracteres
+### <a name="to-add-or-delete-a-string-resource"></a>Para adicionar ou excluir um recurso de string
 
-Você pode inserir ou excluir entradas rapidamente na tabela de cadeia de caracteres usando o **Editor de cadeia de caracteres**. Novas cadeias de caracteres são colocadas no final da tabela e recebem o próximo identificador disponível. Você pode editar as propriedades de **ID**, **valor**ou **legenda** no [janela Propriedades](/visualstudio/ide/reference/properties-window) conforme necessário.
+Você pode inserir ou excluir rapidamente entradas na tabela de strings usando o **Editor de cordas**. Novas cordas são colocadas na extremidade da tabela e recebem o próximo identificador disponível. Você pode editar as propriedades **ID,** **Value**ou **Caption** na [janela Propriedades](/visualstudio/ide/reference/properties-window) conforme necessário.
 
-O **Editor de cadeia de caracteres** garante que você não use uma ID que já esteja em uso. Se você selecionar uma ID que já está em uso, o **Editor de cadeia de caracteres** o notificará e atribuirá uma ID exclusiva genérica, por exemplo `IDS_STRING58113`.
+O **Editor de Cordas** garante que você não use um ID que já está em uso. Se você selecionar um ID já em uso, o **Editor de strings** irá `IDS_STRING58113`notificá-lo e, em seguida, atribuir um ID genérico exclusivo, por exemplo .
 
-#### <a name="to-add-a-string-table-entry"></a>Para adicionar uma entrada de tabela de cadeia de caracteres
+#### <a name="to-add-a-string-table-entry"></a>Para adicionar uma entrada de tabela de strings
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra a tabela de strings clicando duas vezes em seu ícone na [Exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Clique com o botão direito do mouse na tabela de cadeia de caracteres e escolha **nova cadeia de caracteres**.
+1. Clique com o botão direito do mouse dentro da tabela de strings e escolha **Nova string**.
 
-1. No **Editor de cadeia de caracteres**, selecione uma **ID** na lista suspensa **ID** ou digite uma *ID* diretamente no local.
+1. No **Editor de cordas,** selecione um **ID** na lista de isto de **id** ou digite um *ID* diretamente no lugar.
 
-1. Edite o **valor**, se necessário.
+1. Editar o **Valor,** se necessário.
 
-1. Digite uma entrada para a **legenda**.
+1. Digite uma entrada para **a Legenda**.
 
    > [!NOTE]
-   > Cadeias de caracteres nulas não são permitidas em tabelas de cadeias do Windows Se você criar uma entrada na tabela de cadeia de caracteres que é uma cadeia de caracteres nula, receberá uma mensagem solicitando que **Insira uma cadeia de caracteres para essa entrada de tabela**.
+   > As seqüências nulas não são permitidas nas tabelas de strings do Windows. Se você criar uma entrada na tabela de strings que é uma seqüência de caracteres nula, você receberá uma mensagem pedindo para **você, por favor, digite uma seqüência para esta entrada de tabela**.
 
-#### <a name="to-delete-a-string-table-entry"></a>Para excluir uma entrada de tabela de cadeia de caracteres
+#### <a name="to-delete-a-string-table-entry"></a>Para excluir uma entrada de tabela de strings
 
-Selecione a entrada que você deseja excluir e siga um destes procedimentos:
+Selecione a entrada que deseja excluir e faça uma das seguintes:
 
-- Vá para o menu **editar** > **excluir**.
+- Ir para menu **Editar** > **excluir**.
 
-- Clique com o botão direito do mouse na cadeia de caracteres a ser excluída e escolha **excluir**.
+- Clique com o botão direito do mouse na seqüência para excluir e escolher **Excluir**.
 
-- Pressione a tecla **delete** .
+- Pressione a **tecla Excluir.**
 
-### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Para mover uma cadeia de caracteres de um arquivo de script de recurso para outro
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Para mover uma seqüência de um arquivo de script de recurso para outro
 
-1. [Abra as tabelas de cadeia de caracteres em ambos os arquivos. rc](../windows/how-to-create-a-resource-script-file.md).
+1. [Abra as tabelas de string em ambos os arquivos .rc](../windows/how-to-create-a-resource-script-file.md).
 
-1. Clique com o botão direito do mouse na cadeia de caracteres para mover e escolha **recortar**.
+1. Clique com o botão direito do mouse na seqüência para mover e escolher **Cortar**.
 
-1. Coloque o cursor na janela do **Editor de cadeia de caracteres** de destino.
+1. Coloque o cursor na janela do **Editor de cordas** alvo.
 
-1. No arquivo *. rc* para o qual você deseja mover a cadeia de caracteres, clique com o botão direito do mouse e escolha **colar**.
-
-> [!NOTE]
-> Se a **ID** ou o **valor** da cadeia de caracteres movida estiver em conflito com uma **ID** ou **valor** existente no arquivo de destino, essa **ID** ou o **valor** da cadeia de caracteres movida será alterado.
-
-### <a name="to-change-the-properties-of-a-string-resource"></a>Para alterar as propriedades de um recurso de cadeia de caracteres
-
-Você pode usar a edição in-loco para alterar as propriedades de **ID**, **valor**e **legenda** .
+1. No arquivo *.rc* para o qual você deseja mover a seqüência, clique com o botão direito do mouse e escolha **Colar**.
 
 > [!NOTE]
->  Você também pode editar as propriedades de uma cadeia de caracteres na [janela Propriedades](/visualstudio/ide/reference/properties-window).
+> Se o **ID** ou **o Valor** da seqüência de string saqueado entrarem em conflito com um **ID** ou **valor** existente no arquivo de destino, esse **ID** ou o **Valor** da seqüência de strings mudou.
 
-#### <a name="to-change-a-string-or-its-identifier"></a>Para alterar uma cadeia de caracteres ou seu identificador
+### <a name="to-change-the-properties-of-a-string-resource"></a>Para alterar as propriedades de um recurso de string
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
+Você pode usar a edição no local para alterar as propriedades **ID,** **Value**e **Caption.**
 
-1. Selecione a cadeia de caracteres que você deseja editar e clique duas vezes na coluna **ID**, **valor**ou **legenda** e, em seguida, você pode:
+> [!NOTE]
+> Você também pode editar as propriedades de uma seqüência na [janela Propriedades](/visualstudio/ide/reference/properties-window).
 
-   - Selecione uma **ID** na lista suspensa **ID** ou digite uma *ID* diretamente no local.
+#### <a name="to-change-a-string-or-its-identifier"></a>Para alterar uma seqüência ou seu identificador
 
-   - Digite um número diferente na coluna **valor** .
+1. Abra a tabela de strings clicando duas vezes em seu ícone na [Exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-   - Digite edições na coluna **legenda** .
+1. Selecione a seqüência de string que deseja editar e clique duas vezes na coluna **ID,** **Value**ou **Caption,** e então você pode:
 
-#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Para alterar a propriedade Caption de vários recursos de cadeia de caracteres
+   - Selecione um **ID** na lista de isto de ida do **ID** ou digite um *ID* diretamente no lugar.
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
+   - Digite um número diferente na coluna **Valor.**
 
-1. Selecione as cadeias de caracteres que você deseja alterar mantendo a tecla **Ctrl** pressionada ao selecionar cada uma delas.
+   - Digite edições na coluna **Legenda.**
 
-1. Na [janela Propriedades](/visualstudio/ide/reference/properties-window), digite um novo valor para a propriedade que você deseja alterar.
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Para alterar a propriedade de legenda de vários recursos de string
+
+1. Abra a tabela de strings clicando duas vezes em seu ícone na [Exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
+
+1. Selecione as strings que deseja alterar segurando a tecla **Ctrl** enquanto seleciona cada uma delas.
+
+1. Na [janela Propriedades,](/visualstudio/ide/reference/properties-window)digite um novo valor para a propriedade que deseja alterar.
 
 1. Pressione **Enter**.
 
-### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Para adicionar formatação ou caracteres especiais a um recurso de cadeia de caracteres
+### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Para adicionar formatação ou caracteres especiais a um recurso de string
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra a tabela de strings clicando duas vezes em seu ícone na [Exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Selecione a cadeia de caracteres que você deseja modificar.
+1. Selecione a seqüência que deseja modificar.
 
-1. Na [janela Propriedades](/visualstudio/ide/reference/properties-window), adicione qualquer uma das sequências de escape padrão listadas abaixo ao texto na caixa **legenda** e pressione **Enter**.
+1. Na [janela Propriedades](/visualstudio/ide/reference/properties-window), adicione qualquer uma das seqüências de escape padrão listadas abaixo ao texto na caixa **Legenda** e **pressione Enter**.
 
-   |Para obter isso...|Digite isto...|
+   |Para conseguir isso...|Digite isso...|
    |-----------------|---------------|
    | Nova linha | \\n |
-   | Retorno de carro | \\r |
+   | Retorno de carro | \\R |
    | Tab | \\t |
    | Barra invertida (\\) | \\\\ |
-   | Caractere ASCII | \\DDD (notação octal) |
-   | Alerta (Bell) | \\a |
+   | Personagem ASCII | \\ddd (notação octal) |
+   | Alerta (sino) | \\a |
 
    > [!NOTE]
-   > O **Editor de cadeia de caracteres** não dá suporte ao conjunto completo de caracteres asci de escape. Você só pode usar os listados acima.
+   > O **Editor de cordas** não suporta o conjunto completo de caracteres ASCI fugitivos. Você só pode usar os listados acima.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -170,7 +170,7 @@ Win32
 
 ## <a name="see-also"></a>Confira também
 
-[Editores de recursos](../windows/resource-editors.md)
-[cadeias de caracteres](/windows/win32/menurc/strings)<br/>
-[Sobre cadeias de caracteres](/windows/win32/menurc/about-strings)<br/>
+[Strings de editores](../windows/resource-editors.md)
+de[recursos](/windows/win32/menurc/strings)<br/>
+[Sobre Strings](/windows/win32/menurc/about-strings)<br/>
 [Personalizando layouts de janela](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
-ms.openlocfilehash: fce0a127a4debfb8001c1e97924fbffa40d52d62
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 87e6703f759888b36ed89daed10df937701c6dbd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078988"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372547"
 ---
 # <a name="auto_gcroot-class"></a>Classe auto_gcroot
 
-Gerenciamento automático de recursos (como [Auto_ptr classe](../standard-library/auto-ptr-class.md)) que pode ser usado para inserir um identificador virtual em um tipo nativo.
+O gerenciamento automático de recursos (como [auto_ptr Class)](../standard-library/auto-ptr-class.md)que pode ser usado para incorporar uma alça virtual em um tipo nativo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,50 +34,50 @@ template<typename _element_type>
 class auto_gcroot;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_element_type*<br/>
-O tipo gerenciado a ser inserido.
+O tipo gerenciado a ser incorporado.
 
 ## <a name="members"></a>Membros
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |---------|-----------|
-|[auto_gcroot::auto_gcroot](#auto-gcroot)|O construtor de `auto_gcroot`.|
-|[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|O destruidor `auto_gcroot`.
+|[auto_gcroot:auto_gcroot](#auto-gcroot)|O `auto_gcroot` construtor.|
+|[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|O `auto_gcroot` destruidor.
 |
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |---------|-----------|
 |[auto_gcroot::attach](#attach)|Anexar `auto_gcroot` a um objeto.|
-|[auto_gcroot::get](#get)|Obtém o objeto contido.|
-|[auto_gcroot::release](#release)|Libera o objeto do gerenciamento de `auto_gcroot`.|
-|[auto_gcroot::reset](#reset)|Destrua o objeto de propriedade atual e, opcionalmente, assuma a posse de um novo objeto.|
-|[auto_gcroot::swap](#swap)|Permuta objetos por outro `auto_gcroot`.|
+|[auto_gcroot::get](#get)|Pega o objeto contido.|
+|[auto_gcroot::release](#release)|Libera o objeto `auto_gcroot` da gestão.|
+|[auto_gcroot::reset](#reset)|Destrua o objeto de propriedade atual e, opcionalmente, tome posse de um novo objeto.|
+|[auto_gcroot::swap](#swap)|Troca objetos `auto_gcroot`por outro .|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |---------|-----------|
-|[operador auto_gcroot:: Operator-&gt;](#operator-arrow)|O operador de acesso de membro.|  
+|[auto_gcroot::operador-&gt;](#operator-arrow)|O operador de acesso de membros.|  
 |[auto_gcroot::operator=](#operator-assign)|Operador de atribuição.|
-|[&nbsp;de auto_gcroot:: Operator auto_gcroot](#operator-auto-gcroot)|Operador de conversão de tipo entre `auto_gcroot` e tipos compatíveis.|
-|[auto_gcroot:: Operator&nbsp;bool](#operator-bool)|Operador para usar `auto_gcroot` em uma expressão condicional.|  
-|[auto_gcroot::operator!](#operator-logical-not)|Operador para usar `auto_gcroot` em uma expressão condicional.|
+|[auto_gcroot:auto_gcroot&nbsp;do operador](#operator-auto-gcroot)|Operador de molde `auto_gcroot` de tipo entre e tipos compatíveis.|
+|[auto_gcroot::bool operador&nbsp;](#operator-bool)|Operador para `auto_gcroot` uso em uma expressão condicional.|  
+|[auto_gcroot:operador!](#operator-logical-not)|Operador para `auto_gcroot` uso em uma expressão condicional.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Arquivo de cabeçalho** \<msclr \ auto_gcroot. h >
+Arquivo \< **de cabeçalho** msclr\auto_gcroot.h>
 
-Msclr de **namespace**
+**Namespace** msclr
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot:: auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot:auto_gcroot
 
-O construtor de `auto_gcroot`.
+O `auto_gcroot` construtor.
 
 ```cpp
 auto_gcroot(
@@ -92,17 +92,17 @@ auto_gcroot(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_ptr*<br/>
-O objeto a ser proprietário.
+O objeto a possuir.
 
 *_right*<br/>
 Um `auto_gcroot` existente.
 
 ### <a name="remarks"></a>Comentários
 
-Ao construir um `auto_gcroot` de um `auto_gcroot`existente, a `auto_gcroot` existente libera seu objeto antes de transferir a propriedade do objeto para o novo `auto_gcroot`.
+Ao construir `auto_gcroot` um a `auto_gcroot`partir de `auto_gcroot` um existente, o existente libera seu `auto_gcroot`objeto antes de transferir a propriedade do objeto para o novo .
 
 ### <a name="example"></a>Exemplo
 
@@ -191,9 +191,9 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot:: ~ auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot::~auto_gcroot
 
-O destruidor `auto_gcroot`.
+O `auto_gcroot` destruidor.
 
 ```cpp
 ~auto_gcroot();
@@ -201,7 +201,7 @@ O destruidor `auto_gcroot`.
 
 ### <a name="remarks"></a>Comentários
 
-O destruidor também destrui o objeto de propriedade.
+O destruidor também destrói o objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -238,7 +238,7 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot:: Attach
+## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot::anexar
 
 Anexar `auto_gcroot` a um objeto.
 
@@ -255,10 +255,10 @@ auto_gcroot<_element_type> & attach(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_right*<br/>
-O objeto a ser anexado ou um `auto_gcroot` que contém o objeto a ser anexado.
+O objeto a ser `auto_gcroot` anexado, ou um que contenha o objeto a ser anexado.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -266,7 +266,7 @@ O `auto_gcroot` atual.
 
 ### <a name="remarks"></a>Comentários
 
-Se `_right` for um `auto_gcroot`, ele liberará a propriedade de seu objeto antes que o objeto seja anexado à `auto_gcroot`atual.
+Se `_right` for `auto_gcroot`um , ele libera a propriedade de seu `auto_gcroot`objeto antes que o objeto seja anexado à corrente .
 
 ### <a name="example"></a>Exemplo
 
@@ -333,9 +333,9 @@ Hello from fourth A!
 in ClassA destructor:fourth
 ```
 
-## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot:: Get
+## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot:get
 
-Obtém o objeto contido.
+Pega o objeto contido.
 
 ```cpp
 _element_type get() const;
@@ -393,9 +393,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot:: versão
+## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot::liberação
 
-Libera o objeto do gerenciamento de `auto_gcroot`.
+Libera o objeto `auto_gcroot` da gestão.
 
 ```cpp
 _element_type release();
@@ -403,7 +403,7 @@ _element_type release();
 
 ### <a name="return-value"></a>Valor retornado
 
-O objeto liberado.
+O objeto solto.
 
 ### <a name="example"></a>Exemplo
 
@@ -456,9 +456,9 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot:: redefinir
+## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot::reset
 
-Destrua o objeto de propriedade atual e, opcionalmente, assuma a posse de um novo objeto.
+Destrua o objeto de propriedade atual e, opcionalmente, tome posse de um novo objeto.
 
 ```cpp
 void reset(
@@ -466,10 +466,10 @@ void reset(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_new_ptr*<br/>
-Adicional O novo objeto.
+(Opcional) O novo objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -521,9 +521,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot:: swap
+## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot::swap
 
-Permuta objetos por outro `auto_gcroot`.
+Troca objetos `auto_gcroot`por outro .
 
 ```cpp
 void swap(
@@ -531,10 +531,10 @@ void swap(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_right*<br/>
-O `auto_gcroot` com o qual trocar objetos.
+Com `auto_gcroot` o qual trocar objetos.
 
 ### <a name="example"></a>Exemplo
 
@@ -563,9 +563,9 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>operador auto_gcroot:: Operator-&gt;
+## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot::operador-&gt;
 
-O operador de acesso de membro.
+O operador de acesso de membros.
 
 ```cpp
 _element_type operator->() const;
@@ -573,7 +573,7 @@ _element_type operator->() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O objeto que é encapsulado por `auto_gcroot`.
+O objeto que está `auto_gcroot`embrulhado por.
 
 ### <a name="example"></a>Exemplo
 
@@ -612,7 +612,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot:: Operator =
+## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot:operador=
 
 Operador de atribuição.
 
@@ -629,14 +629,14 @@ auto_gcroot<_element_type> & operator=(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_right*<br/>
-O objeto ou `auto_gcroot` a ser atribuído ao `auto_gcroot`atual.
+O objeto `auto_gcroot` ou a ser `auto_gcroot`atribuído à corrente.
 
 ### <a name="return-value"></a>Valor retornado
 
-O `auto_gcroot`atual, agora proprietário `_right`.
+A `auto_gcroot`corrente, agora `_right`possuindo.
 
 ### <a name="example"></a>Exemplo
 
@@ -704,9 +704,9 @@ done
 in ClassA destructor: third
 ```
 
-## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>operador auto_gcroot:: Operator auto_gcroot
+## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot:auto_gcroot do operador
 
-Operador de conversão de tipo entre `auto_gcroot` e tipos compatíveis.
+Operador de molde `auto_gcroot` de tipo entre e tipos compatíveis.
 
 ```cpp
 template<typename _other_type>
@@ -715,7 +715,7 @@ operator auto_gcroot<_other_type>();
 
 ### <a name="return-value"></a>Valor retornado
 
-A conversão atual de `auto_gcroot` para `auto_gcroot<_other_type>`.
+O `auto_gcroot` elenco `auto_gcroot<_other_type>`atual para .
 
 ### <a name="example"></a>Exemplo
 
@@ -759,9 +759,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot:: Operator bool
+## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot::bool operador
 
-Operador para usar `auto_gcroot` em uma expressão condicional.
+Operador para `auto_gcroot` uso em uma expressão condicional.
 
 ```cpp
 operator bool() const;
@@ -769,11 +769,11 @@ operator bool() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-`true` se o objeto encapsulado for válido; caso contrário, `false`.
+`true`se o objeto embrulhado for válido; `false` caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Na verdade, esse operador converte para `_detail_class::_safe_bool`, que é mais seguro que `bool` porque não pode ser convertido em um tipo integral.
+Este operador realmente `_detail_class::_safe_bool`se converte `bool` para , o que é mais seguro do que porque não pode ser convertido para um tipo integral.
 
 ### <a name="example"></a>Exemplo
 
@@ -804,9 +804,9 @@ now s is valid
 now s is invalid
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot:: Operator!
+## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot:operador!
 
-Operador para usar `auto_gcroot` em uma expressão condicional.
+Operador para `auto_gcroot` uso em uma expressão condicional.
 
 ```cpp
 bool operator!() const;
@@ -814,7 +814,7 @@ bool operator!() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-`true` se o objeto encapsulado for inválido; caso contrário, `false`.
+`true`se o objeto embrulhado for inválido; `false` caso contrário.
 
 ### <a name="example"></a>Exemplo
 

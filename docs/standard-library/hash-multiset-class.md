@@ -86,17 +86,17 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8888f393e1058e3cd5ff968d9433b5306cac4949
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421677"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370651"
 ---
 # <a name="hash_multiset-class"></a>Classe hash_multiset
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 A classe de contêiner hash_multiset é uma extensão da Biblioteca Padrão C++ e é usado para o armazenamento e a recuperação rápida de dados de uma coleção na qual os valores dos elementos contidos servem como valores chave e não precisam ser exclusivos.
 
@@ -107,15 +107,15 @@ template <class Key, class Traits =hash_compare<Key, less <Key>>, class Allocato
 class hash_multiset
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*Chave*\
 O tipo de dados do elemento a ser armazenado no hash_multiset.
 
-\ de *características*
-O tipo que inclui dois objetos Function, uma das classes Compare, que é um predicado binário capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um predicado unário mapeando valores de chave dos elementos para inteiros não assinados do tipo `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key> >` é o valor padrão.
+*Traços*\
+O tipo que inclui dois objetos de função, um de classe comparar que é um predicado binário capaz de comparar dois valores de elemento como chaves de classificação `size_t`para determinar sua ordem relativa e uma função hash que é um predicado não ary mapeamento valores-chave dos elementos a inteiros não assinados do tipo . Esse argumento é opcional e o `hash_compare<Key, less<Key> >` é o valor padrão.
 
-\ de *alocador*
+*Alocador*\
 O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_multiset. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
@@ -130,7 +130,7 @@ O hash_multiset é:
 
 - Exclusivo no sentido de que cada um de seus elementos deve ter uma chave exclusiva. Uma vez que hash_multiser também é um contêiner associativo simples, seus elementos também são exclusivos.
 
-- Um modelo de classe porque a funcionalidade que ele fornece é genérica e, portanto, independente do tipo específico de dados contido como elementos ou chaves. Os tipos de dados a serem usados para elementos e chaves são especificados como parâmetros no modelo de classe juntamente com o alocador e a função de comparação.
+- Um modelo de classe porque a funcionalidade que ele fornece é genérico e tão independente do tipo específico de dados contidos como elementos ou chaves. Os tipos de dados a serem usados para elementos e chaves são especificados como parâmetros no modelo de classe juntamente com o alocador e a função de comparação.
 
 A principal vantagem do uso de hash em vez da classificação é a maior eficiência: um hash bem-sucedido executa inserções, exclusões e localizações em tempos médios constantes, em comparação com um tempo proporcional ao logaritmo do número de elementos no contêiner para técnicas de classificação. O valor de um elemento em um conjunto não pode ser alterado diretamente. Em vez disso, você deve excluir valores antigos e inserir elementos com novos valores.
 
@@ -138,9 +138,9 @@ A escolha do tipo de contêiner deve se basear, de modo geral, no tipo de pesqui
 
 O hash_multiset deve ser o contêiner associativo escolhido quando as condições que associam os valores às respectivas chaves forem atendidas pelo aplicativo. Os elementos de um hash_multiset podem ser múltiplos e atuar como suas próprias chaves de classificação, de modo que as chaves não são exclusivas. Um modelo para esse tipo de estrutura é uma lista ordenada de palavras, por exemplo, na qual as palavras podem ocorrer mais de uma vez. Não tendo sido permitidas várias ocorrências das palavras, um hash_multiser seria a estrutura de contêiner apropriada. Se definições exclusivas fossem anexadas como valores à lista de palavras-chave exclusivas, um hash_map seria uma estrutura apropriada para conter esses dados. Se, em vez disso, as definições não fossem exclusivas, um hash_multimap seria o contêiner ideal.
 
-O hash_multiset ordena a sequência que controla chamando um objeto de características de hash armazenado do tipo [value_compare](#value_compare). Esse objeto armazenado pode ser acessado chamando a função membro [key_comp](#key_comp). Esse objeto de função deve se comportar da mesma forma que um objeto da classe `hash_compare<Key, less<Key> >`. Especificamente, para a *chave* de todos os valores do tipo `Key`, a chamada `Trait(Key)` produz uma distribuição de valores do tipo `size_t`.
+O hash_multiset ordena a sequência que controla chamando um objeto de características de hash armazenado do tipo [value_compare](#value_compare). Esse objeto armazenado pode ser acessado chamando a função membro [key_comp](#key_comp). Tal objeto de função deve se comportar `hash_compare<Key, less<Key> >`da mesma forma que um objeto de classe . Especificamente, para todos os `Key`valores `Trait(Key)` *Chave* do tipo, `size_t`a chamada produz uma distribuição de valores do tipo .
 
-De modo geral, os elementos precisam ser simplesmente menores que os comparáveis para estabelecer essa ordem: desse modo, considerando dois elementos, pode ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão. Um predicado binário *f*( *x*, *y*) é um objeto de função que tem dois objetos de argumento x e y e um valor retornado de true ou false. Uma ordenação imposta a um hash_multiset será uma ordenação fraca estrita se o predicado binário for irreflexivo, antissimétrico e transitivo, e se a equivalência for transitiva, em que dois objetos x e y serão definidos para serem equivalentes quando *f*( *x*, *y*) e *f*( *y*, *x*) forem falsos. Se a condição mais forte de igualdade entre as chaves substituir essa equivalência, a ordenação será total (no sentido de que todos os elementos serão ordenados um em relação ao outro) e as chaves correspondentes não poderão ser diferenciadas uma da outra.
+De modo geral, os elementos precisam ser simplesmente menores que os comparáveis para estabelecer essa ordem: desse modo, considerando dois elementos, pode ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão. Um predicado binário *f* *(x*, *y)* é um objeto de função que tem dois objetos de argumento x e y e um valor de retorno de verdadeiro ou falso. Uma ordenação imposta a um hash_multiset será uma ordenação fraca estrita se o predicado binário for irreflexivo, antissimétrico e transitivo, e se a equivalência for transitiva, em que dois objetos x e y serão definidos para serem equivalentes quando *f*( *x*, *y*) e *f*( *y*, *x*) forem falsos. Se a condição mais forte de igualdade entre as chaves substituir essa equivalência, a ordenação será total (no sentido de que todos os elementos serão ordenados um em relação ao outro) e as chaves correspondentes não poderão ser diferenciadas uma da outra.
 
 A ordem real dos elementos na sequência controlada depende da função de hash, da função de ordenação e do tamanho atual da tabela de hash armazenada no objeto de contêiner. Não é possível determinar o tamanho atual da tabela de hash, portanto, de modo geral, não é possível prever a ordem dos elementos na sequência controlada. A inserção de elementos não invalida iteradores e a remoção de elementos invalida apenas os iteradores que apontavam especificamente os elementos removidos.
 
@@ -148,76 +148,76 @@ O iterador fornecido pela classe hash_multiset é um iterador bidirecional, mas 
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|DESCRIÇÃO|
+|Construtor|Descrição|
 |-|-|
 |[hash_multiset](#hash_multiset)|Constrói um `hash_multiset` que está vazio ou que é uma cópia de todo ou parte de algum outro `hash_multiset`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome do tipo|DESCRIÇÃO|
+|Nome do tipo|Descrição|
 |-|-|
 |[allocator_type](#allocator_type)|Um tipo que representa a classe `allocator` para o objeto `hash_multiset`.|
-|[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que pode ler um elemento **const** no `hash_multiset`.|
-|[const_pointer](#const_pointer)|Um tipo que fornece um ponteiro para um elemento **const** em um `hash_multiset`.|
-|[const_reference](#const_reference)|Um tipo que fornece uma referência a um elemento **const** armazenado em um `hash_multiset` para leitura e execução de operações **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler qualquer elemento **const** no `hash_multiset`.|
+|[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que `hash_multiset`pode ler um elemento **const** no .|
+|[const_pointer](#const_pointer)|Um tipo que fornece um ponteiro para `hash_multiset`um elemento **const** em um .|
+|[const_reference](#const_reference)|Um tipo que fornece uma referência a `hash_multiset` um elemento **const** armazenado em um para leitura e realização de operações de **const.**|
+|[const_reverse_iterator](#const_reverse_iterator)|Um tipo que fornece um iterador bidirecional que `hash_multiset`pode ler qualquer elemento **const** no .|
 |[difference_type](#difference_type)|Um tipo inteiro com sinal que indica a diferença entre dois iteradores que se referem a elementos no mesmo `hash_multiset`.|
-|[iterator](#iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar qualquer elemento em um `hash_multiset`.|
+|[Iterador](#iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar qualquer elemento em um `hash_multiset`.|
 |[key_compare](#key_compare)|Um tipo que fornece um objeto de função que pode comparar duas chaves de classificação para determinar a ordem relativa de dois elementos no `hash_multiset`.|
 |[key_type](#key_type)|Um tipo que descreve um objeto armazenado como um elemento de um `hash_set` em sua capacidade como chave de classificação.|
-|[pointer](#pointer)|Um tipo que fornece um ponteiro para um elemento em um `hash_multiset`.|
-|[reference](#reference)|Um tipo que fornece uma referência a um elemento armazenado em um `hash_multiset`.|
+|[ponteiro](#pointer)|Um tipo que fornece um ponteiro para um elemento em um `hash_multiset`.|
+|[Referência](#reference)|Um tipo que fornece uma referência a um elemento armazenado em um `hash_multiset`.|
 |[reverse_iterator](#reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar um elemento em um `hash_multiset` invertido.|
 |[size_type](#size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `hash_multiset`.|
 |[value_compare](#value_compare)|Um tipo que fornece dois objetos de função, um predicado binário da classe compare que pode comparar dois valores de elemento de um `hash_multiset` para determinar sua ordem relativa, bem como um predicado unário que faz o hash dos elementos.|
-|[value_type](#value_type)|Um tipo que descreve um objeto armazenado como um elemento de um `hash_multiset` em sua capacidade como um valor.|
+|[Value_type](#value_type)|Um tipo que descreve um objeto armazenado como um elemento de um `hash_multiset` em sua capacidade como um valor.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|DESCRIÇÃO|
+|Função de membro|Descrição|
 |-|-|
-|[begin](#begin)|Retorna um iterador que trata do primeiro elemento no `hash_multiset`.|
+|[Começar](#begin)|Retorna um iterador que trata do primeiro elemento no `hash_multiset`.|
 |[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento no `hash_multiset`.|
 |[cend](#cend)|Retorna um iterador const que trata o local após o último elemento em um `hash_multiset`.|
-|[clear](#clear)|Apaga todos os elementos de um `hash_multiset`.|
+|[Claro](#clear)|Apaga todos os elementos de um `hash_multiset`.|
 |[contagem](#count)|Retorna o número de elementos em um `hash_multiset` cuja chave corresponde a uma chave especificada pelo parâmetro|
 |[crbegin](#crbegin)|Retorna um iterador const que trata o primeiro elemento em um `hash_multiset` invertido.|
 |[crend](#crend)|Retorna um iterador const que trata o local após o último elemento em um `hash_multiset` invertido.|
 |[emplace](#emplace)|Insere um elemento construído adequadamente em um `hash_multiset`.|
 |[emplace_hint](#emplace_hint)|Insere um elemento construído adequadamente em um `hash_multiset`, com uma dica de posicionamento.|
-|[empty](#empty)|Testa se `hash_multiset` está vazio.|
+|[Vazio](#empty)|Testa se `hash_multiset` está vazio.|
 |[end](#end)|Retorna um iterador que trata o local após o último elemento em um `hash_multiset`.|
-|[equal_range](#equal_range)|Retorna um par de iteradores, respectivamente, para o primeiro elemento em um `hash_multiset` com uma chave que é maior do que uma chave especificada e para o primeiro elemento no `hash_multiset` com uma chave igual ou maior que a chave.|
+|[Equal_range](#equal_range)|Retorna um par de iteradores, respectivamente, para o primeiro elemento em um `hash_multiset` com uma chave que é maior do que uma chave especificada e para o primeiro elemento no `hash_multiset` com uma chave igual ou maior que a chave.|
 |[erase](#erase)|Remove um elemento ou um intervalo de elementos em um `hash_multiset` das posições especificadas ou remove elementos que correspondem a uma chave especificada.|
-|[find](#find)|Retorna um iterador que trata do local de um elemento em um `hash_multiset` que tem uma chave equivalente a uma chave especificada.|
+|[Encontrar](#find)|Retorna um iterador que trata do local de um elemento em um `hash_multiset` que tem uma chave equivalente a uma chave especificada.|
 |[get_allocator](#get_allocator)|Retorna uma cópia do objeto `allocator` usada para construir o `hash_multiset`.|
-|[insert](#insert)|Insere um elemento ou um intervalo de elementos em um `hash_multiset`.|
+|[Inserir](#insert)|Insere um elemento ou um intervalo de elementos em um `hash_multiset`.|
 |[key_comp](#key_compare)|Recupera uma cópia do objeto de comparação usada para ordenar chaves em um `hash_multiset`.|
 |[lower_bound](#lower_bound)|Retorna um iterador para o primeiro elemento em um `hash_multiset` com uma chave que é igual ou maior que uma chave especificada.|
-|[max_size](#max_size)|Retorna o comprimento máximo do `hash_multiset`.|
+|[Max_size](#max_size)|Retorna o comprimento máximo do `hash_multiset`.|
 |[rbegin](#rbegin)|Retorna um iterador que trata o primeiro elemento em um `hash_multiset` invertido.|
 |[rend](#rend)|Retorna um iterador que trata o local após o último elemento em um `hash_multiset` invertido.|
-|[size](#size)|Retorna o número de elementos no `hash_multiset`.|
-|[swap](#swap)|Troca os elementos de dois `hash_multiset`s.|
+|[Tamanho](#size)|Retorna o número de elementos no `hash_multiset`.|
+|[Trocar](#swap)|Troca os elementos de dois `hash_multiset`s.|
 |[upper_bound](#upper_bound)|Retorna um iterador para o primeiro elemento em um `hash_multiset` com uma chave que é igual ou maior que uma chave especificada.|
 |[value_comp](#value_comp)|Recupera uma cópia do objeto de características de hash usado para fazer o hash e ordenar valores chave de elementos em um `hash_multiset`.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIÇÃO|
+|Operador|Descrição|
 |-|-|
-|[hash_multiset::operator=](#op_eq)|Substitui os elementos de hash_multiset por uma cópia de outro hash_multiset.|
+|[hash_multiset:operador=](#op_eq)|Substitui os elementos de hash_multiset por uma cópia de outro hash_multiset.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<hash_set >
+**Cabeçalho:** \<hash_set>
 
 **Namespace:** stdext
 
-## <a name="allocator_type"></a>  hash_multiset::allocator_type
+## <a name="hash_multisetallocator_type"></a><a name="allocator_type"></a>hash_multiset:allocator_type
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que representa a classe allocator do objeto hash_multiset.
 
@@ -229,10 +229,10 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 Consulte o exemplo para [get_allocator](#get_allocator) para obter um exemplo do uso de `allocator_type`
 
-## <a name="begin"></a>  hash_multiset::begin
+## <a name="hash_multisetbegin"></a><a name="begin"></a>hash_multiset::começar
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador que trata do primeiro elemento no hash_multiset.
 
@@ -248,7 +248,7 @@ Um iterador bidirecional que trata do primeiro elemento no hash_multiset ou no l
 
 ### <a name="remarks"></a>Comentários
 
-Se o valor de retorno de `begin` for atribuído a uma `const_iterator`, os elementos no objeto hash_multiset não poderão ser modificados. Se o valor de retorno de `begin` for atribuído a um `iterator`, os elementos no objeto hash_multiset poderão ser modificados.
+Se o valor `begin` de retorno `const_iterator`for atribuído a a, os elementos do objeto hash_multiset não poderão ser modificados. Se o valor `begin` de retorno `iterator`for atribuído a um , os elementos no objeto hash_multiset podem ser modificados.
 
 ### <a name="example"></a>Exemplo
 
@@ -290,10 +290,10 @@ The first element of hms1 is 1
 The first element of hms1 is now 2
 ```
 
-## <a name="cbegin"></a>  hash_multiset::cbegin
+## <a name="hash_multisetcbegin"></a><a name="cbegin"></a>hash_multiset::cbegin
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador const que trata do primeiro elemento no hash_multiset.
 
@@ -337,10 +337,10 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="cend"></a>  hash_multiset::cend
+## <a name="hash_multisetcend"></a><a name="cend"></a>hash_multiset::cend
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador const que trata do local após o último elemento em um hash_multiset.
 
@@ -385,10 +385,10 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="clear"></a>  hash_multiset::clear
+## <a name="hash_multisetclear"></a><a name="clear"></a>hash_multiset::claro
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Apaga todos os elementos de um hash_multiset.
 
@@ -429,10 +429,10 @@ The size of the hash_multiset is initially 2.
 The size of the hash_multiset after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  hash_multiset::const_iterator
+## <a name="hash_multisetconst_iterator"></a><a name="const_iterator"></a>hash_multiset:const_iterator
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece um iterador bidirecional que pode ler um elemento **const** no hash_multiset.
 
@@ -448,10 +448,10 @@ Um tipo de `const_iterator` não pode ser usado para modificar o valor de um ele
 
 Consulte o exemplo para [begin](#begin) para obter um exemplo que usa `const_iterator`.
 
-## <a name="const_pointer"></a>  hash_multiset::const_pointer
+## <a name="hash_multisetconst_pointer"></a><a name="const_pointer"></a>hash_multiset:const_pointer
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece um ponteiro para um elemento **const** em um hash_multiset.
 
@@ -465,10 +465,10 @@ Um tipo de `const_pointer` não pode ser usado para modificar o valor de um elem
 
 Na maioria dos casos, um [const_iterador](#const_iterator) deve ser usado para acessar os elementos em um objeto de hash_multiset **const**.
 
-## <a name="const_reference"></a>  hash_multiset::const_reference
+## <a name="hash_multisetconst_reference"></a><a name="const_reference"></a>hash_multiset:const_reference
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece uma referência a um elemento **const** armazenado em um hash_multiset para leitura e execução de operações **const**.
 
@@ -512,10 +512,10 @@ int main( )
 The first element in the hash_multiset is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  hash_multiset::const_reverse_iterator
+## <a name="hash_multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_multiset:const_reverse_iterator
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece um iterador bidirecional que pode ler qualquer elemento **const** no hash_multiset.
 
@@ -531,10 +531,10 @@ Um tipo `const_reverse_iterator` não pode modificar o valor de um elemento e é
 
 Veja o exemplo de [rend](#rend) para obter um exemplo de como declarar e usar o `const_reverse_iterator`.
 
-## <a name="count"></a>  hash_multiset::count
+## <a name="hash_multisetcount"></a><a name="count"></a>hash_multiset::contagem
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna o número de elementos em um hash_multiset cuja chave corresponde a uma chave especificada pelo parâmetro.
 
@@ -542,9 +542,9 @@ Retorna o número de elementos em um hash_multiset cuja chave corresponde a uma 
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*Chave*\
 O valor dos elementos a serem correspondidos do hash_multiset.
 
 ### <a name="return-value"></a>Valor retornado
@@ -555,7 +555,7 @@ O número de elementos no hash_multiset com a chave especificada pelo parâmetro
 
 A função membro retorna o número de elementos no seguinte intervalo:
 
-\[ lower_bound (*chave*), upper_bound (*chave*)).
+\[lower_bound(*chave),* upper_bound(*chave).*
 
 ### <a name="example"></a>Exemplo
 
@@ -594,10 +594,10 @@ The number of elements in hms1 with a sort key of 1 is: 2.
 The number of elements in hms1 with a sort key of 2 is: 0.
 ```
 
-## <a name="crbegin"></a>  hash_multiset::crbegin
+## <a name="hash_multisetcrbegin"></a><a name="crbegin"></a>hash_multiset::crbegin
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador const que trata do primeiro elemento em um hash_multiset invertido.
 
@@ -646,10 +646,10 @@ int main( )
 The first element in the reversed hash_multiset is 30.
 ```
 
-## <a name="crend"></a>  hash_multiset::crend
+## <a name="hash_multisetcrend"></a><a name="crend"></a>hash_multiset::crend
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador const que trata do local após o último elemento em um hash_multiset invertido.
 
@@ -699,10 +699,10 @@ int main( )
 The last element in the reversed hash_multiset is 10.
 ```
 
-## <a name="difference_type"></a>  hash_multiset::difference_type
+## <a name="hash_multisetdifference_type"></a><a name="difference_type"></a>hash_multiset::difference_type
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo inteiro com sinal que indica a diferença entre dois iteradores que se referem a elementos no mesmo hash_multiset.
 
@@ -779,10 +779,10 @@ The number '20' occurs 2 times in hash_multiset hms1.
 The number of elements in the hash_multiset hms1 is 3.
 ```
 
-## <a name="emplace"></a>  hash_multiset::emplace
+## <a name="hash_multisetemplace"></a><a name="emplace"></a>hash_multiset:emplace
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Insere um elemento construído em um hash_multiset.
 
@@ -791,11 +791,11 @@ template <class ValTy>
 iterator insert(ValTy&& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|DESCRIÇÃO|
+|Parâmetro|Descrição|
 |-|-|
-|*val*|O valor de um elemento a ser inserido no [hash_multiset](../standard-library/hash-multiset-class.md), a menos que o `hash_multiset` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
+|*Val*|O valor de um elemento a ser inserido no [hash_multiset](../standard-library/hash-multiset-class.md), a menos que o `hash_multiset` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -829,10 +829,10 @@ int main( )
 After the emplace insertion, hms3 contains a.
 ```
 
-## <a name="emplace_hint"></a>  hash_multiset::emplace_hint
+## <a name="hash_multisetemplace_hint"></a><a name="emplace_hint"></a>hash_multiset:emplace_hint
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Insere um elemento construído em um hash_multiset, com uma dica de posicionamento.
 
@@ -843,13 +843,13 @@ iterator insert(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*valor*\
+*Val*\
 O valor de um elemento a ser inserido no [hash_multiset](../standard-library/hash-multiset-class.md), a menos que o `hash_multiset` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.
 
-*onde*\
-O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção for imediatamente seguido de *onde*.)
+*Onde*\
+O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmico, se o ponto de inserção seguir imediatamente *onde*.)
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -857,7 +857,7 @@ A função membro [hash_multiset::emplace](#emplace) retorna um iterador que apo
 
 ### <a name="remarks"></a>Comentários
 
-A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção imediatamente seguir *onde*.
+A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmico, se o ponto de inserção seguir imediatamente *onde*.
 
 ### <a name="example"></a>Exemplo
 
@@ -885,10 +885,10 @@ int main( )
 After the emplace insertion, hms1 contains a.
 ```
 
-## <a name="empty"></a>  hash_multiset::empty
+## <a name="hash_multisetempty"></a><a name="empty"></a>hash_multiset::vazio
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Testa se um hash_multiset está vazio.
 
@@ -934,10 +934,10 @@ The hash_multiset hms1 is not empty.
 The hash_multiset hms2 is empty.
 ```
 
-## <a name="end"></a>  hash_multiset::end
+## <a name="hash_multisetend"></a><a name="end"></a>hash_multiset::fim
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador que trata do local após o último elemento em um hash_multiset.
 
@@ -953,7 +953,7 @@ Um iterador bidirecional que trata do local após o último elemento em um hash_
 
 ### <a name="remarks"></a>Comentários
 
-`end` é usado para testar se um iterador atingiu o final de seu hash_multiset. O valor retornado por `end` não deve ser desreferenciado.
+`end`é usado para testar se um iterador chegou ao fim de sua hash_multiset. O valor retornado por `end` não deve ser desreferenciado.
 
 ### <a name="example"></a>Exemplo
 
@@ -997,10 +997,10 @@ The last element of hms1 is 3
 The last element of hms1 is now 2
 ```
 
-## <a name="equal_range"></a>  hash_multiset::equal_range
+## <a name="hash_multisetequal_range"></a><a name="equal_range"></a>hash_multiset:equal_range
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um par de iteradores, respectivamente, para o primeiro elemento em um hash_multiset com uma chave que é maior do que uma chave especificada e para o primeiro elemento no hash_multiset com uma chave igual ou maior que a chave.
 
@@ -1010,16 +1010,16 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*Chave*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
 
 Um par de iteradores em que o primeiro é o [lower_bound](#lower_bound) e o segundo é o [upper_bound](#upper_bound) da chave.
 
-Para acessar o primeiro iterador de um par `pr` retornado pela função membro, use `pr`. **first** e para desreferenciar o iterador de limite inferior, use \*( `pr`. **first**). Para acessar o segundo iterador de um par `pr` retornado pela função membro, use `pr`. **second** e para desreferenciar o iterador de limite superior, use \*( `pr`. **second**).
+Para acessar o primeiro iterador de um par `pr` retornado pela função membro, use `pr`. **primeiro** e para desreferenciar o \*iterador inferior, use (. `pr` **primeiro**). Para acessar o segundo iterador de um par `pr` retornado pela função membro, use `pr`. **segundo** e para desreferenciar o \*iterador superior, use (. `pr` **segundo**).
 
 ### <a name="example"></a>Exemplo
 
@@ -1084,10 +1084,10 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_multiset hms1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a>  hash_multiset::erase
+## <a name="hash_multiseterase"></a><a name="erase"></a>hash_multiset::apagar
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Remove um elemento ou um intervalo de elementos em um hash_multiset das posições especificadas ou remove elementos que correspondem a uma chave especificada.
 
@@ -1099,18 +1099,18 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*onde*\
+*Onde*\
 Posição do elemento a ser removido do hash_multiset.
 
-*primeiro*\
+*Primeiro*\
 Posição do primeiro elemento removido do hash_multiset.
 
-*última*\
+*Última*\
 Posição logo após o último elemento removido do hash_multiset.
 
-\ de *chave*
+*Chave*\
 A chave dos elementos a serem removidos do hash_multiset.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1207,10 +1207,10 @@ After another element with a key equal to that of the 2nd element
 is deleted, the hash_multiset hms3 is: 0 3.
 ```
 
-## <a name="find"></a>  hash_multiset::find
+## <a name="hash_multisetfind"></a><a name="find"></a>hash_multiset::encontrar
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador que trata do local de um elemento em um hash_multiset que tem uma chave equivalente a uma chave especificada.
 
@@ -1220,9 +1220,9 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*Chave*\
 A chave do argumento que deve corresponder à chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1231,9 +1231,9 @@ Um [iterador](#iterator) ou [const_iterator](#const_iterator) que trata do local
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna um iterador que aborda um elemento no hash_multiset cuja chave de classificação é `equivalent` à chave de argumento em um predicado binário que induzi uma ordenação com base em uma relação comparação menor que.
+A função membro retorna um ativador que aborda um `equivalent` elemento no hash_multiset cuja chave de classificação é a chave de argumento sob um predicado binário que induz um pedido baseado em uma relação de comparabilidade menor que a.
 
-Se o valor de retorno de `find` for atribuído a uma `const_iterator`, o objeto hash_multiset não poderá ser modificado. Se o valor de retorno de `find` for atribuído a um `iterator`, o objeto hash_multiset poderá ser modificado.
+Se o valor `find` de retorno `const_iterator`for atribuído a a, o objeto hash_multiset não poderá ser modificado. Se o valor `find` de retorno `iterator`for atribuído a um , o objeto hash_multiset pode ser modificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1285,10 +1285,10 @@ The hash_multiset hms1 doesn't have an element with a key of 40.
 The element of hms1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="get_allocator"></a>  hash_multiset::get_allocator
+## <a name="hash_multisetget_allocator"></a><a name="get_allocator"></a>hash_multiset:get_allocator
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna uma cópia do objeto alocador usado para construir o hash_multiset.
 
@@ -1361,10 +1361,10 @@ int main( )
 }
 ```
 
-## <a name="hash_multiset"></a>  hash_multiset::hash_multiset
+## <a name="hash_multisethash_multiset"></a><a name="hash_multiset"></a>hash_multiset:hash_multiset
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Constrói um `hash_multiset` que está vazio ou que é uma cópia de todo ou parte de algum outro `hash_multiset`.
 
@@ -1410,7 +1410,7 @@ hash_multiset(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Al*\
 A classe do alocador de armazenamento a ser usado para este objeto `hash_multiset`, cujo padrão é `Allocator`.
@@ -1418,16 +1418,16 @@ A classe do alocador de armazenamento a ser usado para este objeto `hash_multise
 *Comp*\
 A função de comparação do tipo `const Traits` usada para ordenar os elementos no `hash_multiset`, cujo padrão é `hash_compare`.
 
-\ *à direita*
+*Certo*\
 O `hash_multiset` do qual o `hash_multiset` construído é uma cópia.
 
-*primeiro*\
+*Primeiro*\
 A posição do primeiro elemento no intervalo de elementos a serem copiados.
 
-*última*\
+*Última*\
 A posição do primeiro elemento além do intervalo de elementos a serem copiados.
 
-*IList*\
+*Ilist*\
 O initializer_list que contém os elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
@@ -1438,9 +1438,9 @@ Todos os construtores inicializam seus hash_multisets.
 
 Todos os construtores armazenam um objeto de função do tipo `Traits`, que é usado para estabelecer uma ordem entre as chaves do `hash_multiset` e que, posteriormente, pode ser retornado ao chamar [hash_multiset::key_comp](#key_comp). Para obter mais informações sobre `Traits`, consulte o tópico [Classe hash_multiset](../standard-library/hash-multiset-class.md).
 
-Os três primeiros construtores especificam um `hash_multiset`inicial vazio, o segundo que especifica o tipo de função de comparação (*comp*) a ser usado no estabelecimento da ordem dos elementos e da terceira especificação explícita do tipo de alocador (*Al*) a ser usado. A palavra-chave **explicit** suprime determinados tipos de conversão automática de tipo.
+Os três primeiros construtores especificam uma inicial `hash_multiset`vazia , a segunda especificando o tipo de função de comparação (*Comp*) a ser usada no estabelecimento da ordem dos elementos e a terceira especificando explicitamente o tipo de alocador *(Al)* a ser usado. A palavra-chave **explicit** suprime determinados tipos de conversão automática de tipo.
 
-O quarto Construtor move o `hash_multiset` `Right`.
+O quarto construtor move o `hash_multiset` `Right`.
 
 A quinto, o sexto e o sétimo construtor usam um initializer_list.
 
@@ -1448,10 +1448,10 @@ Os três últimos construtores copiam o intervalo (`first`, `last`) de um `hash_
 
 A ordem real dos elementos de um contêiner de conjunto de hash depende da função de hash, da função de ordenação e do tamanho atual da tabela de hash e não pode, de modo geral, ser prevista como era possível com o contêiner do conjunto, em que foi determinada somente pela função de ordenação.
 
-## <a name="insert"></a>  hash_multiset::insert
+## <a name="hash_multisetinsert"></a><a name="insert"></a>hash_multiset::inserção
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Insere um elemento ou um intervalo de elementos em um hash_multiset.
 
@@ -1488,21 +1488,21 @@ iterator insert(
     ValTy&& value);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*value*\
+*Valor*\
 O valor de um elemento a ser inserido no hash_multiset, a menos que hash_multiset já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.
 
-*onde*\
-O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção for imediatamente seguido de *onde*.)
+*Onde*\
+O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmico, se o ponto de inserção seguir imediatamente *onde*.)
 
-*primeiro*\
+*Primeiro*\
 A posição do primeiro elemento a ser copiado de um hash_multiset.
 
-*última*\
+*Última*\
 A posição logo após o último elemento a ser copiado de um hash_multiset.
 
-*IList*\
+*Ilist*\
 A initializer_list que contém os elementos a serem copiados.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1515,12 +1515,12 @@ A terceira função membro insere a sequência de valores de elemento em um hash
 
 ### <a name="remarks"></a>Comentários
 
-A inserção pode ocorrer em tempo constante amortizado para a versão de dica de Insert, em vez de tempo logarítmica, se o ponto de inserção imediatamente seguir *onde*.
+A inserção pode ocorrer em tempo constante amortizado para a versão de dica da inserção, em vez do tempo logarítmico, se o ponto de inserção seguir imediatamente *onde*.
 
-## <a name="iterator"></a>  hash_multiset::iterator
+## <a name="hash_multisetiterator"></a><a name="iterator"></a>hash_multiset::iterator
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece um iterador bidirecional que pode ler ou modificar qualquer elemento em um hash_multiset.
 
@@ -1530,16 +1530,16 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Comentários
 
-Um tipo `iterator` pode ser usado para modificar o valor de um elemento.
+Um `iterator` tipo pode ser usado para modificar o valor de um elemento.
 
 ### <a name="example"></a>Exemplo
 
-Consulte o exemplo de [início](#begin) para obter um exemplo de como declarar e usar `iterator`.
+Veja o exemplo para [começar](#begin) para obter `iterator`um exemplo de como declarar e usar .
 
-## <a name="key_comp"></a>  hash_multiset::key_comp
+## <a name="hash_multisetkey_comp"></a><a name="key_comp"></a>hash_multiset:key_comp
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Recupera uma cópia do objeto de comparação usado para ordenar chaves em um hash_multiset.
 
@@ -1549,9 +1549,9 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna as *características*do parâmetro de modelo hash_multiset, que contém objetos de função que são usados para o hash e para ordenar os elementos do contêiner.
+Retorna o parâmetro de modelo hash_multiset *Traits*, que contém objetos de função que são usados para hash e para ordenar os elementos do recipiente.
 
-Para obter mais informações sobre *características* , consulte o tópico [hash_multiset classe](../standard-library/hash-multiset-class.md) .
+Para obter mais informações sobre *características,* consulte o tópico [hash_multiset Class.](../standard-library/hash-multiset-class.md)
 
 ### <a name="remarks"></a>Comentários
 
@@ -1612,10 +1612,10 @@ int main( )
 }
 ```
 
-## <a name="key_compare"></a>  hash_multiset::key_compare
+## <a name="hash_multisetkey_compare"></a><a name="key_compare"></a>hash_multiset::key_compare
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece dois objetos de função, um predicado binário da classe compare que pode comparar dois valores de elemento de um hash_multiset para determinar sua ordem relativa, bem como um predicado unário que faz o hash dos elementos.
 
@@ -1625,9 +1625,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Comentários
 
-`key_compare` é um sinônimo para as *características*do parâmetro de modelo.
+`key_compare`é um sinônimo para o parâmetro de modelo *Traits*.
 
-Para obter mais informações sobre *características* , consulte o tópico [hash_multiset classe](../standard-library/hash-multiset-class.md) .
+Para obter mais informações sobre *características,* consulte o tópico [hash_multiset Class.](../standard-library/hash-multiset-class.md)
 
 Observe que `key_compare` e value_compare são sinônimos do parâmetro de modelo *Traits*. Os dois tipos são fornecidos para as classes hash_set e hash_multiset, em que são idênticos, para compatibilidade com as classes hash_map e hash_multimap, em que são diferentes.
 
@@ -1635,10 +1635,10 @@ Observe que `key_compare` e value_compare são sinônimos do parâmetro de model
 
 Consulte o exemplo de [key_comp](#key_comp) para obter um exemplo de como declarar e usar `key_compare`.
 
-## <a name="key_type"></a>  hash_multiset::key_type
+## <a name="hash_multisetkey_type"></a><a name="key_type"></a>hash_multiset:key_type
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece um objeto de função que pode comparar duas chaves de classificação para determinar a ordem relativa de dois elementos no hash_multiset.
 
@@ -1648,20 +1648,20 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Comentários
 
-`key_type` é um sinônimo para a *chave*de parâmetro do modelo.
+`key_type`é um sinônimo para a *chave*de parâmetro de modelo .
 
 Observe que `key_type` e [value_type](../standard-library/hash-set-class.md#value_type) são sinônimos do parâmetro de modelo *Key*. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
 
-Para obter mais informações sobre a *chave*, consulte a seção comentários do tópico [hash_multiset classe](../standard-library/hash-multiset-class.md) .
+Para obter mais informações sobre *a Tecla,* consulte a seção Observações do tópico [classe hash_multiset.](../standard-library/hash-multiset-class.md)
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [value_type](#value_type) para obter uma amostra de como declarar e usar `key_type`.
 
-## <a name="lower_bound"></a>  hash_multiset::lower_bound
+## <a name="hash_multisetlower_bound"></a><a name="lower_bound"></a>hash_multiset:lower_bound
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador para o primeiro elemento em um hash_multiset com uma chave que é igual ou maior que uma chave especificada.
 
@@ -1671,9 +1671,9 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*Chave*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1725,10 +1725,10 @@ int main() {
 }
 ```
 
-## <a name="max_size"></a>  hash_multiset::max_size
+## <a name="hash_multisetmax_size"></a><a name="max_size"></a>hash_multiset:max_size
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna o tamanho máximo do hash_multiset.
 
@@ -1763,10 +1763,10 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  hash_multiset::operator=
+## <a name="hash_multisetoperator"></a><a name="op_eq"></a>hash_multiset:operador=
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Substitui os elementos de hash_multiset por uma cópia de outro hash_multiset.
 
@@ -1776,15 +1776,15 @@ hash_multiset& operator=(const hash_multiset& right);
 hash_multiset& operator=(hash_multiset&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|DESCRIÇÃO|
+|Parâmetro|Descrição|
 |-|-|
-|*right*|O [hash_multiset](../standard-library/hash-multiset-class.md) que está sendo copiado para o `hash_multiset`.|
+|*Certo*|O [hash_multiset](../standard-library/hash-multiset-class.md) que está sendo copiado para o `hash_multiset`.|
 
 ### <a name="remarks"></a>Comentários
 
-Depois de apagar todos os elementos existentes em uma `hash_multiset`, `operator=` copia ou move o conteúdo do *lado* para o `hash_multiset`.
+Depois de apagar quaisquer `hash_multiset`elementos `operator=` existentes em um , ou `hash_multiset`copia ou move o conteúdo da direita *para* o .
 
 ### <a name="example"></a>Exemplo
 
@@ -1824,10 +1824,10 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  hash_multiset::pointer
+## <a name="hash_multisetpointer"></a><a name="pointer"></a>hash_multiset::pointer
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece um ponteiro para um elemento em um hash_multiset.
 
@@ -1837,14 +1837,14 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>Comentários
 
-Um tipo `pointer` pode ser usado para modificar o valor de um elemento.
+Um `pointer` tipo pode ser usado para modificar o valor de um elemento.
 
 Na maioria dos casos, um [iterador](#iterator) deve ser usado para acessar os elementos em um objeto multiset.
 
-## <a name="rbegin"></a>  hash_multiset::rbegin
+## <a name="hash_multisetrbegin"></a><a name="rbegin"></a>hash_multiset:rbegin
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador que trata o primeiro elemento em um hash_multiset invertido.
 
@@ -1924,10 +1924,10 @@ The reversed hash_multiset is: 30 20 10
 After the erasure, the first element in the reversed hash_multiset is 20.
 ```
 
-## <a name="reference"></a>  hash_multiset::reference
+## <a name="hash_multisetreference"></a><a name="reference"></a>hash_multiset::referência
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece uma referência a um elemento armazenado em um hash_multiset.
 
@@ -1974,10 +1974,10 @@ The first element in the hash_multiset is 10.
 The first element in the hash_multiset is now 15.
 ```
 
-## <a name="rend"></a>  hash_multiset::rend
+## <a name="hash_multisetrend"></a><a name="rend"></a>hash_multiset:rend
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador que trata do local após o último elemento em um hash_multiset invertido.
 
@@ -2060,10 +2060,10 @@ The reversed hash_multiset is: 30 20 10 .
 After the erasure, the last element in the reversed hash_multiset is 20.
 ```
 
-## <a name="reverse_iterator"></a>  hash_multiset::reverse_iterator
+## <a name="hash_multisetreverse_iterator"></a><a name="reverse_iterator"></a>hash_multiset:reverse_iterator
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece um iterador bidirecional que pode ler ou modificar um elemento em um hash_multiset invertido.
 
@@ -2079,10 +2079,10 @@ Um tipo `reverse_iterator` é usado para iterar pelo hash_multiset em ordem inve
 
 Veja o exemplo de [rbegin](#rbegin) que demonstra como declarar e usar `reverse_iterator`.
 
-## <a name="size"></a>  hash_multiset::size
+## <a name="hash_multisetsize"></a><a name="size"></a>hash_multiset::tamanho
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna o número de elementos no hash_multiset.
 
@@ -2126,10 +2126,10 @@ The hash_multiset length is 1.
 The hash_multiset length is now 2.
 ```
 
-## <a name="size_type"></a>  hash_multiset::size_type
+## <a name="hash_multisetsize_type"></a><a name="size_type"></a>hash_multiset:size_type
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo inteiro sem sinal que pode representar o número de elementos em um hash_multiset.
 
@@ -2143,10 +2143,10 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 Veja o exemplo de [size](#size) para obter um exemplo de como declarar e usar `size_type`
 
-## <a name="swap"></a>  hash_multiset::swap
+## <a name="hash_multisetswap"></a><a name="swap"></a>hash_multiset::swap
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Troca os elementos de dois hash_multisets.
 
@@ -2154,9 +2154,9 @@ Troca os elementos de dois hash_multisets.
 void swap(hash_multiset& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à direita*
+*Certo*\
 O hash_multiset do argumento que fornece os elementos a serem trocados com o hash_multiset de destino.
 
 ### <a name="remarks"></a>Comentários
@@ -2217,10 +2217,10 @@ After swapping with hms2, list hms1 is: 200 100.
 After swapping with hms3, list hms1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  hash_multiset::upper_bound
+## <a name="hash_multisetupper_bound"></a><a name="upper_bound"></a>hash_multiset:upper_bound
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Retorna um iterador para o primeiro elemento em um hash_multisets com uma chave que é maior que uma chave especificada.
 
@@ -2230,9 +2230,9 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*Chave*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -2295,10 +2295,10 @@ The first element of hms1 with a key greater than
 that of the initial element of hms1 is: 20.
 ```
 
-## <a name="value_comp"></a>  hash_multiset::value_comp
+## <a name="hash_multisetvalue_comp"></a><a name="value_comp"></a>hash_multiset:value_comp
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Recupera uma cópia do objeto de comparação usado para ordenar valores de elemento em um hash_multiset.
 
@@ -2308,15 +2308,15 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna as *características*do parâmetro de modelo hash_multiset, que contém objetos de função que são usados para hash e para ordenar elementos do contêiner.
+Retorna o parâmetro de modelo hash_multiset *Traits*, que contém objetos de função que são usados para hash e para ordenar elementos do recipiente.
 
-Para obter mais informações sobre *características* , consulte o tópico [hash_multiset classe](../standard-library/hash-multiset-class.md) .
+Para obter mais informações sobre *características,* consulte o tópico [hash_multiset Class.](../standard-library/hash-multiset-class.md)
 
 ### <a name="remarks"></a>Comentários
 
 O objeto armazenado define uma função membro:
 
-**operador bool**( **constKey &** `_xVal`, **chave const &** *_yVal*);
+**operador booliano**( **constKey&**`_xVal`, **const Key&** *_yVal*);
 
 que retornará **true** se `_xVal` preceder e não for igual a `_yVal` na ordem de classificação.
 
@@ -2376,10 +2376,10 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of hms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of hms2.
 ```
 
-## <a name="value_compare"></a>  hash_multiset::value_compare
+## <a name="hash_multisetvalue_compare"></a><a name="value_compare"></a>hash_multiset:value_compare
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que fornece dois objetos de função, um predicado binário da classe compare que pode comparar dois valores de elemento de um hash_multiset para determinar sua ordem relativa, bem como um predicado unário que faz o hash dos elementos.
 
@@ -2389,20 +2389,20 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Comentários
 
-`value_compare` é um sinônimo para as *características*do parâmetro de modelo.
+`value_compare`é um sinônimo para o parâmetro de modelo *Traits*.
 
-Para obter mais informações sobre *características* , consulte o tópico [hash_multiset classe](../standard-library/hash-multiset-class.md) .
+Para obter mais informações sobre *características,* consulte o tópico [hash_multiset Class.](../standard-library/hash-multiset-class.md)
 
-Observe que tanto [key_compare](#key_compare) quanto `value_compare` são sinônimos para as *características*do parâmetro de modelo. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
+Observe que [key_compare](#key_compare) tanto `value_compare` key_compare quanto são sinônimos para os *traços*do parâmetro modelo . Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [value_comp](#value_comp) para obter um exemplo de como declarar e usar `value_compare`.
 
-## <a name="value_type"></a>  hash_multiset::value_type
+## <a name="hash_multisetvalue_type"></a><a name="value_type"></a>hash_multiset:value_type
 
 > [!NOTE]
-> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
+> Esta API está obsoleta. A alternativa é a [Classe unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Um tipo que descreve um objeto armazenado como elemento como um hash_multiset em sua capacidade como um valor.
 
@@ -2452,5 +2452,5 @@ The hash_multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Confira também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Segurança do segmento na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

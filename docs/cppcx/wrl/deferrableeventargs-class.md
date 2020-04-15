@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: 4a3786e65873d6837389ad4fa5e7d06a14d66460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bae2472a75ab77f138fcee0951a6b869cc7c8e82
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398570"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372559"
 ---
 # <a name="deferrableeventargs-class"></a>Classe DeferrableEventArgs
 
@@ -32,35 +32,35 @@ class DeferrableEventArgs : public TEventArgsInterface;
 ### <a name="parameters"></a>Parâmetros
 
 *TEventArgsInterface*<br/>
-O tipo de interface que declara os argumentos para um evento adiado.
+O tipo de interface que declara os argumentos para um evento diferido.
 
 *TEventArgsClass*<br/>
-A classe que implementa *TEventArgsInterface*.
+A classe que implementa *o TEventArgsInterface*.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 Nome                                                         | Descrição
 ------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
-[DeferrableEventArgs::GetDeferral](#getdeferral)             | Obtém uma referência para o [adiamento](/uwp/api/windows.foundation.deferral) objeto que representa um evento adiado.
-[DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Chamado para indicar que todo o processamento para manipular um evento adiado foi concluída.
+[DiferindoEventArgs::GetDeferral](#getdeferral)             | Obtém uma referência ao objeto [Diferimento](/uwp/api/windows.foundation.deferral) que representa um evento diferido.
+[AdiveleventArgs::InvokeAllFinished](#invokeallfinished) | Chamado para indicar que todo o processamento para lidar com um evento diferido está completo.
 
 ## <a name="remarks"></a>Comentários
 
-As instâncias dessa classe são passadas para manipuladores de eventos para eventos adiados. Os parâmetros de modelo representam uma interface que define os detalhes dos argumentos do evento para um tipo específico de evento adiado e uma classe que implementa a interface.
+As instâncias desta classe são passadas aos manipuladores de eventos para eventos diferidos. Os parâmetros do modelo representam uma interface que define os detalhes dos argumentos do evento para um tipo específico de evento diferido e uma classe que implementa essa interface.
 
-A classe é exibido como o primeiro argumento para um manipulador de eventos para um evento adiado. Você pode chamar o [GetDeferral](#getdeferral) método para obter o [adiamento](/uwp/api/windows.foundation.deferral) objeto do qual você pode obter todas as informações sobre o evento adiada. Depois de concluir a manipulação de eventos, você deve chamar Complete no objeto de adiamento. Em seguida, você deve chamar [InvokeAllFinished](#invokeallfinished) no final do método do manipulador de eventos, que garante que a conclusão de adiada todos os eventos é comunicada corretamente.
+A classe aparece como o primeiro argumento para um manipulador de eventos para um evento adiado. Você pode chamar o método [GetDeferredal](#getdeferral) para obter o objeto [Diferimento](/uwp/api/windows.foundation.deferral) do qual você pode obter todas as informações sobre o evento diferido. Após concluir o tratamento do evento, você deve ligar para Completar no objeto Diferimento. Em seguida, você deve chamar [InvokeAllFinished](#invokeallfinished) no final do método de manipulador de eventos, que garante que a conclusão de todos os eventos diferidos seja comunicada corretamente.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Event. h
+**Cabeçalho:** event.h
 
-**Namespace:** Microsoft::WRL
+**Espaço de nome:** Microsoft::WRL
 
-## <a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
+## <a name="deferrableeventargsgetdeferral"></a><a name="getdeferral"></a>DiferindoEventArgs::GetDeferral
 
-Obtém uma referência para o [adiamento](/uwp/api/windows.foundation.deferral) objeto que representa um evento adiado.
+Obtém uma referência ao objeto [Diferimento](/uwp/api/windows.foundation.deferral) que representa um evento diferido.
 
 ```cpp
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
@@ -68,16 +68,16 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 
 ### <a name="parameters"></a>Parâmetros
 
-*result*<br/>
-Um ponteiro que fará referência a [adiamento](/uwp/api/windows.foundation.deferral) objeto quando a chamada é concluída.
+*Resultado*<br/>
+Um ponteiro que fará referência ao objeto [Diferimento](/uwp/api/windows.foundation.deferral) quando a chamada for concluída.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="invokeallfinished"></a>DeferrableEventArgs::InvokeAllFinished
+## <a name="deferrableeventargsinvokeallfinished"></a><a name="invokeallfinished"></a>AdiveleventArgs::InvokeAllFinished
 
-Chamado para indicar que todo o processamento para manipular um evento adiado foi concluída.
+Chamado para indicar que todo o processamento para lidar com um evento diferido está completo.
 
 ```cpp
 void InvokeAllFinished()
@@ -85,4 +85,4 @@ void InvokeAllFinished()
 
 ### <a name="remarks"></a>Comentários
 
-Você deve chamar esse método após as chamadas de código-fonte do evento [InvokeAll](eventsource-class.md#invokeall). Chamar esse método impede que mais adiamentos de que está sendo feito e força a execução se nenhum adiamentos foram realizados do manipulador de conclusão.
+Você deve chamar este método depois que a fonte do evento chamar [InvokeAll](eventsource-class.md#invokeall). Chamar este método evita que mais adiamentos sejam tomados e força o manipulador de conclusão a executar se nenhum adiamento foi tomado.

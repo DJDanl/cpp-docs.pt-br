@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295013"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328404"
 ---
 # <a name="batch-mode-rules"></a>Regras de modo do lote
 
@@ -20,18 +20,18 @@ ms.locfileid: "62295013"
    commands
 ```
 
-Regras de inferência de modo de lote fornecem apenas uma invocação da regra de inferência de tipos quando comandos de N passar por essa regra de inferência de tipos. Sem regras de inferência de modo de lote, ele exigiria comandos de N a ser invocado. N é o número de dependentes que disparam a regra de inferência de tipos.
+As regras de inferência em modo de lote fornecem apenas uma invocação da regra de inferência quando os comandos N passam por essa regra de inferência. Sem regras de inferência em modo de lote, exigiria que os comandos N fossem invocados. N é o número de dependentes que desencadeiam a regra da inferência.
 
-Makefiles que contêm regras de inferência de modo de lote deve usar NMAKE versão 1.62 ou superior. Para verificar a versão NMAKE, execute a macro _NMAKE_VER disponível com a versão NMAKE 1,62 ou superior. Essa macro retorna uma cadeia de caracteres que representa a versão do produto Visual C++.
+Os arquivos que contêm regras de inferência em modo de lote devem usar a versão 1.62 do NMAKE ou superior. Para verificar a versão NMAKE, execute a _NMAKE_VER macro disponível com a versão 1.62 ou superior do NMAKE. Esta macro retorna uma seqüência representando a versão do produto Visual C++.
 
-A diferença sintática apenas da regra de inferência padrão é que a regra de inferência de tipos de modo de lote é encerrada com dois-pontos duplos (:).
+A única diferença sintática da regra de inferência padrão é que a regra de inferência em modo de lote é terminada com um duplo cólon (::).
 
 > [!NOTE]
->  A ferramenta que está sendo invocada deve ser capaz de lidar com vários arquivos. A regra de inferência de tipos de modo de lote deve usar `$<` como a macro para acessar os arquivos dependentes.
+> A ferramenta que está sendo invocada deve ser capaz de lidar com vários arquivos. A regra de inferência `$<` do modo de lote deve ser usada como macro para acessar arquivos dependentes.
 
-As regras de inferência de modo de lote podem acelerar o processo de compilação. Ele é mais rápido fornecer arquivos para o compilador em lote, porque o driver do compilador é invocado apenas uma vez. Por exemplo, o compilador C e C++ executa melhor ao lidar com um conjunto de arquivos, porque ele pode permanecer memória residente durante o processo.
+As regras de inferência do modo de lote podem acelerar o processo de construção. É mais rápido fornecer arquivos para o compilador em lote, porque o driver do compilador é invocado apenas uma vez. Por exemplo, o compilador C e C++ tem melhor desempenho ao manusear um conjunto de arquivos porque ele pode permanecer residente de memória durante o processo.
 
-O exemplo a seguir mostra como usar regras de inferência de modo de lote:
+O exemplo a seguir mostra como usar as regras de inferência em modo de lote:
 
 ```
 #
@@ -56,7 +56,7 @@ $(Objs) :
 #end of makefile
 ```
 
-NMAKE produz a seguinte saída sem regras de inferência de modo de lote:
+O NMAKE produz a seguinte saída sem regras de inferência em modo de lote:
 
 ```
 E:\tmp> nmake -f test.mak -a NOBatch=1
@@ -73,7 +73,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE produz o resultado a seguir com as regras de inferência de modo de lote:
+A NMAKE produz o seguinte resultado com as regras de inferência em modo de lote:
 
 ```
 E:\tmp> nmake -f test.mak -a
@@ -89,6 +89,6 @@ foo4.cpp
 Generating Code...
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Regras de inferência](inference-rules.md)

@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f05c2e9482f8a0bada3868fdc946d4d26a0e0e1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421894"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371930"
 ---
 # <a name="collate-class"></a>Classe collate
 
-Um modelo de classe que descreve um objeto que pode servir como uma faceta de localidade para controlar a ordenação e o agrupamento de caracteres dentro de uma cadeia de caracteres, comparações entre eles e o hash de cadeias.
+Um modelo de classe que descreve um objeto que pode servir como uma faceta local para controlar a ordem e o agrupamento de caracteres dentro de uma string, comparações entre eles e o hashing de strings.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,9 +40,9 @@ template <class CharType>
 class collate : public locale::facet;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *CharType*
+*CharType*\
 O tipo usado em um programa para codificar caracteres.
 
 ## <a name="remarks"></a>Comentários
@@ -51,35 +51,35 @@ Como qualquer faceta de localidade, a ID de objeto estático tem um valor armaze
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|DESCRIÇÃO|
+|Construtor|Descrição|
 |-|-|
-|[collate](#collate)|O construtor para objetos da classe `collate` que serve como uma faceta de localidade para tratar convenções de classificação de cadeia de caracteres.|
+|[Collate](#collate)|O construtor para objetos da classe `collate` que serve como uma faceta de localidade para tratar convenções de classificação de cadeia de caracteres.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome do tipo|DESCRIÇÃO|
+|Nome do tipo|Descrição|
 |-|-|
 |[char_type](#char_type)|Um tipo que descreve um caractere do tipo `CharType`.|
 |[string_type](#string_type)|Um tipo que descreve uma cadeia de caracteres do tipo `basic_string` que contém caracteres do tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|DESCRIÇÃO|
+|Função de membro|Descrição|
 |-|-|
-|[compare](#compare)|Compara duas sequências de caracteres de acordo com as igualdades ou desigualdades das respectivas regras específicas de faceta.|
+|[Comparar](#compare)|Compara duas sequências de caracteres de acordo com as igualdades ou desigualdades das respectivas regras específicas de faceta.|
 |[do_compare](#do_compare)|Uma função virtual chamada para comparar duas sequências de caracteres de acordo com as igualdades ou desigualdades das respectivas regras específicas de faceta.|
 |[do_hash](#do_hash)|Uma função virtual chamada para determinar o valor de hash das sequências de acordo com as respectivas regras específicas de faceta.|
 |[do_transform](#do_transform)|Uma função virtual chamada para converter uma sequência de caracteres de uma localidade em uma cadeia de caracteres que pode ser usada em comparações lexicográficas com outras sequências de caracteres convertidas da mesma forma da mesma localidade.|
-|[hash](#hash)|Determina o valor de hash da sequência de acordo com suas regras específicas de faceta.|
-|[transform](#transform)|Converte uma sequência de caracteres de uma localidade em uma cadeia de caracteres que pode ser usada em comparações lexicográficas com outras sequências de caracteres convertidas da mesma forma da mesma localidade.|
+|[Hash](#hash)|Determina o valor de hash da sequência de acordo com suas regras específicas de faceta.|
+|[Transformar](#transform)|Converte uma sequência de caracteres de uma localidade em uma cadeia de caracteres que pode ser usada em comparações lexicográficas com outras sequências de caracteres convertidas da mesma forma da mesma localidade.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<localidade >
+**Cabeçalho:** \<locale>
 
 **Namespace:** std
 
-## <a name="char_type"></a>  collate::char_type
+## <a name="collatechar_type"></a><a name="char_type"></a>collate::char_type
 
 Um tipo que descreve um caractere do tipo `CharType`.
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 O tipo é um sinônimo do parâmetro de modelo `CharType`.
 
-## <a name="collate"></a>  collate::collate
+## <a name="collatecollate"></a><a name="collate"></a>collate::collate
 
 O construtor de objetos da classe collate que funciona como uma faceta de localidade para manipular convenções de classificação de cadeia de caracteres.
 
@@ -106,7 +106,7 @@ const char* _Locname,
     size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Refs*\
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
@@ -116,17 +116,17 @@ O nome da localidade.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o parâmetro *_Refs* e seu significado são:
+Os valores possíveis para o *parâmetro _Refs* e sua significância são:
 
 - 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
 - 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não estão definidos.
+- \>1: Esses valores não estão definidos.
 
-O construtor inicializa seu objeto base com **locale::** [faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
+O construtor inicializa seu objeto base com **localidade::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
-## <a name="compare"></a>  collate::compare
+## <a name="collatecompare"></a><a name="compare"></a>collate::compare
 
 Compara duas sequências de caracteres de acordo com as igualdades ou desigualdades das respectivas regras específicas de faceta.
 
@@ -137,18 +137,18 @@ int compare(const CharType* first1,
     const CharType* last2) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *first1*
+*primeiro1*\
 Ponteiro para o primeiro elemento na primeira sequência a ser comparada.
 
-\ *last1*
+*último1*\
 Ponteiro para o último elemento na primeira sequência a ser comparada.
 
-\ *first2*
+*primeiro2*\
 Ponteiro para o primeiro elemento na segunda sequência a ser comparada.
 
-\ *last2*
+*último2*\
 Ponteiro para o último elemento na segunda sequência a ser comparada.
 
 ### <a name="return-value"></a>Valor retornado
@@ -165,7 +165,7 @@ A função membro retornará:
 
 A primeira sequência comparará menos se ela tiver o elemento menor do par desigual mais antigo nas sequências ou, se não existir nenhum par desigual, mas a primeira sequência for menor.
 
-A função membro retorna [do_compare](#do_compare)( `first1`, `last1`, `first2`, `last2`).
+A função do `first1`membro `last1` `first2`retorna `last2` [do_compare](#do_compare)( , , , ).
 
 ### <a name="example"></a>Exemplo
 
@@ -192,7 +192,7 @@ int main() {
 }
 ```
 
-## <a name="do_compare"></a>  collate::do_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a>colito::do_compare
 
 Uma função virtual chamada para comparar duas sequências de caracteres de acordo com as igualdades ou desigualdades das respectivas regras específicas de faceta.
 
@@ -203,18 +203,18 @@ virtual int do_compare(const CharType* first1,
     const CharType* last2) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *first1*
+*primeiro1*\
 Ponteiro para o primeiro elemento na primeira sequência a ser comparada.
 
-\ *last1*
+*último1*\
 Ponteiro para o último elemento na primeira sequência a ser comparada.
 
-\ *first2*
+*primeiro2*\
 Ponteiro para o primeiro elemento na segunda sequência a ser comparada.
 
-\ *last2*
+*último2*\
 Ponteiro para o último elemento na segunda sequência a ser comparada.
 
 ### <a name="return-value"></a>Valor retornado
@@ -229,13 +229,13 @@ A função membro retornará:
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegido compara a sequência em [* first1, Last1) * com a sequência em *[first2, last2*). Ele compara valores aplicando `operator<` entre pares de elementos correspondentes do tipo `CharType`. A primeira sequência comparará menos se ela tiver o elemento menor do par desigual mais antigo nas sequências ou, se não existir nenhum par desigual, mas a primeira sequência for menor.
+A função de membro virtual protegido compara a seqüência em [ * primeiro1, Last1)* com a seqüência em *[ first2, last2*). Ele compara valores `operator<` aplicando entre pares `CharType`de elementos correspondentes do tipo . A primeira sequência comparará menos se ela tiver o elemento menor do par desigual mais antigo nas sequências ou, se não existir nenhum par desigual, mas a primeira sequência for menor.
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [collate::compare](#compare), que chama `do_compare`.
 
-## <a name="do_hash"></a>  collate::do_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a>colito::do_hash
 
 Uma função virtual chamada para determinar o valor de hash das sequências de acordo com as respectivas regras específicas de faceta.
 
@@ -243,12 +243,12 @@ Uma função virtual chamada para determinar o valor de hash das sequências de 
 virtual long do_hash(const CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*Primeiro*\
 Um ponteiro para o primeiro caractere na sequência cujo valor será determinado.
 
-*última*\
+*Última*\
 Um ponteiro para o último caractere na sequência cujo valor será determinado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -263,7 +263,7 @@ Um valor de hash pode ser útil, por exemplo, na distribuição de sequências d
 
 Consulte o exemplo de [hash](#hash), que chama `do_hash`.
 
-## <a name="do_transform"></a>  collate::do_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a>colito::do_transform
 
 Uma função virtual chamada para converter uma sequência de caracteres de uma localidade em uma cadeia de caracteres que pode ser usada em comparações lexicográficas com outras sequências de caracteres convertidas da mesma forma da mesma localidade.
 
@@ -271,12 +271,12 @@ Uma função virtual chamada para converter uma sequência de caracteres de uma 
 virtual string_type do_transform(const CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*Primeiro*\
 Um ponteiro para o primeiro caractere na sequência a ser convertida.
 
-*última*\
+*Última*\
 Um ponteiro para o último caractere na sequência a ser convertida.
 
 ### <a name="return-value"></a>Valor retornado
@@ -285,13 +285,13 @@ Uma cadeia de caracteres que é a sequência de caracteres transformados.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro virtual protegida retorna um objeto da classe [string_type](#string_type) cuja sequência controlada é uma cópia da sequência [ `first`, `last`). Se uma classe derivada de COLLATE\< **chartype**> substitui [do_compare](#do_compare), ela também deve substituir `do_transform` para corresponder. Quando passadas para `collate::compare`, duas cadeias de caracteres transformadas devem produzir o mesmo resultado que você obteria ao passar as cadeias de caracteres não transformadas para serem comparadas na classe derivada.
+A função de membro virtual protegido retorna um objeto de classe `first` `last` [string_type](#string_type) cuja seqüência controlada é uma cópia da seqüência [ . Se uma classe derivada decollate\< **CharType**> substituir [do_compare](#do_compare), ela também deverá substituir `do_transform` para haver correspondência. Quando passadas para `collate::compare`, duas cadeias de caracteres transformadas devem produzir o mesmo resultado que você obteria ao passar as cadeias de caracteres não transformadas para serem comparadas na classe derivada.
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [transform](#transform), que chama `do_transform`.
 
-## <a name="hash"></a>  collate::hash
+## <a name="collatehash"></a><a name="hash"></a>collate::hash
 
 Determina o valor de hash da sequência de acordo com suas regras específicas de faceta.
 
@@ -299,12 +299,12 @@ Determina o valor de hash da sequência de acordo com suas regras específicas d
 long hash(const CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*Primeiro*\
 Um ponteiro para o primeiro caractere na sequência cujo valor será determinado.
 
-*última*\
+*Última*\
 Um ponteiro para o último caractere na sequência cujo valor será determinado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -313,7 +313,7 @@ Um valor de hash do tipo **longo** da sequência.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna [do_hash](#do_hash)( `first`, `last`).
+A função do `first`membro `last`retorna [do_hash](#do_hash)( , ).
 
 Um valor de hash pode ser útil, por exemplo, na distribuição de sequências de maneira pseudo-aleatória em uma matriz de listas.
 
@@ -345,7 +345,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="string_type"></a>  collate::string_type
+## <a name="collatestring_type"></a><a name="string_type"></a>collate::string_type
 
 Um tipo que descreve uma cadeia de caracteres do tipo `basic_string` que contém caracteres do tipo `CharType`.
 
@@ -355,13 +355,13 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias da sequência de origem.
+O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias da seqüência de origem.
 
 ### <a name="example"></a>Exemplo
 
 Para obter um exemplo de como declarar e usar `string_type`, consulte [transform](#transform).
 
-## <a name="transform"></a>  collate::transform
+## <a name="collatetransform"></a><a name="transform"></a>collate::transformar
 
 Converte uma sequência de caracteres de uma localidade em uma cadeia de caracteres que pode ser usada em comparações lexicográficas com outras sequências de caracteres convertidas da mesma forma da mesma localidade.
 
@@ -369,12 +369,12 @@ Converte uma sequência de caracteres de uma localidade em uma cadeia de caracte
 string_type transform(const CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*Primeiro*\
 Um ponteiro para o primeiro caractere na sequência a ser convertida.
 
-*última*\
+*Última*\
 Um ponteiro para o último caractere na sequência a ser convertida.
 
 ### <a name="return-value"></a>Valor retornado
@@ -383,7 +383,7 @@ Uma cadeia de caracteres que contém a sequência de caracteres transformados.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna [do_transform](#do_transform)(`first`, `last`).
+A função do`first`membro `last`retorna [do_transform](#do_transform)( ).
 
 ### <a name="example"></a>Exemplo
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Confira também
 
-[\<locale>](../standard-library/locale.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<local>](../standard-library/locale.md)\
+[Segurança de threads na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -35,56 +35,56 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-ms.openlocfilehash: b15a303f69ce13cf3ba3b6c1c0739acdb8a33c7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f73c72830216679f8a91d0037d48c1e1b8e400c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309468"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372861"
 ---
 # <a name="variant-parameter-type-constants"></a>Constantes do tipo de parâmetro variante
 
-Este tópico lista as novas constantes que indicam os tipos de parâmetro variante projetados para uso com as classes de controle OLE da biblioteca Microsoft Foundation Class.
+Este tópico lista novas constantes que indicam tipos de parâmetros de variantes projetados para uso com as classes de controle OLE da Microsoft Foundation Class Library.
 
 A seguir está uma lista de constantes de classe:
 
-##  <a name="_mfc_variant_data_constants"></a> Constantes de dados Variant
+## <a name="variant-data-constants"></a><a name="_mfc_variant_data_constants"></a>Constantes de dados de variantes
 
-- Inteiro de 32 bits do VTS_COLOR usado para representar um valor de cor RGB.
+- VTS_COLOR Um inteiro de 32 bits usado para representar um valor de cor RGB.
 
-- Ponteiro de um VTS_FONT para o `IFontDisp` interface de um objeto de fonte OLE.
+- VTS_FONT um ponteiro `IFontDisp` para a interface de um objeto de fonte OLE.
 
-- Valor do identificador VTS_HANDLE um Windows.
+- VTS_HANDLE O valor do windows.
 
-- Ponteiro de um VTS_PICTURE para o `IPictureDisp` interface de um objeto de imagem OLE.
+- VTS_PICTURE Um ponteiro `IPictureDisp` para a interface de um objeto de imagem OLE.
 
-- Valor de 16 bits do VTS_OPTEXCLUSIVE usado para um controle que se destina a ser usado em um grupo de controles, como botões de opção. Esse tipo informa o contêiner que, se um controle em um grupo tem um valor TRUE, todos os outros devem ser FALSE.
+- VTS_OPTEXCLUSIVE Um valor de 16 bits usado para um controle que se destina a ser usado em um grupo de controles, como botões de rádio. Este tipo diz ao contêiner que se um controle em um grupo tem um valor TRUE, todos os outros devem ser FALSOs.
 
-- VTS_TRISTATE de 16 bits assinado inteiro usado para as propriedades que podem ter um dos três valores possíveis (marcados, desmarcados, indisponíveis), por exemplo, uma caixa de seleção.
+- VTS_TRISTATE Um inteiro assinado de 16 bits usado para propriedades que podem ter um dos três valores possíveis (selecionado, limpo, indisponível), por exemplo, uma caixa de seleção.
 
-- VTS_XPOS_HIMETRIC de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo x em unidades HIMETRIC.
+- VTS_XPOS_HIMETRIC Um inteiro não assinado de 32 bits usado para representar uma posição ao longo do eixo x em unidades HIMETRIC.
 
-- VTS_YPOS_HIMETRIC de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo y em unidades HIMETRIC.
+- VTS_YPOS_HIMETRIC Um inteiro não assinado de 32 bits usado para representar uma posição ao longo do eixo y em unidades HIMETRIC.
 
-- VTS_XPOS_PIXELS de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo x em pixels.
+- VTS_XPOS_PIXELS Um inteiro não assinado de 32 bits usado para representar uma posição ao longo do eixo x em pixels.
 
-- VTS_YPOS_PIXELS de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo y em pixels.
+- VTS_YPOS_PIXELS Um inteiro não assinado de 32 bits usado para representar uma posição ao longo do eixo y em pixels.
 
-- VTS_XSIZE_PIXELS de 32 bits sem sinal número inteiro usado para representar a largura de um objeto de tela em pixels.
+- VTS_XSIZE_PIXELS Um inteiro não assinado de 32 bits usado para representar a largura de um objeto de tela em pixels.
 
-- VTS_YSIZE_PIXELS de 32 bits sem sinal número inteiro usado para representar a altura de um objeto de tela em pixels.
+- VTS_YSIZE_PIXELS Um inteiro não assinado de 32 bits usado para representar a altura de um objeto de tela em pixels.
 
-- VTS_XSIZE_HIMETRIC de 32 bits sem sinal número inteiro usado para representar a largura de um objeto de tela em unidades HIMETRIC.
+- VTS_XSIZE_HIMETRIC Um inteiro não assinado de 32 bits usado para representar a largura de um objeto de tela em unidades HIMETRIC.
 
-- VTS_YSIZE_HIMETRIC de 32 bits sem sinal número inteiro usado para representar a altura de um objeto de tela em unidades HIMETRIC.
+- VTS_YSIZE_HIMETRIC Um inteiro não assinado de 32 bits usado para representar a altura de um objeto de tela em unidades HIMETRIC.
 
     > [!NOTE]
-    >  Constantes de variant adicionais foram definidos para todos os tipos variantes, com exceção do VTS_FONT e VTS_PICTURE, que fornecem um ponteiro para a constante de dados variant. Essas constantes são nomeadas usando o VTS_P`constantname` convenção. Por exemplo, VTS_PCOLOR é um ponteiro para uma constante VTS_COLOR.
+    >  Foram definidas constantes adicionais de variantes para todos os tipos de variantes, com exceção de VTS_FONT e VTS_PICTURE, que fornecem um ponteiro para a constante de dados da variante. Essas constantes são nomeadas usando a convenção VTS_P.`constantname` Por exemplo, VTS_PCOLOR é um ponteiro para uma VTS_COLOR constante.
 
 ## <a name="requirements"></a>Requisitos
 
-**Header:** afxdisp.h
+**Cabeçalho:** afxdisp.h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)

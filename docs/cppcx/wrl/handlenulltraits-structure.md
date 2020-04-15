@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: d70425f414b998eb67e3937c2c126dd3eda0c00d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398375"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371473"
 ---
 # <a name="handlenulltraits-structure"></a>Estrutura HANDLENullTraits
 
-Define as características comuns de um identificador não inicializado.
+Define características comuns de uma alça não inicializada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,14 +34,14 @@ struct HANDLENullTraits;
 
 Nome   | Descrição
 ------ | ---------------------
-`Type` | Um sinônimo de identificador.
+`Type` | Um sinônimo de HANDLE.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                                                  | Descrição
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Close](#close)                     | Fecha o identificador especificado.
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Representa um identificador inválido.
+[HANDLENullTraits::Close](#close)                     | Fecha a alça especificada.
+[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Representa uma alça inválida.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -49,13 +49,13 @@ Nome                                                  | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** corewrappers. h
+**Cabeçalho:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Espaço de nome:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="close"></a>HANDLENullTraits::Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Close
 
-Fecha o identificador especificado.
+Fecha a alça especificada.
 
 ```cpp
 inline static bool Close(
@@ -65,21 +65,21 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*<br/>
-O identificador para fechar.
+*H*<br/>
+A alça para fechar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se tratar *h* fechado com êxito; caso contrário, **false**.
+**verdade** se a alça *h* fechado com sucesso; caso contrário, **falso**.
 
-## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
 
-Representa um identificador inválido.
+Representa uma alça inválida.
 
 ```cpp
 inline static Type GetInvalidValue();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Sempre retorna `nullptr`.
+Retorna sempre `nullptr`.

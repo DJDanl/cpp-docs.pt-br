@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: b659f832756b79289181db34fa8d6fc0d974609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161271"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371341"
 ---
 # <a name="issame-structure"></a>Estrutura IsSame
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +40,7 @@ Outro tipo.
 
 ## <a name="remarks"></a>Comentários
 
-Testes se um tipo especificado é igual a outro tipo especificado.
+Testa se um tipo especificado é o mesmo que outro tipo especificado.
 
 ## <a name="members"></a>Membros
 
@@ -48,7 +48,7 @@ Testes se um tipo especificado é igual a outro tipo especificado.
 
 Nome                    | Descrição
 ----------------------- | --------------------------------------------------
-[IsSame::value](#value) | Indica se um tipo é igual a outro.
+[IsSame::valor](#value) | Indica se um tipo é o mesmo que o outro.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -58,11 +58,11 @@ Nome                    | Descrição
 
 **Cabeçalho:** internal.h
 
-**Namespace:** Microsoft::WRL::Details
+**Espaço de nome:** Microsoft::WRL::Details
 
-## <a name="value"></a>IsSame::value
+## <a name="issamevalue"></a><a name="value"></a>IsSame::valor
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 template <typename T1, typename T2>
@@ -80,6 +80,6 @@ struct IsSame<T1, T1>
 
 ### <a name="remarks"></a>Comentários
 
-Indica se um tipo é igual a outro.
+Indica se um tipo é o mesmo que o outro.
 
-`value` está **verdadeira** se os parâmetros de modelo são os mesmos, e **falso** se os parâmetros de modelo são diferentes.
+`value`é **verdade** se os parâmetros do modelo forem os mesmos e **forem falsos** se os parâmetros do modelo forem diferentes.
