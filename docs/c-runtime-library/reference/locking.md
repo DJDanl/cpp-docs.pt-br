@@ -1,8 +1,9 @@
 ---
 title: _locking
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _locking
+- _o__locking
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2c6ee763a1491a744b25cbb517886e9354ca6152
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953264"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342056"
 ---
 # <a name="_locking"></a>_locking
 
@@ -51,43 +53,45 @@ int _locking(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fd*<br/>
+*Fd*<br/>
 Descritor de arquivo.
 
-*modo*<br/>
+*Modo*<br/>
 Bloqueio de ação a ser executada.
 
 *nbytes*<br/>
 O número de bytes a serem bloqueados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_locking** retornará 0 se for bem-sucedido. Um valor de retorno de-1 indica falha; nesse caso, [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como um dos valores a seguir.
+**_locking** retorna 0 se for bem sucedido. Um valor de retorno de -1 indica falha, nesse caso [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como um dos seguintes valores.
 
 |Valor errno|Condição|
 |-|-|
-| **EACCES** | Violação de bloqueio (arquivo já foi bloqueado ou desbloqueado). |
+| **Eacces** | Violação de bloqueio (arquivo já foi bloqueado ou desbloqueado). |
 | **EBADF** | Descritor de arquivo inválido. |
-| **EDEADLOCK** | Violação de bloqueio. Retornado quando o sinalizador **_LK_LOCK** ou **_LK_RLCK** é especificado e o arquivo não pode ser bloqueado após 10 tentativas. |
-| **EINVAL** | Um argumento inválido foi fornecido para **_locking**. |
+| **EDEADLOCK** | Violação de bloqueio. Retornado quando o **sinalizador de _LK_LOCK** ou **_LK_RLCK** for especificado e o arquivo não puder ser bloqueado após 10 tentativas. |
+| **Einval** | Um argumento inválido foi dado a **_locking**. |
 
 Se houver uma falha devido a um parâmetro incorreto, como um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **_locking** bloqueia ou desbloqueia os bytes de *nbytes* do arquivo especificado por *fd*. Os bytes bloqueados em um arquivo impedem o acesso a esses bytes por outros processos. Todos os bloqueios ou desbloqueios se iniciam na posição atual do ponteiro do arquivo e avança para os próximos bytes *nbytes*. É possível bloquear bytes após o final do arquivo.
+A **função _locking** bloqueia ou desbloqueia bytes de *nbytes* do arquivo especificado por *fd*. Os bytes bloqueados em um arquivo impedem o acesso a esses bytes por outros processos. Todos os bloqueios ou desbloqueios se iniciam na posição atual do ponteiro do arquivo e avança para os próximos bytes *nbytes*. É possível bloquear bytes após o final do arquivo.
 
 *mode* deve ser uma das seguintes constantes de manifesto definidas em Locking.h.
 
-|valor de *modo*|Efeito|
+|valor *do modo*|Efeito|
 |-|-|
 | **_LK_LOCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, o programa tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a constante retornará um erro. |
 | **_LK_NBLCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a constante retornará um erro. |
-| **_LK_NBRLCK** | O mesmo que **_LK_NBLCK**. |
-| **_LK_RLCK** | O mesmo que **_LK_LOCK**. |
+| **_LK_NBRLCK** | O mesmo que **_LK_NBLCK.** |
+| **_LK_RLCK** | O mesmo **que _LK_LOCK.** |
 | **_LK_UNLCK** | Desbloqueia os bytes especificados, que devem ter sido bloqueados anteriormente. |
 
-Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma região que está sendo desbloqueada deve ter sido bloqueada anteriormente. **_locking** não mescla regiões adjacentes; se duas regiões bloqueadas estiverem adjacentes, cada região deverá ser desbloqueada separadamente. Regiões devem ser bloqueadas por um curto período de tempo e devem ser desbloqueadas antes de fechar um arquivo ou sair do programa.
+Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma região que está sendo desbloqueada deve ter sido bloqueada anteriormente. **_locking** não mescla regiões adjacentes; se duas regiões bloqueadas estiverem adjacentes, cada região deve ser desbloqueada separadamente. Regiões devem ser bloqueadas por um curto período de tempo e devem ser desbloqueadas antes de fechar um arquivo ou sair do programa.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -97,7 +101,7 @@ Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma 
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -158,7 +162,7 @@ int main( void )
 The first thirty bytes of this file will be locked.
 ```
 
-## <a name="sample-output"></a>Saída de Exemplo
+## <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 No one can change these bytes while I'm reading them
@@ -166,7 +170,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

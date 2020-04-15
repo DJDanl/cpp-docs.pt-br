@@ -1,8 +1,9 @@
 ---
 title: _getdrives
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdrives
+- _o__getdrives
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,19 +29,19 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 0733cc00523bb3a7bb019453cc94183a5c2b87e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 82d9aaac99e901d4fbf2fd41dbe84aad77ec8a9e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955072"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344287"
 ---
 # <a name="_getdrives"></a>_getdrives
 
 Retorna um bitmask que representa as unidades de disco disponíveis no momento.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -47,9 +49,13 @@ Retorna um bitmask que representa as unidades de disco disponíveis no momento.
 unsigned long _getdrives( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Se a função for bem-sucedida, o valor retornado será um bitmask que representa as unidades de disco disponíveis no momento. A posição de bit 0 (o bit menos significativo) é a unidade A, a posição de bit 1 é a unidade B, a posição de bit 2 é a unidade C e assim por diante. Se a função falhar, o valor retornado será zero. Para obter informações de erro estendidas, chame **GetLastError**.
+Se a função for bem-sucedida, o valor retornado será um bitmask que representa as unidades de disco disponíveis no momento. A posição de bit 0 (o bit menos significativo) é a unidade A, a posição de bit 1 é a unidade B, a posição de bit 2 é a unidade C e assim por diante. Se a função falhar, o valor retornado será zero. Para obter informações de erro estendidas, ligue para **GetLastError**.
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,6 +111,6 @@ D:
 E:
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de diretório](../../c-runtime-library/directory-control.md)<br/>

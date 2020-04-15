@@ -1,8 +1,9 @@
 ---
 title: fwrite
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fwrite
+- _o_fwrite
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: 8149e0f2cbc84c2c28093d86fecd5ff2a9db7aba
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5bd6da3c8d16189f7ff0db744901e03513acc21
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956189"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345400"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -49,29 +51,31 @@ size_t fwrite(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*Buffer*<br/>
 Ponteiro para os dados a serem gravados.
 
-*size*<br/>
+*Tamanho*<br/>
 Tamanho do item, em bytes.
 
-*count*<br/>
+*contagem*<br/>
 Máximo de itens a serem gravados.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**fwrite** retorna o número de itens completos gravados, o que pode ser menor que a *contagem* se ocorrer um erro. Além disso, em caso de erro, não será possível determinar o indicador de posição do arquivo. Se o *fluxo* ou o *buffer* for um ponteiro nulo ou se um número ímpar de bytes a serem gravados for especificado no modo Unicode, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
+**fwrite** retorna o número de itens completos realmente escritos, o que pode ser menor do que *a contagem* se ocorrer um erro. Além disso, em caso de erro, não será possível determinar o indicador de posição do arquivo. Se o *fluxo* ou *buffer* for um ponteiro nulo ou se um número ímpar de bytes a serem gravados for especificado no modo Unicode, a função invoca o manipulador de parâmetros inválidos, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna 0.
 
 ## <a name="remarks"></a>Comentários
 
-A função **fwrite** grava até a *contagem* de itens, com *tamanho* de comprimento cada, do *buffer* para o *fluxo*de saída. O ponteiro de arquivo associado ao *fluxo* (se houver) é incrementado pelo número de bytes realmente gravados. Se o *fluxo* for aberto no modo de texto, cada alimentação de linha será substituído por um par de retorno de carro-alimentação de linha. A substituição não interfere no valor retornado.
+A função **fwrite** grava até *para contar* itens, de *tamanho* cada, do *buffer* ao *fluxo*de saída . O ponteiro de arquivo associado ao *fluxo* (se houver um) é incrementado pelo número de bytes realmente escritos. Se *o fluxo* for aberto no modo texto, cada alimentação da linha será substituída por um par de feed de linha de retorno do transporte. A substituição não interfere no valor retornado.
 
-Quando o *fluxo* é aberto no modo de conversão Unicode — por exemplo, se o *fluxo* for aberto chamando **fopen** e usando um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**— o*buffer* é interpretado como um ponteiro para uma matriz de **wchar_t** que contém Dados UTF-16. Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
+Quando *o fluxo* é aberto no modo de tradução Unicode — por exemplo, se o *fluxo* for aberto chamando **fopen** e usando um parâmetro de modo que inclui **ccs=UNICODE**, **ccs=UTF-16LE**, ou **ccs=UTF-8**, ou se o modo for alterado para um modo de tradução Unicode usando **_setmode** e um parâmetro de modo que inclua **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**—*buffer* é interpretado como um ponteiro para um conjunto de **wchar_t** que contém Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
 
-Como essa função bloqueia o thread da chamada, ela é thread-safe. Para uma versão sem bloqueio, consulte **_fwrite_nolock**.
+Como essa função bloqueia o thread da chamada, ela é thread-safe. Para obter uma versão sem bloqueio, consulte **_fwrite_nolock**.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -79,13 +83,13 @@ Como essa função bloqueia o thread da chamada, ela é thread-safe. Para uma ve
 |--------------|---------------------|
 |**fwrite**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
 Veja o exemplo de [thread](fread.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_setmode](setmode.md)<br/>

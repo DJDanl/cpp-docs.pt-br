@@ -1,8 +1,9 @@
 ---
 title: rand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand
+- _o_rand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338159"
 ---
 # <a name="rand"></a>rand
 
-Gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente reproduzível. Uma versão mais programaticamente segura dessa função está disponível; consulte [rand_s](rand-s.md). Os números gerados por **Rand** não são criptograficamente seguros. Para geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções C++ declaradas na biblioteca padrão em [ \<> aleatórios](../../standard-library/random.md).
+Gera um número pseudoaleatório usando um algoritmo bem conhecido e totalmente reprodutível. Uma versão mais programática mente segura desta função está disponível; veja [rand_s](rand-s.md). Os números gerados pelo **rand** não são criptograficamente seguros. Para uma geração de números aleatórios mais seguras criptograficamente, use [rand_s](rand-s.md) ou as funções declaradas na Biblioteca Padrão C++ em [ \<>aleatórias ](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,23 +48,25 @@ Gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente 
 int rand( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**Rand** retorna um número pseudoaleatória, conforme descrito acima. Nenhum erro é retornado.
+**rand** retorna um número pseudoaleatório, como descrito acima. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-A função **Rand** retorna um número inteiro pseudoaleatória no intervalo de 0 a **RAND_MAX** (32767). Use a função [srand](srand.md) para propagar o gerador de número de pseudoaleatória antes de chamar **Rand**.
+A função **rand** retorna um inteiro pseudoaleatório na faixa 0 a **RAND_MAX** (32767). Use a função [srand](srand.md) para semear o gerador de número pseudoaleatório antes de chamar **rand**.
 
-A função **Rand** gera uma sequência bem conhecida e não é apropriada para uso como uma função criptográfica. Para geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções C++ declaradas na biblioteca padrão em [ \<> aleatórios](../../standard-library/random.md). Para obter informações sobre o que há de errado com \<Rand e como o > aleatório resolve essas deficiências, consulte este vídeo intitulado [Rand considerado prejudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+A função **rand** gera uma seqüência bem conhecida e não é apropriada para uso como função criptográfica. Para uma geração de números aleatórios mais seguras criptograficamente, use [rand_s](rand-s.md) ou as funções declaradas na Biblioteca Padrão C++ em [ \<>aleatórias ](../../standard-library/random.md). Para obter informações sobre o que \<há de errado com **o rand** e como> aleatórios abordam essas deficiências, consulte este vídeo intitulado [rand Considerado Prejudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**rand**|\<stdlib.h>|
+|**Rand**|\<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -134,7 +138,7 @@ int main( void )
    66
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>

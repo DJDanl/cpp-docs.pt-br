@@ -1,8 +1,9 @@
 ---
 title: _fwrite_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fwrite_nolock
+- _o__fwrite_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 035ee1d958c6ea6a13481d92311733ded9ed5f2c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9623606cb79dc4c0ac988960545faf3d91c42f9d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345448"
 ---
 # <a name="_fwrite_nolock"></a>_fwrite_nolock
 
@@ -51,25 +53,27 @@ size_t _fwrite_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*Buffer*<br/>
 Ponteiro para os dados a serem gravados.
 
-*size*<br/>
+*Tamanho*<br/>
 Tamanho do item em bytes.
 
-*count*<br/>
+*contagem*<br/>
 Máximo de itens a serem gravados.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O mesmo que [fwrite](fwrite.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essa função é uma versão sem bloqueio do **fwrite**. É idêntico a **fwrite** , exceto que não é protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Esta função é uma versão não travada do **fwrite**. É idêntico ao **fwrite,** exceto que não está protegido contra interferências por outros segmentos. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +87,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo de [thread](fread.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fread](fread.md)<br/>

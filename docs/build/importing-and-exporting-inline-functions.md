@@ -1,5 +1,5 @@
 ---
-title: Importando e exportando funções embutidas
+title: Importação e exportação de funções embutidas
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exporting functions [C++], inline functions
@@ -12,38 +12,38 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abb0443ab8fbd315524350caaff34e0250147ed2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273437"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328513"
 ---
-# <a name="importing-and-exporting-inline-functions"></a>Importando e exportando funções embutidas
+# <a name="importing-and-exporting-inline-functions"></a>Importação e exportação de funções embutidas
 
-Funções importadas podem ser definidas como embutidos. O efeito é aproximadamente o mesmo que definir uma padrão de função embutida; chamadas para a função são expandidas no código embutido, assim como uma macro. Isso é útil principalmente como uma maneira de dar suporte a C++ classes em uma DLL isso de forma embutida talvez alguns dos seus membros de funções para maior eficiência.
+As funções importadas podem ser definidas como inline. O efeito é aproximadamente o mesmo que definir uma função padrão em linha; chamadas para a função são expandidas para código inline, muito parecido com uma macro. Isso é principalmente útil como uma maneira de apoiar classes C++ em uma DLL que pode inline algumas de suas funções de membro para eficiência.
 
-Um recurso de uma função importada embutida é que você pode usar seu endereço em C++. O compilador retorna o endereço da cópia da função embutida que reside na DLL. Outro recurso de funções embutidas importadas é que você pode inicializar os dados locais estáticos da função importada, ao contrário dos dados importados globais.
+Uma característica de uma função inline importada é que você pode pegar seu endereço em C++. O compilador retorna o endereço da cópia da função inline que reside na DLL. Outra característica das funções inline importadas é que você pode inicializar dados locais estáticos da função importada, ao contrário dos dados importados globais.
 
 > [!CAUTION]
->  Você deve tenha cuidado ao fornecer importado funções embutidas, pois eles podem criar a possibilidade de conflitos de versão. Uma função embutida é expandida em código do aplicativo; Portanto, se você posteriormente reescrever a função, ele não for atualizado, a menos que o aplicativo em si é recompilado. (Normalmente, funções de DLL podem ser atualizadas sem recompilar os aplicativos que usá-los.)
+> Você deve ter cuidado ao fornecer funções inline importadas, pois elas podem criar a possibilidade de conflitos de versão. Uma função inline é expandida para o código do aplicativo; portanto, se você reescrever a função mais tarde, ela não será atualizada a menos que o aplicativo em si seja recompilado. (Normalmente, as funções dll podem ser atualizadas sem reconstruir os aplicativos que as usam.)
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Exportação de uma DLL](exporting-from-a-dll.md)
+- [Exportar de um DLL](exporting-from-a-dll.md)
 
-- [Exportar de uma DLL usando. Arquivos DEF](exporting-from-a-dll-using-def-files.md)
+- [Exportar de uma DLL usando . Arquivos DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar de uma DLL usando dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar de uma DLL usando __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar usando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Exportação e importação usando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar funções de C++ para uso em executáveis da linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funções C++ para uso em executáveis em linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
 - [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
 - [Importação para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Importando e exportando](importing-and-exporting.md)

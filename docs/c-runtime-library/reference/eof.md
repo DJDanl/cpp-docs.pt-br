@@ -1,8 +1,9 @@
 ---
 title: _eof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _eof
+- _o__eof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941991"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347929"
 ---
 # <a name="_eof"></a>_eof
 
@@ -50,16 +52,18 @@ int _eof(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fd*<br/>
+*Fd*<br/>
 Descritor de arquivo que se refere ao arquivo aberto.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_eof** retornará 1 se a posição atual for final do arquivo ou 0 se não for. Um valor de retorno de-1 indica um erro; Nesse caso, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EBADF**, que indica um descritor de arquivo inválido.
+**_eof** retorna 1 se a posição atual estiver terminada do arquivo, ou 0 se não for. Um valor de retorno de -1 indica um erro; neste caso, o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, **errno** será definido **como EBADF**, o que indica um descritor de arquivo inválido.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_eof** determina se o fim do arquivo associado ao *FD* foi atingido.
+A função **_eof** determina se o fim do arquivo associado ao *fd* foi alcançado.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -121,9 +125,9 @@ This file contains some text.
 Number of bytes read = 29
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Tratamento de erro](../../c-runtime-library/error-handling-crt.md)<br/>
+[Tratamento de erros](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [feof](feof.md)<br/>

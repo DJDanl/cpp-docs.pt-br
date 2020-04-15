@@ -9,16 +9,16 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef0ee4f77441cb8d19ea2d6dcada1fed9faf2782
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275997"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329422"
 ---
 # <a name="iserviceproviderimpl-class"></a>Classe IServiceProviderImpl
 
-Essa classe fornece uma implementação padrão da `IServiceProvider` interface.
+Esta classe fornece uma `IServiceProvider` implementação padrão da interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +34,7 @@ Sua classe, derivada de `IServiceProviderImpl`.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -42,13 +42,13 @@ Sua classe, derivada de `IServiceProviderImpl`.
 
 ## <a name="remarks"></a>Comentários
 
-O `IServiceProvider` interface localiza um serviço especificado pelo seu GUID e retorna o ponteiro de interface para a interface solicitada no serviço. Classe `IServiceProviderImpl` fornece uma implementação padrão dessa interface.
+A `IServiceProvider` interface localiza um serviço especificado por seu GUID e retorna o ponteiro de interface para a interface solicitada no serviço. A `IServiceProviderImpl` classe fornece uma implementação padrão desta interface.
 
-`IServiceProviderImpl` Especifica um método: [QueryService](#queryservice), que cria ou acessa o serviço especificado e retorna um ponteiro de interface para a interface especificada para o serviço.
+`IServiceProviderImpl`especifica um método: [QueryService](#queryservice), que cria ou acessa o serviço especificado e retorna um ponteiro de interface para a interface especificada para o serviço.
 
-`IServiceProviderImpl` usa um mapa de serviço, começando com [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) e terminando com [END_SERVICE_MAP](service-map-macros.md#end_service_map).
+`IServiceProviderImpl`usa um mapa de serviço, começando com [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) e terminando com [END_SERVICE_MAP](service-map-macros.md#end_service_map).
 
-O mapa de serviço contém duas entradas: [SERVICE_ENTRY](service-map-macros.md#service_entry), que indica uma id de serviço especificado (SID) com suporte pelo objeto, e [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), que chama `QueryService` encadear a outro objeto.
+O mapa de serviço contém duas entradas: [SERVICE_ENTRY](service-map-macros.md#service_entry), que indica um sid (service id) de serviço especificado suportado pelo objeto, e [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), que chama `QueryService` para cadeia para outro objeto.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -58,9 +58,9 @@ O mapa de serviço contém duas entradas: [SERVICE_ENTRY](service-map-macros.md#
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom.h
 
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+## <a name="iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderImpl::QueryService
 
 Cria ou acessa o serviço especificado e retorna um ponteiro de interface para a interface especificada para o serviço.
 
@@ -74,42 +74,42 @@ STDMETHOD(QueryService)(
 ### <a name="parameters"></a>Parâmetros
 
 *guidService*<br/>
-[in] Ponteiro para um serviço SID (identificador).
+[em] Ponteiro para um identificador de serviço (SID).
 
 *riid*<br/>
-[in] Identificador da interface ao qual o chamador deve ter acesso.
+[em] Identificador da interface à qual o chamador deve ter acesso.
 
-*ppvObj*<br/>
-[out] Ponteiro indireto para a interface solicitada.
+*Ppvobj*<br/>
+[fora] Ponteiro indireto para a interface solicitada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O valor HRESULT retornado é um dos seguintes:
 
 |Valor retornado|Significado|
 |------------------|-------------|
-|S_OK|O serviço com êxito foi criado ou recuperado.|
+|S_OK|O serviço foi criado ou recuperado com sucesso.|
 |E_INVALIDARG|Um ou mais argumentos são inválidos.|
-|E_OUTOFMEMORY|Memória é insuficiente para criar o serviço.|
+|E_OUTOFMEMORY|A memória é insuficiente para criar o serviço.|
 |E_UNEXPECTED|Erro desconhecido.|
-|E_NOINTERFACE|A interface solicitada não é parte do serviço ou o serviço é desconhecido.|
+|E_NOINTERFACE|A interface solicitada não faz parte deste serviço, ou o serviço é desconhecido.|
 
 ### <a name="remarks"></a>Comentários
 
-`QueryService` Retorna um ponteiro indireto para a interface solicitada no serviço especificado. O chamador é responsável por liberar esse ponteiro quando não for mais necessário.
+`QueryService`retorna um ponteiro indireto para a interface solicitada no serviço especificado. O chamador é responsável por liberar este ponteiro quando ele não é mais necessário.
 
-Quando você chama `QueryService`, você passa um identificador do serviço (*guidService*) e um identificador de interface (*riid*). O *guidService* Especifica o serviço ao qual você deseja acesso, e o *riid* identifica uma interface que é parte do serviço. Em troca, você recebe um ponteiro indireto para a interface.
+Quando você `QueryService`liga, você passa tanto um identificador de serviço *(guidService)* quanto um identificador de interface *(riid).* O *guidService* especifica o serviço ao qual você deseja acesso, e o *riid* identifica uma interface que faz parte do serviço. Em troca, você recebe um ponteiro indireto para a interface.
 
 O objeto que implementa a interface também pode implementar interfaces que fazem parte de outros serviços. Considere o seguinte:
 
-- Algumas dessas interfaces podem ser opcionais. Nem todas as interfaces definidas na descrição de serviço estão necessariamente presentes em cada implementação do serviço ou em cada objeto retornado.
+- Algumas dessas interfaces podem ser opcionais. Nem todas as interfaces definidas na descrição do serviço estão necessariamente presentes em cada implementação do serviço ou em cada objeto retornado.
 
-- Ao contrário das chamadas para `QueryInterface`, passar um identificador de serviço diferentes não significa necessariamente que um objeto diferente do modelo de objeto de componente (COM) é retornado.
+- Ao contrário `QueryInterface`das chamadas para , passar um identificador de serviço diferente não significa necessariamente que um objeto COM (Component Object Model, modelo de objeto componente) diferente seja devolvido.
 
 - O objeto retornado pode ter interfaces adicionais que não fazem parte da definição do serviço.
 
-Dois serviços diferentes, como SID_SMyService e SID_SYourService, podem ambos especificam o uso da mesma interface, mesmo que a implementação da interface pode ter nada em comum entre os dois serviços. Isso funciona, porque uma chamada para `QueryService` (SID_SMyService, IID_IDispatch) pode retornar um objeto diferente que `QueryService` (SID_SYourService, IID_IDispatch). Identidade do objeto não será considerada quando você especificar um identificador de serviço diferentes.
+Dois serviços diferentes, como SID_SMyService e SID_SYourService, podem tanto especificar o uso da mesma interface, embora a implementação da interface possa não ter nada em comum entre os dois serviços. Isso funciona, pois `QueryService` uma chamada para (SID_SMyService, IID_IDispatch) pode retornar um objeto diferente do `QueryService` (SID_SYourService, IID_IDispatch). A identidade do objeto não é assumida quando você especifica um identificador de serviço diferente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -1,11 +1,15 @@
 ---
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +50,19 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49915a4017040200afca950cee5e1ac31184c589
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341054"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
 Testa e converte o formato de maiúsculas e minúsculas de um caractere multibyte.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -80,48 +85,50 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*C*<br/>
 Caracteres multibyte a serem convertidos.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retorna o caractere *c*convertido, se possível. Caso contrário, ele retornará o caractere *c* inalterado.
+Cada uma dessas funções retorna o caractere *c*convertido, se possível. Caso contrário, ele retorna o caractere *c* inalterado.
 
 ## <a name="remarks"></a>Comentários
 
-As funções testam um caractere *c* e, se possível, aplicam uma das conversões a seguir.
+As funções testam um caractere *c* e, se possível, aplicam uma das seguintes conversões.
 
 |Rotinas|Converte|
 |--------------|--------------|
-|**_mbctolower**, **_mbctolower_l**|Caracteres maiúsculos para caracteres minúsculos.|
-|**_mbctoupper**, **_mbctoupper_l**|Caracteres minúsculos para caracteres maiúsculos.|
+|**_mbctolower,** **_mbctolower_l.**|Caracteres maiúsculos para caracteres minúsculos.|
+|**_mbctoupper** **_mbctoupper_l**|Caracteres minúsculos para caracteres maiúsculos.|
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o sufixo **_L** usa a localidade atual para esse comportamento dependente de localidade; a versão com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão desta função sem o sufixo **_l** usa a localidade atual para este comportamento dependente da localidade; a versão com o **sufixo _l** é idêntica, exceto que ele usa o parâmetro local passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Nas versões anteriores, **_mbctolower** era chamado de **jtolower**e **_mbctoupper** era chamado de **jtoupper**. Para código novo, use os novos nomes.
+Nas versões anteriores, **_mbctolower** era chamado **de jtolower**, e **_mbctoupper** era chamado **de jtoupper**. Para código novo, use os novos nomes.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**Tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**Toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotinas|Cabeçalho necessário|
 |--------------|---------------------|
-|**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
-|**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
+|**_mbctolower,** **_mbctolower_l.**|\<mbstring.h>|
+|**_mbctoupper** **_mbctoupper_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

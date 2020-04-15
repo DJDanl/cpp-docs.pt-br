@@ -1,11 +1,13 @@
 ---
 title: isgraph, iswgraph, _isgraph_l, _iswgraph_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isgraph
 - iswgraph
 - _iswgraph_l
 - _isgraph_l
+- _o_isgraph
+- _o_iswgraph
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +42,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b10038a783f05512f12f25a231dd553a1863c143
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442971"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343822"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -71,16 +74,16 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*C*<br/>
 Inteiro a ser testado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere imprimível que não seja um espaço. **isgraph** retornará um valor diferente de zero se *c* for um caractere imprimível que não seja um espaço. **iswgraph** retornará um valor diferente de zero se *c* for um caractere largo imprimível diferente de um espaço de caracteres largo. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
+Cada uma dessas rotinas retorna não zero se *c* é uma representação particular de um caractere imprimível que não seja um espaço. **isgraph** retorna um valor não zero se *c* é um caractere imprimível diferente de um espaço. **iswgraph** retorna um valor não zero se *c* é um caractere amplo imprimível diferente de um espaço de caractere amplo. Cada uma dessas rotinas retorna 0 se *c* não satisfaz a condição de teste.
 
-As versões dessas funções que têm o sufixo **_L** usam a localidade que é passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o **sufixo _l** usam o local que é passado em vez do local atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **isgraph** e **_isgraph_l** será indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
+O comportamento do **isógrafo** e **_isgraph_l** é indefinido se *c* não é EOF ou na faixa 0 a 0xFF, inclusive. Quando uma biblioteca CRT depurada é usada e *c* não é um desses valores, as funções levantam uma afirmação.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -89,7 +92,11 @@ O comportamento de **isgraph** e **_isgraph_l** será indefinido se *c* não for
 |**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -98,9 +105,9 @@ O comportamento de **isgraph** e **_isgraph_l** será indefinido se *c* não for
 |**_isgraph_l**|\<ctype.h>|
 |**_iswgraph_l**|\<ctype.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _getw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getw
+- _o__getw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eddb68ae6108c8a66966472cebca60a9969b78d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954885"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344159"
 ---
 # <a name="_getw"></a>_getw
 
@@ -47,16 +49,18 @@ int _getw(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_getw** retorna o valor inteiro lido. Um valor de retorno de **EOF** indica um erro ou um fim de arquivo. No entanto, como o valor de **EOF** também é um valor inteiro legítimo, use **feof** ou **referenciador** para verificar uma condição de fim de arquivo ou de erro. Se o *fluxo* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **EOF**.
+**_getw** retorna o valor inteiro lido. Um valor de retorno do **EOF** indica um erro ou o fim do arquivo. No entanto, como o valor **EOF** também é um valor inteiro legítimo, use **feof** ou **ferror** para verificar uma condição de fim de arquivo ou erro. Se *o fluxo* for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e a função retorna **EOF**.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_getw** lê o próximo valor binário do tipo **int** do arquivo associado ao *fluxo* e incrementa o ponteiro de arquivo associado (se houver) para apontar para o próximo caractere não lido. **_getw** não assume nenhum alinhamento especial de itens no fluxo. Problemas com portabilidade podem ocorrer com **_getw** porque o tamanho do tipo **int** e a ordenação de bytes dentro do tipo **int** diferem entre os sistemas.
+A função **_getw** lê o próximo valor binário do tipo **int** a partir do arquivo associado ao *fluxo* e incrementa o ponteiro de arquivo associado (se houver um) para apontar para o próximo caractere não lido. **_getw** não assume nenhum alinhamento especial de itens no fluxo. Problemas com a portação podem ocorrer com **_getw** porque o tamanho do tipo **int** e a ordem de bytes dentro do tipo **int** diferem entre os sistemas.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -114,7 +118,7 @@ Line two.
 First data word in file: 0x656e694c
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_putw](putw.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _fread_nolock_s2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fread_nolock_s
+- _o__fread_nolock_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: e7fded9860b7a1364841d5f9b8a7e3aa478a8420
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3fb34a75a0281058a1d70ce41e1ce33b4b1bbb59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956900"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346142"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -48,28 +50,30 @@ size_t _fread_nolock_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*Buffer*<br/>
 Local de armazenamento de dados.
 
-*bufferSize*<br/>
+*Buffersize*<br/>
 Tamanho do buffer de destino em bytes.
 
-*elementSize*<br/>
+*Elementsize*<br/>
 Tamanho do item a ser lido em bytes.
 
 *elementCount*<br/>
 Número máximo de itens a serem lidos.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Consulte [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essa função é uma versão sem bloqueio do **fread_s**. É idêntico a **fread_s** , exceto que não é protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Esta função é uma versão não-travada de **fread_s**. É idêntico ao **fread_s** exceto que não está protegido contra interferências por outros segmentos. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -79,7 +83,7 @@ Essa função é uma versão sem bloqueio do **fread_s**. É idêntico a **fread
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

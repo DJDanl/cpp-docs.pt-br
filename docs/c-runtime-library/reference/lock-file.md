@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953310"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342104"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Bloqueia um objeto de **arquivo** para garantir a consistência de threads que acessam o objeto de **arquivo** simultaneamente.
+Bloqueia um objeto **FILE** para garantir a consistência dos segmentos que acessam o objeto **FILE** simultaneamente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parâmetros
 
-*file*<br/>
+*Arquivo*<br/>
 Identificador de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_lock_file** bloqueia o objeto de **arquivo** especificado pelo *arquivo*. O arquivo subjacente não está bloqueado pelo **_lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. Chamadas para **_lock_file** e **_unlock_file** devem ser combinadas em um thread.
+A função **_lock_file** bloqueia o objeto **FILE** especificado por *arquivo*. O arquivo subjacente não está bloqueado por **_lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. As chamadas para **_lock_file** e **_unlock_file** devem ser combinadas em uma linha.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

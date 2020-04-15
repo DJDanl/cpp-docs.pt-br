@@ -1,9 +1,11 @@
 ---
 title: mbtowc, _mbtowc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbtowc
 - _mbtowc_l
+- _o__mbtowc_l
+- _o_mbtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 655f5288738d2f2329b50a27381c00cb06e35e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 99659def42cba4e832c26b1535706ea576931969
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952007"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338791"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -58,25 +61,27 @@ int _mbtowc_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*wchar*<br/>
-Endereço de um caractere largo (tipo **wchar_t**).
+*Wchar*<br/>
+Endereço de um caractere amplo (tipo **wchar_t**).
 
-*mbchar*<br/>
+*Mbchar*<br/>
 Endereço de uma sequência de bytes (um caractere multibyte).
 
-*count*<br/>
+*contagem*<br/>
 O número de bytes a serem verificados.
 
-*locale*<br/>
+*Localidade*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Se **mbchar** não for **nulo** e se o objeto que *mbchar* aponta para formar um caractere multibyte válido, **mbtowc** retornará o comprimento em bytes do caractere multibyte. Se *mbchar* for **nulo** ou o objeto ao qual ele aponta for um caractere nulo de caractere largo (L ' \ 0 '), a função retornará 0. Se o objeto que *mbchar* aponta para não formar um caractere multibyte válido dentro dos primeiros caracteres de *contagem* , ele retornará-1.
+Se **mbchar** não for **NULL** e se o objeto que *mbchar* aponta para formar um caractere multibyte válido, **mbtowc** retorna o comprimento em bytes do caractere multibyte. Se *mbchar* for **NULL** ou o objeto para o que ele aponta for um caractere nulo de caractere amplo (L'\0'), a função retorna 0. Se o objeto que *mbchar* aponta não formar um caractere multibyte válido dentro dos caracteres da primeira *contagem,* ele retorna -1.
 
 ## <a name="remarks"></a>Comentários
 
-A função **mbtowc** converte a *contagem* ou menos bytes apontados por *mbchar*, se *mbchar* não for **NULL**, para um caractere largo correspondente. **mbtowc** armazena o caractere largo resultante em *WCHAR,* se *WCHAR* não for **NULL**. **mbtowc** não examina mais de **MB_CUR_MAX** bytes. **mbtowc** usa a localidade atual para comportamento dependente de localidade; **_mbtowc_l** é idêntico, exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A função **mbtowc** *converte a contagem* ou menos bytes apontados por *mbchar*, se *mbchar* não é **NULL**, para um caractere amplo correspondente. **mbtowc** armazena o caractere amplo resultante em *wchar,* se *wchar* não é **NULL**. **mbtowc** não examina mais do que **MB_CUR_MAX** bytes. **mbtowc** usa o local atual para comportamento dependente de localidades; **_mbtowc_l** é idêntica, exceto que usa o local passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -85,9 +90,9 @@ A função **mbtowc** converte a *contagem* ou menos bytes apontados por *mbchar
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -147,7 +152,7 @@ Attempt to convert a NULL pointer to a wide character:
    Bytes converted: 0
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

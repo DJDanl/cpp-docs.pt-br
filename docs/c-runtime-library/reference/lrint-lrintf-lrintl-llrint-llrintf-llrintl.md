@@ -1,6 +1,6 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lrint
 - lrintl
@@ -8,6 +8,12 @@ api_name:
 - llrint
 - llrintf
 - llrintl
+- _o_llrint
+- _o_llrintf
+- _o_llrintl
+- _o_lrint
+- _o_lrintf
+- _o_lrintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6283cffaa094af4484d48781b5bb92d0339d38d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857743"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341662"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -107,28 +114,30 @@ o valor a ser arredondado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, retorna o valor integral arredondado de *x*.
+Se for bem sucedido, retorna o valor integral arredondado de *x*.
 
-|Problema|Valor de|
+|Problema|Retorno|
 |-----------|------------|
-|*x* está fora do intervalo do tipo de retorno<br /><br /> *x* = ±∞<br /><br /> *x* = Nan|Gera **FE_INVALID** e retorna zero (0).|
+|*x* está fora do intervalo do tipo de retorno<br /><br /> *x* = ±・<br /><br /> *x* = NaN|Aumenta **FE_INVALID** e retorna zero (0).|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **lrint** e **llrint** que têm tipos **float** e **Long** **Double** . Em um programa C, **lrint** e **llrint** sempre levam um **duplo**.
+Como c++ permite sobrecarga, você pode chamar sobrecargas de **lrint** e **llrint** que tomam **flutuação** e tipos **duplos** **longos.** Em um programa C, **inrint** e **llrint** sempre tomam um **duplo**.
 
-Se *x* não representar o equivalente de ponto flutuante de um valor integral, essas funções aumentarão **FE_INEXACT**.
+Se *x* não representa o equivalente a ponto flutuante de um valor integral, essas funções aumentam **FE_INEXACT**.
 
-**Específico da Microsoft**: quando o resultado está fora do intervalo do tipo de retorno, ou quando o parâmetro é um Nan ou infinito, o valor de retorno é definido como implementação. O compilador da Microsoft retorna um valor zero (0).
+**Específico da Microsoft**: Quando o resultado está fora do intervalo do tipo de retorno ou quando o parâmetro é um NaN ou infinito, o valor de retorno é definido. O compilador da Microsoft retorna um valor zero (0).
 
-## <a name="requirements"></a>Requisitos do
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+|**Intint**, **intf**, **intl**, **llrint,** **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>

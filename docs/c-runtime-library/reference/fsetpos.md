@@ -1,8 +1,9 @@
 ---
 title: fsetpos
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fsetpos
+- _o_fsetpos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-ms.openlocfilehash: f44ab1b35c9e598f82dbc0af96979476ee353541
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 22b8cebd0154c0dbfc3d21843380ebc9a139059a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956518"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345726"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -47,21 +49,23 @@ int fsetpos(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-*pos*<br/>
+*Pos*<br/>
 Armazenamento do indicador de posição.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, **fsetpos** retornará 0. Em caso de falha, a função retorna um valor diferente de zero e define **errno** como uma das constantes de manifesto a seguir (definidas em errno. H): **EBADF**, o que significa que o arquivo não está acessível ou o objeto para o qual o *fluxo* aponta não é uma estrutura de arquivo válida; ou **EINVAL**, o que significa que um valor inválido para *Stream* ou *pos* foi passado. Se um parâmetro inválido for passado, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md).
+Se for bem sucedido, **fsetpos** retorna 0. Na falha, a função retorna um valor não zero e define **errno** a uma das seguintes constantes de manifesto (definidas em ERRNO. H): **EBADF**, o que significa que o arquivo não está acessível ou o objeto que o *fluxo* aponta não é uma estrutura de arquivo válida; ou **EINVAL,** o que significa que um valor inválido para *fluxo* ou *pos* foi passado. Se um parâmetro inválido for passado, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
-Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
+Veja [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses, e outros, códigos de devolução.
 
 ## <a name="remarks"></a>Comentários
 
-A função **fsetpos** define o indicador de posição de arquivo para *fluxo* para o valor de *pos*, que é obtido em uma chamada anterior para **fgetpos** em relação ao *fluxo*. A função limpa o indicador de fim de arquivo e desfaz os efeitos de [ungetc](ungetc-ungetwc.md) no *fluxo*. Depois de chamar **fsetpos**, a próxima operação no *fluxo* pode ser entrada ou saída.
+A função **fsetpos** define o indicador de posição de arquivo para *fluxo* para o valor de *pos*, que é obtido em uma chamada anterior para **fgetpos** contra *fluxo*. A função limpa o indicador de fim de arquivo e desfaz quaisquer efeitos de [ungetc](ungetc-ungetwc.md) no *fluxo*. Depois de chamar **fsetpos,** a próxima operação no *fluxo* pode ser entrada ou saída.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -69,13 +73,13 @@ A função **fsetpos** define o indicador de posição de arquivo para *fluxo* p
 |--------------|---------------------|
 |**fsetpos**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
 Veja o exemplo de [fgetpos](fgetpos.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetpos](fgetpos.md)<br/>

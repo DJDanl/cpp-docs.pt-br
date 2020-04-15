@@ -1,10 +1,12 @@
 ---
 title: _create_locale, _wcreate_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _create_locale
 - __create_locale
 - _wcreate_locale
+- _o__create_locale
+- _o__wcreate_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 611eaf342776b9a0f57c4f55c52a841c3fd13fb5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348260"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -55,44 +58,46 @@ _locale_t _wcreate_locale(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*category*<br/>
+*Categoria*<br/>
 Categoria.
 
-*locale*<br/>
+*Localidade*<br/>
 Especificador de localidade.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se uma *localidade* e *categoria* válidas forem fornecidas, o retornará as configurações de localidade especificadas como um objeto **_locale_t** . As configurações de localidade atual do programa não são alteradas.
+Se for dado um *local* e *categoria* válidos, retorna as configurações de local especificadas como um **objeto _locale_t.** As configurações de localidade atual do programa não são alteradas.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_create_locale** permite que você crie um objeto que representa determinadas configurações específicas de região, para uso em versões específicas de localidade de muitas funções do CRT (funções com o sufixo **_L** ). O comportamento é semelhante ao **setlocale**, exceto que, em vez de aplicar as configurações de localidade especificadas ao ambiente atual, as configurações são salvas em uma estrutura de **_locale_t** retornada. A estrutura de **_locale_t** deve ser liberada usando [_free_locale](free-locale.md) quando não for mais necessária.
+A função **_create_locale** permite criar um objeto que represente determinadas configurações específicas da região, para uso em versões específicas locais de muitas funções CRT (funções com o **sufixo _l).** O comportamento é semelhante ao **setlocale,** exceto que, em vez de aplicar as configurações de localização especificadas no ambiente atual, as configurações são salvas em uma estrutura **_locale_t** que é devolvida. A estrutura **_locale_t** deve ser liberada usando [_free_locale](free-locale.md) quando não for mais necessário.
 
-**_wcreate_locale** é uma versão de caractere largo do **_create_locale**; o argumento de *localidade* para **_wcreate_locale** é uma cadeia de caracteres largos. **_wcreate_locale** e **_create_locale** se comportar de forma idêntica.
+**_wcreate_locale** é uma versão ampla do **_create_locale;** o argumento *local* para **_wcreate_locale** é uma seqüência de caracteres amplo. **_wcreate_locale** e **_create_locale** se comportam de forma idêntica.
 
-O argumento *Category* especifica as partes do comportamento específico da localidade que são afetadas. Os sinalizadores usados para a *categoria* e as partes do programa que eles afetam são mostrados nesta tabela:
+O argumento *da categoria* especifica as partes do comportamento específico do local que são afetadas. As bandeiras utilizadas para *a categoria* e as partes do programa que afetam são como mostrado nesta tabela:
 
-| sinalizador de *categoria* | Afeta |
+| *bandeira categoria* | Afeta |
 |-----------------|---------|
-| **LC_ALL** |Todas as categorias, conforme listado abaixo. |
-| **LC_COLLATE** |As funções **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**e **wcsxfrm** . |
-| **LC_CTYPE** | As funções de manipulação de caracteres (exceto **IsDigit**, **isxdigit**, **mbstowcs**e **mbtowc**, que não são afetadas). |
-| **LC_MONETARY** | Informações de formatação monetária retornadas pela função **localeconv** . |
-| **LC_NUMERIC** | Caractere de ponto decimal para as rotinas de saída formatadas (como **printf**), para as rotinas de conversão de dados e para as informações de formatação não monetária retornadas por **localeconv**. Além do caractere de ponto decimal, **LC_NUMERIC** define o separador de milhar e a cadeia de caracteres de controle de agrupamento retornada por [localeconv](localeconv.md). |
-| **LC_TIME** | As funções **strftime** e **wcsftime** . |
+| **Lc_all** |Todas as categorias, conforme listado abaixo. |
+| **LC_COLLATE** |O **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, e **wcsxfrm.** |
+| **LC_CTYPE** | As funções de manuseio de caracteres (exceto **isdigit**, **isxdigit,** **mbstowcs**e **mbtowc**, que não são afetadas). |
+| **LC_MONETARY** | Informações de formatação monetária retornadas pela função **localeconv.** |
+| **LC_NUMERIC** | Caractere de ponto decimal para as rotinas de saída formatadas (como **printf),** para as rotinas de conversão de dados e para as informações de formatação não monetárias retornadas pela **localeconv**. Além do caractere de ponto decimal, **LC_NUMERIC** define o separador de milhares e a seqüência de controle de agrupamento retornada por [localeconv](localeconv.md). |
+| **LC_TIME** | As funções **strftime** e **wcsftime.** |
 
-Essa função valida os parâmetros de *categoria* e *localidade* . Se o parâmetro Category não for um dos valores fornecidos na tabela anterior ou se *locale* for **NULL**, a função retornará **NULL**.
+Esta função valida os parâmetros de *categoria* *e local.* Se o parâmetro de categoria não for um dos valores dados na tabela anterior ou se a *localidade* for **NULA,** a função retorna **NULA**.
 
-O argumento de *localidade* é um ponteiro para uma cadeia de caracteres que especifica a localidade. Para obter informações sobre o formato do argumento de *localidade* , consulte [nomes de localidade, idiomas e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
+O *argumento local é* um ponteiro para uma string que especifica o local. Para obter informações sobre o formato do argumento *local,* consulte [Nomes locais, idiomas e strings de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-O argumento de *localidade* pode usar um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres de idioma e um código de país/região, uma página de código ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto de nomes de localidade disponíveis, idiomas, códigos de país/região e páginas de código inclui tudo o que é suportado pela API NLS do Windows. O conjunto de nomes de localidade com suporte pelo **_create_locale** é descrito em [nomes de localidade, linguagens e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte do **_create_locale** está listado em cadeias de caracteres de [idioma](../../c-runtime-library/language-strings.md) e cadeias de [país/região](../../c-runtime-library/country-region-strings.md).
+O argumento *local* pode ter um nome local, uma seqüência de idiomas, uma seqüência de idiomas e código de país/região, uma página de código ou uma seqüência de idiomas, código de país/região e página de código. O conjunto de nomes locais disponíveis, idiomas, códigos de país/região e páginas de código inclui tudo o que é suportado pela API do Windows NLS. O conjunto de nomes locais suportados por **_create_locale** são descritos em [Nomes locais, idiomas e strings de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de strings de idioma e país/região suportados por **_create_locale** estão listados em [Strings de idioma](../../c-runtime-library/language-strings.md) e [strings país/região](../../c-runtime-library/country-region-strings.md).
 
 Para obter mais informações sobre as configurações de localidade, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 
-O nome anterior dessa função, **__create_locale** (com dois sublinhados à esquerda), foi preterido.
+O nome anterior desta função, **__create_locale** (com dois sublinhados principais), foi preterido.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -101,7 +106,7 @@ O nome anterior dessa função, **__create_locale** (com dois sublinhados à esq
 |**_create_locale**|\<locale.h>|
 |**_wcreate_locale**|\<locale.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -167,12 +172,12 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 
 ## <a name="see-also"></a>Confira também
 
-[Nomes de localidades, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nomes locais, idiomas e strings país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Cadeias de caracteres de idioma](../../c-runtime-library/language-strings.md)<br/>
 [Cadeias de caracteres de país/região](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
-[setlocale](../../preprocessor/setlocale.md)<br/>
+[Setlocale](../../preprocessor/setlocale.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

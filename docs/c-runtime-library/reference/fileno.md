@@ -1,8 +1,9 @@
 ---
 title: _fileno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fileno
+- _o__fileno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 586e390e100f5dc46a49b99c007016cf23ac68f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ec4f08e499efe82b0ee35235e6e2d86dbb9bab66
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957211"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346840"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -48,21 +50,23 @@ int _fileno(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_fileno** retorna o descritor de arquivo. Nenhum erro é retornado. O resultado será indefinido se o *fluxo* não especificar um arquivo aberto. Se Stream for **NULL**, **_fileno** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor -1 e definirá **errno** como **EINVAL**.
+**_fileno** retorna o descritor do arquivo. Nenhum erro é retornado. O resultado é indefinido se *o fluxo* não especificar um arquivo aberto. Se o fluxo for **NULO,** **_fileno** invoca o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor -1 e definirá **errno** como **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
-> Se **stdout** ou **stderr** não estiver associado a um fluxo de saída (por exemplo, em um aplicativo do Windows sem uma janela de console), o descritor de arquivo retornado será-2. Nas versões anteriores, o descritor de arquivo retornado era –1. Essa alteração permite que aplicativos faça a distinção dessa condição de um erro.
+> Se **stdout** ou **stderr** não estiver associado a um fluxo de saída (por exemplo, em um aplicativo do Windows sem uma janela de console), o descritor de arquivo retornado é -2. Nas versões anteriores, o descritor de arquivo retornado era –1. Essa alteração permite que aplicativos faça a distinção dessa condição de um erro.
 
 ## <a name="remarks"></a>Comentários
 
-A rotina **_fileno** retorna o descritor de arquivo atualmente associado ao *fluxo*. Essa rotina é implementada como uma função e uma macro. Para obter informações sobre como escolher a implementação, consulte [Escolher entre funções e macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+A **rotina _fileno** retorna o descritor de arquivos atualmente associado ao *fluxo*. Essa rotina é implementada como uma função e uma macro. Para obter informações sobre como escolher a implementação, consulte [Escolher entre funções e macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -96,7 +100,7 @@ The file descriptor for stdout is 1
 The file descriptor for stderr is 2
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
