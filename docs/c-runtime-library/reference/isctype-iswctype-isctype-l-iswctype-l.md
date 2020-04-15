@@ -1,11 +1,15 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
+- _o__isctype
+- _o__isctype_l
+- _o__iswctype_l
+- _o_iswctype
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +46,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5beedd8a5da6848fc8c43ab1a27ee52402fe394e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954393"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343845"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Testa *c* para a propriedade CType especificada pelo argumento *desc* . Para cada valor válido de *desc*, há uma rotina equivalente de classificação de caracteres largos.
+Testes *c* para a propriedade ctype especificada pelo argumento *desc.* Para cada valor válido de *desc,* há uma rotina de classificação de caracteres amplos equivalente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -77,27 +82,31 @@ int _iswctype_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*C*<br/>
 Inteiro a ser testado.
 
-*desc*<br/>
+*Desc*<br/>
 Propriedade a ser testada. Normalmente, é recuperado usando ctype ou [wctype](wctype.md).
 
-*locale*<br/>
+*Localidade*<br/>
 A localidade a ser usado para qualquer teste que depender da localidade.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_isctype** e **iswctype** retornarão um valor diferente de zero se *c* tiver a propriedade especificada por *desc* na localidade atual ou 0 se não tiver. As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_isctype** e **iswctype** retornam um valor não zero se *c* tiver a propriedade especificada por *desc* no local atual ou 0 se não o fizer. As versões dessas funções com o **sufixo _l** são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **_isctype** e **_isctype_l** será indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
+O comportamento de **_isctype** e **_isctype_l** é indefinido se *c* não é EOF ou na faixa 0 a 0xFF, inclusive. Quando uma biblioteca CRT depurada é usada e *c* não é um desses valores, as funções levantam uma afirmação.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|N/D|**_isctype**|N/D|**_iswctype**|
-|N/D|**_isctype_l**|N/D|**_iswctype_l**|
+|n/d|**_isctype**|n/d|**_iswctype**|
+|n/d|**_isctype_l**|n/d|**_iswctype_l**|
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -110,11 +119,11 @@ O comportamento de **_isctype** e **_isctype_l** será indefinido se *c* não fo
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>

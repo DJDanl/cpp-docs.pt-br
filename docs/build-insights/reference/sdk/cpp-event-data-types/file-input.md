@@ -1,6 +1,6 @@
 ---
-title: Classe de entrada de dados
-description: A C++ referência da classe de entrada do SDK do Build insights.
+title: Classe FileInput
+description: A referência da classe C++ Build Insights SDK FileInput.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: bea2cf72ca2a83a9cd630f8a9ccefb87dd4b7ff1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 642236d3e67465ed38508cb24c8cd698ae880065
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324790"
 ---
-# <a name="fileinput-class"></a>Classe de entrada de dados
+# <a name="fileinput-class"></a>Classe FileInput
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A classe `FileInput` é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a um evento [FILE_INPUT](../event-table.md#file-input) .
+A `FileInput` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar com um evento [FILE_INPUT.](../event-table.md#file-input)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,18 +52,18 @@ public:
 
 ## <a name="members"></a>Membros
 
-Junto com os membros herdados de sua classe base [SimpleEvent](simple-event.md) , a classe `FileInput` contém os seguintes membros:
+Juntamente com os membros herdados de `FileInput` sua classe base [SimpleEvent,](simple-event.md) a classe contém os seguintes membros:
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-[Entrada de dados](#file-input)
+[Entrada de arquivos](#file-input)
 
-### <a name="functions"></a>{1&gt;Funções&lt;1}
+### <a name="functions"></a>Funções
 
-[Tipo](#type) de
-de [caminho](#path)
+[Path](#path)
+[Tipo](#type) de caminho
 
-## <a name="file-input"></a>Entrada de dados
+## <a name="fileinput"></a><a name="file-input"></a>Entrada de arquivos
 
 ```cpp
 FileInput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileInput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*event*\
-Um evento [FILE_INPUT](../event-table.md#file-input) .
+*Evento*\
+Um evento [FILE_INPUT.](../event-table.md#file-input)
 
-## <a name="path"></a> Path
+## <a name="path"></a><a name="path"></a>Caminho
 
 ```cpp
 const wchar_t Path() const;
@@ -84,7 +84,7 @@ const wchar_t Path() const;
 
 O caminho absoluto para o arquivo de entrada.
 
-## <a name="type"></a>Escreva
+## <a name="type"></a>Tipo <a name="type"></a>
 
 ```cpp
 Type Type() const;

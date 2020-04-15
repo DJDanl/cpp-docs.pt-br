@@ -1,6 +1,6 @@
 ---
 title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ctime64
 - _wctime32
@@ -8,6 +8,8 @@ api_name:
 - _wctime64
 - _ctime32
 - _wctime
+- _o__wctime32
+- _o__wctime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -53,12 +56,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: ee802e9e6ddef839f08cf6dab6573f404328b2c6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6056ad8bac6561c0ce2902928364996b2be9ae92
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937753"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348244"
 ---
 # <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -78,23 +81,23 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 ### <a name="parameters"></a>Parâmetros
 
 *sourceTime*<br/>
-Ponteiro para o tempo armazenado a ser convertido.
+Ponteiro para tempo armazenado para converter.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o resultado da cadeia de caracteres. **NULL** será retornado se:
+Um ponteiro para o resultado da cadeia de caracteres. **NULL** será devolvido se:
 
-- *sourcetime* representa uma data anterior à meia-noite, 1º de janeiro de 1970, UTC.
+- *sourceTime* representa uma data antes da meia-noite de 1º de janeiro de 1970, UTC.
 
-- Se você usar **_ctime32** ou **_wctime32** e *sourcetime* representa uma data posterior a 23:59:59, 18 de janeiro de 2038, UTC.
+- Se você usar **_ctime32** ou **_wctime32** e *sourceTime* representa uma data após 23:59:59 janeiro 18, UTC.
 
-- Se você usar **_ctime64** ou **_wctime64** e *sourcetime* representa uma data após 23:59:59, 31 de dezembro de 3000, UTC.
+- Se você usar **_ctime64** ou **_wctime64** e *sourceTime* representa uma data após 23:59:59, 31 de dezembro de 3000, UTC.
 
-**CTime** é uma função embutida que é avaliada como **_ctime64** e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo **time_t**de 32 bits, você pode definir **_USE_32BIT_TIME_T**. Isso fará com que o **CTime** seja avaliado para **_ctime32**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
+**ctime** é uma função inline que avalia **para _ctime64** e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo **time_t**de 32 bits, você pode definir **_USE_32BIT_TIME_T**. Fazer isso fará com **que ctime** para avaliar para **_ctime32**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
 
 ## <a name="remarks"></a>Comentários
 
-A função **CTime** converte um valor de hora armazenado como um valor de [time_t](../../c-runtime-library/standard-types.md) em uma cadeia de caracteres. O valor de *sourcetime* geralmente é obtido de uma chamada para [time](time-time32-time64.md), que retorna o número de segundos decorridos desde a meia-noite (00:00:00), 1 de janeiro de 1970, tempo universal coordenado (UTC). A cadeia de caracteres do valor retornado contém exatamente 26 caracteres e tem o formato:
+A função **ctime** converte um valor de tempo armazenado como um [valor time_t](../../c-runtime-library/standard-types.md) em uma seqüência de caracteres. O valor *sourceTime* é geralmente obtido a partir de uma chamada para [o tempo](time-time32-time64.md), que retorna o número de segundos decorridos desde meia-noite (00:00:00), 1 de janeiro de 1970, tempo universal coordenado (UTC). A cadeia de caracteres do valor retornado contém exatamente 26 caracteres e tem o formato:
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -102,13 +105,15 @@ Wed Jan 02 02:03:55 1980\n\0
 
 Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha ('\n') e o caractere nulo ('\0') ocupam as duas últimas posições da cadeia de caracteres.
 
-A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)e [localtime](localtime-localtime32-localtime64.md) para obter informações sobre como configurar a hora local e a função [_tzset](tzset.md) para obter detalhes sobre como definir o ambiente de fuso horário e as variáveis globais.
+A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [de hora,](time-time32-time64.md) [_ftime](ftime-ftime32-ftime64.md)e [local](localtime-localtime32-localtime64.md) para obter informações sobre a configuração do horário local e a função [_tzset](tzset.md) para obter detalhes sobre a definição do ambiente de fuso horário e variáveis globais.
 
-Uma chamada para **CTime** modifica o buffer único alocado estaticamente usado pelas funções **gmtime** e **localtime** . Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior. **CTime** compartilha um buffer estático com a função **asctime** . Assim, uma chamada para **CTime** destrói os resultados de qualquer chamada anterior para **asctime**, **localtime**ou **gmtime**.
+Uma chamada para **ctime** modifica o buffer único alocado estáticamente usado pelas funções **gmtime** e **localtime.** Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior. **ctime** compartilha um buffer estático com a função **asctime.** Assim, uma chamada para **ctime** destrói os resultados de qualquer chamada anterior para **asctime**, **localtime**ou **gmtime**.
 
-**_wctime** e **_wctime64** são a versão de caractere largo do **CTime** e do **_ctime64**; retornando um ponteiro para uma cadeia de caracteres largos. Caso contrário, **_ctime64**, **_wctime**e **_wctime64** se comportam de forma idêntica ao **CTime**.
+**_wctime** e **_wctime64** são a versão de grande caráter de **ctime** e **_ctime64;** retornando um ponteiro para a seqüência de caracteres largos. Caso contrário, **_ctime64,** **_wctime**e **_wctime64** se comportem de forma idêntica ao **ctime**.
 
-Essas funções validam seus parâmetros. Se *sourcetime* for um ponteiro NULL ou se o valor de *sourcetime* for negativo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão **NULL** e definirá **errno** como **EINVAL**.
+Essas funções validam seus parâmetros. Se *sourceTime* for um ponteiro nulo ou se o valor *sourceTime* for negativo, essas funções invocarão o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, as funções retornam **NULL** e definem **errno** para **EINVAL**.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -129,7 +134,7 @@ Essas funções validam seus parâmetros. Se *sourcetime* for um ponteiro NULL o
 |**_wctime32**|\<time.h> ou \<wchar.h>|
 |**_wctime64**|\<time.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -158,9 +163,9 @@ int main( void )
 The time is Wed Feb 13 16:04:43 2002
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>

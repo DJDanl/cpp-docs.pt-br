@@ -1,8 +1,9 @@
 ---
 title: fgetpos
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fgetpos
+- _o_fgetpos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0c16150a6240068e1453ec90b396c87ab9ece5a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346919"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -47,19 +49,21 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 O fluxo de destino.
 
-*pos*<br/>
+*Pos*<br/>
 Armazenamento do indicador de posição.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, **fgetpos** retornará 0. Em caso de falha, ele retorna um valor diferente de zero e define **errno** como uma das constantes de manifesto a seguir (definidas em STDIO. H): **EBADF**, que significa que o fluxo especificado não é um ponteiro de arquivo válido ou não está acessível, ou **EINVAL**, o que significa que o valor de *fluxo* ou o valor de *PDV* é inválido, como se um deles for um ponteiro nulo. Se *Stream* ou *pos* for um ponteiro **NULL** , a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
+Se for bem **sucedido, fgetpos** retorna 0. No fracasso, ele retorna um valor não zero e define **errno** a uma das seguintes constantes de manifesto (definidas em STDIO. H): **EBADF**, o que significa que o fluxo especificado não é um ponteiro de arquivo válido ou não é acessível, ou **EINVAL,** o que significa que o valor do *fluxo* ou o valor do *pos* é inválido, como se qualquer um deles fosse um ponteiro nulo. Se *o fluxo* ou *pos* for um ponteiro **NULL,** a função invoca o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **fgetpos** Obtém o valor atual do indicador de posição de arquivo do argumento de *fluxo* e o armazena no objeto apontado pelo *PDV*. A função **fsetpos** pode usar posteriormente as informações armazenadas no *PDV* para redefinir o ponteiro do argumento de *fluxo* para sua posição no momento em que **fgetpos** foi chamado. O valor de *PDV* é armazenado em um formato interno e destina-se ao uso somente por **fgetpos** e **fsetpos**.
+A função **fgetpos** obtém o valor atual do indicador de posição de arquivo do argumento do *fluxo* e armazena-o no objeto apontado por *pos*. A função **fsetpos** pode usar posteriormente informações armazenadas em *pos* para redefinir o ponteiro do argumento de *fluxo* para sua posição no momento em **que fgetpos** foi chamado. O valor *do pos* é armazenado em formato interno e destina-se a ser usado apenas por **fgetpos** e **fsetpos**.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -67,7 +71,7 @@ A função **fgetpos** Obtém o valor atual do indicador de posição de arquivo
 |--------------|---------------------|
 |**fgetpos**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -124,7 +128,7 @@ after fgetpos: gets a stream
 after fsetpos: gets a stream
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fsetpos](fsetpos.md)<br/>

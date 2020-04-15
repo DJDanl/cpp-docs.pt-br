@@ -1,9 +1,11 @@
 ---
 title: _ismbbblank, _ismbbblank_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbblank_l
 - _ismbbblank
+- _o__ismbbblank
+- _o__ismbbblank_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,24 +18,25 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 21f4c88b00774159f8e6945973641e67718494e6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 819ea45bb9d5775bb59764b587a75e368fa0e80d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954239"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343743"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
 Determina se um caractere multibyte especificado é um caractere em branco.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,15 +52,19 @@ int _ismbbblank_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*C*<br/>
 Inteiro a ser testado.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_ismbbblank** retornará um valor diferente de zero se *c* representar um caractere de espaço (0x20), um caractere de tabulação horizontal (0x09) ou um caractere específico de localidade que é usado para separar palavras dentro de uma linha de texto para a qual **isspace** é verdadeiro; caso contrário, retornará 0. **_ismbbblank** usa a localidade atual para qualquer comportamento dependente de localidade. **_ismbbblank_l** é idêntico, exceto que ele usa a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbbblank** retorna um valor não zero se *c* representar um caractere espaço (0x20), um caractere de guia horizontal (0x09) ou um caractere específico de localidade que é usado para separar palavras dentro de uma linha de texto para a qual **o espaço** é verdadeiro; caso contrário, retorna 0. **_ismbbblank** usa o local atual para qualquer comportamento dependente do local. **_ismbbblank_l** é idêntica, exceto que em vez disso usa o local que passou dentro Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -68,7 +75,7 @@ Localidade a usar.
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[Rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

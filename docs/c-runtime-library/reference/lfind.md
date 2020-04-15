@@ -1,8 +1,9 @@
 ---
 title: _lfind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lfind
+- _o__lfind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 287cbd8bc9cc567a4a0d5b9505d57098197bc545
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342173"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -54,7 +56,7 @@ void *_lfind(
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*<br/>
+*Chave*<br/>
 O objeto a ser pesquisado.
 
 *base*<br/>
@@ -66,20 +68,22 @@ Número de elementos da matriz.
 *width*<br/>
 Largura dos elementos da matriz.
 
-*compare*<br/>
+*Comparar*<br/>
 Ponteiro para a rotina de comparação. O primeiro parâmetro é um ponteiro para a chave a ser pesquisada. O segundo parâmetro é um ponteiro para um elemento de matriz a ser comparado com a chave.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a chave for encontrada, **_lfind** retornará um ponteiro para o elemento da matriz na *base* que corresponde à *chave*. Se a chave não for encontrada, **_lfind** retornará **NULL**.
+Se a chave for encontrada, **_lfind** retorna um ponteiro para o elemento da matriz na *base* que corresponde à *tecla*. Se a chave não for encontrada, **_lfind** retorna **NULL**.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_lfind** executa uma pesquisa linear para a *chave* de valor em uma matriz de elementos *Number* , cada um dos bytes de *largura* . Ao contrário de **bsearch**, **_lfind** não exige que a matriz seja classificada. O argumento *base* é um ponteiro para a base da matriz a ser pesquisada. O argumento *Compare* é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e, em seguida, retorna um valor especificando sua relação. **_lfind** chama a rotina de *comparação* uma ou mais vezes durante a pesquisa, passando ponteiros para dois elementos de matriz em cada chamada. A rotina *Compare* deve comparar os elementos e, em seguida, retornar diferente de zero (ou seja, os elementos são diferentes) ou 0 (o que significa que os elementos são idênticos).
+A função **_lfind** realiza uma busca linear pela *chave* de valor em uma matriz de elementos *numéricos,* cada um dos bytes de *largura.* Ao contrário **do bsearch,** **_lfind** não exige que a matriz seja classificada. O argumento *base* é um ponteiro para a base da matriz a ser pesquisada. O argumento *compare* é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de array e, em seguida, retorna um valor especificando seu relacionamento. **_lfind** chama a rotina *de comparação* uma ou mais vezes durante a pesquisa, passando ponteiros para dois elementos de matriz em cada chamada. A rotina *de comparação* deve comparar os elementos e, em seguida, retornar não zero (o que significa que os elementos são diferentes) ou 0 (o que significa que os elementos são idênticos).
 
-Essa função valida seus parâmetros. Se *Compare*, *Key* ou *Number* for **NULL**ou se *base* for **NULL** e *Number* for zero, ou se *Width* for menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**.
+Essa função valida seus parâmetros. Se *comparar*, *a chave* ou o *número* for **NULO,** ou se *a base* for **NULA** e *o número* não for zero, ou se a *largura* for menor que zero, o manipulador de parâmetros inválido suscitado, conforme descrito na Validação [de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e a função retorna **NULL**.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -87,7 +91,7 @@ Essa função valida seus parâmetros. Se *Compare*, *Key* ou *Number* for **NUL
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_lfind.c
@@ -124,7 +128,7 @@ int main( )
 Hello found
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>

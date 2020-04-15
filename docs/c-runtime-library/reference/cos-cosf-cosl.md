@@ -1,10 +1,11 @@
 ---
 title: cos, cosf, cosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cos
 - cosf
 - cosl
+- _o_cos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 536d9a235ef0d4b2bb68362645b5b4e03d8f37a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170249"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348463"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -58,14 +60,14 @@ float cos( float x );  // C++ only
 long double cos( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
 Ângulo em radianos.
 
 ## <a name="return-value"></a>Valor retornado
 
-O cosseno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
+O cosseno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a -263, ocorre uma perda de significância no resultado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -74,19 +76,21 @@ O cosseno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma 
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **cos** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, o **cos** sempre usa e retorna um **Double**.
+Como c++ permite sobrecarga, você pode chamar sobrecargas de **cos** que tomam e retornam **flutuam** **ou** **longos** valores duplos. Em um programa C, **porque** sempre leva e retorna um **duplo**.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|---------------------|-|
-|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> ou \<math.h>|
+|**cos**, **cosh,** **cosf**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
-Veja o exemplo em [sin, sinf, sinl](sin-sinf-sinl.md).
+Veja o exemplo em [pecado, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Confira também
 

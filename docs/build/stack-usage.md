@@ -2,63 +2,63 @@
 title: Uso da pilha x64
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b598c33fbdd56630ca3e5ef0da551f38a73baa26
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417253"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335528"
 ---
 # <a name="x64-stack-usage"></a>Uso da pilha x64
 
-Toda a memória além do endereço atual do RSP é considerada volátil: o sistema operacional ou um depurador pode substituir essa memória durante uma sessão de depuração do usuário ou um manipulador de interrupção. Portanto, RSP deve sempre ser definido antes de tentar ler ou gravar valores em um quadro de pilha.
+Toda a memória além do endereço atual do RSP é considerada volátil: o SISTEMA OPERACIONAL, ou um depurador, pode substituir essa memória durante uma sessão de depuração do usuário ou um manipulador de interrupção. Assim, o RSP deve ser sempre definido antes de tentar ler ou escrever valores em um quadro de pilha.
 
-Esta seção discute a alocação de espaço de pilha para variáveis locais e o **alloca** intrínseco.
+Esta seção discute a alocação de espaço de pilha para variáveis locais e a **aloca** intrínseca.
 
-## <a name="stack-allocation"></a>Alocação de pilha
+## <a name="stack-allocation"></a>Alocação da pilha
 
 O prólogo de uma função é responsável por alocar espaço de pilha para variáveis locais, registros salvos, parâmetros de pilha e parâmetros de registro.
 
-A área de parâmetros é sempre na parte inferior da pilha (mesmo se `alloca` for usado), de modo que sempre será adjacente ao endereço de retorno durante qualquer chamada de função. Ele contém pelo menos quatro entradas, mas sempre há espaço suficiente para manter todos os parâmetros necessários para qualquer função que possa ser chamada. Observe que o espaço sempre é alocado para os parâmetros de registro, mesmo que os próprios parâmetros nunca sejam hospedados na pilha; um receptor é garantido que o espaço foi alocado para todos os seus parâmetros. Os endereços residenciais são necessários para os argumentos de registro para que uma área contígua esteja disponível no caso de a função chamada precisar pegar o endereço da lista de argumentos (va_list) ou um argumento individual. Essa área também fornece um local conveniente para salvar os argumentos de registro durante a execução da conversão e como uma opção de depuração (por exemplo, torna os argumentos fáceis de encontrar durante a depuração, se forem armazenados em seus endereços residenciais no código de prólogo). Mesmo se a função chamada tiver menos de 4 parâmetros, esses quatro locais de pilha serão efetivamente pertencentes à função chamada e poderão ser usados pela função chamada para outros fins, além de salvar os valores de registro de parâmetro.  Portanto, o chamador não pode salvar informações nessa região de pilha em uma chamada de função.
+A área do parâmetro está sempre na parte `alloca` inferior da pilha (mesmo que seja usada), de modo que ela esteja sempre adjacente ao endereço de retorno durante qualquer chamada de função. Contém pelo menos quatro entradas, mas sempre espaço suficiente para manter todos os parâmetros necessários por qualquer função que possa ser chamada. Observe que o espaço é sempre alocado para os parâmetros de registro, mesmo que os parâmetros em si nunca estejam abrigados na pilha; uma callee é garantida que o espaço foi alocado para todos os seus parâmetros. Os endereços residenciais são necessários para os argumentos de registro para que uma área contígua esteja disponível no caso de a chamada função precisar tomar o endereço da lista de argumentos (va_list) ou um argumento individual. Essa área também fornece um lugar conveniente para salvar argumentos de registro durante a execução do thunk e como uma opção de depuração (por exemplo, torna os argumentos fáceis de encontrar durante a depuração se eles estiverem armazenados em seus endereços residenciais no código de prólog). Mesmo que a função chamada tenha menos de 4 parâmetros, esses 4 locais de pilha são efetivamente de propriedade da chamada função, e podem ser usados pela chamada função para outros fins, além de salvar valores de registro de parâmetros.  Assim, o chamador não pode salvar informações nesta região de pilha em uma chamada de função.
 
-Se o espaço for alocado dinamicamente (`alloca`) em uma função, um registro não volátil deverá ser usado como um ponteiro de quadro para marcar a base da parte fixa da pilha e esse registro deverá ser salvo e inicializado no prólogo. Observe que quando `alloca` é usado, as chamadas para o mesmo receptor do mesmo chamador podem ter endereços base diferentes para seus parâmetros de registro.
+Se o espaço for`alloca`alocado dinamicamente () em uma função, então um registro não volátil deve ser usado como ponteiro de quadro para marcar a base da parte fixa da pilha e esse registro deve ser salvo e inicializado no prólogo. Observe que, quando `alloca` usado, chamadas para o mesmo chamador do mesmo chamador podem ter endereços residenciais diferentes para seus parâmetros de registro.
 
-A pilha sempre será mantida em 16 bytes alinhada, exceto no prólogo (por exemplo, depois que o endereço de retorno for enviado por push) e, exceto quando indicado em [tipos de função](#function-types) para uma determinada classe de funções de quadro.
+A pilha será sempre mantida alinhada a 16 bytes, exceto dentro do prólogo (por exemplo, depois que o endereço de retorno for empurrado), e exceto quando indicado em [Tipos de Função](#function-types) para uma determinada classe de funções de quadro.
 
-Veja a seguir um exemplo de layout de pilha em que a função A chama uma função B sem folha. A função A prólogo já alocou espaço para todos os parâmetros de registro e de pilha exigidos por B na parte inferior da pilha. A chamada envia por push o endereço de retorno e o prólogo de B aloca espaço para suas variáveis locais, registros não voláteis e o espaço necessário para que ele chame funções. Se B usar `alloca`, o espaço será alocado entre a área de salvamento de registro de variável local/não volátil e a área da pilha de parâmetros.
+A seguir, um exemplo do layout de pilha onde a função A chama uma função não-folha B. O prólogo da função A já alocou espaço para todos os parâmetros de registro e pilha exigidos por B na parte inferior da pilha. A chamada empurra o endereço de retorno e o prólogo de B aloca espaço para suas variáveis locais, registros não voláteis e o espaço necessário para que ele chame funções. Se B `alloca`usar, o espaço será alocado entre a área de salvamento de registro local/não volátil e a área de pilha de parâmetros.
 
 ![Exemplo de conversão AMD](../build/media/vcamd_conv_ex_5.png "Exemplo de conversão AMD")
 
-Quando a função B chama outra função, o endereço de retorno é enviado logo abaixo do endereço principal para RCX.
+Quando a função B chama outra função, o endereço de retorno é empurrado logo abaixo do endereço inicial do RCX.
 
-## <a name="dynamic-parameter-stack-area-construction"></a>Construção da área da pilha de parâmetros dinâmico
+## <a name="dynamic-parameter-stack-area-construction"></a>Construção da área de pilha de parâmetros dinâmicos
 
-Se um ponteiro de quadro for usado, a opção existirá para criar dinamicamente a área da pilha de parâmetros. Isso não é feito atualmente no compilador x64.
+Se um ponteiro de quadro for usado, a opção existirá para criar dinamicamente a área de pilha de parâmetros. Isso não é feito atualmente no compilador x64.
 
 ## <a name="function-types"></a>Tipos de função
 
-Há basicamente dois tipos de funções. Uma função que requer um quadro de pilha é chamada de *função de quadro*. Uma função que não requer um quadro de pilha é chamada de *função de folha*.
+Existem basicamente dois tipos de funções. Uma função que requer um quadro de pilha é chamada de *função de quadro*. Uma função que não requer um quadro de pilha é chamada de *função folha*.
 
-Uma função frame é uma função que aloca espaço de pilha, chama outras funções, salva registros não voláteis ou usa manipulação de exceção. Ele também requer uma entrada de tabela de função. Uma função frame requer um prólogo e um epílogo. Uma função frame pode alocar dinamicamente o espaço de pilha e pode empregar um ponteiro de quadro. Uma função frame tem os recursos completos desse padrão de chamada em sua disposição.
+Uma função de quadro é uma função que aloca espaço de pilha, chama outras funções, salva registros não voláteis ou usa o manuseio de exceções. Também requer uma entrada de tabela de funções. Uma função de quadro requer um prólogo e um epílogo. Uma função de quadro pode alocar dinamicamente o espaço da pilha e pode empregar um ponteiro de quadro. Uma função de quadro tem todas as capacidades deste padrão de chamada à sua disposição.
 
-Se uma função de quadro não chamar outra função, não será necessário alinhar a pilha (referenciada em [alocação de pilha](#stack-allocation)de seção).
+Se uma função de quadro não chamar outra função, então não é necessário alinhar a pilha (referenciada na [alocação de pilha de seção](#stack-allocation)).
 
-Uma função folha é aquela que não requer uma entrada de tabela de função. Ele não pode fazer alterações em nenhum registro não volátil, incluindo RSP, o que significa que ele não pode chamar nenhuma função nem alocar espaço de pilha. É permitido deixar a pilha desalinhada enquanto ela é executada.
+Uma função folha é aquela que não requer uma entrada de tabela de funções. Ele não pode fazer alterações em nenhum registro não volátil, incluindo RSP, o que significa que ele não pode chamar nenhuma função ou alocar espaço de pilha. É permitido deixar a pilha desalinhada enquanto ela é executada.
 
-## <a name="malloc-alignment"></a>alinhamento de malloc
+## <a name="malloc-alignment"></a>alinhamento malloc
 
-a [malloc](../c-runtime-library/reference/malloc.md) é garantida para retornar a memória que está adequadamente alinhada para armazenar qualquer objeto que tenha um alinhamento fundamental e que possa se ajustar à quantidade de memória alocada. Um *alinhamento fundamental* é um alinhamento menor ou igual ao maior alinhamento que é suportado pela implementação sem uma especificação de alinhamento. (No Visual C++, esse é o alinhamento necessário para um `double`ou 8 bytes. No código que tem como destino plataformas de 64 bits, é 16 bytes.) Por exemplo, uma alocação de quatro bytes seria alinhada em um limite que dá suporte a qualquer objeto de quatro bytes ou menor.
+[malloc](../c-runtime-library/reference/malloc.md) é garantido para retornar a memória que está adequadamente alinhada para armazenar qualquer objeto que tenha um alinhamento fundamental e que poderia caber na quantidade de memória que é alocada. Um *alinhamento fundamental* é um alinhamento menor ou igual ao maior alinhamento que é apoiado pela implementação sem uma especificação de alinhamento. (No Visual C++, este é o alinhamento `double`necessário para um , ou 8 bytes. Em código que tem como alvo plataformas de 64 bits, são 16 bytes.) Por exemplo, uma alocação de quatro bytes seria alinhada em um limite que suporta qualquer objeto de quatro bytes ou menor.
 
-O C++ visual permite tipos com *alinhamento estendido*, que também são conhecidos como tipos *alinhados* . Por exemplo, os tipos de SSE [__m128](../cpp/m128.md) e `__m256`e os tipos declarados usando `__declspec(align( n ))` em que `n` é maior que 8, têm o alinhamento estendido. O alinhamento de memória em um limite adequado para um objeto que requer o alinhamento estendido não é garantido pelo `malloc`. Para alocar memória para tipos com alinhamento excessivo, use [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) e funções relacionadas.
+O Visual C++ permite tipos que tenham *alinhamento estendido,* que também são conhecidos como tipos *superalinhados.* Por exemplo, os [__m128](../cpp/m128.md) tipos `__m256`de SSE __m128 e `__declspec(align( n ))` , `n` e tipos que são declarados usando onde é maior que 8, têm alinhamento estendido. O alinhamento da memória em um limite adequado para um `malloc`objeto que requer alinhamento prolongado não é garantido por . Para alocar memória para tipos superalinhados, use [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) e funções relacionadas.
 
 ## <a name="alloca"></a>alloca
 
-[_alloca](../c-runtime-library/reference/alloca.md) deve ser alinhado em 16 bytes e, além disso, necessário para usar um ponteiro de quadro.
+[_alloca](../c-runtime-library/reference/alloca.md) é necessário estar alinhado com 16 bytes e adicionalmente necessário para usar um ponteiro de quadro.
 
-A pilha que é alocada precisa incluir o espaço após ele para os parâmetros das funções subsequentemente chamadas, conforme discutido em [alocação de pilha](#stack-allocation).
+A pilha alocada precisa incluir espaço depois dele para parâmetros de funções posteriormente chamadas, conforme discutido na [Alocação de Pilha](#stack-allocation).
 
 ## <a name="see-also"></a>Confira também
 
 [Convenções de software x64](../build/x64-software-conventions.md)<br/>
-[align](../cpp/align-cpp.md)<br/>
+[Alinhar](../cpp/align-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)

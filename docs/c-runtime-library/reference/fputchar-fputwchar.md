@@ -1,9 +1,11 @@
 ---
 title: _fputchar, _fputwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fputchar
 - _fputwchar
+- _o__fputchar
+- _o__fputwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29d23dcaba75ad87b462a1a87c7a2ad9c8c7298b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442979"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346163"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -59,18 +62,20 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*C*<br/>
 O caractere a ser gravado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retorna o caractere gravado. Por **_fputchar**, um valor de retorno de **EOF** indica um erro. Por **_fputwchar**, um valor de retorno de **WEOF** indica um erro. Se c for **NULL**, essas funções gerarão uma exceção de parâmetro inválida, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, elas retornam **EOF** (ou **WEOF**) e definem **errno** como **EINVAL**.
+Cada uma dessas funções retorna o caractere gravado. Para **_fputchar,** um valor de retorno do **EOF** indica um erro. Para **_fputwchar,** um valor de retorno do **WEOF** indica um erro. Se c for **NULO,** essas funções geram uma exceção de parâmetro inválida, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, eles retornam **EOF** (ou **WEOF**) e definem **errno** para **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Ambas as funções gravam o único caractere *c* em **stdout** e avançam o indicador conforme apropriado. **_fputchar** é equivalente a `fputc( stdout )`. Ele também é equivalente a **putchar**, mas implementado somente como uma função, em vez de como uma função e uma macro. Ao contrário de **fputc** e **putchar**, essas funções não são compatíveis com o padrão ANSI.
+Ambas as funções gravam o caractere *único c* para **stdout** e avança o indicador conforme apropriado. **_fputchar** equivale `fputc( stdout )`a . Também é equivalente ao **putchar,** mas implementado apenas como uma função, e não como uma função e uma macro. Ao contrário **de fputc** e **putchar,** essas funções não são compatíveis com o padrão ANSI.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -78,16 +83,16 @@ Ambas as funções gravam o único caractere *c* em **stdout** e avançam o indi
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console do —**stdin**, **stdout**e **stderr**— devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+O console não é suportado em aplicativos Universal Windows Platform (UWP). As alças de fluxo padrão associadas ao console,**stdin,** **stdout**e **stderr,** devem ser redirecionadas antes que as funções de tempo de execução C possam usá-las em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_fputchar.c
@@ -112,7 +117,7 @@ int main( void )
 This is a test of _fputchar!!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

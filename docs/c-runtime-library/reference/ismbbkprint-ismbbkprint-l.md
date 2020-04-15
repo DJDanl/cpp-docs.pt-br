@@ -1,9 +1,11 @@
 ---
 title: _ismbbkprint, _ismbbkprint_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbkprint
 - _ismbbkprint_l
+- _o__ismbbkprint
+- _o__ismbbkprint_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: e2417718d7cb90e8032cfe9dad903d6610dc6ae7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e59d06678b2601375bf3174fa84bc261c350c4dd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954109"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343627"
 ---
 # <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -56,15 +59,19 @@ int _ismbbkprint_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*C*<br/>
 Inteiro a ser testado.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_ismbbkprint** retornará um valor diferente de zero se o inteiro *c* for um texto não-ASCII ou símbolo de pontuação não ASCII ou 0 se não for. Por exemplo, somente na página de código 932, **_ismbbkprint** testes para Pontuação katakana alfanumérico ou katakana (Range: 0xA1 a 0xDF). **_ismbbkprint** usa a localidade atual para configurações de caractere dependentes de localidade. **_ismbbkprint_l** é idêntico, exceto pelo fato de que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbbkprint** retorna um valor não zero se o inteiro *c* for um texto não-ASCII ou um símbolo de pontuação não ASCII ou 0 se não for. Por exemplo, somente na página de código 932, **_ismbbkprint** testa se há pontuação katakana ou alfanumérico katakana (intervalo: 0xA1 – 0xDF). **_ismbbkprint** usa o local atual para configurações de caracteres dependentes de localidades. **_ismbbkprint_l** é idêntica, exceto que usa o local passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +82,7 @@ Localidade a usar.
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[Rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
