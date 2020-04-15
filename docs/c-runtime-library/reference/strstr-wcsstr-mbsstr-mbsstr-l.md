@@ -1,11 +1,13 @@
 ---
 title: strstr, wcsstr, _mbsstr, _mbsstr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsstr
 - wcsstr
 - _mbsstr_l
 - strstr
+- _o__mbsstr
+- _o__mbsstr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 8c113e02f308b634b6bcb8aea6e46fc14b9abd92
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 06fb79ac050f4e1c357a76a782730cd72cbdadec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946582"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316930"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -119,36 +122,38 @@ const unsigned char *_mbsstr_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres terminada em nulo para pesquisa.
 
-*strSearch*<br/>
+*Strsearch*<br/>
 Cadeia de caracteres terminada em nulo para pesquisar.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para a primeira ocorrência de *strSearch* em *Str*, ou NULL se *strSearch* não aparecer em *Str*. Se *strSearch* apontar para uma cadeia de caracteres de comprimento zero, a função retornará *Str*.
+Retorna um ponteiro para a primeira ocorrência de *strSearch* in *str*, ou NULL se *strSearch* não aparecer em *str*. Se *strSearch* aponta para uma seqüência de comprimento zero, a função retorna *str*.
 
 ## <a name="remarks"></a>Comentários
 
-A `strstr` função retorna um ponteiro para a primeira ocorrência de *strSearch* em *Str*. A pesquisa não inclui os caracteres nulo de terminação. `wcsstr` é a versão de caractere largo de `strstr` e `_mbsstr` é a versão de caracteres multibyte. Os argumentos e o valor retornado de `wcsstr` são cadeias de caracteres largos; aqueles de `_mbsstr` são cadeias de caracteres multibyte. `_mbsstr` valida seus parâmetros. Se *Str* ou *strSearch* for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução tiver permissão para continuar `_mbsstr` , `errno` o definirá como EINVAL e retornará 0. `strstr` e `wcsstr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+A `strstr` função retorna um ponteiro para a primeira ocorrência de *strSearch* in *str*. A pesquisa não inclui os caracteres nulo de terminação. `wcsstr` é a versão de caractere largo de `strstr` e `_mbsstr` é a versão de caracteres multibyte. Os argumentos e o valor retornado de `wcsstr` são cadeias de caracteres largos; aqueles de `_mbsstr` são cadeias de caracteres multibyte. `_mbsstr` valida seus parâmetros. Se *str* ou *strSearch* for NULL, o manipulador de parâmetros inválidos será invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md) . Se a execução `_mbsstr` continuar, define-se `errno` para EINVAL e retorna 0. `strstr` e `wcsstr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 > [!IMPORTANT]
 > Essas funções podem incorrer uma ameaça de um problema de estouro de buffer. Problemas de estouro de buffer podem ser usados para atacar um sistema pois eles podem permitir a execução de código arbitrário, que pode causar uma injustificada elevação de privilégio. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Em C, essas funções assumem um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que usa um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não**const**. A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as versões **const** e não**const** dessas funções estiverem disponíveis. Se você precisar do comportamento não**const** para ambas as C++ sobrecargas, defina o símbolo _CONST_RETURN.
+Em C, essas funções tomam um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que leva um ponteiro para **const** retorna um ponteiro para **const**; a versão que leva um ponteiro para**não-const** retorna um ponteiro para**não-const**. O _CRT_CONST_CORRECT_OVERLOADS macro é definido se as **versões const** e**não-const** dessas funções estão disponíveis. Se você precisar do comportamento não**const** para ambas as sobrecargas C++, defina o símbolo _CONST_RETURN.
 
-O valor de saída é afetado pela configuração de categoria de localidade de LC_CTYPE; para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não têm o sufixo **_L** usam a localidade atual para esse comportamento dependente de localidade; as versões que têm o sufixo **_L** são idênticas, exceto que usam o parâmetro Locale que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração de categoria local de LC_CTYPE; para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não possuem o **sufixo _l** utilizam a localidade atual para este comportamento dependente da localidade; as versões que têm o **sufixo _l** são idênticas, exceto que elas usam o parâmetro local que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
-|**n/d**|**n/d**|`_mbsstr_l`|**n/d**|
+|**n/a**|**n/a**|`_mbsstr_l`|**n/a**|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -197,9 +202,9 @@ String to be searched:
 lazy found at position 36
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
@@ -207,4 +212,4 @@ lazy found at position 36
 [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[basic_string::find](../../standard-library/basic-string-class.md#find)<br/>
+[basic_string::encontrar](../../standard-library/basic-string-class.md#find)<br/>

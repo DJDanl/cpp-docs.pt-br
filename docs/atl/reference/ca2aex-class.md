@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: 712e663ab58e2c9de4e2f25090b84b35d0bced71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f8b9f91e9bc499523fe3484bc76325e2efb8140
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247632"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319175"
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
 
-Essa classe é usada pelas macros de conversão de cadeia de caracteres CA2TEX CT2AEX e typedef CA2A.
+Esta classe é usada pelas macros de conversão de strings CA2TEX e CT2AEX, e pelo typedef CA2A.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +34,7 @@ class CA2AEX
 #### <a name="parameters"></a>Parâmetros
 
 *t_nBufferLength*<br/>
-O tamanho do buffer usado no processo de tradução. O comprimento padrão é 128 bytes.
+O tamanho do buffer usado no processo de tradução. O comprimento padrão é de 128 bytes.
 
 ## <a name="members"></a>Membros
 
@@ -49,46 +49,46 @@ O tamanho do buffer usado no processo de tradução. O comprimento padrão é 12
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CA2AEX::Operator LPSTR](#operator_lpstr)|Operador de conversão.|
+|[CA2AEX::operador LPSTR](#operator_lpstr)|Operador de conversão.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CA2AEX::m_psz](#m_psz)|O membro de dados que armazena a cadeia de caracteres de origem.|
-|[CA2AEX::m_szBuffer](#m_szbuffer)|O buffer estático, usado para armazenar a cadeia de caracteres convertida.|
+|[CA2AEX:m_psz](#m_psz)|O membro de dados que armazena a seqüência de origem.|
+|[CA2AEX::m_szBuffer](#m_szbuffer)|O buffer estático, usado para armazenar a seqüência convertida.|
 
 ## <a name="remarks"></a>Comentários
 
-A menos que a funcionalidade adicional for necessária, use CA2TEX, CT2AEX ou CA2A em seu próprio código.
+A menos que seja necessária funcionalidade extra, use CA2TEX, CT2AEX ou CA2A em seu próprio código.
 
-Essa classe contém um buffer estático de tamanho fixo que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe aloca memória usando **malloc**, liberando a memória quando o objeto sai do escopo. Isso garante que, diferentemente do texto macros de conversão disponíveis em versões anteriores da ATL, essa classe é seguro para ser usado em loops e que ele não estouram a pilha.
+Esta classe contém um buffer estático de tamanho fixo que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe alocará memória usando **malloc,** liberando a memória quando o objeto sai do escopo. Isso garante que, ao contrário das macros de conversão de texto disponíveis nas versões anteriores do ATL, essa classe é segura de usar em loops e que não transbordará a pilha.
 
-Se a classe tenta alocar memória no heap e falhar, ele chamará `AtlThrow` com um argumento de E_OUTOFMEMORY.
+Se a classe tentar alocar memória no monte `AtlThrow` e falhar, ela chamará com um argumento de E_OUTOFMEMORY.
 
-Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão.
+Por padrão, as classes de conversão ATL e macros usam a página de código ANSI do segmento atual para a conversão.
 
-As macros a seguir se baseiam nessa classe:
+As seguintes macros são baseadas nesta classe:
 
-- CA2TEX
+- Ca2tex
 
-- CT2AEX
+- Ct2aex
 
-O typedef seguir baseia-se nessa classe:
+O tipo de digitação a seguir é baseado nesta classe:
 
 - CA2A
 
-Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md).
+Para uma discussão sobre essas macros de conversão de texto, consulte Macros de [conversão de strings ATL e MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Exemplo
 
-Ver [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.
+Consulte macros de [conversão de strings ATL e MFC](string-conversion-macros.md) para um exemplo de uso dessas macros de conversão de strings.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Atlconv. h
+**Cabeçalho:** atlconv.h
 
-##  <a name="ca2aex"></a>  CA2AEX::CA2AEX
+## <a name="ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX::CA2AEX
 
 O construtor.
 
@@ -99,17 +99,17 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*<br/>
-A cadeia de caracteres de texto a ser convertido.
+*Psz*<br/>
+A seqüência de texto a ser convertida.
 
 *nCodePage*<br/>
-Não usado nessa classe.
+Não usado nesta aula.
 
 ### <a name="remarks"></a>Comentários
 
 Cria o buffer necessário para a tradução.
 
-##  <a name="dtor"></a>  CA2AEX::~CA2AEX
+## <a name="ca2aexca2aex"></a><a name="dtor"></a>CA2AEX::~CA2AEX
 
 O destruidor.
 
@@ -121,23 +121,23 @@ O destruidor.
 
 Libera o buffer alocado.
 
-##  <a name="m_psz"></a>  CA2AEX::m_psz
+## <a name="ca2aexm_psz"></a><a name="m_psz"></a>CA2AEX:m_psz
 
-O membro de dados que armazena a cadeia de caracteres de origem.
+O membro de dados que armazena a seqüência de origem.
 
 ```
 LPSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CA2AEX::m_szBuffer
+## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a>CA2AEX::m_szBuffer
 
-O buffer estático, usado para armazenar a cadeia de caracteres convertida.
+O buffer estático, usado para armazenar a seqüência convertida.
 
 ```
 char m_szBuffer[ t_nBufferLength];
 ```
 
-##  <a name="operator_lpstr"></a>  CA2AEX::Operator LPSTR
+## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CA2AEX::operador LPSTR
 
 Operador de conversão.
 
@@ -145,11 +145,11 @@ Operador de conversão.
 operator LPSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna a cadeia de caracteres de texto enquanto digita LPSTR.
+Retorna a seqüência de texto como tipo LPSTR.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
 [Classe CA2WEX](../../atl/reference/ca2wex-class.md)<br/>

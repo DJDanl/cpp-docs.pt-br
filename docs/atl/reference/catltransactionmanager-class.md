@@ -25,19 +25,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: d72867eaa449a20e676d4eddc4c94c02090334e5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c2814f963ea4814e0d7585e0e4d6dda26c1f04d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497726"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321319"
 ---
 # <a name="catltransactionmanager-class"></a>Classe CAtlTransactionManager
 
-A classe CAtlTransactionManager fornece um wrapper para funções de KTM (kernel Transaction Manager).
+A classe CAtlTransactionManager fornece um invólucro para as funções do Gerenciador de Transações do Kernel (KTM).
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -51,36 +51,36 @@ class CAtlTransactionManager;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[~CAtlTransactionManager](#dtor)|Destruidor CAtlTransactionManager.|
-|[CAtlTransactionManager](#catltransactionmanager)|Construtor CAtlTransactionManager.|
+|[~CAtlTransactionManager](#dtor)|Destruidor do CAtlTransactionManager.|
+|[Gerente de transações catl](#catltransactionmanager)|Construtor CAtlTransactionManager.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Fechar](#close)|Fecha um identificador de transação.|
-|[Compromisso](#commit)|Solicita que a transação seja confirmada.|
-|[Criada](#create)|Cria o identificador de transação.|
+|[Fechar](#close)|Fecha um o cabo da transação.|
+|[Commit](#commit)|Solicita que a transação seja cometida.|
+|[Criar](#create)|Cria o cabo da transação.|
 |[CreateFile](#createfile)|Cria ou abre um arquivo, fluxo de arquivos ou diretório como uma operação transacionada.|
 |[DeleteFile](#deletefile)|Exclui um arquivo existente como uma operação transacionada.|
-|[FindFirstFile](#findfirstfile)|Pesquisa um diretório para um arquivo ou subdiretório como uma operação transacionada.|
-|[GetFileAttributes](#getfileattributes)|Recupera atributos do sistema de arquivos para um arquivo ou diretório especificado como uma operação transacionada.|
+|[Findfirstfile](#findfirstfile)|Pesquisa um diretório para um arquivo ou subdiretório como uma operação transacionada.|
+|[Getfileattributes](#getfileattributes)|Recupera atributos do sistema de arquivos para um arquivo ou diretório especificado como uma operação transacionada.|
 |[GetFileAttributesEx](#getfileattributesex)|Recupera atributos do sistema de arquivos para um arquivo ou diretório especificado como uma operação transacionada.|
-|[GetHandle](#gethandle)|Retorna o identificador da transação.|
-|[IsFallback](#isfallback)|Determina se as chamadas de fallback estão habilitadas.|
-|[MoveFile](#movefile)|Move um arquivo existente ou um diretório, incluindo seus filhos, como uma operação transacionada.|
-|[RegCreateKeyEx](#regcreatekeyex)|Cria a chave do Registro especificada e a associa a uma transação. Se a chave já existir, a função a abrirá.|
-|[RegDeleteKey](#regdeletekey)|Exclui uma subchave e seus valores da exibição específica da plataforma especificada do registro como uma operação transacionada.|
-|[RegOpenKeyEx](#regopenkeyex)|Abre a chave do Registro especificada e a associa a uma transação.|
-|[Versão](#rollback)|Solicita que a transação seja revertida.|
-|[SetFileAttributes](#setfileattributes)|Define os atributos de um arquivo ou diretório como uma operação transacionada.|
+|[Gethandle](#gethandle)|Devolve a alça da transação.|
+|[IsFallback](#isfallback)|Determina se as chamadas de recuo estão ativadas.|
+|[MoveFile](#movefile)|Move um arquivo ou um diretório existente, incluindo seus filhos, como uma operação transacionada.|
+|[Regcreatekeyex](#regcreatekeyex)|Cria a chave de registro especificada e associa-a a uma transação. Se a chave já existir, a função a abre.|
+|[Chave de regdelete](#regdeletekey)|Exclui uma subchave e seus valores da exibição específica da plataforma especificada do registro como uma operação transacionada.|
+|[Regopenkeyex](#regopenkeyex)|Abre a chave de registro especificada e associa-a a uma transação.|
+|[Reversão](#rollback)|Solicita que a transação seja revertida.|
+|[Setfileattributes](#setfileattributes)|Define os atributos de um arquivo ou diretório como uma operação transacionada.|
 
-### <a name="protected-data-members"></a>Membros de dados protegidos
+### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[m_bFallback](#m_bfallback)|TRUE se houver suporte para fallback; Caso contrário, FALSE.|
-|[m_hTransaction](#m_htransaction)|O identificador da transação.|
+|[m_bFallback](#m_bfallback)|VERDADE se o recuo for suportado; FALSO de outra forma.|
+|[m_hTransaction](#m_htransaction)|O cabo da transação.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -90,11 +90,11 @@ class CAtlTransactionManager;
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atltransactionmanager. h
+**Cabeçalho:** atltransactionmanager.h
 
-##  <a name="dtor"></a>  ~CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="dtor"></a>~CAtlTransactionManager
 
-Destruidor CAtlTransactionManager.
+Destruidor do CAtlTransactionManager.
 
 ```
 virtual ~CAtlTransactionManager();
@@ -102,9 +102,9 @@ virtual ~CAtlTransactionManager();
 
 ### <a name="remarks"></a>Comentários
 
-No processamento normal, a transação é automaticamente confirmada e fechada. Se o destruidor for chamado durante um desenrolamento de exceção, a transação será revertida e fechada.
+No processamento normal, a transação é automaticamente comprometida e fechada. Se o destruidor for chamado durante uma exceção, a transação será revertida e fechada.
 
-##  <a name="catltransactionmanager"></a>  CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>Gerente de transações catl
 
 Construtor CAtlTransactionManager.
 
@@ -115,62 +115,62 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 ### <a name="parameters"></a>Parâmetros
 
 *bFallback*<br/>
-VERDADEIRO indica o fallback de suporte. Se a função transacionada falhar, a classe chamará automaticamente a função "não transacionada". FALSE indica que não há chamadas de "fallback".
+TRUE indica recuo de suporte. Se a função transacionada falhar, a classe chama automaticamente a função "não transacionada". FALSE indica que não há chamadas de "recuo".
 
-*bAutoCreateTransaction*<br/>
-VERDADEIRO indica que o manipulador de transações é criado automaticamente no construtor. FALSE indica que não é.
+*bAutoCriartransação*<br/>
+TRUE indica que o manipulador de transações é criado automaticamente no construtor. FALSE indica que não é.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="close"></a>Inclui
+## <a name="close"></a><a name="close"></a>Perto
 
-Fecha o identificador de transação.
+Fecha o controle da transação.
 
 ```
 inline BOOL Close();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Verdadeiro se for bem-sucedido; caso contrário, FALSE.
+VERDADE se bem sucedido; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `CloseHandle` função. O método é chamado automaticamente no destruidor.
+Este invólucro chama a `CloseHandle` função. O método é automaticamente chamado no destruidor.
 
-##  <a name="commit"></a>Compromisso
+## <a name="commit"></a><a name="commit"></a>Cometer
 
-Solicita que a transação seja confirmada.
+Solicita que a transação seja cometida.
 
 ```
 inline BOOL Commit();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Verdadeiro se for bem-sucedido; caso contrário, FALSE.
+VERDADE se bem sucedido; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `CommitTransaction` função. O método é chamado automaticamente no destruidor.
+Este invólucro chama a `CommitTransaction` função. O método é automaticamente chamado no destruidor.
 
-##  <a name="create"></a>Criada
+## <a name="create"></a><a name="create"></a>Criar
 
-Cria o identificador de transação.
+Cria o cabo da transação.
 
 ```
 inline BOOL Create();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Verdadeiro se for bem-sucedido; caso contrário, FALSE.
+VERDADE se bem sucedido; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `CreateTransaction` função. Verifique se ele é
+Este invólucro chama a `CreateTransaction` função. Confira se é isso.
 
-##  <a name="createfile"></a>  CreateFile
+## <a name="createfile"></a><a name="createfile"></a>Createfile
 
 Cria ou abre um arquivo, fluxo de arquivos ou diretório como uma operação transacionada.
 
@@ -187,36 +187,36 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpFileName*<br/>
+*Lpfilename*<br/>
 O nome de um objeto a ser criado ou aberto.
 
 *dwDesiredAccess*<br/>
-O acesso ao objeto, que pode ser resumido como leitura, gravação, ambos ou nenhum (zero). Os valores usados com mais frequência são GENERIC_READ, GENERIC_WRITE ou ambos: GENERIC_READ &#124; GENERIC_WRITE.
+O acesso ao objeto, que pode ser resumido como leitura, escrita, ambos, ou nenhum (zero). Os valores mais utilizados são GENERIC_READ, GENERIC_WRITE ou ambos: GENERIC_READ &#124; GENERIC_WRITE.
 
-*dwShareMode*<br/>
-O modo de compartilhamento de um objeto, que pode ser lido, gravado, ambos, excluído, todos eles ou nenhum: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+*Dwsharemode*<br/>
+O modo de compartilhamento de um objeto, que pode ser lido, escrever, ambos, excluir, todos eles, ou nenhum: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
-Um ponteiro para uma estrutura SECURITY_ATTRIBUTES que contém um descritor de segurança opcional e também determina se o identificador retornado pode ser herdado por processos filho. O parâmetro pode ser nulo.
+Um ponteiro para uma estrutura de SECURITY_ATTRIBUTES que contém um descritor de segurança opcional e também determina se a alça devolvida pode ou não ser herdada por processos de criança. O parâmetro pode ser NULO.
 
-*dwCreationDisposition*<br/>
-Uma ação a ser executada em arquivos que existem e não existem. Esse parâmetro deve ser um dos seguintes valores, que não podem ser combinados: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING ou TRUNCATE_EXISTING.
+*Dwcreationdisposition*<br/>
+Uma ação para assumir arquivos que existem e não existem. Este parâmetro deve ser um dos seguintes valores, que não podem ser combinados: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING ou TRUNCATE_EXISTING.
 
-*dwFlagsAndAttributes*<br/>
-Os atributos e sinalizadores de arquivo. Esse parâmetro pode incluir qualquer combinação dos atributos de arquivo disponíveis (FILE_ATTRIBUTE_ *). Todos os outros atributos de arquivo substituem FILE_ATTRIBUTE_NORMAL. Esse parâmetro também pode conter combinações de sinalizadores (FILE_FLAG_\*) para controle do comportamento de buffer, modos de acesso e outros sinalizadores de finalidade especial. Elas são combinadas com\* quaisquer valores de FILE_ATTRIBUTE_.
+*Dwflagsandattributes*<br/>
+Os atributos e bandeiras do arquivo. Este parâmetro pode incluir qualquer combinação dos atributos de arquivo disponíveis (FILE_ATTRIBUTE_*). Todos os outros atributos de arquivo se sobrepõem FILE_ATTRIBUTE_NORMAL. Este parâmetro também pode conter combinações\*de sinalizadores (FILE_FLAG_ ) para controle do comportamento de buffering, modos de acesso e outros sinalizadores de uso especial. Estes combinam\* com quaisquer valores FILE_ATTRIBUTE_.
 
 *hTemplateFile*<br/>
-Um identificador válido para um arquivo de modelo com o direito de acesso GENERIC_READ. O arquivo de modelo fornece atributos de arquivo e atributos estendidos para o arquivo que está sendo criado. Esse parâmetro pode ser nulo.
+Uma alça válida para um arquivo de modelo com o direito de acesso GENERIC_READ. O arquivo de modelo fornece atributos de arquivo e atributos estendidos para o arquivo que está sendo criado. Este parâmetro pode ser NULO.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um identificador que pode ser usado para acessar o objeto.
+Retorna uma alça que pode ser usada para acessar o objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `CreateFileTransacted` função.
+Este invólucro chama a `CreateFileTransacted` função.
 
-##  <a name="deletefile"></a>  DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a>Deletefile
 
 Exclui um arquivo existente como uma operação transacionada.
 
@@ -226,14 +226,14 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpFileName*<br/>
+*Lpfilename*<br/>
 O nome do arquivo a ser excluído.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `DeleteFileTransacted` função.
+Este invólucro chama a `DeleteFileTransacted` função.
 
-##  <a name="findfirstfile"></a>  FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a>Findfirstfile
 
 Pesquisa um diretório para um arquivo ou subdiretório como uma operação transacionada.
 
@@ -245,21 +245,21 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpFileName*<br/>
-O diretório ou caminho e o nome do arquivo a ser pesquisado. Esse parâmetro pode incluir caracteres curinga, como um asterisco (*) ou um ponto de interrogação ().
+*Lpfilename*<br/>
+O diretório ou caminho, e o nome do arquivo para procurar. Este parâmetro pode incluir caracteres curinga, como um asterisco (*) ou um ponto de interrogação ().
 
 *pNextInfo*<br/>
 Um ponteiro para a estrutura WIN32_FIND_DATA que recebe informações sobre um arquivo ou subdiretório encontrado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se a função for realizada com sucesso, o valor de retorno será um identificador de pesquisa usado em `FindNextFile` uma `FindClose`chamada subsequente para ou. Se a função falhar ou falhar em localizar arquivos da cadeia de caracteres de pesquisa no parâmetro *lpFileName* , o valor de retorno será INVALID_HANDLE_VALUE.
+Se a função for bem sucedida, o valor de `FindNextFile` retorno `FindClose`será uma alça de pesquisa usada em uma chamada subseqüente para ou . Se a função falhar ou não localizar arquivos da seqüência de pesquisa no parâmetro *lpFileName,* o valor de retorno será INVALID_HANDLE_VALUE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `FindFirstFileTransacted` função.
+Este invólucro chama a `FindFirstFileTransacted` função.
 
-##  <a name="getfileattributes"></a>  GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a>Getfileattributes
 
 Recupera atributos do sistema de arquivos para um arquivo ou diretório especificado como uma operação transacionada.
 
@@ -269,14 +269,14 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpFileName*<br/>
+*Lpfilename*<br/>
 O nome do arquivo ou diretório.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `GetFileAttributesTransacted` função.
+Este invólucro chama a `GetFileAttributesTransacted` função.
 
-##  <a name="getfileattributesex"></a>  GetFileAttributesEx
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx
 
 Recupera atributos do sistema de arquivos para um arquivo ou diretório especificado como uma operação transacionada.
 
@@ -289,50 +289,50 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpFileName*<br/>
+*Lpfilename*<br/>
 O nome do arquivo ou diretório.
 
 *fInfoLevelId*<br/>
-O nível das informações de atributo a recuperar.
+O nível de informação de atributo para recuperar.
 
 *lpFileInformation*<br/>
-Um ponteiro para um buffer que recebe as informações de atributo. O tipo de informação de atributo que é armazenado nesse buffer é determinado pelo valor de *fInfoLevelId*. Se o parâmetro *fInfoLevelId* for GetFileExInfoStandard, esse parâmetro apontará para uma estrutura WIN32_FILE_ATTRIBUTE_DATA.
+Um ponteiro para um buffer que recebe as informações de atributo. O tipo de informação de atributo armazenada neste buffer é determinada pelo valor do *fInfoLevelId*. Se o parâmetro *fInfoLevelId* for GetFileExInfoStandard, esse parâmetro será WIN32_FILE_ATTRIBUTE_DATA estrutura.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `GetFileAttributesTransacted` função.
+Este invólucro chama a `GetFileAttributesTransacted` função.
 
-##  <a name="gethandle"></a>  GetHandle
+## <a name="gethandle"></a><a name="gethandle"></a>Gethandle
 
-Retorna o identificador da transação.
+Devolve a alça da transação.
 
 ```
 HANDLE GetHandle() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o identificador de transação para uma classe. Retornará NULL se o `CAtlTransactionManager` não estiver anexado a um identificador.
+Devolve o cabo de transação para uma classe. Retorna NULO `CAtlTransactionManager` se o não estiver preso a uma alça.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="isfallback"></a>  IsFallback
+## <a name="isfallback"></a><a name="isfallback"></a>IsFallback
 
-Determina se as chamadas de fallback estão habilitadas.
+Determina se as chamadas de recuo estão ativadas.
 
 ```
 BOOL IsFallback() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna TRUE é a classe que oferece suporte a chamadas de fallback. Caso contrário, FALSE.
+Retorna TRUE é a classe suporta chamadas de recuo. FALSO de outra forma.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="m_bfallback"></a>  m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
 
-TRUE se houver suporte para fallback; Caso contrário, FALSE.
+VERDADE se o recuo for suportado; FALSO de outra forma.
 
 ```
 BOOL m_bFallback;
@@ -340,9 +340,9 @@ BOOL m_bFallback;
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="m_htransaction"></a>  m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
 
-O identificador da transação.
+O cabo da transação.
 
 ```
 HANDLE m_hTransaction;
@@ -350,9 +350,9 @@ HANDLE m_hTransaction;
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="movefile"></a>  MoveFile
+## <a name="movefile"></a><a name="movefile"></a>Movefile
 
-Move um arquivo existente ou um diretório, incluindo seus filhos, como uma operação transacionada.
+Move um arquivo ou um diretório existente, incluindo seus filhos, como uma operação transacionada.
 
 ```
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
@@ -364,15 +364,15 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 O nome atual do arquivo ou diretório existente no computador local.
 
 *lpNewFileName*<br/>
-O novo nome para o arquivo ou diretório. Esse nome ainda não deve existir. Um novo arquivo pode estar em um sistema de arquivos ou unidade diferente. Um novo diretório deve estar na mesma unidade.
+O novo nome para o arquivo ou diretório. Esse nome ainda não deve existir. Um novo arquivo pode estar em um sistema de arquivos ou unidade diferente. Um novo diretório deve estar no mesmo carro.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `MoveFileTransacted` função.
+Este invólucro chama a `MoveFileTransacted` função.
 
-##  <a name="regcreatekeyex"></a>  RegCreateKeyEx
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>Regcreatekeyex
 
-Cria a chave do Registro especificada e a associa a uma transação. Se a chave já existir, a função a abrirá.
+Cria a chave de registro especificada e associa-a a uma transação. Se a chave já existir, a função a abre.
 
 ```
 inline LSTATUS RegCreateKeyEx(
@@ -389,42 +389,42 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hKey*<br/>
-Um identificador para uma chave de registro aberta.
+*Hkey*<br/>
+Uma alça para uma chave de registro aberta.
 
 *lpSubKey*<br/>
-O nome de uma subchave que essa função abre ou cria.
+O nome de uma subchave que esta função abre ou cria.
 
-*dwReserved*<br/>
-Esse parâmetro é reservado e deve ser zero.
+*dwReservado*<br/>
+Este parâmetro é reservado e deve ser zero.
 
-*lpClass*<br/>
-A classe definida pelo usuário dessa chave. Esse parâmetro pode ser ignorado. Esse parâmetro pode ser nulo.
+*Lpclass*<br/>
+A classe definida pelo usuário desta chave. Este parâmetro pode ser ignorado. Este parâmetro pode ser NULO.
 
 *dwOptions*<br/>
-Esse parâmetro pode ser um dos seguintes valores: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE ou REG_OPTION_VOLATILE.
+Este parâmetro pode ser um dos seguintes valores: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE ou REG_OPTION_VOLATILE.
 
 *samDesired*<br/>
 Uma máscara que especifica os direitos de acesso para a chave.
 
 *lpSecurityAttributes*<br/>
-Ponteiro para uma estrutura SECURITY_ATTRIBUTES que determina se o identificador retornado pode ser herdado por processos filho. Se *lpSecurityAttributes* for NULL, o identificador não poderá ser herdado.
+Ponteiro para uma estrutura SECURITY_ATTRIBUTES que determina se o indicador retornado pode ser herdado por processos filhos. Se *lpSecurityAttributes* for NULL, o cabo não poderá ser herdado.
 
 *phkResult*<br/>
-Um ponteiro para uma variável que recebe um identificador para a chave aberta ou criada. Se a chave não for uma das chaves do registro predefinidas, `RegCloseKey` chame a função depois de terminar de usar o identificador.
+Um ponteiro para uma variável que recebe uma alça para a tecla aberta ou criada. Se a chave não for uma das chaves `RegCloseKey` de registro predefinidas, ligue para a função depois de terminar de usar a alça.
 
 *lpdwDisposition*<br/>
 Um ponteiro para uma variável que recebe um dos seguintes valores de disposição: REG_CREATED_NEW_KEY ou REG_OPENED_EXISTING_KEY.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se a função for realizada com sucesso, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno será um código de erro diferente de zero definido em Winerror. h.
+Se a função for bem sucedida, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno será um código de erro não zero definido em Winerror.h.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `RegCreateKeyTransacted` função.
+Este invólucro chama a `RegCreateKeyTransacted` função.
 
-##  <a name="regdeletekey"></a>  RegDeleteKey
+## <a name="regdeletekey"></a><a name="regdeletekey"></a>Chave de regdelete
 
 Exclui uma subchave e seus valores da exibição específica da plataforma especificada do registro como uma operação transacionada.
 
@@ -436,20 +436,20 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*hKey*|Um identificador para uma chave de registro aberta.|
-|*lpSubKey*|O nome da chave a ser excluída.|
+|*Hkey*|Uma alça para uma chave de registro aberta.|
+|*lpSubKey*|O nome da chave a ser excluído.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se a função for realizada com sucesso, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno será um código de erro diferente de zero definido em Winerror. h.
+Se a função for bem sucedida, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno será um código de erro não zero definido em Winerror.h.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `RegDeleteKeyTransacted` função.
+Este invólucro chama a `RegDeleteKeyTransacted` função.
 
-##  <a name="regopenkeyex"></a>  RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>Regopenkeyex
 
-Abre a chave do Registro especificada e a associa a uma transação.
+Abre a chave de registro especificada e associa-a a uma transação.
 
 ```
 inline LSTATUS RegOpenKeyEx(
@@ -462,30 +462,30 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hKey*<br/>
-Um identificador para uma chave de registro aberta.
+*Hkey*<br/>
+Uma alça para uma chave de registro aberta.
 
 *lpSubKey*<br/>
-O nome da subchave do registro a ser aberta.
+O nome da subchave do registro a ser aberto.
 
 *ulOptions*<br/>
-Esse parâmetro é reservado e deve ser zero.
+Este parâmetro é reservado e deve ser zero.
 
 *samDesired*<br/>
 Uma máscara que especifica os direitos de acesso para a chave.
 
 *phkResult*<br/>
-Um ponteiro para uma variável que recebe um identificador para a chave aberta ou criada. Se a chave não for uma das chaves do registro predefinidas, `RegCloseKey` chame a função depois de terminar de usar o identificador.
+Um ponteiro para uma variável que recebe uma alça para a tecla aberta ou criada. Se a chave não for uma das chaves `RegCloseKey` de registro predefinidas, ligue para a função depois de terminar de usar a alça.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se a função for realizada com sucesso, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno será um código de erro diferente de zero definido em Winerror. h
+Se a função for bem sucedida, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno será um código de erro não zero definido em Winerror.h
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `RegOpenKeyTransacted` função.
+Este invólucro chama a `RegOpenKeyTransacted` função.
 
-##  <a name="rollback"></a>Versão
+## <a name="rollback"></a><a name="rollback"></a>Reversão
 
 Solicita que a transação seja revertida.
 
@@ -493,15 +493,15 @@ Solicita que a transação seja revertida.
 inline BOOL Rollback();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Verdadeiro se for bem-sucedido; caso contrário, FALSE.
+VERDADE se bem sucedido; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `RollbackTransaction` função.
+Este invólucro chama a `RollbackTransaction` função.
 
-##  <a name="setfileattributes"></a>  SetFileAttributes
+## <a name="setfileattributes"></a><a name="setfileattributes"></a>Setfileattributes
 
 Define os atributos de um arquivo ou diretório como uma operação transacionada.
 
@@ -511,16 +511,16 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpFileName*<br/>
+*Lpfilename*<br/>
 O nome do arquivo ou diretório.
 
-*dwAttributes*<br/>
-Os atributos de arquivo a serem definidos para o arquivo. Para obter mais informações, consulte [SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw).
+*dwAttributeS*<br/>
+Os atributos do arquivo a serem definidos para o arquivo. Para obter mais informações, consulte [SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw).
 
 ### <a name="remarks"></a>Comentários
 
-Esse wrapper chama a `SetFileAttributesTransacted` função.
+Este invólucro chama a `SetFileAttributesTransacted` função.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)

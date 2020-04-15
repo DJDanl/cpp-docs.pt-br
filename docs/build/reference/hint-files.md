@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8037cb8025cc85a8479528490e1512531cbcc035
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075200"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322306"
 ---
 # <a name="hint-files"></a>Arquivos de dica
 
@@ -36,8 +36,9 @@ Um arquivo de dica contém dicas personalizáveis pelo usuário, que têm a mesm
 
 > [!IMPORTANT]
 > Se você modificar ou adicionar um arquivo de dica, precisará executar etapas adicionais para que as alterações entrem em vigor:
-> - Em versões anteriores ao Visual Studio 2017 versão 15,6: exclua o arquivo. sdf e/ou o arquivo VC. DB na solução para todas as alterações.
-> - No Visual Studio 2017 versão 15,6 e posteriores: feche e reabra a solução depois de adicionar novos arquivos de dica.
+>
+> - Em versões anteriores ao Visual Studio 2017 versão 15.6: Exclua o arquivo .sdf e/ou vc.db na solução para todas as alterações.
+> - No Visual Studio 2017 versão 15.6 e posterior: Feche e reabra a solução depois de adicionar novos arquivos de dicas.
 
 ## <a name="scenario"></a>Cenário
 
@@ -92,17 +93,17 @@ A partir do Visual Studio 2017 versão 15.8 em diante, há vários recursos para
 
 - Há uma Ação Rápida para criar um arquivo de dica que inclui a macro realçada ou, se houver um arquivo de dica existente, para adicionar a macro ao arquivo de dica.
 
-![Macro realçada.](media/hint-squiggle-and-actions.png "Dica rabisca e ações rápidas")
+![Destaque Macro.](media/hint-squiggle-and-actions.png "Dica squiggle e Ações Rápidas")
 
 Depois de executar qualquer uma das Ações Rápidas, o analisador revisa novamente os arquivos afetados pelo arquivo de dica.
 
-Por padrão, a macro do problema é realçada como uma sugestão. O realce pode ser alterado para algo mais perceptível, como um rabisco vermelho ou verde. Use a opção **Macros em Regiões de Navegação Ignoradas** na seção **Rabiscos de Código** em **Ferramentas** > **Opções** > **Editor de Texto** > **C/C++**  > **Exibir**.
+Por padrão, a macro do problema é realçada como uma sugestão. O realce pode ser alterado para algo mais perceptível, como um rabisco vermelho ou verde. Use a opção **Macros em Regiões de Navegação Ignoradas** na seção **Rabiscos de Código** em **Ferramentas** > **Opções** > **Editor de Texto** > **C/C++** > **Exibir**.
 
-![Macros na opção de regiões de navegação ignorada.](media/skipped-regions-squiggle-option.png "Opção de áreas sinuosa ignorada.")
+![Macros na opção Regiões de navegação ignoradas.](media/skipped-regions-squiggle-option.png "Regiões ignoradas opção de squiggle.")
 
 ## <a name="display-browsing-database-errors"></a>Exibir Erros de Banco de Dados de Navegação
 
-O comando de menu **Projeto** > **Exibir Erros de Banco de Dados de Navegação** exibe todas as regiões que falharam na análise na **Lista de Erros**. O comando destina-se a simplificar a criação do arquivo de dica inicial. No entanto, o analisador não pode determinar se a causa do erro foi uma macro que causa interrupções, portanto, você deve avaliar cada erro. Execute o comando **Exibir Erros do Banco de Dados de Navegação** e navegue até cada erro para carregar o arquivo afetado no editor. Depois que o arquivo for carregado, se alguma macro estiver dentro da região, ela será realçada. Você pode invocar as Ações Rápidas para adicioná-las a um arquivo de dica. Após uma atualização do arquivo de dica, a lista de erros é atualizada automaticamente. Como alternativa, se você estiver modificando o arquivo de dica manualmente, poderá usar o comando **Examinar Novamente a Solução** para disparar uma atualização.
+O **comando Project** > **Display Database Errors (Erros de banco de dados de visualização de** exibição de projeto exibe todas as regiões que não foram analisados na Lista de **erros).** O comando destina-se a simplificar a criação do arquivo de dica inicial. No entanto, o analisador não pode determinar se a causa do erro foi uma macro que causa interrupções, portanto, você deve avaliar cada erro. Execute o comando **Exibir Erros do Banco de Dados de Navegação** e navegue até cada erro para carregar o arquivo afetado no editor. Depois que o arquivo for carregado, se alguma macro estiver dentro da região, ela será realçada. Você pode invocar as Ações Rápidas para adicioná-las a um arquivo de dica. Após uma atualização do arquivo de dica, a lista de erros é atualizada automaticamente. Como alternativa, se você estiver modificando o arquivo de dica manualmente, poderá usar o comando **Examinar Novamente a Solução** para disparar uma atualização.
 
 ## <a name="architecture"></a>Arquitetura
 
@@ -150,13 +151,13 @@ Dicas usam a seguinte sintaxe:
 
 |Sintaxe|Significado|
 |------------|-------------|
-|*dica de* `#define`- *Replacement-name-string*<br /><br /> `#define` *dica-nome* `(` *parâmetro*,...`)`*substituição-Cadeia de caracteres*|Uma diretiva do pré-processador que define uma nova dica ou redefine uma dica existente. Após a diretiva, o pré-processador substitui cada ocorrência de *hint-name* no código-fonte por *replacement-string*.<br /><br /> O segundo formato de sintaxe define uma dica semelhante a uma função. Se uma dica semelhante a uma função ocorre no código-fonte, o pré-processador primeiro substitui cada ocorrência do *parameter* na *replacement-string* pelo argumento correspondente no código-fonte e, em seguida, substitui *hint-name* pela *replacement-string*.|
+|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|Uma diretiva do pré-processador que define uma nova dica ou redefine uma dica existente. Após a diretiva, o pré-processador substitui cada ocorrência de *hint-name* no código-fonte por *replacement-string*.<br /><br /> O segundo formato de sintaxe define uma dica semelhante a uma função. Se uma dica semelhante a uma função ocorre no código-fonte, o pré-processador primeiro substitui cada ocorrência do *parameter* na *replacement-string* pelo argumento correspondente no código-fonte e, em seguida, substitui *hint-name* pela *replacement-string*.|
 |`@<`|Uma *replacement-string* específica a um arquivo de dica que indica o início de um conjunto de elementos de mapa.|
 |`@=`|Uma *replacement-string* específica a um arquivo de dica que indica um elemento do mapa intermediário. Um mapa pode ter vários elementos de mapa.|
 |`@>`|Uma *replacement-string* específica a um arquivo de dica que indica o fim de um conjunto de elementos de mapa.|
-|nome da `#undef` *dica*|A diretiva do pré-processador que exclui uma dica existente. O nome da dica é fornecido pelo identificador *hint-name*.|
-|`//` *Comentário*|Um comentário de linha única.|
-|*Comentário* de `/*` `*/`|Um comentário de várias linhas.|
+|`#undef` *hint-name*|A diretiva do pré-processador que exclui uma dica existente. O nome da dica é fornecido pelo identificador *hint-name*.|
+|`//`*comentário*|Um comentário de linha única.|
+|`/*` *comment* `*/`|Um comentário de várias linhas.|
 
 ## <a name="example"></a>Exemplo
 
@@ -166,7 +167,7 @@ A ilustração mostra alguns dos diretórios físicos em um projeto do Visual St
 
 ### <a name="hint-file-directories"></a>Diretórios de arquivos de dica
 
-![Diretórios de arquivos&#45;de dica específicos do projeto e comuns.](media/hintfile.png "Dica de")
+![Diretórios de arquivos de dicas comuns e de projeto&#45;específicos.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Diretórios e conteúdo do arquivo de dica
 

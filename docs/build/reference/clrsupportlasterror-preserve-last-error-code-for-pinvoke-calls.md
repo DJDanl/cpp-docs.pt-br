@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 64948d81759d415245e741bc6152d56bb35480d2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 19930591c2d0406c68b1a408622a49c9e8b1d551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988343"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322268"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (preservar último código de erro para chamadas PInvoke)
 
-**/CLRSUPPORTLASTERROR**, que é ativado por padrão, preserva o último código de erro das funções chamadas por meio do mecanismo P/Invoke, que permite chamar funções nativas em DLLs, do código compilado com **/CLR**.
+**/CLRSUPPORTLASTERROR**, que está ligado por padrão, preserva o último código de erro das funções chamadas através do mecanismo P/Invoke, que permite chamar funções nativas em DLLS, a partir de código compilado com **/clr**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,45 +26,45 @@ ms.locfileid: "74988343"
 
 ## <a name="remarks"></a>Comentários
 
-A preservação do último código de erro implica uma diminuição no desempenho.  Se você não quiser incorrer no impacto no desempenho de preservar o último código de erro, vincule com **/CLRSUPPORTLASTERROR: no**.
+Preservar o último código de erro implica uma diminuição no desempenho.  Se você não quiser incorrer no impacto de desempenho da preservação do último código de erro, vincule-se com **/CLRSUPPORTLASTERROR:NO**.
 
-Você pode minimizar o impacto no desempenho vinculando-se com **/CLRSUPPORTLASTERROR: SYSTEMDLL**, que preserva apenas o último código de erro para funções em DLLs do sistema.  Uma DLL do sistema é definida como uma das seguintes opções:
+Você pode minimizar o impacto de desempenho vinculando-se com **/CLRSUPPORTLASTERROR:SYSTEMDLL**, que só preserva o último código de erro para funções em DLLs do sistema.  Um sistema DLL é definido como um dos seguintes:
 
 |||||
 |-|-|-|-|
-|ACLUI.DLL|ACTIVEDS. DLL|ADPTIF. DLL|ADVAPI32.DLL|
-|ASYCFILT. DLL|Autorização. DLL|AVICAP32. DLL|AVIFIL32.DLL|
-|Gabinete. DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|
-|COMSVCS.DLL|CREDUI. DLL|CRYPT32.DLL|CRYPTNET.DLL|
-|CRYPTUI. DLL|D3D8THK.DLL|DBGENG. DLL|DBGHELP. DLL|
-|DCIMAN32.DLL|DNSAPI.DLL|DSPROP. DLL|DSUIEXT.DLL|
-|GDI32.DLL|GLU32.DLL|Hlink. DLL|ICM32.DLL|
-|IMAGEHLP.DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP. DLL|
-|KERNEL32.DLL|KSUSER.DLL|LOADPERF. DLL|LZ32.DLL|
-|Mapi32. DLL|MGMTAPI. DLL|MOBSYNC.DLL|MPR. DLL|
-|MPRAPI. DLL|MQRT.DLL|MSACM32.DLL|MSCMS. DLL|
-|MSI.DLL|MSIMG32.DLL|MSRATING. DLL|Mstask. DLL|
-|MSVFW32.DLL|MSWSOCK.DLL|MTXEX. DLL|NDDEAPI.DLL|
-|Netapi32. DLL|NPPTOOLS. DLL|NTDSAPI.DLL|NTDSBCLI.DLL|
-|NTMSAPI.DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|
-|OLEACC. DLL|OLEAUT32.DLL|OLEDLG. DLL|OPENGL32.DLL|
-|PDH. DLL|POWRPROF. DLL|QOSNAME.DLL|Consultá. DLL|
-|RASAPI32.DLL|RASDLG.DLL|RASSAPI.DLL|RESUTILS. DLL|
-|Riched20. DLL|RPCNS4.DLL|RPCRT4.DLL|RTM. DLL|
-|RTUTILS. DLL|SCARDDLG. DLL|SECUR32.DLL|SENSAPI. DLL|
-|Setupapi. DLL|SFC.DLL|SHELL32.DLL|SHFOLDER.DLL|
-|SHLWAPI.DLL|SISBKUP.DLL|SNMPAPI. DLL|SRCLIENT. DLL|
-|STI. DLL|TAPI32. DLL|Tráfico. DLL|URL.DLL|
-|Urlmon. DLL|USER32.DLL|USERENV. DLL|USP10.DLL|
-|UXTHEME. DLL|VDMDBG.DLL|Versão. DLL|WINFAX.DLL|
-|WINHTTP.DLL|WININET.DLL|WINMM.DLL|WINSCARD. DLL|
-|WINTRUST.DLL|WLDAP32.DLL|WOW32.DLL|WS2_32.DLL|
-|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|
+|A ACLUI. Dll|Activeds. Dll|ADPTIF. Dll|ADVAPI32. Dll|
+|Asycfilt. Dll|O AUTHZ. Dll|AVICAP32. Dll|O AVIFIL32. Dll|
+|Armário. Dll|A CLUSAPI. Dll|COMCTL32. Dll|COMDLG32. Dll|
+|COMSVCS. Dll|Credui. Dll|CRYPT32. Dll|CRYPTNET. Dll|
+|Cryptui. Dll|D3D8THK. Dll|O DBGENG. Dll|DBGHELP. Dll|
+|O DCIMAN32. Dll|DNSAPI. Dll|DSPROP. Dll|DSUiEXT. Dll|
+|GDI32. Dll|O GLU32. Dll|O HLINK. Dll|O ICM32. Dll|
+|IMAGEHLP. Dll|O IMM32. Dll|IPHLPAPI. Dll|IPROP. Dll|
+|KERNEL32. Dll|O KSUSER. Dll|LOADPERF. Dll|O LZ32. Dll|
+|MAPI32. Dll|MGMTAPI. Dll|O MOBSYNC. Dll|Mpr. Dll|
+|O MPRAPI. Dll|O MQRT. Dll|MSACM32. Dll|MSCMS. Dll|
+|Msi. Dll|MSIMG32. Dll|MSRATING. Dll|MSTASK. Dll|
+|MSVFW32. Dll|MSWSOCK. Dll|O MTXEX. Dll|A NDDEAPI. Dll|
+|NETAPI32. Dll|NPPTOOLS. Dll|A NTDSAPI. Dll|NTDSBCLI. Dll|
+|A NTMSAPI. Dll|ODBC32. Dll|ODBCBCP. Dll|Ole32. Dll|
+|OLEACC, o que está. Dll|OLEAUT32. Dll|OLEDLG. Dll|O OPENGL32. Dll|
+|Pdh. Dll|PowrPROF. Dll|QOSNAME. Dll|Consulta. Dll|
+|RASAPI32. Dll|O RASDLG. Dll|A RASSAPI. Dll|RESUTILS. Dll|
+|RICHED20. Dll|RPCNS4. Dll|RPCRT4. Dll|Rtm. Dll|
+|RTUTILS. Dll|SCARDDLG. Dll|SECUR32. Dll|A SENSAPI. Dll|
+|SetuPAPI. Dll|Sfc. Dll|O SHELL32. Dll|SHFOLDER. Dll|
+|A SHLWAPI. Dll|O SISBKUP. Dll|O SNMPAPI. Dll|SRCLIENT. Dll|
+|Sti. Dll|O TAPI32. Dll|Tráfego. Dll|Url. Dll|
+|Urlmon. Dll|USUÁRIO32. Dll|Userenv. Dll|USP10. Dll|
+|Uxtheme. Dll|VDMDBG. Dll|Versão. Dll|Winfax. Dll|
+|WINHTTP. Dll|Wininet. Dll|O WINMM. Dll|O WINSCARD. Dll|
+|A WINTRUST. Dll|WLDAP32. Dll|UAU32. Dll|WS2_32.DLL|
+|WSNMP32. Dll|WSOCK32.DLL|WTSAPI32. Dll|O XOLEHLP. Dll|
 
 > [!NOTE]
->  Não há suporte para a preservação do último erro em funções não gerenciadas que são consumidas pelo código CLR, no mesmo módulo.
+> A preservação do último erro não é suportada para funções não gerenciadas que são consumidas pelo código CLR, no mesmo módulo.
 
-- Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](clr-common-language-runtime-compilation.md).
+- Para obter mais informações, consulte [/clr (Common Language Runtime Compilation)](clr-common-language-runtime-compilation.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
@@ -72,9 +72,9 @@ Você pode minimizar o impacto no desempenho vinculando-se com **/CLRSUPPORTLAST
 
 1. Clique na pasta **Vinculador**.
 
-1. Clique na página de propriedades de **linha de comando** .
+1. Clique na página de propriedade Linha de **Comando.**
 
-1. Digite a opção na caixa **Opções adicionais** .
+1. Digite a opção na **caixa Opções Adicionais.**
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -82,7 +82,7 @@ Você pode minimizar o impacto no desempenho vinculando-se com **/CLRSUPPORTLAST
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir define uma DLL nativa com uma função exportada que modifica o último erro.
+A amostra a seguir define uma DLL nativa com uma função exportada que modifica o último erro.
 
 ```cpp
 // CLRSUPPORTLASTERROR_dll.cpp
@@ -99,7 +99,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir consome a DLL, demonstrando como usar **/CLRSUPPORTLASTERROR**.
+A amostra a seguir consome o DLL, demonstrando como usar **/CLRSUPPORTLASTERROR**.
 
 ```cpp
 // CLRSUPPORTLASTERROR_client.cpp
@@ -150,7 +150,7 @@ GetLastError for application call failed (127).
 GetLastError for system call succeeded (183).
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de vinculador MSVC](linking.md)<br/>
 [Opções de vinculador MSVC](linker-options.md)

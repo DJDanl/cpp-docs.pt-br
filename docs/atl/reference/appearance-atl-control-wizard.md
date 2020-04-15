@@ -6,90 +6,90 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-ms.openlocfilehash: e07dc017241848f1a670c17b12c2254de6d1b8e1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3484fb5d0f919af0dfd18b584e96d4675e2baea8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319403"
 ---
 # <a name="appearance-atl-control-wizard"></a>Aparência, assistente de controle ATL
 
-Use esta página do assistente para identificar opções de elemento de usuário adicionais para o controle. Esta página está disponível para controles identificados como **controles padrão** em **tipo de controle** na página [Opções, assistente de controle ATL](../../atl/reference/options-atl-control-wizard.md) .
+Use esta página do assistente para identificar opções adicionais de elemento susceptino de elemento susceptino para o controle. Esta página está disponível para controles identificados como **controles Padrão** sob o **tipo Controle** na página [Opções, assistente de controle ATL.](../../atl/reference/options-atl-control-wizard.md)
 
-## <a name="uielement-list"></a>Lista UIElement
+## <a name="uielement-list"></a>Lista de elementos de interface do usuário
 
 - **Exibir status**
 
-   Define a aparência do controle dentro do contêiner.
+   Define a aparência do controle dentro do recipiente.
 
-   - **Opaco**: Define o bit VIEWSTATUS_OPAQUE na enumeração [VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus) e desenha o retângulo de controle inteiro passado para o método [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) . O controle aparece completamente opaco e nenhum dos contêineres é exibido atrás dos limites de controle.
+  - **Opaco :** Define o VIEWSTATUS_OPAQUE bit na enumeração [VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus) e desenha todo o retângulo de controle passado para o método [CComControlBase::OnDraw.](../../atl/reference/ccomcontrolbase-class.md#ondraw) O controle parece completamente opaco, e nenhum dos contêineres aparece atrás dos limites de controle.
 
-      Essa configuração ajuda o contêiner a desenhar o controle mais rapidamente. Se essa opção não estiver selecionada, o controle poderá conter partes transparentes.
+      Esta configuração ajuda o recipiente a desenhar o controle mais rapidamente. Se esta opção não for selecionada, o controle pode conter peças transparentes.
 
-      Somente um controle opaco pode ter um plano de fundo sólido.
+      Só um controle opaco pode ter um fundo sólido.
 
-   - **Plano de fundo sólido**: Define o bit VIEWSTATUS_SOLIDBKGND na enumeração VIEWSTATUS. O plano de fundo do controle aparece como uma cor sólida sem padrão.
+  - **Fundo sólido**: Define o bit VIEWSTATUS_SOLIDBKGND na enumeração VIEWSTATUS. O fundo do controle aparece como uma cor sólida sem padrão.
 
-      Essa opção estará disponível somente se a opção **opaco** também estiver selecionada.
+      Esta opção só está disponível se a opção **Opaque** também for selecionada.
 
 - **Adicionar controle com base em**
 
-   Define o controle para ser baseado em um tipo de controle do Windows adicionando um membro de dados [CContainedWindow](ccontainedwindowt-class.md) à classe que implementa o controle. Ele também adiciona um mapa de mensagens e funções de manipulador de mensagens para manipular mensagens do Windows para o controle. Escolha na lista o tipo de controle do Windows que você deseja criar, se houver.
+   Define o controle a ser baseado em um tipo de controle do Windows adicionando um membro de dados [CContainedWindow](ccontainedwindowt-class.md) à classe que implementa o controle. Ele também adiciona um mapa de mensagens e funções de manipulador de mensagens para lidar com mensagens do Windows para o controle. Escolha na lista o tipo de controle do Windows que deseja criar, se houver.
 
-   - **Button**
+  - **Botão**
 
-   - **ListBox**
+  - **ListBox**
 
-   - **SysAnimate32**
+  - **SysAnimate32**
 
-   - **SysListView32**
+  - **SysListView32**
 
-   - **ComboBox**
+  - **ComboBox**
 
-   - **RichEdit**
+  - **Richedit**
 
-   - **SysDateTimePick32**
+  - **SysDateTimePick32**
 
-   - **SysMonthCal32**
+  - **SysMonthCal32**
 
-   - **ComboBoxEx32**
+  - **ComboBoxEx32**
 
-   - **ScrollBar**
+  - **ScrollBar**
 
-   - **SysHeader32**
+  - **SysHeader32**
 
-   - **SysTabControl32**
+  - **SysTabControl32**
 
-   - **Editar**
+  - **Editar**
 
-   - **Estático**
+  - **Estático**
 
-   - **SysIPAddress32**
+  - **SysIPAddress32**
 
-   - **SysTreeView32**
+  - **SysTreeView32**
 
-- **Status variado**
+- **Estado misc**
 
    Define opções adicionais de aparência e comportamento para o controle.
 
-   - **Invisível em tempo de execução**: Define o controle como invisível no tempo de execução. Você pode usar controles invisíveis para executar operações em segundo plano, como acionar eventos em intervalos de tempo.
+  - **Invisível no tempo de execução**: Define o controle para ser invisível no tempo de execução. Você pode usar controles invisíveis para executar operações em segundo plano, como eventos de disparo em intervalos cronometrados.
 
-   - **Atua como o botão**: Define o bit OLEMISC_ACTSLIKEBUTTON na enumeração [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) para permitir que um controle atue como um botão. Se o contêiner tiver marcado o site do cliente do controle como um botão padrão, a seleção dessa opção permitirá que o controle de botão seja exibido como um botão padrão, desenhando-o com um quadro mais espesso. Consulte [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) para obter mais informações.
+  - **Atua como um botão**: Define o OLEMISC_ACTSLIKEBUTTON bit na enumeração [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) para permitir que um controle aja como um botão. Se o contêiner tiver marcado o site do cliente do controle como um botão padrão, a seleção desta opção permite que o controle do botão se exiba como um botão padrão, desenhando-se com um quadro mais grosso. Consulte [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) para obter mais informações.
 
-   - **Atua como o rótulo**: Define o bit OLEMISC_ACTSLIKELABEL na enumeração OLEMISC para habilitar um controle para substituir o rótulo nativo do contêiner. O contêiner determina o que fazer com esse sinalizador, se houver algo.
+  - **Atua como rótulo**: Define o OLEMISC_ACTSLIKELABEL bit na enumeração OLEMISC para permitir um controle para substituir o rótulo nativo do recipiente. O contêiner determina o que fazer com esta bandeira, se alguma coisa.
 
 - **Outros**
 
    Define opções de comportamento adicionais para o controle.
 
-   - **Controlador de domínio normalizado**: Define o controle para criar um contexto de dispositivo normalizado quando ele é chamado para desenhar a si mesmo. Essa ação padroniza a aparência do controle, mas torna o desenho menos eficiente.
+  - **DC normalizado**: Define o controle para criar um contexto de dispositivo normalizado quando é chamado para desenhar-se. Esta ação padroniza a aparência do controle, mas torna o desenho menos eficiente.
 
-   - **Somente janela**: Especifica que seu controle não pode ser sem janela. Se você não selecionar essa opção, seu controle será automaticamente sem janela em contêineres que dão suporte a objetos sem janela, e ele será automaticamente desmarcado em contêineres que não dão suporte a objetos sem janela. A seleção dessa opção força o controle a ser janelas, mesmo em contêineres que dão suporte a objetos sem janela.
+  - **Somente janela**: Especifica que seu controle não pode ser sem janelas. Se você não selecionar essa opção, seu controle é automaticamente sem janelas em recipientes que suportam objetos sem janelas, e ele é automaticamente janelas em recipientes que não suportam objetos sem janelas. A seleção dessa opção força que seu controle seja janelasdo, mesmo em contêineres que suportam objetos sem janelas.
 
-   - **Insertável**: Selecione esta opção para que seu controle apareça na caixa de diálogo **Inserir objeto** de aplicativos, como Word e Excel. Em seguida, seu controle pode ser inserido por qualquer aplicativo que ofereça suporte a objetos inseridos por meio dessa caixa de diálogo.
+  - **Inseringível**: Selecione esta opção para que seu controle apareça na caixa de diálogo **Inserir objeto** de aplicativos como Word e Excel. Seu controle pode então ser inserido por qualquer aplicativo que suporte objetos incorporados através desta caixa de diálogo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Assistente de Controle da ATL](../../atl/reference/atl-control-wizard.md)<br/>
-[Exemplo de SUBEDIT: Superclasses de um controle padrão do Windows](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
+[Assistente de controle ATL](../../atl/reference/atl-control-wizard.md)<br/>
+[Subedit Sample: Superclasses um Controle Padrão do Windows](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)

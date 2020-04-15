@@ -1,55 +1,55 @@
 ---
 title: 'Referência: comandos vcperf'
-description: Referência para o utilitário de linha de comando vcperf. exe.
+description: Referência para o utilitário de linha de comando vcperf.exe.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b85320ce4517eb41410c59a11bd79553405b8402
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 9d3b0a9dbdfe922dc87f91006441e1f65d54c8a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332218"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323247"
 ---
 # <a name="reference-vcperf-commands"></a>Referência: comandos vcperf
 
 ::: moniker range="<=vs-2017"
 
-As C++ ferramentas de informações de compilação estão disponíveis no Visual Studio 2019. Para ver a documentação dessa versão, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2019.
+As ferramentas C++ Build Insights estão disponíveis no Visual Studio 2019. Para ver a documentação dessa versão, defina o controle do seletor Visual Studio **Version** para este artigo para o Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Este artigo lista e descreve os comandos disponíveis no *vcperf. exe*e como usá-los.
+Este artigo lista e descreve os comandos disponíveis em *vcperf.exe*, e como usá-los.
 
 ## <a name="commands-to-start-and-stop-traces"></a>Comandos para iniciar e parar rastreamentos
 
-*IMPORTANTE: todos os comandos a seguir exigem privilégios administrativos.*
+*IMPORTANTE: todos os seguintes comandos exigem privilégios administrativos.*
 
-| {1&gt;Opção&lt;1}           | Argumentos e descrição |
+| Opção           | Argumentos e descrição |
 |------------------|---------------------------|
 | `/start`         | `[/nocpusampling]` `<sessionName>` |
-|                  | Informa ao *vcperf. exe* para iniciar um rastreamento sob o nome de sessão fornecido. Só pode haver uma sessão ativa por vez em um determinado computador. <br/><br/> Se a opção `/nocpusampling` for especificada, *vcperf. exe* não coletará exemplos de CPU. Ele impede o uso da exibição de uso da CPU (amostrada) no analisador de desempenho do Windows, mas torna os rastreamentos coletados menores. <br/><br/> Depois que o rastreamento é iniciado, o *vcperf. exe* retorna imediatamente. Os eventos são coletados em todo o sistema para todos os processos em execução no computador. Isso significa que você não precisa criar seu projeto do mesmo prompt de comando que aquele usado para executar o *vcperf. exe*. Por exemplo, você pode criar seu projeto no Visual Studio. |
+|                  | Diz *vcperf.exe* para iniciar um rastreamento sob o nome da sessão dado. Só pode haver uma sessão ativa de cada vez em uma determinada máquina. <br/><br/> Se `/nocpusampling` a opção for especificada, *vcperf.exe* não coletará amostras de CPU. Ele impede o uso da visualização de uso da CPU (Sampled) no Analisador de Desempenho do Windows, mas torna os traços coletados menores. <br/><br/> Uma vez iniciado o rastreamento, *vcperf.exe* retorna imediatamente. Os eventos são coletados em todo o sistema para todos os processos em execução na máquina. Isso significa que você não precisa construir seu projeto a partir do mesmo prompt de comando que o que você usou para executar *vcperf.exe*. Por exemplo, você pode construir seu projeto a partir do Visual Studio. |
 | `/stop`          | `<sessionName>` `<outputFile.etl>` |
-|                  | Interrompe o rastreamento identificado pelo nome de sessão fornecido. Executa uma etapa de pós-processamento no rastreamento para gerar um arquivo visível no analisador de desempenho do Windows (WPA). Para obter a melhor experiência de exibição, use uma versão do WPA que C++ inclua o suplemento Build insights. Para obter mais informações, consulte Introdução [aos C++ insights de compilação](/cpp/build-insights/get-started-with-cpp-build-insights). O parâmetro `<outputFile.etl>` especifica onde salvar o arquivo de saída. |
+|                  | Interrompe o traço identificado pelo nome da sessão. Executa uma etapa de pós-processamento no trace para gerar um arquivo visível no WPA (Windows Performance Analyzer). Para obter a melhor experiência de visualização, use uma versão do WPA que inclua o complemento C++ Build Insights. Para obter mais informações, consulte [Comece com o C++ Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights). O `<outputFile.etl>` parâmetro especifica onde salvar o arquivo de saída. |
 | `/stopnoanalyze` | `<sessionName>` `<rawOutputFile.etl>` |
-|                  | Interrompe o rastreamento identificado pelo nome de sessão fornecido e grava os dados brutos não processados no arquivo de saída especificado. O arquivo resultante não deve ser exibido no WPA. <br/><br/> Às vezes, a etapa de pós-processamento envolvida no comando `/stop` pode ser demorada. Você pode usar o comando `/stopnoanalyze` para atrasar esta etapa do pós-processamento. Use o comando `/analyze` quando estiver pronto para produzir um arquivo visível no analisador de desempenho do Windows. |
+|                  | Interrompe o rastreamento identificado pelo nome da sessão dado e grava os dados brutos e não processados no arquivo de saída especificado. O arquivo resultante não deve ser visualizado no WPA. <br/><br/> A etapa de pós-processamento `/stop` envolvida no comando às vezes pode ser demorada. Você pode `/stopnoanalyze` usar o comando para atrasar esta etapa de pós-processamento. Use `/analyze` o comando quando estiver pronto para produzir um arquivo visível no Analisador de Desempenho do Windows. |
 
 ## <a name="miscellaneous-commands"></a>Comandos variados
 
-| {1&gt;Opção&lt;1}     | Argumentos e descrição |
+| Opção     | Argumentos e descrição |
 |------------|---------------------------|
 | `/analyze` | `<rawInputFile.etl> <outputFile.etl>` |
-|            | Aceita um arquivo de rastreamento bruto produzido pelo comando `/stopnoanalyze`. Executa uma etapa de pós-processamento nesse rastreamento para gerar um arquivo visível no analisador de desempenho do Windows. Para obter a melhor experiência de exibição, use uma versão do WPA que C++ inclua o suplemento Build insights. Para obter mais informações, consulte Introdução [aos C++ insights de compilação](/cpp/build-insights/get-started-with-cpp-build-insights). |
+|            | Aceita um arquivo de rastreamento `/stopnoanalyze` bruto produzido pelo comando. Execute uma etapa de pós-processamento neste trace para gerar um arquivo visível no Analisador de Desempenho do Windows. Para obter a melhor experiência de visualização, use uma versão do WPA que inclua o complemento C++ Build Insights. Para obter mais informações, consulte [Comece com o C++ Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights). |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Introdução às informações C++ de compilação](/cpp/build-insights/get-started-with-cpp-build-insights)\
-[Tutorial: Noções básicas do analisador de desempenho do Windows](/cpp/build-insights/tutorials/wpa-basics)\
-[Referência: exibições do analisador de desempenho do Windows](wpa-views.md)\
+[Comece com c++ Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[Tutorial: Noções básicas do Analisador de Desempenho do Windows](/cpp/build-insights/tutorials/wpa-basics)\
+[Referência: Visualizações do Analisador de Desempenho do Windows](wpa-views.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

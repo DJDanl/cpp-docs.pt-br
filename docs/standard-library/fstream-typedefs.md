@@ -11,12 +11,12 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: 3f4104b28f5becfdbf62ede16faa81e855fcac8c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 57e481c131a6e4a1111b1ed88217b891d6fc96a8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421775"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317188"
 ---
 # <a name="ltfstreamgt-typedefs"></a>typedefs &lt;fstream&gt;
 
@@ -26,9 +26,9 @@ ms.locfileid: "79421775"
 |[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|
 |[wifstream](#wifstream)|[wofstream](#wofstream)|
 
-## <a name="filebuf"></a>  filebuf
+## <a name="filebuf"></a><a name="filebuf"></a>filebuf
 
-Um tipo `basic_filebuf` especializado em parâmetros de modelo **Char** .
+Um `basic_filebuf` tipo especializado em parâmetros de modelo **de char.**
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
@@ -36,11 +36,11 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o modelo de classe [basic_filebuf](../standard-library/basic-filebuf-class.md), especializado para elementos do tipo **Char** com características de caractere padrão.
+O tipo é um sinônimo de modelo de classe [basic_filebuf,](../standard-library/basic-filebuf-class.md)especializado para elementos de **tipo char** com traços de caractere padrão.
 
-## <a name="fstream"></a>  fstream
+## <a name="fstream"></a><a name="fstream"></a>fstream
 
-Um tipo `basic_fstream` especializado em parâmetros de modelo **Char** .
+Um `basic_fstream` tipo especializado em parâmetros de modelo **de char.**
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
@@ -48,13 +48,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o modelo de classe [basic_fstream](../standard-library/basic-fstream-class.md), especializado para elementos do tipo **Char** com características de caractere padrão.
+O tipo é um sinônimo para modelo de classe [basic_fstream,](../standard-library/basic-fstream-class.md)especializado para elementos de **tipo char** com traços de caractere padrão.
 
-## <a name="ifstream"></a>  ifstream
+## <a name="ifstream"></a><a name="ifstream"></a>ifstream
 
-Define um fluxo a ser usado para ler dados de caractere de byte único em série de um arquivo. `ifstream` é um typedef que especializa o modelo de classe `basic_ifstream` para **Char**.
+Define um fluxo a ser usado para ler dados de caractere de byte único em série de um arquivo. `ifstream`é um typedef que é `basic_ifstream` especializado o modelo de classe para **char**.
 
-Também há `wifstream`, um typedef que especializa `basic_ifstream` para ler **wchar_t** caracteres de largura dupla. Para saber mais, consulte [wifstream](../standard-library/fstream-typedefs.md#wifstream).
+Há também `wifstream`, um typedef `basic_ifstream` especializado para ler **wchar_t** caracteres de dupla largura. Para saber mais, consulte [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -62,7 +62,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o modelo de classe [basic_ifstream](../standard-library/basic-ifstream-class.md), especializado para elementos do tipo char com características de caractere padrão. Um exemplo é
+O tipo é um sinônimo para modelo de classe [basic_ifstream,](../standard-library/basic-ifstream-class.md)especializado para elementos de tipo char com traços de caractere padrão. Um exemplo é
 
 ```cpp
 using namespace std;
@@ -76,9 +76,9 @@ if (!infile.bad())
 }
 ```
 
-## <a name="ofstream"></a>  ofstream
+## <a name="ofstream"></a><a name="ofstream"></a>ofstream
 
-Um tipo `basic_ofstream` especializado em parâmetros de modelo **Char** .
+Um `basic_ofstream` tipo especializado em parâmetros de modelo **de char.**
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
@@ -86,11 +86,11 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o modelo de classe [basic_ofstream](../standard-library/basic-ofstream-class.md), especializado para elementos do tipo **Char** com características de caractere padrão.
+O tipo é um sinônimo para modelo de classe [basic_ofstream,](../standard-library/basic-ofstream-class.md)especializado para elementos de **tipo char** com traços de caractere padrão.
 
-## <a name="wfstream"></a>  wfstream
+## <a name="wfstream"></a><a name="wfstream"></a>wfstream
 
-Um tipo `basic_fstream` especializado em parâmetros de modelo de **wchar_t** .
+Um `basic_fstream` tipo especializado em parâmetros de modelo **wchar_t.**
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
@@ -98,11 +98,11 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o modelo de classe [basic_fstream](../standard-library/basic-fstream-class.md), especializado para elementos do tipo **wchar_t** com características de caractere padrão.
+O tipo é um sinônimo de modelo de classe [basic_fstream,](../standard-library/basic-fstream-class.md)especializado para elementos do tipo **wchar_t** com traços de caractere padrão.
 
-## <a name="wifstream"></a>  wifstream
+## <a name="wifstream"></a><a name="wifstream"></a>wifstream
 
-Um tipo `basic_ifstream` especializado em parâmetros de modelo de **wchar_t** .
+Um `basic_ifstream` tipo especializado em parâmetros de modelo **wchar_t.**
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
@@ -110,11 +110,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o modelo de classe [basic_ifstream](../standard-library/basic-ifstream-class.md), especializado para elementos do tipo **wchar_t** com características de caractere padrão.
+O tipo é um sinônimo para modelo de classe [basic_ifstream,](../standard-library/basic-ifstream-class.md)especializado para elementos do tipo **wchar_t** com traços de caractere padrão.
 
-## <a name="wofstream"></a>  wofstream
+## <a name="wofstream"></a><a name="wofstream"></a>wofstream
 
-Um tipo `basic_ofstream` especializado em parâmetros de modelo de **wchar_t** .
+Um `basic_ofstream` tipo especializado em parâmetros de modelo **wchar_t.**
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
@@ -122,11 +122,11 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o modelo de classe [basic_ofstream](../standard-library/basic-ofstream-class.md), especializado para elementos do tipo **wchar_t** com características de caractere padrão.
+O tipo é um sinônimo de modelo de classe [basic_ofstream,](../standard-library/basic-ofstream-class.md)especializado para elementos de tipo **wchar_t** com traços de caractere padrão.
 
-## <a name="wfilebuf"></a>  wfilebuf
+## <a name="wfilebuf"></a><a name="wfilebuf"></a>wfilebuf
 
-Um tipo `basic_filebuf` especializado em parâmetros de modelo de **wchar_t** .
+Um `basic_filebuf` tipo especializado em parâmetros de modelo **wchar_t.**
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
@@ -134,7 +134,7 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o modelo de classe [basic_filebuf](../standard-library/basic-filebuf-class.md), especializado para elementos do tipo **wchar_t** com características de caractere padrão.
+O tipo é um sinônimo para modelo de classe [basic_filebuf,](../standard-library/basic-filebuf-class.md)especializado para elementos do tipo **wchar_t** com traços de caractere padrão.
 
 ## <a name="see-also"></a>Confira também
 

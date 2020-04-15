@@ -1,11 +1,15 @@
 ---
 title: strtol, wcstol, _strtol_l, _wcstol_l
-ms.date: 01/14/2020
+ms.date: 4/2/2020
 api_name:
 - strtol
 - wcstol
 - _strtol_l
 - _wcstol_l
+- _o__strtol_l
+- _o__wcstol_l
+- _o_strtol
+- _o_wcstol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -72,16 +77,16 @@ no-loc:
 - _atof_l
 - _wtof
 - _wtof_l
-ms.openlocfilehash: 83054e1b31b56fda96bdea198ab34d65d633f335
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: dbeaf04d34aa20e15de48e99082ed07edb6129ab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320483"
 ---
-# <a name="opno-locstrtol-opno-locwcstol-opno-loc_strtol_l-opno-loc_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
+# <a name="strtol-wcstol-_strtol_l-_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
-Converta cadeias de caracteres em um valor inteiro **longo** .
+Converta as strings em um **longo** valor inteiro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -112,37 +117,39 @@ long _wcstol_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string*\
+*String*\
 Cadeia de caracteres terminada em nulo a ser convertida.
 
 *end_ptr*\
-Um parâmetro de saída, definido para apontar para o caractere após o último caractere interpretado. Ignorado, se for **nulo**.
+Um parâmetro de saída, definido para apontar para o personagem após o último caractere interpretado. Ignorado, se **NULO.**
 
-*base*\
+*Base*\
 O número base a ser usado.
 
-\ de *localidade*
+*Localidade*\
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**strtol** , **wcstol** , **_strtol_l** e **_wcstol_l** retornam o valor representado na *cadeia de caracteres*. Eles retornam 0 se nenhuma conversão é possível. Quando a representação causar um estouro, elas retornarão **LONG_MAX** ou **LONG_MIN** .
+**strtol,** **wcstol,** **_strtol_l**e **_wcstol_l** devolver o valor representado na *cadeia.* Eles retornam 0 se nenhuma conversão for possível. Quando a representação causaria um estouro, eles retornam **LONG_MAX** ou **LONG_MIN**.
 
-**errno** é definido como **ERANGE** se ocorrer estouro ou Subfluxo. Ele é definido como **EINVAL** se a *cadeia de caracteres* é **nula**. Ou, se *base* for diferente de zero e menor que 2 ou maior que 36. Para obter mais informações sobre **ERANGE** , **EINVAL** e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**errno** é definido como **ERANGE** se ocorrer estouro ou subfluxo. Está definido como **EINVAL** se *a seqüência* for **NULA**. Ou, se *a base* não for zero e menor que 2, ou maior que 36. Para obter mais informações sobre **ERANGE,** **EINVAL**e outros códigos de devolução, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-As funções **strtol** , **wcstol** , **_strtol_l** e **_wcstol_l** convertem a *cadeia de caracteres* em um **longo**. Eles param de ler a *cadeia de caracteres* no primeiro caractere não reconhecido como parte de um número. Pode ser o caractere de terminação-nulo ou o primeiro caractere alfanumérico maior ou igual a *base*.
+As funções **strtol,** **wcstol,** **_strtol_l**e **_wcstol_l** convertem *a seqüência* em um **longo**. Eles param de ler *string* no primeiro caractere não reconhecido como parte de um número. Pode ser o caractere final-nulo, ou o primeiro caractere alfanumérico maior ou igual à *base*.
 
-**wcstol** e **_wcstol_l** são versões de caractere largo de **strtol** e **_strtol_l** . O argumento de *cadeia* de caracteres é uma cadeia de caracteres largo. Essas funções se comportam de forma idêntica para **strtol** e **_strtol_l** caso contrário. A configuração de categoria de **LC_NUMERIC** da localidade determina o reconhecimento do caractere fracionário (o marcador fracionário ou o ponto decimal) na *cadeia de caracteres*. As funções **strtol** e **wcstol** usam a localidade atual. **_strtol_l** e **_wcstol_l** usar a localidade passada em vez disso. Para obter mais informações, consulte [setlocale] e [localidade](../../c-runtime-library/locale.md).
+**wcstol** e **_wcstol_l** são versões de grande caráter de **strtol** e **_strtol_l**. Seu argumento *de seqüência* é uma seqüência de caracteres amplo. Essas funções se comportam de forma idêntica ao **strtol** e **_strtol_l** de outra forma. A configuração **da** LC_NUMERIC do local determina o reconhecimento do caractere radix (o marcador fracionado ou ponto decimal) na *seqüência*. As funções **strtol** e **wcstol** usam a localização atual. **_strtol_l** e **_wcstol_l** usar o local passou em seu lugar. Para obter mais informações, consulte [setlocale] e [Locale](../../c-runtime-library/locale.md).
 
-Quando *end_ptr* é **nulo**, ele é ignorado. Caso contrário, um ponteiro para o caractere que parou a verificação é armazenado no local apontado por *end_ptr*. Nenhuma conversão será possível se nenhum dígito válido for encontrado ou se uma base inválida for especificada. O valor da *cadeia de caracteres* é armazenado no local apontado por *end_ptr*.
+Quando *end_ptr* é **NULA,** é ignorada. Caso contrário, um ponteiro para o caractere que parou a varredura é armazenado no local apontado por *end_ptr*. Nenhuma conversão é possível se nenhum dígito válido for encontrado ou uma base inválida for especificada. O valor da *seqüência* é então armazenado no local apontado por *end_ptr*.
 
-**strtol** espera que a *cadeia de caracteres* aponte para uma cadeia de caracteres do seguinte formato:
+**strtol** espera que a *seqüência* aponte para uma seqüência da seguinte forma:
 
-> [*espaço em branco*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*alfanuméricos*]
+> [*espaço em branco*] [{**+** **-**&#124; }] [**0** [{ **x** &#124; **X** }]] [*alfanuméricas*]
 
-Colchetes (`[ ]`) circundar elementos opcionais. Chaves e uma barra vertical (`{ | }`) alternativas de surround para um único elemento. o *espaço em branco* pode consistir em caracteres de espaço e tabulação, ignorados. os *alfanuméricos* são dígitos decimais ou as letras ' a ' a ' z ' (ou ' a ' por meio de ' z '). O primeiro caractere que não se ajusta a esse formulário interrompe a verificação. Se *base* estiver entre 2 e 36, ela será usada como a base do número. Se *base* for 0, os caracteres iniciais da cadeia de caracteres apontados por *cadeia de caracteres* serão usados para determinar a base. Se o primeiro caractere for 0 e o segundo caractere não for ' x ' ou ' X ', a cadeia de caracteres será interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras ' a ' a ' z ' (ou ' A ' até ' Z ') recebem os valores de 10 a 35. A verificação só permite letras cujos valores sejam menores que *base*. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, suponha que a *cadeia de caracteres* comece com "01". Se *base* for 0, o verificador assumirá que é um inteiro octal. Um caractere ' 8 ' ou ' 9 ' interrompe a verificação.
+Suportes quadrados`[ ]`() circundam elementos opcionais. Aparelhos encaracolados e`{ | }`uma barra vertical ( ) cercam alternativas para um único elemento. *o espaço branco* pode consistir em caracteres de espaço e guia, que são ignorados. *alfanuméricas* são dígitos decimais ou as letras 'a' através de 'z' (ou 'A' a 'Z'). O primeiro caractere que não se encaixa neste formulário interrompe a varredura. Se *a base* está entre 2 e 36, então é usada como base do número. Se *base* é 0, os caracteres iniciais da seqüência apontada por *string* são usados para determinar a base. Se o primeiro caractere for 0, e o segundo caractere não for 'x' ou 'X', a seqüência é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a z' (ou 'A' a 'Z') são atribuídas aos valores de 10 a 35. A varredura só permite letras cujos valores são inferiores à *base.* O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, suponha que *a seqüência* comece com "01". Se *a base* é 0, o scanner assume que é um inteiro octal. Um caractere '8' ou '9' interrompe a varredura.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -151,7 +158,7 @@ Colchetes (`[ ]`) circundar elementos opcionais. Chaves e uma barra vertical (`{
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -160,20 +167,20 @@ Colchetes (`[ ]`) circundar elementos opcionais. Chaves e uma barra vertical (`{
 |**_strtol_l**|\<stdlib.h>|
 |**_wcstol_l**|\<stdlib.h> ou \<wchar.h>|
 
-As funções **_strtol_l** e **_wcstol_l** são específicas da Microsoft, não fazem parte da biblioteca C padrão. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../compatibility.md).
+As **_strtol_l** **_wcstol_l** funções são específicas da Microsoft, não fazem parte da biblioteca Padrão C. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
-Consulte o exemplo para [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
+Veja o [strtod](strtod-strtod-l-wcstod-wcstod-l.md)exemplo para .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-\ de [conversão de dados](../data-conversion.md)
+[Conversão de dados](../data-conversion.md)\
 [Localidade](../locale.md)\
 [localeconv](localeconv.md)\
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)\
-[Cadeia de caracteres para funções de valor numérico](../string-to-numeric-value-functions.md)\
-[strtod, _strtod_l, wcstod_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)\
-[strtoll, _strtoll_l, wcstoll_wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)\
-[strtoul, _strtoul_l, wcstoul_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)\
-[atof, _atof_l, _wtof_wtof_l](atof-atof-l-wtof-wtof-l.md)
+[Funções de valor de string a numéricas](../string-to-numeric-value-functions.md)\
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)\
+[strtoll, _strtoll_l, wcstoll, _wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)\
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)\
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)

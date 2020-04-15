@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246805"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318894"
 ---
 # <a name="cautoptrarray-class"></a>Classe CAutoPtrArray
 
-Essa classe fornece métodos úteis ao construir uma matriz de ponteiros inteligentes.
+Esta classe fornece métodos úteis ao construir uma matriz de ponteiros inteligentes.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,9 +46,9 @@ O tipo de ponteiro.
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe fornece um construtor e deriva de métodos de [CAtlArray](../../atl/reference/catlarray-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para ajudar na criação de um objeto de classe de coleção armazenar ponteiros inteligentes.
+Esta classe fornece um construtor e deriva métodos do [CAtlArray](../../atl/reference/catlarray-class.md) e [cAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para ajudar a criação de um objeto de classe de coleção armazenando ponteiros inteligentes.
 
-Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).
+Para obter mais informações, consulte [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -60,7 +60,7 @@ Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl
 
 **Cabeçalho:** atlcoll.h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 O construtor.
 
@@ -70,9 +70,9 @@ CAutoPtrArray() throw();
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa a matriz de ponteiro inteligente.
+Inicializa a matriz de ponteiros inteligentes.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CAtlArray](../../atl/reference/catlarray-class.md)<br/>
 [Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>

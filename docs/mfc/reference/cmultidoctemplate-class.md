@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: 5fefe91fa2067831c0263146ff3b2cd143b9c647
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b3f239b05b1cf7661929333e2d616acce6bedb0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319739"
 ---
 # <a name="cmultidoctemplate-class"></a>Classe CMultiDocTemplate
 
-Define um modelo de documento que implementa o interface de documentos múltiplos (MDI).
+Define um modelo de documento que implementa a interface de documento múltiplo (MDI).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,39 +35,39 @@ class CMultiDocTemplate : public CDocTemplate
 
 ## <a name="remarks"></a>Comentários
 
-Um aplicativo MDI usa a janela do quadro principal como um espaço de trabalho no qual o usuário pode abrir janelas de quadro de documento zero ou mais, cada um deles exibindo um documento. Para obter uma descrição mais detalhada da MDI, consulte *Windows Interface Guidelines for Software Design*.
+Um aplicativo MDI usa a janela do quadro principal como um espaço de trabalho no qual o usuário pode abrir zero ou mais janelas de quadro de documento, cada uma das quais exibe um documento. Para obter uma descrição mais detalhada do MDI, consulte *As Diretrizes*de Interface do Windows para design de software .
 
-Um modelo de documento define as relações entre os três tipos de classes:
+Um modelo de documento define as relações entre três tipos de classes:
 
-- Uma classe de documento, que derivam de [CDocument](../../mfc/reference/cdocument-class.md).
+- Uma classe de documento, que você deriva de [CDocument](../../mfc/reference/cdocument-class.md).
 
-- Uma classe de exibição, que exibe dados de classe de documento listada acima. Você pode derivar desta classe de [CView](../../mfc/reference/cview-class.md), `CScrollView`, `CFormView`, ou `CEditView`. (Você também pode usar `CEditView` diretamente.)
+- Uma classe de exibição, que exibe dados da classe de documento listada acima. Você pode derivar esta `CScrollView`classe `CFormView`de `CEditView` [CView,](../../mfc/reference/cview-class.md)ou . (Você também `CEditView` pode usar diretamente.)
 
-- Uma classe de janela de quadro, que contém a exibição. Para um modelo de documento MDI, você pode derivar desta classe de `CMDIChildWnd`, ou, se você não precisa personalizar o comportamento de janelas com moldura de documento, você pode usar [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) diretamente sem sua própria classe.
+- Uma classe de janela de quadro, que contém a vista. Para um modelo de documento MDI, `CMDIChildWnd`você pode derivar essa classe de , ou, se você não precisar personalizar o comportamento das janelas do quadro de documentos, você pode usar [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) diretamente sem derivar sua própria classe.
 
-Um aplicativo MDI pode dar suporte a mais de um tipo de documento e documentos de tipos diferentes podem ser abertos ao mesmo tempo. Seu aplicativo tem um modelo de documento para cada tipo de documento que ela dá suporte. Por exemplo, se seu aplicativo MDI dá suporte a planilhas e documentos de texto, o aplicativo tem dois `CMultiDocTemplate` objetos.
+Um aplicativo MDI pode suportar mais de um tipo de documento, e documentos de diferentes tipos podem ser abertos ao mesmo tempo. Seu aplicativo tem um modelo de documento para cada tipo de documento que ele suporta. Por exemplo, se o aplicativo MDI suportar planilhas e `CMultiDocTemplate` documentos de texto, o aplicativo tem dois objetos.
 
-O aplicativo usa o modelo de documento (s) quando o usuário cria um novo documento. Se o aplicativo dá suporte a mais de um tipo de documento, o framework obtém os nomes dos tipos de documento com suporte os modelos de documento e exibe-os em uma lista na caixa de diálogo Novo arquivo. Depois que o usuário tiver selecionado um tipo de documento, o aplicativo cria um objeto de classe de documento, um objeto de janela de quadro e um objeto de exibição e anexa-os uns aos outros.
+O aplicativo usa os modelos de documentos quando o usuário cria um novo documento. Se o aplicativo suportar mais de um tipo de documento, o framework obtém os nomes dos tipos de documento suportados dos modelos de documento e os exibe em uma lista na caixa de diálogo Arquivo Novo. Uma vez que o usuário tenha selecionado um tipo de documento, o aplicativo cria um objeto de classe de documento, um objeto de janela de quadro e um objeto de exibição e os anexa entre si.
 
-Você não precisa chamar qualquer função de membro `CMultiDocTemplate` , exceto o construtor. Os identificadores de framework `CMultiDocTemplate` objetos internamente.
+Você não precisa chamar nenhuma função `CMultiDocTemplate` membro de exceto o construtor. A estrutura `CMultiDocTemplate` lida com objetos internamente.
 
-Para obter mais informações sobre `CMultiDocTemplate`, consulte [modelos de documento e o processo de criação de documento/exibição](../../mfc/document-templates-and-the-document-view-creation-process.md).
+Para obter `CMultiDocTemplate`mais informações, consulte [Modelos de documentos e o processo de criação de documentos/visualização.](../../mfc/document-templates-and-the-document-view-creation-process.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)
+[Cdoctemplate](../../mfc/reference/cdoctemplate-class.md)
 
 `CMultiDocTemplate`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxwin. h
+**Cabeçalho:** afxwin.h
 
-##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate
 
 Constrói um objeto `CMultiDocTemplate`.
 
@@ -81,10 +81,10 @@ CMultiDocTemplate(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIDResource*<br/>
-Especifica a identificação dos recursos usados com o tipo de documento. Isso pode incluir recursos de cadeia de caracteres, ícone, tabela de Aceleradores e menu.
+*Nidresource*<br/>
+Especifica o ID dos recursos utilizados com o tipo de documento. Isso pode incluir menu, ícone, tabela de acelerador e recursos de string.
 
-O recurso de cadeia de caracteres consiste em subcadeias de caracteres até sete separadas pelo caractere '\n' (o caractere '\n' é necessário como um espaço reservado, se uma subcadeia de caracteres não for incluída; no entanto, não são necessários de caracteres à direita de '\n'); Esses subcadeias de caracteres descrevem o tipo de documento. Para obter informações sobre as subcadeias de caracteres, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Esse recurso de cadeia de caracteres for encontrado no arquivo de recurso do aplicativo. Por exemplo:
+O recurso de seqüência consiste em até sete substringões separadas pelo caractere '\n' (o caractere '\n' é necessário como titular de lugar se uma substring não estiver incluída; no entanto, caracteres '\n' não são necessários); essas substrings descrevem o tipo de documento. Para obter informações sobre as substrings, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Esse recurso de string é encontrado no arquivo de recursos do aplicativo. Por exemplo:
 
 ```RC
 // MYCALC.RC
@@ -94,32 +94,32 @@ BEGIN
 END
 ```
 
-Observe que a cadeia de caracteres começa com um caractere '\n'; Isso ocorre porque a primeira subcadeia de caracteres não é usada para aplicativos MDI e portanto, não está incluída. Você pode editar essa cadeia de caracteres usando o editor de cadeia de caracteres; a cadeia de caracteres inteira é exibido como uma única entrada no Editor de cadeia de caracteres, não como sete entradas separadas.
+Observe que a seqüência começa com um caractere '\n'; isso porque a primeira substring não é usada para aplicações MDI e, portanto, não está incluída. Você pode editar esta seqüência usando o editor de seqüência; toda a seqüência aparece como uma única entrada no Editor de cordas, não como sete entradas separadas.
 
-Para obter mais informações sobre esses tipos de recursos, consulte [editores de recursos](../../windows/resource-editors.md).
+Para obter mais informações sobre esses tipos de recursos, consulte [Resource Editors](../../windows/resource-editors.md).
 
 *pDocClass*<br/>
-Aponta para o `CRuntimeClass` objeto da classe do documento. Essa classe é um `CDocument`-derivado da classe que você define para representar seus documentos.
+Aponta para `CRuntimeClass` o objeto da classe de documentos. Esta classe `CDocument`é uma classe derivada que você define para representar seus documentos.
 
 *pFrameClass*<br/>
-Aponta para o `CRuntimeClass` objeto da classe de janela do quadro. Essa classe pode ser um `CMDIChildWnd`-classe derivada, ou pode ser `CMDIChildWnd` em si, se você quiser o comportamento padrão para as janelas de quadro do documento.
+Aponta para `CRuntimeClass` o objeto da classe frame-window. Esta classe pode `CMDIChildWnd`ser uma classe derivada, ou pode ser `CMDIChildWnd` ela mesma se você quiser comportamento padrão para as janelas do quadro de documentos.
 
 *pViewClass*<br/>
-Aponta para o `CRuntimeClass` objeto da classe de exibição. Essa classe é um `CView`-derivado da classe que você define para exibir seus documentos.
+Aponta para `CRuntimeClass` o objeto da classe de exibição. Esta classe `CView`é uma classe derivada que você define para exibir seus documentos.
 
 ### <a name="remarks"></a>Comentários
 
-Alocar dinamicamente um `CMultiDocTemplate` objeto para cada tipo de documento que seu aplicativo dá suporte a e passar cada um deles `CWinApp::AddDocTemplate` do `InitInstance` função de membro de sua classe de aplicativo.
+Aloque `CMultiDocTemplate` dinamicamente um objeto para cada tipo `CWinApp::AddDocTemplate` de `InitInstance` documento que seu aplicativo suporta e passe cada um para a função de membro da sua classe de aplicativo.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#92](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]
 
-Aqui está um exemplo de segundo.
+Aqui está um segundo exemplo.
 
 [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

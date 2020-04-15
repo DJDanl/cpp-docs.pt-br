@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: d382d1fe7d50a2fdeefc9b477625580792de7d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55412eff18fd04ac4e41c0f001991c1cf725b9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247146"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321502"
 ---
 # <a name="catlbasemodule-class"></a>Classe CAtlBaseModule
 
-Essa classe é instanciada em cada projeto ATL.
+Esta classe é instanciada em todos os projetos ATL.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,24 +44,24 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Adiciona uma instância do recurso à lista de identificadores de armazenado.|
-|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Retorna um identificador para uma instância do recurso especificado.|
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Retorna a instância de módulo de um `CAtlBaseModule` objeto.|
-|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Retorna a instância do recurso de um `CAtlBaseModule` objeto.|
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Remove uma instância do recurso na lista de identificadores de armazenado.|
-|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Define a instância do recurso de um `CAtlBaseModule` objeto.|
+|[CAtlBaseModule::Adicionar instância de recursos](#addresourceinstance)|Adiciona uma instância de recurso à lista de alças armazenadas.|
+|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Retorna uma alça para uma instância de recurso especificada.|
+|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Retorna a instância `CAtlBaseModule` do módulo de um objeto.|
+|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Retorna a instância `CAtlBaseModule` de recurso de um objeto.|
+|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Remove uma instância de recurso da lista de alças armazenadas.|
+|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Define a instância `CAtlBaseModule` de recurso de um objeto.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Uma variável que indica se a inicialização do módulo tiver falhado.|
+|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Uma variável que indica se a inicialização do módulo falhou.|
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância de `CAtlBaseModule` _AtlBaseModule nomeado está presente em cada projeto da ATL, que contém um identificador para a instância de módulo, um identificador para o módulo que contém recursos (que, por padrão, são o mesmo) e uma matriz de identificadores para módulos que fornecem primário recursos. `CAtlBaseModule` podem ser acessados com segurança de vários threads.
+Uma instância `CAtlBaseModule` de _AtlBaseModule nomeada está presente em todos os projetos ATL, contendo uma alça para a instância do módulo, uma alça para o módulo contendo recursos (que por padrão, são um e o mesmo), e um conjunto de alças para módulos que fornecem recursos primários. `CAtlBaseModule`pode ser acessado com segurança a partir de vários segmentos.
 
-Essa classe substitui o obsoletos [CComModule](../../atl/reference/ccommodule-class.md) classe usado em versões anteriores do ATL.
+Esta classe substitui a obsoleta classe [CComModule](../../atl/reference/ccommodule-class.md) usada em versões anteriores do ATL.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -73,9 +73,9 @@ Essa classe substitui o obsoletos [CComModule](../../atl/reference/ccommodule-cl
 
 **Cabeçalho:** atlcore.h
 
-##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance
+## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::Adicionar instância de recursos
 
-Adiciona uma instância do recurso à lista de identificadores de armazenado.
+Adiciona uma instância de recurso à lista de alças armazenadas.
 
 ```
 bool AddResourceInstance(HINSTANCE hInst) throw();
@@ -83,14 +83,14 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hInst*<br/>
-A instância do recurso para adicionar.
+*Hinst*<br/>
+A instância de recurso para adicionar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna VERDADEIRO se o recurso tiver sido adicionado, false caso contrário.
+Retorna verdadeiro se o recurso foi adicionado com sucesso, falso de outra forma.
 
-##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule
+## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule
 
 O construtor.
 
@@ -102,9 +102,9 @@ CAtlBaseModule() throw();
 
 Cria o `CAtlBaseModule`.
 
-##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt
+## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt
 
-Retorna um identificador para uma instância do recurso especificado.
+Retorna uma alça para uma instância de recurso especificada.
 
 ```
 HINSTANCE GetHInstanceAt(int i) throw();
@@ -112,40 +112,40 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*i*<br/>
-O número da instância do recurso.
+*Eu*<br/>
+O número da instância de recurso.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o identificador para a instância do recurso, ou nulo se não existir nenhuma instância de recurso correspondente.
+Retorna a alça para a instância de recurso ou NULL se não houver instância de recurso correspondente.
 
-##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance
+## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance
 
-Retorna a instância de módulo de um `CAtlBaseModule` objeto.
+Retorna a instância `CAtlBaseModule` do módulo de um objeto.
 
 ```
 HINSTANCE GetModuleInstance() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna a instância de módulo.
+Retorna a instância do módulo.
 
-##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance
+## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance
 
-Retorna a instância do recurso.
+Retorna a instância de recurso.
 
 ```
 HINSTANCE GetResourceInstance() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna a instância do recurso.
+Retorna a instância de recurso.
 
-##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed
 
-Uma variável que indica se a inicialização do módulo tiver falhado.
+Uma variável que indica se a inicialização do módulo falhou.
 
 ```
 static bool m_bInitFailed;
@@ -153,11 +153,11 @@ static bool m_bInitFailed;
 
 ### <a name="remarks"></a>Comentários
 
-True se o módulo inicializado, FALSO se ele falha ao inicializar.
+Verdade se o módulo inicializado, falso se ele falhou em inicializar.
 
-##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance
 
-Remove uma instância do recurso na lista de identificadores de armazenado.
+Remove uma instância de recurso da lista de alças armazenadas.
 
 ```
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
@@ -165,16 +165,16 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hInst*<br/>
-A instância do recurso a ser removido.
+*Hinst*<br/>
+A instância de recurso para remover.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna VERDADEIRO se o recurso foi removido com êxito, false caso contrário.
+Retorna verdadeiro se o recurso foi removido com sucesso, falso de outra forma.
 
-##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance
+## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance
 
-Define a instância do recurso de um `CAtlBaseModule` objeto.
+Define a instância `CAtlBaseModule` de recurso de um objeto.
 
 ```
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
@@ -182,14 +182,14 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hInst*<br/>
-A nova instância do recurso.
+*Hinst*<br/>
+A nova instância de recurso.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna a instância do recurso atualizado.
+Retorna a instância de recurso atualizada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
-[Classes de módulo](../../atl/atl-module-classes.md)
+[Aulas de módulo](../../atl/atl-module-classes.md)

@@ -89,18 +89,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: a5e98a9fe32c71e87f80c2cfc2e733a5d0fe5c94
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 38b0a3278efd10ef5cc989a5fc900bf82d377eae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208332"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320314"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
-A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tem acesso bidirecional. Você usa o contêiner `set` para gerenciar uma sequência de elementos como uma árvore ordenada de nós (aproximadamente) equilibrada, cada um armazenando um elemento.
+A classe modelo descreve um objeto que controla uma seqüência de elementos de comprimento variado que tem acesso bidirecional. Você usa `set` o recipiente para gerenciar uma seqüência de elementos como uma árvore de nó (quase) equilibrada, cada um armazenando um elemento.
 
-Na descrição abaixo, `GValue` é o mesmo que `GKey`, que, por sua vez, é o mesmo que a *chave* , a menos que o último seja um tipo de referência; nesse caso, ele é `Key^`.
+`GValue` Na descrição abaixo, é `GKey`o mesmo que , que por sua vez é o mesmo `Key^`que *Key* a menos que este último seja um tipo de árbitro, nesse caso é .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -118,113 +118,113 @@ template<typename Key>
     { ..... };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
-O tipo do componente de chave de um elemento na sequência controlada.
+O tipo do componente-chave de um elemento na seqüência controlada.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<cliext/definir >
+**Cabeçalho:** \<cliext/set>
 
 **Namespace:** cliext
 
-## <a name="declarations"></a>{1&gt;{2&gt;Declarações&lt;2}&lt;1}
+## <a name="declarations"></a>Declarations
 
-|Definição do tipo|DESCRIÇÃO|
+|Definição do tipo|Descrição|
 |---------------------|-----------------|
 |[set::const_iterator (STL/CLR)](#const_iterator)|O tipo de um iterador de constante para a sequência controlada.|
 |[set::const_reference (STL/CLR)](#const_reference)|O tipo de uma referência de constante para um elemento.|
 |[set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|O tipo de um iterador reverso de constante para a sequência controlada.|
-|[set::difference_type (STL/CLR)](#difference_type)|O tipo de uma distância (possivelmente assinada) entre dois elementos.|
-|[set::generic_container (STL/CLR)](#generic_container)|O tipo da interface genérica para o contêiner.|
-|[set::generic_iterator (STL/CLR)](#generic_iterator)|O tipo de um iterador para a interface genérica para o contêiner.|
-|[set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|O tipo de um iterador reverso para a interface genérica para o contêiner.|
-|[set::generic_value (STL/CLR)](#generic_value)|O tipo de um elemento para a interface genérica para o contêiner.|
+|[set::difference_type (STL/CLR)](#difference_type)|O tipo de distância (possivelmente assinada) entre dois elementos.|
+|[set::generic_container (STL/CLR)](#generic_container)|O tipo de interface genérica para o recipiente.|
+|[set::generic_iterator (STL/CLR)](#generic_iterator)|O tipo de um iterizador para a interface genérica para o recipiente.|
+|[set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|O tipo de um ativador reverso para a interface genérica para o recipiente.|
+|[set::generic_value (STL/CLR)](#generic_value)|O tipo de elemento para a interface genérica para o recipiente.|
 |[set::iterator (STL/CLR)](#iterator)|O tipo de um iterador para a sequência controlada.|
-|[set::key_compare (STL/CLR)](#key_compare)|O delegado de ordenação para duas chaves.|
+|[set::key_compare (STL/CLR)](#key_compare)|O delegado de ordem para duas chaves.|
 |[set::key_type (STL/CLR)](#key_type)|O tipo de uma chave de classificação.|
 |[set::reference (STL/CLR)](#reference)|O tipo de uma referência para um elemento.|
 |[set::reverse_iterator (STL/CLR)](#reverse_iterator)|O tipo de um iterador inverso para a sequência controlada.|
-|[set::size_type (STL/CLR)](#size_type)|O tipo de uma distância (não negativa) entre dois elementos.|
-|[set::value_compare (STL/CLR)](#value_compare)|O delegado de ordenação para dois valores de elemento.|
+|[set::size_type (STL/CLR)](#size_type)|O tipo de distância (não negativa) entre dois elementos.|
+|[set::value_compare (STL/CLR)](#value_compare)|O delegado de ordem para dois valores de elemento.|
 |[set::value_type (STL/CLR)](#value_type)|O tipo de um elemento.|
 
-|Função membro|DESCRIÇÃO|
+|Função membro|Descrição|
 |---------------------|-----------------|
 |[set::begin (STL/CLR)](#begin)|Designa o início da sequência controlada.|
 |[set::clear (STL/CLR)](#clear)|Remove todos os elementos.|
-|[set::count (STL/CLR)](#count)|Conta os elementos que correspondem a uma chave especificada.|
+|[set::count (STL/CLR)](#count)|Conta elementos correspondentes a uma chave especificada.|
 |[set::empty (STL/CLR)](#empty)|Testa se nenhum elemento está presente.|
 |[set::end (STL/CLR)](#end)|Designa o fim da sequência controlada.|
 |[set::equal_range (STL/CLR)](#equal_range)|Localiza o intervalo que corresponde a uma chave especificada.|
 |[set::erase (STL/CLR)](#erase)|Remove os elementos em posições especificadas.|
 |[set::find (STL/CLR)](#find)|Localiza um elemento que corresponde a uma chave especificada.|
 |[set::insert (STL/CLR)](#insert)|Adiciona elementos.|
-|[set::key_comp (STL/CLR)](#key_comp)|Copia o delegado de ordenação de duas chaves.|
-|[set::lower_bound (STL/CLR)](#lower_bound)|Localiza o início do intervalo que corresponde a uma chave especificada.|
+|[set::key_comp (STL/CLR)](#key_comp)|Copia o delegado de encomenda por duas chaves.|
+|[set::lower_bound (STL/CLR)](#lower_bound)|Encontra início de intervalo que corresponde a uma chave especificada.|
 |[set::make_value (STL/CLR)](#make_value)|Constrói um objeto de valor.|
 |[set::rbegin (STL/CLR)](#rbegin)|Designa o início da sequência controlada invertida.|
 |[set::rend (STL/CLR)](#rend)|Designa o fim da sequência controlada invertida.|
 |[set::set (STL/CLR)](#set)|Constrói um objeto contêiner.|
 |[set::size (STL/CLR)](#size)|Conta o número de elementos.|
 |[set::swap (STL/CLR)](#swap)|Alterna o conteúdo de dois contêineres.|
-|[set::to_array (STL/CLR)](#to_array)|Copia a sequência controlada em uma nova matriz.|
-|[set::upper_bound (STL/CLR)](#upper_bound)|Localiza o fim do intervalo que corresponde a uma chave especificada.|
-|[set::value_comp (STL/CLR)](#value_comp)|Copia o delegado de ordenação para dois valores de elemento.|
+|[set::to_array (STL/CLR)](#to_array)|Copia a seqüência controlada para uma nova matriz.|
+|[set::upper_bound (STL/CLR)](#upper_bound)|Encontra o fim do alcance que corresponde a uma chave especificada.|
+|[set::value_comp (STL/CLR)](#value_comp)|Copia o delegado de ordem para dois valores de elemento.|
 
-|Operador|DESCRIÇÃO|
+|Operador|Descrição|
 |--------------|-----------------|
 |[set::operator= (STL/CLR)](#op_as)|Substitui a sequência controlada.|
-|[operator!= (set) (STL/CLR)](#op_neq)|Determina se um objeto `set` não é igual a outro objeto `set`.|
-|[operator< (set) (STL/CLR)](#op_lt)|Determina se um objeto de `set` é menor que outro objeto de `set`.|
-|[operator<= (set) (STL/CLR)](#op_lteq)|Determina se um objeto de `set` é menor ou igual a outro objeto de `set`.|
-|[operator== (set) (STL/CLR)](#op_eq)|Determina se um objeto de `set` é igual a outro objeto de `set`.|
-|[operator> (set) (STL/CLR)](#op_gt)|Determina se um objeto de `set` é maior que outro objeto de `set`.|
-|[operator>= (set) (STL/CLR)](#op_gteq)|Determina se um objeto de `set` é maior ou igual a outro objeto de `set`.|
+|[operador!= (conjunto) (STL/CLR)](#op_neq)|Determina se `set` um objeto não `set` é igual a outro objeto.|
+|[operador< (conjunto) (STL/CLR)](#op_lt)|Determina se `set` um objeto é `set` menor que outro objeto.|
+|[operador<= (conjunto) (STL/CLR)](#op_lteq)|Determina se `set` um objeto é menor `set` ou igual a outro objeto.|
+|[operator== (set) (STL/CLR)](#op_eq)|Determina se `set` um objeto é `set` igual a outro objeto.|
+|[operador> (conjunto) (STL/CLR)](#op_gt)|Determina se `set` um objeto é `set` maior que outro objeto.|
+|[operador>= (conjunto) (STL/CLR)](#op_gteq)|Determina se `set` um objeto é maior `set` ou igual a outro objeto.|
 
 ## <a name="interfaces"></a>Interfaces
 
-|Interface|DESCRIÇÃO|
+|Interface|Descrição|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicar um objeto.|
-|<xref:System.Collections.IEnumerable>|Sequência por meio de elementos.|
-|<xref:System.Collections.ICollection>|Manter grupo de elementos.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Sequenciar por meio de elementos tipados.|
-|<xref:System.Collections.Generic.ICollection%601>|Manter grupo de elementos tipados.|
-|ITree\<chave, valor >|Manter contêiner genérico.|
+|<xref:System.Collections.IEnumerable>|Seqüência através de elementos.|
+|<xref:System.Collections.ICollection>|Manter o grupo de elementos.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Seqüência através de elementos digitados.|
+|<xref:System.Collections.Generic.ICollection%601>|Manter o grupo de elementos digitados.|
+|Chave\<iTree,> de valor|Manter recipiente genérico.|
 
 ## <a name="remarks"></a>Comentários
 
-O objeto aloca e libera o armazenamento para a sequência que ele controla como nós individuais. Ele insere elementos em uma árvore (quase) equilibrada que ele mantém ordenada alterando os links entre os nós, nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente sem perturbar os elementos restantes.
+O objeto aloca e libera o armazenamento para a seqüência que controla como nós individuais. Ele insere elementos em uma árvore (quase) equilibrada que mantém ordenada alterando os links entre nós, nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente sem perturbar os elementos restantes.
 
-O objeto ordena a sequência que ele controla chamando um objeto delegado armazenado do tipo [set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Você pode especificar o objeto delegado armazenado ao construir o conjunto; Se você não especificar nenhum objeto delegado, o padrão será a `operator<(key_type, key_type)`de comparação. Você acessa esse objeto armazenado chamando o conjunto de funções de membro [:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.
+O objeto ordena a seqüência que ele controla chamando um objeto de delegado armazenado de conjunto de [tipos:key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Você pode especificar o objeto de delegar armazenado quando construir o conjunto; se você especificar nenhum objeto de `operator<(key_type, key_type)`delegado, o padrão é a comparação . Você acessa este objeto armazenado chamando o conjunto de funções de [membro::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.
 
-Esse objeto delegado deve impor uma ordenação fraca estrita em chaves do tipo [set:: KEY_TYPE (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Isso significa que, para quaisquer duas chaves `X` e `Y`:
+Tal objeto dedelegado deve impor uma ordem fraca estrita nas teclas do conjunto de [tipos::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Isso significa, para `X` qualquer `Y`duas chaves e:
 
-`key_comp()(X, Y)` retorna o mesmo resultado booliano em cada chamada.
+`key_comp()(X, Y)`retorna o mesmo resultado booleano em cada chamada.
 
-Se `key_comp()(X, Y)` for true, `key_comp()(Y, X)` deverá ser false.
+Se `key_comp()(X, Y)` for verdade, então `key_comp()(Y, X)` deve ser falso.
 
-Se `key_comp()(X, Y)` for true, `X` será considerado como ordenado antes de `Y`.
+Se `key_comp()(X, Y)` for verdade, então `X` diz-se `Y`que deve ser ordenado antes.
 
-Se `!key_comp()(X, Y) && !key_comp()(Y, X)` for true, `X` e `Y` serão considerados como uma ordenação equivalente.
+Se `!key_comp()(X, Y) && !key_comp()(Y, X)` é verdade, então `X` e `Y` dizem que tem pedidos equivalentes.
 
-Para qualquer elemento `X` que preceda `Y` na sequência controlada, `key_comp()(Y, X)` é false. (Para o objeto delegado padrão, as chaves nunca diminuem em valor.) Ao contrário do [conjunto](../dotnet/set-stl-clr.md)de classes de modelo, um objeto de classe de modelo `set` não exige que as chaves para todos os elementos sejam exclusivas. (Duas ou mais chaves podem ter uma ordenação equivalente.)
+Para qualquer `X` elemento `Y` que precede na `key_comp()(Y, X)` seqüência controlada, é falso. (Para o objeto delegado padrão, as chaves nunca diminuem de valor.) Ao contrário do [conjunto](../dotnet/set-stl-clr.md)de `set` classes de modelo, um objeto de classe de modelo não requer que as teclas para todos os elementos sejam únicas. (Duas ou mais chaves podem ter pedidos equivalentes.)
 
-Cada elemento serve como um ey e um valor. A sequência é representada de uma maneira que permite a pesquisa, a inserção e a remoção de um elemento arbitrário com várias operações proporcionais ao logaritmo do número de elementos na sequência (tempo logarítmica). Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.
+Cada elemento serve tanto como um ey quanto como um valor. A seqüência é representada de forma que permite a procuração, inserção e remoção de um elemento arbitrário com uma série de operações proporcionais ao logaritmo do número de elementos na seqüência (tempo logarítmico). Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.
 
-Um conjunto dá suporte a iteradores bidirecionais, o que significa que você pode percorrer elementos adjacentes, dado um iterador que designa um elemento na sequência controlada. Um nó de cabeçalho especial corresponde ao iterador retornado por [set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Você pode decrementar esse iterador para alcançar o último elemento na sequência controlada, se presente. Você pode incrementar um iterador de conjunto para alcançar o nó principal e, em seguida, será comparado igual a `end()`. Mas não é possível desreferenciar o iterador retornado pelo `end()`.
+Um conjunto suporta iteradores bidirecionais, o que significa que você pode pisar em elementos adjacentes dado um iterador que designa um elemento na seqüência controlada. Um nó de cabeça especial corresponde ao iterator retornado por [set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Você pode diminuir este tempor para alcançar o último elemento na seqüência controlada, se presente. Você pode incrementar um iterador definidor para alcançar o `end()`nó da cabeça, e ele será então comparado igual a . Mas você não pode desreferenciar `end()`o tempoator devolvido por .
 
-Observe que você não pode fazer referência a um elemento Set diretamente, dada sua posição numérica, que requer um iterador de acesso aleatório.
+Observe que você não pode se referir a um elemento definido diretamente dada a sua posição numérica -- que requer um iterizador de acesso aleatório.
 
-Um iterador Set armazena um identificador para seu nó de conjunto associado que, por sua vez, armazena um identificador para seu contêiner associado. Você pode usar iteradores somente com seus objetos de contêiner associados. Um iterador de conjunto permanece válido, desde que seu nó de conjunto associado esteja associado a algum conjunto. Além disso, um iterador válido é dereferencable--você pode usá-lo para acessar ou alterar o valor do elemento que ele designa, desde que ele não seja igual a `end()`.
+Um definidor armazena uma alça para o seu nó conjunto associado, que por sua vez armazena uma alça para o seu contêiner associado. Você só pode usar dispositivos com seus objetos de contêiner associados. Um definidor permanece válido desde que seu nó de conjunto associado esteja associado a algum conjunto. Além disso, um iterador válido é desreferenciador - você pode usá-lo para acessar ou alterar o `end()`valor do elemento que ele designa - desde que não seja igual a .
 
-Apagar ou remover um elemento chama o destruidor para seu valor armazenado. A destruição do contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma ref class garante que nenhum elemento sobreviver além o contêiner. No entanto, observe que um contêiner de identificadores *não* destrói seus elementos.
+Apagar ou remover um elemento chama o destruidor pelo seu valor armazenado. Destruir o contêiner apaga todos os elementos. Assim, um recipiente cujo tipo de elemento é uma classe ref garante que nenhum elemento sobreviva ao recipiente. Note, no entanto, que um recipiente de alças *não* destrói seus elementos.
 
 ## <a name="members"></a>Membros
 
-## <a name="setbegin-stlclr"></a><a name="begin"></a>Set:: Begin (STL/CLR)
+## <a name="setbegin-stlclr"></a><a name="begin"></a>conjunto::start (STL/CLR)
 
 Designa o início da sequência controlada.
 
@@ -236,7 +236,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador bidirecional que designa o primeiro elemento da sequência controlada ou apenas além do final de uma sequência vazia. Use-o para obter um iterador que designa o início `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
+A função do membro retorna um iterador bidirecional que designa o primeiro elemento da seqüência controlada, ou logo após o fim de uma seqüência vazia. Use-o para obter um iterador que designa o início `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -272,7 +272,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="setclear-stlclr"></a><a name="clear"></a>Set:: Clear (STL/CLR)
+## <a name="setclear-stlclr"></a><a name="clear"></a>conjunto::clear (STL/CLR)
 
 Remove todos os elementos.
 
@@ -284,7 +284,7 @@ void clear();
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro efetivamente chama [set:: Erase (STL/CLR)](../dotnet/set-erase-stl-clr.md)`(` [set:: Begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)`(),` [set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`())`. Você o usa para garantir que a sequência controlada esteja vazia.
+A função de membro chama efetivamente [set::apagar (STL/CLR)](../dotnet/set-erase-stl-clr.md) `(` [set::begin (STL/CLR)](../dotnet/set-begin-stl-clr.md) `(),` [set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`())`. Use-o para garantir que a seqüência controlada esteja vazia.
 
 ### <a name="example"></a>Exemplo
 
@@ -330,7 +330,7 @@ a b
 size() = 0
 ```
 
-## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>definir:: const_iterator (STL/CLR)
+## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>conjunto::const_iterator (STL/CLR)
 
 O tipo de um iterador de constante para a sequência controlada.
 
@@ -342,7 +342,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto de tipo não especificado `T2` que pode servir como um iterador bidirecional constante para a sequência controlada.
+O tipo descreve um objeto `T2` de tipo não especificado que pode servir como um constante iterador bidirecional para a seqüência controlada.
 
 ### <a name="example"></a>Exemplo
 
@@ -372,7 +372,7 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>definir:: const_reference (STL/CLR)
+## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>conjunto::const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -384,7 +384,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma referência constante para um elemento.
+O tipo descreve uma referência constante a um elemento.
 
 ### <a name="example"></a>Exemplo
 
@@ -417,9 +417,9 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>definir:: const_reverse_iterator (STL/CLR)
+## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>conjunto::const_reverse_iterator (STL/CLR)
 
-O tipo de um iterador reverso constante para a sequência controlada.
+O tipo de um isolador reverso constante para a seqüência controlada..
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -429,7 +429,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto de tipo não especificado `T4` que pode servir como um iterador reverso constante para a sequência controlada.
+O tipo descreve um objeto `T4` de tipo não especificado que pode servir como um constante tempor reverso para a seqüência controlada.
 
 ### <a name="example"></a>Exemplo
 
@@ -459,7 +459,7 @@ int main()
 c b a
 ```
 
-## <a name="setcount-stlclr"></a><a name="count"></a>Set:: Count (STL/CLR)
+## <a name="setcount-stlclr"></a><a name="count"></a>conjunto::contagem (STL/CLR)
 
 Localiza o número de elementos que correspondem a uma chave especificada.
 
@@ -469,14 +469,14 @@ Localiza o número de elementos que correspondem a uma chave especificada.
 size_type count(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*chave*<br/>
+*Chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna o número de elementos na sequência controlada que têm uma ordenação equivalente com a *chave*. Usado para determinar o número de elementos que estão na sequência controlada no momento e que correspondem a uma chave especificada.
+A função do membro retorna o número de elementos na seqüência controlada que têm ordem equivalente com *chave*. Usado para determinar o número de elementos que estão na sequência controlada no momento e que correspondem a uma chave especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -512,9 +512,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>conjunto::d ifference_type (STL/CLR)
+## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>conjunto::difference_type (STL/CLR)
 
-Os tipos de uma distância assinada entre dois elementos.
+Os tipos de distância assinada entre dois elementos.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -567,7 +567,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="setempty-stlclr"></a><a name="empty"></a>Set:: Empty (STL/CLR)
+## <a name="setempty-stlclr"></a><a name="empty"></a>conjunto::vazio (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -579,7 +579,7 @@ bool empty();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [set:: Size (STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0`. Você o usa para testar se o conjunto está vazio.
+A função membro retorna verdadeiro para uma sequência controlada vazia. Equivale a [definir::tamanho (STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0`. Você o usa para testar se o conjunto está vazio.
 
 ### <a name="example"></a>Exemplo
 
@@ -619,7 +619,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="setend-stlclr"></a><a name="end"></a>Set:: End (STL/CLR)
+## <a name="setend-stlclr"></a><a name="end"></a>conjunto::end (STL/CLR)
 
 Designa o fim da sequência controlada.
 
@@ -631,7 +631,7 @@ iterator end();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador bidirecional que aponta apenas além do fim da sequência controlada. Você o usa para obter um iterador que designa o final da sequência controlada; seu status não será alterado se o comprimento da sequência controlada for alterado.
+A função do membro retorna um iterador bidirecional que aponta um pouco além do final da seqüência controlada. Você o usa para obter um iterador que designa o fim da seqüência controlada; seu status não muda se o comprimento da seqüência controlada mudar.
 
 ### <a name="example"></a>Exemplo
 
@@ -668,7 +668,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>definir:: equal_range (STL/CLR)
+## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>conjunto::equal_range (STL/CLR)
 
 Localiza o intervalo que corresponde a uma chave especificada.
 
@@ -678,14 +678,14 @@ Localiza o intervalo que corresponde a uma chave especificada.
 cliext::pair<iterator, iterator> equal_range(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*chave*<br/>
+*Chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um par de iteradores `cliext::pair<iterator, iterator>(` [conjunto:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)`(key),` [conjunto:: upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)`(key))`. Você o usa para determinar o intervalo de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
+A função membro retorna um conjunto `cliext::pair<iterator, iterator>(` de iterizadores [definido::lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [definido::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)`(key))`. Você o usa para determinar o alcance de elementos atualmente na seqüência controlada que correspondem a uma chave especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -728,7 +728,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="seterase-stlclr"></a><a name="erase"></a>Set:: Erase (STL/CLR)
+## <a name="seterase-stlclr"></a><a name="erase"></a>conjunto::apagar (STL/CLR)
 
 Remove os elementos em posições especificadas.
 
@@ -740,29 +740,29 @@ iterator erase(iterator first, iterator last);
 size_type erase(key_type key)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
-Início do intervalo a ser apagado.
+*Primeiro*<br/>
+Início do alcance para apagar.
 
-*chave*<br/>
-Valor de chave a ser apagado.
+*Chave*<br/>
+Valor-chave para apagar.
 
-*last*<br/>
-Fim do intervalo a ser apagado.
+*Última*<br/>
+Fim do alcance para apagar.
 
-*where*<br/>
-Elemento a ser apagado.
+*Onde*<br/>
+Elemento para apagar.
 
 ### <a name="remarks"></a>Comentários
 
-A função de primeiro membro remove o elemento da sequência controlada apontada por *Where*e retorna um iterador que designa o primeiro elemento restante além do elemento removido, ou [set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()` se nenhum elemento desse tipo existir. Você o usa para remover um único elemento.
+A primeira função do membro remove o elemento da seqüência controlada apontada para *onde*, e retorna um iterador que designa o primeiro elemento restante além do elemento removido, ou [definido::end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` se não houver tal elemento. Você o usa para remover um único elemento.
 
-A segunda função de membro remove os elementos da sequência controlada no intervalo [`first`, `last`) e retorna um iterador que designa o primeiro elemento restante além de todos os elementos removidos ou `end()` se nenhum elemento desse tipo existir.. Você o usa para remover zero ou mais elementos contíguos.
+A segunda função do membro remove os elementos`first` `last`da seqüência controlada na faixa [ , ), e `end()` retorna um iterador que designa o primeiro elemento restante além de quaisquer elementos removidos, ou se tal elemento não existe.. Você o usa para remover elementos zero ou mais contíguos.
 
-A terceira função de membro remove qualquer elemento da sequência controlada cuja chave tem ordenação equivalente para a *chave*e retorna uma contagem do número de elementos removidos. Você o usa para remover e contar todos os elementos que correspondem a uma chave especificada.
+A função do terceiro membro remove qualquer elemento da seqüência controlada cuja chave tem ordem equivalente à *chave*e retorna uma contagem do número de elementos removidos. Você o usa para remover e contar todos os elementos que correspondem a uma chave especificada.
 
-Cada eliminação de elemento leva tempo proporcional ao logaritmo do número de elementos na sequência controlada.
+Cada eliminação de elemento leva tempo proporcional ao logaritmo do número de elementos na seqüência controlada.
 
 ### <a name="example"></a>Exemplo
 
@@ -812,7 +812,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="setfind-stlclr"></a><a name="find"></a>Set:: find (STL/CLR)
+## <a name="setfind-stlclr"></a><a name="find"></a>conjunto::find (STL/CLR)
 
 Localiza um elemento que corresponde a uma chave especificada.
 
@@ -822,14 +822,14 @@ Localiza um elemento que corresponde a uma chave especificada.
 iterator find(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*chave*<br/>
+*Chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-Se pelo menos um elemento na sequência controlada tiver uma ordenação equivalente com *chave*, a função de membro retornará um iterador que designa um desses elementos; caso contrário, ele retornará [set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Você o usa para localizar um elemento atualmente na sequência controlada que corresponde a uma chave especificada.
+Se pelo menos um elemento na seqüência controlada tiver ordem equivalente com *chave,* a função do membro retorna um iterator designando um desses elementos; caso contrário, ele retorna [definido::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Você o usa para localizar um elemento atualmente na seqüência controlada que corresponde a uma chave especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -868,9 +868,9 @@ find b = b
 find C = False
 ```
 
-## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>definir:: generic_container (STL/CLR)
+## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>conjunto::generic_container (STL/CLR)
 
-O tipo da interface genérica para o contêiner.
+O tipo de interface genérica para o recipiente.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -932,9 +932,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>definir:: generic_iterator (STL/CLR)
+## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>conjunto::generic_iterator (STL/CLR)
 
-O tipo de um iterador para uso com a interface genérica para o contêiner.
+O tipo de um ativador para uso com a interface genérica para o recipiente.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -946,7 +946,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um iterador genérico que pode ser usado com a interface genérica para essa classe de contêiner de modelo.
+O tipo descreve um iterador genérico que pode ser usado com a interface genérica para esta classe de contêiner de modelo.
 
 ### <a name="example"></a>Exemplo
 
@@ -988,9 +988,9 @@ a b c
 a
 ```
 
-## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>definir:: generic_reverse_iterator (STL/CLR)
+## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>conjunto::generic_reverse_iterator (STL/CLR)
 
-O tipo de um iterador reverso para uso com a interface genérica para o contêiner.
+O tipo de um ativador reverso para uso com a interface genérica para o recipiente.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1002,7 +1002,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um iterador reverso genérico que pode ser usado com a interface genérica para essa classe de contêiner de modelo.
+O tipo descreve um iterador reverso genérico que pode ser usado com a interface genérica para esta classe de contêiner de modelo.
 
 ### <a name="example"></a>Exemplo
 
@@ -1044,9 +1044,9 @@ a b c
 c
 ```
 
-## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>definir:: generic_value (STL/CLR)
+## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>conjunto::generic_value (STL/CLR)
 
-O tipo de um elemento a ser usado com a interface genérica para o contêiner.
+O tipo de elemento para uso com a interface genérica para o recipiente.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1056,7 +1056,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto do tipo `GValue` que descreve o valor do elemento armazenado para uso com a interface genérica para essa classe de contêiner de modelo.
+O tipo descreve um `GValue` objeto de tipo que descreve o valor do elemento armazenado para uso com a interface genérica para esta classe de contêiner de modelo.
 
 ### <a name="example"></a>Exemplo
 
@@ -1098,7 +1098,7 @@ a b c
 a
 ```
 
-## <a name="setinsert-stlclr"></a><a name="insert"></a>Set:: Insert (STL/CLR)
+## <a name="setinsert-stlclr"></a><a name="insert"></a>conjunto::insert (STL/CLR)
 
 Adiciona elementos.
 
@@ -1112,36 +1112,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
-Início do intervalo a ser inserido.
+*Primeiro*<br/>
+Início do alcance para inserir.
 
-*last*<br/>
-Fim do intervalo a ser inserido.
+*Última*<br/>
+Fim do alcance para inserir.
 
-*right*<br/>
-Enumeração a ser inserida.
+*Certo*<br/>
+Enumeração para inserir.
 
-*val*<br/>
-Valor de chave a ser inserido.
+*Val*<br/>
+Valor-chave para inserir.
 
-*where*<br/>
-Onde o contêiner deve ser inserido (somente dica).
+*Onde*<br/>
+Onde no recipiente para inserir (somente dica).
 
 ### <a name="remarks"></a>Comentários
 
-Cada uma das funções de membro insere uma sequência especificada pelos operandos restantes.
+Cada uma das funções do membro insere uma seqüência especificada pelos operands restantes.
 
-A primeira função de membro tenta inserir um elemento com valor *Val*e retorna um par de valores `X`. Se `X.second` for true, `X.first` designará o elemento recentemente inserido; caso contrário `X.first` designa um elemento com ordenação equivalente que já existe e nenhum elemento novo é inserido. Você o usa para inserir um único elemento.
+A função do primeiro membro se esforça para inserir um `X`elemento com valor *val*, e retorna um par de valores . Se `X.second` for `X.first` verdade, designa o elemento recém-inserido; caso `X.first` contrário, designa um elemento com ordem equivalente que já existe e nenhum novo elemento é inserido. Você o usa para inserir um único elemento.
 
-A segunda função de membro insere um elemento com valor *Val*, usando *Where* como uma dica (para melhorar o desempenho) e retorna um iterador que designa o elemento recém-inserido. Você o usa para inserir um único elemento que pode ser adjacente a um elemento que você conhece.
+A segunda função do membro insere um elemento com *valor val,* usando *como* uma dica (para melhorar o desempenho), e retorna um iterator que designa o elemento recém-inserido. Você o usa para inserir um único elemento que pode ser adjacente a um elemento que você conhece.
 
-A terceira função de membro insere a sequência [`first`, `last`). Você o usa para inserir zero ou mais elementos copiados de outra sequência.
+A função do terceiro membro`first` `last`insere a seqüência [ ). Você o usa para inserir zero ou mais elementos copiados de outra seqüência.
 
-A quarta função de membro insere a sequência designada à *direita*. Você o usa para inserir uma sequência descrita por um enumerador.
+A função do quarto membro insere a seqüência designada pela *direita*. Você o usa para inserir uma seqüência descrita por um enumerador.
 
-Cada inserção de elemento leva tempo proporcional ao logaritmo do número de elementos na sequência controlada. A inserção pode ocorrer em tempo constante amortizado, no entanto, dada uma dica que designa um elemento adjacente ao ponto de inserção.
+Cada inserção de elemento leva tempo proporcional ao logaritmo do número de elementos na seqüência controlada. A inserção pode ocorrer em tempo constante amortizado, no entanto, dada uma dica que designa um elemento adjacente ao ponto de inserção.
 
 ### <a name="example"></a>Exemplo
 
@@ -1214,7 +1214,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="setiterator-stlclr"></a><a name="iterator"></a>Set:: iterador (STL/CLR)
+## <a name="setiterator-stlclr"></a><a name="iterator"></a>conjunto::iterator (STL/CLR)
 
 O tipo de um iterador para a sequência controlada.
 
@@ -1226,7 +1226,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto de tipo não especificado `T1` que pode servir como um iterador bidirecional para a sequência controlada.
+O tipo descreve um objeto `T1` de tipo não especificado que pode servir como um iterador bidirecional para a seqüência controlada.
 
 ### <a name="example"></a>Exemplo
 
@@ -1256,9 +1256,9 @@ int main()
 a b c
 ```
 
-## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>definir:: key_comp (STL/CLR)
+## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>conjunto::key_comp (STL/CLR)
 
-Copia o delegado de ordenação de duas chaves.
+Copia o delegado de encomenda por duas chaves.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1268,7 +1268,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna o delegado de ordenação usado para ordenar a sequência controlada. Use-o para comparar duas chaves.
+A função membro retorna o delegado de ordem usado para ordenar a seqüência controlada. Use-o para comparar duas chaves.
 
 ### <a name="example"></a>Exemplo
 
@@ -1315,9 +1315,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>definir:: key_compare (STL/CLR)
+## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>conjunto::key_compare (STL/CLR)
 
-O delegado de ordenação para duas chaves.
+O delegado de ordem para duas chaves.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1328,7 +1328,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o delegado que determina a ordenação de seus argumentos de chave.
+O tipo é um sinônimo para o delegado que determina a ordenação de seus argumentos-chave.
 
 ### <a name="example"></a>Exemplo
 
@@ -1375,7 +1375,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_type-stlclr"></a><a name="key_type"></a>definir:: key_type (STL/CLR)
+## <a name="setkey_type-stlclr"></a><a name="key_type"></a>conjunto::key_type (STL/CLR)
 
 O tipo de uma chave de classificação.
 
@@ -1387,7 +1387,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para a *chave*de parâmetro do modelo.
+O tipo é um sinônimo para a *chave*de parâmetro de modelo .
 
 ### <a name="example"></a>Exemplo
 
@@ -1420,9 +1420,9 @@ int main()
 a b c
 ```
 
-## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>definir:: lower_bound (STL/CLR)
+## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>conjunto::lower_bound (STL/CLR)
 
-Localiza o início do intervalo que corresponde a uma chave especificada.
+Encontra início de intervalo que corresponde a uma chave especificada.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1430,14 +1430,14 @@ Localiza o início do intervalo que corresponde a uma chave especificada.
 iterator lower_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*chave*<br/>
+*Chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro determina o primeiro elemento `X` na sequência controlada que tem uma ordenação equivalente para a *chave*. Se nenhum elemento desse tipo existir, ele retornará [set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; caso contrário, ele retorna um iterador que designa `X`. Você o usa para localizar o início de uma sequência de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
+A função do membro `X` determina o primeiro elemento na seqüência controlada que tem ordem equivalente à *chave*. Se não existir tal elemento, ele retorna [set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; caso contrário, ele retorna um `X`iterador que designa . Você o usa para localizar o início de uma seqüência de elementos atualmente na seqüência controlada que correspondem a uma chave especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -1477,7 +1477,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="setmake_value-stlclr"></a><a name="make_value"></a>definir:: make_value (STL/CLR)
+## <a name="setmake_value-stlclr"></a><a name="make_value"></a>conjunto::make_value (STL/CLR)
 
 Constrói um objeto de valor.
 
@@ -1487,14 +1487,14 @@ Constrói um objeto de valor.
 static value_type make_value(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*chave*<br/>
-Valor de chave a ser usado.
+*Chave*<br/>
+Valor-chave a ser usado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um objeto `value_type` cuja chave é *chave*. Você o usa para compor um objeto adequado para uso com várias outras funções de membro.
+A função do `value_type` membro retorna um objeto cuja chave é *a chave*. Você o usa para compor um objeto adequado para uso com várias outras funções de membro.
 
 ### <a name="example"></a>Exemplo
 
@@ -1523,7 +1523,7 @@ int main()
 a b c
 ```
 
-## <a name="setoperator-stlclr"></a><a name="op_as"></a>Set:: Operator = (STL/CLR)
+## <a name="setoperator-stlclr"></a><a name="op_as"></a>conjunto::operador= (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -1533,14 +1533,14 @@ Substitui a sequência controlada.
 set<Key>% operator=(set<Key>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*<br/>
 O contêiner a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-O operador membro copia *diretamente* para o objeto e, em seguida, retorna `*this`. Você o usa para substituir a sequência controlada por uma cópia da sequência controlada *à direita*.
+O operador membro copia *o* direito `*this`ao objeto e retorna . Você o usa para substituir a seqüência controlada por uma cópia da seqüência controlada à *direita*.
 
 ### <a name="example"></a>Exemplo
 
@@ -1578,7 +1578,7 @@ a b c
 a b c
 ```
 
-## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>Set:: rbegin (STL/CLR)
+## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>conjunto::rbegin (STL/CLR)
 
 Designa o início da sequência controlada invertida.
 
@@ -1590,7 +1590,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador reverso que designa o último elemento da sequência controlada ou apenas além do início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência invertida. Use-o para obter um iterador que designa o início `current` da sequência controlada que é vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
+A função do membro retorna um iterador reverso que designa o último elemento da seqüência controlada, ou logo após o início de uma seqüência vazia. Portanto, ele designa o `beginning` da sequência invertida. Use-o para obter um iterador que designa o início `current` da sequência controlada que é vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1626,7 +1626,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="setreference-stlclr"></a><a name="reference"></a>Set:: Reference (STL/CLR)
+## <a name="setreference-stlclr"></a><a name="reference"></a>conjunto::referência (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -1671,7 +1671,7 @@ int main()
 a b c
 ```
 
-## <a name="setrend-stlclr"></a><a name="rend"></a>Set:: rend (STL/CLR)
+## <a name="setrend-stlclr"></a><a name="rend"></a>conjunto::rend (STL/CLR)
 
 Designa o fim da sequência controlada invertida.
 
@@ -1683,7 +1683,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador reverso que aponta apenas além do início da sequência controlada. Portanto, ele designa o `end` da sequência invertida. Use-o para obter um iterador que designa o fim `current` da sequência controlada vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
+A função do membro retorna um iterador reverso que aponta pouco além do início da seqüência controlada. Portanto, ele designa o `end` da sequência invertida. Use-o para obter um iterador que designa o fim `current` da sequência controlada vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1720,7 +1720,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>definir:: reverse_iterator (STL/CLR)
+## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>conjunto::reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso para a sequência controlada.
 
@@ -1732,7 +1732,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto de tipo não especificado `T3` que pode servir como um iterador reverso para a sequência controlada.
+O tipo descreve um objeto `T3` de tipo não especificado que pode servir como um iterizador reverso para a seqüência controlada.
 
 ### <a name="example"></a>Exemplo
 
@@ -1762,7 +1762,7 @@ int main()
 c b a
 ```
 
-## <a name="setset-stlclr"></a><a name="set"></a>Set:: Set (STL/CLR)
+## <a name="setset-stlclr"></a><a name="set"></a>conjunto::set (STL/CLR)
 
 Constrói um objeto contêiner.
 
@@ -1783,18 +1783,18 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
-Início do intervalo a ser inserido.
+*Primeiro*<br/>
+Início do alcance para inserir.
 
-*last*<br/>
-Fim do intervalo a ser inserido.
+*Última*<br/>
+Fim do alcance para inserir.
 
 *Pred*<br/>
-Predicado de ordenação para a sequência controlada.
+Ordenando predicado para a seqüência controlada.
 
-*right*<br/>
+*Certo*<br/>
 Objeto ou intervalo a inserir.
 
 ### <a name="remarks"></a>Comentários
@@ -1803,49 +1803,49 @@ O construtor:
 
 `set();`
 
-Inicializa a sequência controlada sem elementos, com o predicado de ordenação padrão `key_compare()`. Você o usa para especificar uma sequência controlada inicial vazia, com o predicado de ordenação padrão.
+inicializa a seqüência controlada sem elementos, `key_compare()`com o predicado de encomenda padrão . Você o usa para especificar uma seqüência controlada inicial vazia, com o predicado de pedido padrão.
 
 O construtor:
 
 `explicit set(key_compare^ pred);`
 
-Inicializa a sequência controlada sem elementos, com o predicado de ordenação *Pred*. Você o usa para especificar uma sequência controlada inicial vazia, com o predicado de ordenação especificado.
+inicializa a seqüência controlada sem elementos, com o predicado de ordenação *pred*. Você o usa para especificar uma seqüência controlada inicial vazia, com o predicado de pedido especificado.
 
 O construtor:
 
 `set(set<Key>% right);`
 
-Inicializa a sequência controlada com a sequência [`right.begin()`, `right.end()`), com o predicado de ordenação padrão. Você o usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo *direito*Set Object, com o predicado de ordenação padrão.
+inicializa a seqüência controlada`right.begin()` `right.end()`com a seqüência [ , ), com o predicado de encomenda padrão. Você o usa para especificar uma seqüência controlada inicial que é uma cópia da seqüência controlada pelo objeto definido *direito,* com o predicado de pedido padrão.
 
 O construtor:
 
 `set(set<Key>^ right);`
 
-Inicializa a sequência controlada com a sequência [`right->begin()`, `right->end()`), com o predicado de ordenação padrão. Você o usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo *direito*Set Object, com o predicado de ordenação padrão.
+inicializa a seqüência controlada`right->begin()` `right->end()`com a seqüência [ , ), com o predicado de encomenda padrão. Você o usa para especificar uma seqüência controlada inicial que é uma cópia da seqüência controlada pelo objeto definido *direito,* com o predicado de pedido padrão.
 
 O construtor:
 
 `template<typename InIter> set(InIter first, InIter last);`
 
-Inicializa a sequência controlada com a sequência [`first`, `last`), com o predicado de ordenação padrão. Você o usa para tornar a sequência controlada uma cópia de outra sequência, com o predicado de ordenação padrão.
+inicializa a seqüência controlada`first` `last`com a seqüência [ , ), com o predicado de encomenda padrão. Você o usa para fazer da seqüência controlada uma cópia de outra seqüência, com o predicado de pedido padrão.
 
 O construtor:
 
 `template<typename InIter> set(InIter first, InIter last, key_compare^ pred);`
 
-Inicializa a sequência controlada com a sequência [`first`, `last`), com o predicado de ordenação *Pred*. Você o usa para tornar a sequência controlada uma cópia de outra sequência, com o predicado de ordenação especificado.
+inicializa a seqüência controlada`first` `last`com a seqüência [ , ), com o predicado de ordenação *pred*. Você o usa para fazer da seqüência controlada uma cópia de outra seqüência, com o predicado de pedido especificado.
 
 O construtor:
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Inicializa a sequência controlada com a sequência designada pelo enumerador *à direita*, com o predicado de ordenação padrão. Você o usa para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador, com o predicado de ordenação padrão.
+inicializa a seqüência controlada com a seqüência designada pelo *enumerador direito,* com o predicado de encomenda padrão. Você o usa para fazer da seqüência controlada uma cópia de outra seqüência descrita por um enumerador, com o predicado de pedido padrão.
 
 O construtor:
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inicializa a sequência controlada com a sequência designada pelo enumerador *à direita*, com o predicado de ordenação *Pred*. Você o usa para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador, com o predicado de ordenação especificado.
+inicializa a seqüência controlada com a seqüência designada pela *direita*do enumerador, com o predicado de encomenda *pred*. Você a usa para fazer da seqüência controlada uma cópia de outra seqüência descrita por um enumerador, com o predicado de pedido especificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1933,7 +1933,7 @@ c b a
 a b c
 ```
 
-## <a name="setsize-stlclr"></a><a name="size"></a>Set:: Size (STL/CLR)
+## <a name="setsize-stlclr"></a><a name="size"></a>conjunto::tamanho (STL/CLR)
 
 Conta o número de elementos.
 
@@ -1945,7 +1945,7 @@ size_type size();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o comprimento da sequência controlada. Você o usa para determinar o número de elementos atualmente na sequência controlada. Se tudo o que você se importa é se a sequência tem tamanho diferente de zero, consulte [set:: Empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)`()`.
+A função membro retorna o comprimento da sequência controlada. Você o usa para determinar o número de elementos atualmente na seqüência controlada. Se tudo o que você se importa é se a seqüência tem tamanho não zero, consulte [set::empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Exemplo
 
@@ -1987,9 +1987,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="setsize_type-stlclr"></a><a name="size_type"></a>definir:: size_type (STL/CLR)
+## <a name="setsize_type-stlclr"></a><a name="size_type"></a>conjunto::size_type (STL/CLR)
 
-O tipo de uma distância assinada entre dois elementos.
+O tipo de distância assinada entre dois elementos.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2035,7 +2035,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="setswap-stlclr"></a><a name="swap"></a>Set:: swap (STL/CLR)
+## <a name="setswap-stlclr"></a><a name="swap"></a>conjunto::swap (STL/CLR)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -2045,14 +2045,14 @@ Alterna o conteúdo de dois contêineres.
 void swap(set<Key>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*<br/>
 Contêiner com o qual trocar conteúdos.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca as sequências controladas entre `this` e *direita*. Ele faz isso em constante tempo e não lança nenhuma exceção. Você o usa como uma maneira rápida de trocar o conteúdo de dois contêineres.
+A função do membro troca `this` as seqüências controladas entre e *a direita*. Ele faz isso em tempo constante e não lança exceções. Você o usa como uma maneira rápida de trocar o conteúdo de dois contêineres.
 
 ### <a name="example"></a>Exemplo
 
@@ -2103,9 +2103,9 @@ d e f
 a b c
 ```
 
-## <a name="setto_array-stlclr"></a><a name="to_array"></a>definir:: to_array (STL/CLR)
+## <a name="setto_array-stlclr"></a><a name="to_array"></a>conjunto::to_array (STL/CLR)
 
-Copia a sequência controlada em uma nova matriz.
+Copia a seqüência controlada para uma nova matriz.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2115,7 +2115,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna uma matriz que contém a sequência controlada. Você o usa para obter uma cópia da sequência controlada na forma de matriz.
+A função membro retorna uma matriz contendo a seqüência controlada. Você o usa para obter uma cópia da seqüência controlada na forma de matriz.
 
 ### <a name="example"></a>Exemplo
 
@@ -2153,9 +2153,9 @@ a b c d
 a b c
 ```
 
-## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>definir:: upper_bound (STL/CLR)
+## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>conjunto::upper_bound (STL/CLR)
 
-Localiza o fim do intervalo que corresponde a uma chave especificada.
+Encontra o fim do alcance que corresponde a uma chave especificada.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2163,14 +2163,14 @@ Localiza o fim do intervalo que corresponde a uma chave especificada.
 iterator upper_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*chave*<br/>
+*Chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro determina o último elemento `X` na sequência controlada que tem uma ordenação equivalente para a *chave*. Se esse elemento não existir, ou se `X` for o último elemento na sequência controlada, ele retornará [set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; caso contrário, ele retorna um iterador que designa o primeiro elemento além `X`. Você o usa para localizar o final de uma sequência de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
+A função do membro `X` determina o último elemento na seqüência controlada que tem ordem equivalente à *chave*. Se não existe tal `X` elemento, ou se é o último elemento na seqüência controlada, ele retorna [definido::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; caso contrário, ele retorna um iterador `X`que designa o primeiro elemento além . Você o usa para localizar o fim de uma seqüência de elementos atualmente na seqüência controlada que correspondem a uma tecla especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -2210,9 +2210,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>definir:: value_comp (STL/CLR)
+## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>conjunto::value_comp (STL/CLR)
 
-Copia o delegado de ordenação para dois valores de elemento.
+Copia o delegado de ordem para dois valores de elemento.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2222,7 +2222,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna o delegado de ordenação usado para ordenar a sequência controlada. Você o usa para comparar dois valores de elemento.
+A função membro retorna o delegado de ordem usado para ordenar a seqüência controlada. Você o usa para comparar dois valores de elemento.
 
 ### <a name="example"></a>Exemplo
 
@@ -2254,9 +2254,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>definir:: value_compare (STL/CLR)
+## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>conjunto::value_compare (STL/CLR)
 
-O delegado de ordenação para dois valores de elemento.
+O delegado de ordem para dois valores de elemento.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2299,7 +2299,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>definir:: value_type (STL/CLR)
+## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>conjunto::value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -2344,9 +2344,9 @@ int main()
 a b c
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_neq"></a>operador! = (conjunto) (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_neq"></a>operador!= (conjunto) (STL/CLR)
 
-Lista não é igual a comparação.
+Lista não é igual comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2356,17 +2356,17 @@ template<typename Key>
         set<Key>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*Deixou*<br/>
 Contêiner esquerdo a comparar.
 
-*right*<br/>
+*Certo*<br/>
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função Operator retorna `!(left == right)`. Você o usa para testar se a *esquerda* não é ordenada da mesma forma que a *correta* quando os dois conjuntos são elementos comparados por elemento.
+A função `!(left == right)`do operador retorna . Você o usa para testar se *a esquerda* não é ordenada da mesma forma que a *direita* quando os dois conjuntos são comparados elemento por elemento.
 
 ### <a name="example"></a>Exemplo
 
@@ -2416,7 +2416,7 @@ a b d
 
 ## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>operador&lt; (conjunto) (STL/CLR)
 
-Lista menor que comparação.
+Liste menos do que comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2426,17 +2426,17 @@ template<typename Key>
         set<Key>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*Deixou*<br/>
 Contêiner esquerdo a comparar.
 
-*right*<br/>
+*Certo*<br/>
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função Operator retornará true se, para a posição mais baixa `i` para a qual `!(right[i] < left[i])` também é true que `left[i] < right[i]`. Caso contrário, ele retornará `left->size() < right->size()` você o usará para testar se a *esquerda* é ordenada antes da *direita* quando os dois conjuntos são elementos comparados por elemento.
+A função do operador retorna verdadeira `i` se, para a posição mais baixa para a qual `!(right[i] < left[i])` também é verdade que `left[i] < right[i]`. Caso contrário, `left->size() < right->size()` ele retorna Você o usa para testar se *a esquerda* é ordenada antes *da direita* quando os dois conjuntos são comparados elemento por elemento.
 
 ### <a name="example"></a>Exemplo
 
@@ -2486,7 +2486,7 @@ a b d
 
 ## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>operador&lt;= (conjunto) (STL/CLR)
 
-Lista de comparação menor ou igual.
+Liste menos ou igual comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2496,17 +2496,17 @@ template<typename Key>
         set<Key>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*Deixou*<br/>
 Contêiner esquerdo a comparar.
 
-*right*<br/>
+*Certo*<br/>
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função Operator retorna `!(right < left)`. Você o usa para testar se a *esquerda* não é ordenada após *direita* quando os dois conjuntos são elementos comparados por elemento.
+A função `!(right < left)`do operador retorna . Você o usa para testar se *a esquerda* não é ordenada após a *direita* quando os dois conjuntos são comparados elemento por elemento.
 
 ### <a name="example"></a>Exemplo
 
@@ -2554,9 +2554,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_eq"></a>Operator = = (Set) (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_eq"></a>operador== (conjunto) (STL/CLR)
 
-Listar comparação igual.
+Lista de comparação igual.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2566,17 +2566,17 @@ template<typename Key>
         set<Key>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*Deixou*<br/>
 Contêiner esquerdo a comparar.
 
-*right*<br/>
+*Certo*<br/>
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função Operator retornará true somente se as sequências controladas pela *esquerda* e *à direita* tiverem o mesmo comprimento e, para cada posição `i`, `left[i] ==` `right[i]`. Você o usa para testar se a *esquerda* é ordenada da mesma forma que a *direita* quando os dois conjuntos são elementos comparados por elemento.
+A função do operador retorna somente se as seqüências controladas `i`pela `left[i] ==` `right[i]` *esquerda* e *direita* tiverem o mesmo comprimento e, para cada posição, . Você o usa para testar se *a esquerda* é ordenada da mesma forma que a *direita* quando os dois conjuntos são comparados elemento por elemento.
 
 ### <a name="example"></a>Exemplo
 
@@ -2626,7 +2626,7 @@ a b d
 
 ## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>operador&gt; (conjunto) (STL/CLR)
 
-Lista maior que comparação.
+Lista maior do que comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2636,17 +2636,17 @@ template<typename Key>
         set<Key>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*Deixou*<br/>
 Contêiner esquerdo a comparar.
 
-*right*<br/>
+*Certo*<br/>
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função Operator retorna `right` `<` `left`. Você o usa para testar se a *esquerda* é ordenada após *direita* quando os dois conjuntos são elementos comparados por elemento.
+A função `right` `<` `left`do operador retorna . Você o usa para testar se *a esquerda* é encomendada após a *direita* quando os dois conjuntos são comparados elemento por elemento.
 
 ### <a name="example"></a>Exemplo
 
@@ -2696,7 +2696,7 @@ a b d
 
 ## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>operador&gt;= (conjunto) (STL/CLR)
 
-Lista maior ou igual a comparação.
+Lista maior ou igual comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2706,17 +2706,17 @@ template<typename Key>
         set<Key>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*Deixou*<br/>
 Contêiner esquerdo a comparar.
 
-*right*<br/>
+*Certo*<br/>
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função Operator retorna `!(left < right)`. Você o usa para testar se a *esquerda* não é ordenada antes da *direita* quando os dois conjuntos são elementos comparados por elemento.
+A função `!(left < right)`do operador retorna . Você o usa para testar se *a esquerda* não é ordenada antes *da direita* quando os dois conjuntos são comparados elemento por elemento.
 
 ### <a name="example"></a>Exemplo
 

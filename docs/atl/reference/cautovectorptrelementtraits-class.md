@@ -1,5 +1,5 @@
 ---
-title: Classe CAutoVectorPtrElementTraits
+title: CAutoVectorPtrElementTraits Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoVectorPtrElementTraits
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-ms.openlocfilehash: 168670709470d7b7fdd77edb3c29d5a9f4049ca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 956fe39c4d3ba89bb9def2f996dca59905753edb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260078"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318749"
 ---
-# <a name="cautovectorptrelementtraits-class"></a>Classe CAutoVectorPtrElementTraits
+# <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits Class
 
-Essa classe fornece métodos, funções estáticas e definições de tipo útil durante a criação de coleções de ponteiros inteligentes usando o vetor novo e excluir operadores.
+Esta classe fornece métodos, funções estáticas e tipos úteis ao criar coleções de ponteiros inteligentes usando novos vetoriais e excluir operadores.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,20 +42,20 @@ O tipo de ponteiro.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.|
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe da coleção.|
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos ao objeto da classe de coleta.|
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar elementos do objeto da classe de coleta.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe fornece métodos, funções estáticas e definições de tipo para auxiliar a criação de objetos de classe de coleção que contém ponteiros inteligentes. Diferentemente [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), essa classe usa vetor novo e excluir operadores.
+Esta classe fornece métodos, funções estáticas e tipos para ajudar na criação de objetos de classe de coleta contendo ponteiros inteligentes. Ao contrário [do CAutoPtrElementTraits,](../../atl/reference/cautoptrelementtraits-class.md)esta classe usa operadores vetoriais novos e excluem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+[Cdefaultcomparetraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+[Cdefaulthashtraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[Celementtraitsbase](../../atl/reference/celementtraitsbase-class.md)
 
 [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
@@ -65,23 +65,23 @@ Essa classe fornece métodos, funções estáticas e definições de tipo para a
 
 **Cabeçalho:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE
+## <a name="cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE
 
-O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.
+O tipo de dados a ser usado para adicionar elementos ao objeto da classe de coleta.
 
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE
+## <a name="cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE
 
-O tipo de dados a ser usado para recuperar os elementos do objeto de classe da coleção.
+O tipo de dados a ser usado para recuperar elementos do objeto da classe de coleta.
 
 ```
 typedef T*& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Classe CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>

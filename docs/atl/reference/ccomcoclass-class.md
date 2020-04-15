@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 5b4e39fa4d93893d288bb8de03d8a71b671be087
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 11e724a982f3a2f404473dbdd34d848842cc8e14
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417939"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320833"
 ---
 # <a name="ccomcoclass-class"></a>Classe CComCoClass
 
-Essa classe fornece métodos para criar instâncias de uma classe e obter suas propriedades.
+Esta classe fornece métodos para criar instâncias de uma classe e obter suas propriedades.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,46 +30,46 @@ template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Sua classe, derivada de `CComCoClass`.
 
-*pclsid*<br/>
+*Pclsid*<br/>
 Um ponteiro para o CLSID do objeto.
 
 ## <a name="members"></a>Membros
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[CComCoClass:: CreateInstance](#createinstance)|Auto-estática Cria uma instância da classe e as consultas para uma interface.|
-|[CComCoClass:: erro](#error)|Auto-estática Retorna informações de erro avançadas para o cliente.|
-|[CComCoClass:: GetObjectCLSID](#getobjectclsid)|Auto-estática Retorna o identificador de classe do objeto.|
-|[CComCoClass:: GetObjectDescription](#getobjectdescription)|Auto-estática Substituir para retornar a descrição do objeto.|
+|[CComCoClass::CreateInstance](#createinstance)|(Estática) Cria uma instância da classe e consultas para uma interface.|
+|[CComCoClass::Erro](#error)|(Estática) Devolve informações ricas de erro ao cliente.|
+|[CComCoClass::GetObjectCLSID](#getobjectclsid)|(Estática) Retorna o identificador de classe do objeto.|
+|[CComCoClass::GetObjectDescription](#getobjectdescription)|(Estática) Anular para devolver a descrição do objeto.|
 
 ## <a name="remarks"></a>Comentários
 
-`CComCoClass` fornece métodos para recuperar o CLSID de um objeto, definir informações de erro e criar instâncias da classe. Qualquer classe registrada no mapa de objetos deve ser derivada de `CComCoClass`.
+`CComCoClass`fornece métodos para recuperar o CLSID de um objeto, definir informações de erro e criar instâncias da classe. Qualquer classe registrada no mapa do objeto `CComCoClass`deve ser derivada de .
 
-`CComCoClass` também define a fábrica de classes padrão e o modelo de agregação para seu objeto. `CComCoClass` usa as duas macros a seguir:
+`CComCoClass`também define o modelo de fábrica de classe padrão e agregação para o seu objeto. `CComCoClass`usa as duas macros a seguir:
 
-- [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) Declara a fábrica de classes a ser [CComClassFactory](../../atl/reference/ccomclassfactory-class.md).
+- [DECLARE_CLASSFACTORY DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) Declara a fábrica de classe [como CComClassFactory](../../atl/reference/ccomclassfactory-class.md).
 
-- [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable) Declara que o objeto pode ser agregado.
+- [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable) Declara que seu objeto pode ser agregado.
 
-Você pode substituir qualquer um desses padrões especificando outra macro na definição de sua classe. Por exemplo, para usar [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) em vez de `CComClassFactory`, especifique a macro [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) :
+Você pode substituir qualquer um desses padrões especificando outra macro na definição de classe. Por exemplo, para usar [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) em vez de, `CComClassFactory`especificar a [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) macro:
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom. h
+**Cabeçalho:** atlcom.h
 
-##  <a name="createinstance"></a>CComCoClass:: CreateInstance
+## <a name="ccomcoclasscreateinstance"></a><a name="createinstance"></a>CComCoClass::CreateInstance
 
-Use essas funções `CreateInstance` para criar uma instância de um objeto COM e recuperar um ponteiro de interface sem usar a API COM.
+Use `CreateInstance` essas funções para criar uma instância de um objeto COM e recuperar um ponteiro de interface sem usar a API COM.
 
 ```
 template <class  Q>
@@ -79,40 +79,40 @@ template <class  Q>
 static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Q*<br/>
-A interface COM que deve ser retornada via *PP*.
+A interface COM que deve ser devolvida via *pp*.
 
-*punkOuter*<br/>
-no O desconhecido externo ou controlando o desconhecido da agregação.
+*Punkouter*<br/>
+[em] O desconhecido externo ou o controle desconhecido do agregado.
 
-*PP*<br/>
-fora O endereço de uma variável de ponteiro que recebe o ponteiro de interface solicitado se a criação for realizada com sucesso.
+*Pp*<br/>
+[fora] O endereço de uma variável ponteiro que recebe o ponteiro de interface solicitado se a criação for bem sucedida.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor HRESULT padrão. Consulte [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) no SDK do Windows para obter uma descrição dos possíveis valores de retorno.
+Um valor HRESULT padrão. Consulte [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) no Windows SDK para obter uma descrição dos possíveis valores de retorno.
 
 ### <a name="remarks"></a>Comentários
 
-Use a primeira sobrecarga dessa função para a criação típica de objeto; Use a segunda sobrecarga quando precisar agregar o objeto que está sendo criado.
+Use a primeira sobrecarga desta função para a criação típica de objetos; use a segunda sobrecarga quando precisar agregar o objeto que está sendo criado.
 
-A classe ATL que implementa o objeto COM necessário (ou seja, a classe usada como o primeiro parâmetro de modelo para [CComCoClass](../../atl/reference/ccomcoclass-class.md)) deve estar no mesmo projeto que o código de chamada. A criação do objeto COM é executada pela fábrica de classes registrada para esta classe ATL.
+A classe ATL que implementa o objeto COM necessário (ou seja, a classe usada como primeiro parâmetro de modelo para [CComCoClass](../../atl/reference/ccomcoclass-class.md)) deve estar no mesmo projeto que o código de chamada. A criação do objeto COM é realizada pela fábrica de classe registrada para esta classe ATL.
 
-Essas funções são úteis para criar objetos que você impediu de ser externamente creatable usando a macro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto) . Eles também são úteis em situações em que você deseja evitar a API COM por motivos de eficiência.
+Essas funções são úteis para criar objetos que você impediu de serem creatable externamente usando a [macro OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO.](object-map-macros.md#object_entry_non_createable_ex_auto) Eles também são úteis em situações em que você deseja evitar a API COM por razões de eficiência.
 
-Observe que a interface *Q* deve ter um IID associado a ele que possa ser recuperado usando o operador de [__uuidof](../../cpp/uuidof-operator.md) .
+Observe que a interface *Q* deve ter um IID associado a ele que pode ser recuperado usando o [operador __uuidof.](../../cpp/uuidof-operator.md)
 
 ### <a name="example"></a>Exemplo
 
-No exemplo a seguir, `CDocument` é uma classe ATL gerada por assistente derivada de `CComCoClass` que implementa a interface `IDocument`. A classe é registrada no mapa de objetos com a macro OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO para que os clientes não possam criar instâncias do documento usando [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` é uma coclass que fornece um método em uma de suas próprias interfaces COM para criar instâncias da classe de documento. O código a seguir mostra como é fácil criar instâncias da classe Document usando o membro `CreateInstance` herdado da classe base `CComCoClass`.
+No exemplo a `CDocument` seguir, está uma classe ATL gerada pelo assistente derivada `CComCoClass` disso que implementa a `IDocument` interface. A classe é registrada no mapa de objetos com a OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO macro para que os clientes não possam criar instâncias do documento usando [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication`é uma CoClass que fornece um método em uma de suas próprias interfaces COM para criar instâncias da classe de documentos. O código abaixo mostra como é fácil criar `CreateInstance` instâncias da `CComCoClass` classe de documento usando o membro herdado da classe base.
 
 [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]
 
-##  <a name="error"></a>CComCoClass:: erro
+## <a name="ccomcoclasserror"></a><a name="error"></a>CComCoClass::Erro
 
-Essa função estática configura a interface `IErrorInfo` para fornecer informações de erro ao cliente.
+Esta função estática `IErrorInfo` configura a interface para fornecer informações de erro ao cliente.
 
 ```
 static HRESULT WINAPI Error(
@@ -154,28 +154,28 @@ static HRESULT Error(
     HINSTANCE hInst = _AtlBaseModule.GetResourceInstance());
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lpszDesc*<br/>
-no A cadeia de caracteres que descreve o erro. A versão Unicode do `Error` especifica que *lpszDesc* é do tipo LPCOLESTR; a versão ANSI especifica um tipo de LPCSTR.
+*Lpszdesc*<br/>
+[em] A seqüência descrevendo o erro. A versão Unicode de `Error` especifica que *lpszDesc* é do tipo LPCOLESTR; a versão ANSI especifica um tipo de LPCSTR.
 
-*IID*<br/>
-no O IID da interface que define o erro ou GUID_NULL (o valor padrão) se o erro for definido pelo sistema operacional.
+*Iid*<br/>
+[em] O IID da interface que define o erro ou GUID_NULL (o valor padrão) se o erro for definido pelo sistema operacional.
 
-*hRes*<br/>
-no O HRESULT que você deseja retornar ao chamador. O valor padrão é 0. Para obter mais detalhes sobre *hRes*, consulte comentários.
+*Hres*<br/>
+[em] O HRESULT que você deseja retornou ao chamador. O valor padrão é 0. Para obter mais detalhes sobre *hRes,* consulte Observações.
 
 *nID*<br/>
-no O identificador de recurso em que a cadeia de caracteres de descrição do erro é armazenada. Esse valor deve estar entre 0x0200 e 0xFFFF, inclusive. Em compilações de depuração, uma **declaração** resultará se *NID* não indexar uma cadeia de caracteres válida. Em builds de versão, a cadeia de caracteres de descrição do erro será definida como "erro desconhecido".
+[em] O identificador de recursos onde a seqüência de descrição de erro é armazenada. Esse valor deve ficar entre 0x0200 e 0xFFFF, inclusive. Nas compilações de depuração, um **ASSERT** resultará se *o nID* não indexar uma seqüência de string válida. Nas compilações de versão, a seqüência de descrição de erro será definida como "Erro desconhecido".
 
 *dwHelpID*<br/>
-no O identificador de contexto da ajuda para o erro.
+[em] O identificador de contexto de ajuda para o erro.
 
 *lpszHelpFile*<br/>
-no O caminho e o nome do arquivo de ajuda que descreve o erro.
+[em] O caminho e o nome do arquivo de ajuda descrevendo o erro.
 
-*hInst*<br/>
-no O identificador para o recurso. Por padrão, esse parâmetro é `_AtlModule::GetResourceInstance`, em que `_AtlModule` é a instância global de [CAtlModule](../../atl/reference/catlmodule-class.md).
+*Hinst*<br/>
+[em] A alça do recurso. Por padrão, este `_AtlModule::GetResourceInstance`parâmetro `_AtlModule` é , onde está a instância global do [CAtlModule](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -183,11 +183,11 @@ Um valor HRESULT padrão. Para obter detalhes, consulte Observações.
 
 ### <a name="remarks"></a>Comentários
 
-Para chamar `Error`, o objeto deve implementar a interface `ISupportErrorInfo Interface`.
+Para `Error`chamar, seu objeto `ISupportErrorInfo Interface` deve implementar a interface.
 
-Se o parâmetro *hRes* for diferente de zero, `Error` retornará o valor de *hRes*. Se *hRes* for zero, as primeiras quatro versões do `Error` retornarão DISP_E_EXCEPTION. As duas últimas versões retornam o resultado da macro **MAKE_HRESULT (1, FACILITY_ITF,** *NID* **)** .
+Se o parâmetro *hRes* não `Error` for zero, então retorne o valor de *hRes*. Se *hRes* é zero, então `Error` as quatro primeiras versões de retorno DISP_E_EXCEPTION. As duas últimas versões retornam o resultado do **MAKE_HRESULT macro( 1, FACILITY_ITF,** *nID* **).**
 
-##  <a name="getobjectclsid"></a>CComCoClass:: GetObjectCLSID
+## <a name="ccomcoclassgetobjectclsid"></a><a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID
 
 Fornece uma maneira consistente de recuperar o CLSID do objeto.
 
@@ -199,9 +199,9 @@ static const CLSID& WINAPI GetObjectCLSID();
 
 O identificador de classe do objeto.
 
-##  <a name="getobjectdescription"></a>CComCoClass:: GetObjectDescription
+## <a name="ccomcoclassgetobjectdescription"></a><a name="getobjectdescription"></a>CComCoClass::GetObjectDescription
 
-Essa função estática recupera a descrição de texto para seu objeto de classe.
+Esta função estática recupera a descrição do texto do objeto de classe.
 
 ```
 static LPCTSTR WINAPI GetObjectDescription();
@@ -209,17 +209,17 @@ static LPCTSTR WINAPI GetObjectDescription();
 
 ### <a name="return-value"></a>Valor retornado
 
-A descrição do objeto de classe.
+A descrição do objeto da classe.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão retorna NULL. Você pode substituir esse método pela macro [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description) . Por exemplo:
+A implementação padrão retorna NULL. Você pode substituir este método com a [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description) macro. Por exemplo:
 
 [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]
 
-`GetObjectDescription` é chamado por `IComponentRegistrar::GetComponents`. `IComponentRegistrar` é uma interface de automação que permite registrar e cancelar o registro de componentes individuais em uma DLL. Quando você cria um objeto de registrador de componente com o assistente de projeto do ATL, o assistente implementará automaticamente a interface `IComponentRegistrar`. o `IComponentRegistrar` normalmente é usado pelo Microsoft Transaction Server.
+`GetObjectDescription`é chamado `IComponentRegistrar::GetComponents`por . `IComponentRegistrar`é uma interface de Automação que permite registrar e descadastrar componentes individuais em uma DLL. Quando você cria um objeto Registrador de Componentes com o `IComponentRegistrar` Assistente de Projeto ATL, o assistente implementará automaticamente a interface. `IComponentRegistrar`é normalmente usado pelo Microsoft Transaction Server.
 
-Para obter mais informações sobre o assistente de projeto do ATL, consulte o artigo [criando um projeto do ATL](../../atl/reference/creating-an-atl-project.md).
+Para obter mais informações sobre o ASSISTENTE DE PROJETO ATL, consulte o artigo [Criando um Projeto ATL](../../atl/reference/creating-an-atl-project.md).
 
 ## <a name="see-also"></a>Confira também
 

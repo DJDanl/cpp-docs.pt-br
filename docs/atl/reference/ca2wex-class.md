@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 927b9f5031bb6262c2f4a071b535802eb9e6990a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c9123e163ca828fa71fe217e46537ceb18e6f549
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497960"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319122"
 ---
 # <a name="ca2wex-class"></a>Classe CA2WEX
 
-Essa classe é usada pelas macros de conversão de cadeia de Caracteres CA2TEX, CA2CTEX, CT2WEX e CT2CWEX, e o typedef CA2W.
+Esta classe é usada pelas macros de conversão de strings CA2TEX, CA2CTEX, CT2WEX e CT2CWEX, e pelo typedef CA2W.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +34,7 @@ class CA2WEX
 #### <a name="parameters"></a>Parâmetros
 
 *t_nBufferLength*<br/>
-O tamanho do buffer usado no processo de tradução. O comprimento padrão é 128 bytes.
+O tamanho do buffer usado no processo de tradução. O comprimento padrão é de 128 bytes.
 
 ## <a name="members"></a>Membros
 
@@ -43,56 +43,56 @@ O tamanho do buffer usado no processo de tradução. O comprimento padrão é 12
 |Nome|Descrição|
 |----------|-----------------|
 |[CA2WEX::CA2WEX](#ca2wex)|O construtor.|
-|[CA2WEX:: ~ CA2WEX](#dtor)|O destruidor.|
+|[CA2WEX::~CA2WEX](#dtor)|O destruidor.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[LPWSTR do CA2WEX:: Operator](#operator_lpwstr)|Operador de conversão.|
+|[CA2WEX::operador LPWSTR](#operator_lpwstr)|Operador de conversão.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CA2WEX::m_psz](#m_psz)|O membro de dados que armazena a cadeia de caracteres de origem.|
-|[CA2WEX::m_szBuffer](#m_szbuffer)|O buffer estático, usado para armazenar a cadeia de caracteres convertida.|
+|[CA2WEX::m_psz](#m_psz)|O membro de dados que armazena a seqüência de origem.|
+|[CA2WEX::m_szBuffer](#m_szbuffer)|O buffer estático, usado para armazenar a seqüência convertida.|
 
 ## <a name="remarks"></a>Comentários
 
-A menos que a funcionalidade extra seja necessária, use CA2TEX, CA2CTEX, CT2WEX, CT2CWEX ou CA2W em seu código.
+A menos que seja necessária funcionalidade extra, use CA2TEX, CA2CTEX, CT2WEX, CT2CWEX ou CA2W em seu código.
 
-Essa classe contém um buffer estático de tamanho fixo que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para se ajustar ao buffer estático, a classe alocará memória usando **malloc**, liberando a memória quando o objeto sair do escopo. Isso garante que, ao contrário das macros de conversão de texto disponíveis em versões anteriores do ATL, essa classe seja segura para uso em loops e que ela não ultrapasse a pilha.
+Esta classe contém um buffer estático de tamanho fixo que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe alocará memória usando **malloc,** liberando a memória quando o objeto sai do escopo. Isso garante que, ao contrário das macros de conversão de texto disponíveis nas versões anteriores do ATL, essa classe é segura de usar em loops e que não transbordará a pilha.
 
-Se a classe tentar alocar memória no heap e falhar, ela chamará `AtlThrow` com um argumento de E_OUTOFMEMORY.
+Se a classe tentar alocar memória no monte `AtlThrow` e falhar, ela chamará com um argumento de E_OUTOFMEMORY.
 
-Por padrão, as classes de conversão de ATL e macros usam a página de código ANSI do thread atual para a conversão. Se você quiser substituir esse comportamento para uma conversão específica, especifique a página de código como o segundo parâmetro para o construtor para a classe.
+Por padrão, as classes de conversão ATL e macros usam a página de código ANSI do segmento atual para a conversão. Se você quiser substituir esse comportamento para uma conversão específica, especifique a página de código como o segundo parâmetro para o construtor da classe.
 
-As macros a seguir se baseiam nesta classe:
+As seguintes macros são baseadas nesta classe:
 
-- CA2TEX
+- Ca2tex
 
-- CA2CTEX
+- Ca2ctex
 
 - CT2WEX
 
 - CT2CWEX
 
-O seguinte typedef se baseia nesta classe:
+O tipo de digitação a seguir é baseado nesta classe:
 
 - CA2W
 
-Para obter uma discussão sobre essas macros de conversão de texto, veja [macros de conversão de cadeias de caracteres ATL e MFC](string-conversion-macros.md).
+Para uma discussão sobre essas macros de conversão de texto, consulte Macros de [conversão de strings ATL e MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Exemplo
 
-Consulte macros de conversão de cadeias de [caracteres ATL e MFC](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia
+Consulte macros de [conversão de strings ATL e MFC](string-conversion-macros.md) para um exemplo de uso dessas macros de conversão de strings.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** AtlConv. h
+**Cabeçalho:** atlconv.h
 
-##  <a name="ca2wex"></a>  CA2WEX::CA2WEX
+## <a name="ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX
 
 O construtor.
 
@@ -103,17 +103,17 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*<br/>
-A cadeia de texto a ser convertida.
+*Psz*<br/>
+A seqüência de texto a ser convertida.
 
 *nCodePage*<br/>
-A página de código usada para executar a conversão. Consulte a discussão de parâmetro de página de código para a função SDK do Windows [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) para obter mais detalhes.
+A página de código usada para realizar a conversão. Consulte a discussão do parâmetro de página de código para a função Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) para obter mais detalhes.
 
 ### <a name="remarks"></a>Comentários
 
 Aloca o buffer usado no processo de tradução.
 
-##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX
+## <a name="ca2wexca2wex"></a><a name="dtor"></a>CA2WEX::~CA2WEX
 
 O destruidor.
 
@@ -125,23 +125,23 @@ O destruidor.
 
 Libera o buffer alocado.
 
-##  <a name="m_psz"></a>  CA2WEX::m_psz
+## <a name="ca2wexm_psz"></a><a name="m_psz"></a>CA2WEX::m_psz
 
-O membro de dados que armazena a cadeia de caracteres de origem.
+O membro de dados que armazena a seqüência de origem.
 
 ```
 LPWSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CA2WEX::m_szBuffer
+## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a>CA2WEX::m_szBuffer
 
-O buffer estático, usado para armazenar a cadeia de caracteres convertida.
+O buffer estático, usado para armazenar a seqüência convertida.
 
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpwstr"></a>LPWSTR do CA2WEX:: Operator
+## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX::operador LPWSTR
 
 Operador de conversão.
 
@@ -149,11 +149,11 @@ Operador de conversão.
 operator LPWSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna a cadeia de texto como o tipo LPWSTR.
+Retorna a seqüência de texto como tipo LPWSTR.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
 [Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>

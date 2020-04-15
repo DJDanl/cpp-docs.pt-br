@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338682"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321972"
 ---
 # <a name="canimationvalue-class"></a>Classe CAnimationValue
 
@@ -49,26 +49,26 @@ class CAnimationValue : public CAnimationBaseObject;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAnimationValue::AddTransition](#addtransition)|Adiciona uma transição para ser aplicado a um valor.|
+|[CAnimationValue::AddTransition](#addtransition)|Adiciona uma transição a ser aplicada a um valor.|
 |[CAnimationValue::GetValue](#getvalue)|Sobrecarregado. Recupera o valor atual.|
-|[CAnimationValue::GetVariable](#getvariable)|Fornece acesso à variável de animação encapsulado.|
-|[CAnimationValue::SetDefaultValue](#setdefaultvalue)|Define o valor padrão.|
+|[CAnimationValue::GetVariable](#getvariable)|Fornece acesso à variável animação encapsulada.|
+|[CAnimationValue::SetDefault'2](#setdefaultvalue)|Define o valor padrão.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Coloca a variável de animação encapsulado em uma lista. (Substitui [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[cAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Coloca a variável de animação encapsulada em uma lista. (Substitui [cAnimationBaseObject:GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAnimationValue::operator dupla](#operator_double)|Fornece a conversão entre CAnimationValue e DOUBLE.|
-|[CAnimationValue::operator INT32](#operator_int32)|Fornece a conversão entre CAnimationValue e INT32.|
-|[CAnimationValue::operator=](#operator_eq)|Sobrecarregado. Atribui um valor INT32 a CAnimationValue.|
+|[CAnimationValue::operador DUPLO](#operator_double)|Fornece conversão entre CAnimationValue e DOUBLE.|
+|[CAnimationValue::operador INT32](#operator_int32)|Fornece conversão entre CAnimationValue e INT32.|
+|[CAnimationValue::operador=](#operator_eq)|Sobrecarregado. Atribui um valor INT32 ao CAnimationValue.|
 
-### <a name="protected-data-members"></a>Membros de dados protegidos
+### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -76,11 +76,11 @@ class CAnimationValue : public CAnimationBaseObject;
 
 ## <a name="remarks"></a>Comentários
 
-A classe CAnimationValue encapsula um único objeto CAnimationVariable e pode representar em aplicativos de um único valor animado. Por exemplo, você pode usar essa classe para transparência animada (efeito de esmaecimento), de ângulo (para girar objetos), ou para qualquer outro caso, quando você precisa criar uma animação dependendo de um único valor animado. Para usar essa classe no aplicativo, basta instanciar um objeto dessa classe, adicioná-lo ao controlador de animação usando CAnimationController::AddAnimationObject e chamar AddTransition para cada transição a ser aplicado ao valor.
+A classe CAnimationValue encapsula um único objeto CAnimationVariable e pode representar em aplicativos um único valor animado. Por exemplo, você pode usar esta classe para transparência animada (efeito fade), ângulo (para girar objetos) ou para qualquer outro caso quando você precisar criar uma animação dependendo de um único valor animado. Para usar esta classe no aplicativo, basta instanciar um objeto desta classe, adicioná-lo ao controlador de animação usando CAnimationController::AddAnimationObject e chamar AddTransition para cada transição a ser aplicada ao valor.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
@@ -90,9 +90,9 @@ A classe CAnimationValue encapsula um único objeto CAnimationVariable e pode re
 
 **Cabeçalho:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationValue::AddTransition
+## <a name="canimationvalueaddtransition"></a><a name="addtransition"></a>CAnimationValue::AddTransition
 
-Adiciona uma transição para ser aplicado a um valor.
+Adiciona uma transição a ser aplicada a um valor.
 
 ```
 void AddTransition(CBaseTransition* pTransition);
@@ -100,14 +100,14 @@ void AddTransition(CBaseTransition* pTransition);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pTransition*<br/>
+*pTransição*<br/>
 Um ponteiro para objeto de transição.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para adicionar uma transição à lista interna de transições a serem aplicadas a uma variável de animação. Ao adicionar transições, eles não são aplicados imediatamente e armazenados em uma lista interna. As transições são aplicadas (adicionado a um storyboard para um determinado valor) quando você chama CAnimationController::AnimateGroup.
+Chame esta função para adicionar uma transição à lista interna de transições a serem aplicadas a uma variável de animação. Quando você adiciona transições, elas não são aplicadas imediatamente e armazenadas em uma lista interna. Transições são aplicadas (adicionadas a um storyboard para um determinado valor) quando você chama CAnimationController::AnimateGroup.
 
-##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue
+## <a name="canimationvaluecanimationvalue"></a><a name="canimationvalue"></a>CAnimationValue::CAnimationValue
 
 Constrói um objeto CAnimationValue.
 
@@ -127,21 +127,21 @@ CAnimationValue(
 Especifica o valor padrão.
 
 *nGroupID*<br/>
-Especifica a ID do grupo.
+Especifica o ID do grupo.
 
 *nObjectID*<br/>
-Especifica a ID de objeto.
+Especifica o ID do objeto.
 
 *dwUserData*<br/>
-Especifica os dados definidos pelo usuário.
+especifica dados definidos pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
-Constrói um objeto CAnimationValue com propriedades padrão: valor padrão, ID de grupo e a ID de objeto são definidos como 0.
+Construa o objeto CAnimationValue com propriedades padrão: o valor padrão, o ID do grupo e o ID do objeto são definidos como 0.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList
+## <a name="canimationvaluegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>cAnimationValue::GetAnimationVariableList
 
-Coloca a variável de animação encapsulado em uma lista.
+Coloca a variável de animação encapsulada em uma lista.
 
 ```
 virtual void GetAnimationVariableList(
@@ -151,10 +151,10 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lst*<br/>
-Quando a função retorna, ele contém um ponteiro para CAnimationVariable que representa o valor animado.
+*Lst*<br/>
+Quando a função retorna, ela contém um ponteiro para CAnimationVariable representando o valor animado.
 
-##  <a name="getvalue"></a>  CAnimationValue::GetValue
+## <a name="canimationvaluegetvalue"></a><a name="getvalue"></a>CAnimationValue::GetValue
 
 Recupera o valor atual.
 
@@ -166,36 +166,36 @@ BOOL GetValue(INT32& nValue);
 ### <a name="parameters"></a>Parâmetros
 
 *dblValue*<br/>
-Saída. Quando a função retorna, ele contém um valor atual da variável de animação.
+Saída. Quando a função retorna, ela contém um valor atual da variável animação.
 
-*nValue*<br/>
-Saída. Quando a função retorna, ele contém um valor atual da variável de animação.
+*Nvalue*<br/>
+Saída. Quando a função retorna, ela contém um valor atual da variável animação.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se o valor atual foi recuperado com êxito; Caso contrário, FALSE.
+TRUE se o valor atual foi recuperado com sucesso; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para recuperar o valor atual. Essa implementação chama o objeto COM encapsulado, e se a chamada falhar, este método retorna o valor padrão que foi anteriormente definido no construtor ou com SetDefaultValue.
+Chame esta função para recuperar o valor atual. Essa implementação chama o objeto COM encapsulado e, se a chamada falhar, esse método retorna o valor padrão que foi definido anteriormente no construtor ou com SetDefaultValue.
 
-##  <a name="getvariable"></a>  CAnimationValue::GetVariable
+## <a name="canimationvaluegetvariable"></a><a name="getvariable"></a>CAnimationValue::GetVariable
 
-Fornece acesso à variável de animação encapsulado.
+Fornece acesso à variável animação encapsulada.
 
 ```
 CAnimationVariable& GetVariable();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma referência à variável de animação encapsulado.
+Uma referência à variável animação encapsulada.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para acessar a variável de animação encapsulado. Do CAnimationVariable você obtém acesso ao objeto subjacente de IUIAnimationVariable, cujo ponteiro pode ser NULL se a variável de animação não tiver sido criado.
+Use este método para acessar a variável de animação encapsulada. A partir do CAnimationVariable você tem acesso ao objeto IUIAnimationVariable subjacente, cujo ponteiro pode ser NULO se a variável de animação não tiver sido criada.
 
-##  <a name="m_value"></a>  CAnimationValue::m_value
+## <a name="canimationvaluem_value"></a><a name="m_value"></a>CAnimationValue::m_value
 
 A variável de animação encapsulada que representa o valor da animação.
 
@@ -203,41 +203,41 @@ A variável de animação encapsulada que representa o valor da animação.
 CAnimationVariable m_value;
 ```
 
-##  <a name="operator_double"></a>  CAnimationValue::operator DOUBLE
+## <a name="canimationvalueoperator-double"></a><a name="operator_double"></a>CAnimationValue::operador DUPLO
 
-Fornece a conversão entre CAnimationValue e DOUBLE.
+Fornece conversão entre CAnimationValue e DOUBLE.
 
 ```
 operator DOUBLE();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Valor atual do valor da animação.
+Valor atual do Valor de Animação.
 
 ### <a name="remarks"></a>Comentários
 
-Fornece a conversão entre CAnimationValue e DOUBLE. Internamente, esse método chama GetValue e não verifica se há erros. Se falhar GetValue, o valor retornado conterá um valor padrão definido anteriormente no construtor ou com SetDefaultValue.
+Fornece conversão entre CAnimationValue e DOUBLE. Este método chama internamente getvalue e não verifica se há erros. Se o GetValue falhar, o valor retornado conterá um valor padrão previamente definido no construtor ou com SetDefaultValue.
 
-##  <a name="operator_int32"></a>  CAnimationValue::operator INT32
+## <a name="canimationvalueoperator-int32"></a><a name="operator_int32"></a>CAnimationValue::operador INT32
 
-Fornece a conversão entre CAnimationValue e INT32.
+Fornece conversão entre CAnimationValue e INT32.
 
 ```
 operator INT32();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Valor atual do valor da animação como inteiro.
+Valor atual do Valor de Animação como inteiro.
 
 ### <a name="remarks"></a>Comentários
 
-Fornece a conversão entre CAnimationValue e INT32. Internamente, esse método chama GetValue e não verifica se há erros. Se falhar GetValue, o valor retornado conterá um valor padrão definido anteriormente no construtor ou com SetDefaultValue.
+Fornece conversão entre CAnimationValue e INT32. Este método chama internamente getvalue e não verifica se há erros. Se o GetValue falhar, o valor retornado conterá um valor padrão previamente definido no construtor ou com SetDefaultValue.
 
-##  <a name="operator_eq"></a>  CAnimationValue::operator=
+## <a name="canimationvalueoperator"></a><a name="operator_eq"></a>CAnimationValue::operador=
 
-Atribui um valor duplo a CAnimationValue.
+Atribui um valor DUPLO ao CAnimationValue.
 
 ```
 void operator=(DOUBLE dblVal);
@@ -247,16 +247,16 @@ void operator=(INT32 nVal);
 ### <a name="parameters"></a>Parâmetros
 
 *dblVal*<br/>
-Especifica o valor a ser atribuído ao valor da animação.
+Especifica o valor a ser atribuído ao Valor de Animação.
 
 *nVal*<br/>
-Especifica o valor a ser atribuído ao valor da animação.
+Especifica o valor a ser atribuído ao Valor de Animação.
 
 ### <a name="remarks"></a>Comentários
 
-Atribui um valor duplo a CAnimationValue. Esse valor é definido como um valor padrão para a variável de animação encapsulado. Se você se inscreveu nesse objeto de animação para eventos (ValueChanged ou IntegerValueChanged), você precisa habilitar novamente esses eventos.
+Atribui um valor DUPLO ao CAnimationValue. Esse valor é definido como um valor padrão para a variável animação encapsulada. Se você inscreveu esse objeto de animação para eventos (ValueChanged ou IntegerValueChanged), você precisará reativar esses eventos.
 
-##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue
+## <a name="canimationvaluesetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationValue::SetDefault'2
 
 Define o valor padrão.
 
@@ -271,8 +271,8 @@ Especifica o valor padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para definir um valor padrão. Um valor padrão é retornado ao aplicativo quando a animação não tiver sido iniciada e/ou o objeto subjacente de COM não foi criado. Se o objeto COM subjacente encapsulado em CAnimationVarible já foi criado, esse método recria a ele, portanto você pode precisar chamar métodos EnableValueChanged/EnableIntegerValueChanged novamente.
+Use este método para definir um valor padrão. Um valor padrão é devolvido ao aplicativo quando a animação não foi iniciada e/ou objeto COM subjacente não foi criado. Se o objeto COM subjacente encapsulado no CAnimationVarible já foi criado, este método o recria, portanto, você pode precisar chamar Os métodos EnableValueChanged/EnableIntegerValueChanged novamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes](../../mfc/reference/mfc-classes.md)

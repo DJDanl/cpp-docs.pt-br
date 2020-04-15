@@ -2,38 +2,38 @@
 title: Escolhendo o formato de arquivos de entrada .netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4d4b80e4b9195d184b9d97cea67bbaaa3d7d843
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294571"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320568"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Escolhendo o formato de arquivos de entrada .netmodule
 
-Um arquivo. obj MSIL (compilado com [/clr](clr-common-language-runtime-compilation.md)) também pode ser usado como um arquivo. netmodule.  arquivos. obj contêm metadados e símbolos nativa.  netmodules contém apenas metadados.
+Um arquivo MSIL .obj (compilado com [/clr)](clr-common-language-runtime-compilation.md)também pode ser usado como um arquivo .netmodule.  Os arquivos .obj contêm metadados e símbolos nativos.  .netmodules contêm apenas metadados.
 
-Você pode passar um arquivo. obj MSIL para qualquer compilador do Visual Studio por meio da opção de compilador /addmodule (mas lembre-se de que o arquivo. obj se torna parte do assembly resultante e deve ser enviado com o assembly).  Por exemplo, Visual c# e Visual Basic têm a opção de compilador /addmodule.
+Você pode passar um arquivo MSIL .obj para qualquer outro compilador visual studio através da opção /addmodule compilador (mas esteja ciente de que o arquivo .obj torna-se parte do conjunto resultante e deve ser enviado com o conjunto).  Por exemplo, Visual C# e Visual Basic têm a opção compilador /addmodule.
 
 > [!NOTE]
->  Na maioria dos casos, você precisará passar para o vinculador o arquivo. obj da compilação que criou o módulo do .net.  Passar um arquivo de módulo MSIL. dll ou. netmodule para o vinculador pode resultar em das LNK1107.
+> Na maioria dos casos, você precisará passar para o linker o arquivo .obj a partir da compilação que criou o módulo .net.  Passar um arquivo de módulo MSIL .dll ou .netmodule para o linker pode resultar em LNK1107.
 
-arquivos. obj, juntamente com seus arquivos. h associado, que fazem referência a por meio de #include no código-fonte, permitem que os aplicativos do C++ consumir os tipos nativos no módulo, enquanto em um arquivo. netmodule, somente os tipos gerenciados podem ser consumidos por um aplicativo C++.  Se você tentar passar um arquivo. obj para #using, informações sobre tipos nativos não estarão disponíveis. #include. h arquivo do arquivo. obj em vez disso.
+Os arquivos .obj, juntamente com seus arquivos .h associados, que você faz referência via #include na fonte, permitem que os aplicativos C++ consumam os tipos nativos no módulo, enquanto em um arquivo .netmodule, apenas os tipos gerenciados podem ser consumidos por um aplicativo C++.  Se você tentar passar um arquivo .obj para #using, informações sobre tipos nativos não estarão disponíveis; #include o arquivo .obj .h.
 
 Outros compiladores do Visual Studio só podem consumir tipos gerenciados a partir de um módulo.
 
-Use o seguinte para determinar se é necessário usar um. netmodule ou um arquivo. obj como entrada de módulo para o vinculador MSVC:
+Use o seguinte para determinar se você precisa usar um .netmodule ou um arquivo .obj como entrada de módulo no linker MSVC:
 
-- Se você estiver compilando com um compilador do Visual Studio que não seja o Visual C++, produzir um. netmodule e usar o. netmodule como entrada para o vinculador.
+- Se você estiver construindo com um compilador Visual Studio diferente do Visual C++, produza um módulo .net e use o módulo .net como entrada para o linker.
 
-- Se você estiver usando o compilador MSVC para produzir os módulos e se os módulos serão usados para criar algo diferente de uma biblioteca, use os arquivos. obj gerados pelo compilador como entrada de módulo para o vinculador; Não use o arquivo. netmodule como entrada.
+- Se você estiver usando o compilador MSVC para produzir módulos e se o módulo(s) for usado para construir algo diferente de uma biblioteca, use os arquivos .obj produzidos pelo compilador como entrada de módulo para o linker; não use o arquivo .netmodule como entrada.
 
-- Se seus módulos serão usados para criar uma biblioteca nativa (não gerenciado), use arquivos. obj como entrada de módulo para o vinculador e gerar um arquivo de biblioteca. lib.
+- Se seus módulos forem usados para construir uma biblioteca nativa (não gerenciada), use arquivos .obj como entrada de módulo para o linker e gerar um arquivo de biblioteca .lib.
 
-- Se seus módulos serão usados para criar uma biblioteca gerenciada, e todas as entradas do módulo para o vinculador será verificáveis (produzido com /CLR: Safe), use arquivos. obj como entrada de módulo para o vinculador e gerar um. dll (assembly) ou arquivo de biblioteca. netmodule (módulo).
+- Se seus módulos forem usados para construir uma biblioteca gerenciada e se toda a entrada do módulo no linker for verificável (produzida com /clr:safe), use arquivos .obj como entrada de módulo para o linker e gerará um arquivo de biblioteca .dll (assembly) ou .netmodule (módulo).
 
-- Se seus módulos serão usados para criar uma biblioteca gerenciada, e se a entrada de módulos de um ou mais para o vinculador será produzida com /clr apenas, use arquivos. obj como entrada de módulo para o vinculador e gerar um arquivo. dll (assembly).  Se você quiser expor tipos gerenciados da biblioteca e se você também deseja a aplicativos de C++ para consumir os tipos nativos na biblioteca, sua biblioteca consistirá em arquivos. obj para os módulos de componente de bibliotecas (você também desejará enviar os arquivos. h para cada módulo para que eles podem ser referenciados com #include do código-fonte).
+- Se seus módulos forem usados para construir uma biblioteca gerenciada e se um ou mais módulos de entrada no linker forem produzidos com apenas /clr, use arquivos .obj como entrada de módulo para o linker e gerará um .dll (conjunto).  Se você quiser expor tipos gerenciados da biblioteca e se você também quiser que os aplicativos C++ consumam os tipos nativos na biblioteca, sua biblioteca consistirá nos arquivos .obj para os módulos componentes bibliotecas (você também vai querer enviar os arquivos .h para cada módulo, para que eles possam ser referenciados com #include do código-fonte).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos .netmodule como entrada do vinculador](netmodule-files-as-linker-input.md)

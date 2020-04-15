@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 448b4d03e4d38dc45621cddab7d8f5d03b805968
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451679"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320202"
 ---
-# <a name="recursivemutex-class"></a>Classe recursive_mutex
+# <a name="recursive_mutex-class"></a>Classe recursive_mutex
 
 Representa um *tipo mutex*. Em contraste com [mutex](../standard-library/mutex-class-stl.md), o comportamento de chamadas para métodos de bloqueio para objetos que já estão bloqueados é bem definido.
 
@@ -44,17 +44,17 @@ class recursive_mutex;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[lock](#lock)|Bloqueia o thread de chamada até que ele tenha obtido a propriedade do mutex.|
+|[Bloqueio](#lock)|Bloqueia o thread de chamada até que ele tenha obtido a propriedade do mutex.|
 |[try_lock](#try_lock)|Tenta obter a propriedade do mutex sem bloquear.|
-|[unlock](#unlock)|Libera a propriedade do mutex.|
+|[Desbloquear](#unlock)|Libera a propriedade do mutex.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<> mutex
+**Cabeçalho:** \<mutex>
 
 **Namespace:** std
 
-## <a name="lock"></a>  lock
+## <a name="lock"></a><a name="lock"></a>Bloqueio
 
 Bloqueia o thread de chamada até que ele tenha obtido a propriedade do `mutex`.
 
@@ -66,7 +66,7 @@ void lock();
 
 Se o thread de chamada já possuir o `mutex`, o método retornará imediatamente e o bloqueio anterior permanece em vigor.
 
-## <a name="recursive_mutex"></a>  recursive_mutex
+## <a name="recursive_mutex"></a><a name="recursive_mutex"></a>recursive_mutex
 
 Constrói um objeto `recursive_mutex` que não está bloqueado.
 
@@ -74,7 +74,7 @@ Constrói um objeto `recursive_mutex` que não está bloqueado.
 recursive_mutex();
 ```
 
-## <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex
+## <a name="recursive_mutex"></a><a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex
 
 Libera todos os recursos que são usados pelo objeto.
 
@@ -86,7 +86,7 @@ Libera todos os recursos que são usados pelo objeto.
 
 Se o objeto estiver bloqueado quando o destruidor for executado, o comportamento será indefinido.
 
-## <a name="try_lock"></a>  try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
 Tenta obter a propriedade do `mutex` sem o bloqueio.
 
@@ -94,15 +94,15 @@ Tenta obter a propriedade do `mutex` sem o bloqueio.
 bool try_lock() noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**true** se o método obtiver com êxito a propriedade do `mutex` ou se o thread de chamada já possuir `mutex**; otherwise, **false`o.
+**verdade** se o método obtém `mutex` com sucesso a propriedade `mutex**; otherwise, **false`do ou se o segmento de chamada já possui o .
 
 ### <a name="remarks"></a>Comentários
 
-Se o thread de chamada já possuir `mutex`o, a função retornará imediatamente **true**e o bloqueio anterior permanecerá em vigor.
+Se o segmento de `mutex`chamada já possuir o , a função retorna imediatamente **verdadeira**, e o bloqueio anterior permanece em vigor.
 
-## <a name="unlock"></a>  unlock
+## <a name="unlock"></a><a name="unlock"></a>Desbloquear
 
 Libera a propriedade do mutex.
 
@@ -116,7 +116,7 @@ Esse método libera a propriedade do `mutex` somente depois que ele é chamado t
 
 Se o thread de chamada não for o proprietário do `mutex`, o comportamento será indefinido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

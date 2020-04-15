@@ -17,16 +17,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 8b05284104f9d2e5e7704bceaee6f8adf9a33aac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9f05e83c8d0a1fd68fce3228dea9cfeab6183c96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497653"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321165"
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
 
-Essa classe implementa a interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para um objeto agregado. Por definição, um objeto agregado está contido em um objeto externo. A `CComAggObject` classe é semelhante à [classe CComObject](../../atl/reference/ccomobject-class.md), exceto pelo fato de que ela expõe uma interface que está diretamente acessível a clientes externos.
+Esta classe implementa a interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para um objeto agregado. Por definição, um objeto agregado está contido dentro de um objeto externo. A `CComAggObject` classe é semelhante à [Classe CComObject,](../../atl/reference/ccomobject-class.md)exceto que expõe uma interface diretamente acessível a clientes externos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,8 +38,8 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Parâmetros
 
-*presente*<br/>
-Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como de quaisquer outras interfaces às quais você deseja dar suporte no objeto.
+*Contido*<br/>
+Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx,](../../atl/reference/ccomobjectrootex-class.md)bem como de quaisquer outras interfaces que você deseja suportar no objeto.
 
 ## <a name="members"></a>Membros
 
@@ -55,29 +55,29 @@ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-clas
 |Nome|Descrição|
 |----------|-----------------|
 |[CComAggObject::AddRef](#addref)|Incrementa a contagem de referência no objeto agregado.|
-|[CComAggObject::CreateInstance](#createinstance)|Essa função estática permite que você crie um novo objeto **CComAggObject <** `contained` **>** sem a sobrecarga de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
-|[CComAggObject::FinalConstruct](#finalconstruct)|Executa a inicialização final `m_contained`do.|
-|[CComAggObject::FinalRelease](#finalrelease)|Executa a destruição final `m_contained`do.|
+|[CComAggObject::CreateInstance](#createinstance)|Esta função estática permite criar um novo objeto **CComAggObject<** `contained` **>** sem a sobrecarga de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
+|[CComAggObject::FinalConstruct](#finalconstruct)|Realiza a inicialização final de `m_contained`.|
+|[CComAggObject::FinalRelease](#finalrelease)|Realiza a `m_contained`destruição final de .|
 |[CComAggObject::QueryInterface](#queryinterface)|Recupera um ponteiro para a interface solicitada.|
-|[CComAggObject::Release](#release)|Decrementa a contagem de referência no objeto agregado.|
+|[CComAggObject::Liberação](#release)|Decreta a contagem de referência no objeto agregado.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComAggObject::m_contained](#m_contained)|Delega `IUnknown` chamadas para a externa desconhecidas.|
+|[CComAggObject::m_contained](#m_contained)|Os `IUnknown` delegados ligam para o desconhecido.|
 
 ## <a name="remarks"></a>Comentários
 
-`CComAggObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para um objeto agregado. `CComAggObject`tem sua própria `IUnknown` interface, separada da interface do `IUnknown` objeto externo e mantém sua própria contagem de referência.
+`CComAggObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para um objeto agregado. `CComAggObject`tem sua `IUnknown` própria interface, separada da `IUnknown` interface do objeto externo, e mantém sua própria contagem de referência.
 
-Para obter mais informações sobre agregação, consulte o artigo [Fundamentals de objetos com ATL](../../atl/fundamentals-of-atl-com-objects.md).
+Para obter mais informações sobre agregação, consulte o artigo [Fundamentos de Objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `CComObjectRootBase`
 
-[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
+[Ccomobjectrootex](../../atl/reference/ccomobjectrootex-class.md)
 
 `IUnknown`
 
@@ -85,9 +85,9 @@ Para obter mais informações sobre agregação, consulte o artigo [Fundamentals
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom. h
+**Cabeçalho:** atlcom.h
 
-##  <a name="addref"></a>  CComAggObject::AddRef
+## <a name="ccomaggobjectaddref"></a><a name="addref"></a>CComAggObject::AddRef
 
 Incrementa a contagem de referência no objeto agregado.
 
@@ -95,11 +95,11 @@ Incrementa a contagem de referência no objeto agregado.
 STDMETHOD_(ULONG, AddRef)();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor que pode ser útil para diagnóstico ou teste.
+Um valor que pode ser útil para diagnósticos ou testes.
 
-##  <a name="ccomaggobject"></a>  CComAggObject::CComAggObject
+## <a name="ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a>CComAggObject::CComAggObject
 
 O construtor.
 
@@ -109,16 +109,16 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pv*<br/>
-no O desconhecido externo.
+*Pv*<br/>
+[em] O desconhecido exterior.
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa o `CComContainedObject` membro, [m_contained](#m_contained), e incrementa a contagem de bloqueios de módulo.
+Inicializa o `CComContainedObject` membro, [m_contained](#m_contained)e incrementa a contagem de bloqueiodo módulo.
 
-O destruidor decrementa a contagem de bloqueios de módulo.
+O destructor decreta a contagem de bloqueio do módulo.
 
-##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject
+## <a name="ccomaggobjectccomaggobject"></a><a name="dtor"></a>CComAggObject::~CComAggObject
 
 O destruidor.
 
@@ -128,11 +128,11 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-Libera todos os recursos alocados, chama [FinalRelease](#finalrelease)e decrementa a contagem de bloqueios de módulo.
+Libera todos os recursos alocados, chama [FinalRelease](#finalrelease)e decreta a contagem de bloqueio do módulo.
 
-##  <a name="createinstance"></a>  CComAggObject::CreateInstance
+## <a name="ccomaggobjectcreateinstance"></a><a name="createinstance"></a>CComAggObject::CreateInstance
 
-Essa função estática permite que você crie um novo objeto **CComAggObject <** `contained` **>** sem a sobrecarga de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
+Esta função estática permite criar um novo objeto **CComAggObject<** `contained` **>** sem a sobrecarga de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -142,40 +142,40 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pp*<br/>
-fora Um ponteiro para um ponteiro<em>contido</em> **>** **CComAggObject\<** . Se `CreateInstance` não for bem-sucedida, *PP* será definido como NULL.
+*Pp*<br/>
+[fora] Um ponteiro para um **\<CComAggObject**<em>continha</em> **>** ponteiro. Se `CreateInstance` não for bem sucedido, *pp* é definido como NULO.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-O objeto retornado tem uma contagem de referência igual a zero, `AddRef` portanto, chame imediatamente `Release` e, em seguida, use para liberar a referência no ponteiro do objeto quando terminar.
+O objeto retornado tem uma contagem `AddRef` de referência de `Release` zero, então chame imediatamente, em seguida, use para liberar a referência no ponteiro do objeto quando você terminar.
 
-Se você não precisar de acesso direto ao objeto, mas ainda quiser criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.
+Se você não precisar de acesso direto ao objeto, mas ainda `CoCreateInstance`quiser criar um novo objeto sem a sobrecarga de , use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.
 
-##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct
+## <a name="ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a>CComAggObject::FinalConstruct
 
-Chamado durante os estágios finais da construção do objeto, esse método executa qualquer inicialização final no membro [m_contained](#m_contained) .
+Chamado durante as fases finais de construção de objetos, este método realiza qualquer inicialização final no [membro m_contained.](#m_contained)
 
 ```
 HRESULT FinalConstruct();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
-##  <a name="finalrelease"></a>  CComAggObject::FinalRelease
+## <a name="ccomaggobjectfinalrelease"></a><a name="finalrelease"></a>CComAggObject::FinalRelease
 
-Chamado durante a destruição de objeto, esse método libera o membro [m_contained](#m_contained) .
+Chamado durante a destruição de objetos, este método liberta o [membro m_contained.](#m_contained)
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComAggObject::m_contained
+## <a name="ccomaggobjectm_contained"></a><a name="m_contained"></a>CComAggObject::m_contained
 
 Um objeto [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) derivado de sua classe.
 
@@ -185,14 +185,14 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parâmetros
 
-*presente*<br/>
-no Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como de quaisquer outras interfaces às quais você deseja dar suporte no objeto.
+*Contido*<br/>
+[em] Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx,](../../atl/reference/ccomobjectrootex-class.md)bem como de quaisquer outras interfaces que você deseja suportar no objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Todas `IUnknown` as chamadas `m_contained` por meio são delegadas para o desconhecido externo.
+Todas `IUnknown` as `m_contained` chamadas são delegadas para o desconhecido exterior.
 
-##  <a name="queryinterface"></a>  CComAggObject::QueryInterface
+## <a name="ccomaggobjectqueryinterface"></a><a name="queryinterface"></a>CComAggObject::QueryInterface
 
 Recupera um ponteiro para a interface solicitada.
 
@@ -204,40 +204,40 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iid*<br/>
-no O identificador da interface que está sendo solicitada.
+*Iid*<br/>
+[em] O identificador da interface que está sendo solicitada.
 
-*ppvObject*<br/>
-fora Um ponteiro para o ponteiro de interface identificado pelo *IID*. Se o objeto não oferecer suporte a essa interface, *ppvObject* será definido como NULL.
+*Ppvobject*<br/>
+[fora] Um ponteiro para o ponteiro de interface identificado por *iid*. Se o objeto não suportar essa interface, *ppvObject* será definido como NULL.
 
-*pp*<br/>
-fora Um ponteiro para o ponteiro de interface identificado pelo `Q`tipo. Se o objeto não oferecer suporte a essa interface, *PP* será definido como NULL.
+*Pp*<br/>
+[fora] Um ponteiro para o ponteiro `Q`de interface identificado por tipo . Se o objeto não suportar essa interface, *pp* será definido como NULL.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Se a interface solicitada `IUnknown`for `QueryInterface` , retornará um ponteiro para o próprio `IUnknown` objeto agregado e incrementará a contagem de referência. Caso contrário, esse método consultará a interface por `CComContainedObject` meio do membro, [m_contained](#m_contained).
+Se a interface `IUnknown`solicitada `QueryInterface` for, retorne um ponteiro para `IUnknown` o próprio objeto agregado e incrementa a contagem de referência. Caso contrário, este método consulta a `CComContainedObject` interface através do membro, [m_contained](#m_contained).
 
-##  <a name="release"></a>  CComAggObject::Release
+## <a name="ccomaggobjectrelease"></a><a name="release"></a>CComAggObject::Liberação
 
-Decrementa a contagem de referência no objeto agregado.
+Decreta a contagem de referência no objeto agregado.
 
 ```
 STDMETHOD_(ULONG, Release)();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Em compilações de `Release` depuração, retorna um valor que pode ser útil para diagnóstico ou teste. Em compilações não depuradas, `Release` sempre retorna 0.
+Nas compilações de `Release` depuração, retorna um valor que pode ser útil para diagnósticos ou testes. Em construções não-depuradas, `Release` sempre retorna 0.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
-[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[Declare_only_aggregatable](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bcf0f2eb2bef08757250999d0a6696b256fb15c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269395"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322191"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (o tipo char padrão não é assinado)
 
-Altera o padrão `char` tipo do `signed char` à `unsigned char`e o `char` tipo é estendido em zero quando ele é ampliado para um `int` tipo.
+Altera o `char` tipo `signed char` `unsigned char`padrão de `char` para , e o tipo é `int` zero estendido quando é ampliado para um tipo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,28 +32,28 @@ Altera o padrão `char` tipo do `signed char` à `unsigned char`e o `char` tipo 
 
 ## <a name="remarks"></a>Comentários
 
-Se um `char` valor for declarado explicitamente como `signed`, o **/J** opção não afeta e o valor será estendido com sinal quando ele é ampliado para um `int` tipo.
+Se `char` um valor for explicitamente `signed`declarado como , a opção **/J** não o afeta, e o `int` valor é estendido quando é ampliado para um tipo.
 
-O **/J** opção define `_CHAR_UNSIGNED`, que é usado com `#ifndef` no arquivo Limits. h para definir o intervalo padrão do `char` tipo.
+A opção **/J** define `_CHAR_UNSIGNED`, `#ifndef` que é usado com o arquivo LIMITS.h para definir o intervalo do tipo padrão. `char`
 
-ANSI C e C++ não exigem uma implementação específica do `char` tipo. Essa opção é útil quando você estiver trabalhando com dados de caractere que eventualmente serão convertidos em um idioma diferente do inglês.
+ANSI C e C++ não exigem `char` uma implementação específica do tipo. Essa opção é útil quando você está trabalhando com dados de caracteres que eventualmente serão traduzidos para um idioma diferente do inglês.
 
 > [!NOTE]
->  Se você usar essa opção do compilador com da ATL/MFC, pode ser gerado um erro. Você pode desativar esse erro definindo `_ATL_ALLOW_CHAR_UNSIGNED`, essa solução alternativa não é suportada e pode não funcionar.
+> Se você usar esta opção de compilador com ATL/MFC, um erro pode ser gerado. Embora você possa desativar esse `_ATL_ALLOW_CHAR_UNSIGNED`erro definindo, esta solução não é suportada e pode nem sempre funcionar.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. No **Gerenciador de Soluções**, abra o menu de atalho para o projeto e escolha **Propriedades**.
+1. No **Solution Explorer,** abra o menu de atalho para o projeto e escolha **Propriedades**.
 
-1. No projeto **páginas de propriedades** caixa de diálogo, no painel esquerdo, em **propriedades de configuração**, expanda **C/C++** e, em seguida, selecione **delinhadecomando**.
+1. Na caixa de diálogo Páginas de **propriedade** do projeto, no painel esquerdo em Propriedades **de configuração,** expanda **C/C++** e selecione **Linha de comando**.
 
-1. No **opções adicionais** painel, especifique a **/J** opção de compilador.
+1. No **painel Opções adicionais,** especifique a opção **compilador /J.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>

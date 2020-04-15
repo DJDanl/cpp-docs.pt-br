@@ -1,5 +1,5 @@
 ---
-title: Contagem de referência (ATL)
+title: Contagem de referências (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AddRef method [C++], reference counting
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: 565b74956280d4e80c41376ead4249e69980a80e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 095f0ad2ecc1e1a870077899d61a3c594f8cc95f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492230"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321735"
 ---
-# <a name="reference-counting"></a>Contagem de referência
+# <a name="reference-counting"></a>Contagem de referências
 
-O próprio COM não tenta remover automaticamente um objeto da memória quando ele pensa que o objeto não está mais sendo usado. Em vez disso, o programador de objetos deve remover o objeto não utilizado. O programador determina se um objeto pode ser removido com base em uma contagem de referência.
+O PRÓPRIO COM não tenta automaticamente remover um objeto da memória quando ele pensa que o objeto não está mais sendo usado. Em vez disso, o programador de objetos deve remover o objeto não utilizado. O programador determina se um objeto pode ser removido com base em uma contagem de referência.
 
-COM usa os `IUnknown` métodos, [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) e [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release), para gerenciar a contagem de referência de interfaces em um objeto. As regras gerais para chamar esses métodos são:
+O COM `IUnknown` usa os métodos [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) e [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release), para gerenciar a contagem de referência de interfaces em um objeto. As regras gerais para chamar esses métodos são:
 
-- Sempre que um cliente recebe um ponteiro de `AddRef` interface, deve ser chamado na interface.
+- Sempre que um cliente `AddRef` recebe um ponteiro de interface, deve ser chamado na interface.
 
-- Sempre que o cliente tiver terminado de usar o ponteiro de interface, `Release`ele deverá chamar.
+- Sempre que o cliente tiver terminado de `Release`usar o ponteiro de interface, ele deve chamar .
 
-Em uma implementação simples, cada `AddRef` chamada é incrementada e `Release` cada chamada diminui uma variável de contador dentro do objeto. Quando a contagem retorna para zero, a interface não tem mais nenhum usuário e está livre para se remover da memória.
+Em uma implementação `AddRef` simples, cada `Release` chamada incrementa e cada chamada decreta uma contravariável dentro do objeto. Quando a contagem retorna a zero, a interface não tem mais usuários e é livre para remover-se da memória.
 
-A contagem de referência também pode ser implementada para que cada referência ao objeto (não a uma interface individual) seja contada. Nesse caso, cada um `AddRef` e `Release` chamar delega para uma implementação central no objeto e `Release` libera o objeto inteiro quando sua contagem de referência chega a zero.
+A contagem de referências também pode ser implementada para que cada referência ao objeto (não a uma interface individual) seja contada. Neste caso, `AddRef` cada `Release` um e chamar delegados para `Release` uma implementação central no objeto, e libera todo o objeto quando sua contagem de referência atinge zero.
 
 > [!NOTE]
->  Quando um `CComObject`objeto derivado é construído usando o operador **New** , a contagem de referência é 0. Portanto, uma chamada para `AddRef` deve ser feita depois de criar com êxito `CComObject`o objeto derivado.
+> Quando `CComObject`um objeto derivado é construído usando o **novo** operador, a contagem de referência é 0. Portanto, uma chamada `AddRef` deve ser feita `CComObject`após a criação com sucesso do objeto derivado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Introdução a COM](../atl/introduction-to-com.md)<br/>
-[Gerenciando tempos de vida de objeto por meio de contagem de referência](/windows/win32/com/managing-object-lifetimes-through-reference-counting)
+[Introdução ao COM](../atl/introduction-to-com.md)<br/>
+[Gerenciamento de vidas de objetos através da contagem de referências](/windows/win32/com/managing-object-lifetimes-through-reference-counting)

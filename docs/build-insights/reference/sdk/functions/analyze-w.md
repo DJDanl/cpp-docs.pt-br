@@ -1,6 +1,6 @@
 ---
 title: AnalyzeW
-description: A C++ referência da função ANALYZEW do SDK do insights do Build.
+description: A referência da função C++ Build Insights SDK AnalyzeW.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: bd9b401f08941134d3c267df5c23c5d9e981cb86
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 64d68e4c10c0b77c3e6b08b1ec23735e38a377a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324156"
 ---
 # <a name="analyzew"></a>AnalyzeW
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A função `AnalyzeW` é usada para analisar eventos MSVC lidos de um rastreamento ETW (rastreamento de eventos de entrada para Windows).
+A `AnalyzeW` função é usada para analisar eventos MSVC lidos a partir de um rastreamento de evento de entrada para Windows (ETW).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,14 +37,14 @@ enum RESULT_CODE AnalyzeW(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *inputLogFile*
-O rastreamento ETW de entrada do qual você deseja ler eventos.
+*inputLogFile*\
+O rastreamento etw de entrada do que você deseja ler eventos.
 
-\ *analysisDescriptor*
-Ponteiro para um objeto [ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) . Use este objeto para configurar a análise.
+*análiseDescritor*\
+Ponteiro para um objeto [ANALYSIS_DESCRIPTOR.](../other-types/analysis-descriptor-struct.md) Use este objeto para configurar a análise.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um código de resultado da enumeração [RESULT_CODE](../other-types/result-code-enum.md) .
+Um código de resultado do [RESULT_CODE](../other-types/result-code-enum.md) enum.
 
 ::: moniker-end

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cc8aa9216fd0d4dcc169830fb745134ceb5c65fa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502615"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318409"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 
@@ -57,7 +57,7 @@ class CShellManager : public CObject
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CShellManager::BrowseForFolder](#browseforfolder)|Exibe uma caixa de diálogo que permite ao usuário selecionar uma pasta do Shell.|
+|[CShellManager::BrowseForFolder](#browseforfolder)|Exibe uma caixa de diálogo que permite ao usuário selecionar uma pasta shell.|
 |[CShellManager::ConcatenateItem](#concatenateitem)|Concatena dois PIDLs.|
 |[CShellManager::CopyItem](#copyitem)|Cria um novo PIDL e copia o PIDL fornecido para ele.|
 |[CShellManager::CreateItem](#createitem)|Cria um novo PIDL do tamanho especificado.|
@@ -70,23 +70,23 @@ class CShellManager : public CObject
 
 ## <a name="remarks"></a>Comentários
 
-Todos os métodos da `CShellManager` classe lidam com PIDLs. Um PIDL é um identificador exclusivo para um objeto Shell.
+Os métodos `CShellManager` da classe lidam com PIDLs. Um PIDL é um identificador único para um objeto shell.
 
-Você não deve criar um `CShellManager` objeto manualmente. Ele será criado automaticamente pela estrutura do seu aplicativo. No entanto, você deve chamar [CWinAppEx:: InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) durante o processo de inicialização do seu aplicativo. Para obter um ponteiro para o Gerenciador de Shell para seu aplicativo, chame [CWinAppEx::](../../mfc/reference/cwinappex-class.md#getshellmanager)GetShellManager.
+Você não deve `CShellManager` criar um objeto manualmente. Ele será criado automaticamente pela estrutura de sua aplicação. No entanto, você deve ligar para [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) durante o processo de inicialização do seu aplicativo. Para obter um ponteiro para o gerenciador de shell para o seu aplicativo, ligue para [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CShellManager](../../mfc/reference/cshellmanager-class.md)
+[Cshellmanager](../../mfc/reference/cshellmanager-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxshellmanager. h
+**Cabeçalho:** afxshellmanager.h
 
-##  <a name="browseforfolder"></a>  CShellManager::BrowseForFolder
+## <a name="cshellmanagerbrowseforfolder"></a><a name="browseforfolder"></a>CShellManager::BrowseForFolder
 
-Exibe uma caixa de diálogo que permite ao usuário selecionar uma pasta do Shell.
+Exibe uma caixa de diálogo que permite ao usuário selecionar uma pasta shell.
 
 ```
 BOOL BrowseForFolder(
@@ -101,40 +101,40 @@ BOOL BrowseForFolder(
 ### <a name="parameters"></a>Parâmetros
 
 *strOutFolder*<br/>
-fora A cadeia de caracteres usada pelo método para armazenar o caminho da pasta selecionada.
+[fora] A seqüência usada pelo método para armazenar o caminho da pasta selecionada.
 
 *pWndParent*<br/>
-no Um ponteiro para a janela pai.
+[em] Um ponteiro para a janela dos pais.
 
-*lplszInitialFolder*<br/>
-no Uma cadeia de caracteres que contém a pasta selecionada por padrão quando a caixa de diálogo é exibida.
+*iplszPastainicial*<br/>
+[em] Uma seqüência de string que contém a pasta selecionada por padrão quando a caixa de diálogo é exibida.
 
 *lpszTitle*<br/>
-no O título da caixa de diálogo.
+[em] O título da caixa de diálogo.
 
-*ulFlags*<br/>
-no Sinalizadores que especificam opções para a caixa de diálogo. Consulte [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) para obter a descrição detalhada.
+*Ulflags*<br/>
+[em] Sinalizadores especificando opções para a caixa de diálogo. Consulte [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) para obter a descrição detalhada.
 
 *piFolderImage*<br/>
-fora Um ponteiro para o valor inteiro em que o método grava o índice de imagem da pasta selecionada.
+[fora] Um ponteiro para o valor inteiro onde o método grava o índice de imagem da pasta selecionada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se o usuário selecionar uma pasta na caixa de diálogo; caso contrário, 0.
+Não zero se o usuário selecionar uma pasta na caixa de diálogo; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Quando você chama esse método, o aplicativo cria e mostra uma caixa de diálogo que permite ao usuário selecionar uma pasta. O método irá gravar o caminho da pasta no parâmetro *strOutFolder* .
+Quando você chama esse método, o aplicativo cria e mostra uma caixa de diálogo que permite ao usuário selecionar uma pasta. O método escreverá o caminho da pasta no parâmetro *strOutFolder.*
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como recuperar uma referência a um `CShellManager` objeto usando o `CWinAppEx::GetShellManager` método e como usar o `BrowseForFolder` método. Este trecho de código faz parte do [exemplo do Explorer](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como `CShellManager` recuperar uma `CWinAppEx::GetShellManager` referência a um `BrowseForFolder` objeto usando o método e como usar o método. Este trecho de código faz parte da [amostra do Explorer](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 
-##  <a name="concatenateitem"></a>  CShellManager::ConcatenateItem
+## <a name="cshellmanagerconcatenateitem"></a><a name="concatenateitem"></a>CShellManager::ConcatenateItem
 
-Cria uma nova lista contendo duas PIDLs.
+Cria uma nova lista contendo dois PIDLs.
 
 ```
 LPITEMIDLIST ConcatenateItem(
@@ -145,20 +145,20 @@ LPITEMIDLIST ConcatenateItem(
 ### <a name="parameters"></a>Parâmetros
 
 *pidl1*<br/>
-no O primeiro item.
+[em] O primeiro item.
 
 *pidl2*<br/>
-no O segundo item.
+[em] O segundo item.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para a nova lista de itens se a função tiver sucesso, caso contrário, NULL.
+Um ponteiro para a nova lista de itens se a função for bem sucedida, caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método cria uma nova [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) grande o suficiente para conter *pidl1* e *pidl2*. Em seguida, ele copia *pidl1* e *pidl2* para a nova lista.
+Este método cria um novo [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) grande o suficiente para conter *pidl1* e *pidl2*. Em seguida, copia *pidl1* e *pidl2* para a nova lista.
 
-##  <a name="copyitem"></a>  CShellManager::CopyItem
+## <a name="cshellmanagercopyitem"></a><a name="copyitem"></a>CShellManager::CopyItem
 
 Copia uma lista de itens.
 
@@ -169,17 +169,17 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ### <a name="parameters"></a>Parâmetros
 
 *pidlSource*<br/>
-no A lista de itens original.
+[em] A lista de itens originais.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para a lista de itens recém-criada se for bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-A lista de itens recém-criadas tem o mesmo tamanho da lista de itens de origem.
+A lista de itens recém-criada tem o mesmo tamanho da lista de itens de origem.
 
-##  <a name="createitem"></a>  CShellManager::CreateItem
+## <a name="cshellmanagercreateitem"></a><a name="createitem"></a>CShellManager::CreateItem
 
 Cria um novo PIDL.
 
@@ -190,13 +190,13 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ### <a name="parameters"></a>Parâmetros
 
 *cbSize*<br/>
-no O tamanho da lista de itens.
+[em] O tamanho da lista de itens.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para a lista de itens criados se for bem-sucedido; caso contrário, NULL.
 
-##  <a name="cshellmanager"></a>  CShellManager::CShellManager
+## <a name="cshellmanagercshellmanager"></a><a name="cshellmanager"></a>CShellManager::CShellManager
 
 Constrói um objeto `CShellManager`.
 
@@ -206,9 +206,9 @@ CShellManager();
 
 ### <a name="remarks"></a>Comentários
 
-Na maioria dos casos, você não precisa criar um `CShellManager` diretamente. Por padrão, a estrutura cria uma para você. Para obter um ponteiro para o `CShellManager`, chame [CWinAppEx::](../../mfc/reference/cwinappex-class.md#getshellmanager)GetShellManager. Se você criar um `CShellManager` manualmente, deverá inicializá-lo com o método [CWinAppEx:: InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).
+Na maioria dos casos, você `CShellManager` não precisa criar um diretamente. Por padrão, a estrutura cria uma para você. Para obter um `CShellManager`ponteiro para o , ligue [cWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Se você criar `CShellManager` um manualmente, você deve inicializá-lo com o método [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).
 
-##  <a name="freeitem"></a>  CShellManager::FreeItem
+## <a name="cshellmanagerfreeitem"></a><a name="freeitem"></a>CShellManager::FreeItem
 
 Exclui uma lista de itens.
 
@@ -218,10 +218,10 @@ void FreeItem(LPITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pidl*<br/>
-no Uma lista de itens a ser excluída.
+*Pidl*<br/>
+[em] Uma lista de itens para excluir.
 
-##  <a name="getitemcount"></a>  CShellManager::GetItemCount
+## <a name="cshellmanagergetitemcount"></a><a name="getitemcount"></a>CShellManager::GetItemCount
 
 Retorna o número de itens em uma lista de itens.
 
@@ -231,14 +231,14 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pidl*<br/>
-no Um ponteiro para uma lista de itens.
+*Pidl*<br/>
+[em] Um ponteiro para uma lista de itens.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de itens na lista de itens.
 
-##  <a name="getitemsize"></a>  CShellManager::GetItemSize
+## <a name="cshellmanagergetitemsize"></a><a name="getitemsize"></a>CShellManager::GetItemSize
 
 Retorna o tamanho de uma lista de itens.
 
@@ -248,16 +248,16 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pidl*<br/>
-no Um ponteiro para uma lista de itens.
+*Pidl*<br/>
+[em] Um ponteiro para uma lista de itens.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O tamanho da lista de itens.
 
-##  <a name="getnextitem"></a>  CShellManager::GetNextItem
+## <a name="cshellmanagergetnextitem"></a><a name="getnextitem"></a>CShellManager::GetNextItem
 
-Recupera o próximo item de um ponteiro para uma lista de identificadores de item (PIDL).
+Recupera o próximo item de um ponteiro para uma lista de identificadores de itens (PIDL).
 
 ```
 LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
@@ -265,20 +265,20 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pidl*<br/>
-no A lista de itens a iterar.
+*Pidl*<br/>
+[em] A lista de itens para iterar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o próximo item da lista.
 
 ### <a name="remarks"></a>Comentários
 
-Se não houver mais itens na lista, esse método retornará NULL.
+Se não houver mais itens na lista, este método retorna NULL.
 
-##  <a name="getparentitem"></a>  CShellManager::GetParentItem
+## <a name="cshellmanagergetparentitem"></a><a name="getparentitem"></a>CShellManager::GetParentItem
 
-Recupera o pai de um ponteiro para uma lista de identificadores de item (PIDL).
+Recupera o pai de um ponteiro para uma lista de identificadores de itens (PIDL).
 
 ```
 int GetParentItem(
@@ -288,13 +288,13 @@ int GetParentItem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpidl*<br/>
-no Um PIDL cujo pai será recuperado.
+*Rio Ipidl*<br/>
+[em] Um PIDL cujo pai será recuperado.
 
 *lpidlParent*<br/>
-fora Uma referência a um PIDL onde o método irá armazenar o resultado.
+[fora] Uma referência a um PIDL onde o método armazenará o resultado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O nível do PIDL pai.
 
@@ -302,9 +302,9 @@ O nível do PIDL pai.
 
 O nível de um PIDL é relativo à área de trabalho. O PIDL da área de trabalho é considerado com um nível de 0.
 
-##  <a name="itemfrompath"></a>  CShellManager::ItemFromPath
+## <a name="cshellmanageritemfrompath"></a><a name="itemfrompath"></a>CShellManager::ItemFromPath
 
-Recupera o ponteiro para uma lista de identificadores de item (PIDL) do item identificado por um caminho de cadeia de caracteres.
+Recupera o ponteiro para uma lista de identificadores de itens (PIDL) do item identificado por um caminho de strings.
 
 ```
 HRESULT ItemFromPath(
@@ -315,16 +315,16 @@ HRESULT ItemFromPath(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszPath*<br/>
-no Uma cadeia de caracteres que especifica o caminho para o item.
+[em] Uma seqüência que especifica o caminho para o item.
 
-*pidl*<br/>
-fora Uma referência a um PIDL. O método usa esse PIDL para armazenar o ponteiro para seu valor de retorno.
+*Pidl*<br/>
+[fora] Uma referência a um PIDL. O método usa este PIDL para armazenar o ponteiro ao seu valor de retorno.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna NOERROR se for bem-sucedido; um valor de erro definido por OLE.
+Retorna NOERROR se for bem sucedido; um valor de erro definido pelo OLE.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

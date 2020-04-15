@@ -1,6 +1,6 @@
 ---
 title: Relog
-description: A C++ referência da função relog do SDK do insights de compilação.
+description: A referência de função C++ Build Insights SDK Relog.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1ce09101deebd957de4b9305762dc37f38b53f4e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28b290d2bf2880ce2f534fa1cd91750890e2fead
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332687"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323784"
 ---
 # <a name="relog"></a>Relog
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A função `Relog` é usada para ler eventos MSVC de um rastreamento ETW (rastreamento de eventos para Windows) e gravá-los em um rastreamento ETW novo e modificado.
+A `Relog` função é usada para ler eventos MSVC a partir de um rastreamento de eventos para Windows (ETW) e escrevê-los em um novo traço de ETW modificado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -55,38 +55,38 @@ RESULT_CODE Relog(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *TAnalyzerGroupMembers*
-Esse parâmetro é sempre deduzido.
+*Membros do TAnalyzerGroup*\
+Este parâmetro é sempre deduzido.
 
-\ *TReloggerGroupMembers*
-Esse parâmetro é sempre deduzido.
+*Membros do TReloggerGroup*\
+Este parâmetro é sempre deduzido.
 
-\ *inputLogFile*
-O rastreamento ETW de entrada do qual você deseja ler eventos.
+*inputLogFile*\
+O rastreamento etw de entrada do que você deseja ler eventos.
 
-\ *outputLogFile*
-O arquivo no qual os novos eventos são gravados.
+*saídaLogFile*\
+O arquivo em que escrever os novos eventos.
 
-\ *numberOfAnalysisPasses*
-O número de etapas de análise a serem executadas no rastreamento de entrada. O rastreamento é passado pelo grupo analisador fornecido uma vez por passagem de análise.
+*numberOfAnalysisPasses*\
+O número de análises passa para ser executado no rastreamento de entrada. O rastreamento é passado através do grupo analisador fornecido uma vez por passe de análise.
 
-\ *systemEventsRetentionFlags*
-Um bitmask que especifica quais eventos de ETW do sistema manter no rastreamento de relogin. Para obter mais informações, consulte [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
+*systemEventsRetentionFlags*\
+Uma máscara de bit que especifica quais eventos de ETW do sistema para manter no rastreamento relocado. Para obter mais informações, consulte [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
 
-\ do *fileanalyzer*
-O grupo do Analyzer usado para a fase de análise da sessão de reregistro em log. Chame [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) para criar um grupo do Analyzer. Para usar um grupo do analisador dinâmico obtido do [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), primeiro encapsula-o dentro de um grupo do analisador estático passando seu endereço para `MakeStaticAnalyzerGroup`.
+*analyzerGroup*\
+O grupo analisador utilizado para a fase de análise da sessão de relogging. Chamada [MakeStaticAnalyzegroup](make-static-analyzer-group.md) para criar um grupo de analisadores. Para usar um grupo de analisador dinâmico obtido do [MakeDynamicAnalyzerGroup,](make-dynamic-analyzer-group.md)primeiro encapsule-o dentro de um grupo de analisadores estáticos, passando seu endereço para `MakeStaticAnalyzerGroup`.
 
-\ de *agente* novamente
-O grupo de relogger que registra novamente os eventos no arquivo de rastreamento especificado em *outputLogFile*. Chame [MakeStaticReloggerGroup](make-static-relogger-group.md) para criar um grupo de relogger. Para usar um grupo de reagente dinâmico obtido do [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), primeiro encapsula-o dentro de um grupo de reagente estático, passando seu endereço para `MakeStaticReloggerGroup`.
+*reloggerGroup*\
+O grupo relogger que reloga eventos no arquivo de rastreamento especificado no *outputLogFile*. Ligue para [o MakeStaticReloggerGroup](make-static-relogger-group.md) para criar um grupo de relogger. Para usar um grupo de relogger dinâmico obtido do [MakeDynamicReloggerGroup,](make-dynamic-relogger-group.md)primeiro encapsule-o `MakeStaticReloggerGroup`dentro de um grupo de relogger estático, passando seu endereço para .
 
 ### <a name="return-value"></a>Valor retornado
 
-Um código de resultado da enumeração [RESULT_CODE](../other-types/result-code-enum.md) .
+Um código de resultado do [RESULT_CODE](../other-types/result-code-enum.md) enum.
 
-### <a name="remark"></a>Remark
+### <a name="remark"></a>Comentário
 
-O rastreamento de entrada é passado pelo grupo analisador *numberOfAnalysisPasses* vezes. Não há nenhuma opção semelhante para o reregistro em log. O rastreamento é passado Trough o grupo de relogger apenas uma vez, após a conclusão de todas as etapas de análise.
+O rastreamento de entrada é transmitido através do número do grupo *analisadorOfAnalysisPasses* times. Não há opção similar para realogar passes. O rastreamento é passado pelo grupo relogger apenas uma vez, depois que todas as análises são concluídas.
 
-Não há suporte para o registro em log de eventos do sistema, como exemplos de CPU de uma classe de relogger. Use o parâmetro *systemEventsRetentionFlags* para decidir quais eventos do sistema manter no rastreamento de saída.
+O relogamento de eventos do sistema, como amostras de CPU de dentro de uma classe de relogger, não é suportado. Use o *parâmetro SystemEventsRetentionFlags* para decidir quais eventos do sistema manter no rastreamento de saída.
 
 ::: moniker-end

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 7f81cb9e1fc2ef7a74cb3878c369e4d7d14e3d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322156"
 ---
 # <a name="platformsizet-value-class"></a>Platform::classe de valor SizeT
 
@@ -36,11 +36,11 @@ public ref class SizeT sealed : ValueType
 
 **Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
 **Metadados:** platform.winmd
 
-## <a name="ctor"></a>  Construtor sizet:: Sizet
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a>TamanhoT::Construtor SizeT
 
 Inicializa uma nova instância de SizeT com o valor especificado.
 
@@ -52,12 +52,12 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
 
 ### <a name="parameters"></a>Parâmetros
 
-*value1*<br/>
+*valor1*<br/>
 Um valor de 32 bits sem sinal.
 
-*value2*<br/>
+*valor2*<br/>
 Ponteiro para um valor de 32 bits sem sinal.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

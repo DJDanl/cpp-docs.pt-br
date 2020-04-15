@@ -1,6 +1,6 @@
 ---
-title: MatchEventStackInMemberFunction
-description: A C++ referência da função MATCHEVENTSTACKINMEMBERFUNCTION do SDK do insights do Build.
+title: MatchEventStackInMemberfunction
+description: A referência da função C++ Build Insights SDK MatchEventStackInMemberFunction.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a966ea5209a25a62c08cb0873d0565299a15d27
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332785"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323881"
 ---
-# <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
+# <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberfunction
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A função `MatchEventStackInMemberFunction` é usada para corresponder a uma pilha de eventos em uma hierarquia de eventos específica, descrita pela lista de parâmetros de uma função de membro. As hierarquias correspondentes são encaminhadas para a função de membro para processamento adicional. Para saber mais sobre eventos, pilhas de eventos e hierarquias, consulte a [tabela de eventos](../event-table.md).
+A `MatchEventStackInMemberFunction` função é usada para corresponder a uma pilha de eventos com uma hierarquia de evento específica, descrita pela lista de parâmetros de uma função de membro. Hierarquias combinadas são encaminhadas para a função membro para posterior processamento. Para saber mais sobre eventos, pilhas de eventos e hierarquias, consulte [a tabela de eventos](../event-table.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -81,44 +81,44 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *TInterface*
-O tipo que contém a função de membro.
+*TInterface*\
+O tipo que contém a função do membro.
 
-\ *TReturn*
-O tipo de retorno da função de membro.
+*Retorno*\
+O tipo de retorno da função do membro.
 
-*T1*,..., *T10*\
-Os tipos que descrevem a hierarquia de eventos a serem correspondentes.
+*T1*, ..., *T10*\
+Os tipos que descrevem a hierarquia de eventos para coincidir.
 
-\ *TExtraParams*
-Os tipos dos parâmetros extras aceitos pela função de membro e os tipos de hierarquia de eventos.
+*TExtraParams*\
+Os tipos de parâmetros extras aceitos pela função do membro e os tipos de hierarquia de eventos.
 
-\ *TExtraArgs*
-Os tipos dos argumentos extras que foram passados para `MatchEventStackInMemberFunction`.
+*TExtraArgs*\
+Os tipos de argumentos extras `MatchEventStackInMemberFunction`que foram passados para .
 
-\ *eventStack*
-A pilha de eventos para corresponder à hierarquia de tipo de evento descrita por *T1* por meio de *T10*.
+*eventStack*\
+A pilha de eventos para coincidir com a hierarquia do tipo de evento descrita por *T1* até *T10*.
 
-\ *objectPtr*
-Um ponteiro para um objeto no qual *memberFunc* é chamado.
+*objectPtr*\
+Um ponteiro para um objeto no qual *o membroFunc* é chamado.
 
-\ *memberFunc*
-A função de membro que descreve a hierarquia de tipo de evento para corresponder.
+*membroFunc*\
+A função de membro que descreve a hierarquia do tipo de evento para corresponder.
 
-\ *extraArgs*
-Os argumentos que são encaminhados perfeitamente para *memberFunc* junto com os parâmetros de hierarquia de tipo de evento.
+*extraArgs*\
+Os argumentos que são encaminhados perfeitamente para *o membroFunc* juntamente com os parâmetros de hierarquia do tipo de evento.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor **bool** que será **true** se a correspondência for bem-sucedida ou **false** caso contrário.
+Um valor **bool** que é **verdadeiro** se a correspondência foi bem sucedida, ou **falso** de outra forma.
 
 ## <a name="remarks"></a>Comentários
 
-O último evento em *eventStack* sempre é correspondido em relação à última entrada na hierarquia de tipo de evento para corresponder. Todos os outros tipos na hierarquia de tipo de evento podem corresponder a qualquer posição no *eventStack* , exceto o último, desde que eles estejam na mesma ordem.
+O último evento no *eventStack* é sempre compatível com a última entrada na hierarquia do tipo de evento para combinar. Todos os outros tipos na hierarquia do tipo de evento podem corresponder a qualquer posição no *eventStack,* exceto o último, desde que estejam na mesma ordem.
 
-Os tipos de evento a serem usados para os parâmetros *T1* a *T10* são selecionados em uma lista de *classes de captura*. Para obter uma lista de eventos e as classes de captura que você pode usar para fazer a correspondência, consulte a [tabela de eventos](../event-table.md).
+Os tipos de eventos a serem usados para os parâmetros *T1* e *T10* são selecionados a partir de uma lista de classes de *captura*. Para obter uma lista de eventos e as classes de captura que você pode usar para combiná-los, consulte [a tabela de eventos](../event-table.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```cpp
 void MyClass::Foo1(Compiler cl, BackEndPass bep, C2DLL c2,
