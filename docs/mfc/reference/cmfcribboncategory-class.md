@@ -130,16 +130,16 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375270"
 ---
 # <a name="cmfcribboncategory-class"></a>Classe CMFCRibbonCategory
 
-O `CMFCRibbonCategory` classe implementa uma guia de faixa de opções que contém um grupo de [painéis de faixa de opções](../../mfc/reference/cmfcribbonpanel-class.md).
+A `CMFCRibbonCategory` classe implementa uma guia de fita que contém um grupo de [painéis](../../mfc/reference/cmfcribbonpanel-class.md)de fita .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -159,75 +159,75 @@ class CMFCRibbonCategory : public CObject
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonCategory::AddHidden](#addhidden)|Adiciona um elemento oculto à categoria de faixa de opções.|
-|[CMFCRibbonCategory::AddPanel](#addpanel)|Adiciona um novo painel para a categoria de faixa de opções.|
-|[CMFCRibbonCategory::CopyFrom](#copyfrom)||
-|[CMFCRibbonCategory::FindByData](#findbydata)||
-|[CMFCRibbonCategory::FindByID](#findbyid)||
+|[CMFCRibbonCategory::AddHidden](#addhidden)|Adiciona um elemento oculto à categoria fita.|
+|[CMFCRibbonCategory::AddPanel](#addpanel)|Adiciona um novo painel à categoria fita.|
+|[CMFCRibbonCategory:::Copiar](#copyfrom)||
+|[CMFCRibbonCategory::FindbyData](#findbydata)||
+|[CMFCRibboncategory::FindbyId](#findbyid)||
 |[CMFCRibbonCategory::FindPanelWithElem](#findpanelwithelem)||
-|[CMFCRibbonCategory::GetContextID](#getcontextid)|Retorna a ID do contexto da categoria de faixa de opções.|
-|[CMFCRibbonCategory::GetData](#getdata)|Retorna os dados definidos pelo usuário que está associados com a categoria de faixa de opções.|
+|[CMFCRibboncategory::GetcontextID](#getcontextid)|Retorna o ID de contexto da categoria fita.|
+|[CMFCRibbonCategory::GetData](#getdata)|Retorna os dados definidos pelo usuário associados à categoria fita.|
 |[CMFCRibbonCategory::GetDroppedDown](#getdroppeddown)||
 |[CMFCRibbonCategory::GetElements](#getelements)||
-|[CMFCRibbonCategory::GetElementsByID](#getelementsbyid)||
-|[CMFCRibbonCategory::GetFirstVisibleElement](#getfirstvisibleelement)|Obter um primeiro elemento visível que pertencem à categoria de faixa de opções.|
-|[CMFCRibbonCategory::GetFocused](#getfocused)|Retorna um elemento com foco.|
-|[CMFCRibbonCategory::GetHighlighted](#gethighlighted)|Retorna um elemento realçado.|
+|[CMFCRibboncategory::GetelementsbyID](#getelementsbyid)||
+|[CMFCRibbonCategory::getFirstVisibleelement](#getfirstvisibleelement)|Obtenha um primeiro elemento visível que pertença à categoria de fita.|
+|[CMFCRibbonCategory::GetFocus](#getfocused)|Retorna um elemento focado.|
+|[CMFCRibbonCategory::GetHighlighted](#gethighlighted)|Retorna um elemento destacado.|
 |[CMFCRibbonCategory::GetImageCount](#getimagecount)||
 |[CMFCRibbonCategory::GetImageSize](#getimagesize)||
 |[CMFCRibbonCategory::GetItemIDsList](#getitemidslist)||
-|[CMFCRibbonCategory::GetLastVisibleElement](#getlastvisibleelement)|Obter um último elemento visível que pertencem à categoria de faixa de opções|
-|[CMFCRibbonCategory::GetLargeImages](#getlargeimages)|Retorna uma referência à lista de imagens grandes que usa a categoria de faixa de opções.|
+|[CMFCRibbonCategory::GetLastVisibleElement](#getlastvisibleelement)|Obtenha um último elemento visível que pertence à categoria fita|
+|[CMFCRibbonCategory::GetLargeImages](#getlargeimages)|Retorna uma referência à lista de imagens grandes que a categoria ribbon usa.|
 |[CMFCRibbonCategory::GetMaxHeight](#getmaxheight)||
 |[CMFCRibbonCategory::GetName](#getname)||
-|[CMFCRibbonCategory::GetPanel](#getpanel)|Retorna um ponteiro para o painel de faixa de opções que está localizado no índice especificado.|
-|[CMFCRibbonCategory::GetPanelCount](#getpanelcount)|Retorna o número de painéis de faixa de opções na categoria de faixa de opções.|
+|[CMFCRibbonCategory::GetPanel](#getpanel)|Retorna um ponteiro para o painel de fita situado no índice especificado.|
+|[CMFCRibbonCategory::GetPanelCount](#getpanelcount)|Retorna o número de painéis de fita na categoria fita.|
 |[CMFCRibbonCategory::GetPanelFromPoint](#getpanelfrompoint)||
-|[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)|Retorna o índice do painel da faixa de opções especificados.|
-|[CMFCRibbonCategory::GetParentButton](#getparentbutton)||
-|[CMFCRibbonCategory::GetParentMenuBar](#getparentmenubar)||
-|[CMFCRibbonCategory::GetParentRibbonBar](#getparentribbonbar)||
+|[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)|Retorna o índice do painel de fita especificado.|
+|[CMFCRibbonCategory::GetParentbutton](#getparentbutton)||
+|[CMFCRibbonCategory::GetParentmenubar](#getparentmenubar)||
+|[CMFCRibboncategory::GetParentribbonbar](#getparentribbonbar)||
 |[CMFCRibbonCategory::GetRect](#getrect)||
-|[CMFCRibbonCategory::GetSmallImages](#getsmallimages)|Retorna uma referência à lista de imagens pequenas que usa a categoria.|
-|[CMFCRibbonCategory::GetTabColor](#gettabcolor)|Retorna a cor atual da guia categoria de faixa de opções.|
+|[CMFCRibbonCategory::GetSmallImages](#getsmallimages)|Retorna uma referência à lista de pequenas imagens que a categoria usa.|
+|[CMFCRibbonCategory::GettabColor](#gettabcolor)|Retorna a cor atual da guia categoria de fita.|
 |[CMFCRibbonCategory::GetTabRect](#gettabrect)||
 |[CMFCRibbonCategory::GetTextTopLine](#gettexttopline)||
-|[CMFCRibbonCategory::GetVisibleElements](#getvisibleelements)|Obter todos os elementos visíveis que pertencem à categoria de faixa de opções.|
-|[CMFCRibbonCategory::HighlightPanel](#highlightpanel)||
+|[CMFCRibbonCategory::GetVisibleElements](#getvisibleelements)|Obtenha todos os elementos visíveis que pertencem à categoria fita.|
+|[CMFCRibbonCategory::Painel de destaque](#highlightpanel)||
 |[CMFCRibbonCategory::HitTest](#hittest)||
 |[CMFCRibbonCategory::HitTestEx](#hittestex)||
-|[CMFCRibbonCategory::HitTestScrollButtons](#hittestscrollbuttons)||
+|[CMFCRibbonCategory::HitTestScrollBotões](#hittestscrollbuttons)||
 |[CMFCRibbonCategory::IsActive](#isactive)||
-|[CMFCRibbonCategory::IsVisible](#isvisible)|Determina se a categoria de faixa de opções está visível.|
-|[CMFCRibbonCategory::IsWindows7Look](#iswindows7look)|Indica se a faixa de opções do pai tem a aparência de estilo de 7 do Windows (botão pequeno aplicativo retangular)|
-|[CMFCRibbonCategory::NotifyControlCommand](#notifycontrolcommand)||
+|[CMFCRibbonCategory::IsVisible](#isvisible)|Determina se a categoria da fita é visível.|
+|[CMFCRibbonCategory::IsWindows7Look](#iswindows7look)|Indica se a fita dos pais tem visual estilo Windows 7 (pequeno botão de aplicativo retangular)|
+|[CMFCRibbonCategory::NotificarComando de controle](#notifycontrolcommand)||
 |[CMFCRibbonCategory::OnCancelMode](#oncancelmode)||
 |[CMFCRibbonCategory::OnDraw](#ondraw)||
 |[CMFCRibbonCategory::OnDrawImage](#ondrawimage)||
 |[CMFCRibbonCategory::OnDrawMenuBorder](#ondrawmenuborder)||
-|[CMFCRibbonCategory::OnKey](#onkey)|Chamado pelo framework quando um usuário pressiona um botão do teclado.|
-|[CMFCRibbonCategory::OnLButtonDown](#onlbuttondown)||
-|[CMFCRibbonCategory::OnLButtonUp](#onlbuttonup)||
+|[CMFCRibbonCategory::OnKey](#onkey)|Chamado pela estrutura quando um usuário pressiona um botão de teclado.|
+|[CMFCRibbonCategory::OnlbuttonDown](#onlbuttondown)||
+|[CMFCRibbonCategory::OnlbuttonUp](#onlbuttonup)||
 |[CMFCRibbonCategory::OnMouseMove](#onmousemove)||
 |[CMFCRibbonCategory::OnRTLChanged](#onrtlchanged)||
 |[CMFCRibbonCategory::OnScrollHorz](#onscrollhorz)||
 |[CMFCRibbonCategory::OnUpdateCmdUI](#onupdatecmdui)||
-|[CMFCRibbonCategory::RecalcLayout](#recalclayout)||
+|[CMFCRibbonCategoria::RecalcLayout](#recalclayout)||
 |[CMFCRibbonCategory::RemovePanel](#removepanel)||
-|[CMFCRibbonCategory::ReposPanels](#repospanels)||
-|[CMFCRibbonCategory::SetCollapseOrder](#setcollapseorder)|Define a ordem de recolhimento dos painéis da faixa de opções que estão presentes na categoria de faixa de opções.|
-|[CMFCRibbonCategory::SetData](#setdata)|Armazena os dados definidos pelo usuário na categoria de faixa de opções.|
-|[CMFCRibbonCategory::SetKeys](#setkeys)|Atribui uma dica de tecla para a categoria de faixa de opções.|
+|[CMFCRibbonCategoria::RepetiçõesPainéis](#repospanels)||
+|[CMFCRibboncategory::setCollapseOrder](#setcollapseorder)|Define a ordem de colapso dos painéis de fita que estão presentes na categoria de fita.|
+|[CMFCRibbonCategory::SetData](#setdata)|Armazena os dados definidos pelo usuário na categoria fita.|
+|[CMFCRibbonCategory:::setKeys](#setkeys)|Atribui uma dica-chave para a categoria de fita.|
 |[CMFCRibbonCategory::SetName](#setname)||
-|[CMFCRibbonCategory::SetTabColor](#settabcolor)|Define a cor da categoria de faixa de opções.|
+|[CMFCRibbonCategory::SettabColor](#settabcolor)|Define a cor da categoria fita.|
 
 ## <a name="remarks"></a>Comentários
 
-Normalmente, você cria uma categoria de faixa de opções indiretamente chamando [CMFCRibbonBar::AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory), que retorna um ponteiro para a categoria de faixa de opções recém-criado. Adicionar painéis a categoria chamando [CMFCRibbonCategory::AddPanel](#addpanel).
+Normalmente, você cria uma categoria de fita indiretamente chamando [CMFCRibbonBar::AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory), que retorna um ponteiro para a categoria de fita recém-criada. Você adiciona painéis à categoria chamando [CMFCRibbonCategory::AddPanel](#addpanel).
 
-O `CMFCRibbonTab` classe desenha as categorias de faixa de opções. Ela é derivada de [classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
+A `CMFCRibbonTab` classe desenha categorias de fitas. É derivado da [classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-O exemplo a seguir demonstra como criar uma categoria de faixa de opções e adicionar um painel a ela.
+Este exemplo a seguir demonstra como criar uma categoria de fita e adicionar um painel a ela.
 
 ```cpp
 // Create a new ribbon category and get a pointer to it`
@@ -242,13 +242,13 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
     m_PanelIcons.ExtractIcon (0));  // Panel icon
 ```
 
-O diagrama a seguir mostra uma figura da categoria do aplicativo de exemplo RibbonApp Home.
+O diagrama a seguir mostra uma figura da categoria Home do aplicativo de amostra RibbonApp.
 
-![Categoria de página inicial do aplicativo de exemplo RibbonApp](../../mfc/reference/media/cmfcribboncategory.png "categoria de página inicial do aplicativo de exemplo RibbonApp")
+![Categoria home do aplicativo de exemplo RibbonApp](../../mfc/reference/media/cmfcribboncategory.png "Categoria home do aplicativo de exemplo RibbonApp")
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CMFCRibbonCategory`
 
@@ -256,9 +256,9 @@ O diagrama a seguir mostra uma figura da categoria do aplicativo de exemplo Ribb
 
 **Cabeçalho:** afxribboncategory.h
 
-##  <a name="addhidden"></a>  CMFCRibbonCategory::AddHidden
+## <a name="cmfcribboncategoryaddhidden"></a><a name="addhidden"></a>CMFCRibbonCategory::AddHidden
 
-Adiciona o elemento de faixa de opções especificado para a matriz de elementos de faixa de opções que são exibidos na caixa de diálogo de personalização.
+Adiciona o elemento de fita especificado à matriz de elementos de fita exibidos na caixa de diálogo de personalização.
 
 ```
 void AddHidden(CMFCRibbonBaseElement* pElem);
@@ -267,15 +267,15 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Parâmetros
 
 *pElem*<br/>
-[in] Ponteiro para um elemento de faixa de opções.
+[em] Ponteiro para um elemento de fita.
 
 ### <a name="remarks"></a>Comentários
 
-Elementos de faixa de opções na caixa de diálogo de personalização são os comandos que podem ser adicionados à barra de ferramentas de acesso rápido.
+Elementos de fita na caixa de diálogo de personalização são os comandos que você pode adicionar à barra de ferramentas de acesso rápido.
 
-##  <a name="addpanel"></a>  CMFCRibbonCategory::AddPanel
+## <a name="cmfcribboncategoryaddpanel"></a><a name="addpanel"></a>CMFCRibbonCategory::AddPanel
 
-Cria um painel de faixa de opções para a categoria de faixa de opções.
+Cria um painel de fita para a categoria fita.
 
 ```
 CMFCRibbonPanel* AddPanel(
@@ -287,33 +287,33 @@ CMFCRibbonPanel* AddPanel(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszPanelName*<br/>
-[in] Ponteiro para o nome do novo painel de faixa de opções.
+[em] Ponteiro para o nome do novo painel de fita.
 
-*hIcon*<br/>
-[in] Identificador para o ícone padrão para o novo painel de faixa de opções.
+*Hicon*<br/>
+[em] Manuseie o ícone padrão para o novo painel de fita.
 
 *pRTI*<br/>
-[in] Ponteiro para informações de classe de tempo de execução para um painel de faixa de opções personalizada.
+[em] Ponteiro para informações da classe de tempo de execução para um painel de fita personalizado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para o novo painel de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo se o painel não foi criado.
+Ponteiro para o novo painel de fita se o método foi bem sucedido; caso contrário, NULL se o painel não foi criado.
 
 ### <a name="remarks"></a>Comentários
 
-Se você quiser criar um painel de faixa de opções personalizada, você deve especificar suas informações de classe de tempo de execução no *pRTI*. A classe do painel de faixa de opções personalizada deve ser derivada de `CMFCRibbonPanel` classe.
+Se você quiser criar um painel de fita personalizado, você deve especificar suas informações de classe de tempo de execução no *pRTI*. A classe do painel de fita `CMFCRibbonPanel` personalizada deve ser derivada da classe.
 
-O ícone padrão para o painel de faixa de opções é exibido quando não há espaço suficiente para exibir os elementos da faixa de opções.
+O ícone padrão do painel de fita é exibido quando não há espaço suficiente para exibir os elementos da fita.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `AddPanel` método no `CMFCRibbonCategory` classe.
+O exemplo a seguir `AddPanel` demonstra como `CMFCRibbonCategory` usar o método na classe.
 
 [!code-cpp[NVC_MFC_RibbonApp#10](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]
 
-##  <a name="cmfcribboncategory"></a>  CMFCRibbonCategory::CMFCRibbonCategory
+## <a name="cmfcribboncategorycmfcribboncategory"></a><a name="cmfcribboncategory"></a>CMFCRibbonCategory::CMFCRibbonCategory
 
-Constrói e inicializa um [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) objeto.
+Constrói e inicializa um objeto [CMFCRibbonCategory.](../../mfc/reference/cmfcribboncategory-class.md)
 
 ```
 CMFCRibbonCategory(
@@ -330,26 +330,26 @@ CMFCRibbonCategory(
 ### <a name="parameters"></a>Parâmetros
 
 *pParenrRibbonBar*<br/>
-[in] Ponteiro para a barra de faixa de opções do pai da categoria de faixa de opções.
+[em] Ponteiro para a barra de fita dos pais da categoria fita.
 
 *lpszName*<br/>
-[in] Nome da categoria de faixa de opções.
+[em] Nome da categoria fita.
 
 *uiSmallImagesResID*<br/>
-[in] ID do recurso da lista de imagens para imagens pequenas que são usados por elementos de faixa de opções na categoria de faixa de opções.
+[em] ID de recurso da lista de imagens para pequenas imagens que são usadas por elementos de fita na categoria fita.
 
 *uiLargeImagesResID*<br/>
-[in] ID do recurso da lista de imagens para imagens grandes que são usadas pelos elementos de faixa de opções na categoria de faixa de opções.
+[em] ID de recurso da lista de imagens para imagens grandes que são usadas por elementos de fita na categoria fita.
 
 *sizeSmallImage*<br/>
-[in] Tamanho de imagens pequenas para elementos de faixa de opções na categoria de faixa de opções padrão.
+[em] Tamanho padrão de pequenas imagens para elementos de fita na categoria fita.
 
 *sizeLargeImage*<br/>
-[in] Tamanho das imagens grandes para elementos de faixa de opções na categoria de faixa de opções padrão.
+[em] Tamanho padrão de imagens grandes para elementos de fita na categoria fita.
 
-##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom
+## <a name="cmfcribboncategorycopyfrom"></a><a name="copyfrom"></a>CMFCRibbonCategory:::Copiar
 
-Copia o estado do especificado [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) atual [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) objeto.
+Copia o estado do [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) especificado para o objeto [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) atual.
 
 ```
 virtual void CopyFrom(CMFCRibbonCategory& src);
@@ -358,13 +358,13 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ### <a name="parameters"></a>Parâmetros
 
 *src*<br/>
-[in] A fonte `CMFCRibbonCategory` objeto.
+[em] O `CMFCRibbonCategory` objeto de origem.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="findbydata"></a>  CMFCRibbonCategory::FindByData
+## <a name="cmfcribboncategoryfindbydata"></a><a name="findbydata"></a>CMFCRibbonCategory::FindbyData
 
-Recupera o elemento de faixa de opções associado com os dados especificados.
+Recupera o elemento de fita associado aos dados especificados.
 
 ```
 CMFCRibbonBaseElement* FindByData(
@@ -374,21 +374,21 @@ CMFCRibbonBaseElement* FindByData(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwData*<br/>
-[in] Os dados associados a um elemento de faixa de opções.
+*Dwdata*<br/>
+[em] Os dados associados a um elemento de fita.
 
 *bVisibleOnly*<br/>
-[in] TRUE para incluir elementos de faixa de opções de acesso rápido na pesquisa; FALSE para excluir os elementos de faixa de opções de acesso rápido na pesquisa.
+[em] VERDADEIRO para incluir elementos de fita de acesso rápido na pesquisa; FALSO para excluir elementos de fita de acesso rápido na pesquisa.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para um elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Ponteiro para um elemento de fita se o método foi bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="findbyid"></a>  CMFCRibbonCategory::FindByID
+## <a name="cmfcribboncategoryfindbyid"></a><a name="findbyid"></a>CMFCRibboncategory::FindbyId
 
-Recupera o elemento de faixa de opções associado com a ID do comando especificado.
+Recupera o elemento de fita associado ao ID de comando especificado.
 
 ```
 CMFCRibbonBaseElement* FindByID(
@@ -399,20 +399,20 @@ CMFCRibbonBaseElement* FindByID(
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmdID*<br/>
-[in] ID de comando associada a um elemento de faixa de opções.
+[em] ID de comando associado a um elemento de fita.
 
 *bVisibleOnly*<br/>
-[in] TRUE para incluir elementos de faixa de opções de acesso rápido na pesquisa; FALSE para excluir os elementos de faixa de opções de acesso rápido na pesquisa.
+[em] VERDADEIRO para incluir elementos de fita de acesso rápido na pesquisa; FALSO para excluir elementos de fita de acesso rápido na pesquisa.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para um elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Ponteiro para um elemento de fita se o método foi bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="findpanelwithelem"></a>  CMFCRibbonCategory::FindPanelWithElem
+## <a name="cmfcribboncategoryfindpanelwithelem"></a><a name="findpanelwithelem"></a>CMFCRibbonCategory::FindPanelWithElem
 
-Recupera o painel de faixa de opções que contém o elemento de faixa de opções especificados.
+Recupera o painel de fita que contém o elemento de fita especificado.
 
 ```
 CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
@@ -421,59 +421,59 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ### <a name="parameters"></a>Parâmetros
 
 *pElement*<br/>
-[in] Ponteiro para um elemento de faixa de opções.
+[em] Ponteiro para um elemento de fita.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para um painel de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Ponteiro para um painel de fita se o método foi bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getcontextid"></a>  CMFCRibbonCategory::GetContextID
+## <a name="cmfcribboncategorygetcontextid"></a><a name="getcontextid"></a>CMFCRibboncategory::GetcontextID
 
-Recupera a ID do contexto da categoria de faixa de opções.
+Recupera o ID de contexto da categoria fita.
 
 ```
 UINT GetContextID() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-ID do contexto da categoria de faixa de opções.
+ID de contexto da categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-A ID de contexto é 0 se a categoria de faixa de opções não é uma categoria de faixa de opções de contexto.
+O ID de contexto é 0 se a categoria de fita não for uma categoria de fita de contexto.
 
-##  <a name="getdata"></a>  CMFCRibbonCategory::GetData
+## <a name="cmfcribboncategorygetdata"></a><a name="getdata"></a>CMFCRibbonCategory::GetData
 
-Recupera os dados definidos pelo usuário que está associados com a categoria de faixa de opções.
+Recupera os dados definidos pelo usuário associados à categoria fita.
 
 ```
 DWORD_PTR GetData() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Os dados definidos pelo usuário que está associados com a categoria de faixa de opções.
+Os dados definidos pelo usuário que estão associados à categoria fita.
 
-##  <a name="getdroppeddown"></a>  CMFCRibbonCategory::GetDroppedDown
+## <a name="cmfcribboncategorygetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonCategory::GetDroppedDown
 
-Recupera um ponteiro para o elemento de faixa de opções que atualmente tem o menu pop-up exibido.
+Recupera um ponteiro para o elemento de fita que atualmente tem seu menu pop-up exibido.
 
 ```
 CMFCRibbonBaseElement* GetDroppedDown();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para um elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Ponteiro para um elemento de fita se o método foi bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getelements"></a>  CMFCRibbonCategory::GetElements
+## <a name="cmfcribboncategorygetelements"></a><a name="getelements"></a>CMFCRibbonCategory::GetElements
 
-Recupera todos os elementos de faixa de opções na categoria de faixa de opções.
+Recupera todos os elementos da fita na categoria fita.
 
 ```
 void GetElements(
@@ -483,15 +483,15 @@ void GetElements(
 ### <a name="parameters"></a>Parâmetros
 
 *arElements*<br/>
-[no, out] Referência a um [CArray](../../mfc/reference/carray-class.md) de elementos de faixa de opções.
+[dentro, fora] Referência a um [CArray](../../mfc/reference/carray-class.md) de elementos de fita.
 
 ### <a name="remarks"></a>Comentários
 
-Elementos de faixa de opções que são projetados para uso na barra de ferramentas de acesso rápido são incluídos na matriz.
+Os elementos de fita projetados para uso na barra de ferramentas de acesso rápido estão incluídos na matriz.
 
-##  <a name="getelementsbyid"></a>  CMFCRibbonCategory::GetElementsByID
+## <a name="cmfcribboncategorygetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibboncategory::GetelementsbyID
 
-Recupera todos os elementos de faixa de opções que estão associados com a ID do comando especificado.
+Recupera todos os elementos de fita associados ao ID de comando especificado.
 
 ```
 void GetElementsByID(
@@ -502,60 +502,60 @@ void GetElementsByID(
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmdID*<br/>
-[in] ID de comando associada a um elemento de faixa de opções.
+[em] ID de comando associado a um elemento de fita.
 
 *arElements*<br/>
-[no, out] Referência a um [CArray](../../mfc/reference/carray-class.md) de elementos de faixa de opções.
+[dentro, fora] Referência a um [CArray](../../mfc/reference/carray-class.md) de elementos de fita.
 
 ### <a name="remarks"></a>Comentários
 
-Elementos de faixa de opções que são projetados para uso na barra de ferramentas de acesso rápido são incluídos na matriz.
+Os elementos de fita projetados para uso na barra de ferramentas de acesso rápido estão incluídos na matriz.
 
-##  <a name="getfirstvisibleelement"></a>  CMFCRibbonCategory::GetFirstVisibleElement
+## <a name="cmfcribboncategorygetfirstvisibleelement"></a><a name="getfirstvisibleelement"></a>CMFCRibbonCategory::getFirstVisibleelement
 
-Recupera o primeiro elemento visível que pertence à categoria de faixa de opções.
+Recupera o primeiro elemento visível que pertence à categoria fita.
 
 ```
 CMFCRibbonBaseElement* GetFirstVisibleElement() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para o primeiro elemento visível; pode ser NULL se a categoria não tem todos os elementos visíveis.
+Ponteiro para o primeiro elemento visível; pode ser NULA se a categoria não tiver elementos visíveis.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getfocused"></a>  CMFCRibbonCategory::GetFocused
+## <a name="cmfcribboncategorygetfocused"></a><a name="getfocused"></a>CMFCRibbonCategory::GetFocus
 
-Retorna um elemento com foco.
+Retorna um elemento focado.
 
 ```
 CMFCRibbonBaseElement* GetFocused();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para um elemento com foco ou NULL.
+Um ponteiro para um elemento focado ou NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="gethighlighted"></a>  CMFCRibbonCategory::GetHighlighted
+## <a name="cmfcribboncategorygethighlighted"></a><a name="gethighlighted"></a>CMFCRibbonCategory::GetHighlighted
 
-Retorna um elemento realçado.
+Retorna um elemento destacado.
 
 ```
 CMFCRibbonBaseElement* GetHighlighted();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para um elemento realçado ou nulo se nenhum elemento é realçado.
+Um ponteiro para um elemento destacado ou NULL se nenhum elemento for destacado.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getimagecount"></a>  CMFCRibbonCategory::GetImageCount
+## <a name="cmfcribboncategorygetimagecount"></a><a name="getimagecount"></a>CMFCRibbonCategory::GetImageCount
 
-Recupera o número de imagens na lista de imagem especificado está contido na categoria de faixa de opções.
+Recupera o número de imagens na lista de imagens especificadas contida na categoria fita.
 
 ```
 int GetImageCount(BOOL bIsLargeImage) const;
@@ -564,17 +564,17 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ### <a name="parameters"></a>Parâmetros
 
 *bIsLargeImage*<br/>
-[in] TRUE para o número de imagens na lista de imagens grandes; FALSE para o número de imagens na lista de imagens pequenas.
+[em] TRUE para o número de imagens na grande lista de imagens; FALSO para o número de imagens na pequena lista de imagens.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número de imagens na lista de imagem especificado.
+O número de imagens na lista de imagens especificada.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getimagesize"></a>  CMFCRibbonCategory::GetImageSize
+## <a name="cmfcribboncategorygetimagesize"></a><a name="getimagesize"></a>CMFCRibbonCategory::GetImageSize
 
-Recupera o tamanho de uma imagem na lista de imagem especificado está contida na categoria de faixa de opções.
+Recupera o tamanho de uma imagem na lista de imagens especificada contida na categoria fita.
 
 ```
 CSize GetImageSize(BOOL bIsLargeImage) const;
@@ -583,19 +583,19 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ### <a name="parameters"></a>Parâmetros
 
 *bIsLargeImage*<br/>
-[in] TRUE para o tamanho das imagens grandes; FALSE para o tamanho das imagens pequenas.
+[em] VERDADE para o tamanho de imagens grandes; FALSO para o tamanho de imagens pequenas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O tamanho de uma imagem na lista de imagem especificado.
+O tamanho de uma imagem na lista de imagens especificada.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho recuperado inclui o fator de escala global de imagem.
+O tamanho recuperado inclui o fator de escala de imagem global.
 
-##  <a name="getitemidslist"></a>  CMFCRibbonCategory::GetItemIDsList
+## <a name="cmfcribboncategorygetitemidslist"></a><a name="getitemidslist"></a>CMFCRibbonCategory::GetItemIDsList
 
-Recupera as IDs de comando para os elementos de faixa de opções que estão contidos na categoria de faixa de opções.
+Recupera os IDs de comando para os elementos de fita que estão contidos na categoria fita.
 
 ```
 void GetItemIDsList(
@@ -605,43 +605,43 @@ void GetItemIDsList(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lstItems*<br/>
-[out] A lista de IDs de comando para os elementos de faixa de opções na categoria de faixa de opções.
+*LstItems*<br/>
+[fora] A lista de IDs de comando para os elementos da fita na categoria fita.
 
 *bHiddenOnly*<br/>
-[in] TRUE para excluir os elementos de faixa de opções exibidos nos painéis de faixa de opções na categoria de faixa de opções; FALSO para incluir todos os elementos de faixa de opções na categoria de faixa de opções.
+[em] VERDADEIRO para excluir elementos de fita exibidos nos painéis de fita na categoria fita; FALSE para incluir todos os elementos da fita na categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getlargeimages"></a>  CMFCRibbonCategory::GetLargeImages
+## <a name="cmfcribboncategorygetlargeimages"></a><a name="getlargeimages"></a>CMFCRibbonCategory::GetLargeImages
 
-Recupera a lista de imagens grandes que estão contidos na categoria de faixa de opções.
+Recupera a lista de imagens grandes que estão contidas na categoria fita.
 
 ```
 CMFCToolBarImages& GetLargeImages();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A lista de imagens grandes que estão contidos na categoria de faixa de opções.
+A lista de imagens grandes que estão contidas na categoria fita.
 
-##  <a name="getlastvisibleelement"></a>  CMFCRibbonCategory::GetLastVisibleElement
+## <a name="cmfcribboncategorygetlastvisibleelement"></a><a name="getlastvisibleelement"></a>CMFCRibbonCategory::GetLastVisibleElement
 
-Recupera o último elemento visível que pertence à categoria de faixa de opções.
+Recupera o último elemento visível que pertence à categoria fita.
 
 ```
 CMFCRibbonBaseElement* GetLastVisibleElement() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para o último elemento visível; pode ser NULL se a categoria não tem todos os elementos visíveis.
+Ponteiro para o último elemento visível; pode ser NULA se a categoria não tiver elementos visíveis.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getmaxheight"></a>  CMFCRibbonCategory::GetMaxHeight
+## <a name="cmfcribboncategorygetmaxheight"></a><a name="getmaxheight"></a>CMFCRibbonCategory::GetMaxHeight
 
-Recupera a altura máxima dos painéis da faixa de opções que estão contidos na categoria de faixa de opções.
+Recupera a altura máxima dos painéis de fita que estão contidos na categoria de fita.
 
 ```
 int GetMaxHeight(CDC* pDC);
@@ -650,33 +650,33 @@ int GetMaxHeight(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo para os painéis de faixa de opções.
+[em] Ponteiro para um contexto de dispositivo para os painéis de fita.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A altura máxima dos painéis da faixa de opções que estão contidos na categoria de faixa de opções.
+A altura máxima dos painéis de fita que estão contidos na categoria de fita.
 
 ### <a name="remarks"></a>Comentários
 
-O valor recuperado inclui a altura das margens superior e inferior para os painéis de faixa de opções.
+O valor recuperado inclui a altura das margens superior e inferior para os painéis de fita.
 
-##  <a name="getname"></a>  CMFCRibbonCategory::GetName
+## <a name="cmfcribboncategorygetname"></a><a name="getname"></a>CMFCRibbonCategory::GetName
 
-Recupera o nome da categoria de faixa de opções.
+Recupera o nome da categoria fita.
 
 ```
 LPCTSTR GetName() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O nome da categoria de faixa de opções.
+O nome da categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getpanel"></a>  CMFCRibbonCategory::GetPanel
+## <a name="cmfcribboncategorygetpanel"></a><a name="getpanel"></a>CMFCRibbonCategory::GetPanel
 
-Retorna um ponteiro para o painel de faixa de opções que está localizado no índice especificado.
+Retorna um ponteiro para o painel de fita situado no índice especificado.
 
 ```
 CMFCRibbonPanel* GetPanel(int nIndex);
@@ -685,31 +685,31 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-[in] O índice baseado em zero de um painel de faixa de opções.
+[em] O índice baseado em zero de um painel de fita.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para o painel de faixa de opções que está localizado no índice especificado.
+Pointer para o painel de fita situado no índice especificado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma exceção é gerada se *nIndex* está fora do intervalo.
+Uma exceção é lançada se *nIndex* estiver fora de alcance.
 
-##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount
+## <a name="cmfcribboncategorygetpanelcount"></a><a name="getpanelcount"></a>CMFCRibbonCategory::GetPanelCount
 
-Retorna o número de painéis de faixa de opções na categoria de faixa de opções.
+Retorna o número de painéis de fita na categoria fita.
 
 ```
 int GetPanelCount() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número de painéis de faixa de opções na categoria de faixa de opções.
+O número de painéis de fita na categoria fita.
 
-##  <a name="getpanelfrompoint"></a>  CMFCRibbonCategory::GetPanelFromPoint
+## <a name="cmfcribboncategorygetpanelfrompoint"></a><a name="getpanelfrompoint"></a>CMFCRibbonCategory::GetPanelFromPoint
 
-Recupera um ponteiro para um painel de faixa de opções, se o ponto especificado está localizado nele.
+Recupera um ponteiro para um painel de fita se o ponto especificado estiver localizado nele.
 
 ```
 CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
@@ -717,20 +717,20 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*point*<br/>
-[in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.
+*Ponto*<br/>
+[em] As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para um painel de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Ponteiro para um painel de fita se o método foi bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Apenas os painéis de faixa de opções que estão contidos na categoria de faixa de opções são testados.
+Apenas os painéis de fita contidos na categoria de fita são testados.
 
-##  <a name="getpanelindex"></a>  CMFCRibbonCategory::GetPanelIndex
+## <a name="cmfcribboncategorygetpanelindex"></a><a name="getpanelindex"></a>CMFCRibbonCategory::GetPanelIndex
 
-Recupera o índice baseado em zero do painel da faixa de opções especificados.
+Recupera o índice baseado em zero do painel de fita especificado.
 
 ```
 int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
@@ -739,97 +739,97 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pPanel*<br/>
-[in] Ponteiro para um painel de faixa de opções.
+[em] Ponteiro para um painel de fita.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Índice baseado em zero do painel da faixa de opções especificado se o método foi bem-sucedida; Caso contrário,-1.
+Índice baseado em zero do painel de fita especificado se o método foi bem sucedido; caso contrário -1.
 
 ### <a name="remarks"></a>Comentários
 
-Apenas os painéis de faixa de opções que estão contidos na categoria de faixa de opções são pesquisados.
+Somente são pesquisados os painéis de fita contidos na categoria fita.
 
-##  <a name="getparentbutton"></a>  CMFCRibbonCategory::GetParentButton
+## <a name="cmfcribboncategorygetparentbutton"></a><a name="getparentbutton"></a>CMFCRibbonCategory::GetParentbutton
 
-Recupera o elemento de faixa de opções do pai da categoria de faixa de opções.
+Recupera o elemento de fita pai da categoria fita.
 
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para o elemento de faixa de opções do pai ou nulo se não houver nenhum elemento pai.
+Retorna um ponteiro para o elemento de fita pai ou NULL se não houver elemento pai.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getparentmenubar"></a>  CMFCRibbonCategory::GetParentMenuBar
+## <a name="cmfcribboncategorygetparentmenubar"></a><a name="getparentmenubar"></a>CMFCRibbonCategory::GetParentmenubar
 
-Retorna um ponteiro para a barra de menu pai do `CMFCRibbonCategory` objeto.
+Retorna um ponteiro para a `CMFCRibbonCategory` barra de menu pai do objeto.
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o conteúdo do `m_pParentMenuBar` protegido por membro.
+Devolve o conteúdo `m_pParentMenuBar` do membro protegido.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getparentribbonbar"></a>  CMFCRibbonCategory::GetParentRibbonBar
+## <a name="cmfcribboncategorygetparentribbonbar"></a><a name="getparentribbonbar"></a>CMFCRibboncategory::GetParentribbonbar
 
-Recupera a barra de faixa de opções do pai para a categoria de faixa de opções.
+Recupera a barra de fita dos pais para a categoria fita.
 
 ```
 CMFCRibbonBar* GetParentRibbonBar() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para a barra de faixa de opções do pai para a categoria de faixa de opções.
+Pointer para a barra de fita dos pais para a categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getrect"></a>  CMFCRibbonCategory::GetRect
+## <a name="cmfcribboncategorygetrect"></a><a name="getrect"></a>CMFCRibbonCategory::GetRect
 
-Recupera o retângulo de exibição para a categoria de faixa de opções.
+Recupera o retângulo do visor para a categoria fita.
 
 ```
 CRect GetRect() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O retângulo de exibição para a categoria de faixa de opções.
+O retângulo do display para a categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-O retângulo de exibição para a categoria de faixa de opções não inclui a guia de categoria.
+O retângulo de exibição para a categoria fita não inclui a guia categoria.
 
-##  <a name="getsmallimages"></a>  CMFCRibbonCategory::GetSmallImages
+## <a name="cmfcribboncategorygetsmallimages"></a><a name="getsmallimages"></a>CMFCRibbonCategory::GetSmallImages
 
-Recupera a lista de imagens pequenas que estão contidos na categoria de faixa de opções.
+Recupera a lista de pequenas imagens que estão contidas na categoria fita.
 
 ```
 CMFCToolBarImages& GetSmallImages();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A lista de imagens pequenas que estão contidos na categoria de faixa de opções.
+A lista de pequenas imagens que estão contidas na categoria fita.
 
-##  <a name="gettabcolor"></a>  CMFCRibbonCategory::GetTabColor
+## <a name="cmfcribboncategorygettabcolor"></a><a name="gettabcolor"></a>CMFCRibbonCategory::GettabColor
 
-Retorna a cor atual da guia categoria de faixa de opções.
+Retorna a cor atual da guia categoria de fita.
 
 ```
 AFX_RibbonCategoryColor GetTabColor() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A cor atual da guia categoria de faixa de opções.
+A cor atual da guia categoria de fita.
 
 ### <a name="remarks"></a>Comentários
 
@@ -849,37 +849,37 @@ O valor retornado pode ser um dos seguintes valores enumerados:
 
 - AFX_CategoryColor_Violet
 
-##  <a name="gettabrect"></a>  CMFCRibbonCategory::GetTabRect
+## <a name="cmfcribboncategorygettabrect"></a><a name="gettabrect"></a>CMFCRibbonCategory::GetTabRect
 
-Recupera o retângulo de exibição para a guia de categoria de faixa de opções.
+Recupera o retângulo do display para a guia categoria de fita.
 
 ```
 CRect GetTabRect() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O retângulo de exibição para a guia de categoria de faixa de opções.
+O retângulo do display para a guia categoria de fita.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="gettexttopline"></a>  CMFCRibbonCategory::GetTextTopLine
+## <a name="cmfcribboncategorygettexttopline"></a><a name="gettexttopline"></a>CMFCRibbonCategory::GetTextTopLine
 
-Recupera o local vertical do texto em botões de faixa de opções na categoria de faixa de opções que exibem imagens grandes.
+Recupera a localização vertical do texto nos botões de fita na categoria fita que exibe imagens grandes.
 
 ```
 int GetTextTopLine() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A localização vertical do texto, em pixels, nos botões de faixa de opções que exibem imagens grandes.
+A localização vertical do texto, em pixels, em botões de fita que exibem imagens grandes.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getvisibleelements"></a>  CMFCRibbonCategory::GetVisibleElements
+## <a name="cmfcribboncategorygetvisibleelements"></a><a name="getvisibleelements"></a>CMFCRibbonCategory::GetVisibleElements
 
-Recupera todos os elementos visíveis que pertencem à categoria de faixa de opções.
+Recupera todos os elementos visíveis que pertencem à categoria fita.
 
 ```
 void GetVisibleElements(
@@ -894,9 +894,9 @@ Matriz de todos os elementos visíveis.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="highlightpanel"></a>  CMFCRibbonCategory::HighlightPanel
+## <a name="cmfcribboncategoryhighlightpanel"></a><a name="highlightpanel"></a>CMFCRibbonCategory::Painel de destaque
 
-Realça o painel de faixa de opções especificados.
+Destaca o painel de fita especificado.
 
 ```
 CMFCRibbonPanel* HighlightPanel(
@@ -907,22 +907,22 @@ CMFCRibbonPanel* HighlightPanel(
 ### <a name="parameters"></a>Parâmetros
 
 *pHLPanel*<br/>
-[in] Ponteiro para o painel de faixa de opções para realçar.
+[em] Pointer para o painel de fita para destacar.
 
-*point*<br/>
-[in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.
+*Ponto*<br/>
+[em] As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para o painel de faixa de opções realçado anteriormente; Caso contrário, nulo se nenhum painel da faixa de opções é realçado quando este método é invocado.
+Ponteiro para o painel de fita previamente destacado; caso contrário, NULL se nenhum painel de fita for destacado quando este método for invocado.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o realce de um painel de faixa de opções, consulte [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight).
+Para obter mais informações sobre como destacar um painel de fita, consulte [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight).
 
-##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest
+## <a name="cmfcribboncategoryhittest"></a><a name="hittest"></a>CMFCRibbonCategory::HitTest
 
-Recupera um ponteiro para um elemento de faixa de opções, se o ponto especificado está localizado nele.
+Recupera um ponteiro para um elemento de fita se o ponto especificado estiver localizado nele.
 
 ```
 CMFCRibbonBaseElement* HitTest(
@@ -932,23 +932,23 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*point*<br/>
-[in] As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.
+*Ponto*<br/>
+[em] As coordenadas x e y do ponteiro do mouse, em relação ao canto superior esquerdo da janela.
 
 *bCheckPanelCaption*<br/>
-[in] TRUE para testar a legenda do painel de faixa de opções; FALSE para excluir a legenda do painel de faixa de opções.
+[em] TRUE para testar a legenda do painel de fita; FALSE para excluir a legenda do painel de fita.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para um elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Ponteiro para um elemento de fita se o método foi bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Somente os elementos de faixa de opções que estão contidos na categoria de faixa de opções são testados.
+Apenas os elementos de fita contidos na categoria da fita são testados.
 
-##  <a name="hittestex"></a>  CMFCRibbonCategory::HitTestEx
+## <a name="cmfcribboncategoryhittestex"></a><a name="hittestex"></a>CMFCRibbonCategory::HitTestEx
 
-Recupera o índice baseado em zero de um elemento de faixa de opções, se o ponto especificado está localizado nele.
+Recupera o índice baseado em zero de um elemento de fita se o ponto especificado estiver localizado nele.
 
 ```
 int HitTestEx(CPoint point) const;
@@ -956,20 +956,20 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*point*<br/>
-[in] As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.
+*Ponto*<br/>
+[em] As coordenadas x e y do ponteiro do mouse, em relação ao canto superior esquerdo da janela.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Índice baseado em zero de um elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário,-1.
+Índice baseado em zero de um elemento de fita se o método foi bem sucedido; caso contrário -1.
 
 ### <a name="remarks"></a>Comentários
 
-Somente os elementos de faixa de opções que estão contidos na categoria de faixa de opções são testados.
+Apenas os elementos de fita contidos na categoria da fita são testados.
 
-##  <a name="hittestscrollbuttons"></a>  CMFCRibbonCategory::HitTestScrollButtons
+## <a name="cmfcribboncategoryhittestscrollbuttons"></a><a name="hittestscrollbuttons"></a>CMFCRibbonCategory::HitTestScrollBotões
 
-Se um ponto está dentro do botão de rolagem esquerda ou direita de uma categoria de faixa de opções, retorna um ponteiro para esse botão.
+Se um ponto se encaixa no botão de rolagem esquerdo ou direito de uma categoria de fita, retorne um ponteiro para esse botão.
 
 ```
 CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
@@ -977,64 +977,64 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*point*<br/>
-[in] Ponto a ser testado.
+*Ponto*<br/>
+[em] O ponto a ser testado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se *aponte* cai dentro do retângulo delimitador de tanto à esquerda ou o botão de rolagem à direita da categoria de faixa de opções, retorna um ponteiro para aquele botão ou caso contrário, retornará NULL.
+Se o *ponto* cair dentro do retângulo delimitador do botão esquerdo ou direito da categoria de fita, retorne um ponteiro para esse botão, ou de outra forma, retorna NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="isactive"></a>  CMFCRibbonCategory::IsActive
+## <a name="cmfcribboncategoryisactive"></a><a name="isactive"></a>CMFCRibbonCategory::IsActive
 
-Indica se a categoria de faixa de opções é a categoria do Active Directory na barra de faixa de opções.
+Indica se a categoria de fita é a categoria ativa na barra de fita.
 
 ```
 BOOL IsActive() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a categoria de faixa de opções é a categoria de Active Directory; Caso contrário, FALSE.
+TRUE se a categoria de fita for a categoria ativa; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-A categoria de faixa de opções ativa exibe seus painéis de faixa de opções.
+A categoria fita ativa exibe seus painéis de fita.
 
-##  <a name="isvisible"></a>  CMFCRibbonCategory::IsVisible
+## <a name="cmfcribboncategoryisvisible"></a><a name="isvisible"></a>CMFCRibbonCategory::IsVisible
 
-Indica se a categoria de faixa de opções está visível.
+Indica se a categoria da fita é visível.
 
 ```
 BOOL IsVisible() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a categoria de faixa de opções estiver visível; Caso contrário, FALSE.
+TRUE se a categoria de fita for visível; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Categorias de faixa de opções que estão visíveis exibem uma guia de categoria.
+Categorias de fita que são visíveis exibem uma guia de categoria.
 
-##  <a name="iswindows7look"></a>  CMFCRibbonCategory::IsWindows7Look
+## <a name="cmfcribboncategoryiswindows7look"></a><a name="iswindows7look"></a>CMFCRibbonCategory::IsWindows7Look
 
-Indica se a faixa de opções do pai tem Windows 7 parecer (botão pequeno aplicativo retangular).
+Indica se a fita pai tem aparência do Windows 7 (pequeno botão de aplicativo retangular).
 
 ```
 BOOL IsWindows7Look() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a faixa de opções do pai tiver o Windows 7 parecer; Caso contrário, FALSE.
+VERDADE se a fita dos pais tiver o visual do Windows 7; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="notifycontrolcommand"></a>  CMFCRibbonCategory::NotifyControlCommand
+## <a name="cmfcribboncategorynotifycontrolcommand"></a><a name="notifycontrolcommand"></a>CMFCRibbonCategory::NotificarComando de controle
 
-Fornece uma mensagem WM_NOTIFY de comando para todos os `CMFCRibbonPanel` elementos no `CMFCRibbonCategory` até que a mensagem é manipulada.
+Fornece uma mensagem de `CMFCRibbonPanel` comando `CMFCRibbonCategory` WM_NOTIFY a todos os elementos no até que a mensagem seja tratada.
 
 ```
 virtual BOOL NotifyControlCommand(
@@ -1047,26 +1047,26 @@ virtual BOOL NotifyControlCommand(
 ### <a name="parameters"></a>Parâmetros
 
 *bAccelerator*<br/>
-[in] TRUE se este comando foi originado de um acelerador, ou FALSO caso contrário.
+[em] TRUE se este comando se originou de um acelerador, ou FALSE de outra forma.
 
 *nNotifyCode*<br/>
-[in] O código de notificação.
+[em] O código de notificação.
 
 *wParam*<br/>
-[in] O campo WPARAM da mensagem.
+[em] O campo WPARAM da mensagem.
 
 *lParam*<br/>
-[in] O campo LPARAM da mensagem.
+[em] O campo LPARAM da mensagem.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna TRUE se a mensagem foi tratada ou FALSE se não.
+Retorna TRUE se a mensagem foi manuseada, ou FALSA se não.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="oncancelmode"></a>  CMFCRibbonCategory::OnCancelMode
+## <a name="cmfcribboncategoryoncancelmode"></a><a name="oncancelmode"></a>CMFCRibbonCategory::OnCancelMode
 
-Invoca o modo de cancelamento em todos os `CMFCRibbonPanel` elementos do `CMFCRibbonCategory`.
+Invoca o modo de `CMFCRibbonPanel` cancelamento `CMFCRibbonCategory`em todos os elementos do .
 
 ```
 virtual void OnCancelMode();
@@ -1074,9 +1074,9 @@ virtual void OnCancelMode();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondraw"></a>  CMFCRibbonCategory::OnDraw
+## <a name="cmfcribboncategoryondraw"></a><a name="ondraw"></a>CMFCRibbonCategory::OnDraw
 
-Chamado pelo framework para desenhar a categoria de faixa de opções.
+Chamado pelo quadro para desenhar a categoria fita.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -1085,13 +1085,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo para a categoria de faixa de opções.
+[em] Ponteiro para um contexto de dispositivo para a categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondrawimage"></a>  CMFCRibbonCategory::OnDrawImage
+## <a name="cmfcribboncategoryondrawimage"></a><a name="ondrawimage"></a>CMFCRibbonCategory::OnDrawImage
 
-Chamado pelo framework para desenhar a imagem especificada na categoria de faixa de opções.
+Chamado pelo framework para desenhar a imagem especificada na categoria fita.
 
 ```
 virtual BOOL OnDrawImage(
@@ -1106,32 +1106,32 @@ virtual BOOL OnDrawImage(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo para a imagem.
+[em] Ponteiro para um contexto de dispositivo para a imagem.
 
-*rect*<br/>
-[in] Retângulo de exibição para a imagem.
+*Rect*<br/>
+[em] Exibir retângulo para a imagem.
 
 *pElement*<br/>
-[in] Ponteiro para o elemento de faixa de opções que contém a imagem.
+[em] Pointer para o elemento de fita que contém a imagem.
 
 *bIsLargeImage*<br/>
-[in] TRUE se a imagem é o tamanho grande. FALSE se a imagem é o tamanho pequeno.
+[em] VERDADE se a imagem for de tamanho grande; FALSO se a imagem for de tamanho pequeno.
 
 *nImageIndex*<br/>
-[in] Índice baseado em zero da imagem da matriz de imagem que está contido na categoria de faixa de opções.
+[em] Índice baseado em zero da imagem na matriz de imagens contida na categoria fita.
 
 *bCenter*<br/>
-[in] TRUE para centralizar a imagem no retângulo de exibição; FALSE para desenhar a imagem no canto superior esquerdo do retângulo de exibição.
+[em] TRUE para centralizar a imagem no retângulo do display; FALSE para desenhar a imagem no canto superior esquerdo do retângulo do display.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se o método foi bem-sucedida; Caso contrário, FALSE.
+VERDADEIRO se o método foi bem sucedido; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondrawmenuborder"></a>  CMFCRibbonCategory::OnDrawMenuBorder
+## <a name="cmfcribboncategoryondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFCRibbonCategory::OnDrawMenuBorder
 
-Chamado pelo framework para desenhar a borda de um menu pop-up.
+Chamado pela estrutura para desenhar a borda de um menu pop-up.
 
 ```
 virtual void OnDrawMenuBorder(
@@ -1142,18 +1142,18 @@ virtual void OnDrawMenuBorder(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Esse parâmetro não é usado.
+[em] Este parâmetro não é usado.
 
 *pMenuBar*<br/>
-[in] Esse parâmetro não é usado.
+[em] Este parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método não fará nada. Substitua este método para desenhar a borda de um menu pop-up.
+Por padrão, este método não faz nada. Anular este método para desenhar a borda de um menu pop-up.
 
-##  <a name="onkey"></a>  CMFCRibbonCategory::OnKey
+## <a name="cmfcribboncategoryonkey"></a><a name="onkey"></a>CMFCRibbonCategory::OnKey
 
-Chamado pelo framework quando um usuário pressiona um botão do teclado.
+Chamado pela estrutura quando um usuário pressiona um botão de teclado.
 
 ```
 virtual BOOL OnKey(UINT nChar);
@@ -1161,14 +1161,14 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nChar*<br/>
-O código de tecla virtual para a chave que o usuário pressionou.
+*Nchar*<br/>
+O código de chave virtual para a chave que um usuário pressionou.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onlbuttondown"></a>  CMFCRibbonCategory::OnLButtonDown
+## <a name="cmfcribboncategoryonlbuttondown"></a><a name="onlbuttondown"></a>CMFCRibbonCategory::OnlbuttonDown
 
-Chamado pelo framework para recuperar o elemento de faixa de opções, sob o ponto especificado quando o usuário pressiona o botão esquerdo do mouse.
+Chamado pela estrutura para recuperar o elemento de fita sob o ponto especificado quando o usuário pressiona o botão esquerdo do mouse.
 
 ```
 virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
@@ -1176,18 +1176,18 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*point*<br/>
-[in] As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.
+*Ponto*<br/>
+[em] As coordenadas x e y do ponteiro do mouse, em relação ao canto superior esquerdo da janela.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para um elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Ponteiro para um elemento de fita se o método foi bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onlbuttonup"></a>  CMFCRibbonCategory::OnLButtonUp
+## <a name="cmfcribboncategoryonlbuttonup"></a><a name="onlbuttonup"></a>CMFCRibbonCategory::OnlbuttonUp
 
-Chamado pelo framework quando o usuário libera o botão esquerdo do mouse e o ponteiro está sobre a categoria de faixa de opções.
+Chamado pela estrutura quando o usuário libera o botão esquerdo do mouse e o ponteiro está sobre a categoria de fita.
 
 ```
 virtual void OnLButtonUp(CPoint point);
@@ -1195,14 +1195,14 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*point*<br/>
-[in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.
+*Ponto*<br/>
+[em] As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onmousemove"></a>  CMFCRibbonCategory::OnMouseMove
+## <a name="cmfcribboncategoryonmousemove"></a><a name="onmousemove"></a>CMFCRibbonCategory::OnMouseMove
 
-Chamado pelo framework quando o ponteiro se move na barra de faixa de opções para atualizar a exibição de categoria de faixa de opções.
+Chamado pelo framework quando o ponteiro se move na barra de fita para atualizar a exibição da categoria de fita.
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -1210,12 +1210,12 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*point*<br/>
-[in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.
+*Ponto*<br/>
+[em] As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onrtlchanged"></a>  CMFCRibbonCategory::OnRTLChanged
+## <a name="cmfcribboncategoryonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonCategory::OnRTLChanged
 
 Chamado pelo framework quando o layout muda de direção.
 
@@ -1226,15 +1226,15 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="parameters"></a>Parâmetros
 
 *bIsRTL*<br/>
-[in] TRUE se o layout é da direita para esquerda; FALSE se o layout é esquerda para a direita.
+[em] TRUE se o layout for da direita para a esquerda; FALSO se o layout estiver da esquerda para a direita.
 
 ### <a name="remarks"></a>Comentários
 
-Este método ajusta o layout de todos os painéis de faixa de opções e elementos de faixa de opções que estão contidos na categoria de faixa de opções.
+Este método ajusta o layout de todos os painéis de fita e elementos de fita que estão contidos na categoria fita.
 
-##  <a name="onscrollhorz"></a>  CMFCRibbonCategory::OnScrollHorz
+## <a name="cmfcribboncategoryonscrollhorz"></a><a name="onscrollhorz"></a>CMFCRibbonCategory::OnScrollHorz
 
-Rola para a categoria de faixa de opções na direção horizontal.
+Rola a categoria da fita na direção horizontal.
 
 ```
 virtual BOOL OnScrollHorz(
@@ -1245,20 +1245,20 @@ virtual BOOL OnScrollHorz(
 ### <a name="parameters"></a>Parâmetros
 
 *bScrollLeft*<br/>
-[in] TRUE para rolar para a esquerda; FALSE para rolar para a direita.
+[em] TRUE para rolar para a esquerda; FALSE para rolar para a direita.
 
 *nScrollOffset*<br/>
-[in] A distância de rolagem em pixels.
+[em] A distância de rolagem em pixels.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a categoria de faixa de opções é movido na direção horizontal; Caso contrário, FALSE.
+VERDADE se a categoria de fita se moveu em uma direção horizontal; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onupdatecmdui"></a>  CMFCRibbonCategory::OnUpdateCmdUI
+## <a name="cmfcribboncategoryonupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCRibbonCategory::OnUpdateCmdUI
 
-Chamadas a `OnUpdateCmdUI` função de membro em cada um dos `CMFCRibbonPanel` elementos do `CMFCRibbonCategory` para habilitar ou desabilitar os elementos de interface do usuário neles.
+Chama `OnUpdateCmdUI` a função de `CMFCRibbonPanel` membro em `CMFCRibbonCategory` cada um dos elementos do para ativar ou desativar os elementos de interface do usuário neles.
 
 ```
 virtual void OnUpdateCmdUI(
@@ -1270,19 +1270,19 @@ virtual void OnUpdateCmdUI(
 ### <a name="parameters"></a>Parâmetros
 
 *pCmdUI*<br/>
-[in] Ponteiro para o `CMFCRibbonCmdUI` objeto que especifica quais elementos de interface do usuário deverão ser habilitados e que devem ser desabilitados.
+[em] Ponteiro para `CMFCRibbonCmdUI` o objeto que especifica quais elementos de interface de usuário devem ser ativados e quais devem ser desativados.
 
-*pTarget*<br/>
-[in] Ponteiro para a janela que controla o habilitando ou desabilitando os elementos de interface do usuário.
+*Ptarget*<br/>
+[em] Ponteiro para a janela que controla a ativação ou desativação dos elementos da interface do usuário.
 
 *bDisableIfNoHndler*<br/>
-[in] TRUE para desabilitar o item de interface do usuário, se nenhum manipulador é definido em um mapa de mensagem Caso contrário, FALSE.
+[em] TRUE desabilitar o item de interface do usuário se nenhum manipulador for definido em um mapa de mensagem; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="recalclayout"></a>  CMFCRibbonCategory::RecalcLayout
+## <a name="cmfcribboncategoryrecalclayout"></a><a name="recalclayout"></a>CMFCRibbonCategoria::RecalcLayout
 
-Ajusta o layout de todos os controles na categoria de faixa de opções.
+Ajusta o layout de todos os controles na categoria fita.
 
 ```
 virtual void RecalcLayout(CDC* pDC);
@@ -1291,13 +1291,13 @@ virtual void RecalcLayout(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo para a categoria de faixa de opções.
+[em] Ponteiro para um contexto de dispositivo para a categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="removepanel"></a>  CMFCRibbonCategory::RemovePanel
+## <a name="cmfcribboncategoryremovepanel"></a><a name="removepanel"></a>CMFCRibbonCategory::RemovePanel
 
-Remove um painel de faixa de opções da categoria de faixa de opções.
+Remove um painel de fita da categoria fita.
 
 ```cpp
 BOOL RemovePanel(
@@ -1308,18 +1308,18 @@ BOOL RemovePanel(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-[in] O número de índice do painel para remover. Obtido chamando o [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) método.
+[em] O número de índice do painel para remover. Obtido chamando o [método CMFCRibbonCategory::GetPanelIndex.](#getpanelindex)
 
 *bDelete*<br/>
-[in] TRUE para excluir o objeto do painel da memória; FALSE para remover o objeto de painel sem excluí-la.
+[em] TRUE para excluir o objeto do painel da memória; FALSO para remover o objeto do painel sem excluí-lo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se o método foi bem-sucedida; Caso contrário, FALSE.
+VERDADEIRO se o método foi bem sucedido; caso contrário, FALSE.
 
-##  <a name="repospanels"></a>  CMFCRibbonCategory::ReposPanels
+## <a name="cmfcribboncategoryrepospanels"></a><a name="repospanels"></a>CMFCRibbonCategoria::RepetiçõesPainéis
 
-Ajusta o layout de todos os controles nos painéis de faixa de opções que estão contidos na categoria de faixa de opções.
+Ajusta o layout de todos os controles nos painéis de fita que estão contidos na categoria fita.
 
 ```
 virtual void ReposPanels(CDC* pDC);
@@ -1328,13 +1328,13 @@ virtual void ReposPanels(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo para os painéis de faixa de opções que estão contidos na categoria de faixa de opções.
+[em] Ponteiro para um contexto de dispositivo para os painéis de fita que estão contidos na categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setcollapseorder"></a>  CMFCRibbonCategory::SetCollapseOrder
+## <a name="cmfcribboncategorysetcollapseorder"></a><a name="setcollapseorder"></a>CMFCRibboncategory::setCollapseOrder
 
-Define a ordem na qual recolher os painéis de faixa de opções da categoria de faixa de opções.
+Define a ordem em que os painéis de fita da categoria de fita entram em colapso.
 
 ```
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
@@ -1343,25 +1343,25 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ### <a name="parameters"></a>Parâmetros
 
 *arCollapseOrder*<br/>
-[in] Especifica a ordem de recolhimento. A matriz contém os índices com base em zero de painéis da faixa de opções.
+[em] Especifica a ordem de colapso. A matriz contém índices baseados em zero de painéis de fita.
 
 ### <a name="remarks"></a>Comentários
 
-A biblioteca define a ordem de recolhimento. No entanto, você pode personalizar esse comportamento, fornecendo a categoria com a lista de índices que especifica a ordem de recolhimento.
+A biblioteca define a ordem de colapso. No entanto, você pode personalizar esse comportamento fornecendo à categoria a lista de índices que especifica a ordem de colapso.
 
-Quando a categoria detecta que ele tem que recolher um painel de faixa de opções, ele procura o próximo elemento na lista especificada. Se a lista estiver vazia, ou você não especificou elementos suficientes, a categoria usa o algoritmo interno.
+Quando a categoria detecta que tem que desabar um painel de fita, ele procura o próximo elemento na lista especificada. Se a lista estiver vazia ou você não tiver especificado elementos suficientes, então a categoria usa o algoritmo interno.
 
-Por exemplo, a categoria tem três painéis de faixa de opções e pode ser recolhida várias vezes até que todos os painéis estão no estado recolhido totalmente. Você pode definir a ordem de recolher a seguir: 0, 0, 2, 2. Nesse caso, a categoria de recolher o painel 0 duas vezes, o painel 2 duas vezes. O painel que tem o índice de 1 permanece expandido.
+Por exemplo, a categoria tem três painéis de fita e pode ser colapsada várias vezes até que todos os painéis estejam em estado totalmente colapsado. Você pode definir a seguinte ordem de colapso: 0, 0, 2, 2. Neste caso, a categoria entrará em colapso no painel 0 duas vezes, o painel 2 duas vezes. O painel que tem o índice de 1 permanece sem colapso.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `SetCollapseOrder` método no `CMFCRibbonCategory` classe. O exemplo mostra como construir uma matriz para a ordem de recolhimento e como definir a ordem de recolher à categoria de faixa de opções.
+O exemplo a seguir `SetCollapseOrder` demonstra como `CMFCRibbonCategory` usar o método na classe. O exemplo mostra como construir uma matriz para a ordem de colapso e como definir a ordem de colapso para a categoria de fita.
 
 [!code-cpp[NVC_MFC_RibbonApp#13](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]
 
-##  <a name="setdata"></a>  CMFCRibbonCategory::SetData
+## <a name="cmfcribboncategorysetdata"></a><a name="setdata"></a>CMFCRibbonCategory::SetData
 
-Define os dados definidos pelo usuário a ser associado com a categoria de faixa de opções.
+Define os dados definidos pelo usuário como associados à categoria fita.
 
 ```
 void SetData(DWORD_PTR dwData);
@@ -1369,12 +1369,12 @@ void SetData(DWORD_PTR dwData);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwData*<br/>
-[in] Os dados definidos pelo usuário.
+*Dwdata*<br/>
+[em] Os dados definidos pelo usuário.
 
-##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys
+## <a name="cmfcribboncategorysetkeys"></a><a name="setkeys"></a>CMFCRibbonCategory:::setKeys
 
-Atribui uma dica de tecla para a categoria de faixa de opções.
+Atribui uma dica-chave para a categoria de fita.
 
 ```
 void SetKeys(LPCTSTR lpszKeys);
@@ -1383,15 +1383,15 @@ void SetKeys(LPCTSTR lpszKeys);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszKeys*<br/>
-[in] O texto de dica de tecla.
+[em] O texto da dica chave.
 
 ### <a name="remarks"></a>Comentários
 
-As dicas de tecla são exibidas quando o usuário pressiona a tecla Alt ou a tecla F10.
+As teclas são exibidas quando o usuário pressiona a tecla Alt ou a tecla F10.
 
-##  <a name="setname"></a>  CMFCRibbonCategory::SetName
+## <a name="cmfcribboncategorysetname"></a><a name="setname"></a>CMFCRibbonCategory::SetName
 
-Atribui um nome e uma dica de tecla para a categoria de faixa de opções.
+Atribui um nome e uma dica à categoria de fita.
 
 ```
 void SetName(LPCTSTR lpszName);
@@ -1400,15 +1400,15 @@ void SetName(LPCTSTR lpszName);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
-[in] O nome e a dica de tecla da categoria de faixa de opções.
+[em] O nome e a dica da categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-Para definir a dica de tecla para a categoria de faixa de opções, acrescentar uma sequência de escape de nova linha seguida pelos caracteres de dica de tecla *lpszName*.
+Para definir a dica-chave para a categoria fita, anexar uma seqüência de escape newline seguido dos caracteres keytip para *lpszName*.
 
-##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor
+## <a name="cmfcribboncategorysettabcolor"></a><a name="settabcolor"></a>CMFCRibbonCategory::SettabColor
 
-Define a cor da categoria de faixa de opções.
+Define a cor da categoria fita.
 
 ```
 void SetTabColor(AFX_RibbonCategoryColor color);
@@ -1416,12 +1416,12 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*color*<br/>
-[in] Especifica a nova cor da categoria de faixa de opções.
+*cor*<br/>
+[em] Especifica a nova cor da categoria fita.
 
 ### <a name="remarks"></a>Comentários
 
-Cor pode ser um dos seguintes valores:
+A cor pode ser um dos seguintes valores:
 
 - AFX_CategoryColor_None
 
@@ -1439,7 +1439,7 @@ Cor pode ser um dos seguintes valores:
 
 - AFX_CategoryColor_Violet
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

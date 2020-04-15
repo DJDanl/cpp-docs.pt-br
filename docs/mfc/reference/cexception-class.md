@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 5942e636809e3758f34d209a3da80f0d903ab708
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: c3742db7475e626b18e9c073a0b7417a8034863f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450364"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373947"
 ---
 # <a name="cexception-class"></a>Classe CException
 
-A classe base para todas as exceções na biblioteca de classes Microsoft Foundation.
+A classe base para todas as exceções na Biblioteca de Classes da Microsoft Foundation.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,51 +42,51 @@ class AFX_NOVTABLE CException : public CObject
 |Nome|Descrição|
 |----------|-----------------|
 |[CException::Delete](#delete)|Exclui um `CException` objeto.|
-|[CException::ReportError](#reporterror)|Relata uma mensagem de erro em uma caixa de mensagem para o usuário.|
+|[CException::'Erro de relatório](#reporterror)|Relata uma mensagem de erro em uma caixa de mensagem para o usuário.|
 
 ## <a name="remarks"></a>Comentários
 
-Porque `CException` é uma classe base abstrata que não é possível criar `CException` objetos diretamente; você deve criar objetos de classes derivadas. Se você precisar criar seus próprios `CException`-classe de estilo, use uma das classes derivadas listadas acima como um modelo. Certifique-se de que sua classe derivada também usa `IMPLEMENT_DYNAMIC`.
+Porque `CException` é uma classe base `CException` abstrata, você não pode criar objetos diretamente; você deve criar objetos de classes derivadas. Se você precisar criar `CException`sua própria classe de estilo, use uma das classes derivadas listadas acima como um modelo. Certifique-se de que sua `IMPLEMENT_DYNAMIC`classe derivada também usa .
 
 As classes derivadas e suas descrições estão listadas abaixo:
 
 |||
 |-|-|
-|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Uma classe base para exceções críticas para os recursos do MFC|
-|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Condição de exceção de argumento inválido|
-|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Exceção de falta de memória|
-|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Solicitação para uma operação sem suporte|
-|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|Exceção específica do arquivo morto|
-|[CFileException](../../mfc/reference/cfileexception-class.md)|Exceção de arquivo específico|
-|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Recursos do Windows não foi encontrado ou não pode ser criado|
-|[COleException](../../mfc/reference/coleexception-class.md)|Exceção OLE|
-|[CDBException](../../mfc/reference/cdbexception-class.md)|Exceção de banco de dados (ou seja, as condições de exceção decorrente para classes de banco de dados do MFC com base em Open Database Connectivity)|
-|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|Exceção de expedição (automação) do OLE|
-|[CUserException](../../mfc/reference/cuserexception-class.md)|Exceção que indica que um recurso não pôde ser encontrado|
-|[CDaoException](../../mfc/reference/cdaoexception-class.md)|Exceção de objeto de acesso de dados (ou seja, as condições de exceção decorrente para classes DAO)|
-|[CInternetException](../../mfc/reference/cinternetexception-class.md)|Exceção de Internet (ou seja, as condições de exceção decorrente para classes de Internet).|
+|[Csimpleexception](../../mfc/reference/csimpleexception-class.md)|Uma classe base para exceções mfc críticas de recursos|
+|[Cinvalidargexception](../../mfc/reference/cinvalidargexception-class.md)|Condição de exceção de argumento inválida|
+|[Cmemoryexception](../../mfc/reference/cmemoryexception-class.md)|Exceção fora da memória|
+|[Cnotsupportedexception](../../mfc/reference/cnotsupportedexception-class.md)|Solicitação de uma operação sem suporte|
+|[Carchiveexception](../../mfc/reference/carchiveexception-class.md)|Exceção específica do arquivo|
+|[Cfileexception](../../mfc/reference/cfileexception-class.md)|Exceção específica de arquivo|
+|[Cresourceexception](../../mfc/reference/cresourceexception-class.md)|Recurso do Windows não encontrado ou não creatable|
+|[Coleexception](../../mfc/reference/coleexception-class.md)|Exceção oLE|
+|[Cdbexception](../../mfc/reference/cdbexception-class.md)|Exceção de banco de dados (ou seja, condições de exceção decorrentes de classes de banco de dados MFC baseadas em conectividade de banco de dados aberto)|
+|[Coledispatchexception](../../mfc/reference/coledispatchexception-class.md)|Exceção de despacho OLE (automação)|
+|[Cuserexception](../../mfc/reference/cuserexception-class.md)|Exceção que indica que um recurso não pôde ser encontrado|
+|[Cdaoexception](../../mfc/reference/cdaoexception-class.md)|Exceção de objeto de acesso a dados (ou seja, condições de exceção decorrentes de classes DAO)|
+|[Cinternetexception](../../mfc/reference/cinternetexception-class.md)|Exceção da Internet (ou seja, condições de exceção decorrentes de aulas de Internet).|
 
-Essas exceções são se destina a ser usado com o [lançar](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [tente](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch), e [end_catch](exception-processing.md#end_catch) macros. Para obter mais informações sobre exceções, consulte [processamento de exceção](exception-processing.md), ou consulte o artigo [tratamento de exceção (MFC)](../exception-handling-in-mfc.md).
+Essas exceções destinam-se a ser utilizadas com as macros [THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [try](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch)e [end_catch.](exception-processing.md#end_catch) Para obter mais informações sobre exceções, consulte [Processamento de Exceções](exception-processing.md)ou consulte o artigo [Manipulação de Exceções (MFC)](../exception-handling-in-mfc.md).
 
-Para capturar uma exceção específica, use a classe derivada apropriada. A captura todos os tipos de exceções, use `CException`e, em seguida, use [CObject::IsKindOf](cobject-class.md#iskindof) diferenciar entre os `CException`-as classes derivadas. Observe que `CObject::IsKindOf` funciona apenas em classes declaradas com o [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro, para tirar proveito da verificação de tipo dinâmico. Qualquer `CException`-uma classe derivada que você criar deve usar o `IMPLEMENT_DYNAMIC` macro, muito.
+Para obter uma exceção específica, use a classe derivada apropriada. Para capturar todos os tipos `CException`de exceções, use e use [CObject::IsKindOf](cobject-class.md#iskindof) para diferenciar entre `CException`classes derivadas. Note `CObject::IsKindOf` que funciona apenas para classes declaradas com o [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro, a fim de aproveitar a verificação do tipo dinâmico. Qualquer `CException`classe derivada que você `IMPLEMENT_DYNAMIC` criar deve usar a macro também.
 
-Você pode relatar os detalhes sobre exceções para o usuário chamando [GetErrorMessage](cfileexception-class.md#geterrormessage) ou [ReportError](#reporterror), dois que funcionam com qualquer uma das funções de membro `CException`do classes derivadas.
+Você pode relatar detalhes sobre exceções ao usuário chamando [GetErrorMessage](cfileexception-class.md#geterrormessage) ou [ReportError](#reporterror), duas funções de membro que funcionam com qualquer uma das `CException`classes derivadas.
 
-Se uma exceção é capturada por uma das macros, o `CException` objeto é excluído automaticamente; não excluí-lo por conta própria. Se uma exceção é capturada usando um **catch** palavra-chave, ele não será excluído automaticamente. Consulte o artigo [tratamento de exceção (MFC)](../exception-handling-in-mfc.md) para obter mais informações sobre quando excluir um objeto da exceção.
+Se uma exceção for capturada por `CException` uma das macros, o objeto será excluído automaticamente; não apague você mesmo. Se uma exceção for capturada usando uma palavra-chave **de captura,** ela não será automaticamente excluída. Consulte o artigo [Manipulação de Exceções (MFC)](../exception-handling-in-mfc.md) para obter mais informações sobre quando excluir um objeto de exepção.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](cobject-class.md)
+[Cobject](cobject-class.md)
 
 `CException`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** AFX. h
+**Cabeçalho:** afx.h
 
-##  <a name="cexception"></a>  CException::CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a>CException::CException
 
-Essa função membro constrói um `CException` objeto.
+Esta função membro `CException` constrói um objeto.
 
 ```
 explicit CException(BOOL bAutoDelete);
@@ -95,15 +95,15 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="parameters"></a>Parâmetros
 
 *b_AutoDelete*<br/>
-Especifique verdadeiro se a memória para o `CException` objeto foi alocado no heap. Isso fará com que o `CException` objeto a ser excluído quando o `Delete` função membro é chamada para excluir a exceção. Especifique FALSE se o `CException` objeto na pilha ou é um objeto global. Nesse caso, o `CException` não serão excluídos quando o `Delete` função membro é chamada.
+Especifique TRUE `CException` se a memória do objeto tiver sido alocada no heap. Isso fará `CException` com que o objeto `Delete` seja excluído quando a função membro for chamada para excluir a exceção. Especifique `CException` FALSO se o objeto estiver na pilha ou se for um objeto global. Neste caso, `CException` o objeto não será `Delete` excluído quando a função membro for chamada.
 
 ### <a name="remarks"></a>Comentários
 
-Você normalmente não precisa chamar esse construtor diretamente. Uma função que gera uma exceção deve criar uma instância de um `CException`-classe derivada e chama seu construtor, ou ele deve usar um do MFC lançar funções, como [AfxThrowFileException](exception-processing.md#afxthrowfileexception), gerem um tipo predefinido. Esta documentação é fornecida apenas para fins de integridade.
+Você normalmente nunca precisaria chamar este construtor diretamente. Uma função que lança uma exceção `CException`deve criar uma instância de uma classe derivada e chamar seu construtor, ou deve usar uma das funções de lançamento do MFC, como [AfxThrowFileException,](exception-processing.md#afxthrowfileexception)para lançar um tipo predefinido. Esta documentação é fornecida apenas para a completude.
 
-##  <a name="delete"></a>  CException::Delete
+## <a name="cexceptiondelete"></a><a name="delete"></a>CException::Delete
 
-Essa função verifica se o `CException` objeto foi criado no heap e, nesse caso, ele chama o **excluir** operador no objeto.
+Esta função verifica se `CException` o objeto foi criado no heap e, se for o caso, ele chama o operador **de exclusão** no objeto.
 
 ```
 void Delete();
@@ -111,11 +111,11 @@ void Delete();
 
 ### <a name="remarks"></a>Comentários
 
-Ao excluir uma `CException` do objeto, use o `Delete` a função de membro para excluir a exceção. Não use o **exclua** operador diretamente, porque o `CException` objeto pode ser um objeto global ou ter sido criado na pilha.
+Ao excluir `CException` um objeto, `Delete` use a função membro para excluir a exceção. Não use o operador de `CException` **exclusão** diretamente, porque o objeto pode ser um objeto global ou ter sido criado na pilha.
 
 Você pode especificar se o objeto deve ser excluído quando o objeto é construído. Para obter mais informações, consulte [CException::CException](#cexception).
 
-Você só precisa chamar `Delete` se você estiver usando o C++ **tente**- **catch** mecanismo. Se você estiver usando as macros do MFC **tente** e **CATCH**, em seguida, essas macros chamará automaticamente essa função.
+Você só precisa `Delete` ligar se estiver usando o mecanismo de- **captura** **c++.** Se você estiver usando as macros MFC **TRY** e **CATCH,** essas macros chamarão automaticamente essa função.
 
 ### <a name="example"></a>Exemplo
 
@@ -168,9 +168,9 @@ if (pFile != NULL)
 }
 ```
 
-##  <a name="reporterror"></a>  CException::ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException::'Erro de relatório
 
-Chame essa função de membro para o texto de erro de relatório em uma caixa de mensagem para o usuário.
+Ligue para esta função de membro para relatar o texto de erro em uma caixa de mensagem para o usuário.
 
 ```
 virtual int ReportError(
@@ -181,18 +181,18 @@ virtual int ReportError(
 ### <a name="parameters"></a>Parâmetros
 
 *nType*<br/>
-Especifica o estilo da caixa de mensagem. Aplicar qualquer combinação da [estilos de caixa de mensagem](styles-used-by-mfc.md#message-box-styles) à caixa. Se você não especificar esse parâmetro, o padrão é MB_OK.
+Especifica o estilo da caixa de mensagens. Aplique qualquer combinação dos estilos da [caixa de mensagem](styles-used-by-mfc.md#message-box-styles) na caixa. Se você não especificar esse parâmetro, o padrão será MB_OK.
 
 *nMessageID*<br/>
-Especifica a ID de recurso (entrada de cadeia de caracteres) de uma mensagem a ser exibido se o objeto de exceção não tem uma mensagem de erro. Se for 0, a mensagem "nenhuma mensagem de erro está disponível" é exibida.
+Especifica o ID de recurso (entrada da tabela de strings) de uma mensagem a ser exibida se o objeto de exceção não tiver uma mensagem de erro. Se 0, a mensagem "Nenhuma mensagem de erro está disponível" é exibida.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um `AfxMessageBox` valor; caso contrário, 0 se não houver memória suficiente para exibir a caixa de mensagem. Ver [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) para os possíveis valores de retornados.
+Um `AfxMessageBox` valor; caso contrário 0 se não houver memória suficiente para exibir a caixa de mensagens. Consulte [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) para obter os possíveis valores de retorno.
 
 ### <a name="example"></a>Exemplo
 
-Aqui está um exemplo do uso de `CException::ReportError`. Para obter outro exemplo, consulte o exemplo de [CATCH](exception-processing.md#catch).
+Aqui está um exemplo `CException::ReportError`do uso de . Por outro exemplo, veja o exemplo de [CATCH](exception-processing.md#catch).
 
 ```cpp
 CFile fileInput;
@@ -226,9 +226,9 @@ else
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](cobject-class.md)<br/>
 [Gráfico da hierarquia](../hierarchy-chart.md)<br/>
 [Processamento de exceção](exception-processing.md)<br/>
-[Como faço Criar minhas próprias Classes de exceção personalizada](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Como faço: criar minhas próprias classes de exceção personalizadas](https://go.microsoft.com/fwlink/p/?linkid=128045)

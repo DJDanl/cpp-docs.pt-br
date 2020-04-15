@@ -14,21 +14,21 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420732"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375846"
 ---
 # <a name="ltthreadgt-functions"></a>Funções &lt;thread&gt;
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+|[Trocar](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>  get_id
+## <a name="get_id"></a><a name="get_id"></a>get_id
 
 Identifica exclusivamente o thread atual de execução.
 
@@ -40,7 +40,7 @@ thread::id this_thread::get_id() noexcept;
 
 Um objeto do tipo [thread::id](../standard-library/thread-class.md) que identifica exclusivamente o thread de execução atual.
 
-## <a name="sleep_for"></a>  sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
 
 Bloqueia o thread de chamada.
 
@@ -50,16 +50,16 @@ class Period>
 inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Rel_time*\
 O objeto [duration](../standard-library/duration-class.md) que especifica um intervalo de tempo.
 
 ### <a name="remarks"></a>Comentários
 
-A função bloqueia o thread de chamada para pelo menos o tempo especificado por *Rel_time*. Essa função não gera exceções.
+A função bloqueia o segmento de chamada por pelo menos o tempo especificado por *Rel_time*. Essa função não gera exceções.
 
-## <a name="sleep_until"></a>  sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
 Bloqueia o thread de chamada, pelo menos, até o tempo especificado.
 
@@ -70,7 +70,7 @@ void sleep_until(const chrono::time_point<Clock, Duration>& Abs_time);
 void sleep_until(const xtime *Abs_time);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Abs_time*\
 Representa um ponto no tempo.
@@ -79,27 +79,27 @@ Representa um ponto no tempo.
 
 Essa função não gera exceções.
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Trocar
 
-Permuta os Estados de dois objetos de **thread** .
+Troca os estados de dois objetos de **rosca.**
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
-O objeto de **thread** à esquerda.
+*Deixou*\
+O objeto **da rosca** esquerda.
 
-\ *à direita*
-O objeto de **thread** certo.
+*Certo*\
+O objeto **de rosca** direita.
 
 ### <a name="remarks"></a>Comentários
 
 A função chama `Left.swap(Right)`.
 
-## <a name="yield"></a>  yield
+## <a name="yield"></a><a name="yield"></a>Rendimento
 
 Sinaliza ao sistema operacional para executar outros threads, mesmo se o thread atual continuar normalmente em execução.
 

@@ -1,72 +1,72 @@
 ---
-title: 'Área de transferência: Copiando e colando dados'
+title: 'Área de Transferência: copiando e colando dados'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74348dd3e790cceada9aafd718464694997316ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327139"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374562"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>Área de transferência: Copiando e colando dados
+# <a name="clipboard-copying-and-pasting-data"></a>Área de Transferência: copiando e colando dados
 
-Este tópico descreve o trabalho mínimo necessário para implementar para a cópia e colagem da área de transferência no aplicativo OLE. É recomendável que você leia as [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) tópicos antes de continuar.
+Este tópico descreve o trabalho mínimo necessário para implementar a cópia e a cola da Área de Transferência em seu aplicativo OLE. Recomenda-se que você leia os [tópicos de Objetos de Dados e Fontes de Dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) antes de prosseguir.
 
-Antes de implementar copiar ou colar, primeiro você deve fornecer funções para lidar com as opções de copiar, recortar e colar no menu Editar.
+Antes de implementar a cópia ou a colagem, você deve primeiro fornecer funções para lidar com as opções Copiar, Cortar e Colar no menu Editar.
 
-##  <a name="_core_copying_or_cutting_data"></a> Copiar ou recortar dados
+## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a>Copiando ou cortando dados
 
-#### <a name="to-copy-data-to-the-clipboard"></a>Para copiar dados para a área de transferência
+#### <a name="to-copy-data-to-the-clipboard"></a>Para copiar dados para a Área de Transferência
 
-1. Determine se os dados a serem copiados são dados nativos ou é um item vinculado ou inserido.
+1. Determine se os dados a serem copiados são dados nativos ou se é um item incorporado ou vinculado.
 
-   - Se os dados são inseridos ou vinculados, obter um ponteiro para o `COleClientItem` objeto que foi selecionado.
+   - Se os dados forem incorporados ou `COleClientItem` vinculados, obtenha um ponteiro para o objeto selecionado.
 
-   - Se os dados são nativos e o aplicativo for um servidor, crie um novo objeto derivado de `COleServerItem` que contém os dados selecionados. Caso contrário, crie um `COleDataSource` objeto para os dados.
+   - Se os dados forem nativos e o aplicativo for `COleServerItem` um servidor, crie um novo objeto derivado da contenção dos dados selecionados. Caso contrário, `COleDataSource` crie um objeto para os dados.
 
-1. Chame o item selecionado `CopyToClipboard` função de membro.
+1. Ligue para a função `CopyToClipboard` membro do item selecionado.
 
-1. Se o usuário escolher uma operação Cut em vez de uma operação de cópia, exclua os dados selecionados do seu aplicativo.
+1. Se o usuário escolheu uma operação Cortar em vez de uma operação Copiar, exclua os dados selecionados do seu aplicativo.
 
-Para ver um exemplo dessa sequência, consulte o `OnEditCut` e `OnEditCopy` programas de exemplo de funções na OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md). Observe que esses exemplos de mantenham um ponteiro para os dados selecionados no momento, portanto, a etapa 1 já foi concluída.
+Para ver um exemplo desta `OnEditCut` seqüência, consulte as funções e `OnEditCopy` funções nos programas de amostra MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md). Observe que essas amostras mantêm um ponteiro para os dados selecionados no momento, então a etapa 1 já está completa.
 
-##  <a name="_core_pasting_data"></a> Colando dados
+## <a name="pasting-data"></a><a name="_core_pasting_data"></a>Colar dados
 
-Colagem de dados é mais complicado do que copiá-lo porque você precisa escolher o formato a ser usado em Colar os dados em seu aplicativo.
+Colar dados é mais complicado do que copiá-los porque você precisa escolher o formato a ser usado na colagem dos dados em seu aplicativo.
 
-#### <a name="to-paste-data-from-the-clipboard"></a>Para colar dados da área de transferência
+#### <a name="to-paste-data-from-the-clipboard"></a>Para colar dados da Área de Transferência
 
-1. Em sua classe de exibição, implementar `OnEditPaste` para lidar com os usuários a escolher a opção de colar no menu Editar.
+1. Na sua classe `OnEditPaste` de exibição, implemente para lidar com os usuários escolhendo a opção Colar no menu Editar.
 
-1. No `OnEditPaste` funcionar, crie um `COleDataObject` objeto e chame seu `AttachClipboard` função de membro para vincular a esse objeto para os dados na área de transferência.
+1. Na `OnEditPaste` função, crie `COleDataObject` um objeto `AttachClipboard` e chame sua função de membro para vincular esse objeto aos dados na Área de Transferência.
 
-1. Chamar `COleDataObject::IsDataAvailable` para verificar se um determinado formato está disponível.
+1. Ligue `COleDataObject::IsDataAvailable` para verificar se um determinado formato está disponível.
 
-   Como alternativa, você pode usar `COleDataObject::BeginEnumFormats` para procurar outros formatos até encontrar uma mais adequado ao seu aplicativo.
+   Alternativamente, você `COleDataObject::BeginEnumFormats` pode usar para procurar outros formatos até encontrar um mais adequado para sua aplicação.
 
-1. Realize a colagem no formato.
+1. Executar a pasta do formato.
 
-Para obter um exemplo de como isso funciona, consulte a implementação de `OnEditPaste` funções de membro nas classes de exibição definidas nos programas de exemplo OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md).
+Para um exemplo de como isso funciona, consulte a implementação das funções do `OnEditPaste` membro nas classes de exibição definidas nos programas de amostra de OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
->  O principal benefício de separar a operação de colagem para sua própria função é que o mesmo código de colar pode ser usado quando dados são soltos em seu aplicativo durante uma operação de arrastar e soltar. Como na, OCLIENT e HIERSVR, suas `OnDrop` também pode chamar a função `DoPasteItem`, reutilizar o código escrito para implementar operações de colagem.
+> O principal benefício de separar a operação de colar em sua própria função é que o mesmo código de pasta pode ser usado quando os dados são descartados em seu aplicativo durante uma operação de arrastar e soltar. Como em OCLIENT e HIERSVR, `OnDrop` `DoPasteItem`sua função também pode chamar, reutilizando o código escrito para implementar operações de Colar.
 
-Para lidar com a opção Colar especial no menu Editar, consulte o tópico [caixas de diálogo em OLE](../mfc/dialog-boxes-in-ole.md).
+Para lidar com a opção Colar especial no menu Editar, consulte o tópico [Caixas de Diálogo em OLE](../mfc/dialog-boxes-in-ole.md).
 
-### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+### <a name="what-do-you-want-to-know-more-about"></a>O que você quer saber mais sobre
 
 - [Adicionando outros formatos](../mfc/clipboard-adding-other-formats.md)
 
-- [Transferência de dados uniformes e fontes de dados e objetos de dados OLE](../mfc/data-objects-and-data-sources-ole.md)
+- [Objetos de dados OLE e fontes de dados e transferência uniforme de dados](../mfc/data-objects-and-data-sources-ole.md)
 
-- [Arrastar e soltar OLE](../mfc/drag-and-drop-ole.md)
+- [Arrastar e soltar do OLE](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Área de transferência: usar o mecanismo da Área de transferência OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+[Área de transferência: usando o mecanismo de área de transferência do OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

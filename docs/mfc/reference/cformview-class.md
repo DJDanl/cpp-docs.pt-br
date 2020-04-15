@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 8a0c11352ffab37f50ede5c67aa810fa20e838ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9b897c661731878f0bf78c9d04ae7c4ba28cd42
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181997"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373794"
 ---
 # <a name="cformview-class"></a>Classe CFormView
 
-A classe base usada para modos de exibição de formulário.
+A classe base usada para visualizações de formulários.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,7 +33,7 @@ class CFormView : public CScrollView
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CFormView::CFormView](#cformview)|Constrói um objeto `CFormView`.|
+|[CformView::CFormView](#cformview)|Constrói um objeto `CFormView`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -43,19 +43,19 @@ class CFormView : public CScrollView
 
 ## <a name="remarks"></a>Comentários
 
-Um modo de exibição de formulário é essencialmente uma exibição que contém controles. Esses controles são dispostos com base em um recurso de modelo de caixa de diálogo. Use `CFormView` se você quiser formulários em seu aplicativo. Essas exibições dão suporte à rolagem, conforme necessário, usando o [CScrollView](../../mfc/reference/cscrollview-class.md) funcionalidade.
+Uma visão de formulário é essencialmente uma visão que contém controles. Esses controles são definidos com base em um recurso de modelo de diálogo. Use `CFormView` se quiser formulários em sua aplicação. Essas visualizações suportam rolagem, conforme necessário, usando a funcionalidade [CScrollView.](../../mfc/reference/cscrollview-class.md)
 
-Quando você estiver [criando um aplicativo baseado em formulários](../../mfc/reference/creating-a-forms-based-mfc-application.md), você pode basear sua classe de exibição em `CFormView`, tornando-o um aplicativo baseado em formulários.
+Quando você está [criando um aplicativo baseado em formulários,](../../mfc/reference/creating-a-forms-based-mfc-application.md)você pode basear sua classe de exibição, `CFormView`tornando-a um aplicativo baseado em formulários.
 
-Você também pode inserir novas [tópicos de formulário](../../mfc/form-views-mfc.md) em aplicativos com base no modo de exibição de documento. Mesmo se seu aplicativo não oferecia suporte inicialmente formulários, o Visual C++ adicionará esse suporte quando você insere um novo formulário.
+Você também pode inserir novos [Tópicos de Formulário](../../mfc/form-views-mfc.md) em aplicativos baseados em exibição de documentos. Mesmo que seu aplicativo não tenha suportado inicialmente formulários, o Visual C++ adicionará esse suporte quando você inserir um novo formulário.
 
-O Assistente de aplicativo do MFC e o comando Adicionar classe são os métodos preferenciais para a criação de aplicativos baseados em formulários. Se você precisar criar um aplicativo baseado em formulários sem usar esses métodos, consulte [criando um aplicativo baseado em formulários](../../mfc/reference/creating-a-forms-based-mfc-application.md).
+O Assistente de Aplicativo MFC e o comando Adicionar classe são os métodos preferidos para criar aplicativos baseados em formulários. Se você precisar criar um aplicativo baseado em formulários sem usar esses métodos, consulte [Criando um aplicativo baseado em formulários](../../mfc/reference/creating-a-forms-based-mfc-application.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -69,7 +69,7 @@ O Assistente de aplicativo do MFC e o comando Adicionar classe são os métodos 
 
 **Cabeçalho:** afxext.h
 
-##  <a name="cformview"></a>  CFormView::CFormView
+## <a name="cformviewcformview"></a><a name="cformview"></a>CformView::CFormView
 
 Constrói um objeto `CFormView`.
 
@@ -81,19 +81,19 @@ CFormView(UINT nIDTemplate);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszTemplateName*<br/>
-Contém uma cadeia de caracteres terminada em nulo que é o nome de um recurso de modelo de caixa de diálogo.
+Contém uma seqüência de seqüência de terminadas nula que é o nome de um recurso de modelo de diálogo.
 
-*nIDTemplate*<br/>
-Contém o número de identificação de um recurso de modelo de caixa de diálogo.
+*Nidtemplate*<br/>
+Contém o número de ID de um recurso de modelo de diálogo.
 
 ### <a name="remarks"></a>Comentários
 
-Quando você cria um objeto de um tipo derivado de `CFormView`, chamar um dos construtores para criar o objeto de exibição e identificar o recurso de caixa de diálogo na qual o modo de exibição se baseia. Você pode identificar o recurso por nome (passar uma cadeia de caracteres como o argumento para o construtor) ou pela sua ID (um inteiro sem sinal, como o argumento de passagem).
+Quando você criar um objeto de `CFormView`um tipo derivado, invoque um dos construtores para criar o objeto de exibição e identifique o recurso de diálogo no qual a exibição é baseada. Você pode identificar o recurso pelo nome (passar uma string como argumento para o construtor) ou pelo seu ID (passar um inteiro não assinado como argumento).
 
-Os controles de janela e o filho de exibição de formulário não são criados até `CWnd::Create` é chamado. `CWnd::Create` é chamado pelo framework como parte do processo de criação documento e exibição, que é controlado pelo modelo de documento.
+A janela de visualização de formulário e `CWnd::Create` os controles de criança não são criados até que seja chamado. `CWnd::Create`é chamado pelo framework como parte do processo de criação de documentos e visualização, que é impulsionado pelo modelo do documento.
 
 > [!NOTE]
->  Sua classe derivada *deve* fornecer seu próprio construtor. No construtor, invocar o construtor, `CFormView::CFormView`, com o nome do recurso ou ID como um argumento, como mostra a visão geral da classe anterior.
+> Sua classe derivada *deve* fornecer seu próprio construtor. No construtor, invoque o `CFormView::CFormView`construtor, com o nome do recurso ou ID como argumento como mostrado na visão geral da classe anterior.
 
 ### <a name="example"></a>Exemplo
 
@@ -101,22 +101,22 @@ Os controles de janela e o filho de exibição de formulário não são criados 
 
 [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]
 
-##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted
+## <a name="cformviewisinitdlgcompleted"></a><a name="isinitdlgcompleted"></a>CFormView::IsInitDlgConcluído
 
-Usado pelo MFC para garantir que a inicialização seja concluída antes de executar outras operações.
+Usado pelo MFC para garantir que a inicialização seja concluída antes de realizar outras operações.
 
 ```
 BOOL IsInitDlgCompleted() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-True se a função de inicialização para essa caixa de diálogo foi concluída.
+É verdade se a função de inicialização desta caixa de diálogo tiver sido concluída.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
-[Exemplo MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
+[Amostra de MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC Amostra VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Classe CScrollView](../../mfc/reference/cscrollview-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>

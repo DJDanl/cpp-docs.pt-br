@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 060e601901fa5725d7ca62f244f66784af3dc11d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403627"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375329"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 
-Essa classe implementa uma janela que é colocada em uma janela host fornecida pelo Shell para visualização avançada.
+Esta classe implementa uma janela que é colocada em uma janela de host fornecida pela Shell for Rich Preview.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,63 +59,63 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs um objeto de controle de versão prévia.|
-|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Constrói um objeto de controle de versão prévia.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destrói um objeto de controle de visualização.|
+|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Constrói um objeto de controle de visualização.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::Create](#create)|Sobrecarregado. Chamado por um manipulador de visualização avançada para criar a janela do Windows.|
-|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Chamado por um manipulador de visualização avançada quando ele precisa destruir esse controle.|
+|[CMFCPreviewCtrlImpl::Criar](#create)|Sobrecarregado. Chamado por um manipulador Rich Preview para criar a janela do Windows.|
+|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Chamado por um manipulador Rich Preview quando ele precisa destruir este controle.|
 |[CMFCPreviewCtrlImpl::Focus](#focus)|Define o foco de entrada para esse controle.|
-|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Retorna um documento conectado a esse controle de versão prévia.|
-|[CMFCPreviewCtrlImpl::Redraw](#redraw)|Informa a esse controle seja redesenhada.|
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Chamado pelo Gerenciador de visualização para criar uma relação entre a implementação de documento e o controle de versão prévia.|
+|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Retorna um documento conectado a este controle de visualização.|
+|[CMFCPreviewCtrlImpl::Redraw](#redraw)|Diz a este controle para redesenhar.|
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Chamado pelo manipulador de visualização para criar uma relação entre a implementação do documento e o controle de visualização.|
 |[CMFCPreviewCtrlImpl::SetHost](#sethost)|Define um novo pai para este controle.|
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chamado por um manipulador de visualização avançada quando ele precisa definir os visuais de uma visualização avançada conteúdo.|
+|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chamado por um manipulador Rich Preview quando ele precisa definir visuais de conteúdo de visualização rico.|
 |[CMFCPreviewCtrlImpl::SetRect](#setrect)|Define um novo retângulo delimitador para este controle.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Chamado pelo framework para renderizar a visualização.|
+|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Chamado pela estrutura para renderizar a visualização.|
 
-### <a name="protected-data-members"></a>Membros de dados protegidos
+### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Cor do plano de fundo da janela visualização.|
-|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Cor do texto da janela visualização.|
+|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Cor de fundo da janela de visualização.|
+|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Cor de texto da janela de visualização.|
 |[CMFCPreviewCtrlImpl::m_font](#m_font)|Fonte usada para exibir texto na janela de visualização.|
 |[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Um ponteiro para um documento cujo conteúdo é visualizado no controle.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxwin. h
+**Cabeçalho:** afxwin.h
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
 [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 
-Constrói um objeto de controle de versão prévia.
+Constrói um objeto de controle de visualização.
 
 ### <a name="syntax"></a>Sintaxe
 
 CMFCPreviewCtrlImpl();
 
-## <a name="create"></a> CMFCPreviewCtrlImpl::Create
+## <a name="cmfcpreviewctrlimplcreate"></a><a name="create"></a>CMFCPreviewCtrlImpl::Criar
 
-Sobrecarregado. Chamado por um manipulador de visualização avançada para criar a janela do Windows.
+Sobrecarregado. Chamado por um manipulador Rich Preview para criar a janela do Windows.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -133,22 +133,22 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*<br/>
-Um identificador para a janela de host fornecido pelo Shell para visualização avançada.
+*Hwndparent*<br/>
+Uma alça para a janela de host fornecida pela Shell for Rich Preview.
 
-*prc*<br/>
-Especifica o tamanho inicial e a posição da janela.
+*Prc*<br/>
+Especifica o tamanho e a posição iniciais da janela.
 
 *pContext*<br/>
 Um ponteiro para um contexto de criação.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a criação for bem-sucedida; Caso contrário, FALSE.
+VERDADE se a criação conseguiu; caso contrário, FALSO.
 
-## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
+## <a name="cmfcpreviewctrlimpldestroy"></a><a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
 
-Chamado por um manipulador de visualização avançada quando ele precisa destruir esse controle.
+Chamado por um manipulador Rich Preview quando ele precisa destruir este controle.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -156,9 +156,9 @@ Chamado por um manipulador de visualização avançada quando ele precisa destru
 virtual void Destroy();
 ```
 
-## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint
+## <a name="cmfcpreviewctrlimpldopaint"></a><a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint
 
-Chamado pelo framework para renderizar a visualização.
+Chamado pela estrutura para renderizar a visualização.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -173,7 +173,7 @@ virtual void DoPaint(
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo para pintura.
 
-## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
+## <a name="cmfcpreviewctrlimplfocus"></a><a name="focus"></a>CMFCPreviewCtrlImpl::Focus
 
 Define o foco de entrada para esse controle.
 
@@ -183,9 +183,9 @@ Define o foco de entrada para esse controle.
 virtual void Focus();
 ```
 
-## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
+## <a name="cmfcpreviewctrlimplgetdocument"></a><a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
 
-Retorna um documento conectado a esse controle de versão prévia.
+Retorna um documento conectado a este controle de visualização.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -193,13 +193,13 @@ Retorna um documento conectado a esse controle de versão prévia.
 ATL::IDocument* GetDocument();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para um documento, cujo conteúdo é visualizado no controle.
 
-## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor
+## <a name="cmfcpreviewctrlimplm_clrbackcolor"></a><a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor
 
-Cor do plano de fundo da janela de visualização.
+Cor de fundo da janela de visualização.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -207,9 +207,9 @@ Cor do plano de fundo da janela de visualização.
 COLORREF m_clrBackColor;
 ```
 
-## <a name="m_clrtextcolor"></a> CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="cmfcpreviewctrlimplm_clrtextcolor"></a><a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
 
-Cor do texto da janela de visualização.
+Cor de texto da janela de visualização.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -217,7 +217,7 @@ Cor do texto da janela de visualização.
 COLORREF m_clrTextColor;
 ```
 
-## <a name="m_font"></a> Fonte de CMFCPreviewCtrlImpl::m_font usada para exibir o texto na janela de visualização.
+## <a name="cmfcpreviewctrlimplm_font--font-used-to-display-text-in-the-preview-window"></a><a name="m_font"></a>CMFCPreviewCtrlImpl::m_font Fonte usada para exibir texto na janela de visualização.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -225,7 +225,7 @@ COLORREF m_clrTextColor;
 CFont m_font;
 ```
 
-## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
+## <a name="cmfcpreviewctrlimplm_pdocument"></a><a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument
 
 Um ponteiro para um documento cujo conteúdo é visualizado no controle.
 
@@ -235,9 +235,9 @@ Um ponteiro para um documento cujo conteúdo é visualizado no controle.
 ATL::IDocument* m_pDocument;
 ```
 
-## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw
+## <a name="cmfcpreviewctrlimplredraw"></a><a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw
 
-Informa a esse controle seja redesenhada.
+Diz a este controle para redesenhar.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -245,9 +245,9 @@ Informa a esse controle seja redesenhada.
 virtual void Redraw();
 ```
 
-## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
+## <a name="cmfcpreviewctrlimplsetdocument"></a><a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument
 
-Chamado pelo Gerenciador de visualização para criar uma relação entre a implementação de documento e o controle de versão prévia.
+Chamado pelo manipulador de visualização para criar uma relação entre a implementação do documento e o controle de visualização.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -262,7 +262,7 @@ void SetDocument(
 *pDocument*<br/>
 Um ponteiro para a implementação do documento.
 
-## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost
+## <a name="cmfcpreviewctrlimplsethost"></a><a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost
 
 Define um novo pai para este controle.
 
@@ -276,12 +276,12 @@ virtual void SetHost(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*<br/>
-Um identificador para a nova janela pai.
+*Hwndparent*<br/>
+Uma alça para a nova janela dos pais.
 
-## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals
+## <a name="cmfcpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals
 
-Chamado por um manipulador de visualização avançada quando ele precisa definir os visuais de uma visualização avançada conteúdo.
+Chamado por um manipulador Rich Preview quando ele precisa definir visuais de conteúdo de visualização rico.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -296,15 +296,15 @@ virtual void SetPreviewVisuals(
 ### <a name="parameters"></a>Parâmetros
 
 *clrBack*<br/>
-Cor do plano de fundo da janela visualização.
+Cor de fundo da janela de visualização.
 
 *clrText*<br/>
-Cor do texto da janela visualização.
+Cor de texto da janela de visualização.
 
 *plf*<br/>
 Fonte usada para exibir texto na janela de visualização.
 
-##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect
+## <a name="cmfcpreviewctrlimplsetrect"></a><a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect
 
 Define um novo retângulo delimitador para este controle.
 
@@ -319,19 +319,19 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*prc*<br/>
-Especifica o novo tamanho e posição do controle de versão prévia.
+*Prc*<br/>
+Especifica o novo tamanho e a posição do controle de visualização.
 
-*bRedraw*<br/>
+*Bredraw*<br/>
 Especifica se o controle deve ser redesenhado.
 
 ### <a name="remarks"></a>Comentários
 
-Normalmente, um novo retângulo delimitador é definido quando o controle de host é redimensionado.
+Normalmente, um novo retângulo delimitador é definido quando o controle do host é redimensionado.
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="dtor"></a>CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
-Destructs um objeto de controle de versão prévia.
+Destrói um objeto de controle de visualização.
 
 ### <a name="syntax"></a>Sintaxe
 

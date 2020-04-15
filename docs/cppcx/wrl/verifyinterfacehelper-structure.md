@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper structure
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-ms.openlocfilehash: cdd0272953b2399cd71efe207eb1c56e5de154e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09c2cc7e08e2dc0e8df42c64d285c37627c5925a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398089"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374241"
 ---
 # <a name="verifyinterfacehelper-structure"></a>Estrutura VerifyInterfaceHelper
 
-Oferece suporte a infraestrutura de biblioteca de modelos de C++ de tempo de execução do Windows e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura da Biblioteca de Modelos C++ do Windows e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,22 +32,22 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="parameters"></a>Parâmetros
 
-*I*<br/>
+*Eu*<br/>
 Uma interface para verificar.
 
 *isWinRTInterface*
 
 ## <a name="remarks"></a>Comentários
 
-Verifica se a interface especificada pelo parâmetro de modelo atende a determinados requisitos.
+Verifica se a interface especificada pelo parâmetro do modelo atende a certos requisitos.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 Nome                                            | Descrição
 ----------------------------------------------- | ---------------------------------------------------------------------------------------------------
-[Método VerifyInterfaceHelper::Verify](#verify) | Verifica se a interface especificada pelo parâmetro de modelo atual atende a determinados requisitos.
+[Método VerifyInterfaceHelper::Verify](#verify) | Verifica se a interface especificada pelo parâmetro de modelo atual atende a certos requisitos.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -55,13 +55,13 @@ Nome                                            | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Implements. h
+**Cabeçalho:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Espaço de nome:** Microsoft::WRL::Details
 
-## <a name="verify"></a>VerifyInterfaceHelper::Verify
+## <a name="verifyinterfacehelperverify"></a><a name="verify"></a>VerificarInterfaceHelper::Verificar
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 static void Verify();
@@ -69,4 +69,4 @@ static void Verify();
 
 ### <a name="remarks"></a>Comentários
 
-Verifica se a interface especificada pelo parâmetro de modelo atual atende a determinados requisitos.
+Verifica se a interface especificada pelo parâmetro de modelo atual atende a certos requisitos.

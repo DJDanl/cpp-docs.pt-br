@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ff6ea37208aef19431bf7aefe612dccd589c638b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419584"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374538"
 ---
 # <a name="ltregexgt-functions"></a>Funções &lt;regex&gt;
 
@@ -27,9 +27,9 @@ ms.locfileid: "79419584"
 |[regex_match](#regex_match)|Testa se uma expressão regular corresponde a toda a cadeia de caracteres de destino.|
 |[regex_replace](#regex_replace)|Substitui expressões regulares correspondentes.|
 |[regex_search](#regex_search)|Pesquisa por uma correspondência de expressão regular.|
-|[swap](#swap)|Troca dois objetos `basic_regex` ou `match_results`.|
+|[Trocar](#swap)|Troca dois `basic_regex` `match_results` ou objetos.|
 
-## <a name="regex_match"></a>regex_match
+## <a name="regex_match"></a><a name="regex_match"></a>regex_match
 
 Testa se uma expressão regular corresponde a toda a cadeia de caracteres de destino.
 
@@ -82,53 +82,53 @@ bool regex_match(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *bidirecional*
-O tipo de iterador para subcorrespondências. Para casos comuns, esse `string::const_iterator`, `wstring::const_iterator`, `const char*` ou `const wchar_t*`.
+*Bidit*\
+O tipo de iterador para subcorrespondências. Para casos comuns `string::const_iterator` `wstring::const_iterator`este `const char*` `const wchar_t*`de, ou .
 
-\ de *alocação*
+*Alloc*\
 A classe alocadora de resultados de correspondência.
 
-\ *elem*
-O tipo de elemento a ser correspondido. Para casos comuns, isso é `string`, `wstring`, `char*` ou `wchar_t*`.
+*Elem*\
+O tipo de elemento a ser correspondido. Para casos comuns, `char*` `wchar_t*`isso é, `string` `wstring`ou .
 
-\ *RXtraits*
+*RXtraits*\
 Classe de características para elementos.
 
-\ *Alloc2*
+*Alloc2*\
 A classe alocadora de expressão regular.
 
-\ *IOtraits*
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-\ *IOalloc*
+*IOalloc*\
 A classe alocadora da cadeia de caracteres.
 
-*flags*\
+*Sinalizadores*\
 Sinalizadores de correspondências.
 
-*primeiro*\
+*Primeiro*\
 Início da sequência de correspondência.
 
-*última*\
+*Última*\
 Fim da sequência de correspondência.
 
-*corresponder*\
-Os resultados da correspondência. Corresponde ao tipo elem: [smatch](../standard-library/regex-typedefs.md#smatch) para `string`, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) para `wstring`, [cmatch](../standard-library/regex-typedefs.md#cmatch) para `char*` ou [wcmatch](../standard-library/regex-typedefs.md#wcmatch) para `wchar_t*`.
+*Jogo*\
+Os resultados da correspondência. Corresponde ao tipo Elem: `string` [smatch](../standard-library/regex-typedefs.md#smatch) for `wstring`, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) for `wchar_t*`, [cmatch](../standard-library/regex-typedefs.md#cmatch) for `char*` ou [wcmatch](../standard-library/regex-typedefs.md#wcmatch) for .
 
-\ *PTR*
-Ponteiro para o início da sequência de correspondência. Se *PTR* for `char*`, use `cmatch` e `regex`. Se *PTR* for `wchar_t*`, use `wcmatch` e `wregex`.
+*Ptr*\
+Ponteiro para o início da sequência de correspondência. Se *ptr* é `char*` `cmatch` , `regex`em seguida, use e . Se *ptr* `wchar_t*` é `wcmatch` `wregex`então usar e .
 
-\ *novamente*
-A expressão regular de correspondência. Digite `regex` para `string` e `char*`ou `wregex` para `wstring` e `wchar_t*`.
+*Re*\
+A expressão regular de correspondência. `regex` Digite `string` `char*`para `wregex` e `wstring` `wchar_t*`, ou para e .
 
-\ de *Str*
-Cadeia de caracteres de correspondência. Corresponde ao tipo de *elem*.
+*Str*\
+Cadeia de caracteres de correspondência. Corresponde ao tipo *de Elem.*
 
 ### <a name="remarks"></a>Comentários
 
-Cada função de modelo retornará true somente se a sequência de operando inteira *Str* corresponder exatamente *ao argumento de*expressão regular. Use [regex_search](../standard-library/regex-functions.md#regex_search) para corresponder a uma subcadeia de caracteres dentro de uma sequência de destino e `regex_iterator` para localizar várias correspondências. As funções que utilizam um objeto `match_results` definem seus membros para refletir se a correspondência foi bem-sucedida e, em caso afirmativo, quais são os diversos grupos de capturas na expressão regular capturada.
+Cada função de modelo retorna verdadeira somente se toda a seqüência de opers e seqüência *str* corresponder exatamente ao argumento de expressão regular *re*. Use [regex_search](../standard-library/regex-functions.md#regex_search) para combinar uma substring `regex_iterator` dentro de uma seqüência de destino e para encontrar várias correspondências. As funções que utilizam um objeto `match_results` definem seus membros para refletir se a correspondência foi bem-sucedida e, em caso afirmativo, quais são os diversos grupos de capturas na expressão regular capturada.
 
 As funções que utilizam um objeto `match_results` definem seus membros para refletir se a correspondência foi bem-sucedida e, em caso afirmativo, quais são os diversos grupos de capturas na expressão regular capturada.
 
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>regex_replace
+## <a name="regex_replace"></a><a name="regex_replace"></a>regex_replace
 
 Substitui expressões regulares correspondentes.
 
@@ -218,47 +218,47 @@ basic_string<Elem> regex_replace(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *OutIt*
+*OutIt*\
 O tipo de iterador para substituições.
 
-\ *bidirecional*
+*Bidit*\
 O tipo de iterador para subcorrespondências.
 
-\ *RXtraits*
+*RXtraits*\
 Classe de características para elementos.
 
-\ de *alocação*
+*Alloc*\
 A classe alocadora de expressão regular.
 
-\ *elem*
+*Elem*\
 O tipo de elemento a ser correspondido.
 
-*flags*\
+*Sinalizadores*\
 Sinalizadores de correspondências.
 
-*primeiro*\
+*Primeiro*\
 Início da sequência de correspondência.
 
-\ *fmt*
+*Fmt*\
 O formato das substituições.
 
-*última*\
+*Última*\
 Fim da sequência de correspondência.
 
-*out*\
+*fora*\
 O iterador de saída.
 
-\ *novamente*
+*Re*\
 A expressão regular de correspondência.
 
-\ de *Str*
+*Str*\
 Cadeia de caracteres de correspondência.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função constrói um regex_iterator objeto de [classe](../standard-library/regex-iterator-class.md) `iter(first, last, re, flags)` e o usa para dividir seu intervalo de entrada `[first, last)` em uma série de subsequências `T0 M0 T1 M1...TN-1 MN-1 TN`, em que `Mn` é a enésimo correspondência detectada pelo iterador. Se nenhuma correspondência for encontrada, `T0` é todo o intervalo de entrada e `N` é zero. Se apenas a primeira correspondência `(flags & format_first_only) != 0` for usada, `T1` é todo o texto de entrada após a correspondência e `N` é 1. Para cada `i` no intervalo `[0, N)`, se `(flags & format_no_copy) == 0` ele copiar o texto no intervalo `Ti` para *o iterador*. Em seguida, ele chama `m.format(out, fmt, flags)`, em que `m` é o objeto `match_results` retornado pelo objeto iterador `iter` para o `Mi`da subsequência. Por fim, se `(flags & format_no_copy) == 0` ele copiará o texto no intervalo `TN` para o *iterador*. A *função retorna.*
+A primeira função [regex_iterator Class](../standard-library/regex-iterator-class.md) constrói um `iter(first, last, re, flags)` objeto regex_iterator Class e `[first, last)` o usa para `T0 M0 T1 M1...TN-1 MN-1 TN`dividir `Mn` seu intervalo de entrada em uma série de subseqüências, onde está a enésima correspondência detectada pelo iterador. Se nenhuma correspondência for encontrada, `T0` é todo o intervalo de entrada e `N` é zero. Se apenas a primeira correspondência `(flags & format_first_only) != 0` for usada, `T1` é todo o texto de entrada após a correspondência e `N` é 1. Para `i` cada um `[0, N)`na `(flags & format_no_copy) == 0` faixa, se ele `Ti` copiar o texto na faixa para fora do iterador *out*. Em seguida, ele chama `m.format(out, fmt, flags)`, onde `m` é `match_results` o `iter` objeto retornado pelo objeto iterador para a subseqüência `Mi`. Finalmente, `(flags & format_no_copy) == 0` se ele copiar o `TN` texto no intervalo para o iterador *para fora*. A função *retorna*.
 
 A segunda função constrói uma variável local `result` do tipo `basic_string<charT>` e chama `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Ele retorna `result`.
 
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>regex_search
+## <a name="regex_search"></a><a name="regex_search"></a>regex_search
 
 Pesquisa por uma correspondência de expressão regular.
 
@@ -351,53 +351,53 @@ bool regex_search(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *bidirecional*
+*Bidit*\
 O tipo de iterador para subcorrespondências.
 
-\ de *alocação*
+*Alloc*\
 A classe alocadora de resultados de correspondência.
 
-\ *elem*
+*Elem*\
 O tipo de elemento a ser correspondido.
 
-\ *RXtraits*
+*RXtraits*\
 Classe de características para elementos.
 
-\ *Alloc2*
+*Alloc2*\
 A classe alocadora de expressão regular.
 
-\ *IOtraits*
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-\ *IOalloc*
+*IOalloc*\
 A classe alocadora da cadeia de caracteres.
 
-*flags*\
+*Sinalizadores*\
 Sinalizadores de correspondências.
 
-*primeiro*\
+*Primeiro*\
 Início da sequência de correspondência.
 
-*última*\
+*Última*\
 Fim da sequência de correspondência.
 
-*corresponder*\
+*Jogo*\
 Os resultados da correspondência.
 
-\ *PTR*
+*Ptr*\
 Ponteiro para o início da sequência de correspondência.
 
-\ *novamente*
+*Re*\
 A expressão regular de correspondência.
 
-\ de *Str*
+*Str*\
 Cadeia de caracteres de correspondência.
 
 ### <a name="remarks"></a>Comentários
 
-Cada função de modelo retorna true somente se uma pesquisa por seu argumento de expressão regular *re* em sua sequência de operando for realizada com sucesso. As funções que utilizam um objeto `match_results` definem seus membros para refletir se a pesquisa foi bem-sucedida e, em caso afirmativo, quais são os diversos grupos de captura na expressão regular capturada.
+Cada função de modelo retorna verdadeira somente se uma pesquisa por seu argumento de expressão regular *for em* sua seqüência de operações e for bem sucedida. As funções que utilizam um objeto `match_results` definem seus membros para refletir se a pesquisa foi bem-sucedida e, em caso afirmativo, quais são os diversos grupos de captura na expressão regular capturada.
 
 ### <a name="example"></a>Exemplo
 
@@ -455,9 +455,9 @@ search(string, "abc") == true
   matched: "abc"
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Trocar
 
-Troca dois objetos `basic_regex` ou `match_results`.
+Troca dois `basic_regex` `match_results` ou objetos.
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -471,12 +471,12 @@ void swap(
     match_results<BidIt, Alloc>& right) noexcept;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *elem*
+*Elem*\
 O tipo de elemento a ser correspondido.
 
-\ *RXtraits*
+*RXtraits*\
 Classe de características para elementos.
 
 ### <a name="remarks"></a>Comentários
@@ -521,10 +521,10 @@ string == aaa
 ## <a name="see-also"></a>Confira também
 
 [\<regex>](../standard-library/regex.md)\
-[classe de regex_constants](../standard-library/regex-constants-class.md)\
-[classe de regex_error](../standard-library/regex-error-class.md)\
-[classe de regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<> de operadores regex](../standard-library/regex-operators.md)\
-[classe de regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[classe de regex_traits](../standard-library/regex-traits-class.md)\
-[\<Typedef regex>](../standard-library/regex-typedefs.md)
+[regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores de> regex](../standard-library/regex-operators.md)\
+[classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<> de reex](../standard-library/regex-typedefs.md)

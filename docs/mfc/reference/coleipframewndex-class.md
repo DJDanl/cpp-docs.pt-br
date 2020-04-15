@@ -94,17 +94,17 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4c5f4aa9a34e8cc8f30c0ef49f2f56c2bc2e0c3c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421551"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374986"
 ---
 # <a name="coleipframewndex-class"></a>Classe COleIPFrameWndEx
 
-A classe `COleIPFrameWndEx` implementa um contêiner OLE que dá suporte a MFC. Você deve derivar a classe de janela do quadro in-loco para seu aplicativo da classe `COleIPFrameWndEx`, em vez de deriva-la da classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md).
-Para obter mais detalhes, consulte o código-fonte localizado no **VC\\atlmfc\\src\\pasta MFC** da sua instalação do Visual Studio.
+A `COleIPFrameWndEx` classe implementa um contêiner OLE que suporta MFC. Você deve derivar a classe de janela `COleIPFrameWndEx` de quadro no local para o seu aplicativo da classe, em vez de deriva-la da classe [COleIPFrameWnd.](../../mfc/reference/coleipframewnd-class.md)
+Para obter mais detalhes, consulte o código-fonte localizado na pasta **VC\\atlmfc\\src\\mfc** da instalação do Visual Studio.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -116,83 +116,83 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[COleIPFrameWndEx::AddDockSite](#adddocksite)||
-|[COleIPFrameWndEx:: AddPane](#addpane)||
+|[COleIPFrameWndEx::AddPane](#addpane)||
 |[COleIPFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)||
-|[COleIPFrameWndEx::D ockPane](#dockpane)||
-|[COleIPFrameWndEx::D ockPaneLeftOf](#dockpaneleftof)|Encaixa um painel à esquerda de outro painel.|
-|[COleIPFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)||
-|[COleIPFrameWndEx::EnableDocking](#enabledocking)||
+|[COleIPFrameWndEx::DockPane](#dockpane)||
+|[COleIPFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Docas um painel à esquerda de outro painel.|
+|[COleIPFrameWndEx:EnableAutoHidePanes](#enableautohidepanes)||
+|[COleIPFrameWndEx::Habilitação docking](#enabledocking)||
 |[COleIPFrameWndEx::EnablePaneMenu](#enablepanemenu)||
 |[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|Retorna um ponteiro para o menu pop-up exibido no momento.|
 |[COleIPFrameWndEx::GetContainerFrameWindow](#getcontainerframewindow)||
-|[COleIPFrameWndEx::GetDefaultResId](#getdefaultresid)|Retorna a ID de recurso da janela do quadro que você especificou quando a janela foi carregada.|
+|[COleIPFrameWndEx::GetDefaultResId](#getdefaultresid)|Retorna o ID de recurso da janela de quadro que você especificou quando a janela foi carregada.|
 |[COleIPFrameWndEx::GetDockFrame](#getdockframe)||
 |[COleIPFrameWndEx::GetDockingManager](#getdockingmanager)||
-|[COleIPFrameWndEx:: getmainframe](#getmainframe)||
-|[COleIPFrameWndEx:: GetMenuBar](#getmenubar)|Retorna um ponteiro para o objeto de barra de menu anexado à janela do quadro.|
-|[COleIPFrameWndEx:: GetPane](#getpane)||
-|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|Retorna uma lista de objetos de painel que estão em um estado retirado.|
-|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Chamado pelo Framework antes que a dica de ferramenta de um botão seja exibida.|
+|[COleIPFrameWndEx::GetMainFrame](#getmainframe)||
+|[COleIPFrameWndEx::GetMenuBar](#getmenubar)|Retorna um ponteiro para o objeto da barra de menu anexado à janela do quadro.|
+|[COleIPFrameWndEx::GetPane](#getpane)||
+|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|Retorna uma lista de objetos de painel que estão em estado de ruptura.|
+|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Chamado pela estrutura antes que a dica de ferramenta para um botão seja exibida.|
 |[COleIPFrameWndEx::InsertPane](#insertpane)||
-|[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Determina se o ponteiro para o objeto de barra de menus não está `NULL`.|
+|[COleIPFrameWndEx::IsMenuBarDisponível](#ismenubaravailable)|Determina se o ponteiro para o `NULL`objeto da barra de menu não é .|
 |[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
-|[COleIPFrameWndEx:: LoadFrame](#loadframe)|(Substitui `COleIPFrameWnd::LoadFrame`.)|
+|[COleIPFrameWndEx::Quadro de carga](#loadframe)|(Substitui `COleIPFrameWnd::LoadFrame`.)|
 |[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
 |[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
-|[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Chamado pelo Framework quando um menu pop-up ativo processa uma mensagem de WM_DESTROY.|
+|[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Chamado pelo framework quando um menu pop-up ativo processa uma mensagem WM_DESTROY.|
 |[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|(Substitui `CFrameWnd::OnCmdMsg`.)|
-|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Chamado pelo Framework quando a imagem associada a um item de menu é desenhada.|
-|[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Chamado pelo Framework quando um objeto [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processa uma mensagem de WM_PAINT.|
-|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Chamado pelo Framework quando um objeto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)processa WM_NCHITTEST mensagem.|
+|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Chamado pela estrutura quando a imagem associada a um item do menu é desenhada.|
+|[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Chamado pela estrutura quando um objeto [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processa uma mensagem WM_PAINT.|
+|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Chamado pela estrutura quando um objeto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)processa WM_NCHITTEST mensagem.|
 |[COleIPFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)||
-|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Chame essa função de membro para definir a janela de quadro principal do aplicativo dentro e fora do modo de visualização de impressão. (Substitui [CFrameWnd:: OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
-|[COleIPFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)||
+|[COleIPFrameWndEx::OndaVisualizaçãodevisualizaçãoMode](#onsetpreviewmode)|Chame esta função de membro para definir a janela principal do quadro do aplicativo para dentro e para fora do modo de visualização de impressão. (Substitui [cframewnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
+|[COleIPFrameWndEx::OnShowPersonalizePane](#onshowcustomizepane)||
 |[COleIPFrameWndEx::OnShowPanes](#onshowpanes)||
-|[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Chamado pelo Framework quando um menu pop-up é ativado.|
-|[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Chamado pelo Framework quando um menu que tem uma barra suspensa é ativado.|
-|[COleIPFrameWndEx::P aneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx::P reTranslateMessage](#pretranslatemessage)|(Substitui `COleIPFrameWnd::PreTranslateMessage`.)|
+|[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Chamado pela estrutura quando um menu pop-up é ativado.|
+|[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Chamado pela estrutura quando um menu que tem uma barra de rasgo é ativado.|
+|[COleIPFrameWndEx::PaneFromPoint](#panefrompoint)||
+|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|(Substitui `COleIPFrameWnd::PreTranslateMessage`.)|
 |[COleIPFrameWndEx::RecalcLayout](#recalclayout)|(Substitui `COleIPFrameWnd::RecalcLayout`.)|
 |[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
-|[COleIPFrameWndEx:: SetDockState](#setdockstate)|Aplica o estado de encaixe especificado aos painéis que pertencem à janela do quadro.|
-|[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Modifica um objeto Toolbar pesquisando itens fictícios e substituindo-os pelos itens especificados pelo usuário.|
-|[COleIPFrameWndEx:: expane](#showpane)||
-|[COleIPFrameWndEx:: WinHelpa](#winhelpa)|Chamado pelo Framework para iniciar o aplicativo WinHelp ou a ajuda de contexto.|
+|[COleIPFrameWndEx::SetDockState](#setdockstate)|Aplica o estado de acoplamento especificado aos painéis que pertencem à janela do quadro.|
+|[COleIPFrameWndEx::ConfiguraçãoBarra de ferramentasMenu](#setuptoolbarmenu)|Modifica um objeto da barra de ferramentas pesquisando itens manequim e substituindo-os pelos itens definidos pelo usuário especificados.|
+|[COleIPFrameWndEx::ShowPane](#showpane)||
+|[COleIPFrameWndEx::WinHelpA](#winhelpa)|Chamado pela estrutura para iniciar o aplicativo WinHelp ou ajuda de contexto.|
 
-### <a name="protected-methods"></a>Métodos protegidos
+### <a name="protected-methods"></a>Métodos Protegidos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Informa à estrutura para inicializar um intervalo de IDs de controle que são atribuídas a barras de ferramentas definidas pelo usuário.|
+|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Diz à estrutura para inicializar uma gama de IDs de controle que são atribuídos a barras de ferramentas definidas pelo usuário.|
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como subclasse uma instância da classe `COleIPFrameWndEx` e sobrepassar seus métodos. O exemplo mostra como ultrapassar o método `OnDestory`, o método `RepositionFrame`, o método `RecalcLayout` e o método `CalcWindowRect`. Este trecho de código faz parte do [exemplo do Word pad](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como `COleIPFrameWndEx` subclasse uma instância da classe e sobre montar seus métodos. O exemplo mostra como `OnDestory` sobremontar `RepositionFrame` o método, o método, o `RecalcLayout` método e o `CalcWindowRect` método. Este trecho de código faz parte da amostra do [Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)
+[Coleipframewnd](../../mfc/reference/coleipframewnd-class.md)
 
-[COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md)
+[Coleipframewndex](../../mfc/reference/coleipframewndex-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxoleipframewndex. h
+**Cabeçalho:** afxoleipframewndex.h
 
-##  <a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite
+## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite
 
 ```
 void AddDockSite();
@@ -200,7 +200,7 @@ void AddDockSite();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addpane"></a>COleIPFrameWndEx:: AddPane
+## <a name="coleipframewndexaddpane"></a><a name="addpane"></a>COleIPFrameWndEx::AddPane
 
 ```
 BOOL AddPane(
@@ -208,28 +208,28 @@ BOOL AddPane(
     BOOL bTail = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *pControlBar*<br/>
-no *bTail*<br/>
+[em] *pControlBar*<br/>
+[em] *bTail*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="adjustdockinglayout"></a>COleIPFrameWndEx::AdjustDockingLayout
+## <a name="coleipframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>COleIPFrameWndEx::AdjustDockingLayout
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *HDWP*<br/>
+[em] *hdwp*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="dockpane"></a>COleIPFrameWndEx::D ockPane
+## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>COleIPFrameWndEx::DockPane
 
 ```
 void DockPane(
@@ -238,17 +238,17 @@ void DockPane(
     LPCRECT lpRect = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *pBar*<br/>
-no *nDockBarID*<br/>
-no *lpRect*<br/>
+[em] *pBar*<br/>
+[em] *nDockBarID*<br/>
+[em] *lpRect*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="dockpaneleftof"></a>COleIPFrameWndEx::D ockPaneLeftOf
+## <a name="coleipframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>COleIPFrameWndEx::DockPaneLeftOf
 
-Encaixa um painel à esquerda de outro painel.
+Docas um painel à esquerda de outro painel.
 
 ```
 BOOL DockPaneLeftOf(
@@ -256,51 +256,51 @@ BOOL DockPaneLeftOf(
     CPane* pLeftOf);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*pBar*<br/>
-no Um ponteiro para o painel a ser encaixado.
+*Pbar*<br/>
+[em] Um ponteiro para o painel para acoplar.
 
 *pLeftOf*<br/>
-no Um ponteiro para o painel que serve como origem.
+[em] Um ponteiro para o painel que serve de origem.
 
 ### <a name="return-value"></a>Valor retornado
 
-Retornará TRUE se a operação for bem-sucedida. Caso contrário, retornará FALSE.
+Retorna TRUE se a operação for bem sucedida. Caso contrário, retornará FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para encaixar vários objetos de painel em uma ordem predefinida. Esse método encaixa o painel especificado por *pBar* à esquerda do painel especificado por *pLeftOf*.
+Chame este método para ancorar vários objetos de painel em uma ordem predefinida. Este método encaixa o painel especificado por *pBar* à esquerda do painel especificado por *pLeftOf*.
 
-##  <a name="enableautohidepanes"></a>COleIPFrameWndEx::EnableAutoHidePanes
+## <a name="coleipframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>COleIPFrameWndEx:EnableAutoHidePanes
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *dwDockStyle*<br/>
+[em] *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="enabledocking"></a>COleIPFrameWndEx::EnableDocking
+## <a name="coleipframewndexenabledocking"></a><a name="enabledocking"></a>COleIPFrameWndEx::Habilitação docking
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *dwDockStyle*<br/>
+[em] *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu
+## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu
 
 ```
 void EnablePaneMenu(
@@ -312,18 +312,18 @@ void EnablePaneMenu(
     BOOL bViewMenuShowsToolbarsOnly = FALSE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *bEnable*<br/>
-no *uiCustomizeCmd*<br/>
-no *strCustomizeLabel*<br/>
-no *uiViewToolbarsMenuEntryID*<br/>
-no *bContextMenuShowsToolbarsOnly*<br/>
-no *bViewMenuShowsToolbarsOnly*<br/>
+[em] *bEnable*<br/>
+[em] *uiCustomizeCmd*<br/>
+[em] *strPersonalizeLabel*<br/>
+[em] *uiViewToolbarsMenuEntryID*<br/>
+[em] *bContextMenuMostrabarras de ferramentassomente*<br/>
+[em] *bViewMenuMostrabarras de ferramentassomente*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getactivepopup"></a>COleIPFrameWndEx::GetActivePopup
+## <a name="coleipframewndexgetactivepopup"></a><a name="getactivepopup"></a>COleIPFrameWndEx::GetActivePopup
 
 Retorna um ponteiro para o menu pop-up exibido no momento.
 
@@ -337,9 +337,9 @@ Um ponteiro para o menu pop-up ativo; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para obter um ponteiro para o objeto da [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) que está sendo exibido no momento.
+Use este método para obter um ponteiro para o objeto [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) que está atualmente exibido.
 
-##  <a name="getcontainerframewindow"></a>COleIPFrameWndEx::GetContainerFrameWindow
+## <a name="coleipframewndexgetcontainerframewindow"></a><a name="getcontainerframewindow"></a>COleIPFrameWndEx::GetContainerFrameWindow
 
 ```
 COleCntrFrameWndEx* GetContainerFrameWindow();
@@ -349,9 +349,9 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getdefaultresid"></a>COleIPFrameWndEx::GetDefaultResId
+## <a name="coleipframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>COleIPFrameWndEx::GetDefaultResId
 
-Retorna a ID de recurso de menu que foi especificada quando a janela do quadro carregou o menu.
+Retorna o ID de recurso do menu que foi especificado quando a janela do quadro carregou o menu.
 
 ```
 UINT GetDefaultResId() const;
@@ -359,13 +359,13 @@ UINT GetDefaultResId() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna a ID de recurso do menu ou 0 se a janela do quadro não tiver nenhuma barra de menus.
+Retorna o ID de recurso do menu, ou 0 se a janela do quadro não tiver barra de menu.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para recuperar a ID de recurso que foi especificada quando a janela do quadro carregou o recurso de menu chamando `COleIPFrameWndEx::LoadFrame`.
+Chame esta função para recuperar o ID de recurso especificado quando `COleIPFrameWndEx::LoadFrame`a janela do quadro carregou o recurso do menu chamando .
 
-##  <a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame
+## <a name="coleipframewndexgetdockframe"></a><a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame
 
 ```
 CFrameWnd* GetDockFrame();
@@ -375,7 +375,7 @@ CFrameWnd* GetDockFrame();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager
+## <a name="coleipframewndexgetdockingmanager"></a><a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager();
@@ -385,7 +385,7 @@ CDockingManager* GetDockingManager();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getmainframe"></a>COleIPFrameWndEx:: getmainframe
+## <a name="coleipframewndexgetmainframe"></a><a name="getmainframe"></a>COleIPFrameWndEx::GetMainFrame
 
 ```
 CFrameWnd* GetMainFrame();
@@ -395,9 +395,9 @@ CFrameWnd* GetMainFrame();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getmenubar"></a>COleIPFrameWndEx:: GetMenuBar
+## <a name="coleipframewndexgetmenubar"></a><a name="getmenubar"></a>COleIPFrameWndEx::GetMenuBar
 
-Retorna um ponteiro para o objeto de barra de menu anexado à janela do quadro.
+Retorna um ponteiro para o objeto da barra de menu anexado à janela do quadro.
 
 ```
 const CMFCMenuBar* GetMenuBar() const;
@@ -405,29 +405,29 @@ const CMFCMenuBar* GetMenuBar() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o objeto de barra de menus.
+Um ponteiro para o objeto da barra de menu.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função para recuperar um ponteiro para o objeto de barra de menu que pertence ao objeto `COleIPFrameWndEx`.
+Use esta função para recuperar um ponteiro para `COleIPFrameWndEx` o objeto da barra de menu que pertence ao objeto.
 
-##  <a name="getpane"></a>COleIPFrameWndEx:: GetPane
+## <a name="coleipframewndexgetpane"></a><a name="getpane"></a>COleIPFrameWndEx::GetPane
 
 ```
 CBasePane* GetPane(UINT nID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *NID*<br/>
+[em] *nID*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="gettearoffbars"></a>COleIPFrameWndEx::GetTearOffBars
+## <a name="coleipframewndexgettearoffbars"></a><a name="gettearoffbars"></a>COleIPFrameWndEx::GetTearOffBars
 
-Retorna uma lista de objetos de painel que estão em um estado retirado.
+Retorna uma lista de objetos de painel que estão em estado de ruptura.
 
 ```
 const CObList& GetTearOffBars() const;
@@ -435,15 +435,15 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma referência a um objeto `CObList` que contém uma coleção de ponteiros para os objetos derivados de [Classe CBasePane](../../mfc/reference/cbasepane-class.md).
+Uma referência `CObList` a um objeto que contém uma coleção de ponteiros para os objetos derivados da [Classe CBasePane.](../../mfc/reference/cbasepane-class.md)
 
 ### <a name="remarks"></a>Comentários
 
-O objeto `COleIPFrameWndEx` mantém a coleção de menus destacáveis como uma lista de objetos derivados de [Classe CBasePane](../../mfc/reference/cbasepane-class.md). Use este método para recuperar uma referência a essa lista.
+O `COleIPFrameWndEx` objeto mantém a coleção de menus tear-off como uma lista de objetos derivados da [Classe CBasePane.](../../mfc/reference/cbasepane-class.md) Use este método para recuperar uma referência a esta lista.
 
-##  <a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::GetToolbarButtonToolTipText
+## <a name="coleipframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::GetToolbarButtonToolTipText
 
-Chamado pelo Framework antes que a dica de ferramenta de um botão seja exibida.
+Chamado pela estrutura antes que a dica de ferramenta para um botão seja exibida.
 
 ```
 virtual BOOL GetToolbarButtonToolTipText(
@@ -451,13 +451,13 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString& strTTText);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*pButton*<br/>
-no Ponteiro para o botão.
+*Pbutton*<br/>
+[em] Ponteiro para o botão.
 
 *strTTText*<br/>
-no Ponteiro para o texto da dica de ferramenta.
+[em] Ponteiro para o texto da dica de ferramenta.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -465,11 +465,11 @@ A implementação padrão retorna 0.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua essa função para personalizar a exibição de dicas de ferramenta em botões da barra de ferramentas.
+Anular esta função para personalizar a exibição de dicas de ferramentas nos botões da barra de ferramentas.
 
-##  <a name="initusertoobars"></a>COleIPFrameWndEx::InitUserToobars
+## <a name="coleipframewndexinitusertoobars"></a><a name="initusertoobars"></a>COleIPFrameWndEx::InitUserToobars
 
-Especifica um intervalo de IDs de controle que a estrutura atribui às barras de ferramentas definidas pelo usuário.
+Especifica uma gama de IDs de controle que a estrutura atribui às barras de ferramentas definidas pelo usuário.
 
 ```
 void InitUserToolbars(
@@ -478,22 +478,22 @@ void InitUserToolbars(
     UINT uiUserToolbarLast)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lpszRegEntry*<br/>
-no A entrada do registro onde a biblioteca armazena as configurações da barra de ferramentas do usuário.
+*lpszRegentry*<br/>
+[em] A entrada de registro onde a biblioteca armazena as configurações da barra de ferramentas do usuário.
 
-*uiUserToolbarFirst*<br/>
-no ID de controle atribuída à primeira barra de ferramentas definida pelo usuário.
+*uiUserToolbarPrimeiro*<br/>
+[em] ID de controle atribuído à primeira barra de ferramentas definida pelo usuário.
 
 *uiUserToolbarLast*<br/>
-no ID de controle atribuída à última barra de ferramentas definida pelo usuário.
+[em] ID de controle atribuído à última barra de ferramentas definida pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função para inicializar um intervalo de IDs de controle para atribuição a barras de ferramentas que os usuários definem dinamicamente. Os parâmetros *uiUserToolbarFirst* e *uiUserToolbarLast* definem um intervalo de IDs de controle Toolbar permitido. Para desabilitar a criação de barras de ferramentas definidas pelo usuário, defina *uiUserToolbarFirst* ou *uiUserToolbarLast* como-1.
+Use essa função para inicializar uma gama de IDs de controle para atribuição de barras de ferramentas que os usuários definem dinamicamente. Os parâmetros *uiUserToolbarFirst* e *uiUserToolbarÚltima* definir uma gama de IDs de controle de barra de ferramentas permitidas. Para desativar a criação de barras de ferramentas definidas pelo usuário, defina *uiUserToolbarFirst* ou *uiUserToolbarLast* para -1.
 
-##  <a name="insertpane"></a>COleIPFrameWndEx::InsertPane
+## <a name="coleipframewndexinsertpane"></a><a name="insertpane"></a>COleIPFrameWndEx::InsertPane
 
 ```
 BOOL InsertPane(
@@ -502,19 +502,19 @@ BOOL InsertPane(
     BOOL bAfter = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *pControlBar*<br/>
-no *pTarget*<br/>
-no *bAfter*<br/>
+[em] *pControlBar*<br/>
+[em] *pTarget*<br/>
+[em] *bDepois*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ismenubaravailable"></a>COleIPFrameWndEx::IsMenuBarAvailable
+## <a name="coleipframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>COleIPFrameWndEx::IsMenuBarDisponível
 
-Determina se o ponteiro para o objeto de barra de menus não é nulo
+Determina se o ponteiro para o objeto da barra de menu não é NULO
 
 ```
 BOOL IsMenuBarAvailable() const;
@@ -522,13 +522,13 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Retornará um valor diferente de zero se a janela do quadro tiver uma barra de menus; caso contrário, retorna 0.
+Retorna um valor não-zero se a janela do quadro tiver uma barra de menu; caso contrário, retorna 0.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para determinar se a janela do quadro mantém um ponteiro não nulo para seu objeto de barra de menus.
+Chame este método para determinar se a janela do quadro mantém um ponteiro não-NULL no objeto da barra de menu.
 
-##  <a name="ispointneardocksite"></a>COleIPFrameWndEx::IsPointNearDockSite
+## <a name="coleipframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>COleIPFrameWndEx::IsPointNearDockSite
 
 ```
 BOOL IsPointNearDockSite(
@@ -537,17 +537,17 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *ponto*<br/>
-no *dwBarAlignment*<br/>
-no *bOuterEdge*<br/>
+[em] *ponto*<br/>
+[em] *dwBarAlignment*<br/>
+[em] *bOuterEdge*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="loadframe"></a>COleIPFrameWndEx:: LoadFrame
+## <a name="coleipframewndexloadframe"></a><a name="loadframe"></a>COleIPFrameWndEx::Quadro de carga
 
 ```
 virtual BOOL LoadFrame(
@@ -557,63 +557,63 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *nIDResource*<br/>
-no *dwDefaultStyle*<br/>
-no *pParentWnd*<br/>
-no *pContext*<br/>
+[em] *nIDResource*<br/>
+[em] *dwDefaultStyle*<br/>
+[em] *pParentWnd*<br/>
+[em] *pContext*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onclosedockingpane"></a>COleIPFrameWndEx::OnCloseDockingPane
+## <a name="coleipframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>COleIPFrameWndEx::OnCloseDockingPane
 
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane*);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *CDockablePane&#42;*<br/>
+[em] *&#42;cdockablepane*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="oncloseminiframe"></a>COleIPFrameWndEx::OnCloseMiniFrame
+## <a name="coleipframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>COleIPFrameWndEx::OnCloseMiniFrame
 
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *CPaneFrameWnd&#42;*<br/>
+[em] *&#42;CPaneFrameWnd*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onclosepopupmenu"></a>COleIPFrameWndEx::OnClosePopupMenu
+## <a name="coleipframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>COleIPFrameWndEx::OnClosePopupMenu
 
-Chamado pelo Framework quando um menu pop-up ativo processa uma mensagem de WM_DESTROY.
+Chamado pelo framework quando um menu pop-up ativo processa uma mensagem WM_DESTROY.
 
 ```
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pMenuPopup*<br/>
-no Um ponteiro para o objeto de menu pop-up.
+[em] Um ponteiro para o objeto do menu pop-up.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua esse método para receber notificações de objetos `CMFCPopupMenu` quando eles processarem WM_DESTROY mensagens.
+Substituir este método para `CMFCPopupMenu` receber notificações de objetos quando eles processam WM_DESTROY mensagens.
 
-##  <a name="oncmdmsg"></a>COleIPFrameWndEx::OnCmdMsg
+## <a name="coleipframewndexoncmdmsg"></a><a name="oncmdmsg"></a>COleIPFrameWndEx::OnCmdMsg
 
 ```
 virtual BOOL OnCmdMsg(
@@ -623,20 +623,20 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *NID*<br/>
-no *nCode*<br/>
-no *pExtra*<br/>
-no *pHandlerInfo*<br/>
+[em] *nID*<br/>
+[em] *nCode*<br/>
+[em] *pExtra*<br/>
+[em] *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondrawmenuimage"></a>COleIPFrameWndEx::OnDrawMenuImage
+## <a name="coleipframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>COleIPFrameWndEx::OnDrawMenuImage
 
-Chamado pelo Framework quando a imagem associada a um item de menu é desenhada.
+Chamado pela estrutura quando a imagem associada a um item do menu é desenhada.
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -645,16 +645,16 @@ virtual BOOL OnDrawMenuImage(
     const CRect& rectImage);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-no Ponteiro para o contexto do dispositivo.
+[em] Ponteiro para o contexto do dispositivo.
 
 *pMenuButton*<br/>
-no Ponteiro para o botão de menu.
+[em] Ponteiro para o botão de menu.
 
 *rectImage*<br/>
-no A imagem associada ao item de menu.
+[em] A imagem associada ao item do menu.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -662,11 +662,11 @@ A implementação padrão não faz nada e retorna 0.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua esse método se você quiser personalizar o desenho de imagem para os itens de menu que pertencem à barra de menus de Propriedade do objeto derivado de `COleIPFrameWndEx`.
+Anular este método se você quiser personalizar o desenho de imagem para os `COleIPFrameWndEx`itens do menu que pertencem à barra de menu de propriedade do objeto derivado.
 
-##  <a name="ondrawmenulogo"></a>COleIPFrameWndEx::OnDrawMenuLogo
+## <a name="coleipframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>COleIPFrameWndEx::OnDrawMenuLogo
 
-Chamado pelo Framework quando um objeto [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processa uma mensagem de WM_PAINT.
+Chamado pela estrutura quando um objeto [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processa uma mensagem WM_PAINT.
 
 ```
 virtual void OnDrawMenuLogo(
@@ -675,24 +675,24 @@ virtual void OnDrawMenuLogo(
     const CRect& rectLogo);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-no Ponteiro para o contexto do dispositivo.
+[em] Ponteiro para o contexto do dispositivo.
 
 *pMenu*<br/>
-no Ponteiro para o objeto de menu pop-up.
+[em] Ponteiro para o objeto do menu pop-up.
 
 *rectLogo*<br/>
-no Ponteiro para o logotipo a ser exibido.
+[em] Ponteiro para o logotipo para exibir.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua esse método para exibir um logotipo no menu pop-up associado à barra de menus de Propriedade do objeto derivado de `COleIPFrameWndEx`. A implementação padrão não faz nada.
+Substituir este método para exibir um logotipo no menu pop-up `COleIPFrameWndEx`associado à barra de menu de propriedade do objeto derivado. A implementação padrão não faz nada.
 
-##  <a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest
+## <a name="coleipframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest
 
-Chamado pelo Framework quando um objeto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)processa uma mensagem de WM_NCHITTEST.
+Chamado pela estrutura quando um objeto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)processa uma mensagem WM_NCHITTEST.
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -700,35 +700,35 @@ virtual BOOL OnMenuButtonToolHitTest(
     TOOLINFO* pTI);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-[in] ponteiro pButton para um botão de menu.
+[in] pButton Pointer para um botão de menu.
 
-[out] ponteiro pTI para uma estrutura de `TOOLINFO`.
+[out] pTI Pointer `TOOLINFO` para uma estrutura.
 
 ### <a name="return-value"></a>Valor retornado
 
-A implementação padrão não faz nada e retorna 0. Sua implementação deve retornar um valor diferente de zero se ele preencher o parâmetro *PTI* .
+A implementação padrão não faz nada e retorna 0. Sua implementação deve retornar um valor não-zero se preencher o parâmetro *pTI.*
 
 ### <a name="remarks"></a>Comentários
 
-Substitua esse método para fornecer informações de dica de ferramenta sobre um item de menu específico.
+Anular este método para fornecer informações do ToolTip sobre um item de menu específico.
 
-##  <a name="onmoveminiframe"></a>COleIPFrameWndEx::OnMoveMiniFrame
+## <a name="coleipframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>COleIPFrameWndEx::OnMoveMiniFrame
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *pFrame*<br/>
+[em] *pFrame*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onsetpreviewmode"></a>COleIPFrameWndEx::OnSetPreviewMode
+## <a name="coleipframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>COleIPFrameWndEx::OndaVisualizaçãodevisualizaçãoMode
 
 ```
 virtual void OnSetPreviewMode(
@@ -736,14 +736,14 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *bPreview*<br/>
-no *pState*<br/>
+[em] *bPreview*<br/>
+[em] *pEstado*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onshowcustomizepane"></a>COleIPFrameWndEx::OnShowCustomizePane
+## <a name="coleipframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>COleIPFrameWndEx::OnShowPersonalizePane
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -751,53 +751,53 @@ virtual BOOL OnShowCustomizePane(
     UINT uiToolbarID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *pMenuPane*<br/>
-no *uiToolbarID*<br/>
+[em] *pMenuPane*<br/>
+[em] *uiToolbarID*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onshowpanes"></a>COleIPFrameWndEx::OnShowPanes
+## <a name="coleipframewndexonshowpanes"></a><a name="onshowpanes"></a>COleIPFrameWndEx::OnShowPanes
 
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *bShow*<br/>
+[em] *bMostrar*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onshowpopupmenu"></a>COleIPFrameWndEx::OnShowPopupMenu
+## <a name="coleipframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>COleIPFrameWndEx::OnShowPopupMenu
 
-Chamado pelo Framework quando um menu pop-up é exibido.
+Chamado pela estrutura quando um menu pop-up é exibido.
 
 ```
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pMenuPopup*<br/>
-no Ponteiro para o menu pop-up a ser exibido.
+[em] Ponteiro para o menu pop-up a ser exibido.
 
 ### <a name="return-value"></a>Valor retornado
 
-A implementação padrão não faz nada e retorna um valor diferente de zero. Sua implementação deverá retornar FALSE se o menu pop-up não puder ser exibido.
+A implementação padrão não faz nada e retorna um valor não-zero. Sua implementação deve retornar FALSE se o menu pop-up não puder ser exibido.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua esse método para personalizar a exibição de um menu pop-up. Por exemplo, você pode alterar os botões de menu para botões de menu de cor ou inicializar barras de divisão.
+Anular este método para personalizar a exibição de um menu pop-up. Por exemplo, você pode alterar os botões do menu para colorir botões de menu ou inicializar barras de tear-off.
 
-##  <a name="ontearoffmenu"></a>COleIPFrameWndEx::OnTearOffMenu
+## <a name="coleipframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>COleIPFrameWndEx::OnTearOffMenu
 
-Chamado pelo Framework quando o usuário seleciona um menu que tem uma barra suspensa.
+Chamado pela estrutura quando o usuário seleciona um menu que tem uma barra de ruptura.
 
 ```
 virtual BOOL OnTearOffMenu(
@@ -805,23 +805,23 @@ virtual BOOL OnTearOffMenu(
     CPane* pBar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pMenuPopup*<br/>
-no Um ponteiro para o menu pop-up que o usuário selecionou.
+[em] Um ponteiro para o menu pop-up que o usuário selecionou.
 
-*pBar*<br/>
-no Um ponteiro para o painel que hospeda o menu.
+*Pbar*<br/>
+[em] Um ponteiro para o painel que hospeda o menu.
 
 ### <a name="return-value"></a>Valor retornado
 
-TRUE se você quiser que a estrutura ative o menu pop-up; caso contrário, FALSE. O valor padrão é TRUE.
+TRUE se você quiser que a estrutura ative o menu pop-up; caso contrário, FALSO. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua essa função se desejar personalizar a configuração da barra de desmontagem.
+Anular esta função se você quiser personalizar a configuração da barra de rasgos.
 
-##  <a name="panefrompoint"></a>COleIPFrameWndEx::P aneFromPoint
+## <a name="coleipframewndexpanefrompoint"></a><a name="panefrompoint"></a>COleIPFrameWndEx::PaneFromPoint
 
 ```
 CBasePane* PaneFromPoint(
@@ -837,45 +837,45 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *ponto*<br/>
-no *nSensitivity*<br/>
-no *bExactBar*<br/>
-no *pRTCBarType*<br/>
-no *dwAlignment*<br/>
+[em] *ponto*<br/>
+[em] *nSensibilidade*<br/>
+[em] *bExactBar*<br/>
+[em] *pRTCBarType*<br/>
+[em] *dwAlignment*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="pretranslatemessage"></a>COleIPFrameWndEx::P reTranslateMessage
+## <a name="coleipframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a>COleIPFrameWndEx::PreTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *pMsg*<br/>
+[em] *pMsg*<br/>
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="recalclayout"></a>COleIPFrameWndEx::RecalcLayout
+## <a name="coleipframewndexrecalclayout"></a><a name="recalclayout"></a>COleIPFrameWndEx::RecalcLayout
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *bNotify*<br/>
+[em] *bNotificar*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager
+## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager
 
 ```
 void RemovePaneFromDockManager(
@@ -886,36 +886,36 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *pControlBar*<br/>
-no *bDestroy*<br/>
-no *bAdjustLayout*<br/>
-no *bAutoHide*<br/>
-no *pBarReplacement*<br/>
+[em] *pControlBar*<br/>
+[em] *bDestruir*<br/>
+[em] *bAdjustLayout*<br/>
+[em] *bAutoHide*<br/>
+[em] *pBarReplacement*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setdockstate"></a>COleIPFrameWndEx:: SetDockState
+## <a name="coleipframewndexsetdockstate"></a><a name="setdockstate"></a>COleIPFrameWndEx::SetDockState
 
-Aplica o estado de encaixe especificado a painéis que pertencem à janela do quadro.
+Aplica o estado de acoplamento especificado aos painéis que pertencem à janela do quadro.
 
 ```
 void SetDockState(const CDockState& state);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*state*<br/>
-no Especifica o estado de encaixe.
+*Estado*<br/>
+[em] Especifica o estado de acoplamento.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função para especificar um novo estado de encaixe para painéis que pertencem ao objeto `COleIPFrameWndEx`.
+Use esta função para especificar um novo estado `COleIPFrameWndEx` de acoplamento para painéis que pertencem ao objeto.
 
-##  <a name="setuptoolbarmenu"></a>COleIPFrameWndEx::SetupToolbarMenu
+## <a name="coleipframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>COleIPFrameWndEx::ConfiguraçãoBarra de ferramentasMenu
 
-Modifica um objeto Toolbar pesquisando itens fictícios e substituindo-os pelos itens especificados pelo usuário.
+Modifica um objeto da barra de ferramentas pesquisando itens manequim e substituindo-os pelos itens definidos pelo usuário especificados.
 
 ```
 void SetupToolbarMenu(
@@ -924,20 +924,20 @@ void SetupToolbarMenu(
     const UINT uiViewUserToolbarCmdLast);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*AdicionarMenu*<br/>
-no Uma referência a um objeto [CMenu](../../mfc/reference/cmenu-class.md) a ser modificado.
+*Menu*<br/>
+[em] Uma referência a um objeto [CMenu](../../mfc/reference/cmenu-class.md) a ser modificada.
 
 *uiViewUserToolbarCmdFirst*<br/>
-no Especifica o primeiro comando definido pelo usuário.
+[em] Especifica o primeiro comando definido pelo usuário.
 
 *uiViewUserToolbarCmdLast*<br/>
-no Especifica o último comando definido pelo usuário.
+[em] Especifica o último comando definido pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="showpane"></a>COleIPFrameWndEx:: expane
+## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>COleIPFrameWndEx::ShowPane
 
 ```
 void ShowPane(
@@ -947,18 +947,18 @@ void ShowPane(
     BOOL bActivate);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-no *pBar*<br/>
-no *bShow*<br/>
-no *bDelay*<br/>
-no *bActivate*<br/>
+[em] *pBar*<br/>
+[em] *bMostrar*<br/>
+[em] *bAtraso*<br/>
+[em] *bAtivar*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="winhelpa"></a>COleIPFrameWndEx:: WinHelpa
+## <a name="coleipframewndexwinhelpa"></a><a name="winhelpa"></a>COleIPFrameWndEx::WinHelpA
 
-Chamado pelo Framework para iniciar o aplicativo WinHelp ou a ajuda de contexto.
+Chamado pela estrutura para iniciar o aplicativo WinHelp ou ajuda de contexto.
 
 ```
 virtual void WinHelp(
@@ -966,12 +966,12 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-[in] dwData especifica os dados conforme necessário para o tipo de ajuda especificado por *nCmd*.
+[in] dwData Especifica os dados conforme necessário para o tipo de ajuda especificada pelo *nCmd*.
 
 *nCmd*<br/>
-no Especifica o tipo de ajuda solicitada. Para obter uma lista de valores possíveis e como eles afetam o parâmetro *dwData* , consulte a [função WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) no SDK do Windows.
+[em] Especifica o tipo de ajuda solicitada. Para obter uma lista de valores possíveis e como eles afetam o parâmetro *dwData,* consulte a [função WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 

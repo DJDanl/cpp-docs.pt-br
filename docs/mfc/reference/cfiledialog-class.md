@@ -132,16 +132,16 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: c301766b64af7fc1523b39adad91d9b52a5e88f7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506590"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373902"
 ---
 # <a name="cfiledialog-class"></a>Classe CFileDialog
 
-Encapsula a caixa de diálogo comum que é usada para operações de arquivo abrir ou salvar arquivo.
+Encapsula a caixa de diálogo comum usada para operações de abertura de arquivo ou de salvamento de arquivos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -155,156 +155,156 @@ class CFileDialog : public CCommonDialog
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CFileDialog::CFileDialog](#cfiledialog)|Constrói um objeto `CFileDialog`.|
+|[cfiledialog::CfileDialog](#cfiledialog)|Constrói um objeto `CFileDialog`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CFileDialog::AddCheckButton](#addcheckbutton)|Adiciona um botão de seleção à caixa de diálogo.|
-|[CFileDialog::AddComboBox](#addcombobox)|Adiciona uma caixa de combinação ao diálogo.|
-|[CFileDialog::AddControlItem](#addcontrolitem)|Adiciona um item a um controle de contêiner na caixa de diálogo.|
-|[CFileDialog::AddEditBox](#addeditbox)|Adiciona uma caixa de edição ao diálogo.|
-|[CFileDialog::AddMenu](#addmenu)|Adiciona um menu à caixa de diálogo.|
-|[CFileDialog::AddPlace](#addplace)|Sobrecarregado. Adiciona uma pasta à lista de locais disponíveis para o usuário abrir ou salvar itens.|
-|[CFileDialog::AddPushButton](#addpushbutton)|Adiciona um botão à caixa de diálogo.|
-|[CFileDialog::AddRadioButtonList](#addradiobuttonlist)|Adiciona um grupo de botões de opção (também conhecido como botão de opção) à caixa de diálogo.|
-|[CFileDialog::AddSeparator](#addseparator)|Adiciona um separador à caixa de diálogo.|
-|[CFileDialog::AddText](#addtext)|Adiciona o conteúdo de texto à caixa de diálogo.|
-|[CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog)|Atualiza o estado do `CFileDialog` para corresponder aos parâmetros e sinalizadores armazenados na variável de `m_ofn` membro.|
-|[CFileDialog::D oModal](#domodal)|Exibe a caixa de diálogo e permite que o usuário faça uma seleção.|
-|[CFileDialog::EnableOpenDropDown](#enableopendropdown)|Habilita uma lista suspensa no botão **abrir** ou **salvar** na caixa de diálogo.|
-|[CFileDialog::EndVisualGroup](#endvisualgroup)|Interrompe a adição de elementos a um grupo Visual na caixa de diálogo.|
-|[CFileDialog::GetCheckButtonState](#getcheckbuttonstate)|Obtém o estado atual de um botão de verificação (caixa de seleção) no diálogo.|
-|[CFileDialog::GetControlItemState](#getcontrolitemstate)|Obtém o estado atual de um item em um controle de contêiner encontrado na caixa de diálogo.|
-|[CFileDialog::GetControlState](#getcontrolstate)|Obtém a visibilidade atual e os Estados habilitados de um determinado controle.|
-|[CFileDialog::GetEditBoxText](#geteditboxtext)|Obtém o texto atual em um controle de caixa de edição.|
+|[cfiledialog::AddCheckbutton](#addcheckbutton)|Adiciona um botão de verificação à caixa de diálogo.|
+|[CFileDialog::AddComboBox](#addcombobox)|Adiciona uma caixa de combinação à caixa de diálogo.|
+|[cfiledialog::AddControlItem](#addcontrolitem)|Adiciona um item a um controle de contêiner na caixa de diálogo.|
+|[cfiledialog::AddEditBox](#addeditbox)|Adiciona uma caixa de edição à caixa de diálogo.|
+|[cfiledialog::Addmenu](#addmenu)|Adiciona um menu ao diálogo.|
+|[cfiledialog::addplace](#addplace)|Sobrecarregado. Adiciona uma pasta à lista de lugares disponíveis para o usuário abrir ou salvar itens.|
+|[cfiledialog::AddPushButton](#addpushbutton)|Adiciona um botão à caixa de diálogo.|
+|[cfiledialog::Addradiobuttonlist](#addradiobuttonlist)|Adiciona um botão de opção (também conhecido como botão de rádio) à caixa de diálogo.|
+|[cfiledialog::AddSeparator](#addseparator)|Adiciona um separador ao diálogo.|
+|[cfiledialog::AddText](#addtext)|Adiciona conteúdo de texto à caixa de diálogo.|
+|[cfiledialog::ApplyOFNToShellDialog](#applyofntoshelldialog)|Atualiza o estado `CFileDialog` do para corresponder aos parâmetros e sinalizadores armazenados na `m_ofn` variável membro.|
+|[CFileDialog::DoModal](#domodal)|Exibe a caixa de diálogo e permite que o usuário faça uma seleção.|
+|[cfileDialog::HabilitarOpenDropDown](#enableopendropdown)|Habilita uma lista de parada no botão **Abrir** ou **Salvar** na caixa de diálogo.|
+|[cfiledialog::EndvisualGroup](#endvisualgroup)|Impede a adição de elementos a um grupo visual no diálogo.|
+|[cfiledialog::getCheckbuttonstate](#getcheckbuttonstate)|Obtém o estado atual de um botão de seleção (caixa de seleção) na caixa de diálogo.|
+|[cfiledialog::GetControlItemState](#getcontrolitemstate)|Obtém o estado atual de um item em um controle de contêiner encontrado na caixa de diálogo.|
+|[cfiledialog::getcontrolstate](#getcontrolstate)|Obtém a visibilidade atual e estados habilitados de um determinado controle.|
+|[cfiledialog::getEditBoxText](#geteditboxtext)|Obtém o texto atual em um controle de caixa de edição.|
 |[CFileDialog::GetFileExt](#getfileext)|Retorna a extensão do arquivo selecionado.|
-|[CFileDialog::GetFileName](#getfilename)|Retorna o nome de arquivo do arquivo selecionado.|
-|[CFileDialog::GetFileTitle](#getfiletitle)|Retorna o título do arquivo selecionado.|
-|[CFileDialog::GetFolderPath](#getfolderpath)|Recupera o caminho da pasta ou diretório aberto no momento para uma caixa de diálogo **aberta** no estilo do Explorer ou **salvar como** comum.|
-|[CFileDialog::GetIFileDialogCustomize](#getifiledialogcustomize)|Recupera o objeto com interno para um objeto `CFileDialog` personalizado.|
-|[CFileDialog::GetIFileOpenDialog](#getifileopendialog)|Recupera o objeto com interno para um `CFileDialog` que é usado como uma caixa de diálogo de arquivo **aberto** .|
-|[CFileDialog::GetIFileSaveDialog](#getifilesavedialog)|Recupera o objeto com interno para um `CFileDialog` que é usado como uma caixa de diálogo **salvar** arquivo.|
-|[CFileDialog::GetNextPathName](#getnextpathname)|Retorna o caminho completo do próximo arquivo selecionado.|
-|[CFileDialog::GetOFN](#getofn)|Recupera a `OPENFILENAME` estrutura `CFileDialog` do objeto.|
-|[CFileDialog::GetPathName](#getpathname)|Retorna o caminho completo do arquivo selecionado.|
-|[CFileDialog::GetReadOnlyPref](#getreadonlypref)|Retorna o status somente leitura do arquivo selecionado.|
-|[CFileDialog::GetResult](#getresult)|Obtém a opção que o usuário fez na caixa de diálogo.|
-|[CFileDialog::GetResults](#getresults)|Obtém as opções do usuário em uma caixa de diálogo que permite seleção múltipla.|
-|[CFileDialog::GetSelectedControlItem](#getselectedcontrolitem)|Obtém um item específico dos controles de contêiner especificados na caixa de diálogo.|
-|[CFileDialog::GetStartPosition](#getstartposition)|Retorna a posição do primeiro elemento da lista de nomes de arquivos.|
-|[CFileDialog::HideControl](#hidecontrol)|Oculta o controle especificado em uma caixa de diálogo **abrir** no estilo do Explorer ou **salvar como** comum.|
-|[CFileDialog::IsPickFoldersMode](#ispickfoldersmode)|Determina se a caixa de diálogo atual no modo de seletor de pasta.|
-|[CFileDialog::MakeProminent](#makeprominent)|Coloca um controle na caixa de diálogo para que ele se destaque em comparação com outros controles adicionados.|
-|[CFileDialog::RemoveControlItem](#removecontrolitem)|Remove um item de um controle de contêiner na caixa de diálogo.|
-|[CFileDialog::SetCheckButtonState](#setcheckbuttonstate)|Define o estado atual de um botão de verificação (caixa de seleção) no diálogo.|
-|[CFileDialog::SetControlItemState](#setcontrolitemstate)|Define o estado atual de um item em um controle de contêiner encontrado na caixa de diálogo.|
-|[CFileDialog::SetControlItemText](#setcontrolitemtext)|Define o texto de um item de controle. Por exemplo, o texto que acompanha um botão de opção ou um item em um menu.|
-|[CFileDialog::SetControlLabel](#setcontrollabel)|Define o texto associado a um controle, como um texto de botão ou um rótulo de caixa de edição.|
-|[CFileDialog::SetControlState](#setcontrolstate)|Define a visibilidade atual e os Estados habilitados de um determinado controle.|
-|[CFileDialog::SetControlText](#setcontroltext)|Define o texto do controle especificado em uma caixa de diálogo **abrir** no estilo do Explorer ou **salvar como** comum.|
-|[CFileDialog::SetDefExt](#setdefext)|Define a extensão de nome de arquivo padrão para uma caixa de diálogo **abrir** no estilo do Explorer ou **salvar como** comum.|
-|[CFileDialog::SetEditBoxText](#seteditboxtext)|Define o texto atual em um controle de caixa de edição.|
-|[CFileDialog::SetProperties](#setproperties)|Fornece um repositório de propriedades que define os valores padrão a serem usados para o item que está sendo salvo.|
-|[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|Define o estado selecionado de um item específico em um grupo de botões de opção ou de uma caixa de combinação encontrada no diálogo.|
-|[CFileDialog::SetTemplate](#settemplate)|Define o modelo de caixa de diálogo `CFileDialog` para o objeto.|
-|[CFileDialog::StartVisualGroup](#startvisualgroup)|Declara um grupo Visual na caixa de diálogo. As chamadas subsequentes para qualquer método "Add" adicionam esses elementos a esse grupo.|
-|[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|Atualiza os dados armazenados na `m_ofn` variável de membro para corresponder ao estado atual da caixa de diálogo de arquivo.|
+|[cfiledialog::getFileName](#getfilename)|Retorna o nome do arquivo do arquivo selecionado.|
+|[cfiledialog::getFileTitle](#getfiletitle)|Retorna o título do arquivo selecionado.|
+|[cfiledialog::getfolderpathPath](#getfolderpath)|Recupera o caminho da pasta ou diretório atualmente aberto para uma caixa de diálogo **aberta** no estilo Explorer ou **Save As** comum.|
+|[cfiledialog::getiFileDialogCustom](#getifiledialogcustomize)|Recupera o objeto COM interno `CFileDialog` para um objeto personalizado.|
+|[cfiledialog::getifileopendialog](#getifileopendialog)|Recupera o objeto COM `CFileDialog` interno para um que é usado como uma caixa de diálogo de arquivo **Aberto.**|
+|[cfiledialog::getiFileSavedialog](#getifilesavedialog)|Recupera o objeto COM `CFileDialog` interno para um que é usado como uma caixa de diálogo **Salvar** arquivo.|
+|[cfiledialog::getNextPathName](#getnextpathname)|Retorna o caminho completo do próximo arquivo selecionado.|
+|[cfiledialog::getOFN](#getofn)|Recupera a `OPENFILENAME` estrutura `CFileDialog` do objeto.|
+|[cfiledialog::getPathName](#getpathname)|Retorna o caminho completo do arquivo selecionado.|
+|[cfiledialog::GetReadOnlyPref](#getreadonlypref)|Retorna o status somente leitura do arquivo selecionado.|
+|[cfiledialog::getResult](#getresult)|Obtém-se a escolha que o usuário fez na caixa de diálogo.|
+|[cfiledialog::getResults](#getresults)|Obtém as escolhas do usuário em uma caixa de diálogo que permite a seleção múltipla.|
+|[cfiledialog::GetSelectedControlItem](#getselectedcontrolitem)|Obtém um item específico de controles de contêiner especificados na caixa de diálogo.|
+|[cfiledialog::getStartPosition](#getstartposition)|Retorna a posição do primeiro elemento da lista de nomes do arquivo.|
+|[cfiledialog::Ocultar controle](#hidecontrol)|Oculta o controle especificado em uma caixa de diálogo estilo Explorer **Open** ou **Save As** comum.|
+|[CFileDialog::IsPickPastsMode](#ispickfoldersmode)|Determina se a caixa de diálogo atual no modo seletor de pastas.|
+|[cfiledialog::MakeProminent](#makeprominent)|Coloca um controle no diálogo para que ele se destaque em comparação com outros controles adicionados.|
+|[cfilediálogo::RemoveControlItem](#removecontrolitem)|Remove um item de um controle de contêiner na caixa de diálogo.|
+|[cfiledialog::setCheckButtonstate](#setcheckbuttonstate)|Define o estado atual de um botão de seleção (caixa de seleção) na caixa de diálogo.|
+|[cfileDiálogo::SetControlItemState](#setcontrolitemstate)|Define o estado atual de um item em um controle de contêiner encontrado na caixa de diálogo.|
+|[cfileDiálogo::SetControlItemText](#setcontrolitemtext)|Define o texto de um item de controle. Por exemplo, o texto que acompanha um botão de rádio ou um item em um menu.|
+|[cfile 'Diálogo':'SetControl'](#setcontrollabel)|Define o texto associado a um controle, como texto de botão ou um rótulo de caixa de edição.|
+|[cfiledialog::setControlState](#setcontrolstate)|Define a visibilidade atual e os estados habilitados de um determinado controle.|
+|[cfileDialog::SetControlText](#setcontroltext)|Define o texto para o controle especificado em uma caixa de diálogo **aberto** ou **salvo como** um ponto de diálogo comum no estilo Explorer.|
+|[cfiledialog::SetDefExt](#setdefext)|Define a extensão de nome de arquivo padrão para uma caixa de diálogo **'Abrir'** estilo Explorer ou **Salvar como** uma caixa de diálogo comum.|
+|[cfileDialog::SetEditBoxText](#seteditboxtext)|Define o texto atual em um controle de caixa de edição.|
+|[cfileDialog::SetPropriedades](#setproperties)|Fornece um repositório de propriedades que define os valores padrão a serem usados para o item que está sendo salvo.|
+|[cfileDiálogo::ConjuntoConjuntoControledecontroleItem](#setselectedcontrolitem)|Define o estado selecionado de um item específico em um grupo de botões de opção ou em uma caixa de combinação encontrada na caixa de diálogo.|
+|[cfileDialog::SetTemplate](#settemplate)|Define o modelo da `CFileDialog` caixa de diálogo para o objeto.|
+|[cfiledialog::StartVisualGroup](#startvisualgroup)|Declara um grupo visual na caixa de diálogo. Chamadas subseqüentes a qualquer método de "adicionar" adicionam esses elementos a este grupo.|
+|[cfiledialog::updateOFnFromShellDialog](#updateofnfromshelldialog)|Atualiza os dados armazenados na variável `m_ofn` membro para corresponder ao estado atual da caixa de diálogo de arquivo.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CFileDialog::OnButtonClicked](#onbuttonclicked)|Chamado quando o botão é clicado.|
-|[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Chamado quando a caixa de seleção está marcada/desmarcada.|
-|[CFileDialog::OnControlActivating](#oncontrolactivating)|Chamado quando o controle está sendo ativo.|
-|[CFileDialog::OnFileNameChange](#onfilenamechange)|Manipula a mensagem WM_NOTIFY CDN_SELCHANGE.|
-|[CFileDialog::OnFileNameOK](#onfilenameok)|Valida o nome do arquivo inserido na caixa de diálogo.|
-|[CFileDialog::OnFolderChange](#onfolderchange)|Manipula a mensagem WM_NOTIFY CDN_FOLDERCHANGE.|
-|[CFileDialog::OnInitDone](#oninitdone)|Manipula a mensagem WM_NOTIFY CDN_INITDONE.|
-|[CFileDialog::OnItemSelected](#onitemselected)|Chamado quando o item de contêiner está sendo selecionado.|
-|[CFileDialog::OnLBSelChangedNotify](#onlbselchangednotify)|Permite que você execute ações personalizadas quando a seleção de arquivo é alterada.|
-|[CFileDialog::OnShareViolation](#onshareviolation)|Lida com violações de compartilhamento.|
-|[CFileDialog:: OnTypeChange](#ontypechange)|Manipula a mensagem WM_NOTIFY CDN_TYPECHANGE.|
+|[cfiledialog::OnButtonClicked](#onbuttonclicked)|Chamado quando o botão é clicado.|
+|[cfiledialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Chamado quando a caixa de seleção é verificada/desmarcada.|
+|[CFileDialog::OnControlActivating](#oncontrolactivating)|Chamado quando o controle está ativo.|
+|[cfiledialog::OnFileNameChange](#onfilenamechange)|Lida com a mensagem CDN_SELCHANGE WM_NOTIFY.|
+|[cfiledialog::OnFilenameOK](#onfilenameok)|Valida o nome do arquivo inserido na caixa de diálogo.|
+|[cfiledialog::OnFolderChange](#onfolderchange)|Lida com a mensagem CDN_FOLDERCHANGE WM_NOTIFY.|
+|[cfiledialog::OnInitDone](#oninitdone)|Lida com a mensagem WM_NOTIFY CDN_INITDONE.|
+|[cfiledialog::OnItemSelecionado](#onitemselected)|Chamado quando o item do contêiner está sendo selecionado.|
+|[cfiledialog::OnLBSelChangedNotificar](#onlbselchangednotify)|Permite que você execute ações personalizadas quando a seleção de arquivos for mudada.|
+|[cfiledialog::onShareViolation](#onshareviolation)|Lida com violações de compartilhamento.|
+|[cfiledialog::OnTypeChange](#ontypechange)|Lida com a mensagem WM_NOTIFY CDN_TYPECHANGE.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CFileDialog:: m_ofn](#m_ofn)|A estrutura `OPENFILENAME` do Windows. Fornece acesso aos parâmetros da caixa de diálogo de arquivo básico.|
+|[CFileDialog::m_ofn](#m_ofn)|A `OPENFILENAME` estrutura do Windows. Fornece acesso aos parâmetros básicos da caixa de diálogo de arquivos.|
 
 ## <a name="remarks"></a>Comentários
 
-Caixas de diálogo de arquivo comum permitem implementar caixas de diálogo de seleção de arquivos, por exemplo, **Abrir arquivo** e **salvar como**, de maneira consistente com os padrões do Windows.
+Caixas de diálogo de arquivo comuns permitem que você implemente caixas de diálogo de seleção de arquivos, por exemplo, **Abrir arquivo** e **salvar como**, de uma maneira consistente com os padrões do Windows.
 
-Você pode usar `CFileDialog` o as com o construtor fornecido ou pode derivar sua própria classe de caixa de diálogo `CFileDialog` de e escrever um construtor para atender às suas necessidades. Em ambos os casos, essas caixas de diálogo se comportarão como caixas de diálogo padrão do MFC porque são derivadas da [classe CCommonDialog](../../mfc/reference/ccommondialog-class.md). `CFileDialog`depende do COMMDLG. Arquivo DLL que está incluído no Windows.
+Você pode `CFileDialog` usar como está com o construtor fornecido, ou você `CFileDialog` pode derivar sua própria classe caixa de diálogo e escrever um construtor para atender às suas necessidades. Em ambos os casos, essas caixas de diálogo se comportarão como caixas de diálogo MFC padrão porque são derivadas da [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md). `CFileDialog`conta com o COMMDLG. Arquivo DLL que está incluído no Windows.
 
-A aparência e a funcionalidade do `CFileDialog` com o Windows Vista ou posterior diferem das versões anteriores do Windows. O padrão `CFileDialog` usa automaticamente o novo estilo Windows Vista ou posterior sem alterações de código se um programa for compilado e executado no Windows Vista ou posterior. Use o parâmetro *bVistaStyle* no construtor para substituir manualmente essa atualização automática. A exceção à atualização automática é de caixas de diálogo personalizadas. Eles não serão convertidos para o novo estilo. Para obter mais informações sobre o construtor, consulte [CFileDialog:: CFileDialog](#cfiledialog).
+Tanto a aparência quanto a `CFileDialog` funcionalidade do com o Windows Vista ou posterior diferem das versões anteriores do Windows. O `CFileDialog` padrão usa automaticamente o novo estilo Windows Vista ou posterior sem alterações de código se um programa for compilado e executado no Windows Vista ou posteriormente. Use o parâmetro *bVistaStyle* no construtor para substituir manualmente esta atualização automática. A exceção à atualização automática são as caixas de diálogo personalizadas. Eles não serão convertidos para o novo estilo. Para obter mais informações sobre o construtor, consulte [CFileDialog::CFileDialog](#cfiledialog).
 
 > [!NOTE]
->  O sistema de identificação de controle difere no Windows Vista ou posterior de versões anteriores do Windows quando você `CFileDialog`usa um. Você deve atualizar todas as referências `CFileDialog` a controles no código antes de poder portar seu projeto de uma versão anterior do Windows.
+> O sistema de ID de controle difere no Windows Vista `CFileDialog`ou mais tarde das versões anteriores do Windows quando você usa um . Você deve atualizar todas `CFileDialog` as referências aos controles em código antes de poder portar seu projeto a partir de uma versão anterior do Windows.
 
-Alguns `CFileDialog` métodos não têm suporte no Windows Vista ou posterior. Verifique o tópico Método individual para obter informações sobre se há suporte para o método. Além disso, as seguintes funções herdadas não têm suporte no Windows Vista ou posterior:
+Alguns `CFileDialog` métodos não são suportados no Windows Vista ou posteriormente. Verifique o tópico do método individual para obter informações sobre se o método é suportado. Além disso, as seguintes funções herdadas não são suportadas no Windows Vista ou posteriormente:
 
 - [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
 
-- [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
+- [diálogo::Fonte de início](../../mfc/reference/cdialog-class.md#onsetfont)
 
-As mensagens do Windows para `CFileDialog` a classe variam de acordo com o sistema operacional que você está usando. Por exemplo, o Windows XP não oferece suporte a [CDialog:: OnCancel](../../mfc/reference/cdialog-class.md#oncancel) e [CDialog:: OnOK](../../mfc/reference/cdialog-class.md#onok) para a `CFileDialog` classe. No entanto, o Windows Vista e sistemas operacionais posteriores dão suporte a eles. Para obter mais informações sobre as diferentes mensagens que são geradas e a ordem em que elas são recebidas, consulte [exemplo de CFileDialog: Log de ordem](../../overview/visual-cpp-samples.md)de evento.
+As mensagens do `CFileDialog` Windows para a classe variam de acordo com o sistema operacional que você está usando. Por exemplo, o Windows XP não suporta [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) e `CFileDialog` [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) para a classe. No entanto, o Windows Vista e os sistemas operacionais posteriores os suportam. Para obter mais informações sobre as diferentes mensagens geradas e a ordem em que são recebidas, consulte [CFileDialog Sample: Logging Event Order](../../overview/visual-cpp-samples.md).
 
-Para usar um `CFileDialog` objeto, primeiro crie o objeto usando o `CFileDialog` Construtor. Depois que a caixa de diálogo tiver sido construída, você poderá definir ou modificar quaisquer valores na estrutura [CFileDialog:: m_ofn](#m_ofn) para inicializar os valores ou Estados dos controles da caixa de diálogo. A `m_ofn` estrutura é do tipo `OPENFILENAME`. Para obter mais informações, consulte a estrutura [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) no SDK do Windows.
+Para usar `CFileDialog` um objeto, primeiro crie `CFileDialog` o objeto usando o construtor. Depois que a caixa de diálogo for construída, você pode definir ou modificar quaisquer valores na estrutura [CFileDialog::m_ofn](#m_ofn) para inicializar os valores ou estados dos controles da caixa de diálogo. A `m_ofn` estrutura é `OPENFILENAME`do tipo. Para obter mais informações, consulte a estrutura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) no SDK do Windows.
 
-Depois de inicializar os controles da caixa de diálogo, chame o método [CFileDialog::D omodal](#domodal) para exibir a caixa de diálogo para que o usuário possa digitar o caminho e o nome do arquivo. `DoModal`Retorna se o usuário clicou no botão OK (IDOK) ou Cancel (IDCANCEL). Se `DoModal` retornar IDOK, você poderá usar uma `CFileDialog` das funções de membro público para recuperar as informações colocadas pelo usuário.
+Depois de inicializar os controles da caixa de diálogo, ligue para o método [CFileDialog::DoModal](#domodal) para exibir a caixa de diálogo para que o usuário possa digitar o caminho e o nome do arquivo. `DoModal`retorna se o usuário clicou no botão OK (IDOK) ou no botão Cancelar (IDCANCEL). Se `DoModal` retornar o IDOK, você `CFileDialog` pode usar uma das funções do membro público para recuperar as informações colocadas pelo usuário.
 
 > [!NOTE]
-> No Windows Vista ou posterior, várias chamadas para [IFileDialog::](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) SetFileTypes causam um erro. A segunda chamada para `SetFileTypes` para qualquer instância de a `CFileDialog` retornará E_UNEXPECTED no Windows Vista ou posterior. Algumas `CFileDialog` funções de método `SetFileTypes`chamam. Por exemplo, duas chamadas para `CFileDialog::DoModal` para a mesma instância de um `CFileDialog` gera [Assert](diagnostic-services.md#assert).
+> No Windows Vista ou posterior, várias chamadas para [IFileDialog::SetFileTypes](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) causa um erro. A segunda `SetFileTypes` chamada para qualquer `CFileDialog` instância de um retornará E_UNEXPECTED no Windows Vista ou posterior. Algumas `CFileDialog` funções `SetFileTypes`do método chamam . Por exemplo, duas `CFileDialog::DoModal` chamadas para a `CFileDialog` mesma instância de um [gera ASSERT](diagnostic-services.md#assert).
 
-`CFileDialog`inclui vários membros protegidos que permitem a manipulação personalizada de violações de compartilhamento, validação de nome de arquivo e notificação de alteração da caixa de listagem. Esses membros protegidos são funções de retorno de chamada que a maioria dos aplicativos não precisa usar porque o tratamento padrão é executado automaticamente. As entradas de mapa de mensagens para essas funções não são necessárias porque são funções virtuais padrão.
+`CFileDialog`inclui vários membros protegidos que permitem que você faça o tratamento personalizado de violações de compartilhamento, validação de nome de arquivo e notificação de alteração de caixa de lista. Esses membros protegidos são funções de retorno de chamada que a maioria dos aplicativos não precisa usar porque o manuseio padrão é realizado automaticamente. As entradas de mapa de mensagens para essas funções não são necessárias porque são funções virtuais padrão.
 
-Você pode usar a função [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) do Windows para determinar se ocorreu um erro durante a inicialização da caixa de diálogo e para saber mais sobre o erro.
+Você pode usar a função Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) para determinar se ocorreu um erro durante a inicialização da caixa de diálogo e para saber mais sobre o erro.
 
-A destruição de `CFileDialog` objetos é manipulada automaticamente. Você não precisa chamar [CDialog:: EndDialog](../../mfc/reference/cdialog-class.md#enddialog).
+A destruição de `CFileDialog` objetos é tratada automaticamente. Você não precisa ligar para [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog).
 
-Para permitir que o usuário Selecione vários arquivos, defina o sinalizador OFN_ALLOWMULTISELECT antes de `DoModal`chamar. Você deve fornecer seu próprio buffer de nome de arquivo para acomodar a lista retornada de vários nomes de arquivo. Faça isso substituindo `m_ofn.lpstrFile` por um ponteiro para um buffer que você alocou, depois de construir o `CFileDialog`, mas antes de chamar `DoModal`.
+Para permitir que o usuário selecione vários `DoModal`arquivos, defina o sinalizador OFN_ALLOWMULTISELECT antes de chamar . Você deve fornecer seu próprio buffer de nome de arquivo para acomodar a lista retornada de vários nomes de arquivo. Faça isso substituindo `m_ofn.lpstrFile` por um ponteiro para um buffer que `CFileDialog`você alocou, depois de construir o , mas antes de chamar `DoModal`.
 
-Além disso, você deve `m_ofn.nMaxFile` definir usando o número de caracteres no buffer apontado por. `m_ofn.lpstrFile` Se você definir o número máximo de arquivos a serem selecionados `n`, o tamanho de buffer necessário será. `n * (_MAX_PATH + 1) + 1` O primeiro item retornado no buffer é o caminho para a pasta onde os arquivos foram selecionados. Para as caixas de diálogo do Windows Vista ou estilo posterior, as cadeias de caracteres de nome de diretório e arquivo são terminadas em nulo, com um caractere nulo extra após o último nome de arquivo. Esse formato permite que as caixas de diálogo do estilo Explorer retornem nomes de arquivo longos que incluem espaços. Para caixas de diálogo de estilo antigo, as cadeias de caracteres de nome de diretório e de arquivo são separadas por espaços e a função usa nomes de arquivo curtos para nomes de arquivo com espaços.
+Além disso, você `m_ofn.nMaxFile` deve definir usando o número de `m_ofn.lpstrFile`caracteres no buffer apontado por . Se você definir o número máximo `n`de arquivos a `n * (_MAX_PATH + 1) + 1`serem selecionados, o tamanho de buffer necessário será . O primeiro item devolvido no buffer é o caminho para a pasta onde os arquivos foram selecionados. Para o Windows Vista ou caixas de diálogo de estilo posterior, as seqüências de nome de diretório e arquivo são anuladas por nulidade, com um caractere nulo extra após o nome do último arquivo. Esse formato permite que as caixas de diálogo estilo Explorer retornem nomes de arquivos longos que incluem espaços. Para caixas de diálogo de estilo antigo, as seqüências de diretório e nome do arquivo são separadas por espaços e a função usa nomes de arquivos curtos para nomes de arquivos com espaços.
 
-O exemplo a seguir demonstra como usar um buffer para recuperar e listar vários nomes de arquivo.
+O exemplo a seguir demonstra como usar um buffer para recuperar e listar vários nomes de arquivos.
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 
-Para alterar o tamanho do buffer em resposta ao usuário que seleciona vários nomes de arquivo, você deve derivar uma `CFileDialog` nova classe de e substituir o método [CFileDialog:: OnFileNameChange](#onfilenamechange) .
+Para alterar o tamanho do buffer em resposta ao usuário que seleciona vários nomes de `CFileDialog` arquivo, você deve derivar uma nova classe e substituir o método [CFileDialog::OnFileNameChange.](#onfilenamechange)
 
-Se você derivar uma nova classe `CFileDialog`do, poderá usar um mapa de mensagens para lidar com qualquer mensagem. Para estender a manipulação de mensagens padrão, derive uma `CFileDialog`classe de, adicione um mapa de mensagem à nova classe e forneça funções de membro para as novas mensagens. Você não precisa fornecer uma função de gancho para personalizar a caixa de diálogo.
+Se você derivar `CFileDialog`uma nova classe de , você pode usar um mapa de mensagem para lidar com quaisquer mensagens. Para estender o tratamento padrão da `CFileDialog`mensagem, obtenha uma classe de , adicione um mapa de mensagem à nova classe e forneça funções de membro para as novas mensagens. Você não precisa fornecer uma função de gancho para personalizar a caixa de diálogo.
 
-Para personalizar a caixa de diálogo, derive uma `CFileDialog`classe de, forneça um modelo de caixa de diálogo personalizada e adicione um mapa de mensagens para processar as mensagens de notificação dos controles estendidos. Passe todas as mensagens não processadas para a classe base. Você não precisa personalizar a função Hook.
+Para personalizar a caixa de `CFileDialog`diálogo, obtenha uma classe, forneça um modelo de caixa de diálogo personalizado e adicione um mapa de mensagem para processar as mensagens de notificação dos controles estendidos. Passe qualquer mensagem não processada para a classe base. Você não precisa personalizar a função do gancho.
 
-Ao usar o estilo Windows Vista ou posterior do `CFileDialog`, não é possível usar os mapas de mensagens e os modelos de caixa de diálogo. Em vez disso, você deve usar as interfaces COM para funcionalidade semelhante.
+Quando você estiver usando o Windows `CFileDialog`Vista ou o estilo posterior do , você não pode usar mapas de mensagem e modelos de caixa de diálogo. Em vez disso, você deve usar as interfaces COM para funcionalidadesemelhante.
 
-Para obter mais informações sobre como usar `CFileDialog`o, consulte [classes de caixa de diálogo comuns](../../mfc/common-dialog-classes.md).
+Para obter mais informações `CFileDialog`sobre como usar, consulte [Common Dialog Classes](../../mfc/common-dialog-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+[Ccommondialog](../../mfc/reference/ccommondialog-class.md)
 
 `CFileDialog`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdlgs. h
+**Cabeçalho:** afxdlgs.h
 
-##  <a name="addcheckbutton"></a>  CFileDialog::AddCheckButton
+## <a name="cfiledialogaddcheckbutton"></a><a name="addcheckbutton"></a>cfiledialog::AddCheckbutton
 
-Adiciona um botão de seleção à caixa de diálogo.
+Adiciona um botão de verificação à caixa de diálogo.
 
 ```
 HRESULT AddCheckButton(
@@ -316,19 +316,19 @@ HRESULT AddCheckButton(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do botão de seleção a ser adicionado.
+O ID do botão de seleção para adicionar.
 
-*strLabel*<br/>
+*strRótulo*<br/>
 O nome do botão de verificação.
 
 *bChecked*<br/>
-Um booliano que indica o estado atual do botão de verificação. TRUE se marcado; Caso contrário, FALSE
+Um booleano indicando o estado atual do botão de verificação. VERDADEIRO se verificado; FALSO de outra forma
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addcombobox"></a>  CFileDialog::AddComboBox
+## <a name="cfiledialogaddcombobox"></a><a name="addcombobox"></a>CFileDialog::AddComboBox
 
-Adiciona uma caixa de combinação ao diálogo.
+Adiciona uma caixa de combinação à caixa de diálogo.
 
 ```
 HRESULT AddComboBox(DWORD dwIDCtl);
@@ -337,11 +337,11 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID da caixa de combinação a ser adicionada.
+O ID da caixa de combinação para adicionar.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addcontrolitem"></a>  CFileDialog::AddControlItem
+## <a name="cfiledialogaddcontrolitem"></a><a name="addcontrolitem"></a>cfiledialog::AddControlItem
 
 Adiciona um item a um controle de contêiner na caixa de diálogo.
 
@@ -355,19 +355,19 @@ HRESULT AddControlItem(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do controle de contêiner ao qual adicionar o item.
+O ID do controle do contêiner para adicionar o item.
 
 *dwIDItem*<br/>
-A ID do item.
+O ID do item.
 
-*strLabel*<br/>
-Texto do item.
+*strRótulo*<br/>
+O texto do item.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addeditbox"></a>  CFileDialog::AddEditBox
+## <a name="cfiledialogaddeditbox"></a><a name="addeditbox"></a>cfiledialog::AddEditBox
 
-Adiciona uma caixa de edição ao diálogo.
+Adiciona uma caixa de edição à caixa de diálogo.
 
 ```
 HRESULT AddEditBox(
@@ -378,16 +378,16 @@ HRESULT AddEditBox(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID da caixa de edição a ser adicionada.
+O ID da caixa de edição para adicionar.
 
 *strText*<br/>
 O nome da caixa de edição.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addmenu"></a>  CFileDialog::AddMenu
+## <a name="cfiledialogaddmenu"></a><a name="addmenu"></a>cfiledialog::Addmenu
 
-Adiciona um menu à caixa de diálogo.
+Adiciona um menu ao diálogo.
 
 ```
 HRESULT AddMenu(
@@ -398,16 +398,16 @@ HRESULT AddMenu(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do menu a ser adicionado.
+O ID do menu para adicionar.
 
-*strLabel*<br/>
+*strRótulo*<br/>
 O nome do menu.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addplace"></a>  CFileDialog::AddPlace
+## <a name="cfiledialogaddplace"></a><a name="addplace"></a>cfiledialog::addplace
 
-Adiciona uma pasta à lista de locais disponíveis para o usuário abrir ou salvar itens.
+Adiciona uma pasta à lista de lugares disponíveis para o usuário abrir ou salvar itens.
 
 ```
 void AddPlace(
@@ -422,17 +422,17 @@ void AddPlace(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszFolder*<br/>
-Um caminho para a pasta a ser disponibilizada para o usuário. Isso só pode ser uma pasta.
+Um caminho para a pasta a ser disponibilizada ao usuário. Isso só pode ser uma pasta.
 
 *fdap*<br/>
 Especifica onde a pasta é colocada dentro da lista.
 
 *psi*<br/>
-Um ponteiro para um IShellItem que representa a pasta a ser disponibilizada para o usuário. Isso só pode ser uma pasta.
+Um ponteiro para um IShellItem que representa a pasta a ser disponibilizada ao usuário. Isso só pode ser uma pasta.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addpushbutton"></a>  CFileDialog::AddPushButton
+## <a name="cfiledialogaddpushbutton"></a><a name="addpushbutton"></a>cfiledialog::AddPushButton
 
 Adiciona um botão à caixa de diálogo.
 
@@ -445,16 +445,16 @@ HRESULT AddPushButton(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do botão a ser adicionado.
+O ID do botão para adicionar.
 
-*strLabel*<br/>
+*strRótulo*<br/>
 O nome do botão.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addradiobuttonlist"></a>  CFileDialog::AddRadioButtonList
+## <a name="cfiledialogaddradiobuttonlist"></a><a name="addradiobuttonlist"></a>cfiledialog::Addradiobuttonlist
 
-Adiciona um grupo de botões de opção (também conhecido como botão de opção) à caixa de diálogo.
+Adiciona um botão de opção (também conhecido como botão de rádio) à caixa de diálogo.
 
 ```
 HRESULT AddRadioButtonList(DWORD dwIDCtl);
@@ -463,13 +463,13 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do grupo de botões de opção a ser adicionado.
+O ID do grupo de botões de opção para adicionar.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addseparator"></a>CFileDialog:: AddSeparator
+## <a name="cfiledialogaddseparator"></a><a name="addseparator"></a>cfiledialog::AddSeparator
 
-Adiciona um separador à caixa de diálogo.
+Adiciona um separador ao diálogo.
 
 ```
 HRESULT AddSeparator(DWORD dwIDCtl);
@@ -478,11 +478,11 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do separador adicionado.
+O ID do separador adicionar.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addtext"></a>  CFileDialog::AddText
+## <a name="cfiledialogaddtext"></a><a name="addtext"></a>cfiledialog::AddText
 
 Adiciona texto à caixa de diálogo.
 
@@ -495,16 +495,16 @@ HRESULT AddText(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do texto a ser adicionado.
+O ID do texto para adicionar.
 
 *strText*<br/>
 O nome do texto.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="applyofntoshelldialog"></a>  CFileDialog::ApplyOFNToShellDialog
+## <a name="cfiledialogapplyofntoshelldialog"></a><a name="applyofntoshelldialog"></a>cfiledialog::ApplyOFNToShellDialog
 
-Atualiza o estado atual do [CFileDialog](../../mfc/reference/cfiledialog-class.md) com base nos valores armazenados na estrutura de `m_ofn` dados.
+Atualiza o estado atual do [CFileDialog](../../mfc/reference/cfiledialog-class.md) com base `m_ofn` nos valores armazenados na estrutura de dados.
 
 ```
 void ApplyOFNToShellDialog();
@@ -512,19 +512,19 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>Comentários
 
-Nas versões do Windows anteriores ao Windows Vista, a estrutura de dados [da OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) do membro foi sincronizada continuamente com `CFileDialog`o estado do. Todas as alterações na variável de membro [m_ofn](#m_ofn) foram refletidas imediatamente no estado da caixa de diálogo. Além disso, todas as alterações no estado da caixa de diálogo atualizam `m_ofn` imediatamente a variável de membro.
+Nas versões do Windows antes do Windows Vista, a estrutura de `CFileDialog`dados DO MEMBRO [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) foi continuamente sincronizada com o estado do . Quaisquer alterações na variável [membro m_ofn](#m_ofn) foram imediatamente refletidas no estado da caixa de diálogo. Além disso, quaisquer alterações no estado da `m_ofn` caixa de diálogo atualizem imediatamente a variável membro.
 
-No Windows Vista ou posterior, os valores na `m_ofn` variável `CFileDialog` de membro e no estado do não têm garantia de serem sincronizados. Essa função força o estado do `CFileDialog` a ser atualizado para `m_ofn` corresponder à estrutura. O Windows chama essa função automaticamente durante [CFileDialog::D omodal](#domodal).
+No Windows Vista ou posterior, `m_ofn` os valores `CFileDialog` na variável membro e no estado do não são garantidos para serem sincronizados. Esta função força o `CFileDialog` estado do ser `m_ofn` atualizado para corresponder à estrutura. O Windows chama essa função automaticamente durante [CFileDialog::DoModal](#domodal).
 
-Para obter mais informações sobre como usar a `CFileDialog` classe no Windows Vista ou posterior, consulte [classe CFileDialog](../../mfc/reference/cfiledialog-class.md).
+Para obter mais informações `CFileDialog` sobre como usar a classe no Windows Vista ou posterior, consulte [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CFileDialog:: UpdateOFNFromShellDialog](#updateofnfromshelldialog).
+  Veja o exemplo de [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog).
 
-##  <a name="cfiledialog"></a>CFileDialog:: CFileDialog
+## <a name="cfiledialogcfiledialog"></a><a name="cfiledialog"></a>cfiledialog::CfileDialog
 
-Chame essa função para construir uma caixa de diálogo padrão de arquivo do Windows.
+Chame esta função para construir uma caixa de diálogo de arquivo padrão do Windows.
 
 ```
 explicit CFileDialog(
@@ -541,90 +541,90 @@ explicit CFileDialog(
 ### <a name="parameters"></a>Parâmetros
 
 *bOpenFileDialog*<br/>
-no O parâmetro que especifica que tipo de caixa de diálogo criar. Defina-a como TRUE para construir uma caixa de diálogo de **abertura de arquivo** . Defina-a como FALSE para construir uma caixa de diálogo **salvar arquivo como** .
+[em] O parâmetro que especifica que tipo de caixa de diálogo criar. Defina-o como TRUE para construir uma caixa de diálogo **Abrir arquivos.** Defina-o como FALSE para construir uma caixa de diálogo **Salvar arquivo como** caixa de diálogo.
 
 *lpszDefExt*<br/>
-no A extensão de nome de arquivo padrão. Se o usuário não incluir uma extensão conhecida (uma que tenha uma associação no computador do usuário) na caixa nome do arquivo, a extensão especificada por *lpszDefExt* será anexada automaticamente ao nome. Se esse parâmetro for NULL, nenhuma extensão será anexada.
+[em] A extensão padrão do nome do arquivo. Se o usuário não incluir uma extensão conhecida (uma que tenha uma associação no computador do usuário) na caixa Nome de Arquivo, a extensão especificada pelo *lpszDefExt* será automaticamente anexada ao nome do arquivo. Se este parâmetro for NULO, nenhuma extensão será anexada.
 
 *lpszFileName*<br/>
-no O nome de arquivo inicial que aparece na caixa filename. Se for NULL, nenhum nome de arquivo inicial será exibido.
+[em] O nome inicial do arquivo que aparece na caixa Nome de Arquivo. Se NULO, nenhum nome de arquivo inicial será exibido.
 
 *dwFlags*<br/>
-no Uma combinação de um ou mais sinalizadores que você pode usar para personalizar a caixa de diálogo. Para obter uma descrição desses sinalizadores, consulte a estrutura [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) no SDK do Windows. Se você modificar o `m_ofn.Flags` membro da estrutura, use um operador de bit-a-or em suas alterações para manter o comportamento padrão intacto.
+[em] Uma combinação de um ou mais sinalizadores que você pode usar para personalizar a caixa de diálogo. Para obter uma descrição desses sinalizadores, consulte a estrutura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) no SDK do Windows. Se você `m_ofn.Flags` modificar o membro da estrutura, use um operador bitwise-OR em suas alterações para manter o comportamento padrão intacto.
 
 *lpszFilter*<br/>
-no Uma série de pares de cadeias de caracteres que especificam filtros que você pode aplicar ao arquivo. Se você especificar filtros de arquivo, somente os arquivos que correspondem aos critérios de filtro aparecerão na lista de arquivos. Consulte a seção comentários para obter mais informações sobre como trabalhar com filtros de arquivo.
+[em] Uma série de pares de strings que especificam filtros que você pode aplicar no arquivo. Se você especificar filtros de arquivo, somente arquivos que correspondam aos critérios do filtro aparecerão na lista Arquivos. Consulte a seção Observações para obter mais informações sobre como trabalhar com filtros de arquivos.
 
-*pParentWnd*<br/>
-no Um ponteiro para a janela pai ou proprietário da caixa de diálogo de arquivo.
+*Pparentwnd*<br/>
+[em] Um ponteiro para a janela pai ou proprietário da caixa de diálogo de arquivo.
 
-*dwSize*<br/>
-no O tamanho da `OPENFILENAME` estrutura. Esse valor depende da versão do sistema operacional. O MFC usou esse parâmetro para determinar o tipo apropriado de caixa de diálogo a ser criada. O tamanho padrão de 0 significa que o código MFC determinará o tamanho correto da caixa de diálogo a ser usada com base na versão do sistema operacional em que o programa é executado.
+*Dwsize*<br/>
+[em] O tamanho `OPENFILENAME` da estrutura. Esse valor depende da versão do sistema operacional. O MFC usou este parâmetro para determinar o tipo apropriado de caixa de diálogo para criar. O tamanho padrão de 0 significa que o código MFC determinará o tamanho correto da caixa de diálogo a ser usada com base na versão do sistema operacional em que o programa é executado.
 
-*bVistaStyle*<br/>
-no **Observação** Esse parâmetro está disponível no Visual Studio 2008 e posterior e faz com que a caixa de diálogo novo estilo seja usada somente se você estiver executando no Windows Vista ou posterior.
+*Bvistastyle*<br/>
+[em] **Nota** Este parâmetro está disponível no Visual Studio 2008 e posteriormente e faz com que a caixa de diálogo de novo estilo seja usada apenas se você estiver sendo executado no Windows Vista ou posteriormente.
 
-O parâmetro que especifica o estilo da caixa de diálogo de arquivo. Defina-a como TRUE para usar as novas caixas de diálogo de arquivo de estilo do vista. Caso contrário, o estilo antigo das caixas de diálogo será usado. Consulte a seção comentários para obter mais informações sobre como executar no vista.
+O parâmetro que especifica o estilo da caixa de diálogo do arquivo. Defina-o como TRUE para usar as novas diálogos de arquivo de estilo do Vista. Caso contrário, o antigo estilo das caixas de diálogo será usado. Consulte a seção Observações para obter mais informações sobre a execução sob o Vista.
 
 ### <a name="remarks"></a>Comentários
 
-Uma caixa de diálogo **Abrir arquivo** ou **salvar arquivo como** é construída, dependendo do valor de *bOpenFileDialog*.
+Uma **caixa de diálogo Abrir arquivo** ou salvar arquivos **como** é construída, dependendo do valor do *bOpenFileDialog*.
 
-A especificação de uma extensão padrão usando *lpszDefExt* pode não produzir o comportamento esperado, pois raramente é previsível quais extensões têm associações de arquivo no computador do usuário. Se você precisar de mais controle sobre o acréscimo de uma extensão padrão, poderá derivar sua própria classe do `CFileDialog`e substituir o `CFileDialog::OnFileNameOK` método para executar sua própria manipulação de extensão.
+Especificar uma extensão padrão usando *lpszDefExt* pode não produzir o comportamento que você espera, porque raramente é previsível quais extensões têm associações de arquivos no computador do usuário. Se você precisar de mais controle sobre a anexação de `CFileDialog`uma extensão `CFileDialog::OnFileNameOK` padrão, você pode derivar sua própria classe e substituir o método para executar seu próprio tratamento de extensão.
 
-Para permitir que o usuário Selecione vários arquivos, defina o sinalizador OFN_ALLOWMULTISELECT antes de chamar [DoModal](#domodal). Você deve fornecer seu próprio buffer de nome de arquivo para armazenar a lista retornada de vários nomes de arquivo. Faça isso substituindo `m_ofn.lpstrFile` por um ponteiro para um buffer que você alocou, depois de construir o [CFileDialog](../../mfc/reference/cfiledialog-class.md), mas antes de chamar `DoModal`. Além disso, você deve `m_ofn.nMaxFile` definir com o número de caracteres no buffer apontado por `m_ofn.lpstrFile`. Se você definir o número máximo de arquivos a serem selecionados como *n*, o tamanho de buffer necessário `n`será * (_MAX_PATH + 1) + 1. Por exemplo:
+Para habilitar o usuário a selecionar vários arquivos, defina o sinalizador OFN_ALLOWMULTISELECT antes de chamar [DoModal](#domodal). Você deve fornecer seu próprio buffer de nome de arquivo para armazenar a lista retornada de vários nomes de arquivo. Faça isso substituindo `m_ofn.lpstrFile` por um ponteiro para um buffer que você alocou, depois de construir o [CFileDialog,](../../mfc/reference/cfiledialog-class.md)mas antes de chamar `DoModal`. Além disso, você `m_ofn.nMaxFile` deve definir com o número `m_ofn.lpstrFile`de caracteres no buffer apontado por . Se você definir o número máximo de arquivos a serem `n`selecionados para *n,* o tamanho de buffer necessário é *(_MAX_PATH + 1) + 1. Por exemplo:
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 
-Para permitir que o usuário redimensione uma caixa de diálogo estilo do Explorer usando o mouse ou o teclado, defina o sinalizador OFN_ENABLESIZING. A definição desse sinalizador será necessária somente se você fornecer um procedimento de gancho ou modelo personalizado. O sinalizador funciona apenas com uma caixa de diálogo estilo de Gerenciador; as caixas de diálogo de estilo antigo não podem ser redimensionadas.
+Para permitir que o usuário redimensione uma caixa de diálogo estilo Explorer usando o mouse ou o teclado, defina o sinalizador OFN_ENABLESIZING. Definir este sinalizador só é necessário se você fornecer um procedimento de gancho ou modelo personalizado. O sinalizador funciona apenas com uma caixa de diálogo estilo Explorer; As caixas de diálogo de estilo antigo não podem ser redimensionadas.
 
-O parâmetro *lpszFilter* é usado para determinar o tipo de nome de arquivo que um arquivo deve ter para ser exibido na lista de arquivos. A primeira cadeia de caracteres no par de cadeia de caracteres descreve o filtro; a segunda cadeia de caracteres indica a extensão de nome de arquivo a ser usada. Várias extensões podem ser especificadas usando um ponto-e-vírgula (o caractere '; ') como o delimitador. A cadeia de caracteres termina com&#124;dois ' ' caracteres, seguidos de um caractere nulo. Você também pode usar um objeto [CString](../../atl-mfc-shared/using-cstring.md) para esse parâmetro.
+O parâmetro *lpszFilter* é usado para determinar o tipo de nome do arquivo que um arquivo deve ter que ser exibido na lista de arquivos. A primeira seqüência do par de cordas descreve o filtro; a segunda seqüência indica a extensão do nome do arquivo a ser usada. Várias extensões podem ser especificadas usando um ponto e vírgula (o caractere ';') como delimitador. A seqüência termina com dois caracteres '&#124;', seguido por um caractere NULL. Você também pode usar um objeto [CString](../../atl-mfc-shared/using-cstring.md) para este parâmetro.
 
-Por exemplo, o Microsoft Excel permite que os usuários abram arquivos que têm extensões. xlc (gráfico) ou. xls (planilha), entre outros. O filtro para Excel pode ser escrito como:
+Por exemplo, o Microsoft Excel permite que os usuários abram arquivos que tenham extensões .xlc (gráfico) ou .xls (planilha), entre outros. O filtro para Excel pode ser escrito como:
 
 [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]
 
-No entanto, se você planeja usar essa cadeia de caracteres para `OPENFILENAME` atualizar diretamente a estrutura, você deve delimitar suas cadeias de caracteres com o caractere nulo, ' \ 0 ',&#124;em vez das barras verticais (' ').
+No entanto, se você planeja usar `OPENFILENAME` essa string para atualizar diretamente a estrutura, você deve delimitar suas strings com o caractere nulo, '\0', em vez das barras verticais ('&#124;').
 
-O parâmetro *bVistaStyle* é aplicável somente quando executado no Windows Vista ou posterior. Em versões anteriores do Windows, esse parâmetro é ignorado. Se *bVistaStyle* for definido como true, quando você compilar um programa com o Visual Studio 2008 ou posterior, a caixa de **diálogo novo arquivo** de estilo do vista será usada. Caso contrário, a caixa de **diálogo de arquivo** de estilo MFC anterior será usada.
+O parâmetro *bVistaStyle* só é aplicável ao ser executado no Windows Vista ou posteriormente. Em versões anteriores do Windows, este parâmetro é ignorado. Se *bVistaStyle* estiver definido como TRUE, ao compilar um programa com o Visual Studio 2008 ou posterior, o novo estilo **Decaixa de Arquivo do** Vista será usado. Caso contrário, o diálogo **de arquivo de** estilo mfc anterior será usado.
 
-Não há suporte para modelos de caixa de diálogo em caixas de diálogo com base em *bVistaStyle*
+Os modelos de diálogo não são suportados em diálogos com base no *bVistaStyle*
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CFileDialog::D omodal](#domodal).
+  Veja o exemplo de [CFileDialog::DoModal](#domodal).
 
-##  <a name="domodal"></a>CFileDialog::D oModal
+## <a name="cfiledialogdomodal"></a><a name="domodal"></a>CFileDialog::DoModal
 
-Chame essa função para exibir a caixa de diálogo arquivo comum do Windows e permitir que o usuário procure arquivos e diretórios e insira um nome de arquivo.
+Chame esta função para exibir a caixa de diálogo de arquivo comum do Windows e permitir que o usuário navegue por arquivos e diretórios e digite um nome de arquivo.
 
 ```
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-IDOK ou IDCANCEL. Se IDCANCEL for retornado, chame a função [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) do Windows para determinar se ocorreu um erro.
+IDOK ou IDCANCEL. Se o IDCANCEL for retornado, ligue para a função [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) do Windows para determinar se ocorreu um erro.
 
-IDOK e IDCANCEL são constantes que indicam se o usuário selecionou o botão OK ou cancelar.
+IDOK e IDCANCEL são constantes que indicam se o usuário selecionou o botão OK ou Cancel.
 
 ### <a name="remarks"></a>Comentários
 
-Se você quiser inicializar as várias opções de caixa de diálogo de arquivo definindo os membros da `m_ofn` estrutura, faça isso antes de chamar `DoModal`, mas depois que o objeto da caixa de diálogo for construído.
+Se você quiser inicializar as várias opções de `m_ofn` caixa de diálogo de `DoModal`arquivo definindo membros da estrutura, você deve fazer isso antes de chamar, mas depois que o objeto de diálogo for construído.
 
-Por exemplo, se você quiser permitir que o usuário Selecione vários arquivos, defina o sinalizador OFN_ALLOWMULTISELECT antes de chamar `DoModal`, conforme mostrado no exemplo de código neste tópico.
+Por exemplo, se você quiser permitir que o usuário selecione `DoModal`vários arquivos, defina o OFN_ALLOWMULTISELECT sinalizador antes de chamar, como mostrado no exemplo de código neste tópico.
 
-Quando o usuário clica nos botões OK ou cancelar da caixa de diálogo, ou seleciona a opção fechar no menu controle da caixa de diálogo, o controle é retornado ao seu aplicativo. Em seguida, você pode chamar outras funções de membro para recuperar as configurações ou informações que o usuário insere na caixa de diálogo.
+Quando o usuário clica nos botões OK ou Cancel da caixa de diálogo ou seleciona a opção Fechar no menu de controle da caixa de diálogo, o controle é retornado ao seu aplicativo. Em seguida, você pode chamar outras funções de membro para recuperar as configurações ou informações que o usuário insere na caixa de diálogo.
 
-`DoModal`é uma função virtual substituída da `CDialog`classe.
+`DoModal`é uma função virtual substituída `CDialog`da classe.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCFiles#25](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_3.cpp)]
 
-##  <a name="enableopendropdown"></a>  CFileDialog::EnableOpenDropDown
+## <a name="cfiledialogenableopendropdown"></a><a name="enableopendropdown"></a>cfileDialog::HabilitarOpenDropDown
 
-Habilita uma lista suspensa no botão abrir ou salvar na caixa de diálogo.
+Habilita uma lista de parada no botão Abrir ou Salvar na caixa de diálogo.
 
 ```
 HRESULT EnableOpenDropDown(DWORD dwIDCtl);
@@ -633,27 +633,27 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID da lista suspensa.
+A id da lista de paradas.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="endvisualgroup"></a>  CFileDialog::EndVisualGroup
+## <a name="cfiledialogendvisualgroup"></a><a name="endvisualgroup"></a>cfiledialog::EndvisualGroup
 
-Interrompe a adição de elementos a um grupo Visual na caixa de diálogo.
+Impede a adição de elementos a um grupo visual no diálogo.
 
 ```
 HRESULT EndVisualGroup();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retornará S_OK se for bem-sucedido; caso contrário, será um valor de erro.
+Os retornos S_OK se forem bem sucedidos; um valor de erro de outra forma.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getcheckbuttonstate"></a>  CFileDialog::GetCheckButtonState
+## <a name="cfiledialoggetcheckbuttonstate"></a><a name="getcheckbuttonstate"></a>cfiledialog::getCheckbuttonstate
 
-Recupera o estado atual de um botão de verificação (caixa de seleção) no diálogo.
+Recupera o estado atual de um botão de seleção (caixa de seleção) na caixa de diálogo.
 
 ```
 HRESULT GetCheckButtonState(
@@ -664,14 +664,14 @@ HRESULT GetCheckButtonState(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID da caixa de seleção.
+A id da caixa de seleção.
 
 *bChecked*<br/>
-O estado da caixa de seleção. VERDADEIRO indica marcado; FALSE indica desmarcado.
+O estado da caixa de seleção. TRUE indica verificado; FALSO indica descontrolado.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getcontrolitemstate"></a>  CFileDialog::GetControlItemState
+## <a name="cfiledialoggetcontrolitemstate"></a><a name="getcontrolitemstate"></a>cfiledialog::GetControlItemState
 
 Recupera o estado atual de um item em um controle de contêiner encontrado na caixa de diálogo.
 
@@ -688,16 +688,16 @@ HRESULT GetControlItemState(
 A ID do controle de contêiner.
 
 *dwIDItem*<br/>
-A ID do item.
+O ID do item.
 
-*dwState*<br/>
-Uma referência a uma variável que recebe um ou mais valores da enumeração CDCONTROLSTATE que indica o estado atual do controle.
+*Dwstate*<br/>
+Uma referência a uma variável que recebe um dos valores a mais da enumeração CDCONTROLSTATE que indica o estado atual do controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getcontrolstate"></a>  CFileDialog::GetControlState
+## <a name="cfiledialoggetcontrolstate"></a><a name="getcontrolstate"></a>cfiledialog::getcontrolstate
 
-Recupera a visibilidade atual e os Estados habilitados de um determinado controle.
+Recupera a visibilidade atual e os estados habilitados de um determinado controle.
 
 ```
 HRESULT GetControlState(
@@ -708,14 +708,14 @@ HRESULT GetControlState(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do controle.
+A id do controle.
 
-*dwState*<br/>
+*Dwstate*<br/>
 Uma referência a uma variável que recebe um ou mais valores da enumeração CDCONTROLSTATE que indica o estado atual do controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="geteditboxtext"></a>  CFileDialog::GetEditBoxText
+## <a name="cfiledialoggeteditboxtext"></a><a name="geteditboxtext"></a>cfiledialog::getEditBoxText
 
 Recupera o texto atual em um controle de caixa de edição.
 
@@ -728,90 +728,90 @@ HRESULT GetEditBoxText(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID da caixa de edição.
+O ID da caixa de edição.
 
 *strText*<br/>
 O valor do texto.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getfileext"></a>  CFileDialog::GetFileExt
+## <a name="cfiledialoggetfileext"></a><a name="getfileext"></a>CFileDialog::GetFileExt
 
-Chame essa função para recuperar a extensão do nome de arquivo inserido na caixa de diálogo.
+Chame esta função para recuperar a extensão do nome do arquivo inserido na caixa de diálogo.
 
 ```
 CString GetFileExt() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A extensão do nome de arquivo.
+A extensão do nome do arquivo.
 
 ### <a name="remarks"></a>Comentários
 
-Por exemplo, se o nome do arquivo inserido for DATA. Txt, `GetFileExt` retorna "txt".
+Por exemplo, se o nome do arquivo inserido for DATA. TXT, `GetFileExt` retorna "TXT".
 
-Se `m_ofn.Flags` tiver o sinalizador OFN_ALLOWMULTISELECT definido, essa cadeia de caracteres conterá uma sequência de cadeias de caracteres terminadas em nulo, com a primeira cadeia de caracteres do caminho do diretório do grupo de arquivos selecionado, seguida pelos nomes de todos os arquivos selecionados pelo usuário. Para recuperar os caminhos de arquivo, use as funções de membro [GetStartPosition](#getstartposition) e [GetNextPathName](#getnextpathname) .
+Se `m_ofn.Flags` tiver o OFN_ALLOWMULTISELECT conjunto de bandeiras, esta seqüência contém uma seqüência de strings terminadas por nulo, com a primeira seqüência sendo o caminho do diretório do grupo de arquivos selecionado, seguido pelos nomes de todos os arquivos selecionados pelo usuário. Para recuperar nomes de caminhos de arquivo, use as funções de membro [GetStartPosition](#getstartposition) e [GetNextPathName.](#getnextpathname)
 
-##  <a name="getfilename"></a>  CFileDialog::GetFileName
+## <a name="cfiledialoggetfilename"></a><a name="getfilename"></a>cfiledialog::getFileName
 
-Chame essa função para recuperar o nome do nome de arquivo inserido na caixa de diálogo.
+Chame esta função para recuperar o nome do arquivo inserido na caixa de diálogo.
 
 ```
 CString GetFileName() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O nome do arquivo.
 
 ### <a name="remarks"></a>Comentários
 
-O nome do arquivo inclui o prefixo e a extensão. Por exemplo, `GetFileName` retornará "Text. DAT "para o arquivo C:\FILES\TEXT.DAT.
+O nome do arquivo inclui tanto o prefixo quanto a extensão. Por exemplo, `GetFileName` retornará "Texto. DAT" para o arquivo C:\FILES\TEXT.DAT.
 
-Se `m_ofn.Flags` tiver o `OFN_ALLOWMULTISELECT` sinalizador definido, você deverá chamar [GetStartPosition](#getstartposition) e [GetNextPathName](#getnextpathname) para recuperar um nome de caminho de arquivo.
+Se `m_ofn.Flags` tiver `OFN_ALLOWMULTISELECT` o conjunto de sinalizadores, você deve chamar [GetStartPosition](#getstartposition) e [GetNextPathName](#getnextpathname) para recuperar um nome de caminho do arquivo.
 
-##  <a name="getfiletitle"></a>  CFileDialog::GetFileTitle
+## <a name="cfiledialoggetfiletitle"></a><a name="getfiletitle"></a>cfiledialog::getFileTitle
 
-Chame essa função para recuperar o título do arquivo inserido na caixa de diálogo.
+Chame esta função para recuperar o título do arquivo inserido na caixa de diálogo.
 
 ```
 CString GetFileTitle() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O título do arquivo.
 
 ### <a name="remarks"></a>Comentários
 
-O título do arquivo inclui apenas seu prefixo, sem o caminho ou a extensão. Por exemplo, `GetFileTitle` retornará "text" para o arquivo C:\FILES\TEXT.dat.
+O título do arquivo inclui apenas o seu prefixo, sem o caminho ou a extensão. Por exemplo, `GetFileTitle` retornará "TEXTO" para o arquivo C:\FILES\TEXT.DAT.
 
-Se `m_ofn.Flags` tiver o sinalizador OFN_ALLOWMULTISELECT definido, essa cadeia de caracteres conterá uma sequência de cadeias de caracteres terminadas em nulo, com a primeira cadeia de caracteres do caminho do diretório do grupo de arquivos selecionado, seguida pelos nomes de todos os arquivos selecionados pelo usuário. Por esse motivo, use as funções de membro [GetStartPosition](#getstartposition) e [GetNextPathName](#getnextpathname) para recuperar o próximo nome de arquivo na lista.
+Se `m_ofn.Flags` tiver o OFN_ALLOWMULTISELECT conjunto de bandeiras, esta seqüência contém uma seqüência de strings terminadas por nulo, com a primeira seqüência sendo o caminho do diretório do grupo de arquivos selecionado, seguido pelos nomes de todos os arquivos selecionados pelo usuário. Por essa razão, use as funções [getstartposition](#getstartposition) e [getnextpathname](#getnextpathname) para recuperar o próximo nome do arquivo na lista.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CFileDialog::D omodal](#domodal).
+  Veja o exemplo de [CFileDialog::DoModal](#domodal).
 
-##  <a name="getfolderpath"></a>  CFileDialog::GetFolderPath
+## <a name="cfiledialoggetfolderpath"></a><a name="getfolderpath"></a>cfiledialog::getfolderpathPath
 
-Chame essa função de membro para recuperar o caminho da pasta ou do diretório aberto no momento para uma caixa de diálogo aberta no estilo do Explorer ou salvar como comum.
+Chame esta função de membro para recuperar o caminho da pasta ou diretório atualmente aberto para uma caixa de diálogo aberta no estilo Explorer ou Save As comum.
 
 ```
 CString GetFolderPath() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contém a pasta ou o diretório aberto no momento.
+Um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) contendo a pasta ou diretório atualmente aberto.
 
 ### <a name="remarks"></a>Comentários
 
-A caixa de diálogo deve ter sido criada com o estilo OFN_EXPLORER; caso contrário, o método falhará com uma asserção.
+A caixa de diálogo deve ter sido criada com o estilo OFN_EXPLORER; caso contrário, o método falhará com uma afirmação.
 
-Você pode chamar esse método somente enquanto a caixa de diálogo está sendo exibida. Depois que a caixa de diálogo for fechada, essa função não funcionará mais, e o método falhará com uma asserção.
+Você só pode chamar esse método enquanto a caixa de diálogo estiver sendo exibida. Depois que a caixa de diálogo for fechada, essa função não funcionará mais e o método falhará com uma afirmação.
 
-##  <a name="getifiledialogcustomize"></a>  CFileDialog::GetIFileDialogCustomize
+## <a name="cfiledialoggetifiledialogcustomize"></a><a name="getifiledialogcustomize"></a>cfiledialog::getiFileDialogCustom
 
 Recupera um ponteiro para o objeto COM interno para um determinado [CFileDialog](../../mfc/reference/cfiledialog-class.md).
 
@@ -819,73 +819,73 @@ Recupera um ponteiro para o objeto COM interno para um determinado [CFileDialog]
 IFileDialogCustomize* GetIFileDialogCustomize();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O ponteiro para o objeto COM interno para o `CFileDialog`. É sua responsabilidade liberar esse ponteiro adequadamente.
+O ponteiro para o objeto `CFileDialog`COM interno para o . É sua responsabilidade liberar este ponteiro apropriadamente.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função somente no Windows Vista ou posterior com um objeto que tenha *bVistaStyle* definido como true. Se você usar essa função quando *bVistaStyle* for false, ela retornará NULL no modo de liberação e lançará uma asserção no modo de depuração.
+Use esta função apenas no Windows Vista ou posteriormente com um objeto que tenha *bVistaStyle* definido como TRUE. Se você usar esta função quando *bVistaStyle* for FALSE, ele retornará NULL no modo de liberação e lançará uma afirmação no modo de depuração.
 
-Para obter mais informações sobre `IFileDialogCustomize` a interface, consulte [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+Para obter mais `IFileDialogCustomize` informações sobre a interface, consulte [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
 ### <a name="example"></a>Exemplo
 
-Este exemplo recupera o objeto COM interno. Para executar este exemplo de código, você deve compilá-lo no Windows Vista ou posterior.
+Este exemplo recupera o objeto COM interno. Para executar este exemplo de código, você deve compilá-lo no Windows Vista ou mais tarde.
 
 [!code-cpp[NVC_MFC_CFileDialog#4](../../mfc/reference/codesnippet/cpp/cfiledialog-class_4.cpp)]
 
-##  <a name="getifileopendialog"></a>  CFileDialog::GetIFileOpenDialog
+## <a name="cfiledialoggetifileopendialog"></a><a name="getifileopendialog"></a>cfiledialog::getifileopendialog
 
-Recupera um ponteiro para o objeto COM interno para um determinado `CFileDialog`.
+Recupera um ponteiro para o objeto `CFileDialog`COM interno para um dado .
 
 ```
 IFileOpenDialog* GetIFileOpenDialog();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O ponteiro para o objeto COM interno para o `CFileDialog`. É sua responsabilidade liberar esse ponteiro adequadamente.
+O ponteiro para o objeto `CFileDialog`COM interno para o . É sua responsabilidade liberar este ponteiro apropriadamente.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função somente no Windows Vista ou posterior com um objeto que tenha *bVistaStyle* definido como true. Essa função retornará NULL se o `CFileDialog` não for uma caixa de diálogo **aberta** ou se *bVistaStyle* estiver definido como false. Nesse último caso, a função retorna apenas NULL no modo de versão – no modo de depuração, ele gerará uma asserção.
+Use esta função apenas no Windows Vista ou posteriormente com um objeto que tenha *bVistaStyle* definido como TRUE. Esta função retorna `CFileDialog` NULL se não for uma caixa de diálogo **Abrir** ou se *bVistaStyle* estiver definido como FALSE. Neste caso final, a função só retorna NULL no modo de liberação - no modo de depuração ele vai lançar uma afirmação.
 
-Para obter mais informações sobre `IFileOpenDialog` a interface, consulte [IFileOpenDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
+Para obter mais `IFileOpenDialog` informações sobre a interface, consulte [IFileOpenDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
 
 ### <a name="example"></a>Exemplo
 
-Este exemplo recupera o objeto COM interno. Para executar esse código, você deve compilá-lo no Windows Vista ou posterior.
+Este exemplo recupera o objeto COM interno. Para executar este código, você deve compilá-lo no Windows Vista ou mais tarde.
 
 [!code-cpp[NVC_MFC_CFileDialog#2](../../mfc/reference/codesnippet/cpp/cfiledialog-class_5.cpp)]
 
-##  <a name="getifilesavedialog"></a>  CFileDialog::GetIFileSaveDialog
+## <a name="cfiledialoggetifilesavedialog"></a><a name="getifilesavedialog"></a>cfiledialog::getiFileSavedialog
 
-Recupera um ponteiro para o objeto COM interno para um determinado `CFileDialog`.
+Recupera um ponteiro para o objeto `CFileDialog`COM interno para um dado .
 
 ```
 IFileSaveDialog* GetIFileSaveDialog();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O ponteiro para o objeto COM interno para o `CFileDialog`. É sua responsabilidade liberar esse ponteiro adequadamente.
+O ponteiro para o objeto `CFileDialog`COM interno para o . É sua responsabilidade liberar este ponteiro apropriadamente.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função somente no Windows Vista ou posterior com um objeto que tenha *bVistaStyle* definido como true. Essa função retornará NULL se `CFileDialog` não for uma caixa de diálogo de **salvamento** ou se *bVistaStyle* for definido como false. Nesse último caso, a função retorna apenas NULL no modo de versão – no modo de depuração, ele gerará uma asserção.
+Use esta função apenas no Windows Vista ou posteriormente com um objeto que tenha *bVistaStyle* definido como TRUE. Esta função retornará `CFileDialog` NULL se não for uma caixa de diálogo **Salvar** ou se *bVistaStyle* estiver definido como FALSE. Neste caso final, a função só retorna NULL no modo de liberação - no modo de depuração ele vai lançar uma afirmação.
 
-Para obter mais informações sobre `IFileSaveDialog` a interface, consulte [IFileSaveDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
+Para obter mais `IFileSaveDialog` informações sobre a interface, consulte [IFileSaveDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
 
 ### <a name="example"></a>Exemplo
 
-Este exemplo recupera o objeto COM interno. Para executar este exemplo de código, você deve compilá-lo no Windows Vista ou posterior.
+Este exemplo recupera o objeto COM interno. Para executar este exemplo de código, você deve compilá-lo no Windows Vista ou mais tarde.
 
 [!code-cpp[NVC_MFC_CFileDialog#3](../../mfc/reference/codesnippet/cpp/cfiledialog-class_6.cpp)]
 
-##  <a name="getnextpathname"></a>  CFileDialog::GetNextPathName
+## <a name="cfiledialoggetnextpathname"></a><a name="getnextpathname"></a>cfiledialog::getNextPathName
 
-Chame essa função para recuperar o próximo nome de arquivo do grupo selecionado na caixa de diálogo.
+Chame esta função para recuperar o próximo nome de arquivo do grupo selecionado na caixa de diálogo.
 
 ```
 CString GetNextPathName(POSITION& pos) const;
@@ -893,22 +893,22 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pos*<br/>
-Uma referência a um valor de posição retornado por uma `GetNextPathName` chamada `GetStartPosition` de função ou anterior. NULL se o final da lista tiver sido atingido.
+*Pos*<br/>
+Uma referência a um valor DE `GetNextPathName` `GetStartPosition` POSIÇÃO retornado por uma chamada anterior ou de função. NULL se o fim da lista tiver sido alcançado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O caminho completo do arquivo.
 
 ### <a name="remarks"></a>Comentários
 
-O caminho do nome de arquivo inclui o título do arquivo e o caminho do diretório inteiro. Por exemplo, `GetNextPathName` retornará "C:\FILES\TEXT. DAT "para o arquivo C:\FILES\TEXT.DAT. Você pode usar `GetNextPathName` em um loop de iteração progressiva se estabelecer a posição inicial com uma chamada `GetStartPosition`para.
+O caminho do nome do arquivo inclui o título do arquivo mais todo o caminho do diretório. Por exemplo, `GetNextPathName` retornará "C:\FILES\TEXT. DAT" para o arquivo C:\FILES\TEXT.DAT. Você pode `GetNextPathName` usar em um loop de iteração para `GetStartPosition`frente se estabelecer a posição inicial com uma chamada para .
 
-Se a seleção consistir em apenas um arquivo, esse nome de arquivo será retornado.
+Se a seleção consistir em apenas um arquivo, esse nome do arquivo será devolvido.
 
-##  <a name="getofn"></a>  CFileDialog::GetOFN
+## <a name="cfiledialoggetofn"></a><a name="getofn"></a>cfiledialog::getOFN
 
-Recupera a estrutura `OPENFILENAME` associada.
+Recupera a `OPENFILENAME` estrutura associada.
 
 ```
 const OPENFILENAME& GetOFN() const;
@@ -916,84 +916,84 @@ const OPENFILENAME& GetOFN() const;
 OPENFILENAME& GetOFN();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma estrutura [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) .
+Uma estrutura [OPENFILENAME.](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)
 
 ### <a name="remarks"></a>Comentários
 
-Use a segunda versão dessa função para inicializar a aparência de uma caixa de diálogo **Abrir arquivo** ou **arquivo salvar como** depois que ela é construída, mas antes de ser exibida `DoModal` com a função de membro. Por exemplo, você pode definir o `lpstrTitle` membro de `m_ofn` para a legenda que deseja que a caixa de diálogo tenha.
+Use a segunda versão desta função para inicializar a aparência de uma caixa de diálogo **Abrir ou** Salvar **arquivos como** caixa de diálogo depois de construída, mas antes de ser exibida com a `DoModal` função de membro. Por exemplo, você `lpstrTitle` pode `m_ofn` definir o membro da legenda que deseja que a caixa de diálogo tenha.
 
-##  <a name="getpathname"></a>  CFileDialog::GetPathName
+## <a name="cfiledialoggetpathname"></a><a name="getpathname"></a>cfiledialog::getPathName
 
-Chame essa função para recuperar o caminho completo do arquivo inserido na caixa de diálogo.
+Chame esta função para recuperar o caminho completo do arquivo inserido na caixa de diálogo.
 
 ```
 CString GetPathName() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O caminho completo do arquivo.
 
 ### <a name="remarks"></a>Comentários
 
-O caminho do nome de arquivo inclui o título do arquivo e o caminho do diretório inteiro. Por exemplo, `GetPathName` retornará "C:\FILES\TEXT. DAT "para o arquivo C:\FILES\TEXT.DAT.
+O caminho do nome do arquivo inclui o título do arquivo mais todo o caminho do diretório. Por exemplo, `GetPathName` retornará "C:\FILES\TEXT. DAT" para o arquivo C:\FILES\TEXT.DAT.
 
-Se `m_ofn.Flags` tiver o sinalizador OFN_ALLOWMULTISELECT definido, essa cadeia de caracteres conterá uma sequência de cadeias de caracteres NULL-teminated, com a primeira cadeia de caracteres do caminho do diretório do grupo de arquivos selecionado, seguida pelos nomes de todos os arquivos selecionados pelo usuário. Por esse motivo, use as funções de membro [GetStartPosition](#getstartposition) e [GetNextPathName](#getnextpathname) para recuperar o próximo nome de arquivo na lista.
+Se `m_ofn.Flags` tiver o OFN_ALLOWMULTISELECT conjunto de bandeiras, esta seqüência contém uma seqüência de strings anuladas, com a primeira seqüência sendo o caminho de diretório do grupo de arquivos selecionado, seguido pelos nomes de todos os arquivos selecionados pelo usuário. Por essa razão, use as funções [getstartposition](#getstartposition) e [getnextpathname](#getnextpathname) para recuperar o próximo nome do arquivo na lista.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CFileDialog::D omodal](#domodal).
+  Veja o exemplo de [CFileDialog::DoModal](#domodal).
 
-##  <a name="getreadonlypref"></a>  CFileDialog::GetReadOnlyPref
+## <a name="cfiledialoggetreadonlypref"></a><a name="getreadonlypref"></a>cfiledialog::GetReadOnlyPref
 
-Chame essa função para determinar se a caixa de seleção somente leitura foi selecionada nas caixas de diálogo abrir arquivo do Windows padrão e salvar arquivo como.
+Chame esta função para determinar se a caixa de seleção Somente leitura foi selecionada nas caixas de diálogo Abrir e Salvar arquivos como caixa de diálogo Do windows standard File Open and File Save As.
 
 ```
 BOOL GetReadOnlyPref() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se a caixa de seleção somente leitura na caixa de diálogo estiver marcada; caso contrário, 0.
+Não-zero se a caixa de seleção Somente leitura na caixa de diálogo estiver selecionada; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode ocultar a caixa de seleção somente leitura definindo o estilo OFN_HIDEREADONLY no `CFileDialog` Construtor.
+Você pode ocultar a caixa de seleção Somente leitura definindo o estilo OFN_HIDEREADONLY no `CFileDialog` construtor.
 
 > [!NOTE]
-> Os objetos de estilo `CFileDialog` do Windows Vista ou posterior não oferecem suporte a essa função. A tentativa de usar essa função em um estilo `CFileDialog` do Windows Vista ou posterior gerará [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+> Os objetos `CFileDialog` de estilo Windows Vista ou posteriores não suportam essa função. Tentar usar essa função em um estilo `CFileDialog` do Windows Vista ou posterior jogará [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-##  <a name="getresult"></a>  CFileDialog::GetResult
+## <a name="cfiledialoggetresult"></a><a name="getresult"></a>cfiledialog::getResult
 
-Recupera a opção que o usuário fez na caixa de diálogo.
+Recupera a escolha que o usuário fez na caixa de diálogo.
 
 ```
 IShellItem* GetResult() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para um IShellItem que representa a opção do usuário.
+Um ponteiro para um IShellItem que representa a escolha do usuário.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getresults"></a>  CFileDialog::GetResults
+## <a name="cfiledialoggetresults"></a><a name="getresults"></a>cfiledialog::getResults
 
-Recupera as opções do usuário em uma caixa de diálogo que permite seleção múltipla.
+Recupera as escolhas do usuário em uma caixa de diálogo que permite a seleção múltipla.
 
 ```
 IShellItemArray* GetResults() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para um IShellItemArray por meio do qual os itens selecionados na caixa de diálogo podem ser acessados.
+Um ponteiro para um IShellItemArray através do qual os itens selecionados na caixa de diálogo podem ser acessados.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getselectedcontrolitem"></a>  CFileDialog::GetSelectedControlItem
+## <a name="cfiledialoggetselectedcontrolitem"></a><a name="getselectedcontrolitem"></a>cfiledialog::GetSelectedControlItem
 
 Recupera um item específico do controle de contêiner especificado na caixa de diálogo.
 
@@ -1009,25 +1009,25 @@ HRESULT GetSelectedControlItem(
 A ID do controle de contêiner.
 
 *dwIDItem*<br/>
-A ID do item que o usuário selecionou no controle.
+O ID do item que o usuário selecionou no controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getstartposition"></a>  CFileDialog::GetStartPosition
+## <a name="cfiledialoggetstartposition"></a><a name="getstartposition"></a>cfiledialog::getStartPosition
 
-Chame essa função de membro para recuperar a posição do primeiro nome de caminho de arquivo na lista `m_ofn.Flags` , se tiver o sinalizador OFN_ALLOWMULTISELECT definido.
+Chame esta função de membro para recuperar a posição do `m_ofn.Flags` primeiro nome de caminho do arquivo na lista, se tiver o OFN_ALLOWMULTISELECT marca de bandeira.
 
 ```
 POSITION GetStartPosition() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor de posição que pode ser usado para iteração; NULL se a lista estiver vazia.
+Um valor de POSIÇÃO que pode ser usado para iteração; NULO se a lista estiver vazia.
 
-##  <a name="hidecontrol"></a>  CFileDialog::HideControl
+## <a name="cfiledialoghidecontrol"></a><a name="hidecontrol"></a>cfiledialog::Ocultar controle
 
-Chame essa função de membro para ocultar o controle especificado em uma caixa de diálogo abrir no estilo do Explorer ou salvar como comum.
+Chame esta função de membro para ocultar o controle especificado em uma caixa de diálogo aberta ou save as comum no estilo Explorer.
 
 ```
 void HideControl(int nID);
@@ -1036,39 +1036,39 @@ void HideControl(int nID);
 ### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-A ID do controle a ser ocultada.
+A id do controle para esconder.
 
 ### <a name="remarks"></a>Comentários
 
-A caixa de diálogo deve ter sido criada com o estilo OFN_EXPLORER; caso contrário, a função falhará com uma asserção.
+A caixa de diálogo deve ter sido criada com o estilo OFN_EXPLORER; caso contrário, a função falhará com uma afirmação.
 
-##  <a name="ispickfoldersmode"></a>  CFileDialog::IsPickFoldersMode
+## <a name="cfiledialogispickfoldersmode"></a><a name="ispickfoldersmode"></a>CFileDialog::IsPickPastsMode
 
-Determina se a caixa de diálogo atual está no modo de seletor de pasta.
+Determina se a caixa de diálogo atual está no modo seletor de pastas.
 
 ```
 BOOL IsPickFoldersMode() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a caixa de diálogo estiver no modo de seletor de pasta; caso contrário, FALSE.
-
-### <a name="remarks"></a>Comentários
-
-##  <a name="m_ofn"></a>CFileDialog:: m_ofn
-
-`m_ofn`é uma estrutura do tipo `OPENFILENAME`. Os dados nessa estrutura representam o estado atual do `CFileDialog`.
+TRUE se a caixa de diálogo estiver no modo seletor de pastas; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa estrutura para inicializar a aparência de uma caixa de diálogo **abrir** arquivo ou **arquivo salvar como** depois de construí-la, mas antes de exibi-la com o método [DoModal](#domodal) . Por exemplo, você pode definir o membro *lpstrTitle* de `m_ofn` para a legenda que você deseja que a caixa de diálogo tenha.
+## <a name="cfiledialogm_ofn"></a><a name="m_ofn"></a>CFileDialog::m_ofn
 
-Com o estilo Windows Vista ou posterior de [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` não há garantia de que sempre corresponda ao estado da caixa de diálogo. Ele é sincronizado com a caixa de diálogo em versões anteriores do Windows. Consulte [CFileDialog:: ApplyOFNToShellDialog](#applyofntoshelldialog) e [CFileDialog:: UpdateOFNFromShellDialog](#updateofnfromshelldialog) para obter mais informações sobre a sincronização `m_ofn` da estrutura e `CFileDialog` o estado no Windows Vista ou posterior.
+`m_ofn`é uma estrutura `OPENFILENAME`de tipo. Os dados nesta estrutura representam o `CFileDialog`estado atual do .
 
-As caixas de diálogo de arquivo de estilo do Windows Vista ou posterior não dão suporte a `CFileDialog`determinados membros e sinalizadores do. Como resultado, elas não terão efeito.
+### <a name="remarks"></a>Comentários
 
-Veja a seguir uma lista dos membros que não têm suporte do Windows Vista ou posterior:
+Use esta estrutura para inicializar a aparência de uma caixa de diálogo **Abrir** ou **Salvar arquivos como** caixa de diálogo depois de construí-la, mas antes de exibi-la com o método [DoModal.](#domodal) Por exemplo, você pode definir o `m_ofn` membro *lpstrTitle* da legenda que deseja que a caixa de diálogo tenha.
+
+Com o Windows Vista ou o `m_ofn` estilo posterior do [CFileDialog,](../../mfc/reference/cfiledialog-class.md)não é garantido que sempre corresponda ao estado da caixa de diálogo. Ele é sincronizado com a caixa de diálogo em versões anteriores do Windows. Veja [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) e [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) para obter `m_ofn` mais `CFileDialog` informações sobre a sincronização da estrutura e do estado no Windows Vista ou posteriormente.
+
+As diálogos de arquivo de estilo do Windows `CFileDialog`Vista ou posteriores não suportam certos membros e bandeiras do . Como resultado, isso não terá efeito.
+
+A seguir está uma lista dos membros que não são suportados pelo Windows Vista ou posteriormente:
 
 - `lpstrCustomFilter`
 
@@ -1080,7 +1080,7 @@ Veja a seguir uma lista dos membros que não têm suporte do Windows Vista ou po
 
 - `lpTemplateName`
 
-Os seguintes sinalizadores não têm suporte e, portanto, não têm efeito quando você usa o estilo Windows Vista ou `CFileDialog`posterior de:
+As seguintes bandeiras não são suportadas e, portanto, não `CFileDialog`têm efeito quando você usa o Windows Vista ou o estilo posterior de :
 
 - OFN_ENABLEHOOK
 
@@ -1090,27 +1090,27 @@ Os seguintes sinalizadores não têm suporte e, portanto, não têm efeito quand
 
 - OFN_ENABLETEMPLATEHANDLE
 
-- OFN_EXPLORER
+- Ofn_explorer
 
 - OFN_EXTENSIONDIFFERENT
 
 - OFN_HIDEREADONLY
 
-- OFN_LONGNAMES-sempre no Windows Vista ou posterior
+- OFN_LONGNAMES - efetivamente sempre ligado no Windows Vista ou posterior
 
-- OFN_NOLONGNAMES-efetivamente sempre no Windows Vista ou posterior
+- OFN_NOLONGNAMES - efetivamente sempre desligado no Windows Vista ou mais tarde
 
-- OFN_NONETWORKBUTTON-sempre no Windows Vista ou posterior
+- OFN_NONETWORKBUTTON - efetivamente sempre ligado no Windows Vista ou posterior
 
 - OFN_READONLY
 
 - OFN_SHOWHELP
 
-Para obter mais informações sobre essa estrutura, consulte a estrutura [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) no SDK do Windows.
+Para obter mais informações sobre essa estrutura, consulte a estrutura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) no SDK do Windows.
 
-##  <a name="makeprominent"></a>  CFileDialog::MakeProminent
+## <a name="cfiledialogmakeprominent"></a><a name="makeprominent"></a>cfiledialog::MakeProminent
 
-Coloca um controle na caixa de diálogo para que ele se destaque em comparação com outros controles.
+Coloca um controle no diálogo para que ele se destaque em comparação com outros controles.
 
 ```
 HRESULT MakeProminent(DWORD dwIDCtl);
@@ -1119,11 +1119,11 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do controle.
+A id do controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onbuttonclicked"></a>  CFileDialog::OnButtonClicked
+## <a name="cfiledialogonbuttonclicked"></a><a name="onbuttonclicked"></a>cfiledialog::OnButtonClicked
 
 Chamado quando o botão é clicado.
 
@@ -1134,13 +1134,13 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do botão.
+A id do botão.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="oncheckbuttontoggled"></a>  CFileDialog::OnCheckButtonToggled
+## <a name="cfiledialogoncheckbuttontoggled"></a><a name="oncheckbuttontoggled"></a>cfiledialog::OnCheckButtonToggled
 
-Chamado quando a caixa de seleção está marcada ou desmarcada.
+Chamado quando a caixa de seleção é verificada ou desmarcada.
 
 ```
 virtual void OnCheckButtonToggled(
@@ -1151,14 +1151,14 @@ virtual void OnCheckButtonToggled(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID da caixa de seleção.
+A id da caixa de seleção.
 
 *bChecked*<br/>
-Marcado ou desmarcado.
+Verificado ou desmarcado.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="oncontrolactivating"></a>  CFileDialog::OnControlActivating
+## <a name="cfiledialogoncontrolactivating"></a><a name="oncontrolactivating"></a>CFileDialog::OnControlActivating
 
 Chamado quando o controle é ativado.
 
@@ -1169,13 +1169,13 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do controle.
+A id do controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onfilenamechange"></a>  CFileDialog::OnFileNameChange
+## <a name="cfiledialogonfilenamechange"></a><a name="onfilenamechange"></a>cfiledialog::OnFileNameChange
 
-Substitua esse método se você quiser manipular a mensagem WM_NOTIFY CDN_SELCHANGE.
+Anule este método se quiser lidar com a mensagem CDN_SELCHANGE WM_NOTIFY.
 
 ```
 virtual void OnFileNameChange();
@@ -1183,31 +1183,31 @@ virtual void OnFileNameChange();
 
 ### <a name="remarks"></a>Comentários
 
-O sistema envia a mensagem CDN_SELCHANGE quando o usuário seleciona um novo arquivo ou pasta na lista de arquivos da caixa de diálogo **abrir** ou **salvar como** . Substitua esse método se você quiser executar qualquer ação em resposta a esta mensagem.
+O sistema envia a mensagem CDN_SELCHANGE quando o usuário seleciona um novo arquivo ou pasta na lista de arquivos da caixa de diálogo **Abrir** ou **Salvar como.** Anular este método se você quiser executar quaisquer ações em resposta a esta mensagem.
 
-O sistema enviará essa mensagem somente se a caixa de diálogo tiver sido criada com o sinalizador OFN_EXPLORER ativado. Para obter mais informações sobre a notificação, consulte [CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange). Para obter informações sobre o sinalizador OFN_EXPLORER, consulte as caixas de diálogo estrutura [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) e [abrir e salvar como](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
+O sistema envia esta mensagem somente se a caixa de diálogo foi criada com a bandeira OFN_EXPLORER ligada. Para obter mais informações sobre a notificação, consulte [CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange). Para obter informações sobre o OFN_EXPLORER bandeira, consulte a estrutura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) e [Abrir e Salvar como caixas de diálogo](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
-##  <a name="onfilenameok"></a>  CFileDialog::OnFileNameOK
+## <a name="cfiledialogonfilenameok"></a><a name="onfilenameok"></a>cfiledialog::OnFilenameOK
 
-Substitua essa função somente se desejar fornecer validação personalizada de nomes de arquivos inseridos em uma caixa de diálogo de arquivo comum.
+Anular esta função somente se você quiser fornecer validação personalizada de nomes de arquivos inseridos em uma caixa de diálogo de arquivo comum.
 
 ```
 virtual BOOL OnFileNameOK();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 1 se o nome do arquivo não for um nome de arquivo válido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função permite rejeitar um nome de arquivo para qualquer motivo específico do aplicativo. Normalmente, você não precisa usar essa função, pois a estrutura fornece validação padrão de nomes de arquivo e exibe uma caixa de mensagem se um nome inválido for inserido.
+Esta função permite que você rejeite um nome de arquivo por qualquer razão específica do aplicativo. Normalmente, você não precisa usar essa função porque a estrutura fornece validação padrão de nomes de arquivos e exibe uma caixa de mensagem se um nome de arquivo inválido for inserido.
 
-Se 1 for retornado, a caixa de diálogo permanecerá exibida para que o usuário insira outro nome de arquivo. O procedimento da caixa de diálogo ignora a caixa de diálogo se o retorno for 0. Outros valores de retorno diferentes de zero estão atualmente reservados e não devem ser usados.
+Se 1 for retornado, a caixa de diálogo permanecerá exibida para que o usuário digite outro nome de arquivo. O procedimento de diálogo descarta o diálogo se a devolução for 0. Outros valores de retorno não zero estão atualmente reservados e não devem ser usados.
 
-##  <a name="onfolderchange"></a>  CFileDialog::OnFolderChange
+## <a name="cfiledialogonfolderchange"></a><a name="onfolderchange"></a>cfiledialog::OnFolderChange
 
-Substitua essa função para manipular a mensagem WM_NOTIFYCDN_FOLDERCHANGE.
+Anular esta função para lidar com a mensagem WM_NOTIFYCDN_FOLDERCHANGE.
 
 ```
 virtual void OnFolderChange();
@@ -1215,13 +1215,13 @@ virtual void OnFolderChange();
 
 ### <a name="remarks"></a>Comentários
 
-A mensagem de notificação é enviada quando uma nova pasta é aberta na caixa de diálogo abrir ou salvar como.
+A mensagem de notificação é enviada quando uma nova pasta é aberta na caixa de diálogo Abrir ou Salvar como.
 
-A notificação será enviada somente se a caixa de diálogo tiver sido criada com o estilo OFN_EXPLORER. Para obter mais informações sobre a notificação, consulte [CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange). Para obter informações sobre o estilo OFN_EXPLORER, consulte a estrutura [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) e as [caixas de diálogo abrir e salvar como](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
+A notificação só é enviada se a caixa de diálogo foi criada com o estilo OFN_EXPLORER. Para obter mais informações sobre a notificação, consulte [CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange). Para obter informações sobre o estilo OFN_EXPLORER, consulte a estrutura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) e [Abrir e Salvar como caixas de diálogo](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
-##  <a name="oninitdone"></a>  CFileDialog::OnInitDone
+## <a name="cfiledialogoninitdone"></a><a name="oninitdone"></a>cfiledialog::OnInitDone
 
-Substitua essa função para manipular a mensagem WM_NOTIFY CDN_INITDONE.
+Anular esta função para lidar com a mensagem CDN_INITDONE WM_NOTIFY.
 
 ```
 virtual void OnInitDone();
@@ -1229,16 +1229,16 @@ virtual void OnInitDone();
 
 ### <a name="remarks"></a>Comentários
 
-O sistema envia essa mensagem de notificação quando o sistema termina de organizar controles na caixa de diálogo **abrir** ou **salvar como** para liberar espaço para os controles da caixa de diálogo filho.
+O sistema envia esta mensagem de notificação quando o sistema tiver terminado de organizar controles na caixa de diálogo **Abrir** ou **Salvar como** para abrir espaço para os controles da caixa de diálogo filho.
 
-O sistema enviará isso somente se a caixa de diálogo tiver sido criada com o estilo OFN_EXPLORER. Para obter mais informações sobre a notificação, consulte [CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone). Para obter informações sobre o estilo OFN_EXPLORER, consulte a estrutura [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) e as [caixas de diálogo abrir e salvar como](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
+O sistema envia isso somente se a caixa de diálogo foi criada com o estilo OFN_EXPLORER. Para obter mais informações sobre a notificação, consulte [CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone). Para obter informações sobre o estilo OFN_EXPLORER, consulte a estrutura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) e [Abrir e Salvar como caixas de diálogo](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
 > [!NOTE]
-> As caixas de diálogo de arquivo de estilo do Windows Vista ou posterior não oferecem suporte a essa função. A tentativa de usar essa função em uma caixa de diálogo de arquivo de estilo do Windows Vista ou posterior gerará [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+> As diálogos de arquivo de estilo do Windows Vista ou posteriores não suportam essa função. Tentar usar essa função em uma caixa de diálogo de arquivo de estilo do Windows Vista ou posterior jogará [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-##  <a name="onitemselected"></a>  CFileDialog::OnItemSelected
+## <a name="cfiledialogonitemselected"></a><a name="onitemselected"></a>cfiledialog::OnItemSelecionado
 
-Chamado quando o item de contêiner é selecionado.
+Chamado quando o item do contêiner for selecionado.
 
 ```
 virtual void OnItemSelected(
@@ -1252,13 +1252,13 @@ virtual void OnItemSelected(
 A ID do controle de contêiner.
 
 *dwIDItem*<br/>
-A ID do item.
+O ID do item.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onlbselchangednotify"></a>  CFileDialog::OnLBSelChangedNotify
+## <a name="cfiledialogonlbselchangednotify"></a><a name="onlbselchangednotify"></a>cfiledialog::OnLBSelChangedNotificar
 
-Essa função é chamada sempre que a seleção atual em uma caixa de listagem está prestes a ser alterada.
+Esta função é chamada sempre que a seleção atual em uma caixa de lista está prestes a mudar.
 
 ```
 virtual void OnLBSelChangedNotify(
@@ -1270,29 +1270,29 @@ virtual void OnLBSelChangedNotify(
 ### <a name="parameters"></a>Parâmetros
 
 *nIDBox*<br/>
-A ID da caixa de listagem ou da caixa de combinação na qual a seleção ocorreu.
+O ID da caixa de lista ou caixa de combinação em que a seleção ocorreu.
 
-*iCurSel*<br/>
+*Icursel*<br/>
 O índice da seleção atual.
 
-*nCode*<br/>
-O código de notificação de controle. Esse parâmetro deve ter um dos seguintes valores:
+*Ncode*<br/>
+O código de notificação de controle. Este parâmetro deve ter um dos seguintes valores:
 
-- CD_LBSELCHANGE especifica *iCurSel* é o item selecionado em uma caixa de listagem de seleção única.
+- CD_LBSELCHANGE Especifica *iCurSel* é o item selecionado em uma caixa de lista de seleção única.
 
-- CD_LBSELSUB Especifica que o *iCurSel* não está mais selecionado em uma caixa de listagem de seleção.
+- CD_LBSELSUB Especifica que *o iCurSel* não está mais selecionado em uma caixa de lista de multiseleção.
 
-- CD_LBSELADD especifica que *iCurSel* está selecionado em uma caixa de listagem de seleção multiseleções.
+- CD_LBSELADD Especifica que *o iCurSel* está selecionado em uma caixa de lista de multiseleção.
 
-- CD_LBSELNOITEMS especifica que nenhuma seleção existe em uma caixa de listagem de seleção.
+- CD_LBSELNOITEMS Especifica que não existe seleção em uma caixa de lista de multiseleção.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua essa função para fornecer manipulação personalizada de alterações de seleção na caixa de listagem. Por exemplo, você pode usar essa função para exibir os direitos de acesso ou a data da última modificação de cada arquivo que o usuário seleciona.
+Substituir esta função para fornecer o manuseio personalizado de alterações de seleção na caixa de lista. Por exemplo, você pode usar essa função para exibir os direitos de acesso ou a última alteração de data de cada arquivo que o usuário seleciona.
 
-##  <a name="onshareviolation"></a>  CFileDialog::OnShareViolation
+## <a name="cfiledialogonshareviolation"></a><a name="onshareviolation"></a>cfiledialog::onShareViolation
 
-Substitua essa função para fornecer manipulação personalizada de violações de compartilhamento.
+Anular esta função para fornecer o manuseio personalizado de violações de compartilhamento.
 
 ```
 virtual UINT OnShareViolation(LPCTSTR lpszPathName);
@@ -1300,28 +1300,28 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszPathName*<br/>
-O caminho do arquivo no qual ocorreu a violação de compartilhamento.
+*Lpszpathname*<br/>
+O caminho do arquivo em que a violação de compartilhamento ocorreu.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um dos seguintes valores:
 
-- OFN_SHAREFALLTHROUGH o nome do arquivo é retornado da caixa de diálogo.
+- OFN_SHAREFALLTHROUGH O nome do arquivo é devolvido da caixa de diálogo.
 
-- OFN_SHARENOWARN nenhuma ação adicional precisa ser executada.
+- OFN_SHARENOWARN Nenhuma ação adicional precisa ser tomada.
 
-- OFN_SHAREWARN o usuário recebe a mensagem de aviso padrão para esse erro.
+- OFN_SHAREWARNO usuário recebe a mensagem de aviso padrão para este erro.
 
 ### <a name="remarks"></a>Comentários
 
-Normalmente, você não precisa usar essa função porque a estrutura fornece verificação padrão de violações de compartilhamento e exibe uma caixa de mensagem se ocorrer uma violação de compartilhamento.
+Normalmente, você não precisa usar essa função porque o framework fornece verificação padrão de violações de compartilhamento e exibe uma caixa de mensagem se ocorrer uma violação de compartilhamento.
 
-Se você quiser desabilitar a verificação de violação de compartilhamento, use o operador OR bit a bit para combinar `m_ofn.Flags`o sinalizador OFN_SHAREAWARE com.
+Se você quiser desativar a verificação de violação de compartilhamento, use `m_ofn.Flags`o operador bitwise OR para combinar o OFN_SHAREAWARE de bandeira com .
 
-##  <a name="ontypechange"></a>CFileDialog:: OnTypeChange
+## <a name="cfiledialogontypechange"></a><a name="ontypechange"></a>cfiledialog::OnTypeChange
 
-Substitua essa função para manipular a mensagem WM_NOTIFYCDN_TYPECHANGE.
+Anular esta função para lidar com a mensagem WM_NOTIFYCDN_TYPECHANGE.
 
 ```
 virtual void OnTypeChange();
@@ -1329,11 +1329,11 @@ virtual void OnTypeChange();
 
 ### <a name="remarks"></a>Comentários
 
-A mensagem de notificação é enviada quando o usuário seleciona um novo tipo de arquivo na lista de tipos de arquivo na caixa de diálogo abrir ou salvar como.
+A mensagem de notificação é enviada quando o usuário seleciona um novo tipo de arquivo da lista de tipos de arquivo na caixa de diálogo Abrir ou Salvar como.
 
-A notificação será enviada somente se a caixa de diálogo tiver sido criada com o estilo OFN_EXPLORER. Para obter mais informações sobre a notificação, consulte [CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange). Para obter informações sobre o estilo OFN_EXPLORER, consulte a estrutura [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) e as [caixas de diálogo abrir e salvar como](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
+A notificação só é enviada se a caixa de diálogo foi criada com o estilo OFN_EXPLORER. Para obter mais informações sobre a notificação, consulte [CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange). Para obter informações sobre o estilo OFN_EXPLORER, consulte a estrutura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) e [Abrir e Salvar como caixas de diálogo](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
-##  <a name="removecontrolitem"></a>  CFileDialog::RemoveControlItem
+## <a name="cfiledialogremovecontrolitem"></a><a name="removecontrolitem"></a>cfilediálogo::RemoveControlItem
 
 Remove um item de um controle de contêiner na caixa de diálogo.
 
@@ -1346,16 +1346,16 @@ HRESULT RemoveControlItem(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do controle de contêiner do qual remover o item.
+O ID do controle do recipiente para remover o item.
 
 *dwIDItem*<br/>
-A ID do item.
+O ID do item.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setcheckbuttonstate"></a>  CFileDialog::SetCheckButtonState
+## <a name="cfiledialogsetcheckbuttonstate"></a><a name="setcheckbuttonstate"></a>cfiledialog::setCheckButtonstate
 
-Define o estado atual de um botão de verificação (caixa de seleção) no diálogo.
+Define o estado atual de um botão de seleção (caixa de seleção) na caixa de diálogo.
 
 ```
 HRESULT SetCheckButtonState(
@@ -1366,14 +1366,14 @@ HRESULT SetCheckButtonState(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID da caixa de seleção.
+A id da caixa de seleção.
 
 *bChecked*<br/>
-O estado da caixa de seleção. VERDADEIRO indica marcado; FALSE indica desmarcado.
+O estado da caixa de seleção. TRUE indica verificado; FALSO indica descontrolado.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setcontrolitemstate"></a>  CFileDialog::SetControlItemState
+## <a name="cfiledialogsetcontrolitemstate"></a><a name="setcontrolitemstate"></a>cfileDiálogo::SetControlItemState
 
 Define o estado atual de um item em um controle de contêiner encontrado na caixa de diálogo.
 
@@ -1390,16 +1390,16 @@ HRESULT SetControlItemState(
 A ID do controle de contêiner.
 
 *dwIDItem*<br/>
-A ID do item.
+O ID do item.
 
-*dwState*<br/>
+*Dwstate*<br/>
 Um ou mais valores da enumeração CDCONTROLSTATE que indicam o novo estado do controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setcontrolitemtext"></a>  CFileDialog::SetControlItemText
+## <a name="cfiledialogsetcontrolitemtext"></a><a name="setcontrolitemtext"></a>cfileDiálogo::SetControlItemText
 
-Define o texto de um item de controle. Por exemplo, o texto que acompanha um botão de opção ou um item em um menu.
+Define o texto de um item de controle. Por exemplo, o texto que acompanha um botão de rádio ou um item em um menu.
 
 ```
 HRESULT SetControlItemText(
@@ -1414,16 +1414,16 @@ HRESULT SetControlItemText(
 A ID do controle de contêiner.
 
 *dwIDItem*<br/>
-A ID do item.
+O ID do item.
 
-*strLabel*<br/>
-Texto do item.
+*strRótulo*<br/>
+O texto do item.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setcontrollabel"></a>  CFileDialog::SetControlLabel
+## <a name="cfiledialogsetcontrollabel"></a><a name="setcontrollabel"></a>cfile 'Diálogo':'SetControl'
 
-Define o texto associado a um controle, como um texto de botão ou um rótulo de caixa de edição.
+Define o texto associado a um controle, como texto de botão ou um rótulo de caixa de edição.
 
 ```
 HRESULT SetControlLabel(
@@ -1434,16 +1434,16 @@ HRESULT SetControlLabel(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do controle.
+A id do controle.
 
-*strLabel*<br/>
+*strRótulo*<br/>
 O nome do controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setcontrolstate"></a>  CFileDialog::SetControlState
+## <a name="cfiledialogsetcontrolstate"></a><a name="setcontrolstate"></a>cfiledialog::setControlState
 
-Define a visibilidade atual e os Estados habilitados de um determinado controle.
+Define a visibilidade atual e os estados habilitados de um determinado controle.
 
 ```
 HRESULT SetControlState(
@@ -1454,16 +1454,16 @@ HRESULT SetControlState(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do controle.
+A id do controle.
 
-*dwState*<br/>
+*Dwstate*<br/>
 Um ou mais valores da enumeração CDCONTROLSTATE que indicam o estado atual do controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setcontroltext"></a>  CFileDialog::SetControlText
+## <a name="cfiledialogsetcontroltext"></a><a name="setcontroltext"></a>cfileDialog::SetControlText
 
-Chame esse método para definir o texto para o controle especificado em uma caixa de diálogo **abrir** no estilo do Explorer ou **salvar como** .
+Chame este método para definir o texto para o controle especificado em uma caixa de diálogo **Abrir** ou **Salvar como** no estilo Explorer.
 
 ```
 void SetControlText(
@@ -1478,20 +1478,20 @@ void SetControlText(
 ### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-no A ID do controle para o qual definir o texto.
+[em] O ID do controle para o qual definir o texto.
 
-*lpsz*<br/>
-no Um ponteiro para a cadeia de caracteres que contém o texto a ser definido para o controle.
+*Lpsz*<br/>
+[em] Um ponteiro para a seqüência que contém o texto a definir para o controle.
 
 ### <a name="remarks"></a>Comentários
 
-Ambas as versões dessa função são válidas para aplicativos que usam Unicode. No entanto, somente a versão com o tipo LPCSTR é válida para aplicativos que usam ANSI.
+Ambas as versões desta função são válidas para aplicativos que usam Unicode. No entanto, apenas a versão com o tipo LPCSTR é válida para aplicações que usam ANSI.
 
-Para usar esse método, você deve criar a caixa de diálogo com o estilo OFN_EXPLORER. Caso contrário, a função falhará com uma asserção.
+Para usar este método, você deve criar a caixa de diálogo com o estilo OFN_EXPLORER. Caso contrário, a função falhará com uma afirmação.
 
-##  <a name="setdefext"></a>  CFileDialog::SetDefExt
+## <a name="cfiledialogsetdefext"></a><a name="setdefext"></a>cfiledialog::SetDefExt
 
-Chame essa função para definir a extensão de nome de arquivo padrão para uma caixa de diálogo aberta no estilo do Explorer ou salvar como comum.
+Chame esta função para definir a extensão de nome de arquivo padrão para uma caixa de diálogo aberta ou save as comum no estilo Explorer.
 
 ```
 void SetDefExt(LPCSTR lpsz);
@@ -1499,14 +1499,14 @@ void SetDefExt(LPCSTR lpsz);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpsz*<br/>
-Um ponteiro para uma cadeia de caracteres que contém a extensão padrão a ser usada para o objeto da caixa de diálogo. Esta cadeia de caracteres não deve conter um ponto (.).
+*Lpsz*<br/>
+Um ponteiro para uma seqüência contendo a extensão padrão a ser usada para o objeto da caixa de diálogo. Esta seqüência não deve conter um período (.).
 
 ### <a name="remarks"></a>Comentários
 
-A caixa de diálogo deve ter sido criada com o estilo OFN_EXPLORER; caso contrário, a função falhará com uma asserção.
+A caixa de diálogo deve ter sido criada com o estilo OFN_EXPLORER; caso contrário, a função falhará com uma afirmação.
 
-##  <a name="seteditboxtext"></a>  CFileDialog::SetEditBoxText
+## <a name="cfiledialogseteditboxtext"></a><a name="seteditboxtext"></a>cfileDialog::SetEditBoxText
 
 Define o texto atual em um controle de caixa de edição.
 
@@ -1519,14 +1519,14 @@ HRESULT SetEditBoxText(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID da caixa de edição.
+O ID da caixa de edição.
 
 *strText*<br/>
 O valor do texto.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setproperties"></a>  CFileDialog::SetProperties
+## <a name="cfiledialogsetproperties"></a><a name="setproperties"></a>cfileDialog::SetPropriedades
 
 Fornece um repositório de propriedades que define os valores padrão a serem usados para o item que está sendo salvo.
 
@@ -1537,13 +1537,13 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszPropList*<br/>
-Uma lista de propriedades predefinidas separadas por ";". Para obter uma lista dos sinalizadores, consulte a seção **flags** de [da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
+Uma lista de propriedades predefinidas separadas por ";". Para obter uma lista das bandeiras, consulte a seção **Sinalizadores** de [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setselectedcontrolitem"></a>  CFileDialog::SetSelectedControlItem
+## <a name="cfiledialogsetselectedcontrolitem"></a><a name="setselectedcontrolitem"></a>cfileDiálogo::ConjuntoConjuntoControledecontroleItem
 
-Define o estado selecionado de um item específico em um grupo de botões de opção ou de uma caixa de combinação encontrada no diálogo.
+Define o estado selecionado de um item específico em um grupo de botões de opção ou em uma caixa de combinação encontrada na caixa de diálogo.
 
 ```
 HRESULT SetSelectedControlItem(
@@ -1557,13 +1557,13 @@ HRESULT SetSelectedControlItem(
 A ID do controle de contêiner.
 
 *dwIDItem*<br/>
-A ID do item que o usuário selecionou no controle.
+O ID do item que o usuário selecionou no controle.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="settemplate"></a>  CFileDialog::SetTemplate
+## <a name="cfiledialogsettemplate"></a><a name="settemplate"></a>cfileDialog::SetTemplate
 
-Define o modelo de caixa de diálogo para o objeto [CFileDialog](../../mfc/reference/cfiledialog-class.md) .
+Define o modelo da caixa de diálogo para o objeto [CFileDialog.](../../mfc/reference/cfiledialog-class.md)
 
 ```
 void SetTemplate(
@@ -1578,27 +1578,27 @@ void SetTemplate(
 ### <a name="parameters"></a>Parâmetros
 
 *nWin3ID*<br/>
-no Contém o número de ID do recurso de modelo para o objeto que `CFileDialog` não é do Explorer. Este modelo só é usado no Windows NT 3,51 ou quando o estilo OFN_EXPLORER não está presente.
+[em] Contém o número de ID do recurso `CFileDialog` de modelo para o objeto não-Explorer. Este modelo só é usado no Windows NT 3.51 ou quando o estilo OFN_EXPLORER não está presente.
 
 *nWin4ID*<br/>
-no Contém o número de ID do recurso de modelo para o `CFileDialog` objeto do Gerenciador. Esse modelo é usado somente no Windows NT 4,0 e versões posteriores, Windows 95 e versões posteriores ou quando o estilo OFN_EXPLORER está presente.
+[em] Contém o número de ID do `CFileDialog` recurso de modelo para o objeto Explorer. Este modelo é usado apenas em versões Windows NT 4.0 e posteriores, Windows 95 e versões posteriores, ou quando o estilo OFN_EXPLORER está presente.
 
 *lpWin3ID*<br/>
-no Contém o nome do recurso de modelo para o objeto que não `CFileDialog` é do Explorer. Este modelo só é usado no Windows NT 3,51 ou quando o estilo OFN_EXPLORER não está presente.
+[em] Contém o nome do recurso de `CFileDialog` modelo para o objeto não-Explorer. Este modelo só é usado no Windows NT 3.51 ou quando o estilo OFN_EXPLORER não está presente.
 
 *lpWin4ID*<br/>
-no Contém o nome do recurso de modelo do objeto Explorer `CFileDialog` . Esse modelo é usado somente no Windows NT 4,0 e versões posteriores, Windows 95 e versões posteriores ou quando o estilo OFN_EXPLORER está presente.
+[em] Contém o nome do recurso `CFileDialog` de modelo do objeto Explorer. Este modelo é usado apenas em versões Windows NT 4.0 e posteriores, Windows 95 e versões posteriores, ou quando o estilo OFN_EXPLORER está presente.
 
 ### <a name="remarks"></a>Comentários
 
-O sistema usará apenas um dos modelos especificados. O sistema determina qual modelo usar com base na presença do estilo OFN_EXPLORER e no sistema operacional em que o aplicativo está sendo executado. Ao especificar um modelo que não seja o Explorer e o estilo do Explorer, é fácil dar suporte ao Windows NT 3,51, ao Windows NT 4,0 e às versões posteriores e ao Windows 95 e versões posteriores.
+O sistema usará apenas um dos modelos especificados. O sistema determina qual modelo usar com base na presença do estilo OFN_EXPLORER e do sistema operacional em que o aplicativo está sendo executado. Ao especificar um modelo não-Explorer e estilo Explorer, é fácil suportar windows NT 3.51, Windows NT 4.0 e versões posteriores do Windows NT, e Windows 95 e versões posteriores.
 
 > [!NOTE]
-> As caixas de diálogo de arquivo de estilo do Windows Vista ou posterior não oferecem suporte a essa função. A tentativa de usar essa função em uma caixa de diálogo de arquivo de estilo do Windows Vista ou posterior gerará [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Uma alternativa é usar uma caixa de diálogo personalizada. Para obter mais informações sobre como usar `CFileDialog`um personalizado, consulte [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+> As caixas de diálogo de arquivo de estilo do Windows Vista ou posteriores não suportam essa função. Tentar usar essa função em uma caixa de diálogo de arquivo de estilo do Windows Vista ou posterior jogará [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Uma alternativa é usar um diálogo personalizado. Para obter mais informações `CFileDialog`sobre como usar um personalizado, consulte [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
-##  <a name="startvisualgroup"></a>  CFileDialog::StartVisualGroup
+## <a name="cfiledialogstartvisualgroup"></a><a name="startvisualgroup"></a>cfiledialog::StartVisualGroup
 
-Declara um grupo Visual na caixa de diálogo. As chamadas subsequentes para qualquer método "Add" adicionam esses elementos a esse grupo.
+Declara um grupo visual na caixa de diálogo. Chamadas subseqüentes a qualquer método de "adicionar" adicionam esses elementos a este grupo.
 
 ```
 HRESULT StartVisualGroup(
@@ -1609,14 +1609,14 @@ HRESULT StartVisualGroup(
 ### <a name="parameters"></a>Parâmetros
 
 *dwIDCtl*<br/>
-A ID do grupo Visual.
+A identidade do grupo visual.
 
-*strLabel*<br/>
+*strRótulo*<br/>
 O nome do grupo.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="updateofnfromshelldialog"></a>  CFileDialog::UpdateOFNFromShellDialog
+## <a name="cfiledialogupdateofnfromshelldialog"></a><a name="updateofnfromshelldialog"></a>cfiledialog::updateOFnFromShellDialog
 
 Atualiza a `m_ofn` estrutura de dados do [CFileDialog](../../mfc/reference/cfiledialog-class.md) com base no estado atual do objeto interno.
 
@@ -1626,19 +1626,19 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>Comentários
 
-Nas versões do Windows anteriores ao Windows Vista, a estrutura de dados [da OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) do membro foi sincronizada continuamente com `CFileDialog`o estado do. Qualquer alteração na variável de membro [m_ofn](#m_ofn) afetou diretamente o estado da caixa de diálogo. Além disso, todas as alterações no estado da caixa de diálogo atualizaram imediatamente a variável de membro m_ofn.
+Nas versões do Windows antes do Windows Vista, a estrutura de `CFileDialog`dados DO MEMBRO [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) foi continuamente sincronizada com o estado do . Quaisquer alterações na variável [membro m_ofn](#m_ofn) afetaram diretamente o estado da caixa de diálogo. Além disso, qualquer alteração no estado da caixa de diálogo atualizou imediatamente a variável membro m_ofn.
 
-No Windows Vista ou posterior, a `m_ofn` estrutura de dados não é atualizada automaticamente. Para garantir a precisão dos dados na `m_ofn` variável de membro, você deve chamar a `UpdateOFNFromShellDialog` função antes de acessar os dados. O Windows chama essa função automaticamente durante o processamento de [IFileDialog:: OnFileOk](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
+No Windows Vista ou `m_ofn` posterior, a estrutura de dados não é atualizada automaticamente. Para garantir a exatidão dos `m_ofn` dados na variável `UpdateOFNFromShellDialog` membro, você deve ligar para a função antes de acessar os dados. O Windows chama essa função automaticamente durante o processamento do [IFileDialog::OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 
-Para obter mais informações sobre como usar a `CFileDialog` classe no Windows Vista ou posterior, consulte [classe CFileDialog](../../mfc/reference/cfiledialog-class.md).
+Para obter mais informações `CFileDialog` sobre como usar a classe no Windows Vista ou posterior, consulte [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).
 
 ### <a name="example"></a>Exemplo
 
-Este exemplo atualiza o `CFileDialog` antes de exibi-lo. Antes de atualizar `m_ofn` a variável de membro, precisamos sincronizá-la para o estado atual da caixa de diálogo.
+Este exemplo atualiza `CFileDialog` o antes de exibi-lo. Antes de `m_ofn` atualizar a variável membro, precisamos sincronizá-la ao estado atual da caixa de diálogo.
 
 [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

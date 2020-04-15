@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403588"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375100"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Classe CMFCRibbonMainPanel
 
-Implementa um painel de faixa de opções exibe quando você clica o [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
+Implementa um painel de fita que é exibido quando você clica no [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,39 +46,39 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonMainPanel::Add](#add)|Adiciona um elemento de faixa de opções no painel esquerdo do painel de botão do aplicativo. (Substitui [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Adiciona uma cadeia de caracteres de texto para o menu de lista de arquivos recentes.|
-|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Adiciona um elemento de faixa de opções no painel inferior do painel de aplicativo da faixa de opções.|
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Adiciona um elemento de faixa de opções para o painel à direita do painel de botão do aplicativo.|
-|`CMFCRibbonMainPanel::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|
-|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Retorna um retângulo que representa a área do painel principal da faixa de opções.|
-|`CMFCRibbonMainPanel::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|
+|[CMFCRibbonMainPanel::Adicionar](#add)|Adiciona um elemento de fita ao painel esquerdo do painel do botão de aplicação. (Substitui [cmfcribbonpanel::Adicionar](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
+|[CMFCRibbonMain::AddRecentFilesList](#addrecentfileslist)|Adiciona uma seqüência de texto ao menu de lista de arquivos recentes.|
+|[CMFCRibbonmainpanel::Addtobottom](#addtobottom)|Adiciona um elemento de fita ao painel inferior do painel de aplicação da fita.|
+|[CMFCRibbonmainpanel::Addtoright](#addtoright)|Adiciona um elemento de fita ao painel direito do painel do botão de aplicação.|
+|`CMFCRibbonMainPanel::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
+|[CMFCRibbonMain::GetCommandsFrame](#getcommandsframe)|Retorna um retângulo que representa a área do painel principal da fita.|
+|`CMFCRibbonMainPanel::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a este tipo de classe.|
 
 ## <a name="remarks"></a>Comentários
 
-Exibe a estrutura de `CMFCRibbonMainPanel` quando você abre o painel do aplicativo. Ele contém três painéis:
+A estrutura `CMFCRibbonMainPanel` exibe quando você abre o painel de aplicação. Contém três painéis:
 
-- O painel esquerdo contém comandos associados a arquivos, como **aberto**, **salve**, **impressão**, e **fechar**. Para adicionar um comando para esse painel, chame [CMFCRibbonMainPanel::Add](#add).
+- O painel esquerdo contém comandos associados a arquivos, como **Open,** **Save,** **Print**e **Close**. Para adicionar um comando a este painel, chame [CMFCRibbonMainPanel::Add](#add).
 
-- O painel direito contém opções que modificam o comando que você clicar no painel esquerdo. Por exemplo, se você clicar **Salvar como** no painel esquerdo, o painel à direita pode exibir tipos de arquivo disponíveis. Para adicionar um item para esse painel, chame [CMFCRibbonMainPanel::AddToRight](#addtoright).
+- O painel direito contém opções que modificam o comando que você clica no painel esquerdo. Por exemplo, se você clicar **em Salvar como** no painel esquerdo, o painel direito pode exibir os tipos de arquivo disponíveis. Para adicionar um item a este painel, chame [CMFCRibbonMainPanel::AddToRight](#addtoright).
 
-- O painel inferior contém botões que permitem que você alterar as configurações do aplicativo e para sair do programa. Para adicionar um item para esse painel, chame [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
+- O painel inferior contém botões que permitem alterar as configurações do aplicativo e sair do programa. Para adicionar um item a este painel, chame [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
+[Cmfcribbonpanel](../../mfc/reference/cmfcribbonpanel-class.md)
 
-[CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)
+[Cmfcribbonmainpanel](../../mfc/reference/cmfcribbonmainpanel-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxRibbonMainPanel.h
 
-##  <a name="add"></a>  CMFCRibbonMainPanel::Add
+## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a>CMFCRibbonMainPanel::Adicionar
 
-Adiciona um elemento de faixa de opções no painel esquerdo do painel de botão do aplicativo.
+Adiciona um elemento de fita ao painel esquerdo do painel do botão de aplicação.
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -87,15 +87,15 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Parâmetros
 
 *pElem*<br/>
-[no, out] Um ponteiro para o elemento de faixa de opções para adicionar ao painel principal.
+[dentro, fora] Um ponteiro para o elemento de fita para adicionar ao painel principal.
 
 ### <a name="remarks"></a>Comentários
 
-Adiciona um elemento de faixa de opções no painel. Elementos adicionados usando esse método estará localizados na coluna à esquerda do painel principal.
+Adiciona um elemento de fita ao painel. Os elementos adicionados usando este método serão localizados na coluna esquerda do painel principal.
 
-##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList
+## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFCRibbonMain::AddRecentFilesList
 
-Adiciona uma cadeia de caracteres de texto para o menu de lista de arquivos recentes.
+Adiciona uma seqüência de texto ao menu de lista de arquivos recentes.
 
 ```
 void AddRecentFilesList(
@@ -106,16 +106,16 @@ void AddRecentFilesList(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszLabel*<br/>
-Especifica a cadeia de caracteres para adicionar à lista de arquivos recentes.
+Especifica a seqüência para adicionar à lista de arquivos recentes.
 
-*nWidth*<br/>
+*Nwidth*<br/>
 Especifica a largura, em pixels, do painel de lista de arquivos recentes.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom
+## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFCRibbonmainpanel::Addtobottom
 
-Adiciona um elemento de faixa de opções no painel inferior do painel de aplicativo da faixa de opções.
+Adiciona um elemento de fita ao painel inferior do painel de aplicação da fita.
 
 ```
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
@@ -124,13 +124,13 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ### <a name="parameters"></a>Parâmetros
 
 *pElem*<br/>
-[no, out] Um ponteiro para o elemento de faixa de opções para adicionar a parte inferior do painel principal.
+[dentro, fora] Um ponteiro para o elemento de fita para adicionar à parte inferior do painel principal.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight
+## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFCRibbonmainpanel::Addtoright
 
-Adiciona um elemento de faixa de opções para o painel à direita do painel de botão do aplicativo.
+Adiciona um elemento de fita ao painel direito do painel do botão de aplicação.
 
 ```
 void AddToRight(
@@ -141,28 +141,28 @@ void AddToRight(
 ### <a name="parameters"></a>Parâmetros
 
 *pElem*<br/>
-Um ponteiro para um elemento de faixa de opções a serem adicionadas ao lado direito do painel principal.
+Um ponteiro para um elemento de fita a ser adicionado ao lado direito do painel principal.
 
-*nWidth*<br/>
-Especifica a largura, em pixels, do painel à direita.
+*Nwidth*<br/>
+Especifica a largura, em pixels, do painel direito.
 
 ### <a name="remarks"></a>Comentários
 
-Use esta função para adicionar um elemento de faixa de opções para o painel direito. O painel direito exibe a lista de arquivos recentes, mas você pode adicionar qualquer outro elemento de faixa de opções aqui.
+Use esta função para adicionar um elemento de fita ao painel direito. O painel direito normalmente exibe a lista de arquivos recentes, mas você pode adicionar qualquer outro elemento de fita aqui.
 
-##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame
+## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFCRibbonMain::GetCommandsFrame
 
-Retorna um retângulo que representa a área do painel principal da faixa de opções.
+Retorna um retângulo que representa a área do painel principal da fita.
 
 ```
 CRect GetCommandsFrame() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um retângulo que representa a área do painel principal da faixa de opções.
+Um retângulo que representa a área do painel principal da fita.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

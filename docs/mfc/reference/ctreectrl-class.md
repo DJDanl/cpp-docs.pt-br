@@ -162,16 +162,16 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: eda7a2430aa13bb8d30649d796d9f72f900b9097
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676971"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373302"
 ---
 # <a name="ctreectrl-class"></a>Classe CTreeCtrl
 
-Fornece a funcionalidade do controle de exibição de árvore comum do Windows.
+Fornece a funcionalidade do controle de visualização de árvore comum do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -181,48 +181,48 @@ class CTreeCtrl : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Constrói um objeto `CTreeCtrl`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[CTreeCtrl::Create](#create)|Cria um controle de exibição de árvore e o anexa a um objeto `CTreeCtrl`.|
-|[CTreeCtrl::CreateDragImage](#createdragimage)|Cria um bitmap de arrastar para o item de exibição de árvore especificado.|
-|[CTreeCtrl::CreateEx](#createex)|Cria um controle de árvore com os estilos estendidos do Windows especificados e o anexa a um objeto `CTreeCtrl`.|
-|[CTreeCtrl::DeleteAllItems](#deleteallitems)|Exclui todos os itens em um controle de exibição de árvore.|
-|[CTreeCtrl::DeleteItem](#deleteitem)|Exclui um novo item em um controle de exibição de árvore.|
-|[CTreeCtrl::EditLabel](#editlabel)|Edita um item de exibição de árvore especificado no local.|
-|[CTreeCtrl::EndEditLabelNow](#endeditlabelnow)|Cancela a operação de edição no rótulo de um item de exibição de árvore no controle de exibição de árvore atual.|
-|[CTreeCtrl::EnsureVisible](#ensurevisible)|Garante que um item de exibição de árvore esteja visível em seu controle de exibição de árvore.|
-|[CTreeCtrl::Expand](#expand)|Expande ou recolhe os itens filho do item de exibição de árvore especificado.|
-|[CTreeCtrl::GetBkColor](#getbkcolor)|Recupera a cor do plano de fundo atual do controle.|
+|[CTreeCtrl::Criar](#create)|Cria um controle de visualização `CTreeCtrl` de árvore e o anexa a um objeto.|
+|[CTreeCtrl::CreateDragImage](#createdragimage)|Cria um bitmap arrastando para o item de exibição de árvore especificado.|
+|[CTreeCtrl::CreateEx](#createex)|Cria um controle de árvore com os estilos estendidos do Windows especificados e o anexa a um `CTreeCtrl` objeto.|
+|[CTreeCtrl::DeleteAllItems](#deleteallitems)|Exclui todos os itens em um controle de visualização de árvore.|
+|[CTreeCtrl::DeleteItem](#deleteitem)|Exclui um novo item em um controle de visualização de árvore.|
+|[CTreeCtrl::EditLabel](#editlabel)|Emite um item de exibição de árvore especificado no local.|
+|[CTreeCtrl::EndEditLabelNow](#endeditlabelnow)|Cancela a operação de edição no rótulo de um item de exibição de árvore no controle atual de exibição de árvore.|
+|[CTreeCtrl::EnsureVisible](#ensurevisible)|Garante que um item de visualização de árvore seja visível no controle de visualização da árvore.|
+|[CTreeCtrl::Expand](#expand)|Expande, ou colapsa, os itens infantis do item de exibição de árvore especificado.|
+|[CTreeCtrl::GetBkColor](#getbkcolor)|Recupera a cor de fundo atual do controle.|
 |[CTreeCtrl::GetCheck](#getcheck)|Recupera o estado de verificação de um item de controle de árvore.|
 |[CTreeCtrl::GetChildItem](#getchilditem)|Recupera o filho de um item de exibição de árvore especificado.|
-|[CTreeCtrl::GetCount](#getcount)|Recupera o número de itens de árvore associados a um controle de exibição de árvore.|
-|[CTreeCtrl::GetDropHilightItem](#getdrophilightitem)|Recupera o destino de uma operação de arrastar e soltar.|
-|[CTreeCtrl::GetEditControl](#geteditcontrol)|Recupera o identificador do controle de edição usado para editar o item de exibição de árvore especificado.|
-|[CTreeCtrl::GetExtendedStyle](#getextendedstyle)|Recupera os estilos estendidos que o controle de exibição de árvore atual está usando.|
+|[CTreeCtrl::GetCount](#getcount)|Recupera o número de itens de árvore associados a um controle de visualização de árvore.|
+|[CTreeCtrl::GetDropHilightItem](#getdrophilightitem)|Recupera o alvo de uma operação de arrastar e soltar.|
+|[CTreeCtrl::GetEditControl](#geteditcontrol)|Recupera a alça do controle de edição usado para editar o item de exibição de árvore especificado.|
+|[CTreeCtrl::GetExtendedStyle](#getextendedstyle)|Recupera os estilos estendidos que o controle atual de visualização de árvore está usando.|
 |[CTreeCtrl::GetFirstVisibleItem](#getfirstvisibleitem)|Recupera o primeiro item visível do item de exibição de árvore especificado.|
-|[CTreeCtrl::GetImageList](#getimagelist)|Recupera o identificador da lista de imagens associada a um controle de exibição de árvore.|
-|[CTreeCtrl::GetIndent](#getindent)|Recupera o deslocamento (em pixels) de um item de exibição de árvore de seu pai.|
-|[CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Recupera a cor usada para desenhar a marca de inserção para o modo de exibição de árvore.|
+|[CTreeCtrl::GetImageList](#getimagelist)|Recupera a alça da lista de imagens associada a um controle de visualização de árvore.|
+|[CTreeCtrl::GetIndent](#getindent)|Recupera o deslocamento (em pixels) de um item de visualização de árvore de seu pai.|
+|[CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Recupera a cor usada para desenhar a marca de inserção para a visualização da árvore.|
 |[CTreeCtrl::GetItem](#getitem)|Recupera os atributos de um item de exibição de árvore especificado.|
-|[CTreeCtrl::GetItemData](#getitemdata)|Retorna o valor específico do aplicativo associado a um item.|
-|[CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex)|Recupera o índice da imagem a ser exibida quando o item especificado do controle de exibição de árvore atual está no estado expandido.|
-|[CTreeCtrl::GetItemHeight](#getitemheight)|Recupera a altura atual dos itens de exibição de árvore.|
+|[CTreeCtrl::GetItemData](#getitemdata)|Devolve o valor específico do aplicativo associado a um item.|
+|[CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex)|Recupera o índice da imagem a ser exibida quando o item especificado do controle atual de exibição de árvore estiver no estado expandido.|
+|[CTreeCtrl::GetItemHeight](#getitemheight)|Recupera a altura atual dos itens de visualização da árvore.|
 |[CTreeCtrl::GetItemImage](#getitemimage)|Recupera as imagens associadas a um item.|
-|[CTreeCtrl::GetItemPartRect](#getitempartrect)|Recupera o retângulo delimitador de uma parte especificada de um item especificado no controle de exibição de árvore atual.|
+|[CTreeCtrl::GetItemPartRect](#getitempartrect)|Recupera o retângulo delimitador para uma parte especificada de um item especificado no controle atual de exibição de árvore.|
 |[CTreeCtrl::GetItemRect](#getitemrect)|Recupera o retângulo delimitador de um item de exibição de árvore.|
-|[CTreeCtrl::GetItemState](#getitemstate)|Retorna o estado de um item.|
-|[CTreeCtrl::GetItemStateEx](#getitemstateex)|Recupera o estado estendido do item especificado no controle de exibição de árvore atual.|
+|[CTreeCtrl::GetItemState](#getitemstate)|Devolve o estado de um item.|
+|[CTreeCtrl::GetItemStateEx](#getitemstateex)|Recupera o estado estendido do item especificado no controle atual de exibição de árvore.|
 |[CTreeCtrl::GetItemText](#getitemtext)|Retorna o texto de um item.|
-|[CTreeCtrl::GetLastVisibleItem](#getlastvisibleitem)|Recupera o último item expandido no controle de exibição de árvore atual.|
-|[CTreeCtrl::GetLineColor](#getlinecolor)|Recupera a cor da linha atual para o controle de exibição de árvore.|
+|[CTreeCtrl::GetLastVisibleItem](#getlastvisibleitem)|Recupera o último item expandido no controle atual de visualização de árvores.|
+|[CTreeCtrl::GetLineColor](#getlinecolor)|Recupera a cor da linha atual para o controle de visualização da árvore.|
 |[CTreeCtrl::GetNextItem](#getnextitem)|Recupera o próximo item de exibição de árvore que corresponde a uma relação especificada.|
 |[CTreeCtrl::GetNextSiblingItem](#getnextsiblingitem)|Recupera o próximo irmão do item de exibição de árvore especificado.|
 |[CTreeCtrl::GetNextVisibleItem](#getnextvisibleitem)|Recupera o próximo item visível do item de exibição de árvore especificado.|
@@ -230,76 +230,76 @@ class CTreeCtrl : public CWnd
 |[CTreeCtrl::GetPrevSiblingItem](#getprevsiblingitem)|Recupera o irmão anterior do item de exibição de árvore especificado.|
 |[CTreeCtrl::GetPrevVisibleItem](#getprevvisibleitem)|Recupera o item visível anterior do item de exibição de árvore especificado.|
 |[CTreeCtrl::GetRootItem](#getrootitem)|Recupera a raiz do item de exibição de árvore especificado.|
-|[CTreeCtrl::GetScrollTime](#getscrolltime)|Recupera o tempo máximo de rolagem para o controle de exibição de árvore.|
-|[CTreeCtrl::GetSelectedCount](#getselectedcount)|Recupera o número de itens selecionados no controle de exibição de árvore atual.|
+|[CTreeCtrl::GetScrollTime](#getscrolltime)|Recupera o tempo máximo de rolagem para o controle de visualização da árvore.|
+|[CTreeCtrl::GetSelectedCount](#getselectedcount)|Recupera o número de itens selecionados no controle atual de exibição de árvore.|
 |[CTreeCtrl::GetSelectedItem](#getselecteditem)|Recupera o item de exibição de árvore selecionado no momento.|
-|[CTreeCtrl::GetTextColor](#gettextcolor)|Recupera a cor do texto atual do controle.|
-|[CTreeCtrl::GetToolTips](#gettooltips)|Recupera o identificador para o controle ToolTip filho usado por um controle de exibição de árvore.|
-|[CTreeCtrl::GetVisibleCount](#getvisiblecount)|Recupera o número de itens de árvore visíveis associados a um controle de exibição de árvore.|
-|[CTreeCtrl::HitTest](#hittest)|Retorna a posição atual do cursor relacionado ao objeto `CTreeCtrl`.|
-|[CTreeCtrl::InsertItem](#insertitem)|Insere um novo item em um controle de exibição de árvore.|
-|[CTreeCtrl::ItemHasChildren](#itemhaschildren)|Retornará zero se o item especificado tiver itens filhos.|
-|[CTreeCtrl::MapAccIdToItem](#mapaccidtoitem)|Mapeia o identificador de acessibilidade especificado para o identificador para um item de exibição de árvore no controle de exibição de árvore atual.|
-|[CTreeCtrl::MapItemToAccID](#mapitemtoaccid)|Mapeia o identificador especificado para um item de exibição de árvore no controle de exibição de árvore atual para um identificador de acessibilidade.|
+|[CTreeCtrl::GetTextColor](#gettextcolor)|Recupera a cor de texto atual do controle.|
+|[CTreeCtrl::GetToolTips](#gettooltips)|Recupera a alça para o controle toolTip infantil usado por um controle de visualização de árvore.|
+|[CTreeCtrl::GetVisibleCount](#getvisiblecount)|Recupera o número de itens de árvore visíveis associados a um controle de visualização de árvore.|
+|[CTreeCtrl::HitTest](#hittest)|Retorna a posição atual do cursor relacionada ao `CTreeCtrl` objeto.|
+|[CTreeCtrl::InsertItem](#insertitem)|Insere um novo item em um controle de visualização de árvore.|
+|[CTreeCtrl::ItemHasChildren](#itemhaschildren)|Retorna não zero se o item especificado tiver itens infantis.|
+|[CTreeCtrl::MapAccIdToItem](#mapaccidtoitem)|Mapeie o identificador de acessibilidade especificado para a alça para um item de exibição de árvore no controle atual de exibição de árvore.|
+|[CTreeCtrl::MapItemToAccID](#mapitemtoaccid)|Mapeie a alça especificada para um item de exibição de árvore no controle atual de exibição de árvore para um identificador de acessibilidade.|
 |[CTreeCtrl::Select](#select)|Seleciona, rola para a exibição ou redesenha um item de exibição de árvore especificado.|
-|[CTreeCtrl::SelectDropTarget](#selectdroptarget)|Redesenha o item de árvore como o destino de uma operação de arrastar e soltar.|
+|[CTreeCtrl::SelectDropTarget](#selectdroptarget)|Redesenha o item da árvore como alvo de uma operação de arrastar e soltar.|
 |[CTreeCtrl::SelectItem](#selectitem)|Seleciona um item de exibição de árvore especificado.|
 |[CTreeCtrl::SelectSetFirstVisible](#selectsetfirstvisible)|Seleciona um item de exibição de árvore especificado como o primeiro item visível.|
-|[CTreeCtrl::SetAutoscrollInfo](#setautoscrollinfo)|Define a taxa de rolagem automática do controle de exibição de árvore atual.|
-|[CTreeCtrl::SetBkColor](#setbkcolor)|Define a cor do plano de fundo do controle.|
+|[CTreeCtrl::SetAutoscrollInfo](#setautoscrollinfo)|Define a taxa de rolagem automática do controle atual de visualização de árvore.|
+|[CTreeCtrl::SetBkColor](#setbkcolor)|Define a cor de fundo do controle.|
 |[CTreeCtrl::SetCheck](#setcheck)|Define o estado de verificação de um item de controle de árvore.|
-|[CTreeCtrl::SetExtendedStyle](#setextendedstyle)|Define os estilos estendidos para o controle de exibição de árvore atual.|
-|[CTreeCtrl::SetImageList](#setimagelist)|Define o identificador da lista de imagens associada a um controle de exibição de árvore.|
-|[CTreeCtrl::SetIndent](#setindent)|Define o deslocamento (em pixels) de um item de exibição de árvore de seu pai.|
-|[CTreeCtrl::SetInsertMark](#setinsertmark)|Define a marca de inserção em um controle de exibição de árvore.|
-|[CTreeCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Define a cor usada para desenhar a marca de inserção para o modo de exibição de árvore.|
+|[CTreeCtrl::SetExtendedStyle](#setextendedstyle)|Define os estilos estendidos para o controle atual de visualização de árvore.|
+|[CTreeCtrl::SetImageList](#setimagelist)|Define o cabo da lista de imagens associado a um controle de visualização de árvore.|
+|[CTreeCtrl::SetIndent](#setindent)|Define o deslocamento (em pixels) de um item de visualização de árvore de seu pai.|
+|[CTreeCtrl::SetInsertMark](#setinsertmark)|Define a marca de inserção em um controle de visualização de árvore.|
+|[CTreeCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Define a cor usada para desenhar a marca de inserção para a visualização da árvore.|
 |[CTreeCtrl::SetItem](#setitem)|Define os atributos de um item de exibição de árvore especificado.|
 |[CTreeCtrl::SetItemData](#setitemdata)|Define o valor específico do aplicativo associado a um item.|
-|[CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex)|Define o índice da imagem a ser exibido quando o item especificado do controle de exibição de árvore atual estiver no estado expandido.|
-|[CTreeCtrl::SetItemHeight](#setitemheight)|Define a altura dos itens de exibição de árvore.|
+|[CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex)|Define o índice da imagem a ser exibida quando o item especificado do controle atual de exibição de árvore estiver no estado expandido.|
+|[CTreeCtrl::SetItemHeight](#setitemheight)|Define a altura dos itens de vista da árvore.|
 |[CTreeCtrl::SetItemImage](#setitemimage)|Associa imagens a um item.|
 |[CTreeCtrl::SetItemState](#setitemstate)|Define o estado de um item.|
-|[CTreeCtrl::SetItemStateEx](#setitemstateex)|Define o estado estendido do item especificado no controle de exibição de árvore atual.|
+|[CTreeCtrl::SetItemStateEx](#setitemstateex)|Define o estado estendido do item especificado no controle atual de exibição de árvore.|
 |[CTreeCtrl::SetItemText](#setitemtext)|Define o texto de um item.|
-|[CTreeCtrl::SetLineColor](#setlinecolor)|Define a cor da linha atual para o controle de exibição de árvore.|
-|[CTreeCtrl::SetScrollTime](#setscrolltime)|Define o tempo máximo de rolagem para o controle de exibição de árvore.|
+|[CTreeCtrl::SetLineColor](#setlinecolor)|Define a cor da linha atual para o controle de visualização da árvore.|
+|[CTreeCtrl::SetScrollTime](#setscrolltime)|Define o tempo máximo de rolagem para o controle de visualização da árvore.|
 |[CTreeCtrl::SetTextColor](#settextcolor)|Define a cor do texto do controle.|
-|[CTreeCtrl::SetToolTips](#settooltips)|Define um controle de dica de ferramenta filho do controle de exibição de árvore.|
-|[CTreeCtrl::ShowInfoTip](#showinfotip)|Exibe o InfoTip do item especificado no controle de exibição de árvore atual.|
-|[CTreeCtrl::SortChildren](#sortchildren)|Classifica os filhos de um determinado item pai.|
+|[CTreeCtrl::SetToolTips](#settooltips)|Define o controle child ToolTip de um controle de visualização de árvore.|
+|[CTreeCtrl::ShowInfoTip](#showinfotip)|Exibe a dica de informação para o item especificado no controle atual de exibição de árvore.|
+|[CTreeCtrl::SortChildren](#sortchildren)|Classifica os filhos de um determinado item dos pais.|
 |[CTreeCtrl::SortChildrenCB](#sortchildrencb)|Classifica os filhos de um determinado item pai usando uma função de classificação definida pelo aplicativo.|
 
 ## <a name="remarks"></a>Comentários
 
-Um "controle de exibição de árvore" é uma janela que exibe uma lista hierárquica de itens, como os cabeçalhos de um documento, as entradas em um índice ou os arquivos e diretórios em um disco. Cada item consiste em um rótulo e uma imagem de bitmap opcional, e cada item pode ter uma lista de subitens associados a ele. Ao clicar em um item, o usuário pode expandir e recolher a lista de subitens associada.
+Um "controle de visualização de árvore" é uma janela que exibe uma lista hierárquica de itens, como os títulos de um documento, as entradas em um índice ou os arquivos e diretórios em um disco. Cada item consiste em um rótulo e uma imagem bitmapapped opcional, e cada item pode ter uma lista de subitens associados a ele. Ao clicar em um item, o usuário pode expandir e colapsar a lista associada de subitens.
 
-Esse controle (e, portanto, a classe `CTreeCtrl`) está disponível somente para programas em execução no Windows 98 e no Windows NT versão 4 e posterior.
+Este controle (e, `CTreeCtrl` portanto, a classe) está disponível apenas para programas em execução no Windows 98 e Windows NT versão 4 e posteriores.
 
-Para obter mais informações sobre como usar `CTreeCtrl`, consulte:
+Para obter mais `CTreeCtrl`informações sobre como usar, consulte:
 
 - [Controles](../../mfc/controls-mfc.md)
 
 - [Usando CTreeCtrl](../../mfc/using-ctreectrl.md)
 
-- [Referência de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-reference) no SDK do Windows.
+- [Referência de controle de visualização](/windows/win32/Controls/tree-view-control-reference) de árvore no SDK do Windows.
 
-## <a name="inheritance-hierarchy"></a>Hierarquia de Herança
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
 `CTreeCtrl`
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxcmn. h
+**Cabeçalho:** afxcmn.h
 
-##  <a name="create"></a>  CTreeCtrl::Create
+## <a name="ctreectrlcreate"></a><a name="create"></a>CTreeCtrl::Criar
 
-Se você especificar o controle de árvore em um modelo de caixa de diálogo ou se estiver usando [CTreeView](../../mfc/reference/ctreeview-class.md), seu controle de árvore será criado automaticamente quando a caixa de diálogo ou exibição for criada.
+Se você especificar o controle de árvore em um modelo de caixa de diálogo ou se estiver usando [cTreeView,](../../mfc/reference/ctreeview-class.md)o controle da árvore será criado automaticamente quando a caixa de diálogo ou exibição for criada.
 
 ```
 virtual BOOL Create(
@@ -311,37 +311,37 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwStyle*<br/>
-Especifica o estilo do controle de exibição de árvore. Aplique estilos de janela, descritos na [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww), e qualquer combinação de [estilos de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-styles) , conforme descrito na SDK do Windows.
+*Dwstyle*<br/>
+Especifica o estilo do controle de visualização da árvore. Aplique estilos de janela, descritos no [CreateWindow,](/windows/win32/api/winuser/nf-winuser-createwindoww)e qualquer combinação de estilos de controle de [visualização](/windows/win32/Controls/tree-view-control-window-styles) de árvore conforme descrito no SDK do Windows.
 
-*rect*<br/>
-Especifica o tamanho e a posição do controle de exibição de árvore. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
+*Rect*<br/>
+Especifica o tamanho e a posição do controle de visualização da árvore. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
 
-*pParentWnd*<br/>
-Especifica a janela pai do controle de exibição de árvore, geralmente um `CDialog`. Ele não deve ser nulo.
+*Pparentwnd*<br/>
+Especifica a janela pai do controle de `CDialog`visualização da árvore, geralmente um . Não deve ser NULO.
 
 *nID*<br/>
-Especifica a ID do controle de exibição de árvore.
+Especifica o ID do controle de visualização de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se a inicialização tiver sido bem-sucedida; caso contrário, 0.
+Não zero se a inicialização foi bem sucedida; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Se você quiser criar o controle de árvore como uma janela filho de alguma outra janela, use a função de membro `Create`. Se você criar o controle de árvore usando `Create`, deverá passá-lo WS_VISIBLE, além de outros estilos de exibição de árvore.
+Se você quiser criar o controle da árvore como uma `Create` janela filho de alguma outra janela, use a função membro. Se você criar o `Create`controle de árvore usando, você deve passá-lo WS_VISIBLE, além de outros estilos de visualização de árvore.
 
-Você constrói uma `CTreeCtrl` em duas etapas. Primeiro, chame o construtor e, em seguida, chame `Create`, que cria o controle de exibição de árvore e o anexa ao objeto `CTreeCtrl`.
+Você constrói `CTreeCtrl` um em dois passos. Primeiro chame o construtor, `Create`depois chame, que cria o controle `CTreeCtrl` de visualização da árvore e o anexa ao objeto.
 
-Para criar um controle de árvore com estilos de janela estendidos, chame [CreateEx](#createex) em vez de `Create`.
+Para criar um controle de árvore com estilos `Create`de janela estendidos, chame [CreateEx](#createex) em vez de .
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_1.cpp)]
 
-##  <a name="createex"></a>  CTreeCtrl::CreateEx
+## <a name="ctreectrlcreateex"></a><a name="createex"></a>CTreeCtrl::CreateEx
 
-Chame essa função para criar um controle (uma janela filho) e associá-lo ao objeto `CTreeCtrl`.
+Chame esta função para criar um controle (uma `CTreeCtrl` janela filho) e associá-la com o objeto.
 
 ```
 virtual BOOL CreateEx(
@@ -354,32 +354,32 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwExStyle*<br/>
+*Dwexstyle*<br/>
 Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
 
-*dwStyle*<br/>
-Especifica o estilo do controle de exibição de árvore. Aplique estilos de janela, descritos na [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww), e qualquer combinação de [estilos de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-styles) , conforme descrito na SDK do Windows.
+*Dwstyle*<br/>
+Especifica o estilo do controle de visualização da árvore. Aplique estilos de janela, descritos no [CreateWindow,](/windows/win32/api/winuser/nf-winuser-createwindoww)e qualquer combinação de estilos de controle de [visualização](/windows/win32/Controls/tree-view-control-window-styles) de árvore conforme descrito no SDK do Windows.
 
-*rect*<br/>
-Uma referência a uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) que descreve o tamanho e a posição da janela a ser criada, nas coordenadas de cliente de *pParentWnd*.
+*Rect*<br/>
+Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
-*pParentWnd*<br/>
+*Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
 
 *nID*<br/>
-A ID da janela filho do controle.
+A id da janela infantil do controle.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido 0.
+Não zero se bem sucedido caso contrário 0.
 
 ### <a name="remarks"></a>Comentários
 
-Use `CreateEx` em vez de [Create](#create) para aplicar estilos estendidos do Windows, especificados pelo **WS_EX_** de prefácio de estilo estendido do Windows.
+Use `CreateEx` em vez de [Criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.
 
-##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
+## <a name="ctreectrlcreatedragimage"></a><a name="createdragimage"></a>CTreeCtrl::CreateDragImage
 
-Chame essa função para criar um bitmap de arrastar para o item determinado em um controle de exibição de árvore, criar uma lista de imagens para o bitmap e adicionar o bitmap à lista de imagens.
+Chame esta função para criar um bitmap arrastado para o item dado em um controle de exibição de árvore, crie uma lista de imagens para o bitmap e adicione o bitmap à lista de imagens.
 
 ```
 CImageList* CreateDragImage(HTREEITEM hItem);
@@ -387,22 +387,22 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item de árvore a ser arrastado.
+*Hitem*<br/>
+Alça do item da árvore a ser arrastado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para a lista de imagens para a qual o bitmap de arrastar foi adicionado, se bem-sucedido; caso contrário, NULL.
+Ponteiro para a lista de imagens à qual o bitmap arrastando foi adicionado, se bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Um aplicativo usa as funções de lista de imagens para exibir a imagem quando o item está sendo arrastado.
+Um aplicativo usa as funções da lista de imagens para exibir a imagem quando o item está sendo arrastado.
 
-O objeto `CImageList` é permanente e você deve excluí-lo quando terminar. Por exemplo:
+O `CImageList` objeto é permanente, e você deve excluí-lo quando terminar. Por exemplo:
 
 [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]
 
-##  <a name="ctreectrl"></a>  CTreeCtrl::CTreeCtrl
+## <a name="ctreectrlctreectrl"></a><a name="ctreectrl"></a>CTreeCtrl::CTreeCtrl
 
 Constrói um objeto `CTreeCtrl`.
 
@@ -410,25 +410,25 @@ Constrói um objeto `CTreeCtrl`.
 CTreeCtrl();
 ```
 
-##  <a name="deleteallitems"></a>  CTreeCtrl::DeleteAllItems
+## <a name="ctreectrldeleteallitems"></a><a name="deleteallitems"></a>CTreeCtrl::DeleteAllItems
 
-Chame essa função para excluir todos os itens do controle de exibição de árvore.
+Chame esta função para excluir todos os itens do controle de visualização da árvore.
 
 ```
 BOOL DeleteAllItems();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_3.cpp)]
 
-##  <a name="deleteitem"></a>  CTreeCtrl::DeleteItem
+## <a name="ctreectrldeleteitem"></a><a name="deleteitem"></a>CTreeCtrl::DeleteItem
 
-Chame essa função para excluir um item do controle de exibição de árvore.
+Chame esta função para excluir um item do controle de visualização da árvore.
 
 ```
 BOOL DeleteItem(HTREEITEM hItem);
@@ -436,20 +436,20 @@ BOOL DeleteItem(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item de árvore a ser excluído. Se *hItem* tiver o valor TVI_ROOT, todos os itens serão excluídos do controle de exibição de árvore.
+*Hitem*<br/>
+Alça do item da árvore a ser excluído. Se *hitem* tiver o valor TVI_ROOT, todos os itens serão excluídos do controle de visualização da árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_4.cpp)]
 
-##  <a name="editlabel"></a>  CTreeCtrl::EditLabel
+## <a name="ctreectrleditlabel"></a><a name="editlabel"></a>CTreeCtrl::EditLabel
 
-Chame essa função para iniciar a edição in-loco do texto do item especificado.
+Chame esta função para iniciar a edição no local do texto do item especificado.
 
 ```
 CEdit* EditLabel(HTREEITEM hItem);
@@ -457,24 +457,24 @@ CEdit* EditLabel(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item de árvore a ser editado.
+*Hitem*<br/>
+Alça do item da árvore a ser editado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, um ponteiro para o objeto `CEdit` usado para editar o texto do item; caso contrário, NULL.
+Se for bem-sucedido, um ponteiro para o `CEdit` objeto usado para editar o texto do item; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-A edição é feita substituindo o texto do item por um controle de edição de linha única que contém o texto.
+A edição é realizada substituindo o texto do item por um controle de edição de linha única contendo o texto.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_5.cpp)]
 
-##  <a name="endeditlabelnow"></a>  CTreeCtrl::EndEditLabelNow
+## <a name="ctreectrlendeditlabelnow"></a><a name="endeditlabelnow"></a>CTreeCtrl::EndEditLabelNow
 
-Conclui a operação de edição no rótulo de um item de exibição de árvore no controle de exibição de árvore atual.
+Conclui a operação de edição no rótulo de um item de exibição de árvore no controle atual de visualização de árvore.
 
 ```
 BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
@@ -484,19 +484,19 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*fCancelWithoutSave*|no TRUE para descartar as alterações no item de exibição em árvore antes de concluir a operação de edição ou FALSE para salvar as alterações no item de exibição de árvore antes de concluir a operação.|
+|*fCancelSwithoutSave*|[em] TRUE para descartar alterações no item de exibição de árvore antes de concluir a operação de edição ou FALSE para salvar alterações no item de exibição de árvore antes de concluir a operação.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se esse método for bem-sucedido; caso contrário, FALSE.
+VERDADE se este método for bem sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem de [TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow) , que é descrita na SDK do Windows.
+Este método envia a mensagem [TVM_ENDEDITLABELNOW,](/windows/win32/Controls/tvm-endeditlabelnow) que é descrita no SDK do Windows.
 
-##  <a name="ensurevisible"></a>  CTreeCtrl::EnsureVisible
+## <a name="ctreectrlensurevisible"></a><a name="ensurevisible"></a>CTreeCtrl::EnsureVisible
 
-Chame essa função para garantir que um item de exibição de árvore esteja visível.
+Chame esta função para garantir que um item de visualização de árvore seja visível.
 
 ```
 BOOL EnsureVisible(HTREEITEM hItem);
@@ -504,24 +504,24 @@ BOOL EnsureVisible(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item de árvore que está sendo visível.
+*Hitem*<br/>
+Alça do item da árvore sendo visível.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retornará TRUE se o sistema tiver rolado os itens no controle de exibição de árvore para garantir que o item especificado esteja visível. Caso contrário, o valor de retorno será FALSE.
+Retorna TRUE se o sistema rolar os itens no controle de exibição de árvore para garantir que o item especificado esteja visível. Caso contrário, o valor de devolução é FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Se necessário, a função expande o item pai ou rola o controle de exibição de árvore para que o item fique visível.
+Se necessário, a função expande o item pai ou rola o controle de visualização da árvore para que o item fique visível.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_6.cpp)]
 
-##  <a name="expand"></a>  CTreeCtrl::Expand
+## <a name="ctreectrlexpand"></a><a name="expand"></a>CTreeCtrl::Expand
 
-Chame essa função para expandir ou recolher a lista de itens filho, se houver, associada ao item pai fornecido.
+Chame esta função para expandir ou colapsar a lista de itens infantis, se houver, associados ao item pai dado.
 
 ```
 BOOL Expand(
@@ -531,47 +531,47 @@ BOOL Expand(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item de árvore que está sendo expandido.
+*Hitem*<br/>
+Alça do item da árvore sendo expandido.
 
-*nCode*<br/>
-Um sinalizador que indica o tipo de ação a ser executada. Esse sinalizador pode ter um dos seguintes valores:
+*Ncode*<br/>
+Uma bandeira indicando o tipo de ação a ser tomada. Esta bandeira pode ter um dos seguintes valores:
 
-- TVE_COLLAPSE recolhe a lista.
+- TVE_COLLAPSE colapsa a lista.
 
-- TVE_COLLAPSERESET Recolhe a lista e remove os itens filho. O sinalizador de estado TVIS_EXPANDEDONCE é redefinido. Esse sinalizador deve ser usado com o sinalizador TVE_COLLAPSE.
+- TVE_COLLAPSERESET colapsa a lista e remove os itens da criança. A bandeira do estado TVIS_EXPANDEDONCE é reset. Esta bandeira deve ser usada com a bandeira TVE_COLLAPSE.
 
 - TVE_EXPAND expande a lista.
 
-- TVE_TOGGLE recolhe a lista se ela estiver expandida no momento ou a expande se estiver recolhida no momento.
+- TVE_TOGGLE Colapsa a lista se ela for expandida ou expandida se for colapsada no momento.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: EnsureVisible](#ensurevisible).
+  Veja o exemplo de [CTreeCtrl::EnsureVisible](#ensurevisible).
 
-##  <a name="getbkcolor"></a>  CTreeCtrl::GetBkColor
+## <a name="ctreectrlgetbkcolor"></a><a name="getbkcolor"></a>CTreeCtrl::GetBkColor
 
-Essa função de membro implementa o comportamento do [TVM_GETBKCOLOR](/windows/win32/Controls/tvm-getbkcolor)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [mensagem](/windows/win32/Controls/tvm-getbkcolor)Win32 TVM_GETBKCOLOR , conforme descrito no SDK do Windows.
 
 ```
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor COLORREF que representa a cor do plano de fundo da janela atual para o controle. Se esse valor for-1, o controle estará usando a cor da janela do sistema. Nesse caso, você pode usar `::GetSysColor(COLOR_WINDOW)` para obter a cor atual do sistema que o controle está usando.
+Um valor COLORREF que representa a cor de fundo da janela atual para o controle. Se este valor for -1, o controle está usando a cor da janela do sistema. Neste caso, você `::GetSysColor(COLOR_WINDOW)` pode usar para obter a cor atual do sistema que o controle está usando.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: SetTextColor](#settextcolor).
+  Veja o exemplo de [CTreeCtrl::SetTextColor](#settextcolor).
 
-##  <a name="getcheck"></a>  CTreeCtrl::GetCheck
+## <a name="ctreectrlgetcheck"></a><a name="getcheck"></a>CTreeCtrl::GetCheck
 
-Chame essa função de membro para recuperar o estado de verificação de um item.
+Ligue para esta função de membro para recuperar o estado de verificação de um item.
 
 ```
 BOOL GetCheck(HTREEITEM hItem) const;
@@ -579,20 +579,20 @@ BOOL GetCheck(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-O HTREEITEM sobre o qual receber as informações de estado.
+*Hitem*<br/>
+O HTREEITEM sobre o qual receber as informações do estado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se o item de controle de árvore estiver marcado; caso contrário, 0.
+Não zero se o item de controle de árvore for verificado; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: SetCheck](#setcheck).
+  Veja o exemplo de [CTreeCtrl::SetCheck](#setcheck).
 
-##  <a name="getchilditem"></a>  CTreeCtrl::GetChildItem
+## <a name="ctreectrlgetchilditem"></a><a name="getchilditem"></a>CTreeCtrl::GetChildItem
 
-Chame essa função para recuperar o item de modo de exibição de árvore que é o filho do item especificado por *hItem*.
+Chame esta função para recuperar o item de exibição de árvore que é o filho do item especificado por *hItem*.
 
 ```
 HTREEITEM GetChildItem(HTREEITEM hItem) const;
@@ -600,100 +600,100 @@ HTREEITEM GetChildItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do item filho, se bem-sucedido; caso contrário, NULL.
+A alça do item da criança se for bem sucedida; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_7.cpp)]
 
-##  <a name="getcount"></a>  CTreeCtrl::GetCount
+## <a name="ctreectrlgetcount"></a><a name="getcount"></a>CTreeCtrl::GetCount
 
-Chame essa função para recuperar uma contagem dos itens em um controle de exibição de árvore.
+Chame esta função para recuperar uma contagem dos itens em um controle de visualização de árvore.
 
 ```
 UINT GetCount() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número de itens no controle de exibição de árvore.
+O número de itens no controle de visualização da árvore.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_8.cpp)]
 
-##  <a name="getdrophilightitem"></a>  CTreeCtrl::GetDropHilightItem
+## <a name="ctreectrlgetdrophilightitem"></a><a name="getdrophilightitem"></a>CTreeCtrl::GetDropHilightItem
 
-Chame essa função para recuperar o item que é o destino de uma operação de arrastar e soltar.
+Chame esta função para recuperar o item que é o alvo de uma operação de arrastar e soltar.
 
 ```
 HTREEITEM GetDropHilightItem() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do item Descartado se for bem-sucedido; caso contrário, NULL.
+A alça do item caiu se for bem sucedida; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]
 
-##  <a name="geteditcontrol"></a>  CTreeCtrl::GetEditControl
+## <a name="ctreectrlgeteditcontrol"></a><a name="geteditcontrol"></a>CTreeCtrl::GetEditControl
 
-Chame essa função para recuperar o identificador do controle de edição usado para editar o texto de um item de exibição de árvore.
+Chame esta função para recuperar a alça do controle de edição que está sendo usado para editar o texto de um item de exibição de árvore.
 
 ```
 CEdit* GetEditControl() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o controle de edição usado para editar o texto do item, se for bem-sucedido; caso contrário, NULL.
+Um ponteiro para o controle de edição usado para editar o texto do item, se for bem sucedido; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#10](../../mfc/reference/codesnippet/cpp/ctreectrl-class_10.cpp)]
 
-##  <a name="getextendedstyle"></a>  CTreeCtrl::GetExtendedStyle
+## <a name="ctreectrlgetextendedstyle"></a><a name="getextendedstyle"></a>CTreeCtrl::GetExtendedStyle
 
-Recupera os estilos estendidos que o controle de exibição de árvore atual está usando.
+Recupera os estilos estendidos que o controle atual de visualização de árvore está usando.
 
 ```
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor que contém uma combinação de bits (ou) dos estilos estendidos do controle de exibição de árvore atual. Para obter mais informações, consulte [estilos estendidos do controle de exibição em árvore](/windows/win32/Controls/tree-view-control-window-extended-styles).
+Um valor que contém uma combinação bitwise (OR) dos estilos estendidos do controle de visualização de árvore atual. Para obter mais informações, consulte [Tree-View Control Extended Styles](/windows/win32/Controls/tree-view-control-window-extended-styles).
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem de [TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle) , que é descrita na SDK do Windows.
+Este método envia a mensagem [TVM_GETEXTENDEDSTYLE,](/windows/win32/Controls/tvm-getextendedstyle) que é descrita no SDK do Windows.
 
-##  <a name="getfirstvisibleitem"></a>  CTreeCtrl::GetFirstVisibleItem
+## <a name="ctreectrlgetfirstvisibleitem"></a><a name="getfirstvisibleitem"></a>CTreeCtrl::GetFirstVisibleItem
 
-Chame essa função para recuperar o primeiro item visível do controle de exibição de árvore.
+Chame esta função para recuperar o primeiro item visível do controle de visualização da árvore.
 
 ```
 HTREEITEM GetFirstVisibleItem() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do primeiro item visível; caso contrário, NULL.
+A alça do primeiro item visível; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: SetCheck](#setcheck).
+  Veja o exemplo de [CTreeCtrl::SetCheck](#setcheck).
 
-##  <a name="getimagelist"></a>  CTreeCtrl::GetImageList
+## <a name="ctreectrlgetimagelist"></a><a name="getimagelist"></a>CTreeCtrl::GetImageList
 
-Chame essa função para recuperar o identificador da lista de imagens normal ou de estado associada ao controle de exibição de árvore.
+Chame esta função para recuperar o cabo da lista de imagens normais ou estaduais associada ao controle de visualização de árvore.
 
 ```
 CImageList* GetImageList(UINT nImageList) const;
@@ -702,35 +702,35 @@ CImageList* GetImageList(UINT nImageList) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nImageList*<br/>
-Tipo de lista de imagens a recuperar. A lista de imagens pode ser um dos seguintes valores:
+Tipo de lista de imagens para recuperar. A lista de imagens pode ser um dos seguintes valores:
 
-- TVSIL_NORMAL recupera a lista de imagens normal, que contém as imagens selecionadas e não selecionadas para o item de modo de exibição de árvore.
+- TVSIL_NORMAL Recupera a lista de imagens normais, que contém as imagens selecionadas e não selecionadas para o item de exibição de árvore.
 
-- TVSIL_STATE Recupera a lista de imagens de estado, que contém as imagens de itens de exibição de árvore que estão em um estado definido pelo usuário.
+- TVSIL_STATE Recupera a lista de imagens do estado, que contém as imagens para itens de exibição de árvore que estão em um estado definido pelo usuário.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para a lista de imagens do controle se for bem-sucedido; caso contrário, NULL.
+Ponteiro para a lista de imagens do controle se for bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Cada item em um controle de exibição de árvore pode ter um par de imagens de bitmap associadas a ele. Uma imagem é exibida quando o item é selecionado e a outra é exibida quando o item não está selecionado. Por exemplo, um item pode exibir uma pasta aberta quando ela é selecionada e uma pasta fechada quando não está selecionada.
+Cada item em um controle de visualização de árvore pode ter um par de imagens bitmapapped associadas a ele. Uma imagem é exibida quando o item é selecionado e a outra é exibida quando o item não é selecionado. Por exemplo, um item pode exibir uma pasta aberta quando for selecionada e uma pasta fechada quando não for selecionada.
 
-Para obter mais informações sobre listas de imagens, consulte a classe [CImageList](../../mfc/reference/cimagelist-class.md) .
+Para obter mais informações sobre listas de imagens, consulte a classe [CImageList.](../../mfc/reference/cimagelist-class.md)
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#11](../../mfc/reference/codesnippet/cpp/ctreectrl-class_11.cpp)]
 
-##  <a name="getindent"></a>  CTreeCtrl::GetIndent
+## <a name="ctreectrlgetindent"></a><a name="getindent"></a>CTreeCtrl::GetIndent
 
-Chame essa função para recuperar a quantidade, em pixels, que os itens filho são recuados em relação aos seus itens pai.
+Chame esta função para recuperar a quantidade, em pixels, que os itens da criança são recuados em relação aos seus itens-mãe.
 
 ```
 UINT GetIndent() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A quantidade de recuo medida em pixels.
 
@@ -738,25 +738,25 @@ A quantidade de recuo medida em pixels.
 
 [!code-cpp[NVC_MFC_CTreeCtrl#12](../../mfc/reference/codesnippet/cpp/ctreectrl-class_12.cpp)]
 
-##  <a name="getinsertmarkcolor"></a>  CTreeCtrl::GetInsertMarkColor
+## <a name="ctreectrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CTreeCtrl::GetInsertMarkColor
 
-Essa função de membro implementa o comportamento do [TVM_GETINSERTMARKCOLOR](/windows/win32/Controls/tvm-getinsertmarkcolor)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_GETINSERTMARKCOLOR](/windows/win32/Controls/tvm-getinsertmarkcolor)de mensagem Win32 , conforme descrito no SDK do Windows.
 
 ```
 COLORREF GetInsertMarkColor() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor de COLORREF que contém a cor da marca de inserção atual.
+Um valor COLORREF que contém a cor da marca de inserção atual.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#13](../../mfc/reference/codesnippet/cpp/ctreectrl-class_13.cpp)]
 
-##  <a name="getitem"></a>  CTreeCtrl::GetItem
+## <a name="ctreectrlgetitem"></a><a name="getitem"></a>CTreeCtrl::GetItem
 
-Chame essa função para recuperar os atributos do item de exibição de árvore especificado.
+Chame esta função para recuperar os atributos do item de exibição de árvore especificado.
 
 ```
 BOOL GetItem(TVITEM* pItem) const;
@@ -764,20 +764,20 @@ BOOL GetItem(TVITEM* pItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pItem*<br/>
-Um ponteiro para uma estrutura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) , conforme descrito na SDK do Windows.
+*Pitem*<br/>
+Um ponteiro para uma estrutura [TVITEM,](/windows/win32/api/commctrl/ns-commctrl-tvitemw) como descrito no Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl::D eleteitem](#deleteitem).
+  Veja o exemplo de [CTreeCtrl::DeleteItem](#deleteitem).
 
-##  <a name="getitemdata"></a>  CTreeCtrl::GetItemData
+## <a name="ctreectrlgetitemdata"></a><a name="getitemdata"></a>CTreeCtrl::GetItemData
 
-Chame essa função para recuperar o valor específico do aplicativo associado ao item especificado.
+Chame esta função para recuperar o valor específico do aplicativo associado ao item especificado.
 
 ```
 DWORD_PTR GetItemData(HTREEITEM hItem) const;
@@ -785,20 +785,20 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item cujos dados serão recuperados.
+*Hitem*<br/>
+Manuseie o item cujos dados devem ser recuperados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor específico de aplicativo de tamanho de ponteiro associado ao item especificado por *hItem*.
+Um valor específico de aplicativo do tamanho de um ponteiro associado ao item especificado por *hItem*.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#14](../../mfc/reference/codesnippet/cpp/ctreectrl-class_14.cpp)]
 
-##  <a name="getitemexpandedimageindex"></a>  CTreeCtrl::GetItemExpandedImageIndex
+## <a name="ctreectrlgetitemexpandedimageindex"></a><a name="getitemexpandedimageindex"></a>CTreeCtrl::GetItemExpandedImageIndex
 
-Recupera o índice da imagem a ser exibida quando o item especificado do controle de exibição de árvore atual está no estado expandido.
+Recupera o índice da imagem a ser exibida quando o item especificado do controle atual de exibição de árvore estiver no estado expandido.
 
 ```
 int GetItemExpandedImageIndex(HTREEITEM hItem)const;
@@ -808,25 +808,25 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*hItem*|no Identificador para um item de controle de exibição de árvore.|
+|*Hitem*|[em] Manuseie um item de controle de visualização de árvore.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O índice da imagem a ser exibido quando o item especificado estiver no estado expandido.
+O índice da imagem a ser exibida quando o item especificado estiver no estado expandido.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem de [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) , que é descrita na SDK do Windows. Essa mensagem retorna a estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) que descreve o item de controle de exibição em árvore e, em seguida, esse método recupera o membro `iExpandedImage` dessa estrutura.
+Este método envia a mensagem [TVM_GETITEM,](/windows/win32/Controls/tvm-getitem) que é descrita no SDK do Windows. Essa mensagem retorna a estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) que descreve o item de `iExpandedImage` controle de visualização de árvore e, em seguida, este método recupera o membro dessa estrutura.
 
-##  <a name="getitemheight"></a>  CTreeCtrl::GetItemHeight
+## <a name="ctreectrlgetitemheight"></a><a name="getitemheight"></a>CTreeCtrl::GetItemHeight
 
-Essa função de membro implementa o comportamento do [TVM_GETITEMHEIGHT](/windows/win32/Controls/tvm-getitemheight)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_GETITEMHEIGHT](/windows/win32/Controls/tvm-getitemheight)de mensagem Win32 , conforme descrito no SDK do Windows.
 
 ```
 SHORT GetItemHeight() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A altura do item, em pixels.
 
@@ -834,9 +834,9 @@ A altura do item, em pixels.
 
 [!code-cpp[NVC_MFC_CTreeCtrl#15](../../mfc/reference/codesnippet/cpp/ctreectrl-class_15.cpp)]
 
-##  <a name="getitemimage"></a>  CTreeCtrl::GetItemImage
+## <a name="ctreectrlgetitemimage"></a><a name="getitemimage"></a>CTreeCtrl::GetItemImage
 
-Cada item em um controle de exibição de árvore pode ter um par de imagens de bitmap associadas a ele.
+Cada item em um controle de visualização de árvore pode ter um par de imagens bitmapapped associadas a ele.
 
 ```
 BOOL GetItemImage(
@@ -847,32 +847,32 @@ BOOL GetItemImage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-O identificador do item cuja imagem deve ser recuperada.
+*Hitem*<br/>
+A alça do item cuja imagem deve ser recuperada.
 
-*nImage*<br/>
-Um inteiro que recebe o índice da imagem do item na lista de imagens do controle de exibição de árvore.
+*Nimage*<br/>
+Um inteiro que recebe o índice da imagem do item na lista de imagens do controle de visualização de árvore.
 
-*nSelectedImage*<br/>
-Um inteiro que recebe o índice da imagem selecionada do item na lista de imagens do controle de exibição de árvore.
+*nImagemdeImagem selecionada*<br/>
+Um inteiro que recebe o índice da imagem selecionada do item na lista de imagens do controle de visualização de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-As imagens aparecem no lado esquerdo do rótulo de um item. Uma imagem é exibida quando o item é selecionado e a outra é exibida quando o item não está selecionado. Por exemplo, um item pode exibir uma pasta aberta quando ela é selecionada e uma pasta fechada quando não está selecionada.
+As imagens aparecem no lado esquerdo da etiqueta de um item. Uma imagem é exibida quando o item é selecionado e a outra é exibida quando o item não é selecionado. Por exemplo, um item pode exibir uma pasta aberta quando for selecionada e uma pasta fechada quando não for selecionada.
 
-Chame essa função para recuperar o índice da imagem do item e sua imagem selecionada na lista de imagens do controle de exibição de árvore.
+Chame esta função para recuperar o índice da imagem do item e sua imagem selecionada na lista de imagens do controle de visualização da árvore.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#16](../../mfc/reference/codesnippet/cpp/ctreectrl-class_16.cpp)]
 
-##  <a name="getitempartrect"></a>  CTreeCtrl::GetItemPartRect
+## <a name="ctreectrlgetitempartrect"></a><a name="getitempartrect"></a>CTreeCtrl::GetItemPartRect
 
-Recupera o retângulo delimitador de uma parte especificada de um item especificado no controle de exibição de árvore atual.
+Recupera o retângulo delimitador para uma parte especificada de um item especificado no controle atual de exibição de árvore.
 
 ```
 BOOL GetItemPartRect(
@@ -885,35 +885,35 @@ BOOL GetItemPartRect(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*hItem*|no Identificador para um item de controle de exibição de árvore.|
-|*nPart*|no Identificador da parte. Deve ser definido como TVGIPR_BUTTON.|
-|*lpRect*|fora Ponteiro para uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) . Se esse método for bem-sucedido, a estrutura receberá as coordenadas de retângulo da parte especificada por *hItem* e *peça*.|
+|*Hitem*|[em] Manuseie um item de controle de visualização de árvore.|
+|*nPart*|[em] Identificador para o papel. Deve ser definido para TVGIPR_BUTTON.|
+|*Lprect*|[fora] Ponteiro para uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\)) Se este método for bem sucedido, a estrutura receberá as coordenadas retângulos da parte especificada por *hItem* e *nPart*.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se esse método for bem-sucedido; caso contrário, FALSE.
+VERDADE se este método for bem sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Cada item de controle de árvore é limitado por um retângulo de gráficos. Sempre que um ponto nesse retângulo é clicado, diz-se que o item é *atingido*. Esse método retorna o retângulo maior, de modo que, quando um ponto no retângulo é clicado, o item identificado pelo parâmetro *hItem* é atingido.
+Cada item de controle de árvore é limitado por um retângulo gráfico. Sempre que um ponto nesse retângulo é clicado, diz-se que o item é *atingido*. Este método retorna o maior retângulo de modo que quando um ponto no retângulo é clicado, o item identificado pelo parâmetro *hItem* é atingido.
 
-Esse método envia a mensagem de TVM_GETITEMPARTRECT, que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [TreeView_GetItemPartRect](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect) .
+Este método envia a mensagem TVM_GETITEMPARTRECT, que é descrita no SDK do Windows. Para obter mais informações, consulte a [macro TreeView_GetItemPartRect.](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect)
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define uma variável, `m_treeCtrl`, que é usada para acessar o controle de exibição de árvore atual. O exemplo de código também define um inteiro sem sinal e várias variáveis HTREEITEM. Essas variáveis são usadas no exemplo a seguir.
+O exemplo de código a `m_treeCtrl`seguir define uma variável, que é usada para acessar o controle atual de visualização de árvore. O exemplo de código também define um inteiro não assinado e várias variáveis HTREEITEM. Essas variáveis são usadas no próximo exemplo.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir usa um identificador de acessibilidade e o método [CTreeCtrl:: MapAccIdToItem](#mapaccidtoitem) para recuperar um identificador para o item de exibição de árvore raiz. Em seguida, o exemplo usa o identificador e o método [CTreeCtrl:: GetItemPartRect](#getitempartrect) para desenhar um retângulo 3D em volta desse item. Em uma seção anterior do exemplo de código, que não é mostrada, criamos um modo de exibição de árvore que consiste em um nó de país/região raiz para o Estados Unidos, subnós para os Estados de Pensilvânia e Washington e itens de árvore para cidades nesses Estados. Usamos o método [CTreeCtrl:: MapItemToAccID](#mapitemtoaccid) para associar o item de exibição de árvore raiz a um identificador de acessibilidade.
+O exemplo de código a seguir usa um identificador de acessibilidade e o método [CTreeCtrl::MapAccIdToItem](#mapaccidtoitem) para recuperar uma alça no item de exibição de árvore raiz. Em seguida, o exemplo usa a alça e o método [CTreeCtrl::GetItemPartRect](#getitempartrect) para desenhar um retângulo 3D em torno desse item. Em uma seção anterior do exemplo de código, que não é mostrada, criamos uma visão de árvore que consiste em um nó raiz país/região para os Estados Unidos, subnomes para os estados da Pensilvânia e Washington, e itens de árvores para cidades nesses estados. Usamos o método [CTreeCtrl::MapItemToAccID](#mapitemtoaccid) para associar o item de exibição de árvore raiz a um identificador de acessibilidade.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]
 
-##  <a name="getitemrect"></a>  CTreeCtrl::GetItemRect
+## <a name="ctreectrlgetitemrect"></a><a name="getitemrect"></a>CTreeCtrl::GetItemRect
 
-Chame essa função para recuperar o retângulo delimitador para *hItem* e determinar se ele está visível ou não.
+Chame esta função para recuperar o retângulo delimitador para *hItem* e determinar se ele é visível ou não.
 
 ```
 BOOL GetItemRect(
@@ -924,24 +924,24 @@ BOOL GetItemRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-O identificador de um item de controle de exibição de árvore.
+*Hitem*<br/>
+A alça de um item de controle de visualização de árvore.
 
-*lpRect*<br/>
-Ponteiro para uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) que recebe o retângulo delimitador. As coordenadas são relativas ao canto superior esquerdo do controle de exibição de árvore.
+*Lprect*<br/>
+Ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recebe o retângulo delimitador. As coordenadas são relativas ao canto superior esquerdo do controle de visão da árvore.
 
 *bTextOnly*<br/>
-Se esse parâmetro for diferente de zero, o retângulo delimitador incluirá apenas o texto do item. Caso contrário, ele inclui a linha inteira que o item ocupa no controle de exibição de árvore.
+Se esse parâmetro não for zero, o retângulo delimitador inclui apenas o texto do item. Caso contrário, inclui toda a linha que o item ocupa no controle de visualização da árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se o item estiver visível, com o retângulo delimitador contido em *lpRect*. Caso contrário, 0 com *lpRect* não inicializado.
+Não zero se o item for visível, com o retângulo delimitador contido em *lpRect*. Caso contrário, 0 com *lpRect* não inicializado.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#17](../../mfc/reference/codesnippet/cpp/ctreectrl-class_19.cpp)]
 
-##  <a name="getitemstate"></a>  CTreeCtrl::GetItemState
+## <a name="ctreectrlgetitemstate"></a><a name="getitemstate"></a>CTreeCtrl::GetItemState
 
 Retorna o estado do item especificado por *hItem*.
 
@@ -953,23 +953,23 @@ UINT GetItemState(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item cujo estado deve ser recuperado.
+*Hitem*<br/>
+Manuseie o item cujo estado deve ser recuperado.
 
-*nStateMask*<br/>
-Máscara que indica um ou mais Estados a serem recuperados. Para obter mais informações sobre os valores possíveis para *nStateMask*, consulte a discussão dos membros `state` e `stateMask` da estrutura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) no SDK do Windows.
+*Nstatemask*<br/>
+Máscara indicando um ou mais estados a serem recuperados. Para obter mais informações sobre possíveis valores para `state` `stateMask` *nStateMask,* consulte a discussão dos membros da estrutura do [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) no SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um UINT que contém os valores de OR bit a bit especificados por nStateMask. Para obter informações sobre os valores possíveis, consulte [CTreeCtrl:: GetItem](#getitem). Para localizar o valor de um estado específico, execute uma operação e bit a bit do valor de estado e o valor de retorno, conforme mostrado no exemplo a seguir.
+Um UINT que contém o bitwise OR dos valores especificados por nStateMask. Para obter informações sobre possíveis valores, consulte [CTreeCtrl::GetItem](#getitem). Para encontrar o valor para um estado específico, execute um pouco e a operação do valor do estado e do valor de retorno, como mostrado no exemplo a seguir.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#18](../../mfc/reference/codesnippet/cpp/ctreectrl-class_20.cpp)]
 
-##  <a name="getitemstateex"></a>  CTreeCtrl::GetItemStateEx
+## <a name="ctreectrlgetitemstateex"></a><a name="getitemstateex"></a>CTreeCtrl::GetItemStateEx
 
-Recupera o estado estendido do item especificado no controle de exibição de árvore atual.
+Recupera o estado estendido do item especificado no controle atual de exibição de árvore.
 
 ```
 UINT GetItemStateEx(HTREEITEM hItem) const;
@@ -979,17 +979,17 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*hItem*|no Identificador para um item de controle de exibição de árvore.|
+|*Hitem*|[em] Manuseie um item de controle de visualização de árvore.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O estado estendido do item. Para obter mais informações, consulte o membro `uStateEx` da estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
+O estado estendido do item. Para obter mais `uStateEx` informações, consulte o membro da estrutura [TVITEMEX.](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem de [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) , que é descrita na SDK do Windows. Essa mensagem retorna a estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) que descreve o item de controle de exibição em árvore, e esse método recupera o membro `uStateEx` dessa estrutura.
+Este método envia a mensagem [TVM_GETITEM,](/windows/win32/Controls/tvm-getitem) que é descrita no SDK do Windows. Essa mensagem retorna a estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) que descreve o item de `uStateEx` controle de visualização de árvore, e este método recupera o membro dessa estrutura.
 
-##  <a name="getitemtext"></a>  CTreeCtrl::GetItemText
+## <a name="ctreectrlgetitemtext"></a><a name="getitemtext"></a>CTreeCtrl::GetItemText
 
 Retorna o texto do item especificado por *hItem*.
 
@@ -999,54 +999,54 @@ CString GetItemText(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item cujo texto deve ser recuperado.
+*Hitem*<br/>
+Manuseie o item cujo texto deve ser recuperado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um objeto de `CString` que contém o texto do item.
+Um `CString` objeto contendo o texto do item.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: GetNextItem](#getnextitem).
+  Veja o exemplo de [CTreeCtrl::GetNextItem](#getnextitem).
 
-##  <a name="getlastvisibleitem"></a>  CTreeCtrl::GetLastVisibleItem
+## <a name="ctreectrlgetlastvisibleitem"></a><a name="getlastvisibleitem"></a>CTreeCtrl::GetLastVisibleItem
 
-Recupera o último item de nó não expandido no controle de exibição de árvore atual.
+Recupera o último item de nó não expandido no controle atual de visualização de árvore.
 
 ```
 HTREEITEM GetLastVisibleItem() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador para o último item de nó não expandido se o método for bem-sucedido; caso contrário, NULL.
+A alça para o último item de nó não expandido se o método for bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem de [TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem) , que é descrita na SDK do Windows. Para obter mais informações, consulte o sinalizador TVGN_LASTVISIBLE no parâmetro *Flag* da mensagem.
+Este método envia a mensagem [TVM_GETNEXTITEM,](/windows/win32/Controls/tvm-getnextitem) que é descrita no SDK do Windows. Para obter mais informações, consulte a bandeira TVGN_LASTVISIBLE no parâmetro de *bandeira* dessa mensagem.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define uma variável, `m_treeCtrl`, que é usada para acessar o controle de exibição de árvore atual. O exemplo de código também define um inteiro sem sinal e várias variáveis HTREEITEM. Uma ou mais dessas variáveis são usadas no exemplo a seguir.
+O exemplo de código a `m_treeCtrl`seguir define uma variável, que é usada para acessar o controle atual de visualização de árvore. O exemplo de código também define um inteiro não assinado e várias variáveis HTREEITEM. Uma ou mais dessas variáveis são usadas no próximo exemplo.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir recupera um identificador para o último item de nó de exibição de árvore não expandida e, em seguida, desenha um retângulo 3D em volta desse item. Em uma seção anterior do exemplo de código, que não é mostrada, criamos um modo de exibição de árvore que consiste em um nó de país/região raiz para o Estados Unidos, subnós para os Estados de Pensilvânia e Washington e itens de árvore para cidades nesses Estados.
+O exemplo de código a seguir recupera uma alça para o último item de nó de exibição de árvore não expandido e, em seguida, desenha um retângulo 3D em torno desse item. Em uma seção anterior do exemplo de código, que não é mostrada, criamos uma visão de árvore que consiste em um nó raiz país/região para os Estados Unidos, subnomes para os estados da Pensilvânia e Washington, e itens de árvores para cidades nesses estados.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_21.cpp)]
 
-##  <a name="getlinecolor"></a>  CTreeCtrl::GetLineColor
+## <a name="ctreectrlgetlinecolor"></a><a name="getlinecolor"></a>CTreeCtrl::GetLineColor
 
-Essa função de membro implementa o comportamento do [TVM_GETLINECOLOR](/windows/win32/Controls/tvm-getlinecolor)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_GETLINECOLOR](/windows/win32/Controls/tvm-getlinecolor)de mensagem Win32 , conforme descrito no SDK do Windows.
 
 ```
 COLORREF GetLineColor() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A cor da linha atual.
 
@@ -1054,9 +1054,9 @@ A cor da linha atual.
 
 [!code-cpp[NVC_MFC_CTreeCtrl#19](../../mfc/reference/codesnippet/cpp/ctreectrl-class_22.cpp)]
 
-##  <a name="getnextitem"></a>  CTreeCtrl::GetNextItem
+## <a name="ctreectrlgetnextitem"></a><a name="getnextitem"></a>CTreeCtrl::GetNextItem
 
-Chame essa função para recuperar o item de exibição de árvore que tem a relação especificada, indicada pelo parâmetro *nCode* , para *hItem*.
+Chame esta função para recuperar o item de exibição de árvore que tem a relação especificada, indicada pelo parâmetro *nCode,* para *hItem*.
 
 ```
 HTREEITEM GetNextItem(
@@ -1066,51 +1066,51 @@ HTREEITEM GetNextItem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-*nCode*<br/>
-Um sinalizador que indica o tipo de relação a *hItem*. Esse sinalizador pode ser um dos seguintes valores:
+*Ncode*<br/>
+Uma bandeira indicando o tipo de relação com *hItem*. Esta bandeira pode ser um dos seguintes valores:
 
-- TVGN_CARET Recupera o item atualmente selecionado.
+- TVGN_CARET Recupera o item selecionado no momento.
 
-- TVGN_CHILD recupera o primeiro item filho do item especificado pelo parâmetro *hItem* .
+- TVGN_CHILD Recupera o primeiro item filho do item especificado pelo parâmetro *hItem.*
 
-- TVGN_DROPHILITE recupera o item que é o destino de uma operação de arrastar e soltar.
+- TVGN_DROPHILITE Recupera o item que é o alvo de uma operação de arrastar e soltar.
 
-- TVGN_FIRSTVISIBLE recupera o primeiro item visível.
+- TVGN_FIRSTVISIBLE Recupera o primeiro item visível.
 
-- TVGN_LASTVISIBLE Recupera o último item expandido na árvore. Isso não recupera o último item visível na janela de exibição em árvore.
+- TVGN_LASTVISIBLE Recupera o último item expandido na árvore. Isso não recupera o último item visível na janela de exibição de árvore.
 
-- TVGN_NEXT recupera o próximo item irmão.
+- TVGN_NEXT recupera o próximo item de irmão.
 
-- TVGN_NEXTVISIBLE recupera o próximo item visível que segue o item especificado.
+- TVGN_NEXTVISIBLE Recupera o próximo item visível que segue o item especificado.
 
-- TVGN_PARENT recupera o pai do item especificado.
+- TVGN_PARENT Recupera o pai do item especificado.
 
-- TVGN_PREVIOUS Recupera o item irmão anterior.
+- TVGN_PREVIOUS Recupera o item anterior do irmão.
 
-- TVGN_PREVIOUSVISIBLE recupera o primeiro item visível que precede o item especificado.
+- TVGN_PREVIOUSVISIBLE Recupera o primeiro item visível que precede o item especificado.
 
 - TVGN_ROOT Recupera o primeiro item filho do item raiz do qual o item especificado faz parte.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do próximo item se bem-sucedido; caso contrário, NULL.
+A alça do próximo item se for bem sucedida; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função retornará NULL se o item que está sendo recuperado for o nó raiz da árvore. Por exemplo, se você usar essa mensagem com o sinalizador TVGN_PARENT em um filho de primeiro nível do nó raiz da exibição de árvore, a mensagem retornará NULL.
+Esta função retornará NULL se o item que está sendo recuperado for o nó raiz da árvore. Por exemplo, se você usar esta mensagem com a bandeira TVGN_PARENT em um filho de primeiro nível do nó raiz da exibição da árvore, a mensagem retornará NULL.
 
 ### <a name="example"></a>Exemplo
 
-Para obter um exemplo de como usar `GetNextItem` em um loop, consulte [CTreeCtrl::D eleteitem](#deleteitem).
+Para obter um `GetNextItem` exemplo de uso em um loop, consulte [CTreeCtrl::DeleteItem](#deleteitem).
 
 [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]
 
-##  <a name="getnextsiblingitem"></a>  CTreeCtrl::GetNextSiblingItem
+## <a name="ctreectrlgetnextsiblingitem"></a><a name="getnextsiblingitem"></a>CTreeCtrl::GetNextSiblingItem
 
-Chame essa função para recuperar o próximo irmão de *hItem*.
+Chame esta função para recuperar o próximo irmão de *hItem*.
 
 ```
 HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
@@ -1118,20 +1118,20 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do próximo item irmão; caso contrário, NULL.
+A alça do próximo item de irmão; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#21](../../mfc/reference/codesnippet/cpp/ctreectrl-class_24.cpp)]
 
-##  <a name="getnextvisibleitem"></a>  CTreeCtrl::GetNextVisibleItem
+## <a name="ctreectrlgetnextvisibleitem"></a><a name="getnextvisibleitem"></a>CTreeCtrl::GetNextVisibleItem
 
-Chame essa função para recuperar o próximo item visível de *hItem*.
+Chame esta função para recuperar o próximo item visível do *hItem*.
 
 ```
 HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
@@ -1139,20 +1139,20 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do próximo item visível; caso contrário, NULL.
+A alça do próximo item visível; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: SetCheck](#setcheck).
+  Veja o exemplo de [CTreeCtrl::SetCheck](#setcheck).
 
-##  <a name="getparentitem"></a>  CTreeCtrl::GetParentItem
+## <a name="ctreectrlgetparentitem"></a><a name="getparentitem"></a>CTreeCtrl::GetParentItem
 
-Chame essa função para recuperar o pai de *hItem*.
+Chame esta função para recuperar o pai do *hItem*.
 
 ```
 HTREEITEM GetParentItem(HTREEITEM hItem) const;
@@ -1160,24 +1160,24 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do item pai; caso contrário, NULL.
+A alça do item pai; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função retornará NULL se o pai do item especificado for o nó raiz da árvore.
+Esta função retornará NULL se o pai do item especificado for o nó raiz da árvore.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: EnsureVisible](#ensurevisible).
+  Veja o exemplo de [CTreeCtrl::EnsureVisible](#ensurevisible).
 
-##  <a name="getprevsiblingitem"></a>  CTreeCtrl::GetPrevSiblingItem
+## <a name="ctreectrlgetprevsiblingitem"></a><a name="getprevsiblingitem"></a>CTreeCtrl::GetPrevSiblingItem
 
-Chame essa função para recuperar o irmão anterior de *hItem*.
+Chame esta função para recuperar o irmão anterior do *hItem*.
 
 ```
 HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
@@ -1185,20 +1185,20 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do irmão anterior; caso contrário, NULL.
+A alça do irmão anterior; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#22](../../mfc/reference/codesnippet/cpp/ctreectrl-class_25.cpp)]
 
-##  <a name="getprevvisibleitem"></a>  CTreeCtrl::GetPrevVisibleItem
+## <a name="ctreectrlgetprevvisibleitem"></a><a name="getprevvisibleitem"></a>CTreeCtrl::GetPrevVisibleItem
 
-Chame essa função para recuperar o item visível anterior de *hItem*.
+Chame esta função para recuperar o item visível anterior do *hItem*.
 
 ```
 HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
@@ -1206,136 +1206,136 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do item visível anterior; caso contrário, NULL.
+A alça do item visível anterior; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#23](../../mfc/reference/codesnippet/cpp/ctreectrl-class_26.cpp)]
 
-##  <a name="getrootitem"></a>  CTreeCtrl::GetRootItem
+## <a name="ctreectrlgetrootitem"></a><a name="getrootitem"></a>CTreeCtrl::GetRootItem
 
-Chame essa função para recuperar o item raiz do controle de exibição de árvore.
+Chame esta função para recuperar o item raiz do controle de visualização da árvore.
 
 ```
 HTREEITEM GetRootItem() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do item raiz; caso contrário, NULL.
+A alça do item raiz; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: EditLabel](#editlabel).
+  Veja o exemplo de [CTreeCtrl::EditLabel](#editlabel).
 
-##  <a name="getscrolltime"></a>  CTreeCtrl::GetScrollTime
+## <a name="ctreectrlgetscrolltime"></a><a name="getscrolltime"></a>CTreeCtrl::GetScrollTime
 
-Chame essa função de membro para recuperar o tempo máximo de rolagem para o controle de exibição de árvore.
+Ligue para esta função de membro para recuperar o tempo máximo de rolagem para o controle de visualização da árvore.
 
 ```
 UINT GetScrollTime() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O tempo máximo de rolagem, em milissegundos.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro implementa o comportamento do [TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)de mensagem Win32, conforme descrito no SDK do Windows.
 
-##  <a name="getselectedcount"></a>  CTreeCtrl::GetSelectedCount
+## <a name="ctreectrlgetselectedcount"></a><a name="getselectedcount"></a>CTreeCtrl::GetSelectedCount
 
-Recupera o número de itens selecionados no controle de exibição de árvore atual.
+Recupera o número de itens selecionados no controle atual de exibição de árvore.
 
 ```
 UINT GetSelectedCount();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de itens selecionados.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem de [TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount) , que é descrita na SDK do Windows.
+Este método envia a [mensagem TVM_GETSELECTEDCOUNT,](/windows/win32/Controls/tvm-getselectedcount) que é descrita no SDK do Windows.
 
-##  <a name="getselecteditem"></a>  CTreeCtrl::GetSelectedItem
+## <a name="ctreectrlgetselecteditem"></a><a name="getselecteditem"></a>CTreeCtrl::GetSelectedItem
 
-Chame essa função para recuperar o item selecionado no momento do controle de exibição de árvore.
+Chame esta função para recuperar o item selecionado no momento do controle de exibição de árvore.
 
 ```
 HTREEITEM GetSelectedItem() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do item selecionado; caso contrário, NULL.
+A alça do item selecionado; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#24](../../mfc/reference/codesnippet/cpp/ctreectrl-class_27.cpp)]
 
-##  <a name="gettextcolor"></a>  CTreeCtrl::GetTextColor
+## <a name="ctreectrlgettextcolor"></a><a name="gettextcolor"></a>CTreeCtrl::GetTextColor
 
-Essa função de membro implementa o comportamento do [TVM_GETTEXTCOLOR](/windows/win32/Controls/tvm-gettextcolor)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_GETTEXTCOLOR](/windows/win32/Controls/tvm-gettextcolor)de mensagem Win32 , conforme descrito no SDK do Windows.
 
 ```
 COLORREF GetTextColor() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor COLORREF que representa a cor do texto atual. Se esse valor for-1, o controle estará usando a cor do sistema para a cor do texto.
+Um valor COLORREF que representa a cor de texto atual. Se este valor for -1, o controle está usando a cor do sistema para a cor do texto.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: SetTextColor](#settextcolor).
+  Veja o exemplo de [CTreeCtrl::SetTextColor](#settextcolor).
 
-##  <a name="gettooltips"></a>  CTreeCtrl::GetToolTips
+## <a name="ctreectrlgettooltips"></a><a name="gettooltips"></a>CTreeCtrl::GetToolTips
 
-Essa função de membro implementa o comportamento do [TVM_GETTOOLTIPS](/windows/win32/Controls/tvm-gettooltips)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_GETTOOLTIPS](/windows/win32/Controls/tvm-gettooltips)de mensagem Win32 , conforme descrito no SDK do Windows.
 
 ```
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para um objeto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) a ser usado pelo controle de árvore. Se a função [criar](#create) membro usar o estilo TVS_NOTOOLTIPS, nenhuma dica de ferramenta será usada e nulo será retornado.
+Um ponteiro para um objeto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) a ser usado pelo controle da árvore. Se a função [Criar](#create) membro usar o estilo TVS_NOTOOLTIPS, nenhuma dica de ferramenta será usada e NULL será devolvida.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação do MFC de `GetToolTips` retorna um objeto `CToolTipCtrl`, que é usado pelo controle de árvore, em vez de um identificador para um controle ToolTip.
+A implementação `GetToolTips` do `CToolTipCtrl` MFC retorna um objeto, que é usado pelo controle da árvore, em vez de uma alça para um controle de ponta de ferramenta.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#25](../../mfc/reference/codesnippet/cpp/ctreectrl-class_28.cpp)]
 
-##  <a name="getvisiblecount"></a>  CTreeCtrl::GetVisibleCount
+## <a name="ctreectrlgetvisiblecount"></a><a name="getvisiblecount"></a>CTreeCtrl::GetVisibleCount
 
-Chame essa função para recuperar uma contagem dos itens visíveis em um controle de exibição de árvore.
+Chame esta função para recuperar uma contagem dos itens visíveis em um controle de visualização de árvore.
 
 ```
 UINT GetVisibleCount() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número de itens visíveis no controle de exibição de árvore; caso contrário,-1.
+O número de itens visíveis no controle de visualização da árvore; caso contrário - 1.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: SetCheck](#setcheck).
+  Veja o exemplo de [CTreeCtrl::SetCheck](#setcheck).
 
-##  <a name="hittest"></a>  CTreeCtrl::HitTest
+## <a name="ctreectrlhittest"></a><a name="hittest"></a>CTreeCtrl::HitTest
 
-Chame essa função para determinar o local do ponto especificado em relação à área do cliente de um controle de exibição de árvore.
+Ligue para esta função para determinar a localização do ponto especificado em relação à área cliente de um controle de visualização de árvore.
 
 ```
 HTREEITEM HitTest(
@@ -1348,35 +1348,35 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pt*<br/>
-Coordenadas do cliente do ponto a ser testada.
+Coordenadas do cliente do ponto para testar.
 
 *pFlags*<br/>
-Ponteiro para um número inteiro que recebe informações sobre os resultados do teste de clique. Pode ser um ou mais dos valores listados no membro `flags` na seção comentários.
+Ponteiro para um inteiro que recebe informações sobre os resultados do teste de acerto. Pode ser um ou mais dos `flags` valores listados no membro na seção Observações.
 
 *pHitTestInfo*<br/>
-Endereço de uma estrutura [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) que contém a posição para teste de clique e que recebe informações sobre os resultados do teste de clique.
+Endereço de uma estrutura [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) que contém a posição de acertar o teste e que recebe informações sobre os resultados do teste de acerto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador do item de exibição de árvore que ocupa o ponto especificado ou nulo se nenhum item ocupar o ponto.
+A alça do item de exibição de árvore que ocupa o ponto especificado ou NULL se nenhum item ocupar o ponto.
 
 ### <a name="remarks"></a>Comentários
 
-Quando essa função é chamada, o parâmetro *pt* especifica as coordenadas do ponto a ser testado. A função retornará o identificador do item no ponto especificado ou NULL se nenhum item ocupar o ponto. Além disso, o parâmetro *pFlags* contém um valor que indica o local do ponto especificado. Os possíveis valores são:
+Quando esta função é chamada, o parâmetro *pt* especifica as coordenadas do ponto a ser testado. A função retorna a alça do item no ponto especificado ou NULO se nenhum item ocupar o ponto. Além disso, o parâmetro *pFlags* contém um valor que indica a localização do ponto especificado. Os valores possíveis são:
 
 |||
 |-|-|
-|Value|Significado|
+|Valor|Significado|
 |TVHT_ABOVE|Acima da área do cliente.|
 |TVHT_BELOW|Abaixo da área do cliente.|
-|TVHT_NOWHERE|Na área cliente, mas abaixo do último item.|
+|TVHT_NOWHERE|Na área do cliente, mas abaixo do último item.|
 |TVHT_ONITEM|No bitmap ou rótulo associado a um item.|
 |TVHT_ONITEMBUTTON|No botão associado a um item.|
 |TVHT_ONITEMICON|No bitmap associado a um item.|
 |TVHT_ONITEMINDENT|No recuo associado a um item.|
-|TVHT_ONITEMLABEL|No rótulo (cadeia de caracteres) associado a um item.|
+|TVHT_ONITEMLABEL|No rótulo (string) associado a um item.|
 |TVHT_ONITEMRIGHT|Na área à direita de um item.|
-|TVHT_ONITEMSTATEICON|No ícone de estado de um item de exibição de árvore que está em um estado definido pelo usuário.|
+|TVHT_ONITEMSTATEICON|No ícone de estado para um item de exibição de árvore que está em um estado definido pelo usuário.|
 |TVHT_TOLEFT|À esquerda da área do cliente.|
 |TVHT_TORIGHT|À direita da área do cliente.|
 |||
@@ -1385,9 +1385,9 @@ Quando essa função é chamada, o parâmetro *pt* especifica as coordenadas do 
 
 [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]
 
-##  <a name="insertitem"></a>  CTreeCtrl::InsertItem
+## <a name="ctreectrlinsertitem"></a><a name="insertitem"></a>CTreeCtrl::InsertItem
 
-Chame essa função para inserir um novo item em um controle de exibição de árvore.
+Chame esta função para inserir um novo item em um controle de visualização de árvore.
 
 ```
 HTREEITEM InsertItem(LPTVINSERTSTRUCT lpInsertStruct);
@@ -1419,38 +1419,38 @@ HTREEITEM InsertItem(
 ### <a name="parameters"></a>Parâmetros
 
 *lpInsertStruct*<br/>
-Um ponteiro para um `TVINSERTSTRUCT` que especifica os atributos do item de exibição de árvore a ser inserido.
+Um ponteiro `TVINSERTSTRUCT` para um que especifica os atributos do item de exibição da árvore a ser inserido.
 
-*nMask*<br/>
-Inteiro que especifica quais atributos definir. Consulte a estrutura de `TVITEM` no SDK do Windows.
+*Nmask*<br/>
+Inteiro especificando quais atributos definir. Veja `TVITEM` a estrutura no Windows SDK.
 
-*lpszItem*<br/>
-Endereço de uma cadeia de caracteres que contém o texto do item.
+*Lpszitem*<br/>
+Endereço de uma seqüência contendo o texto do item.
 
-*nImage*<br/>
-Índice da imagem do item na lista de imagens do controle de exibição de árvore.
+*Nimage*<br/>
+Índice da imagem do item na lista de imagens do controle de visualização de árvore.
 
-*nSelectedImage*<br/>
-Índice da imagem selecionada do item na lista de imagens do controle de exibição de árvore.
+*nImagemdeImagem selecionada*<br/>
+Índice da imagem selecionada do item na lista de imagens do controle de visualização de árvore.
 
-*nState*<br/>
-Especifica valores para os Estados do item. Consulte Estados do item de controle de exibição de árvore na SDK do Windows para obter uma lista de Estados apropriados.
+*Nstate*<br/>
+Especifica valores para os estados do item. Consulte Os estados de controle de visualização de árvore no SDK do Windows para obter uma lista de estados apropriados.
 
-*nStateMask*<br/>
-Especifica quais Estados devem ser definidos. Consulte a estrutura de `TVITEM` no SDK do Windows.
+*Nstatemask*<br/>
+Especifica quais estados devem ser definidos. Veja `TVITEM` a estrutura no Windows SDK.
 
 *lParam*<br/>
-Um valor específico de aplicativo de tamanho de ponteiro associado ao item.
+Um valor específico de aplicativo do tamanho de um ponteiro associado ao item.
 
 *hParent*<br/>
-Identificador do pai do item inserido.
+Alça do pai do item inserido.
 
 *hInsertAfter*<br/>
-Identificador do item após o qual o novo item deve ser inserido.
+Alça do item após o qual o novo item deve ser inserido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Identificador do novo item se for bem-sucedido; caso contrário, NULL.
+Alça do novo item se for bem sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1460,9 +1460,9 @@ O exemplo mostra situações em que você pode querer usar cada versão da funç
 
 [!code-cpp[NVC_MFC_CTreeCtrl#27](../../mfc/reference/codesnippet/cpp/ctreectrl-class_30.cpp)]
 
-##  <a name="itemhaschildren"></a>  CTreeCtrl::ItemHasChildren
+## <a name="ctreectrlitemhaschildren"></a><a name="itemhaschildren"></a>CTreeCtrl::ItemHasChildren
 
-Use essa função para determinar se o item de árvore especificado por *hItem* tem itens filhos.
+Use esta função para determinar se o item da árvore especificado por *hItem* tem itens filho.
 
 ```
 BOOL ItemHasChildren(HTREEITEM hItem) const;
@@ -1470,24 +1470,24 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se o item de árvore especificado por *hItem* tiver itens filho; 0 se não tiver.
+Não zero se o item da árvore especificado por *hItem* tiver itens de criança; 0 se não o fizer.
 
 ### <a name="remarks"></a>Comentários
 
-Nesse caso, você pode usar [CTreeCtrl:: GetChildItem](#getchilditem) para recuperar esses itens filhos.
+Se assim for, você pode usar [CTreeCtrl::GetChildItem](#getchilditem) para recuperar esses itens infantis.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo para [CTreeCtrl:: GetSelectedItem](#getselecteditem).
+  Veja o exemplo de [CTreeCtrl::GetSelectedItem](#getselecteditem).
 
-##  <a name="mapaccidtoitem"></a>  CTreeCtrl::MapAccIdToItem
+## <a name="ctreectrlmapaccidtoitem"></a><a name="mapaccidtoitem"></a>CTreeCtrl::MapAccIdToItem
 
-Mapeia o identificador de acessibilidade especificado para o identificador de um item de exibição de árvore no controle de exibição de árvore atual.
+Mapeie o identificador de acessibilidade especificado para a alça de um item de exibição de árvore no controle atual de exibição de árvore.
 
 ```
 HTREEITEM MapAccIdToItem(UINT uAccId) const;
@@ -1497,33 +1497,33 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*uAccId*|no Um identificador de acessibilidade para um elemento no item de exibição de árvore.|
+|*uAccId*|[em] Um identificador de acessibilidade para um elemento no item de exibição de árvore.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador para um item de exibição de árvore (`HTREEITEM`) que corresponde ao parâmetro *uAccId* . Para obter mais informações, consulte o membro *hItem* da estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
+A alça de um item `HTREEITEM`de visualização de árvore () corresponde ao parâmetro *uAccId.* Para obter mais informações, consulte o membro *hItem* da estrutura [TVITEMEX.](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)
 
 ### <a name="remarks"></a>Comentários
 
-Os auxílios de acessibilidade são aplicativos que ajudam as pessoas com deficiências a usar computadores. Um identificador de acessibilidade é usado pela interface `IAccessible` para especificar exclusivamente um elemento em uma janela. Para obter mais informações sobre identificadores de acessibilidade, procure o tópico "sobre o suporte ao Acessibilidade Ativa" no [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
+Os auxílios de acessibilidade são aplicativos que ajudam pessoas com deficiência a usar computadores. Um identificador de acessibilidade `IAccessible` é usado pela interface para especificar exclusivamente um elemento em uma janela. Para obter mais informações sobre identificadores de acessibilidade, procure o tópico "Sobre o suporte à acessibilidade ativa" na [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
-Esse método envia a mensagem de [TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem) , que é descrita na SDK do Windows.
+Este método envia a mensagem [TVM_MAPACCIDTOHTREEITEM,](/windows/win32/Controls/tvm-mapaccidtohtreeitem) que é descrita no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define uma variável, `m_treeCtrl`, que é usada para acessar o controle de exibição de árvore atual. O exemplo de código também define um inteiro sem sinal e várias variáveis HTREEITEM. Essas variáveis são usadas no exemplo a seguir.
+O exemplo de código a `m_treeCtrl`seguir define uma variável, que é usada para acessar o controle atual de visualização de árvore. O exemplo de código também define um inteiro não assinado e várias variáveis HTREEITEM. Essas variáveis são usadas no próximo exemplo.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir usa um identificador de acessibilidade e o método [CTreeCtrl:: MapAccIdToItem](#mapaccidtoitem) para recuperar um identificador para o item de exibição de árvore raiz. O exemplo usa o identificador e o método [CTreeCtrl:: GetItemPartRect](#getitempartrect) para desenhar um retângulo 3D em volta desse item. Em uma seção anterior do exemplo de código, que não é mostrada, criamos um modo de exibição de árvore que consiste em um nó de país/região raiz para o Estados Unidos, subnós para os Estados de Pensilvânia e Washington e itens de árvore para cidades nesses Estados. Usamos o método [CTreeCtrl:: MapItemToAccID](#mapitemtoaccid) para associar o item de exibição de árvore raiz a um identificador de acessibilidade.
+O exemplo de código a seguir usa um identificador de acessibilidade e o método [CTreeCtrl::MapAccIdToItem](#mapaccidtoitem) para recuperar uma alça no item de exibição de árvore raiz. O exemplo usa a alça e o método [CTreeCtrl::GetItemPartRect](#getitempartrect) para desenhar um retângulo 3D em torno desse item. Em uma seção anterior do exemplo de código, que não é mostrada, criamos uma visão de árvore que consiste em um nó raiz país/região para os Estados Unidos, subnomes para os estados da Pensilvânia e Washington, e itens de árvores para cidades nesses estados. Usamos o método [CTreeCtrl::MapItemToAccID](#mapitemtoaccid) para associar o item de exibição de árvore raiz a um identificador de acessibilidade.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]
 
-##  <a name="mapitemtoaccid"></a>  CTreeCtrl::MapItemToAccID
+## <a name="ctreectrlmapitemtoaccid"></a><a name="mapitemtoaccid"></a>CTreeCtrl::MapItemToAccID
 
-Mapeia o identificador especificado de um item de exibição de árvore no controle de exibição de árvore atual para um identificador de acessibilidade.
+Mapeia a alça especificada de um item de exibição de árvore no controle atual de exibição de árvore para um identificador de acessibilidade.
 
 ```
 UINT MapItemToAccID(HTREEITEM hItem) const;
@@ -1533,33 +1533,33 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*hItem*|no Um identificador de um item de exibição de árvore no controle. Para obter mais informações, consulte o membro *hItem* da estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .|
+|*Hitem*|[em] Uma alça de um item de visão de árvore no controle. Para obter mais informações, consulte o membro *hItem* da estrutura [TVITEMEX.](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador de acessibilidade que corresponde ao parâmetro *hItem* .
+O identificador de acessibilidade que corresponde ao parâmetro *hItem.*
 
 ### <a name="remarks"></a>Comentários
 
-Os auxílios de acessibilidade são aplicativos que ajudam as pessoas com deficiências a usar computadores. Um identificador de acessibilidade é usado pela interface `IAccessible` para especificar exclusivamente um elemento em uma janela. Para obter mais informações sobre identificadores de acessibilidade, procure o tópico "sobre o suporte ao Acessibilidade Ativa" no [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
+Os auxílios de acessibilidade são aplicativos que ajudam pessoas com deficiência a usar computadores. Um identificador de acessibilidade `IAccessible` é usado pela interface para especificar exclusivamente um elemento em uma janela. Para obter mais informações sobre identificadores de acessibilidade, procure o tópico "Sobre o suporte à acessibilidade ativa" na [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
-Esse método envia a mensagem de [TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid) , que é descrita na SDK do Windows.
+Este método envia a mensagem [TVM_MAPHTREEITEMTOACCID,](/windows/win32/Controls/tvm-maphtreeitemtoaccid) que é descrita no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define uma variável, `m_treeCtrl`, que é usada para acessar o controle de exibição de árvore atual. O exemplo de código também define um inteiro sem sinal e várias variáveis HTREEITEM. Essas variáveis são usadas no exemplo a seguir.
+O exemplo de código a `m_treeCtrl`seguir define uma variável, que é usada para acessar o controle atual de visualização de árvore. O exemplo de código também define um inteiro não assinado e várias variáveis HTREEITEM. Essas variáveis são usadas no próximo exemplo.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir obtém um número de identificação para um item de controle de exibição de árvore. Em uma seção anterior do exemplo de código, que não é mostrada, criamos um modo de exibição de árvore que consiste em um nó de país/região raiz para o Estados Unidos, subnós para os Estados de Pensilvânia e Washington e itens de árvore para cidades nesses Estados. Este exemplo de código obtém um número de identificação exclusivo para o nó raiz país/região.
+O exemplo de código a seguir obtém um número de identificação para um item de controle de visualização de árvore. Em uma seção anterior do exemplo de código, que não é mostrada, criamos uma visão de árvore que consiste em um nó raiz país/região para os Estados Unidos, subnomes para os estados da Pensilvânia e Washington, e itens de árvores para cidades nesses estados. Este exemplo de código obtém um número de identificação único para o nó raiz país/região.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_31.cpp)]
 
-##  <a name="select"></a>  CTreeCtrl::Select
+## <a name="ctreectrlselect"></a><a name="select"></a>CTreeCtrl::Select
 
-Chame essa função para selecionar o item de exibição de árvore fornecido, role o item para a exibição ou Redesenhe o item no estilo usado para indicar o destino de uma operação de arrastar e soltar.
+Chame esta função para selecionar o item dado para exibição de árvore, role o item para a exibição ou redesenhe o item no estilo usado para indicar o alvo de uma operação de arrastar e soltar.
 
 ```
 BOOL Select(
@@ -1569,33 +1569,33 @@ BOOL Select(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-*nCode*<br/>
-O tipo de ação a ser tomada. Esse parâmetro pode ser um dos seguintes valores:
+*Ncode*<br/>
+O tipo de ação a ser tomada. Este parâmetro pode ser um dos seguintes valores:
 
-- TVGN_CARET define a seleção para o item determinado.
+- TVGN_CARET Define a seleção para o item dado.
 
-- TVGN_DROPHILITE Redesenha o item determinado no estilo usado para indicar o destino de uma operação de arrastar e soltar.
+- TVGN_DROPHILITE Redesenha o item dado no estilo usado para indicar o alvo de uma operação de arrastar e soltar.
 
-- TVGN_FIRSTVISIBLE Rola o modo de exibição de árvore verticalmente para que o item fornecido seja o primeiro item visível.
+- TVGN_FIRSTVISIBLE Rola a visão da árvore verticalmente para que o item dado seja o primeiro item visível.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Se *nCode* contiver o valor TVGN_CARET, a janela pai receberá as mensagens de notificação TVN_SELCHANGING e TVN_SELCHANGED. Além disso, se o item especificado for o filho de um item pai recolhido, a lista de itens filho do pai será expandida para revelar o item especificado. Nesse caso, a janela pai recebe a TVN_ITEMEXPANDING e TVN_ITEMEXPANDED Mensagens de notificação.
+Se *nCode* contiver o valor TVGN_CARET, a janela pai receberá as mensagens de notificação TVN_SELCHANGING e TVN_SELCHANGED. Além disso, se o item especificado for o filho de um item dos pais colapsado, a lista de itens do filho dos pais será expandida para revelar o item especificado. Neste caso, a janela pai recebe as mensagens de notificação TVN_ITEMEXPANDING e TVN_ITEMEXPANDED.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: HitTest](#hittest).
+  Veja o exemplo de [CTreeCtrl::HitTest](#hittest).
 
-##  <a name="selectdroptarget"></a>  CTreeCtrl::SelectDropTarget
+## <a name="ctreectrlselectdroptarget"></a><a name="selectdroptarget"></a>CTreeCtrl::SelectDropTarget
 
-Chame essa função para redesenhar o item no estilo usado para indicar o destino de uma operação de arrastar e soltar.
+Chame esta função para redesenhar o item no estilo usado para indicar o alvo de uma operação de arrastar e soltar.
 
 ```
 BOOL SelectDropTarget(HTREEITEM hItem);
@@ -1603,20 +1603,20 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]
 
-##  <a name="selectitem"></a>  CTreeCtrl::SelectItem
+## <a name="ctreectrlselectitem"></a><a name="selectitem"></a>CTreeCtrl::SelectItem
 
-Chame essa função para selecionar o item de exibição de árvore fornecido.
+Chame esta função para selecionar o item dado para exibição de árvore.
 
 ```
 BOOL SelectItem(HTREEITEM hItem);
@@ -1624,24 +1624,24 @@ BOOL SelectItem(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador de um item de árvore.
+*Hitem*<br/>
+Alça de um item de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Se *hItem* for nulo, essa função não selecionará nenhum item.
+Se *hItem* for NULL, então esta função não selecionará nenhum item.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]
 
-##  <a name="selectsetfirstvisible"></a>  CTreeCtrl::SelectSetFirstVisible
+## <a name="ctreectrlselectsetfirstvisible"></a><a name="selectsetfirstvisible"></a>CTreeCtrl::SelectSetFirstVisible
 
-Chame essa função para rolar o modo de exibição de árvore verticalmente de forma que o item fornecido seja o primeiro item visível.
+Chame esta função para rolar a visão da árvore verticalmente para que o item dado seja o primeiro item visível.
 
 ```
 BOOL SelectSetFirstVisible(HTREEITEM hItem);
@@ -1649,24 +1649,24 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item de árvore a ser definido como o primeiro item visível.
+*Hitem*<br/>
+Alça do item da árvore a ser definido como o primeiro item visível.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-A função envia uma mensagem para a janela com os parâmetros de mensagem TVM_SELECTITEM e TVGN_FIRSTVISIBLE.
+A função envia uma mensagem para a janela com os parâmetros de TVM_SELECTITEM e TVGN_FIRSTVISIBLE de mensagem.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#28](../../mfc/reference/codesnippet/cpp/ctreectrl-class_32.cpp)]
 
-##  <a name="setautoscrollinfo"></a>  CTreeCtrl::SetAutoscrollInfo
+## <a name="ctreectrlsetautoscrollinfo"></a><a name="setautoscrollinfo"></a>CTreeCtrl::SetAutoscrollInfo
 
-Define a taxa de rolagem automática do controle de exibição de árvore atual.
+Define a taxa de rolagem automática do controle atual de visualização de árvore.
 
 ```
 BOOL SetAutoscrollInfo(
@@ -1678,34 +1678,34 @@ BOOL SetAutoscrollInfo(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*uPixelsPerSec*|no O número de pixels por segundo para rolar.|
-|*uUpdateTime*|no O intervalo de tempo entre as atualizações do controle.|
+|*uPixelsPerSec*|[em] O número de pixels por segundo para rolar.|
+|*uUpdateTime*|[em] O intervalo de tempo entre as atualizações do controle.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Os parâmetros de rolagem são usados para rolar para a exibição de um item que não está visível no momento. O controle de exibição de árvore deve ter o TVS_EX_AUTOHSCROLL estilo estendido, que é descrito em [estilos estendidos de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-extended-styles).
+Os parâmetros do pergaminho automático são usados para rolar para ver um item que atualmente não está visível. O controle de visualização de árvore deve ter o estilo TVS_EX_AUTOHSCROLL estendido, que é descrito em [Estilos estendidos de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-extended-styles).
 
-Esse método envia a mensagem de [TVM_SETAUTOSCROLLINFO](/windows/win32/Controls/tvm-setautoscrollinfo) , que é descrita na SDK do Windows.
+Este método envia a mensagem [TVM_SETAUTOSCROLLINFO,](/windows/win32/Controls/tvm-setautoscrollinfo) que é descrita no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define uma variável, `m_treeCtrl`, que é usada para acessar o controle de exibição de árvore atual. O exemplo de código também define um inteiro sem sinal e várias variáveis HTREEITEM. Essas variáveis são usadas no exemplo a seguir.
+O exemplo de código a `m_treeCtrl`seguir define uma variável, que é usada para acessar o controle atual de visualização de árvore. O exemplo de código também define um inteiro não assinado e várias variáveis HTREEITEM. Essas variáveis são usadas no próximo exemplo.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define o comportamento de AutoScroll do controle de exibição de árvore atual. Em uma seção anterior do exemplo de código, que não é mostrada, criamos um modo de exibição de árvore que consiste em um nó de país/região raiz para o Estados Unidos, subnós para os Estados de Pensilvânia e Washington e itens de árvore para cidades nesses Estados. Intencionalmente, tornamos o controle de exibição em árvore estreito, de forma que ele deve rolar automaticamente para exibir o item de árvore que tem o foco. O exemplo de código define o controle de exibição de árvore para rolar automaticamente 30 pixels por segundo a cada 5 segundos até que o item de árvore esteja na exibição.
+O exemplo de código a seguir define o comportamento do autoscroll do controle atual de visualização de árvore. Em uma seção anterior do exemplo de código, que não é mostrada, criamos uma visão de árvore que consiste em um nó raiz país/região para os Estados Unidos, subnomes para os estados da Pensilvânia e Washington, e itens de árvores para cidades nesses estados. Nós intencionalmente fizemos o controle de visualização de árvore estreito de modo que ele deve rolar automaticamente para exibir o item da árvore que tem o foco. O exemplo de código define o controle de visualização de árvore para rolar automaticamente 30 pixels por segundo a cada 5 segundos até que o item da árvore esteja em exibição.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_33.cpp)]
 
-##  <a name="setbkcolor"></a>  CTreeCtrl::SetBkColor
+## <a name="ctreectrlsetbkcolor"></a><a name="setbkcolor"></a>CTreeCtrl::SetBkColor
 
-Essa função de membro implementa o comportamento do [TVM_SETBKCOLOR](/windows/win32/Controls/tvm-setbkcolor)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_SETBKCOLOR](/windows/win32/Controls/tvm-setbkcolor)de mensagem Win32 , conforme descrito no SDK do Windows.
 
 ```
 COLORREF SetBkColor(COLORREF clr);
@@ -1713,20 +1713,20 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*clr*<br/>
-Um valor COLORREF que contém a nova cor do plano de fundo. Se esse valor for-1, o controle será revertido para usar a cor do sistema para a cor do plano de fundo.
+*Clr*<br/>
+Um valor COLORREF que contém a nova cor de fundo. Se esse valor for -1, o controle voltará a usar a cor do sistema para a cor de fundo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor COLORREF que representa a cor do texto atual. Se esse valor for-1, o controle estará usando a cor do sistema para a cor do texto.
+Um valor COLORREF que representa a cor de texto atual. Se este valor for -1, o controle está usando a cor do sistema para a cor do texto.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: SetTextColor](#settextcolor).
+  Veja o exemplo de [CTreeCtrl::SetTextColor](#settextcolor).
 
-##  <a name="setcheck"></a>  CTreeCtrl::SetCheck
+## <a name="ctreectrlsetcheck"></a><a name="setcheck"></a>CTreeCtrl::SetCheck
 
-Chame essa função de membro para definir o estado de verificação para um item de controle de árvore.
+Ligue para esta função de membro para definir o estado de verificação de um item de controle de árvore.
 
 ```
 BOOL SetCheck(
@@ -1736,19 +1736,19 @@ BOOL SetCheck(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
+*Hitem*<br/>
 O HTREEITEM para receber a alteração do estado de verificação.
 
-*Confira*<br/>
-Indica se o item de controle de árvore deve ser marcado ou desmarcado. Por padrão, `SetCheck` define o item a ser verificado.
+*fCheck*<br/>
+Indica se o item de controle de árvore deve ser verificado ou desmarcado. Por padrão, `SetCheck` define o item a ser verificado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Quando o item de controle de árvore é verificado ( *Confira* definido como true), o item é exibido com uma marca de seleção adjacente.
+Quando o item de controle de árvore é verificado *(fCheck* definido como TRUE), o item aparece com uma marca de seleção adjacente.
 
 ### <a name="example"></a>Exemplo
 
@@ -1756,13 +1756,13 @@ Quando o item de controle de árvore é verificado ( *Confira* definido como tru
 
 ### <a name="example"></a>Exemplo
 
-Para usar caixas de seleção, defina TVS_CHECKBOXES antes de preencher o controle de árvore.
+Para usar caixas de seleção, defina TVS_CHECKBOXES antes de preencher o controle da árvore.
 
 [!code-cpp[NVC_MFC_CTreeCtrl#30](../../mfc/reference/codesnippet/cpp/ctreectrl-class_35.cpp)]
 
-##  <a name="setextendedstyle"></a>  CTreeCtrl::SetExtendedStyle
+## <a name="ctreectrlsetextendedstyle"></a><a name="setextendedstyle"></a>CTreeCtrl::SetExtendedStyle
 
-Define os estilos estendidos para o controle de exibição de árvore atual.
+Define os estilos estendidos para o controle atual de visualização de árvore.
 
 ```
 DWORD SetExtendedStyle(
@@ -1774,34 +1774,34 @@ DWORD SetExtendedStyle(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*dwExMask*|no Um bitmask que especifica quais estilos no controle de exibição de árvore atual são afetados por esse método. Se esse parâmetro for zero, ele será ignorado e o valor do parâmetro *dwExStyles* será atribuído ao controle de exibição de árvore.<br /><br /> Especifique zero ou uma combinação de bits (ou) de bit que seja descrita em [estilos estendidos de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-extended-styles).|
-|*dwExStyles*|no Um bitmask que especifica quais estilos no controle de exibição de árvore atual definir ou limpar.<br /><br /> Para definir uma combinação de estilos, especifique uma combinação de bits de bit (ou) de estilos descrita em [estilos estendidos de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-extended-styles). Para limpar um conjunto de estilos, especifique zero.|
+|*Dwexmask*|[em] Uma máscara de bit que especifica quais estilos no controle atual de visualização de árvore são afetados por este método. Se esse parâmetro for zero, ele será ignorado e o valor do parâmetro *dwExStyles* será atribuído ao controle de visualização de árvores.<br /><br /> Especifique zero ou uma combinação bitwise (OR) de estilos descritos em [Estilos estendidos de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-extended-styles).|
+|*Dwexstyles*|[em] Uma máscara de bit que especifica quais estilos no controle atual de visualização de árvore para definir ou limpar.<br /><br /> Para definir uma combinação de estilos, especifique uma combinação bitwise (OR) de estilos descritos em [Estilos estendidos de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-extended-styles). Para limpar um conjunto de estilos, especifique zero.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor que contém os estilos de controle estendidos anteriores.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método limpa os estilos especificados no parâmetro *dwExMask* e, em seguida, define os estilos especificados no parâmetro *dwExStyles* . Somente os estilos estendidos que correspondem aos bits em *dwExMask* mudam.
+Este método limpa os estilos especificados no parâmetro *dwExMask* e, em seguida, define os estilos especificados no parâmetro *dwExStyles.* Apenas os estilos estendidos que correspondem aos bits na alteração *dwExMask.*
 
-Esse método envia a mensagem de [TVM_SETEXTENDEDSTYLE](/windows/win32/Controls/tvm-setextendedstyle) , que é descrita na SDK do Windows.
+Este método envia a [mensagem TVM_SETEXTENDEDSTYLE,](/windows/win32/Controls/tvm-setextendedstyle) que é descrita no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define uma variável, `m_treeCtrl`, que é usada para acessar o controle de exibição de árvore atual. O exemplo de código também define um inteiro sem sinal e várias variáveis HTREEITEM. Essas variáveis são usadas no exemplo a seguir.
+O exemplo de código a `m_treeCtrl`seguir define uma variável, que é usada para acessar o controle atual de visualização de árvore. O exemplo de código também define um inteiro não assinado e várias variáveis HTREEITEM. Essas variáveis são usadas no próximo exemplo.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir adiciona o TVS_EX_AUTOHSCROLL estilo estendido ao controle de exibição de árvore atual. Em uma seção anterior do exemplo de código, que não é mostrada, criamos um modo de exibição de árvore que consiste em um nó de país/região raiz para o Estados Unidos, subnós para os Estados de Pensilvânia e Washington e itens de árvore para cidades nesses Estados. Intencionalmente, tornamos o controle de exibição em árvore estreito, de forma que ele deve rolar automaticamente para exibir o item de árvore que tem o foco.
+O exemplo de código a seguir adiciona o estilo TVS_EX_AUTOHSCROLL estendido ao controle atual de visualização de árvore. Em uma seção anterior do exemplo de código, que não é mostrada, criamos uma visão de árvore que consiste em um nó raiz país/região para os Estados Unidos, subnomes para os estados da Pensilvânia e Washington, e itens de árvores para cidades nesses estados. Nós intencionalmente fizemos o controle de visualização de árvore estreito de modo que ele deve rolar automaticamente para exibir o item da árvore que tem o foco.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_36.cpp)]
 
-##  <a name="setimagelist"></a>  CTreeCtrl::SetImageList
+## <a name="ctreectrlsetimagelist"></a><a name="setimagelist"></a>CTreeCtrl::SetImageList
 
-Chame essa função para definir a lista de imagens normal ou de estado de um controle de exibição de árvore e redesenhar o controle usando as novas imagens.
+Chame esta função para definir a lista de imagens normais ou estaduais para um controle de visualização de árvore e redesenhar o controle usando as novas imagens.
 
 ```
 CImageList* SetImageList(
@@ -1812,26 +1812,26 @@ CImageList* SetImageList(
 ### <a name="parameters"></a>Parâmetros
 
 *pImageList*<br/>
-Ponteiro para a lista de imagens a ser atribuída. Se *pImageList* for NULL, todas as imagens serão removidas do controle de exibição de árvore.
+Ponteiro para a lista de imagens para atribuir. Se *pImageList* for NULL, todas as imagens serão removidas do controle de visualização da árvore.
 
 *nImageListType*<br/>
-Tipo de lista de imagens a ser definida. A lista de imagens pode ser um dos seguintes valores:
+Tipo de lista de imagens a definir. A lista de imagens pode ser um dos seguintes valores:
 
-- TVSIL_NORMAL Define a lista de imagens normal, que contém as imagens selecionadas e não selecionadas para o item de modo de exibição de árvore. Você deve usar esse estado para imagens de sobreposição.
+- TVSIL_NORMAL Define a lista de imagens normais, que contém as imagens selecionadas e não selecionadas para o item de exibição de árvore. Você deve usar este estado para sobrepor imagens.
 
-- TVSIL_STATE define a lista de imagens de estado, que contém as imagens de itens de exibição de árvore que estão em um estado definido pelo usuário.
+- TVSIL_STATE Define a lista de imagens do estado, que contém as imagens para itens de exibição de árvore que estão em um estado definido pelo usuário.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Ponteiro para a lista de imagens anterior, se houver; caso contrário, NULL.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: GetImageList](#getimagelist).
+  Veja o exemplo de [CTreeCtrl::GetImageList](#getimagelist).
 
-##  <a name="setindent"></a>  CTreeCtrl::SetIndent
+## <a name="ctreectrlsetindent"></a><a name="setindent"></a>CTreeCtrl::SetIndent
 
-Chame essa função para definir a largura do recuo para um controle de exibição de árvore e redesenhar o controle para refletir a nova largura.
+Chame esta função para definir a largura do recuo para um controle de visualização de árvore e redesenha o controle para refletir a nova largura.
 
 ```
 void SetIndent(UINT nIndent);
@@ -1839,16 +1839,16 @@ void SetIndent(UINT nIndent);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndent*<br/>
-Largura, em pixels, do recuo. Se *nIndent* for menor que a largura mínima definida pelo sistema, a nova largura será definida como o mínimo definido pelo sistema.
+*Nindent*<br/>
+Largura, em pixels, do recuo. Se *nIndent* for menor que a largura mínima definida pelo sistema, a nova largura será definida para o mínimo definido pelo sistema.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: GetIndent](#getindent).
+  Veja o exemplo de [CTreeCtrl::GetIndent](#getindent).
 
-##  <a name="setinsertmark"></a>  CTreeCtrl::SetInsertMark
+## <a name="ctreectrlsetinsertmark"></a><a name="setinsertmark"></a>CTreeCtrl::SetInsertMark
 
-Essa função de membro implementa o comportamento do [TVM_SETINSERTMARK](/windows/win32/Controls/tvm-setinsertmark)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [mensagem](/windows/win32/Controls/tvm-setinsertmark)Win32 TVM_SETINSERTMARK , conforme descrito no SDK do Windows.
 
 ```
 BOOL SetInsertMark(
@@ -1858,23 +1858,23 @@ BOOL SetInsertMark(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-HTREEITEM que especifica em qual item a marca de inserção será colocada. Se esse argumento for nulo, a marca de inserção será removida.
+*Hitem*<br/>
+HTREEITEM que especifica em qual item a marca de inserção será colocada. Se este argumento for NULO, a marca de inserção será removida.
 
 *fAfter*<br/>
-Valor BOOL que especifica se a marca de inserção é colocada antes ou depois do item especificado. Se esse argumento for diferente de zero, a marca de inserção será colocada após o item. Se esse argumento for zero, a marca de inserção será colocada antes do item.
+Valor BOOL que especifica se a marca de inserção é colocada antes ou depois do item especificado. Se esse argumento não for zero, a marca de inserção será colocada após o item. Se este argumento for zero, a marca de inserção será colocada antes do item.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#31](../../mfc/reference/codesnippet/cpp/ctreectrl-class_37.cpp)]
 
-##  <a name="setinsertmarkcolor"></a>  CTreeCtrl::SetInsertMarkColor
+## <a name="ctreectrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CTreeCtrl::SetInsertMarkColor
 
-Essa função de membro implementa o comportamento do [TVM_SETINSERTMARKCOLOR](/windows/win32/Controls/tvm-setinsertmarkcolor)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [mensagem](/windows/win32/Controls/tvm-setinsertmarkcolor)TVM_SETINSERTMARKCOLOR do Win32, conforme descrito no SDK do Windows.
 
 ```
 COLORREF SetInsertMarkColor(COLORREF clrNew);
@@ -1883,19 +1883,19 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="parameters"></a>Parâmetros
 
 *clrNew*<br/>
-Um valor de COLORREF que contém a nova cor de marca de inserção.
+Um valor COLORREF que contém a nova cor da marca de inserção.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor de COLORREF que contém a cor de marca de inserção anterior.
+Um valor COLORREF que contém a cor da marca de inserção anterior.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: GetInsertMarkColor](#getinsertmarkcolor).
+  Veja o exemplo de [CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor).
 
-##  <a name="setitem"></a>  CTreeCtrl::SetItem
+## <a name="ctreectrlsetitem"></a><a name="setitem"></a>CTreeCtrl::SetItem
 
-Chame essa função para definir os atributos do item de exibição de árvore especificado.
+Chame esta função para definir os atributos do item de exibição de árvore especificado.
 
 ```
 BOOL SetItem(TVITEM* pItem);
@@ -1913,50 +1913,50 @@ BOOL SetItem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pItem*<br/>
-Um ponteiro para uma estrutura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) que contém os novos atributos de item, conforme descrito na SDK do Windows.
+*Pitem*<br/>
+Um ponteiro para uma estrutura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) que contém os atributos do novo item, conforme descrito no SDK do Windows.
 
-*hItem*<br/>
-Identificador do item cujos atributos devem ser definidos. Consulte o membro `hItem` da estrutura `TVITEM` no SDK do Windows.
+*Hitem*<br/>
+Manuseie o item cujos atributos devem ser definidos. Consulte `hItem` o membro `TVITEM` da estrutura no Windows SDK.
 
-*nMask*<br/>
-Inteiro que especifica quais atributos definir. Consulte o membro `mask` da estrutura `TVITEM`.
+*Nmask*<br/>
+Inteiro especificando quais atributos definir. Veja `mask` o membro `TVITEM` da estrutura.
 
-*lpszItem*<br/>
-Endereço de uma cadeia de caracteres que contém o texto do item.
+*Lpszitem*<br/>
+Endereço de uma seqüência contendo o texto do item.
 
-*nImage*<br/>
-Índice da imagem do item na lista de imagens do controle de exibição de árvore. Consulte o membro `iImage` da estrutura `TVITEM`.
+*Nimage*<br/>
+Índice da imagem do item na lista de imagens do controle de visualização de árvore. Veja `iImage` o membro `TVITEM` da estrutura.
 
-*nSelectedImage*<br/>
-Índice da imagem selecionada do item na lista de imagens do controle de exibição de árvore. Consulte o membro `iSelectedImage` da estrutura `TVITEM`.
+*nImagemdeImagem selecionada*<br/>
+Índice da imagem selecionada do item na lista de imagens do controle de visualização de árvore. Veja `iSelectedImage` o membro `TVITEM` da estrutura.
 
-*nState*<br/>
-Especifica valores para os Estados do item. Consulte o membro `State` da estrutura `TVITEM`.
+*Nstate*<br/>
+Especifica valores para os estados do item. Veja `State` o membro `TVITEM` da estrutura.
 
-*nStateMask*<br/>
-Especifica quais Estados devem ser definidos. Consulte o membro `stateMask` da estrutura `TVITEM`.
+*Nstatemask*<br/>
+Especifica quais estados devem ser definidos. Veja `stateMask` o membro `TVITEM` da estrutura.
 
 *lParam*<br/>
-Um valor específico de aplicativo de tamanho de ponteiro associado ao item.
+Um valor específico de aplicativo do tamanho de um ponteiro associado ao item.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Na estrutura `TVITEM`, o membro `hItem` identifica o item e o membro `mask` especifica quais atributos definir.
+Na `TVITEM` estrutura, `hItem` o membro identifica o item e o `mask` membro especifica quais atributos a definir.
 
-Se o membro `mask` ou o parâmetro *nMask* especificar o valor TVIF_TEXT, o membro `pszText` ou o *lpszItem* será o endereço de uma cadeia de caracteres terminada em nulo e o membro `cchTextMax` será ignorado. Se `mask` (ou *nMask*) especificar o valor TVIF_STATE, o membro `stateMask` ou o parâmetro *nStateMask* especificará quais Estados de item alterar e o membro `state` ou o parâmetro *nState* conterá os valores para esses Estados.
+Se `mask` o membro ou o parâmetro *nMask* especificar o valor TVIF_TEXT, o `pszText` membro ou o *lpszItem* é o endereço de uma seqüência de seqüência sumida e o `cchTextMax` membro é ignorado. Se `mask` (ou *nMask)* especificar o `stateMask` valor TVIF_STATE, o parâmetro membro ou *nStateMask* `state` especifica qual item é alternou e o parâmetro membro ou *nState* contém os valores para esses estados.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#32](../../mfc/reference/codesnippet/cpp/ctreectrl-class_38.cpp)]
 
-##  <a name="setitemdata"></a>  CTreeCtrl::SetItemData
+## <a name="ctreectrlsetitemdata"></a><a name="setitemdata"></a>CTreeCtrl::SetItemData
 
-Chame essa função para definir o valor específico do aplicativo associado ao item especificado.
+Chame esta função para definir o valor específico do aplicativo associado ao item especificado.
 
 ```
 BOOL SetItemData(
@@ -1966,23 +1966,23 @@ BOOL SetItemData(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item cujos dados serão recuperados.
+*Hitem*<br/>
+Manuseie o item cujos dados devem ser recuperados.
 
-*dwData*<br/>
-Um valor específico de aplicativo de tamanho de ponteiro associado ao item especificado por *hItem*.
+*Dwdata*<br/>
+Um valor específico de aplicativo do tamanho de um ponteiro associado ao item especificado por *hItem*.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#33](../../mfc/reference/codesnippet/cpp/ctreectrl-class_39.cpp)]
 
-##  <a name="setitemexpandedimageindex"></a>  CTreeCtrl::SetItemExpandedImageIndex
+## <a name="ctreectrlsetitemexpandedimageindex"></a><a name="setitemexpandedimageindex"></a>CTreeCtrl::SetItemExpandedImageIndex
 
-Define o índice da imagem a ser exibido quando o item especificado do controle de exibição de árvore atual estiver no estado expandido.
+Define o índice da imagem a ser exibida quando o item especificado do controle atual de exibição de árvore estiver no estado expandido.
 
 ```
 BOOL SetItemExpandedImageIndex(
@@ -1994,32 +1994,32 @@ BOOL SetItemExpandedImageIndex(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*hItem*|no Identificador para um item de controle de exibição de árvore.|
-|*iExpandedImage*|no O índice da imagem a ser exibido quando o item especificado estiver no estado expandido.|
+|*Hitem*|[em] Manuseie um item de controle de visualização de árvore.|
+|*iExpandedImage*|[em] O índice da imagem a ser exibida quando o item especificado estiver no estado expandido.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se esse método for bem-sucedido; caso contrário, FALSE.
+VERDADE se este método for bem sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem de [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) , que é descrita na SDK do Windows. Esse método atribui o parâmetro *iExpandedImage* ao membro `iExpandedImage` de uma estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) e, em seguida, usa essa estrutura na mensagem.
+Este método envia a [mensagem TVM_SETITEM,](/windows/win32/Controls/tvm-setitem) que é descrita no SDK do Windows. Este método atribui o parâmetro *iExpandedImage* ao `iExpandedImage` membro de uma estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) e, em seguida, usa essa estrutura na mensagem.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define uma variável, `m_treeCtrl`, que é usada para acessar o controle de exibição de árvore atual. O exemplo de código também define um inteiro sem sinal e várias variáveis HTREEITEM. Essas variáveis são usadas no exemplo a seguir.
+O exemplo de código a `m_treeCtrl`seguir define uma variável, que é usada para acessar o controle atual de visualização de árvore. O exemplo de código também define um inteiro não assinado e várias variáveis HTREEITEM. Essas variáveis são usadas no próximo exemplo.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir é um teste trivial para determinar se o método [CTreeCtrl:: GetItemExpandedImageIndex](#getitemexpandedimageindex) retorna o valor definido pelo método [CTreeCtrl:: SetItemExpandedImageIndex](#setitemexpandedimageindex) . Em uma seção anterior do exemplo de código, que não é mostrada, criamos um modo de exibição de árvore que consiste em um nó de país/região raiz para o Estados Unidos, subnós para os Estados de Pensilvânia e Washington e itens de árvore para cidades nesses Estados.
+O exemplo de código a seguir é um teste trivial para determinar se o método [CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex) retorna o valor definido pelo método [CTreeCtrl::SetItemExpandedImageIndex.](#setitemexpandedimageindex) Em uma seção anterior do exemplo de código, que não é mostrada, criamos uma visão de árvore que consiste em um nó raiz país/região para os Estados Unidos, subnomes para os estados da Pensilvânia e Washington, e itens de árvores para cidades nesses estados.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_40.cpp)]
 
-##  <a name="setitemheight"></a>  CTreeCtrl::SetItemHeight
+## <a name="ctreectrlsetitemheight"></a><a name="setitemheight"></a>CTreeCtrl::SetItemHeight
 
-Essa função de membro implementa o comportamento do [TVM_SETITEMHEIGHT](/windows/win32/Controls/tvm-setitemheight)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_SETITEMHEIGHT](/windows/win32/Controls/tvm-setitemheight)de mensagem Win32 , conforme descrito no SDK do Windows.
 
 ```
 SHORT SetItemHeight(SHORT cyHeight);
@@ -2028,17 +2028,17 @@ SHORT SetItemHeight(SHORT cyHeight);
 ### <a name="parameters"></a>Parâmetros
 
 *cyHeight*<br/>
-Especifica a nova altura de cada item no modo de exibição de árvore, em pixels. Se esse argumento for menor que a altura das imagens, ele será definido como a altura das imagens. Se esse argumento não for par, ele será arredondado para baixo até o valor par mais próximo. Se esse argumento for-1, o controle será revertido para usar sua altura de item padrão.
+Especifica a nova altura de cada item na visualização da árvore, em pixels. Se esse argumento for menor que a altura das imagens, então ele será definido para a altura das imagens. Se esse argumento não for mesmo, ele será arredondado para o valor mais próximo. Se este argumento for -1, o controle voltará a usar a altura do item padrão.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A altura anterior dos itens, em pixels.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: GetItemHeight](#getitemheight).
+  Veja o exemplo de [CTreeCtrl::GetItemHeight](#getitemheight).
 
-##  <a name="setitemimage"></a>  CTreeCtrl::SetItemImage
+## <a name="ctreectrlsetitemimage"></a><a name="setitemimage"></a>CTreeCtrl::SetItemImage
 
 Associa imagens a um item.
 
@@ -2051,32 +2051,32 @@ BOOL SetItemImage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item cuja imagem deve ser definida.
+*Hitem*<br/>
+Alça do item cuja imagem deve ser definida.
 
-*nImage*<br/>
-Índice da imagem do item na lista de imagens do controle de exibição de árvore.
+*Nimage*<br/>
+Índice da imagem do item na lista de imagens do controle de visualização de árvore.
 
-*nSelectedImage*<br/>
-Índice da imagem selecionada do item na lista de imagens do controle de exibição de árvore.
+*nImagemdeImagem selecionada*<br/>
+Índice da imagem selecionada do item na lista de imagens do controle de visualização de árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Cada item em um controle de exibição de árvore pode ter um par de imagens de bitmap associadas a ele. As imagens aparecem no lado esquerdo do rótulo de um item. Uma imagem é exibida quando o item é selecionado e a outra é exibida quando o item não está selecionado. Por exemplo, um item pode exibir uma pasta aberta quando ela é selecionada e uma pasta fechada quando não está selecionada.
+Cada item em um controle de visualização de árvore pode ter um par de imagens bitmapapped associadas a ele. As imagens aparecem no lado esquerdo da etiqueta de um item. Uma imagem é exibida quando o item é selecionado e a outra é exibida quando o item não é selecionado. Por exemplo, um item pode exibir uma pasta aberta quando for selecionada e uma pasta fechada quando não for selecionada.
 
-Chame essa função para definir o índice da imagem do item e sua imagem selecionada na lista de imagens do controle de exibição de árvore.
+Chame esta função para definir o índice da imagem do item e sua imagem selecionada na lista de imagens do controle de visualização da árvore.
 
 Para obter mais informações sobre imagens, consulte [CImageList](../../mfc/reference/cimagelist-class.md).
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CTreeCtrl:: GetItemImage](#getitemimage).
+  Veja o exemplo de [CTreeCtrl::GetItemImage](#getitemimage).
 
-##  <a name="setitemstate"></a>  CTreeCtrl::SetItemState
+## <a name="ctreectrlsetitemstate"></a><a name="setitemstate"></a>CTreeCtrl::SetItemState
 
 Define o estado do item especificado por *hItem*.
 
@@ -2089,30 +2089,30 @@ BOOL SetItemState(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item cujo estado deve ser definido.
+*Hitem*<br/>
+Manuseie o item cujo estado deve ser definido.
 
-*nState*<br/>
-Especifica novos Estados para o item.
+*Nstate*<br/>
+Especifica novos estados para o item.
 
-*nStateMask*<br/>
-Especifica quais Estados devem ser alterados.
+*Nstatemask*<br/>
+Especifica quais estados devem ser alterados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter informações sobre Estados, consulte [CTreeCtrl:: GetItem](#getitem).
+Para obter informações sobre estados, consulte [CTreeCtrl::GetItem](#getitem).
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo para [CTreeCtrl:: GetItemState](#getitemstate).
+  Veja o exemplo de [CTreeCtrl::GetItemState](#getitemstate).
 
-##  <a name="setitemstateex"></a>  CTreeCtrl::SetItemStateEx
+## <a name="ctreectrlsetitemstateex"></a><a name="setitemstateex"></a>CTreeCtrl::SetItemStateEx
 
-Define o estado estendido do item especificado no controle de exibição de árvore atual.
+Define o estado estendido do item especificado no controle atual de exibição de árvore.
 
 ```
 BOOL SetItemStateEx(
@@ -2124,30 +2124,30 @@ BOOL SetItemStateEx(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*hItem*|no Identificador para um item de controle de exibição de árvore.|
-|*uStateEx*|no O estado estendido do item. Para obter mais informações, consulte o membro `uStateEx` da estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .|
+|*Hitem*|[em] Manuseie um item de controle de visualização de árvore.|
+|*uStateEx*|[em] O estado estendido do item. Para obter mais `uStateEx` informações, consulte o membro da estrutura [TVITEMEX.](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se esse método for bem-sucedido; caso contrário, FALSE.
+VERDADE se este método for bem sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem de [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) , que é descrita na SDK do Windows. Esse método atribui o parâmetro *uStateEx* ao membro `uStateEx` de uma estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) e, em seguida, usa essa estrutura na mensagem.
+Este método envia a [mensagem TVM_SETITEM,](/windows/win32/Controls/tvm-setitem) que é descrita no SDK do Windows. Este método atribui o parâmetro *uStateEx* ao `uStateEx` membro de uma estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) e, em seguida, usa essa estrutura na mensagem.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define uma variável, `m_treeCtrl`, que é usada para acessar o controle de exibição de árvore atual. O exemplo de código também define um inteiro sem sinal e várias variáveis HTREEITEM. Essas variáveis são usadas no exemplo a seguir.
+O exemplo de código a `m_treeCtrl`seguir define uma variável, que é usada para acessar o controle atual de visualização de árvore. O exemplo de código também define um inteiro não assinado e várias variáveis HTREEITEM. Essas variáveis são usadas no próximo exemplo.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define um item de exibição de árvore para o estado desabilitado. Em uma seção anterior do exemplo de código, que não é mostrada, criamos um modo de exibição de árvore que consiste em um nó de país/região raiz para o Estados Unidos, subnós para os Estados de Pensilvânia e Washington e itens de árvore para cidades nesses Estados. Este exemplo de código define o nó da Pensilvânia para o estado desabilitado.
+O exemplo de código a seguir define um item de exibição de árvore para o estado desativado. Em uma seção anterior do exemplo de código, que não é mostrada, criamos uma visão de árvore que consiste em um nó raiz país/região para os Estados Unidos, subnomes para os estados da Pensilvânia e Washington, e itens de árvores para cidades nesses estados. Este exemplo de código define o nó da Pensilvânia para o estado desativado.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_41.cpp)]
 
-##  <a name="setitemtext"></a>  CTreeCtrl::SetItemText
+## <a name="ctreectrlsetitemtext"></a><a name="setitemtext"></a>CTreeCtrl::SetItemText
 
 Define o texto do item especificado por *hItem*.
 
@@ -2159,23 +2159,23 @@ BOOL SetItemText(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item cujo texto deve ser definido.
+*Hitem*<br/>
+Manuseie o item cujo texto deve ser definido.
 
-*lpszItem*<br/>
-Endereço de uma cadeia de caracteres que contém o novo texto para o item
+*Lpszitem*<br/>
+Endereço de uma string contendo o novo texto para o item
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#34](../../mfc/reference/codesnippet/cpp/ctreectrl-class_42.cpp)]
 
-##  <a name="setlinecolor"></a>  CTreeCtrl::SetLineColor
+## <a name="ctreectrlsetlinecolor"></a><a name="setlinecolor"></a>CTreeCtrl::SetLineColor
 
-Chame essa função de membro para definir a cor da linha atual para o controle de exibição de árvore.
+Ligue para esta função de membro para definir a cor da linha atual para o controle de visualização da árvore.
 
 ```
 COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
@@ -2184,23 +2184,23 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 ### <a name="parameters"></a>Parâmetros
 
 *clrNew*<br/>
-A nova cor da linha.
+A nova linha de cor.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A cor da linha anterior.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro implementa o comportamento do [TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [mensagem](/windows/win32/Controls/tvm-setlinecolor)Win32 TVM_SETLINECOLOR , conforme descrito no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#35](../../mfc/reference/codesnippet/cpp/ctreectrl-class_43.cpp)]
 
-##  <a name="setscrolltime"></a>  CTreeCtrl::SetScrollTime
+## <a name="ctreectrlsetscrolltime"></a><a name="setscrolltime"></a>CTreeCtrl::SetScrollTime
 
-Chame essa função de membro para definir o tempo máximo de rolagem para o controle de exibição de árvore.
+Ligue para esta função de membro para definir o tempo máximo de rolagem para o controle de visualização da árvore.
 
 ```
 UINT SetScrollTime(UINT uScrollTime);
@@ -2209,19 +2209,19 @@ UINT SetScrollTime(UINT uScrollTime);
 ### <a name="parameters"></a>Parâmetros
 
 *uScrollTime*<br/>
-O novo tempo máximo de rolagem, em milissegundos. Se esse valor for menor que 100, ele será arredondado para 100.
+O novo tempo máximo de rolagem, em milissegundos. Se esse valor for inferior a 100, ele será arredondado até 100.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O tempo máximo de rolagem anterior, em milissegundos.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro implementa o comportamento do [TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [mensagem](/windows/win32/Controls/tvm-setscrolltime)Win32 TVM_SETSCROLLTIME , conforme descrito no SDK do Windows.
 
-##  <a name="settextcolor"></a>  CTreeCtrl::SetTextColor
+## <a name="ctreectrlsettextcolor"></a><a name="settextcolor"></a>CTreeCtrl::SetTextColor
 
-Essa função de membro implementa o comportamento do [TVM_SETTEXTCOLOR](/windows/win32/Controls/tvm-settextcolor)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [TVM_SETTEXTCOLOR](/windows/win32/Controls/tvm-settextcolor)de mensagem Win32, conforme descrito no SDK do Windows.
 
 ```
 COLORREF SetTextColor(COLORREF clr);
@@ -2229,20 +2229,20 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*clr*<br/>
-Um valor COLORREF que contém a nova cor do texto. Se esse argumento for-1, o controle será revertido para usar a cor do sistema para a cor do texto.
+*Clr*<br/>
+Um valor COLORREF que contém a nova cor de texto. Se este argumento for -1, o controle voltará a usar a cor do sistema para a cor do texto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor COLORREF que representa a cor do texto anterior. Se esse valor for-1, o controle estava usando a cor do sistema para a cor do texto.
+Um valor COLORREF que representa a cor do texto anterior. Se este valor for -1, o controle estava usando a cor do sistema para a cor do texto.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#36](../../mfc/reference/codesnippet/cpp/ctreectrl-class_44.cpp)]
 
-##  <a name="settooltips"></a>  CTreeCtrl::SetToolTips
+## <a name="ctreectrlsettooltips"></a><a name="settooltips"></a>CTreeCtrl::SetToolTips
 
-Essa função de membro implementa o comportamento do [TVM_SETTOOLTIPS](/windows/win32/Controls/tvm-settooltips)de mensagens Win32, conforme descrito no SDK do Windows.
+Esta função de membro implementa o comportamento da [mensagem](/windows/win32/Controls/tvm-settooltips)TVM_SETTOOLTIPS do Win32, conforme descrito no SDK do Windows.
 
 ```
 CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
@@ -2251,23 +2251,23 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="parameters"></a>Parâmetros
 
 *pWndTip*<br/>
-Um ponteiro para um objeto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) que será usado pelo controle de árvore.
+Um ponteiro para um objeto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) que o controle da árvore usará.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para um objeto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) que contém a dica de ferramenta usada anteriormente pelo controle, ou NULL se nenhuma dica de ferramenta foi usada anteriormente.
+Um ponteiro para um objeto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) contendo a dica de ferramenta usada anteriormente pelo controle ou NULL se nenhuma dica de ferramenta foi usada anteriormente.
 
 ### <a name="remarks"></a>Comentários
 
-Para usar dicas de ferramenta, indique o estilo de TVS_NOTOOLTIPS ao criar o objeto `CTreeCtrl`.
+Para usar as dicas de ferramentas, `CTreeCtrl` indique o estilo TVS_NOTOOLTIPS ao criar o objeto.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo para [CTreeCtrl:: GetToolTips](#gettooltips).
+  Veja o exemplo de [CTreeCtrl::GetToolTips](#gettooltips).
 
-##  <a name="showinfotip"></a>  CTreeCtrl::ShowInfoTip
+## <a name="ctreectrlshowinfotip"></a><a name="showinfotip"></a>CTreeCtrl::ShowInfoTip
 
-Exibe o InfoTip do item especificado no controle de exibição de árvore atual.
+Exibe a dica de informação para o item especificado no controle atual de exibição de árvore.
 
 ```
 void ShowInfoTip(HTREEITEM hItem);
@@ -2277,17 +2277,17 @@ void ShowInfoTip(HTREEITEM hItem);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*hItem*|no Um identificador para um item de exibição de árvore no controle. Para obter mais informações, consulte o membro `hItem` da estrutura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .|
+|*Hitem*|[em] Uma alça para um item de visão de árvore no controle. Para obter mais `hItem` informações, consulte o membro da estrutura [TVITEMEX.](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)|
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre a diferença entre tooltips e infotips, procure o tópico "ToolTips and Infotips" na [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
+Para obter mais informações sobre a diferença entre dicas de ferramentas e dicas de informação, procure o tópico "Dicas de ferramentas e Infotips" na [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
-Esse método envia a mensagem de [TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip) , que é descrita na SDK do Windows.
+Este método envia a mensagem [TVM_SHOWINFOTIP,](/windows/win32/Controls/tvm-showinfotip) que é descrita no SDK do Windows.
 
-##  <a name="sortchildren"></a>  CTreeCtrl::SortChildren
+## <a name="ctreectrlsortchildren"></a><a name="sortchildren"></a>CTreeCtrl::SortChildren
 
-Chame essa função para classificar alfabeticamente os itens filho do item pai fornecido em um controle de exibição de árvore.
+Chame esta função para classificar alfabeticamente os itens da criança do item pai dado em um controle de visualização de árvore.
 
 ```
 BOOL SortChildren(HTREEITEM hItem);
@@ -2295,24 +2295,24 @@ BOOL SortChildren(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hItem*<br/>
-Identificador do item pai cujos itens filho devem ser classificados. Se *hItem* for NULL, a classificação continuará a partir da raiz da árvore.
+*Hitem*<br/>
+Manuseie o item pai cujos itens de criança devem ser classificados. Se *hItem* for NULL, a classificação procederá da raiz da árvore.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-`SortChildren` não recorrerá na árvore; somente os filhos imediatos de *hItem* serão classificados.
+`SortChildren`não vai reamaldiçoar através da árvore; apenas os filhos imediatos *de hItem* serão classificados.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CTreeCtrl#37](../../mfc/reference/codesnippet/cpp/ctreectrl-class_45.cpp)]
 
-##  <a name="sortchildrencb"></a>  CTreeCtrl::SortChildrenCB
+## <a name="ctreectrlsortchildrencb"></a><a name="sortchildrencb"></a>CTreeCtrl::SortChildrenCB
 
-Chame essa função para classificar os itens de exibição de árvore usando uma função de retorno de chamada definida pelo aplicativo que compara os itens.
+Chame esta função para classificar itens de exibição de árvore usando uma função de retorno de chamada definida pelo aplicativo que compara os itens.
 
 ```
 BOOL SortChildrenCB(LPTVSORTCB pSort);
@@ -2321,17 +2321,17 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 ### <a name="parameters"></a>Parâmetros
 
 *pSort*<br/>
-Ponteiro para uma estrutura [TVSORTCB](/windows/win32/api/commctrl/ns-commctrl-tvsortcb) .
+Ponteiro para uma estrutura [TVSORTCB.](/windows/win32/api/commctrl/ns-commctrl-tvsortcb)
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-A função de comparação da estrutura, `lpfnCompare`, deve retornar um valor negativo se o primeiro item deve preceder o segundo, um valor positivo se o primeiro item deve seguir o segundo ou zero se os dois itens forem equivalentes.
+A função de comparação `lpfnCompare`da estrutura, deve retornar um valor negativo se o primeiro item preceder o segundo, um valor positivo se o primeiro item deve seguir o segundo, ou zero se os dois itens forem equivalentes.
 
-Os parâmetros *lParam1* e *lParam2* correspondem ao membro `lParam` da estrutura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) para os dois itens que estão sendo comparados. O parâmetro *lParamSort* corresponde ao membro `lParam` da estrutura `TV_SORTCB`.
+Os parâmetros *lParam1* e *lParam2* correspondem ao `lParam` membro da estrutura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) para os dois itens que estão sendo comparados. O parâmetro *iParamSort* corresponde `lParam` ao membro `TV_SORTCB` da estrutura.
 
 ### <a name="example"></a>Exemplo
 
@@ -2339,9 +2339,9 @@ Os parâmetros *lParam1* e *lParam2* correspondem ao membro `lParam` da estrutur
 
 [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[Exemplo de CMNCTRL1 do MFC](../../overview/visual-cpp-samples.md)<br/>
+[Amostra de MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CImageList](../../mfc/reference/cimagelist-class.md)

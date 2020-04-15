@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: a3372a176a158dd9c89eb888c8deb0244eef9a84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a80c0ec14da2a955a95ac84dd3975212ef20ae04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387533"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374215"
 ---
 # <a name="weakreference-class"></a>Classe WeakReference
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,13 +38,13 @@ class WeakReference;
 
 ## <a name="remarks"></a>Comentários
 
-Representa uma *referência fraca* que pode ser usado com o tempo de execução do Windows ou o com clássico. Uma referência fraca representa um objeto que pode ou não ser acessível.
+Representa uma *referência fraca* que pode ser usada com o Windows Runtime ou com clássico. Uma referência fraca representa um objeto que pode ou não ser acessível.
 
-Um `WeakReference` objeto mantém uma *referência forte*, que é um ponteiro para um objeto e uma *contagem de referência forte*, que é o número de cópias da referência forte que foram distribuídas por o `Resolve()` método. Embora a contagem de referência forte é diferente de zero, a referência forte é válida e o objeto está acessível. Quando a contagem de referência forte se torna zero, a referência forte é inválida e o objeto está inacessível.
+Um `WeakReference` objeto mantém uma *forte referência*, que é um ponteiro para um objeto, e uma *forte contagem*de referência , que é o número de cópias da forte referência que foram distribuídas pelo `Resolve()` método. Embora a forte contagem de referências não seja zero, a forte referência é válida e o objeto é acessível. Quando a forte contagem de referênciase zero, a forte referência é inválida e o objeto é inacessível.
 
-Um `WeakReference` objeto normalmente é usado para representar um objeto cuja existência é controlada por um aplicativo ou thread externo. Por exemplo, construir uma `WeakReference` objeto a partir de uma referência a um objeto de arquivo. Enquanto o arquivo estiver aberto, a referência forte é válida. Mas, se o arquivo é fechado, a referência forte se torna inválida.
+Um `WeakReference` objeto é normalmente usado para representar um objeto cuja existência é controlada por um segmento ou aplicativo externo. Por exemplo, `WeakReference` construa um objeto a partir de uma referência a um objeto de arquivo. Enquanto o arquivo estiver aberto, a referência forte é válida. Mas se o arquivo for fechado, a forte referência se torna inválida.
 
-O `WeakReference` métodos são thread-safe.
+Os `WeakReference` métodos são seguros para rosca.
 
 ## <a name="members"></a>Membros
 
@@ -52,17 +52,17 @@ O `WeakReference` métodos são thread-safe.
 
 Nome                                                  | Descrição
 ----------------------------------------------------- | ---------------------------------------------------------------------------
-[WeakReference::WeakReference](#weakreference)        | Inicializa uma nova instância da classe `WeakReference`.
-[WeakReference::~WeakReference](#tilde-weakreference) | Realiza o desligamento (destrói) a instância atual do `WeakReference` classe.
+[Referência fraca::Referência fraca](#weakreference)        | Inicia uma nova instância da classe `WeakReference`.
+[Referência fraca::~Referência fraca](#tilde-weakreference) | Desinicializa (destrói) a instância `WeakReference` atual da classe.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                                                                 | Descrição
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[WeakReference::DecrementStrongReference](#decrementstrongreference) | Diminui a contagem de referência forte da atual `WeakReference` objeto.
-[WeakReference::IncrementStrongReference](#incrementstrongreference) | Incrementa a contagem de referência forte da atual `WeakReference` objeto.
-[WeakReference::Resolve](#resolve)                                   | Define o ponteiro especificado para o valor atual de referência forte se a contagem de referência forte for diferente de zero.
-[WeakReference::SetUnknown](#setunknown)                             | Define a referência forte da atual `WeakReference` objeto para o ponteiro de interface especificado.
+[Referência fraca::DecrementStrongReference](#decrementstrongreference) | Decreta a forte contagem de `WeakReference` referência do objeto atual.
+[Referência fraca::IncrementStrongReference](#incrementstrongreference) | Incrementa a forte contagem `WeakReference` de referência do objeto atual.
+[Referência fraca::Resolver](#resolve)                                   | Define o ponteiro especificado para o valor de referência forte atual se a contagem de referência forte não for zero.
+[Referência fraca::setUnknown](#setunknown)                             | Define a referência forte `WeakReference` do objeto atual ao ponteiro de interface especificado.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -70,27 +70,27 @@ Nome                                                                 | Descriç�
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Implements. h
+**Cabeçalho:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Espaço de nome:** Microsoft::WRL::Details
 
-## <a name="tilde-weakreference"></a>WeakReference::~WeakReference
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>Referência fraca::~Referência fraca
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 virtual ~WeakReference();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-A instância atual do realiza o desligamento de `WeakReference` classe.
+Desinicializa a instância `WeakReference` atual da classe.
 
-## <a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>Referência fraca::DecrementStrongReference
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 ULONG DecrementStrongReference();
@@ -98,33 +98,33 @@ ULONG DecrementStrongReference();
 
 ### <a name="remarks"></a>Comentários
 
-Diminui a contagem de referência forte da atual `WeakReference` objeto.
+Decreta a forte contagem de `WeakReference` referência do objeto atual.
 
-Quando a contagem de referência forte se torna zero, a referência forte é definida como `nullptr`.
+Quando a forte contagem de referênciase `nullptr`zero, a forte referência é definida como .
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A contagem de referência forte decrementado.
+A forte contagem de referências decretadas.
 
-## <a name="incrementstrongreference"></a>WeakReference::IncrementStrongReference
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>Referência fraca::IncrementStrongReference
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 ULONG IncrementStrongReference();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A contagem de referência forte incrementado.
+A contagem de referências incrementada.
 
 ### <a name="remarks"></a>Comentários
 
-Incrementa a contagem de referência forte da atual `WeakReference` objeto.
+Incrementa a forte contagem `WeakReference` de referência do objeto atual.
 
-## <a name="resolve"></a>WeakReference::Resolve
+## <a name="weakreferenceresolve"></a><a name="resolve"></a>Referência fraca::Resolver
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 STDMETHOD(Resolve)
@@ -136,26 +136,26 @@ STDMETHOD(Resolve)
 ### <a name="parameters"></a>Parâmetros
 
 *riid*<br/>
-Uma ID de interface.
+Um ID de interface.
 
-*ppvObject*<br/>
-Quando essa operação for concluída, uma cópia da referência forte atual se a contagem de referência forte for diferente de zero.
+*Ppvobject*<br/>
+Quando esta operação for concluída, uma cópia da referência forte atual se a forte contagem de referência não for zero.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-- S_OK se essa operação for bem-sucedida e a contagem de referência forte é zero. O *ppvObject* parâmetro for definido como `nullptr`.
+- S_OK se esta operação for bem sucedida e a forte contagem de referências for zero. O parâmetro *ppvObject* está `nullptr`definido como .
 
-- S_OK se essa operação for bem-sucedida e a contagem de referência forte é diferente de zero. O *ppvObject* parâmetro for definido como a referência forte.
+- S_OK se esta operação for bem sucedida e a forte contagem de referências não for zero. O parâmetro *ppvObject* é definido como uma referência forte.
 
-- Caso contrário, um HRESULT que indica o motivo pelo qual esta operação falhou.
+- Caso contrário, um HRESULT que indica a razão pela qual esta operação falhou.
 
 ### <a name="remarks"></a>Comentários
 
-Define o ponteiro especificado para o valor atual de referência forte se a contagem de referência forte for diferente de zero.
+Define o ponteiro especificado para o valor de referência forte atual se a contagem de referência forte não for zero.
 
-## <a name="setunknown"></a>WeakReference::SetUnknown
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>Referência fraca::setUnknown
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 void SetUnknown(
@@ -166,15 +166,15 @@ void SetUnknown(
 ### <a name="parameters"></a>Parâmetros
 
 *unk*<br/>
-Um ponteiro para o `IUnknown` interface de um objeto.
+Um ponteiro `IUnknown` para a interface de um objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Define a referência forte da atual `WeakReference` objeto para o ponteiro de interface especificado.
+Define a referência forte `WeakReference` do objeto atual ao ponteiro de interface especificado.
 
-## <a name="weakreference"></a>WeakReference::WeakReference
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>Referência fraca::Referência fraca
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 WeakReference();
@@ -182,6 +182,6 @@ WeakReference();
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa uma nova instância da classe `WeakReference`.
+Inicia uma nova instância da classe `WeakReference`.
 
-O ponteiro de referência forte para o `WeakReference` objeto é inicializado como `nullptr`, e a contagem de referência forte é inicializada como 1.
+O ponteiro de `WeakReference` referência forte para `nullptr`o objeto é inicializado para , e a forte contagem de referência é inicializada para 1.
