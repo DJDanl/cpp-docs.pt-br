@@ -457,7 +457,7 @@
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
         - name: 'Como: Modificar a estrutura de destino e o conjunto de ferramentas da plataforma'
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
-    - name: 'Passo a passo: como criar e usar uma biblioteca estática (C++)'
+    - name: 'Passo a passo: Criar e usar uma biblioteca estática (C++)'
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
     - name: Build de DLLs do C++ no Visual Studio
       expanded: false
@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: Inicialização CRT
                   href: c-runtime-library/crt-initialization.md
+                - name: Estado global no CRT
+                  href: c-runtime-library/global-state.md
             - name: Rotinas de runtime C universais por categoria
               expanded: false
               items:
@@ -10417,7 +10419,7 @@
                           href: parallel/concrt/reference/concurrency-namespace-enums.md
                         - name: Classe affinity_partitioner
                           href: parallel/concrt/reference/affinity-partitioner-class.md
-                        - name: Classe agent
+                        - name: Classe de agente
                           href: parallel/concrt/reference/agent-class.md
                         - name: Classe auto_partitioner
                           href: parallel/concrt/reference/auto-partitioner-class.md
