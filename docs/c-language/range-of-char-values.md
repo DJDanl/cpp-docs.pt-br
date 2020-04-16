@@ -2,21 +2,21 @@
 title: Intervalo de valores char
 ms.date: 11/04/2016
 ms.assetid: 15ae9781-ec21-4333-bba8-6d2383bbf7f1
-ms.openlocfilehash: c188856ab15c18ccd52aa89235d149366d0b316e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 8cb2609aca910056b5243fddc868710581e576e7
+ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147419"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81480899"
 ---
 # <a name="range-of-char-values"></a>Intervalo de valores char
 
-**ANSI 3.2.1.1** Se um **char** “comum” tem o mesmo intervalo de valores que um **signed char** ou um `unsigned char`
+**ANSI 3.2.1.1** Se um **char** "simples" tem a mesma faixa de valores que um **char assinado** ou um char **não assinado**
 
 Todos os valores de caracteres com sinal variam de -128 a 127. Todos os valores de caracteres sem sinal variam de 0 a 255.
 
-A opção do compilador /J altera o padrão de **signed** para `unsigned`.
+A [`/J`](../build/reference/j-default-char-type-is-unsigned.md) opção compilador altera o tipo padrão para **char** de **char assinado** para char **não assinado**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Caracteres](../c-language/characters.md)

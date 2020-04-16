@@ -1,6 +1,7 @@
 ---
-title: Instrução switch (C++)
-ms.date: 05/06/2019
+title: switchdeclaração (C++)
+description: Referência à declaração switch Standard C++ no Microsoft Visual Studio C++.
+ms.date: 04/15/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -9,76 +10,82 @@ helpviewer_keywords:
 - switch keyword [C++]
 - case keyword [C++], in switch statements
 - default keyword [C++]
+no-loc:
+- switch
+- case
+- default
+- break
+- while
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 6b09c0eac939f7ca6a12b68ce5deb3fb83ad27c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1f65d4699423d74be9c75a9be47e543a9a1256e2
+ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160808"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81480831"
 ---
-# <a name="switch-statement-c"></a>Instrução switch (C++)
+# <a name="opno-locswitch-statement-c"></a>switchdeclaração (C++)
 
 Permite a seleção entre várias seções de código, dependendo do valor de uma expressão integral.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-   switch ( init; expression )
-   case constant-expression : statement
-   [default  : statement]
-```
+> **`switch (`**\[ *inicialização* **`;`** *] expressão***`)`**\
+> **`{`**\
+> &nbsp;&nbsp;&nbsp;&nbsp;**`case`***constant-expression* **`:`** *declaração* de expressão constante\
+> &nbsp;&nbsp;&nbsp;&nbsp;\[**`default :`***declaração*] \
+> **`}`**
 
 ## <a name="remarks"></a>Comentários
 
-A *expressão* deve ser de um tipo integral ou de um tipo de classe para o qual haja uma conversão não ambígua para o tipo integral. A promoção integral é executada conforme descrito em [conversões padrão](standard-conversions.md).
+A *expressão* deve ter um tipo integral, ou ser um tipo de classe que tenha uma conversão inequívoca para o tipo integral. A promoção integral ocorre conforme descrito nas [conversões Padrão](standard-conversions.md).
 
-O corpo da instrução **switch** consiste em uma série de rótulos **Case** e um rótulo **padrão** opcional. Não há duas expressões constantes em instruções **Case** que podem ser avaliadas com o mesmo valor. O rótulo **padrão** pode aparecer apenas uma vez. As instruções rotuladas não são requisitos sintáticos, mas a instrução **switch** não faz sentido sem elas.   A instrução default não precisa vir no final; ela pode aparecer em qualquer lugar no corpo da instrução switch. Um rótulo case ou default só pode aparecer dentro de uma instrução switch.
+O **switch** corpo de declaração **case** consiste em uma **default** série de rótulos e um rótulo opcional. Coletivamente, as declarações que seguem as etiquetas são chamadas de declarações *rotuladas.* As declarações rotuladas não são requisitos **switch** sintáticos, mas a declaração não tem sentido sem elas. Nenhuma expressão constante **case** nas declarações pode avaliar com o mesmo valor. O **default** rótulo pode aparecer apenas uma vez. A **default** declaração é muitas vezes colocada no final, mas **switch** pode aparecer em qualquer lugar no corpo da declaração. Um **case** **default** rótulo ou rótulo **switch** só pode aparecer dentro de uma declaração.
 
-A *expressão de constante* em cada rótulo de **caso** é convertida para o tipo de *expressão* e comparada com a *expressão* de igualdade. O controle passa para a instrução cuja *expressão constante* **Case** corresponde ao valor de *expression*. O comportamento resultante é mostrado na tabela a seguir.
+A *expressão constante* **case** em cada rótulo é convertida ao tipo de *expressão*. Então, é comparado com *a expressão* para a igualdade. O controle passa **case** para a declaração cuja *expressão constante* corresponde ao valor da *expressão*. O comportamento resultante é mostrado na tabela a seguir.
 
-### <a name="switch-statement-behavior"></a>Comportamento da instrução switch
+### <a name="switch-statement-behavior"></a>Comportamento da declaração de switch
 
-|Condição|Ação|
-|---------------|------------|
-|O valor convertido corresponde ao da expressão de controle promovida.|O controle é transferido para a instrução após esse rótulo.|
-|Nenhuma das constantes corresponde às constantes nos rótulos de **caso** ; um rótulo **padrão** está presente.|O controle é transferido para o rótulo **padrão** .|
-|Nenhuma das constantes corresponde às constantes nos rótulos de **caso** ; o rótulo **padrão** não está presente.|O controle é transferido para a instrução após a instrução **switch** .|
+| Condição | Ação |
+|--|--|
+| O valor convertido corresponde ao da expressão de controle promovida. | O controle é transferido para a instrução após esse rótulo. |
+| Nenhuma das constantes corresponde às **case** constantes nos rótulos; um **default** rótulo está presente. | O controle é **default** transferido para a etiqueta. |
+| Nenhuma das constantes corresponde às **case** constantes nos rótulos; nenhum **default** rótulo está presente. | O controle é transferido **switch** para a declaração após a declaração. |
 
-Se uma expressão correspondente for encontrada, o controle não será impedido por rótulos de **caso** ou **padrão** subsequentes. A instrução [Break](../cpp/break-statement-cpp.md) é usada para interromper a execução e transferir o controle para a instrução após a instrução **switch** . Sem uma instrução **Break** , todas as instruções do rótulo **Case** correspondente ao final do **comutador**, incluindo o **padrão**, são executadas. Por exemplo:
+Se uma expressão correspondente for encontrada, **case** **default** a execução pode continuar através de rótulos ou rótulos posteriores. A [`break`](../cpp/break-statement-cpp.md) declaração é usada para interromper a **switch** execução e transferir o controle para a declaração após a declaração. Sem **break** uma declaração, todas **case** as declarações **switch** da etiqueta **default** combinada até o final do , incluindo o , são executadas. Por exemplo:
 
 ```cpp
 // switch_statement1.cpp
 #include <stdio.h>
 
 int main() {
-   char *buffer = "Any character stream";
-   int capa, lettera, nota;
+   const char *buffer = "Any character stream";
+   int uppercase_A, lowercase_a, other;
    char c;
-   capa = lettera = nota = 0;
+   uppercase_A = lowercase_a = other = 0;
 
    while ( c = *buffer++ )   // Walks buffer until NULL
    {
       switch ( c )
       {
          case 'A':
-            capa++;
+            uppercase_A++;
             break;
          case 'a':
-            lettera++;
+            lowercase_a++;
             break;
          default:
-            nota++;
+            other++;
       }
    }
-   printf_s( "\nUppercase a: %d\nLowercase a: %d\nTotal: %d\n",
-      capa, lettera, (capa + lettera + nota) );
+   printf_s( "\nUppercase A: %d\nLowercase a: %d\nTotal: %d\n",
+      uppercase_A, lowercase_a, (uppercase_A + lowercase_a + other) );
 }
 ```
 
-No exemplo acima, `capa` será incrementado se `c` for `A` maiúsculo. A instrução **Break** após `capa++` encerra a execução do corpo da instrução **switch** e o controle passa para o loop **while** . Sem a instrução **Break** , a execução "passa" para a próxima instrução rotulada, de modo que `lettera` e `nota` também seriam incrementadas. Uma finalidade semelhante é servida pela instrução **Break** para `case 'a'`. Se `c` for uma `a`minúscula, `lettera` será incrementado e a instrução **Break** terminará o corpo da instrução **switch** . Se `c` não for um `a` ou `A`, a instrução **padrão** será executada.
+No exemplo acima, `uppercase_A` será incrementado se `c` for `'A'` maiúsculo. A **break** declaração após `uppercase_A++` o **switch** término da execução **while** do corpo de declaração e controle passa para o loop. Sem **break** a declaração, a execução "cairia" para `lowercase_a` a `other` próxima declaração rotulada, de modo que e também seria incrementada. Um propósito semelhante é **break** servido `case 'a'`pela declaração para . Se `c` for uma `'a'` `lowercase_a` minúscula, é **break** incrementada **switch** e a declaração encerra o corpo de declaração. Se `c` não for `'a'` `'A'`um **default** ou , a declaração é executada.
 
-**Visual Studio 2017 e posterior:** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) o atributo `[[fallthrough]]` é especificado no padrão c++ 17. Ele pode ser usado em uma instrução **switch** como uma dica ao compilador (ou a qualquer pessoa que leia o código) que o comportamento de passagem é pretendido. O compilador C++ da Microsoft atualmente não avisa sobre o comportamento do fallthrough, portanto, esse atributo não tem nenhum efeito sobre o comportamento do compilador. Observe que o atributo é aplicado a uma instrução vazia dentro da instrução rotulada; em outras palavras, o ponto e vírgula é necessário.
+**Visual Studio 2017 e posterior:** (disponível com [/std:c++17](../build/reference/std-specify-language-standard-version.md)) O `[[fallthrough]]` atributo está especificado no padrão C++17. Você pode usá-lo em uma **switch** declaração. É uma dica para o compilador, ou qualquer um que leia o código, que o comportamento de queda é intencional. O compilador Microsoft C++ atualmente não avisa sobre o comportamento de transição, portanto este atributo não tem efeito sobre o comportamento do compilador. No exemplo, o atributo é aplicado a uma declaração vazia dentro da declaração rotulada não terminada. Em outras palavras, o ponto e vírgula é necessário.
 
 ```cpp
 int main()
@@ -106,7 +113,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): uma instrução switch pode introduzir e inicializar uma variável cujo escopo é limitado ao bloco da instrução switch:
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std:c++17](../build/reference/std-specify-language-standard-version.md)). Uma switch declaração pode ter uma cláusula *de inicialização.* Ele introduz e inicializa uma variável cujo escopo é switch limitado ao bloco da declaração:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +126,7 @@ int main()
     };
 ```
 
-Um bloco interno de uma instrução **switch** pode conter definições com inicializações, desde que elas estejam acessíveis, ou seja, não ignoradas por todos os caminhos de execução possíveis. Os nomes introduzidos por meio dessas declarações têm escopo local. Por exemplo:
+Um bloco interno **switch** de uma declaração pode conter definições com inicializações desde que sejam *acessíveis,* ou seja, não contornadas por todos os caminhos de execução possíveis. Os nomes introduzidos por meio dessas declarações têm escopo local. Por exemplo:
 
 ```cpp
 // switch_statement2.cpp
@@ -154,15 +161,13 @@ int main(int argc, char *argv[])
 }
 ```
 
-Uma instrução **switch** pode ser aninhada. Nesses casos, os rótulos de **caso** ou **padrão** são associados à instrução de **comutador** mais próxima que os coloca.
+Uma **switch** declaração pode ser aninhada. Quando aninhados, os **case** rótulos **default** **switch** associam-se à declaração mais próxima que as inclui.
 
-**Seção específica da Microsoft**
+### <a name="microsoft-specific-behavior"></a>Comportamento específico da Microsoft
 
-O Microsoft C não limita o número de valores case em uma instrução **switch** . O número é limitado somente pela memória disponível. ANSI C requer pelo menos 257 rótulos de caso sejam permitidos em uma instrução **switch** .
+A Microsoft C não limita **case** o **switch** número de valores em uma declaração. O número é limitado somente pela memória disponível. O ANSI C requer **case** pelo menos 257 rótulos em um **switch** comunicado.
 
-O padrão do Microsoft C é que as extensões da Microsoft sejam habilitadas. Use a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) para desabilitar essas extensões.
-
-**Fim da seção específica da Microsoft**
+O default para microsoft C é que as extensões da Microsoft estão habilitadas. Use a opção [compilador /Za](../build/reference/za-ze-disable-language-extensions.md) para desativar essas extensões.
 
 ## <a name="see-also"></a>Confira também
 
