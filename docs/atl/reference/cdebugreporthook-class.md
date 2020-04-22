@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327106"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747725"
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
 
@@ -107,7 +107,7 @@ static int __cdecl CDebugReportHookProc(
 *Reporttype*<br/>
 O tipo de relatório (_CRT_WARN, _CRT_ERROR ou _CRT_ASSERT).
 
-*Mensagem*<br/>
+*message*<br/>
 A cadeia de caracteres da mensagem.
 
 *Returnvalue*<br/>
@@ -127,7 +127,7 @@ O código nesta função é executado no contexto de segurança subjacente do se
 
 Chame este método para parar de enviar relatórios de depuração para o tubo nomeado e restaurar o gancho de relatório anterior.
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ Chamadas [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook
 
 Chame este método para começar a enviar relatórios de depuração para o tubo nomeado.
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ Retorna TRUE no sucesso, FALSO no fracasso.
 
 Chame este método para definir a hora em milissegundos que esta classe esperará para que o tubo nomeado fique disponível.
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 62cabf281473cdf21fe260fa23082bc55f339849
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e247b4f488411ffdcde5d1d9016436c9c36fe793
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326898"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747687"
 ---
 # <a name="cheapptrbase-class"></a>Classe CHeapptrBase
 
@@ -107,7 +107,7 @@ Em compilações de depuração, uma falha de afirmação ocorrerá se a variáv
 
 Chame este método para tomar posse de um ponteiro existente.
 
-```
+```cpp
 void Attach(T* pData) throw();
 ```
 
@@ -154,7 +154,7 @@ Libera a propriedade de um ponteiro, define a variável de membro [CHeapPtrBase:
 
 Chame este método para excluir um `CHeapPtrBase`objeto apontado por um .
 
-```
+```cpp
 void Free() throw();
 ```
 

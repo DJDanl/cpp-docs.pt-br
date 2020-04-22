@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321435"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748660"
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 
@@ -159,7 +159,7 @@ Para obter mais informações, consulte [ATL Collection Classes](../../atl/atl-c
 
 Chame este método para causar `CAtlMap` um ASSERT se o objeto não for válido.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ Esta classe é usada pelos métodos [CAtlMap::GetNext](#getnext) e [CAtlMap::Loo
 
 Chame este método para desativar a reedição automática do `CAtlMap` objeto.
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ Quando o rehashing automático estiver ativado (o que é por padrão), o número
 
 Chame este método para ativar a `CAtlMap` reedição automática do objeto.
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ Quando o rehashing automático estiver ativado (o que é por padrão), o número
 
 Chame este método para retornar o elemento em uma posição especificada no mapa.
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -291,7 +291,7 @@ CPair* GetAt(POSITION& pos) throw();
 *Pos*<br/>
 O contador de posição, retornado por uma chamada anterior para [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
-*Chave*<br/>
+*chave*<br/>
 Parâmetro de modelo especificando o tipo da chave do mapa.
 
 *value*<br/>
@@ -376,7 +376,7 @@ Retorna um ponteiro para o próximo par de elementos de chave/valor armazenados 
 
 Recebe o próximo elemento para iteração.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -388,7 +388,7 @@ void GetNextAssoc(
 *Pos*<br/>
 O contador de posição, retornado por uma chamada anterior para [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
-*Chave*<br/>
+*chave*<br/>
 Parâmetro de modelo especificando o tipo da chave do mapa.
 
 *value*<br/>
@@ -558,7 +558,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 Especifica a chave que identifica o elemento a ser examinado.
 
 *value*<br/>
@@ -582,7 +582,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A chave do elemento para adicionar ou substituir.
 
 ### <a name="return-value"></a>Valor retornado
@@ -597,7 +597,7 @@ Se a chave já existir, o elemento será substituído. Se a chave não existir, 
 
 Chame este método para `CAtlMap` refazer o objeto.
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ Se *nBins* for `CAtlMap` 0, calcula um número razoável com base no número de 
 
 Chame este método para remover `CAtlMap` todos os elementos do objeto.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ Limpa o `CAtlMap` objeto, liberando a memória usada para armazenar os elementos
 
 Chame este método para remover o elemento `CAtlMap` na posição dada no objeto.
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -649,7 +649,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A tecla correspondente ao par de elementos que deseja remover.
 
 ### <a name="return-value"></a>Valor retornado
@@ -672,7 +672,7 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 O valor-chave a `CAtlMap` ser adicionado ao objeto.
 
 *value*<br/>
@@ -690,7 +690,7 @@ Retorna a posição do par de `CAtlMap` elementos de chave/valor no objeto.
 
 Chame este método para definir `CAtlMap` a carga ideal do objeto.
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ Este método redefine o valor `CAtlMap` ideal de carga para o objeto. Consulte [
 
 Chame este método para alterar o valor `CAtlMap` armazenado em uma determinada posição no objeto.
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);

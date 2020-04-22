@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: 573446256aa89423837ebf73176a73f72054911b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc4bd4ba7a2f41a25679f1da718671f525519708
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318762"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748221"
 ---
 # <a name="cautovectorptr-class"></a>Classe CAutoVectorPtr
 
@@ -105,7 +105,7 @@ Nas compilações de depuração, uma falha de afirmação ocorrerá se a variá
 
 Chame este método para tomar posse de um ponteiro existente.
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
@@ -171,7 +171,7 @@ Libera a propriedade de um ponteiro, define a variável de membro [CAutoVectorPt
 
 Chame este método para excluir um `CAutoVectorPtr`objeto apontado por um .
 
-```
+```cpp
 void Free() throw();
 ```
 

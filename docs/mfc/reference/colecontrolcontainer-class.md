@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: b1737b2ac114181a4245fff027b756ca30b64129
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83171e012db7ef2cce459d35cfc689746afd062c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366179"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749018"
 ---
 # <a name="colecontrolcontainer-class"></a>Classe COleControlContainer
 
@@ -359,7 +359,7 @@ Use a segunda sobrecarga para criar controles de tamanho padrão.
 
 Cria uma fonte OLE.
 
-```
+```cpp
 void CreateOleFont(CFont* pFont);
 ```
 
@@ -389,7 +389,7 @@ Um ponteiro para o site personalizado do item especificado.
 
 Determina se o contêiner ignorará os eventos dos locais de controle anexados ou os aceitará.
 
-```
+```cpp
 void FreezeAllEvents(BOOL bFreeze);
 ```
 
@@ -543,7 +543,7 @@ virtual BOOL HandleWindowlessMessage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 O identificador da mensagem da janela, fornecido pelo Windows.
 
 *wParam*<br/>
@@ -760,7 +760,7 @@ virtual LRESULT SendDlgItemMessage(
 *nID*<br/>
 Especifica o identificador do controle que recebe a mensagem.
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem a ser enviada.
 
 *wParam*<br/>

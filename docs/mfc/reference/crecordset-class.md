@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368372"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750509"
 ---
 # <a name="crecordset-class"></a>Classe CRecordset
 
@@ -331,7 +331,7 @@ Para obter mais informações sobre marcadores e navegação de conjunto de regi
 
 Solicita que a fonte de dados cancele uma operação assíncrona em andamento ou um processo a partir de um segundo segmento.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ Observe que as classes MFC ODBC não usam mais processamento assíncrono; para r
 
 Cancela quaisquer atualizações pendentes, causadas por uma operação [Editar](#edit) ou [AdicionarNova,](#addnew) antes [que a atualização](#update) seja chamada.
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ O código a `COutParamRecordset` seguir `CRecordset`assume que é um objeto deri
 
 Obtém o valor do marcador para o registro atual.
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ Para obter mais informações, consulte o artigo [Recordset: Declarando uma Clas
 
 Recupera dados de campo no registro atual.
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ Para obter mais informações sobre a criação de conjuntos de registros, consu
 
 Obtém informações sobre os campos no conjunto de registros.
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ Para obter mais informações, consulte a `SQLExtendedFetch` função DePi ODBC 
 
 Determina o índice do registro atual no conjunto de registros e se o último registro foi visto.
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ Para obter mais informações sobre navegação por conjunto de registros, consu
 
 Faz o primeiro disco na primeira fila definir o recorde atual.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ Para obter mais informações sobre navegação por conjunto de registros, consu
 
 Faz o primeiro disco na última linha completa definir o recorde atual.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ Para obter mais informações sobre navegação por conjunto de registros, consu
 
 Faz o primeiro disco na próxima linha definir o recorde atual.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ Para obter mais informações sobre navegação por conjunto de registros, consu
 
 Faz o primeiro disco na linha anterior definir o recorde atual.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ Os exemplos de código a `Open` seguir mostram diferentes formas da chamada.
 
 Atualiza os dados e o status de uma linha no conjunto de linhas atual.
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ Este exemplo reconstrói um conjunto de registros para aplicar uma ordem de clas
 
 Posiciona o conjunto de registros no registro correspondente ao número de registro especificado.
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ Para obter mais informações sobre navegação e marcadores do conjunto de regi
 
 Posiciona o conjunto de registros no registro que contém o marcador especificado.
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ Para obter mais informações sobre marcadores e navegação de conjunto de regi
 
 Sinaliza um membro de dados de campo do conjunto de registros como alterado ou inalterado.
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ Isso significa que `param` você não pode definir `outputColumn` todos os campo
 
 Sinaliza um membro de dados de campo do conjunto de registros como Nulo (especificamente sem valor) ou como não-nulo.
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ Isso significa que `param` você não pode definir `outputColumn` todos os campo
 
 Define o modo de bloqueio como bloqueio "otimista" (o padrão) ou bloqueio "pessimista". Determina como os registros são bloqueados para atualizações.
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ Ligue para esta função de membro se você precisar especificar qual das duas e
 
 Sinaliza um parâmetro como Nulo (especificamente sem valor) ou como não nulo.
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ Ao contrário [de SetFieldNull,](#setfieldnull)você pode ligar `SetParamNull` a
 
 Move o cursor para uma linha dentro do conjunto de linhas atual.
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 

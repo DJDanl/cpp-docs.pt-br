@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 7173fa0b6261ea718a02d399d944a1b5bb98b9f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f6a26c2724146f8723dee3ddce60ddce6995ec8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317734"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747157"
 ---
 # <a name="coledatetimespan-class"></a>Classe COleDateTimeSpan
 
@@ -678,7 +678,7 @@ Este operador retorna o `COleDateTimeSpan` valor deste valor como um número de 
 
 Define o valor deste valor de data/período de tempo.
 
-```
+```cpp
 void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ```
 
@@ -715,7 +715,7 @@ Para obter funções que consultam o valor de um `COleDateTimeSpan` objeto, cons
 
 Define o status (validade) `COleDateTimeSpan` deste objeto.
 
-```
+```cpp
 void SetStatus(DateTimeSpanStatus status) throw();
 ```
 

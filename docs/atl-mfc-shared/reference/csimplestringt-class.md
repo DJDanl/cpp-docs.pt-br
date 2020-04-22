@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: dce33289699b9e7b7484d1feb6335476f93dee9b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76d418c4f063d5787209ea72e7c681013eb37801
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317682"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747038"
 ---
 # <a name="csimplestringt-class"></a>Classe CsimpleStringT
 
@@ -133,7 +133,7 @@ Anexa um `CSimpleStringT` objeto a `CSimpleStringT` um objeto existente.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void Append(const CSimpleStringT& strSrc);
 void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
@@ -172,7 +172,7 @@ Anexa um caractere a `CSimpleStringT` um objeto existente.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void AppendChar(XCHAR ch);
 ```
 
@@ -316,7 +316,7 @@ Faz `CSimpleStringT` deste objeto uma seqüência vazia e libera a memória conf
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void Empty() throw();
 ```
 
@@ -339,7 +339,7 @@ Libera qualquer memória extra anteriormente alocada pela string, mas não é ma
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -895,7 +895,7 @@ Aloca uma quantidade específica de bytes para o `CSimpleStringT` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void Preallocate( int nLength);
 ```
 
@@ -937,7 +937,7 @@ Libera o controle do buffer alocado pelo [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void ReleaseBuffer(int nNewLength = -1);
 ```
 
@@ -978,7 +978,7 @@ Libera o controle do buffer alocado pelo [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void ReleaseBufferSetLength(int nNewLength);
 ```
 
@@ -997,7 +997,7 @@ Define um único `CSimpleStringT` caractere de um objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void SetAt(int iChar, XCHAR ch);
 ```
 
@@ -1029,7 +1029,7 @@ Especifica o gerenciador `CSimpleStringT` de memória do objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void SetManager(IAtlStringMgr* pStringMgr);
 ```
 
@@ -1057,7 +1057,7 @@ Define a seqüência de um `CSimpleStringT` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```
@@ -1130,7 +1130,7 @@ Trunca a corda para o novo comprimento.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void Truncate(int nNewLength);
 ```
 
@@ -1165,7 +1165,7 @@ Desbloqueia o `CSimpleStringT` buffer do objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void UnlockBuffer() throw();
 ```
 

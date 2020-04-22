@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 3b52661097ca1feab4c8045be240e4138a0c0f21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190620"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749694"
 ---
 # <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Vincula um wrapper `_bstr_t` a um `BSTR`.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void Attach(
    BSTR s
 );
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *s*<br/>
 Um `BSTR` a ser associado ou atribuído à variável `_bstr_t`.
@@ -38,9 +38,9 @@ Se o `_bstr_t` estava associado anteriormente a outro `BSTR`, o `_bstr_t` limpar
 
 ## <a name="example"></a>Exemplo
 
-Consulte [_bstr_t:: assign](../cpp/bstr-t-assign.md) para obter um exemplo usando **Attach**.
+Consulte [_bstr_t::Atribuir](../cpp/bstr-t-assign.md) para um exemplo usando **Anexar**.
 
-**Fim da seção específica da Microsoft**
+**Fim específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

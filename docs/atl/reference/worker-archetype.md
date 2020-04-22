@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329341"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747352"
 ---
 # <a name="worker-archetype"></a>Arquétipo operário
 
@@ -58,7 +58,7 @@ Esses parâmetros de modelo esperam que a classe esteja em conformidade com este
 
 Chamado para processar um item de trabalho.
 
-```
+```cpp
 void Execute(
     RequestType request,
     void* pvWorkerParam,
@@ -67,7 +67,7 @@ void Execute(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Solicitação*<br/>
+*solicitação*<br/>
 O item de trabalho a ser processado. O item de trabalho é `RequestType`do mesmo tipo que .
 
 *pvWorkerParam*<br/>
@@ -109,7 +109,7 @@ Este tipo deve ser usado como `WorkerArchetype::Execute` o primeiro parâmetro e
 
 Chamado para desinicializar o objeto do `WorkerArchetype::Execute`trabalhador depois de todos os pedidos terem sido passados para ).
 
-```
+```cpp
 void Terminate(void* pvParam) throw();
 ```
 

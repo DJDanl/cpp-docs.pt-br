@@ -1,19 +1,19 @@
 ---
-title: Declarador de referência rvalue:&amp;&amp;
+title: Declarador de referência de valor rvalue:&amp;&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: d6aa6aa9caed77f92b3b183cc49c63aaaa6c724f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53729cca7c259bc2d3b792ddc3509d5fc3bd255a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498573"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749834"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referência rvalue:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referência de valor rvalue:&amp;&amp;
 
 Contém uma referência a uma expressão rvalue.
 
@@ -25,17 +25,17 @@ type-id && cast-expression
 
 ## <a name="remarks"></a>Comentários
 
-Referências de rvalue permitem que você diferencie um lvalue de um rvalue. As referências a lvalue e as referências a rvalue são sintaticamente e semanticamente semelhantes, mas seguem regras um pouco diferentes. Para obter mais informações sobre lvalues e rvalues, consulte [lvalues e rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Para obter mais informações sobre referências de lvalue, consulte Declarador de [referência lvalue: &](../cpp/lvalue-reference-declarator-amp.md).
+Referências de rvalue permitem que você diferencie um lvalue de um rvalue. As referências a lvalue e as referências a rvalue são sintaticamente e semanticamente semelhantes, mas seguem regras um pouco diferentes. Para obter mais informações sobre valores e valores, consulte [Valores e Valores](../cpp/lvalues-and-rvalues-visual-cpp.md). Para obter mais informações sobre referências de valor, consulte [Declarador de referência de valor: &](../cpp/lvalue-reference-declarator-amp.md).
 
-As seções a seguir descrevem como as referências a rvalue dão suporte à implementação de *semântica de movimentação* e *encaminhamento perfeito*.
+As seções a seguir descrevem como as referências de valor rvalue suportam a implementação da *semântica de movimento* e *do encaminhamento perfeito*.
 
 ## <a name="move-semantics"></a>Semântica de movimentação
 
-As referências a rvalue dão suporte à implementação da *semântica de movimentação*, o que pode aumentar significativamente o desempenho de seus aplicativos. A semântica de movimentação permite que você escreva códigos que transfiram recursos (como a memória dinamicamente alocada) de um objeto para outro. A semântica de movimentação funciona porque permite que recursos sejam transferidos de objetos temporários que não podem ser referenciados em outro lugar no programa.
+As referências de valor rvalue suportam a implementação da *semântica de movimento,* que pode aumentar significativamente o desempenho de seus aplicativos. A semântica de movimentação permite que você escreva códigos que transfiram recursos (como a memória dinamicamente alocada) de um objeto para outro. A semântica de movimentação funciona porque permite que recursos sejam transferidos de objetos temporários que não podem ser referenciados em outro lugar no programa.
 
-Para implementar a semântica de movimentação, você normalmente fornece um *Construtor de movimentação e,* opcionalmente, um operador de atribuição de movimento (**operador =** ), para sua classe. As operações de cópia e atribuição cujas origens são rvalues aproveitam automaticamente as vantagens da semântica de movimentação. Diferente do construtor de cópia padrão, o compilador não fornece um construtor de movimentação padrão. Para obter mais informações sobre como escrever um construtor de movimentação e como usá-lo em seu aplicativo, consulte [mover construtores e mover operadores de atribuiçãoC++()](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Para implementar a semântica de movimento, você normalmente fornece um *construtor de movimento,* e opcionalmente um operador de atribuição de movimento **(operador=**), para sua classe. As operações de cópia e atribuição cujas origens são rvalues aproveitam automaticamente as vantagens da semântica de movimentação. Diferente do construtor de cópia padrão, o compilador não fornece um construtor de movimentação padrão. Para obter mais informações sobre como escrever um construtor de movimentos e como usá-lo em seu aplicativo, consulte [Mover Construtores e Mover Operadores de Atribuição (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-Você também pode sobrecarregar as funções e operadores comuns para aproveitar a semântica de movimentação. O Visual Studio 2010 introduz a semântica de C++ movimentação na biblioteca padrão. Por exemplo, a classe `string` implementa as operações que executam a semântica de movimentação. Considere o exemplo a seguir, que concatena várias cadeias de caracteres e imprime o resultado:
+Você também pode sobrecarregar as funções e operadores comuns para aproveitar a semântica de movimentação. Visual Studio 2010 introduz semântica de movimento na Biblioteca Padrão C++. Por exemplo, a classe `string` implementa as operações que executam a semântica de movimentação. Considere o exemplo a seguir, que concatena várias cadeias de caracteres e imprime o resultado:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,23 +51,23 @@ int main()
 }
 ```
 
-Antes do Visual Studio 2010, cada chamada para **Operator +** aloca e retorna um novo objeto temporário `string` (um rvalue). o **operador +** não pode acrescentar uma cadeia de caracteres à outra porque não sabe se as cadeias de caracteres de origem são lvalue ou rvalues. Se as cadeias de caracteres de origem forem lvalues, poderão ser referenciadas em outro local do programa e, portanto, não devem ser modificadas. Usando referências rvalue, o **operador +** pode ser modificado para pegar rvalues, que não podem ser referenciados em outro lugar no programa. Portanto, o **operador +** pode agora acrescentar uma cadeia de caracteres a outra. Isso pode reduzir significativamente o número de alocações de memória dinâmica que a classe `string` deve executar. Para obter mais informações sobre `string` a classe, consulte [classe basic_string](../standard-library/basic-string-class.md).
+Antes do Visual Studio 2010, cada chamada para `string` **operador+** aloca e retorna um novo objeto temporário (um valor). **o operador+** não pode anexar uma seqüência à outra porque não sabe se as strings de origem são valores ou valores. Se as cadeias de caracteres de origem forem lvalues, poderão ser referenciadas em outro local do programa e, portanto, não devem ser modificadas. Usando referências de valor, o **operador+** pode ser modificado para obter valores, que não podem ser referenciados em outros lugares do programa. Portanto, **o operador+** pode agora anexar uma seqüência a outra. Isso pode reduzir significativamente o número de alocações de memória dinâmica que a classe `string` deve executar. Para obter mais `string` informações sobre a classe, consulte [basic_string Classe](../standard-library/basic-string-class.md).
 
-A semântica de movimentação também ajuda quando o compilador não pode usar a Otimização de Valor de Retorno (RVO) ou a Otimização de Valor de Retorno (NRVO). Nesses casos, o compilador chama o construtor de movimentação caso o tipo o defina. Para obter mais informações sobre a otimização de valor de retorno nomeado, consulte [otimização de valor de retorno nomeado no Visual Studio 2005](/previous-versions/ms364057(v=vs.80)).
+A semântica de movimentação também ajuda quando o compilador não pode usar a Otimização de Valor de Retorno (RVO) ou a Otimização de Valor de Retorno (NRVO). Nesses casos, o compilador chama o construtor de movimentação caso o tipo o defina.
 
 Para compreender melhor a semântica de movimentação, considere o exemplo de inserção de um elemento em um objeto `vector`. Se a capacidade do objeto `vector` for excedida, o objeto `vector` deverá realocar memória para os seus elementos e então copiar cada elemento para outro local da memória para dar espaço ao elemento inserido. Quando uma operação de inserção copia um elemento, ele cria um novo elemento, chama o construtor de cópia para copiar os dados do elemento anterior para o novo elemento e destrói o elemento anterior. A semântica de movimentação permite que você mova objetos diretamente sem ter que executar operações caras de alocação de memória e de cópia.
 
 Para aproveitar a semântica de movimentação no exemplo `vector`, você pode escrever um construtor de movimentação para mover dados de um objeto para outro.
 
-Para obter mais informações sobre a introdução da semântica de movimentação na C++ biblioteca padrão do Visual Studio 2010, consulte [ C++ biblioteca padrão](../standard-library/cpp-standard-library-reference.md).
+Para obter mais informações sobre a introdução da semântica de movimento na Biblioteca Padrão C++ no Visual Studio 2010, consulte [C++ Standard Library](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Encaminhamento perfeito
 
-O encaminhamento perfeito reduz a necessidade de funções sobrecarregadas e ajuda a evitar problemas de encaminhamento. O *problema* de encaminhamento pode ocorrer quando você escreve uma função genérica que usa referências como seus parâmetros e passa (ou *encaminha*) esses parâmetros para outra função. Por exemplo, se a função genérica receber um parâmetro de tipo `const T&`, então a função chamada não poderá modificar o valor desse parâmetro. Se a função genérica pegar um parâmetro do tipo `T&`, então a função não poderá ser chamada usando um rvalue (como um objeto temporário ou um literal de inteiro).
+O encaminhamento perfeito reduz a necessidade de funções sobrecarregadas e ajuda a evitar problemas de encaminhamento. O *problema de encaminhamento* pode ocorrer quando você escreve uma função genérica que toma referências como seus parâmetros e passa (ou *encaminha)* esses parâmetros para outra função. Por exemplo, se a função genérica receber um parâmetro de tipo `const T&`, então a função chamada não poderá modificar o valor desse parâmetro. Se a função genérica pegar um parâmetro do tipo `T&`, então a função não poderá ser chamada usando um rvalue (como um objeto temporário ou um literal de inteiro).
 
 Normalmente, para resolver esse problema, você deve fornecer as versões sobrecarregadas da função genérica que recebe `T&` e `const T&` para cada um dos seus parâmetros. Como resultado, o número de funções sobrecarregadas aumenta exponencialmente com o número de parâmetros. As referências rvalue permitem que você grave uma versão de uma função que aceita argumentos arbitrários e os encaminha para outra função, como se a outra função tivesse sido chamada diretamente.
 
-Considere o seguinte exemplo que declara quatro tipos, `W`, `X`, `Y` e `Z`. O construtor para cada tipo usa uma combinação diferente de referências de lvalue **const** e não**const** como seus parâmetros.
+Considere o seguinte exemplo que declara quatro tipos, `W`, `X`, `Y` e `Z`. O construtor para cada tipo tem uma combinação diferente de referências de valor de **valor const** e não**const** como seus parâmetros.
 
 ```cpp
 struct W
@@ -124,7 +124,7 @@ T* factory(A1&& a1, A2&& a2)
 }
 ```
 
-Este exemplo usa referências de rvalue como os parâmetros para a função `factory`. A finalidade da função [std:: forward](../standard-library/utility-functions.md#forward) é encaminhar os parâmetros da função de fábrica para o construtor da classe de modelo.
+Este exemplo usa referências de rvalue como os parâmetros para a função `factory`. O objetivo da função [std::forward](../standard-library/utility-functions.md#forward) é encaminhar os parâmetros da função de fábrica para o construtor da classe modelo.
 
 O exemplo a seguir mostra a função `main` que usa a função `factory` revisada para criar instâncias das classes `W`, `X`, `Y` e `Z`. A função `factory` revisada encaminha seus parâmetros (lvalues ou rvalues) para o construtor de classe apropriado.
 
@@ -146,9 +146,9 @@ int main()
 
 ## <a name="additional-properties-of-rvalue-references"></a>Propriedades adicionais das referências de rvalue
 
-**Você pode sobrecarregar uma função para obter uma referência lvalue e uma referência rvalue.**
+**Você pode sobrecarregar uma função para obter uma referência de lvalue e uma referência de rvalue.**
 
-Ao sobrecarregar uma função para pegar uma referência lvalue **const** ou uma referência rvalue, você pode escrever um código que diferencie entre objetos não modificáveis (lvalue) e valores temporários modificáveis (rvalues). Você pode passar um objeto para uma função que usa uma referência rvalue, a menos que o objeto seja marcado como **const**. O exemplo a seguir mostra a função `f`, que é sobrecarregada para pegar uma referência de lvalue e uma referência de rvalue. A função `main` chama `f` com lvalues e um rvalue.
+Ao sobrecarregar uma função para obter uma referência de valor de valor **const** ou uma referência de valor, você pode escrever um código que distingue entre objetos não modificáveis (valores lvalues) e valores temporários modificáveis (valores rvalues). Você pode passar um objeto para uma função que leva uma referência de valor, a menos que o objeto esteja marcado como **const**. O exemplo a seguir mostra a função `f`, que é sobrecarregada para pegar uma referência de lvalue e uma referência de rvalue. A função `main` chama `f` com lvalues e um rvalue.
 
 ```cpp
 // reference-overload.cpp
@@ -180,7 +180,7 @@ int main()
 }
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```Output
 In f(const MemoryBlock&). This version cannot modify the parameter.
@@ -189,7 +189,7 @@ In f(MemoryBlock&&). This version can modify the parameter.
 
 Nesse exemplo, a primeira chamada para `f` passa uma variável local (um lvalue) como seu argumento. A segunda chamada para `f` passa um objeto temporário como seu argumento. Como o objeto temporário não pode ser referenciado em outro lugar no programa, a chamada é associada à versão sobrecarregada de `f` que utiliza uma referência de rvalue, que está livre para alterar o objeto.
 
-**O compilador trata uma referência de rvalue nomeada como um lvalue e uma referência de rvalue sem nome como um Rvalue.**
+**O compilador trata uma referência de rvalue nomeada como um lvalue e uma referência de rvalue não nomeada como um rvalue.**
 
 Quando você escrever uma função que recebe uma referência de rvalue como seu parâmetro, esse parâmetro é tratado como um lvalue no corpo da função. O compilador trata uma referência de rvalue nomeada como um lvalue porque um objeto nomeado pode ser referenciado por várias partes de um programa. Seria perigoso permitir que várias partes de um programa modifiquem ou removam recursos desse objeto. Por exemplo, se várias partes de um programa tentarem transferir recursos do mesmo objeto, somente a primeira parte transferirá o recurso com êxito.
 
@@ -229,7 +229,7 @@ int main()
 }
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```cpp
 In g(const MemoryBlock&).
@@ -238,9 +238,9 @@ In g(MemoryBlock&&).
 
 Neste exemplo, a função `main` passa um rvalue para `f`. O corpo de `f` trata seu parâmetro nomeado como um lvalue. A chamada de `f` para `g` associa o parâmetro a uma referência de lvalue (a primeira versão sobrecarregada de `g`).
 
-- **Você pode converter um lvalue em uma referência rvalue.**
+- **Você pode lançar um valor para uma referência de valor.**
 
-A C++ função padrão library [std:: move](../standard-library/utility-functions.md#move) permite que você converta um objeto em uma referência rvalue para esse objeto. Como alternativa, você pode usar a palavra-chave **static_cast** para converter um lvalue em uma referência rvalue, conforme mostrado no exemplo a seguir:
+A função C++ Standard Library [std::move](../standard-library/utility-functions.md#move) permite converter um objeto em uma referência de valor para esse objeto. Alternativamente, você pode usar a **palavra-chave static_cast** para lançar um valor para uma referência de valor, como mostrado no exemplo a seguir:
 
 ```cpp
 // cast-reference.cpp
@@ -272,18 +272,18 @@ int main()
 }
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```cpp
 In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-**Os modelos de função deduzim seus tipos de argumento de modelo e, em seguida, usam regras de recolhimento de referência.**
+**Os modelos de função deduzem seus tipos de argumento de modelo e então usam regras de recolhimento de referência.**
 
-É comum escrever um modelo de função que passe (ou *encaminhe*) seus parâmetros para outra função. É importante compreender como funciona a dedução de tipo de modelo para os modelos de função com referências de rvalue.
+É comum escrever um modelo de função que passe (ou encaminhe ) seus *parâmetros*para outra função. É importante compreender como funciona a dedução de tipo de modelo para os modelos de função com referências de rvalue.
 
-Se o argumento de função for um rvalue, o compilador deduzirá o argumento como uma referência de rvalue. Por exemplo, se você passar uma referência de rvalue para um objeto do tipo `X` a uma função de modelo que obtenha o tipo `T&&` como seu parâmetro, a dedução do argumento do modelo deduzirá `T` como `X`. Portanto, o parâmetro tem o tipo `X&&`. Se o argumento da função for um lvalue lvalue ou **const** , o compilador deduzirá seu tipo para ser uma referência lvalue ou uma referência de lvalue **const** desse tipo.
+Se o argumento de função for um rvalue, o compilador deduzirá o argumento como uma referência de rvalue. Por exemplo, se você passar uma referência de rvalue para um objeto do tipo `X` a uma função de modelo que obtenha o tipo `T&&` como seu parâmetro, a dedução do argumento do modelo deduzirá `T` como `X`. Portanto, o parâmetro tem o tipo `X&&`. Se o argumento da função for um valor de valor de valor ou **valor const,** o compilador deduz seu tipo para ser uma referência de valor de valor ou referência de valor **const** desse tipo.
 
 O exemplo a seguir declara um modelo de estrutura e o especializa para vários tipos de referência. A função `print_type_and_value` usa uma referência de rvalue como seu parâmetro e a encaminha para a versão especializada apropriada do método `S::print`. A função `main` demonstra as várias maneiras de chamar o método `S::print`.
 
@@ -366,7 +366,7 @@ int main()
 }
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```cpp
 print<T&>: first
@@ -405,10 +405,10 @@ A dedução do argumento do modelo é um elemento importante para a implementaç
 
 Referências de rvalue diferenciam lvalues de rvalues. Elas podem ajudar a melhorar o desempenho de seus aplicativos eliminando a necessidade de alocações de memória e operações de cópia desnecessárias. Elas também permitem que você grave uma versão de uma função que aceita argumentos arbitrários e os encaminha para outra função, como se a outra função tivesse sido chamada diretamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)<br/>
 [Declarador de referência Lvalue: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
 [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
-[Operadores de construtores de movimento e de atribuição de movimento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)
+[Move Constructors and Move Assignment Operators (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md) (Operadores de construtores de movimento e de atribuição de movimento (C++))<br/>
+[Biblioteca Padrão C++](../standard-library/cpp-standard-library-reference.md)

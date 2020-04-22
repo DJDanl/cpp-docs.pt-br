@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 813b6f0dd33bdfa85476b816086217a7892f4476
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea119436fd36d0814c05f1b48380028ad3f63f0c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318785"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748246"
 ---
 # <a name="cautorevertimpersonation-class"></a>Classe cautorevertrepresentação
 
@@ -61,7 +61,7 @@ Para obter uma introdução ao modelo de controle de acesso no Windows, consulte
 
 Automatiza a reversão de personificação de um token de acesso.
 
-```
+```cpp
 void Attach(const CAccessToken* pAT) throw();
 ```
 

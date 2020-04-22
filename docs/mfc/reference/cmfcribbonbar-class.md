@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361434"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749754"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
@@ -581,7 +581,7 @@ A categoria fita de barra de ferramentas de acesso rápido só é usada na caixa
 
 Adiciona o elemento de fita especificado à linha de guias da barra de fita.
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ VERDADE se a janela foi criada; caso contrário, FALSO.
 
 Fecha todos os controles de ponta de chave na barra de fita.
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 Ativa ou desativa o recurso keytip para a barra de fita.
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ Quando você habilita esse recurso, as principais dicas são exibidas quando o u
 
 Ativa ou desativa o recurso **Visualização de impressão.**
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ Por padrão, o recurso **Visualização de impressão** está ativado.
 
 Ativa ou desativa dicas de ferramentas e descrições opcionais de ponta de ferramenta na barra de fita.
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ O índice baseado em zero de uma categoria de fita se o método foi bem sucedido
 
 Ajusta o layout de todos os itens na barra de fita e na janela dos pais e redesenha toda a janela.
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ O elemento de fita que está atualmente caiu; ou NULL se nenhum elemento de fita
 
 Recupera uma matriz de ponteiros para todos os elementos de fita que têm um ID de comando específico.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ A tabela a seguir lista a possível combinação de sinalizadores para o valor d
 
 Recupera os IDs de comando para a coleção especificada de elementos de fita na barra de fita.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ Um ponteiro para o elemento de fita na barra de ferramentas de acesso rápido qu
 
 Recupera uma lista de IDs de comando para os elementos da fita na barra de ferramentas de acesso rápido.
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ Se uma categoria de contexto estiver ativa, a categoria ativa será redefinida p
 
 Esconde todas as dicas de tecla na barra de fita.
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ TRUE se o evento de digitação foi processado; caso contrário, FALSO.
 
 Remove uma dica de ferramenta da vista.
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ Após o ajuste do layout, o visor da barra de fita é atualizado.
 
 Exclui todas as categorias de fita da barra de fita.
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ Este método exclui todas as categorias de fita da memória e da lista de catego
 
 Remove todos os elementos da fita da área da guia.
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ Se a categoria especificada por *pCategory* não for exibida, ela não poderá s
 
 Associa os botões do sistema na barra de fita que pertencem a uma janela de criança de interface de vários documentos (MDI) à janela de criança MDI especificada.
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 Atribui um botão de fita de aplicação à barra de fita.
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ A dica de chave do menu opcional é para elementos de fita com um botão split q
 
 Define o nível de navegação do teclado à medida que o usuário pressiona as teclas contidas na barra de fita.
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ A navegação do teclado da barra de fita começa quando o usuário pressiona a 
 
 Ajusta a barra de fita quando o tamanho da janela de uma janela de criança de interface de vários documentos (MDI) entra ou deixa o estado maximizado.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ A barra de fita exibe os botões do sistema para uma janela de criança MDI na l
 
 Adiciona um ou mais elementos de fita à barra de ferramentas de acesso rápido.
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,13 +1890,13 @@ O exemplo a seguir `SetQuickAccessCommands` demonstra como `CMFCRibbonBar` usar 
 
 Define a barra de ferramentas de acesso rápido ao estado padrão.
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estado*<br/>
+*state*<br/>
 [em] O estado padrão da barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
@@ -1913,7 +1913,7 @@ O exemplo a seguir `SetQuickAccessDefaultState` demonstra como `CMFCRibbonBar` u
 
 Posiciona a barra de ferramentas de acesso rápido acima ou abaixo da barra de fita.
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 Define os tamanhos regulares e grandes das larguras fixas da ponta da ferramenta para a barra de fita.
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ Definir um parâmetro para 0 faz com que a largura correspondente varie.
 
 Mostra ou oculta a categoria de fita especificada.
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 Mostra ou oculta as categorias de contexto que possuem o ID especificado.
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 Mostra as pontas-chave de cada elemento de fita na barra de fita.
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 Alterna a barra de fita entre os estados minimizados e maximizados.
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ VERDADE se bem sucedido; caso contrário, FALSO.
 
 Ativa ou desativa o visual do Windows 7 (pequeno botão de aplicativo retangular) para a Fita.
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);

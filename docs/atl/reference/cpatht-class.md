@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331483"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746587"
 ---
 # <a name="cpatht-class"></a>Classe CpathT
 
@@ -72,7 +72,7 @@ class CPathT
 
 #### <a name="parameters"></a>Parâmetros
 
-*Stringtype*<br/>
+*StringType*<br/>
 A classe de string ATL/MFC a ser usada para o caminho (ver [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Membros
@@ -166,7 +166,7 @@ A classe de string ATL/MFC a ser usada para o caminho (ver [CStringT](../../atl-
 
 Chame este método para adicionar uma barra invertida ao final de uma string para criar a sintaxe correta para um caminho. Se o caminho já tiver uma barra invertida, nenhuma barra invertida será adicionada.
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ Para obter mais informações, consulte [PathAppend](/windows/win32/api/shlwapi/
 
 Chame este método para criar um caminho raiz a partir de um determinado número de unidade.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ Para obter mais informações, consulte [PathBuildRoot](/windows/win32/api/shlwa
 
 Chame este método para converter o caminho para a forma canônica.
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ Para obter mais informações, consulte [PathCanonicalize](/windows/win32/api/sh
 
 Chame este método para concatenar uma seqüência representando um nome de diretório e uma seqüência representando um nome de caminho de arquivo em um caminho.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 Chame este método para envolver o caminho entre aspas se ele contiver algum espaço.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ Para obter mais informações, consulte [PathRelativePathTo](/windows/win32/api/
 
 Chame este método para remover quaisquer argumentos de linha de comando do caminho.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ Para obter mais informações, consulte [PathRemoveArgs](/windows/win32/api/shlw
 
 Chame este método para remover a barra invertida do caminho.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ Para obter mais informações, consulte [PathRemoveBackslash](/windows/win32/api
 
 Chame este método para remover todos os espaços de liderança e de trilha do caminho.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ Para obter mais informações, consulte [PathRemoveBlanks](/windows/win32/api/sh
 
 Chame este método para remover a extensão do arquivo do caminho, se houver um.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ Para obter mais informações, consulte [PathSkipRoot](/windows/win32/api/shlwap
 
 Chame este método para remover a parte do caminho de um caminho e nome de arquivo totalmente qualificados.
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ Para obter mais informações, consulte [PathStripToRoot](/windows/win32/api/shl
 
 Chame este método para remover aspas do início e do fim de um caminho.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 

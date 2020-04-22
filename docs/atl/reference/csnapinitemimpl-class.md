@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330717"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746420"
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 
@@ -131,7 +131,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW Itens podem ser inseridos no menu de exibição da barra de ferramentas ou no submenu Exibir do menu de contexto do painel de resultados.
 
-*type*<br/>
+*tipo*<br/>
 [em] Especifica o tipo de objeto. Pode ter um dos seguintes valores:
 
 - CCT_SCOPE objeto Data para o contexto do painel de escopo.
@@ -155,7 +155,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 *lCommandID*<br/>
 [em] Especifica o identificador de comando do item do menu.
 
-*type*<br/>
+*tipo*<br/>
 [em] Especifica o tipo de objeto. Pode ter um dos seguintes valores:
 
 - CCT_SCOPE objeto Data para o contexto do painel de escopo.
@@ -189,7 +189,7 @@ CreatePropertyPages(
 *Punk*<br/>
 [em] Ponteiro para `IExtendPropertySheet` a interface no objeto que contém informações de contexto sobre o nó.
 
-*type*<br/>
+*tipo*<br/>
 [em] Especifica o tipo de objeto. Pode ter um dos seguintes valores:
 
 - CCT_SCOPE objeto Data para o contexto do painel de escopo.
@@ -316,7 +316,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Evento*<br/>
+*event*<br/>
 [em] Identifica uma ação tomada por um usuário. As seguintes notificações são possíveis:
 
 - MMCN_ACTIVATE Enviado quando uma janela está sendo ativada e desativada.
@@ -359,7 +359,7 @@ STDMETHOD(Notify)(
 *pComponente*<br/>
 [fora] Um ponteiro para o `IComponent`objeto que implementa . Este parâmetro é NULO se a notificação `IComponent::Notify`não estiver sendo encaminhada de .
 
-*type*<br/>
+*tipo*<br/>
 [em] Especifica o tipo de objeto. Pode ter um dos seguintes valores:
 
 - CCT_SCOPE objeto Data para o contexto do painel de escopo.
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 Chame esta função para modificar os sinalizadores de inserção do menu, especificados por *pInsertionAllowed*, para o objeto snap-in.
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ Você não deve tentar definir bits em *pInsertionAllowed* que foram originalmen
 
 Chame esta função para modificar qualquer estilo de botão da barra de ferramentas do objeto snap-in, antes que a barra de ferramentas seja criada.
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 Chame esta função para modificar um item do menu antes de ser inserido no menu de contexto do objeto snap-in.
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,

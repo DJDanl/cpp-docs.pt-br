@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 85168af654d3d63e06559486b464938b7fd90ad3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 607af2adaa3ef28a768812f3c811eb2ed3169ad9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321567"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748785"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -69,7 +69,7 @@ O código usado para copiar ou mover elementos.
 |[GetData](#getdata)|Chame este método para retornar um ponteiro para o primeiro elemento na matriz.|
 |[InsertArrayAt](#insertarrayat)|Chame este método para inserir uma matriz em outra.|
 |[Insertat](#insertat)|Chame este método para inserir um novo elemento (ou várias cópias de um elemento) no objeto da matriz.|
-|[IsEmpty](#isempty)|Chame este método para testar se a matriz está vazia.|
+|[Isempty](#isempty)|Chame este método para testar se a matriz está vazia.|
 |[Removeall](#removeall)|Chame este método para remover todos os elementos do objeto da matriz.|
 |[RemoveAt](#removeat)|Chame este método para remover um ou mais elementos da matriz.|
 |[Setat](#setat)|Chame este método para definir o valor de um elemento no objeto da matriz.|
@@ -162,7 +162,7 @@ Nas compilações de depuração, um ATLASSERT será levantado se o `CAtlArray` 
 
 Chame este método para confirmar se o objeto de matriz é válido.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -206,7 +206,7 @@ Libera todos os recursos usados pelo objeto de matriz.
 
 Chame este método para copiar os elementos de uma matriz para outra.
 
-```
+```cpp
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
@@ -234,7 +234,7 @@ Nas compilações de depuração, um ATLASSERT `CAtlArray` será levantado se o 
 
 Chame este método para remover quaisquer elementos vazios da matriz.
 
-```
+```cpp
 void FreeExtra() throw();
 ```
 
@@ -319,7 +319,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 
 Chame este método para inserir uma matriz em outra.
 
-```
+```cpp
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
@@ -348,7 +348,7 @@ Nas compilações de depuração, um ATLASSERT será levantado se o `CAtlArray` 
 
 Chame este método para inserir um novo elemento (ou várias cópias de um elemento) no objeto da matriz.
 
-```
+```cpp
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
@@ -429,7 +429,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 
 Chame este método para remover todos os elementos do objeto da matriz.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -447,7 +447,7 @@ Veja o exemplo de [CAtlArray::IsEmpty](#isempty).
 
 Chame este método para remover um ou mais elementos da matriz.
 
-```
+```cpp
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
@@ -473,7 +473,7 @@ Nas compilações de depuração, um ATLASSERT será levantado se o `CAtlArray` 
 
 Chame este método para definir o valor de um elemento no objeto da matriz.
 
-```
+```cpp
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
@@ -527,7 +527,7 @@ Veja o exemplo de [CAtlArray::GetData](#getdata).
 
 Chame este método para definir o valor de um elemento no objeto de matriz, expandindo a matriz conforme necessário.
 
-```
+```cpp
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 

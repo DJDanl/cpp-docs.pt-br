@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330315"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746024"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -394,7 +394,7 @@ Consulte [ArrangeIconicWindows](/windows/win32/api/winuser/nf-winuser-arrangeico
 
 Anexa a janela identificada por *hWndNew* ao `CWindow` objeto.
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Consulte [ClientToScreen](/windows/win32/api/winuser/nf-winuser-clienttoscreen) no Windows SDK.
 
-A segunda versão deste método permite converter as coordenadas de uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+A segunda versão deste método permite converter as coordenadas de uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowcreate"></a><a name="create"></a>Janela de c::Criar
 
@@ -771,7 +771,7 @@ Consulte [DlgDirSelectComboBoxEx](/windows/win32/api/winuser/nf-winuser-dlgdirse
 
 Registra se a janela aceita arquivos arrastados.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ Consulte [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) no W
 
 Marca o fim da pintura.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ Consulte [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) n
 
 Define o foco do teclado como um controle na caixa de diálogo.
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ Consulte [InvalidRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) no 
 
 Invalida a área do cliente dentro da região especificada.
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Consulte [MapWindowPoints](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) no Windows SDK.
 
-A segunda versão deste método permite converter as coordenadas de uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+A segunda versão deste método permite converter as coordenadas de uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>Janela de c::Caixa de mensagens
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 Para um objeto de janela de nível superior, os parâmetros x e y são relativos ao canto superior esquerdo da tela. Para um objeto de janela filho, eles são relativos ao canto superior esquerdo da área cliente da janela pai.
 
-A segunda versão deste método usa uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) para determinar a nova posição, largura e altura da janela.
+A segunda versão deste método usa uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) para determinar a nova posição, largura e altura da janela.
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow::NextDlgCtrl
 
 Define o foco do teclado para o próximo controle na caixa de diálogo.
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ Retorna sem esperar que o segmento processe a mensagem.
 
 Define o foco do teclado para o controle anterior na caixa de diálogo.
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ Veja [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) no Windows SDK.
 
 Envia uma mensagem [WM_PRINT](/windows/win32/gdi/wm-print) para a janela para solicitar que ela se desenhe no contexto do dispositivo especificado.
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 Envia uma mensagem [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) à janela para solicitar que ela desenhe sua área cliente no contexto especificado do dispositivo.
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Consulte [ScreenToClient](/windows/win32/api/winuser/nf-winuser-screentoclient) no Windows SDK.
 
-A segunda versão deste método permite converter as coordenadas de uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+A segunda versão deste método permite converter as coordenadas de uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>Janela de c::Janela de rolagem
 
@@ -2216,7 +2216,7 @@ Consulte [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) no Win
 
 Envia a mensagem especificada para `CWindow` todos os filhos imediatos do objeto.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2226,7 +2226,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 [em] A mensagem a ser enviada.
 
 *wParam*<br/>
@@ -2363,7 +2363,7 @@ Consulte [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) no Windows S
 
 Altera a fonte atual da janela enviando uma [mensagem WM_SETFONT](/windows/win32/winmsg/wm-setfont) para a janela.
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ Consulte [SetParent](/windows/win32/api/winuser/nf-winuser-setparent) no Windows
 
 Define ou limpa a bandeira de redesenho enviando uma [mensagem WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) para a janela.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Consulte [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) no Windows SDK.
 
-A segunda versão deste método usa uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) para definir a nova posição, largura e altura da janela.
+A segunda versão deste método usa uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) para definir a nova posição, largura e altura da janela.
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow::SetWindowRgn
 

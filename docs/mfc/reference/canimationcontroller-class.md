@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369761"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750185"
 ---
 # <a name="canimationcontroller-class"></a>Classe CAnimationController
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 Chamado pela estrutura para limpar o grupo quando a animação foi programada.
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -716,7 +716,7 @@ Um ponteiro para um grupo de animação que contém um objeto de animação cujo
 *Pobject*<br/>
 Um ponteiro para um objeto de animação que contém uma variável de animação cujo valor foi alterado.
 
-*variável*<br/>
+*Variável*<br/>
 Um ponteiro para uma variável de animação.
 
 *newValue*<br/>
@@ -813,7 +813,7 @@ Um ponteiro para um grupo de animação que contém um objeto de animação cujo
 *Pobject*<br/>
 Um ponteiro para um objeto de animação que contém uma variável de animação cujo valor foi alterado.
 
-*variável*<br/>
+*Variável*<br/>
 Um ponteiro para uma variável de animação.
 
 *newValue*<br/>
@@ -1010,7 +1010,7 @@ Este método é chamado se você habilitar eventos de storyboard usando CAnimati
 
 Remove todos os grupos de animação do controlador de animação.
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ Todos os grupos serão excluídos, seu ponteiro, se armazenado no nível do apli
 
 Remove um grupo de animação com ID especificado do controlador de animação.
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ Este método remove um grupo de animação da lista interna de grupos e o exclui
 
 Remova um objeto de animação do controlador de animação.
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ Remove um objeto de animação do controlador de animação e do grupo de anima�
 
 Remove transições de objetos de animação que pertencem ao grupo especificado.
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ Você deve chamar AnimateGroup com parâmetro bScheduleNow definido como FALSO s
 
 Estabelece uma relação entre o controlador de animação e uma janela.
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 

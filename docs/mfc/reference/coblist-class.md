@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: cccd45bf5a97ae7dcc8369015e0a431b3a9e960f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f24965357e0b71f28ba39b82d045600e7e1a44e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360367"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749692"
 ---
 # <a name="coblist-class"></a>Classe CObList
 
@@ -749,7 +749,7 @@ A tabela a seguir mostra outras `CObList::IsEmpty`funções de membro semelhante
 
 Remove todos os elementos desta lista `CObList` e libera a memória associada.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -776,7 +776,7 @@ Consulte [CObList::CObList](#coblist) para obter `CAge` uma listagem da classe.
 
 Remove o elemento especificado desta lista.
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
@@ -876,7 +876,7 @@ Consulte [CObList::CObList](#coblist) para obter `CAge` uma listagem da classe.
 
 Define o elemento em uma determinada posição.
 
-```
+```cpp
 void SetAt(
     POSITION pos,
     CObject* newElement);

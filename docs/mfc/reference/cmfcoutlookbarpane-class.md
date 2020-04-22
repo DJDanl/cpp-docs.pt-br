@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369638"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749613"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane Class
 
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 Libera os recursos usados pelas imagens no painel da barra do Outlook.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ A implementação padrão verifica o modo de personalização [(CMFCToolBar::IsC
 
 Especifica se as setas de rolagem no painel da barra do Outlook avançam a lista de botões página por página ou botão por botão.
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,7 +395,7 @@ TRUE se o botão foi removido com sucesso; FALSO se o ID de comando especificado
 
 Define a cor de fundo da barra do Outlook.
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
@@ -412,7 +412,7 @@ Chame esta função para definir a cor de fundo atual para a barra do Outlook. A
 
 Define a imagem de fundo.
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ Chame este método para definir a imagem de fundo da barra do Outlook. A lista d
 
 Redefine o painel da barra do Outlook para o conjunto original de botões.
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ Este método restaura os botões da barra do Outlook ao conjunto original. Este 
 
 Define o número de pixels de preenchimento usados em torno de botões no painel da barra do Outlook.
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 Define as cores do texto regular e destacado no painel da barra do Outlook.
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,7 +467,7 @@ void SetTextColor(
 
 Define a cor transparente para o painel da barra do Outlook.
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 

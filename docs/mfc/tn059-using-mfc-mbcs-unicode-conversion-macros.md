@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366585"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749437"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: usando macros de conversão MBCS/Unicode MFC
 
@@ -114,7 +114,7 @@ Novamente, existem macros semelhantes para fazer strings alocadas em TEXTMETRIC,
 
 Não use as macros em um loop apertado. Por exemplo, você não deseja escrever o seguinte tipo de código:
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 O código acima pode resultar na alocação de megabytes de memória `lpsz` na pilha, dependendo do conteúdo da string! Também leva tempo para converter a seqüência para cada iteração do loop. Em vez disso, mova essas conversões constantes para fora do loop:
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 Se a seqüência não for constante, então encapsule a chamada do método em uma função. Isso permitirá que o buffer de conversão seja liberado cada vez. Por exemplo:
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;

@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368337"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747197"
 ---
 # <a name="crendertarget-class"></a>Classe CRenderTarget
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 Anexa a interface de destino de renderização existente ao objeto
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ Interface de destino de renderização existente. Não pode ser NULO
 
 Inicia o desenho neste alvo de renderização.
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 Limpa a área de desenho para a cor especificada.
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -314,7 +314,7 @@ O tamanho desejado do novo destino de renderização em pixels se ele deve ser d
 *formato desejado*<br/>
 O formato de pixel desejado e o modo alfa do novo destino de renderização, ou NULL. Se o formato de pixel estiver definido como DXGI_FORMAT_UNKNOWN ou se esse parâmetro for nulo, o novo destino de renderização usará o mesmo formato de pixel do destino de renderização original. Se o modo alfa for D2D1_ALPHA_MODE_UNKNOWN ou este parâmetro for NULO, o modo alfa do novo destino de renderização é padrão para D2D1_ALPHA_MODE_PREMULTIPLIED. Para obter informações sobre formatos de pixel suportados, consulte Formatos Pixel suportados e modos Alfa.
 
-*Opções*<br/>
+*options*<br/>
 Um valor que especifica se o novo destino de renderização deve ser compatível com o GDI.
 
 ### <a name="return-value"></a>Valor retornado
@@ -362,7 +362,7 @@ Ponteiro para interface de destino de renderização separada.
 
 Desenha o texto formatado descrito pelo objeto IDWriteTextLayout especificado.
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ O tamanho e a posição, em pixels independentes do dispositivo no espaço de co
 
 Desenha o contorno da elipse especificada usando o estilo de traçado especificado.
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ O estilo de curso para aplicar ao contorno da elipse, ou NULL para pintar um tra
 
 Desenha o contorno da geometria especificada usando o estilo de traçado especificado.
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ O estilo de curso para aplicar ao contorno da geometria, ou NULL para pintar um 
 
 Desenha os glifos especificados.
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ Um valor que indica como as métricas de glifos são usadas para medir o texto q
 
 Desenha uma linha entre os pontos especificados usando o estilo de traçado especificado.
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ O estilo de traço para pintar, ou NULL para pintar uma linha sólida.
 
 Desenha o contorno de um retângulo que tenha as dimensões especificadas e o estilo de traçado.
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ O estilo de traço para pintar, ou NULL para pintar um traço sólido.
 
 Desenha o contorno do retângulo arredondado especificado usando o estilo de traçado especificado.
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ O estilo do traço do retângulo arredondado, ou NULL para pintar um traço sól
 
 Desenha o texto especificado usando as informações de formato fornecidas por um objeto IDWriteTextFormat.
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -576,7 +576,7 @@ O pincel usado para pintar o texto.
 *textFormat*<br/>
 Um objeto que descreve a formatação de detalhes do texto a ser desenhado, como a fonte, o tamanho da fonte e a direção do fluxo.
 
-*Opções*<br/>
+*options*<br/>
 Um valor que indica se o texto deve ser encaixado nos limites dos pixels e se o texto deve ser cortado no retângulo de layout. O valor padrão é D2D1_DRAW_TEXT_OPTIONS_NONE, o que indica que o texto deve ser encaixado nos limites dos pixels e não deve ser cortado no retângulo de layout.
 
 *mediçãoMode*<br/>
@@ -586,7 +586,7 @@ Um valor que indica como as métricas de glifos são usadas para medir o texto q
 
 Desenha o texto formatado descrito pelo objeto IDWriteTextLayout especificado.
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -605,7 +605,7 @@ O texto formatado para desenhar. Quaisquer efeitos de desenho que não herdam do
 *pBrushForeground*<br/>
 O pincel usado para pintar qualquer texto no textLayout que ainda não tenha um pincel associado a ele como efeito de desenho (especificado pelo método IDWriteTextLayout::SetDrawingEffect).
 
-*Opções*<br/>
+*options*<br/>
 Um valor que indica se o texto deve ser encaixado nos limites dos pixels e se o texto deve ser cortado no retângulo de layout. O valor padrão é D2D1_DRAW_TEXT_OPTIONS_NONE, o que indica que o texto deve ser encaixado nos limites dos pixels e não deve ser cortado no retângulo de layout.
 
 ## <a name="crendertargetenddraw"></a><a name="enddraw"></a>CRenderTarget::EndDraw
@@ -624,7 +624,7 @@ Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retorna um 
 
 Pinta o interior da elipse especificada.
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ O pincel usado para pintar o interior da elipse.
 
 Pinta o interior da geometria especificada.
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ A máscara de opacidade para aplicar à geometria; NULL para nenhuma máscara de
 
 Pinta o interior da malha especificada.
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ O pincel usado para pintar a malha.
 
 Aplica a máscara de opacidade descrita pelo bitmap especificado em um pincel e usa esse pincel para pintar uma região do alvo de renderização.
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -699,7 +699,7 @@ A posição e o raio, em pixels independentes do dispositivo, da elipse para pin
 *pBrush*<br/>
 O pincel usado para pintar a região do alvo de renderização especificado pelo destinationRectangle.
 
-*Conteúdo*<br/>
+*content*<br/>
 O tipo de conteúdo que a máscara de opacidade contém. O valor é usado para determinar o espaço de cor no qual a máscara de opacidade é misturada.
 
 *rectDest*<br/>
@@ -712,7 +712,7 @@ A região do bitmap para usar como máscara de opacidade, em pixels independente
 
 Pinta o interior do retângulo especificado.
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ O pincel usado para pintar o interior do retângulo.
 
 Pinta o interior do retângulo arredondado especificado.
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ O pincel usado para pintar o interior do retângulo arredondado.
 
 Executa todos os comandos de desenho pendentes.
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ O tamanho atual do destino de renderização em pixels independentes do disposit
 
 Obtém o rótulo para operações subsequentes de desenho.
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ Modo de antialiasing atual para operações de desenho de texto e glifo.
 
 Recupera as opções atuais de renderização de texto do destino render.
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ Quando esse método retorna, textRenderingParamscontém o endereço de um pontei
 
 Obtém a transformação atual do alvo de renderização.
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ Ponteiro para uma interface ID2D1RenderTarget ou NULL se o objeto ainda não est
 
 Remove o último clipe alinhado ao eixo do alvo de renderização. Depois que este método é chamado, o clipe não é mais aplicado às operações de desenho subseqüentes.
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 Interrompe o redirecionamento das operações de desenho para a camada especificada pela última chamada PushLayer.
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 Remove o último clipe alinhado ao eixo do alvo de renderização. Depois que este método é chamado, o clipe não é mais aplicado às operações de desenho subseqüentes.
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ O modo antialiasing que é usado para desenhar as bordas dos retângulos de clip
 
 Adiciona a camada especificada ao destino de renderização para que ele receba todas as operações de desenho subseqüentes até que o PopLayer seja chamado.
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ A camada que recebe operações de desenho subseqüentes.
 
 Define o estado de desenho do destino de renderização para o do ID2D1DrawingStateBlock especificado.
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ O novo estado de desenho do alvo de renderização.
 
 Salva o estado de desenho atual para o ID2D1DrawingStateBlock especificado.
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ Quando este método retornar, contém o estado de desenho atual do destino de re
 
 Define o modo de antialiasing do alvo de renderização. O modo antialiasing aplica-se a todas as operações de desenho subseqüentes, excluindo as operações de desenho de texto e glifo.
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ O modo de antialiasing para futuras operações de desenho.
 
 Define os pontos por polegada (DPI) do alvo de renderização.
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ Um valor maior ou igual a zero que especifica o DPI horizontal/vertical do desti
 
 Especifica um rótulo para operações de desenho subseqüentes.
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ Um rótulo para aplicar às operações de desenho subsequentes.
 
 Especifica o modo de antialiasing a ser usado para operações subsequentes de desenho de texto e glifo.
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ O modo de antialiasing para usar para operações subsequentes de desenho de tex
 
 Especifica opções de renderização de texto a serem aplicadas a todas as operações de desenho de texto e glifo subseqüentes.
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ As opções de renderização de texto a serem aplicadas a todas as operações 
 
 Aplica a transformação especificada ao destino de renderização, substituindo a transformação existente. Todas as operações de desenho subsequentes ocorrem no espaço transformado.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```

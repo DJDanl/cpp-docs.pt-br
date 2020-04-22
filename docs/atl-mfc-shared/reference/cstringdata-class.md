@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 5915d9e25588e4e35538619662281ceaf1b35ff7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317606"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746843"
 ---
 # <a name="cstringdata-class"></a>Classe CStringData
 
@@ -91,7 +91,7 @@ Esses dados são compostos por:
 
 Incrementa a contagem de referência do objeto de seqüência.
 
-```
+```cpp
 void AddRef() throw();
 ```
 
@@ -106,7 +106,7 @@ Incrementa a contagem de referência do objeto de seqüência.
 
 Retorna um ponteiro para o buffer de caracteres de um objeto de seqüência.
 
-```
+```cpp
 void* data() throw();
 ```
 
@@ -157,7 +157,7 @@ Chame esta função para determinar se o buffer de caracteres de um objeto de da
 
 Bloqueia o buffer de caracteres do objeto de seqüência associado.
 
-```
+```cpp
 void Lock() throw();
 ```
 
@@ -220,7 +220,7 @@ Armazena o gerenciador de memória para o objeto de string associado. Para obter
 
 Decreta a contagem de referência do objeto de dados de seqüência.
 
-```
+```cpp
 void Release() throw();
 ```
 
@@ -236,7 +236,7 @@ Por exemplo, o código `CStringData::Release` a seguir exigiria `str1`o objeto d
 
 Desbloqueia o buffer de caracteres do objeto de seqüência de caracteres associado.
 
-```
+```cpp
 void Unlock() throw();
 ```
 

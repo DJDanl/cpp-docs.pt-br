@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0dffd273b51dd1c71328332f9f7e29e1ac5cd213
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376165"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745149"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 
@@ -328,7 +328,7 @@ A implementação padrão apenas constrói `CMFCPopupMenu` e retorna um novo obj
 
 Desenha um ícone de documento no botão menu.
 
-```
+```cpp
 void DrawDocumentIcon(
     CDC* pDC,
     const CRect& rectImage,
@@ -352,7 +352,7 @@ Este método pega um ícone de documento e o desenha no botão menu, centrado na
 
 ## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBarMenuButton::Habilitaro-separa-se quickcustomize
 
-```
+```cpp
 void EnableQuickCustomize();
 ```
 
@@ -428,7 +428,7 @@ Um botão de menu da barra de ferramentas pode exibir um submenu. Você pode for
 
 Recupera o retângulo delimitador para a imagem do botão.
 
-```
+```cpp
 void GetImageRect(CRect& rectImage);
 ```
 
@@ -794,7 +794,7 @@ Por padrão, este método define os dados de acessibilidade para o elemento fita
 
 Especifica se o botão é desenhado como um botão de menu ou um botão dividido quando ele tem um ID de comando válido e um submenu.
 
-```
+```cpp
 void SetMenuOnly(BOOL bMenuOnly);
 ```
 
@@ -811,7 +811,7 @@ Normalmente, quando um botão de menu de barra de ferramentas tem um submenu e u
 
 Especifica se o menu suspenso está no modo paleta.
 
-```
+```cpp
 void SetMenuPaletteMode(
     BOOL bMenuPaletteMode=TRUE,
     int nPaletteRows=1);
@@ -831,7 +831,7 @@ No modo paleta, todos os itens do menu são exibidos como uma paleta de várias 
 
 ## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 

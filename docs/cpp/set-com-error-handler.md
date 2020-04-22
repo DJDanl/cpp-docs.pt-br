@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 226dce24de68edd66ca68c43e41ce0cb5b8a1b48
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: debad733f351c710ada342e29fa95a4d1ff03b7d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857288"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749797"
 ---
 # <a name="_set_com_error_handler"></a>_set_com_error_handler
 
-Substitui a função padrão que é usada para o tratamento de erros COM. **_set_com_error_handler** é específica da Microsoft.
+Substitui a função padrão que é usada para o tratamento de erros COM. **_set_com_error_handler** é específico da Microsoft.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void __stdcall _set_com_error_handler(
    void (__stdcall *pHandler)(
       HRESULT hr,
@@ -31,15 +31,15 @@ void __stdcall _set_com_error_handler(
 *pHandler*<br/>
 Ponteiro para a função de substituição.
 
-*Human*<br/>
-Informações de HRESULT.
+*Hr*<br/>
+Informações do HRESULT.
 
 *perrinfo*<br/>
 Objeto `IErrorInfo`.
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o [_com_raise_error](../cpp/com-raise-error.md) manipula todos os erros de com. Você pode alterar esse comportamento usando **_set_com_error_handler** para chamar sua própria função de tratamento de erros.
+Por padrão, [_com_raise_error](../cpp/com-raise-error.md) lida com todos os erros de COM. Você pode alterar esse comportamento usando **_set_com_error_handler** para chamar sua própria função de manipulação de erros.
 
 A função de substituição deve ter uma assinatura equivalente à de `_com_raise_error`.
 
@@ -84,12 +84,12 @@ int main()
 Exception raised: Unable to establish the connection!
 ```
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<comdef. h >
+**Cabeçalho:** \<comdef.h>
 
-**Lib:** Se a opção de compilador **/Zc: wchar_t** for especificada (o padrão), use comsuppw. lib ou comsuppwd. lib. Se a opção **/Zc: wchar_t-** Compiler for especificada, use comsupp. lib. Para obter mais informações, incluindo como definir essa opção no IDE, consulte [/Zc: wchar_t (Wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Se a opção de compilador **/Zc:wchar_t** for especificada (o padrão), use comsuppw.lib ou comsuppwd.lib. Se a opção **/Zc:wchar_t-** compilador for especificada, use comsupp.lib. Para obter mais informações, incluindo como definir essa opção no IDE, consulte [/Zc:wchar_t (wchar_t É o Tipo Nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções globais COM do compilador](../cpp/compiler-com-global-functions.md)

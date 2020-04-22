@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 09811b14ed805b1965015a32a25c0b67c947ff4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358300"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745312"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Classe CMFCToolBarFontSizeComboBox
 
@@ -99,7 +99,7 @@ Se o valor de retorno for positivo, é o tamanho da fonte em twips. É -1 se a c
 
 Preenche uma caixa de combinação de tamanho de fonte com todos os tamanhos válidos da fonte dada.
 
-```
+```cpp
 void RebuildFontSizes(const CString& strFontName);
 ```
 
@@ -116,7 +116,7 @@ Chame esta função quando quiser sincronizar entre a seleção em uma caixa de 
 
 Arredonda o tamanho especificado (em twips) para o tamanho mais próximo em pontos e, em seguida, define o tamanho selecionado na caixa de combinação para esse valor.
 
-```
+```cpp
 void SetTwipSize(int nSize);
 ```
 

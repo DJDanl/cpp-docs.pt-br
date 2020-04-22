@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 19939ce7dacc1b826e0a2f067c43fc65db328a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b505912c69ffbb86ad3dae98f99531c477db693
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370160"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749142"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -584,7 +584,7 @@ O parâmetro *nCode* especifica o estilo de alinhamento.
 
 Cancela a operação de edição de texto do item.
 
-```
+```cpp
 void CancelEditLabel();
 ```
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de lista. Aplique qualquer combinação de estilos de controle de lista ao controle. Consulte [Os estilos de janela de exibição](/windows/win32/Controls/list-view-window-styles) de lista no SDK do Windows para obter uma lista completa desses estilos. Defina estilos estendidos específicos para um controle usando [SetExtendedStyle](#setextendedstyle).
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle da lista. Pode ser um `CRect` objeto ou uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Especifica o tamanho e a posição do controle da lista. Pode ser um `CRect` objeto ou uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *Pparentwnd*<br/>
 Especifica a janela pai do controle `CDialog`de lista, geralmente um . Não deve ser NULO.
@@ -666,7 +666,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle de lista. Aplique qualquer combinação de estilos de controle de lista ao controle. Para obter uma lista completa desses estilos, consulte ['Listar exibir estilos de janela'](/windows/win32/Controls/list-view-window-styles) no SDK do Windows.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 Índice do item cuja lista de imagens de arrastar deve ser criada.
 
 *Lppoint*<br/>
-Endereço de uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) que recebe a localização inicial do canto superior esquerdo da imagem, em coordenadas de exibição.
+Endereço de uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) que recebe a localização inicial do canto superior esquerdo da imagem, em coordenadas de exibição.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -1413,7 +1413,7 @@ O exemplo de `GetGroupInfoByIndex` código a seguir demonstra o método. Em uma 
 
 Recupera as métricas de um grupo.
 
-```
+```cpp
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*iGroupId*|[em] Especifica um grupo.|
-|*Lprect*|[dentro, fora] Ponteiro para uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\)) Se este método for bem sucedido, a estrutura receberá as coordenadas retângulo do grupo especificadas pelo *iGroupId*.|
+|*Lprect*|[dentro, fora] Ponteiro para uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect) Se este método for bem sucedido, a estrutura receberá as coordenadas retângulo do grupo especificadas pelo *iGroupId*.|
 |*iCoords*|[em] Especifica as coordenadas retângulo para recuperar. Use um desses valores:<br /><br /> - LVGGR_GROUP - (Padrão) Coordenadas de todo o grupo expandido.<br />- LVGGR_HEADER - Coordenadas de apenas o cabeçalho (grupo colapsado).<br />- LVGGR_SUBSETLINK - Coordenadas de apenas o link subconjunto (subconjunto de marcação).|
 
 ### <a name="return-value"></a>Valor retornado
@@ -1451,7 +1451,7 @@ VERDADE se este método for bem sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O chamador é responsável por alocar a estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) apontada pelo parâmetro *pRect.*
+O chamador é responsável por alocar a estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) apontada pelo parâmetro *pRect.*
 
 Este método envia a mensagem [LVM_GETGROUPRECT,](/windows/win32/Controls/lvm-getgrouprect) que é descrita no SDK do Windows.
 
@@ -1791,7 +1791,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[em] Pointer para uma estrutura [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) para o item pai do subitem.<br /><br /> O chamador é responsável por alocar e definir os membros da estrutura [LVITEMINDEX.](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) Esse parâmetro não pode ser NULL.|
 |*Icolumn*|[em] Índice baseado em zero de uma coluna no controle.|
 |*rectType*|[em] Parte do subitem de exibição de lista para o qual o retângulo delimitador é recuperado. Especifique um dos seguintes valores:<br /><br /> LVIR_BOUNDS - Retorna o retângulo delimitador de todo o subitem, incluindo o ícone e o rótulo.<br /><br /> LVIR_ICON - Retorna o retângulo delimitador do ícone ou pequeno ícone do subitem.<br /><br /> LVIR_LABEL - Retorna o retângulo delimitador do texto subitem.|
-|*pRect*|[fora] Ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recebe informações sobre o retângulo delimitador do subtemto.<br /><br /> O chamador é responsável por alocar a estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\)) Esse parâmetro não pode ser NULL.|
+|*pRect*|[fora] Ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que recebe informações sobre o retângulo delimitador do subtemto.<br /><br /> O chamador é responsável por alocar a estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect) Esse parâmetro não pode ser NULL.|
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -1845,7 +1845,7 @@ BOOL GetItemPosition(
 O índice do item cuja posição deve ser recuperada.
 
 *Lppoint*<br/>
-Endereço de uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) que recebe a posição do canto superior esquerdo do item, em coordenadas de exibição.
+Endereço de uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) que recebe a posição do canto superior esquerdo do item, em coordenadas de exibição.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -1884,7 +1884,7 @@ BOOL GetItemRect(
 O índice do item cuja posição deve ser recuperada.
 
 *Lprect*<br/>
-Endereço de uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recebe o retângulo delimitador.
+Endereço de uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que recebe o retângulo delimitador.
 
 *Ncode*<br/>
 Parte do item de exibição da lista para o qual recuperar o retângulo delimitador. Pode ser um dos valores a seguir:
@@ -2221,7 +2221,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parâmetros
 
 *Lppoint*<br/>
-Endereço de uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) que recebe a origem da vista.
+Endereço de uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) que recebe a origem da vista.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -2532,7 +2532,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *Lprect*<br/>
-Endereço de uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Endereço de uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -2546,7 +2546,7 @@ A exibição da lista deve estar na exibição do ícone ou na exibição de um 
 
 Recupera as áreas de trabalho atuais de um controle de exibição de lista.
 
-```
+```cpp
 void GetWorkAreas(
     int nWorkAreas,
     LPRECT pRect) const;
@@ -2835,7 +2835,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parâmetros
 
 *Ppoint*<br/>
-Um ponteiro para uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) que contém as coordenadas de teste de acerto, em relação à área cliente do controle da lista.
+Um ponteiro para uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) que contém as coordenadas de teste de acerto, em relação à área cliente do controle da lista.
 
 *plvim*<br/>
 Um ponteiro para uma estrutura [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark) que especifica o ponto de inserção mais próximo das coordenadas definidas pelo parâmetro de ponto.
@@ -3008,7 +3008,7 @@ Esta função membro emula a funcionalidade da mensagem [LVM_MOVEGROUP,](/window
 
 Move o item especificado para o grupo especificado.
 
-```
+```cpp
 void MoveItemToGroup(
     int idItemFrom,
     int idGroupTo);
@@ -3059,7 +3059,7 @@ Os itens especificados não são realmente repintados até que a janela de exibi
 
 Remove todos os grupos de um controle de exibição de lista.
 
-```
+```cpp
 void RemoveAllGroups();
 ```
 
@@ -3098,7 +3098,7 @@ BOOL Scroll(CSize size);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tamanho*<br/>
+*size*<br/>
 Um `CSize` objeto especificando a quantidade de rolagem horizontal e vertical, em pixels. O `y` membro de *tamanho* é dividido pela altura, em pixels, da linha do controle de exibição de lista, e o controle é rolado pelo número resultante de linhas.
 
 ### <a name="return-value"></a>Valor retornado
@@ -3387,7 +3387,7 @@ Este método envia a mensagem [LVM_SETGROUPINFO,](/windows/win32/Controls/lvm-se
 
 Define as métricas de grupo de um controle de exibição de lista.
 
-```
+```cpp
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
@@ -3497,7 +3497,7 @@ A distância (em pixels) entre ícones no eixo x.
 *Cy*<br/>
 A distância (em pixels) entre ícones no eixo y.
 
-*Tamanho*<br/>
+*size*<br/>
 Um `CSize` objeto especificando a distância (em pixels) entre ícones nos eixos x e y.
 
 ### <a name="return-value"></a>Valor retornado
@@ -3693,7 +3693,7 @@ Veja o exemplo de [CListCtrl::HitTest](#hittest).
 
 Prepara um controle de exibição de lista para adicionar um grande número de itens.
 
-```
+```cpp
 void SetItemCount(int nItems);
 ```
 
@@ -3855,7 +3855,7 @@ BOOL SetItemPosition(
 Índice do item cuja posição deve ser definida.
 
 *pt*<br/>
-Uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) especificando a nova posição, em coordenadas de exibição, do canto superior esquerdo do item.
+Uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) especificando a nova posição, em coordenadas de exibição, do canto superior esquerdo do item.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -4156,7 +4156,7 @@ Esta função membro emula a funcionalidade da mensagem [LVM_SETVIEW,](/windows/
 
 Define a área onde os ícones podem ser exibidos em um controle de exibição de lista.
 
-```
+```cpp
 void SetWorkAreas(
     int nWorkAreas,
     LPRECT lpRect);

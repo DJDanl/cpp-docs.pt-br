@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375270"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749546"
 ---
 # <a name="cmfcribboncategory-class"></a>Classe CMFCRibbonCategory
 
@@ -260,7 +260,7 @@ O diagrama a seguir mostra uma figura da categoria Home do aplicativo de amostra
 
 Adiciona o elemento de fita especificado à matriz de elementos de fita exibidos na caixa de diálogo de personalização.
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ Ponteiro para um elemento de fita se o método foi bem sucedido; caso contrário
 
 Recupera todos os elementos da fita na categoria fita.
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ Os elementos de fita projetados para uso na barra de ferramentas de acesso rápi
 
 Recupera todos os elementos de fita associados ao ID de comando especificado.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ O tamanho recuperado inclui o fator de escala de imagem global.
 
 Recupera os IDs de comando para os elementos de fita que estão contidos na categoria fita.
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ A localização vertical do texto, em pixels, em botões de fita que exibem imag
 
 Recupera todos os elementos visíveis que pertencem à categoria fita.
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 Define a ordem em que os painéis de fita da categoria de fita entram em colapso.
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ O exemplo a seguir `SetCollapseOrder` demonstra como `CMFCRibbonCategory` usar o
 
 Define os dados definidos pelo usuário como associados à categoria fita.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 Atribui uma dica-chave para a categoria de fita.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ As teclas são exibidas quando o usuário pressiona a tecla Alt ou a tecla F10.
 
 Atribui um nome e uma dica à categoria de fita.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ Para definir a dica-chave para a categoria fita, anexar uma seqüência de escap
 
 Define a cor da categoria fita.
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 

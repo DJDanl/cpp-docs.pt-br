@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331237"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746585"
 ---
 # <a name="crbtree-class"></a>Classe CRBTree
 
@@ -159,7 +159,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 Um valor de chave.
 
 ### <a name="return-value"></a>Valor retornado
@@ -185,7 +185,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *Pos*<br/>
 O valor da posição.
 
-*Chave*<br/>
+*chave*<br/>
 A variável que recebe a chave.
 
 *value*<br/>
@@ -276,7 +276,7 @@ O contador de posição *pos* é atualizado após cada chamada. Se o elemento re
 
 Chame este método para obter a chave e o valor de um elemento armazenado no mapa e avançar a posição para o próximo elemento.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -288,7 +288,7 @@ void GetNextAssoc(
 *Pos*<br/>
 O contador de posições, retornado por uma chamada anterior para métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*Chave*<br/>
+*chave*<br/>
 Parâmetro de modelo especificando o tipo de chave da árvore.
 
 *value*<br/>
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 Chame este método para remover `CRBTree` todos os elementos do objeto.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ Limpa o `CRBTree` objeto, liberando a memória usada para armazenar os elementos
 
 Chame este método para remover o elemento `CRBTree` na posição dada no objeto.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ Remove o par de chaves/valor armazenado na posição especificada. A memória us
 
 Chame este método para alterar o valor `CRBTree` armazenado em uma determinada posição no objeto.
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 

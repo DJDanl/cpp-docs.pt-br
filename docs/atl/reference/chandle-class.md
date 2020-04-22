@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 7c72ded75298ed69efe73c1a81abf404545ea9b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b883bdf3159c40f8d74866f04f655ae73d82a8a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326931"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747701"
 ---
 # <a name="chandle-class"></a>Classe CHandle
 
@@ -74,7 +74,7 @@ Um `CHandle` objeto pode ser usado sempre que uma alça `CHandle` for necessári
 
 Chame este método `CHandle` para anexar o objeto a uma alça existente.
 
-```
+```cpp
 void Attach(HANDLE h) throw();
 ```
 
@@ -122,7 +122,7 @@ Libera o `CHandle` objeto chamando [CHandle::Close](#close).
 
 Chame este método `CHandle` para fechar um objeto.
 
-```
+```cpp
 void Close() throw();
 ```
 

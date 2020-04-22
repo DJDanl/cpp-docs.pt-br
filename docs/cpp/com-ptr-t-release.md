@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: f455e855e782a939e79898ee46e445f65d25d37a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73de3c2d19063f0738b8b0a3c510ea520f58de0b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170586"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745063"
 ---
 # <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Chama a função de membro de **liberação** de `IUnknown` no ponteiro de interface encapsulada.
+Chama a função `IUnknown` de membro de **versão** do ponteiro de interface encapsulado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void Release( );
 ```
 
 ## <a name="remarks"></a>Comentários
 
-Chama `IUnknown::Release` no ponteiro de interface encapsulada, gerando um erro de `E_POINTER` se esse ponteiro de interface for nulo.
+Chama `IUnknown::Release` o ponteiro de interface `E_POINTER` encapsulado, levantando um erro se este ponteiro de interface for NULL.
 
-**Fim da seção específica da Microsoft**
+**Fim específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

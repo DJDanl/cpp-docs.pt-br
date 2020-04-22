@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330693"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747584"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Classe CSnapInPropertyPageImpl
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 Chame essa função depois que uma alteração irrecuperável foi feita para os dados em uma página de uma folha de propriedade modal.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ A implementação `OnApply` padrão de devoluções TRUE.
 
 Essa função de membro é chamada quando o usuário clica no botão **Ajuda** para a página da propriedade.
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ A implementação `OnQueryCancel` padrão de devoluções TRUE.
 
 Esta função de membro é chamada quando o usuário clica no botão **Cancelar.**
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ Se uma página retornar um valor não zero, a folha de propriedade não enviará
 
 Chame esta função de membro para ativar ou desativar o botão **Aplicar agora,** com base em se as configurações na página de propriedade devem ser aplicadas ao objeto externo apropriado.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

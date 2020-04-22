@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327600"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747911"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CcomObjectRootEx
 
@@ -155,7 +155,7 @@ Aqui está uma maneira típica de criar um agregado:
 
 Você pode substituir este método em sua classe derivada para realizar qualquer limpeza necessária para o seu objeto.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ Se o modelo de rosca for multithreaded, `InterlockedDecrement` é usado para evi
 
 Se o modelo de segmento for multithreaded, este método chama a função API Do Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), que espera até que o segmento possa assumir a propriedade do objeto de seção crítica obtido através de um membro de dados privado.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ Em construções não-depuradas, sempre retorna 0. Nas compilações de depuraç
 
 Se o modelo de segmento for multithreaded, este método chama a função API Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), que libera a propriedade do objeto de seção crítica obtido através de um membro de dados privado.
 
-```
+```cpp
 void Unlock();
 ```
 

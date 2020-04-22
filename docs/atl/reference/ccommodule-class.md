@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 652c5f078ddbaf8d3e333f7003d6515a94dd8f83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e30f847ff99a80ab19b880728472a339fd4cbe5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327756"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747932"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 
@@ -465,7 +465,7 @@ Remove o objeto de classe. Este método só está disponível para EXEs.
 
 A partir do ATL `CComModule` 7.0, é obsoleto: consulte [ATL Module Classes](../../atl/atl-module-classes.md) para obter mais detalhes.
 
-```
+```cpp
 void Term() throw();
 ```
 

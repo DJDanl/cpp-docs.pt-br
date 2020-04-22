@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: f3604f95c8217c7407c100671265140bbadbab78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6264bb6bc9070b5ce170b294f9db0d371e7b6b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326729"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747673"
 ---
 # <a name="cnonstatelessworker-class"></a>Classe CNonStatelessWorker
 
@@ -67,7 +67,7 @@ O benefício dessa classe é que ela fornece uma maneira conveniente de mudar o 
 
 Implementação do [WorkerArchetype::Execute](worker-archetype.md#execute).
 
-```
+```cpp
 void Execute(
     Worker::RequestType request,
     void* pvWorkerParam,
@@ -110,7 +110,7 @@ Esta classe lida com o mesmo tipo de item de trabalho que a classe usada para o 
 
 Implementação [do WorkerArchetype::Terminate](worker-archetype.md#terminate).
 
-```
+```cpp
 void Terminate(void* /* pvParam */) throw();
 ```
 

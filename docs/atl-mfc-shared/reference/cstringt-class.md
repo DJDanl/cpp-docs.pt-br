@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317595"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746712"
 ---
 # <a name="cstringt-class"></a>Classe Cstringt
 
@@ -306,7 +306,7 @@ O exemplo a seguir demonstra o uso de `CStringT::AllocSysString`.
 
 Converte todos os `CStringT` caracteres deste objeto do caractere ANSI definido para o conjunto de caracteres OEM.
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ A função não está disponível se _UNICODE for definida.
 
 Anexa dados formatados a `CStringT` um objeto existente.
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -696,7 +696,7 @@ Encontra a primeira ocorrência de qualquer um dos personagens em *pszCharSet*.
 
 Grava dados formatados para a mesma `CStringT` forma que [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formata dados em uma matriz de caracteres estilo C.
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -730,7 +730,7 @@ Para obter mais informações, consulte [Sintaxe de especificação de formato: 
 
 Formata uma seqüência de mensagens.
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -763,7 +763,7 @@ Cada inserção deve ter um parâmetro correspondente seguindo o parâmetro *psz
 
 Formata uma seqüência de mensagens usando uma lista de argumentos variáveis.
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ Para obter mais informações, consulte a função Windows [FormatMessage](/wind
 
 Formata uma seqüência de mensagens usando uma lista de argumentos variáveis.
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -1012,7 +1012,7 @@ Para conjuntos de caracteres multibytes (MBCS), *nCount* refere-se a cada caract
 
 Converte todos os `CStringT` caracteres deste objeto do caractere OEM definido para o conjunto de caracteres ANSI.
 
-```
+```cpp
 void OemToAnsi();
 ```
 
@@ -1056,7 +1056,7 @@ Um booleano especificando se o projeto é um DLL MFC ou não.
 *BaseType*<br/>
 O tipo de base de cordas.
 
-*Var*<br/>
+*var*<br/>
 Um objeto variante para atribuir a esta seqüência.
 
 *Ch*<br/>
@@ -1150,7 +1150,7 @@ Um booleano especificando se o projeto é um DLL MFC ou não.
 *BaseType*<br/>
 O tipo de base de cordas.
 
-*Var*<br/>
+*var*<br/>
 Um objeto variante para concatenar a esta seqüência.
 
 *Ch*<br/>
