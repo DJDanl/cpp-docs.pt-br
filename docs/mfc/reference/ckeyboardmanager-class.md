@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 5d0f544943cc8584960bb2668ee7ce326547e2fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8053ab33a2b49eb2c447cdaa1cb2b9e356bc696
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372324"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754921"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
@@ -256,7 +256,7 @@ Se você não especificar uma janela padrão, a janela principal do quadro do ap
 
 Recarrega as tabelas de teclas de atalho do recurso do aplicativo.
 
-```
+```cpp
 void ResetAll();
 ```
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365962"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752312"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 
@@ -160,7 +160,7 @@ Para obter mais `CTabCtrl`informações sobre como usar, consulte [Controles](..
 
 Calcula a área de exibição de um controle de guia dado um retângulo de janela ou calcula o retângulo da janela que corresponderia a uma determinada área de exibição.
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Indica qual operação executar. Se este parâmetro for TRUE, *lpRect* especifica um retângulo de exibição e recebe o retângulo da janela correspondente. Se este parâmetro for FALSO, *o lpRect* especifica um retângulo de janela e recebe o retângulo de exibição correspondente.
 
 *Lprect*<br/>
-Pointer para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifica o retângulo dado e recebe o retângulo calculado.
+Pointer para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifica o retângulo dado e recebe o retângulo calculado.
 
 ### <a name="example"></a>Exemplo
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de guias. Aplique qualquer combinação de estilos de controle de [guia,](/windows/win32/Controls/tab-control-styles)descrito no SDK do Windows. Consulte **Observações** para obter uma lista de estilos de janela que você também pode aplicar ao controle.
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle da guia. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Especifica o tamanho e a posição do controle da guia. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *Pparentwnd*<br/>
 Especifica a janela pai do controle `CDialog`de guia, geralmente um . Não deve ser NULO.
@@ -250,7 +250,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle de guias. Aplique qualquer combinação de estilos de controle de [guia,](/windows/win32/Controls/tab-control-styles)descrito no SDK do Windows. Consulte **Observações** em [Criar](#create) para obter uma lista de estilos de janela que você também pode aplicar ao controle.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -313,7 +313,7 @@ Não zero se bem sucedido; caso contrário, 0.
 
 Redefine itens em um controle de guia, limpando todos os que foram pressionados.
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Índice baseado em zero do item da guia.
 
 *Lprect*<br/>
-Pointer para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recebe o retângulo delimitador da guia. Essas coordenadas usam o modo de mapeamento atual da viewport.
+Pointer para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que recebe o retângulo delimitador da guia. Essas coordenadas usam o modo de mapeamento atual da viewport.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -682,7 +682,7 @@ Especifica quais estados devem ser definidos. Para obter mais informações, con
 
 Remove a imagem especificada da lista de imagens de um controle de guia.
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ O controle de guia atualiza o índice de imagem de cada guia para que cada guia 
 
 Define o foco para uma guia especificada em um controle de guia.
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -829,7 +829,7 @@ CSize SetItemSize(CSize size);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tamanho*<br/>
+*size*<br/>
 A nova largura e altura, em pixels, dos itens de controle de guia.
 
 ### <a name="return-value"></a>Valor retornado
@@ -892,20 +892,20 @@ Esta função de membro implementa o comportamento da [TCM_SETMINTABWIDTH](/wind
 
 Define a quantidade de espaço (preenchimento) em torno do ícone e do rótulo de cada guia em um controle de guia.
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tamanho*<br/>
+*size*<br/>
 Define a quantidade de espaço (preenchimento) em torno do ícone e do rótulo de cada guia em um controle de guia.
 
 ## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl::SetToolTips
 
 Atribui um controle de ponta de ferramenta a um controle de guia.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

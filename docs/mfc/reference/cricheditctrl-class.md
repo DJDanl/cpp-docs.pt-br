@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 07c3c864e91d8aebc8d70f54fed4286a24986208
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c601d036d05048bff9b60f837140e8f7a873964
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368279"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754438"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -377,7 +377,7 @@ Para obter mais informações, consulte [EM_CHARFROMPOS](/windows/win32/Controls
 
 Exclui (limpa) a seleção atual (se houver) no rico controle de edição.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -397,7 +397,7 @@ Para obter mais informações, consulte [WM_CLEAR](/windows/win32/dataxchg/wm-cl
 
 Copia a seleção atual (se houver) no rico controle de edição para a Área de Transferência.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -489,7 +489,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle de edição. Aplique uma combinação dos estilos de janela listados na seção **Observações** dos estilos de controle [Criar](#create) e [editar,](/windows/win32/Controls/edit-control-styles)descritos no SDK do Windows.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -525,7 +525,7 @@ Use [Criar](#create) para construir o controle de edição rico do Windows.
 
 Exclua (corta) a seleção atual (se houver) no rico controle de edição e copia o texto excluído para a Área de Transferência.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -572,7 +572,7 @@ Para obter mais informações, consulte [EM_DISPLAYBAND](/windows/win32/Controls
 
 Reinicia (claro) a bandeira de desfazer deste rico controle de edição.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -966,7 +966,7 @@ Esta função de membro está disponível apenas com as versões em língua asi�
 
 Recupera o retângulo de `CRichEditCtrl` formatação para este objeto.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -1005,7 +1005,7 @@ Os tipos de ações que podem ser desfeitas ou refeitas incluem operações de d
 
 Recupera os limites da seleção `CRichEditCtrl` atual neste objeto.
 
-```
+```cpp
 void GetSel(CHARRANGE& cr) const;
 
 void GetSel(
@@ -1256,7 +1256,7 @@ Esta função de membro está disponível apenas para versões em língua asiát
 
 Muda a visibilidade da seleção.
 
-```
+```cpp
 void HideSelection(
     BOOL bHide,
     BOOL bPerm);
@@ -1284,7 +1284,7 @@ Para obter mais informações, consulte [EM_HIDESELECTION](/windows/win32/Contro
 
 Limita o comprimento do texto que o usuário pode inserir em um controle de edição.
 
-```
+```cpp
 void LimitText(long nChars = 0);
 ```
 
@@ -1391,7 +1391,7 @@ Para obter mais informações, consulte [EM_LINELENGTH](/windows/win32/Controls/
 
 Rola o texto de um controle de edição de várias linhas.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -1421,7 +1421,7 @@ Para obter mais informações, consulte [EM_LINESCROLL](/windows/win32/Controls/
 
 Insere os dados da `CRichEditCtrl` Área de Transferência no ponto de inserção, na localização do cuidador.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1439,7 +1439,7 @@ Para obter mais informações, consulte [WM_PASTE](/windows/win32/dataxchg/wm-pa
 
 Cola dados em um formato específico `CRichEditCtrl` de área de transferência para este objeto.
 
-```
+```cpp
 void PasteSpecial(
     UINT nClipFormat,
     DWORD dvAspect = 0,
@@ -1508,7 +1508,7 @@ Para obter mais informações, consulte [EM_REDO](/windows/win32/Controls/em-red
 
 Substitui a seleção `CRichEditCtrl` atual neste objeto pelo texto especificado.
 
-```
+```cpp
 void ReplaceSel(
     LPCTSTR lpszNewText,
     BOOL bCanUndo = FALSE);
@@ -1540,7 +1540,7 @@ Para obter mais informações, consulte [EM_REPLACESEL](/windows/win32/Controls/
 
 Força `CRichEditCtrl` este objeto a enviar mensagens de notificação EN_REQUESTRESIZE para sua janela pai.
 
-```
+```cpp
 void RequestResize();
 ```
 
@@ -1667,7 +1667,7 @@ Para obter mais informações, consulte [EM_SETEVENTMASK](/windows/win32/Control
 
 Define ou limpa o sinalizador modificado para um controle de edição.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1713,7 +1713,7 @@ Para obter mais informações, consulte [EM_SETOLECALLBACK](/windows/win32/Contr
 
 Define as opções para este `CRichEditCtrl` objeto.
 
-```
+```cpp
 void SetOptions(
     WORD wOp,
     DWORD dwFlags);
@@ -1848,7 +1848,7 @@ Para obter mais informações, consulte [EM_SETREADONLY](/windows/win32/Controls
 
 Define o retângulo de `CRichEditCtrl` formatação para este objeto.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1871,7 +1871,7 @@ Para obter mais informações, consulte [EM_SETRECT](/windows/win32/Controls/em-
 
 Define a seleção dentro deste `CRichEditCtrl` objeto.
 
-```
+```cpp
 void SetSel(
     long nStartChar,
     long nEndChar);
@@ -2076,7 +2076,7 @@ Esta mensagem está disponível apenas nas versões em língua asiática do sist
 
 Impede que o controle coletasse ações adicionais de digitação na ação de desfazer-se atual.
 
-```
+```cpp
 void StopGroupTyping();
 ```
 

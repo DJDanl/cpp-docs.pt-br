@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: bbc64aad0d65c0430ad23b96f635be8fe2b396e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81357036"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751480"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funções de bitmap cinza e pontilhado
 
@@ -44,7 +44,7 @@ O MFC também fornece duas funções para substituir o fundo de um bitmap por um
 
 Desenha uma versão cinza de um bitmap.
 
-```
+```cpp
 void AFXAPI AfxDrawGrayBitmap(
     CDC* pDC,
     int x,
@@ -88,7 +88,7 @@ Um bitmap `AfxDrawGrayBitmap` desenhado terá a aparência de um controle desati
 
 Copia uma versão cinza de um bitmap.
 
-```
+```cpp
 void AFXAPI AfxGetGrayBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -124,7 +124,7 @@ Um bitmap copiado com `AfxGetGrayBitmap` terá a aparência de um controle desat
 
 Desenha um bitmap, substituindo seu fundo por um padrão dithered (dac) .
 
-```
+```cpp
 void AFXAPI AfxDrawDitheredBitmap(
     CDC* pDC,
     int x,
@@ -172,7 +172,7 @@ O bitmap de origem é desenhado no DC de destino com um padrão quadricolor *(cr
 
 Copia um bitmap, substituindo seu plano de fundo por um padrão dithered (verificador).
 
-```
+```cpp
 void AFXAPI AfxGetDitheredBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,

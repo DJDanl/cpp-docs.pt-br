@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354435"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750607"
 ---
 # <a name="platformcollectionsmapview-class"></a>Classe Platform::Collections::MapView
 
@@ -108,7 +108,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A chave usada para localizar o elemento MapView. O tipo de *chave* é o nome de digite *K*.
 
 ### <a name="return-value"></a>Valor retornado
@@ -127,7 +127,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A chave usada para localizar um elemento em MapView. O tipo `key` de é o nome tipo *K*.
 
 ### <a name="return-value"></a>Valor retornado
@@ -197,7 +197,7 @@ Divide o objeto MapView atual em dois objetos MapView. Este método é não oper
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f46566eb562f1515e98aedf938ca68b225ee1b67
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363996"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751109"
 ---
 # <a name="cpropertypage-class"></a>Classe CPropertyPage
 
@@ -119,7 +119,7 @@ Para obter mais informações sobre como estabelecer uma planilha de propriedade
 
 Chame essa função depois que uma alteração irrecuperável foi feita para os dados em uma página de uma folha de propriedade modal.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -137,7 +137,7 @@ A `CancelToClose` função de membro não faz nada em uma folha de propriedade m
 
 Chame esta função de `CPropertyPage` membro para construir um objeto.
 
-```
+```cpp
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
@@ -555,7 +555,7 @@ Se uma página retornar um valor não zero, a folha de propriedade não enviará
 
 Chame esta função de membro para ativar ou desativar o botão Aplicar agora, com base em se as configurações na página de propriedade devem ser aplicadas ao objeto externo apropriado.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

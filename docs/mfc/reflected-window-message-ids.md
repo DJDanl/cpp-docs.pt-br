@@ -46,12 +46,12 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 5b44a1b4e96d92d9ddd150a5b5f68cf83863f8db
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d4ee3483bdfeb88951071bddb748671897a424b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372847"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754396"
 ---
 # <a name="reflected-window-message-ids"></a>IDs de mensagem da janela refletida
 
@@ -78,7 +78,7 @@ A tabela a seguir mostra as mensagens interceptadas e as mensagens correspondent
 |[WM_COMPAREITEM](/windows/win32/Controls/wm-compareitem)|OCM_COMPAREITEM|
 |[Wm_hscroll](/windows/win32/Controls/wm-hscroll)|OCM_HSCROLL|
 |[Wm_vscroll](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
-|[Wm_parentnotify](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
+|[Wm_parentnotify](/windows/win32/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
 |[Wm_notify](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]

@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366830"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750677"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -377,7 +377,7 @@ O `m_hPrevInstance` membro de dados não existe mais. Para determinar se outra i
 
 Ligue para esta função de membro para adicionar um modelo de documento à lista de modelos de documentos disponíveis que o aplicativo mantém.
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ Para personalizar o comportamento, anular essa função em uma [classe CWinApp](
 
 Ligue para esta função de membro para fechar todos os documentos abertos antes de sair.
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ Retorna TRUE se o suporte ao D2D foi ativado, FALSE - caso contrário
 
 Chame esta função de membro de `CWinApp`dentro do construtor de sua classe derivada para usar HTMLHelp para a ajuda do seu aplicativo.
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 Chame essa função, normalmente a partir de sua `InitInstance` substituição, para permitir que os usuários do aplicativo abram arquivos de dados quando clicarem duas vezes nos arquivos de dentro do Gerenciador de Arquivos do Windows.
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ Chave de seção se a função for bem sucedida; caso contrário, NULL.
 
 Ligue para esta função de membro para ocultar um aplicativo antes de fechar os documentos abertos.
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ Use `LoadStandardIcon` a função de membro [loadoemicon](#loadoemicon) para ace
 
 Chame essa função de membro de dentro da função membro [InitInstance](#initinstance) para habilitar e carregar a lista dos arquivos MRU (Mais recentemente usados) e o último estado de visualização.
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ Se um documento que tiver esse nome já estiver aberto, a primeira janela de qua
 
 Ligue para esta função de membro para analisar a linha de comando e enviar os parâmetros, um de cada vez, para [CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam).
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Código*<br/>
+*code*<br/>
 Especifica um código de gancho. Esta função membro usa o código para determinar como processar *lpMsg.*
 
 *Lpmsg*<br/>
@@ -1920,7 +1920,7 @@ A implementação padrão simplesmente retorna TRUE. Anular esta função para f
 
 Ligue para esta função de membro para registrar todos os tipos de documentos do seu aplicativo com o Gerenciador de Arquivos do Windows.
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -2108,7 +2108,7 @@ A implementação padrão desta função membro chama a função [CDocument::Sav
 
 Chame esta função de membro para selecionar uma impressora específica e libere a impressora que foi previamente selecionada na caixa Imprimir diálogo.
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ Se *hDevMode* e *hDevNames* `SelectPrinter` forem NULL, use a impressora padrão
 
 Define o tipo de ajuda do aplicativo.
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ Para definir o tipo de ajuda do aplicativo como HTMLHelp, você pode chamar [Ena
 
 Faz com que as configurações do aplicativo sejam armazenadas no registro em vez de arquivos INI.
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ Anular esta função para executar etapas personalizadas de descadastramento.
 
 Chame esta função de membro para cancelar o registro de todos os tipos de documentos do aplicativo com o Gerenciador de Arquivos do Windows.
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ Em outro exemplo, consulte o exemplo de [CWinApp::GetProfileInt](#getprofileint)
 
 Define explicitamente o ID do modelo do usuário do aplicativo para o aplicativo. Este método deve ser chamado antes de qualquer interface de usuário ser apresentada ao usuário (o melhor lugar é o construtor do aplicativo).
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 

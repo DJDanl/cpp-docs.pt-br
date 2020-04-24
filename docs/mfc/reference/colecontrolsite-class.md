@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366161"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753951"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 
@@ -454,7 +454,7 @@ Não zero se a janela foi previamente desativada, caso contrário 0.
 
 Especifica se o local de controle lidará ou ignorará os eventos disparados de um controle.
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ Se *bFreeze* for TRUE, o site de controle solicita o controle para parar eventos
 
 Recupera informações sobre mnemônicos de teclado e comportamento do teclado.
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -1017,7 +1017,7 @@ Não zero se bem sucedido; caso contrário, zero.
 
 Define o controle como o botão padrão.
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: d62d5ecb0962f74a5dac1658c207cfb08cf12588
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09a2f3fe66abb86a8f220dbdf6744813ad9db0d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367615"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752397"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Classe CMFCDropDownToolbarButton
 
@@ -525,7 +525,7 @@ Este método amplia a implementação da classe base [(CMFCToolBarButton::Serial
 
 Define o comando padrão que a estrutura usa quando um usuário clica no botão.
 
-```
+```cpp
 void SetDefaultCommand(UINT uiCmd);
 ```
 

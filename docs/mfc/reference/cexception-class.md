@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: c3742db7475e626b18e9c073a0b7417a8034863f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 93901f6f92ee79bd893b2ec0d1e341e77749d951
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373947"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753184"
 ---
 # <a name="cexception-class"></a>Classe CException
 
@@ -105,7 +105,7 @@ Você normalmente nunca precisaria chamar este construtor diretamente. Uma funç
 
 Esta função verifica se `CException` o objeto foi criado no heap e, se for o caso, ele chama o operador **de exclusão** no objeto.
 
-```
+```cpp
 void Delete();
 ```
 

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375601"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753343"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 
@@ -881,7 +881,7 @@ Anular este método em uma classe derivada para personalizar a aparência da leg
 
 Habilita ou desativa o modo de ocultação automática para este painel e para outros painéis no recipiente.
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ Substituir este método em uma classe derivada para implementar efeitos de autoo
 
 A estrutura chama esse método quando um painel está sendo desencaixado.
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ VERDADE se a substituição for bem sucedida; caso contrário, FALSE.
 
 Quando um painel é desserializado, a estrutura chama esse método para restaurar o divisor de painel padrão.
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ Chame este método para trocar um painel dockable para o modo de ocultação aut
 
 Defina o botão de ocultação automática e a barra de ferramentas de ocultação automática para o painel.
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,7 +1542,7 @@ void SetAutoHideParents(
 
 Define a porcentagem de espaço que um painel ocupa em seu recipiente.
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
@@ -1559,7 +1559,7 @@ A estrutura ajusta o painel para usar o novo valor quando o layout é recalculad
 
 Define o divisor de painel padrão restaurado.
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ Um divisor de painel padrão restaurado é obtido quando um painel é desseriali
 
 Define as informações da classe de tempo de execução para uma janela com guias criadas quando dois painéis atracam juntos.
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 

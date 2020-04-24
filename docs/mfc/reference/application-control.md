@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 1f438d3344e90a16def2bd4c0f9cedcd47a64203
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e18b4504ddbfdd9a4399f33c34c6e6e9900233b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363550"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752859"
 ---
 # <a name="application-control"></a>Controle do aplicativo
 
@@ -104,7 +104,7 @@ O usuário está no controle do aplicativo quando o usuário abriu ou criou expl
 
 Define ou limpa o sinalizador de controle do usuário, `AfxOleGetUserCtrl`o que é explicado na referência para .
 
-```
+```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
@@ -127,7 +127,7 @@ Chame esta função se outras ações em seu aplicativo devem colocar o usuário
 
 Incrementa a contagem global do número de objetos ativos no aplicativo.
 
-```
+```cpp
 void AFXAPI AfxOleLockApp();
 ```
 
@@ -151,7 +151,7 @@ Chamada `AfxOleLockApp` de qualquer objeto que exponha interfaces OLE, se seria 
 
 Decreta a contagem de objetos ativos da estrutura na aplicação.
 
-```
+```cpp
 void AFXAPI AfxOleUnlockApp();
 ```
 
@@ -284,7 +284,7 @@ Os símbolos são preenchidos da seguinte forma:
 
 Implementa a interface do usuário para o *comando Typename* Object.
 
-```
+```cpp
 void AFXAPI AfxOleSetEditMenu(
     COleClientItem* pClient,
     CMenu* pMenu,

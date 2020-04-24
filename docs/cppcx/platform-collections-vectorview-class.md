@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363798"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032220"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 
@@ -40,7 +40,7 @@ Especifica um predicado binário para testar a igualdade com valores do tipo `T`
 
 ### <a name="remarks"></a>Comentários
 
-A `VectorView` classe implementa a interface [de>do Windows::Foundation:Collections:IVectorView\<T](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) e suporte para iteradores de biblioteca de modelos padrão.
+A `VectorView` classe implementa a interface [de>do Windows::Foundation:Collections:IVectorView\<T](/uwp/api/windows.foundation.collections.ivectorview-1) e suporte para iteradores de biblioteca de modelos padrão.
 
 ### <a name="members"></a>Membros
 
@@ -250,7 +250,7 @@ Um [std::initializer_list](../standard-library/initializer-list-class.md) cujos 
 *N*<br/>
 O número de elementos em uma coleção de objetos que é usada para inicializar o VectorView atual.
 
-*Tamanho*<br/>
+*size*<br/>
 O número de elementos no VectorView.
 
 *value*<br/>

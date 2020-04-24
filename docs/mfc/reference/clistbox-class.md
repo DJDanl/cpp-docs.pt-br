@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372225"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753582"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -717,7 +717,7 @@ O valor de palavra dupla foi o parâmetro *dwItemData* de uma chamada [SetItemDa
 
 Recupera o valor de 32 bits fornecido pelo aplicativo associado ao item de caixa de lista especificado como ponteiro **(vazio).** <strong>\*</strong>
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ Consulte [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 
 
 Remove todos os itens de uma caixa de lista.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ Use esta função de membro apenas com caixas de lista de seleção múltipla. S
 
 Define a âncora em uma caixa de lista de seleção múltipla para iniciar uma seleção estendida.
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ Se o item não estiver visível, ele será colocado em exibição.
 
 Define a largura em pixels de todas as colunas em uma caixa de lista de várias colunas (criada com o estilo [LBS_MULTICOLUMN).](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ Para definir ou remover uma seleção em uma caixa de lista de seleção múltip
 
 Define a largura, em pixels, pela qual uma caixa de lista pode ser rolada horizontalmente.
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ Para selecionar um item em uma caixa de lista de seleção única, use [CListBox
 
 Define as posições de 'stop' em uma caixa de lista.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368947"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754704"
 ---
 # <a name="cdaoquerydef-class"></a>Classe CDaoQueryDef
 
@@ -410,7 +410,7 @@ O número de campos definidos na consulta.
 
 Ligue para esta função de membro para obter vários tipos de informações sobre um campo definido no consultardef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ Para obter informações relacionadas, consulte os tópicos "Objeto parâmetro",
 
 Ligue para esta função de membro para obter informações sobre um parâmetro definido no consultardef.
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ Uma vez que o consultadef esteja aberto, você pode chamar sua função [execute
 
 Ligue para esta função de membro para definir a seqüência de conexão do objeto querydef.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ Para obter mais informações sobre a estrutura da seqüência de conexão e exe
 
 Chame esta função de membro se quiser alterar o nome de uma consulta que não seja temporária.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ Os nomes de querydef são nomes únicos e definidos pelo usuário. Você pode `S
 
 Ligue para esta função de membro para definir o prazo antes de uma consulta a uma fonte de dados ODBC.
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ Especifique o `COleVariant` valor a ser definido como um objeto. Para obter info
 
 Chame essa função de membro como parte do processo de configuração de uma consulta de passagem SQL para um banco de dados externo.
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ Nesse caso, você deve criar o consultardef e `CDaoQueryDef` definir suas propri
 
 Ligue para esta função de membro para definir a declaração SQL que o querydef executa.
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 

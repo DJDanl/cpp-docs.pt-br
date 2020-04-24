@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 8c8ce90f5e36d6cdc2592233588bc3bd7bf2c9d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a872854af1695b8b2b347b21d73165d259b3a986
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371693"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753069"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -619,7 +619,7 @@ Retorna o número atual de colunas no divisor. Para um divisor estático, este t
 
 Retorna informações na coluna especificada.
 
-```
+```cpp
 void GetColumnInfo(
     int col,
     int& cxCur,
@@ -675,7 +675,7 @@ Retorna o número atual de linhas na janela do divisor. Para uma janela de divis
 
 Retorna informações sobre a linha especificada.
 
-```
+```cpp
 void GetRowInfo(
     int row,
     int& cyCur,
@@ -896,7 +896,7 @@ Especifique o painel fornecendo linha e coluna, **ou** fornecendo *pWnd*.
 
 Ligue para definir as informações da coluna especificadas.
 
-```
+```cpp
 void SetColumnInfo(
     int col,
     int cxIdeal,
@@ -928,7 +928,7 @@ Quando a estrutura exibe a janela do divisor, ela coloca os painéis em colunas 
 
 Ligue para definir as informações da linha especificadas.
 
-```
+```cpp
 void SetRowInfo(
     int row,
     int cyIdeal,
@@ -956,7 +956,7 @@ Quando a estrutura exibe a janela do divisor, ela coloca os painéis em colunas 
 
 Especifica o novo estilo de rolagem para o suporte compartilhado da barra de rolagem da janela splitter.
 
-```
+```cpp
 void SetScrollStyle(DWORD dwStyle);
 ```
 

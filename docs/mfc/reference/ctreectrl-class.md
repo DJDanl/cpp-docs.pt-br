@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373302"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752118"
 ---
 # <a name="ctreectrl-class"></a>Classe CTreeCtrl
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de visualização da árvore. Aplique estilos de janela, descritos no [CreateWindow,](/windows/win32/api/winuser/nf-winuser-createwindoww)e qualquer combinação de estilos de controle de [visualização](/windows/win32/Controls/tree-view-control-window-styles) de árvore conforme descrito no SDK do Windows.
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle de visualização da árvore. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Especifica o tamanho e a posição do controle de visualização da árvore. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *Pparentwnd*<br/>
 Especifica a janela pai do controle de `CDialog`visualização da árvore, geralmente um . Não deve ser NULO.
@@ -361,7 +361,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle de visualização da árvore. Aplique estilos de janela, descritos no [CreateWindow,](/windows/win32/api/winuser/nf-winuser-createwindoww)e qualquer combinação de estilos de controle de [visualização](/windows/win32/Controls/tree-view-control-window-styles) de árvore conforme descrito no SDK do Windows.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*Hitem*|[em] Manuseie um item de controle de visualização de árvore.|
 |*nPart*|[em] Identificador para o papel. Deve ser definido para TVGIPR_BUTTON.|
-|*Lprect*|[fora] Ponteiro para uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\)) Se este método for bem sucedido, a estrutura receberá as coordenadas retângulos da parte especificada por *hItem* e *nPart*.|
+|*Lprect*|[fora] Ponteiro para uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect) Se este método for bem sucedido, a estrutura receberá as coordenadas retângulos da parte especificada por *hItem* e *nPart*.|
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 A alça de um item de controle de visualização de árvore.
 
 *Lprect*<br/>
-Ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recebe o retângulo delimitador. As coordenadas são relativas ao canto superior esquerdo do controle de visão da árvore.
+Ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que recebe o retângulo delimitador. As coordenadas são relativas ao canto superior esquerdo do controle de visão da árvore.
 
 *bTextOnly*<br/>
 Se esse parâmetro não for zero, o retângulo delimitador inclui apenas o texto do item. Caso contrário, inclui toda a linha que o item ocupa no controle de visualização da árvore.
@@ -1833,7 +1833,7 @@ Ponteiro para a lista de imagens anterior, se houver; caso contrário, NULL.
 
 Chame esta função para definir a largura do recuo para um controle de visualização de árvore e redesenha o controle para refletir a nova largura.
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -2269,7 +2269,7 @@ Para usar as dicas de ferramentas, `CTreeCtrl` indique o estilo TVS_NOTOOLTIPS a
 
 Exibe a dica de informação para o item especificado no controle atual de exibição de árvore.
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 

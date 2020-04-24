@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 22208aec505033d372f5a80ba2a9641b1bd15874
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367701"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752522"
 ---
 # <a name="cmfccolormenubutton-class"></a>Classe CMFCColorMenuButton
 
@@ -193,7 +193,7 @@ Este método é chamado pela estrutura quando o usuário pressiona um botão de 
 
 Ativa e desativa um botão "automático" posicionado acima dos botões de cor regulares. (O botão automático do sistema padrão é rotulado **como Automático**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -219,7 +219,7 @@ O botão automático aplica a cor padrão atual.
 
 Habilita a exibição de cores específicas do documento em vez de cores do sistema.
 
-```
+```cpp
 void EnableDocumentColors(
     LPCTSTR lpszLabel,
     BOOL bEnable=TRUE);
@@ -241,7 +241,7 @@ Use este método para exibir as cores atuais do documento ou as cores da paleta 
 
 Ativa e desativa um botão "outro" posicionado abaixo dos botões de cor regulares. (O botão padrão do sistema "outros" está rotulado como **Mais Cores**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -265,7 +265,7 @@ void EnableOtherButton(
 
 Permite a capacidade de rasgar um painel colorido.
 
-```
+```cpp
 void EnableTearOff(
     UINT uiID,
     int nVertDockColumns=-1,
@@ -533,7 +533,7 @@ static void SetColorName(
 
 Define o número de colunas a serem exibidas em um controle de seleção de cores (objeto [CMFCColorBar).](../../mfc/reference/cmfccolorbar-class.md)
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 

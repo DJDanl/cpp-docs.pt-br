@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367363"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753456"
 ---
 # <a name="cmfctabctrl-class"></a>Classe CMFCTabCtrl
 
@@ -256,7 +256,7 @@ O exemplo a seguir demonstra como `CMFCTabCtrl` usar vários métodos na classe 
 
 Exibe a guia especificada do controle de guia atual e define o foco nessa guia.
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ Sempre TRUE.
 
 Especifica se a estrutura deve redimensionar a área do cliente de todas as janelas de controle de guiaquando um elemento de interface do usuário do controle de guia sucateia.
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [em] O ID do controle da guia.
 
-*Localização*<br/>
+*local*<br/>
 [em] A localização das guias. O valor padrão é LOCATION_BOTTOM. Para obter mais informações, consulte Comentários.
 
 *bCloseBtn*<br/>
@@ -381,7 +381,7 @@ Este método é chamado quando você altera o rótulo de uma guia. Este método 
 
 Mostra ou esconde um botão Fechar **(X)** na guia ativa.
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 Alterna entre uma interface de usuário que usa dois botões para rolar as guias da janela e uma interface que exibe um menu pop-up de janelas com guias.
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ Use este método para acessar a barra de rolagem incorporada do controle de guia
 
 Recupera o retângulo delimitador da área da etiqueta da guia na parte superior ou inferior do controle da guia.
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 Recupera o limite da área cliente do controle atual da guia.
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 Oculta a barra de rolagem horizontal, se houver, na janela ativa.
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ Use este método para evitar que o controle da guia pisce quando o usuário alte
 
 Especifica se o framework exibe janelas de controle de guiainativas.
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 Ativa ou desativa o desenho da área de guias se não houver guias visíveis.
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 Define a guia atual de um controle de guia como a guia ativa em um grupo de guia de interface de documento múltiplo.
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ O `SetActiveTab` método chama automaticamente o método [CMFCTabCtrl::HideActiv
 
 Ativa ou desativa o uso de uma fonte em negrito em guias ativas.
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 Especifica se um retângulo de quadro é desenhado em torno de uma barra incorporada.
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 Especifica se deve desenhar um plano ou um quadro 3D ao redor da área da guia.
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ Use o método [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-clas
 
 Especifica como o controle de guia atual pode ser redimensionado e, em seguida, reexibe o controle.
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ O parâmetro *resizeMode* pode ser `ResizeMode` um dos seguintes valores de enum
 
 Especifica a largura máxima da guia em uma janela com guias.
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ Use este método para limitar a largura de cada guia em uma janela com guias. Es
 
 Termina a operação de redimensionamento atual no controle da guia.
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 

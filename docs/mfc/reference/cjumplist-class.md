@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 98d6bec3d33c9060ebb741111dff793f64cc7cb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e45e2e58bd51d36b6412940b7ed01aa119017ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372329"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754940"
 ---
 # <a name="cjumplist-class"></a>Classe CJumpList
 
@@ -99,7 +99,7 @@ Destrói um objeto `CJumpList`.
 
 Aborta uma transação de construção de listas sem cometer.
 
-```
+```cpp
 void AbortList();
 ```
 
@@ -158,7 +158,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Categoria*<br/>
+*category*<br/>
 Especifica um tipo de categoria conhecido. Pode ser KDC_RECENT ou KDC_KNOWN.
 
 ### <a name="return-value"></a>Valor retornado
@@ -256,7 +256,7 @@ Se este parâmetro for FALSO, a lista não será automaticamente cometida em des
 
 Remove todas as tarefas e destinos que foram `CJumpList` adicionados à instância atual até agora.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -268,7 +268,7 @@ Este método limpa e libera todos os dados e interfaces internas.
 
 Remove todos os destinos que foram adicionados à instância atual do CJumpList até agora.
 
-```
+```cpp
 void ClearAllDestinations();
 ```
 
@@ -350,7 +350,7 @@ Você não precisa chamar este método explicitamente, a menos `ICustomDestinati
 
 Define o ID do modelo do usuário do aplicativo para a lista que será construída.
 
-```
+```cpp
 void SetAppID(LPCTSTR strAppID);
 ```
 

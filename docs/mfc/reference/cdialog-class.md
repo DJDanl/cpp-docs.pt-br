@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375642"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753371"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -295,7 +295,7 @@ Se o usuário clicar em um dos botões na caixa de diálogo, como OK ou Cancel, 
 
 Chame esta função de membro para encerrar uma caixa de diálogo modal.
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ Este é geralmente um botão OK.
 
 Move o foco para o controle especificado na caixa de diálogo.
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ As caixas de diálogo que contêm controles ActiveX requerem informações adici
 
 Chamada para converter as unidades da caixa de diálogo de um retângulo para unidades de tela.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ A `MapDialogRect` função membro substitui as unidades da caixa de diálogo em 
 
 Move o foco para o próximo controle na caixa de diálogo.
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ O editor de diálogo normalmente define a fonte caixa de diálogo como parte do 
 
 Define o foco para o controle anterior na caixa de diálogo.
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ Se o foco estiver no primeiro controle na caixa de diálogo, ele se move para o 
 
 Altera o controle de botão padrão para uma caixa de diálogo.
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ Especifica o ID do controle do botão que se tornará o padrão.
 
 Define um ID de ajuda sensível ao contexto para a caixa de diálogo.
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 

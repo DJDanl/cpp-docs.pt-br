@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 14f92e51ecf776aad5312335dade7dfcd154c3eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9956537dbbbc34c69f6f6a6da8174ab594418386
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352046"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752668"
 ---
 # <a name="chtmlview-class"></a>Classe CHtmlView
 
@@ -390,7 +390,7 @@ Aponta para uma seqüência de caracteres com término nulo que representa o nom
 Especifica os atributos de estilo da janela. Por padrão, os estilos WS_VISIBLE e WS_CHILD do Windows são definidos.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) especificando o tamanho e a posição da janela. O valor *rectDefault* permite que o Windows especifique o tamanho e a posição da nova janela.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) especificando o tamanho e a posição da janela. O valor *rectDefault* permite que o Windows especifique o tamanho e a posição da nova janela.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela pai do controle.
@@ -469,7 +469,7 @@ Um valor HRESULT padrão. Para obter uma lista completa de valores possíveis, c
 
 Chame esta função de membro para executar um comando no WebBrowser ou no Internet Explorer.
 
-```
+```cpp
 void ExecWB(
     OLECMDID cmdID,
     OLECMDEXECOPT cmdexecopt,
@@ -960,7 +960,7 @@ A largura atual da janela, em pixels.
 
 Navega para trás um item na lista de histórico.
 
-```
+```cpp
 void GoBack();
 ```
 
@@ -972,7 +972,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Navega para a frente um item na lista de histórico.
 
-```
+```cpp
 void GoForward();
 ```
 
@@ -980,7 +980,7 @@ void GoForward();
 
 Navega até a página inicial atual especificada na caixa de diálogo Opções da Internet Explorer ou na caixa de diálogo Propriedades da Internet, acessada no Painel de Controle.
 
-```
+```cpp
 void GoHome();
 ```
 
@@ -992,7 +992,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Navega até a página de pesquisa atual, conforme especificado na caixa de diálogo Opções da Internet Explorer ou na caixa de diálogo Propriedades da Internet, acessada no Painel de Controle.
 
-```
+```cpp
 void GoSearch();
 ```
 
@@ -1029,7 +1029,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Ligue para esta função de membro para navegar até o recurso identificado por uma URL.
 
-```
+```cpp
 void Navigate(
     LPCTSTR URL,
     DWORD dwFlags = 0,
@@ -1067,7 +1067,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Ligue para esta função de membro para navegar até o recurso identificado por uma URL ou para o arquivo identificado por um caminho completo.
 
-```
+```cpp
 void Navigate2(
     LPITEMIDLIST pIDL,
     DWORD dwFlags = 0,
@@ -1825,7 +1825,7 @@ Isso permite que a janela do host de controle de objeto se comporto da mesma man
 
 Ligue para esta função de membro para definir a propriedade associada a um determinado objeto.
 
-```
+```cpp
 void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
@@ -1935,7 +1935,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Recarrega a URL ou arquivo que o navegador da Web está exibindo no momento.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -1949,7 +1949,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Recarrega o arquivo que o Internet Explorer está exibindo no momento.
 
-```
+```cpp
 void Refresh2(int nLevel);
 ```
 
@@ -1968,7 +1968,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Ligue para esta função de membro para mostrar ou ocultar a barra de endereços do objeto Internet Explorer.
 
-```
+```cpp
 void SetAddressBar(BOOL bNewValue);
 ```
 
@@ -1985,7 +1985,7 @@ Aplica-se ao Internet Explorer. Se você usar esta chamada com um controle do We
 
 Ligue para esta função de membro para definir o Internet Explorer para o modo de tela cheia ou normal da janela.
 
-```
+```cpp
 void SetFullScreen(BOOL bNewValue);
 ```
 
@@ -2004,7 +2004,7 @@ Aplica-se ao Internet Explorer. Se você usar esta chamada com um controle do We
 
 Chame esta função de membro para definir a altura da janela principal do Internet Explorer.
 
-```
+```cpp
 void SetHeight(long nNewValue);
 ```
 
@@ -2021,7 +2021,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Define a posição horizontal da janela principal do Internet Explorer.
 
-```
+```cpp
 void SetLeft(long nNewValue);
 ```
 
@@ -2034,7 +2034,7 @@ A coordenada de tela da borda esquerda da janela principal.
 
 Ligue para esta função de membro para mostrar ou ocultar a barra de menu satisfatodia pelo Internet Explorer.
 
-```
+```cpp
 void SetMenuBar(BOOL bNewValue);
 ```
 
@@ -2051,7 +2051,7 @@ Aplica-se ao Internet Explorer. Se você usar esta chamada com um controle do We
 
 Ligue para esta função de membro para definir um valor indicando se o controle do WebBrowser está operando no modo off-line.
 
-```
+```cpp
 void SetOffline(BOOL bNewValue);
 ```
 
@@ -2070,7 +2070,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Ligue para esta função de membro para definir um valor indicando se o controle do WebBrowser está registrado como um navegador de nível superior para resolução de nome de destino.
 
-```
+```cpp
 void SetRegisterAsBrowser(BOOL bNewValue);
 ```
 
@@ -2089,7 +2089,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Ligue para esta função de membro para definir um valor indicando se o controle do WebBrowser está registrado como um alvo de queda para navegação.
 
-```
+```cpp
 void SetRegisterAsDropTarget(BOOL bNewValue);
 ```
 
@@ -2106,7 +2106,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Ligue para esta função de membro para definir um valor indicando se alguma caixa de diálogo pode ser mostrada.
 
-```
+```cpp
 void SetSilent(BOOL bNewValue);
 ```
 
@@ -2123,7 +2123,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Ligue para esta função de membro para exibir a barra de status.
 
-```
+```cpp
 void SetStatusBar(BOOL bNewValue);
 ```
 
@@ -2140,7 +2140,7 @@ Aplica-se ao Internet Explorer. Se você usar esta chamada com um controle do We
 
 Ligue para esta função de membro para definir um valor indicando se o controle do WebBrowser está no modo de teatro.
 
-```
+```cpp
 void SetTheaterMode(BOOL bNewValue);
 ```
 
@@ -2159,7 +2159,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Ligue para esta função de membro para mostrar ou ocultar a barra de ferramentas do Internet Explorer.
 
-```
+```cpp
 void SetToolBar(int nNewValue);
 ```
 
@@ -2176,7 +2176,7 @@ Aplica-se ao Internet Explorer. Se você usar esta chamada com um controle do We
 
 Chame esta função de membro para definir a distância entre a borda superior interna do controle do WebBrowser e a borda superior do seu recipiente
 
-```
+```cpp
 void SetTop(long nNewValue);
 ```
 
@@ -2193,7 +2193,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Chame esta função de membro para definir o estado de visibilidade do controle do WebBrowser.
 
-```
+```cpp
 void SetVisible(BOOL bNewValue);
 ```
 
@@ -2210,7 +2210,7 @@ Aplica-se ao Internet Explorer e ao WebBrowser.
 
 Define a largura da janela principal do Internet Explorer.
 
-```
+```cpp
 void SetWidth(long nNewValue);
 ```
 
@@ -2223,7 +2223,7 @@ A largura, em pixels, da janela principal do Internet Explorer.
 
 Ligue para esta função de membro para cancelar qualquer operação pendente de navegação ou download e parar quaisquer elementos de página dinâmica, como sons de fundo e animações.
 
-```
+```cpp
 void Stop();
 ```
 

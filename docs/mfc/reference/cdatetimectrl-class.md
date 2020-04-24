@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321909"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754615"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 Fecha o controle atual de data e seleção de horários.
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Especifica a combinação de estilos de controle de data-hora. Consulte [Os estilos de controle do seletor](/windows/win32/Controls/date-and-time-picker-control-styles) de data e hora no SDK do Windows para obter mais informações sobre os estilos de seleção de data e hora.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT,](/previous-versions/dd162897\(v=vs.85\)) que é a posição e o tamanho do controle de data e seleção de tempo.
+Uma referência a uma estrutura [RECT,](/windows/win32/api/windef/ns-windef-rect) que é a posição e o tamanho do controle de data e seleção de tempo.
 
 *Pparentwnd*<br/>
 Um ponteiro para um objeto [CWnd](../../mfc/reference/cwnd-class.md) que é a janela pai do controle de seleção de data e hora. Não deve ser NULO.
@@ -474,7 +474,7 @@ Esta função de membro implementa o comportamento da [DTM_SETMCCOLOR](/windows/
 
 Define a fonte que o controle de data e hora do controle do mês filho usará.
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);

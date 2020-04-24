@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367693"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752528"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe CMFCColorPickerCtrl
 
@@ -184,7 +184,7 @@ O valor RGB da cor selecionada.
 
 Recupera os valores de matiz, luminância e saturação da cor que o usuário seleciona.
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ O componente de saturação da cor selecionada.
 
 Define a cor atual para a cor definida pelos componentes de cor RGB especificados ou pelo hexágono de célula especificado.
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -292,7 +292,7 @@ A segunda sobrecarga deste método define a cor atual para a cor do hexágono ce
 
 Define a cor atual para o valor de cor RGB especificado.
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 Define a cor atual para o valor de cor HLS especificado.
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 Altera a tonalidade da cor selecionada no momento.
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 Altera a luminância da cor selecionada no momento.
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,7 +365,7 @@ void SetLuminance(double Luminance);
 
 Define a largura da barra de luminância no controle do seletor de cores.
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
@@ -382,7 +382,7 @@ Use este método para redimensionar a barra de luminância, que está na guia **
 
 Define a cor selecionada inicial.
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ Chame este método quando o controle do seletor de cores for inicializado.
 
 Define a paleta de cores atual.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ A paleta de cores define a matriz de cores que é apresentada no controle do sel
 
 Altera a saturação da cor selecionada no momento.
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 Define o tipo de controle do seletor de cores para exibir.
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 

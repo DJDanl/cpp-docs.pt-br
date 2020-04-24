@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375876"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753412"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ O menu pop-up que este método cria contém a lista de páginas no painel de tar
 
 Ativa ou desativa a animação que ocorre quando um grupo de tarefas se expande ou entra em colapso.
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ Por padrão, a animação que ocorre quando um grupo de tarefas se expande ou co
 
 Especifica se um usuário pode colapsar grupos de tarefas.
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ Um grupo de tarefas em colapso exibe apenas a legenda do grupo; a lista de taref
 
 Habilita menus suspensos nos botões de navegação **Next** e **Previous.**
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ Os menus contêm o histórico de páginas de tarefas que o usuário usou.
 
 Ativa ou desativa a barra de ferramentas de navegação.
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ Por padrão, a estrutura não exibe a barra de ferramentas de navegação. Se a 
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::HabilitarOffsetCustomControls
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 Habilita botões de rolagem em vez de uma barra de rolagem.
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ Por padrão, a estrutura exibe botões de rolagem no painel de tarefas.
 
 Habilita ou desativa o embrulho de palavras para o texto em rótulos.
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ Por padrão, a estrutura não envolve o texto em rótulos. Quando o embrulho de 
 
 Habilita ou desativa o envoltório de palavras para o texto em tarefas.
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ O espaçamento padrão entre um painel de tarefas e a borda da área do cliente 
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane::GetNextPages
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ O número de páginas no painel de tarefas.
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane::RecalcLayout
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 Remove todos os grupos na página especificada.
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ Remove todos os grupos na página especificada por *nPageIdx*ou todos os grupos 
 
 Remove todas as páginas do painel de tarefas, exceto a página padrão (primeira).
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 Remove todas as tarefas do grupo especificado.
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 Remove um grupo.
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ Quando a estrutura remove um grupo, todas as tarefas e janelas de usuário assoc
 
 Remove uma página especificada do painel de tarefas.
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 Torna a página especificada no painel de tarefas ativa.
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ Este método afirma se o *nPageIdx* é inválido.
 
 Define o nome da legenda de um painel de tarefas.
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,7 +1643,7 @@ Se um painel de tarefas tiver várias páginas, a página padrão tem a legenda 
 
 Define a altura de uma legenda de grupo.
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
@@ -1662,7 +1662,7 @@ Se *n* é -1, a estrutura determina o valor `CMFCVisualManager::GetTasksPaneGrou
 
 Define o deslocamento horizontal de uma legenda de grupo.
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
@@ -1675,7 +1675,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 
 Define o deslocamento vertical de uma legenda de grupo.
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
@@ -1736,7 +1736,7 @@ TRUE se a cor do texto do grupo foi alterada com sucesso; caso contrário, FALSE
 
 Define o deslocamento vertical para um grupo.
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
@@ -1755,7 +1755,7 @@ Chame este método para personalizar as margens dos elementos do painel de taref
 
 Define a margem horizontal.
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
@@ -1807,7 +1807,7 @@ Este método associa uma lista de imagens com o controle do painel de tarefas. P
 
 Define o texto da legenda para uma página de painel de tarefas.
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,7 +1855,7 @@ TRUE se o nome da tarefa foi definido com sucesso; caso contrário, FALSE.
 
 Define o deslocamento horizontal para tarefas.
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
@@ -1874,7 +1874,7 @@ O deslocamento horizontal padrão é de 12 pixels.
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1930,7 +1930,7 @@ TRUE se a cor do texto para a tarefa foi definida com sucesso; caso contrário, 
 
 Define a margem vertical.
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 

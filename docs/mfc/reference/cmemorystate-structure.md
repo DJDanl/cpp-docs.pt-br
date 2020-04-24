@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369997"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752606"
 ---
 # <a name="cmemorystate-structure"></a>Estrutura CMemoryState
 
@@ -79,7 +79,7 @@ Para obter mais informações `CMemoryState` sobre como usar e outros diagnósti
 
 Pega um resumo instantâneo da memória e `CMemoryState` armazena-a neste objeto.
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -137,7 +137,7 @@ O ponto de [verificação](#checkpoint) deve ter sido chamado para cada um dos d
 
 Chama `Dump` a função para todos os objetos de um tipo derivado da classe `CObject` que foram alocados (e ainda estão alocados) desde a última chamada de [Checkpoint](#checkpoint) para este `CMemoryState` objeto.
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -153,7 +153,7 @@ A `DumpAllObjectsSince` chamada com `CMemoryState` um objeto não inicializado d
 
 Imprime um relatório de estatísticas `CMemoryState` de memória concisa de um objeto preenchido pela função [membro Diferença.](#difference)
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 

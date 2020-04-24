@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6073feb5cad5bda5e20f3ff5c16e1ed6d380bca7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373756"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752918"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 
@@ -316,7 +316,7 @@ O exemplo a seguir demonstra como `CFrameWndEx` herdar uma classe da classe. O e
 
 Ajusta o layout do item cliente OLE e a área cliente do quadro.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -380,7 +380,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 Acopla o painel especificado para a janela da moldura.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -498,7 +498,7 @@ O parâmetro *dwDockStyle* pode ter um dos seguintes valores:
 
 Mostra ou esconde o menu principal em um modo de tela cheia.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -511,7 +511,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Habilita o modo de tela cheia para a janela do quadro.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -532,7 +532,7 @@ Se você quiser manter o menu principal na tela, chame [CFrameWndEx::EnableFullS
 
 Habilita ou desativa o carregamento do estado de acoplamento.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
@@ -545,7 +545,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 Ativa ou desativa o manuseio automático do menu do painel.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -1712,7 +1712,7 @@ afx_msg void OnSizing(
 
 Chamado pela estrutura quando as cores do sistema mudam.
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1963,7 +1963,7 @@ Este método é chamado quando o tamanho da janela do quadro foi alterado ou qua
 
 Desregistra um painel e remove-o do gerente de acoplamento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1999,20 +1999,20 @@ A [Classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) lida co
 
 Restaura o layout de acoplamento ao estado de acoplamento armazenado no registro.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estado*<br/>
+*state*<br/>
 O estado de acoplamento. Este parâmetro é ignorado.
 
 ## <a name="cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame
 
 Define a janela do quadro de visualização de impressão.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -2027,7 +2027,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Insere comandos definidos pelo usuário em um menu de barra de ferramentas.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -2053,7 +2053,7 @@ A estrutura armazena comandos definidos pelo usuário em uma lista. Use *uiViewU
 
 Alterna o quadro principal entre o modo de tela cheia e o modo regular.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -2061,7 +2061,7 @@ void ShowFullScreen();
 
 Mostra ou esconde o painel especificado.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -2087,7 +2087,7 @@ void ShowPane(
 
 Chamado pela estrutura para atualizar a legenda do quadro da janela.
 
-```
+```cpp
 void UpdateCaption();
 ```
 

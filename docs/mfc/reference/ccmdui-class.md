@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 5f411890575c07e471b02c423aa42ec5bf51ac0a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3e167d9e305481e05808f5e553222c10abbc88de
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352271"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752734"
 ---
 # <a name="ccmdui-class"></a>Classe CCmdUI
 
@@ -99,7 +99,7 @@ Para obter mais informações sobre o uso desta classe, consulte [Como atualizar
 
 Ligue para esta função de membro para dizer ao mecanismo de roteamento de comando para continuar roteando a mensagem atual pela cadeia de manipuladores.
 
-```
+```cpp
 void ContinueRouting();
 ```
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 1c03f0c62e508f9d00a352b71c8f3a18604e36c0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02b302ec38922128190a6f20ce2f156b52383b55
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367749"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752587"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount Class
 
@@ -90,7 +90,7 @@ Você pode `CMFCCmdUsageCount` persistir dados de classe entre as corridas do se
 
 Incrementos por um o contador que está associado com o comando dado.
 
-```
+```cpp
 void AddCmd(UINT uiCmd);
 ```
 
@@ -179,7 +179,7 @@ Este método retorna 0 se `m_nTotalUsage`o uso total do comando, é 0. Caso cont
 
 Limpa a contagem de uso de todos os comandos.
 
-```
+```cpp
 void Reset();
 ```
 

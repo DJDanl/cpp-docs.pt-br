@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 247072d815b660fcd2cc6c2a1291b618aa6ce2ab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373902"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753145"
 ---
 # <a name="cfiledialog-class"></a>Classe CFileDialog
 
@@ -409,7 +409,7 @@ O nome do menu.
 
 Adiciona uma pasta à lista de lugares disponíveis para o usuário abrir ou salvar itens.
 
-```
+```cpp
 void AddPlace(
     LPCWSTR lpszFolder,
     FDAP fdap = FDAP_TOP) throw();
@@ -506,13 +506,13 @@ O nome do texto.
 
 Atualiza o estado atual do [CFileDialog](../../mfc/reference/cfiledialog-class.md) com base `m_ofn` nos valores armazenados na estrutura de dados.
 
-```
+```cpp
 void ApplyOFNToShellDialog();
 ```
 
 ### <a name="remarks"></a>Comentários
 
-Nas versões do Windows antes do Windows Vista, a estrutura de `CFileDialog`dados DO MEMBRO [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) foi continuamente sincronizada com o estado do . Quaisquer alterações na variável [membro m_ofn](#m_ofn) foram imediatamente refletidas no estado da caixa de diálogo. Além disso, quaisquer alterações no estado da `m_ofn` caixa de diálogo atualizem imediatamente a variável membro.
+Nas versões do Windows antes do Windows Vista, a estrutura de `CFileDialog`dados DO MEMBRO [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) foi continuamente sincronizada com o estado do . Quaisquer alterações na variável [membro m_ofn](#m_ofn) foram imediatamente refletidas no estado da caixa de diálogo. Além disso, quaisquer alterações no estado da `m_ofn` caixa de diálogo atualizem imediatamente a variável membro.
 
 No Windows Vista ou posterior, `m_ofn` os valores `CFileDialog` na variável membro e no estado do não são garantidos para serem sincronizados. Esta função força o `CFileDialog` estado do ser `m_ofn` atualizado para corresponder à estrutura. O Windows chama essa função automaticamente durante [CFileDialog::DoModal](#domodal).
 
@@ -1029,7 +1029,7 @@ Um valor de POSIÇÃO que pode ser usado para iteração; NULO se a lista estive
 
 Chame esta função de membro para ocultar o controle especificado em uma caixa de diálogo aberta ou save as comum no estilo Explorer.
 
-```
+```cpp
 void HideControl(int nID);
 ```
 
@@ -1465,7 +1465,7 @@ Um ou mais valores da enumeração CDCONTROLSTATE que indicam o estado atual do 
 
 Chame este método para definir o texto para o controle especificado em uma caixa de diálogo **Abrir** ou **Salvar como** no estilo Explorer.
 
-```
+```cpp
 void SetControlText(
     int nID,
     LPCSTR lpsz);
@@ -1493,7 +1493,7 @@ Para usar este método, você deve criar a caixa de diálogo com o estilo OFN_EX
 
 Chame esta função para definir a extensão de nome de arquivo padrão para uma caixa de diálogo aberta ou save as comum no estilo Explorer.
 
-```
+```cpp
 void SetDefExt(LPCSTR lpsz);
 ```
 
@@ -1565,7 +1565,7 @@ O ID do item que o usuário selecionou no controle.
 
 Define o modelo da caixa de diálogo para o objeto [CFileDialog.](../../mfc/reference/cfiledialog-class.md)
 
-```
+```cpp
 void SetTemplate(
     UINT nWin3ID,
     UINT nWin4ID);
@@ -1620,13 +1620,13 @@ O nome do grupo.
 
 Atualiza a `m_ofn` estrutura de dados do [CFileDialog](../../mfc/reference/cfiledialog-class.md) com base no estado atual do objeto interno.
 
-```
+```cpp
 void UpdateOFNFromShellDialog();
 ```
 
 ### <a name="remarks"></a>Comentários
 
-Nas versões do Windows antes do Windows Vista, a estrutura de `CFileDialog`dados DO MEMBRO [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) foi continuamente sincronizada com o estado do . Quaisquer alterações na variável [membro m_ofn](#m_ofn) afetaram diretamente o estado da caixa de diálogo. Além disso, qualquer alteração no estado da caixa de diálogo atualizou imediatamente a variável membro m_ofn.
+Nas versões do Windows antes do Windows Vista, a estrutura de `CFileDialog`dados DO MEMBRO [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) foi continuamente sincronizada com o estado do . Quaisquer alterações na variável [membro m_ofn](#m_ofn) afetaram diretamente o estado da caixa de diálogo. Além disso, qualquer alteração no estado da caixa de diálogo atualizou imediatamente a variável membro m_ofn.
 
 No Windows Vista ou `m_ofn` posterior, a estrutura de dados não é atualizada automaticamente. Para garantir a exatidão dos `m_ofn` dados na variável `UpdateOFNFromShellDialog` membro, você deve ligar para a função antes de acessar os dados. O Windows chama essa função automaticamente durante o processamento do [IFileDialog::OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 

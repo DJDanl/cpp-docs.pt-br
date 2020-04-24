@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367528"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752374"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 
@@ -133,7 +133,7 @@ O exemplo a seguir demonstra como `CMFCEditBrowseCtrl` usar `EnableFolderBrowseB
 
 Exibe ou não o botão de navegação no controle de navegação de edição atual.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ Se o parâmetro *bEnable* for TRUE, o `BrowseMode_Default`modo de navegação do
 
 Exibe o botão de navegação no controle de navegação de edição atual e coloca o controle no modo *de navegação de arquivo.*
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ Para obter uma lista completa de sinalizadores disponíveis, consulte [a estrutu
 
 Exibe o botão de navegação no controle de navegação de edição atual e coloca o controle no modo *de navegação da pasta.*
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ Anular esta função em uma classe derivada para personalizar a aparência do bo
 
 Define uma imagem personalizada no botão de navegação do controle de navegação de edição.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);

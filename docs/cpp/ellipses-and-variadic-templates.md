@@ -1,15 +1,15 @@
 ---
-title: Reticências e modelos variadic
+title: Elipse e Modelos Variadic
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366334"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031518"
 ---
-# <a name="ellipses-and-variadic-templates"></a>Reticências e modelos variadic
+# <a name="ellipsis-and-variadic-templates"></a>Elipse e Modelos Variadic
 
 Este artigo mostra como usar reticências (`...`) com modelos variadic de C++. As reticências tiveram muitos usos em C e C++. Eles incluem listas de argumentos variáveis para funções. A função `printf()` da Biblioteca em Runtime C é um dos exemplos mais conhecidos.
 

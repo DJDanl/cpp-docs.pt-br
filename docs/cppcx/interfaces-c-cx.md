@@ -2,12 +2,12 @@
 title: Interfaces (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366035"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032350"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 
@@ -63,7 +63,7 @@ Quando uma classe ref implementa várias interfaces e estas têm métodos cujos 
 
 ## <a name="generic-interfaces"></a>Interfaces genéricas
 
-Em C++/CX, `generic` a palavra-chave é usada para representar um tipo parametrizado do Windows Runtime. Um tipo parametrizado é emitido nos metadados e pode ser consumido pelo código que está escrito em qualquer linguagem que ofereça suporte aos parâmetros de tipo. O Windows Runtime define algumas interfaces genéricas — por exemplo, [Windows::Foundation::Collections::IVector\<T>](/uwp/api/Windows.Foundation.Collections.IVector_T_)— mas não suporta a criação de interfaces genéricas definidas pelo usuário público em C++/CX. No entanto, é possível criar interfaces genéricas privadas.
+Em C++/CX, `generic` a palavra-chave é usada para representar um tipo parametrizado do Windows Runtime. Um tipo parametrizado é emitido nos metadados e pode ser consumido pelo código que está escrito em qualquer linguagem que ofereça suporte aos parâmetros de tipo. O Windows Runtime define algumas interfaces genéricas — por exemplo, [Windows::Foundation::Collections::IVector\<T>](/uwp/api/windows.foundation.collections.ivector-1)— mas não suporta a criação de interfaces genéricas definidas pelo usuário público em C++/CX. No entanto, é possível criar interfaces genéricas privadas.
 
 Veja como os tipos de Tempo de Execução do Windows podem ser usados para criar uma interface genérica:
 

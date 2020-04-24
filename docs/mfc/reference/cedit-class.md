@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373979"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753226"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 
@@ -299,7 +299,7 @@ Para obter mais informações, consulte [EM_CHARFROMPOS](/windows/win32/Controls
 
 Chame esta função para excluir (limpar) a seleção atual (se houver) no controle de edição.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ Para obter mais informações, consulte [WM_CLEAR](/windows/win32/dataxchg/wm-cl
 
 Chame esta função para coyaaa a seleção atual (se houver) no controle de edição para a Área de Transferência em formato CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ Aplique os [seguintes estilos de janela](styles-used-by-mfc.md#window-styles) a 
 
 Chame esta função para excluir (cortar) a seleção atual (se houver) no controle de edição e copie o texto excluído para a Área de Transferência em CF_TEXT formato.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ Para obter mais informações, consulte [WM_CUT](/windows/win32/dataxchg/wm-cut)
 
 Chame esta função para redefinir (limpar) o sinalizador de desfazer de um controle de edição.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ Este método envia a [mensagem EM_GETPASSWORDCHAR,](/windows/win32/Controls/em-g
 
 Chame esta função para obter o retângulo de formatação de um controle de edição.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,7 +793,7 @@ Esta função envia a mensagem [EM_HIDEBALLOONTIP,](/windows/win32/Controls/em-h
 
 Chame esta função para limitar o comprimento do texto que o usuário pode inserir em um controle de edição.
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
@@ -910,7 +910,7 @@ Este método é suportado pela mensagem [EM_LINELENGTH,](/windows/win32/Controls
 
 Chame esta função para rolar o texto de um controle de edição de várias linhas.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ Para obter mais informações, consulte [EM_LINESCROLL](/windows/win32/Controls/
 
 Chame esta função para inserir os dados `CEdit` da Área de Transferência no ponto de inserção.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ Para obter mais informações, consulte [EM_POSFROMCHAR](/windows/win32/Controls
 
 Chame esta função para substituir a seleção atual em um controle de edição com o texto especificado pelo *lpszNewText*.
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ O exemplo a seguir demonstra o método [CEdit::SetCueBanner.](#setcuebanner)
 
 Chame esta função para definir a alça na memória local que será usada por um controle de edição de várias linhas.
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ Para obter mais informações, consulte [EM_SETHANDLE](/windows/win32/Controls/e
 
 Destaca uma gama de texto que é exibido no controle de edição atual.
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ Este método envia a mensagem [EM_SETHILITE,](/windows/win32/Controls/em-sethili
 
 Chame esta função de membro para `CEdit` definir o limite de texto para este objeto.
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ Para obter mais informações, consulte [EM_SETLIMITTEXT](/windows/win32/Control
 
 Chame este método para definir as margens esquerda e direita deste controle de edição.
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ Para obter mais informações, consulte [EM_SETMARGINS](/windows/win32/Controls/
 
 Chame esta função para definir ou limpar o sinalizador modificado para um controle de edição.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ Para obter mais informações, consulte [EM_SETMODIFY](/windows/win32/Controls/e
 
 Chame esta função para definir ou remover um caractere de senha exibido em um controle de edição quando o usuário digita texto.
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ Para obter mais informações, consulte [EM_SETREADONLY](/windows/win32/Controls
 
 Chame esta função para definir as dimensões de um retângulo usando as coordenadas especificadas.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ Para obter mais informações, consulte [EM_SETRECT](/windows/win32/Controls/em-
 
 Chame esta função para definir o retângulo de formatação de um controle de edição de várias linhas.
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ Para obter mais informações, consulte [EM_SETRECTNP](/windows/win32/Controls/e
 
 Chame esta função para selecionar uma gama de caracteres em um controle de edição.
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ Para obter mais informações, consulte [EM_SETSEL](/windows/win32/Controls/em-s
 
 Chame esta função para definir as paradas de guia em um controle de edição de várias linhas.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

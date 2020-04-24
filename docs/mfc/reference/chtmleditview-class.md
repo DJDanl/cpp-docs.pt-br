@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20d4586c1ae45e5f3f56c0adbb1ecb1757084fd7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352074"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752325"
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
 
@@ -106,7 +106,7 @@ Aponta para uma seqüência de caracteres com término nulo que representa o nom
 Especifica os atributos de estilo da janela. Por padrão, os estilos WS_VISIBLE e WS_CHILD do Windows são definidos.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) especificando o tamanho e a posição da janela. O valor *rectDefault* permite que o Windows especifique o tamanho e a posição da nova janela.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) especificando o tamanho e a posição da janela. O valor *rectDefault* permite que o Windows especifique o tamanho e a posição da nova janela.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela pai do controle.

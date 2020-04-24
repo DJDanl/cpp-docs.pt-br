@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372443"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752692"
 ---
 # <a name="cimagelist-class"></a>Classe CImageList
 
@@ -691,13 +691,13 @@ Um ponteiro para o contexto do dispositivo de destino. Você deve excluir este o
 O índice baseado em zero da imagem a ser desenhada.
 
 *pt*<br/>
-Uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) contendo as coordenadas x e y onde a imagem será desenhada.
+Uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) contendo as coordenadas x e y onde a imagem será desenhada.
 
 *Sz*<br/>
 Uma [estrutura SIZE](/windows/win32/api/windef/ns-windef-size) indicando o tamanho da imagem a ser desenhada.
 
 *ptOrigin*<br/>
-Uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) contendo as coordenadas x e y especificando o canto superior esquerdo da operação de desenho em relação à própria imagem. Os pixels da imagem que estão à esquerda da coordenada x e acima da coordenada y não são desenhados.
+Uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) contendo as coordenadas x e y especificando o canto superior esquerdo da operação de desenho em relação à própria imagem. Os pixels da imagem que estão à esquerda da coordenada x e acima da coordenada y não são desenhados.
 
 *Fstyle*<br/>
 Sinalizar especificando o estilo de desenho e, opcionalmente, a imagem de sobreposição. Consulte a seção Observações para obter informações sobre a imagem de sobreposição. A implementação padrão do MFC, ILD_NORMAL, desenha a imagem usando a cor de fundo para a lista de imagens. Se a cor de fundo for o valor CLR_NONE, a imagem será desenhada de forma transparente usando uma máscara.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parâmetros
 
 *Lppoint*<br/>
-Endereço de uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) que recebe a posição de arrasto atual.
+Endereço de uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) que recebe a posição de arrasto atual.
 
 *lpPointHotSpot*<br/>
 Endereço de `POINT` uma estrutura que recebe o deslocamento da imagem de arrasto em relação à posição de arrastar.

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318493"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754415"
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
 
@@ -124,7 +124,7 @@ Para obter mais `CScrollView`informações sobre como usar, consulte [Document/V
 
 Ligue para esta função de membro para determinar se a exibição do pergaminho tem barras horizontais e verticais.
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ Você deve `SetScrollSizes` ligar `SetScaleToFitSize` para um ou antes que a exi
 
 Chamada `FillOutsideRect` para preencher a área da vista que aparece fora da área de rolagem.
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ Este par de coordenadas corresponde ao local no documento para o qual o canto su
 
 `GetDeviceScrollSizes`obtém o modo de mapeamento atual, o tamanho total e os tamanhos de linha e página da exibição rolável.
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ O tamanho total da exibição do pergaminho em unidades lógicas. O tamanho hori
 
 Ligue `ResizeParentToFit` para que o tamanho da sua vista dite o tamanho da janela do quadro.
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ Isso é recomendado apenas para visualizações em janelas de moldura de crianç
 
 Chamada `ScrollToPosition` para rolar para um determinado ponto de vista.
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ A vista será rolada de modo que este ponto esteja no canto superior esquerdo da
 
 Ligue `SetScaleToFitSize` quando quiser dimensionar o tamanho da porta de exibição para o tamanho da janela atual automaticamente.
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ Você normalmente colocará a `SetScaleToFitSize` chamada em sua substituição 
 
 Ligue `SetScrollSizes` quando a vista estiver prestes a ser atualizada.
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372992"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751143"
 ---
 # <a name="property-pages-mfc"></a>Páginas de propriedade (MFC)
 
@@ -49,7 +49,7 @@ A seguir está uma lista de macros usadas para criar e gerenciar páginas de pro
 
 Chame essa função na função `DoDataExchange` da página de propriedade para sincronizar o valor de uma propriedade inteira com o índice da seleção atual em uma caixa de combinação na página da propriedade.
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ Esta função deve ser `DDX_CBIndex` chamada antes da chamada de função corres
 
 Chame essa função na função `DoDataExchange` da página de propriedade para sincronizar o valor de uma propriedade de string com a seleção atual em uma caixa de combinação na página da propriedade.
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ Esta função deve ser `DDX_CBString` chamada antes da chamada de função corre
 
 Chame essa função na função `DoDataExchange` da página de propriedade para sincronizar o valor de uma propriedade de string que corresponde exatamente à seleção atual em uma caixa de combinação na página da propriedade.
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ Esta função deve ser `DDX_CBStringExact` chamada antes da chamada de função 
 
 Chame essa função na função `DoDataExchange` da página de propriedade para sincronizar o valor da propriedade com o controle da caixa de seleção da página de propriedade associada.
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ Esta função deve ser `DDX_Check` chamada antes da chamada de função correspo
 
 Chame essa função na função `DoDataExchange` da página de propriedade para sincronizar o valor de uma propriedade inteira com o índice da seleção atual em uma caixa de lista na página da propriedade.
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ Esta função deve ser `DDX_LBIndex` chamada antes da chamada de função corres
 
 Chame essa função na função `DoDataExchange` da página de propriedade para sincronizar o valor de uma propriedade de string com a seleção atual em uma caixa de lista na página da propriedade.
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ Esta função deve ser `DDX_LBString` chamada antes da chamada de função corre
 
 Chame essa função na função `DoDataExchange` da página de propriedade para sincronizar o valor de uma propriedade de string que corresponde exatamente à seleção atual em uma caixa de lista na página da propriedade.
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ Esta função deve ser `DDX_LBStringExact` chamada antes da chamada de função 
 
 Chame essa função na função `DoDataExchange` da página de propriedade, para concluir a transferência de valores de propriedade da página de propriedade para o seu controle quando os valores da propriedade estiverem sendo salvos.
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ Esta função deve ser chamada depois que todas as funções de troca de dados f
 
 Chame esta função na `DoPropExchange` função do controle para sincronizar o valor da propriedade com o controle do botão de rádio da página de propriedade associada.
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ Esta função deve ser `DDX_Radio` chamada antes da chamada de função correspo
 
 Chame essa função na `DoDataExchange` função do seu controle para sincronizar o valor da propriedade com o controle da página de propriedade associada.
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,

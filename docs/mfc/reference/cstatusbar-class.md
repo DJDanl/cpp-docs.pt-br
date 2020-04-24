@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376254"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753050"
 ---
 # <a name="cstatusbar-class"></a>Classe CStatusBar
 
@@ -271,7 +271,7 @@ O ID do indicador especificado por *nIndex*.
 
 Copia as coordenadas do indicador especificadas por *nIndex* na estrutura apontada por *lpRect*.
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 Índice do indicador cujas coordenadas retângulo devem ser recuperadas.
 
 *Lprect*<br/>
-Aponta para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) ou um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que receberá as coordenadas do indicador especificado por *nIndex*.
+Aponta para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) ou um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que receberá as coordenadas do indicador especificado por *nIndex*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -293,7 +293,7 @@ As coordenadas estão em pixels relativos ao canto superior esquerdo da barra de
 
 Define *nID,* *nStyle*e *cxWidth* para o ID, estilo e largura do painel indicador no local especificado por *nIndex*.
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ Não zero se bem sucedido; caso contrário, 0.
 
 Define o painel indicador especificado como um novo ID, estilo e largura.
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ Os seguintes estilos indicadores são suportados:
 
 Chame esta função de membro para definir o estilo do painel de uma barra de status.
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);

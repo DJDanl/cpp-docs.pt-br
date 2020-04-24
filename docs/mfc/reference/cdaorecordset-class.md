@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377158"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754673"
 ---
 # <a name="cdaorecordset-class"></a>Classe CDaoRecordset
 
@@ -626,7 +626,7 @@ Para obter informações relacionadas, consulte os tópicos "AddNew Method", "Ed
 
 Chame esta função de membro para armazenar um número especificado de registros do conjunto de registros.
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ Para obter informações relacionadas, consulte o tópico "Count Property" no DA
 
 Ligue para esta função de membro para obter informações sobre os campos em um conjunto de registros.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ Para obter informações relacionadas, consulte o tópico "Atribui propriedade" 
 
 Ligue para esta função de membro para obter vários tipos de informações sobre um índice definido na tabela base subjacente a um conjunto de registros.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ Para obter informações relacionadas, consulte os tópicos "Move Method" e "Mov
 
 Chame esta função de membro para fazer o primeiro registro no conjunto de registros (se houver) o registro atual.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ Para obter informações relacionadas, consulte os tópicos "Move Method" e "Mov
 
 Chame esta função de membro para fazer o último registro (se houver) no registrodefinir o registro atual.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ Para obter informações relacionadas, consulte os tópicos "Move Method" e "Mov
 
 Chame esta função de membro para fazer o próximo registro no registrodo registro do registro atual.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ Para obter informações relacionadas, consulte os tópicos "Move Method" e "Mov
 
 Chame esta função de membro para fazer o registro anterior no registro do registro do registro atual.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ Para obter informações relacionadas, consulte o tópico "Buscar método" no DA
 
 Define o número de registro relativo do registro atual de um objeto de conjunto de registros.
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ Para obter informações relacionadas, consulte o tópico "AbsolutePosition Prop
 
 Chame esta função de membro para posicionar o conjunto de registros no registro que contém o marcador especificado.
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ Para obter informações relacionadas, consulte os tópicos "Propriedade de marc
 
 Ligue para esta função de membro para definir o número de registros a serem armazenados em cache.
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ Para obter informações relacionadas, consulte o tópico "CacheSize, CacheStart
 
 Ligue para esta função de membro para especificar o marcador do primeiro registro no conjunto de registros a ser armazenado em cache.
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ Para obter informações relacionadas, consulte o tópico CacheSize, CacheStart 
 
 Ligue para esta função de membro para definir um índice em um conjunto de registros do tipo tabela.
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ Para obter informações relacionadas, consulte o tópico "Objeto de Índice" e 
 
 Chame esta função de membro para sinalizar um membro de dados de campo do conjunto de registros como alterado ou inalterado.
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ Isso significa que você não pode definir todos `outputColumn` os campos de **p
 
 Chame esta função de membro para sinalizar um membro de dados de campo do conjunto de registros como Nulo (especificamente sem valor) ou como não-nulo.
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ Para obter informações relacionadas, consulte os tópicos "Objeto de campo" e 
 
 Chame esta função de membro para definir o campo como um valor nulo.
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ Para obter informações relacionadas, consulte os tópicos "Objeto de campo" e 
 
 Ligue para esta função de membro para definir o tipo de bloqueio para o conjunto de registros.
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2442,7 +2442,7 @@ virtual void SetParamValue(
 *nIndex*<br/>
 A posição numérica do parâmetro na coleção de Parâmetros da consulta.
 
-*Var*<br/>
+*var*<br/>
 O valor a ser definido; ver Observações.
 
 *lpszName*<br/>
@@ -2458,7 +2458,7 @@ Especifique o `COleVariant` valor a ser definido como um objeto. Para obter info
 
 Ligue para esta função de membro para definir o parâmetro como um valor nulo.
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ C++ NULL não é o mesmo que Null, o que, na terminologia do banco de dados, sig
 
 Chame essa função de membro para definir um valor que altera a localização aproximada do registro atual no objeto recordset com base em uma porcentagem dos registros no conjunto de registros.
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 

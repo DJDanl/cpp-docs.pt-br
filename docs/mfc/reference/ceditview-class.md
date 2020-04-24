@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373964"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753190"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 
@@ -259,7 +259,7 @@ Use esta função para determinar a fonte atual da impressora. Se não for a fon
 
 Chamada `GetSelectedText` para copiar o `CString` texto selecionado em um objeto, até o final da seleção ou o caractere que precede o primeiro caractere de retorno de transporte na seleção.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ O `rect.bottom` elemento do objeto *rectLayout* é alterado de modo que as dimen
 
 Ligue `SerializeRaw` para `CArchive` que um objeto leia `CEditView` ou escreva o texto no objeto para um arquivo de texto.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ Referência ao `CArchive` objeto que armazena o texto serializado.
 
 Chamada `SetPrinterFont` para definir a fonte da impressora na fonte especificada por *pFont*.
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ Se você quiser que sua visão use sempre uma `SetPrinterFont` fonte específica
 
 Chame esta função para definir as guias de paradas usadas para exibição e impressão.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ Este fragmento de código define as paradas de guia no controle para cada quarto
 
 Ligue para esta função de membro para desbloquear o buffer.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 

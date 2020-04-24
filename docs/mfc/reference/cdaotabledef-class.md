@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377133"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754694"
 ---
 # <a name="cdaotabledef-class"></a>Classe CDaoTableDef
 
@@ -300,7 +300,7 @@ Para obter informações relacionadas, consulte o tópico "CreateTableDef Method
 
 Chame esta função de membro para adicionar um campo à tabela.
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -373,7 +373,7 @@ Para obter informações relacionadas, consulte o tópico "CreateField Method" n
 
 Chame esta função para adicionar um índice a uma tabela.
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ Os membros restantes serão ignorados se definidos como FALSO. Além disso, `m_l
 
 Chame esta função de membro para remover um campo e torná-lo inacessível.
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ Para obter informações relacionadas, consulte o tópico "Método de exclusão"
 
 Chame esta função de membro para excluir um índice em uma tabela subjacente.
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ Para obter informações relacionadas, consulte o tópico "Count Property" no DA
 
 Ligue para esta função de membro para obter vários tipos de informações sobre um campo definido no tabledef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ Para obter informações relacionadas, consulte o tópico "Count Property" no DA
 
 Ligue para esta função de membro para obter vários tipos de informações sobre um índice definido na tabeladef.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ Um ponteiro para uma seqüência que especifica um nome de tabela.
 
 Ligue para esta função de membro para atualizar as informações de conexão para uma tabela anexada.
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ Para obter informações relacionadas, consulte o tópico "Método De Atualizaç
 
 Define um valor que indica uma `CDaoTableDef` ou mais características de um objeto.
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ Para obter informações relacionadas, consulte o tópico "Atribui propriedade" 
 
 Para `CDaoTableDef` um objeto que representa uma tabela anexada, o objeto de seqüência consiste em uma ou duas partes (um especificador de tipo de banco de dados e um caminho para o banco de dados).
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -894,7 +894,7 @@ Para obter informações relacionadas, consulte o tópico "Conectar propriedade"
 
 Chame esta função de membro para definir um nome definido pelo usuário para uma tabela.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ Para obter informações relacionadas, consulte o tópico "Propriedade de nome" 
 
 Chame esta função de membro para especificar o nome de uma `CDaoTableDef` tabela anexada ou o nome da tabela base na qual o objeto está baseado, como ele existe na fonte original dos dados.
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ Para obter informações relacionadas, consulte o tópico "Propriedade SourceTab
 
 Chame esta função de membro para definir uma regra de validação para um tabledef.
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ Para obter informações relacionadas, consulte o tópico "ValidationRule Proper
 
 Chame esta função de membro para definir o `CDaoTableDef` texto de exceção de uma regra de validação para um objeto com uma tabela base subjacente suportada pelo mecanismo de banco de dados Microsoft Jet.
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 

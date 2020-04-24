@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377045"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755063"
 ---
 # <a name="canimationvariable-class"></a>Classe CAnimationVariable
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 Adiciona uma transição.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ Este método é chamado para adicionar uma transição à lista interna de trans
 
 Adiciona transições da lista interna para storyboard.
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ Constrói um objeto variável de animação e define seu valor padrão. Um valor
 
 Limpa transições.
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ Esse método é chamado pelo framework quando precisa criar transições que for
 
 Ativa ou desativa o evento IntegerValueChanged.
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ Quando o evento ValueChanged está ativado, a estrutura chama o método virtual 
 
 Ativa ou desativa o evento ValueChanged.
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 Define o valor padrão e libera o objeto IUIAnimationVariable COM.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ Use este método para redefinir o valor padrão. Este método libera o objeto In
 
 Define a relação entre uma variável de animação e um objeto de animação.
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 

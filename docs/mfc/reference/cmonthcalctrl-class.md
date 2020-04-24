@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319751"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752824"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Especifica a combinação de estilos do Windows aplicados ao controle do calendário do mês. Consulte [Month Calendar Control Styles](/windows/win32/Controls/month-calendar-control-styles) no Windows SDK para obter mais informações sobre os estilos.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\)) Contém a posição e o tamanho do controle do calendário do mês.
+Uma referência a uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect) Contém a posição e o tamanho do controle do calendário do mês.
 
 *pt*<br/>
-Uma referência a uma estrutura [POINT](/previous-versions/dd162805\(v=vs.85\)) que identifica a localização do controle do calendário do mês.
+Uma referência a uma estrutura [POINT](/windows/win32/api/windef/ns-windef-point) que identifica a localização do controle do calendário do mês.
 
 *Pparentwnd*<br/>
 Um ponteiro para um objeto [CWnd](../../mfc/reference/cwnd-class.md) que é a janela pai do controle do calendário do mês. Não deve ser NULO.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pRect*<br/>
-Um ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que receberá informações delimitadoras do retângulo. Este parâmetro deve ser um endereço válido e não pode ser NULO.
+Um ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que receberá informações delimitadoras do retângulo. Este parâmetro deve ser um endereço válido e não pode ser NULO.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -808,7 +808,7 @@ Este método envia a mensagem [MCM_GETCURRENTVIEW,](/windows/win32/Controls/mcm-
 
 Define a largura da borda do controle do calendário do mês atual.
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
@@ -840,7 +840,7 @@ O exemplo de código a seguir define a largura de borda do controle do calendár
 
 Define a largura padrão da borda do controle do calendário do mês atual.
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -1219,7 +1219,7 @@ Esta função de membro implementa o comportamento da [mensagem](/windows/win32/
 
 Define o controle do calendário para o dia atual.
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Lprect*|[em] Ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que define um retângulo que contém o número desejado de calendários.|
+|*Lprect*|[em] Ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que define um retângulo que contém o número desejado de calendários.|
 
 ### <a name="return-value"></a>Valor retornado
 
-Pointer para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que define um retângulo cujo tamanho é menor ou igual ao retângulo definido pelo parâmetro *lpRect.*
+Pointer para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que define um retângulo cujo tamanho é menor ou igual ao retângulo definido pelo parâmetro *lpRect.*
 
 ### <a name="remarks"></a>Comentários
 

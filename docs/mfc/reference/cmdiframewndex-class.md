@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370042"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754530"
 ---
 # <a name="cmdiframewndex-class"></a>Classe CMDIFrameWndEx
 
@@ -296,7 +296,7 @@ O exemplo a seguir `CMDIFrameWndEx`deriva uma classe de . Este trecho de código
 
 Recalcula o layout do item ativo.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ Um ponteiro para a nova janela.
 
 Acopla o painel especificado para a janela da moldura.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ O exemplo a `EnableDocking` seguir mostra como o método é usado no [VisualStud
 
 Mostra ou esconde o menu principal no modo de tela cheia.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Habilita o modo de tela cheia para a janela do quadro.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ No modo de tela cheia, todas as barras de controle de encaixe, barras de ferrame
 
 Habilita ou desativa o carregamento do estado de acoplamento.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 Ativa ou desativa o recurso de grupos com guias MDI para a janela do quadro.
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ O exemplo a `EnableMDITabbedGroups` seguir mostra como é usado no [VisualStudio
 
 Ativa ou desativa o recurso Guias MDI para a janela do quadro MDI. Quando ativada, a janela do quadro exibe uma guia para cada janela de criança MDI.
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -746,7 +746,7 @@ O exemplo a `EnableMDITabs` seguir mostra como é usado na [amostra MDITabsDemo:
 
 Especifica se a última guia ativa deve ser aberta quando o usuário fecha a guia atual.
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ Use `EnableMDITabsLastActiveActivation` para ativar a segunda forma de ativaçã
 
 Ativa ou desativa a criação e o gerenciamento automáticos do menu pop-up pane, que exibe uma lista de painéis de aplicativos.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ O exemplo a `EnablePaneMenu` seguir mostra como é usado no [VisualStudioDemo Sa
 
 Insere um item de menu cujo ID de comando chama uma caixa de diálogo [CMFCWindowsManagerDialog.](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ O exemplo a `LoadMDIState` seguir mostra como é usado no [VisualStudioDemo Samp
 
 Move a guia ativa da janela de guias ativa atualmente para o próximo ou anterior grupo de guias.
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 Cria um novo grupo com guias que tem uma única janela.
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ Este método substitui [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-c
 
 Desregistra um painel e remove-o do gerente de acoplamento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ O exemplo a `SaveMDIState` seguir mostra como é usado no [VisualStudioDemo Samp
 
 Define a janela do quadro de visualização de impressão.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Modifica um objeto da barra de ferramentas substituindo itens de bonecos por itens definidos pelo usuário.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 Muda o quadro principal do modo regular para o modo de tela cheia.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 Mostra ou esconde o painel especificado.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ O exemplo a `ShowPane` seguir mostra como é usado no [VisualStudioDemo Sample: 
 
 Cria uma caixa [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) e a abre.
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ O exemplo a `TabbedDocumentToControlBar` seguir mostra como é usado no [VisualS
 
 Chamado pela estrutura para atualizar a legenda do quadro da janela.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 Define o ícone para cada painel de guias MDI.
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361935"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754149"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 
@@ -380,7 +380,7 @@ Este método recalcula como desenhar todo o controle da grade da propriedade e s
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ VERDADEIRO se o método for bem sucedido; caso contrário, FALSE.
 
 Ativa ou desativa a área de descrição exibida abaixo da lista de propriedades no controle da grade de propriedade.
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ A área de descrição é exibida na parte inferior do controle da rede de propr
 
 Habilita ou desativa o controle de cabeçalho na parte superior do controle da grade da propriedade.
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ TRUE se a operação de edição terminar com sucesso; FALSO se os dados de prop
 
 Rola um controle de grade de propriedade e expande os itens de propriedade até que a propriedade especificada seja visível.
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 Expande ou colapsa todos os nós de controle da rede de propriedade.
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ Um ponteiro para o objeto de propriedade que corresponde ao item selecionado no 
 
 Recupera as cores personalizadas definidas atualmente para elementos de controle da grade de propriedade.
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1225,7 +1225,7 @@ Use o método [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) para def
 
 Especifica como exibir propriedades modificadas.
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ Por padrão, esse método envia a [mensagem AFX_WM_PROPERTY_CHANGED](../../mfc/r
 
 Chamado pela estrutura quando uma propriedade que contém um controle de caixa combo é selecionada.
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 Remove todos os objetos de propriedade de um controle de grade de propriedade.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 Restaura os valores originais de todas as propriedades.
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 Define ou redefine o modo alfabético.
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ Quando o controle da grade da propriedade está no modo alfabético, o controle 
 
 Especifica o texto dos rótulos booleanos.
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 Seleciona uma propriedade em um controle de grade de propriedade.
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ Use este método para cancelar a seleção do item atual no controle da grade de
 
 Especifica cores personalizadas para vários elementos do controle da grade da propriedade.
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ Para personalizar a aparência de uma propriedade específica, obtenha uma class
 
 Especifica o número de linhas a serem exibidas na seção de descrição do controle atual da grade da propriedade.
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 Especifica se é exibido a largura total do nome da categoria para um grupo de propriedades no controle atual da grade de propriedade.
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ Os termos *nome do grupo* e nome da *categoria* são usados intercambiavelmente 
 
 Define um caractere que é usado como delimitador em uma lista de valores de propriedade.
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ Por padrão, o [construtor CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcprop
 
 Especifica se a estrutura redesenha as colunas de nome e valor do controle da grade de propriedade atual quando um usuário redimensiona as colunas.
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ O usuário pode redimensionar as colunas de nome e valor de um controle de grade
 
 Define a aparência do controle da grade de propriedade para o estilo que é usado no Visual Studio .NET.
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 

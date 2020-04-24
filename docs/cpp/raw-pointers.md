@@ -1,19 +1,26 @@
 ---
 title: Ponteiros brutos (C++)
 description: Como usar ponteiros brutos em C++
-ms.date: 11/19/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 919447fcab123ce6b838391d3cc295fb8a8fe95e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+no-loc:
+- void
+- nullptr
+- const
+- char
+- new
+- delete
+ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374677"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032090"
 ---
 # <a name="raw-pointers-c"></a>Ponteiros brutos (C++)
 
-Um ponteiro é um tipo de variável que armazena o endereço de um objeto na memória e é usado para acessar esse objeto. Um *ponteiro bruto* é um ponteiro cuja vida não é controlada por um objeto encapsulante, como um ponteiro [inteligente](smart-pointers-modern-cpp.md). Um ponteiro bruto pode ser atribuído o endereço de outra variável não-pointer, ou pode ser atribuído um valor de [nullptr](nullptr.md). Um ponteiro que não foi atribuído um valor contém dados aleatórios.
+Um *ponteiro* é um tipo de variável. Ele armazena o endereço de um objeto na memória, e é usado para acessar esse objeto. Um *ponteiro bruto* é um ponteiro cuja vida não é controlada por um objeto encapsulante, como um ponteiro [inteligente](smart-pointers-modern-cpp.md). Um ponteiro bruto pode ser atribuído o endereço de outra variável não-pointer, ou pode ser atribuído um valor de [nullptr](nullptr.md). Um ponteiro que não foi atribuído um valor contém dados aleatórios.
 
 Um ponteiro também pode ser *desreferenciado* para recuperar o valor do objeto que ele aponta. O *operador de acesso ao membro* fornece acesso aos membros de um objeto.
 
@@ -23,19 +30,17 @@ Um ponteiro também pode ser *desreferenciado* para recuperar o valor do objeto 
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
-
 ```
 
-Um ponteiro pode apontar para um objeto digitado ou para **anular**. Quando um programa aloca um novo objeto na [pilha](https://wikipedia.org/wiki/Heap) na memória, ele recebe o endereço desse objeto na forma de um ponteiro. Tais ponteiros são chamados *de ponteiros próprios;* um ponteiro de possuir (ou uma cópia dele) deve ser usado para excluir explicitamente o objeto alocado em pilha quando ele não for mais necessário. A falha em excluir a memória resulta em um *vazamento de memória* e torna o local da memória indisponível para qualquer outro programa na máquina. Para obter mais informações, consulte [operadores novos e excluídos](new-and-delete-operators.md).
+Um ponteiro pode apontar para um **void** objeto digitado ou para . Quando um programa aloca um objeto no [heap](https://wikipedia.org/wiki/Heap) na memória, ele recebe o endereço desse objeto na forma de um ponteiro. Tais ponteiros são chamados *de ponteiros próprios.* Um ponteiro de possuir (ou uma cópia dele) deve ser usado para liberar explicitamente o objeto alocado em pilha quando ele não for mais necessário. A falha em liberar a memória resulta em um vazamento de *memória*e torna o local da memória indisponível para qualquer outro programa na máquina. O uso **new** da memória alocado **delete** deve ser liberado usando (ou ** delete \[]**). Para obter mais informações, consulte [ new delete e operadores](new-and-delete-operators.md).
 
 ```cpp
-
     MyClass* mc = new MyClass(); // allocate object on the heap
     mc->print(); // access class member
     delete mc; // delete object (please don't forget!)
 ```
 
-Um ponteiro (se não for declarado como **const)** pode ser incrementado ou decretado de modo que ele aponte para um novo local na memória. Isso é chamado *de aritmética de ponteiro* e é usado na programação estilo C para iterar sobre elementos em matrizes ou outras estruturas de dados. Um **ponteiro const** não pode ser feito para apontar para um local de memória diferente, e nesse sentido é muito semelhante a uma [referência](references-cpp.md). Para obter mais informações, consulte [ponteiros const e voláteis](const-and-volatile-pointers.md).
+Um ponteiro (se não for **const** declarado como ) pode ser incrementado ou decretado para apontar para outro local na memória. Esta operação é chamada *de aritmética ponteiro*. É usado na programação estilo C para iterar sobre elementos em matrizes ou outras estruturas de dados. Um **const** ponteiro não pode ser feito para apontar para um local de memória diferente, e nesse sentido é semelhante a uma [referência](references-cpp.md). Para obter mais informações, consulte [ const e ponteiros voláteis](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +54,13 @@ Um ponteiro (se não for declarado como **const)** pode ser incrementado ou decr
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-Em sistemas operacionais de 64 bits, um ponteiro tem um tamanho de 64 bits; o tamanho do ponteiro de um sistema determina quanta memória endereçada ele pode ter. Todas as cópias de um ponteiro apontam para o mesmo local de memória. Ponteiros (juntamente com referências) são usados extensivamente em C++ para passar objetos maiores para e de funções, porque geralmente é muito mais eficiente copiar o endereço de 64 bits de um objeto do que copiar um objeto inteiro. Ao definir uma função, especifique os parâmetros do ponteiro como **const,** a menos que você pretenda que a função modifique o objeto. Em geral, as referências **const** são a maneira preferida de passar objetos para funções, a menos que o valor do objeto possa ser **anulado**.
+Em sistemas operacionais de 64 bits, um ponteiro tem um tamanho de 64 bits. O tamanho do ponteiro de um sistema determina quanta memória endereçada ele pode ter. Todas as cópias de um ponteiro apontam para o mesmo local de memória. Ponteiros (juntamente com referências) são usados extensivamente em C++ para passar objetos maiores de e para funções. Isso porque muitas vezes é mais eficiente copiar o endereço de um objeto do que copiar todo o objeto. Ao definir uma função, **const** especifique parâmetros de ponteiro, a menos que você pretenda modificar o objeto. Em geral, **const** as referências são a maneira preferida de passar objetos para funções, a menos que o valor do objeto possa ser **nullptr**.
 
 [Ponteiros para funções](#pointers_to_functions) permitem que as funções sejam passadas para outras funções e são usadas para "retornos de chamada" na programação estilo C. O C++ moderno usa [expressões lambda](lambda-expressions-in-cpp.md) para este fim.
 
 ## <a name="initialization-and-member-access"></a>Inicialização e acesso aos membros
 
-O exemplo a seguir mostra como declarar um ponteiro bruto e inicializá-lo com um objeto alocado no heap e, em seguida, como usá-lo. Também mostra alguns dos perigos associados aos ponteiros brutos. (Lembre-se, esta é a programação estilo C e não a C++!)
+O exemplo a seguir mostra como declarar, inicializar e usar um ponteiro bruto. É inicializado usando **new** para apontar um objeto alocado no heap, **delete** que você deve explicitamente . O exemplo também mostra alguns dos perigos associados aos ponteiros brutos. (Lembre-se, este exemplo é programação estilo C e não C++!)
 
 ```cpp
 #include <iostream>
@@ -119,13 +124,13 @@ int main()
     pmc2->print(); // "Erika, 108"
 
     // Pass the pointer to a function.
-    func_A(mc);
+    func_A(pmc);
     pmc->print(); // "Erika, 3"
     pmc2->print(); // "Erika, 3"
 
     // Dereference the pointer and pass a copy
     // of the pointed-to object to a function
-    func_B(*mc);
+    func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
     delete(pmc); // don't forget to give memory back to operating system!
@@ -166,9 +171,9 @@ int main()
 }
 ```
 
-Certas operações aritméticas podem ser realizadas em ponteiros não const para fazê-los apontar para um novo local de memória. Um ponteiro pode ser incrementado e **++** **+=** decrementado usando os operadores **-=** e **--** operadores. Esta técnica pode ser usada em matrizes e é especialmente útil em buffers de dados não digitados. Um **\* vazio** incrementa pelo tamanho de um **char** (1 byte). Um ponteiro digitado incrementa pelo tamanho do tipo que ele aponta.
+Certas operações aritméticas podemconst ser usadas em não-ponteiros para fazê-los apontar para outro local de memória. Os ponteiros são incrementados e **++** **+=** decretados usando os operadores **-=** e **--** operadores. Esta técnica pode ser usada em matrizes e é especialmente útil em buffers de dados não digitados. A ** void ** é incrementado pelo **char** tamanho de um (1 byte). Um ponteiro digitado é incrementado pelo tamanho do tipo que aponta.
 
-O exemplo a seguir demonstra como a aritmética do ponteiro pode ser usada para acessar pixels individuais em um bitmap no Windows. Observe o uso de **novo** e **exclusão**e o operador de desreferência.
+O exemplo a seguir demonstra como a aritmética do ponteiro pode ser usada para acessar pixels individuais em um bitmap no Windows. Observe o **new** uso **delete** e , e o operador de desreferência.
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>ponteiros vazio*
+## <a name="opno-locvoid-pointers"></a>void* ponteiros
 
-Um ponteiro para **anular** simplesmente aponta para um local de memória bruta. Às vezes é necessário usar ponteiros **\* vazios,** por exemplo, ao passar entre as funções C++ e C.
+Um ponteiro **void** para simplesmente apontar para um local de memória bruta. Às vezes é necessário ** void ** usar ponteiros, por exemplo, ao passar entre as funções C++ e C.
 
-Quando um ponteiro digitado é lançado para um ponteiro vazio, o conteúdo do local de memória não é alterado, mas as informações do tipo são perdidas, de modo que você não pode executar operações de incremento ou decrésia. Um local de memória pode ser lançado, por exemplo, do MyClass* para anular* e voltar para MyClass*. Tais operações são inerentemente propensas a erros e requerem muito cuidado para evitar erros. O C++ moderno desencoraja o uso de ponteiros vazios, a menos que seja absolutamente necessário.
+Quando um ponteiro digitado void é lançado para um ponteiro, o conteúdo do local de memória é inalterado. No entanto, as informações do tipo são perdidas, de modo que você não pode fazer operações de incremento ou decrésia. Um local de memória pode ser `MyClass*` `void*` lançado, por `MyClass*`exemplo, de ida e volta para . Tais operações são inerentemente propensas a erros e requerem muito cuidado para evitar erros. O C++ moderno desencoraja void o uso de ponteiros em quase todas as circunstâncias.
 
 ```cpp
 
@@ -293,7 +298,7 @@ int main()
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Ponteiros para funções
 
-Na programação estilo C, ponteiros de função são usados principalmente para passar funções para outras funções. Neste cenário, o chamador pode personalizar o comportamento de uma função sem modificá-la. No C++moderno, as [expressões lambda](lambda-expressions-in-cpp.md) fornecem a mesma capacidade com maior segurança do tipo e outras vantagens.
+Na programação estilo C, ponteiros de função são usados principalmente para passar funções para outras funções. Esta técnica permite que o chamador personalize o comportamento de uma função sem modificá-la. No C++moderno, as [expressões lambda](lambda-expressions-in-cpp.md) fornecem a mesma capacidade com maior segurança do tipo e outras vantagens.
 
 Uma declaração de ponteiro de função especifica a assinatura que a função apontada para a função deve ter:
 
@@ -311,7 +316,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-O exemplo a `combine` seguir mostra uma função que toma `std::string` como parâmetro `std::string`qualquer função que aceite a e retorne a . Dependendo da função que `combine` é passada para ele irá preparar ou anexar uma seqüência.
+O exemplo a `combine` seguir mostra uma função que toma `std::string` como parâmetro `std::string`qualquer função que aceite a e retorne a . Dependendo da função que é `combine`passada para, ou prepara ou anexa uma seqüência.
 
 ```cpp
 #include <iostream>

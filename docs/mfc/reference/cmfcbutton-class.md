@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367785"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754874"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 Especifica se é para exibir o texto completo de uma dica de ferramenta em uma grande janela de dica de ferramenta ou uma versão truncada do texto em uma pequena janela de dica de ferramenta.
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 Especifica se a fonte de texto do botão é a mesma da fonte do menu do aplicativo.
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ Anular este método para usar seu próprio código para recuperar a fonte.
 
 Define um botão para o modo de repetição automática.
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ Esse método faz com que o botão envie constantemente mensagens WM_COMMAND para
 
 Define a imagem como um botão verificado.
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 Define a cor de fundo do texto do botão.
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ Use este método para definir uma nova cor de preenchimento para o fundo do bot�
 
 Define a imagem como um botão.
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ O exemplo a seguir demonstra como `SetImage` usar `CMFCButton` várias versões 
 
 Define a imagem do cursor.
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ O exemplo a seguir `SetMouseCursor` demonstra como `CMFCButton` usar o método n
 
 Define o cursor à imagem de uma mão.
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ Use este método para associar a imagem do cursor de uma mão com o botão. O cu
 
 Usa `CMenuImages` um objeto para definir a imagem do botão.
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -924,7 +924,7 @@ void SetStdImage(
 *id*<br/>
 [em] Um dos identificadores de imagem do `CMenuImage::IMAGES_IDS` botão que é definido na enumeração. Os valores da imagem especificam imagens como setas, pinos e botões de rádio.
 
-*Estado*<br/>
+*state*<br/>
 [em] Um dos identificadores de estado de `CMenuImages::IMAGE_STATE` imagem do botão que é definido na enumeração. Os estados da imagem especificam cores de botão como preto, cinza, cinza claro, branco e cinza escuro. O valor padrão é `CMenuImages::ImageBlack`.
 
 *idDisabled*<br/>
@@ -936,7 +936,7 @@ void SetStdImage(
 
 Define a cor do texto do botão para um botão que não está selecionado.
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 Define a cor do texto do botão para um botão selecionado.
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 Associa uma dica de ferramenta com um botão.
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 

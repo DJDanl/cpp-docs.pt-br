@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375577"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753329"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -332,7 +332,7 @@ VERDADE se o painel de doca foi criado com sucesso; FALSO de outra forma.
 
 Adiciona uma alça a um painel de barras à lista de painéis de barra mdi escondidos.
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ O parâmetro *dwAlignment* pode ter um dos seguintes valores:
 
 Redimensiona um painel de encaixe no modo de ocultação automática para que ele leve toda a largura ou altura da área cliente do quadro cercada por locais de doca.
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ NULA SE a barra de ferramentas de ocultação automática não for criada; caso 
 
 Traz as barras ancoradas que têm o alinhamento especificado para o topo.
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 Adiciona nomes de painéis de encaixe e barras de ferramentas a um menu.
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 Calcula o retângulo esperado de uma janela ancorada.
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ O status de acoplamento pode ser um dos seguintes valores:
 
 Habilita ou desativa o carregamento do layout de acoplamento do registro.
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ Chame este método quando você deve preservar o layout atual de painéis de enc
 
 Docas um painel para outro painel ou para uma janela de moldura.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ Por padrão, este menu não é exibido.
 
 Diz à biblioteca para exibir um menu de contexto especial que tenha uma lista de barras de ferramentas de aplicativos e painéis de encaixe quando o usuário clica no botão direito do mouse e a biblioteca está processando a mensagem WM_CONTEXTMENU.
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ Um retângulo que contém as bordas externas do quadro.
 
 Retorna uma lista de painéis que pertencem ao gerente de acoplamento. Isso inclui todos os painéis flutuantes.
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ A classe que contém os parâmetros de acoplamento inteligentes para o atual ger
 
 Esconde um painel que está no modo de ocultação automática.
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1221,7 +1221,7 @@ VERDADE se o estado do gerente de acoplamento foi carregado com sucesso; caso co
 
 Bloqueia a janela dada.
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 Chamado pelo framework quando um menu pop-up ativo processa uma mensagem WM_DESTROY.
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ VERDADEIRO se o método for bem sucedido; caso contrário, FALSO.
 
 Chamado pela estrutura quando constrói um menu que tem uma lista de painéis.
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Libera os recipientes vazios do painel.
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 Remove o painel de barra escondido especificado.
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ TRUE se o quadro especificado for removido; FALSO de outra forma.
 
 Desregistra um painel e remove-o da lista no gerenciador de acoplamento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ VERDADE se o painel for substituído com sucesso; FALSO de outra forma.
 
 Recorre os quadros na lista de mini quadros.
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ VERDADE sempre.
 
 Escreve o gerente de ancoragem para um arquivo.
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ Escrever o gerenciador de encaixe em um arquivo envolve determinar o número de 
 
 Define o tamanho, largura e altura das barras de controle e do painel especificado.
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 Define o modo de visualização de impressão das barras exibidas na visualização de impressão.
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ Para usar a aparência padrão de marcadores de encaixe inteligentes, passe uma 
 
 Mostra ou esconde as janelas dos mini quadros.
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ Sempre FALSE.
 
 Inicia o acoplamento inteligente da janela especificada de acordo com o alinhamento do gerenciador de acoplamento inteligente.
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 Impede o acoplamento inteligente.
 
-```
+```cpp
 void StopSDocking();
 ```
 

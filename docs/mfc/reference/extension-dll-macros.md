@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365697"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751591"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macros e funções para gerenciamento de DLLs
 
@@ -91,7 +91,7 @@ Para obter suporte ao OLE de uma DLL MFC regular que esteja dinamicamente `CWinA
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ Para o suporte a Soquetes MFC de uma DLL MFC regular que está dinamicamente `CW
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -193,7 +193,7 @@ BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModul
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estado*<br/>
+*state*<br/>
 Uma referência à estrutura [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) estrutura que conterá o estado do módulo DLL de extensão MFC após a inicialização. O estado inclui uma cópia dos objetos de classe de tempo de execução que foram inicializados `DllMain` pela extensão MFC DLL como parte da construção normal de objetos estáticos executadas antes de ser inserida.
 
 *Hmodule*<br/>
@@ -244,7 +244,7 @@ Use esta função para definir a bandeira de estado por módulo, que afeta o com
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,13 +279,13 @@ Chame esta função para permitir que o MFC limpe a dLL de extensão MFC quando 
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estado*<br/>
+*state*<br/>
 Uma referência à estrutura [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) que contém o estado do módulo DLL de extensão MFC.
 
 *Bola*<br/>

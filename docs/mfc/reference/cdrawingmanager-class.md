@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374024"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753229"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 
@@ -157,7 +157,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Parâmetro|Descrição|
-|*Tamanho*|[em] Um [parâmetro CSize](../../atl-mfc-shared/reference/csize-class.md) que indica o tamanho do bitmap.|
+|*size*|[em] Um [parâmetro CSize](../../atl-mfc-shared/reference/csize-class.md) que indica o tamanho do bitmap.|
 |*pBits*|[fora] Um ponteiro para um ponteiro de dados que recebe a localização dos valores de bit do DIB.|
 |*Bitmap*|Uma alça para o bitmap original|
 |*clrTransparent*|Um valor RGB especificando a cor transparente do bitmap original.|
@@ -174,7 +174,7 @@ Para obter mais informações sobre como criar um bitmap DIB, consulte [CreateDI
 
 Exibe bitmaps que possuem pixels transparentes ou semitransparentes.
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ Este método executa a mistura alfa para dois bitmaps. Para obter mais informaç
 
 Desenha uma elipse com as cores de enchimento e borda fornecidas.
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ O retângulo definido por *reto* deve ter pelo menos 5 pixels de largura e 5 pix
 
 Desenha uma linha.
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ Este método falha se *clrLine* for igual a -1.
 
 Desenha um retângulo com as cores de enchimento e borda fornecidas.
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ O exemplo a seguir `DrawShadow` demonstra como `CDrawingManager` usar o método 
 
 Preenche uma área retangular com dois gradientes de cor.
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ Este método gera uma falha de afirmação se *nPercentage* for menor que 0 ou m
 
 Preenche uma área retangular com o gradiente de cor especificado.
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ O exemplo a seguir `FillGradient` demonstra como `CDrawingManager` usar o métod
 
 Preenche uma área retangular com um gradiente de cor especificado.
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -737,7 +737,7 @@ Para converter uma cor HSV ou HSL em uma representação RGB, ligue para um dos 
 
 Vira uma área retangular.
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -1012,7 +1012,7 @@ A razão ponderada é calculada com \* a seguinte fórmula: (color1 k1 + color2 
 
 Gira um conteúdo DC de origem dentro do retângulo dado em 90 graus.
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,

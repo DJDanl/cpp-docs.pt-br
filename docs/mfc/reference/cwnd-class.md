@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 12ba4cc28d94cbc2961475944c62d2e942b20c05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2ea240ba736c95026b2b6d2af45296245881bab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365941"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751716"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1576,7 +1576,7 @@ Não ligue `BeginPaint` para a função de membro, exceto em resposta a uma [men
 
 Vincula a propriedade padrão do objeto de chamada (como um controle de edição), conforme marcado na biblioteca do tipo, ao cursor subjacente definido pelas propriedades DataSource, UserName, Password e SQL do controle de origem de dados.
 
-```
+```cpp
 void BindDefaultProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -1612,7 +1612,7 @@ O `CWnd` objeto no qual você chama esta função deve ser um controle vinculado
 
 Vincula uma propriedade vinculada ao cursor em um controle vinculado a dados (como um controle de grade) a um controle de origem de dados e registra essa relação com o gerenciador de vinculação do MFC.
 
-```
+```cpp
 void BindProperty(
     DISPID dwDispId,
     CWnd* pWndDSC);
@@ -1640,7 +1640,7 @@ O `CWnd` objeto no qual você chama esta função deve ser um controle vinculado
 
 Coloca `CWnd` no topo de uma pilha de janelas sobrepostas.
 
-```
+```cpp
 void BringWindowToTop();
 ```
 
@@ -1708,7 +1708,7 @@ TRUE para cancelar as dicas da ferramenta quando uma tecla é pressionada e defi
 
 Centraliza uma janela em relação ao seu pai.
 
-```
+```cpp
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
@@ -1746,7 +1746,7 @@ Não zero se bem sucedido; caso contrário, 0.
 
 Seleciona (coloca uma marca de seleção ao lado) ou limpa (remove uma marca de seleção de) um botão, ou altera o estado de um botão de três estados.
 
-```
+```cpp
 void CheckDlgButton(
     int nIDButton,
     UINT nCheck);
@@ -1772,7 +1772,7 @@ A `CheckDlgButton` função envia uma [mensagem BM_SETCHECK](/windows/win32/Cont
 
 Seleciona (adiciona uma marca de verificação a) um determinado botão de rádio em um grupo e limpa (remove uma marca de verificação) todos os outros botões de rádio do grupo.
 
-```
+```cpp
 void CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
@@ -1843,7 +1843,7 @@ O `CWnd`* que for devolvido pode ser temporário e não deve ser armazenado para
 
 Converte as coordenadas do cliente de um determinado ponto ou retângulo no visor em coordenadas de tela.
 
-```
+```cpp
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
@@ -1869,7 +1869,7 @@ A `ClientToScreen` função membro pressupõe que o ponto ou retângulo dado est
 
 Minimiza a janela.
 
-```
+```cpp
 void CloseWindow();
 ```
 
@@ -1984,7 +1984,7 @@ Cria um proxy de acessibilidade ativa para o objeto especificado.
 
 Cria uma nova forma para o cuidado do sistema e reivindica a propriedade do cuidador.
 
-```
+```cpp
 void CreateCaret(CBitmap* pBitmap);
 ```
 
@@ -2207,7 +2207,7 @@ O método [CWnd::OnCreate](#oncreate) é `CreateEx` chamado antes do método ret
 
 Cria um retângulo cinza para o cuidado do sistema e reivindica a propriedade do cuidador.
 
-```
+```cpp
 void CreateGrayCaret(
     int nWidth,
     int nHeight);
@@ -2241,7 +2241,7 @@ O caret do sistema é um recurso compartilhado. `CWnd`deve criar um caret soment
 
 Cria um retângulo sólido para o cuidado do sistema e reivindica a propriedade do cuidador.
 
-```
+```cpp
 void CreateSolidCaret(
     int nWidth,
     int nHeight);
@@ -2316,7 +2316,7 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem do Windows a ser processada.
 
 *wParam*<br/>
@@ -2373,7 +2373,7 @@ Se a janela for o pai de qualquer janela, essas janelas da criança serão autom
 
 A `DestroyWindow` função membro também destrói caixas de diálogo modeless criadas por [CDialog::Create](../../mfc/reference/cdialog-class.md#create).
 
-Se `CWnd` o ser destruído for uma janela de criança e não tiver o [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) conjunto de estilos, então a [mensagem WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) é enviada para o pai.
+Se `CWnd` o ser destruído for uma janela de criança e não tiver o [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) conjunto de estilos, então a [mensagem WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify) é enviada para o pai.
 
 ### <a name="example"></a>Exemplo
 
@@ -2626,7 +2626,7 @@ Para obter mais informações sobre troca e validação de dados de diálogo, co
 
 Chame essa função de membro de `CWnd` dentro de uma janela, usando um ponteiro, na função [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) do aplicativo para indicar que a janela aceita arquivos descartados do Gerenciador de Arquivos do Windows ou do Explorador de Arquivos.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -2681,10 +2681,10 @@ BOOL DrawAnimatedRects(
 Especifica o tipo de animação. Se você especificar IDANI_CAPTION, a legenda da janela se animará da posição especificada por *lprcFrom* para a posição especificada por *lprcTo*. O efeito é semelhante à minimização ou maximização de uma janela.
 
 *lprcFrom*<br/>
-Ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) especificando o local e o tamanho do ícone ou janela minimizada.
+Ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) especificando o local e o tamanho do ícone ou janela minimizada.
 
 *lprcTo*<br/>
-Ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) especificando a localização e o tamanho da janela restaurada
+Ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) especificando a localização e o tamanho da janela restaurada
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -2728,7 +2728,7 @@ Esta função de membro emula a funcionalidade da função [DrawCaption](/window
 
 Redesenha a barra de menu.
 
-```
+```cpp
 void DrawMenuBar();
 ```
 
@@ -2744,7 +2744,7 @@ Se uma barra de menu for alterada depois que o Windows tiver criado a janela, ch
 
 Habilita funções de acessibilidade ativa definidas pelo usuário.
 
-```
+```cpp
 void EnableActiveAccessibility();
 ```
 
@@ -2756,7 +2756,7 @@ O suporte padrão de acessibilidade ativa do MFC é suficiente para janelas e co
 
 Habilita ou desativa o gerenciador de layout dinâmico. Quando o layout dinâmico é ativado, a posição e o tamanho das janelas filho podem ajustar dinamicamente quando o usuário redimensiona a janela.
 
-```
+```cpp
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
@@ -2773,7 +2773,7 @@ Se você quiser ativar o layout dinâmico, você tem que fazer mais do que apena
 
 Ativa ou desativa o suporte d2D da janela. Chame este método antes que a janela principal seja inicializada.
 
-```
+```cpp
 void EnableD2DSupport(
     BOOL bEnable = TRUE,
     BOOL bUseDCRenderTarget = FALSE);
@@ -2827,7 +2827,7 @@ Não zero se as setas estiverem habilitadas ou desativadas conforme especificado
 
 Ativa ou desativa a barra de rolagem para esta janela.
 
-```
+```cpp
 void EnableScrollBarCtrl(
     int nBar,
     BOOL bEnable = TRUE);
@@ -2966,7 +2966,7 @@ virtual void EndModalState();
 
 Marca o fim da pintura na janela dada.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
@@ -3014,7 +3014,7 @@ TRUE se um recurso de diálogo for executado; caso contrário, FALSO.
 
 Chamado pela estrutura para exibir mensagens de dica da ferramenta.
 
-```
+```cpp
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
@@ -3699,7 +3699,7 @@ ID do botão de rádio verificado, ou 0 se nenhum for selecionado.
 
 Copia as coordenadas `CWnd` do cliente da área do cliente para a estrutura apontada pelo *lpRect*.
 
-```
+```cpp
 void GetClientRect(LPRECT lpRect) const;
 ```
 
@@ -4460,7 +4460,7 @@ Em contraste, a função [GetParent](#getparent) retorna um ponteiro para o pai 
 
 Chame esta função de membro para obter a propriedade de controle ActiveX especificada por *dwDispID*.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -4685,7 +4685,7 @@ A posição atual é um valor relativo que depende da faixa de rolagem atual. Po
 
 Copia as posições atuais de barra de rolagem mínima e máxima para a barra de rolagem dada para os locais especificados por *lpMinPos* e *lpMaxPos*.
 
-```
+```cpp
 void GetScrollRange(
     int nBar,
     LPINT lpMinPos,
@@ -5050,7 +5050,7 @@ O `flags` membro da estrutura [WINDOWPLACEMENT](/windows/win32/api/winuser/ns-wi
 
 Copia as dimensões do retângulo `CWnd` delimitador do objeto para a estrutura apontada por *lpRect*.
 
-```
+```cpp
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
@@ -5160,7 +5160,7 @@ Esta função membro [WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) 
 
 Esconde o cuidado removendo-o da tela de exibição.
 
-```
+```cpp
 void HideCaret();
 ```
 
@@ -5234,7 +5234,7 @@ Consulte [CWinApp::HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp) para
 
 Chamado pela estrutura para inicializar o layout dinâmico para uma janela.
 
-```
+```cpp
 void InitDynamicLayout();
 ```
 
@@ -5246,7 +5246,7 @@ Não chame este método diretamente.
 
 Invalida toda a `CWnd`área do cliente de .
 
-```
+```cpp
 void Invalidate(BOOL bErase = TRUE);
 ```
 
@@ -5271,7 +5271,7 @@ O Windows [WM_PAINT](#onpaint) envia uma `CWnd` mensagem WM_PAINT sempre que a r
 
 Invalida a área do cliente dentro do retângulo `CWnd` dado adicionando esse retângulo à região de atualização.
 
-```
+```cpp
 void InvalidateRect(
     LPCRECT lpRect,
     BOOL bErase = TRUE);
@@ -5297,7 +5297,7 @@ O Windows [WM_PAINT](#onpaint) envia uma `CWnd` mensagem WM_PAINT sempre que a r
 
 Invalida a área do cliente dentro da determinada região `CWnd`adicionando-a à região de atualização atual de .
 
-```
+```cpp
 void InvalidateRgn(
     CRgn* pRgn,
     BOOL bErase = TRUE);
@@ -5325,7 +5325,7 @@ A determinada região deve ter sido previamente criada por uma das funções da 
 
 Chame esta função de membro para invocar o método activeX control ou propriedade especificada por *dwDispID*, no contexto especificado por *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -5623,7 +5623,7 @@ O `m_hWnd` membro de dados é uma variável pública do tipo HWND.
 
 Converte (mapas) um conjunto de pontos `CWnd` do espaço de coordenadas do espaço de coordenadas para o espaço de coordenadade outra janela.
 
-```
+```cpp
 void MapWindowPoints(
     CWnd* pwndTo,
     LPRECT lpRect) const;
@@ -5790,7 +5790,7 @@ Para modificar janelas usando estilos de janela regulares, consulte [ModifyStyle
 
 Muda a posição e as dimensões.
 
-```
+```cpp
 void MoveWindow(
     int x,
     int y,
@@ -5837,7 +5837,7 @@ A `MoveWindow` função envia a mensagem [WM_GETMINMAXINFO.](#ongetminmaxinfo) O
 
 Sinaliza o sistema que ocorreu um evento predefinido. Se algum aplicativo cliente tiver registrado uma função de gancho para o evento, o sistema chama a função de gancho do cliente.
 
-```
+```cpp
 void NotifyWinEvent(
     DWORD event,
     LONG idObjectType,
@@ -5846,7 +5846,7 @@ void NotifyWinEvent(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Evento*<br/>
+*event*<br/>
 Especifica o evento que ocorreu. Esse valor deve ser uma das constantes do [evento.](/windows/win32/WinAuto/event-constants)
 
 *idObjectType*<br/>
@@ -6195,7 +6195,7 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Um número de mensagem do Windows enviado para uma janela dos pais.
 
 *wParam*<br/>
@@ -7915,7 +7915,7 @@ Especifica um ponteiro para a janela pai de nível superior da janela que está 
 *nHitTest*<br/>
 Especifica o código de área [de teste de hit.](#onnchittest) Um teste de acerto é um teste que determina a localização do cursor.
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica o número da mensagem do mouse.
 
 ### <a name="return-value"></a>Valor retornado
@@ -8579,7 +8579,7 @@ Este método recebe a notificação [WM_DWMNCRENDERINGCHANGED,](/windows/win32/d
 
 A estrutura chama essa função de membro quando o usuário clica duas vezes em XBUTTON1 ou XBUTTON2 enquanto o cursor está na área não cliente de uma janela.
 
-```
+```cpp
 void OnNcXButtonDblClk(
     short nHitTest,
     UINT nButton,
@@ -8849,7 +8849,7 @@ afx_msg void OnParentNotify(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica o evento para o qual o pai está sendo notificado e o identificador da janela filho. O evento é a palavra de baixa ordem da *mensagem.* Se o evento for WM_CREATE ou WM_DESTROY, a palavra de *mensagem* de alta ordem é o identificador da janela da criança; caso contrário, a palavra de alta ordem é indefinida. O evento (palavra de baixa ordem de *mensagem)* pode ser qualquer um desses valores:
 
 - WM_CREATE A janela da criança está sendo criada.
@@ -9219,7 +9219,7 @@ Especifica um ponteiro para a janela que contém o cursor. O ponteiro pode ser t
 *nHitTest*<br/>
 Especifica o código de área [de teste de hit.](#onnchittest) O teste de acerto determina a localização do cursor.
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica o número da mensagem do mouse.
 
 ### <a name="return-value"></a>Valor retornado
@@ -10267,7 +10267,7 @@ virtual BOOL OnWndMsg(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem a ser enviada.
 
 *wParam*<br/>
@@ -10497,7 +10497,7 @@ BOOL PostMessage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem a ser postada.
 
 *wParam*<br/>
@@ -10601,7 +10601,7 @@ Não zero se a mensagem foi traduzida e não deve ser despachada; 0 se a mensage
 
 Chame esta função de membro para desenhar a janela atual no contexto do dispositivo especificado, o que é mais comumente em um contexto de dispositivo de impressora.
 
-```
+```cpp
 void Print(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10647,7 +10647,7 @@ Especifica as opções de desenho. Este parâmetro pode ser uma ou mais dessas b
 
 Chame esta função de membro para desenhar qualquer janela no contexto especificado do dispositivo (geralmente um contexto de dispositivo de impressora).
 
-```
+```cpp
 void PrintClient(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10773,7 +10773,7 @@ BOOL ReflectChildNotify(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem a ser refletida.
 
 *wParam*<br/>
@@ -10852,7 +10852,7 @@ O aplicativo deve `ReleaseDC` chamar a função de membro para cada chamada para
 
 Chamado para reposicionar e redimensionar barras de controle na área cliente de uma janela.
 
-```
+```cpp
 void RepositionBars(UINT nIDFirst,
     UINT nIDLast,
     UINT nIDLeftOver,
@@ -10926,7 +10926,7 @@ Por padrão, `ContinueModal` retorna `EndModalLoop` FALSE depois é chamado. Ret
 
 Converte as coordenadas de tela de um determinado ponto ou retângulo no visor em coordenadas do cliente.
 
-```
+```cpp
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
@@ -10950,7 +10950,7 @@ A `ScreenToClient` função de membro substitui as coordenadas de tela dadas em 
 
 Rola o conteúdo da área cliente `CWnd` do objeto atual.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -11082,7 +11082,7 @@ LRESULT SendDlgItemMessage(
 *nID*<br/>
 Especifica o identificador do controle de diálogo que receberá a mensagem.
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem a ser enviada.
 
 *wParam*<br/>
@@ -11118,7 +11118,7 @@ LRESULT SendMessage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem a ser enviada.
 
 *wParam*<br/>
@@ -11143,7 +11143,7 @@ A `SendMessage` função membro chama o procedimento de janela diretamente e nã
 
 Ligue para esta função de membro para enviar a mensagem especificada do Windows para todas as janelas descendentes.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -11154,7 +11154,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem a ser enviada.
 
 *wParam*<br/>
@@ -11192,7 +11192,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem a ser enviada.
 
 *wParam*<br/>
@@ -11313,7 +11313,7 @@ A janela pode ser qualquer janela de criança, não apenas um controle em uma ca
 
 Define o texto de um determinado controle em uma caixa de diálogo para a representação de seqüência de stringde de um valor inteiro especificado.
 
-```
+```cpp
 void SetDlgItemInt(
     int nID,
     UINT nValue,
@@ -11343,7 +11343,7 @@ Especifica se o valor inteiro está assinado ou não assinado. Se este parâmetr
 
 Define a legenda ou texto de um controle de propriedade de uma janela ou caixa de diálogo.
 
-```
+```cpp
 void SetDlgItemText(
     int nID,
     LPCTSTR lpszString);
@@ -11409,7 +11409,7 @@ Se a janela atual estiver ativa, mas não tiver o foco (ou seja, nenhuma janela 
 
 Envia a mensagem WM_SETFONT para a janela para usar a fonte especificada.
 
-```
+```cpp
 void SetFont(
     CFont* pFont,
     BOOL bRedraw = TRUE);
@@ -11518,7 +11518,7 @@ Faz com que a janela seja redesenhada para refletir a alteração do menu.
 
 Define o proprietário da janela atual para o objeto de janela especificado.
 
-```
+```cpp
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
@@ -11560,7 +11560,7 @@ Se a janela filho estiver visível, o Windows realizará o redesenho e a repintu
 
 Chame esta função de membro para definir a propriedade de controle OLE especificada por *dwDispID*.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -11588,7 +11588,7 @@ Para obter mais informações sobre como usar esta função membro com os contê
 
 Um aplicativo `SetRedraw` chama para permitir que as alterações sejam redesenhadas ou para evitar que as alterações sejam redesenhadas.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
@@ -11684,7 +11684,7 @@ A configuração *do bRedraw* para FALSE é útil sempre que a barra de rolagem 
 
 Define valores mínimos e máximos de posição para a barra de rolagem dada.
 
-```
+```cpp
 void SetScrollRange(
     int nBar,
     int nMinPos,
@@ -11755,7 +11755,7 @@ Um valor de intervalo é especificado e toda vez que o intervalo transversimento
 
 A função de retorno de chamada *lpfnTimer* não precisa ser nomeada, `TimerProc`mas deve ser declarada como estática e definida da seguinte forma.
 
-```
+```cpp
 void CALLBACK TimerProc(
     HWND hWnd,   // handle of CWnd that called SetTimer
     UINT nMsg,   // WM_TIMER
@@ -11949,7 +11949,7 @@ Após uma chamada `SetWindowRgn`bem sucedida para , o sistema operacional possui
 
 Define o título da janela para o texto especificado.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
@@ -11972,7 +11972,7 @@ Esta função faz com que uma mensagem [WM_SETTEXT](/windows/win32/winmsg/wm-set
 
 Mostra o cuidado na tela na posição atual do caret.
 
-```
+```cpp
 void ShowCaret();
 ```
 
@@ -11994,7 +11994,7 @@ O caret é um recurso compartilhado. A janela deve mostrar o cuidado somente qua
 
 Mostra ou esconde todas as janelas pop-up de propriedade desta janela.
 
-```
+```cpp
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
@@ -12011,7 +12011,7 @@ Especifica se as janelas pop-up devem ser mostradas ou ocultas. Se este parâmet
 
 Mostra ou esconde uma barra de rolagem.
 
-```
+```cpp
 void ShowScrollBar(
     UINT nBar,
     BOOL bShow = TRUE);
@@ -12146,7 +12146,7 @@ Esta função de membro anexa `CWnd` o controle do Windows `WndProc` a `AfxWndPr
 
 Chame esta função de membro para `CWnd::LockWindowUpdate`desbloquear uma janela que estava bloqueada com .
 
-```
+```cpp
 void UnlockWindowUpdate();
 ```
 
@@ -12195,7 +12195,7 @@ O framework é `UpdateData` call automaticamente com *bSaveAndValidate* definido
 
 Ligue para esta função de membro para atualizar o estado dos botões de diálogo e outros controles em uma caixa de diálogo ou janela que usa o mecanismo de retorno de chamada [ON_UPDATE_COMMAND_UI.](message-map-macros-mfc.md#on_update_command_ui)
 
-```
+```cpp
 void UpdateDialogControls(
     CCmdTarget* pTarget,
     BOOL bDisableIfNoHndler);
@@ -12275,7 +12275,7 @@ Esta função de membro emula a funcionalidade da função [UpdateLayeredWindow]
 
 Atualiza a área do cliente enviando uma [mensagem WM_PAINT](/windows/win32/gdi/wm-paint) se a região de atualização não estiver vazia.
 
-```
+```cpp
 void UpdateWindow();
 ```
 
@@ -12291,7 +12291,7 @@ A `UpdateWindow` função de membro envia uma mensagem WM_PAINT diretamente, ign
 
 Valida a área do cliente no retângulo dado removendo o retângulo da região de atualização da janela.
 
-```
+```cpp
 void ValidateRect(LPCRECT lpRect);
 ```
 
@@ -12310,7 +12310,7 @@ O Windows continua a gerar mensagens WM_PAINT até que a região de atualizaçã
 
 Valida a área do cliente dentro da determinada região removendo a região da região de atualização atual da janela.
 
-```
+```cpp
 void ValidateRgn(CRgn* pRgn);
 ```
 
@@ -12359,7 +12359,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica a mensagem do Windows a ser processada.
 
 *wParam*<br/>

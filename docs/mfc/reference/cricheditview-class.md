@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2d832f3cc07d39ace9e679901c5344a376cea03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b72daac576411b45908d1e91bd86bbd9aeacf738
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318633"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754458"
 ---
 # <a name="cricheditview-class"></a>Classe CRichEditView
 
@@ -218,7 +218,7 @@ Para um exemplo de usar uma exibição de edição rica em um aplicativo MFC, co
 
 Chame esta função para mover a caixa de diálogo dada para que ela não obscureça a seleção atual.
 
-```
+```cpp
 void AdjustDialogPosition(CDialog* pDlg);
 ```
 
@@ -251,7 +251,7 @@ CRichEditView();
 
 Chame esta função para colar o item OLE no *dataobj* neste documento/exibição de edição rica.
 
-```
+```cpp
 void DoPaste(
     COleDataObject& dataobj,
     CLIPFORMAT cf,
@@ -643,7 +643,7 @@ O número de caracteres ou bytes no controle de edição. Se as bandeiras incomp
 
 Chame essa função para inserir o arquivo especificado (como um objeto [CRichEditCntrItem)](../../mfc/reference/cricheditcntritem-class.md) em uma exibição de edição rica.
 
-```
+```cpp
 void InsertFileAsObject(LPCTSTR lpszFileName);
 ```
 
@@ -745,7 +745,7 @@ Um dos seguintes valores:
 
 Chame esta função para alternar os efeitos de formatação de caracteres para a seleção atual.
 
-```
+```cpp
 void OnCharEffect(
     DWORD dwMask,
     DWORD dwEffect);
@@ -844,7 +844,7 @@ Para obter mais informações, consulte [IStorage](/windows/win32/api/objidl/nn-
 
 Chame esta função para alterar o alinhamento de parágrafos para os parágrafos selecionados.
 
-```
+```cpp
 void OnParaAlign(WORD wAlign);
 ```
 
@@ -975,7 +975,7 @@ Para obter mais informações, consulte [MessageBeep](/windows/win32/api/winuser
 
 A estrutura chama essa função para atualizar a ui de comando para comandos de efeito de caractere.
 
-```
+```cpp
 void OnUpdateCharEffect(
     CCmdUI* pCmdUI,
     DWORD dwMask,
@@ -1007,7 +1007,7 @@ Para obter mais informações sobre os parâmetros *dwMask* e *dwEffect* e seus 
 
 A estrutura chama essa função para atualizar a ui de comando para comandos de efeito de parágrafo.
 
-```
+```cpp
 void OnUpdateParaAlign(
     CCmdUI* pCmdUI,
     WORD wAlign);
@@ -1153,7 +1153,7 @@ Para obter mais informações `IDataObject`sobre HRESULT e , consulte [Estrutura
 
 Chame esta função para definir os atributos `CRichEditView` de formatação de caracteres para novo texto neste objeto.
 
-```
+```cpp
 void SetCharFormat(CHARFORMAT2 cf);
 ```
 
@@ -1176,7 +1176,7 @@ Para obter mais informações, consulte [EM_SETCHARFORMAT](/windows/win32/Contro
 
 Chame esta função para definir as margens de impressão para esta exibição de edição rica.
 
-```
+```cpp
 void SetMargins(const CRect& rectMargin);
 ```
 
@@ -1199,7 +1199,7 @@ Observe que as margens usadas pelo [PrintPage](#printpage) são relativas à pá
 
 Chame esta função para definir o tamanho do papel para imprimir esta rica exibição de edição.
 
-```
+```cpp
 void SetPaperSize(CSize sizePaper);
 ```
 
@@ -1247,7 +1247,7 @@ Para obter mais informações, consulte [EM_SETPARAFORMAT](/windows/win32/Contro
 
 Chame esta função para redefinir o estado de pesquisa interna do controle [CRichEditView](../../mfc/reference/cricheditview-class.md) após uma chamada com falha no [FindText](#findtext).
 
-```
+```cpp
 void TextNotFound(LPCTSTR lpszFind);
 ```
 

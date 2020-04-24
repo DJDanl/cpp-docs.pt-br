@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c492c806d64b1cfe0e4f73b3bb880ec7bd0a7e80
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377109"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754664"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -213,7 +213,7 @@ Para obter informações relacionadas, consulte o tópico "Método de apêndice"
 
 Ligue para esta função de membro para iniciar uma transação.
 
-```
+```cpp
 void BeginTrans();
 ```
 
@@ -272,7 +272,7 @@ Para obter informações relacionadas, consulte o tópico "Close Method" no DAO 
 
 Ligue para essa função de membro para cometer uma transação — salve um grupo de edições e atualizações em um ou mais bancos de dados no espaço de trabalho.
 
-```
+```cpp
 void CommitTrans();
 ```
 
@@ -437,7 +437,7 @@ O número de bancos de dados abertos no espaço de trabalho.
 
 Ligue para esta função de membro para obter vários tipos de informações sobre um banco de dados aberto no espaço de trabalho.
 
-```
+```cpp
 void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
@@ -607,7 +607,7 @@ Esta contagem não inclui quaisquer espaços de trabalho abertos não anexados �
 
 Ligue para esta função de membro para obter vários tipos de informações sobre um espaço de trabalho aberto na sessão.
 
-```
+```cpp
 void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
@@ -754,7 +754,7 @@ Para obter mais informações sobre como reparar bancos de dados, consulte o tó
 
 Ligue para essa função de membro para encerrar a transação atual e restaurar todos os bancos de dados no espaço de trabalho para sua condição antes que a transação seja iniciada.
 
-```
+```cpp
 void Rollback();
 ```
 
@@ -852,7 +852,7 @@ Você pode usar esse mecanismo para configurar o mecanismo do banco de dados com
 
 Ligue para esta função de membro para definir o valor da propriedade DAO IsolateODBCTrans para o espaço de trabalho.
 
-```
+```cpp
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 

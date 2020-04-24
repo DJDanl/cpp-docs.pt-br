@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354443"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032441"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
-Representa um *mapa*, que é uma coleção de pares chave-valor. Implementa [o Windows::Foundation::Collections::IObservávelMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) para ajudar com a [vinculação de dados](/windows/uwp/data-binding/data-binding-in-depth)XAML .
+Representa um *mapa*, que é uma coleção de pares chave-valor. Implementa [o Windows::Foundation::Collections::IObservávelMap](/uwp/api/windows.foundation.collections.iobservablemap-2) para ajudar com a [vinculação de dados](/windows/uwp/data-binding/data-binding-in-depth)XAML .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -63,7 +63,7 @@ Os tipos permitidos são:
 
 - classe de enum pública
 
-O mapa é basicamente um wrapper para [std::map](../standard-library/map-class.md). É uma implementação de concreto C++ dos tipos [Windows::Foundation::Collections:IMap<Windows::Foundation::Collections:IKeyValuePair\<K,V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObwatchbleMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) que são passados através de interfaces públicas do Windows Runtime. Se você tentar usar um tipo `Platform::Collections::Map` em um parâmetro ou valor de retorno público, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do parâmetro ou do valor de retorno para [o Windows::Foundation::Collections:IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+O mapa é basicamente um wrapper para [std::map](../standard-library/map-class.md). É uma implementação de concreto C++ dos tipos [Windows::Foundation::Collections:IMap<Windows::Foundation::Collections:IKeyValuePair\<K,V>>](/uwp/api/windows.foundation.collections.imap-2) e [IObwatchbleMap](/uwp/api/windows.foundation.collections.iobservablemap-2) que são passados através de interfaces públicas do Windows Runtime. Se você tentar usar um tipo `Platform::Collections::Map` em um parâmetro ou valor de retorno público, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do parâmetro ou do valor de retorno para [o Windows::Foundation::Collections:IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2).
 
 Para obter mais informações, consulte [Coleções](../cppcx/collections-c-cx.md).
 
@@ -136,7 +136,7 @@ Uma maneira conveniente de segurar o iterator devolvido pelo First() é atribuir
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>Mapa::Método getview
 
-Retorna uma exibição somente leitura do Mapa atual; ou seja, uma [plataforma::Coleções:MapView Class](../cppcx/platform-collections-mapview-class.md), que implementa a interface [Windows::Foundation::Collections::IMapView\<K,V>]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Retorna uma exibição somente leitura do Mapa atual; ou seja, uma [plataforma::Coleções:MapView Class](../cppcx/platform-collections-mapview-class.md), que implementa o [Windows::Foundation::Collections:IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2) interface.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -160,7 +160,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A chave usada para localizar o elemento Map. O tipo de *chave* é o nome de digite *K*.
 
 ### <a name="return-value"></a>Valor retornado
@@ -179,7 +179,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é o nome de digite *K*.
 
 *value*<br/>
@@ -201,7 +201,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A chave usada para localizar um elemento em Map. O tipo de *chave* é o nome de digite *K*.
 
 ### <a name="return-value"></a>Valor retornado
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno
 
-Um [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que levantou o evento e o tipo de alteração que ocorreu. Veja também [\<iMapChangedEventArgs K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+Um [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) que contém informações sobre o objeto que levantou o evento e o tipo de alteração que ocorreu. Veja também [\<iMapChangedEventArgs K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
@@ -276,12 +276,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é o nome de digite *K*.
 
 ## <a name="mapsize-method"></a><a name="size"></a>Mapa::Método de tamanho
 
-Retorna o número do [Windows::Foundation::Coleções::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos no Mapa.
+Retorna o número do [Windows::Foundation::Coleções::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) elementos no Mapa.
 
 ### <a name="syntax"></a>Sintaxe
 

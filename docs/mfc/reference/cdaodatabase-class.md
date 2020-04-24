@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369012"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754746"
 ---
 # <a name="cdaodatabase-class"></a>Classe CDaoDatabase
 
@@ -315,7 +315,7 @@ Se você omite a constante de criptografia, um banco de dados não criptografado
 
 Chame essa função de membro para estabelecer uma relação entre um ou mais campos em uma tabela primária no banco de dados e um ou mais campos em uma tabela estrangeira (outra tabela no banco de dados).
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ Para obter informações relacionadas, consulte o tópico "CreateRelation Method
 
 Ligue para esta função de membro para excluir o consulta `CDaoDatabase` especificado — consulta salva — da coleção QueryDefs do objeto.
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ Para obter informações sobre como criar objetos querydef, consulte a classe [C
 
 Chame essa função de membro para excluir uma relação existente da coleção relações do objeto de banco de dados.
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ Para obter informações relacionadas, consulte o tópico "Método de exclusão"
 
 Chame esta função de membro para excluir a tabela `CDaoDatabase` especificada e todos os seus dados da coleção TableDefs do objeto.
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ Para obter informações relacionadas, consulte o tópico "Método de exclusão"
 
 Chame essa função de membro para executar uma consulta de ação ou executar uma declaração SQL no banco de dados.
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ O número de consultas definidas no banco de dados.
 
 Ligue para esta função de membro para obter vários tipos de informações sobre uma consulta definida no banco de dados.
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ Para ilustrar o conceito de uma relação, considere uma tabela de Fornecedores 
 
 Ligue para esta função membro para obter informações sobre uma relação especificada na coleção de Relações do banco de dados.
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ O número de tabelas definidas no banco de dados.
 
 Ligue para esta função de membro para obter vários tipos de informações sobre uma tabela definida no banco de dados.
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ Você também pode usar a seqüência de conexões `CDaoDatabase` para vários n
 
 Ligue para esta função de membro para substituir o número padrão de segundos para permitir antes das operações subseqüentes no tempo de tempo do banco de dados conectado.
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369467"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754815"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Especifica a combinação de estilos de caixa combo aplicados à caixa de combinação. Veja **observações** abaixo para obter mais informações sobre estilos.
 
 *Rect*<br/>
-Uma referência a um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou estrutura [RECT,](/previous-versions/dd162897\(v=vs.85\)) que é a posição e o tamanho da caixa de combinação.
+Uma referência a um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou estrutura [RECT,](/windows/win32/api/windef/ns-windef-rect) que é a posição e o tamanho da caixa de combinação.
 
 *Pparentwnd*<br/>
 Um ponteiro para um objeto [CWnd](../../mfc/reference/cwnd-class.md) que é a janela `CDialog`pai da caixa de combinação (geralmente a ). Não deve ser NULO.
@@ -210,7 +210,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 O estilo do controle da caixa combo. Consulte [Criar](#create) para uma lista de estilos.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.

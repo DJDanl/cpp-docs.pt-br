@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 0fd104e377300233ef1526f6c453346555dd27d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bb93420b39be5d6fb9a6691cec8300fdccb0e73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373783"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754981"
 ---
 # <a name="cframewnd-class"></a>Classe CFrameWnd
 
@@ -384,7 +384,7 @@ Use esta função de membro para `CView`criar "visualizações" que não são de
 
 Faz com que uma barra de controle seja encaixada na janela da moldura.
 
-```
+```cpp
 void DockControlBar(
     CControlBar* pBar,
     UINT nDockBarID = 0,
@@ -420,7 +420,7 @@ A barra de controle será encaixada em um dos lados da janela do quadro especifi
 
 Chame esta função para habilitar barras de controle ancoráveis em uma janela de quadro.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -463,7 +463,7 @@ virtual void EndModalState();
 
 Chame esta função para fazer com que uma barra de controle não seja encaixada na janela do quadro.
 
-```
+```cpp
 void FloatControlBar(
     CControlBar* pBar,
     CPoint point,
@@ -570,13 +570,13 @@ O parâmetro *nID* refere-se ao identificador `Create` único passado para o mé
 
 Ligue para esta função de membro para armazenar informações `CDockState` de estado sobre as barras de controle da janela do quadro em um objeto.
 
-```
+```cpp
 void GetDockState(CDockState& state) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estado*<br/>
+*state*<br/>
 Contém o estado atual das barras de controle da janela do quadro no retorno.
 
 ### <a name="remarks"></a>Comentários
@@ -675,7 +675,7 @@ Um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) contendo o
 
 Ligue `IntitialUpdateFrame` depois de criar `Create`um novo quadro com .
 
-```
+```cpp
 void InitialUpdateFrame(
     CDocument* pDoc,
     BOOL bMakeVisible);
@@ -748,7 +748,7 @@ Se você `LoadFrame` chamar para criar a janela de quadro, a estrutura carrega u
 
 Chame esta função para restaurar as configurações de cada barra de controle de propriedade da janela do quadro.
 
-```
+```cpp
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
@@ -1014,7 +1014,7 @@ static AFX_DATA const CRect rectDefault;
 
 Ligue para esta função para armazenar informações sobre cada barra de controle de propriedade da janela do quadro.
 
-```
+```cpp
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
@@ -1031,7 +1031,7 @@ Essas informações podem ser lidas a partir do arquivo de inicialização usand
 
 Designa a exibição especificada como a exibição ativa de Visualização Rica.
 
-```
+```cpp
 void SetActivePreviewView(CView* pViewNew);
 ```
 
@@ -1046,7 +1046,7 @@ Um ponteiro para uma visão a ser ativada.
 
 Chame esta função de membro para definir a exibição ativa.
 
-```
+```cpp
 void SetActiveView(
     CView* pViewNew,
     BOOL bNotify = TRUE);
@@ -1068,13 +1068,13 @@ A estrutura chamará essa função automaticamente à medida que o usuário alte
 
 Ligue para esta função de membro `CDockState` para aplicar informações de estado armazenadas em um objeto nas barras de controle da janela do quadro.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estado*<br/>
+*state*<br/>
 Aplique o estado armazenado nas barras de controle da janela do quadro.
 
 ### <a name="remarks"></a>Comentários
@@ -1127,7 +1127,7 @@ Este método afeta o estado dos menus em aplicativos escritos para o Windows Vis
 
 Chame esta função para colocar uma seqüência no painel da barra de status que tenha um ID de 0.
 
-```
+```cpp
 void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
@@ -1148,7 +1148,7 @@ Este é tipicamente o painel mais à esquerda e mais longo da barra de status.
 
 Define a posição atual para a barra de progresso do Windows 7 exibida na barra de tarefas.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1163,7 +1163,7 @@ Especifica a posição a definir. Deve estar dentro do `SetProgressBarRange`inte
 
 Define o intervalo para a barra de progresso do Windows 7 exibida na barra de tarefas.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1183,7 +1183,7 @@ Valor máximo.
 
 Define o tipo e o estado do indicador de progresso exibidos em um botão de barra de tarefas.
 
-```
+```cpp
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
@@ -1229,7 +1229,7 @@ VERDADE se bem sucedido; FALSO se a versão do SISTEMA OPERACIONAL for menor que
 
 Define o título do objeto da janela.
 
-```
+```cpp
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
@@ -1242,7 +1242,7 @@ Um ponteiro para uma seqüência de caracteres contendo o título do objeto da j
 
 Ligue para esta função de membro para mostrar ou ocultar a barra de controle.
 
-```
+```cpp
 void ShowControlBar(
     CControlBar* pBar,
     BOOL bShow,
@@ -1264,7 +1264,7 @@ Se TRUE, demore a mostrar a barra de controle. Se FALSO, mostre a barra de contr
 
 Chame esta função de membro para mostrar `CFrameWnd` todas as janelas que são descendentes do objeto.
 
-```
+```cpp
 void ShowOwnedWindows(BOOL bShow);
 ```
 

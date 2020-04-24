@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 41fa3204712749a3b1123a20d31b01ba8b5fbaa4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ebac4e18f65d789d5196266d57184744ad5ad28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364112"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753619"
 ---
 # <a name="cpanedivider-class"></a>Classe CPaneDivider
 
@@ -194,7 +194,7 @@ O exemplo a seguir `CPaneDivider` demonstra como `CWorkspaceBar` obter um objeto
 
 ## <a name="cpanedividersetautohidemode"></a><a name="setautohidemode"></a>PpaneDivisor::SetAuto'HideMode
 
-```
+```cpp
 void SetAutoHideMode(BOOL bMode);
 ```
 
@@ -206,7 +206,7 @@ void SetAutoHideMode(BOOL bMode);
 
 ## <a name="cpanedividersetpanecontainermanager"></a><a name="setpanecontainermanager"></a>CPaneDivider::SetPaneContainerManager
 
-```
+```cpp
 void SetPaneContainerManager(CPaneContainerManager* p);
 ```
 
@@ -433,7 +433,7 @@ const CBasePane* GetFirstPane() const;
 
 Retorna a lista de divisores de painel que residem na [Classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Este método deve ser chamado apenas para divisores de painéis padrão.
 
-```
+```cpp
 void GetPaneDividers(CObList& lstSliders);
 ```
 
@@ -460,7 +460,7 @@ DWORD GetPaneDividerStyle() const;
 
 Retorna a lista de painéis que residem na [Classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Este método deve ser chamado apenas para recuperar divisores de painel padrão.
 
-```
+```cpp
 void GetPanes(CObList& lstBars);
 ```
 
@@ -495,7 +495,7 @@ int GetWidth() const;
 
 ## <a name="cpanedividerinit"></a><a name="init"></a>CPaneDivider::Init
 
-```
+```cpp
 void Init(
     BOOL bDefaultSlider = FALSE,
     CWnd* pParent = NULL);
@@ -632,7 +632,7 @@ virtual void OnShowPane(
 
 ## <a name="cpanedividerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CPaneDivider::ReleaseEmptyPaneContainers
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -684,7 +684,7 @@ virtual void RepositionPanes(
 
 ## <a name="cpanedividerserialize"></a><a name="serialize"></a>CPaneDivider::Serialize
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -696,7 +696,7 @@ void Serialize(CArchive& ar);
 
 ## <a name="cpanedividershowwindow"></a><a name="showwindow"></a>CPaneDivider::ShowWindow
 
-```
+```cpp
 void ShowWindow(int nCmdShow);
 ```
 
@@ -708,7 +708,7 @@ void ShowWindow(int nCmdShow);
 
 ## <a name="cpanedividerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPaneDivider::StoreRecentDockSiteInfo
 
-```
+```cpp
 void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```
 
@@ -720,7 +720,7 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ## <a name="cpanedividerstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPaneDivider::StoreRecentTabRelatedInfo
 
-```
+```cpp
 void StoreRecentTabRelatedInfo(
     CDockablePane* pDockingBar,
     CDockablePane* pTabbedBar);

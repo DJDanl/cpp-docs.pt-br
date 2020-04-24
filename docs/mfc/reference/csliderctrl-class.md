@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318223"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751267"
 ---
 # <a name="csliderctrl-class"></a>Classe CSliderCtrl
 
@@ -169,7 +169,7 @@ Para obter mais `CSliderCtrl`informações sobre como usar, consulte [Controles]
 
 Limpa a seleção atual em um controle deslizante.
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ Redesenhar bandeira. Se este parâmetro for TRUE, o controle deslizante será re
 
 Remove as marcas de tique-taque atuais de um controle deslizante.
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Especifica o estilo do controle deslizante. Aplique qualquer combinação de estilos de [controle de controle deslizante,](/windows/win32/Controls/trackbar-control-styles)descritos no Windows SDK, ao controle.
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle deslizante. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Especifica o tamanho e a posição do controle deslizante. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *Pparentwnd*<br/>
 Especifica a janela pai do controle de `CDialog`controle deslizante, geralmente um . Não deve ser NULO.
@@ -251,7 +251,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle deslizante. Aplique qualquer combinação de estilos de [controle de controle deslizante,](/windows/win32/Controls/trackbar-control-styles)descritos no Windows SDK, ao controle.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -304,7 +304,7 @@ Esta função de membro implementa o comportamento da [TBM_GETBUDDY](/windows/wi
 
 Recupera o tamanho e a posição do retângulo delimitador para o canal de controle deslizante.
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ A posição atual.
 
 Recupera as posições máxima e mínima para o controle deslizante em um controle deslizante.
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ A posição mínima do controle.
 
 Recupera as posições de partida e final da seleção atual em um controle deslizante.
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ Este método envia a mensagem [TBM_GETTHUMBLENGTH,](/windows/win32/Controls/tbm-
 
 Recupera o tamanho e a posição do retângulo delimitador para o controle deslizante (polegar) em um controle deslizante.
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ O tamanho da página afeta o quanto o controle deslizante se move para as notifi
 
 Define a posição atual do controle deslizante em um controle deslizante.
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ Especifica a nova posição de controle deslizante.
 
 Define o intervalo (posições mínimas e máximas) para o controle deslizante em um controle deslizante.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ O redesenho da bandeira. Se este parâmetro for TRUE, o controle deslizante ser�
 
 Define o intervalo máximo para o controle deslizante em um controle deslizante.
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ O redesenho da bandeira. Se este parâmetro for TRUE, o controle deslizante ser�
 
 Define o intervalo mínimo para o controle deslizante em um controle deslizante.
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ O redesenho da bandeira. Se este parâmetro for TRUE, o controle deslizante ser�
 
 Define as posições de inicialização e final para a seleção atual em um controle deslizante.
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,7 +697,7 @@ Posição final para o controle deslizante.
 
 Define o comprimento do controle deslizante no controle atual da barra de trilhos.
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
@@ -746,7 +746,7 @@ Não zero se a marca de tique-taque estiver definida; caso contrário, 0.
 
 Define a freqüência com que as marcas de tique-taque são exibidas em um controle deslizante.
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ Esta função de membro implementa o comportamento da mensagem Win32 TBM_SETTIPS
 
 Atribui um controle de ponta de ferramenta a um controle deslizante.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

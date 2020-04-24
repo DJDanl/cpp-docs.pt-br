@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 060e601901fa5725d7ca62f244f66784af3dc11d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0c0a594a84b45ce7bf6f2c2fa5d1a547fa10eaa6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375329"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751842"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 
@@ -251,7 +251,7 @@ Chamado pelo manipulador de visualização para criar uma relação entre a impl
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void SetDocument(
    IDocument* pDocument
 );

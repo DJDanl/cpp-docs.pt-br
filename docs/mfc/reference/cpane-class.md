@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364171"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753661"
 ---
 # <a name="cpane-class"></a>Classe CPane
 
@@ -340,7 +340,7 @@ A diferença de largura e altura entre *rectRequired* e o retângulo da janela a
 
 Calcula o retângulo interno de um painel, incluindo as bordas e pinças.
 
-```
+```cpp
 void CalcInsideRect(
     CRect& rect,
     BOOL bHorz) const;
@@ -362,7 +362,7 @@ Este método é chamado pela estrutura quando ele tem que recalcular o layout pa
 
 Calcula o retângulo recentemente ancorado.
 
-```
+```cpp
 void CalcRecentDockedRect();
 ```
 
@@ -864,7 +864,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tamanho*<br/>
+*size*<br/>
 [fora] Um `CSize` objeto que está preenchido com o tamanho mínimo permitido.
 
 ### <a name="remarks"></a>Comentários
@@ -890,7 +890,7 @@ O título do painel é exibido na área da legenda quando o painel está ancorad
 
 Recupera o *retângulo virtual* do painel.
 
-```
+```cpp
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
@@ -1381,7 +1381,7 @@ Se `CMFCAutoHideButton::m_bOverlappingTabs` for FALSO ou se o painel não estive
 
 Define os valores de borda do painel.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -1416,7 +1416,7 @@ Chame esta função para definir os tamanhos das bordas do painel.
 
 Define o *ponto quente* para o painel.
 
-```
+```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
@@ -1471,13 +1471,13 @@ Por padrão, todas as barras de ferramentas têm o modo de linha exclusivo desat
 
 Define o tamanho mínimo permitido para o painel.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tamanho*<br/>
+*size*<br/>
 [em] Um `CSize` objeto que contém o tamanho mínimo permitido para o painel.
 
 ### <a name="remarks"></a>Comentários
@@ -1486,7 +1486,7 @@ void SetMinSize(const CSize& size);
 
 Define o *retângulo virtual* do painel.
 
-```
+```cpp
 void SetVirtualRect(
     const CRect& rect,
     BOOL bMapToParent = TRUE);
@@ -1510,7 +1510,7 @@ Não chame métodos relacionados a retângulos virtuais, a menos que você estej
 
 Define as informações da classe de tempo de execução para a janela padrão do miniquadro.
 
-```
+```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
@@ -1582,7 +1582,7 @@ Use este método para desacoplar programáticamente um painel.
 
 Atualiza o retângulo virtual.
 
-```
+```cpp
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);

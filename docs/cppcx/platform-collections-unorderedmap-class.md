@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354414"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031492"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -52,7 +52,7 @@ Os tipos permitidos são:
 
 - classe de enum pública
 
-**UnorderedMap** é basicamente um invólucro para [std::unordered_map](../standard-library/unordered-map-class.md) que suporta o armazenamento de tipos de tempo de execução do Windows. É uma implementação concreta dos tipos [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObserbleMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) que são passados através de interfaces públicas do Windows Runtime. Se você tentar usar um tipo `Platform::Collections::UnorderedMap` em um parâmetro ou valor de retorno público, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do parâmetro ou do valor retornado para [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** é basicamente um invólucro para [std::unordered_map](../standard-library/unordered-map-class.md) que suporta o armazenamento de tipos de tempo de execução do Windows. É uma implementação concreta dos tipos [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2) e [IObserbleMap](/uwp/api/windows.foundation.collections.iobservablemap-2) que são passados através de interfaces públicas do Windows Runtime. Se você tentar usar um tipo `Platform::Collections::UnorderedMap` em um parâmetro ou valor de retorno público, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do parâmetro ou do valor retornado para [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2).
 
 Para obter mais informações, consulte [Coleções](../cppcx/collections-c-cx.md).
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>Mapa desordenado::Primeiro método
 
-Retorna um iterator que especifica o primeiro [elemento Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) no mapa desordenado.
+Retorna um iterator que especifica o primeiro [elemento Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) no mapa desordenado.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -126,7 +126,7 @@ Uma maneira conveniente de segurar o iterator devolvido pelo First() é atribuir
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>DesordenadoMap::Método GetView
 
-Retorna uma exibição somente leitura do Mapa Não ordenado atual; ou seja, uma [plataforma::Coleções::UnorderedMapView Class](../cppcx/platform-collections-unorderedmapview-class.md) que implementa a interface [Windows::Foundation::Collections::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Retorna uma exibição somente leitura do Mapa Não ordenado atual; ou seja, uma [plataforma::Coleções::UnorderedMapView Class](../cppcx/platform-collections-unorderedmapview-class.md) que implementa o [Windows::Foundation::Collections:IMapView::IMapView](/uwp/api/windows.foundation.collections.imapview-2) interface.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -152,7 +152,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A chave usada para localizar o elemento UnorderedMap. O tipo de *chave* é o nome de digite *K*.
 
 ### <a name="return-value"></a>Valor retornado
@@ -174,7 +174,7 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é o nome de digite *K*.
 
 *value*<br/>
@@ -198,7 +198,7 @@ V Lookup(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A chave usada para localizar um elemento em UnorderedMap. O tipo de *chave* é o nome de digite *K*.
 
 ### <a name="return-value"></a>Valor retornado
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno
 
-Um [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que levantou o evento e o tipo de alteração que ocorreu. Veja também [\<iMapChangedEventArgs K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+Um [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) que contém informações sobre o objeto que levantou o evento e o tipo de alteração que ocorreu. Veja também [\<iMapChangedEventArgs K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
@@ -236,12 +236,12 @@ virtual void Remove(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*chave*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é o nome de digite *K*.
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>Mapa desordenado::Método de tamanho
 
-Retorna o número do [Windows::Foundation::Coleções::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos no UnorderedMap.
+Retorna o número do [Windows::Foundation::Coleções::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) elementos no UnorderedMap.
 
 ### <a name="syntax"></a>Sintaxe
 

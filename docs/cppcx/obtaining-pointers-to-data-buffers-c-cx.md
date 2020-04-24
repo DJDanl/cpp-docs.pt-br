@@ -2,20 +2,20 @@
 title: Obtendo ponteiros para buffers de dados (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e60adc4163e96349f6f4bafa919944e5d8d5b51
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162299"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032363"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtendo ponteiros para buffers de dados (C++/CX)
 
-No Tempo de Execução do Windows, a interface [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) oferece meios baseados em transmissão de linguagem neutra para acessar buffers de dados. Em C++, você pode obter um ponteiro bruto para a matriz de bytes subjacente usando a interface IBufferByteAccess da Biblioteca em Tempo de Execução do Windows definida em robuffer.h. Usando essa abordagem, você pode modificar a matriz de bytes in-loco sem fazer cópias desnecessárias dos dados.
+No Windows Runtime, a interface [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) oferece meios baseados em transmissão de linguagem neutra para acessar buffers de dados. Em C++, você pode obter um ponteiro bruto para a matriz de bytes subjacente usando a interface IBufferByteAccess da Biblioteca em Windows Runtime definida em robuffer.h. Usando essa abordagem, você pode modificar a matriz de bytes in-loco sem fazer cópias desnecessárias dos dados.
 
-O diagrama a seguir mostra um elemento de imagem XAML, cuja origem é um [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap). Um aplicativo cliente escrito em qualquer linguagem pode transmitir uma referência ao `WriteableBitmap` para o código C++, e o C++ pode usar a referência para obter o buffer subjacente. Em um aplicativo de plataforma Universal do Windows que está escrito em C++, você pode usar a função no exemplo a seguir diretamente no código-fonte sem empacotá-la em um componente de tempo de execução do Windows.
+O diagrama a seguir mostra um elemento de imagem XAML, cuja origem é um [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap). Um aplicativo cliente escrito em qualquer linguagem pode transmitir uma referência ao `WriteableBitmap` para o código C++, e o C++ pode usar a referência para obter o buffer subjacente. Em um aplicativo universal do Windows Platform que está escrito em C++, você pode usar a função no exemplo a seguir diretamente no código-fonte sem empacotá-lo em um componente windows runtime.
 
-![C&#43; &#43; o código que acessa dados de pixel diretamente](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; o código que acessa dados de pixel diretamente")
+![C código&#43;&#43; que acessa dados de pixels diretamente](../cppcx/media/ibufferbyteaccessdiagram.png "C código&#43;&#43; que acessa dados de pixels diretamente")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
@@ -51,11 +51,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 
 ## <a name="complete-example"></a>Exemplo completo
 
-As etapas a seguir mostram como criar um aplicativo c# Universal Windows Platform que passa um `WriteableBitmap` para uma DLL do componente de tempo de execução do C++ Windows. O código C++ obtém um ponteiro para o buffer de pixels e executa uma simples modificação in-loco na imagem. Como alternativa, você pode criar o aplicativo cliente no Visual Basic, em JavaScript ou C++ em vez de C#. Se você usar C++, o componente DLL não será necessário; basta adicionar esses métodos diretamente à classe MainPage ou qualquer outra classe que você defina.
+As etapas a seguir mostram como criar um `WriteableBitmap` aplicativo C# Universal Windows Platform que passa a um DLL componente C++ Windows Runtime. O código C++ obtém um ponteiro para o buffer de pixels e executa uma simples modificação in-loco na imagem. Como alternativa, você pode criar o aplicativo cliente no Visual Basic, em JavaScript ou C++ em vez de C#. Se você usar C++, o componente DLL não será necessário; basta adicionar esses métodos diretamente à classe MainPage ou qualquer outra classe que você defina.
 
-#### <a name="create-the-client"></a>Criar o cliente
+#### <a name="create-the-client"></a>Crie o cliente
 
-1. Use o modelo de projeto de aplicativo em branco para criar um aplicativo c# Universal Windows Platform.
+1. Use o modelo de projeto do aplicativo Blank para criar um aplicativo C# Universal Windows Platform.
 
 1. Em MainPage.xaml
 
@@ -129,7 +129,7 @@ As etapas a seguir mostram como criar um aplicativo c# Universal Windows Platfor
 
 #### <a name="create-the-c-component"></a>Criar o componente em C++
 
-1. Adicione um novo componente de tempo de execução do C++ Windows à solução existente e nomeie- `ImageManipCPP`. Adicione uma referência a ele no projeto C# clicando com o botão direito do mouse nesse projeto em **Gerenciador de Soluções** e selecionando **Adicionar**, **Referência**.
+1. Adicione um novo componente C++ Windows Runtime à `ImageManipCPP`solução existente e nomeie-o . Adicione uma referência a ele no projeto C# clicando com o botão direito do mouse nesse projeto em **Gerenciador de Soluções** e selecionando **Adicionar**, **Referência**.
 
 1. Em Class1.h
 

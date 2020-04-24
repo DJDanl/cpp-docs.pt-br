@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368889"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753553"
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 
@@ -432,7 +432,7 @@ Um ponteiro válido para o elemento de fita base localizado na posição *nIndex
 
 Recupera todos os elementos da fita que estão contidos no painel da fita.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 Adiciona elementos de fita que têm o ID de comando especificado à matriz especificada.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 
 Recupera os IDs de comando para todos os elementos da fita no painel de fita.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ Chame este método para remover um elemento do painel de fita.
 
 Exclui todos os elementos da fita do painel de fita.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ Para substituir um elemento de fita com base na posição, ligue para [CMFCRibbo
 
 Ativa ou desativa a centralidade das posições verticais dos elementos da fita no retângulo do display.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 Associa dados definidos pelo usuário com o painel de fita.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 Ativa ou desativa o ajuste da largura dos elementos da fita na mesma coluna.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ Quando este recurso é ativado em um painel de fita, as larguras dos elementos d
 
 Defina a dica de tecla para o botão padrão do painel de fita.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ O menu pop-up do painel de fita só está disponível quando a exibição do pai
 
 Define o foco para o elemento Ribbon especificado.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ Um ponteiro para um elemento Ribbon que recebe foco.
 
 Rola a galeria para tornar visível o elemento Ribbon especificado.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ VERDADE se a fita dos pais tiver o visual do Windows 7; caso contrário, FALSO.
 
 Recupera uma matriz de elementos visíveis.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);

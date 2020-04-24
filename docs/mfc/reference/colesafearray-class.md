@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374870"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753765"
 ---
 # <a name="colesafearray-class"></a>Classe COleSafeArray
 
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 Recupera um ponteiro para os dados da matriz.
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ No erro, a função lança uma [CMemoryException](../../mfc/reference/cmemoryexc
 
 Aloca memória para uma matriz segura.
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ No erro, a função lança uma [CMemoryException](../../mfc/reference/cmemoryexc
 
 Aloca memória para o descritor de uma matriz segura.
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ No erro, a função lança uma [CMemoryException](../../mfc/reference/cmemoryexc
 
 Fornece o controle dos dados `VARIANT` em `COleSafeArray` uma matriz existente para o objeto.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ O `VARIANT`tipo de origem está definido como VT_EMPTY. Esta função limpa os d
 
 Limpa a matriz segura.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ No erro, a função lança uma [CMemoryException](../../mfc/reference/cmemoryexc
 
 Cria uma cópia de uma matriz de segurança existente.
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ No erro, a função lança uma [CMemoryException](../../mfc/reference/cmemoryexc
 
 Aloca e inicializa os dados para a matriz.
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ Esta função limpará os dados do array atual, se necessário. No erro, a funç
 
 Cria um novo `COleSafeArray` objeto unidimensional.
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ No erro, a função lança uma [CMemoryException](../../mfc/reference/cmemoryexc
 
 Destrói um descritor de matriz existente e todos os dados da matriz.
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ Se os objetos forem armazenados na matriz, cada objeto será liberado. No erro, 
 
 Destrói todos os dados em uma matriz segura.
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ Se os objetos forem armazenados na matriz, cada objeto será liberado. No erro, 
 
 Destrói um descritor de uma matriz segura.
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ No erro, a função lança um [COleException](../../mfc/reference/coleexception-
 
 Copia o conteúdo da matriz `CByteArray`segura em um .
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ O número de dimensões na matriz segura.
 
 Recupera um único elemento da matriz segura.
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ O tamanho, em bytes, dos elementos de uma matriz segura.
 
 Retorna o limite inferior para `COleSafeArray` qualquer dimensão de um objeto.
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ O número de elementos na matriz segura unidimensional.
 
 Retorna o limite superior para qualquer dimensão de uma matriz segura.
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ No erro, a função lança um [COleException](../../mfc/reference/coleexception-
 
 Incrementa a contagem de bloqueio de uma matriz e coloque um ponteiro para os dados da matriz no descritor da matriz.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 Retorna um ponteiro para o elemento especificado pelos valores de índice.
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ No retorno, ponteiro para o elemento identificado pelos valores em *rgIndices*.
 
 Atribui um único elemento à matriz.
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ No erro, a função lança uma [CMemoryException](../../mfc/reference/cmemoryexc
 
 Altera o limite menos significativo (à direita) de uma matriz segura.
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ No erro, a função lança um [COleException](../../mfc/reference/coleexception-
 
 Altera o número de elementos `COleSafeArray` em um objeto unidimensional.
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ No erro, a função lança um [COleException](../../mfc/reference/coleexception-
 
 Diminui a contagem de bloqueio de uma matriz e `AccessData`invalida o ponteiro recuperado por .
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ No erro, a função lança um [COleException](../../mfc/reference/coleexception-
 
 Decreta a contagem de bloqueios de uma matriz para que possa ser liberada ou redimensionada.
 
-```
+```cpp
 void Unlock();
 ```
 

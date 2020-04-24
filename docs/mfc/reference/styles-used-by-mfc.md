@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372911"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032389"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos usados pelo MFC
 
@@ -418,7 +418,7 @@ Os estilos estáticos aplicam-se a objetos [classe CStatic.](../../mfc/reference
 |SS_BLACKRECT|Especifica um retângulo preenchido com a cor usada para desenhar quadros de janelas. O padrão é preto.|
 |SS_CENTER|Designa um retângulo simples e exibe o texto dado centrado no retângulo. O texto é formatado antes de ser exibido. Palavras que se estenderiam além do fim de uma linha são automaticamente embrulhadas para o início da próxima linha centrada.|
 |Ss_centerimage|Especifica que, se o bitmap ou ícone for menor do que a área cliente do controle estático, o resto da área do cliente estará preenchida com a cor do pixel no canto superior esquerdo do bitmap ou ícone. Se o controle estático contiver uma única linha de texto, o texto será centrado verticalmente na área cliente do controle.|
-|SS_ENDELLIPSIS|ou SS_PATHELLIPSIS Substitui parte da seqüência dada por elipses, se necessário, de modo que o resultado se encaixe no retângulo especificado. <br /><br />Você pode especificar SS_END_ELLIPSIS para substituir caracteres no final da seqüência ou SS_PATHELLIPSIS para substituir caracteres no meio da seqüência. Se a seqüência\\contiver caracteres de barra invertida ( ), SS_PATHELLIPSIS preservar á máximo o texto após a última barra invertida possível.|
+|SS_ENDELLIPSIS|ou SS_PATHELLIPSIS Substitui parte da seqüência dada por elipse, se necessário, de modo que o resultado se encaixe no retângulo especificado. <br /><br />Você pode especificar SS_END_ELLIPSIS para substituir caracteres no final da seqüência ou SS_PATHELLIPSIS para substituir caracteres no meio da seqüência. Se a seqüência\\contiver caracteres de barra invertida ( ), SS_PATHELLIPSIS preservar á máximo o texto após a última barra invertida possível.|
 |Ss_enhmetafile|Especifica que um metaarquivo aprimorado deve ser exibido no controle estático. O texto dado é o nome de um metaarquivo. Um controle estático de metaarquivos aprimorado tem um tamanho fixo; o metaarquivo é dimensionado para se encaixar na área cliente do controle estático.|
 |SS_ETCHEDFRAME|Desenha o quadro do controle estático usando o estilo de borda EDGE_ETCHED.|
 |SS_ETCHEDHORZ|Desenha as bordas superior e inferior do controle estático usando o estilo de borda EDGE_ETCHED.|
@@ -439,7 +439,7 @@ Os estilos estáticos aplicam-se a objetos [classe CStatic.](../../mfc/reference
 |SS_USERITEM|Especifica um item definido pelo usuário.|
 |SS_WHITEFRAME|Especifica uma caixa com um quadro desenhado com a mesma cor do fundo da janela. O padrão é branco.|
 |SS_WHITERECT|Especifica um retângulo preenchido com a cor usada para preencher o plano de fundo da janela. O padrão é branco.|
-|SS_WORDELLIPSIS|Trunca texto que não se encaixa e adiciona elipses.|
+|SS_WORDELLIPSIS|Trunca texto que não se encaixa e adiciona elipse.|
 
 ## <a name="window-styles"></a><a name="window-styles"></a>Estilos de janela
 

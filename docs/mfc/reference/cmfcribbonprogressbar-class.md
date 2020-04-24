@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 063f8ce560af84d350abc0114644f6a63f969f95
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b7cbddbd4fca8379562b762fadbb3d2bda44f166
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368858"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753534"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
 
@@ -203,7 +203,7 @@ virtual void OnDraw(CDC* pDC);
 
 Define a barra de progresso para funcionar no modo infinito.
 
-```
+```cpp
 void SetInfiniteMode(BOOL bSet = TRUE);
 ```
 
@@ -220,7 +220,7 @@ Normalmente, se a barra de progresso estiver no modo infinito, ele está dizendo
 
 Define a posição atual da barra de progresso.
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw = TRUE);
@@ -242,7 +242,7 @@ O conjunto de intervalos deve estar dentro do intervalo especificado pelo métod
 
 Define os valores mínimo e máximo para a barra de progresso.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);

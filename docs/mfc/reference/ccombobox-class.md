@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369504"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754835"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -308,7 +308,7 @@ CComboBox();
 
 Exclui (limpa) a seleção atual, se houver, no controle de edição da caixa de combinação.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -357,7 +357,7 @@ Por padrão, esta função de membro não faz nada. Se você criar uma caixa de 
 
 Copia a seleção atual, se houver, no controle de edição da caixa de combinação na Área de Transferência em formato CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ Aplique os [seguintes estilos de janela](../../mfc/reference/styles-used-by-mfc.
 
 Exclui (corta) a seleção atual, se houver, no controle de edição da caixa de combinação e copia o texto excluído na Área de Transferência em formato CF_TEXT.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ O índice baseado em zero do item selecionado no momento na caixa de lista de um
 
 Ligue `GetDroppedControlRect` para a função membro para recuperar as coordenadas de tela da caixa de lista visível (descartada) de uma caixa de combo para dada.
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ O valor de 32 bits pode ser definido com o parâmetro *dwItemData* de uma chamad
 
 Recupera o valor de 32 bits fornecido pelo aplicativo associado ao item combo-box especificado como ponteiro **(vazio).** <strong>\*</strong>
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ Consulte [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 
 
 Insere os dados da Área de Transferência no controle de edição da caixa de combo na posição atual do cursor.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ Os dados só são inseridos se a Área de Transferência contiver dados em CF_TE
 
 Remove todos os itens da caixa de lista e edita o controle de uma caixa de combinação.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ A rolagem no controle estático é desativada quando a lista de itens não está
 
 Define a largura, em pixels, pela qual a parte de caixa de lista da caixa de combinação pode ser rolada horizontalmente.
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ O sistema rola a caixa de lista até que o item especificado pelo *nIndex* apare
 
 Mostra ou esconde a caixa de lista de uma caixa de combinação que tem o [estilo CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST.](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 

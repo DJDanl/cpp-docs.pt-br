@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: fdbf343c91725783afd79bbebd73f66fdb1d67e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364289"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752215"
 ---
 # <a name="ctoolbar-class"></a>Classe CToolBar
 
@@ -292,7 +292,7 @@ Ligue [para](#create) a função Criar membro para criar a janela da barra de fe
 
 Esta função de membro recupera o índice de id, estilo e imagem de controle do botão da barra de ferramentas ou separador no local especificado pelo *nIndex.*
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -522,7 +522,7 @@ Por exemplo, `SetBitmap` chamada para alterar a imagem bitmapapped depois que o 
 
 Ligue para esta função de membro para definir o ID de comando do botão, o estilo e o número da imagem.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -603,7 +603,7 @@ Se *o lpIDArray* for NULL, esta função alocará espaço para o número de iten
 
 Ligue para esta função de membro para definir o estilo de um botão ou separador, ou para botões de grupo.
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -672,7 +672,7 @@ Não zero se bem sucedido; caso contrário, 0.
 
 Esta função de membro define a altura da barra de ferramentas para o valor, em pixels, especificado em *cyHeight*.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -691,7 +691,7 @@ Se esta função não for chamada, a estrutura usará o tamanho do botão para d
 
 Chame esta função de membro para definir os botões da barra de ferramentas para o tamanho, em pixels, especificado em *sizeButton*.
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);

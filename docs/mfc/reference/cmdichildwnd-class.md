@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370076"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754571"
 ---
 # <a name="cmdichildwnd-class"></a>Classe CMDIChildWnd
 
@@ -207,7 +207,7 @@ O quadro devolvido é de `CMDIChildWnd` dois pais removidos do e é o pai `CMDIC
 
 Chame esta função de membro para ativar uma janela de criança MDI independentemente da janela do quadro MDI.
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ Quando o quadro se tornar ativo, a janela da criança que foi ativada pela últi
 
 Chame esta função de membro para destruir uma janela de criança MDI.
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ A função membro remove o título da janela do filho da janela do quadro e desa
 
 Chame essa função de membro para maximizar uma janela de criança MDI.
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ Quando uma janela filho é maximizada, o Windows redimensiona-a para fazer com q
 
 Chame esta função de membro para restaurar uma janela de criança MDI de tamanho maximizado ou minimizado.
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 Define as alças para os recursos do menu e do acelerador.
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);

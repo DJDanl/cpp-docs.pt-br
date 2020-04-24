@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: bae2472a75ab77f138fcee0951a6b869cc7c8e82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 066918bf2c76b17f06871ee08be674be9b36c161
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372559"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032454"
 ---
 # <a name="deferrableeventargs-class"></a>Classe DeferrableEventArgs
 
@@ -41,10 +41,10 @@ A classe que implementa *o TEventArgsInterface*.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Nome                                                         | Descrição
------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------
-[DiferindoEventArgs::GetDeferral](#getdeferral)             | Obtém uma referência ao objeto [Diferimento](/uwp/api/windows.foundation.deferral) que representa um evento diferido.
-[AdiveleventArgs::InvokeAllFinished](#invokeallfinished) | Chamado para indicar que todo o processamento para lidar com um evento diferido está completo.
+| Nome | Descrição |
+|--|--|
+| [DiferindoEventArgs::GetDeferral](#getdeferral) | Obtém uma referência ao objeto [Diferimento](/uwp/api/windows.foundation.deferral) que representa um evento diferido. |
+| [AdiveleventArgs::InvokeAllFinished](#invokeallfinished) | Chamado para indicar que todo o processamento para lidar com um evento diferido está completo. |
 
 ## <a name="remarks"></a>Comentários
 

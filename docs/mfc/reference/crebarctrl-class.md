@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367439"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750641"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 
@@ -223,7 +223,7 @@ Para obter mais informações, consulte [Usando CReBarCtrl](../../mfc/using-creb
 
 Implementa o comportamento da mensagem Win32 [RB_BEGINDRAG,](/windows/win32/Controls/rb-begindrag)conforme descrito no SDK do Windows.
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Especifica a combinação de estilos de controle de vergalhões aplicados ao controle. Consulte [Estilos de controle](/windows/win32/Controls/rebar-control-styles) de barras no SDK do Windows para obter uma lista de estilos suportados.
 
 *Rect*<br/>
-Uma referência a um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou estrutura [RECT,](/previous-versions/dd162897\(v=vs.85\)) que é a posição e o tamanho do controle do vergalhão.
+Uma referência a um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou estrutura [RECT,](/windows/win32/api/windef/ns-windef-rect) que é a posição e o tamanho do controle do vergalhão.
 
 *Pparentwnd*<br/>
 Um ponteiro para um objeto [CWnd](../../mfc/reference/cwnd-class.md) que é a janela pai do controle do vergalhão. Não deve ser NULO.
@@ -303,7 +303,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica a combinação de estilos de controle de vergalhões aplicados ao controle. Para obter uma lista de estilos suportados, consulte Estilos de controle de [barras](/windows/win32/Controls/rebar-control-styles) no SDK do Windows.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -356,7 +356,7 @@ Não zero se a banda for excluída com sucesso; caso contrário, zero.
 
 Implementa o comportamento da mensagem Win32 [RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove), conforme descrito no SDK do Windows.
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ Um valor DWORD que contém as novas coordenadas do mouse. A coordenada horizonta
 
 Implementa o comportamento da [mensagem](/windows/win32/Controls/rb-enddrag)Win32 RB_ENDDRAG , conforme descrito no SDK do Windows.
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 Implementa o comportamento da mensagem Win32 [RB_GETBANDBORDERS,](/windows/win32/Controls/rb-getbandborders)conforme descrito no SDK do Windows.
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 Índice baseado em zero da banda para a qual as fronteiras serão recuperadas.
 
 *Prc*<br/>
-Um ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que receberá as bordas da banda. Se o controle do vergalhão tiver o estilo RBS_BANDBORDERS, cada membro desta estrutura receberá o número de pixels, no lado correspondente da banda, que constituem a borda. Se o controle do vergalhão não tiver o estilo RBS_BANDBORDERS, apenas o membro esquerdo desta estrutura recebe informações válidas. Para obter uma descrição dos estilos de controle de verbar, consulte Estilos de controle de [barras](/windows/win32/Controls/rebar-control-styles) no SDK do Windows.
+Um ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que receberá as bordas da banda. Se o controle do vergalhão tiver o estilo RBS_BANDBORDERS, cada membro desta estrutura receberá o número de pixels, no lado correspondente da banda, que constituem a borda. Se o controle do vergalhão não tiver o estilo RBS_BANDBORDERS, apenas o membro esquerdo desta estrutura recebe informações válidas. Para obter uma descrição dos estilos de controle de verbar, consulte Estilos de controle de [barras](/windows/win32/Controls/rebar-control-styles) no SDK do Windows.
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl::GetBandCount
 
@@ -429,7 +429,7 @@ Não zero se bem sucedido; caso contrário, zero.
 
 Recupera as margens da banda.
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Índice baseado em zero de uma banda no controle do vergalhão.
 
 *Prc*<br/>
-Um ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que receberá os limites da banda de vergalhões.
+Um ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que receberá os limites da banda de vergalhões.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -723,7 +723,7 @@ Não zero se bem sucedido; caso contrário, zero.
 
 Redimensiona uma banda em um controle de vergalhões para o seu maior tamanho.
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ Implementa o comportamento da mensagem `fIdeal` Win32 [RB_MAXIMIZEBAND](/windows
 
 Redimensiona uma banda em um controle de vergalhões para o menor tamanho.
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ Não zero se bem sucedido; caso contrário, zero.
 
 Implementa o comportamento da mensagem Win32 [RB_PUSHCHEVRON,](/windows/win32/Controls/rb-pushchevron)conforme descrito no SDK do Windows.
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ Um aplicativo definiu o valor de 32 bits. Consulte *o iAppValue* em [RB_PUSHCHEV
 
 Redimensiona uma banda em um controle de vergalhões para o seu tamanho ideal.
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -931,7 +931,7 @@ Consulte este tópico para obter mais informações sobre quando definir a cor d
 
 Define o esquema de cores para os botões em um controle de vergalhões.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -1056,7 +1056,7 @@ Ele é fornecido para suportar a flexibilidade da cor do texto em um controle de
 
 Associa um controle de ponta de ferramenta com um controle de vergalhões.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 

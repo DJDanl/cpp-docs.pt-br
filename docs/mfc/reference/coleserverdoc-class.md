@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376124"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753780"
 ---
 # <a name="coleserverdoc-class"></a>Classe COleServerDoc
 
@@ -192,7 +192,7 @@ Para obter mais informações sobre servidores, consulte o artigo [Servidores: I
 
 Ativa o documento DocObject associado.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ Ele chama [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), uma função v
 
 Ligue `GetItemClipRect` para a função membro para obter as coordenadas retângulo de recorte do item que está sendo editado no lugar.
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ O desenho não deve ocorrer fora do retângulo de recorte. Normalmente, o desenh
 
 Ligue `GetItemPosition` para a função de membro para obter as coordenadas do item que está sendo editado no lugar.
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ Não zero `COleServerDoc` se o objeto estiver ativo no lugar; caso contrário, 0
 
 Ligue para esta função para notificar todos os itens vinculados conectados ao documento que o documento foi alterado.
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ Normalmente, você chama essa função depois que o usuário altera algum atribu
 
 Ligue para esta função para notificar os contêineres que o documento foi fechado.
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ Quando o usuário escolhe o comando Fechar `NotifyClosed` no `COleServerDoc`menu
 
 Chame esta função depois que o usuário renomear o documento do servidor.
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ Quando o usuário escolhe o comando Salvar `NotifyRename` como no `COleServerDoc
 
 Chame esta função depois que o usuário salvar o documento do servidor.
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ A implementação padrão chama o [COleServerDoc::NotificarSaved](#notifysaved) 
 
 Chame esta função de membro para que o aplicativo de contêiner altere a posição do item.
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ Esta função é geralmente chamada `UpdateAllItems`(em conjunto com ) quando os
 
 Ligue para esta função para dizer ao aplicativo de contêiner para salvar o objeto incorporado.
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ Valores positivos indicam rolagem para baixo e para a direita; valores negativos
 
 Ligue para esta função para notificar todos os itens vinculados conectados ao documento que o documento foi alterado.
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,

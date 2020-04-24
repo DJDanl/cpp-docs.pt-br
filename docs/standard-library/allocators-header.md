@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 3619f3810f167fef291ad3def4a2b94f9a6b9b1a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f6be154be68cd5e43fd6f934d88c04fb25be9dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688473"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754449"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -23,17 +23,20 @@ Define vários modelos que ajudam a alocar e liberar os blocos de memória para 
 #include <allocators>
 ```
 
+> [!NOTE]
+> \<alocadores> é preterido, começando com visual studio versão 16.3.
+
 ## <a name="remarks"></a>Comentários
 
-O cabeçalho \<allocators> fornece seis modelos de alocadores que podem ser usados para selecionar as estratégias de gerenciamento de memória para contêineres baseados em nó. Para usar com esses modelos, ele também fornece vários filtros de sincronização diferentes para personalizar a estratégia de gerenciamento de memória para uma variedade de diferentes esquemas de multithreading (incluindo nenhum). Corresponder uma estratégia de gerenciamento de memória aos padrões de uso de memória e aos requisitos de sincronização conhecidos de um determinado aplicativo, geralmente pode aumentar a velocidade ou reduzir os requisitos de memória gerais de um aplicativo.
+O cabeçalho \<allocators> fornece seis modelos de alocadores que podem ser usados para selecionar as estratégias de gerenciamento de memória para contêineres baseados em nó. Para usar com esses modelos, ele também fornece vários filtros de sincronização diferentes para personalizar a estratégia de gerenciamento de memória para uma variedade de diferentes esquemas de multithreading (incluindo nenhum). Você pode acelerar seu aplicativo ou reduzir seus requisitos de memória, combinando uma estratégia de gerenciamento de memória com seus padrões de uso de memória e requisitos de sincronização.
 
 Os modelos de alocadores são implementados com componentes reutilizáveis que podem ser personalizados ou substituídos para fornecer estratégias adicionais de gerenciamento de memória.
 
-Os contêineres baseados em nó na Biblioteca Padrão do C++ (std::list, std::set, std::multiset, std::map e std::multimap) armazenam seus elementos em nós individuais. Todos os nós de um tipo de contêiner específico têm o mesmo tamanho, portanto, não é necessário ter a flexibilidade de um gerenciador de memória de uso geral. Como o tamanho de cada bloco de memória é conhecido no tempo de compilação, o gerenciador de memória pode ser muito mais simples e rápido.
+Os contêineres baseados em nó na Biblioteca Padrão C++ (std::list, std::set, std::multiset, std::map e std::multimap) armazenam seus elementos em nomes individuais. Todos os nós de um tipo de contêiner específico têm o mesmo tamanho, portanto, não é necessário ter a flexibilidade de um gerenciador de memória de uso geral. Como o tamanho de cada bloco de memória é conhecido no tempo de compilação, o gerenciador de memória pode ser muito mais simples e rápido.
 
-Quando usados com contêineres que não são baseados em nó (por exemplo, os contêineres std::vector std::deque e std::basic_string da Biblioteca Padrão do C++), os modelos de alocadores funcionarão corretamente, mas provavelmente não fornecerão nenhuma melhoria de desempenho em relação ao alocador padrão.
+Quando usados com recipientes que não são baseados em nó (como os contêineres C++ Standard Library std::vector std::deque e std:basic_string), os modelos de alocadorefuncionarão corretamente, mas não são susceptíveis de fornecer qualquer melhoria de desempenho sobre o alocador padrão.
 
-Um alocador é um modelo de classe que descreve um objeto que gerencia a alocação de armazenamento e libera para objetos e matrizes de objetos de um tipo designado. Os C++ objetos de alocador são usados por vários modelos de classe de contêiner na biblioteca padrão.
+Um alocador é um modelo de classe que descreve um objeto que gerencia a alocação de armazenamento e a liberação de objetos e matrizes de objetos de um tipo designado. Os objetos alocadores são usados por vários modelos de classe de contêiner na Biblioteca Padrão C++.
 
 Os alocadores são todos os modelos deste tipo:
 
@@ -42,7 +45,7 @@ template<class Type>
 class allocator;
 ```
 
-em que o argumento de modelo `Type` é do tipo gerenciado pela instância do alocador. A C++ biblioteca padrão fornece um alocador padrão, [alocador](../standard-library/allocator-class.md)de modelo de classe, que é definido em [\<memory >](../standard-library/memory.md). O cabeçalho \<allocators> fornece os alocadores a seguir:
+em que o argumento de modelo `Type` é do tipo gerenciado pela instância do alocador. A Biblioteca Padrão C++ fornece um alocador padrão, [alocador](../standard-library/allocator-class.md)de modelo de classe, que é definido em [ \<>de memória ](../standard-library/memory.md). O cabeçalho \<allocators> fornece os alocadores a seguir:
 
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)
 
@@ -77,9 +80,9 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 aloca nós com `allocator_chunklist` e o filtro de sincronização [sync_per_thread](../standard-library/sync-per-thread-class.md).
 
-Um alocador de blocos é um cache ou um filtro. Um cache é um modelo de classe que usa um argumento do tipo std:: size_t. Ele define um alocador de blocos que aloca e desaloca os blocos de memória de um único tamanho. Ele deve obter a memória usando o operador **New**, mas não precisa fazer uma chamada separada para o operador **New** para cada bloco. Ele pode, por exemplo, subalocar de um bloco maior ou armazenar em cache os blocos desalocados para uma próxima realocação.
+Um alocador de blocos é um cache ou um filtro. Um cache é um modelo de classe que leva um argumento de tipo std::size_t. Ele define um alocador de blocos que aloca e desaloca os blocos de memória de um único tamanho. Ele deve obter memória usando **o operador novo,** mas não precisa fazer uma chamada separada para o operador **novo** para cada bloco. Ele pode, por exemplo, subalocar de um bloco maior ou armazenar em cache os blocos desalocados para uma próxima realocação.
 
-Com um compilador que não pode compilar reassociação, o valor do argumento std::size_t usado quando a instância do modelo foi criada não é necessariamente o valor do argumento _Sz passado para as funções de membro do cache alocar e desalocar.
+Com um compilador que não pode revincular o valor do argumento std::size_t usado quando o modelo foi instanciado não é necessariamente o valor do argumento _Sz passado para as funções de membro de um cache alocar e desalocar.
 
 \<allocators> fornece os seguintes modelos de cache:
 
@@ -89,7 +92,7 @@ Com um compilador que não pode compilar reassociação, o valor do argumento st
 
 - [cache_chunklist](../standard-library/cache-chunklist-class.md)
 
-Um filtro é um alocador de blocos que implementa as funções de membro usando outro alocador de blocos que é passado para ele como um argumento de modelo. A forma mais comum de filtro é um filtro de sincronização, que aplica uma política de sincronização para controlar o acesso às funções de membro de uma instância de outro alocador de blocos. \<allocators> fornece os seguintes filtros de sincronização:
+Um filtro é um alocador de blocos que implementa suas funções de membro usando outro alocador de blocos, que é passado para ele como um argumento de modelo. A forma mais comum de filtro é um filtro de sincronização, que aplica uma política de sincronização para controlar o acesso às funções de membro de uma instância de outro alocador de blocos. \<allocators> fornece os seguintes filtros de sincronização:
 
 - [sync_none](../standard-library/sync-none-class.md)
 
@@ -99,13 +102,13 @@ Um filtro é um alocador de blocos que implementa as funções de membro usando 
 
 - [sync_shared](../standard-library/sync-shared-class.md)
 
-\<allocators> também fornece o filtro [rts_alloc](../standard-library/rts-alloc-class.md), que contém diversas instâncias de alocador de blocos e determina qual instância deve ser usada para alocação ou desalocação no tempo de execução, em vez de no tempo de compilação. Ele é usado com os compiladores que não podem compilar reassociação.
+\<allocators&gt; também fornece o filtro [rts_alloc](../standard-library/rts-alloc-class.md), que contém diversas instâncias de alocador de blocos e determina qual instância deve ser usada para alocação ou desalocação no runtime, em vez de no tempo de compilação. Ele é usado com os compiladores que não podem compilar reassociação.
 
 Uma política de sincronização determina como uma instância de alocador manipula solicitações simultâneas de alocação e desalocação de vários threads. A política mais simples é passar todas as solicitações diretamente para o objeto de cache subjacente, deixando o gerenciamento de sincronização para o usuário. Uma política mais complexa poderia ser usar um mutex para serializar o acesso ao objeto de cache subjacente.
 
 Se um compilador der suporte à compilação de aplicativos de single-threaded e multi-threaded, o filtro de sincronização padrão para aplicativos de single-threaded será `sync_none`, para todos os outros casos, será `sync_shared`.
 
-O modelo de cache `cache_freelist` usa um argumento de classe max que determina o número máximo de elementos a serem armazenados na lista livre.
+O modelo `cache_freelist` de cache tem um argumento de classe máxima, que determina o número máximo de elementos a serem armazenados na lista livre.
 
 \<allocators> fornece as seguintes classes max:
 
@@ -121,7 +124,7 @@ O modelo de cache `cache_freelist` usa um argumento de classe max que determina 
 
 |Macro|Descrição|
 |-|-|
-|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Produz um modelo de classe de alocador.|
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Produz um modelo de classe alocador.|
 |[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Produz `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
 |[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Produz `stdext::allocators::cache_freelist<sizeof(Type), max>`.|
 |[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Produz `stdext::allocators::cache_suballoc<sizeof(Type)>`.|
@@ -131,17 +134,17 @@ O modelo de cache `cache_freelist` usa um argumento de classe max que determina 
 
 |Operador|Descrição|
 |-|-|
-|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|Testa a desigualdade entre objetos do alocador de uma classe especificada.|
+|[operador!=\<(alocadores>)](../standard-library/allocators-operators.md#op_neq)|Testa a desigualdade entre objetos do alocador de uma classe especificada.|
 |[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|Testa a igualdade entre objetos do alocador de uma classe especificada.|
 
 ### <a name="classes"></a>Classes
 
-|Class|Descrição|
+|Classe|Descrição|
 |-|-|
 |[allocator_base](../standard-library/allocator-base-class.md)|Define a classe base e as funções comuns necessárias para criar um alocador definido pelo usuário de um filtro de sincronização.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Descreve um objeto que gerencia a alocação de armazenamento e a liberação de objetos usando um cache do tipo [cache_chunklist](../standard-library/cache-chunklist-class.md).|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Descreve um objeto que gerencia a alocação e a liberação de armazenamento para objetos do tipo `Type` usando um cache do tipo [cache_freelist](../standard-library/cache-freelist-class.md) com um comprimento gerenciado por [max_fixed_size](../standard-library/max-fixed-size-class.md).|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa um alocador que usa o **operador Delete** para desalocar um bloco de memória e um **operador novo** para alocar um bloco de memória.|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa um alocador que usa **a exclusão do operador** para desalocar um bloco de memória e um operador **novo** para alocar um bloco de memória.|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Descreve um objeto que gerencia a alocação e a liberação de armazenamento para objetos do tipo `Type` usando um cache do tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Descreve um objeto que gerencia a alocação e a liberação de armazenamento de objetos do tipo `Type`, usando um cache do tipo [cache_freelist](../standard-library/cache-freelist-class.md) com um comprimento gerenciado por [max_unbounded](../standard-library/max-unbounded-class.md).|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Descreve um objeto que gerencia a alocação e a liberação de armazenamento para objetos do tipo `Type`, usando um cache do tipo [cache_freelist](../standard-library/cache-freelist-class.md) com um comprimento gerenciado por [max_variable_size](../standard-library/max-variable-size-class.md).|
@@ -153,7 +156,7 @@ O modelo de cache `cache_freelist` usa um argumento de classe max que determina 
 |[max_none](../standard-library/max-none-class.md)|Descreve um objeto da classe max que limita um objeto [freelist](../standard-library/freelist-class.md) a um comprimento máximo igual a zero.|
 |[max_unbounded](../standard-library/max-unbounded-class.md)|Descreve um objeto da classe max que não limita o comprimento máximo de um objeto [freelist](../standard-library/freelist-class.md).|
 |[max_variable_size](../standard-library/max-variable-size-class.md)|Descreve um objeto da classe max que limita um objeto [freelist](../standard-library/freelist-class.md) a um comprimento máximo aproximadamente proporcional ao número de blocos de memória alocados.|
-|[rts_alloc](../standard-library/rts-alloc-class.md)|O modelo de classe rts_alloc descreve um [filtro](../standard-library/allocators-header.md) que contém uma matriz de instâncias de cache e determina qual instância usar para alocação e desalocação em tempo de execução em vez de em tempo de compilação.|
+|[rts_alloc](../standard-library/rts-alloc-class.md)|O modelo de classe rts_alloc descreve um [filtro](../standard-library/allocators-header.md) que contém uma matriz de instâncias de cache e determina qual instância usar para alocação e desalocação em tempo de execução, em vez de em tempo de compilação.|
 |[sync_none](../standard-library/sync-none-class.md)|Descreve um filtro de sincronização que não fornece nenhuma sincronização.|
 |[sync_per_container](../standard-library/sync-per-container-class.md)|Descreve um filtro de sincronização que fornece um objeto de cache separado para cada objeto alocador.|
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|Descreve um filtro de sincronização que fornece um objeto de cache separado para cada thread.|
@@ -165,6 +168,6 @@ O modelo de cache `cache_freelist` usa um argumento de classe max que determina 
 
 **Namespace:** stdext
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

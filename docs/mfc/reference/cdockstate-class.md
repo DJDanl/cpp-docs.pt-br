@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375558"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753267"
 ---
 # <a name="cdockstate-class"></a>Classe CDockState
 
@@ -74,7 +74,7 @@ Para obter mais informações sobre barras de controle de encaixe, consulte os a
 
 Chame esta função para limpar todas `CDockState` as informações de acoplamento armazenadas no objeto.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -102,7 +102,7 @@ O suporte à versão permite que uma barra revisada adicione novas propriedades 
 
 Ligue para esta função para recuperar informações do estado do registro ou . Arquivo INI.
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
@@ -127,7 +127,7 @@ CPtrArray m_arrBarInfo;
 
 Ligue para esta função para salvar as informações do estado no registro ou . Arquivo INI.
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 

@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354381"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032116"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
-Representa uma coleção sequencial de objetos que podem ser acessados separadamente por índice. Implementa [o Windows::Foundation::Collections:IObservávelpara](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) ajudar com a [vinculação de dados](/windows/uwp/data-binding/data-binding-in-depth)XAML .
+Representa uma coleção sequencial de objetos que podem ser acessados separadamente por índice. Implementa [o Windows::Foundation::Collections:IObservávelpara](/uwp/api/windows.foundation.collections.iobservablevector-1) ajudar com a [vinculação de dados](/windows/uwp/data-binding/data-binding-in-depth)XAML .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,9 +61,9 @@ Os tipos permitidos são:
 
 1. classe de enum pública
 
-A classe **Vector** é a implementação de concreto C++ do [Windows::Foundation::Collections:IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) interface.
+A classe **Vector** é a implementação de concreto C++ do [Windows::Foundation::Collections:IVector](/uwp/api/windows.foundation.collections.ivector-1) interface.
 
-Se você tentar usar um tipo **vetorial** em um valor de retorno público ou parâmetro, o erro do compilador C3986 será aumentado. Você pode corrigir o erro alterando o tipo do parâmetro ou do valor de retorno para [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).
+Se você tentar usar um tipo **vetorial** em um valor de retorno público ou parâmetro, o erro do compilador C3986 será aumentado. Você pode corrigir o erro alterando o tipo do parâmetro ou do valor de retorno para [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1). Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membros
 
@@ -96,7 +96,7 @@ Se você tentar usar um tipo **vetorial** em um valor de retorno público ou par
 |||
 |-|-|
 |Nome|Descrição|
-|[evento Windows::Foundation::Collection:VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Ocorre quando o Vector é alterado.|
+|[evento Windows::Foundation::Collection:VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Ocorre quando o Vector é alterado.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -372,7 +372,7 @@ Um [std::initializer_list](../standard-library/initializer-list-class.md) de obj
 *N*<br/>
 O número de elementos em uma coleção de objetos que é usada para inicializar o Vector atual.
 
-*Tamanho*<br/>
+*size*<br/>
 O número de elementos no Vector.
 
 *value*<br/>

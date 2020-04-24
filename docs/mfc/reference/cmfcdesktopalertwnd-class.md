@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367643"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752451"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Classe CMFCDesktopAlertWnd
 
@@ -391,7 +391,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 Define a nova velocidade de animação.
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
@@ -408,13 +408,13 @@ Chame este método para definir a velocidade de animação para a janela de aler
 
 Define o tipo de animação.
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*type*<br/>
+*tipo*<br/>
 [em] Especifica o tipo de animação.
 
 ### <a name="remarks"></a>Comentários
@@ -435,7 +435,7 @@ Chame este método para definir o tipo de animação. É possível especificar u
 
 Define o tempo de fechamento automático.
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
@@ -452,7 +452,7 @@ A janela de alerta é automaticamente fechada após o tempo especificado se o us
 
 Alterna entre legendas pequenas e de tamanho normal.
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
@@ -469,7 +469,7 @@ Chame este método para exibir a legenda de tamanho pequeno ou regular. Por padr
 
 Define o nível de transparência da janela popup.
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 

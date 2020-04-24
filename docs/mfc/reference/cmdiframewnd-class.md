@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370052"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754550"
 ---
 # <a name="cmdiframewnd-class"></a>Classe CMDIFrameWnd
 
@@ -242,7 +242,7 @@ Substituir esta função de membro se você tiver um menu Janela que não use os
 
 Ativa uma janela de criança MDI diferente.
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ Veja o exemplo de [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).
 
 Organiza todas as janelas de crianças MDI em um formato em cascata.
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ Veja o exemplo de [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-c
 
 Organiza todas as janelas de crianças de documento minimizadas.
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ Veja o exemplo de [CMDIFrameWnd::MDICascade](#mdicascade).
 
 Maximiza a janela de criança MDI especificada.
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ Veja o exemplo de [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-c
 
 Ativa a janela da criança imediatamente atrás da janela de criança ativa atualmente e coloca a janela do filho ativa atualmente atrás de todas as outras janelas da criança.
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ Se a janela de criança MDI atualmente ativa for maximizada, a função membro r
 
 Ativa a janela do filho anterior e coloca a janela do filho ativa imediatamente atrás dela.
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ Se a janela de criança MDI atualmente ativa for maximizada, a função membro r
 
 Restaura uma janela de criança MDI de tamanho maximizado ou minimizado.
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ Não chame essa função de membro se você usar a estrutura para gerenciar suas
 
 Organiza todas as janelas de crianças em um formato de ladrilho.
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```

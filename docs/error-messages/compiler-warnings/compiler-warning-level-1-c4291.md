@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: cd161a37683703fd67b4c682558a51121c130816
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c1972236e30be4e6ca738b606b00398f5c7860e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175708"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754859"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>Aviso do compilador (nível 1) C4291
 
-' declaração ': nenhuma exclusão de operador correspondente encontrada; a memória não será liberada se a inicialização lançar uma exceção
+'Declaração': não foi encontrada exclusão do operador correspondente; memória não será liberada se a inicialização lança uma exceção
 
-Um [novo](../../cpp/new-operator-cpp.md) posicionamento é usado para o qual não há [exclusão](../../cpp/delete-operator-cpp.md)de posicionamento.
+Uma [nova](../../cpp/new-operator-cpp.md) colocação é usada para a qual não há [exclusão de](../../cpp/delete-operator-cpp.md)colocação .
 
-Quando a memória é alocada para um objeto com o operador **New**, o construtor do objeto é chamado. Se o Construtor lançar uma exceção, qualquer memória alocada para o objeto deverá ser desalocada. Isso não pode ocorrer a menos que exista uma função de **exclusão** de operador que corresponda ao operador **novo**.
+Quando a memória é alocada para um objeto com **o novo**operador, o construtor do objeto é chamado. Se o construtor lançar uma exceção, qualquer memória que foi alocada para o objeto deve ser desalocada. Isso não pode ocorrer a menos que exista uma função **de exclusão** do operador que corresponda ao **novo**operador .
 
-Se você usar o operador **novo** sem argumentos extras e compilar com as opções [/GX](../../build/reference/gx-enable-exception-handling.md), [o/EHS](../../build/reference/eh-exception-handling-model.md)ou/EHa para habilitar o tratamento de exceções, o compilador gerará código para chamar o Operator **delete** se o Construtor lançar uma exceção.
+Se você usar o **operador novo** sem quaisquer argumentos extras e compilar com opções [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md)ou /EHa para permitir o manuseio de exceções, o compilador gerará código para excluir o **operador** de chamadas se o construtor lançar uma exceção.
 
-Se você usar a forma de posicionamento do operador **New** (o formulário com argumentos, além do tamanho da alocação) e o construtor do objeto gerar uma exceção, o compilador ainda terá código para chamar Operator **delete**; Mas isso só fará isso se uma forma de posicionamento de operador **delete** existir corresponder à forma de posicionamento do operador **novo** que alocou a memória. Por exemplo:
+Se você usar a forma de colocação do **novo** operador (o formulário com argumentos além do tamanho da alocação) e o construtor do objeto lançar uma exceção, o compilador ainda gerará código para excluir o **operador**de chamadas; mas só o fará se existir uma forma de colocação de exclusão do operador que **corresponda** à forma de colocação do **operador novo** que alocou a memória. Por exemplo:
 
 ```cpp
 // C4291.cpp
@@ -74,9 +74,9 @@ int main(void)
 }
 ```
 
-O exemplo acima gera o aviso C4291 porque nenhum formulário de posicionamento da **exclusão** do operador foi definido e corresponde à forma de posicionamento do operador **novo**. Para resolver o problema, insira o código a seguir acima de **principal**. Observe que todos os parâmetros de função de **exclusão** de operador sobrecarregados correspondem aos do operador sobrecarregado **novo**, exceto para o primeiro parâmetro.
+O exemplo acima gera aviso C4291 porque não foi definida uma forma de colocação de **exclusão** do operador que corresponda à forma de colocação do **operador novo**. Para resolver o problema, insira o seguinte código acima **principal**. Observe que todos os parâmetros de função de **exclusão** do operador sobrecarregado satismem com os do operador sobrecarregado **novo,** exceto o primeiro parâmetro.
 
-```
+```cpp
 void operator delete(void* pMem, char* pszFilename, int nLine)
 {
    free(pMem);

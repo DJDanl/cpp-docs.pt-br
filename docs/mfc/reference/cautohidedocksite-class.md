@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 3a4593ac17f0af26517144edb7b01a9ca4203b1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352976"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753000"
 ---
 # <a name="cautohidedocksite-class"></a>Classe CAutoHideDockSite
 
@@ -151,7 +151,7 @@ Se *o lpRect* for NULL, a estrutura coloca o painel no local padrão no local do
 
 Recupera o tamanho do local do dock em coordenadas de tela.
 
-```
+```cpp
 void GetAlignRect(CRect& rect) const;
 ```
 
@@ -182,7 +182,7 @@ Quando `CMFCAutoHideBar` um está ancorado `CAutoHideDockSite`em um , ele não d
 
 Define a margem do lado esquerdo da barra de acoplamento.
 
-```
+```cpp
 void SetOffsetLeft(int nOffset);
 ```
 
@@ -199,7 +199,7 @@ Os objetos [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) estã
 
 Define a margem do lado direito da barra de acoplamento.
 
-```
+```cpp
 void SetOffsetRight(int nOffset);
 ```
 
@@ -235,7 +235,7 @@ A implementação padrão não usa *rectNewClientArea*. Ele redesenha os painéi
 
 Chama [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) para objetos no local do dock.
 
-```
+```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 ```
 

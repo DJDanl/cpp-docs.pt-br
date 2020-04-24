@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 73319ad898bfebf4caf191954ebb3935bd4ebce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fd1bce7de7ac323dc3099ab4938306768eb95a35
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321961"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754626"
 ---
 # <a name="cdataexchange-class"></a>Classe CDataExchange
 
@@ -107,7 +107,7 @@ Construa `CDataExchange` um objeto para armazenar informações extras no objeto
 
 O framework chama essa função de membro quando uma operação de validação de dados de diálogo (DDV) falha.
 
-```
+```cpp
 void Fail();
 ```
 

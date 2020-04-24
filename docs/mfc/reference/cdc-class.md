@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375708"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753435"
 ---
 # <a name="cdc-class"></a>Classe CDC
 
@@ -1354,7 +1354,7 @@ Um contexto de dispositivo Windows.
 
 Use esta função quando você der tamanhos HIMÉTRICOs ao OLE, convertendo pixels em HIMETRIC.
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ Se o modo de mapeamento do objeto de contexto do dispositivo for MM_LOENGLISH, M
 
 Converte unidades de dispositivos em unidades lógicas.
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ A função mapeia as coordenadas de cada ponto, ou dimensão de um tamanho, do s
 
 Chame esta função de membro para desenhar um retângulo tridimensional.
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1452,7 +1452,7 @@ O retângulo será desenhado com os lados superior e esquerdo na cor especificad
 
 Chame esta função de membro repetidamente para redesenhar um retângulo de arrasto.
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1467,7 +1467,7 @@ void DrawDragRect(
 *Lprect*<br/>
 Aponta para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) ou um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que especifica as coordenadas lógicas de um retângulo — neste caso, a posição final do retângulo está sendo redesenhada.
 
-*Tamanho*<br/>
+*size*<br/>
 Especifica o deslocamento do canto superior esquerdo da borda externa para o canto superior esquerdo da borda interna (ou seja, a espessura da borda) de um retângulo.
 
 *lpRectLast*<br/>
@@ -1548,7 +1548,7 @@ Quando um `DrawEscape`aplicativo chama, os dados identificados por *nInputSize* 
 
 Desenha um retângulo no estilo usado para indicar que o retângulo tem o foco.
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -1767,7 +1767,7 @@ BOOL DrawState(
 *pt*<br/>
 Especifica a localização da imagem.
 
-*Tamanho*<br/>
+*size*<br/>
 Especifica o tamanho da imagem.
 
 *Hbitmap*<br/>
@@ -2345,7 +2345,7 @@ Depois que seu interior é preenchido, o caminho é descartado a partir do conte
 
 Chame esta função de membro para preencher um determinado retângulo usando o pincel especificado.
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ O pincel deve ser criado `CBrush` usando `CreateHatchBrush`as `CreatePatternBrus
 
 Chame esta função de membro para preencher o retângulo dado com a cor sólida especificada.
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2492,7 +2492,7 @@ A `ExtFloodFill` função oferece capacidade semelhante, mas maior flexibilidade
 
 Desenha uma borda em torno do retângulo especificado por *lpRect*.
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -4123,7 +4123,7 @@ Quando a estrutura está no modo `GrayString` de visualização, uma `TextOut` c
 
 Use esta função quando converter tamanhos HIMÉTRICOs de OLE para pixels.
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ Se o modo de mapeamento do objeto de contexto do dispositivo for MM_LOENGLISH, M
 
 Chame esta função para converter unidades HIMETRIC em unidades lógicas.
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI corta toda a saída subseqüente para caber dentro do novo limite. A largura
 
 Inverte o conteúdo do retângulo dado.
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4297,7 +4297,7 @@ A linha é desenhada com a caneta selecionada. A posição atual é definida com
 
 Converte unidades lógicas em unidades de dispositivos.
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ As coordenadas x e y de pontos são inteiros assinados por 2 bytes na faixa -32.
 
 Chame esta função para converter unidades lógicas em unidades HIMETRIC.
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -4516,7 +4516,7 @@ Especifica o número de unidades lógicas para mover-se para a esquerda ou para 
 *Y*<br/>
 Especifica o número de unidades lógicas para mover para cima ou para baixo.
 
-*Tamanho*<br/>
+*size*<br/>
 Especifica o valor a ser compensado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -6493,7 +6493,7 @@ Especifica a extensão x da porta de exibição (em unidades do dispositivo).
 *Cy*<br/>
 Especifica a extensão y da porta de exibição (em unidades de dispositivo).
 
-*Tamanho*<br/>
+*size*<br/>
 Especifica as extensões x e y da porta de exibição (em unidades do dispositivo).
 
 ### <a name="return-value"></a>Valor retornado
@@ -6574,7 +6574,7 @@ Especifica a extensão x (em unidades lógicas) da janela.
 *Cy*<br/>
 Especifica a extensão y (em unidades lógicas) da janela.
 
-*Tamanho*<br/>
+*size*<br/>
 Especifica as extensões x e y (em unidades lógicas) da janela.
 
 ### <a name="return-value"></a>Valor retornado
@@ -7029,7 +7029,7 @@ Para obter mais informações, consulte [TransparentBlt](/windows/win32/api/wing
 
 Atualiza a área cliente do contexto do dispositivo combinando as cores atuais na área do cliente com a paleta do sistema em uma base pixel por pixel.
 
-```
+```cpp
 void UpdateColors();
 ```
 

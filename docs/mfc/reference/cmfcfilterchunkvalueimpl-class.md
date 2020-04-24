@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367504"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752366"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
 
@@ -129,7 +129,7 @@ hr = pedaço. SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 Limpa o ChunkValue.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -178,7 +178,7 @@ S_OK se for bem sucedido; caso contrário, um código de erro.
 
 Inicializa esse valor de pedaço do outro valor.
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
@@ -327,7 +327,7 @@ Especifica o valor do pedaço a ser definido.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
@@ -367,7 +367,7 @@ Especifica uma chave de propriedade.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
@@ -411,7 +411,7 @@ Especifica o valor do pedaço a ser definido.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
@@ -455,7 +455,7 @@ Especifica o valor do pedaço a ser definido.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
@@ -499,7 +499,7 @@ Especifica o valor do pedaço a ser definido.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
@@ -543,7 +543,7 @@ Especifica o valor do pedaço a ser definido.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
@@ -587,7 +587,7 @@ Especifica o valor do pedaço a ser definido.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
@@ -631,7 +631,7 @@ Especifica o valor do pedaço a ser definido.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
@@ -675,7 +675,7 @@ Especifica o valor do pedaço a ser definido.
 *chunkType*<br/>
 Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*Localidade*<br/>
+*locale*<br/>
 A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>

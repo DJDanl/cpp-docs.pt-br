@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 94d75f914e5f7928d08dd2a87997ab02c4f16832
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc5d6d99c326fba7020e8c5040c3bf28d09f8f0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361784"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754122"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
 
@@ -115,7 +115,7 @@ TRUE se a janela foi criada com sucesso; caso contrário, FALSE.
 
 Desativa e oculta o controle da ponta de ferramenta.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -127,7 +127,7 @@ Este método define a última posição e o texto como valores vazios, de modo q
 
 Retorna as coordenadas da última posição do controle da ponta de ferramenta.
 
-```
+```cpp
 void GetLastRect(CRect& rect) const;
 ```
 
@@ -140,7 +140,7 @@ void GetLastRect(CRect& rect) const;
 
 Esconde o controle da ponta de ferramenta.
 
-```
+```cpp
 void Hide();
 ```
 
@@ -148,7 +148,7 @@ void Hide();
 
 Define o espaçamento entre o texto da dica de ferramenta e a borda da janela da ponta de ferramenta.
 
-```
+```cpp
 void SetTextMargin(int nTextMargin);
 ```
 
@@ -161,7 +161,7 @@ void SetTextMargin(int nTextMargin);
 
 Exibe o controle da ponta da ferramenta.
 
-```
+```cpp
 void Track(
     CRect rect,
     const CString& strText);

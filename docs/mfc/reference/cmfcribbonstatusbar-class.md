@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368827"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754051"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Classe CMFCRibbonStatusBar
 
@@ -140,7 +140,7 @@ O exemplo a seguir demonstra como `CMFCRibbonStatusBar` usar vários métodos na
 
 Adiciona um elemento dinâmico à barra de status da fita.
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -157,7 +157,7 @@ Ao contrário dos elementos regulares, os elementos dinâmicos não são persona
 
 Adiciona um novo elemento de fita à barra de status da fita.
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -179,7 +179,7 @@ void AddElement(
 
 Adiciona um elemento de fita à área estendida da barra de status da fita.
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -205,7 +205,7 @@ A área estendida está do lado direito do controle da barra de status.
 
 Adiciona um separador à barra de status da fita.
 
-```
+```cpp
 void AddSeparator();
 ```
 
@@ -477,7 +477,7 @@ virtual void RecalcLayout();
 
 Remove todos os elementos da barra de status da fita.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -502,7 +502,7 @@ TRUE se um elemento com o *uiID* especificado for removido. FALSO de outra forma
 
 Ativa ou desativa o modo de informação da barra de status da fita.
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 

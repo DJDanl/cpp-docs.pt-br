@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377356"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753407"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe CMFCToolBarsCustomizeDialog
 
@@ -120,7 +120,7 @@ O exemplo a seguir demonstra como `CMFCToolBarsCustomizeDialog` usar vários mé
 
 Insere um botão de barra de ferramentas na lista de comandos na página **Comandos.**
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -187,7 +187,7 @@ Na chamada `AddMenuCommands`para *, bPopup* é FALSE. Como resultado, esse méto
 
 Adiciona itens à lista de comandos na página **Comandos** para representar todos os itens do menu especificado.
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ Chame `Create` o método somente depois de inicializar totalmente a classe.
 
 Ativa ou desativa a criação de novas barras de ferramentas usando a caixa de diálogo **Personalizar.**
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ A `CMFCMousePropertyPage` classe usa esse método para preencher a caixa de list
 
 Preenche o objeto `CComboBox` fornecido com o nome de cada categoria de comando na caixa de diálogo **Personalizar.**
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ As `CMFCToolBarsKeyboardPropertyPage` `CMFCKeyMapDialog` classes e as classes us
 
 Preenche o objeto `CListBox` fornecido com o nome de cada categoria de comando na caixa de diálogo **Personalizar.**
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ O nome da categoria deve ser único.
 
 Substitui um botão de barra de ferramentas na caixa de lista de comandos na página **Comandos.**
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);

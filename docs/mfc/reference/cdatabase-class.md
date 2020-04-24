@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376472"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754635"
 ---
 # <a name="cdatabase-class"></a>Classe CDatabase
 
@@ -186,7 +186,7 @@ Em sua substituição, `SQLBindParameters` as funções de chamada e ODBC relaci
 
 Ligue para esta função de membro para solicitar que a fonte de dados cancele uma operação assíncrona em andamento ou um processo a partir de um segundo segmento.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ Para obter mais informações sobre transações, consulte o artigo [Transação
 
 Chame esta função de membro quando precisar executar um comando SQL diretamente.
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ Após uma reversão, o registro que estava atual antes da reversão permanece at
 
 Ligue para esta função `OpenEx` de `Open` membro — antes de ligar ou — para substituir o número padrão de segundos permitido antes que uma tentativa de conexão de origem de dados seja cancelada.
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ O valor padrão para intervalos de login é de 15 segundos. Nem todas as fontes 
 
 Ligue para esta função de membro para substituir o número padrão de segundos para permitir antes das operações subseqüentes no tempo de saída da fonte de dados conectado.
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 

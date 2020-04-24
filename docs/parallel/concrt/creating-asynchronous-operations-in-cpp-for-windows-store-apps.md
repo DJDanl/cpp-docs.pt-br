@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8e1183464d3ecf9b12fabcc6fb4f1fd99b7b0083
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 635a8c95a3801c6e88feff1cefa3ed27727a8f88
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353403"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032181"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 
@@ -54,13 +54,13 @@ Usando o Windows Runtime, você pode usar os melhores recursos de várias lingua
 [Windows::Fundação::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 Representa uma ação assíncrona.
 
-[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)<br/>
+[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](/uwp/api/windows.foundation.iasyncactionwithprogress-1)<br/>
 Representa uma ação assíncrona que relata o progresso.
 
-[Windows::Fundação::IAsyncOperação\<TResult>](/uwp/api/windows.foundation.iasyncoperation_tresult_)<br/>
+[Windows::Fundação::IAsyncOperação\<TResult>](/uwp/api/windows.foundation.iasyncoperation-1)<br/>
 Representa uma operação assíncrona que retorna um resultado.
 
-[Windows::Foundation::IAsyncOperationWithProgress\<Tresult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<Tresult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 Representa uma operação assíncrona que retorna um resultado e relata progresso.
 
 A noção de *ação* significa que a tarefa assíncrona não produz `void`um valor (pense em uma função que retorna ). A noção de uma *operação* significa que a tarefa assíncrona produz um valor. A noção de *progresso* significa que a tarefa pode relatar mensagens de progresso ao chamador. JavaScript, o .NET Framework e o Visual C++ cada um fornece sua própria maneira de criar instâncias dessas interfaces para uso através do limite ABI. Para Visual C++, o PPL fornece a função [de simultuá-lo::create_async.](reference/concurrency-namespace-functions.md#create_async) Essa função cria uma ação assíncrona do Windows Runtime ou uma operação que representa a conclusão de uma tarefa. A `create_async` função assume uma função de trabalho (tipicamente `task` uma expressão lambda), cria internamente um objeto e envolve essa tarefa em uma das quatro interfaces assíncronas do Windows Runtime.
@@ -92,7 +92,7 @@ O exemplo a seguir mostra `IAsyncAction` as várias maneiras de criar um objeto 
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>Exemplo: Criar um componente de tempo de execução do C++ Windows e consumi-lo a partir de C\#
 
-Considere um aplicativo que usa XAML e C# para definir a ui e um componente C++ Windows Runtime para executar operações com uso intensivo de computação. Neste exemplo, o componente C++ calcula quais números em um determinado intervalo são primos. Para ilustrar as diferenças entre as quatro interfaces de tarefa assíncronas do Windows `Primes`Runtime, inicie, no Visual Studio, criando uma solução em **branco** e nomeando-a . Em seguida, adicione à solução um projeto **do Windows Runtime Component** e nomeie-o `PrimesLibrary`. Adicione o seguinte código ao arquivo de cabeçalho C++ gerado (este exemplo renomeia Class1.h para Primes.h). Cada `public` método define uma das quatro interfaces assíncronas. Os métodos que retornam um valor retornam um [objeto Windows::Foundation::Collections::IVector\<int>.](/uwp/api/Windows.Foundation.Collections.IVector_T_) Os métodos que `double` relatam o progresso produzem valores que definem o percentual do trabalho global que foi concluído.
+Considere um aplicativo que usa XAML e C# para definir a ui e um componente C++ Windows Runtime para executar operações com uso intensivo de computação. Neste exemplo, o componente C++ calcula quais números em um determinado intervalo são primos. Para ilustrar as diferenças entre as quatro interfaces de tarefa assíncronas do Windows `Primes`Runtime, inicie, no Visual Studio, criando uma solução em **branco** e nomeando-a . Em seguida, adicione à solução um projeto **do Windows Runtime Component** e nomeie-o `PrimesLibrary`. Adicione o seguinte código ao arquivo de cabeçalho C++ gerado (este exemplo renomeia Class1.h para Primes.h). Cada `public` método define uma das quatro interfaces assíncronas. Os métodos que retornam um valor retornam um [objeto Windows::Foundation::Collections::IVector\<int>.](/uwp/api/windows.foundation.collections.ivector-1) Os métodos que `double` relatam o progresso produzem valores que definem o percentual do trabalho global que foi concluído.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 

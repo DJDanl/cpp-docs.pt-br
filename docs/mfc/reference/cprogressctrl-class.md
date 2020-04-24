@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364014"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751130"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -149,7 +149,7 @@ Especifica o estilo do controle da barra de progresso. Aplique qualquer combina�
 - PBS_SMOOTH Exibe o preenchimento gradual e suave no controle da barra de progresso. Sem esta bandeira, o controle se encherá de blocos.
 
 *Rect*<br/>
-Especifica o tamanho e a posição da barra de progresso. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\)) Como o controle deve ser uma janela filho, as coordenadas especificadas são relativas à área cliente do *pParentWnd*.
+Especifica o tamanho e a posição da barra de progresso. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect) Como o controle deve ser uma janela filho, as coordenadas especificadas são relativas à área cliente do *pParentWnd*.
 
 *Pparentwnd*<br/>
 Especifica a janela pai da barra de `CDialog`progresso, geralmente a . Não deve ser NULO.
@@ -191,7 +191,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle da barra de progresso. Aplique qualquer combinação de estilos de janela descritos no [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) no Windows SDK.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -263,7 +263,7 @@ A posição do controle da barra de progresso não é a localização física na
 
 Obtém os limites inferiores e superiores atuais, ou alcance, do controle da barra de progresso.
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -495,7 +495,7 @@ A posição do controle da barra de progresso não é a localização física na
 
 Define os limites superiore e inferior do alcance da barra de progresso e redesenha a barra para refletir as novas faixas.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

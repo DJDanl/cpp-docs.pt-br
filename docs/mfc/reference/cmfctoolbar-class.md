@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375070"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754036"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 
@@ -652,7 +652,7 @@ Anular este método para fornecer seu próprio layout `CMFCToolbar`dinâmico em 
 
 Recalcula o tamanho da barra de ferramentas.
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ A estrutura chama esse método quando um aplicativo é desligado.
 
 Libera os recursos do sistema alocados para imagens bloqueadas da barra de ferramentas.
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ Substituir este método em uma classe derivada do [CMFCToolBar](../../mfc/refere
 
 Ativa ou desativa o botão Personalizar que aparece na barra de ferramentas.
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ Este método amplia a implementação da classe base, [CBasePane::EnableDocking]
 
 Ativa ou desativa grandes ícones nos botões da barra de ferramentas.
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 Ativa ou desativa a reflexão do comando.
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ Para obter mais informações sobre reflexão de comando, consulte [TN062: Refle
 
 Ativa ou desativa etiquetas de texto em imagens de botão da barra de ferramentas.
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ Um ponteiro para o botão da barra de ferramentas se ele existir; ou NULL se nã
 
 Retorna o id de comando, o estilo e o índice de imagem do botão em um índice especificado.
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -3211,7 +3211,7 @@ Consulte a amostra explorer para obter um exemplo que usa este método.
 
 Define o ID de comando, o estilo e o ID de imagem de um botão de barra de ferramentas.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ Este método ajusta o layout e redesenha cada barra de ferramentas no aplicativo
 
 Especifica se os botões indisponíveis na barra de ferramentas estão escurecidos ou se as imagens indisponíveis por botão são usadas.
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ Por padrão, os botões indisponíveis são escurecidos.
 
 Define a altura da barra de ferramentas.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 Especifica se os botões da barra de ferramentas estão rastreados a quente.
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ Para obter mais informações sobre botões de barra de ferramentas com foco que
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ Para obter mais informações sobre a caixa de diálogo **Personalizar,** consul
 
 Define os tamanhos dos botões bloqueados e imagens bloqueadas na barra de ferramentas.
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ Ligue para o [método CMFCToolBar::GetLockedImageSize](#getlockedimagesize) para
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFCToolBar::SetMaskMode
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ Este método limpa a lista anterior de comandos não permitidos. Por padrão, a 
 
 Posiciona a barra de ferramentas e seu irmão na mesma linha.
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ A estrutura chama o método [CMFCToolBar::SetTwoRowsWithSibling](#settworowswith
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 Especifica se um usuário pode fechar a barra de ferramentas.
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ Ligue para o [CMFCToolBar::CanBeClosed](#canbeclosed) method para determinar se 
 
 Especifica se o quadro pai ou o proprietário enviam comandos para a barra de ferramentas.
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ Ligue para o [método CMFCToolBar::GetShowTooltips](#getshowtooltips) para deter
 
 Especifica o irmão da barra de ferramentas.
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ Ligue para o [método CMFCToolBar::GetImageSize](#getimagesize) para recuperar o
 
 Especifica propriedades de um botão na barra de ferramentas.
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ Em compilações de depuração, este método gera uma falha de afirmação se *
 
 Posiciona a barra de ferramentas e seu irmão em linhas separadas.
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ A estrutura chama esse método quando uma tecla é pressionada juntamente com a 
 
 Atualiza o estado do botão especificado.
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 

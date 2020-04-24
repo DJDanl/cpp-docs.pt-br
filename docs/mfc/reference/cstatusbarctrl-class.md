@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57d040a7efd87d384e0aaa6275593bc91f38cc86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366027"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753039"
 ---
 # <a name="cstatusbarctrl-class"></a>Classe CStatusBarCtrl
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Especifica o estilo do controle da barra de status. Aplique qualquer combinação de estilos de controle de barra de status listados em [Estilos de Controle Comuns](/windows/win32/Controls/common-control-styles) no SDK do Windows. Este parâmetro deve incluir o estilo WS_CHILD. Também deve incluir o estilo WS_VISIBLE.
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle da barra de status. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Especifica o tamanho e a posição do controle da barra de status. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *Pparentwnd*<br/>
 Especifica a janela pai do controle da `CDialog`barra de status, geralmente um . Não deve ser NULO.
@@ -178,7 +178,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle da barra de status. Aplique qualquer combinação de estilos de controle de barra de status listados em [Estilos de Controle Comuns](/windows/win32/Controls/common-control-styles) no SDK do Windows. Este parâmetro deve incluir o estilo WS_CHILD. Também deve incluir o estilo WS_VISIBLE.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Índice baseado em zero da parte cujo retângulo delimitador deve ser recuperado.
 
 *Lprect*<br/>
-Endereço de uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recebe o retângulo delimitador.
+Endereço de uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que recebe o retângulo delimitador.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -530,7 +530,7 @@ Esta função de membro implementa o comportamento da [SB_SETICON](/windows/win3
 
 Define a altura mínima da área de desenho de um controle de barra de status.
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -632,7 +632,7 @@ A mensagem invalida a parte do controle que foi alterada, fazendo com que ela ex
 
 Define o texto da dica de ferramenta para um painel em uma barra de status.
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);

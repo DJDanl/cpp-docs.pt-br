@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e5294aabc42301e2f874d5b8328d648f4deeb3c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: efa08aa5dd556d7e136323c31451a9f33bd72ec6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372361"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754951"
 ---
 # <a name="cinterpolatorbase-class"></a>Classe CInterpolatorBase
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Duração*<br/>
+*duration*<br/>
 Saída. A duração da transição, em segundos.
 
 ### <a name="return-value"></a>Valor retornado
@@ -217,7 +217,7 @@ Se o método for bem-sucedido, retornará S_OK. Ele retorna E_FAIL se o CCustomI
 
 Armazena um ponteiro para interpolador personalizado, que estará lidando com eventos.
 
-```
+```cpp
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```
 
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Duração*<br/>
+*duration*<br/>
 A duração da transição.
 
 ### <a name="return-value"></a>Valor retornado

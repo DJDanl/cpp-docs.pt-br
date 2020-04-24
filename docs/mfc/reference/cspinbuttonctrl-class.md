@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318120"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753109"
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Especifica o estilo do controle do botão de giro. Aplique qualquer combinação de estilos de controle do botão de giro ao controle. Esses estilos são descritos em [Estilos de controle de up-down](/windows/win32/Controls/up-down-control-styles) no SDK do Windows.
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle do botão de giro. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\))
+Especifica o tamanho e a posição do controle do botão de giro. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect)
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela pai do `CDialog`controle do botão de giro, geralmente um . Não deve ser NULO.
@@ -160,7 +160,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle do botão de giro. Aplique qualquer combinação de estilos de controle do botão de giro ao controle. Esses estilos são descritos em [Estilos de controle de up-down](/windows/win32/Controls/up-down-control-styles) no SDK do Windows.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -375,7 +375,7 @@ A posição anterior (precisão de `SetPos`16 bits `SetPos32`para precisão de 3
 
 Define os limites superior e inferior (intervalo) para um controle de botão de giro.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

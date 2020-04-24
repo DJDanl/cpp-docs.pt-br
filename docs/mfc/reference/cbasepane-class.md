@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 56e4e30e23262da677c014a18e9fb8b175a6903d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 941f32dfadffd97210586edd7c2aa63c3c1708cd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352932"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752982"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -377,7 +377,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 
 Adiciona um painel ao gerente de acoplamento.
 
-```
+```cpp
 void AddPane(CBasePane* pBar);
 ```
 
@@ -774,7 +774,7 @@ Chame esta função para encaixar um painel em outro painel ou uma barra de doca
 
 Acopla o painel usando informações do tipo run-time.
 
-```
+```cpp
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
@@ -1740,7 +1740,7 @@ virtual void RecalcLayout();
 
 Desregistra um painel e remove-o da lista no gerenciador de acoplamento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pBar,
     BOOL bDestroy = TRUE,
@@ -1837,7 +1837,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 Define o modo de acoplamento para o painel.
 
-```
+```cpp
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 

@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363675"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752876"
 ---
 # <a name="afx_global_data-structure"></a>Estrutura AFX_GLOBAL_DATA
 
@@ -170,7 +170,7 @@ TRUE indica que a mistura alfa é suportada; caso contrário, FALSE.
 
 Libera recursos que são alocados pelo framework, como pincéis, fontes e DLLs.
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -190,7 +190,7 @@ HRESULT D2D1MakeRotateMatrix(
 *angle*<br/>
 O ângulo da rotação no sentido horário, em graus.
 
-*centro*<br/>
+*Centro*<br/>
 O ponto sobre o qual girar.
 
 *Matriz*<br/>
@@ -288,7 +288,7 @@ Um tema define o estilo visual de uma aplicação. Um tema não é usado para de
 
 Ativa ou desativa o suporte ao Microsoft Active Accessibility.
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -676,7 +676,7 @@ O `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` construtor inicializa este membro para 4 pi
 
 Detecta o estado atual dos recursos de animação de menu e barra de tarefas da barra de tarefas.
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ Este método cria uma fonte horizontal regular, uma fonte sublinhada e uma fonte
 
 Reintializa as fontes lógicas que são usadas pela estrutura.
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ Para obter mais informações sobre `CFont::CreateFontIndirect`fontes lógicas, 
 
 Inicializa as cores, profundidade de cor, pincéis, canetas e imagens que são usadas pela estrutura.
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ Um valor inteiro com sinalizadores codificados que especificam posições de bar
 
 Libera interfaces obtidas `GetITaskbarList` através `GetITaskbarList3` dos métodos.
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: a5e95efe1880f1177490d55988ca1fe42c606b15
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367549"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752433"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 
@@ -173,7 +173,7 @@ A estrutura chama esse método quando o quadro de saque é criado ou a janela pa
 
 Define se a janela da barra de ferramentas suspensa da criança é destruída automaticamente.
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 

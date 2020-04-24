@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369305"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754282"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Classe CD2DBitmapBrush
 
@@ -132,7 +132,7 @@ virtual ~CD2DBitmapBrush();
 
 Anexa a interface de recurso existente ao objeto
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -200,7 +200,7 @@ Ponteiro para uma seqüência de terminadas nula que contém o nome do arquivo.
 
 Inicializa o objeto
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -346,7 +346,7 @@ Ponteiro para uma interface ID2D1BitmapBrush ou NULL se o objeto ainda não esti
 
 Especifica a fonte bitmap que este pincel usa para pintar
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -359,7 +359,7 @@ A fonte bitmap usada pelo pincel
 
 Especifica como o pincel horizontalmente ladrilhos as áreas que se estendem além de seu bitmap
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -372,7 +372,7 @@ Um valor que especifica como o pincel horizontalmente ladrilhos as áreas que se
 
 Especifica como o pincel ladria verticalmente as áreas que se estendem além de seu bitmap
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -385,7 +385,7 @@ Um valor que especifica como o pincel ladria verticalmente as áreas que se este
 
 Especifica o modo de interpolação usado quando o bitmap de pincel é dimensionado ou girado
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 

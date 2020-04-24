@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: b0118b47fd1bb1db15916d7deffbaa32dcfc9df7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e25a375f8bf5769a4a118318eac272db93062cbf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375293"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752506"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 
@@ -250,7 +250,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 Adiciona um item do menu ao menu pop-up associado ao botão.
 
-```
+```cpp
 void AddSubItem(
     CMFCRibbonBaseElement* pSubItem,
     int nIndex=-1);
@@ -803,7 +803,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 Remove todos os itens do menu do menu pop-up.
 
-```
+```cpp
 void RemoveAllSubItems();
 ```
 
@@ -852,7 +852,7 @@ Retorna TRUE se for bem sucedido; caso contrário, FALSO.
 
 Especifica se o botão exibe uma imagem grande ou pequena quando o usuário colapsa o botão.
 
-```
+```cpp
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```
 
@@ -865,7 +865,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 
 Habilita o comando padrão para o botão de fita.
 
-```
+```cpp
 void SetDefaultCommand(BOOL bSet=TRUE);
 ```
 
@@ -894,7 +894,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 Atribui um índice à imagem do botão.
 
-```
+```cpp
 void SetImageIndex(
     int nIndex,
     BOOL bLargeImage);
@@ -912,7 +912,7 @@ void SetImageIndex(
 
 Atribui um menu pop-up ao botão de fita.
 
-```
+```cpp
 void SetMenu(
     HMENU hMenu,
     BOOL bIsDefaultCommand=FALSE,
@@ -958,7 +958,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 Alinha o menu pop-up à borda do botão.
 
-```
+```cpp
 void SetRightAlignMenu(BOOL bSet=TRUE);
 ```
 

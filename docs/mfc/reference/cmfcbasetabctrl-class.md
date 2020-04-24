@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: db82a3c9019655fae850002d9e664e5de5407aa6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367826"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754902"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Classe CMFCBaseTabCtrl
 
@@ -425,7 +425,7 @@ As seguintes dicas `CMFCBaseTabCtrl Class` pertencem às classes que herdam dela
 
 Adiciona um ícone à lista de `CMap m_mapAddedIcons` ícones no membro protegido.
 
-```
+```cpp
 void AddIcon(
     HICON hIcon,
     int iIcon);
@@ -494,7 +494,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow
 
-```
+```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -598,7 +598,7 @@ Se a guia especificada por *nTabNum* não for destacável, esta função falhar�
 
 ## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>CMFCBaseTabCtrl:HabilitarActivateActivateLastActive
 
-```
+```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
@@ -612,7 +612,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 Controla se a estrutura usa as cores automáticas de fundo ao desenhar uma guia.
 
-```
+```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```
 
@@ -695,7 +695,7 @@ VERDADE se bem sucedido; caso contrário, FALSO.
 
 Permite que o usuário altere a ordem da guia usando um mouse.
 
-```
+```cpp
 void EnableTabSwap(BOOL bEnable);
 ```
 
@@ -733,7 +733,7 @@ Por padrão, este método não `CMFCBaseTabCtrl Class`é suportado pelo . Você 
 
 ## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode
 
-```
+```cpp
 void EnterDragMode();
 ```
 
@@ -1409,7 +1409,7 @@ Se o objeto indicado por *pNewWnd* não for derivado da [Classe CDockablePane](.
 
 ## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>CMFCBaseTabCtrl::Invalidtab
 
-```
+```cpp
 void InvalidateTab(int iTab);
 ```
 
@@ -1944,7 +1944,7 @@ virtual BOOL RenameTab();
 
 Redefine a lista de imagens para uma instância da [Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
-```
+```cpp
 void ResetImageList();
 ```
 
@@ -2019,7 +2019,7 @@ Por padrão, a estrutura obtém a cor do texto de [GetSysColor](/windows/win32/a
 
 Define as cores do controle de guia que a estrutura usa no modo de cor automático.
 
-```
+```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```
 
@@ -2038,7 +2038,7 @@ Para ativar o modo de coloração automática, use o método [CMFCBaseTabCtrl::E
 
 Define a classe de invólucro que é usada para quaisquer objetos que não sejam derivados da [classe CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
-```
+```cpp
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```
 
@@ -2055,7 +2055,7 @@ Você adiciona guias a um controle de guiausando os métodos [CMFCBaseTabCtrl::A
 
 Habilita e desativa o processamento de caracteres prefixos em etiquetas de guia.
 
-```
+```cpp
 void SetDrawNoPrefix(
     BOOL bNoPrefix,
     BOOL bRedraw = TRUE);

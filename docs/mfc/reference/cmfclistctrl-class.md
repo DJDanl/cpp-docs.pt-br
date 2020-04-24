@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 63fbfd236ed98eee3b90f4a20b191817026903c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 099ec086bd95a1180af4cf5a8f6a9fa7f1d099ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370766"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754238"
 ---
 # <a name="cmfclistctrl-class"></a>Classe CMFCListCtrl
 
@@ -94,7 +94,7 @@ O exemplo a seguir demonstra como `CMFCListCtrl` usar vários métodos na classe
 
 Marca as colunas classificadas com uma cor de fundo diferente.
 
-```
+```cpp
 void EnableMarkSortedColumn(
     BOOL bMark = TRUE,
     BOOL bRedraw = TRUE);
@@ -116,7 +116,7 @@ void EnableMarkSortedColumn(
 
 Permite classificar as linhas de dados no controle de lista por várias colunas.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```
 
@@ -277,7 +277,7 @@ Por padrão, este `GetTextColor` método chama independentemente dos parâmetros
 
 Remove uma coluna de classificação da lista de colunas classificadas.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -294,7 +294,7 @@ Este método remove uma coluna de classificação do controle de cabeçalho. Cha
 
 Define a coluna classificada atual e a ordem de classificação.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending = TRUE,

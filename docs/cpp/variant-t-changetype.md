@@ -9,41 +9,41 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: b0692c9befaa6b7e787ada624dcbb56b074c9f9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c2283158856a6781ab2e12c51f4e2ad0e4f1d531
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160457"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750721"
 ---
 # <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Altera o tipo do objeto `_variant_t` para o `VARTYPE`indicado.
+Altera o tipo `_variant_t` do objeto `VARTYPE`para o indicado .
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void ChangeType(
    VARTYPE vartype,
    const _variant_t* pSrc = NULL
 );
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*VarType*<br/>
-O `VARTYPE` para este objeto de `_variant_t`.
+*Vartype*<br/>
+O `VARTYPE` para `_variant_t` este objeto.
 
-*pSrc*<br/>
-Um ponteiro para o objeto `_variant_t` a ser convertido. Se esse valor for NULL, a conversão será feita no local.
+*Psrc*<br/>
+Um ponteiro para o objeto `_variant_t` a ser convertido. Se esse valor for NULO, a conversão será feita no lugar.
 
 ## <a name="remarks"></a>Comentários
 
-Essa função de membro converte um objeto `_variant_t` no `VARTYPE`indicado. Se *pSrc* for NULL, a conversão será feita em vigor, caso contrário, esse objeto de `_variant_t` será copiado de *pSrc* e convertido.
+Esta função de `_variant_t` membro converte `VARTYPE`um objeto no indicado . Se *o pSrc* for NULL, a conversão `_variant_t` será feita no lugar, caso contrário este objeto será copiado do *pSrc* e convertido.
 
-**Fim da seção específica da Microsoft**
+**Fim específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

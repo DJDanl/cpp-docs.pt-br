@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367520"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752390"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Classe CMFCDynamicLayout
 
@@ -123,7 +123,7 @@ A posição e o tamanho de um controle de crianças são alterados dinamicamente
 
 Adiciona uma janela filho, tipicamente um controle, à lista de janelas que são controladas pelo gerenciador de layout dinâmico.
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ A posição e o tamanho de um controle de crianças são alterados dinamicamente
 
 Recupera o retângulo para a área de cliente atual da janela.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,13 +383,13 @@ Um valor [MoveSettings](#movesettings_structure) que encapsula a relação de mo
 
 Define o tamanho da janela abaixo do qual o layout não é ajustado.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tamanho*<br/>
+*size*<br/>
 O tamanho desejado abaixo do qual o layout não é ajustado.
 
 ### <a name="remarks"></a>Comentários

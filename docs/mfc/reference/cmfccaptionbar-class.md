@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 3a1e8890176fe686b54fe4756dfd578869cbcdfb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c42b1ccb51a3c290e0887717d900543b8d5b277a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367790"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752618"
 ---
 # <a name="cmfccaptionbar-class"></a>Classe CMFCCaptionBar
 
@@ -227,7 +227,7 @@ Retorna FALSO, a menos que substituído.
 
 Ativa ou desativa o botão na barra de legendas.
 
-```
+```cpp
 void EnableButton(BOOL bEnable=TRUE);
 ```
 
@@ -473,7 +473,7 @@ Anular este método `CMFCCaptionBar` em uma classe derivada para personalizar a 
 
 Remove a imagem bitmap da barra de legendas.
 
-```
+```cpp
 void RemoveBitmap();
 ```
 
@@ -481,7 +481,7 @@ void RemoveBitmap();
 
 Remove o botão da barra de legendas.
 
-```
+```cpp
 void RemoveButton();
 ```
 
@@ -493,7 +493,7 @@ O layout dos elementos da barra de legendas são ajustados automaticamente.
 
 Remove o ícone da barra de legendas.
 
-```
+```cpp
 void RemoveIcon();
 ```
 
@@ -501,7 +501,7 @@ void RemoveIcon();
 
 Remove o rótulo de texto da barra de legendas.
 
-```
+```cpp
 void RemoveText();
 ```
 
@@ -509,7 +509,7 @@ void RemoveText();
 
 Define a imagem bitmap para a barra de legendas.
 
-```
+```cpp
 void SetBitmap(
     HBITMAP hBitmap,
     COLORREF clrTransparent,
@@ -557,7 +557,7 @@ O bitmap está alinhado conforme especificado pelo parâmetro *bmpAlignment.*  E
 
 Define o tamanho da borda da barra de legendas.
 
-```
+```cpp
 void SetBorderSize(int nSize);
 ```
 
@@ -570,7 +570,7 @@ void SetBorderSize(int nSize);
 
 Define o botão para a barra de legendas.
 
-```
+```cpp
 void SetButton(
     LPCTSTR lpszLabel,
     UINT uiCmdUI,
@@ -596,7 +596,7 @@ VERDADE se o botão exibir uma seta solta, FALSO de outra forma.
 
 Especifica se o botão permanece pressionado.
 
-```
+```cpp
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```
 
@@ -609,7 +609,7 @@ VERDADE se o botão mantiver seu estado pressionado, FALSO de outra forma.
 
 Define a dica de ferramenta para o botão.
 
-```
+```cpp
 void SetButtonToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -627,7 +627,7 @@ void SetButtonToolTip(
 
 Define o estilo de borda da barra de legendas.
 
-```
+```cpp
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```
 
@@ -640,7 +640,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 
 Define o ícone como uma barra de legendas.
 
-```
+```cpp
 void SetIcon(
     HICON hIcon,
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
@@ -672,7 +672,7 @@ O ícone está alinhado de acordo com o parâmetro *iconAlignment.* Pode ser um 
 
 Define a dica de ferramenta para a imagem na barra de legendas.
 
-```
+```cpp
 void SetImageToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -690,7 +690,7 @@ void SetImageToolTip(
 
 Define a distância entre a borda do elemento da barra de legendae e a borda do controle da barra de legendas.
 
-```
+```cpp
 void SetMargin(int nMargin);
 ```
 
@@ -703,7 +703,7 @@ void SetMargin(int nMargin);
 
 Define o rótulo de texto para a barra de legendas.
 
-```
+```cpp
 void SetText(
     const CString& strText,
     BarElementAlignment textAlignment=ALIGN_RIGHT);

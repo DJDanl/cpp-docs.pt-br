@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 8db12a73d64641a52fea3056de8ab3180c9239b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f952044f4320aea1a757559b3c9c51e8ffb7c3a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365788"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751649"
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
 
@@ -124,7 +124,7 @@ Chame esta função para causar uma pausa (no local da chamada para `AfxDebugBre
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void AfxDebugBreak( );
 ```
 
@@ -434,7 +434,7 @@ Função interna que o MFC usa para despejar o estado de um objeto durante a dep
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -483,7 +483,7 @@ int  afxMemDF;
 
 Esta função testa o SCODE aprovado para ver se é um erro.
 
-```
+```cpp
 void AFXAPI AfxCheckError(SCODE sc);
 throw CMemoryException*
 throw COleException*
@@ -547,7 +547,7 @@ Esta função funciona apenas na versão Debug do MFC.
 
 Chame esta função enquanto estiver no depurador para despejar o estado de um objeto durante a depuração.
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -570,7 +570,7 @@ O código do `AfxDump`programa não deve `Dump` chamar, mas deve chamar a funç�
 
 Esta função global pode ser usada para gerar uma imagem da pilha atual.
 
-```
+```cpp
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
@@ -858,7 +858,7 @@ Observe que a convenção de chamada aFXAPI implica que a callee deve remover os
 
 Chama a função de iteração `CObject`especificada para todas as classes derivadas serializáveis no espaço de memória do aplicativo.
 
-```
+```cpp
 void
 AFXAPI AfxDoForAllClasses(
     void (* pfn)(const CRuntimeClass* pClass, void* pContext),
@@ -894,7 +894,7 @@ Classes `CObject`derivadas serializáveis são classes derivadas usando a macro 
 
 Executa a função de iteração especificada `CObject` para todos os objetos derivados dos que foram alocados com **novo**.
 
-```
+```cpp
 void AfxDoForAllObjects(
     void (* pfn)(CObject* pObject, void* pContext),
     void* pContext);

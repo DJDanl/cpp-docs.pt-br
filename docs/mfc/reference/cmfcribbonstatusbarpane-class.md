@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 554b9fe364c6a213e038416a605c17cdd4f8e7d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb4e09eabab17061812ed22b2739d06accd57fee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368792"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753509"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Classe CMFCRibbonStatusBarPane
 
@@ -259,7 +259,7 @@ virtual void OnFinishAnimation();
 
 Defina o texto mais longo que pode ser exibido no painel da barra de status sem truncação.
 
-```
+```cpp
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```
 
@@ -276,7 +276,7 @@ A biblioteca calcula o tamanho do texto que *lpszAlmostLargeText* especifica e r
 
 Anexa ao painel da barra de status uma lista de imagens que pode ser usada para animação.
 
-```
+```cpp
 void SetAnimationList(
     HBITMAP hBmpAnimationList,
     int cxAnimation=16,
@@ -310,7 +310,7 @@ TRUE se a lista de imagens for anexada com sucesso ao painel da barra de status;
 
 Define o alinhamento de texto do rótulo do painel da barra de status.
 
-```
+```cpp
 void SetTextAlign(int nAlign);
 ```
 
@@ -333,7 +333,7 @@ void SetTextAlign(int nAlign);
 
 Inicia a animação que você atribui ao painel.
 
-```
+```cpp
 void StartAnimation(
     UINT nFrameDelay=500,
     UINT nDuration=-1);
@@ -355,7 +355,7 @@ Você deve especificar uma alça para `StartAnimation` uma `SetAnimationList`lis
 
 Interrompe a animação que você atribuiu ao painel da barra de status.
 
-```
+```cpp
 void StopAnimation();
 ```
 

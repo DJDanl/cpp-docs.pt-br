@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367764"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752575"
 ---
 # <a name="cmfccolorbar-class"></a>Classe CMFCColorBar
 
@@ -380,7 +380,7 @@ A etiqueta padrão para o outro botão é **Mais Cores...**.
 
 Calcula as margens verticais e horizontais necessárias para conter os botões no controle da barra de cores e ajusta a localização desses botões.
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ VERDADE se este método for bem sucedido; caso contrário, FALSE.
 
 Mostra ou esconde o botão automático.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ O rótulo de texto do botão automático é excluído se o parâmetro *lpszLabel
 
 Ativa ou desativa a exibição de uma caixa de diálogo que permite ao usuário selecionar mais cores.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ Ponteiro para a paleta que é substituído pela paleta do botão pai do controle
 
 Define a cor selecionada no momento.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ Este método altera o nome da `CMFCColorBar` cor especificada em todos os objeto
 
 Define um novo ID de comando para um controle de barra de cores.
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ Chame este método para modificar o ID de comando de um controle de barra de cor
 
 Define a lista de cores usadas no documento atual.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 Define a margem horizontal, que é o espaço entre a célula de cor esquerda ou direita e o limite da área do cliente.
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ Por padrão, o [construtor CMFCColorBar::CMFCColorBar](#cmfccolorbar) define a m
 
 Define `m_pWndPropList` o membro de dados protegido para o ponteiro especificado para um controle de grade de propriedade.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 Define a margem vertical, que é o espaço entre a célula de cor superior ou inferior e o limite da área do cliente.
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 

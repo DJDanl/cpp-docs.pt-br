@@ -1,33 +1,33 @@
 ---
-title: 'Como: Fazer DDX – DDV vinculação de dados com Windows Forms'
+title: Como fazer a vinculação de dados DDX–DDV com o Windows Forms
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31629a4db2559112ba49f5c069b08de7abdfc2db
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387312"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754354"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Como: Fazer DDX/DDV vinculação de dados com Windows Forms
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Como fazer a associação de dados DDX/DDV aos Windows Forms
 
-[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) chamadas [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) para criar um controle que corresponda a ID de controle de recurso. Se você usar `DDX_ManagedControl` para um `CWinFormsControl` controle (no código gerado pelo Assistente), você não deve chamar `CreateManagedControl` explicitamente para o mesmo controle.
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) chama [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) para criar um controle que corresponda ao ID de controle de recursos. Se você `DDX_ManagedControl` usar `CWinFormsControl` para um controle (em código `CreateManagedControl` gerado pelo assistente), você não deve chamar explicitamente para o mesmo controle.
 
-Chame `DDX_ManagedControl` na [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) para criar controles de IDs de recurso. Troca de dados, você não precisa usar as funções DDX/DDV com controles de Windows Forms. Em vez disso, você pode colocar o código para acessar as propriedades do controle gerenciado no `DoDataExchange` método de sua classe de caixa de diálogo (ou exibição), como no exemplo a seguir.
+Ligue `DDX_ManagedControl` [para CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) para criar controles a partir de IDs de recursos. Para a troca de dados, você não precisa usar as funções DDX/DDV com controles do Windows Forms. Em vez disso, você pode colocar código para `DoDataExchange` acessar as propriedades do controle gerenciado no método de sua classe de diálogo (ou visualização), como no exemplo a seguir.
 
-O exemplo a seguir mostra como associar uma cadeia de caracteres do C++ nativa para um controle de usuário do .NET.
+O exemplo a seguir mostra como vincular uma seqüência c++ nativa a um controle de usuário .NET.
 
 ## <a name="example"></a>Exemplo
 
-A seguir está um exemplo de associação de dados DDX/DDV de uma cadeia de caracteres MFC `m_str` com o definido pelo usuário `NameText` propriedade de um controle de usuário do .NET.
+A seguir, um exemplo da vinculação de dados DDX/DDV de uma seqüência `m_str` de MFC com a propriedade definida pelo `NameText` usuário de um controle de usuário .NET.
 
-O controle é criado quando [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) chamadas `CMyDlg::DoDataExchange` pela primeira vez, portanto, qualquer código que referencia `m_UserControl` deve vir após o `DDX_ManagedControl` chamar.
+O controle é criado quando [o CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) é chamado `CMyDlg::DoDataExchange` pela `m_UserControl` primeira vez, `DDX_ManagedControl` portanto, qualquer código que as referências devem vir após a chamada.
 
-Você pode implementar esse código no aplicativo MFC01 criado no [como: Criar o controle de usuário e o Host em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Você pode implementar esse código no aplicativo MFC01 que você criou em [Como: Criar o Controle do Usuário e hospedar em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 Coloque o seguinte código na declaração de CMFC01Dlg:
 
@@ -41,9 +41,9 @@ class CMFC01Dlg : public CDialog
 
 ## <a name="example"></a>Exemplo
 
-Coloque o código a seguir na implementação de CMFC01Dlg:
+Coloque o seguinte código na implementação do CMFC01Dlg:
 
-```
+```cpp
 void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 {
    CDialog::DoDataExchange(pDX);
@@ -60,11 +60,11 @@ void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 
 ## <a name="example"></a>Exemplo
 
-Agora, adicionaremos o método de manipulador para um clique no botão Okey. Clique o **exibição de recurso** guia. No modo de exibição de recursos, clique duas vezes em `IDD_MFC01_DIALOG`. O recurso de caixa de diálogo é exibida no Editor de recursos. Em seguida, clique duas vezes no botão Okey...
+Agora vamos adicionar o método handler para um clique no botão OK. Clique na **guia 'Exibir recursos'.** Na exibição de recursos, clique duas vezes em `IDD_MFC01_DIALOG`. O recurso de diálogo é exibido no Resource Editor. Em seguida, clique duas vezes no botão OK..
 
-Defina o manipulador da seguinte maneira.
+Defina o manipulador da seguinte forma.
 
-```
+```cpp
 void CMFC01Dlg::OnBnClickedOk()
 {
    AfxMessageBox(CString(m_MyControl.GetControl()->textBox1->Text));
@@ -74,15 +74,15 @@ void CMFC01Dlg::OnBnClickedOk()
 
 ## <a name="example"></a>Exemplo
 
-E adicione a seguinte linha à implementação de CMFC01Dlg::OnInitDialog() BOOL.
+E adicione a seguinte linha à implementação do BOOL CMFC01Dlg::OnInitDialog().
 
 ```
 m_MyControl.GetControl()->textBox1->Text = "hello";
 ```
 
-Agora você pode compilar e executar o aplicativo. Observe que qualquer texto na caixa de texto será exibido em uma caixa de mensagem pop-up quando o aplicativo é fechado.
+Agora você pode compilar e executar o aplicativo. Observe que qualquer texto na caixa de texto será exibido em uma caixa de mensagens pop-up quando o aplicativo fechar.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)<br/>
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>

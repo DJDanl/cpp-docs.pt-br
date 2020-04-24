@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 2c520a732edf54ebb36c07728ceb19791b351143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3355e72c58365e97f8f3f8ce09754285f671915a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377019"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753971"
 ---
 # <a name="carray-class"></a>Classe CArray
 
@@ -209,7 +209,7 @@ A matriz cresce um elemento de cada vez.
 
 Use esta função de membro para copiar os elementos de uma matriz para outra.
 
-```
+```cpp
 void Copy(const CArray& src);
 ```
 
@@ -258,7 +258,7 @@ Ele é usado para implementar o operador de atribuição do lado esquerdo para m
 
 Libera qualquer memória extra que foi alocada enquanto a matriz foi cultivada.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -385,7 +385,7 @@ A `GetUpperBound( )` condição = -1 indica que a matriz não contém elementos.
 
 A primeira `InsertAt` versão de insere um elemento (ou várias cópias de um elemento) em um índice especificado em uma matriz.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     ARG_TYPE newElement,
@@ -502,7 +502,7 @@ Para matrizes nas quais um elemento contém um ponteiro para um de seus próprio
 
 Remove todos os elementos dessa matriz.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -518,7 +518,7 @@ Se a matriz já estiver vazia, a função ainda funciona.
 
 Remove um ou mais elementos a partir de um índice especificado em uma matriz.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -546,7 +546,7 @@ Se você tentar remover mais elementos do que estão contidos na matriz acima do
 
 Define o elemento matriz no índice especificado.
 
-```
+```cpp
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -575,7 +575,7 @@ Você deve garantir que o valor do índice represente uma posição válida na m
 
 Define o elemento matriz no índice especificado.
 
-```
+```cpp
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -602,7 +602,7 @@ A matriz cresce automaticamente se necessário (ou seja, o limite superior é aj
 
 Estabelece o tamanho de uma matriz vazia ou existente; aloca a memória, se necessário.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 28aa0e7137647bc49406dab1e82b9c2b05ca3538
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372348"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754968"
 ---
 # <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
 
@@ -96,7 +96,7 @@ CIPAddressCtrl();
 
 Limpa o conteúdo do controle de endereço IP.
 
-```
+```cpp
 void ClearAddress();
 ```
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 O estilo do controle de endereço IP. Aplique uma combinação de estilos de janela. Você deve incluir o estilo WS_CHILD porque o controle deve ser uma janela de criança. Consulte [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) no Windows SDK para obter uma lista de estilos de janelas.
 
 *Rect*<br/>
-Uma referência ao tamanho e posição do controle de endereço IP. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Uma referência ao tamanho e posição do controle de endereço IP. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela pai do controle de endereço ip. Não deve ser NULO.
@@ -166,7 +166,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 O estilo do controle de endereço IP. Aplique uma combinação de estilos de janela. Você deve incluir o estilo WS_CHILD porque o controle deve ser uma janela de criança. Consulte [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) no Windows SDK para obter uma lista de estilos de janelas.
 
 *Rect*<br/>
-Uma referência a uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
+Uma referência a uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) descrevendo o tamanho e a posição da janela a ser criada, em coordenadas de cliente de *pParentWnd*.
 
 *Pparentwnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -248,7 +248,7 @@ Esta função de membro implementa o comportamento da [mensagem](/windows/win32/
 
 Define os valores de endereço para todos os quatro campos no Controle de Endereço IP.
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -290,7 +290,7 @@ Esta função de membro implementa o comportamento da [IPM_SETADDRESS](/windows/
 
 Define o foco do teclado para o campo especificado no controle de endereço ip.
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
@@ -307,7 +307,7 @@ Esta função de membro implementa o comportamento da [IPM_SETFOCUS](/windows/wi
 
 Define o intervalo no campo especificado no controle de endereço ip.
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,

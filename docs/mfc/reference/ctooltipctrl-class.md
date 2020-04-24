@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365099"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752191"
 ---
 # <a name="ctooltipctrl-class"></a>Classe CToolTipCtrl
 
@@ -164,7 +164,7 @@ Para obter mais `CToolTipCtrl`informações sobre como usar, consulte [Controles
 
 Chame esta função para ativar ou desativar um controle de ponta de ferramenta.
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ Ponteiro para a janela que contém a ferramenta.
 ID do recurso string que contém o texto para a ferramenta.
 
 *lpRectTool*<br/>
-Ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) contendo coordenadas do retângulo delimitador da ferramenta. As coordenadas são relativas ao canto superior esquerdo da área do cliente da janela identificada por *pWnd*.
+Ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) contendo coordenadas do retângulo delimitador da ferramenta. As coordenadas são relativas ao canto superior esquerdo da área do cliente da janela identificada por *pWnd*.
 
 *Nidtool*<br/>
 ID da ferramenta.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parâmetros
 
 *Lprc*<br/>
-Pointer para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) que contém um retângulo de janela de ponta de ferramenta ou um retângulo de exibição de texto.
+Pointer para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) que contém um retângulo de janela de ponta de ferramenta ou um retângulo de exibição de texto.
 
 *Blarger*<br/>
 Se TRUE, *lprc* é usado para especificar um retângulo de exibição de texto e ele recebe o retângulo da janela correspondente. Se FALSE, *lprc* é usado para especificar um retângulo de janela e recebe o retângulo de exibição de texto correspondente.
@@ -352,7 +352,7 @@ Você deve `Create` ligar depois de construir o objeto.
 
 Remove a ferramenta especificada por *pWnd* e *nIDTool* da coleção de ferramentas suportadas por um controle de ponta da ferramenta.
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ Esta função de membro implementa o comportamento da [TTM_GETDELAYTIME](/window
 
 Recupera as margens superior, esquerda, inferior e direita definidas para uma janela de ponta de ferramenta.
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *Lprc*<br/>
-Endereço de `RECT` uma estrutura que receberá as informações da margem. Os membros da estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) não definem um retângulo delimitador. Para efeitos desta mensagem, os membros da estrutura são interpretados da seguinte forma:
+Endereço de `RECT` uma estrutura que receberá as informações da margem. Os membros da estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) não definem um retângulo delimitador. Para efeitos desta mensagem, os membros da estrutura são interpretados da seguinte forma:
 
 |Membro|Representação|
 |------------|--------------------|
@@ -486,7 +486,7 @@ Esta função de membro implementa o comportamento da [mensagem](/windows/win32/
 
 Recupera o texto que um controle de ponta de ferramenta mantém para uma ferramenta.
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ Esta função de membro implementa o comportamento da [mensagem](/windows/win32/
 
 Recupera o título do controle atual da ponta de ferramenta.
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 Remove uma janela de ponta de ferramenta exibida da vista.
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ Esta função de membro implementa o comportamento da [TTM_POP](/windows/win32/C
 
 Faz com que o controle atual da dica de ferramenta seja exibido nas coordenadas da última mensagem do mouse.
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ O exemplo de código a seguir exibe uma janela de dica de ferramenta.
 
 Passa uma mensagem de mouse para um controle de ponta de ferramenta para processamento.
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ Um controle de ponta de ferramenta processa apenas `RelayEvent`as seguintes mens
 
 Define o tempo de atraso para um controle de ponta de ferramenta.
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ O tempo de atraso é o tempo que o cursor deve permanecer em uma ferramenta ante
 
 Coloque as margens superior, esquerda, inferior e direita para uma janela de ponta de ferramenta.
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ Esta função de membro implementa o comportamento da [TTM_SETMAXTIPWIDTH](/wind
 
 Define a cor de fundo em uma janela de ponta de ferramenta.
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ Esta função de membro implementa o comportamento da [mensagem](/windows/win32/
 
 Define a cor do texto em uma janela de ponta de ferramenta.
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ Esta função de membro implementa o comportamento da [mensagem](/windows/win32/
 
 Define as informações que uma dica de ferramenta mantém para uma ferramenta.
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ Um ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctr
 
 Define um novo retângulo delimitador para uma ferramenta.
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ Ponteiro para a janela que contém a ferramenta.
 ID da ferramenta.
 
 *Lprect*<br/>
-Ponteiro para uma estrutura [RECT](/previous-versions/dd162897\(v=vs.85\)) especificando o novo retângulo delimitador.
+Ponteiro para uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) especificando o novo retângulo delimitador.
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme
 
@@ -894,7 +894,7 @@ Esta função membro emula a funcionalidade da mensagem [TTM_SETWINDOWTHEME,](/w
 
 Força a ferramenta atual a ser redesenhada.
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 Atualiza o texto da dica da ferramenta para as ferramentas deste controle.
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,

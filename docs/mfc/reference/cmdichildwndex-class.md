@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370064"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754563"
 ---
 # <a name="cmdichildwndex-class"></a>Classe CMDIChildWndEx
 
@@ -249,7 +249,7 @@ VERDADE se o painel foi registrado com sucesso com o gerente de acoplamento; cas
 
 Adiciona um painel com abas.
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ Anular este método em uma classe derivada e retornar FALSO se a janela não for
 
 Docas um painel.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Remove um painel do gerente de acoplamento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::ShowPane
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ Uma alça para um ícone para exibir na guia barra de tarefas do Windows 7.
 
 Remove o filho MDI das guias da barra de tarefas do Windows 7.
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ VERDADE se bem sucedido; caso contrário, FALSO.
 
 Define propriedades para uma guia de barra de tarefas do Windows 7.
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ Uma combinação de valores STPFLAG. Para obter mais informações, consulte [IT
 
 Insere o filho MDI antes da janela especificada nas guias da barra de tarefas do Windows 7.
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ Um ponteiro para a janela da criança MDI cuja miniatura está inserida à esque
 
 Ativa a guia de barra de tarefas correspondente do Windows 7.
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -941,7 +941,7 @@ Especifica um ponteiro para a janela pai de nível superior da janela que está 
 *nHitTest*<br/>
 Especifica o código de área de teste de hit. Um teste de acerto é um teste que determina a localização do cursor.
 
-*Mensagem*<br/>
+*message*<br/>
 Especifica o número da mensagem do mouse.
 
 ### <a name="remarks"></a>Comentários
@@ -1146,7 +1146,7 @@ Um ponteiro `CMDITabProxyWnd` para um objeto, que está registrado com as guias 
 
 Habilita ou desativa a seleção automática de uma parte da área cliente de uma janela para exibir como miniatura dessa janela na barra de tarefas.
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 

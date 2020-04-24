@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: f28ba975b060de149edaa5e3b93eac61d4cd6703
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375305"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752476"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [em] Ponteiro para um contexto de dispositivo.
 
-*type*<br/>
+*tipo*<br/>
 [em] Um tipo de imagem enumerado valor. Consulte a seção Observações para obter uma lista de valores possíveis.
 
 *rectImage*<br/>
@@ -1893,7 +1893,7 @@ Este método notifica a janela pai da barra de fita que o elemento fita mostrar�
 
 Fecha o menu pop-up para o elemento fita e envia uma mensagem próxima ao menu pai.
 
-```
+```cpp
 void PostMenuCommand(UINT uiCmdId);
 ```
 
@@ -1972,7 +1972,7 @@ A tabela a seguir resume a lógica para este método.
 
 Associa um item de dados com o elemento fita.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1985,7 +1985,7 @@ void SetData(DWORD_PTR dwData);
 
 Define o elemento de fita para aparecer como um comando pop-up.
 
-```
+```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```
 
@@ -2129,7 +2129,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 Define as dimensões do retângulo do display para o elemento da fita.
 
-```
+```cpp
 void SetRect(CRect rect);
 ```
 
@@ -2200,7 +2200,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 
 Define a visibilidade do elemento da fita.
 
-```
+```cpp
 void SetVisible(BOOL bIsVisible);
 ```
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: bcdf60c974ecdc437b90891d2b46a5eec94859d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 901a44c8f5fdecd1b277ebdecc995722a3afe9a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367675"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752498"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Classe CMFCColorPopupMenu
 
@@ -231,7 +231,7 @@ O menu pop-up de cores tem um objeto [CMFCPopupMenuBar Class](../../mfc/referenc
 
 Define o objeto de controle `CMFCColorBar` da grade de propriedade do objeto incorporado.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
