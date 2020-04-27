@@ -1,5 +1,5 @@
 ---
-title: Estrutura _ATL_COM_MODULE70
+title: Estrutura de _ATL_COM_MODULE70
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_ATL_COM_MODULE70
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_COM_MODULE70 structure
 - ATL_COM_MODULE70 structure
 ms.assetid: 5b0b2fd0-bdeb-4c7e-8870-78fa69ace6e6
-ms.openlocfilehash: c6361fc5374ed732cd9ccbfbbd1d3d1c2fc8f1f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2e9e3d6695a7fbbcc87c489edf2e96fcdffb835
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261033"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168625"
 ---
-# <a name="atlcommodule70-structure"></a>Estrutura _ATL_COM_MODULE70
+# <a name="_atl_com_module70-structure"></a>Estrutura de _ATL_COM_MODULE70
 
-Usado pelo código COM relacionados na ATL.
+Usado pelo código relacionado ao COM em ATL.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInstTypeLib;
@@ -38,16 +38,16 @@ struct _ATL_COM_MODULE70 {
 O tamanho da estrutura, usado para controle de versão.
 
 `m_hInstTypeLib`<br/>
-A instância do identificador para a biblioteca de tipos para esse módulo.
+A instância de identificador para a biblioteca de tipos deste módulo.
 
 `m_ppAutoObjMapFirst`<br/>
-Endereço do elemento da matriz que indica o início das entradas de mapa de objeto para esse módulo.
+Endereço do elemento da matriz que indica o início das entradas de mapa do objeto para este módulo.
 
 `m_ppAutoObjMapLast`<br/>
-Endereço do elemento da matriz que indicam o final das entradas de mapa de objeto para esse módulo.
+Endereço do elemento da matriz que indica o fim das entradas de mapa do objeto para este módulo.
 
 `m_csObjMap`<br/>
-Seção crítica para serializar o acesso às entradas de mapa de objeto. Usado internamente pelo ATL.
+Seção crítica para serializar o acesso às entradas do mapa de objetos. Usado internamente pela ATL.
 
 ## <a name="remarks"></a>Comentários
 
@@ -57,6 +57,6 @@ Seção crítica para serializar o acesso às entradas de mapa de objeto. Usado 
 
 **Cabeçalho:** atlbase. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes e structs](../../atl/reference/atl-classes.md)

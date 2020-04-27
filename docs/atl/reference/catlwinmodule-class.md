@@ -10,23 +10,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: e131ca1b4eb6e320d533ad1292c23add6ffa46e5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5cdf13ebbb982ad8184a52dcf1a3e30d71e4e5b0
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748561"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167702"
 ---
 # <a name="catlwinmodule-class"></a>Classe CAtlWinModule
 
-Esta classe fornece suporte para componentes de janelas ATL.
+Essa classe fornece suporte para componentes da janela ATL.
 
 > [!IMPORTANT]
-> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
+> Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
@@ -37,18 +37,18 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |Nome|Descrição|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|O construtor.|
-|[CAtlWinModule::~CAtlWinModule](#dtor)|O destruidor.|
+|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Adiciona um objeto de dados.|
-|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Retorna um ponteiro para o objeto de dados do módulo da janela.|
+|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Retorna um ponteiro para o objeto de dados do módulo de janela.|
 
 ## <a name="remarks"></a>Comentários
 
-Esta classe fornece suporte para todas as classes ATL que requerem recursos de janelas.
+Essa classe fornece suporte para todas as classes ATL que exigem recursos de janelas.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -58,11 +58,11 @@ Esta classe fornece suporte para todas as classes ATL que requerem recursos de j
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase.h
+**Cabeçalho:** atlbase. h
 
 ## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
 
-Este método inicia e `_AtlCreateWndData` adiciona uma estrutura.
+Esse método inicializa e adiciona uma `_AtlCreateWndData` estrutura.
 
 ```cpp
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -70,33 +70,33 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Pdata*<br/>
-Ponteiro para `_AtlCreateWndData` a estrutura a ser inicializada e adicionada ao módulo atual.
+*pData*<br/>
+Ponteiro para a `_AtlCreateWndData` estrutura a ser inicializada e adicionada ao módulo atual.
 
-*Pobject*<br/>
-Ponteiro para um objeto é **este** ponteiro.
+*pObject*<br/>
+Ponteiro para **o** ponteiro de um objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Este método chama [AtlWinModuleAddCreateWnDData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que inicia uma estrutura [de _AtlCreateWndData.](../../atl/reference/atlcreatewnddata-structure.md) Esta estrutura armazenará **este** ponteiro, usado para obter a instância de classe em procedimentos de janela.
+Esse método chama [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que Inicializa uma estrutura de [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Essa estrutura armazenará **esse** ponteiro, usado para obter a instância de classe em procedimentos de janela.
 
 ## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
 
 O construtor.
 
-```
+```cpp
 CAtlWinModule();
 ```
 
 ### <a name="remarks"></a>Comentários
 
-Se a inicialização falhar, uma exceção **EXCEPTION_NONCONTINUABLE** será levantada.
+Se a inicialização falhar, uma exceção de **EXCEPTION_NONCONTINUABLE** será gerada.
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule::~CAtlWinModule
+## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule
 
 O destruidor.
 
-```
+```cpp
 ~CAtlWinModule();
 ```
 
@@ -106,7 +106,7 @@ Libera todos os recursos alocados.
 
 ## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
 
-Este método retorna um `_AtlCreateWndData` ponteiro para uma estrutura.
+Esse método retorna um ponteiro para uma `_AtlCreateWndData` estrutura.
 
 ```cpp
 void* ExtractCreateWndData();
@@ -114,10 +114,10 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro `_AtlCreateWndData` à estrutura anteriormente adicionado com [CAtlWinModule::AddCreateWndData](#addcreatewnddata)ou NULL se nenhum objeto estiver disponível.
+Retorna um ponteiro para a `_AtlCreateWndData` estrutura adicionada anteriormente com [CAtlWinModule:: AddCreateWndData](#addcreatewnddata)ou NULL se nenhum objeto estiver disponível.
 
 ## <a name="see-also"></a>Confira também
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
-[Aulas de módulo](../../atl/atl-module-classes.md)
+[Classes de módulo](../../atl/atl-module-classes.md)

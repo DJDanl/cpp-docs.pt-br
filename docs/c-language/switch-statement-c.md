@@ -1,34 +1,39 @@
 ---
-title: Instrução switch (C)
-ms.date: 11/04/2016
+title: switchInstrução (C)
+ms.date: 04/25/2020
 f1_keywords:
 - switch
 helpviewer_keywords:
 - switch keyword [C]
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
-ms.openlocfilehash: 0f781147bf4ed020cf925ca29c2ba1b0f601cde1
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+no-loc:
+- switch
+- case
+- default
+- break
+ms.openlocfilehash: 12163e85110092e3e372fa496cf42efd7574ea8d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148186"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167670"
 ---
-# <a name="switch-statement-c"></a>Instrução switch (C)
+# <a name="opno-locswitch-statement-c"></a>switchInstrução (C)
 
-As instruções `switch` e **case** ajudam a controlar operações complexas condicionais e de ramificação. A instrução `switch` transfere o controle para uma instrução dentro do corpo.
+As **switch** instruções **case** e ajudam a controlar operações condicionais e de ramificação complexas. A **switch** instrução transfere o controle para uma instrução dentro de seu corpo.
 
 ## <a name="syntax"></a>Sintaxe
 
 *selection-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (** *expression* **)** *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**`switch (`***expression* **`)`** *instrução* de expressão
 
-*labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
+*rotulado-instrução*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`case`**  *instrução de expressão***`:`***statement* de constante    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`default :`**  *privacidade*
 
-O controle passa para a instrução cuja **case** *constant-expression* corresponde ao valor de **switch (** *expression* **)**. A instrução `switch` pode incluir qualquer número de instâncias de **case**, mas duas constantes de case dentro da mesma instrução `switch` não podem ter o mesmo valor. A execução do corpo da instrução começa na instrução selecionada e continua até o final do corpo ou até que uma instrução **break** transfira o controle para fora do corpo.
+O controle passa para a instrução **case** *expressão constante* corresponde ao valor de ** switch (** *expressão* **)**. A **switch** instrução pode incluir qualquer número de **case** instâncias. No entanto, case duas constantes dentro da **switch** mesma instrução podem ter o mesmo valor. A execução do corpo da instrução começa na instrução selecionada. Ele continua até o final do corpo ou até que uma **break** instrução transfira o controle para fora do corpo.
 
-O uso da instrução `switch` geralmente tem essa aparência:
+O **switch** uso da instrução geralmente é semelhante a este:
 
 ```C
 switch ( expression )
@@ -45,32 +50,32 @@ switch ( expression )
 }
 ```
 
-Você pode usar a instrução **break** para encerrar o processamento de um caso específico dentro da instrução `switch` e para ramificar ao final da instrução `switch`. Sem **break**, o programa passa para os próximos casos, executando as instruções até **break** ou até que o final da instrução seja atingido. Em algumas situações, essa continuação pode ser desejável.
+Você pode usar a **break** instrução para finalizar o processamento de uma instrução rotulada em **switch** particular dentro da instrução. Ele é ramificado para o final **switch** da instrução. Sem **break**, o programa continua para a próxima instrução rotulada, executando as instruções até que **break** um ou o final da instrução seja atingido. Essa continuação pode ser desejável em algumas situações.
 
-A instrução **default** será executada se nenhum **case** *constant-expression* for igual ao valor de **switch (** *expression* **)**. Se a instrução **default** for omitida e nenhuma correspondência de **case** for encontrada, nenhuma das instruções no corpo de `switch` será executada. Pode haver, no máximo, uma instrução **default**. A instrução **default** não precisa ficar no final; ela pode aparecer em qualquer local do corpo da instrução `switch`. Um rótulo **case** ou **default** pode ser exibido apenas dentro de uma instrução `switch`.
+A **default** instrução será executada se nenhuma **case** *expressão constante* for igual ao valor de ** switch (** *expressão* **)**. Se não houver nenhuma **default** instrução e nenhuma **case** correspondência for encontrada, nenhuma das instruções no **switch** corpo será executada. Pode haver no máximo uma **default** instrução. A **default** instrução não precisa aparecer no final. Ele pode aparecer em qualquer lugar no corpo da **switch** instrução. Um **case** rótulo **default** ou só pode aparecer dentro de **switch** uma instrução.
 
-O tipo de `switch` *expression* e **case** *constant-expression* deve ser integral. O valor de cada **case** *constant-expression* deve ser exclusivo dentro do corpo da instrução.
+O tipo de **switch** *expressão* e **case** a *expressão de constante* devem ser integrais. O valor de cada **case** *expressão de constante* deve ser exclusivo dentro do corpo da instrução.
 
-Os rótulos **case** e **default** do corpo da instrução `switch` são significativos apenas no teste inicial que determina onde a execução começa no corpo da instrução. As instruções de alternância podem ser aninhadas. Todas as variáveis estáticas são inicializadas antes da execução em qualquer `switch` instrução.
+Os **case** rótulos **default** e do corpo **switch** da instrução são significativos apenas no teste inicial que determina onde a execução começa no corpo da instrução. **switch** as instruções podem ser aninhadas. Todas as variáveis estáticas são inicializadas antes **switch** de serem executadas em qualquer instrução.
 
 > [!NOTE]
-> As declarações podem aparecer no início da instrução composta que forma o corpo de `switch`, mas as inicializações incluídas nas declarações não serão executadas. A instrução `switch` transfere o controle diretamente para uma instrução executável dentro do corpo, ignorando as linhas que contêm inicializações.
+> As declarações podem aparecer no início da instrução composta que formam o **switch** corpo, mas as inicializações incluídas nas declarações não são executadas. A **switch** instrução transfere o controle diretamente para uma instrução executável dentro do corpo, ignorando as linhas que contêm inicializações.
 
-Os exemplos a seguir ilustram as instruções `switch`:
+Os exemplos a seguir **switch** ilustram instruções:
 
 ```C
 switch( c )
 {
     case 'A':
-        capa++;
+        capital_a++;
     case 'a':
-        lettera++;
+        letter_a++;
     default :
         total++;
 }
 ```
 
-Neste exemplo, as três instruções do corpo de `switch` são executadas se `c` for igual a `'A'`, contanto que uma instrução **break** não apareça antes do seguinte caso. O controle de execução é transferido para a primeira instrução (`capa++;`) e continua em ordem pelo restante do corpo. Se `c` é igual a `'a'`, `lettera` e `total` são incrementados. Apenas `total` é incrementado se `c` não é igual a `'A'` ou a `'a'`.
+Todas as três instruções do **switch** corpo neste exemplo `c` serão executadas se for igual a `'A'`, pois nenhuma **break** instrução aparecerá antes do seguinte case. O controle de execução é transferido para a primeira instrução (`capital_a++;`) e continua em ordem pelo restante do corpo. Se `c` é igual a `'a'`, `letter_a` e `total` são incrementados. Só `total` é incrementado quando `c` não é `'A'` igual `'a'`a ou.
 
 ```C
 switch( i )
@@ -87,29 +92,30 @@ switch( i )
 }
 ```
 
-Neste exemplo, uma instrução **break** segue cada instrução do corpo de `switch`. A instrução **break** força uma saída do corpo da instrução depois que uma instrução é executada. Se `i` for igual a -1, apenas `n` será incrementado. A instrução **break** que segue a instrução `n++;` faz com que o controle de execução seja passado para fora do corpo da instrução, ignorando as instruções restantes. Da mesma forma, se `i` é igual a 0, somente `z` será incrementado; se `i` é igual a 1, somente `p` será incrementado. A instrução de **break** final não é estritamente necessária, pois o controle passa para fora do corpo no final da instrução composta, mas é incluído para manter a consistência.
+Neste exemplo, uma **break** instrução segue cada instrução do **switch** corpo. A **break** instrução força uma saída do corpo da instrução após a execução de uma instrução. Se `i` for igual a -1, apenas `n` será incrementado. A **break** instrução `n++;` a seguir faz com que o controle de execução passe do corpo da instrução, ignorando as instruções restantes. Da mesma forma, se `i` é igual a 0, somente `z` será incrementado; se `i` é igual a 1, somente `p` será incrementado. A instrução **break** final não é estritamente necessária, já que o controle passa do corpo no final da instrução composta. Ele está incluído para fins de consistência.
 
-Uma única instrução pode portar vários rótulos de **case**, conforme mostrado no exemplo a seguir:
+Uma única instrução pode transportar vários **case** rótulos, como mostra o exemplo a seguir:
 
 ```C
-case 'a' :
-case 'b' :
-case 'c' :
-case 'd' :
-case 'e' :
-case 'f' :  hexcvt(c);
+switch( c )
+{
+    case 'a' :
+    case 'b' :
+    case 'c' :
+    case 'd' :
+    case 'e' :
+    case 'f' :  convert_hex(c);
+}
 ```
 
-Neste exemplo, se *constant-expression* for igual a qualquer letra entre `'a'` e `'f'`, a função `hexcvt` será chamada.
+Neste exemplo, se *constant-expression* for igual a qualquer letra entre `'a'` e `'f'`, a função `convert_hex` será chamada.
 
-**Seção específica da Microsoft**
+### <a name="microsoft-specific"></a>Específico da Microsoft
 
-O Microsoft C não limita o número de valores de case em uma instrução `switch`. O número é limitado somente pela memória disponível. O ANSI C requer que pelo menos 257 rótulos case sejam permitidos em uma instrução `switch`.
+O Microsoft C não limita o número case de valores em **switch** uma instrução. O número é limitado somente pela memória disponível. ANSI C requer pelo menos 257 case rótulos serem permitidos em uma **switch** instrução.
 
-O padrão do Microsoft C é que as extensões da Microsoft sejam habilitadas. Use a opção de compilador /Za para desativar essas extensões.
+O default para Microsoft C é que as extensões da Microsoft estão habilitadas. Use a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) para desabilitar essas extensões.
 
-**Fim da seção específica da Microsoft**
+## <a name="see-also"></a>Confira também
 
-## <a name="see-also"></a>Consulte também
-
-[Instrução switch (C++)](../cpp/switch-statement-cpp.md)
+[switchInstrução (C++)](../cpp/switch-statement-cpp.md)
