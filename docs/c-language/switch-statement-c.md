@@ -11,29 +11,35 @@ no-loc:
 - case
 - default
 - break
-ms.openlocfilehash: 12163e85110092e3e372fa496cf42efd7574ea8d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 5858447602a28dcc5573aa3138e869d106b5aa23
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167670"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587369"
 ---
-# <a name="opno-locswitch-statement-c"></a>switchInstrução (C)
+# <a name="switch-statement-c"></a>`switch`Instrução (C)
 
-As **switch** instruções **case** e ajudam a controlar operações condicionais e de ramificação complexas. A **switch** instrução transfere o controle para uma instrução dentro de seu corpo.
+As __`switch`__ instruções __`case`__ e ajudam a controlar operações condicionais e de ramificação complexas. A __`switch`__ instrução transfere o controle para uma instrução dentro de seu corpo.
 
 ## <a name="syntax"></a>Sintaxe
 
-*selection-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`switch (`***expression* **`)`** *instrução* de expressão
+> *`selection-statement`*:<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
 
-*rotulado-instrução*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`case`**  *instrução de expressão***`:`***statement* de constante    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`default :`**  *privacidade*
+> *`labeled-statement`*:<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
-O controle passa para a instrução **case** *expressão constante* corresponde ao valor de ** switch (** *expressão* **)**. A **switch** instrução pode incluir qualquer número de **case** instâncias. No entanto, case duas constantes dentro da **switch** mesma instrução podem ter o mesmo valor. A execução do corpo da instrução começa na instrução selecionada. Ele continua até o final do corpo ou até que uma **break** instrução transfira o controle para fora do corpo.
+## <a name="remarks"></a>Comentários
 
-O **switch** uso da instrução geralmente é semelhante a este:
+Uma __`switch`__ instrução faz com que o controle seja *`labeled-statement`* transferido para um em seu corpo de instrução, dependendo do *`expression`* valor de.
+
+Os valores de *`expression`* e cada *`constant-expression`* devem ter um tipo integral. Um *`constant-expression`* deve ter um valor integral constante não ambíguo no tempo de compilação.
+
+O controle passa para **`case`** a instrução *`constant-expression`* cujo valor corresponde ao valor *`expression`* de. A __`switch`__ instrução pode incluir qualquer número de __`case`__ instâncias. No entanto, *`constant-expression`* dois valores dentro da __`switch`__ mesma instrução podem ter o mesmo valor. A execução do __`switch`__ corpo da instrução começa na primeira instrução no ou após a correspondência *`labeled-statement`*. A execução continua até o fim do corpo ou até que uma __`break`__ instrução transfira o controle para fora do corpo.
+
+O __`switch`__ uso da instrução geralmente é semelhante a este:
 
 ```C
 switch ( expression )
@@ -50,18 +56,18 @@ switch ( expression )
 }
 ```
 
-Você pode usar a **break** instrução para finalizar o processamento de uma instrução rotulada em **switch** particular dentro da instrução. Ele é ramificado para o final **switch** da instrução. Sem **break**, o programa continua para a próxima instrução rotulada, executando as instruções até que **break** um ou o final da instrução seja atingido. Essa continuação pode ser desejável em algumas situações.
+Você pode usar a __`break`__ instrução para finalizar o processamento de uma instrução rotulada em __`switch`__ particular dentro da instrução. Ele é ramificado para o final __`switch`__ da instrução. Sem __`break`__, o programa continua para a próxima instrução rotulada, executando as instruções até que __`break`__ um ou o final da instrução seja atingido. Essa continuação pode ser desejável em algumas situações.
 
-A **default** instrução será executada se nenhuma **case** *expressão constante* for igual ao valor de ** switch (** *expressão* **)**. Se não houver nenhuma **default** instrução e nenhuma **case** correspondência for encontrada, nenhuma das instruções no **switch** corpo será executada. Pode haver no máximo uma **default** instrução. A **default** instrução não precisa aparecer no final. Ele pode aparecer em qualquer lugar no corpo da **switch** instrução. Um **case** rótulo **default** ou só pode aparecer dentro de **switch** uma instrução.
+A __`default`__ instrução será executada se nenhum __`case`__ *`constant-expression`* valor for igual ao valor de *`expression`*. Se não houver nenhuma __`default`__ instrução e nenhuma __`case`__ correspondência for encontrada, nenhuma das instruções no __`switch`__ corpo será executada. Pode haver no máximo uma __`default`__ instrução. A __`default`__ instrução não precisa aparecer no final. Ele pode aparecer em qualquer lugar no corpo da __`switch`__ instrução. Um __`case`__ rótulo __`default`__ ou só pode aparecer dentro de __`switch`__ uma instrução.
 
-O tipo de **switch** *expressão* e **case** a *expressão de constante* devem ser integrais. O valor de cada **case** *expressão de constante* deve ser exclusivo dentro do corpo da instrução.
+O tipo de __`switch`__ *`expression`* e __`case`__ *`constant-expression`* deve ser integral. O valor de cada __`case`__ *`constant-expression`* deve ser exclusivo dentro do corpo da instrução.
 
-Os **case** rótulos **default** e do corpo **switch** da instrução são significativos apenas no teste inicial que determina onde a execução começa no corpo da instrução. **switch** as instruções podem ser aninhadas. Todas as variáveis estáticas são inicializadas antes **switch** de serem executadas em qualquer instrução.
+Os __`case`__ rótulos __`default`__ e do corpo __`switch`__ da instrução são significativos apenas no teste inicial que determina onde a execução começa no corpo da instrução. __`switch`__ as instruções podem ser aninhadas. Todas as variáveis estáticas são inicializadas antes __`switch`__ de serem executadas em qualquer instrução.
 
 > [!NOTE]
-> As declarações podem aparecer no início da instrução composta que formam o **switch** corpo, mas as inicializações incluídas nas declarações não são executadas. A **switch** instrução transfere o controle diretamente para uma instrução executável dentro do corpo, ignorando as linhas que contêm inicializações.
+> As declarações podem aparecer no início da instrução composta que formam o __`switch`__ corpo, mas as inicializações incluídas nas declarações não são executadas. A __`switch`__ instrução transfere o controle diretamente para uma instrução executável dentro do corpo, ignorando as linhas que contêm inicializações.
 
-Os exemplos a seguir **switch** ilustram instruções:
+Os exemplos a seguir __`switch`__ ilustram instruções:
 
 ```C
 switch( c )
@@ -75,7 +81,7 @@ switch( c )
 }
 ```
 
-Todas as três instruções do **switch** corpo neste exemplo `c` serão executadas se for igual a `'A'`, pois nenhuma **break** instrução aparecerá antes do seguinte case. O controle de execução é transferido para a primeira instrução (`capital_a++;`) e continua em ordem pelo restante do corpo. Se `c` é igual a `'a'`, `letter_a` e `total` são incrementados. Só `total` é incrementado quando `c` não é `'A'` igual `'a'`a ou.
+Todas as três instruções do __`switch`__ corpo neste exemplo `c` serão executadas se for igual a `'A'`, pois nenhuma __`break`__ instrução aparecerá antes do seguinte __`case`__. O controle de execução é transferido para a primeira instrução (`capital_a++;`) e continua em ordem pelo restante do corpo. Se `c` é igual a `'a'`, `letter_a` e `total` são incrementados. Só `total` é incrementado quando `c` não é `'A'` igual `'a'`a ou.
 
 ```C
 switch( i )
@@ -92,9 +98,9 @@ switch( i )
 }
 ```
 
-Neste exemplo, uma **break** instrução segue cada instrução do **switch** corpo. A **break** instrução força uma saída do corpo da instrução após a execução de uma instrução. Se `i` for igual a -1, apenas `n` será incrementado. A **break** instrução `n++;` a seguir faz com que o controle de execução passe do corpo da instrução, ignorando as instruções restantes. Da mesma forma, se `i` é igual a 0, somente `z` será incrementado; se `i` é igual a 1, somente `p` será incrementado. A instrução **break** final não é estritamente necessária, já que o controle passa do corpo no final da instrução composta. Ele está incluído para fins de consistência.
+Neste exemplo, uma __`break`__ instrução segue cada instrução do __`switch`__ corpo. A __`break`__ instrução força uma saída do corpo da instrução após a execução de uma instrução. Se `i` for igual a -1, apenas `n` será incrementado. A __`break`__ instrução `n++;` a seguir faz com que o controle de execução passe do corpo da instrução, ignorando as instruções restantes. Da mesma forma, se `i` é igual a 0, somente `z` será incrementado; se `i` é igual a 1, somente `p` será incrementado. A instrução __`break`__ final não é estritamente necessária, já que o controle passa do corpo no final da instrução composta. Ele está incluído para fins de consistência.
 
-Uma única instrução pode transportar vários **case** rótulos, como mostra o exemplo a seguir:
+Uma única instrução pode transportar vários __`case`__ rótulos, como mostra o exemplo a seguir:
 
 ```C
 switch( c )
@@ -112,7 +118,7 @@ Neste exemplo, se *constant-expression* for igual a qualquer letra entre `'a'` e
 
 ### <a name="microsoft-specific"></a>Específico da Microsoft
 
-O Microsoft C não limita o número case de valores em **switch** uma instrução. O número é limitado somente pela memória disponível. ANSI C requer pelo menos 257 case rótulos serem permitidos em uma **switch** instrução.
+O Microsoft C não limita o número __`case`__ de valores em __`switch`__ uma instrução. O número é limitado somente pela memória disponível. ANSI C requer pelo menos 257 __`case`__ rótulos serem permitidos em uma __`switch`__ instrução.
 
 O default para Microsoft C é que as extensões da Microsoft estão habilitadas. Use a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) para desabilitar essas extensões.
 
