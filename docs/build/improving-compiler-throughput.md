@@ -16,12 +16,12 @@ ms.locfileid: "62188746"
 ---
 # <a name="improving-compiler-throughput"></a>Melhorando taxa de transferência do compilador
 
-Use arquivos de cabeçalho pré-compilado para criar seu projeto com mais rapidez. Isso é importante se você estiver usando ATL, MFC ou os arquivos de cabeçalho do SDK do Windows.
+Use arquivos de cabeçalho pré-compilados para criar seu projeto mais rapidamente. Isso é importante se você estiver usando ATL, MFC ou os arquivos de cabeçalho de SDK do Windows.
 
-Ver [/Yc](reference/yc-create-precompiled-header-file.md) e [/Yu](reference/yu-use-precompiled-header-file.md).
+Consulte [/YC](reference/yc-create-precompiled-header-file.md) e [/Yu](reference/yu-use-precompiled-header-file.md).
 
-Para obter mais informações sobre cabeçalhos pré-compilados, consulte [arquivos de cabeçalho pré-compilado](creating-precompiled-header-files.md).
+Para obter mais informações sobre cabeçalhos pré-compilados, consulte [arquivos de cabeçalho pré-compilados](creating-precompiled-header-files.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Otimizando seu código](optimizing-your-code.md)
+[Otimizando o código](optimizing-your-code.md)

@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
 ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "62233357"
@@ -21,7 +21,7 @@ Uma expressão subscrita também pode ter vários subscritos, como segue:
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-As expressões subscritas são associadas da esquerda para a direita. A expressão subscrita mais à esquerda, *expression1* **[** *expression2* **]** , é avaliada primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (<strong>\*</strong>) é aplicado depois que a última expressão subscrita é avaliada, a menos que o valor do ponteiro final trate de um tipo de matriz (veja os exemplos abaixo).
+As expressões subscritas são associadas da esquerda para a direita. A expressão de subscrito mais à esquerda, *expressão1* **[** *expression2* **]**, é avaliada primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (<strong>\*</strong>) é aplicado depois que a última expressão de subscrito é avaliada, a menos que o valor de ponteiro final atenda a um tipo de matriz (veja os exemplos abaixo).
 
 As expressões com vários subscritos referem-se aos elementos de "matrizes multidimensionais". Uma matriz multidimensional é uma matriz cujos elementos são matrizes. Por exemplo, o primeiro elemento de uma matriz tridimensional é uma matriz com duas dimensões.
 
@@ -68,6 +68,6 @@ Na primeira dessas instruções, a expressão `prop[2][1]` é uma referência v�
 
 Da mesma forma, o resultado da expressão `prop[2]` na segunda instrução `ipp = prop[2];` é um valor de ponteiro pertinente a uma matriz bidimensional.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operador subscript:](../cpp/subscript-operator.md)

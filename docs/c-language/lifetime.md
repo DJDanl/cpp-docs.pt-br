@@ -18,11 +18,11 @@ helpviewer_keywords:
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
 ms.openlocfilehash: 962e5ef4cae1be142091d2a209b4c60c0b789e74
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232768"
 ---
 # <a name="lifetime"></a>Tempo de vida
 
@@ -42,6 +42,6 @@ Embora um identificador com tempo de vida global exista durante a execução do 
 
 A memória pode ser alocada conforme necessário (dinâmica) se criada com o uso de rotinas de biblioteca especiais como `malloc`. Como a alocação de memória dinâmica usa rotinas de biblioteca, não é considerado como parte da linguagem. Consulte a função [malloc](../c-runtime-library/reference/malloc.md) na *Referência da biblioteca em tempo de execução*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158230"
 ---
 # <a name="simple-variable-declarations"></a>Declarações de variável simples
 
@@ -20,20 +20,20 @@ Classes ou tipos de armazenamento (ou ambos) são necessários em declarações 
 
 ## <a name="syntax"></a>Sintaxe
 
-*declarator*:<br/>
+*Declarador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
+*Declarador direto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID*
 
-*identifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
+*identificador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Não dígito*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
 Para tipos de aritmética, de estrutura, de união, enumerações e tipos nulos, e para os tipos representados por nomes `typedef`, os declaradores simples podem ser usados em uma declaração desde que o especificador de tipo forneça todas as informações de tipo. Tipos de ponteiro, matriz e função requerem declaradores mais complicados.
 
-Você pode usar uma lista de identificadores separados por vírgulas (**,**) para especificar diversas variáveis na mesma declaração. Todas as variáveis definidas na declaração têm o mesmo tipo base. Por exemplo:
+Você pode usar uma lista de identificadores separados por vírgulas (**,**) para especificar diversas variáveis na mesma declaração. Todas as variáveis definidas na declaração têm o mesmo tipo base. Por exemplo: 
 
 ```C
 int x, y;        /* Declares two simple variables of type int */
@@ -51,6 +51,6 @@ unsigned long reply, flag; /* Declares two variables
 
 Neste exemplo, as duas variáveis, `reply` e `flag`, têm o tipo `unsigned long` e valores integrais não assinados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md)
+[Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)

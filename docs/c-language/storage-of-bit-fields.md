@@ -3,11 +3,11 @@ title: Armazenamento de campos de bits
 ms.date: 11/04/2016
 ms.assetid: 4816a241-1580-4d1c-82ed-13d359733959
 ms.openlocfilehash: 4dbfb3c6ad27fb023881dafde74bb27132959085
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157873"
 ---
 # <a name="storage-of-bit-fields"></a>Armazenamento de campos de bits
 
@@ -40,6 +40,6 @@ cccccccb bbbbaaaa
 
 Como os processadores 80x86 armazenam o byte inferior de valores inteiros antes do byte superior, o inteiro 0x01F2 acima seria armazenado na memória física como 0xF2 seguido por 0x01.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Estruturas, uniões, enumerações e campos de bit](../c-language/structures-unions-enumerations-and-bit-fields.md)
+[Estruturas, uniões, enumerações e campos de bits](../c-language/structures-unions-enumerations-and-bit-fields.md)
