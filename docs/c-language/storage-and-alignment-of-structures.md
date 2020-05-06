@@ -8,21 +8,21 @@ helpviewer_keywords:
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
 ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336160"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Armazenamento e alinhamento de estruturas
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Os membros da estrutura são armazenados em sequência na ordem em que são declarados: o primeiro membro tem o endereço de memória mais baixo e o último membro, o mais alto.
 
-Cada objeto de dados tem um requisito *alignment-requirement*. Para estruturas, o requisito é o maior dos respectivos membros. Um *offset* é alocado para cada objeto de modo que
+Cada objeto de dados tem um *requisito de alinhamento*. Para estruturas, o requisito é o maior dos respectivos membros. Cada objeto é alocado um *deslocamento* para que
 
-*offset* `%` *alignment-requirement* `==` 0
+*offset* `%` *alinhamento de deslocamento-requisito* `==` 0
 
 Os campos de bits adjacentes serão empacotados na mesma unidade de alocação de 1, 2, ou 4 bytes se os tipos integrais forem do mesmo tamanho e se o campo de bit seguinte se encaixar na unidade de alocação atual sem cruzar o limite imposto pelos requisitos comuns de alinhamento dos campos de bits.
 
@@ -38,8 +38,8 @@ Para usar o pragma `pack` para especificar um empacotamento que não seja aquele
 
 Os campos de bits usam como padrão o tamanho **long** para o compilador de C da Microsoft. Os membros da estrutura são alinhados no tamanho do tipo ou no tamanho de /Zp[*n*], o que for menor. O tamanho padrão é 4.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações de estrutura](../c-language/structure-declarations.md)

@@ -13,7 +13,7 @@ ms.locfileid: "62314592"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>O uso do nome de função sem () não produz código
 
-Quando o nome de uma função declarado em seu programa for usado sem parênteses, o compilador não produz código. Isso ocorre independentemente de estarem ou não a função utiliza parâmetros, porque o compilador calcula o endereço de função; No entanto, como o operador de chamada de função "()" não está presente, nenhuma chamada é feita. Esse resultado é semelhante ao seguinte:
+Quando um nome de função declarado em seu programa é usado sem parênteses, o compilador não produz código. Isso ocorre independentemente de a função usar ou não parâmetros porque o compilador calcula o endereço da função; no entanto, como o operador de chamada de função "()" não está presente, nenhuma chamada é feita. Esse resultado é semelhante ao seguinte:
 
 ```
 // compile with /Wall to generate a warning
@@ -21,9 +21,9 @@ int a;
 a;      // no code generated here either
 ```
 
-No Visual C++, mesmo usando o nível de aviso 4 não gera nenhuma saída de diagnóstico. Nenhum aviso é emitido; Nenhum código é produzido.
+Em Visual C++, mesmo o uso do nível de aviso 4 não gera nenhuma saída de diagnóstico. Nenhum aviso é emitido; nenhum código é produzido.
 
-O código de exemplo a seguir é compilado (com um aviso) e vincula corretamente sem erros, mas não produz código referência ao `funcn( )`. Para que isso funcione corretamente, adicione o operador de chamada de função "()".
+O código de exemplo a seguir compila (com um aviso) e links corretamente sem erros, mas não produz nenhum código em `funcn( )`referência a. Para que isso funcione corretamente, adicione o operador de chamada de função "()".
 
 ```
 #include <stdio.h>
@@ -39,6 +39,6 @@ void funcn() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Otimizando seu código](optimizing-your-code.md)
+[Otimizando o código](optimizing-your-code.md)

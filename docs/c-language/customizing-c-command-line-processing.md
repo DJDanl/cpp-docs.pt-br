@@ -13,11 +13,11 @@ helpviewer_keywords:
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
 ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290672"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizando processamento de linha de comando C
 
@@ -27,6 +27,6 @@ Da mesma forma, se você nunca acessar a tabela de ambiente pelo argumento `envp
 
 Se seu programa faz chamadas para a família **_spawn** ou **_exec** das rotinas na biblioteca em tempo de execução de C, você não deve suprimir a rotina de processamento de ambiente, pois ela é usada para transmitir um ambiente do processo de geração para o novo processo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Função main e execução do programa](../c-language/main-function-and-program-execution.md)

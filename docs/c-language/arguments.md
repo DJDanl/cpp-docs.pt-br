@@ -1,5 +1,5 @@
 ---
-title: Arguments
+title: Argumentos
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arguments [C++], function
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
 ms.openlocfilehash: e60a7935cdddc116848b64461b064c5fd5cdd00a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313502"
 ---
-# <a name="arguments"></a>Arguments
+# <a name="arguments"></a>Argumentos
 
 Os argumentos em uma chamada de função têm este formato:
 
-> *expression* **(** *expression-list*<SUB>opt</SUB> **)**  /* Function call */
+> *expressão* **(** *opcional de expressão-lista de expressões*<SUB>opt</SUB> **)** /* chamada de função */
 
 Em uma chamada de função, *expression-list* é uma lista de expressões (separadas por vírgula). Os valores dessas últimas expressões são os argumentos passados para a função. Se a função não utiliza argumentos, a *expression-list* deve conter a palavra-chave `void`.
 
@@ -32,7 +32,7 @@ A ordem em que os argumentos são avaliados pode variar nos compiladores diferen
 
 A *expression-list* em uma chamada de função é avaliada e as conversões aritméticas comuns são executadas em cada argumento da chamada de função. Se um protótipo estiver disponível, o tipo de argumento resultante será comparado ao parâmetro correspondente do protótipo. Caso isso não aconteça, uma conversão será executada ou uma mensagem de diagnóstico será emitida. Os parâmetros também passam por conversões aritméticas comuns.
 
-O número de expressões em *expression-list* deve corresponder ao número de parâmetros, a menos que o protótipo ou a definição da função especifique explicitamente um número variável de argumentos. Nesse caso, o compilador verifica quantos argumentos houver nos nomes de tipo na lista de parâmetros e os converte, se necessário, conforme descrito acima. Consulte [Chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obter mais informações.
+O número de expressões em *expression-list* deve corresponder ao número de parâmetros, a menos que o protótipo ou a definição da função especifique explicitamente um número variável de argumentos. Nesse caso, o compilador verifica quantos argumentos houver nos nomes de tipo na lista de parâmetros e os converte, se necessário, conforme descrito acima. Consulte [chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obter mais informações.
 
 Se a lista de parâmetros do protótipo contém apenas a palavra-chave `void`, o compilador espera zero argumentos na chamada de função e zero parâmetros na definição. Uma mensagem de diagnóstico será emitida se encontrar argumentos.
 
@@ -77,6 +77,6 @@ o endereço de `x` é armazenado em `num1`, e o endereço de `y` é armazenado e
 
 O compilador executa a verificação de tipo nos argumentos para `swap` porque o protótipo de `swap` inclui tipos de argumento para cada parâmetro. Os identificadores entre parênteses do protótipo e a definição podem ser iguais ou diferentes. O importante aqui é que os tipos dos argumentos correspondam aos das listas de parâmetros no protótipo e na definição.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Chamadas de função](../c-language/function-calls.md)

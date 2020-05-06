@@ -7,15 +7,15 @@ helpviewer_keywords:
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325995"
 ---
 # <a name="initializing-strings"></a>Inicializando cadeias de caracteres
 
-Você pode inicializar uma matriz de caracteres (ou caracteres largos) com uma literal de cadeia de caracteres (ou literal de cadeia de caracteres largos). Por exemplo:
+Você pode inicializar uma matriz de caracteres (ou caracteres largos) com uma literal de cadeia de caracteres (ou literal de cadeia de caracteres largos). Por exemplo: 
 
 ```
 char code[ ] = "abc";
@@ -46,12 +46,12 @@ char s[]  = {'a', 'b', 'c', '\0'},
 
 Se a cadeia de caracteres for menor que o tamanho de matriz especificado, os elementos restantes da matriz serão inicializados como 0.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 No Microsoft C, os literais de cadeia de caracteres podem ter até 2048 bytes de comprimento.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Inicialização](../c-language/initialization.md)
+[Initialization](../c-language/initialization.md)

@@ -3,11 +3,11 @@ title: Constantes de caractere e inclusão condicional
 ms.date: 11/04/2016
 ms.assetid: 1692207b-0707-4908-9e05-f8ed7ae0dd76
 ms.openlocfilehash: b890cbd7ef2c8b1f58419a8df5ee6f998f03324f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312660"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Constantes de caractere e inclusão condicional
 
@@ -15,6 +15,6 @@ ms.locfileid: "56146928"
 
 O conjunto de caracteres usado em instruções do pré-processador é igual ao conjunto de caracteres de execução. O pré-processador reconhece valores negativos de caracteres.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Diretivas de pré-processamento](../c-language/preprocessing-directives.md)
+[Pré-processando diretivas](../c-language/preprocessing-directives.md)

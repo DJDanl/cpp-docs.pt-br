@@ -6,11 +6,11 @@ helpviewer_keywords:
 - additive operators
 ms.assetid: 7d54841e-436d-4ae8-9865-1ac1829e6f22
 ms.openlocfilehash: 0e2d802a77c56b8f458b614b29e86e2e1d30a55e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344870"
 ---
 # <a name="using-the-additive-operators"></a>Usando os operadores Additive
 
@@ -37,6 +37,6 @@ j = &x[i] - &x[i-2];
 
 Nesse exemplo, o endereço do terceiro elemento de `x` (determinado por `x[i-2]`) é subtraído do endereço do quinto elemento de `x` (determinado por `x[i]`). A diferença é dividida pelo comprimento de um **float**; o resultado é o valor inteiro 2.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operadores aditivos C](../c-language/c-additive-operators.md)

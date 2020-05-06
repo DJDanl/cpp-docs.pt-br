@@ -7,11 +7,11 @@ helpviewer_keywords:
 - break keyword [C]
 ms.assetid: 015627c7-0924-49b2-a4d1-c77edf5eae6a
 ms.openlocfilehash: b38ff6c535c142bd15ea09a4d7c80010c3fff31f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313357"
 ---
 # <a name="break-statement-c"></a>Instrução break (C)
 
@@ -19,7 +19,7 @@ A instrução `break` encerra a execução da instrução delimitadora `do`, `fo
 
 ## <a name="syntax"></a>Sintaxe
 
-*jump-statement*:<br/>
+*instrução de salto*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**break ;**
 
 A instrução `break` é frequentemente usada para encerrar o processamento de um caso específico dentro de uma instrução `switch`. A falta de uma instrução interativa delimitadora ou `switch` gera um erro.
@@ -43,6 +43,6 @@ int main() {
 } // Loop exits only when 'Q' is pressed
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instrução Break](../cpp/break-statement-cpp.md)

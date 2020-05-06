@@ -10,11 +10,11 @@ helpviewer_keywords:
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325657"
 ---
 # <a name="c-identifiers"></a>Identificadores C
 
@@ -38,8 +38,8 @@ Um tipo especial de identificador, chamado de rótulo da instrução, pode ser u
 
 ## <a name="syntax"></a>Sintaxe
 
-*identifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
+*identificador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Não dígito*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
@@ -52,11 +52,11 @@ Um tipo especial de identificador, chamado de rótulo da instrução, pode ser u
 
 O primeiro caractere do nome de identificador deve ser `nondigit` (ou seja, o primeiro caractere deve ser um sublinhado ou letra maiúscula ou minúscula). Permite seis caracteres ANSI significativos em um nome de identificador externo e 31 para nomes (dentro de uma função) de identificadores internos. Os identificadores externos (os declarados no escopo global ou declarados com a classe de armazenamento `extern`) podem estar sujeitos às restrições de nomeação adicionais, pois esses identificadores precisam ser processados por outro software, como vinculadores.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Ainda que o ANSI permita 6 caracteres significativos em nomes de identificadores externos e 31 para nomes (dentro de uma função) de identificadores internos, o compilador do C da Microsoft permite 247 caracteres em um nome de identificador interno ou externo. Se você não tiver preocupado com compatibilidade de ANSI, pode alterar esse padrão para um número menor ou maior usando a opção /H (restringe o comprimento dos nomes externos).
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 O compilador do C considerará as letras maiúsculas e minúsculas como caracteres distintos. Esse recurso, chamado de "diferenciação de maiúsculas e minúsculas" permite que você crie identificadores distintos que têm a mesma ortografia mas maiúsculas e minúsculas diferentes para uma ou mais letras. Por exemplo, cada um dos seguintes identificadores é exclusivo:
 
@@ -67,11 +67,11 @@ Add
 aDD
 ```
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Não selecione nomes dos identificadores que comecem com dois sublinhados ou com um sublinhado seguido por uma letra maiúscula. O padrão ANSI C permite que os nomes dos identificadores que começam com essas combinações de caracteres sejam reservados para uso pelo compilador. Os identificadores com escopo no nível de arquivo não devem ser nomeados com um sublinhado e uma letra minúscula como as duas primeiras letras. Os nomes de identificadores que começam com esses caracteres também são reservados. Por convenção, a Microsoft usa um sublinhado e uma letra maiúscula para iniciar nomes de macro e sublinhados duplos para nomes de palavras-chave específicos da Microsoft. Para evitar conflitos de nomenclatura, sempre selecione nomes do identificador que não comecem com um ou os dois sublinhados, ou os nomes que comecem com um sublinhado seguido por uma letra maiúscula.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 Os exemplos a seguir são identificadores válidos em conformidade com restrições de nome de ANSI ou Microsoft:
 
@@ -84,7 +84,7 @@ skip12
 LastNum
 ```
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Ainda que os identificadores nos arquivos de origem tenham diferenciação de maiúsculas e minúsculas por padrão, os símbolos nos arquivos de objeto não são. O Microsoft C trata os identificadores em uma unidade de compilação com diferenciação de maiúsculas e minúsculas.
 
@@ -92,10 +92,10 @@ O vinculador da Microsoft faz diferenciação de maiúsculas e minúsculas. Voc�
 
 O "conjunto de caracteres de origem" é o conjunto de caracteres válidos que podem aparecer nos arquivos de origem. Para o Microsoft C, o conjunto de origem é o conjunto de caracteres ASCII padrão. O conjunto de caracteres de origem e o conjunto de caracteres de execução incluem os caracteres ASCII usados como sequências de escape. Consulte [Constantes de caractere](../c-language/c-character-constants.md) para obter informações sobre o conjunto de caracteres de execução.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 Um identificador tem “escopo”, que é a região de programa em que é conhecido, e “vinculação”, que determina se o mesmo nome em outro escopo faz referência ao mesmo identificador. Esses tópicos são explicados em [Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Elementos de C](../c-language/elements-of-c.md)
