@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
 ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234502"
 ---
 # <a name="declarators-and-variable-declarations"></a>Declaradores e declarações variáveis
 
@@ -26,9 +26,9 @@ O restante desta seção descreve o formato e o significado das declarações pa
 |[Estruturas](../c-language/structure-declarations.md)|Variáveis compostas de uma coleção de valores que podem ter tipos diferentes|
 |[Uniões](../c-language/union-declarations.md)|Variáveis compostas de vários valores de tipos diferentes que ocupam o mesmo espaço de armazenamento|
 
-Um declarador é a parte de uma declaração que especifica o nome a ser introduzido no programa. Pode incluir modificadores como <strong>\*</strong> (pointer-to) e qualquer uma das palavras-chave de convenção de chamada da Microsoft.
+Um declarador é a parte de uma declaração que especifica o nome a ser introduzido no programa. Ele pode incluir modificadores como <strong>\*</strong> (ponteiro-para) e qualquer uma das palavras-chave da Convenção de chamada da Microsoft.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 No declarador
 
@@ -38,28 +38,28 @@ __declspec(thread) char *var;
 
 `char` é o especificador de tipo, `__declspec(thread)` e `*` são os modificadores, e `var` é o nome do identificador.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 Você usa declaradores para declarar matrizes de valores, ponteiros para valores e funções que retornam valores de um tipo especificado. Os declaradores aparecem nas declarações de matrizes e de ponteiros descritas posteriormente nesta seção.
 
 ## <a name="syntax"></a>Sintaxe
 
-*declarator*:<br/>
+*Declarador*:<br/>
 &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *declarator*  **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**
+*Declarador direto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *Declarador*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***[***opt-expressão de constante*<sub>opt</sub> **]**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto*  **(**  *tipo de parâmetro-lista*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***(***opção identificador-lista*<sub>opt</sub> **)**    
 
-*pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
+*ponteiro*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong><sub>opção</sub> *de qualificador de tipo-lista*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong><sub>opt</sub> *ponteiro* de *tipo-qualificador de lista de tipos*
 
 *type-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*qualificador de tipo*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list type-qualifier*
 
 > [!NOTE]
@@ -79,12 +79,12 @@ double func( void ); // Declares a function named func, with no
 int *aptr[10] // Declares an array of 10 pointers
 ```
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 O compilador de C da Microsoft não limita o número de declaradores que podem modificar um tipo aritmético, de estrutura ou de união. O número é limitado somente pela memória disponível.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e tipos](../c-language/declarations-and-types.md)
