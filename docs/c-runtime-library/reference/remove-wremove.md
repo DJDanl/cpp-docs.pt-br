@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 6a3d7ea81b2f6b1a7e87c706ca883394e02dff3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338146"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917833"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
@@ -65,15 +65,15 @@ Caminho do arquivo a ser removido.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retornará 0 se o arquivo for excluído com êxito. Caso contrário, ele retorna -1 e define **errno** ou ao **EACCES** para indicar que o caminho especifica um arquivo somente leitura, especifica um diretório ou o arquivo está aberto ou para **o ENOENT** para indicar que o nome do arquivo ou o caminho não foram encontrados.
+Cada uma dessas funções retornará 0 se o arquivo for excluído com êxito. Caso contrário, ele retornará-1 e definirá **errno** como **EACCES** para indicar que o caminho Especifica um arquivo somente leitura, especifica um diretório ou que o arquivo está aberto ou para **ENOENT** para indicar que o nome do arquivo ou caminho não foi encontrado.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-A função **remove** exclui o arquivo especificado por *path.* **_wremove** é uma versão ampla de **_remove;** o argumento de *caminho* para **_wremove** é uma seqüência de caracteres amplo. **_wremove** e **_remove** se comportam de forma idêntica. Todos os manipuladores de um arquivo devem ser fechados para que ele possa ser excluído.
+A função **remove** exclui o arquivo especificado por *path.* **_wremove** é uma versão de caractere largo do **_remove**; o argumento de *caminho* para **_wremove** é uma cadeia de caracteres largos. **_wremove** e **_remove** se comportar de forma idêntica. Todos os manipuladores de um arquivo devem ser fechados para que ele possa ser excluído.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -123,7 +123,7 @@ This file will be deleted.
 Deleted 'CRT_REMOVE.TXT'
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_unlink, _wunlink](unlink-wunlink.md)<br/>

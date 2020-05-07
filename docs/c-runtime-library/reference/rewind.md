@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 4b99dd1101727c3ba7d501dffc5abe22edf7f7ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338098"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917762"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,25 +55,25 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="remarks"></a>Comentários
 
-A função **rebobinar** reposiciona o ponteiro do arquivo associado ao *fluxo* até o início do arquivo. Uma chamada para **rewind** é semelhante a
+A função **retrocesso** reposiciona o ponteiro do arquivo associado ao *fluxo* para o início do arquivo. Uma chamada para **rewind** é semelhante a
 
-**(vazio) fseek** _(fluxo_**, 0L, SEEK_SET);**
+**(void) fseek (** _Stream_**, 0L, SEEK_SET);**
 
-No entanto, ao contrário [do fseek,](fseek-fseeki64.md) **o rebobinar** limpa os indicadores de erro para o fluxo, bem como o indicador de fim de arquivo. Além disso, ao contrário [do fseek,](fseek-fseeki64.md) **o rebobinamento** não retorna um valor para indicar se o ponteiro foi movido com sucesso.
+No entanto, ao contrário de [fseek](fseek-fseeki64.md), o **retrocesso** limpa os indicadores de erro do fluxo, bem como o indicador de fim de arquivo. Além disso, ao contrário de [fseek](fseek-fseeki64.md), o **retrocesso** não retorna um valor para indicar se o ponteiro foi movido com êxito.
 
-Para limpar o buffer do teclado, use **o rebobinar** com o **stdin**de fluxo, que está associado ao teclado por padrão.
+Para limpar o buffer de teclado, use **rebobinar** com o fluxo **stdin**, que é associado ao teclado por padrão.
 
-Se o fluxo for um ponteiro **NULL,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função retorna e **errno** é definida **como EINVAL**.
+Se Stream for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função retornará e **errno** será definida como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**Rebobinar**|\<stdio.h>|
+|**retrocesso**|\<stdio.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -121,6 +121,6 @@ The values written are: 1 and -37
 The values read are: 1 and -37
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
