@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
 ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232937"
 ---
 # <a name="initializing-scalar-types"></a>Inicializando tipos escalares
 
@@ -25,7 +25,7 @@ Ao inicializar tipos escalares, o valor de *assignment-expression* é atribuído
 
 ## <a name="syntax"></a>Sintaxe
 
-*declaration*:<br/>
+*declaração*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *init-declarator-list*<sub>opt</sub> **;**
 
 *declaration-specifiers*:<br/>
@@ -34,15 +34,15 @@ Ao inicializar tipos escalares, o valor de *assignment-expression* é atribuído
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list* **,** *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List* **,** *init-declarator*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer* /\* Para inicialização escalar \*/
+*init-Declarador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\* *inicializador* **=**  / de *Declarador* para inicialização escalar\*/
 
-*initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*
+*inicializador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão de atribuição*
 
 Você pode inicializar variáveis de qualquer tipo, desde que obedeça às seguintes regras:
 
@@ -52,7 +52,7 @@ Você pode inicializar variáveis de qualquer tipo, desde que obedeça às segui
 
 - Variáveis declaradas com o especificador de classe de armazenamento **auto** ou **register** são inicializadas cada vez que o controle da execução passa para o bloco em que são declaradas. Se você omitir um inicializador da declaração de uma variável **auto** ou **register**, o valor inicial da variável será indefinido. Para valores automáticos e de registro, o inicializador não está restrito a ser uma constante; ele pode ser qualquer expressão que envolva valores definidos anteriormente, inclusive chamadas de função.
 
-- Os valores iniciais para declarações de variáveis externas e para todas as variáveis **static**, sejam externas ou internas, devem ser expressões de constantes. (Para obter mais informações, consulte o tópico sobre [expressões de constantes](../c-language/c-constant-expressions.md).) Como o endereço de qualquer variável estática ou declarada externamente é constante, ele pode ser usado para inicializar uma variável de ponteiro **static** declarada internamente. No entanto, o endereço de uma variável **auto** não pode ser usado como um inicializador estático, pois pode ser diferente para cada execução do bloco. Você pode usar valores de constantes ou de variáveis para inicializar as variáveis **auto** e **register**.
+- Os valores iniciais para declarações de variáveis externas e para todas as variáveis **static**, sejam externas ou internas, devem ser expressões de constantes. (Para obter mais informações, consulte [expressões constantes](../c-language/c-constant-expressions.md).) Como o endereço de qualquer variável estática ou declarada externamente é constante, ele pode ser usado para inicializar uma variável de ponteiro **estático** internamente declarada. No entanto, o endereço de uma variável **auto** não pode ser usado como um inicializador estático, pois pode ser diferente para cada execução do bloco. Você pode usar valores de constantes ou de variáveis para inicializar as variáveis **auto** e **register**.
 
 - Se a declaração de um identificador tem o escopo do bloco e o identificador tem vinculação externa, a declaração não pode ter uma inicialização.
 
@@ -102,8 +102,8 @@ int function( void )
 }
 ```
 
-A variável global `GLOBAL` é declarada no nível externo e, por isso, tem tempo de vida global. A variável local `LOCAL` tem a classe de armazenamento **auto** e tem apenas um endereço durante a execução da função em que é declarada. Em consequência, não é permitido tentar inicializar a variável de ponteiro **static** `lp` com o endereço de `LOCAL`. A variável de ponteiro **static** `gp` pode ser inicializada como o endereço de `GLOBAL` porque esse endereço é sempre o mesmo. Da mesma forma, `*rp` pode ser inicializada `rp` porque é uma variável local e pode ter um inicializador não constante. Cada vez que se entra no bloco, `LOCAL` tem um novo endereço, que é então atribuído a `rp`.
+A variável global `GLOBAL` é declarada no nível externo e, por isso, tem tempo de vida global. A variável local `LOCAL` tem a classe de armazenamento **auto** e tem apenas um endereço durante a execução da função em que é declarada. Em consequência, não é permitido tentar inicializar a variável de ponteiro **static**`lp` com o endereço de `LOCAL`. A variável de ponteiro **static**`gp` pode ser inicializada como o endereço de `GLOBAL` porque esse endereço é sempre o mesmo. Da mesma forma, `*rp` pode ser inicializada `rp` porque é uma variável local e pode ter um inicializador não constante. Cada vez que se entra no bloco, `LOCAL` tem um novo endereço, que é então atribuído a `rp`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Inicialização](../c-language/initialization.md)
+[Initialization](../c-language/initialization.md)

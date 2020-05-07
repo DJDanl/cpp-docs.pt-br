@@ -11,15 +11,15 @@ helpviewer_keywords:
 - structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
 ms.openlocfilehash: e7a5cd7624b55e7bce0fbd09451ab42426f5bc37
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232885"
 ---
 # <a name="incomplete-types"></a>Tipos incompletos
 
-Um *tipo incompleto* é um tipo que descreve um identificador, mas não tem as informações necessárias para determinar o tamanho do identificador. Um tipo incompleto pode ser:
+Um *tipo incompleto* é um tipo que descreve um identificador, mas que não tem informações necessárias para determinar o tamanho do identificador. Um tipo incompleto pode ser:
 
 - Um tipo de estrutura cujos membros você ainda não especificou.
 
@@ -44,7 +44,7 @@ O tipo **void** é um tipo incompleto que não pode ser concluído. Para conclui
     }                   /* student structure now completed */
     ```
 
-- Para criar um tipo incompleto de matriz, declare um tipo de matriz sem especificar sua contagem de repetições. Por exemplo:
+- Para criar um tipo incompleto de matriz, declare um tipo de matriz sem especificar sua contagem de repetições. Por exemplo: 
 
     ```C
     char a[];  /* a has incomplete type */
@@ -56,6 +56,6 @@ O tipo **void** é um tipo incompleto que não pode ser concluído. Para conclui
     char a[25]; /* a now has complete type */
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e tipos](../c-language/declarations-and-types.md)

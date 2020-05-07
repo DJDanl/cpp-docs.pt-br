@@ -11,7 +11,7 @@ ms.locfileid: "70740093"
 ---
 # <a name="character-testing"></a>Testes de caractere
 
-**ANSI 4.3.1** Os conjuntos de caracteres testados pelas funções `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint` e `isupper`
+**4.3.1 do ANSI** Os conjuntos de caracteres testados pelas funções `isalnum`, `isalpha`, `iscntrl`, `islower` `isprint`, e `isupper`
 
 A lista a seguir descreve essas funções como são implementadas pelo compilador Microsoft C.
 
@@ -24,6 +24,6 @@ A lista a seguir descreve essas funções como são implementadas pelo compilado
 |`isprint`|Caracteres A–Z, a–z, 0 – 9, pontuação, espaço ASCII 32–126|
 |`isupper`|Caracteres A–Z ASCII 65–90|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções de biblioteca](../c-language/library-functions.md)

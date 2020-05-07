@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
 ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400526"
@@ -21,16 +21,16 @@ Os operadores relacionais binários e de igualdade comparam o primeiro operando 
 
 **Sintaxe**
 
-*relational-expression*:<br/>
+*expressão relacional*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;**&lt;** *expressão de alternância* de *expressão relacional*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**>** *expressão de alternância* de *expressão relacional*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão de alternância* de *expressão* ** &lt; ** relacional<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**>=** *expressão de alternância* de *expressão relacional*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**==** *expressão relacional de* *expressão de igualdade*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 Os operadores relacionais e de igualdade testam as seguintes relações:
@@ -48,7 +48,7 @@ Os primeiros quatro operadores na lista acima têm alta prioridade quanto aos op
 
 Os operandos podem ter o tipo integral, flutuação ou ponteiro. Os tipos dos operandos podem ser diferentes. Os operadores relacionais executam as conversões aritméticas comuns em operandos do tipo integral ou flutuação. Além disso, você pode usar as seguintes combinações de tipos de operando com os operadores relacionais e de igualdade:
 
-- Ambos os operandos de qualquer operador relacional ou de igualdade podem ser ponteiros para o mesmo tipo. Para os operadores de igualdade (`==`) e de desigualdade (`!=`), o resultado da comparação indica se os dois ponteiros endereçam o mesmo local da memória. Para os outros operadores relacionais ( **\<** , **>** , **\<** = e **>** =), o resultado da comparação indica a posição relativa dos dois endereços de memória dos objetos apontados. Os operadores relacionais são apenas deslocamentos.
+- Ambos os operandos de qualquer operador relacional ou de igualdade podem ser ponteiros para o mesmo tipo. Para os operadores de igualdade (`==`) e de desigualdade (`!=`), o resultado da comparação indica se os dois ponteiros endereçam o mesmo local da memória. Para os outros operadores relacionais (**\<**, **>**, **\<**=, e **>**=), o resultado da comparação indica a posição relativa dos dois endereços de memória dos objetos apontados. Os operadores relacionais são apenas deslocamentos.
 
    A comparação do ponteiro é definida apenas para partes do mesmo objeto. Se os ponteiros fizerem referência aos membros de uma matriz, uma comparação é equivalente à comparação dos subscritos correspondentes. O endereço do primeiro elemento da matriz é "menor que" o endereço do último elemento. No caso de estruturas, os ponteiros para os membros da estrutura declarados posteriormente são ponteiros "maiores que" para os membros declarados anteriormente na estrutura. Os ponteiros para os membros da mesma união são iguais.
 
@@ -90,7 +90,7 @@ enum color { red, white, green } col;
 
 Essas instruções declaram uma variável de enumeração chamada `col` com a marca `color`. A qualquer momento, a variável pode conter um valor inteiro de 0, 1, ou 2, que representa um dos elementos do conjunto de enumeração `color`: a cor vermelha, branca ou verde, respectivamente. Se `col` contiver 0 quando a instrução **if** for executada, todas as instruções dependentes de **if** serão executadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operadores relacionais: \<, >, \<= e >=](../cpp/relational-operators-equal-and-equal.md)<br/>
 [Operadores de igualdade: == e !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

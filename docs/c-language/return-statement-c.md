@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
 ms.openlocfilehash: c3975076ee65d267f3d278e20a7770e6750c06d3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158368"
 ---
 # <a name="return-statement-c"></a>Instrução return (C)
 
@@ -17,7 +17,7 @@ A instrução `return` encerra a execução de uma função e devolve o controle
 
 ## <a name="syntax"></a>Sintaxe
 
-*jump-statement*:<br/>
+*instrução de salto*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
 
 O valor de *expression*, se existir, será retornado à função de chamada. Se o valor de *expression* for omitido, o valor retornado da função será indefinido. A expressão, se presente, será avaliada e convertida no tipo retornado pela função. Se a função foi declarada com o tipo de retorno `void`, uma instrução `return` que contém uma expressão gera um aviso e a expressão não é avaliada.
@@ -67,6 +67,6 @@ O resultado do exemplo é semelhante a este:
 i = 2147483647, ll = 4611686014132420609
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções](../c-language/statements-c.md)

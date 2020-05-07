@@ -15,9 +15,9 @@ ms.locfileid: "69493338"
 
 Um aplicativo isolado depende apenas de assemblies lado a lado e é associado a suas dependências usando um manifesto. Não é necessário que seu aplicativo esteja totalmente isolado para ser executado corretamente no Windows; no entanto, ao investir em tornar seu aplicativo totalmente isolado, você poderá economizar tempo se precisar atender seu aplicativo no futuro. Para obter mais informações sobre as vantagens de tornar seu aplicativo totalmente isolado, consulte [aplicativos isolados](/windows/win32/SbsCs/isolated-applications).
 
-Quando você cria seu C/C++ aplicativo nativo usando o Visual Studio, por padrão, o sistema de projeto do Visual Studio gera um arquivo de manifesto que descreve as dependências do seu aplicativo nas bibliotecas do Visual Studio. Se essas são as únicas dependências de seu aplicativo, ele se torna um aplicativo isolado assim que é recriado com o Visual Studio. Se seu aplicativo estiver usando outras bibliotecas em tempo de execução, talvez seja necessário recriar essas bibliotecas como assemblies lado a lado seguindo as etapas descritas na [criação de assembliesC++ C/lado](building-c-cpp-side-by-side-assemblies.md)a lado.
+Quando você cria seu aplicativo C/C++ nativo usando o Visual Studio, por padrão, o sistema de projeto do Visual Studio gera um arquivo de manifesto que descreve as dependências do seu aplicativo nas bibliotecas do Visual Studio. Se essas são as únicas dependências de seu aplicativo, ele se torna um aplicativo isolado assim que é recriado com o Visual Studio. Se seu aplicativo estiver usando outras bibliotecas em tempo de execução, talvez seja necessário recriar essas bibliotecas como assemblies lado a lado seguindo as etapas descritas em [compilando assemblies lado a lado do C/C++](building-c-cpp-side-by-side-assemblies.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conceitos de aplicativos isolados e assemblies lado a lado](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
-[Compilando aplicativos isolados do C/C++ e assemblies lado a lado](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Criando aplicativos isolados C/C++ e assemblies lado a lado](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

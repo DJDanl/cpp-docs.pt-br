@@ -15,7 +15,7 @@ ms.locfileid: "81480875"
 
 **ANSI 3.2.1.4** A direção de truncamento ou arredondamento quando um número de ponto flutuante é convertido em um número de ponto flutuante mais restrito
 
-Quando ocorre um subfluxo, o valor de uma variável de ponto flutuante é arredondado para zero. Um estouro pode causar um erro de tempo de execução ou pode gerar um valor imprevisível, dependendo das otimizações especificadas.
+Quando ocorre um estouro negativo, o valor de uma variável de ponto flutuante é arredondado para zero. Um estouro pode causar um erro de tempo de execução ou pode gerar um valor imprevisível, dependendo das otimizações especificadas.
 
 ## <a name="see-also"></a>Confira também
 

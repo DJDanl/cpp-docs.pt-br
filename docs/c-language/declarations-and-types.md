@@ -8,11 +8,11 @@ helpviewer_keywords:
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
 ms.openlocfilehash: 75ffbeda8b120b9a1bb9f1bb28c570695ed2c8c8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234573"
 ---
 # <a name="declarations-and-types"></a>Declarações e tipos
 
@@ -26,11 +26,11 @@ Esta seção descreve a declaração e a inicialização de variáveis, funçõe
 
 - [Qualificadores de tipo](../c-language/type-qualifiers.md)
 
-- [Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md)
+- [Declaradores e declarações de variáveis](../c-language/declarators-and-variable-declarations.md)
 
 - [Interpretando declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md)
 
-- [Inicialização](../c-language/initialization.md)
+- [Initialization](../c-language/initialization.md)
 
 - [Armazenamento de tipos básicos](../c-language/storage-of-basic-types.md)
 
@@ -40,6 +40,6 @@ Esta seção descreve a declaração e a inicialização de variáveis, funçõe
 
 - [Atributos de classe de armazenamento estendido](../c-language/c-extended-storage-class-attributes.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C](../c-language/c-language-reference.md)

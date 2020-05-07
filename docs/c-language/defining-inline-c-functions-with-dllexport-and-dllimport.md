@@ -8,15 +8,15 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
 ms.openlocfilehash: 2e43f01b495a03e4f50295de42afa9b6c6b38173
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234412"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>Definindo funções C embutidas com dllexport e dllimport
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Você pode definir como uma função embutida com o atributo `dllexport`. Nesse caso, a função sempre é instanciada e exportada, mesmo se qualquer módulo no programa fizer referência à função. Presume-se que a função seja importada por outro programa.
 
@@ -26,8 +26,8 @@ Os dados locais estáticos e as cadeias de caracteres em funções embutidas man
 
 Tenha cuidado ao fornecer funções embutidas importadas. Por exemplo, se você atualizar a DLL, não suponha que o cliente não usará a versão modificada da DLL. Para garantir que você esteja carregando a versão apropriada da DLL, recompile o cliente da DLL também.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções de importação e exportação de DLL](../c-language/dll-import-and-export-functions.md)

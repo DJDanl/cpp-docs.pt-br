@@ -5,11 +5,11 @@ helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
 ms.openlocfilehash: edfb8f03094c10cf0cf33b0eb799d5d822ac017d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234399"
 ---
 # <a name="demotion-of-integers"></a>Rebaixamentos de inteiros
 
@@ -33,6 +33,6 @@ atribui o valor 0x34 a `y`.
 
 Quando variáveis com sinal são convertidas em sem sinal e vice-versa, os padrões de bits permanecem os mesmos. Por exemplo, converter -2 (0xFE) em um valor sem sinal gera 254 (também 0xFE).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Inteiros](../c-language/integers.md)

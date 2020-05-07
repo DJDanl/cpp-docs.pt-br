@@ -6,11 +6,11 @@ helpviewer_keywords:
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
 ms.openlocfilehash: 736ed4fbbd9f87c675c0bb9566c6c31287e77917
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233703"
 ---
 # <a name="expression-statement-c"></a>Instrução de expressão (C)
 
@@ -18,7 +18,7 @@ Quando uma instrução de expressão é executada, ela é avaliada de acordo com
 
 ## <a name="syntax"></a>Sintaxe
 
-*expression-statement*:<br/>
+*expressão-instrução*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
 
 Todos os efeitos colaterais de avaliação da expressão são concluídos antes de a próxima instrução ser executada. Uma instrução expression vazia é chamada de instrução null. Consulte [A instrução null](../c-language/null-statement-c.md) para obter mais informações.
@@ -35,6 +35,6 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
 
 Na última instrução, a expressão de chamada de função, o valor da expressão, que inclui os valores retornados pela função, é aumentada em 3 e atribuída às duas variáveis `y` e `z`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções](../c-language/statements-c.md)

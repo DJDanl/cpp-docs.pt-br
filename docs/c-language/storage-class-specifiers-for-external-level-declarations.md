@@ -17,11 +17,11 @@ helpviewer_keywords:
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
 ms.openlocfilehash: 941994f668fa035b569f9ccae2c301ebf42bcda6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157949"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Especificadores de classe de armazenamento para declarações de nível externo
 
@@ -40,7 +40,7 @@ Uma declaração de variável externa que também inicializa a variável (implí
 
 - Uma variável inicializada explicitamente no nível externo. Por exemplo, `int j = 3;` é uma definição da variável `j`.
 
-Em declarações de variável no nível externo (ou seja, fora de todas as funções), você pode usar o **static** ou `extern` storage-class-specifier ou omitir totalmente esse especificador. Você não pode usar os terminais de **auto** e **register** *storage-class-specifier* no nível externo.
+Em declarações de variável no nível externo (ou seja, fora de todas as funções), você pode usar o **static** ou `extern` storage-class-specifier ou omitir totalmente esse especificador. Você não pode usar os terminais de **auto** e **register ** *storage-class-specifier* no nível externo.
 
 Depois que uma variável é definida no nível externo, ela é visível durante o resto da unidade de tradução. A variável não é visível antes de sua declaração no mesmo arquivo de origem. Além disso, ela não é visível em outros arquivos de origem do programa, a menos que uma declaração de referência torne-a visível, como descrito a seguir.
 
@@ -125,6 +125,6 @@ Todas as três funções, `main`, `next`, e `other`, executadas na mesma tarefa:
 
 Se a variável `i` não tivesse sido inicializada, ela seria definida automaticamente como 0. Nesse caso, os valores 1, 2, e 3 seriam impressos. Consulte [Inicialização](../c-language/initialization.md) para obter mais informações sobre inicialização de variáveis.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes de armazenamento C](../c-language/c-storage-classes.md)

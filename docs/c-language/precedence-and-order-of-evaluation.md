@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
 ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
 ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/12/2019
 ms.locfileid: "67861071"
@@ -22,16 +22,16 @@ A tabela a seguir resume a precedência e a associatividade (a ordem em que os o
 
 ## <a name="precedence-and-associativity-of-c-operators"></a>Precedência e associatividade de operadores C
 
-| Símbolo <sup>1</sup> | Tipo de operação | Associatividade |
+| Símbolo <sup>1</sup> | Tipo de operação | Capacidade de associação |
 |-------------|-----------------------|-------------------|
-| `[` `]` `(` `)` `.` `->`<br/>`++` `--` (sufixo) | Expressão | Da esquerda para a direita |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++` `--` (prefixo) | Unário | Da direita para a esquerda |
+| `[` `]` `(` `)` `.` `->`<br/>`++``--` (sufixo) | Expression | Da esquerda para a direita |
+| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--` (prefixo) | Unário | Da direita para a esquerda |
 | *typecasts* | Unário | Da direita para a esquerda |
 | `*` `/` `%` | Multiplicativo | Da esquerda para a direita |
-| `+` `-` | Aditivo | Da esquerda para a direita |
+| `+` `-` | Aditiva | Da esquerda para a direita |
 | `<<` `>>` | Deslocamento bit a bit | Da esquerda para a direita |
 | `<` `>` `<=` `>=` | Relacional | Da esquerda para a direita |
-| `==` `!=` | Igualdade | Da esquerda para a direita |
+| `==` `!=` | Igualitário | Da esquerda para a direita |
 | `&` | Bitwise-AND | Da esquerda para a direita |
 | `^` | Bitwise-exclusive-OR | Da esquerda para a direita |
 | `|` | Bitwise-inclusive-OR | Da esquerda para a direita |
@@ -47,7 +47,7 @@ A tabela a seguir resume a precedência e a associatividade (a ordem em que os o
 
 Uma expressão pode conter vários operadores com a mesma precedência. Quando vários desses operadores aparecem no mesmo nível em uma expressão, a avaliação procede de acordo com a associatividade do operador, da direita para a esquerda ou da esquerda para a direita. A direção da avaliação não afeta os resultados das expressões que incluem mais de um operador de multiplicação (`*`), adição (`+`) ou binário bit a bit (`&`, `|` ou `^`) no mesmo nível. A ordem das operações não é definida pela linguagem. O compilador é livre para avaliar essas expressões em qualquer ordem, se ele puder garantir um resultado consistente.
 
-Somente os operadores de avaliação sequencial (`,`), AND lógico (`&&`), OR lógico (`||`), de expressão condicional (`? :`) e de chamada de função constituem pontos de sequência e, portanto, garantem uma ordem específica de avaliação de seus operandos. O operador da chamada de função é o conjunto de parênteses depois do identificador da função. O operador de avaliação sequencial (`,`) é garantido para avaliar seus operandos da esquerda para a direita. (O operador vírgula em uma chamada de função não é o mesmo que o operador de avaliação sequencial e não fornece tal garantia.) Para obter mais informações, confira [Pontos de sequência](c-sequence-points.md).
+Somente os operadores de avaliação sequencial (`,`), AND lógico (`&&`), OR lógico (`||`), de expressão condicional (`? :`) e de chamada de função constituem pontos de sequência e, portanto, garantem uma ordem específica de avaliação de seus operandos. O operador da chamada de função é o conjunto de parênteses depois do identificador da função. O operador de avaliação sequencial (`,`) é garantido para avaliar seus operandos da esquerda para a direita. (O operador de vírgula em uma chamada de função não é o mesmo que o operador de avaliação sequencial e não fornece nenhuma garantia.) Para obter mais informações, consulte [pontos de sequência](c-sequence-points.md).
 
 Os operadores lógicos também garantem a avaliação de seus operandos da esquerda para a direita. No entanto, eles avaliam o menor número de operandos necessários para determinar o resultado da expressão. Isso é chamado de avaliação de" curto-circuito". Assim, alguns operandos da expressão não podem ser avaliados. Por exemplo, na expressão
 
@@ -59,7 +59,7 @@ o segundo operando, `y++`, será avaliado somente se `x` for true (diferente de 
 
 A lista a seguir mostra como o compilador associa automaticamente várias expressões de exemplo:
 
-| Expressão | Associação automática |
+| Expression | Associação automática |
 |----------------|-----------------------|
 | `a & b || c` | `(a & b) || c` |
 | `a = b || c` | `a = (b || c)` |
@@ -81,6 +81,6 @@ Nessa expressão, o operador de igualdade (`==`) tem a precedência mais alta, e
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Operadores C](c-operators.md)
+[Operadores de C](c-operators.md)

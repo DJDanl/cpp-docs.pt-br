@@ -25,8 +25,8 @@ Um programa de origem pode ser dividido em um ou mais "arquivos de origem “ ou
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*definição de função*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declaração*
+&nbsp;&nbsp;&nbsp;&nbsp;*função-definição*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*mesma*
 
 [Visão geral das declarações](../c-language/overview-of-declarations.md) fornece a sintaxe da `declaration` não terminal e *Referência do pré-processador* explica como a [unidade de translação](../preprocessor/phases-of-translation.md) é processada.
 

@@ -3,11 +3,11 @@ title: Programa de exemplo
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
 ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233919"
 ---
 # <a name="example-program"></a>Programa de exemplo
 
@@ -73,6 +73,6 @@ FILE1.C usa a declarações de definição para inicializar as variáveis globai
 
 O tempo de vida e a visibilidade dos identificadores são discutidos em [Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md). Para obter mais informações sobre funções, consulte [Funções](../c-language/functions-c.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos e programas de origem](../c-language/source-files-and-source-programs.md)

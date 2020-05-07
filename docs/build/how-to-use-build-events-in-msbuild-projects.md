@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar eventos de compilação em projetos do MSBuild'
+title: Como usar eventos de build em projetos de MSBuild
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/27/2019
 ms.locfileid: "70060062"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Como: Usar eventos de compilação em projetos do MSBuild
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Como usar eventos de build em projetos de MSBuild
 
 Um evento de compilação é um comando que o MSBuild executa em um estágio específico no processo de compilação. O evento de *pré-compilação* ocorre antes do início da compilação; o evento de *pré-vínculo* ocorre antes do início da etapa de link; e o evento de *pós-compilação* ocorre depois que a compilação é encerrada com êxito. Um evento de compilação ocorrerá somente se a etapa de compilação associada ocorrer. Por exemplo, o evento de pré-vínculo não ocorrerá se a etapa de vínculo não for executada.
 
@@ -37,7 +37,7 @@ A tabela a seguir lista cada elemento de *uso-in-Build* :
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir pode ser adicionado dentro do elemento de projeto do arquivo myproject. vcxproj criado no [Walkthrough: Usando o MSBuild para criar C++ um](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)projeto. Um evento de *pré-compilação* faz uma cópia do Main. cpp; um evento de *pré-vínculo* faz uma cópia do Main. obj; e um evento de *pós-compilação* faz uma cópia de MyProject. exe. Se o projeto for criado usando uma configuração de versão, os eventos de compilação serão executados. Se o projeto for criado usando uma configuração de depuração, os eventos de compilação não serão executados.
+O exemplo a seguir pode ser adicionado dentro do elemento de projeto do arquivo myproject. vcxproj criado no [Walkthrough: usando o MSBuild para criar um projeto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Um evento de *pré-compilação* faz uma cópia do Main. cpp; um evento de *pré-vínculo* faz uma cópia do Main. obj; e um evento de *pós-compilação* faz uma cópia de MyProject. exe. Se o projeto for criado usando uma configuração de versão, os eventos de compilação serão executados. Se o projeto for criado usando uma configuração de depuração, os eventos de compilação não serão executados.
 
 ``` xml
 <ItemDefinitionGroup>
@@ -68,7 +68,7 @@ O exemplo a seguir pode ser adicionado dentro do elemento de projeto do arquivo 
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[MSBuild na linha de comando – C++](msbuild-visual-cpp.md)<br/>
-[Passo a passo: usar o MSBuild para a criação de um projeto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild na linha de comando-C++](msbuild-visual-cpp.md)<br/>
+[Walkthrough: usando o MSBuild para criar um projeto do C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

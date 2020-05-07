@@ -1,6 +1,6 @@
 ---
 title: Configurar as sessões de depuração do CMake no Visual Studio
-description: Descreve como usar o Visual Studio para configurar as configurações do depurador CMake.
+description: Descreve como usar o Visual Studio para definir as configurações do depurador CMake.
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
@@ -15,7 +15,7 @@ ms.locfileid: "81328831"
 
 ::: moniker range="vs-2015"
 
-O suporte nativo do CMake está disponível no Visual Studio 2017 e posteriormente. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O suporte nativo a CMake está disponível no Visual Studio 2017 e posterior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 
@@ -23,35 +23,35 @@ O suporte nativo do CMake está disponível no Visual Studio 2017 e posteriormen
 
 Todos os destinos executáveis do CMake são mostrados na lista suspensa **Item de Inicialização** na barra de ferramentas **Geral**. Selecione um para iniciar uma sessão de depuração e inicie o depurador.
 
-![CMake item de inicialização dropdown](media/cmake-startup-item-dropdown.png "CMake item de inicialização dropdown")
+![Menu suspenso de item de inicialização CMake](media/cmake-startup-item-dropdown.png "Menu suspenso de item de inicialização CMake")
 
-Você também pode iniciar uma sessão de depuração do Solution Explorer. Primeiro, mude para **CMake Targets Exibir** na janela **Solution Explorer.**
+Você também pode iniciar uma sessão de depuração de Gerenciador de Soluções. Primeiro, alterne para o **modo de exibição de destinos CMake** na janela **Gerenciador de soluções** .
 
-![Botão de exibição de destinos do CMake](media/cmake-targets-view.png  "CFazer metas Exibir item do menu")
+![Botão de exibição de destinos do CMake](media/cmake-targets-view.png  "Item de menu de exibição de destinos CMake")
 
-Em seguida, clique com o botão direito do mouse em um executável e selecione **Debug**. Este comando inicia automaticamente a depuração do destino selecionado com base na sua configuração ativa.
+Em seguida, clique com o botão direito do mouse em um executável e selecione **depurar**. Esse comando inicia automaticamente a depuração do destino selecionado com base em sua configuração ativa.
 
 ## <a name="customize-debugger-settings"></a>Personalizar configurações do depurador
 
-Você pode personalizar as configurações do depurador para qualquer destino CMake executável em seu projeto. Eles são encontrados em um arquivo de configuração chamado *launch.vs.json*, localizado em uma *`.vs`* pasta na raiz do projeto. Um arquivo de configuração de lançamento é útil na maioria dos cenários de depuração, porque você pode configurar e salvar os detalhes de configuração de depuração. Há três pontos de entrada neste arquivo:
+Você pode personalizar as configurações do depurador para qualquer destino de CMake executável em seu projeto. Eles são encontrados em um arquivo de configuração chamado *Launch. vs. JSON*, localizado em *`.vs`* uma pasta na raiz do projeto. Um arquivo de configuração de inicialização é útil na maioria dos cenários de depuração, pois você pode configurar e salvar os detalhes da configuração de depuração. Há três pontos de entrada para este arquivo:
 
-- **Menu de depuração:** Selecione **Depurar > Debug e Configurações de lançamento para ${activeDebugTarget}** no menu principal para personalizar a configuração de depuração específica do seu destino de depuração ativa. Se você não tiver um destino de depuração selecionado, esta opção será acinzentada.
+- **Menu Depurar:** Selecione **depurar > depurar e iniciar configurações para $ {activeDebugTarget}** no menu principal para personalizar a configuração de depuração específica para seu destino de depuração ativa. Se você não tiver um destino de depuração selecionado, essa opção estará esmaecida.
 
 ![Ponto de entrada do menu de depuração](media/cmake-debug-menu.png "Ponto de entrada do menu de depuração")
 
-- **Exibição de metas:** Navegue **até o Targets View** in Solution Explorer. Em seguida, clique com o botão direito do mouse em um destino de depuração e selecione **Adicionar configuração de depuração** para personalizar a configuração de depuração específica para o destino selecionado.
+- **Exibição de destinos:** Navegue até o **modo de exibição destinos** em Gerenciador de soluções. Em seguida, clique com o botão direito do mouse em um destino de depuração e selecione **Adicionar configuração de depuração** para personalizar a configuração de depuração específica para o destino selecionado.
 
-![Alvos ver ponto de entrada](media/cmake-targets-add-debug-configuration.png "Alvos ver ponto de entrada")
+![Ponto de entrada de exibição de destinos](media/cmake-targets-add-debug-configuration.png "Ponto de entrada de exibição de destinos")
 
-- **Root CMakeLists.txt:** Clique com o botão direito do mouse em uma *raiz CMakeLists.txt* e selecione **Adicionar configuração de depuração** para abrir a caixa de diálogo **Selecionar um depurador.** A caixa de diálogo permite adicionar *qualquer* tipo de configuração de depuração, `projectTarget` mas você deve especificar manualmente o destino CMake para invocar através da propriedade.
+- **CMakeLists. txt raiz:** Clique com o botão direito do mouse em uma raiz *CMakeLists. txt* e selecione **Adicionar configuração de depuração** para abrir a caixa de diálogo **selecionar um depurador** . A caixa de diálogo permite que você adicione *qualquer* tipo de configuração de depuração, mas você deve especificar manualmente o destino CMake para `projectTarget` invocar por meio da propriedade.
 
-![Selecione uma caixa de diálogo de depurador](media/cmake-select-a-debugger.png "Selecione uma caixa de diálogo de depurador")
+![Caixa de diálogo Selecionar um depurador](media/cmake-select-a-debugger.png "Caixa de diálogo Selecionar um depurador")
 
-Você pode editar o arquivo *launch.vs.json* para criar configurações de depuração para qualquer número de alvos CMake. Quando você salva o arquivo, o Visual Studio cria uma entrada para cada nova configuração no **item** de inicialização.
+Você pode editar o arquivo *Launch. vs. JSON* para criar configurações de depuração para qualquer número de destinos CMake. Quando você salva o arquivo, o Visual Studio cria uma entrada para cada nova configuração no menu suspenso **item de inicialização** .
 
-## <a name="reference-keys-in-cmakesettingsjson"></a>Chaves de referência em CMakeSettings.json
+## <a name="reference-keys-in-cmakesettingsjson"></a>Chaves de referência em CMakeSettings. JSON
 
-Para referenciar qualquer tecla em um arquivo *CMakeSettings.json,* `cmake.` prepare-a em *launch.vs.json*. O exemplo a seguir mostra um arquivo simple *launch.vs.json* que puxa o valor da `remoteCopySources` chave no arquivo *CMakeSettings.json* para a configuração atualmente selecionada:
+Para fazer referência a qualquer chave em um arquivo *CMakeSettings. JSON* , preceda `cmake.` -a na *inicialização. vs. JSON*. O exemplo a seguir mostra um arquivo de *inicialização simples. vs. JSON* que efetua pull do valor da `remoteCopySources` chave no arquivo *CMakeSettings. JSON* para a configuração selecionada no momento:
 
 ```json
 {
@@ -69,15 +69,15 @@ Para referenciar qualquer tecla em um arquivo *CMakeSettings.json,* `cmake.` pre
 }
 ```
 
-**As variáveis de ambiente definidas** em *CMakeSettings.json* também podem ser usadas `${env.VARIABLE_NAME}`em launch.vs.json usando a sintaxe . No Visual Studio 2019 versão 16.4 e posterior, os alvos de depuração são automaticamente lançados usando o ambiente especificado em *CMakeSettings.json*. Você pode desdefinir uma variável de ambiente definindo-a **como nula**.
+As **variáveis de ambiente** definidas em *CMakeSettings. JSON* também podem ser usadas em Launch. vs. JSON usando `${env.VARIABLE_NAME}`a sintaxe. No Visual Studio 2019 versão 16,4 e posteriores, os destinos de depuração são iniciados automaticamente usando o ambiente que você especificar em *CMakeSettings. JSON*. Você pode remover uma variável de ambiente definindo-a como **NULL**.
 
-## <a name="launchvsjson-reference"></a>Referência launch.vs.json
+## <a name="launchvsjson-reference"></a>Inicializar. vs. referência JSON
 
-Existem muitas propriedades *launch.vs.json* para suportar todos os seus cenários de depuração. As seguintes propriedades são comuns a todas as configurações de depuração, tanto remotas quanto locais:
+Há muitas propriedades *Launch. vs. JSON* para dar suporte a todos os seus cenários de depuração. As propriedades a seguir são comuns a todas as configurações de depuração, remota e local:
 
-- `projectTarget`: Especifica o alvo CMake para invocar ao construir o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *launch.vs.json* no **Menu Debug** ou **Targets View**. Esse valor deve corresponder ao nome de um destino de depuração existente listado **na** lista de itens de inicialização.
+- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *Launch. vs. JSON* no **menu Depurar** ou no **modo de exibição destinos**. Esse valor deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
 
-- `env`: Variáveis adicionais de ambiente para adicionar usando a sintaxe:
+- `env`: Variáveis de ambiente adicionais a serem adicionadas usando a sintaxe:
 
   ```json
   "env": {
@@ -86,74 +86,74 @@ Existem muitas propriedades *launch.vs.json* para suportar todos os seus cenári
       }
   ```
 
-- `args`: Argumentos de linha de comando passados para o programa para depurar.
+- `args`: Argumentos de linha de comando passados para o programa a ser depurado.
 
-## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>Referência launch.vs.json para projetos remotos e WSL
+## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>Inicialização. vs. JSON referência para projetos e WSL remotos
 
-No Visual Studio 2019 versão 16.6, adicionamos `type: cppgdb` uma nova configuração de depuração para simplificar a depuração em sistemas remotos e WSL. Configurações antigas de `type: cppdbg` depuração ainda são suportadas.
+No Visual Studio 2019 versão 16,6, adicionamos uma nova configuração de depuração `type: cppgdb` do para simplificar a depuração em sistemas remotos e WSL. As configurações de depuração `type: cppdbg` antigas do ainda têm suporte.
 
 ### <a name="configuration-type-cppgdb"></a>Tipo de configuração`cppgdb`
 
-- `name`: Um nome amigável para identificar a configuração no **item** de inicialização.
-- `project`: Especifica o caminho relativo ao arquivo do projeto. Normalmente, você não precisa mudar esse caminho ao depurar um projeto CMake.
-- `projectTarget`: Especifica o alvo CMake para invocar ao construir o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *launch.vs.json* no **Menu Debug** ou **Targets View**. Esse valor de destino deve corresponder ao nome de um destino de depuração existente listado **na** lista de itens de inicialização.
-- `debuggerConfiguration`: Indica qual conjunto de valores padrão de depuração deve ser utilizado. No Visual Studio 2019 versão 16.6, `gdb`a única opção válida é . Versões `gdbserver`anteriores também suportam .
-- `args`: Os argumentos da linha de comando passaram a inicialização para o programa que está sendo depurado.
-- `env`: Variáveis adicionais de ambiente passadas para o programa que está sendo depurado. Por exemplo, `{"DISPLAY": "0.0"}`.
-- `processID`: ID de processo Linux para anexar. Usado apenas quando conectado a um processo remoto. Para obter mais informações, consulte ['Solução de problemas' anexando-se a processos que usam OGDB](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
+- `name`: Um nome amigável para identificar a configuração no menu suspenso do **item de inicialização** .
+- `project`: Especifica o caminho relativo para o arquivo de projeto. Normalmente, você não precisa alterar esse caminho ao depurar um projeto CMake.
+- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *Launch. vs. JSON* no **menu Depurar** ou no **modo de exibição destinos**. Esse valor de destino deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
+- `debuggerConfiguration`: Indica qual conjunto de valores padrão de depuração usar. No Visual Studio 2019 versão 16,6, a única opção válida é `gdb`. Versões anteriores também oferecem `gdbserver`suporte a.
+- `args`: Argumentos de linha de comando passados na inicialização para o programa que está sendo depurado.
+- `env`: Variáveis de ambiente adicionais passadas para o programa que está sendo depurado. Por exemplo, `{"DISPLAY": "0.0"}`.
+- `processID`: ID do processo do Linux para anexar. Usado somente ao anexar a um processo remoto. Para obter mais informações, consulte [solucionar problemas de anexação a processos usando o gdb](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
 
-#### <a name="additional-options-for-the-gdb-configuration"></a>Opções adicionais para a configuração `gdb`
+#### <a name="additional-options-for-the-gdb-configuration"></a>Opções adicionais para a `gdb` configuração
 
-- `program`: Padrão `"${debugInfo.fullTargetPath}"`para . O caminho Unix para a aplicação para depurar. Apenas necessário se diferente do executável de destino no local de compilação ou implantação.
-- `remoteMachineName`: Padrão `"${debugInfo.remoteMachineName}"`para . Nome do sistema remoto que hospeda o programa para depurar. Só é necessário se diferente do sistema de construção. Deve ter uma entrada existente no [Gerenciador de Conexões](../linux/connect-to-your-remote-linux-computer.md). Pressione **Ctrl+Space** para visualizar uma lista de todas as conexões remotas existentes.
-- `cwd`: Padrão `"${debugInfo.defaultWorkingDirectory}"`para . O caminho Unix para o diretório `program` no sistema remoto onde é executado. O diretório precisa existir.
-- `gdbpath`: Padrão `/usr/bin/gdb`para . Caminho Completo unix `gdb` para o usado para depurar. Só é necessário se `gdb`usar uma versão personalizada de .
-- `preDebugCommand`: Um comando Linux para ser `gdb`executado imediatamente antes de invocar . `gdb`não começa até que o comando seja concluído. Você pode usar a opção de executar `gdb`um script antes da execução de .
+- `program`: O padrão é `"${debugInfo.fullTargetPath}"`. O caminho do UNIX para o aplicativo a ser depurado. Necessário somente se for diferente do executável de destino no local de compilação ou implantação.
+- `remoteMachineName`: O padrão é `"${debugInfo.remoteMachineName}"`. Nome do sistema remoto que hospeda o programa a ser depurado. Necessário somente se for diferente do sistema de compilação. Deve ter uma entrada existente no [Gerenciador de conexões](../linux/connect-to-your-remote-linux-computer.md). Pressione **Ctrl + espaço** para exibir uma lista de todas as conexões remotas existentes.
+- `cwd`: O padrão é `"${debugInfo.defaultWorkingDirectory}"`. O caminho do UNIX para o diretório no sistema remoto em `program` que o é executado. O diretório precisa existir.
+- `gdbpath`: O padrão é `/usr/bin/gdb`. Caminho completo do UNIX para `gdb` o usado para depurar. Necessário somente se estiver usando uma versão personalizada `gdb`do.
+- `preDebugCommand`: Um comando do Linux a ser executado imediatamente antes `gdb`de chamar. `gdb`não inicia até que o comando seja concluído. Você pode usar a opção para executar um script antes da execução de `gdb`.
 
 #### <a name="deployment-options"></a>Opções de implantação
 
-Use as seguintes opções para separar sua máquina de compilação (definida em CMakeSettings.json) da sua máquina de depuração remota.
+Use as opções a seguir para separar o computador de compilação (definido em CMakeSettings. JSON) de seu computador de depuração remota.
 
-- `remoteMachineName`: Máquina de depuração remota. Só é necessário se diferente da máquina de construção. Deve ter uma entrada existente no [Gerenciador de Conexões](../linux/connect-to-your-remote-linux-computer.md). Pressione **Ctrl+Space** para visualizar uma lista de todas as conexões remotas existentes.
-- `disableDeploy`: Padrão `false`para . Indica se a separação de compilação/depuração está desativada. Quando `false`, esta opção permite que a compilação e a depuração ocorram em duas máquinas separadas.
-- `deployDirectory`: Caminho completo do Unix `remoteMachineName` para o diretório em que o executável é copiado.
-- `deploy`: Um conjunto de configurações avançadas de implantação. Você só precisa configurar essas configurações quando quiser um controle mais granular sobre o processo de implantação. Por padrão, apenas os arquivos necessários para o processo de depuração são implantados na máquina de depuração remota.
-  - `sourceMachine`: A máquina a partir da qual o arquivo ou diretório é copiado. Pressione **Ctrl+Space** para visualizar uma lista de todas as conexões remotas armazenadas no Gerenciador de conexões. Ao construir nativamente no WSL, essa opção é ignorada.
-  - `targetMachine`: A máquina para a qual o arquivo ou diretório é copiado. Pressione **Ctrl+Space** para visualizar uma lista de todas as conexões remotas armazenadas no Gerenciador de conexões.
-  - `sourcePath`: O arquivo ou `sourceMachine`o local do diretório ligado .
-  - `targetPath`: O arquivo ou `targetMachine`o local do diretório ligado .
-  - `deploymentType`: Uma descrição do tipo de implantação. `LocalRemote`e `RemoteRemote` são apoiados. `LocalRemote`significa copiar do sistema de arquivos local para `remoteMachineName` o sistema remoto especificado por *em launch.vs.json*. `RemoteRemote`significa copiar do sistema de compilação remota especificado em *CMakeSettings.json* para o diferente sistema remoto especificado em *launch.vs.json*.
-  - `executable`: Indica se o arquivo implantado é executável.
+- `remoteMachineName`: Computador de depuração remota. Necessário somente se for diferente do computador de compilação. Deve ter uma entrada existente no [Gerenciador de conexões](../linux/connect-to-your-remote-linux-computer.md). Pressione **Ctrl + espaço** para exibir uma lista de todas as conexões remotas existentes.
+- `disableDeploy`: O padrão é `false`. Indica se a separação de compilação/depuração está desabilitada. Quando `false`, essa opção permite que a compilação e a depuração ocorram em dois computadores separados.
+- `deployDirectory`: Caminho completo do UNIX para o diretório `remoteMachineName` no qual o executável é copiado.
+- `deploy`: Uma matriz de configurações de implantação avançadas. Você só precisa definir essas configurações quando desejar um controle mais granular sobre o processo de implantação. Por padrão, somente os arquivos necessários para o processo de depuração são implantados no computador de depuração remota.
+  - `sourceMachine`: O computador do qual o arquivo ou diretório é copiado. Pressione **Ctrl + espaço** para exibir uma lista de todas as conexões remotas armazenadas no Gerenciador de conexões. Ao compilar nativamente em WSL, essa opção é ignorada.
+  - `targetMachine`: O computador no qual o arquivo ou diretório é copiado. Pressione **Ctrl + espaço** para exibir uma lista de todas as conexões remotas armazenadas no Gerenciador de conexões.
+  - `sourcePath`: O local do arquivo ou diretório `sourceMachine`em.
+  - `targetPath`: O local do arquivo ou diretório `targetMachine`em.
+  - `deploymentType`: Uma descrição do tipo de implantação. `LocalRemote`e `RemoteRemote` têm suporte. `LocalRemote`significa copiar do sistema de arquivos local para o sistema remoto especificado por `remoteMachineName` na *inicialização. vs. JSON*. `RemoteRemote`significa copiar do sistema de Build remoto especificado em *CMakeSettings. JSON* para o sistema remoto diferente especificado em *Launch. vs. JSON*.
+  - `executable`: Indica se o arquivo implantado é um executável.
 
-### <a name="execute-custom-gdb-commands"></a>Execute `gdb` comandos personalizados
+### <a name="execute-custom-gdb-commands"></a>Executar comandos `gdb` personalizados
 
-O Visual Studio suporta `gdb` a execução de comandos personalizados para interagir diretamente com o depurador subjacente. Para obter mais informações, consulte [Executando comandos `gdb` lldb personalizados](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands).
+O Visual Studio dá suporte `gdb` à execução de comandos personalizados para interagir diretamente com o depurador subjacente. Para obter mais informações, consulte [executando `gdb` comandos lldb personalizados](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands).
 
 ### <a name="enable-logging"></a>Habilitar o registro em log
 
-Habilite o registro do MIEngine `gdb`para `gdb` ver para quais comandos são enviados, quais retornos de saída e quanto tempo cada comando leva. [Saiba mais](https://github.com/microsoft/MIEngine/wiki/Logging)
+Habilite o log do MIEngine para ver quais comandos `gdb`são enviados, `gdb` qual saída retorna e quanto tempo cada comando leva. [Saiba mais](https://github.com/microsoft/MIEngine/wiki/Logging)
 
 ### <a name="configuration-type-cppdbg"></a>Tipo de configuração`cppdbg`
 
-As seguintes opções podem ser usadas ao depurar `cppdbg` em um sistema remoto ou WSL usando o tipo de configuração. No Visual Studio 2019 versão 16.6 `cppgdb` ou posterior, o tipo de configuração é recomendado.
+As opções a seguir podem ser usadas durante a depuração em um sistema remoto ou WSL `cppdbg` usando o tipo de configuração. No Visual Studio 2019 versão 16,6 ou posterior, o tipo `cppgdb` de configuração é recomendado.
 
-- `name`: Um nome amigável para identificar a configuração no **item** de inicialização.
+- `name`: Um nome amigável para identificar a configuração no menu suspenso do **item de inicialização** .
 
-- `project`: Especifica o caminho relativo ao arquivo do projeto. Normalmente, você não precisa alterar esse valor ao depurar um projeto CMake.
+- `project`: Especifica o caminho relativo para o arquivo de projeto. Normalmente, você não precisa alterar esse valor ao depurar um projeto CMake.
 
-- `projectTarget`: Especifica o alvo CMake para invocar ao construir o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *launch.vs.json* no **Menu Debug** ou **Targets View**. Esse valor deve corresponder ao nome de um destino de depuração existente listado **na** lista de itens de inicialização.
+- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *Launch. vs. JSON* no **menu Depurar** ou no **modo de exibição destinos**. Esse valor deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
 
-- `args`: Os argumentos da linha de comando passaram a inicialização para o programa que está sendo depurado.
+- `args`: Argumentos de linha de comando passados na inicialização para o programa que está sendo depurado.
 
-- `processID`: ID de processo Linux para anexar. Usado apenas quando conectado a um processo remoto. Para obter mais informações, consulte ['Solução de problemas' anexando-se a processos que usam OGDB](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
+- `processID`: ID do processo do Linux para anexar. Usado somente ao anexar a um processo remoto. Para obter mais informações, consulte [solucionar problemas de anexação a processos usando o gdb](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
 
-- `program`: Padrão `"${debugInfo.fullTargetPath}"`para . O caminho Unix para a aplicação para depurar. Apenas necessário se diferente do executável de destino no local de compilação ou implantação.
+- `program`: O padrão é `"${debugInfo.fullTargetPath}"`. O caminho do UNIX para o aplicativo a ser depurado. Necessário somente se for diferente do executável de destino no local de compilação ou implantação.
 
-- `remoteMachineName`: Padrão `"${debugInfo.remoteMachineName}"`para . Nome do sistema remoto que hospeda o programa para depurar. Só é necessário se diferente do sistema de construção. Deve ter uma entrada existente no [Gerenciador de Conexões](../linux/connect-to-your-remote-linux-computer.md). Pressione **Ctrl+Space** para visualizar uma lista de todas as conexões remotas existentes.
+- `remoteMachineName`: O padrão é `"${debugInfo.remoteMachineName}"`. Nome do sistema remoto que hospeda o programa a ser depurado. Necessário somente se for diferente do sistema de compilação. Deve ter uma entrada existente no [Gerenciador de conexões](../linux/connect-to-your-remote-linux-computer.md). Pressione **Ctrl + espaço** para exibir uma lista de todas as conexões remotas existentes.
 
-- `cwd`: Padrão `"${debugInfo.defaultWorkingDirectory}"`para . Caminho Completo unix para o diretório `program` no sistema remoto onde é executado. O diretório precisa existir.
+- `cwd`: O padrão é `"${debugInfo.defaultWorkingDirectory}"`. Caminho completo do UNIX para o diretório no sistema remoto em `program` que o é executado. O diretório precisa existir.
 
-- `environment`: Variáveis adicionais de ambiente passadas para o programa que está sendo depurado. Por exemplo,
+- `environment`: Variáveis de ambiente adicionais passadas para o programa que está sendo depurado. Por exemplo,
 
   ```json
     "environment": [
@@ -168,9 +168,9 @@ As seguintes opções podem ser usadas ao depurar `cppdbg` em um sistema remoto 
       ]
   ```
 
-- `pipeArgs`: Uma matriz de argumentos de linha de comando passou para o programa de tubos para configurar a conexão. O programa pipe é usado para retransmitir `gdb`entrada/saída padrão entre o Visual Studio e . A maioria desta matriz **não precisa ser personalizada ao** depurar projetos CMake. A exceção `${debuggerCommand}`é a `gdb` , que é lançada no sistema remoto. Pode ser modificado para:
+- `pipeArgs`: Uma matriz de argumentos de linha de comando passada para o programa de pipe para configurar a conexão. O programa de pipe é usado para retransmitir entrada/saída padrão entre o `gdb`Visual Studio e o. A maior parte dessa matriz **não precisa ser personalizada durante a** depuração de projetos CMake. A exceção é o `${debuggerCommand}`, que é `gdb` iniciado no sistema remoto. Ele pode ser modificado para:
 
-  - Exporte o valor da variável ambiente DISPLAY em seu sistema Linux. No exemplo a seguir, `:1`este valor é .
+  - Exporte o valor da exibição da variável de ambiente no seu sistema Linux. No exemplo a seguir, esse valor é `:1`.
 
     ```json
     "pipeArgs": [
@@ -184,7 +184,7 @@ As seguintes opções podem ser usadas ao depurar `cppdbg` em um sistema remoto 
       ],
     ```
 
-  - Execute um script antes `gdb`da execução de . Certifique-se de que as permissões de execução estão definidas no seu script.
+  - Execute um script antes da execução de `gdb`. Verifique se as permissões de execução estão definidas no seu script.
 
     ```json
     "pipeArgs": [
@@ -198,21 +198,21 @@ As seguintes opções podem ser usadas ao depurar `cppdbg` em um sistema remoto 
       ],
     ```
 
-- `stopOnEntry`: Um booleano que especifica se deve quebrar assim que o processo é iniciado. O padrão é false.
+- `stopOnEntry`: Um booliano que especifica se deve ser interrompido assim que o processo é iniciado. O padrão é false.
 
-- `visualizerFile`: Um [arquivo .natvis](/visualstudio/debugger/create-custom-views-of-native-objects) para usar ao depurar este processo. Esta opção é `gdb` incompatível com impressão bonita. Também `showDisplayString` defina quando você definir esta propriedade.
+- `visualizerFile`: Um [arquivo. natvis](/visualstudio/debugger/create-custom-views-of-native-objects) a ser usado ao depurar esse processo. Essa opção é incompatível com `gdb` a impressão de formatação. Defina `showDisplayString` também quando você definir essa propriedade.
 
-- `showDisplayString`: Um booleano que habilita `visualizerFile` a seqüência de visualização quando a é especificada. Definir essa `true` opção pode causar um desempenho mais lento durante a depuração.
+- `showDisplayString`: Um booliano que habilita a cadeia de caracteres `visualizerFile` de exibição quando um é especificado. Definir essa opção como `true` pode causar um desempenho mais lento durante a depuração.
 
-- `setupCommands`: Um `gdb` ou mais comandos para executar, para configurar o depurador subjacente.
+- `setupCommands`: Um ou mais `gdb` comandos a serem executados para configurar o depurador subjacente.
 
-- `miDebuggerPath`: O caminho `gdb`completo para . Quando não especificado, o Visual Studio pesquisa path primeiro para o depurador.
+- `miDebuggerPath`: O caminho completo para `gdb`. Quando não especificado, o Visual Studio pesquisa o caminho primeiro para o depurador.
 
-- Finalmente, todas as opções `cppgdb` de implantação definidas `cppdbg` para o tipo de configuração também podem ser usadas pelo tipo de configuração.
+- Por fim, todas as opções de implantação definidas para `cppgdb` o tipo de configuração também podem ser `cppdbg` usadas pelo tipo de configuração.
 
-### <a name="debug-using-gdbserver"></a>Depuração usando`gdbserver`
+### <a name="debug-using-gdbserver"></a>Depurar usando`gdbserver`
 
-Você pode configurar `cppdbg` a configuração `gdbserver`para depurar usando . Você pode encontrar mais detalhes e uma configuração de lançamento de exemplo no microsoft C++ Team Blog [post Depurando Projetos Linux `gdbserver`CMake com ](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/).
+Você pode configurar a `cppdbg` configuração para depurar usando `gdbserver`o. Você pode encontrar mais detalhes e uma configuração de inicialização de exemplo no blog da equipe do Microsoft C++ post [Debugging Linux `gdbserver`CMake Projects with ](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/).
 
 ::: moniker-end
 
@@ -220,12 +220,12 @@ Você pode configurar `cppdbg` a configuração `gdbserver`para depurar usando .
 
 ## <a name="see-also"></a>Confira também
 
-[Projetos CMake no Visual Studio](cmake-projects-in-visual-studio.md)\
-[Configure um projeto Linux CMake](../linux/cmake-linux-project.md)\
-[Conecte-se ao seu computador Linux remoto](../linux/connect-to-your-remote-linux-computer.md)\
-[Personalizar configurações de compilação cMake](customize-cmake-settings.md)\
+[Projetos do CMake no Visual Studio](cmake-projects-in-visual-studio.md)\
+[Configurar um projeto CMake do Linux](../linux/cmake-linux-project.md)\
+[Conectar-se ao computador Linux remoto](../linux/connect-to-your-remote-linux-computer.md)\
+[Personalizar configurações de Build do CMake](customize-cmake-settings.md)\
 [Configurar sessões de depuração CMake](configure-cmake-debugging-sessions.md)\
-[Implantar, executar e depurar seu projeto Linux](../linux/deploy-run-and-debug-your-linux-project.md)\
+[Implante, execute e depure seu projeto do Linux](../linux/deploy-run-and-debug-your-linux-project.md)\
 [Referência de configuração predefinida do CMake](cmake-predefined-configuration-reference.md)
 
 ::: moniker-end

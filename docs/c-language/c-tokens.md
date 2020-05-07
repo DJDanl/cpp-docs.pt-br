@@ -20,18 +20,18 @@ No programa de origem C, o elemento básico reconhecido pelo compilador é o "to
 
 *token*: *keyword*
 
-*Identificador*
+*identificador*
 
 *constante*
 
-*string-literal*
+*literal de cadeia de caracteres*
 
-*Operador*
+*operador*
 
 *punctuator*
 
 > [!NOTE]
-> Consulte a introdução do [Resumo da Sintaxe de Linguagem C](../c-language/c-language-syntax-summary.md) para uma explicação das convenções de sintaxe ansi.
+> Consulte o resumo da [sintaxe de linguagem C](../c-language/c-language-syntax-summary.md) Introduction to para obter uma explicação das convenções de sintaxe ANSI.
 
 As palavras-chave, os identificadores, as constantes, os literais de cadeia de caracteres e os operadores descritos nesta seção são exemplos de tokens. Caracteres de pontuação como colchetes (**[ ]**), chaves (**{ }**), parênteses ( **( )** ) e vírgulas (**,**) também são tokens.
 

@@ -1,5 +1,5 @@
 ---
-title: 'DLLs não MFC: Visão geral'
+title: 'DLLs que não sejam MFC: visão geral'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
@@ -12,7 +12,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493169"
 ---
-# <a name="non-mfc-dlls-overview"></a>DLLs não MFC: Visão geral
+# <a name="non-mfc-dlls-overview"></a>DLLs que não sejam MFC: visão geral
 
 Uma DLL não MFC é uma DLL que não usa MFC internamente e as funções exportadas na DLL podem ser chamadas por arquivos executáveis MFC ou não MFC. Normalmente, as funções são exportadas de uma DLL não MFC usando a interface C padrão.
 
@@ -20,7 +20,7 @@ Para obter mais informações sobre DLLs não-MFC, consulte [bibliotecas de vín
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [Walkthrough: Criando e usando uma biblioteca de vínculo dinâmico](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
 - [Exportar de uma DLL](exporting-from-a-dll.md)
 
@@ -30,12 +30,12 @@ Para obter mais informações sobre DLLs não-MFC, consulte [bibliotecas de vín
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
-- [DLLs regulares do MFC vinculadas estaticamente ao MFC](regular-dlls-statically-linked-to-mfc.md)
+- [DLLs MFC regulares vinculadas estaticamente ao MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [DLLs regulares do MFC vinculadas dinamicamente ao MFC](regular-dlls-dynamically-linked-to-mfc.md)
+- [DLLs MFC regulares vinculadas dinamicamente ao MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [DLLs de extensão de MFC: visão geral](extension-dlls-overview.md)
+- [DLLs de extensão do MFC: visão geral](extension-dlls-overview.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tipos de DLLs](kinds-of-dlls.md)

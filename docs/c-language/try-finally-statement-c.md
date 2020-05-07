@@ -48,7 +48,7 @@ O manipulador de término não é chamado se um processo é interrompido durante
 
 Veja o exemplo da [instrução try-except](../c-language/try-except-statement-c.md) para saber como a instrução `try-finally` funciona.
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

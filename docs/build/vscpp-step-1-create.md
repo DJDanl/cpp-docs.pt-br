@@ -1,6 +1,6 @@
 ---
 title: Criar um projeto de aplicativo de console C++
-description: Crie um aplicativo de console Hello World usando o Microsoft C++ no Visual Studio.
+description: Crie um aplicativo de console Olá, Mundo usando o Microsoft C++ no Visual Studio.
 ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
@@ -14,7 +14,7 @@ ms.locfileid: "81749313"
 ---
 # <a name="create-a-c-console-app-project"></a>Criar um projeto de aplicativo de console C++
 
-O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mundo!" executado na linha de comando. Isso é o que você vai criar no Visual Studio nesta etapa.
+O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mundo!" executado na linha de comando. Isso é o que você criará no Visual Studio nesta etapa.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -22,23 +22,23 @@ O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mund
 
 ## <a name="create-your-app-project"></a>Criar seu projeto de aplicativo
 
-O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as *soluções* para organizar seus projetos. Um projeto contém todas as opções, configurações e regras usadas para criar seus aplicativos. Ele gerencia a relação entre todos os arquivos do projeto e quaisquer arquivos externos. Para criar seu aplicativo, primeiro, crie um novo projeto e uma nova solução.
+O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as *soluções* para organizar seus projetos. Um projeto contém todas as opções, configurações e regras usadas para criar seus aplicativos. Ele gerencia a relação entre todos os arquivos do projeto e todos os arquivos externos. Para criar seu aplicativo, primeiro, crie um novo projeto e uma nova solução.
 
 ::: moniker range=">=vs-2019"
 
-1. No Visual Studio, abra o menu **Arquivo** e escolha **Projeto Novo >** para abrir a caixa de diálogo Criar um novo **projeto.** Selecione o modelo **de aplicativo** de console que tenha **tags C++**, **Windows**e **Console** e escolha **Next**.
+1. No Visual Studio, abra o menu **arquivo** e escolha **novo projeto >** para abrir a caixa de diálogo **criar um novo projeto** . Selecione o modelo de **aplicativo de console** que tem as marcas **C++**, **Windows**e **console** e, em seguida, escolha **Avançar**.
 
-   ![Criar um novo projeto](media/vs2019-choose-console-app.png "Abra o Criar um novo diálogo de projeto")
+   ![Criar um novo projeto](media/vs2019-choose-console-app.png "Abrir a caixa de diálogo criar um novo projeto")
 
-1. Na **configuração do novo diálogo de projeto, digite** *HelloWorld* na caixa de edição **nome do Projeto.** Escolha **Criar** para criar o projeto.
+1. No diálogo **configurar seu novo projeto** , digite *HelloWorld* na caixa de edição **nome do projeto** . Escolha **criar** para criar o projeto.
 
    ![Nomeie e crie o novo projeto](media/vs2019-configure-new-project-hello-world.png "Nomeie e crie o novo projeto")
 
-   Visual Studio cria um novo projeto. Está pronto para você adicionar e editar seu código fonte. Por padrão, o modelo do Aplicativo de Console preenche seu código-fonte com um aplicativo "Hello World":
+   O Visual Studio cria um novo projeto. Ele está pronto para você adicionar e editar seu código-fonte. Por padrão, o modelo de aplicativo de console preenche o código-fonte com um aplicativo "Olá, Mundo":
 
-   ![Projeto Hello World no IDE](media/vs2019-hello-world-code.png "Projeto Hello World no IDE")
+   ![Olá, Mundo projeto no IDE](media/vs2019-hello-world-code.png "Olá, Mundo projeto no IDE")
 
-   Quando o código se parece com isso no editor, você está pronto para ir para o próximo passo e construir o seu aplicativo.
+   Quando o código tiver esta aparência no editor, você estará pronto para ir para a próxima etapa e criar seu aplicativo.
 
 [Houve um problema.](#create-your-app-project-issues)
 
@@ -46,47 +46,47 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 
 ::: moniker range="<=vs-2017"
 
-1. No Visual Studio, abra o menu **Arquivo** e escolha **Projeto Novo >** para abrir a caixa de diálogo Novo **Projeto.**
+1. No Visual Studio, abra o menu **arquivo** e escolha **novo projeto >** para abrir a caixa de diálogo **novo projeto** .
 
    ![Abrir a caixa de diálogo Novo Projeto](media/vscpp-file-new-project.gif "Abrir a caixa de diálogo Novo Projeto")
 
-1. Na caixa de diálogo **Novo projeto,** selecione **> Visual C++** se ele ainda não estiver selecionado e escolha o modelo **Projeto Vazio.** No campo **Nome,** *insira HelloWorld*. Escolha **OK** para criar o projeto.
+1. Na caixa de diálogo **novo projeto** , selecione **instalado > Visual C++** se ele ainda não estiver selecionado e, em seguida, escolha o modelo de **projeto vazio** . No campo **nome** , digite *HelloWorld*. Escolha **OK** para criar o projeto.
 
    ![Nomeie e crie o novo projeto](media/vscpp-concierge-project-name-callouts.png "Nomeie e crie o novo projeto")
 
-Visual Studio cria um novo projeto vazio. Ele está pronto para você se especializar para o tipo de aplicativo que você deseja criar e para adicionar seus arquivos de código fonte. Você fará isso em seguida.
+O Visual Studio cria um projeto novo e vazio. Ele está pronto para você se especializar para o tipo de aplicativo que deseja criar e adicionar seus arquivos de código-fonte. Você fará isso em seguida.
 
 [Houve um problema.](#create-your-app-project-issues)
 
-## <a name="make-your-project-a-console-app"></a>Faça do seu projeto um aplicativo de console
+## <a name="make-your-project-a-console-app"></a>Tornar seu projeto um aplicativo de console
 
-Visual Studio pode criar todos os tipos de aplicativos e componentes para Windows e outras plataformas. O modelo **do Projeto Vazio** não é específico sobre que tipo de aplicativo ele cria. Um *aplicativo de console* é aquele que é executado em uma janela de solicitação de console ou comando. Para criar um, você deve dizer ao Visual Studio para construir seu aplicativo para usar o subsistema do console.
+O Visual Studio pode criar todos os tipos de aplicativos e componentes para Windows e outras plataformas. O modelo de **projeto vazio** não é específico sobre o tipo de aplicativo que ele cria. Um *aplicativo de console* é aquele executado em uma janela de console ou de prompt de comando. Para criar um, você deve informar ao Visual Studio para criar seu aplicativo para usar o subsistema de console.
 
-1. No Visual Studio, abra o menu **Projeto** e escolha **Propriedades** para abrir a caixa de diálogo **Páginas de Propriedade helloworld.**
+1. No Visual Studio, abra o menu **projeto** e escolha **Propriedades** para abrir a caixa de diálogo **páginas de propriedades do HelloWorld** .
 
-1. Na caixa de diálogo **Propriedades Páginas,** selecione **Propriedades de configuração > Sistema de >** e escolha a caixa de edição ao lado da propriedade **Subsystem.** No menu suspenso que aparece, selecione **Console (/SUBSYSTEM:CONSOLE)**. Escolha **OK** para salvar suas alterações.
+1. Na caixa de diálogo **páginas de propriedades** , selecione **propriedades de configuração > o vinculador > sistema**e, em seguida, escolha o quadro de edição ao lado da propriedade **subsistema** . No menu suspenso que aparece, selecione **console (/SUBSYSTEM: console)**. Escolha **OK** para salvar suas alterações.
 
-   ![Abra a caixa de diálogo Páginas de propriedade](media/vscpp-properties-linker-subsystem.gif "Abra a caixa de diálogo Páginas de propriedade")
+   ![Abrir a caixa de diálogo páginas de propriedades](media/vscpp-properties-linker-subsystem.gif "Abrir a caixa de diálogo páginas de propriedades")
 
-Visual Studio agora sabe construir seu projeto para ser executado em uma janela de console. Em seguida, você adicionará um arquivo de código fonte e digitará o código para o seu aplicativo.
+O Visual Studio agora sabe criar seu projeto para ser executado em uma janela de console. Em seguida, você adicionará um arquivo de código-fonte e inserirá o código para seu aplicativo.
 
 [Houve um problema.](#make-your-project-a-console-app-issues)
 
-## <a name="add-a-source-code-file"></a>Adicionar um arquivo de código fonte
+## <a name="add-a-source-code-file"></a>Adicionar um arquivo de código-fonte
 
-1. No **Solution Explorer,** selecione o projeto HelloWorld. Na barra de menus, escolha **Projeto**, **Adicionar novo item** para abrir a **caixa de diálogo Adicionar novo item.**
+1. Em **Gerenciador de soluções**, selecione o projeto HelloWorld. Na barra de menus, escolha **projeto**, **Adicionar novo item** para abrir a caixa de diálogo **Adicionar novo item** .
 
-1. Na **caixa de diálogo Adicionar novo item,** selecione **Visual C++** em **Instalado** se ele ainda não estiver selecionado. No painel central, selecione **arquivo C++ (.cpp)**. Alterar o **nome** para *HelloWorld.cpp*. Escolha **Adicionar** para fechar a caixa de diálogo e criar o arquivo.
+1. Na caixa de diálogo **Adicionar novo item** , selecione **Visual C++** em **instalado** , se ainda não estiver selecionado. No painel central, selecione **arquivo C++ (. cpp)**. Altere o **nome** para *HelloWorld. cpp*. Escolha **Adicionar** para fechar a caixa de diálogo e criar o arquivo.
 
-   ![Adicione um arquivo de origem para HelloWorld.cpp](media/vscpp-add-new-item.gif "Adicione um arquivo de origem para HelloWorld.cpp")
+   ![Adicionar um arquivo de origem para HelloWorld. cpp](media/vscpp-add-new-item.gif "Adicionar um arquivo de origem para HelloWorld. cpp")
 
-O visual studio cria um novo arquivo de código fonte vazio e o abre em uma janela de editor, pronto para inserir seu código-fonte.
+O Visual Studio cria um novo arquivo de código-fonte vazio e o abre em uma janela do editor, pronto para inserir seu código-fonte.
 
 [Houve um problema.](#add-a-source-code-file-issues)
 
 ## <a name="add-code-to-the-source-file"></a>Adicionar código ao arquivo de origem
 
-1. Copie este código na janela do editor HelloWorld.cpp.
+1. Copie esse código para a janela do editor HelloWorld. cpp.
 
    ```cpp
    #include <iostream>
@@ -98,11 +98,11 @@ O visual studio cria um novo arquivo de código fonte vazio e o abre em uma jane
    }
    ```
 
-   O código deve ficar assim na janela do editor:
+   O código deve ter a seguinte aparência na janela do editor:
 
-   ![Olá Código mundial no editor](media/vscpp-hello-world-editor.png "Olá Código mundial no editor")
+   ![Código de Olá, Mundo no editor](media/vscpp-hello-world-editor.png "Código de Olá, Mundo no editor")
 
-Quando o código se parece com isso no editor, você está pronto para ir para o próximo passo e construir o seu aplicativo.
+Quando o código tiver esta aparência no editor, você estará pronto para ir para a próxima etapa e criar seu aplicativo.
 
 [Houve um problema.](#add-a-source-code-file-issues)
 
@@ -111,21 +111,21 @@ Quando o código se parece com isso no editor, você está pronto para ir para o
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Construir e executar um projeto C++](vscpp-step-2-build.md)
+> [Compilar e executar um projeto C++](vscpp-step-2-build.md)
 
 ## <a name="troubleshooting-guide"></a>Guia de Solução de Problemas
 
-Venha aqui para obter soluções para problemas comuns quando você criar seu primeiro projeto C++.
+Venha aqui para soluções para problemas comuns quando você cria seu primeiro projeto C++.
 
-### <a name="create-your-app-project-issues"></a>Crie seu projeto de aplicativo: problemas
+### <a name="create-your-app-project-issues"></a>Criar seu projeto de aplicativo: problemas
 
 ::: moniker range="vs-2019"
 
-A caixa de diálogo **Novo Projeto** deve mostrar um modelo de aplicativo **de console** que tenha tags **C++**, **Windows**e **Console.** Se você não vê-lo, há duas causas possíveis. Pode ser filtrado para fora da lista, ou pode não ser instalado. Primeiro, verifique as vertentes do filtro no topo da lista de modelos. Defina-os como **C++**, **Windows**e **Console**. O modelo c++ **console App** deve aparecer; caso contrário, o desenvolvimento de desktop com carga de trabalho **C++** não está instalado.
+A caixa de diálogo **novo projeto** deve mostrar um modelo de **aplicativo de console** que tem marcas **C++**, **Windows**e **console** . Se você não vê-lo, há duas causas possíveis. Ele pode ser filtrado fora da lista ou pode não estar instalado. Primeiro, verifique as listas suspensas de filtros na parte superior da lista de modelos. Defina-os como **C++**, **Windows**e **console**. O modelo de **aplicativo de console** do C++ deve aparecer; caso contrário, o **desenvolvimento de desktop com carga de trabalho C++** não é instalado.
 
-Para instalar **o desenvolvimento de desktop com C++,** você pode executar o instalador direto da caixa de diálogo Novo **Projeto.** Escolha o **link Instalar mais ferramentas e recursos** na parte inferior da lista de modelos para iniciar o instalador. Se a caixa de diálogo **Controle de conta** de usuário solicitar permissões, escolha **Sim**. No instalador, certifique-se de que o desenvolvimento da área de trabalho com carga de trabalho **C++** seja verificado. Em seguida, escolha **Modificar** para atualizar sua instalação do Visual Studio.
+Para instalar o **desenvolvimento de desktop com C++**, você pode executar o instalador diretamente na caixa de diálogo **novo projeto** . Escolha o link **instalar mais ferramentas e recursos** na parte inferior da lista de modelos para iniciar o instalador. Se a caixa de diálogo **controle de conta de usuário** solicitar permissões, escolha **Sim**. No instalador, verifique se a opção **desenvolvimento de desktop com carga de trabalho C++** está marcada. Em seguida, escolha **Modificar** para atualizar a instalação do Visual Studio.
 
-Se outro projeto com o mesmo nome já existir, escolha outro nome para o seu projeto. Ou, exclua o projeto existente e tente novamente. Para excluir um projeto existente, exclua a pasta de solução (a pasta que contém o arquivo *helloworld.sln)* no File Explorer.
+Se outro projeto com o mesmo nome já existir, escolha outro nome para o seu projeto. Ou exclua o projeto existente e tente novamente. Para excluir um projeto existente, exclua a pasta da solução (a pasta que contém o arquivo *HelloWorld. sln* ) no explorador de arquivos.
 
 [Volte.](#create-your-app-project)
 
@@ -133,37 +133,37 @@ Se outro projeto com o mesmo nome já existir, escolha outro nome para o seu pro
 
 ::: moniker range="vs-2017"
 
-Se a caixa de diálogo **Novo Projeto** não mostrar uma entrada **Visual C++** em **Instalação,** sua cópia do Visual Studio provavelmente não terá o desenvolvimento de Desktop com carga de trabalho **C++** instalada. Você pode executar o instalador direto da caixa de diálogo **Projeto** Novo. Escolha o link **Do Instalador do Estúdio Visual Aberto** para iniciar o instalador novamente. Se a caixa de diálogo **Controle de conta** de usuário solicitar permissões, escolha **Sim**. Atualize o instalador se necessário. No instalador, certifique-se de que o desenvolvimento da área de trabalho com carga de trabalho **C++** seja verificado e escolha **OK** para atualizar sua instalação do Visual Studio.
+Se a caixa de diálogo **novo projeto** não mostrar uma entrada de **Visual C++** em **instalado**, sua cópia do Visual Studio provavelmente não terá o **desenvolvimento de desktop com** a carga de trabalho do C++ instalada. Você pode executar o instalador diretamente na caixa de diálogo **novo projeto** . Escolha o link **abrir instalador do Visual Studio** para iniciar o instalador novamente. Se a caixa de diálogo **controle de conta de usuário** solicitar permissões, escolha **Sim**. Atualize o instalador, se necessário. No instalador, verifique se a opção **desenvolvimento de desktop com carga de trabalho C++** está marcada e escolha **OK** para atualizar a instalação do Visual Studio.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Se outro projeto com o mesmo nome já existir, escolha outro nome para o seu projeto. Ou, exclua o projeto existente e tente novamente. Para excluir um projeto existente, exclua a pasta de solução (a pasta que contém o arquivo *helloworld.sln)* no File Explorer.
+Se outro projeto com o mesmo nome já existir, escolha outro nome para o seu projeto. Ou exclua o projeto existente e tente novamente. Para excluir um projeto existente, exclua a pasta da solução (a pasta que contém o arquivo *HelloWorld. sln* ) no explorador de arquivos.
 
 [Volte.](#create-your-app-project)
 
-### <a name="make-your-project-a-console-app-issues"></a>Faça do seu projeto um aplicativo de console: problemas
+### <a name="make-your-project-a-console-app-issues"></a>Tornar seu projeto um aplicativo de console: problemas
 
-Se você não ver **O Linker** listado em **Propriedades de configuração,** escolha **Cancelar** para fechar a caixa de diálogo **Páginas de** propriedade. Certifique-se de que o projeto **HelloWorld** esteja selecionado no **Solution Explorer** antes de tentar novamente. Não selecione a solução **HelloWorld,** ou outro item, no **Solution Explorer**.
+Se você não vir o **vinculador** listado em **Propriedades de configuração**, escolha **Cancelar** para fechar a caixa de diálogo páginas de **Propriedades** . Certifique-se de que o projeto **HelloWorld** esteja selecionado no **Gerenciador de soluções** antes de tentar novamente. Não selecione a solução **HelloWorld** ou outro item, em **Gerenciador de soluções**.
 
-O controle de isto não aparece na caixa de edição de propriedade **do SubSystem** até que você selecione a propriedade. Clique na caixa de edição para selecioná-la. Ou, você pode pressionar **Tab** para ciclo através dos controles de diálogo até **que o SubSystem** seja destacado. Escolha o controle de isto ou **pressione Alt+Down** para abri-lo.
+O controle suspenso não aparecerá na caixa de edição da propriedade **subsistema** até que você selecione a propriedade. Clique na caixa de edição para selecioná-la. Ou, você pode pressionar **Tab** para percorrer os controles da caixa de diálogo até que o **subsistema** seja realçado. Escolha o controle suspenso ou pressione **Alt + seta** para abri-lo.
 
 [Voltar](#make-your-project-a-console-app)
 
-### <a name="add-a-source-code-file-issues"></a>Adicionar um arquivo de código fonte: problemas
+### <a name="add-a-source-code-file-issues"></a>Adicionar um arquivo de código-fonte: problemas
 
-Tudo bem se você der ao arquivo de código fonte um nome diferente. No entanto, não adicione mais de um arquivo que contenha o mesmo código ao seu projeto.
+Não há problema se você fornecer um nome diferente ao arquivo de código-fonte. No entanto, não adicione mais de um arquivo que contenha o mesmo código ao seu projeto.
 
-Se você adicionou o tipo de arquivo errado ao seu projeto, como um arquivo de cabeçalho, exclua-o e tente novamente. Para excluir o arquivo, selecione-o no **Solution Explorer**. Em seguida, pressione a **tecla Excluir.**
+Se você adicionou o tipo de arquivo errado ao seu projeto, como um arquivo de cabeçalho, exclua-o e tente novamente. Para excluir o arquivo, selecione-o em **Gerenciador de soluções**. Em seguida, pressione a tecla **delete** .
 
 [Volte.](#add-a-source-code-file)
 
-### <a name="add-code-to-the-source-file-issues"></a>Adicionar código ao arquivo fonte: problemas
+### <a name="add-code-to-the-source-file-issues"></a>Adicionar código ao arquivo de origem: problemas
 
-Se você acidentalmente fechou a janela do editor de arquivos de código fonte, você pode facilmente abri-la novamente. Para abri-lo, clique duas vezes em HelloWorld.cpp na janela **Solution Explorer.**
+Se você fechou acidentalmente a janela do editor de arquivo de código-fonte, você pode abri-la facilmente novamente. Para abri-lo, clique duas vezes em HelloWorld. cpp na janela **Gerenciador de soluções** .
 
-Se os rabiscos vermelhos aparecerem em qualquer coisa no editor de código fonte, verifique se seu código corresponde ao exemplo em ortografia, pontuação e caso. O caso é significativo no código C++.
+Se os rabiscos vermelhos aparecerem em qualquer coisa no editor de código-fonte, verifique se o seu código corresponde ao exemplo em ortografia, pontuação e caso. O caso é significativo no código C++.
 
 [Volte.](#add-code-to-the-source-file)
 

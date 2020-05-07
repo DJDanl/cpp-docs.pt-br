@@ -1,6 +1,6 @@
 ---
 title: Desenvolver e executar um projeto de aplicativo de console C++
-description: Construa e execute um aplicativo de console Hello World no Visual C++
+description: Compilar e executar um aplicativo de console de Olá, Mundo no Visual C++
 ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
@@ -15,23 +15,23 @@ ms.locfileid: "81749246"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Desenvolver e executar um projeto de aplicativo de console C++
 
-Você criou um projeto de aplicativo de console C++ e inseriu seu código. Agora você pode construí-lo e executá-lo dentro do Visual Studio. Em seguida, execute-o como um aplicativo autônomo a partir da linha de comando.
+Você criou um projeto de aplicativo de console do C++ e inseriu seu código. Agora você pode criar e executá-lo no Visual Studio. Em seguida, execute-o como um aplicativo autônomo na linha de comando.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Ter o Visual Studio com o desenvolvimento de Desktop com carga de trabalho do C++ instalada e em execução no seu computador. Se ainda não estiver instalado, siga as etapas do [suporte ao Install C++ no Visual Studio](vscpp-step-0-installation.md).
+- Ter o Visual Studio com o desenvolvimento de Desktop com carga de trabalho do C++ instalada e em execução no seu computador. Se ele ainda não estiver instalado, siga as etapas em [Instalar suporte a C++ no Visual Studio](vscpp-step-0-installation.md).
 
-- Crie um "Olá, Mundo!" projetar e inserir seu código fonte. Se você ainda não fez essa etapa, siga os passos em Criar um projeto de [aplicativo de console C++.](vscpp-step-1-create.md)
+- Criar um "Olá, mundo!" projeto e insira seu código-fonte. Se você ainda não fez essa etapa, siga as etapas em [criar um projeto de aplicativo de console do C++](vscpp-step-1-create.md).
 
-Se o Visual Studio se parece com isso, você está pronto para construir e executar o seu aplicativo:
+Se o Visual Studio tiver esta aparência, você estará pronto para compilar e executar seu aplicativo:
 
-   ![Pronto para construir o novo projeto](media/vscpp-ready-to-build.png "Pronto para construir o novo projeto")
+   ![Pronto para criar o novo projeto](media/vscpp-ready-to-build.png "Pronto para criar o novo projeto")
 
-## <a name="build-and-run-your-code-in-visual-studio"></a>Construa e execute seu código no Visual Studio
+## <a name="build-and-run-your-code-in-visual-studio"></a>Compilar e executar seu código no Visual Studio
 
 1. Para compilar o projeto, escolha **Compilar Solução** no menu **Compilar**. A janela de **Saída** mostra os resultados do processo de build.
 
-   ![Construa o projeto](media/vscpp-build-solution.gif "Compilar o projeto")
+   ![Compilar o projeto](media/vscpp-build-solution.gif "Compilar o projeto")
 
 1. Para executar o código, na barra de menus, escolha **Depurar**, **Iniciar sem depuração**.
 
@@ -43,45 +43,45 @@ Parabéns! Você criou seu primeiro aplicativo de console "Olá, mundo!" no Visu
 
 [Houve um problema.](#build-and-run-your-code-in-visual-studio-issues)
 
-## <a name="run-your-code-in-a-command-window"></a>Execute seu código em uma janela de comando
+## <a name="run-your-code-in-a-command-window"></a>Executar seu código em uma janela de comando
 
-Normalmente, você executa aplicativos de console no prompt de comando, não no Visual Studio. Uma vez que seu aplicativo é construído pelo Visual Studio, você pode executá-lo a partir de qualquer janela de comando. Veja como encontrar e executar seu novo aplicativo em uma janela de solicitação de comando.
+Normalmente, você executa aplicativos de console no prompt de comando, não no Visual Studio. Depois que seu aplicativo for criado pelo Visual Studio, você poderá executá-lo em qualquer janela de comando. Veja como localizar e executar seu novo aplicativo em uma janela de prompt de comando.
 
-1. No **Solution Explorer,** selecione a solução HelloWorld (não o projeto HelloWorld) e clique com o botão direito do mouse para abrir o menu de contexto. Escolha **Abrir pasta no Explorador de arquivos** para abrir uma janela do File **Explorer** na pasta de solução HelloWorld.
+1. Em **Gerenciador de soluções**, selecione a solução HelloWorld (não o projeto HelloWorld) e clique com o botão direito do mouse para abrir o menu de contexto. Escolha **abrir pasta no explorador de arquivos** para abrir uma janela do **Explorador de arquivos** na pasta da solução HelloWorld.
 
-1. Na janela **Explorador de arquivos,** abra a pasta Debug. Esta pasta contém seu aplicativo, *HelloWorld.exe,* e alguns outros arquivos de depuração. Mantenha a tecla **Shift** e clique com o botão direito do mouse no *HelloWorld.exe* para abrir o menu de contexto. Escolha **Copiar como caminho** para copiar o caminho para o seu aplicativo para a área de transferência.
+1. Na janela **Explorador de arquivos** , abra a pasta depurar. Essa pasta contém seu aplicativo, *HelloWorld. exe*e alguns outros arquivos de depuração. Mantenha pressionada a tecla **Shift** e clique com o botão direito do mouse em *HelloWorld. exe* para abrir o menu de contexto. Escolha **Copiar como caminho** para copiar o caminho para o aplicativo na área de transferência.
 
-1. Para abrir uma janela de solicitação de comando, pressione **o Windows+R** para abrir a caixa de diálogo **Executar.** Digite *cmd.exe* na **caixa de** texto Aberta e escolha **OK** para executar uma janela de solicitação de comando.
+1. Para abrir uma janela de prompt de comando, pressione **Windows + R** para abrir a caixa de diálogo **executar** . Insira *cmd. exe* na caixa de texto **abrir** e escolha **OK** para executar uma janela de prompt de comando.
 
-1. Na janela de solicitação de comando, clique com o botão direito do mouse para colar o caminho para o aplicativo no prompt de comando. Pressione Enter para executar seu aplicativo.
+1. Na janela do prompt de comando, clique com o botão direito do mouse para colar o caminho para seu aplicativo no prompt de comando. Pressione Enter para executar seu aplicativo.
 
-   ![Execute o aplicativo no prompt de comando](media/vscpp-run-in-cmd.gif "Execute o aplicativo no prompt de comando")
+   ![Executar o aplicativo no prompt de comando](media/vscpp-run-in-cmd.gif "Executar o aplicativo no prompt de comando")
 
-Parabéns, você construiu e executou um aplicativo de console no Visual Studio!
+Parabéns, você criou e executou um aplicativo de console no Visual Studio!
 
 [Houve um problema.](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Depois de construir e executar este aplicativo simples, você está pronto para projetos mais complexos. Para obter mais informações, consulte [Usando o Visual Studio IDE para Desenvolvimento de Desktop C++.](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) Possui passo a passo mais detalhado que exploram os recursos do Microsoft C++ no Visual Studio.
+Depois de criar e executar este aplicativo simples, você estará pronto para projetos mais complexos. Para obter mais informações, consulte [usando o IDE do Visual Studio para desenvolvimento de Desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md). Ele tem orientações mais detalhadas que exploram os recursos do Microsoft C++ no Visual Studio.
 
 ## <a name="troubleshooting-guide"></a>Guia de Solução de Problemas
 
-Venha aqui para obter soluções para problemas comuns quando você criar seu primeiro projeto C++.
+Venha aqui para soluções para problemas comuns quando você cria seu primeiro projeto C++.
 
-### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Construa e execute seu código no Visual Studio: problemas
+### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Compilar e executar seu código no Visual Studio: problemas
 
-Se os rabiscos vermelhos aparecerem em qualquer coisa no editor de código fonte, a compilação pode ter erros ou avisos. Verifique se seu código corresponde ao exemplo em ortografia, pontuação e estojo.
+Se os rabiscos vermelhos aparecerem em qualquer coisa no editor de código-fonte, a compilação poderá ter erros ou avisos. Verifique se o seu código corresponde ao exemplo em ortografia, pontuação e caso.
 
 [Voltar.](#build-and-run-your-code-in-visual-studio)
 
 ### <a name="run-your-code-in-a-command-window-issues"></a>Execute seu código em uma janela de comando: problemas
 
-Se o caminho mostrado no File Explorer terminar no * \\HelloWorld\\HelloWorld,* você abriu o *projeto* HelloWorld em vez da *solução*HelloWorld . Você será confundido por uma pasta Debug que não contém seu aplicativo. Navegue até um nível no File Explorer para chegar à pasta de soluções, o primeiro *HelloWorld* no caminho. Esta pasta também contém uma pasta Debug, e você encontrará seu aplicativo lá.
+Se o caminho mostrado no explorador de arquivos terminar * \\em\\HelloWorld HelloWorld*, você terá aberto o *projeto* HelloWorld em vez da *solução*HelloWorld. Você ficará confuso com uma pasta de depuração que não contém seu aplicativo. Navegue até um nível no explorador de arquivos para obter a pasta da solução, o primeiro *HelloWorld* no caminho. Essa pasta também contém uma pasta de depuração e você encontrará seu aplicativo lá.
 
-Você também pode navegar até a pasta Debug de solução na linha de comando para executar seu aplicativo. Seu aplicativo não será executado a partir de outros diretórios sem especificar o caminho para o aplicativo. No entanto, você pode copiar seu aplicativo para outro diretório e executá-lo a partir daí. Também é possível copiá-lo a um diretório especificado pela variável de ambiente PATH e executá-lo de qualquer lugar.
+Você também pode navegar até a pasta de depuração da solução na linha de comando para executar seu aplicativo. Seu aplicativo não será executado de outros diretórios sem especificar o caminho para o aplicativo. No entanto, você pode copiar seu aplicativo para outro diretório e executá-lo a partir daí. Também é possível copiá-lo para um diretório especificado pela variável de ambiente PATH e, em seguida, executá-lo de qualquer lugar.
 
-Se você não ver **Copiar como caminho** no menu de atalho, descarte o menu e, em seguida, mantenha a tecla **Shift** enquanto você a abre novamente. Este comando é apenas por conveniência. Você também pode copiar o caminho para a pasta na barra de pesquisa do Explorador de arquivos e colá-lo na caixa de diálogo **Executar** e, em seguida, digitar o nome do executável no final. É só um pouco mais de digitação, mas tem o mesmo resultado.
+Se você não vir **Copiar como caminho** no menu de atalho, ignore o menu e mantenha a tecla **Shift** pressionada enquanto abri-la novamente. Esse comando é apenas para sua conveniência. Você também pode copiar o caminho para a pasta na barra de pesquisa do explorador de arquivos e colá-lo na caixa de diálogo **executar** e, em seguida, inserir o nome do seu executável no final. É apenas um pouco mais de digitação, mas tem o mesmo resultado.
 
 [Voltar.](#run-your-code-in-a-command-window)
 

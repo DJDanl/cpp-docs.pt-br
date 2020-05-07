@@ -6,14 +6,14 @@ helpviewer_keywords:
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
 ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400518"
 ---
 # <a name="c-integer-constants"></a>Constantes de inteiro C
 
-Uma *constante de inteiro* é um número decimal (base 10), octal (base 8) ou hexadecimal (base 16), que representa um valor integral. Use as constantes de inteiro para representar os valores de inteiro que não podem ser alterados.
+Uma *constante de inteiro* é um número decimal (base 10), octal (base 8) ou hexadecimal (base 16) que representa um valor integral. Use as constantes de inteiro para representar os valores de inteiro que não podem ser alterados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,7 +23,7 @@ Uma *constante de inteiro* é um número decimal (base 10), octal (base 8) ou he
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
 
 *decimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dígito diferente de zero*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
 
 *octal-constant*:<br/>
@@ -35,7 +35,7 @@ Uma *constante de inteiro* é um número decimal (base 10), octal (base 8) ou he
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
 
 *hexadecimal-prefix*: um de<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0x**
 
 *nonzero-digit*: one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
@@ -70,7 +70,7 @@ Uma *constante de inteiro* é um número decimal (base 10), octal (base 8) ou he
 
 Os sufixos **i64** e **I64** são específicos da Microsoft.
 
-As constantes de inteiro são positivas a menos que sejam precedidas por um sinal de subtração ( **-** ). O sinal de subtração é interpretado como o operador aritmético unário de negação. (Consulte [Operadores aritméticos unários](../c-language/unary-arithmetic-operators.md) para obter informações sobre este operador.)
+As constantes de inteiro são positivas, a menos que sejam precedidas**-** por um sinal de subtração (). O sinal de subtração é interpretado como o operador aritmético unário de negação. (Consulte [Operadores aritméticos unários](../c-language/unary-arithmetic-operators.md) para obter informações sobre este operador.)
 
 Se uma constante inteira começar com **0x** ou **0X**, ela é hexadecimal. Se ela começar com o dígito **0**, é octal. Caso contrário, pressupõe-se que é decimal.
 
@@ -116,6 +116,6 @@ Nenhum caractere de espaço em branco pode separar os dígitos de uma constante 
     unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Constantes C](../c-language/c-constants.md)<br/>

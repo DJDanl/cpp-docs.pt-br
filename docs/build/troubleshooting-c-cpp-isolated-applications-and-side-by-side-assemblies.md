@@ -15,40 +15,40 @@ ms.locfileid: "81335448"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionando problemas de aplicativos isolados do C/C++ e assemblies lado a lado
 
-O carregamento de um aplicativo C/C++ pode falhar se bibliotecas dependentes não puderem ser encontradas. Este artigo descreve algumas razões comuns pelas quais um aplicativo C/C++ falha em carregar e sugere etapas para resolver os problemas.
+O carregamento de um aplicativo C/C++ poderá falhar se bibliotecas dependentes não puderem ser encontradas. Este artigo descreve alguns motivos comuns pelos quais um aplicativo C/C++ não carrega e sugere etapas para resolver os problemas.
 
-Se um aplicativo não for carregado porque possui um manifesto que especifica uma dependência de um conjunto lado a lado, e o conjunto não estiver instalado como um conjunto privado na mesma pasta do executável nem no cache de montagem nativo na pasta %WINDIR%\WinSxS\, uma das seguintes mensagens de erro pode ser exibida, dependendo da versão do Windows em que você tenta executar o aplicativo.
+Se um aplicativo não for carregado porque ele tem um manifesto que especifica uma dependência em um assembly lado a lado, e o assembly não estiver instalado como um assembly privado na mesma pasta que o executável nem no cache de assembly nativo na pasta%WINDIR%\WinSxS\, uma das seguintes mensagens de erro poderá ser exibida, dependendo da versão do Windows na qual você tenta executar o aplicativo.
 
 - O aplicativo não foi inicializado corretamente (0xc0000135).
 
-- Este aplicativo falhou porque a configuração do aplicativo está incorreta. A reinstalação do aplicativo pode corrigir esse problema.
+- Falha ao iniciar este aplicativo porque a configuração do aplicativo está incorreta. A reinstalação do aplicativo pode corrigir esse problema.
 
 - O sistema não pode executar o programa especificado.
 
-Se o seu aplicativo não tiver manifesto e depender de uma DLL que o Windows não pode encontrar nos locais típicos de pesquisa, uma mensagem de erro que se assemelha a esta pode ser exibida:
+Se seu aplicativo não tiver nenhum manifesto e depender de uma DLL que o Windows não consegue localizar nos locais de pesquisa típicos, uma mensagem de erro semelhante a esta poderá ser exibida:
 
-- Este aplicativo não foi recomeçado porque *uma DLL necessária* não foi encontrada. A reinstalação do aplicativo pode corrigir este problema.
+- Falha ao iniciar este aplicativo porque *uma DLL necessária* não foi encontrada. A reinstalação do aplicativo pode corrigir este problema.
 
-Se o seu aplicativo for implantado em um computador que não tenha visual studio, e ele falhar com mensagens de erro que se assemelham às anteriores, verifique estas coisas:
+Se seu aplicativo for implantado em um computador que não tem o Visual Studio e ele falhar com mensagens de erro que se assemelham aos anteriores, verifique estas coisas:
 
-1. Siga as etapas descritas no [Entendimento das Dependências de um Aplicativo Visual C++.](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md) O andador de dependência pode mostrar a maioria das dependências para um aplicativo ou DLL. Se você observar que alguns DLLs estão faltando, instale-os no computador no qual você está tentando executar seu aplicativo.
+1. Siga as etapas descritas em [noções básicas sobre as dependências de um aplicativo Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). O Dependency Walker pode mostrar a maioria das dependências de um aplicativo ou DLL. Se você observar que algumas DLLs estão ausentes, instale-as no computador no qual você está tentando executar o aplicativo.
 
-1. O carregador do sistema operacional usa o manifesto de aplicação para carregar conjuntos dos que o aplicativo depende. O manifesto pode ser incorporado no binário como um recurso ou instalado como um arquivo separado na pasta do aplicativo. Para verificar se o manifesto está incorporado no binário, abra o binário no Visual Studio e procure RT_MANIFEST em sua lista de recursos. Se você não conseguir encontrar um manifesto incorporado, procure na pasta de aplicativos um arquivo chamado algo como <binary_name>. \<extensão>.manifest.
+1. O carregador do sistema operacional usa o manifesto do aplicativo para carregar os assemblies dos quais o aplicativo depende. O manifesto pode ser inserido no binário como um recurso ou instalado como um arquivo separado na pasta do aplicativo. Para verificar se o manifesto está inserido no binário, abra o binário no Visual Studio e procure RT_MANIFEST em sua lista de recursos. Se você não encontrar um manifesto inserido, procure na pasta do aplicativo um arquivo chamado algo como <binary_name>. \<extensão>. manifest.
 
-1. Se sua aplicação depende de montagens lado a lado e um manifesto não está presente, você tem que garantir que o linker gere um manifesto para o seu projeto. Verifique a opção linker **Gerar manifesto** na caixa de diálogo Propriedades do **Projeto** para o projeto.
+1. Se seu aplicativo depender de assemblies lado a lado e um manifesto não estiver presente, você precisará garantir que o vinculador gere um manifesto para seu projeto. Verifique se a opção de vinculador **gera o manifesto** na caixa de diálogo **Propriedades do projeto** para o projeto.
 
-1. Se o manifesto estiver incorporado no binário, certifique-se de que o ID de RT_MANIFEST esteja correto para este tipo de binário. Para obter mais informações sobre qual ID de recurso usar, consulte Usando conjuntos lado a [lado como um recurso (Windows)](/windows/win32/SbsCs/using-side-by-side-assemblies-as-a-resource). Se o manifesto estiver em um arquivo separado, abra-o em um editor XML ou editor de texto. Para obter mais informações sobre manifestos e regras para implantação, consulte [Manifests](/windows/win32/sbscs/manifests).
+1. Se o manifesto for inserido no binário, verifique se a ID de RT_MANIFEST está correta para esse tipo de binário. Para obter mais informações sobre qual ID de recurso usar, consulte [usando assemblies lado a lado como um recurso (Windows)](/windows/win32/SbsCs/using-side-by-side-assemblies-as-a-resource). Se o manifesto estiver em um arquivo separado, abra-o em um editor de XML ou editor de texto. Para obter mais informações sobre manifestos e regras para implantação, consulte [manifestos](/windows/win32/sbscs/manifests).
 
    > [!NOTE]
-   > Se um manifesto incorporado e um arquivo manifesto separado estiverem presentes, o carregador do sistema operacional usará o manifesto incorporado e ignorará o arquivo separado. No entanto, no Windows XP, o oposto é verdadeiro — o arquivo manifesto separado é usado e o manifesto incorporado é ignorado.
+   > Se um manifesto incorporado e um arquivo de manifesto separado estiverem presentes, o carregador do sistema operacional usará o manifesto incorporado e ignorará o arquivo separado. No entanto, no Windows XP, o oposto é verdadeiro — o arquivo de manifesto separado é usado e o manifesto incorporado é ignorado.
 
-1. Recomendamos que você incorpore um manifesto em cada DLL porque manifestos externos `LoadLibrary` são ignorados quando uma DLL é carregada apesar de uma chamada. Para obter mais informações, consulte [manifestos da Assembléia](/windows/win32/SbsCs/assembly-manifests).
+1. É recomendável que você incorpore um manifesto em cada DLL porque os manifestos externos são ignorados quando uma DLL é `LoadLibrary` carregada por meio de uma chamada. Para obter mais informações, consulte [manifestos de assembly](/windows/win32/SbsCs/assembly-manifests).
 
-1. Verifique se todos os conjuntos que estão enumerados no manifesto estão corretamente instalados no computador. Cada conjunto é especificado no manifesto pelo nome, número da versão e arquitetura do processador. Se a sua aplicação depender de conjuntos lado a lado, verifique se esses conjuntos estão corretamente instalados no computador para que o carregador do sistema operacional possa encontrá-los, conforme descrito na [Seqüência de Pesquisa de Montagem](/windows/win32/SbsCs/assembly-searching-sequence). Lembre-se que conjuntos de 64 bits não podem ser carregados em processos de 32 bits e não podem ser executados em sistemas operacionais de 32 bits.
+1. Verifique se todos os assemblies enumerados no manifesto estão instalados corretamente no computador. Cada assembly é especificado no manifesto por seu nome, número de versão e arquitetura de processador. Se seu aplicativo depende de assemblies lado a lado, verifique se esses assemblies estão instalados corretamente no computador para que o carregador do sistema operacional possa encontrá-los, conforme descrito em [sequência de pesquisa de assembly](/windows/win32/SbsCs/assembly-searching-sequence). Lembre-se de que os assemblies de 64 bits não podem ser carregados em processos de 32 bits e não podem ser executados em sistemas operacionais de 32 bits.
 
 ## <a name="example"></a>Exemplo
 
-Suponha que temos um aplicativo, appl.exe, que é construído usando Visual C++. O manifesto do aplicativo está incorporado em appl.exe como o recurso binário RT_MANIFEST, que tem um ID igual a 1, ou é armazenado como o arquivo separado appl.exe.manifest. O conteúdo deste manifesto se assemelha a isso:
+Suponha que tenhamos um aplicativo, o Apl. exe, criado usando Visual C++. O manifesto do aplicativo é inserido no APL. exe como o recurso binário RT_MANIFEST, que tem uma ID igual a 1, ou é armazenado como o arquivo. exe. manifest separado. O conteúdo desse manifesto é semelhante a este:
 
 ```
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
@@ -60,9 +60,9 @@ Suponha que temos um aplicativo, appl.exe, que é construído usando Visual C++.
 </assembly>
 ```
 
-Para o carregador do sistema operacional, este manifesto diz que appl.exe depende de um conjunto chamado Fabrikam.SxS.Library, versão 2.0.20121.0, que é construído para uma arquitetura de processador x86 de 32 bits. O conjunto lado a lado dependente pode ser instalado como um conjunto compartilhado ou como uma montagem privada.
+Para o carregador do sistema operacional, esse manifesto diz que o Apl. exe depende de um assembly chamado Fabrikam. SxS. library, versão 2.0.20121.0, criado para uma arquitetura de processador x86 de 32 bits. O assembly lado a lado dependente pode ser instalado como um assembly compartilhado ou como um assembly privado.
 
-O manifesto de montagem para um conjunto compartilhado está instalado na pasta %WINDIR%\WinSxS\Manifests\.. Ele identifica a montagem e lista seu conteúdo — ou seja, os DLLs que fazem parte da montagem:
+O manifesto do assembly para um assembly compartilhado é instalado na pasta%WINDIR%\WinSxS\Manifests\ Ele identifica o assembly e lista seu conteúdo, ou seja, as DLLs que fazem parte do assembly:
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -74,7 +74,7 @@ O manifesto de montagem para um conjunto compartilhado está instalado na pasta 
 </assembly>
 ```
 
-Os conjuntos lado a lado também podem usar arquivos de [configuração de editores](/windows/win32/SbsCs/publisher-configuration-files)— também conhecidos como arquivos de diretiva — para redirecionar globalmente aplicativos e conjuntos para usar uma versão de um conjunto lado a lado, em vez de outra versão do mesmo conjunto. Você pode verificar as políticas de um conjunto compartilhado na pasta %WINDIR%\WinSxS\Policies\\. Aqui está um arquivo de política de exemplo:
+Os assemblies lado a lado também podem usar [arquivos de configuração do Publicador](/windows/win32/SbsCs/publisher-configuration-files)— também conhecidos como arquivos de política — para redirecionar globalmente aplicativos e assemblies para usar uma versão de um assembly lado a lado, em vez de outra versão do mesmo assembly. Você pode verificar as políticas para um assembly compartilhado na pasta%WINDIR%\WinSxS\Policies\. Aqui está um exemplo de arquivo de política:
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -90,17 +90,17 @@ Os conjuntos lado a lado também podem usar arquivos de [configuração de edito
 </assembly>
 ```
 
-Este arquivo de diretiva especifica que qualquer aplicativo ou conjunto que solicite a versão 2.0.10000.0 deste conjunto deve, em vez disso, usar a versão 2.0.20121.0, que é a versão atual instalada no sistema. Se uma versão do conjunto mencionada no manifesto do aplicativo for especificada no arquivo de diretiva, o carregador procurará uma versão deste conjunto especificada no manifesto na pasta %WINDIR%\WinSxS\, e se essa versão não estiver instalada, a carga falhará. E se a versão de montagem 2.0.20121.0 não estiver instalada, a carga falhará para aplicativos que pedem a versão de montagem 2.0.10000.0.
+Esse arquivo de política especifica que qualquer aplicativo ou assembly que solicite a versão 2.0.10000.0 desse assembly deve usar a versão 2.0.20121.0, que é a versão atual instalada no sistema. Se uma versão do assembly mencionada no manifesto do aplicativo for especificada no arquivo de política, o carregador procurará uma versão desse assembly especificada no manifesto na pasta%WINDIR%\WinSxS\ e, se essa versão não estiver instalada, a carga falhará. E se a versão do assembly 2.0.20121.0 não estiver instalada, o carregamento falhará para aplicativos que solicitam a versão do assembly 2.0.10000.0.
 
-No entanto, o conjunto também pode ser instalado como um conjunto privado lado a lado na pasta de aplicativos instalada. Se o sistema operacional não encontrar o conjunto como uma montagem compartilhada, ele o procura como uma montagem privada, na seguinte ordem:
+No entanto, o assembly também pode ser instalado como um assembly lado a lado privado na pasta do aplicativo instalado. Se o sistema operacional não conseguir localizar o assembly como um assembly compartilhado, ele o procurará como um assembly privado, na seguinte ordem:
 
-1. Verifique a pasta do aplicativo para \<obter um arquivo manifesto que tenha o nome assemblyName>.manifest. Neste exemplo, o carregador tenta encontrar Fabrikam.SxS.Library.manifest na pasta que contém appl.exe. Se encontrar o manifesto, o carregador carrega o conjunto da pasta de aplicação. Se o conjunto não for encontrado, a carga falhará.
+1. Verifique a pasta do aplicativo em busca de um arquivo de manifesto \<que tenha o nome AssemblyName>. manifest. Neste exemplo, o carregador tenta localizar fabrikam. SxS. library. manifest na pasta que contém o Apl. exe. Se encontrar o manifesto, o carregador carregará o assembly da pasta do aplicativo. Se o assembly não for encontrado, o carregamento falhará.
 
-1. Tente abrir \\ a pasta\><assemblyName \ na pasta que contém \\ appl.exe e se<assemblyName\> \<\ existir, tente carregar um arquivo manifesto que tenha o nome assemblyName>.manifest desta pasta. Se o manifesto for encontrado, o carregador \\ carregará\>o conjunto a partir da pasta<assemblyName \. Se o conjunto não for encontrado, a carga falhará.
+1. \\ Tente abrir a pasta<AssemblyName\>\ na pasta que contém o Apl. exe e, \\ se<AssemblyName\>\ Exists, tente carregar um arquivo de manifesto que tenha o nome \<AssemblyName>. manifest nessa pasta. Se o manifesto for encontrado, o carregador carregará o assembly da \\ pasta<\>AssemblyName \. Se o assembly não for encontrado, o carregamento falhará.
 
-Para obter mais informações sobre como o carregador procura montagens dependentes, consulte [Assembly Search Sequence](/windows/win32/SbsCs/assembly-searching-sequence). Se o carregador não encontrar um conjunto dependente como um conjunto privado, a carga falhará e a mensagem "O sistema não pode executar o programa especificado" será exibida. Para resolver esse erro, certifique-se de que conjuntos dependentes — e DLLs que fazem parte deles — sejam instalados no computador como conjuntos privados ou compartilhados.
+Para obter mais informações sobre como o carregador procura assemblies dependentes, consulte [sequência de pesquisa de assembly](/windows/win32/SbsCs/assembly-searching-sequence). Se o carregador não conseguir localizar um assembly dependente como um assembly privado, a carga falhará e a mensagem "o sistema não pode executar o programa especificado" será exibida. Para resolver esse erro, verifique se os assemblies dependentes – e DLLs que fazem parte deles — estão instalados no computador como assemblies privados ou compartilhados.
 
 ## <a name="see-also"></a>Confira também
 
-[Conceitos de Aplicações Isoladas e Montagens Lado a lado](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
-[Construindo aplicações isoladas C/C++ e conjuntos lado a lado](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Conceitos de aplicativos isolados e assemblies lado a lado](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
+[Criando aplicativos isolados C/C++ e assemblies lado a lado](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

@@ -1,5 +1,5 @@
 ---
-title: launch.vs.json schema reference (C++)
+title: inicialização. vs. referência de esquema JSON (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
@@ -10,87 +10,87 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81323048"
 ---
-# <a name="launchvsjson-schema-reference-c"></a>launch.vs.json schema reference (C++)
+# <a name="launchvsjson-schema-reference-c"></a>inicialização. vs. referência de esquema JSON (C++)
 
-Use o arquivo *launch.vs.json* para configurar parâmetros de depuração. Para criar o arquivo. clique com o botão direito do mouse em um arquivo executável no **Solution Explorer** e escolha **Depurar e Iniciar Configurações**. Escolha a opção que mais combina com o seu projeto e, em seguida, use as seguintes propriedades para modificar a configuração conforme necessário. Para obter mais informações sobre a depuração de projetos CMake, consulte [Configurar sessões de depuração CMake](/cpp/build/configure-cmake-debugging-sessions).
+Use o arquivo *Launch. vs. JSON* para configurar parâmetros de depuração. Para criar o arquivo. Clique com o botão direito do mouse em um arquivo executável em **Gerenciador de soluções** e escolha **depurar e iniciar configurações**. Escolha a opção que mais se aproximará do seu projeto e, em seguida, use as propriedades a seguir para modificar a configuração conforme necessário. Para obter mais informações sobre como depurar projetos do CMake, consulte [Configurar sessões de depuração do cmake](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Propriedades padrão
 
 ||||
 |-|-|-|
 |**Propriedade**|**Tipo**|**Descrição**|
-|`name`|string|Especifica o nome da entrada na parada de destino Debug.|
-|`type`|string|Especifica se o projeto é um dll ou .exe (Padrão para .exe)|
-|`project`|string|Especifica o caminho relativo ao arquivo do projeto.|
-|`projectTarget`|string|Especifica o alvo opcional invocado na construção `project`. Isso `projectTarget` já deve existir e corresponder ao nome no dropdown **Debug Target.**|
-|`debugType`|string|Especifica o modo de depuração de acordo com o tipo de código (nativo, gerenciado ou misto). Isso será detectado automaticamente a menos que este parâmetro esteja definido. Valores permitidos: "nativo", "gerenciado", "misto".|
-|`inheritEnvironments`|matriz|Especifica um conjunto de variáveis de ambiente herdadas de múltiplas fontes. Você pode definir algumas variáveis em arquivos como *CMakeSettings.json* ou *CppProperties.json* e disponibilizá-las para depurar contexto.  **Visual Studio 16.4:**: Especifique variáveis de `env.VARIABLE_NAME` ambiente por alvo usando a sintaxe. Para desdefinir uma variável, defina-a como "nula".|
+|`name`|string|Especifica o nome da entrada no menu suspenso de destino de depuração.|
+|`type`|string|Especifica se o projeto é uma DLL ou. exe (o padrão é. exe)|
+|`project`|string|Especifica o caminho relativo para o arquivo de projeto.|
+|`projectTarget`|string|Especifica o destino opcional invocado durante `project`a compilação. Isso `projectTarget` já deve existir e corresponder ao nome na lista suspensa de **destino de depuração** .|
+|`debugType`|string|Especifica o modo de depuração de acordo com o tipo de código (nativo, gerenciado ou misto). Isso será detectado automaticamente, a menos que esse parâmetro esteja definido. Valores permitidos: "nativo", "gerenciado", "misto".|
+|`inheritEnvironments`|matriz|Especifica um conjunto de variáveis de ambiente herdadas de várias fontes. Você pode definir algumas variáveis em arquivos como *CMakeSettings. JSON* ou *CppProperties. JSON* e torná-los disponíveis para o contexto de depuração.  **Visual Studio 16,4:**: especificar variáveis de ambiente por destino usando a `env.VARIABLE_NAME` sintaxe. Para remover a definição de uma variável, defina-a como "NULL".|
 |`args`|matriz|Especifica os argumentos de linha de comando passados para o programa iniciado.|
-|`currentDir`|string|Especifica o caminho completo do diretório para o Alvo de Compilação. Isso será detectado automaticamente a menos que este parâmetro esteja definido.|
-|`noDebug`|booleano|Especifica se deve depurar o programa lançado. O valor padrão deste `false` parâmetro é, se não especificado.|
-|`stopOnEntry`|booleano|Especifica se deve quebrar um logo que o processo é iniciado e o depurador é anexado. O valor padrão para `false`este parâmetro é .|
-|`remoteMachine`|string|Especifica o nome da máquina remota onde o programa é lançado.|
-|`env`|matriz| Especifica uma lista de valor-chave de variáveis de ambiente personalizadas. env:{"myEnv":"myVal"}.|
+|`currentDir`|string|Especifica o caminho completo do diretório para o destino da compilação. Isso será detectado automaticamente, a menos que esse parâmetro esteja definido.|
+|`noDebug`|booleano|Especifica se o programa iniciado deve ser depurado. O valor padrão para esse parâmetro é `false` se não for especificado.|
+|`stopOnEntry`|booleano|Especifica se deve-se interromper um pouco quando o processo é iniciado e o depurador é anexado. O valor padrão para esse parâmetro é `false`.|
+|`remoteMachine`|string|Especifica o nome do computador remoto onde o programa é iniciado.|
+|`env`|matriz| Especifica uma lista de valores-chave de variáveis de ambiente personalizadas. env: {"myEnv": "myVal"}.|
 |`portName`|string|Especifica o nome da porta ao anexar a um processo em execução.|
-|`buildConfigurations`|matriz| Um par de valor-chave que especifica o nome do modo de compilação para aplicar as configurações. Por `Debug` exemplo, `Release` ou e as configurações a serem usados de acordo com o modo de compilação selecionado.
+|`buildConfigurations`|matriz| Um par chave-valor que especifica o nome do modo de compilação para aplicar as configurações. Por exemplo, `Debug` ou `Release` e as configurações a serem usadas de acordo com o modo de compilação selecionado.
 
-## <a name="c-linux-properties"></a>Propriedades C++ Linux
+## <a name="c-linux-properties"></a>Propriedades do C++ Linux
 
 ||||
 |-|-|-|
 |**Propriedade**|**Tipo**|**Descrição**|
-|`program`|string|Caminho completo para programar executável na máquina remota. Ao usar cMake, `${debugInfo.fullTargetPath}` a macro pode ser usada como o valor deste campo.|
+|`program`|string|Caminho completo para o executável do programa no computador remoto. Ao usar CMake, a macro `${debugInfo.fullTargetPath}` pode ser usada como o valor desse campo.|
 |`processId`|inteiro|ID de processo opcional para anexar o depurador.|
-|`sourceFileMap`|objeto|Mapeamentos opcionais de arquivos de origem passados para o mecanismo de depuração. Formato: `{ "\<Compiler source location>": "\<Editor source location>" }` `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`ou . Exemplo: `{ "/home/user/foo": "C:\\foo" }` ou `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Consulte [as opções do mapa do arquivo de origem](#source_file_map_options).|
-|`additionalProperties`|string|Uma das opções de sourceFileMapOptions. (Veja abaixo.)|
-|`MIMode`|string|Indica o tipo de depurador de console habilitado para MI ao que o MIDebugEngine se conectará. Os valores permitidos são "gdb", "lldb".|
-|`args`|matriz|Argumentos de linha de comando passaram para o programa.|
-|`environment`|matriz|Variáveis de ambiente para adicionar ao ambiente para o programa. Exemplo: [ { "nome": "lula", "valor": "molusco" } ].|
-|`targetArchitecture`|string|A arquitetura da depuração. Isso será detectado automaticamente a menos que este parâmetro esteja definido. Os valores permitidos são x86, braço, braço64, mips, x64, amd64, x86_64.|
-|`visualizerFile`|string|arquivo .natvis a ser usado ao depurar esse processo. Esta opção não é compatível com a impressão bonita GDB. Consulte "showDisplayString" se estiver usando essa configuração.|
-|`showDisplayString`|booleano|Quando um visualizadorDe arquivo é especificado, showDisplayString ativará a seqüência de exibição. Ligar esta opção pode causar um desempenho mais lento durante a depuração.|
-|`remoteMachineName`|string|A máquina Linux remota que hospeda o gdb e o programa para depurar. Use o Gerenciador de Conexões para a adição de novos computadores Linux. Ao usar cMake, `${debugInfo.remoteMachineName}` a macro pode ser usada como o valor deste campo.|
-|`cwd`|string|O diretório de trabalho do alvo na máquina remota. Ao usar cMake, `${debugInfo.defaultWorkingDirectory}` a macro pode ser usada como o valor deste campo. O valor padrão é a raiz do espaço de trabalho remoto, a menos que seja substituído no arquivo *CMakeLists.txt.*|
-|`miDebuggerPath`|string|O caminho para o depurador habilitado para MI (como gdb). Quando não especificado, ele procurará path primeiro para o depurador.|
-|`miDebuggerServerAddress`|string|Endereço de rede do servidor dedepurador habilitado para MI para se conectar. Exemplo: localhost:1234.|
-|`setupCommands`|matriz|Um ou mais comandos GDB/LLDB para executar para configurar o depurador subjacente. Exemplo: `"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`. Consulte [os comandos de configuração de lançamento](#launch_setup_commands).|
-|`customLaunchSetupCommands`|matriz|Se fornecido, isso substitui os comandos padrão usados para lançar um alvo por alguns outros comandos. Por exemplo, isso pode ser "-target-attach" para anexar a um processo de destino. Uma lista de comandos vazia substitui os comandos de lançamento por nada, o que pode ser útil se o depurador estiver sendo fornecido opções de lançamento como opções de linha de comando. Exemplo: `"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`.|
-|`launchCompleteCommand`|string|O comando a ser executado após o depurador é totalmente configurado, para fazer com que o processo de destino seja executado. Os valores permitidos são "exec-run", "exec-continue", "None". O valor padrão é "exec-run".|
-|`debugServerPath`|string|Caminho completo opcional para depurar servidor para iniciar. Inadimplência a nulo.|
-|`debugServerArgs`|string|Args de servidor de depuração opcional. Inadimplência a nulo.|
-|`filterStderr`|booleano|Pesquise o fluxo stderr para padrão iniciado pelo servidor e registre stderr para depurar a saída. Usa `false` como padrão.|
-|`coreDumpPath`|string|Caminho completo opcional para um arquivo de despejo principal para o programa especificado. Inadimplência a nulo.|
-externalConsole|booleano|Se for verdade, um console é lançado para a depuração. Se `false`, nenhum console é lançado. Usa `false` como padrão. NOTA: Essa opção é ignorada em alguns casos por razões técnicas.|
-|`pipeTransport`|string|Quando presente, isso diz ao depurador para se conectar a um computador remoto usando outro executável como um tubo que irá retransmitir entrada/saída padrão entre o Visual Studio e o depurador habilitado para MI (como gdb). Valores permitidos: uma ou mais [opções de transporte de tubulação](#pipe_transport_options).|
+|`sourceFileMap`|objeto|Mapeamentos de arquivo de origem opcionais passados para o mecanismo de depuração. Formato: `{ "\<Compiler source location>": "\<Editor source location>" }` ou `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`. Exemplo: `{ "/home/user/foo": "C:\\foo" }` ou `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Consulte [Opções de mapa do arquivo de origem](#source_file_map_options).|
+|`additionalProperties`|string|Um dos sourceFileMapOptions. (Veja abaixo.)|
+|`MIMode`|string|Indica o tipo de depurador de console habilitado para MI ao qual o MIDebugEngine se conectará. Os valores permitidos são "gdb", "lldb".|
+|`args`|matriz|Argumentos de linha de comando passados para o programa.|
+|`environment`|matriz|Variáveis de ambiente a serem adicionadas ao ambiente para o programa. Exemplo: [{"Name": "squid", "value": "ponto"}].|
+|`targetArchitecture`|string|A arquitetura do depurado. Isso será detectado automaticamente, a menos que esse parâmetro esteja definido. Os valores permitidos são x86, ARM, arm64, MIPS, x64, AMD64, x86_64.|
+|`visualizerFile`|string|arquivo. natvis a ser usado ao depurar esse processo. Essa opção não é compatível com a impressão bonita do GDB. Consulte "exibir somente" se estiver usando essa configuração.|
+|`showDisplayString`|booleano|Quando um visualisadorfile é especificado, o DisplayString habilitará a cadeia de caracteres de exibição. Ativar essa opção pode causar um desempenho mais lento durante a depuração.|
+|`remoteMachineName`|string|O computador Linux remoto que hospeda o gdb e o programa a ser depurado. Use o Gerenciador de Conexões para a adição de novos computadores Linux. Ao usar CMake, a macro `${debugInfo.remoteMachineName}` pode ser usada como o valor desse campo.|
+|`cwd`|string|O diretório de trabalho do destino no computador remoto. Ao usar CMake, a macro `${debugInfo.defaultWorkingDirectory}` pode ser usada como o valor desse campo. O valor padrão é a raiz do espaço de trabalho remoto, a menos que seja substituído no arquivo *CMakeLists. txt* .|
+|`miDebuggerPath`|string|O caminho para o depurador habilitado para MI (como o gdb). Quando não for especificado, ele pesquisará o caminho primeiro para o depurador.|
+|`miDebuggerServerAddress`|string|Endereço de rede do servidor do depurador habilitado para MI ao qual se conectar. Exemplo: localhost: 1234.|
+|`setupCommands`|matriz|Um ou mais comandos GDB/LLDB para executar a fim de configurar o depurador subjacente. Exemplo: `"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`. Consulte [iniciar comandos de instalação](#launch_setup_commands).|
+|`customLaunchSetupCommands`|matriz|Se fornecido, isso substituirá os comandos padrão usados para iniciar um destino com alguns outros comandos. Por exemplo, isso pode ser "-Target-Attach" para anexar a um processo de destino. Uma lista de comandos vazia substitui os comandos de inicialização por nada, o que pode ser útil se o depurador estiver sendo fornecido com opções de inicialização como opções de linha de comando. Exemplo: `"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`.|
+|`launchCompleteCommand`|string|O comando a ser executado depois que o depurador está totalmente configurado, para fazer com que o processo de destino seja executado. Os valores permitidos são "exec-Run", "exec-Continue", "None". O valor padrão é "exec-Run".|
+|`debugServerPath`|string|Caminho completo opcional para o servidor de depuração a ser iniciado. O padrão é NULL.|
+|`debugServerArgs`|string|Argumentos de servidor de depuração opcionais. O padrão é NULL.|
+|`filterStderr`|booleano|Pesquisar o fluxo stderr para o padrão iniciado pelo servidor e o stderr do log para depurar a saída. O padrão é `false`.|
+|`coreDumpPath`|string|Caminho completo opcional para um arquivo de despejo de núcleo para o programa especificado. O padrão é NULL.|
+externalConsole|booleano|Se for true, um console será iniciado para o depurado. Se `false`, nenhum console será iniciado. O padrão é `false`. Observação: essa opção é ignorada em alguns casos por motivos técnicos.|
+|`pipeTransport`|string|Quando presente, isso informa ao depurador para se conectar a um computador remoto usando outro executável como um pipe que retransmitirá a entrada/saída padrão entre o Visual Studio e o depurador habilitado para MI (como o gdb). Valores permitidos: uma ou mais [Opções de transporte de pipe](#pipe_transport_options).|
 
-## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a>Comandos de configuração de lançamento
+## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a>Iniciar comandos de instalação
 
-Usado com `setupCommands` a propriedade:
+Usado com a `setupCommands` Propriedade:
 
 ||||
 |-|-|-|
-|`text`|string|O comando dedepurador para executar.|
+|`text`|string|O comando do depurador a ser executado.|
 |`description`|string|Descrição opcional para o comando.|
-|`ignoreFailures`|booleano|Se for verdade, falhas do comando devem ser ignoradas. Usa `false` como padrão.|
+|`ignoreFailures`|booleano|Se for true, as falhas do comando deverão ser ignoradas. O padrão é `false`.|
 
-## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a>Opções de transporte de tubos
+## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a>Opções de transporte de pipe
 
-Usado com `pipeTransport` a propriedade:
-
-||||
-|-|-|-|
-|`pipeCwd`|string|O caminho totalmente qualificado para o diretório de trabalho para o programa de tubos.|
-|`pipeProgram`|string|O comando de tubulação totalmente qualificado para executar.|
-|`pipeArgs`|matriz|Argumentos de linha de comando passados para o programa de tubos para configurar a conexão.|
-|`debuggerPath`|string|O caminho completo para o depurador na máquina de destino, por exemplo /usr/bin/gdb.|
-|`pipeEnv`|objeto|Variáveis de ambiente passadas para o programa de tubos.|
-|`quoteArgs`|booleano|Se os argumentos individuais contiverem caracteres (como espaços ou guias), ele deve ser citado? Se `false`, o comando depurador não será mais citado automaticamente. O padrão é `true`.|
-
-## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>Opções de mapa de arquivo de origem
-
-Use com `sourceFileMap` a propriedade:
+Usado com a `pipeTransport` Propriedade:
 
 ||||
 |-|-|-|
-|`editorPath`|string|A localização do código fonte para o editor localizar.|
-|`useForBreakpoints`|booleano|Ao definir pontos de interrupção, este mapeamento de origem deve ser usado. Se `false`, apenas o nome de arquivo e o número da linha forusado para definir pontos de interrupção. Se `true`, pontos de interrupção serão definidos com o caminho completo para o arquivo e o número da linha somente quando este mapeamento de origem for usado. Caso contrário, apenas nome de arquivo e número de linha serão usados ao definir pontos de interrupção. O padrão é `true`.|
+|`pipeCwd`|string|O caminho totalmente qualificado para o diretório de trabalho para o programa de pipe.|
+|`pipeProgram`|string|O comando de pipe totalmente qualificado a ser executado.|
+|`pipeArgs`|matriz|Argumentos de linha de comando passados para o programa de pipe para configurar a conexão.|
+|`debuggerPath`|string|O caminho completo para o depurador no computador de destino, por exemplo,,/usr/bin/gdb.|
+|`pipeEnv`|objeto|Variáveis de ambiente passadas para o programa de pipe.|
+|`quoteArgs`|booleano|Se argumentos individuais contiverem caracteres (como espaços ou tabulações), eles deverão ser colocados entre aspas? Se `false`, o comando do depurador não será mais colocado entre aspas automaticamente. O padrão é `true`.|
+
+## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>Opções de mapa do arquivo de origem
+
+Use com a `sourceFileMap` Propriedade:
+
+||||
+|-|-|-|
+|`editorPath`|string|O local do código-fonte do editor a ser localizado.|
+|`useForBreakpoints`|booleano|Ao definir pontos de interrupção, esse mapeamento de origem deve ser usado. Se `false`, somente o nome do arquivo e o número da linha serão usados para definir pontos de interrupção. Se `true`, os pontos de interrupção serão definidos com o caminho completo para o arquivo e o número de linha somente quando esse mapeamento de origem for usado. Caso contrário, apenas o nome do arquivo e o número da linha serão usados ao definir pontos de interrupção. O padrão é `true`.|

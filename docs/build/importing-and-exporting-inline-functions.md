@@ -21,24 +21,24 @@ ms.locfileid: "81328513"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importação e exportação de funções embutidas
 
-As funções importadas podem ser definidas como inline. O efeito é aproximadamente o mesmo que definir uma função padrão em linha; chamadas para a função são expandidas para código inline, muito parecido com uma macro. Isso é principalmente útil como uma maneira de apoiar classes C++ em uma DLL que pode inline algumas de suas funções de membro para eficiência.
+As funções importadas podem ser definidas como embutidas. O efeito é praticamente o mesmo que definir uma função padrão embutida; as chamadas para a função são expandidas em código embutido, de forma semelhante a uma macro. Isso é principalmente útil como uma maneira de dar suporte a classes C++ em uma DLL que pode embutir algumas de suas funções de membro para eficiência.
 
-Uma característica de uma função inline importada é que você pode pegar seu endereço em C++. O compilador retorna o endereço da cópia da função inline que reside na DLL. Outra característica das funções inline importadas é que você pode inicializar dados locais estáticos da função importada, ao contrário dos dados importados globais.
+Um recurso de uma função embutida importada é que você pode pegar seu endereço em C++. O compilador retorna o endereço da cópia da função embutida que reside na DLL. Outro recurso das funções embutidas importadas é que você pode inicializar dados locais estáticos da função importada, diferentemente dos dados importados globalmente.
 
 > [!CAUTION]
-> Você deve ter cuidado ao fornecer funções inline importadas, pois elas podem criar a possibilidade de conflitos de versão. Uma função inline é expandida para o código do aplicativo; portanto, se você reescrever a função mais tarde, ela não será atualizada a menos que o aplicativo em si seja recompilado. (Normalmente, as funções dll podem ser atualizadas sem reconstruir os aplicativos que as usam.)
+> Você deve ter cuidado ao fornecer funções embutidas importadas, pois elas podem criar a possibilidade de conflitos de versão. Uma função embutida é expandida no código do aplicativo; Portanto, se você reescrever posteriormente a função, ela não será atualizada, a menos que o próprio aplicativo seja recompilado. (Normalmente, as funções de DLL podem ser atualizadas sem recriar os aplicativos que as utilizam.)
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Exportar de um DLL](exporting-from-a-dll.md)
+- [Exportar de uma DLL](exporting-from-a-dll.md)
 
-- [Exportar de uma DLL usando . Arquivos DEF](exporting-from-a-dll-using-def-files.md)
+- [Exportar de uma DLL usando. Arquivos DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar de uma DLL usando __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar de uma DLL usando __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportação e importação usando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Exportar e importar usando o AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar funções C++ para uso em executáveis em linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funções C++ para uso em executáveis de linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
 - [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 

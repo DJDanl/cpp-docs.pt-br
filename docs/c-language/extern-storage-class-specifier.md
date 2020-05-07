@@ -9,11 +9,11 @@ helpviewer_keywords:
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
 ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233828"
 ---
 # <a name="extern-storage-class-specifier"></a>Especificador de classe de armazenamento externa
 
@@ -61,8 +61,8 @@ void func(void)
 
 Neste exemplo, a variável `i` é definida em Source1.c com um valor inicial de 1. Uma declaração **extern** em Source2.c torna 'i' visível nesse arquivo.
 
-Na função `func`, o endereço da variável global `i` é usado para inicializar a variável de ponteiro **static** `external_i`. Isso funciona porque a variável global tem tempo de vida **static**, ou seja, seu endereço não é alterado durante a execução do programa. Em seguida, uma variável `i` é definida dentro do escopo de `func` como uma variável local com o valor inicial 16. Essa definição não afeta o valor da variável `i` de nível externo, que é ocultada pelo uso do respectivo nome para a variável local. O valor de `i` global agora está acessível apenas através do ponteiro `external_i`.
+Na função `func`, o endereço da variável global `i` é usado para inicializar a variável de ponteiro **static**`external_i`. Isso funciona porque a variável global tem tempo de vida **static**, ou seja, seu endereço não é alterado durante a execução do programa. Em seguida, uma variável `i` é definida dentro do escopo de `func` como uma variável local com o valor inicial 16. Essa definição não afeta o valor da variável `i` de nível externo, que é ocultada pelo uso do respectivo nome para a variável local. O valor de `i` global agora está acessível apenas através do ponteiro `external_i`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Especificadores de classe de armazenamento para declarações de nível interno](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
