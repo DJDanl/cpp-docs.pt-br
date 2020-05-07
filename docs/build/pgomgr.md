@@ -14,56 +14,56 @@ ms.locfileid: "62295218"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-Adiciona dados de perfil de um ou mais arquivos. PGC para o arquivo. PGD.
+Adiciona dados de perfil de um ou mais arquivos. pgc ao arquivo. pgd.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **pgomgr** [*opções*] *pgcfiles* *pgdfile*
+> **pgomgr** [*Opções*] *pgcfiles* *pgdFile*
 
 ### <a name="parameters"></a>Parâmetros
 
 *options*<br/>
 As opções a seguir podem ser especificadas para **pgomgr**:
 
-- **/Help** ou **/?** Exibe disponíveis **pgomgr** opções.
+- **/help** ou **/?** Exibe as opções de **pgomgr** disponíveis.
 
-- **/clear** faz com que o arquivo. PGD seja limpo de todas as informações de perfil. Não é possível especificar um. PGC arquivo quando **/limpar** for especificado.
+- **/Clear** Faz com que o arquivo. pgd seja limpo de todas as informações de perfil. Você não pode especificar um arquivo. pgc quando **/Clear** é especificado.
 
-- **/Detail** exibe as estatísticas detalhadas, incluindo informações de cobertura de gráfico de fluxo.
+- **/Detail** Exibe estatísticas detalhadas, incluindo informações de cobertura do grafo de fluxo.
 
-- **/ summary** exibe de estatísticas por função.
+- **/Summary** Exibe estatísticas por função.
 
-- **/Unique** quando usado com **/summary**, causas decorado nomes de função para exibir. O padrão, quando **/Unique** não for usado, é não decorado para nomes de função a ser exibido.
+- **/Unique** Quando usado com **/Summary**, faz com que nomes de função decorados sejam exibidos. O padrão, quando **/Unique** não é usado, é para que nomes de função não decorados sejam exibidos.
 
-- **/ merge**\[**:**<em>n</em>] faz com que os dados no arquivo. PGC ou arquivos a serem adicionados ao arquivo. PGD. O parâmetro opcional, *n*, permite que você especifique que os dados devem ser adicionados *n* vezes. Por exemplo, se um cenário normalmente seria feitos seis vezes refletir a frequência com que isso é feito por clientes, você pode fazer isso vez em uma execução de teste e adicioná-lo para o arquivo. PGD seis vezes com **pgomgr /merge:6**.
+- **/Merge**\[**:**<em>n</em>] faz com que os dados nos arquivos. pgc sejam adicionados ao arquivo. pgd. O parâmetro opcional, *n*, permite que você especifique que os dados devem ser adicionados *n* vezes. Por exemplo, se um cenário normalmente fosse feito seis vezes para refletir a frequência de conclusão pelos clientes, você pode fazer isso uma vez em uma execução de teste e adicioná-lo ao arquivo. pgd seis vezes com **pgomgr/Merge: 6**.
 
 *pgcfiles*<br/>
-. PGC um ou mais arquivos cujos dados de perfil que você deseja mesclar com o arquivo. PGD. Você pode especificar um arquivo. PGC único ou vários arquivos. PGC. Se você não especificar todos os arquivos. PGC, **pgomgr** mescla todos os arquivos. PGC cujos nomes de arquivo são os mesmos que o arquivo. PGD.
+Um ou mais arquivos. pgc cujos dados de perfil você deseja mesclar no arquivo. pgd. Você pode especificar um único arquivo. pgc ou vários arquivos. pgc. Se você não especificar nenhum arquivo. pgc, o **pgomgr** mesclará todos os arquivos. pgc cujos nomes de arquivo são iguais aos arquivos. pgd.
 
 *pgdfile*<br/>
-O arquivo. PGD para a qual você está mesclando dados do arquivo. PGC ou arquivos.
+O arquivo. pgd no qual você está Mesclando dados do arquivo. pgc ou arquivos.
 
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Você pode iniciar essa ferramenta apenas de um prompt de comando do desenvolvedor de Visual Studio. Você não pode iniciá-lo em um prompt de comando do sistema ou no Explorador de arquivos.
+> Você pode iniciar essa ferramenta somente em um prompt de comando do desenvolvedor do Visual Studio. Você não pode iniciá-lo em um prompt de comando do sistema ou no explorador de arquivos.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo de comando limpa o arquivo myapp.pgd dos dados de perfil:
+Este comando de exemplo limpa o arquivo MyApp. pgd dos dados de perfil:
 
 `pgomgr /clear myapp.pgd`
 
-Este exemplo de comando adiciona dados de perfil no myapp1.pgc para o arquivo. PGD três vezes:
+Esse comando de exemplo adiciona dados de perfil em myapp1. pgc ao arquivo. pgd três vezes:
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-Neste exemplo, dados de perfil de todos os arquivos. PGC do n º de myapp são adicionados ao arquivo myapp.pgd.
+Neste exemplo, os dados de perfil de todos os arquivos MyApp #. pgc são adicionados ao arquivo MyApp. pgd.
 
 `pgomgr -merge myapp1.pgd`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Otimizações guiadas por perfil](profile-guided-optimizations.md)<br/>
+[Otimizações orientadas a perfil](profile-guided-optimizations.md)<br/>
 [PgoAutoSweep](pgoautosweep.md)<br/>
 [pgosweep](pgosweep.md)<br/>

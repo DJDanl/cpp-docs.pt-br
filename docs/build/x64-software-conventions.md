@@ -14,17 +14,17 @@ ms.locfileid: "79417190"
 ---
 # <a name="x64-software-conventions"></a>Convenções de software x64
 
-Esta seção descreve a C++ metodologia de Convenção de chamada para x64, a extensão de 64 bits para a arquitetura x86.
+Esta seção descreve a metodologia de Convenção de chamada do C++ para x64, a extensão de 64 bits para a arquitetura x86.
 
 ## <a name="overview-of-x64-calling-conventions"></a>Visão geral das convenções de chamada x64
 
-Duas diferenças importantes entre x86 e x64 são o recurso de endereçamento de 64 bits e um conjunto simples de registros de 16 64 bits para uso geral. Considerando o conjunto de registros expandido, o x64 usa a Convenção de chamada [__fastcall](../cpp/fastcall.md) e um modelo de tratamento de exceção baseado em RISC. A Convenção de `__fastcall` usa registros para os primeiros quatro argumentos e o quadro de pilha para passar argumentos adicionais. Para obter detalhes sobre a Convenção de chamada x64, incluindo o uso de registro, parâmetros de pilha, valores de retorno e desenrolamento de pilha, consulte [Convenção de chamada x64](x64-calling-convention.md).
+Duas diferenças importantes entre x86 e x64 são o recurso de endereçamento de 64 bits e um conjunto simples de registros de 16 64 bits para uso geral. Considerando o conjunto de registros expandido, o x64 usa a Convenção de chamada [__fastcall](../cpp/fastcall.md) e um modelo de tratamento de exceção baseado em RISC. A `__fastcall` Convenção usa registros para os primeiros quatro argumentos e o quadro de pilha para passar argumentos adicionais. Para obter detalhes sobre a Convenção de chamada x64, incluindo o uso de registro, parâmetros de pilha, valores de retorno e desenrolamento de pilha, consulte [Convenção de chamada x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Habilitar a otimização para x64
 
 A opção de compilador a seguir ajuda a otimizar seu aplicativo para x64:
 
-- [/favor (otimizar para especificações da arquitetura)](../build/reference/favor-optimize-for-architecture-specifics.md)
+- [/favor (otimizar para especificações de arquitetura)](../build/reference/favor-optimize-for-architecture-specifics.md)
 
 ## <a name="types-and-storage"></a>Tipos e armazenamento
 
@@ -181,7 +181,7 @@ Trabalhar com dados não alinhados tem duas implicações.
 
 - Os locais não alinhados não podem ser usados em operações interbloqueadas.
 
-Se você precisar de um alinhamento mais estrito, use `__declspec(align(N))` em suas declarações de variável. Isso faz com que o compilador alinhe dinamicamente a pilha para atender às suas especificações. No entanto, o ajuste dinâmico da pilha em tempo de execução pode causar uma execução mais lenta do seu aplicativo.
+Se você precisar de um alinhamento mais estrito `__declspec(align(N))` , use em suas declarações de variável. Isso faz com que o compilador alinhe dinamicamente a pilha para atender às suas especificações. No entanto, o ajuste dinâmico da pilha em tempo de execução pode causar uma execução mais lenta do seu aplicativo.
 
 ## <a name="register-usage"></a>Registrar uso
 
@@ -193,25 +193,25 @@ A tabela a seguir descreve como cada registro é usado nas chamadas de função:
 
 ||||
 |-|-|-|
-|Registrar|Status|Use|
-|RAX|Volatile|Registro de valores retornados|
-|RCX|Volatile|Primeiro argumento inteiro|
-|RDX|Volatile|Segundo argumento inteiro|
-|R8|Volatile|Terceiro argumento inteiro|
-|R9|Volatile|Quarto argumento inteiro|
-|R10, R11|Volatile|Deve ser preservado, conforme a necessidade do chamador; usado em instruções syscall/sysret|
+|Registrar |Status|Uso|
+|RAX|Volátil|Registro de valores retornados|
+|RCX|Volátil|Primeiro argumento inteiro|
+|RDX|Volátil|Segundo argumento inteiro|
+|R8|Volátil|Terceiro argumento inteiro|
+|R9|Volátil|Quarto argumento inteiro|
+|R10, R11|Volátil|Deve ser preservado, conforme a necessidade do chamador; usado em instruções syscall/sysret|
 |R12, R15|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RDI|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RSI|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RBX|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RBP|Não volátil|Pode ser usado como um ponteiro de quadro; deve ser preservado pelo receptor da chamada|
 |RSP|Não volátil|Ponteiro de pilha|
-|XMM0, YMM0|Volatile|Primeiro argumento FP; primeiro argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM1, YMM1|Volatile|Segundo argumento FP; segundo argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM2, YMM2|Volatile|Terceiro argumento FP; terceiro argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM3, YMM3|Volatile|Quarto argumento FP; quarto argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM4, YMM4|Volatile|Deve ser preservado conforme necessário pelo chamador; quinto argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM5, YMM5|Volatile|Deve ser preservado conforme necessário pelo chamador; sexto argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM0, YMM0|Volátil|Primeiro argumento FP; primeiro argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM1, YMM1|Volátil|Segundo argumento FP; segundo argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM2, YMM2|Volátil|Terceiro argumento FP; terceiro argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM3, YMM3|Volátil|Quarto argumento FP; quarto argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM4, YMM4|Volátil|Deve ser preservado conforme necessário pelo chamador; quinto argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM5, YMM5|Volátil|Deve ser preservado conforme necessário pelo chamador; sexto argumento de tipo vetorial quando `__vectorcall` for usado|
 |XMM6:XMM15, YMM6:YMM15|Não volátil (XMM), Volátil (metade superior de YMM)|Deve ser preservado pelo receptor. Os registros YMM devem ser preservados conforme necessário pelo chamador.|
 
 Na função Exit e na entrada de função para chamadas da biblioteca de tempo de execução C e chamadas de sistema do Windows, o sinalizador de direção no registro de sinalizadores de CPU deve ser limpo.
@@ -222,15 +222,15 @@ Para obter detalhes sobre alocação de pilha, alinhamento, tipos de função e 
 
 ## <a name="prolog-and-epilog"></a>Prólogo e epílogo
 
-Cada função que aloca espaço de pilha, chama outras funções, salva registros não-voláteis ou usa tratamento de exceção deve ter um prólogo cujos limites de endereço sejam descritos nos dados de desenrolamento associados à entrada da respectiva tabela de funções e epilogs em cada saída para uma função. Para obter detalhes sobre o prólogo necessário e o código epílogo em x64, consulte [prólogo e epílogo de x64](prolog-and-epilog.md).
+Cada função que aloca espaço de pilha, chama outras funções, salva registros não voláteis ou usa o tratamento de exceções deve ter um prólogo cujos limites de endereço são descritos nos dados de desenrolamento associados à entrada da respectiva tabela de funções e epilogs a cada saída para uma função. Para obter detalhes sobre o prólogo necessário e o código epílogo em x64, consulte [prólogo e epílogo de x64](prolog-and-epilog.md).
 
 ## <a name="x64-exception-handling"></a>Tratamento de exceções x64
 
-Para obter informações sobre as convenções e estruturas de dados usadas para implementar o tratamento C++ de exceção estruturado e o comportamento de manipulação de exceção no x64, consulte [manipulação de exceção de x64](exception-handling-x64.md).
+Para obter informações sobre as convenções e estruturas de dados usadas para implementar o tratamento de exceções estruturado e o comportamento de manipulação de exceção do C++ no x64, consulte [manipulação de exceção de x64](exception-handling-x64.md).
 
 ## <a name="intrinsics-and-inline-assembly"></a>Intrínsecos e assembly embutido
 
-Uma das restrições para o compilador x64 é não ter suporte embutido para Assembler. Isso significa que as funções que não podem ser escritas em C++ C ou precisarão ser gravadas como sub-rotinas ou como funções intrínsecas com suporte pelo compilador. Determinadas funções são sensíveis ao desempenho, enquanto outras não. Funções sensíveis ao desempenho devem ser implementadas como funções intrínsecas.
+Uma das restrições para o compilador x64 é não ter suporte embutido para Assembler. Isso significa que as funções que não podem ser escritas em C ou C++ precisarão ser escritas como sub-rotinas ou como funções intrínsecas com suporte pelo compilador. Determinadas funções são sensíveis ao desempenho, enquanto outras não. Funções sensíveis ao desempenho devem ser implementadas como funções intrínsecas.
 
 Os intrínsecores suportados pelo compilador são descritos em [intrínsecos do compilador](../intrinsics/compiler-intrinsics.md).
 

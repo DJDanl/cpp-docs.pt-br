@@ -38,13 +38,13 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-Esse código é executado perfeitamente em uma versão de depuração de um aplicativo MFC. Se a chamada para `calloc( )` falhar, uma mensagem de diagnóstico que inclui o arquivo e o número de linha será exibida. No entanto, em uma compilação de varejo de um aplicativo MFC:
+Esse código é executado perfeitamente em uma versão de depuração de um aplicativo MFC. Se a chamada para `calloc( )` falhar, será exibida uma mensagem de diagnóstico que inclui o arquivo e o número da linha. No entanto, em uma compilação de varejo de um aplicativo MFC:
 
 - a chamada para `calloc( )` nunca ocorre, deixando `buf` não inicializado ou
 
-- `strcpy_s( )` copia "`Hello, World`" em uma parte aleatória da memória, possivelmente travando o aplicativo ou fazendo com que o sistema pare de responder ou
+- `strcpy_s( )`copia "`Hello, World`" em uma parte aleatória da memória, possivelmente falhando no aplicativo ou fazendo com que o sistema pare de responder ou
 
-- `free()` tenta liberar memória que nunca foi alocada.
+- `free()`Tenta liberar memória que nunca foi alocada.
 
 Para usar o ASSERT corretamente, o exemplo de código deve ser alterado para o seguinte:
 
@@ -71,6 +71,6 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Corrigindo problemas do build de versão](fixing-release-build-problems.md)
+[Corrigindo problemas de compilação da versão](fixing-release-build-problems.md)

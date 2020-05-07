@@ -1,5 +1,5 @@
 ---
-title: C++Builds de versão – Visual Studio
+title: Builds de versão do C++-Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -19,14 +19,14 @@ Uma compilação de versão usa otimizações. Quando você usa otimizações pa
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Problemas comuns durante a criação de um build de versão](common-problems-when-creating-a-release-build.md)<br/>
-[Corrigindo problemas do build de versão](fixing-release-build-problems.md)<br/>
+[Problemas comuns durante a criação de uma compilação de versão](common-problems-when-creating-a-release-build.md)<br/>
+[Corrigindo problemas de compilação da versão](fixing-release-build-problems.md)<br/>
 [Usando VERIFY em vez de ASSERT](using-verify-instead-of-assert.md)<br/>
 [Usando o build de depuração para verificar se há substituição de memória](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
-[Como depurar um build de versão](how-to-debug-a-release-build.md)<br/>
+[Como depurar um build da versão](how-to-debug-a-release-build.md)<br/>
 [Verificando se há substituições de memória](checking-for-memory-overwrites.md)<br/>
-[Otimizando seu código](optimizing-your-code.md)
+[Otimizando o código](optimizing-your-code.md)
 
 ## <a name="see-also"></a>Confira também
 
-[Referência de compilação C/C++](reference/c-cpp-building-reference.md)
+[Referência de build C/C++](reference/c-cpp-building-reference.md)

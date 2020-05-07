@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
 ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345299"
 ---
 # <a name="trigraphs"></a>Trígrafos
 
@@ -48,7 +48,7 @@ A tabela a seguir mostra as nove sequências de trígrafos. Em um arquivo de ori
 
 Um trígrafo é sempre tratado como um único caractere de origem. A conversão de trígrafos ocorre na primeira [fase de conversão](../preprocessor/phases-of-translation.md), antes do reconhecimento dos caracteres de escape em literais de cadeias e constantes de caracteres. Somente os nove trígrafos mostrados na tabela acima são reconhecidos. Todas as outras sequências de caracteres são mantidas sem conversão.
 
-A sequência de escape de caracteres, **\\?**, evita a interpretação errônea de sequências de caracteres semelhantes a trígrafos. (Para obter informações sobre sequências de escape, consulte [Sequências de escape](../c-language/escape-sequences.md).) Por exemplo, se você tentar imprimir a cadeia de caracteres `What??!` com esta instrução `printf`
+A sequência de escape de caractere, ** \\?**, impede a interpretação inapropriada de sequências de caracteres como trigraphs. (Para obter informações sobre sequências de escape, consulte [sequências de escape](../c-language/escape-sequences.md).) Por exemplo, se você tentar imprimir a cadeia de `What??!` caracteres com `printf` esta instrução
 
 ```C
 printf( "What??!\n" );
@@ -62,7 +62,7 @@ printf( "What?\?!\n" );
 
 Nessa instrução `printf`, um caractere de escape de barra invertida na frente do segundo ponto de interrogação impede a interpretação errônea de `??!` como um trígrafo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [/Zc:trigraphs (substituição de trígrafos)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
-[Identificadores C](../c-language/c-identifiers.md)
+[Identificadores de C](../c-language/c-identifiers.md)

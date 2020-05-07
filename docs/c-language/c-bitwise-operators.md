@@ -21,21 +21,21 @@ ms.locfileid: "80168767"
 ---
 # <a name="c-bitwise-operators"></a>Operadores bit a bit C
 
-Os operadores bit a bit executam as operações E bit a bit ( **&** ), OR exclusivo bit a bit ( **^** ) e OR inclusivo bit a bit ( **&#124;** ).
+Os operadores de bits bit a passo executam operações bit-a-AND**&**(**^**), Exclusive-or () e bit-a-inclusivo-or (**&#124;**).
 
 ## <a name="syntax"></a>Sintaxe
 
-*Expressão and*: &nbsp;&nbsp;*expressão de igualdade* &nbsp;&nbsp;*e-* Expression **&** *expressão de igualdade*
+Expressão *and-* Expression &nbsp;: &nbsp; *igualdade-* &nbsp; &nbsp;expressão e expressão de *igualdade* de *expressão* **&**
 
-*Exclusive-ou-Expression*: &nbsp;&nbsp;*e-Expression* &nbsp;&nbsp;expressão- *ou-* **^** de expressão *and* exclusivas
+expressão *Exclusive-ou-Expression*: &nbsp; &nbsp; *e-* &nbsp; &nbsp;Expression *Exclusive-ou-* **^** Expression *e-Expression*
 
-*inclusivo-ou-expressão*: &nbsp;&nbsp;*expressão exclusiva* &nbsp;&nbsp;uma expressão de *inclusão* &#124; ou expressão *exclusiva*
+*inclusivo-ou-* expressão &nbsp; &nbsp;: *Exclusive-ou* &nbsp; &nbsp;-expressão *inclusiva ou* expressão &#124; *Exclusive-ou-Expression*
 
 Os operandos dos operadores bit a bit devem ter tipos integrais, mas seus tipos podem ser diferentes. Esses operadores executam conversões aritméticas comuns; o tipo do resultado é o tipo dos operandos após a conversão.
 
 Os operadores bit a bit de C são descritos abaixo:
 
-|Operador|DESCRIÇÃO|
+|Operador|Descrição|
 |--------------|-----------------|
 |**&**|O operador AND bit a bit compara cada bit do primeiro operando com o bit correspondente de seu segundo operando. Se ambos os bits forem 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).|
 |**^**|O operador OR exclusivo bit a bit compara cada bit do primeiro operando ao bit correspondente do seu segundo operando. Se um bit for 0 e o outro bit for 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).|
@@ -63,7 +63,7 @@ n = i ^ j;
 
 O operador OR inclusivo bit a bit no segundo exemplo resulta no valor 0xABCD (hexadecimal), enquanto o OU exclusivo bit a bit no terceiro exemplo gerencia 0xCD (hexadecimal).
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Os resultados de operação bit a bit em números inteiros assinados é definido pela implementação de acordo com o padrão ANSI C. Para o compilador C da Microsoft, as operações bit a bit em números inteiros assinados funcionam da mesma forma que as operações bit a bit em inteiros não assinados. Por exemplo, `-16 & 99` pode ser expresso em binário como
 
@@ -76,7 +76,7 @@ Os resultados de operação bit a bit em números inteiros assinados é definido
 
 O resultado do E bit a bit é decimal 96.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

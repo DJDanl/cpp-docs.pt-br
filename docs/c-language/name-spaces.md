@@ -11,11 +11,11 @@ helpviewer_keywords:
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
 ms.openlocfilehash: 76ad9b797a4f192e8f22f8c040f5a308371a461b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325761"
 ---
 # <a name="name-spaces"></a>Namespaces
 
@@ -30,7 +30,7 @@ Rótulos de instrução Rótulos de instrução nomeados fazem parte das instru�
 
 Marcas de estrutura, união e enumeração. Essas marcas fazem parte de especificadores do tipo estrutura, união e enumeração e, quando presentes, ocorrerão sempre imediatamente após as palavras reservadas **struct**, **union** ou **enum**. Os nomes de marcas devem ser diferentes de todas as outras marcas de estrutura, enumeração e união com a mesma visibilidade.
 
-Membros de estruturas ou uniões Os nomes de membros são alocados em namespaces associados a cada tipo de estrutura e união. Ou seja, o mesmo identificador pode ser um nome de componente em várias estruturas ou uniões ao mesmo tempo. As definições de nomes de componente sempre ocorrem dentro dos especificadores do tipo estrutura ou união. O uso de nomes de componente sempre ocorre imediatamente após os operadores de seleção de membros (**->** e **.**). O nome de um membro deve ser exclusivo dentro da estrutura ou da união, mas não precisa ser diferente de outros nomes no programa, inclusive os nomes dos membros de estruturas e uniões diferentes ou o nome da própria estrutura.
+Membros de estruturas ou uniões Os nomes de membros são alocados em namespaces associados a cada tipo de estrutura e união. Ou seja, o mesmo identificador pode ser um nome de componente em várias estruturas ou uniões ao mesmo tempo. As definições de nomes de componente sempre ocorrem dentro dos especificadores do tipo estrutura ou união. Os usos de nomes de componentes sempre seguem imediatamente os operadores de seleção**->** de Membros (e **.**). O nome de um membro deve ser exclusivo dentro da estrutura ou da união, mas não precisa ser diferente de outros nomes no programa, inclusive os nomes dos membros de estruturas e uniões diferentes ou o nome da própria estrutura.
 
 Identificadores comuns Todos os outros nomes ficam em um namespace que inclui variáveis, funções (incluindo parâmetros formais e variáveis locais) e constantes de enumeração. Os nomes de identificadores têm visibilidade aninhada, para que você possa redefini-los nos blocos.
 
@@ -46,8 +46,8 @@ struct student {
    } student;
 ```
 
-Quando `student` aparece após a palavra-chave **struct**, o compilador o reconhece como uma marca de estrutura. Quando `student` aparece após um operador de seleção de membros (**->** ou **.**), o nome faz referência ao membro da estrutura. Em outros contextos, `student` se refere à variável da estrutura. Porém, sobrecarregar a marca name space não é recomendado porque obscurece o significado.
+Quando `student` aparece após a palavra-chave **struct**, o compilador o reconhece como uma marca de estrutura. Quando `student` aparece depois de um operador de seleção de**->** membro (ou **.**), o nome refere-se ao membro da estrutura. Em outros contextos, `student` se refere à variável da estrutura. Porém, sobrecarregar a marca name space não é recomendado porque obscurece o significado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Estrutura do programa](../c-language/program-structure.md)
