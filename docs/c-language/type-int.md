@@ -22,9 +22,9 @@ Os especificadores de tipo `int` e `unsigned int` (ou simplesmente `unsigned`) d
 
 **Específico da Microsoft**
 
-Os inteiros com sinal são representados no formato de dois complementos. O bit mais significativo contém o sinal: 1 para o negativo, 0 para o sinal positivo e zero. A faixa de valores é dada em [C e C++ Limites Inteiros,](../c-language/cpp-integer-limits.md)que é retirado dos LIMITES. Arquivo h cabeçalho.
+Os inteiros com sinal são representados no formato de dois complementos. O bit mais significativo contém o sinal: 1 para o negativo, 0 para o sinal positivo e zero. O intervalo de valores é fornecido em [limites de inteiro C e C++](../c-language/cpp-integer-limits.md), que é obtido dos limites. Arquivo de cabeçalho H.
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**
 
 > [!NOTE]
 > Os especificadores de tipo int e unsigned int são amplamente usados em programas C porque permitem que um computador específico administre valores inteiros da maneira mais eficiente. No entanto, como os tamanhos dos tipos int e unsigned int variam, os programas que dependem de um int de determinado tamanho não podem ser portáteis para outros computadores. Para tornar os programas mais portáteis, você pode usar expressões com o operador sizeof (como descrito em [O operador sizeof](../c-language/sizeof-operator-c.md)) em vez de tamanhos de dados embutidos em código.

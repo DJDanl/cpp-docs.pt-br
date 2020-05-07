@@ -17,7 +17,7 @@ O tipo **float** contém 32 bits: 1 para o sinal, 8 para o exponente e 23 para a
 
 O tipo **double** contém 64 bits: 1 para o sinal, 11 para o expoente e 52 para a mantissa. O intervalo é +/- 1.7E308 com pelo menos 15 dígitos de precisão.
 
-O tipo **duplo longo** é distinto, mas tem a mesma representação do tipo **duplo** no compilador Microsoft C.
+O tipo **longo Duplo** é distinto, mas tem a mesma representação que o tipo **Double** no compilador do Microsoft C.
 
 ## <a name="see-also"></a>Confira também
 

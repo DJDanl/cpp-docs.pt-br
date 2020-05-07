@@ -19,9 +19,9 @@ C tem um operador ternário: o operador de expressão condicional (**?:**).
 
 ## <a name="syntax"></a>Sintaxe
 
-*expressão condicional:*<br/>
+*expressão condicional*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão logical-OR*  **?**  *expressão*  **:**  *expressão condicional*
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão logical-OR*  **?**  *expression*  **:**  *expressão condicional*
 
 A *logical-OR-expression* deve ter um tipo integral, de flutuação ou ponteiro. Ela é avaliada em termos de sua equivalência a 0. Um ponto de sequência vem após a *logical-OR-expression*. A avaliação dos operandos acontece da seguinte maneira:
 

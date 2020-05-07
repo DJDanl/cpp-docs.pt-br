@@ -26,41 +26,41 @@ ms.locfileid: "81328861"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problemas comuns durante a criação de uma compilação de versão
 
-Durante o desenvolvimento, você geralmente construirá e testará com uma compilação de depuração do seu projeto. Se você construir seu aplicativo para uma compilação de liberação, você pode obter uma violação de acesso.
+Durante o desenvolvimento, normalmente você criará e testará com uma compilação de depuração do seu projeto. Se você criar seu aplicativo para uma compilação de versão, poderá obter uma violação de acesso.
 
-A lista abaixo mostra as principais diferenças entre uma compilação de depuração e uma versão (não depuração). Existem outras diferenças, mas a seguir estão as principais diferenças que fariam com que um aplicativo falhasse em uma compilação de versão quando funcionasse em uma compilação de depuração.
+A lista a seguir mostra as principais diferenças entre uma compilação de depuração e uma versão (não depurar). Há outras diferenças, mas a seguir estão as principais diferenças que poderiam fazer com que um aplicativo falhasse em uma compilação de versão quando ela funcionasse em uma compilação de depuração.
 
-- [Layout de Pilha](#_core_heap_layout)
+- [Layout do heap](#_core_heap_layout)
 
 - [Compilação](#_core_compilation)
 
-- [Suporte ao ponteiro](#_core_pointer_support)
+- [Suporte a ponteiro](#_core_pointer_support)
 
 - [Otimizações](#_core_optimizations)
 
-Consulte a opção [compilador /GZ (Catch Release-Build Errors in Debug Build)](reference/gz-enable-stack-frame-run-time-error-checking.md) para obter informações sobre como capturar erros de compilação de release em compilações de depuração.
+Consulte a opção de compilador [/gz (versão catch-Build Errors in Debug)](reference/gz-enable-stack-frame-run-time-error-checking.md) para obter informações sobre como detectar erros de compilação de versão em compilações de depuração.
 
-## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Layout de Pilha
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Layout do heap
 
-O layout do heap será a causa de cerca de noventa por cento dos problemas aparentes quando um aplicativo funciona em depuração, mas não em lançamento.
+O layout de heap será a causa de cerca de 90% dos problemas aparentes quando um aplicativo funciona em depuração, mas não em versão.
 
-Quando você constrói seu projeto para depurar, você está usando o alocador de memória depuração. Isso significa que todas as alocações de memória têm bytes de guarda colocados ao seu redor. Estes bytes de guarda detectam uma sobregravação de memória. Como o layout heap é diferente entre versões de liberação e depuração, uma sobregravação de memória pode não criar problemas em uma compilação de depuração, mas pode ter efeitos catastróficos em uma compilação de versão.
+Ao compilar seu projeto para depuração, você está usando o alocador de memória de depuração. Isso significa que todas as alocações de memória têm bytes de proteção colocados em relação a elas. Esses bytes de proteção detectam uma substituição de memória. Como o layout de heap é diferente entre versões de versão e de depuração, uma substituição de memória pode não criar problemas em uma compilação de depuração, mas pode ter efeitos catastróficos em uma compilação de versão.
 
-Para obter mais informações, [consulte Verificar a sobregravação de memória](checking-for-memory-overwrites.md) e usar a [compilação de depuração para verificar a sobregravação de memória](using-the-debug-build-to-check-for-memory-overwrite.md).
+Para obter mais informações, consulte [verificar a substituição de memória](checking-for-memory-overwrites.md) e [usar a compilação de depuração para verificar a substituição de memória](using-the-debug-build-to-check-for-memory-overwrite.md).
 
-## <a name="compilation"></a><a name="_core_compilation"></a>Compilação
+## <a name="compilation"></a><a name="_core_compilation"></a>Ocorrida
 
-Muitas das macros MFC e grande parte da implementação do MFC mudam quando você constrói para lançamento. Em particular, a macro ASSERT não avalia nada em uma compilação de versão, de modo que nenhum código encontrado em ASSERTs será executado. Para obter mais informações, consulte [Examine as declarações da ASSERT](using-verify-instead-of-assert.md).
+Muitas das macros do MFC e grande parte da implementação do MFC são alteradas quando você cria para o lançamento. Em particular, a macro ASSERT é avaliada como Nothing em uma compilação de versão, portanto nenhum código encontrado em ASSERTs será executado. Para obter mais informações, consulte [examinar instruções Assert](using-verify-instead-of-assert.md).
 
-Algumas funções são forradas para aumentar a velocidade na compilação de liberação. As otimizações são geralmente ligadas em uma compilação de versão. Um localizador de memória diferente também está sendo usado.
+Algumas funções são embutidas para aumentar a velocidade na compilação da versão. Otimizações geralmente são ativadas em uma compilação de versão. Um alocador de memória diferente também está sendo usado.
 
-## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Suporte ao ponteiro
+## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Suporte a ponteiro
 
-A falta de informações de depuração remove o preenchimento do seu aplicativo. Em uma compilação de versão, ponteiros perdidos têm uma maior chance de apontar para memória não inicializada em vez de apontar para informações de depuração.
+A falta de informações de depuração remove o preenchimento do seu aplicativo. Em uma compilação de versão, os ponteiros isolados têm uma chance maior de apontar para a memória não inicializada em vez de apontar para informações de depuração.
 
 ## <a name="optimizations"></a><a name="_core_optimizations"></a>Otimizações
 
-Dependendo da natureza de certos segmentos de código, o compilador otimizador pode gerar código sumário. Esta é a causa menos provável de problemas de construção de liberação, mas surge de vez em quando. Para obter uma solução, consulte [Otimizando seu código](optimizing-your-code.md).
+Dependendo da natureza de determinados segmentos de código, o compilador de otimização pode gerar código inesperado. Essa é a causa menos provável de problemas de Build de liberação, mas isso ocorre ocasionalmente. Para obter uma solução, consulte [otimizando seu código](optimizing-your-code.md).
 
 ## <a name="see-also"></a>Confira também
 

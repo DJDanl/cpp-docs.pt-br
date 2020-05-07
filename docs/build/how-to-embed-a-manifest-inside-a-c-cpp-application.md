@@ -15,13 +15,13 @@ ms.locfileid: "81322992"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Como inserir um manifesto em um aplicativo do C/C++
 
-Recomendamos que você incorpore o manifesto de sua aplicação ou biblioteca dentro do binário final, pois isso garante o comportamento correto de tempo de execução na maioria dos cenários. Por padrão, o Visual Studio tenta incorporar o manifesto quando ele constrói um projeto. Para obter mais informações, consulte [Manifest Generation no Visual Studio](manifest-generation-in-visual-studio.md). No entanto, se você construir seu aplicativo usando nmake, você tem que fazer algumas alterações no makefile. Esta seção mostra como alterar os makefiles para que ele incorpore automaticamente o manifesto dentro do binário final.
+Recomendamos que você incorpore o manifesto do aplicativo ou da biblioteca dentro do binário final, pois isso garante o comportamento correto do tempo de execução na maioria dos cenários. Por padrão, o Visual Studio tenta inserir o manifesto quando ele cria um projeto. Para obter mais informações, consulte [manifesto Generation in Visual Studio](manifest-generation-in-visual-studio.md). No entanto, se você criar seu aplicativo usando o NMAKE, precisará fazer algumas alterações no Makefile. Esta seção mostra como alterar os makefiles para que ele insira automaticamente o manifesto dentro do binário final.
 
 ## <a name="two-approaches"></a>Duas abordagens
 
-Há duas maneiras de incorporar o manifesto dentro de um aplicativo ou biblioteca.
+Há duas maneiras de inserir o manifesto dentro de um aplicativo ou biblioteca.
 
-- Se você não estiver fazendo uma compilação incremental, você pode incorporar diretamente o manifesto usando uma linha de comando semelhante à seguinte como uma etapa pós-compilação:
+- Se você não estiver fazendo uma compilação incremental, poderá inserir diretamente o manifesto usando uma linha de comando semelhante à seguinte como uma etapa de pós-compilação:
 
    ```cmd
    mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
@@ -33,21 +33,21 @@ Há duas maneiras de incorporar o manifesto dentro de um aplicativo ou bibliotec
    mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
    ```
 
-   Use 1 para um EXE e 2 para um DLL.
+   Use 1 para um EXE e 2 para uma DLL.
 
 - Se você estiver fazendo uma compilação incremental, use as seguintes etapas:
 
-  - Vincule o binário para gerar o arquivo MyApp.exe.manifest.
+  - Vincule o binário para gerar o arquivo MyApp. exe. manifest.
 
-  - Converta o manifesto em um arquivo de recursos.
+  - Converta o manifesto em um arquivo de recurso.
 
-  - Re-link (incrementalmente) para incorporar o recurso manifesto no binário.
+  - Vincule novamente (incrementalmente) para inserir o recurso de manifesto no binário.
 
-Os exemplos a seguir mostram como alterar makefiles para incorporar ambas as técnicas.
+Os exemplos a seguir mostram como alterar os makefiles para incorporar as duas técnicas.
 
-## <a name="makefiles-before"></a>Makefiles (antes)
+## <a name="makefiles-before"></a>Makefiles (antes de)
 
-Considere o script nmake para MyApp.exe, um aplicativo simples construído a partir de um arquivo:
+Considere o script NMAKE para MyApp. exe, um aplicativo simples criado a partir de um arquivo:
 
 ```
 # build MyApp.exe
@@ -67,9 +67,9 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Se este script for executado inalterado com o Visual Studio, ele criará com sucesso o MyApp.exe. Ele também cria o arquivo manifesto externo MyApp.exe.manifest, para uso do sistema operacional para carregar conjuntos dependentes em tempo de execução.
+Se esse script for executado sem alterações no Visual Studio, ele criará o MyApp. exe com êxito. Ele também cria o arquivo de manifesto externo MyApp. exe. manifest, para uso pelo sistema operacional para carregar assemblies dependentes em tempo de execução.
 
-O script nmake para MyLibrary.dll é muito semelhante:
+O script NMAKE para MyLibrary. dll é muito semelhante:
 
 ```
 # build MyLibrary.dll
@@ -92,9 +92,9 @@ clean :
     del MyLibrary.obj MyLibrary.dll
 ```
 
-## <a name="makefiles-after"></a>Makefiles (Depois)
+## <a name="makefiles-after"></a>Makefiles (depois)
 
-Para construir com manifestos incorporados você tem que fazer quatro pequenas alterações nos arquivos de make originais. Para o arquivo de makedo MyApp.exe:
+Para compilar com manifestos incorporados, você precisa fazer quatro pequenas alterações nos makefiles originais. Para o makefile MyApp. exe:
 
 ```
 # build MyApp.exe
@@ -124,7 +124,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Para o arquivo de make do MyLibrary.dll:
+Para o makefile MyLibrary. dll:
 
 ```
 # build MyLibrary.dll
@@ -157,9 +157,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Os arquivos make agora incluem dois arquivos que fazem o trabalho real, makefile.inc e makefile.targ.inc.
+Os makefiles agora incluem dois arquivos que fazem o trabalho real, makefile. Inc e makefile. Tino. Inc.
 
-Crie makefile.inc e copie o seguinte:
+Crie makefile. Inc e copie o seguinte para ele:
 
 ```
 # makefile.inc -- Include this file into existing makefile at the very top.
@@ -230,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Agora crie **makefile.targ.inc** e copie o seguinte para ele:
+Agora, crie **makefile. Tino. Inc** e copie o seguinte para ele:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile
@@ -259,4 +259,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>Confira também
 
-[Entendendo a Geração de Manifestos para Programas C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
+[Entendendo a geração de manifesto para programas C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

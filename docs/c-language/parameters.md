@@ -25,25 +25,25 @@ Os argumentos são nomes de valores transmitidos a uma função por uma chamada 
 
 ## <a name="syntax"></a>Sintaxe
 
-*definição de função:*<br/>
+*função-definição*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\**atributo-seq* é específico da Microsoft\*/
+/\**Attribute-Seq* é específico da Microsoft\*/
 
-*declarador:*<br/>
+*Declarador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*declarador direto*:\* / Um declarador de função\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarador direto***(lista***de parâmetros- tipo)***)**  / \* Declarador de novo estilo      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarador direto*<sub>(opção</sub> de lista de **(***identificadores* **)**  / \* Declarador estilo obsoleto    \*/
+*Declarador direto*:\* /um Declarador de função\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Declarador *direto***(***tipo de parâmetro-lista***)**  / \* Declarador de novo estilo      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***(***opção identificador-lista*<sub>opt</sub> **)**  / \* Declarador de estilo obsoleto    \*/
 
-*tipo de parâmetro:*/\* A lista de parâmetros\*/<br/>
+*tipo de parâmetro-lista*:/\* a lista de parâmetros\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros,* **...**
+&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* **,...**
 
-*lista de parâmetros:*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parâmetro-declaração*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros,* **,***declaração de parâmetros*  
+*lista de parâmetros*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração de parâmetro*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parâmetro-List* **,**  *declaração de parâmetro*
 
 *parameter-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
@@ -66,11 +66,11 @@ void new( double x, double y, double z )
 }
 ```
 
-Se ocorrer pelo menos um parâmetro na lista de parâmetros, a lista pode terminar com uma tura seguida por três períodos (**... ).** Essa construção, chamada de "notação ellipsis", indica um número variável de argumentos para a função. (Consulte [Chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obter mais informações.) No entanto, uma chamada para a função deve ter pelo menos tantos argumentos quanto há parâmetros antes da última comuma.
+Se pelo menos um parâmetro ocorrer na lista de parâmetros, a lista poderá terminar com uma vírgula seguida de três pontos (**,...**). Essa construção, chamada de "notação de reticências", indica um número variável de argumentos para a função. (Consulte [chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obter mais informações.) No entanto, uma chamada para a função deve ter pelo menos tantos argumentos quantos houver parâmetros antes da última vírgula.
 
 Se nenhum argumento for transmitido à função, a lista de parâmetros será substituída pela palavra-chave `void`. Esse uso de `void` é diferente do seu uso como um especificador de tipo.
 
-A ordem e o tipo de parâmetros, inclusive qualquer uso da notação de reticências, devem ser iguais em todas as declarações de função (se houver) e na definição da função. Os tipos de argumentos depois das conversões aritméticas comuns devem ter atribuições compatíveis com os tipos dos parâmetros correspondentes. (Consulte [Conversões Aritméticas Usuais](../c-language/usual-arithmetic-conversions.md) para obter informações sobre conversões aritméticas.) Os argumentos que seguem as elipses não são verificados. Um parâmetro pode ter qualquer tipo fundamental, de estrutura, união, ponteiro ou matriz.
+A ordem e o tipo de parâmetros, inclusive qualquer uso da notação de reticências, devem ser iguais em todas as declarações de função (se houver) e na definição da função. Os tipos de argumentos depois das conversões aritméticas comuns devem ter atribuições compatíveis com os tipos dos parâmetros correspondentes. (Consulte [conversões aritméticas usuais](../c-language/usual-arithmetic-conversions.md) para obter informações sobre conversões aritméticas.) Os argumentos após as reticências não são verificados. Um parâmetro pode ter qualquer tipo fundamental, de estrutura, união, ponteiro ou matriz.
 
 O compilador executa as conversões aritméticas comuns independentemente em cada parâmetro e em cada argumento, se necessário. Após a conversão, nenhum parâmetro é menor que `int` e nenhum parâmetro tem o tipo **float**, a menos que o tipo de parâmetro seja especificado explicitamente como **float** no protótipo. Isso significa, por exemplo, que declarar um parâmetro como `char` tem o mesmo efeito que declará-lo o como `int`.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Modificar propriedades e metas do projeto C++ sem alterar o arquivo do projeto'
+title: Como modificar propriedades e destinos de projeto C++ sem alterar o arquivo de projeto
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
@@ -10,7 +10,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328458"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Como: Modificar propriedades e metas do projeto C++ sem alterar o arquivo do projeto
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Como modificar propriedades e destinos de projeto C++ sem alterar o arquivo de projeto
 
 Substitua as propriedades e os destinos do projeto no prompt de comando do MSBuild sem alterar o arquivo de projeto. Isso é útil quando você deseja aplicar algumas propriedades temporária ou ocasionalmente. Isso pressupõe noções básicas do MSBuild. Para obter mais informações, consulte [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 

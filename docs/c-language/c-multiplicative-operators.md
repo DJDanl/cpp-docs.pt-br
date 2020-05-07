@@ -20,13 +20,13 @@ ms.locfileid: "81335005"
 ---
 # <a name="c-multiplicative-operators"></a>Operadores multiplicativos C
 
-Os operadores multiplicativos<strong>\*</strong>realizam operações de multiplicação ( ), divisão (**/**) e restantes (**%**) operações.
+Os operadores multiplicativa executam operações de<strong>\*</strong>multiplicação ()**/**, divisão () e**%** resto ().
 
 ## <a name="syntax"></a>Sintaxe
 
-*multiplicação-expressão* &nbsp; &nbsp; &nbsp; &nbsp;: *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicativo-expressão* <strong>\*</strong> *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicativa-expressão* **/** *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicativa-expressão* **%** *cast-expression cast-expression cast-expression cast-expression*
+*multiplicativa-* expressão: &nbsp; &nbsp; &nbsp; &nbsp; *Cast-Expression* &nbsp; &nbsp; &nbsp; &nbsp; **%** *multiplicative-expression* &nbsp; &nbsp; *multiplicative-expression* *multiplicative-expression* &nbsp; *cast-expression* **/** *cast-expression* *cast-expression* multiplicativa-expressão <strong>\*</strong> Cast &nbsp;- &nbsp;Expression multiplicativa-Expression Cast &nbsp;-expressão multiplicativa-Expression Cast-Expression &nbsp; &nbsp;
 
-Os operands do operador**%** restante ( ) devem ser integrais. Os operadores<strong>\*</strong>de multiplicação ( ) e divisão (**/**) podem tomar operands integral ou flutuante; os tipos de operadores podem ser diferentes.
+Os operandos do operador resto (**%**) devem ser integral. Os operadores de multiplicação (<strong>\*</strong>) e**/** divisão () podem ter operandos de tipo inteiro ou flutuante; os tipos dos operandos podem ser diferentes.
 
 Os operadores multiplicativos executam as conversões aritméticas comuns nos operandos. O tipo do resultado é o tipo dos operandos após conversão.
 
@@ -38,8 +38,8 @@ Os operadores multiplicativos C são descritos abaixo:
 |Operador|Descrição|
 |--------------|-----------------|
 |<strong>\*</strong>|O operador de multiplicação faz com que dois operandos sejam multiplicados.|
-|**/**|O operador de divisão faz com que o primeiro operando seja dividido pelo segundo. Se dois operandos de inteiro forem divididos e o resultado não for um inteiro, ele será truncado de acordo com as seguintes regras:<br/><br/>- O resultado da divisão por 0 é indefinida de acordo com o padrão ANSI C. O compilador do Microsoft C gera um erro no tempo de compilação ou no tempo de execução.<br/><br/>- Se ambos os operandos forem positivos ou sem sinal, o resultado será truncado para 0.<br/><br/>- Se qualquer operando for negativo, se o resultado da operação for o maior inteiro menor ou igual ao quociente algébrico ou o menor inteiro maior ou igual ao quociente algébrico, ele será definido pela implementação. (Veja a seção específica da Microsoft abaixo.)|
-|**%**|O resultado do operador de restante é o restante quando o primeiro operando é dividido pelo segundo. Quando a divisão não é exata, o resultado é determinado pelas seguintes regras:<br/><br/>- Se o operando da direita for zero, o resultado será indefinido.<br/><br/>- Se ambos os operandos forem positivos ou sem sinal, o resultado será positivo.<br/><br/>- Se qualquer operando for negativo e o resultado não for exato, o resultado será definido para implementação. (Veja a seção específica da Microsoft abaixo.)|
+|**/**|O operador de divisão faz com que o primeiro operando seja dividido pelo segundo. Se dois operandos de inteiro forem divididos e o resultado não for um inteiro, ele será truncado de acordo com as seguintes regras:<br/><br/>- O resultado da divisão por 0 é indefinida de acordo com o padrão ANSI C. O compilador do Microsoft C gera um erro no tempo de compilação ou no tempo de execução.<br/><br/>- Se ambos os operandos forem positivos ou sem sinal, o resultado será truncado para 0.<br/><br/>- Se qualquer operando for negativo, se o resultado da operação for o maior inteiro menor ou igual ao quociente algébrico ou o menor inteiro maior ou igual ao quociente algébrico, ele será definido pela implementação. (Consulte a seção específica da Microsoft abaixo.)|
+|**%**|O resultado do operador de restante é o restante quando o primeiro operando é dividido pelo segundo. Quando a divisão não é exata, o resultado é determinado pelas seguintes regras:<br/><br/>- Se o operando da direita for zero, o resultado será indefinido.<br/><br/>- Se ambos os operandos forem positivos ou sem sinal, o resultado será positivo.<br/><br/>- Se qualquer operando for negativo e o resultado não for exato, o resultado será definido para implementação. (Consulte a seção específica da Microsoft abaixo.)|
 
 ### <a name="microsoft-specific"></a>Específico da Microsoft
 
@@ -78,7 +78,7 @@ Essa instrução aloca a `n` ao restante inteiro, 1, quando 10 é dividido por 3
 
 **Específico da Microsoft**
 
-O sinal do restante é o mesmo sinal do dividendo. Por exemplo:
+O sinal do restante é o mesmo sinal do dividendo. Por exemplo: 
 
 ```
 50 % -6 = 2
@@ -87,8 +87,8 @@ O sinal do restante é o mesmo sinal do dividendo. Por exemplo:
 
 Em cada caso, `50` e `2` têm o mesmo sinal.
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
-[Operadores Multiplicativos e o Operador do Módulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+[Operadores multiplicativa e o operador de módulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Mesclar vários perfis PGO em um único perfil'
+title: Como mesclar vários perfis PGO em um único perfil
 ms.date: 03/14/2018
 helpviewer_keywords:
 - merging profiles
@@ -12,33 +12,33 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188867"
 ---
-# <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Como: Mesclar vários perfis PGO em um único perfil
+# <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Como mesclar vários perfis PGO em um único perfil
 
-Otimização Guiada por perfil (PGO) é uma excelente ferramenta para criar binários otimizados com base em um cenário cujo perfil foi criado. Mas e se você tiver um aplicativo que tenha vários cenários importantes, ainda distintos? Como criar um único perfil pode usar a PGO de vários cenários diferentes? No Visual Studio, o Gerenciador de PGO [pgomgr.exe](pgomgr.md), faz esse trabalho para você.
+A PGO (otimização guiada por perfil) é uma excelente ferramenta para criar binários otimizados com base em um cenário cujo perfil é criado. Mas e se você tiver um aplicativo que tenha vários cenários importantes, mas distintos? Como criar um único perfil que o PGO pode usar de vários cenários diferentes? No Visual Studio, o PGO Manager, [pgomgr. exe](pgomgr.md), faz esse trabalho para você.
 
-A sintaxe para a mesclagem de perfis é:
+A sintaxe para mesclar perfis é:
 
 `pgomgr /merge[:num] [.pgc_files] .pgd_files`
 
-onde `num` é um peso opcional a ser usado para os arquivos. PGC adicionados por essa mesclagem. Os pesos são usados se há alguns cenários que são mais importantes que outras pessoas ou se houver cenários que estão para ser executado várias vezes.
+em `num` que é um peso opcional a ser usado para os arquivos. pgc adicionados por essa mesclagem. Os pesos são geralmente usados se houver alguns cenários que são mais importantes do que outros ou se houver cenários que devem ser executados várias vezes.
 
 > [!NOTE]
-> O Gerenciador de PGO não funciona com os dados de perfil obsoletos. Para mesclar um arquivo. PGC em um arquivo. PGD, o arquivo. PGC deve ser gerado por um executável que foi criado por invocação mesmo link que gerou o arquivo. PGD.
+> O Gerenciador de PGO não funciona com dados de perfil obsoletos. Para mesclar um arquivo. pgc em um arquivo. pgd, o arquivo. pgc deve ser gerado por um executável que foi criado pela mesma invocação de link que gerou o arquivo. pgd.
 
 ## <a name="examples"></a>Exemplos
 
-Neste exemplo, o Gerenciador de PGO adiciona pgcFile.pgc ao pgdFile.pgd seis vezes:
+Neste exemplo, o Gerenciador de PGO adiciona pgcFile. pgc a pgdFile. pgd seis vezes:
 
 `pgomgr /merge:6 pgcFile.pgc pgdFile.pgd`
 
-Neste exemplo, o Gerenciador de PGO adiciona pgcFile1.pgc e pgcFile2.pgc para pgdFile.pgd, duas vezes para cada arquivo. PGC:
+Neste exemplo, o Gerenciador de PGO adiciona pgcFile1. pgc e pgcFile2. pgc a pgdFile. pgd, duas vezes para cada arquivo. pgc:
 
 `pgomgr /merge:2 pgcFile1.pgc pgcFile2.pgc pgdFile.pgd`
 
-Se o Gerenciador de PGO é executado sem nenhum argumento de arquivo. PGC, ele pesquisará o diretório local para todos os arquivos. PGC que têm o mesmo nome base do arquivo. PGD seguido por um ponto de exclamação (!) e caracteres arbitrários, em seguida, um ou mais. Por exemplo, se o diretório local tiver arquivos test.pgd, test!1.pgc, test2.pgc e test!hello.pgc, e o comando a seguir é executado no diretório local, em seguida, **pgomgr** mescla test!1.pgc e test!hello.pgc test.pgd.
+Se o Gerenciador de PGO for executado sem argumentos de arquivo. pgc, ele pesquisará o diretório local em busca de todos os arquivos. pgc que têm o mesmo nome base do arquivo. pgd seguido por um ponto de exclamação (!) e, em seguida, um ou mais caracteres arbitrários. Por exemplo, se o diretório local tiver arquivos test. pgd, Test! 1. pgc, test2. pgc e test! hello. pgc, e o comando a seguir for executado a partir do diretório local, o **pgomgr** mesclará Test! 1. pgc e test! hello. pgc em Test. pgd.
 
 `pgomgr /merge test.pgd`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Otimizações guiadas por perfil](profile-guided-optimizations.md)
+[Otimizações orientadas a perfil](profile-guided-optimizations.md)

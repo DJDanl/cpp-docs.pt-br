@@ -17,13 +17,13 @@ ms.locfileid: "80078687"
 ---
 # <a name="visual-studio-projects---c"></a>Projetos do Visual Studio – C++
 
-Um *projeto do Visual Studio* é um projeto baseado no sistema de build do MSBuild. O MSBuild é o sistema de compilação nativo do Visual Studio e geralmente é o melhor sistema de compilação a ser usado para programas específicos do Windows. O MSBuild está totalmente integrado ao Visual Studio, mas você também pode usá-lo na linha de comando. Para projetos de plataforma cruzada ou projetos que usam bibliotecas de software livre, recomendamos o uso [de projetos CMake no Visual Studio](cmake-projects-in-visual-studio.md) no visual Studio 2017 e posterior. Para obter informações sobre como atualizar projetos do MSBuild de versões anteriores do Visual Studio, consulte o [Guia de portagem e atualização da Microsoft C++ ](../porting/visual-cpp-porting-and-upgrading-guide.md).
+Um *projeto do Visual Studio* é um projeto baseado no sistema de build do MSBuild. O MSBuild é o sistema de compilação nativo do Visual Studio e geralmente é o melhor sistema de compilação a ser usado para programas específicos do Windows. O MSBuild está totalmente integrado ao Visual Studio, mas você também pode usá-lo na linha de comando. Para projetos de plataforma cruzada ou projetos que usam bibliotecas de software livre, recomendamos o uso [de projetos CMake no Visual Studio](cmake-projects-in-visual-studio.md) no visual Studio 2017 e posterior. Para obter informações sobre como atualizar projetos do MSBuild de versões anteriores do Visual Studio, consulte o [Guia de portagem e atualização do Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Criar um projeto
 
 ::: moniker range="vs-2019"
 
-Crie projetos C++ escolhendo **Arquivo** > **Novo** > **Projeto** e, em seguida, definindo a **Linguagem** como C++. Na lista de resultados, você verá uma lista de modelos de projeto pela qual poderá filtrar, definindo a **Plataforma** ou o **Tipo de Projeto** e digitando palavras-chave na caixa de pesquisa.
+Você pode criar projetos C++ escolhendo **arquivo** > **novo** > **projeto**e, em seguida, definindo o **idioma** como C++. Na lista de resultados, você verá uma lista de modelos de projeto pela qual poderá filtrar, definindo a **Plataforma** ou o **Tipo de Projeto** e digitando palavras-chave na caixa de pesquisa.
 
    ![Modelos de projeto do Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Caixa de diálogo novo projeto do Visual Studio 2019")
 
@@ -31,7 +31,7 @@ Crie projetos C++ escolhendo **Arquivo** > **Novo** > **Projeto** e, em seguida,
 
 ::: moniker range="vs-2017"
 
-Crie projetos C++ escolhendo **Arquivo** > **Novo** > **Projeto** e, em seguida, escolhendo Visual C++ no painel esquerdo. No painel central, você verá uma lista de modelos de projeto:
+Você pode criar projetos C++ escolhendo **arquivo** > **novo** > **projeto**e, em seguida, escolhendo Visual C++ no painel esquerdo. No painel central, você verá uma lista de modelos de projeto:
 
    ![Modelos de projeto](../overview/media/vs2017-new-project.png "Caixa de diálogo novo projeto do Visual Studio 2017")
 
@@ -81,10 +81,10 @@ Como personalizar a localização dos arquivos executáveis criados no processo 
 [Etapas e eventos de build personalizados](understanding-custom-build-steps-and-build-events.md)<br/>
 Como adicionar qualquer comando arbitrário para o processo de build em pontos específicos.
 
-[Criar um projeto com base em código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
+[Criar um projeto com base no código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Como criar um projeto do Visual Studio com base em uma coleção flexível de arquivos de origem.
 
 ## <a name="see-also"></a>Confira também
 
 [Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br>
-[Guia C++ de atualização e portabilidade da Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Guia de atualização e portabilidade do Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

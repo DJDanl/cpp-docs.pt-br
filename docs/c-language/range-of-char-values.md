@@ -11,12 +11,12 @@ ms.locfileid: "81480899"
 ---
 # <a name="range-of-char-values"></a>Intervalo de valores char
 
-**ANSI 3.2.1.1** Se um **char** "simples" tem a mesma faixa de valores que um **char assinado** ou um char **não assinado**
+**3.2.1.1 ANSI** Se um **caractere** "Plain" tem o mesmo intervalo de valores que um **char assinado** ou um **Char não** assinado
 
 Todos os valores de caracteres com sinal variam de -128 a 127. Todos os valores de caracteres sem sinal variam de 0 a 255.
 
-A [`/J`](../build/reference/j-default-char-type-is-unsigned.md) opção compilador altera o tipo padrão para **char** de **char assinado** para char **não assinado**.
+A [`/J`](../build/reference/j-default-char-type-is-unsigned.md) opção do compilador altera o tipo padrão para **Char** de Char **assinado** para **caractere não**assinado.
 
 ## <a name="see-also"></a>Confira também
 
-[Caracteres](../c-language/characters.md)
+[Personagens](../c-language/characters.md)

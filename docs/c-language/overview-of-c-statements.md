@@ -27,22 +27,22 @@ As instruções C consistem em tokens, expressões e outras instruções. Uma in
 
 [expression-statement](../c-language/expression-statement-c.md)
 
-[selection-statement](../c-language/if-statement-c.md)
+[instrução de seleção](../c-language/if-statement-c.md)
 
 [iteration-statement](../c-language/do-while-statement-c.md)
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[tente-Except-Statement](../c-language/try-except-statement-c.md) /* \*específicas da Microsoft /
+[try-Except-Statement](../c-language/try-except-statement-c.md) /* específico da Microsoft\*/
 
-[instrução try-finally-](../c-language/try-finally-statement-c.md) /\* \*específica da Microsoft /
+[instrução try-finally-](../c-language/try-finally-statement-c.md)  / \* da Microsoft\*/
 
-Geralmente, o corpo da instrução é uma “instrução composta”. Uma instrução composta consiste em outras instruções que podem incluir palavras-chave. A instrução compound é delimitada por chaves ( **{ }** ). Todas as outras instruções C terminam com ponto-e-vírgula ( **;** ). O ponto-e-vírgula é um terminador de instrução.
+Geralmente, o corpo da instrução é uma “instrução composta”. Uma instrução composta consiste em outras instruções que podem incluir palavras-chave. A instrução compound é delimitada por chaves (**{ }**). Todas as outras instruções C terminam com ponto-e-vírgula (**;**). O ponto-e-vírgula é um terminador de instrução.
 
 A instrução da expressão contém a expressão C que pode conter operadores aritméticos ou lógicos introduzidos em [Expressões e atribuições](../c-language/expressions-and-assignments.md). A instrução null é uma instrução vazia.
 
 Qualquer instrução C pode começar com um rótulo de identificação que consiste em um nome e dois-pontos. Como apenas a instrução `goto` reconhece rótulos de instrução, os rótulos de instrução são explicados com `goto`. Consulte [as instruções goto e labeled](../c-language/goto-and-labeled-statements-c.md) para obter mais informações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções](../c-language/statements-c.md)

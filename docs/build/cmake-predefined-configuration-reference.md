@@ -15,7 +15,7 @@ ms.locfileid: "81322998"
 
 ::: moniker range="vs-2015"
 
-Os projetos CMake são suportados no Visual Studio 2017 e posteriormente.
+Os projetos CMake têm suporte no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
@@ -34,7 +34,7 @@ Em um projeto do CMake, configurações de build são armazenadas em um arquivo 
 - Depuração de MinGW
 - Versão de MinGW
 
-Quando você escolhe uma configuração, ela é adicionada ao arquivo *CMakeSettings.json* na pasta raiz do projeto. Você então pode usá-la para compilar seu projeto. Para obter informações sobre as propriedades de configuração, consulte [referência CMakeSettings](cmakesettings-reference.md).
+Quando você escolhe uma configuração, ela é adicionada ao arquivo *CMakeSettings. JSON* na pasta raiz do projeto. Você então pode usá-la para compilar seu projeto. Para obter informações sobre as propriedades de configuração, consulte [referência de CMakeSettings](cmakesettings-reference.md).
 
 ## <a name="linux-predefined-build-configurations"></a>Configurações de build do Linux predefinidas:
 
@@ -359,25 +359,25 @@ essas opções permitem que você execute comandos no sistema remoto antes e dep
 Em um projeto do CMake, configurações de build são armazenadas em um arquivo CMakeSettings.json. Quando você escolhe **Gerenciar Configurações** na lista suspensa de configuração de build na barra de ferramentas principal, uma caixa de diálogo é exibida mostrando o padrão de configurações do CMake disponíveis no Visual Studio:
 
 - Depuração de x86
-- x86 Clang Debug
+- Depuração Clang x86
 - Versão de x86
-- Liberação x86 Clang
+- Versão Clang x86
 - Depuração de x64
-- x64 Clang Debug
+- Depuração Clang x64
 - Versão de x64
-- liberação x64 Clang
+- Versão Clang x64
 - Linux-Debug
 - Linux-Release
 - Linux-Clang-Debug
-- Lançamento do Linux-Clang
+- Linux-Clang-versão
 - Cache existente (remoto)
 - Cache existente
 - Depuração de MinGW
 - Versão de MinGW
-- WSL Debug
-- Lançamento wsl
-- WSL Clang Debug
-- Liberação wsl clang
+- Depuração WSL
+- Versão WSL
+- Depuração WSL Clang
+- Versão WSL Clang
 - Clang
 
 Quando você escolhe uma configuração, ela é adicionada ao arquivo CMakeSettings.json na pasta raiz do projeto. Você então pode usá-la para compilar seu projeto.

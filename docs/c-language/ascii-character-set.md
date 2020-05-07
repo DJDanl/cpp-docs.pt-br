@@ -20,4 +20,4 @@ O conjunto de caracteres de origem é o conjunto de caracteres válidos que pode
 
 ## <a name="see-also"></a>Confira também
 
-[Caracteres](../c-language/characters.md)
+[Personagens](../c-language/characters.md)

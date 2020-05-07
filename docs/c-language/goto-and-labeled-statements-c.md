@@ -21,15 +21,15 @@ A instrução `goto` transfere o controle para um rótulo. O rótulo fornecido d
 
 ## <a name="syntax"></a>Sintaxe
 
-*statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
+*instrução*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução rotulada*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de salto*
 
-*jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;o identificador **goto** **;**
+*instrução de salto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto***identificador*GoTo **;**    
 
-*labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;*identificador*de &nbsp; **:** *instrução*
+*rotulado-instrução*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificador*  **:**  *instrução*
 
 O rótulo de uma instrução é significante somente para uma instrução `goto`; em qualquer outro contexto, uma instrução rotulada é executada sem considerar o rótulo.
 
@@ -67,6 +67,6 @@ int main()
 
 Neste exemplo, uma instrução `goto` transfere o controle para o ponto rotulado `stop` quando o valor de `i` é igual a 5.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Instruções](../c-language/statements-c.md)

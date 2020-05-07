@@ -5,11 +5,11 @@ helpviewer_keywords:
 - strerror function
 ms.assetid: 9fb9366e-d9a8-47d4-ad51-d98774a0617f
 ms.openlocfilehash: e2bcfef0ad7c2c432b84efdff76c88a87f6f84c9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157832"
 ---
 # <a name="strerror-function"></a>Função strerror
 
@@ -57,6 +57,6 @@ A função `strerror` gera essas mensagens:
 36  Resource deadlock would occur
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções de biblioteca](../c-language/library-functions.md)

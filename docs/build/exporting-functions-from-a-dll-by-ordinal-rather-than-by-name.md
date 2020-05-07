@@ -16,16 +16,16 @@ ms.locfileid: "81328581"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Exportando funções a partir de uma DLL por ordinal e não por nome
 
-A maneira mais simples de exportar funções do seu DLL é exportá-las pelo nome. Isso é o que acontece quando você usa **__declspec(dllexport)**, por exemplo. Mas você pode, em vez disso, exportar funções por ordinal. Com esta técnica, você deve usar um arquivo .def em vez de **__declspec(dllexport)**. Para especificar o valor ordinal de uma função, aprová-lo ordinal ao nome da função no arquivo .def. Para obter informações sobre como especificar ordinals, consulte [Exportando a partir de um DLL Usando .def Files](exporting-from-a-dll-using-def-files.md).
+A maneira mais simples de exportar funções de sua DLL é exportá-las por nome. Isso é o que acontece quando você usa **__declspec (dllexport)**, por exemplo. Mas, em vez disso, você pode exportar funções por ordinal. Com essa técnica, você deve usar um arquivo. def em vez de **__declspec (dllexport)**. Para especificar o valor ordinal de uma função, acrescente seu ordinal ao nome da função no arquivo. def. Para obter informações sobre como especificar ordinais, consulte [exportando de uma DLL usando arquivos. def](exporting-from-a-dll-using-def-files.md).
 
 > [!TIP]
-> Se você quiser otimizar o tamanho do arquivo do seu DLL, use o atributo **NONAME** em cada função exportada. Com o atributo **NONAME,** as ordinais são armazenadas na tabela de exportação da DLL em vez dos nomes da função. Isso pode ser uma economia considerável se você estiver exportando muitas funções.
+> Se você quiser otimizar o tamanho do arquivo de sua DLL, use o atributo **NoName** em cada função exportada. Com o atributo **NoName** , os ordinais são armazenados na tabela de exportação da dll em vez dos nomes de função. Isso pode ser uma economia considerável se você estiver exportando muitas funções.
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Use um arquivo .def para que eu possa exportar por ordinal](exporting-from-a-dll-using-def-files.md)
+- [Usar um arquivo. def para que eu possa exportar por ordinal](exporting-from-a-dll-using-def-files.md)
 
-- [Use __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Usar __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 ## <a name="see-also"></a>Confira também
 

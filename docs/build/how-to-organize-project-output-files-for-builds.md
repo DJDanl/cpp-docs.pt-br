@@ -46,7 +46,7 @@ Este tópico descreve as melhores práticas para organizar arquivos de saída do
 
 1. Referencie o arquivo de cabeçalho apropriado no código usando a diretiva #include. O arquivo de cabeçalho precisa estar no caminho de inclusão ou fazer parte do projeto atual. Para obter mais informações, confira [Diretiva #include (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. Defina também as dependências do projeto. A definição das dependências do projeto garante duas coisas. Primeiro, garante que os projetos sejam compilados na ordem correta, de modo que um projeto sempre possa encontrar os arquivos dependentes de que precisa. Em segundo lugar, ele adiciona implicitamente o diretório de saída do projeto dependente ao caminho para que os arquivos possam ser encontrados facilmente no link-time.
+1. Defina também as dependências do projeto. A definição das dependências do projeto garante duas coisas. Primeiro, garante que os projetos sejam compilados na ordem correta, de modo que um projeto sempre possa encontrar os arquivos dependentes de que precisa. Em segundo lugar, ele adiciona implicitamente o diretório de saída do projeto dependente ao caminho para que os arquivos possam ser encontrados facilmente no momento do link.
 
 1. Para implantar o aplicativo, você precisará colocar a DLL em um local apropriado. Pode ser um dos seguintes:
 

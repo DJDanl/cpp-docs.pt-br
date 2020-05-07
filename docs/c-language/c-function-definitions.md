@@ -26,17 +26,17 @@ Uma definição de função especifica o nome da função, os tipos e o número 
 ## <a name="syntax"></a>Sintaxe
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração externa* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
-*external-declaration*: /\* Permitida apenas no escopo externo (do arquivo) \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+*declaração externa*:/\* permitida somente em escopo externo (arquivo)\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*função-definição*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*mesma*
 
-*function-definition*:<br/>
+*função-definição*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-*atributo de \* /-Seq* é \*específico da Microsoft /
+/\**Attribute-Seq* é específico da Microsoft\*/
 
 Os parâmetros de protótipo são:
 
@@ -46,25 +46,25 @@ Os parâmetros de protótipo são:
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*mesma*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
-*declarator*:<br/>
+*Declarador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*: /\* Um declarador de função \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Declarador de novo estilo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Declarador de estilo obsoleto \*/
+*Declarador direto*:\* /um Declarador de função\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Declarador *direto***(***tipo de parâmetro-lista***)**  / \* Declarador de novo estilo      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***(***opção identificador-lista*<sub>opt</sub> **)**  / \* Declarador de estilo obsoleto    \*/
 
 A lista de parâmetros em uma definição usa esta sintaxe:
 
-*parameter-type-list*: /\* A lista de parâmetros \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
+*tipo de parâmetro-lista*:/\* a lista de parâmetros\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* **,...**
 
-*parameter-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
+*lista de parâmetros*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração de parâmetro*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parâmetro-List* **,**  *declaração de parâmetro*
 
 *parameter-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
@@ -72,14 +72,14 @@ A lista de parâmetros em uma definição usa esta sintaxe:
 
 A lista de parâmetros em uma definição de função antiga usa esta sintaxe:
 
-*identifier-list*: /\* Usada em declarações e definições de função de estilo obsoleto \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier-list* **,**  *identifier*
+*identificador-lista*:/\* usado em definições e declarações de função de estilo obsoleto\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificador-lista* **,**  *identificador*
 
 A sintaxe para o corpo da função é:
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*instrução composta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaração-lista*de instruções<sub>opt</sub> *-lista*<sub>opt</sub> **}**
 
 Os únicos especificadores de classe de armazenamento que podem alterar uma declaração de função são **extern** e **static**. O especificador **extern** significa que a função pode ser referenciada de outros arquivos; ou seja, o nome da função é exportado para o vinculador. O especificador **static** significa que a função não pode ser referenciada de outros arquivos; ou seja, o nome não é exportado pelo vinculador. Se nenhuma classe de armazenamento for exibida em uma definição de função, **extern** será assumido. Em qualquer caso, a função sempre é visível do ponto de definição ao final do arquivo.
 
@@ -93,6 +93,6 @@ A *compound-statement* é o corpo da função que contém declarações de vari�
 
 As seções [Atributos de função](../c-language/function-attributes.md), [Classe de armazenamento](../c-language/storage-class.md), [Tipo de retorno](../c-language/return-type.md), [Parâmetros](../c-language/parameters.md) e [Corpo da função](../c-language/function-body.md) descrevem os componentes da definição de função detalhadamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções](../c-language/functions-c.md)

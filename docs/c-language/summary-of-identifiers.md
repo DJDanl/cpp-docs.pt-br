@@ -3,16 +3,16 @@ title: Resumo de identificadores
 ms.date: 11/04/2016
 ms.assetid: 2fe74b88-79e4-4e09-9d87-c258905ec31a
 ms.openlocfilehash: b690e434705d20806573f61c48f528ced6dad82c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157715"
 ---
 # <a name="summary-of-identifiers"></a>Resumo de identificadores
 
-*identifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
+*identificador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Não dígito*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
@@ -23,6 +23,6 @@ ms.locfileid: "56152853"
 *digit*: uma destas opções<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gramática lexical](../c-language/lexical-grammar.md)

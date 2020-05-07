@@ -18,14 +18,14 @@ ms.locfileid: "81334568"
 
 Uma *chamada de função* é uma expressão que passa o controle e os argumentos (se houver) para uma função e tem o formato:
 
-*expressão* <sub>(opção</sub>*lista de expressão)*
+*expressão* (<sub>opt</sub>*de lista de expressões*)
 
 em que *expression* é um nome de função ou é avaliado em um endereço de função e *expression-list* é uma lista de expressões (separadas por vírgulas). Os valores dessas últimas expressões são os argumentos passados para a função. Se a função não retorna um valor, você a declara para ser uma função que retorna `void`.
 
 Se uma declaração existe antes da chamada de função, mas nenhuma informação é fornecida quanto aos parâmetros, os argumentos não declarados simplesmente passam pelas conversões aritméticas comuns.
 
 > [!NOTE]
-> As expressões na lista de argumentos da função podem ser avaliadas em qualquer ordem, portanto, os argumentos cujos valores podem ser alterados por efeitos colaterais de outro argumento têm valores indefinidos. O ponto de sequência definido pelo operador de chamada de função apenas garante que todos os efeitos colaterais na lista de argumentos sejam avaliados antes que o controle passe para a função chamada. (Observe que a ordem em que os argumentos são empurrados sobre a pilha é uma questão separada.) Consulte [Pontos de Seqüência](../c-language/c-sequence-points.md) para obter mais informações.
+> As expressões na lista de argumentos da função podem ser avaliadas em qualquer ordem, portanto, os argumentos cujos valores podem ser alterados por efeitos colaterais de outro argumento têm valores indefinidos. O ponto de sequência definido pelo operador de chamada de função apenas garante que todos os efeitos colaterais na lista de argumentos sejam avaliados antes que o controle passe para a função chamada. (Observe que a ordem na qual os argumentos são enviados por push na pilha é uma questão separada.) Consulte [pontos de sequência](../c-language/c-sequence-points.md) para obter mais informações.
 
 O único requisito em qualquer chamada de função é que a expressão antes dos parênteses devem ser avaliadas como um endereço de função. Isso significa que uma função pode ser chamada por qualquer expressão de ponteiro de função.
 

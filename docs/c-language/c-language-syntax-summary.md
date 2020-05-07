@@ -23,4 +23,4 @@ Esta seção fornece a descrição completa dos recursos da linguagem C e da lin
 
 ## <a name="see-also"></a>Confira também
 
-[Referência em Linguagem C](../c-language/c-language-reference.md)
+[Referência da linguagem C](../c-language/c-language-reference.md)

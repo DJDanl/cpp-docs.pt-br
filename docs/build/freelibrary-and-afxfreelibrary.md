@@ -24,7 +24,7 @@ ms.locfileid: "76821545"
 
 Processos que se vinculam explicitamente a uma DLL chamam a função [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) quando o módulo DLL não é mais necessário. Essa função decrementa a contagem de referência do módulo. E, se a contagem de referência for zero, ela não será mapeada do espaço de endereço do processo.
 
-Em um aplicativo MFC, use [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) em vez de `FreeLibrary` para descarregar uma DLL de extensão do MFC. A interface (protótipo de função) para `AfxFreeLibrary` é a mesma que `FreeLibrary`.
+Em um aplicativo MFC, use [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) em vez `FreeLibrary` de para descarregar uma DLL de extensão do MFC. A interface (protótipo de função) `AfxFreeLibrary` para é a mesma `FreeLibrary`que.
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
@@ -38,8 +38,8 @@ Em um aplicativo MFC, use [AfxFreeLibrary](../mfc/reference/application-informat
 
 - [GetProcAddress](getprocaddress.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[Criar C/C++ DLLs no Visual Studio](dlls-in-visual-cpp.md)\
-\ [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
+[Criar DLLs C/C++ no Visual Studio](dlls-in-visual-cpp.md)\
+[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)\
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

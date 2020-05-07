@@ -29,7 +29,7 @@ As exceções podem ser baseadas em hardware ou software. Mesmo quando os aplica
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**declaração***composta* de __except *(expressão)***)**      
+*instrução composta de* **__except (***expressão***)**      
 
 A instrução composta após a cláusula `__try` é a seção protegida. A instrução composta após a cláusula `__except` é o manipulador de exceções. O manipulador especifica um conjunto de ações a ser executado se uma exceção for gerada durante a execução da seção protegida. A execução procede da seguinte maneira:
 
@@ -94,7 +94,7 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
