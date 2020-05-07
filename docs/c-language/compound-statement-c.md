@@ -6,11 +6,11 @@ helpviewer_keywords:
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
 ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312552"
 ---
 # <a name="compound-statement-c"></a>Instrução composta (C)
 
@@ -18,15 +18,15 @@ Uma instrução composta (também chamada de “bloco”) aparece geralmente com
 
 ## <a name="syntax"></a>Sintaxe
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*instrução composta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaração-lista*de instruções<sub>opt</sub> *-lista*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*mesma*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*privacidade*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
 
 Se houver declarações, elas deverão vir antes de todas as instruções. O escopo de cada identificador declarado no início de uma instrução composta estende-se de seu ponto de declaração ao fim do bloco. É visível em todo o bloco a menos que uma declaração do mesmo identificador exista em um bloco interno.
@@ -50,6 +50,6 @@ if ( i > 0 )
 
 Neste exemplo, se `i` for maior que 0, todas as instruções na instrução composta serão executadas na ordem.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções](../c-language/statements-c.md)

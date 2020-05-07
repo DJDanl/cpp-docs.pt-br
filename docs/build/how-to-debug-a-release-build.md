@@ -1,5 +1,5 @@
 ---
-title: 'Como: Depurar um Build de versão'
+title: Como depurar um build da versão
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -12,30 +12,30 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188951"
 ---
-# <a name="how-to-debug-a-release-build"></a>Como: Depurar um Build de versão
+# <a name="how-to-debug-a-release-build"></a>Como depurar um build da versão
 
-Você pode depurar um build de versão de um aplicativo.
+Você pode depurar uma compilação de versão de um aplicativo.
 
-### <a name="to-debug-a-release-build"></a>Para depurar um build de versão
+### <a name="to-debug-a-release-build"></a>Para depurar uma compilação de versão
 
-1. Abra o **páginas de propriedade** caixa de diálogo para o projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](working-with-project-properties.md).
+1. Abra a caixa de diálogo **páginas de propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](working-with-project-properties.md).
 
-1. Clique o **C/C++** nó. Definir **formato de informações de depuração** à [compatível com C7 (/ Z7)](reference/z7-zi-zi-debug-information-format.md) ou **banco de dados do programa (/Zi)**.
+1. Clique no nó **C/C++** . Defina o **formato de informações de depuração** como [compatível com C7 (/Z7)](reference/z7-zi-zi-debug-information-format.md) ou **banco de dados de programa (/Zi)**.
 
-1. Expandir **vinculador** e clique no **geral** nó. Definir **habilitar vinculação Incremental** à [não (/ /INCREMENTAL: NO)](reference/incremental-link-incrementally.md).
+1. Expanda o **vinculador** e clique no nó **geral** . Defina **habilitar vinculação incremental** como [não (/incremental: no)](reference/incremental-link-incrementally.md).
 
-1. Selecione o **depuração** nó. Definir **gerar informações de depuração** à [Sim (/debug)](reference/debug-generate-debug-info.md).
+1. Selecione o nó de **depuração** . Defina **gerar informações de depuração** como [Sim (/debug)](reference/debug-generate-debug-info.md).
 
-1. Selecione o **otimização** nó. Definir **referências** à [/OPT: REF](reference/opt-optimizations.md) e **habilitar dobra COMDAT** para [/OPT: ICF](reference/opt-optimizations.md).
+1. Selecione o nó **otimização** . Defina **referências** para [/OPT: REF](reference/opt-optimizations.md) e **habilitar o dobramento COMDAT** para [/OPT: ICF](reference/opt-optimizations.md).
 
-1. Agora você pode depurar seu aplicativo de build de versão. Para encontrar um problema, percorrer o código (ou a depuração Just-In-Time de uso) até encontrar onde ocorre a falha e, em seguida, determinar os parâmetros incorretos ou código.
+1. Agora você pode depurar seu aplicativo de Build de versão. Para encontrar um problema, percorra o código (ou use a depuração Just-in-time) até encontrar o local em que a falha ocorre e, em seguida, determine os parâmetros ou o código incorretos.
 
-   Se um aplicativo funciona em uma compilação de depuração, mas falhará na compilação de versão, uma das otimizações do compilador pode expor um defeito no código-fonte. Para isolar o problema, desabilite otimizações selecionadas para cada arquivo de código-fonte até localizar o arquivo e a otimização que está causando o problema. (Para agilizar o processo, você pode dividir os arquivos em dois grupos, desabilitar a otimização de um grupo e quando você encontrar um problema em um grupo, continuar dividindo até isolar o problema de arquivo.)
+   Se um aplicativo funcionar em uma compilação de depuração, mas falhar em uma compilação de versão, uma das otimizações do compilador poderá estar expondo um defeito no código-fonte. Para isolar o problema, desabilite as otimizações selecionadas para cada arquivo de código-fonte até localizar o arquivo e a otimização que está causando o problema. (Para agilizar o processo, você pode dividir os arquivos em dois grupos, desabilitar a otimização em um grupo e, quando encontrar um problema em um grupo, continuar dividindo até isolar o arquivo de problema).
 
-   Você pode usar [/RTC](reference/rtc-run-time-error-checks.md) para tentar expor esses bugs em suas compilações de depuração.
+   Você pode usar o [/RTC](reference/rtc-run-time-error-checks.md) para tentar expor esses bugs em suas compilações de depuração.
 
    Para obter mais informações, consulte [otimizando seu código](optimizing-your-code.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Corrigindo problemas do build de versão](fixing-release-build-problems.md)
+[Corrigindo problemas de compilação da versão](fixing-release-build-problems.md)

@@ -17,21 +17,21 @@ ms.locfileid: "75299085"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analisando argumentos de linha de comando C
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 O código de inicialização do Microsoft C usa as seguintes regras para interpretar os argumentos dados na linha de comando do sistema operacional:
 
 - Os argumentos são delimitados por espaço em branco, que é um espaço ou uma tabulação.
 
-- Uma cadeia de caracteres cercada por aspas duplas são interpretadas como um único argumento, independentemente do espaço em branco contido. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento. Observe que o acento circunflexo ( **^** ) não é reconhecido como um caractere de escape ou um delimitador.
+- Uma cadeia de caracteres cercada por aspas duplas são interpretadas como um único argumento, independentemente do espaço em branco contido. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento. Observe que o cursor (**^**) não é reconhecido como um caractere de escape ou delimitador.
 
-- Aspas duplas precedidas por uma barra invertida, **\\"** , são interpretadas como um caractere literal de aspas duplas ( **"** ).
+- Aspas duplas precedidas por uma barra invertida ** \\"**, são interpretadas como uma aspa dupla literal (**"**).
 
 - As barras invertidas são interpretadas literalmente, a menos que precedam imediatamente as aspas duplas.
 
-- Se um número par de barras invertidas for seguido por aspas duplas, então uma barra invertida ( **\\** ) será colocada na matriz `argv` para cada par de barras invertidas ( **\\\\** ); as aspas duplas ( **"** ) serão interpretadas como um delimitador de cadeia de caracteres.
+- Se um número par de barras invertidas for seguido por uma aspa dupla, uma barra invertida (**\\**) será colocada na `argv` matriz para cada par de barras invertidas (**\\**) e as aspas duplas (**"**) serão interpretadas como um delimitador de cadeia de caracteres.
 
-- Se um número ímpar de barras invertidas for seguido por aspas duplas, então uma barra invertida ( **\\** ) será colocada na matriz `argv` para cada par de barras invertidas ( **\\\\** ); as aspas duplas serão interpretadas como uma sequência de escape pela barra invertida restante, causando a colocação de aspas duplas literais ( **"** ) em `argv`.
+- Se um número ímpar de barras invertidas for seguido por aspas duplas, uma barra invertida (**\\**) `argv` será colocada na matriz para cada par de barras invertidas (**\\**) e as aspas duplas serão interpretadas como uma sequência de escape pela barra invertida restante, fazendo com que uma aspa dupla literal (**"**) `argv`seja colocada em.
 
 Esta lista ilustra as regras acima mostrando o resultado interpretado passado para `argv` por vários exemplos de argumentos de linha de comando. O resultado listado na segunda, terceira e quarta coluna são do programa de ARGS.C que segue a lista.
 
@@ -76,7 +76,7 @@ char **envp )      // Array of environment variable strings
 }
 ```
 
-## <a name="comments"></a>Comments
+## <a name="comments"></a>Comentários
 
 Um exemplo de resultado deste programa é:
 
@@ -95,8 +95,8 @@ Environment variables:
   WINDIR=c:\nt
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Função main e execução do programa](../c-language/main-function-and-program-execution.md)
