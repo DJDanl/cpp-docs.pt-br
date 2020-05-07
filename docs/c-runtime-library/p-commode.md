@@ -13,7 +13,7 @@ api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: fa589c1972d27854e3f794d8283f49d9db5d053a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 057a0146aed87a50fc2e8c444b97a8b7b51eada1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349316"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919494"
 ---
 # <a name="__p__commode"></a>__p__commode
 
@@ -51,7 +51,7 @@ A função `__p__commode` destina-se apenas ao uso interno e não deve ser chama
 
 O modo de confirmação de arquivo especifica quando os dados críticos são gravados no disco. Para obter mais informações, consulte [fflush](../c-runtime-library/reference/fflush.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

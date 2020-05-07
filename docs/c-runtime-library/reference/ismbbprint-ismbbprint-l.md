@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: 8da69247d090c2067b0efda3c47f92bbeb729e49
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63aa7d9af3b756bc7807cae55fe969d492ec43cf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343529"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918646"
 ---
 # <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint, _ismbbprint_l
 
@@ -59,23 +59,23 @@ int _ismbbprint_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_ismbbprint** retorna um valor não zero se a expressão:
+**_ismbbprint** retornará um valor diferente de zero se a expressão:
 
 `isprint(c) || _ismbbkprint(c)`
 
-não é zero para *c*, ou 0 se não for. **_ismbbprint** usa o local atual para qualquer comportamento dependente do local. **_ismbbprint_l** é idêntica, exceto que usa o local passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+é diferente de zero para *c*ou 0 se não for. **_ismbbprint** usa a localidade atual para qualquer comportamento dependente de localidade. o **_ismbbprint_l** é idêntico, exceto pelo fato de que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -86,7 +86,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

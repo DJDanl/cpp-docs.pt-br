@@ -28,7 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -66,19 +66,19 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-ms.openlocfilehash: 315a86c5cf7e58219bad25f2b6633dd91275c09f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 786c2bd2738bb82b3edac5c811ccfd3f9f8bc854
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320466"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920003"
 ---
 # <a name="_stricmp-_wcsicmp-_mbsicmp-_stricmp_l-_wcsicmp_l-_mbsicmp_l"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
 Executa uma comparação que não diferencia maiúsculas de minúsculas na cadeia de caracteres.
 
 > [!IMPORTANT]
-> **_mbsicmp** e **_mbsicmp_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicmp** e **_mbsicmp_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -114,44 +114,44 @@ int _mbsicmp_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1,* *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres com terminação nula.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-O valor de retorno indica a relação de *string1* com *string2* da seguinte forma.
+O valor de retorno indica a relação de *seqüência1* para *string2* da seguinte maneira.
 
 |Valor retornado|Descrição|
 |------------------|-----------------|
-|< 0|*string1* menos que *string2*|
-|0|*string1* idêntico à *string2*|
-|> 0|*string1* maior que *string2*|
+|< 0|*seqüência1* menor que *seqüência2*|
+|0|*seqüência1* idêntico a *seqüência2*|
+|> 0|*seqüência1* maior que *seqüência2*|
 
-Em um erro, **_mbsicmp** retorna **_NLSCMPERROR**, que é definido em \<string.h> e \<mbstring.h>.
+Em um erro, **_mbsicmp** retorna **_NLSCMPERROR**, que é definido em \<String. h> e \<mbstring. h>.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_stricmp** compara ordinally *string1* e *string2* depois de converter cada caractere em minúsculas, e retorna um valor indicando sua relação. **_stricmp** difere da **_stricoll,** na qual a comparação **_stricmp** só é afetada por **LC_CTYPE**, que determina quais caracteres são maiúsculas e minúsculas. A função **_stricoll** compara as cordas de acordo com as categorias **LC_CTYPE** e **LC_COLLATE** do local, o que inclui tanto o caso quanto a ordem de colagem. Para obter mais informações sobre a categoria **LC_COLLATE,** consulte [setlocale](setlocale-wsetlocale.md) e [Categorias Locais](../../c-runtime-library/locale-categories.md). As versões dessas funções sem o **sufixo _l** usam a localidade atual para comportamento dependente da localidade. As versões com o sufixo são idênticas, com exceção de que usam a localidade passada, em vez da localidade atual. Se a localidade não tiver sido definida, a localidade C será usada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A função **_stricmp** , em seguida, compara *seqüência1* e *seqüência2* depois de converter cada caractere em minúsculas e retorna um valor que indica sua relação. **_stricmp** difere de **_stricoll** no que a comparação de **_stricmp** só é afetada pelo **LC_CTYPE**, que determina quais caracteres são letras maiúsculas e minúsculas. A função **_stricoll** compara Cadeias de caracteres de acordo com as categorias **LC_CTYPE** e **LC_COLLATE** da localidade, que inclui o caso e a ordem de agrupamento. Para obter mais informações sobre **LC_COLLATE** a categoria de LC_COLLATE [, consulte categorias de local e](setlocale-wsetlocale.md) de [localidade](../../c-runtime-library/locale-categories.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual para o comportamento dependente de localidade. As versões com o sufixo são idênticas, com exceção de que usam a localidade passada, em vez da localidade atual. Se a localidade não tiver sido definida, a localidade C será usada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> **_stricmp** equivale a **_strcmpi.** Eles podem ser usados de forma intercambiável, mas **_stricmp** é o padrão preferido.
+> **_stricmp** é equivalente a **_strcmpi**. Eles podem ser usados de forma intercambiável, mas **_stricmp** é o padrão preferencial.
 
-A função **_strcmpi** é equivalente a **_stricmp** e é fornecida apenas para compatibilidade retrógrada.
+A função **_strcmpi** é equivalente a **_stricmp** e é fornecida somente para fins de compatibilidade com versões anteriores.
 
-Como **_stricmp** faz comparações minúsculas, pode resultar em comportamento inesperado.
+Como **_stricmp** faz comparações em minúsculas, isso pode resultar em um comportamento inesperado.
 
-Para ilustrar quando a conversão de casos por **_stricmp** afeta o resultado de uma comparação, suponha que você tem as duas cordas JOHNSTON e JOHN_HENRY. A cadeia de caracteres JOHN_HENRY será considerada inferior a JOHNSTON porque "_" tem um valor de ASCII menor que um S minúsculo. Na verdade, qualquer caractere que tenha um valor de ASCII entre 91 e 96 será considerado menor do que qualquer letra.
+Para ilustrar quando a conversão de maiúsculas e minúsculas por **_stricmp** afeta o resultado de uma comparação, suponha que você tenha as duas cadeias de caracteres JOHNSTON e JOHN_HENRY. A cadeia de caracteres JOHN_HENRY será considerada inferior a JOHNSTON porque "_" tem um valor de ASCII menor que um S minúsculo. Na verdade, qualquer caractere que tenha um valor de ASCII entre 91 e 96 será considerado menor do que qualquer letra.
 
-Se a função [strcmp](strcmp-wcscmp-mbscmp.md) for usada em vez de **_stricmp,** JOHN_HENRY será maior que johnston.
+Se a função [strcmp](strcmp-wcscmp-mbscmp.md) for usada em vez de **_stricmp**, JOHN_HENRY será maior que Johnston.
 
-**_wcsicmp** e **_mbsicmp** são versões de amplo caráter e multibytes de **_stricmp**. Os argumentos e o valor de retorno de **_wcsicmp** são strings de caracteres amplos; os de **_mbsicmp** são cordas de caracteres multibytes. **_mbsicmp** reconhece sequências de caracteres multibytes de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Caso contrário, essas três funções se comportam de forma idêntica.
+**_wcsicmp** e **_mbsicmp** são versões de caractere largo e de vários caracteres de **_stricmp**. Os argumentos e o valor de retorno de **_wcsicmp** são cadeias de caracteres largos; os de **_mbsicmp** são cadeias de caracteres multibyte. **_mbsicmp** reconhece seqüências de caracteres multibyte de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Caso contrário, essas três funções se comportam de forma idêntica.
 
-**_wcsicmp** e **wcscmp** se comportam de forma idêntica, exceto que **o wcscmp** não converte seus argumentos em minúsculas antes de compará-los. **_mbsicmp** e **_mbscmp** se comportam de forma idêntica, exceto que **_mbscmp** não converte seus argumentos em minúsculas antes de compará-los.
+**_wcsicmp** e **wcscmp** se comportam de forma idêntica, exceto que **wcscmp** não converte seus argumentos em minúsculas antes de compará-los. **_mbsicmp** e **_mbscmp** se comportam de forma idêntica, exceto que **_mbscmp** não converte seus argumentos em minúsculas antes de compará-los.
 
-Você precisará chamar [setlocale](setlocale-wsetlocale.md) para **_wcsicmp** trabalhar com caracteres latinos 1. A localidade C está em vigor por padrão, portanto, por exemplo, ä não será comparado como igual a Ä. Chamada **setlocale** com qualquer local que não seja o local C antes da chamada para **_wcsicmp**. A amostra a seguir demonstra como **_wcsicmp** é sensível ao local:
+Você precisará chamar [setlocaling](setlocale-wsetlocale.md) para que **_wcsicmp** funcionem com Latin 1 caracteres. A localidade C está em vigor por padrão, portanto, por exemplo, ä não será comparado como igual a Ä. Chame **setlocale** com qualquer localidade diferente da localidade C antes da chamada para **_wcsicmp**. O exemplo a seguir demonstra como **_wcsicmp** é sensível à localidade:
 
 ```C
 // crt_stricmp_locale.c
@@ -169,9 +169,9 @@ int main() {
 }
 ```
 
-Uma alternativa é chamar [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md) e passar o objeto local devolvido como parâmetro para **_wcsicmp_l**.
+Uma alternativa é chamar [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md) e passar o objeto de localidade retornado como um parâmetro para **_wcsicmp_l**.
 
-Todas essas funções validam seus parâmetros. Se as *string1* ou *string2* forem ponteiros nulos, o manipulador de parâmetros inválidos será invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md) . Se a execução continuar, essas funções retornam **_NLSCMPERROR** e definem **errno** para **EINVAL**.
+Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüência2* forem ponteiros nulos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -183,9 +183,9 @@ Todas essas funções validam seus parâmetros. Se as *string1* ou *string2* for
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_stricmp** **_stricmp_l**|\<string.h>|
-|**_wcsicmp,** **_wcsicmp_l.**|\<string.h> ou \<wchar.h>|
-|**_mbsicmp,** **_mbsicmp_l.**|\<mbstring.h>|
+|**_stricmp**, **_stricmp_l**|\<string.h>|
+|**_wcsicmp**, **_wcsicmp_l**|\<string.h> ou \<wchar.h>|
+|**_mbsicmp**, **_mbsicmp_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -240,7 +240,7 @@ Compare strings:
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp, _memicmp_l](memicmp-memicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

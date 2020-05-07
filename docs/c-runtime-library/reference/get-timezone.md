@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 94dfae1aaaddf9c545af4309d3ddc62a0bcb33f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344901"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918494"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -50,20 +50,20 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Segundos*<br/>
+*seg*<br/>
 A diferença, em segundos, entre o UTC e a hora local.
 
 ## <a name="return-value"></a>Valor retornado
 
-Zero se for bem sucedido ou **um valor errno** se ocorrer um erro.
+Zero se for bem-sucedido ou um valor **errno** se ocorrer um erro.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_get_timezone** recupera a diferença em segundos entre UTC e hora local como um inteiro. O valor padrão é de 28.800 segundos para a Hora Padrão do Pacífico (oito horas antes do UTC).
+A função **_get_timezone** recupera a diferença em segundos entre o UTC e a hora local como um inteiro. O valor padrão é de 28.800 segundos para a Hora Padrão do Pacífico (oito horas antes do UTC).
 
-Se *o segundo* for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+Se *segundos* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -73,7 +73,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

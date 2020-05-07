@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332833"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917828"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -60,32 +60,32 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Parâmetros
 
-*Numer*<br/>
+*número*<br/>
 O numerador.
 
 *denom*<br/>
 O denominador.
 
-*Quo*<br/>
+*situação*<br/>
 Um ponteiro para um inteiro para armazenar um valor que tem o sinal e magnitude aproximada do quociente.
 
 ## <a name="return-value"></a>Valor retornado
 
-**remquo** retorna o restante do ponto flutuante de *x* / *y*. Se o valor de *y* for 0.0, **remquo** retorna uma NaN tranquila. Para obter informações sobre a representação de um NaN tranquilo pela família **printf,** consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** retorna o restante de ponto flutuante do *x* / *y*. Se o valor de *y* for 0,0, **remquo** retornará Nan silencioso. Para obter informações sobre a representação de um NaN silencioso pela família **printf** , consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **remquo** calcula o restante do ponto flutuante *f* de *x* / *y* tal que *x* = *i* \* *y* + *f*, onde *i* é um inteiro, *f* tem o mesmo sinal que *x*, e o valor absoluto de *f* é menor do que o valor absoluto de *y*.
+A função **remquo** calcula o restante do ponto flutuante *f* de *x* / *y* de forma que *x* = *i* \* *y* + *f*, onde *eu* seja um inteiro, *f* tenha o mesmo sinal que *x*e o valor absoluto de *f* seja menor que o valor absoluto de *y*.
 
-C++ permite sobrecarga, para que você possa chamar sobrecargas de **remquo** que tomam e retornam **flutuam** **ou** **longos** valores duplos. Em um programa C, **o remquo** sempre pega dois **argumentos duplos** e retorna um **duplo**.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **remquo** que usam e retornam valores **long** **duplos** **float** ou Long. Em um programa C, **remquo** sempre pega dois argumentos **duplos** e retorna um **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |--------------|---------------------|-|
-|**remquo,** **remquof,** **remquol**|\<math.h>|\<cmath> ou \<math.h>|
+|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

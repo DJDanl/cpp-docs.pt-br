@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 3fc90747d336e7b101739c41980332ad0b6b763a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344738"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919628"
 ---
 # <a name="_getch-_getwch"></a>_getch, _getwch
 
@@ -62,11 +62,11 @@ Retorna o caractere lido. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-As funções **_getch** e **_getwch** leem um único caractere do console sem ecoar o personagem. Nenhuma dessas funções pode ser usada para ler CTRL+C. Ao ler uma tecla de função ou uma tecla de direção, cada função deve ser chamada duas vezes; a primeira chamada retorna 0 ou 0xE0 e a segunda chamada retorna o código da tecla de fato.
+As funções **_getch** e **_getwch** lêem um único caractere do console sem ecoar o caractere. Nenhuma dessas funções pode ser usada para ler CTRL+C. Ao ler uma tecla de função ou uma tecla de direção, cada função deve ser chamada duas vezes; a primeira chamada retorna 0 ou 0xE0 e a segunda chamada retorna o código da tecla de fato.
 
 Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Para versões sem bloqueio, consulte [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -121,7 +121,7 @@ Type 'Y' when finished typing keys: Y
 
 ## <a name="see-also"></a>Confira também
 
-[Console e Porta I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

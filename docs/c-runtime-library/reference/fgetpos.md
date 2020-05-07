@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: 0c16150a6240068e1453ec90b396c87ab9ece5a4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b57a07dbe5c2c746e8af6b96f1864e4f4534849f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346919"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920358"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -52,18 +52,18 @@ int fgetpos(
 *fluxo*<br/>
 O fluxo de destino.
 
-*Pos*<br/>
+*pos*<br/>
 Armazenamento do indicador de posição.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se for bem **sucedido, fgetpos** retorna 0. No fracasso, ele retorna um valor não zero e define **errno** a uma das seguintes constantes de manifesto (definidas em STDIO. H): **EBADF**, o que significa que o fluxo especificado não é um ponteiro de arquivo válido ou não é acessível, ou **EINVAL,** o que significa que o valor do *fluxo* ou o valor do *pos* é inválido, como se qualquer um deles fosse um ponteiro nulo. Se *o fluxo* ou *pos* for um ponteiro **NULL,** a função invoca o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md).
+Se for bem-sucedido, **fgetpos** retornará 0. Em caso de falha, ele retorna um valor diferente de zero e define **errno** como uma das constantes de manifesto a seguir (definidas em STDIO. H): **EBADF**, que significa que o fluxo especificado não é um ponteiro de arquivo válido ou não está acessível, ou **EINVAL**, o que significa que o valor de *fluxo* ou o valor de *PDV* é inválido, como se um deles for um ponteiro nulo. Se *Stream* ou *pos* for um ponteiro **NULL** , a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **fgetpos** obtém o valor atual do indicador de posição de arquivo do argumento do *fluxo* e armazena-o no objeto apontado por *pos*. A função **fsetpos** pode usar posteriormente informações armazenadas em *pos* para redefinir o ponteiro do argumento de *fluxo* para sua posição no momento em **que fgetpos** foi chamado. O valor *do pos* é armazenado em formato interno e destina-se a ser usado apenas por **fgetpos** e **fsetpos**.
+A função **fgetpos** Obtém o valor atual do indicador de posição de arquivo do argumento de *fluxo* e o armazena no objeto apontado pelo *PDV*. A função **fsetpos** pode usar posteriormente as informações armazenadas no *PDV* para redefinir o ponteiro do argumento de *fluxo* para sua posição no momento em que **fgetpos** foi chamado. O valor de *PDV* é armazenado em um formato interno e destina-se ao uso somente por **fgetpos** e **fsetpos**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -128,7 +128,7 @@ after fgetpos: gets a stream
 after fsetpos: gets a stream
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fsetpos](fsetpos.md)<br/>

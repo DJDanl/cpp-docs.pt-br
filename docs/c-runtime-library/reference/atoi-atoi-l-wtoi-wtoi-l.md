@@ -23,7 +23,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: ef65f8986cf02b6385cbce71e5e81fa690b38b2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348864"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919859"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -84,28 +84,28 @@ int _wtoi_l(
 *Str*<br/>
 Cadeia de caracteres a ser convertida.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada função retorna o valor **int** produzido interpretando os caracteres de entrada como um número. O valor de retorno é 0 para **atoi** e **_wtoi**, se a entrada não puder ser convertida em um valor desse tipo.
+Cada função retorna o valor **int** produzido pela interpretação dos caracteres de entrada como um número. O valor de retorno é 0 para **atoi** e **_wtoi**, se a entrada não puder ser convertida em um valor desse tipo.
 
-No caso de transbordamento com grandes valores integrais negativos, **LONG_MIN** é devolvido. **atoi** e **_wtoi** retorno **INT_MAX** e **INT_MIN** nessas condições. Em todos os casos fora de alcance, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EINVAL** e retornam 0.
+No caso de estouro com grandes valores inteiros negativos, **LONG_MIN** é retornado. **atoi** e **_wtoi** retornam **INT_MAX** e **INT_MIN** nessas condições. Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão **errno** como **EINVAL** e retornarão 0.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções convertem uma seqüência de caracteres em um valor inteiro **(atoi** e **_wtoi).** A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou L'\0') que encerra a cadeia de caracteres.
+Essas funções convertem uma cadeia de caracteres em um valor inteiro (**atoi** e **_wtoi**). A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou L'\0') que encerra a cadeia de caracteres.
 
-O argumento *str* para **atoi** e **_wtoi** tem a seguinte forma:
+O argumento *Str* para **atoi** e **_wtoi** tem o seguinte formato:
 
-> [*espaço em branco*] [*sinal]* [*dígitos*]]
+> [*espaço em branco*] [*assinar*] [*dígitos*]]
 
-Um *espaço em branco* consiste em caracteres de espaço ou guia, que são ignorados; *sinal* é mais (+) ou menos (-); e *os dígitos* são um ou mais dígitos.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos.
 
-As versões dessas funções com o **sufixo _l** são idênticas, exceto que eles usam o parâmetro local passado em vez do local atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -119,11 +119,11 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |Rotinas|Cabeçalho necessário|
 |--------------|---------------------|
 |**atoi**|\<stdlib.h>|
-|**_atoi_l,** **_wtoi** **_wtoi_l.**|\<stdlib.h> ou \<wchar.h>|
+|**_atoi_l**, **_wtoi**, **_wtoi_l**|\<stdlib.h> ou \<wchar.h>|
 
 ## <a name="example"></a>Exemplo
 
-Este programa mostra como os números armazenados como strings podem ser convertidos em valores numéricos usando as funções **atoi.**
+Este programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando as funções **atoi** .
 
 ```C
 // crt_atoi.c
@@ -169,11 +169,11 @@ Function: atoi( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

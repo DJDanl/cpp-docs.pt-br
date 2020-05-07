@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: a12c0c93ae15350a4b91a8aa905acb941f8b6a10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 085bf20a12d9b77be0977521bde2ab75d9b2636a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345039"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918278"
 ---
 # <a name="_get_osfhandle"></a>_get_osfhandle
 
@@ -51,23 +51,23 @@ intptr_t _get_osfhandle(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fd*<br/>
+*FD*<br/>
 Um descritor de arquivo existente.
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna uma alça de arquivo do sistema operacional se *fd* for válido. Caso contrário, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução continuar, ela retorna **INVALID_HANDLE_VALUE** (-1). Ele também define **errno** para **EBADF,** indicando uma alça de arquivo inválida. Para evitar um aviso quando o resultado for usado como uma alça de arquivo Win32, lance-o para um tipo **handle.**
+Retorna um identificador de arquivo do sistema operacional se *FD* for válido. Caso contrário, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, ela retornará **INVALID_HANDLE_VALUE** (-1). Ele também define **errno** como **EBADF**, indicando um identificador de arquivo inválido. Para evitar um aviso quando o resultado é usado como um identificador de arquivo do Win32, converta-o em um tipo de **identificador** .
 
 > [!NOTE]
-> Quando **stdin**, **stdout**e **stderr** não estão associados a um fluxo (por exemplo, em um aplicativo windows sem uma janela de console), os valores do descritor de arquivo para esses fluxos são devolvidos de [_fileno](fileno.md) como o valor especial -2. Da mesma forma, se você usar um 0, 1 ou 2 como parâmetro do descritor de arquivo em vez do resultado de uma chamada para **_fileno,** **_get_osfhandle** também retorna o valor especial -2 quando o descritor de arquivo não está associado a um fluxo, e não define **errno**. No entanto, este não é um valor de manipulação de arquivo válido, e chamadas subseqüentes que tentam usá-lo provavelmente falharão.
+> Quando **stdin**, **stdout**e **stderr** não estão associados a um fluxo (por exemplo, em um aplicativo do Windows sem uma janela de console), os valores do descritor de arquivo para esses fluxos são retornados de [_fileno](fileno.md) como o valor especial-2. Da mesma forma, se você usar um 0, 1 ou 2 como o parâmetro do descritor de arquivo em vez do resultado de uma chamada para **_fileno**, **_get_osfhandle** também retornará o valor especial-2 quando o descritor de arquivo não estiver associado a um fluxo e não definir **errno**. No entanto, esse não é um valor de identificador de arquivo válido e as chamadas subsequentes que tentam usá-lo provavelmente falharão.
 
-Para obter mais informações sobre **ebadf** e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre **EBADF** e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Para fechar um arquivo cujo cabo de arquivo do sistema operacional (OS) é obtido por **_get_osfhandle,** chame [_close](close.md) no descritor de arquivo *fd*. Nunca ligue para **closehandle** no valor de retorno desta função. O cabo de arquivo do Sistema Operacional subjacente é de propriedade do descritor de arquivo *fd,* e é fechado quando [_close](close.md) é chamado em *fd*. Se o descritor de arquivo `FILE *` for de propriedade de `FILE *` um fluxo, então chamar [fclose](fclose-fcloseall.md) nesse fluxo fechará tanto o descritor de arquivo quanto o punho de arquivo do SISTEMA OPERACIONAL subjacente. Neste caso, não ligue [para _close](close.md) no descritor do arquivo.
+Para fechar um arquivo cujo identificador de arquivo do sistema operacional (SO) é obtido por **_get_osfhandle**, chame [_close](close.md) no descritor de arquivo *fd*. Nunca chame **CloseHandle** no valor de retorno dessa função. O identificador de arquivo do sistema operacional subjacente é de Propriedade do descritor de arquivo *FD* e é fechado quando [_close](close.md) é chamado em *fd*. Se o descritor de arquivo pertencer `FILE *` a um fluxo, chamar [fclose](fclose-fcloseall.md) nesse `FILE *` fluxo fecha o descritor de arquivo e o identificador de arquivo do sistema operacional subjacente. Nesse caso, não chame [_close](close.md) no descritor de arquivo.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,7 +77,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

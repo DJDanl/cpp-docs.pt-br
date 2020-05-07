@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 3d526c546e1496b3b13b14a12c9025cbd0347cd2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5dd21013c8910ba07e2d23606af49bc80458dbc6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332397"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918989"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
@@ -87,47 +87,47 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Filename*<br/>
+*nome do arquivo*<br/>
 O nome de arquivo a ser pesquisado.
 
-*Varname*<br/>
+*varname*<br/>
 O ambiente a pesquisar.
 
-*Caminho*<br/>
+*nome*<br/>
 O buffer para armazenar o caminho completo.
 
-*Numberofelements*<br/>
-Tamanho do buffer de nome de *caminho.*
+*numberOfElements*<br/>
+Tamanho do buffer do *nome do caminho* .
 
 ## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido; um código de erro em caso de falha.
 
-Se *o nome do arquivo* for uma seqüência de string vazia, o valor de retorno será **ENOENT**.
+Se *filename* for uma cadeia de caracteres vazia, o valor de retorno será **ENOENT**.
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|*Filename*|*Varname*|*Caminho*|*Numberofelements*|Valor retornado|Conteúdo do nome do *caminho*|
+|*nome do arquivo*|*varname*|*nome*|*numberOfElements*|Valor retornado|Conteúdo de *PathName*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|any|any|**NULO**|any|**Einval**|n/d|
-|**NULO**|any|any|any|**Einval**|não alterado|
-|any|any|any|<= 0|**Einval**|não alterado|
+|any|any|**NULO**|any|**EINVAL**|N/D|
+|**NULO**|any|any|any|**EINVAL**|não alterado|
+|any|any|any|<= 0|**EINVAL**|não alterado|
 
-Se qualquer uma dessas condições de erro ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EINVAL** e retornam **EINVAL**.
+Se qualquer uma dessas condições de erro ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EINVAL** e retornarão **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-A **_searchenv_s** pesquisa de rotina para o arquivo de destino no domínio especificado. A variável *varname* pode ser qualquer ambiente ou variável definida pelo usuário que especifique uma lista de caminhos de diretório, como **PATH**, **LIB**e **INCLUDE**. Como **_searchenv_s** é sensível a casos, *o varname* deve coincidir com o caso da variável ambiente. Se *varname* não corresponder ao nome de uma variável de ambiente definida no ambiente do processo, a função retorna zero e a variável nome de *caminho* é inalterada.
+A rotina **_searchenv_s** procura o arquivo de destino no domínio especificado. A variável *VarName* pode ser qualquer ambiente ou variável definida pelo usuário que especifique uma lista de caminhos de diretório, como **Path**, **lib**e **include**. Como **_searchenv_s** diferencia maiúsculas de minúsculas, *VarName* deve corresponder ao caso da variável de ambiente. Se *VarName* não corresponder ao nome de uma variável de ambiente definida no ambiente do processo, a função retornará zero e a variável de *nome de caminho* será inalterada.
 
-A rotina pesquisa pelo arquivo primeiramente no diretório de trabalho atual. Se não encontrar o arquivo, ela procurará em seguida nos diretórios especificados pela variável de ambiente. Se o arquivo de destino estiver em um desses diretórios, o caminho recém-criado será copiado para *pathname*. Se o arquivo *nome* do arquivo não for encontrado, *o nome do caminho* contém uma seqüência de seqüência de nulidade vazia.
+A rotina pesquisa pelo arquivo primeiramente no diretório de trabalho atual. Se não encontrar o arquivo, ela procurará em seguida nos diretórios especificados pela variável de ambiente. Se o arquivo de destino estiver em um desses diretórios, o caminho recém-criado será copiado em *PathName*. Se o arquivo *filename* não for encontrado, *PathName* conterá uma cadeia de caracteres vazia terminada em nulo.
 
-O buffer *de nome de caminho* deve ser pelo menos **_MAX_PATH** caracteres para acomodar toda a extensão do nome do caminho construído. Caso contrário, **_searchenv_s** pode ultrapassar o buffer *de nome de caminho,* resultando em comportamento inesperado.
+O *buffer de nome de caminho deve* ter pelo menos **_MAX_PATH** caracteres para acomodar o comprimento completo do nome de caminho construído. Caso contrário, **_searchenv_s** pode saturar o buffer de *nome de caminho* resultando em um comportamento inesperado
 
-**_wsearchenv_s** é uma versão ampla de **_searchenv_s;** os argumentos para **_wsearchenv_s** são cordas de caracteres amplos. **_wsearchenv_s** e **_searchenv_s** se comportam de forma idêntica.
+**_wsearchenv_s** é uma versão de caractere largo do **_searchenv_s**; os argumentos para **_wsearchenv_s** são cadeias de caracteres largos. **_wsearchenv_s** e **_searchenv_s** se comportar de forma idêntica.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

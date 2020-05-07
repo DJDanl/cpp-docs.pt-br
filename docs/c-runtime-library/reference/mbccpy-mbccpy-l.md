@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 45f93e370e11cf38fc17da3557b21c636fcbc623
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a265a37ba4c16dd15e6b50035dcc65bc8afbe7c7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341257"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919575"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy, _mbccpy_l
 
@@ -76,27 +76,27 @@ Destino da cópia.
 *src*<br/>
 Caracteres multibyte para copiar.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mbccpy** copia um caractere multibyte *de src* para *dest*.
+A função **_mbccpy** copia um caractere multibyte de *src* para *dest*.
 
-Essa função valida seus parâmetros. Se **_mbccpy** for aprovado um ponteiro nulo para *dest* ou *src,* o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL**.
+Essa função valida seus parâmetros. Se **_mbccpy** for passado um ponteiro NULL para *dest* ou *src*, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL**.
 
-**_mbccpy** usa o local atual para qualquer comportamento dependente do local. **_mbccpy_l** é idêntica ao **_mbccpy** exceto que **_mbccpy_l** usa o local passado para qualquer comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_mbccpy** usa a localidade atual para qualquer comportamento dependente de localidade. **_mbccpy_l** é idêntica a **_mbccpy** , exceto que **_mbccpy_l** usa a localidade passada para qualquer comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 **Observação de Segurança** Use uma cadeia de caracteres terminada em nulo. A cadeia de caracteres terminada em nulo não deve exceder o tamanho do buffer de destino. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tccpy**|É mapeado para um macro ou uma função embutida|**_mbccpy**|É mapeado para um macro ou uma função embutida|
-|**_tccpy_l**|n/d|**_mbccpy_l**|n/d|
+|**_tccpy_l**|N/D|**_mbccpy_l**|N/D|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -107,8 +107,8 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

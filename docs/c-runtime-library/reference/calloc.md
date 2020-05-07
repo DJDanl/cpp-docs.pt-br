@@ -1,6 +1,6 @@
 ---
 title: calloc
-description: A função c runtime library calloc aloca memória inicializada zero.
+description: A função de biblioteca de tempo de execução C calloc aloca memória inicializada por zero.
 ms.date: 4/2/2020
 api_name:
 - calloc
@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: fb4f7d6dc059023d34cb0b811edf5dfb48cb7a34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333644"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918716"
 ---
 # <a name="calloc"></a>calloc
 
@@ -53,34 +53,34 @@ void *calloc(
 *number*<br/>
 Número de elementos.
 
-*Tamanho*<br/>
+*size*<br/>
 O comprimento, em bytes, de cada elemento.
 
 ## <a name="return-value"></a>Valor retornado
 
-**calloc** retorna um ponteiro para o espaço alocado. O espaço de armazenamento ao qual o valor retornado apontou com certeza estará alinhado de modo adequado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo diferente de **vazio,** use um tipo de elenco sobre o valor de retorno.
+**calloc** retorna um ponteiro para o espaço alocado. O espaço de armazenamento ao qual o valor retornado apontou com certeza estará alinhado de modo adequado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo diferente de **void**, use uma conversão de tipo no valor de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-A função **calloc** aloca espaço de armazenamento para uma matriz de elementos *numéricos,* cada um dos bytes de *tamanho* de comprimento. Cada elemento é inicializado como 0.
+A função **calloc** aloca espaço de armazenamento para uma matriz de elementos *Number* , cada um dos bytes de *tamanho* de comprimento. Cada elemento é inicializado como 0.
 
-**calloc** define **errno** ao **ENOMEM** se uma alocação de memória falhar ou se a quantidade de memória solicitada exceder **_HEAP_MAXREQ**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**calloc** define **errno** como **ENOMEM** se uma alocação de memória falhar ou se a quantidade de memória solicitada excede **_HEAP_MAXREQ**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Na implementação da Microsoft, se o *número* ou *tamanho* for zero, **o calloc** retorna um ponteiro para um bloco alocado de tamanho não zero. Uma tentativa de ler ou escrever através do ponteiro retornado leva a um comportamento indefinido.
+Na implementação da Microsoft, se o *número* ou o *tamanho* for zero, **calloc** retornará um ponteiro para um bloco alocado de tamanho diferente de zero. Uma tentativa de ler ou gravar o ponteiro retornado leva a um comportamento indefinido.
 
-**calloc** usa a função [C++ _set_new_mode](set-new-mode.md) para definir o novo modo *de manipulador*. O novo modo de manipulador indica se, em falha, **o calloc** deve chamar a nova rotina do manipulador conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, **o calloc** não chama a nova rotina de manipulador em falha na alocação de memória. Você pode substituir esse comportamento padrão para que, quando o **calloc** não aloque a memória, ele chame a nova rotina do manipulador da mesma forma que o **novo** operador faz quando falha pelo mesmo motivo. Para substituir o padrão, chame
+**calloc** usa a função [_set_new_mode](set-new-mode.md) do C++ para definir o *novo modo de manipulador*. O novo modo de manipulador indica se, em caso de falha, **calloc** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, **calloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando **calloc** falha ao alocar memória, ele chama a nova rotina do manipulador da mesma maneira que o **novo** operador faz quando ele falha pelo mesmo motivo. Para substituir o padrão, chame
 
 ```C
 _set_new_mode(1);
 ```
 
-no início do seu programa, ou link com *NEWMODE. OBJ* (ver [Opções de Link](../../c-runtime-library/link-options.md)).
+no início do programa ou vincular com *NewMode. OBJ* (consulte [Opções de link](../../c-runtime-library/link-options.md)).
 
-Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução C, **o calloc** resolve [_calloc_dbg](calloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
+Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução do C, o **calloc** é resolvido para [_calloc_dbg](calloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
 
-**calloc** é `__declspec(noalias)` `__declspec(restrict)`marcado e , o que significa que a função é garantida para não modificar variáveis globais, e que o ponteiro retornado não é aliased. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**calloc** é marcado `__declspec(noalias)` como `__declspec(restrict)`e, o que significa que a função está garantida para não modificar variáveis globais e que o ponteiro retornado não tem um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -120,6 +120,6 @@ Allocated 40 long integers
 ## <a name="see-also"></a>Confira também
 
 [Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
-[Livre](free.md)<br/>
+[informações](free.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

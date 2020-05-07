@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 5d9481ecc8e574b602124103f8524e07270fe058
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343232"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919734"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -100,15 +100,15 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Caractere a ser testado.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c* <= 255 e houver uma rotina **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum),** o resultado é o valor de retorno da rotina **_ismbb** correspondente.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c* <= 255 e houver uma rotina de **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), o resultado será o valor de retorno da rotina de **_ismbb** correspondente.
 
 ## <a name="remarks"></a>Comentários
 
@@ -118,18 +118,18 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 
 |Rotina|Condição de teste (página de código 932 somente)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS não-Kanji: 0x8140<=*c*<=0x889E.|
-|**_ismbcl0_l**|JIS não-Kanji: 0x8140<=*c*<=0x889E.|
-|**_ismbcl1**|JIS nível-1: 0x889F<=*c*<=0x9872.|
-|**_ismbcl1_l**|JIS nível-1: 0x889F<=*c*<=0x9872.|
-|**_ismbcl2**|JIS nível-2: 0x989F<=*c*<=0xEAA4.|
-|**_ismbcl2_l**|JIS nível-2: 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl0**|JIS não kanji: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl0_l**|JIS não kanji: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl1**|JIS nível-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl1_l**|JIS nível-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl2**|JIS nível-2:0x989F<=*c*<= 0xEAA4.|
+|**_ismbcl2_l**|JIS nível-2:0x989F<=*c*<= 0xEAA4.|
 
-As funções verificam se o valor c especificado *corresponde* às condições de teste descritas acima, mas não verificase se *c* é um caractere multibyte válido. Se o byte inferior estiver nos intervalos 0x00 – 0x3F, 0x7F ou 0xFD – 0xFF, essas funções retornarão um valor diferente de zero, indicando que o caractere satisfaz a condição de teste. Use [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) para testar se o caractere multibyte foi definido.
+As funções verificam se o valor especificado *c* corresponde às condições de teste descritas acima, mas não verifica se *c* é um caractere multibyte válido. Se o byte inferior estiver nos intervalos 0x00 – 0x3F, 0x7F ou 0xFD – 0xFF, essas funções retornarão um valor diferente de zero, indicando que o caractere satisfaz a condição de teste. Use [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) para testar se o caractere multibyte foi definido.
 
-**Código final Página 932 Específico**
+**Página de código final 932 específica**
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -144,7 +144,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [Rotinas _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>

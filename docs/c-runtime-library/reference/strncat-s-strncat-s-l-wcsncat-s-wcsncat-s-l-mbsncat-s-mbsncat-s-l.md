@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,19 +56,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 7e3359a97ff8e11f47c61590f4af11d51f62073a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4aba4a2bd843fe0946c2e444b305f776065a57be
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364212"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919358"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
 Acrescenta caracteres a uma cadeia de caracteres. Essas versões de [strncat, _strncat_l, wcsncat, _wcsncat_l, mbsncat, mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncat_s** e **_mbsncat_s_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat_s** e **_mbsncat_s_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -155,19 +155,19 @@ errno_t _mbsncat_s_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Strdest*<br/>
+*strDest*<br/>
 Cadeia de caracteres de destino terminada em nulo.
 
-*Numberofelements*<br/>
+*numberOfElements*<br/>
 Tamanho do buffer de destino.
 
-*Strsource*<br/>
+*strSource*<br/>
 Cadeia de caracteres de origem com terminação nula.
 
 *contagem*<br/>
 O número de caracteres a serem acrescentados ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
@@ -176,17 +176,17 @@ Retornará 0 se for bem-sucedido; um código de erro em caso de falha.
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|*Strdestination*|*Numberofelements*|*Strsource*|Valor retornado|Conteúdo do *strDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULA OU** não denominada|any|any|**Einval**|não modificado|
-|any|any|**NULO**|**Einval**|não modificado|
+|**Nulo** ou não terminado|any|any|**EINVAL**|não modificado|
+|any|any|**NULO**|**EINVAL**|não modificado|
 |any|0 ou muito pequeno|any|**ERANGE**|não modificado|
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções tentam anexar os primeiros caracteres *D* do *strSource* até o final do *strDest,* onde *D* é o menor da *contagem* e o comprimento do *strSource*. Se a anexação desses caracteres *D* caberá dentro *de strDest* (cujo tamanho é dado como *numberOfElements*) e ainda deixar espaço para um exterminador nulo, então esses caracteres são anexados, começando pelo final original nulo de *strDest*, e um novo nulo final é anexado; caso contrário, *strDest*[0] é definido para o caractere nulo e o manipulador de parâmetros inválidoé invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md).
+Essas funções tentam acrescentar os primeiros caracteres *D* de *strSource* ao final de *strDest*, em que *D* é o menor de *Count* e o comprimento de *strSource*. Se a anexação desses caracteres *D* couber em *strDest* (cujo tamanho é fornecido como *numberOfElements*) e ainda deixar espaço para um terminador nulo, esses caracteres serão anexados, começando com o nulo de terminação original de *strDest*e um novo nulo de terminação será acrescentado; caso contrário, *strDest*[0] é definido como o caractere nulo e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
-Há uma exceção para o parágrafo acima. Se *a contagem* for [_TRUNCATE,](../../c-runtime-library/truncate.md) então tanto *strSource* quanto se encaixará é anexado ao *strDest* enquanto ainda deixa espaço para anexar um nulo final.
+Há uma exceção para o parágrafo acima. Se *Count* for [_TRUNCATE](../../c-runtime-library/truncate.md) , a maior parte de *strSource* como ajustará é acrescentada ao *strDest* e ainda deixará espaço para acrescentar um nulo de terminação.
 
 Por exemplo,
 
@@ -196,9 +196,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-significa que estamos pedindo **strncat_s** para anexar três caracteres a dois caracteres em um buffer de cinco caracteres de comprimento; isso não deixaria espaço para o exterminador nulo, **portanto, strncat_s** zera a cadeia e chama o manipulador de parâmetros inválidos.
+significa que estamos solicitando que **strncat_s** acrescente três caracteres a dois caracteres em um buffer de cinco caracteres de comprimento; Isso não deixaria nenhum espaço para o terminador nulo, portanto **strncat_s** Zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.
 
-Se for necessário o comportamento de truncação, use **_TRUNCATE** ou ajuste o parâmetro de *tamanho* de acordo:
+Se o comportamento de truncamento for necessário, use **_TRUNCATE** ou ajuste o parâmetro de *tamanho* de acordo:
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -212,17 +212,17 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-Se *strSource* ou *strDest* for **NULL,** ou for *numberOfElements* é zero, o manipulador de parâmetros inválido sao invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md) . Se a execução for permitida, a função retorna **EINVAL** sem modificar seus parâmetros.
+Se *strSource* ou *strDest* for **nulo**ou *numberOfElements* for zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, a função retornará **EINVAL** sem modificar seus parâmetros.
 
-**wcsncat_s** e **_mbsncat_s** são versões de amplo caráter e multibytes de **strncat_s**. Os argumentos de seqüência e o valor de retorno de **wcsncat_s** são strings de caracteres amplos; os de **_mbsncat_s** são cordas de caracteres multibytes. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsncat_s** e **_mbsncat_s** são versões de caractere largo e de vários caracteres de **strncat_s**. Os argumentos de cadeia de caracteres e o valor de retorno de **wcsncat_s** são cadeias de caracteres largos; os de **_mbsncat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -231,7 +231,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** e **_wcsncat_s_l** não têm dependência local; eles são fornecidos apenas para **_tcsncat_s_l**.
+**_strncat_s_l** e **_wcsncat_s_l** não têm dependência de localidade; Eles são fornecidos apenas para **_tcsncat_s_l**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -239,7 +239,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> ou \<wchar.h>|
-|**_mbsncat_s** **_mbsncat_s_l**|\<mbstring.h>|
+|**_mbsncat_s**, **_mbsncat_s_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -382,8 +382,8 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
