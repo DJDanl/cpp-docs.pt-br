@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361315"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909297"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -84,20 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 O caractere a ser enviado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Ambas as funções retornam o caractere *c* se forbem bem sucedido. Se houver um erro, **_ungetch** devolve um valor de **EOF** e **_ungetwch** retorna **WEOF**.
+Ambas as funções retornam o caractere *c* se bem-sucedidas. Se houver um erro, **_ungetch** retornará um valor de **EOF** e **_ungetwch** retornará **WEOF**.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções empurram o caractere *c* de volta para o console, fazendo com *que c* seja o próximo caractere lido por **_getch** ou **_getche** (ou **_getwch** ou **_getwche**). **_ungetch** e **_ungetwch** falhar se forem chamados mais de uma vez antes da próxima leitura. O argumento *c* não pode ser **EOF** (ou **WEOF**).
+Essas funções enviam o caractere *c* de volta para o console, fazendo com que *c* seja o próximo caractere lido por **_getch** ou **_getche** (ou **_getwch** ou **_getwche**). **_ungetch** e **_ungetwch** falham se forem chamados mais de uma vez antes da próxima leitura. O argumento *c* não pode ser **EOF** (ou **WEOF**).
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -110,8 +110,8 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_ungetch** **_ungetch_nolock.**|\<conio.h>|
-|**_ungetwch** **_ungetwch_nolock**|\<conio.h> ou \<wchar.h>|
+|**_ungetch**, **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**, **_ungetwch_nolock**|\<conio.h> ou \<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -159,6 +159,6 @@ Whitetoken = White
 
 ## <a name="see-also"></a>Confira também
 
-[Console e Porta I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

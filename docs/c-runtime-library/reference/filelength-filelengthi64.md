@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 1a830bedc8dca65410a2df49b96c6e3bf6e11b4a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5fea019591fc5a90aab07f0347aa3f02fe0d43f3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346877"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910215"
 ---
 # <a name="_filelength-_filelengthi64"></a>_filelength, _filelengthi64
 
@@ -59,16 +59,16 @@ __int64 _filelengthi64(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fd*<br/>
+*FD*<br/>
 Direciona o descritor do arquivo.
 
 ## <a name="return-value"></a>Valor retornado
 
-Tanto **_filelength** quanto **_filelengthi64** retornar o comprimento do arquivo, em bytes, do arquivo de destino associado ao *fd*. Se *fd* for um descritor de arquivo inválido, esta função invoca o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, ambas as funções retornam -1L para indicar um erro e definir **errno** para **EBADF**.
+Ambos **_filelength** e **_filelengthi64** retornam o comprimento do arquivo, em bytes, do arquivo de destino associado ao *fd*. Se *FD* for um descritor de arquivo inválido, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, ambas as funções retornam-1L para indicar um erro e definir **errno** como **EBADF**.
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +83,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Consulte o exemplo de [_chsize](chsize.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_chsize](chsize.md)<br/>

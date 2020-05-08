@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: f61aa0edeadd74a254f906dd745e18b059da7f24
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365141"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910865"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -82,28 +82,28 @@ float wcstof_l(
 
 ## <a name="parameters"></a>Parâmetros
 
-*Strsource*<br/>
+*strSource*<br/>
 Cadeia de caracteres terminada em nulo a ser convertida.
 
 *endptr*<br/>
 Ponteiro para o caractere que interrompe o exame.
 
-*Localidade*<br/>
+*locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor retornado
 
-**strtof** retorna o valor do número de ponto flutuante, exceto quando a representação causaria um estouro, nesse caso a função retorna +/-**HUGE_VALF**. O sinal de **HUGE_VALF** corresponde ao sinal do valor que não pode ser representado. **strtof** retorna 0 se nenhuma conversão pode ser realizada ou um subfluxo ocorrer.
+**strtof** retorna o valor do número de ponto flutuante, exceto quando a representação causar um estouro; nesse caso, a função retornará +/-**HUGE_VALF**. O sinal de **HUGE_VALF** corresponde ao sinal do valor que não pode ser representado. **strtof** retornará 0 se nenhuma conversão puder ser executada ou se ocorrer um estouro negativo.
 
-**wcstof retorna** valores análogos ao **strtof**. Para ambas as funções, **errno** é definido como **ERANGE** se ocorrer estouro ou subfluxo e o manipulador de parâmetros inválidos for invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md).
+**wcstof** retorna valores de forma análoga ao **strtof**. Para ambas as funções, **errno** é definido como **ERANGE** se o estouro ou Subfluxo ocorre e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
 Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Cada função converte o *strSource* da string de entrada em um **flutuador**. A **função strtof** converte *strSource* em um valor de precisão única. **strtof** pára de ler o *strSource* string no primeiro caractere que ele não pode reconhecer como parte de um número. Este pode ser o caractere nulo de terminação. **wcstof** é uma versão de amplo caráter de **strtof;** seu argumento *strSource* é uma seqüência de caracteres amplo. Caso contrário, essas funções se comportam de forma idêntica.
+Cada função converte a cadeia de caracteres de entrada *strSource* em um **float**. A função **strtof** converte *strSource* em um valor de precisão única. **strtof** interrompe a leitura da cadeia de caracteres *strSource* no primeiro caractere que ela não pode reconhecer como parte de um número. Este pode ser o caractere nulo de terminação. **wcstof** é uma versão de caractere largo do **strtof**; seu argumento *strSource* é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -112,24 +112,24 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-A **configuração de** LC_NUMERIC categoria da localidade atual determina o reconhecimento do caractere radix em *strSource*; para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As funções que não possuem o **sufixo _l** usam a localidade atual; os que têm o sufixo são idênticos, exceto que eles usam o local que é passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A configuração de categoria de **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As funções que não têm o sufixo **_L** usam a localidade atual; aqueles que têm o sufixo são idênticos, exceto pelo fato de usarem a localidade que é passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Se *endptr* não for **NULL**, um ponteiro para o caractere que parou a varredura é armazenado no local que é apontado pelo *endptr*. Se nenhuma conversão for realizada (nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor do *strSource* será armazenado no local que é apontado pelo *endptr*.
+Se *endptr* não for **NULL**, um ponteiro para o caractere que parou a verificação será armazenado no local apontado por *endptr*. Se nenhuma conversão puder ser executada (nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* será armazenado no local apontado por *endptr*.
 
-**strtof** espera *strSource* para apontar para uma seqüência da seguinte forma:
+**strtof** espera que *strSource* aponte para uma cadeia de caracteres do seguinte formato:
 
-[*espaço em branco*] [*sinal]* [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **E**} [*signo*] *dígitos*]
+[*espaço em branco*] [*assinar*] [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **e**} [*assinar*] *dígitos*]
 
-Um *espaço em branco* pode consistir em caracteres de espaço e guia, que são ignorados; *sinal* é mais**+**( )**-** ou menos (); e *os dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e** ou **E**) e um inteiro assinado opcionalmente. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
+Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, ignorados; o *sinal* é mais (**+**) ou menos (**-**); e os *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e** ou **e**) e um inteiro assinado opcionalmente. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
 
-As versões UCRT dessas funções não suportam a conversão de letras expoentes no estilo Fortran **(d** ou **D).** Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
+As versões UCRT dessas funções não dão suporte à conversão de letras de expoente de estilo Fortran (**d** ou **d**). Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strtof,** **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> ou \<stdlib.h>|
-|**wcstof,** **_wcstof_l**|C: \<stdlib.h> ou \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> ou \<wchar.h>|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> ou \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> ou \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> ou \<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -168,7 +168,7 @@ string = 3.14159This stopped it
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Funções de valor da cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 9b4b6d3b81dd1dda968cc42448ab2e53bdd44433
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361276"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911861"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -76,21 +76,21 @@ Um ponteiro para um buffer que contém a cadeia de caracteres de data formatada.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retorna um ponteiro para o *datestr*de seqüência de caracteres resultante .
+Cada uma dessas funções retorna um ponteiro para a cadeia de caracteres de caractere resultante *datestr*.
 
 ## <a name="remarks"></a>Comentários
 
 Versões mais seguras dessas funções estão disponíveis; consulte [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). É recomendável que as funções mais seguras sejam usadas sempre que possível.
 
-A função **_strdate** copia a data atual do sistema para o buffer apontado pelo *datestr*, formatado **mm**/**dd**/**yy,** onde **mm** é de dois dígitos representando o mês, **dd** é dois dígitos representando o dia, e **yy** é os dois últimos dígitos do ano. Por exemplo, a string **12/05/99** representa 5 de dezembro de 1999. O tamanho do buffer deve ser de, ao menos, 9 bytes.
+A **função _strdate** copia a data atual do sistema para o buffer apontado *por datestr*, formatada **mm**/**DD**/**AA**, em que **mm** é dois dígitos que representam o mês, **DD** é dois dígitos que representam o dia e **YY** são os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **12/05/99** representa 5 de dezembro de 1999. O tamanho do buffer deve ser de, ao menos, 9 bytes.
 
-Se *o datestr* for um ponteiro **NULL,** o manipulador de parâmetros inválidos será invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, essas funções retornam -1 e definem **errno** para **EINVAL**.
+Se *datestr* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
-**_wstrdate** é uma versão ampla do **_strdate;** o argumento e o valor de retorno de **_wstrdate** são cadeias de caracteres amplos. Caso contrário, essas funções se comportam de forma idêntica.
+**_wstrdate** é uma versão de caractere largo do **_strdate**; o argumento e o valor de retorno de **_wstrdate** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
