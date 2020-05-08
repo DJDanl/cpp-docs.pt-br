@@ -13,7 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: e7009272dbbd2b406c6355977514feaaf13ba746
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9b18c2eb0a76885f3c3aad7bb1f03d7dea52c5c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334376"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918069"
 ---
 # <a name="_cicos"></a>_CIcos
 
@@ -48,13 +48,13 @@ Esta versão da função [cos](../c-runtime-library/reference/cos-cosf-cosl.md) 
 
 O valor resultante é colocado na parte superior da pilha de ponto flutuante.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 **Plataforma:** x86
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [cos, cosf, cosl](../c-runtime-library/reference/cos-cosf-cosl.md)<br/>

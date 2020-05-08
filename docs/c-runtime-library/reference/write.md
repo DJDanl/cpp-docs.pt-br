@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: a616df570d266c335337d897da59a2a0ec69b40e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367392"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916702"
 ---
 # <a name="_write"></a>_write
 
@@ -51,10 +51,10 @@ int _write(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fd*<br/>
+*FD*<br/>
 O descritor de arquivo do arquivo em que os dados são gravados.
 
-*Buffer*<br/>
+*completo*<br/>
 Dados a serem gravados.
 
 *contagem*<br/>
@@ -62,21 +62,21 @@ Quantidade de bytes.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se for bem sucedido, **_write** retorna o número de bytes escritos. Se o espaço real restante no disco for menor do que o tamanho do buffer, a função está tentando gravar no disco, **_write** falhar e não liberar nenhum dos conteúdos do buffer para o disco. Um valor de retorno de -1 indica um erro. Se parâmetros inválidos forem passados, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, a função retorna -1 e **errno** é definida como um dos três valores: **EBADF**, o que significa que o descritor de arquivo é inválido ou o arquivo não é aberto para gravação; **ENOSPC**, o que significa que não há espaço suficiente no dispositivo para a operação; ou **EINVAL,** o que significa que *buffer* era um ponteiro nulo ou que uma *contagem* ímpar de bytes foi passada para ser escrita para um arquivo no modo Unicode.
+Se for bem-sucedido, **_write** retornará o número de bytes gravados. Se o espaço real restante no disco for menor do que o tamanho do buffer que a função está tentando gravar no disco, **_write** falhará e não liberará o conteúdo do buffer para o disco. Um valor de retorno de-1 indica um erro. Se parâmetros inválidos forem passados, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará-1 e **errno** será definida como um dos três valores: **EBADF**, o que significa que o descritor de arquivo é inválido ou o arquivo não está aberto para gravação; **ENOSPC**, que significa que não há espaço suficiente restante no dispositivo para a operação; ou **EINVAL**, o que significa que o *buffer* era um ponteiro nulo ou que uma *contagem* ímpar de bytes foi passada para ser gravada em um arquivo no modo Unicode.
 
-Para obter mais informações sobre esses e outros códigos de devolução, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Se o arquivo for aberto no modo texto, cada caractere de alimentação de linha será substituído por um par de feed de linha de retorno de transporte na saída. A substituição não afeta o valor de retorno.
+Se o arquivo for aberto no modo de texto, cada caractere de alimentação de linha será substituído por um par de retorno de carro-alimentação de linha na saída. A substituição não afeta o valor de retorno.
 
-Quando o arquivo é aberto no modo de tradução Unicode — por exemplo, se *fd* for aberto usando **_open** ou **_sopen** e um parâmetro de modo que inclua **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, ou se for aberto usando **fopen** e um parâmetro de modo que inclui **ccs=UNICODE**, **ccs=UTF-16LE**, ou **ccs=UTF-8**, ou se o modo for alterado para um modo de tradução Unicode usando **_setmode**-*buffer* é interpretado como um ponteiro para um conjunto de **wchar_t** que contém **UTF-16** Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
+Quando o arquivo é aberto no modo de conversão Unicode — por exemplo, se *FD* é aberto usando **_open** ou **_sopen** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**, **ou _O_U8TEXT**, ou se estiver aberto usando **fopen** e um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **ccs = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode**— o*buffer* será interpretado como um ponteiro para uma matriz de **wchar_t** que contém dados **UTF-16** . Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
 
 ## <a name="remarks"></a>Comentários
 
-A **função _write** grava bytes de *contagem* de *buffer* no arquivo associado ao *fd*. A operação de gravação começa na posição atual do ponteiro de arquivo (se houver) associado ao arquivo em questão. Se o arquivo estiver aberto para anexação, a operação começa no final do arquivo. Após a operação de gravação, o ponteiro do arquivo é aumentado pelo número de bytes escritos.
+A função **_write** grava bytes de *contagem* do *buffer* no arquivo associado ao *FD*. A operação de gravação começa na posição atual do ponteiro de arquivo (se houver) associado ao arquivo em questão. Se o arquivo estiver aberto para anexação, a operação começa no final do arquivo. Após a operação de gravação, o ponteiro do arquivo é aumentado pelo número de bytes gravados.
 
-Ao escrever para arquivos abertos no modo texto, **_write** trata um caractere CTRL+Z como o final lógico do arquivo. Ao escrever para um dispositivo, **_write** trata um caractere CTRL+Z no buffer como um exterminador de saída.
+Ao gravar em arquivos abertos no modo de texto, **_write** trata um caractere CTRL + Z como o final lógico do arquivo. Ao gravar em um dispositivo, **_write** trata um caractere CTRL + Z no buffer como um terminador de saída.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

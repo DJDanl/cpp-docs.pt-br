@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 46983843e128b59df89722c8d4694c30a858011f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26bcfe0d93a8c2b1a14e6afc0d413a5c7e4a7f6e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348541"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917313"
 ---
 # <a name="_configthreadlocale"></a>_configthreadlocale
 
@@ -55,25 +55,25 @@ A opção a ser definida. Uma das opções listadas na tabela a seguir.
 
 ## <a name="return-value"></a>Valor retornado
 
-O status de locale anterior por segmento **(_DISABLE_PER_THREAD_LOCALE** ou **_ENABLE_PER_THREAD_LOCALE),** ou -1 em falha.
+O status de localidade por thread anterior (**_DISABLE_PER_THREAD_LOCALE** ou **_ENABLE_PER_THREAD_LOCALE**) ou-1 em caso de falha.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_configurethreadlocale** é usada para controlar o uso de locais específicos de rosca. Use uma dessas *opções per_thread_locale_type* para especificar ou determinar o status de locale por segmento:
+A função **_configurethreadlocale** é usada para controlar o uso de localidades específicas de thread. Use uma destas opções de *per_thread_locale_type* para especificar ou determinar o status de localidade por thread:
 
 | Opção | Descrição |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | Faça o thread atual usar uma localidade específica do thread. Chamadas subseqüentes para **definir local** neste segmento afetam apenas a própria localidade do segmento. |
-| **_DISABLE_PER_THREAD_LOCALE** | Faça o thread atual usar a localidade global. Chamadas subseqüentes para **definir local** neste segmento afetam outros segmentos usando o local global. |
+| **_ENABLE_PER_THREAD_LOCALE** | Faça o thread atual usar uma localidade específica do thread. As chamadas subsequentes para **setlocaling** nesse thread afetam apenas a localidade do thread. |
+| **_DISABLE_PER_THREAD_LOCALE** | Faça o thread atual usar a localidade global. As chamadas subsequentes para **setlocaling** nesse thread afetam outros threads usando a localidade global. |
 | **0** | Recupera a configuração atual para este thread específico. |
 
-Essas funções afetam o comportamento do **setlocale,** **_tsetlocale,** **_wsetlocale**e **_setmbcp**. Quando o local por segmento é desativado, qualquer chamada subseqüente para **definir local** ou **_wsetlocale** altera a localização de todos os segmentos que usam o local global. Quando a localização por segmento estiver ativada, **setlocale** ou **_wsetlocale** afeta apenas a localidade do segmento atual.
+Essas funções afetam o comportamento de **setlocale**, **_tsetlocale**, **_wsetlocale**e **_setmbcp**. Quando a localidade por thread é desabilitada, qualquer chamada subsequente para **setlocale** ou **_wsetlocale** altera a localidade de todos os threads que usam a localidade global. Quando a localidade por thread é habilitada, **setlocale** ou **_wsetlocale** afeta apenas a localidade do thread atual.
 
-Se você usar **_configurethreadlocale** para habilitar um local por thread, recomendamos que você chame **setlocale** ou **_wsetlocale** para definir o local preferido nesse segmento imediatamente depois.
+Se você usar **_configurethreadlocale** para habilitar uma localidade por thread, recomendamos que você chame **setlocale** ou **_wsetlocale** para definir a localidade preferencial nesse thread imediatamente depois.
 
-Se *per_thread_locale_type* não for um dos valores listados na tabela, esta função invoca o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna -1.
+Se *per_thread_locale_type* não for um dos valores listados na tabela, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** como **EINVAL** e retornará-1.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -194,5 +194,5 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
 
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Multithread e localidades](../../parallel/multithreading-and-locales.md)<br/>

@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 92e3a744ef8069d45733c06b7a2681905c3eab55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338584"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914573"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -68,25 +68,25 @@ O valor a ser arredondado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, retorna *x*, arredondado para o inteiro mais próximo, utilizando o formato de arredondamento atual conforme relatado pela [fegetround](fegetround-fesetround2.md). Caso contrário, a função pode retornar um dos seguintes valores:
+Se for bem-sucedido, retorna *x*, arredondado para o número inteiro mais próximo, usando o formato de arredondamento atual conforme relatado por [fegetround](fegetround-fesetround2.md). Caso contrário, a função pode retornar um dos seguintes valores:
 
 |Problema|Retorno|
 |-----------|------------|
-|*x* = ±INFINITO|±INFINITY, sem modificações|
-|*x* = ±0|±0, sem modificações|
-|*x* = NaN|NaN|
+|*x* = ± infinito|±INFINITY, sem modificações|
+|*x* = ± 0|±0, sem modificações|
+|*x* = Nan|NaN|
 
-Erros não são relatados através [de _matherr;](matherr.md) especificamente, esta função não reporta nenhuma **exceção FE_INEXACT.**
+Os erros não são relatados por meio de [_matherr](matherr.md); especificamente, essa função não relata nenhuma exceção **FE_INEXACT** .
 
 ## <a name="remarks"></a>Comentários
 
-A principal diferença entre esta função e [rint](rint-rintf-rintl.md) é que esta função não aumenta a exceção de ponto flutuante inexato.
+A principal diferença entre essa função e [rimir](rint-rintf-rintl.md) é que essa função não gera a exceção de ponto flutuante inexata.
 
 Como os valores máximos de ponto flutuante são inteiros exatos, essa função nunca estourará sozinha. Em vez disso, a saída pode estourar o valor retornado, dependendo da versão da função que você usar.
 
-C++ permite sobrecarga, para que você possa chamar sobrecargas de **nearbyint** que tomam e retornam **flutuam** **ou** longos parâmetros **duplos.** Em um programa C, **o próximo** sempre leva dois valores duplos e retorna um valor duplo.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **nearbyint** que usam e retornam parâmetros **long** **duplos** **float** ou Long. Em um programa C, **nearbyint** sempre usa dois valores double e retorna um valor Double.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -96,7 +96,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
 [Suporte matemático e de ponto flutuante](../floating-point-support.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-ms.openlocfilehash: 75b5c0ebe47c8f82ab8ad328dd21505c458a6ac8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 224649abffd836667641f3c83e5f777f8752d7bd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347798"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915928"
 ---
 # <a name="_execvp-_wexecvp"></a>_execvp, _wexecvp
 
@@ -62,35 +62,35 @@ intptr_t _wexecvp(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cmdname*<br/>
+*cmdname*<br/>
 Caminho do arquivo a ser executado.
 
-*Argv*<br/>
+*argv*<br/>
 Matriz de ponteiros para os parâmetros.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, nesse caso a variável **global errno** é definida.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de-1 indica um erro; nesse caso, a variável global **errno** é definida.
 
-|**valor errno**|Descrição|
+|valor **errno**|Descrição|
 |-------------------|-----------------|
 |**E2BIG**|O espaço necessário para os argumentos e as configurações de ambiente excede 32 KB.|
-|**Eacces**|O arquivo especificado tem uma violação de compartilhamento ou de bloqueio.|
-|**Einval**|Parâmetro inválido.|
+|**EACCES**|O arquivo especificado tem uma violação de compartilhamento ou de bloqueio.|
+|**EINVAL**|Parâmetro inválido.|
 |**EMFILE**|Muitos arquivos abertos (o arquivo especificado deve ser aberto para determinar se ele é executável).|
-|**Enoent**|Arquivo ou caminho não encontrado.|
+|**ENOENT**|Arquivo ou caminho não encontrado.|
 |**ENOEXEC**|O arquivo especificado não é executável ou tem um formato inválido do arquivo executável.|
-|**Enomem**|Não há memória suficiente disponível para executar o novo processo. A memória disponível foi corrompida ou há um bloco inválido, indicando que o processo de chamada não foi alocado corretamente.|
+|**ENOMEM**|Não há memória suficiente disponível para executar o novo processo. A memória disponível foi corrompida ou há um bloco inválido, indicando que o processo de chamada não foi alocado corretamente.|
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções carrega e executa um novo processo, passando um conjunto de ponteiros para argumentos de linha de comando e usando a variável de ambiente **PATH** para encontrar o arquivo para executar.
+Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando e usando a variável de ambiente **path** para localizar o arquivo a ser executado.
 
-As funções **_execvp** validam seus parâmetros. Se o *cmdname* for um ponteiro nulo, ou *argv* for um ponteiro nulo, ponteiro para uma matriz vazia ou se a matriz contiver uma seqüência de string vazia como primeiro argumento, essas funções invocam o manipulador de parâmetros inválidos conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EINVAL** e retornam -1. Nenhum processo é inicializado.
+As funções de **_execvp** validam seus parâmetros. Se *cmdname* for um ponteiro nulo ou *argv* for um ponteiro nulo, um ponteiro para uma matriz vazia ou se a matriz contiver uma cadeia de caracteres vazia como o primeiro argumento, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1. Nenhum processo é inicializado.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,11 +105,11 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Consulte o exemplo nas [ funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[Abortar](abort.md)<br/>
+[anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>

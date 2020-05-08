@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,12 +59,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d5121c795ed27c22d20087868f798a4b7f5f5b02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca7636f7054b6c7e228b57e0e776250f1b4ccb32
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348161"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914818"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -130,21 +130,21 @@ errno_t _wctime64_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Buffer*<br/>
-Deve ser grande o suficiente para conter 26 caracteres. Um ponteiro para o resultado da seqüência de **caracteres,** ou NULL se:
+*completo*<br/>
+Deve ser grande o suficiente para conter 26 caracteres. Um ponteiro para o resultado da cadeia de caracteres ou **NULL** se:
 
-- *sourceTime* representa uma data antes da meia-noite de 1º de janeiro de 1970, UTC.
+- *sourcetime* representa uma data anterior à meia-noite, 1º de janeiro de 1970, UTC.
 
-- Se você usar **_ctime32_s** ou **_wctime32_s** e *sourceTime* representa uma data após 23:59:59 janeiro 18, 2038, UTC.
+- Se você usar **_ctime32_s** ou **_wctime32_s** e *sourcetime* representa uma data posterior a 23:59:59, 18 de janeiro de 2038, UTC.
 
-- Se você usar **_ctime64_s** ou **_wctime64_s** e *sourceTime* representa uma data após 23:59:59, 31 de dezembro de 3000, UTC.
+- Se você usar **_ctime64_s** ou **_wctime64_s** e *sourcetime* representa uma data após 23:59:59, 31 de dezembro de 3000, UTC.
 
-- Se você usar **_ctime_s** ou **_wctime_s,** essas funções são invólucros para as funções anteriores. Consulte a seção Comentários.
+- Se você usar **_ctime_s** ou **_wctime_s**, essas funções serão wrappers para as funções anteriores. Consulte a seção Comentários.
 
-*Numberofelements*<br/>
+*numberOfElements*<br/>
 O tamanho do buffer.
 
-*sourceTime*<br/>
+*origemtime*<br/>
 Ponteiro para a hora armazenada.
 
 ## <a name="return-value"></a>Valor retornado
@@ -153,33 +153,33 @@ Zero se for bem-sucedido. Se houver uma falha devido a um parâmetro inválido, 
 
 ## <a name="error-conditions"></a>Condições de erro
 
-|*Buffer*|*Numberofelements*|*sourceTime*|Retorno|Valor em *buffer*|
+|*completo*|*numberOfElements*|*origemtime*|Retorno|Valor no *buffer*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULO**|any|any|**Einval**|Não modificado|
-|Não **NULL** (pontos para memória válida)|0|any|**Einval**|Não modificado|
-|Não **nulo**|0< tamanho < 26|any|**Einval**|cadeia de caracteres vazia|
-|Não **nulo**|>= 26|NULO|**Einval**|cadeia de caracteres vazia|
-|Não **nulo**|>= 26|< 0|**Einval**|cadeia de caracteres vazia|
+|**NULO**|any|any|**EINVAL**|Não modificado|
+|Not **NULL** (aponta para memória válida)|0|any|**EINVAL**|Não modificado|
+|Não **nulo**|0< tamanho < 26|any|**EINVAL**|cadeia de caracteres vazia|
+|Não **nulo**|>= 26|NULO|**EINVAL**|cadeia de caracteres vazia|
+|Não **nulo**|>= 26|< 0|**EINVAL**|cadeia de caracteres vazia|
 
 ## <a name="remarks"></a>Comentários
 
-A função **ctime_s** converte um valor de tempo armazenado como uma estrutura [time_t](../../c-runtime-library/standard-types.md) em uma seqüência de caracteres. O valor *sourceTime* é geralmente obtido a partir de uma chamada para [o tempo](time-time32-time64.md), que retorna o número de segundos decorridos desde meia-noite (00:00:00), 1 de janeiro de 1970, tempo universal coordenado (UTC). A cadeia de caracteres do valor retornado contém exatamente 26 caracteres e tem o formato:
+A função **ctime_s** converte um valor de hora armazenado como uma estrutura de [time_t](../../c-runtime-library/standard-types.md) em uma cadeia de caracteres. O valor de *sourcetime* geralmente é obtido de uma chamada para [time](time-time32-time64.md), que retorna o número de segundos decorridos desde a meia-noite (00:00:00), 1 de janeiro de 1970, tempo universal coordenado (UTC). A cadeia de caracteres do valor retornado contém exatamente 26 caracteres e tem o formato:
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha ('\n') e o caractere nulo ('\0') ocupam as duas últimas posições da cadeia de caracteres.
 
-A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [de hora,](time-time32-time64.md) [_ftime](ftime-ftime32-ftime64.md)e [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) para obter informações sobre a configuração do horário local e a função [_tzset](tzset.md) para obter informações sobre a definição do ambiente de fuso horário e variáveis globais.
+A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)e [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) para obter informações sobre como configurar a hora local e a função [_tzset](tzset.md) para obter informações sobre como definir o ambiente de fuso horário e as variáveis globais.
 
-**_wctime32_s** e **_wctime64_s** são a versão de grande caráter de **_ctime32_s** e **_ctime64_s;** retornando um ponteiro para a seqüência de caracteres largos. Caso contrário, **_ctime64_s,** **_wctime32_s**e **_wctime64_s** se comportem de forma idêntica ao **_ctime32_s.**
+**_wctime32_s** e **_wctime64_s** são a versão de caractere largo de **_ctime32_s** e **_ctime64_s**; retornando um ponteiro para uma cadeia de caracteres largos. Caso contrário, **_ctime64_s**, **_wctime32_s**e **_wctime64_s** se comportam de forma idêntica ao **_ctime32_s**.
 
-**ctime_s** é uma função inline que avalia **_ctime64_s** e **time_t** equivale a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo **time_t**de 32 bits, você pode definir **_USE_32BIT_TIME_T**. Fazer isso fará com que **ctime_s** avalie **para _ctime32_s**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
+**ctime_s** é uma função embutida que é avaliada como **_ctime64_s** e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o **time_t**de 32 bits antigo, poderá definir **_USE_32BIT_TIME_T**. Isso fará com que **ctime_s** seja avaliado para **_ctime32_s**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -193,8 +193,8 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**ctime_s,** **_ctime32_s** **_ctime64_s**|\<time.h>|
-|**_wctime_s** **_wctime64_s** **_wctime32_s**|\<time.h> ou \<wchar.h>|
+|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
+|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> ou \<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
