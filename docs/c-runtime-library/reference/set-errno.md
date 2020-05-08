@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: acc54e209d1a09e72196d2a7881ebd6c4ff8f6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e889f8e2dabfffbcc69ff796fb21570b66b57fb0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337723"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913051"
 ---
 # <a name="_set_errno"></a>_set_errno
 
-Defina o valor da variável global **errno.**
+Defina o valor da variável global **errno** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,7 +49,7 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>Parâmetros
 
 *error_value*<br/>
-O novo valor de **errno.**
+O novo valor de **errno**.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -59,7 +59,7 @@ Retorna zero se bem-sucedido.
 
 Os possíveis valores são definidos em Errno.h. Consulte também [Constantes errno](../../c-runtime-library/errno-constants.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -87,7 +87,7 @@ Oops: Illegal byte sequence
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [_get_errno](get-errno.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

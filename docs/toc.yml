@@ -4104,7 +4104,7 @@
                       href: cpp/types-of-expressions.md
                     - name: Expressões primárias
                       href: cpp/primary-expressions.md
-                    - name: Reticências e modelos variadic
+                    - name: Reticências e modelos variádicos
                       href: cpp/ellipses-and-variadic-templates.md
                     - name: Expressões pós-fixadas
                       href: cpp/postfix-expressions.md
@@ -6259,7 +6259,7 @@
                   href: windows/attributes/com-attributes.md
                 - name: Atributos IDL
                   href: windows/attributes/idl-attributes.md
-                - name: Atributos do consumidor OLE DB
+                - name: 'Atributos do consumidor OLE DB '
                   href: windows/attributes/ole-db-consumer-attributes.md
                 - name: Atributos de compilador
                   href: windows/attributes/compiler-attributes.md
@@ -6313,7 +6313,7 @@
                   href: windows/attributes/coclass.md
                 - name: com_interface_entry
                   href: windows/attributes/com-interface-entry-cpp.md
-                - name: Controle
+                - name: 'Controle '
                   href: windows/attributes/control.md
                 - name: cpp_quote
                   href: windows/attributes/cpp-quote.md

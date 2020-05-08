@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: b11a40dd9dc58964df77330767a55aa95a179319
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338197"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919538"
 ---
 # <a name="rand_s"></a>rand_s
 
-Gera um número pseudoaleatório. Esta é uma versão mais segura do [rand](rand.md)de função, com melhorias de segurança descritas [em Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Gera um número pseudoaleatório. Essa é uma versão mais segura da função [Rand](rand.md), com aprimoramentos de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -51,18 +51,18 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Randomvalue*<br/>
+*randomValue*<br/>
 Um ponteiro para um inteiro para manter o valor gerado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de entrada _randomValue_ for um ponteiro nulo, a função invoca um manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, a função retorna **EINVAL** e define **errno** para **EINVAL**. Se a função falhar por qualquer outro motivo, *_randomValue_ será definido como 0.
+Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de entrada _randomValue_ for um ponteiro NULL, a função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**. Se a função falhar por qualquer outro motivo, *_randomValue_ será definido como 0.
 
 ## <a name="remarks"></a>Comentários
 
-A função **rand_s** grava um inteiro pseudoaleatório na faixa 0 a **UINT_MAX** ao ponteiro de entrada. A função **rand_s** usa o sistema operacional para gerar números aleatórios criptograficamente seguros. Não utiliza a semente gerada pela função [srand,](srand.md) nem afeta a seqüência de números aleatórios utilizada pelo [rand](rand.md).
+A função **rand_s** grava um número inteiro de pseudoaleatória no intervalo de 0 a **UINT_MAX** para o ponteiro de entrada. A função **rand_s** usa o sistema operacional para gerar números aleatórios criptograficamente seguros. Ele não usa a semente gerada pela função [srand](srand.md) , nem afeta a sequência numérica aleatória usada pelo [Rand](rand.md).
 
-A função **rand_s** exige que **_CRT_RAND_S** constantes sejam definidas antes da declaração de inclusão para que a função seja declarada, como no exemplo a seguir:
+A função **rand_s** requer que a constante **_CRT_RAND_S** seja definida antes da instrução de inclusão da função a ser declarada, como no exemplo a seguir:
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -71,7 +71,7 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-**rand_s** depende da API [RtlGenRandom,](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) que só está disponível no Windows XP e posteriormente.
+**rand_s** depende da API [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , que está disponível apenas no Windows XP e posterior.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -157,7 +157,7 @@ int main( void )
 65.0712
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [Rand](rand.md)<br/>

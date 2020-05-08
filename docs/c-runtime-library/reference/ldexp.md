@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342236"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916535"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -80,26 +80,26 @@ long double ldexpl(
 *x*<br/>
 Valor de ponto flutuante.
 
-*Exp*<br/>
+*exp*<br/>
 Expoente inteiro.
 
 ## <a name="return-value"></a>Valor retornado
 
-As funções **ldexp** retornam o valor de *x* \* 2<sup>*exp*</sup> se bem sucedido. No estouro, e dependendo do sinal de *x,* **o Ldexp** retorna +/- **HUGE_VAL**; o valor **errno** é definido **como ERANGE**.
+As funções **ldexp** retornarão o valor de *x* \* 2<sup>*exp*</sup> se for bem-sucedido. Em estouro, e dependendo do sinal de *x*, **ldexp** retorna +/- **HUGE_VAL**; o valor **errno** é definido como **ERANGE**.
 
-Para obter mais informações sobre valores de retorno de erros **errno** e possíveis, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre **errno** e possíveis valores de retorno de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **ldexp** que tomam **flutuação** ou tipos **duplos** **longos.** Em um programa C, **ldexp** sempre pega um **duplo** e um **int** e retorna um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ldexp** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **ldexp** sempre leva um **Double** e um **int** e retorna um **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**Ldexp**, **ldexpf,** **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -127,7 +127,7 @@ int main( void )
 4.0 times two to the power of 3 is 32.0
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: e7ff45c9d43a01d89d7ad2e9bac004ca1dcffd9d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fa92d8e0f0ed331110666add1015fbdacf20f07
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343701"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917492"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
@@ -58,23 +58,23 @@ int _ismbbalpha_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_ismbbalpha** retorna um valor não zero se a expressão:
+**_ismbbalpha** retornará um valor diferente de zero se a expressão:
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-não é zero para *c*, ou 0 se não for. **_ismbbalpha** usa o local atual para quaisquer configurações de caracteres dependentes de localidades. **_ismbbalpha_l** é idêntica, exceto que usa o local passado.
+é diferente de zero para *c*ou 0 se não for. **_ismbbalpha** usa a localidade atual para qualquer configuração de caractere dependente de localidade. **_ismbbalpha_l** é idêntico, exceto pelo fato de que ele usa a localidade passada.
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -89,7 +89,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: bb2d72e40796a1dd2253361626042486490c77d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350058"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917197"
 ---
 # <a name="_chsize"></a>_chsize
 
@@ -52,25 +52,25 @@ int _chsize(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fd*<br/>
+*FD*<br/>
 Descritor de arquivo que faz referência a um arquivo aberto.
 
-*Tamanho*<br/>
+*size*<br/>
 Novo tamanho do arquivo em bytes.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_chsize** retorna o valor 0 se o tamanho do arquivo for alterado com sucesso. Um valor de retorno de -1 indica um erro: **errno** é definido como **EACCES** se o arquivo especificado for somente leitura ou o arquivo especificado estiver bloqueado contra o acesso, para **EBADF** se o descritor for inválido, **ENOSPC** se não houver espaço no dispositivo ou **EINVAL** se *o tamanho* for menor que zero.
+**_chsize** retornará o valor 0 se o tamanho do arquivo for alterado com êxito. Um valor de retorno de-1 indica um erro: **errno** é definido **como EACCES** se o arquivo especificado for somente leitura ou se o arquivo especificado estiver bloqueado contra acesso, para **EBADF** se o descritor for inválido, **ENOSPC** se nenhum espaço for deixado no dispositivo ou **EINVAL** se o *tamanho* for menor que zero.
 
-Veja [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses, e outros, códigos de devolução.
+Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_chsize** estende ou trunca o arquivo associado ao *fd* ao comprimento especificado pelo *tamanho*. O arquivo deve ser aberto em um modo que permita gravação. Caracteres nulos ('\0') que serão acrescentados se o arquivo for estendido. Se o arquivo for truncado, todos os dados do final do arquivo reduzido para o tamanho original do arquivo serão perdidos.
+A função **_chsize** estende ou trunca o arquivo associado a *FD* para o comprimento especificado por *size*. O arquivo deve ser aberto em um modo que permita gravação. Caracteres nulos ('\0') que serão acrescentados se o arquivo for estendido. Se o arquivo for truncado, todos os dados do final do arquivo reduzido para o tamanho original do arquivo serão perdidos.
 
-Essa função valida seus parâmetros. Se *o tamanho* for menor que zero ou *fd* for um descritor de arquivo ruim, o manipulador de parâmetros inválido suscitado, conforme descrito na Validação de [Parâmetros](../../c-runtime-library/parameter-validation.md).
+Essa função valida seus parâmetros. Se *size* for menor que zero ou *FD* for um descritor de arquivo incorreto, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

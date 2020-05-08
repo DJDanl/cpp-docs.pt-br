@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: e2bdfbeac7b995be0b589156437a3ded39114adf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342156"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916445"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -68,13 +68,13 @@ O valor a ser computado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se for bem sucedido, devolva o logaritmo natural do valor absoluto da função gama de *x*.
+Se for bem-sucedido, retorna o logaritmo natural do valor absoluto da função gama de *x*.
 
 |Problema|Retorno|
 |-----------|------------|
-|*x* = NaN|NaN|
-|*x* = ±0|+INFINITY|
-|*x*= inteiro negativo|+INFINITY|
+|*x* = Nan|NaN|
+|*x* = ± 0|+INFINITY|
+|*x*= número inteiro negativo|+INFINITY|
 |±INFINITY|+INFINITY|
 |erro de polo|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
 |erro de intervalo de estouro|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
@@ -83,21 +83,21 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **lgamma** que pegam e retornam **flutuam** e tipos **duplos** **longos.** Em um programa C, **lgamma** sempre pega e devolve um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lGamma** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **lGamma** sempre pega e retorna um **Double**.
 
-Se x é um número racional, esta função retorna o logaritmo do fatorial de (x - 1).
+Se x for um número racional, essa função retornará o logaritmo do fatorial de (x-1).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**lgamma**, **lgammaf,** **lgammal**|\<math.h>|\<cmath>|
+|**lGamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
 [tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

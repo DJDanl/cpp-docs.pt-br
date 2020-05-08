@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: b4871ff2c362e2c6cbe37be6a31bde4e6e258709
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333541"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917091"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -77,10 +77,10 @@ errno_t _cgetws_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Buffer*<br/>
+*completo*<br/>
 Local de armazenamento de dados.
 
-*Numberofelements*<br/>
+*numberOfElements*<br/>
 O tamanho do buffer em caracteres de byte único ou largos, que também é o número máximo de caracteres a serem lido.
 
 *pSizeRead*<br/>
@@ -92,23 +92,23 @@ O valor retornado será zero se obtiver sucesso; caso contrário, um código de 
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|*Buffer*|*Numberofelements*|*pSizeRead*|Retorno|Conteúdo de *buffer*|
+|*completo*|*numberOfElements*|*pSizeRead*|Retorno|Conteúdo do *buffer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULO**|any|any|**Einval**|n/d|
-|não **NULO**|zero|any|**Einval**|não modificado|
-|não **NULO**|any|**NULO**|**Einval**|cadeia de caracteres de comprimento zero|
+|**NULO**|any|any|**EINVAL**|N/D|
+|Não **nulo**|zero|any|**EINVAL**|não modificado|
+|Não **nulo**|any|**NULO**|**EINVAL**|cadeia de caracteres de comprimento zero|
 
 ## <a name="remarks"></a>Comentários
 
-**_cgets_s** e **_cgetws_s** ler uma seqüência do console e copiar a seqüência (com um exterminador nulo) em *buffer*. **_cgetws_s** é a versão ampla da função; além do tamanho do personagem, o comportamento dessas duas funções é idêntico. O tamanho máximo da string a ser lida é passado como o parâmetro *numberOfElements.* Esse tamanho deve incluir um caractere extra para a terminação nula. O número real de caracteres lidos é colocado em *pSizeRead*.
+**_cgets_s** e **_cgetws_s** ler uma cadeia de caracteres do console e copiar a cadeia de caracteres (com um terminador nulo) para o *buffer*. **_cgetws_s** é a versão de caractere largo da função; Além do tamanho do caractere, o comportamento dessas duas funções é idêntico. O tamanho máximo da cadeia de caracteres a ser lida é passado como o parâmetro *numberOfElements* . Esse tamanho deve incluir um caractere extra para a terminação nula. O número real de caracteres lidos é colocado em *pSizeRead*.
 
-Se ocorrer um erro durante a operação ou na validação dos parâmetros, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e **EINVAL** é devolvido.
+Se ocorrer um erro durante a operação ou na validação dos parâmetros, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **errno** será definido como **EINVAL** e **EINVAL** será retornado.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho e podem substituir automaticamente funções mais antigas e menos seguras por equivalentes mais novas e mais seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -125,7 +125,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Console e Porta I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

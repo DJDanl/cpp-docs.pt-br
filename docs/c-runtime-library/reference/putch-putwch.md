@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338415"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916186"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -63,20 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 O caractere a ser gerado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna *c* se houver êxito. Se **_putch** falhar, ele retorna **o EOF;** se **_putwch** falhar, ele retorna **WEOF**.
+Retorna *c* se houver êxito. Se **_putch** falhar, ele retornará **EOF**; Se **_putwch** falhar, ele retornará **WEOF**.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções escrevem o caractere *c* diretamente, sem buffer, para o console. No Windows NT, **_putwch** grava caracteres Unicode usando a configuração de localidade do console atual.
+Essas funções gravam o caractere *c* diretamente, sem armazenar em buffer, no console. No Windows NT, **_putwch** grava caracteres Unicode usando a configuração de localidade do console atual.
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Para obter mais informações, consulte **_putch_nolock**, **_putwch_nolock**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -101,8 +101,8 @@ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-lib
 
 Consulte o exemplo de [_getch](getch-getwch.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Console e Porta I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

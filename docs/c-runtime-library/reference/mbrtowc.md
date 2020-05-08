@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340924"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919185"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -50,43 +50,43 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Wchar*<br/>
-Endereço de um caractere amplo para receber a seqüência de caracteres amplas convertida (tipo **wchar_t**). Esse valor poderá ser um ponteiro nulo se não for necessário nenhum caractere largo de retorno.
+*WCHAR*<br/>
+Endereço de um caractere largo para receber a cadeia de caracteres largos convertidas (tipo **wchar_t**). Esse valor poderá ser um ponteiro nulo se não for necessário nenhum caractere largo de retorno.
 
-*Mbchar*<br/>
+*mbchar*<br/>
 Endereço de uma sequência de bytes (um caractere multibyte).
 
 *contagem*<br/>
 O número de bytes a serem verificados.
 
-*Mbstate*<br/>
-O ponteiro para um objeto do estado da conversão. Se esse valor for um ponteiro nulo, a função usará um objeto de estado de conversão interna estática. Como o objeto **mbstate_t** interno não é seguro para threads, recomendamos que você sempre passe seu próprio argumento *de mbstate.*
+*mbstate*<br/>
+O ponteiro para um objeto do estado da conversão. Se esse valor for um ponteiro nulo, a função usará um objeto de estado de conversão interna estática. Como o objeto de **mbstate_t** interno não é thread-safe, é recomendável que você sempre passe seu próprio argumento *mbstate* .
 
 ## <a name="return-value"></a>Valor retornado
 
 Um dos seguintes valores:
 
-0 A próxima *contagem* ou menos bytes completam o caractere multibyte que representa o caractere de largura nulo, que é armazenado em *wchar*, se *wchar* não for um ponteiro nulo.
+0 a próxima *contagem* ou menos bytes concluirá o caractere multibyte que representa o caractere largo nulo, que será armazenado em *WCHAR*, se *WCHAR* não for um ponteiro nulo.
 
-1 para *contar,* inclusive A próxima *contagem* ou menos bytes completam um caractere multibyte válido. O valor retornado é o número de bytes que completa os caracteres multibyte. O equivalente de caractere largo é armazenado em *wchar,* se *wchar* não for um ponteiro nulo.
+1 para *contar*, inclusive a próxima *contagem* ou menos bytes concluem um caractere multibyte válido. O valor retornado é o número de bytes que completa os caracteres multibyte. O equivalente a caracteres largos é armazenado em *WCHAR*, se *WCHAR* não for um ponteiro nulo.
 
-(size_t) (-1) Ocorreu um erro de codificação. A próxima *contagem* ou menos bytes não contribuem para um caractere multibyte completo e válido. Neste caso, **errno** é definido como EILSEQ e o estado de mudança de conversão em *mbstate* não é especificado.
+(size_t) (-1) Ocorreu um erro de codificação. A próxima *contagem* ou menos bytes não contribuirá para um caractere multibyte completo e válido. Nesse caso, **errno** é definido como EILSEQ e o estado de deslocamento de conversão em *mbstate* não é especificado.
 
-(size_t) (-2) Os próximos bytes *de contagem* contribuem para um caractere multibyte incompleto, mas potencialmente válido, e todos os bytes *de contagem* foram processados. Nenhum valor é armazenado em *wchar,* mas *mbstate* é atualizado para reiniciar a função.
+(size_t) (-2) Os bytes de *contagem* seguinte contribuem para um caractere multibyte incompleto, mas potencialmente válido, e todos os bytes de *contagem* foram processados. Nenhum valor é armazenado em *WCHAR*, mas *mbstate* é atualizado para reiniciar a função.
 
 ## <a name="remarks"></a>Comentários
 
-Se *mbchar* for um ponteiro nulo, a função é equivalente à chamada:
+Se *mbchar* for um ponteiro nulo, a função será equivalente à chamada:
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-Neste caso, o valor dos argumentos *wchar* e *contagem* são ignorados.
+Nesse caso, o valor dos argumentos *WCHAR* e *Count* é ignorado.
 
-Se *mbchar* não for um ponteiro nulo, a função examinará os bytes de *contagem* de *mbchar* para determinar o número necessário de bytes necessários para completar o próximo caractere multibyte. Se o próximo caractere for válido, o caractere multibyte correspondente será armazenado em *wchar* se não for um ponteiro nulo. Se o caractere for o caractere nulo amplo correspondente, o estado resultante de *mbstate* é o estado de conversão inicial.
+Se *mbchar* não for um ponteiro NULL, a função examinará a *contagem* de bytes de *mbchar* para determinar o número necessário de bytes necessários para concluir o próximo caractere de vários bytes. Se o próximo caractere for válido, o caractere multibyte correspondente será armazenado em *WCHAR* se não for um ponteiro nulo. Se o caractere for o caractere nulo largo correspondente, o estado resultante de *mbstate* será o estado de conversão inicial.
 
-A função **mbrtowc** difere da [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subseqüentes para as mesmas ou outras funções reinicializáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo deve usar **wcsrlen** em vez de **wcslen** se uma chamada subseqüente para **wcsrtombs** for usada em vez de **wcstombs**.
+A função **mbrtowc** difere de [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo deve usar **wcsrlen** em vez de **wcslen** se uma chamada subsequente para **wcsrtombs** for usada em vez de **wcstombs**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -213,8 +213,8 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

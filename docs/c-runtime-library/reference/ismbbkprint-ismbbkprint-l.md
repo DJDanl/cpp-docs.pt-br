@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: e59d06678b2601375bf3174fa84bc261c350c4dd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 183a883d259fd322c5ecd6712bba676b7ffe080c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343627"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915712"
 ---
 # <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -59,19 +59,19 @@ int _ismbbkprint_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_ismbbkprint** retorna um valor não zero se o inteiro *c* for um texto não-ASCII ou um símbolo de pontuação não ASCII ou 0 se não for. Por exemplo, somente na página de código 932, **_ismbbkprint** testa se há pontuação katakana ou alfanumérico katakana (intervalo: 0xA1 – 0xDF). **_ismbbkprint** usa o local atual para configurações de caracteres dependentes de localidades. **_ismbbkprint_l** é idêntica, exceto que usa o local passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbbkprint** retornará um valor diferente de zero se o inteiro *c* for um texto não-ASCII ou símbolo de pontuação não ASCII ou 0 se não for. Por exemplo, somente na página de código 932, **_ismbbkprint** testa se há pontuação katakana ou alfanumérico katakana (intervalo: 0xA1 – 0xDF). **_ismbbkprint** usa a localidade atual para configurações de caractere dependentes de localidade. **_ismbbkprint_l** é idêntico, exceto pelo fato de que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,7 +82,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

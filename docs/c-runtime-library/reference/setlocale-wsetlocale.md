@@ -1,6 +1,6 @@
 ---
 title: setlocale, _wsetlocale
-description: Descreve as funções de biblioteca de tempo setlocale _wsetlocalede execução do Microsoft C (CRT) e .
+description: Descreve as funções setlocale de biblioteca do Microsoft C Runtime (CRT _wsetlocale) e o.
 ms.date: 4/2/2020
 api_name:
 - _wsetlocale
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 2834229839153c3154caadf71e5fb30d84ed2f1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 312fd8e9f794368d334ea353e2c92241d701ab0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353716"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918849"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -66,15 +66,15 @@ wchar_t *_wsetlocale(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Categoria*\
+*Categorias*\
 Categoria afetada pela localidade.
 
-*Localidade*\
+*localidade*\
 Especificador de localidade.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se for dado um *local e* *categoria* válidos, retorne um ponteiro para a seqüência associada à *localidade* e *categoria*especificadas . Se a *localidade* ou *categoria* não for válida, retorne um ponteiro nulo e as configurações de localização atuais do programa serão inalteradas.
+Se uma *localidade* e *categoria* válidas forem fornecidas, o retornará um ponteiro para a cadeia de caracteres associada à *localidade* e à *categoria*especificadas. Se a *localidade* ou *categoria* não for válida, o retornará um ponteiro nulo e as configurações de localidade atuais do programa ficarão inalteradas.
 
 Por exemplo, a chamada
 
@@ -88,44 +88,44 @@ define todas as categorias, retornando apenas a cadeia de caracteres
 en-US
 ```
 
-Você pode copiar a seqüência devolvida por **setlocale** para restaurar essa parte das informações locais do programa. O armazenamento local global ou de rosca é usado para a seqüência retornada pelo **setlocale**. Chamadas posteriores para **definir setlocale** sobreescrevem a seqüência, o que invalida ponteiros de seqüência retornados por chamadas anteriores.
+Você pode copiar a cadeia de caracteres retornada por **setlocale** para restaurar essa parte das informações de localidade do programa. O armazenamento local global ou de thread é usado para a cadeia de caracteres retornada por **setlocale**. As chamadas posteriores para **setlocaling** substituem a cadeia de caracteres, que invalida os ponteiros de cadeia de caracteres retornados por chamadas anteriores.
 
 ## <a name="remarks"></a>Comentários
 
-Use a função **setlocale** para definir, alterar ou consultar algumas ou todas as informações atuais do local do programa especificadas por *localidade* e *categoria*. *local refere-se* à localidade (país/região e idioma) para a qual você pode personalizar certos aspectos do seu programa. Algumas categorias de localidade dependentes incluem a formatação de datas e o formato de exibição de valores monetários. Se você definir a *localização* da seqüência padrão para um idioma que tenha vários formulários suportados no computador, você deverá verificar o valor de retorno **definido para** ver qual idioma está em vigor. Por exemplo, se você definir *local para* "chinês" o valor de retorno pode ser "simplificado chinês" ou "chinês-tradicional".
+Use a função **setlocalize** para definir, alterar ou consultar algumas ou todas as informações de localidade do programa atual especificadas por *localidade* e *categoria*. *locale* refere-se à localidade (país/região e idioma) para a qual você pode personalizar determinados aspectos do seu programa. Algumas categorias de localidade dependentes incluem a formatação de datas e o formato de exibição de valores monetários. Se você definir a *localidade* como a cadeia de caracteres padrão para um idioma que tenha vários formulários com suporte no seu computador, deverá verificar o valor de retorno de **setlocalize** para ver qual idioma está em vigor. Por exemplo, se você definir *locale* como "chinês", o valor de retorno poderá ser "chinês simplificado" ou "chinês-tradicional".
 
-**_wsetlocale** é uma versão de amplo caráter do **setlocale;** o argumento *local e* o valor de retorno de **_wsetlocale** são strings de caracteres amplos. **_wsetlocale** e **setlocale** se comportem de forma idêntica de outra forma.
+**_wsetlocale** é uma versão de caractere largo do **setlocale**; o argumento de *localidade* e o valor de retorno de **_wsetlocale** são cadeias de caracteres largos. o **_wsetlocale** e o **setlocaling** se comportam de forma idêntica.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsetlocale**|**Setlocale**|**Setlocale**|**_wsetlocale**|
+|**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
 
-O argumento *da categoria* especifica as partes das informações locais de um programa que são afetadas. As macros utilizadas para *a categoria* e as partes do programa que afetam são as seguintes:
+O argumento *Category* especifica as partes das informações de localidade de um programa que são afetadas. As macros usadas para a *categoria* e as partes do programa que elas afetam são as seguintes:
 
-|*bandeira categoria*|Afeta|
+|sinalizador de *categoria*|Afeta|
 |-|-|
-| **Lc_all** | Todas as categorias, conforme listado abaixo. |
-| **LC_COLLATE** | O **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, e **wcsxfrm.** |
-| **LC_CTYPE** | As funções de manuseio de caracteres (exceto **isdigit**, **isxdigit,** **mbstowcs**e **mbtowc**, que não são afetadas). |
-| **LC_MONETARY** | Informações de formatação monetária retornadas pela função **localeconv.** |
-| **LC_NUMERIC** | Caractere de ponto decimal para as rotinas de saída formatadas (como **printf),** para as rotinas de conversão de dados e para as informações de formatação não monetárias retornadas pela **localeconv**. Além do caractere de ponto decimal, **LC_NUMERIC** define o separador de milhares e a seqüência de controle de agrupamento retornada por [localeconv](localeconv.md). |
-| **LC_TIME** | As funções **strftime** e **wcsftime.** |
+| **LC_ALL** | Todas as categorias, conforme listado abaixo. |
+| **LC_COLLATE** | As funções **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**e **wcsxfrm** . |
+| **LC_CTYPE** | As funções de manipulação de caracteres (exceto **IsDigit**, **isxdigit**, **mbstowcs**e **mbtowc**, que não são afetadas). |
+| **LC_MONETARY** | Informações de formatação monetária retornadas pela função **localeconv** . |
+| **LC_NUMERIC** | Caractere de ponto decimal para as rotinas de saída formatadas (como **printf**), para as rotinas de conversão de dados e para as informações de formatação não monetária retornadas por **localeconv**. Além do caractere de ponto decimal, **LC_NUMERIC** define o separador de milhar e a cadeia de caracteres de controle de agrupamento retornada por [localeconv](localeconv.md). |
+| **LC_TIME** | As funções **strftime** e **wcsftime** . |
 
-Essa função valida o parâmetro category. Se o parâmetro de categoria não for um dos valores dados na tabela anterior, o manipulador de parâmetros inválidos será invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, a função define **errno** para **EINVAL** e retorna **NULL**.
+Essa função valida o parâmetro category. Se o parâmetro Category não for um dos valores fornecidos na tabela anterior, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função definirá **errno** como **EINVAL** e retornará **NULL**.
 
-O *argumento local é* um ponteiro para uma string que especifica o local. Para obter informações sobre o formato do argumento *local,* consulte [Nomes locais, idiomas e strings de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Se *locale* apontar para uma cadeia de caracteres vazia, a localidade será o ambiente nativo definido pela implementação. Um valor de **C** especifica o ambiente mínimo de conformidade ANSI para tradução C. O **local C** assume que todos os tipos de dados **char** são 1 byte e que seu valor é sempre menor que 256.
+O argumento de *localidade* é um ponteiro para uma cadeia de caracteres que especifica a localidade. Para obter informações sobre o formato do argumento de *localidade* , consulte [nomes de localidade, idiomas e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Se *locale* apontar para uma cadeia de caracteres vazia, a localidade será o ambiente nativo definido pela implementação. Um valor de **C** especifica o ambiente de conformidade ANSI mínimo para conversão de C. A localidade **C** pressupõe que todos os tipos de dados **Char** sejam 1 byte e que seu valor seja sempre menor que 256.
 
 Na inicialização do programa, o equivalente da instrução a seguir é executado:
 
 `setlocale( LC_ALL, "C" );`
 
-O argumento *local* pode ter um nome local, uma seqüência de idiomas, uma seqüência de idiomas e código de país/região, uma página de código ou uma seqüência de idiomas, código de país/região e página de código. O conjunto de nomes locais disponíveis, idiomas, códigos de país/região e páginas de código inclui todos aqueles suportados pela API do Windows NLS. O conjunto de nomes locais suportados por **setlocale** são descritos em [Nomes locais, idiomas e strings país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de strings de idioma e país/região suportados pelo **setlocale** estão listados em [Strings de idioma](../../c-runtime-library/language-strings.md) e [strings país/região](../../c-runtime-library/country-region-strings.md). Recomendamos o formato do nome da localidade para o desempenho e a capacidade de manutenção de cadeias de caracteres de localidade inseridas no código ou serializadas para armazenamento. As cadeias de caracteres de nome da localidade são menos prováveis de ser alteradas por uma atualização do sistema operacional do que o formato de idioma e país/região.
+O argumento de *localidade* pode usar um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres de idioma e um código de país/região, uma página de código ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto de nomes de localidade disponíveis, idiomas, códigos de país/região e páginas de código inclui todos aqueles com suporte da API NLS do Windows. O conjunto de nomes de localidade com suporte do **setlocaling** é descrito em [nomes de localidade, linguagens e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte no **setlocale** são listados em cadeias de caracteres de [idioma](../../c-runtime-library/language-strings.md) e de [país/região](../../c-runtime-library/country-region-strings.md). Recomendamos o formato do nome da localidade para o desempenho e a capacidade de manutenção de cadeias de caracteres de localidade inseridas no código ou serializadas para armazenamento. As cadeias de caracteres de nome da localidade são menos prováveis de ser alteradas por uma atualização do sistema operacional do que o formato de idioma e país/região.
 
-Um ponteiro nulo que é passado como o argumento *local* diz **setlocale** para consultar em vez de definir o ambiente internacional. Se o argumento *local for* um ponteiro nulo, a configuração atual do local do programa não será alterada. Em vez disso, **setlocale** retorna um ponteiro para a string que está associada à *categoria* da localização atual do segmento. Se o argumento de *categoria* for **LC_ALL,** a função reameda uma string que indique a configuração atual de cada categoria, separada por ponto e vírgula. Por exemplo, a sequência de chamadas
+Um ponteiro nulo que é passado como o argumento *locale* informa **setlocalize** para consultar em vez de para definir o ambiente internacional. Se o argumento de *localidade* for um ponteiro nulo, a configuração de localidade atual do programa não será alterada. Em vez disso, **setlocalize** retorna um ponteiro para a cadeia de caracteres associada à *categoria* da localidade atual do thread. Se o argumento *Category* for **LC_ALL**, a função retornará uma cadeia de caracteres que indica a configuração atual de cada categoria, separada por ponto e vírgula. Por exemplo, a sequência de chamadas
 
 ```C
 // Set all categories and return "en-US"
@@ -141,33 +141,33 @@ retorna
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 ```
 
-que é a string que está associada com a categoria **LC_ALL.**
+que é a cadeia de caracteres associada à categoria de **LC_ALL** .
 
-Os exemplos a seguir dizem respeito à categoria **LC_ALL.** Qualquer uma das cordas". OCP" e ". ACP" pode ser usado em vez de um número de página de código para especificar o uso da página de código OEM padrão do usuário e da página de código ANSI padrão do usuário para esse nome local, respectivamente.
+Os exemplos a seguir pertencem à categoria de **LC_ALL** . Qualquer uma das cadeias de caracteres ". OCP "e". ACP "pode ser usado em vez de um número de página de código para especificar o uso da página de código OEM padrão do usuário e da página de código ANSI padrão do usuário para esse nome de localidade, respectivamente.
 
 - `setlocale( LC_ALL, "" );`
 
-   Define a localidade para o padrão, que é a página de código ANSI padrão do usuário obtida do sistema operacional. O nome local está definido como o valor retornado por [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). A página de código é definida como o valor retornado pelo [GetACP](/windows/win32/api/winnls/nf-winnls-getacp).
+   Define a localidade para o padrão, que é a página de código ANSI padrão do usuário obtida do sistema operacional. O nome da localidade é definido como o valor retornado por [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). A página de código é definida com o valor retornado por [GetACP](/windows/win32/api/winnls/nf-winnls-getacp).
 
 - `setlocale( LC_ALL, ".OCP" );`
 
-   Define a localização para a página de código OEM atual obtida no sistema operacional. O nome local está definido como o valor retornado por [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). A página de código é definida como o valor [LOCALE_IDEFAULTCODEPAGE](/windows/win32/intl/locale-idefault-constants) para o nome local padrão do usuário por [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Define a localidade para a página de código OEM atual obtida do sistema operacional. O nome da localidade é definido como o valor retornado por [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). A página de código é definida como o valor [LOCALE_IDEFAULTCODEPAGE](/windows/win32/intl/locale-idefault-constants) para o nome de localidade padrão do usuário por [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, ".ACP" );`
 
-   Define a localidade para a página de código ANSI obtida do sistema operacional. O nome local está definido como o valor retornado por [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). A página de código é definida como o valor [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para o nome local padrão do usuário por [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Define a localidade para a página de código ANSI obtida do sistema operacional. O nome da localidade é definido como o valor retornado por [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). A página de código é definida como o valor [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para o nome de localidade padrão do usuário por [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<localename>" );`
 
-   Define o local para o nome local indicado * \< *pelo nome local>. A página de código é definida como o valor [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para o nome local especificado por [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Define a localidade como o nome da localidade que é indicado por * \<localename>*. A página de código é definida como o valor de [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para o nome de localidade especificado por [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>" );`
 
-   Define o local para o idioma e * \<* país/região indicados pelo idioma>e * \<país>, *juntamente com a página de código padrão obtida no sistema operacional host. A página de código é definida como o valor [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para o nome local especificado por [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Define a localidade para o idioma e o país/região indicados por * \<>de idiomas* e * \<>de país *, junto com a página de código padrão obtida do sistema operacional do host. A página de código é definida como o valor de [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para o nome de localidade especificado por [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Define o local para a página de idioma, país/região e código indicada pelo * \<idioma>, * * \<>de país *e * \<code_page>* strings. Você pode usar várias combinações de idioma, país/região e página de código. Por exemplo, esta chamada define a localidade para francês canadense com a página de código 1252:
+   Define a localidade para o idioma, o país/região e a página de código indicados pelo * \<idioma>*, * \<país>* e * \<code_page* cadeias de caracteres>. Você pode usar várias combinações de idioma, país/região e página de código. Por exemplo, esta chamada define a localidade para francês canadense com a página de código 1252:
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -181,7 +181,7 @@ Os exemplos a seguir dizem respeito à categoria **LC_ALL.** Qualquer uma das co
 
 - `setlocale( LC_ALL, "<language>" );`
 
-   Define o local para o idioma indicado * \< *pelo idioma>, e usa o país/região padrão para o idioma especificado e a página de código ANSI padrão do usuário para esse país/região, conforme obtido no sistema operacional host. Por exemplo, as seguintes chamadas para **setlocale** são funcionalmente equivalentes:
+   Define a localidade para o idioma indicado pelo * \<>de idiomas *e usa o país/região padrão para o idioma especificado e a página de código ANSI padrão do usuário para esse país/região, conforme obtido do sistema operacional do host. Por exemplo, as seguintes chamadas para **setlocaling** são funcionalmente equivalentes:
 
    `setlocale( LC_ALL, "en-US" );`
 
@@ -195,7 +195,7 @@ Os exemplos a seguir dizem respeito à categoria **LC_ALL.** Qualquer uma das co
 
    Define a página de código para o valor indicado por *<code_page>*, juntamente com o país/região e o idioma padrão (conforme definidos pelo sistema operacional do host) para a página de código especificada.
 
-A categoria deve ser **LC_ALL** ou **LC_CTYPE** para efetuar uma alteração da página de código. Por exemplo, se o país/região padrão e o idioma do sistema operacional host forem "Estados Unidos" e "Inglês", as duas chamadas para **setlocale** são funcionalmente equivalentes:
+A categoria deve ser **LC_ALL** ou **LC_CTYPE** para afetar uma alteração de página de código. Por exemplo, se o país/região padrão e idioma do sistema operacional do host forem "Estados Unidos" e "inglês", as duas chamadas a seguir para **setlocaling** serão funcionalmente equivalentes:
 
 `setlocale( LC_ALL, ".1252" );`
 
@@ -203,7 +203,7 @@ A categoria deve ser **LC_ALL** ou **LC_CTYPE** para efetuar uma alteração da 
 
 Para obter mais informações, consulte a diretiva de pragma [setlocale](../../preprocessor/setlocale.md) na [Referência de pré-processador C/C++](../../preprocessor/c-cpp-preprocessor-reference.md).
 
-A função [_configthreadlocale](configthreadlocale.md) é usada para controlar se o **setlocale** afeta a localização de todos os segmentos em um programa ou apenas a localização do segmento de chamada.
+A função [_configthreadlocale](configthreadlocale.md) é usada para controlar se **setlocaling** afeta a localidade de todos os threads em um programa ou apenas a localidade do thread de chamada.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -320,18 +320,18 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>Confira também
 
-[Nomes locais, idiomas e strings país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Nomes de localidade, idiomas e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\
-[_create_locale _wcreate_locale.](create-locale-wcreate-locale.md)\
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)\
 [Localidade](../../c-runtime-library/locale.md)\
-[Localeconv](localeconv.md)\
+[localeconv](localeconv.md)\
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)\
-[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
 [_setmbcp](setmbcp.md)\
-[strcoll Funções](../../c-runtime-library/strcoll-functions.md)\
-[strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
+[Funções strcoll](../../c-runtime-library/strcoll-functions.md)\
+[STRFTIME, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
-[wcssetos, _wcstombs_l](wcstombs-wcstombs-l.md)\
+[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)

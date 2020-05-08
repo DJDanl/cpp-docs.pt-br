@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 111d5745703d15fccf0b2a941248203cc80d07a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362553"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912240"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -59,28 +59,28 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Lidar com*<br/>
+*processamento*<br/>
 Descritor de arquivo que faz referência a um arquivo aberto.
 
 ## <a name="return-value"></a>Valor retornado
 
 A posição atual do ponteiro de arquivo. Em dispositivos sem capacidade de busca, o valor retornado será indefinido.
 
-Um valor de retorno de -1L indica um erro. Se *o punho* for um descritor de arquivo inválido, o manipulador de parâmetros inválidos será invocado, conforme descrito na Validação de [Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EBADF** e retornam -1L.
+Um valor de retorno de-1L indica um erro. Se o *identificador* for um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EBADF** e retornará-1L.
 
-Veja [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre este, e outros códigos de devolução.
+Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esse e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_tell** obtém a posição atual do ponteiro do arquivo (se houver) associada ao argumento do *punho.* A posição é expressa como o número de bytes do início do arquivo. Para a função **_telli64,** este valor é expresso como um inteiro de 64 bits.
+A função **_tell** Obtém a posição atual do ponteiro do arquivo (se houver) associado ao argumento *Handle* . A posição é expressa como o número de bytes do início do arquivo. Para a função **_telli64** , esse valor é expresso como um inteiro de 64 bits.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_tell,** **_telli64.**|\<io.h>|
+|**_tell**, **_telli64**|\<io.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -130,7 +130,7 @@ Line two.
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

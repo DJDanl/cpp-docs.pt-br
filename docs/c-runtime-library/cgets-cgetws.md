@@ -16,7 +16,7 @@ api_location:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: afffb691ca8bf8d180cac11ac5f16a84d871b1b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334411"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917437"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -71,7 +71,7 @@ wchar_t *_cgetws(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Buffer*<br/>
+*completo*<br/>
 Local de armazenamento de dados.
 
 ## <a name="return-value"></a>Valor retornado
@@ -86,7 +86,7 @@ Uma vez que todas as chaves de edição estão ativas quando `_cgets` ou `_cgetw
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -149,5 +149,5 @@ Text = A line of input.
 
 ## <a name="see-also"></a>Confira também
 
-[Console e Porta I/O](../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)

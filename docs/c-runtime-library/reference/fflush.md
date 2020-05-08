@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 401f715e99e6304f0726c8b9c96a71d9582dbc1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347163"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912894"
 ---
 # <a name="fflush"></a>fflush
 
@@ -54,24 +54,24 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor retornado
 
-**fflush** retorna 0 se o buffer foi lavado com sucesso. O valor 0 também é retornado em casos em que o fluxo especificado não tem nenhum buffer ou está aberto para acesso somente leitura. Um valor de retorno do **EOF** indica um erro.
+**fflush** retornará 0 se o buffer tiver sido liberado com êxito. O valor 0 também é retornado em casos em que o fluxo especificado não tem nenhum buffer ou está aberto para acesso somente leitura. Um valor de retorno de **EOF** indica um erro.
 
 > [!NOTE]
-> Se **o fflush** retornar **OEOF,** os dados podem ter sido perdidos devido a uma falha de gravação. Ao configurar um manipulador de erros crítico, é mais seguro desligar o buffering com a função **setvbuf** ou usar rotinas de I/O de baixo nível, como **_open,** **_close**e **_write** em vez das funções de I/O do fluxo.
+> Se **fflush** retornar **EOF**, os dados poderão ter sido perdidos devido a uma falha de gravação. Ao configurar um manipulador de erro crítico, é mais seguro ativar o buffer com a função **setvbuf** ou usar rotinas de e/s de nível baixo, como **_open**, **_close**e **_write** em vez das funções de e/s de fluxo.
 
 ## <a name="remarks"></a>Comentários
 
-A função **fflush** libera o *fluxo*. Se o fluxo foi aberto no modo de gravação ou se ele foi aberto no modo de atualização e a última operação foi uma gravação, o conteúdo do buffer de fluxo é gravado no arquivo subjacente ou o dispositivo e o buffer são descartados. Se o fluxo foi aberto no modo de leitura ou se o fluxo não tiver buffer, a chamada para **fflush** não terá efeito e qualquer buffer será retido. Uma chamada para **fflush** nega o efeito de qualquer chamada prévia para **ungetc** para o fluxo. O fluxo permanecerá aberto após a chamada.
+A função **fflush** libera o *fluxo*de fluxo. Se o fluxo foi aberto no modo de gravação ou se ele foi aberto no modo de atualização e a última operação foi uma gravação, o conteúdo do buffer de fluxo é gravado no arquivo subjacente ou o dispositivo e o buffer são descartados. Se o fluxo tiver sido aberto no modo de leitura ou se o fluxo não tiver buffer, a chamada para **fflush** não terá efeito e qualquer buffer será retido. Uma chamada para **fflush** nega o efeito de qualquer chamada anterior ao **ungetc** para o fluxo. O fluxo permanecerá aberto após a chamada.
 
-Se *o fluxo* for **NULO,** o comportamento é o mesmo que uma chamada para **fflush** em cada fluxo aberto. Todos os fluxos abertos no modo de gravação e todos os fluxos abertos no modo de atualização em que a última operação foi uma gravação são liberados. A chamada não tem efeito em outros fluxos.
+Se o *fluxo* for **nulo**, o comportamento será o mesmo que uma chamada para **fflush** em cada fluxo aberto. Todos os fluxos abertos no modo de gravação e todos os fluxos abertos no modo de atualização em que a última operação foi uma gravação são liberados. A chamada não tem efeito em outros fluxos.
 
-Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos. O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com COMMODE.OBJ. No arquivo executável resultante, chamadas para **_flushall** gravar o conteúdo de todos os buffers em disco. Apenas **_flushall** e **fflush** são afetados por COMMODE.OBJ.
+Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos. O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com COMMODE.OBJ. No arquivo executável resultante, as chamadas para **_flushall** gravam o conteúdo de todos os buffers em disco. Somente **_flushall** e **fflush** são afetados por COMMODE. obj.
 
 Para obter informações sobre como controlar o recurso de confirmação em disco, consulte [E/S de fluxo](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) e [_fdopen](fdopen-wfdopen.md).
 
-Essa função bloqueia o thread de chamada e, portanto, é thread-safe. Para obter uma versão sem travamento, **consulte _fflush_nolock**.
+Essa função bloqueia o thread de chamada e, portanto, é thread-safe. Para uma versão sem bloqueio, consulte **_fflush_nolock**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
