@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338693"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914633"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -65,7 +65,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 Valor de ponto flutuante.
 
-*Intptr*<br/>
+*IntPtr*<br/>
 Ponteiro para a parte inteira armazenada.
 
 ## <a name="return-value"></a>Valor retornado
@@ -74,19 +74,19 @@ Esta função retorna a parte fracionária com sinal de *x*. Nenhum erro é reto
 
 ## <a name="remarks"></a>Comentários
 
-As funções **modf** dividem o valor de ponto flutuante *x* em partes fracionadas e inteiras, cada uma das quais tem o mesmo sinal que *x*. A parte fracionada assinada de *x* é devolvida. A porção inteira é armazenada como um valor de ponto flutuante no *intptr*.
+As funções **modf** dividem o valor de ponto flutuante *x* em partes fracionárias e de inteiros, cada um com o mesmo sinal de *x*. A parte fracionária assinada de *x* é retornada. A parte inteira é armazenada como um valor de ponto flutuante em *IntPtr*.
 
-**modf** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+o **modf** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ permite sobrecarga, para que você possa chamar sobrecargas de **modf** que tomam e retornam **flutuam** **ou** longos parâmetros **duplos.** Em um programa C, **modf** sempre pega dois valores duplos e retorna um valor duplo.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **modf** que usam e retornam parâmetros **long** **duplos** **float** ou Long. Em um programa C, **modf** sempre usa dois valores double e retorna um valor Double.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**modf,** **modff,** **modfl**|C: \<math.h><br /><br /> C++: , \<cmath> ou \<math.h>|
+|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: , \<cmath> ou \<math.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

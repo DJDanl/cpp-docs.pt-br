@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: b92e056816183b4bbb07edb3efec4415655d655e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 19a20de40bb02e49f618e8e617c9659788dc3e25
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341586"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914388"
 ---
 # <a name="_makepath-_wmakepath"></a>_makepath, _wmakepath
 
@@ -75,24 +75,24 @@ void _wmakepath(
 Buffer de caminho completo.
 
 *Dirigir*<br/>
-Contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um sinal de dois pontos opcional à direita. **_makepath** insere o cólon automaticamente no caminho composto se estiver faltando. Se *a unidade* for **NULL** ou apontapara uma seqüência de string vazia, nenhuma letra de unidade será exibida na seqüência de *caminho* composto.
+Contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um sinal de dois pontos opcional à direita. **_makepath** insere os dois-pontos automaticamente no caminho composto, se ele estiver ausente. Se a *unidade* for **nula** ou apontar para uma cadeia de caracteres vazia, nenhuma letra da unidade será exibida na cadeia de caracteres do *caminho* composto.
 
-*Dir*<br/>
-Contém o caminho de diretórios, excluindo o designador da unidade ou o nome de arquivo real. A barra de arrasto é opcional, e uma barra\\para a frente (/) ou uma barra invertida ( ) ou ambas podem ser usadas em um único argumento *dir.* Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se *dir* for **NULL** ou apontar para uma seqüência de string vazia, nenhum caminho de diretório será inserido na string *de caminho* composto.
+*dir*<br/>
+Contém o caminho de diretórios, excluindo o designador da unidade ou o nome de arquivo real. A barra à direita é opcional e uma barra (/) ou uma barra invertida (\\) ou ambas podem ser usadas em um único argumento *dir* . Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se *dir* for **nulo** ou apontar para uma cadeia de caracteres vazia, nenhum caminho de diretório será inserido na cadeia de caracteres de *caminho* composto.
 
-*Fname*<br/>
-Contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se *fname* for **NULL** ou aponta para uma seqüência de string vazia, nenhum nome de arquivo será inserido na seqüência *de caminho* composto.
+*fname*<br/>
+Contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se *fname* for **nulo** ou apontar para uma cadeia de caracteres vazia, Nenhum filename será inserido na cadeia de caracteres do *caminho* composto.
 
-*Ext*<br/>
-Contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). **_makepath** insere o período automaticamente se ele não aparecer em *ramal*. Se *o ramo* for **NULO** ou apontapara uma seqüência vazia, nenhuma extensão será inserida na seqüência *de caminho* composto.
+*externa*<br/>
+Contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). **_makepath** inserirá o período automaticamente se ele não aparecer em *ext*. Se *ext* for **nulo** ou apontar para uma cadeia de caracteres vazia, nenhuma extensão será inserida na cadeia de caracteres de *caminho* composto.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_makepath** cria uma seqüência de caminho composto a partir de componentes individuais, armazenando o resultado em *caminho*. O *caminho* pode incluir uma letra de unidade, caminho de diretório, nome de arquivo e extensão de nome de arquivo. **_wmakepath** é uma versão ampla de **_makepath;** os argumentos para **_wmakepath** são cordas de caracteres largos. **_wmakepath** e **_makepath** se comportam de forma idêntica.
+A função **_makepath** cria uma cadeia de caracteres de caminho composto de componentes individuais, armazenando o resultado no *caminho*. O *caminho* pode incluir uma letra de unidade, caminho de diretório, nome de arquivo e extensão de nome de arquivo. **_wmakepath** é uma versão de caractere largo do **_makepath**; os argumentos para **_wmakepath** são cadeias de caracteres largos. **_wmakepath** e **_makepath** se comportar de forma idêntica.
 
-**Observação de Segurança** Use uma cadeia de caracteres terminada em nulo. Para evitar a ultraserção do buffer, a seqüência de terminação nula não deve exceder o tamanho do buffer de *caminho.* **_makepath** não garante que o comprimento da seqüência de caminho composto não exceda **_MAX_PATH**. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+**Observação de Segurança** Use uma cadeia de caracteres terminada em nulo. Para evitar a saturação do buffer, a cadeia de caracteres terminada em nulo não deve exceder o tamanho do buffer do *caminho* . **_makepath** não garante que o comprimento da cadeia de caracteres de caminho composto não exceda **_MAX_PATH**. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -100,9 +100,9 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-O argumento *do caminho* deve apontar para um buffer vazio grande o suficiente para manter o caminho completo. O *caminho* composto não deve ser maior do que **a** _MAX_PATH constante, definida em Stdlib.h.
+O argumento de *caminho* deve apontar para um buffer vazio grande o suficiente para manter o caminho completo. O *caminho* composto não deve ser maior que a constante de **_MAX_PATH** , definida em STDLIB. h.
 
-Se o caminho for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Além disso, **errno** está definido **como EINVAL**. **Valores NULL** são permitidos para todos os outros parâmetros.
+Se path for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, **errno** é definido como **EINVAL**. Valores **nulos** são permitidos para todos os outros parâmetros.
 
 ## <a name="requirements"></a>Requisitos
 

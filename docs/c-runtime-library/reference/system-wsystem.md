@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 21ce04d30da80a40a1162dce06ff378150008766
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362786"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912386"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -62,31 +62,31 @@ int _wsystem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Comando*<br/>
+*.*<br/>
 O comando a ser executado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se o *comando* **for NULL** e o intérprete de comando for encontrado, retorna um valor não zero. Se o intérprete de comando não for encontrado, retorna 0 e define **errno** para **ENOENT**. Se o *comando* não for **NULL,** o **sistema** retorna o valor que é devolvido pelo intérprete de comando. Retornará o valor 0 somente se o interpretador de comandos retornar o valor 0. Um valor de retorno de - 1 indica um erro, e **errno** é definido como um dos seguintes valores:
+Se o *comando* for **nulo** e o interpretador de comandos for encontrado, retornará um valor diferente de zero. Se o interpretador de comandos não for encontrado, retornará 0 e definirá **errno** como **ENOENT**. Se o *comando* não for **nulo**, o **sistema** retornará o valor retornado pelo interpretador de comando. Retornará o valor 0 somente se o interpretador de comandos retornar o valor 0. Um valor de retorno de-1 indica um erro e **errno** é definido como um dos seguintes valores:
 
 |||
 |-|-|
 | **E2BIG** | A lista de argumentos (que é dependente do sistema) é muito grande. |
-| **Enoent** | Não foi possível encontrar o interpretador de comandos. |
+| **ENOENT** | Não foi possível encontrar o interpretador de comandos. |
 | **ENOEXEC** | O arquivo do interpretador de comandos não pode ser executado porque o formato não é válido. |
-| **Enomem** | Não há memória suficiente disponível para executar o comando, a memória disponível foi corrompida ou há um bloco inválido, indicando que o processo que está fazendo a chamada não foi alocado corretamente. |
+| **ENOMEM** | Não há memória suficiente disponível para executar o comando, a memória disponível foi corrompida ou há um bloco inválido, indicando que o processo que está fazendo a chamada não foi alocado corretamente. |
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-A função **do sistema** passa *o comando* para o intérprete de comando, que executa a seqüência como um comando do sistema operacional. **o sistema** usa as variáveis de ambiente **COMSPEC** e **PATH** para localizar o arquivo de intérprete de comando CMD.exe. Se o *comando* for **NULL**, a função apenas verifica se o intérprete de comando existe.
+A função do **sistema** passa o *comando* para o interpretador de comandos, que executa a cadeia de caracteres como um comando do sistema operacional. o **sistema** usa as variáveis de ambiente **COMSPEC** e **Path** para localizar o arquivo do interpretador de comando cmd. exe. Se o *comando* for **nulo**, a função apenas verificará se o interpretador de comando existe.
 
-Você deve explicitamente dar descarga, usando [fflush](fflush.md) ou [_flushall,](flushall.md)ou fechar qualquer fluxo antes de chamar **o sistema**.
+Você deve liberar explicitamente, usando [fflush](fflush.md) ou [_flushall](flushall.md), ou fechar qualquer fluxo antes de chamar o **sistema**.
 
-**_wsystem** é uma versão de amplo caractere do **sistema;** o argumento *de comando* para **_wsystem** é uma seqüência de caracteres amplo. Caso contrário, essas funções se comportam de forma idêntica.
+**_wsystem** é uma versão de caractere largo do **sistema**; o argumento de *comando* para **_wsystem** é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -105,7 +105,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa **o sistema** para digitar um arquivo de texto.
+Este exemplo usa o **sistema** para digitar um arquivo de texto.
 
 ```C
 // crt_system.c
@@ -132,7 +132,7 @@ Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>

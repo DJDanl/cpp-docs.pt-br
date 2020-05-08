@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +28,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: fd3a3c2f99d1702cdccf68328c2122b965b2d078
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 06f72597a384cc5c90b2e345e62e13dee96c4dca
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337878"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913125"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 Especifica a ação a ser tomada quando um programa é terminado de maneira anormal.
 
 > [!NOTE]
-> Não use a função [abortar](abort.md) para desligar um aplicativo da Microsoft Store, exceto em cenários de teste ou depuração. Formas programáticas ou de uI para fechar um aplicativo da Loja não são permitidas de acordo com as políticas da [Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [o ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Não use a função [Abort](abort.md) para desligar um aplicativo Microsoft Store, exceto em cenários de teste ou depuração. As maneiras programática ou de interface do usuário de fechar um aplicativo da loja não são permitidas de acordo com as [políticas de Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,11 +53,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sinalizadores*<br/>
-Novo valor das bandeiras [abortarem.](abort.md)
+*sinalizadores*<br/>
+Novo valor dos sinalizadores de [anulação](abort.md) .
 
 *mask*<br/>
-Máscara para os bits de bandeiras [de abortar](abort.md) para definir.
+Máscara para os bits de sinalizadores de [anulação](abort.md) a serem definidos.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -65,9 +65,9 @@ O valor antigo dos sinalizadores.
 
 ## <a name="remarks"></a>Comentários
 
-Há duas bandeiras [de abortar:](abort.md) **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se uma mensagem de texto útil é impressa quando um programa é anormalmente encerrado. A mensagem afirma que o aplicativo chamou a função [abortar.](abort.md) O comportamento padrão é imprimir a mensagem. **_CALL_REPORTFAULT**, se definido, especifica que um dump de falha do Watson é gerado e relatado quando [o aborté](abort.md) é chamado. Por padrão, o relatório do despejo de memória está habilitado em builds que não são do tipo DEBUG.
+Há dois sinalizadores de [anulação](abort.md) : **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se uma mensagem de texto útil é impressa quando um programa é encerrado de forma anormal. A mensagem informa que o aplicativo chamou a função [Abort](abort.md) . O comportamento padrão é imprimir a mensagem. **_CALL_REPORTFAULT**, se definido, especifica que um despejo de memória Watson é gerado e relatado quando [Abort](abort.md) é chamado. Por padrão, o relatório do despejo de memória está habilitado em builds que não são do tipo DEBUG.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -100,4 +100,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>Confira também
 
-[Abortar](abort.md)<br/>
+[anular](abort.md)<br/>

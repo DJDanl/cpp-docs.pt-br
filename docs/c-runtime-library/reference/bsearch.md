@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: efad391eb2512cfa59cc3597430a84727676f27e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333798"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913377"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -53,38 +53,38 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*\
-Ponteiro para a chave para procurar.
+*chaves*\
+Ponteiro para a chave a ser pesquisada.
 
-*Base*\
+*polybase*\
 Ponteiro para a base dos dados de pesquisa.
 
-*Número*\
+*automática*\
 Número de elementos.
 
 *Largura*\
 Largura de elementos.
 
-*Comparar*\
-Função de retorno de chamada que compara dois elementos. O primeiro é um ponteiro para a chave para a pesquisa, e o segundo é um ponteiro para o elemento de matriz a ser comparado com a chave.
+*comparar*\
+Função de retorno de chamada que compara dois elementos. O primeiro é um ponteiro para a chave da pesquisa e o segundo é um ponteiro para o elemento da matriz a ser comparado com a chave.
 
 ## <a name="return-value"></a>Valor retornado
 
-**bsearch** retorna um ponteiro para uma ocorrência de *chave* na matriz apontada para *base*. Se *a chave* não for encontrada, a função retorna **NULA**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
+**bsearch** retorna um ponteiro para uma ocorrência de *Key* na matriz apontada por *base*. Se a *chave* não for encontrada, a função retornará **NULL**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
 
 ## <a name="remarks"></a>Comentários
 
-A função **bsearch** realiza uma pesquisa binária de uma matriz classificada de elementos *numéricos,* cada um dos bytes de *largura* em tamanho. O valor *base* é um ponteiro para a base da matriz a ser pesquisada, e *a chave* é o valor que está sendo procurado. O parâmetro *compare* é um ponteiro para uma rotina fornecida pelo usuário que compara a chave solicitada a um elemento de matriz. Ele retorna um dos seguintes valores que especificam sua relação:
+A função **bsearch** executa uma pesquisa binária de uma matriz classificada de elementos *numéricos* , com tamanho de bytes de *largura* . O valor de *base* é um ponteiro para a base da matriz a ser pesquisada e *Key* é o valor que está sendo procurado. O parâmetro *Compare* é um ponteiro para uma rotina fornecida pelo usuário que compara a chave solicitada a um elemento de matriz. Ele retorna um dos seguintes valores que especificam sua relação:
 
-|Valor devolvido pela *rotina de comparação*|Descrição|
+|Valor retornado pela rotina de *comparação*|Descrição|
 |-----------------------------------------|-----------------|
 |\< 0|A chave é menor que o elemento da matriz.|
 |0|A chave é igual ao elemento da matriz.|
 |> 0|A chave é maior que o elemento da matriz.|
 
-Essa função valida seus parâmetros. Se *comparar*, *a chave* ou o *número* for **NULO,** ou se *a base* for **NULA** e *o número* não for zero, ou se a *largura* for zero, a função invoca o manipulador de parâmetros inválido, conforme descrito na Validação [de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido `EINVAL` e a função retorna **NULA**.
+Essa função valida seus parâmetros. Se a *comparação*, a *chave* ou o *número* for **nulo**ou se *base* for **nulo** e o *número* for diferente de zero, ou se a *largura* for zero, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como `EINVAL` e a função retornará **NULL**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -139,9 +139,9 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Busca e Classificação](../../c-runtime-library/searching-and-sorting.md)\
+[Pesquisa e classificação](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\
 [_lsearch](lsearch.md)\
 [qsort](qsort.md)

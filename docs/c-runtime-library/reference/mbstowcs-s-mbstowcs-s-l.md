@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 07d694a7430f23e2f9600a5d2b147bcee2ef0e09
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4a6e86e1122a7392862fa34a59042c32560fd69d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338807"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915462"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -80,22 +80,22 @@ errno_t _mbstowcs_s_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Preturnvalue*<br/>
+*preativar*<br/>
 O número de caracteres convertidos.
 
-*Wcstr*<br/>
+*wcstr*<br/>
 Endereço do buffer para a cadeia de caracteres largos convertida resultante.
 
 *sizeInWords*<br/>
-O tamanho do *tampão wcstr* em palavras.
+O tamanho do buffer *wcstr* em palavras.
 
-*Mbstr*<br/>
+*mbstr*<br/>
 O endereço de uma sequência de caracteres multibyte terminadas por nulo.
 
 *contagem*<br/>
-O número máximo de caracteres largos para armazenar no buffer *wcstr,* sem incluir o nulo final, ou [_TRUNCATE](../../c-runtime-library/truncate.md).
+O número máximo de caracteres largos para armazenar no buffer *wcstr* , sem incluir o nulo de terminação ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Localidade*<br/>
+*locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor retornado
@@ -104,41 +104,41 @@ Zero se for bem-sucedido ou um código de erro em caso de falha.
 
 |Condição de erro|Valor de retorno e **errno**|
 |---------------------|------------------------------|
-|*wcstr* é **NULL** e *tamanhoInWords* > 0|**Einval**|
-|*mbstr* é **NULO**|**Einval**|
-|O buffer de destino é muito pequeno para conter a seqüência convertida (a menos que a *contagem* seja **_TRUNCATE;** veja Observações abaixo)|**ERANGE**|
-|*wcstr* não é **NULO** e *tamanhoInWords* == 0|**Einval**|
+|*wcstr* é **nulo** e *sizeInWords* > 0|**EINVAL**|
+|*mbstr* é **nulo**|**EINVAL**|
+|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que a *contagem* seja **_TRUNCATE**; consulte os comentários abaixo)|**ERANGE**|
+|*wcstr* não é **nulo** e *sizeInWords* = = 0|**EINVAL**|
 
-Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, a função retorna um código de erro e define **errno** como indicado na tabela.
+Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará um código de erro e definirá **errno** como indicado na tabela.
 
 ## <a name="remarks"></a>Comentários
 
-A função **mbstowcs_s** converte uma seqüência de caracteres multibytes apontados por *mbstr* em caracteres largos armazenados no buffer apontado por *wcstr*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
+A função **mbstowcs_s** converte uma cadeia de caracteres de vários bytes apontados por *mbstr* em caracteres largos armazenados no buffer apontados por *wcstr*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
 
 - Um caractere nulo multibyte é encontrado
 
 - Um caractere multibyte inválido é encontrado
 
-- O número de caracteres largos armazenados no buffer *wcstr* é igual *a contagem*.
+- O número de caracteres largos armazenados na *contagem*de Equals do buffer *wcstr* .
 
 A cadeia de caracteres de destino sempre é terminada em nulo (mesmo em caso de erro).
 
-Se *a contagem* for o valor especial [_TRUNCATE,](../../c-runtime-library/truncate.md)então **mbstowcs_s** converte tanto da string quanto caberá no buffer de destino, enquanto ainda deixa espaço para um exterminador nulo.
+Se *Count* for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **mbstowcs_s** converterá a maior parte da cadeia de caracteres que se ajustará ao buffer de destino e, ao mesmo tempo, deixará espaço para um terminador nulo.
 
-Se **mbstowcs_s** converter com sucesso a seqüência de caracteres de origem, ele coloca o tamanho em caracteres amplos da seqüência de caracteres convertidos, incluindo o exterminador nulo, em *&#42;pReturnValue* (desde *que pReturnValue* não seja **NULL**). Isso ocorre mesmo que o *argumento wcstr* seja **NULO** e forneça uma maneira de determinar o tamanho de buffer necessário. Observe que se *wcstr* for **NULL**, *a contagem* é ignorada e *o tamanhoInWords* deve ser 0.
+Se **mbstowcs_s** converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em caracteres largos da cadeia de caracteres convertida, incluindo o terminador nulo, em *&#42;pretransformvalue* (a *preactivavalue* fornecida não é **nula**). Isso ocorre mesmo que o argumento *wcstr* seja **nulo** e forneça uma maneira de determinar o tamanho do buffer necessário. Observe que, se *wcstr* for **NULL**, *Count* será ignorado e *sizeInWords* deverá ser 0.
 
-Se **mbstowcs_s** encontrar um caractere multibyte inválido, ele coloca 0 em *&#42;pReturnValue,* define o buffer de destino como uma seqüência vazia, define **errno** para **EILSEQ**e retorna **EILSEQ**.
+Se **mbstowcs_s** encontrar um caractere multibyte inválido, ele colocará 0 *em&#42;de preativar*, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
 
-Se as seqüências apontadas por *mbstr* e *wcstr* se sobrepõem, o comportamento de **mbstowcs_s** é indefinido.
+Se as sequências apontadas por *mbstr* e *wcstr* se sobrepõem, o comportamento de **mbstowcs_s** é indefinido.
 
 > [!IMPORTANT]
-> Certifique-se de que *wcstr* e *mbstr* não se sobrepõem, e essa *contagem* reflete corretamente o número de caracteres multibytes a serem convertidos.
+> Verifique se *wcstr* e *mbstr* não se sobrepõem e se *Count* reflete corretamente o número de caracteres multibyte a serem convertidos.
 
-**mbstowcs_s** usa o local atual para qualquer comportamento dependente de localidades; **_mbstowcs_s_l** é idêntica, exceto que usa o local passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**mbstowcs_s** usa a localidade atual para qualquer comportamento dependente de localidade; o **_mbstowcs_s_l** é idêntico, exceto pelo fato de que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -149,10 +149,10 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

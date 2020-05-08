@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 73a519614f17b6a8f8b26b5eae2172c87ea7f817
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362637"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912373"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -68,24 +68,24 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>Valor retornado
 
-As funções **bronzeadas** retornam a tangente de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a -263, ocorre uma perda de significância no resultado.
+As funções **Tan** retornam a tangente de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
 
-|Entrada|Exceção SEH|**Matherr** Exceção|
+|Entrada|Exceção SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN,IND|nenhuma|_DOMAIN|
 |± INF|**Inválido**|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **bronzeado** que tomam e retornam **flutuam** **ou** **longos** valores duplos. Em um programa C, **o bronzeado** sempre pega e retorna **em dobro.**
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Tan** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **Tan** sempre leva e retorna **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------|-|
-|**bronzeado,** **tanf,** **tanl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Tan**, **tanf**, **tanl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -25,7 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 85c218fdb3f5153e572e434bffbdb64510554d07
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362319"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913875"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -86,47 +86,47 @@ int _towupper_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Caractere a ser convertido.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas rotinas converte uma cópia de *c*, se possível, e retorna o resultado.
 
-Se *c* é um caractere amplo para o qual **iswlower** não é zero e há um caractere amplo correspondente para o qual [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) não é zero, **o towupper** retorna o caractere amplo correspondente; caso contrário, **o reboque** retorna *c* inalterado.
+Se *c* for um caractere largo para o qual **iswlower** é diferente de zero e houver um caractere largo correspondente para o qual [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) é diferente de zero, **towupper** retornará o caractere largo correspondente; caso contrário, **towupper** retornará *c* inalterado.
 
 Não há valor retornado reservado para indicar um erro.
 
-Para **que o toupper** dê os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [mais baixos](islower-iswlower-islower-l-iswlower-l.md) devem retornar sem zero.
+Para que o **ToUpper** forneça os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [islow](islower-iswlower-islower-l-iswlower-l.md) devem retornar zero.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas rotinas converte determinada letra minúscula em maiúscula, se for possível e relevante. A conversão de caso de **towupper** é específica local. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o **sufixo _l** usam o local definido no momento. As versões dessas funções com o sufixo **_l** tomam o local como parâmetro e usam isso em vez do local atualmente definido. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas rotinas converte determinada letra minúscula em maiúscula, se for possível e relevante. A conversão de casos de **towupper** é específica da localidade. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o sufixo **_L** usam a localidade definida atualmente. As versões dessas funções com o sufixo **_L** pegam a localidade como um parâmetro e usam isso em vez da localidade definida no momento. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Para **que o toupper** dê os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devem retornar sem zero.
+Para que o **ToUpper** forneça os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [IsUpper](isupper-isupper-l-iswupper-iswupper-l.md) devem retornar diferentes de zero.
 
 [Rotinas de conversão de dados](../../c-runtime-library/data-conversion.md)
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper**|**Toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**ToUpper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** e **_towupper_l** não têm dependência local e não devem ser chamados diretamente. Eles são fornecidos para uso interno por **_totupper_l**.
+> **_toupper_l** e **_towupper_l** não têm nenhuma dependência de localidade e não devem ser chamadas diretamente. Eles são fornecidos para uso interno por **_totupper_l**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**Toupper**|\<ctype.h>|
+|**ToUpper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|
 |**towupper**|\<ctype.h> ou \<wchar.h>|
 
@@ -136,9 +136,9 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Consulte o exemplo em [Funções to](../../c-runtime-library/to-functions.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
 [Funções to](../../c-runtime-library/to-functions.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

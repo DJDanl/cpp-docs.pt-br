@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350840"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913025"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -68,24 +68,24 @@ Valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor retornado
 
-As funções **acosh** retornam o cosseno hibólico inverso (cosseno hiperbólico do arco) de *x*. Estas funções são válidas sobre o domínio *x* ≥ 1. Se *x* é menor `errno` que `EDOM` 1, é definido para e o resultado é um NaN tranquilo. Se *x* é um NaN tranquilo, indefinido ou infinito, o mesmo valor é devolvido.
+As funções **ACOSH** retornam o cosseno hyberbolic inverso (arco hiperbólico cosseno) de *x*. Essas funções são válidas no domínio *x* ≥ 1. Se *x* for menor que 1, `errno` será definido como `EDOM` e o resultado será um NaN silencioso. Se *x* for um erro Nan, indefinido ou infinito, o mesmo valor será retornado.
 
 |Entrada|Exceção SEH|Exceção `_matherr`|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|none|none|
-|*x* < 1|none|none|
+|± QNAN, IND, INF|nenhuma|nenhuma|
+|*x* < 1|nenhuma|nenhuma|
 
 ## <a name="remarks"></a>Comentários
 
-Quando você usa C++, você pode chamar sobrecargas de **acosh** que pegam e retornam **flutuam** **ou** **longos** valores duplos. Em um programa C, **acosh** sempre pega e retorna **em dobro.**
+Ao usar o C++, você pode chamar sobrecargas de **ACOSH** que levam e retornam valores **long** **duplos** **float** ou Long. Em um programa C, **ACOSH** sempre leva e retorna **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**acosh,** **acoshf,** **acoshl**|\<math.h>|\<cmath>|
+|**ACOSH**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

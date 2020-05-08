@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 3a44651cb9ff8be806c45c6b6c5f41f810319a85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8eb3cf338d7486d7e7893090a1390e5d2d16a438
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341597"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914487"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -92,20 +92,20 @@ Buffer de caminho completo.
 *sizeInWords*<br/>
 O tamanho do buffer em palavras.
 
-*Sizeinbytes*<br/>
+*sizeInBytes*<br/>
 O tamanho do buffer em bytes.
 
 *Dirigir*<br/>
-Contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um sinal de dois pontos opcional à direita. **_makepath_s** insere o cólon automaticamente no caminho composto se estiver faltando. Se *a unidade* for **NULL** ou apontapara uma seqüência de string vazia, nenhuma letra de unidade será exibida na seqüência de *caminho* composto.
+Contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um sinal de dois pontos opcional à direita. **_makepath_s** insere os dois-pontos automaticamente no caminho composto, se ele estiver ausente. Se a *unidade* for **nula** ou apontar para uma cadeia de caracteres vazia, nenhuma letra da unidade será exibida na cadeia de caracteres do *caminho* composto.
 
-*Dir*<br/>
-Contém o caminho de diretórios, excluindo o designador da unidade ou o nome de arquivo real. A barra de arrasto é opcional, e uma barra\\para a frente (/) ou uma barra invertida ( ) ou ambas podem ser usadas em um único argumento *dir.* Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se *dir* for **NULL** ou apontar para uma seqüência de string vazia, nenhum caminho de diretório será inserido na string *de caminho* composto.
+*dir*<br/>
+Contém o caminho de diretórios, excluindo o designador da unidade ou o nome de arquivo real. A barra à direita é opcional e uma barra (/) ou uma barra invertida (\\) ou ambas podem ser usadas em um único argumento *dir* . Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se *dir* for **nulo** ou apontar para uma cadeia de caracteres vazia, nenhum caminho de diretório será inserido na cadeia de caracteres de *caminho* composto.
 
-*Fname*<br/>
-Contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se *fname* for **NULL** ou aponta para uma seqüência de string vazia, nenhum nome de arquivo será inserido na seqüência *de caminho* composto.
+*fname*<br/>
+Contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se *fname* for **nulo** ou apontar para uma cadeia de caracteres vazia, Nenhum filename será inserido na cadeia de caracteres do *caminho* composto.
 
-*Ext*<br/>
-Contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). **_makepath_s** insere o período automaticamente se ele não aparecer em *ramal*. Se *o ramo* for **NULO** ou apontapara uma seqüência vazia, nenhuma extensão será inserida na seqüência *de caminho* composto.
+*externa*<br/>
+Contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). **_makepath_s** inserirá o período automaticamente se ele não aparecer em *ext*. Se *ext* for **nulo** ou apontar para uma cadeia de caracteres vazia, nenhuma extensão será inserida na cadeia de caracteres de *caminho* composto.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -113,18 +113,18 @@ Zero se for bem-sucedido; um código de erro em caso de falha.
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|*path*|*tamanhoInWords* / *tamanhoInBytes*|Retorno|Conteúdo do *caminho*|
+|*path*|*sizeInWords* / *sizeInBytes*|Retorno|Conteúdo do *caminho*|
 |------------|------------------------------------|------------|------------------------|
-|**NULO**|any|**Einval**|não modificado|
-|any|<= 0|**Einval**|não modificado|
+|**NULO**|any|**EINVAL**|não modificado|
+|any|<= 0|**EINVAL**|não modificado|
 
-Se qualquer uma das condições de erro acima ocorrer, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e as funções retornarão **EINVAL**. **NULL** é permitido para a *unidade*de parâmetros, *fname* *e ramal*. Para obter informações sobre o comportamento quando esses parâmetros forem ponteiros nulos ou strings vazios, consulte a seção Observações.
+Se qualquer uma das condições de erro acima ocorrer, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e as funções retornarão **EINVAL**. **NULL** é permitido para os parâmetros *drive*, *fname*e *ext*. Para obter informações sobre o comportamento quando esses parâmetros são ponteiros nulos ou cadeias de caracteres vazias, consulte a seção comentários.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_makepath_s** cria uma seqüência de caminho composto a partir de componentes individuais, armazenando o resultado em *caminho*. O *caminho* pode incluir uma letra de unidade, caminho de diretório, nome do arquivo e extensão de nome do arquivo. **_wmakepath_s** é uma versão ampla do **_makepath_s;** os argumentos para **_wmakepath_s** são cordas de caracteres amplos. **_wmakepath_s** e **_makepath_s** se comportam de forma idêntica.
+A função **_makepath_s** cria uma cadeia de caracteres de caminho composto de componentes individuais, armazenando o resultado no *caminho*. O *caminho* pode incluir uma letra de unidade, um caminho de diretório, um nome de arquivo e uma extensão de nome de arquivo. **_wmakepath_s** é uma versão de caractere largo do **_makepath_s**; os argumentos para **_wmakepath_s** são cadeias de caracteres largos. **_wmakepath_s** e **_makepath_s** se comportar de forma idêntica.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -132,13 +132,13 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-O argumento *do caminho* deve apontar para um buffer vazio grande o suficiente para manter o caminho completo. O *caminho* composto não deve ser maior do que **a** _MAX_PATH constante, definida em Stdlib.h.
+O argumento de *caminho* deve apontar para um buffer vazio grande o suficiente para manter o caminho completo. O *caminho* composto não deve ser maior que a constante de **_MAX_PATH** , definida em STDLIB. h.
 
-Se o caminho for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Além disso, **errno** está definido **como EINVAL**. **Valores NULL** são permitidos para todos os outros parâmetros.
+Se path for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, **errno** é definido como **EINVAL**. Valores **nulos** são permitidos para todos os outros parâmetros.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisitos
 

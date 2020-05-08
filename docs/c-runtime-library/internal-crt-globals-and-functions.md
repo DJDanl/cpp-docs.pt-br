@@ -394,14 +394,14 @@ api_location:
 - api-ms-win-crt-time-l1-1-0.dll
 - api-ms-win-crt-process-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-conio-l1-1-0.dll
 - vcruntime140_app.dll
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -930,12 +930,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 22c38c1ad2cd5dad0a0e58437b441faf4cdb6662
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe9b466ca839cb09011dc7cc38650b8b85037e86
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351242"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914167"
 ---
 # <a name="internal-crt-globals-and-functions"></a>Funções e globais de CRT interno
 
@@ -1170,14 +1170,14 @@ Essas funções e macros de função são usadas para implementar o CRT e a Bibl
 |__p&#95;&#95;_wargv|
 |__p&#95;&#95;_winitenv|
 |__p\__acmdln|
-|[__p\__commode __p](../c-runtime-library/p-commode.md)|
+|[__p\__commode](../c-runtime-library/p-commode.md)|
 |__p\__crtAssertBusy|
 |__p\__crtBreakAlloc|
 |__p\__crtDbgFlag|
 |__p\__daylight|
 |__p\__dstbias|
 |__p\__environ|
-|[_fmode\___p](../c-runtime-library/p-fmode.md)|
+|[__p\__fmode](../c-runtime-library/p-fmode.md)|
 |__p\__iob|
 |__p\__mbcasemap|
 |__p\__mbctype|
@@ -1270,6 +1270,6 @@ Essas funções e macros de função são usadas para implementar o CRT e a Bibl
 |_Xbad_alloc|
 |_Xlength_error|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
