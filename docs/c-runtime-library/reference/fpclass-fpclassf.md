@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346284"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914842"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -74,7 +74,7 @@ As funções **_fpclass** e **_fpclassf** retornam um valor inteiro que indica a
 |**_FPCLASS_NINF**|Infinito negativo (-INF)|
 |**_FPCLASS_NN**|Negativo normalizado diferente de zero|
 |**_FPCLASS_ND**|Negativo desnormalizado|
-|**_FPCLASS_NZ**|Zero negativo ( - 0)|
+|**_FPCLASS_NZ**|Zero negativo (-0)|
 |**_FPCLASS_PZ**|0 positivo (+0)|
 |**_FPCLASS_PD**|Positivo desnormalizado|
 |**_FPCLASS_PN**|Positivo normalizado diferente de zero|
@@ -82,19 +82,19 @@ As funções **_fpclass** e **_fpclassf** retornam um valor inteiro que indica a
 
 ## <a name="remarks"></a>Comentários
 
-As **funções _fpclass** e **_fpclassf** são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. A função **_fpclassf** só está disponível quando compilada para a plataforma x64.
+As funções **_fpclass** e **_fpclassf** são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. A função **_fpclassf** só estará disponível quando compilada para a plataforma x64.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**_fpclass** **_fpclassf**|\<float.h>|
+|**_fpclass**, **_fpclassf**|\<float.h>|
 
 Para obter mais informações sobre compatibilidade e conformidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

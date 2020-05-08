@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 203265a8dd85854bcedd737359b856fdc4cce04d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 907d02e94c79acf09dfa99a8b42e9f448d32dcfa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316261"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915760"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -55,36 +55,36 @@ int setvbuf(
 *fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-*Buffer*<br/>
+*completo*<br/>
 Buffer alocado pelo usuário.
 
-*Modo*<br/>
+*mode*<br/>
 Modo de buffer.
 
-*Tamanho*<br/>
-O tamanho do buffer, em bytes. Faixa permitida: 2 <= *tamanho* <= INT_MAX (2147483647). Internamente, o valor fornecido para o *tamanho* é arredondado até o múltiplo mais próximo de 2.
+*size*<br/>
+O tamanho do buffer, em bytes. Intervalo permitido: 2 <= *size* <= INT_MAX (2147483647). Internamente, o valor fornecido para o *tamanho* é arredondado para baixo até o múltiplo mais próximo de 2.
 
 ## <a name="return-value"></a>Valor retornado
 
 Retorna 0 se for bem-sucedido.
 
-Se *o fluxo* for **NULO,** ou se *o modo* ou *tamanho* não estiver dentro de uma alteração válida, o manipulador de parâmetros inválidos será invocado, conforme descrito na Validação [de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor -1 e definirá **errno** como **EINVAL**.
+Se o *fluxo* for **nulo**, ou se o *modo* ou o *tamanho* não estiver dentro de uma alteração válida, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor -1 e definirá **errno** como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A **função setvbuf** permite que o programa controle tanto o buffering quanto o tamanho do buffer para *fluxo*. *o fluxo* deve se referir a um arquivo aberto que não foi submetido a uma operação de I/O desde que foi aberto. A matriz apontada pelo *buffer* é usada como buffer, a menos que seja **NULL,** nesse **caso, a setvbuf** usa um buffer alocado automaticamente de *tamanho*de comprimento /2 \* 2 bytes.
+A função **setvbuf** permite que o programa controle o buffer e o tamanho do buffer para o *fluxo*. o *fluxo* deve se referir a um arquivo aberto que não passou por uma operação de e/s desde que ele foi aberto. A matriz apontada por *buffer* é usada como buffer, a menos que seja **nula**, caso em que **setvbuf** usa um buffer alocado automaticamente de *tamanho*de comprimento/ \* 2 2 bytes.
 
-O modo deve ser **_IOFBF,** **_IOLBF**ou **_IONBF.** Se *o modo* for **_IOFBF** ou **_IOLBF,** então o *tamanho* é usado como o tamanho do buffer. Se *o modo* estiver **_IONBF,** o fluxo será desprotegido e *o tamanho* e o *buffer* serão ignorados. Os valores para *o modo* e seus significados são:
+O modo deve ser **_IOFBF**, **_IOLBF**ou **_IONBF**. Se o *modo* for **_IOFBF** ou **_IOLBF**, o *tamanho* será usado como o tamanho do buffer. Se o *modo* for **_IONBF**, o fluxo será sem buffer e o *tamanho* e o *buffer* serão ignorados. Os valores para o *modo* e seus significados são:
 
-|valor *do modo*|Significado|
+|valor de *modo*|Significado|
 |-|-|
-| **_IOFBF** | Tampão completo; ou seja, *buffer* é usado como buffer e *tamanho* é usado como o tamanho do buffer. Se *o buffer* for **NULL,** um *tamanho* de buffer alocado automaticamente é usado por muito tempo. |
-| **_IOLBF** | Para alguns sistemas, isso fornece buffer em linha. No entanto, para win32, o comportamento é o mesmo **que _IOFBF** - Full Buffering. |
-| **_IONBF** | Nenhum buffer é usado, independentemente do *buffer* ou *tamanho*. |
+| **_IOFBF** | Buffer completo; ou seja, o *buffer* é usado como o buffer e o *tamanho* são usados como o tamanho do buffer. Se o *buffer* for **nulo**, será usado um *tamanho* de buffer atribuído automaticamente com comprimento de bytes. |
+| **_IOLBF** | Para alguns sistemas, isso fornece buffer em linha. No entanto, para o Win32, o comportamento é o mesmo que **_IOFBF** buffer completo. |
+| **_IONBF** | Nenhum buffer é usado, independentemente do *buffer* ou do *tamanho*. |
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

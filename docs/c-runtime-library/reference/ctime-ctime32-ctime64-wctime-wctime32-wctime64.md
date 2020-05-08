@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,12 +56,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: 6056ad8bac6561c0ce2902928364996b2be9ae92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7dc87f417db93f8ad0d90de1270c19997669fb7c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348244"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914831"
 ---
 # <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -80,24 +80,24 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 
 ### <a name="parameters"></a>Parâmetros
 
-*sourceTime*<br/>
-Ponteiro para tempo armazenado para converter.
+*origemtime*<br/>
+Ponteiro para o tempo armazenado a ser convertido.
 
 ## <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o resultado da cadeia de caracteres. **NULL** será devolvido se:
+Um ponteiro para o resultado da cadeia de caracteres. **NULL** será retornado se:
 
-- *sourceTime* representa uma data antes da meia-noite de 1º de janeiro de 1970, UTC.
+- *sourcetime* representa uma data anterior à meia-noite, 1º de janeiro de 1970, UTC.
 
-- Se você usar **_ctime32** ou **_wctime32** e *sourceTime* representa uma data após 23:59:59 janeiro 18, UTC.
+- Se você usar **_ctime32** ou **_wctime32** e *sourcetime* representa uma data posterior a 23:59:59, 18 de janeiro de 2038, UTC.
 
-- Se você usar **_ctime64** ou **_wctime64** e *sourceTime* representa uma data após 23:59:59, 31 de dezembro de 3000, UTC.
+- Se você usar **_ctime64** ou **_wctime64** e *sourcetime* representa uma data após 23:59:59, 31 de dezembro de 3000, UTC.
 
-**ctime** é uma função inline que avalia **para _ctime64** e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo **time_t**de 32 bits, você pode definir **_USE_32BIT_TIME_T**. Fazer isso fará com **que ctime** para avaliar para **_ctime32**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
+**CTime** é uma função embutida que é avaliada como **_ctime64** e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o **time_t**de 32 bits antigo, poderá definir **_USE_32BIT_TIME_T**. Isso fará com que o **CTime** seja avaliado para **_ctime32**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
 
 ## <a name="remarks"></a>Comentários
 
-A função **ctime** converte um valor de tempo armazenado como um [valor time_t](../../c-runtime-library/standard-types.md) em uma seqüência de caracteres. O valor *sourceTime* é geralmente obtido a partir de uma chamada para [o tempo](time-time32-time64.md), que retorna o número de segundos decorridos desde meia-noite (00:00:00), 1 de janeiro de 1970, tempo universal coordenado (UTC). A cadeia de caracteres do valor retornado contém exatamente 26 caracteres e tem o formato:
+A função **CTime** converte um valor de hora armazenado como um valor [time_t](../../c-runtime-library/standard-types.md) em uma cadeia de caracteres. O valor de *sourcetime* geralmente é obtido de uma chamada para [time](time-time32-time64.md), que retorna o número de segundos decorridos desde a meia-noite (00:00:00), 1 de janeiro de 1970, tempo universal coordenado (UTC). A cadeia de caracteres do valor retornado contém exatamente 26 caracteres e tem o formato:
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -105,15 +105,15 @@ Wed Jan 02 02:03:55 1980\n\0
 
 Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha ('\n') e o caractere nulo ('\0') ocupam as duas últimas posições da cadeia de caracteres.
 
-A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [de hora,](time-time32-time64.md) [_ftime](ftime-ftime32-ftime64.md)e [local](localtime-localtime32-localtime64.md) para obter informações sobre a configuração do horário local e a função [_tzset](tzset.md) para obter detalhes sobre a definição do ambiente de fuso horário e variáveis globais.
+A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)e [localtime](localtime-localtime32-localtime64.md) para obter informações sobre como configurar a hora local e a função [_tzset](tzset.md) para obter detalhes sobre como definir o ambiente de fuso horário e as variáveis globais.
 
-Uma chamada para **ctime** modifica o buffer único alocado estáticamente usado pelas funções **gmtime** e **localtime.** Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior. **ctime** compartilha um buffer estático com a função **asctime.** Assim, uma chamada para **ctime** destrói os resultados de qualquer chamada anterior para **asctime**, **localtime**ou **gmtime**.
+Uma chamada para **CTime** modifica o buffer único alocado estaticamente usado pelas funções **gmtime** e **localtime** . Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior. **CTime** compartilha um buffer estático com a função **asctime** . Assim, uma chamada para **CTime** destrói os resultados de qualquer chamada anterior para **asctime**, **localtime**ou **gmtime**.
 
-**_wctime** e **_wctime64** são a versão de grande caráter de **ctime** e **_ctime64;** retornando um ponteiro para a seqüência de caracteres largos. Caso contrário, **_ctime64,** **_wctime**e **_wctime64** se comportem de forma idêntica ao **ctime**.
+**_wctime** e **_wctime64** são a versão de caractere largo de **CTime** e **_ctime64**; retornando um ponteiro para uma cadeia de caracteres largos. Caso contrário, **_ctime64**, **_wctime**e **_wctime64** se comportam de forma idêntica ao **CTime**.
 
-Essas funções validam seus parâmetros. Se *sourceTime* for um ponteiro nulo ou se o valor *sourceTime* for negativo, essas funções invocarão o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, as funções retornam **NULL** e definem **errno** para **EINVAL**.
+Essas funções validam seus parâmetros. Se *sourcetime* for um ponteiro NULL ou se o valor de *sourcetime* for negativo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão **NULL** e definirá **errno** como **EINVAL**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

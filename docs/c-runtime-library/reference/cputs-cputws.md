@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348380"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917598"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
@@ -68,15 +68,15 @@ Cadeia de caracteres de saída.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se for bem sucedido, **_cputs** retorna 0. Se a função falhar, ela retornará um valor diferente de zero.
+Se for bem-sucedido, **_cputs** retornará 0. Se a função falhar, ela retornará um valor diferente de zero.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_cputs** grava a seqüência de terminadas nula que é apontada por *str* diretamente para o console. Uma combinação CR-LF (retorno de carro-alimentação de linha) não é acrescentada automaticamente à cadeia de caracteres.
+A função **_cputs** grava a cadeia de caracteres terminada em nulo apontada por *Str* diretamente para o console. Uma combinação CR-LF (retorno de carro-alimentação de linha) não é acrescentada automaticamente à cadeia de caracteres.
 
-Esta função valida seu parâmetro. Se *str* for **NULL,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e -1 é devolvido.
+Esta função valida seu parâmetro. Se *Str* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **errno** será definido como **EINVAL** e-1 será retornado.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -156,5 +156,5 @@ Hello world (courtesy of _cputws)!
 
 ## <a name="see-also"></a>Confira também
 
-[Console e Porta I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch, _putwch](putch-putwch.md)<br/>

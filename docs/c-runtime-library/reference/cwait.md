@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: d54f62c8ce391b2c8ead92a0a73ac48e6f2b3cb3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e2e23acb041004b9e96d1c6558ae195ed522155
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348157"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914791"
 ---
 # <a name="_cwait"></a>_cwait
 
@@ -53,37 +53,37 @@ intptr_t _cwait(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Termstat*<br/>
-Ponteiro para um buffer onde o código de resultado do processo especificado será armazenado, ou **NULL**.
+*termstat*<br/>
+Ponteiro para um buffer em que o código de resultado do processo especificado será armazenado ou **nulo**.
 
-*Prochandle*<br/>
-A alça para o processo de aguardar (ou seja, o processo que tem que terminar antes **_cwait** pode retornar).
+*procHandle*<br/>
+O identificador para o processo aguardar (ou seja, o processo que deve ser encerrado antes que **_cwait** possa retornar).
 
-*Ação*<br/>
-NULL: Ignorado por aplicativos do sistema operacional Windows; para outras aplicações: código de ação para executar no *procHandle*.
+*action*<br/>
+NULL: ignorado por aplicativos do sistema operacional Windows; para outros aplicativos: código de ação a ser executado em *procHandle*.
 
 ## <a name="return-value"></a>Valor retornado
 
-Quando o processo especificado for concluído com sucesso, retorne a alça do processo especificado e define o *termstat* para o código de resultado que é retornado pelo processo especificado. Caso contrário, retorna -1 e define **errno** da seguinte forma.
+Quando o processo especificado tiver sido concluído com êxito, retornará o identificador do processo especificado e definirá *termstat* para o código de resultado retornado pelo processo especificado. Caso contrário, retorna-1 e define **errno** da seguinte maneira.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|**ECHILD**|Não existe nenhum processo especificado, *procHandle* é inválido ou a chamada para a [API GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) ou [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) falhou.|
-|**Einval**|*ação* é inválida.|
+|**ECHILD**|Não existe um processo especificado, *procHandle* é inválido ou a chamada para a API [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) ou [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) falhou.|
+|**EINVAL**|*ação* inválida.|
 
-Para obter mais informações sobre esses e outros códigos de devolução, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **_cwait** aguarda o término do ID do processo especificado fornecido pelo *procHandle*. O valor do *procHandle* que é passado para **_cwait** deve ser o valor que é devolvido pela chamada para a função [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) que criou o processo especificado. Se o ID do processo for encerrado antes **de _cwait** for chamado, **_cwait** retorna imediatamente. **_cwait** pode ser usado por qualquer processo para aguardar qualquer outro processo conhecido para o qual exista uma alça válida *(procHandle).*
+A função **_cwait** aguarda o encerramento da ID de processo do processo especificado que é fornecido pelo *procHandle*. O valor de *procHandle* que é passado para **_cwait** deve ser o valor retornado pela chamada para a função [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) que criou o processo especificado. Se a ID do processo for encerrada antes de **_cwait** ser chamada, **_cwait** retornará imediatamente. **_cwait** pode ser usado por qualquer processo para aguardar qualquer outro processo conhecido para o qual exista um identificador válido (*procHandle*).
 
-*termstat* aponta para um buffer onde o código de retorno do processo especificado será armazenado. O valor do *termstat* indica se o processo especificado terminou normalmente ligando para a API do Windows [ExitProcess.](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) **ExitProcess** é chamado internamente se o processo especificado chama **sair** ou **_exit,** retornar da **principal**ou chegar ao final da **principal**. Para obter mais informações sobre o valor que é passado através do *termstat,* consulte [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Se **_cwait** for chamado usando um valor **NULL** para *termstat,* o código de devolução do processo especificado não será armazenado.
+*termstat* aponta para um buffer em que o código de retorno do processo especificado será armazenado. O valor de *termstat* indica se o processo especificado terminou normalmente chamando a API [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) do Windows. **ExitProcess** é chamado internamente se o processo especificado chama **Exit** ou **_exit**, retorna de **Main**ou atinge o final de **Main**. Para obter mais informações sobre o valor que é passado de volta por meio de *termstat*, consulte [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Se **_cwait** for chamado usando um valor **nulo** para *termstat*, o código de retorno do processo especificado não será armazenado.
 
-O parâmetro de *ação* é ignorado pelo sistema operacional Windows porque as relações pai-filho não são implementadas nesses ambientes.
+O parâmetro *Action* é ignorado pelo sistema operacional Windows porque as relações pai-filho não são implementadas nesses ambientes.
 
-A menos *que procHandle* seja -1 ou -2 (alças para o processo atual ou rosca), a alça será fechada. Portanto, nessa situação, não use o identificador retornado.
+A menos que *procHandle* seja-1 ou-2 (identificadores para o processo ou thread atual), o identificador será fechado. Portanto, nessa situação, não use o identificador retornado.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

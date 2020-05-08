@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: 1dc95d0f77528c26bad796ab6166998fca20a8ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca5c693a1baed7e5f31219cdbee712b5c77f2a85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338029"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917647"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -55,9 +55,9 @@ int _rmtmp( void );
 
 ## <a name="remarks"></a>Comentários
 
-A função **_rmtmp** limpa todos os arquivos temporários no diretório atual. A função remove apenas os arquivos criados pelo **tmpfile;** usá-lo apenas no mesmo diretório em que os arquivos temporários foram criados.
+A função **_rmtmp** limpa todos os arquivos temporários no diretório atual. A função remove somente os arquivos criados por **tmpfile**; Use-o somente no mesmo diretório em que os arquivos temporários foram criados.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +75,7 @@ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-lib
 
 Veja o exemplo a seguir para [tmpfile](tmpfile.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: c49a924a38aed3ff2d7953e150c4f3f1f3a5a25c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bfe26a988c491c4d137bfc1badc093d56cde4010
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342248"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916546"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -57,13 +57,13 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>Valor retornado
 
-**_kbhit** retorna um valor não zero se uma tecla tiver sido pressionada. Caso contrário, retornará 0.
+**_kbhit** retornará um valor diferente de zero se uma chave tiver sido pressionada. Caso contrário, retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_kbhit** verifica o console para obter um toque de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode então chamar **_getch** ou **_getche** para obter o toque de tecla.
+A função **_kbhit** verifica o console para obter um pressionamento de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode então chamar **_getch** ou **_getche** para obter o pressionamento de teclas.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -109,6 +109,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Console e Porta I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../../c-runtime-library/console-and-port-i-o.md)<br/>

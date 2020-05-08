@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346565"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914946"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -87,10 +87,10 @@ long double fmal(
 *x*<br/>
 O primeiro valor a ser multiplicado.
 
-*Y*<br/>
+*Iar*<br/>
 O segundo valor a ser multiplicado.
 
-*Z*<br/>
+*z*<br/>
 O valor a ser adicionado.
 
 ## <a name="return-value"></a>Valor retornado
@@ -101,10 +101,10 @@ Caso contrário, pode retornar um dos seguintes valores:
 
 |Problema|Retorno|
 |-----------|------------|
-|*x* = INFINITY, *y* = 0 ou<br /><br /> *x* = 0, *y* = INFINITY|NaN|
-|*x* ou *y* = exato ± INFINITO, *z* = INFINITO com o sinal oposto|NaN|
-|*x* ou *y* = NaN|NaN|
-|não *(x* = 0, *y*= indefinido) e *z* = NaN<br /><br /> não (*x*=indefinido, *y*=0) e *z* = NaN|NaN|
+|*x* = infinito, *y* = 0 ou<br /><br /> *x* = 0, *y* = infinito|NaN|
+|*x* ou *y* = infinito exato de ±, *z* = Infinity com o sinal oposto|NaN|
+|*x* ou *y* = Nan|NaN|
+|Não (*x* = 0, *y*= indefinido) e *z* = Nan<br /><br /> Não (*x*= indefinido, *y*= 0) e *z* = Nan|NaN|
 |Erro de intervalo de estouro|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
 |Erro de intervalo de estouro negativo|valor correto, após o arredondamento.|
 
@@ -112,21 +112,21 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **fma** que pegam e retornam **flutuam** e tipos **duplos** **longos.** Em um programa C, **fma** sempre pega e devolve um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **FMA** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, o **FMA** sempre usa e retorna um **Double**.
 
 Esta função calcula o valor como se ele tivesse precisão infinita e arredonda o resultado final.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**fma**, **fmaf,** **fmal**|\<math.h>|\<cmath>|
+|**FMA**, **fmaf**, **Fmal**|\<math.h>|\<cmath>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>

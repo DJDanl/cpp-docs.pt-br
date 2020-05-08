@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +43,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: 166d44c32a593ad9f32fcd19c56747bfaf4b5d0f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359185"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915264"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Copia uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** não podem ser usados em aplicativos executados no Tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** não pode ser usado em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -91,10 +91,10 @@ unsigned char *_mbscpy(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Strdestination*<br/>
+*strDestination*<br/>
 Cadeia de caracteres de destino.
 
-*Strsource*<br/>
+*strSource*<br/>
 Cadeia de caracteres de origem com terminação nula.
 
 ## <a name="return-value"></a>Valor retornado
@@ -103,16 +103,16 @@ Cada uma dessas funções retorna a cadeia de caracteres de destino. Nenhum valo
 
 ## <a name="remarks"></a>Comentários
 
-A função **strcpy** copia *strSource*, incluindo o caractere nulo terminando, para o local especificado pelo *strDestination*. O comportamento do **strcpy** é indefinido se as strings de origem e destino se sobrepõem.
+A função **strcpy** copia *strSource*, incluindo o caractere nulo de terminação, para o local especificado por *strDestination*. O comportamento de **strcpy** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
 > [!IMPORTANT]
-> Como **o strcpy** não verifica espaço suficiente no *strDestination* antes de copiar *strSource,* é uma causa potencial de excessos de buffer. Portanto, é recomendável que você use [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) em vez disso.
+> Como **strcpy** não verifica espaço suficiente em *strDestination* antes de copiar *strSource*, é uma possível causa de estouros de buffer. Portanto, é recomendável que você use [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) em vez disso.
 
-**wcscpy** e **_mbscpy** são, respectivamente, versões de amplo caráter e multibyte-caracteres de **strcpy**. Os argumentos e o valor de retorno do **wcscpy** são strings de amplo caráter; os de **_mbscpy** são cordas de caracteres multibytes. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcscpy** e **_mbscpy** são versões, respectivamente, de caracteres largos e de caracteres multibyte de **strcpy**. Os argumentos e o valor de retorno de **wcscpy** são cadeias de caracteres largos; os de **_mbscpy** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -167,7 +167,7 @@ String = Hello world from strcpy and strcat!
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

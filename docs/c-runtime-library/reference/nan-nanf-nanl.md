@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: d8f0db5020f274de27f7f1bbf3a76659eae568e4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338638"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914582"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -55,26 +55,26 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Parâmetros
 
-*Entrada*<br/>
+*entrada*<br/>
 Um valor de cadeia de caracteres.
 
 ## <a name="return-value"></a>Valor retornado
 
-As **funções nan** retornam um valor de NaN tranquilo.
+As funções **Nan** retornam um valor Nan silencioso.
 
 ## <a name="remarks"></a>Comentários
 
-As **funções nan** retornam a um valor de ponto flutuante que corresponde a um NaN silencioso (sem sinalização). O valor *de entrada* é ignorado. Para obter informações sobre como um NaN é representado para saída, consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+As funções **Nan** retornam um valor de ponto flutuante que corresponde a um NaN silencioso (sem sinalização). O valor de *entrada* é ignorado. Para obter informações sobre como um NaN é representado para saída, consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**nan,** **nanf,** **nanl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Nan**, **nanf**, **nanl**|\<math.h>|\<cmath> ou \<math.h>|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

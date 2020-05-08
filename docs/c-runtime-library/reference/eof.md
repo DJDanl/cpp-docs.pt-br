@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347929"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915049"
 ---
 # <a name="_eof"></a>_eof
 
@@ -52,18 +52,18 @@ int _eof(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fd*<br/>
+*FD*<br/>
 Descritor de arquivo que se refere ao arquivo aberto.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_eof** retorna 1 se a posição atual estiver terminada do arquivo, ou 0 se não for. Um valor de retorno de -1 indica um erro; neste caso, o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, **errno** será definido **como EBADF**, o que indica um descritor de arquivo inválido.
+**_eof** retornará 1 se a posição atual for final do arquivo ou 0 se não for. Um valor de retorno de-1 indica um erro; Nesse caso, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EBADF**, que indica um descritor de arquivo inválido.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_eof** determina se o fim do arquivo associado ao *fd* foi alcançado.
+A função **_eof** determina se o final do arquivo associado a *FD* foi atingido.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -125,9 +125,9 @@ This file contains some text.
 Number of bytes read = 29
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Tratamento de erros](../../c-runtime-library/error-handling-crt.md)<br/>
+[Tratamento de erro](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [feof](feof.md)<br/>

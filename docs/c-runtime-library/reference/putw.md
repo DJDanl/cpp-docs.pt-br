@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 1dd506ed1b99867e3bc61324d9d02a542718770d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338324"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916078"
 ---
 # <a name="_putw"></a>_putw
 
@@ -59,15 +59,15 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna o valor gravado. Um valor de retorno do **EOF** pode indicar um erro. Como **o EOF** também é um valor inteiro legítimo, use **ferror** para verificar um erro. Se *o fluxo* for um ponteiro nulo, o manipulador de parâmetros inválidos é invocado, conforme descrito na Validação de [Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna **EOF**.
+Retorna o valor gravado. Um valor de retorno de **EOF** pode indicar um erro. Como **EOF** também é um valor inteiro legítimo, use o **referenciador** para verificar um erro. Se *Stream* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** como **EINVAL** e retornará **EOF**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **_putw** grava um valor binário de tipo **int** para a posição atual do *fluxo.* **_putw** não afeta o alinhamento de itens no fluxo nem assume qualquer alinhamento especial. **_putw** é principalmente para compatibilidade com bibliotecas anteriores. Problemas de portabilidade podem ocorrer com **_putw** porque o tamanho de um **int** e a ordem de bytes dentro de um **int** diferem entre os sistemas.
+A função **_putw** grava um valor binário do tipo **int** na posição atual do *fluxo.* **_putw** não afeta o alinhamento dos itens no fluxo, nem assume nenhum alinhamento especial. **_putw** é principalmente para compatibilidade com bibliotecas anteriores. Problemas de portabilidade podem ocorrer com **_putw** porque o tamanho de um **int** e a ordenação de bytes em um **int** diferem entre os sistemas.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -119,7 +119,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

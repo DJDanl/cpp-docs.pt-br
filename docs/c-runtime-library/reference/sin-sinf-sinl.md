@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355008"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915764"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -67,7 +67,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor retornado
 
-As funções **do pecado** retornam o seno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a -263, ocorre uma perda de significância no resultado.
+As funções **sin** retornam o seno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -78,15 +78,15 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **pecado** que tomam e retornam **flutuam** **ou** **longos** valores duplos. Em um programa C, **o pecado** sempre pega e retorna **em dobro.**
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **sin** sempre usa e retorna **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-|-|-|
-|**pecado,** **sinf,** **sinl**|\<math.h>|\<cmath> ou \<math.h>|
+|**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

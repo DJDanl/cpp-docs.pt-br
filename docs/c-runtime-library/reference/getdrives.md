@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 82d9aaac99e901d4fbf2fd41dbe84aad77ec8a9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66940abc3f171b07f0816441709b1f4f9db88614
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344287"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913760"
 ---
 # <a name="_getdrives"></a>_getdrives
 
@@ -51,11 +51,11 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função for bem-sucedida, o valor retornado será um bitmask que representa as unidades de disco disponíveis no momento. A posição de bit 0 (o bit menos significativo) é a unidade A, a posição de bit 1 é a unidade B, a posição de bit 2 é a unidade C e assim por diante. Se a função falhar, o valor retornado será zero. Para obter informações de erro estendidas, ligue para **GetLastError**.
+Se a função for bem-sucedida, o valor retornado será um bitmask que representa as unidades de disco disponíveis no momento. A posição de bit 0 (o bit menos significativo) é a unidade A, a posição de bit 1 é a unidade B, a posição de bit 2 é a unidade C e assim por diante. Se a função falhar, o valor retornado será zero. Para obter informações de erro estendidas, chame **GetLastError**.
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

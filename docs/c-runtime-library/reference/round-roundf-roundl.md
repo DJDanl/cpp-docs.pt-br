@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337984"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916715"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -72,23 +72,23 @@ O valor do ponto flutuante a ser arredondado.
 
 ## <a name="return-value"></a>Valor retornado
 
-As funções **redondas** retornam um valor de ponto flutuante que representa o inteiro mais próximo de *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
+As funções **round** retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN,** **IND**|none|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **rodada** que pegam e retornam **flutuam** e **longos** valores **duplos.** Em um programa C, **a rodada** sempre pega e devolve um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **round** que levam e retornam valores float e **Long** **double** **flutuantes** . Em um programa C, **round** sempre usa e retorna um **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**rodada,** **roundf,** **roundl**|\<math.h>|
+|**round**, **roundf**, **arredondado**|\<math.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

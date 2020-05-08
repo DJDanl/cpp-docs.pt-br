@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 36d2130d4039f1f87f7f54fc26ad02cb8d519b4a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353828"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915805"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -53,35 +53,35 @@ int _setmode (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fd*<br/>
+*FD*<br/>
 Descritor de arquivo.
 
-*Modo*<br/>
+*mode*<br/>
 Novo modo de conversão.
 
 ## <a name="return-value"></a>Valor retornado
 
 Se bem-sucedido, retorna para o modo de conversão anterior.
 
-Se parâmetros inválidos forem passados para essa função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essa função retorna -1 e define **errno** para **ebadf**, o que indica um descritor de arquivo inválido, ou **EINVAL,** que indica um argumento *de modo* inválido.
+Se parâmetros inválidos forem passados para essa função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função retornará-1 e definirá **errno** como **EBADF**, que indica um descritor de arquivo inválido ou **EINVAL**, que indica um argumento de *modo* inválido.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **_setmode** define para *moder* o modo de tradução do arquivo dado por *fd*. Passar **_O_TEXT** como *modo* define texto (isto é, traduzido) modo. As combinações de alimentação de linha de retorno de transporte (CR-LF) são traduzidas em um único caractere de alimentação de linha na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. Passar **_O_BINARY** define o modo binário (não traduzido), no qual essas traduções são suprimidas.
+A função **_setmode** define como *modo* o modo de tradução do arquivo fornecido pelo *fd*. A passagem de **_O_TEXT** como *modo* define o modo de texto (ou seja, traduzido). As combinações de CR-LF (retorno de carro-alimentação de linha) são convertidas em um único caractere de alimentação de linha na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. A passagem de **_O_BINARY** define o modo binário (não traduzido), no qual essas traduções são suprimidas.
 
-Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** para habilitar o modo Unicode, como demonstrado no segundo exemplo mais tarde neste documento.
-
-> [!CAUTION]
-> O modo Unicode é para funções `wprintf`de impressão ampla (por exemplo, ) e não é suportado para funções de impressão estreitas. O uso de uma função de impressão estreita em um fluxo de modo Unicode aciona uma afirmação.
-
-**_setmode** é normalmente usado para modificar o modo de tradução padrão de **stdin** e **stdout,** mas você pode usá-lo em qualquer arquivo. Se você aplicar **_setmode** ao descritor de arquivo de um fluxo, chame **_setmode** antes de executar qualquer operação de entrada ou saída no fluxo.
+Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** para habilitar o modo Unicode, conforme demonstrado no segundo exemplo posteriormente neste documento.
 
 > [!CAUTION]
-> Se você gravar dados em um fluxo de arquivos, lave explicitamente o código usando [fflush](fflush.md) antes de usar **_setmode** para alterar o modo. Se você não limpar o código, pode ocorrer comportamento inesperado. Se você não tiver dados gravados no fluxo, não será preciso limpar o código.
+> O modo Unicode é para funções de impressão amplas ( `wprintf`por exemplo,) e não tem suporte para funções de impressão restritas. O uso de uma função de impressão restrita em um fluxo de modo Unicode dispara uma declaração.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+**_setmode** normalmente é usado para modificar o modo de tradução padrão de **stdin** e **stdout**, mas você pode usá-lo em qualquer arquivo. Se você aplicar **_setmode** ao descritor de arquivo para um fluxo, chame **_setmode** antes de executar qualquer operação de entrada ou saída no fluxo.
+
+> [!CAUTION]
+> Se você gravar dados em um fluxo de arquivos, libere explicitamente o código usando [fflush](fflush.md) antes de usar **_setmode** para alterar o modo. Se você não limpar o código, pode ocorrer comportamento inesperado. Se você não tiver dados gravados no fluxo, não será preciso limpar o código.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348966"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916882"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -63,31 +63,31 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
-Valor entre -1 e 1, para o qual calcular o arccosine (o cosseno inverso).
+Valor entre-1 e 1, para o qual calcular o arco cosseno (o cosseno inverso).
 
 ## <a name="return-value"></a>Valor retornado
 
-A função **acos** retorna o arcocosino de *x* na faixa 0 a π radians.
+A função **acos** retorna o arco cosseno de *x* no intervalo de 0 a π radianos.
 
-Por padrão, se *x* for menor que -1 ou maior que 1, **o Acos** retorna por tempo indeterminado.
+Por padrão, se *x* for menor que-1 ou maior que 1, **acos** retornará um indefinido.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN,IND|nenhuma|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **acos** que pegam e retornam **flutuam** e tipos **duplos** **longos.** Em um programa C, **acos** sempre pega e devolve um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **acos** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **acos** sempre usa e retorna um **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf,** **acosl**|\<math.h>|\<errno.h>|
+|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Exemplo
 
@@ -139,7 +139,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

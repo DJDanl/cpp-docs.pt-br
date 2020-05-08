@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 11ff6920ea5f1dad2925a8010c9202e012fad87a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338843"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915466"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -74,38 +74,38 @@ size_t _mbstowcs_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Wcstr*<br/>
+*wcstr*<br/>
 O endereço de uma sequência de caracteres largos.
 
-*Mbstr*<br/>
+*mbstr*<br/>
 O endereço de uma sequência de caracteres multibyte terminadas por nulo.
 
 *contagem*<br/>
 O número máximo de caracteres multibyte a serem convertidos.
 
-*Localidade*<br/>
+*locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se **mbstowcs** converter com sucesso a seqüência de caracteres de origem, ele retorna o número de caracteres multibytes convertidos. Se o argumento *wcstr* for **NULL**, a função retorna o tamanho necessário (em caracteres largos) da seqüência de destinos. Se **mbstowcs** encontrar um caractere multibyte inválido, ele retorna -1. Se o valor de retorno *for contagem,* a seqüência de caracteres amplos não será anulada.
+Se **mbstowcs** converter com êxito a cadeia de caracteres de origem, ela retornará o número de caracteres multibyte convertidos. Se o argumento *wcstr* for **nulo**, a função retornará o tamanho necessário (em caracteres largos) da cadeia de caracteres de destino. Se **mbstowcs** encontrar um caractere multibyte inválido, ele retornará-1. Se o valor de retorno for *contagem*, a cadeia de caracteres largos não será terminada em nulo.
 
 > [!IMPORTANT]
-> Certifique-se de que *wcstr* e *mbstr* não se sobrepõem, e essa *contagem* reflete corretamente o número de caracteres multibytes a serem convertidos.
+> Verifique se *wcstr* e *mbstr* não se sobrepõem e se *Count* reflete corretamente o número de caracteres multibyte a serem convertidos.
 
 ## <a name="remarks"></a>Comentários
 
-A função **mbstowcs** converte até um número máximo de caracteres multibytes de *contagem* apontados por *mbstr* para uma seqüência de caracteres largos correspondentes que são determinados pelo local atual. Ele armazena a seqüência de caracteres amplos resultante no endereço representado pelo *wcstr*. O resultado é semelhante a uma série de chamadas para [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** encontrar o caractere nulo de byte único ('\0') antes ou quando a *contagem* ocorrer, ele converte o caractere nulo em um caractere nulo de caractere amplo (L'\0') e pára. Assim, a seqüência de caracteres amplos no *wcstr* é anulada somente se um caractere nulo for encontrado durante a conversão. Se as seqüências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento é indefinido.
+A função **mbstowcs** converte até um número máximo de caracteres multibyte de *contagem* apontados por *mbstr* para uma cadeia de caracteres de largura correspondentes que são determinados pela localidade atual. Ele armazena a cadeia de caracteres largos resultante no endereço representado por *wcstr*. O resultado é semelhante a uma série de chamadas para [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** encontrar o caractere nulo de byte único (' \ 0 ') antes ou quando ocorrer a *contagem* , ele converterá o caractere nulo em um caractere nulo de caractere largo (L ' \ 0 ') e será interrompido. Assim, a cadeia de caracteres largos em *wcstr* será encerrada em nulo somente se um caractere nulo for encontrado durante a conversão. Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento é indefinido.
 
-Se o argumento *wcstr* for **NULL**, **mbstowcs** retorna o número de caracteres amplos que resultariam da conversão, sem incluir um exterminador nulo. A cadeia de caracteres de origem deve ser terminada em nulo para o valor correto ser retornado. Se você precisar que a cadeia de caracteres largos seja terminada em nulo, adicione um ao valor retornado.
+Se o argumento *wcstr* for **nulo**, **mbstowcs** retornará o número de caracteres largos que resultaria da conversão, não incluindo um terminador nulo. A cadeia de caracteres de origem deve ser terminada em nulo para o valor correto ser retornado. Se você precisar que a cadeia de caracteres largos seja terminada em nulo, adicione um ao valor retornado.
 
-Se o argumento *mbstr* for **NULO**ou se *a contagem* for > **INT_MAX,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md) . Se a execução continuar, errno será definido **como EINVAL** e a função retorna -1.
+Se o argumento *mbstr* for **nulo**ou se *Count* for > **INT_MAX**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, errno será definido como **EINVAL** e a função retornará-1.
 
-**mbstowcs** usa o local atual para qualquer comportamento dependente de localidades; **_mbstowcs_l** é idêntica, exceto que usa o local passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**mbstowcs** usa a localidade atual para qualquer comportamento dependente de localidade; o **_mbstowcs_l** é idêntico, exceto pelo fato de que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -214,7 +214,7 @@ Convert back to wide-character string:
 ## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: a8f8978b9d46d8d903f8256424d47c84bec649ec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3e300562a52029fe835ebd4fe34e9a7ef247a76a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350045"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917217"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -50,19 +50,19 @@ errno_t clearerr_s(
 ### <a name="parameters"></a>Parâmetros
 
 *fluxo*<br/>
-Estrutura ponteiro **para** arquivo
+Ponteiro para estrutura de **arquivo**
 
 ## <a name="return-value"></a>Valor retornado
 
-Zero se for bem sucedido; **EINVAL** se *o fluxo* for **NULO**.
+Zero se for bem-sucedido; **EINVAL** se o *fluxo* for **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-A função **clearerr_s** redefine o indicador de erro e o indicador de fim do arquivo para *fluxo*. Os indicadores de erro não são automaticamente limpos; uma vez que o indicador de erro para um fluxo especificado seja definido, as operações nesse fluxo continuam a retornar um valor de erro até que **clearerr_s,** **mais claro,** [fseek,](fseek-fseeki64.md) **fsetpos**ou [rebobinar](rewind.md) seja chamado.
+A função **clearerr_s** redefine o indicador de erro e o indicador de fim de arquivo para o *fluxo*. Os indicadores de erro não são limpos automaticamente; Depois que o indicador de erro de um fluxo especificado é definido, as operações nesse fluxo continuam a retornar um valor de erro até que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**ou [retrocesso](rewind.md) seja chamado.
 
-Se *o fluxo* for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+Se o *fluxo* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -127,9 +127,9 @@ Write error: Bad file descriptor
 Will input cause an error? n
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Tratamento de erros](../../c-runtime-library/error-handling-crt.md)<br/>
+[Tratamento de erro](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>

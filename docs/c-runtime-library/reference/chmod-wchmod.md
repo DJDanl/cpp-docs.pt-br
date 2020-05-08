@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: faceb49c921162da042f863abbebbe2ef0a52153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350084"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917001"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
@@ -55,33 +55,33 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>Parâmetros
 
-*Filename*<br/>
+*nome do arquivo*<br/>
 Nome do arquivo existente.
 
-*Pmode*<br/>
+*pmode*<br/>
 Configuração de permissão para o arquivo.
 
 ## <a name="return-value"></a>Valor retornado
 
-Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor de retorno de -1 indica falha. Se o arquivo especificado não puder ser encontrado, **errno** será definido **como ENOENT;** se um parâmetro for inválido, **errno** será definido **como EINVAL**.
+Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor de retorno de-1 indica falha. Se o arquivo especificado não pôde ser encontrado, **errno** é definido como **ENOENT**; se um parâmetro for inválido, **errno** será definido como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_chmod** altera a configuração de permissão do arquivo especificado pelo *nome do arquivo*. A configuração de permissão controla o acesso de leitura e gravação para o arquivo. O *pmode* de expressão inteiro contém uma ou ambas as seguintes constantes de manifesto, definidas em SYS\Stat.h.
+A função **_chmod** altera a configuração de permissão do arquivo especificado por *filename*. A configuração de permissão controla o acesso de leitura e gravação para o arquivo. A expressão de inteiro *pmode* contém uma ou ambas as seguintes constantes de manifesto, definidas em SYS\Stat.h.
 
-| *Pmode* | Significado |
+| *pmode* | Significado |
 |-|-|
-| **\_S\_IREAD** | Somente a leitura é permitida. |
-| **\_S\_IWRITE** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
-| **\_S\_IREAD** &#124; ** \_\_S IWRITE** | Leitura e gravação permitidas. |
+| **\_IREAD\_S** | Somente a leitura é permitida. |
+| **\_IWRITE\_S** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
+| **\_S\_IREAD** &#124; ** \_s\_IWRITE** | Leitura e gravação permitidas. |
 
-Quando ambas as constantes são dadas, elas**\|** são unidas com o bitwise ou operador ( ). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Assim, os modos **_S_IWRITE** e **_S_IREAD** \| **_S_IWRITE** são equivalentes.
+Quando ambas as constantes são fornecidas, elas são unidas com o operador OR (**\|**). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Assim, os modos **_S_IWRITE** e **_S_IREAD** \| **_S_IWRITE** são equivalentes.
 
-**_wchmod** é uma versão ampla de **_chmod;** o argumento *de nome de arquivo* para **_wchmod** é uma seqüência de caracteres amplo. **_wchmod** e **_chmod** se comportam de forma idêntica.
+**_wchmod** é uma versão de caractere largo do **_chmod**; o argumento de *nome de arquivo* para **_wchmod** é uma cadeia de caracteres largos. **_wchmod** e **_chmod** se comportar de forma idêntica.
 
-Essa função valida seus parâmetros. Se *o pmode* não é uma combinação de uma das constantes manifestas ou incorpora um conjunto alternativo de constantes, a função simplesmente ignora essas. Se *o nome do arquivo* for **NULL,** o manipulador de parâmetros inválidos será invocado, conforme descrito na Validação de [Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e a função retorna -1.
+Essa função valida seus parâmetros. Se *pmode* não for uma combinação de uma das constantes de manifesto ou incorporar um conjunto alternativo de constantes, a função simplesmente irá ignorá-las. Se *filename* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará-1.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

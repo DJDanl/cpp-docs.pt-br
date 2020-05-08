@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333336"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915402"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -79,20 +79,20 @@ Zero se for bem-sucedido; um código de erro em caso de falha.
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|*dest*|*destSize*|*src*|*contagem*|Valor retornado|Conteúdo *de dest*|
+|*dest*|*destSize*|*src*|*contagem*|Valor retornado|Conteúdo do *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |any|any|any|0|0|Não modificado|
-|**NULO**|any|any|diferente de zero|**Einval**|Não modificado|
-|any|any|**NULO**|diferente de zero|**Einval**|*dest* é zerado|
-|any|< *Contar*|any|diferente de zero|**ERANGE**|*dest* é zerado|
+|**NULO**|any|any|diferente de zero|**EINVAL**|Não modificado|
+|any|any|**NULO**|diferente de zero|**EINVAL**|o *dest* está zerado|
+|any|< *contar*|any|diferente de zero|**ERANGE**|o *dest* está zerado|
 
 ## <a name="remarks"></a>Comentários
 
-**memcpy_s** cópias *contam* bytes *de src* a *dest;* **wmemcpy_s** cópias *contam* caracteres largos (dois bytes). Se a origem e o destino se sobrepõem, o comportamento de **memcpy_s** é indefinido. Use **memmove_s** para lidar com regiões sobrepostas.
+o **memcpy_s** copia a *contagem* de bytes de *src* para *dest*; as cópias de **wmemcpy_s** *contam* caracteres largos (dois bytes). Se a origem e o destino se sobrepõem, o comportamento de **memcpy_s** é indefinido. Use **memmove_s** para lidar com regiões sobrepostas.
 
-Essas funções validam seus parâmetros. Se *a contagem* não for zero e *dest* ou *src* for um ponteiro nulo, ou *destTamanho* for menor do que *a contagem,* essas funções invocam o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções retornam **EINVAL** ou **ERANGE** e definem **errno** no valor de retorno.
+Essas funções validam seus parâmetros. Se *Count* for diferente de zero e *dest* ou *src* for um ponteiro nulo, ou *destSize* for menor que *Count*, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão **EINVAL** ou **ERANGE** e definirá **errno** como o valor de retorno.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

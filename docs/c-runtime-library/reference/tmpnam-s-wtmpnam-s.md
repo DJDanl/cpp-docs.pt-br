@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: e34fbe64d342205659a4b0bdaf703248e62ed733
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362409"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917481"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -73,7 +73,7 @@ errno_t _wtmpnam_s(
 *Str*<br/>
 Ponteiro que conterá o nome gerado.
 
-*tamanhoInChars*<br/>
+*sizeInChars*<br/>
 O tamanho do buffer em caracteres.
 
 ## <a name="return-value"></a>Valor retornado
@@ -84,23 +84,23 @@ Ambas as funções retornarão 0 se tiverem êxito ou um número de erro em caso
 
 |||||
 |-|-|-|-|
-|*Str*|*tamanhoInChars*|**Valor retornado**|**Conteúdo de**  *str*|
-|**NULO**|any|**Einval**|não modificado|
-|não **NULL** (pontos para memória válida)|muito curto|**ERANGE**|não modificado|
+|*Str*|*sizeInChars*|**Valor retornado**|**Conteúdo de**  *Str*|
+|**NULO**|any|**EINVAL**|não modificado|
+|Not **NULL** (aponta para memória válida)|muito curto|**ERANGE**|não modificado|
 
-Se *str* for **NULL,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EINVAL** e retornam **EINVAL**.
+Se *Str* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EINVAL** e retornarão **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções retorna o nome de um arquivo que não existe no momento. **tmpnam_s** retorna um nome exclusivo no diretório temporário designado do Windows retornado pelo [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Observe que quando um nome de arquivo é precedido por uma barra invertida e nenhuma informação de caminho, como \fname21, isso indica que o nome é válido para o diretório de trabalho atual.
+Cada uma dessas funções retorna o nome de um arquivo que não existe no momento. **tmpnam_s** retorna um nome exclusivo no diretório temporário do Windows designado retornado por [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Observe que quando um nome de arquivo é precedido por uma barra invertida e nenhuma informação de caminho, como \fname21, isso indica que o nome é válido para o diretório de trabalho atual.
 
-Para **tmpnam_s,** você pode armazenar este nome de arquivo gerado no *str*. O comprimento máximo de uma seqüência retornada por **tmpnam_s** é **L_tmpnam_s,** definido em STDIO. H. Se *str* for **NULL**, então **tmpnam_s** deixa o resultado em um buffer estático interno. Portanto, todas as chamadas posteriores destroem esse valor. O nome gerado por **tmpnam_s** consiste em um nome de arquivo gerado pelo programa e, após a primeira chamada para **tmpnam_s**, uma extensão de arquivo de números seqüenciais na base 32 (.1-.1vvvvvvu, quando **TMP_MAX_S** no STDIO. H é **INT_MAX).**
+Por **tmpnam_s**, você pode armazenar esse nome de arquivo gerado em *Str*. O comprimento máximo de uma cadeia de caracteres retornada pelo **tmpnam_s** é **L_tmpnam_s**, definido em STDIO. T. Se *Str* for **NULL**, **tmpnam_s** deixará o resultado em um buffer estático interno. Portanto, todas as chamadas posteriores destroem esse valor. O nome gerado por **tmpnam_s** consiste em um nome de arquivo gerado por programa e, após a primeira chamada para **tmpnam_s**, uma extensão de arquivo de números sequenciais na base 32 (. 1-. 1vvvvvu, quando **TMP_MAX_S** em STDIO. H é **INT_MAX**).
 
-**tmpnam_s** lida automaticamente com argumentos de seqüência de caracteres de caracteres multibytes conforme apropriado, reconhecendo seqüências de caracteres multibytes de acordo com a página de código OEM obtida do sistema operacional. **_wtmpnam_s** é uma versão de grande caráter **da tmpnam_s;** o argumento e o valor de retorno de **_wtmpnam_s** são cadeias de caracteres amplos. **_wtmpnam_s** e **tmpnam_s** se comportam de forma idêntica, exceto que **_wtmpnam_s** não lida com cordas de caracteres multibytes.
+**tmpnam_s** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código OEM obtida do sistema operacional. **_wtmpnam_s** é uma versão de caractere largo do **tmpnam_s**; o argumento e o valor de retorno de **_wtmpnam_s** são cadeias de caracteres largos. **_wtmpnam_s** e **tmpnam_s** se comportam de forma idêntica, exceto que **_wtmpnam_s** não lida com cadeias de caracteres multibyte.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
