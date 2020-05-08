@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 0c50e77863b4b136ac59b6f79d8e529691032609
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338542"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919329"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
@@ -59,34 +59,34 @@ void _wperror(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mensagem*<br/>
+*message*<br/>
 Mensagem de cadeia de caracteres para imprimir.
 
 ## <a name="remarks"></a>Comentários
 
-A função **perror** imprime uma mensagem de erro para **stderr**. **_wperror** é uma versão ampla de **_perror;** o argumento de *mensagem* para **_wperror** é uma seqüência de caracteres amplo. **_wperror** e **_perror** se comportam de forma idêntica.
+A função **perror** imprime uma mensagem de erro em **stderr**. **_wperror** é uma versão de caractere largo do **_perror**; o argumento da *mensagem* para **_wperror** é uma cadeia de caracteres largos. **_wperror** e **_perror** se comportar de forma idêntica.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tperror**|**Perror**|**Perror**|**_wperror**|
+|**_tperror**|**perror**|**perror**|**_wperror**|
 
-*mensagem* é impressa primeiro, seguida por um cólon, depois pela mensagem de erro do sistema para a última chamada de biblioteca que produziu o erro, e finalmente por um caractere newline. Se *a mensagem* for um ponteiro nulo ou um ponteiro para uma seqüência de caracteres nula, **o erro** de erro imprime apenas a mensagem de erro do sistema.
+a *mensagem* é impressa primeiro, seguida por dois-pontos, depois pela mensagem de erro do sistema para a última chamada de biblioteca que produziu o erro e, por fim, por um caractere de nova linha. Se *Message* for um ponteiro nulo ou um ponteiro para uma cadeia de caracteres nula, **perror** imprimirá apenas a mensagem de erro do sistema.
 
-O número do erro real é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definida em ERRNO.H). As mensagens de erro do sistema são acessadas por meio da variável [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que é uma matriz de mensagens ordenadas por número do erro. **perror** imprime a mensagem de erro apropriada usando o valor **errno** como índice para **_sys_errlist**. O valor da variável [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como o número máximo de elementos na **matriz _sys_errlist.**
+O número do erro real é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definida em ERRNO.H). As mensagens de erro do sistema são acessadas por meio da variável [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que é uma matriz de mensagens ordenadas por número do erro. **perror** imprime a mensagem de erro apropriada usando o valor **errno** como um índice para **_sys_errlist**. O valor da variável [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como o número máximo de elementos na matriz **_sys_errlist** .
 
-Para obter resultados precisos, **o erro de** chamada imediatamente após o retorno de uma rotina de biblioteca com um erro. Caso contrário, chamadas subseqüentes podem substituir o **valor errno.**
+Para obter resultados precisos, chame **perror** imediatamente depois que uma rotina de biblioteca retornar com um erro. Caso contrário, as chamadas subsequentes podem substituir o valor **errno** .
 
-No sistema operacional Windows, alguns **valores errno** listados no ERRNO. H não são usados. Esses valores são reservados para uso pelo sistema operacional UNIX. Veja [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para uma lista de valores **errno** usados pelo sistema operacional Windows. **perror** imprime uma seqüência vazia para qualquer **valor errno** não usado por essas plataformas.
+No sistema operacional Windows, alguns valores de **errno** listados em errno. H não são usadas. Esses valores são reservados para uso pelo sistema operacional UNIX. Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter uma lista dos valores de **errno** usados pelo sistema operacional Windows. **perror** imprime uma cadeia de caracteres vazia para qualquer valor **errno** não usado por essas plataformas.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**Perror**|\<stdio.h> ou \<stdlib.h>|
+|**perror**|\<stdio.h> ou \<stdlib.h>|
 |**_wperror**|\<stdio.h> ou \<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
@@ -148,4 +148,4 @@ _strerror says open failed: No such file or directory
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[strerror, _strerror, \__wcserror, _wcserror](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

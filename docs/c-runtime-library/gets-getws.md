@@ -15,7 +15,7 @@ api_location:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: a1fd3218f75079554d049d4ef4c3691a2fbdd542
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c60cf14334a0dcc0492b23da10a36c3219bb699
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349328"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919909"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
@@ -72,7 +72,7 @@ wchar_t *_getws(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Buffer*<br/>
+*completo*<br/>
 Local de armazenamento para a cadeia de caracteres de entrada.
 
 ## <a name="return-value"></a>Valor retornado
@@ -88,7 +88,7 @@ A função `gets` lê uma linha do fluxo de entrada padrão `stdin` e a armazena
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -130,7 +130,7 @@ Observe que uma entrada com mais de 20 caracteres saturará o buffer de linha e 
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 08df395c6978c84b3f53ed0b07ce988afd0249f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341242"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920317"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -92,40 +92,40 @@ Destino da cópia.
 Tamanho do buffer de destino.
 
 *pCopied*<br/>
-Preenchido com o número de bytes copiados (1 ou 2 se for bem-sucedido). Passe **NULO** se você não se importa com o número.
+Preenchido com o número de bytes copiados (1 ou 2 se for bem-sucedido). Passe **NULL** se você não se preocupa com o número.
 
 *src*<br/>
 Caracteres multibyte para copiar.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Zero se for bem-sucedido; um código de erro em caso de falha. Se *src* ou *dest* for **NULL**, ou se mais do que **buffSizeinBytes** bytes será copiado para *dest*, então o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, as funções retornam **EINVAL** e **errno** é definida **como EINVAL**.
+Zero se for bem-sucedido; um código de erro em caso de falha. Se *src* ou *dest* for **NULL**ou se mais de **buffSizeInBytes** bytes forem copiados para *dest*, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, as funções retornam **EINVAL** e **errno** é definida como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mbccpy_s** copia um caractere multibyte *de src* para *dest*. Se *o src* não apontar para o byte principal de um caractere multibyte determinado por uma chamada implícita para [_ismbblead,](ismbblead-ismbblead-l.md)então o único byte que *o src* aponta é copiado. Se *o src* aponta para um byte de chumbo, mas o byte seguinte é 0 e, portanto, inválido, então 0 é copiado para *dest*, **errno** é definido como **EILSEQ**, e a função retorna **EILSEQ**.
+A função **_mbccpy_s** copia um caractere multibyte de *src* para *dest*. Se *src* não apontar para o byte de Lead de um caractere multibyte como determinado por uma chamada implícita para [_ismbblead](ismbblead-ismbblead-l.md), então, o único byte para o qual *src* aponta será copiado. Se *src* apontar para um byte de Lead, mas o byte a seguir for 0 e, portanto, for inválido, 0 será copiado para *dest*, **errno** será definido como **EILSEQ**e a função retornará **EILSEQ**.
 
-**_mbccpy_s** não anexa um exterminador nulo; no entanto, se *src* aponta para um caractere nulo, então esse nulo é copiado para *dest* (esta é apenas uma cópia regular de single-byte).
+**_mbccpy_s** não acrescenta um terminador nulo; no entanto, se *src* apontar para um caractere nulo, esse NULL será copiado para *dest* (essa é apenas uma cópia regular de byte único).
 
-O valor em *pCopied* é preenchido com o número de bytes copiados. Os valores possíveis são 1 e 2 se a operação for bem-sucedida. Se **NULL** for aprovado, este parâmetro será ignorado.
+O valor em *pCopied* é preenchido com o número de bytes copiados. Os valores possíveis são 1 e 2 se a operação for bem-sucedida. Se **NULL** for passado, esse parâmetro será ignorado.
 
-|*src*|copiado para *dest*|*pCopied*|Valor retornado|
+|*src*|copiado para o *dest*|*pCopied*|Valor retornado|
 |-----------|----------------------|---------------|------------------|
 |byte não inicial|byte não inicial|1|0|
 |0|0|1|0|
 |byte inicial seguido por um valor diferente de 0|byte inicial seguido por um valor diferente de 0|2|0|
 |byte inicial seguido por 0|0|1|**EILSEQ**|
 
-Observe que a segunda linha é apenas um caso especial do primeiro. Observe também que a tabela assume *buffSizeInBytes* >= *pCopied*.
+Observe que a segunda linha é apenas um caso especial do primeiro. Observe também que a tabela pressupõe *buffSizeInBytes* >= *pCopied*.
 
-**_mbccpy_s** usa o local atual para qualquer comportamento dependente do local. **_mbccpy_s_l** é idêntico ao **_mbccpy_s** exceto que **_mbccpy_s_l** usa o local passado para qualquer comportamento dependente da localidade.
+**_mbccpy_s** usa a localidade atual para qualquer comportamento dependente de localidade. **_mbccpy_s_l** é idêntica a **_mbccpy_s** , exceto que **_mbccpy_s_l** usa a localidade passada para qualquer comportamento dependente de localidade.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -142,8 +142,8 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

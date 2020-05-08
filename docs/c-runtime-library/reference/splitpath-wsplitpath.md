@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: 6798f93b2d1bc18a190b3b015bf8c882a3fa8a37
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1d24565a912d74060e60024dcfd90b8018cae32d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355605"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920275"
 ---
 # <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -75,24 +75,24 @@ void _wsplitpath(
 Caminho completo.
 
 *Dirigir*<br/>
-Carta de unidade, seguida de um cólon (**:**). Você pode passar **NULL** para este parâmetro se você não precisar da letra de unidade.
+Letra da unidade, seguida por dois-pontos (**:**). Você pode passar **NULL** para esse parâmetro se não precisar da letra da unidade.
 
-*Dir*<br/>
-Caminho do diretório, incluindo barra à direita. Cortes dianteiros **/** (), barras **\\** traseiras (), ou ambos podem ser usados. Você pode passar **NULL** para este parâmetro se você não precisar do caminho do diretório.
+*dir*<br/>
+Caminho do diretório, incluindo barra à direita. Barras invertidas **/** (), barras invertidas ( **\\** ) ou ambas podem ser usadas. Você pode passar **NULL** para esse parâmetro se não precisar do caminho do diretório.
 
-*Fname*<br/>
-Nome de arquivo base (sem extensão). Você pode passar **NULL** para este parâmetro se você não precisar do nome do arquivo.
+*fname*<br/>
+Nome de arquivo base (sem extensão). Você pode passar **NULL** para esse parâmetro se não precisar do nome de arquivo.
 
-*Ext*<br/>
-Extensão de nome de arquivo, incluindo o período principal **(.**). Você pode passar **NULL** para este parâmetro se você não precisar da extensão de nome de arquivo.
+*externa*<br/>
+Extensão de nome de arquivo, incluindo o ponto à esquerda (**.**). Você pode passar **NULL** para esse parâmetro se não precisar da extensão de nome de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_splitpath** quebra um caminho em seus quatro componentes. **_splitpath** lida automaticamente com argumentos de seqüência de caracteres de caracteres multibytes conforme apropriado, reconhecendo seqüências de caracteres multibytes de acordo com a página de código multibyte atualmente em uso. **_wsplitpath** é uma versão ampla do **_splitpath;** os argumentos para **_wsplitpath** são cordas de caracteres amplos. Caso contrário, essas funções se comportam de forma idêntica.
+A função **_splitpath** quebra um caminho em seus quatro componentes. **_splitpath** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **_wsplitpath** é uma versão de caractere largo do **_splitpath**; os argumentos para **_wsplitpath** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-**Observação de segurança** Essas funções acarretam uma ameaça em potencial em relação a um problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Versões mais seguras dessas funções estão disponíveis; veja [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+**Observação de segurança** Essas funções acarretam uma ameaça em potencial em relação a um problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Versões mais seguras dessas funções estão disponíveis; consulte [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -100,7 +100,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Cada componente do caminho completo é armazenado em um buffer separado; as constantes manifestas **_MAX_DRIVE**, **_MAX_DIR,** **_MAX_FNAME**e **_MAX_EXT** (definidas em STDLIB. H) especifique o tamanho máximo para cada componente do arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.
+Cada componente do caminho completo é armazenado em um buffer separado; as constantes de manifesto **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**e **_MAX_EXT** (definidas em STDLIB. H) especifique o tamanho máximo para cada componente de arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.
 
 Cada buffer deve ser tão grande quanto a constante de manifesto correspondente para evitar um possível estouro de buffer.
 
@@ -113,11 +113,11 @@ A tabela a seguir lista os valores das constantes do manifesto.
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-Se o caminho completo não contiver um componente (por exemplo, um nome de arquivo), **_splitpath** atribuir strings vazias aos buffers correspondentes.
+Se o caminho completo não contiver um componente (por exemplo, um nome de arquivo), **_splitpath** atribuirá cadeias de caracteres vazias aos buffers correspondentes.
 
-Você pode passar **NULL** para **_splitpath** para qualquer parâmetro que não seja *o caminho* que você não precisa.
+Você pode passar **NULL** para **_splitpath** para qualquer parâmetro que não seja o *caminho* que não seja necessário.
 
-Se *o caminho* for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e a função retorna **EINVAL**.
+Se *Path* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -132,7 +132,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo de [_makepath](makepath-wmakepath.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: ba8a4b3867eb0a18d4a14cb2f5480bc5800303c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337700"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913036"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -51,20 +51,20 @@ errno_t _set_fmode(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Modo*<br/>
-O modo de tradução de arquivos desejado: **_O_TEXT** ou **_O_BINARY**.
+*mode*<br/>
+O modo de conversão de arquivo desejado: **_O_TEXT** ou **_O_BINARY**.
 
 ## <a name="return-value"></a>Valor retornado
 
-Retornará zero se tiver êxito ou um código de erro em caso de falha. Se *o modo* não for **_O_TEXT** ou **_O_BINARY** ou **_O_WTEXT,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+Retornará zero se tiver êxito ou um código de erro em caso de falha. Se o *modo* não **for _O_TEXT** ou **_O_BINARY** ou **_O_WTEXT**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-A função define a variável global [_fmode](../../c-runtime-library/fmode.md). Esta variável especifica o modo de tradução de arquivo padrão para as operações de I/O do arquivo **_open** e **_pipe**.
+A função define a variável global [_fmode](../../c-runtime-library/fmode.md). Essa variável especifica o modo de conversão de arquivo padrão para as operações de e/s de arquivo **_open** e **_pipe**.
 
-**_O_TEXT** e **_O_BINARY** são definidos em Fcntl.h. **EINVAL** é definido em Errno.h.
+**_O_TEXT** e **_O_BINARY** são definidos em Fcntl. h. **EINVAL** é definido em errno. h.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -142,4 +142,4 @@ A   B   C   D   E   F   G   H   I   J   K   L
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[I/O do arquivo de texto e modo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[E/s de arquivo de modo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

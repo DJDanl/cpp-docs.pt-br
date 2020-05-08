@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 364544a9423668494747405e801d59b73de4e6c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 984b55737e575656670f561c45f528265800f214
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355628"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920294"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -97,28 +97,28 @@ errno_t _wsplitpath_s(
 Caminho completo.
 
 *Dirigir*<br/>
-Carta de unidade, seguida de um cólon (**:**). Você pode passar **NULL** para este parâmetro se você não precisar da letra de unidade.
+Letra da unidade, seguida por dois-pontos (**:**). Você pode passar **NULL** para esse parâmetro se não precisar da letra da unidade.
 
-*unidadeNumberOfElements*<br/>
-O tamanho do buffer de *unidade* em caracteres de byte único ou largo. Se *a unidade* for **NULA,** este valor deve ser 0.
+*driveNumberOfElements*<br/>
+O tamanho do buffer da *unidade* em caracteres de byte único ou largos. Se a *unidade* for **nula**, esse valor deverá ser 0.
 
-*Dir*<br/>
-Caminho do diretório, incluindo barra à direita. Cortes dianteiros **/** (), barras **\\** traseiras (), ou ambos podem ser usados. Você pode passar **NULL** para este parâmetro se você não precisar do caminho do diretório.
+*dir*<br/>
+Caminho do diretório, incluindo barra à direita. Barras invertidas **/** (), barras invertidas ( **\\** ) ou ambas podem ser usadas. Você pode passar **NULL** para esse parâmetro se não precisar do caminho do diretório.
 
 *dirNumberOfElements*<br/>
-O tamanho do buffer *dir* em caracteres de byte único ou largo. Se *dir* for **NULL,** este valor deve ser 0.
+O tamanho do buffer de *dir* em caracteres de byte único ou largos. Se *dir* for **NULL**, esse valor deverá ser 0.
 
-*Fname*<br/>
-Nome de arquivo base (sem extensão). Você pode passar **NULL** para este parâmetro se você não precisar do nome do arquivo.
+*fname*<br/>
+Nome de arquivo base (sem extensão). Você pode passar **NULL** para esse parâmetro se não precisar do nome de arquivo.
 
-*nomeNúmeronúmeroElementos*<br/>
-O tamanho do buffer *fname* em caracteres single-byte ou wide. Se *fname* for **NULL,** este valor deve ser 0.
+*nameNumberOfElements*<br/>
+O tamanho do buffer *fname* em caracteres de byte único ou largos. Se *fname* for **NULL**, esse valor deverá ser 0.
 
-*Ext*<br/>
-Extensão de nome de arquivo, incluindo o período principal **(.**). Você pode passar **NULL** para este parâmetro se você não precisar da extensão de nome de arquivo.
+*externa*<br/>
+Extensão de nome de arquivo, incluindo o ponto à esquerda (**.**). Você pode passar **NULL** para esse parâmetro se não precisar da extensão de nome de arquivo.
 
 *extNumberOfElements*<br/>
-O tamanho do *tampão ext* em caracteres single-byte ou wide. Se *o ramo* for **NULO,** este valor deve ser 0.
+O tamanho do buffer *ext* em caracteres de byte único ou largos. Se *ext* for **NULL**, esse valor deverá ser 0.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -128,25 +128,25 @@ Zero se for bem-sucedido; um código de erro em caso de falha.
 
 |Condição|Valor retornado|
 |---------------|------------------|
-|*caminho* é **NULO**|**Einval**|
-|*unidade* é **NULL**, *unidadeNumberOfElements* não é zero|**Einval**|
-|*unidade* **não-NULL,** *unidadeNumberOfElements* é zero|**Einval**|
-|*dir* é **NULL**, *dirNumberOfElements* não é zero|**Einval**|
-|*dir* é**não-NULL**, *dirNumberOfElements* é zero|**Einval**|
-|*fname* é **NULL**, *nomeNumberOfElements* não é zero|**Einval**|
-|*fname* é**não-NULL**, *nomeNumberOfElements* é zero|**Einval**|
-|*ext* é **NULL,** *extNumberOfElements* não é zero|**Einval**|
-|*ext* é**não-NULL,** *extNumberOfElements* é zero|**Einval**|
+|o *caminho* é **nulo**|**EINVAL**|
+|a *unidade* é **nula**, *driveNumberOfElements* é diferente de zero|**EINVAL**|
+|a *unidade* não é**nula**, *driveNumberOfElements* é zero|**EINVAL**|
+|*dir* é **nulo**, *dirNumberOfElements* é diferente de zero|**EINVAL**|
+|*dir* não é**nulo**, *dirNumberOfElements* é zero|**EINVAL**|
+|*fname* é **nulo**, *nameNumberOfElements* é diferente de zero|**EINVAL**|
+|*fname* não é**nulo**, *nameNumberOfElements* é zero|**EINVAL**|
+|*ext* é **nulo**, *extNumberOfElements* é diferente de zero|**EINVAL**|
+|*ext* é não**nulo**, *extNumberOfElements* é zero|**EINVAL**|
 
-Se qualquer uma das condições acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EINVAL** e retornam **EINVAL**.
+Se qualquer uma das condições acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EINVAL** e retornarão **EINVAL**.
 
-Se algum dos buffers for muito curto para segurar o resultado, essas funções limpam todos os buffers para as strings vazias, **definem errno** para **ERANGE**e retornam **ERANGE**.
+Se qualquer um dos buffers for muito curto para manter o resultado, essas funções apagarão todos os buffers para cadeias de caracteres vazias, definir **errno** como **ERANGE**e retornará **ERANGE**.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_splitpath_s** quebra um caminho em seus quatro componentes. **_splitpath_s** lida automaticamente com argumentos de seqüência de caracteres de vários bytes conforme apropriado, reconhecendo seqüências de caracteres multibytes de acordo com a página de código multibyte atualmente em uso. **_wsplitpath_s** é uma versão ampla de **_splitpath_s;** os argumentos para **_wsplitpath_s** são cordas de caracteres amplos. Caso contrário, essas funções se comportam de forma idêntica
+A função **_splitpath_s** quebra um caminho em seus quatro componentes. **_splitpath_s** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **_wsplitpath_s** é uma versão de caractere largo do **_splitpath_s**; os argumentos para **_wsplitpath_s** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -154,7 +154,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Cada componente do caminho completo é armazenado em um buffer separado; as constantes manifestas **_MAX_DRIVE**, **_MAX_DIR,** **_MAX_FNAME**e **_MAX_EXT** (definidas em STDLIB. H) especifique o tamanho máximo permitido para cada componente do arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.
+Cada componente do caminho completo é armazenado em um buffer separado; as constantes de manifesto **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**e **_MAX_EXT** (definidas em STDLIB. H) especifique o tamanho máximo permitido para cada componente de arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.
 
 A tabela a seguir lista os valores das constantes do manifesto.
 
@@ -165,11 +165,11 @@ A tabela a seguir lista os valores das constantes do manifesto.
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Se o caminho completo não contiver um componente (por exemplo, um nome de arquivo), **_splitpath_s** atribuir uma seqüência vazia ao buffer correspondente.
+Se o caminho completo não contiver um componente (por exemplo, um nome de arquivo), **_splitpath_s** atribuirá uma cadeia de caracteres vazia ao buffer correspondente.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -184,7 +184,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo de [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>

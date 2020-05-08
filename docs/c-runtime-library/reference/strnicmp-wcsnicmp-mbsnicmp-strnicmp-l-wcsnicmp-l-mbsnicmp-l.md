@@ -28,7 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -76,19 +76,19 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: b0bde60a230f1fd428716073471cd85b2728a614
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920091"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
 Compara o número especificado de caracteres de duas cadeias de caracteres sem considerar o caso.
 
 > [!IMPORTANT]
-> **_mbsnicmp** e **_mbsnicmp_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicmp** e **_mbsnicmp_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -130,13 +130,13 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1,* *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres com terminação nula.
 
 *contagem*<br/>
 O número de caracteres a serem comparados.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
@@ -145,23 +145,23 @@ Indica a relação entre as subcadeias de caracteres, da seguinte maneira.
 
 |Valor retornado|Descrição|
 |------------------|-----------------|
-|< 0|*string1* substring é menor que *string2* substring.|
-|0|*string1* substring é idêntico ao substring *string2.*|
-|> 0|*string1* substring é maior do que *string2* substring.|
+|< 0|a subcadeia de caracteres *seqüência1* é menor que a subcadeia de *seqüência2* .|
+|0|a subcadeia de caracteres *seqüência1* é idêntica à subcadeia de *seqüência2* .|
+|> 0|a subcadeia de caracteres *seqüência1* é maior que a subcadeia de *seqüência2* .|
 
-Em um erro de validação de parâmetros, essas \<funções retornam \< **_NLSCMPERROR**, que é definida em string.h> e mbstring.h>.
+Em um erro de validação de parâmetro, essas funções retornam **_NLSCMPERROR**, que \<é definido em String. \<h> e Mbstring. h>.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_strnicmp** compara, no máximo, os caracteres de primeira *contagem* de *string1* e *string2*. A comparação é executada independentemente do caso, convertendo cada caractere em minúsculas. **_strnicmp** é uma versão insensível ao caso do **strncmp**. A comparação termina se um caractere nulo terminando for alcançado em qualquer seqüência antes *de contar* caracteres. Se as strings forem iguais quando um caractere nulo terminante for alcançado em qualquer seqüência antes de os caracteres *de contagem* forem comparados, a seqüência mais curta será menor.
+A função **_strnicmp** , em primeiro lugar, compara, no máximo, a primeira *contagem* de caracteres de *seqüência1* e *seqüência2*. A comparação é executada independentemente do caso, convertendo cada caractere em minúsculas. **_strnicmp** é uma versão que não diferencia maiúsculas de minúsculas do **strncmp**. A comparação terminará se um caractere nulo de terminação for atingido em qualquer cadeia de caracteres antes de a *contagem* deles ser comparada. Se as cadeias de caracteres forem iguais quando um caractere nulo de terminação for atingido em uma cadeia de caracteres antes de a *contagem* de caracteres serem comparados, a cadeia de caracteres menor será menor.
 
-Os caracteres de 91 a 96 na tabela ASCII ('[','\\', ']', ' ^', '_' e '\`') avaliam como menor do que qualquer caractere alfabético. Esta encomenda é idêntica à do **stricmp**.
+Os caracteres de 91 a 96 na tabela ASCII ('[','\\', ']', ' ^', '_' e '\`') avaliam como menor do que qualquer caractere alfabético. Essa ordenação é idêntica à do **stricmp**.
 
-**_wcsnicmp** e **_mbsnicmp** são versões de amplo caráter e multibytes de **_strnicmp**. Os argumentos de **_wcsnicmp** são cordas de caracteres amplos; os de **_mbsnicmp** são cordas de caracteres multibytes. **_mbsnicmp** reconhece sequências de caracteres multibytes de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Caso contrário, essas três funções se comportam de forma idêntica. Essas funções são afetadas pela configuração local — as versões que não têm o **sufixo _l** usam o local atual para seu comportamento dependente da localidade; as versões que têm o **sufixo _l** em vez de usar o *local* que é passado dentro Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_wcsnicmp** e **_mbsnicmp** são versões de caractere largo e de vários caracteres de **_strnicmp**. Os argumentos de **_wcsnicmp** são cadeias de caracteres largos; os de **_mbsnicmp** são cadeias de caracteres multibyte. **_mbsnicmp** reconhece seqüências de caracteres multibyte de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Caso contrário, essas três funções se comportam de forma idêntica. Essas funções são afetadas pela configuração de localidade – as versões que não têm o sufixo **_L** usam a localidade atual para seu comportamento dependente de localidade; as versões que têm o sufixo **_L** , em vez disso, usam a *localidade* que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Todas essas funções validam seus parâmetros. Se a *string1* ou *string2* for um ponteiro nulo, o manipulador de parâmetros inválidos será invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, essas funções retornam **_NLSCMPERROR** e definem **errno** para **EINVAL**.
+Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüência2* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -175,9 +175,9 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_strnicmp** **_strnicmp_l**|\<string.h>|
-|**_wcsnicmp** **_wcsnicmp_l**|\<string.h> ou \<wchar.h>|
-|**_mbsnicmp** **, _mbsnicmp_l**|\<mbstring.h>|
+|**_strnicmp**, **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<string.h> ou \<wchar.h>|
+|**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -185,9 +185,9 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo para [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

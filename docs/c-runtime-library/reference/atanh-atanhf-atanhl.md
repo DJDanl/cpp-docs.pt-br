@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350123"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920059"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -65,24 +65,24 @@ Valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor retornado
 
-As funções **atanh** retornam a tangente hiberbólica inversa (tangente arco hiperbólico) de *x*. Se *x* for maior que 1, ou menos de -1, **errno** é definido como **EDOM** e o resultado é um NaN tranquilo. Se *x* for igual a 1 ou -1, um infinito positivo ou negativo é devolvido, respectivamente, e **errno** é definido como **ERANGE**.
+As funções **ATANH** retornam a tangente inversa hyberbolic (tangente hiperbólica do arco) de *x*. Se *x* for maior que 1 ou menor que-1, **errno** será definido como **Edom** e o resultado será um NaN silencioso. Se *x* for igual a 1 ou-1, um infinito positivo ou negativo será retornado, respectivamente, e **errno** será definido como **ERANGE**.
 
-|Entrada|Exceção SEH|**Matherr** Exceção|
+|Entrada|Exceção SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|none|none|
-|*X* ≥ 1; *x* ≤ -1|none|none|
+|± QNAN,IND|nenhuma|nenhuma|
+|*X* ≥ 1; *x* ≤-1|nenhuma|nenhuma|
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **atanh** que tomam e retornam **flutuam** **ou** **longos** valores duplos. Em um programa C, **atanh** sempre leva e retorna **em dobro**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ATANH** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **ATANH** sempre leva e retorna **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**ATANH**, **atanhf**, **atanhl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: e2e48e4acc26c7b8317a2d358d1a426d012ec508
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 895814a1a44910ef65a826cba330a3edd70b85a9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345084"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916307"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
@@ -55,7 +55,7 @@ Retorna o identificador do heap do Win32 usado pelo sistema de tempo de execuç�
 
 Use essa função se quiser chamar [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) e habilitar o Heap de baixa fragmentação no heap do CRT.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -88,6 +88,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>

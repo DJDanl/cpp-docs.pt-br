@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +36,19 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: 5bdb5ff5c8309e03a49f9518f65a45d5757e9bfa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a1c0eeaa6d66e91b913ce7940d37409fc4f6ac29
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347631"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909669"
 ---
 # <a name="exit-_exit-_exit"></a>exit, _Exit, _exit
 
-Encerra o processo de chamada. A função **de saída** termina após a limpeza; **_exit** e **_Exit** terminá-lo imediatamente.
+Encerra o processo de chamada. A função **Exit** termina após a limpeza; **_exit** e **_Exit** finalizá-lo imediatamente.
 
 > [!NOTE]
-> Não use esse método para desligar um aplicativo Universal Windows Platform (UWP), exceto em cenários de teste ou depuração. Formas programáticas ou de uI para fechar um aplicativo da Loja não são permitidas de acordo com as políticas da [Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [o ciclo de vida do Aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle). Para obter mais informações sobre aplicativos do Windows 10, consulte [Guias de instrução para aplicativos do Windows 10](https://developer.microsoft.com/windows/apps).
+> Não use esse método para desligar um aplicativo Plataforma Universal do Windows (UWP), exceto em cenários de teste ou depuração. As maneiras programática ou de interface do usuário de fechar um aplicativo da loja não são permitidas de acordo com as [políticas de Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle). Para obter mais informações sobre aplicativos do Windows 10, consulte [Guias de instrução para aplicativos do Windows 10](https://developer.microsoft.com/windows/apps).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -71,22 +71,22 @@ Código de status de saída.
 
 ## <a name="remarks"></a>Comentários
 
-As funções **de saída,** **_Exit** e **_exit** encerram o processo de chamada. A função de **saída** chama os destruidores para objetos locais de rosca e, em seguida, chama — em ordem LIFO (Última-in-first-out) — as funções registradas pelo **atexit** e **_onexit**e, em seguida, libera todos os buffers de arquivo antes que ele encerre o processo. As funções **_Exit** e **_exit** encerram o processo sem destruir objetos locais de rosca ou processar funções **atexit** ou **_onexit,** e sem limpar buffers de fluxo.
+As funções **Exit**, **_Exit** e **_exit** encerram o processo de chamada. A função **Exit** chama destruidores para objetos de thread local e, em seguida, chama – na ordem UEPS (último a entrar, primeiro a sair) — as funções registradas por **atexit** e **_onexit**e, em seguida, libera todos os buffers de arquivo antes de finalizar o processo. As funções **_Exit** e **_exit** encerram o processo sem destruir objetos locais de thread ou processar funções **atexit** ou **_onexit** e sem liberar buffers de fluxo.
 
-Embora a **saída**, **_Exit** e **_exit** chamadas não retornem um valor, o valor no *status* é disponibilizado para o ambiente host ou processo de chamada de espera, se existir, após a saída do processo. Normalmente, o chamador define o valor *de status* como 0 para indicar uma saída normal ou para algum outro valor para indicar um erro. O valor *de status* está disponível para o comando de lote do sistema operacional **ERRORLEVEL** e é representado por uma das duas constantes: **EXIT_SUCCESS**, que representa um valor de 0, ou **EXIT_FAILURE**, que representa um valor de 1.
+Embora as chamadas **Exit**, **_Exit** e **_exit** não retornem um valor, o valor no *status* é disponibilizado para o ambiente de host ou aguardando o processo de chamada, se houver um, após o processo sair. Normalmente, o chamador define o valor de *status* como 0 para indicar uma saída normal ou para algum outro valor para indicar um erro. O valor de *status* está disponível para o **ERRORLEVEL** do comando do sistema operacional e é representado por uma das duas constantes: **EXIT_SUCCESS**, que representa um valor de 0, ou **EXIT_FAILURE**, que representa um valor de 1.
 
-As funções **de saída**, **_Exit,** **_exit**, **quick_exit**, **_cexit**e **_c_exit** comportam-se da seguinte forma.
+As funções **Exit**, **_Exit**, **_exit**, **quick_exit**, **_cexit**e **_c_exit** se comportam da seguinte maneira.
 
 |Função|Descrição|
 |--------------|-----------------|
-|**Saída**|Executa procedimentos completos de encerramento de biblioteca C, encerra o processo e fornece o código de status fornecido para o ambiente de host.|
+|**exit**|Executa procedimentos completos de encerramento de biblioteca C, encerra o processo e fornece o código de status fornecido para o ambiente de host.|
 |**_Exit**|Executa procedimentos mínimos de encerramento de biblioteca C, encerra o processo e fornece o código de status fornecido para o ambiente de host.|
 |**_exit**|Executa procedimentos mínimos de encerramento de biblioteca C, encerra o processo e fornece o código de status fornecido para o ambiente de host.|
 |**quick_exit**|Executa procedimentos rápidos de encerramento de biblioteca C, encerra o processo e fornece o código de status fornecido para o ambiente de host.|
 |**_cexit**|Executa procedimentos completos de encerramento de biblioteca C e retorna ao chamador. Não encerra o processo.|
 |**_c_exit**|Executa procedimentos mínimos de encerramento de biblioteca C e retorna ao chamador. Não encerra o processo.|
 
-Quando você chama a **saída,** **_Exit** ou **_exit** função, os destruidores de quaisquer objetos temporários ou automáticos que existem no momento da chamada não são chamados. Um objeto automático é um objeto local não estático definido em uma função. Um objeto temporário é um objeto criado pelo compilador, como um valor retornado por uma chamada de função. Para destruir um objeto automático antes de chamar **a saída,** **_Exit**ou **_exit,** chame explicitamente o destruidor para o objeto, como mostrado aqui:
+Quando você chama a função **Exit**, **_Exit** ou **_exit** , os destruidores para todos os objetos temporários ou automáticos existentes no momento da chamada não são chamados. Um objeto automático é um objeto local não estático definido em uma função. Um objeto temporário é um objeto que é criado pelo compilador, como um valor retornado por uma chamada de função. Para destruir um objeto automático antes de chamar **Exit**, **_Exit**ou **_exit**, chame explicitamente o destruidor para o objeto, como mostrado aqui:
 
 ```cpp
 void last_fn() {}
@@ -97,15 +97,15 @@ void last_fn() {}
 }
 ```
 
-Não use **DLL_PROCESS_ATTACH** para chamar **a saída** de **DllMain**. Para sair da função **DLLMain,** devolva **FALSO** de **DLL_PROCESS_ATTACH**.
+Não use **DLL_PROCESS_ATTACH** para chamar **Exit** de **DllMain**. Para sair da função **DllMain** , retorne **false** de **DLL_PROCESS_ATTACH**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**saída**, **_Exit**, **_exit**|\<process.h> ou \<stdlib.h>|
+|**sair**, **_Exit**, **_exit**|\<process.h> ou \<stdlib.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -127,7 +127,7 @@ int main( void )
 ## <a name="see-also"></a>Confira também
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Abortar](abort.md)<br/>
+[anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_cexit, _c_exit](cexit-c-exit.md)<br/>
 [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>

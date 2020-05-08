@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 187031adc0b22aff2c5418cd7e0f3e64075f1745
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: abce570aecc307efd4986fab78d45954d7a79588
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343926"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919795"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -76,19 +76,19 @@ int _iswalpha_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
-*Localidade*<br/>
+*locale*<br/>
 A localidade a ser usada em vez da localidade atual.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retorna não zero se *c* é uma representação particular de um caractere alfabético. **isalpha** retorna um valor não zero se *c* estiver dentro das faixas A - Z ou a - z. **iswalpha** retorna um valor não zero apenas para caracteres largos para os quais [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ou **iswlower** não é zero; ou seja, para qualquer personagem amplo que seja um conjunto definido pela implementação para o qual nenhum **iswcntrl,** **iswdigit,** **iswpunct**ou **iswspace** não é zero. Cada uma dessas rotinas retorna 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere alfabético. **isalpha** retornará um valor diferente de zero se *c* estiver dentro dos intervalos de a-z ou a-z. **iswalpha** retorna um valor diferente de zero somente para caracteres largos para os quais [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ou **iswlower** é diferente de zero; ou seja, para qualquer caractere largo que seja um de um conjunto definido pela implementação para o qual nenhum de **iswcntrl**, **iswdigit**, **iswpunct**ou **iswspace** seja diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
-As versões dessas funções que têm o **sufixo _l** usam o parâmetro local que é passado em vez do local atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o sufixo **_L** usam o parâmetro Locale que é passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **isalpha** e **_isalpha_l** é indefinido se *c* não é EOF ou na faixa 0 a 0xFF, inclusive. Quando uma biblioteca CRT depurada é usada e *c* não é um desses valores, as funções levantam uma afirmação.
+O comportamento de **isalpha** e **_isalpha_l** será indefinido se *c* não for EOF ou estiver no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -99,7 +99,7 @@ O comportamento de **isalpha** e **_isalpha_l** é indefinido se *c* não é EOF
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -112,8 +112,8 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

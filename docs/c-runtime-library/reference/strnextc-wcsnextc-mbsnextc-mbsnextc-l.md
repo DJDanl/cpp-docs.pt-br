@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,19 +50,19 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-ms.openlocfilehash: 69c9c3d89f2d74c133558eab99d6687fd0055ca2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4017dc4f72a0072df8d0969406169a26c1da43ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364497"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919270"
 ---
 # <a name="_strnextc-_wcsnextc-_mbsnextc-_mbsnextc_l"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
 Localiza o próximo caractere em uma cadeia de caracteres.
 
 > [!IMPORTANT]
-> **_mbsnextc** e **_mbsnextc_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnextc** e **_mbsnextc_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -87,22 +87,22 @@ unsigned int _mbsnextc_l(
 *Str*<br/>
 Cadeia de caracteres de origem.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retorna o valor inteiro do próximo caractere em *str*.
+Cada uma dessas funções retorna o valor inteiro do próximo caractere em *Str*.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mbsnextc** retorna o valor inteiro do próximo caractere multibyte em *str,* sem avançar o ponteiro de string. **_mbsnextc** reconhece sequências de caracteres multibytes de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso.
+A função **_mbsnextc** retorna o valor inteiro do próximo caractere multibyte em *Str*, sem avançar o ponteiro da cadeia de caracteres. **_mbsnextc** reconhece seqüências de caracteres multibyte de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) em uso no momento.
 
-Se *str* for **NULL,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e a função retorna 0.
+Se *Str* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará 0.
 
 **Observação de segurança** Essa API causa uma ameaça em potencial em relação ao problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -110,9 +110,9 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc** e **_wcsnextc** são versões de seqüência de caracteres de um único byte e versões de cadeia de caracteres amplos de **_mbsnextc**. **_wcsnextc** retorna o valor inteiro do próximo caractere amplo em *str*; **_strnextc** retorna o valor inteiro do próximo caractere single-byte em *str*. **_strnextc** e **_wcsnextc** são fornecidos apenas para este mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strnextc** e **_wcsnextc** são cadeias de caracteres de byte único e versões de cadeia de caracteres largos do **_mbsnextc**. **_wcsnextc** retorna o valor inteiro do próximo caractere largo em *Str*; **_strnextc** retorna o valor inteiro do próximo caractere de byte único em *Str*. **_strnextc** e **_wcsnextc** são fornecidos somente para esse mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsnextc_l** é idêntico, exceto que usa o parâmetro local passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_mbsnextc_l** é idêntico, exceto pelo fato de que ele usa o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -125,10 +125,10 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>

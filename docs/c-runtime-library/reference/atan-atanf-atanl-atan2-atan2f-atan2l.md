@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,16 +44,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 3b8411f9839022477dff3100792e271e2f0b572b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334111"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920068"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Calcula o arcotangent de **x** (**atan**, **atanf**e **atanl**) ou o arctangent de **y**/**x** **(atan2,** **atan2f**e **atan2l**).
+Calcula o arco tangente de **x** (**ATAN**, **atanf**e **atanl**) ou o arco tangente de **y**/**x** (**ATAN2**, **atan2f**e **atan2l**).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -82,29 +82,29 @@ Quaisquer números.
 
 ## <a name="return-value"></a>Valor retornado
 
-**atan** retorna o arcotangent de *x* na faixa -π/2 para π/2 radianos. **atan2** retorna o arcotangent de *y*/*x* na faixa -π para π radians. Se *x* é 0, **atan** retorna 0. Se ambos os parâmetros de **atan2** forem 0, a função retorna 0. Todos os resultados estão em radianos.
+**ATAN** retorna o arco tangente de *x* no intervalo de-π/2 a π/2 radianos. **ATAN2** retorna o arco tangente de *y*/*x* no intervalo de π a π radianos. Se *x* for 0, **ATAN** retornará 0. Se ambos os parâmetros de **ATAN2** forem 0, a função retornará 0. Todos os resultados estão em radianos.
 
-**atan2** usa os sinais de ambos os parâmetros para determinar o quadrante do valor de retorno.
+**ATAN2** usa os sinais de ambos os parâmetros para determinar o quadrante do valor de retorno.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN,** **IND**|none|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-A função **atan** calcula o arcotangent (a função tangente inversa) de *x*. **atan2** calcula o arcotangent de *y*/*x* (se *x* é igual a 0, **atan2** retorna π/2 se *y* for positivo, -π/2 se *y* for negativo, ou 0 se *y* é 0.)
+A função **ATAN** calcula o arco tangente (a função tangente inversa) de *x*. **ATAN2** calcula o arco tangente de *y*/*x* (se *x* for igual a 0, **ATAN2** retornará π/2 se *y* for positivo,-π/2 se *y* for negativo ou 0 se *y* for 0.)
 
-**atan** tem uma implementação que usa streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**ATAN** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **atan** e **atan2** que tomam **flutuação** ou **argumentos duplos** **longos.** Em um programa C, **atan** e **atan2** sempre tomam **argumentos duplos** e devolvem um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ATAN** e **ATAN2** que têm argumentos **duplos** **float** ou **Long** . Em um programa C, **ATAN** e **ATAN2** sempre assumem argumentos **duplos** e retornam um **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------|-|
-|**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l, atan2l**|\<math.h>|\<cmath> ou \<math.h>|
+|**ATAN**, **ATAN2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> ou \<math.h>|
 
 ## <a name="example"></a>Exemplo
 
