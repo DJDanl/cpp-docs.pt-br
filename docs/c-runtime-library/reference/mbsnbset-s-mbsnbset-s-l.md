@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 0ecfac1f9c0f1f9aeb8de85411b0b2f696b578e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81339017"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915530"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Define os primeiros **bytes n** de uma seqüência de caracteres multibytes para um caractere especificado. Essas versões de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Define os primeiros **n** bytes de uma cadeia de caracteres multibyte para um caractere especificado. Essas versões de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -88,16 +88,16 @@ errno_t _mbsnbset_s_l(
 *Str*<br/>
 Cadeia de caracteres a ser alterada.
 
-*Tamanho*<br/>
+*size*<br/>
 O tamanho do buffer da cadeia de caracteres.
 
-*C*<br/>
+*&*<br/>
 Configuração de caractere multibyte ou de byte único.
 
 *contagem*<br/>
 Número de bytes a serem definidos.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
@@ -106,19 +106,19 @@ Zero se for bem-sucedido, caso contrário, um código de erro.
 
 ## <a name="remarks"></a>Comentários
 
-As **funções _mbsnbset_s** e **_mbsnbset_s_l** definem, no máximo, os primeiros bytes de *contagem* de *str* a *c*. Se *a contagem* for maior do que o comprimento do *str,* o comprimento do *str* é usado em vez de *contar*. Se *c* é um caractere multibyte e não pode ser definido inteiramente no último byte especificado pela *contagem,* o último byte é acolchoado com um caractere em branco. **_mbsnbset_s** e **_mbsnbset_s_l** não colocam um nulo final no final do *str*.
+As funções **_mbsnbset_s** e **_mbsnbset_s_l** definidas, no máximo, a primeira *contagem* de bytes de *Str* para *c*. Se *Count* for maior que o comprimento de *Str*, o comprimento de *Str* será usado em vez de *Count*. Se *c* for um caractere multibyte e não puder ser definido inteiramente no último byte especificado por *Count*, o último byte será preenchido com um caractere em branco. **_mbsnbset_s** e **_mbsnbset_s_l** não coloque um nulo de terminação no final de *Str*.
 
-**_mbsnbset_s** e **_mbsnbset_s_l** se assemelham **a _mbsnset,** exceto que eles definem bytes *de contagem* em vez de *contar* caracteres de *c*.
+**_mbsnbset_s** e **_mbsnbset_s_l** se assemelham **_mbsnset**, exceto que eles definem bytes de *contagem* em vez de *contar* caracteres de *c*.
 
-Se *str* é **NULO** ou *contagem* é zero, esta função gera uma exceção de parâmetro inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e a função retorna **NULL**. Além disso, se *c* não é um caractere multibyte válido, **errno** é definido como **EINVAL** e um espaço é usado em vez disso.
+Se *Str* for **NULL** ou *Count* for zero, essa função gerará uma exceção de parâmetro inválida, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**. Além disso, se *c* não for um caractere multibyte válido, **errno** será definido como **EINVAL** e um espaço será usado em vez disso.
 
-O valor de saída é afetado pela configuração da configuração da categoria **LC_CTYPE** do local; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. A **versão _mbsnbset_s** desta função usa a localidade atual para este comportamento dependente da localidade; a versão **_mbsnbset_s_l** é idêntica, exceto que em vez disso usa o parâmetro local que é passado dentro Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria de **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. A versão **_mbsnbset_s** dessa função usa a localidade atual para esse comportamento dependente de localidade; a versão **_mbsnbset_s_l** é idêntica, exceto pelo fato de que ela usa o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -160,9 +160,9 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

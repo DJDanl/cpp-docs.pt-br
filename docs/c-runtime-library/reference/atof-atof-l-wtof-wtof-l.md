@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 492719a0cc0f8ac079b257ec8d7aa1014c5b2a86
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348916"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909108"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -89,14 +89,14 @@ double _wtof_l(
 *Str*<br/>
 Cadeia de caracteres a ser convertida.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada função retorna o **valor duplo** produzido interpretando os caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.
+Cada função retorna o valor **Double** produzido pela interpretação dos caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.
 
-Em todos os casos fora de alcance, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EINVAL** e retornam 0.
+Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão **errno** como **EINVAL** e retornarão 0.
 
 ## <a name="remarks"></a>Comentários
 
@@ -104,17 +104,17 @@ Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuant
 
 A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou L'\0') que encerra a cadeia de caracteres.
 
-O argumento *str* para **atof** e **_wtof** tem a seguinte forma:
+O argumento *Str* para **atof** e **_wtof** tem o seguinte formato:
 
-[*espaço em branco*] [*sinal]* [*dígitos*] [__.__ *dígitos*] [**{ e** &#124; **E** }[*sign*]*dígitos*]
+[*espaço em branco*] [*assinar*] [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **e** } [*assinar*]*dígitos*]
 
-Um *espaço em branco* consiste em caracteres de espaço ou guia, que são ignorados; *sinal* é mais (+) ou menos (-); e *os dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e**, ou **E**) e um inteiro decimal assinado opcionalmente.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e**ou **e) e**um inteiro decimal assinado opcionalmente.
 
-As versões UCRT dessas funções não suportam a conversão de letras expoentes no estilo Fortran **(d** ou **D).** Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
+As versões UCRT dessas funções não dão suporte à conversão de letras de expoente de estilo Fortran (**d** ou **d**). Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
 
-As versões dessas funções com o **sufixo _l** são idênticas, exceto que eles usam o parâmetro *local* passado em vez do local atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de *localidade* passado em vez da localidade atual.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -128,11 +128,11 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |Rotina(s)|Cabeçalho necessário|
 |------------------|---------------------|
 |**atof**, **_atof_l**|C: \<math.h> ou \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> ou \<math.h>|
-|**_wtof** **_wtof_l.**|C: \<stdlib.h> ou \<wchar.h> C++: \<cstdlib>, \<stdlib.h> ou \<wchar.h>|
+|**_wtof**, **_wtof_l**|C: \<stdlib.h> ou \<wchar.h> C++: \<cstdlib>, \<stdlib.h> ou \<wchar.h>|
 
 ## <a name="example"></a>Exemplo
 
-Este programa mostra como os números armazenados como strings podem ser convertidos em valores numéricos usando as funções **atof** e **_atof_l.**
+Este programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando as funções **atof** e **_atof_l** .
 
 ```C
 // crt_atof.c
@@ -181,11 +181,11 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

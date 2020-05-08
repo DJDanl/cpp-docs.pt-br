@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333149"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914089"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -63,14 +63,14 @@ errno_t wmemmove_s(
 *dest*<br/>
 Objeto de destino.
 
-*Numberofelements*<br/>
+*numberOfElements*<br/>
 Tamanho do buffer de destino.
 
 *src*<br/>
 Objeto de origem.
 
 *contagem*<br/>
-Número de bytes **(memmove_s)** ou caracteres **(wmemmove_s)** para copiar.
+Número de bytes (**memmove_s**) ou caracteres (**wmemmove_s**) a serem copiados.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -78,19 +78,19 @@ Zero se for bem-sucedido ou um código de erro em caso de falha
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|*dest*|*Numberofelements*|*src*|Valor retornado|Conteúdo *de dest*|
+|*dest*|*numberOfElements*|*src*|Valor retornado|Conteúdo do *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULO**|any|any|**Einval**|não modificado|
-|any|any|**NULO**|**Einval**|não modificado|
-|any|< *Contar*|any|**ERANGE**|não modificado|
+|**NULO**|any|any|**EINVAL**|não modificado|
+|any|any|**NULO**|**EINVAL**|não modificado|
+|any|< *contar*|any|**ERANGE**|não modificado|
 
 ## <a name="remarks"></a>Comentários
 
-Cópias *contam* bytes de caracteres *de src* a *dest*. Se algumas regiões da área de origem e do destino se sobreporem, **memmove_s** garante que os bytes originais de origem na região sobreposta sejam copiados antes de serem substituídos.
+Copia os bytes de *contagem* de caracteres de *src* para *dest*. Se algumas regiões da área de origem e o destino se sobrepõem, **memmove_s** garante que os bytes de origem originais na região de sobreposição sejam copiados antes de serem substituídos.
 
-Se *dest* ou se *src* for um ponteiro nulo, ou se a seqüência de destino for muito pequena, essas funções invocam um manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md) . Se a execução for permitida, essas funções retornam **eINVAL** e definem **errno** para **EINVAL**.
+Se *dest* ou se *src* for um ponteiro NULL, ou se a cadeia de caracteres de destino for muito pequena, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **EINVAL** e definirá **errno** como **EINVAL**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -137,7 +137,7 @@ Before: 0123456789
 After: 0012345789
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
