@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-ms.openlocfilehash: 18ecf78d2cbff3647eae912a1bb1b17d5340f185
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 379a4adbf17755341fed6a48c649afe29e150fe5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348331"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912120"
 ---
 # <a name="_creat-_wcreat"></a>_creat, _wcreat
 
-Cria um arquivo novo. **_creat** e **_wcreat** foram preteridas; usar [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md) em vez disso.
+Cria um arquivo novo. **_creat** e **_wcreat** foram preteridas; Use [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md) em vez disso.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -64,31 +64,31 @@ int _wcreat(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Filename*<br/>
+*nome do arquivo*<br/>
 Nome do novo arquivo.
 
-*Pmode*<br/>
+*pmode*<br/>
 Configuração de permissão.
 
 ## <a name="return-value"></a>Valor retornado
 
-Essas funções, se tiverem êxito, retornarão um descritor de arquivo para o arquivo criado. Caso contrário, as funções retornam -1 e definem **errno** conforme mostrado na tabela a seguir.
+Essas funções, se tiverem êxito, retornarão um descritor de arquivo para o arquivo criado. Caso contrário, as funções retornam-1 e define **errno** , conforme mostrado na tabela a seguir.
 
-|**errno** configuração|Descrição|
+|configuração de **errno**|Descrição|
 |---------------------|-----------------|
-|**Eacces**|*filename* especifica um arquivo somente leitura existente ou especifica um diretório em vez de um arquivo.|
+|**EACCES**|*filename* especifica um arquivo somente leitura existente ou especifica um diretório em vez de um arquivo.|
 |**EMFILE**|Nenhum outro descritor de arquivo disponível.|
-|**Enoent**|Não foi possível encontrar o arquivo especificado.|
+|**ENOENT**|Não foi possível encontrar o arquivo especificado.|
 
-Se *o nome do arquivo* for **NULL,** essas funções invocam o manipulador de parâmetros inválidos, conforme descrito na Validação de [Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EINVAL** e retornam -1.
+Se *filename* for **NULL**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **_creat** cria um novo arquivo ou abre e trunca um já existente. **_wcreat** é uma versão ampla do **_creat;** o argumento *de nome de arquivo* para **_wcreat** é uma seqüência de caracteres amplo. **_wcreat** e **_creat** se comportam de forma idêntica.
+A função **_creat** cria um novo arquivo ou abre e Trunca um existente. **_wcreat** é uma versão de caractere largo do **_creat**; o argumento de *nome de arquivo* para **_wcreat** é uma cadeia de caracteres largos. **_wcreat** e **_creat** se comportar de forma idêntica.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -96,17 +96,17 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
-Se o arquivo especificado pelo *nome do arquivo* não existir, um novo arquivo será criado com a configuração de permissão dada e será aberto para gravação. Se o arquivo já existir e sua configuração de permissão permitir a escrita, **_creat** truncar o arquivo para comprimento 0, destruindo o conteúdo anterior e o abre para gravação. A configuração de permissão, *pmode,* aplica-se apenas a arquivos recém-criados. O novo arquivo recebe a configuração de permissão especificada depois que ele é fechado pela primeira vez. A expressão inteira *pmode* contém uma ou ambas as **constantes** _S_IWRITE e **_S_IREAD,** definidas em SYS\Stat.h. Quando ambas as constantes são dadas, elas são unidas com o bitwise ou o operador **(&#124;).** O parâmetro *pmode* é definido como um dos seguintes valores.
+Se o arquivo especificado por *filename* não existir, um novo arquivo será criado com a configuração de permissão fornecida e será aberto para gravação. Se o arquivo já existir e sua configuração de permissão permitir a gravação, **_creat** truncará o arquivo para o comprimento 0, destruindo o conteúdo anterior e o abrirá para gravação. A configuração de permissão, *pmode*, aplica-se somente a arquivos recém-criados. O novo arquivo recebe a configuração de permissão especificada depois que ele é fechado pela primeira vez. A expressão de número inteiro *pmode* contém uma ou ambas as constantes de manifesto **_S_IWRITE** e **_S_IREAD**, definidas em SYS\Stat.h. Quando ambas as constantes são fornecidas, elas são unidas com o operador OR de bit ( **&#124;** ). O parâmetro *pmode* é definido como um dos valores a seguir.
 
 |Valor|Definição|
 |-----------|----------------|
 |**_S_IWRITE**|Gravação permitida.|
 |**_S_IREAD**|Leitura permitida.|
-|**_S_IREAD** **_S_IWRITE &#124;**|Leitura e gravação permitidas.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Leitura e gravação permitidas.|
 
-Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Todos os arquivos são sempre legíveis; é impossível conceder permissão somente gravação. Os modos **_S_IWRITE** e **_S_IREAD** | **_S_IWRITE** são então equivalentes. Os arquivos abertos com **_creat** são sempre abertos no modo de compatibilidade (veja [_sopen)](sopen-wsopen.md)com **_SH_DENYNO**.
+Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Todos os arquivos são sempre legíveis; é impossível conceder permissão somente gravação. Os modos **_S_IWRITE** e **_S_IREAD** | **_S_IWRITE** , em seguida, são equivalentes. Os arquivos abertos usando **_creat** sempre são abertos no modo de compatibilidade (consulte [_sopen](sopen-wsopen.md)) com **_SH_DENYNO**.
 
-**_creat** aplica a máscara de permissão de arquivo atual ao *pmode* antes de definir as permissões (ver [_umask](umask.md)). **_creat** é fornecida principalmente para compatibilidade com bibliotecas anteriores. Uma chamada para **_open** com **_O_CREAT** e **_O_TRUNC** no parâmetro *oflag* é equivalente a **_creat** e é preferível para novo código.
+**_creat** aplica a máscara de permissão de arquivo atual a *pmode* antes de definir as permissões (consulte [_umask](umask.md)). **_creat** é fornecido principalmente para compatibilidade com as bibliotecas anteriores. Uma chamada para **_open** com **_O_CREAT** e **_O_TRUNC** no parâmetro *oflag* é equivalente a **_creat** e é preferível para o novo código.
 
 ## <a name="requirements"></a>Requisitos
 

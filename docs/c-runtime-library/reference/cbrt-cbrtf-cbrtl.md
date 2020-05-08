@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333574"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912100"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -73,21 +73,21 @@ Valor de ponto flutuante
 
 As funções **cbrt** retornam a raiz do cubo de *x*.
 
-|Entrada|Exceção SEH|**_matherr** Exceção|
+|Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|none|none|
+|± ∞, QNAN, IND|nenhuma|nenhuma|
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **cbrt** que tomam **flutuação** ou tipos **duplos** **longos.** Em um programa C, **o CBRT** sempre pega e retorna **em dobro.**
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cbrt** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **cbrt** sempre leva e retorna **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**cbrt**, **cbrtf,** **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 130e19fcb1107f27133854f4e379b35969130106
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea89458a51360b8781cb713fc9412239d2e03c78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340670"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911890"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
-Copia **n** bytes de uma string para uma seqüência de destino. Versões mais seguras dessas funções estão disponíveis, consulte [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
+Copia **n** bytes de uma cadeia de caracteres para uma cadeia de caracteres de destino. Versões mais seguras dessas funções estão disponíveis, consulte [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -83,36 +83,36 @@ unsigned char * _mbsnbcpy_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Strdest*<br/>
+*strDest*<br/>
 Destino para a cadeia de caracteres a ser copiada.
 
-*Strsource*<br/>
+*strSource*<br/>
 Cadeia de caracteres a ser copiada.
 
 *contagem*<br/>
 Número de bytes a serem copiados.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_mbsnbcpy** retorna um ponteiro para a seqüência de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.
+**_mbsnbcpy** retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-A **função _mbsnbcpy** copia bytes de *strSource* para *strDest*. *count* Se a *contagem* exceder o tamanho do *strDest* ou as strings de origem e destino se sobrepõem, o comportamento de **_mbsnbcpy** é indefinido.
+A função **_mbsnbcpy** copia bytes de *contagem* de *strSource* para *strDest*. Se a *contagem* exceder o tamanho de *strDest* ou as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **_mbsnbcpy** será indefinido.
 
-Se *strSource* ou *strDest* for um ponteiro nulo, esta função invoca o manipulador de parâmetros inválidos conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, a função retorna **NULL** e define **errno** para **EINVAL**.
+Se *strSource* ou *strDest* for um ponteiro NULL, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará **NULL** e definirá **errno** como **EINVAL**.
 
-O valor de saída é afetado pela configuração da configuração da categoria **LC_CTYPE** do local; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o **sufixo _l** usam a localização atual e as versões que têm o **sufixo _l** em vez disso usam o parâmetro local que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria de **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto pelo fato de que aquelas que não têm o sufixo de **_L** usam a localidade atual e as versões que têm o sufixo **_L** , em vez disso, usam o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
 > Essas funções podem ser vulneráveis a ameaças de estouro de buffer. As saturações de buffer podem ser usadas para executar código arbitrário do invasor, que pode resultar na elevação de privilégio sem garantia e comprometer o sistema. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 Em C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais recentes e mais seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -130,9 +130,9 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>

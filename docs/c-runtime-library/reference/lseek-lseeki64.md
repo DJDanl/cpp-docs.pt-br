@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: d35b3db157d4f33e3a8490c6620a08000ff090f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341613"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911314"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
@@ -63,34 +63,34 @@ __int64 _lseeki64(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fd*<br/>
+*FD*<br/>
 Descritor de arquivo que faz referência a um arquivo aberto.
 
-*deslocamento*<br/>
+*offset*<br/>
 Número de bytes de *origem*.
 
-*Origem*<br/>
+*ter*<br/>
 Posição inicial.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_lseek** retorna o deslocamento, em bytes, da nova posição desde o início do arquivo. **_lseeki64** devolve o deslocamento em um inteiro de 64 bits. A função retorna -1L para indicar um erro. Se um parâmetro inválido for passado, como um descritor de arquivo incorreto, o valor de *origem* será inválido ou a posição especificada por *deslocamento* será anterior ao início do arquivo e o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções definem **errno** para **EBADF** e retornam -1L. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), o valor retornado será indefinido.
+**_lseek** retorna o deslocamento, em bytes, da nova posição desde o início do arquivo. **_lseeki64** retorna o deslocamento em um inteiro de 64 bits. A função retorna-1L para indicar um erro. Se um parâmetro inválido for passado, como um descritor de arquivo incorreto, o valor de *origem* será inválido ou a posição especificada por *deslocamento* será anterior ao início do arquivo e o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EBADF** e retornará-1L. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), o valor retornado será indefinido.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A **função _lseek** move o ponteiro de arquivo associado ao *fd* para um novo local que é *offset* bytes de *origem*. A operação seguinte no arquivo ocorre no novo local. O argumento de *origem* deve ser uma das constantes a seguir, definidas em Stdio.h.
+A função **_lseek** move o ponteiro de arquivo associado a *FD* para um novo local que é o *deslocamento* de bytes da *origem*. A operação seguinte no arquivo ocorre no novo local. O argumento de *origem* deve ser uma das constantes a seguir, definidas em Stdio.h.
 
-|valor *de origem*||
+|valor de *origem*||
 |-|-|
 | **SEEK_SET** | Início do arquivo. |
 | **SEEK_CUR** | Posição atual do ponteiro de arquivo. |
 | **SEEK_END** | Final do arquivo. |
 
-Você pode usar **_lseek** para reposicionar o ponteiro em qualquer lugar de um arquivo ou além do final do arquivo.
+Você pode usar **_lseek** para reposicionar o ponteiro em qualquer lugar em um arquivo ou além do final do arquivo.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -175,7 +175,7 @@ Position for current position seek = 10
 Position for end of file seek = 57
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: e77e1811cb6f002c06e514b5f737b8a92ea84282
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333686"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913348"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -50,18 +50,18 @@ double _cabs(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Z*<br/>
+*z*<br/>
 Número complexo.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_cabs** devolve o valor absoluto de seu argumento se for bem sucedido. No estouro, **_cabs** retorna **HUGE_VAL** e define **errno** para **ERANGE**. Você pode alterar o tratamento de erro com [_matherr](matherr.md).
+**_cabs** retornará o valor absoluto de seu argumento se for bem-sucedido. Em Overflow, **_cabs** retorna **HUGE_VAL** e define **errno** como **ERANGE**. Você pode alterar o tratamento de erro com [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **_cabs** calcula o valor absoluto de um número complexo, que deve ser uma estrutura de tipo [_complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composta por um componente real *x* e um componente imaginário *y*. Um chamado para **_cabs** produz um valor `sqrt( z.x * z.x + z.y * z.y )`equivalente ao da expressão.
+A função **_cabs** calcula o valor absoluto de um número complexo, que deve ser uma estrutura do tipo [_complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composta por um componente real *x* e um componente imaginário de *y*. Uma chamada para **_cabs** produz um valor equivalente ao da expressão `sqrt( z.x * z.x + z.y * z.y )`.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -12,7 +12,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: 241292f22beea0cbf4e14d1b4480f6621ef6ccca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7247827cb2bfe18c341ce60c2f3d8976f676b138
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351130"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914075"
 ---
 # <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
@@ -49,7 +49,7 @@ A página de código de ordenação atual do thread.
 
 Funções CRT internas são específicas da implementação e estão sujeitas a alteração em cada versão. Não recomendamos usá-las no seu código.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -57,7 +57,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |-------------|---------------------|
 |`___lc_collate_cp_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 095a272e1dd85c1b61e1970a1b881737acbb739d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344313"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913823"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
-Usa informações sobre uma unidade de disco para preencher uma estrutura **_diskfree_t.**
+Usa informações sobre uma unidade de disco para popular uma estrutura de **_diskfree_t** .
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -59,16 +59,16 @@ unsigned _getdiskfree(
 *Dirigir*<br/>
 A unidade de disco cujas informações você deseja.
 
-*Driveinfo*<br/>
-Um **_diskfree_t** estrutura que será preenchida com informações sobre a unidade.
+*Method*<br/>
+Uma estrutura de **_diskfree_t** que será populada com informações sobre a unidade.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função obtiver êxito, o valor retornado será zero. Se a função falhar, o valor retornado será o código de erro. O valor **errno** é definido para quaisquer erros que são devolvidos pelo sistema operacional. Para obter mais informações sobre as condições de erro indicadas por **errno,** consulte [errno Constants](../../c-runtime-library/errno-constants.md).
+Se a função obtiver êxito, o valor retornado será zero. Se a função falhar, o valor retornado será o código de erro. O valor **errno** é definido para quaisquer erros retornados pelo sistema operacional. Para obter mais informações sobre condições de erro indicadas por **errno**, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Comentários
 
-A estrutura **_diskfree_t** é definida no Direct.h.
+A estrutura de **_diskfree_t** é definida no Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -79,9 +79,9 @@ struct _diskfree_t {
 };
 ```
 
-Essa função valida seus parâmetros. Se o ponteiro *driveinfo* for **NULL** ou *a unidade* especificar uma unidade inválida, esta função invocará um manipulador de parâmetros inválido, conforme descrito na Validação [de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, a função retorna **EINVAL** e define **errno** para **EINVAL**. Intervalo de unidades válidas, de 0 a 26. Um valor de *unidade* de 0 especifica a unidade atual; depois disso, os números mapeiam as letras do alfabeto inglês de tal forma que 1 indica a unidade A, 3 indica a unidade C, e assim por diante.
+Essa função valida seus parâmetros. Se o ponteiro do *DriveInfo* for **nulo** ou a *unidade* especificar uma unidade inválida, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**. Intervalo de unidades válidas, de 0 a 26. Um valor de *unidade* de 0 especifica a unidade atual; Depois disso, os números são mapeados para letras do alfabeto em inglês, de modo que 1 indica a unidade A, 3 indica a unidade C e assim por diante.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 827e5a579d801c12b932440fcbbaa18343ad7ece
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316873"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910914"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
@@ -71,22 +71,22 @@ wchar_t *_wstrtime(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Timestr*<br/>
+*timestr*<br/>
 Cadeia de caracteres de hora.
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para o timestr de seqüência *de caracteres resultante*.
+Retorna um ponteiro para a cadeia de caracteres de caractere resultante *timestr*.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_strtime** copia o tempo local atual no buffer apontado pelo *timestr*. O tempo é formatado como **hh:mm:ss** onde **hh** é de dois dígitos representando a hora na notação de 24 horas, **mm** é de dois dígitos representando os minutos passados da hora, e **ss** é de dois dígitos representando segundos. Por exemplo, a string **18:23:44** representa 23 minutos e 44 segundos depois das 18:00. O tamanho do buffer deve ser de, ao menos, 9 bytes.
+A função **_strtime** copia a hora local atual para o buffer apontado por *timestr*. O tempo é formatado como **hh: mm: SS** , em que **hh** é dois dígitos que representam a hora na notação de 24 horas, **mm** é dois dígitos que representam os minutos passados da hora e **SS** é dois dígitos que representam segundos. Por exemplo, a cadeia de caracteres **18:23:44** representa 23 minutos e 44 segundos das últimas 18:00 O tamanho do buffer deve ser de, ao menos, 9 bytes.
 
-**_wstrtime** é uma versão ampla de **_strtime;** o argumento e o valor de retorno de **_wstrtime** são cadeias de caracteres amplos. Caso contrário, essas funções se comportam de forma idêntica. Se *o timestr* for um ponteiro **NULL** ou se *o timestr* for formatado incorretamente, o manipulador de parâmetros inválidos será invocado, conforme descrito na Validação de [Parâmetros](../../c-runtime-library/parameter-validation.md). Se a exceção for permitida a continuar, essas funções retornarão um **NULL** e **definirão errno** ao **EINVAL** se *o timestr* for um **NULL** ou definir **errno** para **ERANGE** se *o timestr* for formatado incorretamente.
+**_wstrtime** é uma versão de caractere largo do **_strtime**; o argumento e o valor de retorno de **_wstrtime** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica. Se *timestr* for um ponteiro **nulo** ou se *timestr* estiver formatado incorretamente, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a exceção tiver permissão para continuar, essas funções retornarão um **valor nulo** e definirá **errno** como **EINVAL** se *timestr* for **NULL** ou Set **errno** como **ERANGE** se *timestr* estiver formatado incorretamente.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

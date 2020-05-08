@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332073"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910339"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,16 +52,16 @@ void setbuf(
 *fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-*Buffer*<br/>
+*completo*<br/>
 Buffer alocado pelo usuário.
 
 ## <a name="remarks"></a>Comentários
 
-A função **setbuf** controla o buffering para *fluxo*. O argumento *do fluxo* deve se referir a um arquivo aberto que não foi lido ou escrito. Se o argumento *buffer* for **NULL,** o fluxo será desprotegido. Caso assim, o buffer deve apontar para uma matriz de caracteres de comprimento **BUFSIZ**, onde **BUFSIZ** é o tamanho do buffer definido em STDIO. H. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O fluxo **stderr** é desprotegido por padrão, mas você pode usar **setbuf** para atribuir buffers ao **stderr**.
+A função **setbuf** controla o buffer para o *Stream*. O argumento de *fluxo* deve se referir a um arquivo aberto que não foi lido ou gravado. Se o argumento de *buffer* for **nulo**, o fluxo não será armazenado em buffer. Caso contrário, o buffer deve apontar para uma matriz de caracteres de comprimento **BUFSIZ**, em que **BUFSIZ** é o tamanho do buffer, conforme definido em STDIO. T. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O fluxo **stderr** é sem buffer por padrão, mas você pode usar **setbuf** para atribuir buffers a **stderr**.
 
-**setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferida para o novo código. Ao contrário **do setvbuf**, **setbuf** não tem como reportar erros. **setvbuf** também permite controlar tanto o modo de buffer e o tamanho do buffer. **o setbuf** existe para compatibilidade com o código existente.
+o **setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferida para o novo código. Ao contrário de **setvbuf**, o **setbuf** não tem nenhuma maneira de relatar erros. o **setvbuf** também permite que você controle o modo de buffer e o tamanho do buffer. **setbuf** existe para compatibilidade com o código existente.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

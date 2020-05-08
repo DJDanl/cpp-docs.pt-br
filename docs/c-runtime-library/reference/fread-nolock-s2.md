@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 3fb34a75a0281058a1d70ce41e1ce33b4b1bbb59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346142"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912723"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -50,13 +50,13 @@ size_t _fread_nolock_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Buffer*<br/>
+*completo*<br/>
 Local de armazenamento de dados.
 
-*Buffersize*<br/>
+*bufferSize*<br/>
 Tamanho do buffer de destino em bytes.
 
-*Elementsize*<br/>
+*elementSize*<br/>
 Tamanho do item a ser lido em bytes.
 
 *elementCount*<br/>
@@ -71,9 +71,9 @@ Consulte [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Comentários
 
-Esta função é uma versão não-travada de **fread_s**. É idêntico ao **fread_s** exceto que não está protegido contra interferências por outros segmentos. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Esta função é uma versão sem bloqueio do **fread_s**. É idêntico a **fread_s** , exceto pelo fato de não estar protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +83,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

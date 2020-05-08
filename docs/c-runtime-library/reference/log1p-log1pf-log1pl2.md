@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: b4e077f5b806dbe38ed4a4f4e8eef0259170cb7e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341803"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911423"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -79,7 +79,7 @@ O argumento de ponto flutuante.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se for bem sucedido, retorna o registro natural (base-*e*) de *(x* + 1).
+Se for bem-sucedido, retorna o log natural (base-*e*) de (*x* + 1).
 
 Caso contrário, pode retornar um dos seguintes valores:
 
@@ -94,27 +94,27 @@ Caso contrário, pode retornar um dos seguintes valores:
 |±SNaN|Igual à entrada|INVALID||
 |±QNaN, indefinido|Igual à entrada|||
 
-O **valor errno** é definido como ERANGE se *x* = -1. O **valor errno** é definido **como EDOM** se *x* < -1.
+O valor de **errno** é definido como ERANGE Se *x* =-1. O valor de **errno** é definido como **EDOM** se *x* <-1.
 
 ## <a name="remarks"></a>Comentários
 
-As funções **log1p** podem ser `log(x + 1)` mais precisas do que usar quando *x* está perto de 0.
+As funções **log1p** podem ser mais precisas do que `log(x + 1)` usar quando *x* é quase 0.
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **log1p** que pegam e retornam **flutuam** e tipos **duplos** **longos.** Em um programa C, **log1p** sempre pega e retorna um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **log1p** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **log1p** sempre pega e retorna um **Double**.
 
-Se *x* é um número natural, esta função retorna o logaritmo do fatorial de *(x* - 1).
+Se *x* for um número natural, essa função retornará o logaritmo do fatorial de (*x* -1).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**log1p,** **log1pf,** **log1pl**|\<math.h>|\<cmath>|
+|**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>
