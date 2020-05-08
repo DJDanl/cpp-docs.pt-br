@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,12 +56,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-ms.openlocfilehash: 828c8b68855197f0c17202739f98a45e0abb929c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e650c15ca2b7d3b448d5480a6b1f09769100171
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343302"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918548"
 ---
 # <a name="_ismbcalnum-_ismbcalnum_l-_ismbcalpha-_ismbcalpha_l-_ismbcdigit-_ismbcdigit_l"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -104,43 +104,43 @@ int _ismbcdigit_l
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Caractere a ser testado.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*<= 255 e houver uma rotina **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum),** o resultado é o valor de retorno da rotina **_ismbb** correspondente.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*<= 255 e houver uma rotina de **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), o resultado será o valor de retorno da rotina de **_ismbb** correspondente.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas rotinas testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **sufixo _l** são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum** **_ismbcalnum_l**|Alfanumérico|Retorna não zero se e somente se *c* for uma representação de byte único de uma letra em inglês ASCII: Veja exemplos para **_ismbcdigit** e **_ismbcalpha**.|
-|**_ismbcalpha** **_ismbcalpha_l**|Alfabético|Retorna não zero se e somente se *c* for uma representação de byte único de uma letra em inglês ASCII: 0x41<=*c*<=0x5A ou 0x61<=*c*<=0x7A; ou uma letra katakana: 0xA6<=*c*<=0xDF.|
-|**_ismbcdigit** **_ismbcdigit**|Dígito|Retorna não zero se e somente se *c* for uma representação de byte único de um dígito ASCII: 0x30<=*c*<=0x39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alfanumérico|Retornará zero se e somente se *c* for uma representação de byte único de uma letra ASCII em inglês: consulte exemplos de **_ismbcdigit** e **_ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alfabético|Retornará zero se e somente se *c* for uma representação de byte único de uma letra ASCII em inglês: 0x41<=*c*<= 0x5A ou 0x61<=*c*<= 0x7A; ou uma letra katakana: 0xA6<=*c*<= 0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Dígito|Retornará zero se e somente se *c* for uma representação de byte único de um dígito ASCII: 0x30<=*c*<= 0x39.|
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_ismbcalnum** **_ismbcalnum_l**|\<mbstring.h>|
-|**_ismbcalpha** **_ismbcalpha_l**|\<mbstring.h>|
-|**_ismbcdigit** **_ismbcdigit_l**|\<mbstring.h>|
+|**_ismbcalnum**, **_ismbcalnum_l**|\<mbstring.h>|
+|**_ismbcalpha**, **_ismbcalpha_l**|\<mbstring.h>|
+|**_ismbcdigit**, **_ismbcdigit_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [Rotinas _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
-[rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

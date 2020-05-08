@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-ms.openlocfilehash: 8809595c90c48976d9f28ffa659714f5b9d919c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a30302a72d228d709cd16d25d7b62d9ce64a8ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338454"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918920"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -61,7 +61,7 @@ wint_t putwc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 O caractere a ser gravado.
 
 *fluxo*<br/>
@@ -69,17 +69,17 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna o caractere gravado. Para indicar uma condição de erro ou fim do arquivo, **putc** e **putchar** retornam **EOF**; **putwc** e **putwchar** retorno **WEOF**. Para todas as quatro rotinas, use [ferror](ferror.md) ou [feof](feof.md) para verificar se há um erro ou o fim do arquivo. Se passar um ponteiro nulo para *fluxo,* o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções retornam **EOF** ou **WEOF** e definem **errno** para **EINVAL**.
+Retorna o caractere gravado. Para indicar um erro ou condição de fim de arquivo, **putc** e **putchar** retornam **EOF**; **putwc** e **putwchar** retornam **WEOF**. Para todas as quatro rotinas, use [ferror](ferror.md) ou [feof](feof.md) para verificar se há um erro ou o fim do arquivo. Se for passado um ponteiro NULL para *Stream*, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** ou **WEOF** e definem **errno** como **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-A rotina **putc** escreve o caractere *único c* para o *fluxo* de saída na posição atual. Qualquer inteiro pode ser passado para **putc,** mas apenas os 8 bits inferiores são escritos. A rotina **de putchar** é idêntica a `putc( c, stdout )`. Para cada rotina, se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. **putc** e **putchar** são semelhantes aos **fputc** e **_fputchar,** respectivamente, mas são implementados tanto como funções quanto como macros (ver [Escolhendo Entre Funções e Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** e **putwchar** são versões de grande caráter de **putc** e **putchar,** respectivamente. **putwc** e **putc** se comportam de forma idêntica se o fluxo for aberto no modo ANSI. **putc** não suporta atualmente a saída em um fluxo UNICODE.
+A rotina **putc** grava o único caractere *c* no *fluxo* de saída na posição atual. Qualquer inteiro pode ser passado para **putc**, mas apenas os 8 bits inferiores são gravados. A rotina **putchar** é idêntica a `putc( c, stdout )`. Para cada rotina, se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. **putc** e **putchar** são semelhantes a **fputc** e **_fputchar**, respectivamente, mas são implementadas como funções e macros (consulte [escolhendo entre funções e macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** e **putwchar** são versões de caracteres largos de **putc** e **putchar**, respectivamente. **putwc** e **putc** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. Atualmente, o **putc** não dá suporte à saída em um fluxo Unicode.
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Para obter mais informações, consulte **_putc_nolock, _putwc_nolock**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -94,7 +94,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |**putc**|\<stdio.h>|
 |**putwc**|\<stdio.h> ou \<wchar.h>|
 
-O console não é suportado em aplicativos Universal Windows Platform (UWP). As alças de fluxo padrão associadas ao console, **stdin**, **stdout**e **stderr,** devem ser redirecionadas antes que as funções de tempo de execução C possam usá-las em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -131,7 +131,7 @@ int main( void )
 This is the line of output
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

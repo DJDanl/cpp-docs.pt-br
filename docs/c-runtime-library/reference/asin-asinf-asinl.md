@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334126"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909273"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -65,33 +65,33 @@ Valor cujo arco seno é calculado.
 
 ## <a name="return-value"></a>Valor retornado
 
-A função **asin** retorna o arco (a função seno inversa) de *x* na faixa -π/2 a π/2 radianos.
+A função **Asen** retorna o arco seno (a função de seno inversa) de *x* no intervalo de-π/2 a π/2 radianos.
 
-Por padrão, se *x* for menor que -1 ou maior que 1, **como in** retorna por tempo indeterminado.
+Por padrão, se *x* for menor que-1 ou maior que 1, **Asen** retornará um indefinido.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|**Inválido**|**_DOMAIN**|
-|± **QNAN,** **IND**|none|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
 |&#124;x&#124;>1|**Inválido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-Como c++ permite sobrecarga, você pode chamar sobrecargas de **asin** com **flutuação** e valores **duplos** **longos.** Em um programa C, **como sempre** leva e retorna um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Asen** com valores **duplos** **float** e **Long** . Em um programa C, **Asen** sempre pega e retorna um **Double**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------|-|
-|**asin,** **asinf,** **asinl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Asen**, **asinf**, **asenl**|\<math.h>|\<cmath> ou \<math.h>|
 
 ## <a name="example"></a>Exemplo
 
 Para obter mais informações, consulte [acos, acosf, acosl](acos-acosf-acosl.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

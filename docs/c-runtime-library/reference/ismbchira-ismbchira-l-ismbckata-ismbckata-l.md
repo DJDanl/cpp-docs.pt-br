@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-ms.openlocfilehash: d450702ae41f404606cda1bea613f3d99fadd06f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 89c6aacbb6726165703d38e3ea519806b1f970d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343210"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910703"
 ---
 # <a name="_ismbchira-_ismbchira_l-_ismbckata-_ismbckata_l"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -83,32 +83,32 @@ int _ismbckata_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Caractere a ser testado.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c* <= 255 e houver uma rotina **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum),** o resultado é o valor de retorno da rotina **_ismbb** correspondente.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c* <= 255 e houver uma rotina de **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), o resultado será o valor de retorno da rotina de **_ismbb** correspondente.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas funções testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **sufixo _l** são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste (página de código 932 somente)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Hiragana de byte duplo: 0x829F<=*c*<=0x82F1.|
-|**_ismbchira_l**|Hiragana de byte duplo: 0x829F<=*c*<=0x82F1.|
-|**_ismbckata**|Katakana de byte duplo: 0x8340<=*c*<=0x8396.|
-|**_ismbckata_l**|Katakana de byte duplo: 0x8340<=*c*<=0x8396.|
+|**_ismbchira**|Dois bytes hiragana: 0x829F<=*c*<= 0x82F1.|
+|**_ismbchira_l**|Dois bytes hiragana: 0x829F<=*c*<= 0x82F1.|
+|**_ismbckata**|Katakana de byte duplo: 0x8340<=*c*<= 0x8396.|
+|**_ismbckata_l**|Katakana de byte duplo: 0x8340<=*c*<= 0x8396.|
 
-**Código final Página 932 Específico**
+**Página de código final 932 específica**
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -121,10 +121,10 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [Rotinas _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

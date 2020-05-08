@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-ms.openlocfilehash: f1ad79a1517783a48de887ccf2294d7a8018f70e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e25539bf6c6d590a787615e091ec68753cd1c93e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346252"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920135"
 ---
 # <a name="_fputc_nolock-_fputwc_nolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -65,7 +65,7 @@ wint_t _fputwc_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 O caractere a ser gravado.
 
 *fluxo*<br/>
@@ -77,11 +77,11 @@ Cada uma dessas funções retorna o caractere gravado. Para obter informações 
 
 ## <a name="remarks"></a>Comentários
 
-**_fputc_nolock** e **_fputwc_nolock** são idênticas a **fputc** e **fputwc,** respectivamente, exceto que não estão protegidos contra interferências por outros segmentos. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**_fputc_nolock** e **_fputwc_nolock** são idênticos a **fputc** e **fputwc**, respectivamente, exceto que eles não estão protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
-As duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **_fputc_nolock** não suporta atualmente a saída em um fluxo UNICODE.
+As duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, o **_fputc_nolock** não dá suporte à saída em um fluxo Unicode.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -96,7 +96,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> ou \<wchar.h>|
 
-O console não é suportado em aplicativos Universal Windows Platform (UWP). As alças de fluxo padrão associadas ao console,**stdin,** **stdout**e **stderr,** devem ser redirecionadas antes que as funções de tempo de execução C possam usá-las em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console do —**stdin**, **stdout**e **stderr**— devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

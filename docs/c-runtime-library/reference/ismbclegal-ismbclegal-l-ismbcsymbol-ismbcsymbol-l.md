@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 5f7dacbb131094164c5256171dd54ab3ea94cda4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 295eabdef37a7b8d6bfb8408ba0d3d683a59c42d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342961"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919725"
 ---
 # <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -85,28 +85,28 @@ int _ismbcsymbol_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*C*<br/>
+*&*<br/>
 Caractere a ser testado.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*<= 255 e houver uma rotina **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum),** o resultado é o valor de retorno da rotina **_ismbb** correspondente.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*<= 255 e houver uma rotina de **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), o resultado será o valor de retorno da rotina de **_ismbb** correspondente.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas funções testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **sufixo _l** são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Multibyte válido|Retorna não zero se e somente se o primeiro byte de *c* estiver dentro das faixas 0x81 - 0x9F ou 0xE0 - 0xFC, enquanto o segundo byte está dentro das faixas 0x40 - 0x7E ou 0x80 - FC.|
-|**_ismbcsymbol**|Símbolo multibyte|Retorna não zero se e somente se 0x8141<=*c*<=0x81AC.|
+|**_ismbclegal**|Multibyte válido|Retornará zero se e somente se o primeiro byte de *c* estiver dentro dos intervalos 0X81-0X9F ou 0XE0-0xFC, enquanto o segundo byte está dentro dos intervalos 0X40-0x7E ou 0X80-FC.|
+|**_ismbcsymbol**|Símbolo multibyte|Retornará zero se e somente se 0x8141<=*c*<= 0x81AC.|
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -119,14 +119,14 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_ismbclegal** **_ismbclegal_l**|\<mbstring.h>|
-|**_ismbcsymbol,** **_ismbcsymbol_l.**|\<mbstring.h>|
+|**_ismbclegal**, **_ismbclegal_l**|\<mbstring.h>|
+|**_ismbcsymbol**, **_ismbcsymbol_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [Rotinas _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
-[rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: e424ffe3f113e50e318d9198bd5f06aaec96852a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347298"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920148"
 ---
 # <a name="ferror"></a>ferror
 
@@ -54,15 +54,15 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se não ocorreu nenhum erro no *fluxo,* **ferror** retorna 0. Caso contrário, retornará um valor diferente de zero. Se o fluxo for **NULO,** o **ferror** invoca o manipulador de parâmetros inválidos, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna 0.
+Se nenhum erro ocorreu no *fluxo*, o **referenciador** retorna 0. Caso contrário, retornará um valor diferente de zero. Se Stream for **NULL**, o **referenciador** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-A rotina **ferror** (implementada tanto como função quanto como macro) testa um erro de leitura ou escrita no arquivo associado ao *fluxo*. Se ocorreu um erro, o indicador de erro do fluxo permanece definido até que o fluxo seja fechado ou rebobinado, ou até que seja chamado **mais claro** contra ele.
+A rotina do **referenciador** (implementada como uma função e como uma macro) testa um erro de leitura ou gravação no arquivo associado ao *fluxo*. Se ocorrer um erro, o indicador de erro para o fluxo permanecerá definido até que o fluxo seja fechado ou rebobinado, ou até que **clearerr** seja chamado em relação a ele.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -76,9 +76,9 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo de [feof](feof.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Tratamento de erros](../../c-runtime-library/error-handling-crt.md)<br/>
+[Tratamento de erro](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>

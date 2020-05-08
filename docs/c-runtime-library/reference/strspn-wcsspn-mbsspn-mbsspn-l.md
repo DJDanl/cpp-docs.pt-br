@@ -22,7 +22,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,19 +47,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: 8bd8837f2e1f6cb92c5b7e2e819da56408273810
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b63ca5f7d22b6522ca3e3c58ea5486d612b671ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317039"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911099"
 ---
 # <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Retorna o índice do primeiro caractere, em uma cadeia de caracteres, que não pertence a um conjunto de caracteres.
 
 > [!IMPORTANT]
-> **_mbsspn** e **_mbsspn_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspn** e **_mbsspn_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -88,25 +88,25 @@ size_t _mbsspn_l(
 *Str*<br/>
 Cadeia de caracteres terminada em nulo para pesquisa.
 
-*Strcharset*<br/>
+*strCharSet*<br/>
 Conjunto de caracteres terminado em nulo.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna um valor inteiro especificando o comprimento da substring em *str* que consiste inteiramente de caracteres em *strCharSet*. Se *str* começar com um caractere que não está em *strCharSet,* a função retorna 0.
+Retorna um valor inteiro especificando o comprimento da subcadeia de caracteres em *Str* que consiste inteiramente em caracteres em *strCharSet*. Se a *Str* começar com um caractere que não está em *strCharSet*, a função retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-A função **strspn** retorna o índice do primeiro caractere em *str* que não pertence ao conjunto de caracteres em *strCharSet*. A pesquisa não inclui os caracteres nulo de terminação.
+A função **strspn** retorna o índice do primeiro caractere em *Str* que não pertence ao conjunto de caracteres em *strCharSet*. A pesquisa não inclui os caracteres nulo de terminação.
 
-**wcsspn** e **_mbsspn** são versões de amplo caráter e multibyte-caracteres do **strspn**. Os argumentos do **wcsspn** são cordas de caráter amplo; os de **_mbsspn** são cordas de caracteres multibytes. **_mbsspn** valida seus parâmetros. Se *str* ou *strCharSet* for **NULL,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md) . Se a execução for permitida, **_mbspn** **define errno** para **EINVAL** e retorna 0. **strspn** e **wcsspn** não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsspn** e **_mbsspn** são versões de caractere largo e multibyte de **strspn**. Os argumentos de **wcsspn** são cadeias de caracteres largos; os de **_mbsspn** são cadeias de caracteres multibyte. **_mbsspn** valida seus parâmetros. Se *Str* ou *strCharSet* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução tiver permissão para continuar, o **_mbspn** definirá **errno** como **EINVAL** e retornará 0. **strspn** e **wcsspn** não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -121,7 +121,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |-------------|---------------------|
 |**strspn**|\<string.h>|
 |**wcsspn**|\<string.h> ou \<wchar.h>|
-|**_mbsspn** **_mbsspn_l**|\<mbstring.h>|
+|**_mbsspn**, **_mbsspn_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -154,8 +154,8 @@ The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

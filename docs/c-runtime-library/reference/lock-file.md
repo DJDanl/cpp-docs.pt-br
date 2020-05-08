@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342104"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911535"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Bloqueia um objeto **FILE** para garantir a consistência dos segmentos que acessam o objeto **FILE** simultaneamente.
+Bloqueia um objeto de **arquivo** para garantir a consistência de threads que acessam o objeto de **arquivo** simultaneamente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -48,14 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parâmetros
 
-*Arquivo*<br/>
+*Grupo*<br/>
 Identificador de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_lock_file** bloqueia o objeto **FILE** especificado por *arquivo*. O arquivo subjacente não está bloqueado por **_lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. As chamadas para **_lock_file** e **_unlock_file** devem ser combinadas em uma linha.
+A função **_lock_file** bloqueia o objeto de **arquivo** especificado pelo *arquivo*. O arquivo subjacente não está bloqueado por **_lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. Chamadas para **_lock_file** e **_unlock_file** devem ser correspondidas em um thread.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

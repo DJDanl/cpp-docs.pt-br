@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320437"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910481"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,20 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Wchar*<br/>
+*WCHAR*<br/>
 A valor a ser movido.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se **o wctob** converte com sucesso um personagem amplo, ele retorna sua representação de caracteres multibytes, apenas se o caractere multibyte for exatamente um byte de comprimento. Se **wctob** encontra um personagem amplo ele não pode converter para um caractere multibyte ou o caractere multibyte não é exatamente um byte de comprimento, ele retorna a -1.
+Se **wctob** converter com êxito um caractere largo, ele retornará sua representação de caractere multibyte, somente se o caractere multibyte tiver exatamente um byte. Se **wctob** encontrar um caractere largo, ele não poderá converter para um caractere multibyte ou o caractere multibyte não será exatamente um byte, ele retornará um-1.
 
 ## <a name="remarks"></a>Comentários
 
-A função **wctob** converte um caractere amplo contido em *wchar* para o caractere multibyte correspondente passado pelo valor **int** de retorno, se o caractere multibyte é exatamente um byte de comprimento.
+A função **wctob** converte um caractere largo contido em *WCHAR* para o caractere multibyte correspondente passado pelo valor **int** de retorno, se o caractere multibyte for exatamente um byte.
 
-Se **wctob** não teve sucesso e nenhum caractere multibyte correspondente foi encontrado, a função define **errno** para **EILSEQ** e retorna -1.
+Se **wctob** não tiver sido bem-sucedido e nenhum caractere multibyte correspondente for encontrado, a função definirá **errno** como **EILSEQ** e retornará-1.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -74,7 +74,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 ## <a name="example"></a>Exemplo
 
-Este programa ilustra o comportamento da função **wcstombs.**
+Este programa ilustra o comportamento da função **wcstombs** .
 
 ```C
 // crt_wctob.c
@@ -106,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

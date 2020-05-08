@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 969b6d2dfd83a1a136fdfb3d17f8f843337b792c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345225"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919376"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -52,22 +52,22 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Parâmetros
 
-*Segundos*<br/>
+*seg*<br/>
 A diferença em segundos para o horário de verão.
 
 ## <a name="return-value"></a>Valor retornado
 
-Zero se for bem sucedido ou **um valor errno** se ocorrer um erro.
+Zero se for bem-sucedido ou um valor **errno** se ocorrer um erro.
 
 ## <a name="remarks"></a>Comentários
 
 A função **_get_dstbias** recupera o número de segundos no horário de verão como um inteiro. Se o horário de verão estiver em vigor, a diferença padrão é de 3600 segundos, que é o número de segundos em uma hora (embora algumas regiões tenham uma diferença de duas horas).
 
-Se *o segundo* for **NULO,** o manipulador de parâmetros inválidos será invocado conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+Se *segundos* for **nulo**, o manipulador de parâmetro inválido será invocado conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
-Recomendamos que você use esta função em vez do **_dstbias** macro ou da função depreciada **__dstbias**.
+Recomendamos que você use essa função em vez da macro **_dstbias** ou da função preterida **__dstbias**.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,7 +77,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

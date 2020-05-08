@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: fff90037851b23f3525f514aba0f6f913f9dd776
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344927"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920408"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
-Retorna a rotina de rescisão para ser chamado por **terminar**.
+Retorna a rotina de término a ser chamada por **Terminate**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,11 +49,11 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para a função registrada por [set_terminate](set-terminate-crt.md). Se nenhuma função tiver sido definida, o valor de retorno poderá ser usado para restaurar o comportamento padrão; este valor pode ser **NULO**.
+Retorna um ponteiro para a função registrada por [set_terminate](set-terminate-crt.md). Se nenhuma função tiver sido definida, o valor de retorno poderá ser usado para restaurar o comportamento padrão; Esse valor pode ser **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -63,10 +63,10 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Rotinas de tratamento de exceções](../../c-runtime-library/exception-handling-routines.md)<br/>
-[Abortar](abort.md)<br/>
-[Set_unexpected](set-unexpected-crt.md)<br/>
-[Terminar](terminate-crt.md)<br/>
-[Inesperado](unexpected-crt.md)<br/>
+[anular](abort.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[encerrar](terminate-crt.md)<br/>
+[previsto](unexpected-crt.md)<br/>

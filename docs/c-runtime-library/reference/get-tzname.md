@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 50f1f6e4320e3ef905b4eda67ba1d458a5b1df08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344880"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919678"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -53,51 +53,51 @@ errno_t _get_tzname(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Preturnvalue*<br/>
-O comprimento da seqüência de *timeZoneName* incluindo um exterminador nulo.
+*preativar*<br/>
+O tamanho da cadeia de caracteres de *timeZoneName* incluindo um terminador nulo.
 
-*Timezonename*<br/>
-O endereço de uma seqüência de caracteres para a representação do nome do fuso horário ou do nome do fuso horário padrão da luz do dia (DST), dependendo do *índice*.
+*timeZoneName*<br/>
+O endereço de uma cadeia de caracteres para a representação do nome do fuso horário ou o horário de verão padrão, dependendo do *índice*.
 
-*Sizeinbytes*<br/>
-O tamanho da seqüência de caracteres *timeZoneName* em bytes.
+*sizeInBytes*<br/>
+O tamanho da cadeia de caracteres *timeZoneName* em bytes.
 
-*Índice*<br/>
+*index*<br/>
 O índice de um dos dois nomes de fuso horário a serem recuperados.
 
-|*Índice*|Conteúdo do *timeZoneName*|valor padrão *do timeZoneName*|
+|*index*|Conteúdo de *timeZoneName*|valor padrão *timeZoneName*|
 |-|-|-|
 |0|Nome do fuso horário|"PST"|
 |1|O nome do fuso horário com horário de verão|"PDT"|
-|> 1 ou < 0|**errno** definido para **EINVAL**|não modificado|
+|> 1 ou < 0|**errno** definido como **EINVAL**|não modificado|
 
 A menos que os valores sejam alterados explicitamente durante o tempo de execução, os valores padrão serão "PST" e "PDT" respectivamente.
 
 ## <a name="return-value"></a>Valor retornado
 
-Zero se for bem sucedido, caso contrário, um valor de tipo **errno.**
+Zero se for bem-sucedido, caso contrário, um valor de tipo **errno** .
 
-Se o *timeZoneName* for **NULL**ou *sizeInBytes* for zero ou menor que zero (mas não ambos), um manipulador de parâmetros inválido suscitado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+Se *timeZoneName* for **nulo**ou *sizeInBytes* for zero ou menor que zero (mas não ambos), um manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|*Preturnvalue*|*Timezonename*|*Sizeinbytes*|*Índice*|Valor retornado|Conteúdo do *timeZoneName*|
+|*preativar*|*timeZoneName*|*sizeInBytes*|*index*|Valor retornado|Conteúdo de *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
 |tamanho do nome do FH|**NULO**|0|0 ou 1|0|não modificado|
 |tamanho do nome do FH|any|> 0|0 ou 1|0|Nome do FH|
-|não modificado|**NULO**|> 0|any|**Einval**|não modificado|
-|não modificado|any|zero|any|**Einval**|não modificado|
-|não modificado|any|> 0|> 1|**Einval**|não modificado|
+|não modificado|**NULO**|> 0|any|**EINVAL**|não modificado|
+|não modificado|any|zero|any|**EINVAL**|não modificado|
+|não modificado|any|> 0|> 1|**EINVAL**|não modificado|
 
 ## <a name="remarks"></a>Comentários
 
-A função **_get_tzname** recupera a representação da seqüência de caracteres do nome do fuso horário atual ou o nome do fuso horário padrão da luz do dia (DST) no endereço do *timeZoneName* dependendo do valor do índice, juntamente com o tamanho da string no *pReturnValue*. Se *o timeZoneName* for **NULL** e *sizeInBytes* for zero, o tamanho da string necessária para segurar o fuso horário especificado e um nulo de terminação em bytes é retornado em *pReturnValue*. Os valores do índice devem ser 0 para fuso horário padrão ou 1 para fuso horário padrão; quaisquer outros valores de *índice* têm resultados indeterminados.
+A função **_get_tzname** recupera a representação de cadeia de caracteres do nome do fuso horário atual ou o horário de Verão (horário padrão) para o endereço do *timeZoneName* , dependendo do valor do índice, junto com o tamanho da cadeia de caracteres em *preligávalue*. Se *timeZoneName* for **NULL** e *sizeInBytes* for zero, o tamanho da cadeia de caracteres necessária para manter o fuso horário especificado e um nulo de terminação em bytes será retornado em *pretransformvalue*. Os valores de índice devem ser 0 para o fuso horário padrão ou 1 para o fuso horário padrão de verão; quaisquer outros valores de *índice* têm resultados indeterminados.
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="example"></a>Exemplo
 
-Esta amostra chama **_get_tzname** para obter o tamanho de buffer necessário para exibir o nome atual do fuso horário padrão daylight, aloca um buffer desse tamanho, chama **_get_tzname** novamente para carregar o nome no buffer e imprime-o no console.
+Este exemplo chama **_get_tzname** para obter o tamanho de buffer necessário para exibir o nome do fuso horário padrão atual, aloca um buffer desse tamanho, chama **_get_tzname** novamente para carregar o nome no buffer e o imprime no console.
 
 ```C
 // crt_get_tzname.c
@@ -147,7 +147,7 @@ The current Daylight standard time zone name is PDT.
 
 Para obter mais informações, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

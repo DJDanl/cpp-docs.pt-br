@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: d4c9bfcec1deab8c00eb490dc044e62a6124aba3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342912"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919168"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -90,23 +90,23 @@ int _ismbstrail_l(
 *Str*<br/>
 Ponteiro para o início da cadeia de caracteres ou o byte inicial anterior conhecido.
 
-*Atual*<br/>
+*atualizados*<br/>
 Ponteiro para a posição na cadeia de caracteres a ser testada.
 
-*Localidade*<br/>
+*locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_ismbslead** retorna -1 se o personagem for um byte principal e **_ismbstrail** retorna -1 se o personagem for um byte de trilha. Se as cadeias de caracteres de entrada forem válidas, mas não forem um byte inicial ou um byte final, essas funções retornarão zero. Se qualquer argumento for **NULO,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções retornam **NULL** e definem **errno** para **EINVAL**.
+**_ismbslead** retornará-1 se o caractere for um byte de lead e **_ismbstrail** retornará-1 se o caractere for um byte final. Se as cadeias de caracteres de entrada forem válidas, mas não forem um byte inicial ou um byte final, essas funções retornarão zero. Se um dos argumentos for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **NULL** e definirá **errno** como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-**_ismbslead** e **_ismbstrail** são mais lentos do que as versões **_ismbblead** e **_ismbbtrail** porque levam em conta o contexto das cordas.
+**_ismbslead** e **_ismbstrail** são mais lentas do que as versões **_ismbblead** e **_ismbbtrail** porque usam o contexto da cadeia de caracteres em conta.
 
-As versões dessas funções que têm o **sufixo _l** são idênticas, exceto que para o seu comportamento dependente da localidade eles usam o local que é passado em vez do local atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o sufixo **_L** são idênticas, exceto pelo comportamento dependente de localidade que usam a localidade passada em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -121,9 +121,9 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [Rotinas _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
-[rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

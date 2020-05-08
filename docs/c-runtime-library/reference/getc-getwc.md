@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: 5c05d7a2743cd0c1e843d6895e8f5574031ab098
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6248dd2287b2f11db72f64df1241affe8deec22d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919662"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -67,7 +67,7 @@ Fluxo de entrada.
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna o caractere lido. Para indicar um erro de leitura ou condição de fim de arquivo, **getc** retorna **EOF**e **getwc** retorna **WEOF**. Para **getc,** use **ferror** ou **feof** para verificar se há um erro ou para o fim do arquivo. Se *o fluxo* for **NULO**, **getc** e **getwc** invocar o manipulador de parâmetros inválidos, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções retornam **EOF** (ou **WEOF** for **getwc**) e definem **errno** para **EINVAL**.
+Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, **getc** retorna **EOF**e **getwc** retorna **WEOF**. Para **getc**, use o **referenciador** ou o **feof** para verificar se há um erro ou para o fim do arquivo. Se *Stream* for **NULL**, **getc** e **getwc** invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** (ou **WEOF** para **getwc**) e definem **errno** como **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
@@ -81,10 +81,10 @@ Veja comentários específicos sobre a rotina a seguir.
 
 |Rotina|Comentários|
 |-------------|-------------|
-|**getc**|O mesmo que **fgetc,** mas implementado como uma função e como um macro.|
-|**getwc**|Versão de grande caráter de **getc**. Lê um caractere multibyte ou um caractere amplo de acordo com se *o fluxo* é aberto no modo texto ou no modo binário.|
+|**getc**|O mesmo que **fgetc**, mas implementado como uma função e como uma macro.|
+|**getwc**|Versão de caractere largo de **getc**. Lê um caractere multibyte ou um caractere largo de acordo com se o *fluxo* é aberto no modo de texto ou no modo binário.|
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -151,7 +151,7 @@ Line two.
 Input was: Line one.
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -57,19 +57,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 0aa7c4f666936bae9602d6b2ab95a2731d9c0413
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4dc50decb3c7c72aaa89b729b30d4581d32164c9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355245"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919969"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Obtém o tamanho de uma cadeia de caracteres usando a localidade atual ou uma especificada. Versões mais seguras dessas funções estão disponíveis; consulte [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen,** **_mbslen_l,** **_mbstrlen**e **_mbstrlen_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen**e **_mbstrlen_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -101,20 +101,20 @@ size_t _mbstrlen_l(
 *Str*<br/>
 Cadeia de caracteres terminada em nulo.
 
-*Localidade*<br/>
+*locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retorna o número de caracteres em *str,* excluindo o terminal nulo. Nenhum valor de retorno é reservado para indicar um `((size_t)(-1))` erro, exceto para **_mbstrlen** e **_mbstrlen_l**, que retornam se a seqüência contiver um caractere multibyte inválido.
+Cada uma dessas funções retorna o número de caracteres em *Str*, excluindo o nulo do terminal. Nenhum valor de retorno é reservado para indicar um erro, com exceção de **_mbstrlen** e **_mbstrlen_l**, `((size_t)(-1))` que retornam se a cadeia de caracteres contém um caractere multibyte inválido.
 
 ## <a name="remarks"></a>Comentários
 
-**strlen** interpreta a seqüência como uma seqüência de caracteres de byte único, de modo que seu valor de retorno é sempre igual ao número de bytes, mesmo que a seqüência contenha caracteres multibyte. **wcslen** é uma versão de amplo caráter de **strlen;** o argumento de **wcslen** é uma seqüência de caracteres de amplo e a contagem de caracteres é em caracteres largos (dois bytes). **wcslen** e **strlen** se comportar de forma idêntica de outra forma.
+**strlen** interpreta a cadeia de caracteres como uma cadeia de caracteres de byte único, de modo que seu valor de retorno é sempre igual ao número de bytes, mesmo se a cadeia de caracteres contiver caractere multibyte. **wcslen** é uma versão de caractere largo do **strlen**; o argumento de **wcslen** é uma cadeia de caracteres largos e a contagem de caracteres é em caracteres largos (dois bytes). **wcslen** e **strlen** se comportam de outra forma.
 
 **Observação de segurança** Essas funções acarretam uma ameaça em potencial em relação a um problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -124,7 +124,7 @@ Por padrão, o estado global desta função é escopo para o aplicativo. Para mu
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen** e **_mbslen_l** retornar o número de caracteres multibytes em uma seqüência de caracteres multibytes, mas eles não testam a validade de caracteres multibytes. **_mbstrlen** e **_mbstrlen_l** teste para validade de caracteres multibytes e reconhecer sequências de caracteres multibytes. Se a seqüência passou para **_mbstrlen** ou **_mbstrlen_l** contiver um caractere multibyte inválido para a página de código, a função retorna -1 e define **errno** para **EILSEQ**.
+**_mbslen** e **_mbslen_l** retornam o número de caracteres multibyte em uma cadeia de caracteres multibyte, mas não testam a validade de caracteres multibyte. **_mbstrlen** e **_mbstrlen_l** teste de validade de caracteres multibyte e reconheça seqüências de caracteres multibyte. Se a cadeia de caracteres passada para **_mbstrlen** ou **_mbstrlen_l** contiver um caractere multibyte inválido para a página de código, a função retornará-1 e definirá **errno** como **EILSEQ**.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -134,8 +134,8 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 |-------------|---------------------|
 |**strlen**|\<string.h>|
 |**wcslen**|\<string.h> ou \<wchar.h>|
-|**_mbslen** **_mbslen_l**|\<mbstring.h>|
-|**_mbstrlen** **_mbstrlen_l**|\<stdlib.h>|
+|**_mbslen**, **_mbslen_l**|\<mbstring.h>|
+|**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -204,9 +204,9 @@ Bytes in 'ABCァD' : 6
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
