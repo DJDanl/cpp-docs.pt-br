@@ -1,7 +1,7 @@
 ---
-title: switchdeclaração (C++)
-description: Referência à declaração switch Standard C++ no Microsoft Visual Studio C++.
-ms.date: 04/15/2020
+title: switchinstrução (C++)
+description: Referência à instrução C++ padrão switch no Microsoft Visual Studio C++.
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -16,43 +16,55 @@ no-loc:
 - default
 - break
 - while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 1f65d4699423d74be9c75a9be47e543a9a1256e2
-ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81480831"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83204157"
 ---
-# <a name="opno-locswitch-statement-c"></a>switchdeclaração (C++)
+# <a name="switch-statement-c"></a>`switch`instrução (C++)
 
 Permite a seleção entre várias seções de código, dependendo do valor de uma expressão integral.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **`switch (`**\[ *inicialização* **`;`** *] expressão***`)`**\
-> **`{`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;**`case`***constant-expression* **`:`** *declaração* de expressão constante\
-> &nbsp;&nbsp;&nbsp;&nbsp;\[**`default :`***declaração*] \
-> **`}`**
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub> <sup>C++ 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
+
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
+
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
+
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Comentários
 
-A *expressão* deve ter um tipo integral, ou ser um tipo de classe que tenha uma conversão inequívoca para o tipo integral. A promoção integral ocorre conforme descrito nas [conversões Padrão](standard-conversions.md).
+Uma __`switch`__ instrução faz com que o controle seja transferido para um *`labeled-statement`* em seu corpo de instrução, dependendo do valor de *`condition`* .
 
-O **switch** corpo de declaração **case** consiste em uma **default** série de rótulos e um rótulo opcional. Coletivamente, as declarações que seguem as etiquetas são chamadas de declarações *rotuladas.* As declarações rotuladas não são requisitos **switch** sintáticos, mas a declaração não tem sentido sem elas. Nenhuma expressão constante **case** nas declarações pode avaliar com o mesmo valor. O **default** rótulo pode aparecer apenas uma vez. A **default** declaração é muitas vezes colocada no final, mas **switch** pode aparecer em qualquer lugar no corpo da declaração. Um **case** **default** rótulo ou rótulo **switch** só pode aparecer dentro de uma declaração.
+O *`condition`* deve ter um tipo integral ou ser um tipo de classe que tenha uma conversão não ambígua para o tipo integral. A promoção integral ocorre conforme descrito em [conversões padrão](standard-conversions.md).
 
-A *expressão constante* **case** em cada rótulo é convertida ao tipo de *expressão*. Então, é comparado com *a expressão* para a igualdade. O controle passa **case** para a declaração cuja *expressão constante* corresponde ao valor da *expressão*. O comportamento resultante é mostrado na tabela a seguir.
+O __`switch`__ corpo da instrução consiste em uma série de __`case`__ rótulos e um __`default`__ rótulo opcional. Um *`labeled-statement`* é um desses rótulos e as instruções a seguir. As instruções rotuladas não são requisitos sintáticos, mas a __`switch`__ instrução não faz sentido sem elas. Dois *`constant-expression`* valores em __`case`__ instruções podem ser avaliados com o mesmo valor. O __`default`__ rótulo pode aparecer apenas uma vez. A __`default`__ instrução geralmente é colocada no final, mas pode aparecer em qualquer lugar no __`switch`__ corpo da instrução. Um __`case`__ __`default`__ rótulo ou só pode aparecer dentro de uma __`switch`__ instrução.
 
-### <a name="switch-statement-behavior"></a>Comportamento da declaração de switch
+O *`constant-expression`* em cada __`case`__ rótulo é convertido em um valor constante que é do mesmo tipo que *`condition`* . Em seguida, ele é comparado com a *`condition`* igualdade. O controle passa para a primeira instrução após o __`case`__ *`constant-expression`* valor que corresponde ao valor de *`condition`* . O comportamento resultante é mostrado na tabela a seguir.
+
+### <a name="switch-statement-behavior"></a>`switch`comportamento da instrução
 
 | Condição | Ação |
 |--|--|
 | O valor convertido corresponde ao da expressão de controle promovida. | O controle é transferido para a instrução após esse rótulo. |
-| Nenhuma das constantes corresponde às **case** constantes nos rótulos; um **default** rótulo está presente. | O controle é **default** transferido para a etiqueta. |
-| Nenhuma das constantes corresponde às **case** constantes nos rótulos; nenhum **default** rótulo está presente. | O controle é transferido **switch** para a declaração após a declaração. |
+| Nenhuma das constantes corresponde às constantes nos __`case`__ Rótulos; um __`default`__ rótulo está presente. | O controle é transferido para o __`default`__ rótulo. |
+| Nenhuma das constantes corresponde às constantes nos __`case`__ Rótulos; nenhum __`default`__ rótulo está presente. | O controle é transferido para a instrução após a __`switch`__ instrução. |
 
-Se uma expressão correspondente for encontrada, **case** **default** a execução pode continuar através de rótulos ou rótulos posteriores. A [`break`](../cpp/break-statement-cpp.md) declaração é usada para interromper a **switch** execução e transferir o controle para a declaração após a declaração. Sem **break** uma declaração, todas **case** as declarações **switch** da etiqueta **default** combinada até o final do , incluindo o , são executadas. Por exemplo:
+Se uma expressão correspondente for encontrada, a execução poderá continuar mais tarde __`case`__ ou __`default`__ Rótulos. A [`break`](../cpp/break-statement-cpp.md) instrução é usada para interromper a execução e transferir o controle para a instrução após a __`switch`__ instrução. Sem uma __`break`__ instrução, todas as instruções do __`case`__ rótulo correspondente ao final do __`switch`__ , incluindo o __`default`__ , são executadas. Por exemplo:
 
 ```cpp
 // switch_statement1.cpp
@@ -83,9 +95,9 @@ int main() {
 }
 ```
 
-No exemplo acima, `uppercase_A` será incrementado se `c` for `'A'` maiúsculo. A **break** declaração após `uppercase_A++` o **switch** término da execução **while** do corpo de declaração e controle passa para o loop. Sem **break** a declaração, a execução "cairia" para `lowercase_a` a `other` próxima declaração rotulada, de modo que e também seria incrementada. Um propósito semelhante é **break** servido `case 'a'`pela declaração para . Se `c` for uma `'a'` `lowercase_a` minúscula, é **break** incrementada **switch** e a declaração encerra o corpo de declaração. Se `c` não for `'a'` `'A'`um **default** ou , a declaração é executada.
+No exemplo acima, `uppercase_A` será incrementado se `c` for `'A'` maiúsculo. A __`break`__ instrução depois `uppercase_A++` encerra a execução do __`switch`__ corpo da instrução e o controle passa para o __`while`__ loop. Sem a __`break`__ instrução, a execução "passa" para a próxima instrução rotulada, de modo que `lowercase_a` e `other` também seria incrementada. Uma finalidade semelhante é servida pela __`break`__ instrução para `case 'a'` . Se `c` for uma letra minúscula `'a'` , `lowercase_a` será incrementado e a __`break`__ instrução terminará o __`switch`__ corpo da instrução. Se `c` não for um `'a'` ou `'A'` , a __`default`__ instrução será executada.
 
-**Visual Studio 2017 e posterior:** (disponível com [/std:c++17](../build/reference/std-specify-language-standard-version.md)) O `[[fallthrough]]` atributo está especificado no padrão C++17. Você pode usá-lo em uma **switch** declaração. É uma dica para o compilador, ou qualquer um que leia o código, que o comportamento de queda é intencional. O compilador Microsoft C++ atualmente não avisa sobre o comportamento de transição, portanto este atributo não tem efeito sobre o comportamento do compilador. No exemplo, o atributo é aplicado a uma declaração vazia dentro da declaração rotulada não terminada. Em outras palavras, o ponto e vírgula é necessário.
+**Visual Studio 2017 e posterior:** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) o `[[fallthrough]]` atributo é especificado no padrão c++ 17. Você pode usá-lo em uma __`switch`__ instrução. É uma dica para o compilador, ou qualquer pessoa que lê o código, o comportamento de passagem é intencional. O compilador do Microsoft C++ atualmente não avisa sobre o comportamento do fallthrough, portanto, esse atributo não tem nenhum efeito sobre o comportamento do compilador. No exemplo, o atributo é aplicado a uma instrução vazia dentro da instrução rotulada não finalizada. Em outras palavras, o ponto e vírgula é necessário.
 
 ```cpp
 int main()
@@ -113,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std:c++17](../build/reference/std-specify-language-standard-version.md)). Uma switch declaração pode ter uma cláusula *de inicialização.* Ele introduz e inicializa uma variável cujo escopo é switch limitado ao bloco da declaração:
+**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)). Uma __`switch`__ instrução pode ter uma *`init-statement`* cláusula, que termina com um ponto e vírgula. Ele apresenta e Inicializa uma variável cujo escopo é limitado ao bloco da __`switch`__ instrução:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +138,7 @@ int main()
     };
 ```
 
-Um bloco interno **switch** de uma declaração pode conter definições com inicializações desde que sejam *acessíveis,* ou seja, não contornadas por todos os caminhos de execução possíveis. Os nomes introduzidos por meio dessas declarações têm escopo local. Por exemplo:
+Um bloco interno de uma __`switch`__ instrução pode conter definições com inicializadores, desde que eles estejam *acessíveis*, ou seja, não sejam ignorados por todos os caminhos de execução possíveis. Os nomes introduzidos por meio dessas declarações têm escopo local. Por exemplo:
 
 ```cpp
 // switch_statement2.cpp
@@ -161,15 +173,13 @@ int main(int argc, char *argv[])
 }
 ```
 
-Uma **switch** declaração pode ser aninhada. Quando aninhados, os **case** rótulos **default** **switch** associam-se à declaração mais próxima que as inclui.
+Uma __`switch`__ instrução pode ser aninhada. Quando aninhados, __`case`__ os __`default`__ rótulos ou se associam à __`switch`__ instrução mais próxima que os coloca.
 
 ### <a name="microsoft-specific-behavior"></a>Comportamento específico da Microsoft
 
-A Microsoft C não limita **case** o **switch** número de valores em uma declaração. O número é limitado somente pela memória disponível. O ANSI C requer **case** pelo menos 257 rótulos em um **switch** comunicado.
+O Microsoft C++ não limita o número de __`case`__ valores em uma __`switch`__ instrução. O número é limitado somente pela memória disponível.
 
-O default para microsoft C é que as extensões da Microsoft estão habilitadas. Use a opção [compilador /Za](../build/reference/za-ze-disable-language-extensions.md) para desativar essas extensões.
-
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Instruções de seleção](../cpp/selection-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)
