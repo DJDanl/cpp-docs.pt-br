@@ -2,7 +2,7 @@
   tocHref: /
   topicHref: /
   items:
-    - name: Visual C++
+    - name: Microsoft C++
       tocHref: /cpp/
       topicHref: /cpp
       items:
@@ -19,7 +19,7 @@
             - name: Pré-processador C/C++
               tocHref: /cpp/preprocessor/
               topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
-            - name: Intrínsecos do compilador e linguagem do assembly
+            - name: Intrínsecos do compilador e linguagem assembly
               tocHref: /cpp/intrinsics/
               topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
               items:
@@ -32,40 +32,40 @@
                 - name: MASM
                   tocHref: /cpp/assembler/masm/
                   topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
-            - name: Biblioteca em Runtime C
+            - name: Biblioteca de runtime C
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
                 - name: Referência
                   tocHref: /cpp/c-runtime-library/reference/
                   topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
-            - name: Biblioteca Padrão C++
+            - name: Biblioteca padrão C++
               tocHref: /cpp/standard-library/
               topicHref: /cpp/standard-library/cpp-standard-library-reference
             - name: Windows
               tocHref: /cpp/windows/
               topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
+              items: null
+            - name: ATL
+              tocHref: /cpp/atl/
+              topicHref: /cpp/atl/atl-com-desktop-components
+            - name: MFC
+              tocHref: /cpp/mfc/
+              topicHref: /cpp/mfc/mfc-desktop-applications
               items:
-                - name: ATL
-                  tocHref: /cpp/atl/
-                  topicHref: /cpp/atl/atl-com-desktop-components
-                - name: MFC
-                  tocHref: /cpp/mfc/
-                  topicHref: /cpp/mfc/mfc-desktop-applications
-                  items:
-                    - name: Referência
-                      tocHref: /cpp/mfc/reference/
-                      topicHref: /cpp/mfc/reference/mfc-classes
-                - name: Classes compartilhadas ATL/MFC
-                  tocHref: /cpp/atl-mfc-shared/
-                  topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
-                  items:
-                    - name: Referência
-                      tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
-                - name: C++/CX
-                  tocHref: /cpp/cppcx/
-                  topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
+                - name: Referência
+                  tocHref: /cpp/mfc/reference/
+                  topicHref: /cpp/mfc/reference/mfc-classes
+            - name: Classes compartilhadas ATL/MFC
+              tocHref: /cpp/atl-mfc-shared/
+              topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
+              items:
+                - name: Referência
+                  tocHref: /cpp/atl-mfc-shared/reference/
+                  topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
+            - name: C++/CX
+              tocHref: /cpp/cppcx/
+              topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
             - name: Linux
               tocHref: /cpp/linux/
               topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
@@ -75,7 +75,7 @@
             - name: Programação paralela
               tocHref: /cpp/parallel/
               topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
-            - name: Acesso a dados
+            - name: Acesso aos dados
               tocHref: /cpp/data/
               topicHref: /cpp/data/data-access-in-cpp
               items:
@@ -92,18 +92,20 @@
                 - name: IDE
                   tocHref: /cpp/ide/
                   topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
-            - name: Compilação de programas em C/C++
+            - name: Compilação de projetos em C/C++
               tocHref: /cpp/build/
               topicHref: /cpp/build/building-c-cpp-programs
               items:
-                - name: Referência de Build
+                - name: Referência de build
                   tocHref: /cpp/build/reference/
                   topicHref: /cpp/build/reference/c-cpp-building-reference
-                  items:
-                    - name: Erros e avisos da ferramenta e do compilador
-                      tocHref: /cpp/error-messages/
-                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
-            - name: Portabilidade e atualizando
+            - name: Insights de build
+              tocHref: /cpp/build-insights/
+              topicHref: /cpp/build-insights/get-started-with-cpp-build-insights
+            - name: Erros e avisos
+              tocHref: /cpp/error-messages/
+              topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
+            - name: Compatibilizar e atualizar
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
             - name: Texto e cadeias de caracteres
