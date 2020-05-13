@@ -1,0 +1,61 @@
+- name: Texto e cadeias de caracteres em MSVC
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Unicode e MBCS
+  expanded: false
+  items:
+    - name: Unicode e MBCS
+      href: ../text/unicode-and-mbcs.md
+    - name: Habilitação internacional
+      href: ../text/international-enabling.md
+    - name: Estratégias de internacionalização
+      href: ../text/internationalization-strategies.md
+    - name: Localidades e páginas de código
+      href: ../text/locales-and-code-pages.md
+    - name: Benefícios da portabilidade do conjunto de caracteres
+      href: ../text/benefits-of-character-set-portability.md
+- name: Suporte para Unicode
+  expanded: false
+  items:
+    - name: Suporte para Unicode
+      href: ../text/support-for-unicode.md
+    - name: Suporte para usar wmain
+      href: ../text/support-for-using-wmain.md
+    - name: Resumo de programação Unicode
+      href: ../text/unicode-programming-summary.md
+- name: Suporte para MBCSs (conjuntos de caracteres multibyte)
+  expanded: false
+  items:
+    - name: Suporte para MBCSs (conjuntos de caracteres multibyte)
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: Suporte a MBCS no MSVC
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: Dicas de programação de MBCS
+      expanded: false
+      items:
+        - name: Dicas de programação de MBCS
+          href: ../text/mbcs-programming-tips.md
+        - name: Aviso de programação MBCS geral
+          href: ../text/general-mbcs-programming-advice.md
+        - name: Incrementando e decrementando ponteiros
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: Índices de byte
+          href: ../text/byte-indices.md
+        - name: Último caractere em uma cadeia de caracteres
+          href: ../text/last-character-in-a-string.md
+        - name: Atribuição de caractere
+          href: ../text/character-assignment.md
+        - name: Comparação de caracteres
+          href: ../text/character-comparison.md
+        - name: Estouro de buffer
+          href: ../text/buffer-overflow.md
+- name: Suporte para ANSI
+  href: ../text/support-for-ansi.md
+- name: Mapeamentos de texto genérico em tchar.h
+  expanded: false
+  items:
+    - name: Mapeamentos de texto genérico em tchar.h
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: Usando tipos de dados TCHAR.H com código _MBCS
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: 'Como: converter entre diversos tipos de cadeia de caracteres'
+  href: ../text/how-to-convert-between-various-string-types.md
