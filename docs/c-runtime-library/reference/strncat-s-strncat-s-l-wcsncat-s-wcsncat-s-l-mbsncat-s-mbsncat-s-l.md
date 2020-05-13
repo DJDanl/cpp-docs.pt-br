@@ -1,6 +1,6 @@
 ---
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsncat_s_l
 - wcsncat_s
@@ -8,6 +8,10 @@ api_name:
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
+- _o__mbsncat_s
+- _o__mbsncat_s_l
+- _o_strncat_s
+- _o_wcsncat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +56,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 4aba4a2bd843fe0946c2e444b305f776065a57be
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626176"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919358"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -159,7 +164,7 @@ Tamanho do buffer de destino.
 *strSource*<br/>
 Cadeia de caracteres de origem com terminação nula.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a serem acrescentados ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
@@ -169,19 +174,19 @@ Localidade a usar.
 
 Retornará 0 se for bem-sucedido; um código de erro em caso de falha.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
 |*strDestination*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Nulo** ou não terminado|qualquer|qualquer|**EINVAL**|não modificado|
-|qualquer|qualquer|**NULL**|**EINVAL**|não modificado|
-|qualquer|0 ou muito pequeno|qualquer|**ERANGE**|não modificado|
+|**Nulo** ou não terminado|any|any|**EINVAL**|não modificado|
+|any|any|**NULO**|**EINVAL**|não modificado|
+|any|0 ou muito pequeno|any|**ERANGE**|não modificado|
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções tentam acrescentar os primeiros caracteres *D* de *strSource* ao final de *strDest*, em que *D* é o menor de *Count* e o comprimento de *strSource*. Se a anexação desses caracteres *D* couber em *strDest* (cujo tamanho é fornecido como *numberOfElements*) e ainda deixar espaço para um terminador nulo, esses caracteres serão anexados, começando com o nulo de finalização original de  *strDest*, e um novo nulo de terminação é acrescentado; caso contrário, *strDest*[0] é definido como o caractere nulo e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
+Essas funções tentam acrescentar os primeiros caracteres *D* de *strSource* ao final de *strDest*, em que *D* é o menor de *Count* e o comprimento de *strSource*. Se a anexação desses caracteres *D* couber em *strDest* (cujo tamanho é fornecido como *numberOfElements*) e ainda deixar espaço para um terminador nulo, esses caracteres serão anexados, começando com o nulo de terminação original de *strDest*e um novo nulo de terminação será acrescentado; caso contrário, *strDest*[0] é definido como o caractere nulo e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
-Há uma exceção para o parágrafo acima. Se *Count* for [_TRUNCATE](../../c-runtime-library/truncate.md) , a maior parte de *strSource* como ajustará é anexada a *strDest* enquanto ainda deixa espaço para acrescentar um nulo de terminação.
+Há uma exceção para o parágrafo acima. Se *Count* for [_TRUNCATE](../../c-runtime-library/truncate.md) , a maior parte de *strSource* como ajustará é acrescentada ao *strDest* e ainda deixará espaço para acrescentar um nulo de terminação.
 
 Por exemplo,
 
@@ -191,7 +196,7 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-significa que estamos pedindo que o **strncat_s** acrescente três caracteres a dois caracteres em um buffer de cinco caracteres; Isso não deixaria nenhum espaço para o terminador nulo, portanto, **strncat_s** Zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.
+significa que estamos solicitando que **strncat_s** acrescente três caracteres a dois caracteres em um buffer de cinco caracteres de comprimento; Isso não deixaria nenhum espaço para o terminador nulo, portanto **strncat_s** Zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.
 
 Se o comportamento de truncamento for necessário, use **_TRUNCATE** ou ajuste o parâmetro de *tamanho* de acordo:
 
@@ -209,13 +214,15 @@ Em todos os casos, a cadeia de caracteres resultante é encerrada com um caracte
 
 Se *strSource* ou *strDest* for **nulo**ou *numberOfElements* for zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, a função retornará **EINVAL** sem modificar seus parâmetros.
 
-**wcsncat_s** e **_mbsncat_s** são versões de caractere largo e de multibyte de **strncat_s**. Os argumentos de cadeia de caracteres e o valor de retorno de **wcsncat_s** são cadeias de caracteres largos; os de **_mbsncat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsncat_s** e **_mbsncat_s** são versões de caractere largo e de vários caracteres de **strncat_s**. Os argumentos de cadeia de caracteres e o valor de retorno de **wcsncat_s** são cadeias de caracteres largos; os de **_mbsncat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -373,10 +380,10 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

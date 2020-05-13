@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89e4830c3b5c6cb663ca2d2935adaaae3f356958
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366895"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319659"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Classe CMultiPageDHtmlDialog
 
-Uma caixa de diálogo várias páginas exibe várias páginas HTML em sequência e trata os eventos de cada página.
+Uma caixa de diálogo de várias páginas exibe várias páginas HTML sequencialmente e lida com os eventos de cada página.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,18 +31,18 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Constrói um objeto de caixa de diálogo várias páginas (estilo de assistente) DHTML.|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Destrói um objeto de caixa de diálogo DHTML várias páginas.|
+|[cmultipagedhtmldiálogo::cmultipagedhtmldialog](#cmultipagedhtmldialog)|Constrói um objeto de diálogo DHTML de várias páginas (estilo assistente).|
+|[cmultipagedhtmldiálogo::~cmultipagedhtmldialog](#_dtorcmultipagedhtmldialog)|Destrói um objeto de diálogo DHTML de várias páginas.|
 
 ## <a name="remarks"></a>Comentários
 
-O mecanismo para fazer isso é um [mapa de evento DHTML e URL](dhtml-event-maps.md), que contém inseridos mapas de evento para cada página.
+O mecanismo para fazer isso é um mapa de [evento DHTML e URL,](dhtml-event-maps.md)que contém mapas de eventos incorporados para cada página.
 
 ## <a name="example"></a>Exemplo
 
-Essa caixa de diálogo de Multipágina assume três recursos HTML que definem a funcionalidade de assistente como simple. A primeira página tem um **próxima** botão, o segundo um **Prev** e **próxima** botão e a terceira um **Prev** botão. Quando um dos botões é pressionado, uma função de manipulador chama [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) para carregar a nova página apropriada.
+Este diálogo de várias páginas pressupõe três recursos HTML que definem funcionalidades simples semelhantes a assistentes. A primeira página tem um botão **Next,** a segunda um botão **Prev** e **Next** e a terceira um botão **Prev.** Quando um dos botões é pressionado, uma função do manipulador chama [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) para carregar a nova página apropriada.
 
-As partes pertinentes de declaração de classe (em CMyMultiPageDlg.h):
+As partes pertinentes da declaração de classe (em CMyMultiPageDlg.h):
 
 [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]
 
@@ -52,13 +52,13 @@ As partes pertinentes da implementação da classe (em CMyMultipageDlg.cpp):
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CDHtmlSinkHandlerBase2`
 
 `CDHtmlSinkHandlerBase1`
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 `CDHtmlSinkHandler`
 
@@ -66,9 +66,9 @@ As partes pertinentes da implementação da classe (em CMyMultipageDlg.cpp):
 
 `CDHtmlEventSink`
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)
+[Cdhtmldialog](../../mfc/reference/cdhtmldialog-class.md)
 
 `CMultiPageDHtmlDialog`
 
@@ -76,9 +76,9 @@ As partes pertinentes da implementação da classe (em CMyMultipageDlg.cpp):
 
 **Cabeçalho:** afxdhtml.h
 
-##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>cmultipagedhtmldiálogo::cmultipagedhtmldialog
 
-Constrói um objeto de caixa de diálogo várias páginas (estilo de assistente) DHTML.
+Constrói um objeto de diálogo DHTML de várias páginas (estilo assistente).
 
 ```
 CMultiPageDHtmlDialog(
@@ -97,28 +97,28 @@ CMultiPageDHtmlDialog();
 ### <a name="parameters"></a>Parâmetros
 
 *lpszTemplateName*<br/>
-A cadeia terminada em nulo que é o nome de um recurso de modelo de caixa de diálogo.
+A seqüência de seqüência de nulidade sumida é o nome de um recurso de modelo de caixa de diálogo.
 
 *szHtmlResID*<br/>
-A cadeia terminada em nulo que é o nome de um recurso HTML.
+A seqüência de terminadas nula que é o nome de um recurso HTML.
 
-*pParentWnd*<br/>
-Um ponteiro para o objeto de janela pai ou o proprietário (do tipo [CWnd](../../mfc/reference/cwnd-class.md)) ao qual pertence o objeto de caixa de diálogo. Se for NULL, a janela do pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.
+*Pparentwnd*<br/>
+Um ponteiro para o objeto da janela pai ou proprietário (do tipo [CWnd)](../../mfc/reference/cwnd-class.md)ao qual o objeto de diálogo pertence. Se for NULL, a janela pai do objeto de diálogo será definida na janela principal do aplicativo.
 
-*nIDTemplate*<br/>
-Contém o número de identificação de um recurso de modelo de caixa de diálogo.
+*Nidtemplate*<br/>
+Contém o número de ID de um recurso de modelo de caixa de diálogo.
 
 *nHtmlResID*<br/>
-Contém o número de identificação de um recurso HTML.
+Contém o número de ID de um recurso HTML.
 
-##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>cmultipagedhtmldiálogo::~cmultipagedhtmldialog
 
-Destrói um objeto de caixa de diálogo DHTML várias páginas.
+Destrói um objeto de diálogo DHTML de várias páginas.
 
 ```
 virtual ~CMultiPageDHtmlDialog();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)

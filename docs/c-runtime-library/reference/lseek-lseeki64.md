@@ -1,9 +1,11 @@
 ---
 title: _lseek, _lseeki64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lseeki64
 - _lseek
+- _o__lseek
+- _o__lseeki64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952981"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911314"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
@@ -60,16 +63,16 @@ __int64 _lseeki64(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fd*<br/>
+*FD*<br/>
 Descritor de arquivo que faz referência a um arquivo aberto.
 
-*deslocamento*<br/>
+*offset*<br/>
 Número de bytes de *origem*.
 
-*origem*<br/>
+*ter*<br/>
 Posição inicial.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_lseek** retorna o deslocamento, em bytes, da nova posição desde o início do arquivo. **_lseeki64** retorna o deslocamento em um inteiro de 64 bits. A função retorna-1L para indicar um erro. Se um parâmetro inválido for passado, como um descritor de arquivo incorreto, o valor de *origem* será inválido ou a posição especificada por *deslocamento* será anterior ao início do arquivo e o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EBADF** e retornará-1L. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), o valor retornado será indefinido.
 
@@ -87,6 +90,8 @@ A função **_lseek** move o ponteiro de arquivo associado a *FD* para um novo l
 
 Você pode usar **_lseek** para reposicionar o ponteiro em qualquer lugar em um arquivo ou além do final do arquivo.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -96,7 +101,7 @@ Você pode usar **_lseek** para reposicionar o ponteiro em qualquer lugar em um 
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 

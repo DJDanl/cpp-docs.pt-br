@@ -1,0 +1,366 @@
+- name: Programação do .NET com C++/CLI
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: 'Passo a passo: Compilação de um programa em CLI/C++ que se destina ao CLR'
+  href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+- name: Tarefas do C++/CLI
+  expanded: false
+  items:
+    - name: Tarefas do C++/CLI
+      href: ../dotnet/cpp-cli-tasks.md
+    - name: 'Como: criar projetos CLR vazios'
+      href: ../dotnet/how-to-create-clr-empty-projects.md
+    - name: 'Como: criar aplicativos de console CLR'
+      href: ../dotnet/how-to-create-clr-console-applications-cpp-cli.md
+    - name: 'Como: usar referências de acompanhamento no C++/CLI'
+      href: ../dotnet/how-to-use-tracking-references-in-cpp-cli.md
+    - name: 'Como: usar matrizes no C++/CLI'
+      href: ../dotnet/how-to-use-arrays-in-cpp-cli.md
+    - name: 'Como: definir e consumir classes e structs'
+      href: ../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
+    - name: Semântica da pilha do C++ para tipos de referência
+      href: ../dotnet/cpp-stack-semantics-for-reference-types.md
+    - name: Operadores definidos pelo usuário
+      href: ../dotnet/user-defined-operators-cpp-cli.md
+    - name: Conversões definidas pelo usuário
+      href: ../dotnet/user-defined-conversions-cpp-cli.md
+    - name: initonly
+      href: ../dotnet/initonly-cpp-cli.md
+    - name: 'Como: definir e usar delegados'
+      href: ../dotnet/how-to-define-and-use-delegates-cpp-cli.md
+    - name: 'Como: definir e consumir enumerações no C++/CLI'
+      href: ../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
+    - name: 'Como: usar eventos no C++/CLI'
+      href: ../dotnet/how-to-use-events-in-cpp-cli.md
+    - name: 'Como: definir um construtor estático de interface'
+      href: ../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
+    - name: 'Como: declarar especificadores de substituição em compilações nativas'
+      href: ../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
+    - name: 'Como: usar propriedades no C++/CLI'
+      href: ../dotnet/how-to-use-properties-in-cpp-cli.md
+    - name: 'Como: usar safe_cast no C++/CLI'
+      href: ../dotnet/how-to-use-safe-cast-in-cpp-cli.md
+    - name: Expressões regulares
+      href: ../dotnet/regular-expressions-cpp-cli.md
+    - name: Tratamento de arquivos e E/S
+      href: ../dotnet/file-handling-and-i-o-cpp-cli.md
+    - name: Operações de gráficos
+      href: ../dotnet/graphics-operations-cpp-cli.md
+    - name: Operações do Windows
+      href: ../dotnet/windows-operations-cpp-cli.md
+    - name: Acesso a dados usando ADO.NET
+      href: ../dotnet/data-access-using-adonet-cpp-cli.md
+- name: Interoperabilidade .NET e nativa
+  expanded: false
+  items:
+    - name: Interoperabilidade .NET e nativa
+      href: ../dotnet/native-and-dotnet-interoperability.md
+    - name: Interoperabilidade com outras linguagens .NET
+      href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
+    - name: Assemblies mistos (nativos e gerenciados)
+      expanded: false
+      items:
+        - name: Assemblies mistos (nativos e gerenciados)
+          href: ../dotnet/mixed-native-and-managed-assemblies.md
+        - name: 'Como: migrar para o -clr'
+          href: ../dotnet/how-to-migrate-to-clr.md
+        - name: 'Como: compilar código MFC e ATL usando -clr'
+          href: ../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
+        - name: Inicialização de assemblies mistos
+          href: ../dotnet/initialization-of-mixed-assemblies.md
+        - name: Suporte de biblioteca para assemblies mistos
+          href: ../dotnet/library-support-for-mixed-assemblies.md
+        - name: Considerações sobre desempenho para interop (C++)
+          href: ../dotnet/performance-considerations-for-interop-cpp.md
+        - name: Domínios de aplicativo e Visual C++
+          href: ../dotnet/application-domains-and-visual-cpp.md
+        - name: Conversão dupla (C++)
+          href: ../dotnet/double-thunking-cpp.md
+        - name: Evitando exceções no desligamento do CLR durante o consumo dos objetos COM criados com /clr
+          href: ../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
+        - name: 'Como: criar um aplicativo parcialmente confiável, removendo a dependência da DLL da biblioteca CRT'
+          href: ../dotnet/create-a-partially-trusted-application.md
+    - name: Usando um controle de usuário do Windows Form no MFC
+      expanded: false
+      items:
+        - name: Usando um controle de usuário do Windows Form no MFC
+          href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
+        - name: Windows Forms/diferenças de programação MFC
+          href: ../dotnet/windows-forms-mfc-programming-differences.md
+        - name: Hospedando um controle de usuário do Windows Form em uma caixa de diálogo MFC
+          expanded: false
+          items:
+            - name: Hospedando um controle de usuário do Windows Form em uma caixa de diálogo MFC
+              href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
+            - name: 'Como: criar o controle de usuário e o host em uma caixa de diálogo'
+              href: ../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
+            - name: 'Como: fazer a vinculação de dados DDX–DDV com o Windows Forms'
+              href: ../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
+            - name: 'Como: coletar eventos do Windows Forms de classes C++ nativas'
+              href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
+        - name: Hospedando um controle de usuário dos Windows Forms como uma exibição MFC
+          expanded: false
+          items:
+            - name: Hospedando um controle de usuário dos Windows Forms como uma exibição MFC
+              href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
+            - name: 'Como: criar o controle de usuário e o host em uma exibição de MDI'
+              href: ../dotnet/how-to-create-the-user-control-and-host-mdi-view.md
+            - name: 'Como: adicionar roteamento de comando ao controle do Windows Forms'
+              href: ../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
+            - name: 'Como: chamar propriedades e métodos do controle do Windows Forms'
+              href: ../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
+        - name: Hospedando um controle de usuário do Windows Form como uma caixa de diálogo MFC
+          href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
+    - name: Chamando funções nativas do código gerenciado
+      expanded: false
+      items:
+        - name: Chamando funções nativas do código gerenciado
+          href: ../dotnet/calling-native-functions-from-managed-code.md
+        - name: Usando PInvoke explícito em C++ (atributo DllImport)
+          expanded: false
+          items:
+            - name: Usando PInvoke explícito em C++ (atributo DllImport)
+              href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
+            - name: 'Como: chamar DLLs nativas de código gerenciado usando o PInvoke'
+              href: ../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
+            - name: 'Como: realizar marshaling de cadeias de caracteres usando o PInvoke'
+              href: ../dotnet/how-to-marshal-strings-using-pinvoke.md
+            - name: 'Como: realizar marshaling de estruturas usando o PInvoke'
+              href: ../dotnet/how-to-marshal-structures-using-pinvoke.md
+            - name: 'Como: realizar marshaling de matrizes usando o PInvoke'
+              href: ../dotnet/how-to-marshal-arrays-using-pinvoke.md
+            - name: 'Como: realizar marshaling de ponteiros de função usando o PInvoke'
+              href: ../dotnet/how-to-marshal-function-pointers-using-pinvoke.md
+            - name: 'Como: realizar marshaling de ponteiros inseridos usando o PInvoke'
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
+        - name: Usando interop C++ (PInvoke implícito)
+          expanded: false
+          items:
+            - name: Usando interop C++ (PInvoke implícito)
+              href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
+            - name: 'Como: realizar marshaling de cadeias de caracteres ANSI usando a interop do C++'
+              href: ../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
+            - name: 'Como: realizar marshaling de cadeias de caracteres Unicode usando a interop do C++'
+              href: ../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
+            - name: 'Como: realizar marshaling de cadeias de caracteres COM usando a interop do C++'
+              href: ../dotnet/how-to-marshal-com-strings-using-cpp-interop.md
+            - name: 'Como: realizar marshaling de estruturas usando a interop do C++'
+              href: ../dotnet/how-to-marshal-structures-using-cpp-interop.md
+            - name: 'Como: realizar marshaling de matrizes usando a interop do C++'
+              href: ../dotnet/how-to-marshal-arrays-using-cpp-interop.md
+            - name: 'Como: realizar marshaling de retornos de chamada e delegados usando a interop do C++'
+              href: ../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
+            - name: 'Como: realizar marshaling de ponteiros inseridos usando a interop do C++'
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
+            - name: 'Como: estender a biblioteca de marshaling'
+              href: ../dotnet/how-to-extend-the-marshaling-library.md
+            - name: 'Como: acessar caracteres em um System::String'
+              href: ../dotnet/how-to-access-characters-in-a-system-string.md
+            - name: 'Como: converter a cadeia de caracteres char* na matriz System::Byte'
+              href: ../dotnet/how-to-convert-char-star-string-to-system-byte-array.md
+            - name: 'Como: converter System::String em wchar_t* ou char*'
+              href: ../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
+            - name: 'Como: converter System::String em uma cadeia de caracteres padrão'
+              href: ../dotnet/how-to-convert-system-string-to-standard-string.md
+            - name: 'Como: converter uma cadeia de caracteres padrão em System::String'
+              href: ../dotnet/how-to-convert-standard-string-to-system-string.md
+            - name: 'Como: obter um ponteiro para uma matriz de bytes'
+              href: ../dotnet/how-to-obtain-a-pointer-to-byte-array.md
+            - name: 'Como: carregar recursos não gerenciados em uma matriz de bytes'
+              href: ../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
+            - name: 'Como: modificar a classe de referência em uma função nativa'
+              href: ../dotnet/how-to-modify-reference-class-in-a-native-function.md
+            - name: 'Como: determinar se uma imagem é nativa ou CLR'
+              href: ../dotnet/how-to-determine-if-an-image-is-native-or-clr.md
+            - name: 'Como: adicionar a DLL nativa ao Cache de Assembly Global'
+              href: ../dotnet/how-to-add-native-dll-to-global-assembly-cache.md
+            - name: 'Como: manter a referência ao tipo de valor em tipo nativo'
+              href: ../dotnet/how-to-hold-reference-to-value-type-in-native-type.md
+            - name: 'Como: manter a referência do objeto na memória não gerenciada'
+              href: ../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
+            - name: 'Como: detectar uma compilação de -clr'
+              href: ../dotnet/how-to-detect-clr-compilation.md
+            - name: 'Como: converter entre System::Guid e _GUID'
+              href: ../dotnet/how-to-convert-between-system-guid-and-guid.md
+            - name: 'Como: especificar um parâmetro externo'
+              href: ../dotnet/how-to-specify-an-out-parameter.md
+            - name: 'Como: usar um tipo nativo em uma compilação de -clr'
+              href: ../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
+            - name: 'Como: declarar identificadores em tipos nativos'
+              href: ../dotnet/how-to-declare-handles-in-native-types.md
+            - name: 'Como: encapsular a classe nativa a ser usada pelo C#'
+              href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
+- name: Código puro e verificável
+  expanded: false
+  items:
+    - name: Código puro e verificável
+      href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
+    - name: 'Como: criar projetos C++ verificáveis'
+      href: ../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
+    - name: Usando assemblies verificáveis com SQL Server
+      href: ../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
+    - name: Convertendo projetos do modo misto em linguagem intermediária pura
+      href: ../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md
+- name: Serialização
+  href: ../dotnet/serialization-cpp-cli.md
+- name: Assemblies amigáveis (C++)
+  href: ../dotnet/friend-assemblies-cpp.md
+- name: Tipos gerenciados
+  href: ../dotnet/managed-types-cpp-cli.md
+- name: Reflexão
+  href: ../dotnet/reflection-cpp-cli.md
+- name: Assemblies de nome forte (assinatura de assembly)
+  href: ../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md
+- name: Classe de depuração
+  href: ../dotnet/debug-class-cpp-cli.md
+- name: Referência de biblioteca STL/CLR
+  expanded: false
+  items:
+    - name: Referência de biblioteca STL/CLR
+      href: ../dotnet/stl-clr-library-reference.md
+    - name: Namespace cliext
+      href: ../dotnet/cliext-namespace.md
+    - name: Contêineres STL/CLR
+      href: ../dotnet/stl-clr-containers.md
+    - name: Requisitos dos elementos de contêiner STL/CLR
+      href: ../dotnet/requirements-for-stl-clr-container-elements.md
+    - name: 'Como: converter de um coleção do .NET em um contêiner do STL/CLR'
+      href: ../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
+    - name: 'Como: converter de um contêiner do STL/CLR em uma coleção do .NET'
+      href: ../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
+    - name: 'Como: expor um contêiner do STL/CLR de um assembly'
+      href: ../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
+    - name: 'for each, in'
+      href: ../dotnet/for-each-in.md
+    - name: adapter (STL/CLR)
+      href: ../dotnet/adapter-stl-clr.md
+    - name: algorithm (STL/CLR)
+      href: ../dotnet/algorithm-stl-clr.md
+    - name: deque (STL/CLR)
+      href: ../dotnet/deque-stl-clr.md
+    - name: functional (STL/CLR)
+      href: ../dotnet/functional-stl-clr.md
+    - name: hash_map (STL/CLR)
+      href: ../dotnet/hash-map-stl-clr.md
+    - name: hash_multimap (STL/CLR)
+      href: ../dotnet/hash-multimap-stl-clr.md
+    - name: hash_multiset (STL/CLR)
+      href: ../dotnet/hash-multiset-stl-clr.md
+    - name: hash_set (STL/CLR)
+      href: ../dotnet/hash-set-stl-clr.md
+    - name: list (STL/CLR)
+      href: ../dotnet/list-stl-clr.md
+    - name: map (STL/CLR)
+      href: ../dotnet/map-stl-clr.md
+    - name: multimapa (STL/CLR)
+      href: ../dotnet/multimap-stl-clr.md
+    - name: multiset (STL/CLR)
+      href: ../dotnet/multiset-stl-clr.md
+    - name: numérico (STL/CLR)
+      href: ../dotnet/numeric-stl-clr.md
+    - name: priority_queue (STL/CLR)
+      href: ../dotnet/priority-queue-stl-clr.md
+    - name: queue (STL/CLR)
+      href: ../dotnet/queue-stl-clr.md
+    - name: set (STL/CLR)
+      href: ../dotnet/set-stl-clr.md
+    - name: stack (STL/CLR)
+      href: ../dotnet/stack-stl-clr.md
+    - name: utility (STL/CLR)
+      href: ../dotnet/utility-stl-clr.md
+    - name: vector (STL/CLR)
+      href: ../dotnet/vector-stl-clr.md
+- name: Biblioteca de suporte do C++
+  expanded: false
+  items:
+    - name: Biblioteca de suporte do C++
+      href: ../dotnet/cpp-support-library.md
+    - name: Visão geral de marshaling no C++
+      expanded: false
+      items:
+        - name: Visão geral de marshaling no C++
+          href: ../dotnet/overview-of-marshaling-in-cpp.md
+        - name: marshal_as
+          href: ../dotnet/marshal-as.md
+        - name: Classe marshal_context
+          href: ../dotnet/marshal-context-class.md
+    - name: namespace msclr
+      href: ../dotnet/msclr-namespace.md
+    - name: Classes de gerenciamento de recursos
+      expanded: false
+      items:
+        - name: Classes de gerenciamento de recursos
+          href: ../dotnet/resource-management-classes.md
+        - name: auto_gcroot
+          expanded: false
+          items:
+            - name: auto_gcroot
+              href: ../dotnet/auto-gcroot.md
+            - name: Classe auto_gcroot
+              href: ../dotnet/auto-gcroot-class.md
+            - name: Função swap (auto_gcroot)
+              href: ../dotnet/swap-function-auto-gcroot.md
+        - name: auto_handle
+          href: ../dotnet/auto-handle.md
+          items:
+            - name: auto_handle
+              href: ../dotnet/auto-handle.md
+            - name: Classe auto_handle
+              href: ../dotnet/auto-handle-class.md
+            - name: Função swap (auto_handle)
+              href: ../dotnet/swap-function-auto-handle.md
+    - name: Sincronização (classe lock)
+      expanded: false
+      items:
+        - name: Sincronização (classe lock)
+          href: ../dotnet/synchronization-lock-class.md
+        - name: bloqueio
+          expanded: false
+          items:
+            - name: bloqueio
+              href: ../dotnet/lock.md
+            - name: Classe lock
+              href: ../dotnet/lock-class.md
+            - name: lock_when Enum
+              href: ../dotnet/lock-when-enum.md
+    - name: Chamando funções em um domínio de aplicativo específico
+      expanded: false
+      items:
+        - name: Chamando funções em um domínio de aplicativo específico
+          href: ../dotnet/calling-functions-in-a-specific-application-domain.md
+        - name: Função call_in_appdomain
+          href: ../dotnet/call-in-appdomain-function.md
+    - name: 'com::ptr'
+      expanded: false
+      items:
+        - name: 'com::ptr'
+          href: ../dotnet/com-ptr.md
+        - name: 'Classe com::ptr'
+          href: ../dotnet/com-ptr-class.md
+- name: Exceções em C++/CLI
+  expanded: false
+  items:
+    - name: Exceções em C++/CLI
+      href: ../dotnet/exceptions-in-cpp-cli.md
+    - name: Conceitos básicos em usar exceções gerenciadas
+      href: ../dotnet/basic-concepts-in-using-managed-exceptions.md
+    - name: Diferenças no comportamento do tratamento de exceções em /clr
+      href: ../dotnet/differences-in-exception-handling-behavior-under-clr.md
+    - name: finally
+      href: ../dotnet/finally.md
+    - name: 'Como: capturar exceções em código nativo lançadas pela MSIL'
+      href: ../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
+    - name: 'Como: definir e instalar um Manipulador de Exceção Global'
+      href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
+- name: Boxing
+  expanded: false
+  items:
+    - name: Boxing
+      href: ../dotnet/boxing-cpp-cli.md
+    - name: 'Como: solicitar explicitamente uma conversão boxing'
+      href: ../dotnet/how-to-explicitly-request-boxing.md
+    - name: 'Como: usar gcnew para criar tipos de valor e usar conversão boxing implícita'
+      href: ../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
+    - name: 'Como: realizar uma operação de unbox'
+      href: ../dotnet/how-to-unbox.md
+    - name: Conversões padrão e conversão boxing implícita
+      href: ../dotnet/standard-conversions-and-implicit-boxing.md

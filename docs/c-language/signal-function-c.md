@@ -5,11 +5,11 @@ helpviewer_keywords:
 - signal function
 ms.assetid: d3ce419a-50b2-4233-bb50-99312293f9f3
 ms.openlocfilehash: c8e340bcf48c5fdcd08fc09103863f5023c808f0
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158528"
 ---
 # <a name="signal-function-c"></a>Função signal (C)
 
@@ -17,6 +17,6 @@ ms.locfileid: "56148628"
 
 O primeiro argumento transmitido para **signal** deve ser uma das constantes simbólicas descritas na *Referência da biblioteca em tempo de execução* da função **signal**. As informações na *Referência da biblioteca em tempo de execução* também listam o suporte ao modo de operação para cada sinal. As constantes também são definidas em SIGNAL.H.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções de biblioteca](../c-language/library-functions.md)

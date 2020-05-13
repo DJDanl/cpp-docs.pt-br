@@ -2,30 +2,30 @@
 title: Bibliotecas estáticas (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3c4bfd28b805903a2e596ef6d648ff31b0b8261c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077972"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358104"
 ---
 # <a name="static-libraries-ccx"></a>Bibliotecas estáticas (C++/CX)
 
-Uma biblioteca estática que é usada em um aplicativo de Plataforma Universal do Windows (UWP) pode conter código ISO C++ -Standard, incluindo tipos STL, e também chamadas para APIs Win32 que não são excluídas da plataforma Windows Runtime aplicativo. Uma biblioteca estática consome componentes Windows Runtime e pode criar Windows Runtime componentes com determinadas restrições.
+Uma biblioteca estática usada em um aplicativo Universal Windows Platform (UWP) pode conter código C++ padrão ISO, incluindo tipos de STL, e também chamadas para APIs Win32 que não são excluídas da plataforma do aplicativo Windows Runtime. Uma biblioteca estática consome componentes do Windows Runtime e pode criar componentes do Windows Runtime com certas restrições.
 
 ## <a name="creating-static-libraries"></a>Criando bibliotecas estáticas
 
-As instruções para criar um novo projeto variam de acordo com a versão do Visual Studio instalada. Verifique se você tem o seletor de versão no canto superior esquerdo definido como a versão correta.
+As instruções para criar um novo projeto variam dependendo da versão do Visual Studio que você instalou. Para ver a documentação da sua versão preferida do Visual Studio, use o controle do seletor **de versão.** É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Para criar uma biblioteca estática UWP no Visual Studio 2019
 
-1. Na barra de menus, escolha **arquivo** > **novo** **projeto** de > para abrir a caixa de diálogo **criar um novo projeto** .
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um novo projeto**.
 
-1. Na parte superior da caixa de diálogo, **Language** defina idioma **C++** como, defina **plataforma** para **Windows**e defina **tipo de projeto** como **UWP**.
+1. Na parte superior da caixa de diálogo, defina **o Idioma** como **C++**, defina **plataforma** para **Windows**e defina o tipo **de projeto** como **UWP**.
 
-1. Na lista filtrada de tipos de projeto, escolha **biblioteca estática (universal do C++Windows-/CX)** e escolha **Avançar**. Na próxima página, dê um nome ao projeto e especifique o local do projeto, se desejado.
+1. Na lista filtrada de tipos de projeto, escolha **Biblioteca Estática (Universal Windows - C++/CX)** e escolha **Next**. Na página seguinte, dê um nome ao projeto e especifique o local do projeto, se desejar.
 
 1. Escolha o botão **Criar** para criar o projeto.
 
@@ -33,23 +33,23 @@ As instruções para criar um novo projeto variam de acordo com a versão do Vis
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Para criar uma biblioteca estática UWP no Visual Studio 2017 ou no Visual Studio 2015
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Para criar uma biblioteca estática UWP no Visual Studio 2017 ou Visual Studio 2015
 
-1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto**. Em **Visual C++**  > **Windows universal** , escolha **biblioteca estática (universal do Windows)** .
+1. Na barra de menu, escolha **Arquivo** > **Novo** > **Projeto**. Em **Visual C++** > **Windows Universal** escolha Static Library **(Universal Windows)**.
 
-1. No **Gerenciador de Soluções**, abra o menu de atalho para o projeto e escolha **Propriedades**. Na caixa de diálogo **Propriedades** , na página **Propriedades de configuração** > **CC++ /** , defina a **extensão consumir Windows Runtime** como **Sim (/ZW)** .
+1. No **Solution Explorer,** abra o menu de atalho para o projeto e escolha **Propriedades**. Na caixa de diálogo **Propriedades,** na página **Propriedades** > de configuração**C/C++,** defina **consumir extensão de tempo de execução do Windows** como Sim **(/ZW)**.
 
 ::: moniker-end
 
-Quando você compila uma nova biblioteca estática, se fizer uma chamada para uma API do Win32 que é excluída para aplicativos UWP, o compilador gerará o erro C3861, "identificador não encontrado". Para procurar um método alternativo com suporte para o Windows Runtime, consulte [alternativas para APIs do Windows em aplicativos UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
+Quando você compila uma nova biblioteca estática, se fizer uma chamada para uma API Win32 excluída para aplicativos UWP, o compilador aumentará o erro C3861, "Identificador não encontrado". Para procurar um método alternativo que seja suportado para o Windows Runtime, consulte [Alternativas às APIs do Windows em aplicativos UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 
-Se você adicionar um C++ projeto de biblioteca estática a uma solução de aplicativo UWP, talvez seja necessário atualizar as configurações de Propriedade do projeto de biblioteca para que a propriedade de suporte UWP seja definida como **Sim**. Sem essa configuração, o código cria e vincula, mas ocorre um erro quando você tenta verificar o aplicativo para o Microsoft Store. A biblioteca estática deve ser compilada com as mesmas configurações do compilador do projeto que a consome.
+Se você adicionar um projeto de biblioteca estática C++ a uma solução de aplicativo UWP, você poderá ter que atualizar as configurações de propriedade do projeto da biblioteca para que a propriedade de suporte ao UWP seja definida como **Sim**. Sem essa configuração, o código cria e vincula, mas um erro ocorre quando você tenta verificar o aplicativo para a Microsoft Store. A biblioteca estática deve ser compilada com as mesmas configurações do compilador do projeto que a consome.
 
 Se você consumir uma biblioteca estática que cria classes públicas `ref` , as classes de interface pública ou as classes de valor público, o vinculador gerará este aviso:
 
-> **aviso LNK4264:** arquivo de objeto de arquivamento compilado com/zw em uma biblioteca estática; Observe que, ao criar Windows Runtime tipos, não é recomendável vincular a uma biblioteca estática que contenha Windows Runtime metadados.
+> **aviso LNK4264:** arquivamento de arquivo de objeto compilado com /ZW em uma biblioteca estática; observe que ao criar tipos de Tempo de Execução do Windows não é recomendável vincular-se a uma biblioteca estática que contenha metadados do Windows Runtime.
 
-Você pode ignorar o aviso com segurança apenas se a biblioteca estática não estiver produzindo Windows Runtime componentes consumidos fora da própria biblioteca. Se a biblioteca não consumir um componente que ela definir, o vinculador poderá otimizar a implementação mesmo que os metadados públicos contenham as informações de tipo. Isso significa que os componentes públicos em uma biblioteca estática serão compilados, mas não serão ativados no tempo de execução. Por esse motivo, qualquer componente Windows Runtime destinado ao consumo por outros componentes ou aplicativos deve ser implementado em uma DLL (biblioteca de vínculo dinâmico).
+Você só pode ignorar o aviso com segurança se a biblioteca estática não estiver produzindo componentes do Windows Runtime que são consumidos fora da própria biblioteca. Se a biblioteca não consumir um componente que ela definir, o vinculador poderá otimizar a implementação mesmo que os metadados públicos contenham as informações de tipo. Isso significa que os componentes públicos em uma biblioteca estática serão compilados, mas não serão ativados no tempo de execução. Por essa razão, qualquer componente do Windows Runtime destinado ao consumo de outros componentes ou aplicativos deve ser implementado em uma biblioteca de links dinâmicos (DLL).
 
 ## <a name="see-also"></a>Confira também
 

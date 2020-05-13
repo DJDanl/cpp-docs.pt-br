@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-ms.openlocfilehash: ba57e756457fcffca806eeba7454ddf7bcf99d34
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6d6690b8d06df29ce9fcd323eb8724009ee3cca9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504303"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366173"
 ---
 # <a name="coleconvertdialog-class"></a>Classe COleConvertDialog
 
@@ -45,18 +45,18 @@ class COleConvertDialog : public COleDialog
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COleConvertDialog::COleConvertDialog](#coleconvertdialog)|Constrói um objeto `COleConvertDialog`.|
+|[COleConvertDiálogo::COleConvertDialog](#coleconvertdialog)|Constrói um objeto `COleConvertDialog`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COleConvertDialog::DoConvert](#doconvert)|Executa a conversão especificada na caixa de diálogo.|
-|[COleConvertDialog::DoModal](#domodal)|Exibe a caixa de diálogo item de alteração OLE.|
+|[COleConvertDiálogo::DoConvert](#doconvert)|Executa a conversão especificada na caixa de diálogo.|
+|[COleConvertDialog::DoModal](#domodal)|Exibe a caixa de diálogo OLE Change Item.|
 |[COleConvertDialog::GetClassID](#getclassid)|Obtém o CLSID associado ao item escolhido.|
-|[COleConvertDialog::GetDrawAspect](#getdrawaspect)|Especifica se o item deve ser desenhado como um ícone.|
-|[COleConvertDialog::GetIconicMetafile](#geticonicmetafile)|Obtém um identificador para o metarquivo associado ao formulário icônico deste item.|
-|[COleConvertDialog::GetSelectionType](#getselectiontype)|Obtém o tipo de seleção escolhida.|
+|[COleConvertDiálogo::GetDrawAspect](#getdrawaspect)|Especifica se deve desenhar o item como um ícone.|
+|[COleConvertDiálogo::GetIconicMetafile](#geticonicmetafile)|Obtém uma alça para o metaarquivo associado à forma icônica deste item.|
+|[COleConvertDiálogo::GetSelectionType](#getselectiontype)|Recebe o tipo de seleção escolhida.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
@@ -67,33 +67,33 @@ class COleConvertDialog : public COleDialog
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
->  O assistente de aplicativo-código de contêiner gerado usa essa classe.
+> O código de contêiner gerado pelo Assistente do aplicativo usa essa classe.
 
-Para obter mais informações sobre caixas de diálogo específicas de OLE, consulte as caixas de diálogo do artigo [em OLE](../../mfc/dialog-boxes-in-ole.md).
+Para obter mais informações sobre caixas de diálogo específicas da OLE, consulte o artigo [Caixas de Diálogo no OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+[Ccommondialog](../../mfc/reference/ccommondialog-class.md)
 
-[COleDialog](../../mfc/reference/coledialog-class.md)
+[Coledialog](../../mfc/reference/coledialog-class.md)
 
 `COleConvertDialog`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxodlgs. h
+**Cabeçalho:** afxodlgs.h
 
-##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog
+## <a name="coleconvertdialogcoleconvertdialog"></a><a name="coleconvertdialog"></a>COleConvertDiálogo::COleConvertDialog
 
-Constrói apenas um `COleConvertDialog` objeto.
+Constrói apenas `COleConvertDialog` um objeto.
 
 ```
 explicit COleConvertDialog (
@@ -105,37 +105,37 @@ explicit COleConvertDialog (
 
 ### <a name="parameters"></a>Parâmetros
 
-*pItem*<br/>
+*Pitem*<br/>
 Aponta para o item a ser convertido ou ativado.
 
 *dwFlags*<br/>
-Sinalizador de criação, que contém qualquer número dos seguintes valores combinados usando o operador OR bit-a-or:
+Sinalizador de criação, que contém qualquer número dos seguintes valores combinados usando o bitwise ou operador:
 
-- CF_SELECTCONVERTTO especifica que o botão de opção converter em será selecionado inicialmente quando a caixa de diálogo for chamada. Esse é o padrão.
+- CF_SELECTCONVERTTO Especifica que o botão Converter para rádio será selecionado inicialmente quando a caixa de diálogo for chamada. Esse é o padrão.
 
-- CF_SELECTACTIVATEAS especifica que o botão de opção Ativar como será selecionado inicialmente quando a caixa de diálogo for chamada.
+- CF_SELECTACTIVATEAS Especifica que o botão Ativar como rádio será selecionado inicialmente quando a caixa de diálogo for chamada.
 
-- CF_SETCONVERTDEFAULT Especifica que a classe cujo CLSID é especificado pelo `clsidConvertDefault` membro `m_cv` da estrutura será usada como a seleção padrão na caixa de listagem de classes quando o botão de opção converter em for selecionado.
+- CF_SETCONVERTDEFAULT Especifica que a classe cujo CLSID `clsidConvertDefault` é `m_cv` especificado pelo membro da estrutura será usada como seleção padrão na caixa de lista de classes quando o botão Converter para rádio for selecionado.
 
-- CF_SETACTIVATEDEFAULT especifica que a classe cujo CLSID é especificado pelo `clsidActivateDefault` membro `m_cv` da estrutura será usada como a seleção padrão na caixa de listagem de classes quando o botão de opção Ativar como estiver selecionado.
+- CF_SETACTIVATEDEFAULT Especifica que a classe cujo CLSID `clsidActivateDefault` é `m_cv` especificado pelo membro da estrutura será usada como seleção padrão na caixa de lista de classes quando o botão Ativar como rádio for selecionado.
 
-- CF_SHOWHELPBUTTON especifica que o botão ajuda será exibido quando a caixa de diálogo for chamada.
+- CF_SHOWHELPBUTTON Especifica que o botão Ajuda será exibido quando a caixa de diálogo for chamada.
 
-*pClassID*<br/>
-Aponta para o CLSID do item a ser convertido ou ativado. Se for NULL, o CLSID associado a *pItem* será usado.
+*Pclassid*<br/>
+Aponta para o CLSID do item a ser convertido ou ativado. Se NULA, o CLSID associado ao *pItem* será usado.
 
-*pParentWnd*<br/>
-Aponta para o objeto de janela pai ou proprietário (do `CWnd`tipo) ao qual o objeto de caixa de diálogo pertence. Se for NULL, a janela pai da caixa de diálogo será definida como a janela principal do aplicativo.
+*Pparentwnd*<br/>
+Aponta para o objeto da janela `CWnd`pai ou proprietário (de tipo) ao qual o objeto de diálogo pertence. Se for NULL, a janela pai da caixa de diálogo será definida na janela principal do aplicativo.
 
 ### <a name="remarks"></a>Comentários
 
-Para exibir a caixa de diálogo, chame a função [DoModal](#domodal) .
+Para exibir a caixa de diálogo, ligue para a função [DoModal.](#domodal)
 
-Para obter mais informações, consulte a [chave CLSID](/windows/win32/com/clsid-key-hklm) e a estrutura [OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw) .
+Para obter mais informações, consulte [a tecla CLSID](/windows/win32/com/clsid-key-hklm) e a estrutura [OLEUICONVERT.](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw)
 
-##  <a name="doconvert"></a>  COleConvertDialog::DoConvert
+## <a name="coleconvertdialogdoconvert"></a><a name="doconvert"></a>COleConvertDiálogo::DoConvert
 
-Chame essa função, depois de retornar com êxito de [DoModal](#domodal), para converter ou para ativar um objeto do tipo [COleClientItem](../../mfc/reference/coleclientitem-class.md).
+Chame esta função, depois de retornar com sucesso do [DoModal,](#domodal)seja para converter ou ativar um objeto do tipo [COleClientItem](../../mfc/reference/coleclientitem-class.md).
 
 ```
 BOOL DoConvert(COleClientItem* pItem);
@@ -143,108 +143,108 @@ BOOL DoConvert(COleClientItem* pItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pItem*<br/>
+*Pitem*<br/>
 Aponta para o item a ser convertido ou ativado. Não pode ser NULL.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
 O item é convertido ou ativado de acordo com as informações selecionadas pelo usuário na caixa de diálogo Converter.
 
-##  <a name="domodal"></a>  COleConvertDialog::DoModal
+## <a name="coleconvertdialogdomodal"></a><a name="domodal"></a>COleConvertDialog::DoModal
 
-Chame essa função para exibir a caixa de diálogo conversão de OLE.
+Chame esta função para exibir a caixa de diálogo OLE Converter.
 
 ```
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Status de conclusão da caixa de diálogo. Um dos seguintes valores:
 
-- IDOK se a caixa de diálogo foi exibida com êxito.
+- IDOK se a caixa de diálogo foi exibida com sucesso.
 
 - IDCANCEL se o usuário cancelou a caixa de diálogo.
 
-- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame a função de membro [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) para obter mais informações sobre o tipo de erro ocorrido. Para obter uma lista de possíveis erros, consulte a função [OLEUICONVERT](/windows/win32/api/oledlg/nf-oledlg-oleuiconvertw) no SDK do Windows.
+- IDABORT se ocorreu um erro. Se o IDABORT for retornado, ligue para a função de membro [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte a função [OleUIConvert](/windows/win32/api/oledlg/nf-oledlg-oleuiconvertw) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Se você quiser inicializar os vários controles da caixa de diálogo definindo membros da estrutura [m_cv](#m_cv) , faça isso antes de chamar `DoModal`, mas depois que o objeto da caixa de diálogo for construído.
+Se você quiser inicializar os vários controles da caixa de diálogo definindo `DoModal`membros da estrutura [m_cv,](#m_cv) você deve fazer isso antes de chamar, mas depois que o objeto de diálogo for construído.
 
-Se `DoModal` retornar IDOK, você poderá chamar outras funções de membro para recuperar as configurações ou informações inseridas pelo usuário na caixa de diálogo.
+Se `DoModal` retornar o IDOK, você pode ligar para outras funções de membro para recuperar as configurações ou informações que foram inseridas pelo usuário na caixa de diálogo.
 
-##  <a name="getclassid"></a>  COleConvertDialog::GetClassID
+## <a name="coleconvertdialoggetclassid"></a><a name="getclassid"></a>COleConvertDialog::GetClassID
 
-Chame essa função para obter o CLSID associado ao item selecionado pelo usuário na caixa de diálogo Converter.
+Chame esta função para obter o CLSID associado ao item que o usuário selecionou na caixa de diálogo Converter.
 
 ```
 REFCLSID GetClassID() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O CLSID associado ao item que foi selecionado na caixa de diálogo Converter.
+O CLSID associado ao item selecionado na caixa de diálogo Converter.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função somente depois que [DoModal](#domodal) retornar IDOK.
+Ligue para esta função somente depois que [o DoModal](#domodal) retornar o IDOK.
 
-Para obter mais informações, consulte [chave de CLSID](/windows/win32/com/clsid-key-hklm) no SDK do Windows.
+Para obter mais informações, consulte [a tecla CLSID](/windows/win32/com/clsid-key-hklm) no SDK do Windows.
 
-##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect
+## <a name="coleconvertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleConvertDiálogo::GetDrawAspect
 
-Chame essa função para determinar se o usuário optou por exibir o item selecionado como um ícone.
+Chame esta função para determinar se o usuário escolheu exibir o item selecionado como um ícone.
 
 ```
 DVASPECT GetDrawAspect() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O método necessário para processar o objeto.
+O método necessário para renderizar o objeto.
 
-- DVASPECT_CONTENT retornado se a caixa de seleção Exibir como ícone não foi marcada.
+- DVASPECT_CONTENT Retornado se a caixa de seleção Exibir como ícone não foi verificada.
 
-- DVASPECT_ICON retornado se a caixa de seleção Exibir como ícone foi marcada.
+- DVASPECT_ICON retornado se a caixa de seleção Exibir como ícone foi verificada.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função somente depois que [DoModal](#domodal) retornar IDOK.
+Ligue para esta função somente depois que [o DoModal](#domodal) retornar o IDOK.
 
-Para obter mais informações sobre o aspecto do desenho, consulte a estrutura de dados [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) na SDK do Windows.
+Para obter mais informações sobre o aspecto de desenho, consulte a estrutura de dados [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) no SDK do Windows.
 
-##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile
+## <a name="coleconvertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleConvertDiálogo::GetIconicMetafile
 
-Chame essa função para obter um identificador para o metarquivo que contém o aspecto icônico do item selecionado.
+Chame esta função para obter uma alça para o metaarquivo que contém o aspecto icônico do item selecionado.
 
 ```
 HGLOBAL GetIconicMetafile() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O identificador para o metarquivo que contém o aspecto de icônico do item selecionado, se a caixa de seleção Exibir como ícone foi marcada quando o diálogo foi descartado, escolhendo OK; caso contrário, NULL.
+A alça para o metaarquivo contendo o aspecto icônico do item selecionado, se a caixa de seleção Exibir como ícone foi verificada quando a caixa de diálogo foi rejeitada escolhendo OK; caso contrário, NULL.
 
-##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType
+## <a name="coleconvertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleConvertDiálogo::GetSelectionType
 
-Chame essa função para determinar o tipo de conversão selecionada na caixa de diálogo Converter.
+Chame esta função para determinar o tipo de conversão selecionada na caixa de diálogo Converter.
 
 ```
 UINT GetSelectionType() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Tipo de seleção feita.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores de tipo de retorno são especificados `Selection` pelo tipo de enumeração declarado `COleConvertDialog` na classe.
+Os valores do tipo `Selection` de retorno são especificados `COleConvertDialog` pelo tipo de enumeração declarado na classe.
 
 ```
 enum Selection {
@@ -254,15 +254,15 @@ enum Selection {
     };
 ```
 
-As breves descrições desses valores são as seguintes:
+Breves descrições desses valores seguem:
 
-- `COleConvertDialog::noConversion`Retornado se a caixa de diálogo foi cancelada ou o usuário selecionou nenhuma conversão. Se `COleConvertDialog::DoModal` for retornado IDOK, é possível que o usuário tenha selecionado um ícone diferente daquele selecionado anteriormente.
+- `COleConvertDialog::noConversion`Devolvido se a caixa de diálogo foi cancelada ou o usuário não selecionou nenhuma conversão. Se `COleConvertDialog::DoModal` o IDOK retornado, é possível que o usuário selecione um ícone diferente do selecionado anteriormente.
 
-- `COleConvertDialog::convertItem`Retornado se o botão de opção converter em foi marcado, o usuário selecionou um item diferente para o qual `DoModal` converter e retornou IDOK.
+- `COleConvertDialog::convertItem`Devolvido se o botão Converter para rádio foi verificado, o usuário `DoModal` selecionou um item diferente para converter e retornou o IDOK.
 
-- `COleConvertDialog::activateAs`Retornado se o botão de opção Ativar como estava marcado, o usuário selecionou um item diferente para ativar `DoModal` e retornou IDOK.
+- `COleConvertDialog::activateAs`Retornado se o botão Ativar como rádio foi verificado, o `DoModal` usuário selecionou um item diferente para ativar e retornou o IDOK.
 
-##  <a name="m_cv"></a>  COleConvertDialog::m_cv
+## <a name="coleconvertdialogm_cv"></a><a name="m_cv"></a>COleConvertDialog::m_cv
 
 Estrutura do tipo OLEUICONVERT usada para controlar o comportamento da caixa de diálogo Converter.
 
@@ -272,11 +272,11 @@ OLEUICONVERT m_cv;
 
 ### <a name="remarks"></a>Comentários
 
-Os membros dessa estrutura podem ser modificados diretamente ou por meio de funções de membro.
+Os membros desta estrutura podem ser modificados diretamente ou através de funções de membros.
 
 Para obter mais informações, consulte a estrutura [OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw) no SDK do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

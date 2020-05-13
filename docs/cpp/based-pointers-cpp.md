@@ -10,16 +10,16 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: f16e9f6582ae846c0c19fc1dcbd86f09baba713e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 24c3a7f85c4ea05c38f3ab1d3f637ea0ab24d4c5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181389"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363751"
 ---
 # <a name="based-pointers-c"></a>Ponteiros baseados (C++)
 
-A palavra-chave **__based** permite declarar ponteiros com base em ponteiros (ponteiros que são deslocamentos de ponteiros existentes). A palavra-chave **__based** é específica da Microsoft.
+A **palavra-chave __based** permite que você declare ponteiros com base em ponteiros (ponteiros que são deslocamentos de ponteiros existentes). A **palavra-chave __based** é específica da Microsoft.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,7 +29,7 @@ type __based( base ) declarator
 
 ## <a name="remarks"></a>Comentários
 
-Ponteiros baseados em endereços de ponteiro são a única forma da palavra-chave **__based** válida em compilações de 32 bits ou 64 bits. Para os compiladores C/C++ de 32 bits da Microsoft, um ponteiro baseado é um deslocamento de 32 bits de uma base de ponteiro de 32 bits. Uma restrição semelhante é mantida para ambientes de 64 bits, onde um ponteiro baseado é um deslocamento de 64 bits da base de 64 bits.
+Ponteiros baseados em endereços de ponteiro são a única forma da **palavra-chave __based** válida em compilações de 32 ou 64 bits. Para os compiladores C/C++ de 32 bits da Microsoft, um ponteiro baseado é um deslocamento de 32 bits de uma base de ponteiro de 32 bits. Uma restrição semelhante é mantida para ambientes de 64 bits, onde um ponteiro baseado é um deslocamento de 64 bits da base de 64 bits.
 
 Um uso para ponteiros baseados em ponteiros é para identificadores persistentes que contêm ponteiros. Uma lista vinculada que consiste em ponteiros baseados em um ponteiro pode ser salva em disco e depois ser recarregada em outro local na memória, com os ponteiros permanecendo válidos. Por exemplo:
 
@@ -46,11 +46,11 @@ struct llist_t {
 O ponteiro `vpBuffer` é atribuído ao endereço da memória alocada em algum momento posterior no programa. A lista vinculada é realocada em relação ao valor de `vpBuffer`.
 
 > [!NOTE]
->  Os identificadores de persistência contendo ponteiros também podem ser obtidos com o uso [de arquivos mapeados para memória](/windows/win32/Memory/file-mapping).
+> Os identificadores persistentes que contêm ponteiros também podem ser realizados usando [arquivos mapeados pela memória](/windows/win32/Memory/file-mapping).
 
 Ao desreferenciar um ponteiro baseado, a base deve ser especificada explicitamente ou implicitamente conhecida na declaração.
 
-Para compatibilidade com versões anteriores, **_based** é um sinônimo para **__based** , a menos que a opção de compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
+Para compatibilidade com as versões anteriores, **_based** é um sinônimo para **__based** a menos que a opção de compilador [/Za \(Disable extensões de idioma)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ## <a name="example"></a>Exemplo
 

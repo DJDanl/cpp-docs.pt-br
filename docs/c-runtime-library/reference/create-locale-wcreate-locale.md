@@ -1,10 +1,12 @@
 ---
 title: _create_locale, _wcreate_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _create_locale
 - __create_locale
 - _wcreate_locale
+- _o__create_locale
+- _o__wcreate_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 31bde3d032bdb47d63db5730ba53016de573332c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473840"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912087"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -55,7 +58,7 @@ _locale_t _wcreate_locale(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *category*<br/>
 Categoria.
@@ -94,6 +97,8 @@ Para obter mais informações sobre as configurações de localidade, consulte [
 
 O nome anterior dessa função, **__create_locale** (com dois sublinhados à esquerda), foi preterido.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -101,7 +106,7 @@ O nome anterior dessa função, **__create_locale** (com dois sublinhados à esq
 |**_create_locale**|\<locale.h>|
 |**_wcreate_locale**|\<locale.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -167,13 +172,13 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 
 ## <a name="see-also"></a>Confira também
 
-[Nomes de localidades, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nomes de localidade, idiomas e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Cadeias de caracteres de idioma](../../c-runtime-library/language-strings.md)<br/>
 [Cadeias de caracteres de país/região](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>

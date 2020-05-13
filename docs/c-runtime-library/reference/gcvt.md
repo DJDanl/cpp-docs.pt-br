@@ -1,8 +1,9 @@
 ---
 title: _gcvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt
+- _o__gcvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956097"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919406"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -57,13 +59,13 @@ char *_gcvt(
 *value*<br/>
 Valor a ser convertido.
 
-*digits*<br/>
+*dígitos*<br/>
 Número de dígitos significativos armazenados.
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento para o resultado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_gcvt** retorna um ponteiro para a cadeia de caracteres de dígitos.
 
@@ -74,6 +76,8 @@ A função **_gcvt** converte um *valor* de ponto flutuante em uma cadeia de car
 Um *buffer* de comprimento **_CVTBUFSIZE** é suficiente para qualquer valor de ponto flutuante.
 
 Essa função valida seus parâmetros. Se o *buffer* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **NULL**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -139,7 +143,7 @@ buffer: '-0.123456789012' (15 chars)
 buffer: '-1.23456789012e-002' (19 chars)
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>

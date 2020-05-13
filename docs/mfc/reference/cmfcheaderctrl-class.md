@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5140d02c5acbbc430c3b4d175da1933c79c702b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218379"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752345"
 ---
 # <a name="cmfcheaderctrl-class"></a>Classe CMFCHeaderCtrl
 
-O `CMFCHeaderCtrl` classe dá suporte à classificação de várias colunas em um controle de cabeçalho.
+A `CMFCHeaderCtrl` classe suporta a classificação de várias colunas em um controle de cabeçalho.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -60,43 +60,43 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Habilita ou desabilita *classificação de várias colunas* modo para o controle de cabeçalho atual.|
-|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indica se uma coluna não está classificada, ou é classificada em ordem crescente ou decrescente.|
+|[CMFCHeaderCtrl:EnableMultipleSort](#enablemultiplesort)|Ativa ou desativa o modo *de classificação de várias colunas* para o controle de cabeçalho atual.|
+|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indica se uma coluna não está classificada ou classificada em ordem ascendente ou descendente.|
 |[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Recupera o índice baseado em zero da primeira coluna classificada no controle de cabeçalho.|
-|`CMFCHeaderCtrl::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|
-|[CMFCHeaderCtrl::IsAscending](#isascending)|Indica se qualquer coluna no controle de cabeçalho é classificada em ordem crescente.|
+|`CMFCHeaderCtrl::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a este tipo de classe.|
+|[CMFCHeaderCtrl::IsAscending](#isascending)|Indica se qualquer coluna no controle de cabeçalho está classificada em ordem crescente.|
 |[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Indica se a janela pai do controle de cabeçalho atual é uma caixa de diálogo.|
-|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indica se o controle de cabeçalho atual está no *classificação de várias colunas* modo.|
-|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Remove a coluna especificada na lista de colunas de classificação.|
-|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Define a ordem de classificação de uma coluna especificada em um controle de cabeçalho.|
+|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indica se o controle de cabeçalho atual está no modo *de classificação de várias colunas.*|
+|[CMFCHeaderCtrl:RemoveSortColumn](#removesortcolumn)|Remove a coluna especificada da lista de colunas de tipo.|
+|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Define a ordem de tipo de uma coluna especificada em um controle de cabeçalho.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Chamado pelo framework para desenhar uma coluna do controle de cabeçalho.|
-|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Chamado pelo framework para desenhar a seta de classificação.|
-|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Chamado pelo framework para preencher a tela de fundo de uma coluna do controle de cabeçalho.|
+|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Chamado pela estrutura para desenhar uma coluna de controle de cabeçalho.|
+|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Chamado pela estrutura para desenhar a seta de classificação.|
+|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Chamado pela estrutura para preencher o plano de fundo de uma coluna de controle de cabeçalho.|
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como construir um objeto do `CMFCHeaderCtrl` classe e como habilitar *classificação de várias colunas* modo para o controle de cabeçalho atual.
+O exemplo a seguir demonstra como `CMFCHeaderCtrl` construir um objeto da classe e como ativar o modo *de classificação de várias colunas* para o controle de cabeçalho atual.
 
 [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]
 
 ## <a name="remarks"></a>Comentários
 
-O `CMFCHeaderCtrl` classe desenha uma seta de classificação em uma coluna do controle de cabeçalho para indicar que a coluna é classificada. Use *classificação de várias colunas* modo se um conjunto de colunas no controle de lista pai ( [classe CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)) podem ser classificados ao mesmo tempo.
+A `CMFCHeaderCtrl` classe desenha uma seta de classificação em uma coluna de controle de cabeçalho para indicar que a coluna está classificada. Use o modo *de classificação de várias colunas* se um conjunto de colunas no controle da lista dos pais [(CMFCListCtrl Class)](../../mfc/reference/cmfclistctrl-class.md)puder ser classificado ao mesmo tempo.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)
+[Cheaderctrl](../../mfc/reference/cheaderctrl-class.md)
 
 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)
 
@@ -104,7 +104,7 @@ O `CMFCHeaderCtrl` classe desenha uma seta de classificação em uma coluna do c
 
 **Cabeçalho:** afxheaderctrl.h
 
-##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl
+## <a name="cmfcheaderctrlcmfcheaderctrl"></a><a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl
 
 Constrói um objeto `CMFCHeaderCtrl`.
 
@@ -114,7 +114,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 ### <a name="remarks"></a>Comentários
 
-Este construtor inicializa as seguintes variáveis de membro com os valores especificados:
+Este construtor inicializa as seguintes variáveis de membro para os valores especificados:
 
 |Variável de membro|Valor|
 |---------------------|-----------|
@@ -124,28 +124,28 @@ Este construtor inicializa as seguintes variáveis de membro com os valores espe
 |`m_nHighlightedItem`|-1|
 |`m_bTracked`|FALSE|
 |`m_bIsDlgControl`|FALSE|
-|`m_hFont`|NULL|
+|`m_hFont`|NULO|
 
-##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort
+## <a name="cmfcheaderctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCHeaderCtrl:EnableMultipleSort
 
-Habilita ou desabilita *classificação de várias colunas* modo para o controle de cabeçalho atual.
+Ativa ou desativa o modo *de classificação de várias colunas* para o controle de cabeçalho atual.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
-[in] TRUE para habilitar o modo de classificação de coluna vários; FALSE para desabilitar o modo de classificar várias colunas e remover todas as colunas da lista de colunas classificadas. O valor padrão é TRUE.
+*Benable*<br/>
+[em] TRUE para habilitar o modo de classificação de várias colunas; FALSO para desativar o modo de classificação de várias colunas e remover quaisquer colunas da lista de colunas classificadas. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para habilitar ou desabilitar o modo de classificar várias colunas. Duas ou mais colunas podem participar em uma classificação, se o controle de cabeçalho estiver no modo de classificação de coluna vários.
+Use este método para ativar ou desativar o modo de classificação de várias colunas. Duas ou mais colunas podem participar de uma espécie se o controle de cabeçalho estiver no modo de classificação de várias colunas.
 
-##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState
+## <a name="cmfcheaderctrlgetcolumnstate"></a><a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState
 
-Indica se uma coluna está classificada, ou é classificada em ordem crescente ou decrescente.
+Indica se uma coluna não é classificada ou está classificada em ordem ascendente ou descendente.
 
 ```
 int GetColumnState(int iColumn) const;
@@ -153,22 +153,22 @@ int GetColumnState(int iColumn) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*iColumn*<br/>
-[in] O índice baseado em zero de uma coluna.
+*Icolumn*<br/>
+[em] O índice baseado em zero de uma coluna.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor que indicam o status de classificação da coluna especificada. A tabela a seguir lista os valores possíveis:
+Um valor que indique o status de tipo da coluna especificada. A tabela a seguir lista os valores possíveis: 
 
 |Valor|Descrição|
 |-----------|-----------------|
-|-1|Classificado em ordem decrescente.|
-|0|Não classificado.|
-|1|Classificado em ordem crescente.|
+|-1|Ordenado em ordem descendente.|
+|0|Não está resolvido.|
+|1|Ordenado em ordem ascendente.|
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn
+## <a name="cmfcheaderctrlgetsortcolumn"></a><a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn
 
 Recupera o índice baseado em zero da primeira coluna classificada no controle de cabeçalho.
 
@@ -176,31 +176,31 @@ Recupera o índice baseado em zero da primeira coluna classificada no controle d
 int GetSortColumn() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O índice de uma coluna classificada ou -1 se nenhuma coluna classificada foi encontrada.
+O índice de uma coluna classificada, ou -1, se nenhuma coluna classificada for encontrada.
 
 ### <a name="remarks"></a>Comentários
 
-Se o controle de cabeçalho está na *classificação de várias colunas* modo e você o aplicativo no modo de depuração, esse método declara e compilados aconselha a usar o [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) método em vez disso. Se o controle de cabeçalho está no modo de classificar várias colunas e você tiver compilado o aplicativo no modo de varejo, esse método retornará -1.
+Se o controle de cabeçalho estiver no modo *de classificação de várias colunas* e você tiver compilado o aplicativo no modo de depuração, este método afirma e aconselha que você use o método [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) em vez disso. Se o controle de cabeçalho estiver no modo de classificação de várias colunas e você tiver compilado o aplicativo no modo de varejo, este método reame -1.
 
-##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending
+## <a name="cmfcheaderctrlisascending"></a><a name="isascending"></a>CMFCHeaderCtrl::IsAscending
 
-Indica se qualquer coluna no controle de cabeçalho é classificada em ordem crescente.
+Indica se qualquer coluna no controle de cabeçalho está classificada em ordem crescente.
 
 ```
 BOOL IsAscending() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se qualquer coluna no controle de cabeçalho é classificada em ordem crescente; Caso contrário, FALSE.
+VERDADE se qualquer coluna no controle de cabeçalho for classificada em ordem crescente; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O valor que retorna este método é usado para exibir a seta de classificação apropriado no item de controle de cabeçalho. Use o [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) método para definir a ordem de classificação.
+O valor que este método retorna é usado para exibir a seta de classificação apropriada no item de controle de cabeçalho. Use o método [CMFCHeaderCtrl:SetSortColumn](#setsortcolumn) para definir a ordem de classificação.
 
-##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl
+## <a name="cmfcheaderctrlisdialogcontrol"></a><a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl
 
 Indica se a janela pai do controle de cabeçalho atual é uma caixa de diálogo.
 
@@ -208,29 +208,29 @@ Indica se a janela pai do controle de cabeçalho atual é uma caixa de diálogo.
 BOOL IsDialogControl() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a janela pai do controle de cabeçalho atual é uma caixa de diálogo Caso contrário, FALSE.
+VERDADE se a janela pai do controle de cabeçalho atual for uma caixa de diálogo; caso contrário, FALSE.
 
-##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort
+## <a name="cmfcheaderctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort
 
-Indica se o controle de cabeçalho atual está no *classificação de várias colunas* modo.
+Indica se o controle de cabeçalho atual está no modo *de classificação de várias colunas.*
 
 ```
 BOOL IsMultipleSort() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se o modo de classificação de coluna vários estiver habilitado; Caso contrário, FALSE.
+TRUE se o modo de classificação de várias colunas estiver ativado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Use o [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) método para habilitar ou desabilitar o modo de classificar várias colunas. Duas ou mais colunas podem participar em uma classificação, se o controle de cabeçalho estiver no modo de classificação de coluna vários.
+Use o [método CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) para ativar ou desativar o modo de classificação de várias colunas. Duas ou mais colunas podem participar de uma espécie se o controle de cabeçalho estiver no modo de classificação de várias colunas.
 
-##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem
+## <a name="cmfcheaderctrlondrawitem"></a><a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem
 
-Chamado pelo framework para desenhar uma coluna do controle de cabeçalho.
+Chamado pela estrutura para desenhar uma coluna de controle de cabeçalho.
 
 ```
 virtual void OnDrawItem(
@@ -244,23 +244,23 @@ virtual void OnDrawItem(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+[em] Um ponteiro para um contexto de dispositivo.
 
-*iItem*<br/>
-[in] O índice baseado em zero do item a ser desenhado.
+*Iitem*<br/>
+[em] O índice baseado em zero do item a ser sorteado.
 
-*rect*<br/>
-[in] O retângulo delimitador do item a ser desenhado.
+*Rect*<br/>
+[em] O retângulo delimitador do item para desenhar.
 
-*bIsPressed*<br/>
-[in] TRUE para desenhar o item no estado pressionado; Caso contrário, FALSE.
+*bIspressed*<br/>
+[em] TRUE para desenhar o item em estado pressionado; caso contrário, FALSE.
 
-*bIsHighlighted*<br/>
-[in] TRUE para desenhar o item em um estado realçado; Caso contrário, FALSE.
+*bIshighlighted*<br/>
+[em] TRUE para desenhar o item em estado destacado; caso contrário, FALSE.
 
-##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow
+## <a name="cmfcheaderctrlondrawsortarrow"></a><a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow
 
-Chamado pelo framework para desenhar a seta de classificação.
+Chamado pela estrutura para desenhar a seta de classificação.
 
 ```
 virtual void OnDrawSortArrow(
@@ -271,14 +271,14 @@ virtual void OnDrawSortArrow(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+[em] Um ponteiro para um contexto de dispositivo.
 
 *rectArrow*<br/>
-[in] O retângulo delimitador da seta de classificação.
+[em] O retângulo delimitador da seta do tipo.
 
-##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground
+## <a name="cmfcheaderctrlonfillbackground"></a><a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground
 
-Chamado pelo framework para preencher a tela de fundo de uma coluna do controle de cabeçalho.
+Chamado pela estrutura para preencher o plano de fundo de uma coluna de controle de cabeçalho.
 
 ```
 virtual void OnFillBackground(CDC* pDC);
@@ -287,28 +287,28 @@ virtual void OnFillBackground(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+[em] Um ponteiro para um contexto de dispositivo.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn
+## <a name="cmfcheaderctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCHeaderCtrl:RemoveSortColumn
 
-Remove a coluna especificada na lista de colunas de classificação.
+Remove a coluna especificada da lista de colunas de tipo.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*iColumn*<br/>
-[in] O índice baseado em zero da coluna a ser removida.
+*Icolumn*<br/>
+[em] O índice baseado em zero da coluna para remover.
 
-##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn
+## <a name="cmfcheaderctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn
 
-Define a ordem de classificação de uma coluna especificada em um controle de cabeçalho.
+Define a ordem de tipo de uma coluna especificada em um controle de cabeçalho.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending=TRUE,
@@ -317,26 +317,26 @@ void SetSortColumn(
 
 ### <a name="parameters"></a>Parâmetros
 
-*iColumn*<br/>
-[in] O índice baseado em zero de uma coluna do controle de cabeçalho. Se esse parâmetro é menor que zero, esse método Remove todas as colunas da lista de colunas de classificação.
+*Icolumn*<br/>
+[em] O índice baseado em zero de uma coluna de controle de cabeçalho. Se este parâmetro for menor que zero, este método removerá todas as colunas da lista de colunas de tipo.
 
-*bAscending*<br/>
-[in] Especifica a ordem de classificação da coluna que o *iColumn* parâmetro especifica. TRUE para definir a ordem crescente; FALSE para definir a ordem decrescente. O valor padrão é TRUE.
+*bAscendente*<br/>
+[em] Especifica a ordem de classificação da coluna que o parâmetro *iColumn* especifica. VERDADE para definir ordem ascendente; FALSO para definir ordem descendente. O valor padrão é TRUE.
 
 *bAdd*<br/>
-[in] True para definir a ordem de classificação da coluna que o *iColumn* parâmetro especifica.
+[em] TRUE para definir a ordem de classificação da coluna que o parâmetro *iColumn* especifica.
 
-Se o controle de cabeçalho atual está no *classificação de várias colunas* modo, esse método adiciona a coluna especificada à lista de colunas de classificação. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) para definir o modo de classificar várias colunas.
+Se o controle de cabeçalho atual estiver no modo *de classificação de várias colunas,* este método adicionará a coluna especificada à lista de colunas de tipo. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) para definir o modo de classificação de várias colunas.
 
-Se vários modo de classificação de coluna não está definido e esse método é compilado no modo de depuração, esse método declara. Se vários modo de classificação de coluna não está definido e esse método é compilado no modo de varejo, esse método primeiro remove todas as colunas da lista de colunas de classificação e, em seguida, adiciona a coluna especificada à lista.
+Se o modo de classificação de várias colunas não estiver definido e este método for compilado no modo de depuração, este método será afirmado. Se o modo de classificação de várias colunas não estiver definido e esse método for compilado no modo de varejo, este método primeiro removerá todas as colunas da lista de colunas de tipo e, em seguida, adicionará a coluna especificada à lista.
 
-FALSE para primeiro remova todas as colunas da lista de colunas de classificação e, em seguida, adicionar a coluna especificada à lista. O valor padrão é FALSE.
+FALSE para primeiro remover todas as colunas da lista de colunas de tipo e, em seguida, adicionar a coluna especificada à lista. O valor padrão é FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para definir a ordem de classificação de uma coluna. Se necessário, este método adiciona a coluna à lista de colunas de classificação. O controle de cabeçalho usa a ordem de classificação para desenhar uma seta de classificação que aponta para cima ou para baixo.
+Use este método para definir a ordem de tipo de uma coluna. Se necessário, este método adiciona a coluna à lista de colunas de tipo. O controle de cabeçalho usa a ordem de classificação para desenhar uma seta de classificação que aponta para cima ou para baixo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

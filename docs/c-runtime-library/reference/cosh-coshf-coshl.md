@@ -1,10 +1,11 @@
 ---
 title: cosh, coshf, coshl
-ms.date: 04/11/2018
+ms.date: 4/2/2020
 api_name:
 - cosh
 - coshf
 - coshl
+- _o_cosh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938990"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917223"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -60,28 +62,30 @@ long double cosh( long double x );  // C++ only
 *x*<br/>
 Ângulo em radianos.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O cosseno hiperbólico de *x*.
 
-Por padrão, se o resultado for muito grande em uma chamada **cosh**, **coshf**ou **Coshl** , a função retornará **HUGE_VAL** e definirá **errno** como **ERANGE**.
+Por padrão, se o resultado for muito grande em uma chamada **cosh**, **coshf**ou **coshl** , a função retornará **HUGE_VAL** e definirá **errno** como **ERANGE**.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|nenhum|**_DOMAIN**|
-|*x* ≥ 7.104760 e + 002|**INEXACT**+**OVERFLOW**|**CONTRA**|
+|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
+|*x* ≥ 7.104760 e + 002|**estouro inexato**+**OVERFLOW**|**CONTRA**|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **cosh** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **cosh** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cosh** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **cosh** sempre pega e retorna um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------|-|
-|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath> ou \<math.h>|
+|**coshf**, **COSL**, **coshl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
 ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158339"
 ---
 # <a name="scope-and-visibility"></a>Escopo e visibilidade
 
@@ -29,6 +29,6 @@ Escopo de protótipo de função O declarador ou especificador de tipo de um ide
 
 As declarações apropriadas para tornar as variáveis visíveis em outros arquivos de origem são descritas em [Classes de armazenamento](../c-language/c-storage-classes.md). No entanto, as variáveis e as funções declaradas no nível externo com o especificador de classe de armazenamento **static** são visíveis apenas no arquivo de origem nas quais são definidas. Todas as funções restantes são visíveis globalmente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md)

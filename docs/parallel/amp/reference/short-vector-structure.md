@@ -6,16 +6,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: fc2864477da80885b18dabb08b9ccbee30f31387
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126429"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374745"
 ---
 # <a name="short_vector-structure"></a>Estrutura short_vector
 
-o short_vector fornece definições de metaprogramação que são úteis para a programação de vetores curtos genericamente.
+short_vector fornece definições de metaprogramação que são úteis para programar vetores curtos genericamente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -83,34 +83,34 @@ struct short_vector<double, 4>;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs Públicos
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[Construtor short_vector:: short_vector](#ctor)||
+|[Construtor short_vector::short_vector](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `short_vector`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** amp_short_vectors. h
+**Cabeçalho:** amp_short_vectors.h
 
-**Namespace:** Simultaneidade:: Graphics
+**Espaço de nome:** Concorrência::gráficos
 
-## <a name="ctor"></a>Construtor short_vector:: short_vector
+## <a name="short_vectorshort_vector-constructor"></a><a name="ctor"></a>short_vector:short_vector Construtor
 
 ```cpp
 short_vector();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)

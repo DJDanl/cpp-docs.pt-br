@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4604769d9d1bc5fa848d15459327dc87d82f7016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368728"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363776"
 ---
 # <a name="platformexception-class"></a>Classe Platform::Exception
 
@@ -37,7 +37,7 @@ A classe `Exception` também tem os tipos de membros a seguir.
 
 |Membro|Descrição|
 |------------|-----------------|
-|[Exception:: Exception](#ctor)|Inicializa uma nova instância da classe `Exception`.|
+|[Exceção::Exceção](#ctor)|Inicia uma nova instância da classe `Exception`.|
 
 ### <a name="methods"></a>Métodos
 
@@ -45,7 +45,7 @@ A classe `Exception` herda os métodos `Equals()`, `Finalize()`,`GetHashCode()`,
 
 |Membro|Descrição|
 |------------|-----------------|
-|[Exception::CreateException](#createexception)|Cria uma exceção que representa o valor HRESULT especificado.|
+|[Exceção::CreateException](#createexception)|Cria uma exceção que representa o valor HRESULT especificado.|
 
 ### <a name="properties"></a>Propriedades
 
@@ -53,8 +53,8 @@ A classe Exception também tem as propriedades a seguir.
 
 |Membro|Descrição|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|O HRESULT que corresponde à exceção.|
-|[Exception::Message](#message)|Uma mensagem que descreve a exceção. Esse valor é somente leitura e não pode ser modificado após a construção de `Exception` .|
+|[Exceção::HResult](#hresult)|O HRESULT que corresponde à exceção.|
+|[Exceção::Mensagem](#message)|Uma mensagem que descreve a exceção. Esse valor é somente leitura e não pode ser modificado após a construção de `Exception` .|
 
 ### <a name="requirements"></a>Requisitos
 
@@ -62,11 +62,11 @@ A classe Exception também tem as propriedades a seguir.
 
 **Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
 **Metadados:** platform.winmd
 
-## <a name="createexception"></a> Método Exception:: createexception
+## <a name="exceptioncreateexception-method"></a><a name="createexception"></a>Exceção::Método de criação de exceção
 
 Cria uma Platform::Exception^ a partir de um valor HRESULT especificado.
 
@@ -79,13 +79,13 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hr*<br/>
-Um valor HRESULT que você normalmente obtém de uma chamada para um método COM. Se o valor for 0, que é igual a S_OK, esse método gerará [Platform:: invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md) porque os métodos COM bem-sucedidos não devem lançar exceções.
+*Hr*<br/>
+Um valor HRESULT que você normalmente obtém de uma chamada para um método COM. Se o valor for 0, que é igual a S_OK, este método lança [Plataforma::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) porque os métodos COM que forem bem sucedidos não devem abrir exceções.
 
-*message*<br/>
+*Mensagem*<br/>
 Uma cadeia de caracteres que descreve o erro.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma exceção que representa o HRESULT de erro.
 
@@ -93,9 +93,9 @@ Uma exceção que representa o HRESULT de erro.
 
 Use esse método para criar uma exceção fora de um HRESULT que é retornado, por exemplo, a partir de uma chamada para um método de interface COM. Você pode usar a sobrecarga que utiliza um parâmetro String^ para fornecer uma mensagem personalizada.
 
-É altamente recomendável usar CreateException para criar uma exceção fortemente tipada em vez de criar uma [Platform:: COMException](../cppcx/platform-comexception-class.md) que simplesmente contenha o HRESULT.
+É fortemente recomendável usar CreateException para criar uma exceção fortemente digitada em vez de criar uma [Plataforma::COMException](../cppcx/platform-comexception-class.md) que contém apenas o HRESULT.
 
-## <a name="ctor"></a>  Construtor Exception:: Exception
+## <a name="exceptionexception-constructor"></a><a name="ctor"></a>Exceção::Construtor de exceção
 
 Inicializa uma nova instância da classe Exception.
 
@@ -108,13 +108,13 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hresult*<br/>
+*Hresult*<br/>
 O erro HRESULT que é representado pela exceção.
 
-*message*<br/>
+*Mensagem*<br/>
 Uma mensagem especificada pelo usuário, como texto prescritivo, que é associada à exceção. Em geral, você deve preferir a segunda sobrecarga para fornecer uma mensagem descritiva que seja a mais específica possível sobre como e por que ocorreu o erro.
 
-## <a name="hresult"></a>  Propriedade Exception:: HRESULT
+## <a name="exceptionhresult-property"></a><a name="hresult"></a>Exceção::HResult Property
 
 O HRESULT que corresponde à exceção.
 
@@ -133,7 +133,7 @@ Um valor HRESULT.
 
 A maioria das exceções começa como erros COM, que são retornados como valores HRESULT. C++/CX converte esses valores em objetos Platform::Exception^ e essa propriedade armazena o valor do código de erro original.
 
-## <a name="message"></a> Propriedade Exception:: Message
+## <a name="exceptionmessage-property"></a><a name="message"></a>Exceção::Propriedade de mensagem
 
 Mensagem que descreve o erro.
 
@@ -145,12 +145,12 @@ public:property String^ Message;
 
 ## <a name="property-value"></a>Valor da propriedade
 
-Nas exceções originadas no Tempo de Execução do Windows, essa é uma descrição do erro fornecida pelo sistema.
+Nas exceções originadas no Windows Runtime, essa é uma descrição do erro fornecida pelo sistema.
 
 ### <a name="remarks"></a>Comentários
 
-No Windows 8, essa propriedade é somente leitura, porque as exceções nessa versão do Windows Runtime são transportadas pela ABI somente como HRESULTS. No Windows 8.1, as informações de exceção mais detalhadas são transportadas pela ABI, e você pode fornecer uma mensagem personalizada que outros componentes podem acessar programaticamente. Para obter mais informações, consulte [exceções (C++/CX)](../cppcx/exceptions-c-cx.md).
+No Windows 8, essa propriedade é somente leitura porque exceções nessa versão do Windows Runtime são transportadas através do ABI apenas como HRESULTS. No Windows 8.1, as informações de exceção mais detalhadas são transportadas pela ABI, e você pode fornecer uma mensagem personalizada que outros componentes podem acessar programaticamente. Para obter mais informações, consulte [Exceções (C++/CX)](../cppcx/exceptions-c-cx.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

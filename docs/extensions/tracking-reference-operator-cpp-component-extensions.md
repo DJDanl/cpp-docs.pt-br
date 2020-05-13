@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ab1b11d3f8d3416a6e9ed345085d63ce86d56010
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368231"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Operador de referência de acompanhamento (C++/CLI e C++/CX)
 
-Uma *referência de acompanhamento* (`%`) se comporta como uma referência comum do C++ (`&`), exceto que quando um objeto é atribuído a uma referência de acompanhamento, a contagem de referência do objeto é incrementada.
+Uma *referência de rastreamento* (`%`) comporta-se`&`como uma referência C++ comum ( ) exceto que quando um objeto é atribuído a uma referência de rastreamento, a contagem de referência do objeto é incrementada.
 
 ## <a name="all-platforms"></a>Todas as plataformas
 
 Uma referência de acompanhamento possui as características a seguir.
 
-- A atribuição de um objeto a uma referência de acompanhamento faz com que a contagem de referência do objeto seja incrementada.
+- A atribuição de um objeto a uma referência de rastreamento faz com que a contagem de referência do objeto seja incrementada.
 
 - Uma referência nativa (`&`) é o resultado quando você desfaz uma referência a um `*`. Uma referência de acompanhamento (`%`) é o resultado quando você desfaz uma referência a um `^`. Contanto que você tenha um `%` para um objeto, o objeto permanecerá vivo na memória.
 
@@ -35,7 +35,7 @@ Uma referência de acompanhamento possui as características a seguir.
 
 - Uma referência de acompanhamento não pode ser usada como um operador take-address unário.
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 Uma referência de acompanhamento se comporta como uma referência padrão do C++, exceto pelo fato de que um % é contado por referência. O snippet a seguir mostra como converter entre os tipos % e ^:
 
@@ -75,7 +75,7 @@ Não é possível ter uma referência de C++ nativa para um objeto no heap colet
 
 Saiba mais sobre referências de acompanhamento no C++/CLI em:
 
-- [Como usar referências de acompanhamento no C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [Como usar referências de monitoramento em C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>Exemplos
 

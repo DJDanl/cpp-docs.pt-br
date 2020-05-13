@@ -1,11 +1,13 @@
 ---
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
+- _o__mbspbrk
+- _o__mbspbrk_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 507f6b99416cd59c3a0383e3e41a7ae26c44b019
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947156"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911175"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -119,7 +122,7 @@ const unsigned char *_mbspbrk_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres pesquisadas e terminadas em nulo.
 
 *strCharSet*<br/>
@@ -128,7 +131,7 @@ Conjunto de caracteres terminado em nulo.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna um ponteiro para a primeira ocorrência de qualquer caractere de *strCharSet* em *Str*, ou um ponteiro NULL se os dois argumentos de cadeia de caracteres não tiverem caracteres em comum.
 
@@ -142,16 +145,18 @@ A `strpbrk` função retorna um ponteiro para a primeira ocorrência de um carac
 
 `_mbspbrk` é semelhante ao `_mbscspn`, exceto que `_mbspbrk` retorna um ponteiro em vez de um valor do tipo [size_t](../../c-runtime-library/standard-types.md).
 
-Em C, essas funções assumem um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que assume um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não**const**. A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as versões **const** e não**const** dessas funções estiverem disponíveis. Se você precisar do comportamento não**const** para ambas as C++ sobrecargas, defina o símbolo _CONST_RETURN.
+Em C, essas funções assumem um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que assume um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não**const**. A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as versões **const** e não**const** dessas funções estiverem disponíveis. Se você precisar do comportamento não**const** para ambas as sobrecargas de C++, defina o símbolo _CONST_RETURN.
 
-O valor de saída é afetado pela configuração da configuração de categoria LC_CTYPE da localidade; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual para esse comportamento dependente de localidade; a versão com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria de LC_CTYPE da localidade; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual para esse comportamento dependente de localidade; a versão com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
-|**n/d**|**n/d**|`_mbspbrk_l`|**n/d**|
+|**n/a**|**n/a**|`_mbspbrk_l`|**n/a**|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -197,10 +202,10 @@ int main( void )
 4: 5 pigs
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>

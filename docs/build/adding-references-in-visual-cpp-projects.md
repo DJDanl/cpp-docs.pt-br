@@ -1,5 +1,5 @@
 ---
-title: Consumindo bibliotecas e C++ componentes em projetos
+title: Consumindo bibliotecas e componentes em projetos C++
 ms.date: 12/10/2018
 f1_keywords:
 - VC.Project.References
@@ -16,17 +16,17 @@ ms.locfileid: "80169949"
 ---
 # <a name="consuming-libraries-and-components"></a>Consumindo bibliotecas e componentes
 
-Geralmente, um C++ projeto precisa chamar funções ou acessar dados em um arquivo binário, como biblioteca estática (arquivos. lib), dll, componente Windows Runtime, componente com ou assembly .net. Nesses casos, você precisa configurar o projeto para que ele possa encontrar esse binário no momento da compilação. As etapas específicas dependem do tipo de seu projeto, do tipo de binário e se o binário está sendo compilado na mesma solução que o seu projeto.
+Geralmente, um projeto C++ precisa chamar funções ou acessar dados em um arquivo binário, como biblioteca estática (arquivos. lib), DLL, componente Windows Runtime, componente COM ou assembly .NET. Nesses casos, você precisa configurar o projeto para que ele possa encontrar esse binário no momento da compilação. As etapas específicas dependem do tipo de seu projeto, do tipo de binário e se o binário está sendo compilado na mesma solução que o seu projeto.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Consumindo bibliotecas baixadas via vcpkg
 
-Para consumir uma biblioteca que você baixou usando o Gerenciador de pacotes do **vcpkg** , você pode ignorar as instruções abaixo. Consulte [vcpkg: um C++ Gerenciador de pacotes para Windows, Linux e MacOS](vcpkg.md#integrate-with-visual-studio-windows) para obter mais informações.
+Para consumir uma biblioteca que você baixou usando o Gerenciador de pacotes do **vcpkg** , você pode ignorar as instruções abaixo. Consulte [vcpkg: um Gerenciador de pacotes C++ para Windows, Linux e MacOS](vcpkg.md#integrate-with-visual-studio-windows) para obter mais informações.
 
 ## <a name="consuming-static-libraries"></a>Consumindo bibliotecas estáticas
 
 Se seu projeto de biblioteca estática estiver sendo compilado na mesma solução:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>inclua os arquivos de cabeçalho da biblioteca estática usando aspas. Em uma solução típica, o caminho começará com `../<library project name>`. O IntelliSense irá ajudá-lo a encontrá-lo.
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>inclua os arquivos de cabeçalho da biblioteca estática usando aspas. Em uma solução típica, o caminho começará `../<library project name>`. O IntelliSense irá ajudá-lo a encontrá-lo.
 2. Adicione uma referência ao projeto de biblioteca estática. Clique com o botão direito do mouse em **referências** no nó do projeto de aplicativo em **Gerenciador de soluções** e escolha **Adicionar referência**.
 
 Se a biblioteca estática não fizer parte da solução:
@@ -46,11 +46,11 @@ Se a DLL não fizer parte da solução de aplicativo, você precisará do arquiv
 
 ## <a name="com-objects"></a>objetos COM
 
-Se seu aplicativo C++ nativo precisar consumir um objeto com e esse objeto for *registrado*, tudo o que você precisará fazer é chamar COCREATEINSTANCE e passar o CLSID do objeto. O sistema irá encontrá-lo no registro do Windows e carregá-lo. Um C++projeto/CLI pode consumir um objeto com da mesma maneira ou adicionando uma referência a ele na lista de **Adicionar referências > com** e consumindo-o por meio de seu [tempo de execução Callable Wrapper](/dotnet/framework/interop/runtime-callable-wrapper).
+Se seu aplicativo C++ nativo precisar consumir um objeto COM e esse objeto for *registrado*, tudo o que você precisará fazer é chamar CoCreateInstance e passar o CLSID do objeto. O sistema irá encontrá-lo no registro do Windows e carregá-lo. Um projeto C++/CLI pode consumir um objeto COM da mesma maneira ou adicionando uma referência a ele na lista de **Adicionar referências > com** e consumindo-o por meio de seu [tempo de execução Callable Wrapper](/dotnet/framework/interop/runtime-callable-wrapper).
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Assemblies do .NET e componentes do Windows Runtime
 
-Em projetos UWP C++ou/CLI, você consome assemblies .net ou componentes Windows Runtime adicionando uma *referência* ao assembly ou ao componente. No nó **referências** em um projeto UWP ou C++/CLI, você vê referências a componentes usados com frequência. Clique com o botão direito do mouse no nó **referências** em **Gerenciador de soluções** para abrir o **Gerenciador** de referências e navegar pelos componentes adicionais que são conhecidos pelo sistema. Clique no botão **procurar** para navegar para qualquer pasta na qual um componente personalizado está localizado. Como os assemblies do .NET e os componentes do Windows Runtime contêm informações de tipo interno, você pode exibir seus métodos e classes clicando com o botão direito do mouse e escolhendo **Exibir no Pesquisador de objetos**.
+Em projetos UWP ou C++/CLI, você consome assemblies .NET ou componentes Windows Runtime adicionando uma *referência* ao assembly ou ao componente. No nó **referências** em um projeto UWP ou C++/CLI, você vê referências a componentes usados com frequência. Clique com o botão direito do mouse no nó **referências** em **Gerenciador de soluções** para abrir o **Gerenciador** de referências e navegar pelos componentes adicionais que são conhecidos pelo sistema. Clique no botão **procurar** para navegar para qualquer pasta na qual um componente personalizado está localizado. Como os assemblies do .NET e os componentes do Windows Runtime contêm informações de tipo interno, você pode exibir seus métodos e classes clicando com o botão direito do mouse e escolhendo **Exibir no Pesquisador de objetos**.
 
 ## <a name="reference-properties"></a>Propriedades de referência
 
@@ -80,11 +80,11 @@ As propriedades de referência do ActiveX estão disponíveis somente para refer
 
    Exibe a ferramenta usada para compilar o assembly de interoperabilidade da biblioteca COM referenciada ou do controle ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Propriedades de referência deC++assembly (/CLI)
+### <a name="assembly-reference-properties-ccli"></a>Propriedades de referência de assembly (C++/CLI)
 
-As propriedades de referência de assembly estão disponíveis somente para referências a C++.NET Framework assemblies em projetos/CLI. Essas propriedades são exibidas somente quando um .NET Framework assembly é selecionado no painel **referências** . As propriedades não podem ser modificadas.
+As propriedades de referência do assembly estão disponíveis somente para referências a .NET Framework assemblies em projetos do C++/CLI. Essas propriedades são exibidas somente quando um .NET Framework assembly é selecionado no painel **referências** . As propriedades não podem ser modificadas.
 
-- **Caminho Relativo**
+- **Caminho relativo**
 
    Exibe o caminho relativo do diretório do projeto ao assembly referenciado.
 
@@ -96,7 +96,7 @@ As propriedades a seguir estão disponíveis em vários tipos de referências. E
 
    Especifica se o assembly referenciado será copiado automaticamente para o local de destino durante um build.
 
-- **Para copiar assemblies satélite locaisC++(/CLI)**
+- **Copiar assemblies satélite locais (C++/CLI)**
 
    Especifica se os assemblies satélite serão copiados automaticamente do assembly referenciado para o local de destino durante um build. Usado somente se **Local da cópia** for **true**.
 
@@ -144,7 +144,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Para assemblies .NET Framework, exibe o caminho completo. Para componentes COM, exibe o GUID.
 
-- **Rótulo**
+- **Rotular**
 
    Exibe o rótulo da referência.
 
@@ -152,7 +152,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Exibe o nome da referência.
 
-- **Token de Chave Pública**
+- **Token de chave pública**
 
    Exibe o token de chave pública usado para identificar o assembly referenciado.
 
@@ -166,5 +166,5 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
 ## <a name="see-also"></a>Confira também
 
-[C++referência de página de propriedades do projeto](reference/property-pages-visual-cpp.md)<br>
+[Referência de página de propriedades do projeto C++](reference/property-pages-visual-cpp.md)<br>
 [Definição das propriedades de compilação do C++ no Visual Studio](working-with-project-properties.md)

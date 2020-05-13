@@ -7,15 +7,15 @@ helpviewer_keywords:
 - functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
 ms.openlocfilehash: ebe0fd3d785903c149999bd4ec8de9eabeabdb05
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325540"
 ---
 # <a name="inline-functions"></a>Funções embutidas
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 A palavra-chave `__inline` diz para o compilador substituir o código na definição de função para cada instância de uma chamada de função. No entanto, a substituição ocorre apenas ao critério do compilador. Por exemplo, o compilador não uma embute uma função se seu endereço já estiver em uso ou se for muito grande para embutir.
 
@@ -35,8 +35,8 @@ O uso de funções embutidas gera código mais rápido e às vezes pode gerar c�
 
 As funções que usam `__inline` não devem ser confundidas com o código de assembler embutido. Consulte [Assembler embutido](../c-language/inline-assembler-c.md) para obter mais informações.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)

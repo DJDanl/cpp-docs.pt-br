@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386129"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371379"
 ---
 # <a name="invokehelper-structure"></a>Estrutura InvokeHelper
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -103,18 +103,18 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 
 ### <a name="parameters"></a>Parâmetros
 
-*TDelegateInterface*<br/>
+*Interface de TDelegate*<br/>
 O tipo de interface do delegado.
 
 *TCallback*<br/>
-O tipo da função de manipulador de eventos.
+O tipo de função do manipulador de eventos.
 
-*argCount*<br/>
+*Argcount*<br/>
 O número de argumentos em uma `InvokeHelper` especialização.
 
 ## <a name="remarks"></a>Comentários
 
-Fornece uma implementação do `Invoke()` método com base no tipo de argumentos e o número especificado.
+Fornece uma implementação do `Invoke()` método com base no número e tipo de argumentos especificados.
 
 ## <a name="members"></a>Membros
 
@@ -122,25 +122,25 @@ Fornece uma implementação do `Invoke()` método com base no tipo de argumentos
 
 Nome     | Descrição
 -------- | -----------------------------------------------------------------------------
-`Traits` | Um sinônimo para a classe que define o tipo de cada argumento de manipulador de eventos.
+`Traits` | Um sinônimo para a classe que define o tipo de argumento de manipulador de eventos.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
 Nome                                        | Descrição
 ------------------------------------------- | -------------------------------------------------------
-[InvokeHelper::InvokeHelper](#invokehelper) | Inicializa uma nova instância da classe `InvokeHelper`.
+[InvocarHelper::InvocarHelper](#invokehelper) | Inicia uma nova instância da classe `InvokeHelper`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                            | Descrição
 ------------------------------- | -----------------------------------------------------------------------------------
-[InvokeHelper::Invoke](#invoke) | Chama o manipulador de eventos cuja assinatura contém o número especificado de argumentos.
+[InvocarHelper::Invocar](#invoke) | Chama o manipulador de eventos cuja assinatura contém o número especificado de argumentos.
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 Nome                                 | Descrição
 ------------------------------------ | ----------------------------------------------------------
-[InvokeHelper::callback_](#callback) | Representa o manipulador de eventos para chamar quando ocorre um evento.
+[InvocarHelper::callback_](#callback) | Representa o manipulador de eventos para chamar quando um evento ocorre.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -148,13 +148,13 @@ Nome                                 | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Event. h
+**Cabeçalho:** event.h
 
-**Namespace:** Microsoft::WRL::Details
+**Espaço de nome:** Microsoft::WRL::Details
 
-## <a name="callback"></a>InvokeHelper::callback_
+## <a name="invokehelpercallback_"></a><a name="callback"></a>InvocarHelper::callback_
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 TCallback callback_;
@@ -162,13 +162,13 @@ TCallback callback_;
 
 ### <a name="remarks"></a>Comentários
 
-Representa o manipulador de eventos para chamar quando ocorre um evento.
+Representa o manipulador de eventos para chamar quando um evento ocorre.
 
-O `TCallback` parâmetro de modelo especifica o tipo de manipulador de eventos.
+O `TCallback` parâmetro modelo especifica o tipo do manipulador de eventos.
 
-## <a name="invoke"></a>InvokeHelper::Invoke
+## <a name="invokehelperinvoke"></a><a name="invoke"></a>InvocarHelper::Invocar
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 STDMETHOD(
@@ -215,7 +215,7 @@ Argumento 2.
 Argumento 3.
 
 *arg4*<br/>
-Argumento de 4.
+Argumento 4.
 
 *arg5*<br/>
 Argumento 5.
@@ -224,25 +224,25 @@ Argumento 5.
 Argumento 6.
 
 *arg7*<br/>
-Argumento de 7.
+Argumento 7.
 
 *arg8*<br/>
-Argumento de 8.
+Argumento 8.
 
 *arg9*<br/>
-Argumento de 9.
+Argumento 9.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve o erro.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve o erro.
 
 ### <a name="remarks"></a>Comentários
 
 Chama o manipulador de eventos cuja assinatura contém o número especificado de argumentos.
 
-## <a name="invokehelper"></a>InvokeHelper::InvokeHelper
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>InvocarHelper::InvocarHelper
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 explicit InvokeHelper(
@@ -252,11 +252,11 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>Parâmetros
 
-*callback*<br/>
+*retorno de chamada*<br/>
 Um manipulador de eventos.
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa uma nova instância da classe `InvokeHelper`.
+Inicia uma nova instância da classe `InvokeHelper`.
 
-O `TCallback` parâmetro de modelo especifica o tipo de manipulador de eventos.
+O `TCallback` parâmetro modelo especifica o tipo do manipulador de eventos.

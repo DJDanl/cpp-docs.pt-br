@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2b677ac6e7dac4eed5fc920ece064d94119ceb97
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418128"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168430"
 ---
 # <a name="category-macros"></a>Macros de categoria
 
@@ -29,15 +29,15 @@ Essas macros definem mapas de categorias.
 
 **Cabeçalho:** atlcom. h
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 Marca o início do mapa de categoria.
 
-```
+```cpp
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Classe*<br/>
 no O nome da classe que contém o mapa de categoria.
@@ -51,7 +51,7 @@ Adicione uma entrada de [IMPLEMENTED_CATEGORY](#implemented_category) ao mapa pa
 As categorias de componentes listadas no mapa serão registradas automaticamente quando o módulo for registrado se a classe tiver um [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)associados.
 
 > [!NOTE]
->  A ATL usa o Gerenciador de categorias de componentes padrão para registrar categorias de componentes. Se o Gerenciador não estiver presente no sistema quando o módulo estiver registrado, o registro terá sucesso, mas as categorias de componentes não serão registradas para essa classe.
+> A ATL usa o Gerenciador de categorias de componentes padrão para registrar categorias de componentes. Se o Gerenciador não estiver presente no sistema quando o módulo estiver registrado, o registro terá sucesso, mas as categorias de componentes não serão registradas para essa classe.
 
 Para obter mais informações sobre categorias de componentes, consulte [o que são categorias de componentes e como elas funcionam](/windows/win32/com/component-categories-and-how-they-work) na SDK do Windows.
 
@@ -59,11 +59,11 @@ Para obter mais informações sobre categorias de componentes, consulte [o que s
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>END_CATEGORY_MAP
+## <a name="end_category_map"></a><a name="end_category_map"></a>END_CATEGORY_MAP
 
 Marca o final do mapa de categoria.
 
-```
+```cpp
 END_CATEGORY_MAP()
 ```
 
@@ -71,15 +71,15 @@ END_CATEGORY_MAP()
 
 Consulte o exemplo para [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
 Adicione uma macro IMPLEMENTED_CATEGORY ao [mapa de categoria](#begin_category_map) do componente para especificar que ele deve ser registrado como implementando a categoria identificada pelo parâmetro *CATID* .
 
-```
+```cpp
 IMPLEMENTED_CATEGORY(catID)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *catID*<br/>
 no Uma constante de CATID ou variável que contém o GUID (identificador global exclusivo) da categoria implementada. O endereço do *CATID* será obtido e adicionado ao mapa. Consulte a tabela abaixo para obter uma seleção de categorias de estoque.
@@ -94,7 +94,7 @@ Para obter mais informações sobre categorias de componentes, consulte [o que s
 
 ### <a name="a-selection-of-stock-categories"></a>Uma seleção de categorias de estoque
 
-|DESCRIÇÃO|Símbolo|GUID do registro|
+|Descrição|Símbolo|GUID do registro|
 |-----------------|------------|-------------------|
 |Seguro para scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Seguro para inicialização|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -108,15 +108,15 @@ Para obter mais informações sobre categorias de componentes, consulte [o que s
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>REQUIRED_CATEGORY
+## <a name="required_category"></a><a name="required_category"></a>REQUIRED_CATEGORY
 
 Adicione uma macro REQUIRED_CATEGORY ao [mapa de categoria](#begin_category_map) do componente para especificar que ele deve ser registrado como exigindo a categoria identificada pelo parâmetro *CATID* .
 
-```
+```cpp
 REQUIRED_CATEGORY( catID )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *catID*<br/>
 no Uma constante de CATID ou variável que contém o GUID (identificador global exclusivo) da categoria necessária. O endereço do *CATID* será obtido e adicionado ao mapa. Consulte a tabela abaixo para obter uma seleção de categorias de estoque.
@@ -131,7 +131,7 @@ Para obter mais informações sobre categorias de componentes, incluindo uma lis
 
 ### <a name="a-selection-of-stock-categories"></a>Uma seleção de categorias de estoque
 
-|DESCRIÇÃO|Símbolo|GUID do registro|
+|Descrição|Símbolo|GUID do registro|
 |-----------------|------------|-------------------|
 |Seguro para scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Seguro para inicialização|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|

@@ -1,6 +1,6 @@
 ---
 title: Classe TraceInfo
-description: A C++ referência da classe build do SDK do insights TraceInfo.
+description: A referência da classe C++ Build Insights SDK TraceInfo.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5cf32c8dc954a803a11888231d35b1050ac81cc3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 75d53937e3999f5692dee0ecf419e0ce5f49a274
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332939"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324168"
 ---
 # <a name="traceinfo-class"></a>Classe TraceInfo
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A classe `TraceInfo` é usada para acessar propriedades úteis sobre um rastreamento que está sendo analisado ou registrado novamente.
+A `TraceInfo` classe é usada para acessar propriedades úteis sobre um vestígio que está sendo analisado ou relogado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -47,25 +47,25 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-Subtraia o `StartTimestamp` de `StopTimestamp` para obter o número de tiques decorridos durante todo o rastreamento. Use `TickFrequency` para converter o valor resultante em uma unidade de tempo. Para obter um exemplo de conversão de tiques em tempo, consulte [EVENT_DATA](../c-event-data-types/event-data-struct.md).
+Subtraia `StartTimestamp` `StopTimestamp` a de si para obter o número de carrapatos decorridos durante todo o rastreamento. Use `TickFrequency` para converter o valor resultante em uma unidade de tempo. Para um exemplo de conversão de carrapatos em tempo, veja [EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-Se você não quiser converter os tiques por conta própria, a classe `TraceInfo` fornece uma função membro que retorna a duração do rastreamento em nanossegundos. Use a biblioteca C++ de `chrono` padrão para converter esse valor em outras unidades de tempo.
+Se você não quiser converter carrapatos `TraceInfo` você mesmo, a classe fornece uma função de membro que retorna a duração do rastreamento em nanossegundos. Use a biblioteca `chrono` C++ padrão para converter esse valor em outras unidades de tempo.
 
 ## <a name="members"></a>Membros
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-[TraceInfo](#trace-info)
+[Traceinfo](#trace-info)
 
-### <a name="functions"></a>{1&gt;Funções&lt;1}
+### <a name="functions"></a>Funções
 
-[Duration](#duration)
-[LogicalProcessorCount](#logical-processor-count)
+[Duração](#duration)
+[LógicaProcessadorContagemContagemDeInícioTimeStamp](#logical-processor-count)
 [StartTimestamp](#start-timestamp)
-[StopTimestamp](#stop-timestamp)
+[StopTimeStamp](#stop-timestamp)
 [TickFrequency](#tick-frequency)
 
-## <a name="duration"></a>Permanência
+## <a name="duration"></a><a name="duration"></a>Duração
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -75,7 +75,7 @@ std::chrono::nanoseconds Duration() const;
 
 A duração da atividade em nanossegundos.
 
-## <a name="logical-processor-count"></a>LogicalProcessorCount
+## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a>Contagem de processadores lógicos
 
 ```cpp
 const unsigned long& LogicalProcessorCount() const;
@@ -83,9 +83,9 @@ const unsigned long& LogicalProcessorCount() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O número de processadores lógicos no computador em que o rastreamento foi coletado.
+O número de processadores lógicos na máquina onde o rastreamento foi coletado.
 
-## <a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -93,9 +93,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor de tique capturado no momento em que o rastreamento foi iniciado.
+Um valor de carrapato capturado no momento em que o rastreamento foi iniciado.
 
-## <a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -103,9 +103,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor de tique capturado no momento em que o rastreamento foi interrompido.
+Um valor de carrapato capturado no momento em que o traço foi interrompido.
 
-## <a name="tick-frequency"></a>TickFrequency
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>Tickfrequency
 
 ```cpp
 const long long& TickFrequency() const;
@@ -113,9 +113,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O número de tiques por segundo a serem usados ao avaliar uma duração medida em tiques.
+O número de carrapatos por segundo a ser usado ao avaliar uma duração medida em carrapatos.
 
-## <a name="trace-info"></a>TraceInfo
+## <a name="traceinfo"></a><a name="trace-info"></a>Traceinfo
 
 ```cpp
 TraceInfo(const TRACE_INFO_DATA& data);
@@ -123,7 +123,7 @@ TraceInfo(const TRACE_INFO_DATA& data);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ de *dados*
-Os dados que contêm as informações sobre o rastreamento.
+*Dados*\
+Os dados contendo as informações sobre o rastreamento.
 
 ::: moniker-end

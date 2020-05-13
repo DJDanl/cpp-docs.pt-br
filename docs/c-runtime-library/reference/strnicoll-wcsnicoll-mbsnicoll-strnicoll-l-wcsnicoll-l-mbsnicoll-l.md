@@ -1,6 +1,6 @@
 ---
 title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnicoll_l
 - _mbsnicoll
@@ -8,6 +8,12 @@ api_name:
 - _strnicoll
 - _strnicoll_l
 - _wcsnicoll
+- _o__mbsnicoll
+- _o__mbsnicoll_l
+- _o__strnicoll
+- _o__strnicoll_l
+- _o__wcsnicoll
+- _o__wcsnicoll_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -63,12 +70,12 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: c1a26690f4913cb35486886f6548927fc09efc89
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7694edda5ef2b214a1ca391ab1b922b8bfbf35e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947075"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914179"
 ---
 # <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -117,16 +124,16 @@ int _mbsnicoll_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1*, *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres com encerramento nulo a serem comparadas
 
-*count*<br/>
+*contagem*<br/>
 Número de caracteres a ser comparado
 
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna um valor que indica a relação entre as subcadeias de *seqüência1* e *seqüência2*, como a seguir.
 
@@ -136,13 +143,15 @@ Cada uma dessas funções retorna um valor que indica a relação entre as subca
 |0|*seqüência1* idêntico a *seqüência2*|
 |> 0|*seqüência1* maior que *seqüência2*|
 
-Cada uma dessas funções retorna **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, inclua uma das cadeias de caracteres. H ou MBSTRING. T. o **_wcsnicoll** poderá falhar se *seqüência1* ou *seqüência2* contiver códigos de caracteres largos fora do domínio da sequência de agrupamento. Quando ocorre um erro, **_wcsnicoll** pode definir **errno** como **EINVAL**. Para verificar se há um erro em uma chamada para **_wcsnicoll**, defina **errno** como 0 e, em seguida, marque **errno** depois de chamar **_wcsnicoll**.
+Cada uma dessas funções retorna **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, inclua uma das cadeias de caracteres. H ou MBSTRING. T. **_wcsnicoll** poderá falhar se *seqüência1* ou *seqüência2* contiver códigos de caracteres largos fora do domínio da sequência de agrupamento. Quando ocorre um erro, **_wcsnicoll** pode definir **errno** como **EINVAL**. Para verificar se há um erro em uma chamada para **_wcsnicoll**, defina **errno** como 0 e, em seguida, marque **errno** depois de chamar **_wcsnicoll**.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas funções executa uma comparação que não diferencia maiúsculas de minúsculas dos primeiros caracteres de *contagem* em *seqüência1* e *seqüência2* , de acordo com a página de código. Essas funções devem ser usadas somente quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código e essa diferença é de interesse para a comparação de cadeia de caracteres. As versões dessas funções sem o sufixo **_L** usam a localidade e a página de código atuais. As versões com o sufixo **_L** são idênticas, exceto que usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüência2* for um ponteiro nulo, ou se Count for maior que **INT_MAX**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
+Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüência2* for um ponteiro nulo, ou se count for maior que **INT_MAX**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -160,12 +169,12 @@ Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüênci
 |**_wcsnicoll**, **_wcsnicoll_l**|\<wchar.h> or \<string.h>|
 |**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Localidade](../../c-runtime-library/locale.md)<br/>
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Funções strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>

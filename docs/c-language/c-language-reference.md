@@ -11,11 +11,11 @@ helpviewer_keywords:
 - language reference, C
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
 ms.openlocfilehash: 9c5417ff3ced770c8dc8a70932d70d9d96b4331d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326658"
 ---
 # <a name="c-language-reference"></a>Referência da linguagem C
 
@@ -31,6 +31,6 @@ Para material de referência adicional sobre C++ e o pré-processador, consulte:
 
 As opções do compilador e do vinculador estão documentadas na [Referência de compilação C/C++](../build/reference/c-cpp-building-reference.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)

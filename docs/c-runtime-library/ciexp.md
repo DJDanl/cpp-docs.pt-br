@@ -1,8 +1,9 @@
 ---
 title: _CIexp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIexp
+- _o__CIexp
 api_location:
 - msvcr120.dll
 - msvcr80.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: c901442bc7874e75dc0be03c72953dbacb67add3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 90a8fdac4b3b671853d2274de26040e3bf67def4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944698"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918039"
 ---
 # <a name="_ciexp"></a>_CIexp
 
@@ -36,7 +38,7 @@ Calcula o exponencial do valor superior na pilha.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void __cdecl _CIexp();
 ```
 
@@ -45,6 +47,8 @@ void __cdecl _CIexp();
 Esta versão da função `exp` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.
 
 O valor resultante é colocado na parte superior da pilha.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

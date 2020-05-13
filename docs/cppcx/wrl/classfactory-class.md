@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398726"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372675"
 ---
 # <a name="classfactory-class"></a>Classe ClassFactory
 
-Implementa a funcionalidade básica do `IClassFactory` interface.
+Implementa a funcionalidade básica `IClassFactory` da interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,7 +53,7 @@ class ClassFactory :
 ### <a name="parameters"></a>Parâmetros
 
 *I0*<br/>
-A interface inicial.
+A interface zero.
 
 *I1*<br/>
 A primeira interface.
@@ -63,9 +63,9 @@ A segunda interface.
 
 ## <a name="remarks"></a>Comentários
 
-Utilizar `ClassFactory` para fornecer uma implementação de fábrica definidos pelo usuário.
+Utilize `ClassFactory` para fornecer uma implementação de fábrica definida pelo usuário.
 
-O padrão de programação a seguir demonstra como usar o [implementa](implements-structure.md) estrutura para especificar mais de três interfaces em uma fábrica de classes.
+O padrão de programação a seguir demonstra como usar a estrutura [Implements](implements-structure.md) para especificar mais de três interfaces em uma fábrica de classe.
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -81,10 +81,10 @@ Nome                                        | Descrição
 
 Nome                                            | Descrição
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | Incrementa a contagem de referência atual `ClassFactory` objeto.
-[ClassFactory::LockServer](#lockserver)         | Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual `ClassFactory` objeto.
-[ClassFactory::QueryInterface](#queryinterface) | Recupera um ponteiro para a interface especificada pelo parâmetro.
-[ClassFactory::Release](#release)               | Diminui a contagem de referência atual `ClassFactory` objeto.
+[ClasseFábrica::AddRef](#addref)                 | Incrementa a contagem `ClassFactory` de referência para o objeto atual.
+[ClasseFábrica::Bloqueioservidor](#lockserver)         | Incrementa ou diminui o número de objetos subjacentes que `ClassFactory` são rastreados pelo objeto atual.
+[ClassFactory::QueryInterface](#queryinterface) | Recupera um ponteiro para a interface especificada por parâmetro.
+[ClassFactory::Lançamento](#release)               | Decreta a contagem de `ClassFactory` referência para o objeto atual.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -112,11 +112,11 @@ Nome                                            | Descrição
 
 **Cabeçalho:** module.h
 
-**Namespace:** Microsoft::WRL
+**Espaço de nome:** Microsoft::WRL
 
-## <a name="addref"></a>ClassFactory::AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a>ClasseFábrica::AddRef
 
-Incrementa a contagem de referência atual `ClassFactory` objeto.
+Incrementa a contagem `ClassFactory` de referência para o objeto atual.
 
 ```cpp
 STDMETHOD_(
@@ -125,19 +125,19 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve a falha.
 
-## <a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory::ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClasseFábrica::Bloqueioservidor
 
-Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual `ClassFactory` objeto.
+Incrementa ou diminui o número de objetos subjacentes que `ClassFactory` são rastreados pelo objeto atual.
 
 ```cpp
 STDMETHOD(
@@ -147,20 +147,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fLock*<br/>
-**True** para incrementar o número de objetos rastreados. **False** para diminuir o número de objetos rastreadas.
+*Rebanho*<br/>
+**fiel** ao incremento do número de objetos rastreados. **falso** para diminuir o número de objetos rastreados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, E_FAIL.
+S_OK se for bem sucedido; caso contrário, E_FAIL.
 
 ### <a name="remarks"></a>Comentários
 
-`ClassFactory` mantém o controle de objetos em uma instância subjacente do [módulo](module-class.md) classe.
+`ClassFactory`mantém o controle de objetos em uma instância subjacente da classe [Module.](module-class.md)
 
-## <a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory::QueryInterface
 
-Recupera um ponteiro para a interface especificada pelo parâmetro.
+Recupera um ponteiro para a interface especificada por parâmetro.
 
 ```cpp
 STDMETHOD(
@@ -171,18 +171,18 @@ STDMETHOD(
 ### <a name="parameters"></a>Parâmetros
 
 *riid*<br/>
-Uma ID de interface.
+Um ID de interface.
 
-*ppvObject*<br/>
-Quando essa operação for concluída, um ponteiro para a interface especificada pelo parâmetro *riid*.
+*Ppvobject*<br/>
+Quando esta operação for concluída, um ponteiro para a interface especificado por parâmetro *riid*.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve a falha.
 
-## <a name="release"></a>ClassFactory::Release
+## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory::Lançamento
 
-Diminui a contagem de referência atual `ClassFactory` objeto.
+Decreta a contagem de `ClassFactory` referência para o objeto atual.
 
 ```cpp
 STDMETHOD_(
@@ -191,6 +191,6 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve a falha.

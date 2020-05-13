@@ -1,9 +1,11 @@
 ---
 title: _fseek_nolock, _fseeki64_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fseek_nolock
 - _fseeki64_nolock
+- _o__fseek_nolock
+- _o__fseeki64_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: c72f44b214893a6702f5da5594db7725a2f02136
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956534"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910166"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -61,22 +64,24 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-*deslocamento*<br/>
+*offset*<br/>
 Número de bytes de *origem*.
 
-*origem*<br/>
+*ter*<br/>
 Posição inicial.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O mesmo que [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), respectivamente.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções são as versões sem bloqueio do [fseek](fseek-fseeki64.md) e do [_fseeki64](fseek-fseeki64.md), respectivamente. Eles são idênticos a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) , exceto que eles não são protegidos contra interferência por outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essas funções são as versões sem bloqueio do [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), respectivamente. Eles são idênticos a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) , exceto que não estão protegidos contra interferência por outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,11 +89,11 @@ Essas funções são as versões sem bloqueio do [fseek](fseek-fseeki64.md) e do
 |--------------|---------------------|
 |**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
-[rewind](rewind.md)<br/>
+[retrocesso](rewind.md)<br/>

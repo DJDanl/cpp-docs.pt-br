@@ -1,9 +1,11 @@
 ---
 title: _getc_nolock, _getwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getc_nolock
 - _getwc_nolock
+- _o__getc_nolock
+- _o__getwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: f6c2da5297e07d82fdea96452c3282c19329f24f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 26e72783e3188c663ab1e0b8f824a1da43fe3d16
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955503"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919639"
 ---
 # <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
@@ -62,16 +65,18 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Fluxo de entrada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Consulte [getc, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Comentários
 
 Essas funções são idênticas a **getc** e **getwc** , exceto que não bloqueiam o thread de chamada. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: a71f9dc98f74247788558d1b7dccf3e117f43072
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 46bfe788c13df3a37dd9cba654d16cfe4c3fe177
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416019"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323189"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Suporte a Clang/LLVM em projetos do Visual Studio CMake
 
@@ -21,7 +21,7 @@ O suporte a Clang está disponível no Visual Studio 2019.
 
 ::: moniker range="vs-2019"
 
-Você pode usar o Visual Studio com Clang para editar e C++ depurar projetos CMake destinados ao Windows ou Linux.
+Você pode usar o Visual Studio com Clang para editar e depurar projetos de CMake do C++ destinados ao Windows ou Linux.
 
 **Windows**: o Visual Studio 2019 versão 16,1 inclui suporte para edição, criação e depuração com CLANG/LLVM em projetos CMake destinados ao Windows.
 
@@ -29,7 +29,7 @@ Você pode usar o Visual Studio com Clang para editar e C++ depurar projetos CMa
 
 ## <a name="install"></a>Instalar
 
-Para obter o melhor suporte ao IDE no Visual Studio, é recomendável usar as ferramentas de compilador Clang mais recentes para Windows. Se você ainda não os tiver, poderá instalá-los abrindo a instalador do Visual Studio e escolhendo  **C++ compilador Clang para Windows** em **desenvolvimento de área de C++ trabalho com** componentes opcionais. Ao usar uma instalação personalizada do Clang, verifique o  **C++ componente ferramentas de Build Clang-CL para v142** .
+Para obter o melhor suporte ao IDE no Visual Studio, é recomendável usar as ferramentas de compilador Clang mais recentes para Windows. Se você ainda não os tiver, poderá instalá-los abrindo a Instalador do Visual Studio e escolhendo **compilador C++ Clang para Windows** em **desenvolvimento de área de trabalho com** componentes opcionais do c++. Ao usar uma instalação personalizada do Clang, verifique o componente de **ferramentas de Build do C++ Clang-CL para v142** .
 
 ![Instalação do componente Clang](media/clang-install-vs2019.png)
 
@@ -72,7 +72,7 @@ Você pode especificar outro local definindo as variáveis **CMAKE_C_COMPILER** 
 
 ## <a name="clang-compatibility-modes"></a>Modos de compatibilidade do Clang
 
-Para configurações do Windows, o CMake, por padrão, invoca Clang no modo [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) e links com a implementação da biblioteca padrão da Microsoft. Por padrão, o **Clang-CL. exe** está localizado em `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`.
+Para configurações do Windows, o CMake, por padrão, invoca Clang no modo [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) e links com a implementação da biblioteca padrão da Microsoft. Por padrão, o **Clang-CL. exe** está localizado `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`em.
 
 Você pode modificar esses valores em **configurações de CMake** em **cache Variables and CMake**. Clique em **Mostrar variáveis avançadas**. Role para baixo até localizar **CMAKE_CXX_COMPILER**e, em seguida, clique no botão **procurar** para especificar um caminho de compilador diferente.
 

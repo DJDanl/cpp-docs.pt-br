@@ -1,5 +1,5 @@
 ---
-title: Classe CReBar
+title: Classe Crebar
 ms.date: 11/19/2018
 f1_keywords:
 - CReBar
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 434232e8f99bf914b00379db53d4b4a37d24fe36
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c1379d1ef8effea0df564da1b43769bb9a11435d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363938"
 ---
-# <a name="crebar-class"></a>Classe CReBar
+# <a name="crebar-class"></a>Classe Crebar
 
-Uma barra de controle que fornece informações de layout, persistência e estado para controles Rebar.
+Uma barra de controle que fornece informações de layout, persistência e estado para controles de vergalhões.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,48 +31,48 @@ class CReBar : public CControlBar
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CReBar::AddBar](#addbar)|Adiciona uma banda a um Rebar.|
-|[CReBar:: criar](#create)|Cria o controle rebar e o `CReBar` anexa ao objeto.|
+|[Crebar::Addbar](#addbar)|Adiciona uma banda a um vergalhão.|
+|[CRebar::Criar](#create)|Cria o controle do vergalhão e o prende ao `CReBar` objeto.|
 |[CReBar::GetReBarCtrl](#getrebarctrl)|Permite acesso direto ao controle comum subjacente.|
 
 ## <a name="remarks"></a>Comentários
 
-Um objeto rebar pode conter uma variedade de janelas filhas, geralmente outros controles, incluindo caixas de edição, barras de ferramentas e caixas de listagem. Um objeto rebar pode exibir suas janelas filhas em um bitmap especificado. Seu aplicativo pode redimensionar automaticamente o rebar ou o usuário pode redimensionar manualmente o rebar clicando ou arrastando sua barra de garra.
+Um objeto de vergalhões pode conter uma variedade de janelas de crianças, geralmente outros controles, incluindo caixas de edição, barras de ferramentas e caixas de lista. Um objeto de vergalhões pode exibir suas janelas filho sobre um bitmap especificado. Seu aplicativo pode redimensionar automaticamente a vergalhões, ou o usuário pode redimensionar manualmente a vergalhão clicando ou arrastando sua barra de aperto.
 
 ![Exemplo de RebarMenu](../../mfc/reference/media/vc4sc61.gif "Exemplo de RebarMenu")
 
-## <a name="rebar-control"></a>Controle rebar
+## <a name="rebar-control"></a>Controle de barras
 
-Um objeto rebar se comporta de forma semelhante a um objeto Toolbar. Um rebar usa o mecanismo de clicar e arrastar para redimensionar suas faixas. Um controle rebar pode conter uma ou mais bandas, sendo que cada banda tem qualquer combinação de uma barra de garra, um bitmap, um rótulo de texto e uma janela filho. No entanto, as faixas não podem conter mais de uma janela filho.
+Um objeto de vergalhões se comporta de forma semelhante a um objeto de barra de ferramentas. Uma vergalhão usa o mecanismo de clique e arrasto para redimensionar suas bandas. Um controle de vergalhões pode conter uma ou mais bandas, com cada banda tendo qualquer combinação de uma barra de aperto, um bitmap, uma etiqueta de texto e uma janela infantil. No entanto, as bandas não podem conter mais de uma janela infantil.
 
-`CReBar`usa a classe [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) para fornecer sua implementação. Você pode acessar o controle rebar por meio do [GetReBarCtrl](#getrebarctrl) para aproveitar as opções de personalização do controle. Para obter mais informações sobre controles Rebar, `CReBarCtrl`consulte. Para obter mais informações sobre como usar controles Rebar, consulte [usando CReBarCtrl](../../mfc/using-crebarctrl.md).
+`CReBar`usa a classe [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) para fornecer sua implementação. Você pode acessar o controle do vergalhão através [do GetReBarCtrl](#getrebarctrl) para aproveitar as opções de personalização do controle. Para obter mais informações sobre `CReBarCtrl`controles de vergalhões, consulte . Para obter mais informações sobre como usar controles de verbar, consulte [Usando CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 > [!CAUTION]
->  Os objetos de controle rebar e rebar não dão suporte ao encaixe da barra de controle do MFC. Se `CRebar::EnableDocking` for chamado, seu aplicativo será declarado.
+> Os objetos de controle de vergalhões e vergalhões não suportam o encaixe da barra de controle MFC. Se `CRebar::EnableDocking` for chamado, sua aplicação afirmará.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[Ccontrolbar](../../mfc/reference/ccontrolbar-class.md)
 
 `CReBar`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxext. h
+**Cabeçalho:** afxext.h
 
-##  <a name="addbar"></a>  CReBar::AddBar
+## <a name="crebaraddbar"></a><a name="addbar"></a>Crebar::Addbar
 
-Chame essa função de membro para adicionar uma banda ao Rebar.
+Chame esta função de membro para adicionar uma banda ao vergalhão.
 
 ```
 BOOL AddBar(
@@ -91,35 +91,35 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pBar*<br/>
-Um ponteiro para um `CWnd` objeto que é a janela filho a ser inserida no Rebar. O objeto referenciado deve ter um WS_CHILD.
+*Pbar*<br/>
+Um ponteiro `CWnd` para um objeto que é a janela da criança a ser inserida no vergalhão. O objeto referenciado deve ter uma WS_CHILD.
 
 *lpszText*<br/>
-Um ponteiro para uma cadeia de caracteres que contém o texto a ser exibido no Rebar. NULL por padrão. O texto contido em *lpszText* não faz parte da janela filho; Ele está no próprio próprio Rebar.
+Um ponteiro para uma seqüência contendo o texto para aparecer no vergalhão. NULL por padrão. O texto contido no *lpszText* não faz parte da janela infantil; está no próprio vergalhão.
 
 *pbmp*<br/>
-Um ponteiro para um `CBitmap` objeto a ser exibido no plano de fundo do rebar. NULL por padrão.
+Um ponteiro `CBitmap` para um objeto a ser exibido no fundo do vergalhão. NULL por padrão.
 
-*dwStyle*<br/>
-Um DWORD que contém o estilo a ser aplicado ao Rebar. Consulte a `fStyle` descrição da função no [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) de estrutura do Win32 para obter uma lista completa de estilos de banda.
+*Dwstyle*<br/>
+Um DWORD contendo o estilo a ser aplicado ao vergalhão. Consulte `fStyle` a descrição da função na estrutura Win32 [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) para obter uma lista completa de estilos de banda.
 
 *clrFore*<br/>
-Um valor COLORREF que representa a cor de primeiro plano do rebar.
+Um valor COLORREF que representa a cor do primeiro plano do vergalhão.
 
 *clrBack*<br/>
-Um valor COLORREF que representa a cor do plano de fundo do rebar.
+Um valor COLORREF que representa a cor de fundo do vergalhão.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]
 
-##  <a name="create"></a>  CReBar::Create
+## <a name="crebarcreate"></a><a name="create"></a>CRebar::Criar
 
-Chame essa função de membro para criar um Rebar.
+Chame esta função de membro para criar um vergalhão.
 
 ```
 virtual BOOL Create(
@@ -131,50 +131,50 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pParentWnd*<br/>
-Ponteiro para o `CWnd` objeto cuja janela do Windows é o pai da barra de status. Normalmente, a janela do quadro.
+*Pparentwnd*<br/>
+Ponteiro para `CWnd` o objeto cuja janela do Windows é o pai da barra de status. Normalmente sua janela de moldura.
 
 *dwCtrlStyle*<br/>
-O estilo de controle rebar. Por padrão, RBS_BANDBORDERS, que exibe linhas estreitas para separar as faixas adjacentes dentro do controle rebar. Consulte [estilos de controle rebar](/windows/win32/Controls/rebar-control-styles) no SDK do Windows para obter uma lista de estilos.
+O estilo de controle do vergalhão. Por padrão, RBS_BANDBORDERS, que exibe linhas estreitas para bandas adjacentes separadas dentro do controle do vergalhão. Consulte [Estilos de controle](/windows/win32/Controls/rebar-control-styles) de barras no SDK do Windows para obter uma lista de estilos.
 
-*dwStyle*<br/>
-Os estilos de janela do rebar.
+*Dwstyle*<br/>
+Os estilos da janela do vergalhão.
 
 *nID*<br/>
-A ID da janela filho do rebar.
+A id da janela infantil do vergalhão.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CReBar:: AddBar](#addbar).
+  Veja o exemplo de [CReBar::AddBar](#addbar).
 
-##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
+## <a name="crebargetrebarctrl"></a><a name="getrebarctrl"></a>CReBar::GetReBarCtrl
 
-Essa função de membro permite o acesso direto ao controle comum subjacente.
+Esta função de membro permite acesso direto ao controle comum subjacente.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma referência a um objeto [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) .
+Uma referência a um objeto [CReBarCtrl.](../../mfc/reference/crebarctrl-class.md)
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função de membro para aproveitar a funcionalidade do controle comum do Windows rebar na personalização de seu rebar. Quando você chama `GetReBarCtrl`, ele retorna um objeto de referência para `CReBarCtrl` o objeto para que você possa usar qualquer conjunto de funções de membro.
+Ligue para esta função de membro para aproveitar a funcionalidade do controle comum do Windows na personalização do vergalhão. Quando você `GetReBarCtrl`chama, ele retorna `CReBarCtrl` um objeto de referência para o objeto para que você possa usar qualquer conjunto de funções de membro.
 
-Para obter mais informações sobre `CReBarCtrl` como usar o para personalizar seu rebar, consulte [usando o CReBarCtrl](../../mfc/using-crebarctrl.md).
+Para obter mais `CReBarCtrl` informações sobre como usar o vergalhão, consulte [Usando CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CReBarCtrl#2](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo de MFCIE do MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Amostra MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

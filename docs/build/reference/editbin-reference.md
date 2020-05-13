@@ -9,26 +9,26 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: 45c2967a55e85ae31bb77bb2e8d50415eafbea46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 266347de063b4e050cb032aa2d8d74e7934b8081
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293024"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328343"
 ---
 # <a name="editbin-reference"></a>Referência de EDITBIN
 
-O Editor de arquivo binário COFF da Microsoft (EDITBIN. EXE) modifica arquivos binários do Common objeto COFF (File Format). Você pode usar (editbin) para modificar os arquivos de objeto, arquivos executáveis e bibliotecas de vínculo dinâmico (DLL).
+O Editor de Arquivos Binários do Microsoft COFF (EDITBIN. EXE) modifica arquivos binários Common Object File Format (COFF). Você pode usar o EDITBIN para modificar arquivos de objetos, arquivos executáveis e bibliotecas de link dinâmico (DLL).
 
 > [!NOTE]
->  Você pode iniciar essa ferramenta apenas de prompt de comando do Visual Studio. Você não pode iniciá-lo em um prompt de comando do sistema ou no Explorador de arquivos.
+> Você só pode iniciar esta ferramenta a partir do prompt de comando do Visual Studio. Não é possível iniciá-lo a partir de um prompt de comando do sistema ou do Explorador de Arquivos.
 
-EDITBIN não está disponível para uso em arquivos produzidos com o [/GL](gl-whole-program-optimization.md) opção de compilador. Quaisquer modificações em arquivos binários produzidos com /GL precisará ser obtido ao recompilar e vinculação.
+EDITBIN não está disponível para uso em arquivos produzidos com a opção [/GL](gl-whole-program-optimization.md) compilador. Quaisquer modificações em arquivos binários produzidos com /GL terão que ser alcançadas recompilando e vinculando.
 
 - [Linha de comando EDITBIN](editbin-command-line.md)
 
-- [Opções de EDITBIN](editbin-options.md)
+- [Opções EDITBIN](editbin-options.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Ferramentas de Build do MSVC adicionais](c-cpp-build-tools.md)
+[Ferramentas adicionais de construção de MSVC](c-cpp-build-tools.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
 ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326008"
 ---
 # <a name="c-enumeration-declarations"></a>Declarações de enumeração C
 
@@ -27,7 +27,7 @@ Em ANSI C, as expressões que definem o valor de uma constante de enumerador sem
 ## <a name="syntax"></a>Sintaxe
 
 *enum-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*<sub>opt</sub> **{** *enumerator-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identificador*de enumeração<sub>opt</sub> **{** *enumerador-List* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*
 
 O *identifier* opcional nomeia o tipo de enumeração definido por *enumerator-list*. Esse identificador é geralmente chamado de a "marca" de enumeração especificada pela lista. Um especificador de tipo no formato
@@ -45,16 +45,16 @@ Se a declaração de uma marca estiver visível, as declarações subsequentes q
 
 ## <a name="syntax"></a>Sintaxe
 
-*enumerator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumerator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumerator-list* **,** *enumerator*
+*enumerador-lista*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumera*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumerador-lista* **,** *enumerador*
 
-*enumerator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant* **=** *constant-expression*
+*enumerador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Enumeração-constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**=** *expressão Constant constante-* *constante*
 
-*enumeration-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
+*Enumeração-constante*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID*
 
 Cada *enumeration-constant* em uma *enumeration-list* nomeia um valor do conjunto de enumerações. Por padrão, a primeira *enumeration-constant* é associada ao valor 0. A próxima *enumeration-constant* na lista é associada ao valor de (*constant-expression* + 1 ), a menos que você a associe explicitamente a outro valor. O nome de uma *enumeration-constant* é equivalente ao seu valor.
 
@@ -144,6 +144,6 @@ Os tipos de dados de enumerador sem nome também podem ser declarados. O nome do
 enum { yes, no } response;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Enumerações](../cpp/enumerations-cpp.md)

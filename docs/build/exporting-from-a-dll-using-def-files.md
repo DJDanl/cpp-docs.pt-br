@@ -15,7 +15,7 @@ ms.locfileid: "80078517"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportando a partir de uma DLL usando arquivos DEF
 
-Uma definição de módulo ou arquivo DEF (*.def) é um arquivo de texto que contém uma ou mais declarações de módulo que descrevem vários atributos de uma DLL. Se você não estiver usando a palavra-chave **__declspec (dllexport)** para exportar as funções da dll, a dll exigirá um arquivo def.
+Um arquivo de definição de módulo ou DEF (*. def) é um arquivo de texto que contém uma ou mais instruções de módulo que descrevem vários atributos de uma DLL. Se você não estiver usando a palavra-chave **__declspec (dllexport)** para exportar as funções da dll, a dll exigirá um arquivo def.
 
 Um arquivo DEF mínimo deve conter as seguintes instruções de definição de módulo:
 
@@ -34,9 +34,9 @@ EXPORTS
    Min   @4
 ```
 
-Se você usar o [Assistente de DLL do MFC](../mfc/reference/mfc-dll-wizard.md) para criar uma DLL do MFC, o assistente criará um arquivo de definição de esqueleto para você e o adicionará automaticamente ao seu projeto. Adicione os nomes das funções a serem exportadas para esse arquivo. Para DLLs não MFC, crie o arquivo DEF por conta própria e adicione-o ao seu projeto. Em seguida, vá para **projeto** > **Propriedades** > **vinculador** > **entrada** > **arquivo de definição de módulo** e insira o nome do arquivo def. Repita essa etapa para cada configuração e plataforma, ou faça tudo de uma só vez selecionando **Configuração = todas as configurações**e **plataforma = todas as plataformas**.
+Se você usar o [Assistente de DLL do MFC](../mfc/reference/mfc-dll-wizard.md) para criar uma DLL do MFC, o assistente criará um arquivo de definição de esqueleto para você e o adicionará automaticamente ao seu projeto. Adicione os nomes das funções a serem exportadas para esse arquivo. Para DLLs não MFC, crie o arquivo DEF por conta própria e adicione-o ao seu projeto. Em seguida, vá para**Propriedades** > do **projeto** > **vinculação** > do módulo de**entrada** > **arquivo de definição** e insira o nome do arquivo def. Repita essa etapa para cada configuração e plataforma, ou faça tudo de uma só vez selecionando **Configuração = todas as configurações**e **plataforma = todas as plataformas**.
 
-Se você estiver exportando funções C++ em um arquivo, precisará posicionar os nomes decorados no arquivo def ou definir suas funções exportadas com vínculo C padrão usando o "C" externo. Se você precisar posicionar os nomes decorados no arquivo DEF, poderá obtê-los usando a ferramenta [DUMPBIN](../build/reference/dumpbin-reference.md) ou usando a opção [/MAP](../build/reference/map-generate-mapfile.md) do vinculador. Observe que os nomes decorados produzidos pelo compilador são específicos do compilador. Se você posicionar os nomes decorados produzidos pelo compilador C++ da Microsoft (MSVC) em um arquivo def, os aplicativos vinculados à sua dll também deverão ser criados usando a mesma versão do MSVC para que os nomes decorados no aplicativo de chamada correspondam aos nomes exportados no arquivo def da dll.
+Se você estiver exportando funções em um arquivo C++, precisará posicionar os nomes decorados no arquivo DEF ou definir suas funções exportadas com vínculo C padrão usando o "C" externo. Se você precisar posicionar os nomes decorados no arquivo DEF, poderá obtê-los usando a ferramenta [DUMPBIN](../build/reference/dumpbin-reference.md) ou usando a opção [/MAP](../build/reference/map-generate-mapfile.md) do vinculador. Observe que os nomes decorados produzidos pelo compilador são específicos do compilador. Se você posicionar os nomes decorados produzidos pelo compilador do Microsoft C++ (MSVC) em um arquivo DEF, os aplicativos vinculados à sua DLL também deverão ser criados usando a mesma versão do MSVC para que os nomes decorados no aplicativo de chamada correspondam aos nomes exportados no arquivo DEF da DLL.
 
 > [!NOTE]
 > Uma DLL criada com o Visual Studio 2015 pode ser consumida por aplicativos criados com o Visual Studio 2017 ou com o Visual Studio 2019.
@@ -51,7 +51,7 @@ Se você estiver criando uma [dll de extensão](../build/extension-dlls-overview
 #define AFX_DATA
 ```
 
-Essas linhas garantem que as variáveis do MFC que são usadas internamente ou que sejam adicionadas às suas classes sejam exportadas (ou importadas) de sua DLL de extensão do MFC. Por exemplo, ao derivar uma classe usando `DECLARE_DYNAMIC`, a macro se expande para adicionar uma variável de membro de `CRuntimeClass` à sua classe. Deixar essas quatro linhas pode fazer com que a DLL seja compilada ou vinculada incorretamente ou cause um erro quando o aplicativo cliente for vinculado à DLL.
+Essas linhas garantem que as variáveis do MFC que são usadas internamente ou que sejam adicionadas às suas classes sejam exportadas (ou importadas) de sua DLL de extensão do MFC. Por exemplo, ao derivar uma classe usando `DECLARE_DYNAMIC`, a macro se expande para adicionar `CRuntimeClass` uma variável de membro à sua classe. Deixar essas quatro linhas pode fazer com que a DLL seja compilada ou vinculada incorretamente ou cause um erro quando o aplicativo cliente for vinculado à DLL.
 
 Ao criar a DLL, o vinculador usa o arquivo DEF para criar um arquivo de exportação (. exp) e um arquivo de biblioteca de importação (. lib). Em seguida, o vinculador usa o arquivo de exportação para criar o arquivo DLL. Executáveis que são vinculados implicitamente ao link da DLL para a biblioteca de importação quando eles são criados.
 
@@ -63,9 +63,9 @@ Observe que o próprio MFC usa arquivos DEF para exportar funções e classes do
 
 - [Exportar e importar usando o AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar C++ funções para uso em executáveis de linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funções C++ para uso em executáveis de linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exportar funções C para uso em executáveis C++de linguagem C ou-](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportar funções C para uso em executáveis de linguagem C ou C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
@@ -87,4 +87,4 @@ Observe que o próprio MFC usa arquivos DEF para exportar funções e classes do
 
 ## <a name="see-also"></a>Confira também
 
-[Exportando de uma DLL](exporting-from-a-dll.md)
+[Exportando a partir de uma DLL](exporting-from-a-dll.md)

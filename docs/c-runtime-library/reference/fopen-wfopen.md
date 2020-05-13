@@ -1,9 +1,11 @@
 ---
 title: fopen, _wfopen
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wfopen
 - fopen
+- _o__wfopen
+- _o_fopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 0e50854cf35dd58f7f59f67ed861247b51fd4541
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d468226028928e3edfe67cc7f9b9eec06e06bd56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957046"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914884"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -61,13 +64,13 @@ FILE *_wfopen(
 
 ### <a name="parameters"></a>Parâmetros
 
-*filename*<br/>
+*nome do arquivo*<br/>
 Nome do arquivo.
 
-*modo*<br/>
+*mode*<br/>
 Tipo de acesso habilitado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna um ponteiro para o arquivo aberto. Um valor de ponteiro nulo indica um erro. Se o *nome do arquivo* ou o *modo* for **nulo** ou uma cadeia de caracteres vazia, essas funções dispararão o manipulador de parâmetro inválido, que é descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **NULL** e definirá **errno** como **EINVAL**.
 
@@ -81,15 +84,17 @@ A função **fopen** abre o arquivo especificado por *filename*. Por padrão, um
 
 Sempre verifique o valor retornado para ver se o ponteiro é NULL antes de realizar qualquer operação adicional no arquivo. Se ocorrer um erro, a variável global **errno** será definida e poderá ser usada para obter informações de erro específicas. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="unicode-support"></a>Suporte para Unicode
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="unicode-support"></a>Suporte de Unicode
 
 o **fopen** dá suporte a fluxos de arquivos Unicode. Para abrir um arquivo Unicode, passe um sinalizador **CCS** que especifica a codificação desejada para **fopen**, da seguinte maneira.
 
-> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=** _encoding_ **");**
+> **ARQUIVO \*fp = fopen ("newfile. txt", "RT +, CCS =**_Encoding_**");**
 
 Os valores permitidos de *codificação* são **Unicode**, **UTF-8**e **UTF-16LE**.
 
-Quando um arquivo é aberto no modo Unicode, as funções de entrada convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **wchar_t**. As funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **wchar_t**. Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Tentar ler ou gravar um número ímpar de bytes no modo Unicode gera um erro de [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
+Quando um arquivo é aberto no modo Unicode, as funções de entrada convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **wchar_t**. As funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **wchar_t**. Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Uma tentativa de ler ou gravar um número ímpar de bytes no modo Unicode causa um erro de [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
 
 Se o arquivo já existir e for aberto para ler ou anexar, o BOM (Marca de ordem de byte), se presente no arquivo, determina a codificação. A codificação de BOM tem precedência sobre a codificação especificada pelo sinalizador **CCS** . A codificação **CCS** é usada somente quando nenhuma bom está presente ou o arquivo é um arquivo novo.
 
@@ -100,7 +105,7 @@ A tabela a seguir resume os modos que são usados para vários sinalizadores de 
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Codificações usadas com base em Sinalizador ccs e BOM
 
-|sinalizador CCS|Nenhuma BOM (ou novo arquivo)|BOM UTF-8|BOM UTF-16|
+|sinalizador CCS|Nenhuma BOM (ou novo arquivo)|BOM: UTF-8|BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -108,7 +113,7 @@ A tabela a seguir resume os modos que são usados para vários sinalizadores de 
 
 Arquivos abertos para gravação no modo Unicode têm uma BOM gravada neles automaticamente.
 
-Se *Mode* for **"a, CCS =** _Encoding_ **"** , o **fopen** primeiro tentará abrir o arquivo usando o acesso de leitura e gravação. Se isso for bem-sucedido, a função lê a BOM para determinar a codificação para o arquivo; se falhar, a função usa a codificação padrão para o arquivo. Em ambos os casos, o **fopen** abrirá o arquivo novamente usando o acesso somente gravação. (Isso se aplica apenas ao modo **"a"** , não ao modo **"a +"** .)
+Se *Mode* for **"a, CCS =**_Encoding_**"**, o **fopen** primeiro tentará abrir o arquivo usando o acesso de leitura e gravação. Se isso for bem-sucedido, a função lê a BOM para determinar a codificação para o arquivo; se falhar, a função usa a codificação padrão para o arquivo. Em ambos os casos, o **fopen** abrirá o arquivo novamente usando o acesso somente gravação. (Isso se aplica apenas ao modo **"a"** , não ao modo **"a +"** .)
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -118,20 +123,20 @@ Se *Mode* for **"a, CCS =** _Encoding_ **"** , o **fopen** primeiro tentará abr
 
 O *modo* de cadeia de caracteres especifica o tipo de acesso solicitado para o arquivo, como a seguir.
 
-|*modo*|Access|
+|*mode*|Acesso|
 |-|-|
-| **"r"** | Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **fopen** falhará. |
-| **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |
-| **"a"** | Abre para gravação no fim do arquivo (conexão) sem remover o marcador de EOF (Fim de arquivo) antes de novos dados serem gravados no arquivo. Cria o arquivo se ele não existir. |
-| **"r+"** | Abre para leitura e gravação. O arquivo deve existir. |
-| **"w+"** | Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos. |
-| **"a+"** | Abre para leitura e conexão. A operação de conexão inclui a remoção do marcador de EOF antes de os novos dados serem gravados no arquivo. O marcador de EOF não é restaurado após a gravação ser concluída. Cria o arquivo se ele não existir. |
+| **d** | Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **fopen** falhará. |
+| **Mostrar** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |
+| **um** | Abre para gravação no fim do arquivo (conexão) sem remover o marcador de EOF (Fim de arquivo) antes de novos dados serem gravados no arquivo. Cria o arquivo se ele não existir. |
+| **"r +"** | Abre para leitura e gravação. O arquivo deve existir. |
+| **"w +"** | Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos. |
+| **"a +"** | Abre para leitura e conexão. A operação de conexão inclui a remoção do marcador de EOF antes de os novos dados serem gravados no arquivo. O marcador de EOF não é restaurado após a gravação ser concluída. Cria o arquivo se ele não existir. |
 
 Quando um arquivo é aberto usando o tipo de acesso **"a"** ou o tipo de acesso **"a +"** , todas as operações de gravação ocorrem no final do arquivo. O ponteiro do arquivo pode ser reposicionado usando [fseek](fseek-fseeki64.md) ou [retrocesso](rewind.md), mas sempre é movido de volta para o final do arquivo antes de qualquer operação de gravação ser executada. Portanto, dados existentes não podem ser substituídos.
 
 O modo **"a"** não remove o marcador EOF antes que ele seja anexado ao arquivo. Depois de a conexão ter ocorrido, o comando MS-DOS TYPE só mostra dados até o marcador de EOF original, e não qualquer dado anexado ao arquivo. Antes de acrescentar ao arquivo, o modo **"a +"** remove o marcador EOF. Depois de anexar, o comando MS-DOS TYPE mostra todos os dados no arquivo. O modo **"a +"** é necessário para anexar a um arquivo de fluxo que é encerrado com o marcador EOF CTRL + Z.
 
-Quando o tipo de acesso **"r +"** , **"w +"** ou **"a +"** é especificado, a leitura e a gravação são habilitadas (o arquivo é considerado aberto para "atualização"). Porém, ao trocar de leitura para gravação, a operação de entrada deve encontrar um marcador de EOF. Se não houver EOF, você deve usar uma chamada intermediária para uma função de posicionamento de arquivo. As funções de posicionamento de arquivo são **fsetpos**, [fseek](fseek-fseeki64.md)e [retrocesso](rewind.md). Quando você muda de gravação para leitura, deve usar uma chamada intermediária para **fflush** ou para uma função de posicionamento de arquivo.
+Quando o tipo de acesso **"r +"**, **"w +"** ou **"a +"** é especificado, a leitura e a gravação são habilitadas (o arquivo é considerado aberto para "atualização"). Porém, ao trocar de leitura para gravação, a operação de entrada deve encontrar um marcador de EOF. Se não houver EOF, você deve usar uma chamada intermediária para uma função de posicionamento de arquivo. As funções de posicionamento de arquivo são **fsetpos**, [fseek](fseek-fseeki64.md)e [retrocesso](rewind.md). Quando você muda de gravação para leitura, deve usar uma chamada intermediária para **fflush** ou para uma função de posicionamento de arquivo.
 
 Além dos valores anteriores, os caracteres a seguir podem ser anexados ao *modo* para especificar o modo de tradução para caracteres de nova linha.
 
@@ -140,7 +145,7 @@ Além dos valores anteriores, os caracteres a seguir podem ser anexados ao *modo
 | **t** | Abra no modo de texto (convertido). |
 | **b** | Abrir no modo binário (não traduzido); as traduções que envolvem caracteres de retorno de carro e de alimentação de linha são suprimidas. |
 
-No modo de texto, CTRL + Z é interpretado como um caractere EOF na entrada. Em arquivos abertos para leitura/gravação usando **"a +"** , o **FOPEN** verifica um CTRL + Z no final do arquivo e o Remove, se possível. Isso é feito porque usar [fseek](fseek-fseeki64.md) e **ftell** para mover dentro de um arquivo que termina com CTRL + Z pode fazer com que o [fseek](fseek-fseeki64.md) se comporte incorretamente perto do final do arquivo.
+No modo de texto, CTRL + Z é interpretado como um caractere EOF na entrada. Em arquivos abertos para leitura/gravação usando **"a +"**, o **FOPEN** verifica um CTRL + Z no final do arquivo e o Remove, se possível. Isso é feito porque usar [fseek](fseek-fseeki64.md) e **ftell** para mover dentro de um arquivo que termina com CTRL + Z pode fazer com que o [fseek](fseek-fseeki64.md) se comporte incorretamente perto do final do arquivo.
 
 No modo de texto, as combinações de retorno de carro-alimentação de linha são convertidas em feeds de linha única na entrada e os caracteres de alimentação de linha são convertidos em combinações de retorno de carro-alimentação de linha na saída. Quando uma função de E/S de fluxo Unicode opera no modo de texto (o padrão), presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo Unicode convertem caracteres multibyte em caracteres largos (como por uma chamada à função **mbtowc**). Pelo mesmo motivo, as funções de saída de fluxo Unicode convertem caracteres largos em caracteres multibyte (como por uma chamada à função **wctomb**).
 
@@ -152,36 +157,36 @@ As opções a seguir podem ser acrescentadas ao *modo* para especificar comporta
 
 |modificador de *modo*|Comportamento|
 |-|-|
-| **c** | Habilite o sinalizador de confirmação para o *nome de arquivo* associado para que o conteúdo do buffer de arquivo seja gravado diretamente no disco se o **fflush** ou **_flushall** for chamado. |
+| **&** | Habilite o sinalizador de confirmação para o *nome de arquivo* associado para que o conteúdo do buffer de arquivo seja gravado diretamente no disco se **fflush** ou **_flushall** for chamado. |
 | **n** | Redefina o sinalizador de confirmação para o *nome de arquivo* associado como "sem confirmação". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a COMMODE.OBJ. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a COMMODE.OBJ (consulte [Opções de vinculação](../../c-runtime-library/link-options.md)). |
-| **N** | Especifica que o arquivo não é herdado por processos filhos. |
-| **S** | Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso. |
+| **P** | Especifica que o arquivo não é herdado por processos filhos. |
+| **&** | Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso. |
 | **R** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
 | **T** | Especifica um arquivo como temporário. Se possível, ele não é liberado no disco. |
 | **D** | Especifica um arquivo como temporário. É excluído quando o último ponteiro de arquivo é fechado. |
-| **ccs=** _encoding_ | Especifica o conjunto de caracteres codificado a ser usado (um de **UTF-8**, **UTF-16LE**ou **Unicode**) para esse arquivo. Deixe não especificado se desejar codificação ANSI. |
+| **CCS =**_codificação_ | Especifica o conjunto de caracteres codificado a ser usado (um de **UTF-8**, **UTF-16LE**ou **Unicode**) para esse arquivo. Deixe não especificado se desejar codificação ANSI. |
 
 Os caracteres válidos para a cadeia de caracteres de *modo* usada em **fopen** e **_fdopen** correspondem aos argumentos *oflag* usados em [_open](open-wopen.md) e [_sopen](sopen-wsopen.md), da seguinte maneira.
 
-|Caracteres no *modo* String|Valor equivalente de oflag \_para Open\_/sopen|
+|Caracteres no *modo* String|Valor *oflag* equivalente de oflag \_para Open\_/sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**\_O\_WRONLY** &#124; &#124; **oAppend\_(geralmente o WRONLY o CRI \_**  **\_\_** &#124;  **\_\_**  **\_ O\_Append**)|
-|**a +**|**\_O\_RDWR** &#124; &#124; **oAppend\_(geralmente o RDWR o Append \_**  **\_\_** &#124;  **\_\_**  **\_ O\_cri** )|
+|**um**|**\_O\_WRONLY** &#124; ** \_o\_Append** (geralmente ** \_O\_WRONLY** &#124; ** \_o\_cri** &#124; ** \_o\_Append**)|
+|**a +**|**\_O\_RDWR** &#124; ** \_o\_Append** (geralmente ** \_o\_RDWR** &#124; ** \_o\_Append** &#124; ** \_o\_cri** )|
 |**r**|**\_O\_RDONLY**|
-|**r+**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (geralmente  **\_oWRONLY\_** &#124; **ocri\_o trunc) \_** &#124;  **\_\_**|
-|**w+**|**\_O\_RDWR** (geralmente  **\_oRDWR\_** &#124; **ocri\_o trunc) \_** &#124;  **\_\_**|
-|**b**|**\_O\_BINARY**|
-|**t**|**\_O\_TEXT**|
-|**c**|Nenhum|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (geralmente ** \_o\_WRONLY** &#124; ** \_o\_cri** &#124; ** \_o\_trunc**)|
+|**w +**|**\_O\_RDWR** (geralmente ** \_o\_RDWR** &#124; ** \_o\_cri** &#124; ** \_o\_trunc**)|
+|**b**|**\_O\_binário**|
+|**t**|**\_O\_texto**|
+|**&**|Nenhum|
 |**n**|Nenhum|
-|**S**|**\_O\_SEQUENCIAL**|
-|**R**|**\_O\_ALEATÓRIO**|
+|**&**|**\_O\_sequencial**|
+|**R**|**\_O\_aleatório**|
 |**T**|**\_O\_SHORTLIVED**|
-|**D**|**\_O\_TEMPORÁRIO**|
-|**ccs=UNICODE**|**\_O\_WTEXT**|
-|**ccs=UTF-8**|**\_O\_UTF8**|
-|**ccs=UTF-16LE**|**\_O\_UTF16**|
+|**D**|**\_O\_temporário**|
+|**CCS = UNICODE**|**\_O\_WTEXT**|
+|**CCS = UTF-8**|**\_O\_UTF8**|
+|**CCS = UTF-16LE**|**\_O\_UTF16**|
 
 Se você estiver usando o modo **RB** , não precisará portar seu código e, se você pretende ler a maior parte de um arquivo grande ou se não estiver preocupado com o desempenho da rede, também poderá considerar se deseja usar os arquivos do Win32 mapeados na memória como uma opção.
 
@@ -198,7 +203,7 @@ As opções de *modo* **c**, **n**, **t**, **S**, **R**, **t**e **D** são exten
 
 ## <a name="example-1"></a>Exemplo 1
 
-O seguinte programa abre dois arquivos.  Ele usa **fclose** para fechar o primeiro arquivo e **_fcloseall** para fechar todos os arquivos restantes.
+O seguinte programa abre dois arquivos.  Ele usa **fclose** para fechar o primeiro arquivo e **_fcloseall** fechar todos os arquivos restantes.
 
 ```C
 // crt_fopen.c

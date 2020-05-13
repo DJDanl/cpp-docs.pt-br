@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944941"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910481"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,10 +49,10 @@ int wctob(
 
 ### <a name="parameters"></a>Parâmetros
 
-*wchar*<br/>
+*WCHAR*<br/>
 A valor a ser movido.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se **wctob** converter com êxito um caractere largo, ele retornará sua representação de caractere multibyte, somente se o caractere multibyte tiver exatamente um byte. Se **wctob** encontrar um caractere largo, ele não poderá converter para um caractere multibyte ou o caractere multibyte não será exatamente um byte, ele retornará um-1.
 
@@ -60,13 +62,15 @@ A função **wctob** converte um caractere largo contido em *WCHAR* para o carac
 
 Se **wctob** não tiver sido bem-sucedido e nenhum caractere multibyte correspondente for encontrado, a função definirá **errno** como **EILSEQ** e retornará-1.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -105,7 +109,7 @@ Determined the corresponding multibyte character to be "A".
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

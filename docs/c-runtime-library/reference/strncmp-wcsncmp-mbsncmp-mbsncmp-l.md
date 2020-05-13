@@ -1,11 +1,13 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
+- _o__mbsncmp
+- _o__mbsncmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +23,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: deae95f8cf7d538dfe22ebbe0e86524765d9d234
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947339"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919323"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -98,16 +101,16 @@ int _mbsncmp_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1*, *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres a serem comparadas.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a serem comparados.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor de retorno indica a relação das subcadeias de caracteres de *seqüência1* e *seqüência2* da seguinte maneira.
 
@@ -117,17 +120,19 @@ O valor de retorno indica a relação das subcadeias de caracteres de *seqüênc
 |0|Subcadeia de caracteres *seqüência1* idêntica à Subcadeia *seqüência2*|
 |> 0|Subcadeia de caracteres de *seqüência1* maior que a subcadeia de *seqüência2*|
 
-Em um erro de validação de parâmetro, **_mbsncmp** e **_mbsncmp_l** retornam **_NLSCMPERROR**, que \<é definido em String. \<h > e Mbstring. h >.
+Em um erro de validação de parâmetro, **_mbsncmp** e **_mbsncmp_l** retornar **_NLSCMPERROR**, que é \<definido em string. h \<> e Mbstring. h>.
 
 ## <a name="remarks"></a>Comentários
 
-A função **strncmp** executa uma comparação ordinal de, no máximo, os primeiros caracteres de *contagem* em *seqüência1* e *seqüência2* e retorna um valor que indica a relação entre as subcadeias de caracteres. **strncmp** é uma versão com diferenciação de maiúsculas e minúsculas do **_strnicmp**. **wcsncmp** e **_mbsncmp** são versões com diferenciação de maiúsculas e minúsculas do **_wcsnicmp** e do **_mbsnicmp**.
+A função **strncmp** executa uma comparação ordinal de, no máximo, os primeiros caracteres de *contagem* em *seqüência1* e *seqüência2* e retorna um valor que indica a relação entre as subcadeias de caracteres. **strncmp** é uma versão que diferencia maiúsculas de minúsculas do **_strnicmp**. **wcsncmp** e **_mbsncmp** são versões com diferenciação de maiúsculas e minúsculas de **_wcsnicmp** e **_mbsnicmp**.
 
-**wcsncmp** e **_mbsncmp** são versões de caractere largo e de multibyte de **strncmp**. Os argumentos de **wcsncmp** são cadeias de caracteres largos; os de **_mbsncmp** são cadeias de caracteres multibyte. o **_mbsncmp** reconhece sequências de caracteres multibyte de acordo com uma página de código multibyte e retorna **_NLSCMPERROR** em um erro.
+**wcsncmp** e **_mbsncmp** são versões de caractere largo e multibyte de **strncmp**. Os argumentos de **wcsncmp** são cadeias de caracteres largos; os de **_mbsncmp** são cadeias de caracteres multibyte. **_mbsncmp** reconhece seqüências de caracteres multibyte de acordo com uma página de código multibyte e retorna **_NLSCMPERROR** em um erro.
 
-Além disso, **_mbsncmp** e **_mbsncmp_l** validam parâmetros. Se *string1* ou *seqüência2* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_mbsncmp** e **_mbsncmp_l** retornará **_NLSCMPERROR** e definir **errno** como **EINVAL**. **strncmp** e **wcsncmp** não validam seus parâmetros. Caso contrário, essas funções se comportam de forma idêntica.
+Além disso, **_mbsncmp** e **_mbsncmp_l** parâmetros de validação. Se *string1* ou *seqüência2* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_mbsncmp** e **_mbsncmp_l** retornar **_NLSCMPERROR** e definir **errno** como **EINVAL**. **strncmp** e **wcsncmp** não validam seus parâmetros. Caso contrário, essas funções se comportam de forma idêntica.
 
-O comportamento de comparação de **_mbsncmp** e **_mbsncmp_l** é afetado pela definição da configuração de categoria **LC_CTYPE** da localidade. Isso controla a detecção de bytes à esquerda e à direita de caracteres multibyte. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). A função **_mbsncmp** usa a localidade atual para esse comportamento dependente de localidade. A função **_mbsncmp_l** é idêntica, exceto pelo fato de usar o parâmetro *locale* em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md). Se a localidade for uma localidade de byte único, o comportamento dessas funções será idêntico a **strncmp**.
+O comportamento de comparação de **_mbsncmp** e **_mbsncmp_l** é afetado pela definição da configuração de categoria de **LC_CTYPE** da localidade. Isso controla a detecção de bytes à esquerda e à direita de caracteres multibyte. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). A função **_mbsncmp** usa a localidade atual para esse comportamento dependente de localidade. A função **_mbsncmp_l** é idêntica, exceto pelo fato de usar o parâmetro *locale* em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md). Se a localidade for uma localidade de byte único, o comportamento dessas funções será idêntico a **strncmp**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -136,7 +141,7 @@ O comportamento de comparação de **_mbsncmp** e **_mbsncmp_l** é afetado pela
 |**_tcsnccmp**|**strncmp**|**_mbsncmp**|**wcsncmp**|
 |**_tcsncmp**|**strncmp**|**_mbsnbcmp**|**wcsncmp**|
 |**_tccmp**|É mapeado para um macro ou uma função embutida|**_mbsncmp**|É mapeado para um macro ou uma função embutida|
-|**não aplicável**|**não aplicável**|**_mbsncmp_l**|**não aplicável**|
+|**Não aplicável**|**Não aplicável**|**_mbsncmp_l**|**Não aplicável**|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -146,7 +151,7 @@ O comportamento de comparação de **_mbsncmp** e **_mbsncmp_l** é afetado pela
 |**wcsncmp**|\<string.h> ou \<wchar.h>|
 |**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -197,10 +202,10 @@ Function:   strnicmp _strnicmp (first 10 characters only)
 Result:      String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>

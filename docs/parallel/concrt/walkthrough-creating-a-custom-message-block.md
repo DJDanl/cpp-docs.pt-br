@@ -5,190 +5,190 @@ helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: a29ed382d67b91443bd13e029af2a37c42ee834d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 3386994dce68812cf3ed0852a24d8910cb903acf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142822"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368565"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Instruções passo a passo: criando um bloco de mensagens personalizado
 
-Este documento descreve como criar um tipo de bloco de mensagens personalizado que ordena mensagens de entrada por prioridade.
+Este documento descreve como criar um tipo de bloco de mensagem personalizado que ordena mensagens recebidas por prioridade.
 
-Embora os tipos de bloco de mensagens internos forneçam uma ampla gama de funcionalidades, você pode criar seu próprio tipo de bloco de mensagens e personalizá-lo para atender aos requisitos do seu aplicativo. Para obter uma descrição dos tipos de bloco de mensagens internos fornecidos pela biblioteca de agentes assíncronos, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md).
+Embora os tipos de blocos de mensagens incorporados forneçam uma ampla gama de funcionalidades, você pode criar seu próprio tipo de bloco de mensagem e personalizá-lo para atender aos requisitos do seu aplicativo. Para obter uma descrição dos tipos de blocos de mensagens incorporados fornecidos pela Biblioteca de Agentes Assíncronos, consulte Blocos de [mensagens Assíncronos](../../parallel/concrt/asynchronous-message-blocks.md).
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
-Leia os seguintes documentos antes de iniciar este passo a passos:
+Leia os seguintes documentos antes de iniciar este passo a passo:
 
 - [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)
 
 - [Funções de transmissão de mensagem](../../parallel/concrt/message-passing-functions.md)
 
-## <a name="top"></a>As
+## <a name="sections"></a><a name="top"></a>Seções
 
 Este passo a passo contém as seguintes seções:
 
-- [Criando um bloco de mensagem personalizado](#design)
+- [Projetando um Bloco de Mensagem Personalizado](#design)
 
-- [Definindo a classe de priority_buffer](#class)
+- [Definindo a Classe priority_buffer](#class)
 
 - [O exemplo completo](#complete)
 
-## <a name="design"></a>Criando um bloco de mensagem personalizado
+## <a name="designing-a-custom-message-block"></a><a name="design"></a>Projetando um bloco de mensagens personalizado
 
-Os blocos de mensagens participam do ato de enviar e receber mensagens. Um bloco de mensagens que envia mensagens é conhecido como um *bloco de origem*. Um bloco de mensagens que recebe mensagens é conhecido como um *bloco de destino*. Um bloco de mensagens que envia e recebe mensagens é conhecido como um *bloco propagador*. A biblioteca de agentes usa a classe abstrata [Concurrency:: as](../../parallel/concrt/reference/isource-class.md) para representar os blocos de origem e a classe abstrata [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) para representar os blocos de destino. Tipos de bloco de mensagens que atuam como fontes derivam de `ISource`; tipos de bloco de mensagens que atuam como destinos derivam de `ITarget`.
+Blocos de mensagens participam do ato de envio e recebimento de mensagens. Um bloco de mensagens que envia mensagens é conhecido como um *bloco de origem*. Um bloco de mensagens que recebe mensagens é conhecido como um *bloco de destino*. Um bloco de mensagens que envia e recebe mensagens é conhecido como *um bloco propagador*. A Biblioteca de agentes usa a classe abstrata [simultâneo::ISource](../../parallel/concrt/reference/isource-class.md) para representar blocos de origem e a classe abstrata [simultâneo::ITarget](../../parallel/concrt/reference/itarget-class.md) para representar blocos de destino. Os tipos de blocos `ISource`de mensagens que agem como fontes derivam; tipos de blocos de mensagem que agem como alvos derivam de `ITarget`.
 
-Embora você possa derivar seu tipo de bloco de mensagens diretamente de `ISource` e `ITarget`, a biblioteca de agentes define três classes base que executam grande parte da funcionalidade que é comum a todos os tipos de bloco de mensagens, por exemplo, tratamento de erros e conexão de blocos de mensagens juntos de maneira segura e em simultaneidade. A classe [Concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md) deriva de `ISource` e envia mensagens para outros blocos. A classe [Concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md) deriva de `ITarget` e recebe mensagens de outros blocos. A classe [Concurrency::p ropagator_block](../../parallel/concrt/reference/propagator-block-class.md) deriva de `ISource` e `ITarget` e envia mensagens a outros blocos e recebe mensagens de outros blocos. Recomendamos que você use essas três classes base para manipular detalhes da infraestrutura para que você possa se concentrar no comportamento do seu bloco de mensagens.
+Embora você possa derivar seu `ISource` `ITarget`tipo de bloco de mensagem diretamente e , a Biblioteca de agentes define três classes base que executam grande parte da funcionalidade que é comum a todos os tipos de blocos de mensagens, por exemplo, manipulação de erros e conexão de blocos de mensagens de forma segura. A [classe de si00::source_block](../../parallel/concrt/reference/source-block-class.md) deriva `ISource` e envia mensagens para outros blocos. A [classe de si0::target_block](../../parallel/concrt/reference/target-block-class.md) deriva `ITarget` e recebe mensagens de outros blocos. A [classe simultâneo::propagator_block](../../parallel/concrt/reference/propagator-block-class.md) deriva `ISource` e `ITarget` envia mensagens para outros blocos e recebe mensagens de outros blocos. Recomendamos que você use essas três classes básicas para lidar com detalhes de infra-estrutura para que você possa se concentrar no comportamento do seu bloco de mensagens.
 
-As classes `source_block`, `target_block`e `propagator_block` são modelos que são parametrizados em um tipo que gerencia as conexões, ou links, entre os blocos de origem e de destino e em um tipo que gerencia como as mensagens são processadas. A biblioteca de agentes define dois tipos que executam o gerenciamento de links, [Concurrency:: single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md) e [concurrency:: multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md). A classe `single_link_registry` permite que um bloco de mensagem seja vinculado a uma origem ou a um destino. A classe `multi_link_registry` permite que um bloco de mensagens seja vinculado a várias fontes ou a vários destinos. A biblioteca de agentes define uma classe que executa o gerenciamento de mensagens, [Concurrency:: ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md). A classe `ordered_message_processor` permite que os blocos de mensagens processem as mensagens na ordem em que são recebidas.
+As `source_block` `target_block`classes `propagator_block` e classes são modelos parametrizados em um tipo que gerencia as conexões, ou links, entre blocos de origem e destino e em um tipo que gerencia como as mensagens são processadas. A Biblioteca de Agentes define dois tipos que executam o gerenciamento de links, [simultâneo::single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md) e [simultâneo::multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md). A `single_link_registry` classe permite que um bloco de mensagens seja vinculado a uma fonte ou a um alvo. A `multi_link_registry` classe permite que um bloco de mensagens seja vinculado a várias fontes ou vários alvos. A Biblioteca de Agentes define uma classe que executa o gerenciamento [de mensagens, simultuou::ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md). A `ordered_message_processor` classe permite que blocos de mensagens processem mensagens na ordem em que as recebe.
 
-Para entender melhor como os blocos de mensagens se relacionam com suas origens e destinos, considere o exemplo a seguir. Este exemplo mostra a declaração da classe [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) .
+Para entender melhor como os blocos de mensagens se relacionam com suas fontes e alvos, considere o seguinte exemplo. Este exemplo mostra a declaração da [classe simultuária::transformer.](../../parallel/concrt/reference/transformer-class.md)
 
 [!code-cpp[concrt-priority-buffer#20](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_1.cpp)]
 
-A classe `transformer` deriva de `propagator_block`e, portanto, atua como um bloco de origem e como um bloco de destino. Ele aceita mensagens do tipo `_Input` e envia mensagens do tipo `_Output`. A classe `transformer` especifica `single_link_registry` como o Gerenciador de links para qualquer bloco de destino e `multi_link_registry` como o Gerenciador de links para qualquer bloco de origem. Portanto, um objeto `transformer` pode ter até um destino e um número ilimitado de fontes.
+A `transformer` classe deriva `propagator_block`, e, portanto, age como um bloco de origem e como um bloco de destino. Aceita mensagens de `_Input` tipo e envia `_Output`mensagens do tipo . A `transformer` classe `single_link_registry` especifica como o gerenciador `multi_link_registry` de links para quaisquer blocos de destino e como o gerenciador de link para quaisquer blocos de origem. Portanto, um `transformer` objeto pode ter até um alvo e um número ilimitado de fontes.
 
-Uma classe derivada de `source_block` deve implementar seis métodos: [propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets), [accept_message](reference/source-block-class.md#accept_message), [reserve_message](reference/source-block-class.md#reserve_message), [consume_message](reference/source-block-class.md#consume_message), [release_message](reference/source-block-class.md#release_message)e [resume_propagation](reference/source-block-class.md#resume_propagation). Uma classe que deriva de `target_block` deve implementar o método [propagate_message](reference/propagator-block-class.md#propagate_message) e, opcionalmente, pode implementar o método [send_message](reference/propagator-block-class.md#send_message) . Derivar de `propagator_block` é funcionalmente equivalente a derivar de `source_block` e `target_block`.
+Uma classe derivada `source_block` deve implementar seis métodos: [propagate_to_any_targets,](reference/source-block-class.md#propagate_to_any_targets) [accept_message](reference/source-block-class.md#accept_message), [reserve_message](reference/source-block-class.md#reserve_message), [consume_message](reference/source-block-class.md#consume_message), [release_message](reference/source-block-class.md#release_message)e [resume_propagation](reference/source-block-class.md#resume_propagation). Uma classe derivada `target_block` deve implementar o método [propagate_message](reference/propagator-block-class.md#propagate_message) e pode, opcionalmente, implementar o método [send_message.](reference/propagator-block-class.md#send_message) O derivado `propagator_block` é funcionalmente equivalente ao `source_block` `target_block`derivado de ambos e .
 
-O método `propagate_to_any_targets` é chamado pelo tempo de execução para processar de forma assíncrona ou síncrona as mensagens de entrada e propagar quaisquer mensagens de saída. O método `accept_message` é chamado por blocos de destino para aceitar mensagens. Muitos tipos de bloco de mensagens, como `unbounded_buffer`, enviam mensagens somente para o primeiro destino que a receberia. Portanto, ele transfere a propriedade da mensagem para o destino. Outros tipos de bloco de mensagens, como [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md), oferecem mensagens a cada um de seus blocos de destino. Portanto, `overwrite_buffer` cria uma cópia da mensagem para cada um de seus destinos.
+O `propagate_to_any_targets` método é chamado pelo tempo de execução para processar assíncrona ou sincronizadamente quaisquer mensagens recebidas e propagar quaisquer mensagens de saída. O `accept_message` método é chamado por blocos de destino para aceitar mensagens. Muitos tipos de blocos de mensagens, como `unbounded_buffer`, enviar mensagens apenas para o primeiro alvo que iria recebê-lo. Portanto, transfere a propriedade da mensagem para o alvo. Outros tipos de blocos de mensagens, como [simultu:overwrite_buffer,](../../parallel/concrt/reference/overwrite-buffer-class.md)oferecem mensagens a cada um de seus blocos-alvo. Portanto, `overwrite_buffer` cria uma cópia da mensagem para cada um de seus alvos.
 
-Os métodos `reserve_message`, `consume_message`, `release_message`e `resume_propagation` permitem que os blocos de mensagens participem da reserva de mensagens. Os blocos de destino chamam o método `reserve_message` quando são oferecidos uma mensagem e precisam reservar a mensagem para uso posterior. Depois que um bloco de destino reserva uma mensagem, ele pode chamar o método `consume_message` para consumir essa mensagem ou o método `release_message` para cancelar a reserva. Assim como com o método `accept_message`, a implementação do `consume_message` pode transferir a propriedade da mensagem ou retornar uma cópia da mensagem. Depois que um bloco de destino consome ou libera uma mensagem reservada, o tempo de execução chama o método `resume_propagation`. Normalmente, esse método continua a propagação de mensagens, começando com a próxima mensagem na fila.
+Os `reserve_message` `consume_message`métodos `release_message` `resume_propagation` e os métodos permitem que blocos de mensagens participem da reserva de mensagens. Os blocos `reserve_message` de destino chamam o método quando são oferecidas uma mensagem e têm que reservar a mensagem para uso posterior. Depois que um bloco de destino `consume_message` reserva uma mensagem, `release_message` ele pode chamar o método para consumir essa mensagem ou o método para cancelar a reserva. Assim como `accept_message` no método, `consume_message` a implementação pode transferir a propriedade da mensagem ou devolver uma cópia da mensagem. Depois que um bloco de destino consome ou libera `resume_propagation` uma mensagem reservada, o tempo de execução chama o método. Normalmente, esse método continua a propagação de mensagens, começando com a próxima mensagem na fila.
 
-O tempo de execução chama o método `propagate_message` para transferir de forma assíncrona uma mensagem de outro bloco para o atual. O método `send_message` é semelhante a `propagate_message`, exceto que, de forma síncrona, em vez de assincronamente, envia a mensagem para os blocos de destino. A implementação padrão de `send_message` rejeita todas as mensagens de entrada. O tempo de execução não chamará nenhum desses métodos se a mensagem não passar a função de filtro opcional que está associada ao bloco de destino. Para obter mais informações sobre filtros de mensagens, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md).
+O tempo de `propagate_message` execução chama o método para transferir assíncronamente uma mensagem de outro bloco para a atual. O `send_message` método `propagate_message`se assemelha, exceto que ele sincronizadamente, em vez de assíncronamente, envia a mensagem para os blocos de destino. A implementação `send_message` padrão de rejeita todas as mensagens recebidas. O tempo de execução não liga para nenhum desses métodos se a mensagem não passar na função de filtro opcional associada ao bloco de destino. Para obter mais informações sobre filtros de mensagens, consulte [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
-## <a name="class"></a>Definindo a classe de priority_buffer
+## <a name="defining-the-priority_buffer-class"></a><a name="class"></a>Definindo a Classe priority_buffer
 
-A classe `priority_buffer` é um tipo de bloco de mensagens personalizado que ordena mensagens de entrada primeiro por prioridade e, em seguida, pela ordem em que as mensagens são recebidas. A classe `priority_buffer` é semelhante à classe [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) porque contém uma fila de mensagens e também porque atua como um bloco de mensagens de origem e de destino e pode ter várias origens e vários destinos. No entanto, `unbounded_buffer` baseia a propagação de mensagens somente na ordem em que recebe mensagens de suas fontes.
+A `priority_buffer` classe é um tipo de bloco de mensagem personalizado que encomenda mensagens recebidas primeiro por prioridade e, em seguida, pela ordem em que as mensagens são recebidas. A `priority_buffer` classe se assemelha à [classe de concorrência::unbounded_buffer](reference/unbounded-buffer-class.md) classe porque mantém uma fila de mensagens, e também porque age como uma fonte e um bloco de mensagem de destino e pode ter várias fontes e vários alvos. No `unbounded_buffer` entanto, baseia a propagação de mensagens apenas na ordem em que recebe mensagens de suas fontes.
 
-A classe `priority_buffer` recebe mensagens do tipo std::[tupla](../../standard-library/tuple-class.md) que contêm `PriorityType` e `Type` elementos. `PriorityType` refere-se ao tipo que contém a prioridade de cada mensagem; `Type` refere-se à parte de dados da mensagem. A classe `priority_buffer` envia mensagens do tipo `Type`. A classe `priority_buffer` também gerencia duas filas de mensagens: um objeto [std::p riority_queue](../../standard-library/priority-queue-class.md) para mensagens de entrada e um objeto std::[Queue](../../standard-library/queue-class.md) para mensagens de saída. A ordenação de mensagens por prioridade é útil quando um objeto `priority_buffer` recebe várias mensagens simultaneamente ou quando recebe várias mensagens antes que qualquer mensagem seja lida pelos consumidores.
+A `priority_buffer` classe recebe mensagens do tipo std:: `Type` [tuple](../../standard-library/tuple-class.md) que contêm `PriorityType` e elementos. `PriorityType`refere-se ao tipo que detém a prioridade de cada mensagem; `Type` refere-se à parte de dados da mensagem. A `priority_buffer` classe envia mensagens do tipo `Type`. A `priority_buffer` classe também gerencia duas filas de mensagens: um objeto [std::priority_queue](../../standard-library/priority-queue-class.md) para mensagens recebidas e um objeto de[fila](../../standard-library/queue-class.md) para mensagens de saída. O pedido de mensagens `priority_buffer` por prioridade é útil quando um objeto recebe várias mensagens simultaneamente ou quando recebe várias mensagens antes de qualquer mensagem ser lida pelos consumidores.
 
-Além dos sete métodos que uma classe derivada de `propagator_block` deve implementar, a classe `priority_buffer` também substitui os métodos `link_target_notification` e `send_message`. A classe `priority_buffer` também define dois métodos auxiliares públicos, `enqueue` e `dequeue`, e um método auxiliar privado, `propagate_priority_order`.
+Além dos sete métodos que uma classe `propagator_block` que deriva `priority_buffer` deve implementar, `link_target_notification` `send_message` a classe também substitui os métodos. A `priority_buffer` classe também define dois métodos `enqueue` `dequeue`de ajuda pública, e `propagate_priority_order`, e um método auxiliar privado, .
 
-O procedimento a seguir descreve como implementar a classe `priority_buffer`.
+O procedimento a seguir descreve `priority_buffer` como implementar a classe.
 
 #### <a name="to-define-the-priority_buffer-class"></a>Para definir a classe priority_buffer
 
-1. Crie um C++ arquivo de cabeçalho e nomeie-o `priority_buffer.h`. Como alternativa, você pode usar um arquivo de cabeçalho existente que faz parte do seu projeto.
+1. Crie um arquivo de cabeçalho C++ e nomeie-o `priority_buffer.h`. Alternativamente, você pode usar um arquivo de cabeçalho existente que faz parte do seu projeto.
 
-1. Em `priority_buffer.h`, adicione o código a seguir.
+1. Em `priority_buffer.h`, adicione o seguinte código.
 
-[!code-cpp[concrt-priority-buffer#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_2.h)]
+    [!code-cpp[concrt-priority-buffer#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_2.h)]
 
-1. No namespace `std`, defina especializações de [std:: less](../../standard-library/less-struct.md) e [std:: Great](../../standard-library/greater-struct.md) que agem em objetos Concurrency::[Message](../../parallel/concrt/reference/message-class.md) .
+1. No `std` namespace, defina especializações de [std::less](../../standard-library/less-struct.md) e [std::maior](../../standard-library/greater-struct.md) estocadas em simultâneos:: objetos[de mensagem.](../../parallel/concrt/reference/message-class.md)
 
-[!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
+    [!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
 
-   A classe `priority_buffer` armazena `message` objetos em um objeto `priority_queue`. Essas especializações de tipo permitem que a fila de prioridade classifique mensagens de acordo com sua prioridade. A prioridade é o primeiro elemento do objeto `tuple`.
+   A `priority_buffer` classe `message` armazena `priority_queue` objetos em um objeto. Essas especializações do tipo permitem que a fila de prioridades classifique as mensagens de acordo com sua prioridade. A prioridade é o `tuple` primeiro elemento do objeto.
 
-1. No namespace `concurrencyex`, declare a classe `priority_buffer`.
+1. No `concurrencyex` namespace, declare `priority_buffer` a classe.
 
-[!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
+    [!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
 
-   O `priority_buffer` classe deriva de `propagator_block`. Portanto, ele pode enviar e receber mensagens. A classe `priority_buffer` pode ter vários destinos que recebem mensagens do tipo `Type`. Ele também pode ter várias fontes que enviam mensagens do tipo `tuple<PriorityType, Type>`.
+   O `priority_buffer` classe deriva de `propagator_block`. Portanto, ele pode enviar e receber mensagens. A `priority_buffer` classe pode ter vários alvos que `Type`recebem mensagens do tipo . Ele também pode ter várias fontes `tuple<PriorityType, Type>`que enviam mensagens do tipo .
 
-1. Na seção `private` da classe `priority_buffer`, adicione as seguintes variáveis de membro.
+1. Na `private` seção `priority_buffer` da classe, adicione as seguintes variáveis de membro.
 
-[!code-cpp[concrt-priority-buffer#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_5.h)]
+    [!code-cpp[concrt-priority-buffer#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_5.h)]
 
-   O objeto `priority_queue` contém mensagens de entrada; o objeto `queue` mantém as mensagens de saída. Um objeto `priority_buffer` pode receber várias mensagens simultaneamente; o objeto `critical_section` sincroniza o acesso à fila de mensagens de entrada.
+   O `priority_queue` objeto contém mensagens recebidas; o `queue` objeto contém mensagens de saída. Um `priority_buffer` objeto pode receber várias mensagens simultaneamente; o `critical_section` objeto sincroniza o acesso à fila de mensagens de entrada.
 
-1. Na seção `private`, defina o construtor de cópia e o operador de atribuição. Isso impede que `priority_queue` objetos sejam atribuíveis.
+1. Na `private` seção, defina o construtor de cópias e o operador de atribuição. Isso evita `priority_queue` que objetos sejam atribuídos.
 
-[!code-cpp[concrt-priority-buffer#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_6.h)]
+    [!code-cpp[concrt-priority-buffer#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_6.h)]
 
-1. Na seção `public`, defina os construtores que são comuns a muitos tipos de bloco de mensagens. Defina também o destruidor.
+1. Na `public` seção, defina os construtores que são comuns a muitos tipos de blocos de mensagem. Também defina o destruidor.
 
-[!code-cpp[concrt-priority-buffer#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_7.h)]
+    [!code-cpp[concrt-priority-buffer#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_7.h)]
 
-1. Na seção `public`, defina os métodos `enqueue` e `dequeue`. Esses métodos auxiliares fornecem uma maneira alternativa de enviar e receber mensagens de um objeto `priority_buffer`.
+1. Na `public` seção, defina `enqueue` `dequeue`os métodos e . Esses métodos auxiliares fornecem uma maneira alternativa de enviar `priority_buffer` mensagens e receber mensagens de um objeto.
 
-[!code-cpp[concrt-priority-buffer#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_8.h)]
+    [!code-cpp[concrt-priority-buffer#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_8.h)]
 
-9. Na seção `protected`, defina o método `propagate_to_any_targets`.
+1. Na `protected` seção, `propagate_to_any_targets` defina o método.
 
-[!code-cpp[concrt-priority-buffer#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_9.h)]
+    [!code-cpp[concrt-priority-buffer#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_9.h)]
 
-   O método `propagate_to_any_targets` transfere a mensagem que está na frente da fila de entrada para a fila de saída e propaga todas as mensagens na fila de saída.
+   O `propagate_to_any_targets` método transfere a mensagem que está na frente da fila de entrada para a fila de saída e propaga todas as mensagens na fila de saída.
 
-10. Na seção `protected`, defina o método `accept_message`.
+1. Na `protected` seção, `accept_message` defina o método.
 
-[!code-cpp[concrt-priority-buffer#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_10.h)]
+    [!code-cpp[concrt-priority-buffer#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_10.h)]
 
-   Quando um bloco de destino chama o método `accept_message`, a classe `priority_buffer` transfere a propriedade da mensagem para o primeiro bloco de destino que a aceita. (Isso se assemelha ao comportamento de `unbounded_buffer`.)
+   Quando um bloco `accept_message` de destino `priority_buffer` chama o método, a classe transfere a propriedade da mensagem para o primeiro bloco de destino que a aceita. (Isso se assemelha `unbounded_buffer`ao comportamento de .)
 
-11. Na seção `protected`, defina o método `reserve_message`.
+1. Na `protected` seção, `reserve_message` defina o método.
 
-[!code-cpp[concrt-priority-buffer#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_11.h)]
+    [!code-cpp[concrt-priority-buffer#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_11.h)]
 
-   A classe `priority_buffer` permite que um bloco de destino Reserve uma mensagem quando o identificador de mensagem fornecido corresponde ao identificador da mensagem que está na frente da fila. Em outras palavras, um destino poderá reservar a mensagem se o objeto de `priority_buffer` ainda não tiver recebido uma mensagem adicional e ainda não tiver propagado o mesmo.
+   A `priority_buffer` classe permite que um bloco de destino reserve uma mensagem quando o identificador de mensagem fornecido corresponder ao identificador da mensagem que está na frente da fila. Em outras palavras, um alvo `priority_buffer` pode reservar a mensagem se o objeto ainda não recebeu uma mensagem adicional e ainda não propagou a atual.
 
-12. Na seção `protected`, defina o método `consume_message`.
+1. Na `protected` seção, `consume_message` defina o método.
 
-[!code-cpp[concrt-priority-buffer#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_12.h)]
+    [!code-cpp[concrt-priority-buffer#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_12.h)]
 
-   Um bloco de destino chama `consume_message` para transferir a propriedade da mensagem que ele reservou.
+   Um bloco `consume_message` de destino chama para transferir a propriedade da mensagem que ele reservou.
 
-13. Na seção `protected`, defina o método `release_message`.
+1. Na `protected` seção, `release_message` defina o método.
 
-[!code-cpp[concrt-priority-buffer#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_13.h)]
+    [!code-cpp[concrt-priority-buffer#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_13.h)]
 
-   Um bloco de destino chama `release_message` para cancelar sua reserva para uma mensagem.
+   Um bloco `release_message` de destino liga para cancelar sua reserva para uma mensagem.
 
-14. Na seção `protected`, defina o método `resume_propagation`.
+1. Na `protected` seção, `resume_propagation` defina o método.
 
-[!code-cpp[concrt-priority-buffer#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_14.h)]
+    [!code-cpp[concrt-priority-buffer#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_14.h)]
 
-   O tempo de execução chama `resume_propagation` depois que um bloco de destino consome ou libera uma mensagem reservada. Esse método propaga todas as mensagens que estão na fila de saída.
+   O tempo `resume_propagation` de execução é chamada após um bloco de destino consumir ou liberar uma mensagem reservada. Este método propaga todas as mensagens que estão na fila de saída.
 
-15. Na seção `protected`, defina o método `link_target_notification`.
+1. Na `protected` seção, `link_target_notification` defina o método.
 
-[!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
+    [!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
 
-   A variável de membro `_M_pReservedFor` é definida pela classe base, `source_block`. Essa variável de membro aponta para o bloco de destino, se houver, que está mantendo uma reserva para a mensagem que está na frente da fila de saída. O tempo de execução chama `link_target_notification` quando um novo destino é vinculado ao objeto `priority_buffer`. Esse método propaga todas as mensagens que estão na fila de saída se nenhum destino estiver segurando uma reserva.
+   A `_M_pReservedFor` variável membro é definida `source_block`pela classe base, . Esta variável de membro aponta para o bloco de destino, se houver, que está segurando uma reserva para a mensagem que está na frente da fila de saída. O tempo `link_target_notification` de execução é call `priority_buffer` quando um novo alvo está vinculado ao objeto. Este método propaga todas as mensagens que estão na fila de saída se nenhum alvo estiver segurando uma reserva.
 
-16. Na seção `private`, defina o método `propagate_priority_order`.
+1. Na `private` seção, `propagate_priority_order` defina o método.
 
-[!code-cpp[concrt-priority-buffer#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_16.h)]
+    [!code-cpp[concrt-priority-buffer#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_16.h)]
 
-   Esse método propaga todas as mensagens da fila de saída. Cada mensagem na fila é oferecida a cada bloco de destino até que um dos blocos de destino aceite a mensagem. A classe `priority_buffer` preserva a ordem das mensagens de saída. Portanto, a primeira mensagem na fila de saída deve ser aceita por um bloco de destino antes que esse método ofereça qualquer outra mensagem aos blocos de destino.
+   Este método propaga todas as mensagens da fila de saída. Todas as mensagens na fila são oferecidas a cada bloco de destino até que um dos blocos de destino aceite a mensagem. A `priority_buffer` classe preserva a ordem das mensagens de saída. Portanto, a primeira mensagem na fila de saída deve ser aceita por um bloco de destino antes que este método ofereça qualquer outra mensagem aos blocos de destino.
 
-17. Na seção `protected`, defina o método `propagate_message`.
+1. Na `protected` seção, `propagate_message` defina o método.
 
-[!code-cpp[concrt-priority-buffer#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_17.h)]
+    [!code-cpp[concrt-priority-buffer#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_17.h)]
 
-   O método `propagate_message` permite que a classe `priority_buffer` atue como um receptor de mensagens ou destino. Esse método recebe a mensagem que é oferecida pelo bloco de origem fornecido e insere essa mensagem na fila de prioridade. O método `propagate_message`, em seguida, envia de forma assíncrona todas as mensagens de saída para os blocos de destino.
+   O `propagate_message` método `priority_buffer` permite que a classe atue como um receptor de mensagem ou alvo. Este método recebe a mensagem oferecida pelo bloco de origem fornecido e insere essa mensagem na fila de prioridade. O `propagate_message` método então envia assíncronamente todas as mensagens de saída para os blocos de destino.
 
-   O tempo de execução chama esse método quando você chama a função [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) ou quando o bloco de mensagens está conectado a outros blocos de mensagens.
+   O tempo de execução chama esse método quando você chama a [função de concorrência::asend](reference/concurrency-namespace-functions.md#asend) ou quando o bloco de mensagens está conectado a outros blocos de mensagens.
 
-18. Na seção `protected`, defina o método `send_message`.
+1. Na `protected` seção, `send_message` defina o método.
 
-[!code-cpp[concrt-priority-buffer#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_18.h)]
+    [!code-cpp[concrt-priority-buffer#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_18.h)]
 
-   O método `send_message` é semelhante a `propagate_message`. No entanto, ele envia as mensagens de saída de forma síncrona em vez de assíncrona.
+   O `send_message` método `propagate_message`se assemelha. No entanto, ele envia as mensagens de saída sincronicamente em vez de assíncronamente.
 
-   O tempo de execução chama esse método durante uma operação de envio síncrona, como quando você chama a função [Concurrency:: send](reference/concurrency-namespace-functions.md#send) .
+   O tempo de execução chama esse método durante uma operação de envio síncrono, como quando você chama a [função de concorrência::enviar.](reference/concurrency-namespace-functions.md#send)
 
-A classe `priority_buffer` contém sobrecargas de construtor que são típicas em muitos tipos de bloco de mensagens. Algumas sobrecargas de Construtor usam objetos [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) ou [Concurrency:: Schedule](../../parallel/concrt/reference/schedulegroup-class.md) , que permitem que o bloco de mensagens seja gerenciado por um Agendador de tarefas específico. Outras sobrecargas de Construtor tomam uma função de filtro. As funções de filtro permitem que os blocos de mensagens aceitem ou rejeitem uma mensagem com base em sua carga. Para obter mais informações sobre filtros de mensagens, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md). Para obter mais informações sobre agendadores de tarefas, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+A `priority_buffer` classe contém sobrecargas de construtores que são típicas em muitos tipos de blocos de mensagens. Algumas sobrecargas de construtores tomam [simultuável::Scheduler](../../parallel/concrt/reference/scheduler-class.md) ou [simultuável::Agendar](../../parallel/concrt/reference/schedulegroup-class.md) objetos, que permitem que o bloco de mensagens seja gerenciado por um agendador de tarefas específico. Outras sobrecargas de construtores tomam uma função de filtro. As funções de filtro permitem que os blocos de mensagens aceitem ou rejeitem uma mensagem com base em sua carga útil. Para obter mais informações sobre filtros de mensagens, consulte [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md). Para obter mais informações sobre agendadores de tarefas, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-Como a classe `priority_buffer` ordena as mensagens por prioridade e, em seguida, pela ordem em que as mensagens são recebidas, essa classe é mais útil quando recebe mensagens de forma assíncrona, por exemplo, quando você chama a função [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) ou quando o bloco de mensagens está conectado a outros blocos de mensagens.
+Como `priority_buffer` a classe ordena mensagens por prioridade e, em seguida, pela ordem em que as mensagens são recebidas, essa classe é mais útil quando recebe mensagens assíncronamente, por exemplo, quando você chama a [função de concorrência::asend](reference/concurrency-namespace-functions.md#asend) ou quando o bloco de mensagens está conectado a outros blocos de mensagens.
 
-[[Superior](#top)]
+[[Top](#top)]
 
-## <a name="complete"></a>O exemplo completo
+## <a name="the-complete-example"></a><a name="complete"></a>O Exemplo Completo
 
-O exemplo a seguir mostra a definição completa da classe `priority_buffer`.
+O exemplo a seguir mostra `priority_buffer` a definição completa da classe.
 
 [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]
 
-O exemplo a seguir executa simultaneamente uma série de operações de `asend` e [simultaneidade: Receive](reference/concurrency-namespace-functions.md#receive) em um objeto `priority_buffer`.
+O exemplo a seguir executa `asend` simultaneamente um número e `priority_buffer` [simultâneo::receber](reference/concurrency-namespace-functions.md#receive) operações em um objeto.
 
 [!code-cpp[concrt-priority-buffer#19](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_20.cpp)]
 
-Este exemplo produz a seguinte saída de exemplo.
+Este exemplo produz a seguinte saída de amostra.
 
 ```Output
 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36
@@ -196,17 +196,17 @@ Este exemplo produz a seguinte saída de exemplo.
 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12
 ```
 
-A classe `priority_buffer` ordena as mensagens primeiro por prioridade e, em seguida, pela ordem em que recebe as mensagens. Neste exemplo, as mensagens com maior prioridade numérica são inseridas em direção à frente da fila.
+A `priority_buffer` classe ordena mensagens primeiro por prioridade e depois pela ordem em que recebe mensagens. Neste exemplo, mensagens com maior prioridade numérica são inseridas na frente da fila.
 
-[[Superior](#top)]
+[[Top](#top)]
 
-## <a name="compiling-the-code"></a>Compilando o Código
+## <a name="compiling-the-code"></a>Compilando o código
 
-Copie o código de exemplo e cole-o em um projeto do Visual Studio, ou cole a definição da classe `priority_buffer` em um arquivo chamado `priority_buffer.h` e o programa de teste em um arquivo chamado `priority_buffer.cpp` e, em seguida, execute o comando a seguir em uma janela de prompt de comando do Visual Studio.
+Copie o código de exemplo e cole-o em um projeto `priority_buffer` do Visual Studio `priority_buffer.h` ou cole a definição da `priority_buffer.cpp` classe em um arquivo nomeado e o programa de teste em um arquivo nomeado e execute o seguinte comando em uma janela Visual Studio Command Prompt.
 
-**CL. exe/EHsc priority_buffer. cpp**
+**cl.exe /EHsc priority_buffer.cpp**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções passo a passo do runtime de simultaneidade](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

@@ -1,11 +1,15 @@
 ---
 title: atoll, _atoll_l, _wtoll, _wtoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
+- _o__atoll_l
+- _o__wtoll
+- _o__wtoll_l
+- _o_atoll
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +41,12 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939473"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913515"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -68,13 +73,13 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres a ser convertida.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada função retorna o **longo** valor **longo** que é produzido interpretando os caracteres de entrada como um número. O valor de retorno para **Palmira** será 0 se a entrada não puder ser convertida em um valor desse tipo.
 
@@ -94,9 +99,11 @@ O argumento *Str* para **Palmira** tem o seguinte formato:
 
 Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos.
 
-**_wtoll** é idêntico ao **Palmira** , exceto pelo fato de que ele usa uma cadeia de caracteres larga como um parâmetro.
+**_wtoll** é idêntica a **Palmira** , exceto pelo fato de que ela usa uma cadeia de caracteres larga como um parâmetro.
 
 As versões dessas funções que têm o sufixo **_L** são idênticas às versões que não têm, exceto que usam o parâmetro Locale que é passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -110,7 +117,7 @@ As versões dessas funções que têm o sufixo **_L** são idênticas às versõ
 
 |Rotinas|Cabeçalho necessário|
 |--------------|---------------------|
-|**atoll**, **_atoll_l**|\<stdlib.h>|
+|**Palmira**, **_atoll_l**|\<stdlib.h>|
 |**_wtoll**, **_wtoll_l**|\<stdlib.h> ou \<wchar.h>|
 
 ## <a name="example"></a>Exemplo
@@ -167,7 +174,7 @@ Overflow condition occurred.
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

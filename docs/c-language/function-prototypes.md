@@ -21,10 +21,10 @@ Uma declaração de função precede a definição de função e especifica o no
 
 ## <a name="syntax"></a>Sintaxe
 
-*declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
+*declaração*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração-especificadores* *atributo-Seq*<sub>opt</sub> *init-Declaration-List*<sub>opt</sub> **;**
 
-/\* *atributo-Seq*<sub>opt</sub> é \*específico da Microsoft /
+/\**atributo-Seq*<sub>opt</sub> é específico da Microsoft\*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -32,19 +32,19 @@ Uma declaração de função precede a definição de função e especifica o no
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List*  **,**  *init-declarator*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
+*init-Declarador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inicializador* de *Declarador* **=**
 
-*declarator*:<br/>
+*Declarador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*: /\* Um declarador de função \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Declarador de novo estilo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Declarador de estilo obsoleto \*/
+*Declarador direto*:\* /um Declarador de função\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Declarador *direto***(***tipo de parâmetro-lista***)**   / \* Declarador de novo estilo      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***(***opção identificador-lista*<sub>opt</sub> **)**  / \* Declarador de estilo obsoleto    \*/
 
 O protótipo tem o mesmo formato que a definição de função, exceto que é ele é encerrado por um ponto-e-vírgula imediatamente depois do parêntese de fechamento e, portanto, não tem corpo. Em ambos os casos, o tipo de retorno deve concordar com o tipo de retorno especificado na definição de função.
 
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 Em **/Ze**, a marca ainda é inserida no escopo global.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções](../c-language/functions-c.md)

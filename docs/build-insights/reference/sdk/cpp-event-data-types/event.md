@@ -1,6 +1,6 @@
 ---
 title: Classe de eventos
-description: A C++ referência da classe de evento Build insights SDK.
+description: A referência da classe C++ Build Insights SDK Event.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 205a4e0ca9dd9449933f38f02d4ceafd5df8ead2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 25d58f642a1c314e48ddff62553394bcc65e4717
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333394"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324958"
 ---
 # <a name="event-class"></a>Classe de eventos
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A classe `Event` é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a qualquer evento.
+A `Event` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar com qualquer evento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,24 +49,24 @@ public:
 
 ## <a name="members"></a>Membros
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-[Event](#entity)
+[Evento](#entity)
 
-### <a name="functions"></a>{1&gt;Funções&lt;1}
+### <a name="functions"></a>Funções
 
-[Dados](#data)
-[EventID](#event-id)\
-\ [EventInstanceId](#event-instance-id)
-[Eventoname](#event-name)\
-\ [EventWideName](#event-wide-name)
-[ProcessId](#process-id)\
-\ [ProcessorIndex](#processor-index)
-\ [ThreadID](#thread-id)
-\ [TickFrequency](#tick-frequency)
-[Carimbo de data/hora](#timestamp)
+[Data](#data)
+[EventId](#event-id)\
+[EventInstanceId](#event-instance-id)\
+[Eventname](#event-name)\
+[EventWideName](#event-wide-name)\
+[Processid](#process-id)\
+[Índice do processador](#processor-index)\
+[Threadid](#thread-id)\
+[Tickfrequency](#tick-frequency)\
+[Timestamp](#timestamp)
 
-## <a name="entity"></a>Circunstância
+## <a name="event"></a><a name="entity"></a>Evento
 
 ```cpp
 Event(const RawEvent& event);
@@ -74,10 +74,10 @@ Event(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*event*\
+*Evento*\
 Qualquer evento.
 
-## <a name="data"></a>Dado
+## <a name="data"></a><a name="data"></a>Dados
 
 ```cpp
 const void* Data() const;
@@ -85,9 +85,9 @@ const void* Data() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para dados adicionais contidos neste evento. Para obter mais informações sobre como interpretar esse campo, consulte [EVENT_DATA](../c-event-data-types/event-data-struct.md).
+Um ponteiro para dados extras contidos neste evento. Para obter mais informações sobre como interpretar este campo, consulte [EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-## <a name="event-id"></a>1008
+## <a name="eventid"></a><a name="event-id"></a>Eventid
 
 ```cpp
 const unsigned short& EventId() const;
@@ -97,7 +97,7 @@ const unsigned short& EventId() const;
 
 Um número que identifica o tipo de evento. Para obter uma lista de identificadores de eventos, consulte [EVENT_ID](../c-event-data-types/event-id-enum.md).
 
-## <a name="event-instance-id"></a>EventInstanceId
+## <a name="eventinstanceid"></a><a name="event-instance-id"></a>EventInstanceId
 
 ```cpp
 const unsigned long long& EventInstanceId() const;
@@ -105,9 +105,9 @@ const unsigned long long& EventInstanceId() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um número que identifica exclusivamente o evento dentro de um rastreamento. Esse valor não é alterado ao analisar ou refazer o log do mesmo rastreamento várias vezes. Use esse valor para identificar o mesmo evento em várias análises ou o novo registro em log passa pelo mesmo rastreamento.
+Um número que identifica exclusivamente o evento dentro de um traço. Esse valor não muda ao analisar ou relogar o mesmo traço várias vezes. Use esse valor para identificar o mesmo evento em análise múltipla ou relogamento passa sobre o mesmo traço.
 
-## <a name="event-name"></a>EventName
+## <a name="eventname"></a><a name="event-name"></a>Eventname
 
 ```cpp
 const char* EventName() const;
@@ -115,9 +115,9 @@ const char* EventName() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma cadeia de caracteres ANSI que contém o nome do tipo de evento identificado pelo [EventID](#event-id).
+Uma seqüência ANSI contendo o nome do tipo de evento identificado por [EventId](#event-id).
 
-## <a name="event-wide-name"></a>EventWideName
+## <a name="eventwidename"></a><a name="event-wide-name"></a>EventWideName
 
 ```cpp
 const wchar_t* EventWideName() const;
@@ -125,9 +125,9 @@ const wchar_t* EventWideName() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma cadeia de caracteres larga que contém o nome do evento identificado pelo [EventID](#event-id).
+Uma corda larga contendo o nome do evento identificado por [EventId](#event-id).
 
-## <a name="process-id"></a>ProcessId
+## <a name="processid"></a><a name="process-id"></a>Processid
 
 ```cpp
 const unsigned long& ProcessId() const;
@@ -135,9 +135,9 @@ const unsigned long& ProcessId() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O identificador do processo no qual o evento ocorreu.
+O identificador para o processo em que o evento ocorreu.
 
-## <a name="processor-index"></a>ProcessorIndex
+## <a name="processorindex"></a><a name="processor-index"></a>Índice do processador
 
 ```cpp
 const unsigned short& ProcessorIndex() const;
@@ -145,9 +145,9 @@ const unsigned short& ProcessorIndex() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O índice de base zero para o processador lógico no qual o evento ocorreu.
+O índice baseado em zero para o processador lógico no qual o evento ocorreu.
 
-## <a name="thread-id"></a>ThreadId
+## <a name="threadid"></a><a name="thread-id"></a>Threadid
 
 ```cpp
 const unsigned long& ThreadId() const;
@@ -155,9 +155,9 @@ const unsigned long& ThreadId() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O identificador para o thread no qual o evento ocorreu.
+O identificador para o segmento em que o evento ocorreu.
 
-## <a name="tick-frequency"></a>TickFrequency
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>Tickfrequency
 
 ```cpp
 const long long& TickFrequency() const;
@@ -165,9 +165,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O número de tiques por segundo a serem usados ao avaliar uma duração medida em tiques para esse evento.
+O número de carrapatos por segundo a ser usado ao avaliar uma duração medida em carrapatos para este evento.
 
-## <a name="timestamp"></a>Estampa
+## <a name="timestamp"></a><a name="timestamp"></a>Timestamp
 
 ```cpp
 const long long& Timestamp() const;
@@ -175,6 +175,6 @@ const long long& Timestamp() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Se o evento for uma atividade, essa função retornará um valor de tique capturado no momento em que a atividade foi iniciada. Para um evento simples, essa função retorna um valor de tique capturado no momento em que o evento ocorreu.
+Se o evento for uma atividade, essa função retorna um valor de tique-taque capturado no momento em que a atividade começou. Para um evento simples, esta função retorna um valor de tique-taque capturado no momento em que o evento ocorreu.
 
 ::: moniker-end

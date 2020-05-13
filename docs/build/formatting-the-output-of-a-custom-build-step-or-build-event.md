@@ -30,7 +30,7 @@ Se a saída de uma etapa de build personalizada ou um evento de build está form
 
 O formato da saída deve ser:
 
-> {<em>filename</em> **(** <em>linha #</em> \[ **,** <em>coluna #</em>] **)** &#124; *ToolName*} **:** \[ <em>qualquer texto</em> ] {**error** &#124; **aviso**de erro} <em>código + número</em> **:** <em>cadeia de caracteres localizável</em> \[ <em>qualquer texto</em> ]
+> {<em>filename</em>**(**<em>line #</em> \[ **,** <em>Column #</em>]**)** &#124; *ToolName*} **:** \[ <em>qualquer texto</em> ] {**erro** &#124; **aviso**} <em>código + número</em>**:**<em>cadeia de caracteres</em> \[ localizável <em>qualquer texto</em> ]
 
 Em que:
 
@@ -40,7 +40,7 @@ Em que:
 
 - O que está em **negrito** representa uma expressão literal.
 
-Por exemplo:
+Por exemplo: 
 
 > C:\\*sourcefile.cpp*(134) : error C2143: syntax error : missing ';' before '}'
 >
@@ -48,4 +48,4 @@ Por exemplo:
 
 ## <a name="see-also"></a>Confira também
 
-[Noções básicas sobre etapas e eventos de build personalizados](understanding-custom-build-steps-and-build-events.md)
+[Noções básicas sobre etapas e eventos compilação personalizada](understanding-custom-build-steps-and-build-events.md)

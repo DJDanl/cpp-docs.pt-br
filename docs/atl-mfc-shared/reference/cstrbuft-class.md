@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71d7b6f7d53e9613b1ac26013d73c1dbd1ef0aab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223487"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746934"
 ---
 # <a name="cstrbuft-class"></a>Classe CStrBufT
 
-Essa classe fornece a limpeza de recursos automáticos `GetBuffer` e `ReleaseBuffer` chama em um existente `CStringT` objeto.
+Esta classe fornece limpeza `GetBuffer` automática `ReleaseBuffer` de recursos `CStringT` e solicita um objeto existente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,14 +33,14 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parâmetros
 
-*TCharType*<br/>
-O tipo de caracteres a `CStrBufT` classe. Pode ser uma das seguintes opções:
+*TcharType*<br/>
+O tipo de `CStrBufT` personagem da classe. Um dos seguintes pode ser feito:
 
-- **char** (para cadeias de caracteres ANSI)
+- **char** (para strings de caracteres ANSI)
 
-- **wchar_t** (para cadeias de caracteres Unicode)
+- **wchar_t** (para strings de caracteres Unicode)
 
-- TCHAR (para cadeias de caracteres ANSI e Unicode)
+- TCHAR (para seqüências de caracteres ANSI e Unicode)
 
 ## <a name="members"></a>Membros
 
@@ -48,49 +48,49 @@ O tipo de caracteres a `CStrBufT` classe. Pode ser uma das seguintes opções:
 
 |Nome|Descrição|
 |----------|-----------------|
-|PCXSTR|Um ponteiro para uma cadeia de caracteres constante.|
-|PXSTR|Um ponteiro para uma cadeia de caracteres.|
-|`StringType`|O tipo de cadeia de caracteres cujo buffer deve ser manipulado por especializações desse modelo de classe.|
+|Pcxstr|Um ponteiro para uma seqüência constante.|
+|PXSTR|Um ponteiro para uma corda.|
+|`StringType`|O tipo de string cujo buffer deve ser manipulado por especializações deste modelo de classe.|
 
 ### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CStrBufT::CStrBufT](#cstrbuft)|O construtor para o objeto de buffer de cadeia de caracteres.|
+|[CStrBufT::CstrBufT](#cstrbuft)|O construtor para o objeto tampão de seqüência de strings.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CStrBufT::SetLength](#setlength)|Define o comprimento do buffer de caracteres do objeto de cadeia de caracteres associada.|
+|[CStrBufT::SetLength](#setlength)|Define o comprimento do buffer de caracteres do objeto de seqüência de caracteres associado.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CStrBufT::operator PCXSTR](#operator_pcxstr)|Recupera uma **const** ponteiro para o buffer de caracteres do objeto de cadeia de caracteres associada.|
-|[CStrBufT::operator PXSTR](#operator_pxstr)|Recupera um ponteiro para o buffer de caracteres do objeto de cadeia de caracteres associada.|
+|[CStrBufT:operador PCXSTR](#operator_pcxstr)|Recupera um **ponteiro const** para o buffer de caracteres do objeto de seqüência associado.|
+|[CStrBufT::operador PXSTR](#operator_pxstr)|Recupera um ponteiro para o buffer de caracteres do objeto de seqüência associado.|
 
 ### <a name="public-constants"></a>Constantes públicas
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CStrBufT::AUTO_LENGTH](#auto_length)|Determine automaticamente o novo comprimento da cadeia de caracteres nesta versão.|
-|[CStrBufT::SET_LENGTH](#set_length)|Definir o tamanho do objeto de cadeia de caracteres em tempo de GetBuffer|
+|[CstrBufT::AUTO_LENGTH](#auto_length)|Determine automaticamente o novo comprimento da seqüência na liberação.|
+|[CStrBufT::SET_LENGTH](#set_length)|Defina o comprimento do objeto de seqüência no tempo GetBuffer|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe é usada como uma classe wrapper para a substituição das chamadas [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), ou [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) e `ReleaseBuffer`.
+Esta classe é usada como uma classe de invólucro para substituir chamadas `ReleaseBuffer`para [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [ReleaseBuffer,](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer)ou [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) e .
 
-Projetado principalmente como uma classe do auxiliar `CStrBufT` fornece uma maneira conveniente para trabalhar com o buffer de caracteres de um objeto de cadeia de caracteres sem se preocupar sobre como um desenvolvedor ou quando chamar `ReleaseBuffer`. Isso é possível porque o objeto do wrapper sai do escopo naturalmente no caso de uma exceção ou vários caminhos de código existente; fazendo com que seu destruidor liberar o recurso de cadeia de caracteres.
+Projetado principalmente como uma classe `CStrBufT` auxiliar, fornece uma maneira conveniente para um desenvolvedor trabalhar com o buffer `ReleaseBuffer`de caracteres de um objeto de seqüência sem se preocupar sobre como ou quando chamar . Isso é possível porque o objeto de invólucro sai do escopo naturalmente no caso de uma exceção ou vários caminhos de código de saída; fazendo com que seu destruidor liberte o recurso de string.
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlsimpstr.h
 
-##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH
+## <a name="cstrbuftauto_length"></a><a name="auto_length"></a>CstrBufT::AUTO_LENGTH
 
-Determine automaticamente o novo comprimento da cadeia de caracteres nesta versão.
+Determine automaticamente o novo comprimento da seqüência na liberação.
 
 ```
 static const DWORD AUTO_LENGTH = 0x01;
@@ -98,11 +98,11 @@ static const DWORD AUTO_LENGTH = 0x01;
 
 ### <a name="remarks"></a>Comentários
 
-Determine automaticamente o novo comprimento da cadeia de caracteres nesta versão. A cadeia de caracteres deve ser terminada em nulo.
+Determine automaticamente o novo comprimento da seqüência na liberação. A seqüência deve ser nula.
 
-##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT
+## <a name="cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CstrBufT
 
-Constrói um objeto de buffer.
+Constrói um objeto tampão.
 
 ```
 CStrBufT(StringType& str, int nMinLength, DWORD dwFlags = AUTO_LENGTH) throw(...);
@@ -111,76 +111,76 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
-O objeto de cadeia de caracteres associado com o buffer. Normalmente, o desenvolvedor usará o typedefs predefinido da `CStrBuf` (variante TCHAR), `CStrBufA` (**char** variant) e `CStrBufW` (**wchar_t** variante).
+*Str*<br/>
+O objeto de seqüência associado ao buffer. Normalmente, o desenvolvedor usará os typedefs predefinidos `CStrBuf` da (variante TCHAR), `CStrBufA` (variante**char)** e `CStrBufW` **(wchar_t** variante).
 
 *nMinLength*<br/>
-O comprimento mínimo do buffer de caractere.
+O comprimento mínimo do buffer de caracteres.
 
 *dwFlags*<br/>
-Determina se o comprimento da cadeia de caracteres é determinado automaticamente. Pode ser uma das seguintes opções:
+Determina se o comprimento da corda é automaticamente determinado. Um dos seguintes pode ser feito:
 
-- Comprimento de cadeia de caracteres AUTO_LENGTH é automaticamente determinado quando [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) é chamado. A cadeia de caracteres deve ser terminada em nulo. Valor padrão.
+- AUTO_LENGTH comprimento da corda é automaticamente determinado quando [CSimpleStringT::Liberação](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) é chamada. A seqüência deve ser nula. Valor padrão.
 
-- Comprimento da cadeia de caracteres SET_LENGTH é definido quando [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) é chamado.
+- SET_LENGTH comprimento da seqüência de strings é definido quando [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) é chamado.
 
 ### <a name="remarks"></a>Comentários
 
-Cria um buffer de cadeia de caracteres para o objeto de cadeia de caracteres associada. Durante a construção, [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) ou [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) é chamado.
+Cria um buffer de string para o objeto de seqüência associado. Durante a construção, [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) ou [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) é chamado.
 
-Observe que é o construtor de cópia **privada**.
+Observe que o construtor de cópias é **privado**.
 
-##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR
+## <a name="cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT:operador PCXSTR
 
-Acessa diretamente caracteres armazenados no objeto de cadeia de caracteres associado como uma cadeia de caracteres de estilo C.
+Acessa diretamente caracteres armazenados no objeto de seqüência associado como uma seqüência de caracteres estilo C.
 
 ```
 operator PCXSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro de caractere para dados da cadeia de caracteres.
+Um ponteiro de caracteres para os dados da seqüência.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para retornar um ponteiro para o buffer de caracteres de um objeto de cadeia de caracteres. O conteúdo do objeto de cadeia de caracteres não pode ser alterado com esse ponteiro.
+Chame esta função para retornar um ponteiro para o buffer de caracteres de um objeto de seqüência. O conteúdo do objeto de seqüência não pode ser alterado com este ponteiro.
 
-##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR
+## <a name="cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT::operador PXSTR
 
-Acessa diretamente caracteres armazenados no objeto de cadeia de caracteres associado como uma cadeia de caracteres de estilo C.
+Acessa diretamente caracteres armazenados no objeto de seqüência associado como uma seqüência de caracteres estilo C.
 
 ```
 operator PXSTR() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro de caractere para dados da cadeia de caracteres.
+Um ponteiro de caracteres para os dados da seqüência.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para retornar um ponteiro para o buffer de caracteres de um objeto de cadeia de caracteres. O desenvolvedor pode alterar o conteúdo do objeto de cadeia de caracteres com este ponteiro.
+Chame esta função para retornar um ponteiro para o buffer de caracteres de um objeto de seqüência. O desenvolvedor pode alterar o conteúdo do objeto de seqüência com este ponteiro.
 
-##  <a name="pcxstr"></a>  CStrBufT::PCXSTR
+## <a name="cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::PCXSTR
 
-Um ponteiro para uma cadeia de caracteres constante.
+Um ponteiro para uma seqüência constante.
 
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```
 
-##  <a name="pxstr"></a>  CStrBufT::PXSTR
+## <a name="cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::PXSTR
 
-Um ponteiro para uma cadeia de caracteres.
+Um ponteiro para uma corda.
 
 ```
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```
 
-##  <a name="set_length"></a>  CStrBufT::SET_LENGTH
+## <a name="cstrbuftset_length"></a><a name="set_length"></a>CStrBufT::SET_LENGTH
 
-Definir o tamanho do objeto de cadeia de caracteres no `GetBuffer` tempo.
+Defina o comprimento do `GetBuffer` objeto de corda no momento.
 
 ```
 static const DWORD SET_LENGTH = 0x02;
@@ -188,33 +188,33 @@ static const DWORD SET_LENGTH = 0x02;
 
 ### <a name="remarks"></a>Comentários
 
-Defina o comprimento do objeto de cadeia de caracteres em tempo de GetBuffer.
+Defina o comprimento do objeto de seqüência no tempo GetBuffer.
 
-Determina se [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) são chamados quando o objeto de buffer de cadeia de caracteres é construído.
+Determina se [CSimpleStringT:GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) são chamados quando o objeto buffer de seqüência é construído.
 
-##  <a name="setlength"></a>  CStrBufT::SetLength
+## <a name="cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT::SetLength
 
 Define o comprimento do buffer de caracteres.
 
-```
+```cpp
 void SetLength(int nLength);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLength*<br/>
-O novo tamanho do buffer de caractere do objeto de cadeia de caracteres.
+*Nlength*<br/>
+O novo comprimento do buffer de caracteres do objeto de seqüência.
 
 > [!NOTE]
->  Deve ser menor ou igual ao comprimento de buffer mínimo especificado no construtor de `CStrBufT`.
+> Deve ser menor ou igual ao comprimento mínimo de `CStrBufT`tampão especificado na construtora de .
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para definir o comprimento da cadeia de caracteres representada pelo objeto de buffer.
+Chame esta função para definir o comprimento da seqüência representada pelo objeto tampão.
 
-##  <a name="stringtype"></a>  CStrBufT::StringType
+## <a name="cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::StringType
 
-O tipo de cadeia de caracteres cujo buffer deve ser manipulado por especializações desse modelo de classe.
+O tipo de string cujo buffer deve ser manipulado por especializações deste modelo de classe.
 
 ```
 typedef CSimpleStringT<TCharType> StringType;
@@ -222,9 +222,9 @@ typedef CSimpleStringT<TCharType> StringType;
 
 ### <a name="remarks"></a>Comentários
 
-`TCharType` o tipo de caractere é usado para especializar o modelo de classe.
+`TCharType`é o tipo de caractere usado para especializar o modelo de classe.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

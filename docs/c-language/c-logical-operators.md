@@ -12,25 +12,25 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326580"
 ---
 # <a name="c-logical-operators"></a>Operadores lógicos C
 
-Os operadores lógicos executam as operações logical-AND (**&&**) e logical-OR (**||**).
+Os operadores lógicos executam operações lógicas-AND (**&&**) e**||** or ().
 
 ## <a name="syntax"></a>Sintaxe
 
-*logical-AND-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
+*expressão and lógica*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inclusivo-ou-expressão*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão de lógica e de expressão*  **&&**  *inclusiva*
 
-*logical-OR-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
+*expressão or lógica*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão AND lógica*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;expressão or *lógica* **&#124;&#124;** *lógica e expressão*    
 
 ## <a name="remarks"></a>Comentários
 
@@ -64,7 +64,7 @@ printf( "%d" , (x == w || x == y || x == z) );
 
 Nesse exemplo, se `x` for igual a `w`, `y` ou `z`, o segundo argumento para a função **printf** é avaliado como verdadeiro e o valor 1 é impresso. Caso contrário, será avaliado como false, e o valor 0 será impresso. Assim que uma das condições for avaliada como true, a avaliação é encerrada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Operador AND lógico: &&](../cpp/logical-and-operator-amp-amp.md)
 - [Operador OR lógico: &#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

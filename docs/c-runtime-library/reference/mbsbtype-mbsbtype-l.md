@@ -1,9 +1,11 @@
 ---
 title: _mbsbtype, _mbsbtype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsbtype_l
 - _mbsbtype
+- _o__mbsbtype
+- _o__mbsbtype_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: c474cad9027b7914a08816346e38e954a7200bb5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1431a2d0886ffd3d16b43abf82b7342c166273a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952400"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909479"
 ---
 # <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
 Retorna o tipo de byte em uma cadeia de caracteres.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -64,13 +67,13 @@ int _mbsbtype_l(
 *mbstr*<br/>
 Endereço de uma sequência de caracteres multibyte.
 
-*count*<br/>
+*contagem*<br/>
 Deslocamento do byte do início da cadeia de caracteres.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_mbsbtype** e **_mbsbtype_l** retorna um valor inteiro que indica o resultado do teste no byte especificado. As constantes de manifesto na tabela a seguir são definidas em Mbctype.h.
 
@@ -85,9 +88,11 @@ Localidade a usar.
 
 A função **_mbsbtype** determina o tipo de um byte em uma cadeia de caracteres multibyte. A função examina apenas o byte na *contagem* de deslocamentos em *mbstr*, ignorando caracteres inválidos antes do byte especificado.
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o sufixo **_L** usa a localidade atual para esse comportamento dependente de localidade; a versão com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o sufixo **_L** usa a localidade atual para esse comportamento dependente de localidade; a versão com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Se a cadeia de caracteres de entrada for **nula**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **_MBC_ILLEGAL**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

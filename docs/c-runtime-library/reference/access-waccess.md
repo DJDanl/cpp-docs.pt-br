@@ -1,9 +1,11 @@
 ---
 title: _access, _waccess
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access
 - _waccess
+- _o__access
+- _o__waccess
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170378"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920264"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -58,7 +61,7 @@ int _waccess(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *path*<br/>
 Caminho do arquivo ou do diretório.
@@ -94,6 +97,8 @@ Essa função apenas verifica se os arquivos e diretórios são somente leitura 
 **_waccess** é uma versão de caractere largo do **_access**; o argumento de *caminho* para **_waccess** é uma cadeia de caracteres largos. **_waccess** e **_access** se comportar de forma idêntica.
 
 Essa função valida seus parâmetros. Se o *caminho* for nulo ou o *modo* não especificar um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá `errno` como `EINVAL` e retornará –1.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -142,7 +147,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>

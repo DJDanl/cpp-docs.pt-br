@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebfbc185cdca2effc96ce2e6d96d05f997c52bf7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324864"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365979"
 ---
 # <a name="csyncobject-class"></a>Classe CSyncObject
 
-Uma classe virtual pura que fornece funcionalidade comum para os objetos de sincronização no Win32.
+Uma classe virtual pura que fornece funcionalidade comum aos objetos de sincronização no Win32.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,30 +43,30 @@ class CSyncObject : public CObject
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSyncObject::Lock](#lock)|Obtém o acesso ao objeto de sincronização.|
-|[CSyncObject::Unlock](#unlock)|Obtém o acesso ao objeto de sincronização.|
+|[CSyncObject::Lock](#lock)|Obtém acesso ao objeto de sincronização.|
+|[CSyncObject::Unlock](#unlock)|Obtém acesso ao objeto de sincronização.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSyncObject::operator identificador](#operator_handle)|Fornece acesso ao objeto de sincronização.|
+|[CSyncObject::handle do operador](#operator_handle)|Fornece acesso ao objeto de sincronização.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSyncObject::m_hObject](#m_hobject)|O identificador para o objeto subjacente de sincronização.|
+|[CSyncObject::m_hObject](#m_hobject)|A alça do objeto de sincronização subjacente.|
 
 ## <a name="remarks"></a>Comentários
 
-A biblioteca Microsoft Foundation Class fornece várias classes derivadas de `CSyncObject`. Esses são [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), e [CSemaphore](../../mfc/reference/csemaphore-class.md).
+A Biblioteca de Classes da Microsoft `CSyncObject`Foundation oferece várias classes derivadas de . Estes são [CEvent,](../../mfc/reference/cevent-class.md) [CMutex,](../../mfc/reference/cmutex-class.md) [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)e [CSemaphore](../../mfc/reference/csemaphore-class.md).
 
-Para obter informações sobre como usar os objetos de sincronização, consulte o artigo [Multithreading: Como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obter informações sobre como usar os objetos de sincronização, consulte o artigo [Multithreading: Como usar as classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CSyncObject`
 
@@ -74,7 +74,7 @@ Para obter informações sobre como usar os objetos de sincronização, consulte
 
 **Cabeçalho:** afxmt.h
 
-##  <a name="csyncobject"></a>  CSyncObject::CSyncObject
+## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject
 
 Constrói um objeto de sincronização com o nome fornecido.
 
@@ -86,11 +86,11 @@ virtual ~CSyncObject();
 ### <a name="parameters"></a>Parâmetros
 
 *pstrName*<br/>
-O nome do objeto. Se for NULL, *pstrName* será nulo.
+O nome do objeto. Se NULO, *pstrName* será nulo.
 
-##  <a name="lock"></a>  CSyncObject::Lock
+## <a name="csyncobjectlock"></a><a name="lock"></a>CSyncObject::Lock
 
-Chame essa função para acessar o recurso controlado pelo objeto de sincronização.
+Chame esta função para obter acesso ao recurso controlado pelo objeto de sincronização.
 
 ```
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
@@ -98,44 +98,44 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwTimeout*<br/>
-Especifica a quantidade de tempo em milissegundos para aguardar o objeto de sincronização estejam disponíveis (sinalizado). Se for infinito, `Lock` aguardará até que o objeto é sinalizado antes de retornar.
+*Dwtimeout*<br/>
+Especifica a quantidade de tempo em milissegundos para esperar que o objeto de sincronização esteja disponível (sinalizado). Se INFINITE, `Lock` esperará até que o objeto seja sinalizado antes de retornar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se a função for bem-sucedida; Caso contrário, 0.
+Não zero se a função foi bem sucedida; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Se o objeto de sincronização é sinalizado, `Lock` retornará com êxito e agora, o thread possui o objeto. Se o objeto de sincronização é não sinalizado (não disponível) `Lock` aguardará o objeto de sincronização ficar sinalizado até o número de milissegundos especificado na *dwTimeOut* parâmetro. Se o objeto de sincronização não sinalizado na quantidade especificada de tempo, `Lock` retorna falha.
+Se o objeto de sincronização for sinalizado, `Lock` retornará com sucesso e o segmento agora possui o objeto. Se o objeto de sincronização não `Lock` for sinalizado (indisponível), aguardará que o objeto de sincronização seja sinalizado até o número de milissegundos especificados no parâmetro *dwTimeOut.* Se o objeto de sincronização não tiver sido sinalizado na quantidade de tempo especificada, `Lock` a falha de retorno.
 
-##  <a name="m_hobject"></a>  CSyncObject::m_hObject
+## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject
 
-O identificador para o objeto subjacente de sincronização.
+A alça do objeto de sincronização subjacente.
 
 ```
 HANDLE m_hObject;
 ```
 
-##  <a name="operator_handle"></a>  CSyncObject::operator identificador
+## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::handle do operador
 
-Use este operador para obter o identificador do `CSyncObject` objeto.
+Use este operador para obter `CSyncObject` a alça do objeto.
 
 ```
 operator HANDLE() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, o identificador do objeto de sincronização; Caso contrário, nulo.
+Se for bem-sucedido, a alça do objeto de sincronização; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode usar o identificador para chamar diretamente as APIs do Windows.
+Você pode usar a alça para chamar apis do Windows diretamente.
 
-##  <a name="unlock"></a>  CSyncObject::Unlock
+## <a name="csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Unlock
 
-A declaração de `Unlock` sem parâmetros é uma função virtual pura e deve ser substituído por todas as classes derivadas de `CSyncObject`.
+A declaração de `Unlock` sem parâmetros é uma função virtual pura, `CSyncObject`e deve ser substituída por todas as classes derivadas de .
 
 ```
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -145,21 +145,21 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lCount*<br/>
-Não é usada pela implementação do padrão.
+*Lcount*<br/>
+Não usado por implementação padrão.
 
 *lpPrevCount*<br/>
-Não é usada pela implementação do padrão.
+Não usado por implementação padrão.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Implementação padrão sempre retorna TRUE.
+A implementação padrão sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão de declaração com dois parâmetros sempre retorna TRUE. Essa função é chamada para liberar o acesso ao objeto de sincronização pelo thread de chamada de propriedade. A segunda declaração é fornecida para objetos de sincronização, como semáforos que permitem que mais de um acesso de um recurso controlado.
+A implementação padrão da declaração com dois parâmetros sempre retorna TRUE. Esta função é chamada para liberar o acesso ao objeto de sincronização de propriedade do segmento de chamada. A segunda declaração é fornecida para objetos de sincronização, como semáforos que permitem mais de um acesso a um recurso controlado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

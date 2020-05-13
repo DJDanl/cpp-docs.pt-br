@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CWordArray [MFC], SetAtGrow
 - CWordArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 99484071c81ed6b766d3e4259d9fc88353b27ea3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9dfb0b674d52b288ebd05bf7574f1ae05e4ed1f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365905"
 ---
 # <a name="cwordarray-class"></a>Classe CWordArray
 
-Oferece suporte a matrizes de palavras de 16 bits.
+Suporta matrizes de palavras de 16 bits.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,7 +61,7 @@ class CWordArray : public CObject
 
 ## <a name="members"></a>Membros
 
-As funções de membro de `CWordArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Sempre que você vir um ponteiro [CObject](../../mfc/reference/cobject-class.md) como um parâmetro de função ou valor de retorno, substitua uma palavra.
+As funções `CWordArray` do membro são semelhantes às funções de membro do [CObArray](../../mfc/reference/cobarray-class.md)de classe . Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Onde quer que você veja um ponteiro [CObject](../../mfc/reference/cobject-class.md) como parâmetro de função ou valor de retorno, substitua um WORD.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,61 +71,61 @@ por exemplo, traduz para
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CWordArray::CWordArray](../../mfc/reference/cobarray-class.md#cobarray)|Constrói uma matriz vazia.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[CWordArray:: Adicionar](../../mfc/reference/cobarray-class.md#add)|Inclui um elemento ao final da matriz; aumenta a matriz quando necessário.|
-|[CWordArray:: Append](../../mfc/reference/cobarray-class.md#append)|Acrescenta outra matriz à matriz; aumenta a matriz quando necessário.|
-|[CWordArray:: copiar](../../mfc/reference/cobarray-class.md#copy)|Copia outra matriz à matriz; aumenta a matriz quando necessário.|
-|[CWordArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Retorna uma referência temporária ao ponteiro do elemento dentro da matriz.|
-|[CWordArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda memória não usada acima do limite superior atual.|
-|[CWordArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retorna o valor a um determinado índice.|
-|[CWordArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtém o número de elementos nesta matriz.|
-|[CWordArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite acesso aos elementos na matriz. Pode ser NULO.|
-|[CWordArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtém o número de elementos nesta matriz.|
-|[CWordArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retorna o maior índice válido.|
-|[CWordArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insere um elemento (ou todos os elementos em outra matriz) em um índice especificado.|
-|[CWordArray:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Determina se a matriz está vazia.|
-|[CWordArray:: RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Remove todos os elementos dessa matriz.|
-|[CWordArray:: RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Remove um elemento a um índice específico.|
-|[CWordArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Define o valor de um determinado índice; não é permitido à matriz aumentar.|
-|[CWordArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Define o valor de um determinado índice; aumenta a matriz quando necessário.|
-|[CWordArray:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|Define o número de elementos a ser contido nesta matriz.|
+|[CWordArray::Adicionar](../../mfc/reference/cobarray-class.md#add)|Inclui um elemento ao final da matriz; aumenta a matriz quando necessário.|
+|[CWordArray::Apêndice](../../mfc/reference/cobarray-class.md#append)|Acrescenta outra matriz à matriz; aumenta a matriz quando necessário.|
+|[CWordArray::Copiar](../../mfc/reference/cobarray-class.md#copy)|Copia outra matriz à matriz; aumenta a matriz quando necessário.|
+|[cwordarray::elementat](../../mfc/reference/cobarray-class.md#elementat)|Retorna uma referência temporária ao ponteiro do elemento dentro da matriz.|
+|[Cwordarray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda memória não usada acima do limite superior atual.|
+|[Cwordarray::getat](../../mfc/reference/cobarray-class.md#getat)|Retorna o valor a um determinado índice.|
+|[CWordArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtém o número de elementos nesta matriz.|
+|[CWordArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite acesso aos elementos na matriz. Pode ser NULL.|
+|[CWordArray::getSize](../../mfc/reference/cobarray-class.md#getsize)|Obtém o número de elementos nesta matriz.|
+|[Cwordarray::getupperbound](../../mfc/reference/cobarray-class.md#getupperbound)|Retorna o maior índice válido.|
+|[Cwordarray::insertat](../../mfc/reference/cobarray-class.md#insertat)|Insere um elemento (ou todos os elementos em outra matriz) em um índice especificado.|
+|[CWordArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Determina se a matriz está vazia.|
+|[CWordArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Remove todos os elementos dessa matriz.|
+|[cwordarray::removeat](../../mfc/reference/cobarray-class.md#removeat)|Remove um elemento a um índice específico.|
+|[Cwordarray::setat](../../mfc/reference/cobarray-class.md#setat)|Define o valor de um determinado índice; não é permitido à matriz aumentar.|
+|[cwordarray::setatgrow](../../mfc/reference/cobarray-class.md#setatgrow)|Define o valor de um determinado índice; aumenta a matriz quando necessário.|
+|[CWordArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Define o número de elementos a ser contido nesta matriz.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[Operador CWordArray::&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|
+|[CWordArray:: &#91;&#93;do operador](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|
 
 ## <a name="remarks"></a>Comentários
 
-`CWordArray` incorpora a macro [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) para dar suporte à serialização e ao despejo de seus elementos. Se uma matriz de palavras for armazenada em um arquivo morto, com um operador de inserção sobrecarregado ou com a função de membro [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) , cada elemento será, por sua vez, serializado.
+`CWordArray`incorpora a [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro para apoiar a serialização e o dumping de seus elementos. Se um conjunto de palavras for armazenado em um arquivo, seja com um operador de inserção sobrecarregado ou com a função [cObject::Serialize](../../mfc/reference/cobject-class.md#serialize) member, cada elemento será, por sua vez, serializado.
 
 > [!NOTE]
->  Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.
+> Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.
 
-Se você precisar de um despejo de elementos individuais na matriz, deverá definir a profundidade do contexto de despejo como 1 ou maior.
+Se você precisar de um despejo de elementos individuais na matriz, você deve definir a profundidade do contexto de despejo para 1 ou maior.
 
-Para obter mais informações sobre como usar `CWordArray`, consulte o artigo [coleções](../../mfc/collections.md).
+Para obter mais `CWordArray`informações sobre como usar, consulte o artigo [Coleções](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CWordArray`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxcoll. h
+**Cabeçalho:** afxcoll.h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[COLETA de amostra do MFC](../../overview/visual-cpp-samples.md)<br/>
+[Coleta de amostras de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

@@ -1,9 +1,11 @@
 ---
 title: _searchenv, _wsearchenv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _searchenv
 - _wsearchenv
+- _o__searchenv
+- _o__wsearchenv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,19 +40,19 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 83ba5663d569d449a0024db5abe2eb3ee903123b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948770"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913219"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
 Usa caminhos de ambiente para pesquisar por um arquivo. Versões mais seguras dessas funções estão disponíveis; consulte [_searchenv_s, _wsearchenv_s](searchenv-s-wsearchenv-s.md).
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -80,13 +83,13 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Parâmetros
 
-*filename*<br/>
+*nome do arquivo*<br/>
 O nome de arquivo a ser pesquisado.
 
 *varname*<br/>
 O ambiente a pesquisar.
 
-*pathname*<br/>
+*nome*<br/>
 O buffer para armazenar o caminho completo.
 
 ## <a name="remarks"></a>Comentários
@@ -95,9 +98,9 @@ A rotina **_searchenv** procura o arquivo de destino no domínio especificado. A
 
 A rotina pesquisa pelo arquivo primeiramente no diretório de trabalho atual. Se não encontrar o arquivo, ela procurará nos diretórios especificados pela variável de ambiente. Se o arquivo de destino estiver em um desses diretórios, o caminho recém-criado será copiado em *PathName*. Se o arquivo *filename* não for encontrado, *PathName* conterá uma cadeia de caracteres vazia terminada em nulo.
 
-O *buffer de nome de caminho deve* ter pelo menos **_MAX_PATH** caracteres para acomodar o comprimento completo do nome de caminho construído. Caso contrário, **_searchenv** poderá saturar o buffer de *nome de caminho* e causar um comportamento inesperado.
+O *buffer de nome de caminho deve* ter pelo menos **_MAX_PATH** caracteres para acomodar o comprimento completo do nome de caminho construído. Caso contrário, **_searchenv** pode saturar o buffer de *nome de caminho* e causar um comportamento inesperado.
 
-**_wsearchenv** é uma versão de caractere largo de **_searchenv**, e os argumentos para **_wsearchenv** são cadeias de caracteres largos. **_wsearchenv** e **_searchenv** se comportam de outra forma.
+**_wsearchenv** é uma versão de caractere largo do **_searchenv**e os argumentos para **_wsearchenv** são cadeias de caracteres largos. **_wsearchenv** e **_searchenv** se comportar de forma idêntica.
 
 Se *filename* for uma cadeia de caracteres vazia, essas funções retornarão **ENOENT**.
 
@@ -106,6 +109,8 @@ Se *filename* ou *PathName* for um ponteiro **NULL** , o manipulador de parâmet
 Para obter mais informações sobre códigos de erro e **errno** , consulte [constantes errno](../../c-runtime-library/errno-constants.md).
 
 Em C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais recentes e mais seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -154,7 +159,7 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de diretório](../../c-runtime-library/directory-control.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>

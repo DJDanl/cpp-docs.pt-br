@@ -1,8 +1,9 @@
 ---
 title: _configthreadlocale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _configthreadlocale
+- _o__configthreadlocale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: aac0d36654a81e5d616ffff28e5a254fe06628a3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 26bcfe0d93a8c2b1a14e6afc0d413a5c7e4a7f6e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939017"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917313"
 ---
 # <a name="_configthreadlocale"></a>_configthreadlocale
 
@@ -51,13 +53,13 @@ int _configthreadlocale( int per_thread_locale_type );
 *per_thread_locale_type*<br/>
 A opção a ser definida. Uma das opções listadas na tabela a seguir.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-O status de localidade por thread anterior ( **_DISABLE_PER_THREAD_LOCALE** ou **_ENABLE_PER_THREAD_LOCALE**) ou-1 em caso de falha.
+O status de localidade por thread anterior (**_DISABLE_PER_THREAD_LOCALE** ou **_ENABLE_PER_THREAD_LOCALE**) ou-1 em caso de falha.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_configurethreadlocale** é usada para controlar o uso de localidades específicas de thread. Use uma dessas opções de *per_thread_locale_type* para especificar ou determinar o status de localidade por thread:
+A função **_configurethreadlocale** é usada para controlar o uso de localidades específicas de thread. Use uma destas opções de *per_thread_locale_type* para especificar ou determinar o status de localidade por thread:
 
 | Opção | Descrição |
 |-|-|
@@ -65,11 +67,13 @@ A função **_configurethreadlocale** é usada para controlar o uso de localidad
 | **_DISABLE_PER_THREAD_LOCALE** | Faça o thread atual usar a localidade global. As chamadas subsequentes para **setlocaling** nesse thread afetam outros threads usando a localidade global. |
 | **0** | Recupera a configuração atual para este thread específico. |
 
-Essas funções afetam o comportamento de **setlocale**, **_tsetlocale**, **_wsetlocale**e **_setmbcp**. Quando a localidade por thread é desabilitada, qualquer chamada subsequente para **setlocale** ou **_wsetlocale** altera a localidade de todos os threads que usam a localidade global. Quando a localidade por thread está habilitada, **setlocale** ou **_wsetlocale** afeta apenas a localidade do thread atual.
+Essas funções afetam o comportamento de **setlocale**, **_tsetlocale**, **_wsetlocale**e **_setmbcp**. Quando a localidade por thread é desabilitada, qualquer chamada subsequente para **setlocale** ou **_wsetlocale** altera a localidade de todos os threads que usam a localidade global. Quando a localidade por thread é habilitada, **setlocale** ou **_wsetlocale** afeta apenas a localidade do thread atual.
 
 Se você usar **_configurethreadlocale** para habilitar uma localidade por thread, recomendamos que você chame **setlocale** ou **_wsetlocale** para definir a localidade preferencial nesse thread imediatamente depois.
 
 Se *per_thread_locale_type* não for um dos valores listados na tabela, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** como **EINVAL** e retornará-1.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -186,9 +190,9 @@ The thread locale is now set to German_Germany.1252.
 The time in German locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Multithread e localidades](../../parallel/multithreading-and-locales.md)<br/>

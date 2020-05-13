@@ -116,16 +116,16 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: ec424e433dc84bf4188e349eb6450888aeeeb463
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506895"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753380"
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 
-É usado para criar caixas de diálogo que usam HTML em vez de recursos de caixa de diálogo para implementar a interface do usuário.
+É usado para criar caixas de diálogo que usam HTML em vez de recursos de diálogo para implementar sua interface de usuário.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -139,88 +139,88 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Constrói um objeto CDHtmlDialog.|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#_dtorcdhtmldialog)|Destrói um objeto CDHtmlDialog.|
+|[cdhtmldialog::Cdhtmldialog](#cdhtmldialog)|Constrói um objeto CDHtmlDialog.|
+|[cdhtmldialog::~cdhtmldialog](#_dtorcdhtmldialog)|Destrói um objeto CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Substituível que é chamado como uma verificação de acesso para ver se os objetos de script na página carregada podem acessar o despacho externo do site de controle. Verifica se o despacho é seguro para scripts ou se a zona atual permite objetos que não são seguros para scripts.|
-|[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Substituível usado para criar uma instância de site de controle para hospedar o controle WebBrowser na caixa de diálogo.|
-|[CDHtmlDialog::D DX_DHtml_AxControl](#ddx_dhtml_axcontrol)|Troca dados entre uma variável de membro e o valor da propriedade de um controle ActiveX em uma página HTML.|
-|[CDHtmlDialog::DDX_DHtml_CheckBox](#ddx_dhtml_checkbox)|Troca dados entre uma variável de membro e uma caixa de seleção em uma página HTML.|
-|[CDHtmlDialog::D DX_DHtml_ElementText](#ddx_dhtml_elementtext)|Troca dados entre uma variável de membro e qualquer propriedade de elemento HTML em uma página HTML.|
-|[CDHtmlDialog::D DX_DHtml_Radio](#ddx_dhtml_radio)|Troca dados entre uma variável de membro e um botão de opção em uma página HTML.|
-|[CDHtmlDialog::D DX_DHtml_SelectIndex](#ddx_dhtml_selectindex)|Obtém ou define o índice de uma caixa de listagem em uma página HTML.|
-|[CDHtmlDialog::DDX_DHtml_SelectString](#ddx_dhtml_selectstring)|Obtém ou define o texto de exibição de uma entrada da caixa de listagem (com base no índice atual) em uma página HTML.|
-|[CDHtmlDialog::DDX_DHtml_SelectValue](#ddx_dhtml_selectvalue)|Obtém ou define o valor de uma entrada da caixa de listagem (com base no índice atual) em uma página HTML.|
-|[CDHtmlDialog::DestroyModeless](#destroymodeless)|Destrói uma caixa de diálogo sem janela restrita.|
-|[CDHtmlDialog::EnableModeless](#enablemodeless)|Habilita caixas de diálogo sem janela restrita.|
-|[CDHtmlDialog::FilterDataObject](#filterdataobject)|Permite que a caixa de diálogo filtre objetos de dados da área de transferência criados pelo navegador hospedado.|
-|[CDHtmlDialog::GetControlDispatch](#getcontroldispatch)|Recupera a `IDispatch` interface em um controle ActiveX inserido no documento HTML.|
-|[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Recupera a propriedade solicitada do controle ActiveX especificado.|
-|[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Recupera o Uniform Resource Locator (URL) associado ao documento atual.|
-|[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Recupera a interface IHTMLDocument2 no documento HTML carregado no momento.|
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Chamado pelo controle WebBrowser contido quando ele está sendo usado como um destino de soltar para permitir que a caixa de diálogo forneça um [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)alternativo.|
-|[CDHtmlDialog::GetElement](#getelement)|Obtém uma interface em um elemento HTML.|
-|[CDHtmlDialog::GetElementHtml](#getelementhtml)|Recupera a `innerHTML` propriedade de um elemento HTML.|
-|[CDHtmlDialog::GetElementInterface](#getelementinterface)|Recupera o ponteiro de interface solicitado de um elemento HTML.|
-|[CDHtmlDialog::GetElementProperty](#getelementproperty)|Recupera o valor da propriedade de um elemento HTML.|
-|[CDHtmlDialog::GetElementText](#getelementtext)|Recupera a `innerText` propriedade de um elemento HTML.|
-|[CDHtmlDialog::GetEvent](#getevent)|Obtém o `IHTMLEventObj` ponteiro para o objeto de evento atual.|
-|[CDHtmlDialog::GetExternal](#getexternal)|Obtém a interface do `IDispatch` host.|
-|[CDHtmlDialog::GetHostInfo](#gethostinfo)|Recupera os recursos da interface do usuário do host.|
-|[CDHtmlDialog::GetOptionKeyPath](#getoptionkeypath)|Recupera a chave do registro sob a qual as preferências do usuário são armazenadas.|
-|[CDHtmlDialog::HideUI](#hideui)|Oculta a interface do usuário do host.|
-|[CDHtmlDialog::IsExternalDispatchSafe](#isexternaldispatchsafe)|Indica se a interface do `IDispatch` host é segura para scripts.|
-|[CDHtmlDialog::LoadFromResource](#loadfromresource)|Carrega o recurso especificado no controle WebBrowser.|
-|[CDHtmlDialog::Navigate](#navigate)|Navega para a URL especificada.|
-|[CDHtmlDialog::OnBeforeNavigate](#onbeforenavigate)|Chamado pelo Framework antes de um evento de navegação ser acionado.|
-|[CDHtmlDialog::OnDocumentComplete](#ondocumentcomplete)|Chamado pelo Framework para notificar um aplicativo quando um documento tiver atingido o estado READYSTATE_COMPLETE.|
-|[CDHtmlDialog::OnDocWindowActivate](#ondocwindowactivate)|Chamado pelo Framework quando a janela do documento é ativada ou desativada.|
-|[CDHtmlDialog::OnFrameWindowActivate](#onframewindowactivate)|Chamado pelo Framework quando a janela do quadro é ativada ou desativada.|
-|[CDHtmlDialog::OnInitDialog](#oninitdialog)|Chamado em resposta à mensagem WM_INITDIALOG.|
-|[CDHtmlDialog::OnNavigateComplete](#onnavigatecomplete)|Chamado pelo Framework após a conclusão de um evento de navegação.|
-|[CDHtmlDialog::ResizeBorder](#resizeborder)|Alerta o objeto de que precisa para redimensionar seu espaço de borda.|
-|[CDHtmlDialog:: setcontrolproperty](#setcontrolproperty)|Define a propriedade de um controle ActiveX para um novo valor.|
-|[CDHtmlDialog::SetElementHtml](#setelementhtml)|Define a `innerHTML` propriedade de um elemento HTML.|
-|[CDHtmlDialog::SetElementProperty](#setelementproperty)|Define uma propriedade de um elemento HTML.|
-|[CDHtmlDialog::SetElementText](#setelementtext)|Define a `innerText` propriedade de um elemento HTML.|
-|[CDHtmlDialog::SetExternalDispatch](#setexternaldispatch)|Define a interface do `IDispatch` host.|
-|[CDHtmlDialog::SetHostFlags](#sethostflags)|Define os sinalizadores da interface do usuário do host.|
-|[CDHtmlDialog::ShowContextMenu](#showcontextmenu)|Chamado quando um menu de contexto está prestes a ser exibido.|
-|[CDHtmlDialog::ShowUI](#showui)|Mostra a interface do usuário do host.|
-|[CDHtmlDialog::TranslateAccelerator](#translateaccelerator)|Chamado para processar mensagens de chave do acelerador de menu.|
-|[CDHtmlDialog::TranslateUrl](#translateurl)|Chamado para modificar a URL a ser carregada.|
-|[CDHtmlDialog::UpdateUI](#updateui)|Chamado para notificar o host que o estado do comando foi alterado.|
+|[cdhtmldialog::canaccessexternal](#canaccessexternal)|Superridable que é chamado como uma verificação de acesso para ver se objetos de script na página carregada podem acessar o despacho externo do site de controle. Verifica se o despacho é seguro para scripts ou a região atual permite objetos que não são seguros para scripts.|
+|[cdhtmldialog::CreateControlSite](#createcontrolsite)|Superridable usado para criar uma instância de site de controle para hospedar o controle do WebBrowser na caixa de diálogo.|
+|[cdhtmlDiálogo::DDx_Dhtml_AxControl](#ddx_dhtml_axcontrol)|Troca dados entre uma variável de membro e o valor de propriedade de um controle ActiveX em uma página HTML.|
+|[cdhtmldiálogo::Ddx_dhtml_checkbox](#ddx_dhtml_checkbox)|Troca dados entre uma variável de membro e uma caixa de seleção em uma página HTML.|
+|[cdhtmlDiálogo::Ddx_dhtml_elementText](#ddx_dhtml_elementtext)|Troca dados entre uma variável de membro e qualquer propriedade de elemento HTML em uma página HTML.|
+|[cdhtmldiálogo::Ddx_dhtml_radio](#ddx_dhtml_radio)|Troca dados entre uma variável de membro e um botão de rádio em uma página HTML.|
+|[cdhtmldiálogo::Ddx_dhtml_selectindex](#ddx_dhtml_selectindex)|Obtém ou define o índice de uma caixa de lista em uma página HTML.|
+|[cdhtmlDiálogo::Ddx_dhtml_selectstring](#ddx_dhtml_selectstring)|Obtém ou define o texto de exibição de uma entrada de caixa de lista (com base no índice atual) em uma página HTML.|
+|[cdhtmlDiálogo::Ddx_dhtml_selectValue](#ddx_dhtml_selectvalue)|Obtém ou define o valor de uma entrada de caixa de lista (com base no índice atual) em uma página HTML.|
+|[CDHtmlDiálogo::DestroyModeless](#destroymodeless)|Destrói uma caixa de diálogo modeless.|
+|[cdhtmlDiálogo::Habilitarmodeless](#enablemodeless)|Habilita caixas de diálogo modeless.|
+|[cdhtmldiálogo::filterdataobject](#filterdataobject)|Permite que a caixa de diálogo filtre objetos de dados de área de transferência criados pelo navegador hospedado.|
+|[cdhtmldialog::GetcontrolDispatch](#getcontroldispatch)|Recupera a `IDispatch` interface em um controle ActiveX incorporado no documento HTML.|
+|[cdhtmldialog::getcontrolProperty](#getcontrolproperty)|Recupera a propriedade solicitada do controle ActiveX especificado.|
+|[cdhtmldialog::getCurrenturl](#getcurrenturl)|Recupera o URL (Uniform Resource Locator, localizador de recursos uniforme) associado ao documento atual.|
+|[cdhtmldialog::getdhtmldocument](#getdhtmldocument)|Recupera a interface IHTMLDocument2 no documento HTML carregado no momento.|
+|[cdhtmldialog::getDroptarget](#getdroptarget)|Chamado pelo controle webbrowser contido quando ele está sendo usado como um alvo de queda para permitir que a caixa de diálogo forneça um [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)alternativo .|
+|[cdhtmldialog::getelement](#getelement)|Obtém uma interface em um elemento HTML.|
+|[cdhtmldialog::getelementhtml](#getelementhtml)|Recupera a `innerHTML` propriedade de um elemento HTML.|
+|[cdhtmldialog::getelementinterface](#getelementinterface)|Recupera o ponteiro de interface solicitado de um elemento HTML.|
+|[cdhtmldialog::getelementproperty](#getelementproperty)|Recupera o valor da propriedade de um elemento HTML.|
+|[cdhtmldialog::getelementtext](#getelementtext)|Recupera a `innerText` propriedade de um elemento HTML.|
+|[cdhtmldialog::getevent](#getevent)|Obtém `IHTMLEventObj` o ponteiro para o objeto de evento atual.|
+|[cdhtmldialog::getexternal](#getexternal)|Obtém a `IDispatch` interface do anfitrião.|
+|[cdhtmldialog::gethostinfo](#gethostinfo)|Recupera os recursos de IA do host.|
+|[cdhtmldialog::getoptionkeypath](#getoptionkeypath)|Recupera a chave de registro sob a qual as preferências do usuário são armazenadas.|
+|[cdhtmldialog::hideui](#hideui)|Esconde a ui do anfitrião.|
+|[cdhtmldialog::isexternalDispatchsafe](#isexternaldispatchsafe)|Indica se a `IDispatch` interface do host é segura para scripts.|
+|[cdhtmldialog::loadFromresource](#loadfromresource)|Carrega o recurso especificado no controle do WebBrowser.|
+|[cdhtmldialog::navegar](#navigate)|Navega para a URL especificada.|
+|[cdhtmldialog::OnbeforeNavigate](#onbeforenavigate)|Chamado pela estrutura antes de um evento de navegação ser acionado.|
+|[cdhtmldialog::OnDocumentComplete](#ondocumentcomplete)|Chamado pelo framework para notificar um aplicativo quando um documento chegou ao estado READYSTATE_COMPLETE.|
+|[cdhtmlDiálogo::OnDocWindowActivate](#ondocwindowactivate)|Chamado pela estrutura quando a janela do documento é ativada ou desativada.|
+|[cdhtmldialog::onFrameWindowactivate](#onframewindowactivate)|Chamado pela estrutura quando a janela do quadro é ativada ou desativada.|
+|[cdhtmlDiálogo::OnInitDialog](#oninitdialog)|Chamado em resposta à mensagem WM_INITDIALOG.|
+|[cdhtmldialog::OnNavigateComplete](#onnavigatecomplete)|Chamado pela estrutura após um evento de navegação ser concluído.|
+|[cdhtmlDiálogo::RedimensionarBorder](#resizeborder)|Alerta o objeto de que ele precisa para redimensionar seu espaço de fronteira.|
+|[cdhtmldialog::setcontrolProperty](#setcontrolproperty)|Define a propriedade de um controle ActiveX como um novo valor.|
+|[cdhtmldialog::setelementhtml](#setelementhtml)|Define `innerHTML` a propriedade de um elemento HTML.|
+|[cdhtmldialog::setelementproperty](#setelementproperty)|Define uma propriedade de um elemento HTML.|
+|[cdhtmldialog::setelementtext](#setelementtext)|Define `innerText` a propriedade de um elemento HTML.|
+|[cdhtmldialog::setexternalDispatch](#setexternaldispatch)|Define a interface `IDispatch` do host.|
+|[cdhtmldialog::setHostflags](#sethostflags)|Define as bandeiras de ui do anfitrião.|
+|[cdhtmldialog::showcontextmenu](#showcontextmenu)|Chamado quando um menu de contexto está prestes a ser exibido.|
+|[cdhtmldialog::showui](#showui)|Mostra a ui do anfitrião.|
+|[cdhtmlDialog::TranslateAccelerator](#translateaccelerator)|Chamado para processar mensagens de chave do acelerador do menu.|
+|[cdhtmldialog::translateurl](#translateurl)|Chamado para modificar a URL a ser carregada.|
+|[cdhtmldialog::updateui](#updateui)|Chamado para notificar o anfitrião que o estado de comando mudou.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Indica se o título do documento HTML deve ser usado como a legenda da caixa de diálogo.|
-|[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|ID de recurso do recurso HTML a ser exibido.|
-|[CDHtmlDialog::m_pBrowserApp](#m_pbrowserapp)|Um ponteiro para um aplicativo de navegador da Web.|
-|[CDHtmlDialog::m_spHtmlDoc](#m_sphtmldoc)|Um ponteiro para um documento HTML.|
-|[CDHtmlDialog::m_strCurrentUrl](#m_strcurrenturl)|A URL atual.|
-|[CDHtmlDialog::m_szHtmlResID](#m_szhtmlresid)|Versão da cadeia de caracteres da ID do recurso HTML.|
+|[cdhtmlDiálogo::m_bUseHtmlTitle](#m_busehtmltitle)|Indica se deve usar o título do documento HTML como legenda de diálogo.|
+|[cdhtmlDiálogo::m_nHtmlResID](#m_nhtmlresid)|ID de recurso de recurso HTML a ser exibido.|
+|[cdhtmlDiálogo::m_pBrowserApp](#m_pbrowserapp)|Um ponteiro para um aplicativo do navegador da Web.|
+|[cdhtmlDiálogo::m_spHtmlDoc](#m_sphtmldoc)|Um ponteiro para um documento HTML.|
+|[cdhtmldiálogo::m_strCurrentUrl](#m_strcurrenturl)|A URL atual.|
+|[cdhtmlDiálogo::m_szHtmlResID](#m_szhtmlresid)|Versão string do ID de recurso HTML.|
 
 ## <a name="remarks"></a>Comentários
 
-`CDHtmlDialog`pode carregar o HTML a ser exibido por meio de um recurso HTML ou de uma URL.
+`CDHtmlDialog`pode carregar o HTML para ser exibido a partir de um recurso HTML ou de uma URL.
 
-`CDHtmlDialog`também pode fazer troca de dados com controles HTML e manipular eventos de controles HTML, como cliques de botão.
+`CDHtmlDialog`também pode fazer troca de dados com controles HTML e lidar com eventos de controles HTML, como cliques de botão.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CDHtmlSinkHandlerBase2`
 
 `CDHtmlSinkHandlerBase1`
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 `CDHtmlSinkHandler`
 
@@ -228,44 +228,44 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 `CDHtmlEventSink`
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 `CDHtmlDialog`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdhtml. h
+**Cabeçalho:** afxdhtml.h
 
-##  <a name="ddx_dhtml_helper_macros"></a>Macros auxiliares DDX_DHtml
+## <a name="ddx_dhtml-helper-macros"></a><a name="ddx_dhtml_helper_macros"></a>DDX_DHtml Helper Macros
 
-As macros auxiliares DDX_DHtml permitem o fácil acesso às propriedades de controles geralmente usadas em uma página HTML.
+As macros auxiliares DDX_DHtml permitem acesso fácil às propriedades comumente usadas dos controles em uma página HTML.
 
 ### <a name="data-exchange-macros"></a>Macros de troca de dados
 
 |||
 |-|-|
-|[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|Define ou recupera a propriedade Value do controle selecionado.|
-|[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|Define ou recupera o texto entre as marcas de início e de fim do elemento atual.|
-|[DDX_DHtml_ElementInnerHtml](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnerhtml)|Define ou recupera o HTML entre as marcas de início e de fim do elemento atual.|
-|[DDX_DHtml_Anchor_Href](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_href)|Define ou recupera a URL de destino ou o ponto de ancoragem.|
-|[DDX_DHtml_Anchor_Target](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_target)|Define ou recupera a janela ou o quadro de destino.|
+|[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|Define ou recupera a propriedade Valor do controle selecionado.|
+|[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|Define ou recupera o texto entre as tags inicial e final do elemento atual.|
+|[DDX_DHtml_ElementInnerHtml](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnerhtml)|Define ou recupera o HTML entre as tags inicial e final do elemento atual.|
+|[DDX_DHtml_Anchor_Href](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_href)|Define ou recupera a URL de destino ou ponto de ancoragem.|
+|[DDX_DHtml_Anchor_Target](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_target)|Define ou recupera a janela de destino ou o quadro.|
 |[DDX_DHtml_Img_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_img_src)|Define ou recupera o nome de uma imagem ou um clipe de vídeo no documento.|
 |[DDX_DHtml_Frame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_frame_src)|Define ou recupera a URL do quadro associado.|
 |[DDX_DHtml_IFrame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_iframe_src)|Define ou recupera a URL do quadro associado.|
 
-##  <a name="canaccessexternal"></a>  CDHtmlDialog::CanAccessExternal
+## <a name="cdhtmldialogcanaccessexternal"></a><a name="canaccessexternal"></a>cdhtmldialog::canaccessexternal
 
-Substituível que é chamado como uma verificação de acesso para ver se os objetos de script na página carregada podem acessar o despacho externo do site de controle. Verifica se o despacho é seguro para scripts ou se a zona atual permite objetos que não são seguros para scripts.
+Superridable que é chamado como uma verificação de acesso para ver se objetos de script na página carregada podem acessar o despacho externo do site de controle. Verifica se o despacho é seguro para scripts ou a região atual permite objetos que não são seguros para scripts.
 
 ```
 virtual BOOL CanAccessExternal();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
-##  <a name="cdhtmldialog"></a>CDHtmlDialog:: CDHtmlDialog
+## <a name="cdhtmldialogcdhtmldialog"></a><a name="cdhtmldialog"></a>cdhtmldialog::Cdhtmldialog
 
 Constrói uma caixa de diálogo HTML dinâmica baseada em recursos.
 
@@ -286,15 +286,15 @@ CDHtmlDialog(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszTemplateName*<br/>
-A cadeia de caracteres terminada em nulo que é o nome de um recurso de modelo de caixa de diálogo.
+A seqüência de seqüência de nulidade sumida é o nome de um recurso de modelo de caixa de diálogo.
 
 *szHtmlResID*<br/>
-A cadeia de caracteres terminada em nulo que é o nome de um recurso HTML.
+A seqüência de terminadas nula que é o nome de um recurso HTML.
 
-*pParentWnd*<br/>
-Um ponteiro para o objeto de janela pai ou proprietário (do tipo [CWnd](../../mfc/reference/cwnd-class.md)) ao qual o objeto de caixa de diálogo pertence. Se for NULL, a janela pai do objeto de caixa de diálogo será definida como a janela principal do aplicativo.
+*Pparentwnd*<br/>
+Um ponteiro para o objeto da janela pai ou proprietário (do tipo [CWnd)](../../mfc/reference/cwnd-class.md)ao qual o objeto de diálogo pertence. Se for NULL, a janela pai do objeto de diálogo será definida na janela principal do aplicativo.
 
-*nIDTemplate*<br/>
+*Nidtemplate*<br/>
 Contém o número de ID de um recurso de modelo de caixa de diálogo.
 
 *nHtmlResID*<br/>
@@ -302,9 +302,9 @@ Contém o número de ID de um recurso HTML.
 
 ### <a name="remarks"></a>Comentários
 
-A segunda forma do construtor fornece acesso ao recurso de caixa de diálogo por meio do nome do modelo. A terceira forma do construtor fornece acesso ao recurso de caixa de diálogo por meio da ID do modelo de recurso. Normalmente, a ID começa com o prefixo **IDD_** .
+A segunda forma do construtor fornece acesso ao recurso de diálogo através do nome do modelo. A terceira forma do construtor fornece acesso ao recurso de diálogo através do ID do modelo de recurso. Normalmente, o ID começa com o prefixo **IDD_.**
 
-##  <a name="_dtorcdhtmldialog"></a>CDHtmlDialog:: ~ CDHtmlDialog
+## <a name="cdhtmldialogcdhtmldialog"></a><a name="_dtorcdhtmldialog"></a>cdhtmldialog::~cdhtmldialog
 
 Destrói um objeto CDHtmlDialog.
 
@@ -314,11 +314,11 @@ virtual ~CDHtmlDialog();
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow) deve ser usada para destruir caixas de diálogo sem janela restrita que são criadas por [CDialog:: Create](../../mfc/reference/cdialog-class.md#create).
+A função [cwnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) membro deve ser usada para destruir caixas de diálogo modeless que são criadas por [CDialog::Create](../../mfc/reference/cdialog-class.md#create).
 
-##  <a name="createcontrolsite"></a>  CDHtmlDialog::CreateControlSite
+## <a name="cdhtmldialogcreatecontrolsite"></a><a name="createcontrolsite"></a>cdhtmldialog::CreateControlSite
 
-Substituível usado para criar uma instância de site de controle para hospedar o controle WebBrowser na caixa de diálogo.
+Superridable usado para criar uma instância de site de controle para hospedar o controle do WebBrowser na caixa de diálogo.
 
 ```
 virtual BOOL CreateControlSite(
@@ -336,19 +336,19 @@ Um ponteiro para o objeto [COleControlContainer](../../mfc/reference/colecontrol
 *ppSite*<br/>
 Um ponteiro para um ponteiro para um [COleControlSite](../../mfc/reference/colecontrolsite-class.md).
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0.
+Não zero se bem sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
 Você pode substituir essa função de membro para retornar uma instância de sua própria classe de site de controle.
 
-##  <a name="ddx_dhtml_axcontrol"></a>CDHtmlDialog::D DX_DHtml_AxControl
+## <a name="cdhtmldialogddx_dhtml_axcontrol"></a><a name="ddx_dhtml_axcontrol"></a>cdhtmlDiálogo::DDx_Dhtml_AxControl
 
-Troca dados entre uma variável de membro e o valor da propriedade de um controle ActiveX em uma página HTML.
+Troca dados entre uma variável de membro e o valor de propriedade de um controle ActiveX em uma página HTML.
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -365,29 +365,29 @@ void DDX_DHtml_AxControl(
 ### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
-Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
+Um ponteiro para um objeto [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
-*szId*<br/>
-O valor do parâmetro de ID da marca do objeto no código-fonte HTML do controle ActiveX.
+*Szid*<br/>
+O valor do parâmetro ID da tag objeto na fonte HTML para o controle ActiveX.
 
-*dispId*<br/>
-A ID de expedição da propriedade com a qual você deseja trocar dados.
+*Dispid*<br/>
+O ID de despacho da propriedade com a qual você deseja trocar dados.
 
 *szPropName*<br/>
 O nome da propriedade.
 
 *var*<br/>
-O membro de dados, do tipo VARIANT, [COleVariant](../../mfc/reference/colevariant-class.md)ou [CComVariant](../../atl/reference/ccomvariant-class.md), que contém o valor trocado com a propriedade de controle ActiveX.
+O membro de dados, do tipo VARIANT, [COleVariant](../../mfc/reference/colevariant-class.md), ou [CComVariant,](../../atl/reference/ccomvariant-class.md)que detém o valor trocado com a propriedade de controle ActiveX.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCHtmlHttp#1](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_1.cpp)]
 
-##  <a name="ddx_dhtml_checkbox"></a>  CDHtmlDialog::DDX_DHtml_CheckBox
+## <a name="cdhtmldialogddx_dhtml_checkbox"></a><a name="ddx_dhtml_checkbox"></a>cdhtmldiálogo::Ddx_dhtml_checkbox
 
 Troca dados entre uma variável de membro e uma caixa de seleção em uma página HTML.
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -397,10 +397,10 @@ void DDX_DHtml_CheckBox(
 ### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
-Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
+Um ponteiro para um objeto [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
-*szId*<br/>
-O valor que você especificou para o parâmetro ID do controle HTML.
+*Szid*<br/>
+O valor especificado para o parâmetro ID do controle HTML.
 
 *value*<br/>
 O valor que está sendo trocado.
@@ -409,11 +409,11 @@ O valor que está sendo trocado.
 
 [!code-cpp[NVC_MFCHtmlHttp#2](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_2.cpp)]
 
-##  <a name="ddx_dhtml_elementtext"></a>CDHtmlDialog::D DX_DHtml_ElementText
+## <a name="cdhtmldialogddx_dhtml_elementtext"></a><a name="ddx_dhtml_elementtext"></a>cdhtmlDiálogo::Ddx_dhtml_elementText
 
 Troca dados entre uma variável de membro e qualquer propriedade de elemento HTML em uma página HTML.
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -460,22 +460,22 @@ void DDX_DHtml_ElementText(
 ### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
-Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
+Um ponteiro para um objeto [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
-*szId*<br/>
-O valor que você especificou para o parâmetro ID do controle HTML.
+*Szid*<br/>
+O valor especificado para o parâmetro ID do controle HTML.
 
-*dispId*<br/>
-A ID de expedição do elemento HTML com o qual você deseja trocar dados.
+*Dispid*<br/>
+O ID de despacho do elemento HTML com o qual você deseja trocar dados.
 
 *value*<br/>
 O valor que está sendo trocado.
 
-##  <a name="ddx_dhtml_radio"></a>CDHtmlDialog::D DX_DHtml_Radio
+## <a name="cdhtmldialogddx_dhtml_radio"></a><a name="ddx_dhtml_radio"></a>cdhtmldiálogo::Ddx_dhtml_radio
 
-Troca dados entre uma variável de membro e um botão de opção em uma página HTML.
+Troca dados entre uma variável de membro e um botão de rádio em uma página HTML.
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -485,19 +485,19 @@ void DDX_DHtml_Radio(
 ### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
-Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
+Um ponteiro para um objeto [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
-*szId*<br/>
-O valor que você especificou para o parâmetro ID do controle HTML.
+*Szid*<br/>
+O valor especificado para o parâmetro ID do controle HTML.
 
 *value*<br/>
 O valor que está sendo trocado.
 
-##  <a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::D DX_DHtml_SelectIndex
+## <a name="cdhtmldialogddx_dhtml_selectindex"></a><a name="ddx_dhtml_selectindex"></a>cdhtmldiálogo::Ddx_dhtml_selectindex
 
-Obtém ou define o índice de uma caixa de listagem em uma página HTML.
+Obtém ou define o índice de uma caixa de lista em uma página HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -507,19 +507,19 @@ void DDX_DHtml_SelectIndex(
 ### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
-Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
+Um ponteiro para um objeto [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
-*szId*<br/>
-O valor que você especificou para o parâmetro do `id` controle HTML.
+*Szid*<br/>
+O valor especificado para o parâmetro `id` do controle HTML.
 
 *value*<br/>
 O valor que está sendo trocado.
 
-##  <a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::D DX_DHtml_SelectString
+## <a name="cdhtmldialogddx_dhtml_selectstring"></a><a name="ddx_dhtml_selectstring"></a>cdhtmlDiálogo::Ddx_dhtml_selectstring
 
-Obtém ou define o texto de exibição de uma entrada da caixa de listagem (com base no índice atual) em uma página HTML.
+Obtém ou define o texto de exibição de uma entrada de caixa de lista (com base no índice atual) em uma página HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -529,19 +529,19 @@ void DDX_DHtml_SelectString(
 ### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
-Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
+Um ponteiro para um objeto [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
-*szId*<br/>
-O valor que você especificou para o parâmetro ID do controle HTML.
+*Szid*<br/>
+O valor especificado para o parâmetro ID do controle HTML.
 
 *value*<br/>
 O valor que está sendo trocado.
 
-##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
+## <a name="cdhtmldialogddx_dhtml_selectvalue"></a><a name="ddx_dhtml_selectvalue"></a>cdhtmlDiálogo::Ddx_dhtml_selectValue
 
-Obtém ou define o valor de uma entrada da caixa de listagem (com base no índice atual) em uma página HTML.
+Obtém ou define o valor de uma entrada de caixa de lista (com base no índice atual) em uma página HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -551,10 +551,10 @@ void DDX_DHtml_SelectValue(
 ### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
-Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
+Um ponteiro para um objeto [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
-*szId*<br/>
-O valor que você especificou para o parâmetro ID do controle HTML.
+*Szid*<br/>
+O valor especificado para o parâmetro ID do controle HTML.
 
 *value*<br/>
 O valor que está sendo trocado.
@@ -563,17 +563,17 @@ O valor que está sendo trocado.
 
 [!code-cpp[NVC_MFCHtmlHttp#3](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_3.cpp)]
 
-##  <a name="destroymodeless"></a>  CDHtmlDialog::DestroyModeless
+## <a name="cdhtmldialogdestroymodeless"></a><a name="destroymodeless"></a>CDHtmlDiálogo::DestroyModeless
 
-Desanexa uma caixa de diálogo sem janela restrita do `CDHtmlDialog` objeto e destrói o objeto.
+Destaca uma caixa de diálogo modeless do `CDHtmlDialog` objeto e destrói o objeto.
 
-```
+```cpp
 void DestroyModeless();
 ```
 
-##  <a name="enablemodeless"></a>  CDHtmlDialog::EnableModeless
+## <a name="cdhtmldialogenablemodeless"></a><a name="enablemodeless"></a>cdhtmlDiálogo::Habilitarmodeless
 
-Habilita caixas de diálogo sem janela restrita.
+Habilita caixas de diálogo modeless.
 
 ```
 STDMETHOD(EnableModeless)(BOOL fEnable);
@@ -582,19 +582,19 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="parameters"></a>Parâmetros
 
 *fEnable*<br/>
-Consulte *fEnable* em [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) no SDK do Windows.
+Consulte *fEnable* no [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) no Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do CDHtmlDialog::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)), conforme descrito no SDK do Windows.
 
-##  <a name="filterdataobject"></a>CDHtmlDialog:: FilterDataObject
+## <a name="cdhtmldialogfilterdataobject"></a><a name="filterdataobject"></a>cdhtmldiálogo::filterdataobject
 
-Permite que a caixa de diálogo filtre objetos de dados da área de transferência criados pelo navegador hospedado.
+Permite que a caixa de diálogo filtre objetos de dados de área de transferência criados pelo navegador hospedado.
 
 ```
 STDMETHOD(FilterDataObject)(
@@ -604,23 +604,23 @@ STDMETHOD(FilterDataObject)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDO*<br/>
-Consulte *pDO* em [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) na SDK do Windows.
+*Dop*<br/>
+Consulte *pDO* em [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) no Windows SDK.
 
 *ppDORet*<br/>
-Consulte *ppDORet* no `IDocHostUIHandler::FilterDataObject` SDK do Windows.
+Consulte *ppDORet* `IDocHostUIHandler::FilterDataObject` no SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)), conforme descrito no SDK do Windows.
 
-##  <a name="getcontroldispatch"></a>  CDHtmlDialog::GetControlDispatch
+## <a name="cdhtmldialoggetcontroldispatch"></a><a name="getcontroldispatch"></a>cdhtmldialog::GetcontrolDispatch
 
-Recupera a `IDispatch` interface em um controle ActiveX inserido no documento HTML retornado por [GetDHtmlDocument](#getdhtmldocument).
+Recupera a `IDispatch` interface em um controle ActiveX incorporado no documento HTML retornado pelo [GetDHtmlDocument](#getdhtmldocument).
 
 ```
 HRESULT GetControlDispatch(
@@ -630,17 +630,17 @@ HRESULT GetControlDispatch(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szId*<br/>
-A ID HTML de um controle ActiveX.
+*Szid*<br/>
+O ID HTML de um controle ActiveX.
 
-*ppdisp*<br/>
-A `IDispatch` interface do controle, se encontrada na página da Web.
+*Ppdisp*<br/>
+A `IDispatch` interface do controle se encontrado na página da Web.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
-##  <a name="getcontrolproperty"></a>CDHtmlDialog:: getcontrolproperty
+## <a name="cdhtmldialoggetcontrolproperty"></a><a name="getcontrolproperty"></a>cdhtmldialog::getcontrolProperty
 
 Recupera a propriedade solicitada do controle ActiveX especificado.
 
@@ -660,40 +660,40 @@ VARIANT GetControlProperty(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szId*<br/>
-A ID HTML de um controle ActiveX.
+*Szid*<br/>
+O ID HTML de um controle ActiveX.
 
 *szPropName*<br/>
-O nome de uma propriedade na localidade padrão do usuário atual.
+O nome de uma propriedade na localização padrão do usuário atual.
 
 *pdispControl*<br/>
 O `IDispatch` ponteiro de um controle ActiveX.
 
-*dispId*<br/>
-A ID de expedição de uma propriedade.
+*Dispid*<br/>
+A impropriedade de uma propriedade.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma variante que contém a propriedade solicitada ou uma variante vazia se o controle ou propriedade não foi encontrado.
+Uma variante contendo a propriedade solicitada ou uma variante vazia se o controle ou propriedade não puder ser encontrado.
 
 ### <a name="remarks"></a>Comentários
 
-As sobrecargas são listadas do menos eficiente na parte superior para a mais eficiente na parte inferior.
+As sobrecargas são listadas de menos eficientes na parte superior para mais eficientes na parte inferior.
 
-##  <a name="getcurrenturl"></a>  CDHtmlDialog::GetCurrentUrl
+## <a name="cdhtmldialoggetcurrenturl"></a><a name="getcurrenturl"></a>cdhtmldialog::getCurrenturl
 
-Recupera o Uniform Resource Locator (URL) associado ao documento atual.
+Recupera o URL (Uniform Resource Locator, localizador de recursos uniforme) associado ao documento atual.
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*szUrl*<br/>
-Um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contém a URL a ser recuperada.
+*Szurl*<br/>
+Um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) contendo a URL para recuperar.
 
-##  <a name="getdhtmldocument"></a>CDHtmlDialog:: GetDHtmlDocument
+## <a name="cdhtmldialoggetdhtmldocument"></a><a name="getdhtmldocument"></a>cdhtmldialog::getdhtmldocument
 
 Recupera a interface [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) no documento HTML carregado no momento.
 
@@ -703,15 +703,15 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 
 ### <a name="parameters"></a>Parâmetros
 
-pphtmlDoc um ponteiro para um ponteiro para um documento HTML.  *\* \**
+* \* \** Um ponteiro para um ponteiro para um documento HTML.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um HRESULT padrão. Retornará S_OK se for bem-sucedido.
+Um HRESULT padrão. Retorna S_OK se for bem sucedido.
 
-##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget
+## <a name="cdhtmldialoggetdroptarget"></a><a name="getdroptarget"></a>cdhtmldialog::getDroptarget
 
-Chamado pelo controle WebBrowser contido quando ele está sendo usado como um destino de soltar para permitir que a caixa de diálogo forneça um [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)alternativo.
+Chamado pelo controle webbrowser contido quando ele está sendo usado como um alvo de queda para permitir que a caixa de diálogo forneça um [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)alternativo .
 
 ```
 STDMETHOD(GetDropTarget)(
@@ -722,20 +722,20 @@ STDMETHOD(GetDropTarget)(
 ### <a name="parameters"></a>Parâmetros
 
 *pDropTarget*<br/>
-Consulte *pDropTarget* em [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) no SDK do Windows.
+Consulte *pDropTarget* em [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) no Windows SDK.
 
 *ppDropTarget*<br/>
-Consulte *ppDropTarget* no `IDocHostUIHandler::GetDropTarget` SDK do Windows.
+Consulte *ppDropTarget* `IDocHostUIHandler::GetDropTarget` no SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do CDHtmlDialog::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)), conforme descrito no SDK do Windows.
 
-##  <a name="getelement"></a>CDHtmlDialog:: GetElement
+## <a name="cdhtmldialoggetelement"></a><a name="getelement"></a>cdhtmldialog::getelement
 
 Retorna uma interface no elemento HTML especificado por *szElementId*.
 
@@ -752,31 +752,31 @@ HRESULT GetElement(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID de um elemento HTML.
+*Szelementid*<br/>
+O ID de um elemento HTML.
 
-*ppdisp*<br/>
-Um `IDispatch` ponteiro para o elemento solicitado ou a coleção de elementos.
+*Ppdisp*<br/>
+Um `IDispatch` ponteiro para o elemento solicitado ou coleção de elementos.
 
 *pbCollection*<br/>
-Um BOOL que indica se o objeto representado por *ppDisp* é um único elemento ou uma coleção de elementos.
+Um BOOL indicando se o objeto representado pelo *ppdisp* é um único elemento ou uma coleção de elementos.
 
 *pphtmlElement*<br/>
 Um `IHTMLElement` ponteiro para o elemento solicitado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Use a primeira sobrecarga se você precisar manipular condições em que pode haver mais de um elemento com a ID especificada. Você pode usar o último parâmetro para descobrir se o ponteiro de interface retornado é para uma coleção ou um único item. Se o ponteiro de interface estiver em uma coleção, você poderá consultar `IHTMLElementCollection` e usar sua `item` propriedade para se referir aos elementos por posição ordinal.
+Use a primeira sobrecarga se precisar lidar com condições nas quais possa haver mais de um elemento com o ID especificado. Você pode usar o último parâmetro para descobrir se o ponteiro de interface retornado é para uma coleção ou um único item. Se o ponteiro de interface estiver em uma `IHTMLElementCollection` coleção, `item` você pode consultar a propriedade e usar sua propriedade para se referir aos elementos por posição ordinal.
 
-A segunda sobrecarga falhará se houver mais de um elemento com a mesma ID na página.
+A segunda sobrecarga falhará se houver mais de um elemento com o mesmo ID na página.
 
-##  <a name="getelementhtml"></a>  CDHtmlDialog::GetElementHtml
+## <a name="cdhtmldialoggetelementhtml"></a><a name="getelementhtml"></a>cdhtmldialog::getelementhtml
 
-Recupera a `innerHTML` Propriedade do elemento HTML identificada por *szElementId*.
+Recupera a `innerHTML` propriedade do elemento HTML identificado por *szElementId*.
 
 ```
 BSTR GetElementHtml(LPCTSTR szElementId);
@@ -784,14 +784,14 @@ BSTR GetElementHtml(LPCTSTR szElementId);
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID de um elemento HTML.
+*Szelementid*<br/>
+O ID de um elemento HTML.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A `innerHTML` Propriedade do elemento HTML identificado por *szElementId* ou NULL se o elemento não foi encontrado.
+A `innerHTML` propriedade do elemento HTML identificada por *szElementId* ou NULL se o elemento não pudesse ser encontrado.
 
-##  <a name="getelementinterface"></a>  CDHtmlDialog::GetElementInterface
+## <a name="cdhtmldialoggetelementinterface"></a><a name="getelementinterface"></a>cdhtmldialog::getelementinterface
 
 Recupera o ponteiro de interface solicitado do elemento HTML identificado por *szElementId*.
 
@@ -808,16 +808,16 @@ HRESULT GetElementInterface(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID de um elemento HTML.
+*Szelementid*<br/>
+O ID de um elemento HTML.
 
-*ppvObj*<br/>
-Endereço de um ponteiro que será preenchido com o ponteiro de interface solicitado se o elemento for encontrado e a consulta for realizada com sucesso.
+*Ppvobj*<br/>
+Endereço de um ponteiro que será preenchido com o ponteiro de interface solicitado se o elemento for encontrado e a consulta for bem sucedida.
 
-*refiid*<br/>
-A ID da interface (IID) da interface solicitada.
+*Refiid*<br/>
+O ID de interface (IID) da interface solicitada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -825,9 +825,9 @@ Um valor HRESULT padrão.
 
 [!code-cpp[NVC_MFCHtmlHttp#4](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_4.cpp)]
 
-##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty
+## <a name="cdhtmldialoggetelementproperty"></a><a name="getelementproperty"></a>cdhtmldialog::getelementproperty
 
-Recupera o valor da propriedade identificada por *dispId* a partir do elemento HTML identificado por *szElementId*.
+Recupera o valor da propriedade identificada por *dspId* a partir do elemento HTML identificado por *szElementId*.
 
 ```
 VARIANT GetElementProperty(
@@ -837,19 +837,19 @@ VARIANT GetElementProperty(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID de um elemento HTML.
+*Szelementid*<br/>
+O ID de um elemento HTML.
 
-*dispId*<br/>
-A ID de expedição de uma propriedade.
+*Dispid*<br/>
+A impropriedade de uma propriedade.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O valor da propriedade ou uma variante vazia se a propriedade ou o elemento não foi encontrado.
+O valor da propriedade ou uma variante vazia se a propriedade ou elemento não pudesse ser encontrado.
 
-##  <a name="getelementtext"></a>  CDHtmlDialog::GetElementText
+## <a name="cdhtmldialoggetelementtext"></a><a name="getelementtext"></a>cdhtmldialog::getelementtext
 
-Recupera a `innerText` Propriedade do elemento HTML identificada por *szElementId*.
+Recupera a `innerText` propriedade do elemento HTML identificado por *szElementId*.
 
 ```
 BSTR GetElementText(LPCTSTR szElementId);
@@ -857,16 +857,16 @@ BSTR GetElementText(LPCTSTR szElementId);
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID de um elemento HTML.
+*Szelementid*<br/>
+O ID de um elemento HTML.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A `innerText` Propriedade do elemento HTML identificado por *szElementId* ou NULL se a propriedade ou o elemento não foi encontrado.
+A `innerText` propriedade do elemento HTML identificada por *szElementId* ou NULL se a propriedade ou elemento não pudesse ser encontrado.
 
-##  <a name="getevent"></a>  CDHtmlDialog::GetEvent
+## <a name="cdhtmldialoggetevent"></a><a name="getevent"></a>cdhtmldialog::getevent
 
-Retorna o `IHTMLEventObj` ponteiro para o objeto de evento atual.
+Retorna `IHTMLEventObj` o ponteiro para o objeto de evento atual.
 
 ```
 HRESULT GetEvent(IHTMLEventObj** ppEventObj);
@@ -875,19 +875,19 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 ### <a name="parameters"></a>Parâmetros
 
 *ppEventObj*<br/>
-Endereço de um ponteiro que será preenchido com o ponteiro `IHTMLEventObj` de interface.
+Endereço de um ponteiro que será `IHTMLEventObj` preenchido com o ponteiro de interface.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função só deve ser chamada de dentro de um manipulador de eventos DHTML.
+Esta função só deve ser chamada de dentro de um manipulador de eventos DHTML.
 
-##  <a name="getexternal"></a>CDHtmlDialog:: GetExternal
+## <a name="cdhtmldialoggetexternal"></a><a name="getexternal"></a>cdhtmldialog::getexternal
 
-Obtém a interface do `IDispatch` host.
+Obtém a `IDispatch` interface do anfitrião.
 
 ```
 STDMETHOD(GetExternal)(IDispatch** ppDispatch);
@@ -896,19 +896,19 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="parameters"></a>Parâmetros
 
 *ppDispatch*<br/>
-Consulte *ppDispatch* em [IDocHostUIHandler:: getexternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) no SDK do Windows.
+Consulte *ppDispatch* em [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) no Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna S_OK em caso de êxito ou E_NOTIMPL em caso de falha.
+Retorna S_OK no sucesso ou E_NOTIMPL no fracasso.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do CDHtmlDialog::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)), conforme descrito no Windows SDK.
 
-##  <a name="gethostinfo"></a>  CDHtmlDialog::GetHostInfo
+## <a name="cdhtmldialoggethostinfo"></a><a name="gethostinfo"></a>cdhtmldialog::gethostinfo
 
-Recupera os recursos da interface do usuário do host.
+Recupera os recursos de IA do host.
 
 ```
 STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
@@ -916,20 +916,20 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pInfo*<br/>
-Consulte *pInfo* em [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) no SDK do Windows.
+*Pinfo*<br/>
+Consulte *pInfo* em [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) no Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do CDHtmlDialog::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)), conforme descrito no SDK do Windows.
 
-##  <a name="getoptionkeypath"></a>  CDHtmlDialog::GetOptionKeyPath
+## <a name="cdhtmldialoggetoptionkeypath"></a><a name="getoptionkeypath"></a>cdhtmldialog::getoptionkeypath
 
-Recupera a chave do registro sob a qual as preferências do usuário são armazenadas.
+Recupera a chave de registro sob a qual as preferências do usuário são armazenadas.
 
 ```
 STDMETHOD(GetOptionKeyPath)(
@@ -939,51 +939,51 @@ STDMETHOD(GetOptionKeyPath)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pchKey*<br/>
-Consulte *pchKey* em [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) no SDK do Windows.
+*pchkey*<br/>
+Consulte *pchKey* em [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) no Windows SDK.
 
 *dw*<br/>
-Consulte *DW* in `IDocHostUIHandler::GetOptionKeyPath` na SDK do Windows.
+Veja *dw* in `IDocHostUIHandler::GetOptionKeyPath` no Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do CDHtmlDialog::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)), conforme descrito no SDK do Windows.
 
-##  <a name="hideui"></a>  CDHtmlDialog::HideUI
+## <a name="cdhtmldialoghideui"></a><a name="hideui"></a>cdhtmldialog::hideui
 
-Oculta a interface do usuário do host.
+Esconde a ui do anfitrião.
 
 ```
 STDMETHOD(HideUI)(void);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler:::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)), conforme descrito no SDK do Windows.
 
-##  <a name="isexternaldispatchsafe"></a>  CDHtmlDialog::IsExternalDispatchSafe
+## <a name="cdhtmldialogisexternaldispatchsafe"></a><a name="isexternaldispatchsafe"></a>cdhtmldialog::isexternalDispatchsafe
 
-Indica se a interface do `IDispatch` host é segura para scripts.
+Indica se a `IDispatch` interface do host é segura para scripts.
 
 ```
 virtual BOOL IsExternalDispatchSafe();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna FALSE.
+Retorna FALSO.
 
-##  <a name="loadfromresource"></a>  CDHtmlDialog::LoadFromResource
+## <a name="cdhtmldialogloadfromresource"></a><a name="loadfromresource"></a>cdhtmldialog::loadFromresource
 
-Carrega o recurso especificado no controle WebBrowser na caixa de diálogo DHTML.
+Carrega o recurso especificado no controle do WebBrowser na caixa de diálogo DHTML.
 
 ```
 BOOL LoadFromResource(LPCTSTR lpszResource);
@@ -993,18 +993,18 @@ BOOL LoadFromResource(UINT nRes);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszResource*<br/>
-Um ponteiro para uma cadeia de caracteres que contém o nome do recurso a ser carregado.
+Um ponteiro para uma seqüência contendo o nome do recurso a carregar.
 
 *nRes*<br/>
-A ID do recurso a ser carregado.
+ID do pool de recursos a carregar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Verdadeiro se for bem-sucedido; caso contrário, FALSE.
+VERDADE se bem sucedido; caso contrário, FALSO.
 
-##  <a name="m_busehtmltitle"></a>  CDHtmlDialog::m_bUseHtmlTitle
+## <a name="cdhtmldialogm_busehtmltitle"></a><a name="m_busehtmltitle"></a>cdhtmlDiálogo::m_bUseHtmlTitle
 
-Indica se o título do documento HTML deve ser usado como a legenda da caixa de diálogo.
+Indica se deve usar o título do documento HTML como legenda de diálogo.
 
 ```
 BOOL m_bUseHtmlTitle;
@@ -1012,11 +1012,11 @@ BOOL m_bUseHtmlTitle;
 
 ### <a name="remarks"></a>Comentários
 
-Se **m**_ **bUseHtmlTitle** for true, a legenda da caixa de diálogo será definida igual ao título do documento HTML; caso contrário, a legenda no recurso de caixa de diálogo será usada.
+Se **m**_ **bUseHtmlTitle** for TRUE, a legenda de diálogo será definida igual ao título do documento HTML; caso contrário, a legenda no recurso de diálogo é usada.
 
-##  <a name="m_nhtmlresid"></a>  CDHtmlDialog::m_nHtmlResID
+## <a name="cdhtmldialogm_nhtmlresid"></a><a name="m_nhtmlresid"></a>cdhtmlDiálogo::m_nHtmlResID
 
-ID de recurso do recurso HTML a ser exibido.
+ID de recurso de recurso HTML a ser exibido.
 
 ```
 UINT m_nHtmlResID;
@@ -1026,15 +1026,15 @@ UINT m_nHtmlResID;
 
 [!code-cpp[NVC_MFCHtmlHttp#5](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_5.cpp)]
 
-##  <a name="m_pbrowserapp"></a>  CDHtmlDialog::m_pBrowserApp
+## <a name="cdhtmldialogm_pbrowserapp"></a><a name="m_pbrowserapp"></a>cdhtmlDiálogo::m_pBrowserApp
 
-Um ponteiro para um aplicativo de navegador da Web.
+Um ponteiro para um aplicativo do navegador da Web.
 
 ```
 CComPtr <IWebBrowser2> m_pBrowserApp;
 ```
 
-##  <a name="m_sphtmldoc"></a>  CDHtmlDialog::m_spHtmlDoc
+## <a name="cdhtmldialogm_sphtmldoc"></a><a name="m_sphtmldoc"></a>cdhtmlDiálogo::m_spHtmlDoc
 
 Um ponteiro para um documento HTML.
 
@@ -1042,7 +1042,7 @@ Um ponteiro para um documento HTML.
 CComPtr<IHTMLDocument2> m_spHtmlDoc;
 ```
 
-##  <a name="m_strcurrenturl"></a>  CDHtmlDialog::m_strCurrentUrl
+## <a name="cdhtmldialogm_strcurrenturl"></a><a name="m_strcurrenturl"></a>cdhtmldiálogo::m_strCurrentUrl
 
 A URL atual.
 
@@ -1050,9 +1050,9 @@ A URL atual.
 CString m_strCurrentUrl;
 ```
 
-##  <a name="m_szhtmlresid"></a>  CDHtmlDialog::m_szHtmlResID
+## <a name="cdhtmldialogm_szhtmlresid"></a><a name="m_szhtmlresid"></a>cdhtmlDiálogo::m_szHtmlResID
 
-Versão da cadeia de caracteres da ID do recurso HTML.
+Versão string do ID de recurso HTML.
 
 ```
 LPTSTR m_szHtmlResID;
@@ -1062,11 +1062,11 @@ LPTSTR m_szHtmlResID;
 
 [!code-cpp[NVC_MFCHtmlHttp#6](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_6.cpp)]
 
-##  <a name="navigate"></a>  CDHtmlDialog::Navigate
+## <a name="cdhtmldialognavigate"></a><a name="navigate"></a>cdhtmldialog::navegar
 
-Navega até o recurso identificado pela URL especificada por *lpszUrl*.
+Navega até o recurso identificado pela URL especificada pelo *lpszURL*.
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1078,27 +1078,27 @@ void Navigate(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszURL*<br/>
-Um ponteiro para uma cadeia de caracteres que contém a URL a ser direcionada.
+*Lpszurl*<br/>
+Um ponteiro para uma seqüência contendo a URL a ser direcionada.
 
 *dwFlags*<br/>
-Os sinalizadores de uma variável que especifica se o recurso deve ser adicionado à lista de histórico, se deve ser lido ou gravado no cache e se o recurso deve ser exibido em uma nova janela. A variável pode ser uma combinação dos valores definidos pela enumeração [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) .
+Os sinalizadores de uma variável que especifica se deve adicionar o recurso à lista de históricos, se ler para o cache ou gravar no cache e se exibir o recurso em uma nova janela. A variável pode ser uma combinação dos valores definidos pela enumeração [BrowserNavConstants.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))
 
-*lpszTargetFrameName*<br/>
-Um ponteiro para uma cadeia de caracteres que contém o nome do quadro no qual exibir o recurso.
+*lpszTargetFrameNome*<br/>
+Um ponteiro para uma seqüência que contém o nome do quadro no qual exibir o recurso.
 
 *lpszHeaders*<br/>
-Um ponteiro para um valor que especifica os cabeçalhos HTTP a serem enviados ao servidor. Esses cabeçalhos são adicionados aos cabeçalhos padrão do Internet Explorer. Os cabeçalhos podem especificar informações como a ação necessária do servidor, o tipo de dados que está sendo passado para o servidor ou um código de status. Esse parâmetro será ignorado se a URL não for uma URL HTTP.
+Um ponteiro para um valor que especifica os cabeçalhos HTTP para enviar ao servidor. Esses cabeçalhos são adicionados aos cabeçalhos padrão do Internet Explorer. Os cabeçalhos podem especificar informações como a ação necessária do servidor, o tipo de dados que estão sendo passados para o servidor ou um código de status. Esse parâmetro é ignorado se a URL não for uma URL HTTP.
 
 *lpvPostData*<br/>
-Um ponteiro para os dados a serem enviados com a transação HTTP POST. Por exemplo, a transação POST é usada para enviar dados coletados por um formulário HTML. Se esse parâmetro não especificar nenhum dado post, `Navigate` o emitirá uma transação HTTP Get. Esse parâmetro será ignorado se a URL não for uma URL HTTP.
+Um ponteiro para os dados a serem enviados com a transação HTTP POST. Por exemplo, a transação POST é usada para enviar dados coletados por um formulário HTML. Se este parâmetro não especificar `Navigate` nenhum dado de postagem, emita uma transação HTTP GET. Esse parâmetro é ignorado se a URL não for uma URL HTTP.
 
 *dwPostDataLen*<br/>
-Dados a serem enviados com a transação HTTP POST. Por exemplo, a transação POST é usada para enviar dados coletados por um formulário HTML. Se esse parâmetro não especificar nenhum dado post, `Navigate` o emitirá uma transação HTTP Get. Esse parâmetro será ignorado se a URL não for uma URL HTTP.
+Dados a serem enviados com a transação HTTP POST. Por exemplo, a transação POST é usada para enviar dados coletados por um formulário HTML. Se este parâmetro não especificar `Navigate` nenhum dado de postagem, emita uma transação HTTP GET. Esse parâmetro é ignorado se a URL não for uma URL HTTP.
 
-##  <a name="onbeforenavigate"></a>  CDHtmlDialog::OnBeforeNavigate
+## <a name="cdhtmldialogonbeforenavigate"></a><a name="onbeforenavigate"></a>cdhtmldialog::OnbeforeNavigate
 
-Chamado pelo Framework para fazer com que um evento seja acionado antes que ocorra uma navegação.
+Chamado pela estrutura para causar um incêndio antes que uma navegação ocorra.
 
 ```
 virtual void OnBeforeNavigate(
@@ -1111,12 +1111,12 @@ virtual void OnBeforeNavigate(
 *pDisp*<br/>
 Um ponteiro para um objeto `IDispatch`.
 
-*szUrl*<br/>
-Um ponteiro para uma cadeia de caracteres que contém a URL para a qual navegar.
+*Szurl*<br/>
+Um ponteiro para uma seqüência contendo a URL para navegar.
 
-##  <a name="ondocumentcomplete"></a>  CDHtmlDialog::OnDocumentComplete
+## <a name="cdhtmldialogondocumentcomplete"></a><a name="ondocumentcomplete"></a>cdhtmldialog::OnDocumentComplete
 
-Chamado pelo Framework para notificar um aplicativo quando um documento atingir o estado READYSTATE_COMPLETE.
+Chamado pelo quadro para notificar um aplicativo quando um documento tiver alcançado o estado READYSTATE_COMPLETE.
 
 ```
 virtual void OnDocumentComplete(
@@ -1129,12 +1129,12 @@ virtual void OnDocumentComplete(
 *pDisp*<br/>
 Um ponteiro para um objeto `IDispatch`.
 
-*szUrl*<br/>
-Um ponteiro para uma cadeia de caracteres que contém a URL à qual foi navegada.
+*Szurl*<br/>
+Um ponteiro para uma seqüência contendo a URL que foi navegada.
 
-##  <a name="ondocwindowactivate"></a>  CDHtmlDialog::OnDocWindowActivate
+## <a name="cdhtmldialogondocwindowactivate"></a><a name="ondocwindowactivate"></a>cdhtmlDiálogo::OnDocWindowActivate
 
-Chamado pelo Framework quando a janela do documento é ativada ou desativada.
+Chamado pela estrutura quando a janela do documento é ativada ou desativada.
 
 ```
 STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
@@ -1143,19 +1143,19 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Parâmetros
 
 *fActivate*<br/>
-Consulte *fActivate* em [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) no SDK do Windows.
+Consulte *fActivate* no [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) no Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), conforme descrito no Windows SDK.
 
-##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
+## <a name="cdhtmldialogonframewindowactivate"></a><a name="onframewindowactivate"></a>cdhtmldialog::onFrameWindowactivate
 
-Chamado pelo Framework quando a janela do quadro é ativada ou desativada.
+Chamado pela estrutura quando a janela do quadro é ativada ou desativada.
 
 ```
 STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
@@ -1164,17 +1164,17 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Parâmetros
 
 *fActivate*<br/>
-Consulte *fActivate* em [IDocHostUIHandler:: OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) no SDK do Windows.
+Consulte *fActivate* no [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) in the Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)), conforme descrito no SDK do Windows.
 
-##  <a name="oninitdialog"></a>  CDHtmlDialog::OnInitDialog
+## <a name="cdhtmldialogoninitdialog"></a><a name="oninitdialog"></a>cdhtmlDiálogo::OnInitDialog
 
 Chamado em resposta à mensagem WM_INITDIALOG.
 
@@ -1182,21 +1182,21 @@ Chamado em resposta à mensagem WM_INITDIALOG.
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A implementação padrão retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa mensagem é enviada para a caixa de diálogo durante `Create`as `CreateIndirect`chamadas, `DoModal` ou, que ocorrem imediatamente antes que a caixa de diálogo seja exibida.
+Esta mensagem é enviada para `Create` `CreateIndirect`a `DoModal` caixa de diálogo durante as chamadas, que ocorrem imediatamente antes da caixa de diálogo ser exibida.
 
-Substitua essa função de membro se você precisar executar processamento especial quando a caixa de diálogo for inicializada. Na versão substituída, primeiro chame a classe `OnInitDialog` base, mas desconsidere seu valor de retorno. Normalmente, você retornará TRUE da sua função de membro substituída.
+Anular essa função de membro se você precisar executar um processamento especial quando a caixa de diálogo for inicializada. Na versão substituída, primeiro chame a `OnInitDialog` classe base, mas desconsidere seu valor de retorno. Você normalmente retornará TRUE de sua função de membro substituído.
 
-O Windows chama `OnInitDialog` a função por meio do procedimento de caixa de diálogo global padrão comum a todas as caixas de diálogo de biblioteca MFC, em vez de por meio de seu mapa de mensagens, portanto, você não precisa de uma entrada de mapa de mensagem para essa função de membro.
+O Windows `OnInitDialog` chama a função através do procedimento padrão de caixa de diálogo global comum a todas as caixas de diálogo da Microsoft Foundation Class Library, em vez de através do mapa de mensagens, para que você não precise de uma entrada de mapa de mensagem para esta função de membro.
 
-##  <a name="onnavigatecomplete"></a>  CDHtmlDialog::OnNavigateComplete
+## <a name="cdhtmldialogonnavigatecomplete"></a><a name="onnavigatecomplete"></a>cdhtmldialog::OnNavigateComplete
 
-Chamado pelo Framework após a navegação até a URL especificada ser concluída.
+Chamado pela estrutura após a navegação para a URL especificada é concluído.
 
 ```
 virtual void OnNavigateComplete(
@@ -1209,12 +1209,12 @@ virtual void OnNavigateComplete(
 *pDisp*<br/>
 Um ponteiro para um objeto `IDispatch`.
 
-*szUrl*<br/>
-Um ponteiro para uma cadeia de caracteres que contém a URL à qual foi navegada.
+*Szurl*<br/>
+Um ponteiro para uma seqüência contendo a URL que foi navegada.
 
-##  <a name="resizeborder"></a>  CDHtmlDialog::ResizeBorder
+## <a name="cdhtmldialogresizeborder"></a><a name="resizeborder"></a>cdhtmlDiálogo::RedimensionarBorder
 
-Alerta o objeto de que precisa para redimensionar seu espaço de borda.
+Alerta o objeto de que ele precisa para redimensionar seu espaço de fronteira.
 
 ```
 STDMETHOD(ResizeBorder)(
@@ -1226,23 +1226,23 @@ STDMETHOD(ResizeBorder)(
 ### <a name="parameters"></a>Parâmetros
 
 *prcBorder*<br/>
-Consulte *prcBorder* em [IDocHostUIHandler:: ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) no SDK do Windows.
+Consulte *prcBorder* em [IDocHostUIHandler::Redimensionborder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) no Windows SDK.
 
 *pUIWindow*<br/>
-Consulte *pUIWindow* no `IDocHostUIHandler::ResizeBorder` SDK do Windows.
+Consulte *pUIWindow* no `IDocHostUIHandler::ResizeBorder` Windows SDK.
 
 *fFrameWindow*<br/>
 Consulte *fFrameWindow* no `IDocHostUIHandler::ResizeBorder` SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
-##  <a name="setcontrolproperty"></a>CDHtmlDialog:: setcontrolproperty
+## <a name="cdhtmldialogsetcontrolproperty"></a><a name="setcontrolproperty"></a>cdhtmldialog::setcontrolProperty
 
-Define a propriedade de um controle ActiveX para um novo valor.
+Define a propriedade de um controle ActiveX como um novo valor.
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1261,26 +1261,26 @@ void SetControlProperty(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID HTML de um controle ActiveX.
+*Szelementid*<br/>
+O ID HTML de um controle ActiveX.
 
-*dispId*<br/>
-A ID de expedição da propriedade a ser definida.
+*Dispid*<br/>
+A impropriedade de despacho da propriedade para definir.
 
-*pVar*<br/>
-Ponteiro para uma variante que contém o novo valor da propriedade.
+*Pvar*<br/>
+Ponteiro para uma VARIANT contendo o novo valor de propriedade.
 
 *pdispControl*<br/>
-Ponteiro para uma interface de `IDispatch` controle ActiveX.
+Ponteiro para a interface `IDispatch` de um controle ActiveX.
 
 *szPropName*<br/>
-Cadeia de caracteres que contém o nome da propriedade a ser definida.
+String contendo o nome da propriedade a definir.
 
-##  <a name="setelementhtml"></a>  CDHtmlDialog::SetElementHtml
+## <a name="cdhtmldialogsetelementhtml"></a><a name="setelementhtml"></a>cdhtmldialog::setelementhtml
 
-Define a `innerHTML` propriedade de um elemento HTML.
+Define `innerHTML` a propriedade de um elemento HTML.
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1292,8 +1292,8 @@ void SetElementHtml(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID de um elemento HTML.
+*Szelementid*<br/>
+O ID de um elemento HTML.
 
 *bstrText*<br/>
 O novo valor da propriedade `innerHTML`.
@@ -1301,11 +1301,11 @@ O novo valor da propriedade `innerHTML`.
 *punkElem*<br/>
 O `IUnknown` ponteiro de um elemento HTML.
 
-##  <a name="setelementproperty"></a>CDHtmlDialog:: setelementproperty
+## <a name="cdhtmldialogsetelementproperty"></a><a name="setelementproperty"></a>cdhtmldialog::setelementproperty
 
 Define uma propriedade de um elemento HTML.
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1314,20 +1314,20 @@ void SetElementProperty(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID de um elemento HTML.
+*Szelementid*<br/>
+O ID de um elemento HTML.
 
-*dispId*<br/>
-A ID de expedição da propriedade a ser definida.
+*Dispid*<br/>
+A impropriedade de despacho da propriedade para definir.
 
-*pVar*<br/>
+*Pvar*<br/>
 O novo valor da propriedade.
 
-##  <a name="setelementtext"></a>  CDHtmlDialog::SetElementText
+## <a name="cdhtmldialogsetelementtext"></a><a name="setelementtext"></a>cdhtmldialog::setelementtext
 
-Define a `innerText` propriedade de um elemento HTML.
+Define `innerText` a propriedade de um elemento HTML.
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1339,8 +1339,8 @@ void SetElementText(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szElementId*<br/>
-A ID de um elemento HTML.
+*Szelementid*<br/>
+O ID de um elemento HTML.
 
 *bstrText*<br/>
 O novo valor da propriedade `innerText`.
@@ -1348,33 +1348,33 @@ O novo valor da propriedade `innerText`.
 *punkElem*<br/>
 O `IUnknown` ponteiro de um elemento HTML.
 
-##  <a name="setexternaldispatch"></a>CDHtmlDialog:: SetExternalDispatch
+## <a name="cdhtmldialogsetexternaldispatch"></a><a name="setexternaldispatch"></a>cdhtmldialog::setexternalDispatch
 
-Define a interface do `IDispatch` host.
+Define a interface `IDispatch` do host.
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*pdispExternal*<br/>
-A nova `IDispatch` interface.
+*pdispExterno*<br/>
+A `IDispatch` nova interface.
 
-##  <a name="sethostflags"></a>  CDHtmlDialog::SetHostFlags
+## <a name="cdhtmldialogsethostflags"></a><a name="sethostflags"></a>cdhtmldialog::setHostflags
 
-Define os sinalizadores de interface do usuário do host.
+Define as bandeiras de ida e qualquer outra.
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *dwFlags*<br/>
-Para obter os valores possíveis, consulte [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) no SDK do Windows.
+Para obter valores possíveis, consulte [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) no Windows SDK.
 
-##  <a name="showcontextmenu"></a>CDHtmlDialog:: addcontextmenu
+## <a name="cdhtmldialogshowcontextmenu"></a><a name="showcontextmenu"></a>cdhtmldialog::showcontextmenu
 
 Chamado quando um menu de contexto está prestes a ser exibido.
 
@@ -1388,29 +1388,29 @@ STDMETHOD(ShowContextMenu)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwID*<br/>
-Confira *dwID* em [IDocHostUIHandler:: createcontextmenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) no SDK do Windows.
+*Dwid*<br/>
+Consulte *dwID* em [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) no Windows SDK.
 
-*ppt*<br/>
-Consulte o PPT `IDocHostUIHandler::ShowContextMenu` no na SDK do Windows.
+*Ppt*<br/>
+Veja *ppt* no `IDocHostUIHandler::ShowContextMenu` Windows SDK.
 
-*pcmdtReserved*<br/>
-Consulte *pcmdtReserved* no `IDocHostUIHandler::ShowContextMenu` SDK do Windows.
+*pcmdtReservado*<br/>
+Consulte *pcmdtReservado* `IDocHostUIHandler::ShowContextMenu` no SDK do Windows.
 
-*pdispReserved*<br/>
-Consulte *pdispReserved* no `IDocHostUIHandler::ShowContextMenu` SDK do Windows.
+*pdispReservado*<br/>
+Consulte *pdispReservado* `IDocHostUIHandler::ShowContextMenu` no Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: addcontextmenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)), conforme descrito no Windows SDK.
 
-##  <a name="showui"></a>  CDHtmlDialog::ShowUI
+## <a name="cdhtmldialogshowui"></a><a name="showui"></a>cdhtmldialog::showui
 
-Mostra a interface do usuário do host.
+Mostra a ui do anfitrião.
 
 ```
 STDMETHOD(ShowUI)(
@@ -1423,8 +1423,8 @@ STDMETHOD(ShowUI)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwID*<br/>
-Consulte *dwID* em [IDocHostUIHandler:: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) no SDK do Windows.
+*Dwid*<br/>
+Consulte *dwID* em [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) no Windows SDK.
 
 *pActiveObject*<br/>
 Consulte *d pActiveObject* no `IDocHostUIHandler::ShowUI` SDK do Windows.
@@ -1433,22 +1433,22 @@ Consulte *d pActiveObject* no `IDocHostUIHandler::ShowUI` SDK do Windows.
 Consulte *pCommandTarget* no `IDocHostUIHandler::ShowUI` SDK do Windows.
 
 *pFrame*<br/>
-Consulte *pFrame* no `IDocHostUIHandler::ShowUI` SDK do Windows.
+Consulte *pFrame* in `IDocHostUIHandler::ShowUI` no Windows SDK.
 
 *pDoc*<br/>
-Consulte *pDoc* no `IDocHostUIHandler::ShowUI` SDK do Windows.
+Consulte *o pDoc* `IDocHostUIHandler::ShowUI` no Windows SDK.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)), conforme descrito no Windows SDK.
 
-##  <a name="translateaccelerator"></a>  CDHtmlDialog::TranslateAccelerator
+## <a name="cdhtmldialogtranslateaccelerator"></a><a name="translateaccelerator"></a>cdhtmlDialog::TranslateAccelerator
 
-Chamado para processar mensagens de chave do acelerador de menu.
+Chamado para processar mensagens de chave do acelerador do menu.
 
 ```
 STDMETHOD(TranslateAccelerator)(
@@ -1459,24 +1459,24 @@ STDMETHOD(TranslateAccelerator)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpMsg*<br/>
-Consulte *lpMsg* em [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) na SDK do Windows.
+*Lpmsg*<br/>
+Consulte *lpMsg* em [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) no Windows SDK.
 
-*pguidCmdGroup*<br/>
-Consulte *pguidCmdGroup* no `IDocHostUIHandler::TranslateAccelerator` SDK do Windows.
+*Pguidcmdgroup*<br/>
+Consulte *pguidCmdGroup* no `IDocHostUIHandler::TranslateAccelerator` Windows SDK.
 
-*nCmdID*<br/>
-Consulte *nCmdID* no `IDocHostUIHandler::TranslateAccelerator` SDK do Windows.
+*Ncmdid*<br/>
+Consulte *nCmdID* `IDocHostUIHandler::TranslateAccelerator` no SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)), conforme descrito no Windows SDK.
 
-##  <a name="translateurl"></a>  CDHtmlDialog::TranslateUrl
+## <a name="cdhtmldialogtranslateurl"></a><a name="translateurl"></a>cdhtmldialog::translateurl
 
 Chamado para modificar a URL a ser carregada.
 
@@ -1490,40 +1490,40 @@ STDMETHOD(TranslateUrl)(
 ### <a name="parameters"></a>Parâmetros
 
 *dwTranslate*<br/>
-Consulte *dwTranslate* em [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) no SDK do Windows.
+Consulte *dwTranslate* em [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) no Windows SDK.
 
 *pchURLIn*<br/>
-Consulte *pchURLIn* no `IDocHostUIHandler::TranslateUrl` SDK do Windows.
+Consulte *pchURLIn* no `IDocHostUIHandler::TranslateUrl` Windows SDK.
 
 *ppchURLOut*<br/>
-Consulte *ppchURLOut* no `IDocHostUIHandler::TranslateUrl` SDK do Windows.
+Consulte *ppchURLOut* `IDocHostUIHandler::TranslateUrl` no SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)), conforme descrito no SDK do Windows.
 
-##  <a name="updateui"></a>  CDHtmlDialog::UpdateUI
+## <a name="cdhtmldialogupdateui"></a><a name="updateui"></a>cdhtmldialog::updateui
 
-Chamado para notificar o host que o estado do comando foi alterado.
+Chamado para notificar o anfitrião que o estado de comando mudou.
 
 ```
 STDMETHOD(UpdateUI)(void);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é a implementação de CDHtmlDialog de [IDocHostUIHandler:: UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), conforme descrito na SDK do Windows.
+Esta função de membro é a implementação do [IDocHostUIHandler do IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), conforme descrito no Windows SDK.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo de DHtmlExplore do MFC](../../overview/visual-cpp-samples.md)<br/>
+[Amostra de MFC Dhtmlexplore](../../overview/visual-cpp-samples.md)<br/>
 [Macros auxiliares DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

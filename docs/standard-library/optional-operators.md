@@ -1,5 +1,5 @@
 ---
-title: '&lt;operadores de&gt; opcionais'
+title: '&lt;operadores opcionais&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9bdef0669f90da7865f7652ff4528e51e584e1a2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419689"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373628"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;operadores de&gt; opcionais
+# <a name="ltoptionalgt-operators"></a>&lt;operadores opcionais&gt;
 
-## <a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operador==
 
-Testa se o objeto `optional` no lado esquerdo do operador é igual ao objeto `optional` no lado direito.
+Teste se `optional` o objeto no lado esquerdo do `optional` operador é igual ao objeto do lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator==(const optional<T>& left, const optional<U>& right);
@@ -37,17 +37,17 @@ template <class T, class U> constexpr bool operator==(const optional<T>&, const 
 template <class T, class U> constexpr bool operator==(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Deixou*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
-\ *à direita*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Certo*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
-## <a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a>operador!=
 
-Testa se o objeto `optional` no lado esquerdo do operador não é igual ao objeto `optional` no lado direito.
+Teste se `optional` o objeto do lado esquerdo do `optional` operador não é igual ao objeto do lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator!=(const optional<T>&, const optional<U>&);
@@ -57,21 +57,21 @@ template <class T, class U> constexpr bool operator!=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator!=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Deixou*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
-\ *à direita*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Certo*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
 ### <a name="remarks"></a>Comentários
 
 Esta função do modelo retorna `!(left == right)`.
 
-## <a name="op_lt">Operador </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Operador&lt;
 
-Testa se o objeto `optional` no lado esquerdo do operador é menor que o objeto `optional` no lado direito.
+Teste se `optional` o objeto do lado esquerdo do `optional` operador é menor que o objeto do lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator<(const optional<T>&, const optional<U>&);
@@ -81,21 +81,21 @@ template <class T, class U> constexpr bool operator<(const optional<T>&, const U
 template <class T, class U> constexpr bool operator<(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Deixou*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
-\ *à direita*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Certo*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
 ### <a name="return-value"></a>Valor retornado
 
 **true** se a lista no lado esquerdo do operador for menor que ou diferente da lista à direita do operador; caso contrário, **false**.
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operador&lt;=
 
-Testa se o objeto `optional` no lado esquerdo do operador é menor ou igual ao objeto de `optional` no lado direito.
+Teste se `optional` o objeto do lado esquerdo do operador `optional` é menor ou igual ao objeto do lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator<=(const optional<T>&, const optional<U>&);
@@ -105,13 +105,13 @@ template <class T, class U> constexpr bool operator<=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator<=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Deixou*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
-\ *à direita*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Certo*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -121,9 +121,9 @@ Um objeto do tipo `optional`, `nullopt_t`ou `T`.
 
 Esta função do modelo retorna `!(right < left)`.
 
-## <a name="op_gt">Operador </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Operador&gt;
 
-Testa se o objeto `optional` no lado esquerdo do operador é maior que o objeto `optional` no lado direito.
+Teste se `optional` o objeto do lado esquerdo do `optional` operador é maior que o objeto do lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator>(const optional<T>&, const optional<U>&);
@@ -133,13 +133,13 @@ template <class T, class U> constexpr bool operator>(const optional<T>&, const U
 template <class T, class U> constexpr bool operator>(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Deixou*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
-\ *à direita*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Certo*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -149,9 +149,9 @@ Um objeto do tipo `optional`, `nullopt_t`ou `T`.
 
 Esta função do modelo retorna `right < left`.
 
-## <a name="op_gt_eq"></a>= de&gt;do operador
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operador&gt;=
 
-Testa se o objeto `optional` no lado esquerdo do operador é maior ou igual ao objeto `optional` no lado direito.
+Teste se `optional` o objeto do lado esquerdo do operador `optional` é maior ou igual ao objeto do lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator>=(const optional<T>&, const optional<U>&);
@@ -161,13 +161,13 @@ template <class T, class U> constexpr bool operator>=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator>=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Deixou*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
-\ *à direita*
-Um objeto do tipo `optional`, `nullopt_t`ou `T`.
+*Certo*\
+Um objeto `optional`de `nullopt_t`tipo, ou `T`.
 
 ### <a name="return-value"></a>Valor retornado
 

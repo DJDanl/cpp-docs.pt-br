@@ -1,8 +1,9 @@
 ---
 title: mbsrtowcs_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbsrtowcs_s
+- _o_mbsrtowcs_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-ms.openlocfilehash: d79cceaf923c1da126a1d133a8d2eb8752883457
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 72a20396b2f0f75d79baa64619deef8a0c1e00ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952094"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915496"
 ---
 # <a name="mbsrtowcs_s"></a>mbsrtowcs_s
 
@@ -58,7 +60,7 @@ errno_t mbsrtowcs_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pReturnValue*<br/>
+*preativar*<br/>
 O número de caracteres convertidos.
 
 *wcstr*<br/>
@@ -70,13 +72,13 @@ O tamanho de *wcstr* em palavras (caracteres largos).
 *mbstr*<br/>
 O ponteiro indireto para o local da cadeia de caracteres multibyte a ser convertida.
 
-*count*<br/>
+*contagem*<br/>
 O número máximo de caracteres largos para armazenar no buffer *wcstr* , sem incluir o nulo de terminação ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
-Um ponteiro para um objeto de estado de conversão **mbstate_t** . Se esse valor for um ponteiro nulo, um objeto de estado de conversão interno estático será usado. Como o objeto **mbstate_t** interno não é thread-safe, é recomendável que você sempre passe seu próprio parâmetro *mbstate* .
+Um ponteiro para um objeto de estado de conversão de **mbstate_t** . Se esse valor for um ponteiro nulo, um objeto de estado de conversão interno estático será usado. Como o objeto de **mbstate_t** interno não é thread-safe, é recomendável que você sempre passe seu próprio parâmetro *mbstate* .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se a conversão for bem-sucedida ou um código de erro em caso de falha.
 
@@ -91,7 +93,7 @@ Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido 
 
 ## <a name="remarks"></a>Comentários
 
-A função **mbsrtowcs_s** converte uma cadeia de caracteres multibyte indiretamente apontada por *mbstr* em caracteres largos armazenados no buffer apontados pelo *wcstr*, usando o estado de conversão contido em *mbstate*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
+A função **mbsrtowcs_s** converte uma cadeia de caracteres multibyte indiretamente apontada por *mbstr* em caracteres largos armazenados no buffer apontados por *wcstr*, usando o estado de conversão contido em *mbstate*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
 
 - Um caractere nulo multibyte é encontrado
 
@@ -103,22 +105,24 @@ A cadeia de caracteres de destino *wcstr* é sempre terminada em nulo, mesmo no 
 
 Se *Count* for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **mbsrtowcs_s** converterá a maior parte da cadeia de caracteres que se ajustará ao buffer de destino e, ao mesmo tempo, deixará espaço para um terminador nulo.
 
-Se o **mbsrtowcs_s** converter com êxito a cadeia de caracteres de origem, ele colocará o tamanho em caracteres largos da cadeia de caracteres convertida e o terminador nulo em  *&#42;preligávalue*, desde que o *preativarvalue* não seja um ponteiro nulo. Isso ocorre mesmo se o argumento *wcstr* é um ponteiro nulo e permite que você determine o tamanho do buffer necessário. Observe que, se *wcstr* for um ponteiro NULL, *Count* será ignorado.
+Se **mbsrtowcs_s** converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em caracteres largos da cadeia de caracteres convertida e o terminador nulo em *&#42;pretransformvalue*, desde que o *preactivavalue* não seja um ponteiro nulo. Isso ocorre mesmo se o argumento *wcstr* é um ponteiro nulo e permite que você determine o tamanho do buffer necessário. Observe que, se *wcstr* for um ponteiro NULL, *Count* será ignorado.
 
 Se *wcstr* não for um ponteiro NULL, o objeto pointer apontado por *mbstr* receberá um ponteiro NULL se a conversão for interrompida porque um caractere nulo de terminação foi atingido. Caso contrário, será atribuído o endereço logo depois do último caractere multibyte convertido, se houver. Isso permite que uma chamada de função subsequente reinicie a conversão em que essa chamada é interrompida.
 
-Se *mbstate* for um ponteiro NULL, o objeto estático do estado de conversão **mbstate_t** interno da biblioteca será usado. Como esse objeto estático interno não é thread-safe, recomendamos que você passe seu próprio valor de *mbstate* .
+Se *mbstate* for um ponteiro nulo, o objeto estático de estado de conversão de **mbstate_t** de biblioteca interno será usado. Como esse objeto estático interno não é thread-safe, recomendamos que você passe seu próprio valor de *mbstate* .
 
-Se **mbsrtowcs_s** encontrar um caractere multibyte que não seja válido na localidade atual, ele colocará-1 em  *&#42;preligávalue*, definirá o buffer de destino *wcstr* como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
+Se **mbsrtowcs_s** encontrar um caractere de multibyte que não seja válido na localidade atual, ele colocará-1 *em&#42;pretransformvalue*, definirá o buffer de destino *wcstr* como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
 
-Se as sequências apontadas por *mbstr* e *wcstr* se sobrepõem, o comportamento de **mbsrtowcs_s** é indefinido. **mbsrtowcs_s** é afetado pela categoria LC_TYPE da localidade atual.
+Se as sequências apontadas por *mbstr* e *wcstr* se sobrepõem, o comportamento de **mbsrtowcs_s** é indefinido. **mbsrtowcs_s** é afetado pela categoria de LC_TYPE da localidade atual.
 
 > [!IMPORTANT]
 > Verifique se *wcstr* e *mbstr* não se sobrepõem e se *Count* reflete corretamente o número de caracteres multibyte a serem convertidos.
 
-A função **mbsrtowcs_s** difere de [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo deve usar **mbsrlen** em vez de **mbslen**, se uma chamada subsequente para **mbsrtowcs_s** for usada em vez de **mbstowcs_s**.
+A função **mbsrtowcs_s** difere da [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo deve usar **mbsrlen** em vez de **mbslen**, se uma chamada subsequente para **mbsrtowcs_s** for usada em vez de **mbstowcs_s**.
 
 Em C++, o uso dessa função é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando o requisito de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras usando suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Exceções
 
@@ -133,7 +137,7 @@ A função **mbsrtowcs_s** será multithread segura se nenhuma função no threa
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ccd82b5c5112bc322717f2b58d79d4c8f34f5bbd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422216"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368168"
 ---
 # <a name="ischeduler-structure"></a>Estrutura IScheduler
 
-Uma interface para uma abstração de um Agendador de trabalho. O Gerenciador de recursos do Tempo de Execução de Simultaneidade usa essa interface para se comunicar com agendadores de trabalho.
+Uma interface para uma abstração de um agendador de trabalho. O Gerenciador de Recursos do Concurrency Runtime usa essa interface para se comunicar com agendadores de trabalho.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,19 +35,19 @@ struct IScheduler;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Fornece um Agendador com um conjunto de raízes de processador virtual para seu uso. Cada interface de `IVirtualProcessorRoot` representa o direito de executar um único thread que pode executar o trabalho em nome do Agendador.|
-|[IScheduler:: GetId](#getid)|Retorna um identificador exclusivo para o Agendador.|
-|[IScheduler:: GetPolicy](#getpolicy)|Retorna uma cópia da política do Agendador. Para obter mais informações sobre as políticas do Agendador, consulte [SchedulerPolicy](schedulerpolicy-class.md).|
-|[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica este Agendador que os threads de hardware representados pelo conjunto de raízes de processador virtual na matriz `ppVirtualProcessorRoots` agora estão sendo usados por outros agendadores.|
-|[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica este Agendador que os threads de hardware representados pelo conjunto de raízes de processador virtual na matriz `ppVirtualProcessorRoots` não estão sendo usados por outros agendadores.|
-|[IScheduler:: RemoveVirtualProcessors](#removevirtualprocessors)|Inicia a remoção de raízes de processador virtual que foram alocadas anteriormente para este Agendador.|
-|[IScheduler:: Statistics](#statistics)|Fornece informações relacionadas à chegada da tarefa e às taxas de conclusão e alteração no comprimento da fila para um Agendador.|
+|[IScheduler::Adicionarprocessadores virtuais](#addvirtualprocessors)|Fornece um agendador com um conjunto de raízes de processador virtual para seu uso. Cada `IVirtualProcessorRoot` interface representa o direito de executar um único segmento que pode executar o trabalho em nome do agendador.|
+|[IScheduler::GetId](#getid)|Retorna um identificador exclusivo para o agendador.|
+|[IScheduler::GetPolicy](#getpolicy)|Devolve uma cópia da política do agendador. Para obter mais informações sobre políticas de agendadores, consulte [SchedulerPolicy](schedulerpolicy-class.md).|
+|[iScheduler::NotificarrecursosExternamenteocupado](#notifyresourcesexternallybusy)|Notifica este agendador que os segmentos de hardware representados `ppVirtualProcessorRoots` pelo conjunto de raízes do processador virtual no array estão sendo usados por outros agendadores.|
+|[iScheduler::NotificarRecursosExternallyIdle](#notifyresourcesexternallyidle)|Notifica este agendador que os segmentos de hardware representados `ppVirtualProcessorRoots` pelo conjunto de raízes do processador virtual no array não estão sendo usados por outros agendadores.|
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Inicia a remoção das raízes do processador virtual que foram previamente alocadas a este agendador.|
+|[IScheduler::Estatísticas](#statistics)|Fornece informações relacionadas às taxas de chegada e conclusão de tarefas e altera o comprimento da fila para um agendador.|
 
 ## <a name="remarks"></a>Comentários
 
-Se você estiver implementando um Agendador personalizado que se comunica com o Gerenciador de recursos, você deve fornecer uma implementação da interface `IScheduler`. Essa interface é uma extremidade de um canal bidirecional de comunicação entre um Agendador e o Gerenciador de recursos. A outra extremidade é representada pelas interfaces `IResourceManager` e `ISchedulerProxy` que são implementadas pelo Gerenciador de recursos.
+Se você estiver implementando um agendador personalizado que se comunica com `IScheduler` o Gerenciador de Recursos, você deve fornecer uma implementação da interface. Esta interface é uma extremidade de um canal de comunicação bidirecional entre um agendador e o Gerenciador de Recursos. A outra extremidade é `IResourceManager` `ISchedulerProxy` representada pelas interfaces que são implementadas pelo Gerenciador de Recursos.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -55,13 +55,13 @@ Se você estiver implementando um Agendador personalizado que se comunica com o 
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** concrtrm. h
+**Cabeçalho:** concrtrm.h
 
-**Namespace:** simultaneidade
+**Namespace:** concurrency
 
-## <a name="addvirtualprocessors"></a>Método IScheduler:: AddVirtualProcessors
+## <a name="ischeduleraddvirtualprocessors-method"></a><a name="addvirtualprocessors"></a>iScheduler::Adicionar método de processadores virtuais
 
-Fornece um Agendador com um conjunto de raízes de processador virtual para seu uso. Cada interface de `IVirtualProcessorRoot` representa o direito de executar um único thread que pode executar o trabalho em nome do Agendador.
+Fornece um agendador com um conjunto de raízes de processador virtual para seu uso. Cada `IVirtualProcessorRoot` interface representa o direito de executar um único segmento que pode executar o trabalho em nome do agendador.
 
 ```cpp
 virtual void AddVirtualProcessors(
@@ -69,21 +69,21 @@ virtual void AddVirtualProcessors(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*ppVirtualProcessorRoots*<br/>
-Uma matriz de interfaces de `IVirtualProcessorRoot` que representa as raízes do processador virtual que estão sendo adicionadas ao agendador.
+*ppVirtualProcessorroots*<br/>
+Uma série `IVirtualProcessorRoot` de interfaces representando as raízes do processador virtual sendo adicionadas ao agendador.
 
 *contagem*<br/>
-O número de interfaces `IVirtualProcessorRoot` na matriz.
+O número `IVirtualProcessorRoot` de interfaces na matriz.
 
 ### <a name="remarks"></a>Comentários
 
-O Gerenciador de recursos invoca o método `AddVirtualProcessor` para conceder um conjunto inicial de raízes de processador virtual a um Agendador. Ele também pode invocar o método para adicionar raízes de processador virtual ao agendador ao reequilibrar os recursos entre os agendadores.
+O Gerenciador de `AddVirtualProcessor` recursos invoca o método para conceder um conjunto inicial de raízes de processador virtual a um agendador. Ele também poderia invocar o método para adicionar raízes de processador virtuais ao agendador quando ele reequilibra recursos entre agendadores.
 
-## <a name="getid"></a>Método IScheduler:: GetId
+## <a name="ischedulergetid-method"></a><a name="getid"></a>IScheduler::Método GetId
 
-Retorna um identificador exclusivo para o Agendador.
+Retorna um identificador exclusivo para o agendador.
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -91,17 +91,17 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um identificador inteiro exclusivo.
+Um identificador inteiro único.
 
 ### <a name="remarks"></a>Comentários
 
-Você deve usar a função [GetSchedulerId](concurrency-namespace-functions.md) para obter um identificador exclusivo para o objeto que implementa a interface `IScheduler`, antes de usar a interface como um parâmetro para os métodos fornecidos pelo Gerenciador de recursos. Você deve retornar o mesmo identificador quando a função `GetId` for invocada.
+Você deve usar a função [GetSchedulerId](concurrency-namespace-functions.md) para obter um identificador exclusivo para o objeto que implementa a `IScheduler` interface, antes de usar a interface como parâmetro para métodos fornecidos pelo Gerenciador de recursos. Espera-se que retorne o mesmo `GetId` identificador quando a função for invocada.
 
-Um identificador obtido de uma fonte diferente poderia resultar em um comportamento indefinido.
+Um identificador obtido de uma fonte diferente pode resultar em comportamento indefinido.
 
-## <a name="getpolicy"></a>Método IScheduler:: GetPolicy
+## <a name="ischedulergetpolicy-method"></a><a name="getpolicy"></a>IScheduler::GetPolicy Method
 
-Retorna uma cópia da política do Agendador. Para obter mais informações sobre as políticas do Agendador, consulte [SchedulerPolicy](schedulerpolicy-class.md).
+Devolve uma cópia da política do agendador. Para obter mais informações sobre políticas de agendadores, consulte [SchedulerPolicy](schedulerpolicy-class.md).
 
 ```cpp
 virtual SchedulerPolicy GetPolicy() const = 0;
@@ -109,11 +109,11 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma cópia da política do Agendador.
+Uma cópia da política do agendador.
 
-## <a name="notifyresourcesexternallybusy"></a>Método IScheduler:: NotifyResourcesExternallyBusy
+## <a name="ischedulernotifyresourcesexternallybusy-method"></a><a name="notifyresourcesexternallybusy"></a>iScheduler::NotificarrecursosMétodoocupado externamente
 
-Notifica este Agendador que os threads de hardware representados pelo conjunto de raízes de processador virtual na matriz `ppVirtualProcessorRoots` agora estão sendo usados por outros agendadores.
+Notifica este agendador que os segmentos de hardware representados `ppVirtualProcessorRoots` pelo conjunto de raízes do processador virtual no array estão sendo usados por outros agendadores.
 
 ```cpp
 virtual void NotifyResourcesExternallyBusy(
@@ -121,27 +121,27 @@ virtual void NotifyResourcesExternallyBusy(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*ppVirtualProcessorRoots*<br/>
-Uma matriz de interfaces `IVirtualProcessorRoot` associadas aos threads de hardware nos quais outros agendadores se tornaram ocupados.
+*ppVirtualProcessorroots*<br/>
+Uma matriz `IVirtualProcessorRoot` de interfaces associadas aos threads de hardware nos quais outros agendadores ficaram ocupados.
 
 *contagem*<br/>
-O número de interfaces `IVirtualProcessorRoot` na matriz.
+O número `IVirtualProcessorRoot` de interfaces na matriz.
 
 ### <a name="remarks"></a>Comentários
 
-É possível que um determinado thread de hardware seja atribuído a vários agendadores ao mesmo tempo. Um motivo para isso pode ser que não haja threads de hardware suficientes no sistema para atender à simultaneidade mínima para todos os agendadores, sem compartilhar recursos. Outra possibilidade é que os recursos sejam atribuídos temporariamente a outros agendadores quando o Agendador proprietário não estiver usando-os, por meio de todas as raízes de processador virtual no thread de hardware que está sendo desativado.
+É possível que um segmento de hardware específico seja atribuído a vários agendadores ao mesmo tempo. Uma das razões para isso pode ser que não há threads de hardware suficientes no sistema para satisfazer a concorrência mínima para todos os agendadores, sem compartilhar recursos. Outra possibilidade é que os recursos sejam temporariamente atribuídos a outros agendadores quando o agendador de propriedade não os estiver usando, por meio de todas as suas raízes de processador virtuais naquele segmento de hardware sendo desativado.
 
-O nível de assinatura de um thread de hardware é indicado pelo número de threads assinados e raízes de processador virtual ativadas associadas a esse thread de hardware. De um ponto de vista de um Agendador específico, o nível de assinatura externa de um thread de hardware é a parte da assinatura que outros agendadores contribuem para o. As notificações de que os recursos estão externos ocupados são enviadas a um Agendador quando o nível de assinatura externo para um thread de hardware é movido de zero para uma região positiva.
+O nível de assinatura de um segmento de hardware é denotado pelo número de threads subscritos e raízes ativadas do processador virtual associadas a esse segmento de hardware. Do ponto de vista de um programador específico, o nível de assinatura externa de um segmento de hardware é a parte da assinatura que outros agendadores contribuem. Notificações de que os recursos estão ocupados externamente são enviadas a um agendador quando o nível de assinatura externa de um segmento de hardware se move de zero para território positivo.
 
-As notificações por meio desse método são enviadas somente aos agendadores que têm uma política em que o valor para a chave de política de `MinConcurrency` é igual ao valor da chave de política de `MaxConcurrency`. Para obter mais informações sobre as políticas do Agendador, consulte [SchedulerPolicy](schedulerpolicy-class.md).
+As notificações através deste método são enviadas apenas para agendadores que possuem uma política onde o valor para a chave de `MinConcurrency` política é igual ao valor da chave de `MaxConcurrency` política. Para obter mais informações sobre políticas de agendadores, consulte [SchedulerPolicy](schedulerpolicy-class.md).
 
-Um Agendador que se qualifica para notificações obtém um conjunto de notificações iniciais quando ele é criado, informando se os recursos que acabou de ser atribuído estão externos ou ociosos.
+Um agendador que se qualifica para notificações recebe um conjunto de notificações iniciais quando é criado, informando se os recursos que foi atribuído são ocupados externamente ou ociosos.
 
-## <a name="notifyresourcesexternallyidle"></a>Método IScheduler:: NotifyResourcesExternallyIdle
+## <a name="ischedulernotifyresourcesexternallyidle-method"></a><a name="notifyresourcesexternallyidle"></a>iScheduler::NotificarrecursosMétodoExternomenteIdle
 
-Notifica este Agendador que os threads de hardware representados pelo conjunto de raízes de processador virtual na matriz `ppVirtualProcessorRoots` não estão sendo usados por outros agendadores.
+Notifica este agendador que os segmentos de hardware representados `ppVirtualProcessorRoots` pelo conjunto de raízes do processador virtual no array não estão sendo usados por outros agendadores.
 
 ```cpp
 virtual void NotifyResourcesExternallyIdle(
@@ -149,27 +149,27 @@ virtual void NotifyResourcesExternallyIdle(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*ppVirtualProcessorRoots*<br/>
-Uma matriz de interfaces `IVirtualProcessorRoot` associadas a threads de hardware nos quais outros agendadores se tornaram ociosos.
+*ppVirtualProcessorroots*<br/>
+Uma matriz `IVirtualProcessorRoot` de interfaces associadas a threads de hardware nos quais outros agendadores ficaram ociosos.
 
 *contagem*<br/>
-O número de interfaces `IVirtualProcessorRoot` na matriz.
+O número `IVirtualProcessorRoot` de interfaces na matriz.
 
 ### <a name="remarks"></a>Comentários
 
-É possível que um determinado thread de hardware seja atribuído a vários agendadores ao mesmo tempo. Um motivo para isso pode ser que não haja threads de hardware suficientes no sistema para atender à simultaneidade mínima para todos os agendadores, sem compartilhar recursos. Outra possibilidade é que os recursos sejam atribuídos temporariamente a outros agendadores quando o Agendador proprietário não estiver usando-os, por meio de todas as raízes de processador virtual no thread de hardware que está sendo desativado.
+É possível que um segmento de hardware específico seja atribuído a vários agendadores ao mesmo tempo. Uma das razões para isso pode ser que não há threads de hardware suficientes no sistema para satisfazer a concorrência mínima para todos os agendadores, sem compartilhar recursos. Outra possibilidade é que os recursos sejam temporariamente atribuídos a outros agendadores quando o agendador de propriedade não os estiver usando, por meio de todas as suas raízes de processador virtuais naquele segmento de hardware sendo desativado.
 
-O nível de assinatura de um thread de hardware é indicado pelo número de threads assinados e raízes de processador virtual ativadas associadas a esse thread de hardware. De um ponto de vista de um Agendador específico, o nível de assinatura externa de um thread de hardware é a parte da assinatura que outros agendadores contribuem para o. As notificações de que os recursos estão externos ocupados são enviadas a um Agendador quando o nível de assinatura externo para um thread de hardware cai para zero a partir de um valor positivo anterior.
+O nível de assinatura de um segmento de hardware é denotado pelo número de threads subscritos e raízes ativadas do processador virtual associadas a esse segmento de hardware. Do ponto de vista de um programador específico, o nível de assinatura externa de um segmento de hardware é a parte da assinatura que outros agendadores contribuem. Notificações de que os recursos estão ocupados externamente são enviadas a um agendador quando o nível de assinatura externa de um segmento de hardware cai para zero de um valor positivo anterior.
 
-As notificações por meio desse método são enviadas somente aos agendadores que têm uma política em que o valor para a chave de política de `MinConcurrency` é igual ao valor da chave de política de `MaxConcurrency`. Para obter mais informações sobre as políticas do Agendador, consulte [SchedulerPolicy](schedulerpolicy-class.md).
+As notificações através deste método são enviadas apenas para agendadores que possuem uma política onde o valor para a chave de `MinConcurrency` política é igual ao valor da chave de `MaxConcurrency` política. Para obter mais informações sobre políticas de agendadores, consulte [SchedulerPolicy](schedulerpolicy-class.md).
 
-Um Agendador que se qualifica para notificações obtém um conjunto de notificações iniciais quando ele é criado, informando se os recursos que acabou de ser atribuído estão externos ou ociosos.
+Um agendador que se qualifica para notificações recebe um conjunto de notificações iniciais quando é criado, informando se os recursos que foi atribuído são ocupados externamente ou ociosos.
 
-## <a name="removevirtualprocessors"></a>Método IScheduler:: RemoveVirtualProcessors
+## <a name="ischedulerremovevirtualprocessors-method"></a><a name="removevirtualprocessors"></a>iScheduler::Remover método deprocessadores virtuais
 
-Inicia a remoção de raízes de processador virtual que foram alocadas anteriormente para este Agendador.
+Inicia a remoção das raízes do processador virtual que foram previamente alocadas a este agendador.
 
 ```cpp
 virtual void RemoveVirtualProcessors(
@@ -177,23 +177,23 @@ virtual void RemoveVirtualProcessors(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*ppVirtualProcessorRoots*<br/>
-Uma matriz de interfaces de `IVirtualProcessorRoot` que representa as raízes do processador virtual a serem removidas.
+*ppVirtualProcessorroots*<br/>
+Uma matriz `IVirtualProcessorRoot` de interfaces representando as raízes do processador virtual a serem removidas.
 
 *contagem*<br/>
-O número de interfaces `IVirtualProcessorRoot` na matriz.
+O número `IVirtualProcessorRoot` de interfaces na matriz.
 
 ### <a name="remarks"></a>Comentários
 
-O Gerenciador de recursos invoca o método `RemoveVirtualProcessors` para retornar um conjunto de raízes de processador virtual de um Agendador. Espera-se que o Agendador invoque o método [Remove](iexecutionresource-structure.md#remove) em cada interface quando for feito com as raízes do processador virtual. Não use uma interface `IVirtualProcessorRoot` depois de invocar o método `Remove` nela.
+O Gerenciador de `RemoveVirtualProcessors` recursos invoca o método para retomar um conjunto de raízes de processador virtuais de um agendador. Espera-se que o agendador invoque o método [Remover](iexecutionresource-structure.md#remove) em cada interface quando for feito com as raízes do processador virtual. Não use `IVirtualProcessorRoot` uma interface depois de `Remove` ter invocado o método nela.
 
-O parâmetro `ppVirtualProcessorRoots` aponta para uma matriz de interfaces. Entre o conjunto de raízes do processador virtual a ser removido, as raízes nunca foram ativadas pode ser retornadas imediatamente usando o método `Remove`. As raízes que foram ativadas e estão executando o trabalho ou foram desativadas e aguardando o trabalho chegar, devem ser retornadas de forma assíncrona. O Agendador deve fazer todas as tentativas de remover a raiz do processador virtual o mais rápido possível. Atrasar a remoção das raízes do processador virtual pode resultar em excesso de assinaturas não intencional dentro do Agendador.
+O parâmetro `ppVirtualProcessorRoots` aponta para uma matriz de interfaces. Entre o conjunto de raízes do processador virtual a serem removidas, as `Remove` raízes nunca foram ativadas podem ser devolvidas imediatamente usando o método. As raízes que foram ativadas e estão executando o trabalho, ou foram desativadas e aguardam a chegada do trabalho, devem ser devolvidas assíncronamente. O agendador deve fazer todas as tentativas de remover a raiz do processador virtual o mais rápido possível. Atrasar a remoção das raízes do processador virtual pode resultar em superassinatura não intencional dentro do agendador.
 
-## <a name="statistics"></a>Método IScheduler:: Statistics
+## <a name="ischedulerstatistics-method"></a><a name="statistics"></a>IScheduler::Método de estatística
 
-Fornece informações relacionadas à chegada da tarefa e às taxas de conclusão e alteração no comprimento da fila para um Agendador.
+Fornece informações relacionadas às taxas de chegada e conclusão de tarefas e altera o comprimento da fila para um agendador.
 
 ```cpp
 virtual void Statistics(
@@ -202,28 +202,28 @@ virtual void Statistics(
     _Out_ unsigned int* pNumberOfTasksEnqueued) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*pTaskCompletionRate*<br/>
-O número de tarefas que foram concluídas pelo Agendador desde a última chamada para esse método.
+*taxa de conclusão de tarefas pTask*<br/>
+O número de tarefas que foram concluídas pelo agendador desde a última chamada para este método.
 
 *pTaskArrivalRate*<br/>
-O número de tarefas que chegaram no Agendador desde a última chamada para esse método.
+O número de tarefas que chegaram ao agendador desde a última chamada para este método.
 
-*pNumberOfTasksEnqueued*<br/>
-O número total de tarefas em todas as filas do Agendador.
+*pNumberOfTasksEnued*<br/>
+O número total de tarefas em todas as filas do agendador.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é invocado pelo Gerenciador de recursos para reunir estatísticas para um Agendador. As estatísticas coletadas aqui serão usadas para direcionar os algoritmos de comentários dinâmicos para determinar quando é apropriado atribuir mais recursos ao agendador e quando retirar recursos. Os valores fornecidos pelo Agendador podem ser otimistas e não necessariamente precisam refletir a contagem atual com precisão.
+Este método é invocado pelo Gerenciador de Recursos para coletar estatísticas para um agendador. As estatísticas coletadas aqui serão usadas para impulsionar algoritmos de feedback dinâmico para determinar quando é apropriado atribuir mais recursos ao agendador e quando tirar recursos. Os valores fornecidos pelo agendador podem ser otimistas e não necessariamente têm que refletir a contagem atual com precisão.
 
-Você deve implementar esse método se quiser que o Gerenciador de recursos use comentários sobre coisas como a chegada da tarefa para determinar como balancear o recurso entre o Agendador e outros agendadores registrados com o Gerenciador de recursos. Se você optar por não coletar estatísticas, poderá definir a chave de política `DynamicProgressFeedback` como o valor `DynamicProgressFeedbackDisabled` na política do Agendador e o Gerenciador de recursos não invocará esse método no Agendador.
+Você deve implementar esse método se quiser que o Gerenciador de recursos use feedback sobre coisas como chegada de tarefas para determinar como equilibrar recursos entre seu agendador e outros agendadores registrados no Gerenciador de Recursos. Se você optar por não reunir estatísticas, `DynamicProgressFeedback` você `DynamicProgressFeedbackDisabled` pode definir a chave de política para o valor na política do seu agendador, e o Gerenciador de recursos não invocará esse método no seu agendador.
 
-Na ausência de informações estatísticas, o Gerenciador de recursos usará níveis de assinatura de thread de hardware para tomar decisões de migração e alocação de recursos. Para obter mais informações sobre os níveis de assinatura, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
+Na ausência de informações estatísticas, o Resource Manager usará os níveis de assinatura do segmento de hardware para tomar decisões de alocação de recursos e migração. Para obter mais informações sobre os níveis de assinatura, consulte [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
 ## <a name="see-also"></a>Confira também
 
-[Namespace de simultaneidade](concurrency-namespace.md)<br/>
+[namespace de concorrência](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Classe SchedulerPolicy](schedulerpolicy-class.md)<br/>
 [Estrutura IExecutionContext](iexecutioncontext-structure.md)<br/>

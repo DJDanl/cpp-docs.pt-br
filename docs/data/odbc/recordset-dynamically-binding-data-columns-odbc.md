@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 456d999a056abc4c15f2dcf3b8774dfc86182272
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e26e62b0e8d613c1a09b077e3bf8d01d1eabba66
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212921"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367057"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: associando dinamicamente colunas de dados (ODBC)
 
@@ -26,9 +26,9 @@ Os conjuntos de registros gerenciam a associação de colunas de tabela que voc�
 - [Como associar colunas dinamicamente em tempo de execução](#_core_how_to_bind_columns_dynamically).
 
 > [!NOTE]
->  Este tópico aplica-se a objetos derivados de `CRecordset` nos quais o fetch de linha em massa não foi implementado. As técnicas descritas geralmente não são recomendadas se você está usando o fetch de linha em massa. Para obter mais informações sobre a busca de linha em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Este tópico aplica-se a objetos derivados de `CRecordset` nos quais o fetch de linha em massa não foi implementado. As técnicas descritas geralmente não são recomendadas se você está usando o fetch de linha em massa. Para obter mais informações sobre a busca de linhas em massa, consulte [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> Quando talvez convenha associar colunas dinamicamente
+## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> Quando talvez convenha associar colunas dinamicamente
 
 > [!NOTE]
 > O Assistente de consumidor ODBC do MFC não está disponível no Visual Studio 2019 e posterior. É possível criar um consumidor manualmente.
@@ -47,13 +47,13 @@ Seu conjunto de registros ainda contém membros de dados para as colunas que voc
 
 Este tópico não aborda outros casos de associação dinâmica, como tabelas ou colunas removidas. Para esses casos, é necessário usar chamadas à API ODBC mais diretamente. Para saber mais, confira a *Referência do Programador* do SDK ODBC no CD da Biblioteca MSDN.
 
-##  <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> Como associar colunas dinamicamente
+## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> Como associar colunas dinamicamente
 
 Para associar colunas dinamicamente, é necessário saber (ou poder determinar) os nomes de mais colunas. Também é necessário alocar armazenamento para mais membros de dados de campo. Especifique seus nomes e seus tipos e o número de colunas que você adicionará.
 
 A discussão a seguir menciona dois conjuntos de registros diferentes. A primeira é o conjunto de registros principal que seleciona registros da tabela de destino. A segunda é um conjunto de registros especial usado para receber informações sobre as colunas em sua tabela de destino.
 
-###  <a name="general-process"></a><a name="_core_the_general_process"></a> Processo Geral
+### <a name="general-process"></a><a name="_core_the_general_process"></a> Processo Geral
 
 No nível mais geral, você segue estas etapas:
 
@@ -69,7 +69,7 @@ No nível mais geral, você segue estas etapas:
 
    O conjunto de registros seleciona registros e usa a RFX (troca de campo de registro) para associar as colunas estáticas (as mapeadas para os membros de dados de campo do conjunto de registros) e as colunas dinâmicas (mapeadas para armazenamento extra que você aloca).
 
-###  <a name="adding-the-columns"></a><a name="_core_adding_the_columns"></a> Como Adicionar as Colunas
+### <a name="adding-the-columns"></a><a name="_core_adding_the_columns"></a> Como Adicionar as Colunas
 
 Associar dinamicamente as colunas adicionadas em tempo de execução requer as seguintes etapas:
 
@@ -81,14 +81,14 @@ Associar dinamicamente as colunas adicionadas em tempo de execução requer as s
 
    Uma abordagem é criar uma ou mais listas dinâmicas; uma para os nomes das novas colunas, outra para seus valores de resultado e uma terceira para seus tipos de dados (se necessário). Essas listas, principalmente a lista de valores, fornecem as informações e o armazenamento necessário para a associação. A imagem a seguir ilustra a criação das listas.
 
-   ![Criando listas de colunas para associar dinamicamente](../../data/odbc/media/vc37w61.gif "Criando listas de colunas para associar dinamicamente")<br/>
+   ![Construindo listas de colunas para vincular dinamicamente](../../data/odbc/media/vc37w61.gif "Construindo listas de colunas para vincular dinamicamente")<br/>
    Como criar listas de colunas para associar dinamicamente
 
 1. Adicione uma chamada de função da RFX na função `DoFieldExchange` do seu conjunto de registros principal para cada coluna adicionada. Essas chamadas RFX fazem o trabalho de execução de fetch de um registro, incluindo as colunas adicionais, e de associação das colunas a membros de dados do conjunto de registros ou ao seu armazenamento fornecido dinamicamente para elas.
 
    Uma abordagem é adicionar um loop à função `DoFieldExchange` do seu conjunto de registros principal que executa um loop em sua lista de novas colunas, chamando a função RFX apropriada para cada coluna na lista. Em cada chamada RFX, passe um nome de coluna da lista do nome da coluna e um local de armazenamento no membro correspondente da lista de valor de resultado.
 
-###  <a name="lists-of-columns"></a><a name="_core_lists_of_columns"></a> Listas de Colunas
+### <a name="lists-of-columns"></a><a name="_core_lists_of_columns"></a> Listas de Colunas
 
 As quatro listas necessárias com as quais trabalhar são mostradas na tabela a seguir.
 
@@ -99,7 +99,7 @@ As quatro listas necessárias com as quais trabalhar são mostradas na tabela a 
 |**Columns-To-Bind-Dynamically**| (Lista 3 na ilustração) Uma lista de colunas na tabela, mas não em seu conjunto de registros. Essas são as colunas que você deseja associar dinamicamente.|
 |**Dynamic-Column-Values**| (Lista 4 na ilustração) Uma lista que contém armazenamento para os valores recuperados das colunas que você associa dinamicamente. Os elementos dessa lista correspondem aos de Columns-to-Bind-Dynamically, um a um.|
 
-###  <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> Como criar suas listas
+### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> Como criar suas listas
 
 Com uma estratégia geral em mente, é possível prestar atenção nos detalhes. Os procedimentos no restante deste tópico mostram como criar as listas mostradas nas [Listas de Colunas](#_core_lists_of_columns). Os procedimentos orientam você para:
 
@@ -109,7 +109,7 @@ Com uma estratégia geral em mente, é possível prestar atenção nos detalhes.
 
 - [Adicionar dinamicamente chamadas RFX para novas colunas](#_core_adding_rfx_calls_to_bind_the_columns).
 
-###  <a name="determining-which-table-columns-are-not-in-your-recordset"></a><a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> Como determinar quais colunas da tabela não estão em seu conjunto de registros
+### <a name="determining-which-table-columns-are-not-in-your-recordset"></a><a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> Como determinar quais colunas da tabela não estão em seu conjunto de registros
 
 Crie uma lista (Bound-Recordset-Columns, como na Lista 2 na ilustração) que contém uma lista das colunas já associadas em seu conjunto de registros principal. Em seguida, crie uma lista (Columns-Bind-Dynamically, derivado de Current-Table-Columns e Bound-Recordset-Columns) que contém os nomes de colunas que estão na tabela na fonte de dados, mas não em seu conjunto de registros principal.
 
@@ -131,7 +131,7 @@ Crie uma lista (Bound-Recordset-Columns, como na Lista 2 na ilustração) que co
 
    Os elementos da lista desempenham a função de novos membros de dados de campo do conjunto de registros. Eles são os locais de armazenamento aos quais as colunas dinâmicas estão associadas. Para ver descrições das listas, confira [Listas de Colunas](#_core_lists_of_columns).
 
-###  <a name="providing-storage-for-the-new-columns"></a><a name="_core_providing_storage_for_the_new_columns"></a> Como fornecer armazenamento para novas colunas
+### <a name="providing-storage-for-the-new-columns"></a><a name="_core_providing_storage_for_the_new_columns"></a> Como fornecer armazenamento para novas colunas
 
 Em seguida, configure os locais de armazenamento para as colunas a serem associadas dinamicamente. A ideia é fornecer um elemento de lista no qual armazenar o valor de cada coluna. Esses locais de armazenamento correspondem às variáveis de membro do conjunto de registros, que armazenam as colunas associadas normalmente.
 
@@ -139,16 +139,16 @@ Em seguida, configure os locais de armazenamento para as colunas a serem associa
 
 1. Crie Dynamic-Column-Values, paralelo a Columns-to-Bind-Dynamically, para conter o valor dos dados em cada coluna.
 
-   Por exemplo, a ilustração mostra valores de coluna dinâmica (lista 4) com um elemento: um `CString` objeto que contém o número de telefone real para o registro atual: "555-1212".
+   Por exemplo, a ilustração mostra Valores dinâmicos de `CString` coluna (Lista 4) com um elemento: um objeto contendo o número de telefone real para o registro atual: "555-1212".
 
    No caso mais comum, Dynamic-Column-Values tem elementos do tipo `CString`. Se estiver lidando com colunas de tipos de dados variados, será necessária uma lista que pode conter elementos de uma variedade de tipos.
 
-O resultado dos procedimentos anteriores são duas listas principais: colunas-para-ligação que contêm dinamicamente os nomes de colunas e valores de coluna dinâmica que contêm os valores nas colunas para o registro atual.
+O resultado dos procedimentos anteriores são duas listas principais: Colunas-para-Vincular-Dinamicamente contendo os nomes das colunas e valores dinâmicos de coluna contendo os valores nas colunas para o registro atual.
 
 > [!TIP]
-> Se as novas colunas não forem do mesmo tipo de dados, talvez convenha ter uma lista paralela extra que contenha itens que definem, de alguma forma, o tipo de cada elemento correspondente na lista de colunas. (Para isso, será possível usar os valores AFX_RFX_BOOL, AFX_RFX_BYTE e assim por diante, se desejar. Essas constantes são definidas em AFXDB. H.) escolha um tipo de lista com base em como você representa os tipos de dados de coluna.
+> Se as novas colunas não forem do mesmo tipo de dados, talvez convenha ter uma lista paralela extra que contenha itens que definem, de alguma forma, o tipo de cada elemento correspondente na lista de colunas. (Para isso, será possível usar os valores AFX_RFX_BOOL, AFX_RFX_BYTE e assim por diante, se desejar. Essas constantes são definidas no AFXDB. H.) Escolha um tipo de lista com base em como você representa os tipos de dados da coluna.
 
-###  <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Como adicionar chamadas RFX para associar as colunas
+### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Como adicionar chamadas RFX para associar as colunas
 
 Por fim, organize a ocorrência da associação dinâmica inserindo chamadas RFX para as novas colunas em sua função `DoFieldExchange`.
 

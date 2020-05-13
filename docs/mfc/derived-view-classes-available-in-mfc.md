@@ -7,39 +7,39 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12b31074e4fcc2ed6a83e3669e1044f5b9caedab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152898"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373497"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Classes de exibição derivadas disponíveis no MFC
 
-A tabela a seguir mostra as classes de exibição do MFC e suas relações uns aos outros. Os recursos da sua classe de exibição dependem da classe de exibição do MFC da qual ela deriva.
+A tabela a seguir mostra as classes de visão da MFC e seus relacionamentos entre si. As capacidades da sua classe de visualização dependem da classe de exibição Do MFC da qual ela deriva.
 
-### <a name="view-classes"></a>Classes de exibição
+### <a name="view-classes"></a>Ver aulas
 
 |Classe|Descrição|
 |-----------|-----------------|
-|[CView](../mfc/reference/cview-class.md)|Classe base de todas as exibições.|
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|Classe de base `CTreeView`, `CListView`, `CEditView`, e `CRichEditView`. Essas classes permitem que você usar a arquitetura de documento/exibição com os controles comuns do Windows indicados.|
-|[CEditView](../mfc/reference/ceditview-class.md)|Uma exibição simples com base no Windows Editar controle de caixa. Permite inserir e editar texto e pode ser usado como base para um aplicativo de editor de texto simples. Consulte também `CRichEditView`.|
-|[CRichEditView](../mfc/reference/cricheditview-class.md)|Uma exibição que contém um [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) objeto. Essa classe é análoga à `CEditView`, mas diferentemente `CEditView`, `CRichEditView` texto formatado de identificadores.|
-|[CListView](../mfc/reference/clistview-class.md)|Uma exibição que contém um [CListCtrl](../mfc/reference/clistctrl-class.md) objeto.|
-|[CTreeView](../mfc/reference/ctreeview-class.md)|Uma exibição que contém um [CTreeCtrl](../mfc/reference/ctreectrl-class.md) objeto para modos de exibição que se assemelhem a janela Gerenciador de soluções no Visual C++.|
-|[CScrollView](../mfc/reference/cscrollview-class.md)|Classe de base `CFormView`, `CRecordView`, e `CDaoRecordView`. Implementa o conteúdo da exibição de rolagem.|
-|[CFormView](../mfc/reference/cformview-class.md)|Uma exibição de formulário, um modo de exibição que contém controles. Um aplicativo baseado em formulários fornece um ou mais essas interfaces de formulário.|
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|Uma exibição de navegador da Web com o qual usuário o aplicativo do pode navegar em sites na World Wide Web, bem como pastas no sistema de arquivos local e em uma rede. A exibição de navegador da Web também pode funcionar como um contêiner de documento ativo.|
-|[CRecordView](../mfc/reference/crecordview-class.md)|Um modo de exibição de formulário que exibe registros de banco de dados ODBC em controles. Se você selecionar o suporte a ODBC em seu projeto, a classe de base da exibição é `CRecordView`. O modo de exibição está conectado a um `CRowset` objeto.|
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Um modo de exibição de formulário que exibe registros de banco de dados DAO em controles. Se você selecionar o suporte do DAO em seu projeto, a classe de base da exibição é `CDaoRecordView`. O modo de exibição está conectado a um `CDaoRecordset` objeto.|
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Um modo de exibição de formulário que exibe registros de OLE DB em controles. Se você selecionar o suporte de OLE DB em seu projeto, a classe de base da exibição é `COleDBRecordView`. O modo de exibição está conectado a um `CRowset` objeto.|
+|[CView](../mfc/reference/cview-class.md)|Classe base de todas as vistas.|
+|[Cctrlview](../mfc/reference/cctrlview-class.md)|Classe base `CTreeView` `CListView`de `CEditView`, `CRichEditView`, e . Essas classes permitem que você use arquitetura de documento/exibição com os controles comuns do Windows indicados.|
+|[CEditView](../mfc/reference/ceditview-class.md)|Uma visão simples com base no controle da caixa de edição do Windows. Permite a entrada e edição de texto e pode ser usado como base para um simples aplicativo de editor de texto. Consulte também `CRichEditView`.|
+|[CRichEditView](../mfc/reference/cricheditview-class.md)|Uma exibição contendo um objeto [CRichEditCtrl.](../mfc/reference/cricheditctrl-class.md) Esta classe é `CEditView`análoga, `CRichEditView` mas ao contrário, `CEditView`lida com texto formatado.|
+|[CListView](../mfc/reference/clistview-class.md)|Uma exibição contendo um objeto [CListCtrl.](../mfc/reference/clistctrl-class.md)|
+|[Ctreeview](../mfc/reference/ctreeview-class.md)|Uma exibição contendo um objeto [CTreeCtrl,](../mfc/reference/ctreectrl-class.md) para visualizações que se assemelham à janela Solution Explorer no Visual C++.|
+|[CScrollView](../mfc/reference/cscrollview-class.md)|Classe base `CFormView` `CRecordView`de `CDaoRecordView`, e . Implementa a rolagem do conteúdo da exibição.|
+|[CFormView](../mfc/reference/cformview-class.md)|Uma exibição de formulário, uma visão que contém controles. Um aplicativo baseado em formulários fornece uma ou mais dessas interfaces de formulário.|
+|[Chtmlview](../mfc/reference/chtmlview-class.md)|Uma visualização do navegador da Web com a qual o usuário do aplicativo pode navegar em sites na World Wide Web, bem como pastas no sistema de arquivos local e em uma rede. A exibição do navegador da Web também pode funcionar como um contêiner de documento Ativo.|
+|[CRecordView](../mfc/reference/crecordview-class.md)|Uma exibição de formulário que exibe registros de banco de dados ODBC em controles. Se você selecionar o suporte ao ODBC em `CRecordView`seu projeto, a classe base da exibição será . A visão está `CRowset` conectada a um objeto.|
+|[Cdaorecordview](../mfc/reference/cdaorecordview-class.md)|Uma exibição de formulário que exibe registros de banco de dados DAO em controles. Se você selecionar suporte ao DAO em seu `CDaoRecordView`projeto, a classe base da exibição será . A visão está `CDaoRecordset` conectada a um objeto.|
+|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Uma exibição de formulário que exibe registros oLE DB em controles. Se você selecionar o suporte ao OLE DB em `COleDBRecordView`seu projeto, a classe base da exibição será . A visão está `CRowset` conectada a um objeto.|
 
 > [!NOTE]
->  A partir da versão 4.0, do MFC `CEditView` é derivado de `CCtrlView`.
+> A partir da versão 4.0 do MFC, `CEditView` é derivada de `CCtrlView`.
 
-Para usar essas classes em seu aplicativo, derive classes de exibição do aplicativo deles. Para obter informações relacionadas, consulte [rolagem e dimensionando exibições](../mfc/scrolling-and-scaling-views.md). Para obter mais informações sobre as classes de banco de dados, consulte [visão geral: Programação de banco de dados](../data/data-access-programming-mfc-atl.md).
+Para usar essas classes em sua aplicação, obtenha as classes de exibição do aplicativo a partir delas. Para obter informações relacionadas, consulte ['Rolagem e escalar visualizações 'Visualizações de rolagem .](../mfc/scrolling-and-scaling-views.md) Para obter mais informações sobre as classes de banco de dados, consulte [Visão geral: Programação de banco de dados](../data/data-access-programming-mfc-atl.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Usando exibições](../mfc/using-views.md)
+[Usando visualizações](../mfc/using-views.md)

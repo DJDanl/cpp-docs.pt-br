@@ -17,20 +17,20 @@ ms.locfileid: "62188880"
 
 Você pode importar funções em um aplicativo usando dois métodos:
 
-- Use as palavras-chave **__declspec(dllimport)** em uma definição de função no aplicativo principal
+- Usar as palavras-chave **__declspec (dllimport)** em uma definição de função no aplicativo principal
 
-- Usar um arquivo de definição (. def) do módulo juntamente com **__declspec(dllimport)**
+- Usar um arquivo de definição de módulo (. def) junto com **__declspec (dllimport)**
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Importação em um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importar para um aplicativo usando __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Chamadas de função de importação usando __declspec(dllimport)](importing-function-calls-using-declspec-dllimport.md)
+- [Importar chamadas de função usando __declspec (dllimport)](importing-function-calls-using-declspec-dllimport.md)
 
-- [Importar dados usando __declspec(dllimport)](importing-data-using-declspec-dllimport.md)
+- [Importar dados usando __declspec (dllimport)](importing-data-using-declspec-dllimport.md)
 
 - [Importar usando arquivos DEF](importing-using-def-files.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Importando e exportando](importing-and-exporting.md)

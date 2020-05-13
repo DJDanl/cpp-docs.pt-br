@@ -1,8 +1,9 @@
 ---
 title: __p__commode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __p__commode
+- _o___p__commode
 api_location:
 - msvcr110.dll
 - msvcrt.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: e3121c127c3ebf0f5fccdeb7ae0f67d0164d0965
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 057a0146aed87a50fc2e8c444b97a8b7b51eada1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171470"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919494"
 ---
 # <a name="__p__commode"></a>__p__commode
 
@@ -48,6 +50,8 @@ Ponteiro para a variável global `_commode`.
 A função `__p__commode` destina-se apenas ao uso interno e não deve ser chamada do código do usuário.
 
 O modo de confirmação de arquivo especifica quando os dados críticos são gravados no disco. Para obter mais informações, consulte [fflush](../c-runtime-library/reference/fflush.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

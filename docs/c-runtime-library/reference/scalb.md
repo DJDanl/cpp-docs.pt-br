@@ -1,9 +1,10 @@
 ---
 title: _scalb, _scalbf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _scalb
 - _scalbf
+- _o__scalb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: 630a5e3db2c39cb40d31c71e6a6dfa214ed91e34
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948891"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918231"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb, _scalbf
 
@@ -62,7 +64,7 @@ Valor de ponto flutuante de precisão dupla.
 *exp*<br/>
 Expoente inteiro longo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retornará um valor exponencial se for bem-sucedido. No estouro (dependendo do sinal de *x*), **_scalb** retorna +/- **HUGE_VAL**; a variável **errno** é definida como **ERANGE**.
 
@@ -71,6 +73,8 @@ Para obter mais informações sobre este e outros códigos retornados, consulte 
 ## <a name="remarks"></a>Comentários
 
 A função **_scalb** calcula o valor de *x* \* 2<sup>*exp*</sup>.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

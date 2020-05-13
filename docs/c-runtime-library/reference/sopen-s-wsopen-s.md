@@ -1,9 +1,11 @@
 ---
 title: _sopen_s, _wsopen_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _sopen_s
 - _wsopen_s
+- _o__sopen_s
+- _o__wsopen_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: f21c805cae74fb700aa186a279082ee183db34d3
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 6c3de36482c4ffdf1ef402b4059816639014eb8b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150830"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912688"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 
@@ -69,7 +72,7 @@ errno_t _wsopen_s(
 *pfh*<br/>
 O identificador de arquivo, ou -1 no caso de um erro.
 
-*filename*<br/>
+*nome do arquivo*<br/>
 Nome do arquivo.
 
 *oflag*<br/>
@@ -103,13 +106,15 @@ No caso de um erro,-1 é retornado por meio de *PFH* (a menos que *PFH* seja um 
 
 A função **_sopen_s** abre o arquivo especificado por *filename* e prepara o arquivo para leitura ou gravação compartilhada, conforme definido por *oflag* e *shflag*. **_wsopen_s** é uma versão de caractere largo do **_sopen_s**; o argumento de *nome de arquivo* para **_wsopen_s** é uma cadeia de caracteres largos. **_wsopen_s** e **_sopen_s** se comportar de forma idêntica.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-A expressão de inteiro *oflag* é formada pela combinação de uma ou mais constantes de manifesto, que são definidas em \<Fcntl. h >. Quando duas ou mais constantes formam o argumento *oflag*, elas são combinadas com o operador OR-bit **&#124;** ().
+A expressão de inteiro *oflag* é formada pela combinação de uma ou mais constantes de manifesto, \<que são definidas em Fcntl. h>. Quando duas ou mais constantes formam o argumento *oflag*, elas são combinadas com o operador OR-bit ( **&#124;** ).
 
 |constante *oflag*|Comportamento|
 |-|-|
@@ -118,7 +123,7 @@ A expressão de inteiro *oflag* é formada pela combinação de uma ou mais cons
 | **_O_CREAT** | Cria um arquivo e o abre para gravação. Não terá efeito se o arquivo especificado por *filename* existir. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | Cria um arquivo temporário e, se possível, não alinha com o disco. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | Cria um arquivo temporário, que é excluído quando o último descritor de arquivo é fechado. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
-| **_O_CREAT** &#124; `_O_EXCL` | Retorna um valor de erro se um arquivo especificado por *filename* existir. Aplica-se somente quando usado com **_O_CREAT**. |
+| **_O_CREAT** &#124;`_O_EXCL` | Retorna um valor de erro se um arquivo especificado por *filename* existir. Aplica-se somente quando usado com **_O_CREAT**. |
 | **_O_NOINHERIT** | Impede a criação de um descritor de arquivo compartilhado. |
 | **_O_RANDOM** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
 | **_O_RDONLY** | Abre um arquivo somente leitura. Não pode ser especificado com **_O_RDWR** ou **_O_WRONLY**. |
@@ -135,9 +140,9 @@ Para especificar o modo de acesso ao arquivo, você deve especificar **_O_RDONLY
 
 Quando um arquivo é aberto no modo Unicode usando **_O_WTEXT**, **_O_U8TEXT**ou **_O_U16TEXT**, as funções de entrada convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **wchar_t**. As funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **wchar_t**. Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Tentar ler ou gravar uma quantidade ímpar de bytes no modo Unicode gera um erro de validação de parâmetro. Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
 
-Se **_sopen_s** for chamado com **_O_WRONLY** |  **_O_APPEND** (modo de acréscimo) e **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, primeiro ele tentará abrir o arquivo para leitura e gravação, ler a bom e, em seguida, reabri-la para gravação. Se uma falha impedir de abrir o arquivo para leitura e gravação, ele será aberto somente para gravação e usará o valor padrão na configuração do modo Unicode.
+Se **_sopen_s** for chamado com **_O_WRONLY** | **_O_APPEND** (modo de acréscimo) e **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, primeiro ele tentará abrir o arquivo para leitura e gravação, ler a bom e, em seguida, reabri-la para gravação. Se uma falha impedir de abrir o arquivo para leitura e gravação, ele será aberto somente para gravação e usará o valor padrão na configuração do modo Unicode.
 
-O argumento *shflag* é uma expressão constante que consiste em uma das constantes de manifesto a seguir, que são definidas em \<share. h >.
+O argumento *shflag* é uma expressão constante que consiste em uma das constantes de manifesto a seguir, que são definidas \<em share. h>.
 
 |constante *shflag*|Comportamento|
 |-|-|
@@ -146,7 +151,7 @@ O argumento *shflag* é uma expressão constante que consiste em uma das constan
 | **_SH_DENYRD** | Nega acesso de leitura a um arquivo. |
 | **_SH_DENYNO** | Permite acesso de leitura e gravação. |
 
-O argumento *pmode* é sempre necessário, ao contrário de **_sopen**. Quando você especificar **_O_CREAT**, se o arquivo não existir, *pmode* especificará as configurações de permissão do arquivo, que são definidas quando o novo arquivo é fechado pela primeira vez. Caso contrário, *pmode* será ignorado. *pmode* é uma expressão de inteiro que contém uma ou ambas as constantes de manifesto **_S_IWRITE** e **_S_IREAD**, que são definidas em \<SYS\Stat.h >. Quando as duas constantes são fornecidas, elas são combinadas com o operador OR bit a bit. O significado de *pmode* é o seguinte.
+O argumento *pmode* é sempre necessário, ao contrário de **_sopen**. Quando você especificar **_O_CREAT**, se o arquivo não existir, *pmode* especificará as configurações de permissão do arquivo, que são definidas quando o novo arquivo é fechado pela primeira vez. Caso contrário, *pmode* será ignorado. *pmode* é uma expressão de inteiro que contém uma ou ambas as constantes de manifesto **_S_IWRITE** e **_S_IREAD**, que são definidas \<em> SYS\Stat.h. Quando as duas constantes são fornecidas, elas são combinadas com o operador OR bit a bit. O significado de *pmode* é o seguinte.
 
 |*pmode*|Significado|
 |-|-|
@@ -154,11 +159,11 @@ O argumento *pmode* é sempre necessário, ao contrário de **_sopen**. Quando v
 | **_S_IWRITE** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
 | **_S_IREAD** &#124; **_S_IWRITE** | Leitura e gravação permitidas. |
 
-Se a permissão de gravação não for fornecida, o arquivo será somente leitura. No sistema operacional Windows, todos os arquivos podem ser lidos; não é possível conceder permissão de somente gravação. Portanto, os modos **_S_IWRITE** e **_S_IREAD** |  **_S_IWRITE** são equivalentes.
+Se a permissão de gravação não for fornecida, o arquivo será somente leitura. No sistema operacional Windows, todos os arquivos podem ser lidos; não é possível conceder permissão de somente gravação. Portanto, os modos **_S_IWRITE** e **_S_IREAD** | **_S_IWRITE** são equivalentes.
 
 **_sopen_s** aplica a máscara de permissão de arquivo atual a *pmode* antes que as permissões sejam definidas. (Consulte [_umask](umask.md).)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
@@ -167,7 +172,7 @@ Se a permissão de gravação não for fornecida, o arquivo será somente leitur
 
 **_sopen_s** e **_wsopen_s** são extensões da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Veja o exemplo de [_locking](locking.md).
 

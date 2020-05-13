@@ -1,8 +1,9 @@
 ---
 title: _isatty
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isatty
+- _o__isatty
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954549"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919777"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -46,18 +48,20 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>Parâmetros
 
-*fd*<br/>
+*FD*<br/>
 Descritor de arquivo que se refere ao dispositivo a ser testado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_isatty** retornará um valor diferente de zero se o descritor estiver associado a um dispositivo de caractere. Caso contrário, **_isatty** retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_isatty** determina se *FD* está associado a um dispositivo de caractere (um terminal, um console, uma impressora ou uma porta serial).
+A função **_isatty** determina se *FD* está associado a um dispositivo de caractere (um terminal, console, impressora ou porta serial).
 
 Essa função valida o parâmetro *FD* . Se *FD* for um ponteiro de arquivo incorreto, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará 0 e definirá **errno** como **EBADF**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -67,7 +71,7 @@ Essa função valida o parâmetro *FD* . Se *FD* for um ponteiro de arquivo inco
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -91,7 +95,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 stdout has not been redirected to a file

@@ -1,8 +1,9 @@
 ---
 title: _rmtmp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _rmtmp
+- _o__rmtmp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ca5c693a1baed7e5f31219cdbee712b5c77f2a85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442785"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917647"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -55,7 +57,9 @@ int _rmtmp( void );
 
 A função **_rmtmp** limpa todos os arquivos temporários no diretório atual. A função remove somente os arquivos criados por **tmpfile**; Use-o somente no mesmo diretório em que os arquivos temporários foram criados.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -67,7 +71,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Veja o exemplo a seguir para [tmpfile](tmpfile.md).
 

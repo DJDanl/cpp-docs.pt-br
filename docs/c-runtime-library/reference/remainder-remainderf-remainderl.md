@@ -1,10 +1,13 @@
 ---
 title: remainder, remainderf, remainderl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remainderl
 - remainder
 - remainderf
+- _o_remainder
+- _o_remainderf
+- _o_remainderl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949419"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917845"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -59,24 +63,26 @@ long double remainder( long double x, long double y ); /* C++ only */
 *x*<br/>
 O numerador.
 
-*y*<br/>
+*Iar*<br/>
 O denominador.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O restante de ponto flutuante de *x* / *y*. Se o valor de *y* for 0,0, **resto** retornará um NaN silencioso. Para obter informações sobre a representação de um NaN silencioso pela família **printf** , consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentários
 
-As funções **restantes** calculam o *r* restante de ponto flutuante de *x* / *y* de forma que *x* = *n* \* *y* + *r*, em que *n* é o inteiro mais próximo no valor para *x* / *y* e *n*é mesmo sempre que &#124; *n* - *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* tem o mesmo sinal que *x*.
+As **funções restantes** calculam o *r* restante de ponto flutuante de *x* / *y* de forma que *x* = *n* \* *y* + *r*, em que *n*é o inteiro mais próximo no valor para *x* / *y* e *n*é mesmo sempre que &#124; *n* - *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* tem o mesmo sinal que *x*.
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **resto** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **resto** sempre usa dois argumentos **duplos** e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **resto** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **resto** sempre usa dois argumentos **duplos** e retorna um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |--------------|---------------------|-|
-|**remainder**, **remainderf**, **remainderl**|\<math.h>|\<cmath> ou \<math.h>|
+|**resto**, **remainderf**, **restantel**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -102,7 +108,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

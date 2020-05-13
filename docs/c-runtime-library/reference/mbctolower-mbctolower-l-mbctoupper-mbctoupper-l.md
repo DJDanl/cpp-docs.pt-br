@@ -1,11 +1,15 @@
 ---
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +50,19 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952536"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914285"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
 Testa e converte o formato de maiúsculas e minúsculas de um caractere multibyte.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -80,13 +85,13 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Caracteres multibyte a serem convertidos.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna o caractere *c*convertido, se possível. Caso contrário, ele retornará o caractere *c* inalterado.
 
@@ -103,13 +108,15 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 
 Nas versões anteriores, **_mbctolower** era chamado de **jtolower**e **_mbctoupper** era chamado de **jtoupper**. Para código novo, use os novos nomes.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**ToLower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**ToUpper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>Requisitos

@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-ms.openlocfilehash: 3bdb501d8210c98ce982719358564c4937991e12
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 947ec16e91b99cc42cff90abe7df4a5d13576e98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417624"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329616"
 ---
 # <a name="iolecontrolimpl-class"></a>Classe IOleControlImpl
 
-Essa classe fornece uma implementação padrão da interface `IOleControl` e implementa `IUnknown`.
+Esta classe fornece uma `IOleControl` implementação padrão `IUnknown`da interface e implementações .
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,7 +32,7 @@ template<class T>
 class IOleControlImpl
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Sua classe, derivada de `IOleControlImpl`.
@@ -41,18 +41,18 @@ Sua classe, derivada de `IOleControlImpl`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[IOleControlImpl:: FreezeEvents](#freezeevents)|Indica se o contêiner ignora ou não os eventos do controle.|
+|[IOleControlImpl::FreezeEvents](#freezeevents)|Indica se o contêiner ignora ou aceita eventos do controle.|
 |[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Preenche informações sobre o comportamento do teclado do controle. A implementação da ATL retorna E_NOTIMPL.|
-|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Informa um controle de que uma ou mais das propriedades de ambiente do contêiner foram alteradas. A implementação da ATL retorna S_OK.|
-|[IOleControlImpl:: onmnemônico](#onmnemonic)|Informa ao controle que um usuário pressionou um pressionamento de tecla especificada. A implementação da ATL retorna E_NOTIMPL.|
+|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Informa um controle de que uma ou mais das propriedades ambientais do contêiner mudaram. A implementação da ATL retorna S_OK.|
+|[IOleControlImpl::OnMnemônico](#onmnemonic)|Informa ao controle que um usuário pressionou uma tecla especificada. A implementação da ATL retorna E_NOTIMPL.|
 
 ## <a name="remarks"></a>Comentários
 
-A classe `IOleControlImpl` fornece uma implementação padrão da interface [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) e implementa `IUnknown` enviando informações para o dispositivo de despejo em compilações de depuração.
+A `IOleControlImpl` classe fornece uma implementação padrão da `IUnknown` interface [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) e implementa enviando informações para o dispositivo de despejo em compilações de depuração.
 
-**Artigos relacionados** - [tutorial do ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto do ATL](../../atl/reference/creating-an-atl-project.md)
+**Artigos relacionados** [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md), Criando um Projeto [ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -62,11 +62,11 @@ A classe `IOleControlImpl` fornece uma implementação padrão da interface [IOl
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlctl. h
+**Cabeçalho:** atlctl.h
 
-##  <a name="freezeevents"></a>IOleControlImpl:: FreezeEvents
+## <a name="iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOleControlImpl::FreezeEvents
 
-Na implementação da ATL, `FreezeEvents` incrementa o membro de dados `m_nFreezeEvents` da classe de controle se `bFreeze` for TRUE e decrementará `m_nFreezeEvents` se `bFreeze` for FALSE.
+Na implementação da `FreezeEvents` ATL, incrementa `m_nFreezeEvents` o membro `bFreeze` de dados da classe `m_nFreezeEvents` `bFreeze` de controle se for TRUE, e decreta se for FALSO.
 
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
@@ -74,11 +74,11 @@ HRESULT FreezeEvents(BOOL bFreeze);
 
 ### <a name="remarks"></a>Comentários
 
-`FreezeEvents`, em seguida, retorna S_OK.
+`FreezeEvents`em seguida, retorna S_OK.
 
-Consulte [IOleControl:: FreezeEvents](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) na SDK do Windows.
+Consulte [IOleControl::FreezeEvents](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) no Windows SDK.
 
-##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo
+## <a name="iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo
 
 Preenche informações sobre o comportamento do teclado do controle.
 
@@ -88,15 +88,15 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleControl: GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) no SDK do Windows.
+Consulte [IOleControl:GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) no Windows SDK.
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
-##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange
+## <a name="iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange
 
-Informa um controle de que uma ou mais das propriedades de ambiente do contêiner foram alteradas.
+Informa um controle de que uma ou mais das propriedades ambientais do contêiner mudaram.
 
 ```
 HRESULT OnAmbientPropertyChange(DISPID dispid);
@@ -108,11 +108,11 @@ Retorna S_OK.
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleControl:: OnAmbientPropertyChange](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) na SDK do Windows.
+Consulte [IOleControl::OnAmbientPropertyChange](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) no Windows SDK.
 
-##  <a name="onmnemonic"></a>IOleControlImpl:: onmnemônico
+## <a name="iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleControlImpl::OnMnemônico
 
-Informa ao controle que um usuário pressionou um pressionamento de tecla especificada.
+Informa ao controle que um usuário pressionou uma tecla especificada.
 
 ```
 HRESULT OnMnemonic(LPMSG pMsg);
@@ -120,11 +120,11 @@ HRESULT OnMnemonic(LPMSG pMsg);
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleControl:: onmnemônico](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) na SDK do Windows.
+Consulte [IOleControl::OnMnemônico](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) no Windows SDK.
 
 ## <a name="see-also"></a>Confira também
 

@@ -20,39 +20,39 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: a463b807d39addfdaa64b829720266bf0502fa7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17f7fb415303ab74f588a2205bc9430127091e96
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188071"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825890"
 ---
 # <a name="try-finally-statement"></a>Instrução try-finally
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 A sintaxe a seguir descreve a instrução **try – finally** :
 
-> **\_\_tentar**<br/>
-> {<br/>
-> &nbsp;&nbsp;&nbsp;código &nbsp;//protegido<br/>
-> }<br/>
-> **\_\_finalmente**<br/>
-> {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;//código de encerramento<br/>
+> **\_\_Tente**<br/>
+> {\
+> &nbsp;&nbsp;&nbsp;&nbsp;código protegido \
+> }\
+> **\_\_disso**\
+> {\
+> &nbsp;&nbsp;&nbsp;&nbsp;código de encerramento \
 > }
 
 ## <a name="grammar"></a>Gramática
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_tente** *a instrução composta* **\_\_finalmente** *a instrução composta*
+&nbsp;&nbsp;&nbsp;&nbsp;instrução try *composto-instrução* ** \_ \_finally** *composta* ** \_ \_**
 
-A instrução **try-finally** é uma extensão da Microsoft para a C C++ e linguagens que permite aos aplicativos de destino garantir a execução do código de limpeza quando a execução de um bloco de código é interrompida. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. A instrução **try-finally** é especialmente útil para rotinas que têm vários lugares em que uma verificação é feita para um erro que poderia causar um retorno prematuro da rotina.
+A instrução **try-finally** é uma extensão da Microsoft para as linguagens C e C++ que permite aos aplicativos de destino garantir a execução do código de limpeza quando a execução de um bloco de código é interrompida. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. A instrução **try-finally** é especialmente útil para rotinas que têm vários lugares em que uma verificação é feita para um erro que poderia causar um retorno prematuro da rotina.
 
-Para obter informações relacionadas e um exemplo de código, consulte [instrução try-Except](../cpp/try-except-statement.md). Para obter mais informações sobre manipulação de exceção estruturada em geral, consulte [manipulação de exceção estruturada](../cpp/structured-exception-handling-c-cpp.md). Para obter mais informações sobre como lidar com exceções em C++aplicativos gerenciados com a/CLI, consulte [tratamento de exceção em/CLR](../extensions/exception-handling-cpp-component-extensions.md).
+Para obter informações relacionadas e um exemplo de código, consulte [instrução try-Except](../cpp/try-except-statement.md). Para obter mais informações sobre manipulação de exceção estruturada em geral, consulte [manipulação de exceção estruturada](../cpp/structured-exception-handling-c-cpp.md). Para obter mais informações sobre como lidar com exceções em aplicativos gerenciados com C++/CLI, consulte [tratamento de exceção em/CLR](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
-> A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. Para C++ programas, é recomendável que você use o C++ mecanismo de tratamento de exceções (instruções[try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
+> A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. Para programas em C++, é recomendável que você use o mecanismo de manipulação de exceções do C++ (instruções[try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
 
 A instrução composta após a cláusula **__try** é a seção protegida. A instrução composta após a cláusula **__finally** é o manipulador de terminação. O manipulador especifica um conjunto de ações que são executadas quando você sai da seção protegida, independentemente de a saída da seção protegida ser realizada por uma exceção (encerramento anormal) ou por queda padrão (encerramento normal).
 
@@ -68,13 +68,13 @@ Se ocorrer uma exceção no bloco de **__try** , o sistema operacional deverá e
 
 Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção é gerada na função D e tratada na A, os manipuladores de encerramento são chamados nessa ordem à medida que o sistema desenrola a pilha: D, C, B.
 
-![Ordem de execução&#45;do manipulador de encerramento](../cpp/media/vc38cx1.gif "Ordem de execução&#45;do manipulador de encerramento") <br/>
+![Ordem de encerramento&#45;execução do manipulador](../cpp/media/vc38cx1.gif "Ordem de encerramento&#45;execução do manipulador") <br/>
 Ordem de execução do manipulador de encerramento
 
 > [!NOTE]
-> O comportamento de try – finally é diferente de algumas outras linguagens que dão suporte ao uso de **finally**, C#como.  Um único **__try** pode ter um, mas não ambos, de **__finally** e **__except**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.
+> O comportamento de try – finally é diferente de algumas outras linguagens que dão suporte ao uso de **finally**, como C#.  Um único **__try** pode ter um, mas não ambos, de **__finally** e **__except**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.
 
-Para a compatibilidade com versões anteriores, **_try**, **_finally**e **_leave** são sinônimos de **__try**, **__finally**e **__Leave** , a menos que a opção do compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
+Para compatibilidade com versões anteriores, **_try**, **_finally**e **_leave** são sinônimos de **__try**, **__finally**e **__leave** , a menos que a opção do compilador [ \(/za desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ## <a name="the-__leave-keyword"></a>A palavra-chave __leave
 
@@ -90,11 +90,11 @@ Se um bloco **try** for encerrado prematuramente por qualquer motivo, incluindo 
 
 O manipulador de encerramento não será chamado se um processo for eliminado no meio da execução de uma instrução **try-finally** .
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
 [Escrevendo um manipulador de encerramento](../cpp/writing-a-termination-handler.md)<br/>
-[Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Manipulação de exceção estruturada (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Sintaxe do manipulador de terminação](/windows/win32/Debug/termination-handler-syntax)

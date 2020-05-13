@@ -1,9 +1,11 @@
 ---
 title: _memicmp, _memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 365b57dc300da5686895d66fa642e3870612c2ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951838"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915391"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -65,13 +68,13 @@ Primeiro buffer.
 *buffer2*<br/>
 Segundo buffer.
 
-*count*<br/>
+*contagem*<br/>
 Número de caracteres.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor retornado indica a relação entre os buffers.
 
@@ -88,7 +91,9 @@ A função **_memicmp** compara os primeiros caracteres de *contagem* dos dois b
 
 Se *buffer1* ou *BUFFER2* for um ponteiro nulo, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
 
-**_memicmp** usa a localidade atual para comportamento dependente de localidade; **_memicmp_l** é idêntico, exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_memicmp** usa a localidade atual para comportamento dependente de localidade; o **_memicmp_l** é idêntico, exceto pelo fato de que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -134,7 +139,7 @@ Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
 First is equal to second.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

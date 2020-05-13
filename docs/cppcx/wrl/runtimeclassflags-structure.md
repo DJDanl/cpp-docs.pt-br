@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClassFlags structure
 - Microsoft::WRL::RuntimeClassFlags::value constant
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
-ms.openlocfilehash: 4cbd3f367bc57c2eedf672422a458b67b1908fc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fed5bb31b077288495a78aefcbd8401b3520bb6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403146"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367221"
 ---
 # <a name="runtimeclassflags-structure"></a>Estrutura RuntimeClassFlags
 
@@ -29,8 +29,8 @@ struct RuntimeClassFlags;
 
 ### <a name="parameters"></a>Parâmetros
 
-*flags*<br/>
-Um [enumeração RuntimeClassType](runtimeclasstype-enumeration.md) valor.
+*Sinalizadores*<br/>
+Um valor [de Enumeração RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 ## <a name="members"></a>Membros
 
@@ -38,7 +38,7 @@ Um [enumeração RuntimeClassType](runtimeclasstype-enumeration.md) valor.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Constante RuntimeClassFlags::value](#value-constant)|Contém uma [enumeração RuntimeClassType](runtimeclasstype-enumeration.md) valor.|
+|[Constante RuntimeClassFlags::value](#value-constant)|Contém um valor [de Enumeração RuntimeClassType.](runtimeclasstype-enumeration.md)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -46,13 +46,13 @@ Um [enumeração RuntimeClassType](runtimeclasstype-enumeration.md) valor.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Implements. h
+**Cabeçalho:** implements.h
 
-**Namespace:** Microsoft::WRL
+**Espaço de nome:** Microsoft::WRL
 
-## <a name="value-constant"></a>Constante runtimeclassflags:: Value
+## <a name="runtimeclassflagsvalue-constant"></a><a name="value-constant"></a>RuntimeClassFlags::'marcação de valor
 
-Um campo que contém um [enumeração RuntimeClassType](runtimeclasstype-enumeration.md) valor.
+Um campo que contém um valor [de Enumeração RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 ```cpp
 static const unsigned int value = flags;

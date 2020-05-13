@@ -1,9 +1,11 @@
 ---
 title: asctime, _wasctime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime
 - asctime
+- _o__wasctime
+- _o_asctime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939666"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909419"
 ---
 # <a name="asctime-_wasctime"></a>asctime, _wasctime
 
@@ -60,9 +63,9 @@ wchar_t *_wasctime(
 *timeptr*<br/>
 Estrutura de hora/data.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**asctime** retorna um ponteiro para o resultado da cadeia de caracteres; **_wasctime** retorna um ponteiro para o resultado de cadeia de caracteres largos. Não há nenhum valor retornado de erro.
+**asctime** retorna um ponteiro para o resultado da cadeia de caracteres; **_wasctime** retorna um ponteiro para o resultado da cadeia de caracteres largos. Não há nenhum valor retornado de erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -86,9 +89,11 @@ A cadeia de caracteres convertida também é ajustada de acordo com as configura
 
 O resultado da cadeia de caracteres produzido por **asctime** contém exatamente 26 caracteres e `Wed Jan 02 02:03:55 1980\n\0`tem o formulário. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. o **asctime** usa um buffer único e alocado estaticamente para manter a cadeia de caracteres de retorno. Cada chamada para essa função destrói o resultado da chamada anterior.
 
-**_wasctime** é uma versão de caractere largo do **asctime**. **_wasctime** e **asctime** se comportam de outra forma.
+**_wasctime** é uma versão de caractere largo do **asctime**. o **_wasctime** e o **asctime** se comportam de forma idêntica.
 
 Essas funções validam seus parâmetros. Se *timeptr* for um ponteiro nulo ou se ele contiver valores fora do intervalo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará **NULL** e definirá **errno** como **EINVAL**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico
 
@@ -137,7 +142,7 @@ Current date and time: Sun Feb 03 11:38:58 2002
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

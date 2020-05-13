@@ -1,8 +1,9 @@
 ---
 title: _pipe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pipe
+- _o__pipe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +30,19 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: bd0107fac28deef94716ff0ce65dd5423a1ececa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d3805de6a591169f94926c09a4542ec01f221d1d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951011"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916835"
 ---
 # <a name="_pipe"></a>_pipe
 
 Cria um pipe para leitura e gravação.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -60,10 +62,10 @@ Ponteiro para uma matriz de dois **int** para conter descritores de arquivo de l
 *psize*<br/>
 Quantidade de memória a ser reservada.
 
-*textmode*<br/>
+*TextMode*<br/>
 Modo de arquivo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna 0 se for bem-sucedido. Retorna-1 para indicar um erro. Se houver erro, **errno** é definido como um destes valores:
 
@@ -79,19 +81,21 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 A função **_pipe** cria um *pipe*, que é um canal de e/s artificial que um programa usa para passar informações para outros programas. Um pipe lembra um arquivo, pois ele tem um ponteiro de arquivo, um descritor de arquivo ou ambos e pode ser lido ou gravado usando as funções de entrada e saída da Biblioteca Padrão. No entanto, um pipe não representa um arquivo ou dispositivo específico. Em vez disso, ele representa o armazenamento temporário na memória que é independente da memória do próprio programa e é controlada totalmente pelo sistema operacional.
 
-**_pipe** se assemelha a **_open** , mas abre o pipe para leitura e gravação e retorna dois descritores de arquivo em vez de um. O programa pode usar ambos os lados do pipe ou fechar um que não é necessário. Por exemplo, o processador de comando no Windows cria um pipe quando executa um comando como **Program1** | **PROGRAM2**.
+**_pipe** se assemelha **_open** , mas abre o pipe para leitura e gravação e retorna dois descritores de arquivo em vez de um. O programa pode usar ambos os lados do pipe ou fechar um que não é necessário. Por exemplo, o processador de comando no Windows cria um pipe quando executa um comando como **Program1** | **PROGRAM2**.
 
 O descritor de saída padrão de **Program1** é anexado ao descritor de gravação do pipe. O descritor de entrada padrão de **PROGRAM2** é anexado ao descritor de leitura do pipe. Isso elimina a necessidade de criar arquivos temporários para passar informações para outros programas.
 
-A função **_pipe** retorna dois descritores de arquivo para o pipe no argumento *PFDs* . O elemento *PFDs*[0] contém o descritor de leitura e o elemento *PFDs*[1] contém o descritor de gravação. Descritores de arquivo de pipe são usados da mesma maneira que outros descritores de arquivo. (As funções de entrada e saída de baixo nível **_read** e **_write** podem ler e gravar em um pipe.) Para detectar a condição de fim do pipe, verifique se há uma solicitação **_read** que retorna 0 como o número de bytes lidos.
+A função **_pipe** retorna dois descritores de arquivo para o pipe no argumento *PFDs* . O elemento *PFDs*[0] contém o descritor de leitura e o elemento *PFDs*[1] contém o descritor de gravação. Descritores de arquivo de pipe são usados da mesma maneira que outros descritores de arquivo. (As funções de entrada e saída de baixo nível **_read** e **_write** podem ler e gravar em um pipe.) Para detectar a condição de fim do pipe, verifique se há uma **_read** solicitação que retorna 0 como o número de bytes lidos.
 
-O argumento *psize* especifica a quantidade de memória, em bytes, a ser reservada para o pipe. O argumento *TextMode* especifica o modo de tradução para o pipe. A constante de manifesto **_O_TEXT** especifica uma tradução de texto e a constante **_O_BINARY** especifica a tradução binária. (Consulte [fopen, _wfopen](fopen-wfopen.md) para obter uma descrição dos modos binário e de texto.) Se o argumento *TextMode* for 0, **_pipe** usará o modo de tradução padrão especificado pela variável de modo padrão [_fmode](../../c-runtime-library/fmode.md).
+O argumento *psize* especifica a quantidade de memória, em bytes, a ser reservada para o pipe. O argumento *TextMode* especifica o modo de tradução para o pipe. A constante de manifesto **_O_TEXT** especifica uma tradução de texto e a constante **_O_BINARY** especifica a conversão binária. (Consulte [fopen, _wfopen](fopen-wfopen.md) para obter uma descrição dos modos de texto e binários.) Se o argumento *TextMode* for 0, **_pipe** usará o modo de tradução padrão especificado pela variável de modo padrão [_fmode](../../c-runtime-library/fmode.md).
 
-Em programas multithread, nenhum bloqueio é executado. Os descritores de arquivo retornados são abertos recentemente e não devem ser referenciados por nenhum thread até que a chamada **_pipe** seja concluída.
+Em programas multithread, nenhum bloqueio é executado. Os descritores de arquivo retornados são abertos recentemente e não devem ser referenciados por nenhum thread até que a chamada de **_pipe** seja concluída.
 
-Para usar a função **_pipe** para se comunicar entre um processo pai e um processo filho, cada processo deve ter apenas um descritor aberto no pipe. Os descritores de deverão ser opostos: se o pai tiver um descritor de leitura aberto, o filho deve ter um descritor de gravação aberto. A maneira mais fácil de fazer isso é a bit e ( **|** ) do sinalizador **_O_NOINHERIT** com *TextMode*. Em seguida, use **_dup** ou **_dup2** para criar uma cópia herdável do descritor de pipe que você deseja passar para o filho. Feche o descritor original e gere o processo filho. No retorno da chamada de geração, feche o descritor duplicado no processo pai. Para obter mais informações, consulte o exemplo 2 mais adiante neste artigo.
+Para usar a função **_pipe** para se comunicar entre um processo pai e um processo filho, cada processo deve ter apenas um descritor aberto no pipe. Os descritores de deverão ser opostos: se o pai tiver um descritor de leitura aberto, o filho deve ter um descritor de gravação aberto. A maneira mais fácil de fazer isso é em que a bit**|** e () o sinalizador de **_O_NOINHERIT** com *TextMode*. Em seguida, use **_dup** ou **_dup2** para criar uma cópia herdável do descritor de pipe que você deseja passar para o filho. Feche o descritor original e gere o processo filho. No retorno da chamada de geração, feche o descritor duplicado no processo pai. Para obter mais informações, consulte o exemplo 2 mais adiante neste artigo.
 
-No sistema operacional Windows, um pipe é destruído quando todos os seus descritores foram fechados. (Se todos os descritores de leitura no pipe foram fechados, então, gravar no pipe causa um erro.) Todas as operações de leitura e gravação no pipe esperam até que haja dados ou espaço em buffer suficiente para concluir a solicitação de E/S.
+No sistema operacional Windows, um pipe é destruído quando todos os seus descritores foram fechados. (Se todos os descritores de leitura no pipe tiverem sido fechados, a gravação no pipe causará um erro.) Todas as operações de leitura e gravação no pipe esperam até que haja dados suficientes ou espaço em buffer suficiente para concluir a solicitação de e/s.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,7 +109,7 @@ No sistema operacional Windows, um pipe é destruído quando todos os seus descr
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 

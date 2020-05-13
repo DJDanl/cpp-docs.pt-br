@@ -1,8 +1,9 @@
 ---
 title: _lfind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lfind
+- _o__lfind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4721ba96e145b3c2fde4ce0bb73157bbbcab4dff
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442924"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916455"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -54,7 +56,7 @@ void *_lfind(
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*<br/>
+*chave*<br/>
 O objeto a ser pesquisado.
 
 *base*<br/>
@@ -66,7 +68,7 @@ Número de elementos da matriz.
 *width*<br/>
 Largura dos elementos da matriz.
 
-*compare*<br/>
+*comparar*<br/>
 Ponteiro para a rotina de comparação. O primeiro parâmetro é um ponteiro para a chave a ser pesquisada. O segundo parâmetro é um ponteiro para um elemento de matriz a ser comparado com a chave.
 
 ## <a name="return-value"></a>Valor retornado
@@ -79,7 +81,9 @@ A função **_lfind** executa uma pesquisa linear para a *chave* de valor em uma
 
 Essa função valida seus parâmetros. Se *Compare*, *Key* ou *Number* for **NULL**ou se *base* for **NULL** e *Number* for zero, ou se *Width* for menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -87,7 +91,7 @@ Essa função valida seus parâmetros. Se *Compare*, *Key* ou *Number* for **NUL
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_lfind.c
@@ -124,7 +128,7 @@ int main( )
 Hello found
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>

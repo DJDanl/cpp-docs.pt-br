@@ -7,96 +7,96 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fa39a4d9369c84d2cffdaeff28dc9cb2f966b31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394735"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370860"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Adicionando várias exibições a um único documento
 
-Em um aplicativo de interface de documento único (SDI) criado com a biblioteca Microsoft Foundation Class (MFC), cada tipo de documento está associado um tipo de exibição único. Em alguns casos, é desejável ter a capacidade de alternar o modo de exibição atual de um documento com um novo modo de exibição.
+Em um aplicativo de interface de documento único (SDI) criado com a Biblioteca MFC (Microsoft Foundation Class, classe de fundação) da Microsoft, cada tipo de documento está associado a um único tipo de exibição. Em alguns casos, é desejável ter a capacidade de alternar a visão atual de um documento com uma nova visão.
 
 > [!TIP]
->  Para obter procedimentos adicionais sobre a implementação de vários modos de exibição para um único documento, consulte [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) e o [COLETAR](../overview/visual-cpp-samples.md) amostra do MFC.
+> Para obter procedimentos adicionais sobre a implementação de várias visualizações para um único documento, consulte [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) e a amostra de MFC [collect.](../overview/visual-cpp-samples.md)
 
-Você pode implementar essa funcionalidade adicionando um novo `CView`-derivado da classe e código adicional para alternar entre os modos de exibição dinamicamente a um aplicativo MFC existente.
+Você pode implementar essa funcionalidade `CView`adicionando uma nova classe derivada e um código adicional para mudar as visualizações dinamicamente para um aplicativo MFC existente.
 
-As etapas são da seguinte maneira:
+As etapas são as seguintes:
 
-- [Modifique a classe de aplicativo existente](#vcconmodifyexistingapplicationa1)
+- [Modificar a classe de aplicativos existente](#vcconmodifyexistingapplicationa1)
 
 - [Criar e modificar a nova classe de exibição](#vcconnewviewclassa2)
 
-- [Criar e anexar o novo modo de exibição](#vcconattachnewviewa3)
+- [Criar e anexar a nova visão](#vcconattachnewviewa3)
 
 - [Implementar a função de comutação](#vcconswitchingfunctiona4)
 
-- [Adicionar suporte para alternar o modo de exibição](#vcconswitchingtheviewa5)
+- [Adicionar suporte para alternar a exibição](#vcconswitchingtheviewa5)
 
-O restante deste tópico pressupõe o seguinte:
+O restante deste tópico assume o seguinte:
 
-- O nome da `CWinApp`-é derivada do objeto `CMyWinApp`, e `CMyWinApp` é declarado e definido no *MYWINAPP. H* e *MYWINAPP. CPP*.
+- O nome `CWinApp`do objeto derivado `CMyWinApp`é `CMyWinApp` , e é declarado e definido em *MYWINAPP. H* e *MYWINAPP. CPP*.
 
-- `CNewView` é o nome do novo `CView`-derivados do objeto, e `CNewView` é declarado e definido no *NOVAVISUALIZACAO. H* e *NOVAVISUALIZACAO. CPP*.
+- `CNewView`é o nome `CView`do novo objeto `CNewView` derivado, e é declarado e definido em *NEWVIEW. H* e *NEWVIEW. CPP*.
 
-##  <a name="vcconmodifyexistingapplicationa1"></a> Modifique a classe de aplicativo existente
+## <a name="modify-the-existing-application-class"></a><a name="vcconmodifyexistingapplicationa1"></a>Modificar a classe de aplicativos existente
 
-Para o aplicativo alternar entre modos de exibição, você precisa modificar a classe de aplicativo, adicionando as variáveis de membro para armazenar os modos de exibição e um método para alterá-los.
+Para que o aplicativo alterne entre visualizações, você precisa modificar a classe de aplicativos adicionando variáveis de membro para armazenar as visualizações e um método para trocá-las.
 
-Adicione o seguinte código à declaração de `CMyWinApp` em *MYWINAPP. H*:
+Adicione o seguinte código `CMyWinApp` à declaração de no *MYWINAPP. H*:
 
 [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]
 
-As novas variáveis de membro `m_pOldView` e `m_pNewView`, aponte para o modo de exibição atual e um recém-criado. O novo método (`SwitchView`) alterna os modos de exibição quando solicitado pelo usuário. O corpo do método é discutido posteriormente neste tópico em [implementar a função troca](#vcconswitchingfunctiona4).
+As novas variáveis `m_pOldView` de `m_pNewView`membro, e , apontam para a visão atual e a recém-criada. O novo`SwitchView`método ( ) alterna as visualizações quando solicitado pelo usuário. O corpo do método é discutido mais tarde neste tópico em [Implementar a Função de Comutação](#vcconswitchingfunctiona4).
 
-Última modificação para a classe de aplicativo requer a inclusão de um novo arquivo de cabeçalho que define uma mensagem do Windows (**WM_INITIALUPDATE**) que é usado na função de comutação.
+A última modificação na classe de aplicativos requer a inclusão de um novo arquivo de cabeçalho que define uma mensagem do Windows **(WM_INITIALUPDATE)** que é usada na função de comutação.
 
-Insira a seguinte linha na seção incluir *MYWINAPP. CPP*:
+Insira a seguinte linha na seção incluir *mywinapp. CPP*:
 
 [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]
 
-Salve suas alterações e continuar para a próxima etapa.
+Salve suas mudanças e continue até o próximo passo.
 
-##  <a name="vcconnewviewclassa2"></a> Criar e modificar a nova classe de exibição
+## <a name="create-and-modify-the-new-view-class"></a><a name="vcconnewviewclassa2"></a>Criar e modificar a nova classe de exibição
 
-Criando a nova classe de exibição é mais fácil usando o **nova classe** disponível no modo de exibição de classe de comando. O único requisito para essa classe é que ele deriva `CView`. Adicione essa nova classe para o aplicativo. Para obter informações específicas sobre como adicionar uma nova classe ao projeto, consulte [adicionando uma classe](../ide/adding-a-class-visual-cpp.md).
+A criação da nova classe de exibição é facilitada usando o comando **New Class** disponível no Class View. O único requisito para esta classe `CView`é que ela deriva de . Adicione esta nova classe ao aplicativo. Para obter informações específicas sobre como adicionar uma nova classe ao projeto, consulte [Adicionar uma classe](../ide/adding-a-class-visual-cpp.md).
 
-Depois de adicionar a classe ao projeto, você precisará alterar a acessibilidade de alguns membros de classe de exibição.
+Depois de adicionar a classe ao projeto, você precisa alterar a acessibilidade de alguns membros da classe de exibição.
 
-Modificar *NOVAVISUALIZACAO. H* alterando-se o especificador de acesso de **protegidos** ao **público** para o construtor e destruidor. Isso permite que a classe sejam criados e destruídos dinamicamente e para modificar a aparência do modo de exibição antes que ele fique visível.
+Modificar *NEWVIEW. H* alterando o especificador de acesso de **protegido** para **público** para o construtor e destruidor. Isso permite que a classe seja criada e destruída dinamicamente e modifique a aparência da exibição antes que ela seja visível.
 
-Salve suas alterações e continuar para a próxima etapa.
+Salve suas mudanças e continue até o próximo passo.
 
-##  <a name="vcconattachnewviewa3"></a> Criar e anexar o novo modo de exibição
+## <a name="create-and-attach-the-new-view"></a><a name="vcconattachnewviewa3"></a>Criar e anexar a nova visão
 
-Para criar e anexar o novo modo de exibição, você precisará modificar o `InitInstance` função da sua classe de aplicativo. A modificação adiciona o novo código que cria um novo objeto de exibição e, em seguida, inicializa os dois `m_pOldView` e `m_pNewView` com os dois objetos de exibição existente.
+Para criar e anexar a nova exibição, você precisa modificar a `InitInstance` função da sua classe de aplicativo. A modificação adiciona um novo código que cria um `m_pOldView` `m_pNewView` novo objeto de exibição e, em seguida, inicializa ambos e com os dois objetos de exibição existentes.
 
-Como o novo modo de exibição é criado dentro de `InitInstance` exibições novas e existentes de função, manter o tempo de vida do aplicativo. No entanto, o aplicativo poderia facilmente criar a nova exibição dinamicamente.
+Como a nova visão é `InitInstance` criada dentro da função, tanto as visualizações novas quanto as existentes persistem durante toda a vida útil do aplicativo. No entanto, o aplicativo poderia facilmente criar a nova visão dinamicamente.
 
-Inserir este código após a chamada para `ProcessShellCommand`:
+Insira este código `ProcessShellCommand`após a chamada para:
 
 [!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]
 
-Salve suas alterações e continuar para a próxima etapa.
+Salve suas mudanças e continue até o próximo passo.
 
-##  <a name="vcconswitchingfunctiona4"></a> Implementar a função de comutação
+## <a name="implement-the-switching-function"></a><a name="vcconswitchingfunctiona4"></a>Implementar a função de comutação
 
-Na etapa anterior, você adicionou o código que é criado e inicializado de um novo objeto de exibição. A última parte principal é implementar o método de comutação, `SwitchView`.
+Na etapa anterior, você adicionou código que criou e inicializou um novo objeto de exibição. A última peça importante é implementar `SwitchView`o método de comutação, .
 
-No final do arquivo de implementação para a sua classe de aplicativo (*MYWINAPP. CPP*), adicione a seguinte definição de método:
+No final do arquivo de implementação para sua classe de aplicativo (*MYWINAPP. CPP*), adicionar a seguinte definição de método:
 
 [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]
 
-Salve suas alterações e continuar para a próxima etapa.
+Salve suas mudanças e continue até o próximo passo.
 
-##  <a name="vcconswitchingtheviewa5"></a> Adicionar suporte para alternar o modo de exibição
+## <a name="add-support-for-switching-the-view"></a><a name="vcconswitchingtheviewa5"></a>Adicionar suporte para alternar a exibição
 
-A etapa final envolve a adição de código que chama o `SwitchView` método quando o aplicativo precisa para alternar entre modos de exibição. Isso pode ser feito de várias maneiras: adicionando um novo item de menu para o usuário escolha ou alternar os modos de exibição internamente quando determinadas condições forem atendidas.
+A etapa final envolve adicionar `SwitchView` código que chama o método quando o aplicativo precisa alternar entre as exibições. Isso pode ser feito de várias maneiras: adicionando um novo item de menu para o usuário escolher ou alternando as visualizações internamente quando determinadas condições são atendidas.
 
-Para obter mais informações sobre como adicionar novos itens de menu e as funções de manipulador de comando, consulte [manipuladores para comandos e notificações de controle](../mfc/handlers-for-commands-and-control-notifications.md).
+Para obter mais informações sobre a adição de novos itens de menu e funções de manipulador de comandos, consulte [Manipuladores para Comandos e Notificações de Controle](../mfc/handlers-for-commands-and-control-notifications.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquitetura de documento/exibição](../mfc/document-view-architecture.md)

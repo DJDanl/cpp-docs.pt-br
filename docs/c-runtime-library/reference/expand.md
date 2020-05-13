@@ -1,8 +1,9 @@
 ---
 title: _expand
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _expand
+- _o__expand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: cb986d893bd862e61ae595317a890fb489c19919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941552"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920251"
 ---
 # <a name="_expand"></a>_expand
 
@@ -61,7 +63,7 @@ Ponteiro para o bloco de memória alocado anteriormente.
 *size*<br/>
 Novo tamanho em bytes.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_expand** retorna um ponteiro void para o bloco de memória realocada. **_expand**, diferente de **realloc**, não pode mover um bloco para alterar seu tamanho. Portanto, se houver memória suficiente disponível para expandir o bloco sem movê-lo, o parâmetro *memblock* para **_expand** será o mesmo que o valor de retorno.
 
@@ -73,14 +75,16 @@ O valor retornado indica um espaço de armazenamento que sempre está sutilmente
 
 ## <a name="remarks"></a>Comentários
 
-A função **_expand** altera o tamanho de um bloco de memória alocado anteriormente ao tentar expandir ou contratar o bloco sem mover seu local no heap. O parâmetro *memblock* aponta para o início do bloco. O parâmetro *size* fornece o novo tamanho do bloco, em bytes. O conteúdo do bloco é inalterado até o menor dos tamanhos novos e antigos. *memblock* não deve ser um bloco que foi liberado.
+A função **_expand** altera o tamanho de um bloco de memória alocado anteriormente tentando expandir ou contrair o bloco sem mover seu local no heap. O parâmetro *memblock* aponta para o início do bloco. O parâmetro *size* fornece o novo tamanho do bloco, em bytes. O conteúdo do bloco é inalterado até o menor dos tamanhos novos e antigos. *memblock* não deve ser um bloco que foi liberado.
 
 > [!NOTE]
-> Em plataformas de 64 bits, **_expand** pode não contratar o bloco se o novo tamanho for menor que o tamanho atual; em particular, se o bloco tiver sido menor que 16K em tamanho e, portanto, alocado no heap de baixa fragmentação, **_expand** deixará o bloco inalterado e retornará *memblock*.
+> Em plataformas de 64 bits, **_expand** pode não contratar o bloco se o novo tamanho for menor que o tamanho atual; em particular, se o bloco tiver sido menor que 16K em tamanho e, portanto, alocado no heap de baixa fragmentação, **_expand** deixar o bloco inalterado e retornar *memblock*.
 
-Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução do C, o **_expand** é resolvido para [_expand_dbg](expand-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
+Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução do C, **_expand** é resolvido para [_expand_dbg](expand-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
 
 Essa função valida seus parâmetros. Se *memblock* for um ponteiro NULL, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**. Se *size* for maior que **_HEAP_MAXREQ**, **errno** será definido como **ENOMEM** e a função retornará **NULL**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -88,7 +92,7 @@ Essa função valida seus parâmetros. Se *memblock* for um ponteiro NULL, essa 
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -124,11 +128,11 @@ Allocated 512 bytes at 002C12BC
 Expanded block to 1024 bytes at 002C12BC
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Alocação de Memória](../../c-runtime-library/memory-allocation.md)<br/>
+[Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[informações](free.md)<br/>
 [malloc](malloc.md)<br/>
 [_msize](msize.md)<br/>
 [realloc](realloc.md)<br/>

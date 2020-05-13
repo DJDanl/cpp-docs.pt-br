@@ -16,23 +16,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 75177c195e83a4ab3ad2a6bd4d608d07f8c2234f
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739555"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168079"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
 Essa classe representa um arquivo mapeado por memória.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class CAtlFileMappingBase
 ```
 
@@ -43,26 +43,26 @@ class CAtlFileMappingBase
 |Nome|Descrição|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|O construtor.|
-|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|O destruidor.|
+|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CAtlFileMappingBase::CopyFrom](#copyfrom)|Chame esse método para copiar de um objeto de mapeamento de arquivo.|
-|[CAtlFileMappingBase::GetData](#getdata)|Chame esse método para obter os dados de um objeto de mapeamento de arquivo.|
-|[CAtlFileMappingBase::GetHandle](#gethandle)|Chame esse método para retornar o identificador de arquivo.|
+|[CAtlFileMappingBase:: GetData](#getdata)|Chame esse método para obter os dados de um objeto de mapeamento de arquivo.|
+|[CAtlFileMappingBase:: GetHandle](#gethandle)|Chame esse método para retornar o identificador de arquivo.|
 |[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Chame esse método para obter o tamanho do mapeamento de um objeto de mapeamento de arquivo.|
-|[CAtlFileMappingBase::MapFile](#mapfile)|Chame esse método para criar um objeto de mapeamento de arquivo.|
+|[CAtlFileMappingBase:: mapa](#mapfile)|Chame esse método para criar um objeto de mapeamento de arquivo.|
 |[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Chame esse método para criar um objeto de mapeamento de arquivo que permita acesso completo a todos os processos.|
 |[CAtlFileMappingBase::OpenMapping](#openmapping)|Chame esse método para retornar um identificador para o objeto de mapeamento de arquivo.|
-|[CAtlFileMappingBase::Unmap](#unmap)|Chame esse método para desmapear um objeto de mapeamento de arquivo.|
+|[CAtlFileMappingBase:: mapeamento](#unmap)|Chame esse método para desmapear um objeto de mapeamento de arquivo.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAtlFileMappingBase::operator =](#operator_eq)|Define o objeto de mapeamento de arquivo atual para outro objeto de mapeamento de arquivo.|
+|[CAtlFileMappingBase:: Operator =](#operator_eq)|Define o objeto de mapeamento de arquivo atual para outro objeto de mapeamento de arquivo.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -74,11 +74,11 @@ Para obter mais informações, consulte [mapeamento de arquivo](/windows/win32/M
 
 **Cabeçalho:** atlfile. h
 
-##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase
 
 O construtor.
 
-```
+```cpp
 CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
@@ -96,11 +96,11 @@ Cria um novo objeto de mapeamento de arquivo, opcionalmente usando um objeto exi
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase
 
 O destruidor.
 
-```
+```cpp
 ~CAtlFileMappingBase() throw();
 ```
 
@@ -108,11 +108,11 @@ O destruidor.
 
 Libera todos os recursos alocados pela classe e chama o método [CAtlFileMappingBase:: remapeamento](#unmap) .
 
-##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom
+## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom
 
 Chame esse método para copiar de um objeto de mapeamento de arquivo.
 
-```
+```cpp
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```
 
@@ -121,43 +121,43 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 *orig*<br/>
 O objeto de mapeamento de arquivo original do qual copiar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
-##  <a name="getdata"></a>  CAtlFileMappingBase::GetData
+## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase:: GetData
 
 Chame esse método para obter os dados de um objeto de mapeamento de arquivo.
 
-```
+```cpp
 void* GetData() const throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna um ponteiro para os dados.
 
-##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle
+## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase:: GetHandle
 
 Chame esse método para retornar um identificador para o objeto de mapeamento de arquivo.
 
-```
+```cpp
 HANDLE GetHandle() throw ();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna um identificador para o objeto de mapeamento de arquivo.
 
-##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize
+## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize
 
 Chame esse método para obter o tamanho do mapeamento de um objeto de mapeamento de arquivo.
 
-```
+```cpp
 SIZE_T GetMappingSize() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna o tamanho do mapeamento.
 
@@ -165,11 +165,11 @@ Retorna o tamanho do mapeamento.
 
 Consulte o exemplo de [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
-##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile
+## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase:: mapa
 
 Chame esse método para abrir ou criar um objeto de mapeamento de arquivo para o arquivo especificado.
 
-```
+```cpp
 HRESULT MapFile(
     HANDLE hFile,
     SIZE_T nMappingSize = 0,
@@ -195,7 +195,7 @@ A proteção desejada para a exibição de arquivo quando o arquivo é mapeado. 
 *dwViewDesiredAccess*<br/>
 Especifica o tipo de acesso à exibição de arquivo e, portanto, a proteção das páginas mapeadas pelo arquivo. Consulte *dwDesiredAccess* em [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) na SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
@@ -207,11 +207,11 @@ Após a criação de um objeto de mapeamento de arquivo, o tamanho do arquivo n�
 
 Consulte o exemplo de [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
-##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem
+## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem
 
 Chame esse método para criar um objeto de mapeamento de arquivo que permita acesso completo a todos os processos.
 
-```
+```cpp
 HRESULT MapSharedMem(
     SIZE_T nMappingSize,
     LPCTSTR szName,
@@ -241,7 +241,7 @@ A proteção desejada para a exibição do arquivo, quando o arquivo é mapeado.
 *dwViewDesiredAccess*<br/>
 Especifica o tipo de acesso à exibição de arquivo e, portanto, a proteção das páginas mapeadas pelo arquivo. Consulte *dwDesiredAccess* em [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) na SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
@@ -249,11 +249,11 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 `MapShareMem`permite que um objeto de mapeamento de arquivo existente, criado por [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), seja compartilhado entre processos.
 
-##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
+## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping
 
 Chame esse método para abrir um objeto de mapeamento de arquivo nomeado para o arquivo especificado.
 
-```
+```cpp
 HRESULT OpenMapping(
     LPCTSTR szName,
     SIZE_T nMappingSize,
@@ -275,7 +275,7 @@ O deslocamento do arquivo onde o mapeamento deve começar. O valor de deslocamen
 *dwViewDesiredAccess*<br/>
 Especifica o tipo de acesso à exibição de arquivo e, portanto, a proteção das páginas mapeadas pelo arquivo. Consulte *dwDesiredAccess* em [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) na SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
@@ -283,11 +283,11 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Em compilações de depuração, ocorrerá um erro de asserção se os parâmetros de entrada forem inválidos.
 
-##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =
+## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase:: Operator =
 
 Define o objeto de mapeamento de arquivo atual para outro objeto de mapeamento de arquivo.
 
-```
+```cpp
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```
 
@@ -296,19 +296,19 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 *orig*<br/>
 O objeto de mapeamento de arquivo atual.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna uma referência ao objeto atual.
 
-##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap
+## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase:: mapeamento
 
 Chame esse método para desmapear um objeto de mapeamento de arquivo.
 
-```
+```cpp
 HRESULT Unmap() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
@@ -316,7 +316,7 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Consulte [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) no SDK do Windows para obter mais detalhes.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -1,10 +1,13 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - nearbyint
 - nearbyintf
 - nearbyintl
+- _o_nearbyint
+- _o_nearbyintf
+- _o_nearbyintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: cd0a7d00c5019dd1e483d555df6db8d9770e61c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951400"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914573"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -62,14 +66,14 @@ long double nearbyint( long double x ); //C++ only
 *x*<br/>
 O valor a ser arredondado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se for bem-sucedido, retorna *x*, arredondado para o número inteiro mais próximo, usando o formato de arredondamento atual conforme relatado por [fegetround](fegetround-fesetround2.md). Caso contrário, a função pode retornar um dos seguintes valores:
 
-|Problema|Valor de|
+|Problema|Retorno|
 |-----------|------------|
-|*x* = ±INFINITY|±INFINITY, sem modificações|
-|*x* = ±0|±0, sem modificações|
+|*x* = ± infinito|±INFINITY, sem modificações|
+|*x* = ± 0|±0, sem modificações|
 |*x* = Nan|NaN|
 
 Os erros não são relatados por meio de [_matherr](matherr.md); especificamente, essa função não relata nenhuma exceção **FE_INEXACT** .
@@ -80,7 +84,9 @@ A principal diferença entre essa função e [rimir](rint-rintf-rintl.md) é que
 
 Como os valores máximos de ponto flutuante são inteiros exatos, essa função nunca estourará sozinha. Em vez disso, a saída pode estourar o valor retornado, dependendo da versão da função que você usar.
 
-C++permite sobrecarga, portanto, você pode chamar sobrecargas de **nearbyint** que usam e retornam parâmetros **duplos** **float** ou **Long** . Em um programa C, **nearbyint** sempre usa dois valores double e retorna um valor Double.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **nearbyint** que usam e retornam parâmetros **long** **duplos** **float** ou Long. Em um programa C, **nearbyint** sempre usa dois valores double e retorna um valor Double.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -88,9 +94,9 @@ C++permite sobrecarga, portanto, você pode chamar sobrecargas de **nearbyint** 
 |--------------|--------------|------------------|
 |**nearbyint**, **nearbyintf**, **nearbyintl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
-[Suporte a matemática e ponto flutuante](../floating-point-support.md)<br/>
+[Suporte matemático e de ponto flutuante](../floating-point-support.md)<br/>

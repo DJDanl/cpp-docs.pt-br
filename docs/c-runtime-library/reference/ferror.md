@@ -1,8 +1,9 @@
 ---
 title: ferror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ferror
+- _o_ferror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 4efb1b01ac94f1cb2d28bffb1f09b594a0e71479
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941097"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920148"
 ---
 # <a name="ferror"></a>ferror
 
@@ -47,10 +49,10 @@ int ferror(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se nenhum erro ocorreu no *fluxo*, o **referenciador** retorna 0. Caso contrário, retornará um valor diferente de zero. Se Stream for **NULL**, o **referenciador** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
 
@@ -60,13 +62,15 @@ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/er
 
 A rotina do **referenciador** (implementada como uma função e como uma macro) testa um erro de leitura ou gravação no arquivo associado ao *fluxo*. Se ocorrer um erro, o indicador de erro para o fluxo permanecerá definido até que o fluxo seja fechado ou rebobinado, ou até que **clearerr** seja chamado em relação a ele.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
 |**ferror**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

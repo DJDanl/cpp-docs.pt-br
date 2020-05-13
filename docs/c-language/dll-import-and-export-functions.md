@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
 ms.openlocfilehash: 8d703045773e4d2c320eaef2aa80c4ce74d23472
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234241"
 ---
 # <a name="dll-import-and-export-functions"></a>Funções de importação e exportação de DLL
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 As informações mais completas e atualizadas sobre este tópico podem ser encontradas em [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
@@ -38,8 +38,8 @@ DllExport int n;
 
 Para obter informações específicas sobre a sintaxe de modificadores de classe de armazenamento estendidos, consulte [Atributos de classe de armazenamento estendidos](../c-language/c-extended-storage-class-attributes.md).
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Definições de função C](../c-language/c-function-definitions.md)

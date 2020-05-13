@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 8342060e7286c1089312874199bf341ec36bed62
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556677"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320957"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Suporte para Open Folder para sistemas de build do C++ no Visual Studio
 
@@ -25,7 +25,7 @@ No Visual Studio 2017 e posteriores, o recurso "Abrir Pasta" permite que você a
 
 ## <a name="cmake-and-qt"></a>CMake e QT
 
-O CMake é integrado no IDE do Visual Studio como um componente da C++ carga de trabalho da área de trabalho. O fluxo de trabalho para CMake não é idêntico ao fluxo de trabalho descrito neste artigo. Se você estiver usando o CMake, consulte [projetos do cmake no Visual Studio](cmake-projects-in-visual-studio.md). Você também pode usar o CMake para criar projetos Qt ou pode usar a [extensão do Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) para o visual Studio 2015 ou o visual Studio 2017.
+O CMake é integrado no IDE do Visual Studio como um componente da carga de trabalho de desktop do C++. O fluxo de trabalho para CMake não é idêntico ao fluxo de trabalho descrito neste artigo. Se você estiver usando o CMake, consulte [projetos do cmake no Visual Studio](cmake-projects-in-visual-studio.md). Você também pode usar o CMake para criar projetos Qt ou pode usar a [extensão do Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) para o visual Studio 2015 ou o visual Studio 2017.
 
 ## <a name="other-build-systems"></a>Outros sistemas de compilação
 
@@ -73,10 +73,10 @@ Se, por exemplo, você escolher **x64-Debug**, o Visual Studio criará um arquiv
 }
 ```
 
-Essa configuração herda as variáveis de ambiente do Prompt de Comando do Desenvolvedor do Visual Studio [x64](building-on-the-command-line.md). Uma dessas variáveis é `INCLUDE` e você pode consultá-la aqui usando a macro `${env.INCLUDE}`. A propriedade `includePath` informa ao Visual Studio onde procurar todas as fontes necessárias para o IntelliSense. Nesse caso, ele diz "examinar todos os diretórios especificados pela variável de ambiente INCLUDE e também todos os diretórios na árvore de pastas de trabalho atual". A propriedade `name` é o nome que aparecerá na lista suspensa e pode ser qualquer coisa que você desejar. A propriedade `defines` fornece dicas para o IntelliSense quando ele encontra blocos de compilação condicional. A propriedade `intelliSenseMode` fornece algumas dicas adicionais com base no tipo de compilador. Várias opções estão disponíveis para MSVC, GCC e Clang.
+Essa configuração herda as variáveis de ambiente do Prompt de Comando do Desenvolvedor do Visual Studio [x64](building-on-the-command-line.md). Uma dessas variáveis é `INCLUDE` e você pode consultá-la aqui usando a `${env.INCLUDE}` macro. A `includePath` propriedade informa ao Visual Studio onde procurar todas as fontes necessárias para o IntelliSense. Nesse caso, ele diz "examinar todos os diretórios especificados pela variável de ambiente INCLUDE e também todos os diretórios na árvore de pastas de trabalho atual". A `name` propriedade é o nome que aparecerá na lista suspensa e pode ser qualquer coisa que você desejar. A `defines` propriedade fornece dicas para o IntelliSense quando ele encontra blocos de compilação condicionais. A `intelliSenseMode` propriedade fornece algumas dicas adicionais com base no tipo de compilador. Várias opções estão disponíveis para MSVC, GCC e Clang.
 
 > [!NOTE]
-> Se parecer que o Visual Studio está ignorando as configurações em *CppProperties. JSON*, tente adicionar uma exceção ao arquivo *. gitignore* da seguinte maneira: `!/CppProperties.json`.
+> Se parecer que o Visual Studio está ignorando as configurações em *CppProperties. JSON*, tente adicionar uma exceção ao arquivo *. gitignore* da `!/CppProperties.json`seguinte maneira:.
 
 ## <a name="default-configuration-for-mingw-w64"></a>Configuração padrão para MinGW-w64
 
@@ -109,9 +109,9 @@ Se você adicionar a configuração MinGW-w64, o JSON terá a seguinte aparênci
 }
 ```
 
-Observe o bloco de `environments`. Ele define as propriedades que se comportam como variáveis de ambiente e estão disponíveis não apenas no arquivo *CppProperties. JSON* , mas também na tarefa outros arquivos de configuração *. vs. JSON* e *Launch. vs. JSON*. A configuração de `Mingw64` herda o ambiente de `mingw_w64` e usa sua propriedade `INCLUDE` para especificar o valor de `includePath`. Você pode adicionar outros caminhos a essa propriedade de matriz, conforme necessário. '
+Observe o `environments` bloco. Ele define as propriedades que se comportam como variáveis de ambiente e estão disponíveis não apenas no arquivo *CppProperties. JSON* , mas também na tarefa outros arquivos de configuração *. vs. JSON* e *Launch. vs. JSON*. A `Mingw64` configuração herda o `mingw_w64` ambiente e usa sua `INCLUDE` propriedade para especificar o valor para. `includePath` Você pode adicionar outros caminhos a essa propriedade de matriz, conforme necessário. '
 
-A propriedade `intelliSenseMode` é definida como um valor apropriado para GCC. Para obter mais informações sobre todas essas propriedades, consulte [CppProperties Schema Reference](cppproperties-schema-reference.md).
+A `intelliSenseMode` propriedade é definida com um valor apropriado para gcc. Para obter mais informações sobre todas essas propriedades, consulte [CppProperties Schema Reference](cppproperties-schema-reference.md).
 
 Quando tudo estiver funcionando corretamente, você verá o IntelliSense dos cabeçalhos GCC ao passar o mouse sobre um tipo:
 
@@ -119,11 +119,11 @@ Quando tudo estiver funcionando corretamente, você verá o IntelliSense dos cab
 
 ## <a name="enable-intellisense-diagnostics"></a>Habilitar o diagnóstico do IntelliSense
 
-Se você não estiver vendo o IntelliSense que espera, poderá solucionar problemas acessando **ferramentas** > **Opções** > **Editor de texto** > **CC++ /**  > **avançado** e definindo **habilitar registro em log** como **true**. Para começar, tente definir o **nível de log** para 5 e **registrar filtros em log** como 8.
+Se você não estiver vendo o IntelliSense esperado, você pode solucionar problemas acessando **ferramentas** > **Opções** > **Editor** > de texto**C/C++** > **avançado** e definindo **habilitar registro em log** como **true**. Para começar, tente definir o **nível de log** para 5 e **registrar filtros em log** como 8.
 
-![Diagnostic logging](media/diagnostic-logging.png)
+![Registro de diagnóstico](media/diagnostic-logging.png)
 
-A saída é canalizada para o **janela de saída** e fica visível quando você escolhe **Mostrar saída de: C++ log Visual*. A saída contém, entre outras coisas, a lista de caminhos de inclusão reais que o IntelliSense está tentando usar. Se os caminhos não corresponderem àqueles em *CppProperties. JSON*, tente fechar a pasta e excluir a subpasta *. vs* que contém dados de navegação armazenados em cache.
+A saída é canalizada para o **janela de saída** e fica visível quando você escolhe **Mostrar saída de: Visual C++ log*. A saída contém, entre outras coisas, a lista de caminhos de inclusão reais que o IntelliSense está tentando usar. Se os caminhos não corresponderem àqueles em *CppProperties. JSON*, tente fechar a pasta e excluir a subpasta *. vs* que contém dados de navegação armazenados em cache.
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>Definir tarefas de build com tasks.vs.json
 
@@ -156,7 +156,7 @@ Isso cria (ou abre) o arquivo *Tasks. vs. JSON* na pasta. vs que o Visual Studio
 
 O arquivo JSON é colocado na subpasta *. vs* . Para ver essa pasta, clique no botão **Mostrar todos os arquivos** na parte superior da **Gerenciador de soluções**. Você pode executar essa tarefa clicando com o botão direito do mouse no nó raiz em **Gerenciador de soluções** e escolhendo **criar Olá**. Quando a tarefa for concluída, você deverá ver um novo arquivo, *Olá. exe* em **Gerenciador de soluções**.
 
-Você pode definir muitos tipos de tarefas. O exemplo a seguir mostra um *arquivo Tasks. vs. JSON* que define uma única tarefa. `taskLabel` define o nome exibido no menu de contexto. `appliesTo` define em quais arquivos o comando pode ser executado. A propriedade `command` refere-se à variável de ambiente COMSPEC, que identifica o caminho para o console (*cmd. exe* no Windows). Referencie também variáveis de ambiente declaradas em CppProperties.json ou CMakeSettings.json. A propriedade `args` especifica a linha de comando a ser invocada. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo .cpp atualmente selecionado.
+Você pode definir muitos tipos de tarefas. O exemplo a seguir mostra um *arquivo Tasks. vs. JSON* que define uma única tarefa. `taskLabel` define o nome exibido no menu de contexto. `appliesTo` define em quais arquivos o comando pode ser executado. A `command` Propriedade refere-se à variável de ambiente COMSPEC, que identifica o caminho para o console (*cmd. exe* no Windows). Referencie também variáveis de ambiente declaradas em CppProperties.json ou CMakeSettings.json. A propriedade `args` especifica a linha de comando a ser invocada. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo .cpp atualmente selecionado.
 
 ```json
 {
@@ -179,7 +179,7 @@ Para obter mais informações, confira [Referência de esquema de Tasks.vs.json]
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurar parâmetros de depuração com launch.vs.json
 
-Para personalizar os argumentos de linha de comando do programa e as instruções de depuração, clique com o botão direito do mouse no executável em **Gerenciador de soluções** e selecione **depurar e iniciar configurações**. Isso abrirá um arquivo de *inicialização existente. vs. JSON* ou, se não houver nenhum, ele criará um novo arquivo com um conjunto de configurações de inicialização mínima. Primeiro, você terá a opção de qual tipo de sessão de depuração deseja configurar. Para depurar um projeto MinGW-w64, escolhemos **C/C++ Launch for MinGW/Cygwin (gdb)** . Isso cria uma configuração de inicialização para usar o *gdb. exe* com algumas palpites instruídos sobre valores padrão. Um desses valores padrão é `MINGW_PREFIX`. Você pode substituir o caminho literal (como mostrado abaixo) ou pode definir uma propriedade `MINGW_PREFIX` em *CppProperties. JSON*:
+Para personalizar os argumentos de linha de comando do programa e as instruções de depuração, clique com o botão direito do mouse no executável em **Gerenciador de soluções** e selecione **depurar e iniciar configurações**. Isso abrirá um arquivo de *inicialização existente. vs. JSON* ou, se não houver nenhum, ele criará um novo arquivo com um conjunto de configurações de inicialização mínima. Primeiro, você terá a opção de qual tipo de sessão de depuração deseja configurar. Para depurar um projeto MinGw-W64, escolhemos a **inicialização de C/C++ para MinGW/Cygwin (gdb)**. Isso cria uma configuração de inicialização para usar o *gdb. exe* com algumas palpites instruídos sobre valores padrão. Um desses valores padrão é `MINGW_PREFIX`. Você pode substituir o caminho literal (conforme mostrado abaixo) ou pode definir uma `MINGW_PREFIX` Propriedade em *CppProperties. JSON*:
 
 ```json
 {
@@ -211,7 +211,7 @@ Para obter mais informações, consulte [Launch. vs. JSON Schema Reference](laun
 
 ## <a name="launching-other-executables"></a>Iniciando outros executáveis
 
-Você pode definir configurações de inicialização para qualquer executável em seu computador. O exemplo a seguir inicia *7za* e especifica argumentos adicionais, adicionando-os à matriz `args` JSON:
+Você pode definir configurações de inicialização para qualquer executável em seu computador. O exemplo a seguir inicia *7za* e especifica argumentos adicionais, adicionando-os à `args` matriz JSON:
 
 ```json
 {

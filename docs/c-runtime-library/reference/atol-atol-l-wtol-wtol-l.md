@@ -1,11 +1,15 @@
 ---
 title: atol, _atol_l, _wtol, _wtol_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - atol
 - _wtol_l
 - _wtol
 - _atol_l
+- _o__atol_l
+- _o__wtol
+- _o__wtol_l
+- _o_atol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 04a2951a48e6dd2c3820551e0fc603ad4ed81086
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943587"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913528"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -78,13 +83,13 @@ long _wtol_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres a ser convertida.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada função retorna o valor **longo** produzido interpretando os caracteres de entrada como um número. O valor de retorno será 0L para **Atol** se a entrada não puder ser convertida em um valor desse tipo.
 
@@ -102,9 +107,11 @@ O argumento *Str* para **Atol** tem o seguinte formato:
 
 Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos.
 
-**_wtol** é idêntico ao **Atol** , exceto pelo fato de que ele usa uma cadeia de caracteres larga.
+**_wtol** é idêntica a **Atol** , exceto pelo fato de que ela usa uma cadeia de caracteres larga.
 
 As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -173,7 +180,7 @@ Overflow condition occurred.
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

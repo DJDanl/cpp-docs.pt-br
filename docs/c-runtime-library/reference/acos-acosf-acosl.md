@@ -1,10 +1,11 @@
 ---
 title: acos, acosf, acosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acosf
 - acos
 - acosl
+- _o_acos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171288"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916882"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -58,7 +60,7 @@ float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
 Valor entre-1 e 1, para o qual calcular o arco cosseno (o cosseno inverso).
@@ -72,12 +74,14 @@ Por padrão, se *x* for menor que-1 ou maior que 1, **acos** retornará um indef
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN,IND|nenhuma|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **acos** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **acos** sempre usa e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **acos** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **acos** sempre usa e retorna um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -135,7 +139,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

@@ -20,7 +20,7 @@ ms.locfileid: "80169806"
 ---
 # <a name="ieee-floating-point-representation"></a>Representação de ponto flutuante IEEE
 
-A C++ Microsoft (MSVC) é consistente com os padrões numéricos do IEEE. O padrão IEEE-754 descreve os formatos de ponto flutuante, uma maneira de representar números reais no hardware. Há pelo menos cinco formatos internos para números de ponto flutuante que podem ser representes no hardware de destino do compilador MSVC, mas o compilador usa apenas dois deles. Os formatos de *precisão única* (4 bytes) e *de precisão dupla* (8 bytes) são usados em MSVC. A precisão única é declarada usando a palavra-chave **float**. A precisão dupla é declarada usando a palavra-chave **Double**. O padrão IEEE também especifica formatos de *meia precisão* (2 bytes) e *de precisão quádrupla* (16 bytes), bem como um formato de *precisão estendida dupla* (10 bytes), que alguns C e C++ compiladores implementam como o tipo de dados **Double longo** . No compilador MSVC, o tipo de dados **Double longo** é tratado como um tipo distinto, mas o tipo de armazenamento é mapeado para **Double**. No entanto, há suporte à linguagem intrínseca e ao assembly para cálculos usando os outros formatos, incluindo o formato de precisão estendida dupla (10 bytes), em que o hardware dá suporte.
+O Microsoft C++ (MSVC) é consistente com os padrões numéricos do IEEE. O padrão IEEE-754 descreve os formatos de ponto flutuante, uma maneira de representar números reais no hardware. Há pelo menos cinco formatos internos para números de ponto flutuante que podem ser representes no hardware de destino do compilador MSVC, mas o compilador usa apenas dois deles. Os formatos de *precisão única* (4 bytes) e *de precisão dupla* (8 bytes) são usados em MSVC. A precisão única é declarada usando a palavra-chave **float**. A precisão dupla é declarada usando a palavra-chave **Double**. O padrão IEEE também especifica formatos de *meia precisão* (2 bytes) e *de precisão quádrupla* (16 bytes), bem como um formato de *precisão estendida dupla* (10 bytes), que alguns compiladores C e C++ implementam como o tipo de dados **Double longo** . No compilador MSVC, o tipo de dados **Double longo** é tratado como um tipo distinto, mas o tipo de armazenamento é mapeado para **Double**. No entanto, há suporte à linguagem intrínseca e ao assembly para cálculos usando os outros formatos, incluindo o formato de precisão estendida dupla (10 bytes), em que o hardware dá suporte.
 
 Os valores são armazenados da seguinte maneira:
 
@@ -36,7 +36,7 @@ Os expoentes são tendenciosas por metade de seu valor possível. Isso significa
 
 Os expoentes são tendenciosas da seguinte maneira:
 
-|Expoente|Tendenciosa por|
+|Exponent|Tendenciosa por|
 |--------------|---------------|
 |8 bits (precisão única)|127|
 |11 bits (precisão dupla)|1023|
@@ -54,7 +54,7 @@ O formato, em seguida, para os vários tamanhos é o seguinte:
 |precisão dupla|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 |precisão estendida dupla|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S` representa o bit de sinal, os `X`são os bits de expoente com tendência e os `M`são os bits significante. Observe que o bit mais à esquerda é considerado nos formatos de precisão simples e de precisão dupla, mas está presente como "1" em byte 3 do formato de precisão estendida dupla.
+`S`representa o bit de sinal, `X`os bits de expoente tendenciosa, e `M`são os bits significante. Observe que o bit mais à esquerda é considerado nos formatos de precisão simples e de precisão dupla, mas está presente como "1" em byte 3 do formato de precisão estendida dupla.
 
 Para deslocar o ponto binário corretamente, você primeiro despolar o expoente e, em seguida, move o ponto binário para a direita ou para a esquerda do número apropriado de bits.
 

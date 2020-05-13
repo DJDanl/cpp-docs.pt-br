@@ -11,35 +11,35 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-ms.openlocfilehash: e884dcfaa22bf720e9579bf2d5d866d595501887
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063c8b39ee0d29403b382b57a236f2a3e8759e3f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410519"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375748"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode e MBCS
 
-A biblioteca Microsoft Foundation Classes (MFC), a biblioteca de tempo de execução C para o Visual C++ e o ambiente de desenvolvimento do Visual C++ são habilitados para ajudar a sua programação internacional. Eles fornecem:
+A biblioteca Microsoft Foundation Classes (MFC), a biblioteca c run-time para Visual C++e o ambiente de desenvolvimento Visual C++ estão habilitados para ajudar sua programação internacional. Elas fornecem:
 
 - Suporte para o padrão Unicode no Windows. Unicode é o padrão atual e deve ser usado sempre que possível.
 
-   O Unicode é um caractere de 16 bits de codificação, fornecendo suficiente codificações para todos os idiomas. Todos os caracteres ASCII são incluídos em Unicode como caracteres largo.
+   Unicode é uma codificação de caracteres de 16 bits, fornecendo codificações suficientes para todas as línguas. Todos os caracteres ASCII estão incluídos no Unicode como caracteres ampliados.
 
-- Suporte para um formulário de conjunto de caracteres multibyte (MBCS) chamado conjunto de caracteres de byte duplo (DBCS) em todas as plataformas.
+- Suporte para uma forma de conjunto de caracteres multibytes (MBCS) chamado conjunto de caracteres de byte duplo (DBCS) em todas as plataformas.
 
-   Caracteres DBCS são compostos de 1 ou 2 bytes. Alguns intervalos de bytes são definidos à parte para uso como bytes iniciais. Um byte inicial Especifica que ele e o byte final seguir compõem um único caractere de 2 bytes de largura. Você deve controlar de quais bytes são bytes iniciais. Em um conjunto de caracteres multibyte, os bytes iniciais ficam dentro de um determinado intervalo, assim como os bytes finais. Quando esses intervalos se sobrepõem, pode ser necessário avaliar o contexto para determinar se um byte está funcionando como um byte inicial ou um byte final.
+   Os caracteres DBCS são compostos por 1 ou 2 bytes. Algumas faixas de bytes são reservadas para uso como bytes de chumbo. Um byte de chumbo especifica que ele e o byte de trilha a seguir compreendem um único caractere de 2 bytes de largura. Você deve manter o controle de quais bytes são bytes de chumbo. Em um conjunto de caracteres multibyte, os bytes iniciais ficam dentro de um determinado intervalo, assim como os bytes finais. Quando essas faixas se sobrepõem, pode ser necessário avaliar o contexto para determinar se um determinado byte está funcionando como um byte de chumbo ou um byte de trilha.
 
-- Suporte para as ferramentas que simplificam a programação do MBCS dos aplicativos escritos para mercados internacionais.
+- Suporte a ferramentas que simplificam a programação MBCS de aplicações escritas para mercados internacionais.
 
-   Quando executado em uma versão habilitada para MBCS do sistema operacional Windows, o sistema de desenvolvimento do Visual C++ — incluindo o editor de códigos do código-fonte integrado, depurador e ferramentas de linha de comando — é habilitada completamente MBCS. Para obter mais informações, consulte [suporte de MBCS no Visual C++](../text/mbcs-support-in-visual-cpp.md).
+   Quando executado em uma versão habilitada para MBCS do sistema operacional Windows, o sistema de desenvolvimento Visual C++ — incluindo o editor de código-fonte integrado, o depurador e as ferramentas de linha de comando — é completamente habilitado para MBCS. Para obter mais informações, consulte [o suporte ao MBCS no Visual C++](../text/mbcs-support-in-visual-cpp.md).
 
 > [!NOTE]
->  Nesta documentação, MBCS é usado para descrever todo o suporte de não-Unicode para caracteres multibyte. No Visual C++, o MBCS sempre significa DBCS. Conjuntos de caracteres maior do que os 2 bytes não são suportados.
+> Nesta documentação, o MBCS é usado para descrever todo o suporte não-Unicode para caracteres multibytes. No Visual C++, MBCS sempre significa DBCS. Os conjuntos de caracteres maiores que 2 bytes não são suportados.
 
-Por definição, o conjunto de caracteres ASCII é um subconjunto de todos os conjuntos de caracteres multibyte. Em muitos conjuntos de caracteres multibyte, cada caractere no intervalo 0x00 – 0x7F é idêntico ao caractere que tem o mesmo valor no conjunto de caracteres ASCII. Por exemplo, nas cadeias de caracteres ASCII e MBCS, o caractere de 1 byte nulo ('\0') tem valor 0x00 e indica o caractere nulo de terminação.
+Por definição, o conjunto de caracteres ASCII é um subconjunto de todos os conjuntos de caracteres multibytes. Em muitos conjuntos de caracteres multibyte, cada caractere no intervalo 0x00 – 0x7F é idêntico ao caractere que tem o mesmo valor no conjunto de caracteres ASCII. Por exemplo, nas seqüências de caracteres ASCII e MBCS, o caractere NULL de 1 byte ('\0') tem valor 0x00 e indica o caractere nulo terminante.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Texto e cadeias de caracteres](../text/text-and-strings-in-visual-cpp.md)<br/>
+[Texto e Cordas](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Habilitação internacional](../text/international-enabling.md)

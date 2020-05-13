@@ -1,11 +1,13 @@
 ---
 title: isgraph, iswgraph, _isgraph_l, _iswgraph_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isgraph
 - iswgraph
 - _iswgraph_l
 - _isgraph_l
+- _o_isgraph
+- _o_iswgraph
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +42,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29fd8a4d9fcaded1f7750eaf9ba9dfbf28760cf7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442971"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909637"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -71,7 +74,7 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
 ## <a name="return-value"></a>Valor retornado
@@ -89,7 +92,11 @@ O comportamento de **isgraph** e **_isgraph_l** será indefinido se *c* não for
 |**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -98,10 +105,10 @@ O comportamento de **isgraph** e **_isgraph_l** será indefinido se *c* não for
 |**_isgraph_l**|\<ctype.h>|
 |**_iswgraph_l**|\<ctype.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

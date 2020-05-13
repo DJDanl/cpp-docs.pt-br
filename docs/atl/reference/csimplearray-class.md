@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3386687757412d09e4df29e84f691f1615c472a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278001"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746478"
 ---
 # <a name="csimplearray-class"></a>Classe CSimpleArray
 
-Essa classe fornece métodos para gerenciar uma matriz simples.
+Esta classe fornece métodos para gerenciar uma matriz simples.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,7 +37,7 @@ class CSimpleArray
 #### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-O tipo de dados a serem armazenados na matriz.
+O tipo de dados a armazenar na matriz.
 
 *TEqual*<br/>
 Um objeto de característica, definindo o teste de igualdade para elementos do tipo *T*.
@@ -48,36 +48,36 @@ Um objeto de característica, definindo o teste de igualdade para elementos do t
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSimpleArray::CSimpleArray](#csimplearray)|O construtor para a matriz simple.|
-|[CSimpleArray::~CSimpleArray](#dtor)|O destruidor para a matriz simple.|
+|[CSimpleArray::CSimpleArray](#csimplearray)|O construtor para a matriz simples.|
+|[CSimpleArray::~CSimpleArray](#dtor)|O destruidor para a matriz simples.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSimpleArray::Add](#add)|Adiciona um novo elemento na matriz.|
-|[CSimpleArray::Find](#find)|Localiza um elemento na matriz.|
+|[CSimpleArray::Adicionar](#add)|Adiciona um novo elemento à matriz.|
+|[CSimpleArray::Encontrar](#find)|Encontra um elemento na matriz.|
 |[CSimpleArray::GetData](#getdata)|Retorna um ponteiro para os dados armazenados na matriz.|
 |[CSimpleArray::GetSize](#getsize)|Retorna o número de elementos armazenados na matriz.|
 |[CSimpleArray::Remove](#remove)|Remove um determinado elemento da matriz.|
 |[CSimpleArray::RemoveAll](#removeall)|Remove todos os elementos da matriz.|
-|[CSimpleArray::RemoveAt](#removeat)|Remove o elemento especificado da matriz.|
-|[CSimpleArray::SetAtIndex](#setatindex)|Define o elemento especificado na matriz.|
+|[Csimplearray::removeat](#removeat)|Remove o elemento especificado da matriz.|
+|[CSimpleArray::setatindex](#setatindex)|Define o elemento especificado na matriz.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSimpleArray::operator\[\]](#operator_at)|Recupera um elemento da matriz.|
-|[CSimpleArray::operator =](#operator_eq)|Operador de atribuição.|
+|[CSimpleArray::operador\[\]](#operator_at)|Recupera um elemento da matriz.|
+|[CSimpleArray::operador =](#operator_eq)|Operador de atribuição.|
 
 ## <a name="remarks"></a>Comentários
 
-`CSimpleArray` fornece métodos para criar e gerenciar uma matriz simples, de qualquer tipo `T`.
+`CSimpleArray`fornece métodos para criar e gerenciar uma `T`matriz simples, de qualquer tipo.
 
-O parâmetro `TEqual` fornece uma maneira de definir uma função de igualdade para dois elementos do tipo `T`. Criando uma classe semelhante à [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), é possível alterar o comportamento do teste de igualdade para qualquer determinada matriz. Por exemplo, ao lidar com uma matriz de ponteiros, pode ser útil definir a igualdade como dependendo dos valores de que ponteiros de referência. A implementação padrão utiliza **operator=()**.
+O parâmetro `TEqual` fornece um meio de definir uma função `T`de igualdade para dois elementos do tipo . Ao criar uma classe semelhante ao [CSimpleArrayEqualHelper,](../../atl/reference/csimplearrayequalhelper-class.md)é possível alterar o comportamento do teste de igualdade para qualquer matriz. Por exemplo, ao lidar com uma matriz de ponteiros, pode ser útil definir a igualdade dependendo dos valores que os ponteiros referenciam. A implementação padrão utiliza **o operador=()**.
 
-Ambos `CSimpleArray` e [CSimpleMap](../../atl/reference/csimplemap-class.md) são projetados para um pequeno número de elementos. [CAtlArray](../../atl/reference/catlarray-class.md) e [CAtlMap](../../atl/reference/catlmap-class.md) deve ser usado quando a matriz contém um grande número de elementos.
+Ambos `CSimpleArray` e [CSimpleMap](../../atl/reference/csimplemap-class.md) são projetados para um pequeno número de elementos. [CAtlArray](../../atl/reference/catlarray-class.md) e [CAtlMap](../../atl/reference/catlmap-class.md) devem ser usados quando a matriz contiver um grande número de elementos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -87,9 +87,9 @@ Ambos `CSimpleArray` e [CSimpleMap](../../atl/reference/csimplemap-class.md) sã
 
 [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]
 
-##  <a name="add"></a>  CSimpleArray::Add
+## <a name="csimplearrayadd"></a><a name="add"></a>CSimpleArray::Adicionar
 
-Adiciona um novo elemento na matriz.
+Adiciona um novo elemento à matriz.
 
 ```
 BOOL Add(const T& t);
@@ -100,15 +100,15 @@ BOOL Add(const T& t);
 *t*<br/>
 O elemento a ser adicionado à matriz.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retornará TRUE se o elemento é adicionado com êxito para a matriz, e FALSE caso contrário.
+Retorna TRUE se o elemento for adicionado com sucesso à matriz, FALSE de outra forma.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]
 
-##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray
+## <a name="csimplearraycsimplearray"></a><a name="csimplearray"></a>CSimpleArray::CSimpleArray
 
 O construtor para o objeto de matriz.
 
@@ -124,9 +124,9 @@ Um objeto `CSimpleArray` existente.
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa os membros de dados, criando um novo vazio `CSimpleArray` objeto ou uma cópia de um existente `CSimpleArray` objeto.
+Inicializa os membros de dados, `CSimpleArray` criando um novo objeto `CSimpleArray` vazio ou uma cópia de um objeto existente.
 
-##  <a name="dtor"></a>  CSimpleArray::~CSimpleArray
+## <a name="csimplearraycsimplearray"></a><a name="dtor"></a>CSimpleArray::~CSimpleArray
 
 O destruidor.
 
@@ -138,9 +138,9 @@ O destruidor.
 
 Libera todos os recursos alocados.
 
-##  <a name="find"></a>  CSimpleArray::Find
+## <a name="csimplearrayfind"></a><a name="find"></a>CSimpleArray::Encontrar
 
-Localiza um elemento na matriz.
+Encontra um elemento na matriz.
 
 ```
 int Find(const T& t) const;
@@ -149,17 +149,17 @@ int Find(const T& t) const;
 ### <a name="parameters"></a>Parâmetros
 
 *t*<br/>
-O elemento pelo qual pesquisar.
+O elemento para a busca.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o índice do elemento encontrado ou -1 se o elemento não for encontrado.
+Retorna o índice do elemento encontrado, ou -1 se o elemento não for encontrado.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]
 
-##  <a name="getdata"></a>  CSimpleArray::GetData
+## <a name="csimplearraygetdata"></a><a name="getdata"></a>CSimpleArray::GetData
 
 Retorna um ponteiro para os dados armazenados na matriz.
 
@@ -167,11 +167,11 @@ Retorna um ponteiro para os dados armazenados na matriz.
 T* GetData() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna um ponteiro para os dados na matriz.
 
-##  <a name="getsize"></a>  CSimpleArray::GetSize
+## <a name="csimplearraygetsize"></a><a name="getsize"></a>CSimpleArray::GetSize
 
 Retorna o número de elementos armazenados na matriz.
 
@@ -179,11 +179,11 @@ Retorna o número de elementos armazenados na matriz.
 int GetSize() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna o número de elementos armazenados na matriz.
 
-##  <a name="operator_at"></a>  CSimpleArray::operator \[\]
+## <a name="csimplearrayoperator-"></a><a name="operator_at"></a>CSimpleArray::operador\[\]
 
 Recupera um elemento da matriz.
 
@@ -194,9 +194,9 @@ T& operator[](int nindex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-O índice do elemento.
+O índice de elementos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna o elemento da matriz referenciada por *nIndex*.
 
@@ -204,7 +204,7 @@ Retorna o elemento da matriz referenciada por *nIndex*.
 
 [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]
 
-##  <a name="operator_eq"></a>  CSimpleArray::operator =
+## <a name="csimplearrayoperator-"></a><a name="operator_eq"></a>CSimpleArray::operador =
 
 Operador de atribuição.
 
@@ -219,19 +219,19 @@ CSimpleArray<T, TEqual>
 *src*<br/>
 A matriz a ser copiada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para a atualização `CSimpleArray` objeto.
+Retorna um ponteiro `CSimpleArray` para o objeto atualizado.
 
 ### <a name="remarks"></a>Comentários
 
-Copia todos os elementos do `CSimpleArray` objeto referenciado pelo *src* no objeto de matriz atual, substituindo todos os dados existentes.
+Copia todos os `CSimpleArray` elementos do objeto referenciado pelo *src* no objeto de matriz atual, substituindo todos os dados existentes.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]
 
-##  <a name="remove"></a>  CSimpleArray::Remove
+## <a name="csimplearrayremove"></a><a name="remove"></a>CSimpleArray::Remove
 
 Remove um determinado elemento da matriz.
 
@@ -244,27 +244,27 @@ BOOL Remove(const T& t);
 *t*<br/>
 O elemento a ser removido da matriz.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna TRUE se o elemento for encontrado e removido, FALSE caso contrário.
+Retorna TRUE se o elemento for encontrado e removido, FALSO de outra forma.
 
 ### <a name="remarks"></a>Comentários
 
-Quando um elemento for removido, os elementos restantes na matriz são renumerados para preencher o espaço vazio.
+Quando um elemento é removido, os elementos restantes na matriz são renumerados para preencher o espaço vazio.
 
-##  <a name="removeall"></a>  CSimpleArray::RemoveAll
+## <a name="csimplearrayremoveall"></a><a name="removeall"></a>CSimpleArray::RemoveAll
 
 Remove todos os elementos da matriz.
 
-```
+```cpp
 void RemoveAll();
 ```
 
 ### <a name="remarks"></a>Comentários
 
-Remove todos os elementos armazenados atualmente na matriz.
+Remove todos os elementos atualmente armazenados na matriz.
 
-##  <a name="removeat"></a>  CSimpleArray::RemoveAt
+## <a name="csimplearrayremoveat"></a><a name="removeat"></a>Csimplearray::removeat
 
 Remove o elemento especificado da matriz.
 
@@ -275,17 +275,17 @@ BOOL RemoveAtint nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Índice que aponta para o elemento a ser removido.
+Índice apontando para o elemento para remover.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retornará TRUE se o elemento foi removido, FALSO se o índice era inválido.
+Retorna TRUE se o elemento foi removido, FALSO se o índice for inválido.
 
 ### <a name="remarks"></a>Comentários
 
-Quando um elemento for removido, os elementos restantes na matriz são renumerados para preencher o espaço vazio.
+Quando um elemento é removido, os elementos restantes na matriz são renumerados para preencher o espaço vazio.
 
-##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex
+## <a name="csimplearraysetatindex"></a><a name="setatindex"></a>CSimpleArray::setatindex
 
 Defina o elemento especificado na matriz.
 
@@ -298,15 +298,15 @@ BOOL SetAtIndex(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-O índice do elemento para alterar.
+O índice do elemento a mudar.
 
 *t*<br/>
 O valor a ser atribuído ao elemento especificado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retornará TRUE se bem-sucedido e FALSO se o índice não era válido.
+Retorna TRUE se for bem sucedido, FALSO se o índice não for válido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

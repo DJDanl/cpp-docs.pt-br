@@ -1,6 +1,6 @@
 ---
 title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcscoll
 - _mbscoll
@@ -8,6 +8,12 @@ api_name:
 - strcoll
 - _strcoll_l
 - _wcscoll_l
+- _o__mbscoll
+- _o__mbscoll_l
+- _o__strcoll_l
+- _o__wcscoll_l
+- _o_strcoll
+- _o_wcscoll
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +53,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: 7519b8f41d77ed668bb7da1e8ced18ee13c0a5bf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f75bf4bb28a2dc34a233374314e6bc170793d77e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957886"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920367"
 ---
 # <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -94,13 +101,13 @@ int _mbscoll_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1*, *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres com terminação nula.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna um valor que indica a relação de *seqüência1* para *seqüência2*, como a seguir.
 
@@ -120,6 +127,8 @@ Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüênci
 
 A comparação de duas cadeias de caracteres é uma operação dependente de localidade, já que cada localidade tem regras diferentes para classificar caracteres. As versões dessas funções sem o sufixo **_L** usam a localidade do thread atual para esse comportamento dependente de localidade; as versões com o sufixo **_L** são idênticas à função correspondente sem o sufixo, exceto pelo fato de que elas usam a localidade passada como um parâmetro em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -136,12 +145,12 @@ A comparação de duas cadeias de caracteres é uma operação dependente de loc
 |**_strcoll_l**|\<string.h>|
 |**_wcscoll_l**|\<wchar.h>, \<string.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Localidade](../../c-runtime-library/locale.md)<br/>
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Funções strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>

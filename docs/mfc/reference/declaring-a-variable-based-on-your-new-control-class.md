@@ -8,42 +8,42 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 994f81524001a80d1cf0dd3783b9de742d61e84d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741614"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365838"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Declarando uma variável com base na nova classe de controle
 
-Depois de criar uma classe de controle do MFC, você pode declarar uma variável com base nele. Para fornecer um contexto para a nova variável, você deve abrir o editor de caixa de diálogo e edite a caixa de diálogo na qual você deseja usar o controle reutilizável. Além disso, a caixa de diálogo já deve ter uma classe associada a ele. Para obter informações sobre como usar o editor de caixa de diálogo, consulte [Editor de caixa de diálogo](../../windows/dialog-editor.md).
+Depois de criar uma classe de controle MFC, você pode declarar uma variável com base nela. Para fornecer um contexto para a nova variável, você deve abrir o editor de diálogo e editar a caixa de diálogo na qual deseja usar seu controle reutilizável. Além disso, a caixa de diálogo já deve ter uma classe associada a ela. Para obter informações sobre o uso do editor de diálogo, consulte [Editor de diálogo](../../windows/dialog-editor.md).
 
 ### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Para declarar uma variável com base em sua classe reutilizável
 
-1. Ao editar a caixa de diálogo, arraste um controle do mesmo tipo como a classe base do seu novo controle na barra de ferramentas de controles para a caixa de diálogo.
+1. Ao editar a caixa de diálogo, arraste um controle do mesmo tipo que a classe base do seu novo controle da barra de ferramentas Controles para a caixa de diálogo.
 
-1. Coloque o ponteiro do mouse sobre o controle removido.
+1. Coloque o ponteiro do mouse sobre o controle descartado.
 
-1. Enquanto pressiona a tecla CTRL, clique duas vezes no controle.
+1. Ao pressionar a tecla CTRL, clique duas vezes no controle.
 
-   O [Adicionar variável de membro](../../ide/add-member-variable-wizard.md) caixa de diálogo é exibida.
+   A caixa de diálogo [Adicionar variável de membro](../../ide/add-member-variable-wizard.md) é exibida.
 
-1. No **acesso** , marque o acesso correto para o seu controle.
+1. Na caixa **Acesso,** selecione o acesso correto para o seu controle.
 
-1. Clique o **variável de controle** caixa de seleção.
+1. Clique na caixa de seleção **variável Controle.**
 
-1. No **nome da variável** , digite um nome.
+1. Na **caixa nome da variável,** digite um nome.
 
-1. Sob **categoria**, clique em **controle**.
+1. Em **Categoria,** clique em **Controlar**.
 
-1. No **ID do controle** lista, selecione o controle que você adicionou. O **tipo de variável** lista deve exibir o tipo correto de variável e o **tipo de controle** caixa deve exibir o tipo de controle correto.
+1. Na lista **de id de controle,** escolha o controle que você adicionou. A **lista de tipos variáveis** deve exibir o tipo de variável correto, e a caixa tipo **controle** deve exibir o tipo de controle correto.
 
-9. No **comentário** caixa, adicione qualquer comentário que você deseja que apareça em seu código.
+1. Na caixa **Comentário,** adicione qualquer comentário que você deseja aparecer em seu código.
 
-10. Clique em **OK**.
+1. Clique em **OK**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Mapeando mensagens para funções](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

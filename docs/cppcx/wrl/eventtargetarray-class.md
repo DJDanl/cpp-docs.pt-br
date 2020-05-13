@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::EventTargetArray::Length method
 - Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
-ms.openlocfilehash: 1f3f8e299dba1f4b6ae5a5767f11989dc2fe8370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ea8800aa22a6b5cae0b3342cf337786fb53fc76
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398479"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371489"
 ---
 # <a name="eventtargetarray-class"></a>Classe EventTargetArray
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,7 +44,7 @@ class EventTargetArray :
 
 Representa uma matriz de manipuladores de eventos.
 
-Os manipuladores de eventos que são associados com um [EventSource](eventsource-class.md) objeto são armazenadas em uma planilha protegida `EventTargetArray` membro de dados.
+Os manipuladores de eventos associados a um objeto `EventTargetArray` [EventSource](eventsource-class.md) são armazenados em um membro de dados protegido.
 
 ## <a name="members"></a>Membros
 
@@ -52,17 +52,17 @@ Os manipuladores de eventos que são associados com um [EventSource](eventsource
 
 Nome                                                           | Descrição
 -------------------------------------------------------------- | -----------------------------------------------------------
-[EventTargetArray::EventTargetArray](#eventtargetarray)        | Inicializa uma nova instância da classe `EventTargetArray`.
-[EventTargetArray::~EventTargetArray](#tilde-eventtargetarray) | Realiza o desligamento atual `EventTargetArray` classe.
+[EventTargetArray::EventTargetArray](#eventtargetarray)        | Inicia uma nova instância da classe `EventTargetArray`.
+[EventTargetArray::~EventTargetArray](#tilde-eventtargetarray) | Desinicializa a `EventTargetArray` classe atual.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                                  | Descrição
 ------------------------------------- | ---------------------------------------------------------------------------------------
-[EventTargetArray::AddTail](#addtail) | Acrescenta o manipulador de eventos especificado ao final da matriz interna de manipuladores de eventos.
-[EventTargetArray::Begin](#begin)     | Obtém o endereço do primeiro elemento da matriz interna de manipuladores de eventos.
-[EventTargetArray::End](#end)         | Obtém o endereço do último elemento da matriz interna de manipuladores de eventos.
-[EventTargetArray::Length](#length)   | Obtém o número atual de elementos na matriz interna de manipuladores de eventos.
+[EventTargetArray::AddTail](#addtail) | Anexa o manipulador de eventos especificado ao final da matriz interna de manipuladores de eventos.
+[EventTargetArray::Begin](#begin)     | Obtém o endereço do primeiro elemento na matriz interna de manipuladores de eventos.
+[EventTargetArray::End](#end)         | Obtém o endereço do último elemento na matriz interna de manipuladores de eventos.
+[EventTargetArray::Comprimento](#length)   | Obtém o número atual de elementos na matriz interna de manipuladores de eventos.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -70,13 +70,13 @@ Nome                                  | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Event. h
+**Cabeçalho:** event.h
 
-**Namespace:** Microsoft::WRL::Details
+**Espaço de nome:** Microsoft::WRL::Details
 
-## <a name="tilde-eventtargetarray"></a>EventTargetArray::~EventTargetArray
+## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a>EventTargetArray::~EventTargetArray
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 ~EventTargetArray();
@@ -84,11 +84,11 @@ Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretament
 
 ### <a name="remarks"></a>Comentários
 
-Realiza o desligamento atual `EventTargetArray` classe.
+Desinicializa a `EventTargetArray` classe atual.
 
-## <a name="addtail"></a>EventTargetArray::AddTail
+## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a>EventTargetArray::AddTail
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 void AddTail(
@@ -98,50 +98,50 @@ void AddTail(
 
 ### <a name="parameters"></a>Parâmetros
 
-*element*<br/>
-Ponteiro para o manipulador de eventos para acrescentar.
+*Elemento*<br/>
+Ponteiro para o manipulador de eventos para anexar.
 
 ### <a name="remarks"></a>Comentários
 
-Acrescenta o manipulador de eventos especificado ao final da matriz interna de manipuladores de eventos.
+Anexa o manipulador de eventos especificado ao final da matriz interna de manipuladores de eventos.
 
-`AddTail()` se destina a ser usado internamente pelo apenas o `EventSource` classe.
+`AddTail()`destina-se a ser usado `EventSource` internamente apenas pela classe.
 
-## <a name="begin"></a>EventTargetArray::Begin
+## <a name="eventtargetarraybegin"></a><a name="begin"></a>EventTargetArray::Begin
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 ComPtr<IUnknown>* Begin();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O endereço do primeiro elemento da matriz interna de manipuladores de eventos.
+O endereço do primeiro elemento na matriz interna de manipuladores de eventos.
 
 ### <a name="remarks"></a>Comentários
 
-Obtém o endereço do primeiro elemento da matriz interna de manipuladores de eventos.
+Obtém o endereço do primeiro elemento na matriz interna de manipuladores de eventos.
 
-## <a name="end"></a>EventTargetArray::End
+## <a name="eventtargetarrayend"></a><a name="end"></a>EventTargetArray::End
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 ComPtr<IUnknown>* End();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O endereço do último elemento da matriz interna de manipuladores de eventos.
+O endereço do último elemento na matriz interna de manipuladores de eventos.
 
 ### <a name="remarks"></a>Comentários
 
-Obtém o endereço do último elemento da matriz interna de manipuladores de eventos.
+Obtém o endereço do último elemento na matriz interna de manipuladores de eventos.
 
-## <a name="eventtargetarray"></a>EventTargetArray::EventTargetArray
+## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a>EventTargetArray::EventTargetArray
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 EventTargetArray(
@@ -152,36 +152,36 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hr*<br/>
-Depois de operações esse construtor, parâmetro *hr* indica se a alocação da matriz foi bem-sucedida ou falhou. A lista a seguir mostra os possíveis valores para *hr*.
+*Hr*<br/>
+Após essas operações de construção, o parâmetro *de rh* indica se a alocação da matriz foi bem sucedida ou não. A lista a seguir mostra os possíveis valores para *o RH*.
 
-+   S_OK<br/>
-    A operação foi bem-sucedida.
+- S_OK<br/>
+  A operação foi realizada com êxito.
 
-+   E_OUTOFMEMORY<br/>
-    Não foi possível alocar memória para a matriz.
+- E_OUTOFMEMORY<br/>
+  A memória não poderia ser alocada para a matriz.
 
-+   S_FALSE<br/>
-    Parâmetro *itens* é menor ou igual a zero.
+- S_FALSE<br/>
+  Os *itens* de parâmetro são menores ou iguais a zero.
 
-*items*<br/>
-O número de elementos da matriz para alocar.
+*Itens*<br/>
+O número de elementos de matriz para alocar.
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa uma nova instância da classe `EventTargetArray`.
+Inicia uma nova instância da classe `EventTargetArray`.
 
-`EventTargetArray` é usado para manter uma matriz de manipuladores de eventos em um `EventSource` objeto.
+`EventTargetArray`é usado para manter uma matriz `EventSource` de manipuladores de eventos em um objeto.
 
-## <a name="length"></a>EventTargetArray::Length
+## <a name="eventtargetarraylength"></a><a name="length"></a>EventTargetArray::Comprimento
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 size_t Length();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número atual de elementos na matriz interna de manipuladores de eventos.
 

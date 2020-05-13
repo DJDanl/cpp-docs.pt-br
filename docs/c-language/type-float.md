@@ -15,11 +15,11 @@ helpviewer_keywords:
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
 ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346321"
 ---
 # <a name="type-float"></a>Tipo float
 
@@ -29,9 +29,9 @@ Você pode declarar variáveis como float ou double, dependendo das necessidades
 
 ### <a name="floating-point-types"></a>Tipos de ponto flutuante
 
-|Tipo|Dígitos significativos|Número de bytes|
+|Type|Dígitos significativos|Número de bytes|
 |----------|------------------------|---------------------|
-|float|6 - 7|4|
+|FLOAT|6 - 7|4|
 |double|15 - 16|8|
 
 As variáveis de ponto flutuante são representadas por uma mantissa, que contém o valor do número, e um expoente, que contém a ordem de grandeza do número.
@@ -40,9 +40,9 @@ A tabela a seguir mostra o número de bits alocados à mantissa e ao expoente pa
 
 ### <a name="lengths-of-exponents-and-mantissas"></a>Comprimentos de expoentes e de mantissas
 
-|Tipo|Comprimento do expoente|Comprimento da mantissa|
+|Type|Comprimento do expoente|Comprimento da mantissa|
 |----------|---------------------|---------------------|
-|float|8 bits|23 bits|
+|FLOAT|8 bits|23 bits|
 |double|11 bits|52 bits|
 
 Como são armazenados em um formato sem sinal, os expoentes são deslocados pela metade do valor possível. Para o tipo float, o deslocamento é 127; para o tipo double, é 1023. Você pode calcular o valor real do expoente subtraindo o valor do deslocamento do valor do expoente.
@@ -55,9 +55,9 @@ A tabela a seguir mostra os valores mínimo e máximo que você pode armazenar e
 
 ### <a name="range-of-floating-point-types"></a>Intervalo de tipos de ponto flutuante
 
-|Tipo|Valor mínimo|Valor máximo|
+|Type|Valor mínimo|Valor máximo|
 |----------|-------------------|-------------------|
-|float|1.175494351 E - 38|3,402823466 E + 38|
+|FLOAT|1.175494351 E - 38|3,402823466 E + 38|
 |double|2.2250738585072014 E - 308|1,7976931348623158 E + 308|
 
 Se a precisão preocupa menos que o armazenamento, considere usar o tipo float para as variáveis de ponto flutuante. Ao contrário, se a precisão é o critério mais importante, use o tipo double.
@@ -80,6 +80,6 @@ No exemplo a seguir (que usa as declarações do exemplo anterior), a aritmétic
 f_longer = f_short * f_short;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Armazenamento de tipos básicos](../c-language/storage-of-basic-types.md)

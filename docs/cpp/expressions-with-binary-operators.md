@@ -6,90 +6,90 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a5c9127db4714575cdf037147cc97601a4523e93
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188981"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360856"
 ---
 # <a name="expressions-with-binary-operators"></a>Expressões com operadores binários
 
 Os operadores binários atuam em dois operandos em uma expressão. Os operadores binários são:
 
-- [Operadores multiplicativa](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+- [Operadores multiplicativos](../cpp/multiplicative-operators-and-the-modulus-operator.md)
 
-   - Multiplicação (*)
+  - Multiplicação (*)
 
-   - Divisão (/)
+  - Divisão (/)
 
-   - Módulo (%)
+  - Módulo (%)
 
 - [Operadores aditivos](../cpp/additive-operators-plus-and.md)
 
-   - Adição (+)
+  - Adição (+)
 
-   - Subtração (-)
+  - Subtração (-)
 
 - [Operadores shift](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - SHIFT direita (> >)
+  - Turno certo (>>)
 
-   - Deslocamento à esquerda (< <)
+  - Turno esquerdo (<<)
 
 - [Operadores relacionais e de igualdade](../cpp/relational-operators-equal-and-equal.md)
 
-   - Menor que (\<)
+  - Menor que (\<)
 
-   - Maior que (>)
+  - Maior que (>)
 
-   - Menor ou igual a (\<=)
+  - Menor ou igual\<a ( =)
 
-   - Maior que ou igual a (>=)
+  - Maior que ou igual a (>=)
 
-   - Igual a (==)
+  - Igual a (==)
 
-   - Diferente de (!=)
+  - Diferente de (!=)
 
 - Operadores bit a bit
 
-   - [E/ou bit-e (&)](../cpp/bitwise-and-operator-amp.md)
+  - [Bitwise E (&)](../cpp/bitwise-and-operator-amp.md)
 
-   - [Or exclusivo de OR bit (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
+  - [OR exclusivo bitwise (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [Bit inclusivo ou&#124;()](../cpp/bitwise-inclusive-or-operator-pipe.md)
+  - [BITWise inclusive OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Operadores lógicos
 
-   - [AND lógico (& &)](../cpp/logical-and-operator-amp-amp.md)
+  - [Lógica E (&&)](../cpp/logical-and-operator-amp-amp.md)
 
-   - [OR lógico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+  - [OR Lógico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
 - [Operadores de atribuição](../cpp/assignment-operators.md)
 
-   - Atribuição (=)
+  - Atribuição (=)
 
-   - Atribuição de adição (+=)
+  - Atribuição de adição (+=)
 
-   - Atribuição de subtração (-=)
+  - Atribuição de subtração (-=)
 
-   - Atribuição de multiplicação (*=)
+  - Atribuição de multiplicação (*=)
 
-   - Atribuição de divisão (/=)
+  - Atribuição de divisão (/=)
 
-   - Atribuição de módulo (%=)
+  - Atribuição de módulo (%=)
 
-   - Atribuição de deslocamento à esquerda (<\<=)
+  - Atribuição de \<turno esquerdo (<=)
 
-   - Atribuição de deslocamento à direita (> > =)
+  - Atribuição de turno direito (>>=)
 
-   - E/ou de atribuição e bit (& =)
+  - Bitwise E atribuição (&=)
 
-   - Atribuição OR exclusivo de bit a bit (^=)
+  - Atribuição OR exclusivo de bit a bit (^=)
 
-   - (=) Bit inclusivo ou atribuição (&#124;=)
+  - Atribuição ou ou inclusiva bitwise (&#124;=)
 
-- [Operador de vírgula](../cpp/comma-operator.md) (,)
+- [Operador de Comma](../cpp/comma-operator.md) (,)
 
 ## <a name="see-also"></a>Confira também
 

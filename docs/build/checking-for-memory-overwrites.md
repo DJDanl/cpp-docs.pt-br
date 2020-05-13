@@ -13,21 +13,21 @@ ms.locfileid: "64342251"
 ---
 # <a name="checking-for-memory-overwrites"></a>Verificando substituições de memória
 
-Se você receber uma violação de acesso em uma chamada para uma função de manipulação de heap, é possível que seu programa corrompeu o heap. Um sintoma comum dessa situação seria:
+Se você obtiver uma violação de acesso em uma chamada para uma função de manipulação de heap, é possível que seu programa tenha corrompido o heap. Um sintoma comum dessa situação seria:
 
 ```
 Access Violation in _searchseg
 ```
 
-O [heapchk](../c-runtime-library/reference/heapchk.md) função está disponível em ambos os depuração e libere compilações (somente no Windows NT) para verificar a integridade do heap de biblioteca de tempo de execução. Você pode usar `_heapchk` da mesma maneira como o `AfxCheckMemory` função, isolar uma substituição de heap, por exemplo:
+A função [_heapchk](../c-runtime-library/reference/heapchk.md) está disponível em compilações de depuração e versão (somente Windows NT) para verificar a integridade do heap de biblioteca de tempo de execução. Você pode usar `_heapchk` praticamente da mesma forma que a `AfxCheckMemory` função para isolar uma substituição de heap, por exemplo:
 
 ```
 if(_heapchk()!=_HEAPOK)
    DebugBreak();
 ```
 
-Se essa função nunca falhar, você precisa isolar no ponto em que o heap foi corrompido.
+Se essa função falhar, você precisará isolar em qual ponto o heap foi corrompido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Corrigindo problemas do build de versão](fixing-release-build-problems.md)
+[Corrigindo problemas de compilação da versão](fixing-release-build-problems.md)

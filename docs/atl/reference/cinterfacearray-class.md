@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-ms.openlocfilehash: 2e8714bf40e99a1014d7cd6de82cddb13cbbb9cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6efe31989b06f0977ecff156a8f64053dc64ad1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258865"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326793"
 ---
 # <a name="cinterfacearray-class"></a>Classe CInterfaceArray
 
-Essa classe fornece métodos úteis ao construir uma matriz de ponteiros de interface COM.
+Esta classe fornece métodos úteis ao construir uma matriz de ponteiros de interface COM.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,11 +30,11 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>Parâmetros
 
-*I*<br/>
+*Eu*<br/>
 Uma interface COM especificando o tipo de ponteiro a ser armazenado.
 
-*piid*<br/>
-Um ponteiro para o IID da *eu*.
+*Piid*<br/>
+Um ponteiro para o IID de *I*.
 
 ## <a name="members"></a>Membros
 
@@ -46,9 +46,9 @@ Um ponteiro para o IID da *eu*.
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe fornece um construtor e métodos derivados para criar uma matriz de ponteiros de interface COM. Use [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quando uma lista é necessária.
+Esta classe fornece um método de construção e derivado para criar uma matriz de ponteiros de interface COM. Use [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quando uma lista for necessária.
 
-Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).
+Para obter mais informações, consulte [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -60,7 +60,7 @@ Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl
 
 **Cabeçalho:** atlcoll.h
 
-##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray
+## <a name="cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray
 
 O construtor.
 
@@ -70,9 +70,9 @@ CInterfaceArray() throw();
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa a matriz de ponteiro inteligente.
+Inicializa a matriz de ponteiros inteligentes.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CAtlArray](../../atl/reference/catlarray-class.md)<br/>
 [Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>

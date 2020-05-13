@@ -1,9 +1,11 @@
 ---
 title: _get_dstbias
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_dstbias
 - __dstbias
+- _o___dstbias
+- _o__get_dstbias
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: a48cc4fe35a1bbd18342750571214ed0977cf3ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955946"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919376"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -52,7 +55,7 @@ error_t _get_dstbias( int* seconds );
 *seg*<br/>
 A diferença em segundos para o horário de verão.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido ou um valor **errno** se ocorrer um erro.
 
@@ -64,6 +67,8 @@ Se *segundos* for **nulo**, o manipulador de parâmetro inválido será invocado
 
 Recomendamos que você use essa função em vez da macro **_dstbias** ou da função preterida **__dstbias**.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -74,7 +79,7 @@ Para obter mais informações, consulte [Compatibilidade](../../c-runtime-librar
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_timezone](get-timezone.md)<br/>

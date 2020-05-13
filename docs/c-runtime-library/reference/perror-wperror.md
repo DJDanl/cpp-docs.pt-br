@@ -1,9 +1,10 @@
 ---
 title: perror, _wperror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wperror
 - perror
+- _o__wperror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951031"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919329"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
@@ -62,7 +64,9 @@ Mensagem de cadeia de caracteres para imprimir.
 
 ## <a name="remarks"></a>Comentários
 
-A função **perror** imprime uma mensagem de erro em **stderr**. **_wperror** é uma versão de caractere largo do **_perror**; o argumento da *mensagem* para **_wperror** é uma cadeia de caracteres largos. **_wperror** e **_perror** se comportam de outra forma.
+A função **perror** imprime uma mensagem de erro em **stderr**. **_wperror** é uma versão de caractere largo do **_perror**; o argumento da *mensagem* para **_wperror** é uma cadeia de caracteres largos. **_wperror** e **_perror** se comportar de forma idêntica.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -85,9 +89,9 @@ No sistema operacional Windows, alguns valores de **errno** listados em errno. H
 |**perror**|\<stdio.h> ou \<stdlib.h>|
 |**_wperror**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -139,7 +143,7 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>

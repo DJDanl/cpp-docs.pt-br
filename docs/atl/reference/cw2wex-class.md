@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-ms.openlocfilehash: d6d68f4f5c0f3532c39fee3f513e7b3102ec075d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b116775a595f9fb3612d46e19526cf1396f85002
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277121"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330343"
 ---
 # <a name="cw2wex-class"></a>Classe CW2WEX
 
-Essa classe é usada pelas macros de conversão de cadeia de caracteres CW2TEX CT2WEX e typedef CW2W.
+Esta classe é usada pelas macros de conversão de strings CW2TEX e CT2WEX, e pelo typedef CW2W.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +34,7 @@ class CW2WEX
 #### <a name="parameters"></a>Parâmetros
 
 *t_nBufferLength*<br/>
-O tamanho do buffer usado no processo de tradução. O comprimento padrão é 128 bytes.
+O tamanho do buffer usado no processo de tradução. O comprimento padrão é de 128 bytes.
 
 ## <a name="members"></a>Membros
 
@@ -49,46 +49,46 @@ O tamanho do buffer usado no processo de tradução. O comprimento padrão é 12
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CW2WEX::Operator LPWSTR](#operator_lpwstr)|Operador de conversão.|
+|[CW2WEX::operador LPWSTR](#operator_lpwstr)|Operador de conversão.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CW2WEX::m_psz](#m_psz)|O membro de dados que armazena a cadeia de caracteres de origem.|
-|[CW2WEX::m_szBuffer](#m_szbuffer)|O buffer estático, usado para armazenar a cadeia de caracteres convertida.|
+|[CW2WEX::m_psz](#m_psz)|O membro de dados que armazena a seqüência de origem.|
+|[CW2WEX::m_szBuffer](#m_szbuffer)|O buffer estático, usado para armazenar a seqüência convertida.|
 
 ## <a name="remarks"></a>Comentários
 
-A menos que a funcionalidade adicional for necessária, use CW2TEX, CT2WEX ou CW2W em seu código.
+A menos que seja necessária funcionalidade extra, use CW2TEX, CT2WEX ou CW2W em seu código.
 
-Essa classe contém um buffer estático de tamanho fixo que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe aloca memória usando **malloc**, liberando a memória quando o objeto sai do escopo. Isso garante que, diferentemente do texto macros de conversão disponíveis em versões anteriores da ATL, essa classe é seguro para ser usado em loops e que ele não estouram a pilha.
+Esta classe contém um buffer estático de tamanho fixo que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe alocará memória usando **malloc,** liberando a memória quando o objeto sai do escopo. Isso garante que, ao contrário das macros de conversão de texto disponíveis nas versões anteriores do ATL, essa classe é segura de usar em loops e que não transbordará a pilha.
 
-Se a classe tenta alocar memória no heap e falhar, ele chamará `AtlThrow` com um argumento de E_OUTOFMEMORY.
+Se a classe tentar alocar memória no monte `AtlThrow` e falhar, ela chamará com um argumento de E_OUTOFMEMORY.
 
-Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão.
+Por padrão, as classes de conversão ATL e macros usam a página de código ANSI do segmento atual para a conversão.
 
-As macros a seguir se baseiam nessa classe:
+As seguintes macros são baseadas nesta classe:
 
-- CW2TEX
+- Cw2tex
 
 - CT2WEX
 
-O typedef seguir baseia-se nessa classe:
+O tipo de digitação a seguir é baseado nesta classe:
 
 - CW2W
 
-Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md).
+Para uma discussão sobre essas macros de conversão de texto, consulte Macros de [conversão de strings ATL e MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Exemplo
 
-Ver [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.
+Consulte macros de [conversão de strings ATL e MFC](string-conversion-macros.md) para um exemplo de uso dessas macros de conversão de strings.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Atlconv. h
+**Cabeçalho:** atlconv.h
 
-##  <a name="cw2wex"></a>  CW2WEX::CW2WEX
+## <a name="cw2wexcw2wex"></a><a name="cw2wex"></a>CW2WEX::CW2WEX
 
 O construtor.
 
@@ -99,19 +99,19 @@ CW2WEX( LPCWSTR  psz) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*<br/>
-A cadeia de caracteres de texto a ser convertido.
+*Psz*<br/>
+A seqüência de texto a ser convertida.
 
 *nCodePage*<br/>
-A página de código. Não usado nessa classe.
+A página de código. Não usado nesta aula.
 
 ### <a name="remarks"></a>Comentários
 
 Cria o buffer necessário para a tradução.
 
-##  <a name="dtor"></a>  CW2WEX::~CW2WEX
+## <a name="cw2wexcw2wex"></a><a name="dtor"></a>CW2WEX::~CW2WEX
 
-O destruidor...
+O destruidor.
 
 ```
 ~CW2WEX() throw();
@@ -121,35 +121,35 @@ O destruidor...
 
 Libera o buffer alocado.
 
-##  <a name="m_psz"></a>  CW2WEX::m_psz
+## <a name="cw2wexm_psz"></a><a name="m_psz"></a>CW2WEX::m_psz
 
-O membro de dados que armazena a cadeia de caracteres de origem.
+O membro de dados que armazena a seqüência de origem.
 
 ```
 LPWSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CW2WEX::m_szBuffer
+## <a name="cw2wexm_szbuffer"></a><a name="m_szbuffer"></a>CW2WEX::m_szBuffer
 
-O buffer estático, usado para armazenar a cadeia de caracteres convertida.
+O buffer estático, usado para armazenar a seqüência convertida.
 
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpwstr"></a>  CW2WEX::operator LPWSTR
+## <a name="cw2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CW2WEX::operador LPWSTR
 
-Operador cast.
+Operador de elenco.
 
 ```
 operator LPWSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna a cadeia de caracteres de texto enquanto digita LPWSTR.
+Retorna a seqüência de texto como tipo LPWSTR.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
 [Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>

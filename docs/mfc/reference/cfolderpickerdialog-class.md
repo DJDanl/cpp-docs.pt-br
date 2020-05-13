@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: 435c91082fa901f0bc9726316f0358fc5a669b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed3dc151060519bce216cf4a2f3d6559d6b8937e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396191"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373860"
 ---
 # <a name="cfolderpickerdialog-class"></a>Classe CFolderPickerDialog
 
-Classe CFolderPickerDialog implementa CFileDialog no modo de selecionador de pasta.
+A classe CFolderPickerDialog implementa CFileDialog no modo de seleção de pastas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,32 +31,32 @@ class CFolderPickerDialog : public CFileDialog;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CFolderPickerDialog::~CFolderPickerDialog](#_dtorcfolderpickerdialog)|Destruidor.|
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Construtor.|
+|[CPastPickerDiálogo::~CPastaPickerDiálogo](#_dtorcfolderpickerdialog)|Destruidor.|
+|[CPastPickerDiálogo::CPastaPickerDiálogo](#cfolderpickerdialog)|Construtor.|
 
 ## <a name="remarks"></a>Comentários
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+[Ccommondialog](../../mfc/reference/ccommondialog-class.md)
 
-[CFileDialog](../../mfc/reference/cfiledialog-class.md)
+[Cfiledialog](../../mfc/reference/cfiledialog-class.md)
 
 `CFolderPickerDialog`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdlgs. h
+**Cabeçalho:** afxdlgs.h
 
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CPastPickerDiálogo::CPastaPickerDiálogo
 
 Construtor.
 
@@ -74,17 +74,17 @@ explicit CFolderPickerDialog(
 Pasta inicial.
 
 *dwFlags*<br/>
-Uma combinação de um ou mais sinalizadores que permitem que você personalize a caixa de diálogo.
+Uma combinação de uma ou mais bandeiras que permitem personalizar a caixa de diálogo.
 
-*pParentWnd*<br/>
-Um ponteiro para a janela do pai ou o proprietário do objeto de caixa de diálogo.
+*Pparentwnd*<br/>
+Um ponteiro para a janela pai ou proprietário do objeto da caixa de diálogo.
 
-*dwSize*<br/>
+*Dwsize*<br/>
 O tamanho da estrutura OPENFILENAME.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog::~CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CPastPickerDiálogo::~CPastaPickerDiálogo
 
 Destruidor.
 
@@ -94,6 +94,6 @@ virtual ~CFolderPickerDialog();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes](../../mfc/reference/mfc-classes.md)

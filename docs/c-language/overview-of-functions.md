@@ -6,11 +6,11 @@ helpviewer_keywords:
 - control flow, function calls
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
 ms.openlocfilehash: 1c54dcdeec1bad1ffbd335d411e39c77be0ad961
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232280"
 ---
 # <a name="overview-of-functions"></a>Visão geral das funções
 
@@ -22,6 +22,6 @@ O compilador usa o protótipo para comparar os tipos de argumentos em chamadas s
 
 Uma chamada de função passa o controle de execução da função de chamada para a função chamada. Os argumentos, se houver, são passados por valor à função chamada. A execução de uma instrução `return` na função chamada retornará o controle e possivelmente um valor para a função de chamada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções](../c-language/functions-c.md)

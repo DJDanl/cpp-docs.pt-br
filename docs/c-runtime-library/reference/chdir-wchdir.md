@@ -1,9 +1,11 @@
 ---
 title: _chdir, _wchdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wchdir
 - _chdir
+- _o__chdir
+- _o__wchdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939366"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917049"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -62,7 +65,7 @@ int _wchdir(
 *dirname*<br/>
 Caminho do novo diretório de trabalho.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Essas funções retornarão um valor de 0 se forem bem-sucedidas. Um valor de retorno de-1 indica falha. Se o caminho especificado não puder ser encontrado, **errno** será definido como **ENOENT**. Se *dirname* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará-1.
 
@@ -74,9 +77,11 @@ A função **_chdir** altera o diretório de trabalho atual para o diretório es
 _chdir("c:\temp");
 ```
 
-Ao usar o caractere de barra invertida opcional **&#92;** () em caminhos, você deve posicionar duas barras invertidas ( **&#92;** ) em um literal de cadeia de caracteres C para representar uma barra invertida simples ( **&#92;** ).
+Ao usar o caractere de barra invertida opcional (**&#92;**) em caminhos, você deve posicionar duas barras invertidas (**&#92;&#92;**) em um literal de cadeia de caracteres C para representar uma barra invertida (**&#92;**).
 
-**_wchdir** é uma versão de caractere largo do **_chdir**; o argumento *dirname* para **_wchdir** é uma cadeia de caracteres largos. **_wchdir** e **_chdir** se comportam de outra forma.
+**_wchdir** é uma versão de caractere largo do **_chdir**; o argumento *dirname* para **_wchdir** é uma cadeia de caracteres largos. **_wchdir** e **_chdir** se comportar de forma idêntica.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico:
 
@@ -152,7 +157,7 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de diretório](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

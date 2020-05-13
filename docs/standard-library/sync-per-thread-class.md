@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450261"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376540"
 ---
-# <a name="syncperthread-class"></a>Classe sync_per_thread
+# <a name="sync_per_thread-class"></a>Classe sync_per_thread
 
 Descreve um [filtro de sincronização](../standard-library/allocators-header.md) que fornece um objeto de cache separado para cada thread.
 
@@ -44,8 +44,8 @@ Os alocadores que usam `sync_per_thread` podem ser comparados como iguais mesmo 
 
 |Função de membro|Descrição|
 |-|-|
-|[allocate](#allocate)|Aloca um bloco de memória.|
-|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
+|[Alocar](#allocate)|Aloca um bloco de memória.|
+|[Desalocar](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
 |[equals](#equals)|Compara a igualdade de dois caches.|
 
 ## <a name="requirements"></a>Requisitos
@@ -54,7 +54,7 @@ Os alocadores que usam `sync_per_thread` podem ser comparados como iguais mesmo 
 
 **Namespace:** stdext
 
-## <a name="allocate"></a>  sync_per_thread::allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread:alocar
 
 Aloca um bloco de memória.
 
@@ -66,13 +66,13 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*count*|O número de elementos na matriz a serem alocados.|
+|*contagem*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="remarks"></a>Comentários
 
 A função membro retorna o resultado de uma chamada a `cache::allocate(count)` no objeto de cache que pertence ao thread atual. Se nenhum objeto de cache tiver sido alocado para o thread atual, ele primeiro alocará um.
 
-## <a name="deallocate"></a>  sync_per_thread::deallocate
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::deallocate
 
 Libera um número especificado de objetos do armazenamento começando em uma posição especificada.
 
@@ -84,14 +84,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|*count*|O número de objetos a serem desalocados do armazenamento.|
+|*Ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*contagem*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
 A função membro chama `deallocate` no objeto de cache que pertence ao thread atual. Se nenhum objeto de cache tiver sido alocado para o thread atual, ele primeiro alocará um.
 
-## <a name="equals"></a>  sync_per_thread::equals
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread::iguais
 
 Compara a igualdade de dois caches.
 
@@ -106,12 +106,12 @@ bool equals(const sync<Cache>& Other) const;
 |*Cache*|O objeto de cache do filtro de sincronização.|
 |*Outros*|O objeto de cache a ser comparado quanto à igualdade.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**false** se nenhum objeto de cache tiver sido alocado para esse objeto ou para *outro* no thread atual. Caso contrário, retornará o resultado da aplicação de `operator==` aos dois objetos de cache.
+**falso** se nenhum objeto de cache tiver sido alocado para este objeto ou para *Outro* no segmento atual. Caso contrário, retornará o resultado da aplicação de `operator==` aos dois objetos de cache.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alocadores>](../standard-library/allocators-header.md)

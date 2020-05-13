@@ -1,9 +1,11 @@
 ---
 title: _ungetc_nolock, _ungetwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ungetwc_nolock
 - _ungetc_nolock
+- _o__ungetc_nolock
+- _o__ungetwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 4228a573a0277c9bacc8beea81cbff6a70e3fe83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 397abcda60dc80f790fcdaba1e6eb0a390f68dc5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945920"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915994"
 ---
 # <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -61,13 +64,13 @@ wint_t _ungetwc_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 O caractere a ser enviado.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se for bem-sucedida, cada uma dessas funções retornará o argumento de caractere *c*. Se *c* não puder ser enviado de volta ou se nenhum caractere tiver sido lido, o fluxo de entrada será inalterado e **_ungetc_nolock** retornará **EOF**; **_ungetwc_nolock** retorna **WEOF**. Se *Stream* for **NULL**, **EOF** ou **WEOF** será retornado e **errno** será definido como **EINVAL**.
 
@@ -76,6 +79,8 @@ Para obter informações sobre esses e outros códigos de erro, consulte [_doser
 ## <a name="remarks"></a>Comentários
 
 Essas funções são versões sem bloqueio de **ungetc** e **ungetwc**. As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -90,7 +95,7 @@ Essas funções são versões sem bloqueio de **ungetc** e **ungetwc**. As vers�
 |**_ungetc_nolock**|\<stdio.h>|
 |**_ungetwc_nolock**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

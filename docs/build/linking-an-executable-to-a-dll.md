@@ -42,11 +42,11 @@ A biblioteca de importação contém apenas o código para carregar a DLL e impl
 
 Quando o sistema inicia um programa que contém referências vinculadas dinamicamente, ele usa as informações no arquivo executável do programa para localizar as DLLs necessárias. Se não for possível localizar a DLL, o sistema encerrará o processo e exibirá uma caixa de diálogo que relata o erro. Caso contrário, o sistema mapeia os módulos de DLL para o espaço de endereço do processo.
 
-Se qualquer uma das DLLs tiver uma função de ponto de entrada para o código de inicialização e término, como `DllMain`, o sistema operacional chamará a função. Um dos parâmetros passados para a função de ponto de entrada especifica um código que indica que a DLL está anexando ao processo. Se a função de ponto de entrada não retornar TRUE, o sistema encerrará o processo e relatará o erro.
+Se qualquer uma das DLLs tiver uma função de ponto de entrada para o código de inicialização e `DllMain`término, como, o sistema operacional chamará a função. Um dos parâmetros passados para a função de ponto de entrada especifica um código que indica que a DLL está anexando ao processo. Se a função de ponto de entrada não retornar TRUE, o sistema encerrará o processo e relatará o erro.
 
 Por fim, o sistema modifica o código executável do processo para fornecer endereços iniciais para as funções de DLL.
 
-Como o restante do código de um programa, o carregador mapeia o código da DLL para o espaço de endereço do processo quando o processo é iniciado. O sistema operacional carrega-o na memória somente quando necessário. Como resultado, os atributos de código `PRELOAD` e `LOADONCALL` usados por arquivos. def para controlar o carregamento em versões anteriores do Windows não têm mais significado.
+Como o restante do código de um programa, o carregador mapeia o código da DLL para o espaço de endereço do processo quando o processo é iniciado. O sistema operacional carrega-o na memória somente quando necessário. Como resultado, os `PRELOAD` atributos de `LOADONCALL` código e usados por arquivos. def para controlar o carregamento em versões anteriores do Windows não têm mais significado.
 
 ### <a name="explicit-linking"></a>Vinculação explícita
 
@@ -56,17 +56,17 @@ A maioria dos aplicativos usa vinculação implícita porque é o método de vin
 
 - Um processo que usa vinculação implícita é encerrado pelo sistema operacional se a DLL não for encontrada na inicialização do processo. Um processo que usa vinculação explícita não é encerrado nessa situação e pode tentar se recuperar do erro. Por exemplo, o processo poderia notificar o usuário sobre o erro e fazer com que o usuário especifique outro caminho para a DLL.
 
-- Um processo que usa vinculação implícita também será encerrado se qualquer uma das DLLs vinculadas tiver uma função `DllMain` que falhará. Um processo que usa vinculação explícita não é encerrado nessa situação.
+- Um processo que usa vinculação implícita também será encerrado se qualquer uma das DLLs vinculadas tiver uma `DllMain` função que falhe. Um processo que usa vinculação explícita não é encerrado nessa situação.
 
 - Um aplicativo que implicitamente vincula a várias DLLs pode ser lento para iniciar porque o Windows carrega todas as DLLs quando o aplicativo é carregado. Para melhorar o desempenho de inicialização, um aplicativo pode usar apenas a vinculação implícita para DLLs necessárias imediatamente após o carregamento. Ele pode usar vinculação explícita para carregar outras DLLs somente quando elas forem necessárias.
 
-- A vinculação explícita elimina a necessidade de vincular o aplicativo usando uma biblioteca de importação. Se as alterações na DLL fizerem a alteração dos ordinais de exportação, os aplicativos não precisarão se vincular novamente se chamarem `GetProcAddress` usando o nome de uma função e não um valor ordinal. Os aplicativos que usam vinculação implícita ainda devem ser revinculados à biblioteca de importação alterada.
+- A vinculação explícita elimina a necessidade de vincular o aplicativo usando uma biblioteca de importação. Se as alterações na DLL fizerem a alteração dos ordinais de exportação, os aplicativos não precisarão ser revinculados se chamarem `GetProcAddress` usando o nome de uma função e não um valor ordinal. Os aplicativos que usam vinculação implícita ainda devem ser revinculados à biblioteca de importação alterada.
 
 Aqui estão dois perigos de vinculação explícita a serem cientes de:
 
-- Se a DLL tiver uma função de ponto de entrada `DllMain`, o sistema operacional chamará a função no contexto do thread que chamou `LoadLibrary`. A função de ponto de entrada não será chamada se a DLL já estiver anexada ao processo devido a uma chamada anterior para `LoadLibrary` que não tinha nenhuma chamada correspondente à função `FreeLibrary`. A vinculação explícita pode causar problemas se a DLL usa uma função `DllMain` para inicializar cada thread de um processo, porque os threads que já existem quando `LoadLibrary` (ou `AfxLoadLibrary`) são chamados não são inicializados.
+- Se a DLL tiver uma `DllMain` função de ponto de entrada, o sistema operacional chamará a função no contexto do thread que `LoadLibrary`chamou. A função de ponto de entrada não será chamada se a DLL já estiver anexada ao processo devido a uma chamada `LoadLibrary` anterior a que não tinha nenhuma chamada correspondente `FreeLibrary` à função. A vinculação explícita pode causar problemas se a DLL usa `DllMain` uma função para inicializar cada thread de um processo, porque qualquer thread que já existe `LoadLibrary` quando ( `AfxLoadLibrary`ou) é chamado não é inicializado.
 
-- Se uma DLL declarar dados de extensão estática como `__declspec(thread)`, isso poderá causar uma falha de proteção se vinculada explicitamente. Depois que a DLL for carregada por uma chamada para `LoadLibrary`, ela causará uma falha de proteção sempre que o código fizer referência a esses dados. (Os dados de extensão estática incluem itens estáticos globais e locais.) É por isso que, ao criar uma DLL, você deve evitar o uso do armazenamento local de thread. Se você não puder, informe os usuários de DLL sobre as possíveis armadilhas de carregar dinamicamente sua DLL. Para obter mais informações, consulte [usando o armazenamento local de thread em uma biblioteca de vínculo dinâmico (SDK do Windows)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
+- Se uma DLL declarar dados de extensão estática como `__declspec(thread)`, ela poderá causar uma falha de proteção se vinculada explicitamente. Depois que a DLL for carregada por uma chamada `LoadLibrary`para, ela causará uma falha de proteção sempre que o código fizer referência a esses dados. (Os dados de extensão estática incluem itens estáticos globais e locais.) É por isso que, ao criar uma DLL, você deve evitar o uso do armazenamento local de thread. Se você não puder, informe os usuários de DLL sobre as possíveis armadilhas de carregar dinamicamente sua DLL. Para obter mais informações, consulte [usando o armazenamento local de thread em uma biblioteca de vínculo dinâmico (SDK do Windows)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
 
 <a name="linking-implicitly"></a>
 
@@ -74,7 +74,7 @@ Aqui estão dois perigos de vinculação explícita a serem cientes de:
 
 Para usar uma DLL por vinculação implícita, os executáveis do cliente devem obter esses arquivos do provedor da DLL:
 
-- Um ou mais arquivos de cabeçalho (arquivos. h) que contêm as declarações dos dados exportados, funções C++ e classes na dll. As classes, as funções e os dados exportados pela DLL devem ser marcados `__declspec(dllimport)` no arquivo de cabeçalho. Para saber mais, confira [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+- Um ou mais arquivos de cabeçalho (arquivos. h) que contêm as declarações dos dados exportados, funções e classes C++ na DLL. As classes, as funções e os dados exportados pela DLL devem ser `__declspec(dllimport)` marcados no arquivo de cabeçalho. Para saber mais, confira [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 - Uma biblioteca de importação para vincular ao seu executável. O vinculador cria a biblioteca de importação quando a DLL é criada. Para obter mais informações, consulte [arquivos lib como entrada do vinculador](reference/dot-lib-files-as-linker-input.md).
 
@@ -94,11 +94,11 @@ Para usar uma DLL por vinculação explícita, os aplicativos devem fazer uma ch
 
 - Chame [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) ou uma função semelhante para carregar a dll e obter um identificador de módulo.
 
-- Chame o [GetProcAddress](getprocaddress.md) para obter um ponteiro de função para cada função exportada que o aplicativo chama. Como os aplicativos chamam as funções de DLL por meio de um ponteiro, o compilador não gera referências externas, portanto, não há necessidade de vincular a uma biblioteca de importação. No entanto, você deve ter uma instrução `typedef` ou `using` que define a assinatura de chamada das funções exportadas que você chama.
+- Chame o [GetProcAddress](getprocaddress.md) para obter um ponteiro de função para cada função exportada que o aplicativo chama. Como os aplicativos chamam as funções de DLL por meio de um ponteiro, o compilador não gera referências externas, portanto, não há necessidade de vincular a uma biblioteca de importação. No entanto, você deve `typedef` ter `using` uma instrução ou que define a assinatura de chamada das funções exportadas que você chama.
 
 - Chame [FreeLibrary](freelibrary-and-afxfreelibrary.md) quando terminar com a dll.
 
-Por exemplo, essa função de exemplo chama `LoadLibrary` para carregar uma DLL denominada "MyDLL", chama `GetProcAddress` para obter um ponteiro para uma função chamada "DLLFunc1", chama a função e salva o resultado e, em seguida, chama `FreeLibrary` para descarregar a DLL.
+Por exemplo, essa função de exemplo `LoadLibrary` chama para carregar uma DLL chamada "MyDLL", `GetProcAddress` chama para obter um ponteiro para uma função chamada "DLLFunc1", chama a função e salva o resultado e, em `FreeLibrary` seguida, chama para descarregar a dll.
 
 ```C
 #include "windows.h"
@@ -135,7 +135,7 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-Ao contrário desse exemplo, na maioria dos casos, você deve chamar `LoadLibrary` e `FreeLibrary` apenas uma vez em seu aplicativo para uma determinada DLL. Isso é especialmente verdadeiro se você pretende chamar várias funções na DLL ou chamar as funções de DLL repetidamente.
+Ao contrário desse exemplo, na maioria dos casos, `LoadLibrary` você `FreeLibrary` deve chamar e apenas uma vez em seu aplicativo para uma determinada dll. Isso é especialmente verdadeiro se você pretende chamar várias funções na DLL ou chamar as funções de DLL repetidamente.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 

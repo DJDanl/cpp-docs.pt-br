@@ -1,5 +1,5 @@
 ---
-title: Limites de C++ C e inteiros
+title: Limites de inteiro C e C++
 ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
@@ -13,17 +13,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72778370"
 ---
-# <a name="c-and-c-integer-limits"></a>Limites de C++ C e inteiros
+# <a name="c-and-c-integer-limits"></a>Limites de inteiro C e C++
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Os limites para tipos de inteiros em C C++ e estão listados na tabela a seguir. Esses limites são definidos no arquivo de cabeçalho padrão C `<limits.h>`. O C++ `<limits>` de cabeçalho da biblioteca padrão inclui `<climits>`, que inclui `<limits.h>`.
+Os limites para tipos de inteiros em C e C++ são listados na tabela a seguir. Esses limites são definidos no arquivo `<limits.h>`de cabeçalho padrão C. O cabeçalho `<limits>` da biblioteca padrão C++ `<climits>`inclui o, `<limits.h>`que inclui o.
 
 O Microsoft C também permite a declaração de variáveis inteiras de tamanho, que são tipos integrais de tamanho de 8, 16-, 32-ou 64 bits. Para obter mais informações sobre os inteiros de tamanho em C, consulte [tipos de inteiro de tamanho](../c-language/c-sized-integer-types.md).
 
 ## <a name="limits-on-integer-constants"></a>Limites em constantes de inteiro
 
-|**Constante**|Significado|Valor|
+|**Amortiza**|Significado|Valor|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|Número de bits na menor variável que não é um campo de bit.|8|
 |**SCHAR_MIN**|Valor mínimo para uma variável do tipo **signed char**.|-128|
@@ -47,8 +47,8 @@ O Microsoft C também permite a declaração de variáveis inteiras de tamanho, 
 
 Se um valor exceder a representação do maior inteiro, o compilador da Microsoft gera um erro.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Constantes de inteiro C](../c-language/c-integer-constants.md)

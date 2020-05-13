@@ -1,11 +1,15 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
+- _o__isctype
+- _o__isctype_l
+- _o__iswctype_l
+- _o_iswctype
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2261eab574a8bc206a02f9e505beff88cf4c7fcf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954393"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918958"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
@@ -77,20 +82,20 @@ int _iswctype_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
-*desc*<br/>
+*crescente*<br/>
 Propriedade a ser testada. Normalmente, é recuperado usando ctype ou [wctype](wctype.md).
 
 *locale*<br/>
 A localidade a ser usado para qualquer teste que depender da localidade.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_isctype** e **iswctype** retornarão um valor diferente de zero se *c* tiver a propriedade especificada por *desc* na localidade atual ou 0 se não tiver. As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **_isctype** e **_isctype_l** será indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
+O comportamento de **_isctype** e **_isctype_l** será indefinido se *c* não for EOF ou estiver no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -98,6 +103,10 @@ O comportamento de **_isctype** e **_isctype_l** será indefinido se *c* não fo
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |N/D|**_isctype**|N/D|**_iswctype**|
 |N/D|**_isctype_l**|N/D|**_iswctype_l**|
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -110,12 +119,12 @@ O comportamento de **_isctype** e **_isctype_l** será indefinido se *c* não fo
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

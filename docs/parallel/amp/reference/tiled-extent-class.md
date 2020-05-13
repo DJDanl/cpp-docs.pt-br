@@ -13,16 +13,16 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: e2248c770c7eedde59d1cb592f7d5d7c1bfbde9a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ce2710da1a745efedcd6e9e524355eda41e26de2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126416"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374706"
 ---
 # <a name="tiled_extent-class"></a>Classe tiled_extent
 
-Um objeto de `tiled_extent` é um objeto de `extent` de uma a três dimensões que subdivide o espaço de extensão em blocos de um, dois ou três-dimensional.
+Um `tiled_extent` objeto `extent` é um objeto de uma a três dimensões que subdivide a extensão do espaço em telhas uni, bi ou tridimensional.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,37 +61,37 @@ O comprimento da dimensão menos significativa.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[Construtor de tiled_extent](#ctor)|Inicializa uma nova instância da classe `tiled_extent`.|
+|[Construtor tiled_extent](#ctor)|Inicia uma nova instância da classe `tiled_extent`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[get_tile_extent](#get_tile_extent)|Retorna um objeto `extent` que captura os valores dos argumentos do modelo `tiled_extent` `_Dim0`, `_Dim1`e `_Dim2`.|
-|[bloco](#pad)|Retorna um novo objeto `tiled_extent` com extensões ajustadas para que sejam divisíveis igualmente pelas dimensões do bloco.|
-|[truncate](#truncate)|Retorna um novo objeto `tiled_extent` com extensões ajustadas para que sejam divisíveis igualmente pelas dimensões do bloco.|
+|[get_tile_extent](#get_tile_extent)|Retorna `extent` um objeto que captura `tiled_extent` os valores dos argumentos `_Dim0`do modelo, `_Dim1`e `_Dim2`.|
+|[Almofada](#pad)|Retorna um `tiled_extent` novo objeto com extensões ajustadas até serem uniformemente divisíveis pelas dimensões do azulejo.|
+|[Truncar](#truncate)|Retorna um `tiled_extent` novo objeto com extensões ajustadas para baixo para ser uniformemente divisível pelas dimensões do azulejo.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[operator=](#operator_eq)|Copia o conteúdo do objeto `tiled_index` especificado para este.|
+|[operador=](#operator_eq)|Copia o conteúdo do `tiled_index` objeto especificado para este.|
 
-### <a name="public-constants"></a>Constantes Públicas
+### <a name="public-constants"></a>Constantes públicas
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[Constante tile_dim0](#tile_dim0)|Armazena o comprimento da dimensão mais significativa.|
-|[Constante tile_dim1](#tile_dim1)|Armazena o comprimento da dimensão de próximo a mais significativa.|
-|[Constante tile_dim2](#tile_dim2)|Armazena o comprimento da dimensão menos significativa.|
+|[tile_dim0 Constante](#tile_dim0)|Armazena a extensão da dimensão mais significativa.|
+|[tile_dim1 Constante](#tile_dim1)|Armazena o comprimento da dimensão mais significativa.|
+|[tile_dim2 Constante](#tile_dim2)|Armazena o comprimento da dimensão menos significativa.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|Obtém um objeto `extent` que captura os valores dos argumentos do modelo `tiled_extent` `_Dim0`, `_Dim1`e `_Dim2`.|
+|[tile_extent](#tile_extent)|Obtém `extent` um objeto que captura `tiled_extent` os `_Dim0`valores dos argumentos do modelo, `_Dim1`e `_Dim2`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -99,15 +99,15 @@ O comprimento da dimensão menos significativa.
 
 `tiled_extent`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** amp. h
+**Cabeçalho:** amp.h
 
 **Namespace:** Simultaneidade
 
-## <a name="ctor"></a> construtor de tiled_extent
+## <a name="tiled_extent-constructor"></a><a name="ctor"> </a> construtor tiled_extent
 
-Inicializa uma nova instância da classe `tiled_extent`.
+Inicia uma nova instância da classe `tiled_extent`.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -124,11 +124,11 @@ tiled_extent(
 ### <a name="parameters"></a>Parâmetros
 
 *_Other*<br/>
-O `extent` ou `tiled_extent` objeto a ser copiado.
+O `extent` `tiled_extent` ou objeto para copiar.
 
-## <a name="get_tile_extent"></a> get_tile_extent
+## <a name="get_tile_extent"></a><a name="get_tile_extent"> </a> get_tile_extent get_tile_extent
 
-Retorna um objeto `extent` que captura os valores dos argumentos do modelo `tiled_extent` `_Dim0`, `_Dim1`e `_Dim2`.
+Retorna `extent` um objeto que captura `tiled_extent` os valores dos argumentos `_Dim0`do modelo, `_Dim1`e `_Dim2`.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -138,11 +138,11 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 
 ### <a name="return-value"></a>Valor retornado
 
-Um objeto `extent` que captura as dimensões desta instância de `tiled_extent`.
+Um `extent` objeto que captura as `tiled_extent` dimensões desta instância.
 
-## <a name="pad"></a> painel
+## <a name="pad"></a><a name="pad"> </a> pad
 
-Retorna um novo objeto `tiled_extent` com extensões ajustadas para que sejam divisíveis igualmente pelas dimensões do bloco.
+Retorna um `tiled_extent` novo objeto com extensões ajustadas até serem uniformemente divisíveis pelas dimensões do azulejo.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -152,10 +152,11 @@ tiled_extent pad() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O novo objeto `tiled_extent`, por valor.
-## <a name="truncate"></a> truncar
+O `tiled_extent` novo objeto, por valor.
 
-Retorna um novo objeto `tiled_extent` com extensões ajustadas para que sejam divisíveis igualmente pelas dimensões do bloco.
+## <a name="truncate"></a><a name="truncate"> </a> truncar
+
+Retorna um `tiled_extent` novo objeto com extensões ajustadas para baixo para ser uniformemente divisível pelas dimensões do azulejo.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -165,11 +166,11 @@ tiled_extent truncate() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna um novo objeto `tiled_extent` com extensões ajustadas para que sejam divisíveis igualmente pelas dimensões do bloco.
+Retorna um `tiled_extent` novo objeto com extensões ajustadas para baixo para ser uniformemente divisível pelas dimensões do azulejo.
 
-## <a name="operator_eq"></a> operador =
+## <a name="operator"></a><a name="operator_eq"> </a> operador=
 
-Copia o conteúdo do objeto `tiled_index` especificado para este.
+Copia o conteúdo do `tiled_index` objeto especificado para este.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -181,15 +182,15 @@ tiled_extent&  operator= (
 ### <a name="parameters"></a>Parâmetros
 
 *_Other*<br/>
-O objeto `tiled_index` do qual copiar.
+O `tiled_index` objeto para copiar.
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma referência a esta instância de `tiled_index`.
+Uma referência `tiled_index` a este caso.
 
-## <a name="tile_dim0"></a> tile_dim0
+## <a name="tile_dim0"></a><a name="tile_dim0"> </a> tile_dim0
 
-Armazena o comprimento da dimensão mais significativa.
+Armazena a extensão da dimensão mais significativa.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -197,9 +198,9 @@ Armazena o comprimento da dimensão mais significativa.
 static const int tile_dim0 = _Dim0;
 ```
 
-## <a name="tile_dim1"></a> tile_dim1
+## <a name="tile_dim1"></a><a name="tile_dim1"> </a> tile_dim1
 
-Armazena o comprimento da dimensão de próximo a mais significativa.
+Armazena o comprimento da dimensão mais significativa.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -207,7 +208,7 @@ Armazena o comprimento da dimensão de próximo a mais significativa.
 static const int tile_dim1 = _Dim1;
 ```
 
-## <a name="tile_dim2"></a> tile_dim2
+## <a name="tile_dim2"></a><a name="tile_dim2"> </a> tile_dim2 tile_dim2.
 
 Armazena o comprimento da dimensão menos significativa.
 
@@ -217,8 +218,9 @@ Armazena o comprimento da dimensão menos significativa.
 static const int tile_dim2 = _Dim2;
 ```
 
-## <a name="tile_extent"></a> tile_extent
-  Obtém um objeto `extent` que captura os valores dos argumentos do modelo `tiled_extent` `_Dim0`, `_Dim1`e `_Dim2`.
+## <a name="tile_extent"></a><a name="tile_extent"> </a> tile_extent
+
+Obtém `extent` um objeto que captura `tiled_extent` os `_Dim0`valores dos argumentos do modelo, `_Dim1`e `_Dim2`.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -226,6 +228,6 @@ static const int tile_dim2 = _Dim2;
 __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)

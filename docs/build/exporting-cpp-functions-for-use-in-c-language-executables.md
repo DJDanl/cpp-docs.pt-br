@@ -16,9 +16,9 @@ ms.locfileid: "62195228"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportando funções do C++ a serem usadas em executáveis da linguagem C
 
-Se você tiver funções em uma DLL escrita em C++ que você deseja acessar a partir de um módulo de linguagem C, você deve declarar essas funções com vínculo a C em vez de vinculação C++. Salvo indicação em contrário, o compilador C++ usa C++ (também conhecido como a decoração de nome) de nomenclatura de tipo seguro e C++ convenções de chamada, que podem ser difícil de chamada do C.
+Se você tiver funções em uma DLL gravadas em C++ que deseja acessar a partir de um módulo C-Language, deverá declarar essas funções com vínculo C em vez de vínculo de C++. A menos que especificado de outra forma, o compilador C++ usa o C++ (também conhecido como decoração de nome) e as convenções de chamada de C++, que podem ser difíceis de chamar de C.
 
-Para especificar o vínculo a C, especifique `extern "C"` para suas declarações de função. Por exemplo:
+Para especificar o vínculo de C `extern "C"` , especifique para suas declarações de função. Por exemplo: 
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
@@ -28,17 +28,17 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 - [Exportar de uma DLL usando arquivos. def](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar de uma DLL usando dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar de uma DLL usando __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar usando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Exportar e importar usando o AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar funções de C para uso em executáveis C ou da linguagem C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportar funções C para uso em executáveis de linguagem C ou C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
 - [Importação para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicialize um DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicializar uma DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
@@ -46,6 +46,6 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 - [Usando extern para especificar a ligação](../cpp/using-extern-to-specify-linkage.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exportando de uma DLL](exporting-from-a-dll.md)
+[Exportando a partir de uma DLL](exporting-from-a-dll.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3766a93d7cba9096ce3ff775d94c17a85456fb00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420116"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363096"
 ---
 # <a name="istream_iterator-class"></a>Classe istream_iterator
 
@@ -34,31 +34,31 @@ class istream_iterator
     const Type&>;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Tipo*\
 O tipo de objeto a ser extraído do fluxo de entrada.
 
-\ *CharType*
-O tipo que representa o tipo de caractere para `istream_iterator`. Esse argumento é opcional e o valor padrão é **Char**.
+*CharType*\
+O tipo que representa o tipo de caractere para `istream_iterator`. Este argumento é opcional e o valor padrão é **char**.
 
-\ de *características*
+*Traços*\
 O tipo que representa o tipo de caractere para `istream_iterator`. Esse argumento é opcional e o valor padrão é `char_traits`< `CharType`>.
 
-\ de *distância*
+*Distância*\
 Um tipo integral com sinal que representa o tipo de diferença para `istream_iterator`. Esse argumento é opcional e o valor padrão é `ptrdiff_t`.
 
 Depois de construir ou incrementar um objeto da classe istream_iterator com um ponteiro armazenado não nulo, o objeto tenta extrair e armazenar um objeto do tipo `Type` do fluxo de entrada associado. Se a extração falhar, o objeto substitui eficientemente o ponteiro armazenado por um ponteiro nulo, criando um indicador de fim de sequência.
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|DESCRIÇÃO|
+|Construtor|Descrição|
 |-|-|
 |[istream_iterator](#istream_iterator)|Constrói um iterador de fim de fluxo como o `istream_iterator` padrão ou um `istream_iterator` inicializado para o tipo de fluxo do iterador do qual ele lê.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome do tipo|DESCRIÇÃO|
+|Nome do tipo|Descrição|
 |-|-|
 |[char_type](#char_type)|Um tipo que é fornecido para o tipo de caractere do `istream_iterator`.|
 |[istream_type](#istream_type)|Um tipo que é fornecido para o tipo de fluxo da `istream_iterator`.|
@@ -66,19 +66,19 @@ Depois de construir ou incrementar um objeto da classe istream_iterator com um p
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIÇÃO|
+|Operador|Descrição|
 |-|-|
-|[operator*](#op_star)|O operador de desreferenciamento retorna o objeto armazenado do tipo `Type` tratado por `istream_iterator`.|
-|[operator->](#op_arrow)|Retorna o valor de um membro, se houver.|
-|[operator++](#op_add_add)|Ou extrai um objeto incrementado do fluxo de entrada, ou copia o objeto antes de incrementá-lo e retorna a cópia.|
+|[operador*](#op_star)|O operador de desreferenciamento retorna o objeto armazenado do tipo `Type` tratado por `istream_iterator`.|
+|[operador->](#op_arrow)|Retorna o valor de um membro, se houver.|
+|[operador++](#op_add_add)|Ou extrai um objeto incrementado do fluxo de entrada, ou copia o objeto antes de incrementá-lo e retorna a cópia.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** > iterador de \<
+**Cabeçalho:** \<iterator>
 
 **Namespace:** std
 
-## <a name="char_type"></a>  istream_iterator::char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator:char_type
 
 Um tipo que é fornecido para o tipo de caractere do `istream_iterator`.
 
@@ -126,7 +126,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iterator"></a>  istream_iterator::istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator:istream_iterator
 
 Constrói um iterador de fim de fluxo como o `istream_iterator` padrão ou um `istream_iterator` inicializado para o tipo de fluxo do iterador do qual ele lê.
 
@@ -136,14 +136,14 @@ istream_iterator();
 istream_iterator(istream_type& _Istr);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Istr*\
 O fluxo de entrada a ser lido usado para inicializar o `istream_iterator`.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa o ponteiro de fluxo de entrada com um ponteiro nulo e cria um iterador de fim do fluxo. O segundo construtor inicializa o ponteiro de fluxo de entrada com *& _Istr*e, em seguida, tenta extrair e armazenar um objeto do tipo `Type`.
+O primeiro construtor inicializa o ponteiro de fluxo de entrada com um ponteiro nulo e cria um iterador de fim do fluxo. O segundo construtor inicializa o ponteiro do fluxo de entrada com *&_Istr,* em seguida, tenta extrair e armazenar um objeto do tipo `Type`.
 
 O iterador de fim do fluxo pode ser usado para testar se um `istream_iterator` atingiu o final de um fluxo.
 
@@ -181,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="istream_type"></a>  istream_iterator::istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator:istream_type
 
 Um tipo que é fornecido para o tipo de fluxo da `istream_iterator`.
 
@@ -191,13 +191,13 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para `basic_istream`\< **CharType**, > de **características**.
+O tipo é `basic_istream` \< um sinônimo de **CharType**, **Traits**>.
 
 ### <a name="example"></a>Exemplo
 
 Consulte [istream_iterator](#istream_iterator) para obter um exemplo de como declarar e usar `istream_type`.
 
-## <a name="op_star"></a>  istream_iterator::operator*
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator:operador*
 
 O operador de desreferenciamento retorna o objeto armazenado do tipo `Type` tratado por `istream_iterator`.
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O objeto armazenado do tipo `Type`.
+O objeto armazenado `Type`do tipo .
 
 ### <a name="example"></a>Exemplo
 
@@ -241,7 +241,7 @@ int main( )
 }
 ```
 
-## <a name="op_arrow"></a>  istream_iterator::operator-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator::operador-&gt;
 
 Retorna o valor de um membro, se houver.
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="op_add_add"></a>  istream_iterator::operator++
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator:operador++
 
 Ou extrai um objeto incrementado do fluxo de entrada, ou copia o objeto antes de incrementá-lo e retorna a cópia.
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Valor retornado
 
-O primeiro operador de membro retorna uma referência ao objeto incrementado do tipo `Type` extraído do fluxo de entrada e a segunda função de membro retorna uma cópia do objeto.
+O primeiro operador membro retorna uma referência `Type` ao objeto incrementado do tipo extraído do fluxo de entrada e a função do segundo membro retorna uma cópia do objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -337,7 +337,7 @@ int main( )
 }
 ```
 
-## <a name="traits_type"></a>  istream_iterator::traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator:traits_type
 
 Um tipo que fornece o tipo de característica do caractere da `istream_iterator`.
 
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>Confira também
 
-[Struct input_iterator_tag](../standard-library/input-iterator-tag-struct.md)\
-[Struct iterator](../standard-library/iterator-struct.md)\
-[\<iterator>](../standard-library/iterator.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[input_iterator_tag Struct](../standard-library/input-iterator-tag-struct.md)\
+[Estruturador de tempo](../standard-library/iterator-struct.md)\
+[\<>do tempo](../standard-library/iterator.md)\
+[Segurança do segmento na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

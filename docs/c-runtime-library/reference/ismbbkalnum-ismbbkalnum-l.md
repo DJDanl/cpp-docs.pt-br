@@ -1,9 +1,11 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
+- _o__ismbbkalnum
+- _o__ismbbkalnum_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954173"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909514"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -56,15 +59,19 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_ismbbkalnum** retornará um valor diferente de zero se o inteiro *c* for um símbolo de texto não-ASCII diferente de pontuação, ou 0 se não for. **_ismbbkalnum** usa a localidade atual para informações de caracteres dependentes de localidade. **_ismbbkalnum_l** é idêntico ao **_ismbbkalnum** , exceto pelo fato de que ele usa a localidade como um parâmetro. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,4 +85,4 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[Rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

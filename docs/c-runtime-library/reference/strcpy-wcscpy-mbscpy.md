@@ -1,10 +1,11 @@
 ---
 title: strcpy, wcscpy, _mbscpy
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strcpy
 - wcscpy
 - _mbscpy
+- _o_wcscpy
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958258"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915264"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Copia uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** não pode ser usado em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** não pode ser usado em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -95,7 +97,7 @@ Cadeia de caracteres de destino.
 *strSource*<br/>
 Cadeia de caracteres de origem com terminação nula.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna a cadeia de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.
 
@@ -109,6 +111,8 @@ A função **strcpy** copia *strSource*, incluindo o caractere nulo de terminaç
 **wcscpy** e **_mbscpy** são versões, respectivamente, de caracteres largos e de caracteres multibyte de **strcpy**. Os argumentos e o valor de retorno de **wcscpy** são cadeias de caracteres largos; os de **_mbscpy** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -124,7 +128,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |**wcscpy**|\<string.h> ou \<wchar.h>|
 |**_mbscpy**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -161,9 +165,9 @@ int main( void )
 String = Hello world from strcpy and strcat!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

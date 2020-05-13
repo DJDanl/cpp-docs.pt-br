@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a8ceef3133e9946524e1fcd02e96535eccd7fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403211"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371265"
 ---
 # <a name="modulebase-class"></a>Classe ModuleBase
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +34,7 @@ class ModuleBase;
 
 ## <a name="remarks"></a>Comentários
 
-Representa a classe base do [módulo](module-class.md) classes.
+Representa a classe base das classes [de Módulo.](module-class.md)
 
 ## <a name="members"></a>Membros
 
@@ -42,15 +42,15 @@ Representa a classe base do [módulo](module-class.md) classes.
 
 Nome                                         | Descrição
 -------------------------------------------- | ---------------------------------------------------------
-[ModuleBase::ModuleBase](#modulebase)        | Inicializa uma instância da classe `Module`.
-[ModuleBase:: ~ ModuleBase](#tilde-modulebase) | A instância atual do realiza o desligamento de `Module` classe.
+[Base do módulo::Base do módulo](#modulebase)        | Inicializa uma instância da classe `Module`.
+[Base do módulo::~Base do módulo](#tilde-modulebase) | Desinicializa a instância `Module` atual da classe.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                                                      | Descrição
 --------------------------------------------------------- | -------------------------------------------------------------------------
 [ModuleBase::DecrementObjectCount](#decrementobjectcount) | Quando implementado, diminui o número de objetos rastreados pelo módulo.
-[ModuleBase::IncrementObjectCount](#incrementobjectcount) | Quando implementado, incrementa o número de objetos controlados pelo módulo.
+[Base do módulo::IncrementObjectCount](#incrementobjectcount) | Quando implementado, aumenta o número de objetos rastreados pelo módulo.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -58,13 +58,13 @@ Nome                                                      | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Implements. h
+**Cabeçalho:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Espaço de nome:** Microsoft::WRL::Details
 
-## <a name="tilde-modulebase"></a>ModuleBase::~ModuleBase
+## <a name="modulebasemodulebase"></a><a name="tilde-modulebase"></a>Base do módulo::~Base do módulo
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 virtual ~ModuleBase();
@@ -72,43 +72,43 @@ virtual ~ModuleBase();
 
 ### <a name="remarks"></a>Comentários
 
-A instância atual do realiza o desligamento de `ModuleBase` classe.
+Desinicializa a instância `ModuleBase` atual da classe.
 
-## <a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
+## <a name="modulebasedecrementobjectcount"></a><a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 virtual long DecrementObjectCount() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A contagem de antes da operação de decremento.
+A contagem antes da operação de decrésia.
 
 ### <a name="remarks"></a>Comentários
 
 Quando implementado, diminui o número de objetos rastreados pelo módulo.
 
-## <a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
+## <a name="modulebaseincrementobjectcount"></a><a name="incrementobjectcount"></a>Base do módulo::IncrementObjectCount
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 virtual long IncrementObjectCount() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A contagem de antes da operação de incremento.
+A contagem antes da operação de incremento.
 
 ### <a name="remarks"></a>Comentários
 
-Quando implementado, incrementa o número de objetos controlados pelo módulo.
+Quando implementado, aumenta o número de objetos rastreados pelo módulo.
 
-## <a name="modulebase"></a>ModuleBase::ModuleBase
+## <a name="modulebasemodulebase"></a><a name="modulebase"></a>Base do módulo::Base do módulo
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 ModuleBase();

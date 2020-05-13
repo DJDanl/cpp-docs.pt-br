@@ -18,19 +18,19 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: b8b633dcf4ea14e899ee00552b553476cf697689
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417764"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745988"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 
-Fornece métodos para criação ou subclasse de uma janela.
+Fornece métodos para criar ou subclassificar uma janela.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,80 +39,80 @@ template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-Sua nova classe, derivada de `CWindowImpl`.
+Sua nova classe, `CWindowImpl`derivada de .
 
-*TBase*<br/>
+*Tbase*<br/>
 A classe base da sua classe. Por padrão, a classe base é [CWindow](../../atl/reference/cwindow-class.md).
 
-*TWinTraits*<br/>
-Uma [classe de características](../../atl/understanding-window-traits.md) que define os estilos para sua janela. O padrão é `CControlWinTraits`.
+*Twintraits*<br/>
+Uma [classe de traços](../../atl/understanding-window-traits.md) que define estilos para sua janela. O padrão é `CControlWinTraits`.
 
 ## <a name="members"></a>Membros
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[CWindowImpl:: criar](#create)|Cria uma janela.|
+|[CWindowImpl::Criar](#create)|Cria uma janela.|
 
-### <a name="cwindowimplbaset-methods"></a>Métodos CWindowImplBaseT
+### <a name="cwindowimplbaset-methods"></a>Métodos CWindowImplBaset
 
 |||
 |-|-|
-|[DefWindowProc](#defwindowproc)|Fornece o processamento de mensagens padrão.|
+|[Defwindowproc](#defwindowproc)|Fornece processamento de mensagens padrão.|
 |[GetCurrentMessage](#getcurrentmessage)|Retorna a mensagem atual.|
-|[Getwindowproc](#getwindowproc)|Retorna o procedimento da janela atual.|
-|[OnFinalMessage](#onfinalmessage)|Chamado depois que a última mensagem é recebida (normalmente WM_NCDESTROY).|
-|[SubclassWindow](#subclasswindow)|Subclasses de uma janela.|
-|[UnsubclassWindow](#unsubclasswindow)|Restaura uma janela de subclasse anterior.|
+|[GetWindowProc](#getwindowproc)|Retorna o procedimento atual da janela.|
+|[OnFinalMessage](#onfinalmessage)|Chamado após a última mensagem ser recebida (tipicamente WM_NCDESTROY).|
+|[Subclasswindow](#subclasswindow)|Subclasses de uma janela.|
+|[Janela de subclasse](#unsubclasswindow)|Restaura uma janela subclassificada anteriormente.|
 
 ### <a name="static-methods"></a>Métodos estáticos
 
 |||
 |-|-|
-|[GetWndClassInfo](#getwndclassinfo)|Retorna uma instância estática de [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md), que gerencia as informações de classe de janela.|
-|[WindowProc](#windowproc)|Processa as mensagens enviadas para a janela.|
+|[Getwndclassinfo](#getwndclassinfo)|Retorna uma instância estática do [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md), que gerencia as informações da classe de janela.|
+|[Windowproc](#windowproc)|Processa mensagens enviadas para a janela.|
 
 ### <a name="data-members"></a>Membros de dados
 
 |||
 |-|-|
-|[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|Aponta para o procedimento de janela original da classe de janela.|
+|[M_pfnsuperwindowproc](#m_pfnsuperwindowproc)|Aponta para o procedimento original da janela da classe janela.|
 
 ## <a name="remarks"></a>Comentários
 
-Você pode usar `CWindowImpl` para criar uma janela ou uma subclasse de uma janela existente. o procedimento de janela `CWindowImpl` usa um mapa de mensagens para direcionar mensagens para os manipuladores apropriados.
+Você pode `CWindowImpl` usar para criar uma janela ou subclasse uma janela existente. o `CWindowImpl` procedimento da janela usa um mapa de mensagem para direcionar mensagens aos manipuladores apropriados.
 
-`CWindowImpl::Create` cria uma janela com base nas informações de classe de janela gerenciadas pelo [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl` contém a macro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , que significa `CWndClassInfo` registra uma nova classe de janela. Se você quiser superclassear uma classe de janela existente, derive sua classe de `CWindowImpl` e inclua a macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . Nesse caso, `CWndClassInfo` registra uma classe de janela baseada em uma classe existente, mas usa `CWindowImpl::WindowProc`. Por exemplo:
+`CWindowImpl::Create`cria uma janela com base nas informações da classe de janela gerenciadas pelo [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl`contém a [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro, o que significa `CWndClassInfo` registrar uma nova classe de janela. Se você quiser superclassificar uma classe de janela `CWindowImpl` existente, obtenha sua classe e inclua a [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro. Neste caso, `CWndClassInfo` registra uma classe de janela que é baseada `CWindowImpl::WindowProc`em uma classe existente, mas usa . Por exemplo:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 
 > [!NOTE]
->  Como `CWndClassInfo` gerencia as informações de apenas uma classe de janela, cada janela criada por meio de uma instância do `CWindowImpl` é baseada na mesma classe de janela.
+> Como `CWndClassInfo` gerencia as informações para apenas uma classe de janela, cada janela criada através de uma instância de é baseada na mesma classe de `CWindowImpl` janela.
 
-`CWindowImpl` também dá suporte à subclasse Window. O método `SubclassWindow` anexa uma janela existente ao objeto `CWindowImpl` e altera o procedimento de janela para `CWindowImpl::WindowProc`. Cada instância do `CWindowImpl` pode subclasse de uma janela diferente.
+`CWindowImpl`também suporta subclasse de janela. O `SubclassWindow` método anexa uma janela `CWindowImpl` existente ao objeto e `CWindowImpl::WindowProc`altera o procedimento da janela para . Cada instância `CWindowImpl` de pode subclasse uma janela diferente.
 
 > [!NOTE]
->  Para qualquer determinado objeto `CWindowImpl`, chame `Create` ou `SubclassWindow`. Não invoque os dois métodos no mesmo objeto.
+> Para qualquer `CWindowImpl` objeto, `Create` ligue `SubclassWindow`para qualquer um ou . Não invoque ambos os métodos no mesmo objeto.
 
-Além de `CWindowImpl`, a ATL fornece [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) para criar uma janela que está contida em outro objeto.
+Além disso, o `CWindowImpl`ATL fornece [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) para criar uma janela contida em outro objeto.
 
-O destruidor de classe base (~ `CWindowImplRoot`) garante que a janela tenha desaparecido antes que o objeto seja destruído.
+O destruidor da classe base `CWindowImplRoot`(~ ) garante que a janela se foi antes que o objeto seja destruído.
 
-`CWindowImpl` deriva de `CWindowImplBaseT`, que deriva de `CWindowImplRoot`, que deriva de `TBase` e [CMessageMap](../../atl/reference/cmessagemap-class.md).
+`CWindowImpl`deriva de `CWindowImplBaseT`, que `CWindowImplRoot`deriva de , `TBase` que deriva de e [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
 |Para saber mais sobre|Consulte|
 |--------------------------------|---------|
 |Criando controles|[Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md)|
-|Usando o Windows na ATL|[Classes de janela da ATL](../../atl/atl-window-classes.md)|
-|Assistente de Projeto da ATL|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|
+|Usando janelas no ATL|[Classes de janela atl](../../atl/atl-window-classes.md)|
+|Assistente de Projeto da ATL|[Como criar um projeto da ATL](../../atl/reference/creating-an-atl-project.md)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CMessageMap](../../atl/reference/cmessagemap-class.md)
+[Cmessagemap](../../atl/reference/cmessagemap-class.md)
 
 `TBase`
 
@@ -124,11 +124,11 @@ O destruidor de classe base (~ `CWindowImplRoot`) garante que a janela tenha des
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin. h
+**Cabeçalho:** atlwin.h
 
-##  <a name="create"></a>CWindowImpl:: criar
+## <a name="cwindowimplcreate"></a><a name="create"></a>CWindowImpl::Criar
 
-Cria uma janela com base em uma nova classe de janela.
+Cria uma janela baseada em uma nova classe de janela.
 
 ```
 HWND Create(
@@ -141,46 +141,46 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*hWndParent*<br/>
-no O identificador para a janela pai ou proprietário.
+*Hwndparent*<br/>
+[em] A alça da janela dos pais ou dodo.
 
 *Rect*<br/>
-no Uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) que especifica a posição da janela. O `RECT` pode ser passado por ponteiro ou por referência.
+[em] Uma estrutura [RECT](/windows/win32/api/windef/ns-windef-rect) especificando a posição da janela. O `RECT` pode ser passado por ponteiro ou por referência.
 
 *szWindowName*<br/>
-no Especifica o nome da janela. O valor padrão é NULL.
+[em] Especifica o nome da janela. O valor padrão é NULL.
 
-*dwStyle*<br/>
-no O estilo da janela. Esse valor é combinado com o estilo fornecido pela classe de características para a janela. O valor padrão fornece à classe de características controle total sobre o estilo. Para obter uma lista de valores possíveis, consulte [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) no SDK do Windows.
+*Dwstyle*<br/>
+[em] O estilo da janela. Este valor é combinado com o estilo fornecido pela classe de traços para a janela. O valor padrão dá às classes de características controle total sobre o estilo. Para obter uma lista de valores possíveis, consulte [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) no SDK do Windows.
 
-*dwExStyle*<br/>
-no O estilo de janela estendida. Esse valor é combinado com o estilo fornecido pela classe de características para a janela. O valor padrão fornece à classe de características controle total sobre o estilo. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
+*Dwexstyle*<br/>
+[em] O estilo de janela estendida. Este valor é combinado com o estilo fornecido pela classe de traços para a janela. O valor padrão dá às classes de características controle total sobre o estilo. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
 
-*MenuOrID*<br/>
-no Para uma janela filho, o identificador de janela. Para uma janela de nível superior, um identificador de menu para a janela. O valor padrão é **0u**.
+*Menuorid*<br/>
+[em] Para uma janela infantil, o identificador da janela. Para uma janela de nível superior, uma alça de menu para a janela. O valor padrão é **0U**.
 
 *lpCreateParam*<br/>
-no Um ponteiro para dados de criação de janela. Para obter uma descrição completa, consulte a descrição do parâmetro final para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw).
+[em] Um ponteiro para dados de criação de janelas. Para obter uma descrição completa, consulte a descrição do parâmetro final para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw).
 
 ### <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, o identificador para a janela recém-criada. Caso contrário, NULL.
+Se for bem sucedido, a alça para a janela recém-criada. Caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-`Create` primeiro registrará a classe de janela se ela ainda não tiver sido registrada. A janela recém-criada é anexada automaticamente ao objeto `CWindowImpl`.
+`Create`primeiro registra a classe da janela se ela ainda não foi registrada. A janela recém-criada é automaticamente `CWindowImpl` anexada ao objeto.
 
 > [!NOTE]
->  Não chame `Create` se você já tiver chamado [SubclassWindow](#subclasswindow).
+> Não ligue `Create` se você já chamou [SubclassWindow](#subclasswindow).
 
-Para usar uma classe de janela baseada em uma classe de janela existente, derive sua classe de `CWindowImpl` e inclua a macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . O procedimento de janela da classe de janela existente é salvo em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Para obter mais informações, consulte a visão geral do [CWindowImpl](../../atl/reference/cwindowimpl-class.md) .
+Para usar uma classe de janela baseada em uma classe `CWindowImpl` de janela existente, obtenha sua classe e inclua a [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro. O procedimento de janela da classe de janela existente é salvo em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Para obter mais informações, consulte a visão geral do [CWindowImpl.](../../atl/reference/cwindowimpl-class.md)
 
 > [!NOTE]
->  Se 0 for usado como o valor para o parâmetro *MenuOrID* , ele deverá ser especificado como 0u (o valor padrão) para evitar um erro do compilador.
+> Se 0 for usado como o valor para o parâmetro *MenuOrID,* ele deve ser especificado como 0U (o valor padrão) para evitar um erro do compilador.
 
-##  <a name="defwindowproc"></a>CWindowImpl::D efWindowProc
+## <a name="cwindowimpldefwindowproc"></a><a name="defwindowproc"></a>CWindowImpl::DefWindowProc
 
 Chamado pelo [WindowProc](#windowproc) para processar mensagens não tratadas pelo mapa de mensagens.
 
@@ -193,30 +193,30 @@ LRESULT DefWindowProc(
 LRESULT DefWindowProc();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*uMsg*<br/>
-no A mensagem enviada para a janela.
+*Umsg*<br/>
+[em] A mensagem enviada para a janela.
 
 *wParam*<br/>
-no Informações adicionais específicas da mensagem.
+[em] Informações específicas de mensagem adicionais.
 
 *lParam*<br/>
-no Informações adicionais específicas da mensagem.
+[em] Informações específicas de mensagem adicionais.
 
 ### <a name="return-value"></a>Valor retornado
 
-O resultado do processamento da mensagem.
+O resultado do processamento de mensagens.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, `DefWindowProc` chama a função Win32 [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) para enviar as informações da mensagem para o procedimento de janela especificado em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+Por padrão, `DefWindowProc` chama a função [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 para enviar as informações da mensagem para o procedimento de janela especificado no [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 A função sem parâmetros recupera automaticamente os parâmetros necessários da mensagem atual.
 
-##  <a name="getcurrentmessage"></a>CWindowImpl:: GetCurrentMessage
+## <a name="cwindowimplgetcurrentmessage"></a><a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage
 
-Retorna a mensagem atual, empacotada na estrutura de `MSG`.
+Retorna a mensagem atual, `MSG` embalada na estrutura.
 
 ```
 const MSG* GetCurrentMessage();
@@ -226,9 +226,9 @@ const MSG* GetCurrentMessage();
 
 A mensagem atual.
 
-##  <a name="getwindowproc"></a>CWindowImpl:: getwindowproc
+## <a name="cwindowimplgetwindowproc"></a><a name="getwindowproc"></a>CWindowImpl::GetWindowProc
 
-Retorna `WindowProc`, o procedimento de janela atual.
+Retorna `WindowProc`, o procedimento da janela atual.
 
 ```
 virtual WNDPROC GetWindowProc();
@@ -236,15 +236,15 @@ virtual WNDPROC GetWindowProc();
 
 ### <a name="return-value"></a>Valor retornado
 
-O procedimento da janela atual.
+O procedimento atual da janela.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua esse método para substituir o procedimento de janela pelo seu próprio.
+Substitua este método para substituir o procedimento da janela pelo seu próprio.
 
-##  <a name="getwndclassinfo"></a>CWindowImpl:: GetWndClassInfo
+## <a name="cwindowimplgetwndclassinfo"></a><a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo
 
-Chamado por [Create](#create) para acessar as informações de classe de janela.
+Chamado por [Criar](#create) para acessar as informações da classe de janela.
 
 ```
 static CWndClassInfo& GetWndClassInfo();
@@ -256,13 +256,13 @@ Uma instância estática de [CWndClassInfo](../../atl/reference/cwndclassinfo-cl
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, `CWindowImpl` obtém esse método por meio da macro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , que especifica uma nova classe de janela.
+Por padrão, `CWindowImpl` obtém esse método através da [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro, que especifica uma nova classe de janela.
 
-Para supergravar uma classe de janela existente, derive sua classe de `CWindowImpl` e inclua a macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) para substituir `GetWndClassInfo`. Para obter mais informações, consulte a visão geral do [CWindowImpl](../../atl/reference/cwindowimpl-class.md) .
+Para superclasse uma classe de janela `CWindowImpl` existente, obtenha sua classe `GetWndClassInfo`e inclua a [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro para substituir . Para obter mais informações, consulte a visão geral do [CWindowImpl.](../../atl/reference/cwindowimpl-class.md)
 
-Além de usar as macros DECLARE_WND_CLASS e DECLARE_WND_SUPERCLASS, você pode substituir `GetWndClassInfo` pela sua própria implementação.
+Além de usar as macros DECLARE_WND_CLASS `GetWndClassInfo` e DECLARE_WND_SUPERCLASS, você pode substituir com sua própria implementação.
 
-##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl:: m_pfnSuperWindowProc
+## <a name="cwindowimplm_pfnsuperwindowproc"></a><a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc
 
 Dependendo da janela, aponta para um dos seguintes procedimentos de janela.
 
@@ -274,56 +274,56 @@ WNDPROC m_pfnSuperWindowProc;
 
 |Tipo de janela|Procedimento de janela|
 |--------------------|----------------------|
-|Uma janela baseada em uma nova classe de janela, especificada por meio da macro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) .|A função Win32 [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw) .|
-|Uma janela baseada em uma classe de janela que modifica uma classe existente, especificada por meio da macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) .|O procedimento de janela da classe de janela existente.|
-|Uma janela de subclasse.|O procedimento da janela original da janela de subclasse.|
+|Uma janela baseada em uma nova classe de janela, especificada através da [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|A função [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw) Win32.|
+|Uma janela baseada em uma classe de janela que modifica uma classe existente, especificada através da [macro DECLARE_WND_SUPERCLASS.](window-class-macros.md#declare_wnd_superclass)|O procedimento de janela da classe de janela existente.|
+|Uma janela subclassificada.|O procedimento original da janela da janela subclassificada.|
 
-[CWindowImpl::D efwindowproc](#defwindowproc) envia informações da mensagem para o procedimento de janela salvo em `m_pfnSuperWindowProc`.
+[CWindowImpl::DefWindowProc](#defwindowproc) envia informações de mensagem `m_pfnSuperWindowProc`para o procedimento de janela salvo em .
 
-##  <a name="onfinalmessage"></a>CWindowImpl:: OnFinalMessage
+## <a name="cwindowimplonfinalmessage"></a><a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage
 
-Chamado depois de receber a última mensagem (normalmente WM_NCDESTROY).
+Chamado após receber a última mensagem (tipicamente WM_NCDESTROY).
 
 ```
 virtual void OnFinalMessage(HWND hWnd);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
-no Um identificador para a janela que está sendo destruída.
+[em] Uma alça da janela sendo destruída.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão de `OnFinalMessage` não faz nada, mas você pode substituir essa função para manipular a limpeza antes de destruir uma janela. Se você quiser excluir automaticamente o objeto na destruição de janela, poderá chamar **delete** . nesta função.
+A implementação `OnFinalMessage` padrão de não faz nada, mas você pode substituir esta função para lidar com a limpeza antes de destruir uma janela. Se você quiser excluir automaticamente seu objeto após a destruição da janela, você pode chamar **de excluir isso;** nesta função.
 
-##  <a name="subclasswindow"></a>CWindowImpl:: SubclassWindow
+## <a name="cwindowimplsubclasswindow"></a><a name="subclasswindow"></a>CWindowImpl::SubclassWindow
 
-Subclasses a janela identificada por *HWND* e a anexa ao objeto `CWindowImpl`.
+Subclasses da janela identificada por *hWnd* `CWindowImpl` e anexa-a ao objeto.
 
 ```
 BOOL SubclassWindow(HWND hWnd);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
-no O identificador para a janela que está sendo subclasse.
+[em] A alça da janela sendo subclassificada.
 
 ### <a name="return-value"></a>Valor retornado
 
-TRUE se a janela for subclasseda com êxito; caso contrário, FALSE.
+TRUE se a janela for subclassificada com sucesso; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-A janela de subclasse agora usa [CWindowImpl:: WindowProc](#windowproc). O procedimento de janela original é salvo em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+A janela subclassificada agora usa [CWindowImpl::WindowProc](#windowproc). O procedimento original da janela é salvo em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 > [!NOTE]
->  Não chame `SubclassWindow` se você já tiver chamado [Create](#create).
+> Não ligue `SubclassWindow` se você já chamou [Criar](#create).
 
-##  <a name="unsubclasswindow"></a>CWindowImpl:: UnsubclassWindow
+## <a name="cwindowimplunsubclasswindow"></a><a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow
 
-Desanexa a janela de subclasse do objeto `CWindowImpl` e restaura o procedimento de janela original, salvo em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+Destaca a janela subclassificada do `CWindowImpl` objeto e restaura o procedimento original da janela, salvo em [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 ```
 HWND UnsubclassWindow();
@@ -331,11 +331,11 @@ HWND UnsubclassWindow();
 
 ### <a name="return-value"></a>Valor retornado
 
-O identificador para a janela anteriormente subclasse.
+A alça da janela anteriormente subclassificada.
 
-##  <a name="windowproc"></a>CWindowImpl:: WindowProc
+## <a name="cwindowimplwindowproc"></a><a name="windowproc"></a>CWindowImpl::WindowProc
 
-Essa função estática implementa o procedimento de janela.
+Esta função estática implementa o procedimento da janela.
 
 ```
 static LRESULT CALLBACK WindowProc(
@@ -345,38 +345,38 @@ static LRESULT CALLBACK WindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
-no O identificador para a janela.
+[em] A alça da janela.
 
-*uMsg*<br/>
-no A mensagem enviada para a janela.
+*Umsg*<br/>
+[em] A mensagem enviada para a janela.
 
 *wParam*<br/>
-no Informações adicionais específicas da mensagem.
+[em] Informações específicas de mensagem adicionais.
 
 *lParam*<br/>
-no Informações adicionais específicas da mensagem.
+[em] Informações específicas de mensagem adicionais.
 
 ### <a name="return-value"></a>Valor retornado
 
-O resultado do processamento da mensagem.
+O resultado do processamento de mensagens.
 
 ### <a name="remarks"></a>Comentários
 
-`WindowProc` usa o mapa de mensagem padrão (declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) para direcionar mensagens para os manipuladores apropriados. Se necessário, `WindowProc` chama [DefWindowProc](#defwindowproc) para processamento de mensagens adicionais. Se a mensagem final não for tratada, `WindowProc` fará o seguinte:
+`WindowProc`usa o mapa de mensagem padrão (declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) para direcionar mensagens aos manipuladores apropriados. Se necessário, `WindowProc` chama [DefWindowProc](#defwindowproc) para processamento adicional de mensagens. Se a mensagem final `WindowProc` não for tratada, faça o seguinte:
 
-- Executa unsubclassing se a janela fosse unsubclassed.
+- Executa unsubclassing se a janela foi subclassificada.
 
 - Limpa o `m_hWnd`.
 
-- Chama [OnFinalMessage](#onfinalmessage) antes de a janela ser destruída.
+- Chama [OnFinalMessage](#onfinalmessage) antes que a janela seja destruída.
 
-Você pode substituir `WindowProc` para fornecer um mecanismo diferente para lidar com mensagens.
+Você pode `WindowProc` substituir para fornecer um mecanismo diferente para lidar com mensagens.
 
 ## <a name="see-also"></a>Confira também
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[Begin_msg_map](message-map-macros-atl.md#begin_msg_map)<br/>
 [Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

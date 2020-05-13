@@ -1,10 +1,13 @@
 ---
 title: lgamma, lgammaf, lgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lgamma
 - lgammaf
 - lgammal
+- _o_lgamma
+- _o_lgammaf
+- _o_lgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953367"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916445"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -62,14 +66,14 @@ long double lgamma( long double x ); //C++ only
 *x*<br/>
 O valor a ser computado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se for bem-sucedido, retorna o logaritmo natural do valor absoluto da função gama de *x*.
 
-|Problema|Valor de|
+|Problema|Retorno|
 |-----------|------------|
 |*x* = Nan|NaN|
-|*x* = ±0|+INFINITY|
+|*x* = ± 0|+INFINITY|
 |*x*= número inteiro negativo|+INFINITY|
 |±INFINITY|+INFINITY|
 |erro de polo|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
@@ -79,17 +83,19 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **lGamma** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **lGamma** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lGamma** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **lGamma** sempre pega e retorna um **Double**.
 
 Se x for um número racional, essa função retornará o logaritmo do fatorial de (x-1).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
+|**lGamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

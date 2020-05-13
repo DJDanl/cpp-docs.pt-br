@@ -1,0 +1,128 @@
+- name: C++ no Visual Studio
+  expanded: false
+  items:
+    - name: C++ no Visual Studio
+      href: ../overview/visual-cpp-in-visual-studio.md
+    - name: Visão geral do desenvolvimento em C++ no Visual Studio
+      href: ../overview/overview-of-cpp-development.md
+    - name: Novidades do C++ no Visual Studio
+      href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: Aprimoramentos de conformidade do C++ no Visual Studio
+      href: ../overview/cpp-conformance-improvements.md
+    - name: Conformidade com a linguagem do Microsoft C++
+      href: ../overview/visual-cpp-language-conformance.md
+    - name: Plataformas de destino com suporte
+      href: ../overview/supported-platforms-visual-cpp.md
+    - name: Ferramentas e funcionalidades do C++ em edições do Visual Studio
+      href: ../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md
+    - name: Exemplos
+      href: ../overview/visual-cpp-samples.md
+    - name: Ajuda e comunidade
+      href: ../overview/visual-cpp-help-and-community.md
+    - name: Como relatar um problema com o conjunto de ferramentas do Visual C++
+      href: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- name: Tutoriais do Visual Studio C++
+  expanded: false
+  items:
+    - name: Instalar o suporte ao C++ no Visual Studio
+      href: ../build/vscpp-step-0-installation.md
+    - name: Criar e editar um projeto de aplicativo de console C++
+      href: ../build/vscpp-step-1-create.md
+    - name: Desenvolver e executar um projeto de aplicativo de console C++
+      href: ../build/vscpp-step-2-build.md
+    - name: Criar seu segundo aplicativo C++
+      href: ../get-started/tutorial-console-cpp.md
+    - name: Criar um aplicativo UWP
+      href: /windows/uwp/cpp-and-winrt-apis/get-started
+    - name: Criar um aplicativo da área de trabalho do Windows
+      href: /windows/desktop/learnwin32/learn-to-program-for-windows
+    - name: Criar um jogo DirectX
+      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+- name: Sistemas de build e projetos
+  href: ../build/projects-and-build-systems-cpp.md
+- name: Ler e escrever código C++ no Visual Studio
+  href: ../ide/read-and-understand-code-cpp.md
+- name: Desenvolvimento da área de trabalho do Windows
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: Desenvolvimento da UWP
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: Desenvolvimento de jogos
+  href: ../overview/game-development-cpp.md
+- name: Desenvolvimento em Linux
+  href: ../linux/
+- name: Desenvolvimento móvel multiplataforma
+  href: ../cross-platform/
+- name: Desenvolvimento .NET com C++/CLI
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: Programação de Nuvem e da Web
+  href: ../cloud/cloud-and-web-programming-in-visual-cpp.md
+- name: Portar e atualizar código C++
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: Práticas recomendadas de segurança para C++
+  expanded: false
+  items:
+    - name: Práticas recomendadas de segurança para C++
+      href: ../security/security-best-practices-for-cpp.md
+    - name: Executar como membro do grupo de usuários
+      href: ../security/running-as-a-member-of-the-users-group.md
+    - name: Como o UAC (Controle de Conta de Usuário) afeta seu aplicativo
+      href: ../security/how-user-account-control-uac-affects-your-application.md
+    - name: Diretrizes para desenvolvedores de C++ para canais do lado de execução especulativos
+      href: ../security/developer-guidance-speculative-execution.md
+- name: Referência
+  expanded: false
+  items:
+    - name: Linguagem C/C++ e Bibliotecas padrão
+      href: ../cpp/c-cpp-language-and-standard-libraries.md
+    - name: Referência de linguagens
+      expanded: false
+      items:
+        - name: Linguagens
+          href: ../overview/languages-cpp.md
+        - name: Referência de linguagem C
+          href: ../c-language/c-language-reference.md
+        - name: Referência da linguagem C++
+          href: ../cpp/cpp-language-reference.md
+        - name: Referência de pré-processador C/C++
+          href: ../preprocessor/c-cpp-preprocessor-reference.md
+        - name: Intrínsecos do compilador e linguagem assembly
+          href: ../intrinsics/compiler-intrinsics-and-assembly-language.md
+        - name: Intrínsecos do compilador
+          href: ../intrinsics/compiler-intrinsics.md
+        - name: Referência do assembler ARM
+          href: ../assembler/arm/arm-assembler-reference.md
+        - name: Assembly embutido no MSVC
+          href: ../assembler/inline/inline-assembler.md
+        - name: Referência do MASM (Microsoft Macro Assembler)
+          href: ../assembler/masm/microsoft-macro-assembler-reference.md
+        - name: Extensões de componentes para .NET e UWP
+          href: ../extensions/component-extensions-for-runtime-platforms.md
+        - name: Atributos C++ para COM e .NET
+          href: ../windows/attributes/cpp-attributes-com-net.md
+    - name: Referência de bibliotecas
+      expanded: false
+      items:
+        - name: Libraries
+          href: ../overview/libraries-cpp.md
+        - name: Referência da CRT (biblioteca em tempo de execução) C
+          href: ../c-runtime-library/
+        - name: Referência da Biblioteca Padrão C++
+          href: ../standard-library/
+        - name: Biblioteca SafeInt
+          expanded: false
+          items:
+            - name: Biblioteca SafeInt
+              href: ../safeint/safeint-library.md
+            - name: Classe SafeInt
+              href: ../safeint/safeint-class.md
+            - name: Funções (SafeInt)
+              href: ../safeint/safeint-functions.md
+            - name: Classe SafeIntException
+              href: ../safeint/safeintexception-class.md
+        - name: MFC/ATL
+          href: ../mfc/mfc-and-atl.md
+        - name: Bibliotecas paralelas
+          href: ../parallel/
+          items: null
+        - name: Bibliotecas de acesso a dados
+          href: ../data/

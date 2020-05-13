@@ -1,6 +1,6 @@
 ---
 title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - nextafterf
 - _nextafterf
@@ -10,6 +10,13 @@ api_name:
 - nexttoward
 - nexttowardf
 - nexttowardl
+- _o__nextafter
+- _o_nextafter
+- _o_nextafterf
+- _o_nextafterl
+- _o_nexttoward
+- _o_nexttowardf
+- _o_nexttowardl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: c6b100fb24d879a16780650d8a374ec26f28c048
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857717"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909360"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -90,7 +98,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 *x*<br/>
 O valor do ponto flutuante a ser iniciado.
 
-*y*<br/>
+*Iar*<br/>
 O valor do ponto flutuante a ser destinado.
 
 ## <a name="return-value"></a>Valor retornado
@@ -101,18 +109,20 @@ Retorna o próximo valor de ponto flutuante reapresentável do tipo de retorno a
 
 As famílias de funções **nextafter** e **nexttoward** são equivalentes, exceto para o tipo de parâmetro de *y*. Se *x* e *y* forem iguais, o valor retornado será *y* convertido para o tipo de retorno.
 
-Como C++ o permite sobrecarga, se você incluir \<cmath > poderá chamar sobrecargas de **nextafter** e **nexttoward** que retornam tipos **float** e **Long** **Double** . Em um programa C, **nextafter** e **nexttoward** sempre retornam **Double**.
+Como \<o C++ permite sobrecarga, se você incluir cmath> poderá chamar sobrecargas de **nextafter** e **nexttoward** que retornam tipos **float** e **Long** **Double** . Em um programa C, **nextafter** e **nexttoward** sempre retornam **Double**.
 
 As funções **_nextafter** e **_nextafterf** são específicas da Microsoft. A função **_nextafterf** só está disponível durante a compilação para x64.
 
-## <a name="requirements"></a>Requisitos do
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------------|-------------------------------|
 |**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> ou \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> ou \<cfloat>|
 
-Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

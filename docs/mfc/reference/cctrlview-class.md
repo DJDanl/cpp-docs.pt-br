@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-ms.openlocfilehash: 334f139b81afeb06d57cbd128abe9e413b1fd0e7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f77f1c265920bd160da790647ef754c55e6dbda3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507155"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369353"
 ---
 # <a name="cctrlview-class"></a>Classe CCtrlView
 
-Adapta a arquitetura de exibição de documento para os controles comuns com suporte no Windows 98 e nas versões 3,51 e posteriores do Windows NT.
+Adapta a arquitetura de visualização de documentos aos controles comuns suportados pelas versões 3.51 do Windows 98 e Windows NT e posteriores.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,37 +45,37 @@ class CCtrlView : public CView
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CCtrlView:: OnDraw](#ondraw)|Chamado pelo Framework para desenhar usando o contexto de dispositivo especificado.|
-|[CCtrlView::PreCreateWindow](#precreatewindow)|Chamado antes da criação da janela do Windows anexada a `CCtrlView` este objeto.|
+|[CCtrlView::OnDraw](#ondraw)|Chamado pela estrutura para desenhar usando o contexto do dispositivo especificado.|
+|[CCtrlView::PreCriarjanela](#precreatewindow)|Chamado antes da criação da janela `CCtrlView` do Windows anexada a este objeto.|
 
-### <a name="protected-data-members"></a>Membros de dados protegidos
+### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Contém o estilo padrão para a classe View.|
-|[CCtrlView::m_strClass](#m_strclass)|Contém o nome da classe do Windows para a classe View.|
+|[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Contém o estilo padrão para a classe de exibição.|
+|[CCtrlView::m_strClass](#m_strclass)|Contém o nome da classe Windows para a classe de exibição.|
 
 ## <a name="remarks"></a>Comentários
 
-A classe `CCtrlView` e seus derivados, [CEditView](../../mfc/reference/ceditview-class.md), [CListView](../../mfc/reference/clistview-class.md), [CTreeView](../../mfc/reference/ctreeview-class.md)e [CRichEditView](../../mfc/reference/cricheditview-class.md), adaptam a arquitetura de exibição de documento para os novos controles comuns com suporte no Windows 95/98 e no Windows NT versões 3,51 e posterior. Para obter mais informações sobre a arquitetura de exibição de documento, consulte [arquitetura de documento/exibição](../../mfc/document-view-architecture.md).
+A `CCtrlView` classe e seus derivados, [CEditView,](../../mfc/reference/ceditview-class.md) [CListView,](../../mfc/reference/clistview-class.md) [CTreeView](../../mfc/reference/ctreeview-class.md)e [CRichEditView,](../../mfc/reference/cricheditview-class.md)adaptam a arquitetura de exibição de documentos aos novos controles comuns suportados pelas versões 3.51 do Windows 95/98 e Windows NT 3.51 e posteriores. Para obter mais informações sobre a arquitetura de exibição de documentos, consulte [Arquitetura de documentos/exibição](../../mfc/document-view-architecture.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cvisualização](../../mfc/reference/cview-class.md)
+[CView](../../mfc/reference/cview-class.md)
 
 `CCtrlView`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Afxwin. h
+**Cabeçalho:** afxwin.h
 
-##  <a name="cctrlview"></a>CCtrlView::CCtrlView
+## <a name="cctrlviewcctrlview"></a><a name="cctrlview"></a>CCtrlView::CCtrlView
 
 Constrói um objeto `CCtrlView`.
 
@@ -88,26 +88,26 @@ CCtrlView(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszClass*<br/>
-Nome da classe do Windows da classe View.
+Nome da classe do Windows da classe de exibição.
 
-*dwStyle*<br/>
-Estilo da classe de exibição.
+*Dwstyle*<br/>
+Estilo da aula de vista.
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura chama o Construtor quando uma nova janela de quadro é criada ou uma janela é dividida. Substitua [cvisualização:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) para inicializar a exibição depois que o documento for anexado. Chame [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) ou [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex) para criar o objeto do Windows.
+A estrutura chama o construtor quando uma nova janela de quadro é criada ou uma janela é dividida. Anular [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) para inicializar a exibição depois que o documento é anexado. Ligue [para CWnd::Create](../../mfc/reference/cwnd-class.md#create) ou [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) para criar o objeto Do Windows.
 
-##  <a name="m_strclass"></a>CCtrlView::m_strClass
+## <a name="cctrlviewm_strclass"></a><a name="m_strclass"></a>CCtrlView::m_strClass
 
-Contém o nome da classe do Windows para a classe View.
+Contém o nome da classe Windows para a classe de exibição.
 
 ```
 CString m_strClass;
 ```
 
-##  <a name="m_dwdefaultstyle"></a>  CCtrlView::m_dwDefaultStyle
+## <a name="cctrlviewm_dwdefaultstyle"></a><a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle
 
-Contém o estilo padrão para a classe View.
+Contém o estilo padrão para a classe de exibição.
 
 ```
 DWORD m_dwDefaultStyle;
@@ -115,11 +115,11 @@ DWORD m_dwDefaultStyle;
 
 ### <a name="remarks"></a>Comentários
 
-Esse estilo é aplicado quando uma janela é criada.
+Este estilo é aplicado quando uma janela é criada.
 
-##  <a name="ondraw"></a>CCtrlView:: OnDraw
+## <a name="cctrlviewondraw"></a><a name="ondraw"></a>CCtrlView::OnDraw
 
-Chamado pelo Framework para desenhar o conteúdo do `CCtrlView` objeto usando o contexto de dispositivo especificado.
+Chamado pela estrutura para desenhar `CCtrlView` o conteúdo do objeto usando o contexto do dispositivo especificado.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -128,15 +128,15 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-Um ponteiro para o contexto do dispositivo no qual o desenho ocorre.
+Um ponteiro para o contexto do dispositivo no qual ocorre o desenho.
 
 ### <a name="remarks"></a>Comentários
 
-`OnDraw`é normalmente chamado para exibição de tela, passando um contexto de dispositivo de tela especificado pelo *PDC*.
+`OnDraw`é tipicamente chamado para exibição de tela, passando um contexto de dispositivo de tela especificado pelo *pDC*.
 
-##  <a name="precreatewindow"></a>CCtrlView::P recreatewindow
+## <a name="cctrlviewprecreatewindow"></a><a name="precreatewindow"></a>CCtrlView::PreCriarjanela
 
-Chamado antes da criação da janela do Windows anexada a `CWnd` este objeto.
+Chamado antes da criação da janela `CWnd` do Windows anexada a este objeto.
 
 ```
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -144,27 +144,27 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>Parâmetros
 
-*cs*<br/>
-Uma estrutura [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw).
+*Cs*<br/>
+Uma [estrutura CRIATRUTE.](/windows/win32/api/winuser/ns-winuser-createstructw)
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se a criação da janela continuar; 0 para indicar falha na criação.
+Não zero se a criação da janela continuar; 0 para indicar falha na criação.
 
 ### <a name="remarks"></a>Comentários
 
 Nunca chame essa função diretamente.
 
-A implementação padrão dessa função verifica um nome de classe de janela nula e substitui um padrão apropriado. Substitua essa função de membro para modificar `CREATESTRUCT` a estrutura antes de a janela ser criada.
+A implementação padrão desta função verifica o nome da classe da janela NULL e substitui um padrão apropriado. Substituir esta função de `CREATESTRUCT` membro para modificar a estrutura antes que a janela seja criada.
 
-Cada classe derivada de `CCtrlView` adiciona sua própria funcionalidade à sua substituição de `PreCreateWindow`. Por design, essas derivações do `PreCreateWindow` não são documentadas. Para determinar os estilos apropriados para cada classe e as interdependências entre os estilos, você pode examinar o código-fonte do MFC para a classe base do seu aplicativo. Se você optar por substituir `PreCreateWindow`, poderá determinar se os estilos usados na classe base do seu aplicativo fornecem a funcionalidade necessária usando as informações coletadas do código-fonte do MFC.
+Cada classe derivada adiciona `CCtrlView` sua própria funcionalidade `PreCreateWindow`à sua substituição de . Pelo projeto, essas `PreCreateWindow` derivações não estão documentadas. Para determinar os estilos apropriados para cada classe e as interdependências entre os estilos, você pode examinar o código fonte do MFC para a classe base do aplicativo. Se você optar `PreCreateWindow`por substituir, você pode determinar se os estilos usados na classe base do aplicativo fornecem a funcionalidade necessária usando informações coletadas a partir do código-fonte do MFC.
 
-Para obter mais informações sobre como alterar estilos de janela, consulte [alterando os estilos de uma janela criada pelo MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
+Para obter mais informações sobre a alteração de estilos de janela, consulte a [Alteração dos Estilos de uma Janela Criada pelo MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
-[Classe CTreeView](../../mfc/reference/ctreeview-class.md)<br/>
+[Classe CtreeView](../../mfc/reference/ctreeview-class.md)<br/>
 [Classe CListView](../../mfc/reference/clistview-class.md)<br/>
 [Classe CRichEditView](../../mfc/reference/cricheditview-class.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326281"
 ---
 # <a name="c-comments"></a>Comentários C
 
-Um “comentário” é uma sequência de caracteres que começam com uma combinação de barra e asterisco (<strong>/\*</strong>) que é tratada como um único caractere de espaço em branco e ignorada pelo compilador de outra forma. Um comentário pode incluir qualquer combinação de caracteres do conjunto de caracteres representável, inclusive caracteres de nova linha, mas excluindo o delimitador de fim do comentário (<strong>\*/</strong>). Os comentários podem ocupar mais de uma linha mas não podem ser aninhados.
+Um "comentário" é uma sequência de caracteres que começa com uma combinação de barra/asterisco<strong>/</strong>() que é tratada como um único caractere de espaço em branco pelo compilador e, caso contrário, é ignorada. Um comentário pode incluir qualquer combinação de caracteres do conjunto de caracteres representáveis, incluindo caracteres de nova linha, mas excluindo o delimitador de<strong>\*</strong>"final comment" (). Os comentários podem ocupar mais de uma linha mas não podem ser aninhados.
 
 Os comentários podem aparecer em qualquer lugar em que um caractere de espaço em branco é permitido. Como o compilador trata um comentário como um único caractere de espaço em branco, você não pode incluir comentários nos tokens. O compilador ignora os caracteres no comentário.
 
@@ -59,15 +59,15 @@ O erro ocorre porque o compilador reconhece o primeiro `*/`, após as palavras `
 
 Embora você possa usar comentários para executar determinadas linhas de código inativo para fins de teste, as políticas `#if` e `#endif` do pré-processador e a compilação condicional são uma alternativa útil para essa tarefa. Para obter mais informações, consulte [Diretivas do pré-processador](../preprocessor/preprocessor-directives.md) na *Referência do pré-processador*.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-O compilador da Microsoft também dá suporte aos comentários de linha única precedidos por duas barras (__//__). Se você compilar com /Za (padrão ANSI), esses comentários gerarão erros. Esses comentários não podem se estender para uma segunda linha.
+O compilador da Microsoft também dá suporte a comentários de linha única precedidos por duas__//__ barras (). Se você compilar com /Za (padrão ANSI), esses comentários gerarão erros. Esses comentários não podem se estender para uma segunda linha.
 
 ```C
 // This is a valid comment
 ```
 
-Os comentários que começam com duas barras (__//__) são finalizados pelo caractere de nova linha que não é precedido por um caractere de escape. No exemplo a seguir, o caractere de nova linha é precedido por uma barra invertida (**\\**), criando uma "sequência de escape." Essa sequência de escape faz com que o compilador trate a próxima linha como parte da linha anterior. (Para obter mais informações, consulte [Sequências de escape](../c-language/escape-sequences.md).)
+Os comentários que começam com duas barras (__//__) são encerrados pelo próximo caractere de nova linha que não é precedido por um caractere de escape. No próximo exemplo, o caractere de nova linha é precedido por uma barra invertida (**\\**), criando uma "sequência de escape". Essa sequência de escape faz com que o compilador trate a próxima linha como parte da linha anterior. (Para obter mais informações, consulte [Sequências de escape](../c-language/escape-sequences.md).)
 
 ```C
 // my comment \
@@ -78,8 +78,8 @@ Portanto, a instrução `i++;` é comentada.
 
 O padrão do Microsoft C é que as extensões da Microsoft sejam habilitadas. Use /Za para desabilitar essas extensões.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tokens C](../c-language/c-tokens.md)

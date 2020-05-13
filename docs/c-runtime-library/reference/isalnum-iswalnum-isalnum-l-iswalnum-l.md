@@ -1,11 +1,13 @@
 ---
 title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _iswalnum_l
 - _isalnum_l
 - iswalnum
 - isalnum
+- _o_isalnum
+- _o_iswalnum
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: 636e43a921c2b859db3a31b3dd658112f4e8e9f4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e32cdd2ad13ead282840e192e572757d759110f7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954600"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919809"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -62,13 +65,13 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere alfanumérico. **isalnum** retornará um valor diferente de zero se **isalpha** ou **IsDigit** for diferente de zero para *c*, ou seja, se *c* estiver dentro dos intervalos de a-z, a-z ou 0-9. **iswalnum** retornará um valor diferente de zero se **iswalpha** ou **iswdigit** for diferente de zero para *c*. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
@@ -83,6 +86,10 @@ O comportamento de **isalnum** e **_isalnum_l** será indefinido se *c* não for
 |**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
 |**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
 
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -92,10 +99,10 @@ O comportamento de **isalnum** e **_isalnum_l** será indefinido se *c* não for
 |**_isalnum_l**|\<ctype.h>|
 |**_iswalnum_l**|\<ctype.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -4,10 +4,10 @@ description: Descreve como compilar, executar e depurar o código no destino rem
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "80077832"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implantar, executar e depurar o projeto do Linux
@@ -134,17 +134,17 @@ No Visual Studio de 2019 versão 16.1, você pode separar o computador de compil
 
 ### <a name="msbuild-based-projects"></a>Projetos baseados em MSBuild
 
-Por padrão, o computador de depuração remoto é o mesmo que o computador de compilação remoto (**Propriedades da Configuração** > **Geral** > **Computador de Compilação Remoto**). Para especificar um novo computador de depuração remoto, clique com botão direito no projeto no **Gerenciador de Soluções** e vá para **Propriedades da Configuração** > **Depuração** > **Computador de Depuração Remoto**.  
+Por padrão, a máquina de depuração remota é a mesma da máquina de compilação remota **(Configuration Properties** > **General** > **Remote Build Machine**). Para especificar um novo computador de depuração remoto, clique com botão direito no projeto no **Gerenciador de Soluções** e vá para **Propriedades da Configuração** > **Depuração** > **Computador de Depuração Remoto**.  
 
 ![Computador de depuração remoto do Linux](media/linux-remote-debug-machine.png)
 
-O menu suspenso para **Computador de Depuração Remoto** é preenchido com todas as conexões remotas estabelecidas. Para adicionar uma nova conexão remota, navegue até **Ferramentas** > **Opções** > **Plataforma Cruzada** > **Gerenciador de Conexões** ou pesquise "Gerenciador de Conexões" no **Início Rápido**. Você também pode especificar um novo diretório de implantação remoto nas Páginas de Propriedades do projeto (**Propriedades da Configuração** > **Geral** > **Diretório de Implantação Remoto**).
+O menu suspenso para **Computador de Depuração Remoto** é preenchido com todas as conexões remotas estabelecidas. Para adicionar uma nova conexão remota, navegue até o **Gerenciador** > de**Conexões entre** **Plataformas** > **Cross Platform** > de Ferramentas ou procure por "Gerenciador de Conexões" no **Lançamento Rápido**. Você também pode especificar um novo diretório de implantação remota nas páginas de propriedades do projeto (Configuration**Properties** > **General** > **Remote Deploy Directory).**
 
 Por padrão, somente os arquivos necessários para depurar o processo serão implantados no computador de depuração remoto. Você pode usar o **Gerenciador de Soluções** para configurar os arquivos de origem que serão implantados no computador de depuração remoto. Ao clicar em um arquivo de origem, você verá uma visualização de suas Propriedades de Arquivo logo abaixo do Gerenciador de Soluções.
 
 ![Arquivos implantáveis do Linux](media/linux-deployable-content.png)
 
-A propriedade **Content** especifica se o arquivo será implantado no computador de depuração remoto. Você pode desabilitar totalmente a implantação navegando até **Páginas de Propriedades** > **Configuration Manager** e desmarcando a opção **Implantar** da configuração desejada.
+A propriedade **Content** especifica se o arquivo será implantado no computador de depuração remoto. Você pode desativar a implantação inteiramente navegando no**Gerenciador de Configuração de** **Páginas** > de Propriedade e desverificando **o Implante** para a configuração desejada.
 
 Em alguns casos, você pode exigir mais controle sobre a implantação do projeto. Por exemplo, alguns arquivos que você quer implantar podem estar fora da sua solução ou você quer personalizar o seu diretório de implantação remoto por arquivo ou diretório. Nesses casos, acrescente os seguintes blocos de código ao arquivo .vcxproj e substitua "example.cpp" pelos nomes de arquivo reais:
 
@@ -171,7 +171,7 @@ Para projetos do CMake que se destinam a um computador Linux remoto, você pode 
 
 ![Computador de depuração remoto do CMake](media/cmake-remote-debug-machine.png)
 
-O IntelliSense sugere uma lista de todas as conexões remotas estabelecidas. É possível adicionar uma nova conexão remota navegando até **Ferramentas** > **Opções** > **Plataforma Cruzada** > **Gerenciador de Conexões** ou pesquisando "Gerenciador de Conexões" no **Início Rápido**.
+O IntelliSense sugere uma lista de todas as conexões remotas estabelecidas. Você pode adicionar uma nova conexão remota navegando para **o Tools** > **Options** > **Cross Platform** > **Connection Manager** ou procurando por "Connection Manager" no Quick **Launch**.
 
 Se quiser controle completo sobre a implantação, você poderá acrescentar os seguintes blocos de código ao arquivo launch.vs.json. Lembre-se de substituir os valores do espaço reservado pelos valores reais:
 

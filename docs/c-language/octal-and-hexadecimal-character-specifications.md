@@ -6,15 +6,15 @@ helpviewer_keywords:
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
 ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148927"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343377"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Especificações de caractere octa e hexadecimal
 
-A sequência **\\**<em>ooo</em> significa que é possível especificar qualquer caractere no conjunto de caracteres ASCII como um código de caracteres octal de três dígitos. O valor numérico inteiro octal especifica o valor de caractere desejado ou do caractere largo.
+A sequência **\\** <em>OOO</em> significa que você pode especificar qualquer caractere no conjunto de caracteres ASCII como um código de caractere octal de três dígitos. O valor numérico inteiro octal especifica o valor de caractere desejado ou do caractere largo.
 
 De maneira semelhante, a sequência **\x**<em>hhh</em> permite especificar qualquer caractere ASCII como um código de caracteres hexadecimal. Por exemplo, o caractere de backspace ASCII pode ser atribuído como a sequência de escape C normal (**\b**) ou codificado como **\010** (octal) ou **\x008** (hexadecimal).
 
@@ -37,6 +37,6 @@ Para valores hexadecimais, você pode dividir a cadeia de caracteres para mostra
 "\xab" "c" /* two characters */
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Constantes de caractere C](../c-language/c-character-constants.md)

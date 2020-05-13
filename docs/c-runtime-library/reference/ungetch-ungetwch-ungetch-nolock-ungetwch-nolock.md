@@ -1,11 +1,15 @@
 ---
 title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
+- _o__ungetch
+- _o__ungetch_nolock
+- _o__ungetwch
+- _o__ungetwch_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443754"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909297"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -79,7 +84,7 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 O caractere a ser enviado.
 
 ## <a name="return-value"></a>Valor retornado
@@ -92,6 +97,8 @@ Essas funções enviam o caractere *c* de volta para o console, fazendo com que 
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -99,16 +106,16 @@ As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não s
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**_ungetch**, **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**, **_ungetwch_nolock**|\<conio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_ungetch.c
@@ -150,8 +157,8 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[E/S de porta e console](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

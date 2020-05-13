@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 9e8334db52e05f4a61adb7256e87ed611f0d3ecb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 17af246a85c4e3f1e0c7eb9d387161ad7b5123a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689278"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377417"
 ---
 # <a name="move_iterator-class"></a>Classe move_iterator
 
@@ -51,14 +51,14 @@ Um `move_iterator` pode ser capaz de operações que não são definidas pelo it
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|Descrição|
 |-|-|
 |[iterator_type](#iterator_type)|Um sinônimo para o parâmetro de modelo `RandomIterator`.|
-|[iterator_category](#iterator_category)|Um sinônimo para uma expressão **TypeName** mais longa do mesmo nome, `iterator_category` identifica as capacidades gerais do iterador.|
-|[value_type](#value_type)|Um sinônimo para uma expressão **TypeName** mais longa do mesmo nome, `value_type` descreve o tipo dos elementos do iterador.|
-|[difference_type](#difference_type)|Um sinônimo para uma expressão **TypeName** mais longa do mesmo nome, `difference_type` descreve o tipo integral necessário para expressar valores de diferença entre elementos.|
-|[pointer](#pointer)|Um sinônimo para o parâmetro de modelo `RandomIterator`.|
-|[reference](#reference)|Um sinônimo para a referência `rvalue``value_type&&`.|
+|[iterator_category](#iterator_category)|Um sinônimo para uma expressão de nome `iterator_category` de **tipo** mais longo de mesmo nome, identifica as habilidades gerais do ativador.|
+|[Value_type](#value_type)|Um sinônimo para uma expressão de nome `value_type` de **tipo** mais longo de mesmo nome, descreve que tipo são os elementos do iterador.|
+|[difference_type](#difference_type)|Um sinônimo para uma expressão de nome `difference_type` de **tipo** mais longo de mesmo nome, descreve o tipo integral necessário para expressar valores de diferença entre os elementos.|
+|[ponteiro](#pointer)|Um sinônimo para o parâmetro de modelo `RandomIterator`.|
+|[Referência](#reference)|Um sinônimo para a referência `rvalue``value_type&&`.|
 
 ### <a name="member-functions"></a>Funções de membro
 
@@ -70,15 +70,15 @@ Um `move_iterator` pode ser capaz de operações que não são definidas pelo it
 
 |Operador|Descrição|
 |-|-|
-|[move_iterator::operator*](#op_star)|Retorna `(reference)*base().`|
-|[move_iterator::operator++](#op_add_add)|Incrementa o iterador armazenado. O comportamento exato depende do tipo de operação: pré-incremento ou pós-incremento.|
+|[move_iterator:operador*](#op_star)|Retorna `(reference)*base().`|
+|[move_iterator:operador++](#op_add_add)|Incrementa o iterador armazenado. O comportamento exato depende do tipo de operação: pré-incremento ou pós-incremento.|
 |[move_iterator::operator--](#operator--)|Decrementa o iterador armazenado. O comportamento exato depende do tipo de operação: pré-decremento ou pós-decremento.|
-|[move_iterator::operator-&gt;](#op_arrow)|Retorna `&**this`.|
-|[move_iterator::operator-](#operator-)|Retorna `move_iterator(*this) -=` subtraindo primeiro o valor do lado direito da posição atual.|
-|[move_iterator::operator[]](#op_at)|Retorna `(reference)*(*this + off)`. Permite especificar um deslocamento da base atual para obter o valor nessa posição.|
-|[move_iterator::operator+](#op_add)|Retorna `move_iterator(*this) +=` do valor. Permite adicionar um deslocamento à base para obter o valor nessa posição.|
-|[move_iterator::operator+=](#op_add_eq)|Adiciona o valor do lado direito ao iterador armazenado e retorna `*this`.|
-|[move_iterator::operator-=](#operator-_eq)|Subtrai o valor do lado direito do iterador armazenado e retorna `*this`.|
+|[move_iterator::operador-&gt;](#op_arrow)|Retorna `&**this`.|
+|[move_iterator::operador-](#operator-)|Retorna `move_iterator(*this) -=` subtraindo primeiro o valor do lado direito da posição atual.|
+|[move_iterator:operador[]](#op_at)|Retorna `(reference)*(*this + off)`. Permite especificar um deslocamento da base atual para obter o valor nessa posição.|
+|[move_iterator:operador+](#op_add)|Retorna `move_iterator(*this) +=` do valor. Permite adicionar um deslocamento à base para obter o valor nessa posição.|
+|[move_iterator:operador+=](#op_add_eq)|Adiciona o valor do lado direito ao iterador armazenado e retorna `*this`.|
+|[move_iterator:operador-=](#operator-_eq)|Subtrai o valor do lado direito do iterador armazenado e retorna `*this`.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -86,7 +86,7 @@ Um `move_iterator` pode ser capaz de operações que não são definidas pelo it
 
 **Namespace:** std
 
-## <a name="base"></a>  move_iterator::base
+## <a name="move_iteratorbase"></a><a name="base"></a>move_iterator:base
 
 Retorna o iterador armazenado para este `move_iterator`.
 
@@ -98,9 +98,9 @@ RandomIterator base() const;
 
 A função membro retorna o iterador armazenado.
 
-## <a name="difference_type"></a>  move_iterator::difference_type
+## <a name="move_iteratordifference_type"></a><a name="difference_type"></a>move_iterator::difference_type
 
-O tipo `difference_type` é uma `typedef` `move_iterator` com base no `difference_type` de características do iterador e pode ser usado de forma intercambiável com ele.
+O tipo `difference_type` é um `move_iterator` `typedef` com base na característica de iterador `difference_type` e podem ser usados alternadamente com ele.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::difference_type difference_type;
@@ -110,9 +110,9 @@ typedef typename iterator_traits<RandomIterator>::difference_type difference_typ
 
 O tipo é um sinônimo para a característica do iterador `typename iterator_traits<RandomIterator>::pointer`.
 
-## <a name="iterator_category"></a>  move_iterator::iterator_category
+## <a name="move_iteratoriterator_category"></a><a name="iterator_category"></a>move_iterator:iterator_category
 
-O tipo `iterator_category` é uma `typedef` `move_iterator` com base no `iterator_category` de características do iterador e pode ser usado de forma intercambiável com ele.
+O tipo `iterator_category` é um `move_iterator` `typedef` com base na característica de iterador `iterator_category` e podem ser usados alternadamente com ele.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::iterator_category  iterator_category;
@@ -122,7 +122,7 @@ typedef typename iterator_traits<RandomIterator>::iterator_category  iterator_ca
 
 O tipo é um sinônimo para a característica do iterador `typename iterator_traits<RandomIterator>::iterator_category`.
 
-## <a name="iterator_type"></a>  move_iterator::iterator_type
+## <a name="move_iteratoriterator_type"></a><a name="iterator_type"></a>move_iterator:iterator_type
 
 O tipo `iterator_type` é baseado no parâmetro de modelo `RandomIterator` para o modelo de classe `move_iterator` e pode ser usado alternadamente em seu lugar.
 
@@ -134,7 +134,7 @@ typedef RandomIterator iterator_type;
 
 O tipo é um sinônimo do parâmetro de modelo `RandomIterator`.
 
-## <a name="move_iterator"></a>  move_iterator::move_iterator
+## <a name="move_iteratormove_iterator"></a><a name="move_iterator"></a>move_iterator:move_iterator
 
 Constrói um iterador de movimentação. Usa o parâmetro como o iterador armazenado.
 
@@ -147,14 +147,14 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *à direita*
+*Certo*\
 O iterador a ser usado como o iterador armazenado.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor inicializa o iterador armazenado com o construtor padrão. Os construtores restantes inicializam o iterador armazenado com `base.base()`.
 
-## <a name="op_add_eq"></a>  move_iterator::operator+=
+## <a name="move_iteratoroperator"></a><a name="op_add_eq"></a>move_iterator:operador+=
 
 Adiciona um deslocamento ao iterador armazenado, para que o iterador armazenado aponte para o elemento no novo local atual. O operador move então o novo elemento atual.
 
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *_Off*
+*_Off*\
 Um deslocamento para adicionar à posição atual para determinar a nova posição atual.
 
 ### <a name="return-value"></a>Valor retornado
@@ -173,9 +173,9 @@ Retorna o novo elemento atual.
 
 ### <a name="remarks"></a>Comentários
 
-O operador adiciona *_Off* ao iterador armazenado. Em seguida, retorna `*this`.
+O operador adiciona *_Off* ao tempo réterizador armazenado. Em seguida, retorna `*this`.
 
-## <a name="operator-_eq"></a>  move_iterator::operator-=
+## <a name="move_iteratoroperator-"></a><a name="operator-_eq"></a>move_iterator:operador-=
 
 Move entre um número especificado de elementos anteriores. Este operador subtrai um deslocamento do iterador armazenado.
 
@@ -189,7 +189,7 @@ move_iterator& operator-=(difference_type _Off);
 
 O operador avalia `*this += -_Off`. Em seguida, retorna `*this`.
 
-## <a name="op_add_add"></a>  move_iterator::operator++
+## <a name="move_iteratoroperator"></a><a name="op_add_add"></a>move_iterator:operador++
 
 Incrementa o iterador armazenado que pertence a este `move_iterator.`. O elemento atual é acessado pelo operador pós-incremento. O próximo elemento é acessado pelo operador pré-incremento.
 
@@ -206,7 +206,7 @@ O primeiro operador (pré-incremento) incrementa o iterador armazenado. Em segui
 
 O segundo operador (pós-incremento) faz uma cópia do `*this`, avalia `++*this`. E retorna a cópia.
 
-## <a name="op_add"></a>  move_iterator::operator+
+## <a name="move_iteratoroperator"></a><a name="op_add"></a>move_iterator:operador+
 
 Retorna a posição do iterador avançada por qualquer número de elementos.
 
@@ -218,9 +218,9 @@ move_iterator operator+(difference_type _Off) const;
 
 ### <a name="remarks"></a>Comentários
 
-O operador retorna `move_iterator(*this) +=` `_Off`.
+O operador `move_iterator(*this) +=` `_Off`retorna.
 
-## <a name="op_at"></a>  move_iterator::operator[]
+## <a name="move_iteratoroperator"></a><a name="op_at"></a>move_iterator:operador[]
 
 Permite o acesso de índice de matriz a elementos em uma série do `move iterator`.
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 O operador retorna `(reference)*(*this + _Off)`.
 
-## <a name="operator--"></a>  move_iterator::operator--
+## <a name="move_iteratoroperator--"></a><a name="operator--"></a>move_iterator::operador--
 
 Os operadores de membro pré e pós-incremento realizam uma diminuição no iterador armazenado.
 
@@ -251,7 +251,7 @@ O primeiro operador de membro (pré-decremento) diminui o iterador armazenado. E
 
 O segundo operador (pós-decremento) faz uma cópia do `*this`, avalia `--*this`. E retorna a cópia.
 
-## <a name="operator-"></a>  move_iterator::operator-
+## <a name="move_iteratoroperator-"></a><a name="operator-"></a>move_iterator::operador-
 
 Diminui o iterador armazenado e retorna o valor indicado.
 
@@ -265,7 +265,7 @@ move_iterator operator-(difference_type _Off) const;
 
 O operador retorna `move_iterator(*this) -= _Off`.
 
-## <a name="op_star"></a>  move_iterator::operator*
+## <a name="move_iteratoroperator"></a><a name="op_star"></a>move_iterator:operador*
 
 Desreferencia o iterador armazenado e retorna o valor. Isso se comporta como um `rvalue reference` e realiza uma atribuição de movimentação. O operador transfere o elemento atual para fora do iterador de base. O elemento seguinte se torna o novo elemento atual.
 
@@ -277,9 +277,9 @@ reference operator*() const;
 
 O operador retorna `(reference)*base()`.
 
-## <a name="op_arrow"></a>  move_iterator::operator-&gt;
+## <a name="move_iteratoroperator-gt"></a><a name="op_arrow"></a>move_iterator::operador-&gt;
 
-Como um `RandomIterator` normal `operator->`, ele fornece acesso aos campos que pertencem ao elemento atual.
+Como um `RandomIterator` `operator->` normal, ele fornece acesso aos campos que pertencem ao elemento atual.
 
 ```cpp
 pointer operator->() const;
@@ -289,9 +289,9 @@ pointer operator->() const;
 
 O operador retorna `&**this`.
 
-## <a name="pointer"></a>  move_iterator::pointer
+## <a name="move_iteratorpointer"></a><a name="pointer"></a>move_iterator::pointer
 
-O tipo `pointer` é um **typedef** baseado na `RandomIterator` do iterador aleatório para `move_iterator` e pode ser usado de forma intercambiável.
+O `pointer` tipo é um **typedef** baseado `RandomIterator` no `move_iterator`iterador aleatório para , e pode ser usado de forma intercambiável.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -301,9 +301,9 @@ typedef RandomIterator  pointer;
 
 O tipo é um sinônimo de `RandomIterator`.
 
-## <a name="reference"></a>  move_iterator::reference
+## <a name="move_iteratorreference"></a><a name="reference"></a>move_iterator::referência
 
-O tipo `reference` é um **typedef** baseado em `value_type&&` para `move_iterator` e pode ser usado de forma intercambiável com `value_type&&`.
+O `reference` tipo é um **typedef** baseado em `value_type&&` , `move_iterator` `value_type&&`e pode ser usado intercambiavelmente com .
 
 ```cpp
 typedef value_type&& reference;
@@ -313,9 +313,9 @@ typedef value_type&& reference;
 
 O tipo é um sinônimo para `value_type&&`, que é uma referência de rvalue.
 
-## <a name="value_type"></a>  move_iterator::value_type
+## <a name="move_iteratorvalue_type"></a><a name="value_type"></a>move_iterator:value_type
 
-O tipo `value_type` é uma `typedef` `move_iterator` com base no `value_type` de características do iterador e pode ser usado de forma intercambiável com ele.
+O tipo `value_type` é um `move_iterator` `typedef` com base na característica de iterador `value_type` e podem ser usados alternadamente com ele.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::value_type   value_type;
@@ -325,9 +325,9 @@ typedef typename iterator_traits<RandomIterator>::value_type   value_type;
 
 O tipo é um sinônimo para a característica do iterador `typename iterator_traits<RandomIterator>::value_type`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<iterator>](../standard-library/iterator.md)\
-[Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)\
-[Move Constructors and Move Assignment Operators (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)\ (Operadores de construtores de movimento e de atribuição de movimento (C++))
+[\<>do tempo](../standard-library/iterator.md)\
+[Valores e Valores](../cpp/lvalues-and-rvalues-visual-cpp.md)\
+[Mover construtores e mover operadores de atribuição (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)\
 [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

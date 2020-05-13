@@ -1,34 +1,34 @@
 ---
-title: Arquivos de cabeçalhoC++()
+title: Arquivos de cabeçalho (C++)
 ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 4ab6a2b2626cde94f35678bc9ec789b80d493b8f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301477"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367239"
 ---
-# <a name="header-files-c"></a>Arquivos de cabeçalhoC++()
+# <a name="header-files-c"></a>Arquivos de cabeçalho (C++)
 
-Os nomes dos elementos do programa, como variáveis, funções, classes e assim por diante, devem ser declarados antes que possam ser usados. Por exemplo, você não pode apenas escrever `x = 42` sem primeiro declarar ' x '.
+Os nomes dos elementos do programa, como variáveis, funções, classes e assim por diante devem ser declarados antes de serem usados. Por exemplo, você não `x = 42` pode simplesmente escrever sem primeiro declarar 'x'.
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
-A declaração informa ao compilador se o elemento é um **int**, um **Double**, uma **função**, uma **classe** ou alguma outra coisa.  Além disso, cada nome deve ser declarado (direta ou indiretamente) em cada arquivo. cpp no qual é usado. Quando você compila um programa, cada arquivo. cpp é compilado de forma independente em uma unidade de compilação. O compilador não tem conhecimento de quais nomes são declarados em outras unidades de compilação. Isso significa que, se você definir uma classe ou função ou variável global, deverá fornecer uma declaração dessa coisa em cada arquivo. cpp adicional que a usa. Cada declaração dessa coisa deve ser exatamente idêntica em todos os arquivos. Uma ligeira inconsistência causará erros ou comportamento indesejado quando o vinculador tentar mesclar todas as unidades de compilação em um único programa.
+A declaração diz ao compilador se o elemento é um **int**, um **duplo**, uma **função**, uma **classe** ou alguma outra coisa.  Além disso, cada nome deve ser declarado (direta ou indiretamente) em cada arquivo .cpp no qual é utilizado. Quando você compila um programa, cada arquivo .cpp é compilado independentemente em uma unidade de compilação. O compilador não tem conhecimento de quais nomes são declarados em outras unidades de compilação. Isso significa que se você definir uma classe ou função ou variável global, você deve fornecer uma declaração dessa coisa em cada arquivo adicional .cpp que a usa. Cada declaração dessa coisa deve ser exatamente idêntica em todos os arquivos. Uma pequena inconsistência causará erros, ou comportamento não intencional, quando o linker tentar mesclar todas as unidades de compilação em um único programa.
 
-Para minimizar o potencial de erros, C++ o adotou a Convenção de uso de *arquivos de cabeçalho* para conter declarações. Você faz as declarações em um arquivo de cabeçalho e, em seguida, usa a diretiva #include em cada arquivo. cpp ou outro arquivo de cabeçalho que requer essa declaração. A diretiva #include insere uma cópia do arquivo de cabeçalho diretamente no arquivo. cpp antes da compilação.
+Para minimizar o potencial de erros, o C++ adotou a convenção de usar *arquivos de cabeçalho* para conter declarações. Você faz as declarações em um arquivo de cabeçalho e, em seguida, usa a diretiva #include em cada arquivo .cpp ou outro arquivo de cabeçalho que exija essa declaração. A diretiva #include insere uma cópia do arquivo de cabeçalho diretamente no arquivo .cpp antes da compilação.
 
 > [!NOTE]
-> No Visual Studio 2019, o recurso de *módulos* do c++ 20 é apresentado como uma melhoria e substituição eventual para arquivos de cabeçalho. Para obter mais informações, consulte [visão geral dos C++módulos no ](modules-cpp.md).
+> No Visual Studio 2019, o recurso *de módulos* C+20 é introduzido como uma melhoria e eventual substituição por arquivos de cabeçalho. Para obter mais informações, consulte [Visão geral dos módulos em C++](modules-cpp.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra uma maneira comum de declarar uma classe e, em seguida, usá-la em um arquivo de origem diferente. Vamos começar com o arquivo de cabeçalho, `my_class.h`. Ele contém uma definição de classe, mas observe que a definição está incompleta; a função de membro `do_something` não está definida:
+O exemplo a seguir mostra uma maneira comum de declarar uma classe e, em seguida, usá-la em um arquivo de origem diferente. Vamos começar com o arquivo `my_class.h`de cabeçalho, . Ele contém uma definição de classe, mas note que a definição está incompleta; a função `do_something` do membro não está definida:
 
 ```cpp
 // my_class.h
@@ -43,9 +43,9 @@ namespace N
 }
 ```
 
-Em seguida, crie um arquivo de implementação (normalmente com uma extensão. cpp ou semelhante). Vamos chamar o arquivo my_class. cpp e fornecer uma definição para a declaração de membro. Adicionamos uma diretiva `#include` para o arquivo "my_class. h" para que a declaração de my_class inserida neste ponto no arquivo. cpp e incluímos `<iostream>` para efetuar pull da declaração para `std::cout`. Observe que as aspas são usadas para arquivos de cabeçalho no mesmo diretório que o arquivo de origem, e os colchetes angulares são usados para cabeçalhos de biblioteca padrão. Além disso, muitos cabeçalhos de biblioteca padrão não têm. h ou qualquer outra extensão de arquivo.
+Em seguida, crie um arquivo de implementação (normalmente com uma extensão .cpp ou similar). Chamaremos o arquivo my_class.cpp e forneceremos uma definição para a declaração do membro. Adicionamos `#include` uma diretiva para o arquivo "my_class.h" a fim de ter a declaração my_class `<iostream>` inserida neste ponto `std::cout`no arquivo .cpp, e incluímos puxar a declaração para . Observe que as aspas são usadas para arquivos de cabeçalho no mesmo diretório que o arquivo de origem, e os suportes angulares são usados para cabeçalhos de biblioteca padrão. Além disso, muitos cabeçalhos padrão da biblioteca não têm .h ou qualquer outra extensão de arquivo.
 
-No arquivo de implementação, opcionalmente, podemos usar uma instrução **using** para evitar ter que qualificar cada menção de "my_class" ou "cout" com "N::" ou "std::".  Não coloque **usando** instruções em seus arquivos de cabeçalho!
+No arquivo de implementação, podemos usar opcionalmente uma declaração **de uso** para evitar ter que qualificar cada menção de "my_class" ou "cout" com "N::" ou "std::".  Não coloque **o uso de** declarações em seus arquivos de cabeçalho!
 
 ```cpp
 // my_class.cpp
@@ -61,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-Agora, podemos usar `my_class` em outro arquivo. cpp. Podemos #include o arquivo de cabeçalho para que o compilador receba a declaração. Tudo o que o compilador precisa saber é que my_class é uma classe que tem uma função de membro público chamada `do_something()`.
+Agora podemos `my_class` usar em outro arquivo .cpp. Nós #include o arquivo de cabeçalho para que o compilador puxe na declaração. Tudo o que o compilador precisa saber é que my_class `do_something()`é uma classe que tem uma função de membro público chamada .
 
 ```cpp
 // my_program.cpp
@@ -77,11 +77,11 @@ int main()
 }
 ```
 
-Depois que o compilador conclui a compilação de cada arquivo. cpp em arquivos. obj, ele passa os arquivos. obj para o vinculador. Quando o vinculador mescla os arquivos de objeto, ele encontra exatamente uma definição para my_class; Ele está no arquivo. obj produzido por my_class. cpp e a compilação é realizada com sucesso.
+Depois que o compilador termina de compilar cada arquivo .cpp em arquivos .obj, ele passa os arquivos .obj para o linker. Quando o linker mescla os arquivos de objeto, ele encontra exatamente uma definição para my_class; está no arquivo .obj produzido para my_class.cpp, e a compilação é bem sucedida.
 
-## <a name="include-guards"></a>Incluir proteções
+## <a name="include-guards"></a>Inclua guardas
 
-Normalmente, os arquivos de cabeçalho têm uma diretiva *include Guard* ou uma `#pragma once` para garantir que eles não sejam inseridos várias vezes em um único arquivo. cpp.
+Normalmente, os arquivos de cabeçalho têm um *protetor de inclusão* ou uma `#pragma once` diretiva para garantir que eles não sejam inseridos várias vezes em um único arquivo .cpp.
 
 ```cpp
 // my_class.h
@@ -102,22 +102,23 @@ namespace N
 
 ## <a name="what-to-put-in-a-header-file"></a>O que colocar em um arquivo de cabeçalho
 
-Como um arquivo de cabeçalho pode potencialmente ser incluído por vários arquivos, ele não pode conter definições que possam produzir várias definições de mesmo nome. Os itens a seguir não são permitidos ou são considerados uma prática muito boa:
+Como um arquivo de cabeçalho pode potencialmente ser incluído por vários arquivos, ele não pode conter definições que possam produzir várias definições de mesmo nome. Os seguintes não são permitidos, ou são considerados práticas muito ruins:
 
-- definições de tipo interno no namespace ou escopo global
-- definições de função não embutidas
+- definições de tipo incorporadas no namespace ou escopo global
+- definições de função não-inline
 - definições de variáveis não const
-- definições de agregação
+- definições agregadas
 - namespaces sem nome
 - usando diretivas
 
-O uso da diretiva **using** não causará necessariamente um erro, mas pode potencialmente causar um problema, pois ele coloca o namespace no escopo em cada arquivo. cpp que inclui direta ou indiretamente esse cabeçalho.
+O uso da diretiva **de uso** não necessariamente causará um erro, mas pode causar um problema porque ele traz o namespace para o escopo em cada arquivo .cpp que inclui direta ou indiretamente esse cabeçalho.
 
-## <a name="sample-header-file"></a>Arquivo de cabeçalho de exemplo
+## <a name="sample-header-file"></a>Arquivo de cabeçalho de amostra
 
 O exemplo a seguir mostra os vários tipos de declarações e definições que são permitidas em um arquivo de cabeçalho:
 
 ```cpp
+// sample.h
 #pragma once
 #include <vector> // #include directive
 #include <string>

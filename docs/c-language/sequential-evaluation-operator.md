@@ -7,11 +7,11 @@ helpviewer_keywords:
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
 ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158515"
 ---
 # <a name="sequential-evaluation-operator"></a>Operador de avaliação sequencial
 
@@ -19,9 +19,9 @@ O operador de avaliação sequencial, também chamado de "operador vírgula", av
 
 ## <a name="syntax"></a>Sintaxe
 
-*expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
+*expressão*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão de atribuição*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **,** expressão *de atribuição*
 
 O operando esquerdo do operador de avaliação sequencial é avaliado como uma expressão `void`. O resultado da operação tem o mesmo valor e tipo que o operando direito. Cada operando pode ser de qualquer tipo. O operador de avaliação sequencial não executa conversões de tipos entre seus operandos e não produz um l-value. Há um ponto de sequência depois do primeiro operando, o que significa que todos os efeitos colaterais da avaliação do operando esquerdo são concluídos antes de iniciar a avaliação do operando direito. Consulte [Pontos de sequência](../c-language/c-sequence-points.md) para obter mais informações.
 
@@ -46,6 +46,6 @@ func_two( (x--, y + 2), z );
 
 Na chamada de função para `func_one`, três argumentos, separados por vírgulas, são passados: `x`, `y + 2` e `z`. Na chamada da função para `func_two`, os parênteses forçam o compilador a interpretar a primeira vírgula como o operador de avaliação sequencial. Essa chamada de função passa dois argumentos para `func_two`. O primeiro argumento é o resultado da operação de avaliação sequencial `(x--, y + 2)`, que tem o valor e o tipo da expressão `y + 2`; o segundo argumento é `z`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operador vírgula: ,](../cpp/comma-operator.md)

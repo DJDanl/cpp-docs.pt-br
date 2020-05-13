@@ -11,169 +11,169 @@ ms.locfileid: "80170430"
 ---
 # <a name="summary-of-declarations"></a>Resumo de declarações
 
-*declaration*:<br/>
+*declaração*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaração-especificadores* *atributo-Seq*<sub>opt</sub> *init-Declaration-List*<sub>opt</sub> **;**
 
 *declaration-specifiers*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;declaração de *classe de armazenamento* - *especificadores*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaração*<sub>opt</sub> *de tipo-* especificador<br/>
-&nbsp;&nbsp;&nbsp;Declaração *de qualificador de tipo* de &nbsp;-<sub>aceitar</sub> *especificadores*
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*Attribute-Seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*attribute* *atributo de atributo-Seq*<sub>opt</sub>
+*atributo-Seq* &nbsp; &nbsp; &nbsp; &nbsp; :/ específico da Microsoft\*\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*attribute* *attribute-seq*<sub>opt</sub>
 
-*atributo* : um dos&nbsp;&nbsp;&nbsp;&nbsp;/\* específico da Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl __inline](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
+*atributo* : um dos&nbsp; &nbsp; &nbsp; &nbsp; / \* específicos da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List* **,** *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List*  **,**  *init-declarator*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarador* **=** *inicializador* /\* para inicialização escalar \*/
+*init-Declarador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator***=**\* *inicializador*  / de Declarador para inicialização escalar    \*/
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Automático**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Registr**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**auto-estática**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**externo**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-Modifier-Seq* **)**  /\* \*específicos da Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-Modifier-Seq* **)**  / \* específico da Microsoft\*/
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+&nbsp;&nbsp;&nbsp;&nbsp;**livre**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**º**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**baixo**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**inteiro**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int8** / __int8\* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int16** / __int16\* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int32** / __int32\* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int64** / __int64\* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Longas**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**barra**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Clique**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**inteiro**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**não assinados**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*especificador struct-ou-Union-*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*especificador de enumeração*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-Name*
 
-*type-qualifier*:<br/>
+*qualificador de tipo*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**const**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**volatile**
+&nbsp;&nbsp;&nbsp;&nbsp;**volátil**
 
-*declarator*:<br/>
-&nbsp;&nbsp;&nbsp;*Declarador de ponteiro de &nbsp;para* *pointer*<sub>consentimento</sub> direto
+*Declarador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *Declarador* **)**<br/>
+*Declarador direto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *Declarador* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto* **[** *opt-expressão de constante*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto* **(** *tipo de parâmetro-lista* **)**  /\* Declarador de novo estilo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto* **(opcional do** *identificador-lista*<sub>opt</sub> **)**  /\* Declarador de estilo obsoleto \*/
+&nbsp;&nbsp;&nbsp;&nbsp;Declarador *direto* **(** *tipo de parâmetro-lista* **)**  / \* Declarador de novo estilo\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto* **(** *opção identificador-lista*<sub>opt</sub> **)**  / \* Declarador de estilo obsoleto\*/
 
-*pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;a<sub>opção</sub> <strong>\*</strong> *tipo-qualificador-lista*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;de <strong>\*</strong> *tipo-qualificador-listar*<sub>opt</sub> *ponteiros* de consentimento
+*ponteiro*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong><sub>opção</sub> *de qualificador de tipo-lista*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong><sub>opt</sub> *ponteiro* de *tipo-qualificador de lista de tipos*
 
-*parameter-type-list*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* A lista de parâmetros \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list*<br/>
+*tipo de parâmetro-lista*&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :&nbsp; &nbsp; &nbsp; &nbsp; a lista de parâmetros&nbsp; &nbsp; / \*\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* **,...**
 
-*parameter-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
+*lista de parâmetros*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração de parâmetro*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parâmetro-List* **,** *declaração de parâmetro*
 
 *type-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*tipo-qualificador-* *tipo de lista-qualificador*
+&nbsp;&nbsp;&nbsp;&nbsp;*qualificador de tipo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*
 
 *enum-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identificador*de enumeração<sub>opcional</sub> **{** *enumerador-List* **}**<br/>
-&nbsp;&nbsp;&nbsp;*identificador* de **Enumeração** &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identificador*de enumeração<sub>opt</sub> **{** *enumerador-List* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*
 
-*enumerator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumerator*<br/>
-&nbsp;&nbsp;&nbsp;*enumerador &nbsp;-List* **,** *enumerador*
+*enumerador-lista*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumera*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumerador-lista* **,** *enumerador*
 
-*enumerator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Enumeração-constante* **=** *expressão constante*
+*enumerador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Enumeração-constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**=** *expressão Constant constante-* *constante*
 
-*enumeration-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
+*Enumeração-constante*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID*
 
-*struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;o identificador *struct-ou-Union tem a* *identifier*<sub>opção</sub> **{** *struct-Declaration-List* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identificador* *struct-ou-Union*
+*especificador de struct-ou-Union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificador struct-or-Union* *identifier*<sub>opt</sub> **{** *struct-declaração-List* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp;**unida**
 
 *struct-declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaração-lista* *struct-declaração*
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração de struct*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
 
-*struct-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*especificador-qualificador-List* *struct-declarator-List* **;**
+*declaração de struct*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
 
 *specifier-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;especificador de *especificador de tipo* *-qualificador,* <sub>aceitar</sub> lista<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*tipo-* qualificador *especificador-qualificador-lista*de<sub>consentimento</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *specifier-qualifier-list*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
 
 *struct-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;struct *-* declarator *estrutura-Declaration-List* **,** *struct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;struct *-* Declarador *struct-declarator-List* **,** *struct-declarator*
 
-*struct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declarador* *de tipo-especificado* <sub>opcional</sub> **:** *expressão de constante*
+*estrutura-declaradora*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*tipo de* *Declarador*de especificador<sub>opt</sub> **:** *expressão Constant*
 
 *parameter-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaração-especificadores* *declaradores* /\* declarador nomeado \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaração-especificadores* *abstract-declarator*<sub>opt</sub> /\* Declarador anônimo \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração-especificadores* *declaradores*  / \* denominado Declarador\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração-especificadores* *abstract-Declarador de*<sub>consentimento anônimo opt</sub>  / \*\*/
 
-*identifier-list*: /\* Para declarador de estilo antigo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;*identificador de &nbsp;-lista* **,** *identificador*
+*identificador-lista*:/\* para Declarador de estilo antigo\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificador-lista* **,** *identificador*
 
-*abstract-declarator*: /\* Usado com declaradores anônimos \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<br/>
-&nbsp;&nbsp;&nbsp;o *Declarador* de *ponteiro*de &nbsp;para<sub>consentimento</sub> direto
+*abstract-declarator*:/\* usado com declaradores anônimos\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*refere*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
 
 *direct-abstract-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *Resumo-Declarador* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-declarable*<sub>opt</sub> **[** *expressão constante*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*a opção Direct-abstract-Declaration*<sub>opt</sub> **(** opt de *tipo de parâmetro-lista*<sub>opt</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *Resumo-Declarador* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-declarable*<sub>opt</sub> **[** *constante-expressão*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;opção *Direct-abstract-Declaration*<sub>opt</sub> **(** <sub>opt</sub> de *tipo de parâmetro-lista* **)**
 
-*initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *inicializador-lista* **}**  /\* para inicialização agregada \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *inicializador-lista* **,}**
+*inicializador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão de atribuição*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *inicializador-lista* **}**  / \* para inicialização de agregação\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *inicializador-lista* **,}**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*inicializador-lista* **,** *inicializador*
 
-*type-name*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*especificador-qualificador-List* *Resumo-Declarador*<sub>opt</sub> de lista
+*nome do tipo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>
 
-*typedef-name*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
+*typedef-Name*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID*
 
-*Extended-decl-Modifier-Seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específicos da Microsoft /<br/>
+*Extended-decl-Modifier-Seq*:&nbsp; &nbsp; &nbsp; &nbsp; / \* específico da Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-Modifier-Seq* *Extended-decl-Modifier*
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Extended-decl-Modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
+*Extended-decl-Modifier*:&nbsp; &nbsp; &nbsp; &nbsp; / \* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**processo**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**descoberto**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
 ## <a name="see-also"></a>Confira também
 
 [Convenções de chamada](../cpp/calling-conventions.md)<br/>
-[Gramática de estrutura de frase](../c-language/phrase-structure-grammar.md)<br/>
+[Gramática de estrutura da frase](../c-language/phrase-structure-grammar.md)<br/>
 [Convenções de chamada obsoletas](../cpp/obsolete-calling-conventions.md)

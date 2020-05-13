@@ -1,8 +1,9 @@
 ---
 title: _cwait
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cwait
+- _o__cwait
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,19 +27,19 @@ helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: b4be342ef528959bae22917bc59eef5a953aa4ae
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9e2e23acb041004b9e96d1c6558ae195ed522155
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937746"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914791"
 ---
 # <a name="_cwait"></a>_cwait
 
 Aguarda até outro processo terminar.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -57,10 +59,10 @@ Ponteiro para um buffer em que o código de resultado do processo especificado s
 *procHandle*<br/>
 O identificador para o processo aguardar (ou seja, o processo que deve ser encerrado antes que **_cwait** possa retornar).
 
-*Action*<br/>
-NULO Ignorado por aplicativos do sistema operacional Windows; para outros aplicativos: código de ação a ser executado em *procHandle*.
+*action*<br/>
+NULL: ignorado por aplicativos do sistema operacional Windows; para outros aplicativos: código de ação a ser executado em *procHandle*.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Quando o processo especificado tiver sido concluído com êxito, retornará o identificador do processo especificado e definirá *termstat* para o código de resultado retornado pelo processo especificado. Caso contrário, retorna-1 e define **errno** da seguinte maneira.
 
@@ -80,6 +82,8 @@ A função **_cwait** aguarda o encerramento da ID de processo do processo espec
 O parâmetro *Action* é ignorado pelo sistema operacional Windows porque as relações pai-filho não são implementadas nesses ambientes.
 
 A menos que *procHandle* seja-1 ou-2 (identificadores para o processo ou thread atual), o identificador será fechado. Portanto, nessa situação, não use o identificador retornado.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -157,7 +161,7 @@ Hi, Dad. It's Carl.
 Hi, Dad. It's Dave.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

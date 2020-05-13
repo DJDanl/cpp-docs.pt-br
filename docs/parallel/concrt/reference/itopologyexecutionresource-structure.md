@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c9221cab1ac2d48bd099a769188e4bee797823c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368143"
 ---
 # <a name="itopologyexecutionresource-structure"></a>Estrutura ITopologyExecutionResource
 
-Uma interface para um recurso de execução, conforme definido pelo Gerenciador de recursos.
+Uma interface para um recurso de execução definida pelo Gerenciador de recursos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,28 +30,28 @@ struct ITopologyExecutionResource;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[ITopologyExecutionResource:: GetId](#getid)|Retorna o identificador exclusivo do Gerenciador de recursos para este recurso de execução.|
-|[ITopologyExecutionResource:: GetNext](#getnext)|Retorna uma interface para o próximo recurso de execução na ordem de enumeração.|
+|[ITopologyExecutionResource::GetId](#getid)|Retorna o identificador exclusivo do Gerenciador de Recursos para este recurso de execução.|
+|[ITopologyExecutionResource::GetNext](#getnext)|Retorna uma interface para o próximo recurso de execução em ordem de enumeração.|
 
 ## <a name="remarks"></a>Comentários
 
-Normalmente, essa interface é utilizada para percorrer a topologia do sistema, conforme observado pelo Gerenciador de recursos.
+Essa interface é normalmente utilizada para andar na topologia do sistema, conforme observado pelo Gerenciador de Recursos.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `ITopologyExecutionResource`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** concrtrm. h
+**Cabeçalho:** concrtrm.h
 
-**Namespace:** simultaneidade
+**Namespace:** concurrency
 
-## <a name="getid"></a>Método ITopologyExecutionResource:: GetId
+## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a>ITopologyExecutionResource::GetId Method
 
-Retorna o identificador exclusivo do Gerenciador de recursos para este recurso de execução.
+Retorna o identificador exclusivo do Gerenciador de Recursos para este recurso de execução.
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -59,11 +59,11 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>Valor retornado
 
-O identificador exclusivo do Gerenciador de recursos para este recurso de execução.
+O identificador exclusivo do Gerenciador de Recursos para este recurso de execução.
 
-## <a name="getnext"></a>Método ITopologyExecutionResource:: GetNext
+## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>ITopologyExecutionResource::GetNext Method
 
-Retorna uma interface para o próximo recurso de execução na ordem de enumeração.
+Retorna uma interface para o próximo recurso de execução em ordem de enumeração.
 
 ```cpp
 virtual ITopologyExecutionResource *GetNext() const = 0;
@@ -71,8 +71,8 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma interface para o próximo recurso de execução na ordem de enumeração. Se não houver mais nós na ordem de enumeração do nó ao qual esse recurso de execução pertence, esse método retornará o valor `NULL`.
+Uma interface para o próximo recurso de execução em ordem de enumeração. Se não houver mais nós na ordem de enumeração do nó ao qual este `NULL`recurso de execução pertence, este método devolverá o valor .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Namespace de simultaneidade](concurrency-namespace.md)
+[namespace de concorrência](concurrency-namespace.md)

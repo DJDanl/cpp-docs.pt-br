@@ -1,11 +1,12 @@
 ---
 title: ldexp, ldexpf, ldexpl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
+- _o_ldexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953500"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916535"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -81,7 +83,7 @@ Valor de ponto flutuante.
 *exp*<br/>
 Expoente inteiro.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **ldexp** retornarão o valor de *x* \* 2<sup>*exp*</sup> se for bem-sucedido. Em estouro, e dependendo do sinal de *x*, **ldexp** retorna +/- **HUGE_VAL**; o valor **errno** é definido como **ERANGE**.
 
@@ -89,7 +91,9 @@ Para obter mais informações sobre **errno** e possíveis valores de retorno de
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **ldexp** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **ldexp** sempre leva um **Double** e um **int** e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ldexp** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **ldexp** sempre leva um **Double** e um **int** e retorna um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

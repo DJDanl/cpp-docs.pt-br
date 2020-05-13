@@ -1,9 +1,10 @@
 ---
 title: _fpclass, _fpclassf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fpclass
 - _fpclassf
+- _o__fpclass
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170209"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914842"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -56,7 +58,7 @@ int _fpclassf(
 ); /* x64 only */
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
 O valor de ponto flutuante a ser testado.
@@ -65,7 +67,7 @@ O valor de ponto flutuante a ser testado.
 
 As funções **_fpclass** e **_fpclassf** retornam um valor inteiro que indica a classificação de ponto flutuante do argumento *x*. A classificação pode ter um dos valores a seguir, definidos em \<float.>.
 
-|Valor|DESCRIÇÃO|
+|Valor|Descrição|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Sinalização de NaN|
 |**_FPCLASS_QNAN**|NaN silencioso|
@@ -82,6 +84,8 @@ As funções **_fpclass** e **_fpclassf** retornam um valor inteiro que indica a
 
 As funções **_fpclass** e **_fpclassf** são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. A função **_fpclassf** só estará disponível quando compilada para a plataforma x64.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
@@ -90,7 +94,7 @@ As funções **_fpclass** e **_fpclassf** são específicas da Microsoft. Elas s
 
 Para obter mais informações sobre compatibilidade e conformidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

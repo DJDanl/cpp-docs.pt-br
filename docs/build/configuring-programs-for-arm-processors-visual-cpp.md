@@ -15,10 +15,10 @@ Esta seção da documentação contém informações sobre como usar as ferramen
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Visão geral das convenções da Abi do ARM](overview-of-arm-abi-conventions.md)\
+[Visão geral das convenções da ABI do ARM](overview-of-arm-abi-conventions.md)\
 Descreve a interface binária do aplicativo usada pelo Windows em ARM para registrar uso, convenções de chamada e tratamento de exceções.
 
-[Visão geral das convenções da Abi ARM64](arm64-windows-abi-conventions.md)\
+[Visão geral das convenções da ABI ARM64](arm64-windows-abi-conventions.md)\
 Descreve a interface binária do aplicativo usada pelo Windows no ARM64 para registrar o uso, as convenções de chamada e o tratamento de exceções.
 
 [Problemas comuns de migração do MSVC ARM](common-visual-cpp-arm-migration-issues.md)\
@@ -27,13 +27,13 @@ Descreve elementos de código C++ que são comumente considerados como portátei
 [Manipulação de exceção do ARM](arm-exception-handling.md)\
 Descreve o esquema de codificação para desenrolamento de pilha durante tratamento de exceções estruturado no Windows em ARM.
 
-\ de [manipulação de exceção do ARM64](arm64-exception-handling.md)
+[Manipulação de exceção do ARM64](arm64-exception-handling.md)\
 Descreve o esquema de codificação para desenrolar a pilha durante a manipulação de exceção estruturada no Windows no ARM64.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-\ [intrínsecos do ARM](../intrinsics/arm-intrinsics.md)
+[Intrínsecos do ARM](../intrinsics/arm-intrinsics.md)\
 Descreve intrínsecas do compilador para processadores que usam a arquitetura ARM.
 
-\ [intrínsecos do ARM64](../intrinsics/arm-intrinsics.md)
+[Intrínsecos do ARM64](../intrinsics/arm-intrinsics.md)\
 Descreve os intrínsecos do compilador para processadores que usam a arquitetura ARM64.

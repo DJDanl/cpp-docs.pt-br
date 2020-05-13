@@ -1,8 +1,9 @@
 ---
 title: localeconv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - localeconv
+- _o_localeconv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: ca7113903e1ed6e9ffb94bef79beba41e09bfb71
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953357"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916402"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -43,9 +45,9 @@ Obtém informações detalhadas sobre configurações de localidade.
 struct lconv *localeconv( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**localeconv** retorna um ponteiro para um objeto preenchido do tipo [struct lconv](../../c-runtime-library/standard-types.md). Os valores contidos no objeto são copiados das configurações de localidade no armazenamento local de thread e podem ser substituídos por chamadas subsequentes para **localeconv**. As alterações feitas nos valores neste objeto não modificam as configurações de localidade. As chamadas para [setlocaling](setlocale-wsetlocale.md) com valores de *categoria* de **LC_ALL**, **LC_MONETARY**ou **LC_NUMERIC** substituem o conteúdo da estrutura.
+**localeconv** retorna um ponteiro para um objeto preenchido do tipo [struct lconv](../../c-runtime-library/standard-types.md). Os valores contidos no objeto são copiados das configurações de localidade no armazenamento local de thread e podem ser substituídos por chamadas subsequentes para **localeconv**. As alterações feitas nos valores neste objeto não modificam as configurações de localidade. Chamadas para [setlocaling](setlocale-wsetlocale.md) com valores de *categoria* de **LC_ALL**, **LC_MONETARY**ou **LC_NUMERIC** substituir o conteúdo da estrutura.
 
 ## <a name="remarks"></a>Comentários
 
@@ -55,7 +57,7 @@ A função **localeconv** Obtém informações detalhadas sobre a formatação n
 |-|-|
 decimal_point,<br/>_W_decimal_point|Ponteiro para caractere de ponto decimal para quantidades não monetárias.
 thousands_sep,<br/>_W_thousands_sep|Ponteiro para caractere que separa grupos de dígitos à esquerda do ponto decimal para quantidades não monetárias.
-grouping|Ponteiro para um inteiro de tamanho **Char**que contém o tamanho de cada grupo de dígitos em quantidades não monetárias.
+agrupamento|Ponteiro para um inteiro de tamanho **Char**que contém o tamanho de cada grupo de dígitos em quantidades não monetárias.
 int_curr_symbol,<br/>_W_int_curr_symbol|Ponteiro para símbolo de moeda internacional para a localidade atual. Os três primeiros caracteres especificam o símbolo de moeda alfabético internacional, conforme definido na norma *ISO 4217, Códigos para a Representação de Moedas e Fundos*. O quarto caractere (caractere nulo imediatamente anterior) separa o símbolo de moeda internacional da quantidade monetária.
 currency_symbol,<br/>_W_currency_symbol|Ponteiro para o símbolo de moeda local para a localidade atual.
 mon_decimal_point,<br/>_W_mon_decimal_point|Ponteiro para caractere de ponto decimal para quantidades monetárias.
@@ -114,21 +116,23 @@ Os valores para **p_sign_posn** e **n_sign_posn** são interpretados de acordo c
 
 - 4-a cadeia de caracteres de sinal imediatamente segue o símbolo de moeda.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**localeconv**|\<locale.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
 [Funções strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>

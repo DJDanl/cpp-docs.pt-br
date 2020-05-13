@@ -14,55 +14,55 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 16168e7eb5e27f4ec0380d53cf8a5c4b9586ec34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c4a3048bfa07e9635662534b510fa57caa091f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171132"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336085"
 ---
-# <a name="resources-property-page"></a>Página de propriedades de recursos
+# <a name="resources-property-page"></a>Página de propriedade de recursos
 
-Para programas nativos da área de trabalho do Windows, a compilação invoca o [compilador de recurso (RC. exe)](/windows/win32/menurc/resource-compiler) para adicionar imagens, tabelas de cadeia de caracteres e arquivos *. res* ao binário. As propriedades expostas nesta página de propriedades são passadas para o compilador de recurso C++ , não para o compilador ou o vinculador. Para obter mais informações sobre as propriedades listadas aqui e como elas são mapeadas para as opções de linha de comando RC, consulte [usando o RC (a linha de comando RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Para obter informações sobre como acessar as páginas de propriedades de **recursos** , consulte [ C++ definir compilador e propriedades de compilação no Visual Studio](../working-with-project-properties.md). Para acessar essas propriedades de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+Para programas nativos de desktop do Windows, a compilação invoca o [Resource Compiler (rc.exe)](/windows/win32/menurc/resource-compiler) para adicionar imagens, tabelas de strings e arquivos *.res* ao binário. As propriedades expostas nesta página de propriedade são passadas para o Compilador de recursos, não para o compilador C++ ou para o linker. Para obter mais informações sobre as propriedades listadas aqui e como elas mapeiam as opções de linha de comando RC, consulte [Usando RC (A Linha de Comando RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Para obter informações sobre como acessar as páginas de propriedade **Resources,** consulte [O compilador Set C++ e construa propriedades no Visual Studio](../working-with-project-properties.md). Para acessar essas propriedades de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
 
-As propriedades de recursos do C++.net em aplicativos/CLI são expostas na [página de propriedades recursos gerenciados](managed-resources-property-page.md).
+As propriedades para recursos .NET em aplicativos C++/CLI são expostas na [Página de propriedade de recursos gerenciados](managed-resources-property-page.md).
 
 ## <a name="preprocessor-definitions"></a>Definições do Pré-processador
 
-Especifica uma ou mais definições para o compilador de recurso. (/d [macro])
+Especifica um ou mais definições para o compilador de recursos. (/d[macro])
 
-## <a name="undefine-preprocessor-definitions"></a>Excluir as definições do pré-processador
+## <a name="undefine-preprocessor-definitions"></a>Excluir definições do pré-processador
 
-Desdefina um símbolo. /u
+Desdefinir um símbolo. (/u)
 
 ## <a name="culture"></a>Cultura
 
-Lista a cultura (como inglês americano ou italiano) usada nos recursos. (/l [num])
+Lista a cultura (como inglês ou italiano dos EUA) usada nos recursos. (/l [num])
 
 ## <a name="additional-include-directories"></a>Diretórios de Inclusão Adicionais
 
-Especifica um ou mais diretórios a serem adicionados ao caminho de inclusão; Use o delimitador de ponto-e-vírgula se houver mais de um. (/I [caminho])
+Especifica um ou mais diretórios para adicionar ao caminho de inclusão; usar delimitador de ponto e vírgula se mais de um. (/I[caminho])
 
 ## <a name="ignore-standard-include-paths"></a>Ignorar caminhos de inclusão padrão
 
-Impede que o compilador de recursos procure por arquivos de inclusão em diretórios especificados nas variáveis de ambiente INCLUDE. /X
+Impede que o compilador de recursos procure incluir arquivos em diretórios especificados nas variáveis de ambiente INCLUDE. (/X)
 
 ## <a name="show-progress"></a>Mostrar progresso
 
-Enviar mensagens de progresso para a janela de saída. /v
+Envie mensagens de progresso para a janela de saída. (/v)
 
 ## <a name="suppress-startup-banner"></a>Suprimir Faixa de Inicialização
 
-Suprimir a exibição da faixa de inicialização e mensagem de informação (/nologo)
+Suprimir a exibição do banner de inicialização e a mensagem de informação (/nologo)
 
-## <a name="resource-file-name"></a>Nome do arquivo de recurso
+## <a name="resource-file-name"></a>Nome do arquivo do recurso
 
-Especifica o nome do arquivo de recurso (/fo [File])
+Especifica o nome do arquivo de recursos (/fo[file])
 
-## <a name="null-terminate-strings"></a>Cadeias de caracteres de término nulas
+## <a name="null-terminate-strings"></a>Cordas de término nula
 
-Anexar nulos a todas as cadeias de caracteres nas tabelas de cadeias. opção
+Anexar nulo a todas as cordas nas tabelas de strings. (/n)
 
 ## <a name="see-also"></a>Confira também
 
-[C++referência de página de propriedades do projeto](property-pages-visual-cpp.md)
+[Referência da página de propriedade do projeto C++](property-pages-visual-cpp.md)

@@ -30,7 +30,7 @@ Para obter informações gerais sobre as ferramentas e as etapas de build person
 
 ### <a name="to-specify-a-custom-build-tool"></a>Para especificar uma ferramenta de build personalizada
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](working-with-project-properties.md).
 
 1. Escolha **Propriedades de Configuração** para habilitar a caixa **Configuração**. Na caixa **Configuração**, selecione a configuração para a qual deseja especificar uma ferramenta de build personalizada.
 
@@ -50,9 +50,9 @@ Para obter informações gerais sobre as ferramentas e as etapas de build person
 
    - Em **Linha de Comando**, especifique um comando como se o estivesse especificando no prompt de comando. Especifique um comando ou arquivo em lotes válido e os arquivos de entrada ou de saída necessários. Especifique o comando em lote **call** antes do nome de um arquivo em lotes para assegurar que todos os comandos seguintes sejam executados.
 
-      Vários arquivos de entrada e de saída podem ser especificados simbolicamente com macros do MSBuild. Para obter informações sobre como especificar o local dos arquivos ou os nomes dos conjuntos de arquivos, consulte [macros comuns para compilar comandos e propriedades](reference/common-macros-for-build-commands-and-properties.md).
+      Vários arquivos de entrada e de saída podem ser especificados simbolicamente com macros do MSBuild. Para obter informações sobre como especificar o local dos arquivos ou os nomes de conjuntos de arquivos, consulte [macros comuns para comandos e propriedades de compilação](reference/common-macros-for-build-commands-and-properties.md).
 
-      Como o caractere '%' é reservado pelo MSBuild, se você especificar uma variável de ambiente, substitua cada caractere de escape **%** pela sequência de escape hexadecimal **%25**. Por exemplo, substitua **%WINDIR%** por **%25WINDIR%25**. O MSBuild substitui cada sequência **%25** pelo caractere **%** antes de acessar a variável de ambiente.
+      Como o caractere '% ' é reservado pelo MSBuild, se você especificar uma variável de ambiente, **%** substitua cada caractere de escape pela sequência de escape hexadecimal **%25** . Por exemplo, substitua **%WINDIR%** por **%25WINDIR%25**. O MSBuild substitui cada sequência **%25** pelo caractere **%** antes de acessar a variável de ambiente.
 
    - Em **Descrição**, insira uma mensagem descritiva sobre essa ferramenta de build personalizada. A mensagem será impressa na janela de **Saída** quando o sistema de build processar essa ferramenta.
 
@@ -74,11 +74,11 @@ Esse comando executa o analisador léxico em parser.l e gera parser.c no diretó
 
 Na propriedade **Saídas**, insira o seguinte:
 
-> **.\%(Nome do arquivo).c**
+> **. \%(Nome do arquivo). c**
 
 Quando você compilar o projeto, o sistema de build comparará os carimbos de data/hora de parser.l e parser.c. Se parser.l for mais recente ou se parser.c não existir, o sistema de build executará o valor da propriedade **Linha de Comando** para atualizar parser.c. Como parser.c também foi adicionado ao projeto, o sistema de build, em seguida, compila parser.c.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros comuns para comandos e propriedades de build](reference/common-macros-for-build-commands-and-properties.md)<br>
 [Solucionando problemas de personalização de compilação](troubleshooting-build-customizations.md)

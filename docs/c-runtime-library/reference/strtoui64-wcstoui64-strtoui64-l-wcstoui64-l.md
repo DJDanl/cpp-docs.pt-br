@@ -1,11 +1,15 @@
 ---
 title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strtoui64
 - _strtoui64_l
 - _wcstoui64
 - _wcstoui64_l
+- _o__strtoui64
+- _o__strtoui64_l
+- _o__wcstoui64
+- _o__wcstoui64_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +23,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,16 +48,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: be7d779bac50d332dde879c9d5b070fd2bf7e7e5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 430d72595aadc677fe51d9ed868e4388071decec
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946432"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912449"
 ---
 # <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 
-Converta uma cadeia de caracteres em um valor **__int64** não assinado.
+Converta uma cadeia de caracteres em um valor de **__int64** não assinado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -95,7 +100,7 @@ O número base a ser usado.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_strtoui64** retorna o valor representado na cadeia de caracteres *strSource*, exceto quando a representação causar um estouro, caso em que ele retorna **_UI64_MAX**. **_strtoui64** retornará 0 se nenhuma conversão puder ser executada.
 
@@ -111,6 +116,8 @@ A função **_strtoui64** converte *strSource* em um **__int64** **não assinado
 
 Ambas as funções param de ler a cadeia de caracteres *strSource* no primeiro caractere que eles não podem reconhecer como parte de um número. Esse pode ser o caractere nulo de terminação ou pode ser o primeiro caractere numérico maior ou igual à *base*.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -118,13 +125,13 @@ Ambas as funções param de ler a cadeia de caracteres *strSource* no primeiro c
 |**_tcstoui64**|**_strtoui64**|**_strtoui64**|**_wstrtoui64**|
 |**_tcstoui64_l**|**_strtoui64_l**|**_strtoui64_l**|**_wstrtoui64_l**|
 
-A configuração de categoria **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo _L usam a localidade atual; **_strtoui64_l** e **_wcstoui64_l** são idênticos às funções correspondentes sem o sufixo **_L** , exceto pelo fato de que usam a localidade transmitida em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A configuração de categoria de **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo _l usam a localidade atual; **_strtoui64_l** e **_wcstoui64_l** são idênticas às funções correspondentes sem o sufixo **_L** , exceto pelo fato de que usam a localidade transmitida em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Se *endptr* não for **NULL**, um ponteiro para o caractere que parou a verificação será armazenado no local apontado por *endptr*. Se nenhuma conversão puder ser executada (nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* será armazenado no local apontado por *endptr*.
 
 **_strtoui64** espera que *strSource* aponte para uma cadeia de caracteres do seguinte formato:
 
-> [*espaço em branco*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [letras de dígitos] **-**
+> [*espaço em branco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*dígitos* &#124; *letras*]
 
 Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, ignorados. os *dígitos* são um ou mais dígitos decimais. as *letras* são uma ou mais das letras ' a ' por meio de ' z ' (ou ' a ' por meio de ' z '). O primeiro caractere que não é adequado a esse formato interrompe o exame. Se *base* estiver entre 2 e 36, ela será usada como a base do número. Se *base* for 0, os caracteres iniciais da cadeia de caracteres apontada por *strSource* serão usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se *base* for 0 e o primeiro caractere verificado for ' 0 ', um inteiro octal será assumido e um caractere ' 8 ' ou ' 9 ' interromperá a verificação.
 
@@ -137,7 +144,7 @@ Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, ig
 |**_strtoui64_l**|\<stdlib.h>|
 |**_wcstoui64_l**|\<stdlib.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -159,13 +166,13 @@ int main() {
 u = 18446744073709551615
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Funções de valor de cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Funções de valor da cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

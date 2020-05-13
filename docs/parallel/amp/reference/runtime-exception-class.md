@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 6ad784720833d2ae5de7d653d132ba144aec2677
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ff54357055d373db98f469b071edc75fce75e0b4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126365"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336793"
 ---
 # <a name="runtime_exception-class"></a>Classe runtime_exception
 
-O tipo base para exceções na biblioteca C++ de amp (grande paralelismo) acelerada.
+O tipo base para exceções na biblioteca C++ Accelerated Massive Parallelism (AMP).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -30,22 +30,22 @@ class runtime_exception : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[Construtor de runtime_exception](#ctor)|Inicializa uma nova instância da classe `runtime_exception`.|
-|[~ runtime_exception destruidor](#dtor)|Destrói o objeto `runtime_exception`.|
+|[Construtor runtime_exception](#ctor)|Inicia uma nova instância da classe `runtime_exception`.|
+|[~runtime_exception Destructor](#dtor)|Destrói o `runtime_exception` objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Retorna o código de erro que causou a exceção.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[operator=](#operator_eq)|Copia o conteúdo do objeto `runtime_exception` especificado para este.|
+|[operador=](#operator_eq)|Copia o conteúdo do `runtime_exception` objeto especificado para este.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -53,13 +53,13 @@ class runtime_exception : public std::exception;
 
 `runtime_exception`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** amprt. h
+**Cabeçalho:** amprt.h
 
 **Namespace:** Simultaneidade
 
-## <a name="ctor"></a>Construtor de runtime_exception
+## <a name="runtime_exception-constructor"></a><a name="ctor"></a>Construtor runtime_exception
 
 Inicializa uma nova instância da classe.
 
@@ -92,7 +92,7 @@ O objeto `runtime_exception` a ser copiado.
 
 O objeto `runtime_exception`.
 
-## <a name="dtor"></a>~ runtime_exception destruidor
+## <a name="runtime_exception-destructor"></a><a name="dtor"></a>~runtime_exception Destructor
 
 Destrói o objeto.
 
@@ -102,7 +102,7 @@ Destrói o objeto.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="get_error_code"></a>get_error_code
+## <a name="get_error_code"></a><a name="get_error_code"></a>get_error_code
 
 Retorna o código de erro que causou a exceção.
 
@@ -116,8 +116,9 @@ HRESULT get_error_code() const throw();
 
 O HRESULT do erro que causou a exceção.
 
-## <a name="operator_eq"></a>  operator=
-  Copia o conteúdo do objeto `runtime_exception` especificado para este.
+## <a name="operator"></a><a name="operator_eq"></a>operador=
+
+Copia o conteúdo do `runtime_exception` objeto especificado para este.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -132,8 +133,8 @@ O objeto `runtime_exception` a ser copiado.
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma referência a este objeto de `runtime_exception`.
+Uma referência `runtime_exception` a este objeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)

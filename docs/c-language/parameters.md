@@ -9,41 +9,41 @@ helpviewer_keywords:
 - parameters [C++], function
 - functions [C], parameters
 - function parameters, syntax
-- ellipses (...), parameters
+- ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: f2fd4b49e08149f8ea5ce8fa6af46da39907dcf9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 78ad91ea86d81a3b6d888335ba7b78399a1d2aea
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857041"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032064"
 ---
-# <a name="parameters"></a>Parâmetros
+# <a name="parameters"></a>parâmetros
 
 Os argumentos são nomes de valores transmitidos a uma função por uma chamada de função. Os parâmetros são os valores que a função espera receber. Em um protótipo de função, os parênteses posteriores ao nome da função contêm uma lista completa dos parâmetros da função e seus tipos. As declarações de parâmetro especificam os tipos, os tamanhos e os identificadores dos valores armazenados nos parâmetros.
 
 ## <a name="syntax"></a>Sintaxe
 
-*function-definition*:<br/>
+*função-definição*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-*atributo de \* /-Seq* é \*específico da Microsoft /
+/\**Attribute-Seq* é específico da Microsoft\*/
 
-*declarator*:<br/>
+*Declarador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*: /\* Um declarador de função \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Declarador de novo estilo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Declarador de estilo obsoleto \*/
+*Declarador direto*:\* /um Declarador de função\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Declarador *direto***(***tipo de parâmetro-lista***)**  / \* Declarador de novo estilo      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***(***opção identificador-lista*<sub>opt</sub> **)**  / \* Declarador de estilo obsoleto    \*/
 
-*parameter-type-list*: /\* A lista de parâmetros \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
+*tipo de parâmetro-lista*:/\* a lista de parâmetros\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* **,...**
 
-*parameter-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
+*lista de parâmetros*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração de parâmetro*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parâmetro-List* **,**  *declaração de parâmetro*
 
 *parameter-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
@@ -66,7 +66,7 @@ void new( double x, double y, double z )
 }
 ```
 
-Se pelo menos um parâmetro ocorrer na lista de parâmetros, a lista poderá terminar com uma vírgula seguida de três pontos ( **,...** ). Essa construção, chamada de "notação de reticências", indica um número variável de argumentos para a função. (Consulte [chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obter mais informações.) No entanto, uma chamada para a função deve ter pelo menos tantos argumentos quantos houver parâmetros antes da última vírgula.
+Se pelo menos um parâmetro ocorrer na lista de parâmetros, a lista poderá terminar com uma vírgula seguida de três pontos (**,...**). Essa construção, chamada de "notação de reticências", indica um número variável de argumentos para a função. (Consulte [chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obter mais informações.) No entanto, uma chamada para a função deve ter pelo menos tantos argumentos quantos houver parâmetros antes da última vírgula.
 
 Se nenhum argumento for transmitido à função, a lista de parâmetros será substituída pela palavra-chave `void`. Esse uso de `void` é diferente do seu uso como um especificador de tipo.
 
@@ -74,6 +74,6 @@ A ordem e o tipo de parâmetros, inclusive qualquer uso da notação de reticên
 
 O compilador executa as conversões aritméticas comuns independentemente em cada parâmetro e em cada argumento, se necessário. Após a conversão, nenhum parâmetro é menor que `int` e nenhum parâmetro tem o tipo **float**, a menos que o tipo de parâmetro seja especificado explicitamente como **float** no protótipo. Isso significa, por exemplo, que declarar um parâmetro como `char` tem o mesmo efeito que declará-lo o como `int`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Definições de função C](../c-language/c-function-definitions.md)

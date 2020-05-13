@@ -1,5 +1,5 @@
 ---
-title: Funções globais de tratamento de evento
+title: Funções globais de manipulação de eventos
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlWaitWithMessageLoop
@@ -7,34 +7,34 @@ helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-ms.openlocfilehash: bb109c63b497420ad6e797cd8e0b366ce4dc0475
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2f8269dcf0f59a5d0794d3f16d4c4f85d8841ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276335"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330143"
 ---
-# <a name="event-handling-global-functions"></a>Funções globais de tratamento de evento
+# <a name="event-handling-global-functions"></a>Funções globais de manipulação de eventos
 
-Essa função fornece um manipulador de eventos.
+Esta função fornece um manipulador de eventos.
 
 > [!IMPORTANT]
->  A função listada na tabela a seguir não pode ser usada em aplicativos executados no tempo de execução do Windows.
+> A função listada na tabela a seguir não pode ser usada em aplicativos executados no Tempo de execução do Windows.
 
 |||
 |-|-|
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Aguarda um objeto a ser sinalizado, enquanto despacha as mensagens da janela, conforme necessário.|
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Espera que um objeto seja sinalizado, enquanto isso, despacha mensagens de janela conforme necessário.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase. h
+**Cabeçalho:** atlbase.h
 
-##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop
+## <a name="atlwaitwithmessageloop"></a><a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop
 
 Aguarda o objeto a ser sinalizado, enquanto despacha as mensagens da janela conforme necessário.
 
 > [!IMPORTANT]
->  Essa função não pode ser usada em aplicativos executados no tempo de execução do Windows.
+> Esta função não pode ser usada em aplicativos executados no Tempo de execução do Windows.
 
 ```
 BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
@@ -42,17 +42,17 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hEvent*<br/>
-[in] O identificador do objeto para aguardar.
+*Hevent*<br/>
+[em] A alça do objeto para esperar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retornará TRUE se o objeto foi sinalizado.
+Retorna TRUE se o objeto tiver sido sinalizado.
 
 ### <a name="remarks"></a>Comentários
 
-Isso é útil se você quiser aguardar um evento de objeto acontecer e ser notificado de que ele acontecendo, mas permitir que as mensagens de janela ser expedida enquanto aguarda.
+Isso é útil se você quiser esperar que o evento de um objeto aconteça e ser notificado sobre o que está acontecendo, mas permita que mensagens de janela sejam enviadas enquanto espera.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções](../../atl/reference/atl-functions.md)

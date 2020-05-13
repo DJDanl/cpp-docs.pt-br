@@ -23,10 +23,10 @@ O tipo de retorno de uma função estabelece o tamanho e o tipo do valor retorna
 
 ## <a name="syntax"></a>Sintaxe
 
-*function-definition*:<br/>
+*função-definição*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-*atributo de \* /-Seq* é \*específico da Microsoft /
+/\**Attribute-Seq* é específico da Microsoft\*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -34,22 +34,22 @@ O tipo de retorno de uma função estabelece o tamanho e o tipo do valor retorna
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+&nbsp;&nbsp;&nbsp;&nbsp;**livre**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**º**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**baixo**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**inteiro**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int8** / __int8\* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int16** / __int16\* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int32** / __int32\* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int64** / __int64\* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Longas**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**barra**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Clique**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**inteiro**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**não assinados**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*especificador struct-ou-Union-*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*especificador de enumeração*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-Name*
 
 *type-specifier* pode especificar qualquer tipo de fundamental, de estrutura ou união. Se você não incluir o *type-specifier*, o tipo de retorno `int` será presumido.
 
@@ -97,6 +97,6 @@ O exemplo define uma função que retorna um ponteiro para uma matriz de caracte
 
 Você não precisa declarar funções com o tipo de retorno `int` antes de chamá-las, embora protótipos sejam recomendados de forma que a verificação de tipo correto de argumentos e valores de retorno seja habilitada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Definições de função C](../c-language/c-function-definitions.md)

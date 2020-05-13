@@ -1,8 +1,9 @@
 ---
 title: rand_s
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand_s
+- _o_rand_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 652521ab472736783ba1b4498ca7d7c3f297e7ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949651"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919538"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -52,7 +54,7 @@ errno_t rand_s(unsigned int* randomValue);
 *randomValue*<br/>
 Um ponteiro para um inteiro para manter o valor gerado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de entrada _randomValue_ for um ponteiro NULL, a função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**. Se a função falhar por qualquer outro motivo, *_randomValue_ será definido como 0.
 
@@ -60,14 +62,16 @@ Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de 
 
 A função **rand_s** grava um número inteiro de pseudoaleatória no intervalo de 0 a **UINT_MAX** para o ponteiro de entrada. A função **rand_s** usa o sistema operacional para gerar números aleatórios criptograficamente seguros. Ele não usa a semente gerada pela função [srand](srand.md) , nem afeta a sequência numérica aleatória usada pelo [Rand](rand.md).
 
-A função **rand_s** requer que a constante **_CRT_RAND_S** seja definida antes da instrução de inclusão para que a função seja declarada, como no exemplo a seguir:
+A função **rand_s** requer que a constante **_CRT_RAND_S** seja definida antes da instrução de inclusão da função a ser declarada, como no exemplo a seguir:
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-o **rand_s** depende da API do [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , que está disponível apenas no Windows XP e posterior.
+**rand_s** depende da API [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , que está disponível apenas no Windows XP e posterior.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -127,7 +131,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 10
@@ -156,5 +160,5 @@ int main( void )
 ## <a name="see-also"></a>Consulte também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[rand](rand.md)<br/>
+[Rand](rand.md)<br/>
 [srand](srand.md)<br/>

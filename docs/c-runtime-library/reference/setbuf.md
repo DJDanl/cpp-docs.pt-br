@@ -1,8 +1,9 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
+ms.date: 4/2/2020
 api_name:
 - setbuf
+- _o_setbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948272"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910339"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -47,10 +49,10 @@ void setbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-*buffer*<br/>
+*completo*<br/>
 Buffer alocado pelo usuário.
 
 ## <a name="remarks"></a>Comentários
@@ -59,13 +61,15 @@ A função **setbuf** controla o buffer para o *Stream*. O argumento de *fluxo* 
 
 o **setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferida para o novo código. Ao contrário de **setvbuf**, o **setbuf** não tem nenhuma maneira de relatar erros. o **setvbuf** também permite que você controle o modo de buffer e o tamanho do buffer. **setbuf** existe para compatibilidade com o código existente.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -106,7 +110,7 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

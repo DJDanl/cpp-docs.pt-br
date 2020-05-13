@@ -1,8 +1,9 @@
 ---
 title: fflush
-ms.date: 09/11/2019
+ms.date: 4/2/2020
 api_name:
 - fflush
+- _o_fflush
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077335"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912894"
 ---
 # <a name="fflush"></a>fflush
 
@@ -45,7 +47,7 @@ int fflush(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
@@ -69,13 +71,15 @@ Para obter informações sobre como controlar o recurso de confirmação em disc
 
 Essa função bloqueia o thread de chamada e, portanto, é thread-safe. Para uma versão sem bloqueio, consulte **_fflush_nolock**.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

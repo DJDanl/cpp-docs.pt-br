@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 3201b5882a1de4064d924fbb28ee1c575ab8ccbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 55f202ffabe945e55589ab1fc771a1757e23ca2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151299"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372471"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Configurações do aplicativo, Assistente de Controle ActiveX MFC
 
-Use esta página do Assistente de controle de ActiveX MFC para criar e adicionar recursos básicos para um novo projeto do ActiveX do MFC. Essas configurações se aplicam ao próprio aplicativo e não a qualquer elemento do controle ou um recurso específico.
+Use esta página do MFC ActiveX Control Wizard para projetar e adicionar recursos básicos a um novo projeto MFC ActiveX. Essas configurações se aplicam ao próprio aplicativo e não a qualquer recurso ou elemento específico do controle.
 
 - **Licença de tempo de execução**
 
-   Selecione esta opção para gerar um arquivo de licença de usuário a ser distribuído com o controle. A licença é um arquivo de texto *NomeDoProjeto*. lic. Esse arquivo deve estar no mesmo diretório que a DLL do controle para permitir que uma instância do controle a ser criado em um ambiente de tempo de design. Você geralmente distribuir esse arquivo com o seu controle, mas seus clientes não distribuí-lo.
+   Selecione esta opção para gerar um arquivo de licença de usuário para distribuir com o controle. A licença é um arquivo de texto, *projname*.lic. Este arquivo deve estar no mesmo diretório que o DLL do controle para permitir que uma instância do controle seja criada em um ambiente de tempo de projeto. Você geralmente distribui este arquivo com o seu controle, mas seus clientes não o distribuem.
 
 - **Gerar arquivos de ajuda**
 
-   Selecione esta opção para gerar arquivos de ajuda de stub e configurar o projeto para incluir a Ajuda para o seu controle. Um projeto, criado sem essa opção, apenas gera uma **sobre** caixa é exibida quando o usuário clica o controle usa F1 ou clica **ajudar** no contêiner do controle.
+   Selecione esta opção para gerar arquivos de ajuda subbed e configure o projeto para incluir ajuda para o seu controle. Um projeto padrão, criado sem essa opção, gera apenas uma caixa **Sobre** que é exibida quando o usuário clica no controle, usa F1 ou **clica** em Ajuda no contêiner do controle.
 
    > [!NOTE]
-   > Como a Ajuda é exibida depende de como o controle interage com seu contêiner. Se você incluir ajuda com seu contêiner, você deve tratar as mensagens entre o controle e o contêiner para exibir a Ajuda de forma adequada.
+   > A forma como a ajuda é exibida depende de como seu controle interage com seu contêiner. Se você incluir ajuda com o recipiente, você deve lidar com mensagens entre o controle e o recipiente para exibir a ajuda adequadamente.
 
    Quando você gera arquivos de ajuda usando o assistente, seu projeto inclui o seguinte:
 
-   - A. vcxproj arquivo contém o código para criar e configurar o arquivo de ajuda quando o projeto é compilado.
+  - O arquivo .vcxproj contém código para construir e configurar o arquivo de ajuda quando o projeto é construído.
 
-   - O arquivo *projnamePropPage*arquivo. cpp inclui um [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) função no construtor.
+  - O arquivo *projnamePropPage*.cpp inclui uma função [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) no construtor.
 
-   - O arquivo projname.hpj, é o arquivo de projeto de Ajuda usado pelo compilador de ajuda para criar o arquivo de Ajuda do controle ActiveX. O arquivo. hpj é um arquivo de texto que contém as informações sobre a criação de seu arquivo de Ajuda e os caminhos para os arquivos adicionais (por exemplo, bitmaps) inclui o arquivo de Ajuda.
+  - O arquivo projname.hpj é o arquivo de projeto de ajuda usado pelo compilador de ajuda para criar o arquivo de ajuda do controle ActiveX. O arquivo .hpj é um arquivo de texto contendo as informações sobre a construção do seu arquivo de ajuda e os caminhos para os arquivos adicionais (por exemplo, bitmaps) que o arquivo de ajuda inclui.
 
-   - O projeto inclui o diretório HLP para conter os arquivos de bitmap de Ajuda do projeto e o arquivo do tópico da Ajuda (*NomeDoProjeto*. rtf). Esse arquivo de tópico de Ajuda contém tópicos da Ajuda padrão para as propriedades, eventos e métodos com suporte de vários controles ActiveX comuns. Você pode editar o arquivo. RTF para adicionar ou remover os tópicos de Ajuda específicos.
+  - O projeto inclui o diretório HLP para conter os arquivos de bitmap de ajuda do projeto e o arquivo de tópico de ajuda *(projname*.rtf). Este arquivo de tópico de ajuda contém os tópicos de ajuda padrão para as propriedades comuns, eventos e métodos suportados por muitos controles ActiveX. Você pode editar o arquivo .rtf para adicionar ou remover tópicos de ajuda específicos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Assistente de controle ActiveX do MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
+[Assistente de controle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Nomes de controle, Assistente de controle ActiveX do MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
 [Configurações de controle, Assistente de controle ActiveX do MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)

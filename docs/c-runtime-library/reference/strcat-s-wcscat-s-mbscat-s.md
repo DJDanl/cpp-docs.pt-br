@@ -1,11 +1,15 @@
 ---
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
+- _o__mbscat_s
+- _o__mbscat_s_l
+- _o_strcat_s
+- _o_wcscat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +43,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f7d890a753638112c4a1bb56cf6093a9510dbee2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625788"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910655"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -117,13 +122,13 @@ Localidade a usar.
 
 Zero se for bem-sucedido; um código de erro em caso de falha.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
 |*strDestination*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Nulo** ou não terminado|qualquer|qualquer|**EINVAL**|não modificado|
-|qualquer|qualquer|**NULL**|**EINVAL**|*strDestination*[0] definido como 0|
-|qualquer|0 ou muito pequeno|qualquer|**ERANGE**|*strDestination*[0] definido como 0|
+|**Nulo** ou não terminado|any|any|**EINVAL**|não modificado|
+|any|any|**NULO**|**EINVAL**|*strDestination*[0] definido como 0|
+|any|0 ou muito pequeno|any|**ERANGE**|*strDestination*[0] definido como 0|
 
 ## <a name="remarks"></a>Comentários
 
@@ -138,7 +143,7 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** e **_mbscat_s** são versões de caractere largo e de multibyte de **strcat_s**. Os argumentos e o valor de retorno de **wcscat_s** são cadeias de caracteres largos; os de **_mbscat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcscat_s** e **_mbscat_s** são versões de caractere largo e de vários caracteres de **strcat_s**. Os argumentos e o valor de retorno de **wcscat_s** são cadeias de caracteres largos; os de **_mbscat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 Se *strDestination* for um ponteiro NULL ou não for terminada em nulo, ou se *strSource* for um ponteiro **NULL** ou se a cadeia de caracteres de destino for muito pequena, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EINVAL** e definirá **errno** como **EINVAL**.
 
@@ -147,6 +152,8 @@ As versões das funções que têm o sufixo **_L** têm o mesmo comportamento, m
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -170,7 +177,7 @@ Consulte o exemplo de código em [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

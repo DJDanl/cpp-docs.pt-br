@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376314"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime e modelos gerenciados (C++/CLI e C++/CX)
 
@@ -22,7 +22,7 @@ Você pode criar modelos a partir de valores ou tipos de referência.  Saiba mai
 
 Saiba mais sobre modelos de classe padrão do C++ em [Modelos de classe](../cpp/class-templates.md).
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 (Não há comentários para esse recurso de linguagem que se apliquem somente ao Windows Runtime.)
 
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-Você não pode acessar modelos definidos em um assembly referenciado com a sintaxe da linguagem C++/CLI, mas pode usar o reflexo. Se um modelo não for instanciado, não será emitido nos metadados. Se um modelo for instanciado, somente as funções de membro referenciadas aparecerão nos metadados.
+Você não pode acessar modelos definidos em um assembly referenciado com a sintaxe da linguagem C++/CLI, mas pode usar o reflexo. Se um modelo não for instanciado, ele não será emitido nos metadados. Se um modelo for instanciado, somente as funções de membro referenciadas aparecerão nos metadados.
 
 ```cpp
 // managed_templates_3.cpp

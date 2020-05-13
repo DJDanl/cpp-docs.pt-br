@@ -1,11 +1,15 @@
 ---
 title: atoi, _atoi_l, _wtoi, _wtoi_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wtoi
 - _wtoi_l
 - atoi
 - _atoi_l
+- _o__atoi_l
+- _o__wtoi
+- _o__wtoi_l
+- _o_atoi
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +23,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: 8d66a219aea1451e745e32f7affbfb59b73ff796
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943744"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919859"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -76,17 +81,17 @@ int _wtoi_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres a ser convertida.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada função retorna o valor **int** produzido pela interpretação dos caracteres de entrada como um número. O valor de retorno é 0 para **atoi** e **_wtoi**, se a entrada não puder ser convertida em um valor desse tipo.
 
-No caso de estouro com grandes valores inteiros negativos, **LONG_MIN** é retornado. **atoi** e **_Wtoi** retornam **INT_MAX** e **INT_MIN** nessas condições. Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão **errno** como **EINVAL** e retornarão 0.
+No caso de estouro com grandes valores inteiros negativos, **LONG_MIN** é retornado. **atoi** e **_wtoi** retornam **INT_MAX** e **INT_MIN** nessas condições. Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão **errno** como **EINVAL** e retornarão 0.
 
 ## <a name="remarks"></a>Comentários
 
@@ -99,6 +104,8 @@ O argumento *Str* para **atoi** e **_wtoi** tem o seguinte formato:
 Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos.
 
 As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -166,7 +173,7 @@ Overflow condition occurred.
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

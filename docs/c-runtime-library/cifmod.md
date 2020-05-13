@@ -1,8 +1,9 @@
 ---
 title: _CIfmod
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIfmod
+- _o__CIfmod
 api_location:
 - msvcrt.dll
 - msvcr110_clr0400.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr120.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: ca869a3033e4186ff6029a832c22bc4149ea1010
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bcfbabd260e17ac788ca3a3b83301b5f35be07eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944652"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917450"
 ---
 # <a name="_cifmod"></a>_CIfmod
 
@@ -36,7 +38,7 @@ Calcula o restante do ponto flutuante dos dois valores superiores na pilha.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void __cdecl _CIfmod();
 ```
 
@@ -45,6 +47,8 @@ void __cdecl _CIfmod();
 Esta versão da função `fmod` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.
 
 O valor resultante é colocado na parte superior da pilha.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

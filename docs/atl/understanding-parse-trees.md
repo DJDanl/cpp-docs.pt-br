@@ -1,48 +1,52 @@
 ---
-title: Registrador da ATL e árvores de análise
+title: Registrador de ATL e árvores de análise
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: e1aea573e78e6f6a9a86bc4e3987ee448815f329
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2cea9b0e7b7c62236f708f9aa8217eaa5df51d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196162"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168690"
 ---
-# <a name="understanding-parse-trees"></a>Noções básicas sobre árvores de análise
+# <a name="understanding-parse-trees"></a>Compreendendo as árvores de análise
 
-Você pode definir uma ou mais árvores de análise em seu script de registrador, onde cada árvore de análise tem a seguinte forma:
+Você pode definir uma ou mais árvores de análise no script do registrador, em que cada árvore de análise tem o seguinte formato:
 
-```
-<root key>{<registry expression>}+
-```
+> \<chave raiz> {\<expressão do registro>} +
 
-em que:
+onde:
 
-```
-<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |
-    HKEY_LOCAL_MACHINE | HKEY_USERS |
-    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |
-    HKEY_CURRENT_CONFIG | HKCR | HKCU |
-    HKLM | HKU | HKPD | HKDD | HKCC
-<registry expression> ::= <Add Key> | <Delete Key>
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
-<Delete Key> ::= Delete<Key Name>
-<Key Name> ::= '<AlphaNumeric>+'
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
-<Key Value> ::== <Key Type><Key Name>
-<Key Type> ::= s | d
-<Key Value> ::= '<AlphaNumeric>'
-```
+> \<> de chave raiz:: = HKEY_CLASSES_ROOT | HKEY_CURRENT_USER | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_LOCAL_MACHINE | HKEY_USERS | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_CURRENT_CONFIG | HKCR | HKCU | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKLM | HKU | HKPD | HKDD | HKCC
+
+> \<expressão de registro>:: \<= adicionar chave> | \<Excluir> de chave
+
+> \<Adicionar chave>:: = [**ForceRemove** | **NoRemove** | **Val**]\<nome da chave>\<[chave key>] [\<{Add Key>}]
+
+> \<Excluir chave>:: = **excluir**\<nome da chave>
+
+> \<Nome da chave>:: = **'**\<alfanumérico>+**'**
+
+> \<> alfanumérico:: = *qualquer caractere não nulo, ou seja, ASCII 0*
+
+> \<Valor da chave>:: \<= tipo de \<chave>nome da chave>
+
+> \<Tipo de chave>:: = **s** | **d**
+
+> \<Valor da chave>:: = **'**\<alfanumérico>**'**
 
 > [!NOTE]
-> `HKEY_CLASSES_ROOT` e `HKCR` forem equivalentes; `HKEY_CURRENT_USER` e `HKCU` são equivalentes; e assim por diante.
+> `HKEY_CLASSES_ROOT`e `HKCR` são equivalentes; `HKEY_CURRENT_USER` e `HKCU` são equivalentes; e assim por diante.
 
-Uma árvore de análise pode adicionar várias chaves e subchaves para a \<chave raiz >. Dessa forma, ele mantém o identificador de uma subchave aberta até que o analisador conclui a análise de todas as suas subchaves. Essa abordagem é mais eficiente do que o operando em uma única chave de cada vez, conforme mostrado no exemplo a seguir:
+Uma árvore de análise pode adicionar várias chaves e subchaves \<à chave raiz>. Ao fazer isso, ele mantém o identificador de uma subchave aberto até que o analisador tenha concluído a análise de todas as suas subchaves. Essa abordagem é mais eficiente do que operar em uma única chave por vez, como visto no exemplo a seguir:
 
-```
+```rgs
 HKEY_CLASSES_ROOT
 {
     'MyVeryOwnKey'
@@ -55,8 +59,8 @@ HKEY_CLASSES_ROOT
 }
 ```
 
-Aqui, o registrador abre inicialmente (cria) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. Em seguida, vê que `MyVeryOwnKey` tiver uma subchave. Em vez de fechar a chave para `MyVeryOwnKey`, o registrador retém o identificador e abre (cria) `HasASubKey` usando esse identificador pai. (O registro do sistema pode ser mais lento quando nenhum identificador pai é aberto.) Assim, abrindo `HKEY_CLASSES_ROOT\MyVeryOwnKey` e, em seguida, abrindo `HasASubKey` com `MyVeryOwnKey` como o pai é mais rápido do que a abertura `MyVeryOwnKey`, fechando `MyVeryOwnKey`e, em seguida, abrindo `MyVeryOwnKey\HasASubKey`.
+Aqui, o registrador inicialmente é aberto ( `HKEY_CLASSES_ROOT\MyVeryOwnKey`cria). Em seguida, ele `MyVeryOwnKey` vê que tem uma subchave. Em vez de fechar a chave `MyVeryOwnKey`para, o registrador retém o identificador e abre (cria `HasASubKey` ) usando esse identificador pai. (O registro do sistema pode ser mais lento quando não há identificador pai aberto.) Portanto, abrir `HKEY_CLASSES_ROOT\MyVeryOwnKey` e abrir `HasASubKey` o com `MyVeryOwnKey` como o pai é mais rápido do `MyVeryOwnKey`que abrir `MyVeryOwnKey`, fechar e abrir `MyVeryOwnKey\HasASubKey`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Criando scripts do Registrador](../atl/creating-registrar-scripts.md)
+[Criando scripts de registrador](../atl/creating-registrar-scripts.md)

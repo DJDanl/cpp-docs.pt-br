@@ -1,6 +1,6 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -8,6 +8,12 @@ api_name:
 - scalblnf
 - scalbn
 - scalbln
+- _o_scalbln
+- _o_scalblnf
+- _o_scalblnl
+- _o_scalbn
+- _o_scalbnf
+- _o_scalbnl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948911"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918184"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -103,7 +110,7 @@ Valor de ponto flutuante.
 *exp*<br/>
 Expoente inteiro.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As **funções scalbn** retornam o valor *de x* \* **FLT_RADIX**<sup>exp</sup> quando bem-sucedidas. No estouro (dependendo do sinal de *x*), **scalbn** retorna +/- **HUGE_VAL**; o valor **errno** é definido como **ERANGE**.
 
@@ -111,9 +118,11 @@ Para obter mais informações sobre **errno** e possíveis valores de retorno de
 
 ## <a name="remarks"></a>Comentários
 
-**FLT_RADIX** é definido em \<float. h > como a base de ponto flutuante nativo; em sistemas binários, ele tem um valor de 2 e **scalbn** é equivalente a [ldexp](ldexp.md).
+**FLT_RADIX** é definido em \<float. h> como a base do ponto flutuante nativo; em sistemas binários, ele tem um valor de 2 e **scalbn** é equivalente a [ldexp](ldexp.md).
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **scalbln** que levam e retornam tipos **float** ou **Long** **duplos** . Em um programa C, **scalbn** sempre leva um **Double** e um **int** e retorna um **Double**, e **scalbln** sempre leva um **Double** e um **Long** e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **scalbln** que usam e retornam tipos **float** ou **Long** **duplos** . Em um programa C, **scalbn** sempre leva um **Double** e um **int** e retorna um **Double**, e **scalbln** sempre leva um **Double** e um **Long** e retorna um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -121,7 +130,7 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **s
 |--------------|--------------|------------------|
 |**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

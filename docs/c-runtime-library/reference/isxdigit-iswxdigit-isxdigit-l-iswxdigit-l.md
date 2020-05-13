@@ -1,11 +1,13 @@
 ---
 title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _iswxdigit_l
 - iswxdigit
 - isxdigit
 - _isxdigit_l
+- _o_iswxdigit
+- _o_isxdigit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: 18f360e66583dfbf5033f813deed0b56abc71260
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3aefa39d9fabb2b8a3124955f3ab0787e9e174f3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953586"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916592"
 ---
 # <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
@@ -70,13 +73,13 @@ int _iswxdigit_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um dígito hexadecimal. **isxdigit** retornará um valor diferente de zero se *c* for um dígito hexadecimal (a-f, a-f ou 0-9). **iswxdigit** retornará um valor diferente de zero se *c* for um caractere largo que corresponde a um caractere de dígito hexadecimal. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
@@ -92,6 +95,10 @@ O comportamento de **isxdigit** e **_isxdigit_l** será indefinido se *c* não f
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istxdigit**|**isxdigit**|**isxdigit**|**iswxdigit**|
 
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -101,10 +108,10 @@ O comportamento de **isxdigit** e **_isxdigit_l** será indefinido se *c* não f
 |**_isxdigit_l**|\<ctype.h>|
 |**_iswxdigit_l**|\<ctype.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

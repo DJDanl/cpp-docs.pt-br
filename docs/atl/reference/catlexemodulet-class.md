@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b678c8a46f56337d76ec192869449797a4f66fb3
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418051"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168781"
 ---
 # <a name="catlexemodulet-class"></a>Classe CAtlExeModuleT
 
@@ -35,12 +35,12 @@ Essa classe representa o módulo para um aplicativo.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
-#### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Sua classe derivada de `CAtlExeModuleT`.
@@ -49,14 +49,14 @@ Sua classe derivada de `CAtlExeModuleT`.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|O construtor.|
 |[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAtlExeModuleT::InitializeCom](#initializecom)|Inicializa COM.|
 |[CAtlExeModuleT::P arseCommandLine](#parsecommandline)|Analisa a linha de comando e executa o registro, se necessário.|
@@ -72,7 +72,7 @@ Sua classe derivada de `CAtlExeModuleT`.
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown)|Um sinalizador que indica que deve haver um atraso ao desligar o módulo.|
 |[CAtlExeModuleT:: m_dwPause](#m_dwpause)|Um valor de pausa usado para garantir que todos os objetos sejam liberados antes do desligamento.|
@@ -80,7 +80,7 @@ Sua classe derivada de `CAtlExeModuleT`.
 
 ## <a name="remarks"></a>Comentários
 
-`CAtlExeModuleT` representa o módulo de um aplicativo (EXE) e contém um código que dá suporte à criação de um EXE, ao processamento da linha de comando, ao registro de objetos de classe, à execução do loop de mensagem e à limpeza na saída.
+`CAtlExeModuleT`representa o módulo para um aplicativo (EXE) e contém um código que dá suporte à criação de um EXE, ao processamento da linha de comando, ao registro de objetos de classe, à execução do loop de mensagem e à limpeza na saída.
 
 Essa classe foi projetada para melhorar o desempenho quando objetos COM no servidor EXE são continuamente criados e destruídos. Após o lançamento do último objeto COM, o EXE aguarda uma duração especificada pelo membro de dados [CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout) . Se não houver nenhuma atividade durante esse período (ou seja, nenhum objeto COM for criado), o processo de desligamento será iniciado.
 
@@ -102,11 +102,11 @@ Para obter mais informações sobre módulos na ATL, consulte [classes de módul
 
 **Cabeçalho:** atlbase. h
 
-##  <a name="catlexemodulet"></a>CAtlExeModuleT::CAtlExeModuleT
+## <a name="catlexemoduletcatlexemodulet"></a><a name="catlexemodulet"></a>CAtlExeModuleT::CAtlExeModuleT
 
 O construtor.
 
-```
+```cpp
 CAtlExeModuleT() throw();
 ```
 
@@ -114,11 +114,11 @@ CAtlExeModuleT() throw();
 
 Se o módulo EXE não puder ser inicializado, o WinMain retornará imediatamente sem processamento adicional.
 
-##  <a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT
+## <a name="catlexemoduletcatlexemodulet"></a><a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT
 
 O destruidor.
 
-```
+```cpp
 ~CAtlExeModuleT() throw();
 ```
 
@@ -126,11 +126,11 @@ O destruidor.
 
 Libera todos os recursos alocados.
 
-##  <a name="initializecom"></a>CAtlExeModuleT::InitializeCom
+## <a name="catlexemoduletinitializecom"></a><a name="initializecom"></a>CAtlExeModuleT::InitializeCom
 
 Inicializa COM.
 
-```
+```cpp
 static HRESULT InitializeCom() throw();
 ```
 
@@ -140,15 +140,15 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é chamado a partir do construtor e pode ser substituído para inicializar COM de uma maneira diferente da implementação padrão. A implementação padrão chama `CoInitializeEx(NULL, COINIT_MULTITHREADED)` ou `CoInitialize(NULL)` dependendo da configuração do projeto.
+Esse método é chamado a partir do construtor e pode ser substituído para inicializar COM de uma maneira diferente da implementação padrão. A implementação padrão chama `CoInitializeEx(NULL, COINIT_MULTITHREADED)` ou `CoInitialize(NULL)` depende da configuração do projeto.
 
 Substituir esse método normalmente requer a substituição de [CAtlExeModuleT:: UninitializeCom](#uninitializecom).
 
-##  <a name="m_bdelayshutdown"></a>CAtlExeModuleT:: m_bDelayShutdown
+## <a name="catlexemoduletm_bdelayshutdown"></a><a name="m_bdelayshutdown"></a>CAtlExeModuleT:: m_bDelayShutdown
 
 Um sinalizador que indica que deve haver um atraso ao desligar o módulo.
 
-```
+```cpp
 bool m_bDelayShutdown;
 ```
 
@@ -156,11 +156,11 @@ bool m_bDelayShutdown;
 
 Consulte a [visão geral do CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) para obter detalhes.
 
-##  <a name="m_dwpause"></a>CAtlExeModuleT:: m_dwPause
+## <a name="catlexemoduletm_dwpause"></a><a name="m_dwpause"></a>CAtlExeModuleT:: m_dwPause
 
 Um valor de pausa usado para garantir que todos os objetos tenham saído antes do desligamento.
 
-```
+```cpp
 DWORD m_dwPause;
 ```
 
@@ -168,11 +168,11 @@ DWORD m_dwPause;
 
 Altere esse valor depois de chamar [CAtlExeModuleT:: InitializeCom](#initializecom) para definir o número de milissegundos usados como o valor de pausa para desligar o servidor. O valor padrão é 1000 milissegundos.
 
-##  <a name="m_dwtimeout"></a>CAtlExeModuleT:: m_dwTimeOut
+## <a name="catlexemoduletm_dwtimeout"></a><a name="m_dwtimeout"></a>CAtlExeModuleT:: m_dwTimeOut
 
 Um valor de tempo limite usado para atrasar o descarregamento do módulo.
 
-```
+```cpp
 DWORD m_dwTimeOut;
 ```
 
@@ -180,15 +180,15 @@ DWORD m_dwTimeOut;
 
 Altere esse valor depois de chamar [CAtlExeModuleT:: InitializeCom](#initializecom) para definir o número de milissegundos usados como o valor de tempo limite para desligar o servidor. O valor padrão é 5.000 milissegundos. Consulte a [visão geral do CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) para obter mais detalhes.
 
-##  <a name="parsecommandline"></a>CAtlExeModuleT::P arseCommandLine
+## <a name="catlexemoduletparsecommandline"></a><a name="parsecommandline"></a>CAtlExeModuleT::P arseCommandLine
 
 Analisa a linha de comando e executa o registro, se necessário.
 
-```
+```cpp
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpCmdLine*<br/>
 A linha de comando passada para o aplicativo.
@@ -204,11 +204,11 @@ Retornará true se o aplicativo continuar a ser executado; caso contrário, fals
 
 Esse método é chamado de [CAtlExeModuleT:: WinMain](#winmain) e pode ser substituído para manipular as opções de linha de comando. A implementação padrão verifica os argumentos de linha de comando **/RegServer** e **opção/UnregServer** e executa o registro ou o cancelamento de registro.
 
-##  <a name="postmessageloop"></a>CAtlExeModuleT::P ostMessageLoop
+## <a name="catlexemoduletpostmessageloop"></a><a name="postmessageloop"></a>CAtlExeModuleT::P ostMessageLoop
 
 Esse método é chamado imediatamente depois que o loop de mensagem é encerrado.
 
-```
+```cpp
 HRESULT PostMessageLoop() throw();
 ```
 
@@ -220,15 +220,15 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Substitua esse método para executar a limpeza de aplicativo personalizada. A implementação padrão chama [CAtlExeModuleT:: RevokeClassObjects](#revokeclassobjects).
 
-##  <a name="premessageloop"></a>CAtlExeModuleT::P reMessageLoop
+## <a name="catlexemoduletpremessageloop"></a><a name="premessageloop"></a>CAtlExeModuleT::P reMessageLoop
 
 Esse método é chamado imediatamente antes de entrar no loop de mensagem.
 
-```
+```cpp
 HRESULT PreMessageLoop(int nShowCmd) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
 O valor passado como o parâmetro *nShowCmd* em WinMain.
@@ -241,15 +241,15 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Substitua esse método para adicionar o código de inicialização personalizado para o aplicativo. A implementação padrão registra os objetos de classe.
 
-##  <a name="registerclassobjects"></a>CAtlExeModuleT::RegisterClassObjects
+## <a name="catlexemoduletregisterclassobjects"></a><a name="registerclassobjects"></a>CAtlExeModuleT::RegisterClassObjects
 
 Registra o objeto de classe com OLE para que outros aplicativos possam se conectar a ele.
 
-```
+```cpp
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwClsContext*<br/>
 Especifica o contexto no qual o objeto de classe deve ser executado. Os valores possíveis são CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER.
@@ -261,11 +261,11 @@ Determina os tipos de conexão para o objeto de classe. Os valores possíveis s�
 
 Retorna S_OK em caso de êxito, S_FALSE se não houvesse nenhuma classe a ser registrada ou um erro HRESULT em caso de falha.
 
-##  <a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects
+## <a name="catlexemoduletrevokeclassobjects"></a><a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects
 
 Remove o objeto de classe.
 
-```
+```cpp
 HRESULT RevokeClassObjects() throw();
 ```
 
@@ -273,15 +273,15 @@ HRESULT RevokeClassObjects() throw();
 
 Retorna S_OK em caso de êxito, S_FALSE se não houvesse nenhuma classe a ser registrada ou um erro HRESULT em caso de falha.
 
-##  <a name="run"></a>CAtlExeModuleT:: Run
+## <a name="catlexemoduletrun"></a><a name="run"></a>CAtlExeModuleT:: Run
 
 Esse método executa o código no módulo EXE para inicializar, executar o loop de mensagem e limpar.
 
-```
+```cpp
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
 Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . O padrão é SW_HIDE.
@@ -294,11 +294,11 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Esse método pode ser substituído. No entanto, na prática, é melhor substituir [CAtlExeModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT:: RunMessageLoop](#runmessageloop)ou [CAtlExeModuleT::P ostmessageloop](#postmessageloop) em vez disso.
 
-##  <a name="runmessageloop"></a>CAtlExeModuleT::RunMessageLoop
+## <a name="catlexemoduletrunmessageloop"></a><a name="runmessageloop"></a>CAtlExeModuleT::RunMessageLoop
 
 Esse método executa o loop de mensagem.
 
-```
+```cpp
 void RunMessageLoop() throw();
 ```
 
@@ -306,11 +306,11 @@ void RunMessageLoop() throw();
 
 Esse método pode ser substituído para alterar o comportamento do loop de mensagem.
 
-##  <a name="uninitializecom"></a>CAtlExeModuleT::UninitializeCom
+## <a name="catlexemoduletuninitializecom"></a><a name="uninitializecom"></a>CAtlExeModuleT::UninitializeCom
 
 Desinicializa COM.
 
-```
+```cpp
 static void UninitializeCom() throw();
 ```
 
@@ -318,11 +318,11 @@ static void UninitializeCom() throw();
 
 Por padrão, esse método simplesmente chama [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) e é chamado do destruidor. Substitua esse método se você substituir [CAtlExeModuleT:: InitializeCom](#initializecom).
 
-##  <a name="unlock"></a>CAtlExeModuleT:: desbloquear
+## <a name="catlexemoduletunlock"></a><a name="unlock"></a>CAtlExeModuleT:: desbloquear
 
 Decrementa a contagem de bloqueios do módulo.
 
-```
+```cpp
 LONG Unlock() throw();
 ```
 
@@ -330,15 +330,15 @@ LONG Unlock() throw();
 
 Retorna um valor que pode ser útil para diagnóstico ou teste.
 
-##  <a name="winmain"></a>CAtlExeModuleT:: WinMain
+## <a name="catlexemoduletwinmain"></a><a name="winmain"></a>CAtlExeModuleT:: WinMain
 
 Esse método implementa o código necessário para executar um EXE.
 
-```
+```cpp
 int WinMain(int nShowCmd) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
 Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
@@ -349,7 +349,7 @@ Retorna o valor de retorno do executável.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método pode ser substituído. Se substituir [CAtlExeModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT::P ostmessageloop](#postmessageloop)ou [CAtlExeModuleT:: RunMessageLoop](#runmessageloop) não fornecer flexibilidade suficiente, será possível substituir a função `WinMain` usando esse método.
+Esse método pode ser substituído. Se substituir [CAtlExeModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT::P ostmessageloop](#postmessageloop)ou [CAtlExeModuleT:: RunMessageLoop](#runmessageloop) não fornecer flexibilidade suficiente, será possível substituir a `WinMain` função usando esse método.
 
 ## <a name="see-also"></a>Confira também
 

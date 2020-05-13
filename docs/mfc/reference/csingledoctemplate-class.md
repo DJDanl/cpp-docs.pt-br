@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: 4d1361734f38d903e2171839b95888863126974a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a014b35a6cd2d12367e190e4d6dd689e28eae66
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324175"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318343"
 ---
 # <a name="csingledoctemplate-class"></a>Classe CSingleDocTemplate
 
@@ -35,37 +35,37 @@ class CSingleDocTemplate : public CDocTemplate
 
 ## <a name="remarks"></a>Comentários
 
-Um aplicativo SDI usa a janela do quadro principal para exibir um documento. apenas um documento pode ser aberto por vez.
+Um aplicativo SDI usa a janela do quadro principal para exibir um documento; apenas um documento pode ser aberto de cada vez.
 
 Um modelo de documento define a relação entre três tipos de classes:
 
-- Uma classe de documento, que derivam de `CDocument`.
+- Uma classe de documentos, `CDocument`da qual você deriva.
 
-- Uma classe de exibição, que exibe dados de classe de documento listada acima. Você pode derivar desta classe de `CView`, `CScrollView`, `CFormView`, ou `CEditView`. (Você também pode usar `CEditView` diretamente.)
+- Uma classe de exibição, que exibe dados da classe de documento listada acima. Você pode derivar `CView` `CScrollView`esta `CFormView`classe `CEditView`de, ou . (Você também `CEditView` pode usar diretamente.)
 
-- Uma classe de janela de quadro, que contém a exibição. Para um modelo de documento de SDI, você pode derivar desta classe de `CFrameWnd`janela de quadro; se você não precisa personalizar o comportamento da janela principal, você pode usar `CFrameWnd` diretamente sem sua própria classe.
+- Uma classe de janela de quadro, que contém a vista. Para um modelo de documento SDI, `CFrameWnd`você pode derivar esta classe de ; se você não precisar personalizar o comportamento da janela `CFrameWnd` principal do quadro, você pode usar diretamente sem derivar sua própria classe.
 
-Um aplicativo SDI geralmente oferece suporte a um tipo de documento, portanto, tem apenas um `CSingleDocTemplate` objeto. Apenas um documento pode ser aberto por vez.
+Um aplicativo SDI normalmente suporta um tipo de documento, por isso tem apenas um `CSingleDocTemplate` objeto. Apenas um documento pode ser aberto de cada vez.
 
-Você não precisa chamar qualquer função de membro `CSingleDocTemplate` , exceto o construtor. Os identificadores de framework `CSingleDocTemplate` objetos internamente.
+Você não precisa chamar nenhuma função `CSingleDocTemplate` membro de exceto o construtor. A estrutura `CSingleDocTemplate` lida com objetos internamente.
 
-Para obter mais informações sobre como usar `CSingleDocTemplate`, consulte [modelos de documento e o processo de criação de documento/exibição](../../mfc/document-templates-and-the-document-view-creation-process.md).
+Para obter mais `CSingleDocTemplate`informações sobre como usar, consulte [Modelos de documentos e o processo de criação de documentos/visualização.](../../mfc/document-templates-and-the-document-view-creation-process.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)
+[Cdoctemplate](../../mfc/reference/cdoctemplate-class.md)
 
 `CSingleDocTemplate`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxwin. h
+**Cabeçalho:** afxwin.h
 
-##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate
+## <a name="csingledoctemplatecsingledoctemplate"></a><a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate
 
 Constrói um objeto `CSingleDocTemplate`.
 
@@ -79,10 +79,10 @@ CSingleDocTemplate(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIDResource*<br/>
-Especifica a identificação dos recursos usados com o tipo de documento. Isso pode incluir recursos de cadeia de caracteres, ícone, tabela de Aceleradores e menu.
+*Nidresource*<br/>
+Especifica o ID dos recursos utilizados com o tipo de documento. Isso pode incluir menu, ícone, tabela de acelerador e recursos de string.
 
-O recurso de cadeia de caracteres consiste em subcadeias de caracteres até sete separadas pelo caractere '\n' (o caractere '\n' é necessário como um espaço reservado, se uma subcadeia de caracteres não for incluída; no entanto, não são necessários de caracteres à direita de '\n'); Esses subcadeias de caracteres descrevem o tipo de documento. Para obter informações sobre as subcadeias de caracteres, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Esse recurso de cadeia de caracteres for encontrado no arquivo de recurso do aplicativo. Por exemplo:
+O recurso string consiste em até sete substrings separadas pelo caractere '\n' (o caractere '\n' é necessário como espaço reservado se uma substring não estiver incluída; no entanto, caracteres '\n' não são necessários); essas substrings descrevem o tipo de documento. Para obter informações sobre as substrings, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Esse recurso de string é encontrado no arquivo de recursos do aplicativo. Por exemplo:
 
 ```RC
 // MYCALC.RC
@@ -92,22 +92,22 @@ BEGIN
 END
 ```
 
-Você pode editar essa cadeia de caracteres usando o editor de cadeia de caracteres; a cadeia de caracteres inteira é exibido como uma única entrada no Editor de cadeia de caracteres, não como sete entradas separadas.
+Você pode editar esta seqüência usando o editor de seqüência; toda a seqüência aparece como uma única entrada no Editor de cordas, não como sete entradas separadas.
 
-Para obter mais informações sobre esses tipos de recursos, consulte a [Editor de cadeia de caracteres](../../windows/string-editor.md).
+Para obter mais informações sobre esses tipos de recursos, consulte o [Editor de cordas](../../windows/string-editor.md).
 
 *pDocClass*<br/>
-Aponta para o `CRuntimeClass` objeto da classe do documento. Essa classe é um `CDocument`-derivado da classe que você define para representar seus documentos.
+Aponta para `CRuntimeClass` o objeto da classe de documentos. Esta classe `CDocument`é uma classe derivada que você define para representar seus documentos.
 
 *pFrameClass*<br/>
-Aponta para o `CRuntimeClass` objeto da classe de janela do quadro. Essa classe pode ser um `CFrameWnd`-classe derivada, ou pode ser `CFrameWnd` em si, se você quiser o comportamento padrão para a janela do quadro principal.
+Aponta para `CRuntimeClass` o objeto da classe da janela do quadro. Esta classe pode `CFrameWnd`ser uma classe derivada, ou pode ser `CFrameWnd` ela mesma se você quiser comportamento padrão para a janela do quadro principal.
 
 *pViewClass*<br/>
-Aponta para o `CRuntimeClass` objeto da classe de exibição. Essa classe é um `CView`-derivado da classe que você define para exibir seus documentos.
+Aponta para `CRuntimeClass` o objeto da classe de exibição. Esta classe `CView`é uma classe derivada que você define para exibir seus documentos.
 
 ### <a name="remarks"></a>Comentários
 
-Alocar dinamicamente um `CSingleDocTemplate` do objeto e passá-lo para `CWinApp::AddDocTemplate` do `InitInstance` função de membro de sua classe de aplicativo.
+Aloque `CSingleDocTemplate` dinamicamente `CWinApp::AddDocTemplate` um `InitInstance` objeto e passe-o para a função membro da sua classe de aplicação.
 
 ### <a name="example"></a>Exemplo
 
@@ -115,9 +115,9 @@ Alocar dinamicamente um `CSingleDocTemplate` do objeto e passá-lo para `CWinApp
 
 [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo MFC DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
+[DockTOOL de amostra De MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>

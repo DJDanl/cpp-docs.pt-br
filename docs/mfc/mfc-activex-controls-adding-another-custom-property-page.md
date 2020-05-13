@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX do MFC: Adicionando outra página de propriedades Personalizada'
+title: 'Controles ActiveX MFC: adicionando outra página de propriedade personalizada'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property pages [MFC], MFC ActiveX controls
@@ -7,106 +7,106 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: 09d85d69efc4c6cf0bf253099bae78c1e570f8a5
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 02c87c2c5283b7293c2a7ab028ec9a2abbba2b33
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364733"
 ---
-# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controles ActiveX do MFC: Adicionando outra página de propriedades Personalizada
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controles ActiveX MFC: adicionando outra página de propriedade personalizada
 
-Ocasionalmente, um controle ActiveX terá mais propriedades do que pode se ajustar de forma razoável em uma página de propriedades. Nesse caso, você pode adicionar páginas de propriedades ao controle ActiveX para exibir essas propriedades.
+Ocasionalmente, um controle ActiveX terá mais propriedades do que pode caber razoavelmente em uma página de propriedade. Neste caso, você pode adicionar páginas de propriedade ao controle ActiveX para exibir essas propriedades.
 
-Este artigo aborda a adição de novas páginas de propriedades a um controle ActiveX que já tem pelo menos uma página de propriedades. Para obter mais informações sobre como adicionar páginas de propriedades de estoque (fonte, imagem ou cor), [consulte o artigo controles ActiveX do MFC: Usando páginas](../mfc/mfc-activex-controls-using-stock-property-pages.md)de propriedades de estoque.
+Este artigo discute a adição de novas páginas de propriedade a um controle ActiveX que já tem pelo menos uma página de propriedade. Para obter mais informações sobre a adição de páginas de propriedade de estoque (fonte, imagem ou cor), consulte o artigo [MFC ActiveX Controls: Usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
-Os procedimentos a seguir usam uma estrutura de controle ActiveX de exemplo criada pelo assistente de controle ActiveX. Portanto, os nomes e identificadores de classe são exclusivos para este exemplo.
+Os procedimentos a seguir usam uma estrutura de controle ActiveX de amostra criada pelo ActiveX Control Wizard. Portanto, os nomes e identificadores de classe são exclusivos deste exemplo.
 
-Para obter mais informações sobre como usar páginas de propriedades em um controle ActiveX, consulte os seguintes artigos:
+Para obter mais informações sobre o uso de páginas de propriedade em um controle ActiveX, consulte os seguintes artigos:
 
-- [Controles ActiveX MFC: página de propriedades](../mfc/mfc-activex-controls-property-pages.md)
+- [Controles ActiveX do MFC: páginas de propriedade](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Controles ActiveX MFC: usar páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controles ActiveX do MFC: usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
-    >  É altamente recomendável que as novas páginas de propriedades aderem ao padrão de tamanho das páginas de propriedades do controle ActiveX. As páginas de propriedade de imagem e cor de estoque medem 250x62 DLU (unidades de diálogo). A página de propriedades de fonte padrão é 250x110 DLUs. A página de propriedades padrão criada pelo assistente de controle ActiveX usa o padrão 250x62 DLU.
+    >  É fortemente recomendável que novas páginas de propriedade aderam ao padrão de tamanho para páginas de propriedade de controle ActiveX. As páginas de imagem de estoque e propriedade de cor medem as unidades de diálogo 250x62 (DLU). A página de propriedade de fonte padrão é 250x110 DLUs. A página de propriedade padrão criada pelo ActiveX Control Wizard usa o padrão DLU 250x62.
 
-### <a name="to-insert-a-new-property-page-template-into-your-project"></a>Para inserir um novo modelo de página de propriedades em seu projeto
+### <a name="to-insert-a-new-property-page-template-into-your-project"></a>Para inserir um novo modelo de página de propriedade em seu projeto
 
-1. Com seu projeto de controle aberto, abra Modo de Exibição de Recursos no espaço de trabalho do projeto.
+1. Com seu projeto de controle aberto, abra a Visualização de Recursos no espaço de trabalho do projeto.
 
-1. Clique com o botão direito do mouse em Modo de Exibição de Recursos para abrir o menu de atalho e clique em **Adicionar recurso**.
+1. Clique com o botão direito do mouse na exibição de recursos para abrir o menu de atalho e clique **em Adicionar recurso**.
 
-1. Expanda o nó da **caixa de diálogo** e selecione **IDD_OLE_PROPPAGE_SMALL**.
+1. Expanda o nó **Diálogo** e selecione **IDD_OLE_PROPPAGE_SMALL**.
 
-1. Clique em **novo** para adicionar o recurso ao seu projeto.
+1. Clique **em Novo** para adicionar o recurso ao seu projeto.
 
-1. Selecione o novo modelo de página de propriedades para atualizar a janela **Propriedades** (em **modo de exibição de recursos**).
+1. Selecione o novo modelo de página de propriedade para atualizar a janela **Propriedades** (em **Exibição de recursos**).
 
-1. Insira um novo valor para a propriedade **ID** . Este exemplo usa **IDD_PROPPAGE_NEWPAGE**.
+1. Digite um novo valor para a propriedade **ID.** Este exemplo usa **IDD_PROPPAGE_NEWPAGE**.
 
-1. Clique em **salvar** na barra de ferramentas.
+1. Clique em **Salvar** na barra de ferramentas.
 
-### <a name="to-associate-the-new-template-with-a-class"></a>Para associar o novo modelo a uma classe
+### <a name="to-associate-the-new-template-with-a-class"></a>Associar o novo modelo a uma classe
 
-1. Abra Modo de Exibição de Classe.
+1. Vista de classe aberta.
 
-1. Clique com o botão direito do mouse em Modo de Exibição de Classe para abrir o menu de atalho.
+1. Clique com o botão direito do mouse na exibição de classe para abrir o menu de atalho.
 
 1. No menu de atalho, clique em **Adicionar** e em **Adicionar Classe**.
 
-   Isso abre a caixa de diálogo [Adicionar classe](../ide/add-class-dialog-box.md) .
+   Isso abre a caixa de diálogo [Adicionar classe.](../ide/add-class-dialog-box.md)
 
-1. Clique duas vezes no modelo de **classe do MFC** .
+1. Clique duas vezes no modelo **Classe MFC.**
 
-1. Na caixa **nome da classe** no [Assistente de classe do MFC](../mfc/reference/mfc-add-class-wizard.md), digite um nome para a nova classe da caixa de diálogo. (Neste exemplo, `CAddtlPropPage`.)
+1. Na caixa Nome de **classe** no [Assistente de Classe Do MFC,](../mfc/reference/mfc-add-class-wizard.md)digite um nome para a nova classe de diálogo. (Neste exemplo, `CAddtlPropPage`.)
 
-1. Se você quiser alterar nomes de arquivo, clique em **alterar**. Digite os nomes dos arquivos de implementação e de cabeçalho ou aceite os nomes padrão.
+1. Se você quiser alterar os nomes dos arquivos, clique **em Alterar**. Digite os nomes para seus arquivos de implementação e cabeçalho ou aceite os nomes padrão.
 
-1. Na caixa **classe base** , selecione `COlePropertyPage`.
+1. Na caixa **Classe base,** selecione `COlePropertyPage`.
 
-1. Na caixa **ID de diálogo** , selecione **IDD_PROPPAGE_NEWPAGE**.
+1. Na caixa **'ID de diálogo',** selecione **IDD_PROPPAGE_NEWPAGE**.
 
-9. Clique em **concluir** para criar a classe.
+1. Clique **em Concluir** para criar a classe.
 
-Para permitir que os usuários do controle acessem essa nova página de propriedades, faça as seguintes alterações na seção de macro IDs de página de propriedades do controle (localizada no arquivo de implementação de controle):
+Para permitir que os usuários do controle acessem essa nova página de propriedade, faça as seguintes alterações na seção de macro IDs da página de propriedade do controle (localizada no arquivo de implementação de controle):
 
 [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]
 
-Observe que você deve aumentar o segundo parâmetro da macro BEGIN_PROPPAGEIDS (a contagem de páginas de propriedades) de 1 para 2.
+Observe que você deve aumentar o segundo parâmetro da macro BEGIN_PROPPAGEIDS (a contagem da página de propriedade) de 1 para 2.
 
-Você também deve modificar o arquivo de implementação de controle (. CPP) para incluir o cabeçalho (. H) do arquivo da nova classe de página de propriedades.
+Você também deve modificar o arquivo de implementação de controle (. Arquivo CPP) para incluir o cabeçalho (. H) arquivo da nova classe de página de propriedade.
 
-A próxima etapa envolve a criação de dois novos recursos de cadeia de caracteres que fornecerão um nome de tipo e uma legenda para a nova página de propriedades.
+O próximo passo envolve a criação de dois novos recursos de string que fornecerão um nome de tipo e uma legenda para a nova página de propriedade.
 
-#### <a name="to-add-new-string-resources-to-a-property-page"></a>Para adicionar novos recursos de cadeia de caracteres a uma página de propriedades
+#### <a name="to-add-new-string-resources-to-a-property-page"></a>Para adicionar novos recursos de string a uma página de propriedade
 
-1. Com seu projeto de controle aberto, abra Modo de Exibição de Recursos.
+1. Com seu projeto de controle aberto, abra a Visualização de Recursos.
 
-1. Clique duas vezes na pasta da **tabela de cadeia de caracteres** e clique duas vezes no recurso de tabela de cadeia de caracteres existente ao qual você deseja adicionar uma cadeia de caracteres.
+1. Clique duas vezes na pasta **Tabela de strings** e clique duas vezes no recurso de tabela de strings existente ao qual você deseja adicionar uma seqüência.
 
-   Isso abre a tabela de cadeia de caracteres em uma janela.
+   Isso abre a mesa de cordas em uma janela.
 
-1. Selecione a linha em branco no final da tabela de cadeia de caracteres e digite o texto, ou legenda, da cadeia de caracteres: por exemplo, "página de propriedades adicional".
+1. Selecione a linha em branco no final da tabela de strings e digite o texto, ou legenda, da string: por exemplo, "Página de propriedade adicional".
 
-   Isso abre uma página de **Propriedades de cadeia de caracteres mostrando as** caixas **legenda** e **ID** . A caixa **legenda** contém a cadeia de caracteres que você digitou.
+   Isso abre uma página **propriedades de string** mostrando **legenda** e caixas **de dissé.** A **caixa Legenda** contém a seqüência digitada.
 
-1. Na caixa **ID** , selecione ou digite uma ID para a cadeia de caracteres. Pressione Enter quando terminar.
+1. Na caixa **ID,** selecione ou digite um ID para a seqüência. Pressione Enter quando terminar.
 
-   Este exemplo usa **IDS_SAMPLE_ADDPAGE** para o nome do tipo da nova página de propriedades.
+   Este exemplo usa **IDS_SAMPLE_ADDPAGE** para o nome de tipo da nova página de propriedade.
 
-1. Repita as etapas 3 e 4 usando **IDS_SAMPLE_ADDPPG_CAPTION** para a ID e "página de propriedades adicional" para a legenda.
+1. Repita as etapas 3 e 4 usando **IDS_SAMPLE_ADDPPG_CAPTION** para o ID e "Página de Propriedade Adicional" para a legenda.
 
-1. No. Arquivo cpp da sua nova classe de página de Propriedades (neste exemplo `CAddtlPropPage`,) modifique `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` o para que IDS_SAMPLE_ADDPAGE seja passado por [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), como no exemplo a seguir:
+1. No . O arquivo CPP da sua nova classe `CAddtlPropPage`de `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` página de propriedade (neste exemplo) modificar o IDS_SAMPLE_ADDPAGE é passado pelo [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), como no exemplo a seguir:
 
    [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
-1. Modifique o construtor de `CAddtlPropPage` para que IDS_SAMPLE_ADDPPG_CAPTION seja passado para o `COlePropertyPage` Construtor, da seguinte maneira:
+1. Modificar o construtor `CAddtlPropPage` para que IDS_SAMPLE_ADDPPG_CAPTION seja `COlePropertyPage` passado para o construtor, da seguinte forma:
 
    [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
-Depois de fazer as modificações necessárias, recompile seu projeto e use o contêiner de teste para testar a nova página de propriedades. Consulte [testando Propriedades e eventos com o contêiner de teste](../mfc/testing-properties-and-events-with-test-container.md) para obter informações sobre como acessar o contêiner de teste.
+Depois de fazer as modificações necessárias, reconstrua seu projeto e use o Test Container para testar a nova página de propriedade. Consulte [Propriedades de teste e eventos com o recipiente de teste](../mfc/testing-properties-and-events-with-test-container.md) para obter informações sobre como acessar o recipiente de teste.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)

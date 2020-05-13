@@ -3,11 +3,11 @@ title: Especificador de classe de armazenamento auto
 ms.date: 11/04/2016
 ms.assetid: 8e73f57e-aa92-4e41-91ea-5c8ad2a2b332
 ms.openlocfilehash: 6bd36fd534602a5a4df95047a830058e8c5ef163
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313461"
 ---
 # <a name="auto-storage-class-specifier"></a>Especificador de classe de armazenamento auto
 
@@ -15,6 +15,6 @@ O especificador de classe de armazenamento **auto** declara uma variável autom�
 
 Uma variável interna **static** (uma variável estática com escopo local ou de bloco) pode ser inicializada com o endereço de qualquer item externo ou **static**, mas não com o endereço de outro item **auto**, pois o endereço de um item **auto** não é uma constante.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Palavra-chave auto](../cpp/auto-keyword.md)

@@ -1,9 +1,11 @@
 ---
 title: _execvpe, _wexecvpe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _execvpe
 - _wexecvpe
+- _o__execvpe
+- _o__wexecvpe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: 49b7f4c55dd0c84807d6ed754ae9b45d63f37dcf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4a1a2d66600a7502c088577adca4085c68e4ccd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443011"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909694"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -91,7 +94,9 @@ Cada uma dessas funções carrega e executa um novo processo, passando uma matri
 
 As funções de **_execvpe** validam seus parâmetros. Se *cmdname* for um ponteiro nulo, ou se *argv* for um ponteiro nulo, um ponteiro para uma matriz vazia ou um ponteiro para uma matriz que contém uma cadeia de caracteres vazia como o primeiro argumento, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1. Nenhum processo é inicializado.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|Cabeçalho opcional|
 |--------------|---------------------|---------------------|
@@ -100,7 +105,7 @@ As funções de **_execvpe** validam seus parâmetros. Se *cmdname* for um ponte
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Consulte o exemplo nas [ funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
@@ -108,7 +113,7 @@ Consulte o exemplo nas [ funções _exec, _wexec](../../c-runtime-library/exec-w
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>

@@ -1,11 +1,13 @@
 ---
 title: strcmp, wcscmp, _mbscmp, _mbscmp_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - wcscmp
 - _mbscmp
 - _mbscmp_l
 - strcmp
+- _o__mbscmp
+- _o__mbscmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +23,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: 4bef0c61122e93bd45bc0d1238030743f1196d9e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 805e355fe12cb2f7ead6180edd45ad0748570141
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957968"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920390"
 ---
 # <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
@@ -83,13 +86,13 @@ int _mbscmp_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1*, *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres com terminação nula.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor de retorno para cada uma dessas funções indica a relação ordinal de *seqüência1* para *seqüência2*.
 
@@ -99,11 +102,13 @@ O valor de retorno para cada uma dessas funções indica a relação ordinal de 
 |0|*seqüência1* é idêntico a *seqüência2*|
 |> 0|*seqüência1* é maior que *seqüência2*|
 
-Em um erro de validação de parâmetro, **_mbscmp** e **_mbscmp_l** retornam **_NLSCMPERROR**, que \<é definido em String. \<h > e Mbstring. h >.
+Em um erro de validação de parâmetro, **_mbscmp** e **_mbscmp_l** retornar **_NLSCMPERROR**, que é \<definido em string. h \<> e Mbstring. h>.
 
 ## <a name="remarks"></a>Comentários
 
-A função **strcmp** executa uma comparação ordinal de *seqüência1* e *seqüência2* e retorna um valor que indica sua relação. **wcscmp** e **_mbscmp** são, respectivamente, as versões de caractere largo e de multibyte de **strcmp**. o **_mbscmp** reconhece sequências de caracteres multibyte de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. **_mbscmp_l** tem o mesmo comportamento, mas usa o parâmetro Locale que é passado em vez da localidade atual. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Além disso, se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbscmp** invocará o manipulador de parâmetro inválido, conforme descrito em validação de [parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_mbscmp** e **_mbscmp_l** retornará **_NLSCMPERROR** e definir **errno** como **EINVAL**. **strcmp** e **wcscmp** não validam seus parâmetros. Caso contrário, essas funções se comportam de forma idêntica.
+A função **strcmp** executa uma comparação ordinal de *seqüência1* e *seqüência2* e retorna um valor que indica sua relação. **wcscmp** e **_mbscmp** são, respectivamente, as versões de caractere largo e de multibyte de **strcmp**. **_mbscmp** reconhece seqüências de caracteres multibyte de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. **_mbscmp_l** tem o mesmo comportamento, mas usa o parâmetro Locale que é passado em vez da localidade atual. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Além disso, se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbscmp** invocará o manipulador de parâmetro inválido, conforme descrito em validação de [parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_mbscmp** e **_mbscmp_l** retornar **_NLSCMPERROR** e definir **errno** como **EINVAL**. **strcmp** e **wcscmp** não validam seus parâmetros. Caso contrário, essas funções se comportam de forma idêntica.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -117,7 +122,7 @@ Na localidade "C", a ordem de caracteres no conjunto de caracteres (conjunto de 
 
 Em localidades para as quais o conjunto de caracteres e a ordem de caracteres lexicográfica são diferentes, você pode usar **strcoll** em vez de **strcmp** para comparação lexicográfica de cadeias de caracteres. Como alternativa, você pode usar **strxfrm** nas cadeias de caracteres originais e, em seguida, usar **strcmp** nas cadeias de caracteres resultantes.
 
-As funções **strcmp** diferenciam maiúsculas de minúsculas. stricmp, **wcsicmp e\_** **mbsicmp comparamcadeiasdecaracteresconvertendo-osprimeiro\_** em seus formulários em minúsculas.  **\_** Duas cadeias que contêm caracteres que estão localizados entre ' Z ' e ' a ' na tabela ASCII (' [', '\\', '] ', ' ^ ', ' _ ' e '\`') se comparam de forma diferente, dependendo de seu caso. Por exemplo, as duas cadeias de caracteres "ABCDE" e "ABCD ^" comparam uma maneira se a comparação for minúscula ("ABCDE" > "abcd ^") e a outra maneira ("ABCDE" < "ABCD ^") se a comparação for maiúscula.
+As funções **strcmp** diferenciam maiúsculas de minúsculas. stricmp, ** \_wcsicmp**e ** \_mbsicmp** comparam cadeias de caracteres convertendo-os primeiro em seus formulários em minúsculas. ** \_** Duas cadeias que contêm caracteres que estão localizados entre ' Z ' e ' a ' na tabela ASCII (' [', '\\', '] ', ' ^ ', ' _ ' e '\`') se comparam de forma diferente, dependendo de seu caso. Por exemplo, as duas cadeias de caracteres "ABCDE" e "ABCD ^" comparam uma maneira se a comparação for minúscula ("ABCDE" > "abcd ^") e a outra maneira ("ABCDE" < "ABCD ^") se a comparação for maiúscula.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -127,9 +132,9 @@ As funções **strcmp** diferenciam maiúsculas de minúsculas. stricmp, **wcsic
 |**wcscmp**|\<string.h> ou \<wchar.h>|
 |**_mbscmp**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -182,9 +187,9 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp, _memicmp_l](memicmp-memicmp-l.md)<br/>
 [Funções strcoll](../../c-runtime-library/strcoll-functions.md)<br/>

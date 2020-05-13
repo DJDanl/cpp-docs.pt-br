@@ -1,6 +1,6 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _atoldbl
 - _atoldbl_l
@@ -8,6 +8,12 @@ api_name:
 - _atoflt
 - _atoflt_l
 - _atodbl_l
+- _o__atodbl
+- _o__atodbl_l
+- _o__atoflt
+- _o__atoflt_l
+- _o__atoldbl
+- _o__atoldbl_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943618"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920042"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Converte uma cadeia de caracteres em duplo ( **_atodbl**), longa dupla ( **_atoldbl**) ou float ( **_atoflt**).
+Converte uma cadeia de caracteres em um Double (**_atodbl**), longo double (**_atoldbl**) ou float (**_atoflt**).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -79,15 +86,15 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 O valor de duplo, duplo longo ou float gerado ao converter a cadeia de caracteres em um valor de ponto flutuante. Esses valores são encapsulados em uma estrutura.
 
-*str*<br/>
+*Str*<br/>
 A cadeia de caracteres a ser analisada para converter em um valor de ponto flutuante.
 
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna 0 se for bem-sucedido. Os códigos de erro possíveis são **_UNDERFLOW** ou **_OVERFLOW**, que são definidos no arquivo \<de cabeçalho Math. h >.
+Retorna 0 se for bem-sucedido. Os códigos de erro possíveis são **_UNDERFLOW** ou **_OVERFLOW**, que são definidos no arquivo \<de cabeçalho Math. h>.
 
 ## <a name="remarks"></a>Comentários
 
@@ -96,6 +103,8 @@ Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuant
 Se uma cadeia de caracteres não tiver uma interpretação válida como um valor de ponto flutuante, o *valor* será definido como zero e o valor de retorno será zero.
 
 As versões dessas funções que têm o sufixo **_L** são idênticas às versões que não têm o sufixo, exceto pelo fato de que usam o parâmetro *locale* que é passado em vez da localidade do thread atual.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -159,9 +168,9 @@ Float value: inf
 Return value: 3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

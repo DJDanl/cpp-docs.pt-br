@@ -1,9 +1,11 @@
 ---
 title: _access_s, _waccess_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access_s
 - _waccess_s
+- _o__access_s
+- _o__waccess_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171314"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916906"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -57,7 +60,7 @@ errno_t _waccess_s(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *path*<br/>
 Caminho do arquivo ou do diretório.
@@ -93,6 +96,8 @@ A permissão para ler ou gravar o arquivo não é suficiente para garantir a cap
 **_waccess_s** é uma versão de caractere largo do **_access_s**, em que o argumento *Path* para **_waccess_s** é uma cadeia de caracteres largos. Caso contrário, **_waccess_s** e **_access_s** se comportam de forma idêntica.
 
 Essas funções validam seus parâmetros. Se o *caminho* for nulo ou o *modo* não especificar um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -151,7 +156,7 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

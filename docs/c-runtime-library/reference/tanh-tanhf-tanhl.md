@@ -1,10 +1,11 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tanh
 - tanhf
 - tanhl
+- _o_tanh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957527"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912295"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -68,11 +70,13 @@ As funções **tanh** retornam a tangente hiperbólica de *x*. Nenhum erro é re
 
 |Entrada|Exceção SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|nenhum|_DOMAIN|
+|± QNAN,IND|nenhuma|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **tanh** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, o **tanh** sempre leva e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **tanh** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, o **tanh** sempre leva e retorna **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -80,7 +84,7 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **tanh** que lev
 |-------------|---------------------|-|
 |**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -110,7 +114,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

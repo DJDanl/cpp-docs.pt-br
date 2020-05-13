@@ -1,12 +1,17 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
+- _o__toupper
+- _o__toupper_l
+- _o__towupper_l
+- _o_toupper
+- _o_towupper
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +51,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957915"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913875"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -80,13 +86,13 @@ int _towupper_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Caractere a ser convertido.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas rotinas converte uma cópia de *c*, se possível, e retorna o resultado.
 
@@ -94,7 +100,7 @@ Se *c* for um caractere largo para o qual **iswlower** é diferente de zero e ho
 
 Não há valor retornado reservado para indicar um erro.
 
-Para que o **ToUpper** forneça os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [islow](islower-iswlower-islower-l-iswlower-l.md) devem retornar diferentes de zero.
+Para que o **ToUpper** forneça os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [islow](islower-iswlower-islower-l-iswlower-l.md) devem retornar zero.
 
 ## <a name="remarks"></a>Comentários
 
@@ -104,25 +110,27 @@ Para que o **ToUpper** forneça os resultados esperados, [__isascii](isascii-isa
 
 [Rotinas de conversão de dados](../../c-runtime-library/data-conversion.md)
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**ToUpper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** e **_towupper_l** não têm nenhuma dependência de localidade e não devem ser chamados diretamente. Eles são fornecidos para uso interno pelo **_totupper_l**.
+> **_toupper_l** e **_towupper_l** não têm nenhuma dependência de localidade e não devem ser chamadas diretamente. Eles são fornecidos para uso interno por **_totupper_l**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**toupper**|\<ctype.h>|
+|**ToUpper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|
 |**towupper**|\<ctype.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -132,5 +140,5 @@ Consulte o exemplo em [Funções to](../../c-runtime-library/to-functions.md).
 
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
 [Funções to](../../c-runtime-library/to-functions.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -1,10 +1,12 @@
 ---
 title: difftime, _difftime32, _difftime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _difftime32
 - difftime
 - _difftime64
+- _o__difftime32
+- _o__difftime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937638"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914785"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -59,10 +62,10 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 *timeEnd*<br/>
 Hora de término.
 
-*timeStart*<br/>
+*timestart*<br/>
 Hora de início.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **difftime** retorna o tempo decorrido em segundos, de *timestart* a *timeEnd*. O valor retornado é um número de ponto flutuante de precisão dupla. O valor retornado pode ser 0, indicando um erro.
 
@@ -76,6 +79,8 @@ O valor de tempo fornecido deve caber dentro do intervalo de **time_t**. **time_
 
 Essas funções validam seus parâmetros. Se um dos parâmetros for zero ou negativo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão 0 e definirá **errno** como **EINVAL**.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -84,7 +89,7 @@ Essas funções validam seus parâmetros. Se um dos parâmetros for zero ou nega
 |**_difftime32**|\<time.h>|
 |**_difftime64**|\<time.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -142,8 +147,8 @@ Multiplying 2 floating point numbers 100 million times...
 Program takes      3 seconds.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>

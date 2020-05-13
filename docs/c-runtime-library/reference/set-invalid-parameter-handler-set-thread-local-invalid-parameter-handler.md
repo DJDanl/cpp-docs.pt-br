@@ -1,9 +1,11 @@
 ---
 title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
+- _o__set_invalid_parameter_handler
+- _o__set_thread_local_invalid_parameter_handler
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: d2e8dab92c70189533656bac359c794de2ad8002
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 404a865cceb5e4014969b15e9877761187af777b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857769"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914001"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -81,7 +84,9 @@ void _invalid_parameter(
 
 O argumento *expression* é uma representação de cadeia de caracteres larga da expressão de argumento que gerou o erro. O argumento da *função* é o nome da função CRT que recebeu o argumento inválido. O argumento *File* é o nome do arquivo de origem do CRT que contém a função. O argumento de *linha* é o número de linha nesse arquivo. O último argumento é reservado. Todos os parâmetros têm o valor **NULL** , a menos que uma versão de depuração da biblioteca CRT seja usada.
 
-## <a name="requirements"></a>Requisitos do
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|

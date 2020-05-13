@@ -1,8 +1,9 @@
 ---
 title: _lsearch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lsearch
+- _o__lsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 73bc82ed57692dee348448d2b523961324203ca9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438151"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911327"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -55,7 +57,7 @@ void *_lsearch(
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*<br/>
+*chave*<br/>
 O objeto a ser pesquisado.
 
 *base*<br/>
@@ -67,7 +69,7 @@ Número de elementos.
 *width*<br/>
 Largura de cada elemento da matriz.
 
-*compare*<br/>
+*comparar*<br/>
 Ponteiro para a rotina de comparação. O primeiro parâmetro é um ponteiro para a chave de pesquisa. O segundo parâmetro é um ponteiro para um elemento de matriz a ser comparado com a chave.
 
 ## <a name="return-value"></a>Valor retornado
@@ -82,7 +84,9 @@ O argumento *Compare* é um ponteiro para uma rotina fornecida pelo usuário que
 
 Essa função valida seus parâmetros. Se *Compare*, *Key* ou *Number* for **NULL**ou se *base* for **NULL** e *Number* for zero, ou se *Width* for menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -90,7 +94,7 @@ Essa função valida seus parâmetros. Se *Compare*, *Key* ou *Number* for **NUL
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_lsearch.c
@@ -132,7 +136,7 @@ wordlist before _lsearch: hello thanks bye
 wordlist after _lsearch: hello thanks bye extra
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

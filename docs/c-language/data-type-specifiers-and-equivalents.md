@@ -13,11 +13,11 @@ helpviewer_keywords:
 - type names [C++], simple
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
 ms.openlocfilehash: 4003d9427c160b0e1c725cdc591190bd9777b3de
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234924"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Especificadores de tipo de dados e equivalentes
 
@@ -28,7 +28,7 @@ Este manual geralmente usa os formatos dos especificadores de tipo listados na t
 |Especificador de tipo|Equivalente(s)|
 |--------------------|---------------------|
 |**signed char**1|**char**|
-|**signed int**|**signed**, **int**|
+|**int assinado**|**signed**, **int**|
 |**signed short int**|**short**, **signed short**|
 |**signed long int**|**long**, **signed long**|
 |**unsigned char**|—|
@@ -42,12 +42,12 @@ Este manual geralmente usa os formatos dos especificadores de tipo listados na t
 
 2   Em sistemas operacionais de 32 e 64 bits, o compilador Microsoft C mapeia o tipo **long double** para o tipo **double**.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Você pode especificar a opção do compilador /J para alterar o tipo **char** padrão de com sinal para sem sinal. Quando essa opção é aplicada, **char** significa o mesmo que **unsigned char** e é necessário usar a palavra-chave **signed** para declarar um valor de caractere com sinal. Se um valor **char** for declarado explicitamente com sinal, a opção /J não o afetará e o valor será estendido com sinal quando ampliado para um tipo **int**. O tipo **char** é estendido em zero quando ampliado para o tipo **int**.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Especificadores de tipo C](../c-language/c-type-specifiers.md)

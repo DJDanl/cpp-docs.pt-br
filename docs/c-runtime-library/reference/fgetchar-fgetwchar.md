@@ -1,9 +1,11 @@
 ---
 title: _fgetchar, _fgetwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fgetchar
 - _fgetwchar
+- _o__fgetchar
+- _o__fgetwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940870"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912756"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -53,9 +56,9 @@ int _fgetchar( void );
 wint_t _fgetwchar( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-fgetchar retorna o caractere lido como um **int** ou retorna `EOF` para indicar um erro ou fim de arquivo.  **\_** fgetwchar retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna `WEOF` para indicar um erro ou fim de arquivo.  **\_** Para ambas as funções, use **feof** ou **referenciador** para distinguir entre um erro e uma condição de fim de arquivo.
+fgetchar retorna o caractere lido como um **int** ou retorna `EOF` para indicar um erro ou fim de arquivo. ** \_** fgetwchar retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna `WEOF` para indicar um erro ou fim de arquivo. ** \_** Para ambas as funções, use **feof** ou **referenciador** para distinguir entre um erro e uma condição de fim de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
@@ -64,6 +67,8 @@ Essas funções lêem um único caractere de **stdin**. A função, em seguida, 
 **_fgetchar** é equivalente a `fgetc( stdin )`. Ele também é equivalente a **GetChar**, mas implementado somente como uma função, em vez de como uma função e uma macro. **_fgetwchar** é a versão de caractere largo do **_fgetchar**.
 
 Essas funções não são compatíveis com o padrão ANSI.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -118,7 +123,7 @@ Line two.Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

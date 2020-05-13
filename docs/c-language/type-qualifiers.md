@@ -11,11 +11,11 @@ helpviewer_keywords:
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
 ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344792"
 ---
 # <a name="type-qualifiers"></a>Qualificadores de tipo
 
@@ -55,7 +55,7 @@ Se a especificação de um tipo de matriz incluir qualificadores de tipo, o elem
 
 Esta lista descreve como usar **const** e `volatile`.
 
-- A palavra-chave **const** pode ser usada para modificar qualquer tipo fundamental ou de agregação, um ponteiro para um objeto de qualquer tipo ou um `typedef`. Se um item for declarado apenas com o qualificador de tipo **const**, seu tipo será considerado **const int**. Uma variável **const** pode ser inicializada ou colocada em uma região somente leitura de armazenamento. A palavra-chave **const** é útil para declarar ponteiros para **const**, pois isso requer que a função não altere o ponteiro de qualquer maneira.
+- A palavra-chave **const** pode ser usada para modificar qualquer tipo fundamental ou de agregação, um ponteiro para um objeto de qualquer tipo ou um `typedef`. Se um item for declarado apenas com o qualificador de tipo **const** , seu tipo será levado para ser **const int**. Uma variável **const** pode ser inicializada ou pode ser colocada em uma região somente leitura do armazenamento. A palavra-chave **const** é útil para declarar ponteiros para **const**, pois isso requer que a função não altere o ponteiro de qualquer maneira.
 
 - O compilador pressupõe que, a qualquer momento no programa, uma variável de `volatile` pode ser acessada por um processo desconhecido que usa ou modifica seu valor. Portanto, independentemente das otimizações especificadas na linha de comando, o código para cada atribuição ou referência a uma variável `volatile` deve ser gerado mesmo se isso não tiver qualquer efeito aparente.
 
@@ -63,6 +63,6 @@ Esta lista descreve como usar **const** e `volatile`.
 
 - Um item pode ser **const** e `volatile` ao mesmo tempo. Nesse caso, ele não pode ser modificado legitimamente por seu próprio programa, mas pode ser modificado por algum processo não simultâneo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e tipos](../c-language/declarations-and-types.md)

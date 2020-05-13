@@ -1,11 +1,13 @@
 ---
 title: _strdec, _wcsdec, _mbsdec, _mbsdec_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsdec
 - _strdec
 - _mbsdec
 - _mbsdec_l
+- _o__mbsdec
+- _o__mbsdec_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: ffb2b81f5ce5a251fb931099a1023a441ca4d496
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c3988beac1a3c1b3d7fa831405208ddc564456a3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958204"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914493"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -84,26 +87,28 @@ unsigned char *_mbsdec_l(
 *start*<br/>
 Ponteiro para qualquer caractere (ou para **_mbsdec** e **_mbsdec_l**, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; *Start* deve preceder *Current* na cadeia de caracteres de origem.
 
-*current*<br/>
+*atualizados*<br/>
 Ponteiro para qualquer caractere (ou para **_mbsdec** e **_mbsdec_l**, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; o *atual* deve seguir o *início* na cadeia de caracteres de origem.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**e **_wcsdec** retornam um ponteiro para o caractere que precede imediatamente o *atual*; **_mbsdec** retornará **NULL** se o valor de *Start* for maior ou igual ao de *Current*. o **_tcsdec** é mapeado para uma dessas funções e seu valor de retorno depende do mapeamento.
+**_mbsdec**, **_mbsdec_l**, **_strdec**e **_wcsdec** cada um retorna um ponteiro para o caractere que precede imediatamente o *atual*; **_mbsdec** retornará **NULL** se o valor de *Start* for maior ou igual ao de *Current*. **_tcsdec** mapeia para uma dessas funções e seu valor de retorno depende do mapeamento.
 
 ## <a name="remarks"></a>Comentários
 
 As funções **_mbsdec** e **_mbsdec_l** retornam um ponteiro para o primeiro byte do caractere multibyte que precede imediatamente a *atual* na cadeia de caracteres que contém *Start*.
 
-O valor de saída é afetado pela configuração da configuração de categoria **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações.  o **_mbsdec** reconhece sequências de caracteres multibyte de acordo com a localidade que está em uso no momento, enquanto **_mbsdec_l** é idêntico, exceto que ele usa o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria de **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações.  **_mbsdec** reconhece seqüências de caracteres multibyte de acordo com a localidade em uso no momento, enquanto **_mbsdec_l** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Se *Start* ou *Current* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função retornará **EINVAL** e definirá **errno** como **EINVAL**.
 
 > [!IMPORTANT]
 > Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -111,7 +116,7 @@ Se *Start* ou *Current* for **NULL**, o manipulador de parâmetro inválido ser�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec** e **_wcsdec** são um caractere de byte único e versões de caractere largo de **_mbsdec** e **_mbsdec_l**. **_strdec** e **_wcsdec** são fornecidos apenas para esse mapeamento e não devem ser usados de outra forma.
+**_strdec** e **_wcsdec** são as versões de caractere de byte único e de caracteres largos de **_mbsdec** e **_mbsdec_l**. **_strdec** e **_wcsdec** são fornecidos somente para esse mapeamento e não devem ser usados de outra forma.
 
 Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
@@ -183,7 +188,7 @@ int main()
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

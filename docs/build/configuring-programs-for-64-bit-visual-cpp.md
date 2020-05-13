@@ -1,5 +1,5 @@
 ---
-title: Configurar C++ projetos para destinos de 64 bits, x64
+title: Configurar projetos C++ para destinos x64 de 64 bits
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -14,17 +14,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493286"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurar C++ projetos para destinos de 64 bits, x64
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurar projetos C++ para destinos x64 de 64 bits
 
-Esta seção contém tópicos sobre como direcionar hardware x64 de 64 bits com C++ as ferramentas de Build Visual.
+Esta seção contém tópicos sobre como direcionar hardware x64 de 64 bits com as ferramentas de Build Visual C++.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-- [Como: Configurar projetos do Visual C++ para terem plataformas x64 de 64 bits como destino](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [Como configurar projetos do Visual C++ para terem plataformas x64 de 64 bits como destino](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Como: Habilitar um conjunto de ferramentas MSVC, hospedado em x64 de 64 bits na linha de comando](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Como habilitar um conjunto de ferramentas MSVC de 64 bits, hospedado em x64 na linha de comando](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
-- [Problemas de migração de 64 bits do Visual C++ comuns](common-visual-cpp-64-bit-migration-issues.md)
+- [Problemas de migração de 64 bits do Visual C++comuns](common-visual-cpp-64-bit-migration-issues.md)
 
 - [Convenções de software x64](x64-software-conventions.md)
 
@@ -32,11 +32,11 @@ Esta seção contém tópicos sobre como direcionar hardware x64 de 64 bits com 
 
 [.NET Framework aplicativos de 64 bits](/dotnet/framework/64-bit-apps)
 
-[align](../cpp/align-cpp.md)
+[alinha](../cpp/align-cpp.md)
 
-[/clr (compilação do Common Language Runtime)](reference/clr-common-language-runtime-compilation.md)
+[/CLR (compilação do Common Language Runtime)](reference/clr-common-language-runtime-compilation.md)
 
-[/favor (otimizar para especificações da arquitetura)](reference/favor-optimize-for-architecture-specifics.md)
+[/favor (otimizar para especificações de arquitetura)](reference/favor-optimize-for-architecture-specifics.md)
 
 [Guia de programação para o Windows de 64 bits](/windows/win32/WinProg64/programming-guide-for-64-bit-windows)
 
@@ -44,6 +44,6 @@ Esta seção contém tópicos sobre como direcionar hardware x64 de 64 bits com 
 
 [Lista de intrínsecos x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)

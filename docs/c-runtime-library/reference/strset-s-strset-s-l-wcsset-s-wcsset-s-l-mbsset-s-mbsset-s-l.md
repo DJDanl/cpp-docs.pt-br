@@ -1,6 +1,6 @@
 ---
 title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsset_s
 - _wcsset_s_l
@@ -8,6 +8,10 @@ api_name:
 - _mbsset_s_l
 - _strset_s_l
 - _mbsset_s
+- _o__mbsset_s
+- _o__mbsset_s_l
+- _o__strset_s
+- _o__wcsset_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -61,12 +66,12 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: a962a333af2a7f5c75d1ce2eb3fb5ce797a5d7f2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 0338d84cbea864eca561c37f1d107a08f1c1e01e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626130"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911141"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
@@ -115,13 +120,13 @@ errno_t _mbsset_s_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres terminada em nulo a ser definida.
 
 *numberOfElements*<br/>
 O tamanho do buffer de *Str* .
 
-*c*<br/>
+*&*<br/>
 Configuração de caractere.
 
 *locale*<br/>
@@ -135,11 +140,13 @@ Essas funções validam seus argumentos. Se *Str* for um ponteiro NULL, ou o arg
 
 ## <a name="remarks"></a>Comentários
 
-A função **_strset_s** define todos os caracteres de *Str* para *c* (convertido em **Char**), exceto o caractere nulo de terminação. **_wcsset_s** e **_mbsset_s** são versões de caractere largo e de multibyte de **_strset_s**. Os tipos de dados dos argumentos e valores de retorno variam de acordo. Caso contrário, essas funções se comportam de forma idêntica.
+A função **_strset_s** define todos os caracteres de *Str* para *c* (convertido em **Char**), exceto o caractere nulo de terminação. **_wcsset_s** e **_mbsset_s** são versões de caractere largo e de vários caracteres de **_strset_s**. Os tipos de dados dos argumentos e valores de retorno variam de acordo. Caso contrário, essas funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -182,10 +189,10 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>

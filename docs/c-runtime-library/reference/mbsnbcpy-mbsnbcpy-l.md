@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy, _mbsnbcpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
+- _o__mbsnbcpy
+- _o__mbsnbcpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9a52f8abb220c840f1b7f71d029efacd4c5206fb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ea89458a51360b8781cb713fc9412239d2e03c78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442864"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911890"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
@@ -86,7 +89,7 @@ Destino para a cadeia de caracteres a ser copiada.
 *strSource*<br/>
 Cadeia de caracteres a ser copiada.
 
-*count*<br/>
+*contagem*<br/>
 Número de bytes a serem copiados.
 
 *locale*<br/>
@@ -109,6 +112,8 @@ O valor de saída é afetado pela configuração da configuração de categoria 
 
 Em C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais recentes e mais seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -116,7 +121,7 @@ Em C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |**_tcsncpy**|[strncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|**_mbsnbcpy**|[wcsncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcp_l**|**_wcsncpy_l**|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -127,7 +132,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>

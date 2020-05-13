@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e0896a28c24877465213a71ac5207c537c731003
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418065"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168755"
 ---
 # <a name="catldllmodulet-class"></a>Classe CAtlDllModuleT
 
@@ -27,12 +27,12 @@ Essa classe representa o módulo para uma DLL.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
-#### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Sua classe derivada de `CAtlDllModuleT`.
@@ -41,14 +41,14 @@ Sua classe derivada de `CAtlDllModuleT`.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAtlDllModuleT::CAtlDllModuleT](#catldllmodulet)|O construtor.|
 |[CAtlDllModuleT:: ~ CAtlDllModuleT](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAtlDllModuleT::D llCanUnloadNow](#dllcanunloadnow)|Testa se a DLL pode ser descarregada.|
 |[CAtlDllModuleT::D llGetClassObject](#dllgetclassobject)|Retorna uma fábrica de classes.|
@@ -59,7 +59,7 @@ Sua classe derivada de `CAtlDllModuleT`.
 
 ## <a name="remarks"></a>Comentários
 
-`CAtlDllModuleT` representa o módulo para uma DLL (biblioteca de vínculo dinâmico) e fornece funções usadas por todos os projetos de DLL. Essa especialização da classe [CAtlModuleT](../../atl/reference/catlmodulet-class.md) inclui suporte para registro.
+`CAtlDllModuleT`representa o módulo para uma DLL (biblioteca de vínculo dinâmico) e fornece funções usadas por todos os projetos de DLL. Essa especialização da classe [CAtlModuleT](../../atl/reference/catlmodulet-class.md) inclui suporte para registro.
 
 Para obter mais informações sobre módulos na ATL, consulte [classes de módulo do ATL](../../atl/atl-module-classes.md).
 
@@ -77,27 +77,27 @@ Para obter mais informações sobre módulos na ATL, consulte [classes de módul
 
 **Cabeçalho:** atlbase. h
 
-##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT
+## <a name="catldllmoduletcatldllmodulet"></a><a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT
 
 O construtor.
 
-```
+```cpp
 CAtlDllModuleT() throw();
 ```
 
-##  <a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT
+## <a name="catldllmoduletcatldllmodulet"></a><a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT
 
 O destruidor.
 
-```
+```cpp
 ~CAtlDllModuleT() throw();
 ```
 
-##  <a name="dllcanunloadnow"></a>CAtlDllModuleT::D llCanUnloadNow
+## <a name="catldllmoduletdllcanunloadnow"></a><a name="dllcanunloadnow"></a>CAtlDllModuleT::D llCanUnloadNow
 
 Testa se a DLL pode ser descarregada.
 
-```
+```cpp
 HRESULT DllCanUnloadNow() throw();
 ```
 
@@ -105,18 +105,18 @@ HRESULT DllCanUnloadNow() throw();
 
 Retorna S_OK se a DLL puder ser descarregada ou S_FALSE se não puder.
 
-##  <a name="dllgetclassobject"></a>CAtlDllModuleT::D llGetClassObject
+## <a name="catldllmoduletdllgetclassobject"></a><a name="dllgetclassobject"></a>CAtlDllModuleT::D llGetClassObject
 
 Retorna a fábrica de classes.
 
-```
+```cpp
 HRESULT DllGetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *rclsid*<br/>
 O CLSID do objeto a ser criado.
@@ -131,15 +131,15 @@ Um ponteiro para o ponteiro de interface identificado por *riid*. Se o objeto n�
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
-##  <a name="dllmain"></a>CAtlDllModuleT::D llMain
+## <a name="catldllmoduletdllmain"></a><a name="dllmain"></a>CAtlDllModuleT::D llMain
 
 O ponto de entrada opcional em uma DLL (biblioteca de vínculo dinâmico).
 
-```
+```cpp
 BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwReason*<br/>
 Se definido como DLL_PROCESS_ATTACH, as chamadas de notificação de DLL_THREAD_ATTACH e DLL_THREAD_DETACH estão desabilitadas.
@@ -155,15 +155,15 @@ Sempre retorna TRUE.
 
 Desabilitar as chamadas de notificação de DLL_THREAD_ATTACH e DLL_THREAD_DETACH pode ser uma otimização útil para aplicativos multissegmentados que têm muitas DLLs, que frequentemente criam e excluem threads e cujas DLLs não precisam dessas notificações no nível de thread de anexo/desanexação.
 
-##  <a name="dllregisterserver"></a>CAtlDllModuleT::D llRegisterServer
+## <a name="catldllmoduletdllregisterserver"></a><a name="dllregisterserver"></a>CAtlDllModuleT::D llRegisterServer
 
 Adiciona entradas ao registro do sistema para objetos na DLL.
 
-```
+```cpp
 HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bRegTypeLib*<br/>
 TRUE se a biblioteca de tipos for registrada. O valor padrão é TRUE.
@@ -172,15 +172,15 @@ TRUE se a biblioteca de tipos for registrada. O valor padrão é TRUE.
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
-##  <a name="dllunregisterserver"></a>CAtlDllModuleT::D llUnregisterServer
+## <a name="catldllmoduletdllunregisterserver"></a><a name="dllunregisterserver"></a>CAtlDllModuleT::D llUnregisterServer
 
 Remove entradas no registro do sistema para objetos na DLL.
 
-```
+```cpp
 HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bUnRegTypeLib*<br/>
 TRUE se a biblioteca de tipos for removida do registro. O valor padrão é TRUE.
@@ -189,18 +189,18 @@ TRUE se a biblioteca de tipos for removida do registro. O valor padrão é TRUE.
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
-##  <a name="getclassobject"></a>CAtlDllModuleT:: GetClassObject
+## <a name="catldllmoduletgetclassobject"></a><a name="getclassobject"></a>CAtlDllModuleT:: GetClassObject
 
 Cria um objeto do CLSID especificado.
 
-```
+```cpp
 HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *rclsid*<br/>
 O CLSID do objeto a ser criado.

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
 ms.openlocfilehash: 13c81728f02963863b641348b58380da099b0013
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232859"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretando declaradores mais complexos
 
@@ -126,6 +126,6 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
 
 Este exemplo mostra como a colocação de parênteses altera o significado da declaração. Neste exemplo, `var` é uma matriz de cinco elementos de ponteiros para as matrizes de cinco elementos de ponteiros para uniões. Para obter exemplos de como usar o `typedef` para evitar instruções complexas, consulte [Declarações de Typedef](../c-language/typedef-declarations.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e tipos](../c-language/declarations-and-types.md)

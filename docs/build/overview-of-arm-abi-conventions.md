@@ -2,18 +2,18 @@
 title: Visão geral das convenções ARM ABI
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 176aaaa17af1ce358255ca94eaccc7d5217f2a87
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320724"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Visão geral das convenções da ABI ARM32
 
 A interface binária do aplicativo (ABI) de código compilado para Windows em processadores ARM é baseada na EABI padrão do ARM. Este artigo destaca diferenças chave entre Windows em ARM e o padrão. Este documento aborda a ABI ARM32. Para obter informações sobre a ABI ARM64, consulte [visão geral das convenções da Abi ARM64](arm64-windows-abi-conventions.md). Para obter mais informações sobre o EABI ARM padrão, consulte [Abi (interface binária de aplicativo) para a arquitetura ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (link externo).
 
-## <a name="base-requirements"></a>Requisitos Base
+## <a name="base-requirements"></a>Requisitos básicos
 
 O Windows em ARM presume estar sendo executado em uma arquitetura ARMv7 continuamente. É necessário haver suporte a ponto flutuante na forma de VFPv3-D32 ou mais recente no hardware. O VFP deve suportar ponto flutuante de precisão única e de precisão dupla no hardware. O Windows runtime não suporta emulação de ponto flutuante para habilitar execução em hardware não VFP.
 
@@ -53,13 +53,13 @@ O uso de Instruções de IT em código Thumb-2 não é permitido, exceto para es
 
 - A instrução de destino deve ser uma das seguintes:
 
-   |Opcodes de 16 bits|Classe|{1&gt;Restrições&lt;1}|
+   |Opcodes de 16 bits|Classe|Restrições|
    |---------------------|-----------|------------------|
    |MOV, MVN|Mover|Rm != PC, Rd != PC|
    |LDR, LDR[S]B, LDR[S]H|Carregar da memória|Mas não formulários literais LDR|
    |STR, STRB, STRH|Armazenar na memória||
    |ADD, ADC, RSB, SBC, SUB|Somar ou subtrair|Mas não formulários ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-   |CMP, CMN|{1&gt;Compare&lt;1}|Rm != PC, Rn != PC|
+   |CMP, CMN|Comparar|Rm != PC, Rn != PC|
    |MUL|Multiplicar||
    |ASR, LSL, LSR, ROR|Deslocamento de bits||
    |AND, BIC, EOR, ORR, TST|Aritmética de bits||
@@ -75,12 +75,12 @@ O uso de instruções de divisão de inteiros SDIV e UDIV tem suporte total, mes
 
 O processador ARM oferece suporte a 16 registros inteiros:
 
-|Registro|Volátil?|Função|
+|Registrar |Volátil?|Função|
 |--------------|---------------|----------|
-|r0|Volatile|Parâmetro, resultado, registro de rascunho 1|
-|r1|Volatile|Parâmetro, resultado, registro de rascunho 2|
-|r2|Volatile|Parâmetro, registro de rascunho 3|
-|r3|Volatile|Parâmetro, registro de rascunho 4|
+|r0|Volátil|Parâmetro, resultado, registro de rascunho 1|
+|r1|Volátil|Parâmetro, resultado, registro de rascunho 2|
+|r2|Volátil|Parâmetro, registro de rascunho 3|
+|r3|Volátil|Parâmetro, registro de rascunho 4|
 |r4|Não volátil||
 |r5|Não volátil||
 |r6|Não volátil||
@@ -89,7 +89,7 @@ O processador ARM oferece suporte a 16 registros inteiros:
 |r9|Não volátil||
 |r10|Não volátil||
 |r11|Não volátil|Ponteiro de quadro|
-|r12|Volatile|Registro de rascunho de chamada dentro do procedimento|
+|r12|Volátil|Registro de rascunho de chamada dentro do procedimento|
 |r13 (SP)|Não volátil|Ponteiro de pilha|
 |r14 (LR)|Não volátil|Registro de link|
 |r15 (PC)|Não volátil|Contador de programa|
@@ -104,22 +104,22 @@ O Windows tem suporte apenas a variações de ARM com suporte no coprocessador V
 
 |Únicos|Duplos|Quads|Volátil?|Função|
 |-------------|-------------|-----------|---------------|----------|
-|s0-s3|d0-d1|q0|Volatile|Parâmetros, resultado, registro de rascunho|
-|s4-s7|d2-d3|q1|Volatile|Parâmetros, registro de rascunho|
-|s8-s11|d4-d5|q2|Volatile|Parâmetros, registro de rascunho|
-|s12-s15|d6-d7|q3|Volatile|Parâmetros, registro de rascunho|
+|s0-s3|d0-d1|q0|Volátil|Parâmetros, resultado, registro de rascunho|
+|s4-s7|d2-d3|q1|Volátil|Parâmetros, registro de rascunho|
+|s8-s11|d4-d5|q2|Volátil|Parâmetros, registro de rascunho|
+|s12-s15|d6-d7|q3|Volátil|Parâmetros, registro de rascunho|
 |s16-s19|d8-d9|q4|Não volátil||
 |s20-s23|d10-d11|q5|Não volátil||
 |s24-s27|d12-d13|q6|Não volátil||
 |s28-s31|d14-d15|q7|Não volátil||
-||d16-d31|q8-q15|Volatile||
+||d16-d31|q8-q15|Volátil||
 
 A próxima tabela ilustra os campos de status do ponto flutuante e do registro de controle (FPSCR):
 
 |Bits|Significado|Volátil?|Função|
 |----------|-------------|---------------|----------|
-|31-28|NZCV|Volatile|Sinalizadores de status|
-|27|QC|Volatile|Saturação cumulativa|
+|31-28|NZCV|Volátil|Sinalizadores de status|
+|27|QC|Volátil|Saturação cumulativa|
 |26|AHP|Não volátil|Controle de meia precisão alternativo|
 |25|DN|Não volátil|Controle de modo NaN padrão|
 |24|FZ|Não volátil|Controle de modo Flush-to-zero|
@@ -127,7 +127,7 @@ A próxima tabela ilustra os campos de status do ponto flutuante e do registro d
 |21-20|Passo|Não volátil|Passo do Vetor, deve ser sempre 0|
 |18-16|Len|Não volátil|Comprimento do Vetor, deve ser sempre 0|
 |15, 12-8|IDE, IXE etc.|Não volátil|Bits de habilitação de captura de exceção, deve ser sempre 0|
-|7, 4-0|IDC, IXC etc.|Volatile|Sinalizadores de exceção cumulativa|
+|7, 4-0|IDC, IXC etc.|Volátil|Sinalizadores de exceção cumulativa|
 
 ## <a name="floating-point-exceptions"></a>Exceções de ponto flutuante
 
@@ -197,11 +197,11 @@ A área de 8 bytes imediatamente abaixo do ponteiro de pilha atual é reservada 
 
 A pilha padrão de modo kernel no Windows é de três páginas (12 KB). Tenha cuidado para não criar funções que possuem grandes buffers de pilha em modo kernel. Uma interrupção pode ocorrer com muito pouco espaço de pilha e causar uma verificação de erros de pânico de pilha.
 
-## <a name="cc-specifics"></a>C/C++ especificos
+## <a name="cc-specifics"></a>Especificações de C/C++
 
 Enumerações são tipos inteiros de 32 bits, exceto quando ao menos um valor na enumeração exigir armazenamento de palavra dupla de 64 bits. Nesse caso, a enumeração é promovida para um tipo inteiro de 64 bits.
 
-`wchar_t` é definido para ser equivalente a `unsigned short`, para preservar a compatibilidade com outras plataformas.
+`wchar_t` é definido como equivalente a `unsigned short`, para preservar a compatibilidade com outras plataformas.
 
 ## <a name="stack-walking"></a>Movimentação de pilha
 
@@ -209,7 +209,7 @@ O código do Windows é compilado com ponteiros de quadro habilitados ([/Oy (omi
 
 ## <a name="exception-unwinding"></a>Desenrolamento de exceção
 
-O desenrolamento de pilha durante manipulação de exceções é habilitado pelo uso de códigos de desenrolamento. Os códigos de desenrolamento são uma sequência de bytes armazenada na seção .xdata da imagem executável. Descrevem a operação do código de prólogo e epílogo da função de maneira abstrata, de modo que os efeitos do prólogo de uma função podem ser desfeitos em preparação para desenrolamento para o quadro de pilha do chamador.
+O desenrolamento de pilha durante manipulação de exceções é habilitado pelo uso de códigos de desenrolamento. Os códigos de desenrolamento são uma sequência de bytes armazenada na seção .xdata da imagem executável. Eles descrevem a operação do prólogo de função e o código epílogo de maneira abstrata, de forma que os efeitos do prólogo de uma função possam ser desfeitos na preparação para o desenrolamento até o quadro de pilha do chamador.
 
 A EABI do ARM especifica um modelo de desenrolamento de exceção que usa códigos de desenrolamento. No entanto, essa especificação não é suficiente para desenrolamento no Windows, que deve manipular casos em que o processador está no meio do prólogo ou epílogo de uma função. Para obter mais informações sobre o Windows em dados de exceção do ARM e o desenrolamento, consulte [manipulação de exceção do ARM](arm-exception-handling.md).
 
@@ -221,7 +221,7 @@ Processadores ARM executando Windows devem suportar um contador de ciclo, porém
 
 O contador é um verdadeiro contador de ciclo, não um relógio; portanto, a frequência de contagem varia com a frequência do processador. Se desejar medir o tempo de relógio decorrido, use `QueryPerformanceCounter`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Problemas de migração ARM do Visual C++ comuns](common-visual-cpp-arm-migration-issues.md)<br/>
-[Tratamento de exceção do ARM](arm-exception-handling.md)
+[Problemas de migração ARM do Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[Manipulação de exceção do ARM](arm-exception-handling.md)

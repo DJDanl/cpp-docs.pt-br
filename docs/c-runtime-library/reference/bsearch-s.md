@@ -1,8 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch_s
+- _o_bsearch_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811149"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913389"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -52,22 +54,22 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*chaves*\
 Ponteiro para a chave a ser pesquisada.
 
-*base*\
+*polybase*\
 Ponteiro para a base dos dados de pesquisa.
 
-*número*\
+*automática*\
 Número de elementos.
 
-*largura*\
+*Largura*\
 Largura de elementos.
 
 *comparar*\
 Função de retorno de chamada que compara dois elementos. O primeiro argumento é o ponteiro de *contexto* . O segundo argumento é um ponteiro para a *chave* da pesquisa. O terceiro argumento é um ponteiro para o elemento da matriz a ser comparado com a *chave*.
 
-\ de *contexto*
+*noticioso*\
 Um ponteiro para um objeto que pode ser acessado na função de comparação.
 
 ## <a name="return-value"></a>Valor retornado
@@ -80,11 +82,11 @@ Se parâmetros inválidos forem passados para a função, ele invocará o manipu
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*automática*|*width*|**errno**|
-|**NULL**|qualquer|qualquer|qualquer|qualquer|**EINVAL**|
-|qualquer|**NULL**|qualquer|!= 0|qualquer|**EINVAL**|
-|qualquer|qualquer|qualquer|qualquer|= 0|**EINVAL**|
-|qualquer|qualquer|**NULL**|uma|qualquer|**EINVAL**|
+|*chave*|*base*|*comparar*|*number*|*width*|**errno**|
+|**NULO**|any|any|any|any|**EINVAL**|
+|any|**NULO**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|= 0|**EINVAL**|
+|any|any|**NULO**|an|any|**EINVAL**|
 
 ## <a name="remarks"></a>Comentários
 
@@ -96,7 +98,9 @@ A função **bsearch_s** executa uma pesquisa binária de uma matriz classificad
 |0|A chave é igual ao elemento da matriz.|
 |> 0|A chave é maior que o elemento da matriz.|
 
-O ponteiro de *contexto* poderá ser útil se a estrutura de dados pesquisada fizer parte de um objeto e a função compare precisar acessar os membros do objeto. A função *Compare* pode converter o ponteiro void no tipo de objeto apropriado e acessar os membros desse objeto. A adição do parâmetro de *contexto* torna o **bsearch_s** mais seguro, já que o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar os dados para a função de *comparação* .
+O ponteiro de *contexto* poderá ser útil se a estrutura de dados pesquisada fizer parte de um objeto e a função compare precisar acessar os membros do objeto. A função *Compare* pode converter o ponteiro void no tipo de objeto apropriado e acessar os membros desse objeto. A adição do parâmetro de *contexto* torna **bsearch_s** mais segura, já que o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar os dados para a função de *comparação* .
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -194,7 +198,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Consulte também
 
-[Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)\
+[Pesquisa e classificação](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\
 [_lsearch](lsearch.md)\
 [qsort](qsort.md)

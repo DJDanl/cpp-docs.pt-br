@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 79b05fde362a44453aac45aa8dc269c9689ea8fc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509521"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751181"
 ---
 # <a name="add-a-property"></a>Adicionar uma propriedade
 
@@ -62,7 +62,7 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Define o nome da propriedade. Para dispinterfaces MFC associadas a controles ActiveX, forneça seu próprio nome ou selecione um nome de propriedade de estoque na lista predefinida. Se você fornecer seu próprio nome de propriedade, o tipo de implementação **Estoque** não ficará disponível. Confira [propriedades de estoque](#stock-properties) para obter uma descrição das propriedades na lista.
 
-  |Tipo de interface|DESCRIÇÃO|
+  |Tipo de interface|Descrição|
   |--------------------|-----------------|
   |Interface dupla ATL, interface personalizada e interface personalizada local|Forneça um nome de propriedade.|
   |Dispinterface MFC, dispinterface MFC do controle ActiveX|Forneça um nome de propriedade ou selecione uma propriedade de estoque na lista. Se você selecionar uma propriedade na lista, o valor apropriado será exibido na caixa **Tipo de propriedade**. Você pode alterar esse tipo, dependendo da seleção em **Tipo de implementação**.|
@@ -77,7 +77,7 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
 - **Função de notificação**
 
-  Somente dispinterfaces MFC. Disponível somente se você especificar **Variável de membro** em **Tipo de implementação**. Define o nome da função de notificação chamada se a propriedade é alterada. Por padrão, o nome da função de notificação é definido como `On`*PropertyName*`Changed`. É possível editar esse nome.
+  Somente dispinterfaces MFC. Disponível somente se você especificar **Variável de membro** em **Tipo de implementação**. Define o nome da função de notificação chamada se a propriedade é alterada. Por padrão, o nome da função `On`de notificação é definido como *PropertyName*`Changed`. É possível editar esse nome.
 
 - **Função Get**
 
@@ -91,10 +91,10 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Somente dispinterfaces MFC. Especifica como implementar a propriedade que está sendo adicionada.
 
-  |Tipo de implementação|DESCRIÇÃO|
+  |Tipo de implementação|Descrição|
   |-------------------------|-----------------|
   |**Estoque**|Especifica uma implementação de estoque para a propriedade selecionada em **Nome da propriedade**. O padrão. Para obter mais informações, confira [Propriedades de estoque](#stock-properties).<br /><br /> Se você especificar **Estoque**, as opções **Tipo de propriedade**, **Tipo de parâmetro** e **Nome do parâmetro** ficarão esmaecidas.|
-  |**Variável de membro**|Especifica que a propriedade é adicionada como uma variável de membro. Adicione propriedades personalizadas ou a maioria das propriedades de estoque como variáveis de membro. Não é possível especificar **Variável de membro** para as propriedades `Caption`, `hWnd` e `Text`.<br /><br /> Fornece nomes padrão em **Nome da variável** e **Função de notificação**. É possível editar esse nome.|
+  |**Variável de membro**|Especifica que a propriedade é adicionada como uma variável de membro. Adicione propriedades personalizadas ou a maioria das propriedades de estoque como variáveis de membro. Você não pode especificar `Caption`a `hWnd`variável `Text` Membro para as propriedades e propriedades do **Membro.**<br /><br /> Fornece nomes padrão em **Nome da variável** e **Função de notificação**. É possível editar esse nome.|
   |**Métodos Get/Set**|Especifica que a propriedade é adicionada como as funções `Get`*PropertyName* e `Set`*PropertyName*, por padrão. Esses nomes são exibidos em **Função Get** e **Função Set**.<br /><br /> Altere o **Tipo de propriedade** padrão, que passa um valor para a função Get. Especifique parâmetros para as funções `Get` e `Set`.|
 
 - **Função Get**
@@ -105,16 +105,16 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Somente interfaces ATL. Define a propriedade gravável; ou seja, ela cria o método `Put` para definição, ou "colocação", dessa propriedade do objeto. Selecione **Get**, **Put** ou ambos. Se você selecionar essa opção, poderá escolher uma das duas seguintes maneiras de implementar o método:
 
-  |Opção|DESCRIÇÃO|
+  |Opção|Descrição|
   |------------|-----------------|
   |**PropPut**|A função [PropPut](../windows/propput.md) retorna uma cópia do objeto. Esse é o padrão e a maneira mais comum para tornar a propriedade gravável.|
   |**PropPutRef**|A função [PropPutRef](../windows/propputref.md) retorna uma referência ao objeto, em vez de retornar a cópia do objeto em si. Considere o uso dessa opção para objetos, como structs ou matrizes grandes, que podem ter a sobrecarga de inicialização.|
 
 - **Atributos de parâmetro**
 
-  Somente interfaces ATL. Define se o parâmetro especificado pelo **Nome do parâmetro** é `in`, `out`, ambos ou nenhum.
+  Somente interfaces ATL. Define se o parâmetro especificado pelo `in` `out` **nome parâmetro** é , ambos ou nenhum.
 
-  |Opção|DESCRIÇÃO|
+  |Opção|Descrição|
   |------------|-----------------|
   |`in`|Indica que o parâmetro é passado do procedimento de chamada para o procedimento chamado.|
   |`out`|Indica que o parâmetro de ponteiro é retornado do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|
@@ -135,7 +135,7 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Adiciona o parâmetro especificado em **Nome do parâmetro** e em **Tipo de parâmetro** à **Lista de parâmetros**. Selecione **Adicionar** para adicionar um parâmetro à lista.
 
-- **Removerr**
+- **Remover**
 
   Remove o parâmetro selecionado em **Lista de parâmetros**.
 
@@ -157,13 +157,13 @@ Use esta página do Assistente de Adição de Propriedade para especificar as co
 
 - `helpstring`
 
-  Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica. Por padrão, ele é definido como `property` &nbsp; *propriedade&nbsp;nome*. Confira [helpstring](/windows/win32/Midl/helpstring) na *Referência de MIDL*.
+  Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica. Por padrão, é definido como o nome `property`&nbsp;*Propriedade&nbsp;*. Confira [helpstring](/windows/win32/Midl/helpstring) na *Referência de MIDL*.
 
 ### <a name="other-options"></a>Outras opções
 
 Nem todas as opções estão disponíveis para todos os tipos de propriedade.
 
-|Opção|DESCRIÇÃO|
+|Opção|Descrição|
 |------------|-----------------|
 |`bindable`|Indica que a propriedade dá suporte à associação de dados. Confira [bindable](/windows/win32/Midl/bindable) na *Referência de MIDL*. Para a implementação de estoque da propriedade, essa opção está definida por padrão e não pode ser alterada.|
 |`defaultbind`|Indica que essa única propriedade associável melhor representa o objeto. Confira [defaultbind](/windows/win32/Midl/defaultbind) na *Referência de MIDL*.|
@@ -181,7 +181,7 @@ Nem todas as opções estão disponíveis para todos os tipos de propriedade.
 
 Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [assistente de adição de propriedade](#idl-attributes-add-property-wizard), escolha uma propriedade de estoque na lista **Nome da propriedade** da página [Nomes](../ide/names-add-property-wizard.md) do assistente. Estas são as seguintes propriedades:
 
-|Property name|DESCRIÇÃO|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |`Appearance`|Retorna ou define um valor que determina a aparência do controle. A propriedade `Appearance` do controle pode incluir ou omitir efeitos de exibição tridimensionais. Essa propriedade é uma propriedade de leitura/gravação de ambiente.|
 |`BackColor`|Retorna ou define a propriedade `BackColor` de ambiente do controle para uma cor da paleta (RGB) ou uma cor predefinida do sistema. Por padrão, seu valor corresponde à cor de primeiro plano do contêiner do controle. Essa propriedade é uma propriedade de leitura/gravação de ambiente.|
@@ -191,5 +191,5 @@ Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [assist
 |`Font`|Retorna ou define a fonte de ambiente do controle. Nulo se o controle não tem nenhuma fonte.|
 |`ForeColor`|Retorna ou define a propriedade `ForeColor` de ambiente do controle.|
 |`hWnd`|Retorna ou define a propriedade `hWnd` do controle. `hWnd` não tem nenhum tipo de implementação **Variável de membro**.|
-|`ReadyState`|Retorna ou define a propriedade `ReadyState` do controle. Um controle pode estar nos seguintes estados: inicialização cancelada, inicializado, carregando, interativo ou completo. Para obter mais informações, confira [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) no *SDK da Internet*.|
+|`ReadyState`|Retorna ou define a propriedade `ReadyState` do controle. Um controle pode estar nos seguintes estados: inicialização cancelada, inicializado, carregando, interativo ou completo. Para obter mais informações, confira [READYSTATE](/previous-versions/aa768362\(v=vs.85\)) no *SDK da Internet*.|
 |`Text`|Retorna ou define o texto contido em um controle. `Text` não tem nenhum tipo de implementação **Variável de membro**.|

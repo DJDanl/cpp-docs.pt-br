@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraitsHelper structure
 - Microsoft::WRL::Details::ArgTraitsHelper::args constant
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
-ms.openlocfilehash: fbba6d96106cc95910ccd9d0029cb3e9c254d7d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4acbd9fa660f29bbaf209282ff0e90f43621574d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398830"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360780"
 ---
 # <a name="argtraitshelper-structure"></a>Estrutura ArgTraitsHelper
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,12 +29,12 @@ struct ArgTraitsHelper;
 
 ### <a name="parameters"></a>Parâmetros
 
-*TDelegateInterface*<br/>
+*Interface de TDelegate*<br/>
 Uma interface de delegado.
 
 ## <a name="remarks"></a>Comentários
 
-Ajuda a definir as características comuns de argumentos do delegado.
+Ajuda a definir características comuns dos argumentos do delegado.
 
 ## <a name="members"></a>Membros
 
@@ -49,7 +49,7 @@ Nome         | Descrição
 
 Nome                           | Descrição
 ------------------------------ | ---------------------------------------------------------------------------------------------------------------------
-[ArgTraitsHelper::args](#args) | Ajuda [argtraits:: args](#args) manter a contagem do número de parâmetros `Invoke` método da interface de um delegado.
+[ArgTraitsHelper::args](#args) | Ajuda [ArgTraits::args](#args) manter a contagem `Invoke` do número de parâmetros no método de uma interface de delegado.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -57,13 +57,13 @@ Nome                           | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Event. h
+**Cabeçalho:** event.h
 
-**Namespace:** Microsoft::WRL::Details
+**Espaço de nome:** Microsoft::WRL::Details
 
-## <a name="args"></a>ArgTraitsHelper::args
+## <a name="argtraitshelperargs"></a><a name="args"></a>ArgTraitsHelper::args
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 static const int args = Traits::args;
@@ -71,4 +71,4 @@ static const int args = Traits::args;
 
 ### <a name="remarks"></a>Comentários
 
-Ajuda `ArgTraitsHelper::args` manter a contagem do número de parâmetros `Invoke` método da interface de um delegado.
+Ajuda `ArgTraitsHelper::args` a manter a contagem `Invoke` do número de parâmetros no método de uma interface de delegado.

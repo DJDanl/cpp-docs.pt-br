@@ -1,11 +1,13 @@
 ---
 title: _mkgmtime, _mkgmtime32, _mkgmtime64
 description: Descreve as funções de biblioteca de tempo de execução _mkgmtime, _mkgmtime32 e _mkgmtime64 C e fornece exemplos de como usá-las.
-ms.date: 12/04/2019
+ms.date: 4/2/2020
 api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
+- _o__mkgmtime32
+- _o__mkgmtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857730"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914651"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
@@ -67,7 +70,7 @@ __time64_t _mkgmtime64(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *timeptr*
+*timeptr*\
 Um ponteiro para a hora UTC como um **struct** **TM** a ser convertido.
 
 ## <a name="return-value"></a>Valor retornado
@@ -85,6 +88,8 @@ A estrutura de tempo passada é alterada da seguinte maneira, da mesma forma que
 O intervalo da função **_mkgmtime32** é da meia-noite, 1º de janeiro de 1970, utc a 23:59:59 18 de janeiro de 2038, UTC. O intervalo de **_mkgmtime64** é da meia-noite, 1º de janeiro de 1970, utc a 23:59:59, 31 de dezembro de 3000, UTC. Uma data fora do intervalo resulta em um valor de retorno de-1. O intervalo de **_mkgmtime** depende se **_USE_32BIT_TIME_T** está definido. Quando não está definido, que é o padrão, o intervalo é o mesmo que **_mkgmtime64**. Caso contrário, o intervalo será limitado ao intervalo de 32 bits de **_mkgmtime32**.
 
 **Gmtime** e **localtime** usam um buffer estático comum para a conversão. Se você fornecer esse buffer para **_mkgmtime**, o conteúdo anterior será destruído.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="examples"></a>Exemplos
 
@@ -179,7 +184,7 @@ t.tm_yday = 42
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)\
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)\
 [asctime, _wasctime](asctime-wasctime.md)\
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)\
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)\

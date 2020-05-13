@@ -1,8 +1,9 @@
 ---
 title: _cabs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cabs
+- _o__cabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 2c2bd6b3f097095514e47b757306b4d83a990e45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170335"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913348"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -46,7 +48,7 @@ double _cabs(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *z*<br/>
 Número complexo.
@@ -58,6 +60,8 @@ Número complexo.
 ## <a name="remarks"></a>Comentários
 
 A função **_cabs** calcula o valor absoluto de um número complexo, que deve ser uma estrutura do tipo [_complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composta por um componente real *x* e um componente imaginário de *y*. Uma chamada para **_cabs** produz um valor equivalente ao da expressão `sqrt( z.x * z.x + z.y * z.y )`.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -2,12 +2,12 @@
 title: Conjunto de caracteres ASCII
 ms.date: 11/04/2016
 ms.assetid: 2390fd40-5fe2-4410-a06c-ccc0fea2709b
-ms.openlocfilehash: 637f605f839b363dd85278f4b85fd832ca5f8e08
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 264d1f5a0f10d77a2c7c1dcc945ee6e508c70789
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147159"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335077"
 ---
 # <a name="ascii-character-set"></a>Conjunto de caracteres ASCII
 
@@ -16,8 +16,8 @@ ms.locfileid: "56147159"
 O conjunto de caracteres de origem é o conjunto de caracteres válidos que podem aparecer nos arquivos de origem. Para o Microsoft C, o conjunto de caracteres de origem é o conjunto de caracteres ASCII padrão.
 
 > [!NOTE]
->  **Aviso** Como os drivers de teclado e de console podem remapear o conjunto de caracteres, os programas destinados à distribuição internacional devem verificar o código do país/região.
+> **Aviso** Como os drivers de teclado e de console podem remapear o conjunto de caracteres, os programas destinados à distribuição internacional devem verificar o código do país/região.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Caracteres](../c-language/characters.md)
+[Personagens](../c-language/characters.md)

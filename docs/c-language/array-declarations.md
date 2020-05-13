@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313518"
 ---
 # <a name="array-declarations"></a>Declarações de matriz
 
@@ -19,22 +19,22 @@ Uma "declaração de matriz" nomeia a matriz e especifica o tipo dos respectivos
 
 ## <a name="syntax"></a>Sintaxe
 
-*declaration*:<br/>
+*declaração*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *init-declarator-list*<sub>opt</sub> **;**
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List*  **,**  *init-declarator*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
+*init-Declarador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inicializador* de *Declarador* **=**
 
-*declarator*:<br/>
+*Declarador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator*: /\* Um declarador de função \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**
+*Declarador direto*:\* /um Declarador de função\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***[***opt-expressão de constante*<sub>opt</sub> **]**    
 
 Como *constant-expression* é opcional, a sintaxe tem dois formatos:
 
@@ -48,7 +48,7 @@ Qualificadores de tipo podem aparecer na declaração de um objeto de tipo de ma
 
 Você pode declarar uma matriz de matrizes (uma matriz "multidimensional") colocando uma lista de expressões de constantes entre colchetes após o declarador de matriz, neste formato:
 
-> *type-specifier* *declarator* **[** *constant-expression* **]** **[** *constant-expression* **]** ...
+> Declarador *de tipo-especificador* *declarator* **[** *expressão constante* **]** **[** *expressão constante* **]** ...
 
 Cada *constant-expression* entre colchetes define o número de elementos em uma determinada dimensão: as matrizes bidimensionais têm duas expressões entre colchetes, as matrizes tridimensionais têm três e assim por diante. Você poderá omitir a primeira expressão de constante se tiver inicializado a matriz, se a tiver declarado como um parâmetro ou se a tiver declarado como uma referência a uma matriz definida explicitamente em outro lugar no programa.
 
@@ -88,12 +88,12 @@ extern char *name[];
 
 Essa instrução declara o tipo e o nome de uma matriz de ponteiros para `char`. A definição real de `name` ocorre em outro lugar.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 O tipo de inteiro necessário para manter o tamanho máximo de uma matriz é o tamanho de **size_t**. Definido no arquivo de cabeçalho STDDEF.H, **size_t** é um `unsigned int` com o intervalo de 0x00000000 a 0x7CFFFFFF.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md)
+[Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)

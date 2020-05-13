@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs
+- _o_wcsrtombs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cad31f28c5542a96eae9f144344882b71806052a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945050"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910624"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -63,13 +65,13 @@ O local do endereço da cadeia de caracteres multibyte convertida resultante.
 *wcstr*<br/>
 Aponta indiretamente para o local da cadeia de caracteres largos a ser convertida.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a ser convertido.
 
 *mbstate*<br/>
-Um ponteiro para um objeto de estado de conversão **mbstate_t** .
+Um ponteiro para um objeto de estado de conversão de **mbstate_t** .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna o número de bytes convertidos com êxito, não incluindo o byte nulo de terminação nula (se houver), caso contrário, retorna –1 em caso de erro.
 
@@ -77,13 +79,15 @@ Retorna o número de bytes convertidos com êxito, não incluindo o byte nulo de
 
 A função **wcsrtombs** converte uma cadeia de caracteres largos, começando no estado de conversão especificado contido em *mbstate*, dos valores indiretos apontados em *wcstr*no endereço de *mbstr*. A conversão continuará para cada caractere até: depois que um caractere largo de encerramento nulo for encontrado, quando um caractere não correspondente for encontrado ou quando o próximo caractere exceder o limite contido na *contagem*. Se **wcsrtombs** encontrar o caractere nulo de caractere largo (L ' \ 0 ') antes ou quando ocorrer a *contagem* , ele o converterá em um 0 de 8 bits e será interrompido.
 
-Assim, a cadeia de caracteres multibyte em *mbstr* será terminada em nulo somente se **wcsrtombs** encontrar um caractere nulo de caractere largo durante a conversão. Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcsrtombs** é indefinido. **wcsrtombs** é afetado pela categoria LC_TYPE da localidade atual.
+Assim, a cadeia de caracteres multibyte em *mbstr* será terminada em nulo somente se **wcsrtombs** encontrar um caractere nulo de caractere largo durante a conversão. Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcsrtombs** é indefinido. **wcsrtombs** é afetado pela categoria de LC_TYPE da localidade atual.
 
 A função **wcsrtombs** difere de [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcsnlen**, se uma chamada subsequente para **wcsrtombs** fosse usada em vez de **wcstombs**.
 
-Se o argumento *mbstr* for **nulo**, **wcsrtombs** retornará o tamanho necessário em bytes da cadeia de caracteres de destino. Se *mbstate* for NULL, o estado de conversão **mbstate_t** interno será usado. Se a sequência de caracteres *WCHAR* não tiver uma representação de caractere multibyte correspondente, um-1 será retornado e o **errno** será definido como **EILSEQ**.
+Se o argumento *mbstr* for **nulo**, **wcsrtombs** retornará o tamanho necessário em bytes da cadeia de caracteres de destino. Se *mbstate* for NULL, o estado de conversão de **mbstate_t** interno será usado. Se a sequência de caracteres *WCHAR* não tiver uma representação de caractere multibyte correspondente, um-1 será retornado e o **errno** será definido como **EILSEQ**.
 
 Em C++, essa função tem uma sobrecarga de modelo que invoca o equivalente mais recente e seguro dessa função. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Exceções
 
@@ -144,7 +148,7 @@ The string was successfuly converted.
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>

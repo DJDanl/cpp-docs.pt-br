@@ -21,7 +21,7 @@ Ao otimizar um executável, você pode obter um equilíbrio entre a velocidade d
 
 ## <a name="language-features"></a>Funcionalidades da linguagem
 
-Os tópicos a seguir descrevem alguns dos recursos de otimização no C/C++ Language.
+Os tópicos a seguir descrevem alguns dos recursos de otimização na linguagem C/C++.
 
 [Pragmas de otimização e palavras-chave](optimization-pragmas-and-keywords.md) \
 Uma lista de palavras-chave e pragmas que você pode usar em seu código para melhorar o desempenho.
@@ -29,7 +29,7 @@ Uma lista de palavras-chave e pragmas que você pode usar em seu código para me
 [Opções de compilador listadas por categoria](reference/compiler-options-listed-by-category.md) \
 Uma lista de opções de compilador **/o** que afetam especificamente a velocidade de execução ou o tamanho do código.
 
-[Declarador de referência rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
+[Declarador de referência rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md) \
 As referências a rvalue dão suporte à implementação da *semântica de movimentação*. Se a semântica de movimentação for usada para implementar bibliotecas de modelos, o desempenho dos aplicativos que usam esses modelos poderá melhorar significativamente.
 
 ### <a name="the-optimize-pragma"></a>O pragma de otimização
@@ -66,7 +66,7 @@ Os tópicos a seguir fornecem informações sobre como Depurar compilações de 
 
 - [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 
-- [Como depurar o código otimizado](/visualstudio/debugger/how-to-debug-optimized-code)
+- [Como: depurar código otimizado](/visualstudio/debugger/how-to-debug-optimized-code)
 
 - [Por que números de ponto flutuante podem perder a precisão](why-floating-point-numbers-may-lose-precision.md)
 
@@ -80,24 +80,24 @@ Os tópicos a seguir fornecem informações sobre como otimizar a criação, o c
 
 - [Especificação de otimização do compilador para um projeto da ATL](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [Quais técnicas de otimização devo usar para melhorar o desempenho do aplicativo cliente ao carregar?](../build/dll-frequently-asked-questions.md#mfc_optimization)
+- [Quais técnicas de otimização devo usar para melhorar o desempenho do aplicativo cliente durante o carregamento?](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Pragmas de otimização e palavras-chave](optimization-pragmas-and-keywords.md) \
 [Melhorando a taxa de transferência do compilador](improving-compiler-throughput.md) \
 [Por que os números de ponto flutuante podem perder a precisão](why-floating-point-numbers-may-lose-precision.md) \
-[Representação de ponto flutuante IEEE](ieee-floating-point-representation.md) \
+[Representação de ponto flutuante de IEEE](ieee-floating-point-representation.md) \
 [Dicas para melhorar o código de tempo crítico](tips-for-improving-time-critical-code.md) \
-O [uso de nome de função sem () não produz nenhum código](using-function-name-without-parens-produces-no-code.md) \
+[O uso de nome de função sem () não produz nenhum código](using-function-name-without-parens-produces-no-code.md) \
 [Práticas recomendadas de otimização](optimization-best-practices.md) \
 [Otimizações guiadas por perfil](profile-guided-optimizations.md) \
 [Variáveis de ambiente para otimizações guiadas por perfil](environment-variables-for-profile-guided-optimizations.md) \
- \ [PgoAutoSweep](pgoautosweep.md)
- \ [pgomgr](pgomgr.md)
- \ [PGOSWEEP](pgosweep.md)
-[Como mesclar vários perfis do PGO em um único perfil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
+[PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[Como mesclar vários perfis PGO em um único perfil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Confira também
 
-[Referência de compilação C/C++](reference/c-cpp-building-reference.md)
+[Referência de build C/C++](reference/c-cpp-building-reference.md)

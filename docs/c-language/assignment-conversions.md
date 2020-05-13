@@ -28,6 +28,6 @@ Em operações de atribuição, o tipo do valor que está sendo atribuído é co
 
 Os qualificadores de tipo não afetam o capacidade de conversão, embora um valor l **const** não possa ser usado no lado esquerdo da atribuição.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversões de tipo](../c-language/type-conversions-c.md)

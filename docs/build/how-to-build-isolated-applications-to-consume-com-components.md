@@ -1,5 +1,5 @@
 ---
-title: 'Como: Crie aplicativos isolados para consumir componentes COM'
+title: Como compilar aplicativos isolados para consumir componentes COM
 ms.date: 11/04/2016
 helpviewer_keywords:
 - isolated applications [C++]
@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493242"
 ---
-# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Como: Crie aplicativos isolados para consumir componentes COM
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Como compilar aplicativos isolados para consumir componentes COM
 
 Aplicativos isolados são aplicativos que têm manifestos incorporados ao programa. Você pode criar aplicativos isolados para consumir componentes COM.
 
@@ -37,7 +37,7 @@ Aplicativos isolados são aplicativos que têm manifestos incorporados ao progra
 
 1. Compile a solução.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Aplicativos isolados](/windows/win32/SbsCs/isolated-applications)<br/>
 [Sobre assemblies lado a lado](/windows/win32/SbsCs/about-side-by-side-assemblies-)

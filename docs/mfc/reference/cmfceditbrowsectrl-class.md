@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: db99c5e72e84bb359184f4c62594fcddff7d8ff6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505349"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752374"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 
-A `CMFCEditBrowseCtrl` classe dá suporte ao controle de navegação de edição, que é uma caixa de texto editável que, opcionalmente, contém um botão procurar. Quando o usuário clica no botão procurar, o controle executa uma ação personalizada ou exibe uma caixa de diálogo padrão que contém um navegador de arquivos ou um navegador de pastas.
+A `CMFCEditBrowseCtrl` classe suporta o controle de navegação de edição, que é uma caixa de texto editável que contém opcionalmente um botão de navegação. Quando o usuário clica no botão de navegação, o controle executa uma ação personalizada ou exibe uma caixa de diálogo padrão que contém um navegador de arquivos ou um navegador de pasta.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -56,84 +56,84 @@ class CMFCEditBrowseCtrl : public CEdit
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Habilita ou desabilita (oculta) o botão procurar.|
-|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Habilita o botão procurar e coloca o controle de navegação de edição no modo de *procura de arquivo* .|
-|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Habilita o botão procurar e coloca o controle de navegação de edição no modo de *procura de pasta* .|
-|[CMFCEditBrowseCtrl::GetMode](#getmode)|Retorna o modo de procura atual.|
-|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Chamado pelo Framework depois que o controle de navegação de edição é atualizado com o resultado de uma ação de procura.|
-|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Chamado pelo Framework depois que o usuário clica no botão procurar.|
+|[CMFCEditBrowseCtrl:EnableBrowseButton](#enablebrowsebutton)|Ativa ou desativa (oculta) o botão de navegação.|
+|[CMFCEditBrowseCtrl:EnableFileBrowseButton](#enablefilebrowsebutton)|Habilita o botão de navegação e coloca o controle de navegação de edição no modo *de navegação de arquivos.*|
+|[CMFCEditBrowseCtrl:EnableFolderBrowseButton](#enablefolderbrowsebutton)|Habilita o botão de navegação e coloca o controle de navegação de edição no modo *de navegação da pasta.*|
+|[CMFCEditBrowseCtrl::GetMode](#getmode)|Retorna o modo de navegação atual.|
+|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Chamado pelo framework após o controle de navegação de edição é atualizado com o resultado de uma ação de navegação.|
+|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Chamado pelo framework depois que o usuário clica no botão de navegação.|
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Redesenha o controle de navegação de edição atual.|
-|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Chamado pelo Framework para desenhar o botão procurar.|
-|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Chamado pelo Framework quando um nome de arquivo ilegal foi inserido no controle de edição.|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Traduz mensagens de janela antes de serem expedidas para as funções do Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Para obter a sintaxe e obter mais informações, consulte [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
-|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Define uma imagem personalizada para o botão procurar.|
+|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Chamado pelo framework para desenhar o botão de navegação.|
+|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Chamado pela estrutura quando um nome de arquivo ilegal foi inserido no controle de edição.|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Traduz mensagens de janela antes de serem enviadas para as funções [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows. Para obter sintaxe e mais informações, consulte [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Define uma imagem personalizada para o botão de navegação.|
 
 ## <a name="remarks"></a>Comentários
 
-Use um controle de navegação de edição para selecionar um nome de arquivo ou pasta. Opcionalmente, use o controle para executar uma ação personalizada, como para exibir uma caixa de diálogo. Você pode exibir ou não exibir o botão procurar, e pode aplicar um rótulo ou uma imagem personalizada no botão.
+Use um controle de navegação de edição para selecionar um nome de arquivo ou pasta. Opcionalmente, use o controle para executar uma ação personalizada, como exibir uma caixa de diálogo. Você pode exibir ou não exibir o botão de navegação, e você pode aplicar uma etiqueta ou imagem personalizada no botão.
 
-O *modo de procura* do controle de navegação de edição determina se ele exibe um botão de procura e qual ação ocorre quando o botão é clicado. Para obter mais informações, consulte o método [GetMode](#getmode).
+O modo de *navegação* do controle de navegação de edição determina se ele exibe um botão de navegação e qual ação ocorre quando o botão é clicado. Para obter mais informações, consulte o método [GetMode.](#getmode)
 
-A `CMFCEditBrowseCtrl` classe oferece suporte aos seguintes modos.
+A `CMFCEditBrowseCtrl` classe suporta os seguintes modos.
 
 - **modo personalizado**
 
-   Uma ação personalizada é executada quando o usuário clica no botão procurar. Por exemplo, você pode exibir uma caixa de diálogo específica do aplicativo.
+   Uma ação personalizada é realizada quando o usuário clica no botão de navegação. Por exemplo, você pode exibir uma caixa de diálogo específica do aplicativo.
 
 - **modo de arquivo**
 
-   Uma caixa de diálogo seleção de arquivo padrão é exibida quando o usuário clica no botão procurar.
+   Uma caixa de diálogo de seleção de arquivos padrão é exibida quando o usuário clica no botão de navegação.
 
-- **modo de pasta**
+- **modo pasta**
 
-   Uma caixa de diálogo seleção de pasta padrão é exibida quando o usuário clica no botão procurar.
+   Uma caixa de diálogo de seleção de pasta padrão é exibida quando o usuário clica no botão de navegação.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Como fazer: Especificar um controle de navegação de edição
+## <a name="how-to-specify-an-edit-browse-control"></a>Como fazer: especificar um controle de navegação de edição
 
 Execute as seguintes etapas para incorporar um controle de navegação de edição em seu aplicativo:
 
-1. Se você quiser implementar um modo de procura personalizado, derive sua própria classe da `CMFCEditBrowseCtrl` classe e, em seguida, substitua o método [CMFCEditBrowseCtrl:: onprocurar](#onbrowse) . No método substituído, execute uma ação de navegação personalizada e atualize o controle de navegação de edição com o resultado.
+1. Se você quiser implementar um modo de navegação `CMFCEditBrowseCtrl` personalizado, obtenha sua própria classe da classe e, em seguida, anule o método [CMFCEditBrowseCtrl::OnBrowse.](#onbrowse) No método substituído, execute uma ação de navegação personalizada e atualize o controle de navegação de edição com o resultado.
 
-1. Insira o `CMFCEditBrowseCtrl` objeto ou o objeto de controle de navegação de edição derivada no objeto de janela pai.
+1. Incorporar o `CMFCEditBrowseCtrl` objeto ou o objeto de navegação de edição derivado no objeto de controle da janela pai.
 
-1. Se você usar o **Assistente de classe** para criar uma caixa de diálogo, adicione um controle `CEdit`de edição () ao formulário da caixa de diálogo. Além disso, adicione uma variável para acessar o controle no arquivo de cabeçalho. No arquivo de cabeçalho, altere o tipo da variável de `CEdit` para. `CMFCEditBrowseCtrl` O controle de navegação de edição será criado automaticamente. Se você não usar o **Assistente de classe**, adicione uma `CMFCEditBrowseCtrl` variável ao arquivo de cabeçalho e, em seguida `Create` , chame seu método.
+1. Se você usar o **Assistente de Classe** para criar `CEdit`uma caixa de diálogo, adicione um controle de edição ( ) à forma caixa de diálogo. Além disso, adicione uma variável para acessar o controle em seu arquivo de cabeçalho. No seu arquivo de cabeçalho, `CEdit` `CMFCEditBrowseCtrl`altere o tipo da variável de . O controle de navegação de edição será criado automaticamente. Se você não usar o Assistente `CMFCEditBrowseCtrl` de **Classe,** adicione uma `Create` variável ao seu arquivo de cabeçalho e, em seguida, chame seu método.
 
 1. Se você adicionar um controle de navegação de edição a uma caixa de diálogo, use a ferramenta **ClassWizard** para configurar a troca de dados.
 
-1. Chame o método [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton)ou [EnableBrowseButton](#enablebrowsebutton) para definir o modo de procura e exibir o botão procurar. Chame o método [GetMode](#getmode) para obter o modo de procura atual.
+1. Ligue para o [método EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton)ou [EnableBrowseButton](#enablebrowsebutton) para definir o modo de navegação e exibir o botão de navegação. Ligue para o método [GetMode](#getmode) para obter o modo de navegação atual.
 
-1. Para fornecer uma imagem personalizada para o botão procurar, chame o método [SetBrowseButtonImage](#setbrowsebuttonimage) ou substitua o método [OnDrawBrowseButton](#ondrawbrowsebutton) .
+1. Para fornecer uma imagem personalizada para o botão de navegação, chame o método [SetBrowseButtonImage](#setbrowsebuttonimage) ou anule o método [OnDrawBrowseButton.](#ondrawbrowsebutton)
 
-1. Para remover o botão procurar do controle de navegação de edição, chame o método [EnableBrowseButton](#enablebrowsebutton) com o parâmetro *BENABLE* definido como false.
+1. Para remover o botão de navegação do controle de navegação de edição, chame o método [EnableBrowseButton](#enablebrowsebutton) com o parâmetro *bEnable* definido como FALSE.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
 [CEdit](../../mfc/reference/cedit-class.md)
 
-[CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md)
+[Cmfceditbrowsectrl](../../mfc/reference/cmfceditbrowsectrl-class.md)
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar dois métodos na `CMFCEditBrowseCtrl` classe: `EnableFolderBrowseButton` e `EnableFileBrowseButton`. Este exemplo faz parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como `CMFCEditBrowseCtrl` usar `EnableFolderBrowseButton` dois `EnableFileBrowseButton`métodos na classe: e . Este exemplo faz parte da [amostra Novos Controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxeditbrowsectrl. h
+**Cabeçalho:** afxeditbrowsectrl.h
 
-##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton
+## <a name="cmfceditbrowsectrlenablebrowsebutton"></a><a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl:EnableBrowseButton
 
-Exibe ou não exibe o botão procurar no controle atual de navegação de edição.
+Exibe ou não o botão de navegação no controle de navegação de edição atual.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -141,23 +141,23 @@ void EnableBrowseButton(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
-TRUE para exibir o botão procurar; FALSE não exibir o botão procurar. O valor padrão é TRUE.
+*Benable*<br/>
+TRUE para exibir o botão de navegação; FALSO para não exibir o botão de navegação. O valor padrão é TRUE.
 
 *szLabel*<br/>
-O rótulo que é exibido no botão procurar. O valor padrão é " **...** ".
+A etiqueta que é exibida no botão de navegação. O valor padrão é " **...**".
 
 ### <a name="remarks"></a>Comentários
 
-Se o parâmetro *bEnable* for true, implemente uma ação personalizada a ser executada quando o botão procurar for clicado. Para implementar uma ação personalizada, derive uma classe da `CMFCEditBrowseCtrl` classe e, em seguida, substitua seu método [OnBrowse](#onbrowse).
+Se o parâmetro *bEnable* for TRUE, implemente uma ação personalizada para executar quando o botão de navegação for clicado. Para implementar uma ação personalizada, `CMFCEditBrowseCtrl` obtenha uma classe da classe e, em seguida, anule seu método [OnBrowse.](#onbrowse)
 
-Se o parâmetro *bEnable* for true, o modo de procura do controle será `BrowseMode_Default`; caso contrário, o modo de `BrowseMode_None`procura será. Para obter mais informações sobre os modos de procura, consulte o método [GetMode](#getmode).
+Se o parâmetro *bEnable* for TRUE, o `BrowseMode_Default`modo de navegação do controle será ; caso contrário, o `BrowseMode_None`modo de navegação é . Para obter mais informações sobre os modos de navegação, consulte o método [GetMode.](#getmode)
 
-##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton
+## <a name="cmfceditbrowsectrlenablefilebrowsebutton"></a><a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl:EnableFileBrowseButton
 
-Exibe o botão procurar no controle de navegação de edição atual e coloca o controle no modo de *procura de arquivo* .
+Exibe o botão de navegação no controle de navegação de edição atual e coloca o controle no modo *de navegação de arquivo.*
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -167,60 +167,60 @@ void EnableFileBrowseButton(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszDefExt*<br/>
-Especifica a extensão de nome de arquivo padrão usada na caixa de diálogo seleção de arquivo. O valor padrão é NULL.
+Especifica a extensão de nome de arquivo padrão que é usada na caixa de diálogo de seleção de arquivos. O valor padrão é NULL.
 
 *lpszFilter*<br/>
-Especifica a cadeia de caracteres de filtro padrão usada na caixa de diálogo de seleção de arquivo. O valor padrão é NULL.
+Especifica a seqüência de filtro padrão usada na caixa de diálogo de seleção de arquivos. O valor padrão é NULL.
 
 *dwFlags*<br/>
-Sinalizadores da caixa de diálogo. O valor padrão é uma combinação de bits (ou) de OFN_HIDEREADONLY e OFN_OVERWRITEPROMPT.
+Bandeiras da caixa de diálogo. O valor padrão é uma combinação bitwise (OR) de OFN_HIDEREADONLY e OFN_OVERWRITEPROMPT.
 
 ### <a name="remarks"></a>Comentários
 
-Quando o controle de navegação de edição está no modo de procura de arquivo e o usuário clica no botão procurar, o controle exibe a caixa de diálogo seleção de arquivo padrão.
+Quando o controle de navegação de edição estiver no modo de navegação de arquivos e o usuário clicar no botão de navegação, o controle exibe a caixa de diálogo de seleção de arquivos padrão.
 
-Para obter uma lista completa dos sinalizadores disponíveis, consulte [estrutura da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
+Para obter uma lista completa de sinalizadores disponíveis, consulte [a estrutura OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
-##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton
+## <a name="cmfceditbrowsectrlenablefolderbrowsebutton"></a><a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl:EnableFolderBrowseButton
 
-Exibe o botão procurar no controle de navegação de edição atual e coloca o controle no modo de *procura de pasta* .
+Exibe o botão de navegação no controle de navegação de edição atual e coloca o controle no modo *de navegação da pasta.*
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
 ### <a name="remarks"></a>Comentários
 
-Quando o controle de navegação de edição está no modo de procura de pasta e o usuário clica no botão procurar, o controle exibe a caixa de diálogo seleção de pasta padrão.
+Quando o controle de navegação de edição estiver no modo de navegação da pasta e o usuário clicar no botão procurar, o controle exibe a caixa de diálogo de seleção de pasta padrão.
 
-##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode
+## <a name="cmfceditbrowsectrlgetmode"></a><a name="getmode"></a>CMFCEditBrowseCtrl::GetMode
 
-Recupera o modo de procura do controle de navegação de edição atual.
+Recupera o modo de navegação do controle de navegação de edição atual.
 
 ```
 CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um dos valores de enumeração que especifica o modo atual do controle de navegação de edição. O modo de procura determina se a estrutura exibe o botão procurar e que ação ocorre quando um usuário clica nesse botão.
+Um dos valores de enumeração que especifica o modo atual do controle de navegação de edição. O modo de navegação determina se a estrutura exibe o botão de navegação e qual ação ocorre quando um usuário clica nesse botão.
 
 A tabela a seguir lista os possíveis valores de retorno.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`BrowseMode_Default`|**modo personalizado**. Uma ação definida pelo programador é executada.|
-|`BrowseMode_File`|**modo de arquivo**. A caixa de diálogo navegador de arquivos padrão é exibida.|
-|`BrowseMode_Folder`|**modo de pasta**. A caixa de diálogo navegador de pastas padrão é exibida.|
-|`BrowseMode_None`|O botão procurar não é exibido.|
+|`BrowseMode_Default`|**modo personalizado**. Uma ação definida pelo programar é realizada.|
+|`BrowseMode_File`|**modo de arquivo**. A caixa de diálogo padrão do navegador de arquivos é exibida.|
+|`BrowseMode_Folder`|**modo pasta**. A caixa de diálogo do navegador da pasta padrão é exibida.|
+|`BrowseMode_None`|O botão de navegação não é exibido.|
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, um `CMFCEditBrowseCtrl` objeto é inicializado `BrowseMode_None` para o modo. Modifique o modo de procura com os métodos [CMFCEditBrowseCtrl:: EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl:: EnableFileBrowseButton](#enablefilebrowsebutton)e [CMFCEditBrowseCtrl:: EnableFolderBrowseButton](#enablefolderbrowsebutton) .
+Por padrão, `CMFCEditBrowseCtrl` um objeto `BrowseMode_None` é inicializado para o modo. Modifique o modo de navegação com os métodos [CMFCEditBrowseCtrl::EnableBrowseButton,](#enablebrowsebutton) [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)e [CMFCEditBrowseCtrl:EnableFolderBrowseButton](#enablefolderbrowsebutton) methods.
 
-##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate
+## <a name="cmfceditbrowsectrlonafterupdate"></a><a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate
 
-Chamado pelo Framework depois que o controle de navegação de edição é atualizado com o resultado de uma ação de procura.
+Chamado pelo framework após o controle de navegação de edição é atualizado com o resultado de uma ação de navegação.
 
 ```
 virtual void OnAfterUpdate();
@@ -228,11 +228,11 @@ virtual void OnAfterUpdate();
 
 ### <a name="remarks"></a>Comentários
 
-Substitua esse método em uma classe derivada para implementar uma ação personalizada.
+Anular este método em uma classe derivada para implementar uma ação personalizada.
 
-##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse
+## <a name="cmfceditbrowsectrlonbrowse"></a><a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse
 
-Chamado pelo Framework depois que o usuário clica no botão procurar do controle de navegação de edição.
+Chamado pelo framework depois que o usuário clica no botão de navegação do controle de navegação de edição.
 
 ```
 virtual void OnBrowse();
@@ -240,9 +240,9 @@ virtual void OnBrowse();
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para executar código personalizado quando o usuário clicar no botão procurar do controle de navegação de edição. Derive sua própria classe da `CMFCEditBrowseCtrl` classe e substitua seu `OnBrowse` método. Nesse método, implemente uma ação de navegação personalizada e, opcionalmente, atualize a caixa de texto do controle de navegação de edição. Em seu aplicativo, use o método [EnableBrowseButton](#enablebrowsebutton) para colocar o controle de navegação de edição no modo de *procura personalizado* .
+Use este método para executar código personalizado quando o usuário clicar no botão de navegação do controle de navegação editar. Obtenha sua própria `CMFCEditBrowseCtrl` classe da classe `OnBrowse` e anule seu método. Nesse método, implemente uma ação de navegação personalizada e, opcionalmente, atualize a caixa de texto do controle de navegação de edição. Em seu aplicativo, use o método [EnableBrowseButton](#enablebrowsebutton) para colocar o controle de navegação de edição no modo *de navegação personalizado.*
 
-##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout
+## <a name="cmfceditbrowsectrlonchangelayout"></a><a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout
 
 Redesenha o controle de navegação de edição atual.
 
@@ -252,11 +252,11 @@ virtual void OnChangeLayout();
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura chama esse método quando o modo de procura do controle de navegação de edição é alterado. Para obter mais informações, consulte [CMFCEditBrowseCtrl:: GetMode](#getmode).
+A estrutura chama esse método quando o modo de navegação do controle de navegação de edição é alterado. Para obter mais informações, consulte [CMFCEditBrowseCtrl::GetMode](#getmode).
 
-##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton
+## <a name="cmfceditbrowsectrlondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton
 
-Chamado pelo Framework para desenhar o botão procurar no controle de navegação de edição.
+Chamado pelo framework para desenhar o botão de navegação no controle de navegação de edição.
 
 ```
 virtual void OnDrawBrowseButton(
@@ -271,24 +271,24 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo.
 
-*Retângulo*<br/>
-O retângulo delimitador do botão procurar.
+*Rect*<br/>
+O retângulo delimitador do botão de navegação.
 
-*bIsButtonPressed*<br/>
+*bIsButtonpressed*<br/>
 TRUE se o botão for pressionado; caso contrário, FALSE.
 
 *bIsButtonHot*<br/>
-TRUE se o botão estiver realçado; caso contrário, FALSE.
+TRUE se o botão for destacado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua essa função em uma classe derivada para personalizar a aparência do botão procurar.
+Anular esta função em uma classe derivada para personalizar a aparência do botão de navegação.
 
-##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage
+## <a name="cmfceditbrowsectrlsetbrowsebuttonimage"></a><a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage
 
-Define uma imagem personalizada no botão procurar do controle de navegação de edição.
+Define uma imagem personalizada no botão de navegação do controle de navegação de edição.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);
@@ -302,25 +302,25 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hIcon*<br/>
-O identificador de um ícone.
+*Hicon*<br/>
+A alça de um ícone.
 
-*hBitmap*<br/>
-O identificador de um bitmap.
+*Hbitmap*<br/>
+A alça de um bitmap.
 
 *uiBmpResId*<br/>
-A ID de recurso de um bitmap.
+O ID de recurso de um bitmap.
 
 *bAutoDestroy*<br/>
-TRUE para excluir o ícone ou bitmap especificado quando esse método for encerrado; caso contrário, FALSE. O valor padrão é TRUE.
+TRUE para excluir o ícone ou bitmap especificado quando este método sair; caso contrário, FALSE. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Use este método para aplicar uma imagem personalizada ao botão procurar. Por padrão, a estrutura Obtém uma imagem padrão quando o controle de navegação de edição está no modo de procura de *arquivo* ou de *pasta* .
+Use este método para aplicar uma imagem personalizada ao botão de navegação. Por padrão, a estrutura obtém uma imagem padrão quando o controle de navegação de edição está no modo *de navegação de arquivo* ou de navegação de *pasta.*
 
-##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName
+## <a name="cmfceditbrowsectrlonillegalfilename"></a><a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName
 
-Chamado pelo Framework quando um nome de arquivo ilegal foi inserido no controle de edição.
+Chamado pela estrutura quando um nome de arquivo ilegal foi inserido no controle de edição.
 
 ```
 virtual BOOL OnIllegalFileName(CString& strFileName);
@@ -328,16 +328,16 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 
 ### <a name="parameters"></a>Parâmetros
 
-*strFileName*<br/>
-Especifica o nome de arquivo ilegal.
+*Strfilename*<br/>
+Especifica o nome do arquivo ilegal.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Deve retornar FALSE se esse nome de arquivo não puder ser passado para a caixa de diálogo de arquivo. Nesse caso, o foco é definido de volta para o controle de edição e o usuário deve continuar editando. A implementação padrão exibe uma caixa de mensagem informando ao usuário sobre o nome de arquivo ilegal e retorna FALSE. Você pode substituir esse método, corrigir o nome do arquivo e retornar TRUE para processamento adicional.
+Deve retornar FALSE se este nome de arquivo não puder ser passado mais adiante para a caixa de diálogo do arquivo. Neste caso, o foco é definido de volta para o controle de edição e o usuário deve continuar editando. A implementação padrão exibe uma caixa de mensagem indique ao usuário sobre o nome do arquivo ilegal e retorna FALSO. Você pode substituir este método, corrigir o nome do arquivo e retornar TRUE para posterior processamento.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

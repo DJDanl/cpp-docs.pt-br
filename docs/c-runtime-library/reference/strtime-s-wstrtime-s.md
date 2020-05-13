@@ -1,9 +1,11 @@
 ---
 title: _strtime_s, _wstrtime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime_s
 - _strtime_s
+- _o__strtime_s
+- _o__wstrtime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625911"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910933"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -67,7 +70,7 @@ errno_t _wstrtime_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Um buffer de, pelo menos, 10 bytes de comprimento, no qual a hora será gravada.
 
 *numberOfElements*<br/>
@@ -79,13 +82,13 @@ Zero se for bem-sucedido.
 
 Se ocorrer uma condição de erro, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se houver uma falha, o valor retornado será um código de erro. Códigos de erro são definidos em ERRNO. H; consulte a tabela a seguir para os erros exatos gerados por esta função. Para obter mais informações sobre códigos de erro, consulte [Constantes errno](../../c-runtime-library/errno-constants.md).
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
-|*buffer*|*numberOfElements*|Valor de|Conteúdo do *buffer*|
+|*completo*|*numberOfElements*|Retorno|Conteúdo do *buffer*|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|(qualquer)|**EINVAL**|Não modificado|
+|**NULO**|(qualquer)|**EINVAL**|Não modificado|
 |Não **nulo** (apontando para um buffer válido)|0|**EINVAL**|Não modificado|
-|Não **nulo** (apontando para um buffer válido)|0 < tamanho < 9|**EINVAL**|Cadeia de caracteres vazia|
+|Não **nulo** (apontando para um buffer válido)|0 < tamanho < 9|**EINVAL**|cadeia de caracteres vazia|
 |Não **nulo** (apontando para um buffer válido)|Tamanho > 9|0|Hora atual formatada conforme especificado nos comentários|
 
 ## <a name="security-issues"></a>Problemas de segurança
@@ -96,13 +99,15 @@ Passar um valor para *numberOfElements* que seja maior que o tamanho real do buf
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções fornecem versões mais seguras do [_strtime](strtime-wstrtime.md) e do [_wstrtime](strtime-wstrtime.md). A função **_strtime_s** copia a hora local atual no buffer apontado por *timestr*. O tempo é formatado como **hh: mm: SS** , em que **hh** é dois dígitos que representam a hora na notação de 24 horas, **mm** é dois dígitos que representam os minutos passados da hora e **SS** é dois dígitos que representam segundos. Por exemplo, a cadeia de caracteres **18:23:44** representa 23 minutos e 44 segundos das últimas 18:00 O buffer deve ter, pelo menos, 9 bytes; o tamanho real é especificado pelo segundo parâmetro.
+Essas funções fornecem versões mais seguras do [_strtime](strtime-wstrtime.md) e [_wstrtime](strtime-wstrtime.md). A função **_strtime_s** copia a hora local atual para o buffer apontado por *timestr*. O tempo é formatado como **hh: mm: SS** , em que **hh** é dois dígitos que representam a hora na notação de 24 horas, **mm** é dois dígitos que representam os minutos passados da hora e **SS** é dois dígitos que representam segundos. Por exemplo, a cadeia de caracteres **18:23:44** representa 23 minutos e 44 segundos das últimas 18:00 O buffer deve ter, pelo menos, 9 bytes; o tamanho real é especificado pelo segundo parâmetro.
 
 **_wstrtime** é uma versão de caractere largo do **_strtime**; o argumento e o valor de retorno de **_wstrtime** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico:
 
@@ -162,9 +167,9 @@ OS time:            14:37:49
 OS date:            04/25/03
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>

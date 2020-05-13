@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-ms.openlocfilehash: 64716d945ffbc6802ec23fb47523464246065192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b1d8b92fbc5e95a5061956bafc4922d249a6f18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258904"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327425"
 ---
 # <a name="ccomqiptr-class"></a>Classe CComQIPtr
 
-Uma classe de ponteiro inteligente para gerenciar os ponteiros de interface COM.
+Uma classe de ponteiro inteligente para gerenciar ponteiros de interface COM.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,8 +31,8 @@ class CComQIPtr: public CComPtr<T>
 *T*<br/>
 Uma interface COM especificando o tipo de ponteiro a ser armazenado.
 
-*piid*<br/>
-Um ponteiro para o IID da *T*.
+*Piid*<br/>
+Um ponteiro para o IID de *T*.
 
 ## <a name="members"></a>Membros
 
@@ -46,25 +46,25 @@ Um ponteiro para o IID da *T*.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComQIPtr::operator =](#operator_eq)|Atribui um ponteiro para o ponteiro de membro.|
+|[CComQIPtr::operador =](#operator_eq)|Atribui um ponteiro ao ponteiro do membro.|
 
 ## <a name="remarks"></a>Comentários
 
-Usa o ATL `CComQIPtr` e [CComPtr](../../atl/reference/ccomptr-class.md) para gerenciar os ponteiros de interface COM, sendo que ambos derivam [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Ambas as classes executam por meio de chamadas para de contagem de referência automática `AddRef` e `Release`. Operadores sobrecarregados lidar com operações de ponteiro.
+O ATL usa `CComQIPtr` e o [CComPtr](../../atl/reference/ccomptr-class.md) para gerenciar ponteiros de interface COM, ambos derivados do [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Ambas as classes realizam contagem automática de referência através de chamadas para `AddRef` e `Release`. Operadores sobrecarregados lidam com operações de ponteiros.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CComPtrBase](../../atl/reference/ccomptrbase-class.md)
+[Ccomptrbase](../../atl/reference/ccomptrbase-class.md)
 
-[CComPtr](../../atl/reference/ccomptr-class.md)
+[Ccomptr](../../atl/reference/ccomptr-class.md)
 
 `CComQIPtr`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcomcli. h
+**Cabeçalho:** atlcomcli.h
 
-##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr
+## <a name="ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr::CComQIPtr
 
 O construtor.
 
@@ -77,16 +77,16 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lp*<br/>
+*Lp*<br/>
 Usado para inicializar o ponteiro de interface.
 
 *T*<br/>
 Uma interface COM.
 
-*piid*<br/>
-Um ponteiro para o IID da *T*.
+*Piid*<br/>
+Um ponteiro para o IID de *T*.
 
-##  <a name="operator_eq"></a>  CComQIPtr::operator =
+## <a name="ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::operador =
 
 O operador de atribuição.
 
@@ -98,20 +98,20 @@ T* operator= (IUnknown* lp) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lp*<br/>
+*Lp*<br/>
 Usado para inicializar o ponteiro de interface.
 
 *T*<br/>
 Uma interface COM.
 
-*piid*<br/>
-Um ponteiro para o IID da *T*.
+*Piid*<br/>
+Um ponteiro para o IID de *T*.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para a atualização `CComQIPtr` objeto.
+Retorna um ponteiro `CComQIPtr` para o objeto atualizado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
 [CComQIPtr::CComQIPtr](#ccomqiptr)<br/>

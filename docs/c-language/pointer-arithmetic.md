@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arithmetic pointer
 ms.assetid: eb924a29-59d3-48a5-9d62-9424790730eb
 ms.openlocfilehash: c1b3e31561bedece6a6180fbeb13473153a46ab6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152671"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343132"
 ---
 # <a name="pointer-arithmetic"></a>Ponteiro aritmético
 
@@ -20,6 +20,6 @@ Esse pressuposto é válido para membros de matriz. Por definição, uma matriz 
 
 Da mesma forma, quando dois valores de ponteiro são subtraídos, a conversão pressupõe que somente valores do mesmo tipo, sem espaços em branco, se encontram entre os endereços dados pelos operandos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operadores aditivos C](../c-language/c-additive-operators.md)

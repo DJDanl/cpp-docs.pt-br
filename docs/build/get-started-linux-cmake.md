@@ -1,39 +1,40 @@
 ---
 title: Criar projetos multiplataforma do C++ no Visual Studio
-description: Como configurar, compilar e depurar um C++ projeto CMake de software livre no Visual Studio que tem como alvo o Linux e o Windows.
+description: Como configurar, compilar e depurar um projeto de CMake de software livre C++ no Visual Studio destinado ao Linux e ao Windows.
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: aac536f488cf22adf5aa835c9fe5b884fc5d7298
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791757"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328752"
 ---
-# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: criar C++ projetos de plataforma cruzada no Visual Studio
+# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: criar projetos de plataforma cruzada C++ no Visual Studio
 
-Desenvolvimento do Visual Studio C e C++ não é mais apenas para Windows. Este tutorial mostra como usar o Visual Studio para C++ o desenvolvimento de plataforma cruzada no Windows e no Linux. Ele é baseado em CMake, portanto, você não precisa criar nem gerar projetos do Visual Studio. Quando você abre uma pasta que contém um arquivo CMakeLists. txt, o Visual Studio configura o IntelliSense e as configurações de compilação automaticamente. Você pode começar rapidamente a editar, criar e depurar seu código localmente no Windows. Em seguida, alterne sua configuração para fazer o mesmo no Linux, tudo de dentro do Visual Studio.
+Desenvolvimento do Visual Studio C e C++ não é mais apenas para Windows. Este tutorial mostra como usar o Visual Studio para desenvolvimento de plataforma cruzada C++ no Windows e no Linux. Ele é baseado em CMake, portanto, você não precisa criar nem gerar projetos do Visual Studio. Quando você abre uma pasta que contém um arquivo CMakeLists. txt, o Visual Studio configura o IntelliSense e as configurações de compilação automaticamente. Você pode começar rapidamente a editar, criar e depurar seu código localmente no Windows. Em seguida, alterne sua configuração para fazer o mesmo no Linux, tudo de dentro do Visual Studio.
 
 Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
+>
 > * clonar um projeto do CMake de software livre do GitHub
 > * abra o projeto no Visual Studio
 > * compilar e depurar um destino de executável no Windows
 > * Adicionar uma conexão a um computador Linux
 > * compilar e depurar o mesmo destino no Linux
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 * Configurar o Visual Studio para Desenvolvimento em C++ Multiplataforma
-  * Primeiro, [Instale o Visual Studio](https://visualstudio.microsoft.com/vs/) e escolha o **desenvolvimento de C++ desktop com** o e o **desenvolvimento do Linux C++ com cargas**de trabalho. Essa instalação mínima é de apenas 3 GB. Dependendo da velocidade de download, a instalação não deve levar mais de 10 minutos.
+  * Primeiro, [Instale o Visual Studio](https://visualstudio.microsoft.com/vs/) e escolha o **desenvolvimento de desktops com** desenvolvimento em c++ e **Linux com cargas**de trabalho do c++. Essa instalação mínima é de apenas 3 GB. Dependendo da velocidade de download, a instalação não deve levar mais de 10 minutos.
 
 * Configurar um computador Linux para desenvolvimento em C++ multiplataforma
   * O Visual Studio não exige nenhuma distribuição específica do Linux. O sistema operacional pode ser executado em um computador físico, em uma VM ou na nuvem. Você também pode usar o subsistema do Windows para Linux (WSL). No entanto, para este tutorial, é necessário um ambiente gráfico. WSL não é recomendado aqui, porque ele é destinado principalmente para operações de linha de comando.
-  * O Visual Studio requer essas ferramentas no computador Linux: C++ compiladores, gdb, SSH, rsync e zip. Em sistemas baseados em Debian, você pode usar esse comando para instalar essas dependências:
+  * O Visual Studio requer essas ferramentas no computador Linux: compiladores C++, gdb, SSH, rsync, ninja e zip. Em sistemas baseados em Debian, você pode usar esse comando para instalar essas dependências:
 
     ```cmd
-    sudo apt install -y openssh-server build-essential gdb rsync zip
+    sudo apt install -y openssh-server build-essential gdb rsync ninja-build zip
     ```
 
   * O Visual Studio requer uma versão recente do CMake no computador Linux que tem o modo de servidor habilitado (pelo menos 3,8). A Microsoft produz um build universal do CMake que você pode instalar em qualquer distribuição do Linux. Recomendamos que você use essa compilação para garantir que tem os recursos mais recentes. Você pode obter os binários do CMake da [bifurcação da Microsoft do repositório CMake](https://github.com/Microsoft/CMake/releases) no GitHub. Acesse essa página e baixe a versão que corresponde à arquitetura do sistema em seu computador Linux e, em seguida, marque-a como um executável:
@@ -43,7 +44,7 @@ Neste tutorial, você aprenderá como:
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * Você pode ver as opções para executar o script com `-–help`. Recomendamos que você use a opção `–prefix` para especificar a instalação no caminho **/usr** , porque **/usr/bin** é o local padrão onde o Visual Studio procura CMake. O exemplo a seguir mostra o script do Linux-x86_64. Altere-o conforme necessário se você estiver usando uma plataforma de destino diferente.
+  * Você pode ver as opções para executar o script com `-–help`. Recomendamos que você use a `–prefix` opção para especificar a instalação no caminho **/usr** , porque **/usr/bin** é o local padrão onde o Visual Studio procura CMake. O exemplo a seguir mostra o script do Linux-x86_64. Altere-o conforme necessário se você estiver usando uma plataforma de destino diferente.
 
     ```cmd
     sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
@@ -120,11 +121,11 @@ Nesta etapa, vamos depurar um programa de exemplo que demonstra a biblioteca do 
 
 1. Defina um ponto de interrupção que é atingido quando você clica no aplicativo em execução. O evento de clique é tratado em um método dentro de uma classe auxiliar. Para rapidamente chegar lá:
 
-   1. Selecione `CommonRigidBodyBase` do qual o `BasicExample` de struct é derivado. Em torno da linha 30.
+   1. Selecione `CommonRigidBodyBase` a qual a `BasicExample` estrutura é derivada. Em torno da linha 30.
 
    1. Clique com o botão direito do mouse e escolha **Ir para Definição**. Agora você está no cabeçalho CommonRigidBodyBase. h.
 
-   1. No modo de exibição de navegador acima da fonte, você verá que está na `CommonRigidBodyBase`. À direita, você pode selecionar membros para examinar. Abra a lista suspensa e selecione `mouseButtonCallback` para ir para a definição dessa função no cabeçalho.
+   1. No modo de exibição de navegador acima da fonte, você verá que está no `CommonRigidBodyBase`. À direita, você pode selecionar membros para examinar. Abra a lista suspensa e selecione `mouseButtonCallback` para ir para a definição dessa função no cabeçalho.
 
       ![Barra de ferramentas da lista de membros do Visual Studio](media/cmake-bullet3-member-list-toolbar.png)
 
@@ -162,7 +163,7 @@ Como é um aplicativo de área de trabalho, você precisa fornecer algumas infor
 
 1. Na exibição destinos de CMake, clique com o botão direito do mouse em AppBasicExampleGui e escolha **depurar e iniciar configurações** para abrir o arquivo launch. vs. JSON que está na subpasta Hidden **. vs** . Esse arquivo é local para seu ambiente de desenvolvimento. Você poderá movê-lo para a raiz do seu projeto se você quiser realizar o check-in e salvá-lo com sua equipe. Neste arquivo, uma configuração foi adicionada para AppBasicExampleGui. Essas configurações padrão funcionam na maioria dos casos, mas não aqui. Como é um aplicativo de área de trabalho, você precisa fornecer algumas informações adicionais para iniciar o programa para que possa vê-lo em seu computador Linux.
 
-1. Para localizar o valor da variável de ambiente `DISPLAY` em seu computador Linux, execute este comando:
+1. Para localizar o valor da variável `DISPLAY` de ambiente em seu computador Linux, execute este comando:
 
    ```cmd
    echo $DISPLAY
@@ -176,7 +177,7 @@ Como é um aplicativo de área de trabalho, você precisa fornecer algumas infor
 
 1. Inicie e depure seu aplicativo. Abra a lista suspensa **selecionar item de inicialização** na barra de ferramentas e escolha **AppBasicExampleGui**. Em seguida, escolha o ícone de reprodução verde na barra de ferramentas ou pressione **F5**. O aplicativo e suas dependências são criados no computador Linux remoto e, em seguida, iniciados com o depurador do Visual Studio anexado. Em seu computador Linux remoto, você deverá ver uma janela do aplicativo.
 
-1. Mova o mouse para a janela do aplicativo e clique em um botão. O ponto de interrupção é atingido. A execução do programa é pausada, o Visual Studio volta para o primeiro plano e você vê o ponto de interrupção. Você também deve ver uma Janela de Console do Linux ser exibida no Visual Studio. A janela fornece a saída do computador Linux remoto e também pode aceitar entrada para `stdin`. Como qualquer janela do Visual Studio, você pode encaixá-la onde preferir vê-la. Sua posição é mantida em sessões futuras.
+1. Mova o mouse para a janela do aplicativo e clique em um botão. O ponto de interrupção é atingido. A execução do programa é pausada, o Visual Studio volta para o primeiro plano e você vê o ponto de interrupção. Você também deve ver uma Janela de Console do Linux ser exibida no Visual Studio. A janela fornece a saída do computador Linux remoto e também pode aceitar a entrada para `stdin`. Como qualquer janela do Visual Studio, você pode encaixá-la onde preferir vê-la. Sua posição é mantida em sessões futuras.
 
    ![Janela de Console do Linux do Visual Studio](media/cmake-bullet3-linux-console.png)
 
@@ -190,7 +191,7 @@ Como é um aplicativo de área de trabalho, você precisa fornecer algumas infor
 
 Neste tutorial, você clonou uma base de código diretamente do GitHub. Você criou, executou e depurau no Windows sem modificações. Em seguida, você usou a mesma base de código, com alterações de configuração secundárias, para compilar, executar e depurar em um computador Linux remoto.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Saiba mais sobre como configurar e depurar projetos do CMake no Visual Studio:
 
@@ -198,7 +199,7 @@ Saiba mais sobre como configurar e depurar projetos do CMake no Visual Studio:
 > [Projetos do CMake no Visual Studio](cmake-projects-in-visual-studio.md)<br/><br/>
 > [Configurar um projeto do Linux CMake](../linux/cmake-linux-project.md)<br/><br/>
 > [Conectar-se ao computador Linux remoto](../linux/connect-to-your-remote-linux-computer.md)<br/><br/>
-> [Personalizar as configurações de compilação do CMake](customize-cmake-settings.md)<br/><br/>
+> [Personalizar as configurações de build do CMake](customize-cmake-settings.md)<br/><br/>
 > [Configurar sessões de depuração do CMake](configure-cmake-debugging-sessions.md)<br/><br/>
 > [Implantar, executar e depurar o projeto do Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/><br/>
 > [Referência de configuração predefinida do CMake](cmake-predefined-configuration-reference.md)

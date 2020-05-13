@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C, functions
 ms.assetid: 31839f65-49f4-43e1-85ec-8769924ffa96
 ms.openlocfilehash: 50b03b6eb155b9f64803faccd65bce156455bc41
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233120"
 ---
 # <a name="functions-c"></a>Funções (C)
 
@@ -22,11 +22,11 @@ A função a unidade modular fundamental em C. Uma função geralmente é criada
 
 - [Especificando convenções de chamada](../c-language/specifying-calling-conventions.md)
 
-- [Funções Embutidas](../c-language/inline-functions.md)
+- [Funções embutidas](../c-language/inline-functions.md)
 
 - [Funções de exportação e importação de DLL](../c-language/dll-import-and-export-functions.md)
 
-- [Funções naked](../c-language/naked-functions.md)
+- [Funções Naked](../c-language/naked-functions.md)
 
 - [Classe de armazenamento](../c-language/storage-class.md)
 
@@ -34,8 +34,8 @@ A função a unidade modular fundamental em C. Uma função geralmente é criada
 
 - [Argumentos](../c-language/arguments.md)
 
-- [Parâmetros](../c-language/parameters.md)
+- [Parameters](../c-language/parameters.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C](../c-language/c-language-reference.md)

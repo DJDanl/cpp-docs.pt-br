@@ -25,9 +25,9 @@ Este passo a passo ilustra as seguintes tarefas:
 
 - Usar o MSBuild para personalizar o projeto.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-{1&gt;Você precisa dos seguintes itens para concluir esta explicação:&lt;1}
+Você precisa dos seguintes itens para concluir esta explicação:
 
 - Uma cópia do Visual Studio com a carga de trabalho **Desenvolvimento para desktop com C++** instalada.
 
@@ -233,7 +233,7 @@ No prompt de comando, digite o comando a seguir para criar um build de versão p
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>Como usar o MSBuild com as ferramentas e o compilador de 64 bits
 
-Se você tiver instalado o Visual Studio no Windows de 64 bits, por padrão, as ferramentas nativas e cruzadas do x64 de 64 bits estarão instaladas. Configure o MSBuild para usar as ferramentas e o compilador de 64 bits a fim de compilar seu aplicativo definindo a propriedade `PreferredToolArchitecture`. Essa propriedade não afeta as propriedades de configuração do projeto nem da plataforma. Por padrão, a versão de 32 bits das ferramentas é usada. Para especificar a versão de 64 bits do compilador e das ferramentas, adicione o seguinte elemento de grupo de propriedades ao arquivo de projeto MyProject. vcxproj após o elemento `Microsoft.Cpp.default.props` \<importar/>:
+Se você tiver instalado o Visual Studio no Windows de 64 bits, por padrão, as ferramentas nativas e cruzadas do x64 de 64 bits estarão instaladas. Configure o MSBuild para usar as ferramentas e o compilador de 64 bits a fim de compilar seu aplicativo definindo a propriedade `PreferredToolArchitecture`. Essa propriedade não afeta as propriedades de configuração do projeto nem da plataforma. Por padrão, a versão de 32 bits das ferramentas é usada. Para especificar a versão de 64 bits do compilador e das ferramentas, adicione o seguinte elemento de grupo de propriedades ao arquivo de projeto MyProject. vcxproj `Microsoft.Cpp.default.props` \<após o elemento Import/>:
 
 ```xml
 <PropertyGroup>
@@ -247,7 +247,7 @@ No prompt de comando, digite o comando a seguir para usar as ferramentas de 64 b
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>Como usar o MSBuild com um conjunto de ferramentas diferente
 
-Se você tiver os conjuntos de ferramentas e as bibliotecas de outras versões do Visual C++ instaladas, o MSBuild poderá compilar aplicativos para a versão atual do Visual C++ ou para as outras versões instaladas. Por exemplo, se você tiver instalado o Visual Studio 2012, para especificar o C++ conjunto de ferramentas do Visual 11,0 para Windows XP, adicione o seguinte elemento de grupo de propriedades ao arquivo de projeto MyProject. vcxproj após o elemento `Microsoft.Cpp.props` \<importação/>:
+Se você tiver os conjuntos de ferramentas e as bibliotecas de outras versões do Visual C++ instaladas, o MSBuild poderá compilar aplicativos para a versão atual do Visual C++ ou para as outras versões instaladas. Por exemplo, se você tiver instalado o Visual Studio 2012, para especificar o conjunto de ferramentas Visual C++ 11,0 para o Windows XP, adicione o seguinte elemento de grupo de propriedades ao arquivo de projeto `Microsoft.Cpp.props` \<MyProject. vcxproj após o elemento Import/>:
 
 ```xml
 <PropertyGroup>
@@ -265,6 +265,6 @@ O MSBuild fornece várias maneiras de personalizar o processo de build. Os segui
 
 - [Como adicionar uma etapa de build personalizada a projetos MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
-- [Como adicionar ferramentas de build personalizadas a projetos MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
+- [Como adicionar ferramentas de compilação personalizadas a projetos MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
 
-- [Como usar eventos de build em projetos do MSBuild](how-to-use-build-events-in-msbuild-projects.md)
+- [Como usar eventos de build em projetos de MSBuild](how-to-use-build-events-in-msbuild-projects.md)

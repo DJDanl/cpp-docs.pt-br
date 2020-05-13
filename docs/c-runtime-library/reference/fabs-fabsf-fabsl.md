@@ -1,10 +1,11 @@
 ---
 title: fabs, fabsf, fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941491"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920238"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -71,17 +73,19 @@ long double fabsl(
 *x*<br/>
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **fabs** retornam o valor absoluto do argumento *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|nenhum|_DOMAIN|
+|± QNAN,IND|nenhuma|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
-C++permite sobrecarregar, para que você possa chamar sobrecargas de **fabs** se incluir o \<cabeçalho de > cmath. Em um programa C, **fabs** sempre pega e retorna um **Double**.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **fabs** se incluir o \<cabeçalho de> cmath. Em um programa C, **fabs** sempre pega e retorna um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -89,7 +93,7 @@ C++permite sobrecarregar, para que você possa chamar sobrecargas de **fabs** se
 |--------------|-----------------------|---------------------------|
 |**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

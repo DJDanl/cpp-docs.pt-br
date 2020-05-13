@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d548a8c2c47a5a345be725afdedb47524344f720
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448084"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337519"
 ---
 # <a name="istrstream-class"></a>Classe istrstream
 
@@ -42,7 +42,7 @@ O objeto armazena um objeto da classe `strstreambuf`.
 |Função de membro|Descrição|
 |-|-|
 |[rdbuf](#rdbuf)|Retorna um ponteiro para o objeto `strstreambuf` associado do fluxo.|
-|[str](#str)|Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.|
+|[Str](#str)|Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -50,7 +50,7 @@ O objeto armazena um objeto da classe `strstreambuf`.
 
 **Namespace:** std
 
-## <a name="istrstream"></a>  istrstream::istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream::istrstream
 
 Constrói um objeto do tipo `istrstream`.
 
@@ -72,17 +72,17 @@ istrstream(
 
 ### <a name="parameters"></a>Parâmetros
 
-*contar*\
-O comprimento do buffer (*PTR*).
+*Contar*\
+O comprimento do tampão *(ptr).*
 
-*PTR*\
+*Ptr*\
 O conteúdo com que o buffer é inicializado.
 
 ### <a name="remarks"></a>Comentários
 
-Todos os construtores inicializam a classe base chamando [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), em que `sb` é o objeto armazenado da classe [strstreambuf](../standard-library/strstreambuf-class.md). Os dois primeiros construtores também são inicializados `sb` chamando `strstreambuf`(( **const** `char` \*) `ptr`, 0). Os dois construtores restantes chamam `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
+Todos os construtores inicializam a classe base chamando `sb` [istream](../standard-library/istream-typedefs.md#istream)**(sb),** onde está o objeto armazenado da classe [strstreambuf](../standard-library/strstreambuf-class.md). Os dois primeiros construtores `sb` também `strstreambuf`se iniciam `ptr`chamando ( ( **const** `char` \*) , 0 ). Os dois construtores restantes, em vez disso, `strstreambuf`chamam **(const** `char` *) `ptr`, `count` ).
 
-## <a name="rdbuf"></a>  istrstream::rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream::rdbuf
 
 Retorna um ponteiro para o objeto strstreambuf associado ao fluxo.
 
@@ -90,7 +90,7 @@ Retorna um ponteiro para o objeto strstreambuf associado ao fluxo.
 strstreambuf *rdbuf() const
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto strstreambuf associado ao fluxo.
 
@@ -102,7 +102,7 @@ A função membro retorna o endereço do buffer de fluxo armazenado do tipo poin
 
 Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) para ver uma amostra que usa `rdbuf`.
 
-## <a name="str"></a>  istrstream::str
+## <a name="istrstreamstr"></a><a name="str"></a>istrstream::str
 
 Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.
 
@@ -110,7 +110,7 @@ Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um po
 char *str();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o início da sequência controlada.
 
@@ -120,11 +120,11 @@ A função membro retorna [rdbuf](#rdbuf) -> [str](../standard-library/strstream
 
 ### <a name="example"></a>Exemplo
 
-Consulte [strstream:: Str](../standard-library/strstreambuf-class.md#str) para obter um exemplo que `str`usa.
+Consulte [strstream::str](../standard-library/strstreambuf-class.md#str) para obter `str`uma amostra que usa .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[istream](../standard-library/istream-typedefs.md#istream)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programação de iostream](../standard-library/iostream-programming.md)\
-[Convenções de iostreams](../standard-library/iostreams-conventions.md)
+[Istream](../standard-library/istream-typedefs.md#istream)\
+[Segurança do segmento na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programação iostream](../standard-library/iostream-programming.md)\
+[Convenções iostreams](../standard-library/iostreams-conventions.md)

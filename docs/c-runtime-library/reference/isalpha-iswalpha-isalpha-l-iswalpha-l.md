@@ -1,11 +1,13 @@
 ---
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswalpha
 - _iswalpha_l
 - isalpha
 - _isalpha_l
+- _o_isalpha
+- _o_iswalpha
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +44,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 9a7de0ba1316a6c0155a46eed0564792ee6256f2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abce570aecc307efd4986fab78d45954d7a79588
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954578"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919795"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -73,13 +76,13 @@ int _iswalpha_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
 *locale*<br/>
 A localidade a ser usada em vez da localidade atual.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere alfabético. **isalpha** retornará um valor diferente de zero se *c* estiver dentro dos intervalos de a-z ou a-z. **iswalpha** retorna um valor diferente de zero somente para caracteres largos para os quais [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ou **iswlower** é diferente de zero; ou seja, para qualquer caractere largo que seja um de um conjunto definido pela implementação para o qual nenhum de **iswcntrl**, **iswdigit**, **iswpunct**ou **iswspace** seja diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
@@ -94,6 +97,10 @@ O comportamento de **isalpha** e **_isalpha_l** será indefinido se *c* não for
 |**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
 |**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
 
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -103,10 +110,10 @@ O comportamento de **isalpha** e **_isalpha_l** será indefinido se *c* não for
 |**_isalpha_l**|\<ctype.h>|
 |**_iswalpha_l**|\<ctype.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

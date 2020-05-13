@@ -1,10 +1,12 @@
 ---
 title: localtime, _localtime32, _localtime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _localtime64
 - _localtime32
 - localtime
+- _o__localtime32
+- _o__localtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: 7e2f39b3a1b6376e24d8a812d1074840862f398a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 764a3768610d97df2eb3af4ed0425065aba4b4fa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953342"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916418"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime, _localtime32, _localtime64
 
@@ -56,10 +59,10 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 ### <a name="parameters"></a>Parâmetros
 
-*sourceTime*<br/>
+*origemtime*<br/>
 Ponteiro para a hora armazenada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorne um ponteiro para o resultado da estrutura, ou **NULL** se a data passada para a função for:
 
@@ -69,9 +72,9 @@ Retorne um ponteiro para o resultado da estrutura, ou **NULL** se a data passada
 
 - Após 23:59:59, 31 de dezembro de 3000, UTC (usando **_time64** e **__time64_t**).
 
-**_localtime64**, que usa a estrutura **__time64_t** , permite que as datas sejam expressadas até 23:59:59, 31 de dezembro de 3000, UTC (tempo Universal Coordenado), enquanto **_localtime32** representa as datas até 23:59:59 de janeiro de 2038, Horário.
+**_localtime64**, que usa a estrutura **__time64_t** , permite que as datas sejam expressadas até 23:59:59, 31 de dezembro de 3000, UTC (tempo Universal Coordenado), enquanto **_localtime32** representa as datas até 23:59:59 de janeiro de 2038, UTC.
 
-**localtime** é uma função embutida que é avaliada como **_localtime64**e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo **time_t**de 32 bits, você pode definir **_USE_32BIT_TIME_T**. Isso fará com que o **localtime** seja avaliado para **_localtime32**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
+**localtime** é uma função embutida que é avaliada como **_localtime64**e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o **time_t**de 32 bits antigo, poderá definir **_USE_32BIT_TIME_T**. Isso fará com que o **localtime** seja avaliado para **_localtime32**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
 
 Os campos do tipo de estrutura [TM](../../c-runtime-library/standard-types.md) armazenam os seguintes valores, sendo que cada um é um **int**:
 
@@ -95,20 +98,22 @@ A função **localtime** converte uma hora armazenada como um valor [time_t](../
 
 As versões de 32 bits e 64 bits de [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)e **localtime** usam uma única estrutura **TM** por thread para a conversão. Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior.
 
-**localtime** corrige o fuso horário local se o usuário primeiro definir a variável de ambiente global **TZ**. Quando a **TZ** é definida, três outras variáveis de ambiente ( **_timezone**, **_daylight**e **_tzname**) também são definidas automaticamente. Se a variável de **TZ** não for definida, o **localtime** tentará usar as informações de fuso horário especificadas no aplicativo de data/hora no painel de controle. Se tais informações não puderem ser obtidas, o PST8PDT (Fuso Horário do Pacífico) será usado por padrão. Consulte [tzset](tzset.md) para obter uma descrição dessas variáveis. O **TZ** é uma extensão da Microsoft e não faz parte da definição padrão ANSI de **localtime**.
+**localtime** corrige o fuso horário local se o usuário primeiro definir a variável de ambiente global **TZ**. Quando a **TZ** é definida, três outras variáveis de ambiente (**_timezone**, **_daylight**e **_tzname**) também são definidas automaticamente. Se a variável de **TZ** não for definida, o **localtime** tentará usar as informações de fuso horário especificadas no aplicativo de data/hora no painel de controle. Se tais informações não puderem ser obtidas, o PST8PDT (Fuso Horário do Pacífico) será usado por padrão. Consulte [tzset](tzset.md) para obter uma descrição dessas variáveis. O **TZ** é uma extensão da Microsoft e não faz parte da definição padrão ANSI de **localtime**.
 
 > [!NOTE]
 > O ambiente de destino deve tentar determinar se o horário de verão está em vigor.
 
 Essas funções validam seus parâmetros. Se *sourcetime* for um ponteiro NULL ou se o valor de *sourcetime* for negativo, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão **NULL** e definirá **errno** como **EINVAL**.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|---------------------|-|
-|**localtime**, **_localtime32**, **_localtime64**|\<time.h>|\<CTime > ou \<time. h >|
+|**localtime**, **_localtime32** **_localtime64**|\<time.h>|\<CTime> ou \<time. h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -153,9 +158,9 @@ int main( void )
 Tue Feb 12 10:05:58 AM
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>

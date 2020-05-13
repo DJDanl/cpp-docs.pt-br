@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 981158125cf978c2f685501117f95553df9c3c89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498196"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587388"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (criar aplicativo com reconhecimento do Terminal Server)
 
@@ -30,13 +30,13 @@ A opção/TSAWARE define um sinalizador no campo IMAGE_OPTIONAL_HEADER DllCharac
 
 Quando um aplicativo não está Terminal Server ciente (também conhecido como um aplicativo herdado), Terminal Server faz determinadas modificações no aplicativo herdado para fazê-lo funcionar corretamente em um ambiente multiusuário. Por exemplo, Terminal Server criará uma pasta virtual do Windows, de modo que cada usuário obtenha uma pasta do Windows em vez de obter o diretório do Windows do sistema. Isso permite que os usuários acessem seus próprios arquivos INI. Além disso, Terminal Server faz alguns ajustes no registro para um aplicativo herdado. Essas modificações reduzem o carregamento do aplicativo herdado no Terminal Server.
 
-Se um aplicativo estiver Terminal Server ciente, ele não deverá confiar em arquivos INI nem gravar no registro **HKEY_CURRENT_USER** durante a instalação.
+Se um aplicativo estiver Terminal Server ciente, ele não deverá depender de arquivos INI nem gravar no registro de **HKEY_CURRENT_USER** durante a instalação.
 
 Se você usar o/TSAWARE e seu aplicativo ainda usar arquivos INI, os arquivos serão compartilhados por todos os usuários do sistema. Se isso for aceitável, você ainda poderá vincular seu aplicativo ao/TSAWARE; caso contrário, você precisará usar/TSAWARE: NO.
 
 A opção/TSAWARE é habilitada por padrão para aplicativos do Windows e de console. Consulte [/Subsystem](subsystem-specify-subsystem.md) e [/version](version-version-information.md) para obter informações.
 
-/TSAWARE não é válido para drivers, VxDs ou DLLs.
+/TSAWARE não é válido para drivers ou DLLs.
 
 Se um aplicativo tiver sido vinculado com/TSAWARE, DUMPBIN [/Headers](headers.md) exibirá informações para esse efeito.
 
@@ -54,7 +54,7 @@ Se um aplicativo tiver sido vinculado com/TSAWARE, DUMPBIN [/Headers](headers.md
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de vinculador MSVC](linking.md)<br/>
 [Opções de vinculador MSVC](linker-options.md)<br/>

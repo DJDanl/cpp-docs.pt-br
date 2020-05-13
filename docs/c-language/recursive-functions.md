@@ -8,11 +8,11 @@ helpviewer_keywords:
 - recursive function calls
 ms.assetid: 59739040-3081-4006-abbc-9d8423992bce
 ms.openlocfilehash: 82f0c820ab75fda4bae83db78fa402d7a07cb7fe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232120"
 ---
 # <a name="recursive-functions"></a>Funções Recursivas
 
@@ -46,6 +46,6 @@ int factorial( int num )      /* Function definition */
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Chamadas de função](../c-language/function-calls.md)

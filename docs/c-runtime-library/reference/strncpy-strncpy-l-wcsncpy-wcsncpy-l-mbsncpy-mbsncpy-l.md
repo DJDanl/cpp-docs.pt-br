@@ -1,6 +1,6 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncpy
 - _strncpy_l
@@ -8,6 +8,8 @@ api_name:
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
+- _o__mbsncpy
+- _o__mbsncpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -65,12 +68,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947208"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919275"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -164,13 +167,13 @@ Cadeia de caracteres de destino.
 *strSource*<br/>
 Cadeia de caracteres de origem.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a ser copiado.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna *strDest*. Nenhum valor retornado é reservado para indicar um erro.
 
@@ -179,15 +182,17 @@ Retorna *strDest*. Nenhum valor retornado é reservado para indicar um erro.
 A função **strncpy** copia os caracteres de *contagem* inicial de *StrSource* para *strDest* e retorna *strDest*. Se *Count* for menor ou igual ao comprimento de *strSource*, um caractere nulo não será acrescentado automaticamente à cadeia de caracteres copiada. Se *Count* for maior que o comprimento de *strSource*, a cadeia de caracteres de destino será preenchida com caracteres nulos até a *contagem*de comprimento. O comportamento de **strncpy** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
 > [!IMPORTANT]
-> **strncpy** não verifica espaço suficiente em *strDest*; isso o torna uma possível causa de estouros de buffer. O argumento *Count* limita o número de caracteres copiados; Não é um limite para o tamanho de *strDest*. Consulte o exemplo a seguir. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> **strncpy** não verifica espaço suficiente em *strDest*; isso o torna uma possível causa de estouros de buffer. O argumento *Count* limita o número de caracteres copiados; Não é um limite para o tamanho de *strDest*. Veja os exemplos a seguir. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 Se *strDest* ou *strSource* for um ponteiro **nulo** , ou se *Count* for menor ou igual a zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
-**wcsncpy** e **_mbsncpy** são versões de caractere largo e de multibyte de **strncpy**. Os argumentos e o valor de retorno de **wcsncpy** e **_mbsncpy** variam de acordo. Essas seis funções se comportam de forma idêntica.
+**wcsncpy** e **_mbsncpy** são versões de caractere largo e multibyte de **strncpy**. Os argumentos e o valor de retorno de **wcsncpy** e **_mbsncpy** variam de acordo. Essas seis funções se comportam de forma idêntica.
 
 As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -211,7 +216,7 @@ Para obter informações adicionais sobre compatibilidade de plataforma, consult
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra o uso de **strncpy** e como ele pode ser usado para causar bugs de programa e problemas de segurança. O compilador gera um aviso para cada chamada para **strncpy** semelhante a **crt_strncpy_x86. c (15): Warning C4996: ' strncpy ': Essa função ou variável pode não ser segura. Ao invés disso, considere usar strncpy_s. Para desabilitar a substituição, use _CRT_SECURE_NO_WARNINGS. Consulte a ajuda online para obter detalhes.**
+O exemplo a seguir demonstra o uso de **strncpy** e como ele pode ser usado para causar bugs de programa e problemas de segurança. O compilador gera um aviso para cada chamada para **strncpy** semelhante a **crt_strncpy_x86. c (15): Warning C4996: ' strncpy ': essa função ou variável pode não ser segura. Considere usar strncpy_s em vez disso. Para desabilitar a reprovação, use _CRT_SECURE_NO_WARNINGS. Consulte a ajuda online para obter detalhes.**
 
 ```C
 // crt_strncpy_x86.c
@@ -280,8 +285,8 @@ O layout de variáveis automáticas, o nível de proteção de detecção e o c�
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

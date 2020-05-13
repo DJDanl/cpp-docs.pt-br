@@ -1,9 +1,11 @@
 ---
 title: _tell, _telli64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _telli64
 - _tell
+- _o__tell
+- _o__telli64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443679"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912240"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -65,21 +68,23 @@ A posição atual do ponteiro de arquivo. Em dispositivos sem capacidade de busc
 
 Um valor de retorno de-1L indica um erro. Se o *identificador* for um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EBADF** e retornará-1L.
 
-Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
+Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esse e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
 A função **_tell** Obtém a posição atual do ponteiro do arquivo (se houver) associado ao argumento *Handle* . A posição é expressa como o número de bytes do início do arquivo. Para a função **_telli64** , esse valor é expresso como um inteiro de 64 bits.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_tell.c

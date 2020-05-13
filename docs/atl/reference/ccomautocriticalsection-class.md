@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-ms.openlocfilehash: 116c550f45bf622e7620b3a6f552339b4bcc24a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8cbf08082fd24ef2cf0e8794e2944a799baec084
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321087"
 ---
 # <a name="ccomautocriticalsection-class"></a>Classe CComAutoCriticalSection
 
@@ -31,28 +31,28 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|O construtor.|
-|[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|O destruidor.|
+|[CComAutoCriticalSection::CComAutoCriticalsection](#ccomautocriticalsection)|O construtor.|
+|[CComAutoCriticalSection::~CComAutoCriticalsection](#dtor)|O destruidor.|
 
 ## <a name="remarks"></a>Comentários
 
-`CComAutoCriticalSection`é semelhante à classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), exceto `CComAutoCriticalSection` que inicializa automaticamente o objeto de seção crítica no construtor.
+`CComAutoCriticalSection`é semelhante à classe [CComCriticalSection,](../../atl/reference/ccomcriticalsection-class.md)exceto que `CComAutoCriticalSection` inicializa automaticamente o objeto de seção crítica no construtor.
 
-Normalmente, você usa `CComAutoCriticalSection` o `typedef` nome [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Esse nome faz `CComAutoCriticalSection` referência quando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) está sendo usado.
+Normalmente, você `CComAutoCriticalSection` usa `typedef` através do nome [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Este nome `CComAutoCriticalSection` faz referência quando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) está sendo usado.
 
-Os `Init` métodos `Term` e de [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) não estão disponíveis ao usar essa classe.
+Os `Init` `Term` métodos e métodos da [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) não estão disponíveis ao usar esta classe.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+[Ccomcriticalsection](../../atl/reference/ccomcriticalsection-class.md)
 
 `CComAutoCriticalSection`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcore. h
+**Cabeçalho:** atlcore.h
 
-##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection
+## <a name="ccomautocriticalsectionccomautocriticalsection"></a><a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalsection
 
 O construtor.
 
@@ -62,9 +62,9 @@ CComAutoCriticalSection();
 
 ### <a name="remarks"></a>Comentários
 
-Chama a função [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection)do Win32, que inicializa o objeto da seção crítica.
+Chama a função Win32 [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), que inicializa o objeto de seção crítica.
 
-##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection
+## <a name="ccomautocriticalsectionccomautocriticalsection"></a><a name="dtor"></a>CComAutoCriticalSection::~CComAutoCriticalsection
 
 O destruidor.
 
@@ -74,9 +74,9 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-O destruidor chama [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), que libera todos os recursos do sistema usados pelo objeto da seção crítica.
+O destructor chama [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), que libera todos os recursos do sistema usados pelo objeto da seção crítica.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>

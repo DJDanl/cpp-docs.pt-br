@@ -1,9 +1,11 @@
 ---
 title: _getdcwd, _wgetdcwd
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdcwd
 - _wgetdcwd
+- _o__getdcwd
+- _o__wgetdcwd
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 3b67e04e914baf85545fcde63cf27c86bc15fac1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956022"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919212"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -65,12 +68,12 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parâmetros
 
-*drive*<br/>
+*Dirigir*<br/>
 Um inteiro não negativo que especifica a unidade (0 = unidade padrão, 1 = A, 2 = B e assim por diante).
 
 Se a unidade especificada não estiver disponível, ou se o tipo de unidade (por exemplo, removível, fixo, CD-ROM, disco RAM ou unidade de rede) não puder ser determinado, o manipulador de parâmetro inválido será invocado. Para saber mais, confira [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento para o caminho ou **NULL**.
 
 Se **NULL** for especificado, essa função alocará um buffer de pelo menos o tamanho de *maxlen* usando **malloc**, e o valor de retorno de **_getdcwd** será um ponteiro para o buffer alocado. O buffer pode ser liberado chamando **gratuitamente** e passando o ponteiro.
@@ -80,7 +83,7 @@ Um inteiro positivo diferente de zero que especifica o comprimento máximo do ca
 
 Se *maxlen* for menor ou igual a zero, o manipulador de parâmetro inválido será invocado. Para saber mais, confira [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Ponteiro para uma cadeia de caracteres que representa o caminho completo do diretório de trabalho atual na unidade especificada, ou **NULL**, que indica um erro.
 
@@ -90,13 +93,15 @@ Se *o buffer* for especificado como **nulo** e não houver memória suficiente p
 
 A função **_getdcwd** Obtém o caminho completo do diretório de trabalho atual na unidade especificada e o armazena no *buffer*. Se o diretório de trabalho atual estiver definido como o raiz, a cadeia de caracteres terminará com uma barra invertida (\\). Se o diretório de trabalho atual estiver definido como um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.
 
-**_wgetdcwd** é uma versão de caractere largo de **_getdcwd**, e seu parâmetro de *buffer* e o valor de retorno são cadeias de caracteres largos. Caso contrário, **_wgetdcwd** e **_getdcwd** se comportam de forma idêntica.
+**_wgetdcwd** é uma versão de caractere largo do **_getdcwd**, e seu parâmetro de *buffer* e o valor de retorno são cadeias de caracteres largos. Caso contrário, **_wgetdcwd** e **_getdcwd** se comportam de forma idêntica.
 
 Essa função é thread-safe, embora dependa de **GetFullPathName**, que não thread-safe. No entanto, você pode violar o acesso thread-safe se seu aplicativo multi-threaded chamar essa função e [GetFullPathName](/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew).
 
 A versão dessa função que tem o sufixo **_nolock** se comporta de forma idêntica a essa função, exceto que ela não é thread-safe e não está protegida contra interferência por outros threads. Para obter mais informações, consulte [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Quando **_DEBUG** e **_CRTDBG_MAP_ALLOC** são definidos, chamadas para **_getdcwd** e **_wgetdcwd** são substituídas por chamadas para **_getdcwd_dbg** e **_wgetdcwd_dbg** para que você possa depurar alocações de memória. Para obter mais informações, consulte [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+Quando **_DEBUG** e **_CRTDBG_MAP_ALLOC** são definidos, as chamadas para **_getdcwd** e **_wgetdcwd** são substituídas por chamadas para **_getdcwd_dbg** e **_wgetdcwd_dbg** para que você possa depurar alocações de memória. Para obter mais informações, consulte [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

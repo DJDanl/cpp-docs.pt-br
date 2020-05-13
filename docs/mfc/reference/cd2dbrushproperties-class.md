@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: 5ca791af658ee719b2e6d6ea78f82e23a66edc98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2db720fd09c62f8b86baecea9229d946f3892333
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253708"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754189"
 ---
 # <a name="cd2dbrushproperties-class"></a>Classe CD2DBrushProperties
 
-Um wrapper para `D2D1_BRUSH_PROPERTIES`.
+Um invólucro para. `D2D1_BRUSH_PROPERTIES`
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,13 +33,13 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Sobrecarregado. Cria um `CD2D_BRUSH_PROPERTIES` estrutura|
+|[CD2DBrushPropriedades:CD2DBrushPropriedades](#cd2dbrushproperties)|Sobrecarregado. Cria `CD2D_BRUSH_PROPERTIES` uma estrutura|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CD2DBrushProperties::CommonInit](#commoninit)|Inicializa o objeto|
+|[CD2DBrushPropriedades:CommonInit](#commoninit)|Inicializa o objeto|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -51,7 +51,7 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 **Cabeçalho:** afxrendertarget.h
 
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>CD2DBrushPropriedades:CD2DBrushPropriedades
 
 Cria uma estrutura CD2D_BRUSH_PROPERTIES
 
@@ -67,19 +67,19 @@ CD2DBrushProperties(
 ### <a name="parameters"></a>Parâmetros
 
 *_opacity*<br/>
-A opacidade de base do pincel. O valor padrão é 1.0.
+A opacidade base do pincel. O valor padrão é 1.0.
 
 *_transform*<br/>
-A transformação a ser aplicada ao Pincel
+A transformação para aplicar ao pincel
 
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>CD2DBrushPropriedades:CommonInit
 
 Inicializa o objeto
 
-```
+```cpp
 void CommonInit();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes](../../mfc/reference/mfc-classes.md)

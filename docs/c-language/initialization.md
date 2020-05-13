@@ -8,11 +8,11 @@ helpviewer_keywords:
 - initializers
 ms.assetid: f009ee12-3df6-4260-b7e4-a6149ebb95aa
 ms.openlocfilehash: f3e8951e4d1900746cc71215df665ad27d3f329f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232887"
 ---
 # <a name="initialization"></a>Inicialização
 
@@ -20,6 +20,6 @@ Um “inicializador” é um valor ou uma sequência de valores a ser atribuído
 
 As seções a seguir descrevem como inicializar variáveis dos tipos [escalares](../c-language/initializing-scalar-types.md), [agregadores](../c-language/initializing-aggregate-types.md) e [cadeia de caracteres](../c-language/initializing-strings.md). Os “tipos escalares” incluem todos os tipos aritméticos, além dos ponteiros. Os “tipos de agregação” incluem matrizes, estruturas e uniões.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e tipos](../c-language/declarations-and-types.md)

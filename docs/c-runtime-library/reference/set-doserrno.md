@@ -1,8 +1,9 @@
 ---
 title: _set_doserrno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_doserrno
+- _o__set_doserrno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-ms.openlocfilehash: e4060992477e5d30dfad0725948cbc719b4d0270
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9de5ff8ccc4673468628275c3c3366681edc3776
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948613"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913063"
 ---
 # <a name="_set_doserrno"></a>_set_doserrno
 
@@ -50,13 +52,15 @@ errno_t _set_doserrno( int error_value );
 *error_value*<br/>
 O novo valor de **_doserrno**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna zero se bem-sucedido.
 
 ## <a name="remarks"></a>Comentários
 
 Os possíveis valores são definidos em Errno.h.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

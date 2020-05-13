@@ -19,7 +19,7 @@ ms.locfileid: "75299098"
 ---
 # <a name="one-dimensional-arrays"></a>Matrizes unidimensionais
 
-Uma expressão de pós-fixação seguida por uma expressão entre colchetes ( **[ ]** ) é uma representação assinada de um elemento de um objeto da matriz. Uma expressão subscrita representa o valor no endereço que está na posição *expression*, além de *postfix-expression* quando expresso como
+Uma expressão de pós-fixação seguida por uma expressão entre colchetes (**[ ]**) é uma representação assinada de um elemento de um objeto da matriz. Uma expressão subscrita representa o valor no endereço que está na posição *expression*, além de *postfix-expression* quando expresso como
 
 ```
 postfix-expression [ expression ]
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-As expressões subscritas geralmente são usadas para se referir a elementos da matriz, mas você pode aplicar um subscrito a qualquer ponteiro. Independentemente da ordem dos valores, *expression* deve estar entre colchetes ( **[ ]** ).
+As expressões subscritas geralmente são usadas para se referir a elementos da matriz, mas você pode aplicar um subscrito a qualquer ponteiro. Independentemente da ordem dos valores, *expression* deve estar entre colchetes (**[ ]**).
 
-A expressão subscrita é avaliada mediante adição do valor integral ao valor do ponteiro, seguida por aplicação do operador de indireção (<strong>\*</strong>) ao resultado. (Consulte [indireção e operadores de endereço](../c-language/indirection-and-address-of-operators.md) para uma discussão sobre o operador de indireção.) Em vigor, para uma matriz unidimensional, as quatro expressões a seguir são equivalentes, supondo que `a` é um ponteiro e `b` é um inteiro:
+A expressão de subscrito é avaliada adicionando o valor integral ao valor do ponteiro e, em seguida, aplicando o operador<strong>\*</strong>de indireção () ao resultado. (Consulte [indireção e operadores de endereço](../c-language/indirection-and-address-of-operators.md) para uma discussão sobre o operador de indireção.) Em vigor, para uma matriz unidimensional, as quatro expressões a seguir são equivalentes, `a` supondo que seja `b` um ponteiro e seja um inteiro:
 
 ```
 a[b]
@@ -51,14 +51,14 @@ De acordo com as regras de conversão para o operador de adição (determinadas 
 
 Por exemplo, suponha que o identificador `line` faça referência a uma matriz de valores `int`. O procedimento a seguir é usado para avaliar a expressão subscrita `line[ i ]`:
 
-1. O valor inteiro `i` é multiplicado pelo número de bytes definidos como o comprimento de um item `int`. O valor convertido de `i` representa `i` posições de `int`.
+1. O valor inteiro `i` é multiplicado pelo número de bytes definidos como o comprimento de um item `int`. O valor convertido de `i` representa `i` `int` posições.
 
-1. Esse valor convertido é adicionado ao valor de ponteiro original (`line`) para produzir um endereço deslocado `i` `int` posições de `line`.
+1. Esse valor convertido é adicionado ao valor de ponteiro original (`line`) para produzir um endereço de deslocamento `i` `int` de `line`posições.
 
 1. O operador de indireção é aplicado ao novo endereço. O resultado é o valor do elemento da matriz nessa posição (intuitivamente, `line [ i ]`).
 
 A expressão subscrita `line[0]` representa o valor do primeiro elemento de linha, desde que o deslocamento de endereço representado por `line` seja 0. Similarmente, uma expressão como `line[5]` se refere ao deslocamento de cinco posições do elemento da linha, ou o sexto elemento da matriz.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Operador subscript:](../cpp/subscript-operator.md)

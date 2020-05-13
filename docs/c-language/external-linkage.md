@@ -7,11 +7,11 @@ helpviewer_keywords:
 - external linkage
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
 ms.openlocfilehash: 35b0fda1f501755640123f5181454a5c36b7e986
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233729"
 ---
 # <a name="external-linkage"></a>Ligação externa
 
@@ -21,6 +21,6 @@ Se a declaração de um identificador para uma função não tiver um *storage-c
 
 O nome de um identificador de vinculação externa designa a mesma função ou o mesmo objeto de dados como qualquer outra declaração para o mesmo nome com vinculação externa. As duas declarações podem estar na mesma unidade de tradução ou em unidades de tradução diferentes. Se o objeto ou a função também tiverem tempo de vida global, o objeto ou a função são compartilhados em todo o programa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando extern para especificar a ligação](../cpp/using-extern-to-specify-linkage.md)

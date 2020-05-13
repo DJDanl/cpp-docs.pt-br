@@ -1,19 +1,19 @@
 ---
-title: 'vcpkg: um C++ Gerenciador de pacotes para Windows, Linux e MacOS'
-description: o vcpkg é um Gerenciador de pacotes de linha de comando que simplifica muito a aquisição e a instalação de C++ bibliotecas de software livre no Windows, no MacOS e no Linux.
+title: 'vcpkg: um Gerenciador de pacotes C++ para Windows, Linux e MacOS'
+description: o vcpkg é um Gerenciador de pacotes de linha de comando que simplifica muito a aquisição e a instalação de bibliotecas C++ de software livre no Windows, no MacOS e no Linux.
 ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9dbeba1f55164ace01fb8bb26155dd9319ba62db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417260"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335402"
 ---
-# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: um C++ Gerenciador de pacotes para Windows, Linux e MacOS
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: um Gerenciador de pacotes C++ para Windows, Linux e MacOS
 
-vcpkg é um Gerenciador de pacotes de linha de C++comando para o. Ele simplifica muito a aquisição e a instalação de bibliotecas de terceiros no Windows, no Linux e no MacOS. Se seu projeto usa bibliotecas de terceiros, é recomendável que você use o vcpkg para instalá-las. O vcpkg dá suporte a bibliotecas de software livre e proprietárias. Todas as bibliotecas do catálogo do vcpkg no Windows foram testadas quanto à compatibilidade com o Visual Studio 2015, o Visual Studio 2017 e o Visual Studio 2019. Entre os catálogos do Windows e Linux/MacOS, o vcpkg agora dá suporte a mais de 1900 bibliotecas. A comunidade do C++ é adicionando mais bibliotecas a ambos os catálogos de forma contínua.
+vcpkg é um Gerenciador de pacotes de linha de comando para C++. Ele simplifica muito a aquisição e a instalação de bibliotecas de terceiros no Windows, no Linux e no MacOS. Se seu projeto usa bibliotecas de terceiros, é recomendável que você use o vcpkg para instalá-las. O vcpkg dá suporte a bibliotecas de software livre e proprietárias. Todas as bibliotecas do catálogo do vcpkg no Windows foram testadas quanto à compatibilidade com o Visual Studio 2015, o Visual Studio 2017 e o Visual Studio 2019. Entre os catálogos do Windows e Linux/MacOS, o vcpkg agora dá suporte a mais de 1900 bibliotecas. A comunidade do C++ é adicionando mais bibliotecas a ambos os catálogos de forma contínua.
 
 ## <a name="simple-yet-flexible"></a>Simples e flexível
 
@@ -21,7 +21,7 @@ Com um único comando, você pode baixar fontes e compilar uma biblioteca. O pr�
 
 ## <a name="sources-not-binaries"></a>Fontes, não binários
 
-Para bibliotecas no catálogo do Windows, o vcpkg baixa fontes em vez de binários<sup>1</sup>. Ele compila essas fontes usando a versão mais recente do Visual Studio que ele possa encontrar. No C++, é importante que o código do aplicativo e as bibliotecas usadas sejam compiladas pelo mesmo compilador e pela versão do compilador. Ao usar o vcpkg, você elimina ou, pelo menos, reduz bastante o potencial de binários não correspondentes e os problemas que eles podem causar. Em equipes padronizadas em uma versão específica de um compilador, um membro da equipe pode usar o vcpkg para baixar fontes e compilar um conjunto de binários. Em seguida, eles podem usar o comando Exportar para compactar os binários e cabeçalhos para outros membros da equipe. Para obter mais informações, confira abaixo [Exportação de binários compilados e cabeçalhos](#export_binaries_per_project).
+Para bibliotecas no catálogo do Windows, o vcpkg baixa fontes em vez de binários<sup>1</sup>. Ele compila essas fontes usando a versão mais recente do Visual Studio que ele possa encontrar. Em C++, é importante que o código do aplicativo e as bibliotecas usadas sejam compiladas pelo mesmo compilador e pela versão do compilador. Ao usar o vcpkg, você elimina ou, pelo menos, reduz bastante o potencial de binários não correspondentes e os problemas que eles podem causar. Em equipes padronizadas em uma versão específica de um compilador, um membro da equipe pode usar o vcpkg para baixar fontes e compilar um conjunto de binários. Em seguida, eles podem usar o comando Exportar para compactar os binários e cabeçalhos para outros membros da equipe. Para obter mais informações, confira abaixo [Exportação de binários compilados e cabeçalhos](#export_binaries_per_project).
 
 Você também pode criar um clone vcpkg que tenha bibliotecas privadas na coleção de portas. Adicione uma porta que baixa seus binários e cabeçalhos pré-criados. Em seguida, escreva um arquivo Portfile. CMake que simplesmente copie esses arquivos para o local preferencial.
 
@@ -29,7 +29,7 @@ Você também pode criar um clone vcpkg que tenha bibliotecas privadas na coleç
 
 ## <a name="installation"></a>Instalação
 
-Clonar o repositório vcpkg do GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Você pode baixar em qualquer local de pasta que você preferir.
+Clone o repositório vcpkg do GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Você pode baixar em qualquer local de pasta que você preferir.
 
 Execute o bootstrapper na pasta raiz:
 
@@ -79,7 +79,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-Para projetos do CMAKE, use CMAKE_TOOLCHAIN_FILE para tornar as bibliotecas disponíveis com `find_package()`. Por exemplo:
+Para projetos do CMAKE, use CMAKE_TOOLCHAIN_FILE para tornar as bibliotecas disponíveis com `find_package()`. Por exemplo: 
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -117,7 +117,7 @@ Se você precisar usar uma versão específica de uma biblioteca diferente da ve
 
 1. Faça uma cópia nova do vcpkg
 1. Modifique o portfile para a biblioteca para obter a versão necessária
-1. Execute **vcpkg install \<library>** .
+1. Execute **vcpkg install \<library>**.
 1. Use **vcpkg integrate project** para criar um pacote NuGet que faz referência a essa biblioteca com base em cada projeto.
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrar com o Visual Studio Code (Linux/MacOS)
@@ -128,7 +128,7 @@ Execute **vcpkg integrar instalação** para configurar o Visual Studio Code no 
 
 Você pode produzir binários do Linux em um computador Windows usando o subsistema do Windows para Linux ou WSL. Siga as instruções para [Configurar o WSL no Windows 10](/windows/wsl/install-win10) e configurá-lo com a [extensão do Visual Studio para Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Não há problema em colocar todas as bibliotecas criadas para Windows e Linux na mesma pasta. Eles estão acessíveis tanto do Windows quanto do WSL.
 
-## <a name="export_binaries_per_project"></a> Exportar binários compilados e cabeçalhos
+## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> Exportar binários compilados e cabeçalhos
 
 É ineficiente fazer com que todos em uma equipe baixem e criem bibliotecas comuns. Um único membro da equipe pode usar o comando **vcpkg Export** para criar um arquivo zip comum dos binários e cabeçalhos, ou um pacote NuGet. Em seguida, é fácil compartilhá-lo com outros membros da equipe.
 
@@ -136,7 +136,7 @@ Você pode produzir binários do Linux em um computador Windows usando o subsist
 
 O catálogo público é mantido atualizado com as versões mais recentes das bibliotecas. Para determinar qual das suas bibliotecas locais está desatualizada, use **vcpkg update**. Quando você estiver pronto para atualizar sua coleção de portas para a versão mais recente do catálogo público, execute o comando de **atualização vcpkg** . Ele baixa e recria automaticamente todas ou todas as suas bibliotecas instaladas que estão desatualizadas.
 
-Por padrão, o comando **upgrade** apenas lista as bibliotecas que estão desatualizadas, ele não as atualiza. Para realmente atualizar as bibliotecas, use a opção **--no-seca-Run** .
+Por padrão, o comando de **atualização** lista apenas as bibliotecas que estão desatualizadas; Ele não os atualiza. Para realmente atualizar as bibliotecas, use a opção **--no-seca-Run** .
 
 ```cmd
   vcpkg upgrade --no-dry-run
@@ -204,7 +204,7 @@ O conteúdo de uma instância de vcpkg é:
 
 ## <a name="command-line-reference"></a>Referência de linha de comando
 
-|Comando|DESCRIÇÃO|
+|Comando|Descrição|
 |---------|---------|
 |**vcpkg Search \[Pat]**|Pesquisar pacotes disponíveis para instalação|
 |**vcpkg install \<pkg>...**|Instalar um pacote|
@@ -213,20 +213,20 @@ O conteúdo de uma instância de vcpkg é:
 |**vcpkg list**|Listar os pacotes instalados|
 |**vcpkg update**|Exibir a lista de pacotes para atualização|
 |**vcpkg upgrade**|Recompilar todos os pacotes desatualizados|
-|**arquivo de \<de hash vcpkg > \[alg]**|Realizar hash de um arquivo por algoritmo específico, o padrão é SHA512|
+|**arquivo de \<hash vcpkg \[> alg]**|Realizar hash de um arquivo por algoritmo específico, o padrão é SHA512|
 |**vcpkg integrate install**|Tornar pacotes instalados disponíveis a todos os usuários. Exige privilégios administrativos no primeiro uso|
 |**vcpkg integrate remove**|Remover a integração de todos os usuários|
 |**vcpkg integrate project**|Gerar um pacote NuGet de referência para uso de projeto individual do VS|
-|**vcpkg exportar \<pkg >... \[opt]...**|Exportar um pacote|
+|**> vcpkg \<de pacote de exportação... \[aceitar]...**|Exportar um pacote|
 |**vcpkg edit \<pkg>**|Abrir uma porta para edição (usa %EDITOR%, o “código” padrão)|
-|**vcpkg Create \<pkg > \<URL > \[arquivoname]**|Criar um novo pacote|
+|**vcpkg criar \<pacote de \<URL> \[> arquivo morto]**|Criar um novo pacote|
 |**vcpkg cache**|Listar pacotes compilados armazenados em cache|
 |**vcpkg version**|Exibir informações de versão|
 |**vcpkg contact --survey**|Exibir informações de contato para enviar comentários.|
 
 ### <a name="options"></a>Opções
 
-|Opção|DESCRIÇÃO|
+|Opção|Descrição|
 |---------|---------|
 |**--triplet \<t>**|Especificar o tripleto da arquitetura de destino. (padrão: `%VCPKG_DEFAULT_TRIPLET%`, veja também **vcpkg help triplet**)|
 |**--vcpkg-root \<path>**|Especificar o diretório raiz do vcpkg (padrão: `%VCPKG_ROOT%`)|

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 744d0dcf8aafdfe336db0c49307b8e1756b8cf7f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 20116674feffaa5b4bbddf707dd3a4d0c1d9ad98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179916"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364437"
 ---
 # <a name="friend-c"></a>friend (C++)
 
-Em algumas circunstâncias, é mais conveniente conceder acesso em nível de membro a funções que não são membros de uma classe ou a todos os membros em uma classe separada. Somente o implementador de classe pode declarar quem são seus amigos. Uma função ou classe não pode se declarar como um amigo de qualquer classe. Em uma definição de classe, use a palavra-chave **Friend** e o nome de uma função não membro ou outra classe para conceder a ela acesso aos membros privados e protegidos da sua classe. Em uma definição de modelo, um parâmetro de tipo pode ser declarado como um amigo.
+Em algumas circunstâncias, é mais conveniente conceder acesso ao nível dos membros a funções que não são membros de uma classe ou a todos os membros de uma classe separada. Só o implementador de classe pode declarar quem são seus amigos. Uma função ou classe não pode se declarar como um amigo de qualquer classe. Em uma definição de classe, use a palavra-chave **amigo** e o nome de uma função não-membro ou outra classe para conceder-lhe acesso aos membros privados e protegidos de sua classe. Em uma definição de modelo, um parâmetro de tipo pode ser declarado como um amigo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,11 +26,11 @@ class friend F
 friend F;
 ```
 
-## <a name="friend-declarations"></a>Declarações Friend
+## <a name="friend-declarations"></a>Declarações de amigos
 
 Se você declarar uma função de amigo que não foi declarada anteriormente, essa função é exportada para o escopo de envolvimento sem classe.
 
-As funções declaradas em uma declaração Friend são tratadas como se tivessem sido declaradas usando a palavra-chave **extern** . Para obter mais informações, consulte [extern](extern-cpp.md).
+As funções declaradas em uma declaração de amigo são tratadas como se tivessem sido declaradas usando a palavra-chave **extern.** Para obter mais informações, consulte [extern](extern-cpp.md).
 
 Ainda que as funções com escopo global possam ser declaradas como amigos antes dos protótipos, as funções de membro não podem ser declaradas como amigos antes da aparência de sua declaração completa da classe. O exemplo de código a seguir mostra porque isso falha:
 
@@ -42,16 +42,16 @@ class HasFriends
 };
 ```
 
-O exemplo anterior insere o nome da classe `ForwardDeclared` no escopo, mas a declaração completa — especificamente, a parte que declara a função `IsAFriend` — não é conhecida. Portanto, a Declaração **Friend** na classe `HasFriends` gera um erro.
+O exemplo anterior insere o nome da classe `ForwardDeclared` no escopo, mas a declaração completa — especificamente, a parte que declara a função `IsAFriend` — não é conhecida. Portanto, a declaração `HasFriends` de **amigo** na aula gera um erro.
 
-A partir do C++ 11, há duas formas de declarações Friend para uma classe:
+A partir de C++11, existem duas formas de declarações de amigos para uma classe:
 
 ```cpp
 friend class F;
 friend F;
 ```
 
-O primeiro formulário apresenta uma nova classe F se nenhuma classe existente com esse nome foi encontrada no namespace mais interno. **C++ 11**: o segundo formulário não introduz uma nova classe; Ele pode ser usado quando a classe já foi declarada e deve ser usada ao declarar um parâmetro de tipo de modelo ou um typedef como um Friend.
+A primeira forma introduz uma nova classe F se nenhuma classe existente com esse nome foi encontrada no namespace mais íntimo. **C++11**: A segunda forma não introduz uma nova classe; ele pode ser usado quando a classe já foi declarada, e deve ser usada ao declarar um parâmetro de tipo de modelo ou um typedef como um amigo.
 
 Use `class friend F` quando o tipo referenciado ainda não tiver sido declarado:
 
@@ -75,7 +75,7 @@ namespace NS
 }
 ```
 
-No exemplo a seguir, `friend F` refere-se à classe `F` que é declarada fora do escopo do NS.
+No exemplo a `friend F` seguir, `F` refere-se à classe que é declarada fora do escopo do NS.
 
 ```cpp
 class F {};
@@ -99,7 +99,7 @@ class my_class
 };
 ```
 
-Use `friend F` para declarar um typedef como Friend:
+Use `friend F` para declarar um typedef como amigo:
 
 ```cpp
 class Foo {};
@@ -115,13 +115,13 @@ class G
 Para declarar duas classes que são amigas da outro, a segunda classe inteira deve ser especificada como amiga de primeira classe. A razão para essa restrição é que o compilador tem informações suficientes para declarar funções individuais de amigo somente no ponto onde a segunda classe é declarada.
 
 > [!NOTE]
->  Embora a segunda classe inteira deve ser amiga da primeira classe, você pode selecionar quais funções na primeira classe serão amigas da segunda classe.
+> Embora a segunda classe inteira deve ser amiga da primeira classe, você pode selecionar quais funções na primeira classe serão amigas da segunda classe.
 
 ## <a name="friend-functions"></a>funções friend
 
-Uma função **Friend** é uma função que não é um membro de uma classe, mas tem acesso aos membros privados e protegidos da classe. As funções friend não são consideradas membros de classe; elas são funções externas normais que recebem privilégios de acesso especiais. Os amigos não estão no escopo da classe e não são chamados usando os operadores de seleção de Membros ( **.** e- **>** ) a menos que sejam membros de outra classe. Uma função **Friend** é declarada pela classe que está concedendo acesso. A Declaração **Friend** pode ser colocada em qualquer lugar na declaração de classe. Ela não é afetada pelas palavras-chave de controle de acesso.
+Uma função **de amigo** é uma função que não é membro de uma classe, mas tem acesso aos membros privados e protegidos da classe. As funções friend não são consideradas membros de classe; elas são funções externas normais que recebem privilégios de acesso especiais. Os amigos não estão no escopo da classe, e eles não são chamados usando os operadores de seleção de membros (**.** e**>**- ) a menos que sejam membros de outra classe. Uma função **de amigo** é declarada pela classe que está concedendo acesso. A declaração **do amigo** pode ser colocada em qualquer lugar da declaração da classe. Ela não é afetada pelas palavras-chave de controle de acesso.
 
-O exemplo a seguir mostra uma classe `Point` e uma função friend, `ChangePrivate`. A função **Friend** tem acesso ao membro de dados privados do objeto `Point` que recebe como um parâmetro.
+O exemplo a seguir mostra uma classe `Point` e uma função friend, `ChangePrivate`. A função **amigo** tem acesso ao `Point` membro de dados privados do objeto que recebe como parâmetro.
 
 ```cpp
 // friend_functions.cpp
@@ -183,7 +183,7 @@ int A::Func1( B& b ) { return b._b; }   // OK
 int A::Func2( B& b ) { return b._b; }   // C2248
 ```
 
-No exemplo anterior, somente a função `A::Func1( B& )` tem acesso de amigo para classificar `B`. Portanto, o acesso ao membro privado `_b` está correto em `Func1` da classe `A`, mas não em `Func2`.
+No exemplo anterior, somente a função `A::Func1( B& )` tem acesso de amigo para classificar `B`. Portanto, o acesso ao `_b` membro `Func1` privado `A` é correto `Func2`na classe, mas não em .
 
 Uma classe `friend` é uma classe cujas funções membro são as funções amigas de uma classe, ou seja, cujas funções membro tenham acesso aos outros membros particulares e protegidos da classe. Suponha que a declaração `friend` na classe `B` fosse:
 
@@ -224,18 +224,18 @@ int main() {
 
 A amizade não é mútua a menos que explicitamente especificada como tal. No exemplo anterior, as funções membro de `YourClass` não podem acessar os membros privados de `YourOtherClass`.
 
-Um tipo gerenciado (em C++/CLI) não pode ter nenhuma função Friend, Friend classes ou Friend interfaces.
+Um tipo gerenciado (em C++/CLI) não pode ter funções de amigos, classes de amigos ou interfaces de amigos.
 
 A amizade não é herdada, o que significa que as classes derivadas de `YourOtherClass` não podem acessar os membros privados de `YourClass`. A amizade não é transitiva, assim as classes que são amigos de `YourOtherClass` não podem acessar membros privados de `YourClass`.
 
 A figura a seguir mostra quatro declarações de classe: `Base`, `Derived`, `aFriend` e `anotherFriend`. Somente a classe `aFriend` tem acesso direto aos membros privados de `Base` (e a todos os membros que `Base` pode ter herdado).
 
-![Implicações da relação Friend](../cpp/media/vc38v41.gif "Implicações da relação Friend") <br/>
-Implicações da relação Friend
+![Implicações da relação de amigos](../cpp/media/vc38v41.gif "Implicações da relação de amigos") <br/>
+Implicações da relação de amigos
 
-## <a name="inline-friend-definitions"></a>Definições de amigo embutido
+## <a name="inline-friend-definitions"></a>Definições de amigos inline
 
-As funções Friend podem ser definidas (dadas um corpo de função) dentro de declarações de classe. Essas funções são funções embutidas, e como funções membro embutidas, se comportam como se fossem definidas imediatamente após todos os membros de classe terem sido vistos, mas antes que o escopo de classe seja fechado (o final da declaração de classe). Funções Friend definidas dentro de declarações de classe estão no escopo da classe delimitadora.
+As funções do amigo podem ser definidas (dado um corpo função) dentro das declarações de classe. Essas funções são funções embutidas, e como funções membro embutidas, se comportam como se fossem definidas imediatamente após todos os membros de classe terem sido vistos, mas antes que o escopo de classe seja fechado (o final da declaração de classe). As funções de amigos que são definidas dentro das declarações de classe estão no escopo da classe de encerramento.
 
 ## <a name="see-also"></a>Confira também
 

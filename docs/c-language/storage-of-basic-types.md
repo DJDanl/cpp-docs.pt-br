@@ -34,19 +34,19 @@ A tabela a seguir resume o armazenamento associado a cada tipo básico.
 
 ## <a name="sizes-of-fundamental-types"></a>Tamanhos de tipos fundamentais
 
-|Tipo|Armazenamento|
+|Type|Armazenamento|
 |----------|-------------|
 |**Char**, **Char não assinado**, **caractere assinado**|1 byte|
-|**short**, **unsigned short**|2 bytes|
+|**curto**, **sem sinal**|2 bytes|
 |**int**, **unsigned int**|4 bytes|
 |**long**, **unsigned long**|4 bytes|
 |**longo tempo**, **não assinado longo**|8 bytes|
 |**float**|4 bytes|
 |**double**|8 bytes|
-|**long double**|8 bytes|
+|**longo Duplo**|8 bytes|
 
 Os tipos de dados C se enquadram nas categorias gerais. Os *tipos integrais* incluem **int**, **Char**, **Short**, **Long**e Long **Long**. Esses tipos podem ser qualificados com **assinados** **ou não assinados**, **e não assinados** por si só podem ser usados como abreviados para **int não assinado**. Os tipos de enumeração (**enum**) também são tratados como tipos integrais para a maioria das finalidades. Os *tipos flutuantes* incluem **float**, **Double**e **Long double**. Os *tipos aritméticos* incluem todos os tipos flutuantes e integrais.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e tipos](../c-language/declarations-and-types.md)

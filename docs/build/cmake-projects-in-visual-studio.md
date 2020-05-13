@@ -1,31 +1,31 @@
 ---
 title: Projetos do CMake no Visual Studio
-description: Como criar e compilar C++ projetos usando o CMake no Visual Studio.
+description: Como criar e compilar projetos C++ usando o CMake no Visual Studio.
 ms.date: 01/08/2020
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: be252759e93eb30d4f9b4ff1446dd4217fcdf2a6
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 49ba53eaa8ac075ab6d3b2a66f33160c5c3ec410
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329169"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projetos do CMake no Visual Studio
 
 O CMake é uma ferramenta multiplataforma de software livre para definir os processos de build executados em várias plataformas. Este artigo pressupõe que você esteja familiarizado com o CMake. Você pode aprender mais sobre isso em [Compilar, Testar e Empacotar seu Software com o CMake](https://cmake.org/).
 
 > [!NOTE]
-> O CMake se tornou cada vez mais integrado ao Visual Studio nas últimas versões. Para ver as informações corretas para a versão que você está usando, verifique se o seletor de versão no canto superior esquerdo desta página está definido corretamente.
+> O CMake se tornou cada vez mais integrado ao Visual Studio nas últimas versões. Para ver a documentação da sua versão preferida do Visual Studio, use o controle seletor de **versão** . Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker range="vs-2019"
 
-O  **C++ componente ferramentas do cmake para Windows** usa o recurso [abrir pasta](open-folder-projects-cpp.md) para consumir arquivos de projeto CMake (como *CMakeLists. txt*) diretamente para fins de IntelliSense e navegação. Há suporte para geradores Ninja e Visual Studio. Se você usar um gerador do Visual Studio, ele gerará um arquivo de projeto temporário e o passará para o MSBuild. exe. No entanto, o projeto nunca é carregado para fins de navegação ou IntelliSense. Você também pode importar um cache CMake existente.
+O componente **C++ CMake Tools for Windows** usa o recurso [abrir pasta](open-folder-projects-cpp.md) para consumir arquivos de projeto CMake (como *CMakeLists. txt*) diretamente para fins de IntelliSense e navegação. Há suporte para geradores Ninja e Visual Studio. Se você usar um gerador do Visual Studio, ele gerará um arquivo de projeto temporário e o passará para o MSBuild. exe. No entanto, o projeto nunca é carregado para fins de navegação ou IntelliSense. Você também pode importar um cache CMake existente.
 
 ## <a name="installation"></a>Instalação
 
-**As ferramentas do cmake para Windows são instaladas como parte do desenvolvimento de desktop com o e do desenvolvimento do Linux com cargas de trabalho. C++**  **C++** **C++** Para obter mais informações, consulte [projetos de CMake de plataforma cruzada](../linux/cmake-linux-project.md).
+O **C++ CMake Tools for Windows** é instalado como parte do **desenvolvimento de desktops com** desenvolvimento em c++ e **Linux com** cargas de trabalho do c++. Para obter mais informações, consulte [projetos de CMake de plataforma cruzada](../linux/cmake-linux-project.md).
 
 ![Componente CMake na carga de trabalho Desktop com C++](media/cmake-install-2019.png)
 
@@ -43,7 +43,7 @@ Quando você escolhe **arquivo > abrir > pasta** para abrir uma pasta que conté
 
 - Em segundo plano, o Visual Studio começa a indexar os arquivos de origem para habilitar o IntelliSense, as informações de navegação, a refatoração e assim por diante. Conforme você trabalha, o Visual Studio monitora as alterações feitas no editor e também em disco para manter seu índice em sincronia com as fontes.
 
-Você pode abrir pastas que contêm qualquer quantidade de projetos do CMake. O Visual Studio detecta e configura todos os arquivos *CMakeLists. txt* de "raiz" em seu espaço de trabalho. As operações CMake (configurar, compilar, depurar) C++ , IntelliSense e navegação estão disponíveis para todos os projetos do cmake em seu espaço de trabalho.
+Você pode abrir pastas que contêm qualquer quantidade de projetos do CMake. O Visual Studio detecta e configura todos os arquivos *CMakeLists. txt* de "raiz" em seu espaço de trabalho. As operações CMake (configurar, compilar, depurar), C++ IntelliSense e navegação estão disponíveis para todos os projetos do CMake em seu espaço de trabalho.
 
 ![Projeto do CMake com várias raízes](media/cmake-multiple-roots.png)
 
@@ -51,7 +51,7 @@ Você também pode exibir seus projetos logicamente organizados pelos destinos. 
 
 ![Botão de exibição de destinos do CMake](media/cmake-targets-view.png)
 
-Clique no botão **Mostrar todos os arquivos** na parte superior da **Gerenciador de soluções** para ver todas as saídas geradas pelo CMake nas pastas *out/Build/\<config >* .
+Clique no botão **Mostrar todos os arquivos** na parte superior da **Gerenciador de soluções** para ver toda a saída gerada pelo CMake nas pastas de *>out\</Build/config* .
 
 O Visual Studio usa um arquivo de configuração chamado **CMakeSettings. JSON**. Esse arquivo permite que você defina e armazene várias configurações de compilação e alterne convenientemente entre elas no IDE. Uma *configuração* é uma construção do Visual Studio que encapsula configurações específicas para um determinado tipo de compilação. As configurações são usadas para configurar as opções de linha de comando padrão que o Visual Studio passa para o CMake. exe. Você também pode especificar opções CMake adicionais aqui e definir quaisquer variáveis adicionais que desejar. Todas as opções são gravadas no cache CMake como variáveis internas ou externas. No Visual Studio 2019, o **Editor de configurações do cmake** fornece uma maneira conveniente de editar suas configurações. Para obter mais informações, confira [Personalizar configurações do CMake](customize-cmake-settings.md).
 
@@ -100,7 +100,7 @@ Você pode personalizar uma sessão de depuração CMake definindo as propriedad
 
 ## <a name="just-my-code-for-cmake-projects"></a>Apenas Meu Código para projetos CMake
 
-Quando você cria para o Windows usando o compilador MSVC, os projetos CMake têm suporte para Apenas Meu Código depuração. Para alterar a configuração de Apenas Meu Código, vá para **ferramentas** > **opções** > **depuração** > **geral**.
+Quando você cria para o Windows usando o compilador MSVC, os projetos CMake têm suporte para Apenas Meu Código depuração. Para alterar a configuração de apenas meu código, vá para **ferramentas** > **Opções** > **depuração** > **geral**.
 
 ## <a name="vcpkg-integration"></a>Integração do Vcpkg
 
@@ -124,7 +124,7 @@ Assim que você salva o arquivo, a etapa de configuração é executada novament
 
 ## <a name="cmake-configure-step"></a>Etapa de configuração do CMake
 
-Quando você faz alterações significativas nos arquivos *CMakeSettings. JSON* ou *CMakeLists. txt* , o Visual Studio executa automaticamente a etapa de configuração do cmake. Se a etapa configurar for concluída sem erros, as informações coletadas estarão disponíveis no C++ IntelliSense e nos serviços de linguagem. Ele também é usado em operações de compilação e depuração.
+Quando você faz alterações significativas nos arquivos *CMakeSettings. JSON* ou *CMakeLists. txt* , o Visual Studio executa automaticamente a etapa de configuração do cmake. Se a etapa configurar for concluída sem erros, as informações coletadas estarão disponíveis em C++ IntelliSense e serviços de linguagem. Ele também é usado em operações de compilação e depuração.
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>Solução de problemas de erros do cache do CMake
 
@@ -154,11 +154,11 @@ Se tiver instalado o CMake do Instalador do Visual Studio, será possível execu
 
 ::: moniker range="vs-2017"
 
-O Visual Studio 2017 tem suporte avançado para CMake, incluindo [projetos CMake de plataforma cruzada](../linux/cmake-linux-project.md). O **componente C++ ferramentas visuais para CMake** usa o recurso **abrir pasta** para permitir que o IDE consuma arquivos de projeto CMake (como *CMakeLists. txt*) diretamente para fins de IntelliSense e navegação. Há suporte para geradores Ninja e Visual Studio. Se você usar um gerador do Visual Studio, ele gerará um arquivo de projeto temporário e o passará para o MSBuild. exe. No entanto, o projeto nunca é carregado para fins de navegação ou IntelliSense. Você também pode importar um cache CMake existente.
+O Visual Studio 2017 tem suporte avançado para CMake, incluindo [projetos CMake de plataforma cruzada](../linux/cmake-linux-project.md). O componente **Visual C++ Tools for CMake** usa o recurso **abrir pasta** para permitir que o IDE consuma arquivos de projeto CMake (como *CMakeLists. txt*) diretamente para fins de IntelliSense e navegação. Há suporte para geradores Ninja e Visual Studio. Se você usar um gerador do Visual Studio, ele gerará um arquivo de projeto temporário e o passará para o MSBuild. exe. No entanto, o projeto nunca é carregado para fins de navegação ou IntelliSense. Você também pode importar um cache CMake existente.
 
 ## <a name="installation"></a>Instalação
 
-**As C++ ferramentas visuais para CMake** são instaladas como parte do desenvolvimento de **desktop com C++**  o e do **desenvolvimento do Linux com C++**  cargas de trabalho.
+As **ferramentas de Visual C++ para CMake** são instaladas como parte do **desenvolvimento de desktops com** desenvolvimento em c++ e **Linux com** cargas de trabalho do c++.
 
 ![Componente CMake na carga de trabalho Desktop com C++](media/cmake-install.png)
 
@@ -176,7 +176,7 @@ Quando você escolhe **arquivo > abrir > pasta** para abrir uma pasta que conté
 
 - Em segundo plano, o Visual Studio começa a indexar os arquivos de origem para habilitar o IntelliSense, as informações de navegação, a refatoração e assim por diante. Conforme você trabalha, o Visual Studio monitora as alterações feitas no editor e também em disco para manter seu índice em sincronia com as fontes.
 
-Você pode abrir pastas que contêm qualquer quantidade de projetos do CMake. O Visual Studio detecta e configura todos os arquivos *CMakeLists. txt* de "raiz" em seu espaço de trabalho. As operações CMake (configurar, compilar, depurar) C++ , IntelliSense e navegação estão disponíveis para todos os projetos do cmake em seu espaço de trabalho.
+Você pode abrir pastas que contêm qualquer quantidade de projetos do CMake. O Visual Studio detecta e configura todos os arquivos *CMakeLists. txt* de "raiz" em seu espaço de trabalho. As operações CMake (configurar, compilar, depurar), C++ IntelliSense e navegação estão disponíveis para todos os projetos do CMake em seu espaço de trabalho.
 
 ![Projeto do CMake com várias raízes](media/cmake-multiple-roots.png)
 
@@ -255,7 +255,7 @@ Assim que você salva o arquivo, a etapa de configuração é executada novament
 
 ## <a name="cmake-configure-step"></a>Etapa de configuração do CMake
 
-Quando são feitas alterações significativas nos arquivos *CMakeSettings. JSON* ou *CMakeLists. txt* , o Visual Studio executa automaticamente a etapa de configuração do cmake. Se a etapa configurar for concluída sem erros, as informações coletadas estarão disponíveis no C++ IntelliSense e nos serviços de linguagem. Ele também é usado em operações de compilação e depuração.
+Quando são feitas alterações significativas nos arquivos *CMakeSettings. JSON* ou *CMakeLists. txt* , o Visual Studio executa automaticamente a etapa de configuração do cmake. Se a etapa configurar for concluída sem erros, as informações coletadas estarão disponíveis em C++ IntelliSense e serviços de linguagem. Ele também é usado em operações de compilação e depuração.
 
 Vários projetos CMake podem usar o mesmo nome de configuração CMake (por exemplo, x86-Debug). Todos eles são configurados e compilados (em sua própria pasta raiz de compilação) quando essa configuração é selecionada. Depure os destinos de todos os projetos do CMake que participam dessa configuração do CMake.
 
@@ -301,13 +301,13 @@ No Visual Studio 2015, os usuários do Visual Studio podem usar um [gerador do C
 
 ::: moniker-end
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[Tutorial: criar C++ projetos de plataforma cruzada no Visual Studio](get-started-linux-cmake.md)\
+[Tutorial: criar projetos de plataforma cruzada C++ no Visual Studio](get-started-linux-cmake.md)\
 [Configurar um projeto CMake do Linux](../linux/cmake-linux-project.md)\
-[Conecte-se ao seu computador Linux remoto](../linux/connect-to-your-remote-linux-computer.md)\
-[Personalizar as configurações de compilação do CMake](customize-cmake-settings.md)\
-[Referência de esquema CMakeSettings. json](cmakesettings-reference.md)\
+[Conectar-se ao computador Linux remoto](../linux/connect-to-your-remote-linux-computer.md)\
+[Personalizar configurações de Build do CMake](customize-cmake-settings.md)\
+[Referência de esquema CMakeSettings. JSON](cmakesettings-reference.md)\
 [Configurar sessões de depuração CMake](configure-cmake-debugging-sessions.md)\
 [Implante, execute e depure seu projeto do Linux](../linux/deploy-run-and-debug-your-linux-project.md)\
 [Referência de configuração predefinida do CMake](cmake-predefined-configuration-reference.md)

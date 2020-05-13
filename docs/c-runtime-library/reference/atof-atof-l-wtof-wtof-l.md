@@ -1,11 +1,15 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
+- _o__atof_l
+- _o__wtof
+- _o__wtof_l
+- _o_atof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939565"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909108"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -81,13 +86,13 @@ double _wtof_l(
 
 ## <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres a ser convertida.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada função retorna o valor **Double** produzido pela interpretação dos caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.
 
@@ -101,13 +106,15 @@ A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser i
 
 O argumento *Str* para **atof** e **_wtof** tem o seguinte formato:
 
-[*espaço em branco*] [*assinar*] [*dígitos*] [ __.__ *dígitos*] [{**e** &#124; **e** } [*assinar*]*dígitos*]
+[*espaço em branco*] [*assinar*] [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **e** } [*assinar*]*dígitos*]
 
 Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e**ou **e) e**um inteiro decimal assinado opcionalmente.
 
 As versões UCRT dessas funções não dão suporte à conversão de letras de expoente de estilo Fortran (**d** ou **d**). Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
 
 As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de *localidade* passado em vez da localidade atual.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -178,7 +185,7 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

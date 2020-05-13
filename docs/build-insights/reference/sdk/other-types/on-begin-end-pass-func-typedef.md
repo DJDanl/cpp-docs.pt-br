@@ -1,6 +1,6 @@
 ---
-title: Typedef OnBeginEndPassFunc
-description: A C++ referência de TYPEDEF do SDK do insights OnBeginEndPassFunc.
+title: Typedef onBeginEndPassFunc
+description: A referência tipo de tipo Deftos C++ Build Insights SDK OnBeginEndPassFunc.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6f5e602fdc460acf8e53307e88a1a3d7ad000893
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 3b3fc453245a47463c29ceeb30dfdc48c79aef35
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332421"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329081"
 ---
-# <a name="onbeginendpassfunc-typedef"></a>Typedef OnBeginEndPassFunc
+# <a name="onbeginendpassfunc-typedef"></a>Typedef onBeginEndPassFunc
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-O `OnBeginEndPassFunc` typedef é uma das assinaturas de função usadas nas estruturas [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) e [RELOG_CALLBACKS](relog-callbacks-struct.md) .
+O `OnBeginEndPassFunc` typedef é uma das assinaturas de função utilizadas nas estruturas [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) e [RELOG_CALLBACKS.](relog-callbacks-struct.md)
 
 ## <a name="syntax"></a>Sintaxe
 

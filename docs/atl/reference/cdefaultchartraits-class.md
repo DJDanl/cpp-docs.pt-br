@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultCharTraits
+title: Classe CDefaultChartraits
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultCharTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-ms.openlocfilehash: fe599ee0e84c393bed656b7304fd13d55ce95a50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40c4d107d05e6d7b610e7c46be920d91d8fe6086
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258735"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327100"
 ---
-# <a name="cdefaultchartraits-class"></a>Classe CDefaultCharTraits
+# <a name="cdefaultchartraits-class"></a>Classe CDefaultChartraits
 
-Essa classe fornece duas funções estáticas para a conversão de caracteres entre letras maiusculas e minúsculas.
+Esta classe fornece duas funções estáticas para converter caracteres entre maiúsculas e minúsculas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,24 +34,24 @@ O tipo de dados a serem armazenados na coleção.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CDefaultCharTraits::CharToLower](#chartolower)|(Estático) Chame essa função para converter um caractere em maiusculas.|
-|[CDefaultCharTraits::CharToUpper](#chartoupper)|(Estático) Chame essa função para converter um caractere em minúsculas.|
+|[CDefaultchartraits::Chartolower](#chartolower)|(Estática) Chame esta função para converter um caractere em maiúsculas.|
+|[CDefaultchartraits::Chartoupper](#chartoupper)|(Estática) Chame esta função para converter um caractere em minúsculas.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe fornece funções que são utilizadas pela classe [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
+Esta classe fornece funções que são utilizadas pela classe [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcoll.h
 
-##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower
+## <a name="cdefaultchartraitschartolower"></a><a name="chartolower"></a>CDefaultchartraits::Chartolower
 
-Chame essa função para converter um caractere em minúsculas.
+Chame esta função para converter um caractere em minúsculas.
 
 ```
 static wchar_t CharToLower(wchar_t x);
@@ -67,9 +67,9 @@ O caractere a ser convertido em minúsculas.
 
 [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]
 
-##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper
+## <a name="cdefaultchartraitschartoupper"></a><a name="chartoupper"></a>CDefaultchartraits::Chartoupper
 
-Chame essa função para converter um caractere em maiusculas.
+Chame esta função para converter um caractere em maiúsculas.
 
 ```
 static wchar_t CharToUpper(wchar_t x);
@@ -81,6 +81,6 @@ static char CharToUpper(char x);
 *x*<br/>
 O caractere a ser convertido em maiúsculas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

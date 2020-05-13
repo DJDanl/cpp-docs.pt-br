@@ -1,106 +1,136 @@
 ---
 title: 'Início Rápido: análise de código para C/C++'
-description: Execute a análise estática C++ no código do Visual Studio para detectar problemas comuns de codificação e defeitos.
-ms.date: 11/04/2016
+description: Execute a análise estática no código C++ no Visual Studio para detectar problemas e defeitos comuns de codificação.
+ms.date: 04/08/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - C/C++ code analysis
-- code analysis,C/C++
-ms.openlocfilehash: 5ee8f702ddf489732f664ae73eed75b18dc46e86
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+- code analysis, C/C++
+ms.openlocfilehash: 43866564915ac84d227ccbf347280efe59e33351
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418777"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370580"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>Início Rápido: análise de código para C/C++
 
-Você pode melhorar a qualidade do seu aplicativo executando a análise de código regularmente em C C++ ou Code. Isso pode ajudá-lo a encontrar problemas comuns, violações de boa prática de programação ou defeitos que são difíceis de descobrir por meio de testes. Os avisos da análise de código diferem dos erros e avisos do compilador porque a análise de código procura por padrões de código específicos que são válidos, mas que ainda podem criar problemas para você ou outras pessoas que usam seu código.
+Você pode melhorar a qualidade do seu aplicativo executando a análise de código regularmente no código C ou C++. A análise de código pode ajudá-lo a encontrar problemas comuns e violações de boas práticas de programação. E, encontra defeitos que são difíceis de descobrir através de testes. Seus avisos diferem de erros e avisos do compilador: Ele procura por padrões de código específicos que são conhecidos por causar problemas. Ou seja, código válido, mas que ainda pode criar problemas, seja para você ou para outras pessoas que usam seu código.
 
-## <a name="configure-rule-sets-for-a-project"></a>Configurar conjuntos de regras para um projeto
+## <a name="configure-rule-sets-for-a-project"></a>Configure conjuntos de regras para um projeto
 
-1. Em **Gerenciador de soluções**, abra o menu de atalho para o nome do projeto e escolha **Propriedades**.
+1. No **Solution Explorer,** abra o menu de atalho para o nome do projeto e, em seguida, escolha **Propriedades**.
 
-1. Opcionalmente, nas listas de **configuração** e **plataforma** , escolha a configuração de compilação e a plataforma de destino.
+1. Opcionalmente, nas listas **Configuração** e **Plataforma,** escolha a configuração de compilação e a plataforma de destino.
 
-1. Para executar a análise de código toda vez que o projeto for criado usando a configuração selecionada, marque a caixa de seleção **Habilitar análise de código na compilação** . Você também pode executar a análise de código manualmente abrindo o menu **analisar** e, em seguida, escolhendo **executar análise de código no** *ProjectName* ou **executar análise de código no arquivo**.
+1. Para executar a análise de código toda vez que o projeto for construído usando a configuração selecionada, selecione a **caixa Despermitir análise de código na** caixa de seleção Build. Você também pode executar a análise de código manualmente abrindo o menu **Analisar** e, em seguida, escolhendo **Run Code Analysis no** *ProjectName* ou **Run Code Analysis on File**.
 
-1. Escolha o [conjunto de regras](using-rule-sets-to-specify-the-cpp-rules-to-run.md) que você deseja usar ou crie um [conjunto de regras personalizado](using-rule-sets-to-specify-the-cpp-rules-to-run.md#to-create-a-rule-set-in-a-text-editor). Se estiver usando LLVM/Clang-CL, consulte [usando Clang-organizar no Visual Studio](../code-quality/clang-tidy.md) para configurar as opções de análise de Clang.
+1. Escolha o [conjunto de regras](using-rule-sets-to-specify-the-cpp-rules-to-run.md) que deseja usar ou crie um conjunto de regras [personalizado](using-rule-sets-to-specify-the-cpp-rules-to-run.md#to-create-a-rule-set-in-a-text-editor). Se estiver usando LLVM/clang-cl, consulte [Usando Clang-Tidy no Visual Studio](../code-quality/clang-tidy.md) para configurar opções de análise Clang-Tidy.
 
-### <a name="standard-cc-rule-sets"></a>Conjuntos de regrasC++ /C padrão
+### <a name="standard-cc-rule-sets"></a>Conjuntos de regras Padrão C/C++
 
-O Visual Studio inclui dois conjuntos padrão de regras para código nativo:
+O Visual Studio inclui estes conjuntos padrão de regras para código nativo:
 
-|Conjunto de regras|DESCRIÇÃO|
-|--------------|-----------------|
-|Regras recomendadas mínimas do Microsoft Native|Esse conjunto de regras enfoca os problemas mais críticos em seu código nativo, incluindo falhas potenciais de segurança e falhas do aplicativo. Você deve incluir esse conjunto de regras em qualquer conjunto personalizado de regras que você criar para seus projetos nativos.|
-|Regras nativas recomendadas da Microsoft|Esse conjunto de regras aborda uma ampla gama de problemas. Ele inclui todas as regras nas regras recomendadas do mínimo nativo da Microsoft.|
+| Conjunto de regras | Descrição |
+|--|--|
+| **C++ Core Verificar Regras Aritméticas** | Essas regras impõem verificações relacionadas às [operações aritméticas das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es-expressions-and-statements) |
+| **C++ Regras de limites de verificação de núcleo** | Essas regras aplicam o [perfil Bounds das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile) |
+| **C++ Regras da classe de verificação do núcleo** | Essas regras impõem verificações relacionadas às [classes das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-classes-and-class-hierarchies) |
+| **C++ Regras de concorrência de verificação de núcleo** | Essas regras impõem verificações relacionadas à [concorrência das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#cpcon-concurrency) |
+| **C++ Regras de const de verificação de núcleo** | Essas regras impõem [verificações relacionadas ao const a partir das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability) |
+| **C++ Regras de Declaração de Verificação Do Núcleo** | Essas regras impõem verificações relacionadas às [declarações das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#i-interfaces) |
+| **C++ Regras do enum de verificação do núcleo** | Essas regras aplicam [verificações relacionadas ao enum das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum) |
+| **C++ Core Check Regras Experimentais** | Essas regras coletam alguns cheques experimentais. Eventualmente, esperamos que esses cheques sejam movidos para outros conjuntos de regras ou removidos completamente. |
+| **C++ Regras de função de verificação do núcleo** | Essas regras impõem verificações relacionadas às [funções das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f-functions) |
+| **C++ Core Verificar regras gsl** | Essas regras impõem verificações relacionadas à [Biblioteca de Suporte de Diretrizes das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl) |
+| **C++ Core Verificar regras de vida** | Essas regras aplicam o [perfil Lifetime das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile) |
+| **C++ Regras do ponteiro do proprietário do ponto de verificação do núcleo** | Essas regras aplicam verificações de gerenciamento de recursos relacionadas ao [proprietário&lt;T&gt; a partir das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management) |
+| **C++ Core Verificar regras de ponteiro bruto** | Essas regras aplicam verificações de gerenciamento de recursos relacionadas a [ponteiros brutos das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management) |
+| **C++ Regras de verificação do núcleo** | Essas regras impõem um subconjunto das verificações das [Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines) Use este conjunto de regras para incluir todas as regras de Verificação do Núcleo C++, exceto os conjuntos de regras Enum e Experimental. |
+| **C++ Core Verifique regras de ponteiro compartilhada** | Essas regras aplicam verificações de gerenciamento de recursos relacionadas a [tipos com semântica de ponteiro compartilhado das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management) |
+| **C++ Core Verificar regras de STL** | Essas regras impõem verificações relacionadas à [C++ Standard Template Library (STL) das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib) |
+| **C++ Regras de estilo de verificação do núcleo** | Essas regras impõem verificações relacionadas ao uso de [expressões e declarações das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es-expressions-and-statements) |
+| **C++ Regras do tipo de verificação do núcleo** | Essas regras aplicam o [perfil Tipo das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile) |
+| **C++ Core Check Regras únicas de ponteiro** | Essas regras aplicam verificações de gerenciamento de recursos relacionadas a tipos com [semântica de ponteiro exclusiva das Diretrizes Principais C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management) |
+| **Regras de verificação de concorrência** | Essas regras aplicam um conjunto de verificações de padrão de simultuo Win32 em C++. |
+| **Regras de concorrência** | Adiciona regras de simultuo de Diretrizes Principais C++ às **Regras de Verificação de Concorrência**. |
+| **Regras mínimas nativas da Microsoft** | Essas regras se concentram nos problemas mais críticos do seu código nativo, incluindo possíveis falhas de segurança e falhas de aplicativos. Recomendamos que você inclua esta regra definida em qualquer conjunto de regras personalizadas que você crie para seus projetos nativos. |
+| **Regras recomendadas nativas da Microsoft** | Essas regras se concentram nos problemas mais críticos e comuns em seu código nativo. Esses problemas incluem possíveis falhas de segurança e falhas de aplicativos. Recomendamos que você inclua esta regra definida em qualquer conjunto de regras personalizadas que você crie para seus projetos nativos. Este conjunto de regras foi projetado para funcionar com a edição Visual Studio Professional e superior. Ele inclui todas as regras em **Regras Mínimas Nativas da Microsoft**. |
+
+O Visual Studio inclui estes conjuntos padrão de regras para código gerenciado:
+
+| Conjunto de regras | Descrição |
+|--|--|
+| **Regras básicas de correção da Microsoft** | Essas regras se concentram em erros lógicos e erros comuns cometidos no uso de APIs-framework. Inclua esta regra definida para expandir na lista de avisos relatados pelas regras mínimas recomendadas. |
+| **Regras de diretrizes básicas de design da Microsoft** | Essas regras se concentram em aplicar as melhores práticas para tornar seu código fácil de entender e usar. Inclua este conjunto de regras se o seu projeto incluir o código da biblioteca ou se você quiser impor práticas recomendadas para um código facilmente sustentável. |
+| **Regras de correção estendidas da Microsoft** | Essas regras se expandem sobre as regras básicas de correção para maximizar a lógica relatada e os erros de uso da estrutura. Ênfase extra é dada em cenários específicos, como interop COM e aplicativos móveis. Considere incluir esta regra definida se um desses cenários se aplica ao seu projeto ou para encontrar problemas adicionais em seu projeto. |
+| **Regras de diretrizes de design estendidas da Microsoft** | Essas regras se expandem sobre as regras básicas de diretriz de design para maximizar os problemas de usabilidade e manutenção relatados. Uma ênfase extra é dada às diretrizes de nomeação. Considere incluir este conjunto de regras se o seu projeto incluir código de biblioteca ou se você quiser impor os mais altos padrões para escrever código sustentável. |
+| **Regras de globalização da Microsoft** | Essas regras se concentram em problemas que impedem que os dados em seu aplicativo sejam exibidos corretamente quando usados em diferentes idiomas, locais e culturas. Inclua esta regra definida se seu aplicativo estiver localizado e/ou globalizado. |
+| **Regras mínimas gerenciadas pela Microsoft** | Essas regras se concentram nos problemas mais críticos do seu código para os quais a Análise de Código é a mais precisa.  Essas regras são pequenas em número e destinam-se apenas a ser executadas em edições limitadas do Visual Studio.  Use MinimumRecommendedRules.ruleset com outras edições do Visual Studio. |
+| **Regras recomendadas gerenciadas pela Microsoft** | Essas regras se concentram nos problemas mais críticos do seu código. Esses problemas incluem possíveis falhas de segurança, falhas de aplicativos e outros erros importantes de lógica e design. Recomendamos que você inclua esta regra definida em qualquer conjunto de regras personalizadas que você crie para seus projetos. |
+| **Regras mínimas da Microsoft Mixed (C++ /CLR)** | Essas regras se concentram nos problemas mais críticos em seus projetos C++ que suportam o Tempo de Execução de Idiomas Comuns. Esses problemas incluem possíveis falhas de segurança, falhas de aplicativos e outros erros importantes de lógica e design. Recomendamos que você inclua esta regra definida em qualquer conjunto de regras personalizadas que você crie para seus projetos C++ que suportam o Tempo de Execução do Idioma Comum. |
+| **Regras recomendadas da Microsoft Mixed (C++ /CLR)** | Essas regras se concentram nos problemas mais comuns e críticos em seus projetos C++ que suportam o Tempo de Execução do Idioma Comum. Esses problemas incluem possíveis falhas de segurança, falhas de aplicativos e outros erros importantes de lógica e design. Este conjunto de regras foi projetado para ser usado na edição visual studio profissional e superior. |
+| **Regras de segurança da Microsoft** | Este conjunto de regras contém todas as regras de segurança da Microsoft. Inclua esta regra definida para maximizar o número de potenciais problemas de segurança relatados. |
+
+Para incluir todas as regras:
+
+| Conjunto de regras | Descrição |
+|--|--|
+| **Todas as regras da Microsoft** | Este conjunto de regras contém todas as regras. A execução deste conjunto de regras pode resultar em um grande número de avisos sendo relatados. Use esta regra definida para obter uma imagem abrangente de todos os problemas em seu código. Ele pode ajudá-lo a decidir qual dos conjuntos de regras mais focados são mais apropriados para executar para seus projetos. |
 
 ## <a name="run-code-analysis"></a>Executar análise de código
 
-Na página análise de código da página de propriedades do projeto, você pode configurar a análise de código para ser executada cada vez que você compilar seu projeto. Você também pode executar a análise de código manualmente.
+Na página **de análise** de código da caixa de diálogo Propriedades do projeto, você pode configurar a análise de código para executar cada vez que você construir seu projeto. Você também pode executar a análise de código manualmente.
 
 Para executar a análise de código em uma solução:
 
-- No menu **Compilar** , escolha **executar análise de código na solução**.
+- No **menu Build,** escolha **Executar análise de código na solução**.
 
 Para executar a análise de código em um projeto:
 
-1. Na Gerenciador de Soluções, selecione o nome do projeto.
+1. No Solution Explorer, selecione o nome do projeto.
 
-1. No menu **Compilar** , escolha **executar análise de código no** *nome do projeto*.
+1. No **menu Build,** escolha **Executar análise de código em** nome do *projeto*.
 
 Para executar a análise de código em um arquivo:
 
-1. Na Gerenciador de Soluções, selecione o nome do arquivo.
+1. No Solution Explorer, selecione o nome do arquivo.
 
-1. No menu **Compilar** , escolha **executar análise de código no arquivo** ou pressione **Ctrl + Shift + Alt + F7**.
+1. No menu **Build,** escolha **Executar análise de código no arquivo** ou **pressione Ctrl+Shift+Alt+F7**.
 
-   O projeto ou solução é compilado e a análise de código é executada. Os resultados aparecem na Lista de Erros.
+   O projeto ou solução é compilado e a análise de código é executada. Os resultados aparecem na janela Lista de erros.
 
 ## <a name="analyze-and-resolve-code-analysis-warnings"></a>Analisar e resolver avisos de análise de código
 
-Para analisar um aviso específico, escolha o título do aviso no Lista de Erros. O aviso se expande para exibir informações adicionais sobre o problema. Quando possível, a análise de código exibe os números de linha e a lógica de análise que levaram ao aviso. Para obter informações detalhadas sobre o aviso, incluindo possíveis soluções para o problema, escolha a ID de aviso para exibir seu tópico de ajuda online correspondente.
+A janela Lista de erros lista os avisos de análise de código encontrados. Os resultados são exibidos em uma tabela. Se houver mais informações sobre um aviso específico, a primeira coluna contém um controle de expansão. Escolha-o para expandir o display para obter informações adicionais sobre o problema. Quando possível, a análise de código exibe os números de linha e a lógica de análise que levaram ao aviso.
 
-Quando você seleciona um aviso, a linha de código que causou o aviso é realçada no editor de código do Visual Studio.
+Para obter informações detalhadas sobre o aviso, incluindo possíveis soluções para o problema, escolha o ID de aviso na coluna Código para exibir seu artigo de ajuda on-line correspondente.
 
-Depois de entender o problema, você pode resolvê-lo no seu código. Em seguida, execute novamente a análise de código para certificar-se de que o aviso não aparecerá mais na Lista de Erros e que sua correção não gerou nenhum aviso novo.
+Clique duas vezes em um aviso para mover o cursor para a linha de código que causou o aviso no editor de código satelital Visual Studio. Ou pressione Enter no aviso selecionado.
 
-## <a name="suppress-code-analysis-warnings"></a>Suprimir avisos de análise de código
+Depois de entender o problema, você pode resolvê-lo no seu código. Em seguida, execute novamente a análise de código para garantir que o aviso não seja mais exibido na Lista de erros.
 
-Há ocasiões em que você pode decidir não corrigir um aviso de análise de código. Você pode decidir que resolver o aviso exige recodificação demais considerando a probabilidade de que o problema ocorrerá em qualquer implementação do seu código no mundo real. Ou você pode achar que a análise usada no aviso é inadequada nesse contexto específico. Você pode suprimir avisos individuais para que eles não apareçam mais no Lista de Erros.
+## <a name="create-work-items-for-code-analysis-warnings"></a>Crie itens de trabalho para avisos de análise de código
 
-### <a name="to-suppress-a-warning"></a>Para suprimir um aviso
+Você pode usar o recurso de rastreamento de itens de trabalho para registrar bugs de dentro do Visual Studio. Para usar esse recurso, você deve se conectar a uma instância do Azure DevOps Server (anteriormente, Team Foundation Server).
 
-1. Se as informações detalhadas não forem exibidas, escolha o título do aviso para expandi-la.
+### <a name="to-create-a-work-item-for-one-or-more-cc-code-warnings"></a>Para criar um item de trabalho para um ou mais avisos de código C/C++
 
-1. Escolha o link **Ações** na parte inferior do aviso.
-
-1. Escolha **suprimir mensagem** e, em seguida, escolha **na fonte**.
-
-   Suprimir uma mensagem insere `#pragma warning (disable:[warning ID])` que suprime o aviso para a linha de código.
-
-## <a name="create-work-items-for-code-analysis-warnings"></a>Criar itens de trabalho para avisos de análise de código
-
-Você pode usar o recurso de acompanhamento de item de trabalho para registrar bugs de dentro do Visual Studio. Para usar esse recurso, você deve se conectar a uma instância do Team Foundation Server.
-
-### <a name="to-create-a-work-item-for-one-or-more-cc-code-warnings"></a>Para criar um item de trabalho para um ou mais avisosC++ C/Code
-
-1. Na Lista de Erros, expanda e selecione os avisos
+1. Na lista de erros, expanda e selecione os avisos
 
 1. No menu de atalho para os avisos, escolha **Criar item de trabalho**e, em seguida, escolha o tipo de item de trabalho.
 
 1. O Visual Studio cria um único item de trabalho para os avisos selecionados e exibe o item de trabalho em uma janela de documento do IDE.
 
-1. Adicione informações adicionais e, em seguida, escolha **salvar item de trabalho**.
+1. Adicione qualquer informação adicional e, em seguida, escolha **Salvar o item de trabalho**.
 
-## <a name="search-and-filter-code-analysis-results"></a>Pesquisar e filtrar resultados da análise de código
+## <a name="search-and-filter-code-analysis-results"></a>Resultados de análise de código de pesquisa e filtro
 
-{1&gt;Você pode pesquisar listas longas de mensagens de aviso e filtrar avisos em soluções multiprojeto.&lt;1}
+Você pode pesquisar listas longas de mensagens de aviso e pode filtrar avisos em soluções multiprojeto.
 
-- **Para filtrar avisos por ID de aviso ou título**: Insira a palavra-chave na caixa de pesquisa.
+- **Para filtrar avisos por título ou ID de aviso**: Digite a palavra-chave na caixa Lista de erros de pesquisa.
 
-- **Para filtrar avisos por severidade**: por padrão, as mensagens de análise de código recebem uma severidade de **aviso**. Você pode atribuir a severidade de uma ou mais mensagens como **erro** em um conjunto de regras personalizadas. Na coluna **severidade** da **lista de erros**, escolha a seta suspensa e, em seguida, o ícone de filtro. Escolha **aviso** ou **erro** para exibir apenas as mensagens que recebem a respectiva severidade. Escolha **selecionar tudo** para exibir todas as mensagens.
+- **Para filtrar avisos por gravidade**: Por padrão, as mensagens de análise de código são atribuídas a uma gravidade de **Aviso**. Você pode atribuir a gravidade de uma ou mais mensagens como **erro** em um conjunto de regras personalizado. Na coluna **Gravidade** da Lista de **erros,** escolha a seta baixa e, em seguida, o ícone do filtro. Escolha **Aviso** ou **Erro** para exibir apenas as mensagens atribuídas à respectiva gravidade. Escolha **Selecionar Tudo** para exibir todas as mensagens.
 
 ## <a name="see-also"></a>Confira também
 

@@ -1,9 +1,11 @@
 ---
 title: _fullpath, _wfullpath
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fullpath
 - _wfullpath
+- _o__fullpath
+- _o__wfullpath
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: 30e62716c496ebb1a39b53a420f372a6e743c2c0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956275"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909950"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -67,10 +70,10 @@ Ponteiro para um buffer que contém o nome do caminho absoluto ou completo, ou *
 *relPath*<br/>
 Nome de caminho relativo.
 
-*maxLength*<br/>
+*Determinado*<br/>
 Comprimento máximo do buffer de nome de caminho absoluto (*absPath*). Esse comprimento é em bytes para **_fullpath** , mas em caracteres largos (**wchar_t**) para **_wfullpath**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna um ponteiro para um buffer que contém o nome do caminho absoluto (*absPath*). Se houver um erro (por exemplo, se o valor passado em *RelPath* incluir uma letra de unidade que não seja válida ou não puder ser encontrada, ou se o comprimento do nome do caminho absoluto criado (*absPath*) for maior que *MaxLength*), a função retornará **NULL**.
 
@@ -81,6 +84,8 @@ A função **_fullpath** expande o nome de caminho relativo em *RelPath* para se
 Por exemplo, para usar rotinas de tempo de execução de C, o aplicativo deve incluir os arquivos de cabeçalho que contêm as declarações para as rotinas. Cada instrução include do arquivo de cabeçalho faz referência ao local do arquivo de forma relativa (do diretório de trabalho do aplicativo):
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <stdlib.h>
 ```
 
@@ -88,7 +93,7 @@ quando o caminho absoluto (local do sistema de arquivos real) do arquivo pode se
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-o **_fullpath** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **_wfullpath** é uma versão de caractere largo do **_fullpath**; os argumentos de cadeia de caracteres para **_wfullpath** são cadeias de caracteres largos. **_wfullpath** e **_fullpath** se comportam de forma idêntica, exceto pelo fato de que o **_wfullpath** não lida com cadeias de caracteres multibyte.
+**_fullpath** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **_wfullpath** é uma versão de caractere largo do **_fullpath**; os argumentos de cadeia de caracteres para **_wfullpath** são cadeias de caracteres largos. **_wfullpath** e **_fullpath** se comportam de forma idêntica, exceto que **_wfullpath** não lida com cadeias de caracteres multibyte.
 
 Se **_DEBUG** e **_CRTDBG_MAP_ALLOC** forem definidos, as chamadas para **_fullpath** e **_wfullpath** serão substituídas por chamadas para **_fullpath_dbg** e **_wfullpath_dbg** para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
@@ -146,7 +151,7 @@ Full path is: C:\test
 Full path is: C:\Documents and Settings\user\test
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>

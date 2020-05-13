@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: c69d2308abe2ee3d7e6b392f5a9e78a004791501
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: ebce276c8c4efa822601fe36652057b37e922570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778366"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334441"
 ---
 # <a name="type-int"></a>Tipo int
 
@@ -20,15 +20,15 @@ O tamanho de um item `int` com ou sem sinal é o tamanho padrão de um inteiro e
 
 Os especificadores de tipo `int` e `unsigned int` (ou simplesmente `unsigned`) definem determinados recursos da linguagem C (por exemplo, o tipo `enum`). Nesses casos, as definições de `int` e o inteiro sem sinal para uma implementação específica determinam o armazenamento real.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Os inteiros com sinal são representados no formato de dois complementos. O bit mais significativo contém o sinal: 1 para o negativo, 0 para o sinal positivo e zero. O intervalo de valores é fornecido em [limites C C++ e inteiros](../c-language/cpp-integer-limits.md), que é obtido dos limites. Arquivo de cabeçalho H.
+Os inteiros com sinal são representados no formato de dois complementos. O bit mais significativo contém o sinal: 1 para o negativo, 0 para o sinal positivo e zero. O intervalo de valores é fornecido em [limites de inteiro C e C++](../c-language/cpp-integer-limits.md), que é obtido dos limites. Arquivo de cabeçalho H.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 > [!NOTE]
->  Os especificadores de tipo int e unsigned int são amplamente usados em programas C porque permitem que um computador específico administre valores inteiros da maneira mais eficiente. No entanto, como os tamanhos dos tipos int e unsigned int variam, os programas que dependem de um int de determinado tamanho não podem ser portáteis para outros computadores. Para tornar os programas mais portáteis, você pode usar expressões com o operador sizeof (como descrito em [O operador sizeof](../c-language/sizeof-operator-c.md)) em vez de tamanhos de dados embutidos em código.
+> Os especificadores de tipo int e unsigned int são amplamente usados em programas C porque permitem que um computador específico administre valores inteiros da maneira mais eficiente. No entanto, como os tamanhos dos tipos int e unsigned int variam, os programas que dependem de um int de determinado tamanho não podem ser portáteis para outros computadores. Para tornar os programas mais portáteis, você pode usar expressões com o operador sizeof (como descrito em [O operador sizeof](../c-language/sizeof-operator-c.md)) em vez de tamanhos de dados embutidos em código.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Armazenamento de tipos básicos](../c-language/storage-of-basic-types.md)

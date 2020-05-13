@@ -29,11 +29,11 @@ Para criar uma DLL somente de recursos, você cria um novo projeto de DLL do Win
 
 1. No **Assistente de aplicativo Win32**, selecione **configurações do aplicativo**. Escolha um **tipo de aplicativo** de **dll**. Em **Opções adicionais**, selecione **projeto vazio**. Escolha **concluir** para criar seu projeto.
 
-1. Crie um novo script de recurso que contenha os recursos para a DLL (como uma cadeia de caracteres ou um menu). Salve o arquivo de `.rc`.
+1. Crie um novo script de recurso que contenha os recursos para a DLL (como uma cadeia de caracteres ou um menu). Salve o arquivo `.rc`.
 
-1. No menu **projeto** , selecione **Adicionar item existente**e, em seguida, insira o novo arquivo de `.rc` no projeto.
+1. No menu **projeto** , selecione **Adicionar item existente**e, em seguida, insira o `.rc` novo arquivo no projeto.
 
-1. Especifique a opção do vinculador [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` impede que o vinculador vincule uma referência a `_main` na DLL; Essa opção é necessária para criar uma DLL somente de recursos.
+1. Especifique a opção do vinculador [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY`impede que o vinculador vincule uma referência para `_main` a dll; Essa opção é necessária para criar uma DLL somente de recursos.
 
 1. Compile a DLL.
 
@@ -44,11 +44,11 @@ Para criar uma DLL somente de recursos, você cria um novo projeto de DLL do Win
 
 1. Na caixa de diálogo **projeto de área de trabalho do Windows** , selecione um tipo de **aplicativo** da **biblioteca de vínculo dinâmico**. Em **Opções adicionais**, selecione **projeto vazio**. Escolha **OK** para criar seu projeto.
 
-1. Crie um novo script de recurso que contenha os recursos para a DLL (como uma cadeia de caracteres ou um menu). Salve o arquivo de `.rc`.
+1. Crie um novo script de recurso que contenha os recursos para a DLL (como uma cadeia de caracteres ou um menu). Salve o arquivo `.rc`.
 
-1. No menu **projeto** , selecione **Adicionar item existente**e, em seguida, insira o novo arquivo de `.rc` no projeto.
+1. No menu **projeto** , selecione **Adicionar item existente**e, em seguida, insira o `.rc` novo arquivo no projeto.
 
-1. Especifique a opção do vinculador [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` impede que o vinculador vincule uma referência a `_main` na DLL; Essa opção é necessária para criar uma DLL somente de recursos.
+1. Especifique a opção do vinculador [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY`impede que o vinculador vincule uma referência para `_main` a dll; Essa opção é necessária para criar uma DLL somente de recursos.
 
 1. Compile a DLL.
 
@@ -56,7 +56,7 @@ Para criar uma DLL somente de recursos, você cria um novo projeto de DLL do Win
 
 ## <a name="use-a-resource-only-dll"></a>Usar uma DLL somente de recursos
 
-O aplicativo que usa a DLL somente de recursos deve chamar [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) ou uma função relacionada para vincular explicitamente à dll. Para acessar os recursos, chame as funções genéricas `FindResource` e `LoadResource`, que funcionam em qualquer tipo de recurso. Ou então, chame uma das seguintes funções específicas do recurso:
+O aplicativo que usa a DLL somente de recursos deve chamar [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) ou uma função relacionada para vincular explicitamente à dll. Para acessar os recursos, chame as funções `FindResource` genéricas e `LoadResource`, que funcionam em qualquer tipo de recurso. Ou então, chame uma das seguintes funções específicas do recurso:
 
 - `FormatMessage`
 
@@ -74,7 +74,7 @@ O aplicativo que usa a DLL somente de recursos deve chamar [LoadLibraryEx](loadl
 
 O aplicativo deve chamar `FreeLibrary` quando terminar de usar os recursos.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)\
+[Trabalhando com arquivos de recursos](../windows/working-with-resource-files.md)\
 [Criar DLLs C /C++ no Visual Studio](dlls-in-visual-cpp.md)

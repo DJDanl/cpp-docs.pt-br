@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: 4cb311289207dbcf78186e11b2c7f03c503389e5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 046cbca30b6cdef2dc4e7dbbe2791d52384d9f25
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450312"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376566"
 ---
-# <a name="syncnone-class"></a>Classe sync_none
+# <a name="sync_none-class"></a>Classe sync_none
 
 Descreve um [filtro de sincronização](../standard-library/allocators-header.md) que não fornece nenhuma sincronização.
 
@@ -40,8 +40,8 @@ class sync_none
 
 |Função de membro|Descrição|
 |-|-|
-|[allocate](#allocate)|Aloca um bloco de memória.|
-|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
+|[Alocar](#allocate)|Aloca um bloco de memória.|
+|[Desalocar](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
 |[equals](#equals)|Compara a igualdade de dois caches.|
 
 ## <a name="requirements"></a>Requisitos
@@ -50,7 +50,7 @@ class sync_none
 
 **Namespace:** stdext
 
-## <a name="allocate"></a>  sync_none::allocate
+## <a name="sync_noneallocate"></a><a name="allocate"></a>sync_none::alocar
 
 Aloca um bloco de memória.
 
@@ -62,13 +62,13 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*count*|O número de elementos na matriz a serem alocados.|
+|*contagem*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="remarks"></a>Comentários
 
 A função membro retorna `cache.allocate(count)`, em que `cache` é o objeto de cache.
 
-## <a name="deallocate"></a>  sync_none::deallocate
+## <a name="sync_nonedeallocate"></a><a name="deallocate"></a>sync_none::deallocate
 
 Libera um número especificado de objetos do armazenamento começando em uma posição especificada.
 
@@ -80,14 +80,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|*count*|O número de objetos a serem desalocados do armazenamento.|
+|*Ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*contagem*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
 A função membro chama `cache.deallocate(ptr, count)`, em que `cache` representa o objeto de cache.
 
-## <a name="equals"></a>  sync_none::equals
+## <a name="sync_noneequals"></a><a name="equals"></a>sync_none::é igual
 
 Compara a igualdade de dois caches.
 
@@ -102,12 +102,12 @@ bool equals(const sync<Cache>& Other) const;
 |*Cache*|O objeto de cache do filtro de sincronização.|
 |*Outros*|O objeto de cache a ser comparado quanto à igualdade.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A função de membro sempre retorna **true**.
+A função do membro sempre retorna **verdadeira.**
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alocadores>](../standard-library/allocators-header.md)

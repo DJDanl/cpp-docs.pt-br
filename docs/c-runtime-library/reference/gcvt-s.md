@@ -1,8 +1,9 @@
 ---
 title: _gcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt_s
+- _o__gcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: da36641f6a3ba8dc1da0894aedbfa390d2e796ae
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625041"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919422"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -62,7 +64,7 @@ errno_t _gcvt_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Buffer para armazenar o resultado da conversão.
 
 *sizeInBytes*<br/>
@@ -71,20 +73,20 @@ O tamanho do buffer.
 *value*<br/>
 Valor a ser convertido.
 
-*digits*<br/>
+*dígitos*<br/>
 Número de dígitos significativos armazenados.
 
 ## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido. Se ocorrer uma falha devido a um parâmetro inválido (consulte na tabela a seguir os valores inválidos), o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, um código de erro será retornado. Códigos de erro são definidos em Errno.h. Para obter uma lista desses erros, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
-|*buffer*|*sizeInBytes*|*value*|*digits*|Valor de|Valor no *buffer*|
+|*completo*|*sizeInBytes*|*value*|*dígitos*|Retorno|Valor no *buffer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
-|Not **NULL** (aponta para memória válida)|zero|qualquer|qualquer|**EINVAL**|Não modificado.|
-|Not **NULL** (aponta para memória válida)|qualquer|qualquer|>= *sizeInBytes*|**EINVAL**|Não modificado.|
+|**NULO**|any|any|any|**EINVAL**|Não modificado.|
+|Not **NULL** (aponta para memória válida)|zero|any|any|**EINVAL**|Não modificado.|
+|Not **NULL** (aponta para memória válida)|any|any|>= *sizeInBytes*|**EINVAL**|Não modificado.|
 
 **Problemas de segurança**
 
@@ -98,13 +100,15 @@ No C++, o uso dessa função é simplificado por uma sobrecarga de modelo. A sob
 
 A versão de depuração dessa função primeiro preenche o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
-Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -137,7 +141,7 @@ int main()
 Converted value: 1.2
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>

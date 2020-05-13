@@ -1,10 +1,11 @@
 ---
 title: tan, tanf, tanl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tan
 - tanf
 - tanl
+- _o_tan
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168701"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912373"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -59,7 +61,7 @@ float tan( float x );  // C++ only
 long double tan( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
 Ângulo em radianos.
@@ -70,12 +72,14 @@ As funções **Tan** retornam a tangente de *x*. Se *x* for maior ou igual a 263
 
 |Entrada|Exceção SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN,IND|nenhuma|_DOMAIN|
 |± INF|**Inválido**|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Tan** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **Tan** sempre leva e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Tan** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **Tan** sempre leva e retorna **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +87,7 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Tan** que leva
 |-------------|---------------------|-|
 |**Tan**, **tanf**, **tanl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

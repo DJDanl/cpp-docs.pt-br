@@ -1,10 +1,12 @@
 ---
 title: _getcwd, _wgetcwd
-description: Funções da biblioteca de tempo de execução C _getcwd, _wgetcwd obter o diretório de trabalho atual.
-ms.date: 09/24/2019
+description: As funções da biblioteca de tempo de execução C _getcwd, _wgetcwd obter o diretório de trabalho atual.
+ms.date: 4/2/2020
 api_name:
 - _wgetcwd
 - _getcwd
+- _o__getcwd
+- _o__wgetcwd
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274626"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915742"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -69,21 +72,23 @@ Local de armazenamento para o caminho.
 *maxlen*\
 Comprimento máximo do caminho em caracteres: **Char** para **_getcwd** e **wchar_t** para **_wgetcwd**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para o *buffer*. Um valor de retorno **nulo** indica um erro e **errno** é definido como **ENOMEM**, indicando que não há memória suficiente para alocar *maxlen* bytes (quando um argumento **nulo** é fornecido como *buffer*) ou para **ERANGE** , indicando que o caminho tem mais de *maxlen* caracteres. Se *maxlen* for menor ou igual a zero, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
+Retorna um ponteiro para o *buffer*. Um valor de retorno **nulo** indica um erro e **errno** é definido como **ENOMEM**, indicando que não há memória suficiente para alocar *maxlen* bytes (quando um argumento **nulo** é fornecido como *buffer*) ou para **ERANGE**, indicando que o caminho tem mais de *maxlen* caracteres. Se *maxlen* for menor ou igual a zero, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **_getcwd** Obtém o caminho completo do diretório de trabalho atual para a unidade padrão e o armazena no *buffer*. O argumento Integer *maxlen* especifica o comprimento máximo para o caminho. Ocorrerá um erro se o comprimento do caminho (incluindo o caractere nulo de terminação) exceder *maxlen*. O argumento de *buffer* pode ser **nulo**; um buffer de pelo menos o tamanho *maxlen* (somente se necessário) é alocado automaticamente, usando **malloc**, para armazenar o caminho. Esse buffer pode ser liberado posteriormente chamando **Free** e passando o valor de retorno de **_getcwd** (um ponteiro para o buffer alocado).
+A função **_getcwd** Obtém o caminho completo do diretório de trabalho atual para a unidade padrão e o armazena no *buffer*. O argumento Integer *maxlen* especifica o comprimento máximo para o caminho. Ocorrerá um erro se o comprimento do caminho (incluindo o caractere nulo de terminação) exceder *maxlen*. O argumento de *buffer* pode ser **nulo**; um buffer de pelo menos o tamanho *maxlen* (somente se necessário) é alocado automaticamente, usando **malloc**, para armazenar o caminho. Esse buffer pode ser liberado mais tarde chamando **gratuitamente** e passando o valor de retorno de **_getcwd** (um ponteiro para o buffer alocado).
 
 **_getcwd** retorna uma cadeia de caracteres que representa o caminho do diretório de trabalho atual. Se o diretório de trabalho atual for a raiz, a cadeia de caracteres terminará com`\`uma barra invertida (). Se o diretório de trabalho atual for um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.
 
-**_wgetcwd** é uma versão de caractere largo do **_getcwd**; o argumento de *buffer* e o valor de retorno de **_wgetcwd** são cadeias de caracteres largos. **_wgetcwd** e **_getcwd** se comportam de outra forma.
+**_wgetcwd** é uma versão de caractere largo do **_getcwd**; o argumento de *buffer* e o valor de retorno de **_wgetcwd** são cadeias de caracteres largos. **_wgetcwd** e **_getcwd** se comportar de forma idêntica.
 
-Quando **_DEBUG** e **_CRTDBG_MAP_ALLOC** são definidos, chamadas para **_getcwd** e **_wgetcwd** são substituídas por chamadas para **_getcwd_dbg** e **_wgetcwd_dbg** para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+Quando **_DEBUG** e **_CRTDBG_MAP_ALLOC** são definidos, as chamadas para **_getcwd** e **_wgetcwd** são substituídas por chamadas para **_getcwd_dbg** e **_wgetcwd_dbg** para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -135,7 +140,7 @@ int main( void )
 C:\Code
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de diretório](../../c-runtime-library/directory-control.md)\
 [_chdir, _wchdir](chdir-wchdir.md)\

@@ -2,16 +2,16 @@
 title: Matriz e WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: 2ade7981d391288edd78f622b4753d546c5eaa04
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: e050fad38d4f70c651fc0ebfddb51a33e31da6f3
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740687"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032402"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Matriz e WriteOnlyArray (C++/CX)
 
-Você pode usar livremente matrizes regulares de estilo C ou [std:: array](../standard-library/array-class-stl.md) em C++um programa/CX (embora [std:: vector](../standard-library/vector-class.md) geralmente é uma opção melhor), mas em qualquer API que é publicada em metadados, você deve converter uma matriz em estilo C ou vetor para uma [plataforma:: array ](../cppcx/platform-array-class.md)ou o tipo [Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) dependendo de como ele está sendo usado. O tipo [Platform::Array](../cppcx/platform-array-class.md) não é tão eficiente nem tão poderoso quanto [std::vector](../standard-library/vector-class.md), assim, como uma diretriz geral, você deve evitar seu uso no código interno que executa muitas operações nos elementos da matriz.
+Você pode usar livremente matrizes de estilo C ou [std::array](../standard-library/array-class-stl.md) em um programa C++/CX (embora [o std::vetor](../standard-library/vector-class.md) seja muitas vezes uma escolha melhor), mas em qualquer API que seja publicada em metadados, você deve converter um array ou vetor de estilo C para uma [Plataforma::Array](../cppcx/platform-array-class.md) ou [Plataforma::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) tipo, dependendo de como ele está sendo usado. O tipo [Platform::Array](../cppcx/platform-array-class.md) não é tão eficiente nem tão poderoso quanto [std::vector](../standard-library/vector-class.md), assim, como uma diretriz geral, você deve evitar seu uso no código interno que executa muitas operações nos elementos da matriz.
 
 Os seguintes tipos de matriz podem ser passados pela ABI:
 
@@ -23,17 +23,17 @@ Os seguintes tipos de matriz podem ser passados pela ABI:
 
 1. valor de retorno de Platform::Array^
 
-Você usa esses tipos de matriz para implementar os três tipos de padrões de matriz que são definidos pelo Windows Runtime.
+Você usa esses tipos de array para implementar os três tipos de padrões de matriz definidos pelo Windows Runtime.
 
-PassArray usado quando o chamador passa uma matriz para um método. O C++ tipo de parâmetro de `const`entrada é [Platform:: array](../cppcx/platform-array-class.md)\<T >.
+PassArray Usado quando o chamador passa uma matriz para um método. O tipo de parâmetro de `const`entrada C++ é [Plataforma::Array](../cppcx/platform-array-class.md)\<T>.
 
-FillArray usado quando o chamador passa uma matriz para o método preencher. O C++ tipo de parâmetro de entrada é [Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
+FillArray Usado quando o chamador passa uma matriz para o método a ser preenchido. O tipo de parâmetro de entrada C++ é [Plataforma:WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T>.
 
-ReceiveArray usado quando o chamador recebe uma matriz que o método aloca. No C++/CX, é possível retornar a matriz no valor de retorno como um Array^ ou retorná-la o como um parâmetro de saída como o tipo Array^*.
+ReceiveArray Usado quando o chamador recebe uma matriz que o método aloca. No C++/CX, é possível retornar a matriz no valor de retorno como um Array^ ou retorná-la o como um parâmetro de saída como o tipo Array^*.
 
 ## <a name="passarray-pattern"></a>Padrão de PassArray
 
-Quando o código do cliente passa uma matriz para um método do C++ e o método não a modifica, o método aceita a matriz como Array^ const. No nível da ABI (interface binária de aplicativo) Windows Runtime, isso é conhecido como um PassArray. O exemplo a seguir mostra como passar uma matriz alocada em JavaScript a uma função C++ que lê dela.
+Quando o código do cliente passa uma matriz para um método do C++ e o método não a modifica, o método aceita a matriz como Array^ const. No nível de interface binária do aplicativo Windows Runtime (ABI), isso é conhecido como PassArray. O exemplo a seguir mostra como passar uma matriz alocada em JavaScript a uma função C++ que lê dela.
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
@@ -43,7 +43,7 @@ O snippet a seguir mostra o método do C++:
 
 ## <a name="receivearray-pattern"></a>Padrão ReceiveArray
 
-No padrão ReceiveArray, o código do cliente declara uma matriz e a passa a um método que aloca a memória para ela e a inicializa. O C++ tipo de parâmetro de entrada é um ponteiro para-chapéu `Array<T>^*`:. O exemplo a seguir mostra como declarar um objeto de matriz em JavaScript e passá-lo a uma função C++ que aloca a memória, inicializa os elementos e o retorna ao JavaScript. O JavaScript trata a matriz alocada como um valor de retorno, mas a função C++ a trata como um parâmetro de saída.
+No padrão ReceiveArray, o código do cliente declara uma matriz e a passa a um método que aloca a memória para ela e a inicializa. O tipo de parâmetro de entrada C++ `Array<T>^*`é um ponteiro-a-chapéu: . O exemplo a seguir mostra como declarar um objeto de matriz em JavaScript e passá-lo a uma função C++ que aloca a memória, inicializa os elementos e o retorna ao JavaScript. O JavaScript trata a matriz alocada como um valor de retorno, mas a função C++ a trata como um parâmetro de saída.
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -73,22 +73,22 @@ O exemplo a seguir mostra como construir um [Platform::Array](../cppcx/platform-
 
 ## <a name="jagged-arrays"></a>Matrizes denteadas
 
-O sistema de tipos do Tempo de Execução do Windows não oferece suporte ao conceito de matrizes denteadas e, portanto, você não pode usar `IVector<Platform::Array<T>>` como um valor de retorno ou parâmetro de método em um método público. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
+O sistema de tipos do Windows Runtime não oferece suporte ao conceito de matrizes denteadas e, portanto, você não pode usar `IVector<Platform::Array<T>>` como um valor de retorno ou parâmetro de método em um método público. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
 
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>Usar ArrayReference para evitar a cópia de dados
 
 Em alguns cenários onde os dados estiverem sendo passados pela ABI para um [Platform::Array](../cppcx/platform-array-class.md)e você, por fim, desejar processar esses dados em uma matriz C-style para obter eficiência, poderá usar [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) para evitar a operação de cópia extra. Quando você passar um [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) como um argumento para um parâmetro que usa um `Platform::Array`, o `ArrayReference` armazenará os dados diretamente em uma matriz C-style especificada por você. Apenas esteja ciente de que `ArrayReference` não tem nenhum bloqueio nos dados de origem, portanto, se esses dados forem modificados ou excluídos em outro thread antes de a chamada ser concluída, os resultados serão indefinidos.
 
-O seguinte snippet de código mostra como copiar os resultados de uma operação [DataReader](/uwp/api/Windows.Storage.Streams.DataReader) em um `Platform::Array` (o padrão comum) e como substituir `ArrayReference` para copiar os dados diretamente em uma matriz C-style:
+O seguinte snippet de código mostra como copiar os resultados de uma operação [DataReader](/uwp/api/windows.storage.streams.datareader) em um `Platform::Array` (o padrão comum) e como substituir `ArrayReference` para copiar os dados diretamente em uma matriz C-style:
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Evitar a exposição de uma matriz como uma propriedade
 
-Em geral, você deve evitar expor um tipo `Platform::Array` como uma propriedade em uma classe ref, pois a matriz inteira será retornada mesmo quando o código do cliente estiver apenas tentando acessar um único elemento. Quando você precisar expor um contêiner de sequências como uma propriedade em uma classe ref pública, [Windows::Foundation::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) será uma opção melhor. Em APIs privadas ou internas (que não são publicadas nos metadados), pense na possibilidade de usar um contêiner padrão do C++, como [std::vector](../standard-library/vector-class.md).
+Em geral, você deve evitar expor um tipo `Platform::Array` como uma propriedade em uma classe ref, pois a matriz inteira será retornada mesmo quando o código do cliente estiver apenas tentando acessar um único elemento. Quando você precisar expor um contêiner de sequências como uma propriedade em uma classe ref pública, [Windows::Foundation::IVector](/uwp/api/windows.foundation.collections.ivector-1) será uma opção melhor. Em APIs privadas ou internas (que não são publicadas nos metadados), pense na possibilidade de usar um contêiner padrão do C++, como [std::vector](../standard-library/vector-class.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
+[Sistema de tipo](../cppcx/type-system-c-cx.md)<br/>
 [Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)

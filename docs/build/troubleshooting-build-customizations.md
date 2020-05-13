@@ -29,12 +29,12 @@ Se os eventos ou as etapas de build personalizadas não estão funcionando confo
 
 - Examine o log de build no diretório de arquivos intermediários para ver o que realmente foi executado. O caminho e o nome do log de build é representado pela expressão de macro **$(IntDir)\\$(MSBuildProjectName).log** do **MSBuild**.
 
-- Modifique as configurações do projeto para coletar mais do que a quantidade padrão de informações no log de build. No menu **Ferramentas**, clique em **Opções**. Na caixa de diálogo **Opções**, clique no nó **Projetos e Soluções** e, em seguida, clique no nó **Compilar e Executar**. Em seguida, na caixa **Detalhes do arquivo de log de build do projeto do MSBuild**, clique em **Detalhado**.
+- Modifique as configurações do projeto para coletar mais do que a quantidade padrão de informações no log de build. No menu **Ferramentas** , clique em **Opções**. Na caixa de diálogo **Opções**, clique no nó **Projetos e Soluções** e, em seguida, clique no nó **Compilar e Executar**. Em seguida, na caixa **Detalhes do arquivo de log de build do projeto do MSBuild**, clique em **Detalhado**.
 
 - Verifique os valores das macros de diretório ou de nome de arquivo que você está usando. Você pode ecoar as macros individualmente ou adicionar `copy %0 command.bat` ao início da etapa de build personalizada, o que copiará os comandos da etapa de build personalizada para command.bat com todas as macros expandidas.
 
 - Execute os eventos e as etapas de build personalizadas individualmente para verificar o comportamento.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Noções básicas sobre etapas e eventos compilação personalizada](understanding-custom-build-steps-and-build-events.md)

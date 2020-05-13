@@ -5,11 +5,11 @@ helpviewer_keywords:
 - integers
 ms.assetid: 4ea91011-5b88-41f8-ab3c-c0bca57c6987
 ms.openlocfilehash: e78436958372db49202e6deaf6fd0840b5bcdd13
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146899"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344187"
 ---
 # <a name="integers"></a>Inteiros
 
@@ -19,10 +19,10 @@ ms.locfileid: "56146899"
 
 - [Operações bit a bit com sinal](../c-language/signed-bitwise-operations.md)
 
-- [Pendências](../c-language/remainders.md)
+- [Restantes](../c-language/remainders.md)
 
 - [Deslocamentos para a direita](../c-language/right-shifts.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Comportamento definido pela implementação](../c-language/implementation-defined-behavior.md)

@@ -14,11 +14,11 @@ ms.locfileid: "73964898"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma
 
-Você pode editar um arquivo de C++ projeto do Visual Studio para direcionar versões C++ diferentes do conjunto de ferramentas de plataforma, oC++SDK do Windows e o .NET Framework (apenas projetos/CLI). Por padrão, o sistema do projeto usa a versão do .NET Framework e do conjunto de ferramentas que corresponde à versão do Visual Studio usada para criar o projeto. Você pode modificar todos esses valores no arquivo. vcxproj para que você possa usar a mesma base de código para cada destino de compilação.
+Você pode editar um arquivo de projeto do Visual Studio C++ para direcionar versões diferentes do conjunto de ferramentas da plataforma C++, o SDK do Windows e o .NET Framework (somente projetos C++/CLI). Por padrão, o sistema do projeto usa a versão do .NET Framework e do conjunto de ferramentas que corresponde à versão do Visual Studio usada para criar o projeto. Você pode modificar todos esses valores no arquivo. vcxproj para que você possa usar a mesma base de código para cada destino de compilação.
 
 ## <a name="platform-toolset"></a>Conjunto de ferramentas de plataforma
 
-O conjunto de ferramentas de plataforma C++ consiste no compilador (CL. exe) e no vinculador (link. exe), juntamente comC++ as bibliotecas C/Standard. Desde o Visual Studio 2015, a versão principal do conjunto de ferramentas permaneceu em 14, o que significa que os projetos compilados com o Visual Studio 2019 ou o Visual Studio 2017 são ABI-versões compatíveis com projetos compilados com o Visual Studio 2015. A versão secundária foi atualizada em 1 para cada versão desde o Visual Studio 2015:
+O conjunto de ferramentas de plataforma consiste no compilador C++ (CL. exe) e no vinculador (link. exe), juntamente com as bibliotecas padrão C/C++. Desde o Visual Studio 2015, a versão principal do conjunto de ferramentas permaneceu em 14, o que significa que os projetos compilados com o Visual Studio 2019 ou o Visual Studio 2017 são ABI-versões compatíveis com projetos compilados com o Visual Studio 2015. A versão secundária foi atualizada em 1 para cada versão desde o Visual Studio 2015:
 
 - Visual Studio 2015: v140
 - Visual Studio 2017: v141
@@ -26,13 +26,13 @@ O conjunto de ferramentas de plataforma C++ consiste no compilador (CL. exe) e n
 
 Esses conjuntos de ferramentas dão suporte ao .NET Framework 4,5 e posterior.
 
-O Visual Studio também dá suporte a multidirecionamento para C++ projetos. Você pode usar o IDE do Visual Studio para editar e compilar projetos que foram criados com versões anteriores do Visual Studio, sem atualizá-los para usar uma nova versão do conjunto de ferramentas. Você precisa ter os conjuntos de ferramentas mais antigos instalados no seu computador. Para obter mais informações, consulte [como usar vários destinos nativos no Visual Studio](../porting/use-native-multi-targeting.md). Por exemplo, no Visual Studio 2015, você pode *direcionar* .NET Framework 2,0, mas deve usar um conjunto de ferramentas anterior que ofereça suporte a ele.
+O Visual Studio também dá suporte a multidirecionamento para projetos C++. Você pode usar o IDE do Visual Studio para editar e compilar projetos que foram criados com versões anteriores do Visual Studio, sem atualizá-los para usar uma nova versão do conjunto de ferramentas. Você precisa ter os conjuntos de ferramentas mais antigos instalados no seu computador. Para obter mais informações, consulte [como usar vários destinos nativos no Visual Studio](../porting/use-native-multi-targeting.md). Por exemplo, no Visual Studio 2015, você pode *direcionar* .NET Framework 2,0, mas deve usar um conjunto de ferramentas anterior que ofereça suporte a ele.
 
-## <a name="target-framework-ccli-project-only"></a>Estrutura de destinoC++(somente projeto/CLI)
+## <a name="target-framework-ccli-project-only"></a>Estrutura de destino (somente projeto C++/CLI)
 
 Ao alterar a Estrutura de destino, altere também o conjunto de ferramentas da plataforma para uma versão que suporte essa Estrutura. Por exemplo, para direcionar o .NET Framework 4,5, você deve usar um conjunto de ferramentas de plataforma compatível, como o Visual Studio 2015 (V140), Visual Studio 2013 (V120) ou o Visual Studio 2012 (V110). Você pode usar o conjunto de ferramentas do [SDK do Windows 7,1](https://www.microsoft.com/download/details.aspx?id=8279) para direcionar o .NET Framework 2,0, 3,0, 3,5 e 4 e as plataformas x86/x64.
 
-É possível estender a plataforma de destino ainda mais criando um conjunto de ferramentas personalizado da plataforma. Para obter mais informações, consulte [ C++ multi-Targeting nativo](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) no C++ blog do Visual.
+É possível estender a plataforma de destino ainda mais criando um conjunto de ferramentas personalizado da plataforma. Para obter mais informações, consulte [C++ multi-Targeting nativo](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) no blog Visual C++.
 
 ### <a name="to-change-the-target-framework"></a>Para alterar a Estrutura de destino
 
@@ -63,8 +63,8 @@ Ao alterar a Estrutura de destino, altere também o conjunto de ferramentas da p
 
 1. No painel direito, selecione **conjunto de ferramentas de plataforma** e, em seguida, selecione o conjunto de ferramentas desejado na lista suspensa. Por exemplo, se você tiver instalado o conjunto de ferramentas do Visual Studio 2010, selecione **visual studio 2010 (V100)** para usá-lo para seu projeto.
 
-1. Selecione o botão **OK**.
+1. Clique no botão **OK**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[MSBuild na linha de comando – C++](msbuild-visual-cpp.md)
+[MSBuild na linha de comando-C++](msbuild-visual-cpp.md)

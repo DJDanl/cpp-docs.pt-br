@@ -1,21 +1,21 @@
 ---
-title: Ferramentas e funcionalidades do C++ em edições do Visual Studio
+title: Ferramentas e recursos do C++ em edições do Visual Studio
 ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079248"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366791"
 ---
-# <a name="c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e funcionalidades do C++ em edições do Visual Studio
+# <a name="c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e recursos do C++ em edições do Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos que declarado de outra forma, todos os recursos estão disponíveis em todas as edições: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alguns recursos exigem cargas de trabalho específicas ou componentes opcionais, que você pode instalar com o Instalador do Visual Studio.
+Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos que seja declarado o contrário, todos os recursos estão disponíveis em todas as edições: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alguns recursos exigem cargas de trabalho específicas ou componentes opcionais, que você pode instalar com o Instalador do Visual Studio.
 
 ## <a name="platforms"></a>Plataformas
 
@@ -41,9 +41,11 @@ O Visual Studio inclui as seguintes cargas de trabalho para desenvolvimento do C
 ### <a name="desktop-development-with-c"></a>Desenvolvimento para desktop com C++
 
 Incluído:
+
 - Principais recursos de área de trabalho do C++
 
 Componentes opcionais:
+
 - MSVC v142 – ferramentas de build do C++ para VS 2019 x64/x86 (v14.21)
 - SDK do Windows 10 (10.0.17763.0)
 - Depurador Just-In-Time
@@ -68,17 +70,20 @@ Componentes opcionais:
 ### <a name="linux-development-with-c"></a>Desenvolvimento de Linux com C++
 
 Incluído:
+
 - Funcionalidades principais do C++
 - Runtime C Universal do Windows
 - Desenvolvimento do C++ para Linux
 
 Componentes opcionais:
+
 - Ferramentas CMake do C++ para Linux
 - Ferramentas de desenvolvimento inseridas e de IoT
 
 ### <a name="universal-windows-platform-development"></a>Desenvolvimento na Plataforma Universal do Windows
 
 Incluído:
+
 - Blend for Visual Studio
 - .NET Native e .NET Standard
 - Gerenciador de pacotes NuGet
@@ -86,6 +91,7 @@ Incluído:
 - SDK do Windows 10 (10.0.17763.0)
 
 Componentes opcionais:
+
 - IntelliCode
 - IntelliTrace (somente Enterprise)
 - Conectividade de dispositivos USB
@@ -100,12 +106,14 @@ Componentes opcionais:
 ### <a name="c-game-development"></a>Desenvolvimento de jogos do C++
 
 Incluído:
+
 - Funcionalidades principais do C++
 - Runtime C Universal do Windows
 - Atualização dos Pacotes Redistribuíveis do C++ 2019
 - MSVC v142 – ferramentas de build do C++ para VS 2019 x64/x86 (v14.21)
 
 Componentes opcionais:
+
 - Ferramentas de criação de perfil do C++
 - SDK do Windows 10 (10.0.17763.0)
 - IntelliCode
@@ -120,10 +128,12 @@ Componentes opcionais:
 ### <a name="mobile-development-with-c"></a>Desenvolvimento móvel com C++
 
 Incluído:
+
 - Funcionalidades principais do C++
 - Instalação do SDK do Android (nível da API 25) (instalação local para Desenvolvimento Móvel com C++)
 
 Componentes opcionais:
+
 - NDK do Android (R16B)
 - Apache Ant (1.9.3)
 - Ferramentas de desenvolvimento do Android para C++
@@ -172,6 +182,7 @@ Componentes opcionais:
 Os seguintes modelos de projeto estão disponíveis dependendo de quais cargas de trabalho você instalou.
 
 Área de trabalho do Windows:
+
 - Projeto Vazio
 - Aplicativo de console
 - Assistente da Área de Trabalho do Windows
@@ -192,6 +203,7 @@ Os seguintes modelos de projeto estão disponíveis dependendo de quais cargas d
 - Google Test
 
 Plataforma Universal do Windows (C++/CX):
+
 - Aplicativo em Branco
 - Aplicativo DirectX 11 e XAML
 - Aplicativo DirectX 11
@@ -203,6 +215,7 @@ Plataforma Universal do Windows (C++/CX):
 - Projeto de Empacotamento de Aplicativos do Windows
 
 Linux:
+
 - Aplicativo de console (Linux)
 - Projeto vazio (Linux)
 - Raspberry Pi Blink
@@ -245,7 +258,7 @@ Linux:
 - Designer/Editor de HTML
 - Editor de XML
 - Editor de Código-fonte
-- Recursos de produtividade: refatoração, mecanismo IntelliSense EDG C++ , formatação de código
+- Características de produtividade: Refatoração, motor EDG IntelliSense, Formatação de Código C++
 - Designer de Formulários do Windows
 - Designer de dados
 - Editor de Recurso Nativo (arquivos .rc)
@@ -290,8 +303,8 @@ Linux:
 
 ## <a name="see-also"></a>Confira também
 
-[Instalar Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Novidades no Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Instalar o Visual Studio](/visualstudio/install/install-visual-studio)<br/>
+[O que há de novo no Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Tipos de projeto do C++ no Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end
@@ -458,8 +471,8 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 
 ## <a name="see-also"></a>Confira também
 
-[Instalar Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Novidades no Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Instalar o Visual Studio](/visualstudio/install/install-visual-studio)<br/>
+[O que há de novo no Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Tipos de projeto do C++ no Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end

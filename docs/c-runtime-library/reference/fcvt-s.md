@@ -1,8 +1,9 @@
 ---
 title: _fcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fcvt_s
+- _o__fcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 557a1d359c389f0eb7477aab4bf9cbb51558703a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623840"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920199"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -62,7 +64,7 @@ errno_t _fcvt_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 O buffer fornecido que conterá o resultado da conversão.
 
 *sizeInBytes*<br/>
@@ -71,13 +73,13 @@ O tamanho do buffer em bytes.
 *value*<br/>
 Número a ser convertido.
 
-*count*<br/>
+*contagem*<br/>
 O número de dígitos após o ponto decimal.
 
-*dec*<br/>
+*dez*<br/>
 Ponteiro para a posição do ponto decimal armazenada.
 
-*sign*<br/>
+*Assine*<br/>
 Ponteiro para o indicador de logon armazenado.
 
 ## <a name="return-value"></a>Valor retornado
@@ -86,14 +88,14 @@ Zero se for bem-sucedido. Se houver uma falha, o valor retornado será um códig
 
 No caso de um parâmetro inválido, conforme listado na tabela a seguir, essa função invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
-|*buffer*|*sizeInBytes*|Valor|count|dec|sinal|Valor de|Valor no *buffer*|
+|*completo*|*sizeInBytes*|value|count|dec|assinar|Retorno|Valor no *buffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|qualquer|qualquer|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
-|Not **NULL** (aponta para memória válida)|<=0|qualquer|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
-|qualquer|qualquer|qualquer|qualquer|**NULL**|qualquer|**EINVAL**|Não modificado.|
-|qualquer|qualquer|qualquer|qualquer|qualquer|**NULL**|**EINVAL**|Não modificado.|
+|**NULO**|any|any|any|any|any|**EINVAL**|Não modificado.|
+|Not **NULL** (aponta para memória válida)|<=0|any|any|any|any|**EINVAL**|Não modificado.|
+|any|any|any|any|**NULO**|any|**EINVAL**|Não modificado.|
+|any|any|any|any|any|**NULO**|**EINVAL**|Não modificado.|
 
 ## <a name="security-issues"></a>Problemas de segurança
 
@@ -107,11 +109,13 @@ Somente dígitos são armazenados na cadeia de caracteres. A posição do ponto 
 
 Um buffer de comprimento **_CVTBUFSIZE** é suficiente para qualquer valor de ponto flutuante.
 
-A diferença entre **_ecvt_s** e **_fcvt_s** está na interpretação do parâmetro *Count* . **_ecvt_s** interpreta a *contagem* como o número total de dígitos na cadeia de caracteres de saída e **_fcvt_s** interpreta a *contagem* como o número de dígitos após o ponto decimal.
+A diferença entre **_ecvt_s** e **_fcvt_s** está na interpretação do parâmetro de *contagem* . **_ecvt_s** interpreta a *contagem* como o número total de dígitos na cadeia de caracteres de saída e **_fcvt_s** interpreta a *contagem* como o número de dígitos após o ponto decimal.
 
 No C++, o uso dessa função é simplificado por uma sobrecarga de modelo. A sobrecarga pode inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 A versão de depuração dessa função primeiro preenche o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -119,7 +123,7 @@ A versão de depuração dessa função primeiro preenche o buffer com 0xFE. Par
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 **Bibliotecas:** todas as versões dos [Recursos da Biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
@@ -155,7 +159,7 @@ int main()
 Converted value: 120000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>

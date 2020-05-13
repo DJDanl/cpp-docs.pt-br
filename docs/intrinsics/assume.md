@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 06189405703a7cc34f3bd807ec79612394ee899f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216968"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368193"
 ---
 # <a name="__assume"></a>__assume
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Passa uma dica para o otimizador.
 
@@ -31,7 +31,7 @@ __assume(
 
 ### <a name="parameters"></a>Parâmetros
 
-*expressão*\
+*Expressão*\
 Qualquer expressão supostamente avaliada como verdadeira.
 
 ## <a name="remarks"></a>Comentários
@@ -41,19 +41,19 @@ O otimizador presume que a condição representada por `expression` é verdadeir
 Se a instrução `__assume` for gravada como uma contradição (uma expressão que sempre avalia como falso), ela sempre será tratada como `__assume(0)`. Se seu código não está funcionando como esperado, verifique se a `expression` que você definiu é válida e verdadeira, conforme descrito anteriormente. Para obter mais informações sobre comportamento esperado de `__assume(0)`, consulte os comentários posteriores.
 
 > [!WARNING]
->  Um programa não deve conter uma instrução `__assume` inválida em um caminho acessível. Se o compilador puder acessar uma instrução `__assume` inválida, o programa pode causar comportamento imprevisível e potencialmente perigoso.
+> Um programa não deve conter uma instrução `__assume` inválida em um caminho acessível. Se o compilador puder acessar uma instrução `__assume` inválida, o programa pode causar comportamento imprevisível e potencialmente perigoso.
 
 `__assume` não é um intrínseco verdadeiro. Ele não precisa ser declarado como uma função e não pode ser usado em uma diretiva `#pragma intrinsic`. Embora nenhum código seja gerado, o código gerado pelo otimizador é afetado.
 
-Use `__assume` em uma [declaração](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) somente quando Assert não for recuperável. Não use `__assume` em um assert para o qual você tem código de recuperação de erro subsequente porque o compilador pode otimizar o código de tratamento do erro.
+Use `__assume` em uma [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) somente quando a afirmação não for recuperável. Não use `__assume` em um assert para o qual você tem código de recuperação de erro subsequente porque o compilador pode otimizar o código de tratamento do erro.
 
 A instrução `__assume(0)` é um caso especial. Use `__assume(0)` para indicar um caminho de código que não pode ser alcançado. O exemplo a seguir mostra como usar `__assume(0)` para indicar que o caso de padrão de uma instrução switch não pode ser alcançado. Isso mostra o uso mais comum de `__assume(0)`.
 
-Para compatibilidade com as versões anteriores, **_assume** é um sinônimo para **__assume** , a menos que a opção de compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
+Para compatibilidade com versões anteriores, **_assume** é um sinônimo de **__assume** a menos que a opção de compilador [/Za \(Disable extensões de idioma)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ## <a name="requirements"></a>Requisitos
 
-|Intrínseco|Arquitetura|
+|Intrinsic|Arquitetura|
 |---------------|------------------|
 |`__assume`|x86, ARM, x64, ARM64|
 
@@ -91,7 +91,7 @@ int main(int p)
 }
 ```
 
-O uso de `__assume(0)` informa ao otimizador que o caso padrão não pode ser acessado. O exemplo demonstra que o programador sabe que as entradas possíveis para `p` será 1 ou 2. Se outro valor for passado `p`, o programa se tornará inválido e causará um comportamento imprevisível.
+O uso de `__assume(0)` informa ao otimizador que o caso padrão não pode ser acessado.  O exemplo demonstra que o programador sabe que as entradas possíveis para `p` será 1 ou 2. Se outro valor for passado `p`, o programa se tornará inválido e causará um comportamento imprevisível.
 
 Como resultado da instrução `__assume(0)`, o compilador não gera código para testar se `p` possui um valor que não é representado em uma instrução de caso. Para que isso funcione, a instrução `__assume(0)` deve ser a primeira no corpo do caso padrão.
 
@@ -114,9 +114,9 @@ Infelizmente, esse uso de `assert` impede que o compilador execute a otimizaçã
       NODEFAULT;
 ```
 
-**Fim da seção específica da Microsoft**
+**Fim específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
+[Intrínseca do compilador](../intrinsics/compiler-intrinsics.md)\
 [Palavras-chave](../cpp/keywords-cpp.md)

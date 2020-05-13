@@ -6,15 +6,15 @@ helpviewer_keywords:
 - inline assembler [C]
 ms.assetid: 821acc77-60b1-434c-ba54-2ba930a25ab4
 ms.openlocfilehash: 8fb2a1dd3e87ef452083935e23048d80b4cdc8c3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233171"
 ---
 # <a name="inline-assembler-c"></a>Assembler embutido (C)
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 O assembler integrado permite inserir instruções da linguagem de assembly diretamente aos seus programas de código-fonte C sem etapas adicionais de assembly e vinculação. O assembler integrado é incorporado ao compilador e, portanto, não é necessário um assembler separado, como o MASM (Microsoft Macro Assembler).
 
@@ -47,8 +47,8 @@ Como a palavra-chave `__asm` é um separador de instruções, você também pode
 __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de função](../c-language/function-attributes.md)

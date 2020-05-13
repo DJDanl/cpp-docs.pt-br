@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421089"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753798"
 ---
 # <a name="colepropertypage-class"></a>Classe COlePropertyPage
 
@@ -59,55 +59,55 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[COlePropertyPage:: COlePropertyPage](#colepropertypage)|Constrói um objeto `COlePropertyPage`.|
+|[COlePropertyPage::COlePropertyPage](#colepropertypage)|Constrói um objeto `COlePropertyPage`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[COlePropertyPage:: GetControlStatus](#getcontrolstatus)|Indica se o usuário modificou o valor no controle.|
-|[COlePropertyPage:: GetObjectArray](#getobjectarray)|Retorna a matriz de objetos que estão sendo editados pela página de propriedades.|
-|[COlePropertyPage:: GetPageSite](#getpagesite)|Retorna um ponteiro para a interface de `IPropertyPageSite` da página de propriedades.|
-|[COlePropertyPage:: IgnoreApply](#ignoreapply)|Determina quais controles não habilitam o botão Aplicar.|
-|[COlePropertyPage:: IsModified](#ismodified)|Indica se o usuário modificou a página de propriedades.|
-|[COlePropertyPage:: oneditproperty](#oneditproperty)|Chamado pelo Framework quando o usuário edita uma propriedade.|
-|[COlePropertyPage:: OnHelp](#onhelp)|Chamado pelo Framework quando o usuário chama a ajuda.|
-|[COlePropertyPage:: OnInitDialog](#oninitdialog)|Chamado pelo Framework quando a página de propriedades é inicializada.|
-|[COlePropertyPage:: onobjects](#onobjectschanged)|Chamado pelo Framework quando outro controle OLE, com novas propriedades, é escolhido.|
-|[COlePropertyPage:: OnSetPageSite](#onsetpagesite)|Chamado pelo Framework quando o quadro de propriedades fornece o site da página.|
-|[COlePropertyPage:: SetControlStatus](#setcontrolstatus)|Define um sinalizador que indica se o usuário modificou o valor no controle.|
-|[COlePropertyPage:: SetDialogResource](#setdialogresource)|Define o recurso de caixa de diálogo da página de propriedades.|
-|[COlePropertyPage:: SetHelpInfo](#sethelpinfo)|Define o texto de ajuda breve da página de propriedades, o nome do seu arquivo de ajuda e seu contexto de ajuda.|
-|[COlePropertyPage:: SetModifiedFlag](#setmodifiedflag)|Define um sinalizador que indica se o usuário modificou a página de propriedades.|
-|[COlePropertyPage:: setpagename](#setpagename)|Define o nome da página de Propriedades (legenda).|
+|[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Indica se o usuário modificou o valor no controle.|
+|[COlePropertyPage::GetObjectArray](#getobjectarray)|Retorna a matriz de objetos que estão sendo editados pela página de propriedade.|
+|[COlePropertyPage::GetPageSite](#getpagesite)|Retorna um ponteiro para a `IPropertyPageSite` interface da página de propriedade.|
+|[COlePropertyPage::IgnoreApply](#ignoreapply)|Determina quais controles não ativam o botão Aplicar.|
+|[COlePropertyPage::IsModified](#ismodified)|Indica se o usuário modificou a página da propriedade.|
+|[COlePropertyPage::OnEditProperty](#oneditproperty)|Chamado pela estrutura quando o usuário emite uma propriedade.|
+|[COlePropertyPage::OnHelp](#onhelp)|Chamado pela estrutura quando o usuário invoca ajuda.|
+|[COlePropertyPage::OnInitDialog](#oninitdialog)|Chamado pela estrutura quando a página de propriedade é inicializada.|
+|[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|Chamado pela estrutura quando outro controle OLE, com novas propriedades, é escolhido.|
+|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|Chamado pela estrutura quando o quadro de propriedade fornece o site da página.|
+|[COlePropertyPage::SetControlStatus](#setcontrolstatus)|Define uma bandeira indicando se o usuário modificou o valor no controle.|
+|[COlePropertyPage::SetDialogResource](#setdialogresource)|Define o recurso de diálogo da página de propriedade.|
+|[COlePropertyPage::SetHelpInfo](#sethelpinfo)|Define o texto de ajuda breve da página de propriedade, o nome de seu arquivo de ajuda e seu contexto de ajuda.|
+|[COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|Define um sinalizador indicando se o usuário modificou a página da propriedade.|
+|[COlePropertyPage::SetPageName](#setpagename)|Define o nome da página de propriedade (legenda).|
 
 ## <a name="remarks"></a>Comentários
 
-Por exemplo, uma página de propriedades pode incluir um controle de edição que permite ao usuário exibir e modificar a propriedade de legenda do controle.
+Por exemplo, uma página de propriedade pode incluir um controle de edição que permite ao usuário visualizar e modificar a propriedade de legenda do controle.
 
-Cada propriedade personalizada ou de controle de estoque pode ter um controle de caixa de diálogo que permite ao usuário do controle exibir o valor da propriedade atual e modificar esse valor, se necessário.
+Cada propriedade personalizada ou de controle de estoque pode ter um controle de diálogo que permite ao usuário do controle visualizar o valor atual da propriedade e modificar esse valor, se necessário.
 
-Para obter mais informações sobre como usar `COlePropertyPage`, consulte o artigo [controles ActiveX: páginas de propriedades](../../mfc/mfc-activex-controls-property-pages.md).
+Para obter mais `COlePropertyPage`informações sobre o uso, consulte o artigo [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 `COlePropertyPage`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxctl. h
+**Cabeçalho:** afxctl.h
 
-##  <a name="colepropertypage"></a>COlePropertyPage:: COlePropertyPage
+## <a name="colepropertypagecolepropertypage"></a><a name="colepropertypage"></a>COlePropertyPage::COlePropertyPage
 
 Constrói um objeto `COlePropertyPage`.
 
@@ -117,59 +117,59 @@ COlePropertyPage(
     UINT idCaption);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*idDlg*<br/>
-ID de recurso do modelo de caixa de diálogo.
+*IdDlg*<br/>
+ID de recurso do modelo de diálogo.
 
 *idCaption*<br/>
-ID de recurso da legenda da página de propriedades.
+ID de recurso da legenda da página de propriedade.
 
 ### <a name="remarks"></a>Comentários
 
-Quando você implementa uma subclasse de `COlePropertyPage`, o construtor de sua subclasse deve usar o Construtor `COlePropertyPage` para identificar o recurso de modelo de caixa de diálogo no qual a página de propriedades é baseada e o recurso de cadeia de caracteres que contém sua legenda.
+Quando você implementa `COlePropertyPage`uma subclasse de , o `COlePropertyPage` construtor da subclasse deve usar o construtor para identificar o recurso de modelo de diálogo no qual a página de propriedade é baseada e o recurso string contendo sua legenda.
 
-##  <a name="getcontrolstatus"></a>COlePropertyPage:: GetControlStatus
+## <a name="colepropertypagegetcontrolstatus"></a><a name="getcontrolstatus"></a>COlePropertyPage::GetControlStatus
 
-Determina se o usuário modificou o valor do controle de página de propriedades com a ID de recurso especificada.
+Determina se o usuário modificou o valor do controle da página de propriedade com o ID de recurso especificado.
 
 ```
 BOOL GetControlStatus(UINT nID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-ID de recurso de um controle de página de propriedades.
+ID de recurso de um controle de página de propriedade.
 
 ### <a name="return-value"></a>Valor retornado
 
-TRUE se o valor de controle tiver sido modificado; caso contrário, FALSE.
+TRUE se o valor de controle tiver sido modificado; caso contrário, FALSO.
 
-##  <a name="getobjectarray"></a>COlePropertyPage:: GetObjectArray
+## <a name="colepropertypagegetobjectarray"></a><a name="getobjectarray"></a>COlePropertyPage::GetObjectArray
 
-Retorna a matriz de objetos que estão sendo editados pela página de propriedades.
+Retorna a matriz de objetos que estão sendo editados pela página de propriedade.
 
 ```
 LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pnObjects*<br/>
-Ponteiro para um inteiro longo sem sinal que receberá o número de objetos que estão sendo editados pela página.
+Ponteiro para um inteiro longo não assinado que receberá o número de objetos que estão sendo editados pela página.
 
 ### <a name="return-value"></a>Valor retornado
 
-Ponteiro para uma matriz de ponteiros de `IDispatch`, que são usados para acessar as propriedades de cada controle na página de propriedades. O chamador não deve liberar esses ponteiros de interface.
+Ponteiro para uma `IDispatch` matriz de ponteiros, que são usados para acessar as propriedades de cada controle na página da propriedade. O chamador não deve liberar esses ponteiros de interface.
 
 ### <a name="remarks"></a>Comentários
 
-Cada objeto da página de propriedades mantém uma matriz de ponteiros para as interfaces `IDispatch` dos objetos que estão sendo editados pela página. Essa função define seu argumento *pnObjects* como o número de elementos nessa matriz e retorna um ponteiro para o primeiro elemento da matriz.
+Cada objeto de página de propriedade `IDispatch` mantém uma matriz de ponteiros para as interfaces dos objetos que estão sendo editados pela página. Esta função define seu argumento *pnObjects* para o número de elementos nessa matriz e retorna um ponteiro para o primeiro elemento da matriz.
 
-##  <a name="getpagesite"></a>COlePropertyPage:: GetPageSite
+## <a name="colepropertypagegetpagesite"></a><a name="getpagesite"></a>COlePropertyPage::GetPageSite
 
-Obtém um ponteiro para a interface de `IPropertyPageSite` da página de propriedades.
+Obtém um ponteiro para `IPropertyPageSite` a interface da página de propriedade.
 
 ```
 LPPROPERTYPAGESITE GetPageSite();
@@ -177,32 +177,32 @@ LPPROPERTYPAGESITE GetPageSite();
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para a interface de `IPropertyPageSite` da página de propriedades.
+Um ponteiro para a `IPropertyPageSite` interface da página de propriedade.
 
 ### <a name="remarks"></a>Comentários
 
-Controles e contêineres cooperam para que os usuários possam procurar e editar propriedades de controle. O controle fornece páginas de propriedades, cada uma delas é um objeto OLE que permite ao usuário editar um conjunto de propriedades relacionado. O contêiner fornece um quadro de propriedades que exibe as páginas de propriedades. Para cada página, o quadro de propriedades fornece um site de página, que dá suporte à interface `IPropertyPageSite`.
+Controles e contêineres cooperam para que os usuários possam navegar e editar propriedades de controle. O controle fornece páginas de propriedade, cada uma delas é um objeto OLE que permite ao usuário editar um conjunto de propriedades relacionados. O contêiner fornece um quadro de propriedade que exibe as páginas da propriedade. Para cada página, o quadro de propriedades fornece `IPropertyPageSite` um site de página, que suporta a interface.
 
-##  <a name="ignoreapply"></a>COlePropertyPage:: IgnoreApply
+## <a name="colepropertypageignoreapply"></a><a name="ignoreapply"></a>COlePropertyPage::IgnoreApply
 
-Determina quais controles não habilitam o botão Aplicar.
+Determina quais controles não ativam o botão Aplicar.
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
 ID do controle a ser ignorado.
 
 ### <a name="remarks"></a>Comentários
 
-O botão aplicar da página de propriedades é habilitado somente quando os valores dos controles da página de propriedades foram alterados. Use essa função para especificar controles que não fazem com que o botão Aplicar seja habilitado quando seus valores forem alterados.
+O botão Aplicar da página de propriedade é ativado somente quando os valores dos controles da página de propriedade foram alterados. Use esta função para especificar controles que não fazem com que o botão Aplicar seja ativado quando seus valores mudarem.
 
-##  <a name="ismodified"></a>COlePropertyPage:: IsModified
+## <a name="colepropertypageismodified"></a><a name="ismodified"></a>COlePropertyPage::IsModified
 
-Determina se o usuário alterou qualquer valor na página de propriedades.
+Determina se o usuário alterou algum valor na página da propriedade.
 
 ```
 BOOL IsModified();
@@ -210,41 +210,41 @@ BOOL IsModified();
 
 ### <a name="return-value"></a>Valor retornado
 
-TRUE se a página de propriedades tiver sido modificada.
+TRUE se a página de propriedade foi modificada.
 
-##  <a name="oneditproperty"></a>COlePropertyPage:: oneditproperty
+## <a name="colepropertypageoneditproperty"></a><a name="oneditproperty"></a>COlePropertyPage::OnEditProperty
 
-A estrutura chama essa função quando uma propriedade específica deve ser editada.
+O framework chama essa função quando uma propriedade específica deve ser editada.
 
 ```
 virtual BOOL OnEditProperty(DISPID dispid);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
-ID de expedição da propriedade que está sendo editada.
+*Dispid*<br/>
+Despachar a id da propriedade que está sendo editada.
 
 ### <a name="return-value"></a>Valor retornado
 
-A implementação padrão retorna FALSE. As substituições dessa função devem retornar TRUE.
+A implementação padrão retorna FALSE. As substituições desta função devem retornar TRUE.
 
 ### <a name="remarks"></a>Comentários
 
 Você pode substituí-lo para definir o foco para o controle apropriado na página. A implementação padrão não faz nada e retorna FALSE.
 
-##  <a name="onhelp"></a>COlePropertyPage:: OnHelp
+## <a name="colepropertypageonhelp"></a><a name="onhelp"></a>COlePropertyPage::OnHelp
 
-A estrutura chama essa função quando o usuário solicita ajuda online.
+A estrutura chama essa função quando o usuário solicita ajuda on-line.
 
 ```
 virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszHelpDir*<br/>
-Diretório que contém o arquivo de ajuda da página de propriedades.
+Diretório contendo o arquivo de ajuda da página de propriedade.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -252,11 +252,11 @@ A implementação padrão retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua-o se a sua página de propriedades precisar executar qualquer ação especial quando o usuário acessar a ajuda. A implementação padrão não faz nada e retorna FALSE, que instrui o Framework a chamar o WinHelp.
+Anular se sua página de propriedade tiver que executar qualquer ação especial quando o usuário acessar a ajuda. A implementação padrão não faz nada e retorna FALSE, que instrui a estrutura a chamar WinHelp.
 
-##  <a name="oninitdialog"></a>COlePropertyPage:: OnInitDialog
+## <a name="colepropertypageoninitdialog"></a><a name="oninitdialog"></a>COlePropertyPage::OnInitDialog
 
-A estrutura chama essa função quando a caixa de diálogo da página de propriedades é inicializada.
+O framework chama essa função quando a caixa de diálogo da página de propriedade é inicializada.
 
 ```
 virtual BOOL OnInitDialog();
@@ -268,11 +268,11 @@ A implementação padrão retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua-o se alguma ação especial for necessária quando a caixa de diálogo for inicializada. A implementação padrão chama `CDialog::OnInitDialog` e retorna FALSE.
+Anular-o se for necessária alguma ação especial quando a diálogo for inicializada. A implementação `CDialog::OnInitDialog` padrão chama e retorna FALSO.
 
-##  <a name="onobjectschanged"></a>COlePropertyPage:: onobjects
+## <a name="colepropertypageonobjectschanged"></a><a name="onobjectschanged"></a>COlePropertyPage::OnObjectsChanged
 
-Chamado pelo Framework quando outro controle OLE, com novas propriedades, é escolhido.
+Chamado pela estrutura quando outro controle OLE, com novas propriedades, é escolhido.
 
 ```
 virtual void OnObjectsChanged();
@@ -280,13 +280,13 @@ virtual void OnObjectsChanged();
 
 ### <a name="remarks"></a>Comentários
 
-Ao exibir as propriedades de um controle OLE no ambiente do desenvolvedor, uma caixa de diálogo sem janela restrita é usada para exibir suas páginas de propriedades. Se outro controle for selecionado, um conjunto diferente de páginas de propriedades deverá ser exibido para o novo conjunto de propriedades. A estrutura chama essa função para notificar a página de propriedades da alteração.
+Ao visualizar as propriedades de um controle OLE no ambiente do desenvolvedor, uma caixa de diálogo modeless é usada para exibir suas páginas de propriedade. Se outro controle for selecionado, um conjunto diferente de páginas de propriedade deve ser exibido para o novo conjunto de propriedades. O framework chama essa função para notificar a página de propriedade da alteração.
 
-Substitua essa função para receber a notificação dessa ação e executar ações especiais.
+Anular esta função para receber notificação desta ação e realizar quaisquer ações especiais.
 
-##  <a name="onsetpagesite"></a>COlePropertyPage:: OnSetPageSite
+## <a name="colepropertypageonsetpagesite"></a><a name="onsetpagesite"></a>COlePropertyPage::OnSetPageSite
 
-A estrutura chama essa função quando o quadro de propriedades fornece o site da página da página de propriedades.
+O framework chama essa função quando o quadro de propriedade fornece o site da página da página da propriedade.
 
 ```
 virtual void OnSetPageSite();
@@ -294,11 +294,11 @@ virtual void OnSetPageSite();
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão carrega a legenda da página e tenta determinar o tamanho da página a partir do recurso de caixa de diálogo. Substitua esta função se sua página de propriedades exigir qualquer ação adicional; sua substituição deve chamar a implementação da classe base.
+A implementação padrão carrega a legenda da página e tenta determinar o tamanho da página a partir do recurso de diálogo. Anular essa função se a página de propriedade exigir qualquer ação adicional; sua substituição deve chamar a implementação da classe base.
 
-##  <a name="setcontrolstatus"></a>COlePropertyPage:: SetControlStatus
+## <a name="colepropertypagesetcontrolstatus"></a><a name="setcontrolstatus"></a>COlePropertyPage::SetControlStatus
 
-Altera o status de um controle de página de propriedades.
+Altera o status de um controle de página de propriedade.
 
 ```
 BOOL SetControlStatus(
@@ -306,87 +306,87 @@ BOOL SetControlStatus(
     BOOL bDirty);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-Contém a ID de um controle de página de propriedades.
+Contém o ID de um controle de página de propriedade.
 
-*bDirty*<br/>
-Especifica se um campo da página de propriedades foi modificado. Defina como TRUE se o campo tiver sido modificado, FALSE se ele não tiver sido modificado.
+*Bdirty*<br/>
+Especifica se um campo da página de propriedade foi modificado. Definir como TRUE se o campo tiver sido modificado, FALSO se não tiver sido modificado.
 
 ### <a name="return-value"></a>Valor retornado
 
-TRUE, se o controle especificado tiver sido definido; caso contrário, FALSE.
+TRUE, se o controle especificado foi definido; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-Se o status de um controle de página de Propriedades for sujo quando a página de Propriedades for fechada ou o botão Aplicar for escolhido, a propriedade do controle será atualizada com o valor apropriado.
+Se o status de um controle de página de propriedade estiver sujo quando a página da propriedade estiver fechada ou o botão Aplicar for escolhido, a propriedade do controle será atualizada com o valor apropriado.
 
-##  <a name="setdialogresource"></a>COlePropertyPage:: SetDialogResource
+## <a name="colepropertypagesetdialogresource"></a><a name="setdialogresource"></a>COlePropertyPage::SetDialogResource
 
-Define o recurso de caixa de diálogo da página de propriedades.
+Define o recurso de diálogo da página de propriedade.
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hDialog*<br/>
-Identificador para o recurso de caixa de diálogo da página de propriedades.
+Manuseie o recurso de diálogo da página de propriedade.
 
-##  <a name="sethelpinfo"></a>COlePropertyPage:: SetHelpInfo
+## <a name="colepropertypagesethelpinfo"></a><a name="sethelpinfo"></a>COlePropertyPage::SetHelpInfo
 
-Especifica informações de dica de ferramenta, o nome de arquivo da ajuda e o contexto da ajuda para sua página de propriedades.
+Especifica informações de dica de ferramenta, o nome do arquivo de ajuda e o contexto de ajuda para sua página de propriedade.
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
     DWORD dwHelpContext = 0);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszDocString*<br/>
-Uma cadeia de caracteres que contém informações de breve ajuda para exibição em uma barra de status ou em outro local.
+Uma seqüência contendo breves informações de ajuda para exibição em uma barra de status ou outro local.
 
 *lpszHelpFile*<br/>
-Nome do arquivo de ajuda da página de propriedades.
+Nome do arquivo de ajuda da página da propriedade.
 
 *dwHelpContext*<br/>
-Contexto de ajuda para a página de propriedades.
+Contexto de ajuda para a página de propriedade.
 
-##  <a name="setmodifiedflag"></a>COlePropertyPage:: SetModifiedFlag
+## <a name="colepropertypagesetmodifiedflag"></a><a name="setmodifiedflag"></a>COlePropertyPage::SetModifiedFlag
 
-Indica se o usuário modificou a página de propriedades.
+Indica se o usuário modificou a página da propriedade.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*bModified*<br/>
-Especifica o novo valor para o sinalizador modificado da página de propriedades.
+*bModificado*<br/>
+Especifica o novo valor para o sinalizador modificado da página de propriedade.
 
-##  <a name="setpagename"></a>COlePropertyPage:: setpagename
+## <a name="colepropertypagesetpagename"></a><a name="setpagename"></a>COlePropertyPage::SetPageName
 
-Define o nome da página de propriedades, que o quadro de propriedades normalmente exibirá na guia da página.
+Define o nome da página de propriedade, que o quadro de propriedade normalmente exibirá na guia da página.
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszPageName*<br/>
-Ponteiro para uma cadeia de caracteres que contém o nome da página de propriedades.
+Ponteiro para uma seqüência contendo o nome da página da propriedade.
 
 ## <a name="see-also"></a>Confira também
 
-[Exemplo de CIRC3 do MFC](../../overview/visual-cpp-samples.md)<br/>
-[Exemplo de TESTHELP do MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Amostra CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[MFC Amostra TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)

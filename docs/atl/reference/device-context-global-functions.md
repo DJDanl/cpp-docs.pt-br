@@ -1,27 +1,27 @@
 ---
-title: Funções globais de contexto de dispositivo
+title: Funções globais do contexto do dispositivo
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: d225bd0cd996fd908479b5a93aad81ea0428900b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e640f310a1976c29a39f0ab7c2575dfd1073c889
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496094"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330149"
 ---
-# <a name="device-context-global-functions"></a>Funções globais de contexto de dispositivo
+# <a name="device-context-global-functions"></a>Funções globais do contexto do dispositivo
 
-Essa função cria um contexto de dispositivo para um determinado dispositivo.
+Esta função cria um contexto de dispositivo para um determinado dispositivo.
 
 |||
 |-|-|
 |[AtlCreateTargetDC](#atlcreatetargetdc)|Cria um contexto de dispositivo.|
 
-##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC
+## <a name="atlcreatetargetdc"></a><a name="atlcreatetargetdc"></a>AtlCreateTargetDC
 
-Cria um contexto de dispositivo para o dispositivo especificado na estrutura [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) .
+Cria um contexto de dispositivo para o dispositivo especificado na estrutura [DVTARGETDEVICE.](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)
 
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -29,26 +29,26 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hdc*<br/>
-no O identificador existente de um contexto de dispositivo ou nulo.
+*Hdc*<br/>
+[em] A alça existente de um contexto de dispositivo, ou NULL.
 
-*ptd*<br/>
-no Um ponteiro para a `DVTARGETDEVICE` estrutura que contém informações sobre o dispositivo de destino.
+*Ptd*<br/>
+[em] Um ponteiro `DVTARGETDEVICE` para a estrutura que contém informações sobre o dispositivo de destino.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o identificador para um contexto de dispositivo para o dispositivo especificado no `DVTARGETDEVICE`. Se nenhum dispositivo for especificado, o retornará o identificador para o dispositivo de vídeo padrão.
+Retorna a alça a um contexto do `DVTARGETDEVICE`dispositivo para o dispositivo especificado no . Se nenhum dispositivo for especificado, a alça retorna a alça ao dispositivo de exibição padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Se a estrutura for nula e *HDC* for NULL, o criará um contexto de dispositivo para o dispositivo de vídeo padrão.
+Se a estrutura for NULL e *hdc* for NULL, criará um contexto de dispositivo para o dispositivo de exibição padrão.
 
-Se *HDC* não for NULL e *ptd* for NULL, a função retornará o *HDC*existente.
+Se *hdc* não for NULL e *ptd* for NULL, a função retorna o *hdc*existente .
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin. h
+**Cabeçalho:** atlwin.h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções](../../atl/reference/atl-functions.md)

@@ -3,11 +3,11 @@ title: Caracteres
 ms.date: 11/04/2016
 ms.assetid: 4f42680f-42fd-4356-adae-735dc18c6727
 ms.openlocfilehash: 9b74a6cbc2e808751fa3972e1f6eae81f4dd6f22
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312592"
 ---
 # <a name="characters"></a>Caracteres
 
@@ -27,6 +27,6 @@ ms.locfileid: "56150955"
 
 - [Intervalo de valores char](../c-language/range-of-char-values.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Comportamento definido pela implementação](../c-language/implementation-defined-behavior.md)

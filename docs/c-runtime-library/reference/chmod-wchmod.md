@@ -1,9 +1,11 @@
 ---
 title: _chmod, _wchmod
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chmod
 - _wchmod
+- _o__chmod
+- _o__wchmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939200"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917001"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
@@ -52,13 +55,13 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>Parâmetros
 
-*filename*<br/>
+*nome do arquivo*<br/>
 Nome do arquivo existente.
 
 *pmode*<br/>
 Configuração de permissão para o arquivo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor de retorno de-1 indica falha. Se o arquivo especificado não pôde ser encontrado, **errno** é definido como **ENOENT**; se um parâmetro for inválido, **errno** será definido como **EINVAL**.
 
@@ -70,13 +73,15 @@ A função **_chmod** altera a configuração de permissão do arquivo especific
 |-|-|
 | **\_IREAD\_S** | Somente a leitura é permitida. |
 | **\_IWRITE\_S** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
-| **\_S\_IREAD** &#124; **\_S\_IWRITE** | Leitura e gravação permitidas. |
+| **\_S\_IREAD** &#124; ** \_s\_IWRITE** | Leitura e gravação permitidas. |
 
-Quando ambas as constantes são fornecidas, elas são unidas com o operador OR ( **\|** ). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Assim, os modos **_S_IWRITE** e **_S_IREAD** \| **_S_IWRITE** são equivalentes.
+Quando ambas as constantes são fornecidas, elas são unidas com o operador OR (**\|**). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Assim, os modos **_S_IWRITE** e **_S_IREAD** \| **_S_IWRITE** são equivalentes.
 
-**_wchmod** é uma versão de caractere largo do **_chmod**; o argumento *filename* para **_wchmod** é uma cadeia de caracteres largos. **_wchmod** e **_chmod** se comportam de outra forma.
+**_wchmod** é uma versão de caractere largo do **_chmod**; o argumento de *nome de arquivo* para **_wchmod** é uma cadeia de caracteres largos. **_wchmod** e **_chmod** se comportar de forma idêntica.
 
 Essa função valida seus parâmetros. Se *pmode* não for uma combinação de uma das constantes de manifesto ou incorporar um conjunto alternativo de constantes, a função simplesmente irá ignorá-las. Se *filename* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará-1.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -169,7 +174,7 @@ Access is denied.
 Mode set to read/write
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

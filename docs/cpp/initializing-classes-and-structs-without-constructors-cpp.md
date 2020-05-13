@@ -1,18 +1,18 @@
 ---
-title: Inicialização de chaves para classes, structs e uniões
-description: Usar a inicialização de chave C++ com qualquer classe, struct ou União
+title: Inicialização de cintas para classes, estruturas e sindicatos
+description: Use a inicialização da cinta com qualquer classe C++, estrutura ou união
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075876"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374069"
 ---
 # <a name="brace-initialization"></a>Inicialização de chaves
 
-Nem sempre é necessário definir um construtor para uma classe, especialmente aqueles que são relativamente simples. Os usuários podem inicializar objetos de uma classe ou estrutura usando a inicialização uniforme, conforme mostrado no exemplo a seguir:
+Nem sempre é necessário definir um construtor para uma classe, especialmente aqueles que são relativamente simples. Os usuários podem inicializar objetos de uma classe ou estruturar usando inicialização uniforme, como mostrado no exemplo a seguir:
 
 ```cpp
 // no_constructor.cpp
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Observe que, quando uma classe ou struct não tem nenhum construtor, você fornece os elementos da lista na ordem em que os membros são declarados na classe. Se a classe tiver um construtor, forneça os elementos na ordem dos parâmetros. Se um tipo tiver um construtor padrão, implicitamente ou explicitamente declarado, você poderá usar a inicialização de chave padrão (com chaves vazias). Por exemplo, a seguinte classe pode ser inicializada usando a inicialização de chave padrão e não padrão:
+Observe que quando uma classe ou estrutura não tem construtor, você fornece os elementos da lista na ordem em que os membros são declarados na classe. Se a classe tiver um construtor, forneça os elementos na ordem dos parâmetros. Se um tipo tiver um construtor padrão, seja declarado implicitamente ou explicitamente, você pode usar a inicialização padrão da cinta (com chaves vazias). Por exemplo, a classe a seguir pode ser inicializada usando inicialização de suporte padrão e não padrão:
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-Se uma classe tiver construtores não padrão, a ordem na qual os membros da classe aparecem no inicializador de chave é a ordem na qual os parâmetros correspondentes aparecem no construtor, não a ordem na qual os membros são declarados (como com `class_a` no exemplo anterior). Caso contrário, se o tipo não tiver um construtor declarado, a ordem na qual os membros aparecerão no inicializador de chaves será igual à ordem na qual eles são declarados; Nesse caso, você pode inicializar quantos membros públicos desejar, mas não pode ignorar nenhum membro. O exemplo a seguir mostra a ordem usada na inicialização de chaves quando não há um construtor declarado:
+Se uma classe tiver construtores não padrão, a ordem em que os membros da classe aparecem no inicializador da cinta é a ordem `class_a` em que os parâmetros correspondentes aparecem no construtor, e não a ordem em que os membros são declarados (como no exemplo anterior). Caso contrário, se o tipo não tiver um construtor declarado, a ordem em que os membros aparecem no inicializador da cinta é a mesma da ordem em que são declarados; neste caso, você pode inicializar quantos membros públicos desejar, mas não pode pular nenhum membro. O exemplo a seguir mostra a ordem usada na inicialização do aparelho quando não há um construtor declarado:
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-Se o construtor padrão for declarado explicitamente, mas marcado como excluído, a inicialização de chave padrão não poderá ser usada:
+Se o construtor padrão for explicitamente declarado, mas marcado como excluído, a inicialização da cinta padrão não poderá ser usada:
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-Você pode usar a inicialização de chaves em qualquer lugar em que normalmente faria a inicialização — por exemplo, como um parâmetro de função ou um valor de retorno, ou com a **nova** palavra-chave:
+Você pode usar a inicialização do aparelho em qualquer lugar que você normalmente faça a inicialização — por exemplo, como um parâmetro de função ou um valor de retorno, ou com a **nova** palavra-chave:
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,20 +136,20 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-No modo **/std: c++ 17** , as regras para a inicialização de chaves vazias são um pouco mais restritivas. Consulte [construtores derivados e inicialização de agregação estendida](constructors-cpp.md#extended_aggregate).
+No modo **/std:c++17,** as regras para inicialização da cinta vazia são um pouco mais restritivas. Veja [construtores derivados e inicialização agregada estendida](constructors-cpp.md#extended_aggregate).
 
-## <a name="initializer_list-constructors"></a>construtores de initializer_list
+## <a name="initializer_list-constructors"></a>construtores initializer_list
 
-A [classe initializer_list](../standard-library/initializer-list-class.md) representa uma lista de objetos de um tipo especificado que podem ser usados em um construtor e em outros contextos. Você pode construir um initializer_list usando a inicialização de chaves:
+A [Classe initializer_list](../standard-library/initializer-list-class.md) representa uma lista de objetos de um tipo especificado que podem ser usados em um construtor e em outros contextos. Você pode construir um initializer_list usando a inicialização da cinta:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  Para usar essa classe, você deve incluir o [\<initializer_list cabeçalho >](../standard-library/initializer-list.md) .
+> Para usar esta classe, você deve incluir o [ \<cabeçalho initializer_list>.](../standard-library/initializer-list.md)
 
-Um `initializer_list` pode ser copiado. Nesse caso, os membros da nova lista são referências aos membros da lista original:
+Uma `initializer_list` lata pode ser copiada. Neste caso, os membros da nova lista são referências aos membros da lista original:
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -158,7 +158,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-As classes de contêiner de biblioteca padrão, e também `string`, `wstring`e `regex`, têm construtores de `initializer_list`. Os exemplos a seguir mostram como fazer a inicialização de chaves com estes construtores:
+As classes padrão de `string`contêineres da biblioteca, e também , `wstring`e `regex`, têm `initializer_list` construtores. Os exemplos a seguir mostram como fazer a inicialização do aparelho com esses construtores:
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };
@@ -169,5 +169,5 @@ regex rgx{ 'x', 'y', 'z' };
 
 ## <a name="see-also"></a>Confira também
 
-[Classes e Structs](../cpp/classes-and-structs-cpp.md)<br/>
+[Classes e structs](../cpp/classes-and-structs-cpp.md)<br/>
 [Construtores](../cpp/constructors-cpp.md)

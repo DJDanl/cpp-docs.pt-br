@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2581c5cdacc9e542f5d911860128dcf5526621ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419997"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367312"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -50,14 +50,14 @@ Você pode definir um conjunto de final aberto dessas facetas. Também é possí
 
 Os grupos predefinidos dessas facetas representam as [categorias de localidade](#category) normalmente gerenciadas na Biblioteca C Padrão pela função `setlocale`.
 
-A `collate` de categoria (LC_COLLATE) inclui as facetas:
+A `collate` categoria (LC_COLLATE) inclui as facetas:
 
 ```cpp
 collate<char>
 collate<wchar_t>
 ```
 
-A `ctype` de categoria (LC_CTYPE) inclui as facetas:
+A `ctype` categoria (LC_CTYPE) inclui as facetas:
 
 ```cpp
 ctype<char>
@@ -68,7 +68,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-A `monetary` de categoria (LC_MONETARY) inclui as facetas:
+A `monetary` categoria (LC_MONETARY) inclui as facetas:
 
 ```cpp
 moneypunct<char, false>
@@ -81,7 +81,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-A `numeric` de categoria (LC_NUMERIC) inclui as facetas:
+A `numeric` categoria (LC_NUMERIC) inclui as facetas:
 
 ```cpp
 num_get<char, istreambuf_iterator<char>>
@@ -92,7 +92,7 @@ numpunct<char>
 numpunct<wchar_t>
 ```
 
-A `time` de categoria (LC_TIME) inclui as facetas:
+A `time` categoria (LC_TIME) inclui as facetas:
 
 ```cpp
 time_get<char, istreambuf_iterator<char>>
@@ -101,18 +101,18 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-A `messages` de categoria (LC_MESSAGES) inclui as facetas:
+A `messages` categoria (LC_MESSAGES) inclui as facetas:
 
 ```cpp
 messages<char>
 messages<wchar_t>
 ```
 
-(A última categoria é exigida pelo POSIX, mas não pelo padrão C.)
+(A última categoria é exigida pelo POSIX, mas não pelo Padrão C.)
 
-Algumas dessas facetas predefinidas são usadas pelas classes `iostream`, para controlar a conversão de valores numéricos de e para sequências de texto.
+Algumas dessas facetas predefinidas `iostream` são usadas pelas classes, para controlar a conversão de valores numéricos para e a partir de seqüências de texto.
 
-Um objeto da localidade de classe também armazena um nome de localidade como um objeto da classe [string](../standard-library/string-typedefs.md#string). Usar um nome inválido de localidade para construir uma faceta ou um objeto de localidade lançará um objeto da classe [runtime_error](../standard-library/runtime-error-class.md). O nome da localidade armazenada será `"*"` se o objeto de localidade não puder ter certeza de que uma localidade em estilo C corresponde exatamente à representada pelo objeto. Caso contrário, você pode estabelecer uma localidade correspondente na biblioteca C padrão, para algum `locale_object`de objeto de localidade, chamando `setlocale(LC_ALL , locale_object.`[nome](#name)`().c_str())`.
+Um objeto da localidade de classe também armazena um nome de localidade como um objeto da classe [string](../standard-library/string-typedefs.md#string). Usar um nome inválido de localidade para construir uma faceta ou um objeto de localidade lançará um objeto da classe [runtime_error](../standard-library/runtime-error-class.md). O nome local `"*"` armazenado é se o objeto local não pode ter certeza de que um local no estilo C corresponde exatamente ao representado pelo objeto. Caso contrário, você pode estabelecer um local correspondente dentro da `locale_object`Biblioteca Padrão `setlocale(LC_ALL , locale_object.`C, para algum objeto local , chamando [o nome](#name)`().c_str())`.
 
 Nessa implementação, também é possível chamar a função membro estática:
 
@@ -120,13 +120,13 @@ Nessa implementação, também é possível chamar a função membro estática:
 static locale empty();
 ```
 
-para construir um objeto de localidade que não tenha nenhuma faceta. Também é uma localidade transparente. Se o modelo funcionar [has_facet](../standard-library/locale-functions.md#has_facet) e [use_facet](../standard-library/locale-functions.md#use_facet) não conseguir localizar a faceta solicitada em uma localidade transparente, eles consultarão primeiro a localidade global e, em seguida, se isso for transparente, a localidade clássica. Portanto, você pode escrever:
+para construir um objeto de localidade que não tenha nenhuma faceta. Também é um local transparente. Se o modelo funcionar [has_facet](../standard-library/locale-functions.md#has_facet) e [use_facet](../standard-library/locale-functions.md#use_facet) não conseguir encontrar a faceta solicitada em um local transparente, eles consultam primeiro o local global e, em seguida, se isso for transparente, o local clássico. Então, você pode escrever:
 
 ```cpp
 cout.imbue(locale::empty());
 ```
 
-As inserções subsequentes para [`cout`](../standard-library/iostream.md#cout) são mediadas pelo estado atual da localidade global. Você ainda pode escrever:
+As inserções subseqüentes [`cout`](../standard-library/iostream.md#cout) são mediadas pelo estado atual da localidade global. Você ainda pode escrever:
 
 ```cpp
 locale loc(locale::empty(),
@@ -140,53 +140,53 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|DESCRIÇÃO|
+|Construtor|Descrição|
 |-|-|
-|[locale](#locale)|Cria uma localidade, ou uma cópia de uma localidade, ou uma cópia da localidade em que uma faceta ou uma categoria foi substituída por uma faceta ou categoria de outra localidade.|
+|[Localidade](#locale)|Cria uma localidade, ou uma cópia de uma localidade, ou uma cópia da localidade em que uma faceta ou uma categoria foi substituída por uma faceta ou categoria de outra localidade.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome do tipo|DESCRIÇÃO|
+|Nome do tipo|Descrição|
 |-|-|
-|[category](#category)|Um tipo de inteiro que fornece valores de bitmask para denotar famílias padrão de facetas.|
+|[Categoria](#category)|Um tipo de inteiro que fornece valores de bitmask para denotar famílias padrão de facetas.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|DESCRIÇÃO|
+|Função de membro|Descrição|
 |-|-|
-|[combine](#combine)|Insere uma faceta de uma localidade especificada em uma localidade de destino.|
+|[Combinar](#combine)|Insere uma faceta de uma localidade especificada em uma localidade de destino.|
 |[name](#name)|Retorna o nome da localidade armazenado.|
 
 ### <a name="static-functions"></a>Funções estáticas
 
 |||
 |-|-|
-|[clássico](#classic)|A função membro estática retorna um objeto de localidade que representa a localidade C clássica.|
-|[global](#global)|Redefine o local padrão do programa.|
+|[Clássico](#classic)|A função membro estática retorna um objeto de localidade que representa a localidade C clássica.|
+|[Global](#global)|Redefine o local padrão do programa.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIÇÃO|
+|Operador|Descrição|
 |-|-|
-|[operator=](#op_eq)|Atribui uma localidade.|
-|[operator!=](#op_neq)|Testa a desigualdade de duas localidades.|
-|[operator( )](#op_call)|Compara dois objetos `basic_string`.|
-|[operator==](#op_eq_eq)|Testa a igualdade de duas localidades.|
+|[operador=](#op_eq)|Atribui um local.|
+|[operador!=](#op_neq)|Testa a desigualdade de duas localidades.|
+|[operador( )](#op_call)|Compara dois objetos `basic_string`.|
+|[operador==](#op_eq_eq)|Testa a igualdade de duas localidades.|
 
 ### <a name="classes"></a>Classes
 
-|Classe|DESCRIÇÃO|
+|Classe|Descrição|
 |-|-|
-|[facet](#facet_class)|Uma classe que serve como a classe base para todas as facetas de localidade.|
+|[Faceta](#facet_class)|Uma classe que serve como a classe base para todas as facetas de localidade.|
 |[`id`](#id_class)|A classe do membro fornece uma identificação exclusiva da faceta usada como um índice para procurar facetas em uma localidade.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<localidade >
+**Cabeçalho:** \<locale>
 
 **Namespace:** std
 
-## <a name="category"></a>  locale::category
+## <a name="localecategory"></a><a name="category"></a>local::categoria
 
 Um tipo de inteiro que fornece valores de bitmask para denotar famílias padrão de facetas.
 
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para um tipo **int** que pode representar um grupo de elementos distintos de um tipo de bitmask local para a localidade de classe ou pode ser usado para representar qualquer uma das categorias de localidade C correspondentes. Os elementos são:
+O tipo é um sinônimo para um tipo **int** que pode representar um grupo de elementos distintos de um tipo de máscara de bit local para a localização da classe ou pode ser usado para representar qualquer uma das categorias de locale C correspondentes. Os elementos são:
 
 - `collate`, correspondente à categoria C LC_COLLATE
 
@@ -220,13 +220,13 @@ O tipo é um sinônimo para um tipo **int** que pode representar um grupo de ele
 
 Dois valores mais úteis são:
 
-- `none`, correspondente a nenhuma das categorias de C
+- `none`, correspondendo a nenhuma das categorias C
 
-- `all`, correspondente à União C de todas as categorias LC_ALL
+- `all`, correspondente à união C de todas as categorias LC_ALL
 
 Você pode representar um grupo arbitrário de categorias usando `OR` com essas constantes, como em `monetary` &#124; `time`.
 
-## <a name="classic"></a>  locale::classic
+## <a name="localeclassic"></a><a name="classic"></a>local::clássico
 
 A função membro estática retorna um objeto de localidade que representa a localidade C clássica.
 
@@ -240,7 +240,7 @@ Uma referência à localidade C.
 
 ### <a name="remarks"></a>Comentários
 
-A localidade C clássica é a localidade ASCII em inglês dos EUA dentro da biblioteca C padrão. É a localidade que é usada implicitamente em programas que não são internacionalizados.
+O local clássico c é o local ASCII inglês dos EUA dentro da biblioteca Standard C. É o local que é usado implicitamente em programas que não são internacionalizados.
 
 ### <a name="example"></a>Exemplo
 
@@ -281,7 +281,7 @@ The previous locale was classic.
 The current locale is not classic.
 ```
 
-## <a name="combine"></a>  locale::combine
+## <a name="localecombine"></a><a name="combine"></a>local::combinar
 
 Insere uma faceta de uma localidade especificada em uma localidade de destino.
 
@@ -290,14 +290,14 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *source_locale*\
 A localidade que contém a faceta a ser inserida na localidade de destino.
 
 ### <a name="return-value"></a>Valor retornado
 
-A função membro retorna um objeto Locale que substitui ou adiciona a **\*essa** faceta `Facet` listada em *source_locale*.
+A função membro retorna um objeto local que substitui ou `Facet` adiciona a ** \*isso** a faceta listada em *source_locale*.
 
 ### <a name="example"></a>Exemplo
 
@@ -329,7 +329,7 @@ int main() {
 }
 ```
 
-## <a name="facet_class"></a>  Classe facet
+## <a name="facet-class"></a><a name="facet_class"></a>Classe faceta
 
 Uma classe que serve como a classe base para todas as facetas de localidade.
 
@@ -346,19 +346,19 @@ private:
 
 ### <a name="remarks"></a>Comentários
 
-Não é possível copiar ou atribuir um objeto da classe `facet`. É possível construir e destruir objetos derivados da classe `locale::facet`, mas não objetos da classe base correta. Normalmente, você constrói um objeto `_Myfac` derivado de `facet` ao construir um `locale`, como no `locale loc(locale::classic(), new _Myfac);`
+Você não pode copiar ou atribuir `facet`um objeto de classe. É possível construir e destruir objetos derivados da classe `locale::facet`, mas não objetos da classe base correta. Normalmente, você constrói `_Myfac` um `facet` objeto derivado `locale`de quando você constrói um , como em`locale loc(locale::classic(), new _Myfac);`
 
-Nesses casos, o construtor para a classe base `facet` deve ter um argumento de *referências* zero. Quando o objeto não for mais necessário, ele será excluído, de modo que você só fornecerá um argumento de *referências* sem zero nesses casos raros em que você assumirá a responsabilidade pelo tempo de vida do objeto.
+Nesses casos, o construtor da `facet` classe base deve ter um argumento *de referência zero.* Quando o objeto não é mais necessário, ele é excluído, então você fornece um argumento de *referências* não zero apenas nos raros casos em que você assume a responsabilidade pela vida útil do objeto.
 
-## <a name="global"></a>  locale::global
+## <a name="localeglobal"></a><a name="global"></a>local::global
 
-Redefine a localidade padrão do programa. Essa chamada afeta a localidade global para C e C++.
+Redefine a localidade padrão do programa. Esta chamada afeta a localidade global para C e C++.
 
 ```cpp
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *new_default_locale*\
 A localidade a ser usada como localidade padrão pelo programa.
@@ -399,7 +399,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C
 ```
 
-## <a name="id_class"></a>  Classe id
+## <a name="id-class"></a><a name="id_class"></a>Classe id
 
 A classe do membro fornece uma identificação exclusiva da faceta usada como um índice para procurar facetas em uma localidade.
 
@@ -414,9 +414,9 @@ class id
 
 ### <a name="remarks"></a>Comentários
 
-A classe membro descreve o objeto de membro estático exigido por cada faceta de localidade exclusiva. Não é possível copiar ou atribuir um objeto da classe `id`.
+A classe membro descreve o objeto de membro estático exigido por cada faceta de localidade exclusiva. Você não pode copiar ou atribuir `id`um objeto de classe.
 
-## <a name="locale"></a>  locale::locale
+## <a name="localelocale"></a><a name="locale"></a>local::locale
 
 Cria uma localidade, ou uma cópia de uma localidade, ou uma cópia da localidade em que uma faceta ou uma categoria foi substituída por uma faceta ou categoria de outra localidade. Também inclui um destruidor.
 
@@ -435,7 +435,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *locale_name*\
 Nome de uma localidade.
@@ -454,23 +454,23 @@ A faceta a ser substituída na localidade construída.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa o objeto de acordo com a localidade global. O segundo e o terceiro construtores inicializam todas as categorias de localidade para que o comportamento seja consistente com o nome de localidade *locale_name*. Os construtores restantes copiam *from_locale*, com as exceções indicadas:
+O primeiro construtor inicializa o objeto de acordo com a localidade global. A segunda e a terceira construtoras iniciam todas as categorias locais para ter comportamento consistente com o nome local *locale_name*. Os demais construtores copiam *from_locale,* com as exceções observadas:
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-Substitui de *outras* facetas que correspondem a uma categoria c para a qual c & *new_category* é diferente de zero.
+substitui de *Outras* facetas correspondentes a uma categoria C para a qual C & *new_category* não é zero.
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
 `locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-Substitui de `locale(locale_name, all)` as facetas correspondentes a uma categoria *replace_category* para a qual `replace_category & new_category` é diferente de zero.
+substitui-se dessas facetas correspondentes a `replace_category & new_category` uma categoria replace_category para a qual não é zero. *replace_category* `locale(locale_name, all)`
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-Substitui (ou adiciona) à *from_locale* da faceta *new_facet*, se *new_facet* não for um ponteiro nulo.
+substitui (ou adiciona) *from_locale* a *faceta new_facet*, se *new_facet* não for um ponteiro nulo.
 
-Se o nome da localidade *locale_name* for um ponteiro nulo ou for inválido, a função lançará [runtime_error](../standard-library/runtime-error-class.md).
+Se o nome *local locale_name* for um ponteiro nulo ou inválido, a função será [runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -512,7 +512,7 @@ int main( ) {
 }
 ```
 
-## <a name="name"></a>  locale::name
+## <a name="localename"></a><a name="name"></a>local::nome
 
 Retorna o nome da localidade armazenado.
 
@@ -551,15 +551,15 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="op_eq"></a>Localidade:: operador =
+## <a name="localeoperator"></a><a name="op_eq"></a>local::operador=
 
-Atribui uma localidade.
+Atribui um local.
 
 ```cpp
 const locale& operator=(const locale& other) noexcept;
 ```
 
-## <a name="op_neq"></a>  locale::operator!=
+## <a name="localeoperator"></a><a name="op_neq"></a>local::operador!=
 
 Testa a desigualdade de duas localidades.
 
@@ -567,18 +567,18 @@ Testa a desigualdade de duas localidades.
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à direita*
+*Certo*\
 Uma das localidades que terá sua desigualdade testada.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor booliano que será **verdadeiro** se as localidades não forem cópias da mesma localidade. Será **false** se as localidades forem cópias da mesma localidade.
+Um valor booleano que é **verdade** se os locais não são cópias do mesmo local. É **falso** se os locais são cópias do mesmo local.
 
 ### <a name="remarks"></a>Comentários
 
-Duas localidades são iguais se forem a mesma localidade, se uma for uma cópia do outro, ou se tiverem nomes idênticos.
+Dois locais são iguais se forem o mesmo local, se um é uma cópia do outro, ou se eles têm nomes idênticos.
 
 ### <a name="example"></a>Exemplo
 
@@ -620,7 +620,7 @@ locales loc1 (German_Germany.1252) and
 loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="op_call"></a>  locale::operator()
+## <a name="localeoperator"></a><a name="op_call"></a>local::operador()
 
 Compara dois objetos `basic_string`.
 
@@ -631,12 +631,12 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
+*Deixou*\
 A cadeia de caracteres à esquerda.
 
-\ *à direita*
+*Certo*\
 A cadeia de caracteres à direita.
 
 ### <a name="return-value"></a>Valor retornado
@@ -659,7 +659,7 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```
 
-Isso significa que você pode usar um objeto de localidade como um objeto de função.
+Isso significa que você pode usar um objeto local como um objeto de função.
 
 ### <a name="example"></a>Exemplo
 
@@ -692,7 +692,7 @@ int main( )
 0
 ```
 
-## <a name="op_eq_eq"></a>  locale::operator==
+## <a name="localeoperator"></a><a name="op_eq_eq"></a>local::operador==
 
 Testa a igualdade de duas localidades.
 
@@ -700,18 +700,18 @@ Testa a igualdade de duas localidades.
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à direita*
+*Certo*\
 Uma das localidades que terá sua igualdade testada.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor booliano que será **verdadeiro** se as localidades forem cópias da mesma localidade. Será **false** se as localidades não forem cópias da mesma localidade.
+Um valor booleano que é **verdade** se os locais são cópias do mesmo local. É **falso** se os locais não forem cópias do mesmo local.
 
 ### <a name="remarks"></a>Comentários
 
-Duas localidades são iguais se forem a mesma localidade, se uma for uma cópia do outro, ou se tiverem nomes idênticos.
+Dois locais são iguais se forem o mesmo local, se um é uma cópia do outro, ou se eles têm nomes idênticos.
 
 ### <a name="example"></a>Exemplo
 
@@ -759,7 +759,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Confira também
 
-[\<locale>](../standard-library/locale.md)\
-[Páginas de código](../c-runtime-library/code-pages.md)\
-[Nomes de localidade, idiomas e cadeias de caracteres de país/região](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<local>](../standard-library/locale.md)\
+[Páginas de Código](../c-runtime-library/code-pages.md)\
+[Nomes locais, idiomas e strings país/região](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Segurança de threads na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

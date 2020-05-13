@@ -1,6 +1,6 @@
 ---
-title: Compilar um C++programa/CLI destinado ao CLR
-description: Use a C++ Microsoft para criar programas e bibliotecas que podem conectar C++ código nativo e programas .net.
+title: Compilação de um programa em CLI/C++ que se destina ao CLR
+description: Use o Microsoft C++ para criar programas e bibliotecas que possam conectar código C++ nativo e programas .NET.
 ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 36c41856dfcdb5c5f50ba59205b4c73c5fde5963
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0d661d9e77211a0e49f8695ad713b607377a236a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080011"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371806"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Walkthrough: compilar um C++programa/CLI que tem como alvo o CLR no Visual Studio
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Passo a passo: Compile um Programa C++/CLI que tem como alvo a CLR no Visual Studio
 
-Usando C++a/CLI, você pode C++ criar programas que usam classes .net, bem como C++ tipos nativos. C++A/CLI é destinada ao uso em aplicativos de console e em C++ DLLs que encapsulam o código nativo e o tornam acessível a partir de programas .net. Para criar uma interface do usuário do Windows baseada em .NET C# , use ou Visual Basic.
+Usando C++/CLI, você pode criar programas C++ que usam classes .NET, bem como tipos C++ nativos. C++/CLI destina-se a ser usado em aplicativos de console e em DLLs que envolvem código C++ nativo e o tornam acessível a partir de programas .NET. Para criar uma interface de usuário do Windows baseada em .NET, use C# ou Visual Basic.
 
-Para este procedimento, você pode digitar seu próprio C++ programa ou usar um dos programas de exemplo. O programa de exemplo que usamos neste procedimento cria um arquivo de texto chamado textfile.txt e salva-o no diretório do projeto.
+Para este procedimento, você pode digitar seu próprio programa C++ ou usar um dos programas de amostra. O programa de exemplo que usamos neste procedimento cria um arquivo de texto chamado textfile.txt e salva-o no diretório do projeto.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma compreensão dos conceitos básicos do C++ idioma.
-- No Visual Studio 2017 e posterior, C++o suporte a/CLI é um componente opcional. Para instalá-lo, abra o **instalador do Visual Studio** no menu Iniciar do Windows. Verifique se a opção **desenvolvimento de área C++ de trabalho com** bloco está marcada e, na seção componentes **opcionais** , verifique  **C++** também o suporte a/CLI.
+- Uma compreensão dos fundamentos da linguagem C++.
+- No Visual Studio 2017 e posterior, o suporte a C++/CLI é um componente opcional. Para instalá-lo, abra o **Visual Studio Installer** no menu Iniciar do Windows. Certifique-se de que o desenvolvimento da área de trabalho com azulejo **C++** seja verificado e, na seção **Componentes Opcionais,** verifique também o **suporte a C++/CLI**.
 
 ## <a name="create-a-new-project"></a>Criar um novo projeto
 
-As etapas a seguir variam dependendo da versão do Visual Studio que você está usando. Verifique se o seletor de versão no canto superior esquerdo desta página está definido corretamente.
+As etapas a seguir variam dependendo da versão do Visual Studio que você está usando. Para ver a documentação da sua versão preferida do Visual Studio, use o controle do seletor **de versão.** É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Para criar um C++projeto/CLI no Visual Studio 2019
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Para criar um projeto C++/CLI no Visual Studio 2019
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse na parte superior para abrir a caixa de diálogo **criar um novo projeto** .
+1. No **Solution Explorer,** clique com o botão direito do mouse na parte superior para abrir a caixa de diálogo **Criar um novo projeto.**
 
-1. Na parte superior do diálogo, digite **CLR** na caixa de pesquisa e escolha projeto do **CLR vazio** na lista de resultados.
+1. Na parte superior da caixa de diálogo, digite **CLR** na caixa de pesquisa e escolha **Projeto Vazio CLR** na lista de resultados.
 
 1. Escolha o botão **Criar** para criar o projeto.
 
@@ -44,7 +44,7 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Para criar um C++projeto/CLI no Visual Studio 2017
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Para criar um projeto C++/CLI no Visual Studio 2017
 
 1. Criar um novo projeto. No menu **Arquivo** , aponte para **Novo**e clique em **Projeto**.
 
@@ -58,7 +58,7 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Para criar um C++projeto/CLI no Visual Studio 2015
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Para criar um projeto C++/CLI no Visual Studio 2015
 
 1. Criar um novo projeto. No menu **Arquivo** , aponte para **Novo**e clique em **Projeto**.
 
@@ -76,11 +76,11 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 1. Adicione um novo arquivo de origem ao projeto:
 
-   - Clique com o botão direito do mouse na pasta **Arquivos de origem** no **Gerenciador de Soluções**, aponte para **Adicionar** e clique em **Novo Item**.
+   - Clique com o botão direito do mouse na pasta **Arquivos de origem** no Solution **Explorer,** aponte para **Adicionar**e clique em **Novo Item**.
 
-   - Clique em **Arquivo C++ (.cpp)** , digite um nome de arquivo e, em seguida, clique em **Adicionar**.
+   - Clique em **Arquivo C++ (.cpp)**, digite um nome de arquivo e, em seguida, clique em **Adicionar**.
 
-   O arquivo **.cpp** é exibido na pasta **Arquivos de Origem** do **Gerenciador de Soluções** e uma janela com guias é exibida no campo no qual você digita o código que deseja inserir nesse arquivo.
+   O arquivo **.cpp** aparece na pasta **Arquivos-origem** no **Solution Explorer** e uma janela de guia aparece onde você digita o código que deseja nesse arquivo.
 
 1. Clique na guia recém-criada no Visual Studio e digite um programa válido do Visual C++ ou copie e cole um dos programas de exemplo.
 
@@ -90,7 +90,7 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Para obter mais informações C++sobre a sintaxe/CLI, consulte [extensões de componente para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
+   Para obter mais informações sobre a sintaxe C++/CLI, consulte [Extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. No menu **Compilar**, clique em **Compilar Solução**.
 
@@ -109,5 +109,5 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 ## <a name="see-also"></a>Confira também
 
-[Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
+[Referência de linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Sistemas de Compilação e Projetos](../build/projects-and-build-systems-cpp.md)<br/>

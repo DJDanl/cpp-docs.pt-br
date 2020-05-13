@@ -6,11 +6,11 @@ helpviewer_keywords:
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
 ms.openlocfilehash: 1191cf4d2912cda535547f465fe4bfbedebe8fa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313188"
 ---
 # <a name="c-type-specifiers"></a>Especificadores de tipo C
 
@@ -18,7 +18,7 @@ Os especificadores de tipo em declarações definem o tipo de uma declaração d
 
 ## <a name="syntax"></a>Sintaxe
 
-*type-specifier*: &nbsp;&nbsp;&nbsp;&nbsp;**void** &nbsp;&nbsp;&nbsp;&nbsp;**char** &nbsp;&nbsp;&nbsp;&nbsp;**short** &nbsp;&nbsp;&nbsp;&nbsp;**int** &nbsp;&nbsp;&nbsp;&nbsp;**long** &nbsp;&nbsp;&nbsp;&nbsp;**float** &nbsp;&nbsp;&nbsp;&nbsp;**double** &nbsp;&nbsp;&nbsp;&nbsp;**signed** &nbsp;&nbsp;&nbsp;&nbsp;**unsigned** &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+*especificador de tipo* &nbsp; &nbsp; &nbsp;: &nbsp; **void** &nbsp; **unsigned** **short** &nbsp; **char** &nbsp; **signed** **int** &nbsp; **long** **double** **float** *enum-specifier* *typedef-name* *struct-or-union-specifier* Char &nbsp;long int &nbsp;longo flutuante duplo &nbsp;assinado &nbsp;de struct-or-Union-do especificador &nbsp;enum- &nbsp;nome do typedef-name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
 Os tipos **signed char**, **signed int**, **signed short int** e **signed long int**, junto com suas contrapartes **unsigned** e **enum**, são chamados de tipos *integrais*. Os especificadores de tipo **float**, **double** e **long double** são chamados de tipos *flutuantes* ou de *ponto flutuante*. Você pode usar qualquer especificador do tipo integral ou de ponto flutuante em uma declaração de variável ou função. Se um *especificador de tipo* não for fornecido em uma declaração, será considerado como **int**.
 
@@ -28,7 +28,7 @@ Os tipos de enumeração são considerados tipos básicos. Os especificadores de
 
 A palavra-chave **void** tem três usos: especificar um tipo de retorno da função, especificar uma lista de tipo de argumento para uma função que não leve argumentos e especificar um ponteiro para um tipo não especificado. Você pode usar o tipo **void** para declarar as funções que não retornam nenhum valor ou para declarar um ponteiro para um tipo não especificado. Consulte [Argumentos](../c-language/arguments.md) para obter informações sobre **void** quando é exibido sozinho dentro dos parênteses depois de um nome de função.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 A verificação de tipo agora está em conformidade com ANSI, o que significa que o tipo **short** e o tipo **int** são tipos distintos. Por exemplo, esta é uma redefinição do compilador do Microsoft C que foi aceita por versões anteriores do compilador.
 
@@ -46,7 +46,7 @@ short *ps;
 ps = pi;  /* Now generates warning */
 ```
 
-O compilador do Microsoft C também gerencia avisos para as diferenças no sinal. Por exemplo:
+O compilador do Microsoft C também gerencia avisos para as diferenças no sinal. Por exemplo: 
 
 ```C
 signed int *pi;
@@ -57,12 +57,12 @@ pi = pu;  /* Now generates warning */
 
 As expressões do tipo **void** são avaliadas quanto a efeitos colaterais. Você não pode usar o valor (inexistente) de uma expressão que tem o tipo **void** em qualquer modo, nem pode converter uma expressão **void** (por conversão implícita ou explícita) em qualquer tipo exceto **void**. Se você usar uma expressão de qualquer outro tipo em um contexto em que a expressão **void** é necessária, seu valor será descartado.
 
-Para estar em conformidade com a especificação de ANSI, <strong>void\*\*</strong> não pode ser usado como <strong>int\*\*</strong>. Somente **void**<strong>\*</strong> pode ser usado como um ponteiro para um tipo não especificado.
+Para estar em conformidade com a especificação ANSI, <strong>void\* </strong> não pode ser usado como <strong>int\*</strong>. Somente **void** <strong>\*</strong> pode ser usado como um ponteiro para um tipo não especificado.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 Você pode criar especificadores de tipo adicionais com as declarações **typedef**, conforme descrito em [Declarações de Typedef](../c-language/typedef-declarations.md). Consulte [Armazenamento de tipos básicos](../c-language/storage-of-basic-types.md) para obter informações sobre o tamanho de cada tipo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e tipos](../c-language/declarations-and-types.md)

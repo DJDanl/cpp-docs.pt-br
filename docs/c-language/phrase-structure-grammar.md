@@ -6,11 +6,11 @@ helpviewer_keywords:
 - grammar, phrase structure
 ms.assetid: 546c2961-5d37-4ef9-a0ce-74e7550e3899
 ms.openlocfilehash: 9dd87cd455971bbe83d76d424280e23f2e53a1fb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232370"
 ---
 # <a name="phrase-structure-grammar"></a>Gramática de estrutura da frase
 
@@ -22,6 +22,6 @@ ms.locfileid: "56148433"
 
 - [Definições externas](../c-language/external-definitions.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Resumo da sintaxe da linguagem C](../c-language/c-language-syntax-summary.md)

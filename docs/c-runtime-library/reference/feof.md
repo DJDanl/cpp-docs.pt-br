@@ -1,8 +1,9 @@
 ---
 title: feof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - feof
+- _o_feof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941141"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920162"
 ---
 # <a name="feof"></a>feof
 
@@ -46,10 +48,10 @@ int feof(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 A função **feof** retornará um valor diferente de zero se uma operação de leitura tiver tentado ler após o final do arquivo; caso contrário, retornará 0. Se o ponteiro de fluxo for **nulo**, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e **feof** retornará 0.
 
@@ -61,13 +63,15 @@ A rotina **feof** (implementada como uma função e como uma macro) determina se
 
 Por exemplo, se um arquivo contiver 10 bytes e você ler 10 bytes do arquivo, **feof** retornará 0 porque, embora o ponteiro do arquivo esteja no final do arquivo, você não tentou ler além do final. Somente depois de tentar ler um byte 11, o **feof** retornará um valor diferente de zero.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

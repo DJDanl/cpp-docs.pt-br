@@ -1,11 +1,15 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
-ms.date: 10/20/2017
+ms.date: 4/2/2020
 api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
+- _o__strtod_l
+- _o__wcstod_l
+- _o_strtod
+- _o_wcstod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 410d339789ef4a29a6760a4118f967b22f4f3a8c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946501"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910886"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -90,15 +95,17 @@ Ponteiro para o caractere que interrompe a verificação.
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**strtod** retorna o valor do número de ponto flutuante, exceto quando a representação causar um estouro, caso em que a função retorna +/-**HUGE_VAL**. O sinal de **HUGE_VAL** corresponde ao sinal do valor que não pode ser representado. **strtod** retornará 0 se nenhuma conversão puder ser executada ou se ocorrer um estouro negativo.
+**strtod** retorna o valor do número de ponto flutuante, exceto quando a representação causar um estouro; nesse caso, a função retornará +/-**HUGE_VAL**. O sinal de **HUGE_VAL** corresponde ao sinal do valor que não pode ser representado. **strtod** retornará 0 se nenhuma conversão puder ser executada ou se ocorrer um estouro negativo.
 
 **wcstod** retorna valores de forma análoga ao **strtod**. Para ambas as funções, **errno** é definido como **ERANGE** se o estouro ou Subfluxo ocorre e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
 Cada função converte a cadeia de caracteres de entrada *strSource* em um **Double**. A função **strtod** converte *strSource* em um valor de precisão dupla. **strtod** interrompe a leitura da cadeia de caracteres *strSource* no primeiro caractere que ela não pode reconhecer como parte de um número. Este pode ser o caractere nulo de terminação. **wcstod** é uma versão de caractere largo do **strtod**; seu argumento *strSource* é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -107,13 +114,13 @@ Cada função converte a cadeia de caracteres de entrada *strSource* em um **Dou
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-A configuração de categoria **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere de ponto de base em *strSource*. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo **_L** usam a localidade atual; **_strtod_l** é idêntico ao **_strtod_l** , exceto pelo fato de que eles usam a *localidade* transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A configuração de categoria de **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere de ponto de base em *strSource*. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo **_L** usam a localidade atual; o **_strtod_l** é idêntico ao **_strtod_l** , exceto pelo fato de que eles usam a *localidade* transmitida em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Se *endptr* não for **NULL**, um ponteiro para o caractere que parou a verificação será armazenado no local apontado por *endptr*. Se nenhuma conversão puder ser executada (nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* será armazenado no local apontado por *endptr*.
 
 **strtod** espera que *strSource* aponte para uma cadeia de caracteres de uma das seguintes formas:
 
-[*espaço em branco*] [*assinar*] { digits [ *dígitos*de &#124; *base* ] *dígitos*de *base* } [{**e** &#124; **e**} [*assinar*] *dígitos*] [*espaço em branco*] [*sinal*] {**0x** &#124; **0x**} {*hexdigits* [*Radix* *hexdigits*] &#124;  *Radix* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *hexdigits*] [*espaço em branco*] [*Sign*] {**inf** &#124; **Infinity**} [*Whitespace*] [ *Sign*] **Nan** [*Sequence*]
+[*espaço em branco*] [*assinar*] {*digits* [ *dígitos**fracionários* ] &#124; *dígitos* *fracionários* } [{**e** &#124; **e**} [*Sign*] *dígitos*] [*espaço em branco*] [*sinal*] {**0x** &#124; **0x**} {*hexdigits* [*Radix* *hexdigits*] &#124; *Radix* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *hexdigits*] [*espaço em branco*] [*Sign*] {**inf** &#124; **infinityy**} [*espaço em branco*] [*Sign*] **Nan** [*Sequence*]
 
 O espaço em *branco* à esquerda opcional pode consistir em caracteres de espaço e tabulação, ignorados; o *sinal* é mais (+) ou menos (-); os *dígitos* são um ou mais dígitos decimais; *hexdigits* são um ou mais dígitos hexadecimais; *Radix* é o caractere de ponto fracionário, um ponto (.) na localidade padrão "C" ou o valor específico de localidade se a localidade atual for diferente ou quando a *localidade* for especificada; uma *sequência* é uma sequência de caracteres alfanuméricos ou de sublinhado. Nos formatos de número decimal e hexadecimal, se nenhum dígito aparecer antes do caractere de ponto de base, pelo menos um deve aparecer após o caractere de ponto de base. Na forma decimal, os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e** ou **e**) e um inteiro assinado opcionalmente. Na forma hexadecimal, os dígitos hexadecimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**p** ou **p**) e um inteiro hexadecimal, opcionalmente assinado, que representa o expoente como uma potência de 2. Em qualquer forma, se nem uma parte de expoente nem um caractere de ponto de base aparecer, um caractere de ponto de base será considerado para seguir o último dígito na cadeia de caracteres. O caso é ignorado nos formulários **inf** e **Nan** . O primeiro caractere que não se ajusta a um desses formulários interrompe a verificação.
 
@@ -126,7 +133,7 @@ As versões UCRT dessas funções não dão suporte à conversão de letras de e
 |**strtod**, **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> ou &lt;stdlib.h> |
 |**wcstod**, **_wcstod_l**|C: &lt;stdlib.h> ou &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> ou &lt;wchar.h> |
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -193,13 +200,13 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
-[Funções de valor de cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Funções de valor da cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

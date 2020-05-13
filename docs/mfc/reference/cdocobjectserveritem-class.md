@@ -1,5 +1,5 @@
 ---
-title: Classe CDocObjectServerItem
+title: Classe de CDocObjectServerItem
 ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: 4d44791415626f1a94500b9c3885581d67e8fe42
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f0f5cf93aab35a17f7174b2beee0d1398564a3d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506816"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375533"
 ---
-# <a name="cdocobjectserveritem-class"></a>Classe CDocObjectServerItem
+# <a name="cdocobjectserveritem-class"></a>Classe de CDocObjectServerItem
 
-Implementa verbos do servidor OLE especificamente para servidores DocObject.
+Implementa verbos de servidor OLE especificamente para servidores DocObject.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,34 +52,34 @@ class CDocObjectServerItem : public COleServerItem
 |Nome|Descrição|
 |----------|-----------------|
 |[CDocObjectServerItem::OnDoVerb](#ondoverb)|Chamado para executar um verbo.|
-|[CDocObjectServerItem::OnHide](#onhide)|Gera uma exceção se a estrutura tenta ocultar um item DocObject.|
-|[CDocObjectServerItem::OnShow](#onshow)|Chamado pelo Framework para tornar o item DocObject ativo no local. Se o item não for um DocObject, chama [COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
+|[CDocObjectServerItem::OnHide](#onhide)|Abre uma exceção se a estrutura tentar ocultar um item DocObject.|
+|[CDocObjectServerItem::OnShow](#onshow)|Chamado pela estrutura para tornar o item DocObject no lugar ativo. Se o item não for um DocObject, chamará [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
 
 ## <a name="remarks"></a>Comentários
 
-`CDocObjectServerItem`define funções de membro substituíveis: [OnHide](#onhide), [OnDoVerb](#ondoverb)e [OnShow](#onshow).
+`CDocObjectServerItem`define funções de membros superridíveis: [OnHide,](#onhide) [OnDoVerb](#ondoverb)e [OnShow](#onshow).
 
-Para usar `CDocObjectServerItem`, certifique-se de que a substituição [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) na sua `COleServerDoc`classe derivada retorna um novo objeto `CDocObjectServerItem`. Se você precisar alterar qualquer funcionalidade em seu item, poderá criar uma nova instância de sua própria `CDocObjectServerItem`classe derivada.
+Para `CDocObjectServerItem`usar, certifique-se de que a `COleServerDoc`substituição [onGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) em sua classe derivada retorna um novo `CDocObjectServerItem` objeto. Se você precisar alterar qualquer funcionalidade em seu item, você `CDocObjectServerItem`pode criar uma nova instância de sua própria classe derivada.
 
-Para obter mais informações sobre DocObjects, consulte [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [COleCmdUI](../../mfc/reference/colecmdui-class.md) na *referência do MFC*.
+Para obter mais informações sobre docObjects, consulte [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [COleCmdUI](../../mfc/reference/colecmdui-class.md) na *referência MFC*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocItem](../../mfc/reference/cdocitem-class.md)
+[Cdocitem](../../mfc/reference/cdocitem-class.md)
 
-[COleServerItem](../../mfc/reference/coleserveritem-class.md)
+[Coleserveritem](../../mfc/reference/coleserveritem-class.md)
 
 `CDocObjectServerItem`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** AfxDocOb. h
+**Cabeçalho:** afxdocob.h
 
-##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem
+## <a name="cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem
 
 Constrói um objeto `CDocObjectServerItem`.
 
@@ -93,9 +93,9 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 Um ponteiro para o documento que conterá o novo item DocObject.
 
 *bAutoDelete*<br/>
-Indica se o objeto pode ser excluído quando um link para ele é liberado. Defina o argumento como false se o `CDocObjectServerItem` objeto for uma parte integral dos dados do documento. Defina-a como TRUE se o objeto for uma estrutura secundária usada para identificar um intervalo nos dados do documento que podem ser excluídos pela estrutura.
+Indica se o objeto pode ser excluído quando um link é liberado. Defina o argumento `CDocObjectServerItem` como FALSO se o objeto for parte integrante dos dados do seu documento. Defina-o como TRUE se o objeto for uma estrutura secundária usada para identificar um intervalo nos dados do documento que pode ser excluído pela estrutura.
 
-##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument
+## <a name="cdocobjectserveritemgetdocument"></a><a name="getdocument"></a>CDocObjectServerItem::GetDocument
 
 Recupera um ponteiro para o documento que contém o item.
 
@@ -103,17 +103,17 @@ Recupera um ponteiro para o documento que contém o item.
 COleServerDoc* GetDocument() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o documento que contém o item; NULL se o item não fizer parte de um documento.
+Um ponteiro para o documento que contém o item; NULO se o item não fizer parte de um documento.
 
 ### <a name="remarks"></a>Comentários
 
-Isso permite o acesso ao documento do servidor que você passou como um argumento para o construtor [CDocObjectServerItem](#cdocobjectserveritem) .
+Isso permite o acesso ao documento do servidor que você passou como um argumento para o construtor [CDocObjectServerItem.](#cdocobjectserveritem)
 
-##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
+## <a name="cdocobjectserveritemondoverb"></a><a name="ondoverb"></a>CDocObjectServerItem::OnDoVerb
 
-Chamado pelo Framework para executar o verbo especificado.
+Chamado pela estrutura para executar o verbo especificado.
 
 ```
 virtual void OnDoVerb(LONG iVerb);
@@ -121,16 +121,16 @@ virtual void OnDoVerb(LONG iVerb);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iVerb*<br/>
-Especifica o verbo a ser executado. Para obter os valores possíveis, consulte [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) no SDK do Windows.
+*Iverb*<br/>
+Especifica o verbo a ser executado. Para obter valores possíveis, consulte [IOleObject::DoVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) no Windows SDK.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão chama a função de membro [OnShow](#onshow) se o item for um DOCOBJECT e OLEIVERB_INPLACEACTIVATE ou OLEIVERB_SHOW for especificado. Se o item não for um DocObject ou um verbo diferente for especificado, a implementação padrão chamará [COleServerItem:: OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb).
+A implementação padrão chama a função de membro [do OnShow](#onshow) se o item for um DocObject e a OLEIVERB_INPLACEACTIVATE ou OLEIVERB_SHOW for especificada. Se o item não for um DocObject ou um verbo diferente for especificado, a implementação padrão chamará [COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb).
 
-##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
+## <a name="cdocobjectserveritemonhide"></a><a name="onhide"></a>CDocObjectServerItem::OnHide
 
-Chamado pelo Framework para ocultar o item.
+Chamado pela estrutura para esconder o item.
 
 ```
 virtual void OnHide();
@@ -138,11 +138,11 @@ virtual void OnHide();
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão gera uma exceção se o item for um DocObject. Não é possível ocultar um item DocObject ativo porque ele usa a exibição inteira. Você deve desativar o item DocObject para que ele desapareça. Se o item não for um DocObject, a implementação padrão chamará [COleServerItem:: OnHide](../../mfc/reference/coleserveritem-class.md#onhide).
+A implementação padrão lança uma exceção se o item for um DocObject. Você não pode ocultar um item ativo doCObject porque ele leva toda a exibição. Você deve desativar o item DocObject para fazê-lo desaparecer. Se o item não for um DocObject, a implementação padrão chamará [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).
 
-##  <a name="onshow"></a>  CDocObjectServerItem::OnShow
+## <a name="cdocobjectserveritemonshow"></a><a name="onshow"></a>CDocObjectServerItem::OnShow
 
-Chamado pelo Framework para instruir o aplicativo de servidor a tornar o item DocObject ativo no local.
+Chamado pela estrutura para instruir o aplicativo do servidor para tornar o item DocObject no lugar ativo.
 
 ```
 virtual void OnShow();
@@ -150,9 +150,9 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>Comentários
 
-Se o item não for um DocObject, a implementação padrão chamará [COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Substitua essa função se você quiser executar um processamento especial ao abrir um item DocObject.
+Se o item não for um DocObject, a implementação padrão chamará [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Anular esta função se você quiser executar um processamento especial ao abrir um item DocObject.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe COleServerItem](../../mfc/reference/coleserveritem-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

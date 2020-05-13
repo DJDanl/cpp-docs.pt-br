@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: Adicionando propriedades de estoque'
+title: 'Controles ActiveX MFC: adicionando propriedades de estoque'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BackColor property [MFC]
@@ -9,55 +9,55 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16bdfddf0c028bc6a312767844b38c58c942d56e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225337"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364660"
 ---
-# <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: Adicionando propriedades de estoque
+# <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: adicionando propriedades de estoque
 
-Propriedades de estoque diferem das propriedades personalizadas em que eles já são implementados pela classe `COleControl`. `COleControl` contém funções de membro predefinidas que oferecem suporte a propriedades comuns para o controle. Algumas propriedades comuns incluem a legenda do controle e as cores de primeiro plano e plano de fundo. Para obter informações sobre outras propriedades de estoque, consulte [Stock propriedades suportadas pelo Assistente para adicionar propriedade](#_core_stock_properties_supported_by_classwizard) mais adiante neste artigo. As entradas de mapa de expedição para propriedades sempre são prefixadas por DISP_STOCKPROP de estoque.
+As propriedades de estoque diferem das propriedades personalizadas, pois já são implementadas pela classe. `COleControl` `COleControl`contém funções de membro predefinidas que suportam propriedades comuns para o controle. Algumas propriedades comuns incluem a legenda do controle e as cores de primeiro plano e de fundo. Para obter informações sobre outras propriedades de estoque, consulte [Propriedades de estoque suportadas pelo Assistente adicionar propriedades](#_core_stock_properties_supported_by_classwizard) mais tarde neste artigo. As entradas do mapa de despacho para propriedades de estoque são sempre prefixadas por DISP_STOCKPROP.
 
-Este artigo descreve como adicionar uma propriedade de estoque (nesse caso, legenda) para um controle ActiveX usando o Assistente para adicionar propriedade e explica as modificações de código resultante. Os tópicos incluem:
+Este artigo descreve como adicionar uma propriedade de estoque (neste caso, Caption) a um controle ActiveX usando o Add Property Wizard e explica as modificações de código resultantes. Os tópicos incluem:
 
-- [Usando o Assistente para adicionar propriedade para adicionar uma propriedade de estoque](#_core_using_classwizard_to_add_a_stock_property)
+- [Usando o Assistente adicionar propriedade para adicionar uma propriedade de estoque](#_core_using_classwizard_to_add_a_stock_property)
 
-- [Adicione as alterações do Assistente de propriedade para propriedades de estoque](#_core_classwizard_changes_for_stock_properties)
+- [Adicionar alterações do Assistente de Propriedade para propriedades de estoque](#_core_classwizard_changes_for_stock_properties)
 
-- [Propriedades de estoque com suporte pelo Assistente para adicionar propriedade](#_core_stock_properties_supported_by_classwizard)
+- [Propriedades de estoque suportadas pelo Assistente de Adicionar Propriedades](#_core_stock_properties_supported_by_classwizard)
 
-- [Notificação e propriedades de estoque](#_core_stock_properties_and_notification)
+- [Propriedades de estoque e notificação](#_core_stock_properties_and_notification)
 
-- [Propriedades de cor](#_core_color_properties)
+- [Propriedades de cores](#_core_color_properties)
 
     > [!NOTE]
-    >  Controles personalizados do Visual Basic normalmente têm as propriedades, como a parte superior, esquerda, largura, altura, alinhar, marca, nome, TabIndex, parada de tabulação e pai. Contêineres de controle ActiveX, no entanto, serão responsáveis por implementar essas propriedades de controle e, portanto, os controles ActiveX devem não dar suporte a essas propriedades.
+    >  Os controles personalizados do Visual Basic normalmente têm propriedades como Top, Left, Width, Height, Align, Tag, Name, TabIndex, TabStop e Parent. Os contêineres de controle ActiveX, no entanto, são responsáveis pela implementação dessas propriedades de controle e, portanto, os controles ActiveX não devem suportar essas propriedades.
 
-##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> Usando o Assistente para adicionar propriedade para adicionar uma propriedade de estoque
+## <a name="using-the-add-property-wizard-to-add-a-stock-property"></a><a name="_core_using_classwizard_to_add_a_stock_property"></a>Usando o assistente de adicionar propriedade para adicionar uma propriedade de estoque
 
-Adicionando propriedades de estoque exige menos código do que Adicionando propriedades personalizadas, porque o suporte para a propriedade é tratada automaticamente pelo `COleControl`. O procedimento a seguir demonstra como adicionar a propriedade Caption de estoque para a estrutura de controle ActiveX e também pode ser usado para adicionar outras propriedades de estoque. Substitua o nome de propriedade de estoque selecionado para a legenda.
+Adicionar propriedades de estoque requer menos código do que adicionar propriedades `COleControl`personalizadas porque o suporte para a propriedade é manipulado automaticamente por . O procedimento a seguir demonstra a adição da propriedade stock Caption a uma estrutura de controle ActiveX e também pode ser usado para adicionar outras propriedades de estoque. Substitua o nome da propriedade de estoque selecionado por Legenda.
 
-#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Para adicionar a propriedade Caption ações usando o Assistente para adicionar propriedade
+#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Para adicionar a propriedade stock Caption usando o Assistente adicionar propriedade
 
-1. Carregar o projeto do seu controle.
+1. Carregue o projeto do seu controle.
 
-1. No modo de exibição de classe, expanda o nó de biblioteca do seu controle.
+1. Em Class View, expanda o nó de biblioteca do seu controle.
 
-1. Para abrir o menu de atalho, clique com botão direito no nó de interface para o seu controle (o segundo nó do nó de biblioteca).
+1. Clique com o botão direito do mouse no nó de interface para o seu controle (o segundo nó do nó da biblioteca) para abrir o menu de atalho.
 
-1. No menu de atalho, clique em **Add** e, em seguida, clique em **adicionar propriedade**.
+1. No menu de atalho, clique **em Adicionar** e clique em **Adicionar propriedade**.
 
-   Isso abre o [Assistente para adicionar de propriedade](../ide/names-add-property-wizard.md).
+   Isso abre o [Assistente adicionar propriedade](../ide/names-add-property-wizard.md).
 
-1. No **nome da propriedade** , clique em **legenda**.
+1. Na caixa Nome da **propriedade,** clique **em Legenda**.
 
-1. Clique em **Finalizar**.
+1. Clique em **Concluir**.
 
-##  <a name="_core_classwizard_changes_for_stock_properties"></a> Adicione as alterações do Assistente de propriedade para propriedades de estoque
+## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a>Adicionar alterações do assistente de propriedade para propriedades de estoque
 
-Porque `COleControl` dá suporte a propriedades de estoque, o Assistente para adicionar propriedade não altera a declaração de classe de qualquer forma, ele adiciona a propriedade para o mapa de expedição. O Assistente para adicionar propriedade adiciona a seguinte linha ao mapa de expedição do controle, que está localizado na implementação (. Arquivo CPP):
+Como `COleControl` suporta propriedades de estoque, o Assistente adicionar propriedades não altera a declaração de classe de forma alguma; ele adiciona a propriedade ao mapa de despacho. O Assistente de Propriedade adicionar adiciona a seguinte linha ao mapa de despacho do controle, que está localizado na implementação (. Arquivo CPP):
 
 [!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]
 
@@ -65,44 +65,44 @@ A linha a seguir é adicionada à descrição da interface do seu controle (. Ar
 
 [!code-cpp[NVC_MFC_AxUI#23](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_2.idl)]
 
-Essa linha atribui a propriedade Caption de uma ID específica. Observe que a propriedade é associável e solicita permissão do banco de dados antes de modificar o valor.
+Esta linha atribui à propriedade Caption um ID específico. Observe que a propriedade é vinculável e solicitará permissão do banco de dados antes de modificar o valor.
 
-Isso torna a propriedade Caption disponível para os usuários do seu controle. Para usar o valor de uma propriedade de estoque, acessar uma variável de membro ou uma função de membro do `COleControl` classe base. Para obter mais informações sobre essas funções de membro e variáveis de membro, consulte a próxima seção, estoque propriedades suportadas pelo Assistente de adição de propriedade.
+Isso torna a propriedade Caption disponível para os usuários do seu controle. Para usar o valor de uma propriedade de estoque, `COleControl` acesse uma variável membro ou função membro da classe base. Para obter mais informações sobre essas variáveis de membro e funções de membro, consulte a próxima seção, Propriedades de estoque suportadas pelo Assistente de adicionar propriedade.
 
-##  <a name="_core_stock_properties_supported_by_classwizard"></a> Estoque de propriedades compatíveis com o Assistente para adicionar propriedade
+## <a name="stock-properties-supported-by-the-add-property-wizard"></a><a name="_core_stock_properties_supported_by_classwizard"></a>Propriedades de estoque suportadas pelo Assistente de Adicionar Propriedades
 
-O `COleControl` classe fornece nove propriedades de estoque. Você pode adicionar as propriedades desejadas usando o Assistente para adicionar propriedade.
+A `COleControl` classe fornece nove propriedades de estoque. Você pode adicionar as propriedades desejadas usando o Assistente adicionar propriedade.
 
-|Propriedade|Entrada de mapa de expedição|Como acessar o valor|
+|Propriedade|Entrada do mapa de despacho|Como acessar o valor|
 |--------------|------------------------|-------------------------|
-|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Valor acessível como `m_sAppearance`.|
-|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|Valor acessível por meio da chamada `GetBackColor`.|
-|`BorderStyle`|(DISP_STOCKPROP_BORDERSTYLE)|Valor acessível como `m_sBorderStyle`.|
-|`Caption`|DISP_STOCKPROP_CAPTION( )|Valor acessível por meio da chamada `InternalGetText`.|
-|`Enabled`|DISP_STOCKPROP_ENABLED( )|Valor acessível como `m_bEnabled`.|
-|`Font`|DISP_STOCKPROP_FONT( )|Consulte o artigo [controles ActiveX MFC: Usando fontes](../mfc/mfc-activex-controls-using-fonts.md) para uso.|
-|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|Valor acessível por meio da chamada `GetForeColor`.|
-|`hWnd`|DISP_STOCKPROP_HWND( )|Valor acessível como `m_hWnd`.|
-|`Text`|DISP_STOCKPROP_TEXT( )|Valor acessível por meio da chamada `InternalGetText`. Essa propriedade é o mesmo que `Caption`, exceto para o nome da propriedade.|
-|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Valor acessível como `m_lReadyState` ou `GetReadyState`|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE.|Valor acessível como `m_sAppearance`.|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR.|Valor acessível `GetBackColor`por chamada .|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE.|Valor acessível como `m_sBorderStyle`.|
+|`Caption`|DISP_STOCKPROP_CAPTION.|Valor acessível `InternalGetText`por chamada .|
+|`Enabled`|DISP_STOCKPROP_ENABLED.|Valor acessível como `m_bEnabled`.|
+|`Font`|DISP_STOCKPROP_FONT.|Veja o artigo [Controles MFC ActiveX: Usando fontes](../mfc/mfc-activex-controls-using-fonts.md) para uso.|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR.|Valor acessível `GetForeColor`por chamada .|
+|`hWnd`|DISP_STOCKPROP_HWND|Valor acessível como `m_hWnd`.|
+|`Text`|DISP_STOCKPROP_TEXT.|Valor acessível `InternalGetText`por chamada . Esta propriedade é `Caption`a mesma que, exceto pelo nome da propriedade.|
+|`ReadyState`|DISP_STOCKPROP_READYSTATE|Valor acessível como `m_lReadyState` ou`GetReadyState`|
 
-##  <a name="_core_stock_properties_and_notification"></a> Notificação e propriedades de estoque
+## <a name="stock-properties-and-notification"></a><a name="_core_stock_properties_and_notification"></a>Propriedades e Notificação de Estoques
 
-A maioria das propriedades de estoque têm funções de notificação que podem ser substituídas. Por exemplo, sempre que o `BackColor` propriedade for alterada, o `OnBackColorChanged` é chamada de função (uma função de membro de classe de controle). A implementação padrão (no `COleControl`) chama `InvalidateControl`. Substitua essa função se você quiser executar ações adicionais em resposta a essa situação.
+A maioria das propriedades de estoque tem funções de notificação que podem ser substituídas. Por exemplo, `BackColor` sempre que a `OnBackColorChanged` propriedade é alterada, a função (uma função membro da classe de controle) é chamada. A implementação `COleControl`padrão `InvalidateControl`(in) chamadas . Anular essa função se você quiser tomar ações adicionais em resposta a esta situação.
 
-##  <a name="_core_color_properties"></a> Propriedades de cor
+## <a name="color-properties"></a><a name="_core_color_properties"></a>Propriedades de cores
 
-Você pode usar o estoque `ForeColor` e `BackColor` propriedades ou suas próprias propriedades de cor personalizada, quando o controle de pintura. Para usar uma propriedade de cor, chame o [COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor) função de membro. Os parâmetros dessa função são o valor da propriedade de cor e um identificador opcional paleta. O valor retornado é um **COLORREF** funções de valor que pode ser passado para GDI, como `SetTextColor` e `CreateSolidBrush`.
+Você pode usar `ForeColor` `BackColor` o estoque e propriedades, ou suas próprias propriedades de cor personalizadas, ao pintar o controle. Para usar uma propriedade de cores, ligue para a função [COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor) member. Os parâmetros desta função são o valor da propriedade de cores e uma alça de paleta opcional. O valor de retorno é um valor **COLORREF** que pode `SetTextColor` `CreateSolidBrush`ser passado para funções GDI, como e .
 
-Os valores de cor para a ação `ForeColor` e `BackColor` propriedades são acessadas chamando o `GetForeColor` ou o `GetBackColor` funcionar, respectivamente.
+Os valores de `ForeColor` `BackColor` cor para o estoque `GetForeColor` e `GetBackColor` propriedades são acessados ligando para a função ou para a função, respectivamente.
 
-O exemplo a seguir demonstra como usar essas propriedades de duas cores ao pintar um controle. Ele inicializa um temporário **COLORREF** variável e uma `CBrush` objeto com chamadas para `TranslateColor`: usando o `ForeColor` propriedade e outra usando o `BackColor` propriedade. Um temporário `CBrush` objeto é usado para pintar o retângulo de controle e a cor do texto é definida usando o `ForeColor` propriedade.
+O exemplo a seguir demonstra o uso dessas duas propriedades de cor ao pintar um controle. Ele inicializa uma variável **COLORREF** temporária `CBrush` e `TranslateColor`um objeto `ForeColor` com chamadas para: um usando a propriedade e outro usando a `BackColor` propriedade. Um `CBrush` objeto temporário é então usado para pintar o retângulo do `ForeColor` controle, e a cor do texto é definida usando a propriedade.
 
 [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: propriedades](../mfc/mfc-activex-controls-properties.md)<br/>
-[Controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX do MFC: propriedades](../mfc/mfc-activex-controls-properties.md)<br/>
+[Controles ActiveX do MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

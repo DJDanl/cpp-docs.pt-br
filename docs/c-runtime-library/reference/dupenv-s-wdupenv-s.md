@@ -1,9 +1,11 @@
 ---
 title: _dupenv_s, _wdupenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dupenv_s
 - _wdupenv_s
+- _o__dupenv_s
+- _o__wdupenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +39,19 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942016"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915189"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
 Obtém um valor do ambiente atual.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -67,7 +70,7 @@ errno_t _wdupenv_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Buffer para armazenar o valor da variável.
 
 *numberOfElements*<br/>
@@ -76,7 +79,7 @@ Tamanho do *buffer*.
 *varname*<br/>
 Nome da variável de ambiente.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero em caso de êxito; código de erro em caso de falha.
 
@@ -86,7 +89,7 @@ Se essas funções não puderem alocar memória suficiente, elas definirão o *b
 
 ## <a name="remarks"></a>Comentários
 
-A função **_dupenv_s** pesquisa a lista de variáveis de ambiente para *VarName*. Se a variável for encontrada, **_dupenv_s** alocará um buffer e copiará o valor da variável para o buffer. O endereço e o comprimento do buffer são retornados em *buffer* e *numberOfElements*. Ao alocar o buffer em si, o **_dupenv_s** fornece uma alternativa mais conveniente para [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+A função **_dupenv_s** pesquisa a lista de variáveis de ambiente para *VarName*. Se a variável for encontrada, **_dupenv_s** aloca um buffer e copia o valor da variável no buffer. O endereço e o comprimento do buffer são retornados em *buffer* e *numberOfElements*. Ao alocar o buffer em si, o **_dupenv_s** fornece uma alternativa mais conveniente para [getenv_s _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > É de responsabilidade do programa chamador liberar a memória chamando [free](free.md).
@@ -95,11 +98,13 @@ Se a variável não for encontrada, o *buffer* será definido como **NULL**, *nu
 
 Se você não estiver interessado no tamanho do buffer, poderá passar **NULL** para *numberOfElements*.
 
-**_dupenv_s** não diferencia maiúsculas de minúsculas no sistema operacional Windows. **_dupenv_s** usa a cópia do ambiente apontado pela variável global **_environ** para acessar o ambiente. Consulte os comentários em [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para uma discussão de **_environ**.
+**_dupenv_s** não diferencia maiúsculas de minúsculas no sistema operacional Windows. **_dupenv_s** usa a cópia do ambiente apontado pela variável global **_environ** para acessar o ambiente. Consulte os comentários em [getenv_s _wgetenv_s](getenv-s-wgetenv-s.md) para obter uma discussão de **_environ**.
 
 O valor no *buffer* é uma cópia do valor da variável de ambiente; modificá-lo não tem nenhum efeito no ambiente. Use a função [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) para modificar o valor de uma variável de ambiente.
 
-**_wdupenv_s** é uma versão de caractere largo do **_dupenv_s**; os argumentos de **_wdupenv_s** são cadeias de caracteres largos. A variável global **_wenviron** é uma versão de caractere largo de **_environ**. Consulte os comentários em [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obter mais informações sobre **_wenviron**.
+**_wdupenv_s** é uma versão de caractere largo do **_dupenv_s**; os argumentos de **_wdupenv_s** são cadeias de caracteres largos. A variável global **_wenviron** é uma versão de caractere largo do **_environ**. Consulte os comentários em [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obter mais informações sobre **_wenviron**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -114,7 +119,7 @@ O valor no *buffer* é uma cópia do valor da variável de ambiente; modificá-l
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -142,7 +147,7 @@ pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
 nonexistentvariable = (null)
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Constantes ambientais](../../c-runtime-library/environmental-constants.md)<br/>

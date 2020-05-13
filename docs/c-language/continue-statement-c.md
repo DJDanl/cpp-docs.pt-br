@@ -8,11 +8,11 @@ helpviewer_keywords:
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
 ms.openlocfilehash: 983775e6fe9887afa5784358ede1de9583b3afba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312551"
 ---
 # <a name="continue-statement-c"></a>Instrução continue (C)
 
@@ -20,7 +20,7 @@ A instrução `continue` transmite o controle para a próxima iteração da inst
 
 ## <a name="syntax"></a>Sintaxe
 
-*jump-statement*:<br/>
+*instrução de salto*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**continue ;**
 
 A próxima iteração de uma instrução `do`, `for` ou `while` é determinada da seguinte maneira:
@@ -43,6 +43,6 @@ while ( i-- > 0 )
 
 Nesse exemplo, o corpo da instrução é executado enquanto `i` é maior que 0. Primeiro, `f(i)` é atribuído a `x`; então, se `x` for igual a 1, a instrução `continue` será executada. O restante das instruções no corpo é ignorado, e a execução será retomada na parte superior do loop com a avaliação do teste de loop.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Instrução continue](../cpp/continue-statement-cpp.md)
+[Instrução Continue](../cpp/continue-statement-cpp.md)

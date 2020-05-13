@@ -23,19 +23,19 @@ O especificador storage-class em uma definição de função fornece à função
 
 ## <a name="syntax"></a>Sintaxe
 
-*function-definition*:<br/>
+*função-definição*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-*atributo de \* /-Seq* é \*específico da Microsoft /
+/\**Attribute-Seq* é específico da Microsoft\*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*storage-class-specifier*: /\* Para definições de função \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**static**
+*armazenamento-classe-especificador*:\* /para definições de função\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**externo**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**auto-estática**
 
 Se uma definição de função não inclui um *storage-class-specifier*, a classe de armazenamento usa `extern` como padrão. Você pode declarar explicitamente uma função como `extern`, mas isso não é necessário.
 
@@ -45,14 +45,14 @@ As declarações de função block-scope com um especificador storage-class dife
 
 Uma função com a classe de armazenamento **static** só é visível no arquivo de origem em que é definida. Todas as outras funções, tendo recebido a classe de armazenamento `extern` de forma explícita ou implícita, são visíveis em todos os arquivos de origem do programa. Se a classe de armazenamento **static** for desejada, ela deverá ser declarada na primeira ocorrência de uma declaração (se houver) da função e na definição da função.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Quando as extensões da Microsoft são habilitadas, uma função originalmente declarada sem uma classe de armazenamento (ou com a classe de armazenamento `extern`) receberá a classe de armazenamento **static** se a definição da função estiver no mesmo arquivo de origem e se a definição especificar explicitamente a classe de armazenamento **static**.
 
 Ao compilar com a opção do compilador /Ze, as funções declaradas em um bloco usando a palavra-chave `extern` terão visibilidade global. Isso não ocorre na compilação com /Za. Esse recurso não deve ser usado se a portabilidade do código-fonte estiver em consideração.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Definições de função C](../c-language/c-function-definitions.md)

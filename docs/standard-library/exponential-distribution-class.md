@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: 7418c0316f98f633d229b3bb544bd34d2ac0fb07
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: a281f7fd77c0a68fca3a8fcfa163758ec464f1d3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688084"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368715"
 ---
 # <a name="exponential_distribution-class"></a>Classe exponential_distribution
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *RealType*
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*\
+O tipo de resultado de ponto flutuante, padrão para **dobrar**. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
 
-@No__t_1 *URNG*
-O mecanismo do gerador de número aleatório. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG*\
+O motor do gerador de números aleatórios. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição exponencial. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário, ou tipo **duplo** se nenhum for fornecido, distribuído de acordo com a Distribuição Exponencial. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ A função membro de propriedade `lambda()` retorna o valor para o parâmetro de
 
 A função membro da propriedade `param()` define ou retorna o pacote de parâmetro de distribuição armazenado `param_type`.
 
-Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
+Para obter mais informações sobre as aulas de distribuição e seus membros, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 Para obter informações detalhadas sobre a distribuição exponencial, consulte o artigo de Wolfram MathWorld [Distribuição exponencial](https://go.microsoft.com/fwlink/p/?linkid=401098).
 
@@ -171,7 +171,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution:exponential_distribution
 
 Constrói a distribuição.
 
@@ -182,21 +182,21 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *lambda*
+*Lambda*\
 O parâmetro de distribuição `lambda`.
 
-\ de *parâmetros*
+*Parm*\
 O pacote de parâmetro usado para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 < lambda`
+**Pré-condição:**`0.0 < lambda`
 
 O primeiro construtor constrói um objeto cujo valor `lambda` armazenado contém o valor *lambda*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="param_type"></a>  exponential_distribution::param_type
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::param_type
 
 Armazena os parâmetros da distribuição.
 
@@ -213,18 +213,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *lambda*
+*Lambda*\
 O parâmetro de distribuição `lambda`.
 
-\ *à direita*
+*Certo*\
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 < lambda`
+**Pré-condição:**`0.0 < lambda`
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<random>](../standard-library/random.md)
+[\<>aleatório](../standard-library/random.md)

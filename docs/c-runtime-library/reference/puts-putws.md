@@ -1,9 +1,11 @@
 ---
 title: puts, _putws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putws
 - puts
+- _o__putws
+- _o_puts
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2e581237c7b839af87df7bc88369f21751b855d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949796"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916104"
 ---
 # <a name="puts-_putws"></a>puts, _putws
 
@@ -57,10 +60,10 @@ int _putws(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres de saída.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna um valor não negativo se for bem-sucedido. Se o **pressionamento** falhar, ele retornará **EOF**; Se **_putws** falhar, ele retornará **WEOF**. Se *Str* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tem permissão para continuar, as funções definem **errno** como **EINVAL** e retornam **EOF** ou **WEOF**.
 
@@ -73,6 +76,8 @@ A função **colocar** grava *Str* no fluxo de saída padrão **stdout**, substi
 **_putws** é a versão de caractere largo de **coloca**; as duas funções se comportam de forma idêntica se o fluxo é aberto no modo ANSI. no momento, **o não dá** suporte à saída em um fluxo Unicode.
 
 **_putwch** grava caracteres Unicode usando a configuração de localidade do console atual.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -87,9 +92,9 @@ A função **colocar** grava *Str* no fluxo de saída padrão **stdout**, substi
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 

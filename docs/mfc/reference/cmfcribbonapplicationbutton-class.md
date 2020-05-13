@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonApplicationButton
+title: Classe de botão de aplicação cmfcribbon
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonApplicationButton
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: d1dc8ef6e801623aa96cb4b47936413cd17f24f0
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: b28d075c5fcc4313e1a62ae731b3fad8ef4d8a12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821244"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749937"
 ---
-# <a name="cmfcribbonapplicationbutton-class"></a>Classe CMFCRibbonApplicationButton
+# <a name="cmfcribbonapplicationbutton-class"></a>Classe de botão de aplicação cmfcribbon
 
-Implementa um botão especial localizado no canto superior esquerdo da janela do aplicativo. Quando clicado, o botão abre um menu que geralmente contém comandos de **arquivo** comuns, como **abrir**, **salvar**e **sair**.
+Implementa um botão especial localizado no canto superior esquerdo da janela de aplicação. Quando clicado, o botão abre um menu que geralmente contém comandos comuns **de arquivo** como **Open**, **Save**e **Exit**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,33 +40,33 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 |Nome|Descrição|
 |----------|-----------------|
 |`CMFCRibbonApplicationButton::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
-|`CMFCRibbonApplicationButton::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a esse tipo de classe.|
-|[CMFCRibbonApplicationButton:: SetImage](#setimage)|Atribui uma imagem ao botão do aplicativo da faixa de faixas.|
+|`CMFCRibbonApplicationButton::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a este tipo de classe.|
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Atribui uma imagem ao botão de aplicação da fita.|
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos na `CMFCRibbonApplicationButton` classe. O exemplo mostra como atribuir uma imagem ao botão do aplicativo e como definir sua dica de ferramenta. Este trecho de código faz parte do [exemplo de cliente de desenho](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como `CMFCRibbonApplicationButton` usar vários métodos na classe. O exemplo mostra como atribuir uma imagem ao botão de aplicativo e como definir sua dica de ferramenta. Este trecho de código faz parte da [amostra Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[Cmfcribbonbaseelement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+[Cmfcribbonbutton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
+[Botão de aplicação do CMFCRibbon](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxRibbonBar. h
+**Cabeçalho:** afxRibbonBar.h
 
-##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+## <a name="cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
 
-Constrói e inicializa um objeto [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) .
+Constrói e inicializa um objeto [CMFCRibbonApplicationButton.](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
 ```
 CMFCRibbonApplicationButton();
@@ -77,20 +77,20 @@ CMFCRibbonApplicationButton(HBITMAP hBmp);
 ### <a name="parameters"></a>Parâmetros
 
 *uiBmpResID*<br/>
-A ID de recurso da imagem a ser exibida no botão do aplicativo.
+O ID de recurso da imagem a ser exibido no botão do aplicativo.
 
 *hBmp*<br/>
-Um identificador para um bitmap a ser exibido no botão do aplicativo.
+Uma alça para um bitmap para exibir no botão de aplicativo.
 
 ### <a name="remarks"></a>Comentários
 
-O botão aplicativo da faixa de das faixas é um botão especial localizado no canto superior esquerdo da janela do aplicativo. Quando um usuário clica nesse botão, o aplicativo abre um menu que geralmente contém comandos de **arquivo** comuns, como **abrir**, **salvar**e **sair**.
+O botão de aplicação da fita é um botão especial que está localizado no canto superior esquerdo da janela de aplicação. Quando um usuário clica neste botão, o aplicativo abre um menu que geralmente contém comandos comuns **de arquivo,** como **Open**, **Save**e **Exit**.
 
-##  <a name="setimage"></a>CMFCRibbonApplicationButton:: SetImage
+## <a name="cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFCRibbonApplicationButton::SetImage
 
-Atribui uma imagem ao botão do aplicativo.
+Atribui uma imagem ao botão de aplicativo.
 
-```
+```cpp
 void SetImage(UINT uiBmpResID);
 void SetImage(HBITMAP hBmp);
 ```
@@ -98,16 +98,16 @@ void SetImage(HBITMAP hBmp);
 ### <a name="parameters"></a>Parâmetros
 
 *uiBmpResID*<br/>
-no A ID de recurso da imagem a ser exibida no botão do aplicativo.
+[em] O ID de recurso da imagem a ser exibido no botão do aplicativo.
 
 *hBmp*<br/>
-no Um identificador para um bitmap a ser exibido no botão do aplicativo.
+[em] Uma alça para um bitmap para exibir no botão de aplicativo.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para atribuir uma nova imagem ao botão do aplicativo da faixa de faixas depois de criar o botão. O botão aplicativo está localizado no canto superior esquerdo da janela do aplicativo.
+Use este método para atribuir uma nova imagem ao botão de aplicativo de fita depois de criar o botão. O botão de aplicação está localizado no canto superior esquerdo da janela de aplicação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

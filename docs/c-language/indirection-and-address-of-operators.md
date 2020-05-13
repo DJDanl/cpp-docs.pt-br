@@ -16,11 +16,11 @@ helpviewer_keywords:
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
 ms.openlocfilehash: 146f84c90aa56b5abf6ae5212c1729022cb7e4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534362"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343892"
 ---
 # <a name="indirection-and-address-of-operators"></a>Operadores de indireção e endereço de
 
@@ -38,9 +38,9 @@ Se o valor do ponteiro não for válido, o resultado do operador de indireção 
 
 - O ponteiro especifica um endereço não usado pelo programa em execução.
 
-O operador unário address-of (**&**) fornece o endereço de seu operando. O operando precisa ser um lvalue que designa um objeto não declarado como __registro__ e não seja um campo de bits, ou o resultado de um operador unário __&#42;__, ou um operador de desreferenciação de matriz (__&#91;&#93;__), ou um designador de função. O resultado é do tipo *ponteiro para tipo* para um operando do tipo *tipo*.
+O operador address-of unário**&**() fornece o endereço de seu operando. O operando precisa ser um lvalue que designa um objeto não declarado como __registro__ e não seja um campo de bits, ou o resultado de um operador unário __&#42;__, ou um operador de desreferenciação de matriz (__&#91;&#93;__), ou um designador de função. O resultado é do tipo *ponteiro para tipo* para um operando do tipo *tipo*.
 
-Se o operando for o resultado de um operador unário __&#42;__, o operador não será avaliado e o resultado omitirá ambos. O resultado não é um lvalue e as restrições ainda se aplicam aos operadores. Se o operando for o resultado de um operador __&#91;&#93;__, o operador __&__ e o operador unário __&#42;__ implícito no __&#91;&#93;__ não serão avaliados. O resultado tem o mesmo efeito de remover o operador __&__ e alterar o operador __&#91;&#93;__ para um operador __+__. Caso contrário, o resultado será um ponteiro para o objeto ou função designado pelo operando.
+Se o operando for o resultado de um operador unário __&#42;__, o operador não será avaliado e o resultado omitirá ambos. O resultado não é um lvalue e as restrições ainda se aplicam aos operadores. Se o operando for o resultado de um operador __&#91;&#93;__, o operador __&__ e o operador unário __&#42;__ implícito no __&#91;&#93;__ não serão avaliados. O resultado tem o mesmo efeito que remover o __&__ operador e alterar o operador de __&#91;&#93;__ para __+__ um operador. Caso contrário, o resultado será um ponteiro para o objeto ou função designado pelo operando.
 
 ## <a name="examples"></a>Exemplos
 
@@ -52,7 +52,7 @@ int a[20];
 double d;
 ```
 
-Esta instrução usa o operador address-of (**&**) para utilizar o endereço do sexto elemento da matriz `a`. O resultado é armazenado na variável de ponteiro `pa`:
+Essa instrução usa o operador address-of (**&**) para obter o endereço do sexto elemento da matriz `a`. O resultado é armazenado na variável de ponteiro `pa`:
 
 ```C
 pa = &a[5];
@@ -82,7 +82,7 @@ assert( pround == proundup );
 
 Uma vez que a função `roundup` é declarada, dois ponteiros para `roundup` são declarados e inicializados. O primeiro ponteiro, `proundup`, é inicializado usando apenas o nome da função, enquanto o segundo, `pround`, usa o operador address-of na inicialização. As inicializações são equivalentes.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operador de indireção: &#42;](../cpp/indirection-operator-star.md)<br/>
 [Operador address-of: &](../cpp/address-of-operator-amp.md)

@@ -1,8 +1,9 @@
 ---
 title: qsort
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort
+- _o_qsort
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949704"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913264"
 ---
 # <a name="qsort"></a>qsort
 
@@ -62,7 +64,7 @@ Tamanho da matriz nos elementos.
 *width*<br/>
 Tamanho do elemento em bytes.
 
-*compare*<br/>
+*comparar*<br/>
 Ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor que especifica seu relacionamento.
 
 ## <a name="remarks"></a>Comentários
@@ -87,13 +89,15 @@ A matriz é classificada em ordem crescente, conforme definido pela função de 
 
 Essa função valida seus parâmetros. Se *Compare* ou *Number* for **NULL**ou se *base* for **NULL** e *Number* for zero ou se *Width* for menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará e **errno** será definida como **EINVAL**.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**qsort**|\<stdlib.h> e \<search.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -139,7 +143,7 @@ int compare( const void *arg1, const void *arg2 )
 boy deserves every favor good
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

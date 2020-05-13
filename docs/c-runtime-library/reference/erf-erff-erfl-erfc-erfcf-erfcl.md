@@ -1,6 +1,6 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - erff
 - erfl
@@ -8,6 +8,12 @@ api_name:
 - erfc
 - erfcf
 - erfcl
+- _o_erf
+- _o_erfc
+- _o_erfcf
+- _o_erfcl
+- _o_erff
+- _o_erfl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 633a766684ed7485ab579157ae4c94fe209f7e73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70937614"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915021"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -102,7 +109,9 @@ As funções **ERF** calculam a função de erro de magnetização de *x*, que �
 
 A função de erro de magnetização complementar é definida como 1-ERF (x). As funções **ERF** retornam um valor no intervalo de-1,0 a 1,0. Nenhum erro é retornado. As funções **ERFC** retornam um valor no intervalo de 0 a 2. Se *x* for muito grande para **ERFC**, a variável **errno** será definida como **ERANGE**.
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **ERF** e **ERFC** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **ERF** e **ERFC** sempre assumem e retornam um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ERF** e **ERFC** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **ERF** e **ERFC** sempre assumem e retornam um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

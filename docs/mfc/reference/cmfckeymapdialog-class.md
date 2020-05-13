@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCKeyMapDialog
+title: CMFCKeyMapSala Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCKeyMapDialog
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: 65aa5ab0f24999ee23a97f383577b69584825502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22aa006ce214ca720192bb761e2ff2b35a64fce3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388495"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374410"
 ---
-# <a name="cmfckeymapdialog-class"></a>Classe CMFCKeyMapDialog
+# <a name="cmfckeymapdialog-class"></a>CMFCKeyMapSala Class
 
-O `CMFCKeyMapDialog` classe dá suporte a um controle que mapeia comandos para teclas do teclado.
+A `CMFCKeyMapDialog` classe suporta um controle que mapeia comandos para teclas no teclado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,52 +49,52 @@ class CMFCKeyMapDialog : public CDialogEx
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Constrói um objeto `CMFCKeyMapDialog`.|
+|[CMFCKeymapdiálogo::CMFCKeyMapDialog](#cmfckeymapdialog)|Constrói um objeto `CMFCKeyMapDialog`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCKeyMapDialog::DoModal](#domodal)|Exibe uma caixa de diálogo de mapeamento de teclado.|
+|[CMFCKeyMapDiálogo::DoModal](#domodal)|Exibe uma caixa de diálogo de mapeamento de teclado.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|Chamado pelo framework para criar uma cadeia de caracteres que descreve um mapeamento de chaves. Por padrão, a cadeia de caracteres contém o nome do comando, as teclas de atalho usadas e a descrição da chave de atalho.|
-|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Recupera uma cadeia de caracteres que contém uma lista de teclas de atalho associado ao comando especificado.|
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Chamado pelo framework antes de um novo item é inserido no controle de lista interna que suporta o controle de mapeamento de teclado.|
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Chamado pelo framework para imprimir o cabeçalho para o mapa do teclado em uma nova página.|
-|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Chamado pelo framework para imprimir um item de mapeamento de teclado.|
-|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Chamado pelo framework para definir as legendas para as colunas no controle de lista interna que suporta o controle de mapeamento de teclado.|
-|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Chamado pelo framework quando um usuário clica o **impressão** botão.|
-|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Chamado pelo framework para definir a largura das colunas na lista interna de controle que suporta o controle de mapeamento de teclado.|
+|[CMFCKeyMapDiálogo::Formatite](#formatitem)|Chamado pela estrutura para construir uma string que descreve um mapeamento de chave. Por padrão, a seqüência contém o nome do comando, as teclas de atalho usadas e a descrição da tecla de atalho.|
+|[CMFCKeyMapDiálogo::obterchaves de comando](#getcommandkeys)|Recupera uma seqüência que contém uma lista de teclas de atalho associadas ao comando especificado.|
+|[CMFCKeyMapDiálogo::OnInsertItem](#oninsertitem)|Chamado pela estrutura antes de um novo item ser inserido no controle de lista interna que suporta o controle de mapeamento do teclado.|
+|[CMFCKeyMapDiálogo::OnprintHeader](#onprintheader)|Chamado pela estrutura para imprimir o cabeçalho para o mapa do teclado em uma nova página.|
+|[CMFCKeyMapDiálogo::OnPrintItem](#onprintitem)|Chamado pela estrutura para imprimir um item de mapeamento do teclado.|
+|[CMFCKeyMapDiálogo::Colunas de início](#onsetcolumns)|Chamado pela estrutura para definir legendas para as colunas no controle de lista interna que suporta o controle de mapeamento do teclado.|
+|[CMFCKeyMapDiálogo::PrintKeyMap](#printkeymap)|Chamado pela estrutura quando um usuário clica no botão **Imprimir.**|
+|[CMFCKeyMapDiálogo::ConjuntoColunasLargura](#setcolumnswidth)|Chamado pela estrutura para definir a largura das colunas no controle de lista interna que suporta o controle de mapeamento do teclado.|
 
 ## <a name="remarks"></a>Comentários
 
-Use o `CMFCKeyMapDialog` classe para implementar uma caixa de diálogo de mapeamento de teclado redimensionável. A caixa de diálogo usa um controle de exibição de lista para exibir os atalhos de teclado e os comandos associados.
+Use `CMFCKeyMapDialog` a classe para implementar uma caixa de diálogo de mapeamento de teclado resizável. A caixa de diálogo usa um controle de exibição de lista para exibir atalhos de teclado e seus comandos associados.
 
-Para usar o `CMFCKeyMapDialog` da classe em um aplicativo, passe um ponteiro para a janela de quadro principal como um parâmetro para o `CMFCKeyMapDialog` construtor. Em seguida, chame o `DoModal` método para iniciar a caixa de diálogo modal.
+Para usar `CMFCKeyMapDialog` a classe em um aplicativo, passe um ponteiro para `CMFCKeyMapDialog` a janela do quadro principal como um parâmetro para o construtor. Em seguida, chame o `DoModal` método para iniciar uma caixa de diálogo modal.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CDialogEx](../../mfc/reference/cdialogex-class.md)
+[Cdialogex](../../mfc/reference/cdialogex-class.md)
 
-[CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)
+[Cmfckeymapdialog](../../mfc/reference/cmfckeymapdialog-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxkeymapdialog.h
 
-##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog
+## <a name="cmfckeymapdialogcmfckeymapdialog"></a><a name="cmfckeymapdialog"></a>CMFCKeymapdiálogo::CMFCKeyMapDialog
 
 Constrói um objeto `CMFCKeyMapDialog`.
 
@@ -106,21 +106,21 @@ CMFCKeyMapDialog(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pWndParentFrame*<br/>
-[in] Um ponteiro para a janela pai do `CMFCKeyMapDialog` objeto.
+*pWndParentframe*<br/>
+[em] Um ponteiro para a `CMFCKeyMapDialog` janela pai do objeto.
 
 *bEnablePrint*<br/>
-[in] TRUE se a lista de teclas de aceleração pode ser impressa; Caso contrário, FALSE. O padrão é FALSE.
+[em] VERDADE se a lista de chaves do acelerador puder ser impressa; caso contrário, FALSE. O padrão é FALSO.
 
 ### <a name="remarks"></a>Comentários
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como construir um objeto do `CMFCKeyMapDialog` classe. Este exemplo faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como `CMFCKeyMapDialog` construir um objeto da classe. Este exemplo faz parte da [amostra visual studio demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]
 
-##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal
+## <a name="cmfckeymapdialogdomodal"></a><a name="domodal"></a>CMFCKeyMapDiálogo::DoModal
 
 Exibe uma caixa de diálogo de mapeamento de teclado.
 
@@ -128,17 +128,17 @@ Exibe uma caixa de diálogo de mapeamento de teclado.
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um inteiro com sinal, como IDOK ou IDCANCEL, que é passado para o [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) método. O método, em seguida, fecha a caixa de diálogo. Para obter mais informações, consulte [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).
+Um inteiro assinado, como IDOK ou IDCANCEL, que é passado para o método [CDialog::EndDialog.](../../mfc/reference/cdialog-class.md#enddialog) O método, por sua vez, fecha a caixa de diálogo. Para obter mais informações, consulte [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).
 
 ### <a name="remarks"></a>Comentários
 
-A caixa de diálogo de mapeamento de teclado permite selecionar e atribuir teclas de aceleração para várias categorias de comandos. Além disso, você pode copiar as teclas de aceleração selecionada e sua descrição para a área de transferência.
+A caixa de diálogo de mapeamento do teclado permite selecionar e atribuir teclas do acelerador a várias categorias de comandos. Além disso, você pode copiar as teclas do acelerador selecionadas e sua descrição na área de transferência.
 
-##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem
+## <a name="cmfckeymapdialogformatitem"></a><a name="formatitem"></a>CMFCKeyMapDiálogo::Formatite
 
-Chamado pelo framework para criar uma cadeia de caracteres que descreve um mapeamento de chaves. Por padrão, a cadeia de caracteres contém o nome do comando, as teclas de atalho usadas e a descrição da chave de atalho.
+Chamado pela estrutura para construir uma string que descreve um mapeamento de chave. Por padrão, a seqüência contém o nome do comando, as teclas de atalho usadas e a descrição da tecla de atalho.
 
 ```
 virtual CString FormatItem(int nItem) const;
@@ -146,18 +146,18 @@ virtual CString FormatItem(int nItem) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nItem*<br/>
-[in] O índice baseado em zero de um item na lista interna de mapeamentos de chave.
+*Nitem*<br/>
+[em] O índice baseado em zero de um item na lista interna de mapeamentos-chave.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um `CString` objeto que contém o texto do item formatada.
+Um `CString` objeto que contém o texto do item formatado.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys
+## <a name="cmfckeymapdialoggetcommandkeys"></a><a name="getcommandkeys"></a>CMFCKeyMapDiálogo::obterchaves de comando
 
-Recupera um valor de cadeia de caracteres. A cadeia de caracteres contém uma lista de teclas de atalho que estão associados um comando especificado.
+Recupera um valor de seqüência. A seqüência contém uma lista de teclas de atalho associadas a um comando especificado.
 
 ```
 virtual CString GetCommandKeys(UINT uiCmdID) const;
@@ -166,17 +166,17 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmdID*<br/>
-[in] Uma ID de comando.
+[em] Uma id de comando.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponto e vírgula delimitado (';') lista de teclas de atalho que está associada com o comando especificado.
+Uma lista de teclas de atalho delimitadas em ponto e vírgula (';') de teclas de atalho associadas ao comando especificado.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem
+## <a name="cmfckeymapdialogoninsertitem"></a><a name="oninsertitem"></a>CMFCKeyMapDiálogo::OnInsertItem
 
-Chamado pelo framework antes de um novo item é inserido em um controle de lista interna que suporta o controle de mapeamento de teclado.
+Chamado pela estrutura antes de um novo item ser inserido em um controle de lista interna que suporta o controle de mapeamento do teclado.
 
 ```
 virtual void OnInsertItem(
@@ -186,17 +186,17 @@ virtual void OnInsertItem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pButton*<br/>
-[in] Um ponteiro para um botão de barra de ferramentas que é usado para mapear uma combinação de teclas do teclado para um nome de comando e uma descrição. O item de mapa de chave é armazenado em um controle de lista interna.
+*Pbutton*<br/>
+[em] Um ponteiro para um botão de barra de ferramentas que é usado para mapear uma combinação de teclas de teclado para um nome de comando e descrição. O item do mapa-chave é armazenado em um controle de lista interna.
 
-*nItem*<br/>
-[in] Um índice baseado em zero que especifica o local para inserir o novo item de mapa de chave no controle de lista interno.
+*Nitem*<br/>
+[em] Um índice baseado em zero que especifica onde inserir o novo item do mapa-chave no controle de lista interna.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader
+## <a name="cmfckeymapdialogonprintheader"></a><a name="onprintheader"></a>CMFCKeyMapDiálogo::OnprintHeader
 
-Chamado pelo framework para imprimir o cabeçalho para o mapa do teclado em uma nova página.
+Chamado pela estrutura para imprimir o cabeçalho para o mapa do teclado em uma nova página.
 
 ```
 virtual int OnPrintHeader(
@@ -207,26 +207,26 @@ virtual int OnPrintHeader(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dc*<br/>
-[in] O contexto de dispositivo para a impressora.
+*Dc*<br/>
+[em] O contexto do dispositivo para a impressora.
 
-*nPage*<br/>
-[in] O número da página para imprimir.
+*Npage*<br/>
+[em] O número da página para imprimir.
 
-*cx*<br/>
-[in] O deslocamento horizontal do cabeçalho, em pixels.
+*Cx*<br/>
+[em] O deslocamento horizontal do cabeçalho, em pixels.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, a altura do texto impresso. Para obter mais informações, consulte a seção de valor de retorno de [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).
+Se for bem sucedido, a altura do texto impresso. Para obter mais informações, consulte a seção Valor de retorno do [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura usa esse método para imprimir o mapa do teclado. Por padrão, esse método imprime o número da página, o nome do aplicativo e o título da caixa de diálogo.
+A estrutura usa este método para imprimir o mapa do teclado. Por padrão, este método imprime o número da página, o nome do aplicativo e o título da caixa de diálogo.
 
-##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem
+## <a name="cmfckeymapdialogonprintitem"></a><a name="onprintitem"></a>CMFCKeyMapDiálogo::OnPrintItem
 
-Chamado pelo framework para imprimir um item de mapeamento de teclado.
+Chamado pela estrutura para imprimir um item de mapeamento do teclado.
 
 ```
 virtual int OnPrintItem(
@@ -239,32 +239,32 @@ virtual int OnPrintItem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dc*<br/>
-[in] O contexto de dispositivo da impressora.
+*Dc*<br/>
+[em] O contexto do dispositivo da impressora.
 
-*nItem*<br/>
-[in] O índice baseado em zero do item para imprimir.
+*Nitem*<br/>
+[em] O índice baseado em zero do item a ser impresso.
 
-*y*<br/>
-[in] O deslocamento vertical entre a parte superior da página e a posição do item.
+*Y*<br/>
+[em] O deslocamento vertical entre a parte superior da página e a posição do item.
 
-*cx*<br/>
-[in] O deslocamento horizontal à esquerda da página e a posição do item.
+*Cx*<br/>
+[em] O deslocamento horizontal entre a esquerda da página e a posição do item.
 
 *bCalcHeight*<br/>
-[in] TRUE para calcular a altura recomendada para o item de impressão; FALSE para truncar o item de impressão para que ele se adapta o espaço padrão.
+[em] TRUE para calcular a melhor altura para o item de impressão; FALSO para truncar o item de impressão de modo que ele se encaixe no espaço padrão.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A altura do item impressa.
+A altura do item impresso.
 
 ### <a name="remarks"></a>Comentários
 
-O framework chama esse método para imprimir um item de caixa de diálogo do mapa de chave. Por padrão, esse método imprime o nome do comando, teclas de atalho e descrição de comando do item.
+A estrutura chama esse método para imprimir um item da caixa de diálogo do mapa chave. Por padrão, este método imprime o nome de comando do item, as teclas de atalho e a descrição do comando.
 
-##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns
+## <a name="cmfckeymapdialogonsetcolumns"></a><a name="onsetcolumns"></a>CMFCKeyMapDiálogo::Colunas de início
 
-Chamado pelo framework para definir as legendas para as colunas no controle de lista interna que suporta o controle de mapeamento de teclado.
+Chamado pela estrutura para definir legendas para as colunas no controle de lista interna que suporta o controle de mapeamento do teclado.
 
 ```
 virtual void OnSetColumns();
@@ -272,11 +272,11 @@ virtual void OnSetColumns();
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método obtém as legendas de colunas de três recursos. A legenda da coluna de comando é de IDS_AFXBARRES_COMMAND, a legenda da coluna de chave é de IDS_AFXBARRES_KEYS, e a legenda da coluna de descrição é de IDS_AFXBARRES_DESCRIPTION.
+Por padrão, este método obtém as legendas para as colunas a partir de três recursos. A legenda da coluna de comando é de IDS_AFXBARRES_COMMAND, a legenda da coluna-chave é de IDS_AFXBARRES_KEYS, e a legenda da coluna de descrição é de IDS_AFXBARRES_DESCRIPTION.
 
-##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap
+## <a name="cmfckeymapdialogprintkeymap"></a><a name="printkeymap"></a>CMFCKeyMapDiálogo::PrintKeyMap
 
-Chamado pelo framework quando um usuário clica o **impressão** botão.
+Chamado pela estrutura quando um usuário clica no botão **Imprimir.**
 
 ```
 virtual void PrintKeyMap();
@@ -284,11 +284,11 @@ virtual void PrintKeyMap();
 
 ### <a name="remarks"></a>Comentários
 
-O `PrintKeyMap` método imprime o mapa da chave. Ele inicia um novo trabalho de impressão e, em seguida, chama repetidamente a [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) e [CMFCKeyMapDialog::OnPrintItem](#onprintitem) métodos até que todos os mapeamentos de chave são impressos.
+O `PrintKeyMap` método imprime o mapa-chave. Ele inicia um novo trabalho de impressão e, em seguida, chama repetidamente o [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) e [CMFCKeyMapDiálogo::OnPrintItem](#onprintitem) métodos até que todos os mapeamentos principais sejam impressos.
 
-##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth
+## <a name="cmfckeymapdialogsetcolumnswidth"></a><a name="setcolumnswidth"></a>CMFCKeyMapDiálogo::ConjuntoColunasLargura
 
-Chamado pelo framework para definir a largura das colunas na lista interna de controle que suporta o controle de mapeamento de teclado.
+Chamado pela estrutura para definir a largura das colunas no controle de lista interna que suporta o controle de mapeamento do teclado.
 
 ```
 virtual void SetColumnsWidth();
@@ -296,9 +296,9 @@ virtual void SetColumnsWidth();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método define a lista interna colunas do controle para larguras de padrão. Em primeiro lugar, a largura da coluna de teclas de atalho é calculada. Em seguida, um terço da largura restante é alocado para a coluna de comando e os dois terços restantes é alocado para a coluna de descrição.
+Este método define as colunas do controle de lista interna para larguras padrão. Primeiro, a largura da coluna de teclas de atalho é calculada. Em seguida, um terço da largura restante é alocada na coluna de comando e os dois terços restantes são alocados na coluna de descrição.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

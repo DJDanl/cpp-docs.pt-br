@@ -1,6 +1,6 @@
 ---
-title: Estrutura de FILE_DATA
-description: A C++ referência da estrutura de FILE_DATA do SDK do insights do Build.
+title: FILE_DATA estrutura
+description: O C++ Build Insights SDK FILE_DATA referência de estrutura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 72cae8c8eb81bdb8d94897c46c5af90c89e92ab4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 6b7b0129c54fa4b1d5285bafb38761da45bab4e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333751"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325585"
 ---
-# <a name="file_data-structure"></a>Estrutura de FILE_DATA
+# <a name="file_data-structure"></a>FILE_DATA estrutura
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A estrutura de `FILE_DATA` descreve uma entrada ou saída de arquivo.
+A `FILE_DATA` estrutura descreve uma entrada ou saída de arquivo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,6 +43,6 @@ typedef struct FILE_DATA_TAG
 |  |  |
 |--|--|
 | `Path` | O caminho absoluto do arquivo |
-| `TypeCode` | Um código que descreve o tipo do arquivo. Para obter mais informações, consulte [FILE_TYPE_CODE](file-type-code-enum.md). |
+| `TypeCode` | Um código descrevendo o tipo do arquivo. Para obter mais informações, consulte [FILE_TYPE_CODE](file-type-code-enum.md). |
 
 ::: moniker-end

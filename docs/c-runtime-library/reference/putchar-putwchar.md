@@ -1,9 +1,11 @@
 ---
 title: putchar, putwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - putchar
 - putwchar
+- _o_putchar
+- _o_putwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 88d1181fc2718d49533f3179c8fd0bfd818d589a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f8b6573b2907ec8fffa5ff4d3d76b8430748f60a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949914"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918886"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -55,10 +58,10 @@ wint_t putwchar(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 O caractere a ser gravado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna o caractere gravado. Para indicar um erro ou condição de fim de arquivo, **putc** e **putchar** retornam **EOF**; **putwc** e **putwchar** retornam **WEOF**. Para todas as quatro rotinas, use [ferror](ferror.md) ou [feof](feof.md) para verificar se há um erro ou o fim do arquivo. Se passar um ponteiro NULL para *Stream*, essas funções gerarão uma exceção de parâmetro inválida, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, ela retornará **EOF** ou **WEOF** e definirá **errno** como **EINVAL**.
 
@@ -69,6 +72,8 @@ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/er
 A rotina **putc** grava o único caractere *c* no *fluxo* de saída na posição atual. Qualquer inteiro pode ser passado para **putc**, mas apenas os 8 bits inferiores são gravados. A rotina **putchar** é idêntica a `putc( c, stdout )`. Para cada rotina, se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. **putc** e **putchar** são semelhantes a **fputc** e **_fputchar**, respectivamente, mas são implementadas como funções e macros (consulte [escolhendo entre funções e macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** e **putwchar** são versões de caracteres largos de **putc** e **putchar**, respectivamente.
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -83,9 +88,9 @@ As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não s
 |**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 

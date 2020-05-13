@@ -7,12 +7,12 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240503"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372076"
 ---
 # <a name="plus-struct"></a>Struct plus
 
@@ -20,7 +20,7 @@ Um objeto de função predefinido que executa a operação de adição (`operato
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -39,16 +39,16 @@ struct plus<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo de*, *T*, *U*\
+*Tipo,* *T,* *U*\
 Um tipo que dá suporte a um `operator+` binário que usa operandos dos tipos especificados ou inferidos.
 
-*À esquerda*\
-O operando esquerdo da operação de adição. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
+*Deixou*\
+O operando esquerdo da operação de adição. O modelo não especializado leva um argumento de referência de valor do *tipo Tipo*. O modelo especializado faz um encaminhamento perfeito de argumentos de referência de valor e valor de valor do tipo *T*inferido .
 
 *Certo*\
-O operando direito da operação de adição. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
+O operando direito da operação de adição. O modelo não especializado leva um argumento de referência de valor do *tipo Tipo*. O modelo especializado faz o encaminhamento perfeito de argumentos de referência de valor e valor de valor do tipo *U*inferido .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O resultado de `Left + Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado pelo binário `operator+`.
 

@@ -33,7 +33,7 @@ Por fim, ao fazer referência a tipos de dados, as seguintes definições do ARM
 - **HFA (agregação de ponto flutuante homogêneo)** – um tipo de dados com 2 a 4 membros de ponto flutuante idênticos, flutuantes ou duplos.
 - **HVA (agregação de vetor curto homogêneo)** – um tipo de dados com 2 a 4 membros de vetores pequenos idênticos.
 
-## <a name="base-requirements"></a>Requisitos básicos
+## <a name="base-requirements"></a>Requisitos base
 
 A versão ARM64 do Windows pressupõe que ele seja executado em uma arquitetura ARMv8 ou posterior em todos os momentos. O suporte a ponto flutuante e NEON é presumido estar presente no hardware.
 
@@ -71,16 +71,16 @@ Alinhamento de layout padrão para globais e estáticos:
 
 A arquitetura AArch64 dá suporte a registros de inteiro 32:
 
-| Registro | Volátil? | Função |
+| Registrar  | Volátil? | Função |
 | - | - | - |
-| x0 | Volatile | Parâmetro/Registro transitório 1, registro de resultados |
-| x1-x7 | Volatile | Parâmetro/Registro transitório 2-8 |
-| x8-x15 | Volatile | Registros de rascunho |
-| x16-x17 | Volatile | Intra-Procedure-chamar os registros de rascunho |
+| x0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
+| X1-120 | Volátil | Parâmetro/Registro transitório 2-8 |
+| x8-X15 | Volátil | Registros de rascunho |
+| X16-X17 | Volátil | Intra-Procedure-chamar os registros de rascunho |
 | x18 | Não volátil | Registro de plataforma: no modo kernel, aponta para KPCR para o processador atual; no modo de usuário, aponta para TEB |
 | x19-x28 | Não volátil | Registros de rascunho |
-| x29/fp | Não volátil | Ponteiro de quadro |
-| x30/lr | Não volátil | Registros de link |
+| x29/FP | Não volátil | Ponteiro de quadro |
+| X30/LR | Não volátil | Registros de link |
 
 Cada registro pode ser acessado como um valor de 64 bits completo (via x0-X30) ou como um valor de 32 bits (via W0-W30). operações de 32 bits zero-Estenda seus resultados até 64 bits.
 
@@ -94,12 +94,12 @@ O ponteiro de quadro (x29) é necessário para compatibilidade com movimentaçã
 
 A arquitetura AArch64 também dá suporte a 32 registros de ponto flutuante/SIMD, resumidos abaixo:
 
-| Registro | Volátil? | Função |
+| Registrar  | Volátil? | Função |
 | - | - | - |
-| v0 | Volatile | Parâmetro/Registro transitório 1, registro de resultados |
-| v1-v7 | Volatile | O parâmetro/os registros de rascunho 2-8 |
-| v8-v15 | Não volátil | Registros de rascunho (somente os bits de 64 baixos são não-voláteis) |
-| v16-v31 | Volatile | Registros de rascunho |
+| V0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
+| v1-v7 | Volátil | O parâmetro/os registros de rascunho 2-8 |
+| V8-v15 | Não volátil | Registros de rascunho (somente os bits de 64 baixos são não-voláteis) |
+| v16-v31 | Volátil | Registros de rascunho |
 
 Cada registro pode ser acessado como um valor de 128 bits completo (via V0-V31 ou q0-q31). Ele pode ser acessado como um valor de 64 bits (via D0-D31), como um valor de 32 bits (via S0-S31), como um valor de 16 bits (via H0-H31) ou como um valor de 8 bits (via B0-B31). Acessos menores que 128 bits acessam apenas os bits inferiores do registro completo de bit 128. Eles deixam os bits restantes intocados, a menos que especificado de outra forma. (AArch64 é diferente de AArch32, em que os registradores menores foram empacotados sobre os registros maiores.)
 
@@ -117,7 +117,7 @@ O FPCR (registro de controle de ponto flutuante) tem determinados requisitos em 
 
 Assim como o AArch32, a especificação AArch64 fornece três registros "thread ID" controlados pelo sistema:
 
-| Registro | Função |
+| Registrar  | Função |
 | - | - |
 | TPIDR_EL0 | Reservado. |
 | TPIDRRO_EL0 | Contém o número de CPU para o processador atual. |
@@ -145,7 +145,7 @@ Esse estágio é feito exatamente uma vez, antes de o processamento dos argument
 
 Para cada argumento na lista, a primeira regra de correspondência da lista a seguir é aplicada. Se nenhuma regra corresponder, o argumento será usado sem modificações.
 
-1. Se o tipo de argumento for um tipo composto cujo tamanho não pode ser determinado estaticamente pelo chamador e pelo receptor, o argumento será copiado para a memória e o argumento será substituído por um ponteiro para a cópia. (Não há esses tipos em C/C++ mas eles existem em outras linguagens ou em extensões de linguagem).
+1. Se o tipo de argumento for um tipo composto cujo tamanho não pode ser determinado estaticamente pelo chamador e pelo receptor, o argumento será copiado para a memória e o argumento será substituído por um ponteiro para a cópia. (Não há tipos desse tipo em C/C++, mas eles existem em outras linguagens ou em extensões de linguagem).
 
 1. Se o tipo de argumento for um HFA ou um HVA, o argumento será usado sem modificações.
 
@@ -157,7 +157,7 @@ Para cada argumento na lista, a primeira regra de correspondência da lista a se
 
 Para cada argumento na lista, as regras a seguir são aplicadas por vez até que o argumento tenha sido alocado. Quando um argumento é atribuído a um registro, todos os bits não utilizados no registro têm um valor não especificado. Se um argumento for atribuído a um slot de pilha, os bytes de preenchimento não utilizados terão um valor não especificado.
 
-1. Se o argumento for um tipo de ponto flutuante de uma ou de vetor de precisão simples ou de quatro pontos, e o NSRN for menor que 8, o argumento será alocado para os bits menos significativos do registro v\[NSRN]. O NSRN é incrementado em um. O argumento agora foi alocado.
+1. Se o argumento for um tipo de ponto flutuante de uma ou de vetor de precisão simples ou de quatro pontos, e o NSRN for menor que 8, o argumento será alocado para os bits menos significativos de Register v\[NSRN]. O NSRN é incrementado em um. O argumento agora foi alocado.
 
 1. Se o argumento for um HFA ou um HVA, e houver registros de ponto flutuante e SIMD não alocados suficientes (NSRN + número de membros ≤ 8), o argumento será alocado para os registros SIMD e de ponto flutuante, um registrador por membro de HFA ou HVA. O NSRN é incrementado pelo número de registros usados. O argumento agora foi alocado.
 
@@ -175,7 +175,7 @@ Para cada argumento na lista, as regras a seguir são aplicadas por vez até que
 
 1. Se o argumento for um tipo integral, o tamanho do argumento será igual a 16 e o NGRN será menor que 7, o argumento será copiado para x\[NGRN] e x\[NGRN + 1]. x\[NGRN] deve conter a palavra-chave mais baixa abordada da representação de memória do argumento. O NGRN é incrementado em dois. O argumento agora foi alocado.
 
-1. Se o argumento for um tipo composto e o tamanho em palavras duplas do argumento não for maior que 8 menos NGRN, o argumento será copiado em registradores de uso geral consecutivos, começando em x\[NGRN]. O argumento é passado como se tivesse sido carregado nos registros de um endereço alinhado em palavras duplas, com uma sequência apropriada de instruções de LDR que carregam registros consecutivos da memória. O conteúdo de qualquer parte não utilizada dos registros não é especificado por esse padrão. O NGRN é incrementado pelo número de registros usados. O argumento agora foi alocado.
+1. Se o argumento for um tipo composto e o tamanho em palavras duplas do argumento não for maior que 8 menos NGRN, o argumento será copiado em registros de uso geral consecutivos, começando em x\[NGRN]. O argumento é passado como se tivesse sido carregado nos registros de um endereço alinhado em palavras duplas, com uma sequência apropriada de instruções de LDR que carregam registros consecutivos da memória. O conteúdo de qualquer parte não utilizada dos registros não é especificado por esse padrão. O NGRN é incrementado pelo número de registros usados. O argumento agora foi alocado.
 
 1. O NGRN é definido como 8.
 
@@ -197,7 +197,7 @@ As funções que usam um número variável de argumentos são tratadas de forma 
 
 Efetivamente, é o mesmo das seguintes regras C. 12 – C. 15 para alocar argumentos para uma pilha imaginária, em que os primeiros 64 bytes da pilha são carregados em x0-120, e todos os argumentos restantes da pilha são colocados normalmente.
 
-## <a name="return-values"></a>Valores de retorno
+## <a name="return-values"></a>Valores retornados
 
 Valores integrais são retornados em x0.
 
@@ -225,7 +225,7 @@ Todos os outros tipos usam esta Convenção:
 
 Seguindo a ABI colocada pelo ARM, a pilha deve permanecer alinhada em 16 bytes em todos os momentos. O AArch64 contém um recurso de hardware que gera falhas de alinhamento de pilha sempre que o SP não está alinhado em 16 bytes e uma carga ou um repositório relativo ao SP é feito. O Windows é executado com esse recurso habilitado em todos os momentos.
 
-Funções que alocam 4K ou mais de pilha devem garantir que cada página antes da página final seja tocada na ordem. Essa ação garante que nenhum código possa "saltar" nas páginas de proteção que o Windows usa para expandir a pilha. Normalmente, o toque é feito pelo auxiliar de `__chkstk`, que tem uma Convenção de chamada personalizada que passa a alocação de pilha total dividida por 16 em X15.
+Funções que alocam 4K ou mais de pilha devem garantir que cada página antes da página final seja tocada na ordem. Essa ação garante que nenhum código possa "saltar" nas páginas de proteção que o Windows usa para expandir a pilha. Normalmente, o toque é feito pelo `__chkstk` auxiliar, que tem uma Convenção de chamada personalizada que passa a alocação de pilha total dividida por 16 em X15.
 
 ## <a name="red-zone"></a>Zona vermelha
 
@@ -245,15 +245,15 @@ O desenrolamento durante a manipulação de exceção é assistido pelo uso de c
 
 O EABI ARM também especifica um modelo de desenrolamento de exceção que usa códigos de liberação. No entanto, a especificação como apresentada é insuficiente para o desenrolamento no Windows, que deve lidar com casos em que o PC está no meio de um prólogo de função ou epílogo.
 
-O código gerado dinamicamente deve ser descrito com tabelas de funções dinâmicas por meio de `RtlAddFunctionTable` e funções associadas, para que o código gerado possa participar da manipulação de exceção.
+O código gerado dinamicamente deve ser descrito com tabelas de função dinâmicas `RtlAddFunctionTable` via e funções associadas, para que o código gerado possa participar da manipulação de exceção.
 
 ## <a name="cycle-counter"></a>Contador de ciclo
 
-Todas as CPUs ARMv8 são necessárias para dar suporte a um registro de contador de ciclo, um registro de 64 bits que o Windows configura para ser legível em qualquer nível de exceção, incluindo o modo de usuário. Ele pode ser acessado por meio do registro de PMCCNTR_EL0 especial, usando o opcode de MSR no código do assembly ou oC++ `_ReadStatusReg` intrínseco no C/Code.
+Todas as CPUs ARMv8 são necessárias para dar suporte a um registro de contador de ciclo, um registro de 64 bits que o Windows configura para ser legível em qualquer nível de exceção, incluindo o modo de usuário. Ele pode ser acessado por meio do registro de PMCCNTR_EL0 especial, usando o opcode de MSR no `_ReadStatusReg` código do assembly ou o intrínseco no código C/C++.
 
-O contador de ciclo aqui é um contador de ciclo verdadeiro, não um relógio de parede. A frequência de contagem vai variar com a frequência do processador. Se você sentir que deve saber a frequência do contador de ciclo, você não deve estar usando o contador de ciclo. Em vez disso, você deseja medir o tempo do relógio de parede, para o qual você deve usar `QueryPerformanceCounter`.
+O contador de ciclo aqui é um contador de ciclo verdadeiro, não um relógio de parede. A frequência de contagem vai variar com a frequência do processador. Se você sentir que deve saber a frequência do contador de ciclo, você não deve estar usando o contador de ciclo. Em vez disso, você deseja medir o tempo do relógio de parede, para `QueryPerformanceCounter`o qual você deve usar.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Problemas de migração ARM do Visual C++ comuns](common-visual-cpp-arm-migration-issues.md)<br/>
+[Problemas de migração ARM do Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
 [Manipulação de exceção do ARM64](arm64-exception-handling.md)

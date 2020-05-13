@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: a8048f860a2cce75c37a065cfdd2751141054f1b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 089c8056afebef31ff98a435bf145566ae64fe1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446234"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375252"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe CMFCRibbonCheckBox
 
-A classe `CMFCRibbonCheckBox` implementa uma caixa de seleção que você pode adicionar a um painel da faixa de, barra de ferramentas de acesso rápido ou menu pop-up.
+A `CMFCRibbonCheckBox` classe implementa uma caixa de seleção que você pode adicionar a um painel de fita, barra de ferramentas de acesso rápido ou menu popup.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,52 +45,52 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|O construtor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Substitui [CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
-|[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(Substitui [CMFCRibbonButton:: GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|
-|[CMFCRibbonCheckBox::GetRegularSize](#getregularsize)|(Substitui [CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
-|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|(Substitui `CMFCRibbonButton::IsDrawTooltipImage`.)|
-|[CMFCRibbonCheckBox:: OnDraw](#ondraw)|(Substitui [CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|(Substitui [CMFCRibbonBaseElement:: OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
-|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|(Substitui `CMFCRibbonButton::OnDrawOnList`.)|
-|[CMFCRibbonCheckBox::SetACCData](#setaccdata)|(Substitui [CMFCRibbonButton:: SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Substitui [cmfcribbonbutton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[CMFCRibbonCheckbox::GetIntermediateSize](#getintermediatesize)|(Substitui [cmfcribbonbutton::GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|
+|[CMFCRibbonCheckbox::getRegularsize](#getregularsize)|(Substitui [cmfcribbonbutton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[CMFCRibbonCheckBox::IsDrawtooltipImage](#isdrawtooltipimage)|(Substitui `CMFCRibbonButton::IsDrawTooltipImage`.)|
+|[CMFCRibbonCheckbox::OnDraw](#ondraw)|(Substitui [cmfcribbonbutton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
+|[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|(Substitui [cmfcribbonbaseelement::OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
+|[CMFCRibbonCheckbox::Ondrawonlist](#ondrawonlist)|(Substitui `CMFCRibbonButton::OnDrawOnList`.)|
+|[CMFCRibbonCheckBox::setACCData](#setaccdata)|(Substitui [cmfcribbonbutton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
 ## <a name="remarks"></a>Comentários
 
-Para usar um `CMFCRibbonCheckBox` em seu aplicativo, adicione o seguinte construtor ao seu código:
+Para usar `CMFCRibbonCheckBox` um em seu aplicativo, adicione o seguinte construtor ao seu código:
 
 ```
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ```
 
-em que *NID* é a ID de comando da caixa de seleção e *lpszText* é o rótulo de texto da caixa de seleção.
+onde *nID* é o iD de comando caixa de seleção e *lpszText* é a etiqueta de texto da caixa de seleção.
 
-Você pode adicionar uma caixa de seleção a um painel da faixa de lista usando [CMFCRibbonPanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
+Você pode adicionar uma caixa de seleção a um painel de fita usando [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[Cmfcribbonbaseelement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+[Cmfcribbonbutton](../../mfc/reference/cmfcribbonbutton-class.md)
 
 [CMFCRibbonCheckBox](../../mfc/reference/cmfcribboncheckbox-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxribboncheckbox. h
+**Cabeçalho:** afxribboncheckbox.h
 
-##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox
+## <a name="cmfcribboncheckboxcmfcribboncheckbox"></a><a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox
 
-Construtor de um objeto caixa de seleção de faixa de faixas
+Construtor de um objeto de caixa de seleção de fita
 
 ```
 CMFCRibbonCheckBox(
@@ -101,24 +101,24 @@ CMFCRibbonCheckBox(
 ### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-no Especifica a ID de comando.
+[em] Especifica o ID de comando.
 
 *lpszText*<br/>
-no Especifica o rótulo de texto.
+[em] Especifica o rótulo de texto.
 
 ### <a name="return-value"></a>Valor retornado
 
-Constrói um objeto da caixa de seleção da faixa de faixas.
+Constrói um objeto de caixa de seleção de fita.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como construir um objeto da classe `CMFCRibbonCheckBox`.
+O exemplo a seguir demonstra como `CMFCRibbonCheckBox` construir um objeto da classe.
 
 [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]
 
-##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize
+## <a name="cmfcribboncheckboxgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize
 
-Quando substituído, obtém o tamanho do Compact da caixa de seleção.
+Quando substituído, obtém o tamanho compacto da caixa de seleção.
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -127,17 +127,17 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-no Ponteiro para o CDC associado à caixa de seleção.
+[em] Ponteiro para o CDC associado com a caixa de seleção.
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna um objeto `CSize` que contém o tamanho do Compact da caixa de seleção.
+Retorna `CSize` um objeto que contém o tamanho compacto da caixa de seleção.
 
 ### <a name="remarks"></a>Comentários
 
 Se não for substituído, retorna o tamanho intermediário da caixa de seleção.
 
-##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize
+## <a name="cmfcribboncheckboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonCheckbox::GetIntermediateSize
 
 Obtém o tamanho intermediário da caixa de seleção.
 
@@ -148,19 +148,19 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-no Ponteiro para o CDC associado a essa caixa de seleção.
+[em] Ponteiro para o CDC associado a esta caixa de seleção.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um objeto `CSize` que contém o tamanho intermediário da caixa de seleção.
+Um `CSize` objeto contendo o tamanho intermediário da caixa de seleção.
 
 ### <a name="remarks"></a>Comentários
 
-Se não for substituído, o calculará o tamanho intermediário como o tamanho da caixa de seleção padrão (`AFX_CHECK_BOX_DEFAULT_SIZE`) mais o tamanho do texto, além das margens.
+Se não for substituído, calcula o tamanho intermediário `AFX_CHECK_BOX_DEFAULT_SIZE`como o tamanho da caixa de seleção padrão ( ) mais o tamanho do texto, mais as margens.
 
-##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize
+## <a name="cmfcribboncheckboxgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonCheckbox::getRegularsize
 
-Obtém o tamanho regular da caixa de seleção.
+Obtém o tamanho normal da caixa de seleção.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -169,17 +169,17 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-no Ponteiro para o objeto CDC associado a essa caixa de seleção.
+[em] Ponteiro para o objeto CDC associado a esta caixa de seleção.
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna um objeto `CSize` que contém o tamanho regular da caixa de seleção.
+Retorna `CSize` um objeto que contém o tamanho regular da caixa de seleção.
 
 ### <a name="remarks"></a>Comentários
 
 Se não for substituído, retorna o tamanho intermediário da caixa de seleção.
 
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage
+## <a name="cmfcribboncheckboxisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawtooltipImage
 
 Indica se há uma imagem de dica de ferramenta associada à caixa de seleção.
 
@@ -189,13 +189,13 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna TRUE se houver uma imagem de dica de ferramenta associada à caixa de seleção ou FALSE se não.
+Retorna TRUE se houver uma imagem de dica de ferramenta associada à caixa de seleção, ou FALSA se não.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondraw"></a>CMFCRibbonCheckBox:: OnDraw
+## <a name="cmfcribboncheckboxondraw"></a><a name="ondraw"></a>CMFCRibbonCheckbox::OnDraw
 
-Chamado pelo Framework para desenhar a caixa de seleção usando um contexto de dispositivo especificado.
+Chamado pela estrutura para desenhar a caixa de seleção usando um contexto de dispositivo especificado.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -204,13 +204,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-no Ponteiro para o CDC no qual desenhar a caixa de seleção.
+[em] Ponteiro para o CDC para desenhar a caixa de seleção.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage
+## <a name="cmfcribboncheckboxondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage
 
-Chamado pelo Framework para desenhar uma imagem de menu para a caixa de seleção.
+Chamado pelo framework para desenhar uma imagem do menu para a caixa de seleção.
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -218,23 +218,23 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Parâmetros
 
-no *CDC&#42;*<br/>
-Ponteiro para o CDC associado à caixa de seleção.
+[em] *CDC&#42;*<br/>
+Ponteiro para o CDC associado com a caixa de seleção.
 
-*CRect*<br/>
-no Um objeto `CRect` especificando o retângulo no qual desenhar a imagem do menu.
+*Crect*<br/>
+[em] Um `CRect` objeto especificando o retângulo no qual desenhar a imagem do menu.
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna TRUE se a imagem foi desenhada ou FALSE se não.
+Retorna TRUE se a imagem foi desenhada, ou FALSA se não.
 
 ### <a name="remarks"></a>Comentários
 
-Se não for substituído, retornará FALSE.
+Se não for substituído, retorna FALSO.
 
-##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList
+## <a name="cmfcribboncheckboxondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonCheckbox::Ondrawonlist
 
-Chamado pelo Framework para desenhar a caixa de seleção em uma caixa de listagem de comandos.
+Chamado pela estrutura para desenhar a caixa de seleção em uma caixa de lista de comandos.
 
 ```
 virtual void OnDrawOnList(
@@ -249,26 +249,26 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-no Ponteiro para o contexto do dispositivo no qual desenhar a caixa de seleção.
+[em] Ponteiro para o contexto do dispositivo para desenhar a caixa de seleção.
 
 *strText*<br/>
-no O texto de exibição.
+[em] O texto de exibição.
 
 *nTextOffset*<br/>
-no A distância, em pixels, do lado esquerdo da caixa de listagem até o texto de exibição.
+[em] A distância, em pixels, do lado esquerdo da caixa de lista para o texto de exibição.
 
 *Rect*<br/>
-no O retângulo de exibição da caixa de seleção.
+[em] O retângulo do visor para a caixa de seleção.
 
 *bIsSelected*<br/>
-no TRUE se a caixa de seleção estiver marcada ou FALSE se não.
+[em] TRUE se a caixa de seleção for selecionada ou FALSA se não for.
 
 *bHighlighted*<br/>
-no TRUE se a caixa de seleção estiver realçada ou FALSE se não.
+[em] TRUE se a caixa de seleção for destacada, ou FALSA se não.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData
+## <a name="cmfcribboncheckboxsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonCheckBox::setACCData
 
 Define os dados de acessibilidade para a caixa de seleção.
 
@@ -281,10 +281,10 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parâmetros
 
 *pParent*<br/>
-A janela pai da caixa de seleção.
+A janela dos pais da caixa de seleção.
 
-*data*<br/>
-Os dados de acessibilidade para a caixa de seleção.
+*dados*<br/>
+Os dados de acessibilidade da caixa de seleção.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -292,9 +292,9 @@ Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método define os dados de acessibilidade para a caixa de seleção e sempre retorna TRUE. Substitua esse método para definir os dados de acessibilidade e retornar um valor que indique êxito ou falha.
+Por padrão, este método define os dados de acessibilidade para a caixa de seleção e sempre retorna TRUE. Substituir este método para definir os dados de acessibilidade e retornar um valor que indique sucesso ou falha.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

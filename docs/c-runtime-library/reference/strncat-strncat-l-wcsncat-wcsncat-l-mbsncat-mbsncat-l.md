@@ -1,6 +1,6 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncat
 - _strncat_l
@@ -8,6 +8,8 @@ api_name:
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
+- _o__mbsncat
+- _o__mbsncat_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -61,12 +64,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947338"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918146"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -134,13 +137,13 @@ Cadeia de caracteres de destino terminada em nulo.
 *strSource*<br/>
 Cadeia de caracteres de origem com terminação nula.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a serem acrescentados.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.
 
@@ -149,13 +152,15 @@ Retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retorna
 A função **strncat** acrescenta, no máximo, a primeira *contagem* de caracteres de *strSource* a *strDest*. O caractere inicial de *strSource* substitui o caractere nulo de terminação de *strDest*. Se um caractere nulo aparecer em *strSource* antes que os caracteres de *contagem* sejam acrescentados, o **strncat** acrescentará todos os caracteres de *strSource*, até o caractere nulo. Se *Count* for maior que o comprimento de *strSource*, o comprimento de *strSource* será usado no lugar da *contagem*. Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> **strncat** não verifica espaço suficiente em *strDest*; Portanto, é uma possível causa de estouros de buffer. Tenha em mente que a *contagem* limita o número de caracteres acrescentados; Não é um limite para o tamanho de *strDest*. Consulte o exemplo abaixo. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> **strncat** não verifica espaço suficiente em *strDest*; Portanto, é uma possível causa de estouros de buffer. Tenha em mente que a *contagem* limita o número de caracteres acrescentados; Não é um limite para o tamanho de *strDest*. Veja o exemplo abaixo. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-**wcsncat** e **_mbsncat** são versões de caractere largo e de multibyte de **strncat**. Os argumentos de cadeia de caracteres e o valor de retorno de **wcsncat** são cadeias de caracteres largos; os de **_mbsncat** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsncat** e **_mbsncat** são versões de caractere largo e multibyte de **strncat**. Os argumentos de cadeia de caracteres e o valor de retorno de **wcsncat** são cadeias de caracteres largos; os de **_mbsncat** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, essas funções têm sobrecargas de modelo. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -165,7 +170,7 @@ No C++, essas funções têm sobrecargas de modelo. Para obter mais informaçõe
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** e **_wcsncat_l** não têm nenhuma dependência de localidade e não devem ser chamados diretamente. Eles são fornecidos para uso interno pelo **_tcsncat_l**.
+> **_strncat_l** e **_wcsncat_l** não têm nenhuma dependência de localidade e não devem ser chamadas diretamente. Eles são fornecidos para uso interno por **_tcsncat_l**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -176,7 +181,7 @@ No C++, essas funções têm sobrecargas de modelo. Para obter mais informaçõe
 |**_mbsncat**|\<mbstring.h>|
 |**_mbsncat_l**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -229,7 +234,7 @@ Observe que **BadAppend** causou uma saturação de buffer.
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
@@ -240,5 +245,5 @@ Observe que **BadAppend** causou uma saturação de buffer.
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

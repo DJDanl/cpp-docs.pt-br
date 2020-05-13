@@ -1,8 +1,9 @@
 ---
 title: _get_fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_fmode
+- _o__get_fmode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: 03e07ea44aadec7c15352bb63fd25aa777ee9bfb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3e59e608f83874088b64d316c04053b94d8fbfdd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955877"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909856"
 ---
 # <a name="_get_fmode"></a>_get_fmode
 
@@ -51,13 +53,15 @@ errno_t _get_fmode(
 *pmode*<br/>
 Um ponteiro para um inteiro a ser preenchido com o modo padrão atual: **_O_TEXT** ou **_O_BINARY**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna zero se tiver êxito; um código de erro em caso de falha. Se *pmode* for **NULL**, o manipulador de parâmetro inválido será invocado conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
 A função obtém o valor da variável global [_fmode](../../c-runtime-library/fmode.md). Essa variável especifica o modo de conversão de arquivo padrão para operações de e/s de arquivo de baixo nível e fluxo, como **_open**, **_pipe**, **fopen**e [freopen](freopen-wfreopen.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -76,4 +80,4 @@ Veja o exemplo em [_set_fmode](set-fmode.md).
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_set_fmode](set-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[E/S de texto e arquivo de modo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[E/s de arquivo de modo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

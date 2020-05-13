@@ -1,10 +1,11 @@
 ---
 title: floor, floorf, floorl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - floorf
 - floorl
 - floor
+- _o_floor
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957150"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911629"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -68,27 +70,29 @@ long double floorl(
 *x*<br/>
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **Floor** retornam um valor de ponto flutuante que representa o maior inteiro que é menor ou igual a *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|nenhum|_DOMAIN|
+|± QNAN,IND|nenhuma|_DOMAIN|
 
 o **Floor** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-C++permite sobrecargas, para que você possa chamar sobrecargas de **piso** que levam e retornam valores float e **Long** **flutuantes** . Em um programa C, o **Floor** sempre pega e retorna um **Double**.
+O C++ permite sobrecarga, de modo que você pode chamar sobrecargas de **piso** que levam e retornam valores **float** e **Long** **duplos** . Em um programa C, o **Floor** sempre pega e retorna um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**floor**, **floorf**, **floorl**|\<math.h>|
+|**piso**, **floorf**, **piso**|\<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -125,7 +129,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

@@ -1,0 +1,591 @@
+- name: Acesso a dados no Visual C++
+  href: ../data/data-access-in-cpp.md
+- name: Programação de Acesso a Dados (MFC-ATL)
+  expanded: false
+  items:
+    - name: Programação de Acesso a Dados (MFC-ATL)
+      href: ../data/data-access-programming-mfc-atl.md
+    - name: Instalando o suporte a banco de dados (MFC-ATL)
+      href: ../data/installing-database-support-mfc-atl.md
+    - name: Classes de banco de dados ATL (modelos de banco de dados OLE)
+      href: ../data/atl-database-classes-ole-db-templates.md
+    - name: Classes de banco de dados MFC
+      expanded: false
+      items:
+        - name: Classes de banco de dados MFC
+          href: ../data/mfc-database-classes-odbc-and-dao.md
+        - name: 'MFC: usar classes de banco de dados com documentos e exibições'
+          href: ../data/mfc-using-database-classes-with-documents-and-views.md
+        - name: 'MFC: Usar classes de banco de dados sem documentos e exibições'
+          href: ../data/mfc-using-database-classes-without-documents-and-views.md
+    - name: Registro (acesso a dados MFC)
+      href: ../data/record-mfc-data-access.md
+    - name: Esquema (acesso a dados MFC)
+      href: ../data/schema-mfc-data-access.md
+    - name: Informações de catálogo (Acesso a dados MFC)
+      href: ../data/catalog-information-mfc-data-access.md
+    - name: Transações (acesso a dados MFC)
+      href: ../data/transactions-mfc-data-access.md
+    - name: Exibição de registro (acesso a dados MFC)
+      expanded: false
+      items:
+        - name: Exibição de registro (acesso a dados MFC)
+          href: ../data/record-views-mfc-data-access.md
+        - name: Recursos de classes de exibição de registro (Acesso a dados MFC)
+          href: ../data/features-of-record-view-classes-mfc-data-access.md
+        - name: Troca de dados para exibições de registro (Acesso a dados MFC)
+          href: ../data/data-exchange-for-record-views-mfc-data-access.md
+        - name: Sua função ao trabalhar com uma exibição de registro (Acesso a dados MFC)
+          href: ../data/your-role-in-working-with-a-record-view-mfc-data-access.md
+        - name: Projetando e criando uma exibição de registro (Acesso a dados MFC)
+          href: ../data/designing-and-creating-a-record-view-mfc-data-access.md
+        - name: Dando suporte a navegação em uma exibição do registro (acesso a dados MFC)
+          expanded: false
+          items:
+            - name: Dando suporte a navegação em uma exibição do registro (acesso a dados MFC)
+              href: ../data/supporting-navigation-in-a-record-view-mfc-data-access.md
+            - name: Manipuladores de comandos para rolagem de registro (Acesso a dados MFC)
+              href: ../data/command-handlers-for-record-scrolling-mfc-data-access.md
+            - name: Atualização de interface do usuário para exibições de registro (Acesso a dados MFC)
+              href: ../data/user-interface-updating-for-record-views-mfc-data-access.md
+        - name: Usando uma exibição do registro (acesso a dados MFC)
+          expanded: false
+          items:
+            - name: Usando uma exibição do registro (acesso a dados MFC)
+              href: ../data/using-a-record-view-mfc-data-access.md
+            - name: Código de exibição de registro criado pelo assistente de aplicativo (Acesso a dados MFC)
+              href: ../data/record-view-code-created-by-application-wizard-mfc-data-access.md
+            - name: Alterações que podem ser feitas ao código padrão (Acesso a dados MFC)
+              href: ../data/changes-you-might-make-to-the-default-code-mfc-data-access.md
+        - name: Preenchendo uma caixa de listagem de um segundo conjunto de registros (Acesso a dados MFC)
+          href: ../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md
+- name: Programação de OLE DB
+  expanded: false
+  items:
+    - name: programação de OLE DB
+      href: ../data/oledb/ole-db-programming.md
+    - name: Visão geral da programação de OLE DB
+      expanded: false
+      items:
+        - name: Visão geral da programação de OLE DB
+          href: ../data/oledb/ole-db-programming-overview.md
+        - name: Consumidores e provedores de OLE DB
+          href: ../data/oledb/ole-db-consumers-and-providers.md
+        - name: Modelo de objeto do OLE DB
+          href: ../data/oledb/ole-db-object-model.md
+        - name: 'Modelos, atributos e outras implementações do OLE DB'
+          href: ../data/oledb/ole-db-templates-attributes-and-other-implementations.md
+        - name: Problemas de design arquitetônico de OLE DB
+          href: ../data/oledb/ole-db-architectural-design-issues.md
+    - name: Modelos de consumidor de OLE DB (C++)
+      expanded: false
+      items:
+        - name: Modelos de consumidor de OLE DB (C++)
+          href: ../data/oledb/ole-db-consumer-templates-cpp.md
+        - name: Origens de dados e sessões
+          href: ../data/oledb/data-sources-and-sessions.md
+        - name: Acessadores e conjuntos de linhas
+          href: ../data/oledb/accessors-and-rowsets.md
+        - name: Comandos e tabelas
+          href: ../data/oledb/commands-and-tables.md
+        - name: Registros de usuário
+          href: ../data/oledb/user-records.md
+        - name: Conjuntos de linhas do esquema
+          href: ../data/oledb/schema-rowsets.md
+        - name: Criando um consumidor de OLE DB
+          expanded: false
+          items:
+            - name: Criando um consumidor de OLE DB
+              href: ../data/oledb/creating-an-ole-db-consumer.md
+            - name: Criando um consumidor de OLE DB sem usar um assistente
+              expanded: false
+              items:
+                - name: Criando um consumidor de OLE DB sem usar um assistente
+                  href: ../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md
+                - name: Criando um consumidor simples
+                  href: ../data/oledb/creating-a-simple-consumer.md
+                - name: Implementando um consumidor simples
+                  href: ../data/oledb/implementing-a-simple-consumer.md
+                - name: Classes geradas pelo Assistente do Consumidor
+                  href: ../data/oledb/consumer-wizard-generated-classes.md
+                - name: Métodos gerados pelo Assistente do Consumidor
+                  href: ../data/oledb/consumer-wizard-generated-methods.md
+            - name: Criando um consumidor sem usar um assistente
+              href: ../data/oledb/creating-a-consumer-without-using-a-wizard.md
+        - name: Trabalhando com modelos de consumidor de OLE DB
+          expanded: false
+          items:
+            - name: Trabalhando com modelos de consumidor de OLE DB
+              href: ../data/oledb/working-with-ole-db-consumer-templates.md
+            - name: Simplificando acesso a dados com atributos de banco de dados
+              href: ../data/oledb/simplifying-data-access-with-database-attributes.md
+            - name: Membros de dados do status de campo em acessadores gerados por assistente
+              href: ../data/oledb/field-status-data-members-in-wizard-generated-accessors.md
+            - name: Percorrendo um conjunto de linhas simples
+              href: ../data/oledb/traversing-a-simple-rowset.md
+            - name: Emitindo uma consulta parametrizada
+              href: ../data/oledb/issuing-a-parameterized-query.md
+            - name: Buscando dados
+              href: ../data/oledb/fetching-data.md
+            - name: Atualizando conjuntos de linhas
+              href: ../data/oledb/updating-rowsets.md
+            - name: Usando procedimentos armazenados
+              expanded: false
+              items:
+                - name: Usando procedimentos armazenados
+                  href: ../data/oledb/using-stored-procedures.md
+                - name: Definindo procedimentos armazenados
+                  href: ../data/oledb/defining-stored-procedures.md
+                - name: Parâmetros de saída
+                  href: ../data/oledb/output-parameters.md
+                - name: Usando vários conjuntos de resultados de um procedimento armazenado
+                  href: ../data/oledb/using-multiple-result-sets-from-one-stored-procedure.md
+            - name: Usando acessadores
+              expanded: false
+              items:
+                - name: Usando acessadores
+                  href: ../data/oledb/using-accessors.md
+                - name: Determinando qual tipo de acessador a ser usado
+                  href: ../data/oledb/determining-which-type-of-accessor-to-use.md
+                - name: Usando vários acessadores em um conjunto de linhas
+                  href: ../data/oledb/using-multiple-accessors-on-a-rowset.md
+                - name: Usando acessadores dinâmicos
+                  href: ../data/oledb/using-dynamic-accessors.md
+                - name: Substituindo um acessador dinâmico
+                  href: ../data/oledb/overriding-a-dynamic-accessor.md
+                - name: Usando acessadores manuais
+                  href: ../data/oledb/using-manual-accessors.md
+                - name: Acessando dados XML
+                  href: ../data/oledb/accessing-xml-data.md
+            - name: Obtendo metadados com conjuntos de linhas de esquema
+              href: ../data/oledb/obtaining-metadata-with-schema-rowsets.md
+            - name: Dando suporte a transações em OLE DB
+              href: ../data/oledb/supporting-transactions-in-ole-db.md
+            - name: Usando exibições de registro de OLE DB
+              href: ../data/oledb/using-ole-db-record-views.md
+            - name: Usando um conjunto de registros ADO existente
+              href: ../data/oledb/using-an-existing-ado-recordset.md
+            - name: Atualizando uma coluna quando outra tabela contém uma referência para a linha
+              href: ../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md
+            - name: Usando indicadores
+              href: ../data/oledb/using-bookmarks.md
+            - name: Recuperando um BLOB
+              href: ../data/oledb/retrieving-a-blob.md
+            - name: Recebendo notificações
+              href: ../data/oledb/receiving-notifications.md
+    - name: Modelos de provedor de OLE DB (C++)
+      expanded: false
+      items:
+        - name: Modelos de provedor de OLE DB (C++)
+          href: ../data/oledb/ole-db-provider-templates-cpp.md
+        - name: Arquitetura de modelo do provedor de OLE DB
+          expanded: false
+          items:
+            - name: Arquitetura de modelo do provedor de OLE DB
+              href: ../data/oledb/ole-db-provider-template-architecture.md
+            - name: Interfaces de objeto da fonte de dados
+              href: ../data/oledb/data-source-object-interfaces.md
+            - name: Interfaces de objeto da sessão
+              href: ../data/oledb/session-object-interfaces.md
+            - name: Interfaces de objeto do conjunto de linhas
+              href: ../data/oledb/rowset-object-interfaces.md
+            - name: Interfaces de objeto do comando
+              href: ../data/oledb/command-object-interfaces.md
+            - name: Interfaces de objeto da transação
+              href: ../data/oledb/transaction-object-interfaces.md
+            - name: Mapas de propriedade
+              href: ../data/oledb/property-maps.md
+            - name: Registro de usuário
+              href: ../data/oledb/user-record.md
+        - name: Criando um provedor de OLE DB
+          expanded: false
+          items:
+            - name: Criando um provedor de OLE DB
+              href: ../data/oledb/creating-an-ole-db-provider.md
+            - name: Criando um projeto para o provedor
+              href: ../data/oledb/creating-a-project-for-the-provider.md
+            - name: Criando o provedor
+              href: ../data/oledb/creating-the-provider.md
+            - name: Arquivos gerados pelo assistente do provedor
+              expanded: false
+              items:
+                - name: Arquivos gerados pelo assistente do provedor
+                  href: ../data/oledb/provider-wizard-generated-files.md
+                - name: CCustomSource (CustomDS.H)
+                  href: ../data/oledb/cmyprovidersource-myproviderds-h.md
+                - name: CCustomSession (CustomSess.H)
+                  href: ../data/oledb/cmyprovidersession-myprovidersess-h.md
+                - name: CCustomCommand (CustomRS.H)
+                  href: ../data/oledb/cmyprovidercommand-myproviderrs-h.md
+                - name: CCustomRowset (CustomRS.H)
+                  href: ../data/oledb/cmyproviderrowset-myproviderrs-h.md
+                - name: CCustomWindowsFile
+                  href: ../data/oledb/cmyproviderwindowsfile.md
+            - name: Criando um provedor somente leitura simples
+              expanded: false
+              items:
+                - name: Criando um provedor somente leitura simples
+                  href: ../data/oledb/creating-a-simple-read-only-provider.md
+                - name: Implementando o provedor somente leitura simples
+                  href: ../data/oledb/implementing-the-simple-read-only-provider.md
+                - name: Armazenando cadeias de caracteres no provedor de OLE DB
+                  href: ../data/oledb/storing-strings-in-the-ole-db-provider.md
+                - name: Lendo cadeias de caracteres no provedor de OLE DB
+                  href: ../data/oledb/reading-strings-into-the-ole-db-provider.md
+                - name: Melhorando o provedor somente leitura simples
+                  href: ../data/oledb/enhancing-the-simple-read-only-provider.md
+                - name: Modificando a herança de RCustomRowset
+                  href: ../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md
+                - name: Determinando dinamicamente colunas retornadas ao consumidor
+                  href: ../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md
+                - name: Testando o provedor somente leitura simples
+                  href: ../data/oledb/testing-the-read-only-provider.md
+            - name: Criando um provedor atualizável
+              href: ../data/oledb/creating-an-updatable-provider.md
+        - name: Trabalhando com modelos de provedor de OLE DB
+          expanded: false
+          items:
+            - name: Trabalhando com modelos de provedor de OLE DB
+              href: ../data/oledb/working-with-ole-db-provider-templates.md
+            - name: Adicionando uma interface ao provedor
+              href: ../data/oledb/adding-an-interface-to-your-provider.md
+            - name: Fazendo referência a uma propriedade no provedor
+              href: ../data/oledb/referencing-a-property-in-your-provider.md
+            - name: Definindo propriedades no provedor
+              href: ../data/oledb/setting-properties-in-your-provider.md
+            - name: Associando colunas dinamicamente em seu provedor
+              href: ../data/oledb/dynamically-binding-columns-in-your-provider.md
+            - name: Dando suporte a threading livre no provedor
+              href: ../data/oledb/supporting-free-threading-in-your-provider.md
+            - name: Testando o provedor
+              href: ../data/oledb/testing-your-provider.md
+            - name: Depurando o provedor
+              href: ../data/oledb/debugging-your-provider.md
+            - name: Dados de conversão não compatíveis com o provedor
+              href: ../data/oledb/converting-data-not-supported-by-the-provider.md
+        - name: Técnicas de provedor avançadas
+          expanded: false
+          items:
+            - name: Técnicas de provedor avançadas
+              href: ../data/oledb/advanced-provider-techniques.md
+            - name: Dando suporte a notificações
+              href: ../data/oledb/supporting-notifications.md
+            - name: Dando suporte a conjuntos de linhas do esquema
+              href: ../data/oledb/supporting-schema-rowsets.md
+            - name: Suporte do provedor para indicadores
+              href: ../data/oledb/provider-support-for-bookmarks.md
+            - name: Passando testes de conformidade de OLE DB
+              href: ../data/oledb/passing-ole-db-conformance-tests.md
+            - name: Pooling de recursos e serviços de OLE DB
+              expanded: false
+              items:
+                - name: Pooling de recursos e serviços de OLE DB
+                  href: ../data/oledb/ole-db-resource-pooling-and-services.md
+                - name: Pooling de recursos no aplicativo de OLE DB
+                  href: ../data/oledb/resource-pooling-in-your-ole-db-application.md
+                - name: Habilitando e desabilitando serviços de OLE DB
+                  expanded: false
+                  items:
+                    - name: Habilitando e desabilitando serviços de OLE DB
+                      href: ../data/oledb/enabling-and-disabling-ole-db-services.md
+                    - name: Habilitando e desabilitando serviços para um provedor
+                      href: ../data/oledb/enabling-and-disabling-services-for-a-provider.md
+                    - name: Substituindo padrões de serviço do provedor
+                      href: ../data/oledb/overriding-provider-service-defaults.md
+- name: Modelos do OLE DB
+  expanded: false
+  items:
+    - name: Visão geral de modelos OLE DB
+      href: ../data/oledb/ole-db-templates.md
+    - name: Visão geral de referência dos modelos de consumidor de OLE DB
+      href: ../data/oledb/ole-db-consumer-templates-reference.md
+    - name: Referência dos modelos de consumidor de OLE DB
+      expanded: false
+      items:
+        - name: Classe CAccessor
+          href: ../data/oledb/caccessor-class.md
+        - name: Classe CAccessorBase
+          href: ../data/oledb/caccessorbase-class.md
+        - name: Classe CAccessorRowset
+          href: ../data/oledb/caccessorrowset-class.md
+        - name: Classe CArrayRowset
+          href: ../data/oledb/carrayrowset-class.md
+        - name: Classe CBookmark
+          href: ../data/oledb/cbookmark-class.md
+        - name: Classe CBulkRowset
+          href: ../data/oledb/cbulkrowset-class.md
+        - name: Classe CColumnAccessor
+          href: ../data/oledb/ccolumnaccessor-class.md
+        - name: Classe CCommand
+          href: ../data/oledb/ccommand-class.md
+        - name: Classe CDataConnection
+          href: ../data/oledb/cdataconnection-class.md
+        - name: Classe CDataSource
+          href: ../data/oledb/cdatasource-class.md
+        - name: Classe CDBErrorInfo
+          href: ../data/oledb/cdberrorinfo-class.md
+        - name: Classe CDBPropIDSet
+          href: ../data/oledb/cdbpropidset-class.md
+        - name: Classe CDBPropSet
+          href: ../data/oledb/cdbpropset-class.md
+        - name: Classe CDynamicAccessor
+          href: ../data/oledb/cdynamicaccessor-class.md
+        - name: Classe CDynamicParameterAccessor
+          href: ../data/oledb/cdynamicparameteraccessor-class.md
+        - name: Classe CDynamicStringAccessor
+          href: ../data/oledb/cdynamicstringaccessor-class.md
+        - name: Classe CDynamicStringAccessorA
+          href: ../data/oledb/cdynamicstringaccessora-class.md
+        - name: Classe CDynamicStringAccessorW
+          href: ../data/oledb/cdynamicstringaccessorw-class.md
+        - name: Classe CEnumerator
+          href: ../data/oledb/cenumerator-class.md
+        - name: Classe CEnumeratorAccessor
+          href: ../data/oledb/cenumeratoraccessor-class.md
+        - name: Classe CManualAccessor
+          href: ../data/oledb/cmanualaccessor-class.md
+        - name: Classe CMultipleResults
+          href: ../data/oledb/cmultipleresults-class.md
+        - name: Classe CNoAccessor
+          href: ../data/oledb/cnoaccessor-class.md
+        - name: Classe CNoMultipleResults
+          href: ../data/oledb/cnomultipleresults-class.md
+        - name: Classe CNoRowset
+          href: ../data/oledb/cnorowset-class.md
+        - name: Classe CRestrictions
+          href: ../data/oledb/crestrictions-class.md
+        - name: Classe CRowset
+          href: ../data/oledb/crowset-class.md
+        - name: Classe CSession
+          href: ../data/oledb/csession-class.md
+        - name: Classe CStreamRowset
+          href: ../data/oledb/cstreamrowset-class.md
+        - name: Classe CTable
+          href: ../data/oledb/ctable-class.md
+        - name: Classe CXMLAccessor
+          href: ../data/oledb/cxmlaccessor-class.md
+        - name: Classe IRowsetNotifyImpl
+          href: ../data/oledb/irowsetnotifyimpl-class.md
+        - name: Classes Rowset do esquema e Typedef
+          href: ../data/oledb/schema-rowset-classes-and-typedef-classes.md
+        - name: Macros e funções globais para modelos de consumidor de OLE DB
+          href: ../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md
+    - name: Visão geral de referência dos modelos de provedor OLE DB
+      href: ../data/oledb/ole-db-provider-templates-reference.md
+    - name: Referência dos modelos de provedor de OLE DB
+      expanded: false
+      items:
+        - name: Classe CRowsetImpl
+          href: ../data/oledb/crowsetimpl-class.md
+        - name: Classe CSimpleRow
+          href: ../data/oledb/csimplerow-class.md
+        - name: Classe CUtlProps
+          href: ../data/oledb/cutlprops-class.md
+        - name: Classe IAccessorImpl
+          href: ../data/oledb/iaccessorimpl-class.md
+        - name: Classe IColumnsInfoImpl
+          href: ../data/oledb/icolumnsinfoimpl-class.md
+        - name: Classe ICommandImpl
+          href: ../data/oledb/icommandimpl-class.md
+        - name: Classe ICommandPropertiesImpl
+          href: ../data/oledb/icommandpropertiesimpl-class.md
+        - name: Classe ICommandTextImpl
+          href: ../data/oledb/icommandtextimpl-class.md
+        - name: Classe IConvertTypeImpl
+          href: ../data/oledb/iconverttypeimpl-class.md
+        - name: Classe IDBCreateCommandImpl
+          href: ../data/oledb/idbcreatecommandimpl-class.md
+        - name: Classe IDBCreateSessionImpl
+          href: ../data/oledb/idbcreatesessionimpl-class.md
+        - name: Classe IDBInitializeImpl
+          href: ../data/oledb/idbinitializeimpl-class.md
+        - name: Classe IDBPropertiesImpl
+          href: ../data/oledb/idbpropertiesimpl-class.md
+        - name: Classe IDBSchemaRowsetImpl
+          href: ../data/oledb/idbschemarowsetimpl-class.md
+        - name: Classe IErrorRecordsImpl
+          href: ../data/oledb/ierrorrecordsimpl-class.md
+        - name: Classe IGetDataSourceImpl
+          href: ../data/oledb/igetdatasourceimpl-class.md
+        - name: Classe IOpenRowsetImpl
+          href: ../data/oledb/iopenrowsetimpl-class.md
+        - name: Classe IRowsetChangeImpl
+          href: ../data/oledb/irowsetchangeimpl-class.md
+        - name: Classe IRowsetCreatorImpl
+          href: ../data/oledb/irowsetcreatorimpl-class.md
+        - name: Classe IRowsetIdentityImpl
+          href: ../data/oledb/irowsetidentityimpl-class.md
+        - name: Classe IRowsetImpl
+          href: ../data/oledb/irowsetimpl-class.md
+        - name: Classe IRowsetInfoImpl
+          href: ../data/oledb/irowsetinfoimpl-class.md
+        - name: Classe IRowsetLocateImpl
+          href: ../data/oledb/irowsetlocateimpl-class.md
+        - name: Classe IRowsetNotifyCP
+          href: ../data/oledb/irowsetnotifycp-class.md
+        - name: Classe IRowsetUpdateImpl
+          href: ../data/oledb/irowsetupdateimpl-class.md
+        - name: Classe ISessionPropertiesImpl
+          href: ../data/oledb/isessionpropertiesimpl-class.md
+        - name: Macros para modelos de provedor de OLE DB
+          href: ../data/oledb/macros-for-ole-db-provider-templates.md
+- name: ODBC (open database connectivity)
+  expanded: false
+  items:
+    - name: ODBC (open database connectivity)
+      href: ../data/odbc/open-database-connectivity-odbc.md
+    - name: Instalação e introdução com ODBC
+      href: ../data/odbc/installing-and-getting-started-with-odbc.md
+    - name: Projetar e criar um aplicativo de banco de dados ODBC
+      href: ../data/odbc/design-and-create-an-odbc-database-application.md
+    - name: Usar formulários de banco de dados (exibições de registro) com ODBC
+      href: ../data/odbc/use-database-forms-record-views-with-odbc.md
+    - name: Usar ODBC para trabalhar com outros usuários
+      href: ../data/odbc/use-odbc-to-work-with-other-users.md
+    - name: Trabalhar com conexões de banco de dados ODBC
+      href: ../data/odbc/work-with-odbc-database-connections.md
+    - name: Trabalhar com ODBC e drivers
+      href: ../data/odbc/work-with-odbc-and-drivers.md
+    - name: Usar a biblioteca de cursores ODBC
+      href: ../data/odbc/use-the-odbc-cursor-library.md
+    - name: Usar conjuntos de registros ODBC MFC
+      href: ../data/odbc/use-mfc-odbc-recordsets.md
+    - name: Noções básicas de ODBC
+      expanded: false
+      items:
+        - name: Noções básicas de ODBC
+          href: ../data/odbc/odbc-basics.md
+        - name: Classes ODBC e de banco de dados
+          href: ../data/odbc/odbc-and-the-database-classes.md
+        - name: Requisitos de driver ODBC para dynasets
+          href: ../data/odbc/odbc-driver-requirements-for-dynasets.md
+        - name: Redistribuindo componentes ODBC para os clientes
+          href: ../data/odbc/redistributing-odbc-components-to-your-customers.md
+        - name: 'ODBC: A biblioteca de cursores ODBC'
+          href: ../data/odbc/odbc-the-odbc-cursor-library.md
+        - name: 'ODBC: Configurar uma fonte de dados ODBC'
+          href: ../data/odbc/odbc-configuring-an-odbc-data-source.md
+        - name: 'ODBC: Chamar funções de API ODBC diretamente'
+          href: ../data/odbc/odbc-calling-odbc-api-functions-directly.md
+    - name: ODBC e MFC
+      expanded: false
+      items:
+        - name: ODBC e MFC
+          href: ../data/odbc/odbc-and-mfc.md
+        - name: Conectando a uma fonte de dados
+          href: ../data/odbc/connecting-to-a-data-source.md
+        - name: Selecionando e manipulando registros
+          href: ../data/odbc/selecting-and-manipulating-records.md
+        - name: Exibindo e manipulando dados em um formulário
+          href: ../data/odbc/displaying-and-manipulating-data-in-a-form.md
+        - name: Trabalhando com documentos e exibições
+          href: ../data/odbc/working-with-documents-and-views.md
+        - name: Acesso a ODBC e SQL
+          href: ../data/odbc/access-to-odbc-and-sql.md
+        - name: Leitura adicional sobre as classes ODBC MFC
+          href: ../data/odbc/further-reading-about-the-mfc-odbc-classes.md
+    - name: Classes e threads ODBC
+      href: ../data/odbc/odbc-classes-and-threads.md
+    - name: Administrador ODBC
+      href: ../data/odbc/odbc-administrator.md
+    - name: Lista de drivers ODBC
+      href: ../data/odbc/odbc-driver-list.md
+    - name: Fonte de dados (ODBC)
+      expanded: false
+      items:
+        - name: Fonte de dados (ODBC)
+          href: ../data/odbc/data-source-odbc.md
+        - name: 'Fonte de dados: gerenciando conexões (ODBC)'
+          href: ../data/odbc/data-source-managing-connections-odbc.md
+        - name: 'Fonte de dados: determinar o esquema da fonte de dados (ODBC)'
+          href: ../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md
+        - name: 'Fonte de dados: configurar programaticamente uma fonte de dados ODBC'
+          href: ../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md
+        - name: 'Fonte de dados: Criar uma tabela programaticamente em uma fonte de dados ODBC'
+          href: ../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md
+    - name: Dynaset
+      href: ../data/odbc/dynaset.md
+    - name: Instantâneo
+      href: ../data/odbc/snapshot.md
+    - name: RFX (registrar troca de campos)
+      expanded: false
+      items:
+        - name: RFX (registrar troca de campos)
+          href: ../data/odbc/record-field-exchange-rfx.md
+        - name: 'Registrar troca de campos: Usando RFX'
+          href: ../data/odbc/record-field-exchange-using-rfx.md
+        - name: 'Registrar troca de campos: Trabalhando com o código do assistente'
+          href: ../data/odbc/record-field-exchange-working-with-the-wizard-code.md
+        - name: 'Registrar troca de campos: Usando as funções RF'
+          href: ../data/odbc/record-field-exchange-using-the-rfx-functions.md
+        - name: 'Registrar troca de campos: Como RFX funciona'
+          href: ../data/odbc/record-field-exchange-how-rfx-works.md
+    - name: Conjunto de registros (ODBC)
+      expanded: false
+      items:
+        - name: Conjunto de registros (ODBC)
+          href: ../data/odbc/recordset-odbc.md
+        - name: 'Conjunto de registros: arquitetura (ODBC)'
+          href: ../data/odbc/recordset-architecture-odbc.md
+        - name: 'Conjunto de registros: Declarando uma classe para uma tabela (ODBC)'
+          href: ../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md
+        - name: 'Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)'
+          href: ../data/odbc/recordset-creating-and-closing-recordsets-odbc.md
+        - name: 'Conjunto de registros: Rolagem (ODBC)'
+          href: ../data/odbc/recordset-scrolling-odbc.md
+        - name: 'Conjunto de registros: Indicadores e posições absolutas (ODBC)'
+          href: ../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md
+        - name: 'Conjunto de registros: Filtrando registros (ODBC)'
+          href: ../data/odbc/recordset-filtering-records-odbc.md
+        - name: 'Conjunto de registros: Classificando registros (ODBC)'
+          href: ../data/odbc/recordset-sorting-records-odbc.md
+        - name: 'Conjunto de registros: Definindo parâmetros de um conjunto de registros (ODBC)'
+          href: ../data/odbc/recordset-parameterizing-a-recordset-odbc.md
+        - name: 'Conjunto de registros: Adicionando, atualizando e excluindo registros (ODBC)'
+          href: ../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md
+        - name: 'Conjunto de registros: Adicionando registros em massa (ODBC)'
+          href: ../data/odbc/recordset-adding-records-in-bulk-odbc.md
+        - name: 'Conjunto de registros: Bloqueando registros (ODBC)'
+          href: ../data/odbc/recordset-locking-records-odbc.md
+        - name: 'Conjunto de registros: Executando uma junção (ODBC)'
+          href: ../data/odbc/recordset-performing-a-join-odbc.md
+        - name: 'Conjunto de registros: como declarar uma classe para uma consulta predefinida (ODBC)'
+          href: ../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md
+        - name: 'Conjunto de registros: Repetindo a consulta de um conjunto de registros (ODBC)'
+          href: ../data/odbc/recordset-requerying-a-recordset-odbc.md
+        - name: 'Conjunto de registros: Associando dinamicamente colunas de dados (ODBC)'
+          href: ../data/odbc/recordset-dynamically-binding-data-columns-odbc.md
+        - name: 'Conjunto de registros: Como efetuar fetch de registros em massa (ODBC)'
+          href: ../data/odbc/recordset-fetching-records-in-bulk-odbc.md
+        - name: 'Conjunto de registros: Trabalhando com itens de dados grandes (ODBC)'
+          href: ../data/odbc/recordset-working-with-large-data-items-odbc.md
+        - name: 'Conjunto de registros: Obtendo SUMs e outros resultados agregados (ODBC)'
+          href: ../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md
+        - name: 'Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)'
+          href: ../data/odbc/recordset-how-recordsets-select-records-odbc.md
+        - name: 'Conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)'
+          href: ../data/odbc/recordset-how-recordsets-update-records-odbc.md
+        - name: 'Conjunto de registros: Como Adicionar Novo, Editar e Excluir Trabalho (ODBC)'
+          href: ../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md
+        - name: 'Conjunto de registros: Mais sobre atualizações (ODBC)'
+          href: ../data/odbc/recordset-more-about-updates-odbc.md
+    - name: SQL no ODBC
+      expanded: false
+      items:
+        - name: SQL no ODBC
+          href: ../data/odbc/sql.md
+        - name: 'SQL: Como personalizar a instrução SQL do seu conjunto de registros (ODBC)'
+          href: ../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md
+        - name: 'SQL: Tipos de dados SQL e C++ (ODBC)'
+          href: ../data/odbc/sql-sql-and-cpp-data-types-odbc.md
+        - name: 'SQL: Fazer chamadas SQL diretas (ODBC)'
+          href: ../data/odbc/sql-making-direct-sql-calls-odbc.md
+    - name: Transação (ODBC)
+      expanded: false
+      items:
+        - name: Transação (ODBC)
+          href: ../data/odbc/transaction-odbc.md
+        - name: 'Transação: realizar uma transação em um conjunto de registros (ODBC)'
+          href: ../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md
+        - name: 'Transação: Como as transações afetam atualizações (ODBC)'
+          href: ../data/odbc/transaction-how-transactions-affect-updates-odbc.md

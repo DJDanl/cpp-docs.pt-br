@@ -24,19 +24,19 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: 4be87710519c9a389adbaf41fefddb9ea8dfb1e6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c5eeb66ff0e6fb05063ec395e12cd97106ad724d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351330"
 ---
 # <a name="_heapadd"></a>_heapadd
 
 Adiciona memória ao heap.
 
 > [!IMPORTANT]
->  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
+> Essa função está obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,10 +52,10 @@ int _heapadd(
 *memblock*<br/>
 Ponteiro para a memória de heap.
 
-*size*<br/>
+*Tamanho*<br/>
 Tamanho da memória a ser adicionada, em bytes.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se for bem-sucedido, `_heapadd` retornará 0. Caso contrário, a função retornará -1 e definirá `errno` como `ENOSYS`.
 
@@ -73,10 +73,10 @@ Começando com o Visual C++ versão 4.0, a estrutura de heap subjacente foi movi
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md) na Introdução.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Alocação de Memória](../c-runtime-library/memory-allocation.md)<br/>
-[free](../c-runtime-library/reference/free.md)<br/>
+[Alocação de memória](../c-runtime-library/memory-allocation.md)<br/>
+[Livre](../c-runtime-library/reference/free.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

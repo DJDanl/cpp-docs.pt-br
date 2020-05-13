@@ -1,9 +1,11 @@
 ---
 title: _ismbbprint, _ismbbprint_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbprint_l
 - _ismbbprint
+- _o__ismbbprint
+- _o__ismbbprint_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: c40ddc931faa5f1dcff914d7c615207ed57d11cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63aa7d9af3b756bc7807cae55fe969d492ec43cf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954054"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918646"
 ---
 # <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint, _ismbbprint_l
 
@@ -56,19 +59,23 @@ int _ismbbprint_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_ismbbprint** retornará um valor diferente de zero se a expressão:
 
 `isprint(c) || _ismbbkprint(c)`
 
-é diferente de zero para *c*ou 0 se não for. **_ismbbprint** usa a localidade atual para qualquer comportamento dependente de localidade. **_ismbbprint_l** é idêntico, exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+é diferente de zero para *c*ou 0 se não for. **_ismbbprint** usa a localidade atual para qualquer comportamento dependente de localidade. o **_ismbbprint_l** é idêntico, exceto pelo fato de que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,4 +89,4 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[Rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: d4fd95b1f11ed6edac26cb03e41e8b650acfafa3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0b88ddd4184e982a5e07c536efc301eaa16f4a41
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139979"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368065"
 ---
 # <a name="iumsunblocknotification-structure"></a>Estrutura IUMSUnblockNotification
 
-Representa uma notificação do Gerenciador de recursos que um proxy de thread que bloqueou e disparou um retorno ao contexto de agendamento designado do Agendador foi desbloqueado e está pronto para ser agendado. Essa interface é inválida quando o contexto de execução associado do proxy de thread, retornado do método `GetContext`, é reagendado.
+Representa uma notificação do Gerenciador de recursos de que um proxy de thread que bloqueou e desencadeou um retorno ao contexto de agendamento designado pelo agendador foi desbloqueado e está pronto para ser agendado. Esta interface é inválida uma vez que o contexto `GetContext` de execução associado do proxy de segmento, retornado do método, é reagendado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,24 +30,24 @@ struct IUMSUnblockNotification;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[IUMSUnblockNotification:: GetContext](#getcontext)|Retorna a interface `IExecutionContext` para o contexto de execução associado ao proxy de thread que foi desbloqueado. Quando esse método retornar e o contexto de execução subjacente tiver sido reagendado por meio de uma chamada para o método `IThreadProxy::SwitchTo`, essa interface não será mais válida.|
-|[IUMSUnblockNotification::GetNextUnblockNotification](#getnextunblocknotification)|Retorna a próxima interface de `IUMSUnblockNotification` na cadeia retornada do método `IUMSCompletionList::GetUnblockNotifications`.|
+|[IUMSUnblockNotification::GetContext](#getcontext)|Retorna `IExecutionContext` a interface para o contexto de execução associado ao proxy thread que foi desbloqueado. Uma vez que este método retorna e o contexto de `IThreadProxy::SwitchTo` execução subjacente foi reagendado através de uma chamada para o método, esta interface não é mais válida.|
+|[IUMSUnBlockNotification::GetNextUnblockNotification](#getnextunblocknotification)|Retorna a `IUMSUnblockNotification` próxima interface na cadeia `IUMSCompletionList::GetUnblockNotifications`retornada do método .|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `IUMSUnblockNotification`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** concrtrm. h
+**Cabeçalho:** concrtrm.h
 
-**Namespace:** simultaneidade
+**Namespace:** concurrency
 
-## <a name="getcontext"></a>Método IUMSUnblockNotification:: GetContext
+## <a name="iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a>IUMSUnblockNotification::GetContext Method
 
-Retorna a interface `IExecutionContext` para o contexto de execução associado ao proxy de thread que foi desbloqueado. Quando esse método retornar e o contexto de execução subjacente tiver sido reagendado por meio de uma chamada para o método `IThreadProxy::SwitchTo`, essa interface não será mais válida.
+Retorna `IExecutionContext` a interface para o contexto de execução associado ao proxy thread que foi desbloqueado. Uma vez que este método retorna e o contexto de `IThreadProxy::SwitchTo` execução subjacente foi reagendado através de uma chamada para o método, esta interface não é mais válida.
 
 ```cpp
 virtual IExecutionContext* GetContext() = 0;
@@ -55,11 +55,11 @@ virtual IExecutionContext* GetContext() = 0;
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma interface `IExecutionContext` para o contexto de execução para um proxy de thread que foi desbloqueado.
+Uma `IExecutionContext` interface para o contexto de execução para um proxy de segmento que foi desbloqueado.
 
-## <a name="getnextunblocknotification"></a>Método IUMSUnblockNotification:: GetNextUnblockNotification
+## <a name="iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a>IUMSUnblockNotification::GetNextUnblockNotification Method
 
-Retorna a próxima interface de `IUMSUnblockNotification` na cadeia retornada do método `IUMSCompletionList::GetUnblockNotifications`.
+Retorna a `IUMSUnblockNotification` próxima interface na cadeia `IUMSCompletionList::GetUnblockNotifications`retornada do método .
 
 ```cpp
 virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
@@ -67,10 +67,10 @@ virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 
 ### <a name="return-value"></a>Valor retornado
 
-A próxima interface de `IUMSUnblockNotification` na cadeia retornada do método `IUMSCompletionList::GetUnblockNotifications`.
+A `IUMSUnblockNotification` próxima interface da cadeia retornou do método `IUMSCompletionList::GetUnblockNotifications`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Namespace de simultaneidade](concurrency-namespace.md)<br/>
+[namespace de concorrência](concurrency-namespace.md)<br/>
 [Estrutura IUMSScheduler](iumsscheduler-structure.md)<br/>
 [Estrutura IUMSCompletionList](iumscompletionlist-structure.md)

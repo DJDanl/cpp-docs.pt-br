@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 5ac5c61488530f99cdad38ca1bfca365b6ac0f8c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3b9521fde1b5a03389bfc1ad3e35fa407d9d6ac0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420123"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363032"
 ---
 # <a name="ltistreamgt-operators"></a>Operadores &lt;istream&gt;
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Operador&gt;&gt;
 
 Extrai caracteres e cadeias de caracteres do fluxo.
 
@@ -54,18 +54,18 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ch*\
 Um caractere.
 
-\ *ISTR*
+*Istr*\
 Um fluxo.
 
-\ de *Str*
+*Str*\
 Uma cadeia de caracteres.
 
-*valor*\
+*Val*\
 Um tipo.
 
 ### <a name="return-value"></a>Valor retornado
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-extrai até `N - 1` elementos e os armazena na matriz, começando em *Str*. Se `Istr.`[largura](../standard-library/ios-base-class.md#width) for maior que zero, *N* será `Istr.width`; caso contrário, é o tamanho da maior matriz de `Elem` que pode ser declarada. A função sempre armazena o valor `Elem()` após qualquer elemento extraído que ele armazena. A extração pára no final do arquivo, em um caractere com valor `Elem(0)` (que não é extraído) ou em qualquer elemento (que não é extraído) que seria Descartado pelo [WS](../standard-library/istream-functions.md#ws). Se a função extrair nenhum elemento, ela chamará `Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Em qualquer caso, ele chama `Istr.width(0)` e retorna *ISTR*.
+extrai até `N - 1` elementos e os armazena na matriz a partir de *str*. Se `Istr.` [a largura](../standard-library/ios-base-class.md#width) for maior que zero, *N* é; `Istr.width` caso contrário, é o tamanho da `Elem` maior matriz do que pode ser declarado. A função sempre `Elem()` armazena o valor após quaisquer elementos extraídos que armazena. A extração pára no início do `Elem(0)` arquivo, em um caractere com valor (que não é extraído), ou em qualquer elemento (que não é extraído) que seria descartado por [ws](../standard-library/istream-functions.md#ws). Se a função não extrai `Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`elementos, ela chama . Em todo caso, `Istr.width(0)` ele liga e retorna *Istr*.
 
-**Observação de segurança** A cadeia de caracteres terminada em nulo que está sendo extraída do fluxo de entrada não deve exceder o tamanho do *Str*de buffer de destino. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+**Nota de segurança** A seqüência de terminais nula que está sendo extraída do fluxo de entrada não deve exceder o tamanho do *buffer str*de destino . Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 O modelo de função:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-extrai um elemento, se possível, e o armazena em *ch*. Caso contrário, ele chama `is.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Em qualquer caso, retorna *ISTR*.
+extrai um elemento, se possível, e armazena-o em *Ch*. Caso contrário, `is.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`ele chama . Em todo caso, ele retorna *Istr*.
 
 O modelo de função:
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Retorna `Istr >> val` (e converte uma referência rvalue para `Istr` em um lvalue no processo).
+retorna `Istr >> val` (e converte uma `Istr` referência de valor para um valor no processo).
 
 ### <a name="example"></a>Exemplo
 

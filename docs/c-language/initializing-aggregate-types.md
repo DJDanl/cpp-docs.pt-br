@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
 ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "62326073"
@@ -21,13 +21,13 @@ Um tipo de *agregação* é um tipo de estrutura, união ou matriz. Se um tipo d
 
 ## <a name="syntax"></a>Sintaxe
 
-*initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* Para inicialização de agregação \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
+*inicializador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *inicializador-lista*  **}** /* para inicialização de agregação\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *inicializador-lista*  **,}**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*initializer-list*  **,**  *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;*inicializador-lista*  **,**  *inicializador*
 
 A *initializer-list* é uma lista de inicializadores separados por vírgulas. Cada inicializador na lista é uma expressão constante ou uma lista de inicializadores. Em virtude disso, as listas de inicializadores podem ser aninhadas. Esse formato é útil para inicializar membros de agregações de um tipo de agregação, como mostrado nos exemplos desta seção. No entanto, se o inicializador de um identificador automático for uma expressão única, ele não precisa ser uma expressão constante, apenas ter o tipo apropriado para a atribuição ao identificador.
 
@@ -35,7 +35,7 @@ Para cada lista de inicializadores, os valores das expressões constantes são a
 
 Se *initializer-list* tiver menos valores do que um tipo de agregação, os membros ou os elementos restantes do tipo de agregação serão inicializados como 0. O valor inicial de um identificador automático não inicializado explicitamente será indefinido. Se *initializer-list* tiver mais valores do que um tipo de agregação, ocorrerá um erro. Essas regras se aplicam a cada lista de inicializadores inserida, bem como à agregação como um todo.
 
-O inicializador de uma estrutura é uma expressão do mesmo tipo ou uma lista de inicializadores para seus membros incluídos entre chaves ( **{ }** ). Os membros sem nome de campo de bits não são inicializados.
+O inicializador de uma estrutura é uma expressão do mesmo tipo ou uma lista de inicializadores para seus membros incluídos entre chaves (**{ }**). Os membros sem nome de campo de bits não são inicializados.
 
 Quando uma união é inicializada, *initializer-list* deve ser uma expressão constante única. O valor da expressão constante é atribuído ao primeiro membro de união.
 
@@ -49,11 +49,11 @@ int x[ ] = { 0, 1, 2 }
 
 No entanto, se você especificar o tamanho e fornecer o número incorreto de inicializadores, o compilador gerará um erro.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 O tamanho máximo para uma matriz é definido por **size_t**. Definido no arquivo de cabeçalho STDDEF.H, **size_t** é um `unsigned int` com o intervalo de 0x00000000 a 0x7CFFFFFF.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="examples"></a>Exemplos
 
@@ -150,6 +150,6 @@ union
 
 A variável de união `y`, neste exemplo, é inicializada. O primeiro elemento da união é uma matriz, assim, o inicializador é um inicializador de agregação. A lista de inicializadores `{'1'}` atribui valores para a primeira linha da matriz. Como apenas um valor aparece na lista, o elemento na primeira coluna é inicializado com o caractere `1`, e os dois elementos restantes na linha são inicializados com o valor 0 por padrão. Da mesma forma, o primeiro elemento da segunda linha de `x` é inicializado com o caractere `4`, e os dois elementos restantes na linha são inicializados com o valor 0.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Inicialização](../c-language/initialization.md)
+[Initialization](../c-language/initialization.md)

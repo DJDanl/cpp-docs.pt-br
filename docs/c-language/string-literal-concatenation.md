@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
 ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157780"
 ---
 # <a name="string-literal-concatenation"></a>Concatenação literal da cadeia de caracteres
 
@@ -35,7 +35,7 @@ Para forçar uma nova linha dentro de uma literal de cadeia de caracteres, digit
 "Enter a number between 1 and 100\nOr press Return"
 ```
 
-Como as cadeias de caracteres podem começar em qualquer coluna do código-fonte e as cadeias de caracteres longas podem ser retomadas em qualquer coluna de uma linha sucessora, você pode posicionar as cadeias de caracteres para aumentar a legibilidade do código-fonte. Em ambos os casos, sua representação na tela resultante não é afetada. Por exemplo:
+Como as cadeias de caracteres podem começar em qualquer coluna do código-fonte e as cadeias de caracteres longas podem ser retomadas em qualquer coluna de uma linha sucessora, você pode posicionar as cadeias de caracteres para aumentar a legibilidade do código-fonte. Em ambos os casos, sua representação na tela resultante não é afetada. Por exemplo: 
 
 ```
 printf_s ( "This is the first half of the string, "
@@ -59,6 +59,6 @@ printf_s( "%s" , string ) ;
 
 Na fase 6 de conversão, as sequências de caracteres multibyte especificadas por qualquer sequência de literais de cadeia de caracteres adjacentes ou literais de cadeia de caracteres largos adjacentes são concatenadas em uma única sequência de caracteres multibytes. Consequentemente, não crie programas para permitir a modificação de cadeias de caracteres literais durante a execução. O padrão ANSI C especifica que o resultado da modificação de uma cadeia de caracteres é indefinido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Literais da cadeia de caracteres C](../c-language/c-string-literals.md)

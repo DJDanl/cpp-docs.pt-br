@@ -20,11 +20,11 @@ ms.locfileid: "69493320"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemas de migração de 64 bits do Visual C++comuns
 
-Ao usar o compilador da C++ Microsoft (MSVC) para criar aplicativos para execução em um sistema operacional Windows de 64 bits, você deve estar ciente dos seguintes problemas:
+Ao usar o compilador do Microsoft C++ (MSVC) para criar aplicativos para execução em um sistema operacional Windows de 64 bits, você deve estar ciente dos seguintes problemas:
 
 - Um `int` e um `long` são valores de 32 bits em sistemas operacionais Windows de 64 bits. Para programas que você planeja Compilar para plataformas de 64 bits, você deve ter cuidado para não atribuir ponteiros a variáveis de 32 bits. Os ponteiros são 64 bits em plataformas de 64 bits e você truncará o valor do ponteiro se atribuí-lo a uma variável de 32 bits.
 
-- `size_t`, `time_t` e`ptrdiff_t` são valores de 64 bits em sistemas operacionais Windows de 64 bits.
+- `size_t`, `time_t`e `ptrdiff_t` são valores de 64 bits em sistemas operacionais Windows de 64 bits.
 
 - `time_t`é um valor de 32 bits em sistemas operacionais Windows de 32 bits no Visual Studio 2005 e versões anteriores. `time_t`Agora é um inteiro de 64 bits por padrão. Para obter mais informações, consulte [Gerenciamento de tempo](../c-runtime-library/time-management.md).
 
@@ -44,7 +44,7 @@ Para obter mais informações, consulte:
 
 - [Dicas de migração](/windows/win32/WinProg64/migration-tips)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Configurar projetos C++ para destinos x64 de 64 bits](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Guia de atualização e portabilidade do Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

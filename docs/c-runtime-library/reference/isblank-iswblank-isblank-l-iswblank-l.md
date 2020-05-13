@@ -1,11 +1,13 @@
 ---
 title: isblank, iswblank, _isblank_l, _iswblank_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isblank
 - _isblank_l
 - iswblank
 - _iswblank_l
+- _o_isblank
+- _o_iswblank
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: 022eba0335facc597f0608d63cfb58e0146e0f23
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1c45319d7da48fad21af5375b0c310330d0f575a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954514"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918477"
 ---
 # <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
@@ -62,15 +65,15 @@ int _iswblank_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um espaço ou um caractere de tabulação horizontal, ou um dos conjuntos de caracteres específicos da localidade que são usados para separar palavras dentro de uma linha de texto. **IsBlank** retornará um valor diferente de zero se *c* for um caractere de espaço (0x20) ou um caractere de tabulação horizontal (0x09). O resultado da condição de teste para as funções **isblanks** depende da configuração de categoria **LC_CTYPE** da localidade; para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não têm o sufixo **_L** usam a localidade atual para qualquer comportamento dependente de localidade; as versões que têm o sufixo **_L** são idênticas, exceto que usam a localidade que é passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um espaço ou um caractere de tabulação horizontal, ou um dos conjuntos de caracteres específicos da localidade que são usados para separar palavras dentro de uma linha de texto. **IsBlank** retornará um valor diferente de zero se *c* for um caractere de espaço (0x20) ou um caractere de tabulação horizontal (0x09). O resultado da condição de teste para as funções **isblanks** depende da configuração de categoria de **LC_CTYPE** da localidade; para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não têm o sufixo **_L** usam a localidade atual para qualquer comportamento dependente de localidade; as versões que têm o sufixo **_L** são idênticas, exceto que usam a localidade que é passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 **iswblank** retornará um valor diferente de zero se *c* for um caractere largo que corresponde a um caractere de tabulação horizontal ou espaço padrão.
 
@@ -80,22 +83,26 @@ O comportamento de **IsBlank** e **_isblank_l** será indefinido se *c* não for
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
+|**_istblank**|**IsBlank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**isblank**|\<ctype.h>|
+|**IsBlank**|\<ctype.h>|
 |**iswblank**|\<ctype.h> ou \<wchar.h>|
 |**_isblank_l**|\<ctype.h>|
 |**_iswblank_l**|\<ctype.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

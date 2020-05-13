@@ -1,9 +1,11 @@
 ---
 title: _cgets, _cgetws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cgetws
 - _cgets
+- _o__cgets
+- _o__cgetws
 api_location:
 - msvcr100.dll
 - msvcr110.dll
@@ -14,6 +16,7 @@ api_location:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,22 +33,22 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298994"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917437"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
 Obtém uma cadeia de caracteres do console. Estão disponíveis versões mais seguras dessas funções; consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
 
 > [!IMPORTANT]
->  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT. As versões seguras dessas funções, _cgets_s e _cgetws_s, ainda estão disponíveis. Para obter informações sobre essas funções alternativas, consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
+> Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT. As versões seguras dessas funções, _cgets_s e _cgetws_s, ainda estão disponíveis. Para obter informações sobre essas funções alternativas, consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
 
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -68,10 +71,10 @@ wchar_t *_cgetws(
 
 #### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento de dados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 `_cgets` e `_cgetws` retornam um ponteiro para o início da cadeia de caracteres, em `buffer[2]`. Se `buffer` for **NULL**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, elas retornarão **NULL** e definirão `errno` como `EINVAL`.
 
@@ -83,20 +86,22 @@ Uma vez que todas as chaves de edição estão ativas quando `_cgets` ou `_cgetw
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../c-runtime-library/secure-template-overloads.md).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> ou \<wchar.h>|
 
-Para obter informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -142,7 +147,7 @@ Line Length = 16
 Text = A line of input.
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)

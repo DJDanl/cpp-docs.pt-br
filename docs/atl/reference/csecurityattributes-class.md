@@ -1,5 +1,5 @@
 ---
-title: Classe CSecurityAttributes
+title: Classe CSecurityAttributeAttributes
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e0ac813008a028bb233adfb4c7409a0ad62a6b78
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496495"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746496"
 ---
-# <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
+# <a name="csecurityattributes-class"></a>Classe CSecurityAttributeAttributes
 
-Essa classe é um wrapper fino para a estrutura de atributos de segurança.
+Esta classe é um invólucro fino para a estrutura de atributos de segurança.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,13 +41,13 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Chame esse método para definir os atributos do `CSecurityAttributes` objeto.|
+|[CSecurityAttributes::Set](#set)|Chame este método para definir `CSecurityAttributes` os atributos do objeto.|
 
 ## <a name="remarks"></a>Comentários
 
-A `SECURITY_ATTRIBUTES` estrutura contém um [descritor de segurança](/windows/win32/api/winnt/ns-winnt-security_descriptor) usado para a criação de um objeto e especifica se o identificador recuperado por meio da especificação dessa estrutura é herdável.
+A `SECURITY_ATTRIBUTES` estrutura contém um [descritor de segurança](/windows/win32/api/winnt/ns-winnt-security_descriptor) usado para a criação de um objeto e especifica se a alça recuperada especificando esta estrutura é hereditária.
 
-Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/win32/SecAuthZ/access-control) no SDK do Windows.
+Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [Control de acesso](/windows/win32/SecAuthZ/access-control) no Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -57,9 +57,9 @@ Para obter uma introdução ao modelo de controle de acesso no Windows, consulte
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** ATLSecurity. h
+**Cabeçalho:** atlsecurity.h
 
-##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
+## <a name="csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes
 
 O construtor.
 
@@ -74,13 +74,13 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 Referência a um descritor de segurança.
 
 *bInheritsHandle*<br/>
-Especifica se o identificador retornado é herdado quando um novo processo é criado. Se esse membro for true, o novo processo herdará o identificador.
+Especifica se a alça retornada é herdada quando um novo processo é criado. Se este membro for verdadeiro, o novo processo herda a alça.
 
-##  <a name="set"></a>CSecurityAttributes:: Set
+## <a name="csecurityattributesset"></a><a name="set"></a>CSecurityAttributes::Set
 
-Chame esse método para definir os atributos do `CSecurityAttributes` objeto.
+Chame este método para definir `CSecurityAttributes` os atributos do objeto.
 
-```
+```cpp
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
 ```
 
@@ -90,16 +90,16 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 Referência a um descritor de segurança.
 
 *bInheritHandle*<br/>
-Especifica se o identificador retornado é herdado quando um novo processo é criado. Se esse membro for true, o novo processo herdará o identificador.
+Especifica se a alça retornada é herdada quando um novo processo é criado. Se este membro for verdadeiro, o novo processo herda a alça.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é usado pelo construtor para inicializar o `CSecurityAttributes` objeto.
+Este método é usado pelo construtor `CSecurityAttributes` para inicializar o objeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo de segurança](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
+[Amostra de segurança](../../overview/visual-cpp-samples.md)<br/>
+[Security_attributes](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
 [descritor de segurança](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)

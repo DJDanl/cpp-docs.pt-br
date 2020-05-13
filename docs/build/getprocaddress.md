@@ -19,7 +19,7 @@ ms.locfileid: "69493247"
 
 Processa explicitamente o vínculo com uma DLL chamada [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) para obter o endereço de uma função exportada na dll. Você usa o ponteiro de função retornado para chamar a função de DLL. O **GetProcAddress** usa como parâmetros o identificador do módulo de dll (retornado por `AfxLoadLibrary` **LoadLibrary**, ou **GetModuleHandle**) e usa o nome da função que você deseja chamar ou o ordinal de exportação da função.
 
-Como você está chamando a função de DLL por meio de um ponteiro e não há nenhuma verificação de tipo em tempo de compilação, certifique-se de que os parâmetros para a função estejam corretos para que você não overstep a memória alocada na pilha e cause uma violação de acesso. Uma maneira de ajudar a fornecer segurança de tipo é examinar os protótipos de função das funções exportadas e criar TYPEDEFs correspondentes para os ponteiros de função. Por exemplo:
+Como você está chamando a função de DLL por meio de um ponteiro e não há nenhuma verificação de tipo em tempo de compilação, certifique-se de que os parâmetros para a função estejam corretos para que você não overstep a memória alocada na pilha e cause uma violação de acesso. Uma maneira de ajudar a fornecer segurança de tipo é examinar os protótipos de função das funções exportadas e criar TYPEDEFs correspondentes para os ponteiros de função. Por exemplo: 
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
@@ -51,7 +51,7 @@ if (hDLL != NULL)
 
 A forma como você especifica a função desejada ao chamar **GetProcAddress** depende de como a dll foi criada.
 
-Você só poderá obter o ordinal de exportação se a DLL à qual você está vinculando for criada com um arquivo de definição de módulo (. def) e se os ordinais estiverem listados com as funções na seção EXPORTS do arquivo. def da dll. Chamar **GetProcAddress** com um ordinal de exportação, ao contrário do nome da função, é ligeiramente mais rápido se a dll tem muitas funções exportadas porque os ordinais de exportação servem como índices para a tabela de exportação da dll. Com um ordinal de exportação, o **GetProcAddress** pode localizar a função diretamente em vez de comparar o nome especificado com os nomes de função na tabela de exportação da dll. No entanto, você deve chamar **GetProcAddress** com um ordinal de exportação somente se tiver controle sobre como atribuir os ordinais às funções exportadas no arquivo. def.
+Você só poderá obter o ordinal de exportação se a DLL à qual você está vinculando for criada com um arquivo de definição de módulo (. def) e se os ordinais estiverem listados com as funções na seção **Exports** do arquivo. def da dll. Chamar **GetProcAddress** com um ordinal de exportação, ao contrário do nome da função, é ligeiramente mais rápido se a dll tem muitas funções exportadas porque os ordinais de exportação servem como índices para a tabela de exportação da dll. Com um ordinal de exportação, o **GetProcAddress** pode localizar a função diretamente em vez de comparar o nome especificado com os nomes de função na tabela de exportação da dll. No entanto, você deve chamar **GetProcAddress** com um ordinal de exportação somente se tiver controle sobre como atribuir os ordinais às funções exportadas no arquivo. def.
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
@@ -65,8 +65,8 @@ Você só poderá obter o ordinal de exportação se a DLL à qual você está v
 
 - [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 
-- [Exportando de uma DLL usando arquivos DEF](exporting-from-a-dll-using-def-files.md)
+- [Exportando a partir de uma DLL usando arquivos DEF](exporting-from-a-dll-using-def-files.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Criar DLLs C /C++ no Visual Studio](dlls-in-visual-cpp.md)

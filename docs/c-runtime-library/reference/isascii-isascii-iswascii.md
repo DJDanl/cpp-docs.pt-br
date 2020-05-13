@@ -1,9 +1,10 @@
 ---
 title: isascii, __isascii, iswascii
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswascii
 - __isascii
+- _o_iswascii
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857782"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919784"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -63,7 +65,7 @@ int iswascii(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Inteiro a ser testado.
 
 ## <a name="return-value"></a>Valor retornado
@@ -74,7 +76,9 @@ Cada uma dessas rotinas retornará zero se **c** for uma representação especí
 
 Tanto **__isascii** quanto **iswascii** são implementadas como macros, a menos que a macro de pré-processador _CTYPE_DISABLE_MACROS seja definida.
 
-Para compatibilidade com versões anteriores, **isascii** é implementado como uma macro somente se [ &#95; &#95;stdc&#95; ](../../preprocessor/predefined-macros.md) não estiver definido ou definido como 0; caso contrário, ele será indefinido.
+Para compatibilidade com versões anteriores, **isascii** é implementado como uma macro somente se [&#95;&#95;stdc&#95;&#95;](../../preprocessor/predefined-macros.md) não estiver definido ou definido como 0; caso contrário, ele será indefinido.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -82,7 +86,7 @@ Para compatibilidade com versões anteriores, **isascii** é implementado como u
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -94,5 +98,5 @@ As funções **isascii**, **__isascii** e **iswascii** são específicas da Micr
 ## <a name="see-also"></a>Consulte também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

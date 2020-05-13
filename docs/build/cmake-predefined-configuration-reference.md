@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322998"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configurações de build CMake predefinidas
 
@@ -22,6 +22,7 @@ Os projetos CMake têm suporte no Visual Studio 2017 e posterior.
 ::: moniker range=">=vs-2017"
 
 Em um projeto do CMake, configurações de build são armazenadas em um arquivo CMakeSettings.json. Quando você escolhe **Gerenciar Configurações** na lista suspensa de configuração de build na barra de ferramentas principal, uma caixa de diálogo é exibida mostrando o padrão de configurações do CMake disponíveis no Visual Studio:
+
 - Depuração de x86
 - Versão de x86
 - Depuração de x64
@@ -694,6 +695,7 @@ Quando você escolhe uma configuração, ela é adicionada ao arquivo CMakeSetti
 ```
 
 ::: moniker-end
+
 ## <a name="see-also"></a>Confira também
 
 [Projetos do CMake no Visual Studio](cmake-projects-in-visual-studio.md)<br/>

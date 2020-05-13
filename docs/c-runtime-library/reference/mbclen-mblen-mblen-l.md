@@ -1,12 +1,16 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
 description: Descreve as funções Microsoft C Runtime Library (CRT) _mbclen, mblen, _mblen_l e _mbclen_l.
-ms.date: 01/08/2020
+ms.date: 4/2/2020
 api_name:
 - _mbclen
 - mblen
 - _mblen_l
 - _mbclen_l
+- _o__mbclen
+- _o__mbclen_l
+- _o__mblen_l
+- _o_mblen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +48,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: b004babc9e7c82d25cd52ec036c3061c99b5f367
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755073"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914367"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
@@ -80,19 +85,19 @@ int _mblen_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ de *c*
+*&*\
 Caractere multibyte.
 
-\ *mbstr*
+*mbstr*\
 Endereço de uma sequência de bytes de caracteres multibyte.
 
-*contagem*\
+*contar*\
 O número de bytes a serem verificados.
 
-\ de *localidade*
+*localidade*\
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_mbclen** e **_mbclen_l** retornam 1 ou 2, de acordo com o comprimento do caractere de multibyte *c*. As funções sempre retornam 1 para UTF-8, independentemente de *c* ser multibyte ou não. Não há nenhum retorno de erro para **_mbclen**.
 
@@ -108,13 +113,15 @@ O valor de saída é afetado pela configuração de categoria de **LC_CTYPE** da
 
 **_mbclen**, **_mblen_l**e **_mbclen_l** são específicos da Microsoft, não fazem parte da biblioteca C padrão. Não recomendamos que você os use onde desejar código portátil. Para compatibilidade com C padrão, use **mblen** ou **mbrlen** em vez disso.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tclen**|É mapeado para um macro ou uma função embutida|**_mbclen**|É mapeado para um macro ou uma função embutida|
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -163,11 +170,11 @@ Length in bytes of multibyte character 61: 1
 Length in bytes of NULL multibyte character 0: 0
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)\
 [Localidade](../../c-runtime-library/locale.md)\
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
 [_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)\
-\ [mbrlen](mbrlen.md)
+[mbrlen](mbrlen.md)\
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

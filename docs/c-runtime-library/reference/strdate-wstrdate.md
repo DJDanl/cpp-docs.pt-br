@@ -1,9 +1,11 @@
 ---
 title: _strdate, _wstrdate
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strdate
 - _wstrdate
+- _o__strdate
+- _o__wstrdate
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958219"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911861"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -71,7 +74,7 @@ wchar_t *_wstrdate(
 *datestr*<br/>
 Um ponteiro para um buffer que contém a cadeia de caracteres de data formatada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna um ponteiro para a cadeia de caracteres de caractere resultante *datestr*.
 
@@ -87,6 +90,8 @@ Se *datestr* for um ponteiro **NULL** , o manipulador de parâmetro inválido se
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -100,7 +105,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |**_strdate**|\<time.h>|
 |**_wstrdate**|\<time.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -128,9 +133,9 @@ int main()
 OS date: 04/25/03
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

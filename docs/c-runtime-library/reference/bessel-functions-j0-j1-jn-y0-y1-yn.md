@@ -1,6 +1,6 @@
 ---
 title: 'Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _j0
 - _j1
@@ -8,6 +8,12 @@ api_name:
 - _y0
 - _y1
 - _yn
+- _o__j0
+- _o__j1
+- _o__jn
+- _o__y0
+- _o__y1
+- _o__yn
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939466"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913472"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -85,25 +92,27 @@ Valor de ponto flutuante.
 *n*<br/>
 Ordem de inteiro da função Bessel.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retorna uma função de Bessel de *x*. Se *x* for negativo nas funções **_y0**, **_y1**ou **_yn** , a rotina definirá **errno** como **Edom**, imprime uma mensagem de erro **_DOMAIN** em **stderr**e retornará **_HUGE_VAL**. Você pode modificar o tratamento de erros usando o **_matherr**.
+Cada uma dessas rotinas retorna uma função de Bessel de *x*. Se *x* for negativo nas funções **_y0**, **_y1**ou **_yn** , a rotina definirá **errno** como **Edom**, imprime uma mensagem de erro de **_DOMAIN** em **stderr**e retornará **_HUGE_VAL**. Você pode modificar o tratamento de erros usando **_matherr**.
 
 ## <a name="remarks"></a>Comentários
 
-As rotinas **_j0**, **_j1**e **_jn** retornam as funções de Bessel do primeiro tipo: Orders 0, 1 e n, respectivamente.
+As rotinas **_j0**, **_j1**e **_Jn** retornam funções de Bessel do primeiro tipo: Orders 0, 1 e n, respectivamente.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**INVÁLIDO**|**_DOMAIN**|
+|± **QNAN**, **Ind**|**Inválido**|**_DOMAIN**|
 
-As rotinas **_y0**, **_y1**e **_yn** retornam as funções de Bessel do segundo tipo: Orders 0, 1 e n, respectivamente.
+As rotinas **_y0**, **_y1**e **_Yn** retornam funções de Bessel do segundo tipo: Orders 0, 1 e n, respectivamente.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**INVÁLIDO**|**_DOMAIN**|
+|± **QNAN**, **Ind**|**Inválido**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0,0|**INVÁLIDO**|**_DOMAIN**|
+|&#124;x&#124; < 0,0|**Inválido**|**_DOMAIN**|
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -111,7 +120,7 @@ As rotinas **_y0**, **_y1**e **_yn** retornam as funções de Bessel do segundo 
 |-------------|---------------------|
 |**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -154,7 +163,7 @@ Bessel functions for x = 2.387000:
    Second 4      _yn( 4, x )  -1.626833
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

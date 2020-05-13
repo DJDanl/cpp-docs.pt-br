@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952439"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919185"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -48,19 +50,19 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*wchar*<br/>
+*WCHAR*<br/>
 Endereço de um caractere largo para receber a cadeia de caracteres largos convertidas (tipo **wchar_t**). Esse valor poderá ser um ponteiro nulo se não for necessário nenhum caractere largo de retorno.
 
 *mbchar*<br/>
 Endereço de uma sequência de bytes (um caractere multibyte).
 
-*count*<br/>
+*contagem*<br/>
 O número de bytes a serem verificados.
 
 *mbstate*<br/>
-O ponteiro para um objeto do estado da conversão. Se esse valor for um ponteiro nulo, a função usará um objeto de estado de conversão interna estática. Como o objeto **mbstate_t** interno não é thread-safe, é recomendável que você sempre passe seu próprio argumento *mbstate* .
+O ponteiro para um objeto do estado da conversão. Se esse valor for um ponteiro nulo, a função usará um objeto de estado de conversão interna estática. Como o objeto de **mbstate_t** interno não é thread-safe, é recomendável que você sempre passe seu próprio argumento *mbstate* .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Um dos seguintes valores:
 
@@ -83,6 +85,8 @@ Nesse caso, o valor dos argumentos *WCHAR* e *Count* é ignorado.
 Se *mbchar* não for um ponteiro NULL, a função examinará a *contagem* de bytes de *mbchar* para determinar o número necessário de bytes necessários para concluir o próximo caractere de vários bytes. Se o próximo caractere for válido, o caractere multibyte correspondente será armazenado em *WCHAR* se não for um ponteiro nulo. Se o caractere for o caractere nulo largo correspondente, o estado resultante de *mbstate* será o estado de conversão inicial.
 
 A função **mbrtowc** difere de [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo deve usar **wcsrlen** em vez de **wcslen** se uma chamada subsequente para **wcsrtombs** for usada em vez de **wcstombs**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -194,7 +198,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 Locale set to: "French_Canada.1252"
@@ -212,5 +216,5 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
+- _o__mbsnbcpy_s
+- _o__mbsnbcpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: fbbdbeb671f501974ceee9565b8d668e8281f92e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 670055ca67e8196805851767596f56028350e32a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624302"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911881"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -91,7 +94,7 @@ O tamanho do buffer de destino.
 *strSource*<br/>
 Cadeia de caracteres a ser copiada.
 
-*count*<br/>
+*contagem*<br/>
 Número de bytes a serem copiados.
 
 *locale*<br/>
@@ -103,7 +106,7 @@ Zero se for bem-sucedido; **EINVAL** se um parâmetro insatisfatório foi passad
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mbsnbcpy_s** copia os bytes de *contagem* de *strSource* para *strDest*. Se *Count* exceder o tamanho de *strDest*, qualquer uma das cadeias de caracteres de entrada será um ponteiro nulo ou *sizeInBytes* ou *Count* será 0, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução tiver permissão para continuar, a função retornará **EINVAL**. Se as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **_mbsnbcpy_s** é indefinido.
+A função **_mbsnbcpy_s** copia bytes de *contagem* de *strSource* para *strDest*. Se *Count* exceder o tamanho de *strDest*, qualquer uma das cadeias de caracteres de entrada será um ponteiro nulo ou *sizeInBytes* ou *Count* será 0, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução tiver permissão para continuar, a função retornará **EINVAL**. Se as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **_mbsnbcpy_s** é indefinido.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -113,6 +116,8 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -128,11 +133,11 @@ As versões de biblioteca de depuração dessas funções primeiro preenchem o b
 |**_mbsnbcpy_s**|\<mbstring.h>|
 |**_mbsnbcpy_s_l**|\<mbstring.h>|
 
-Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>

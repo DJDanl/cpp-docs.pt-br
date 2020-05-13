@@ -36,7 +36,7 @@ Para obter informações gerais sobre eventos de build, confira [Noções básic
 
 1. No **Gerenciador de Soluções**, selecione o projeto para o qual deseja especificar o evento de build.
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](working-with-project-properties.md).
 
 1. Na pasta **Eventos de Build**, selecione uma página de propriedades do evento de build.
 
@@ -44,15 +44,15 @@ Para obter informações gerais sobre eventos de build, confira [Noções básic
 
    - Em **Linha de Comando**, especifique um comando como se o estivesse especificando no prompt de comando. Especifique um comando ou arquivo em lotes válido e os arquivos de entrada ou de saída necessários. Especifique o comando em lote **call** antes do nome de um arquivo em lotes para assegurar que todos os comandos seguintes sejam executados.
 
-      Vários arquivos de entrada e de saída podem ser especificados simbolicamente com macros do MSBuild. Para obter informações sobre como especificar o local dos arquivos ou os nomes dos conjuntos de arquivos, consulte [macros comuns para compilar comandos e propriedades](reference/common-macros-for-build-commands-and-properties.md).
+      Vários arquivos de entrada e de saída podem ser especificados simbolicamente com macros do MSBuild. Para obter informações sobre como especificar o local dos arquivos ou os nomes de conjuntos de arquivos, consulte [macros comuns para comandos e propriedades de compilação](reference/common-macros-for-build-commands-and-properties.md).
 
-      Como o caractere '%' é reservado pelo MSBuild, se você especificar uma variável de ambiente, substitua cada caractere de escape **%** pela sequência de escape hexadecimal **%25**. Por exemplo, substitua **%WINDIR%** por **%25WINDIR%25**. O MSBuild substitui cada sequência **%25** pelo caractere **%** antes de acessar a variável de ambiente.
+      Como o caractere '% ' é reservado pelo MSBuild, se você especificar uma variável de ambiente, **%** substitua cada caractere de escape pela sequência de escape hexadecimal **%25** . Por exemplo, substitua **%WINDIR%** por **%25WINDIR%25**. O MSBuild substitui cada sequência **%25** pelo caractere **%** antes de acessar a variável de ambiente.
 
    - Em **Descrição**, digite uma descrição para esse evento. A descrição será impressa na janela de **Saída** quando esse evento ocorrer.
 
    - Em **Excluído do Build**, especifique **Sim** se não desejar que o evento seja executado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Noções básicas sobre etapas e eventos compilação personalizada](understanding-custom-build-steps-and-build-events.md)<br>
 [Macros comuns para comandos e propriedades de build](reference/common-macros-for-build-commands-and-properties.md)<br>

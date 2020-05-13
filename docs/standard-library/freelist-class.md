@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 712c1f1638b954d1580eb527dd9eab7401917517
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317199"
 ---
 # <a name="freelist-class"></a>Classe freelist
 
@@ -37,7 +37,7 @@ class freelist : public Max
 
 ## <a name="remarks"></a>Comentários
 
-Esse modelo de classe gerencia uma lista de blocos de memória de tamanho *sz* com o comprimento máximo da lista determinada pela classe máxima passada no *máximo*.
+Este modelo de classe gerencia uma lista de blocos de memória de tamanho *Sz* com o comprimento máximo da lista determinado pela classe máxima aprovada em *Max*.
 
 ### <a name="constructors"></a>Construtores
 
@@ -49,8 +49,8 @@ Esse modelo de classe gerencia uma lista de blocos de memória de tamanho *sz* c
 
 |Função de membro|Descrição|
 |-|-|
-|[pop](#pop)|Remove o primeiro bloco de memória da lista livre.|
-|[push](#push)|Adiciona um bloco de memória à lista.|
+|[Pop](#pop)|Remove o primeiro bloco de memória da lista livre.|
+|[Empurrar](#push)|Adiciona um bloco de memória à lista.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -58,7 +58,7 @@ Esse modelo de classe gerencia uma lista de blocos de memória de tamanho *sz* c
 
 **Namespace:** stdext
 
-## <a name="freelist"></a>  freelist::freelist
+## <a name="freelistfreelist"></a><a name="freelist"></a>lista livre::lista livre
 
 Constrói um objeto do tipo `freelist`.
 
@@ -68,7 +68,7 @@ freelist();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="pop"></a>  freelist::pop
+## <a name="freelistpop"></a><a name="pop"></a>freelist::pop
 
 Remove o primeiro bloco de memória da lista livre.
 
@@ -82,9 +82,9 @@ Retorna um ponteiro para o bloco de memória removido da lista.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro retornará NULL se a lista estiver vazia. Caso contrário, remove o primeiro bloco de memória da lista.
+A função membro retorna NULL se a lista estiver vazia. Caso contrário, remove o primeiro bloco de memória da lista.
 
-## <a name="push"></a>  freelist::push
+## <a name="freelistpush"></a><a name="push"></a>lista livre::push
 
 Adiciona um bloco de memória à lista.
 
@@ -96,16 +96,16 @@ bool push(void* ptr);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*ptr*|Um ponteiro para o bloco de memória a ser adicionado à lista livre.|
+|*Ptr*|Um ponteiro para o bloco de memória a ser adicionado à lista livre.|
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a função `full` da classe Max retornar **false**; caso contrário, a função `push` retornará **false**.
+**verdade** se `full` a função da classe máxima retorna **falsa;** caso contrário, `push` a função retorna **falsa**.
 
 ### <a name="remarks"></a>Comentários
 
-Se a função `full` da classe Max retornar **false**, essa função de membro adicionará o bloco de memória apontado por *PTR* ao cabeçalho da lista.
+Se `full` a função da classe máxima retornar **falsa,** esta função de membro adicionará o bloco de memória apontado por *ptr* ao cabeça da lista.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alocadores>](../standard-library/allocators-header.md)

@@ -4,18 +4,18 @@ ms.date: 04/23/2019
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: 1e09debc53e5b1b3e1eeaa6a63924b04fd2b7ca5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d2bd0794a67cf70b9da0499e3d2cafa553531fe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443882"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370251"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Instruções passo a passo: implantando um aplicativo do Visual C++ usando o pacote redistribuível do Visual C++
 
 Este artigo passo a passo descreve como usar o Pacote Redistribuível do Visual C++ para implantar um aplicativo do Visual C++.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 É necessário ter estes componentes para concluir este passo a passo:
 
@@ -25,7 +25,7 @@ Este artigo passo a passo descreve como usar o Pacote Redistribuível do Visual 
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Para usar o Pacote Redistribuível do Visual C++ para implantar um aplicativo
 
-1.  Crie e compile um aplicativo MFC seguindo as etapas de [Passo a passo: Implantando um aplicativo do Visual C++ usando um projeto de instalação](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+1. Crie e compile um aplicativo MFC seguindo as etapas de [Passo a passo: Implantando um aplicativo do Visual C++ usando um projeto de instalação](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Crie um arquivo, nomeie-o setup.bat e adicione a ele os comandos a seguir. Altere `MyMFCApplication` para o nome do projeto.
 
@@ -54,7 +54,7 @@ Este artigo passo a passo descreve como usar o Pacote Redistribuível do Visual 
 
       - O aplicativo MFC (arquivo .exe).
 
-      - vcredist_x86.exe. No Visual Studio 2015, esse arquivo está localizado em *% VCINSTALLDIR% Redist\\1033\\* . No Visual Studio 2017 e no Visual Studio 2019, esse arquivo está localizado em *% VCToolsRedistDir%* . Você também pode [baixar o arquivo Redist mais recente com suporte da Microsoft](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads).
+      - vcredist_x86.exe. No Visual Studio 2015, este arquivo está localizado em *%VCINSTALLDIR%redist\\1033\\*. No Visual Studio 2017 e visual studio 2019, este arquivo está localizado em *%VCToolsRedistDir%*. Você também pode [baixar o mais recente arquivo redist suportado da Microsoft](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads).
 
       - O arquivo setup.bat criado na etapa anterior.
 
@@ -83,8 +83,8 @@ Este artigo passo a passo descreve como usar o Pacote Redistribuível do Visual 
       O arquivo de instalação autoextraível instala o aplicativo MFC que está na pasta especificada na etapa 2. O aplicativo é executado com êxito porque o instalador do Pacote Redistribuível do Visual C++ está incluído no arquivo de instalação autoextraível.
 
       > [!IMPORTANT]
-      > Para determinar qual versão do tempo de execução está instalada, o instalador verifica a chave do registro \\HKLM\\SOFTWARE\\Microsoft\\VisualStudio\\_versão_\\tempo de execução do VC\\\\versão\\da _plataforma_ . Se a versão atualmente instalada é mais recente do que a versão que o instalador está tentando instalar, o instalador retorna uma mensagem de êxito sem instalar a versão mais antiga e deixa uma entrada adicional na página de programas instalados no Painel de Controle.
+      > Para determinar qual versão do tempo de execução está \\instalada,\\o\\\\instalador\\verifica a chave de registro HKLM SOFTWARE Microsoft VisualStudio_versão_\\VC\\Runtimes\\versão Versão da_plataforma._\\ Se a versão atualmente instalada é mais recente do que a versão que o instalador está tentando instalar, o instalador retorna uma mensagem de êxito sem instalar a versão mais antiga e deixa uma entrada adicional na página de programas instalados no Painel de Controle.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplos de implantação](deployment-examples.md)<br/>

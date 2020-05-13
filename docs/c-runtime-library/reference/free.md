@@ -1,8 +1,9 @@
 ---
-title: free
-ms.date: 11/04/2016
+title: livre
+ms.date: 4/2/2020
 api_name:
 - free
+- _o_free
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e0a53dd9d24634442c8dd456e4f9d38f742e292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956724"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920417"
 ---
-# <a name="free"></a>free
+# <a name="free"></a>livre
 
 Desaloca ou libera um bloco de memória.
 
@@ -63,13 +65,15 @@ Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de
 
 Para liberar a memória alocada com [_malloca](malloca.md), use [_freea](freea.md).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**free**|\<stdlib.h> e \<malloc.h>|
+|**informações**|\<stdlib.h> e \<malloc.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -77,7 +81,7 @@ Consulte o exemplo para [malloc](malloc.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Alocação de Memória](../../c-runtime-library/memory-allocation.md)<br/>
+[Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
 [_alloca](alloca.md)<br/>
 [calloc](calloc.md)<br/>
 [malloc](malloc.md)<br/>

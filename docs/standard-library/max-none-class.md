@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c49ceec72be62d8ff3125f04d97bbb6952501677
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626826"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370974"
 ---
 # <a name="max_none-class"></a>Classe max_none
 
@@ -45,9 +45,9 @@ class max_none
 |Função de membro|Descrição|
 |-|-|
 |[allocated](#allocated)|Aumenta a contagem de blocos de memória alocada.|
-|[deallocated](#deallocated)|Diminui a contagem de blocos de memória alocada.|
-|[full](#full)|Retorna um valor que especifica se mais blocos de memória devem ser adicionados à lista livre.|
-|[released](#released)|Diminui a contagem de blocos de memória na lista livre.|
+|[Desalocado](#deallocated)|Diminui a contagem de blocos de memória alocada.|
+|[Cheio](#full)|Retorna um valor que especifica se mais blocos de memória devem ser adicionados à lista livre.|
+|[Lançado](#released)|Diminui a contagem de blocos de memória na lista livre.|
 |[saved](#saved)|Aumenta a contagem de blocos de memória na lista livre.|
 
 ## <a name="requirements"></a>Requisitos
@@ -56,7 +56,7 @@ class max_none
 
 **Namespace:** stdext
 
-## <a name="allocated"></a>  max_none::allocated
+## <a name="max_noneallocated"></a><a name="allocated"></a>max_none::alocado
 
 Aumenta a contagem de blocos de memória alocada.
 
@@ -72,9 +72,9 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro não faz nada. Ele é chamado após cada chamada bem-sucedida pelo `cache_freelist::allocate` para o operador **New**. O argumento *_Nx* é o número de blocos de memória na parte alocada pelo operador **New**.
+Essa função membro não faz nada. É chamado após cada `cache_freelist::allocate` chamada bem sucedida por operador **novo**. O argumento *_Nx* é o número de blocos de memória no pedaço alocado pelo **operador novo**.
 
-## <a name="deallocated"></a>  max_none::deallocated
+## <a name="max_nonedeallocated"></a><a name="deallocated"></a>max_none::dalocado
 
 Diminui a contagem de blocos de memória alocada.
 
@@ -90,9 +90,9 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Comentários
 
-A função membro não faz nada. Essa função de membro é chamada depois de cada chamada por `cache_freelist::deallocate` para a **exclusão**do operador. O argumento *_Nx* é o número de blocos de memória na parte desalocada pelo operador **delete**.
+A função membro não faz nada. Esta função de membro é `cache_freelist::deallocate` chamada após cada chamada para **excluir**o operador . O argumento *_Nx* é o número de blocos de memória no pedaço desalocado pela **exclusão**do operador .
 
-## <a name="full"></a>  max_none::full
+## <a name="max_nonefull"></a><a name="full"></a>max_none::full
 
 Retorna um valor que especifica se mais blocos de memória devem ser adicionados à lista livre.
 
@@ -102,13 +102,13 @@ bool full();
 
 ### <a name="return-value"></a>Valor retornado
 
-Essa função de membro sempre retorna **true**.
+Esta função de membro sempre retorna **verdadeira.**
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada por `cache_freelist::deallocate`. Se a chamada retornar **true**, `deallocate` colocará o bloco de memória na lista livre; Se ele retornar **false**, `deallocate` chamará o operador **delete** para desalocar o bloco.
+Essa função membro é chamada por `cache_freelist::deallocate`. Se a chamada `deallocate` retornar **verdadeira,** coloque o bloco de memória na lista livre; se ele retornar `deallocate` **falso,** chamadas de **exclusão** do operador para desalocar o bloco.
 
-## <a name="released"></a>  max_none::released
+## <a name="max_nonereleased"></a><a name="released"></a>max_none::liberado
 
 Diminui a contagem de blocos de memória na lista livre.
 
@@ -120,7 +120,7 @@ void released();
 
 Essa função membro não faz nada. A função membro `released` da classe max é chamada por `cache_freelist::allocate` sempre que ele remove um bloco de memória da lista livre.
 
-## <a name="saved"></a>  max_none::saved
+## <a name="max_nonesaved"></a><a name="saved"></a>max_none::salvo
 
 Aumenta a contagem de blocos de memória na lista livre.
 
@@ -132,6 +132,6 @@ void saved();
 
 Essa função membro não faz nada. Ela é chamada pelo `cache_freelist::deallocate` sempre que ele coloca um bloco de memória na lista livre.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alocadores>](../standard-library/allocators-header.md)

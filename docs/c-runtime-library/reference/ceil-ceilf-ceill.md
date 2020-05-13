@@ -1,10 +1,11 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ceilf
 - ceil
 - ceill
+- _o_ceil
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 0be81354c19da646fa96f6eb58fbc7c76eeddb33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943199"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917342"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -68,27 +70,29 @@ long double ceill(
 *x*<br/>
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **Ceil** retornam um valor de ponto flutuante que representa o menor inteiro que é maior ou igual a *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|nenhum|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
 
 o **Ceil** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Ceil** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **Ceil** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Ceil** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **Ceil** sempre pega e retorna um **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**ceil**, **ceilf**, **ceill**|\<math.h>|
+|**Ceil**, **ceilf**, **ceill**|\<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

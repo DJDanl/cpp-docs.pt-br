@@ -1,6 +1,6 @@
 ---
 title: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsnicmp
 - _strnicmp_l
@@ -8,6 +8,12 @@ api_name:
 - _strnicmp
 - _mbsnicmp
 - _mbsnicmp_l
+- _o__mbsnicmp
+- _o__mbsnicmp_l
+- _o__strnicmp
+- _o__strnicmp_l
+- _o__wcsnicmp
+- _o__wcsnicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -69,12 +76,12 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 6d1645c33684f5a0fbabc2119592c39a7df97ca3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947128"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920091"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -123,16 +130,16 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1*, *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres com terminação nula.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a serem comparados.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Indica a relação entre as subcadeias de caracteres, da seguinte maneira.
 
@@ -142,17 +149,19 @@ Indica a relação entre as subcadeias de caracteres, da seguinte maneira.
 |0|a subcadeia de caracteres *seqüência1* é idêntica à subcadeia de *seqüência2* .|
 |> 0|a subcadeia de caracteres *seqüência1* é maior que a subcadeia de *seqüência2* .|
 
-Em um erro de validação de parâmetro, essas funções retornam **_NLSCMPERROR**, que \<é definido em String. \<h > e Mbstring. h >.
+Em um erro de validação de parâmetro, essas funções retornam **_NLSCMPERROR**, que \<é definido em String. \<h> e Mbstring. h>.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_strnicmp** , em primeiro lugar, compara, no máximo, a primeira *contagem* de caracteres de *seqüência1* e *seqüência2*. A comparação é executada independentemente do caso, convertendo cada caractere em minúsculas. **_strnicmp** é uma versão de **strncmp**que não diferencia maiúsculas de minúsculas. A comparação terminará se um caractere nulo de terminação for atingido em qualquer cadeia de caracteres antes de a *contagem* deles ser comparada. Se as cadeias de caracteres forem iguais quando um caractere nulo de terminação for atingido em uma cadeia de caracteres antes de a *contagem* de caracteres serem comparados, a cadeia de caracteres menor será menor.
+A função **_strnicmp** , em primeiro lugar, compara, no máximo, a primeira *contagem* de caracteres de *seqüência1* e *seqüência2*. A comparação é executada independentemente do caso, convertendo cada caractere em minúsculas. **_strnicmp** é uma versão que não diferencia maiúsculas de minúsculas do **strncmp**. A comparação terminará se um caractere nulo de terminação for atingido em qualquer cadeia de caracteres antes de a *contagem* deles ser comparada. Se as cadeias de caracteres forem iguais quando um caractere nulo de terminação for atingido em uma cadeia de caracteres antes de a *contagem* de caracteres serem comparados, a cadeia de caracteres menor será menor.
 
 Os caracteres de 91 a 96 na tabela ASCII ('[','\\', ']', ' ^', '_' e '\`') avaliam como menor do que qualquer caractere alfabético. Essa ordenação é idêntica à do **stricmp**.
 
-**_wcsnicmp** e **_mbsnicmp** são versões de caractere largo e de multibyte de **_strnicmp**. Os argumentos de **_wcsnicmp** são cadeias de caracteres largos; os de **_mbsnicmp** são cadeias de caracteres multibyte. o **_mbsnicmp** reconhece sequências de caracteres multibyte de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Caso contrário, essas três funções se comportam de forma idêntica. Essas funções são afetadas pela configuração de localidade – as versões que não têm o sufixo **_L** usam a localidade atual para seu comportamento dependente de localidade; as versões que têm o sufixo **_L** , em vez disso, usam a *localidade* que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_wcsnicmp** e **_mbsnicmp** são versões de caractere largo e de vários caracteres de **_strnicmp**. Os argumentos de **_wcsnicmp** são cadeias de caracteres largos; os de **_mbsnicmp** são cadeias de caracteres multibyte. **_mbsnicmp** reconhece seqüências de caracteres multibyte de acordo com a página de código multibyte atual e retorna **_NLSCMPERROR** em um erro. Para obter mais informações, consulte [Páginas de Código](../../c-runtime-library/code-pages.md). Caso contrário, essas três funções se comportam de forma idêntica. Essas funções são afetadas pela configuração de localidade – as versões que não têm o sufixo **_L** usam a localidade atual para seu comportamento dependente de localidade; as versões que têm o sufixo **_L** , em vez disso, usam a *localidade* que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüência2* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -170,7 +179,7 @@ Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüênci
 |**_wcsnicmp**, **_wcsnicmp_l**|\<string.h> ou \<wchar.h>|
 |**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -178,7 +187,7 @@ Veja o exemplo para [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

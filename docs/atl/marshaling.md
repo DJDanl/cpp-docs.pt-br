@@ -6,21 +6,21 @@ helpviewer_keywords:
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-ms.openlocfilehash: 9963e261f26daa57cb58e30ffc404b431d781bfa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 83cf29fb45347b7bfcfc1644546684f074061d25
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492040"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319347"
 ---
 # <a name="marshaling"></a>Marshaling
 
-A técnica COM de marshaling permite que as interfaces expostas por um objeto em um processo sejam usadas em outro processo. No marshaling, COM fornece código (ou usa código fornecido pelo implementador de interface) para empacotar os parâmetros de um método em um formato que pode ser movido entre processos (bem como, na conexão com os processos em execução em outros computadores) e para desempacotar esses parâmetros na outra extremidade. Da mesma forma, COM deve executar essas mesmas etapas no retorno da chamada.
+A técnica COM de empacotamento permite que interfaces expostas por um objeto em um processo sejam usadas em outro processo. No marshaling, o COM fornece código (ou usa código fornecido pelo implementador de interface) tanto para embalar os parâmetros de um método em um formato que pode ser movido através de processos (bem como, através do fio para processos em execução em outras máquinas) e para desempacotar esses parâmetros na outra extremidade. Da mesma forma, o COM deve executar esses mesmos passos no retorno da chamada.
 
 > [!NOTE]
->  O marshaling normalmente não é necessário quando uma interface fornecida por um objeto está sendo usada no mesmo processo que o objeto. No entanto, o marshaling pode ser necessário entre os threads.
+> O marshaling normalmente não é necessário quando uma interface fornecida por um objeto está sendo usada no mesmo processo que o objeto. No entanto, o empacotamento pode ser necessário entre os fios.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Introdução a COM](../atl/introduction-to-com.md)<br/>
+[Introdução ao COM](../atl/introduction-to-com.md)<br/>
 [Detalhes de marshaling](/windows/win32/com/marshaling-details)

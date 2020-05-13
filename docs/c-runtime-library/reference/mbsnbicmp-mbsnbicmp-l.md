@@ -1,9 +1,11 @@
 ---
 title: _mbsnbicmp, _mbsnbicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
+- _o__mbsnbicmp
+- _o__mbsnbicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e84e6b367c428dc26a1864db80f6828f7ec9c176
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442839"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911830"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -66,7 +69,7 @@ int _mbsnbicmp(
 *seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres com terminação nula.
 
-*count*<br/>
+*contagem*<br/>
 Número de bytes a serem comparados.
 
 ## <a name="return-value"></a>Valor retornado
@@ -93,6 +96,8 @@ Duas cadeias de caracteres que contêm caracteres localizados entre 'Z' e 'a' na
 
 Se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbsnbicmp** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -100,7 +105,7 @@ Se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbsnbicmp** invocar
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
 |**_tcsnicmp_l**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -108,13 +113,13 @@ Se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbsnbicmp** invocar
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Veja o exemplo de [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: gets_s, _getws_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getws_s
 - gets_s
+- _o__getws_s
+- _o_gets_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-ms.openlocfilehash: f282b4e8de12185a19e07374cf565788dc549136
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b01456d3ed37c34dbc10980ebdfbe008e27f624a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954966"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913606"
 ---
 # <a name="gets_s-_getws_s"></a>gets_s, _getws_s
 
@@ -68,13 +71,13 @@ wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento para a cadeia de caracteres de entrada.
 
 *sizeInCharacters*<br/>
 O tamanho do buffer.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna o *buffer* se for bem-sucedido. Um ponteiro **NULL** indica uma condição de erro ou de fim do arquivo. Use [ferror](ferror.md) ou [feof](feof.md) para determinar qual das condições ocorreu.
 
@@ -86,9 +89,11 @@ Se o primeiro caractere lido for o caractere de fim de arquivo, um caractere nul
 
 **_getws_s** é uma versão de caractere largo do **gets_s**; seu argumento e o valor de retorno são cadeias de caracteres largos.
 
-Se o *buffer* for **nulo** ou *sizeInCharacters* for menor ou igual a zero, ou se o buffer for muito pequeno para conter a linha de entrada e o terminador nulo, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **NULL** e definirá errno como **ERANGE**.
+Se o *buffer* for **nulo** ou *sizeInCharacters* for menor ou igual a zero, ou se o buffer for muito pequeno para conter a linha de entrada e o terminador nulo, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **NULL** e definirá errno como **ERANGE**.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -103,7 +108,7 @@ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as s
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -130,10 +135,10 @@ Hello there!
 The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
-[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[Obtém, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

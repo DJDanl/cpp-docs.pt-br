@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 077096cc296f2aa2128127493a84a91da9a067c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5382ba90f490aaa12e9e55767fdf15170a69ced5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270907"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749232"
 ---
-# <a name="gh-enable-pexit-hook-function"></a>/GH (habilitar função de gancho _pexit)
+# <a name="gh-enable-_pexit-hook-function"></a>/GH (habilitar função de gancho _pexit)
 
-Chamadas a `_pexit` função ao final de cada método ou função.
+Chama `_pexit` a função no final de cada método ou função.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,31 +28,31 @@ Chamadas a `_pexit` função ao final de cada método ou função.
 
 ## <a name="remarks"></a>Comentários
 
-O `_pexit` função não faz parte de qualquer biblioteca e cabe a você fornecer uma definição para `_pexit`.
+A `_pexit` função não faz parte de nenhuma biblioteca e cabe `_pexit`a você fornecer uma definição para .
 
-A menos que você planeja chamar explicitamente `_pexit`, você não precisa fornecer um protótipo. A função deve aparecer como se tivesse o protótipo a seguir, e ele deve enviar por push o conteúdo de todos os registros na entrada e pop o conteúdo inalterado na saída:
+A menos que você `_pexit`planeje ligar explicitamente, você não precisa fornecer um protótipo. A função deve aparecer como se tivesse o seguinte protótipo, e deve empurrar o conteúdo de todos os registros na entrada e colocar o conteúdo inalterado na saída:
 
-```
+```cpp
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit` é semelhante à `_penter`; consulte [/Gh (habilitar penter função de gancho)](gh-enable-penter-hook-function.md) para obter um exemplo de como escrever um `_pexit` função.
+`_pexit`é semelhante `_penter`a; ver [/Gh (Habilitar _penter Função de Gancho)](gh-enable-penter-hook-function.md) para um exemplo de como escrever uma `_pexit` função.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Clique o **C/C++** pasta.
+1. Clique na pasta **C/C++.**
 
-1. Clique o **linha de comando** página de propriedades.
+1. Clique na página de propriedade Linha de **Comando.**
 
-1. Digite a opção de compilador na **opções adicionais** caixa.
+1. Digite a opção compilador na **caixa Opções adicionais.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

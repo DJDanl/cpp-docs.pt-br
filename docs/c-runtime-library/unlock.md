@@ -23,23 +23,23 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 5535b19a2419bf58f22bc39d87fc615c19265cd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 73eec2b05b1d321bfc8ac61e743459bf2323fb8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957253"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745116"
 ---
 # <a name="_unlock"></a>_unlock
 
 Libera um bloqueio de vários threads.
 
 > [!IMPORTANT]
->  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
+> Essa função está obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void __cdecl _unlock(
    int locknum
 );
@@ -54,7 +54,7 @@ void __cdecl _unlock(
 
 **Fonte:** mlock.c
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_lock](../c-runtime-library/lock.md)

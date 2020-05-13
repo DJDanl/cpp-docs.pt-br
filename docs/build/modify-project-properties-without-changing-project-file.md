@@ -1,18 +1,18 @@
 ---
-title: 'Como: Modificar as propriedades de projeto do C++ e destinos sem alterar o arquivo de projeto'
+title: Como modificar propriedades e destinos de projeto C++ sem alterar o arquivo de projeto
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: ad527d8ee69a1786be7d325571f9c9ac4f9a8574
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273333"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328458"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Como: Modificar as propriedades de projeto do C++ e destinos sem alterar o arquivo de projeto
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Como modificar propriedades e destinos de projeto C++ sem alterar o arquivo de projeto
 
-Substitua as propriedades e os destinos do projeto no prompt de comando do MSBuild sem alterar o arquivo de projeto. Isso é útil quando você deseja aplicar algumas propriedades temporária ou ocasionalmente. Isso pressupõe noções básicas do MSBuild. Para obter mais informações, confira [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
+Substitua as propriedades e os destinos do projeto no prompt de comando do MSBuild sem alterar o arquivo de projeto. Isso é útil quando você deseja aplicar algumas propriedades temporária ou ocasionalmente. Isso pressupõe noções básicas do MSBuild. Para obter mais informações, consulte [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Use o Editor de XML no Visual Studio ou qualquer editor de texto para criar o arquivo .props ou .targets. Não use o **Gerenciador de Propriedades** neste cenário porque ele adiciona as propriedades ao arquivo de projeto.

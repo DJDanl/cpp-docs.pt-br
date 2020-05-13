@@ -7,38 +7,38 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: a39a3a69b43eb06d67fc806e2d4fa9aec323b650
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 8b66ff0f19392eb1685f8632a3fc4d9e90094304
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70907815"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372796"
 ---
 # <a name="ribbon-designer-mfc"></a>Designer da faixa de opções (MFC)
 
-O designer de faixa de faixas permite criar e personalizar as faixas de faixa em aplicativos MFC. Uma faixa é um elemento da interface do usuário que organiza os comandos em grupos lógicos. Esses grupos aparecem em guias separadas em uma faixa na parte superior da janela. A faixa de faixas substitui a barra de menus e as barras de ferramentas. Uma faixa de faixas pode melhorar significativamente a usabilidade do aplicativo. Para obter mais informações, consulte [Ribbons](/windows/win32/uxguide/cmd-ribbons). A ilustração a seguir mostra uma faixa de opções.
+O Ribbon Designer permite criar e personalizar fitas em aplicativos MFC. Uma fita é um elemento de interface de usuário (UI) que organiza comandos em grupos lógicos. Esses grupos aparecem em guias separadas em uma tira na parte superior da janela. A fita substitui a barra de menu e as barras de ferramentas. Uma fita pode melhorar significativamente a usabilidade da aplicação. Para obter mais informações, consulte [Ribbons](/windows/win32/uxguide/cmd-ribbons). A ilustração a seguir mostra uma fita.
 
-![Controle de recursos da faixa] de de MFC (../mfc/media/ribbon_no_callouts.png "Controle de recursos da faixa") de de MFC
+![Controle de recursos da fita MFC](../mfc/media/ribbon_no_callouts.png "Controle de recursos da fita MFC")
 
-Em versões anteriores do Visual Studio, as faixas de faixa tinham que ser criadas escrevendo um código que usa as classes de faixa de forma do MFC, como a [classe CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md). No Visual Studio 2010 e posteriores, o designer de faixa de faixas fornece um método alternativo para a criação de faixas de opção. Primeiro, crie e personalize uma faixa de uma como um recurso. Em seguida, carregue o recurso da faixa de medida do código no aplicativo do MFC. Você pode até mesmo usar os recursos da faixa de forma e as classes da faixa de uma MFC. Por exemplo, você pode criar um recurso de faixa de forma e, em seguida, adicionar com programação mais elementos a ele em tempo de execução usando código.
+Nas versões anteriores do Visual Studio, as fitas tinham que ser criadas escrevendo código que usa as classes de fita MFC, como [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). No Visual Studio 2010 e posterior, o designer de fitas fornece um método alternativo para construir fitas. Primeiro, crie e personalize uma fita como recurso. Em seguida, carregue o recurso de fita do código no aplicativo MFC. Você pode até usar recursos de fita e classes de fita MFC juntos. Por exemplo, você pode criar um recurso de fita e, em seguida, adicionar programáticamente mais elementos a ele em tempo de execução usando código.
 
-## <a name="understanding-the-ribbon-designer"></a>Noções básicas sobre o designer de faixa de das
+## <a name="understanding-the-ribbon-designer"></a>Entendendo o Designer de Fita
 
-O designer de faixa de faixas cria e armazena a faixa de faixas como um recurso. Ao criar um recurso de faixa de opções, o designer de faixa de opções faz estas três coisas:
+O designer de fita cria e armazena a fita como um recurso. Quando você cria um recurso de fita, o designer de fita faz essas três coisas:
 
-- Adiciona uma entrada no script de definição de recurso do projeto (*. rc). No exemplo a seguir, IDR_RIBBON é o nome exclusivo que identifica o recurso da faixa de opções, RT_RIBBON_XML é o tipo de recurso e Ribbon. mfcribbon-MS é o nome do arquivo de recurso.
+- Adiciona uma entrada no script de definição de recurso do projeto (*.rc). No exemplo a seguir, IDR_RIBBON é o nome único que identifica o recurso de fita, RT_RIBBON_XML é o tipo de recurso, e ribbon.mfcribbon-ms é o nome do arquivo de recurso.
 
-```
+```cpp
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"
 ```
 
-- Adiciona as definições de IDs de comando a Resource. h.
+- Adiciona as definições de IDs de comando ao resource.h.
 
 ```
 #define IDR_RIBBON            307
 ```
 
-- Cria um arquivo de recurso da faixa de bits (*. mfcribbon-MS) que contém o código XML que define os botões, controles e atributos da faixa de,. As alterações na faixa de lista no designer de faixa de faixas são armazenadas no arquivo de recursos como XML. O exemplo de código a seguir mostra parte do conteúdo de \*um arquivo. mfcribbon-MS:
+- Cria um arquivo de recurso de fita (*.mfcribbon-ms) que contém o código XML que define os botões, controles e atributos da fita. As alterações na fita no designer de fita são armazenadas no arquivo de recursos como XML. O exemplo de código a seguir \*mostra parte do conteúdo de um arquivo .mfcribbon-ms:
 
 ```
 <RIBBON_BAR>
@@ -50,66 +50,66 @@ O designer de faixa de faixas cria e armazena a faixa de faixas como um recurso.
 </ID>
 ```
 
-Para usar o recurso da faixa de faixas em seu aplicativo MFC, carregue o recurso chamando [CMFCRibbonBar:: LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).
+Para usar o recurso de fita no aplicativo MFC, carregue o recurso ligando para [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).
 
-## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Criando uma faixa de faixas usando o designer de faixa de faixas
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Criando uma fita usando o designer de fita
 
-Essas são as duas maneiras de adicionar um recurso de faixa de opções ao seu projeto do MFC:
+Estas são as duas maneiras de adicionar um recurso de fita ao seu projeto De MFC:
 
-- Crie um aplicativo MFC e configure o assistente de projeto MFC para criar a faixa de uma. Para obter mais informações, confira [Passo a passo: Criando um aplicativo de faixa de faixas](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)usando o MFC.
+- Crie um aplicativo MFC e configure o Assistente de Projeto MFC para criar a fita. Para obter mais informações, consulte [Passo a Passo: Criando um aplicativo de fita usando mfc](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-- Em um projeto existente do MFC, crie um recurso da faixa de recursos e carregue-o. Para obter mais informações, confira [Passo a passo: Atualizando o aplicativo de rabisco do MFC (](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)parte 1).
+- Em um projeto de MFC existente, crie um recurso de fita e carregue-o. Para obter mais informações, consulte [Passo a Passo: Atualizando o aplicativo de rabisco scribble Do MFC (Parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
-Se o seu projeto já tiver uma faixa de recursos codificada manualmente, o MFC tem funções que você pode usar para converter a faixa de faixas existente em um recurso da faixa de faixas. Para obter mais informações, confira [Como: Converter uma faixa de faixas do MFC existente em](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)um recurso da faixa de faixas.
+Se o seu projeto já tiver uma fita codificada manualmente, o MFC tem funções que você pode usar para converter a fita existente em um recurso de fita. Para obter mais informações, [consulte Como converter uma fita MFC existente em um recurso de fita](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
 
 > [!NOTE]
->  As faixas de faixa não podem ser criadas em aplicativos baseados em caixas de diálogo. Para obter mais informações, consulte [tipo de aplicativo, assistente de aplicativo do MFC](../mfc/reference/application-type-mfc-application-wizard.md).
+> As fitas não podem ser criadas em aplicativos baseados em diálogo. Para obter mais informações, consulte [Tipo de aplicativo, Assistente de aplicativo do MFC](../mfc/reference/application-type-mfc-application-wizard.md).
 
-## <a name="customizing-ribbons"></a>Personalizando faixas de as
+## <a name="customizing-ribbons"></a>Personalização de fitas
 
-Para abrir uma faixa de bits no designer de faixa de faixas, clique duas vezes no recurso da faixa de das Modo de Exibição de Recursos. No designer, você pode adicionar, remover e personalizar elementos na faixa de guia, no botão aplicativo ou na barra de ferramentas de acesso rápido. Você também pode vincular eventos, por exemplo, eventos de clique de botão e eventos de menu, a um método em seu aplicativo.
+Para abrir uma fita no designer de fita, clique duas vezes no recurso de fita na exibição de recursos. No designer, você pode adicionar, remover e personalizar elementos na fita, no botão aplicativo ou na barra de ferramentas de acesso rápido. Você também pode vincular eventos, por exemplo, eventos de clique por botão e eventos de menu, a um método em sua aplicação.
 
-A ilustração a seguir mostra os vários componentes no designer de faixa de opções.
+A ilustração a seguir mostra os vários componentes do designer da fita.
 
-![Designer de faixa de da MFC](../mfc/media/ribbon_designer.png "Designer de faixa de da MFC")
+![Designer da Faixa de Opções MFC](../mfc/media/ribbon_designer.png "Designer da Faixa de Opções MFC")
 
-- **Guia** Contém controles que podem ser arrastados para a superfície do designer.
+- **Caixa de ferramentas:** Contém controles que podem ser arrastados para a superfície do designer.
 
-- **Superfície do designer:** Contém a representação visual do recurso da faixa de faixas.
+- **Superfície do designer:** Contém a representação visual do recurso da fita.
 
-- **[Assistente de classe](reference/mfc-class-wizard.md):** Lista os atributos do item que está selecionado na superfície do designer.
+- ** [Assistente de classe](reference/mfc-class-wizard.md):** Lista os atributos do item selecionado na superfície do designer.
 
-- **Modo de Exibição de Recursos janela:** Exibe os recursos que incluem os recursos da faixa de medida em seu projeto.
+- **Janela de exibição de recursos:** Exibe os recursos que incluem recursos de fita, em seu projeto.
 
-- **Barra de ferramentas do editor de faixa:** Contém comandos que permitem visualizar a faixa de visualização e alterar seu tema visual.
+- **Barra de ferramentas do editor de fita:** Contém comandos que permitem visualizar a fita e alterar seu tema visual.
 
-Os tópicos a seguir descrevem como usar os recursos no designer de faixa de opções:
+Os seguintes tópicos descrevem como usar os recursos no designer de fita:
 
-- [Como: personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)
+- [Como personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)
 
-- [Como: personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+- [Como personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Como: adicionar controles de faixa de opções e manipuladores de evento](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Como adicionar controles de faixa de opções e manipuladores de evento](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Como: carregar um recurso da faixa de opções de um aplicativo MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Como carregar um recurso da faixa de opções de um aplicativo MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
-## <a name="definitions-of-ribbon-elements"></a>Definições de elementos da faixa de faixas
+## <a name="definitions-of-ribbon-elements"></a>Definições de Elementos de Fita
 
-![Faixa de faixas do MFC](../mfc/media/ribbon.png "Faixa de faixas do MFC")
+![Fita MFC](../mfc/media/ribbon.png "Fita MFC")
 
-- **Botão do aplicativo:** O botão que aparece no canto superior esquerdo de uma faixa de bits. O botão aplicativo substitui o menu arquivo e fica visível mesmo quando a faixa de faixas é minimizada. Quando o botão é clicado, um menu que tem uma lista de comandos é exibido.
+- **Botão de aplicação:** O botão que aparece no canto superior esquerdo de uma fita. O botão Aplicativo substitui o menu Arquivo e é visível mesmo quando a fita é minimizada. Quando o botão é clicado, um menu que tem uma lista de comandos é exibido.
 
-- **Barra de ferramentas de acesso rápido:** Uma barra de ferramentas pequena e personalizável que exibe comandos usados com frequência.
+- **Barra de ferramentas de acesso rápido:** Uma pequena barra de ferramentas personalizável que exibe comandos frequentemente usados.
 
-- **Categoria**: O agrupamento lógico que representa o conteúdo de uma guia da faixa de uma.
+- **Categoria**: O agrupamento lógico que representa o conteúdo de uma guia de fita.
 
-- **Botão padrão da categoria:** O botão que aparece na faixa de faixas quando a faixa de faixas é minimizada. Quando o botão é clicado, a categoria reaparece como um menu.
+- **Botão Padrão da categoria:** O botão que aparece na fita quando a fita é minimizada. Quando o botão é clicado, a categoria reaparece como um menu.
 
-- Uma área da barra da faixa de faixas que exibe um grupo de controles relacionados. Cada categoria da faixa de faixas contém um ou mais painéis da faixa de faixas.
+- **Painel:** Uma área da barra de fita que exibe um grupo de controles relacionados. Cada categoria de fita contém um ou mais painéis de fita.
 
-- **Elementos da faixa de faixas:** Controles nos painéis, por exemplo, botões e caixas de combinação. Para ver os vários controles que podem ser hospedados em uma faixa de [faixas, consulte RibbonGadgets Sample: Aplicativo](../overview/visual-cpp-samples.md)de gadgets de faixa de faixas.
+- **Elementos da fita:** Controles nos painéis, por exemplo, botões e caixas de combinação. Para ver os vários controles que podem ser hospedados em uma fita, consulte [RibbonGadgets Sample: Ribbon Gadgets Application](../overview/visual-cpp-samples.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)<br/>
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)

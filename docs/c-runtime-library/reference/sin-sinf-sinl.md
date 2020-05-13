@@ -1,10 +1,11 @@
 ---
 title: sin, sinf, sinl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - sinl
 - sinf
 - sin
+- _o_sin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948074"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915764"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -76,7 +78,9 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **sin** sempre usa e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **sin** sempre usa e retorna **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,7 +88,7 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **sin** que leva
 |-|-|-|
 |**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -114,7 +118,7 @@ sin( 1.570796 ) = 1.000000
 cos( 1.570796 ) = 0.000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

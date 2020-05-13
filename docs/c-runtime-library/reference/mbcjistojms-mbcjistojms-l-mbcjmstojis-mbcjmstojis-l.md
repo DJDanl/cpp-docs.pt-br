@@ -1,11 +1,15 @@
 ---
 title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbcjistojms
 - _mbcjmstojis
 - _mbcjistojms_l
 - _mbcjmstojis_l
+- _o__mbcjistojms
+- _o__mbcjistojms_l
+- _o__mbcjmstojis
+- _o__mbcjmstojis_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,19 +46,19 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: 6bf1109cfba93042bd00acde4812706c1bbf7a01
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc4df04274c33fa14af0762dc62f20ed09f23cd9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952598"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918433"
 ---
 # <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
 Converte entre caracteres JIS (Japan Industry Standard) e JMS (Japan Microsoft).
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -76,13 +81,13 @@ unsigned int _mbcjmstojis_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 Caractere a ser convertido.
 
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 No Japão, essas funções retornarão um caractere convertido ou retornam 0 se nenhuma conversão for possível. Em uma localidade não japonesa, essas funções retornam o caractere passado.
 
@@ -98,6 +103,8 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 
 Em versões anteriores, **_mbcjistojms** e **_mbcjmstojis** eram chamados **jistojms** e **jmstojis**, respectivamente. **_mbcjistojms**, **_mbcjistojms_l**, **_mbcjmstojis** e **_mbcjmstojis_l** devem ser usados em seu lugar.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -112,4 +119,4 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

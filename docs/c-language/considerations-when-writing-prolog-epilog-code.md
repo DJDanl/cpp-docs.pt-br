@@ -7,20 +7,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334590"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Considerações quando escrever código de prólogo/epílogo
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Antes de escrever suas próprias sequências de código de prólogo e epílogo, é importante entender como o registro de ativação é apresentado. Também é útil saber como usar a constante predefinida **__LOCAL_SIZE**.
+Antes de escrever suas próprias sequências de código prólogo e epílogo, é importante entender como o quadro de pilhas é disposto. Também é útil saber como usar o **__LOCAL_SIZE** constante predefinida.
 
-##  <a name="_clang_c_stack_frame_layout"></a> Layout de registro de ativação C
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Layout de quadro CStack
 
 Este exemplo mostra o código padrão do prólogo que pode aparecer em uma função de 32 bits:
 
@@ -42,11 +42,11 @@ ret                          ; Return from function
 
 A pilha sempre vai para baixo (dos endereços de memória mais altos para os mais baixos). O ponteiro de base (`ebp`) aponta para o valor enviados por push de `ebp`. A área de variáveis locais começa em `ebp-2`. Para acessar variáveis locais, calcule um deslocamento de `ebp` subtraindo o valor apropriado de `ebp`.
 
-##  <a name="_clang_the___local_size_constant"></a> A constante __LOCAL_SIZE
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a> A constante __LOCAL_SIZE
 
 O compilador fornece uma constante, **__LOCAL_SIZE**, para o uso no bloco embutido do assembler do código do prólogo da função. Essa constante é usada para alocar espaço para as variáveis locais no quadro da pilha no código personalizado de prólogo.
 
-O compilador determina o valor de **__LOCAL_SIZE**. O valor é o número total de bytes de todas as variáveis locais definidas pelo usuário e variáveis temporárias geradas pelo compilador. **__LOCAL_SIZE** pode ser usada apenas como um operando imediato; não pode ser usada em uma expressão. Você não deve alterar ou redefinir o valor dessa constante. Por exemplo:
+O compilador determina o valor de **__LOCAL_SIZE**. O valor é o número total de bytes de todas as variáveis locais definidas pelo usuário e variáveis temporárias geradas pelo compilador. **__LOCAL_SIZE** pode ser usada apenas como um operando imediato; não pode ser usada em uma expressão. Você não deve alterar ou redefinir o valor dessa constante. Por exemplo: 
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções naked](../c-language/naked-functions.md)

@@ -1,9 +1,11 @@
 ---
 title: fgetc, fgetwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fgetwc
 - fgetc
+- _o_fgetc
+- _o_fgetwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: 92f44c65802f3baed37078574577bf108bbcd09a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940887"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912874"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -57,10 +60,10 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **fgetc** retorna o caractere lido como um **int** ou retorna **EOF** para indicar um erro ou um fim de arquivo. **fgetwc** retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna **WEOF** para indicar um erro ou fim de arquivo. Para ambas as funções, use **feof** ou **referenciador** para distinguir entre um erro e uma condição de fim de arquivo. Se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. Se *Stream* for **NULL**, **fgetc** e **fgetwc** invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam **EOF**.
 
@@ -76,6 +79,8 @@ As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não s
 
 Para obter mais informações sobre como processar caracteres largos e caracteres multibyte em modos de texto e binários, consulte [E/S de fluxo de Unicode em modos de texto e binário](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -89,7 +94,7 @@ Para obter mais informações sobre como processar caracteres largos e caractere
 |**fgetc**|\<stdio.h>|
 |**fgetwc**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

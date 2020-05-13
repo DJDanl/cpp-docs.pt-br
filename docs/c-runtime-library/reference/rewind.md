@@ -1,8 +1,9 @@
 ---
 title: rewind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - rewind
+- _o_rewind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949281"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917762"
 ---
 # <a name="rewind"></a>rewind
 
@@ -48,14 +50,14 @@ void rewind(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="remarks"></a>Comentários
 
 A função **retrocesso** reposiciona o ponteiro do arquivo associado ao *fluxo* para o início do arquivo. Uma chamada para **rewind** é semelhante a
 
-**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
+**(void) fseek (** _Stream_**, 0L, SEEK_SET);**
 
 No entanto, ao contrário de [fseek](fseek-fseeki64.md), o **retrocesso** limpa os indicadores de erro do fluxo, bem como o indicador de fim de arquivo. Além disso, ao contrário de [fseek](fseek-fseeki64.md), o **retrocesso** não retorna um valor para indicar se o ponteiro foi movido com êxito.
 
@@ -65,15 +67,17 @@ Se Stream for um ponteiro **NULL** , o manipulador de parâmetro inválido será
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**rewind**|\<stdio.h>|
+|**retrocesso**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 82cc5ffa3f50196fc5f518b8bb5b2080ff14fd8d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151826"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349607"
 ---
 # <a name="try-finally-statement-c"></a>Instrução try-finally (C)
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 A instrução `try-finally` é uma extensão da Microsoft para a linguagem C que permite que aplicativos garantam a execução do código de limpeza quando a execução de um bloco de códigos é interrompida. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. A instrução `try-finally` é especialmente útil para rotinas que têm vários locais onde uma verificação é feita para um erro que pode causar o retorno prematuro da rotina.
 
@@ -41,15 +41,15 @@ Sair de uma instrução `try-finally` usando uma instrução `return` ou a funç
 O manipulador de término não é chamado se um processo é interrompido durante a execução de uma instrução `try-finally`.
 
 > [!NOTE]
->  A manipulação de exceção estruturada funciona com arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, o mecanismo de tratamento de exceções de C++ é muito mais flexível, pois pode tratar exceções de qualquer tipo.
+> A manipulação de exceção estruturada funciona com arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, o mecanismo de tratamento de exceções de C++ é muito mais flexível, pois pode tratar exceções de qualquer tipo.
 
 > [!NOTE]
->  Para programas C++, o tratamento de exceção de C++ deve ser usado em vez de manipulação de exceção estruturada. Para obter mais informações, consulte [Tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md) na *Referência da linguagem C++*.
+> Para programas C++, o tratamento de exceção de C++ deve ser usado em vez de manipulação de exceção estruturada. Para obter mais informações, consulte [Tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md) na *Referência da linguagem C++*.
 
 Veja o exemplo da [instrução try-except](../c-language/try-except-statement-c.md) para saber como a instrução `try-finally` funciona.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instrução try-finally](../cpp/try-finally-statement.md)

@@ -1,8 +1,9 @@
 ---
 title: _umask_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask_s
+- _o__umask_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-ms.openlocfilehash: 21d9ba194f85e40c3c5a4d67d16ebca9721f68f8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 712313314c67d15987326e3e3a920cd5f1039239
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945991"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913885"
 ---
 # <a name="_umask_s"></a>_umask_s
 
@@ -52,24 +54,24 @@ errno_t _umask_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*modo*<br/>
+*mode*<br/>
 Configuração de permissão padrão.
 
 *pOldMode*<br/>
 O valor anterior da configuração de permissão.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna um código de erro se o *modo* não especificar um modo válido ou se o ponteiro *pOldMode* for **nulo**.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
-|*modo*|*pOldMode*|Valor retornado|Conteúdo de *pOldMode*|
+|*mode*|*pOldMode*|Valor retornado|Conteúdo de *pOldMode*|
 |------------|----------------|----------------------|--------------------------------|
-|qualquer|**NULL**|**EINVAL**|não modificado|
-|modo inválido|qualquer|**EINVAL**|não modificado|
+|any|**NULO**|**EINVAL**|não modificado|
+|modo inválido|any|**EINVAL**|não modificado|
 
-Se uma das condições de erro acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **_umask_s** retornará **EINVAL** e definirá **errno** como **EINVAL**.
+Se uma das condições de erro acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_umask_s** retornará **EINVAL** e definirá **errno** como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
@@ -87,13 +89,15 @@ Quando ambas as constantes são fornecidas, elas são unidas com o operador OR b
 
 Se *pmode* não for uma combinação de uma das constantes de manifesto ou incorporar um conjunto alternativo de constantes, a função simplesmente irá ignorá-las.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**_umask_s**|\<io.h> e \<sys/stat.h> e \<sys/types.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -129,7 +133,7 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>

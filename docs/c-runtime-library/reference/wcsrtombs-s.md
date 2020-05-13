@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs_s
+- _o_wcsrtombs_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 68f5b6f6b87fb3ad21899035dfc82d997d90cf38
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: c804d232dbcce67b8d467eaa37ccf2b15282881a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518303"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910593"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
@@ -60,7 +62,7 @@ errno_t wcsrtombs_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pReturnValue*<br/>
+*preativar*<br/>
 O tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo.
 
 *mbstr*<br/>
@@ -72,13 +74,13 @@ O tamanho em bytes do buffer *mbstr* .
 *wcstr*<br/>
 Aponta para a cadeia de caracteres largos a ser convertida.
 
-*count*<br/>
+*contagem*<br/>
 O número máximo de bytes a serem armazenados no buffer *mbstr* ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
 Um ponteiro para um objeto de estado de conversão de **mbstate_t** .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido ou um código de erro em caso de falha.
 
@@ -104,9 +106,9 @@ A cadeia de caracteres de destino sempre é terminada em nulo (mesmo em caso de 
 
 Se *Count* for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **wcsrtombs_s** converterá a maior parte da cadeia de caracteres que se ajustará ao buffer de destino e, ao mesmo tempo, deixará espaço para um terminador nulo.
 
-Se **wcsrtombs_s** converte com êxito a cadeia de caracteres de origem, ela coloca o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em  *&#42;pretransformvalue* (a *preactivavalue* fornecida não é **nula**). Isso ocorre mesmo que o argumento *mbstr* seja **nulo** e forneça uma maneira de determinar o tamanho do buffer necessário. Observe que, se *mbstr* for **NULL**, *Count* será ignorado.
+Se **wcsrtombs_s** converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em *&#42;preactivavalue* (a *preactivavalue* fornecida não é **nula**). Isso ocorre mesmo que o argumento *mbstr* seja **nulo** e forneça uma maneira de determinar o tamanho do buffer necessário. Observe que, se *mbstr* for **NULL**, *Count* será ignorado.
 
-Se **wcsrtombs_s** encontrar um caractere largo, ele não poderá converter para um caractere multibyte, ele colocará-1 em *\*pretransformvalue*, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
+Se **wcsrtombs_s** encontrar um caractere largo, ele não poderá converter para um caractere multibyte, ele colocará-1 em * \*preligávalue*, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
 
 Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcsrtombs_s** é indefinido. **wcsrtombs_s** é afetado pela categoria de LC_TYPE da localidade atual.
 
@@ -116,6 +118,8 @@ Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento
 A função **wcsrtombs_s** difere da [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcslen**, se uma chamada subsequente para **wcsrtombs_s** fosse usada em vez de **wcstombs_s**.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Exceções
 
@@ -168,16 +172,16 @@ int main()
 The string was successfully converted.
 ```
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**wcsrtombs_s**|\<wchar.h>|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>

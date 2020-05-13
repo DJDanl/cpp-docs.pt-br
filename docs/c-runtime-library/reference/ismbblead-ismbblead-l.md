@@ -1,10 +1,12 @@
 ---
 title: _ismbblead, _ismbblead_l
 description: Descreve as funções de _ismbblead e _ismbblead_l do Microsoft C Runtime Library (CRT).
-ms.date: 01/08/2020
+ms.date: 4/2/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
+- _o__ismbblead
+- _o__ismbblead_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 7680793b71c4535ed75433ac98167e52a39896ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755048"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918664"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
@@ -61,10 +64,10 @@ int _ismbblead_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ de *c*
+*&*\
 Inteiro a ser testado.
 
-\ de *localidade*
+*localidade*\
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
@@ -81,13 +84,15 @@ Quando a localidade é UTF-8, **_ismbblead** e **_ismbblead_l** sempre retorna 0
 
 **_ismbblead** e **_ismbblead_l** são específicos da Microsoft, não fazem parte da biblioteca C padrão. Não recomendamos que você os use onde desejar código portátil. Para compatibilidade com C padrão, use **mbrlen** em vez disso.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos de rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|Sempre retorna falso|**_ismbblead**|Sempre retorna falso|
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
@@ -98,8 +103,8 @@ Quando a localidade é UTF-8, **_ismbblead** e **_ismbblead_l** sempre retorna 0
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-\ de [classificação de bytes](../../c-runtime-library/byte-classification.md)
+[Classificação de bytes](../../c-runtime-library/byte-classification.md)\
 [rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)\
 [mbrlen](mbrlen.md)

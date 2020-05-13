@@ -8,29 +8,29 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: f93f65e949c18ddb1ad5dba859ba8c4832abac8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8912c9013175fe254b2f4a4a968a67fd071f39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365293"
 ---
 # <a name="form-views-mfc"></a>Exibições de formulário (MFC)
 
-Você pode adicionar formulários para qualquer aplicativo do Visual C++ que dá suporte as bibliotecas MFC, incluindo uma [baseada em formulários de aplicativo](../mfc/reference/creating-a-forms-based-mfc-application.md) (um cuja exibição de classe é derivada de `CFormView`). Se você não tiver criado seu aplicativo para dar suporte a formulários inicialmente, o Visual C++ adicionará esse suporte para você quando você insere um novo formulário. Em um aplicativo SDI ou MDI, que implementa o padrão [arquitetura de documento/exibição](../mfc/document-view-architecture.md), quando o usuário escolhe o **New** comando (por padrão, no **arquivo** menu), o Visual C++ solicita que o usuário escolha entre os formatos disponíveis.
+Você pode adicionar formulários a qualquer aplicativo Visual C++ que suporte as bibliotecas MFC, incluindo `CFormView`um aplicativo baseado em [formulários](../mfc/reference/creating-a-forms-based-mfc-application.md) (aquele cuja classe de visualização é derivada ). Se você não criou inicialmente seu aplicativo para suportar formulários, o Visual C++ adicionará esse suporte para você quando inserir um novo formulário. Em um aplicativo SDI ou MDI, que implementa a arquitetura padrão [de documentos/exibição,](../mfc/document-view-architecture.md)quando o usuário escolhe o comando **Novo** (por padrão, no menu **Arquivo),** o Visual C++ solicita que o usuário escolha entre os formulários disponíveis.
 
-Com um aplicativo SDI, quando o usuário escolhe o **New** de comando, a instância atual do formulário continua em execução, mas uma nova instância do aplicativo com o formulário selecionado será criada se não for encontrado. Em um aplicativo MDI, a instância atual do formulário continuará a ser executado quando o usuário escolhe o **New** comando.
+Com um aplicativo SDI, quando o usuário escolhe o comando **Novo,** a instância atual do formulário continua a ser executada, mas uma nova instância do aplicativo com o formulário selecionado é criada se não for encontrada. Em um aplicativo MDI, a instância atual do formulário continua a ser executada quando o usuário escolhe o comando **Novo.**
 
 > [!NOTE]
->  Você pode inserir um formulário em um aplicativo baseado em diálogo (aquele cuja classe de caixa de diálogo se baseia em `CDialog` e outro no qual nenhuma exibição de classe é implementada). No entanto, sem a arquitetura de documento/exibição, Visual C++ não implementar automaticamente as **arquivo**&#124;**New** funcionalidade. Você deve criar uma maneira para o usuário exibir formulários adicionais, como com a implementação de uma caixa de diálogo com guias com várias páginas de propriedade.
+> Você pode inserir um formulário em um aplicativo baseado em `CDialog` diálogo (aquele cuja classe de diálogo é baseada e uma em que nenhuma classe de exibição é implementada). No entanto, sem a arquitetura de documento/exibição, o Visual C++ não implementa automaticamente a funcionalidade **Arquivo**&#124;**Nova.** Você deve criar uma maneira para o usuário visualizar formulários adicionais, como implementando uma caixa de diálogo com várias páginas de propriedade.
 
 Quando você insere um novo formulário em seu aplicativo, o Visual C++ faz o seguinte:
 
-- Cria uma classe com base em uma das classes do estilo de formulário que você escolher (`CFormView`, `CRecordView`, `CDaoRecordView`, ou `CDialog`).
+- Cria uma classe baseada em uma das classes`CFormView`de `CRecordView` `CDaoRecordView`estilo `CDialog`de formulário que você escolhe ( , , ou ).
 
-- Cria um recurso de caixa de diálogo com estilos apropriados (ou você pode usar um recurso de caixa de diálogo existente que ainda não foi associado uma classe).
+- Cria um recurso de diálogo com estilos apropriados (ou você pode usar um recurso de diálogo existente que ainda não foi associado a uma classe).
 
-   Se você escolher um recurso de caixa de diálogo existente, você precisa definir esses estilos por meio da página de propriedades da caixa de diálogo. Estilos para uma caixa de diálogo devem incluir:
+   Se você escolher um recurso de diálogo existente, talvez seja necessário definir esses estilos usando a página Propriedades para a caixa de diálogo. Os estilos para uma caixa de diálogo devem incluir:
 
      **WS_CHILD**=On
 
@@ -40,21 +40,21 @@ Quando você insere um novo formulário em seu aplicativo, o Visual C++ faz o se
 
      **WS_CAPTION**=Off
 
-Para aplicativos com base na arquitetura de documento/exibição, o **novo formulário** (botão direito do mouse na exibição de classe) do comando também:
+Para aplicativos baseados na arquitetura documento/exibição, o comando **Novo formulário** (clique com o botão direito do mouse na exibição de classe) também:
 
-- Cria um `CDocument`-com base em classe
+- Cria `CDocument`uma classe baseada em uma
 
-   Em vez de ter uma nova classe criada, você poderá usar qualquer existente `CDocument`-com base em classe em seu projeto.
+   Em vez de ter uma nova classe criada, você pode usar qualquer classe baseada em seu `CDocument`projeto.
 
-- Gera um modelo de documento (derivado de `CDocument`) com recursos de cadeia de caracteres, o menu e ícone.
+- Gera um modelo de `CDocument`documento (derivado de ) com recursos de string, menu e ícone.
 
-   Você também pode criar uma nova classe no qual basear o modelo.
+   Você também pode criar uma nova classe na qual basear o modelo.
 
-- Adiciona uma chamada para `AddDocumentTemplate` em seu aplicativo `InitInstance` código.
+- Adiciona uma `AddDocumentTemplate` chamada no código `InitInstance` do seu aplicativo.
 
-   Visual C++ adiciona este código para cada novo formulário que você cria, que adiciona o formulário à lista de formulários disponíveis quando o usuário escolhe o **New** comando. Esse código inclui a ID do recurso associado do formulário e os nomes do documento associado, exibição e classes de quadro que juntos compõem o novo objeto de formulário.
+   Visual C++ adiciona este código para cada novo formulário que você cria, que adiciona o formulário à lista de formulários disponíveis quando o usuário escolhe o comando **Novo.** Esse código inclui o ID de recurso associado do formulário e os nomes das classes de documento, exibição e quadro associados que, juntas, compõem o novo objeto de formulário.
 
-   Modelos de documento servem como a conexão entre documentos, janelas de quadro e modos de exibição. Para um único documento, você pode criar muitos modelos.
+   Os modelos de documentos servem como a conexão entre documentos, janelas de quadro e visualizações. Para um único documento, você pode criar muitos modelos.
 
 Para obter mais informações, consulte:
 
@@ -62,6 +62,6 @@ Para obter mais informações, consulte:
 
 - [Inserindo um formulário em um projeto](../mfc/inserting-a-form-into-a-project.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)
+[Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)

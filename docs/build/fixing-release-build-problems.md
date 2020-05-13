@@ -17,20 +17,20 @@ ms.locfileid: "62195280"
 ---
 # <a name="fixing-release-build-problems"></a>Corrigindo problemas de compilação da versão
 
-Se seu código gera erros de compilação depois de alternar do build de depuração para o build de lançamento, há algumas áreas que você deve verificar.
+Se o código gerar erros de compilação depois de alternar da compilação de depuração para a compilação de versão, haverá algumas áreas que você deve verificar.
 
-Você pode receber avisos do compilador durante uma compilação otimizada (lançamento) que não tenha recebido durante uma compilação de depuração.
+Você pode receber avisos do compilador durante uma compilação otimizada (liberação) que você não recebeu durante uma compilação de depuração.
 
-- [Examine instruções ASSERT](using-verify-instead-of-assert.md)
+- [Examinar instruções ASSERT](using-verify-instead-of-assert.md)
 
-- [Use o Build de depuração para verificar se há memória substitui](using-the-debug-build-to-check-for-memory-overwrite.md)
+- [Usar a compilação de depuração para verificar se há substituições de memória](using-the-debug-build-to-check-for-memory-overwrite.md)
 
-- [Ativar a geração de informações de depuração para o Build de versão](how-to-debug-a-release-build.md)
+- [Ativar a geração de informações de depuração para a compilação da versão](how-to-debug-a-release-build.md)
 
-- [Verificação de substituição de memória](checking-for-memory-overwrites.md)
+- [Verificar substituição de memória](checking-for-memory-overwrites.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Builds de versão](release-builds.md)<br/>
-[Problemas comuns durante a criação de um build de versão](common-problems-when-creating-a-release-build.md)<br/>
-[Otimizando seu código](optimizing-your-code.md)
+[Problemas comuns durante a criação de uma compilação de versão](common-problems-when-creating-a-release-build.md)<br/>
+[Otimizando o código](optimizing-your-code.md)

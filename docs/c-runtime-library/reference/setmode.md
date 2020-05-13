@@ -1,8 +1,9 @@
 ---
 title: _setmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _setmode
+- _o__setmode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948585"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915805"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -51,13 +53,13 @@ int _setmode (
 
 ### <a name="parameters"></a>Parâmetros
 
-*fd*<br/>
+*FD*<br/>
 Descritor de arquivo.
 
-*modo*<br/>
+*mode*<br/>
 Novo modo de conversão.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se bem-sucedido, retorna para o modo de conversão anterior.
 
@@ -67,7 +69,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-A função **_setmode** define como *modo* o modo de tradução do arquivo fornecido pelo *fd*. Passar **_O_TEXT** como *Mode* define o modo de texto (ou seja, traduzido). As combinações de CR-LF (retorno de carro-alimentação de linha) são convertidas em um único caractere de alimentação de linha na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. Passar **_O_BINARY** define o modo binário (não traduzido), no qual essas traduções são suprimidas.
+A função **_setmode** define como *modo* o modo de tradução do arquivo fornecido pelo *fd*. A passagem de **_O_TEXT** como *modo* define o modo de texto (ou seja, traduzido). As combinações de CR-LF (retorno de carro-alimentação de linha) são convertidas em um único caractere de alimentação de linha na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. A passagem de **_O_BINARY** define o modo binário (não traduzido), no qual essas traduções são suprimidas.
 
 Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** para habilitar o modo Unicode, conforme demonstrado no segundo exemplo posteriormente neste documento.
 
@@ -78,6 +80,8 @@ Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** para habi
 
 > [!CAUTION]
 > Se você gravar dados em um fluxo de arquivos, libere explicitamente o código usando [fflush](fflush.md) antes de usar **_setmode** para alterar o modo. Se você não limpar o código, pode ocorrer comportamento inesperado. Se você não tiver dados gravados no fluxo, não será preciso limpar o código.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -135,7 +139,7 @@ int main(void) {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: fgets, fgetws
-ms.date: 07/11/2018
+ms.date: 4/2/2020
 api_name:
 - fgets
 - fgetws
+- _o_fgets
+- _o_fgetws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: 3f68bee181ebb20eb7a0a2eaca02a72c4dc03616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5c1d63eea6561af6ab7f51c147c92e184d3d11f8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957407"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912059"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -60,16 +63,16 @@ wchar_t *fgetws(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Local de armazenamento de dados.
 
 *numChars*<br/>
 O número máximo de caracteres a serem lidos.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna *Str*. **NULL** é retornado para indicar um erro ou uma condição de fim de arquivo. Use **feof** ou **referenciador** para determinar se ocorreu um erro. Se *Str* ou *Stream* for um ponteiro NULL ou *numChars* for menor ou igual a zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**.
 
@@ -82,6 +85,8 @@ A função **fgets** lê uma cadeia de caracteres do argumento de *fluxo* de ent
 **fgetws** é uma versão de caractere largo do **fgets**.
 
 **fgetws** lê a *Str* de argumento de caractere largo como uma cadeia de caracteres multibyte ou uma cadeia de caracteres largos de acordo com o *fluxo* ser aberto no modo de texto ou no modo binário, respectivamente. Para obter mais informações sobre como usar os modos de texto e binário em Unicode e E/S de fluxo multibyte, consulte [E/S de texto e arquivo de modo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [E/S de fluxo Unicode em modos de texto e binários](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -96,7 +101,7 @@ A função **fgets** lê uma cadeia de caracteres do argumento de *fluxo* de ent
 |**fgets**|\<stdio.h>|
 |**fgetws**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -140,5 +145,5 @@ Line one.
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
-[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[Obtém, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

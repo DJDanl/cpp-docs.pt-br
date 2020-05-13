@@ -9,61 +9,61 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: 265c3145d8ceacae540286f72939dc046e7c8b35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5fdbf15ddd7edc69f0667a9b7e08c7c5e531a5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319456"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementando uma janela com CWindowImpl
 
-Para implementar uma janela, derive uma classe de `CWindowImpl`. Em sua classe derivada, declare um mapa de mensagem e as funções do manipulador de mensagem. Agora você pode usar a classe de três maneiras diferentes:
+Para implementar uma janela, `CWindowImpl`obtenha uma classe de . Em sua classe derivada, declare um mapa de mensagem e as funções do manipulador de mensagens. Agora você pode usar sua classe de três maneiras diferentes:
 
-- [Criar uma janela com base em uma nova classe do Windows](#_atl_creating_a_window_based_on_a_new_windows_class)
+- [Crie uma janela com base em uma nova classe windows](#_atl_creating_a_window_based_on_a_new_windows_class)
 
-- [Superclasse uma classe existente do Windows](#_atl_superclassing_an_existing_windows_class)
+- [Superclass uma classe Windows existente](#_atl_superclassing_an_existing_windows_class)
 
 - [Subclasse uma janela existente](#_atl_subclassing_an_existing_window)
 
-##  <a name="_atl_creating_a_window_based_on_a_new_windows_class"></a> Criar uma janela com base em uma nova classe do Windows
+## <a name="creating-a-window-based-on-a-new-windows-class"></a><a name="_atl_creating_a_window_based_on_a_new_windows_class"></a>Criando uma janela com base em uma nova classe do Windows
 
-`CWindowImpl` contém o [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) macro para declarar as informações de classe do Windows. Essa macro implementa o `GetWndClassInfo` função, que usa [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) para definir as informações de uma nova classe do Windows. Quando `CWindowImpl::Create` é chamado, esse Windows classe é registrada e uma nova janela é criada.
+`CWindowImpl`contém a [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) macro para declarar as informações da classe Windows. Essa macro implementa a `GetWndClassInfo` função, que usa o [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) para definir as informações de uma nova classe Windows. Quando `CWindowImpl::Create` é chamado, esta classe do Windows é registrada e uma nova janela é criada.
 
 > [!NOTE]
->  `CWindowImpl` passa nulo para o `DECLARE_WND_CLASS` macro, o que significa que o ATL irá gerar um nome de classe do Windows. Para especificar seu próprio nome, passar uma cadeia de caracteres para DECLARE_WND_CLASS no seu `CWindowImpl`-classe derivada.
+> `CWindowImpl`passa NULL `DECLARE_WND_CLASS` para a macro, o que significa que atl irá gerar um nome de classe Windows. Para especificar seu próprio nome, passe `CWindowImpl`uma string para DECLARE_WND_CLASS em sua classe derivada.
 
 ## <a name="example"></a>Exemplo
 
-A seguir está um exemplo de uma classe que implementa uma janela com base em uma nova classe do Windows:
+A seguir está um exemplo de uma classe que implementa uma janela com base em uma nova classe windows:
 
 [!code-cpp[NVC_ATL_Windowing#64](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_1.h)]
 
-Para criar uma janela, crie uma instância do `CMyWindow` e, em seguida, chamar o `Create` método.
+Para criar uma janela, `CMyWindow` crie uma `Create` instância e, em seguida, chame o método.
 
 > [!NOTE]
->  Para substituir as informações de classe do Windows padrão, implementar o `GetWndClassInfo` método em sua classe derivada, definindo o `CWndClassInfo` membros para os valores apropriados.
+> Para substituir as informações padrão da `GetWndClassInfo` classe Windows, implemente `CWndClassInfo` o método em sua classe derivada definindo os membros para os valores apropriados.
 
-##  <a name="_atl_superclassing_an_existing_windows_class"></a> Superclassing uma classe existente do Windows
+## <a name="superclassing-an-existing-windows-class"></a><a name="_atl_superclassing_an_existing_windows_class"></a>Superclassificação de uma classe windows existente
 
-O [DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) macro permite que você crie esse superclassificar um Windows existente de uma janela de classe. Especifique esta macro em seu `CWindowImpl`-classe derivada. Como qualquer outra janela da ATL, as mensagens são manipuladas por um mapa de mensagem.
+A [macro DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) permite criar uma janela que superclasses uma classe Windows existente. Especifique `CWindowImpl`esta macro em sua classe derivada. Como qualquer outra janela ATL, as mensagens são tratadas por um mapa de mensagens.
 
-Quando você usa DECLARE_WND_SUPERCLASS, uma nova classe do Windows será registrada. Essa nova classe será o mesmo que a classe existente que você especificar, mas substituirá o procedimento de janela com `CWindowImpl::WindowProc` (ou com a função que substitui esse método).
+Quando você usar DECLARE_WND_SUPERCLASS, uma nova classe do Windows será registrada. Esta nova classe será a mesma que a classe existente especificada, mas substituirá o procedimento de janela por `CWindowImpl::WindowProc` (ou com sua função que substitui este método).
 
 ## <a name="example"></a>Exemplo
 
-A seguir está um exemplo de uma classe que a edição standard superclassificar classe:
+A seguir está um exemplo de uma classe que superclassifica a classe de edição padrão:
 
 [!code-cpp[NVC_ATL_Windowing#65](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_2.h)]
 
-Para criar a janela de edição de superclasse, crie uma instância do `CMyEdit` e, em seguida, chamar o `Create` método.
+Para criar a janela Editar superclassificada, `CMyEdit` crie uma `Create` instância e, em seguida, chame o método.
 
-##  <a name="_atl_subclassing_an_existing_window"></a> Criando subclasses de uma janela existente
+## <a name="subclassing-an-existing-window"></a><a name="_atl_subclassing_an_existing_window"></a>Subclassificando uma janela existente
 
-A subclasse uma janela existente, derive uma classe de `CWindowImpl` e declarar um mapa de mensagem, como em dois casos anteriores. No entanto, observe que você não especificar qualquer informação de classe do Windows, uma vez que você irá subclasse uma janela já existente.
+Para subclassificar uma janela existente, `CWindowImpl` obtenha uma classe e declare um mapa de mensagem, como nos dois casos anteriores. Observe, no entanto, que você não especifica nenhuma informação de classe do Windows, uma vez que você subclasse uma janela já existente.
 
-Em vez de chamar `Create`, chame `SubclassWindow` e passá-lo o identificador para a janela existente que deseja subclasse. Depois que a janela é uma subclasse, ele usará `CWindowImpl::WindowProc` (ou a função que substitui esse método) para direcionar mensagens para o mapa da mensagem. Para desanexar uma janela de subclasse do seu objeto, chame `UnsubclassWindow`. O procedimento de janela original da janela, em seguida, será restaurado.
+Em vez `Create`de `SubclassWindow` ligar, ligue e passe a alça para a janela existente que deseja subclasse. Uma vez que a janela é `CWindowImpl::WindowProc` subclassificada, ela usará (ou sua função que substitui esse método) para direcionar mensagens para o mapa da mensagem. Para desprender uma janela subclassificada `UnsubclassWindow`do seu objeto, ligue . O procedimento original da janela da janela será então restaurado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Implementando uma janela](../atl/implementing-a-window.md)

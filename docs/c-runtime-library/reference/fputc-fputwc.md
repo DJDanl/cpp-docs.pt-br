@@ -1,9 +1,11 @@
 ---
 title: fputc, fputwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fputc
 - fputwc
+- _o_fputc
+- _o_fputwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: 3d289e54bca53be52d0b308d759f4200eca8599c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 90091bff6a8ee3ced050c359ed540f45afe74f6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956956"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910205"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -57,13 +60,13 @@ wint_t fputwc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*&*<br/>
 O caractere a ser gravado.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna o caractere gravado. Para **fputc**, um valor de retorno de **EOF** indica um erro. Para **fputwc**, um valor de retorno de **WEOF** indica um erro. Se o *fluxo* for **nulo**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, ela retornará **EOF** e definirá **errno** como **EINVAL**.
 
@@ -84,6 +87,8 @@ Veja comentários específicos sobre a rotina a seguir.
 |**fputc**|Equivalente a **putc**, mas implementado somente como uma função, em vez de como uma função e uma macro.|
 |**fputwc**|Versão de caractere largo de **fputc**. Grava *c* como um caractere de vários bytes ou um caractere largo de acordo com a abertura do *fluxo* no modo de texto ou binário.|
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -97,7 +102,7 @@ Veja comentários específicos sobre a rotina a seguir.
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console do —**stdin**, **stdout**e **stderr**— devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console do —**stdin**, **stdout**e **stderr**— devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -124,7 +129,7 @@ int main( void )
 This is a test of fputc!!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

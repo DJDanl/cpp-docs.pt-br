@@ -1,6 +1,6 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _hypotf
 - hypot
@@ -8,6 +8,9 @@ api_name:
 - _hypot
 - _hypotl
 - hypotl
+- _o__hypot
+- _o__hypotf
+- _o_hypot
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +44,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919839"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -80,7 +84,7 @@ long double _hypotl(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *x*, *y*<br/>
 Valores de ponto flutuante.
@@ -93,9 +97,11 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-As **funções hypot** calculam o comprimento do hipotenusa de um triângulo à direita, considerando o comprimento dos dois lados *x* e *y* (em outras palavras, a raiz quadrada *de x*<sup>2</sup> + *y*<sup>2</sup>).
+As funções **hypot** calculam o comprimento do hipotenusa de um triângulo à direita, considerando o comprimento dos dois lados *x* e *y* (em outras palavras, a raiz quadrada *de x*<sup>2</sup> + *y*<sup>2</sup>).
 
 As versões das funções que têm sublinhados iniciais são fornecidas para compatibilidade com os padrões anteriores. Seu comportamento é idêntico ao das versões que não têm sublinhados iniciais. É recomendável usar as versões sem sublinhados iniciais para o novo código.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

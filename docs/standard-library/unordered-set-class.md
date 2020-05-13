@@ -134,16 +134,16 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 1aebb30649d138b22c5b9dae95662f84a6bf39f2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0f619ee086264dfbd18298ca2c50189894f77db8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422517"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373083"
 ---
 # <a name="unordered_set-class"></a>Classe unordered_set
 
-O modelo de classe descreve um objeto que controla uma sequência de comprimento variável de elementos do tipo `const Key`. A sequência é ordenada sem muita rigidez por uma função de hash, que particiona a sequência em um conjunto ordenado de subsequências chamado bucket. Dentro de cada bucket uma função de comparação determina se um par de elementos tem ordenação equivalente. Cada elemento serve como uma chave de classificação e um valor. A sequência é representada de forma a permitir pesquisa, inserção e remoção de um elemento com um número arbitrário de operações que podem ser independentes do número de elementos na sequência (tempo constante), pelo menos quando todos os buckets forem de comprimento aproximadamente igual. No pior caso, quando todos os elementos estiverem em um bucket, o número de operações será proporcional ao número de elementos na sequência (tempo linear). Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.
+O modelo de classe descreve um objeto que controla `const Key`uma seqüência de comprimento variável de elementos do tipo . A sequência é ordenada sem muita rigidez por uma função de hash, que particiona a sequência em um conjunto ordenado de subsequências chamado bucket. Dentro de cada bucket uma função de comparação determina se um par de elementos tem ordenação equivalente. Cada elemento serve como uma chave de classificação e um valor. A sequência é representada de forma a permitir pesquisa, inserção e remoção de um elemento com um número arbitrário de operações que podem ser independentes do número de elementos na sequência (tempo constante), pelo menos quando todos os buckets forem de comprimento aproximadamente igual. No pior caso, quando todos os elementos estiverem em um bucket, o número de operações será proporcional ao número de elementos na sequência (tempo linear). Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -156,18 +156,18 @@ template <
 class unordered_set;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*Chave*\
 O tipo principal.
 
-\ de *hash*
+*Hash*\
 O tipo de objeto da função de hash.
 
-\ *Pred*
+*Pred*\
 O tipo de objeto da função de comparação de igualdade.
 
-\ de *alocação*
+*Alloc*\
 A classe do alocador.
 
 ## <a name="members"></a>Membros
@@ -182,65 +182,65 @@ A classe do alocador.
 |[const_pointer](#const_pointer)|O tipo de um ponteiro de constante para um elemento.|
 |[const_reference](#const_reference)|O tipo de uma referência de constante para um elemento.|
 |[difference_type](#difference_type)|O tipo de uma distância com sinal entre dois elementos.|
-|[Hasher sem](#hasher)|O tipo de função de hash.|
-|[iterator](#iterator)|O tipo de um iterador para a sequência controlada.|
-|[key_equal](#key_equal)|O tipo da função de comparação.|
+|[Hasher](#hasher)|O tipo de função de hash.|
+|[Iterador](#iterator)|O tipo de um iterador para a sequência controlada.|
+|[Key_equal](#key_equal)|O tipo da função de comparação.|
 |[key_type](#key_type)|O tipo de uma chave de classificação.|
 |[local_iterator](#local_iterator)|O tipo de um iterador de bucket para a sequência controlada.|
-|[pointer](#pointer)|O tipo de um ponteiro para um elemento.|
-|[reference](#reference)|O tipo de uma referência para um elemento.|
+|[ponteiro](#pointer)|O tipo de um ponteiro para um elemento.|
+|[Referência](#reference)|O tipo de uma referência para um elemento.|
 |[size_type](#size_type)|O tipo de uma distância sem sinal entre dois elementos.|
-|[value_type](#value_type)|O tipo de um elemento.|
+|[Value_type](#value_type)|O tipo de um elemento.|
 
 ### <a name="functions"></a>Funções
 
 |||
 |-|-|
-|[begin](#begin)|Designa o início da sequência controlada.|
-|[sequencia](#bucket)|Obtém o número de buckets de um valor de chave.|
-|[bucket_count](#bucket_count)|Obtém o número de buckets.|
+|[Começar](#begin)|Designa o início da sequência controlada.|
+|[Balde](#bucket)|Obtém o número de buckets de um valor de chave.|
+|[Bucket_count](#bucket_count)|Obtém o número de buckets.|
 |[bucket_size](#bucket_size)|Obtém o tamanho de um bucket.|
 |[cbegin](#cbegin)|Designa o início da sequência controlada.|
 |[cend](#cend)|Designa o fim da sequência controlada.|
-|[clear](#clear)|Remove todos os elementos.|
+|[Claro](#clear)|Remove todos os elementos.|
 |[contagem](#count)|Localiza o número de elementos que correspondem a uma chave especificada.|
 |[emplace](#emplace)|Adiciona um elemento construído no lugar.|
 |[emplace_hint](#emplace_hint)|Adiciona um elemento construído no lugar, com dica.|
-|[empty](#empty)|Testa se nenhum elemento está presente.|
+|[Vazio](#empty)|Testa se nenhum elemento está presente.|
 |[end](#end)|Designa o fim da sequência controlada.|
-|[equal_range](#equal_range)|Localiza o intervalo que corresponde a uma chave especificada.|
+|[Equal_range](#equal_range)|Localiza o intervalo que corresponde a uma chave especificada.|
 |[erase](#erase)|Remove os elementos em posições especificadas.|
-|[find](#find)|Localiza um elemento que corresponde a uma chave especificada.|
+|[Encontrar](#find)|Localiza um elemento que corresponde a uma chave especificada.|
 |[get_allocator](#get_allocator)|Obtém o objeto de alocador armazenado.|
-|[hash_function](#hash)|Obtém o objeto armazenado da função de hash.|
-|[insert](#insert)|Adiciona elementos.|
-|[key_eq](#key_eq)|Obtém o objeto armazenado da função de comparação.|
+|[Hash_function](#hash)|Obtém o objeto armazenado da função de hash.|
+|[Inserir](#insert)|Adiciona elementos.|
+|[Key_eq](#key_eq)|Obtém o objeto armazenado da função de comparação.|
 |[load_factor](#load_factor)|Conta a média de elementos por bucket.|
 |[max_bucket_count](#max_bucket_count)|Obtém o número máximo de buckets.|
 |[max_load_factor](#max_load_factor)|Obtém ou define o máximo de elementos por bucket.|
-|[max_size](#max_size)|Obtém o tamanho máximo da sequência controlada.|
-|[prolongar](#rehash)|Recria a tabela de hash.|
-|[size](#size)|Conta o número de elementos.|
-|[swap](#swap)|Alterna o conteúdo de dois contêineres.|
+|[Max_size](#max_size)|Obtém o tamanho máximo da sequência controlada.|
+|[Rehash](#rehash)|Recria a tabela de hash.|
+|[Tamanho](#size)|Conta o número de elementos.|
+|[Trocar](#swap)|Alterna o conteúdo de dois contêineres.|
 |[unordered_set](#unordered_set)|Constrói um objeto contêiner.|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[unordered_set::operator=](#op_eq)|Copia uma tabela de hash.|
+|[unordered_set:operador=](#op_eq)|Copia uma tabela de hash.|
 
 ## <a name="remarks"></a>Comentários
 
-O objeto ordena a sequência que ele controla chamando dois objetos armazenados, um objeto de função de comparação do tipo [unordered_set:: key_equal](#key_equal) e um objeto de função de hash do tipo [unordered_set:: Hasher](#hasher). Você acessa o primeiro objeto armazenado chamando a função membro [unordered_set:: key_eq](#key_eq)`()`; e você acessa o segundo objeto armazenado chamando a função membro [unordered_set:: hash_function](#hash)`()`. Especificamente, para todos os valores `X` e `Y` do tipo `Key`, a chamada `key_eq()(X, Y)` retornará true somente se os dois valores de argumento tiverem ordem equivalente; a chamada `hash_function()(keyval)` resulta em uma distribuição de valores do tipo `size_t`. Diferentemente do modelo de classe [Unordered_multiset classe](../standard-library/unordered-multiset-class.md), um objeto do tipo `unordered_set` garante que `key_eq()(X, Y)` seja sempre false para quaisquer dois elementos da sequência controlada. (As chaves são exclusivas.)
+O objeto ordena a seqüência que ele controla chamando dois objetos armazenados, um objeto de função de comparação do tipo [unordered_set::key_equal](#key_equal) e um objeto de função hash do tipo [unordered_set::hasher](#hasher). Você acessa o primeiro objeto armazenado chamando a função de membro [unordered_set::key_eq;](#key_eq)`()` e você acessa o segundo objeto armazenado chamando a função de membro [unordered_set::hash_function](#hash)`()`. Especificamente, para todos os valores `X` e `Y` do tipo `Key`, a chamada `key_eq()(X, Y)` retornará true somente se os dois valores de argumento tiverem ordem equivalente; a chamada `hash_function()(keyval)` resulta em uma distribuição de valores do tipo `size_t`. Ao contrário do modelo de `unordered_set` classe unordered_multiset `key_eq()(X, Y)` [Classe](../standard-library/unordered-multiset-class.md), um objeto de tipo garante que é sempre falso para qualquer dois elementos da seqüência controlada. (As chaves são exclusivas.)
 
-O objeto também armazena um fator de carga máximo, que especifica o número máximo médio desejado de elementos por bucket. Se a inserção de um elemento fizer com que [unordered_set:: load_factor](#load_factor)`()` exceda o fator de carga máximo, o contêiner aumentará o número de buckets e recompilará a tabela de hash conforme necessário.
+O objeto também armazena um fator de carga máximo, que especifica o número máximo médio desejado de elementos por bucket. Se a inserção de um elemento fizer [com que unordered_set::load_factor](#load_factor) `()` exceda o fator máximo de carga, o recipiente aumentará o número de baldes e reconstruirá a tabela hash conforme necessário.
 
 A ordem real de elementos na sequência controlada depende da função de hash, da função de comparação, da ordem de inserção, do fator máximo de carga e do número atual de buckets. Você não pode fazer uma previsão geral da ordem dos elementos na sequência controlada. No entanto, você sempre terá certeza de que qualquer subconjunto de elementos que tenha ordem equivalente será adjacente na sequência de controle.
 
-O objeto aloca e libera o armazenamento para a sequência que ele controla por meio de um objeto alocador armazenado do tipo [unordered_set:: allocator_type](#allocator_type). Esse objeto de alocador deve ter a mesma interface externa que um objeto do tipo `allocator`. Observe que o objeto de alocador armazenado não é copiado quando o objeto de contêiner é atribuído.
+O objeto aloca e libera o armazenamento para a seqüência que ele controla através de um objeto alocador armazenado do tipo [unordered_set::allocator_type](#allocator_type). Tal objeto alocador deve ter a mesma interface `allocator`externa que um objeto de tipo . Observe que o objeto de alocador armazenado não é copiado quando o objeto de contêiner é atribuído.
 
-## <a name="allocator_type"></a>  unordered_set::allocator_type
+## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a>unordered_set:allocator_type
 
 O tipo de um distribuidor para gerenciar o armazenamento.
 
@@ -278,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a>Comece
+## <a name="begin"></a><a name="begin"></a>Começar
 
 Designa o início da sequência controlada ou um bucket.
 
@@ -292,14 +292,14 @@ local_iterator begin(size_type nbucket);
 const_local_iterator begin(size_type nbucket) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *nbucket*
+*nbucket*\
 O número de bucket.
 
 ### <a name="remarks"></a>Comentários
 
-As duas primeiras funções membro retornam um iterador de encaminhamento que aponta para o primeiro elemento da sequência (ou imediatamente após o fim de uma sequência vazia). As duas últimas funções de membro retornam um iterador de encaminhamento que aponta para o primeiro elemento do Bucket *nbucket* (ou apenas além do final de um bucket vazio).
+As duas primeiras funções membro retornam um iterador de encaminhamento que aponta para o primeiro elemento da sequência (ou imediatamente após o fim de uma sequência vazia). As duas últimas funções de membros retornam um iterador dianteiro que aponta para o primeiro elemento do *balde nbucket* (ou pouco além da extremidade de um balde vazio).
 
 ### <a name="example"></a>Exemplo
 
@@ -357,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a>sequencia
+## <a name="bucket"></a><a name="bucket"></a>Balde
 
 Obtém o número de buckets de um valor de chave.
 
@@ -365,14 +365,14 @@ Obtém o número de buckets de um valor de chave.
 size_type bucket(const Key& keyval) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *keyval*
+*Keyval*\
 O valor de chave a ser mapeado.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna o número do Bucket que corresponde ao valor de chave *keyval*.
+A função do membro retorna o número do balde correspondente ao *valor-chave keyval*.
 
 ### <a name="example"></a>Exemplo
 
@@ -412,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>bucket_count
+## <a name="bucket_count"></a><a name="bucket_count"></a>Bucket_count
 
 Obtém o número de buckets.
 
@@ -497,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>bucket_size
+## <a name="bucket_size"></a><a name="bucket_size"></a>bucket_size
 
 Obtém o tamanho de um bucket
 
@@ -505,14 +505,14 @@ Obtém o tamanho de um bucket
 size_type bucket_size(size_type nbucket) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *nbucket*
+*nbucket*\
 O número de bucket.
 
 ### <a name="remarks"></a>Comentários
 
-As funções de membro retornam o tamanho do número de buckets *nbucket*.
+As funções do membro retornam o tamanho do balde *nbucket*número .
 
 ### <a name="example"></a>Exemplo
 
@@ -552,9 +552,9 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
-Retorna um iterador **const** que aborda o primeiro elemento no intervalo.
+Retorna um **iterator const** que aborda o primeiro elemento no intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -562,13 +562,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um iterador de acesso progressivo **const** que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).
+Um **ativador** de acesso avançado que aponta para o primeiro elemento da faixa, ou o local logo `cbegin() == cend()`após o fim de uma faixa vazia (para uma faixa vazia, ).
 
 ### <a name="remarks"></a>Comentários
 
 Com o valor de retorno `cbegin`, os elementos do intervalo não podem ser modificados.
 
-Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` ser um contêiner modificável (não **const**) de qualquer tipo que ofereça suporte a `begin()` e `cbegin()`.
+Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, `Container` considere ser um recipiente modificável (não **const)** `begin()` de `cbegin()`qualquer tipo que suporte e .
 
 ```cpp
 auto i1 = Container.begin();
@@ -578,9 +578,9 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
-Retorna um iterador **const** que aborda o local logo após o último elemento em um intervalo.
+Retorna um **iterador const** que aborda o local logo após o último elemento em uma faixa.
 
 ```cpp
 const_iterator cend() const;
@@ -588,13 +588,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um iterador de acesso de encaminhamento **const** que aponta para além do fim do intervalo.
+Um **ativador** de acesso avançado que aponta um pouco além do fim do intervalo.
 
 ### <a name="remarks"></a>Comentários
 
 `cend` é usado para testar se um iterador passou do fim de seu intervalo.
 
-Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` ser um contêiner modificável (não **const**) de qualquer tipo que ofereça suporte a `end()` e `cend()`.
+Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, `Container` considere ser um recipiente modificável (não **const)** `end()` de `cend()`qualquer tipo que suporte e .
 
 ```cpp
 auto i1 = Container.end();
@@ -606,7 +606,7 @@ auto i2 = Container.cend();
 
 O valor retornado por `cend` não deve ser desreferenciado.
 
-## <a name="clear"></a>formatação
+## <a name="clear"></a><a name="clear"></a>Claro
 
 Remove todos os elementos.
 
@@ -616,7 +616,7 @@ void clear();
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro chama [unordered_set:: erase](#erase)`(` [unordered_set:: Begin](#begin)`(),` [unordered_set:: End](#end)`())`.
+A função membro chama [unordered_set::apagar](#erase) `(` [unordered_set::iniciar](#begin) `(),` [unordered_set::end](#end)`())`.
 
 ### <a name="example"></a>Exemplo
 
@@ -670,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a>Const_iterator
 
 O tipo de um iterador de constante para a sequência controlada.
 
@@ -712,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a>const_local_iterator
+## <a name="const_local_iterator"></a><a name="const_local_iterator"></a>const_local_iterator
 
 O tipo de um iterador de bucket de constante para a sequência controlada.
 
@@ -759,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
 O tipo de um ponteiro de constante para um elemento.
 
@@ -804,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
 O tipo de uma referência de constante para um elemento.
 
@@ -849,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a>contar
+## <a name="count"></a><a name="count"></a>Contar
 
 Localiza o número de elementos que correspondem a uma chave especificada.
 
@@ -857,14 +857,14 @@ Localiza o número de elementos que correspondem a uma chave especificada.
 size_type count(const Key& keyval) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *keyval*
+*Keyval*\
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o número de elementos no intervalo delimitado por [unordered_set:: equal_range](#equal_range)`(keyval)`.
+A função membro retorna o número de elementos no intervalo delimitado por [unordered_set::equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Exemplo
 
@@ -903,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 O tipo de uma distância com sinal entre dois elementos.
 
@@ -959,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a>Emplace
 
 Insere um elemento criado no local (nenhuma operação de cópia ou movimentação é realizada).
 
@@ -970,16 +970,16 @@ emplace(
 Args&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*args*\
+*Args*\
 Os argumentos encaminhados para criar um elemento a ser inserido no unordered_set, a menos que ele já contenha um elemento cujo valor seja ordenado de maneira equivalente.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um `pair` cujo componente **bool** retorna true se uma inserção foi feita e false se a `unordered_set` já continha um elemento cuja chave tinha um valor equivalente na ordenação e cujo componente de iterador retorna o endereço em que um novo elemento foi inserido ou onde o elemento já estava localizado.
+A `pair` cujo componente **bool** retorna verdadeiro se uma `unordered_set` inserção foi feita e falsa se o já continha um elemento cuja chave tinha um valor equivalente na ordem, e cujo componente iterador retorna o endereço onde um novo elemento foi inserido ou onde o elemento já estava localizado.
 
-Para acessar o componente do iterador de um par `pr` retornado por essa função membro, use `pr.first` e, para desreferenciar, use `*(pr.first)`. Para acessar o componente **bool** de um par `pr` retornado por essa função de membro, use `pr.second`.
+Para acessar o componente do iterador de um par `pr` retornado por essa função membro, use `pr.first` e, para desreferenciar, use `*(pr.first)`. Para acessar o componente **bool** de um par `pr` `pr.second`retornado por esta função de membro, use .
 
 ### <a name="remarks"></a>Comentários
 
@@ -987,9 +987,9 @@ Nenhum iterador ou referência será invalidada por essa função.
 
 Durante a inserção, se uma exceção for lançada, mas não ocorrer na função hash do contêiner, o contêiner não será modificado. Se a exceção for lançada na função hash, o resultado é indefinido.
 
-Para obter um exemplo de código, consulte [set:: emplace](../standard-library/set-class.md#emplace).
+Para um exemplo de código, consulte [set::emplace](../standard-library/set-class.md#emplace).
 
-## <a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
 
 Insere um elemento criado no local (nenhuma operação de cópia ou movimentação é realizada), com uma dica de posicionamento.
 
@@ -1000,12 +1000,12 @@ const_iteratorwhere,
 Args&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*args*\
+*Args*\
 Os argumentos encaminhados para criar um elemento a ser inserido no unordered_set, a menos que o unordered_set já contenha esse elemento ou, de modo geral, que ele já contenha um elemento cuja chave seja ordenada de maneira equivalente.
 
-*onde*\
+*Onde*\
 Uma dica relacionada ao local do qual se começa a procurar pelo ponto de inserção correto.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1022,7 +1022,7 @@ Durante a inserção, se uma exceção for lançada, mas não ocorrer na funçã
 
 Para obter um exemplo de código, consulte [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a>esvaziá
+## <a name="empty"></a><a name="empty"></a>Vazio
 
 Testa se nenhum elemento está presente.
 
@@ -1086,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>completo
+## <a name="end"></a><a name="end"></a>Final
 
 Designa o fim da sequência controlada.
 
@@ -1100,14 +1100,14 @@ local_iterator end(size_type nbucket);
 const_local_iterator end(size_type nbucket) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *nbucket*
+*nbucket*\
 O número de bucket.
 
 ### <a name="remarks"></a>Comentários
 
-As duas primeiras funções membro retornam um iterador de encaminhamento que aponta para logo além do fim da sequência. As duas últimas funções de membro retornam um iterador de encaminhamento que aponta muito além do fim do Bucket *nbucket*.
+As duas primeiras funções membro retornam um iterador de encaminhamento que aponta para logo além do fim da sequência. As duas últimas funções de membros retornam um iterador dianteiro que aponta um pouco além do fim do balde *nbucket*.
 
 ### <a name="example"></a>Exemplo
 
@@ -1154,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a>Equal_range
 
 Localiza o intervalo que corresponde a uma chave especificada.
 
@@ -1166,14 +1166,14 @@ std::pair<const_iterator, const_iterator>
 equal_range(const Key& keyval) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *keyval*
+*Keyval*\
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um par de iteradores `X` de forma que`[X.first, X.second)` delimite apenas os elementos da sequência controlada que têm uma ordenação equivalente com *keyval*. Se esses elementos não existirem, ambos os iteradores serão `end()`.
+A função do membro retorna um `X` par`[X.first, X.second)` de iterizadores de modo que delimita apenas os elementos da seqüência controlada que têm ordem equivalente com *keyval*. Se esses elementos não existirem, ambos os iteradores serão `end()`.
 
 ### <a name="example"></a>Exemplo
 
@@ -1222,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a>borracha
+## <a name="erase"></a><a name="erase"></a>Apagar
 
 Remove um elemento ou um intervalo de elementos em um unordered_set das posições especificadas ou remove elementos que correspondem a uma chave especificada.
 
@@ -1234,7 +1234,7 @@ iterator erase(const_iterator First, const_iterator Last);
 size_type erase(const key_type& Key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Onde*\
 A posição do elemento a ser removido.
@@ -1245,7 +1245,7 @@ A posição do primeiro elemento a ser removido.
 *Última*\
 A posição logo após o último elemento a ser removido.
 
-\ de *chave*
+*Chave*\
 O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1258,7 +1258,7 @@ Para a terceira função membro, ele retorna o número de elementos que foram re
 
 Para obter um exemplo de código, consulte [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a>considerar
+## <a name="find"></a><a name="find"></a>Encontrar
 
 Localiza um elemento que corresponde a uma chave especificada.
 
@@ -1266,14 +1266,14 @@ Localiza um elemento que corresponde a uma chave especificada.
 const_iterator find(const Key& keyval) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *keyval*
+*Keyval*\
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna [unordered_set:: equal_range](#equal_range)`(keyval).first`.
+A função membro retorna [unordered_set::equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Exemplo
 
@@ -1317,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 Obtém o objeto de alocador armazenado.
 
@@ -1355,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>hash_function
+## <a name="hash_function"></a><a name="hash"></a>Hash_function
 
 Obtém o objeto armazenado da função de hash.
 
@@ -1393,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>Hasher sem
+## <a name="hasher"></a><a name="hasher"></a>Hasher
 
 O tipo de função de hash.
 
@@ -1431,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>inserido
+## <a name="insert"></a><a name="insert"></a>Inserir
 
 Insere um elemento ou um intervalo de elementos em um unordered_set.
 
@@ -1458,16 +1458,16 @@ void insert(InputIterator First, InputIterator Last);
 void insert(initializer_list<value_type> IList);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Valor*\
+*Val*\
 O valor de um elemento a ser inserido no unordered_set, a menos que ele já contenha um elemento cuja chave seja ordenada de maneira equivalente.
 
 *Onde*\
 O local a partir do qual se começa a procurar pelo ponto de inserção correto.
 
-\ *ValTy*
-Parâmetro de modelo que especifica o tipo de argumento que o unordered_set pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type)e o *valor* de encaminhamentos perfeitos como um argumento.
+*Valty*\
+Parâmetro de modelo que especifica o tipo de argumento que o unordered_set pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type), e aperfeiçoa *Val* como argumento.
 
 *Primeiro*\
 A posição do primeiro elemento a ser copiado.
@@ -1475,15 +1475,15 @@ A posição do primeiro elemento a ser copiado.
 *Última*\
 A posição imediatamente após o último elemento a ser copiado.
 
-\ *InputIterator*
+*Inseriterador*\
 Argumento da função de modelo que atende aos requisitos de um [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que aponta para elementos de um tipo que pode ser usado para construir objetos [value_type](../standard-library/map-class.md#value_type).
 
-*IList*\
-O [initializer_list](../standard-library/initializer-list.md) do qual os elementos serão copiados.
+*Ilist*\
+O [initializer_list](../standard-library/initializer-list.md) a partir do qual copiar os elementos.
 
 ### <a name="return-value"></a>Valor retornado
 
-As funções de membro de elemento único, (1) e (2), retornam um [par](../standard-library/pair-structure.md) cujo componente **bool** é true se uma inserção foi feita e false se o unordered_set já continha um elemento cuja chave tinha um valor equivalente na ordenação. O componente do iterador do par de valor de retorno aponta para o elemento inserido recentemente se o componente **bool** for verdadeiro ou para o elemento existente se o componente **bool** for falso.
+As funções do membro de um elemento único, (1) e (2), retornam um [par](../standard-library/pair-structure.md) cujo componente **bool** é verdadeiro se uma inserção foi feita, e falso se o unordered_set já continha um elemento cuja chave tinha um valor equivalente na ordem. O componente iterador do par de valor de retorno aponta para o elemento recém-inserido se o componente **bool** for verdadeiro ou para o elemento existente se o componente **bool** for falso.
 
 As funções do membro de elemento único com dica, (3) e (4), retornam um iterador que aponta para a posição em que o novo elemento foi inserido no unordered_set ou, se um elemento com uma chave equivalente já existir, para o elemento existente.
 
@@ -1493,21 +1493,21 @@ Nenhum iterador, ponteiro ou referência é invalidado por essa função.
 
 Durante a inserção de apenas um elemento, se uma exceção for lançada, mas não ocorrer na função hash do contêiner, o estado do contêiner não é modificado. Se a exceção for lançada na função hash, o resultado é indefinido. Durante a inserção de vários elementos, se uma exceção for lançada, o contêiner será deixado em um estado não especificado, mas válido.
 
-Para acessar o componente do iterador de um `pair` `pr` retornado pelas funções de membro de elemento único, use `pr.first`; para desreferenciar o iterador no par retornado, use`*pr.first`, fornecendo um elemento. Para acessar o componente **bool** , use `pr.second`. Para obter um exemplo, consulte o código de amostra mais adiante neste artigo.
+Para acessar o componente do `pair` `pr` iterador de um que é retornado pelas funções de membro de um único elemento, use; `pr.first` para desreferenciar o iterator dentro`*pr.first`do par retornado, use, dando-lhe um elemento. Para acessar o componente `pr.second` **bool,** use . Para obter um exemplo, consulte o código de amostra mais adiante neste artigo.
 
 O [value_type](../standard-library/map-class.md#value_type) de um contêiner é um typedef que pertence ao contêiner e, para o conjunto, `unordered_set<V>::value_type` é do tipo `const V`.
 
-A função de membro Range (5) insere a sequência de valores de elemento em um unordered_set que corresponde a cada elemento endereçado por um iterador no intervalo `[First, Last)`; Portanto, *Last* não é inserido. A função de membro do contêiner `end()` faz referência à posição imediatamente após o último elemento no contêiner; por exemplo, a instrução `s.insert(v.begin(), v.end());` tenta inserir todos os elementos de `v` em `s`. Apenas elementos com valores únicos no intervalo são inseridos; as duplicatas são ignoradas. Para observar quais elementos são rejeitados, use as versões de elemento único de `insert`.
+A função membro de intervalo (5) insere a seqüência de valores do elemento `[First, Last)`em um unordered_set que corresponde a cada elemento abordado por um iterizador na faixa; portanto, *o último* não é inserido. A função de membro do contêiner `end()` faz referência à posição imediatamente após o último elemento no contêiner; por exemplo, a instrução `s.insert(v.begin(), v.end());` tenta inserir todos os elementos de `v` em `s`. Apenas elementos com valores únicos no intervalo são inseridos; as duplicatas são ignoradas. Para observar quais elementos são rejeitados, use as versões de elemento único de `insert`.
 
-A função de membro da lista de inicializadores (6) usa um [initializer_list](../standard-library/initializer-list.md) para copiar elementos para o unordered_set.
+A função de membro da lista inicializadora (6) usa um [initializer_list](../standard-library/initializer-list.md) para copiar elementos no unordered_set.
 
 Para inserir um elemento criado no local, ou seja, sem a realização de operações de cópia ou movimentação, consulte [set::emplace](../standard-library/set-class.md#emplace) e [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-Para obter um exemplo de código, consulte [set:: Insert](../standard-library/set-class.md#insert).
+Para um exemplo de código, consulte [set::insert](../standard-library/set-class.md#insert).
 
-## <a name="iterator"></a>repeti
+## <a name="iterator"></a><a name="iterator"></a>Iterador
 
-Um tipo que fornece um [iterador de encaminhamento](../standard-library/forward-iterator-tag-struct.md) constante que pode ler elementos em um unordered_set.
+Um tipo que fornece um [temporter avançado](../standard-library/forward-iterator-tag-struct.md) constante que pode ler elementos em um unordered_set.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1515,9 +1515,9 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>Exemplo
 
-Consulte o exemplo de [início](../standard-library/set-class.md#begin) para obter um exemplo de como declarar e usar um**iterador**.
+Veja o exemplo para [começar](../standard-library/set-class.md#begin) para um exemplo de como declarar e usar um**iterizador**.
 
-## <a name="key_eq"></a>key_eq
+## <a name="key_eq"></a><a name="key_eq"></a>Key_eq
 
 Obtém o objeto armazenado da função de comparação.
 
@@ -1557,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>key_equal
+## <a name="key_equal"></a><a name="key_equal"></a>Key_equal
 
 O tipo da função de comparação.
 
@@ -1597,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a>key_type
 
 O tipo de uma chave de classificação.
 
@@ -1649,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a>load_factor
+## <a name="load_factor"></a><a name="load_factor"></a>Load_factor
 
 Conta a média de elementos por bucket.
 
@@ -1659,7 +1659,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna `(float)`[unordered_set::size](#size)`() / (float)`[unordered_set::bucket_count](#bucket_count)`()`, o número médio de elementos por bucket.
+A função`(float)`membro retorna[unordered_set::tamanho](#size)`() / (float)`[unordered_set:bucket_count](#bucket_count)`()`, o número médio de elementos por balde.
 
 ### <a name="example"></a>Exemplo
 
@@ -1734,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a>local_iterator
+## <a name="local_iterator"></a><a name="local_iterator"></a>local_iterator
 
 O tipo de um iterador de bucket.
 
@@ -1781,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a>max_bucket_count
+## <a name="max_bucket_count"></a><a name="max_bucket_count"></a>max_bucket_count
 
 Obtém o número máximo de buckets.
 
@@ -1866,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a><a name="max_load_factor"></a>max_load_factor
 
 Obtém ou define o máximo de elementos por bucket.
 
@@ -1876,14 +1876,14 @@ float max_load_factor() const;
 void max_load_factor(float factor);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*fator*\
+*Fator*\
 O novo fator de carga máxima.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro retorna o fator de carga máxima armazenado. A segunda função de membro substitui o fator de carga máximo armazenado pelo *fator*.
+A primeira função membro retorna o fator de carga máxima armazenado. A segunda função do membro substitui o fator de carga máxima armazenado pelo *fator*.
 
 ### <a name="example"></a>Exemplo
 
@@ -1958,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>Max_size
 
 Obtém o tamanho máximo da sequência controlada.
 
@@ -1993,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="op_eq"></a>operador =
+## <a name="operator"></a><a name="op_eq"></a>operador=
 
 Copia uma tabela de hash.
 
@@ -2003,14 +2003,14 @@ unordered_set& operator=(const unordered_set& right);
 unordered_set& operator=(unordered_set&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à direita*
+*Certo*\
 O [unordered_set](../standard-library/unordered-set-class.md) sendo copiado para o `unordered_set`.
 
 ### <a name="remarks"></a>Comentários
 
-Depois de apagar todos os elementos existentes em um `unordered_set`, `operator=` copia ou move o conteúdo do *lado* para o `unordered_set`.
+Depois de apagar quaisquer `unordered_set`elementos `operator=` existentes em um , ou `unordered_set`copia ou move o conteúdo da direita *para* o .
 
 ### <a name="example"></a>Exemplo
 
@@ -2049,7 +2049,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>refere
+## <a name="pointer"></a>Ponteiro <a name="pointer"></a>
 
 O tipo de um ponteiro para um elemento.
 
@@ -2095,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a>referência
+## <a name="reference"></a><a name="reference"></a>Referência
 
 O tipo de uma referência para um elemento.
 
@@ -2141,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a>prolongar
+## <a name="rehash"></a><a name="rehash"></a>Rehash
 
 Recria a tabela de hash.
 
@@ -2149,14 +2149,14 @@ Recria a tabela de hash.
 void rehash(size_type nbuckets);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *nbuckets*
+*nbuckets*\
 O número solicitado de buckets.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro altera o número de buckets para ser pelo menos *nbuckets* e recria a tabela de hash conforme necessário.
+A função do membro altera o número de baldes para serem pelo menos *nbuckets* e reconstrói a tabela hash conforme necessário.
 
 ### <a name="example"></a>Exemplo
 
@@ -2218,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>tamanho
+## <a name="size"></a><a name="size"></a>Tamanho
 
 Conta o número de elementos.
 
@@ -2283,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 O tipo de uma distância sem sinal entre dois elementos.
 
@@ -2319,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>permuta
+## <a name="swap"></a><a name="swap"></a>Trocar
 
 Alterna o conteúdo de dois contêineres.
 
@@ -2327,14 +2327,14 @@ Alterna o conteúdo de dois contêineres.
 void swap(unordered_set& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à direita*
+*Certo*\
 O contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca as sequências controladas entre `*this` e *direita*. Se [unordered_set:: get_allocator](#get_allocator)`() == right.get_allocator()`, ele faz isso em constante tempo, ele lança uma exceção somente como resultado da cópia do objeto de características armazenadas do tipo `Tr`e invalida nenhuma referência, ponteiros ou iteradores que designam elementos nas duas sequências controladas. Caso contrário, executará uma série de atribuições de elemento e de chamadas do construtor proporcional ao número de elementos nas duas sequências controladas.
+A função do membro troca `*this` as seqüências controladas entre e *a direita*. Se [unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`, ele o faz em tempo constante, ele lança uma exceção `Tr`apenas como resultado da cópia dos traços armazenados objeto do tipo , e invalida nenhuma referência, ponteiros ou iteradores que designem elementos nas duas seqüências controladas. Caso contrário, executará uma série de atribuições de elemento e de chamadas do construtor proporcional ao número de elementos nas duas sequências controladas.
 
 ### <a name="example"></a>Exemplo
 
@@ -2388,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a>unordered_set
+## <a name="unordered_set"></a><a name="unordered_set"></a>Unordered_set
 
 Constrói um objeto contêiner.
 
@@ -2435,9 +2435,9 @@ unordered_set(
     const Allocator& Al = Alloc());
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *InputIterator*
+*Inseriterador*\
 O tipo de iterador.
 
 *Al*\
@@ -2446,33 +2446,33 @@ O objeto de alocador a ser armazenado.
 *Comp*\
 O objeto de função de comparação a ser armazenado.
 
-\ de *hash*
+*Hash*\
 O objeto de função de hash a ser armazenado.
 
-*bucket_count*\
+*Bucket_count*\
 O número mínimo de buckets.
 
-\ *à direita*
+*Certo*\
 O contêiner a ser copiado.
 
-*IList*\
+*Ilist*\
 A initializer_list que contém os elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor Especifica uma cópia da sequência controlada pela *direita*. O segundo construtor especifica uma sequência controlada vazia. O terceiro construtor Especifica uma cópia da sequência, movendo para a *direita* o quarto até oitavo construtores usam um initializer_list para especificar os elementos a serem copiados. O nono construtor insere a sequência dos valores `[first, last)` do elemento.
+O primeiro construtor especifica uma cópia da seqüência controlada por *Right*. O segundo construtor especifica uma sequência controlada vazia. O terceiro construtor especifica uma cópia da seqüência *movendo-se para a direita O* quarto para o oitavo construtores usa um initializer_list para especificar os elementos a serem copiados. O nono construtor insere a sequência dos valores `[first, last)` do elemento.
 
-Todos os construtores também inicializam vários valores armazenados. Para o construtor de cópia, os valores são obtidos da *direita*. Caso contrário:
+Todos os construtores também inicializam vários valores armazenados. Para o construtor de cópias, os valores são obtidos da *Direita*. Caso contrário:
 
-O número mínimo de buckets é o argumento *bucket_count*, se presente; caso contrário, é um valor padrão descrito aqui como o valor definido pela implementação `N0`.
+O número mínimo de baldes é o argumento *bucket_count*, se presente; caso contrário, é um valor padrão descrito `N0`aqui como o valor definido pela implementação.
 
-O objeto de função de hash é o *hash*de argumento, se presente; caso contrário, será `Hash()`.
+O objeto de função hash é o argumento *Hash*, se presente; caso contrário, `Hash()`é .
 
-O objeto de função de comparação é o argumento *comp*, se presente; caso contrário, será `Comp()`.
+O objeto da função de comparação é o argumento *Comp*, se presente; caso contrário, `Comp()`é .
 
-O objeto de alocador é o argumento *Al*, se presente; caso contrário, será `Alloc()`.
+O objeto alocador é o argumento *Al*, se presente; caso contrário, `Alloc()`é.
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>Value_type
 
 O tipo de um elemento.
 

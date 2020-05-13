@@ -1,8 +1,9 @@
 ---
 title: fread_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fread_s
+- _o_fread_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 340d8188deb34166b1bea58cfc4fe7985cdc5e05
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956843"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919458"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -48,7 +50,7 @@ size_t fread_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento de dados.
 
 *bufferSize*<br/>
@@ -57,15 +59,15 @@ Tamanho do buffer de destino em bytes.
 *elementSize*<br/>
 Tamanho do item a ser lido em bytes.
 
-*count*<br/>
+*contagem*<br/>
 Número máximo de itens a serem lidos.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**fread_s** retorna o número de itens (inteiros) que foram lidos no buffer, o que pode ser menor que a *contagem* se um erro de leitura ou o final do arquivo for encontrado antes que a *contagem* seja atingida. Use a função **feof** ou **referenciadora** para distinguir um erro de uma condição de fim de arquivo. Se *tamanho* ou *contagem* for 0, **fread_s** retornará 0 e o conteúdo do buffer não será alterado. Se *Stream* ou *buffer* for um ponteiro NULL, **fread_s** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
+**fread_s** retorna o número de itens (inteiros) que foram lidos no buffer, o que pode ser menor que a *contagem* se um erro de leitura ou o final do arquivo for encontrado antes que a *contagem* seja atingida. Use a função **feof** ou **referenciadora** para distinguir um erro de uma condição de fim de arquivo. Se *tamanho* ou *contagem* for 0, **fread_s** retornará 0 e o conteúdo do buffer não será alterado. Se o *fluxo* ou o *buffer* for um ponteiro nulo, **fread_s** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
 
 Para obter mais informações sobre códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -75,13 +77,15 @@ A função **fread_s** lê para *contar* os itens de *elementos de elementar* by
 
 Essa função bloqueia outros threads. Se você precisar de uma versão sem bloqueio, use **_fread_nolock**.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -150,7 +154,7 @@ Contents of buffer after write/read:
         zyxwvutsrqponmlkjihgfe
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

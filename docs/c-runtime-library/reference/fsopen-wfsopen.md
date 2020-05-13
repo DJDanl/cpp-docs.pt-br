@@ -1,9 +1,11 @@
 ---
 title: _fsopen, _wfsopen
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wfsopen
 - _fsopen
+- _o__fsopen
+- _o__wfsopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 1ffc3aa5801ff2ed63ecf815f3351e4d7a8cf459
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7c7f079d8867416ab4f091d7c95a01ab9e40c0e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956475"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910152"
 ---
 # <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
@@ -66,16 +69,16 @@ FILE *_wfsopen(
 
 ### <a name="parameters"></a>Parâmetros
 
-*filename*<br/>
+*nome do arquivo*<br/>
 Nome do arquivo a ser aberto.
 
-*modo*<br/>
+*mode*<br/>
 Tipo de acesso permitido.
 
 *shflag*<br/>
 Tipo de compartilhamento permitido.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna um ponteiro para o fluxo. Um valor de ponteiro nulo indica um erro. Se o *nome do arquivo* ou o *modo* for **nulo** ou uma cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **NULL** e definirá **errno** como **EINVAL**.
 
@@ -83,28 +86,28 @@ Para obter mais informações sobre esses e outros códigos de erro, consulte [_
 
 ## <a name="remarks"></a>Comentários
 
-A função **_fsopen** abre o arquivo especificado por *filename* como um fluxo e prepara o arquivo para leitura ou gravação compartilhada subsequente, conforme definido pelos argumentos Mode e *shflag* . **_wfsopen** é uma versão de caractere largo do **_fsopen**; os argumentos *filename* e *Mode* para **_wfsopen** são cadeias de caracteres largos. **_wfsopen** e **_fsopen** se comportam de outra forma.
+A função **_fsopen** abre o arquivo especificado por *filename* como um fluxo e prepara o arquivo para leitura ou gravação compartilhada subsequente, conforme definido pelos argumentos Mode e *shflag* . **_wfsopen** é uma versão de caractere largo do **_fsopen**; os argumentos *filename* e *Mode* para **_wfsopen** são cadeias de caracteres largos. **_wfsopen** e **_fsopen** se comportar de forma idêntica.
 
 O *modo* de cadeia de caracteres especifica o tipo de acesso solicitado para o arquivo, conforme mostrado na tabela a seguir.
 
 |Termo|Definição|
 |----------|----------------|
-|**"r"**|Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **_fsopen** falhará.|
-|**"w"**|Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.|
-|**"a"**|Abre para gravação no final do arquivo (acréscimo); cria o arquivo primeiro se ele não existir.|
-|**"r+"**|Abre para leitura e gravação. (O arquivo deve existir.)|
-|**"w+"**|Abre um arquivo vazio para leitura e gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.|
-|**"a+"**|Abre para gravação e acréscimo; cria o arquivo primeiro se ele não existir.|
+|**d**|Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada de **_fsopen** falhará.|
+|**Mostrar**|Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.|
+|**um**|Abre para gravação no final do arquivo (acréscimo); cria o arquivo primeiro se ele não existir.|
+|**"r +"**|Abre para leitura e gravação. (O arquivo deve existir.)|
+|**"w +"**|Abre um arquivo vazio para leitura e gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.|
+|**"a +"**|Abre para gravação e acréscimo; cria o arquivo primeiro se ele não existir.|
 
 Use os tipos **"w"** e **"w +"** com cuidado, pois eles podem destruir arquivos existentes.
 
-Quando um arquivo é aberto com o tipo de acesso **"a"** ou **"a +"** , todas as operações de gravação ocorrem no final do arquivo. O ponteiro do arquivo pode ser reposicionado usando [fseek](fseek-fseeki64.md) ou [retrocesso](rewind.md), mas sempre é movido de volta para o final do arquivo antes de qualquer operação de gravação ser executada. Sendo assim, dados existentes não podem ser substituídos. Quando o tipo de acesso **"r +"** , **"w +"** ou **"a +"** é especificado, a leitura e a gravação são permitidas (o arquivo é considerado aberto para atualização). No entanto, ao alternar entre leitura e gravação, deve haver uma operação [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) ou [rewind](rewind.md) intermediária. A posição atual pode ser especificada para a operação [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) , se desejado. Além dos valores acima, um dos caracteres a seguir pode ser incluído no *modo* para especificar o modo de tradução para novas linhas e para o gerenciamento de arquivos.
+Quando um arquivo é aberto com o tipo de acesso **"a"** ou **"a +"** , todas as operações de gravação ocorrem no final do arquivo. O ponteiro do arquivo pode ser reposicionado usando [fseek](fseek-fseeki64.md) ou [retrocesso](rewind.md), mas sempre é movido de volta para o final do arquivo antes de qualquer operação de gravação ser executada. Portanto, os dados existentes não podem ser substituídos. Quando o tipo de acesso **"r +"**, **"w +"** ou **"a +"** é especificado, a leitura e a gravação são permitidas (o arquivo é considerado aberto para atualização). No entanto, ao alternar entre leitura e gravação, deve haver uma operação [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) ou [rewind](rewind.md) intermediária. A posição atual pode ser especificada para a operação [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) , se desejado. Além dos valores acima, um dos caracteres a seguir pode ser incluído no *modo* para especificar o modo de tradução para novas linhas e para o gerenciamento de arquivos.
 
 |Termo|Definição|
 |----------|----------------|
 |**t**|Abre um arquivo no modo de texto (convertido). Nesse modo, as combinações de CR-LF (retorno de carro-alimentação de linha) são convertidas em LF (single line feeds) em caracteres de entrada e LF são convertidas em combinações de CR-LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura ou leitura/gravação, o **_fsopen** verifica se há um CTRL + Z no final do arquivo e o Remove, se possível. Isso é feito porque o uso de [fseek](fseek-fseeki64.md) e [ftell](ftell-ftelli64.md) para mover dentro de um arquivo que termina com CTRL + Z pode fazer com que o [fseek](fseek-fseeki64.md) se comporte incorretamente próximo ao final do arquivo.|
 |**b**|Abre um arquivo no modo binário (não convertido); as conversões acima são suprimidas.|
-|**S**|Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso.|
+|**&**|Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso.|
 |**R**|Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso.|
 |**T**|Especifica um arquivo como temporário. Se possível, ele não é liberado no disco.|
 |**D**|Especifica um arquivo como temporário. É excluído quando o último ponteiro de arquivo é fechado.|
@@ -120,6 +123,8 @@ O argumento *shflag* é uma expressão constante que consiste em uma das constan
 |**_SH_DENYRD**|Nega acesso de leitura ao arquivo.|
 |**_SH_DENYRW**|Nega acesso de leitura e gravação ao arquivo.|
 |**_SH_DENYWR**|Nega acesso de gravação ao arquivo.|
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -166,7 +171,7 @@ int main( void )
 No one else in the network can write to this file until we are done.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

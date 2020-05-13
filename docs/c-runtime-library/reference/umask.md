@@ -1,8 +1,9 @@
 ---
 title: _umask
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask
+- _o__umask
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957489"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913839"
 ---
 # <a name="_umask"></a>_umask
 
@@ -51,7 +53,7 @@ int _umask( int pmode );
 *pmode*<br/>
 Configuração de permissão padrão.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_umask** retorna o valor anterior de *pmode*. Nenhum erro é retornado.
 
@@ -67,9 +69,11 @@ A expressão de inteiro *pmode* contém uma ou ambas as seguintes constantes de 
 | **_S_IREAD** | Leitura permitida. |
 | **_S_IREAD** &#124; **_S_IWRITE** | Leitura e gravação permitidas. |
 
-Quando ambas as constantes são fornecidas, elas são unidas com o operador OR bit- **&#124;** a-or (). Se o argumento *pmode* for **_S_IREAD**, a leitura não será permitida (o arquivo é somente gravação). Se o argumento *pmode* for **_S_IWRITE**, a gravação não será permitida (o arquivo é somente leitura). Por exemplo, se o bit de gravação estiver definido na máscara, quaisquer novos arquivos serão somente leitura. Observe que nos sistemas operacionais MS-DOS e Windows, todos os arquivos podem ser lidos; não é possível conceder permissão somente gravação. Portanto, definir o bit de leitura com **_umask** não tem nenhum efeito nos modos do arquivo.
+Quando ambas as constantes são fornecidas, elas são unidas com o operador OR bit-a-OR ( **&#124;** ). Se o argumento *pmode* for **_S_IREAD**, a leitura não será permitida (o arquivo é somente gravação). Se o argumento *pmode* for **_S_IWRITE**, a gravação não será permitida (o arquivo é somente leitura). Por exemplo, se o bit de gravação estiver definido na máscara, quaisquer novos arquivos serão somente leitura. Observe que nos sistemas operacionais MS-DOS e Windows, todos os arquivos podem ser lidos; não é possível conceder permissão somente gravação. Portanto, definir o bit de leitura com **_umask** não tem nenhum efeito nos modos do arquivo.
 
 Se *pmode* não for uma combinação de uma das constantes de manifesto ou incorporar um conjunto alternativo de constantes, a função simplesmente irá ignorá-las.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,9 +81,9 @@ Se *pmode* não for uma combinação de uma das constantes de manifesto ou incor
 |-------------|---------------------|
 |**_umask**|\<io.h>, \<sys/stat.h>, \<sys/types.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -112,7 +116,7 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>

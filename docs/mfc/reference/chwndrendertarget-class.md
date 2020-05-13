@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1669d89183cd971e1afe0f05a1bad040f6b07df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345780"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752707"
 ---
 # <a name="chwndrendertarget-class"></a>Classe CHwndRenderTarget
 
-Um wrapper para ID2D1HwndRenderTarget.
+Um invólucro para ID2D1HwndRenderTarget.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,28 +49,28 @@ class CHwndRenderTarget : public CRenderTarget;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Constrói um objeto CHwndRenderTarget HWND.|
+|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Constrói um objeto CHwndRenderTarget a partir de HWND.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CHwndRenderTarget::Attach](#attach)|Anexa existente renderizar a interface para o objeto de destino|
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Indica se o HWND associado a esse destino de renderização é obstruído.|
-|[CHwndRenderTarget::Create](#create)|Cria um destino de renderização associado à janela|
-|[CHwndRenderTarget::Detach](#detach)|Desanexa a interface de destino de renderização do objeto|
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|Retorna o HWND associado a esse destino de renderização.|
-|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Interface de ID2D1HwndRenderTarget retorna.|
-|[CHwndRenderTarget::ReCreate](#recreate)|Recria um destino de renderização associado à janela|
-|[CHwndRenderTarget::Resize](#resize)|Altera o tamanho do destino de renderização para o tamanho de pixel especificado|
+|[CHwndRenderTarget::Anexo](#attach)|Anexa a interface de destino de renderização existente ao objeto|
+|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Indica se o HWND associado a este alvo de renderização está ocluído.|
+|[CHwndRenderTarget::Criar](#create)|Cria um destino de renderização associado à janela|
+|[CHwndRenderTarget::Detach](#detach)|Desapegos renderizam interface de destino do objeto|
+|[CHwndRenderTarget::GetHwnd](#gethwnd)|Retorna o HWND associado a este destino de renderização.|
+|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Retorna interface ID2D1HwndRenderTarget.|
+|[CHwndRenderTarget::Recriar](#recreate)|Recria um destino de renderização associado à janela|
+|[CHwndRenderTarget::Redimensionar](#resize)|Altera o tamanho do destino de renderização para o tamanho de pixel especificado|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Interface de ID2D1HwndRenderTarget retorna.|
+|[CHwndRenderTarget::operador ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|Retorna interface ID2D1HwndRenderTarget.|
 
-### <a name="protected-data-members"></a>Membros de dados protegidos
+### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -78,7 +78,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
@@ -88,34 +88,34 @@ class CHwndRenderTarget : public CRenderTarget;
 
 **Cabeçalho:** afxrendertarget.h
 
-##  <a name="attach"></a>  CHwndRenderTarget::Attach
+## <a name="chwndrendertargetattach"></a><a name="attach"></a>CHwndRenderTarget::Anexo
 
-Anexa existente renderizar a interface para o objeto de destino
+Anexa a interface de destino de renderização existente ao objeto
 
-```
+```cpp
 void Attach(ID2D1HwndRenderTarget* pTarget);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*pTarget*<br/>
-Adaptador de destino de renderização existente. Não pode ser NULL
+*Ptarget*<br/>
+Interface de destino de renderização existente. Não pode ser NULO
 
-##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState
+## <a name="chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState
 
-Indica se o HWND associado a esse destino de renderização é obstruído.
+Indica se o HWND associado a este alvo de renderização está ocluído.
 
 ```
 D2D1_WINDOW_STATE CheckWindowState() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor que indica se o HWND associado a esse destino de renderização é obstruído.
+Um valor que indica se o HWND associado a este destino de renderização está ocluído.
 
-##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget
+## <a name="chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget
 
-Constrói um objeto CHwndRenderTarget HWND.
+Constrói um objeto CHwndRenderTarget a partir de HWND.
 
 ```
 CHwndRenderTarget(HWND hwnd = NULL);
@@ -123,10 +123,10 @@ CHwndRenderTarget(HWND hwnd = NULL);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hwnd*<br/>
-O HWND associado a esse destino de renderização
+*Hwnd*<br/>
+O HWND associado a este alvo de renderização
 
-##  <a name="create"></a>  CHwndRenderTarget::Create
+## <a name="chwndrendertargetcreate"></a><a name="create"></a>CHwndRenderTarget::Criar
 
 Cria um destino de renderização associado à janela
 
@@ -137,49 +137,49 @@ BOOL Create(HWND hWnd);
 ### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
-O HWND associado a esse destino de renderização
+O HWND associado a este alvo de renderização
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se o método for bem-sucedido, ele retornará TRUE. Caso contrário, retornará FALSE
+Se o método for bem sucedido, ele retorna TRUE. Caso contrário, ele retorna FALSO
 
-##  <a name="detach"></a>  CHwndRenderTarget::Detach
+## <a name="chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderTarget::Detach
 
-Desanexa a interface de destino de renderização do objeto
+Desapegos renderizam interface de destino do objeto
 
 ```
 ID2D1HwndRenderTarget* Detach();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para desanexado renderizar a interface de destino.
+Ponteiro para interface de destino de renderização separada.
 
-##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd
+## <a name="chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndRenderTarget::GetHwnd
 
-Retorna o HWND associado a esse destino de renderização.
+Retorna o HWND associado a este destino de renderização.
 
 ```
 HWND GetHwnd() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O HWND associado a esse destino de renderização.
+O HWND associado a este alvo de renderização.
 
-##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget
+## <a name="chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget
 
-Interface de ID2D1HwndRenderTarget retorna.
+Retorna interface ID2D1HwndRenderTarget.
 
 ```
 ID2D1HwndRenderTarget* GetHwndRenderTarget();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para uma interface ID2D1HwndRenderTarget ou NULL se o objeto ainda não foi inicializado.
+Ponteiro para uma interface ID2D1HwndRenderTarget ou NULL se o objeto ainda não estiver inicializado.
 
-##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget
+## <a name="chwndrendertargetm_phwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget
 
 Um ponteiro para um objeto ID2D1HwndRenderTarget.
 
@@ -187,19 +187,19 @@ Um ponteiro para um objeto ID2D1HwndRenderTarget.
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;
 ```
 
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget*
+## <a name="chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operador ID2D1HwndRenderTarget*
 
-Interface de ID2D1HwndRenderTarget retorna.
+Retorna interface ID2D1HwndRenderTarget.
 
 ```
 operator ID2D1HwndRenderTarget*();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para uma interface ID2D1HwndRenderTarget ou NULL se o objeto ainda não foi inicializado.
+Ponteiro para uma interface ID2D1HwndRenderTarget ou NULL se o objeto ainda não estiver inicializado.
 
-##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate
+## <a name="chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndRenderTarget::Recriar
 
 Recria um destino de renderização associado à janela
 
@@ -210,13 +210,13 @@ BOOL ReCreate(HWND hWnd);
 ### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
-O HWND associado a esse destino de renderização
+O HWND associado a este alvo de renderização
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se o método for bem-sucedido, ele retornará TRUE. Caso contrário, retornará FALSE.
+Se o método for bem sucedido, ele retorna TRUE. Caso contrário, ele retorna FALSO.
 
-##  <a name="resize"></a>  CHwndRenderTarget::Resize
+## <a name="chwndrendertargetresize"></a><a name="resize"></a>CHwndRenderTarget::Redimensionar
 
 Altera o tamanho do destino de renderização para o tamanho de pixel especificado
 
@@ -229,10 +229,10 @@ BOOL Resize(const CD2DSizeU& size);
 *size*<br/>
 O novo tamanho do destino de renderização em pixels do dispositivo
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se o método for bem-sucedido, ele retornará TRUE. Caso contrário, retornará FALSE.
+Se o método for bem sucedido, ele retorna TRUE. Caso contrário, ele retorna FALSO.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes](../../mfc/reference/mfc-classes.md)

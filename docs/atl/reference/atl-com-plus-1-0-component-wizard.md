@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075276"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321684"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistente de componente de COM+ 1.0 da ATL
 
@@ -57,7 +57,7 @@ Especifique os nomes para o objeto, a interface e as classes a ser adicionados a
 
    Indica se o objeto usa atributos. Se você estiver adicionando um objeto a um projeto ATL atribuído, essa opção será selecionada e não estará disponível para alteração. Ou seja, você pode adicionar somente objetos atribuídos a um projeto criado com suporte a atributos.
 
-   Se você selecionar essa opção para um projeto ATL que não tenha suporte a atributo, o assistente solicitará que você especifique se deseja adicionar suporte a atributo ao projeto.
+   Se você selecionar essa opção para um projeto ATL que não seja compatível com o atributo, o assistente solicitará que você especifique se deseja adicionar suporte a atributo ao projeto.
 
    Qualquer objeto que você adiciona após definir essa opção será designado como atribuído por padrão (a caixa de seleção fica marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
 
@@ -72,7 +72,7 @@ Fornece informações sobre a funcionalidade COM do objeto.
    Define o nome da classe do componente que contém uma lista de interfaces compatíveis com o objeto.
 
 > [!NOTE]
->  Se você criar seu projeto usando atributos, ou se indicar nesta página do assistente que o componente COM+ 1.0 usa atributos, não será possível alterar essa opção, pois a ATL não inclui o atributo `coclass`.
+> Se você criar seu projeto usando atributos, ou se indicar nesta página do assistente que o componente COM+ 1.0 usa atributos, não será possível alterar essa opção, pois a ATL não inclui o atributo `coclass`.
 
 - **Tipo**
 

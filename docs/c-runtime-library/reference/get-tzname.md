@@ -1,8 +1,9 @@
 ---
 title: _get_tzname
-ms.date: 10/22/2018
+ms.date: 4/2/2020
 api_name:
 - _get_tzname
+- _o__get_tzname
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 9f86a4997c328e86597e3bad8a7f7a3a5f5f50b6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955619"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919678"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -51,7 +53,7 @@ errno_t _get_tzname(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pReturnValue*<br/>
+*preativar*<br/>
 O tamanho da cadeia de caracteres de *timeZoneName* incluindo um terminador nulo.
 
 *timeZoneName*<br/>
@@ -71,25 +73,27 @@ O índice de um dos dois nomes de fuso horário a serem recuperados.
 
 A menos que os valores sejam alterados explicitamente durante o tempo de execução, os valores padrão serão "PST" e "PDT" respectivamente.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido, caso contrário, um valor de tipo **errno** .
 
 Se *timeZoneName* for **nulo**ou *sizeInBytes* for zero ou menor que zero (mas não ambos), um manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
-|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Valor retornado|Conteúdo de *timeZoneName*|
+|*preativar*|*timeZoneName*|*sizeInBytes*|*index*|Valor retornado|Conteúdo de *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|tamanho do nome do FH|**NULL**|0|0 ou 1|0|não modificado|
-|tamanho do nome do FH|qualquer|> 0|0 ou 1|0|Nome do FH|
-|não modificado|**NULL**|> 0|qualquer|**EINVAL**|não modificado|
-|não modificado|qualquer|zero|qualquer|**EINVAL**|não modificado|
-|não modificado|qualquer|> 0|> 1|**EINVAL**|não modificado|
+|tamanho do nome do FH|**NULO**|0|0 ou 1|0|não modificado|
+|tamanho do nome do FH|any|> 0|0 ou 1|0|Nome do FH|
+|não modificado|**NULO**|> 0|any|**EINVAL**|não modificado|
+|não modificado|any|zero|any|**EINVAL**|não modificado|
+|não modificado|any|> 0|> 1|**EINVAL**|não modificado|
 
 ## <a name="remarks"></a>Comentários
 
-A função **_get_tzname** recupera a representação de cadeia de caracteres do nome do fuso horário atual ou o horário de Verão (horário de hora padrão) no endereço do *timeZoneName* , dependendo do valor do índice, juntamente com o tamanho da cadeia de caracteres em *preligávalue*. Se *timeZoneName* for **NULL** e *sizeInBytes* for zero, o tamanho da cadeia de caracteres necessária para manter o fuso horário especificado e um nulo de terminação em bytes será retornado em *pretransformvalue*. Os valores de índice devem ser 0 para o fuso horário padrão ou 1 para o fuso horário padrão de verão; quaisquer outros valores de *índice* têm resultados indeterminados.
+A função **_get_tzname** recupera a representação de cadeia de caracteres do nome do fuso horário atual ou o horário de Verão (horário padrão) para o endereço do *timeZoneName* , dependendo do valor do índice, junto com o tamanho da cadeia de caracteres em *preligávalue*. Se *timeZoneName* for **NULL** e *sizeInBytes* for zero, o tamanho da cadeia de caracteres necessária para manter o fuso horário especificado e um nulo de terminação em bytes será retornado em *pretransformvalue*. Os valores de índice devem ser 0 para o fuso horário padrão ou 1 para o fuso horário padrão de verão; quaisquer outros valores de *índice* têm resultados indeterminados.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -145,7 +149,7 @@ Para obter mais informações, consulte [Compatibilidade](../../c-runtime-librar
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>

@@ -1,9 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951788"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914089"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -67,26 +69,28 @@ Tamanho do buffer de destino.
 *src*<br/>
 Objeto de origem.
 
-*count*<br/>
+*contagem*<br/>
 Número de bytes (**memmove_s**) ou caracteres (**wmemmove_s**) a serem copiados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido ou um código de erro em caso de falha
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
 |*dest*|*numberOfElements*|*src*|Valor retornado|Conteúdo do *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|qualquer|qualquer|**EINVAL**|não modificado|
-|qualquer|qualquer|**NULL**|**EINVAL**|não modificado|
-|qualquer|< *contar*|qualquer|**ERANGE**|não modificado|
+|**NULO**|any|any|**EINVAL**|não modificado|
+|any|any|**NULO**|**EINVAL**|não modificado|
+|any|< *contar*|any|**ERANGE**|não modificado|
 
 ## <a name="remarks"></a>Comentários
 
-Copia os bytes de *contagem* de caracteres de *src* para *dest*. Se algumas regiões da área de origem e o destino se sobrepõem, o **memmove_s** garante que os bytes de origem originais na região de sobreposição sejam copiados antes de serem substituídos.
+Copia os bytes de *contagem* de caracteres de *src* para *dest*. Se algumas regiões da área de origem e o destino se sobrepõem, **memmove_s** garante que os bytes de origem originais na região de sobreposição sejam copiados antes de serem substituídos.
 
 Se *dest* ou se *src* for um ponteiro NULL, ou se a cadeia de caracteres de destino for muito pequena, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **EINVAL** e definirá **errno** como **EINVAL**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -95,7 +99,7 @@ Se *dest* ou se *src* for um ponteiro NULL, ou se a cadeia de caracteres de dest
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

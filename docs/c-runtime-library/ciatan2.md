@@ -1,8 +1,9 @@
 ---
 title: _CIatan2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIatan2
+- _o__CIatan2
 api_location:
 - msvcr80.dll
 - msvcrt.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,20 +25,20 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: dee536b41ccb4c45284fa418e92b99807e51c53a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 62baae97cec3c572f14a01f2f5c0ad189cb4dbfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940525"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918114"
 ---
 # <a name="_ciatan2"></a>_CIatan2
 
-Calcula o arco tangente de *x* / *y*, em que *x* e *y* são valores na parte superior da pilha.
+Calcula o arco tangente de *x* / *y* em que *x* e *y* são valores na parte superior da pilha.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void __cdecl _CIatan2();
 ```
 
@@ -45,6 +47,8 @@ void __cdecl _CIatan2();
 Esta versão da função `atan2` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.
 
 O valor resultante é colocado na parte superior da pilha.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-ms.openlocfilehash: 7c497347689bcfc5528280bd22aa5183d5fafd61
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ff3cd0259df92aa5cdade3f78a240e69f8f6f7de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377473"
 ---
 # <a name="c-runtime-error-r6035"></a>Erro em runtime de C R6035
 
-Microsoft Visual C++ Runtime Library, erro R6035-um módulo neste aplicativo está inicializando o cookie de segurança global do módulo enquanto uma função que depende desse cookie de segurança está ativa.  Chame __security_init_cookie anteriormente.
+Microsoft Visual C++ Runtime Library, Error R6035 - Um módulo neste aplicativo está inicializando o cookie de segurança global do módulo enquanto uma função que depende desse cookie de segurança está ativa.  Ligue para __security_init_cookie mais cedo.
 
 [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) deve ser chamado antes do primeiro uso do cookie de segurança global.
 
-O cookie de segurança global é usado para proteção contra estouro de buffer em código compilado com [/GS (verificação de segurança de buffer)](../../build/reference/gs-buffer-security-check.md) e em código que usa manipulação de exceção estruturada. Essencialmente, na entrada para uma função protegida por saturação, o cookie é colocado na pilha e, ao sair, o valor na pilha é comparado com o cookie global. Qualquer diferença entre eles indica que ocorreu uma saturação de buffer e resulta na finalização imediata do programa.
+O cookie de segurança global é usado para proteção contra buffer overrun em código compilado com [/GS (Buffer Security Check)](../../build/reference/gs-buffer-security-check.md) e em código que usa tratamento estruturado de exceções. Essencialmente, na entrada em uma função protegida por excesso, o cookie é colocado na pilha e, na saída, o valor na pilha é comparado com o cookie global. Qualquer diferença entre eles indica que ocorreu uma superação de buffer e resulta em encerramento imediato do programa.
 
-Erro R6035 indica que uma chamada para `__security_init_cookie` foi feita depois que uma função protegida foi inserida. Se a execução fosse continuar, uma saturação de buffer falsa seria detectada porque o cookie na pilha não corresponderia mais ao cookie global.
+Erro R6035 indica que `__security_init_cookie` uma chamada foi feita depois que uma função protegida foi inserida. Se a execução continuasse, um buffer espúrio seria detectado porque o cookie na pilha não corresponderia mais ao cookie global.
 
-Considere o exemplo de DLL a seguir. O ponto de entrada da DLL é definido como DllEntryPoint por meio da opção/entry do vinculador [(símbolo de ponto de entrada)](../../build/reference/entry-entry-point-symbol.md) . Isso ignora a inicialização do CRT que normalmente inicializaria o cookie de segurança global, portanto, a própria DLL deve chamar `__security_init_cookie`.
+Considere o seguinte exemplo de DLL. O ponto de entrada dll está definido como DllEntryPoint através da opção linker [/ENTRY (Entry-Point Symbol).](../../build/reference/entry-entry-point-symbol.md) Isso ignora a inicialização do CRT que normalmente inicializaria o cookie `__security_init_cookie`de segurança global, de modo que a própria DLL deve chamar .
 
 ```
 // Wrong way to call __security_init_cookie
@@ -42,7 +42,7 @@ void DllInitialize() {
 }
 ```
 
-Este exemplo irá gerar o erro R6035 porque o DllEntryPoint usa manipulação de exceção estruturada e, portanto, usa o cookie de segurança para detectar saturações de buffer. Quando o DllInitialize de tempo é chamado, o cookie de segurança global já foi colocado na pilha.
+Este exemplo gerará erro R6035 porque o DllEntryPoint usa o manuseio estruturado de exceções e, portanto, usa o cookie de segurança para detectar excessos de buffer. Quando o DllInitialize é chamado, o cookie de segurança global já foi colocado na pilha.
 
 A maneira correta é demonstrada neste exemplo:
 
@@ -63,10 +63,10 @@ void DllEntryHelper() {
 }
 ```
 
-Nesse caso, DllEntryPoint não é protegido contra estouros de buffer (ele não tem buffers de cadeia de caracteres locais e não usa manipulação de exceção estruturada); Portanto, ele pode chamar `__security_init_cookie`com segurança. Em seguida, ele chama uma função auxiliar que é protegida.
+Neste caso, o DllEntryPoint não está protegido contra excessos de buffer (não tem buffers de strings locais e não usa o manuseio estruturado de exceções); portanto, ele pode `__security_init_cookie`chamar com segurança . Em seguida, ele chama uma função auxiliar que é protegida.
 
 > [!NOTE]
->  A mensagem de erro R6035 é gerada somente pelo CRT Debug do x86 e somente para manipulação de exceção estruturada, mas a condição é um erro em todas as plataformas e para todas as formas de manipulação C++ de exceção, como eh.
+> A mensagem de erro R6035 é gerada apenas pelo CRT de depuração x86, e apenas para o manuseio estruturado de exceções, mas a condição é um erro em todas as plataformas, e para todas as formas de manipulação de exceção, como C++ EH.
 
 ## <a name="see-also"></a>Confira também
 

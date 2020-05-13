@@ -3,11 +3,11 @@ title: Estouro negativo de valores de ponto flutuante
 ms.date: 11/04/2016
 ms.assetid: 78af8016-643c-47db-b4f1-7f06cb4b243e
 ms.openlocfilehash: 93230b50b81ede44a9c55406db1566df2660c1ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149916"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344058"
 ---
 # <a name="underflow-of-floating-point-values"></a>Estouro negativo de valores de ponto flutuante
 
@@ -15,6 +15,6 @@ ms.locfileid: "56149916"
 
 Um estouro negativo de ponto flutuante não define a expressão `errno` como `ERANGE`. Quando um valor se aproxima de zero e acaba sofrendo um estouro negativo, o valor é definido como zero.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções de biblioteca](../c-language/library-functions.md)

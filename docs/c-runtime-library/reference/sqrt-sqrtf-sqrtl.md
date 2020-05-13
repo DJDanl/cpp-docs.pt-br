@@ -1,10 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958103"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913909"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -72,17 +74,19 @@ Um valor de ponto flutuante não negativo
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **sqrt** que usam tipos **float** ou **Long** **Double** . Em um programa C, **sqrt** sempre leva e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sqrt** que usam tipos **float** ou **Long** **Double** . Em um programa C, **sqrt** sempre leva e retorna **Double**.
 
-## <a name="return-value"></a>Valor de retorno
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="return-value"></a>Valor retornado
 
 As funções **sqrt** retornam a raiz quadrada de *x*. Por padrão, se *x* for negativo, **sqrt** retornará um NaN indefinido.
 
 |Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|nenhum|_DOMAIN|
-|- ∞|nenhum|_DOMAIN|
-|x<0|nenhum|_DOMAIN|
+|± QNAN,IND|nenhuma|_DOMAIN|
+|- ∞|nenhuma|_DOMAIN|
+|x<0|nenhuma|_DOMAIN|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -117,7 +121,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

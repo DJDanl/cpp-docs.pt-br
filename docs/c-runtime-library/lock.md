@@ -23,23 +23,23 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: 666fdb8febebe133ae09ef3632cb38b6527d1210
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ab7cab2209dc2e02cacca6d540927aa39dc3965
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944492"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745376"
 ---
 # <a name="_lock"></a>_lock
 
 Adquire um bloqueio de vários threads.
 
 > [!IMPORTANT]
->  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
+> Essa função está obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 void __cdecl _lock
    int locknum
 );
@@ -58,7 +58,7 @@ Se o bloqueio já tiver sido adquirido, este método adquire o bloqueio de qualq
 
 **Fonte:** mlock.c
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_unlock](../c-runtime-library/unlock.md)

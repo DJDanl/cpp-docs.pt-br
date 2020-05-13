@@ -23,19 +23,19 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 20afa988bc4fdf3bc3a6ff073a48a1cc00ff84c5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 682ab9796942e52ed036193887158ea22b738189
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944364"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349333"
 ---
 # <a name="_get_output_format"></a>_get_output_format
 
 Obtém o valor atual do sinalizador de formato de saída.
 
 > [!IMPORTANT]
->  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
+> Essa função está obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,7 +43,7 @@ Obtém o valor atual do sinalizador de formato de saída.
 unsigned int _get_output_format();
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor atual do sinalizador de formato de saída.
 
@@ -59,7 +59,7 @@ O sinalizador de formato de saída controla os recursos da E/S formatada. No mom
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md) na Introdução.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Sintaxe de especificação de formato: funções printf e wprintf](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>

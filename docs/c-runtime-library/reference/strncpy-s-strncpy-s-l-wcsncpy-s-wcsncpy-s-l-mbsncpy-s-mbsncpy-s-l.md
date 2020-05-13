@@ -1,6 +1,6 @@
 ---
 title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -8,6 +8,10 @@ api_name:
 - strncpy_s
 - _mbsncpy_s
 - _wcsncpy_s_l
+- _o__mbsncpy_s
+- _o__mbsncpy_s_l
+- _o_strncpy_s
+- _o_wcsncpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626144"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919292"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -157,7 +162,7 @@ O tamanho da cadeia de caracteres de destino, em caracteres.
 *strSource*<br/>
 Cadeia de caracteres de origem.
 
-*count*<br/>
+*contagem*<br/>
 Número de caracteres a ser copiado ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
@@ -167,20 +172,20 @@ A localidade a ser usada.
 
 Zero se for bem-sucedido, **STRUNCATE** se ocorrer truncamento, caso contrário, um código de erro.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
 |*strDest*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|qualquer|qualquer|**EINVAL**|não modificado|
-|qualquer|qualquer|**NULL**|**EINVAL**|*strDest*[0] definido como 0|
-|qualquer|0|qualquer|**EINVAL**|não modificado|
-|Não **nulo**|muito pequeno|qualquer|**ERANGE**|*strDest*[0] definido como 0|
+|**NULO**|any|any|**EINVAL**|não modificado|
+|any|any|**NULO**|**EINVAL**|*strDest*[0] definido como 0|
+|any|0|any|**EINVAL**|não modificado|
+|Não **nulo**|muito pequeno|any|**ERANGE**|*strDest*[0] definido como 0|
 
 ## <a name="remarks"></a>Comentários
 
 Essas funções tentam copiar os primeiros caracteres *d* de *strSource* para *strDest*, onde *D* é o menor de *Count* e o comprimento de *strSource*. Se esses caracteres *D* couberem em *strDest* (cujo tamanho é fornecido como *numberOfElements*) e ainda deixar espaço para um terminador nulo, esses caracteres serão copiados e um nulo de terminação será acrescentado; caso contrário, *strDest*[0] é definido como o caractere nulo e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
-Há uma exceção para o parágrafo acima. Se *Count* for **_TRUNCATE**, a maior parte de *strSource* como se ajustará ao *strDest* será copiada e, ao mesmo tempo, deixará espaço para o nulo de encerramento, que é sempre acrescentado.
+Há uma exceção para o parágrafo acima. Se *Count* for **_TRUNCATE**, a maior parte de *strSource* como se ajustará ao *strDest* será copiada e ainda deixará espaço para o nulo de encerramento, que é sempre acrescentado.
 
 Por exemplo,
 
@@ -189,9 +194,9 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-significa que estamos fazendo com que o **strncpy_s** Copie cinco caracteres em um buffer de cinco bytes de comprimento; Isso não deixaria nenhum espaço para o terminador nulo, portanto, **strncpy_s** Zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.
+significa que estamos pedindo **strncpy_s** para copiar cinco caracteres em um buffer de cinco bytes de comprimento; Isso não deixaria nenhum espaço para o terminador nulo, portanto **strncpy_s** Zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.
 
-Se o comportamento de truncamento for necessário, use **_TRUNCATE** ou (*size* -1):
+Se o comportamento de truncamento for necessário, use **_TRUNCATE** ou (*tamanho* -1):
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
@@ -204,13 +209,15 @@ O comportamento de **strncpy_s** é indefinido se as cadeias de caracteres de or
 
 Se *strDest* ou *strSource* for **nulo**ou *numberOfElements* for 0, o manipulador de parâmetro inválido será invocado. Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**.
 
-**wcsncpy_s** e **_mbsncpy_s** são versões de caractere largo e de multibyte de **strncpy_s**. Os argumentos e o valor de retorno de **wcsncpy_s** e **mbsncpy_s** variam de acordo. Essas seis funções se comportam de forma idêntica.
+**wcsncpy_s** e **_mbsncpy_s** são versões de caractere largo e de vários caracteres de **strncpy_s**. Os argumentos e o valor de retorno de **wcsncpy_s** e **mbsncpy_s** variam de acordo. Essas seis funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -403,10 +410,10 @@ After strncpy_s (with null-termination):
    'mice'
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>

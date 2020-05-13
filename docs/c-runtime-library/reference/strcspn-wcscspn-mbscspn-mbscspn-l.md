@@ -1,11 +1,13 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
+- _o__mbscspn
+- _o__mbscspn_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8fb3e0fe7590dac9fc3ce107b3c1b2a5800c867b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940763"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915247"
 ---
 # <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
@@ -80,7 +83,7 @@ size_t _mbscspn_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres pesquisadas e terminadas em nulo.
 
 *strCharSet*<br/>
@@ -89,7 +92,7 @@ Conjunto de caracteres terminado em nulo.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Essas funções retornam o índice do primeiro caractere em *Str* que está em *strCharSet*. Se nenhum dos caracteres em *Str* estiver em *strCharSet*, o valor de retorno será o comprimento de *Str*.
 
@@ -97,11 +100,13 @@ Nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-**wcscspn** e **_mbscspn** são versões de caractere largo e de multibyte de **strcspn**. Os argumentos de **wcscspn** são cadeias de caracteres largos; os de **_mbscspn** são cadeias de caracteres multibyte.
+**wcscspn** e **_mbscspn** são versões de caractere largo e multibyte de **strcspn**. Os argumentos de **wcscspn** são cadeias de caracteres largos; os de **_mbscspn** são cadeias de caracteres multibyte.
 
 **_mbscspn** valida seus parâmetros. Se *Str* ou *strCharSet* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará 0 e definirá **errno** como **EINVAL**. **strcspn** e **wcscspn** não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -118,7 +123,7 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 |**wcscspn**|\<string.h> ou \<wchar.h>|
 |**_mbscspn**, **_mbscspn_l**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -154,10 +159,10 @@ strcspn( "", "abc" ) = 0
 strcspn( "", "" ) = 0
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

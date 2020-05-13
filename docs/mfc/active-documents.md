@@ -9,20 +9,20 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-ms.openlocfilehash: 519dd51ab9b46adf862999104e97c6e478ccd86b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbea3e032932477006820c5a71fbbf3e40123bdf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394943"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322078"
 ---
 # <a name="active-documents"></a>Documentos ativos
 
-Documentos ativos ampliar a tecnologia de documento composto de OLE. Essas extensões são fornecidas na forma de interfaces adicionais que gerenciam os modos de exibição, para que os objetos podem funcionar dentro de contêineres e ainda manter o controle sobre sua exibição e funções de impressão. Esse processo torna possível exibir documentos em quadros externos (como o Microsoft Office Binder ou o Microsoft Internet Explorer) e em quadros nativos (por exemplo, as portas de modo de exibição do produto).
+Documentos ativos ampliam a tecnologia de documento composto do OLE. Essas extensões são fornecidas sob a forma de interfaces adicionais que gerenciam visualizações, para que os objetos possam funcionar dentro de contêineres e ainda manter o controle sobre suas funções de exibição e impressão. Esse processo permite exibir documentos tanto em quadros estrangeiros (como o Microsoft Office Binder ou o Microsoft Internet Explorer) quanto em quadros nativos (como as portas de exibição do próprio produto).
 
-Esta seção descreve a funcional [requisitos de documentos ativos](#requirements_for_active_documents). O documento ativo possui um conjunto de dados e tem acesso ao armazenamento em que os dados podem ser salvo e recuperados. Ele pode criar e gerenciar uma ou mais exibições em seus dados. Além de permitirem que as interfaces de ativação no local de documentos OLE e incorporação usual, o documento ativo se comunica sua capacidade de criar exibições por meio de `IOleDocument`. Por meio dessa interface, o contêiner pode pedir para criar (e possivelmente enumerar) do documento ativo pode exibir os modos de exibição. Por meio dessa interface, o documento ativo também pode fornecer informações diversas sobre si mesmo, como se ele dá suporte a vários modos de exibição ou retângulos complexos.
+Esta seção descreve os [requisitos](#requirements_for_active_documents)funcionais para documentos ativos . O documento ativo possui um conjunto de dados e tem acesso ao armazenamento onde os dados podem ser salvos e recuperados. Ele pode criar e gerenciar uma ou mais visualizações em seus dados. Além de suportar as interfaces habituais de incorporação e ativação in loco de documentos `IOleDocument`OLE, o documento ativo comunica sua capacidade de criar visualizações através de . Através desta interface, o contêiner pode pedir para criar (e possivelmente enumerar) as visualizações que o documento ativo pode exibir. Através dessa interface, o documento ativo também pode fornecer informações diversas sobre si mesmo, como se suporta múltiplas visões ou retângulos complexos.
 
-A seguir está o `IOleDocument` interface. Observe que o `IEnumOleDocumentViews` interface é um enumerador OLE padrão para `IOleDocumentView*` tipos.
+A seguir `IOleDocument` está a interface. Observe que `IEnumOleDocumentViews` a interface é um enumerador OLE padrão para `IOleDocumentView*` tipos.
 
 ```
 interface IOleDocument : IUnknown
@@ -41,29 +41,29 @@ interface IOleDocument : IUnknown
     }
 ```
 
-Cada documento ativo deve ter um provedor de quadro de exibição com essa interface. Se o documento não é inserido em um contêiner, o próprio servidor de documento ativo deve fornecer o quadro de exibição. No entanto, quando o documento ativo é inserido em um contêiner de documento ativo, o contêiner fornece o quadro de exibição.
+Cada documento ativo deve ter um provedor de quadros de exibição com esta interface. Se o documento não estiver incorporado dentro de um contêiner, o próprio servidor de documentos ativo deve fornecer o quadro de exibição. No entanto, quando o documento ativo é incorporado em um recipiente de documento ativo, o contêiner fornece o quadro de exibição.
 
-Um documento ativo pode criar um ou mais tipos de [modos de exibição](#requirements_for_view_objects) de seus dados (por exemplo, normal, de estrutura de tópicos, layout de página e assim por diante). Modos de exibição atuam como filtros por meio do qual os dados podem ser vistos. Mesmo que o documento tem apenas um tipo de exibição, você ainda pode desejar dar suporte a vários modos de exibição como um meio de oferecer suporte a novas funcionalidades de janela (por exemplo, o **nova janela** item na **janela** menu do Office aplicativos).
+Um documento ativo pode criar um ou mais tipos de [visualizações](#requirements_for_view_objects) de seus dados (por exemplo, normal, contorno, layout da página e assim por diante). As visualizações agem como filtros através dos quais os dados podem ser vistos. Mesmo que o documento tenha apenas um tipo de exibição, você ainda pode querer suportar várias visualizações como um meio de suportar a nova funcionalidade da janela (por exemplo, o item **Nova janela** no menu **Janela** em aplicativos do Office).
 
-##  <a name="requirements_for_active_documents"></a> Requisitos para documentos ativos
+## <a name="requirements-for-active-documents"></a><a name="requirements_for_active_documents"></a>Requisitos para documentos ativos
 
-Um documento ativo que pode ser exibido em um contêiner de documento ativo deve:
+Um documento ativo que pode ser exibido em um recipiente de documento ativo deve:
 
-- Usar arquivos compostos do OLE como seu mecanismo de armazenamento implementando `IPersistStorage`.
+- Use os Arquivos Compostos do OLE `IPersistStorage`como mecanismo de armazenamento implementando .
 
-- Suporte os recursos básicos de incorporação de OLE documentos, incluindo **criar do arquivo**. Isso exige que as interfaces `IPersistFile`, `IOleObject`, e `IDataObject`.
+- Suporte aos recursos básicos de incorporação de documentos OLE, incluindo **Criar a partir de arquivo**. Isso requer as interfaces, `IPersistFile` `IOleObject` `IDataObject`e .
 
-- Suporte a um ou mais modos de exibição, cada um deles é capaz de ativação no local. Ou seja, os modos de exibição devem oferecer suporte à interface `IOleDocumentView` , bem como as interfaces `IOleInPlaceObject` e `IOleInPlaceActiveObject` (usando o contêiner `IOleInPlaceSite` e `IOleInPlaceFrame` interfaces).
+- Suporte a uma ou mais visualizações, cada uma das quais é capaz de ativação no local. Ou seja, as visualizações `IOleDocumentView` devem suportar a `IOleInPlaceObject` `IOleInPlaceActiveObject` interface, bem como `IOleInPlaceSite` `IOleInPlaceFrame` as interfaces e (usando o contêiner e interfaces).
 
-- Suporte as interfaces de padrão de documento ativo `IOleDocument`, `IOleCommandTarget`, e `IPrint`.
+- Suporte às interfaces `IOleDocument`de `IOleCommandTarget`documentos `IPrint`ativas padrão, e .
 
-Dados de Conhecimento de quando e como usar as interfaces do lado do contêiner está implícita nesses requisitos.
+O conhecimento de quando e como usar as interfaces lado contêiner está implícito nesses requisitos.
 
-##  <a name="requirements_for_view_objects"></a> Requisitos para objetos de exibição
+## <a name="requirements-for-view-objects"></a><a name="requirements_for_view_objects"></a>Requisitos para exibir objetos
 
-Um documento ativo pode criar um ou mais modos de exibição de seus dados. Funcionalmente, essas exibições são como as portas em um método específico para exibir os dados. Se um documento ativo somente dá suporte a uma única exibição, o documento ativo e o único modo de exibição podem ser implementados usando uma única classe. `IOleDocument::CreateView` Retorna o mesmo objeto `IOleDocumentView` ponteiro de interface.
+Um documento ativo pode criar uma ou mais visualizações de seus dados. Funcionalmente, essas visualizações são como portas em um método específico para exibir os dados. Se um documento ativo suportar apenas uma exibição única, o documento ativo e essa exibição única podem ser implementados usando uma única classe. `IOleDocument::CreateView`retorna o ponteiro `IOleDocumentView` de interface do mesmo objeto.
 
-Para ser representado dentro de um contêiner de documento ativo, um componente de exibição deve suportar `IOleInPlaceObject` e `IOleInPlaceActiveObject` além `IOleDocumentView`:
+Para ser representado dentro de um contêiner `IOleInPlaceObject` de `IOleInPlaceActiveObject` documento `IOleDocumentView`ativo, um componente de exibição deve suportar e, além de:
 
 ```
 interface IOleDocumentView : IUnknown
@@ -90,14 +90,14 @@ interface IOleDocumentView : IUnknown
     }
 ```
 
-Cada exibição tem um site de exibição associada, que encapsula o quadro de exibição e a porta de exibição (HWND e uma área retangular nessa janela). O site expõe essa funcionalidade no entanto o padrão `IOleInPlaceSite` interface. Observe que é possível ter mais de uma porta de exibição em um único HWND.
+Cada visualização tem um local de exibição associado, que encapsula o quadro de exibição e a porta de exibição (HWND e uma área retangular nessa janela). O site expõe essa funcionalidade `IOleInPlaceSite` através da interface padrão. Observe que é possível ter mais de uma porta de exibição em um único HWND.
 
-Normalmente, cada tipo de exibição tem uma representação impressa diferente. Portanto, exibições e os sites do modo de exibição correspondente devem implementar as interfaces de impressão se `IPrint` e `IContinueCallback`, respectivamente. O quadro de exibição deve negociar com o provedor de exibição por meio de `IPrint` quando a impressão começará, para que os cabeçalhos, rodapés, margens e elementos relacionados são impressos corretamente. O provedor de exibição notifica o quadro de eventos relacionados à impressão por meio de `IContinueCallback`. Para obter mais informações sobre o uso dessas interfaces, consulte [impressão programática](../mfc/programmatic-printing.md).
+Normalmente, cada tipo de visualização tem uma representação impressa diferente. Portanto, as visualizações e os locais `IPrint` de `IContinueCallback`exibição correspondentes devem implementar as interfaces de impressão se e , respectivamente. O quadro de exibição deve `IPrint` negociar com o provedor de visualização durante o início da impressão, para que os cabeçalhos, rodapés, margens e elementos relacionados sejam impressos corretamente. O provedor de visualização notifica o `IContinueCallback`quadro de eventos relacionados à impressão através de . Para obter mais informações sobre o uso dessas interfaces, consulte [Programmatic Printing](../mfc/programmatic-printing.md).
 
-Observe que se um documento ativo somente dá suporte a uma única exibição, em seguida, o documento ativo e o único modo de exibição podem ser implementados usando uma única classe concreta. `IOleDocument::CreateView` simplesmente retorna o mesmo objeto `IOleDocumentView` ponteiro de interface. Em resumo, não é necessário que haver duas instâncias de objeto separado quando apenas uma exibição é necessária.
+Observe que se um documento ativo apenas suporta uma exibição única, então o documento ativo e essa exibição única podem ser implementados usando uma única classe de concreto. `IOleDocument::CreateView`simplesmente retorna o ponteiro `IOleDocumentView` de interface do mesmo objeto. Em suma, não é necessário que haja duas instâncias de objeto separadas quando apenas uma exibição é necessária.
 
-Um objeto de exibição também pode ser um destino do comando. Implementando `IOleCommandTarget` um modo de exibição pode receber comandos que se originam na interface do usuário do contêiner (como **New**, **abra**, **Salvar como**,  **Impressão** sobre o **arquivo** menu; e **cópia**, **colar**, **desfazer** no **editar** menu). Para obter mais informações, consulte [tratamento de mensagem e destinos de comando](../mfc/message-handling-and-command-targets.md).
+Um objeto de exibição também pode ser um alvo de comando. Ao implementar `IOleCommandTarget` uma visualização pode receber comandos que se originam na interface do usuário do contêiner (como **Novo**, **Abrir**, **Salvar Como**, **Imprimir** no menu **Arquivo;** e **Copiar**, **Colar**, **Desfazer** no menu **Editar).** Para obter mais informações, consulte [O manuseio de mensagens e os alvos de comando](../mfc/message-handling-and-command-targets.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Contenção de documentos ativos](../mfc/active-document-containment.md)

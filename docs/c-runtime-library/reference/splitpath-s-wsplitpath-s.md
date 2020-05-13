@@ -1,9 +1,11 @@
 ---
 title: _splitpath_s, _wsplitpath_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wsplitpath_s
 - _splitpath_s
+- _o__splitpath_s
+- _o__wsplitpath_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 984b55737e575656670f561c45f528265800f214
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920294"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -94,13 +97,13 @@ errno_t _wsplitpath_s(
 Caminho completo.
 
 *Dirigir*<br/>
-Letra da unidade, seguida por dois-pontos ( **:** ). Você pode passar **NULL** para esse parâmetro se não precisar da letra da unidade.
+Letra da unidade, seguida por dois-pontos (**:**). Você pode passar **NULL** para esse parâmetro se não precisar da letra da unidade.
 
 *driveNumberOfElements*<br/>
 O tamanho do buffer da *unidade* em caracteres de byte único ou largos. Se a *unidade* for **nula**, esse valor deverá ser 0.
 
-*comando*<br/>
-Caminho do diretório, incluindo barra à direita. Barras invertidas ( **/** ), barras invertidas ( **\\** ) ou ambas podem ser usadas. Você pode passar **NULL** para esse parâmetro se não precisar do caminho do diretório.
+*dir*<br/>
+Caminho do diretório, incluindo barra à direita. Barras invertidas **/** (), barras invertidas ( **\\** ) ou ambas podem ser usadas. Você pode passar **NULL** para esse parâmetro se não precisar do caminho do diretório.
 
 *dirNumberOfElements*<br/>
 O tamanho do buffer de *dir* em caracteres de byte único ou largos. Se *dir* for **NULL**, esse valor deverá ser 0.
@@ -112,7 +115,7 @@ Nome de arquivo base (sem extensão). Você pode passar **NULL** para esse parâ
 O tamanho do buffer *fname* em caracteres de byte único ou largos. Se *fname* for **NULL**, esse valor deverá ser 0.
 
 *externa*<br/>
-Extensão de nome de arquivo, incluindo o ponto à esquerda ( **.** ). Você pode passar **NULL** para esse parâmetro se não precisar da extensão de nome de arquivo.
+Extensão de nome de arquivo, incluindo o ponto à esquerda (**.**). Você pode passar **NULL** para esse parâmetro se não precisar da extensão de nome de arquivo.
 
 *extNumberOfElements*<br/>
 O tamanho do buffer *ext* em caracteres de byte único ou largos. Se *ext* for **NULL**, esse valor deverá ser 0.
@@ -121,7 +124,7 @@ O tamanho do buffer *ext* em caracteres de byte único ou largos. Se *ext* for *
 
 Zero se for bem-sucedido; um código de erro em caso de falha.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
 |Condição|Valor retornado|
 |---------------|------------------|
@@ -141,7 +144,9 @@ Se qualquer um dos buffers for muito curto para manter o resultado, essas funç�
 
 ## <a name="remarks"></a>Comentários
 
-A função **_splitpath_s** quebra um caminho em seus quatro componentes. o **_splitpath_s** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **_wsplitpath_s** é uma versão de caractere largo do **_splitpath_s**; os argumentos para **_wsplitpath_s** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica
+A função **_splitpath_s** quebra um caminho em seus quatro componentes. **_splitpath_s** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **_wsplitpath_s** é uma versão de caractere largo do **_splitpath_s**; os argumentos para **_wsplitpath_s** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -153,14 +158,14 @@ Cada componente do caminho completo é armazenado em um buffer separado; as cons
 
 A tabela a seguir lista os valores das constantes do manifesto.
 
-|Name|Valor|
+|Nome|Valor|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Se o caminho completo não contiver um componente (por exemplo, um nome de arquivo), o **_splitpath_s** atribuirá uma cadeia de caracteres vazia ao buffer correspondente.
+Se o caminho completo não contiver um componente (por exemplo, um nome de arquivo), **_splitpath_s** atribuirá uma cadeia de caracteres vazia ao buffer correspondente.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

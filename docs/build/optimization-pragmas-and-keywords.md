@@ -15,7 +15,7 @@ ms.locfileid: "80169793"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Pragmas e palavras-chave de otimização
 
-Várias palavras-chave e pragmas que você usa em seu C ou C++ código afetam a otimização:
+Várias palavras-chave e pragmas que você usa em seu código C ou C++ afetam a otimização:
 
 - [__asm](../assembler/inline/asm.md)
 
@@ -37,8 +37,8 @@ Várias palavras-chave e pragmas que você usa em seu C ou C++ código afetam a 
 
 - [#pragma otimizar](../preprocessor/optimize.md)
 
-- [Palavra-chave Register](../cpp/storage-classes-cpp.md#register)
+- [Palavra-chave register](../cpp/storage-classes-cpp.md#register)
 
 ## <a name="see-also"></a>Confira também
 
-[Otimizando seu código](optimizing-your-code.md)
+[Otimizando o código](optimizing-your-code.md)

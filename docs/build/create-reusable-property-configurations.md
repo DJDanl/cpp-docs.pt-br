@@ -3,12 +3,12 @@ title: Compartilhar ou reutilizar configurações do projeto do Visual Studio-C+
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 451e22997f81753abf0c8d55d3b9e8d097cc6d5d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: bcf54be0531c7150c1506eb6f5dda2b5bc95161f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328697"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Compartilhamento ou reutilização das configurações de projeto do Visual Studio
 
@@ -21,7 +21,7 @@ Para criar um grupo personalizado de configurações que você pode compartilhar
 >
 > Embora os arquivos .user ainda sejam instalados pelo Visual Studio e participem da herança de propriedade, eles são vazios por padrão. A melhor prática é excluir a referência a eles no **Gerenciador de Propriedades** para garantir que os projetos operem independentemente de qualquer configuração por usuário e por computador. É importante garantir o comportamento correto em um ambiente de SCC (controle do código-fonte).
 
-Para exibir **Gerenciador de propriedades**, na barra de menus, escolha **Exibir** > **Gerenciador de propriedades** ou **Exibir** > **outras** ** > do Windows Gerenciador de propriedades, dependendo**de suas configurações.
+Para exibir **Gerenciador de propriedades**, na barra de menus, escolha **Exibir** > **Gerenciador de propriedades** ou **Exibir** > **outros** > **Gerenciador de propriedades**do Windows, dependendo de suas configurações.
 
 Se você tiver um conjunto de propriedades comuns usadas com frequência que deseje aplicar a vários projetos, use o **Gerenciador de Propriedades** para capturá-las em um arquivo de *folha de propriedades* reutilizável que, por convenção, tem uma extensão de nome de arquivo .props. Você pode aplicar a folha (ou folhas) a novos projetos para que não precisar definir suas propriedades a partir do zero.
 
@@ -44,7 +44,7 @@ Em grandes soluções que terão vários projetos, pode ser útil criar uma folh
 
 #### <a name="to-create-a-property-sheet"></a>Para criar uma folha de propriedades
 
-1. Na barra de menus, escolha **exibir** > **Gerenciador de Propriedades** ou **exibir** > **outras** **Gerenciador de propriedades**de > do Windows. O **Gerenciador de Propriedades** será aberto.
+1. Na barra de menus, escolha **Exibir** > **Gerenciador de propriedades** ou **Exibir** > **outros** > **Gerenciador de propriedades**do Windows. O **Gerenciador de Propriedades** será aberto.
 
 2. Para definir o escopo da folha de propriedades, selecione o item ao qual se aplica. Isso pode ser uma configuração específica ou outra folha de propriedades. Abra o menu de atalho desse item e, em seguida, escolha **Adicionar Nova Folha de Propriedades do Projeto**. Especifique um nome e um local.
 

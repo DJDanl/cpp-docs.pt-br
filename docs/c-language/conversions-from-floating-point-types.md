@@ -18,7 +18,7 @@ Um valor de ponto flutuante que é convertido em outro tipo de ponto flutuante n
 
 Um valor de ponto flutuante que é convertido em um tipo integral é truncado primeiro, descartando qualquer valor fracionário. Se esse valor truncado for representável no tipo de resultado, o resultado deverá ser esse valor. Quando não é possível representá-lo, o valor do resultado é indefinido.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Os compiladores da Microsoft usam a representação binary32 do IEEE-754 para valores **float** e a representação binary64 para **longos Double** e **Double**. Como **Long duplo** e **duplo** usam a mesma representação, eles têm o mesmo intervalo e precisão.
 
@@ -34,7 +34,7 @@ Para conversão em tipos inteiros pelo menos tão grande quanto **longo**, uma c
 
 - Para conversão em longo prazo **não** atribuído ou **não assinado**, o resultado da conversão de um valor fora do intervalo pode ser um valor diferente do valor mais alto ou mais baixo representável. Se o resultado é um sentinela ou um valor saturado ou não depende das opções do compilador e da arquitetura de destino. Versões futuras do compilador podem retornar um valor saturado ou de sentinela.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 A tabela a seguir resume as conversões de tipos flutuantes.
 
@@ -45,29 +45,29 @@ A tabela a seguir resume as conversões de tipos flutuantes.
 |**float**|**char**|Converter em **long**; converter **long** em **char**|
 |**float**|**short**|Converter em **long**; converter **long** em **short**|
 |**float**|**int**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **int**, o resultado será indefinido.|
-|**float**|**long**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **long**, o resultado será indefinido.|
+|**float**|**Longas**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **long**, o resultado será indefinido.|
 |**float**|**long long**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **longo**, o resultado será indefinido.|
 |**float**|**unsigned char**|Converter em **Long**; Converter **longo** em **Char não assinado**|
 |**float**|**unsigned short**|Converter em **long**; converter **long** em **unsigned short**|
 |**float**|**unsigned**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **não assinado**, o resultado será indefinido.|
 |**float**|**unsigned long**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **longo sem sinal**, o resultado será indefinido.|
-|**float**|**longo longo sem sinal**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **longo e sem sinal**, o resultado será indefinido.|
+|**float**|**unsigned long long**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **longo e sem sinal**, o resultado será indefinido.|
 |**float**|**double**|Representar como **duplo**.|
-|**float**|**long double**|Representar como um **longo Duplo**.|
+|**float**|**longo Duplo**|Representar como um **longo Duplo**.|
 |**double**|**char**|Converter em **float**; converter **float** em **char**|
 |**double**|**short**|Converter em **float**; converter **float** em **short**|
 |**double**|**int**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **int**, o resultado será indefinido.|
-|**double**|**long**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **long**, o resultado será indefinido.|
+|**double**|**Longas**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **long**, o resultado será indefinido.|
 |**double**|**unsigned char**|Converter em **Long**; Converter **longo** em **Char não assinado**|
 |**double**|**unsigned short**|Converter em **long**; converter **long** em **unsigned short**|
 |**double**|**unsigned**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **não assinado**, o resultado será indefinido.|
 |**double**|**unsigned long**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **longo sem sinal**, o resultado será indefinido.|
-|**double**|**longo longo sem sinal**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **longo e sem sinal**, o resultado será indefinido.|
+|**double**|**unsigned long long**|Truncar no ponto decimal. Se o resultado for muito grande para ser representado como **longo e sem sinal**, o resultado será indefinido.|
 |**double**|**float**|É representado como um **float**. Se o valor **Double** não puder ser representado exatamente como **float**, ocorrerá a perda de precisão. Se o valor for muito grande para ser representado como **float**, o resultado será indefinido.|
-|**double**|**long double**|O valor **long double** é tratado como **double**.|
+|**double**|**longo Duplo**|O valor **long double** é tratado como **double**.|
 
 As conversões de **longo Duplo** seguem o mesmo método que as conversões de **Double**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversões de atribuição](../c-language/assignment-conversions.md)

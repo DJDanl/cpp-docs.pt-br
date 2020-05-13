@@ -1,9 +1,11 @@
 ---
 title: wcstombs, _wcstombs_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcstombs
 - _wcstombs_l
+- _o__wcstombs_l
+- _o_wcstombs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: e4aa09ec8e6d97762d39e63aa05b0eb0cc159d17
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 33c7554f1ab5c9822a1908a4b50d0ee0764615ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945116"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910630"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -81,13 +84,13 @@ O endereço de uma sequência de caracteres multibyte.
 *wcstr*<br/>
 O endereço de uma sequência de caracteres largos.
 
-*count*<br/>
+*contagem*<br/>
 O número máximo de bytes que pode ser armazenado na cadeia de caracteres multibyte de saída.
 
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se **wcstombs** converter com êxito a cadeia de caracteres multibyte, ele retornará o número de bytes gravados na cadeia de caracteres de saída multibyte, excluindo o nulo de terminação (se houver). Se o argumento *mbstr* for **nulo**, **wcstombs** retornará o tamanho necessário em bytes da cadeia de caracteres de destino. Se **wcstombs** encontrar um caractere largo, ele não poderá converter para um caractere multibyte, ele retornará-1 CAST para o tipo **size_t** e definirá **errno** como **EILSEQ**.
 
@@ -101,9 +104,11 @@ Se o argumento *mbstr* for **nulo**, **wcstombs** retornará o tamanho necessár
 
 **wcstombs** valida seus parâmetros. Se *wcstr* for **nulo**ou se *Count* for maior que **INT_MAX**, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução tiver permissão para continuar, a função definirá **errno** como **EINVAL** e retornará-1.
 
-**wcstombs** usa a localidade atual para qualquer comportamento dependente de localidade; **_wcstombs_l** é idêntico, exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**wcstombs** usa a localidade atual para qualquer comportamento dependente de localidade; o **_wcstombs_l** é idêntico, exceto pelo fato de que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -112,7 +117,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |**wcstombs**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -159,7 +164,7 @@ Convert wide-character string:
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

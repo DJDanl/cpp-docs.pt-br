@@ -16,7 +16,7 @@ ms.locfileid: "74857145"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Atributos de classe de armazenamento estendido C
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Informações mais atualizadas sobre este tópico podem ser encontradas em [__declspec (Referência C++)](../cpp/declspec.md).
 
@@ -27,24 +27,24 @@ A sintaxe de atributo estendido para a especificação de informações de class
 ## <a name="syntax"></a>Sintaxe
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-Modifier-Seq* **)**  /\* \*específicos da Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-Modifier-Seq* **)**  / \* específico da Microsoft\*/
 
-*Extended-decl-Modifier-Seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específicos da Microsoft /<br/>
+*Extended-decl-Modifier-Seq*:&nbsp; &nbsp; &nbsp; &nbsp; / \* específico da Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Extended-decl-Modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específicos da Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
+*Extended-decl-Modifier*:&nbsp; &nbsp; &nbsp; &nbsp; / \* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**processo**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**descoberto**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
 O espaço em branco separa os modificadores de declaração. Observe que *extended-decl-modifier-seq* pode ser vazio; nesse caso, __declspec não tem efeito.
 
 Os atributos de classe de armazenamento thread, naked, dllimport e dllexport são uma propriedade somente da declaração dos dados ou da função aos quais são aplicados; eles não redefinem os atributos de tipo da função em si. O atributo thread afeta somente dados. O atributo naked afeta somente funções. Os atributos dllimport e dllexport afetam funções e dados.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e tipos](../c-language/declarations-and-types.md)

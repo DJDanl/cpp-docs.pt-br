@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
 ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158119"
 ---
 # <a name="sizeof-operator-c"></a>Operador sizeof (C)
 
@@ -49,9 +49,9 @@ static char *strings[] = {
 const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 ```
 
-Nesse exemplo, `strings` é uma matriz de ponteiros para `char`. O número de ponteiros é o número de elementos na matriz, mas não é especificado. É fácil determinar o número de ponteiros usando o operador `sizeof` para calcular o número de elementos na matriz. O valor inteiro **const** `string_no` é inicializado nesse número. Como se trata de um valor **const**, `string_no` não pode ser modificado.
+Nesse exemplo, `strings` é uma matriz de ponteiros para `char`. O número de ponteiros é o número de elementos na matriz, mas não é especificado. É fácil determinar o número de ponteiros usando o operador `sizeof` para calcular o número de elementos na matriz. O valor inteiro **const**`string_no` é inicializado nesse número. Como se trata de um valor **const**, `string_no` não pode ser modificado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Operadores C](c-operators.md)<br/>
+[Operadores de C](c-operators.md)<br/>
 [Operadores internos C++, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

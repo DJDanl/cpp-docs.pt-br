@@ -1,8 +1,9 @@
 ---
 title: abort
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - abort
+- _o_abort
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: 46c8e25483799df3211a5022be6c4338f2c4732a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f330d53df5af0efa41f4e3b3bb843bdc95210c70
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170391"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910912"
 ---
 # <a name="abort"></a>abort
 
@@ -51,9 +53,9 @@ void abort( void );
 
 ## <a name="remarks"></a>Comentários
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Por padrão, quando um aplicativo é compilado com a biblioteca de tempo de execução de depuração, a rotina **Abort** exibe uma mensagem de erro antes que `SIGABRT` seja gerado. Para aplicativos de console em execução no modo de console, a mensagem é enviada para `STDERR`. Aplicativos da área de trabalho do Windows e aplicativos de console em execução no modo de janela exibem a mensagem em uma caixa de mensagem. Para suprimir a mensagem, use [set_abort_behavior](set-abort-behavior.md) para limpar o sinalizador `_WRITE_ABORT_MSG`. A mensagem exibida depende da versão do ambiente de runtime usada. Para aplicativos criados com o uso das versões mais recentes do C++Visual, a mensagem é semelhante a esta:
+Por padrão, quando um aplicativo é compilado com a biblioteca de tempo de execução de depuração, a rotina **Abort** exibe `SIGABRT` uma mensagem de erro antes de o ser gerado. Para aplicativos de console em execução no modo de console, a mensagem é enviada para `STDERR`. Aplicativos da área de trabalho do Windows e aplicativos de console em execução no modo de janela exibem a mensagem em uma caixa de mensagem. Para suprimir a mensagem, use [set_abort_behavior](set-abort-behavior.md) para limpar o sinalizador `_WRITE_ABORT_MSG`. A mensagem exibida depende da versão do ambiente de runtime usada. Para aplicativos criados com o uso das versões mais recentes do Visual C++, a mensagem é semelhante a esta:
 
 > R6010-Abort () foi chamado
 
@@ -63,7 +65,7 @@ Nas versões anteriores da biblioteca de runtime C, esta mensagem era exibida:
 
 Quando o programa é compilado no modo de depuração, a caixa de mensagem exibe opções para **Anular**, **Tentar novamente** ou **Ignorar**. Se o usuário escolher **Anular**, o programa será terminado imediatamente e retornará o código de saída 3. Se o usuário escolher **Tentar novamente**, um depurador será invocado para a depuração Just-In-Time, caso esteja disponível. Se o usuário escolher **ignorar**, **abortar** continuará o processamento normal.
 
-Em compilações de varejo e de depuração, **abortar** verifica se um manipulador de sinal de anulação está definido. Se um manipulador de sinais não padrão for definido, **Abort** chamará `raise(SIGABRT)`. Use a função [signal](signal.md) para associar uma função de manipulador de sinal de anulação ao sinal `SIGABRT`. Você pode executar ações personalizadas – por exemplo, limpar recursos ou informações de log – e terminar o aplicativo com seu próprio código de erro na função de manipulador. Se nenhum manipulador de sinais personalizado for definido, **Abort** não gerará o sinal de `SIGABRT`.
+Em compilações de varejo e de depuração, **abortar** verifica se um manipulador de sinal de anulação está definido. Se um manipulador de sinais não padrão for definido, **anule** as `raise(SIGABRT)`chamadas. Use a função [signal](signal.md) para associar uma função de manipulador de sinal de anulação ao sinal `SIGABRT`. Você pode executar ações personalizadas – por exemplo, limpar recursos ou informações de log – e terminar o aplicativo com seu próprio código de erro na função de manipulador. Se nenhum manipulador de sinais personalizado for definido, **Abort** não gerará `SIGABRT` o sinal.
 
 Por padrão, em compilações não depuradas de aplicativos de desktop ou de console, **Abort** invoca o mecanismo de serviço relatório de erros do Windows (anteriormente conhecido como Dr. Watson) para relatar falhas à Microsoft. Esse comportamento pode ser habilitado ou desabilitado chamando `_set_abort_behavior` e configurando ou mascarando o sinalizador `_CALL_REPORTFAULT`. Quando o sinalizador está definido, o Windows exibe uma caixa de mensagem contendo um texto semelhante a "Um problema impediu o programa de funcionar corretamente". O usuário pode escolher invocar um depurador com um botão **Depurar** ou escolher o botão **Fechar programa** para terminar o aplicativo com um código de erro definido pelo sistema operacional.
 
@@ -73,11 +75,13 @@ Para obter mais informações sobre depuração de CRT, consulte [Técnicas de D
 
 **Fim da seção específica da Microsoft**
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**abort**|\<process.h> ou \<stdlib.h>|
+|**anular**|\<process.h> ou \<stdlib.h>|
 
 ## <a name="example"></a>Exemplo
 
@@ -115,10 +119,10 @@ int main( void )
 File could not be opened: No such file or directory
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Usando abort](../../cpp/using-abort.md)<br/>
-[Função abort](../../c-language/abort-function-c.md)<br/>
+[anular função](../../c-language/abort-function-c.md)<br/>
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>

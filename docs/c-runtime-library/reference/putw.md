@@ -1,8 +1,9 @@
 ---
 title: _putw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putw
+- _o__putw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443728"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916078"
 ---
 # <a name="_putw"></a>_putw
 
@@ -65,7 +67,9 @@ Para obter informações sobre esses e outros códigos de erro, consulte [_doser
 
 A função **_putw** grava um valor binário do tipo **int** na posição atual do *fluxo.* **_putw** não afeta o alinhamento dos itens no fluxo, nem assume nenhum alinhamento especial. **_putw** é principalmente para compatibilidade com bibliotecas anteriores. Problemas de portabilidade podem ocorrer com **_putw** porque o tamanho de um **int** e a ordenação de bytes em um **int** diferem entre os sistemas.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -77,7 +81,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_putw.c

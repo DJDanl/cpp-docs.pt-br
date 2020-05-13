@@ -16,7 +16,7 @@ ms.locfileid: "79440450"
 ---
 # <a name="importing-data-using-__declspecdllimport"></a>Importando dados usando __declspec(dllimport)
 
-No caso de dados, o uso de **__declspec (dllimport)** é um item de conveniência que remove uma camada de indireção. Ao importar dados de uma DLL, você ainda precisa passar pela tabela de endereços de importação. Antes de **__declspec (dllimport)** , isso significava que você tinha que se lembrar de fazer um nível extra de indireção ao acessar dados exportados da dll:
+No caso de dados, o uso de **__declspec (dllimport)** é um item de conveniência que remove uma camada de indireção. Ao importar dados de uma DLL, você ainda precisa passar pela tabela de endereços de importação. Antes de **__declspec (dllimport)**, isso significava que você tinha que se lembrar de fazer um nível extra de indireção ao acessar dados exportados da dll:
 
 ```
 // project.h
@@ -46,7 +46,7 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Quando você marca os dados como **__declspec (dllimport)** , o compilador gera automaticamente o código de indireção para você. Você não precisa mais se preocupar com as etapas acima. Como mencionado anteriormente, não use a declaração de **__declspec (dllimport)** nos dados ao COMPILAR a dll. As funções dentro da DLL não usam a tabela de endereços de importação para acessar o objeto de dados; Portanto, você não terá o nível extra de indireção presente.
+Quando você marca os dados como **__declspec (dllimport)**, o compilador gera automaticamente o código de indireção para você. Você não precisa mais se preocupar com as etapas acima. Como mencionado anteriormente, não use a declaração de **__declspec (dllimport)** nos dados ao COMPILAR a dll. As funções dentro da DLL não usam a tabela de endereços de importação para acessar o objeto de dados; Portanto, você não terá o nível extra de indireção presente.
 
 Para exportar os dados automaticamente da DLL, use esta declaração:
 
@@ -54,6 +54,6 @@ Para exportar os dados automaticamente da DLL, use esta declaração:
 __declspec(dllexport) ULONG ulDataInDLL;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Importando para um aplicativo](importing-into-an-application.md)

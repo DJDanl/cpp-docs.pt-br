@@ -18,10 +18,10 @@ Uma "declaração" especifica a interpretação e os atributos de um conjunto de
 
 ## <a name="syntax"></a>Sintaxe
 
-*declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
+*declaração*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração-especificadores* *atributo-Seq*<sub>opt</sub> *init-Declaration-List*<sub>opt</sub>**;**
 
-/\* *atributo-Seq*<sub>opt</sub> é específico da Microsoft */
+/\**atributo-Seq*<sub>opt</sub> é específico da Microsoft */
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -29,12 +29,12 @@ Uma "declaração" especifica a interpretação e os atributos de um conjunto de
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list* **,** *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List* **,** *init-declarator*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
+*init-Declarador*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inicializador* de *Declarador* **=**
 
 > [!NOTE]
 > Esta sintaxe para *declaration* não é repetida nas seções a seguir. A sintaxe nas seguintes seções normalmente inicia com *declarator* não terminal.
@@ -49,9 +49,9 @@ No formato geral de uma declaração variável, o *especificador de tipo* fornec
 int const *fp;
 ```
 
-declara uma variável nomeada `fp` como um ponteiro para um valor (**const**) `int` não modificável. Você pode definir mais de uma variável em uma declaração usando vários declaradores, separados por vírgulas.
+declara uma variável chamada `fp` como um ponteiro para um valor não modificável (**const**) `int` . Você pode definir mais de uma variável em uma declaração usando vários declaradores, separados por vírgulas.
 
-Uma declaração deve ter pelo menos um declarador ou seu especificador de tipo deve declarar uma marca de estrutura, marca de união ou membros de uma enumeração. Os declaradores fornecem toda quaisquer outras informações sobre um identificador. Um declarador é um identificador que pode ser modificado com colchetes ( **[ ]** ), asteriscos (<strong>\*</strong>) ou parênteses ( **( )** ) para declarar uma matriz, ponteiro ou um tipo de função, respectivamente. Quando você declara variáveis simples (como o caractere, inteiro e itens de ponto flutuante), ou estruturas e uniões de variáveis simples, `declarator` é apenas um identificador. Para obter mais informações sobre os declaradores, consulte [Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md).
+Uma declaração deve ter pelo menos um declarador ou seu especificador de tipo deve declarar uma marca de estrutura, marca de união ou membros de uma enumeração. Os declaradores fornecem toda quaisquer outras informações sobre um identificador. Um declarador é um identificador que pode ser modificado com colchetes (**[ ]**), asteriscos (<strong>\*</strong>) ou parênteses ( **( )** ) para declarar uma matriz, ponteiro ou um tipo de função, respectivamente. Quando você declara variáveis simples (como o caractere, inteiro e itens de ponto flutuante), ou estruturas e uniões de variáveis simples, `declarator` é apenas um identificador. Para obter mais informações sobre os declaradores, consulte [Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md).
 
 Todas as definições são implicitamente declarações, mas nem todas as declarações são definições. Por exemplo, as declarações de variáveis que começam com o especificador de classe de armazenamento `extern` "fazem referência", ao invés de "definir" declarações. Se uma variável externa deve ser chamada antes que tenha sido definida, ou se é definida em outro arquivo de origem do onde é usada, uma declaração `extern` é necessária. O armazenamento não é alocado "referenciando" declarações, nem as variáveis podem ser inicializados em declarações.
 
@@ -65,7 +65,7 @@ Os especificadores do tipo fornecem algumas informações sobre os tipos de dado
 
 Há dois terminais de *type-qualifier*: **const** e `volatile`. Esses qualificadores especificam propriedades adicionais dos tipos que só são relevantes apenas no acesso de objetos desse tipo por valores l. Para obter mais informações sobre **const** e `volatile`, consulte [Qualificadores do tipo](../c-language/type-qualifiers.md). Para uma definição de l-values, consulte [Expressões de l-value e r-value](../c-language/l-value-and-r-value-expressions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Resumo da sintaxe da linguagem C](../c-language/c-language-syntax-summary.md)<br/>
 [Declarações e tipos](../c-language/declarations-and-types.md)<br/>

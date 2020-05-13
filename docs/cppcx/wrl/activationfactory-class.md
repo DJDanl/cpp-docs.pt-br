@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Microsoft::WRL::ActivationFactory::QueryInterface method
 - Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-ms.openlocfilehash: 8e5132f4a8711f6420cd9b52751550a96d10d8fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0655caeb3f49a18e9c57c78f0008901aaaedda4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303884"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368699"
 ---
 # <a name="activationfactory-class"></a>Classe ActivationFactory
 
-Permite que um ou mais classes sejam ativadas pelo tempo de execução do Windows.
+Permite que uma ou mais classes sejam ativadas pelo Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -57,7 +57,7 @@ class ActivationFactory :
 ### <a name="parameters"></a>Parâmetros
 
 *I0*<br/>
-A interface inicial.
+A interface zero.
 
 *I1*<br/>
 A primeira interface.
@@ -67,13 +67,13 @@ A segunda interface.
 
 ## <a name="remarks"></a>Comentários
 
-`ActivationFactory` fornece métodos de registro e a funcionalidade básica para o `IActivationFactory` interface. `ActivationFactory` também permite que você forneça uma implementação de fábrica personalizada.
+`ActivationFactory`fornece métodos de registro e `IActivationFactory` funcionalidade básica para a interface. `ActivationFactory`também permite que você forneça uma implementação de fábrica personalizada.
 
-O fragmento de código a seguir simbolicamente ilustra como usar ActivationFactory.
+O fragmento de código a seguir ilustra simbolicamente como usar ActivationFactory.
 
 [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../codesnippet/CPP/activationfactory-class_1.cpp)]
 
-O fragmento de código a seguir mostra como usar o [implementa](implements-structure.md) estrutura para especificar mais de três IDs de interface.
+O fragmento de código a seguir mostra como usar a estrutura [Implementos](implements-structure.md) para especificar mais de três IDs de interface.
 
 `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`
 
@@ -83,18 +83,18 @@ O fragmento de código a seguir mostra como usar o [implementa](implements-struc
 
 Nome                                                       | Descrição
 ---------------------------------------------------------- | ------------------------------------------
-[ActivationFactory::ActivationFactory](#activationfactory) | Inicializa a classe `ActivationFactory`.
+[AtivaçãoFábrica::AtivaçãoFábrica](#activationfactory) | Inicializa a classe `ActivationFactory`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                                                           | Descrição
 -------------------------------------------------------------- | --------------------------------------------------------------------------------------------
-[ActivationFactory::AddRef](#addref)                           | Incrementa a contagem de referência do atual `ActivationFactory` objeto.
-[ActivationFactory::GetIids](#getiids)                         | Recupera uma matriz de IDs de interface implementada.
-[ActivationFactory::GetRuntimeClassName](#getruntimeclassname) | Obtém o nome de classe de tempo de execução do objeto que atual `ActivationFactory` cria uma instância.
-[ActivationFactory::GetTrustLevel](#gettrustlevel)             | Obtém o nível de confiança do objeto que atual `ActivationFactory` cria uma instância.
-[ActivationFactory::QueryInterface](#queryinterface)           | Recupera um ponteiro para a interface especificada.
-[ActivationFactory::Release](#release)                         | Diminui a contagem de referência do atual `ActivationFactory` objeto.
+[AtivaçãoFábrica::AddRef](#addref)                           | Incrementa a contagem `ActivationFactory` de referência do objeto atual.
+[AtivaçãoFábrica::GetIids](#getiids)                         | Recupera um conjunto de IDs de interface implementados.
+[AtivaçãoFábrica::GetRuntimeClassName](#getruntimeclassname) | Obtém o nome da classe de `ActivationFactory` tempo de execução do objeto que a corrente instancia.
+[ActivationFactory::GetTrustLevel](#gettrustlevel)             | Obtém o nível de confiança `ActivationFactory` do objeto que a corrente instancia.
+[AtivaçãoFábrica::QueryInterface](#queryinterface)           | Recupera um ponteiro para a interface especificada.
+[AtivaçãoFábrica::Lançamento](#release)                         | Decreta a contagem de `ActivationFactory` referência do objeto atual.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -122,9 +122,9 @@ Nome                                                           | Descrição
 
 **Cabeçalho:** module.h
 
-**Namespace:** Microsoft::WRL
+**Espaço de nome:** Microsoft::WRL
 
-## <a name="activationfactory"></a>ActivationFactory::ActivationFactory
+## <a name="activationfactoryactivationfactory"></a><a name="activationfactory"></a>AtivaçãoFábrica::AtivaçãoFábrica
 
 Inicializa a classe `ActivationFactory`.
 
@@ -132,9 +132,9 @@ Inicializa a classe `ActivationFactory`.
 ActivationFactory();
 ```
 
-## <a name="addref"></a>ActivationFactory::AddRef
+## <a name="activationfactoryaddref"></a><a name="addref"></a>AtivaçãoFábrica::AddRef
 
-Incrementa a contagem de referência do atual `ActivationFactory` objeto.
+Incrementa a contagem `ActivationFactory` de referência do objeto atual.
 
 ```cpp
 STDMETHOD_(
@@ -143,13 +143,13 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve a falha.
 
-## <a name="getiids"></a>ActivationFactory::GetIids
+## <a name="activationfactorygetiids"></a><a name="getiids"></a>AtivaçãoFábrica::GetIids
 
-Recupera uma matriz de IDs de interface implementada.
+Recupera um conjunto de IDs de interface implementados.
 
 ```cpp
 STDMETHOD(
@@ -159,19 +159,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parâmetros
 
-*iidCount*<br/>
-Quando essa operação for concluída, o número de IDs de interface na *iids* matriz.
+*IidCount*<br/>
+Quando esta operação for concluída, o número de IDs intercetas na matriz *iids.*
 
-*iids*<br/>
-Quando essa operação for concluída, uma matriz de implementado IDs de interface.
+*Iids*<br/>
+Quando esta operação for concluída, uma matriz de IDs de interface implementados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha. E_OUTOFMEMORY é uma possível falha de HRESULT.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve a falha. E_OUTOFMEMORY é um possível fracasso HRESULT.
 
-## <a name="getruntimeclassname"></a>ActivationFactory::GetRuntimeClassName
+## <a name="activationfactorygetruntimeclassname"></a><a name="getruntimeclassname"></a>AtivaçãoFábrica::GetRuntimeClassName
 
-Obtém o nome de classe de tempo de execução do objeto que atual `ActivationFactory` cria uma instância.
+Obtém o nome da classe de `ActivationFactory` tempo de execução do objeto que a corrente instancia.
 
 ```cpp
 STDMETHOD(
@@ -182,15 +182,15 @@ STDMETHOD(
 ### <a name="parameters"></a>Parâmetros
 
 *runtimeName*<br/>
-Quando essa operação for concluída, um identificador para uma cadeia de caracteres que contém o nome de classe de tempo de execução do objeto que atual `ActivationFactory` cria uma instância.
+Quando esta operação for concluída, uma alça para uma string que contém `ActivationFactory` o nome da classe de tempo de execução do objeto que a corrente instancia.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve a falha.
 
-## <a name="gettrustlevel"></a>ActivationFactory::GetTrustLevel
+## <a name="activationfactorygettrustlevel"></a><a name="gettrustlevel"></a>ActivationFactory::GetTrustLevel
 
-Obtém o nível de confiança do objeto que atual `ActivationFactory` cria uma instância.
+Obtém o nível de confiança `ActivationFactory` do objeto que a corrente instancia.
 
 ```cpp
 STDMETHOD(
@@ -201,13 +201,13 @@ STDMETHOD(
 ### <a name="parameters"></a>Parâmetros
 
 *trustLvl*<br/>
-Quando essa operação for concluída, o nível de confiança do tempo de execução de classe que o `ActivationFactory` cria uma instância.
+Quando esta operação é concluída, o nível de `ActivationFactory` confiança da classe de tempo de execução que a instancia.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um erro de asserção é emitido e *trustLvl* é definido como `FullTrust`.
+S_OK se for bem sucedido; caso contrário, um erro de afirmação é `FullTrust`emitido e *trustLvl* é definido para .
 
-## <a name="queryinterface"></a>ActivationFactory::QueryInterface
+## <a name="activationfactoryqueryinterface"></a><a name="queryinterface"></a>AtivaçãoFábrica::QueryInterface
 
 Recupera um ponteiro para a interface especificada.
 
@@ -220,18 +220,18 @@ STDMETHOD(
 ### <a name="parameters"></a>Parâmetros
 
 *riid*<br/>
-Uma ID de interface.
+Um ID de interface.
 
-*ppvObject*<br/>
-Quando essa operação for concluída, um ponteiro para a interface especificada pelo parâmetro *riid*.
+*Ppvobject*<br/>
+Quando esta operação estiver concluída, um ponteiro para a interface especificado por *parâmetro riid*.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve a falha.
 
-## <a name="release"></a>ActivationFactory::Release
+## <a name="activationfactoryrelease"></a><a name="release"></a>AtivaçãoFábrica::Lançamento
 
-Diminui a contagem de referência do atual `ActivationFactory` objeto.
+Decreta a contagem de `ActivationFactory` referência do objeto atual.
 
 ```cpp
 STDMETHOD_(
@@ -240,6 +240,6 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+S_OK se for bem sucedido; caso contrário, um HRESULT que descreve a falha.

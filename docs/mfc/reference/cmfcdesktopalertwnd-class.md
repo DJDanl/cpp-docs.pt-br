@@ -44,18 +44,19 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403666"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752451"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Classe CMFCDesktopAlertWnd
 
-O `CMFCDesktopAlertWnd` classe implementa a funcionalidade de uma caixa de diálogo sem janela restrita que aparece na tela para informar ao usuário sobre um evento.
+A `CMFCDesktopAlertWnd` classe implementa a funcionalidade de uma caixa de diálogo modeless que aparece na tela para informar o usuário sobre um evento.
 
-Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
+Para obter mais detalhes, consulte o código-fonte localizado na pasta **VC\\atlmfc\\src\\mfc** da instalação do Visual Studio.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```
@@ -64,81 +65,81 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCDesktopAlertWnd::Create](#create)|Cria e inicializa a janela de alerta da área de trabalho.|
+|[CMFCDesktopAlertWnd::Criar](#create)|Cria e inicializa a janela de alerta da área de trabalho.|
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Retorna a velocidade da animação.|
-|[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Retorna o tipo de animação.|
-|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Retorna o tempo limite de fechamento automático.|
+|[CMFCDesktopAlertWnd:GetAnimationType](#getanimationtype)|Retorna o tipo de animação.|
+|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Retorna o tempo de fechamento automático.|
 |[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Retorna a altura da legenda.|
 |[CMFCDesktopAlertWnd::GetDialogSize](#getdialogsize)||
 |[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Retorna a última posição válida da janela de alerta da área de trabalho na tela.|
 |[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|Retorna o nível de transparência.|
-|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Determina se a janela da área de trabalho de alerta é exibida com a legenda curta.|
+|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Determina se a janela de alerta da área de trabalho é exibida com a pequena legenda.|
 |[CMFCDesktopAlertWnd::OnBeforeShow](#onbeforeshow)||
-|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Chamado pelo framework quando o usuário clica em um botão de link localizado no menu de alerta da área de trabalho.|
-|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|O framework chama essa função membro, quando o usuário seleciona um item de um menu, quando um controle filho envia uma mensagem de notificação, ou quando um pressionamento de tecla de aceleração é traduzido. (Substitui [CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|
+|[CMFCDesktopAlertWnd:OnClickLinkButton](#onclicklinkbutton)|Chamado pela estrutura quando o usuário clica em um botão de link localizado no menu de alerta da área de trabalho.|
+|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|A estrutura chama essa função de membro quando o usuário seleciona um item de um menu, quando um controle de criança envia uma mensagem de notificação ou quando uma tecla do acelerador é traduzida. (Substitui [cwnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|
 |[CMFCDesktopAlertWnd::OnDraw](#ondraw)||
 |[CMFCDesktopAlertWnd::ProcessCommand](#processcommand)||
-|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Define a velocidade da animação nova.|
+|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Define a nova velocidade de animação.|
 |[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Define o tipo de animação.|
-|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Define o tempo limite de fechamento automático.|
-|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Alterna entre as legendas de pequenas e normais.|
-|[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|Define o nível de transparência.|
+|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Define o tempo de fechamento automático.|
+|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Alterna entre legendas pequenas e normais.|
+|[CMFCDesktopAlertWnd::SetTransparência](#settransparency)|Define o nível de transparência.|
 
 ## <a name="remarks"></a>Comentários
 
-Uma janela de alerta da área de trabalho pode ser transparente, ela pode aparecer com efeitos de animação e ele poderá desaparecer (após um atraso especificado ou quando o usuário descartá-lo clicando no botão Fechar).
+Uma janela de alerta de desktop pode ser transparente, pode aparecer com efeitos de animação e pode desaparecer (após um atraso especificado ou quando o usuário a descarta clicando no botão de fechamento).
 
-Uma janela de alerta da área de trabalho também pode conter uma caixa de diálogo padrão que por sua vez, contém um ícone, o texto da mensagem (um rótulo) e um link. Como alternativa, uma janela de alerta da área de trabalho pode conter uma caixa de diálogo personalizada de recursos do aplicativo.
+Uma janela de alerta de área de trabalho também pode conter uma caixa de diálogo padrão que, por sua vez, contém um ícone, um texto de mensagem (um rótulo) e um link. Alternativamente, uma janela de alerta de desktop pode conter uma caixa de diálogo personalizada dos recursos do aplicativo.
 
-Você cria uma janela de alerta da área de trabalho em duas etapas. Primeiro, chame o construtor para construir o `CMFCDesktopAlertWnd` objeto. Em segundo lugar, chame o [CMFCDesktopAlertWnd::Create](#create) função de membro para criar a janela e anexá-lo para o `CMFCDesktopAlertWnd` objeto.
+Você cria uma janela de alerta de desktop em dois passos. Primeiro, chame o construtor `CMFCDesktopAlertWnd` para construir o objeto. Em segundo lugar, chame o [CMFCDesktopAlertWnd::Crie](#create) a função `CMFCDesktopAlertWnd` de membro para criar a janela e anexá-la ao objeto.
 
-O `CMFCDesktopAlertWnd` objeto cria uma caixa de diálogo filho especiais que preenche a área de cliente da janela de alerta da área de trabalho. A caixa de diálogo é responsável por todos os controles são posicionados nele.
+O `CMFCDesktopAlertWnd` objeto cria uma caixa de diálogo filho especial que preenche a área cliente da janela de alerta da área de trabalho. O diálogo possui todos os controles que estão posicionados sobre ele.
 
-Para exibir uma caixa de diálogo na janela pop-up, siga estas etapas:
+Para exibir uma caixa de diálogo personalizada na janela popup, siga estas etapas:
 
-1. Derive uma classe de `CMFCDesktopAlertDialog`.
+1. Derivar uma `CMFCDesktopAlertDialog`classe de .
 
 1. Crie um modelo de caixa de diálogo filho nos recursos.
 
-1. Chame [CMFCDesktopAlertWnd::Create](#create) usando a ID do recurso de modelo de caixa de diálogo e um ponteiro para as informações de classe de tempo de execução da classe derivada.
+1. Chamada [CMFCDesktopAlertWnd::Crie](#create) usando o ID de recurso do modelo da caixa de diálogo e um ponteiro para as informações da classe de tempo de execução da classe derivada.
 
-1. A caixa de diálogo personalizada para lidar com todas as notificações provenientes os controles hospedados de programa ou programar os controles hospedados para lidar com essas notificações diretamente.
+1. Programe a caixa de diálogo personalizada para lidar com todas as notificações provenientes dos controles hospedados ou programe os controles hospedados para lidar diretamente com essas notificações.
 
 Use as seguintes funções para controlar o comportamento da janela de alerta da área de trabalho:
 
-- Definir o tipo de animação chamando [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). As opções válidas incluem Desdobrar, deslize e desaparecer.
+- Defina o tipo de animação chamando [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). As opções válidas incluem desdobrar, deslizar e desaparecer.
 
-- Definir a velocidade de quadro de animação chamando [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).
+- Defina a velocidade do quadro de animação chamando [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).
 
-- Definir o nível de transparência chamando [CMFCDesktopAlertWnd::SetTransparency](#settransparency).
+- Defina o nível de transparência chamando [CMFCDesktopAlertWnd::SetTransparency](#settransparency).
 
-- Alterar o tamanho da legenda para pequeno chamando [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). Legenda curta é 7 pixels de altura.
+- Altere o tamanho da legenda para pequeno, chamando [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). A pequena legenda tem 7 pixels de altura.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir ilustra como usar vários métodos na `CMFCDesktopAlertWnd` classe para configurar um `CMFCDesktopAlertWnd` objeto. O exemplo mostra como definir um tipo de animação, definir a transparência da janela pop-up, especifique que a janela de alerta exibe uma legenda curta e definir o tempo decorrido antes que a janela de alerta é fechado automaticamente. O exemplo também demonstra como criar e inicializar a janela de alerta da área de trabalho. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../overview/visual-cpp-samples.md).
+O exemplo a seguir ilustra como usar `CMFCDesktopAlertWnd` vários métodos `CMFCDesktopAlertWnd` na classe para configurar um objeto. O exemplo mostra como definir um tipo de animação, definir a transparência da janela pop-up, especificar que a janela de alerta exibe uma pequena legenda e definir o tempo que se desenrola antes que a janela de alerta feche automaticamente. O exemplo também demonstra como criar e inicializar a janela de alerta da área de trabalho. Este trecho de código faz parte da [amostra de demonstração de alerta de área de trabalho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)
+[Cmfcdesktopalertwnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxDesktopAlertWnd.h
 
-##  <a name="create"></a>  CMFCDesktopAlertWnd::Create
+## <a name="cmfcdesktopalertwndcreate"></a><a name="create"></a>CMFCDesktopAlertWnd::Criar
 
 Cria e inicializa a janela de alerta da área de trabalho.
 
@@ -160,36 +161,36 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *pWndOwner*<br/>
-[no, out] Especifica o proprietário da janela de alerta. O proprietário receberá todas as notificações para a janela de alerta da área de trabalho. Esse valor não pode ser NULL.
+[dentro, fora] Especifica o proprietário da janela de alerta. Esse proprietário receberá todas as notificações para a janela de alerta da área de trabalho. Este valor não pode ser NULO.
 
 *uiDlgResID*<br/>
-[in] Especifica a ID do recurso da janela de alerta.
+[em] Especifica o ID de recurso da janela de alerta.
 
-*hMenu*<br/>
-[in] Especifica o menu que é exibido quando o usuário clica no botão de menu. Se for NULL, o botão de menu não é exibido.
+*Hmenu*<br/>
+[em] Especifica o menu que é exibido quando o usuário clica no botão menu. Se NULO, o botão de menu não será exibido.
 
 *ptPos*<br/>
-[in] Especifica a posição inicial em que a janela de alerta é exibida, usando coordenadas da tela. Se esse parâmetro for (-1, -1), a janela de alerta é exibida no canto inferior direito da tela.
+[em] Especifica a posição inicial onde a janela de alerta é exibida, usando coordenadas de tela. Se este parâmetro for (-1, -1), a janela de alerta será exibida no canto inferior direito da tela.
 
 *pRTIDlgBar*<br/>
-[in] Informações de classe de tempo de execução para uma classe de caixa de diálogo personalizada que abrange a área de cliente da janela de alerta.
+[em] Informações da classe runtime para uma classe de caixa de diálogo personalizada que cobre a área cliente da janela de alerta.
 
 *params*<br/>
-[in] Especifica os parâmetros que são usados para criar uma janela de alerta.
+[em] Especifica parâmetros usados para criar uma janela de alerta.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-VERDADEIRO se a janela de alerta foi criada com êxito; Caso contrário, FALSE.
+TRUE se a janela de alerta foi criada com sucesso; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para criar uma janela de alerta. A área de cliente da janela de alerta contém uma caixa de diálogo filho que hospeda todos os controles que são exibidos ao usuário.
+Chame este método para criar uma janela de alerta. A área cliente da janela de alerta contém uma caixa de diálogo filho que hospeda todos os controles exibidos ao usuário.
 
-A primeira sobrecarga do método cria uma janela de alerta que contém uma caixa de diálogo filho que é carregada de recursos do aplicativo. A primeira sobrecarga do método também pode especificar informações de classe de tempo de execução para uma classe de caixa de diálogo personalizadas.
+A primeira sobrecarga de método cria uma janela de alerta que contém uma caixa de diálogo filho que é carregada a partir dos recursos do aplicativo. A primeira sobrecarga de método também pode especificar informações de classe de tempo de execução para uma classe de caixa de diálogo personalizada.
 
-A segunda sobrecarga do método cria uma janela de alerta que contém controles padrão. Você pode especificar os controles para exibir, modificando o [classe CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).
+A segunda sobrecarga do método cria uma janela de alerta que contém controles padrão. Você pode especificar quais controles exibir modificando a [classe CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).
 
-##  <a name="getanimationspeed"></a>  CMFCDesktopAlertWnd::GetAnimationSpeed
+## <a name="cmfcdesktopalertwndgetanimationspeed"></a><a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed
 
 Retorna a velocidade da animação.
 
@@ -197,15 +198,15 @@ Retorna a velocidade da animação.
 UINT GetAnimationSpeed() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A velocidade da animação da janela de alerta, em milissegundos.
+A velocidade de animação da janela de alerta, em milissegundos.
 
 ### <a name="remarks"></a>Comentários
 
-A velocidade da animação descreve quão rápido a janela de alerta abre e fecha.
+A velocidade de animação descreve a rapidez com que a janela de alerta abre e fecha.
 
-##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType
+## <a name="cmfcdesktopalertwndgetanimationtype"></a><a name="getanimationtype"></a>CMFCDesktopAlertWnd:GetAnimationType
 
 Retorna o tipo de animação.
 
@@ -213,37 +214,37 @@ Retorna o tipo de animação.
 CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um dos seguintes tipos de animação:
 
 - NO_ANIMATION
 
-- DESDOBRAR
+- Desdobrar
 
-- SLIDE
+- Slide
 
-- ESMAECIMENTO
+- Desaparecer
 
 - SYSTEM_DEFAULT_ANIMATION
 
-##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime
+## <a name="cmfcdesktopalertwndgetautoclosetime"></a><a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime
 
-Retorna o tempo limite de fechamento automático.
+Retorna o tempo de fechamento automático.
 
 ```
 int GetAutoCloseTime() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O tempo, em milissegundos, após o qual a janela de alerta será fechada automaticamente.
+O tempo, em milissegundos, após o qual a janela de alerta será automaticamente fechada.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para determinar quanto tempo deve decorrer antes da janela de alerta será fechada automaticamente.
+Use este método para determinar quanto tempo deve passar antes que a janela de alerta feche automaticamente.
 
-##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight
+## <a name="cmfcdesktopalertwndgetcaptionheight"></a><a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight
 
 Retorna a altura da legenda.
 
@@ -251,15 +252,15 @@ Retorna a altura da legenda.
 virtual int GetCaptionHeight();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A altura, em pixels, da legenda.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método pode ser substituído em uma classe derivada. A implementação padrão de qualquer um dos: retorna o valor de altura de legenda curta (7 pixels) se a janela pop-up deve exibir a legenda curta ou o valor obtido da função de API do Windows `GetSystemMetrics(SM_CYSMCAPTION)`.
+Este método pode ser substituído em uma classe derivada. A implementação padrão quer: retorna o valor de altura da pequena legenda (7 pixels) se a janela `GetSystemMetrics(SM_CYSMCAPTION)`pop-up deve exibir a pequena legenda ou o valor obtido na função API do Windows .
 
-##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos
+## <a name="cmfcdesktopalertwndgetlastpos"></a><a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos
 
 Retorna a última posição da janela de alerta da área de trabalho na tela.
 
@@ -267,15 +268,15 @@ Retorna a última posição da janela de alerta da área de trabalho na tela.
 CPoint GetLastPos() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponto em coordenadas da tela.
+Um ponto, nas coordenadas da tela.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método retorna a última posição válida da janela de alerta na tela.
+Este método retorna a última posição válida da janela de alerta na tela.
 
-##  <a name="gettransparency"></a>  CMFCDesktopAlertWnd::GetTransparency
+## <a name="cmfcdesktopalertwndgettransparency"></a><a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency
 
 Retorna o nível de transparência.
 
@@ -283,31 +284,31 @@ Retorna o nível de transparência.
 BYTE GetTransparency() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um nível de transparência entre 0 e 255, inclusive. Quanto maior o valor, o mais opaco a janela.
+Um nível de transparência entre 0 e 255, inclusive. Quanto maior o valor, mais opaca a janela.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para recuperar o atual nível de transparência da janela de alerta.
+Use este método para recuperar o nível de transparência atual da janela de alerta.
 
-##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption
+## <a name="cmfcdesktopalertwndhassmallcaption"></a><a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption
 
-Determina se a janela de alerta da área de trabalho tem uma legenda curta ou uma legenda de tamanho regular.
+Determina se a janela de alerta da área de trabalho tem uma pequena legenda ou uma legenda de tamanho normal.
 
 ```
 BOOL HasSmallCaption() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se a janela pop-up é exibida com uma legenda curta; FALSE se a janela pop-up é exibida com uma legenda de tamanho regular.
+TRUE se a janela pop-up for exibida com uma pequena legenda; FALSO se a janela pop-up for exibida com uma legenda de tamanho regular.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para determinar se a janela pop-up tem uma legenda curta ou uma legenda de tamanho regular. Por padrão, a legenda curta é 7 pixels de altura. Você pode obter a altura da legenda do tamanho regular chamando a função de API do Windows `GetSystemMetrics(SM_CYCAPTION)`.
+Use este método para determinar se a janela pop-up tem uma pequena legenda ou uma legenda de tamanho normal. Por padrão, a pequena legenda tem 7 pixels de altura. Você pode obter a altura da legenda de tamanho `GetSystemMetrics(SM_CYCAPTION)`normal chamando a função API do Windows .
 
-##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow
+## <a name="cmfcdesktopalertwndonbeforeshow"></a><a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow
 
 ```
 virtual BOOL OnBeforeShow(CPoint&);
@@ -315,15 +316,15 @@ virtual BOOL OnBeforeShow(CPoint&);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *CPoint &*<br/>
+[em] *CPoint&*<br/>
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton
+## <a name="cmfcdesktopalertwndonclicklinkbutton"></a><a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd:OnClickLinkButton
 
-Chamado pelo framework quando o usuário clica em um botão de link localizado no menu de alerta da área de trabalho.
+Chamado pela estrutura quando o usuário clica em um botão de link localizado no menu de alerta da área de trabalho.
 
 ```
 virtual BOOL OnClickLinkButton(UINT uiCmdID);
@@ -332,17 +333,17 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmdID*<br/>
-[in] Esse parâmetro não é usado.
+[em] Este parâmetro não é usado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Sempre FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua este método em uma classe derivada se você quiser ser notificado quando um usuário clica no link na janela de alerta.
+Anular este método em uma classe derivada se você quiser ser notificado quando um usuário clicar no link na janela de alerta.
 
-##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand
+## <a name="cmfcdesktopalertwndoncommand"></a><a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand
 
 ```
 virtual BOOL OnCommand(
@@ -352,15 +353,15 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *wParam*<br/>
+[em] *wParam*<br/>
 
-[in] *lParam*<br/>
+[em] *IParam*<br/>
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw
+## <a name="cmfcdesktopalertwndondraw"></a><a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -368,11 +369,11 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pDC*<br/>
+[em] *pDC*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand
+## <a name="cmfcdesktopalertwndprocesscommand"></a><a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand
 
 ```
 BOOL ProcessCommand(HWND hwnd);
@@ -380,118 +381,118 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *hwnd*<br/>
+[em] *hwnd*<br/>
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setanimationspeed"></a>  CMFCDesktopAlertWnd::SetAnimationSpeed
+## <a name="cmfcdesktopalertwndsetanimationspeed"></a><a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed
 
-Define a velocidade da animação nova.
+Define a nova velocidade de animação.
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nSpeed*<br/>
-[in] Especifica a velocidade da animação nova, em milissegundos.
+*nVelocidade*<br/>
+[em] Especifica a nova velocidade de animação, em milissegundos.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para definir a velocidade da animação para a janela de alerta. A velocidade da animação padrão é 30 milissegundos.
+Chame este método para definir a velocidade de animação para a janela de alerta. A velocidade de animação padrão é de 30 milissegundos.
 
-##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType
+## <a name="cmfcdesktopalertwndsetanimationtype"></a><a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType
 
 Define o tipo de animação.
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*type*<br/>
-[in] Especifica o tipo de animação.
+*tipo*<br/>
+[em] Especifica o tipo de animação.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para definir o tipo de animação. É possível especificar um dos seguintes valores:
+Chame este método para definir o tipo de animação. É possível especificar um dos seguintes valores:
 
 - NO_ANIMATION
 
-- DESDOBRAR
+- Desdobrar
 
-- SLIDE
+- Slide
 
-- ESMAECIMENTO
+- Desaparecer
 
 - SYSTEM_DEFAULT_ANIMATION
 
-##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime
+## <a name="cmfcdesktopalertwndsetautoclosetime"></a><a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime
 
-Define o tempo limite de fechamento automático.
+Define o tempo de fechamento automático.
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nTime*<br/>
-[in] O tempo, em milissegundos, decorrido antes que a janela de alerta é fechado automaticamente.
+*Ntime*<br/>
+[em] A hora, em milissegundos, que se desenrola antes que a janela de alerta feche automaticamente.
 
 ### <a name="remarks"></a>Comentários
 
-A janela de alerta é fechada automaticamente após o tempo especificado se o usuário interage com a janela.
+A janela de alerta é automaticamente fechada após o tempo especificado se o usuário não interagir com a janela.
 
-##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption
+## <a name="cmfcdesktopalertwndsetsmallcaption"></a><a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption
 
-Alterna entre as legendas de pequenas e de tamanho regular.
+Alterna entre legendas pequenas e de tamanho normal.
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *bSmallCaption*<br/>
-[in] TRUE para especificar que a janela de alerta exibe uma legenda curta; Caso contrário, FALSE para especificar que a janela de alerta exibe uma legenda de tamanho regular.
+[em] TRUE para especificar que a janela de alerta exibe uma pequena legenda; caso contrário, FALSE para especificar que a janela de alerta exibe uma legenda de tamanho regular.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para exibir a legenda pequena ou de tamanho regular. Por padrão, a legenda curta é 7 pixels de altura. Você pode obter o tamanho da legenda regular chamando a função de API do Windows `GetSystemMetrics(SM_CYCAPTION)`.
+Chame este método para exibir a legenda de tamanho pequeno ou regular. Por padrão, a pequena legenda tem 7 pixels de altura. Você pode obter o tamanho da legenda regular `GetSystemMetrics(SM_CYCAPTION)`chamando a função API do Windows .
 
-##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency
+## <a name="cmfcdesktopalertwndsettransparency"></a><a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparência
 
-Define o nível de transparência da janela pop-up.
+Define o nível de transparência da janela popup.
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nTransparency*<br/>
-[in] Especifica o nível de transparência. Esse valor deve estar entre 0 e 255, inclusive. Quanto maior o valor, o mais opaco a janela.
+*nTransparência*<br/>
+[em] Especifica o nível de transparência. Este valor deve ser entre 0 e 255, inclusive. Quanto maior o valor, mais opaca a janela.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para definir o nível de transparência da janela pop-up.
+Chame esta função para definir o nível de transparência da janela popup.
 
-##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize
+## <a name="cmfcdesktopalertwndgetdialogsize"></a><a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize
 
 ```
 virtual CSize GetDialogSize();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

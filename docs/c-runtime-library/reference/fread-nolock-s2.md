@@ -1,8 +1,9 @@
 ---
 title: _fread_nolock_s2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fread_nolock_s
+- _o__fread_nolock_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: e7fded9860b7a1364841d5f9b8a7e3aa478a8420
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956900"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912723"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -48,7 +50,7 @@ size_t _fread_nolock_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento de dados.
 
 *bufferSize*<br/>
@@ -60,16 +62,18 @@ Tamanho do item a ser lido em bytes.
 *elementCount*<br/>
 Número máximo de itens a serem lidos.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Consulte [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essa função é uma versão sem bloqueio do **fread_s**. É idêntico a **fread_s** , exceto que não é protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Esta função é uma versão sem bloqueio do **fread_s**. É idêntico a **fread_s** , exceto pelo fato de não estar protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

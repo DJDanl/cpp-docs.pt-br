@@ -1,9 +1,11 @@
 ---
 title: _execv, _wexecv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wexecv
 - _execv
+- _o__execv
+- _o__wexecv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,19 +33,19 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: bb18603c618342f67bad28ebf0b99bd173ee5293
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2c92321ebf31cf3dd1e446246674a437919e347b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941848"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919700"
 ---
 # <a name="_execv-_wexecv"></a>_execv, _wexecv
 
 Carrega e executa novos processos filho.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -65,7 +68,7 @@ Caminho do arquivo a ser executado.
 *argv*<br/>
 Matriz de ponteiros para os parâmetros.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de-1 indica um erro; nesse caso, a variável global **errno** é definida.
 
@@ -85,7 +88,9 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando.
 
-As funções **_execv** validam seus parâmetros. Se *cmdname* for um ponteiro nulo ou se *argv* for um ponteiro nulo, um ponteiro para uma matriz vazia ou se a matriz contiver uma cadeia de caracteres vazia como o primeiro argumento, as funções **_execv** invocarão o manipulador de parâmetro inválido, conforme descrito no [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1. Nenhum processo é inicializado.
+As funções de **_execv** validam seus parâmetros. Se *cmdname* for um ponteiro nulo ou se *argv* for um ponteiro nulo, um ponteiro para uma matriz vazia ou se a matriz contiver uma cadeia de caracteres vazia como o primeiro argumento, as funções **_execv** invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1. Nenhum processo é inicializado.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -104,7 +109,7 @@ Consulte o exemplo nas [ funções _exec, _wexec](../../c-runtime-library/exec-w
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>

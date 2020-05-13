@@ -1,8 +1,9 @@
 ---
 title: _read
-ms.date: 02/13/2019
+ms.date: 4/2/2020
 api_name:
 - _read
+- _o__read
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 32238923aeef14230f68def15e27c676753faf61
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2f43fc54a0092afc6ab5855c160a7879747faef7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949541"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919512"
 ---
 # <a name="_read"></a>_read
 
@@ -52,16 +54,16 @@ int _read(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fd*<br/>
+*FD*<br/>
 Descritor de arquivo que se refere ao arquivo aberto.
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento de dados.
 
 *buffer_size*<br/>
 Número máximo de bytes a serem lidos.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_read** retorna o número de bytes lidos, que pode ser menor que *buffer_size* se houver menos de *buffer_size* bytes restantes no arquivo ou se o arquivo tiver sido aberto no modo de texto. No modo de texto, cada par `\r\n` retorno de carro-alimentação de linha é substituído por um caractere `\n`de alimentação de linha única. Somente o caractere de alimentação de linha única é contado no valor de retorno. A substituição não afeta o ponteiro do arquivo.
 
@@ -77,6 +79,8 @@ A função **_read** lê um máximo de *buffer_size* bytes no *buffer* do arquiv
 
 Se o arquivo tiver sido aberto no modo de texto, a leitura será encerrada quando **_read** encontrar um caractere CTRL + Z, que é tratado como um indicador de fim de arquivo. Use [_lseek](lseek-lseeki64.md) para limpar o indicador de fim do arquivo.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -85,7 +89,7 @@ Se o arquivo tiver sido aberto no modo de texto, a leitura será encerrada quand
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 

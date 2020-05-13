@@ -1,9 +1,11 @@
 ---
 title: wctomb_s, _wctomb_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wctomb_s_l
 - wctomb_s
+- _o__wctomb_s_l
+- _o_wctomb_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 329724ca0196e07397d4f0337a2bf0aa2db05c84
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957902"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910439"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
@@ -72,23 +75,23 @@ O endereço de um caractere multibyte.
 *sizeInBytes*<br/>
 Tamanho do buffer *mbchar*.
 
-*wchar*<br/>
+*WCHAR*<br/>
 Um caractere largo.
 
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido ou um código de erro em caso de falha.
 
-Condições de Erro
+Condições de erro
 
 |*mbchar*|*sizeInBytes*|Valor retornado|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**NULL**|>0|**EINVAL**|não modificado|
-|qualquer|>**INT_MAX**|**EINVAL**|não modificado|
-|qualquer|muito pequeno|**EINVAL**|não modificado|
+|**NULO**|>0|**EINVAL**|não modificado|
+|any|>**INT_MAX**|**EINVAL**|não modificado|
+|any|muito pequeno|**EINVAL**|não modificado|
 
 Se qualquer uma das condições de erro acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **wctomb** retornará **EINVAL** e definirá **errno** como **EINVAL**.
 
@@ -96,9 +99,11 @@ Se qualquer uma das condições de erro acima ocorrer, o manipulador de parâmet
 
 A função **wctomb_s** converte seu argumento *WCHAR* para o caractere multibyte correspondente e armazena o resultado em *mbchar*. Você pode chamar a função de qualquer ponto, em qualquer programa.
 
-Se **wctomb_s** converter o caractere largo em um caractere multibyte, ele colocará o número de bytes (que nunca é maior que **MB_CUR_MAX**) no caractere largo no número inteiro apontado por *pRetValue*. Se *WCHAR* for o caractere nulo de caractere largo (L ' \ 0 '), **wctomb_s** preencherá *pRetValue* com 1. Se o ponteiro de destino *mbchar* for **nulo**, **wctomb_s** colocará 0 em *pRetValue*. Se a conversão não for possível na localidade atual, **wctomb_s** colocará-1 em *pRetValue*.
+Se **wctomb_s** converter o caractere largo em um caractere multibyte, ele colocará o número de bytes (que nunca é maior que **MB_CUR_MAX**) no caractere largo no número inteiro apontado por *pRetValue*. Se *WCHAR* for o caractere nulo de caractere largo (L ' \ 0 '), **wctomb_s** preencherá *pRetValue* com 1. Se o ponteiro de destino *mbchar* for **nulo**, **wctomb_s** colocará 0 em *pRetValue*. Se a conversão não for possível na localidade atual, **wctomb_s** coloca-1 em *pRetValue*.
 
-**wctomb_s** usa a localidade atual para obter informações dependentes de localidade; **_wctomb_s_l** é idêntico, exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**wctomb_s** usa a localidade atual para obter informações dependentes de localidade; o **_wctomb_s_l** é idêntico, exceto pelo fato de que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -107,7 +112,7 @@ Se **wctomb_s** converter o caractere largo em um caractere multibyte, ele coloc
 |**wctomb_s**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -140,7 +145,7 @@ Convert a wide character:
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

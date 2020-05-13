@@ -1,8 +1,9 @@
 ---
 title: _set_abort_behavior
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - _set_abort_behavior
+- _o__set_abort_behavior
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: a63d4e77a91dafa4500d5fef8e9b5e94ee28cfbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 06f72597a384cc5c90b2e345e62e13dee96c4dca
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948662"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913125"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
@@ -51,19 +53,21 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Parâmetros
 
-*flags*<br/>
+*sinalizadores*<br/>
 Novo valor dos sinalizadores de [anulação](abort.md) .
 
-*mascara*<br/>
+*mask*<br/>
 Máscara para os bits de sinalizadores de [anulação](abort.md) a serem definidos.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor antigo dos sinalizadores.
 
 ## <a name="remarks"></a>Comentários
 
 Há dois sinalizadores de [anulação](abort.md) : **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se uma mensagem de texto útil é impressa quando um programa é encerrado de forma anormal. A mensagem informa que o aplicativo chamou a função [Abort](abort.md) . O comportamento padrão é imprimir a mensagem. **_CALL_REPORTFAULT**, se definido, especifica que um despejo de memória Watson é gerado e relatado quando [Abort](abort.md) é chamado. Por padrão, o relatório do despejo de memória está habilitado em builds que não são do tipo DEBUG.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -94,6 +98,6 @@ int main()
 Suppressing the abort message. If successful, this message will be the only output.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[abort](abort.md)<br/>
+[anular](abort.md)<br/>

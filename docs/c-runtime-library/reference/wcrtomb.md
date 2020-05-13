@@ -1,8 +1,9 @@
 ---
 title: wcrtomb
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb
+- _o_wcrtomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: 8d2108b90f6884113f0bd974bf7aa634544adf5f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4107ae6cb6366fa8ad80251ce94ee35ca59501bd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945216"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910652"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -59,13 +61,13 @@ size_t wcrtomb(
 *mbchar*<br/>
 O caractere multibyte convertido resultante.
 
-*wchar*<br/>
+*WCHAR*<br/>
 Um caractere largo a ser convertido.
 
 *mbstate*<br/>
 Um ponteiro para um objeto **mbstate_t** .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna o número de bytes necessários para representar o caractere multibyte convertido, caso contrário, retorna –1 em caso de erro.
 
@@ -78,6 +80,8 @@ Se *mbstate* for NULL, o objeto **mbstate_t** interno que contém o estado de co
 A função **wcrtomb** difere de [wctomb, _wctomb_l](wctomb-wctomb-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcsnlen**, se uma chamada subsequente para **wcsrtombs** fosse usada em vez de **wcstombs**.
 
 Em C++, essa função tem uma sobrecarga de modelo que invoca os equivalentes mais recentes e seguros dessa função. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Exceções
 
@@ -135,6 +139,6 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

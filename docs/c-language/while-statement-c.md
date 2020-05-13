@@ -8,11 +8,11 @@ helpviewer_keywords:
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
 ms.openlocfilehash: 4a789f248702f33342a19f95710a8ae313da1d94
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344727"
 ---
 # <a name="while-statement-c"></a>Instrução while (C)
 
@@ -20,8 +20,8 @@ A instrução `while` permite que você repita uma instrução até que uma expr
 
 ## <a name="syntax"></a>Sintaxe
 
-*iteration-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
+*instrução Iteration*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução* **while (***expressão***)**      
 
 A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:
 
@@ -31,7 +31,7 @@ A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da 
 
    Se a *expressão* for verdadeira (diferente de zero), o corpo da instrução será executado e o processo será repetido no início da etapa 1.
 
-A instrução `while` também pode terminar quando um **break**, `goto` ou `return` for executado dentro do corpo da instrução. Use a instrução **continue** para finalizar uma iteração sem sair do loop de `while`. A instrução **continue** passa o controle para a próxima iteração da instrução `while`.
+A `while` instrução também pode terminar quando uma **quebra**, `goto`ou `return` dentro do corpo da instrução for executada. Use a instrução **continue** para finalizar uma iteração sem sair do loop de `while`. A instrução **continue** passa o controle para a próxima iteração da instrução `while`.
 
 Esse é um exemplo da instrução `while`:
 
@@ -45,6 +45,6 @@ while ( i >= 0 )
 
 Esse exemplo copia caracteres de `string2` para `string1`. Se `i` for maior ou igual a 0, `string2[i]` é atribuído a `string1[i]` e `i` é diminuído. Quando `i` atingir ou ficar abaixo de 0, a execução da instrução `while` termina.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instrução while (C++)](../cpp/while-statement-cpp.md)

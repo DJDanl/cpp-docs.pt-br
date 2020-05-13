@@ -20,12 +20,12 @@ A tabela a seguir é um resumo das características do tempo de vida e de visibi
 
 |Atributos:<br /><br /> Nível|Item|Storage-Class<br /><br /> Especificador|Resultado:<br /><br /> Tempo de vida|Visibilidade|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Escopo de arquivo|Definição de variável|**static**|Global|Restante do arquivo de origem no qual ocorre|
+|Escopo de arquivo|Definição de variável|**auto-estática**|Global|Restante do arquivo de origem no qual ocorre|
 ||Declaração de variável|**extern**|Global|Restante do arquivo de origem no qual ocorre|
-||Protótipo ou definição de função|**static**|Global|Arquivo único de origem|
+||Protótipo ou definição de função|**auto-estática**|Global|Arquivo único de origem|
 ||Protótipo da função|**extern**|Global|Restante do arquivo de origem|
 |Escopo de bloco|Declaração de variável|**extern**|Global|Bloquear|
-||Definição de variável|**static**|Global|Bloquear|
+||Definição de variável|**auto-estática**|Global|Bloquear|
 ||Definição de variável|**auto** ou **registrar**|Local|Bloquear|
 
 ## <a name="example"></a>Exemplo
@@ -62,10 +62,10 @@ int main()  // main function defined at external level
 }
 ```
 
-### <a name="comments"></a>Comments
+### <a name="comments"></a>Comentários
 
 Neste exemplo, há quatro níveis de visibilidade: o nível externo e três níveis de bloco. Os valores são impressos na tela como observado nos comentários após cada instrução.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md)

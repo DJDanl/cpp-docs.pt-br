@@ -1,9 +1,11 @@
 ---
 title: _spawnvpe, _wspawnvpe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _spawnvpe
 - _wspawnvpe
+- _o__spawnvpe
+- _o__wspawnvpe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 1ea71f5d7a9cd640e3d314eb48846bca995dca5c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8f974dcfe59551c2fd0fddd7d9c66fb3d46d9b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442701"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919704"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -66,7 +69,7 @@ intptr_t _wspawnvpe(
 
 ### <a name="parameters"></a>Parâmetros
 
-*modo*<br/>
+*mode*<br/>
 Modo de execução do processo de chamada
 
 *cmdname*<br/>
@@ -80,7 +83,7 @@ Matriz de ponteiros para as configurações de ambiente
 
 ## <a name="return-value"></a>Valor retornado
 
-O valor de retorno de um **_spawnvpe** síncrono ou **_wspawnvpe** ( **_P_WAIT** especificado para o *modo*) é o status de saída do novo processo. O valor de retorno de um **_spawnvpe** assíncrono ou **_wspawnvpe** ( **_P_NOWAIT** ou **_P_NOWAITO** especificado para o *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída como um valor diferente de zero se o processo gerado chamar especificamente a rotina de **saída** com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de-1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos seguintes valores:
+O valor de retorno de um **_spawnvpe** síncrono ou **_wspawnvpe** (**_P_WAIT** especificado para o *modo*) é o status de saída do novo processo. O valor de retorno de um **_spawnvpe** assíncrono ou **_wspawnvpe** (**_P_NOWAIT** ou **_P_NOWAITO** especificado para o *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída como um valor diferente de zero se o processo gerado chamar especificamente a rotina de **saída** com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de-1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos seguintes valores:
 
 |||
 |-|-|
@@ -98,22 +101,24 @@ Cada uma dessas funções cria e executa um novo processo, passando uma matriz d
 
 Essas funções validam seus parâmetros. Se *cmdname* ou *argv* for um ponteiro NULL ou se *argv* apontar para um ponteiro NULL ou *argv*[0] for uma cadeia de caracteres vazia, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL**e retornam-1. Nenhum processo novo é gerado.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**_spawnvpe**|\<stdio.h> ou \<process.h>|
 |**_wspawnvpe**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[abort](abort.md)<br/>
+[anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>

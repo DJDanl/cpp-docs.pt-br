@@ -1,11 +1,15 @@
 ---
 title: strtold, _strtold_l, wcstold, _wcstold_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - wcstold
 - strtold
 - _strtold_l
 - _wcstold_l
+- _o__strtold_l
+- _o__wcstold_l
+- _o_strtold
+- _o_wcstold
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +35,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: f1a8bc385072f110832788447bfa248bc12b3663
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba57eed25fd8e1310b9e837c55cb1e1f7ec2b718
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957707"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912594"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -75,7 +80,7 @@ Ponteiro para o caractere que interrompe o exame.
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **strtold** retorna o valor do número de ponto flutuante como um **longo** **duplo**, exceto quando a representação causar um estouro — nesse caso, a função retornará +/-**HUGE_VALL**. O sinal de **HUGE_VALL** corresponde ao sinal do valor que não pode ser representado. **strtold** retornará 0 se nenhuma conversão puder ser executada ou se ocorrer um estouro negativo.
 
@@ -87,6 +92,8 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 Cada função converte a cadeia de caracteres de entrada *strSource* para um **longo** **duplo**. A função **strtold** para de ler a cadeia de caracteres *strSource* no primeiro caractere que ela não pode reconhecer como parte de um número. Este pode ser o caractere nulo de terminação. A versão de caractere largo de **strtold** é **wcstold**; seu argumento *strSource* é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -94,15 +101,15 @@ Cada função converte a cadeia de caracteres de entrada *strSource* para um **l
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-A configuração de categoria **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere fracionário em *strSource*. Para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As funções sem o sufixo **_L** usam a localidade atual; **_strtold_l** e **_wcstold_l** são idênticos a **_strtold** e **_wcstold** , exceto que eles usam a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A configuração de categoria de **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere fracionário em *strSource*. Para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As funções sem o sufixo **_L** usam a localidade atual; **_strtold_l** e **_wcstold_l** são idênticos aos **_strtold** e **_wcstold** , exceto que eles usam a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Se *endptr* não for **NULL**, um ponteiro para o caractere que parou a verificação será armazenado no local apontado por *endptr*. Se nenhuma conversão puder ser executada (nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* será armazenado no local apontado por *endptr*.
 
 **strtold** espera que *strSource* aponte para uma cadeia de caracteres do seguinte formato:
 
-[*espaço em branco*] [*assinar*] [*dígitos*] [. *dígitos*] [{ &#124; &#124; d e e} [assinar] dígitos] &#124;
+[*espaço em branco*] [*assinar*] [*dígitos*] [. *dígitos*] [{**d** &#124; **d** &#124; **e** &#124; **e**} [*assinar*]*dígitos*]
 
-Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, ignorados; *Sign* é um sinal de **+** mais () ou **-** menos (); e os *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
+Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, ignorados; o *sinal* é mais (**+**) ou menos (**-**); e os *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -111,7 +118,7 @@ Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, ig
 |**strtold**, **_strtold_l**|\<stdlib.h>|
 |**wcstold**, **_wcstold_l**|\<stdlib.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -144,13 +151,13 @@ string = 3.1415926535898This stopped it
    Stopped scan at: This stopped it
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
-[Funções de valor de cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Funções de valor da cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

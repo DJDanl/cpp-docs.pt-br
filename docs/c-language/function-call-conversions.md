@@ -7,11 +7,11 @@ helpviewer_keywords:
 - functions [C], argument conversions
 ms.assetid: 04ea0f81-509a-4913-8b12-0937a81babcf
 ms.openlocfilehash: d9f205bbbbac353b57743f8e1211b20fa3d32f05
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233210"
 ---
 # <a name="function-call-conversions"></a>Conversões de função de chamada
 
@@ -21,6 +21,6 @@ Se um protótipo da função estiver presente e incluir tipos de argumentos decl
 
 Se nenhum protótipo da função estiver presente, somente as conversões aritméticas comuns serão executadas nos argumentos na chamada da função. Essas conversões são executadas independentemente em cada argumento na chamada. Isso significa que um valor **float** será convertido em **double**; um valor `char` ou **short** será convertido em `int`; e `unsigned char` ou **unsigned short** será convertido em `unsigned int`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Conversões de Tipo](../c-language/type-conversions-c.md)
+[Conversões de tipo](../c-language/type-conversions-c.md)

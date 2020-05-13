@@ -9,57 +9,57 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-ms.openlocfilehash: e46eaf2bd84d4cebd2215ab2752ce3bb8e1eb9b3
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 3024f744407cf33c8dfad8a6f7af736e0f8061ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907672"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356994"
 ---
 # <a name="mapi-support-in-mfc"></a>Suporte a MAPI no MFC
 
-O MFC fornece suporte para um subconjunto da interface de programa de aplicativo (MAPI) do `CDocument`sistema de mensagens da Microsoft na classe. Especificamente, `CDocument` o tem funções de membro que determinam se o suporte a email está presente na máquina do usuário final e, em caso afirmativo, habilita um comando enviar email cuja ID de comando padrão é ID_FILE_SEND_MAIL. A função de manipulador do MFC para esse comando permite que o usuário envie um documento por email.
+O MFC fornece suporte para um subconjunto da Interface do Programa `CDocument`de Aplicativos de Mensagens da Microsoft (MAPI) na classe . Especificamente, `CDocument` tem funções de membro que determinam se o suporte de e-mail está presente na máquina do usuário final e, se for o caso, habilitar um comando Send Mail cujo ID de comando padrão está ID_FILE_SEND_MAIL. A função de manipulador MFC para este comando permite que o usuário envie um documento por correio eletrônico.
 
 > [!TIP]
->  Embora o MFC não encapsulasse todo o conjunto de funções MAPI, você ainda pode chamar funções MAPI diretamente, assim como você pode chamar funções de API do Win32 diretamente de programas MFC.
+> Embora o MFC não encapsule todo o conjunto de funções MAPI, você ainda pode chamar as funções MAPI diretamente, assim como você pode chamar funções de API Win32 diretamente de programas MFC.
 
-É muito fácil fornecer o comando enviar email em seu aplicativo. O MFC fornece a implementação para empacotar um documento (ou seja `CDocument`, um objeto derivado) como um anexo e enviá-lo como email. Esse anexo é equivalente a um comando File Save que salva (serializa) o conteúdo do documento na mensagem de email. Essa implementação chama o cliente de email na máquina do usuário para dar ao usuário a oportunidade de endereçar o email e adicionar o assunto e o texto da mensagem à mensagem de email. Os usuários veem a interface do usuário do seu aplicativo de email familiar. Essa funcionalidade é fornecida por duas `CDocument` funções de membro `OnFileSendMail` : `OnUpdateFileSendMail`e.
+Fornecer o comando Enviar correio em seu aplicativo é muito fácil. O MFC fornece a implementação para `CDocument`empacotar um documento (ou seja, um objeto derivado) como um anexo e enviá-lo como correio. Este anexo é equivalente a um comando File Save que salva (serializa) o conteúdo do documento para a mensagem de e-mail. Esta implementação solicita ao cliente de e-mail na máquina do usuário a oportunidade de abordar o e-mail e adicionar texto de assunto e mensagem à mensagem de e-mail. Os usuários veem a interface de usuário do aplicativo de e-mail familiar. Esta funcionalidade é fornecida `CDocument` por duas `OnFileSendMail` `OnUpdateFileSendMail`funções de membros: e .
 
-MAPI precisa ler o arquivo para enviar o anexo. Se o aplicativo mantiver seu arquivo de dados aberto `OnFileSendMail` durante uma chamada de função, o arquivo precisará ser aberto com um modo de compartilhamento que permite que vários processos acessem o arquivo.
+A MAPI precisa ler o arquivo para enviar o anexo. Se o aplicativo mantiver seu `OnFileSendMail` arquivo de dados aberto durante uma chamada de função, o arquivo precisa ser aberto com um modo de compartilhamento que permite que vários processos acessem o arquivo.
 
 > [!NOTE]
->  Uma versão de substituição `OnFileSendMail` do para `COleDocument` classe manipula corretamente os documentos compostos.
+> Uma versão sobreposta de `OnFileSendMail` classe `COleDocument` lida corretamente com documentos compostos.
 
-#### <a name="to-implement-a-send-mail-command-with-mfc"></a>Para implementar um comando enviar email com o MFC
+#### <a name="to-implement-a-send-mail-command-with-mfc"></a>Para implementar um comando Enviar correio com MFC
 
-1. Use o editor C++ de menu Visual para adicionar um item de menu cuja ID de comando seja ID_FILE_SEND_MAIL.
+1. Use o editor de menus Visual C++ para adicionar um item de menu cujo ID de comando é ID_FILE_SEND_MAIL.
 
-   Essa ID de comando é fornecida pela estrutura em AFXRES. T. O comando pode ser adicionado a qualquer menu, mas normalmente é adicionado ao menu **arquivo** .
+   Este ID de comando é fornecido pela estrutura no AFXRES. H. O comando pode ser adicionado a qualquer menu, mas geralmente é adicionado ao menu **Arquivo.**
 
 1. Adicione manualmente o seguinte ao mapa de mensagens do documento:
 
    [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
-    >  Esse mapa de mensagens funciona para um documento derivado de `CDocument` ou `COleDocument` — ele pega a classe base correta em ambos os casos, mesmo que o mapa da mensagem esteja em sua classe de documento derivada.
+    >  Este mapa de mensagem funciona `CDocument` para `COleDocument` um documento derivado de qualquer um ou — ele capta a classe base correta em ambos os casos, mesmo que o mapa de mensagem esteja na sua classe de documento derivada.
 
-1. Compile seu aplicativo.
+1. Construa sua aplicação.
 
-Se o suporte a email estiver disponível, o MFC habilitará `OnUpdateFileSendMail` o item de menu com e `OnFileSendMail`processará posteriormente o comando com. Se o suporte a email não estiver disponível, o MFC removerá automaticamente o item de menu para que o usuário não o veja.
+Se o suporte de e-mail estiver `OnUpdateFileSendMail` disponível, o MFC habilita o item do menu com e, posteriormente, processa o comando com `OnFileSendMail`. Se o suporte de e-mail não estiver disponível, o MFC removerá automaticamente o item do menu para que o usuário não o veja.
 
 > [!TIP]
->  Em vez de adicionar manualmente entradas de mapa de mensagem conforme descrito anteriormente, você pode usar o [Assistente de classe](reference/mfc-class-wizard.md) de classe para mapear mensagens para o functions. Para obter mais informações, consulte [mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md).
+> Em vez de adicionar manualmente entradas de mapa de mensagem como descrito anteriormente, você pode usar o [Assistente de Classe](reference/mfc-class-wizard.md) de classe para mapear mensagens para funções. Para obter mais informações, consulte ['Mapeamento de mensagens' para funções](../mfc/reference/mapping-messages-to-functions.md).
 
-Para obter informações relacionadas, consulte a visão geral do [MAPI](../mfc/mapi.md) .
+Para obter informações relacionadas, consulte a visão geral [do MAPI.](../mfc/mapi.md)
 
-Para obter mais informações sobre `CDocument` as funções de membro que habilitam MAPI, consulte:
+Para obter mais `CDocument` informações sobre as funções de membro que habilitam o MAPI, consulte:
 
-- [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)
+- [cdocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)
 
-- [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)
+- [cdocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)
 
 - [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [MAPI](../mfc/mapi.md)

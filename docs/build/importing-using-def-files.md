@@ -17,7 +17,7 @@ ms.locfileid: "62273411"
 ---
 # <a name="importing-using-def-files"></a>Importando usando arquivos DEF
 
-Se você optar por usar **__declspec(dllimport)** junto com um arquivo. def, você deve alterar o arquivo. def para usar dados no lugar de constante para reduzir a probabilidade de que a codificação incorreta fará com que um problema:
+Se você optar por usar **__declspec (dllimport)** junto com um arquivo. def, deverá alterar o arquivo. def para usar dados no lugar de constante para reduzir a probabilidade de que a codificação incorreta cause um problema:
 
 ```
 // project.def
@@ -26,16 +26,16 @@ EXPORTS
    ulDataInDll   DATA
 ```
 
-A tabela a seguir mostra por que.
+A tabela a seguir mostra o porquê.
 
-|Palavra-chave|Emite na biblioteca de importação|Exportações|
+|Palavra-chave|Emitidos na biblioteca de importação|Port|
 |-------------|---------------------------------|-------------|
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-Usando o **__declspec(dllimport)** e constante lista ambos os `imp` biblioteca que é criada para permitir que a vinculação explícita de importação de versão e o nome não decorado na DLL. lib. Usando o **__declspec(dllimport)** listas de dados e apenas o `imp` versão do nome.
+O uso de **__declspec (dllimport)** e constante lista `imp` a versão e o nome não decorado na biblioteca de importação dll. lib que é criada para permitir vinculação explícita. O uso de **__declspec (dllimport)** e de dados `imp` lista apenas a versão do nome.
 
-Se você usar a constante, qualquer uma das construções de código a seguir pode ser usada para acessar `ulDataInDll`:
+Se você usar constante, qualquer uma das seguintes construções de código poderá ser usada para acessar `ulDataInDll`:
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
@@ -49,7 +49,7 @@ ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-No entanto, se você usar dados em seu arquivo. def, somente o código compilado com a seguinte definição pode acessar a variável `ulDataInDll`:
+No entanto, se você usar dados em seu arquivo. def, somente o código compilado com a seguinte definição poderá `ulDataInDll`acessar a variável:
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,10 +57,10 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-Usando a constante é mais arriscado porque se você esquecer de usar o nível extra de indireção, você poderia potencialmente acessar ponteiro da tabela de endereço de importação para a variável — não a própria variável. Esse tipo de problema com frequência pode se manifestar como uma violação de acesso porque a tabela de endereços de importação é feita no momento, somente leitura pelo compilador e vinculador.
+Usar a constante é mais arriscado porque se você esquecer de usar o nível extra de indireção, poderá potencialmente acessar o ponteiro da tabela de endereços de importação para a variável, não a variável em si. Esse tipo de problema geralmente pode ser manifestado como uma violação de acesso porque a tabela de endereços de importação é atualmente feita como somente leitura pelo compilador e pelo vinculador.
 
-O vinculador MSVC atual emite um aviso se perceber constante no arquivo. def para levar em conta para esse caso. O motivo real só para usar a constante é se você não é possível recompilar algum arquivo de objeto em que o arquivo de cabeçalho não listar **__declspec(dllimport)** no protótipo.
+O vinculador MSVC atual emite um aviso se ele vê constante no arquivo. def para considerar esse caso. O único motivo para usar a constante é que se você não puder recompilar algum arquivo de objeto em que o arquivo de cabeçalho não liste **__declspec (dllimport)** no protótipo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Importando para um aplicativo](importing-into-an-application.md)

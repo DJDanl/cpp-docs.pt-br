@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultCompareTraits
+title: Classe CDefaultComparetraits
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultCompareTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-ms.openlocfilehash: c5f4ab3737838af11501c4a0f2037b57087939c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8262800ef613424c37c53931d97dd4b1b1a71321
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245902"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327071"
 ---
-# <a name="cdefaultcomparetraits-class"></a>Classe CDefaultCompareTraits
+# <a name="cdefaultcomparetraits-class"></a>Classe CDefaultComparetraits
 
-Essa classe fornece funções de comparação de elemento de padrão.
+Esta classe fornece funções de comparação de elementos padrão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,26 +34,26 @@ O tipo de dados a serem armazenados na coleção.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(Estático) Chame essa função para comparar dois elementos quanto à igualdade.|
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Estático) Chame essa função para determinar o elemento maior e menor.|
+|[CDefaultCompareTraits::CompareElements](#compareelements)|(Estática) Chame esta função para comparar dois elementos para a igualdade.|
+|[CDefaultCompareTraits::CompareElementsPedido](#compareelementsordered)|(Estática) Chame esta função para determinar o elemento maior e menor.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe contém duas funções estáticas para comparar elementos armazenados em um objeto de classe de coleção. Essa classe é utilizada pela [classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
+Esta classe contém duas funções estáticas para comparar elementos armazenados em um objeto de classe de coleção. Esta classe é utilizada pela [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
 
-Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).
+Para obter mais informações, consulte [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcoll.h
 
-##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements
+## <a name="cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>CDefaultCompareTraits::CompareElements
 
-Chame essa função para comparar dois elementos quanto à igualdade.
+Chame esta função para comparar dois elementos para a igualdade.
 
 ```
 static bool CompareElements(const T& element1, const T& element2);
@@ -61,23 +61,23 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>Parâmetros
 
-*element1*<br/>
+*elemento1*<br/>
 O primeiro elemento.
 
-*element2*<br/>
+*elemento2*<br/>
 O segundo elemento.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna true se os elementos são iguais, caso contrário, false.
+Retorna verdadeiro se os elementos são iguais, falsos de outra forma.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão dessa função é a igualdade (**==**) operador. Para objetos diferentes tipos de dados simples, essa função talvez precise ser substituído.
+A implementação padrão desta função**==** é o operador de igualdade ( ) Para outros objetos que não sejam simples tipos de dados, essa função pode precisar ser substituída.
 
-##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered
+## <a name="cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsPedido
 
-Chame essa função para determinar o elemento maior e menor.
+Chame esta função para determinar o elemento maior e menor.
 
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -85,26 +85,26 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>Parâmetros
 
-*element1*<br/>
+*elemento1*<br/>
 O primeiro elemento.
 
-*element2*<br/>
+*elemento2*<br/>
 O segundo elemento.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna um inteiro com base na tabela a seguir:
 
 |Condição|Valor retornado|
 |---------------|------------------|
-|*element1* < *element2*|<0|
-|*element1* == *element2*|0|
-|*element1* > *element2*|>0|
+|*elemento1* < *elemento2*|<0|
+|*elemento1* == *elemento2*|0|
+|*elemento1* > *elemento2*|>0|
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão dessa função usa o **==**, **\<**, e **>** operadores. Para objetos diferentes tipos de dados simples, essa função talvez precise ser substituído.
+A implementação padrão desta **==** **\<** função **>** utiliza os operadores e operadores. Para outros objetos que não sejam simples tipos de dados, essa função pode precisar ser substituída.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

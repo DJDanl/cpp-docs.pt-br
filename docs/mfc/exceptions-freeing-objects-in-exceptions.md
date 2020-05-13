@@ -1,5 +1,5 @@
 ---
-title: 'Exceções: Liberando objetos em exceções'
+title: 'Exceções: liberando objetos em exceções'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,59 +11,59 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49c7c6b0481f90baa23609c1bb1596deda49f7bd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406061"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371992"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>Exceções: Liberando objetos em exceções
+# <a name="exceptions-freeing-objects-in-exceptions"></a>Exceções: liberando objetos em exceções
 
-Este artigo explica a necessidade e o método de liberação de objetos quando ocorre uma exceção. Os tópicos incluem:
+Este artigo explica a necessidade e o método de libertação de objetos quando ocorre uma exceção. Os tópicos incluem:
 
-- [Tratamento da exceção localmente](#_core_handling_the_exception_locally)
+- [Lidar com a exceção localmente](#_core_handling_the_exception_locally)
 
-- [Lançando exceções após a destruição de objetos](#_core_throwing_exceptions_after_destroying_objects)
+- [Atirando exceções depois de destruir objetos](#_core_throwing_exceptions_after_destroying_objects)
 
-Exceções geradas pelo framework ou por seu fluxo de programa normal de interrupção do aplicativo. Portanto, é muito importante manter o controle de fechamento de objetos, de modo que você pode corretamente descartá-los no caso de uma exceção será lançada.
+Exceções lançadas pelo framework ou pelo aplicativo interrompem o fluxo normal do programa. Assim, é muito importante manter o controle atento dos objetos para que você possa descartá-los adequadamente no caso de uma exceção ser lançada.
 
-Há dois métodos principais para fazer isso.
+Há dois métodos primários para fazer isso.
 
-- Tratar exceções localmente usando o **tente** e **catch** palavras-chave, em seguida, destrua todos os objetos com uma instrução.
+- Lidar com exceções localmente usando as palavras-chave **try** e **catch** e, em seguida, destruir todos os objetos com uma declaração.
 
-- Destruir a qualquer objeto na **catch** bloco antes de lançar a exceção fora do bloco para manipulação adicional.
+- Destrua qualquer objeto no bloco **de captura** antes de jogar a exceção fora do bloco para posterior manuseio.
 
-Essas duas abordagens são ilustradas abaixo como soluções para o exemplo a seguir problemático:
+Essas duas abordagens são ilustradas abaixo como soluções para o seguinte exemplo problemático:
 
 [!code-cpp[NVC_MFCExceptions#14](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_1.cpp)]
 
-Conforme descrito acima, `myPerson` não será excluído se uma exceção é lançada pelo `SomeFunc`. Execução saltará diretamente para o próximo manipulador de exceção externa, ignorando a saída da função normal e o código que exclui o objeto. O ponteiro para o objeto sai do escopo quando a exceção deixa a função e a memória ocupada pelo objeto nunca será recuperada, desde a execução do programa. Isso é um vazamento de memória; ele seria detectado usando o diagnóstico de memória.
+Como escrito `myPerson` acima, não será excluído se `SomeFunc`uma exceção for lançada por . A execução salta diretamente para o próximo manipulador de exceção externo, contornando a saída de função normal e o código que exclui o objeto. O ponteiro para o objeto fica fora de escopo quando a exceção deixa a função, e a memória ocupada pelo objeto nunca será recuperada enquanto o programa estiver em execução. Isto é um vazamento de memória; seria detectado usando o diagnóstico de memória.
 
-##  <a name="_core_handling_the_exception_locally"></a> Tratamento da exceção localmente
+## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a>Manipulação da exceção localmente
 
-O **try/catch** paradigma fornece um método de programação defensivo para evitar vazamentos de memória e garantindo que seus objetos são destruídos quando ocorrerem exceções. Por exemplo, o exemplo mostrado anteriormente neste artigo poderia ser reescrito da seguinte maneira:
+O paradigma **de tentativa/captura** fornece um método de programação defensiva para evitar vazamentos de memória e garantir que seus objetos sejam destruídos quando exceções ocorrem. Por exemplo, o exemplo mostrado anteriormente neste artigo pode ser reescrito da seguinte forma:
 
 [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]
 
-Esse novo exemplo configura um manipulador de exceção para capturar a exceção e tratá-la localmente. Em seguida, ele sai da função normalmente e destrói o objeto. O aspecto importante desse exemplo é que um contexto para capturar a exceção é estabelecido com o **try/catch** blocos. Sem um quadro de local de exceção, a função jamais saberia que uma exceção tivesse sido lançada e não terá a oportunidade de se sair normalmente e destruir o objeto.
+Este novo exemplo configura um manipulador de exceção para pegar a exceção e manuseá-la localmente. Em seguida, ele sai da função normalmente e destrói o objeto. O aspecto importante deste exemplo é que um contexto para capturar a exceção é estabelecido com os blocos **de tentativa/captura.** Sem um quadro de exceção local, a função nunca saberia que uma exceção havia sido lançada e não teria a chance de sair normalmente e destruir o objeto.
 
-##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Lançando exceções após a destruição de objetos
+## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Jogando exceções depois de destruir objetos
 
-Outra maneira de lidar com exceções é transferi-los para o contexto de manipulação de exceção externo Avançar. No seu **catch** bloco, você pode fazer uma limpeza de seus objetos alocados localmente e, em seguida, lance a exceção para processamento adicional.
+Outra maneira de lidar com exceções é passá-las para o próximo contexto externo de tratamento de exceções. No seu bloco **de captura,** você pode fazer alguma limpeza de seus objetos alocados localmente e, em seguida, jogar a exceção para processamento adicional.
 
-A função gerando pode ou não, talvez seja necessário desalocar objetos da pilha. Se a função sempre desaloca o objeto da pilha antes de retornar no caso normal, em seguida, a função também deverá desalocar o objeto da pilha antes de lançar a exceção. Por outro lado, se a função normalmente não desalocar o objeto antes de retornar no caso normal, em seguida, você deve decidir caso a caso se o objeto da pilha deve ser desalocado.
+A função de arremesso pode ou não precisar desalocar objetos de pilha. Se a função sempre desalocar o objeto heap antes de retornar no caso normal, então a função também deve desalocar o objeto heap antes de lançar a exceção. Por outro lado, se a função normalmente não dealoca o objeto antes de retornar no caso normal, então você deve decidir caso a caso se o objeto heap deve ser desalocado.
 
-A exemplo a seguir mostra objetos alocados como localmente pode ser limpos:
+O exemplo a seguir mostra como objetos alocados localmente podem ser limpos:
 
 [!code-cpp[NVC_MFCExceptions#16](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_3.cpp)]
 
-O mecanismo de exceção desaloca automaticamente objetos de quadro; o destruidor do objeto de quadro também é chamado.
+O mecanismo de exceção desaloca automaticamente objetos de quadro; o destruidor do objeto quadro também é chamado.
 
-Se você chamar funções que podem gerar exceções, você pode usar **try/catch** blocos para certificar-se de que você capture as exceções e tenha a oportunidade para destruir todos os objetos criados por você. Em particular, lembre-se de que muitas funções MFC podem lançar exceções.
+Se você chamar funções que podem lançar exceções, você pode usar blocos **de tentativa/captura** para garantir que você pegue as exceções e tenha a chance de destruir quaisquer objetos que você criou. Em particular, esteja ciente de que muitas funções de MFC podem lançar exceções.
 
-Para obter mais informações, consulte [exceções: Obtendo e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Para obter mais informações, consulte [Exceções: Captura e Exclusão de Exceções](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)

@@ -1,9 +1,11 @@
 ---
 title: asctime_s, _wasctime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime_s
 - asctime_s
+- _o__wasctime_s
+- _o_asctime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624779"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909418"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -71,7 +74,7 @@ errno_t _wasctime_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Um ponteiro para um buffer para armazenar o resultado da cadeia de caracteres. Essa função assume um ponteiro para um local de memória válido com um tamanho especificado por *numberOfElements*.
 
 *numberOfElements*<br/>
@@ -84,18 +87,18 @@ Estrutura de hora/data. Essa função assume um ponteiro para um objeto **struct
 
 Zero se for bem-sucedido. Se houver uma falha, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, o valor retornado será um código de erro. Códigos de erro são definidos em ERRNO.H. Para obter mais informações, consulte [Constantes errno](../../c-runtime-library/errno-constants.md). Os códigos de erro reais retornados para cada condição de erro são mostrados na tabela a seguir.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
-|*buffer*|*numberOfElements*|*tmSource*|Valor de|Valor no *buffer*|
+|*completo*|*numberOfElements*|*tmSource*|Retorno|Valor no *buffer*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Qualquer|Qualquer|**EINVAL**|Não modificado|
+|**NULO**|Qualquer|Qualquer|**EINVAL**|Não modificado|
 |Not **NULL** (aponta para memória válida)|0|Qualquer|**EINVAL**|Não modificado|
-|Não **nulo**|0< tamanho < 26|Qualquer|**EINVAL**|Cadeia de caracteres vazia|
-|Não **nulo**|>= 26|**NULL**|**EINVAL**|Cadeia de caracteres vazia|
-|Não **nulo**|>= 26|Estrutura de hora inválida ou valores fora do intervalo para os componentes da hora|**EINVAL**|Cadeia de caracteres vazia|
+|Não **nulo**|0< tamanho < 26|Qualquer|**EINVAL**|cadeia de caracteres vazia|
+|Não **nulo**|>= 26|**NULO**|**EINVAL**|cadeia de caracteres vazia|
+|Não **nulo**|>= 26|Estrutura de hora inválida ou valores fora do intervalo para os componentes da hora|**EINVAL**|cadeia de caracteres vazia|
 
 > [!NOTE]
-> As condições de erro para **wasctime_s** são semelhantes a **asctime_s** , com a exceção de que o limite de tamanho é medido em palavras.
+> As condições de erro para **wasctime_s** são semelhantes a **asctime_s** com a exceção de que o limite de tamanho é medido em palavras.
 
 ## <a name="remarks"></a>Comentários
 
@@ -115,11 +118,13 @@ A função **asctime** converte uma hora armazenada como uma estrutura em uma ca
 
 A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) para informações sobre a configuração da hora local e a função [_tzset](tzset.md) para informações sobre a definição do ambiente de fuso horário e variáveis globais.
 
-O resultado da cadeia de caracteres produzido por **asctime_s** contém exatamente 26 caracteres e tem o formulário `Wed Jan 02 02:03:55 1980\n\0`. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menor, um código de erro, **EINVAL**, será retornado.
+O resultado da cadeia de caracteres produzido por **asctime_s** contém exatamente 26 caracteres e `Wed Jan 02 02:03:55 1980\n\0`tem o formulário. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menor, um código de erro, **EINVAL**, será retornado.
 
-**_wasctime_s** é uma versão de caractere largo do **asctime_s**. **_wasctime_s** e **asctime_s** se comportam de outra forma.
+**_wasctime_s** é uma versão de caractere largo do **asctime_s**. **_wasctime_s** e **asctime_s** se comportar de forma idêntica.
 
 As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico
 
@@ -180,7 +185,7 @@ Current date and time: Wed May 14 15:30:17 2003
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
+[Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>

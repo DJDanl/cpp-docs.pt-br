@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953310"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911535"
 ---
 # <a name="_lock_file"></a>_lock_file
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parâmetros
 
-*file*<br/>
+*Grupo*<br/>
 Identificador de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_lock_file** bloqueia o objeto de **arquivo** especificado pelo *arquivo*. O arquivo subjacente não está bloqueado pelo **_lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. Chamadas para **_lock_file** e **_unlock_file** devem ser combinadas em um thread.
+A função **_lock_file** bloqueia o objeto de **arquivo** especificado pelo *arquivo*. O arquivo subjacente não está bloqueado por **_lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. Chamadas para **_lock_file** e **_unlock_file** devem ser correspondidas em um thread.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

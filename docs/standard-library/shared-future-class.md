@@ -18,14 +18,14 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 65ea01a9ced1ca69cd1b1526e7594c4b54387553
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336775"
 ---
-# <a name="sharedfuture-class"></a>Classe shared_future
+# <a name="shared_future-class"></a>Classe shared_future
 
 Descreve um *objeto de retorno assíncrono*. Diferente de um objeto [future](../standard-library/future-class.md), um *provedor assíncrono* pode ser associado a qualquer quantidade de objetos `shared_future`.
 
@@ -55,8 +55,8 @@ Objetos `shared_future` não estão sincronizados. Chamar métodos no mesmo obje
 |Nome|Descrição|
 |----------|-----------------|
 |[get](#get)|Recupera o resultado armazenado no *estado assíncrono associado*.|
-|[valid](#valid)|Especifica se o objeto não está vazio.|
-|[wait](#wait)|Bloqueia o thread atual até que o estado assíncrono associado esteja pronto.|
+|[Válido](#valid)|Especifica se o objeto não está vazio.|
+|[Esperar](#wait)|Bloqueia o thread atual até que o estado assíncrono associado esteja pronto.|
 |[wait_for](#wait_for)|Bloqueia até que o estado assíncrono associado esteja pronto ou até que o tempo especificado tenha decorrido.|
 |[wait_until](#wait_until)|Bloqueia até que o estado assíncrono associado esteja pronto ou até um ponto no tempo especificado.|
 
@@ -72,7 +72,7 @@ Objetos `shared_future` não estão sincronizados. Chamar métodos no mesmo obje
 
 **Namespace:** std
 
-## <a name="get"></a>  shared_future::get
+## <a name="shared_futureget"></a><a name="get"></a>shared_future::get
 
 Recupera o resultado armazenado no *estado assíncrono associado*.
 
@@ -90,13 +90,13 @@ Se o resultado for uma exceção, o método a gerará novamente. Caso contrário
 
 Antes de recuperar o resultado, este método bloqueia o thread atual até que o estado assíncrono associado esteja pronto.
 
-Para a especialização parcial `shared_future<Ty&>`, o valor armazenado será efetivamente uma referência ao objeto que foi passado para o *provedor assíncrono* como o valor retornado.
+Para a especialização `shared_future<Ty&>`parcial, o valor armazenado é efetivamente uma referência ao objeto que foi passado ao provedor *assíncrono* como o valor de retorno.
 
-Como não existe nenhum valor armazenado para a `shared_future<void>`especialização, o método retorna **void**.
+Como não existe valor armazenado `shared_future<void>`para a especialização, o método retorna **vazio**.
 
-## <a name="op_eq"></a>  shared_future::operator=
+## <a name="shared_futureoperator"></a><a name="op_eq"></a>shared_future:operador=
 
-Transfere o *estado assíncrono associado* de um objeto especificado.
+Transfere um *estado assíncrono associado* de um objeto especificado.
 
 ```cpp
 shared_future& operator=(shared_future&& Right) noexcept;
@@ -106,19 +106,19 @@ shared_future& operator=(const shared_future& Right);
 ### <a name="parameters"></a>Parâmetros
 
 *Certo*\
-Um objeto `shared_future`.
+Um objeto `shared_future` .
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `*this`
 
 ### <a name="remarks"></a>Comentários
 
-Para o primeiro operador, o *direito* não tem mais um estado assíncrono associado após a operação.
+Para o primeiro operador, *a Right* não tem mais um estado assíncrono associado após a operação.
 
-Para o segundo método, *Right* mantém seu estado assíncrono associado.
+Para o segundo método, *right* mantém seu estado assíncrono associado.
 
-## <a name="shared_future"></a> Construtor shared_future::shared_future
+## <a name="shared_futureshared_future-constructor"></a><a name="shared_future"></a>shared_future:shared_future Construtor
 
 Constrói um objeto `shared_future`.
 
@@ -136,13 +136,13 @@ Um objeto [future](../standard-library/future-class.md) ou `shared_future`.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor cria um objeto `shared_future` que não tem nenhum *estado assíncrono associado*.
+O primeiro construtor constrói `shared_future` um objeto que não tem *estado assíncrono associado.*
 
-O segundo e o terceiro construtores conconstróim um `shared_future` objeto e transferem o estado assíncrono associado da *direita*. A *direita* não tem mais um estado assíncrono associado.
+O segundo e terceiro construtores constroem um `shared_future` objeto e transferem o estado assíncrono associado da *Direita*. *A direita* não tem mais um estado assíncrono associado.
 
-O quarto construtor constrói um `shared_future` objeto que tem o mesmo estado assíncrono associado que o *direito*.
+O quarto construtor constrói `shared_future` um objeto que tem o mesmo estado assíncrono associado que *o Direito*.
 
-## <a name="valid"></a>  shared_future::valid
+## <a name="shared_futurevalid"></a><a name="valid"></a>shared_future::válido
 
 Especifica se o objeto tem um *estado assíncrono associado*.
 
@@ -150,13 +150,13 @@ Especifica se o objeto tem um *estado assíncrono associado*.
 bool valid() noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**true** se o objeto tiver um estado assíncrono associado; caso contrário, **false**.
+**verdade** se o objeto tem um estado assíncrono associado; caso contrário, **falso**.
 
-## <a name="wait"></a>  shared_future::wait
+## <a name="shared_futurewait"></a><a name="wait"></a>shared_future::espere
 
-Bloqueia o thread atual até que o *estado assíncrono associado* esteja *pronto*.
+Bloqueia a rosca atual até que o *estado assíncrono associado* esteja *pronto*.
 
 ```cpp
 void wait() const;
@@ -166,7 +166,7 @@ void wait() const;
 
 Um estado assíncrono associado ficará pronto somente se seu provedor assíncrono tiver armazenado um valor retornado ou armazenado uma exceção.
 
-## <a name="wait_for"></a>  shared_future::wait_for
+## <a name="shared_futurewait_for"></a><a name="wait_for"></a>shared_future:wait_for
 
 Bloqueia o thread atual até que o estado assíncrono associado seja *ready* ou até que o intervalo de tempo especificado tenha decorrido.
 
@@ -181,15 +181,15 @@ future_status wait_for(
 *Rel_time*\
 Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica um intervalo de tempo máximo durante o qual o thread fica bloqueado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um [future_status](../standard-library/future-enums.md#future_status) que indica o motivo do retorno.
 
 ### <a name="remarks"></a>Comentários
 
-Um estado assíncrono associado ficará *pronto* somente se seu provedor assíncrono tiver armazenado um valor retornado ou armazenado uma exceção.
+Um estado assíncrono associado só está *pronto* se seu provedor assíncrono tiver armazenado um valor de retorno ou armazenado uma exceção.
 
-## <a name="wait_until"></a>  shared_future::wait_until
+## <a name="shared_futurewait_until"></a><a name="wait_until"></a>shared_future:wait_until
 
 Bloqueia o thread atual até que o estado assíncrono associado esteja *pronto* ou após um determinado ponto no tempo.
 
@@ -204,7 +204,7 @@ future_status wait_until(
 *Abs_time*\
 Um objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica um tempo após o qual o thread pode ser desbloqueado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um [future_status](../standard-library/future-enums.md#future_status) que indica o motivo do retorno.
 
@@ -212,7 +212,7 @@ Um [future_status](../standard-library/future-enums.md#future_status) que indica
 
 Um estado assíncrono associado ficará pronto somente se seu provedor assíncrono tiver armazenado um valor retornado ou armazenado uma exceção.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[\<future>](../standard-library/future.md)
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[\<>futuros](../standard-library/future.md)

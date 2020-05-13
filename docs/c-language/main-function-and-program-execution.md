@@ -36,7 +36,7 @@ Quando você quer passar informações para a função **main**, tradicionalment
 
 Consulte [Usando wmain](../c-language/using-wmain.md) para obter uma descrição da versão de **main** para caracteres largos.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[função principal e argumentos de linha de comandoC++()](../cpp/main-function-command-line-args.md)\
+[argumentos da função principal e da linha de comando (C++)](../cpp/main-function-command-line-args.md)\
 [Analisando argumentos de linha de comando C](../c-language/parsing-c-command-line-arguments.md)

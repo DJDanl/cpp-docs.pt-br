@@ -3,12 +3,12 @@ title: Personalizar as configurações de build do CMake no Visual Studio
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: f93997e498502e0e326edfc2b023af9808f86357
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c6bd1404799ccc9ad6b689646cd066849d48fca8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078650"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328688"
 ---
 # <a name="customize-cmake-build-settings"></a>Personalizar as configurações de build do CMake
 
@@ -24,7 +24,7 @@ Agora você vê o **Editor de Configurações** com as configurações instalada
 
 ![Editor de Configurações do CMake](media/cmake-settings-editor.png)
 
-O Visual Studio fornece uma configuração de `x64-Debug` por padrão. Você pode adicionar configurações adicionais clicando no sinal de adição verde. As configurações que você vê no editor podem variar dependendo da configuração selecionada.
+Por padrão, o `x64-Debug` Visual Studio fornece uma configuração. Você pode adicionar configurações adicionais clicando no sinal de adição verde. As configurações que você vê no editor podem variar dependendo da configuração selecionada.
 
 As opções escolhidas no editor são gravadas em um arquivo chamado *CMakeSettings. JSON*. Esse arquivo fornece argumentos de linha de comando e variáveis de ambiente que são passadas para o CMake quando você compila os projetos. O Visual Studio nunca modifica *CMakeLists. txt* automaticamente; usando *CMakeSettings. JSON* , você pode personalizar a compilação por meio do Visual Studio enquanto deixa os arquivos de projeto do cmake intocados para que outras pessoas em sua equipe possam consumi-los com quaisquer ferramentas que estejam usando.
 
@@ -34,7 +34,7 @@ As seguintes configurações estão disponíveis sob o título **Geral**:
 
 ### <a name="configuration-name"></a>Nome da configuração
 
-Corresponde à configuração **name**. Esse nome aparece na lista C++ suspensa configuração. Use a macro `${name}` para compor outros valores de propriedade, como caminhos.
+Corresponde à configuração **name**. Esse nome aparece na lista suspensa configuração de C++. Use a macro `${name}` para compor outros valores de propriedade, como caminhos.
 
 ### <a name="configuration-type"></a>Tipo de configuração
 
@@ -46,7 +46,7 @@ Corresponde à configuração **inheritedEnvironments**. Define o ambiente do co
 
 ### <a name="cmake-toolchain-file"></a>Arquivo de cadeia de ferramentas do CMake
 
-Caminho para o [arquivo CMake ferramentas](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html). Esse caminho é passado para CMake como "-DCMAKE_TOOLCHAIN_FILE = \<FilePath >". Os arquivos ferramentas especificam locais de compiladores e utilitários de ferramentas, além de outras informações relacionadas à plataforma de destino e ao compilador. Por padrão, o Visual Studio usa o [arquivo vcpkg ferramentas](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) se essa configuração não for especificada.
+Caminho para o [arquivo CMake ferramentas](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html). Esse caminho é passado para CMake como "-DCMAKE_TOOLCHAIN_FILE = \<FilePath>". Os arquivos ferramentas especificam locais de compiladores e utilitários de ferramentas, além de outras informações relacionadas à plataforma de destino e ao compilador. Por padrão, o Visual Studio usa o [arquivo vcpkg ferramentas](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) se essa configuração não for especificada.
 
 ### <a name="build-root"></a>Raiz de build
 
@@ -80,7 +80,7 @@ Opções de linha de comando adicionais passadas para o [rsync](https://download
 
 Essas configurações permitem que você defina as variáveis CMake e salve-as em *CMakeSettings. JSON*. Eles são passados para CMake no momento da compilação e substituem quaisquer valores no arquivo *CMakeLists. txt* . Use esta seção da mesma forma que usaria a CMakeGUI para exibir uma lista de todas as variáveis do CMake disponíveis para edição. Clique no botão **Salvar e gerar cache** para exibir uma lista de todas as variáveis do CMake disponíveis para edição, incluindo variáveis avançadas (de acordo com a CMakeGUI). Você pode filtrar a lista pelo nome da variável.
 
-Corresponde a **variáveis**. Contém um par nome-valor de variáveis CMake passadas como nome **-D** *_name_=_valor_* para CMake. Se as instruções de compilação do projeto CMake especificarem a adição de quaisquer variáveis diretamente ao arquivo de cache CMake, recomendamos que você as adicione aqui em vez disso.
+Corresponde a **variáveis**. Contém um par nome-valor de variáveis CMake passadas como valor de * _nome_=* **-D** para CMake. Se as instruções de compilação do projeto CMake especificarem a adição de quaisquer variáveis diretamente ao arquivo de cache CMake, recomendamos que você as adicione aqui em vez disso.
 
 ## <a name="advanced-settings"></a>Configurações avançadas
 
@@ -88,17 +88,17 @@ Corresponde a **variáveis**. Contém um par nome-valor de variáveis CMake pass
 
 Corresponde ao **gerador**. Mapeia para a opção CMake **-G** e especifica o [gerador de CMake](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) a ser usado. Essa propriedade também pode ser usada como uma macro, `${generator}`, ao compor outros valores de propriedade. No momento, o Visual Studio dá suporte aos seguintes geradores do CMake:
 
-  - "Ninja"
-  - "UNIX Makefiles"
-  - "Visual Studio 16 2019"
-  - "Visual Studio 16 2019 Win64"
-  - "Visual Studio 16 2019 ARM"
-  - "Visual Studio 15 2017"
-  - "Visual Studio 15 2017 Win64"
-  - "Visual Studio 15 2017 ARM"
-  - "Visual Studio 14 2015"
-  - "Visual Studio 14 2015 Win64"
-  - "Visual Studio 14 2015 ARM"
+- "Ninja"
+- "UNIX Makefiles"
+- "Visual Studio 16 2019"
+- "Visual Studio 16 2019 Win64"
+- "Visual Studio 16 2019 ARM"
+- "Visual Studio 15 2017"
+- "Visual Studio 15 2017 Win64"
+- "Visual Studio 15 2017 ARM"
+- "Visual Studio 14 2015"
+- "Visual Studio 14 2015 Win64"
+- "Visual Studio 14 2015 ARM"
   
 Como o ninja foi projetado para velocidades de compilação rápidas em vez de flexibilidade e função, ele é definido como o padrão. No entanto, alguns projetos do CMake podem não conseguir executar o build corretamente usando o Ninja. Se isso ocorrer, você poderá instruir o CMake para gerar um projeto do Visual Studio em vez disso.
 

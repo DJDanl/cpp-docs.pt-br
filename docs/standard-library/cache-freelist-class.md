@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: d7840d114acfa0f3daa01c8dfdb6c6114829d93d
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d757909d3e54fed35bf42b943b9f9740dffee115
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366743"
 ---
 # <a name="cache_freelist-class"></a>Classe cache_freelist
 
@@ -37,9 +37,9 @@ class cache_freelist
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe cache_freelist mantém uma lista gratuita de blocos de memória de tamanho *sz*. Quando a lista livre está cheia, ela usa o **operador Delete** para desalocar os blocos de memória. Quando a lista livre está vazia, ela usa o **operador novo** para alocar novos blocos de memória. O tamanho máximo da lista livre é determinado pela classe máxima da classe passada no parâmetro *Max* .
+O modelo de classe cache_freelist mantém uma lista gratuita de blocos de memória de tamanho *Sz*. Quando a lista gratuita está completa, ela usa a **exclusão do operador** para desalocar blocos de memória. Quando a lista livre está vazia, ela usa **o operador novo** para alocar novos blocos de memória. O tamanho máximo da lista livre é determinado pela classe max aprovada no parâmetro *Max.*
 
-Cada bloco de memória contém os bytes de *sz* de memória utilizável e os dados que o **operador New** e o **operador Delete** exigem.
+Cada bloco de memória contém *bytes Sz* de memória utilizável e os dados que o **operador novo** e o **operador excluem** requerem.
 
 ### <a name="constructors"></a>Construtores
 
@@ -51,8 +51,8 @@ Cada bloco de memória contém os bytes de *sz* de memória utilizável e os dad
 
 |Função de membro|Descrição|
 |-|-|
-|[allocate](#allocate)|Aloca um bloco de memória.|
-|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
+|[Alocar](#allocate)|Aloca um bloco de memória.|
+|[Desalocar](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -60,7 +60,7 @@ Cada bloco de memória contém os bytes de *sz* de memória utilizável e os dad
 
 **Namespace:** stdext
 
-## <a name="allocate"></a>  cache_freelist::allocate
+## <a name="cache_freelistallocate"></a><a name="allocate"></a>cache_freelist:alocar
 
 Aloca um bloco de memória.
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*count*|O número de elementos na matriz a serem alocados.|
+|*contagem*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -80,7 +80,7 @@ Um ponteiro para o objeto alocado.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cache_freelist"></a>  cache_freelist::cache_freelist
+## <a name="cache_freelistcache_freelist"></a><a name="cache_freelist"></a>cache_freelist:cache_freelist
 
 Constrói um objeto do tipo `cache_freelist`.
 
@@ -90,7 +90,7 @@ cache_freelist();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="deallocate"></a>  cache_freelist::deallocate
+## <a name="cache_freelistdeallocate"></a><a name="deallocate"></a>cache_freelist::deallocate
 
 Libera um número especificado de objetos do armazenamento começando em uma posição especificada.
 
@@ -102,11 +102,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|*count*|O número de objetos a serem desalocados do armazenamento.|
+|*Ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*contagem*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alocadores>](../standard-library/allocators-header.md)

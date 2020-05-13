@@ -1,6 +1,6 @@
 ---
 title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strlwr_l
 - _strlwr
@@ -8,6 +8,12 @@ api_name:
 - _mbslwr_l
 - _wcslwr
 - _mbslwr
+- _o__mbslwr
+- _o__mbslwr_l
+- _o__strlwr
+- _o__strlwr_l
+- _o__wcslwr
+- _o__wcslwr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -60,16 +67,16 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 7393f634aeb7de0e8e65866dc11c6d41cc9de6b8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ba2570ff02cf11cb5822666b5569fa88caf76b9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947437"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919940"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
-Converte uma cadeia de caracteres em minúsculas. Versões mais seguras dessas funções estão disponíveis; consulte [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
+Converte uma cadeia de caracteres em letras minúsculas. Versões mais seguras dessas funções estão disponíveis; consulte [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
 > **_mbslwr** e **_mbslwr_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -129,25 +136,27 @@ unsigned char *_mbslwr_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Sequência de terminação nula para converter em minúsculas.
 
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna um ponteiro para a cadeia de caracteres convertida. Como a modificação é feita in-loco, o ponteiro retornado é o mesmo que o ponteiro passado como o argumento de entrada. Nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_strlwr** converte todas as letras maiúsculas em *Str* em letras minúsculas, conforme determinado pela configuração de categoria **LC_CTYPE** da localidade. Outros caracteres não são afetados. Para obter mais informações sobre o **LC_CTYPE**, consulte [setlocaling](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual para seu comportamento dependente de localidade; as versões com o sufixo **_L** são idênticas, exceto que usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A função **_strlwr** converte todas as letras maiúsculas em *Str* em minúsculas conforme determinado pela configuração de categoria de **LC_CTYPE** da localidade. Outros caracteres não são afetados. Para obter mais informações sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual para seu comportamento dependente de localidade; as versões com o sufixo **_L** são idênticas, exceto que usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-As funções **_wcslwr** e **_mbslwr** são versões de caractere largo e de multibyte de **_strlwr**. O argumento e o valor de retorno de **_wcslwr** são cadeias de caracteres largos; os de **_mbslwr** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+As funções **_wcslwr** e **_mbslwr** são versões de caractere largo e multibyte de **_strlwr**. O argumento e o valor de retorno de **_wcslwr** são cadeias de caracteres largos; os de **_mbslwr** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 Se *Str* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão a cadeia de caracteres original e definirá **errno** como **EINVAL**.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -164,7 +173,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |**_wcslwr**, **_wcslwr_l**|\<string.h> ou \<wchar.h>|
 |**_mbslwr**, **_mbslwr_l**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -202,8 +211,8 @@ Lower: the string to end all strings!
 Upper: THE STRING TO END ALL STRINGS!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Localidade](../../c-runtime-library/locale.md)<br/>
+[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)<br/>

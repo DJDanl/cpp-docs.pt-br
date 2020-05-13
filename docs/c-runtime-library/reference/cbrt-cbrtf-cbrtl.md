@@ -1,10 +1,12 @@
 ---
 title: cbrt, cbrtf, cbrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cbrt
 - cbrtf
 - cbrtl
+- _o_cbrt
+- _o_cbrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939298"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912100"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -66,17 +69,19 @@ long double cbrtl(
 *x*<br/>
 Valor de ponto flutuante
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **cbrt** retornam a raiz do cubo de *x*.
 
 |Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|nenhum|nenhum|
+|± ∞, QNAN, IND|nenhuma|nenhuma|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **cbrt** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **cbrt** sempre leva e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cbrt** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **cbrt** sempre leva e retorna **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,7 +89,7 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **cbrt** que tê
 |--------------|--------------|------------------|
 |**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -110,7 +115,7 @@ int main( void )
 The cube root of -64.64 is -4.013289
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Integrar ferramentas personalizadas às propriedades do projeto'
+title: Como integrar ferramentas personalizar a propriedades de projeto
 ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2019
 ms.locfileid: "65837027"
 ---
-# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Como: Integrar ferramentas personalizadas às propriedades do projeto
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Como integrar ferramentas personalizar a propriedades de projeto
 
 Adicione opções de ferramentas personalizadas à janela **Páginas de Propriedades** do Visual Studio criando um arquivo de esquema XML subjacente.
 
@@ -35,6 +35,6 @@ Este documento explica como criar um arquivo em um diretório definido que cont�
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em um projeto e, em seguida, clique em **Propriedades**. Na janela **Páginas de Propriedades**, no painel esquerdo, verifique se há um novo nó com o nome da regra.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[MSBuild na linha de comando – C++](msbuild-visual-cpp.md)
+[MSBuild na linha de comando-C++](msbuild-visual-cpp.md)

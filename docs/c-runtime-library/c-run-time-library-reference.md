@@ -8,12 +8,12 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589456"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334426"
 ---
 # <a name="c-run-time-library-reference"></a>Referência da biblioteca em tempo de execução do C
 
@@ -26,7 +26,7 @@ Programas de exemplo estão incluídos nos tópicos de referência individuais p
 [Bibliotecas em tempo de execução C](../c-runtime-library/crt-library-features.md)<br/>
 Discute os arquivos. lib que compõem as bibliotecas de tempo de execução C.
 
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
 Fornece links para a biblioteca em tempo de execução por categoria.
 
 [Variáveis globais e tipos padrão](../c-runtime-library/global-variables-and-standard-types.md)<br/>
@@ -34,6 +34,9 @@ Fornece links para as variáveis globais e tipos padrão fornecidos pela bibliot
 
 [Constantes globais](../c-runtime-library/global-constants.md)<br/>
 Fornece links para as constantes globais definidas pela biblioteca em tempo de execução.
+
+[Estado Global](../c-runtime-library/global-state.md)<br/>
+Descreve o escopo do estado global na biblioteca c run-time.
 
 [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 Fornece um ponto de entrada de índice em uma lista alfabética de todas as funções de biblioteca em tempo de execução C.
@@ -49,7 +52,7 @@ Descreve como usar a `setlocale` função para definir o idioma e cadeias de car
 [Rotinas de depuração](../c-runtime-library/debug-routines.md)<br/>
 Fornece links para as versões de depuração das rotinas de biblioteca em tempo de execução.
 
-[Verificação de erros em tempo de execução](../c-runtime-library/run-time-error-checking.md)<br/>
+[Verificação de erros de tempo de execução](../c-runtime-library/run-time-error-checking.md)<br/>
 Fornece links para as funções que oferecem suporte a verificações de erro em tempo de execução.
 
 [Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)<br/>

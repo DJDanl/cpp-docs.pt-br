@@ -1,9 +1,11 @@
 ---
 title: getc, getwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - getwc
 - getc
+- _o_getc
+- _o_getwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: ceb3ca117271e7074c6cb72c9c1f9e74ebe3bc10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6248dd2287b2f11db72f64df1241affe8deec22d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955486"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919662"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -59,10 +62,10 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Fluxo de entrada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, **getc** retorna **EOF**e **getwc** retorna **WEOF**. Para **getc**, use o **referenciador** ou o **feof** para verificar se há um erro ou para o fim do arquivo. Se *Stream* for **NULL**, **getc** e **getwc** invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** (ou **WEOF** para **getwc**) e definem **errno** como **EINVAL**.
 
@@ -81,6 +84,8 @@ Veja comentários específicos sobre a rotina a seguir.
 |**getc**|O mesmo que **fgetc**, mas implementado como uma função e como uma macro.|
 |**getwc**|Versão de caractere largo de **getc**. Lê um caractere multibyte ou um caractere largo de acordo com se o *fluxo* é aberto no modo de texto ou no modo binário.|
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -94,7 +99,7 @@ Veja comentários específicos sobre a rotina a seguir.
 |**getc**|\<stdio.h>|
 |**getwc**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

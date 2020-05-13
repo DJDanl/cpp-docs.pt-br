@@ -1,5 +1,5 @@
 ---
-title: 'Tempo de manipulação de exceção: um resumo'
+title: 'Tempo de manipulação de exceção: Um resumo'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 3ed2e02412bd84663674a2df2c4454d21e83575a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17d1c250a98afc2b86c198735602df7d80118bd4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316603"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Tempo de manipulação de exceção: um resumo
+# <a name="timing-of-exception-handling-a-summary"></a>Tempo de manipulação de exceção: Um resumo
 
-Um manipulador de encerramento é executado, independentemente de como o bloco de instrução de **__try** é encerrado. As causas incluem a saída do bloco de **__try** , uma instrução `longjmp` que transfere o controle do bloco e desenrolando a pilha devido à manipulação de exceção.
+Um manipulador de rescisão é executado não importa como o bloco de declaração **__try** seja encerrado. As causas incluem saltar para fora `longjmp` do bloco **de __try,** uma declaração que transfere o controle para fora do bloco e desenrolar a pilha devido ao manuseio de exceção.
 
 > [!NOTE]
->  O compilador C++ da Microsoft dá suporte a duas formas das instruções `setjmp` e `longjmp`. A versão rápida ignora a manipulação de término, mas é mais eficiente. Para usar essa versão, inclua o arquivo \<setjmp. h >. A outra versão oferece suporte à manipulação de término conforme descrito no parágrafo anterior. Para usar essa versão, inclua o arquivo \<setjmpex. h >. O aumento no desempenho da versão rápida depende da configuração de hardware.
+> O compilador Microsoft C++ suporta duas `setjmp` `longjmp` formas de declarações. A versão rápida ignora a manipulação de término, mas é mais eficiente. Para usar esta versão, \<inclua o arquivo setjmp.h>. A outra versão oferece suporte à manipulação de término conforme descrito no parágrafo anterior. Para usar esta versão, \<inclua o arquivo setjmpex.h>. O aumento no desempenho da versão rápida depende da configuração de hardware.
 
 O sistema operacional executa todos os manipuladores de término na ordem apropriada antes que qualquer outro código possa ser executado, incluindo o corpo de um manipulador de exceção.
 
@@ -35,7 +35,7 @@ Quando a causa da interrupção é uma exceção, o sistema deve primeiro execut
 
 1. Se esse filtro passar o controle (retornar 0), o processo continuará até que seja encontrado um filtro que não passe o controle.
 
-1. Se esse filtro retornar-1, a execução continuará onde a exceção foi gerada e nenhum encerramento ocorrerá.
+1. Se este filtro retornar -1, a execução continuará onde a exceção foi levantada e nenhuma rescisão ocorrerá.
 
 1. Se o filtro retornar 1, ocorrerão os seguintes eventos:
 
@@ -49,5 +49,5 @@ Quando a causa da interrupção é uma exceção, o sistema deve primeiro execut
 
 ## <a name="see-also"></a>Confira também
 
-[Escrevendo um manipulador de encerramento](../cpp/writing-a-termination-handler.md)<br/>
-[Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Escrevendo um manipulador de rescisão](../cpp/writing-a-termination-handler.md)<br/>
+[Tratamento estruturado de exceções (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

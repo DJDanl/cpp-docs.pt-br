@@ -11,27 +11,27 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: e06ef25c14f8073d2b8753b57c9593af7bb6c69f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857119"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335005"
 ---
 # <a name="c-multiplicative-operators"></a>Operadores multiplicativos C
 
-Os operadores multiplicativos executam operações de multiplicação (<strong>\*</strong>), divisão ( **/** ) e restante ( **%** ).
+Os operadores multiplicativa executam operações de<strong>\*</strong>multiplicação ()**/**, divisão () e**%** resto ().
 
 ## <a name="syntax"></a>Sintaxe
 
-*multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
+*multiplicativa-* expressão: &nbsp; &nbsp; &nbsp; &nbsp; *Cast-Expression* &nbsp; &nbsp; &nbsp; &nbsp; **%** *multiplicative-expression* &nbsp; &nbsp; *multiplicative-expression* *multiplicative-expression* &nbsp; *cast-expression* **/** *cast-expression* *cast-expression* multiplicativa-expressão <strong>\*</strong> Cast &nbsp;- &nbsp;Expression multiplicativa-Expression Cast &nbsp;-expressão multiplicativa-Expression Cast-Expression &nbsp; &nbsp;
 
-Os operandos do operador de restante ( **%** ) devem ser integrais. Os operadores de multiplicação (<strong>\*</strong>) e de divisão ( **/** ) podem usar operandos do tipo integral ou flutuante; os tipos dos operandos podem ser diferentes.
+Os operandos do operador resto (**%**) devem ser integral. Os operadores de multiplicação (<strong>\*</strong>) e**/** divisão () podem ter operandos de tipo inteiro ou flutuante; os tipos dos operandos podem ser diferentes.
 
 Os operadores multiplicativos executam as conversões aritméticas comuns nos operandos. O tipo do resultado é o tipo dos operandos após conversão.
 
 > [!NOTE]
->  Uma vez que as conversões executadas pelos operadores de multiplicação não fornecem condições de estouro ou estouro negativo, as informações poderão ser perdidas se o resultado de uma operação de multiplicação não puder ser representado no tipo dos operandos após a conversão.
+> Uma vez que as conversões executadas pelos operadores de multiplicação não fornecem condições de estouro ou estouro negativo, as informações poderão ser perdidas se o resultado de uma operação de multiplicação não puder ser representado no tipo dos operandos após a conversão.
 
 Os operadores multiplicativos C são descritos abaixo:
 
@@ -76,9 +76,9 @@ n = i % j;
 
 Essa instrução aloca a `n` ao restante inteiro, 1, quando 10 é dividido por 3.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-O sinal do restante é o mesmo sinal do dividendo. Por exemplo:
+O sinal do restante é o mesmo sinal do dividendo. Por exemplo: 
 
 ```
 50 % -6 = 2
@@ -87,8 +87,8 @@ O sinal do restante é o mesmo sinal do dividendo. Por exemplo:
 
 Em cada caso, `50` e `2` têm o mesmo sinal.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Operadores multiplicativos e o operador de módulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+[Operadores multiplicativa e o operador de módulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)

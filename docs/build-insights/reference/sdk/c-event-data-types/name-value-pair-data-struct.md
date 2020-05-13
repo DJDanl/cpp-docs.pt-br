@@ -1,6 +1,6 @@
 ---
-title: Estrutura de NAME_VALUE_PAIR_DATA
-description: A C++ referência da estrutura de NAME_VALUE_PAIR_DATA do SDK do insights do Build.
+title: estrutura NAME_VALUE_PAIR_DATA
+description: O C++ Build Insights SDK NAME_VALUE_PAIR_DATA referência de estrutura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f6c4f6fef11e6365bdc930d5df1f48f72186ebdb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 4a0bf8e8ba32d94d30a56d0ef26ca4ed0c9b0711
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325349"
 ---
-# <a name="name_value_pair_data-structure"></a>Estrutura de NAME_VALUE_PAIR_DATA
+# <a name="name_value_pair_data-structure"></a>estrutura NAME_VALUE_PAIR_DATA
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A estrutura de `NAME_VALUE_PAIR_DATA` descreve um par de nome e valor.
+A `NAME_VALUE_PAIR_DATA` estrutura descreve um par de nomes e valores.
 
 ## <a name="syntax"></a>Sintaxe
 

@@ -4,12 +4,12 @@ ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-ms.openlocfilehash: 883504810f1b659e28764a75ebc7cfda325920a5
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7188d7a6803c9eec109a59906cf0c016a460819d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222238"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337499"
 ---
 # <a name="preprocessor"></a>Pré-processador
 
@@ -17,7 +17,7 @@ O pré-processador é um processador de texto que manipula o texto de um arquivo
 
 O material de referência no pré-processador inclui as seguintes seções:
 
-- [Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)
+- [Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
 
 - [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)
 
@@ -25,19 +25,19 @@ O material de referência no pré-processador inclui as seguintes seções:
 
 - [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Você pode obter uma lista de seu código-fonte após o pré-processamento usando a opção de compilador [/e](../build/reference/e-preprocess-to-stdout.md) ou [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) . Ambas as opções invocam o pré-processador e enviam o texto resultante para o dispositivo de saída padrão, que, na maioria dos casos, é o console do. A diferença entre as duas opções é que `/E` inclui `#line` diretivas e `/EP` retira essas diretivas.
+Você pode obter uma listagem do seu código fonte após o pré-processamento usando a opção [/E](../build/reference/e-preprocess-to-stdout.md) ou [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) compilador. Ambas as opções invocam o pré-processador e enviam o texto resultante para o dispositivo de saída padrão, que, na maioria dos casos, é o console. A diferença entre as `/E` duas `#line` opções é `/EP` que inclui diretivas, e retira essas diretivas.
 
-**Fim da seção específica da Microsoft**
+**Fim específico da Microsoft**
 
-##  <a name="_predir_special_terminology"></a>Terminologia especial
+## <a name="special-terminology"></a><a name="_predir_special_terminology"></a>Terminologia especial
 
-Na documentação de pré-processador, o termo "argumento" refere-se à entidade passada para uma função. Em alguns casos, ele é modificado por "real" ou "formal", que descreve a expressão de argumento especificada na chamada de função e a declaração de argumento especificada na definição da função, respectivamente.
+Na documentação de pré-processador, o termo "argumento" refere-se à entidade passada para uma função. Em alguns casos, é modificado por "real" ou "formal", que descreve a expressão de argumento especificada na chamada de função, e a declaração de argumento especificada na definição da função, respectivamente.
 
-O termo "variável" se refere a um objeto de dados simples do tipo C. O termo "objeto" refere-se C++ a objetos e variáveis; é um termo inclusivo.
+O termo "variável" se refere a um objeto de dados simples do tipo C. O termo "objeto" refere-se tanto aos objetos C++ quanto às variáveis; é um termo inclusivo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência deC++ C/pré-processador](../preprocessor/c-cpp-preprocessor-reference.md)\
-[Fases de tradução](../preprocessor/phases-of-translation.md)
+[Referência do pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)\
+[Fases da tradução](../preprocessor/phases-of-translation.md)

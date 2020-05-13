@@ -1,9 +1,10 @@
 ---
 title: _cexit, _c_exit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _c_exit
 - _cexit
+- _o__cexit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: aa25d73bef1d85adfed77ba926e2d381e02e45e8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939248"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917142"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
@@ -52,7 +54,7 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Comentários
 
-As chamadas de função **_cexit** , na ordem UEPS (última entrada, primeiro a sair), as funções registradas por **atexit** e **_onexit**. Em seguida, **_cexit** libera todos os buffers de e/s e fecha todos os fluxos abertos antes de retornar. **_c_exit** é o mesmo que **_exit** , mas retorna ao processo de chamada sem processar **atexit** ou **_onexit** ou liberar buffers de fluxo. O comportamento de **Exit**, **_exit**, **_cexit**e **_c_exit** é mostrado na tabela a seguir.
+O **_cexit** chamadas de função, na ordem UEPS (último a entrar, primeiro a sair), as funções registradas por **atexit** e **_onexit**. Em seguida, **_cexit** libera todos os buffers de e/s e fecha todos os fluxos abertos antes de retornar. **_c_exit** é o mesmo que **_exit** , mas retorna ao processo de chamada sem processar **atexit** ou **_onexit** ou liberar buffers de fluxo. O comportamento de **Exit**, **_exit**, **_cexit**e **_c_exit** é mostrado na tabela a seguir.
 
 |Função|Comportamento|
 |--------------|--------------|
@@ -67,6 +69,8 @@ Quando você chama as funções **_cexit** ou **_c_exit** , os destruidores para
 myObject.myClass::~myClass( );
 ```
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -79,7 +83,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 ## <a name="see-also"></a>Consulte também
 
 [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
+[anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>

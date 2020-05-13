@@ -1,8 +1,9 @@
 ---
 title: rand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand
+- _o_rand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949547"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919523"
 ---
 # <a name="rand"></a>rand
 
-Gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente reproduzível. Uma versão mais programaticamente segura dessa função está disponível; consulte [rand_s](rand-s.md). Os números gerados por **Rand** não são criptograficamente seguros. Para geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções C++ declaradas na biblioteca padrão em [ \<> aleatórios](../../standard-library/random.md).
+Gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente reproduzível. Uma versão mais programaticamente segura dessa função está disponível; consulte [rand_s](rand-s.md). Os números gerados por **Rand** não são criptograficamente seguros. Para uma geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções declaradas na biblioteca padrão C++ em [ \<>aleatórias ](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,7 +48,7 @@ Gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente 
 int rand( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **Rand** retorna um número pseudoaleatória, conforme descrito acima. Nenhum erro é retornado.
 
@@ -54,15 +56,17 @@ int rand( void );
 
 A função **Rand** retorna um número inteiro pseudoaleatória no intervalo de 0 a **RAND_MAX** (32767). Use a função [srand](srand.md) para propagar o gerador de número de pseudoaleatória antes de chamar **Rand**.
 
-A função **Rand** gera uma sequência bem conhecida e não é apropriada para uso como uma função criptográfica. Para geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções C++ declaradas na biblioteca padrão em [ \<> aleatórios](../../standard-library/random.md). Para obter informações sobre o que há de errado com \<Rand e como o > aleatório resolve essas deficiências, consulte este vídeo intitulado [Rand considerado prejudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+A função **Rand** gera uma sequência bem conhecida e não é apropriada para uso como uma função criptográfica. Para uma geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções declaradas na biblioteca padrão C++ em [ \<>aleatórias ](../../standard-library/random.md). Para obter informações sobre o que há **rand** de errado com \<rand e como o> aleatório resolve essas deficiências, consulte este vídeo intitulado [Rand considerado prejudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**rand**|\<stdlib.h>|
+|**Rand**|\<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -134,7 +138,7 @@ int main( void )
    66
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>

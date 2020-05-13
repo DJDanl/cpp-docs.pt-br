@@ -3,11 +3,11 @@ title: Argumentos para main
 ms.date: 11/04/2016
 ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
 ms.openlocfilehash: 918be9d281f1cb12c27c6c2f5dd834e4af137179
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313552"
 ---
 # <a name="arguments-to-main"></a>Argumentos para main
 
@@ -29,10 +29,10 @@ A matriz de cadeias de caracteres termina com **argv[argc]**, que contém um pon
 
 Todos os elementos da matriz **argv** são ponteiros para cadeias de caracteres.
 
-Um programa invocado sem argumentos de linha de comando receberá um valor de um para **argc**, já que o nome do arquivo executável é colocado em **argv[0]**. (Em versões do MS-DOS anteriores a 3.0, o nome do arquivo executável não está disponível. A letra “C” é colocada em **argv[0]**.) As cadeias de caracteres apontadas por **argv[1]** a **argv[argc – 1]** representam parâmetros do programa.
+Um programa invocado sem argumentos de linha de comando receberá um valor de um para **argc**, já que o nome do arquivo executável é colocado em **argv[0]**. (Em versões do MS-DOS anteriores a 3.0, o nome do arquivo executável não está disponível. A letra "C" é colocada em **argv [0]**.) As cadeias de caracteres apontadas por **argv [1]** a **argv [argc-1]** representam os parâmetros do programa.
 
 Os parâmetros **argc** e **argv** são modificáveis e retêm seus últimos valores armazenados entre a inicialização do programa e o término do programa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Ambiente](../c-language/environment.md)

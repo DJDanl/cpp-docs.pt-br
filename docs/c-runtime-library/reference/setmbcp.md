@@ -1,8 +1,9 @@
 ---
 title: _setmbcp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _setmbcp
+- _o__setmbcp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: a3408f04eb60a33a84c628c989ebc9c4c4a261df
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473873"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918824"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -46,9 +48,9 @@ int _setmbcp(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*codepage*<br/>
+*código*<br/>
 Nova configuração de página de código para rotinas multibyte independentes da localidade.
 
 ## <a name="return-value"></a>Valor retornado
@@ -83,15 +85,17 @@ O argumento *CodePage* pode ser definido como qualquer um dos seguintes valores:
 
 - Qualquer outro valor de página de código válido, independentemente de o valor ser um ANSI, OEM ou outra página de código com suporte do sistema operacional (exceto UTF-7, que não tem suporte).
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**_setmbcp**|\<mbctype.h>|
 
-Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

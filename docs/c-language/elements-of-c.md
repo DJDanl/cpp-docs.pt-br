@@ -34,10 +34,10 @@ Os seguintes tópicos são abordados:
 
 - [Pontuação e caracteres especiais](../c-language/punctuation-and-special-characters.md)
 
-A seção também inclui tabelas de referência para [trigrafos](../c-language/trigraphs.md), [limites de constantes de ponto flutuante](../c-language/limits-on-floating-point-constants.md), [limites C++ de C e inteiro](../c-language/cpp-integer-limits.md)e [sequências de escape](../c-language/escape-sequences.md).
+A seção também inclui tabelas de referência para [trigrafos](../c-language/trigraphs.md), [limites de constantes de ponto flutuante](../c-language/limits-on-floating-point-constants.md), [limites de inteiros de C e C++](../c-language/cpp-integer-limits.md)e [sequências de escape](../c-language/escape-sequences.md).
 
-Operadores são símbolos (caracteres individuais e combinações de caracteres) que especificam como os valores devem ser manipulados. Cada símbolo é interpretado como uma única unidade, chamada de token. Para obter mais informações, consulte [Operators](../c-language/c-operators.md).
+Operadores são símbolos (caracteres individuais e combinações de caracteres) que especificam como os valores devem ser manipulados. Cada símbolo é interpretado como uma única unidade, chamada de token. Para obter mais informações, consulte [Operadores](../c-language/c-operators.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C](../c-language/c-language-reference.md)

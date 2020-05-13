@@ -44,15 +44,15 @@ Uma operação de atribuição atribui o valor do operando à direita para o loc
 ## <a name="syntax"></a>Sintaxe
 
 *assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;atribuição de *expressão unário* - *expressão de atribuição* de *operador*
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão condicional*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*: one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=^=** **|=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
 Os operadores de atribuição em C podem transformar e atribuir valores em uma única operação. O C fornece os seguintes operadores de atribuição:
 
-|Operator|Operação executada|
+|Operador|Operação executada|
 |--------------|-------------------------|
 |**=**|Atribuição simples|
 |**&#42;=**|Atribuição de multiplicação|
@@ -68,6 +68,6 @@ Os operadores de atribuição em C podem transformar e atribuir valores em uma �
 
 Na atribuição, o tipo do valor à direita é convertido no tipo do valor à esquerda, e o valor é armazenado no operando à esquerda depois que a atribuição ocorreu. O operando à esquerda não deve ser uma matriz, uma função ou uma constante. O caminho específico de conversão, que depende dos dois tipos, é descrito em detalhes em [Conversões de tipos](../c-language/type-conversions-c.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Operadores de Atribuição](../cpp/assignment-operators.md)
+- [Operadores de atribuição](../cpp/assignment-operators.md)

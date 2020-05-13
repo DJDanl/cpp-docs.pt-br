@@ -6,28 +6,28 @@ helpviewer_keywords:
 - ODBC recordsets, sorting
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
-ms.openlocfilehash: 4bbe635cdda9152be6ba178b863147db93b7c706
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8b4deea1d8cbd4abe01ccc7a4114131378abe463
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212739"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366921"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Conjunto de registros: classificando registros (ODBC)
 
 Este tópico aplica-se às classes ODBC do MFC.
 
-Este tópico explica como classificar seu conjunto de registros. Você pode especificar uma ou mais colunas nas quais basear a classificação e pode especificar ordem crescente ou decrescente (**ASC** ou **desc**; **ASC** é o padrão) para cada coluna especificada. Por exemplo, se você especificar duas colunas, os registros serão classificados primeiro na primeira coluna denominada e, em seguida, na segunda coluna denominada. Uma cláusula SQL **order by** define uma classificação. Quando a estrutura acrescenta a cláusula **order by** à consulta SQL do conjunto de registros, a cláusula controla a ordenação da seleção.
+Este tópico explica como classificar seu conjunto de registros. Você pode especificar uma ou mais colunas sobre as quais basear o tipo, e você pode especificar ordem ascendente ou descendente (**ASC** ou **DESC**; **ASC** é o padrão) para cada coluna especificada. Por exemplo, se você especificar duas colunas, os registros serão classificados primeiro na primeira coluna nomeada e, em seguida, na segunda coluna nomeada. Uma cláusula SQL **ORDER BY** define um tipo. Quando o framework anexa a cláusula **ORDER BY** à consulta SQL do conjunto de registros, a cláusula controla o pedido da seleção.
 
-Você deve estabelecer a ordem de classificação de um conjunto de registros depois de construir o objeto, mas antes de chamar sua função de membro de `Open` (ou antes de chamar a função de membro `Requery` para um objeto Recordset existente cuja função de membro `Open` foi chamada anteriormente).
+Você deve estabelecer a ordem de classificação de um conjunto `Open` de registros depois de `Requery` construir o objeto, mas `Open` antes de chamar sua função de membro (ou antes de chamar a função de membro para um objeto de conjunto de registros existente cuja função de membro foi chamada anteriormente).
 
 #### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Para especificar uma ordem de classificação para um objeto de conjunto de registros
 
-1. Construa um novo objeto Recordset (ou prepare-se para chamar `Requery` para um existente).
+1. Construa um novo objeto de `Requery` conjunto de registros (ou prepare-se para chamar para um já existente).
 
-1. Defina o valor do membro de dados do [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) do objeto.
+1. Defina o valor do membro de dados [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) do objeto.
 
-   A classificação é uma cadeia de caracteres terminada em nulo. Ele contém o conteúdo da cláusula **order by** , mas não a palavra-chave **order by**. Por exemplo, use:
+   O tipo é uma seqüência de nulos. Contém o conteúdo da cláusula **ORDEM POR,** mas não a palavra-chave **ORDEM POR**. Por exemplo, use:
 
     ```
     recordset.m_strSort = "LastName DESC, FirstName DESC";
@@ -39,11 +39,11 @@ Você deve estabelecer a ordem de classificação de um conjunto de registros de
     recordset.m_strSort = "ORDER BY LastName DESC, FirstName DESC";
     ```
 
-1. Defina quaisquer outras opções necessárias, como um filtro, modo de bloqueio ou parâmetros.
+1. Defina as outras opções necessárias, como filtro, modo de bloqueio ou parâmetros.
 
-1. Chame `Open` para o novo objeto (ou `Requery` para um objeto existente).
+1. Chamada `Open` para o novo `Requery` objeto (ou para um objeto existente).
 
-Os registros selecionados são ordenados conforme especificado. Por exemplo, para classificar um conjunto de registros de alunos em ordem decrescente por sobrenome e, em seguida, o nome, faça o seguinte:
+Os registros selecionados são ordenados conforme especificado. Por exemplo, para classificar um conjunto de registros de estudantes em ordem decrescente por sobrenome, em seguida, primeiro nome, faça o seguinte:
 
 ```cpp
 // Construct the recordset
@@ -54,10 +54,10 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );
 ```
 
-O conjunto de registros contém todos os registros de aluno, classificados em ordem decrescente (Z a A) por sobrenome e, em seguida, por nome.
+O conjunto de registros contém todos os registros estudantis, classificados em ordem decrescente (Z a A) pelo sobrenome, em seguida, pelo primeiro nome.
 
 > [!NOTE]
->  Se você optar por substituir a cadeia de caracteres SQL padrão do conjunto de registros passando sua própria cadeia de caracteres SQL para `Open`, não defina uma classificação se a cadeia de caracteres personalizada tiver uma cláusula **order by** .
+> Se você optar por substituir a seqüência SQL padrão do conjunto `Open`de registros, passando sua própria seqüência de sql para , não defina uma espécie se sua seqüência personalizada tiver uma cláusula **ORDER BY.**
 
 ## <a name="see-also"></a>Confira também
 

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076813"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373447"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
 Estende as primitivas de inteiro para ajudar a evitar o estouro de inteiro e permite comparar diferentes tipos de inteiros.
 
 > [!NOTE]
-> A última versão dessa biblioteca está localizada em [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
+> A versão mais recente desta [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)biblioteca está localizada em .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,25 +31,25 @@ template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>
 class SafeInt;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-| Modelo  |  DESCRIÇÃO |
+| Modelo  |  Descrição |
 |--------|------------|
 | T         |  O tipo de inteiro ou parâmetro booliano que `SafeInt` substitui. |
 | E         |  Um tipo de dados enumerados que define a política de tratamento de erro. |
 | U         |  O tipo de inteiro ou parâmetro booliano para o operando secundário. |
 
-| Parâmetro  |  DESCRIÇÃO |
+| Parâmetro  |  Descrição |
 |---------|-----------------|
 | *rhs*      |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
-| *i*        |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
-| *bits*     |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
+| *Eu*        |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
+| *Bits*     |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
 
 ## <a name="members"></a>Membros
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-| Nome                          |  DESCRIÇÃO |
+| Nome                          |  Descrição |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Construtor padrão. |
 
@@ -255,12 +255,12 @@ SafeInt (
 )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*i*<br/>
+*Eu*<br/>
 [in] O valor do novo objeto `SafeInt`. Este deve ser um parâmetro do tipo T ou U, dependendo do construtor.
 
-*b*<br/>
+*B*<br/>
 [in] O valor booliano do novo objeto `SafeInt`.
 
 *u*<br/>

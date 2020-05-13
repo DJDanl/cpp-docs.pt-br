@@ -1,10 +1,11 @@
 ---
 title: modf, modff, modfl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - modff
 - modf
 - modfl
+- _o_modf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951534"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914633"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -63,10 +65,10 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 Valor de ponto flutuante.
 
-*intptr*<br/>
+*IntPtr*<br/>
 Ponteiro para a parte inteira armazenada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Esta função retorna a parte fracionária com sinal de *x*. Nenhum erro é retornado.
 
@@ -76,7 +78,9 @@ As funções **modf** dividem o valor de ponto flutuante *x* em partes fracioná
 
 o **modf** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-C++permite sobrecarga, portanto, você pode chamar sobrecargas de **modf** que usam e retornam parâmetros **duplos** **float** ou **Long** . Em um programa C, **modf** sempre usa dois valores double e retorna um valor Double.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **modf** que usam e retornam parâmetros **long** **duplos** **float** ou Long. Em um programa C, **modf** sempre usa dois valores double e retorna um valor Double.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,7 +88,7 @@ C++permite sobrecarga, portanto, você pode chamar sobrecargas de **modf** que u
 |-------------|---------------------|
 |**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: , \<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -110,7 +114,7 @@ int main( void )
 For -14.876543, the fraction is -0.876543 and the integer is -14
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

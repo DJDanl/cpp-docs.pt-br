@@ -25,7 +25,7 @@ Esse comportamento é o resultado de um dos seguintes:
 
 Para resolver o comportamento, a maioria dos programadores garante que o valor seja maior ou menor do que o necessário, ou que eles obtenham e usem uma biblioteca de BCD codificado em binários que manterá a precisão.
 
-A representação binária de valores de ponto flutuante afeta a precisão e a precisão dos cálculos de ponto flutuante. O Microsoft C++ visual usa o [formato de ponto flutuante IEEE](ieee-floating-point-representation.md).
+A representação binária de valores de ponto flutuante afeta a precisão e a precisão dos cálculos de ponto flutuante. Microsoft Visual C++ usa o [formato de ponto flutuante IEEE](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -58,10 +58,10 @@ int main() {
 They are not equal! The value of c is  2.4679999352 or 2.468000
 ```
 
-## <a name="comments"></a>Comments
+## <a name="comments"></a>Comentários
 
 Para épsilon, você pode usar as constantes FLT_EPSILON, que são definidas para float como 1.192092896 e-07F, ou DBL_EPSILON, que é definido para Double como 2.2204460492503131 e-016. Você precisa incluir float. h para essas constantes. Essas constantes são definidas como o menor número positivo x, de modo que x + 1.0 não seja igual a 1,0. Como esse é um número muito pequeno, você deve empregar a tolerância definida pelo usuário para cálculos que envolvem números muito grandes.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[Otimizando seu código](optimizing-your-code.md)
+[Otimizando o código](optimizing-your-code.md)

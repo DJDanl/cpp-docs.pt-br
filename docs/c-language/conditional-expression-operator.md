@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150617"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749187"
 ---
 # <a name="conditional-expression-operator"></a>Operador de expressão condicional
 
@@ -19,9 +19,9 @@ C tem um operador ternário: o operador de expressão condicional (**?:**).
 
 ## <a name="syntax"></a>Sintaxe
 
-*conditional-expression*:<br/>
+*expressão condicional*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão logical-OR*  **?**  *expression*  **:**  *conditional-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão logical-OR*  **?**  *expression*  **:**  *expressão condicional*
 
 A *logical-OR-expression* deve ter um tipo integral, de flutuação ou ponteiro. Ela é avaliada em termos de sua equivalência a 0. Um ponto de sequência vem após a *logical-OR-expression*. A avaliação dos operandos acontece da seguinte maneira:
 
@@ -55,7 +55,7 @@ j = ( i < 0 ) ? ( -i ) : ( i );
 
 Este exemplo atribui o valor absoluto de `i` a `j`. Se `i` for menor que 0, `-i` é atribuído a `j`. Se `i` for maior ou igual a 0, `i` é atribuído a `j`.
 
-```
+```cpp
 void f1( void );
 void f2( void );
 int x;
@@ -68,6 +68,6 @@ int y;
 
 Neste exemplo, duas funções, `f1` e `f2`, e duas variáveis, `x` e `y`, são declaradas. Posteriormente no programa, se as duas variáveis tiverem o mesmo valor, a função `f1` será chamada. Caso contrário, `f2` é chamada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operador condicional: ? :](../cpp/conditional-operator-q.md)

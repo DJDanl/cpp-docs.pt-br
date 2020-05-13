@@ -1,8 +1,9 @@
 ---
 title: qsort_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort_s
+- _o_qsort_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 934801531804345a8cede6ed1ac4abb06bae45b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949744"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913271"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -62,10 +64,10 @@ Tamanho da matriz nos elementos.
 *width*<br/>
 Tamanho do elemento em bytes.
 
-*compare*<br/>
+*comparar*<br/>
 Função de comparação. O primeiro argumento é o ponteiro de *contexto* . O segundo argumento é um ponteiro para a *chave* da pesquisa. O terceiro argumento é um ponteiro para o elemento da matriz a ser comparado com a *chave*.
 
-*context*<br/>
+*contexto*<br/>
 Um ponteiro para um contexto, que pode ser qualquer objeto que a rotina de *comparação* precisa acessar.
 
 ## <a name="remarks"></a>Comentários
@@ -86,18 +88,20 @@ A rotina deve comparar os elementos e, em seguida, retornar um dos seguintes val
 
 A matriz é classificada em ordem crescente, conforme definido pela função de comparação. Para classificar uma matriz em ordem decrescente, inverta o sentido de “maior que” e “menor que” na função de comparação.
 
-Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará e **errno** será definida como **EINVAL**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará e **errno** será definida como **EINVAL**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="error-conditions"></a>Condições de Erro
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
-|key|base|compare|num|largura|errno|
+### <a name="error-conditions"></a>Condições de erro
+
+|chave|base|compare|num|width|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|qualquer|qualquer|qualquer|qualquer|**EINVAL**|
-|qualquer|**NULL**|qualquer|!= 0|qualquer|**EINVAL**|
-|qualquer|qualquer|qualquer|qualquer|<= 0|**EINVAL**|
-|qualquer|qualquer|**NULL**|qualquer|qualquer|**EINVAL**|
+|**NULO**|any|any|any|any|**EINVAL**|
+|any|**NULO**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|<= 0|**EINVAL**|
+|any|any|**NULO**|any|any|**EINVAL**|
 
-**qsort_s** tem o mesmo comportamento que **qsort** , mas tem o parâmetro *Context* e define **errno**. Ao passar um parâmetro de *contexto* , as funções de comparação podem usar um ponteiro de objeto para acessar a funcionalidade de objeto ou outras informações não acessíveis por meio de um ponteiro de elemento. A adição do parâmetro de *contexto* torna a **qsort_s** mais segura porque o *contexto* pode ser usado para evitar bugs de reentrância introduzidos usando variáveis estáticas para disponibilizar informações compartilhadas para a função de *comparação* .
+**qsort_s** tem o mesmo comportamento que **qsort** , mas tem o parâmetro *Context* e define **errno**. Ao passar um parâmetro de *contexto* , as funções de comparação podem usar um ponteiro de objeto para acessar a funcionalidade de objeto ou outras informações não acessíveis por meio de um ponteiro de elemento. A adição do parâmetro de *contexto* torna **qsort_s** mais segura porque o *contexto* pode ser usado para evitar bugs de reentrância introduzidos usando variáveis estáticas para disponibilizar informações compartilhadas para a função de *comparação* .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,9 +109,9 @@ Se parâmetros inválidos forem passados para a função, o manipulador de parâ
 |-------------|---------------------|
 |**qsort_s**|\<stdlib.h> e \<search.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-**DLLs** Todas as versões dos [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** todas as versões dos [Recursos da Biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -250,7 +254,7 @@ int main( )
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 Unsorted input:

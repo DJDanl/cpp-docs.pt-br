@@ -1,8 +1,9 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapchk
+- _o__heapchk
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954817"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916209"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -46,7 +48,7 @@ Executa verificações de consistência no heap.
 int _heapchk( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_heapchk** retorna uma das seguintes constantes de manifesto de inteiro definidas em malloc. h.
 
@@ -58,11 +60,13 @@ int _heapchk( void );
 | **_HEAPEMPTY** | O heap não foi inicializado. |
 | **_HEAPOK** | O heap parece ser consistente. |
 
-Além disso, se ocorrer um erro, **_heapchk** definirá **errno** como **ENOSYS**.
+Além disso, se ocorrer um erro, o **_heapchk** definirá **errno** como **ENOSYS**.
 
 ## <a name="remarks"></a>Comentários
 
 A função **_heapchk** ajuda a depurar problemas relacionados a heap verificando a consistência mínima do heap. Se o sistema operacional não oferecer suporte a **_heapchk**(por exemplo, Windows 98), a função retornará **_HEAPOK** e definirá **errno** como **ENOSYS**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -115,9 +119,9 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Alocação de Memória](../../c-runtime-library/memory-allocation.md)<br/>
+[Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapmin](heapmin.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

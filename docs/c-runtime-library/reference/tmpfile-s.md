@@ -1,8 +1,9 @@
 ---
 title: tmpfile_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - tmpfile_s
+- _o_tmpfile_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946049"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919926"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -50,15 +52,15 @@ errno_t tmpfile_s(
 *pFilePtr*<br/>
 O endereço de um ponteiro para armazenar o endereço do ponteiro gerado em um fluxo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retornará 0 se for bem-sucedido; um código de erro em caso de falha.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
-|*pFilePtr*|**Valor retornado**|**Contents of**  *pFilePtr*|
+|*pFilePtr*|**Valor retornado**|**Conteúdo de**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
-|**NULL**|**EINVAL**|não alterado|
+|**NULO**|**EINVAL**|não alterado|
 
 Se ocorrer o erro de validação de parâmetro acima, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e o valor de retorno será **EINVAL**.
 
@@ -70,13 +72,15 @@ Se o arquivo não puder ser aberto, **tmpfile_s** gravará **NULL** no parâmetr
 
 A falha poderá ocorrer se você tentar mais de **TMP_MAX_S** (consulte STDIO. H) chamadas com **tmpfile_s**.
 
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

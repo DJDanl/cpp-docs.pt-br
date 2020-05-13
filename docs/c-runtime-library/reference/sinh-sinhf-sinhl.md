@@ -1,10 +1,12 @@
 ---
 title: sinh, sinhf, sinhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
+- sinh
 - sinhl
 - sinhf
 - sinhl
+- _o_sinh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948098"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909904"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -63,7 +66,7 @@ long double sinh(long double x);  // C++ only
 *x*<br/>
 Ângulo em radianos.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **Sinh** retornam o seno hiperbólico de *x*. Por padrão, se o resultado for muito grande, **Sinh** definirá **errno** como **ERANGE** e retornará ±**HUGE_VAL**.
 
@@ -76,15 +79,17 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Sinh** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **Sinh** sempre leva e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Sinh** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **Sinh** sempre leva e retorna **Double**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-|-|-|
-|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -115,7 +120,7 @@ sinh( 1.570796 ) = 2.301299
 cosh( 1.570796 ) = 2.509178
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

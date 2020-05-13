@@ -10,16 +10,16 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 150e78b7880a61343db21c3c787ffdd1f0b734a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e2c7a8d79ebf5e6483a06354b280e474d7b8e61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503163"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374843"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 
-Usado para um caso especial da caixa de diálogo links de edição OLE, que deve ser usado quando você precisar atualizar somente objetos vinculados ou incorporados existentes em um documento.
+Usado para um caso especial da caixa de diálogo OLE Edit Links, que deve ser usado quando você precisa atualizar apenas objetos vinculados ou incorporados existentes em um documento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,35 +39,35 @@ class COleUpdateDialog : public COleLinksDialog
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COleUpdateDialog::DoModal](#domodal)|Exibe a caixa de diálogo **Editar links** em um modo de atualização.|
+|[COleUpdateDialog::DoModal](#domodal)|Exibe a caixa de diálogo **Editar vínculos** em um modo de atualização.|
 
 ## <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre caixas de diálogo específicas de OLE, consulte as caixas de diálogo do artigo [em OLE](../../mfc/dialog-boxes-in-ole.md).
+Para obter mais informações sobre caixas de diálogo específicas do OLE, consulte o artigo [Caixas de diálogo no OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+[Ccommondialog](../../mfc/reference/ccommondialog-class.md)
 
-[COleDialog](../../mfc/reference/coledialog-class.md)
+[Coledialog](../../mfc/reference/coledialog-class.md)
 
-[COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
+[Colelinksdialog](../../mfc/reference/colelinksdialog-class.md)
 
 `COleUpdateDialog`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxodlgs. h
+**Cabeçalho:** afxodlgs.h
 
-##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog
+## <a name="coleupdatedialogcoleupdatedialog"></a><a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog
 
 Constrói um objeto `COleUpdateDialog`.
 
@@ -82,46 +82,46 @@ explicit COleUpdateDialog(
 ### <a name="parameters"></a>Parâmetros
 
 *pDoc*<br/>
-Aponta para o documento que contém os links que podem precisar ser atualizados.
+Aponta para o documento contendo os links que podem precisar ser atualizados.
 
 *bUpdateLinks*<br/>
 Sinalizador que determina se os objetos vinculados devem ser atualizados.
 
-*bUpdateEmbeddings*<br/>
+*bUpdateEmincorporaddings*<br/>
 Sinalizador que determina se os objetos incorporados devem ser atualizados.
 
-*pParentWnd*<br/>
-Aponta para o objeto de janela pai ou proprietário (do `CWnd`tipo) ao qual o objeto de caixa de diálogo pertence. Se for NULL, a janela pai da caixa de diálogo será definida como a janela principal do aplicativo.
+*Pparentwnd*<br/>
+Aponta para o objeto da janela `CWnd`pai ou proprietário (de tipo) ao qual o objeto de diálogo pertence. Se for NULL, a janela pai da caixa de diálogo será definida na janela principal do aplicativo.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função constrói apenas um `COleUpdateDialog` objeto. Para exibir a caixa de diálogo, chame [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Essa classe deve ser usada em vez `COleLinksDialog` de quando você deseja atualizar somente itens vinculados ou inseridos existentes.
+Esta função constrói `COleUpdateDialog` apenas um objeto. Para exibir a caixa de diálogo, ligue para [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Esta classe deve ser `COleLinksDialog` usada em vez de quando você quiser atualizar apenas itens vinculados ou incorporados existentes.
 
-##  <a name="domodal"></a>  COleUpdateDialog::DoModal
+## <a name="coleupdatedialogdomodal"></a><a name="domodal"></a>COleUpdateDialog::DoModal
 
-Exibe a caixa de diálogo Editar links no modo de atualização.
+Exibe a caixa de diálogo Editar vínculos no modo de atualização.
 
 ```
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Status de conclusão da caixa de diálogo. Um dos seguintes valores:
 
-- IDOK se a caixa de diálogo foi retornada com êxito.
+- IDOK se a caixa de diálogo retornar com sucesso.
 
-- IDCANCEL se nenhum dos itens vinculados ou incorporados no documento atual precisar de atualização.
+- IDCANCEL se nenhum dos itens vinculados ou incorporados no documento atual precisar ser atualizado.
 
-- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame a função de membro [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) para obter mais informações sobre o tipo de erro ocorrido. Para obter uma lista de possíveis erros, consulte a função [OLEUIEDITLINKS](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) no SDK do Windows.
+- IDABORT se ocorreu um erro. Se o IDABORT for retornado, ligue para a função de membro [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte a função [OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Todos os links e/ou incorporações são atualizados, a menos que o usuário selecione o botão Cancelar.
+Todos os links e/ou incorporações são atualizados a menos que o usuário selecione o botão Cancelar.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo de OCLIENT do MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Amostra OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)

@@ -1,8 +1,9 @@
 ---
 title: bsearch
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch
+- _o_bsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811094"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913377"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -51,16 +53,16 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ de *chave*
+*chaves*\
 Ponteiro para a chave a ser pesquisada.
 
-*base*\
+*polybase*\
 Ponteiro para a base dos dados de pesquisa.
 
-*número*\
+*automática*\
 Número de elementos.
 
-*largura*\
+*Largura*\
 Largura de elementos.
 
 *comparar*\
@@ -80,7 +82,9 @@ A função **bsearch** executa uma pesquisa binária de uma matriz classificada 
 |0|A chave é igual ao elemento da matriz.|
 |> 0|A chave é maior que o elemento da matriz.|
 
-Essa função valida seus parâmetros. Se *comparar*, *chave* ou *número* for **nulo**ou se *base* for **nulo** e o *número* for diferente de zero, ou se a *largura* for zero, a função invocará o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como `EINVAL` e a função retornará **NULL**.
+Essa função valida seus parâmetros. Se a *comparação*, a *chave* ou o *número* for **nulo**ou se *base* for **nulo** e o *número* for diferente de zero, ou se a *largura* for zero, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como `EINVAL` e a função retornará **NULL**.
+
+Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -137,7 +141,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Consulte também
 
-[Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)\
+[Pesquisa e classificação](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\
 [_lsearch](lsearch.md)\
 [qsort](qsort.md)

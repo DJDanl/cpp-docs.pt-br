@@ -27,7 +27,7 @@ DllImport void func();
 
 O uso de **__declspec (dllimport)** é opcional em declarações de função, mas o compilador produz um código mais eficiente se você usar essa palavra-chave. No entanto, você deve usar **__declspec (dllimport)** para que o executável de importação acesse os símbolos e objetos de dados públicos da dll. Observe que os usuários da sua DLL ainda precisam vincular a uma biblioteca de importação.
 
-Você pode usar o mesmo arquivo de cabeçalho para a DLL e o aplicativo cliente. Para fazer isso, use um símbolo de pré-processador especial que indica se você está criando a DLL ou criando o aplicativo cliente. Por exemplo:
+Você pode usar o mesmo arquivo de cabeçalho para a DLL e o aplicativo cliente. Para fazer isso, use um símbolo de pré-processador especial que indica se você está criando a DLL ou criando o aplicativo cliente. Por exemplo: 
 
 ```
 #ifdef _EXPORTING
@@ -50,6 +50,6 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 - [Importações mútuas](mutual-imports.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Importando para um aplicativo](importing-into-an-application.md)

@@ -14,61 +14,61 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: cd9597da7ab4c405f90a145182d63945cef48c53
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ec4d83481f6335d4c40ffb8f004b617f2ee09c62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079817"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367028"
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Conjunto de registros: recuperando registros em massa (ODBC)
 
 Este tópico aplica-se às classes ODBC do MFC.
 
-A classe `CRecordset` fornece suporte para busca de linha em massa, o que significa que vários registros podem ser recuperados ao mesmo tempo durante uma única busca, em vez de recuperar um registro por vez da fonte de dados. Você pode implementar a busca de linha em massa somente em uma classe de `CRecordset` derivada. O processo de transferência de dados da fonte de dados para o objeto Recordset é chamado de troca de campo de registro em massa (suporte RFX em massa). Observe que se você não estiver usando a busca de linha em massa em uma classe derivada de `CRecordset`, os dados serão transferidos por meio do suporte RFX (Record Field Exchange). Para obter mais informações, consulte [Record Field Exchange (suporte RFX)](../../data/odbc/record-field-exchange-rfx.md).
+A `CRecordset` classe fornece suporte para a busca de linhas em massa, o que significa que vários registros podem ser recuperados de uma só vez durante uma única busca, em vez de recuperar um registro de cada vez da fonte de dados. Você pode implementar a busca em `CRecordset` massa em uma classe derivada. O processo de transferência de dados da fonte de dados para o objeto recordset é chamado de troca de campo de registro em massa (Bulk RFX). Observe que se você não estiver usando `CRecordset`a busca de linha em massa em uma classe derivada, os dados são transferidos via record field exchange (RFX). Para obter mais informações, consulte [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 Este tópico explica:
 
-- [Como o CRecordset dá suporte à busca de linha em massa](#_core_how_crecordset_supports_bulk_row_fetching).
+- [Como o CRecordset suporta a busca de linhas em massa](#_core_how_crecordset_supports_bulk_row_fetching).
 
-- [Algumas considerações especiais ao usar a busca de linha em massa](#_core_special_considerations).
+- [Algumas considerações especiais ao usar a busca de linhas a granel](#_core_special_considerations).
 
-- [Como implementar o intercâmbio de campo de registro em massa](#_core_how_to_implement_bulk_record_field_exchange).
+- [Como implementar a troca de campo de registro em massa](#_core_how_to_implement_bulk_record_field_exchange).
 
-##  <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Como o CRecordset dá suporte à busca de linha em massa
+## <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Como o CRecordset suporta a busca de linhas em massa
 
-Antes de abrir o objeto recordset, você pode definir um tamanho de conjunto de linhas com a função membro `SetRowsetSize`. O tamanho do conjunto de linhas especifica quantos registros devem ser recuperados durante uma única busca. Quando a busca de linha em massa é implementada, o tamanho padrão do conjunto de linhas é 25. Se a busca de linha em massa não for implementada, o tamanho do conjunto de linhas permanecerá fixo em 1.
+Antes de abrir o objeto do conjunto de `SetRowsetSize` gravações, você pode definir um tamanho de conjunto de linhas com a função membro. O tamanho do conjunto de linhas especifica quantos registros devem ser recuperados durante uma única busca. Quando a busca de linhas em massa é implementada, o tamanho padrão do conjunto de linhas é de 25. Se a busca de linhas a granel não for implementada, o tamanho do conjunto de linhas permanece fixo em 1.
 
-Depois de inicializar o tamanho do conjunto de linhas, chame a função de membro [Open](../../mfc/reference/crecordset-class.md#open) . Aqui você deve especificar a opção `CRecordset::useMultiRowFetch` do parâmetro *dwOptions* para implementar a busca em massa de linha. Você também pode definir a opção `CRecordset::userAllocMultiRowBuffers`. O mecanismo de troca de campo de registro em massa usa matrizes para armazenar as várias linhas de dados recuperadas durante uma busca. Esses buffers de armazenamento podem ser alocados automaticamente pela estrutura ou você pode alocá-los manualmente. A especificação da opção de `CRecordset::userAllocMultiRowBuffers` significa que você fará a alocação.
+Depois de inicializar o tamanho do conjunto de linhas, chame a função De membro [Aberto.](../../mfc/reference/crecordset-class.md#open) Aqui você deve `CRecordset::useMultiRowFetch` especificar a opção do parâmetro *dwOptions* para implementar a busca de linhas em massa. Além disso, você `CRecordset::userAllocMultiRowBuffers` pode definir a opção. O mecanismo de troca de campo de registro em massa usa matrizes para armazenar as várias linhas de dados recuperados durante uma busca. Esses buffers de armazenamento podem ser alocados automaticamente pela estrutura ou você pode alocá-los manualmente. Especificar `CRecordset::userAllocMultiRowBuffers` a opção significa que você fará a alocação.
 
-A tabela a seguir lista as funções de membro fornecidas pelo `CRecordset` para oferecer suporte à busca de linha em massa.
+A tabela a seguir lista as `CRecordset` funções de membro fornecidas para suportar a busca em linha em massa.
 
-|Função de membro|DESCRIÇÃO|
+|Função de membro|Descrição|
 |---------------------|-----------------|
-|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|Função virtual que manipula os erros que ocorrem durante a busca.|
-|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementa a troca de campo de registro em massa. Chamado automaticamente para transferir várias linhas de dados da fonte de dados para o objeto Recordset.|
+|[Checkrowseterror](../../mfc/reference/crecordset-class.md#checkrowseterror)|Função virtual que lida com quaisquer erros que ocorrem durante a busca.|
+|[Dobulkfieldexchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementa a troca de campo de registro em massa. Chamado automaticamente para transferir várias linhas de dados da fonte de dados para o objeto recordset.|
 |[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Recupera a configuração atual para o tamanho do conjunto de linhas.|
-|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Informa quantas linhas foram realmente recuperadas após uma determinada busca. Na maioria dos casos, esse é o tamanho do conjunto de linhas, a menos que um conjunto de linhas incompleto tenha sido buscado.|
-|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Retorna um status de busca para uma linha específica dentro de um conjunto de linhas.|
-|[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Atualiza os dados e o status de uma linha específica dentro de um conjunto de linhas.|
-|[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Move o cursor para uma linha específica dentro de um conjunto de linhas.|
-|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Função virtual que altera a configuração do tamanho do conjunto de linhas para o valor especificado.|
+|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Diz quantas linhas foram realmente recuperadas após uma dada busca. Na maioria dos casos, este é o tamanho do conjunto de linhas, a menos que um conjunto de linhas incompleto tenha sido buscado.|
+|[Getrowstatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Retorna um status de buscar para uma linha específica dentro de um conjunto de linhas.|
+|[Refreshrowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Atualiza os dados e o status de uma linha específica dentro de um conjunto de linhas.|
+|[Setrowsetcursorposition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Move o cursor para uma linha específica dentro de um conjunto de linhas.|
+|[Setrowsetsize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Função virtual que altera a configuração do tamanho do conjunto de linhas para o valor especificado.|
 
-##  <a name="special-considerations"></a><a name="_core_special_considerations"></a>Considerações especiais
+## <a name="special-considerations"></a><a name="_core_special_considerations"></a>Considerações Especiais
 
-Embora a busca de linha em massa seja um lucro de desempenho, determinados recursos operam de forma diferente. Antes de decidir implementar a busca em massa de linha, considere o seguinte:
+Embora a busca de linhas em massa seja um ganho de desempenho, certos recursos operam de forma diferente. Antes de decidir implementar a busca de linhas em massa, considere o seguinte:
 
-- A estrutura chama automaticamente a função de membro `DoBulkFieldExchange` para transferir dados da fonte de dados para o objeto Recordset. No entanto, os dados não são transferidos do conjunto de registros de volta para a fonte de dados. Chamar as funções de membro `AddNew`, `Edit`, `Delete`ou `Update` resulta em uma asserção com falha. Embora `CRecordset` atualmente não forneça um mecanismo para atualizar linhas de dados em massa, você pode escrever suas próprias funções usando a função da API do ODBC `SQLSetPos`. Para obter mais informações sobre `SQLSetPos`, consulte a *referência do programador do ODBC SDK* na documentação do MSDN.
+- A estrutura chama `DoBulkFieldExchange` automaticamente a função de membro para transferir dados da fonte de dados para o objeto recordset. No entanto, os dados não são transferidos do conjunto de registros de volta para a fonte de dados. Chamar `AddNew`as `Edit` `Delete`funções `Update` de membro ou membro resulta em uma afirmação falha. Embora `CRecordset` atualmente não forneça um mecanismo para atualizar linhas em massa de dados, você pode `SQLSetPos`escrever suas próprias funções usando a função API ODBC . Para obter `SQLSetPos`mais informações sobre , consulte a *referência do programador ODBC SDK* na documentação do MSDN.
 
-- As funções membro `IsDeleted`, `IsFieldDirty`, `IsFieldNull`, `IsFieldNullable`, `SetFieldDirty`e `SetFieldNull` não podem ser usadas em conjuntos de registros que implementam busca de linha em massa. No entanto, você pode chamar `GetRowStatus` no lugar de `IsDeleted`e `GetODBCFieldInfo` no lugar de `IsFieldNullable`.
+- O membro `IsDeleted`funciona `IsFieldDirty` `IsFieldNull`, `IsFieldNullable` `SetFieldDirty`, `SetFieldNull` , , , , e não pode ser usado em conjuntos de registros que implementam a busca de linhas em massa. No entanto, `GetRowStatus` você `IsDeleted`pode `GetODBCFieldInfo` ligar no `IsFieldNullable`lugar de , e no lugar de .
 
-- As operações de `Move` reposicionam seu conjunto de registros por conjunto de linhas. Por exemplo, suponha que você abra um conjunto de registros que tenha 100 registros com um tamanho de conjunto de linhas inicial de 10. `Open` busca as linhas de 1 a 10, com o registro atual posicionado na linha 1. Uma chamada para `MoveNext` busca o próximo conjunto de linhas, não a próxima linha. Esse conjunto de linhas consiste nas linhas de 11 a 20, com o registro atual posicionado na linha 11. Observe que `MoveNext` e `Move( 1 )` não são equivalentes quando a busca de linha em massa é implementada. `Move( 1 )` busca o conjunto de linhas que inicia 1 linha do registro atual. Neste exemplo, chamar `Move( 1 )` depois de chamar `Open` busca o conjunto de linhas que consiste em linhas de 2 a 11, com o registro atual posicionado na linha 2. Para obter mais informações, consulte a função [mover](../../mfc/reference/crecordset-class.md#move) membro.
+- As `Move` operações reposicionam seu conjunto de registros por conjunto de linhas. Por exemplo, suponha que você abra um conjunto de registros que tenha 100 registros com um tamanho inicial de linha de 10. `Open`busca linhas 1 a 10, com o recorde atual posicionado na linha 1. Uma chamada `MoveNext` para buscar o próximo conjunto de linhas, não a próxima linha. Este conjunto de linhas consiste em linhas 11 a 20, com o recorde atual posicionado na linha 11. Observe `MoveNext` que `Move( 1 )` e não são equivalentes quando a busca de linhas a granel é implementada. `Move( 1 )`busca o conjunto de linhas que começa 1 linha do registro atual. Neste exemplo, `Move( 1 )` chamar `Open` após a chamada busca o conjunto de linhas que consiste nas linhas 2 a 11, com o registro atual posicionado na linha 2. Para obter mais informações, consulte a função [Mover](../../mfc/reference/crecordset-class.md#move) membro.
 
-- Ao contrário do registro de campo, os assistentes não dão suporte à troca de campo de registro em massa. Isso significa que você deve declarar manualmente os membros de dados de campo e substituir manualmente `DoBulkFieldExchange` gravando chamadas para as funções de suporte RFX em massa. Para obter mais informações, consulte [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md) na *referência da biblioteca de classes*.
+- Ao contrário da troca de campo de registro, os assistentes não suportam a troca de campo de registro em massa. Isso significa que você deve declarar manualmente seus `DoBulkFieldExchange` membros de dados de campo e substituir manualmente escrevendo chamadas para as funções RFX em massa. Para obter mais informações, consulte [Funções de troca de campo de registro](../../mfc/reference/record-field-exchange-functions.md) na referência da biblioteca de *classe*.
 
-##  <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>Como implementar a troca de campo de registro em massa
+## <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>Como implementar o field exchange de registro em massa
 
-A troca de campo de registro em massa transfere um conjunto de linhas de dados da fonte de dados para o objeto Recordset. As funções de suporte RFX em massa usam matrizes para armazenar esses dados, bem como matrizes para armazenar o comprimento de cada item de dados no conjunto de linhas. Em sua definição de classe, você deve definir os membros de dados de campo como ponteiros para acessar as matrizes de dados. Além disso, você deve definir um conjunto de ponteiros para acessar as matrizes de comprimentos. Quaisquer membros de dados de parâmetro não devem ser declarados como ponteiros; a declaração de membros de dados de parâmetro ao usar a troca de campo de registro em massa é a mesma que declará-los ao usar a troca de campo de registro. O código a seguir mostra um exemplo simples:
+A troca de campo de registro em massa transfere um conjunto de dados da fonte de dados para o objeto recordset. As funções Bulk RFX usam arrays para armazenar esses dados, bem como matrizes para armazenar o comprimento de cada item de dados no conjunto de linhas. Na definição de classe, você deve definir seus membros de dados de campo como ponteiros para acessar os arrays de dados. Além disso, você deve definir um conjunto de ponteiros para acessar as matrizes de comprimentos. Quaisquer membros de dados de parâmetros não devem ser declarados como ponteiros; declarar membros de dados de parâmetros ao usar a troca de campo de registro em massa é o mesmo que declará-los ao usar a troca de campo de registro. O código a seguir mostra um exemplo simples:
 
 ```cpp
 class MultiRowSet : public CRecordset
@@ -93,7 +93,7 @@ public:
 }
 ```
 
-Você pode alocar esses buffers de armazenamento manualmente ou fazer com que a estrutura faça a alocação. Para alocar os buffers por conta própria, você deve especificar a opção `CRecordset::userAllocMultiRowBuffers` do parâmetro *dwOptions* na função de membro `Open`. Certifique-se de definir os tamanhos das matrizes pelo menos igual ao tamanho do conjunto de linhas. Se desejar que a estrutura faça a alocação, você deverá inicializar seus ponteiros para NULL. Normalmente, isso é feito no construtor do objeto Recordset:
+Você pode alocar esses buffers de armazenamento manualmente ou fazer com que a estrutura faça a alocação. Para alocar os buffers você `CRecordset::userAllocMultiRowBuffers` mesmo, você deve especificar `Open` a opção do parâmetro *dwOptions* na função membro. Certifique-se de definir os tamanhos das matrizes pelo menos iguais ao tamanho do conjunto de linhas. Se você quiser que a estrutura faça a alocação, você deve inicializar seus ponteiros para NULL. Isso é normalmente feito no construtor do objeto recordset:
 
 ```cpp
 MultiRowSet::MultiRowSet( CDatabase* pDB )
@@ -114,7 +114,7 @@ MultiRowSet::MultiRowSet( CDatabase* pDB )
 }
 ```
 
-Por fim, você deve substituir a função membro `DoBulkFieldExchange`. Para os membros de dados de campo, chame as funções de suporte RFX em massa; para qualquer membro de dados de parâmetro, chame as funções suporte RFX. Se você abriu o conjunto de registros passando uma instrução SQL ou um procedimento armazenado para `Open`, a ordem na qual você faz as chamadas de suporte RFX em massa deve corresponder à ordem das colunas no conjunto de registros; da mesma forma, a ordem das chamadas suporte RFX para parâmetros deve corresponder à ordem dos parâmetros na instrução SQL ou no procedimento armazenado.
+Finalmente, você deve `DoBulkFieldExchange` substituir a função do membro. Para os membros de dados de campo, ligue para as funções Bulk RFX; para quaisquer membros de dados de parâmetros, ligue para as funções RFX. Se você abriu o conjunto de registros passando uma `Open`declaração SQL ou procedimento armazenado para , a ordem na qual você faz as chamadas RFX em massa deve corresponder à ordem das colunas no conjunto de registros; da mesma forma, a ordem das chamadas RFX para parâmetros deve corresponder à ordem dos parâmetros na declaração SQL ou no procedimento armazenado.
 
 ```cpp
 void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
@@ -135,12 +135,12 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 ```
 
 > [!NOTE]
->  Você deve chamar a função de membro `Close` antes de a classe derivada `CRecordset` sair do escopo. Isso garante que qualquer memória alocada pela estrutura seja liberada. É uma boa prática de programação sempre chamar explicitamente `Close`, independentemente se você implementou a busca em massa de linhas.
+> Você deve `Close` chamar a função `CRecordset` de membro antes que sua classe derivada saia do escopo. Isso garante que qualquer memória alocada pela estrutura seja liberada. É uma boa prática de programação `Close`para sempre chamar explicitamente, independentemente de você ter implementado a busca em linha em massa.
 
-Para obter mais informações sobre a troca de campo de registro (suporte RFX), consulte [gravar campo Exchange: como o suporte RFX funciona](../../data/odbc/record-field-exchange-how-rfx-works.md). Para obter mais informações sobre como usar parâmetros, consulte [CFieldExchange:: SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) e [Recordset: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Para obter mais informações sobre o Record Field Exchange (RFX), consulte [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md). Para obter mais informações sobre o uso de parâmetros, consulte [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) e [Recordset: Parametisizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ## <a name="see-also"></a>Confira também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[CRecordset:: m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
-[CRecordset:: m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)
+[Conjunto de registros de c::m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
+[CRecordset::m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)

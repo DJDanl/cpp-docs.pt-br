@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4748eecdf67ae5a60ddf97783a934a05e80b406c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182984"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374656"
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
 
@@ -41,7 +41,7 @@ class StringReference
 |Nome|Descrição|
 |----------|-----------------|
 |[StringReference::Data](#data)|Retorna os dados da cadeia de caracteres como uma matriz de valores char16.|
-|[StringReference::Length](#length)|Retorna o número de caracteres na cadeia de caracteres.|
+|[StringReference::Comprimento](#length)|Retorna o número de caracteres na cadeia de caracteres.|
 |[StringReference::GetHSTRING](#gethstring)|Retorna os dados da cadeia de caracteres como um HSTRING.|
 |[StringReference::GetString](#getstring)|Retorna os dados da cadeia de caracteres como uma `Platform::String^`.|
 
@@ -49,8 +49,8 @@ class StringReference
 
 |Nome|Descrição|
 |----------|-----------------|
-|[StringReference::operator=](#operator-assign)|Atribui uma `StringReference` a uma nova instância de `StringReference` .|
-|[StringReference::operator()](#operator-call)|Converte uma `StringReference` em uma `Platform::String^`.|
+|[StringReference::operador=](#operator-assign)|Atribui uma `StringReference` a uma nova instância de `StringReference` .|
+|[StringReference::operador()](#operator-call)|Converte uma `StringReference` em uma `Platform::String^`.|
 
 ### <a name="requirements"></a>Requisitos
 
@@ -58,11 +58,11 @@ class StringReference
 
 **Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
 **Cabeçalho:** vccorlib.h
 
-## <a name="data"></a>  Método stringreference:: data
+## <a name="stringreferencedata-method"></a><a name="data"></a>StringReference::Data Method
 
 Retorna o conteúdo desse `StringReference` como uma matriz de valores char16.
 
@@ -72,11 +72,11 @@ Retorna o conteúdo desse `StringReference` como uma matriz de valores char16.
 const ::default::char16 * Data() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma matriz de caracteres de texto UNICODE char16.
 
-## <a name="gethstring"></a>  Método stringreference:: Gethstring
+## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a>StringReference::GetHSTRING Method
 
 Retorna o conteúdo da cadeia de caracteres como `__abi_HSTRING`.
 
@@ -86,13 +86,13 @@ Retorna o conteúdo da cadeia de caracteres como `__abi_HSTRING`.
 __abi_HSTRING GetHSTRING() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma `__abi_HSTRING` que contém os dados da cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="getstring"></a>  Método stringreference:: GetString
+## <a name="stringreferencegetstring-method"></a><a name="getstring"></a>StringReference::GetString Method
 
 Retorna o conteúdo da cadeia de caracteres como uma `Platform::String^`.
 
@@ -103,11 +103,11 @@ __declspec(no_release_return) __declspec(no_refcount)
     ::Platform::String^ GetString() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma `Platform::String^` que contém os dados da cadeia de caracteres.
 
-## <a name="length"></a>  Método stringreference:: Length
+## <a name="stringreferencelength-method"></a><a name="length"></a>StringReference::Método de comprimento
 
 Retorna o número de caracteres na cadeia de caracteres.
 
@@ -117,13 +117,13 @@ Retorna o número de caracteres na cadeia de caracteres.
 unsigned int Length() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um inteiro sem sinal que especifica o número de caracteres na cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="operator-assign"></a>  Stringreference:: Operator operador =
+## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a>StringReference::operador = Operador
 
 Atribui o objeto especificado ao objeto `StringReference` atual.
 
@@ -142,15 +142,15 @@ O endereço de um objeto `StringReference` que é usado para inicializar o objet
 *__strArg*<br/>
 Ponteiro para uma matriz de valores char16 usado para inicializar o objeto `StringReference` atual.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Referência a um objeto do tipo `StringReference`.
 
 ### <a name="remarks"></a>Comentários
 
-Porque `StringReference` é uma classe C++ padrão e não uma classe ref, ela não aparecer na **Pesquisador de objetos**.
+Como `StringReference` é uma classe C++ padrão e não uma classe ref, ele não aparece no **Object Browser**.
 
-## <a name="operator-call"></a>  StringReference::operator()  Operator
+## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a>StringReference::operador() Operador
 
 Converte um objeto `StringReference` em um objeto `Platform::String^`.
 
@@ -161,13 +161,13 @@ __declspec(no_release_return) __declspec(no_refcount)
          operator ::Platform::String^() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um identificador de um objeto do tipo `Platform::String`.
 
-## <a name="ctor"></a>  Construtor StringReference::StringReference
+## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a>StringReference::StringReference Constructor
 
-Inicializa uma nova instância da classe `StringReference`.
+Inicia uma nova instância da classe `StringReference`.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -193,6 +193,6 @@ O número de elementos em `__strArg`.
 
 A primeira versão desse construtor é o construtor padrão. A segunda versão inicializa uma nova classe da instância de `StringReference` do objeto especificado pelo parâmetro `__fstrArg`. As terceira e quarta sobrecargas inicializam uma nova instância de `StringReference` de uma matriz de valores char16. char16 representa um caractere de texto UNICODE de 16 bits.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe Platform::StringReference](../cppcx/platform-stringreference-class.md)

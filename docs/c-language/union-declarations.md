@@ -7,11 +7,11 @@ helpviewer_keywords:
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
 ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291035"
 ---
 # <a name="union-declarations"></a>Declarações de união
 
@@ -19,21 +19,21 @@ Uma "declaração de união" especifica um conjunto de valores de variáveis e, 
 
 ## <a name="syntax"></a>Sintaxe
 
-*struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
+*especificador de struct-ou-Union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificador struct-or-Union* *identifier*<sub>opt</sub> **{** *struct-declaração-List* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp;**unida**
 
 *struct-declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração de struct*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
 
 O conteúdo da união é definido para ser
 
-*struct-declaration*:<br/>
+*declaração de struct*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list*  **;**
 
 *specifier-qualifier-list*:<br/>
@@ -41,8 +41,8 @@ O conteúdo da união é definido para ser
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
 
 *struct-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*estrutura-declaradora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-List*  **,**  *struct-declarator*
 
 Uma variável com tipo **union** armazena um dos valores definidos por esse tipo. As mesmas regras controlam declarações da estrutura e de união. Uniões também podem ter campos de bits.
 
@@ -81,7 +81,7 @@ union               /* Defines a two-dimensional */
 
 A matriz `screen` contém 2.000 elementos. Cada elemento da matriz é uma união individual com dois membros: `window1` e `screenval`. O membro `window1` é uma estrutura com dois membros de campos de bits, `icon` e `color`. O membro `screenval` é um `int`. Em um determinado momento, cada elemento da união mantém `int` representada por `screenval` ou a estrutura representada por `window1`.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Uniões aninhadas podem ser declaradas anonimamente quando são membros de outra estrutura ou união. Este é um exemplo de uma união sem nome:
 
@@ -119,8 +119,8 @@ struct x
 
 Consulte [Membros de estruturas e uniões](../c-language/structure-and-union-members.md) para obter informações sobre uniões de referência.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md)
+[Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)
