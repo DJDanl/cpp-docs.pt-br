@@ -22,8 +22,8 @@ ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
 ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204157"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389695"
 ---
 # <a name="switch-statement-c"></a>`switch`instrução (C++)
 
