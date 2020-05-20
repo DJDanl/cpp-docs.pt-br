@@ -15,7 +15,7 @@ ms.locfileid: "75556650"
 
 Para informar ao Visual Studio como criar seu código-fonte em um projeto de pasta aberta, adicione um arquivo *Tasks. vs. JSON* . Você pode definir qualquer tarefa arbitrária aqui e, em seguida, chamá-la no menu de contexto **Gerenciador de soluções** . Os projetos CMake não usam esse arquivo porque todos os comandos de compilação são especificados em *CMakeLists. txt*. Para sistemas de compilação diferentes de CMake, *Tasks. vs. JSON* é onde você pode especificar comandos de compilação e invocar scripts de compilação. Para obter informações gerais sobre como usar *tarefas. vs. JSON*, consulte [Personalizar tarefas de compilação e depuração para desenvolvimento de "pasta aberta"](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio).
 
-Uma tarefa tem uma `type` propriedade que pode ter um dos quatro valores: `default`, `launch` `remote`, ou `msbuild`. A maioria das tarefas `launch` deve usar a menos que uma conexão remota seja necessária.
+Uma tarefa tem uma `type` propriedade que pode ter um dos quatro valores: `default` , `launch` , `remote` ou `msbuild` . A maioria das tarefas deve usar `launch` a menos que uma conexão remota seja necessária.
 
 ## <a name="default-properties"></a>Propriedades padrão
 
@@ -33,7 +33,7 @@ As propriedades padrão estão disponíveis em todos os tipos de tarefas:
 
 ## <a name="launch-properties"></a>Propriedades de inicialização
 
-Quando o tipo de tarefa `launch`é, essas propriedades estão disponíveis:
+Quando o tipo de tarefa é `launch` , essas propriedades estão disponíveis:
 
 ||||
 |-|-|-|
@@ -43,13 +43,13 @@ Quando o tipo de tarefa `launch`é, essas propriedades estão disponíveis:
 |`launchOption`|string| Valores permitidos: "None", "ContinueOnError", "IgnoreError". Especifica como prosseguir com o comando quando houver erros.|
 |`workingDirectory`|string| Especifica o diretório no qual o comando será executado. O padrão é o diretório de trabalho atual do projeto.|
 |`customLaunchCommand`|string| Especifica uma personalização de escopo global a ser aplicada antes da execução do comando. Útil para definir variáveis de ambiente como% PATH%.|
-|`customLaunchCommandArgs`|string| Especifica os argumentos para customLaunchCommand. (Requer `customLaunchCommand`.)|
+|`customLaunchCommandArgs`|string| Especifica os argumentos para customLaunchCommand. (Requer `customLaunchCommand` .)|
  `env`| Especifica uma lista de valores-chave de variáveis de ambiente personalizadas. Por exemplo, "myEnv": "myVal"|
 |`commands`|matriz| Especifica uma lista de comandos a serem invocados na ordem.|
 
 ### <a name="example"></a>Exemplo
 
-As tarefas a seguir invocam *make. exe* quando um makefile é fornecido na pasta e `Mingw64` o ambiente foi definido em *CppProperties. JSON*, conforme mostrado na [referência de esquema CppProperties. JSON](cppproperties-schema-reference.md#user_defined_environments):
+As tarefas a seguir invocam *make. exe* quando um makefile é fornecido na pasta e o `Mingw64` ambiente foi definido em *CppProperties. JSON*, conforme mostrado na [referência de esquema CppProperties. JSON](cppproperties-schema-reference.md#user_defined_environments):
 
 ```json
  {
@@ -86,7 +86,7 @@ Essas tarefas podem ser invocadas no menu de contexto quando você clica com o b
 
 As tarefas remotas são habilitadas quando você instala o desenvolvimento do Linux com carga de trabalho do C++ e adiciona uma conexão a um computador remoto usando o Gerenciador de conexões do Visual Studio. Uma tarefa remota executa comandos em um sistema remoto e também pode copiar arquivos nele.
 
-Quando o tipo de tarefa `remote`é, essas propriedades estão disponíveis:
+Quando o tipo de tarefa é `remote` , essas propriedades estão disponíveis:
 
 ||||
 |-|-|-|
@@ -99,11 +99,11 @@ Quando o tipo de tarefa `remote`é, essas propriedades estão disponíveis:
 |`remoteCopyMethod`|string| O método a ser usado para copiar. Valores permitidos: "None", "SFTP", "rsync". rsync é recomendado para projetos grandes.|
 |`remoteCopySourcesOutputVerbosity`|string| Valores permitidos: "normal", "detalhado", "diagnóstico".|
 |`rsyncCommandArgs`|string|O padrão é "-t--delete".|
-|`remoteCopyExclusionList`|matriz|Lista separada por vírgulas de arquivos `localCopyDirectory` no para excluir das operações de cópia.|
+|`remoteCopyExclusionList`|matriz|Lista separada por vírgulas de arquivos no `localCopyDirectory` para excluir das operações de cópia.|
 
 ### <a name="example"></a>Exemplo
 
-A tarefa a seguir será exibida no menu de contexto quando você clicar com o botão direito do mouse em *Main. cpp* em **Gerenciador de soluções**. Depende de um computador remoto chamado `ubuntu` no Gerenciador de **conexões**. A tarefa copia a pasta aberta atual no Visual Studio para o `sample` diretório no computador remoto e, em seguida, invoca g + + para compilar o programa.
+A tarefa a seguir será exibida no menu de contexto quando você clicar com o botão direito do mouse em *Main. cpp* em **Gerenciador de soluções**. Depende de um computador remoto chamado `ubuntu` no **Gerenciador de conexões**. A tarefa copia a pasta aberta atual no Visual Studio para o `sample` diretório no computador remoto e, em seguida, invoca g + + para compilar o programa.
 
 ```json
 {
@@ -127,7 +127,7 @@ A tarefa a seguir será exibida no menu de contexto quando você clicar com o bo
 
 ## <a name="msbuild-properties"></a>propriedades MSBuild
 
-Quando o tipo de tarefa `msbuild`é, essas propriedades estão disponíveis:
+Quando o tipo de tarefa é `msbuild` , essas propriedades estão disponíveis:
 
 ||||
 |-|-|-|

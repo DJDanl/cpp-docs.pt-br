@@ -1,21 +1,21 @@
 ---
-title: Instalar o suporte ao C++ no Visual Studio
+title: Instalar o suporte a C e C++ no Visual Studio
 description: Instalar o suporte do Visual Studio para Visual C++
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: d3018bef9254a8eab557057c035cde84310a2452
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335361"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550804"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Instalar o suporte ao C++ no Visual Studio
+# <a name="install-c-and-c-support-in-visual-studio"></a>Instalar o suporte a C e C++ no Visual Studio
 
-Se você ainda não baixou e instalou o Visual Studio e as ferramentas de Visual C++, veja aqui como começar.
+Se você ainda não baixou e instalou o Visual Studio e as ferramentas do Microsoft C/C++, veja aqui como começar.
 
 ::: moniker range="vs-2019"
 
@@ -73,9 +73,9 @@ Depois que o instalador for instalado, você poderá usá-lo para personalizar a
 
    ![Visual Studio 2019: instalar uma carga de trabalho](../get-started/media/vs-installer-workloads.png)
 
-   Para obter suporte básico para C++, escolha a carga de trabalho "desenvolvimento de área de trabalho com C++". Ela vem com o editor de núcleo padrão, que inclui o suporte à edição de código básico para mais de 20 linguagens, a capacidade de abrir e editar o código de qualquer pasta sem precisar de um projeto e o controle do código-fonte integrado.
+   Para obter suporte a C e C++ principal, escolha a carga de trabalho "desenvolvimento de desktop com C++". Ela vem com o editor de núcleo padrão, que inclui o suporte à edição de código básico para mais de 20 linguagens, a capacidade de abrir e editar o código de qualquer pasta sem precisar de um projeto e o controle do código-fonte integrado.
 
-   Cargas de trabalho adicionais dão suporte a outros tipos de desenvolvimento em C++. Por exemplo, escolha a carga de trabalho "desenvolvimento de Plataforma Universal do Windows" para criar aplicativos que usam o Windows Runtime para o Microsoft Store. Escolha "desenvolvimento de jogos com C++" para criar jogos que usam DirectX, inreal e cocos2d. Escolha "desenvolvimento Linux com C++" para as plataformas Linux de destino, incluindo o desenvolvimento de IoT.
+   As cargas de trabalho adicionais dão suporte a outros tipos de desenvolvimento. Por exemplo, escolha a carga de trabalho "desenvolvimento de Plataforma Universal do Windows" para criar aplicativos que usam o Windows Runtime para o Microsoft Store. Escolha "desenvolvimento de jogos com C++" para criar jogos que usam DirectX, inreal e cocos2d. Escolha "desenvolvimento Linux com C++" para as plataformas Linux de destino, incluindo o desenvolvimento de IoT.
 
    O painel **detalhes da instalação** lista os componentes incluídos e opcionais instalados por cada carga de trabalho. Você pode selecionar ou anular a seleção de componentes opcionais nesta lista. Por exemplo, para dar suporte ao desenvolvimento usando os conjuntos de ferramentas do compilador do Visual Studio 2017 ou 2015, escolha os componentes opcionais MSVC v141 ou MSVC v140. Você pode adicionar suporte para MFC, a extensão de linguagem de módulos experimentais, IncrediBuild e muito mais.
 
@@ -84,7 +84,7 @@ Depois que o instalador for instalado, você poderá usá-lo para personalizar a
    Em seguida, serão exibidas telas de status que mostram o progresso da instalação do Visual Studio.
 
 > [!TIP]
-> A qualquer momento após a instalação, você pode instalar as cargas de trabalho ou os componentes não instalados inicialmente. Se você tiver o Visual Studio aberto, vá para **ferramentas** > **obter ferramentas e recursos...** que abre a instalador do Visual Studio. Outra opção é abrir o **Instalador do Visual Studio** no menu Iniciar. Assim, é possível escolher as cargas de trabalho ou os componentes que você deseja instalar. Em seguida, escolha **Modificar**.
+> A qualquer momento após a instalação, você pode instalar as cargas de trabalho ou os componentes não instalados inicialmente. Se você tiver o Visual Studio aberto, vá para **ferramentas**  >  **obter ferramentas e recursos...** que abre a instalador do Visual Studio. Outra opção é abrir o **Instalador do Visual Studio** no menu Iniciar. Assim, é possível escolher as cargas de trabalho ou os componentes que você deseja instalar. Em seguida, escolha **Modificar**.
 
 ### <a name="step-5---choose-individual-components-optional"></a>Etapa 5 – escolher componentes individuais (opcional)
 
@@ -125,7 +125,7 @@ Você pode reduzir o volume de instalação do Visual Studio na unidade do siste
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="vs-2017"
 
 ## <a name="visual-studio-2017-installation"></a>Instalação do Visual Studio 2017
 
@@ -159,7 +159,7 @@ Para obter detalhes sobre o espaço em disco e os requisitos do sistema operacio
 
    ![Desenvolvimento de desktop com carga de trabalho de C++](media/desktop-development-with-cpp.png "Desenvolvimento para desktop com C++")
 
-   Para C++, selecione o **desenvolvimento de desktop com carga de trabalho C++** e, em seguida, escolha **instalar**.
+   Para C e C++, selecione o **desenvolvimento de desktop com carga de trabalho C++** e, em seguida, escolha **instalar**.
 
    ![Instalar o desenvolvimento de desktop com carga de trabalho de C++](media/vscpp-concierge-choose-workload.gif "Instalar o desenvolvimento de desktop com carga de trabalho de C++")
 
@@ -185,9 +185,9 @@ Para obter detalhes sobre o espaço em disco e os requisitos do sistema operacio
 
 ## <a name="visual-studio-2015-installation"></a>Instalação do Visual Studio 2015
 
-Para instalar o Visual Studio 2015, acesse [Baixar versões mais antigas do Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Execute o programa de instalação, escolha **Instalação personalizada** e, em seguida, selecione o componente C++. Para adicionar suporte a C++ a uma instalação existente do Visual Studio 2015, clique no botão Iniciar do Windows e digite **Adicionar remover programas**. Abra o programa na lista de resultados e localize a instalação do Visual Studio 2015 na lista de programas instalados. Clique duas vezes nele, escolha **Modificar** e selecione a Visual C++ componentes a serem instalados.
+Para instalar o Visual Studio 2015, acesse [Baixar versões mais antigas do Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Execute o programa de instalação, escolha **Instalação personalizada** e, em seguida, selecione o componente C++. Para adicionar suporte a C e C++ a uma instalação existente do Visual Studio 2015, clique no botão Iniciar do Windows e digite **Adicionar remover programas**. Abra o programa na lista de resultados e localize a instalação do Visual Studio 2015 na lista de programas instalados. Clique duas vezes nele, escolha **Modificar** e selecione a Visual C++ componentes a serem instalados.
 
-Em geral, é altamente recomendado que você use o Visual Studio 2017, mesmo que você precise compilar o código com o compilador do Visual Studio 2015. Para obter mais informações, consulte [Usar a multiplataforma nativa no Visual Studio para compilar projetos antigos](../porting/use-native-multi-targeting.md).
+Em geral, é altamente recomendável que você use a versão mais recente do Visual Studio mesmo se precisar compilar seu código usando o compilador do Visual Studio 2015. Para obter mais informações, consulte [Usar a multiplataforma nativa no Visual Studio para compilar projetos antigos](../porting/use-native-multi-targeting.md).
 
 ::: moniker-end
 
