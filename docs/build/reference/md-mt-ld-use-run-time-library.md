@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 4e734233d94bf57d6838bd4d37c023d55f1d5f6b
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: a66677ebbef984e9a4c8190f184ca3a9126a7b83
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299756"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550752"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Usar biblioteca de tempo de execução)
 
@@ -67,19 +67,17 @@ Indica se um módulo com multithread é uma DLL e especifica versões comerciais
 
 Para obter mais informações sobre bibliotecas de tempo de execução do C e quais bibliotecas são usadas quando você compila com [/CLR (compilação em tempo de execução de linguagem comum)](clr-common-language-runtime-compilation.md), consulte [recursos da biblioteca do CRT](../../c-runtime-library/crt-library-features.md).
 
-Todos os módulos passados para uma determinada invocação do vinculador devem ter sido compilados com a mesma opção de compilador de biblioteca de tempo de execução ( **/MD**, **/MT**, **/LD**).
+Todos os módulos passados para uma determinada invocação do vinculador devem ter sido compilados com a mesma opção de compilador de biblioteca de tempo de execução (**/MD**, **/MT**, **/LD**).
 
 Para obter mais informações sobre como usar as versões de depuração das bibliotecas de tempo de execução, consulte [C Run-time library Reference](../../c-runtime-library/c-run-time-library-reference.md).
 
-Para saber mais sobre DLLs, confira [criarC++ C/DLLs no Visual Studio](../dlls-in-visual-cpp.md).
+Para saber mais sobre DLLs, confira [criar DLLs C/C++ no Visual Studio](../dlls-in-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedades **Propriedades da Configuração** > **C/C++**  > **Linha de Comando**.
-
-1. Selecione a página de propriedades **geração de código** .
+1. Selecione a página de propriedades **configuração**de  >  geração de código**C/C++**  >  **Code Generation** .
 
 1. Modifique a propriedade da **biblioteca de tempo de execução** .
 
@@ -87,7 +85,7 @@ Para saber mais sobre DLLs, confira [criarC++ C/DLLs no Visual Studio](../dlls-i
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

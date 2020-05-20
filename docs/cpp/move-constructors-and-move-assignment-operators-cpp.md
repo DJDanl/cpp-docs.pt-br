@@ -4,16 +4,16 @@ ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179361"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550765"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Operadores de construtores de movimento e de atribuição de movimento (C++)
 
-Este tópico descreve como gravar um *Construtor de movimentação* e um operador de atribuição de movimentação C++ para uma classe. Um Construtor move permite que os recursos de propriedade de um objeto rvalue sejam movidos para um lvalue sem cópia. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Este tópico descreve como gravar um *Construtor move* e um operador de atribuição de movimentação para uma classe C++. Um Construtor move permite que os recursos de propriedade de um objeto rvalue sejam movidos para um lvalue sem cópia. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência de rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 Este tópico baseia-se na seguinte classe do C++, `MemoryBlock`, que gerencia um buffer de memória.
 
@@ -174,7 +174,7 @@ O exemplo a seguir mostra o construtor de movimentação completo e o operador d
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -193,7 +193,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 
 // Move assignment operator.
-MemoryBlock& operator=(MemoryBlock&& other)
+MemoryBlock& operator=(MemoryBlock&& other) noexcept
 {
    std::cout << "In operator=(MemoryBlock&&). length = "
              << other._length << "." << std::endl;
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. A classe `vector` usa a semântica de movimentação para executar a operação de inserção com eficiência movendo os elementos do vetor em vez de copiá-los.
+O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. A `vector` classe usa a semântica de movimentação para executar a operação de inserção com eficiência movendo os elementos do vetor em vez de copiá-los.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -248,15 +248,15 @@ In MemoryBlock(size_t). length = 25.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 75.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
-In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 50.
 In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In operator=(MemoryBlock&&). length = 75.
-In operator=(MemoryBlock&&). length = 50.
+In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
+In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 25. Deleting resource.
@@ -289,7 +289,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
 
 A versão deste exemplo que usa a semântica de movimentação é mais eficiente do que a versão que não usa a semântica de movimentação, pois ela executa menos operações de cópia, alocação de memória e desalocação de memória.
 
-## <a name="robust-programming"></a>Programação Robusta
+## <a name="robust-programming"></a>Programação robusta
 
 Para evitar vazamento de recursos, sempre libere recursos (como a memória, os identificadores de arquivo e os soquetes) no operador de atribuição de movimentação.
 
@@ -299,7 +299,7 @@ Se você fornecer um construtor de movimentação e um operador de atribuição 
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -307,7 +307,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-A função [std:: move](../standard-library/utility-functions.md#move) preserva a propriedade rvalue do *outro* parâmetro.
+A função [std:: move](../standard-library/utility-functions.md#move) converte o lvalue `other` em um Rvalue.
 
 ## <a name="see-also"></a>Confira também
 
