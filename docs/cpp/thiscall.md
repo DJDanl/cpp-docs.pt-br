@@ -1,41 +1,37 @@
 ---
 title: __thiscall
-ms.date: 11/04/2016
+ms.date: 05/22/2020
 f1_keywords:
 - __thiscall
 - __thiscall_cpp
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: 8772159dca71bb7605af5e5919425065423d503d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9edc2cd8caa5fd5458f6a53c5fdb1f8a5e69914
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188149"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854808"
 ---
-# <a name="__thiscall"></a>__thiscall
+# `__thiscall`
 
-**Seção específica da Microsoft**
+A Convenção de chamada **específica da Microsoft** **`__thiscall`** é usada em funções de membro de classe C++ na arquitetura x86. É a Convenção de chamada padrão usada pelas funções de membro que não usam argumentos variáveis ( `vararg` Functions).
 
-A Convenção de chamada **__thiscall** é usada em funções de membro e é a Convenção de chamada C++ padrão usada por funções de membro que não usam argumentos variáveis. Em **__thiscall**, o receptor limpa a pilha, o que é impossível para `vararg` funções. Os argumentos são enviados por push na pilha da direita para a esquerda, **com o ponteiro** que está sendo passado por meio do registro ecx, e não na pilha, na arquitetura x86.
+Em **`__thiscall`** , o receptor limpa a pilha, o que é impossível para as `vararg` funções. Os argumentos são enviados por push na pilha da direita para a esquerda. O **`this`** ponteiro é transmitido por meio do Registro ECX e não da pilha.
 
-Um motivo para usar **__thiscall** é em classes cujas funções de membro usam `__clrcall` por padrão. Nesse caso, você pode usar **__thiscall** para tornar as funções de membro individuais que podem ser chamadas de código nativo.
+Em máquinas ARM, ARM64 e x64, **`__thiscall`** é aceita e ignorado pelo compilador. Isso ocorre porque eles usam uma Convenção de chamada baseada em registro por padrão.
 
-Ao compilar com [/CLR: Pure](../build/reference/clr-common-language-runtime-compilation.md), todas as funções e ponteiros de função são `__clrcall`, a menos que especificado de outra forma. As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+Um motivo para usar **`__thiscall`** está em classes cujas funções de membro usam **`__clrcall`** por padrão. Nesse caso, você pode usar **`__thiscall`** para tornar as funções de membro individuais que podem ser chamadas do código nativo.
 
-Em versões anteriores ao Visual Studio 2005, a Convenção de chamada **__thiscall** não pôde ser especificada explicitamente em um programa, porque **__thiscall** não era uma palavra-chave.
+Ao compilar com [**`/clr:pure`**](../build/reference/clr-common-language-runtime-compilation.md) , todas as funções e ponteiros de função são **`__clrcall`** , a menos que especificado o contrário. As **`/clr:pure`** **`/clr:safe`** Opções de compilador e são preteridas no visual Studio 2015 e sem suporte no visual Studio 2017.
 
-`vararg` funções de membro usam a Convenção de chamada **__cdecl** . Todos os argumentos de função são enviados por push na pilha, **com o ponteiro** colocado na pilha por último
+`vararg`as funções de membro usam a **`__cdecl`** Convenção de chamada. Todos os argumentos de função são enviados por push na pilha, com o **`this`** ponteiro colocado na pilha por último.
 
-Como esta convenção de chamada se aplica apenas a C++, não há nenhum esquema de decoração de nome de C.
+Como essa Convenção de chamada se aplica apenas ao C++, ela não tem um esquema de decoração de nome de C.
 
-Em máquinas ARM e x64, **__thiscall** é aceita e ignorada pelo compilador.
+Quando você define uma função de membro de classe não estática fora de linha, especifique o modificador de Convenção de chamada somente na declaração. Você não precisa especificá-lo novamente na definição fora de linha. O compilador usa a Convenção de chamada especificada durante a declaração no ponto de definição.
 
-Para funções de classe não estáticas, se a função for definida como fora da linha, o modificador da convenção de chamada não precisará ser especificado na definição fora da linha. Ou seja, para métodos de membro de classe não estática, a convenção de chamada especificada durante a declaração é assumida no ponto de definição.
+## <a name="see-also"></a>Consulte também
 
-**Fim da seção específica da Microsoft**
-
-## <a name="see-also"></a>Confira também
-
-[Convenções de passagem e nomenclatura de argumentos](../cpp/argument-passing-and-naming-conventions.md)
+[Passagem de argumento e convenções de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)
