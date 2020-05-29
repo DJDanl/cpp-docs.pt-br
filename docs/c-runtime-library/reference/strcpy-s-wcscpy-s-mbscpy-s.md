@@ -1,6 +1,6 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
-ms.date: 4/2/2020
+ms.date: 5/28/2020
 api_name:
 - wcscpy_s
 - _mbscpy_s
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
+ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911840"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206187"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -116,7 +116,7 @@ errno_t _mbscpy_s_l(
 Local do buffer de cadeia de caracteres de destino.
 
 *dest_size*<br/>
-Tamanho do buffer da cadeia de caracteres de destino em unidades de **caracteres** para funções delimitadas e de vários bytes e unidades de **wchar_t** para funções amplas. Esse valor deve ser maior que zero e não maior que **RSIZE_MAX**.
+Tamanho do buffer da cadeia de caracteres de destino em unidades de **caracteres** para funções delimitadas e de vários bytes e unidades de **wchar_t** para funções amplas. Esse valor deve ser maior que zero e não maior que **RSIZE_MAX**. Verifique se esse tamanho conta para o encerramento `NULL` após a cadeia de caracteres.
 
 *src*<br/>
 Buffer de cadeia de caracteres de origem com terminação nula.
@@ -124,7 +124,7 @@ Buffer de cadeia de caracteres de origem com terminação nula.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Zero se for bem-sucedido; caso contrário, um código de erro.
 
@@ -132,8 +132,8 @@ Zero se for bem-sucedido; caso contrário, um código de erro.
 
 |*dest*|*dest_size*|*src*|Valor retornado|Conteúdo do *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULO**|any|any|**EINVAL**|não modificado|
-|any|any|**NULO**|**EINVAL**|*dest*[0] definido como 0|
+|**NULL**|any|any|**EINVAL**|não modificado|
+|any|any|**NULL**|**EINVAL**|*dest*[0] definido como 0|
 |any|0 ou muito pequeno|any|**ERANGE**|*dest*[0] definido como 0|
 
 ## <a name="remarks"></a>Comentários
@@ -231,7 +231,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
