@@ -1,28 +1,27 @@
+- name: C++ Build Insights
+  href: ../build-insights/index.yml
 - name: Introdução ao C++ Build Insights
   href: ../build-insights/get-started-with-cpp-build-insights.md
 - name: Tutoriais
-  expanded: false
+  expanded: true
   items:
     - name: vcperf e Windows Performance Analyzer
       href: ../build-insights/tutorials/vcperf-and-wpa.md
     - name: Noções básicas sobre o Windows Performance Analyzer
       href: ../build-insights/tutorials/wpa-basics.md
 - name: Referência
-  expanded: false
   items:
     - name: comandos do vcperf
       href: ../build-insights/reference/vcperf-commands.md
     - name: Modos de exibição do Windows Performance Analyzer
       href: ../build-insights/reference/wpa-views.md
     - name: SDK do C++ Build Insights
-      expanded: false
       items:
         - name: Visão geral
           href: ../build-insights/reference/sdk/overview.md
         - name: Tabela de eventos
           href: ../build-insights/reference/sdk/event-table.md
         - name: Funções
-          expanded: false
           items:
             - name: Analisar
               href: ../build-insights/reference/sdk/functions/analyze.md
@@ -79,7 +78,6 @@
             - name: StopTracingSessionW
               href: ../build-insights/reference/sdk/functions/stop-tracing-session-w.md
         - name: Tipo de dados de evento (C++)
-          expanded: false
           items:
             - name: Atividade
               href: ../build-insights/reference/sdk/cpp-event-data-types/activity.md
@@ -174,7 +172,6 @@
             - name: WholeProgramAnalysis
               href: ../build-insights/reference/sdk/cpp-event-data-types/whole-program-analysis.md
         - name: Tipo de dados de evento (C)
-          expanded: false
           items:
             - name: CL_PASS_DATA
               href: ../build-insights/reference/sdk/c-event-data-types/cl-pass-data-struct.md
@@ -213,7 +210,6 @@
             - name: TRANSLATION_UNIT_PASS_CODE
               href: ../build-insights/reference/sdk/c-event-data-types/translation-unit-pass-code-enum.md
         - name: Outros tipos
-          expanded: false
           items:
             - name: ANALYSIS_CALLBACKS
               href: ../build-insights/reference/sdk/other-types/analysis-callbacks-struct.md
