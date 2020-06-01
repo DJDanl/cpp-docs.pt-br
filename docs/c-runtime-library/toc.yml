@@ -1,4 +1,4 @@
-- name: Referência da CRT (biblioteca em tempo de execução) C
+- name: Referência da CRT (biblioteca de runtime C)
   href: ../c-runtime-library/c-run-time-library-reference.md
 - name: Recursos da biblioteca CRT
   expanded: false
