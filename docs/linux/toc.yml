@@ -3,7 +3,6 @@
 - name: 'Baixar, instalar e configurar a carga de trabalho de Desenvolvimento do Linux'
   href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: Conectar-se ao computador Linux remoto
-  expanded: true
   items:
     - name: Conectar-se ao computador Linux remoto
       href: ../linux/connect-to-your-remote-linux-computer.md
@@ -11,40 +10,43 @@
       href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: Referência do ConnectionManager
       href: ../linux/connectionmanager-reference.md
-- name: Criar um novo projeto do Linux
-  href: ../linux/create-a-new-linux-project.md
-- name: Configurar um projeto do Linux
-  href: ../linux/configure-a-linux-project.md
-- name: Criar e configurar um projeto do Linux CMake
-  href: ../linux/cmake-linux-project.md
+- name: Criar projetos do Linux com o MSBuild no Visual Studio
+  items:
+    - name: Criar um novo projeto do Linux
+      href: ../linux/create-a-new-linux-project.md
+    - name: Configurar um projeto do Linux
+      href: ../linux/configure-a-linux-project.md
+    - name: 'Implantar, executar e depurar o projeto do Linux'
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
+    - name: Referência de página de propriedades do projeto do Linux
+      items:
+        - name: Referência de página de propriedades do projeto do Linux
+          href: ../linux/prop-pages-linux.md
+        - name: Propriedades gerais (Linux)
+          href: ../linux/prop-pages/general-linux.md
+        - name: Propriedades de depuração (Linux)
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: Propriedades dos diretórios do VC++ (Linux)
+          href: ../linux/prop-pages/directories-linux.md
+        - name: Copiar propriedades de origem (Linux)
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: Propriedades de C/C++ (Linux)
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: Propriedades do vinculador (Linux)
+          href: ../linux/prop-pages/linker-linux.md
+        - name: Propriedades de evento de build (Linux)
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: Propriedades da etapa de build personalizada (Linux)
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: Propriedades do projeto do Makefile (Linux)
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: Propriedades de arquivo remoto (Linux)
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: Criar projetos do Linux com o CMake no Visual Studio
+  items:
+    - name: Criar e configurar um projeto do Linux CMake
+      href: ../linux/cmake-linux-project.md
+    - name: 'Tutorial: Criar projetos multiplataforma do C++ no Visual Studio'
+      href: ../build/get-started-linux-cmake.md
 - name: Configurar projetos do Linux para usar o Address Sanitizer
   href: ../linux/linux-asan-configuration.md
-- name: 'Implantar, executar e depurar o projeto do Linux'
-  href: ../linux/deploy-run-and-debug-your-linux-project.md
-- name: 'Tutorial: Criar projetos multiplataforma do C++ no Visual Studio'
-  href: ../build/get-started-linux-cmake.md
-- name: Referência de página de propriedades do projeto do Linux
-  expanded: false
-  items:
-    - name: Referência de página de propriedades do projeto do Linux
-      href: ../linux/prop-pages-linux.md
-    - name: Propriedades gerais (Linux)
-      href: ../linux/prop-pages/general-linux.md
-    - name: Propriedades de depuração (Linux)
-      href: ../linux/prop-pages/debugging-linux.md
-    - name: Propriedades dos diretórios do VC++ (Linux)
-      href: ../linux/prop-pages/directories-linux.md
-    - name: Copiar propriedades de origem (Linux)
-      href: ../linux/prop-pages/copy-sources-project.md
-    - name: Propriedades de C/C++ (Linux)
-      href: ../linux/prop-pages/c-cpp-linux.md
-    - name: Propriedades do vinculador (Linux)
-      href: ../linux/prop-pages/linker-linux.md
-    - name: Propriedades de evento de build (Linux)
-      href: ../linux/prop-pages/build-events-linux.md
-    - name: Propriedades da etapa de build personalizada (Linux)
-      href: ../linux/prop-pages/custom-build-step-linux.md
-    - name: Propriedades do projeto do Makefile (Linux)
-      href: ../linux/prop-pages/makefile-linux.md
-    - name: Propriedades de arquivo remoto (Linux)
-      href: ../linux/prop-pages/remote-ar-linux.md
