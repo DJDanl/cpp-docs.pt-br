@@ -1,11 +1,12 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
 - _o_sqrt
+- _o_sqrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913909"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506878"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -78,15 +79,15 @@ Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sqrt** que usa
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **sqrt** retornam a raiz quadrada de *x*. Por padrão, se *x* for negativo, **sqrt** retornará um NaN indefinido.
 
 |Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|nenhuma|_DOMAIN|
-|- ∞|nenhuma|_DOMAIN|
-|x<0|nenhuma|_DOMAIN|
+|± QNAN,IND|nenhum|_DOMAIN|
+|- ∞|nenhum|_DOMAIN|
+|x<0|nenhum|_DOMAIN|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -123,7 +124,7 @@ The square root of 45.35 is 6.73
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>
