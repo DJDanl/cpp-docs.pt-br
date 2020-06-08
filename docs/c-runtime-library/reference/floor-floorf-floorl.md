@@ -1,11 +1,12 @@
 ---
 title: floor, floorf, floorl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - floorf
 - floorl
 - floor
 - _o_floor
+- _o_floorf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911629"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506995"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -70,13 +71,13 @@ long double floorl(
 *x*<br/>
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **Floor** retornam um valor de ponto flutuante que representa o maior inteiro que é menor ou igual a *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|nenhuma|_DOMAIN|
+|± QNAN,IND|nenhum|_DOMAIN|
 
 o **Floor** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
@@ -131,7 +132,7 @@ The ceil of -2.8 is -2.000000
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

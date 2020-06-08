@@ -1,11 +1,12 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - ceilf
 - ceil
 - ceill
 - _o_ceil
+- _o_ceilf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917342"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507073"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -70,13 +71,13 @@ long double ceill(
 *x*<br/>
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **Ceil** retornam um valor de ponto flutuante que representa o menor inteiro que é maior ou igual a *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhum|**_DOMAIN**|
 
 o **Ceil** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
@@ -98,9 +99,9 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo de [floor](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
