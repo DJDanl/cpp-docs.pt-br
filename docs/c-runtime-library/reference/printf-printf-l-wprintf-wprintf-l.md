@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 431c27a26fb549705abde28b08654ce47498e239
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759232"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421319"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -140,6 +140,9 @@ As [especificações de formato](../../c-runtime-library/format-specification-sy
 
 Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
+> [!IMPORTANT]
+> A partir do Windows 10 versão 2004 (Build 19041), a `printf` família de funções imprime exatamente números de ponto flutuante reapresentáveis de acordo com as regras IEEE 754 para o arredondamento. Nas versões anteriores do Windows, exatamente os números de ponto flutuante reapresentáveis que terminam em ' 5 ' sempre arredondam. O IEEE 754 declara que eles devem ser arredondados para o dígito par mais próximo (também conhecido como "arredondamento do banco"). Por exemplo, 1,5 e 2,5 devem ser arredondados para 2. Anteriormente, 1,5 seria arredondado para 2 e 2,5 seria arredondado para 3. Essa alteração afeta apenas números exatamente reapresentáveis. Por exemplo, 2,35 (que, quando representado na memória, está mais próximo de 2.35000000000000008) continua a arredondar até 2,4. O arredondamento feito por essas funções agora também respeita o modo de arredondamento de ponto flutuante definido por [fesetenv](fesetenv1.md). Anteriormente, o arredondamento sempre escolheva FE_TONEAREST comportamento. Essa alteração afeta apenas os programas criados usando o Visual Studio 2019 versão 16,2 e posterior. Para usar o comportamento de arredondamento de ponto flutuante herdado, vincule com [legacy_stdio_float_rounding. obj](../link-options.md).
+
 ## <a name="example"></a>Exemplo
 
 ```C
@@ -226,12 +229,12 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Sintaxe de especificação de formato: funções printf e wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
