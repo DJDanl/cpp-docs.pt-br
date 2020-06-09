@@ -10,125 +10,125 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 5747e4450816b803f97ad5ff6338b9e01ad41bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2399b27fc081dcc810277079729b0e62ef80d603
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394605"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616944"
 ---
 # <a name="dialog-box-classes"></a>Classes da caixa de diálogo
 
-Classe `CDialog` e suas classes derivadas encapsulam a funcionalidade de caixa de diálogo. Uma vez que uma caixa de diálogo é um tipo especial de janela, `CDialog` é derivado de `CWnd`. Derivar suas classes de caixa de diálogo de `CDialog` ou use uma das classes de caixa de diálogo comum para caixas de diálogo padrão, como abrir ou salvar um arquivo, impressão, selecionando uma fonte ou cor, iniciando uma operação de pesquisa e substituição ou executem várias relacionadas a OLE operações.
+`CDialog`A classe e suas classes derivadas encapsulam a funcionalidade da caixa de diálogo. Como uma caixa de diálogo é um tipo especial de janela, `CDialog` é derivada de `CWnd` . Derive suas classes de caixa de diálogo do `CDialog` ou use uma das classes de diálogo comuns para caixas de diálogo padrão, como abrir ou salvar um arquivo, imprimir, selecionar uma fonte ou cor, iniciar uma operação de pesquisa e substituição ou executar várias operações relacionadas a OLE.
 
-[CDialog](../mfc/reference/cdialog-class.md)<br/>
-A classe base para todas as caixas de diálogo modais e sem janela restrita.
+[CDialog](reference/cdialog-class.md)<br/>
+A classe base para todas as caixas de diálogo, modal e sem janela restrita.
 
-[CDataExchange](../mfc/reference/cdataexchange-class.md)<br/>
-Fornece informações de troca e validação de dados para caixas de diálogo.
+[CDataExchange](reference/cdataexchange-class.md)<br/>
+Fornece troca de dados e informações de validação para caixas de diálogo.
 
 ## <a name="common-dialogs"></a>Caixas de diálogo comuns
 
-Essas classes de caixa de diálogo encapsulam as caixas de diálogo comuns do Windows. Elas fornecem implementações de fácil de usar de caixas de diálogo complicada.
+Essas classes de caixa de diálogo encapsulam as caixas de diálogo comuns do Windows. Eles fornecem implementações fáceis de usar de caixas de diálogo complicadas.
 
-[CCommonDialog](../mfc/reference/ccommondialog-class.md)<br/>
+[CCommonDialog](reference/ccommondialog-class.md)<br/>
 Classe base para todas as caixas de diálogo comuns.
 
-[CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
+[CFileDialog](reference/cfiledialog-class.md)<br/>
 Fornece uma caixa de diálogo padrão para abrir ou salvar um arquivo.
 
-[CColorDialog](../mfc/reference/ccolordialog-class.md)<br/>
+[CColorDialog](reference/ccolordialog-class.md)<br/>
 Fornece uma caixa de diálogo padrão para selecionar uma cor.
 
-[CFontDialog](../mfc/reference/cfontdialog-class.md)<br/>
+[CFontDialog](reference/cfontdialog-class.md)<br/>
 Fornece uma caixa de diálogo padrão para selecionar uma fonte.
 
-[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)<br/>
+[CFindReplaceDialog](reference/cfindreplacedialog-class.md)<br/>
 Fornece uma caixa de diálogo padrão para uma operação de pesquisa e substituição.
 
-[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
+[CPrintDialog](reference/cprintdialog-class.md)<br/>
 Fornece uma caixa de diálogo padrão para imprimir um arquivo.
 
-[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)<br/>
+[CPrintDialogEx](reference/cprintdialogex-class.md)<br/>
 Fornece uma folha de propriedades de impressão do Windows.
 
-[CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)<br/>
-Encapsula os serviços fornecidos pela caixa de diálogo Configurar página comum do Windows com suporte adicional para definir e modificar as margens de impressão.
+[CPageSetupDialog](reference/cpagesetupdialog-class.md)<br/>
+Encapsula os serviços fornecidos pela caixa de diálogo configuração de página comum do Windows com suporte adicional para definir e modificar as margens de impressão.
 
-## <a name="ole-common-dialogs"></a>Caixas de diálogo comuns OLE
+## <a name="ole-common-dialogs"></a>Caixas de diálogo comuns de OLE
 
-OLE adiciona várias caixas de diálogo comuns para Windows. Essas classes encapsulam as caixas de diálogo comuns OLE.
+O OLE adiciona várias caixas de diálogo comuns ao Windows. Essas classes encapsulam as caixas de diálogo OLE comuns.
 
-[COleDialog](../mfc/reference/coledialog-class.md)<br/>
-Usado pelo framework para conter implementações comuns para todas as caixas de diálogo OLE. Todas as classes de caixa de diálogo, na categoria de interface do usuário são derivadas dessa classe base. `COleDialog` não pode ser usado diretamente.
+[COleDialog](reference/coledialog-class.md)<br/>
+Usado pela estrutura para conter implementações comuns para todas as caixas de diálogo OLE. Todas as classes da caixa de diálogo na categoria user-interface são derivadas dessa classe base. `COleDialog`Não pode ser usado diretamente.
 
-[COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)<br/>
-Exibe a caixa de diálogo Inserir objeto, a interface de usuário padrão para inserção OLE novo vinculado ou inserido itens.
+[COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
+Exibe a caixa de diálogo Inserir objeto, a interface do usuário padrão para inserir novos itens vinculados OLE ou incorporados.
 
-[COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)<br/>
-Exibe a caixa de diálogo Colar especial, a interface de usuário padrão para implementar o comando Editar Colar especial.
+[COlePasteSpecialDialog](reference/colepastespecialdialog-class.md)<br/>
+Exibe a caixa de diálogo colar especial, a interface do usuário padrão para implementar o comando Editar Colar especial.
 
-[COleLinksDialog](../mfc/reference/colelinksdialog-class.md)<br/>
-Exibe a caixa de diálogo Editar Links, a interface de usuário padrão para modificar informações sobre itens vinculados.
+[COleLinksDialog](reference/colelinksdialog-class.md)<br/>
+Exibe a caixa de diálogo Editar links, a interface do usuário padrão para modificar informações sobre itens vinculados.
 
-[COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)<br/>
-Exibe a caixa de diálogo Alterar ícone, a interface de usuário padrão para alterar o ícone associado a uma OLE inserido ou item vinculado.
+[COleChangeIconDialog](reference/colechangeicondialog-class.md)<br/>
+Exibe a caixa de diálogo Alterar ícone, a interface do usuário padrão para alterar o ícone associado a um item OLE inserido ou vinculado.
 
-[COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)<br/>
-Exibe a caixa de diálogo Converter, a interface de usuário padrão para itens OLE convertendo um tipo para outro.
+[COleConvertDialog](reference/coleconvertdialog-class.md)<br/>
+Exibe a caixa de diálogo Converter, a interface do usuário padrão para converter itens OLE de um tipo para outro.
 
-[COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)<br/>
-Encapsula a caixa de diálogo de propriedades OLE comum do Windows. Caixas de diálogo comuns OLE propriedades fornecem uma maneira fácil de exibir e modificar as propriedades de um item de documento OLE de maneira consistente com os padrões do Windows.
+[COlePropertiesDialog](reference/colepropertiesdialog-class.md)<br/>
+Encapsula a caixa de diálogo Propriedades OLE comuns do Windows. As caixas de diálogo Propriedades OLE comuns fornecem uma maneira fácil de exibir e modificar as propriedades de um item de documento OLE de maneira consistente com os padrões do Windows.
 
-[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
-Exibe a caixa de diálogo de atualização, a interface de usuário padrão para a atualização de todos os links em um documento. A caixa de diálogo contém um indicador de progresso para indicar o quão próximo o procedimento de atualização é até a conclusão.
+[COleUpdateDialog](reference/coleupdatedialog-class.md)<br/>
+Exibe a caixa de diálogo atualizar, a interface do usuário padrão para atualizar todos os links em um documento. A caixa de diálogo contém um indicador de progresso para indicar como fechar o procedimento de atualização para conclusão.
 
-[COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)<br/>
-Exibe a caixa de diálogo Alterar origem, a interface de usuário padrão para alterar o destino ou origem de um link.
+[COleChangeSourceDialog](reference/colechangesourcedialog-class.md)<br/>
+Exibe a caixa de diálogo Alterar origem, a interface do usuário padrão para alterar o destino ou a origem de um link.
 
-[COleBusyDialog](../mfc/reference/colebusydialog-class.md)<br/>
-Exibe as caixas de diálogo servidor ocupado e o servidor não responder, a interface de usuário padrão para lidar com chamadas para aplicativos de ocupado. Normalmente é exibida automaticamente pelo [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) implementação.
+[COleBusyDialog](reference/colebusydialog-class.md)<br/>
+Exibe as caixas de diálogo servidor ocupado e servidor não respondendo, a interface do usuário padrão para manipular chamadas para aplicativos ocupados. Geralmente exibido automaticamente pela implementação de [COleMessageFilter](reference/colemessagefilter-class.md) .
 
 ## <a name="property-sheet-classes"></a>Classes de folha de propriedades
 
-As classes de folha de propriedades permitem que os aplicativos usem folhas de propriedades, também conhecido como com guias de caixas de diálogo. Folhas de propriedades são uma maneira eficiente de organizar um grande número de controles em uma única caixa de diálogo.
+As classes de folha de propriedades permitem que seus aplicativos usem folhas de propriedades, também conhecidas como caixas de diálogo com guias. As folhas de propriedades são uma maneira eficiente de organizar um grande número de controles em uma única caixa de diálogo.
 
-[CPropertyPage](../mfc/reference/cpropertypage-class.md)<br/>
-Fornece as páginas individuais dentro de uma folha de propriedades. Derive uma classe de `CPropertyPage` para cada página a ser adicionado à sua folha de propriedades.
+[CPropertyPage](reference/cpropertypage-class.md)<br/>
+Fornece as páginas individuais dentro de uma folha de propriedades. Derive uma classe de `CPropertyPage` para cada página a ser adicionada à sua folha de propriedades.
 
-[CPropertySheet](../mfc/reference/cpropertysheet-class.md)<br/>
-Fornece o quadro para várias páginas de propriedade. Derive sua classe de folha de propriedade da `CPropertySheet` implementar suas folhas de propriedades rapidamente.
+[CPropertySheet](reference/cpropertysheet-class.md)<br/>
+Fornece o quadro para várias páginas de propriedades. Derive sua classe de folha de propriedades de `CPropertySheet` para implementar suas folhas de propriedades rapidamente.
 
-[COlePropertyPage](../mfc/reference/colepropertypage-class.md)<br/>
-Exibe as propriedades de uma OLE controlam em uma interface gráfica, semelhante a uma caixa de diálogo.
+[COlePropertyPage](reference/colepropertypage-class.md)<br/>
+Exibe as propriedades de um controle OLE em uma interface gráfica, semelhante a uma caixa de diálogo.
 
-## <a name="html-based-dialog-classes"></a>Classes de caixa de diálogo baseada em HTML
+## <a name="html-based-dialog-classes"></a>Classes de diálogo baseadas em HTML
 
-[CDHtmlDialog](../mfc/reference/cdhtmldialog-class.md)<br/>
-Usado para criar caixas de diálogo que implementam sua interface do usuário com os recursos HTML, em vez da caixa de diálogo.
+[CDHtmlDialog](reference/cdhtmldialog-class.md)<br/>
+Usado para criar caixas de diálogo que implementam sua interface do usuário com HTML em vez de recursos de caixa de diálogo.
 
-[CMultiPageDHtmlDialog](../mfc/reference/cmultipagedhtmldialog-class.md)<br/>
-Exibe várias páginas HTML em sequência e trata os eventos de cada página.
+[CMultiPageDHtmlDialog](reference/cmultipagedhtmldialog-class.md)<br/>
+Exibe várias páginas HTML sequencialmente e manipula os eventos de cada página.
 
 ## <a name="related-classes"></a>Classes relacionadas
 
-Essas classes não são caixas de diálogo por si só, mas usar modelos de caixa de diálogo e têm muito do comportamento de caixas de diálogo.
+Essas classes não são caixas de diálogo por si, mas usam modelos de caixa de diálogo e têm grande parte do comportamento de caixas de diálogo.
 
-[CDialogBar](../mfc/reference/cdialogbar-class.md)<br/>
-Uma barra de controle que se baseia em um modelo de caixa de diálogo.
+[CDialogBar](reference/cdialogbar-class.md)<br/>
+Uma barra de controle baseada em um modelo de caixa de diálogo.
 
-[CFormView](../mfc/reference/cformview-class.md)<br/>
-Um modo de exibição de rolagem cujo layout é definido em um modelo de caixa de diálogo. Derive uma classe de `CFormView` para implementar uma interface do usuário com base em um modelo de caixa de diálogo.
+[CFormView](reference/cformview-class.md)<br/>
+Uma exibição de rolagem cujo layout é definido em um modelo de caixa de diálogo. Derive uma classe de `CFormView` para implementar uma interface do usuário com base em um modelo de caixa de diálogo.
 
-[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Fornece um formulário de exibição diretamente conectada a um objeto de conjunto de registros do objeto de acesso de dados (DAO). Como todos os modos de exibição de formulário, um `CDaoRecordView` baseia-se em um modelo de caixa de diálogo.
+[CDaoRecordView](reference/cdaorecordview-class.md)<br/>
+Fornece uma exibição de formulário diretamente conectada a um objeto Recordset do objeto de acesso a dados (DAO). Como todos os modos de exibição de formulário, um `CDaoRecordView` é baseado em um modelo de caixa de diálogo.
 
-[CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fornece um formulário de exibição conectada diretamente a um objeto de conjunto de registros de conectividade de banco de dados aberto (ODBC). Como todos os modos de exibição de formulário, um `CRecordView` baseia-se em um modelo de caixa de diálogo.
+[CRecordView](reference/crecordview-class.md)<br/>
+Fornece uma exibição de formulário diretamente conectada a um objeto Recordset Open Database Connectivity (ODBC). Como todos os modos de exibição de formulário, um `CRecordView` é baseado em um modelo de caixa de diálogo.
 
-[CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Uma estrutura que contém informações sobre um trabalho de impressão ou visualização de impressão. Usado pela arquitetura de impressão [CView](../mfc/reference/cview-class.md).
+[CPrintInfo](reference/cprintinfo-structure.md)<br/>
+Uma estrutura que contém informações sobre um trabalho de impressão ou de visualização de impressão. Usado pela arquitetura de impressão do [cvisualização](reference/cview-class.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../mfc/class-library-overview.md)
+[Visão geral da classe](class-library-overview.md)

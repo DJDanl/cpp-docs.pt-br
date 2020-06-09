@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 649d64f8e8b894027b9d6850b62d357d79c1dafa
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685740"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616267"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Criando e exibindo caixas de diálogo
 
@@ -21,13 +21,13 @@ A criação de um objeto de caixa de diálogo é uma operação de duas fases. P
 
 ### <a name="dialog-creation"></a>Criação de diálogo
 
-|Tipo de caixa de diálogo|Como criá-lo|
+|Tipo de diálogo|Como criá-lo|
 |-----------------|----------------------|
-|[Sem janela restrita](../mfc/creating-modeless-dialog-boxes.md)|Construa `CDialog` e, em seguida, chame a função de membro `Create`.|
-|[Janelas](../mfc/creating-modal-dialog-boxes.md)|Construa `CDialog` e, em seguida, chame a função de membro `DoModal`.|
+|[Sem janela restrita](creating-modeless-dialog-boxes.md)|Construct `CDialog` e, em seguida, chame a `Create` função member.|
+|[Janelas](creating-modal-dialog-boxes.md)|Construct `CDialog` e, em seguida, chame a `DoModal` função member.|
 
-Você pode, se desejar, criar sua caixa de diálogo de um [modelo de caixa de diálogo na memória](../mfc/using-a-dialog-template-in-memory.md) que você criou em vez de um recurso de modelo de caixa de diálogo. No entanto, esse é um tópico avançado.
+Você pode, se desejar, criar sua caixa de diálogo de um [modelo de caixa de diálogo na memória](using-a-dialog-template-in-memory.md) que você criou em vez de um recurso de modelo de caixa de diálogo. No entanto, esse é um tópico avançado.
 
 ## <a name="see-also"></a>Consulte também
 
-[Trabalhando com caixas de diálogo no MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Trabalhar com caixas de diálogo no MFC](life-cycle-of-a-dialog-box.md)

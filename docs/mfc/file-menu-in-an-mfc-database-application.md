@@ -5,33 +5,33 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbbb4382749278708e8e758f79a618d5cad0549e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405775"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615696"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu de arquivo em um aplicativo de banco de dados MFC
 
-Se você cria um aplicativo de banco de dados do MFC e não usa a serialização, como deve interpretar a abrir, fechar, salvar e salvar como de comandos no menu Arquivo Embora não haja nenhum diretrizes de estilo para essa pergunta, aqui estão algumas sugestões:
+Se você criar um aplicativo de banco de dados MFC e não usar a serialização, como você deve interpretar os comandos abrir, fechar, salvar e salvar como no menu arquivo, embora não haja diretrizes de estilo para essa pergunta, aqui estão algumas sugestões:
 
-- Elimine completamente o comando de abertura do menu arquivo.
+- Elimine inteiramente o comando abrir do menu arquivo.
 
-- Interpretar o comando Abrir como "banco de dados aberto" e mostrar ao usuário uma lista de fontes de dados que seu aplicativo reconheça.
+- Interprete o comando Open como "Open Database" e mostre ao usuário uma lista de fontes de dados que seu aplicativo reconhece.
 
-- Interpretar o comando Abrir como, talvez, "abrir perfil". Manter aberto, mas a abertura de um arquivo serializado, use o arquivo para armazenar um documento serializado que contém informações de "perfil do usuário", como as preferências do usuário, incluindo seu ou sua ID de logon (excluindo, opcionalmente, a senha) e os fonte de dados ele ou ela mais recentemente trabalhou com.
+- Interprete o comando Open como, talvez, "Open Profile". Mantenha aberta para abrir um arquivo serializado, mas use o arquivo para armazenar um documento serializado contendo informações de "perfil do usuário", como as preferências do usuário, incluindo sua ID de logon (opcionalmente, excluindo a senha) e a fonte de dados com a qual ela trabalhou mais recentemente.
 
-O Assistente de aplicativo do MFC dá suporte à criação de um aplicativo com nenhum comando de menu Arquivo relacionadas a documentos. Selecione o **modo de exibição sem suporte a arquivos de banco de dados** opção a **dar suporte a banco de dados** página.
+O assistente de aplicativo do MFC dá suporte à criação de um aplicativo sem comandos de menu de arquivo relacionados a documentos. Selecione a opção **exibição de banco de dados sem suporte a arquivos** na página suporte do banco de **dados** .
 
-Para interpretar um comando de menu de arquivo de forma especial, você deve substituir um ou mais manipuladores de comandos, principalmente em seu `CWinApp`-classe derivada. Por exemplo, se você substituir completamente `OnFileOpen` (que implementa o `ID_FILE_OPEN` comando) para significar "Abrir banco de dados:"
+Para interpretar um comando de menu de arquivo de forma especial, você deve substituir um ou mais manipuladores de comandos, principalmente na `CWinApp` classe derivada. Por exemplo, se você substituir completamente `OnFileOpen` (que implementa o `ID_FILE_OPEN` comando) para significar "Abrir banco de dados:"
 
-- Não chame a versão da classe base do `OnFileOpen`, uma vez que você está substituindo completamente implementação do padrão da estrutura do comando.
+- Não chame a versão da classe base do `OnFileOpen` , pois você está substituindo completamente a implementação padrão do comando da estrutura.
 
-- Use o manipulador para exibir uma caixa de diálogo listando as fontes de dados. Você pode exibir uma caixa de diálogo chamando `CDatabase::OpenEx` ou `CDatabase::Open` com o parâmetro **nulo**. Isso abre uma caixa de diálogo ODBC que exibe todas as fontes de dados disponíveis no computador do usuário.
+- Em vez disso, use o manipulador para exibir uma caixa de diálogo listando fontes de dados. Você pode exibir tal caixa de diálogo chamando `CDatabase::OpenEx` ou `CDatabase::Open` com o parâmetro **NULL**. Isso abre uma caixa de diálogo ODBC que exibe todas as fontes de dados disponíveis na máquina do usuário.
 
-- Como aplicativos de banco de dados normalmente não salva um documento inteiro, provavelmente vai querer remover o salvamento e salve como implementações, a menos que um documento serializado é usado para armazenar informações de perfil. Caso contrário, você pode implementar o comando Salvar como, por exemplo, "confirmar transação." Ver [22 de observação técnica](../mfc/tn022-standard-commands-implementation.md) para obter mais informações sobre a substituição desses comandos.
+- Como os aplicativos de banco de dados normalmente não salvam um documento inteiro, você provavelmente desejará remover as implementações salvar e salvar como, a menos que use um documento serializado para armazenar informações de perfil. Caso contrário, você pode implementar o comando Salvar como, por exemplo, "confirmar transação." Consulte a [Nota técnica 22](tn022-standard-commands-implementation.md) para obter mais informações sobre como substituir esses comandos.
 
 ## <a name="see-also"></a>Consulte também
 
-[Serialização: Serialização vs. Banco de dados de entrada/saída](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serialização: serialização em comparação com entrada/saída do banco de dados](serialization-serialization-vs-database-input-output.md)

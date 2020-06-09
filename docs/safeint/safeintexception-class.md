@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8149a5e1216e26fafc1e0cd4a489cdad0551607c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349941"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615418"
 ---
 # <a name="safeintexception-class"></a>Classe SafeIntException
 
 A classe `SafeInt` usa `SafeIntException` para identificar por que uma operação matemática não pode ser concluída.
 
 > [!NOTE]
-> A versão mais recente desta [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)biblioteca está localizada em .
+> A versão mais recente desta biblioteca está localizada em [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,13 +35,13 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-Nome                                                    | Descrição
+Name                                                    | Descrição
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException::SafeIntException](#safeintexception) | Cria um objeto `SafeIntException`.
+[SafeIntException:: SafeIntException](#safeintexception) | Cria um objeto `SafeIntException`.
 
 ## <a name="remarks"></a>Comentários
 
-A [classe SafeInt](../safeint/safeint-class.md) é a única que usa a classe `SafeIntException`.
+A [classe SafeInt](safeint-class.md) é a única que usa a classe `SafeIntException`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -53,7 +53,7 @@ A [classe SafeInt](../safeint/safeint-class.md) é a única que usa a classe `Sa
 
 **Namespace:** msl::utilities
 
-## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException:: SafeIntException
 
 Cria um objeto `SafeIntException`.
 
@@ -67,7 +67,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Código*<br/>
+*code*<br/>
 [in] Um valor de dados enumerados que descreve o erro ocorrido.
 
 ### <a name="remarks"></a>Comentários

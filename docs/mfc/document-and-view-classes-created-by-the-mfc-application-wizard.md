@@ -7,21 +7,21 @@ helpviewer_keywords:
 - application wizards [MFC], document/view classes created
 - view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
-ms.openlocfilehash: 95b50e34d612c3b8f5dea2f8b469bd6c65182d41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766fe4efb37c199c5babb75ce2cb08ebf676cca6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408012"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616047"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Classes de documento e exibição criadas pelo Assistente de Aplicativo MFC
 
-O Assistente de aplicativo do MFC fornece um ponto de partida em seu desenvolvimento do programa, criando o documento estrutural e classes de exibição para você. Em seguida, você pode [mapear comandos e mensagens para essas classes](../mfc/reference/mapping-messages-to-functions.md) e usar o editor de código de origem do Visual C++ para gravar suas funções de membro.
+O assistente de aplicativo do MFC oferece uma visão inicial do desenvolvimento do programa criando um documento estrutural e classes de exibição para você. Em seguida, você pode [mapear comandos e mensagens para essas classes](reference/mapping-messages-to-functions.md) e usar o editor de código-fonte Visual C++ para gravar suas funções de membro.
 
-A classe de documento criada pelo Assistente de aplicativo do MFC é derivada da classe [CDocument](../mfc/reference/cdocument-class.md). O modo de exibição classe é derivada de [CView](../mfc/reference/cview-class.md). Os nomes que o Assistente de aplicativo dá a essas classes e os arquivos que contêm eles baseiam-se no nome do projeto que você fornecer na caixa de diálogo Assistente de aplicativo. No Assistente de aplicativo, você pode usar a página de Classes geradas para alterar os nomes padrão.
+A classe de documento criada pelo assistente de aplicativo MFC é derivada da classe [CDocument](reference/cdocument-class.md). A classe View é derivada de [cvisualização](reference/cview-class.md). Os nomes que o assistente de aplicativo fornece essas classes e os arquivos que as contêm são baseados no nome do projeto que você fornece na caixa de diálogo Assistente de aplicativo. No assistente de aplicativo, você pode usar a página classes geradas para alterar os nomes padrão.
 
-Alguns aplicativos talvez precisem de mais de uma classe de documento, exibição de classe ou classe de janela do quadro. Para obter mais informações, consulte [vários tipos de documentos, exibições e quadro Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
+Alguns aplicativos podem precisar de mais de uma classe de documento, uma classe de exibição ou uma classe de janela de quadro. Para obter mais informações, consulte [vários tipos de documento, exibições e janelas de quadros](multiple-document-types-views-and-frame-windows.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquitetura de documento/exibição](../mfc/document-view-architecture.md)
+[Arquitetura de documento/exibição](document-view-architecture.md)
