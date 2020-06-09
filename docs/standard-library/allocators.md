@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457539"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623510"
 ---
 # <a name="allocators"></a>Alocadores
 
@@ -24,7 +24,7 @@ template <
 class vector
 ```
 
-A Biblioteca Padrão do C++ fornece uma implementação padrão de um alocador. No C++ 11 e posterior, o alocador padrão é atualizado para exibir uma interface menor, o novo alocador é chamado de *alocador mínimo*. Especificamente, o membro `construct()` do alocador mínimo dá suporte à semântica de movimentação, o que pode melhorar bastante o desempenho. Na maioria dos casos, esse alocador padrão é suficiente. No C++ 11, todos os tipos e funções da Biblioteca Padrão que usam um parâmetro do tipo alocador dão suporte à interface de alocador mínimo, incluindo `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Para obter mais informações sobre o alocador padrão, consulte a [Classe allocator](../standard-library/allocator-class.md).
+A Biblioteca Padrão do C++ fornece uma implementação padrão de um alocador. No C++ 11 e posterior, o alocador padrão é atualizado para exibir uma interface menor, o novo alocador é chamado de *alocador mínimo*. Especificamente, o membro `construct()` do alocador mínimo dá suporte à semântica de movimentação, o que pode melhorar bastante o desempenho. Na maioria dos casos, esse alocador padrão é suficiente. No C++ 11, todos os tipos e funções da Biblioteca Padrão que usam um parâmetro do tipo alocador dão suporte à interface de alocador mínimo, incluindo `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Para obter mais informações sobre o alocador padrão, consulte a [Classe allocator](allocator-class.md).
 
 ## <a name="writing-your-own-allocator-c11"></a>Criando seu próprio alocador (C++11)
 
@@ -119,8 +119,8 @@ Além disso, qualquer alocador usado com contêineres da Biblioteca Padrão do C
 |`allocate`|`operator!=`|
 |`construct`||
 
-Para obter mais informações sobre esses métodos e definições de tipo, consulte a [Classe allocator](../standard-library/allocator-class.md).
+Para obter mais informações sobre esses métodos e definições de tipo, consulte a [Classe allocator](allocator-class.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[Referência da biblioteca padrão do C++](cpp-standard-library-reference.md)

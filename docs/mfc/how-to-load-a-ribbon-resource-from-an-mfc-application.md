@@ -1,29 +1,29 @@
 ---
-title: 'Como: Carregar um recurso de faixa de opções de um aplicativo do MFC'
+title: Como carregar um recurso da faixa de opções de um aplicativo MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
-ms.openlocfilehash: b7691d4168101209b0e2d2500012a2b4a8e47788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47a3b94bbcb14c6c2923524db1f6a83b687e50e8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160322"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626407"
 ---
-# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Como: Carregar um recurso de faixa de opções de um aplicativo do MFC
+# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Como carregar um recurso da faixa de opções de um aplicativo MFC
 
-Para usar o recurso de faixa de opções em seu aplicativo, modifique o aplicativo para carregar o recurso de faixa de opções.
+Para usar o recurso da faixa de faixas em seu aplicativo, modifique o aplicativo para carregar o recurso da faixa de faixas.
 
-### <a name="to-load-a-ribbon-resource"></a>Para carregar um recurso de faixa de opções
+### <a name="to-load-a-ribbon-resource"></a>Para carregar um recurso da faixa de uma
 
-1. Declare a `Ribbon Control` do objeto no `CMainFrame` classe.
+1. Declare o `Ribbon Control` objeto na `CMainFrame` classe.
 
 ```
     CMFCRibbonBar m_wndRibbonBar;
 ```
 
-1. No `CMainFrame::OnCreate`, criar e inicializar o controle de faixa de opções.
+1. No `CMainFrame::OnCreate` , crie e inicialize o controle Ribbon.
 
 ```
     if (!m_wndRibbonBar.Create (this))
@@ -39,4 +39,4 @@ Para usar o recurso de faixa de opções em seu aplicativo, modifique o aplicati
 
 ## <a name="see-also"></a>Consulte também
 
-[Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
+[Designer de faixa de Ribbon (MFC)](ribbon-designer-mfc.md)

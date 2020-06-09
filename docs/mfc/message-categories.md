@@ -10,39 +10,39 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-ms.openlocfilehash: 686d5eef4aaa67785aa56133d820b637fbf4bb86
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3875a6931b4380f0531e4c1786de6dddfccb76ca
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364750"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625462"
 ---
 # <a name="message-categories"></a>Categorias de mensagem
 
-Que tipo de mensagens você escreve manipuladores para Existem três categorias principais:
+Para que tipos de mensagens você escreve manipuladores há três categorias principais:
 
 1. mensagens do Windows
 
-   Isso inclui principalmente aquelas mensagens que começam com o prefixo **WM_,** exceto para WM_COMMAND. As mensagens do Windows são tratadas por janelas e visualizações. Essas mensagens geralmente têm parâmetros que são usados para determinar como lidar com a mensagem.
+   Isso inclui principalmente as mensagens que começam com o prefixo **WM_** , exceto para WM_COMMAND. As mensagens do Windows são manipuladas por janelas e exibições. Essas mensagens geralmente têm parâmetros que são usados para determinar como tratar a mensagem.
 
 1. Notificações de controle
 
-   Isso inclui mensagens de notificação WM_COMMAND de controles e outras janelas de crianças para as janelas de seus pais. Por exemplo, um controle de edição envia ao pai uma mensagem WM_COMMAND contendo o código de notificação de controle EN_CHANGE quando o usuário tomou uma ação que pode ter alterado o texto no controle de edição. O manipulador da janela para a mensagem responde à mensagem de notificação de alguma forma apropriada, como recuperar o texto no controle.
+   Isso inclui WM_COMMAND mensagens de notificação de controles e outras janelas filhas para suas janelas pai. Por exemplo, um controle de edição envia seu pai um WM_COMMAND mensagem contendo o código de notificação de controle de EN_CHANGE quando o usuário executou uma ação que pode ter alterado o texto no controle de edição. O manipulador da janela para a mensagem responde à mensagem de notificação de alguma forma apropriada, como recuperar o texto no controle.
 
-   O framework encaminha mensagens de notificação de controle como outras **mensagens WM_.** Uma exceção, no entanto, é a mensagem de notificação de controle BN_CLICKED enviada por botões quando o usuário clica neles. Esta mensagem é tratada especialmente como uma mensagem de comando e roteada como outros comandos.
+   A estrutura roteia mensagens de notificação de controle como outras mensagens de **WM_** . No entanto, uma exceção é a BN_CLICKED mensagem de notificação de controle enviada por botões quando o usuário clica neles. Essa mensagem é tratada especialmente como uma mensagem de comando e roteada como outros comandos.
 
 1. Mensagens de comando
 
-   Isso inclui mensagens de notificação WM_COMMAND de objetos de interface do usuário: menus, botões de barra de ferramentas e teclas do acelerador. Os processos-quadro são diferentes de outras mensagens, e podem ser manuseados por mais tipos de objetos, conforme explicado em [Command Targets](../mfc/command-targets.md).
+   Isso inclui WM_COMMAND mensagens de notificação de objetos de interface do usuário: menus, botões da barra de ferramentas e teclas de aceleração. A estrutura processa comandos de forma diferente de outras mensagens, e elas podem ser tratadas por mais tipos de objetos, conforme explicado em [destinos de comando](command-targets.md).
 
 ## <a name="windows-messages-and-control-notification-messages"></a><a name="_core_windows_messages_and_control.2d.notification_messages"></a>Mensagens do Windows e mensagens de notificação de controle
 
-As mensagens nas categorias 1 e 2 — mensagens do Windows e notificações `CWnd`de controle — são manuseadas por janelas: objetos de classes derivadas da classe . Isso inclui `CFrameWnd` `CMDIFrameWnd`, `CMDIChildWnd` `CView`, `CDialog`, , , , e suas próprias classes derivadas dessas classes de base. Tais objetos `HWND`encapsulam uma alça para uma janela do Windows.
+Mensagens nas categorias 1 e 2 — mensagens do Windows e notificações de controle — são tratadas pelo Windows: objetos de classes derivadas da classe `CWnd` . Isso inclui `CFrameWnd` , `CMDIFrameWnd` , `CMDIChildWnd` , `CView` , `CDialog` e suas próprias classes derivadas dessas classes base. Esses objetos encapsulam um `HWND` , um identificador para uma janela do Windows.
 
-## <a name="command-messages"></a><a name="_core_command_messages"></a>Mensagens de Comando
+## <a name="command-messages"></a><a name="_core_command_messages"></a>Mensagens de comando
 
-As mensagens na categoria 3 — comandos — podem ser manuseadas por uma variedade mais ampla de objetos: documentos, modelos de documentos e o próprio objeto do aplicativo, além de janelas e visualizações. Quando um comando afeta diretamente algum objeto em particular, faz sentido que esse objeto manuseie o comando. Por exemplo, o comando Abrir no menu Arquivo está logicamente associado ao aplicativo: o aplicativo abre um documento especificado ao receber o comando. Assim, o manipulador para o comando Open é uma função membro da classe de aplicativos. Para obter mais informações sobre comandos e como eles são encaminhados para objetos, consulte [Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md).
+As mensagens na categoria 3 — comandos — podem ser tratadas por uma variedade maior de objetos: documentos, modelos de documentos e o próprio objeto de aplicativo, além de janelas e exibições. Quando um comando afeta diretamente algum objeto específico, faz sentido que o objeto manipule o comando. Por exemplo, o comando abrir no menu arquivo está logicamente associado ao aplicativo: o aplicativo abre um documento especificado após o recebimento do comando. Portanto, o manipulador para o comando Open é uma função membro da classe Application. Para obter mais informações sobre comandos e como eles são roteados para objetos, consulte [como a estrutura chama um manipulador](how-the-framework-calls-a-handler.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Mensagens e comandos no Framework](../mfc/messages-and-commands-in-the-framework.md)
+[Mensagens e comandos no Framework](messages-and-commands-in-the-framework.md)

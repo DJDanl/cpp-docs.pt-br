@@ -8,59 +8,59 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860a8531a96a0671c808dba13523b492026eafe0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152937"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616347"
 ---
 # <a name="creating-an-active-document-container-application"></a>Criando um aplicativo de contêiner de documento ativo
 
-A maneira mais simples e mais recomendada para criar um aplicativo de contêiner do documento ativo é criar um aplicativo de contêiner do MFC EXE usando o Assistente de aplicativo do MFC, em seguida, modificar o aplicativo para dar suporte a contenção de documento ativo.
+A maneira mais simples e recomendada de criar um aplicativo de contêiner de documento ativo é criar um aplicativo de contêiner EXE do MFC usando o assistente de aplicativo do MFC e, em seguida, modificar o aplicativo para dar suporte à contenção do documento ativo.
 
-#### <a name="to-create-an-active-document-container-application"></a>Para criar um aplicativo de contêiner do documento ativo
+#### <a name="to-create-an-active-document-container-application"></a>Para criar um aplicativo de contêiner de documento ativo
 
-1. Do **arquivo** menu, clique em **Project**do **New** submenu.
+1. No menu **arquivo** , clique em **projeto**no **novo** submenu.
 
 1. No painel esquerdo, clique em **Visual C++** tipo de projeto.
 
-1. Selecione **aplicativo do MFC** no painel à direita.
+1. Selecione **aplicativo MFC** no painel direito.
 
-1. Nomeie o projeto *MeuProjeto*, clique em **Okey**.
+1. Nomeie o projeto como *MyProj*, clique em **OK**.
 
-1. Selecione o **suporte de documento composto** página.
+1. Selecione a página de **suporte de documento composto** .
 
-1. Selecione o **recipiente** ou **contêiner/servidor completo** opção.
+1. Selecione a opção **contêiner** ou **contêiner/servidor completo** .
 
-1. Selecione o **contêiner de documento ativo** caixa de seleção.
+1. Marque a caixa de seleção **contêiner do documento ativo** .
 
-1. Clique em **Finalizar**.
+1. Clique em **Concluir**.
 
-1. Quando o Assistente de aplicativo do MFC terminar de gerar o aplicativo, abra os arquivos a seguir usando o Gerenciador de soluções:
+1. Quando o assistente de aplicativo do MFC terminar de gerar o aplicativo, abra os seguintes arquivos usando Gerenciador de Soluções:
 
-   - *MyProjview.cpp*
+   - *MyProjview. cpp*
 
-1. Na *MyProjview.cpp*, faça as seguintes alterações:
+1. No *MyProjview. cpp*, faça as seguintes alterações:
 
-   - No `CMyProjView::OnPreparePrinting`, substitua o conteúdo de função com o código a seguir:
+   - No `CMyProjView::OnPreparePrinting` , substitua o conteúdo da função pelo código a seguir:
 
-     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-   `OnPreparePrinting` fornece suporte para impressão. Esse código substitui `DoPreparePrinting`, que é a preparação de impressão padrão.
+   `OnPreparePrinting`fornece suporte para impressão. Esse código substitui `DoPreparePrinting` , que é a preparação de impressão padrão.
 
-   Contenção de documento ativa fornece um esquema de impressão aprimorado:
+   A contenção de documento ativo fornece um esquema de impressão aprimorado:
 
-   - Primeiro, você pode chamar o documento ativo por meio de seu `IPrint` de interface e informar a ele para imprimir em si. Isso é diferente do anterior confinamento OLE, no qual o contêiner tinha que processar uma imagem do item contido na impressora `CDC` objeto.
+   - Você pode primeiro chamar o documento ativo por meio de sua `IPrint` interface e pedir para ele imprimir. Isso é diferente da contenção de OLE anterior, na qual o contêiner tinha que renderizar uma imagem do item contido no objeto de impressora `CDC` .
 
-   - Se isso falhar, informar ao item independente para imprimir em si por meio de seu `IOleCommandTarget` interface
+   - Se isso falhar, diga ao item contido para imprimir a si mesmo por meio de sua `IOleCommandTarget` interface
 
-   - Se isso falhar, verifique sua própria renderização do item.
+   - Se isso falhar, faça sua própria renderização do item.
 
-   As funções de membro estático `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting`, conforme implementado no código anterior, lidar com esse esquema de impressão aprimorada.
+   As funções de membro estático `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting` , conforme implementado no código anterior, lidam com esse esquema de impressão aprimorado.
 
-1. Adicione qualquer implementação de sua preferência e compile o aplicativo.
+1. Adicione qualquer implementação de sua própria e compile o aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Contenção de documentos ativos](../mfc/active-document-containment.md)
+[Contenção de documentos ativos](active-document-containment.md)

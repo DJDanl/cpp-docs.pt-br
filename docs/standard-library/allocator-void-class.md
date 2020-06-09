@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: c8d787fe03dfe6f67fb8e228308ec74b6e7f620a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: af29c70dca56b1e68eef3614357269c587a77ec9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623676"
 ---
 # <a name="allocatorltvoidgt-class"></a>Classe allocator&lt;void&gt;
 
@@ -41,12 +41,12 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Comentários
 
-A classe especializada explicitamente o [alocador](../standard-library/allocator-class.md) de modelo de classe para o tipo **void**. Seus construtores e operador de atribuição se comportam da mesma forma que para o modelo de classe, mas definem apenas os seguintes tipos:
+A classe especializada explicitamente o [alocador](allocator-class.md) de modelo de classe para o tipo **void**. Seus construtores e operador de atribuição se comportam da mesma forma que para o modelo de classe, mas definem apenas os seguintes tipos:
 
-- [const_pointer](../standard-library/allocator-class.md#const_pointer).
+- [const_pointer](allocator-class.md#const_pointer).
 
-- [pointer](../standard-library/allocator-class.md#pointer).
+- [ponteiro](allocator-class.md#pointer).
 
-- [value_type](../standard-library/allocator-class.md#value_type).
+- [value_type](allocator-class.md#value_type).
 
-- [reassocie](../standard-library/allocator-class.md#rebind), um modelo de classe aninhado.
+- [reassocie](allocator-class.md#rebind), um modelo de classe aninhado.

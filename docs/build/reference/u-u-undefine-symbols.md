@@ -1,6 +1,6 @@
 ---
 title: /U, /u (indefinir símbolos)
-ms.date: 11/04/2016
+ms.date: 06/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -13,57 +13,55 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d7a2b3d5df2b22dc53eb7b58bfb78cdb1824b26
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316997"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616656"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (indefinir símbolos)
 
-O **/U** remoções de definições de opção de compilador o símbolo do pré-processador especificado. O **/u** os símbolos de específico da Microsoft que o compilador define remoções de definições de opção de compilador.
+A **`/U`** opção do compilador não define o símbolo de pré-processador especificado. A **`/u`** opção do compilador não define os símbolos específicos da Microsoft que o compilador define.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-/U[ ]symbol
-/u
-```
+> **`/U`**\[]*símbolo*\
+> **`/u`**
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
-*symbol*<br/>
-O símbolo do pré-processador a excluir.
+*símbolo*<br/>
+O símbolo de pré-processador a ser redefinido.
 
 ## <a name="remarks"></a>Comentários
 
-Nem o **/U** ou **/u** opção pode excluir um símbolo criado usando o **#define** diretiva.
+Nenhuma das **`/U`** Opções e **`/u`** pode desdefinir um símbolo criado usando a **`#define`** diretiva.
 
-O **/U** opção pode excluir um símbolo que foi anteriormente definido usando o **/D** opção.
+A **`/U`** opção pode desdefinir um símbolo que foi definido anteriormente usando a **`/D`** opção.
 
-Por padrão, o compilador define símbolos de específico da Microsoft a seguir.
+Por padrão, o compilador pode definir um grande número de símbolos específicos da Microsoft. Aqui estão algumas regras comuns:
 
-|Símbolo|Função|
-|------------|--------------|
-|_CHAR_UNSIGNED|O tipo char padrão não está assinado. Definido quando o [/J](j-default-char-type-is-unsigned.md) opção for especificada.|
-|_CPPRTTI|Definido para o código compilado com o [/GR](gr-enable-run-time-type-information.md) opção.|
-|_CPPUNWIND|Definido para o código compilado com o [/EHsc](eh-exception-handling-model.md) opção.|
-|_DLL|Definido quando o [/MD](md-mt-ld-use-run-time-library.md) opção for especificada.|
-|_M_IX86|Por padrão, definido como 600 para x86 de destinos.|
-|_MSC_VER|Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).|
-|_WIN32|Definido para aplicativos WIN32. Sempre definido.|
-|_MT|Definido quando o [/MD ou /MT](md-mt-ld-use-run-time-library.md) opção for especificada.|
+| Símbolo | Função |
+|--|--|
+| `_CHAR_UNSIGNED` | O tipo de caractere padrão não é assinado. Definido quando a [**`/J`**](j-default-char-type-is-unsigned.md) opção é especificada. |
+| `_CPPRTTI` | Definido para o código compilado com a [**`/GR`**](gr-enable-run-time-type-information.md) opção. |
+| `_CPPUNWIND` | Definido para o código compilado com a [**`/EHsc`**](eh-exception-handling-model.md) opção. |
+| `_DLL` | Definido quando a [**`/MD`**](md-mt-ld-use-run-time-library.md) opção é especificada. |
+| `_M_IX86` | Por padrão, definido como 600 para destinos x86. |
+| `_MSC_VER` | Definido como um valor inteiro exclusivo para cada versão do compilador. Para obter mais informações, consulte [macros predefinidas](../../preprocessor/predefined-macros.md). |
+| `_WIN32` | Definido para aplicativos WIN32. Sempre definido. |
+| `_MT` | Definido quando a opção [ **`/MD`** or **`/MT`** ](md-mt-ld-use-run-time-library.md) é especificada. |
+
+Para obter uma lista completa de macros predefinidas específicas da Microsoft, consulte [macros predefinidas](../../preprocessor/predefined-macros.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Clique o **C/C++** pasta.
+1. Selecione a **Configuration Properties**  >  página de propriedades avançada**C/C++** Properties  >  **Advanced** .
 
-1. Clique o **avançado** página de propriedades.
-
-1. Modificar a **excluir definições de pré-processador** ou **cancele todas as definições de pré-processador** propriedades.
+1. Modifique as propriedades de definição de **pré-processador** de definição ou **Desdefinição de todas as definições de pré-processador** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
@@ -73,7 +71,7 @@ Por padrão, o compilador define símbolos de específico da Microsoft a seguir.
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
-[/J (o tipo char padrão não é assinado)](j-default-char-type-is-unsigned.md)<br/>
-[/GR (habilitar informações de tipo em tempo de execução)](gr-enable-run-time-type-information.md)<br/>
-[/EH (modelo de tratamento de exceções)](eh-exception-handling-model.md)<br/>
-[/MD, /MT, /LD (usar biblioteca de tempo de execução)](md-mt-ld-use-run-time-library.md)
+[**`/J`**(O tipo de caractere padrão não é assinado)](j-default-char-type-is-unsigned.md)<br/>
+[**`/GR`**(Habilitar informações de tipo de tempo de execução)](gr-enable-run-time-type-information.md)<br/>
+[**`/EH`**(Modelo de tratamento de exceção)](eh-exception-handling-model.md)<br/>
+[**`/MD`**, **`/MT`** , **`/LD`** (Use biblioteca de tempo de execução)](md-mt-ld-use-run-time-library.md)

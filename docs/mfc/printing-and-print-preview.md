@@ -8,29 +8,29 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-ms.openlocfilehash: 70740922ec7f2030d14eebee72144a373550aacc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26ced8172a36d34883d6b65997bb3a81fdc3c319
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218710"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625274"
 ---
 # <a name="printing-and-print-preview"></a>Impressão e visualização de impressão
 
-MFC dá suporte à impressão e visualização de impressão para documentos do seu programa por meio da classe [CView](../mfc/reference/cview-class.md). Para impressão básica e visualização de impressão, basta substituir sua classe de exibição [OnDraw](../mfc/reference/cview-class.md#ondraw) função de membro, você deve fazer qualquer forma. Essa função pode desenhar para a exibição na tela, para um contexto de dispositivo de impressora para uma impressora real, ou para um contexto de dispositivo que simula a impressora na tela.
+O MFC dá suporte à visualização de impressão e impressão para os documentos do seu programa por meio da classe [cvisualização](reference/cview-class.md). Para impressão básica e visualização de impressão, basta substituir a função de membro [OnDraw](reference/cview-class.md#ondraw) da classe View, que você deve fazer mesmo assim. Essa função pode ser desenhada para o modo de exibição na tela, para um contexto de dispositivo de impressora para uma impressora real ou para um contexto de dispositivo que simula a impressora na tela.
 
-Você também pode adicionar código para gerenciar a impressão de documentos de várias páginas e visualização, paginar documentos impressos e adicionar cabeçalhos e rodapés a elas.
+Você também pode adicionar código para gerenciar a impressão e a visualização de documentos de multipágina, para paginar seus documentos impressos e adicionar cabeçalhos e rodapés a eles.
 
-Essa família de artigos explica como imprimir é implementada no Microsoft Foundation Class Library (MFC) e como tirar proveito da arquitetura de impressão já incorporado a estrutura. Os artigos também explicam como o MFC oferece suporte a fácil implementação da funcionalidade de visualização de impressão e como você pode usar e modificar essa funcionalidade.
+Esta família de artigos explica como a impressão é implementada no biblioteca MFC (MFC) e como aproveitar a arquitetura de impressão já incorporada à estrutura. Os artigos também explicam como o MFC dá suporte à implementação fácil da funcionalidade de visualização de impressão e como você pode usar e modificar essa funcionalidade.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Imprimindo](../mfc/printing.md)
+- [Impressão](printing.md)
 
-- [Arquitetura de visualização de impressão](../mfc/print-preview-architecture.md)
+- [Arquitetura de visualização de impressão](print-preview-architecture.md)
 
 - [Amostra](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)
+[Elementos da interface do usuário](user-interface-elements-mfc.md)

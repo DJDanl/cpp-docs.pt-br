@@ -6,25 +6,25 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 440ab6fdfe7663557f6c6a6607e617c793d26674
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbba01a6a8e08ea53e164656733aa06e03dd87a7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371583"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625943"
 ---
 # <a name="creating-the-image-lists"></a>Criando as listas de imagens
 
-Criar listas de imagens é o mesmo se você usar [CListView](../mfc/reference/clistview-class.md) ou [CListCtrl](../mfc/reference/clistctrl-class.md).
+A criação de listas de imagens é a mesma se você usa [CListView](reference/clistview-class.md) ou [CListCtrl](reference/clistctrl-class.md).
 
 > [!NOTE]
-> Você só precisa de listas de `LVS_ICON` imagens se o controle da lista incluir o estilo.
+> Você só precisa de listas de imagens se o controle de lista incluir o `LVS_ICON` estilo.
 
-Use `CImageList` classe para criar uma ou mais listas de imagens (para ícones de tamanho real, pequenos ícones e estados). Consulte [CImageList](../mfc/reference/cimagelist-class.md)e consulte [Listas de imagens](/windows/win32/Controls/using-list-view-controls) de exibição de listas no SDK do Windows.
+Use `CImageList` a classe para criar uma ou mais listas de imagens (para ícones de tamanho completo, ícones pequenos e Estados). Consulte [CImageList](reference/cimagelist-class.md)e veja [lista de imagens de exibição](/windows/win32/Controls/using-list-view-controls) de listas no SDK do Windows.
 
-Chamada [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) para cada lista de imagens; passar um ponteiro `CImageList` para o objeto apropriado.
+Chamar [CListCtrl:: SetImageList](reference/clistctrl-class.md#setimagelist) para cada lista de imagens; Passe um ponteiro para o `CImageList` objeto apropriado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Usando CListCtrl](../mfc/using-clistctrl.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Usando CListCtrl](using-clistctrl.md)<br/>
+[Controles](controls-mfc.md)

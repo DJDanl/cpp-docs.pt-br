@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-ms.openlocfilehash: 3e56bd0f449992118db75a44c39b6e0e15cb0d86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c0a1e1e93433e0fbe07c11eb350216173e74d84
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392787"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625846"
 ---
 # <a name="frame-window-classes-windows"></a>Classes de janela com moldura (Windows)
 
-Janelas de quadro são janelas que um aplicativo ou uma parte de um aplicativo de quadro. Janelas com moldura geralmente contêm outras janelas, como exibições, barras de ferramentas e barras de status. No caso de `CMDIFrameWnd`, eles podem conter `CMDIChildWnd` objetos indiretamente.
+Janelas de quadros são janelas que estruturam um aplicativo ou uma parte de um aplicativo. Janelas de quadros geralmente contêm outras janelas, como exibições, barras de ferramentas e barras de status. No caso do `CMDIFrameWnd` , eles podem conter `CMDIChildWnd` objetos indiretamente.
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
-A classe base para a janela do quadro principal de um aplicativo SDI. Também é a classe base para todas as outras classes de janela de quadro.
+[CFrameWnd](reference/cframewnd-class.md)<br/>
+A classe base para a janela do quadro principal de um aplicativo SDI. Também a classe base para todas as outras classes de janela do quadro.
 
-[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
+[CMDIFrameWnd](reference/cmdiframewnd-class.md)<br/>
 A classe base para a janela do quadro principal de um aplicativo MDI.
 
-[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
-A classe base para janelas de quadro do documento de um aplicativo MDI.
+[CMDIChildWnd](reference/cmdichildwnd-class.md)<br/>
+A classe base para as janelas de quadro de documento de um aplicativo MDI.
 
-[CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)<br/>
-Uma janela do quadro de metade da altura normalmente Vista em torno de barras de ferramentas flutuantes.
+[CMiniFrameWnd](reference/cminiframewnd-class.md)<br/>
+Uma janela de quadro de meia altura normalmente vista em relação a barras de ferramentas flutuantes.
 
-[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
-Fornece a janela do quadro para um modo de exibição quando um documento do servidor está sendo editado no local.
+[COleIPFrameWnd](reference/coleipframewnd-class.md)<br/>
+Fornece a janela do quadro para uma exibição quando um documento do servidor está sendo editado no local.
 
 ## <a name="related-class"></a>Classe relacionada
 
-Classe `CMenu` fornece uma interface por meio do qual acessar os menus do seu aplicativo. É útil para manipulando menus dinamicamente em tempo de execução; Por exemplo, ao adicionar ou excluir itens de menu de acordo com o contexto. Embora menus são geralmente usadas com janelas de quadro, eles também podem ser usados com caixas de diálogo e outras janelas nonchild.
+`CMenu`Fornece uma interface por meio da qual acessar os menus do seu aplicativo. Ele é útil para manipular menus dinamicamente em tempo de execução; por exemplo, ao adicionar ou excluir itens de menu de acordo com o contexto. Embora os menus sejam usados com mais frequência com janelas de quadros, eles também podem ser usados com caixas de diálogo e outras janelas não-filhas.
 
-[CMenu](../mfc/reference/cmenu-class.md)<br/>
-Encapsula um `HMENU` identificador para a barra de menus e menus pop-up do aplicativo.
+[CMenu](reference/cmenu-class.md)<br/>
+Encapsula um `HMENU` identificador para a barra de menus e os menus pop-up do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../mfc/class-library-overview.md)
+[Visão geral da classe](class-library-overview.md)
