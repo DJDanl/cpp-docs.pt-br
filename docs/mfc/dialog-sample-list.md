@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-ms.openlocfilehash: 72470463c3d4ff402bca9c119456778cf7fadecb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28bf4beaafaaff5c4b9122daeca9d61ed05346fc
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384069"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625908"
 ---
 # <a name="dialog-sample-list"></a>Lista de exemplos da caixa de diálogo
 
-Consulte os seguintes programas de exemplo que ilustram as caixas de diálogo e folhas de propriedades:
+Consulte os programas de exemplo a seguir que ilustram caixas de diálogo e folhas de propriedades:
 
 *Aplicativo de exemplo MDI com caixas de diálogo*
 
-- [RABISCO](../overview/visual-cpp-samples.md)
+- [Rabisco](../overview/visual-cpp-samples.md)
 
 *Caixa de diálogo sem janela restrita*
 
-- [SEM JANELA RESTRITA](../overview/visual-cpp-samples.md)
+- [SEM janela restrita](../overview/visual-cpp-samples.md)
 
-*Caixa de diálogo de folha de propriedade (caixa de diálogo de guia)*
+*Caixa de diálogo folha de Propriedades (caixa de diálogo guia)*
 
 - [PROPDLG](../overview/visual-cpp-samples.md)
 
@@ -31,7 +31,7 @@ Consulte os seguintes programas de exemplo que ilustram as caixas de diálogo e 
 
 - [CMNCTRL2](../overview/visual-cpp-samples.md)
 
-*Aplicativo com base em uma caixa de diálogo*
+*Aplicativo baseado em uma caixa de diálogo*
 
 - [CMNCTRL1](../overview/visual-cpp-samples.md)
 
@@ -45,7 +45,7 @@ Consulte os seguintes programas de exemplo que ilustram as caixas de diálogo e 
 
 - [CTRLTEST](../overview/visual-cpp-samples.md)
 
-*Modos de exibição de formulário de caixa de diálogo semelhante*
+*Exibições de formulário semelhantes a caixas de diálogo*
 
 - [VIEWEX](../overview/visual-cpp-samples.md)
 
@@ -55,4 +55,4 @@ Consulte os seguintes programas de exemplo que ilustram as caixas de diálogo e 
 
 ## <a name="see-also"></a>Consulte também
 
-[Caixas de diálogo](../mfc/dialog-boxes.md)
+[Caixas de diálogo](dialog-boxes.md)

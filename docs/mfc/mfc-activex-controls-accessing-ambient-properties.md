@@ -1,60 +1,60 @@
 ---
-title: 'Controles ActiveX MFC: Acessando propriedades ambiente'
+title: 'Controles ActiveX MFC: acessando propriedades ambiente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: 585ec8720a654bbcb728330d70ddb914f2543e41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5c78c9943f8baeadcc1198ee8c96f2023ac0215
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625439"
 ---
-# <a name="mfc-activex-controls-accessing-ambient-properties"></a>Controles ActiveX MFC: Acessando propriedades ambiente
+# <a name="mfc-activex-controls-accessing-ambient-properties"></a>Controles ActiveX MFC: acessando propriedades ambiente
 
 Este artigo discute como um controle ActiveX pode acessar as propriedades de ambiente de seu contêiner de controle.
 
-Um controle pode obter informações sobre seu contêiner acessando propriedades de ambiente do contêiner. Essas propriedades expõem as características visuais, como a cor de plano de fundo do contêiner, a fonte atual usada pelo contêiner e as características operacionais, como se o contêiner está atualmente no modo de usuário ou o modo de designer. Um controle pode usar propriedades de ambiente para personalizar sua aparência e comportamento para o contêiner particular na qual ele é incorporado. No entanto, um controle nunca deve presumir que seu contêiner será compatível com qualquer propriedade de ambiente específica. Na verdade, alguns contêineres podem não aceitar quaisquer propriedades de ambiente em todos os. Na ausência de uma propriedade de ambiente, um controle deve pressupor um valor padrão razoável.
+Um controle pode obter informações sobre seu Contêiner acessando as propriedades de ambiente do contêiner. Essas propriedades expõem características visuais, como a cor do plano de fundo do contêiner, a fonte atual usada pelo contêiner e as características operacionais, como se o contêiner está atualmente no modo de usuário ou de designer. Um controle pode usar propriedades de ambiente para personalizar sua aparência e comportamento para o contêiner específico no qual ele está inserido. No entanto, um controle nunca deve supor que seu contêiner dará suporte a qualquer propriedade de ambiente específica. Na verdade, alguns contêineres podem não dar suporte a todas as propriedades de ambiente. Na ausência de uma propriedade de ambiente, um controle deve assumir um valor padrão razoável.
 
-Para acessar uma propriedade de ambiente, fazer uma chamada para [COleControl::GetAmbientProperty](../mfc/reference/colecontrol-class.md#getambientproperty). Essa função espera que a ID de expedição para a propriedade de ambiente como o primeiro parâmetro (o arquivo OLECTL. H define identificadores de expedição para o conjunto padrão de propriedades de ambiente).
+Para acessar uma propriedade de ambiente, faça uma chamada para [COleControl:: Getambienteproperty](reference/colecontrol-class.md#getambientproperty). Essa função espera a ID de expedição para a propriedade de ambiente como o primeiro parâmetro (o arquivo OLECTL. H define as IDs de expedição para o conjunto padrão de propriedades de ambiente).
 
-Os parâmetros do `GetAmbientProperty` função são a ID de expedição, uma marca de variant que indica o tipo de propriedade esperado e um ponteiro de memória em que o valor deve ser retornado. O tipo de dados ao qual se refere a esse ponteiro irá variar dependendo da marca variant. A função retornará **verdadeira** se o contêiner dá suporte à propriedade, caso contrário, ele retornará **falso**.
+Os parâmetros da `GetAmbientProperty` função são a ID de expedição, uma marca de variante que indica o tipo de propriedade esperado e um ponteiro para a memória em que o valor deve ser retornado. O tipo de dados ao qual esse ponteiro se refere variará dependendo da marca de variante. A função retornará **true** se o contêiner oferecer suporte à propriedade; caso contrário, retornará **false**.
 
-O exemplo de código a seguir obtém o valor da propriedade ambiente chamado "Modo do usuário". Se a propriedade não é suportada pelo contêiner, um valor padrão de **verdadeira** presume-se:
+O exemplo de código a seguir obtém o valor da propriedade de ambiente chamada "UserMode". Se a propriedade não for suportada pelo contêiner, um valor padrão **true** será assumido:
 
-[!code-cpp[NVC_MFC_AxUI#30](../mfc/codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]
+[!code-cpp[NVC_MFC_AxUI#30](codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]
 
-Para sua conveniência, `COleControl` fornece funções auxiliares que acessam a muitas das propriedades de ambiente comumente usadas e retornam os padrões apropriados quando as propriedades não estão disponíveis. Essas funções auxiliares são da seguinte maneira:
+Para sua conveniência, o `COleControl` fornece funções auxiliares que acessam muitas das propriedades de ambiente usadas com frequência e retornam os padrões apropriados quando as propriedades não estão disponíveis. Essas funções auxiliares são as seguintes:
 
-- [COleControl::AmbientBackColor](../mfc/reference/colecontrol-class.md#ambientbackcolor)
+- [COleControl::AmbientBackColor](reference/colecontrol-class.md#ambientbackcolor)
 
-- [AmbientDisplayName](../mfc/reference/colecontrol-class.md#ambientdisplayname)
+- [AmbientDisplayName](reference/colecontrol-class.md#ambientdisplayname)
 
-- [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)
+- [AmbientFont](reference/colecontrol-class.md#ambientfont)
 
     > [!NOTE]
-    >  Chamador deve chamar `Release( )` sobre a fonte retornada.
+    >  O chamador deve chamar `Release( )` na fonte retornada.
 
-- [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)
+- [AmbientForeColor](reference/colecontrol-class.md#ambientforecolor)
 
-- [AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)
+- [AmbientLocaleID](reference/colecontrol-class.md#ambientlocaleid)
 
-- [AmbientScaleUnits](../mfc/reference/colecontrol-class.md#ambientscaleunits)
+- [AmbientScaleUnits](reference/colecontrol-class.md#ambientscaleunits)
 
-- [AmbientTextAlign](../mfc/reference/colecontrol-class.md#ambienttextalign)
+- [AmbientTextAlign](reference/colecontrol-class.md#ambienttextalign)
 
-- [AmbientUserMode](../mfc/reference/colecontrol-class.md#ambientusermode)
+- [AmbientUserMode](reference/colecontrol-class.md#ambientusermode)
 
-- [AmbientUIDead](../mfc/reference/colecontrol-class.md#ambientuidead)
+- [AmbientUIDead](reference/colecontrol-class.md#ambientuidead)
 
-- [AmbientShowHatching](../mfc/reference/colecontrol-class.md#ambientshowhatching)
+- [AmbientShowHatching](reference/colecontrol-class.md#ambientshowhatching)
 
-- [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)
+- [AmbientShowGrabHandles](reference/colecontrol-class.md#ambientshowgrabhandles)
 
-Se o valor de uma propriedade de ambiente for alterado (por meio de alguma ação do contêiner), o `OnAmbientPropertyChanged` é chamada de função de membro do controle. Substitua essa função de membro para lidar com uma notificação. O parâmetro `OnAmbientPropertyChanged` é a ID de expedição da propriedade ambiente afetada. O valor dessa ID de expedição pode ser DISPID_UNKNOWN, que indica que um ou mais propriedades de ambiente foi alterado, mas não estão disponíveis com informações sobre quais propriedades foram afetadas.
+Se o valor de uma propriedade de ambiente for alterado (por meio de alguma ação do contêiner), a `OnAmbientPropertyChanged` função de membro do controle será chamada. Substitua essa função de membro para lidar com tal notificação. O parâmetro para `OnAmbientPropertyChanged` é a ID de expedição da propriedade de ambiente afetada. O valor dessa ID de expedição pode ser DISPID_UNKNOWN, o que indica que uma ou mais propriedades de ambiente foram alteradas, mas as informações sobre quais propriedades foram afetadas não estão disponíveis.
 
 ## <a name="see-also"></a>Consulte também
 
-[Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)
+[Controles ActiveX do MFC](mfc-activex-controls.md)

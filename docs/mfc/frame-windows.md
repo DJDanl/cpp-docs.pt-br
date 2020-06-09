@@ -15,74 +15,74 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 939230753f25db38e6ba2f26340f40ddf74d23bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39c0b4b866fa123d8bcae639342c925570d96e1b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219816"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625818"
 ---
 # <a name="frame-windows"></a>Janelas com moldura
 
-Quando um aplicativo é executado em Windows, o usuário interage com documentos exibidos em janelas com moldura. Uma janela de quadro do documento tem dois componentes principais: o quadro e o conteúdo que ela se enquadra. Uma janela de quadro do documento pode ser um [interface SDI](../mfc/sdi-and-mdi.md) janela de quadro (SDI) ou um [interface de documentos múltiplos](../mfc/sdi-and-mdi.md) janela filho da (MDI). Windows gerencia a maioria da interação do usuário com a janela do quadro: mover e redimensionar a janela, fechá-la e minimizar e maximizando a ele. Você gerencia o conteúdo dentro do quadro.
+Quando um aplicativo é executado no Windows, o usuário interage com os documentos exibidos em janelas de quadros. Uma janela de quadro de documento tem dois componentes principais: o quadro e o conteúdo que ele emoldura. Uma janela de quadro de documento pode ser uma janela de quadro de SDI ( [interface de documento único](sdi-and-mdi.md) ) ou uma janela filho MDI ( [interface de vários documentos](sdi-and-mdi.md) ). O Windows gerencia a maior parte da interação do usuário com a janela do quadro: movendo e redimensionando a janela, fechando-a e minimizando-a e maximizando-a. Você gerencia o conteúdo dentro do quadro.
 
-## <a name="frame-windows-and-views"></a>Modos de exibição e o Windows de quadro
+## <a name="frame-windows-and-views"></a>Janelas de quadros e exibições
 
-Estrutura MFC usa janelas de quadro contenha modos de exibição. Os dois componentes — quadro e conteúdo — são representados e gerenciados por duas classes diferentes no MFC. Uma classe de janela com moldura gerencia o quadro e uma classe de exibição gerencia o conteúdo. A janela de exibição é um filho da janela do quadro. Desenho e outra interação do usuário com o documento assumir o lugar na área de cliente do modo de exibição, não área de cliente da janela do quadro. A janela do quadro fornece um quadro visível em torno de uma exibição, completo com uma barra de legenda e os controles de janela padrão como um menu de controle, botões minimizar e maximizar a janela e controles para redimensionamento da janela. O "conteúdo" consistem em área de cliente da janela, que fica totalmente ocupada por uma janela filho — o modo de exibição. A figura a seguir mostra a relação entre uma janela de quadro em uma exibição.
+A estrutura MFC usa janelas de quadros para conter exibições. Os dois componentes — quadro e conteúdo — são representados e gerenciados por duas classes diferentes no MFC. Uma classe de janela de quadro gerencia o quadro e uma classe de exibição gerencia o conteúdo. A janela exibição é um filho da janela do quadro. O desenho e outra interação do usuário com o documento ocorrem na área cliente da exibição, não na área cliente da janela do quadro. A janela do quadro fornece um quadro visível em uma exibição, completa com uma barra de legenda e controles de janela padrão, como um menu de controle, botões para minimizar e maximizar a janela e controles para redimensionar a janela. O "conteúdo" consiste na área do cliente da janela, que é totalmente ocupada por uma janela filho — a exibição. A figura a seguir mostra a relação entre uma janela de quadro e uma exibição.
 
-![Exibição da janela de quadro](../mfc/media/vc37fx1.gif "exibição da janela de quadro") <br/>
-Modo de exibição e a janela do quadro
+![Exibição de janela do quadro](../mfc/media/vc37fx1.gif "Exibição de janela do quadro") <br/>
+Janela e exibição do quadro
 
-## <a name="frame-windows-and-splitter-windows"></a>Quadro Windows e Windows divisor
+## <a name="frame-windows-and-splitter-windows"></a>Janelas de quadro e janelas de Splitter
 
-Outra organização comum é para a janela do quadro enquadrar vários modos de exibição, normalmente usando um [janela divisora](../mfc/multiple-document-types-views-and-frame-windows.md). Em uma janela separadora, área de cliente da janela de quadro está ocupada por uma janela separadora, que por sua vez, tem várias janelas filho, chamadas de painéis, que são exibições.
+Outra organização comum é a janela do quadro para emoldurar várias exibições, geralmente usando uma [janela](multiple-document-types-views-and-frame-windows.md)separadora. Em uma janela separadora, a área do cliente da janela do quadro é ocupada por uma janela separadora que, por sua vez, tem várias janelas filhas, chamadas painéis, que são exibições.
 
-### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+### <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
 **Tópicos da janela de quadro geral**
 
-- [Objetos de janela](../mfc/window-objects.md)
+- [Objetos de janela](window-objects.md)
 
-- [Classes de janela com moldura](../mfc/frame-window-classes.md)
+- [Classes de janela do quadro](frame-window-classes.md)
 
-- [As classes de janela com moldura criadas pelo Assistente de aplicativo](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+- [As classes de janela de quadro criadas pelo assistente de aplicativo](frame-window-classes-created-by-the-application-wizard.md)
 
-- [Estilos de janela de quadro](../mfc/frame-window-styles-cpp.md)
+- [Estilos de janela do quadro](frame-window-styles-cpp.md)
 
-- [O que fazem janelas com moldura](../mfc/what-frame-windows-do.md)
+- [O que as janelas de quadro fazem](what-frame-windows-do.md)
 
-**Tópicos sobre como usar o Windows de quadro**
+**Tópicos sobre como usar janelas de quadros**
 
-- [Usando janelas com moldura](../mfc/using-frame-windows.md)
+- [Usando janelas com moldura](using-frame-windows.md)
 
-- [Criando janelas com moldura de documento](../mfc/creating-document-frame-windows.md)
+- [Criando janelas de quadro de documento](creating-document-frame-windows.md)
 
-- [Destruindo janelas com moldura](../mfc/destroying-frame-windows.md)
+- [Destruindo janelas com moldura](destroying-frame-windows.md)
 
-- [Gerenciando janelas filhos MDI](../mfc/managing-mdi-child-windows.md)
+- [Gerenciando janelas filho MDI](managing-mdi-child-windows.md)
 
-- [Gerenciando a exibição atual](../mfc/managing-the-current-view.md) em uma janela do quadro que contém mais de uma exibição
+- [Gerenciando a exibição atual](managing-the-current-view.md) em uma janela de quadro que contém mais de uma exibição
 
-- [Gerenciando menus, barras de controle e aceleradores (outros objetos que compartilham o espaço da janela de quadro)](../mfc/managing-menus-control-bars-and-accelerators.md)
+- [Gerenciando menus, barras de controle e aceleradores (outros objetos que compartilham o espaço da janela do quadro)](managing-menus-control-bars-and-accelerators.md)
 
-**Tópicos sobre os recursos especiais do quadro de janela**
+**Tópicos sobre recursos de janela de quadro especial**
 
-- [Arrastando e soltando arquivos](../mfc/dragging-and-dropping-files-in-a-frame-window.md) do Explorador de arquivos ou do Gerenciador de arquivo em uma janela do quadro
+- [Arrastando e soltando arquivos](dragging-and-dropping-files-in-a-frame-window.md) do explorador de arquivos ou do Gerenciador de arquivos em uma janela de quadro
 
-- [Respondendo à troca dinâmica de dados (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
+- [Respondendo ao DDE (intercâmbio de dados dinâmicos)](responding-to-dynamic-data-exchange-dde.md)
 
-- [Estados semimodais: Ajuda contextual do Windows (Orquestrando outras ações de janela)](../mfc/orchestrating-other-window-actions.md)
+- [Estados de semimodal: Ajuda contextual do Windows (orquestrando outras ações de janela)](orchestrating-other-window-actions.md)
 
-- [Estados semimodais: impressão e visualização de impressão (Orquestrando outras ações de janela)](../mfc/orchestrating-other-window-actions.md)
+- [Estados semimodal: impressão e visualização de impressão (orquestrando outras ações de janela)](orchestrating-other-window-actions.md)
 
 **Tópicos sobre outros tipos de Windows**
 
-- [Usando exibições](../mfc/using-views.md)
+- [Usando exibições](using-views.md)
 
-- [Caixas de diálogo](../mfc/dialog-boxes.md)
+- [Caixas de diálogo](dialog-boxes.md)
 
-- [Controles](../mfc/controls-mfc.md)
+- [Controles](controls-mfc.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Windows](../mfc/windows.md)
+[Windows](windows.md)

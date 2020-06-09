@@ -33,23 +33,23 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 80ef6cc9ec956d0041c4aa3fb6a6211868cc9d73
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167557"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623489"
 ---
 # <a name="accelerator-editor-c"></a>Editor de acelerador (C++)
 
-Uma tabela de acelerador C++ é um recurso do Windows que contém uma lista de teclas de aceleração, conhecidas como teclas de atalho, e os identificadores de comando associados a eles. Um programa pode ter mais de uma tabela de acelerador.
+Uma tabela de acelerador é um recurso do Windows do C++ que contém uma lista de teclas de aceleração, conhecidas como teclas de atalho, e os identificadores de comando associados a eles. Um programa pode ter mais de uma tabela de acelerador.
 
 Normalmente, os aceleradores são usados como atalhos de teclado para comandos de programa que também estão disponíveis em um menu ou barra de ferramentas. No entanto, você pode usar a tabela acelerador para definir combinações de teclas para comandos que não têm um objeto de interface de usuário associado a eles.
 
 > [!TIP]
 > Ao usar o **Editor de acelerador**, clique com o botão direito do mouse para exibir um menu de atalho com comandos frequentes. Os comandos disponíveis dependem do que o ponteiro está apontando.
 
-Você pode usar [modo de exibição de classe](/visualstudio/ide/viewing-the-structure-of-code) para conectar comandos de tecla acelerador ao código. Para obter uma lista de chaves de acelerador predefinidas, consulte [teclas de aceleração](../windows/predefined-accelerator-keys.md).
+Você pode usar [modo de exibição de classe](/visualstudio/ide/viewing-the-structure-of-code) para conectar comandos de tecla acelerador ao código. Para obter uma lista de chaves de acelerador predefinidas, consulte [teclas de aceleração](predefined-accelerator-keys.md).
 
 > [!NOTE]
 > O Windows não permite que você crie tabelas de acelerador vazias. Se você criar uma tabela de acelerador sem entradas, ela será excluída automaticamente quando você salvar a tabela.
@@ -69,12 +69,12 @@ A propriedade **modificador** define combinações de teclas de controle para o 
 
 Veja a seguir as entradas legais para a propriedade **modificador** na tabela aceleradora:
 
-   |Valor|DESCRIÇÃO|
+   |Valor|Descrição|
    |-----------|-----------------|
    |**Nenhuma**|O usuário pressiona apenas o valor da **chave** .<br/><br/>Esse valor é usado com mais eficiência com os valores ASCII/ANSI 001 a 026, que é interpretado como ^ A a ^ Z (**Ctrl + a** através de **Ctrl + Z**).|
    |**Alt**|O usuário deve pressionar **ALT** antes do valor da **chave** .|
-   |**Ctrl**|O usuário deve pressionar **Ctrl** antes do valor da **chave** , não é válido com o tipo ASCII.|
-   |**Shift**|O usuário deve pressionar **Shift** antes do valor da **chave** .|
+   |**Teclas**|O usuário deve pressionar **Ctrl** antes do valor da **chave** , não é válido com o tipo ASCII.|
+   |**Alternância**|O usuário deve pressionar **Shift** antes do valor da **chave** .|
    |**CTRL + ALT**|O usuário deve pressionar **Ctrl** e **ALT** antes do valor da **chave** , não é válido com o tipo ASCII.|
    |**Ctrl + Shift**|O usuário deve pressionar **Ctrl** e **Shift** antes do valor da **chave** , não é válido com o tipo ASCII.|
    |**Alt + Shift**|O usuário deve pressionar **ALT** e **Shift** antes do valor da **chave** , não é válido com o tipo ASCII.|
@@ -84,7 +84,7 @@ A propriedade de **chave** define a chave real a ser usada como o acelerador.
 
 Veja a seguir as entradas legais para a propriedade de **chave** na tabela aceleradora:
 
-   |Valor|DESCRIÇÃO|
+   |Valor|Descrição|
    |-----------|-----------------|
    |Um inteiro entre 0 e 255 no formato decimal.|O valor determina se o valor é tratado como ASCII ou ANSI da seguinte maneira:<br/><br/>   -Números de dígito único são sempre interpretados como a chave correspondente, em vez de valores ASCII ou ANSI.<br/>   -Os valores de 1 a 26, quando precedidos por zeros, são interpretados como ^ A até ^ Z, que representa o valor ASCII das letras do alfabeto quando pressionado com a tecla **Ctrl** pressionada.<br/>   -Os valores de 27-32 são sempre interpretados como valores decimais de três dígitos 027 a 032.<br/>   -Valores de 033 a 255, precedidos por 0 ou não são interpretados como valores ANSI.|
    |Um único caractere de teclado.|Maiúsculas a-Z ou os números 0-9 podem ser valores ASCII ou de chave virtual. Qualquer outro caractere é somente ASCII.|
@@ -101,7 +101,7 @@ Veja a seguir as entradas legais para a propriedade de **chave** na tabela acele
 
 A propriedade **Type** determina se a combinação de teclas de atalho associada à **ID** do acelerador é interpretada como um valor de chave ASCII/ANSI ou uma combinação de chave virtual (VIRTKEY).
 
-- Se a propriedade **Type** for **ASCII**, a propriedade **modificadora** só poderá ser `None` ou `Alt`, ou pode ter um acelerador que use a tecla **Ctrl** , conforme especificado, precedendo a chave com uma `^`.
+- Se a propriedade **Type** for **ASCII**, a propriedade **modificadora** só poderá ser `None` ou `Alt` , ou poderá ter um acelerador que use a tecla **Ctrl** , conforme especificado, precedendo a chave com um `^` .
 
 - Se a propriedade **Type** for **VIRTKEY**, qualquer combinação de valores **modificadores** e de **chave** será válida.
 
@@ -110,7 +110,7 @@ A propriedade **Type** determina se a combinação de teclas de atalho associada
 
 ## <a name="accelerator-tables"></a>Tabelas do acelerador
 
-Em um C++ projeto do, você pode editar uma tabela de acelerador diretamente com a edição in-loco no **Editor do acelerador**.
+Em um projeto C++, você pode editar uma tabela de acelerador diretamente com a edição in-loco no **Editor de acelerador**.
 
 Os procedimentos a seguir referem-se ao uso de páginas de propriedades padrão, no entanto, tanto a edição in-loco quanto o método de página de propriedades têm o mesmo resultado. As alterações feitas usando páginas de propriedades ou usando a edição in-loco são refletidas imediatamente na tabela de aceleração.
 
@@ -146,12 +146,12 @@ Os procedimentos a seguir referem-se ao uso de páginas de propriedades padrão,
 
 1. Selecione uma **ID** na lista suspensa na caixa **ID** ou digite uma nova *ID* na caixa **ID** .
 
-1. Digite a *chave* que você deseja usar como um acelerador ou clique com o botão direito do mouse e escolha a **tecla seguinte digitada** para definir uma combinação de teclas ou vá para o menu **Editar** > **próxima chave digitada**.
+1. Digite a *chave* que você deseja usar como um acelerador ou clique com o botão direito do mouse e escolha a **tecla seguinte digitada** para definir uma combinação de teclas ou vá para o menu **Editar**  >  **próxima chave digitada**.
 
 1. Altere o **modificador** e o **tipo**, se necessário, e pressione **Enter**.
 
 > [!NOTE]
-> Verifique se todos os aceleradores definidos são exclusivos. Você pode ter várias combinações de teclas atribuídas à mesma ID sem nenhum efeito desnecessário, por exemplo, **Ctrl**+**P** e **F8** podem ser atribuídas a ID_PRINT. No entanto, ter uma combinação de teclas atribuída a mais de uma ID não funcionará bem, por exemplo, **Ctrl**+**Z** atribuído a ID_SPELL_CHECK e ID_THESAURUS.
+> Verifique se todos os aceleradores definidos são exclusivos. Você pode ter várias combinações de teclas atribuídas à mesma ID sem nenhum efeito de mal, por exemplo, **Ctrl** + **P** e **F8** podem ser atribuídas a ID_PRINT. No entanto, ter uma combinação de teclas atribuída a mais de uma ID não funcionará bem, por exemplo, **Ctrl** + **Z** atribuído a ID_SPELL_CHECK e ID_THESAURUS.
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Para excluir uma entrada de uma tabela de acelerador
 
@@ -159,7 +159,7 @@ Os procedimentos a seguir referem-se ao uso de páginas de propriedades padrão,
 
 1. Selecione a entrada que você deseja excluir ou mantenha pressionada a tecla **Ctrl** ou **Shift** enquanto seleciona para escolher várias entradas.
 
-1. Clique com o botão direito do mouse e escolha **excluir**ou vá para o menu **Editar** > **excluir**.
+1. Clique com o botão direito do mouse e escolha **excluir**ou vá para o menu **Editar**  >  **excluir**.
 
 > [!TIP]
 > Você também pode pressionar a tecla **delete** para excluir.
@@ -190,7 +190,7 @@ Os procedimentos a seguir referem-se ao uso de páginas de propriedades padrão,
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Editores de recursos](../windows/resource-editors.md)<br/>
-[Teclas de aceleração](../windows/predefined-accelerator-keys.md)<br/>
+[Editores de recursos](resource-editors.md)<br/>
+[Teclas de aceleração](predefined-accelerator-keys.md)<br/>

@@ -4,70 +4,70 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: f7d65f48c1af678f6626ba7d315ceb735d3e960a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 96ece9a2a5be6ea29c95e17e81f6ce4adbfd4c0b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364517"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624171"
 ---
 # <a name="ole-background"></a>tela de fundo OLE
 
-O Le é um mecanismo que permite aos usuários criar e editar documentos contendo itens ou "objetos" criados por vários aplicativos.
+OLE é um mecanismo que permite aos usuários criar e editar documentos que contêm itens ou "objetos" criados por vários aplicativos.
 
 > [!NOTE]
-> OLE era originalmente um acrônimo para Object Linking and Inbedding. No entanto, agora é referido como OLE. Partes do OLE não relacionadas à ligação e incorporação agora fazem parte da tecnologia Active.
+> O OLE era originalmente um acrônimo para vinculação e inserção de objetos. No entanto, agora ele é conhecido como OLE. Partes do OLE não relacionadas ao vínculo e à incorporação agora fazem parte da tecnologia ativa.
 
-Os documentos OLE, historicamente chamados de documentos compostos, integram perfeitamente vários tipos de dados ou componentes. Clipes de som, planilhas e bitmaps são exemplos típicos de componentes encontrados em documentos OLE. O suporte ao OLE em seu aplicativo permite que seus usuários usem documentos OLE sem se preocupar em alternar entre os diferentes aplicativos; OLE faz a troca para você.
+Documentos OLE, historicamente chamados de documentos compostos, integram perfeitamente vários tipos de dados ou componentes. Clipes de som, planilhas e bitmaps são exemplos típicos de componentes encontrados em documentos OLE. O suporte ao OLE em seu aplicativo permite que os usuários usem documentos OLE sem se preocupar com a alternância entre os diferentes aplicativos; O OLE faz a alternância para você.
 
-Você usa um aplicativo de contêiner para criar documentos compostos e um aplicativo de servidor ou aplicativo de componentes para criar os itens dentro do documento do contêiner. Qualquer aplicativo que você escrever pode ser um contêiner, um servidor ou ambos.
+Você usa um aplicativo de contêiner para criar documentos compostos e um aplicativo de servidor ou aplicativo de componente para criar os itens dentro do documento de contêiner. Qualquer aplicativo que você escrever pode ser um contêiner, um servidor ou ambos.
 
-A OLE incorpora muitos conceitos diferentes que todos trabalham em direção ao objetivo de interação perfeita entre aplicativos. Essas áreas incluem:
+O OLE incorpora muitos conceitos diferentes que funcionam para o objetivo da interação direta entre aplicativos. Essas áreas incluem o seguinte:
 
 - vincular e inserir
 
-   Vinculação e incorporação são os dois métodos para armazenar itens criados dentro de um documento OLE que foram criados em outro aplicativo. Para obter informações gerais sobre as diferenças entre os dois, consulte o artigo [OLE Background: Linking and Inbedding](../mfc/ole-background-linking-and-embedding.md). Para obter informações mais [detalhadas,](../mfc/servers.md)consulte os artigos [Containers](../mfc/containers.md) and Servers .
+   Vincular e inserir são os dois métodos para armazenar itens criados dentro de um documento OLE que foram criados em outro aplicativo. Para obter informações gerais sobre as diferenças entre os dois, consulte o artigo [plano de fundo OLE: vinculação e inserção](ole-background-linking-and-embedding.md). Para obter informações mais detalhadas, consulte os artigos [containers](containers.md) and [Servers](servers.md).
 
-- Ativação no local (edição visual)
+- Ativação in-loco (edição Visual)
 
-   Ativar um item incorporado no contexto do documento do contêiner é chamado de ativação no local ou edição visual. A interface do aplicativo de contêiner muda para incorporar os recursos do aplicativo de componentes que criou o item incorporado. Os itens vinculados nunca são ativados no local porque os dados reais do item estão contidos em um arquivo separado, fora do contexto do aplicativo que contém o link. Para obter mais informações sobre ativação no local, consulte o artigo [Ativação](../mfc/activation-cpp.md).
-
-   > [!NOTE]
-   > A vinculação e a incorporação e ativação no local fornecem as principais características da edição visual do OLE.
-
-- Automação A automação permite que um aplicativo dirija outro aplicativo. O aplicativo de condução é conhecido como um cliente de automação, e o aplicativo que está sendo conduzido é conhecido como um servidor de automação ou componente de automação. Para obter mais informações sobre automação, consulte os artigos [Automação clientes](../mfc/automation-clients.md) e [servidores de automação.](../mfc/automation-servers.md)
+   Ativar um item incorporado no contexto do documento de contêiner é chamado de ativação in-loco ou edição visual. A interface do aplicativo de contêiner é alterada para incorporar os recursos do aplicativo de componente que criou o item inserido. Itens vinculados nunca são ativados no local porque os dados reais do item estão contidos em um arquivo separado, fora do contexto do aplicativo que contém o link. Para obter mais informações sobre ativação in-loco, consulte o artigo [ativação](activation-cpp.md).
 
    > [!NOTE]
-   > A automação funciona tanto nos contextos de tecnologia OLE quanto Active. Você pode automatizar qualquer objeto com base no COM.
+   > Vinculação e inserção e ativação in-loco fornecem os principais recursos de edição Visual OLE.
+
+- A automação de automação permite que um aplicativo conduza outro aplicativo. O aplicativo de condução é conhecido como cliente de automação, e o aplicativo que está sendo orientado é conhecido como um servidor de automação ou um componente de automação. Para obter mais informações sobre automação, consulte os artigos [clientes de automação](automation-clients.md) e servidores de [automação](automation-servers.md).
+
+   > [!NOTE]
+   > A automação funciona em contextos de tecnologia OLE e ativo. Você pode automatizar qualquer objeto com base em COM.
 
 - arquivos compostos
 
-   Os arquivos compostos fornecem um formato de arquivo padrão que simplifica o armazenamento estruturado de documentos compostos para aplicações OLE. Dentro de um arquivo composto, os armazenamentos têm muitos recursos de diretórios e fluxos têm muitos recursos de arquivos. Essa tecnologia também é chamada de armazenamento estruturado. Para obter mais informações sobre arquivos compostos, consulte o artigo [Containers: Compound Files](../mfc/containers-compound-files.md).
+   Os arquivos compostos fornecem um formato de arquivo padrão que simplifica o armazenamento estruturado de documentos compostos para aplicativos OLE. Em um arquivo composto, os armazenamentos têm muitos recursos de diretórios e fluxos têm muitos recursos de arquivos. Essa tecnologia também é chamada de armazenamento estruturado. Para obter mais informações sobre arquivos compostos, consulte o artigo [contêineres: arquivos compostos](containers-compound-files.md).
 
-- Transferência uniforme de dados
+- Transferência de Dados uniforme
 
-   Uniform Data Transfer (UDT) é um conjunto de interfaces que permitem que os dados sejam enviados e recebidos de forma padrão, independentemente do método real escolhido para transferir os dados. O UDT forma a base para transferências de dados por arrastar e soltar. O UDT agora serve como base para a transferência de dados existente do Windows, como a Área de Transferência e o DDE (Dynamic Data Exchange). Para obter mais informações sobre a UDT, consulte o artigo [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md).
+   O Uniform Transferência de Dados (UDT) é um conjunto de interfaces que permite que os dados sejam enviados e recebidos de uma maneira padrão, independentemente do método real escolhido para transferir os dados. O UDT forma a base para transferências de dados por meio de arrastar e soltar. O UDT agora serve como base para a transferência de dados existente do Windows, como a área de transferência e o DDE (intercâmbio dinâmico de dados). Para obter mais informações sobre UDT, consulte o artigo [objetos de dados e fontes de dados (OLE)](data-objects-and-data-sources-ole.md).
 
 - Arrastar e soltar
 
-   Arrastar e soltar é uma técnica fácil de usar e manipulação direta para transferir dados entre aplicativos, entre janelas dentro de um aplicativo ou mesmo dentro de uma única janela em um aplicativo. Os dados a serem transferidos são selecionados e arrastados para o destino desejado. Arrastar e soltar é baseado na transferência uniforme de dados. Para obter mais informações sobre arrastar e soltar, consulte o artigo [Arrastar e Soltar](../mfc/drag-and-drop-ole.md).
+   O recurso arrastar e soltar é uma técnica de manipulação direta fácil de usar para transferir dados entre aplicativos, entre janelas em um aplicativo ou até mesmo em uma única janela em um aplicativo. Os dados a serem transferidos são selecionados e arrastados para o destino desejado. O recurso de arrastar e soltar baseia-se na transferência de dados uniforme. Para obter mais informações sobre arrastar e soltar, consulte o artigo [arrastar e soltar](drag-and-drop-ole.md).
 
 - Component Object Model
 
-   O Modelo de Objeto Componente (COM) fornece a infra-estrutura usada quando os objetos OLE se comunicam entre si. As classes MFC OLE simplificam o COM para o programador. O COM faz parte da tecnologia Active, pois os objetos COM estão por trás tanto da tecnologia OLE quanto da Active. Para obter mais informações sobre o COM, consulte os tópicos da [Active Template Library (ATL).](../atl/active-template-library-atl-concepts.md)
+   A Component Object Model (COM) fornece a infraestrutura usada quando objetos OLE se comunicam entre si. As classes OLE do MFC simplificam o COM para o programador. O COM faz parte da tecnologia ativa, pois objetos COM se baseiam em tecnologia OLE e ativa. Para obter mais informações sobre COM, consulte os tópicos de [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md) .
 
-Alguns dos tópicos mais importantes da OLE são abordados nos seguintes artigos:
+Alguns dos tópicos mais importantes do OLE são abordados nos seguintes artigos:
 
-- [Tela de fundo OLE: vinculando e inserindo](../mfc/ole-background-linking-and-embedding.md)
+- [Tela de fundo OLE: vinculando e inserindo](ole-background-linking-and-embedding.md)
 
-- [Tela de fundo OLE: contêineres e servidores](../mfc/ole-background-containers-and-servers.md)
+- [Tela de fundo OLE: contêineres e servidores](ole-background-containers-and-servers.md)
 
-- [Tela de fundo OLE: estratégias de implementação](../mfc/ole-background-implementation-strategies.md)
+- [Tela de fundo OLE: estratégias de implementação](ole-background-implementation-strategies.md)
 
-- [tela de fundo OLE: implementação MFC](../mfc/ole-background-mfc-implementation.md)
+- [tela de fundo OLE: implementação MFC](ole-background-mfc-implementation.md)
 
-Para informações gerais de OLE não encontradas nos artigos acima, procure o OLE no MSDN.
+Para informações gerais de OLE não encontradas nos artigos acima, pesquise OLE no MSDN.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[OLE](../mfc/ole-in-mfc.md)
+[OLE](ole-in-mfc.md)

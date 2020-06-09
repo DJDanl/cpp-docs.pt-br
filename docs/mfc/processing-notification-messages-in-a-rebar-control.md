@@ -7,20 +7,20 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e1e1aaa5056b43f0dd23976fead94bc800163613
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625183"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Processando mensagens de notificação em um controle rebar
 
-Na classe pai do controle rebar, crie uma `OnChildNotify` função de manipulador com uma instrução switch para qualquer mensagem de notificação de controle rebar (`CReBarCtrl`) que você deseja manipular. As notificações são enviadas para a janela pai quando o usuário arrasta objetos sobre o controle rebar, altera o layout das bandas de rebar, exclui as faixas do controle rebar e assim por diante.
+Na classe pai do controle rebar, crie uma função de `OnChildNotify` manipulador com uma instrução switch para qualquer mensagem de notificação de controle rebar ( `CReBarCtrl` ) que você deseja manipular. As notificações são enviadas para a janela pai quando o usuário arrasta objetos sobre o controle rebar, altera o layout das bandas de rebar, exclui as faixas do controle rebar e assim por diante.
 
 As seguintes mensagens de notificação podem ser enviadas pelo objeto de controle rebar:
 
-- RBN_AUTOSIZE enviado por um controle rebar (criado com o estilo RBS_AUTOSIZE) quando o rebar é redimensionado automaticamente.
+- RBN_AUTOSIZE enviado por um controle rebar (criado com o estilo de RBS_AUTOSIZE) quando o rebar é redimensionado automaticamente.
 
 - RBN_BEGINDRAG enviado por um controle rebar quando o usuário começa a arrastar uma banda.
 
@@ -32,7 +32,7 @@ As seguintes mensagens de notificação podem ser enviadas pelo objeto de contro
 
 - RBN_ENDDRAG enviado por um controle rebar quando o usuário para de arrastar uma banda.
 
-- RBN_GETOBJECT enviado por um controle rebar (criado com o estilo RBS_REGISTERDROP) quando um objeto é arrastado sobre uma banda no controle.
+- RBN_GETOBJECT enviado por um controle rebar (criado com o estilo de RBS_REGISTERDROP) quando um objeto é arrastado sobre uma banda no controle.
 
 - RBN_HEIGHTCHANGE enviado por um controle rebar quando sua altura é alterada.
 
@@ -42,5 +42,5 @@ Para obter mais informações sobre essas notificações, consulte [referência 
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Usando CReBarCtrl](using-crebarctrl.md)<br/>
+[Controles](controls-mfc.md)

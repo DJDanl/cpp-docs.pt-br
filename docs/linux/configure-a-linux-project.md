@@ -2,12 +2,12 @@
 title: Configurar um projeto do C++ Linux no Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80150960"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623588"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
@@ -17,13 +17,13 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-Este tópico descreve como configurar um projeto do C++ Linux, conforme descrito em [Criar um projeto do C++ Linux no Visual Studio](create-a-new-linux-project.md). Para projetos CMake Linux, consulte [Configurar um Projeto Linux CMake](cmake-linux-project.md).
+Este tópico descreve como configurar um projeto do C++ Linux, conforme descrito em [Criar um projeto do C++ Linux no Visual Studio](create-a-new-linux-project.md). Para projetos do CMake Linux, consulte [configurar um projeto CMake do Linux](cmake-linux-project.md).
 
 Configure um projeto do Linux para ter como destino um computador Linux físico, uma máquina virtual ou o [WSL](/windows/wsl/about) (Subsistema do Windows para Linux).
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 versão 16.1**:
+**Visual Studio 2019 versão 16,1**:
 
 - Ao ter o WSL como destino, você pode evitar as operações de cópia necessárias para build e o IntelliSense ao ter como destino sistemas Linux remotos.
 
@@ -51,7 +51,7 @@ Para alterar as configurações relacionadas ao computador Linux remoto, defina 
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 versão 16.1**: Para segmentar o Windows Subsystem para Linux, clique na seta para baixo para **Plataforma Toolset** e escolha **WSL_1_0**. As outras opções remotas desaparecerão e o caminho para o shell padrão do WSL será exibido em seu lugar:
+   **Visual Studio 2019 versão 16,1**: para direcionar o subsistema do Windows para Linux, clique na seta para baixo para o **conjunto de ferramentas de plataforma** e escolha **WSL_1_0**. As outras opções remotas desaparecerão e o caminho para o shell padrão do WSL será exibido em seu lugar:
 
    ![Computador de build do WSL](media/wsl-remote-vs2019.png)
 
@@ -78,7 +78,7 @@ Esta seção não se aplica quando o WSL é o destino.
 
 Durante o build em sistemas remotos, os arquivos de origem no computador de desenvolvimento são copiados para o computador Linux e compilados nele. Por padrão, todas as fontes no projeto do Visual Studio são copiadas para os locais definidos nas configurações acima. No entanto, outras fontes também podem ser adicionadas à lista ou copiar fontes pode ser totalmente desativado, que é o padrão para um projeto Makefile.
 
-- **Fontes a serem copiadas** determina quais fontes são copiadas para o computador remoto. Por padrão, o ** \@(SourcesToCopyRemotely)** é padrão para todos os arquivos de código-fonte do projeto, mas não inclui nenhum recurso/recurso, como imagens.
+- **Fontes a serem copiadas** determina quais fontes são copiadas para o computador remoto. Por padrão, o ** \@ (SourcesToCopyRemotely)** usa como padrão todos os arquivos de código-fonte no projeto, mas não inclui nenhum arquivo de recurso/ativo, como imagens.
 
 - **Copiar fontes** pode ser ativado e desativado para habilitar e desabilitar a cópia de arquivos de origem para o computador remoto.
 
@@ -97,7 +97,7 @@ Como toda a compilação está acontecendo em um computador remoto (ou no WSL), 
 Quando você adiciona uma nova conexão no **Gerenciador de Conexões**, o Visual Studio detecta automaticamente os diretórios de inclusão para o compilador no sistema remoto. Visual Studio compacta e copia os arquivos para um diretório no seu computador local do Windows. Depois disso, sempre que você usar essa conexão em um projeto do Visual Studio ou CMake, os cabeçalhos nesses diretórios serão usados para fornecer IntelliSense.
 
 > [!NOTE]
-> No Visual Studio 2019 versão 16.5 e posterior, a cópia de cabeçalho remoto foi otimizada. Os cabeçalhos agora são copiados sob demanda ao abrir um projeto Linux ou configurar o CMake para um alvo Linux. A cópia ocorre em segundo plano em uma base por projeto, com base nos compiladores especificados do projeto. Para obter mais informações, consulte [Melhorias na precisão e desempenho do Linux IntelliSense](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
+> No Visual Studio 2019 versão 16,5 e posterior, a cópia de cabeçalho remoto foi otimizada. Os cabeçalhos agora são copiados sob demanda ao abrir um projeto do Linux ou configurar o CMake para um destino do Linux. A cópia ocorre em segundo plano em uma base por projeto, com base nos compiladores especificados do projeto. Para obter mais informações, consulte [melhorias na precisão e no desempenho do Linux IntelliSense](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
 
 Essa funcionalidade depende de o computador Linux ter zip instalado. Você pode instalar o zip usando este comando apt-get:
 
@@ -123,10 +123,10 @@ Habilite o log ajudar a solucionar problemas:
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Defina propriedades de build e compilador](../build/working-with-project-properties.md)<br/>
-[Propriedades gerais de C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Diretórios VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Copiar propriedades do projeto de origem (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Propriedades de evento de build (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Propriedades gerais de C++ (Linux C++)](prop-pages/general-linux.md)<br/>
+[Diretórios VC++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Copiar propriedades do projeto de origem (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Propriedades de evento de build (Linux C++)](prop-pages/build-events-linux.md)

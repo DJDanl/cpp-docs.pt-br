@@ -7,12 +7,12 @@ helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: d241848edf57fe4876c35e22f1762abf5d6888fa
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c2af00ac32b3013820a3109783c4bf7eb42ec445
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302309"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623725"
 ---
 # <a name="alignment_of-class"></a>Classe alignment_of
 
@@ -34,13 +34,13 @@ O tipo a ser consultado.
 
 A consulta de tipo contém o valor do alinhamento do tipo *Ty*.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits >
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Classe aligned_storage](../standard-library/aligned-storage-class.md)
+[<type_traits>](type-traits.md)\
+[Classe aligned_storage](aligned-storage-class.md)
