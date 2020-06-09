@@ -7,31 +7,31 @@ helpviewer_keywords:
 - menus [MFC], manipulating during execution
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
-ms.openlocfilehash: 202a8c791f3ecaa6180eb91134b28a86572f6e19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a9a20676c91dab0d1708293e004513bb648d178
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396373"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626200"
 ---
 # <a name="menus-mfc"></a>Menus (MFC)
 
-MFC fornece dois elementos para ajudá-lo a trabalhar com menus:
+O MFC fornece dois elementos para ajudá-lo a trabalhar com menus:
 
-- Classe [CMenu](../mfc/reference/cmenu-class.md) para manipulação de menus do seu programa em tempo de execução. Use a documentação para `CMenu` e o exemplo para aprender a usar `CMenu` com eficiência.
+- Classe [CMenu](reference/cmenu-class.md) para manipular os menus do programa em tempo de execução. Use a documentação do `CMenu` e o exemplo para aprender a usar com `CMenu` eficiência.
 
-- Um mecanismo para atualizar os menus e botões da barra de ferramentas: habilitando ou desabilitando-os em tempo real para atender às condições do programa atual.
+- Um mecanismo para atualizar menus e botões da barra de ferramentas: habilitá-los ou desabilitá-los em tempo real para atender às condições atuais do programa.
 
-O Visual C++ também fornece um [editor de menu](../windows/menu-editor.md) para criar e editar os recursos do menu do seu programa.
+Visual C++ também fornece um [Editor de menu](../windows/menu-editor.md) para criar e editar os recursos de menu do programa.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Manipulando objetos de menu durante a execução do programa](../mfc/manipulating-menus-during-program-execution.md)
+- [Manipulando objetos de menu durante a execução do programa](manipulating-menus-during-program-execution.md)
 
-- [Como atualizar objetos de Interface do usuário](../mfc/how-to-update-user-interface-objects.md)
+- [Como atualizar objetos da interface do usuário](how-to-update-user-interface-objects.md)
 
-- [Amostra](../mfc/menu-sample-list.md)
+- [Amostra](menu-sample-list.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)
+[Elementos da interface do usuário](user-interface-elements-mfc.md)

@@ -9,33 +9,33 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-ms.openlocfilehash: 53dd6f1a7878d82a7f7ac48dd7082d791323941b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f9dd34b27ddbdc0b99fafbb23ad1cf9782d98605
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370468"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626414"
 ---
 # <a name="header-control-and-list-control"></a>Controle de cabeçalho e de lista
 
-Na maioria dos casos, você usará o controle de cabeçalho incorporado em um objeto [CListCtrl](../mfc/reference/clistctrl-class.md) ou [CListView.](../mfc/reference/clistview-class.md) No entanto, há casos em que um objeto de controle de cabeçalho separado é desejável, como manipulação de dados, dispostos em colunas ou linhas, em um objeto derivado do [CView.](../mfc/reference/cview-class.md) Nesses casos, você precisa de maior controle sobre a aparência e o comportamento padrão de um controle de cabeçalho incorporado.
+Na maioria dos casos, você usará o controle de cabeçalho que é inserido em um objeto [CListCtrl](reference/clistctrl-class.md) ou [CListView](reference/clistview-class.md) . No entanto, há casos em que um objeto de controle de cabeçalho separado é desejável, como a manipulação de dados, organizados em colunas ou linhas, em um objeto derivado de [cvisualização](reference/cview-class.md). Nesses casos, você precisa de maior controle sobre a aparência e o comportamento padrão de um controle de cabeçalho incorporado.
 
-No caso comum de que você deseja um controle de cabeçalho para fornecer comportamento padrão padrão, você pode querer usar [CListCtrl](../mfc/reference/clistctrl-class.md) ou [CListView](../mfc/reference/clistview-class.md) em vez disso. Use `CListCtrl` quando quiser a funcionalidade de um controle de cabeçalho padrão, incorporado em uma exibição de lista comum de controle. Use [CListView](../mfc/reference/clistview-class.md) quando quiser a funcionalidade de um controle de cabeçalho padrão, incorporado em um objeto de exibição.
+No caso comum que você deseja que um controle de cabeçalho forneça o comportamento padrão padrão, convém usar [CListCtrl](reference/clistctrl-class.md) ou [CListView](reference/clistview-class.md) em vez disso. Use `CListCtrl` quando você quiser a funcionalidade de um controle de cabeçalho padrão, inserido em um controle comum de exibição de lista. Use [CListView](reference/clistview-class.md) quando desejar a funcionalidade de um controle de cabeçalho padrão, inserido em um objeto View.
 
 > [!NOTE]
-> Esses controles só incluem um controle de cabeçalho incorporado se o controle de exibição de lista for criado usando o estilo **LVS_REPORT.**
+> Esses controles incluem apenas um controle de cabeçalho interno se o controle de exibição de lista for criado usando o estilo de **LVS_REPORT** .
 
-Na maioria dos casos, o aparecimento do controle de cabeçalho incorporado pode ser modificado alterando os estilos do controle de exibição de lista contendo. Além disso, informações sobre o controle de cabeçalho podem ser obtidas através das funções de membro do controle de exibição da lista dos pais. No entanto, para controle completo e acesso aos atributos e estilos do controle de cabeçalho incorporado, recomenda-se que um ponteiro para o objeto de controle de cabeçalho seja obtido.
+Na maioria dos casos, a aparência do controle de cabeçalho incorporado pode ser modificada alterando os estilos do controle de exibição de lista que o contém. Além disso, as informações sobre o controle de cabeçalho podem ser obtidas por meio de funções de membro do controle de exibição de lista pai. No entanto, para controle total e acesso aos atributos e estilos do controle de cabeçalho incorporado, é recomendável que um ponteiro para o objeto de controle de cabeçalho seja obtido.
 
-O objeto de controle de cabeçalho incorporado pode ser acessado de qualquer um `CListCtrl` ou `CListView` com uma chamada para a função de membro da `GetHeaderCtrl` respectiva classe. O código a seguir demonstra isso:
+O objeto de controle de cabeçalho incorporado pode ser acessado de um `CListCtrl` ou `CListView` com uma chamada para a função de membro da respectiva classe `GetHeaderCtrl` . O código a seguir demonstra isso:
 
-[!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#14](codesnippet/cpp/header-control-and-list-control_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você quer saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Usando listas de imagens com controles de cabeçalho](../mfc/using-image-lists-with-header-controls.md)
+- [Usando listas de imagens com controles de cabeçalho](using-image-lists-with-header-controls.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Usando CHeaderCtrl](using-cheaderctrl.md)<br/>
+[Controles](controls-mfc.md)

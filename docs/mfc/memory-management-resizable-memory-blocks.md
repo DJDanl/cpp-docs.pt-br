@@ -9,20 +9,20 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74ae94146b1ec711b586ea1fecbbc89a47b40b5e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364783"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626276"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Gerenciamento de memória: blocos de memória redimensionáveis
 
-Os **novos** e **exclusões** operadoras, descritas no artigo [Gerenciamento de Memória: Exemplos](../mfc/memory-management-examples.md), são bons para alocar e negociar blocos de memória de tamanho fixo e objetos. Ocasionalmente, sua aplicação pode precisar de blocos de memória resizáveis. Você deve usar as funções padrão de biblioteca de tempo de [execução C malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), e [livre](../c-runtime-library/reference/free.md) para gerenciar blocos de memória resizáveis no heap.
+Os operadores **novo** e **excluir** , descritos no artigo [Gerenciamento de memória: exemplos](memory-management-examples.md), são bons para alocar e desalocar blocos de memória de tamanho fixo e objetos. Ocasionalmente, seu aplicativo pode precisar de blocos de memória redimensionáveis. Você deve usar as funções de biblioteca de tempo de execução do C padrão [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md)e [Free](../c-runtime-library/reference/free.md) para gerenciar blocos de memória redimensionáveis no heap.
 
 > [!IMPORTANT]
-> A mistura dos **novos** e **exclusões** dos operadores com as funções de alocação de memória resizáveis no mesmo bloco de memória resultará em memória corrompida na versão Debug do MFC. Você não deve usar **realloc** em um bloco de memória alocado com **novo**. Da mesma forma, você não deve alocar um bloco de memória com o **novo** operador e excluí-lo **gratuitamente,** ou usar o operador **de exclusão** em um bloco de memória alocado com **malloc**.
+> A combinação dos operadores **New** e **delete** com as funções de alocação de memória redimensionável no mesmo bloco de memória resultará na memória corrompida na versão de depuração do MFC. Você não deve usar a **realocação** em um bloco de memória alocado com o **novo**. Da mesma forma, você não deve alocar um bloco de memória com o operador **New** e excluí-lo com **Free**ou usar o operador **delete** em um bloco de memória alocada com **malloc**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de memória: alocação do heap](../mfc/memory-management-heap-allocation.md)
+[Gerenciamento de memória: alocação do heap](memory-management-heap-allocation.md)

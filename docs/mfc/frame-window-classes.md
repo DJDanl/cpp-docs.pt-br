@@ -12,33 +12,33 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
-ms.openlocfilehash: d42fa475fca7c92e4ba46b164a9beda9869231c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffa5b966ee042120213896dc7ad9d81c048ef928
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625807"
 ---
 # <a name="frame-window-classes"></a>Classes de janela com moldura
 
-Cada aplicativo tem uma "janela de quadro principal", uma janela da área de trabalho que geralmente tem o nome do aplicativo na sua legenda. Cada documento normalmente tem uma "janela de quadro do documento". Uma janela de quadro do documento contém pelo menos uma exibição, que apresenta os dados do documento.
+Cada aplicativo tem uma "janela principal do quadro", uma janela da área de trabalho que geralmente tem o nome do aplicativo em sua legenda. Cada documento geralmente tem uma "janela de quadro do documento". Uma janela de quadro de documento contém pelo menos uma exibição, que apresenta os dados do documento.
 
-## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Windows de quadro SDI e MDI aplicativos
+## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Janelas de quadros em aplicativos SDI e MDI
 
-Para um aplicativo SDI, há uma janela de quadro derivada da classe [CFrameWnd](../mfc/reference/cframewnd-class.md). Essa janela é a janela do quadro principal e a janela de quadro do documento. Para um aplicativo MDI, a janela do quadro principal é derivada da classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), e as janelas de quadro do documento, que são janelas filho MDI, são derivadas da classe [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).
+Para um aplicativo SDI, há uma janela de quadro derivada da classe [CFrameWnd](reference/cframewnd-class.md). Essa janela é a janela do quadro principal e a janela do quadro do documento. Para um aplicativo MDI, a janela principal do quadro é derivada da classe [CMDIFrameWnd](reference/cmdiframewnd-class.md)e as janelas de quadro do documento, que são janelas filhas MDI, são derivadas da classe [CMDIChildWnd](reference/cmdichildwnd-class.md).
 
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>Use a classe de janela com moldura ou derivar dele
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>Usar a classe de janela de quadro ou derivá-la
 
-Essas classes fornecem a maioria das funcionalidades de janela com moldura que você precisa para seus aplicativos. Em circunstâncias normais, o comportamento padrão e a aparência que eles fornecem atenderá às suas necessidades. Se você precisar da funcionalidade adicional, derivam dessas classes.
+Essas classes fornecem a maior parte da funcionalidade de janela de quadro necessária para seus aplicativos. Em circunstâncias normais, o comportamento padrão e a aparência que eles fornecem atenderão às suas necessidades. Se você precisar de funcionalidade adicional, derive dessas classes.
 
-### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+### <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Classes de janela com moldura criadas pelo Assistente de aplicativo](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+- [Classes de janela de quadro criadas pelo assistente de aplicativo](frame-window-classes-created-by-the-application-wizard.md)
 
-- [Estilos de janela com moldura](../mfc/frame-window-styles-cpp.md)
+- [Estilos de janela de quadro](frame-window-styles-cpp.md)
 
-- [Alternando os estilos de uma janela criada por MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+- [Alternando os estilos de uma janela criada por MFC](changing-the-styles-of-a-window-created-by-mfc.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Janelas com moldura](../mfc/frame-windows.md)
+[Janelas com moldura](frame-windows.md)

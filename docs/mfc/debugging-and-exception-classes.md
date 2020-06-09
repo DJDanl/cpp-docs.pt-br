@@ -7,19 +7,19 @@ helpviewer_keywords:
 - debugging [MFC], exception classes
 - debugging [MFC], classes for debugging
 ms.assetid: 0d158efd-2e62-452e-9d2a-d3c30dfee7f9
-ms.openlocfilehash: 328d7a38c544b56f83ea3e8b1136b1122c4dfa14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7d1fc20556993c3c6690122786d7a767d895ad
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625932"
 ---
 # <a name="debugging-and-exception-classes"></a>Classes de depuração e exceção
 
-Essas classes fornecem suporte para depuração de alocação de memória dinâmica, bem como para passar informações de exceção da função de onde a exceção é gerada para a função de onde ela é capturada.
+Essas classes oferecem suporte para depuração de alocação de memória dinâmica e para passar informações de exceção da função em que a exceção é gerada para a função onde ela é capturada.
 
-Usar as classes [CDumpContext](../mfc/reference/cdumpcontext-class.md) e [CMemoryState](../mfc/reference/cmemorystate-structure.md) durante o desenvolvimento para ajudar na depuração, conforme descrito na [Depurando aplicativos do MFC](/visualstudio/debugger/mfc-debugging-techniques). Use [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) para determinar a classe de qualquer objeto em tempo de execução, conforme descrito no artigo [acessando informações de classe de tempo de execução](../mfc/accessing-run-time-class-information.md). A estrutura usa `CRuntimeClass` para criar objetos de uma determinada classe dinamicamente.
+Use classes [CDumpContext](reference/cdumpcontext-class.md) e [CMemoryState](reference/cmemorystate-structure.md) durante o desenvolvimento para auxiliar na depuração, conforme descrito em [Depurando aplicativos MFC](/visualstudio/debugger/mfc-debugging-techniques). Use [CRuntimeClass](reference/cruntimeclass-structure.md) para determinar a classe de qualquer objeto em tempo de execução, conforme descrito no artigo [Acessando informações de classe em tempo de execução](accessing-run-time-class-information.md). A estrutura usa `CRuntimeClass` para criar objetos de uma classe específica dinamicamente.
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../mfc/class-library-overview.md)
+[Visão geral da classe](class-library-overview.md)

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: 2a3f097a44e96fc470719ce636cc1b73e676fb38
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: ba5a48fabb9142c080e688e189e0983ad5ba2eda
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095842"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624058"
 ---
 # <a name="on_update_command_ui-macro"></a>Macro ON_UPDATE_COMMAND_UI
 
-Para conectar um objeto de interface de usuário a um manipulador de atualização de comando em um objeto de destino de comando, abra **modo de exibição de classe**, clique com o botão direito do mouse na classe à qual o manipulador será adicionado e escolha **Assistente de classe**. Localize a ID do objeto da interface do usuário na lista à esquerda, escolha **UPDATE_COMMAND_UI** no painel direito e clique em **Adicionar manipulador**. Isso cria uma função de manipulador na classe e adiciona a entrada apropriada no mapa de mensagens. Consulte [mapeando mensagens para o Functions](../mfc/reference/mapping-messages-to-functions.md) para obter mais informações. Você pode especificar mensagens adicionais para lidar com o painel **mensagens** .
+Para conectar um objeto de interface de usuário a um manipulador de atualização de comando em um objeto de destino de comando, abra **modo de exibição de classe**, clique com o botão direito do mouse na classe à qual o manipulador será adicionado e escolha **Assistente de classe**. Localize a ID do objeto da interface do usuário na lista à esquerda, escolha **UPDATE_COMMAND_UI** no painel direito e clique em **Adicionar manipulador**. Isso cria uma função de manipulador na classe e adiciona a entrada apropriada no mapa de mensagens. Consulte [mapeando mensagens para o Functions](reference/mapping-messages-to-functions.md) para obter mais informações. Você pode especificar mensagens adicionais para lidar com o painel **mensagens** .
 
-Por exemplo, para atualizar um comando limpar tudo no menu Editar do seu programa, use o **Assistente de classe** para adicionar uma entrada de mapa de mensagem na classe selecionada, uma declaração de função para um manipulador de atualização `OnUpdateEditClearAll` de comando chamado na declaração de classe e um vazio modelo de função no arquivo de implementação da classe. O protótipo de função tem esta aparência:
+Por exemplo, para atualizar um comando limpar tudo no menu Editar do seu programa, use o **Assistente de classe** para adicionar uma entrada de mapa de mensagem na classe selecionada, uma declaração de função para um manipulador de atualização de comando chamado `OnUpdateEditClearAll` na declaração de classe e um modelo de função vazio no arquivo de implementação da classe. O protótipo de função tem esta aparência:
 
-[!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]
+[!code-cpp[NVC_MFCDocView#2](codesnippet/cpp/on-update-command-ui-macro_1.h)]
 
-Como todos os manipuladores, a declaração da função mostra a palavra-chave **afx_msg** . Como todos os manipuladores de atualização, ele usa um argumento, um ponteiro `CCmdUI` para um objeto.
+Como todos os manipuladores, a declaração da função mostra a palavra-chave **afx_msg** . Como todos os manipuladores de atualização, ele usa um argumento, um ponteiro para um `CCmdUI` objeto.
 
 ## <a name="see-also"></a>Consulte também
 
-[Como: atualizar objetos de interface do usuário](../mfc/how-to-update-user-interface-objects.md)
+[Como atualizar objetos da interface do usuário](how-to-update-user-interface-objects.md)

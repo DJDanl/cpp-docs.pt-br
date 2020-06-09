@@ -1,5 +1,5 @@
 ---
-title: 'Contêineres: Estados de Item do cliente'
+title: 'Contêineres: estados de item do cliente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client-item states
@@ -7,41 +7,41 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 927211ccec35d8ec26e2f76b971c59b80248ab96
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152846"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625983"
 ---
-# <a name="containers-client-item-states"></a>Contêineres: Estados de Item do cliente
+# <a name="containers-client-item-states"></a>Contêineres: estados de item do cliente
 
-Este artigo explica os diferentes estados em que um item do cliente passa seu tempo de vida.
+Este artigo explica os diferentes Estados que um item de cliente passa durante seu tempo de vida.
 
-Um item do cliente passa por vários estados, conforme ele é criado, ativado, modificado e salvo. Cada vez que as alterações de estado do item, a estrutura chama [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) com o **OLE_CHANGED_STATE** notificação. O segundo parâmetro é um valor da `COleClientItem::ItemState` enumeração. Ele pode ser um dos seguintes:
+Um item de cliente passa por vários Estados conforme ele é criado, ativado, modificado e salvo. Sempre que o estado do item é alterado, a estrutura chama [COleClientItem:: OnChange](reference/coleclientitem-class.md#onchange) com a notificação **OLE_CHANGED_STATE** . O segundo parâmetro é um valor da `COleClientItem::ItemState` enumeração. Pode ser um dos seguintes:
 
-- *COleClientItem::emptyState*
+- *COleClientItem:: emptyState*
 
-- *COleClientItem::loadedState*
+- *COleClientItem:: loadedState*
 
-- *COleClientItem::openState*
+- *COleClientItem:: openState*
 
-- *COleClientItem::activeState*
+- *COleClientItem:: activeState*
 
-- *COleClientItem::activeUIState*
+- *COleClientItem:: activeUIState*
 
-No estado vazio, um item do cliente ainda não está completamente um item. Memória foi alocada para ele, mas ainda não foi inicializado com os dados do item OLE. Este é o estado de um item do cliente está em quando ele tiver sido criado por meio de uma chamada para **novo** , mas ainda não foi submetido a segunda etapa da criação típico em duas etapas.
+No estado vazio, um item de cliente ainda não é completamente um item. A memória foi alocada para ela, mas ainda não foi inicializada com os dados do item OLE. Esse é o estado em que um item de cliente está quando foi criado por meio de uma chamada para **New** , mas ainda não passou pela segunda etapa da criação típica de duas etapas.
 
-Na segunda etapa, executada por meio de uma chamada para `COleClientItem::CreateFromFile` ou outra `CreateFrom` *xxxx* função, o item é criado completamente. Os dados OLE (de um arquivo ou alguma outra origem, como a área de transferência) foi associados com o `COleClientItem`-objeto derivado. Agora o item está no estado carregado.
+Na segunda etapa, executada por meio de uma chamada para `COleClientItem::CreateFromFile` ou outra `CreateFrom` função *xxxx* , o item é completamente criado. Os dados OLE (de um arquivo ou de alguma outra fonte, como a área de transferência) foram associados ao `COleClientItem` objeto derivado. Agora o item está no estado Loaded.
 
-Quando um item foi aberto na janela do servidor mas não foi aberto no local de documento do contêiner, ele está no estado aberto (ou totalmente aberto). Nesse estado, uma hachura de cruzada geralmente é desenhada sobre a representação do item na janela do contêiner para indicar que o item está ativo em outro lugar.
+Quando um item tiver sido aberto na janela do servidor em vez de aberto no local no documento do contêiner, ele estará no estado aberto (ou totalmente aberto). Nesse estado, uma hachura cruzada geralmente é desenhada pela representação do item na janela do contêiner para indicar que o item está ativo em outro lugar.
 
-Quando um item tiver sido ativado no lugar, ele passa, geralmente apenas resumidamente, por meio do estado ativo. Em seguida, ele insere o estado ativo da interface do usuário, em que o servidor foi mesclado seus menus, barras de ferramentas e outros componentes de interface do usuário com aqueles do contêiner. A presença desses componentes de interface do usuário distingue o estado ativo da interface do usuário do estado ativo. Caso contrário, o estado ativo se parece com o estado ativo da interface do usuário. Se o servidor oferecer suporte a desfazer, o servidor é necessário para manter informações de estado de desfazer do item OLE até atingir o estado aberto ou carregado.
+Quando um item é ativado no local, ele passa, normalmente, apenas brevemente, por meio do estado ativo. Em seguida, ele entra no estado ativo da interface do usuário, no qual o servidor mesclou seus menus, barras de ferramentas e outros componentes de interface do usuário com aqueles do contêiner. A presença desses componentes de interface do usuário distingue o estado ativo da IU do estado ativo. Caso contrário, o estado ativo é semelhante ao estado ativo da interface do usuário. Se o servidor oferecer suporte a desfazer, o servidor será solicitado a manter as informações de desfazer estado do item OLE até atingir o estado carregado ou aberto.
 
 ## <a name="see-also"></a>Consulte também
 
-[Contêineres](../mfc/containers.md)<br/>
-[Ativação](../mfc/activation-cpp.md)<br/>
-[Contêineres: notificações de itens de cliente](../mfc/containers-client-item-notifications.md)<br/>
-[Controladores](../mfc/trackers.md)<br/>
-[Classe CRectTracker](../mfc/reference/crecttracker-class.md)
+[Contêineres](containers.md)<br/>
+[Ativação](activation-cpp.md)<br/>
+[Contêineres: notificações de item do cliente](containers-client-item-notifications.md)<br/>
+[Controladores](trackers.md)<br/>
+[Classe CRectTracker](reference/crecttracker-class.md)
