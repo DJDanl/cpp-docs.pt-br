@@ -1,40 +1,40 @@
 ---
-title: 'Controles ActiveX MFC: Propriedades'
+title: 'Controles ActiveX MFC: propriedades'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-ms.openlocfilehash: 5e01854e7ae7acdc33275351d0d26a76dfeabc9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7ed0fddea660409f5089159b71d39a29b01d538
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324318"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618178"
 ---
-# <a name="mfc-activex-controls-properties"></a>Controles ActiveX MFC: Propriedades
+# <a name="mfc-activex-controls-properties"></a>Controles ActiveX MFC: propriedades
 
-Um controle ActiveX aciona eventos para se comunicar com seu contêiner de controle. O contêiner, em troca, usa métodos e propriedades para se comunicar com o controle. Métodos e propriedades são semelhantes em uso e finalidade, respectivamente, para funções de membro e variáveis de membro de uma classe C++. Propriedades são membros de dados do controle ActiveX que são expostos a qualquer contêiner. As propriedades fornecem uma interface para aplicativos que contêm controles ActiveX, como clientes de automação e contêineres de controle ActiveX.
+Um controle ActiveX dispara eventos para se comunicar com seu contêiner de controle. O contêiner, em retorno, usa métodos e propriedades para se comunicar com o controle. Métodos e propriedades são semelhantes em uso e finalidade, respectivamente, para funções de membro e variáveis de membro de uma classe C++. As propriedades são membros de dados do controle ActiveX que são expostos a qualquer contêiner. As propriedades fornecem uma interface para aplicativos que contêm controles ActiveX, como clientes de automação e contêineres de controle ActiveX.
 
 As propriedades também são chamadas de atributos.
 
-Para obter mais informações sobre métodos de controle ActiveX, consulte o artigo [controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md).
+Para obter mais informações sobre os métodos de controle do ActiveX, consulte o artigo [controles ActiveX do MFC: métodos](mfc-activex-controls-methods.md).
 
-Controles ActiveX podem implementar tanto estoque e métodos e propriedades personalizados. Classe `COleControl` fornece uma implementação para propriedades de estoque. (Para obter uma lista completa de propriedades de estoque, consulte o artigo [controles ActiveX MFC: Adicionando propriedades de estoque](../mfc/mfc-activex-controls-adding-stock-properties.md).) Propriedades personalizadas, definidas pelo desenvolvedor, adicione recursos especializados para um controle ActiveX. Para obter mais informações, consulte [controles ActiveX MFC: Adicionando propriedades personalizadas](../mfc/mfc-activex-controls-adding-custom-properties.md).
+Os controles ActiveX podem implementar métodos e propriedades de estoque e personalizados. `COleControl`A classe fornece uma implementação para propriedades de ações. (Para obter uma lista completa das propriedades de ações, consulte o artigo [controles ActiveX do MFC: Adicionando propriedades de estoque](mfc-activex-controls-adding-stock-properties.md).) Propriedades personalizadas, definidas pelo desenvolvedor, adicionam recursos especializados a um controle ActiveX. Para obter mais informações, consulte [controles ActiveX do MFC: Adicionando propriedades personalizadas](mfc-activex-controls-adding-custom-properties.md).
 
-Propriedades de estoque e personalizadas, como métodos, têm suporte por um mecanismo que consiste em um mapa de expedição que lida com propriedades e métodos e funções de membro existente do `COleControl` classe. Além disso, essas propriedades podem ter parâmetros que o desenvolvedor usa para passar informações extras para o controle.
+As propriedades personalizadas e de ações, como métodos, têm suporte de um mecanismo que consiste em um mapa de expedição que manipula Propriedades e métodos e funções de membro existentes da `COleControl` classe. Além disso, essas propriedades podem ter parâmetros que o desenvolvedor usa para passar informações extras para o controle.
 
-Os artigos a seguir discutem as propriedades do controle ActiveX em mais detalhes:
+Os artigos a seguir abordam as propriedades do controle ActiveX mais detalhadamente:
 
-- [Controles ActiveX MFC: adicionar propriedades de estoque](../mfc/mfc-activex-controls-adding-stock-properties.md)
+- [Controles ActiveX do MFC: adicionando propriedades de estoque](mfc-activex-controls-adding-stock-properties.md)
 
-- [Controles ActiveX MFC: adicionar propriedades personalizadas](../mfc/mfc-activex-controls-adding-custom-properties.md)
+- [Controles ActiveX do MFC: adicionando propriedades personalizadas](mfc-activex-controls-adding-custom-properties.md)
 
-- [Controles ActiveX MFC: implementação da propriedade avançada](../mfc/mfc-activex-controls-advanced-property-implementation.md)
+- [Controles ActiveX do MFC: implementação da propriedade avançada](mfc-activex-controls-advanced-property-implementation.md)
 
-- [Controles ActiveX MFC: acessar propriedades de ambiente](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
+- [Controles ActiveX do MFC: acessando propriedades ambiente](mfc-activex-controls-accessing-ambient-properties.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)
+[Controles ActiveX do MFC](mfc-activex-controls.md)

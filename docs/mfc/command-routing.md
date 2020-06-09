@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907628"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620688"
 ---
 # <a name="command-routing"></a>Roteamento de comando
 
@@ -31,18 +31,18 @@ Classes de destino de comando diferentes verificam seus próprios mapas de mensa
 
 Quão caro é esse mecanismo de roteamento em comparação com o que seu manipulador faz em resposta a um comando, o custo do roteamento é baixo. Tenha em mente que a estrutura gera comandos somente quando o usuário interage com um objeto de interface do usuário.
 
-### <a name="_core_standard_command_route"></a>Rota de comando padrão
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a>Rota de comando padrão
 
 |Quando um objeto desse tipo recebe um comando. . .|Ele oferece a si mesmo e outros objetos de destino de comando a oportunidade de lidar com o comando nesta ordem:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Janela de quadro MDI`CMDIFrameWnd`()|1.  Activo`CMDIChildWnd`<br />2.  Esta janela do quadro<br />3.  Aplicativo (`CWinApp` objeto)|
-|Janela do quadro do`CFrameWnd`documento `CMDIChildWnd`(,)|1.  Modo de exibição ativo<br />2.  Esta janela do quadro<br />3.  Aplicativo (`CWinApp` objeto)|
-|Exibir|1.  Este modo de exibição<br />2.  Documento anexado à exibição|
-|Documento|1.  Este documento<br />2.  Modelo de documento anexado ao documento|
-|Caixa de diálogo|1.  Esta caixa de diálogo<br />2.  Janela que possui a caixa de diálogo<br />3.  Aplicativo (`CWinApp` objeto)|
+|Janela de quadro MDI ( `CMDIFrameWnd` )|1. ativo`CMDIChildWnd`<br />2. esta janela do quadro<br />3. aplicativo ( `CWinApp` objeto)|
+|Janela do quadro do documento ( `CFrameWnd` , `CMDIChildWnd` )|1. modo de exibição ativo<br />2. esta janela do quadro<br />3. aplicativo ( `CWinApp` objeto)|
+|Visualizar|1. esta exibição<br />2. documento anexado à exibição|
+|Document|1. este documento<br />2. modelo de documento anexado ao documento|
+|Caixa de diálogo|1. esta caixa de diálogo<br />2. janela que possui a caixa de diálogo<br />3. aplicativo ( `CWinApp` objeto)|
 
 Quando as entradas numeradas na segunda coluna da tabela anterior mencionam outros objetos, como um documento, consulte o item correspondente na primeira coluna. Por exemplo, quando você lê na segunda coluna que a exibição encaminha um comando para seu documento, veja a entrada "Document" na primeira coluna para seguir o roteamento.
 
 ## <a name="see-also"></a>Consulte também
 
-[Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md)
+[Como o Framework chama um manipulador](how-the-framework-calls-a-handler.md)

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Internet classes [MFC]
 - networking classes [MFC]
 ms.assetid: 1acf793d-ebf2-4fac-97be-703d62e3897e
-ms.openlocfilehash: bf153c5b4602a0f9b151f225669efbb63f3583a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47d254d45cb1472f9cb203b90bbdf96afd79981f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153041"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624460"
 ---
 # <a name="internet-and-networking-classes"></a>Classes de internet e rede
 
-Essas classes permitem que você trocar informações com outro computador usando um soquete do Windows ou a Internet Win32 (WinInet). Há também um conjunto de classes para manipulação de soquetes do Windows.
+Essas classes permitem que você troque informações com outro computador usando um soquete do Windows ou o WinInet (Internet Win32). Também há um conjunto de classes para manipular o Windows Sockets.
 
-As seguintes categorias de classes de suporte à conectividade.
+As categorias de classes a seguir dão suporte à conectividade.
 
-- [Classes de Windows Sockets](../mfc/windows-sockets-classes.md)
+- [Classes de Windows Sockets](windows-sockets-classes.md)
 
-- [Classes da Internet Win32](../mfc/win32-internet-classes.md)
+- [Classes de Internet Win32](win32-internet-classes.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../mfc/class-library-overview.md)
+[Visão geral da classe](class-library-overview.md)

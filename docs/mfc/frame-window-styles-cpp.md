@@ -9,29 +9,29 @@ helpviewer_keywords:
 - MFC, frame windows
 - styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
-ms.openlocfilehash: cade8e7e50779437feb73a94058dc62118c03c10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c22944537370a44aee1af1cf71281264ed4969b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219737"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626452"
 ---
 # <a name="frame-window-styles-c"></a>Estilos de janela com moldura (C++)
 
-As janelas de quadro obter com o framework são adequadas para a maioria dos programas, mas você pode obter flexibilidade adicional, usando as funções avançadas [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) e a função MFC global [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` é uma função de membro de `CWnd`.
+As janelas de quadros obtidas com a estrutura são adequadas para a maioria dos programas, mas você pode obter mais flexibilidade usando as funções avançadas [PreCreateWindow](reference/cwnd-class.md#precreatewindow) e a função global do MFC [AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow`é uma função membro do `CWnd` .
 
-Se você aplicar a **WS_HSCROLL** e **WS_VSCROLL** estilos para a janela de quadro principal, em vez disso, são aplicados ao **MDICLIENT** janela para que os usuários podem rolar o **MDICLIENT** área.
+Se você aplicar os estilos de **WS_HSCROLL** e **WS_VSCROLL** à janela do quadro principal, eles serão aplicados à janela **MdiClient** para que os usuários possam rolar a área **MdiClient** .
 
-Se a janela **FWS_ADDTOTITLE** bit de estilo é definido (o que é o padrão), o modo de exibição indica que a janela do quadro que título a ser exibido na barra de título da janela com base no nome do documento da exibição.
+Se o bit do estilo de **FWS_ADDTOTITLE** da janela for definido (que é por padrão), a exibição informará à janela do quadro qual título exibir na barra de título da janela com base no nome do documento da exibição.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Gerenciando janelas filho MDI (MDICLIENT)](../mfc/managing-mdi-child-windows.md), a janela de dentro de um quadro MDI que contém as janelas filho MDI
+- [Gerenciando janelas filho MDI (MDICLIENT)](managing-mdi-child-windows.md), a janela em um quadro MDI que contém as janelas filho MDI
 
-- [Alternando os estilos de uma janela criada por MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+- [Alternando os estilos de uma janela criada por MFC](changing-the-styles-of-a-window-created-by-mfc.md)
 
-- [Estilos de janela](../mfc/reference/styles-used-by-mfc.md#window-styles)
+- [Estilos de janela](reference/styles-used-by-mfc.md#window-styles)
 
 ## <a name="see-also"></a>Consulte também
 
-[Janelas com moldura](../mfc/frame-windows.md)
+[Janelas com moldura](frame-windows.md)
