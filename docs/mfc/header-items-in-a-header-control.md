@@ -7,29 +7,29 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-ms.openlocfilehash: 31b6bcb134b62fc11df78a846b3c256a2ef69c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a70d1d9225d2ac8ef2f7ed3ad9f603a64a937bc7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239991"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620096"
 ---
 # <a name="header-items-in-a-header-control"></a>Itens de cabeçalho em um controle de cabeçalho
 
-Você tem controle considerável sobre a aparência e comportamento dos itens de cabeçalho que compõem um controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Cada item de cabeçalho pode ter uma cadeia de caracteres, uma imagem de bitmap, uma imagem de uma lista de imagens associado ou um valor de 32 bits definido pelo aplicativo associado a ele. A cadeia de caracteres, bitmap ou imagem é exibida no item de cabeçalho.
+Você tem um controle considerável sobre a aparência e o comportamento dos itens de cabeçalho que compõem um controle de cabeçalho ([CHeaderCtrl](reference/cheaderctrl-class.md)). Cada item de cabeçalho pode ter uma cadeia de caracteres, uma imagem de bitmap, uma imagem de uma lista de imagens associada ou um valor de 32 bits definido pelo aplicativo associado a ela. A cadeia de caracteres, bitmap ou imagem é exibida no item de cabeçalho.
 
-Você pode personalizar a aparência e o conteúdo de novos itens quando eles são criados, fazendo uma chamada [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem) ou modificando um item existente, com uma chamada para [CHeaderCtrl::GetItem](../mfc/reference/cheaderctrl-class.md#getitem) e [ CHeaderCtrl::SetItem](../mfc/reference/cheaderctrl-class.md#setitem).
+Você pode personalizar a aparência e o conteúdo de novos itens quando eles são criados fazendo uma chamada [CHeaderCtrl:: InsertItem](reference/cheaderctrl-class.md#insertitem) ou modificando um item existente, com uma chamada para [CHeaderCtrl:: GetItem](reference/cheaderctrl-class.md#getitem) e [CHeaderCtrl:: SetItem](reference/cheaderctrl-class.md#setitem).
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Personalizando a aparência do item de cabeçalho](../mfc/customizing-the-header-item-s-appearance.md)
+- [Personalizando a aparência do item de cabeçalho](customizing-the-header-item-s-appearance.md)
 
-- [Ordenando itens no controle de cabeçalho](../mfc/ordering-items-in-the-header-control.md)
+- [Ordenando itens no controle de cabeçalho](ordering-items-in-the-header-control.md)
 
-- [Fornecendo suporte a arrastar e soltar para itens de cabeçalho](../mfc/providing-drag-and-drop-support-for-header-items.md)
+- [Fornecendo suporte a arrastar e soltar para os itens de cabeçalho](providing-drag-and-drop-support-for-header-items.md)
 
-- [Usando listas de imagens com controles de cabeçalho](../mfc/using-image-lists-with-header-controls.md)
+- [Usando listas de imagens com controles de cabeçalho](using-image-lists-with-header-controls.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)
+[Usando CHeaderCtrl](using-cheaderctrl.md)

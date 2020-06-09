@@ -9,14 +9,14 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-ms.openlocfilehash: d49a1596371e4a69873b826d3e756f263539d034
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aa5012f6657b2676756d1d8023274a524b451df3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448316"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617470"
 ---
-# <a name="allocatornewdel-class"></a>Classe allocator_newdel
+# <a name="allocator_newdel-class"></a>Classe allocator_newdel
 
 Implementa um alocador que usa o **operador Delete** para desalocar um bloco de memória e um **operador novo** para alocar um bloco de memória.
 
@@ -35,14 +35,14 @@ class allocator_newdel;
 
 ## <a name="remarks"></a>Comentários
 
-A macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) passa essa classe como o parâmetro *Name* na seguinte instrução:`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+A macro [ALLOCATOR_DECL](allocators-functions.md#allocator_decl) passa essa classe como o parâmetro *Name* na seguinte instrução:`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<allocators>
+**Cabeçalho:**\<allocators>
 
 **Namespace:** stdext
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

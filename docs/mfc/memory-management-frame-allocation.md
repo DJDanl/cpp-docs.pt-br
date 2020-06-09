@@ -1,5 +1,5 @@
 ---
-title: 'Gerenciamento de memória: Alocação de quadro'
+title: 'Gerenciamento de memória: alocação do quadro'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory leaks [MFC], frame allocation
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 1acf2ce89e18dd64c166103b59b5eb7007214efd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ecf1c08164d1a760fce62457a6019e767ed2605
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352119"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626296"
 ---
-# <a name="memory-management-frame-allocation"></a>Gerenciamento de memória: Alocação de quadro
+# <a name="memory-management-frame-allocation"></a>Gerenciamento de memória: alocação do quadro
 
-Alocação de quadro recebe seu nome do "quadro de pilha" que é definido sempre que uma função é chamada. O quadro de pilha é uma área de memória que armazena temporariamente os argumentos para a função, bem como todas as variáveis que são definidas locais à função. Variáveis do quadro geralmente são chamadas de variáveis "automáticas" porque o compilador automaticamente aloca o espaço para eles.
+A alocação no quadro leva seu nome do "quadro de pilhas" que é configurado sempre que uma função é chamada. O registro de ativação é uma área de memória que mantém temporariamente os argumentos para a função, bem como qualquer variável que esteja definida como local para a função. Variáveis de quadro geralmente são chamadas de variáveis "automáticas" porque o compilador automaticamente aloca o espaço para elas.
 
-Há duas características principais de alocações de quadro. Primeiro, quando você define uma variável local, suficiente espaço é alocado no quadro da pilha para manter a variável de inteira, mesmo se for uma matriz grande ou a estrutura de dados. Em segundo lugar, variáveis do quadro são excluídas automaticamente quando eles saem do escopo:
+Há duas características principais das alocações de quadros. Primeiro, quando você define uma variável local, espaço suficiente é alocado no quadro de pilha para manter a variável inteira, mesmo se for uma grande matriz ou estrutura de dados. Segundo, as variáveis de quadro são excluídas automaticamente quando saem do escopo:
 
-[!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
+[!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-Para variáveis de função local, essa transição de escopo acontece quando a função sai, mas o escopo de uma variável de quadro pode ser menor do que uma função se chaves aninhadas são usadas. Essa exclusão automática de variáveis do quadro é muito importante. No caso de tipos primitivos simples (como **int** ou **bytes**), matrizes, ou estruturas de dados, a exclusão automática simplesmente recupera a memória usada pela variável. Uma vez que a variável tiver saído do escopo, ele não pode ser acessado de qualquer forma. No entanto, no caso de objetos de C++, o processo de exclusão automática é um pouco mais complicado.
+Para variáveis de função locais, essa transição de escopo ocorre quando a função é encerrada, mas o escopo de uma variável de quadro pode ser menor do que uma função se chaves aninhadas forem usadas. Essa exclusão automática de variáveis de quadro é muito importante. No caso de tipos primitivos simples (como **int** ou **byte**), matrizes ou estruturas de dados, a exclusão automática simplesmente recupera a memória usada pela variável. Como a variável saiu do escopo, ela não pode ser acessada mesmo assim. No entanto, no caso de objetos C++, o processo de exclusão automática é um pouco mais complicado.
 
-Quando um objeto é definido como uma variável de quadro, seu construtor é invocado automaticamente no ponto em que a definição for encontrada. Quando o objeto sai do escopo, seu destruidor é invocado automaticamente antes que a memória para o objeto seja recuperada. Essa construção automática e a destruição podem ser muito útil, mas você deve estar ciente das chamadas automático, especialmente para o destruidor.
+Quando um objeto é definido como uma variável de quadro, seu construtor é invocado automaticamente no ponto em que a definição é encontrada. Quando o objeto sai do escopo, seu destruidor é invocado automaticamente antes que a memória do objeto seja recuperada. Essa construção e destruição automáticas podem ser muito úteis, mas você deve estar atento às chamadas automáticas, especialmente ao destruidor.
 
-A principal vantagem de alocação de objetos no quadro é que eles são excluídos automaticamente. Quando você alocar seus objetos no quadro, você não precisa se preocupar sobre objetos esquecidos causar vazamentos de memória. (Para obter detalhes sobre vazamentos de memória, consulte o artigo [detectando vazamentos de memória no MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100)).) Uma desvantagem de alocação do quadro é que as variáveis do quadro não podem ser usadas fora de seu escopo. Outro fator na escolha de alocação do quadro em comparação com a alocação de heap é que para estruturas grandes e objetos, geralmente é melhor usar o heap em vez da pilha para o armazenamento, pois o espaço de pilha é geralmente limitado.
+A principal vantagem de alocar objetos no quadro é que eles são excluídos automaticamente. Ao alocar seus objetos no quadro, você não precisa se preocupar com objetos esquecidos causando vazamentos de memória. (Para obter detalhes sobre vazamentos de memória, consulte o artigo [detectando vazamentos de memória no MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100)).) Uma desvantagem da alocação de quadros é que as variáveis de quadro não podem ser usadas fora do seu escopo. Outro fator na escolha de alocação de quadro versus alocação de heap é que para grandes estruturas e objetos, geralmente é melhor usar o heap em vez da pilha para armazenamento, já que o espaço de pilha é geralmente limitado.
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de memória](../mfc/memory-management.md)
+[Gerenciamento de memória](memory-management.md)
