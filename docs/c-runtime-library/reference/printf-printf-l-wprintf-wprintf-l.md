@@ -229,7 +229,7 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Sintaxe de especificação de formato: funções printf e wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
