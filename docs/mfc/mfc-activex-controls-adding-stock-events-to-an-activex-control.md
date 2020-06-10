@@ -63,7 +63,7 @@ A `COleControl` classe fornece dez eventos de estoque, listados na tabela a segu
 |-----------|---------------------|--------------|
 |Clique em |**void FireClick ()**|Acionado quando o controle captura o mouse, qualquer mensagem **BUTTONUP** (esquerda, intermediária ou direita) é recebida e o botão é liberado sobre o controle. Os eventos MouseDown e MouseUp de estoque ocorrem antes desse evento.<br /><br /> Entrada do mapa de eventos: **EVENT_STOCK_CLICK ()**|
 |DblClick|**void FireDblClick ()**|Semelhante a Click, mas acionado quando uma mensagem **BUTTONDBLCLK** é recebida.<br /><br /> Entrada do mapa de eventos: **EVENT_STOCK_DBLCLICK ()**|
-|Erro|**void FireError (SCODE***SCODE* **, LPCSTR** `lpszDescription` **, uint** `nHelpID` **= 0)**        |Acionado quando ocorre um erro dentro do controle ActiveX fora do escopo de uma chamada de método ou de um acesso de propriedade.<br /><br /> Entrada do mapa de eventos: **EVENT_STOCK_ERROREVENT ()**|
+|Erro do|**void FireError (SCODE***SCODE* **, LPCSTR** `lpszDescription` **, uint** `nHelpID` **= 0)**        |Acionado quando ocorre um erro dentro do controle ActiveX fora do escopo de uma chamada de método ou de um acesso de propriedade.<br /><br /> Entrada do mapa de eventos: **EVENT_STOCK_ERROREVENT ()**|
 |KeyDown|**void FireKeyDown (curto** `nChar` **, curto** `nShiftState` **)**      |Acionado quando `WM_SYSKEYDOWN` uma `WM_KEYDOWN` mensagem ou é recebida.<br /><br /> Entrada do mapa de eventos: **EVENT_STOCK_KEYDOWN ()**|
 |Pressionar|**void FireKeyPress (curto** <strong>\*</strong> `pnChar` **)**    |Acionado quando uma `WM_CHAR` mensagem é recebida.<br /><br /> Entrada do mapa de eventos: **EVENT_STOCK_KEYPRESS ()**|
 |KeyUp|**void FireKeyUp (curto** `nChar` **, curto** `nShiftState` **)**      |Acionado quando `WM_SYSKEYUP` uma `WM_KEYUP` mensagem ou é recebida.<br /><br /> Entrada do mapa de eventos: **EVENT_STOCK_KEYUP ()**|
@@ -104,7 +104,7 @@ O assistente para adicionar evento adiciona a linha de código a seguir ao contr
 
 Essa linha associa o evento KeyPress à sua ID de expedição padrão e permite que o contêiner antecipe o evento KeyPress.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)<br/>
 [Controles ActiveX do MFC: métodos](mfc-activex-controls-methods.md)<br/>
