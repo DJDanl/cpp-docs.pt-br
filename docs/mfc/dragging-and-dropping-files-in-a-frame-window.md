@@ -10,19 +10,19 @@ helpviewer_keywords:
 - frame windows [MFC], dragging and dropping files in
 - drag and drop [MFC], Windows Explorer
 ms.assetid: 85560fe9-121b-4105-bd7b-216b966e19fa
-ms.openlocfilehash: 0129b939e0fe2afd5dd29623bb44418bfd16c20d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42f21e2441f8ba3d2c6a13503c928880fe100f04
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240654"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623165"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Arrastando e soltando arquivos em uma janela com moldura
 
-A janela do quadro gerencia uma relação com o Explorador de arquivos ou o Gerenciador de arquivos.
+A janela do quadro gerencia uma relação com o explorador de arquivos ou o Gerenciador de arquivos.
 
-Por adicionar alguns Inicializando chama em seu substituto do `CWinApp` função de membro `InitInstance`, conforme descrito em [CWinApp: A classe do aplicativo](../mfc/cwinapp-the-application-class.md), você pode ter sua janela de quadro indiretamente abrir arquivos arrastado do Explorador de arquivos ou do Gerenciador de arquivo e solto na janela do quadro. Ver [arquivo gerenciador arrastar e soltar](../mfc/special-cwinapp-services.md).
+Ao adicionar algumas chamadas de inicialização em sua substituição da `CWinApp` função de membro `InitInstance` , conforme descrito em [CWinApp: a classe Application](cwinapp-the-application-class.md), você pode fazer com que a janela do quadro abra indiretamente os arquivos arrastados do explorador de arquivos ou do Gerenciador de arquivos e solto na janela do quadro. Consulte [arrastar e soltar do Gerenciador de arquivos](special-cwinapp-services.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando janelas com moldura](../mfc/using-frame-windows.md)
+[Usando janelas de quadros](using-frame-windows.md)

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: eb8fc425d6b9849f6367d9b207e5181652386be3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 132dd7394119081dcaeb098c2088782ff5d40ae4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207846"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619335"
 ---
 # <a name="com-interface-entry-points"></a>Pontos de entrada da interface COM
 
-Para funções de membro de uma interface COM, use o `METHOD_PROLOGUE` macro para manter o estado global apropriado ao chamar métodos de uma interface exportado.
+Para funções de membro de uma interface COM, use a `METHOD_PROLOGUE` macro para manter o estado global adequado ao chamar métodos de uma interface exportada.
 
-Normalmente, funções de membro das interfaces implementadas por `CCmdTarget`-objetos derivados já usam essa macro para fornecer a inicialização automática do `pThis` ponteiro. Por exemplo:
+Normalmente, as funções de membro de interfaces implementadas por `CCmdTarget` objetos derivados já usam essa macro para fornecer inicialização automática do `pThis` ponteiro. Por exemplo:
 
-[!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#5](codesnippet/cpp/com-interface-entry-points_1.cpp)]
 
-Para obter mais informações, consulte [38 de observação técnica](../mfc/tn038-mfc-ole-iunknown-implementation.md) no MFC/OLE `IUnknown` implementação.
+Para obter informações adicionais, consulte a [Observação técnica 38](tn038-mfc-ole-iunknown-implementation.md) sobre implementação de MFC/OLE `IUnknown` .
 
-O `METHOD_PROLOGUE` macro é definida como:
+A `METHOD_PROLOGUE` macro é definida como:
 
 ```cpp
 #define METHOD_PROLOGUE(theClass, localClass) \
@@ -35,12 +35,12 @@ O `METHOD_PROLOGUE` macro é definida como:
     AFX_MANAGE_STATE(pThis->m_pModuleState) \
 ```
 
-A parte da macro referentes ao gerenciamento de estado global é:
+A parte da macro preocupada com o gerenciamento do estado global é:
 
 `AFX_MANAGE_STATE( pThis->m_pModuleState )`
 
-Nesta expressão, *m_pModuleState* é considerado como uma variável de membro do objeto contentor. Ele é implementado pelos `CCmdTarget` classe base e é inicializada com o valor apropriado pelo `COleObjectFactory`, quando o objeto é instanciado.
+Nessa expressão, *m_pModuleState* é considerada uma variável de membro do objeto contentor. Ele é implementado pela `CCmdTarget` classe base e é inicializado com o valor apropriado pelo `COleObjectFactory` , quando o objeto é instanciado.
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciando os dados de estado dos módulos MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+[Gerenciando os dados de estado dos módulos MFC](managing-the-state-data-of-mfc-modules.md)

@@ -8,38 +8,38 @@ helpviewer_keywords:
 - screen output classes [MFC]
 - output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
-ms.openlocfilehash: 96bda696a310fdd59a124abea2d29bc5001c3ab1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 161144161566293079d4c51324c5c481578ebd5b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626468"
 ---
 # <a name="drawing-tool-classes"></a>Desenhando classes de ferramenta
 
-Essas classes encapsulam as ferramentas de desenho são usadas para desenhar em um contexto de dispositivo.
+Essas classes encapsulam ferramentas de desenho que são usadas para desenhar em um contexto de dispositivo.
 
-[CGdiObject](../mfc/reference/cgdiobject-class.md)<br/>
-A classe base para as ferramentas de desenho do GDI.
+[CGdiObject](reference/cgdiobject-class.md)<br/>
+A classe base para ferramentas de desenho GDI.
 
-[CBrush](../mfc/reference/cbrush-class.md)<br/>
-Encapsula um pincel GDI que pode ser selecionado como o pincel atual em um contexto de dispositivo. Pincéis são usados para preencher os interiores dos objetos que está sendo desenhados.
+[CBrush](reference/cbrush-class.md)<br/>
+Encapsula um pincel GDI que pode ser selecionado como o pincel atual em um contexto de dispositivo. Os pincéis são usados para preencher interiores de objetos que estão sendo desenhados.
 
-[CPen](../mfc/reference/cpen-class.md)<br/>
-Encapsula uma caneta GDI que pode ser selecionada quando a caneta atual em um contexto de dispositivo. Canetas são usadas para desenhar as linhas da borda de objetos.
+[CPen](reference/cpen-class.md)<br/>
+Encapsula uma caneta GDI que pode ser selecionada como a caneta atual em um contexto de dispositivo. As canetas são usadas para desenhar as linhas de borda dos objetos.
 
-[CFont](../mfc/reference/cfont-class.md)<br/>
+[CFont](reference/cfont-class.md)<br/>
 Encapsula uma fonte GDI que pode ser selecionada como a fonte atual em um contexto de dispositivo.
 
-[CBitmap](../mfc/reference/cbitmap-class.md)<br/>
-Encapsula um bitmap GDI, fornecendo uma interface para a manipulação de bitmaps.
+[CBitmap](reference/cbitmap-class.md)<br/>
+Encapsula um bitmap GDI, fornecendo uma interface para manipular bitmaps.
 
-[CPalette](../mfc/reference/cpalette-class.md)<br/>
-Encapsula uma paleta de cores GDI para uso como uma interface entre o aplicativo e um dispositivo de saída de cor como uma exibição.
+[CPalette](reference/cpalette-class.md)<br/>
+Encapsula uma paleta de cores GDI para uso como uma interface entre o aplicativo e um dispositivo de saída de cor, como uma exibição.
 
-[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
+[CRectTracker](reference/crecttracker-class.md)<br/>
 Exibe e manipula a interface do usuário para redimensionar e mover objetos retangulares.
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../mfc/class-library-overview.md)
+[Visão geral da classe](class-library-overview.md)

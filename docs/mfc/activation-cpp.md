@@ -18,32 +18,32 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: 9f3fba71002a19a0be0e3429a0faeeefb7c65197
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47640a59180348bd3513013b65029a775545e211
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354176"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619178"
 ---
 # <a name="activation-c"></a>Ativação (C++)
 
-Este artigo explica o papel da ativação na edição visual dos itens OLE. Depois que um usuário tiver incorporado um item OLE em um documento de contêiner, ele pode precisar ser usado. Para isso, o usuário clica duas vezes no item, que ativa esse item. A atividade mais freqüente para ativação é a edição. Muitos itens OLE atuais, quando ativados para edição, fazem com que os menus e barras de ferramentas na janela atual do quadro mudem para refletir aqueles pertencentes ao aplicativo de servidor que criou o item. Esse comportamento, conhecido como ativação no local, permite que o usuário edite qualquer item incorporado em um documento composto sem sair da janela do documento do contêiner.
+Este artigo explica a função de ativação na edição visual de itens OLE. Depois que um usuário tiver inserido um item OLE em um documento de contêiner, talvez seja necessário usá-lo. Para fazer isso, o usuário clica duas vezes no item, que ativa esse item. A atividade mais frequente para a ativação é edição. Muitos itens OLE atuais, quando ativados para edição, fazem com que os menus e barras de ferramentas na janela do quadro atual sejam alterados para refletir aqueles que pertencem ao aplicativo de servidor que criou o item. Esse comportamento, conhecido como ativação in-loco, permite que o usuário edite qualquer item inserido em um documento composto sem sair da janela do documento do contêiner.
 
-Também é possível editar itens OLE incorporados em uma janela separada. Isso acontecerá se o aplicativo de contêiner ou servidor não suportar a ativação no local. Neste caso, quando o usuário clica duas vezes em um item incorporado, o aplicativo do servidor é iniciado em uma janela separada e o item incorporado aparece como seu próprio documento. O usuário emite o item nesta janela. Quando a edição é concluída, o usuário fecha o aplicativo do servidor e retorna ao aplicativo de contêiner.
+Também é possível editar itens OLE incorporados em uma janela separada. Isso ocorrerá se o aplicativo de contêiner ou de servidor não oferecer suporte à ativação in-loco. Nesse caso, quando o usuário clica duas vezes em um item inserido, o aplicativo de servidor é iniciado em uma janela separada e o item inserido aparece como seu próprio documento. O usuário edita o item nesta janela. Quando a edição é concluída, o usuário fecha o aplicativo de servidor e retorna para o aplicativo de contêiner.
 
-Como alternativa, o usuário pode escolher "editar ** \<** aberta" com o objeto> comando Abrir no menu **Editar.** Isso abre o objeto em uma janela separada.
+Como alternativa, o usuário pode escolher "abrir edição" com o comando ** \<object> abrir** no menu **Editar** . Isso abre o objeto em uma janela separada.
 
 > [!NOTE]
-> Editar itens incorporados em uma janela separada foi um comportamento padrão na versão 1 do OLE, e alguns aplicativos OLE podem suportar apenas esse estilo de edição.
+> A edição de itens incorporados em uma janela separada era o comportamento padrão na versão 1 do OLE, e alguns aplicativos OLE podem dar suporte apenas a esse estilo de edição.
 
-A ativação no local promove uma abordagem centrada em documentos para a criação de documentos. O usuário pode tratar um documento composto como uma única entidade, trabalhando nele sem alternar entre aplicativos. No entanto, a ativação no local é usada apenas para itens incorporados, não para itens vinculados: eles devem ser editados em uma janela separada. Isso ocorre porque um item vinculado é realmente armazenado em um lugar diferente. A edição de um item vinculado ocorre dentro do contexto real dos dados, ou seja, onde os dados são armazenados. Editar um item vinculado em uma janela separada lembra ao usuário que os dados pertencem a outro documento.
+A ativação in-loco promove uma abordagem centrada em documentos à criação de documentos. O usuário pode tratar um documento composto como uma única entidade, trabalhando nele sem alternar entre aplicativos. No entanto, a ativação in-loco é usada somente para itens inseridos, não para itens vinculados: eles devem ser editados em uma janela separada. Isso ocorre porque um item vinculado é realmente armazenado em um local diferente. A edição de um item vinculado ocorre no contexto real dos dados, ou seja, onde os dados são armazenados. A edição de um item vinculado em uma janela separada lembra o usuário de que os dados pertencem a outro documento.
 
-O MFC não suporta ativação aninhada no local. Se você criar um aplicativo de contêiner/servidor e esse contêiner/servidor estiver incorporado em outro contêiner e ativado no local, ele não poderá ativar objetos incorporados nele.
+O MFC não dá suporte à ativação in-loco aninhada. Se você criar um aplicativo de contêiner/servidor e esse contêiner/servidor estiver inserido em outro contêiner e ativado no local, ele não poderá ativar objetos de ativação in-loco incorporados dentro dele.
 
-O que acontece com um item incorporado quando o usuário clica duas vezes depende dos verbos definidos para o item. Para obter informações, consulte [Ativação: Verbos](../mfc/activation-verbs.md).
+O que acontece com um item incorporado quando o usuário clica duas vezes nele depende dos verbos definidos para o item. Para obter informações, consulte [ativação: verbos](activation-verbs.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[Contêineres](../mfc/containers.md)<br/>
-[Servidores](../mfc/servers.md)
+[OLE](ole-in-mfc.md)<br/>
+[Contêineres](containers.md)<br/>
+[Servidores](servers.md)
