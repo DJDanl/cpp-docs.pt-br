@@ -1,41 +1,41 @@
 ---
-title: Vantagens da arquitetura de exibição de documento
+title: Vantagens da arquitetura de exibição de documentos
 ms.date: 11/04/2016
 helpviewer_keywords:
 - views [MFC], advantages
 - document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
-ms.openlocfilehash: e250630bf3c9714fc01ff66b66fba3ac0d5b1cc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80f7141ec62d509defdea361586399bd375df0d1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394722"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623271"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Vantagens da arquitetura de documento/exibição
 
-A principal vantagem de usar a arquitetura de exibição/documento MFC é que a arquitetura oferece suporte a vários modos de exibição do mesmo documento muito bem. (Se você não precisa de vários modos de exibição e a pequena sobrecarga de documento/exibição é excessiva em seu aplicativo, você pode evitar a arquitetura. [Alternativas à arquitetura de documento/exibição](../mfc/alternatives-to-the-document-view-architecture.md).)
+A principal vantagem de usar a arquitetura de exibição/documento do MFC é que a arquitetura dá suporte a várias exibições do mesmo documento muito bem. (Se você não precisar de várias exibições e a pequena sobrecarga de documento/exibição for excessiva em seu aplicativo, você poderá evitar a arquitetura. [Alternativas para a arquitetura de documento/exibição](alternatives-to-the-document-view-architecture.md).)
 
-Suponha que seu aplicativo, que permite aos usuários exibir dados numéricos na forma de planilha ou em formato de gráfico. Um usuário pode querer ver simultaneamente os dados brutos, no formulário de planilha e um gráfico que é o resultado dos dados. Você exibir esses modos de exibição separados em janelas com moldura separado ou em painéis de divisor dentro de uma única janela. Suponha que o usuário pode editar os dados na planilha e consulte agora as alterações refletem imediatamente no gráfico.
+Suponha que seu aplicativo permita que os usuários exibam dados numéricos em forma de planilha ou em formato de gráfico. Um usuário pode querer ver simultaneamente os dados brutos, em forma de planilha e um gráfico que resulta dos dados. Você exibe essas exibições separadas em janelas de quadros separadas ou em painéis de divisores dentro de uma única janela. Agora suponha que o usuário possa editar os dados na planilha e ver as alterações refletidas instantaneamente no gráfico.
 
-No MFC, o modo de exibição da planilha e o modo de exibição de gráfico seriam baseados em diferentes classes derivadas de CView. Ambos os modos de exibição será associados um objeto de documento único. O documento armazena os dados (ou talvez obtém-lo de um banco de dados). Ambos os modos de exibição acessá-lo e exibem os dados que recuperam dele.
+No MFC, a exibição de planilha e a exibição de gráfico seriam baseadas em classes diferentes derivadas de Cvisualização. Ambos os modos de exibição seriam associados a um único objeto de documento. O documento armazena os dados (ou talvez os obtenha de um banco de dado). Ambos os modos de exibição acessam o documento e exibem os dados que eles recuperam dele.
 
-Quando um usuário atualiza um dos modos de exibição, o que exibir chamadas de objeto `CDocument::UpdateAllViews`. Essa função notifica todos os modos de exibição do documento, e cada exibição atualiza a mesmo usando os dados mais recentes do documento. A única chamada para `UpdateAllViews` sincroniza as exibições diferentes.
+Quando um usuário atualiza uma das exibições, essa exibição chama o objeto `CDocument::UpdateAllViews` . Essa função notifica todas as exibições do documento e cada exibição se atualiza usando os dados mais recentes do documento. A chamada única para `UpdateAllViews` sincroniza as diferentes exibições.
 
-Esse cenário seria difícil de código sem a separação dos dados da exibição, especialmente se os modos de exibição armazenado os dados em si. Documento/exibição, é fácil. A estrutura faz grande parte do trabalho de coordenação para você.
+Esse cenário seria difícil de codificar sem a separação de dados da exibição, particularmente se as exibições armazenavam os dados em si. Com o documento/exibição, é fácil. A estrutura faz a maior parte do trabalho de coordenação para você.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Alternativas ao documento/exibição](../mfc/alternatives-to-the-document-view-architecture.md)
+- [Alternativas para documento/exibição](alternatives-to-the-document-view-architecture.md)
 
-- [CDocument](../mfc/reference/cdocument-class.md)
+- [CDocument](reference/cdocument-class.md)
 
-- [CView](../mfc/reference/cview-class.md)
+- [CView](reference/cview-class.md)
 
-- [CDocument::UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)
+- [CDocument:: UpdateAllViews](reference/cdocument-class.md#updateallviews)
 
-- [CView::GetDocument](../mfc/reference/cview-class.md#getdocument)
+- [Cvisualização:: GetDocument](reference/cview-class.md#getdocument)
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquitetura de documento/exibição](../mfc/document-view-architecture.md)
+[Arquitetura de documento/exibição](document-view-architecture.md)

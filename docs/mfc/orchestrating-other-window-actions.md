@@ -9,17 +9,17 @@ helpviewer_keywords:
 - frame windows [MFC], semimodal states
 - context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
-ms.openlocfilehash: 4b767ac8899217761cfcca8e24da841a694ead1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92a42766b96836dad527ce9191901270ff369ad
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378148"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622141"
 ---
 # <a name="orchestrating-other-window-actions"></a>Orquestrando outras ações de janela
 
-A janela do quadro orquestra estados semimodais como a Ajuda contextual e visualização de impressão. Para obter uma descrição da função da janela de quadro na visualização de impressão, consulte [impressão e visualização de impressão](../mfc/printing-and-print-preview.md).
+A janela do quadro orquestra estados semimodal, como a ajuda contextual e a visualização de impressão. Para obter uma descrição da função da janela do quadro na visualização de impressão, consulte [impressão e visualização de impressão](printing-and-print-preview.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando janelas com moldura](../mfc/using-frame-windows.md)
+[Usando janelas de quadros](using-frame-windows.md)

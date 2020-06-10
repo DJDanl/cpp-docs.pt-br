@@ -15,25 +15,25 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: b64298bd2b0f14c30c824d78947a17628adec8b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bc7945ecd9aee9021ce97fa3ea05f512c58fe20
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394631"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621928"
 ---
 # <a name="destroying-frame-windows"></a>Destruindo janelas com moldura
 
-Estrutura MFC gerencia a destruição de janela, bem como a criação dessas janelas associadas com a estrutura de documentos e exibições. Se você criar janelas adicionais, você é responsável por destrui-los.
+A estrutura MFC gerencia a destruição de janelas, bem como a criação dessas janelas associadas a documentos e exibições da estrutura. Se você criar janelas adicionais, será responsável por destruí-las.
 
-No framework, quando o usuário fecha a janela de quadro, o padrão da janela [OnClose](../mfc/reference/cwnd-class.md#onclose) chamadas do manipulador [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). É a última função de membro chamada quando a janela do Windows é destruída [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), que faz alguma limpeza, chama o [padrão](../mfc/reference/cwnd-class.md#default) membro de função para executar a limpeza do Windows e, por fim, chama o função membro virtual [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). O [CFrameWnd](../mfc/reference/cframewnd-class.md) implementação de `PostNcDestroy` exclui o objeto de janela C++. Você nunca deve usar o C++ **excluir** operador em uma janela do quadro. Use `DestroyWindow` em seu lugar.
+Na estrutura, quando o usuário fecha a janela do quadro, o manipulador [fechamento](reference/cwnd-class.md#onclose) padrão da janela chama [DestroyWindow](reference/cwnd-class.md#destroywindow). A última função de membro chamada quando a janela do Windows é destruída é [OnNcDestroy](reference/cwnd-class.md#onncdestroy), que faz alguma limpeza, chama a função de membro [padrão](reference/cwnd-class.md#default) para executar a limpeza do Windows e chama por último a função de membro virtual [PostNcDestroy](reference/cwnd-class.md#postncdestroy). A implementação de [CFrameWnd](reference/cframewnd-class.md) de `PostNcDestroy` exclui o objeto de janela C++. Você nunca deve usar o operador de **exclusão** C++ em uma janela de quadro. Use `DestroyWindow` em vez disso.
 
-Quando a janela principal é fechada, o aplicativo é fechado. Se há forem modificados documentos não salvos, o framework exibe uma caixa de mensagem para perguntar se os documentos devem ser salvas e garante que os documentos apropriados são salvos se necessário.
+Quando a janela principal é fechada, o aplicativo fecha. Se houver documentos não salvos modificados, a estrutura exibirá uma caixa de mensagem para perguntar se os documentos devem ser salvos e garante que os documentos apropriados sejam salvos, se necessário.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Criando janelas com moldura de documento](../mfc/creating-document-frame-windows.md)
+- [Criando janelas de quadro de documento](creating-document-frame-windows.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando janelas com moldura](../mfc/using-frame-windows.md)
+[Usando janelas de quadros](using-frame-windows.md)

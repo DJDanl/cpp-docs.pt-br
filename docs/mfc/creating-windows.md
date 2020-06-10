@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbaad1b973ce944d94dd61bcd368f13e85d73261
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241942"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626502"
 ---
 # <a name="creating-windows"></a>Criando janelas
 
-O framework cria automaticamente a maioria das janelas que você precisa em um programa do framework. [Criação de documento/exibição](../mfc/document-view-creation.md) mostra como o framework cria as janelas de quadro associadas com documentos e exibições. Mas para fins de especial, você pode criar suas próprias janelas — incluindo suas próprias janelas filho de janelas com moldura ou modos de exibição — além do windows fornecido pela estrutura.
+A estrutura cria automaticamente a maioria das janelas que você precisa em um programa de estrutura. A [criação de documentos/exibições](document-view-creation.md) mostra como a estrutura cria as janelas de quadros associadas a documentos e modos de exibição. Mas, para fins especiais, você pode criar suas próprias janelas, incluindo suas próprias janelas filhas de janelas de quadros ou exibições, além das janelas fornecidas pela estrutura.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Registrando classes"janela"](../mfc/registering-window-classes.md) (em vez de objetos de janela C++)
+- [Registrando "classes" de janela](registering-window-classes.md) (em oposição a objetos de janela C++)
 
-- [Sequência de criação da janela geral](../mfc/general-window-creation-sequence.md)
+- [Sequência de criação da janela geral](general-window-creation-sequence.md)
 
-- [Destruindo objetos de janela](../mfc/destroying-window-objects.md)
+- [Destruindo objetos de janela](destroying-window-objects.md)
 
-- [Trabalhando com objetos de janela](../mfc/working-with-window-objects.md)
+- [Trabalhando com objetos de janela](working-with-window-objects.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Objetos de janela](../mfc/window-objects.md)
+[Objetos de janela](window-objects.md)

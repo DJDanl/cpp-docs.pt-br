@@ -9,25 +9,25 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02546559183d0e14973bc2e5ccb26a4570a39b1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394696"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623264"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Alocando e desalocando a memória da janela
 
-Não use o C++ **excluir** operador para destruir uma janela do quadro ou da exibição. Em vez disso, chame o `CWnd` função de membro `DestroyWindow`. Janelas de quadro, portanto, devem ser alocadas no heap com o operador **novo**. Tenha cuidado ao alocar janelas com moldura no quadro da pilha ou globalmente. Outras janelas devem ser alocadas no quadro da pilha sempre que possível.
+Não use o operador C++ **delete** para destruir uma janela ou exibição de quadro. Em vez disso, chame a `CWnd` função de membro `DestroyWindow` . Janelas de quadros, portanto, devem ser alocadas no heap com o operador **novo**. Tenha cuidado ao alocar janelas de quadros no quadro de pilhas ou globalmente. Outras janelas devem ser alocadas no quadro de pilha sempre que possível.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Criando janelas](../mfc/creating-windows.md)
+- [Criando o Windows](creating-windows.md)
 
-- [Sequência de destruição da janela](../mfc/window-destruction-sequence.md)
+- [Sequência de destruição de janela](window-destruction-sequence.md)
 
-- [Desanexando um CWnd de HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Desanexando um CWnd de seu HWND](detaching-a-cwnd-from-its-hwnd.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Destruindo objetos de janela](../mfc/destroying-window-objects.md)
+[Destruindo objetos de janela](destroying-window-objects.md)
