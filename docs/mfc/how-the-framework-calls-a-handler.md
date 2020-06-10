@@ -7,29 +7,29 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcfcbdd224db66550e7f0ff27de6313c85f856a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254001"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618524"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Como o Framework chama um identificador
 
-Os tópicos a seguir primeiro examinar como o framework roteia comandos, em seguida, examinar como as outras mensagens e notificações de controle são enviadas para o windows:
+Os tópicos a seguir examinam primeiro como a estrutura roteia os comandos e, em seguida, examinam como outras mensagens e notificações de controle são enviadas ao Windows:
 
-- [Envio e recebimento de mensagem](../mfc/message-sending-and-receiving.md)
+- [Envio e recebimento da mensagem](message-sending-and-receiving.md)
 
-- [Como mensagens sem comando alcançam os identificadores](../mfc/how-noncommand-messages-reach-their-handlers.md)
+- [Como as mensagens não comandos atingem seus manipuladores](how-noncommand-messages-reach-their-handlers.md)
 
-- [Roteamento de comando](../mfc/command-routing.md)
+- [Roteamento de comandos](command-routing.md)
 
-- [Ilustração de roteamento do comando](../mfc/command-routing-illustration.md)
+- [Ilustração de roteamento do comando](command-routing-illustration.md)
 
-- [O manipulador OnCmdMsg](../mfc/oncmdmsg-handler.md)
+- [O manipulador OnCmdMsg](oncmdmsg-handler.md)
 
-- [Substituindo o roteamento de comando padrão](../mfc/overriding-the-standard-command-routing.md)
+- [Substituindo o roteamento de comando padrão](overriding-the-standard-command-routing.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Tratamento e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)
+[Tratamento e mapeamento de mensagem](message-handling-and-mapping.md)

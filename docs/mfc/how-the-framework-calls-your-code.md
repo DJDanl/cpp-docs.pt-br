@@ -12,25 +12,25 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407946"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622602"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Como o Framework chama o código
 
-É crucial entender a relação entre o código-fonte e o código na estrutura MFC. Quando seu aplicativo é executado, a maioria do fluxo de controle reside no código da estrutura. A estrutura gerencia o loop de mensagem que obtém as mensagens do Windows como o usuário escolhe comandos e edita dados em uma exibição. Eventos que o framework pode manipular por si só não dependem de seu código em todos os. Por exemplo, a estrutura sabe como fechar janelas e como sair do aplicativo em resposta a comandos do usuário. Como ele lida com essas tarefas, a estrutura usa manipuladores de mensagens e funções virtuais do C++ para dar a você oportunidades para responder a esses eventos também. Seu código é não está no controle, no entanto; a estrutura é.
+É crucial entender a relação entre o código-fonte e o código na estrutura do MFC. Quando seu aplicativo é executado, a maior parte do fluxo de controle reside no código da estrutura. A estrutura gerencia o loop de mensagem que recebe mensagens do Windows à medida que o usuário escolhe comandos e edita dados em uma exibição. Eventos que a estrutura pode manipular por si só não dependem de seu código. Por exemplo, a estrutura sabe como fechar o Windows e como sair do aplicativo em resposta aos comandos do usuário. Como ele manipula essas tarefas, a estrutura usa manipuladores de mensagens e funções virtuais do C++ para dar a você oportunidades de responder a esses eventos também. No entanto, o código não está no controle; a estrutura é.
 
-O framework chama o código para eventos específicos do aplicativo. Por exemplo, quando o usuário escolhe um comando de menu, o framework roteia o comando ao longo de uma sequência de objetos C++: a janela de exibição e o quadro atual, o documento associado com o modo de exibição, o modelo de documento do documento e o objeto de aplicativo. Se um desses objetos pode lidar com o comando, ele faz isso, chamando a função de manipulador de mensagens apropriado. Para qualquer comando, o código de chamada pode ser seu ou pode ser a estrutura.
+A estrutura chama seu código para eventos específicos do aplicativo. Por exemplo, quando o usuário escolhe um comando de menu, a estrutura roteia o comando ao longo de uma sequência de objetos C++: a exibição atual e a janela de quadro, o documento associado à exibição, o modelo de documento do documento e o objeto de aplicativo. Se um desses objetos puder manipular o comando, ele fará isso, chamando a função apropriada do manipulador de mensagens. Para qualquer comando fornecido, o código chamado pode ser seu ou pode ser o da estrutura.
 
-Essa disposição é um pouco familiar para os programadores têm experientes com programação tradicional para Windows ou programação controlada por evento.
+Essa organização é um pouco familiar para os programadores experientes na programação tradicional para Windows ou em programação orientada a eventos.
 
-Tópicos relacionados, você lerá o que a estrutura de como ela inicializa e executa o aplicativo e, em seguida, limpa conforme o aplicativo será encerrado. Você saberá onde o código que você escreve se encaixa.
+Nos tópicos relacionados, você lerá o que a estrutura faz quando Inicializa e executa o aplicativo e, em seguida, limpa conforme o aplicativo é encerrado. Você também entenderá onde o código que você escreve se encaixa.
 
-Para obter mais informações, consulte [classe CWinApp: A classe de aplicativo](../mfc/cwinapp-the-application-class.md) e [modelos de documento e o processo de criação de documento/exibição](../mfc/document-templates-and-the-document-view-creation-process.md).
+Para obter mais informações, consulte [Class CWinApp: a classe Application](cwinapp-the-application-class.md) e [modelos de documento e o processo de criação de documento/exibição](document-templates-and-the-document-view-creation-process.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Compilando no Framework](../mfc/building-on-the-framework.md)
+[Criando na estrutura](building-on-the-framework.md)

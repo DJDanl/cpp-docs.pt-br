@@ -1,38 +1,38 @@
 ---
-title: 'Como: Adicionar controles de faixa de opções e manipuladores de eventos'
+title: Como adicionar controles de faixa de opções e manipuladores de evento
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: c21e8b86962ebf37ca1a06bae056d09b9a9dbb2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560524c36dbf57faec3b4b6372cade047f9fe7de
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389509"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618477"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Como: Adicionar controles de faixa de opções e manipuladores de eventos
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Como adicionar controles de faixa de opções e manipuladores de evento
 
-Controles da faixa de opções são elementos como botões e caixas de combinação, que você adiciona aos painéis. Painéis são áreas da barra de faixa de opções que exibem um grupo de controles relacionados.
+Os controles da faixa de faixas são elementos, como botões e caixas de combinação, que você adiciona aos painéis. Painéis são áreas da barra da faixa de faixas que exibem um grupo de controles relacionados.
 
-Neste tópico, abra o Designer de faixa de opções, adicione um botão e, em seguida, vincule um evento que exibe "Hello World".
+Neste tópico, você abrirá o designer de faixa de faixas, adicionará um botão e, em seguida, vinculará um evento que exibe "Olá, Mundo".
 
-### <a name="to-open-the-ribbon-designer"></a>Para abrir o Designer de faixa de opções
+### <a name="to-open-the-ribbon-designer"></a>Para abrir o designer de faixa de uma
 
-1. No Visual Studio, sobre o **modo de exibição** menu, clique em **exibição de recurso**.
+1. No Visual Studio, no menu **Exibir** , clique em **modo de exibição de recursos**.
 
-1. Na **exibição de recurso**, clique duas vezes no recurso de faixa de opções para exibi-lo na superfície de design.
+1. Em **modo de exibição de recursos**, clique duas vezes no recurso da faixa de bits para exibi-lo na superfície de design.
 
 ### <a name="to-add-a-button-and-an-event-handler"></a>Para adicionar um botão e um manipulador de eventos
 
-1. Dos **barra de ferramentas**, clique em **botão** e arraste-o para um painel na superfície de design.
+1. Na **barra de ferramentas**, clique no **botão** e arraste-o para um painel na superfície de design.
 
-1. Clique no botão e, em seguida, clique em **Adicionar manipulador de eventos**.
+1. Clique com o botão direito do mouse no botão e clique em **Adicionar manipulador de eventos**.
 
-1. No **Assistente de manipulador de eventos**, confirme as configurações padrão e clique em **adicionar e editar**. Para obter mais informações, consulte [Assistente de manipulador de eventos](../ide/event-handler-wizard.md).
+1. No **Assistente de manipulador de eventos**, confirme as configurações padrão e clique em **Adicionar e editar**. Para obter mais informações, consulte [Assistente de manipulador de eventos](../ide/event-handler-wizard.md).
 
-1. No editor de códigos, adicione o seguinte código para a função de manipulador:
+1. No editor de código, adicione o seguinte código à função de manipulador:
 
 ```
     MessageBox((LPCTSTR)L"Hello World");
@@ -40,5 +40,5 @@ Neste tópico, abra o Designer de faixa de opções, adicione um botão e, em se
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de gadget de fita: Aplicativo de gadget de faixa de opções](../overview/visual-cpp-samples.md)<br/>
-[Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
+[Exemplo de RibbonGadgets: aplicativo de gadgets de faixa de faixas](../overview/visual-cpp-samples.md)<br/>
+[Designer de faixa de Ribbon (MFC)](ribbon-designer-mfc.md)

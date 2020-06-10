@@ -7,14 +7,14 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 412dc8426112e65d00b572a65f064667d2709a0d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456588"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620776"
 ---
-# <a name="addcv-class"></a>Classe add_cv
+# <a name="add_cv-class"></a>Classe add_cv
 
 Torna **const volatile** tipo do tipo.
 
@@ -35,7 +35,7 @@ O tipo a ser modificado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do tipo `add_cv<T>` modificado tem um  `type` typedef de membro equivalente a *T* modificado por [add_volatile](../standard-library/add-volatile-class.md) e [add_const](../standard-library/add-const-class.md), a menos que *T* já tenha os qualificadores CV, seja uma referência ou seja um funcionamento.
+Uma instância do tipo modificado `add_cv<T>` tem um `type` **typedef** de membro equivalente a *T* modificado por [Add_volatile](add-volatile-class.md) e [add_const](add-const-class.md), a menos que *T* já tenha os qualificadores CV, seja uma referência, ou seja uma função.
 
 O tipo auxiliar `add_cv_t<T>` é um atalho para acessar o typedef `type` do membro `add_cv<T>`.
 
@@ -86,12 +86,12 @@ invoked const volatile S.f()
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Classe remove_const](../standard-library/remove-const-class.md)\
-[Classe remove_volatile](../standard-library/remove-volatile-class.md)
+[<type_traits>](type-traits.md)\
+[Classe remove_const](remove-const-class.md)\
+[Classe remove_volatile](remove-volatile-class.md)

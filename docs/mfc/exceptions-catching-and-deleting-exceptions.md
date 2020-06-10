@@ -9,48 +9,48 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 74022c8bc6af1d2cdf74fa452d4e0483637e542e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50e3a3f8c064b2a054f0018e87c4e8782a5dc363
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365525"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618841"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceções: obtendo e excluindo exceções
 
-As instruções e exemplos a seguir mostram como capturar e excluir exceções. Para obter mais informações sobre a **tentativa**, **pegar**e **lançar** palavras-chave, consulte as melhores [práticas modernas c++ para exceções e manipulação de erros](../cpp/errors-and-exception-handling-modern-cpp.md).
+As instruções e exemplos a seguir mostram como detectar e excluir exceções. Para obter mais informações sobre as palavras-chave **try**, **Catch**e **throw** , consulte [práticas recomendadas do C++ moderno para exceções e tratamento de erros](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Os manipuladores de exceção devem excluir objetos de exceção que eles manipulam, porque a falha em excluir a exceção causa um vazamento de memória sempre que esse código pega uma exceção.
+Os manipuladores de exceção devem excluir objetos de exceção que manipulam, pois a falha ao excluir a exceção causa um vazamento de memória sempre que esse código captura uma exceção.
 
-Seu bloco **de captura** deve excluir uma exceção quando:
+Seu bloco **Catch** deve excluir uma exceção quando:
 
-- O bloco **de captura** lança uma nova exceção.
+- O bloco **Catch** gera uma nova exceção.
 
    É claro que você não deve excluir a exceção se lançar a mesma exceção novamente:
 
-   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- A execução retorna de dentro do bloco **de captura.**
+- A execução retorna de dentro do bloco **Catch** .
 
 > [!NOTE]
-> Ao excluir `CException`um , `Delete` use a função membro para excluir a exceção. Não use a palavra-chave **excluir,** porque ela pode falhar se a exceção não estiver no heap.
+> Ao excluir um `CException` , use a `Delete` função de membro para excluir a exceção. Não use a palavra-chave **delete** , pois ela poderá falhar se a exceção não estiver no heap.
 
-#### <a name="to-catch-and-delete-exceptions"></a>Para capturar e excluir exceções
+#### <a name="to-catch-and-delete-exceptions"></a>Para detectar e excluir exceções
 
-1. Use a palavra-chave **try** para configurar um bloco **de tentativa.** Execute quaisquer instruções de programa que possam abrir uma exceção dentro de um bloco **de tentativa.**
+1. Use a palavra-chave **try** para configurar um bloco **try** . Execute qualquer instrução de programa que possa gerar uma exceção em um bloco **try** .
 
-   Use a palavra-chave de **captura** para configurar um bloco **de captura.** Coloque o código de manipulação de exceções em um bloco **de captura.** O código no bloco **de captura** só é executado se o código dentro do bloco **de tentativa** lançar uma exceção do tipo especificado na declaração **de captura.**
+   Use a palavra-chave **Catch** para configurar um bloco **Catch** . Coloque o código de tratamento de exceção em um bloco **Catch** . O código no bloco **Catch** é executado somente se o código dentro do bloco **try** gera uma exceção do tipo especificado na instrução **Catch** .
 
-   O esqueleto a seguir mostra como os blocos **de tentativa** e **captura** são normalmente organizados:
+   O esqueleto a seguir mostra como blocos **try** e **Catch** normalmente são organizados:
 
-   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   Quando uma exceção é lançada, o controle passa para o primeiro bloco de **captura** cuja declaração de exceção corresponde ao tipo de exceção. Você pode lidar seletivamente com diferentes tipos de exceções com blocos de **captura** seqüenciais, conforme listado abaixo:
+   Quando uma exceção é lançada, o controle passa para o primeiro bloco **Catch** cuja declaração de exceção corresponde ao tipo da exceção. Você pode lidar seletivamente com tipos diferentes de exceções com blocos de **Catch** sequenciais, conforme listado abaixo:
 
-   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-Para obter mais informações, consulte [Exceções: Conversão de Macros de Exceção mfc](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Para obter mais informações, consulte [exceções: convertendo de macros de exceção do MFC](exceptions-converting-from-mfc-exception-macros.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
+[Tratamento de Exceção](exception-handling-in-mfc.md)

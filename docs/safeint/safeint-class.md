@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373447"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620947"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
 Estende as primitivas de inteiro para ajudar a evitar o estouro de inteiro e permite comparar diferentes tipos de inteiros.
 
 > [!NOTE]
-> A versão mais recente desta [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)biblioteca está localizada em .
+> A versão mais recente desta biblioteca está localizada em [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,8 +42,8 @@ class SafeInt;
 | Parâmetro  |  Descrição |
 |---------|-----------------|
 | *rhs*      |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
-| *Eu*        |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
-| *Bits*     |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
+| *i*        |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
+| *bits*     |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
 
 ## <a name="members"></a>Membros
 
@@ -55,7 +55,7 @@ class SafeInt;
 
 ### <a name="assignment-operators"></a>Operadores de atribuição
 
-| Nome  |  Sintaxe |
+| Name  |  Sintaxe |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>Operadores de conversão
 
-| Nome              |  Sintaxe |
+| Name              |  Sintaxe |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>Operadores de comparação
 
-| Nome  |  Sintaxe |
+| Name  |  Sintaxe |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>Operadores aritméticos
 
-| Nome  |  Sintaxe |
+| Name  |  Sintaxe |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>Operadores lógicos
 
-| Nome     |  Sintaxe |
+| Name     |  Sintaxe |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -212,7 +212,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 > [!NOTE]
 > Embora a classe `SafeInt` aceite qualquer tipo inteiro, seu desempenho de execução é melhor com tipos sem sinal.
 
-`E` é o mecanismo de tratamento de erro usado por `SafeInt`. Dois mecanismos de tratamento de erro são fornecidos com a biblioteca SafeInt. A política padrão é `SafeIntErrorPolicy_SafeIntException`, que gera uma exceção [SafeIntException Class](../safeint/safeintexception-class.md) quando ocorre um erro. A outra política é `SafeIntErrorPolicy_InvalidParameter`, que interromperá o programa se ocorrer um erro.
+`E` é o mecanismo de tratamento de erro usado por `SafeInt`. Dois mecanismos de tratamento de erro são fornecidos com a biblioteca SafeInt. A política padrão é `SafeIntErrorPolicy_SafeIntException`, que gera uma exceção [SafeIntException Class](safeintexception-class.md) quando ocorre um erro. A outra política é `SafeIntErrorPolicy_InvalidParameter`, que interromperá o programa se ocorrer um erro.
 
 Existem duas opções para personalizar a política de erro. A primeira opção é definir o parâmetro `E` quando você cria um `SafeInt`. Use essa opção quando quiser alterar a política de tratamento de erro para apenas um `SafeInt`. A outra opção é definir _SAFEINT_DEFAULT_ERROR_POLICY como sua classe personalizada de tratamento de erro antes de incluir a biblioteca `SafeInt`. Use essa opção quando quiser mudar a política de tratamento de erros padrão para todas as instâncias da classe `SafeInt` no seu código.
 
@@ -229,7 +229,7 @@ Existem duas opções para personalizar a política de erro. A primeira opção 
 
 **Namespace:** msl::utilities
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
 
 Constrói um objeto `SafeInt`.
 
@@ -257,10 +257,10 @@ SafeInt (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Eu*<br/>
+*i*<br/>
 [in] O valor do novo objeto `SafeInt`. Este deve ser um parâmetro do tipo T ou U, dependendo do construtor.
 
-*B*<br/>
+*b*<br/>
 [in] O valor booliano do novo objeto `SafeInt`.
 
 *u*<br/>

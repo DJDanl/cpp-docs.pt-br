@@ -8,37 +8,37 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: 3ef23ad74e1ff53d947453faa5682c5ecc1f4e43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fb903fa169233ce532e41ecdf02c23ab6037c8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310910"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621458"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretando a entrada do usuário por meio de uma exibição
 
-Outras funções de membro do modo de exibição manipularem e interpretam todas as entrada do usuário. Normalmente, você definirá funções de membro de manipulador de mensagens em sua classe de exibição para processar:
+Outras funções de membro da alça de exibição e interpretam todas as entradas do usuário. Normalmente, você definirá funções de membro de manipulador de mensagens em sua classe de exibição para processar:
 
-- Windows [mensagens](../mfc/messages.md) gerado pelas ações de mouse e teclado.
+- [Mensagens](messages.md) do Windows geradas por ações de mouse e teclado.
 
-- [Comandos](../mfc/user-interface-objects-and-command-ids.md) de menus, botões de barra de ferramentas e teclas de aceleração.
+- [Comandos](user-interface-objects-and-command-ids.md) de menus, botões da barra de ferramentas e teclas de aceleração.
 
-Essas funções de membro de manipulador de mensagens interpretam as ações a seguir como a entrada de dados, a seleção ou a edição, incluindo a movimentação de dados de e para a área de transferência:
+Essas funções de membro do manipulador de mensagens interpretam as seguintes ações como entrada, seleção ou edição de dados, incluindo a movimentação de dados de e para a área de transferência:
 
-- Os movimentos do mouse e cliques, arrasta e cliques duplos
+- Movimentos e cliques do mouse, arrasta e clica duas vezes
 
-- Pressionamentos de teclas
+- Pressionamentos
 
 - Comandos de menu
 
-Quais mensagens do Windows seus identificadores de exibição depende das necessidades do seu aplicativo.
+Quais mensagens do Windows seus identificadores de exibição dependem das necessidades do seu aplicativo.
 
-[Manipulação e mapeamento de tópicos de mensagem](../mfc/message-handling-and-mapping.md) explica como atribuir itens de menu e outros objetos de interface do usuário para comandos e como associar os comandos a funções do manipulador. [Manipulação e mapeamento de tópicos de mensagem](../mfc/message-handling-and-mapping.md) também explica como o MFC roteia comandos e envia mensagens padrão do Windows para os objetos que contêm os manipuladores para eles.
+[Tópicos de manipulação e mapeamento de mensagens](message-handling-and-mapping.md) explica como atribuir itens de menu e outros objetos de interface do usuário a comandos e como associar os comandos a funções de manipulador. [Tópicos de manipulação e mapeamento de mensagens](message-handling-and-mapping.md) também explica como o MFC roteia comandos e envia mensagens padrão do Windows para os objetos que contêm manipuladores para eles.
 
-Por exemplo, seu aplicativo talvez precise implementar direto do mouse no modo de exibição de desenho. O exemplo de Scribble mostra como tratar as mensagens WM_LBUTTONDOWN, WM_MOUSEMOVE e WM_LBUTTONUP, respectivamente, para começar, continuar e finalizar o desenho de um segmento de linha. Por outro lado, às vezes, talvez seja necessário interpretar um clique do mouse no modo de exibição como uma seleção. O modo de exibição `OnLButtonDown` função do manipulador determina se o usuário foi de desenho ou a seleção. Se você selecionar, o manipulador poderia determinar se o clique foi dentro dos limites de um objeto no modo de exibição e, nesse caso, altere a exibição para mostrar o objeto como selecionado.
+Por exemplo, seu aplicativo pode precisar implementar o desenho direto do mouse na exibição. O exemplo de rabisco mostra como lidar com as mensagens WM_LBUTTONDOWN, WM_MOUSEMOVE e WM_LBUTTONUP, respectivamente, para iniciar, continuar e encerrar o desenho de um segmento de linha. Por outro lado, às vezes você pode precisar interpretar um clique do mouse no modo de exibição como uma seleção. A função do `OnLButtonDown` manipulador de exibição determinaria se o usuário estava desenhando ou selecionando. Se você selecionar, o manipulador determinaria se o clique estava dentro dos limites de algum objeto na exibição e, em caso afirmativo, altero a exibição para mostrar o objeto como selecionado.
 
-O modo de exibição também pode tratar certos comandos de menu, como aqueles no menu Editar para recortar, copiar, colar ou excluir os dados selecionados usando a área de transferência. Um manipulador desse tipo chamaria alguns do membro relacionadas à área de transferência de funções da classe `CWnd` para transferir um item de dados selecionada ou para a área de transferência.
+O modo de exibição também pode manipular certos comandos de menu, como aqueles do menu Editar para recortar, copiar, colar ou excluir dados selecionados usando a área de transferência. Esse manipulador chamaria algumas das funções de membro relacionadas à área de transferência da classe `CWnd` para transferir um item de dados selecionado para ou da área de transferência.
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando exibições](../mfc/using-views.md)
+[Usando exibições](using-views.md)

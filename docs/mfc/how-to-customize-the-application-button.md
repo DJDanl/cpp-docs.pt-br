@@ -1,17 +1,17 @@
 ---
-title: 'Como: Personalizar o botão aplicativo'
+title: Como personalizar o botão do aplicativo
 ms.date: 09/07/2019
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: 3a1d1625e80e6c6f4440864629a5123bed5744c7
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 9160e602848adf8dc95c840d702e0b1a1b2f9049
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620034"
 ---
-# <a name="how-to-customize-the-application-button"></a>Como: Personalizar o botão aplicativo
+# <a name="how-to-customize-the-application-button"></a>Como personalizar o botão do aplicativo
 
 Quando você clica no botão aplicativo, um menu de comandos é exibido. Normalmente, o menu contém comandos relacionados a arquivos, como **abrir**, **salvar**, **Imprimir**e **sair**.
 
@@ -34,13 +34,13 @@ A tabela a seguir define as propriedades do botão do aplicativo.
 |Propriedade|Definição|
 |--------------|----------------|
 |**Botões**|Contém a coleção de até três botões que aparecem no canto inferior direito do menu do aplicativo.|
-|**Caption**|Especifica o texto do controle. Ao contrário de outros elementos da faixa de tipos, o botão do aplicativo não exibe o texto da legenda. Em vez disso, o texto é usado para acessibilidade.|
+|**Legenda**|Especifica o texto do controle. Ao contrário de outros elementos da faixa de tipos, o botão do aplicativo não exibe o texto da legenda. Em vez disso, o texto é usado para acessibilidade.|
 |**Imagem HDPI**|Especifica o identificador do ícone do botão de aplicativo de pontos altos por polegada (HDPI). Quando o aplicativo é executado em um monitor de DPI alto, a **imagem HDPI** é usada em vez de **imagem**.|
 |**HDPI imagens grandes**|Especifica o identificador das altas imagens grandes de DPI. Quando o aplicativo é executado em um monitor de DPI alto, **HDPI imagens grandes** são usadas em vez de **imagens grandes**.|
 |**HDPI imagens pequenas**|Especifica o identificador das imagens pequenas de DPI alta. Quando o aplicativo é executado em um monitor de DPI alto, **HDPI imagens pequenas** são usadas em vez de **imagens pequenas**.|
 |**ID**|Especifica o identificador do controle.|
-|**Image**|Especifica o identificador do ícone do botão do aplicativo. O ícone é um bitmap 26x26 de 32 bits que tem transparência alfa. As partes transparentes do ícone são realçadas quando o botão do aplicativo é clicado ou focalizado.|
-|**Novas**|Especifica a cadeia de caracteres que é exibida quando a navegação de dica de chave está habilitada. A navegação por dicas de tecla é habilitada quando você pressiona ALT.|
+|**Imagem**|Especifica o identificador do ícone do botão do aplicativo. O ícone é um bitmap 26x26 de 32 bits que tem transparência alfa. As partes transparentes do ícone são realçadas quando o botão do aplicativo é clicado ou focalizado.|
+|**Chaves**|Especifica a cadeia de caracteres que é exibida quando a navegação de dica de chave está habilitada. A navegação por dicas de tecla é habilitada quando você pressiona ALT.|
 |**Imagens grandes**|Especifica o identificador da imagem que contém uma série de ícones de 32x32. Os ícones são usados pelos botões na coleção itens principais.|
 |**Itens principais**|Contém uma coleção de itens de menu que aparecem no menu do aplicativo.|
 |**Legenda MRU**|Especifica o texto exibido no painel de lista recente.|
@@ -56,4 +56,4 @@ O menu do aplicativo não aparece na superfície de design. Para exibi-lo, você
 
 ## <a name="see-also"></a>Consulte também
 
-[Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
+[Designer de faixa de Ribbon (MFC)](ribbon-designer-mfc.md)

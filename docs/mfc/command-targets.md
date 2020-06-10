@@ -7,19 +7,19 @@ helpviewer_keywords:
 - messages, command [MFC]
 - command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
-ms.openlocfilehash: ed3d6a68967dc7f4244f887ae34760fdb99fa7f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59ba197174e95e42cd237c875f39f07801cb3dbe
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388508"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619307"
 ---
 # <a name="command-targets"></a>Destinos de comando
 
-A Figura [comandos no Framework](../mfc/user-interface-objects-and-command-ids.md) mostra a conexão entre um objeto de interface do usuário, como um item de menu e a função de manipulador que o framework chama para executar o comando resultante quando o objeto é clicado.
+Os comandos de figura [na estrutura](user-interface-objects-and-command-ids.md) mostram a conexão entre um objeto de interface de usuário, como um item de menu e a função de manipulador que a estrutura chama para executar o comando resultante quando o objeto é clicado.
 
-Windows envia mensagens que não são mensagens de comando diretamente para uma janela cujo manipulador para a mensagem, em seguida, é chamado. No entanto, o framework roteia comandos para um número de objetos de release candidate — chamado "destinos de comando" — um dos quais normalmente invoca um manipulador para o comando. As funções do manipulador funcionam da mesma maneira para comandos e mensagens padrão do Windows, mas os mecanismos pelos quais eles são chamados são diferentes, conforme explicado em [como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md).
+O Windows envia mensagens que não são mensagens de comando diretamente a uma janela cujo manipulador para a mensagem, em seguida, é chamado. No entanto, a estrutura roteia comandos para vários objetos candidatos — chamados de "destinos de comando" — um dos quais normalmente invoca um manipulador para o comando. As funções de manipulador funcionam da mesma maneira para os comandos e as mensagens padrão do Windows, mas os mecanismos pelos quais eles são chamados são diferentes, conforme explicado em [como a estrutura chama um manipulador](how-the-framework-calls-a-handler.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Mensagens e comandos no Framework](../mfc/messages-and-commands-in-the-framework.md)
+[Mensagens e comandos no Framework](messages-and-commands-in-the-framework.md)

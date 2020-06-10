@@ -5,18 +5,18 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: e0661dbf3dd02bef5f5f056c5f09b39e33d17364
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4ce2d8060c7218226340a591c6295a573f99dad8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168545"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619763"
 ---
 # <a name="atl-predefined-symbols"></a>Símbolos predefinidos ATL
 
 Esses símbolos são definidos nos arquivos de cabeçalho do ATL, mas dão suporte a funções e ações padrão de aplicativos do Windows. Esses símbolos são usados principalmente com caixas de diálogo.
 
-Quando você estiver trabalhando com caixas de diálogo e controles no [Editor de caixa de diálogo](../windows/dialog-editor.md), esses símbolos serão exibidos no [janela Propriedades](/visualstudio/ide/reference/properties-window) associado a controles comuns. Por exemplo, se a caixa de diálogo tiver um botão **Cancelar** , esse comando será associado ao símbolo IDCANCEL na janela **Propriedades** .
+Quando você estiver trabalhando com caixas de diálogo e controles no [Editor de caixa de diálogo](dialog-editor.md), esses símbolos serão exibidos no [janela Propriedades](/visualstudio/ide/reference/properties-window) associado a controles comuns. Por exemplo, se a caixa de diálogo tiver um botão **Cancelar** , esse comando será associado ao símbolo IDCANCEL na janela **Propriedades** .
 
 |||
 |-|-|
@@ -35,8 +35,8 @@ Quando você estiver trabalhando com caixas de diálogo e controles no [Editor d
 
 ATL
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)<br/>
-[Símbolos predefinidos do MFC](../windows/mfc-predefined-symbols.md)<br/>
-[Símbolos predefinidos do Win32](../windows/win32-predefined-symbols.md)<br/>
+[IDs de símbolo predefinidas](predefined-symbol-ids.md)<br/>
+[Símbolos predefinidos do MFC](mfc-predefined-symbols.md)<br/>
+[Símbolos predefinidos do Win32](win32-predefined-symbols.md)<br/>

@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 1c1f13d40e02ec6e099ef1e2c20fe1cac4a4ef93
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8fdb53ea03031f2bf1634a105275c72263ee20e3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620924"
 ---
-# <a name="1-object"></a>Objeto _1
+# <a name="_1-object"></a>Objeto _1
 
 Espaços reservados para argumentos substituíveis.
 
@@ -29,7 +29,7 @@ namespace placeholders {
 
 ## <a name="remarks"></a>Comentários
 
-Os objetos `_1, _2, ... _M` são espaços reservados para designar o primeiro, segundo,..., milionésimo argumento, respectivamente em uma chamada de função para um objeto retornado por [associar](../standard-library/functional-functions.md#bind). Use `_N` para especificar onde o enésimo argumento deverá ser inserido quando a expressão bind for avaliada.
+Os objetos `_1, _2, ... _M` são espaços reservados que designam o primeiro, o segundo, o argumento mth, respectivamente em uma chamada de função para um objeto retornado por [BIND](functional-functions.md#bind). Use `_N` para especificar onde o enésimo argumento deverá ser inserido quando a expressão bind for avaliada.
 
 Nesta implementação, o valor de `M` é 20.
 
