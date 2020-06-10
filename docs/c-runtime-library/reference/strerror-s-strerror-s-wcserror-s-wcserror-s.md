@@ -1,6 +1,6 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 4/2/2020
+ms.date: 06/09/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
+ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918391"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664320"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -62,22 +62,22 @@ Obter uma mensagem de erro do sistema (**strerror_s**, **_wcserror_s**) ou impri
 ```C
 errno_t strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    int errnum
 );
 errno_t _strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    const char *strErrMsg
 );
 errno_t _wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    int errnum
 );
 errno_t __wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    const wchar_t *strErrMsg
 );
 template <size_t size>
@@ -107,8 +107,11 @@ errno_t __wcserror_s(
 *completo*<br/>
 Buffer para conter a cadeia de caracteres de erro.
 
-*numberOfElements*<br/>
-Tamanho do buffer.
+*sizeInBytes*<br/>
+O número de bytes no buffer.
+
+*sizeInWords*<br/>
+O número de palavras no buffer.
 
 *errnum*<br/>
 Número de erro.
@@ -116,15 +119,15 @@ Número de erro.
 *strErrMsg*<br/>
 Mensagem fornecida pelo usuário.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Zero se for bem-sucedido ou um código de erro em caso de falha.
 
 ### <a name="error-condtions"></a>Condições de erro
 
-|*completo*|*numberOfElements*|*strErrMsg*|Conteúdo do *buffer*|
+|*completo*|*sizeInBytes/sizeInWords*|*strErrMsg*|Conteúdo do *buffer*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULO**|any|any|N/D|
+|**NULL**|any|any|n/d|
 |any|0|any|não modificado|
 
 ## <a name="remarks"></a>Comentários
@@ -141,7 +144,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 Se *strErrMsg* for **NULL**, **_strerror_s** retornará uma cadeia de caracteres no *buffer* que contém a mensagem de erro do sistema para a última chamada de biblioteca que produziu um erro. A cadeia de caracteres de mensagens de erro é encerrada pelo caractere newline ('\n'). Se *strErrMsg* não for igual a **NULL**, **_strerror_s** retornará uma cadeia de caracteres no *buffer* contendo (em ordem) sua mensagem de cadeia de caracteres, dois-pontos, um espaço, a mensagem de erro do sistema para a última chamada de biblioteca produzindo um erro e um caractere de nova linha. Sua mensagem da cadeia de caracteres pode ter, no máximo, 94 caracteres de comprimento.
 
-Essas funções truncarão a mensagem de erro se seu comprimento exceder *numberOfElements* -1. A cadeia de caracteres resultante no *buffer* é sempre terminada em nulo.
+Essas funções truncarão a mensagem de erro se seu comprimento exceder o tamanho do buffer-1. A cadeia de caracteres resultante no *buffer* sempre será terminada em nulo.
 
 O número de erro real para **_strerror_s** é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). As mensagens de erro do sistema são acessadas por meio da variável [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que é uma matriz de mensagens ordenadas por número do erro. **_strerror_s** acessa a mensagem de erro apropriada usando o valor **errno** como um índice para a variável **_sys_errlist**. O valor da variável [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como o número máximo de elementos na matriz **_sys_errlist** . Para produzir resultados precisos, chame **_strerror_s** imediatamente após uma rotina de biblioteca retornar com um erro. Caso contrário, as chamadas subsequentes para **strerror_s** ou **_strerror_s** podem substituir o valor **errno** .
 
@@ -176,7 +179,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo de [perror](perror-wperror.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [clearerr](clearerr.md)<br/>
