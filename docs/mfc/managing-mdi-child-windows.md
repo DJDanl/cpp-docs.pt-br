@@ -12,30 +12,30 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: d4b4a4876f47452361b13837b0279f5bf98f8658
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e8e3d0aa51eeea112597485a9221dcba4feda87
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279328"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618368"
 ---
 # <a name="managing-mdi-child-windows"></a>Gerenciando janelas filhos MDI
 
-Janelas de quadro principal de MDI (um por aplicativo) contêm uma janela filho especial chamada janela MDICLIENT. A janela MDICLIENT gerencia a área de cliente da janela do quadro principal e, em si tem janelas filho: as janelas de documentos, derivadas de `CMDIChildWnd`. Como as janelas de documentos são janelas de quadro em si (janelas MDI filho), eles também podem ter seus próprios filhos. Em todos esses casos, a janela pai gerencia suas janelas filho e encaminha alguns comandos para eles.
+As janelas de quadro principal MDI (uma por aplicativo) contêm uma janela filho especial chamada de janela MDICLIENT. A janela MDICLIENT gerencia a área do cliente da janela principal do quadro, e ela própria tem janelas filhas: as janelas de documentos derivadas de `CMDIChildWnd` . Como as janelas de documentos são janelas de quadro (janelas filho MDI), elas também podem ter seus próprios filhos. Em todos esses casos, a janela pai gerencia suas janelas filhas e encaminha alguns comandos para elas.
 
-Em uma janela de quadro MDI, a janela do quadro gerencia a janela MDICLIENT, reposicionamento-lo em conjunto com barras de controle. Janela MDICLIENT, por sua vez, gerencia todas as janelas de quadro MDI filho. A figura a seguir mostra a relação entre uma janela de quadro MDI, sua janela MDICLIENT e suas janelas de quadro de documento filho.
+Em uma janela de quadro MDI, a janela do quadro gerencia a janela MDICLIENT, reposicionando-a em conjunto com barras de controle. A janela MDICLIENT, por sua vez, gerencia todas as janelas de quadros filho MDI. A figura a seguir mostra a relação entre uma janela de quadro MDI, sua janela MDICLIENT e suas janelas de moldura de documento filho.
 
-![Janelas filho em uma janela de quadro MDI](../mfc/media/vc37gb1.gif "janelas filho em uma janela de quadro MDI") <br/>
-Filhos e Windows de quadro MDI
+![Janelas filhas em uma janela de quadro MDI](../mfc/media/vc37gb1.gif "Janelas filhas em uma janela de quadro MDI") <br/>
+Janelas de quadro MDI e filhos
 
-Uma janela de quadro MDI também funciona em conjunto com a janela filho MDI atual, se houver um. A janela de quadro MDI delega as mensagens de comando para o filho MDI antes de tentar tratá-las em si.
+Uma janela de quadro MDI também funciona em conjunto com a janela filho MDI atual, se houver uma. A janela de quadro MDI Delega mensagens de comando para o filho MDI antes de tentar tratá-las em si.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Criando janelas com moldura de documento](../mfc/creating-document-frame-windows.md)
+- [Criando janelas de quadro de documento](creating-document-frame-windows.md)
 
-- [Estilos de janela com moldura](../mfc/frame-window-styles-cpp.md)
+- [Estilos de janela de quadro](frame-window-styles-cpp.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando janelas com moldura](../mfc/using-frame-windows.md)
+[Usando janelas de quadros](using-frame-windows.md)

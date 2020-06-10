@@ -7,29 +7,29 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297236"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621856"
 ---
 # <a name="destroying-window-objects"></a>Destruindo objetos de janela
 
-Deve ter cuidado com suas próprias janelas filho para destruir o objeto de janela C++ quando o usuário é concluído com a janela. Se esses objetos não são destruídos, seu aplicativo não recuperará a memória. Felizmente, a estrutura gerencia a destruição de janela, bem como a criação de janelas de quadro, exibições e caixas de diálogo. Se você criar janelas adicionais, você é responsável por destrui-los.
+Deve-se ter cuidado com suas próprias janelas filhas para destruir o objeto de janela C++ quando o usuário termina com a janela. Se esses objetos não forem destruídos, seu aplicativo não recuperará sua memória. Felizmente, a estrutura gerencia a destruição de janelas, bem como a criação de janelas de quadros, exibições e caixas de diálogo. Se você criar janelas adicionais, será responsável por destruí-las.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Sequência de destruição da janela](../mfc/window-destruction-sequence.md)
+- [Sequência de destruição de janela](window-destruction-sequence.md)
 
-- [Alocando e desalocando a memória da janela](../mfc/allocating-and-deallocating-window-memory.md)
+- [Alocando e desalocando a memória da janela](allocating-and-deallocating-window-memory.md)
 
-- [Desanexando um CWnd de HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Desanexando um CWnd de seu HWND](detaching-a-cwnd-from-its-hwnd.md)
 
-- [Sequência de criação da janela geral](../mfc/general-window-creation-sequence.md)
+- [Sequência de criação de janela geral](general-window-creation-sequence.md)
 
-- [Destruindo janelas com moldura](../mfc/destroying-frame-windows.md)
+- [Destruindo janelas com moldura](destroying-frame-windows.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Objetos de janela](../mfc/window-objects.md)
+[Objetos de janela](window-objects.md)

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-ms.openlocfilehash: 1937098de30884be327c67a698dbb0023be248bb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f47cac34f6cdbdae01af98ec28be5af17edf0e25
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345197"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620958"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Fazendo bypass do mecanismo de serialização
 
-Como você viu, o framework fornece uma maneira padrão para ler e gravar dados para e de arquivos. Serializando por meio de um objeto de arquivo morto atender às necessidades de uma ótima muitos aplicativos. Esse aplicativo lê um arquivo inteiramente na memória, permite que o usuário atualize o arquivo e, em seguida, grava a versão atualizada em disco novamente.
+Como você viu, a estrutura fornece uma maneira padrão de ler e gravar dados de e para arquivos. A serialização por meio de um objeto de arquivo é adequada às necessidades de muitos aplicativos. Esse aplicativo lê totalmente um arquivo na memória, permite que o usuário atualize o arquivo e, em seguida, grave a versão atualizada no disco novamente.
 
-No entanto, alguns aplicativos operam em dados de forma muito diferente e serialização por meio de um arquivo morto não é adequada para esses aplicativos. Exemplos incluem programas de banco de dados, os programas que editar apenas partes de arquivos grandes, programas que gravar arquivos de texto e programas que compartilham arquivos de dados.
+No entanto, alguns aplicativos operam em dados de maneira muito diferente e, para esses aplicativos, a serialização por meio de um arquivo não é adequada. Os exemplos incluem programas de banco de dados, programas que editam apenas partes de arquivos grandes, programas que gravam arquivos somente texto e programas que compartilham arquivos de dados.
 
-Nesses casos, você pode substituir a [Serialize](../mfc/reference/cobject-class.md#serialize) função de maneira diferente para mediar as ações de arquivo por meio de uma [CFile](../mfc/reference/cfile-class.md) objeto em vez de um [CArchive](../mfc/reference/carchive-class.md) objeto.
+Nesses casos, você pode substituir a função [Serialize](reference/cobject-class.md#serialize) de uma maneira diferente de mediar ações de arquivo por meio [de um objeto de](reference/cfile-class.md) retratação em vez de um objeto [CArchive](reference/carchive-class.md) .
 
-Você pode usar o `Open`, `Read`, `Write`, `Close`, e `Seek` funções de membro da classe `CFile` para abrir um arquivo, mova o ponteiro do arquivo (busca) para um ponto específico no arquivo, um registro (um número especificado de bytes de leitura ) neste ponto, permitir que o usuário atualizar o registro, em seguida, buscar novamente para o mesmo ponto e gravar o registro de volta para o arquivo. O framework irá abrir o arquivo para você, e você pode usar o `GetFile` função de membro da classe `CArchive` para obter um ponteiro para o `CFile` objeto. Para uso ainda mais sofisticado e flexível, você pode substituir a [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) e [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) funções membro da classe `CWinApp`. Para obter mais informações, consulte a classe [CFile](../mfc/reference/cfile-class.md) na *referência da MFC*.
+Você pode usar as `Open` `Read` `Write` `Close` funções de membro,,, e `Seek` de classe `CFile` para abrir um arquivo, mover o ponteiro do arquivo (buscar) para um ponto específico no arquivo, ler um registro (um número especificado de bytes) nesse ponto, permitir que o usuário atualize o registro e, em seguida, busque o mesmo ponto novamente e grave o registro de volta no arquivo. A estrutura abrirá o arquivo para você e você poderá usar a `GetFile` função de membro da classe `CArchive` para obter um ponteiro para o `CFile` objeto. Para um uso ainda mais sofisticado e flexível, você pode substituir as funções de membro [OnOpenDocument](reference/cdocument-class.md#onopendocument) e [OnSaveDocument](reference/cdocument-class.md#onsavedocument) da classe `CWinApp` . Para obter mais informações, consulte classe [testcfile](reference/cfile-class.md) na *referência do MFC*.
 
-Nesse cenário, sua `Serialize` substituição não faz nada, a menos que, por exemplo, você deseja para que ele seja de leitura e gravação de um cabeçalho de arquivo para mantê-lo atualizado quando o documento é fechado.
+Nesse cenário, sua `Serialize` substituição não faz nada, a menos que, por exemplo, você queira que ele leia e grave um cabeçalho de arquivo para mantê-lo atualizado quando o documento for fechado.
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando documentos](../mfc/using-documents.md)
+[Usando documentos](using-documents.md)

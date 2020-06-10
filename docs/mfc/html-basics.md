@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 6d3a692eab47a1309ee0248b51ab8563fb077d5a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377241"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619996"
 ---
 # <a name="html-basics"></a>Noções básicas de HTML
 
-A maioria dos navegadores tem a capacidade de examinar a fonte HTML das páginas que você navega. Quando você visualizar a fonte, você verá um número de tags HTML (Hypertext markup language), cercadas por suportes angulares (<>), intercaladas com texto.
+A maioria dos navegadores tem a capacidade de examinar a origem HTML das páginas que você navega. Ao exibir a origem, você verá várias marcas HTML (Hypertext Markup Language), cercadas por colchetes angulares (<>), intercaladas com texto.
 
-As etapas abaixo usam tags HTML para construir uma página da Web simples. Nestas etapas, você digitará texto simples em um arquivo no Bloco de Notas, fará algumas alterações, salvará o arquivo e recarregará sua página no navegador para ver suas alterações.
+As etapas a seguir usam marcas HTML para criar uma página da Web simples. Nestas etapas, você digitará texto sem formatação em um arquivo no bloco de notas, fará algumas alterações, salvará o arquivo e recarregará sua página no navegador para ver suas alterações.
 
 #### <a name="to-create-an-html-file"></a>Para criar um arquivo HTML
 
-1. Abra o Bloco de Notas ou qualquer editor de texto simples.
+1. Abra o bloco de notas ou qualquer editor de texto sem formatação.
 
-1. No menu **Arquivo,** escolha **Novo**.
+1. No menu **arquivo** , escolha **novo**.
 
 1. Digite as seguintes linhas:
 
@@ -33,15 +33,15 @@ As etapas abaixo usam tags HTML para construir uma página da Web simples. Nesta
     </HTML>
     ```
 
-1. No menu **Arquivo,** escolha **Salvar**e salve o arquivo como c:\webpages\First.htm. Deixe o arquivo aberto no editor.
+1. No menu **arquivo** , escolha **salvar**e salve o arquivo como c:\webpages\First.htm. Deixe o arquivo aberto no editor.
 
-1. Mude para o seu navegador e, no menu **Arquivo,** escolha **Abrir**ou *digite file://C:/webpages/first.htm* na caixa de edição de URL do navegador. Você deve ver uma página em branco com a legenda da janela "Top HTML Tags".
+1. Alterne para o navegador e, no menu **arquivo** , escolha **abrir**ou digite *file://C:/WEBPAGES/First.htm* na caixa de edição URL do navegador. Você deve ver uma página em branco com a legenda da janela "Top HTML Tags".
 
-   Observe que as tags estão emparelhadas e estão incluídas em suportes angulares. As tags não são sensíveis a maiúsculas e minúsculas, mas a capitalização é frequentemente usada para fazer com que as tags se destaquem.
+   Observe que as marcas são emparelhadas e incluídas entre colchetes angulares. As marcas não diferenciam maiúsculas de minúsculas, mas a capitalização é geralmente usada para destacar as marcas.
 
-   A \<tag HTML> inicia o \<documento, e a> tag /HTML termina com ele. As tags de término (nem sempre necessárias) são as mesmas da tag inicial, mas têm uma barra para a frente (/) na frente da tag. Não deve haver espaços entre o suporte de ângulo (<) e o início da sua tag.
+   A marca \<HTML> inicia o documento e a marca \</HTML> termina. Marcas de fim (nem sempre necessárias) são as mesmas que a marca de início, mas têm uma barra (/) na frente da marca. Não deve haver nenhum espaço entre o colchete angular (<) e o início da sua marca.
 
-1. Volte para o Bloco de \<Notas e, após a linha /HEAD>, digite:
+1. Volte para o bloco de notas e, depois da \</HEAD> linha, digite:
 
     ```html
     <BODY>
@@ -50,21 +50,21 @@ As etapas abaixo usam tags HTML para construir uma página da Web simples. Nesta
     </BODY>
     ```
 
-1. No menu **Arquivo,** escolha **Salvar**.
+1. No menu **arquivo** , escolha **salvar**.
 
-1. Volte para o seu navegador e atualize a página.
+1. Volte para o navegador e atualize a página.
 
-   As palavras aparecerão na área cliente da janela do seu navegador. Note que seu retorno de carruagem é ignorado. Se você quiser ter uma quebra de `<BR>` linha, você deve incluir uma tag após a primeira linha.
+   As palavras aparecerão na área cliente da janela do navegador. Observe que o retorno de carro é ignorado. Se você quiser ter uma quebra de linha, deverá incluir uma `<BR>` marca após a primeira linha.
 
-   Para todas as etapas a seguir, insira o texto em qualquer lugar entre \<body> e \</BODY> para adicionar ao corpo do seu documento.
+   Para todas as etapas a seguir, insira o texto em qualquer lugar entre \<BODY> e \</BODY> para adicionar ao corpo do documento.
 
-1. Adicione um cabeçalho:
+1. Adicionar um cabeçalho:
 
     ```html
     <H3>Here's the big picture</H3>
     ```
 
-1. Adicione uma imagem, usando um arquivo .gif salvo no mesmo diretório da página:
+1. Adicione uma imagem, usando um arquivo. gif salvo no mesmo diretório da sua página:
 
     ```html
     <IMG src="yourfile.gif">
@@ -80,11 +80,11 @@ As etapas abaixo usam tags HTML para construir uma página da Web simples. Nesta
     </UL>
     ```
 
-1. Para numerar a lista, \<use tags \<oL> e /OL> emparelhadas no lugar das \<tags ul> e \</UL>.
+1. Para numerar a lista, use as marcas emparelhadas \<OL> e \</OL> em vez das \<UL> \</UL> marcas e.
 
-Isso deve começar. Se você ver um grande recurso em uma página da Web, você pode descobrir como ele foi criado examinando a fonte HTML. Editores HTML, como o Microsoft Front Page, podem ser usados para criar páginas simples e avançadas.
+Isso deve ajudá-lo a começar. Se você vir um ótimo recurso em uma página da Web, poderá descobrir como ele foi criado examinando a origem HTML. Editores de HTML, como o Microsoft Front Page, podem ser usados para criar páginas simples e avançadas.
 
-Aqui está toda a fonte HTML para o arquivo que você está construindo:
+Aqui está a fonte HTML inteira para o arquivo que você está criando:
 
 ```html
 <HTML>
@@ -105,10 +105,10 @@ Life is good.
 </HTML>
 ```
 
-Para obter uma descrição completa das tags, atributos e extensões, consulte a especificação HTML (Hypertext Markup Language:
+Para obter uma descrição completa de marcas, atributos e extensões, consulte a especificação de linguagem HTML (HTML):
 
-[Última versão publicada de HTML](https://www.w3.org/TR/html/) em W3C.org.
+[Versão publicada mais recente do HTML](https://www.w3.org/TR/html/) em W3C.org.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Noções básicas de programação da Internet Do MFC](../mfc/mfc-internet-programming-basics.md)
+[Noções básicas de programação na Internet do MFC](mfc-internet-programming-basics.md)

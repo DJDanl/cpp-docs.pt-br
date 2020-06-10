@@ -12,29 +12,29 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: b5f9b783e8e14744a816fd63b327ed95d9da8e8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5441827188f5bff98638cc85cd29e2efd79f8ae8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620336"
 ---
 # <a name="documentview-creation"></a>Criação de documento/exibição
 
-O framework fornece implementações da **New** e **aberto** comandos (entre outros) nos **arquivo** menu. Criação de um novo documento e a exibição associada e a janela do quadro é um esforço cooperativo entre o objeto de aplicativo, um modelo de documento, o documento recém-criado e a janela do quadro recém-criado. A tabela a seguir resume quais objetos de criar o que.
+A estrutura fornece implementações dos comandos **novos** e **abertos** (entre outros) no menu **arquivo** . A criação de um novo documento e sua exibição e janela de quadro associadas são um esforço cooperativo entre o objeto de aplicativo, um modelo de documento, o documento recém-criado e a janela de quadros recém-criada. A tabela a seguir resume quais objetos criam o quê.
 
 ### <a name="object-creators"></a>Criadores de objeto
 
 |Criador|Cria|
 |-------------|-------------|
 |Objeto de aplicativo|Modelo de documento|
-|Modelo de documento|Documento|
+|Modelo de documento|Document|
 |Modelo de documento|Janela do quadro|
-|Janela do quadro|Exibir|
+|Janela do quadro|Visualizar|
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de documento e o processo de criação de documento/exibição](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
-[Criação do modelo de documento](../mfc/document-template-creation.md)<br/>
-[Relacionamentos entre objetos MFC](../mfc/relationships-among-mfc-objects.md)<br/>
-[Criando novos documentos, janelas e exibições](../mfc/creating-new-documents-windows-and-views.md)
+[Modelos de documento e o processo de criação de documento/exibição](document-templates-and-the-document-view-creation-process.md)<br/>
+[Criação do modelo de documento](document-template-creation.md)<br/>
+[Relacionamentos entre objetos MFC](relationships-among-mfc-objects.md)<br/>
+[Criando novos documentos, janelas e exibições](creating-new-documents-windows-and-views.md)

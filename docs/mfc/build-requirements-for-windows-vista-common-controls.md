@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630855"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619738"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Requisitos de compilação para controles comuns do Windows
 
@@ -18,7 +18,7 @@ A biblioteca do Microsoft Foundation Class (MFC) oferece suporte a [controles co
 
 ## <a name="compilation-requirements"></a>Requisitos de compilação
 
-### <a name="supported-versions"></a>Versões com suporte
+### <a name="supported-versions"></a>Versões compatíveis
 
 O MFC oferece suporte a todas as versões dos controles comuns. Para obter informações sobre versões de controles comuns do Windows, consulte [versões de controle comuns](/windows/win32/controls/common-control-versions).
 
@@ -52,6 +52,6 @@ Se você usar o IDE do Visual Studio para criar um novo aplicativo MFC que usa o
 
 ## <a name="see-also"></a>Consulte também
 
-[Tópicos gerais do MFC](../mfc/general-mfc-topics.md)<br/>
-[Gráfico da hierarquia](../mfc/hierarchy-chart.md)<br/>
-[APIs ANSI preteridas](../mfc/deprecated-ansi-apis.md)
+[Tópicos MFC gerais](general-mfc-topics.md)<br/>
+[Gráfico da hierarquia](hierarchy-chart.md)<br/>
+[APIs ANSI preteridas](deprecated-ansi-apis.md)

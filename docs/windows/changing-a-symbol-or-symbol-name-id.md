@@ -35,29 +35,29 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 845834679bca274f1f2ca7a363b8a0681fb8f328
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215184"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623073"
 ---
 # <a name="how-to-manage-symbols"></a>Como: Gerenciar símbolos
 
-Quando você cria um novo recurso ou objeto de recurso, o ambiente de desenvolvimento atribui a ele um nome de símbolo padrão, por exemplo, `IDD_DIALOG1`. Você pode usar a [janela Propriedades](/visualstudio/ide/reference/properties-window) para alterar o nome do símbolo padrão ou para alterar o nome de qualquer símbolo já associado a um recurso.
+Quando você cria um novo recurso ou objeto de recurso, o ambiente de desenvolvimento atribui a ele um nome de símbolo padrão, por exemplo, `IDD_DIALOG1` . Você pode usar a [janela Propriedades](/visualstudio/ide/reference/properties-window) para alterar o nome do símbolo padrão ou para alterar o nome de qualquer símbolo já associado a um recurso.
 
 Para os símbolos associados a um único recurso, você também pode usar a janela **Propriedades** para alterar o valor do símbolo. Você pode usar a [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md) para alterar o valor de símbolos não atribuídos no momento a um recurso.
 
-Normalmente, todas as definições de símbolo são salvas em `Resource.h`. No entanto, talvez seja necessário alterar esse nome de arquivo para que você possa, por exemplo, trabalhar com mais de um arquivo de recurso no mesmo diretório.
+Normalmente, todas as definições de símbolo são salvas em `Resource.h` . No entanto, talvez seja necessário alterar esse nome de arquivo para que você possa, por exemplo, trabalhar com mais de um arquivo de recurso no mesmo diretório.
 
 > [!NOTE]
-> Se o seu projeto ainda não contiver um arquivo. rc, consulte [como: criar recursos](../windows/how-to-create-a-resource-script-file.md).
+> Se o seu projeto ainda não contiver um arquivo. rc, consulte [como: criar recursos](how-to-create-a-resource-script-file.md).
 
 ## <a name="symbol-name-restrictions"></a>Restrições de nome do símbolo
 
 As restrições de nomes de símbolo são as seguintes:
 
-- Todos os [símbolos](../windows/symbols-resource-identifiers.md) devem ser exclusivos dentro do escopo do aplicativo para evitar definições de símbolo conflitantes nos arquivos de cabeçalho.
+- Todos os [símbolos](symbols-resource-identifiers.md) devem ser exclusivos dentro do escopo do aplicativo para evitar definições de símbolo conflitantes nos arquivos de cabeçalho.
 
 - Os caracteres válidos para um nome de símbolo incluem A-Z, a-z, 0-9 e sublinhados (_).
 
@@ -67,14 +67,14 @@ As restrições de nomes de símbolo são as seguintes:
 
 - Os nomes de símbolos não diferenciam maiúsculas de minúsculas, mas o caso da primeira definição de símbolo é preservado.
 
-   O arquivo de cabeçalho que define os símbolos é usado pelo compilador/Editor de recurso e C++ programa (s) para referenciar os recursos definidos em um arquivo de recurso. Para dois nomes de símbolo que diferem apenas em C++ maiúsculas e minúsculas, o programa verá dois símbolos separados, enquanto o compilador/Editor de recursos verá ambos os nomes como referência a um único símbolo.
+   O arquivo de cabeçalho que define os símbolos é usado pelo compilador/Editor de recurso e programa (s) C++ para referenciar os recursos definidos em um arquivo de recurso. Para dois nomes de símbolo que diferem apenas no caso, o programa C++ verá dois símbolos separados, enquanto o compilador/Editor de recursos verá ambos os nomes como referência a um único símbolo.
 
 > [!NOTE]
-> Se você não seguir o esquema de nome de símbolo padrão (ID * _ [palavra-chave]) descrito abaixo e o nome do símbolo for igual a uma palavra-chave conhecida pelo compilador de script de recurso, tentar compilar o arquivo de script de recurso resultará em uma geração de erro aparentemente aleatória Isso é difícil de diagnosticar. Para evitar isso, siga o esquema de nomenclatura padrão.
+> Se você não seguir o esquema de nome de símbolo padrão (ID * _ [palavra-chave]) descrito abaixo e o nome do símbolo for igual a uma palavra-chave conhecida pelo compilador de script de recurso, tentar compilar o arquivo de script de recurso resultará em uma geração de erro aparentemente aleatória que é difícil de diagnosticar. Para evitar isso, siga o esquema de nomenclatura padrão.
 
 Os nomes de símbolo têm prefixos descritivos que indicam o tipo de recurso ou objeto que representam. Esses prefixos descritivos começam com a ID de combinação de texto. A biblioteca do MFC (Microsoft Foundation Class) usa as convenções de nomenclatura de símbolo mostradas na tabela a seguir:
 
-|Categoria|Prefixo|Use|
+|Categoria|Prefixo|Uso|
 |--------------|------------|---------|
 |Recursos|IDR_, IDD_, IDC_, IDI_, IDB_|Acelerador ou menu (e recursos associados ou personalizados), caixa de diálogo, cursor, ícone, bitmap|
 |Itens de menu|ID_|Item de menu|
@@ -119,7 +119,7 @@ Algumas limitações dos valores de símbolo são:
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- Você não pode usar macros de pré-processador com argumentos como definições de valor. O exemplo a seguir não é uma expressão válida, independentemente de qual `ID` é avaliada em tempo de compilação:
+- Você não pode usar macros de pré-processador com argumentos como definições de valor. O exemplo a seguir não é uma expressão válida, independentemente do que `ID` é avaliado em tempo de compilação:
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
@@ -187,9 +187,9 @@ O ambiente interpretará corretamente esses símbolos calculados, desde que:
 
 1. Em [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources), clique com o botão direito do mouse no arquivo *. rc* e selecione o [recurso inclui](../windows/resource-includes-dialog-box.md).
 
-1. Na caixa **diretivas de símbolo somente leitura** , use a diretiva de compilador `#include` para especificar o arquivo no qual você deseja que os símbolos somente leitura sejam mantidos.
+1. Na caixa **diretivas de símbolo somente leitura** , use a `#include` diretiva do compilador para especificar o arquivo no qual você deseja que os símbolos somente leitura sejam mantidos.
 
-   Não chame o arquivo `Resource.h`, uma vez que esse é o nome de arquivo normalmente usado pelo ficheiro de cabeçalho de símbolo principal.
+   Não chame o arquivo `Resource.h` , já que esse é o nome de arquivo normalmente usado pelo ficheiro de cabeçalho de símbolo principal.
 
    > [!NOTE]
    > O que você digita na caixa **diretivas de símbolo somente leitura** é incluído no arquivo de recursos exatamente conforme você o digita. Verifique se o que você digita não contém erros ortográficos ou de sintaxe.
@@ -212,8 +212,8 @@ O ambiente interpretará corretamente esses símbolos calculados, desde que:
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Como: criar símbolos](../windows/creating-new-symbols.md)<br/>
-[IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)<br/>
+[Identificadores de recurso (símbolos)](symbols-resource-identifiers.md)<br/>
+[Como: criar símbolos](creating-new-symbols.md)<br/>
+[IDs de símbolo predefinidas](predefined-symbol-ids.md)<br/>

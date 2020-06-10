@@ -8,46 +8,46 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: 578fd5b72e6c04610aa862f1a6631895a32a9bfe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d65a2e8b373f26fe928e4c3e7c0193aec4edf2d6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358216"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618042"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Classes MFC para criar aplicativos clientes de Internet
 
-O MFC fornece as seguintes classes e funções globais para escrever aplicativos clientes da Internet. O recuo indica que uma classe é derivada da classe não recuada acima dela. `CGopherFile`e `CHttpFile` derivam de `CInternetFile`, por exemplo. Essas classes e funções globais são declaradas no AFXINET. H, `CFileFind`exceto , que é declarado em AFX. H.
+O MFC fornece as seguintes classes e funções globais para escrever aplicativos de cliente de Internet. O recuo indica que uma classe é derivada da classe sem recuo acima dela. `CGopherFile`e `CHttpFile` derive de `CInternetFile` , por exemplo. Essas classes e funções globais são declaradas em AFXINET. H, exceto `CFileFind` , que é declarado em AFX. T.
 
 ## <a name="classes"></a>Classes
 
-- [Cinternetsession](../mfc/reference/cinternetsession-class.md)
+- [CInternetSession](reference/cinternetsession-class.md)
 
-- [Cinternetconnection](../mfc/reference/cinternetconnection-class.md)
+- [CInternetConnection](reference/cinternetconnection-class.md)
 
-  - [Cftpconnection](../mfc/reference/cftpconnection-class.md)
+  - [CFtpConnection](reference/cftpconnection-class.md)
 
-  - [Cgopherconnection](../mfc/reference/cgopherconnection-class.md)
+  - [CGopherConnection](reference/cgopherconnection-class.md)
 
-  - [Conexão Chttp](../mfc/reference/chttpconnection-class.md)
+  - [CHttpConnection](reference/chttpconnection-class.md)
 
-- [Cinternetfile](../mfc/reference/cinternetfile-class.md)
+- [CInternetFile](reference/cinternetfile-class.md)
 
-  - [Cgopherfile](../mfc/reference/cgopherfile-class.md)
+  - [CGopherFile](reference/cgopherfile-class.md)
 
-  - [Chttpfile](../mfc/reference/chttpfile-class.md)
+  - [CHttpFile](reference/chttpfile-class.md)
 
-- [Cfilefind](../mfc/reference/cfilefind-class.md)
+- [CFileFind](reference/cfilefind-class.md)
 
-  - [Cftpfilefind](../mfc/reference/cftpfilefind-class.md)
+  - [CFtpFileFind](reference/cftpfilefind-class.md)
 
-  - [Cgopherfilefind](../mfc/reference/cgopherfilefind-class.md)
+  - [CGopherFileFind](reference/cgopherfilefind-class.md)
 
-- [Cgopherlocator](../mfc/reference/cgopherlocator-class.md)
+- [CGopherLocator](reference/cgopherlocator-class.md)
 
-- [Cinternetexception](../mfc/reference/cinternetexception-class.md)
+- [CInternetException](reference/cinternetexception-class.md)
 
-## <a name="global-functions"></a>Funções Globais
+## <a name="global-functions"></a>Funções globais
 
 - [AfxParseURL](reference/internet-url-parsing-globals.md#afxparseurl)
 
@@ -55,8 +55,8 @@ O MFC fornece as seguintes classes e funções globais para escrever aplicativos
 
 - [AfxThrowInternetException](reference/internet-url-parsing-globals.md#afxthrowinternetexception)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Extensões da Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
-[Pré-requisitos para classes clientes de Internet](../mfc/prerequisites-for-internet-client-classes.md)<br/>
-[Escrevendo um aplicativo cliente da Internet usando classes WinInet do MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+[Extensões da Internet Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
+[Pré-requisitos para classes clientes de Internet](prerequisites-for-internet-client-classes.md)<br/>
+[Escrevendo um aplicativo cliente da Internet usando classes WinInet do MFC](writing-an-internet-client-application-using-mfc-wininet-classes.md)

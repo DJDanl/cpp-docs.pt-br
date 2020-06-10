@@ -1,17 +1,17 @@
 ---
-title: 'Como: Personalizar a barra de ferramentas de acesso rápido'
+title: Como personalizar a barra de ferramentas de acesso rápido
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907775"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620026"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Como: Personalizar a barra de ferramentas de acesso rápido
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Como personalizar a barra de ferramentas de acesso rápido
 
 A barra de ferramentas de acesso rápido (QAT) é uma barra de ferramentas personalizável que contém um conjunto de comandos que são exibidos ao lado do botão aplicativo ou sob as guias categoria. A ilustração a seguir mostra uma barra de ferramentas de acesso rápido típica.
 
@@ -38,7 +38,7 @@ A tabela a seguir define as propriedades da barra de ferramentas de acesso rápi
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Para adicionar ou remover comandos na barra de ferramentas de acesso rápido
 
-1. Na janela **Propriedades** , clique em **qat itens**e, em seguida, clique no botão de reticências **(...)** .
+1. Na janela **Propriedades** , clique em **qat itens**e, em seguida, clique no botão de reticências **(...)**.
 
 1. Na caixa de diálogo **Editor de itens qat** , use os botões **Adicionar** e **remover** para modificar a lista de comandos na barra de ferramentas de acesso rápido.
 
@@ -54,4 +54,4 @@ Os comandos da barra de ferramentas de acesso rápido não aparecem na superfíc
 
 ## <a name="see-also"></a>Consulte também
 
-[Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
+[Designer de faixa de Ribbon (MFC)](ribbon-designer-mfc.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d4d81287cb30a7d3608025085cdb3f9a208147a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153562"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619988"
 ---
 # <a name="interface-elements"></a>Elementos da interface
 
@@ -18,54 +18,54 @@ Este documento descreve os elementos de interface que foram introduzidos no Visu
 
 A ilustração a seguir mostra um aplicativo que foi criado usando os novos elementos de interface.
 
-![O aplicativo de exemplo do MFC Feature Pack](../mfc/media/mfc_featurepack.png "o aplicativo de exemplo do MFC Feature Pack")
+![Aplicativo de exemplo do MFC Feature Pack](../mfc/media/mfc_featurepack.png "Aplicativo de exemplo do MFC Feature Pack")
 
-## <a name="window-docking"></a>Janela de encaixe
+## <a name="window-docking"></a>Encaixe da janela
 
-É semelhante a janela de encaixe que a interface gráfica do usuário do Visual Studio usa a funcionalidade de encaixe da janela.
+A funcionalidade de encaixe da janela é semelhante ao encaixe da janela que a interface gráfica do usuário do Visual Studio usa.
 
-## <a name="control-bars-are-now-panes"></a>Barras de controle são agora painéis
+## <a name="control-bars-are-now-panes"></a>Barras de controle agora são painéis
 
-Barras de controle agora são conhecidas como painéis e derivam [classe CBasePane](../mfc/reference/cbasepane-class.md). Em versões anteriores do MFC, a classe base das barras de controle foi `CControlBar`.
+Barras de controle agora são conhecidas como painéis e são derivadas da [Classe CBasePane](reference/cbasepane-class.md). Nas versões anteriores do MFC, a classe base das barras de controle era `CControlBar` .
 
-A janela de quadro principal do aplicativo geralmente é representada pela [classe CFrameWndEx](../mfc/reference/cframewndex-class.md) ou o [classe CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md). O quadro principal é chamado de *encaixar site*. Painéis podem ter um dos três tipos de pais: um local de encaixe, uma barra de encaixe ou uma janela com minimoldura.
+A janela do quadro principal do aplicativo geralmente é representada pela [Classe CFrameWndEx](reference/cframewndex-class.md) ou pela [Classe CMDIFrameWndEx](reference/cmdiframewndex-class.md). O quadro principal é chamado de *site de encaixe*. Os painéis podem ter um dos três tipos de pais: um site de encaixe, uma barra de encaixe ou uma janela de mini-moldura.
 
-Há dois tipos de painéis: redimensionáveis e não redimensionável. Painéis redimensionáveis, como barras de status e barras de ferramentas, podem ser redimensionados usando divisores ou controles deslizantes. Painéis redimensionáveis podem formar contêineres (um painel pode ser encaixado para outro painel, criando um divisor entre eles). No entanto, os painéis redimensionáveis não podem ser anexados (encaixado) para encaixar barras.
+Há dois tipos de painéis: não redimensionável e redimensionável. Painéis redimensionáveis, como barras de status e barras de ferramentas, podem ser redimensionados usando divisores ou controles deslizantes. Os painéis redimensionáveis podem formar Contêineres (um painel pode ser encaixado em outro painel, criando um divisor entre eles). No entanto, os painéis redimensionáveis não podem ser anexados (encaixados) às barras de encaixe.
 
-Se seu aplicativo usa os painéis não redimensionável, derivá-las de [classe CPane](../mfc/reference/cpane-class.md).  Se seu aplicativo usa painéis redimensionáveis, derivá-las de [classe CDockablePane](../mfc/reference/cdockablepane-class.md)
+Se seu aplicativo usar painéis não redimensionáveis, derive-os da [Classe CPane](reference/cpane-class.md).  Se seu aplicativo usar painéis redimensionáveis, derive-os da [Classe CDockablePane](reference/cdockablepane-class.md)
 
-## <a name="dock-site"></a>Local de encaixe
+## <a name="dock-site"></a>Encaixar site
 
-O local de encaixe (ou a janela do quadro principal) possui todos os painéis e janelas com miniem moldura um aplicativo. O local de encaixe contém um [CDockingManager](../mfc/reference/cdockingmanager-class.md) membro. Esse membro mantém uma lista de todos os painéis que pertencem ao local de encaixe. A lista é ordenada para que os painéis criados nas bordas externas do local de encaixe são posicionados no início da lista. Quando o framework redesenha o local de encaixe, ele faz um loop sobre essa lista e ajusta o layout de cada painel para incluir o retângulo delimitador atual do site de encaixe. Você pode chamar `AdjustDockingLayout` ou `RecalcLayout` quando você precise ajustar o layout de encaixe e a estrutura redireciona essa chamada para o Gerenciador de encaixe.
+O site de encaixe (ou a janela de quadro principal) possui todos os painéis e janelas de mini quadros em um aplicativo. O site Dock contém um membro [CDockingManager](reference/cdockingmanager-class.md) . Esse membro mantém uma lista de todos os painéis que pertencem ao site de encaixe. A lista é ordenada para que os painéis criados nas bordas externas do site de encaixe sejam posicionados no início da lista. Quando a estrutura redesenha o site de encaixe, ele percorre essa lista e ajusta o layout de cada painel para incluir o retângulo delimitador atual do site de encaixe. Você pode chamar `AdjustDockingLayout` ou `RecalcLayout` quando você precisa ajustar o layout de encaixe, e a estrutura redireciona essa chamada para o Gerenciador de encaixe.
 
 ## <a name="dock-bars"></a>Barras de encaixe
 
-Cada janela de quadro principal pode posicionar *encaixar barras* ao longo de suas bordas. Uma barra de encaixe é um painel que pertence a um [classe CDockSite](../mfc/reference/cdocksite-class.md). Barras de encaixe podem aceitar objetos derivados de [CPane](../mfc/reference/cpane-class.md), como barras de ferramentas. Para criar barras de encaixe quando a janela do quadro principal é inicializada, chame `EnableDocking`. Para habilitar as barras de ocultar automaticamente, chame `EnableAutoHideBars`. `EnableAutoHideBars` cria [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objetos e posiciona-os ao lado de cada barra de encaixe.
+Cada janela de quadro principal pode posicionar *barras de encaixe* ao longo de suas bordas. Uma barra de encaixe é um painel que pertence a uma [Classe CDockSite](reference/cdocksite-class.md). As barras de encaixe podem aceitar objetos derivados de [CPane](reference/cpane-class.md), como barras de ferramentas. Para criar barras de encaixe quando a janela do quadro principal for inicializada, chame `EnableDocking` . Para habilitar as barras de ocultar automaticamente, chame `EnableAutoHideBars` . `EnableAutoHideBars`cria objetos [CAutoHideDockSite](reference/cautohidedocksite-class.md) e os posiciona ao lado de cada barra de encaixe.
 
-Cada barra de encaixe é dividida em linhas de encaixe. Linhas de encaixe são representadas pela [classe CDockingPanesRow](../mfc/reference/cdockingpanesrow-class.md). Cada linha de encaixe contém uma lista das barras de ferramentas. Se um usuário se encaixa uma barra de ferramentas ou move a barra de ferramentas de uma linha para outra dentro da mesma barra de encaixe, o framework cria uma nova linha e redimensiona a barra de encaixe adequadamente, ou ele posiciona a barra de ferramentas em uma linha existente.
+Cada barra de encaixe é dividida em linhas de encaixe. Linhas de encaixe são representadas pela [classe CDockingPanesRow](reference/cdockingpanesrow-class.md). Cada linha de encaixe contém uma lista de barras de ferramentas. Se um usuário encaixar uma barra de ferramentas ou mover a barra de ferramentas de uma linha para outra na mesma barra de encaixe, a estrutura criará uma nova linha e redimensionará a barra de encaixe adequadamente ou posicionará a barra de ferramentas em uma linha existente.
 
-## <a name="mini-frame-windows"></a>Windows com minimoldura
+## <a name="mini-frame-windows"></a>Janelas de mini quadros
 
-Um painel flutuante reside em uma janela com minimoldura. Janelas com minisão moldura representadas por duas classes: [Classe CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (que pode conter somente um painel) e [classe CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (que pode conter vários painéis). Para flutuar um painel em seu código, chame [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Depois que um painel flutua, o framework cria automaticamente uma janela com minimoldura e essa janela com minimoldura torna-se o pai do painel flutuante. Quando o painel flutuante encaixa, o framework redefine seu pai e o painel flutuante se torna uma barra de encaixe (para barras de ferramentas) ou um local de encaixe (para painéis redimensionáveis).
+Um painel flutuante reside em uma janela de mini-quadro. As janelas de mini-frame são representadas por duas classes: [CMDITabInfo classe](reference/cmditabinfo-class.md) (que pode conter apenas um painel) e a [classe CMultiPaneFrameWnd](reference/cmultipaneframewnd-class.md) (que pode conter vários painéis). Para flutuar um painel em seu código, chame [CBasePane:: FloatPane](reference/cbasepane-class.md#floatpane). Depois que um painel flutua, a estrutura cria automaticamente uma janela de mini-quadro e essa janela de mini-quadro se torna o pai do painel flutuante. Quando o painel flutuante se encaixa, a estrutura redefine seu pai e o painel flutuante se torna uma barra de encaixe (para barras de ferramentas) ou um site de encaixe (para painéis redimensionáveis).
 
 ## <a name="pane-dividers"></a>Divisores de painel
 
-Divisores de painel (também chamados de controles deslizantes ou divisores) são representados pela [classe CPaneDivider](../mfc/reference/cpanedivider-class.md). Quando um usuário encaixa um painel, a estrutura cria os divisores de painel, independentemente se o painel estiver encaixado no local de encaixe ou em outro painel. Quando um painel se encaixa o local de encaixe, o divisor do painel é chamado de *padrão divisor do painel*. O divisor do painel padrão é responsável pelo layout de todos os painéis de encaixe no local de encaixe. O Gerenciador de encaixe mantém uma lista de divisores de painel padrão e uma lista de painéis. Gerenciadores de encaixe são responsáveis pelo layout de todos os painéis de encaixe.
+Os divisores de painel (também chamados de controles deslizantes ou divisores) são representados pela [Classe CPaneDivider](reference/cpanedivider-class.md). Quando um usuário encaixa um painel, a estrutura cria os divisores de painel, independentemente de o painel estar encaixado no site de encaixe ou em outro painel. Quando um painel se encaixa no site de encaixe, o divisor de painel é chamado de *divisor de painel padrão*. O divisor de painel padrão é responsável pelo layout de todos os painéis de encaixe no site de encaixe. O Dock Manager mantém uma lista de divisores de painel padrão e uma lista de painéis. Os Dock Managers são responsáveis pelo layout de todos os painéis de encaixe.
 
 ## <a name="containers"></a>Contêineres
 
-Todos os painéis redimensionáveis quando encaixado uns aos outros, são mantidos em contêineres. Contêineres são representados pela [classe CPaneContainer](../mfc/reference/cpanecontainer-class.md). Cada contêiner tem ponteiros para seu painel esquerdo, painel direito, subcontêiner à esquerda, direita subcontêiner e o divisor entre as partes esquerdas e direita. (*Esquerda* e *direita* não se referem a lados físicos, mas em vez disso, identifique as ramificações de uma estrutura de árvore.) Dessa maneira, podemos construir uma árvore de painéis e divisores e, portanto, atingir layouts complexos de painéis que podem ser redimensionados juntos. O `CPaneContainer` classe mantém a árvore de contêineres; ele também mantém duas listas de painéis e controles deslizantes que residem nessa árvore. Gerenciadores de contêiner de painel geralmente são incorporadas controles deslizantes de padrão e windows com minimoldura que carregam vários painéis.
+Todos os painéis redimensionáveis, quando encaixados entre si, são mantidos em contêineres. Os contêineres são representados pela [Classe CPaneContainer](reference/cpanecontainer-class.md). Cada contêiner tem ponteiros para o painel esquerdo, para o painel direito, para o subcontêiner esquerdo, para o subcontêiner direito e para o divisor entre as partes esquerda e direita. (*Esquerda* e *direita* não fazem referência a lados físicos, mas sim identificar as ramificações de uma estrutura de árvore.) Dessa maneira, podemos criar uma árvore de painéis e divisores e, portanto, obter layouts complexos de painéis que podem ser redimensionados juntos. A `CPaneContainer` classe mantém a árvore de contêineres; ela também mantém duas listas de painéis e controles deslizantes que residem nessa árvore. Os gerenciadores de contêineres de painel geralmente são inseridos em controles deslizantes padrão e de mini quadros que contêm vários painéis.
 
-## <a name="auto-hide-control-bars"></a>Barras de controle de ocultar automaticamente
+## <a name="auto-hide-control-bars"></a>Ocultar barras de controle automaticamente
 
-Por padrão, cada `CDockablePane` suporta o recurso de ocultar automaticamente. Quando um usuário clica no botão de pino na legenda do `CDockablePane`, o framework alterna o painel para o modo de ocultamento automático. Para lidar com o clique, o framework cria uma [classe CMFCAutoHideBar](../mfc/reference/cmfcautohidebar-class.md) e uma [classe CMFCAutoHideButton](../mfc/reference/cmfcautohidebutton-class.md) associado com o `CMFCAutoHideBar` objeto. O framework coloca o novo `CMFCAutoHideBar` sobre o [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). A estrutura também anexa o `CMFCAutoHideButton` à barra de ferramentas. O [classe CDockingManager](../mfc/reference/cdockingmanager-class.md) mantém o `CDockablePane`.
+Por padrão, cada um `CDockablePane` dá suporte ao recurso de ocultar automaticamente. Quando um usuário clica no botão fixar na legenda do `CDockablePane` , a estrutura alterna o painel para ocultar o modo automaticamente. Para manipular o clique, a estrutura cria uma [classe CMFCAutoHideBar](reference/cmfcautohidebar-class.md) e uma [Classe CMFCAutoHideButton](reference/cmfcautohidebutton-class.md) associada ao `CMFCAutoHideBar` objeto. A estrutura coloca a novidade `CMFCAutoHideBar` no [CAutoHideDockSite](reference/cautohidedocksite-class.md). A estrutura também anexa o `CMFCAutoHideButton` à barra de ferramentas. A [classe CDockingManager](reference/cdockingmanager-class.md) mantém o `CDockablePane` .
 
-## <a name="tabbed-control-bars-and-outlook-bars"></a>Barras de controle com guias e barras de Outlook
+## <a name="tabbed-control-bars-and-outlook-bars"></a>Barras de controle com guias e barras do Outlook
 
-O [classe CMFCBaseTabCtrl](../mfc/reference/cmfcbasetabctrl-class.md) implementa a funcionalidade básica de uma janela com guias com guias desanexáveis. Para usar um `CMFCBaseTabCtrl` do objeto, inicialize uma [classe CBaseTabbedPane](../mfc/reference/cbasetabbedpane-class.md) em seu aplicativo. `CBaseTabbedPane` é derivado de `CDockablePane` e mantém um ponteiro para um `CMFCBaseTabCtrl` objeto. O `CBaseTabbedPane` permite que os usuários Encaixar e redimensionar as barras de controle com guias. Use [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) para criar dinamicamente as barras de controle que estão encaixadas e com guias.
+A [Classe CMFCBaseTabCtrl](reference/cmfcbasetabctrl-class.md) implementa a funcionalidade base de uma janela com guias com guias desanexáveis. Para usar um `CMFCBaseTabCtrl` objeto, inicialize uma [classe CBaseTabbedPane](reference/cbasetabbedpane-class.md) em seu aplicativo. `CBaseTabbedPane`é derivado de `CDockablePane` e mantém um ponteiro para um `CMFCBaseTabCtrl` objeto. O `CBaseTabbedPane` permite que os usuários encaixem e redimensionem barras de controle com guias. Use [CDockablePane:: AttachToTabWnd](reference/cdockablepane-class.md#attachtotabwnd) para criar barras de controle dinamicamente que são encaixadas e tabuladas.
 
-O controle de barra do Outlook também se baseia nas barras com guias. O [classe CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md) é derivado de `CBaseTabbedPane`. Para obter mais informações sobre como usar a barra do Outlook, consulte [classe CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md).
+O controle da barra do Outlook também se baseia em barras com guias. A [Classe CMFCOutlookBar](reference/cmfcoutlookbar-class.md) é derivada de `CBaseTabbedPane` . Para obter mais informações sobre como usar a barra do Outlook, consulte [Classe CMFCOutlookBar](reference/cmfcoutlookbar-class.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Conceitos](../mfc/mfc-concepts.md)
+[Conceitos](mfc-concepts.md)
