@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 46619e77861b6a3a78d74ce6c6d9173a3a5f270f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857323"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777312"
 ---
 # <a name="profile-guided-optimizations"></a>Otimizações orientadas a perfil
 
@@ -31,15 +31,15 @@ Para usar a otimização guiada por perfil, siga estas etapas para otimizar seu 
 
 - Link usando [/LTCG](reference/ltcg-link-time-code-generation.md) e [/GENPROFILE ou/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
 
-   O uso de **/LTCG** e **/GENPROFILE** ou **/FASTGENPROFILE** cria `.pgd` um arquivo quando o aplicativo instrumentado é executado. Depois que os dados de execução de teste são `.pgd` adicionados ao arquivo, ele pode ser usado como entrada para a próxima etapa de link (criando a imagem otimizada). Ao especificar **/GENPROFILE**, você pode opcionalmente adicionar um argumento **PGD =**_filename_ para especificar um nome ou local não padrão para o `.pgd` arquivo. A combinação das opções de vinculador **/LTCG** e **/GENPROFILE** ou **/FASTGENPROFILE** substitui a opção de vinculador **/LTCG: PGINSTRUMENT** preterida.
+   O uso de **/LTCG** e **/GENPROFILE** ou **/FASTGENPROFILE** cria um `.pgd` arquivo quando o aplicativo instrumentado é executado. Depois que os dados de execução de teste são adicionados ao `.pgd` arquivo, ele pode ser usado como entrada para a próxima etapa de link (criando a imagem otimizada). Ao especificar **/GENPROFILE**, você pode opcionalmente adicionar um argumento **PGD =**_filename_ para especificar um nome ou local não padrão para o `.pgd` arquivo. A combinação das opções de vinculador **/LTCG** e **/GENPROFILE** ou **/FASTGENPROFILE** substitui a opção de vinculador **/LTCG: PGINSTRUMENT** preterida.
 
 - Criar o perfil do aplicativo.
 
-   Cada vez que uma sessão EXE com criação de perfil é encerrada ou uma DLL de criação de perfil `appname!N.pgc` é descarregada, um arquivo é criado. Um `.pgc` arquivo contém informações sobre uma execução de teste de aplicativo específico. *AppName* é o nome do seu aplicativo e *N* é um número que começa com 1 que é incrementado com base no número de outros `appname!N.pgc` arquivos no diretório. Você pode excluir um `.pgc` arquivo se a execução de teste não representar um cenário que você deseja otimizar.
+   Cada vez que uma sessão EXE com criação de perfil é encerrada ou uma DLL de criação de perfil é descarregada, um `appname!N.pgc` arquivo é criado. Um `.pgc` arquivo contém informações sobre uma execução de teste de aplicativo específico. *AppName* é o nome do seu aplicativo e *N* é um número que começa com 1 que é incrementado com base no número de outros `appname!N.pgc` arquivos no diretório. Você pode excluir um `.pgc` arquivo se a execução de teste não representar um cenário que você deseja otimizar.
 
-   Durante uma execução de teste, você pode forçar o fechamento do arquivo `.pgc` aberto no momento e a criação de `.pgc` um novo arquivo com o utilitário [PGOSWEEP](pgosweep.md) (por exemplo, quando o final de um cenário de teste não coincide com o desligamento do aplicativo).
+   Durante uma execução de teste, você pode forçar o fechamento do arquivo aberto no momento `.pgc` e a criação de um novo `.pgc` arquivo com o utilitário [PGOSWEEP](pgosweep.md) (por exemplo, quando o final de um cenário de teste não coincide com o desligamento do aplicativo).
 
-   Seu aplicativo também pode invocar diretamente uma função PGO, [PgoAutoSweep](pgoautosweep.md), para capturar os dados de perfil no ponto da chamada como um `.pgc` arquivo. Ele pode lhe dar um melhor controle sobre o código coberto pelos dados capturados em `.pgc` seus arquivos. Para obter um exemplo de como usar essa função, consulte a documentação do [PgoAutoSweep](pgoautosweep.md) .
+   Seu aplicativo também pode invocar diretamente uma função PGO, [PgoAutoSweep](pgoautosweep.md), para capturar os dados de perfil no ponto da chamada como um `.pgc` arquivo. Ele pode lhe dar um melhor controle sobre o código coberto pelos dados capturados em seus `.pgc` arquivos. Para obter um exemplo de como usar essa função, consulte a documentação do [PgoAutoSweep](pgoautosweep.md) .
 
    Quando você cria sua compilação instrumentada, por padrão, a coleta de dados é feita no modo não seguro de thread, que é mais rápido, mas pode ser imprecisa. Usando o argumento **exato** para **/GENPROFILE** ou **/FASTGENPROFILE**, você pode especificar a coleta de dados no modo de thread-safe, o que é mais preciso, mas mais lento. Essa opção também estará disponível se você definir a variável de ambiente [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode) preterida ou a opção de vinculador **/POGOSAFEMODE** preterida ao criar sua compilação instrumentada.
 
@@ -47,7 +47,10 @@ Para usar a otimização guiada por perfil, siga estas etapas para otimizar seu 
 
    Use as opções do vinculador **/LTCG** e [/USEPROFILE](reference/useprofile.md) para criar a imagem otimizada. Essa etapa usa como entrada do `.pgd` arquivo. Ao especificar **/USEPROFILE**, você pode opcionalmente adicionar um argumento **PGD =**_filename_ para especificar um nome ou local não padrão para o `.pgd` arquivo. Você também pode especificar esse nome usando a opção de vinculador **/PGD** preterida. A combinação de **/LTCG** e **/USEPROFILE** substitui as opções de vinculador **/LTCG: PGOPTIMIZE** e **/LTCG: PGUPDATE** preteridas.
 
-É possível, até mesmo, criar o arquivo executável otimizado e, posteriormente, determinar que a criação de perfil adicional seria útil para criar uma imagem mais otimizada. Se a imagem `.pgd` instrumentada e seu arquivo estiverem disponíveis, você poderá executar execuções de teste adicionais e recriar a imagem otimizada `.pgd` com o arquivo mais recente, usando as mesmas opções de vinculador **/LTCG** e **/USEPROFILE** .
+É possível, até mesmo, criar o arquivo executável otimizado e, posteriormente, determinar que a criação de perfil adicional seria útil para criar uma imagem mais otimizada. Se a imagem instrumentada e seu `.pgd` arquivo estiverem disponíveis, você poderá executar execuções de teste adicionais e recriar a imagem otimizada com o arquivo mais recente `.pgd` , usando as mesmas opções de vinculador **/LTCG** e **/USEPROFILE** .
+
+> [!NOTE]
+> Os `.pgc` `.pgd` arquivos e são tipos de arquivo binários. Se estiver armazenado em um sistema de controle do código-fonte, evite qualquer transformação automática que possa ser feita em arquivos de texto.
 
 ## <a name="optimizations-performed-by-pgo"></a>Otimizações executadas pelo PGO
 
@@ -65,7 +68,7 @@ As otimizações guiadas por perfil incluem essas verificações e aprimoramento
 
 - **Layout de função** – com base no grafo de chamada e no comportamento de chamador/receptor de perfil, as funções que tendem a estar ao longo do mesmo caminho de execução são colocadas na mesma seção.
 
-- **Otimização de ramificação condicional** -com as investigações de valor, as otimizações guiadas por perfil podem descobrir se um determinado valor em uma instrução switch é usado com mais frequência do que outros valores.  Esse valor pode então ser extraído da instrução switch.  O mesmo pode ser feito com `if`... `else` instruções em que o otimizador pode ordenar o `if`... `else` para que o `if` bloco ou `else` seja colocado primeiro, dependendo de qual bloco é mais frequentemente válido.
+- **Otimização de ramificação condicional** -com as investigações de valor, as otimizações guiadas por perfil podem descobrir se um determinado valor em uma instrução switch é usado com mais frequência do que outros valores.  Esse valor pode então ser extraído da instrução switch.  O mesmo pode ser feito com `if` instruções... `else` em que o otimizador pode ordenar o `if` ... `else` para que `if` o `else` bloco ou seja colocado primeiro, dependendo de qual bloco é mais frequentemente válido.
 
 - **Separação de código inativo** -o código que não é chamado durante a criação de perfil é movido para uma seção especial que é acrescentada ao final do conjunto de seções. Isso efetivamente mantém essa seção fora das páginas usadas com frequência.
 
@@ -77,21 +80,21 @@ As otimizações guiadas por perfil incluem essas verificações e aprimoramento
 
 Leia mais sobre essas variáveis, funções e ferramentas de ambiente que você pode usar em otimizações guiadas por perfil:
 
-[Variáveis de ambiente para otimizações guiadas por perfil](environment-variables-for-profile-guided-optimizations.md)<br/>
+[Variáveis de ambiente para otimizações orientadas a perfil](environment-variables-for-profile-guided-optimizations.md)<br/>
 Essas variáveis foram usadas para especificar o comportamento de tempo de execução de cenários de teste. Agora eles são preteridos e substituídos por novas opções do vinculador. Este documento mostra como mover das variáveis de ambiente para as opções do vinculador.
 
 [PgoAutoSweep](pgoautosweep.md)<br/>
-Uma função que você pode adicionar ao seu aplicativo para fornecer controle refinado de captura de dados de `.pgc` arquivo.
+Uma função que você pode adicionar ao seu aplicativo para fornecer controle refinado de `.pgc` captura de dados de arquivo.
 
 [pgosweep](pgosweep.md)<br/>
-Um utilitário de linha de comando que grava todos os dados de `.pgc` perfil no arquivo, `.pgc` fecha o arquivo e abre um `.pgc` novo arquivo.
+Um utilitário de linha de comando que grava todos os dados de perfil no `.pgc` arquivo, fecha o `.pgc` arquivo e abre um novo `.pgc` arquivo.
 
 [pgomgr](pgomgr.md)<br/>
-Um utilitário de linha de comando que adiciona dados de perfil de um `.pgc` ou mais arquivos `.pgd` ao arquivo.
+Um utilitário de linha de comando que adiciona dados de perfil de um ou mais `.pgc` arquivos ao `.pgd` arquivo.
 
-[Como: mesclar vários perfis de PGO em um único perfil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
+[Como: mesclar vários perfis do PGO em um único perfil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
 Exemplos de uso de **pgomgr** .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Ferramentas de compilação adicionais MSVC](reference/c-cpp-build-tools.md)
+[Ferramentas de build adicionais do MSVC](reference/c-cpp-build-tools.md)
