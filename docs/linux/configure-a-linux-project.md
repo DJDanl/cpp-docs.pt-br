@@ -1,13 +1,13 @@
 ---
 title: Configurar um projeto do C++ Linux no Visual Studio
-ms.date: 06/11/2019
+ms.date: 06/22/2020
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623588"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269735"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
@@ -33,7 +33,7 @@ Configure um projeto do Linux para ter como destino um computador Linux físico,
 
 ## <a name="general-settings"></a>Configurações gerais
 
-Para exibir as opções de configuração, selecione o menu **Projeto > Propriedades** ou clique com o botão direito do mouse no projeto em **Gerenciador de Soluções** e selecione **Propriedades** no menu de contexto. As **Configurações gerais** são exibidas.
+Para exibir as opções de configuração, selecione o menu **Propriedades do projeto >** ou clique com o botão direito do mouse no projeto em **Gerenciador de soluções** e selecione **Propriedades** no menu de contexto. As **Configurações gerais** são exibidas.
 
 ![Configuração geral](media/settings_general.png)
 
@@ -43,7 +43,7 @@ Para obter mais informações sobre as configurações nas páginas de proprieda
 
 ## <a name="remote-settings"></a>Configurações remotas
 
-Para alterar as configurações relacionadas ao computador Linux remoto, defina as configurações remotas exibidas em [Geral](prop-pages/general-linux.md).
+Para alterar as configurações relacionadas ao computador Linux remoto, defina as configurações remotas que aparecem em [geral](prop-pages/general-linux.md).
 
 - Para especificar um computador Linux de destino remoto, use a entrada **Computador de Build Remoto**. Isso permitirá selecionar uma das conexões criadas anteriormente. Para criar uma entrada, confira a seção [Como se conectar ao computador Linux remoto](connect-to-your-remote-linux-computer.md).
 
@@ -72,7 +72,7 @@ Para alterar as configurações relacionadas ao computador Linux remoto, defina 
 
 ::: moniker range="vs-2019"
 
-Esta seção não se aplica quando o WSL é o destino.
+Esta seção não se aplica ao direcionamento de WSL.
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ Durante o build em sistemas remotos, os arquivos de origem no computador de dese
 
 - **Copiar fontes** pode ser ativado e desativado para habilitar e desabilitar a cópia de arquivos de origem para o computador remoto.
 
-- **Fontes adicionais a serem copiadas** permite que você adicione outros arquivos de origem que serão copiados para o sistema remoto. É possível especificar uma lista delimitada por ponto-e-vírgula ou usar a sintaxe **:=** para especificar um nome local e remoto a ser usado:
+- As **fontes adicionais a serem copiadas** permitem que você adicione arquivos de origem adicionais, que serão copiados para o sistema remoto. É possível especificar uma lista delimitada por ponto-e-vírgula ou usar a sintaxe **:=** para especificar um nome local e remoto a ser usado:
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
@@ -123,7 +123,11 @@ Habilite o log ajudar a solucionar problemas:
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="linux-target-locale"></a><a name="locale"></a>Localidade de destino do Linux
+
+As configurações de linguagem do Visual Studio não são propagadas para destinos do Linux porque o Visual Studio não gerencia nem configura pacotes instalados. As mensagens mostradas na janela de **saída** , como erros de compilação, são mostradas usando o idioma e a localidade do destino do Linux. Você precisará configurar seus destinos do Linux para a localidade desejada.
+
+## <a name="see-also"></a>Veja também
 
 [Defina propriedades de build e compilador](../build/working-with-project-properties.md)<br/>
 [Propriedades gerais de C++ (Linux C++)](prop-pages/general-linux.md)<br/>
