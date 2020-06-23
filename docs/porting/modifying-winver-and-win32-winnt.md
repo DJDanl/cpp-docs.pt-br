@@ -1,21 +1,21 @@
 ---
 title: Atualizar WINVER e _WIN32_WINNT
-description: Quando e como atualizar macros WINVER e _WIN32_WINNT em projetos do Visual C++ Studio atualizados.
-ms.date: 01/22/2020
+description: Quando e como atualizar macros WINVER e _WIN32_WINNT em projetos do Visual Studio C++ atualizados.
+ms.date: 06/19/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: a0faed612517bf26cd89473e1aef248fb9e7b33e
+ms.sourcegitcommit: 493fd8747f832e1facb9a76c437a25a5c9fb55f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725690"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141048"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>Atualizar WINVER e _WIN32_WINNT
 
-Ao usar o SDK do Windows, você pode especificar em quais versões do Windows seu código pode ser executado. As macros de pré-processador **winver** e **_WIN32_WINNT** especificam a versão mínima do sistema operacional com suporte do seu código. O Visual Studio e o C++ suporte ao compilador da Microsoft visam o Windows 7 SP1 e posterior. Os conjuntos de ferramentas mais antigos incluem suporte para o Windows XP SP4, o Windows Server 2003 SP4, o Vista e o Windows Server 2008. Não há suporte para o Windows 95, Windows 98, Windows ME, Windows NT e Windows 2000.
+Ao usar o SDK do Windows, você pode especificar em quais versões do Windows seu código pode ser executado. As macros de pré-processador **winver** e **_WIN32_WINNT** especificam a versão mínima do sistema operacional com suporte do seu código. O Visual Studio e o compilador do Microsoft C++ dão suporte ao Windows 7 SP1 e posterior. Os conjuntos de ferramentas mais antigos incluem suporte para o Windows XP SP2, o Windows Server 2003 SP1, o Vista e o Windows Server 2008. Não há suporte para o Windows 95, Windows 98, Windows ME, Windows NT e Windows 2000.
 
 Ao atualizar um projeto mais antigo, talvez seja necessário atualizar suas macros **winver** ou **_WIN32_WINNT** . Se eles forem atribuídos a valores para uma versão sem suporte do Windows, você poderá ver erros de compilação relacionados a essas macros.
 
