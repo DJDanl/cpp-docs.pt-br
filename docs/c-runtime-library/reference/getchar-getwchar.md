@@ -1,6 +1,6 @@
 ---
 title: getchar, getwchar
-ms.date: 4/2/2020
+ms.date: 06/23/2020
 api_name:
 - getchar
 - getwchar
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920337"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334975"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -53,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, **GetChar** retorna **EOF**e **getwchar** retorna **WEOF**. Para **GetChar**, use **referenciador** ou **feof** para verificar se há um erro ou para o fim do arquivo.
+Retorna o caractere lido. Essas funções aguardam entrada e não retornam até que a entrada esteja disponível.
+
+Para indicar um erro de leitura ou uma condição de fim de arquivo, **GetChar** retorna **EOF**e **getwchar** retorna **WEOF**. Para **GetChar**, use **referenciador** ou **feof** para verificar se há um erro ou para o fim do arquivo.
 
 ## <a name="remarks"></a>Comentários
 
 Cada rotina lê um único caractere de **stdin** e incrementa o ponteiro de arquivo associado para apontar para o próximo caractere. **GetChar** é o mesmo que [_fgetchar](fgetc-fgetwc.md), mas é implementado como uma função e como uma macro.
 
-Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Para ver uma versão sem bloqueio, consulte [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+Essas funções também bloqueiam o thread de chamada e são thread-safe. Para ver uma versão sem bloqueio, consulte [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
