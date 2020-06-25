@@ -1,6 +1,6 @@
 ---
 title: Funções (SafeInt)
-ms.date: 10/22/2018
+ms.date: 06/23/2020
 ms.topic: reference
 f1_keywords:
 - SafeInt functions
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622069"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334919"
 ---
 # <a name="safeint-functions"></a>Funções (SafeInt)
 
-A biblioteca SafeInt fornece várias funções que você pode usar sem criar uma instância da classe [SafeInt](safeint-class.md). Se quiser proteger uma única operação matemática contra estouros de inteiro, você pode usar essas funções. Se quiser proteger várias operações matemáticas, você deve criar objetos `SafeInt`. É mais eficiente criar objetos `SafeInt` do que usar essas funções várias vezes.
+A biblioteca SafeInt fornece várias funções que você pode usar sem criar uma instância da classe [SafeInt](safeint-class.md). Se quiser proteger uma única operação matemática contra estouros de inteiro, você pode usar essas funções. Se quiser proteger várias operações matemáticas, você deve criar objetos `SafeInt`. É mais eficiente criar `SafeInt` objetos do que usar essas funções várias vezes.
 
 Essas funções permitem comparar ou realizar operações matemáticas em dois tipos diferentes de parâmetros sem antes precisar convertê-los no mesmo tipo.
 
@@ -136,10 +136,10 @@ inline bool SafeDivide (
 ### <a name="parameters"></a>Parâmetros
 
 *t*<br/>
-[in] O divisor. Deve ser do tipo T.
+[in] O dividendo. Deve ser do tipo T.
 
 *u*<br/>
-[in] O dividendo. Deve ser do tipo U.
+[in] O divisor. Deve ser do tipo U.
 
 *result*<br/>
 [out] O parâmetro em que `SafeDivide` armazena o resultado.
@@ -250,7 +250,7 @@ inline bool SafeLessThan (
 [in] O primeiro número. Deve ser do tipo `T`.
 
 *u*<br/>
-[in] O segundo número. Deve ser do tipo `U`.
+no O segundo número. Deve ser do tipo `U`.
 
 ### <a name="return-value"></a>Valor Retornado
 
@@ -366,7 +366,7 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>Valor Retornado
 
-**true** se *t* e *u* não forem iguais, caso contrário, **false**.
+**true** se *t* e *u* não forem iguais; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 

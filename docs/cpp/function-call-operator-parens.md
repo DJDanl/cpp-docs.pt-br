@@ -23,7 +23,7 @@ ms.locfileid: "84777299"
 
 Uma chamada de função é um tipo de *`postfix-expression`* , formada por uma expressão que identifica uma função seguida pelo operador de chamada de função, **`()`** . Um objeto pode declarar uma `operator ()` função, que fornece semântica de chamada de função para o objeto.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 > *`postfix-expression`*:\
 > &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
