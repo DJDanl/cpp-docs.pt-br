@@ -12,33 +12,34 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813544"
 ---
 # <a name="function-call-operator-"></a>Operador de chamada da função: ()
 
-Uma chamada de função é um tipo de *`postfix-expression`* , formada por uma expressão que identifica uma função seguida pelo operador de chamada de função, **`()`** . Um objeto pode declarar uma `operator ()` função, que fornece semântica de chamada de função para o objeto.
+Uma chamada de função é um tipo de *`postfix-expression`* , formada por uma expressão que é avaliada como uma função ou um objeto que possa ser chamado, seguido pelo operador de chamada de função, **`()`** . Um objeto pode declarar uma `operator ()` função, que fornece semântica de chamada de função para o objeto.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 > *`postfix-expression`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
+> &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
 ## <a name="remarks"></a>Comentários
 
 Os argumentos para o operador de chamada de função são provenientes de uma *`argument-expression-list`* lista de expressões separadas por vírgulas. Os valores dessas expressões são passados para a função como argumentos. A *lista de expressão de argumento* pode estar vazia. Antes do C++ 17, a ordem de avaliação da expressão de função e as expressões de argumento não são especificadas e podem ocorrer em qualquer ordem. No C++ 17 e posteriores, a expressão de função é avaliada antes de qualquer expressão de argumento ou argumentos padrão. As expressões de argumento são avaliadas em uma sequência indeterminada.
 
-O *`postfix-expression`* identifica a função a ser chamada. Ele deve ser avaliado como um endereço de função. Ele pode ter várias formas:
+O *`postfix-expression`* é avaliado para a função a ser chamada. Ele pode ter várias formas:
 
-- um nome ou ponteiro de objeto Function ou Function,
-- uma expressão lvalue que se refere a um objeto Function ou Function,
-- um acessador de função membro, explícito ou implícito.
+- um identificador de função, visível no escopo atual ou no escopo de qualquer um dos argumentos de função fornecidos,
+- uma expressão que é avaliada como uma função, um ponteiro de função, um objeto que possa ser chamado ou uma referência a uma,
+- um acessador de função membro, explícito ou implícito,
+- um ponteiro de referência para uma função de membro.
 
-A função especificada pelo *`postfix-expression`* pode ser uma função sobrecarregada. As regras usuais para resolução de sobrecarga determinam a função real a ser chamada.
+O *`postfix-expression`* pode ser um identificador de função sobrecarregado ou um acessador de função de membro sobrecarregado. As regras para resolução de sobrecarga determinam a função real a ser chamada. Se a função de membro for virtual, a função a ser chamada será determinada em tempo de execução.
 
 Algumas declarações de exemplo:
 

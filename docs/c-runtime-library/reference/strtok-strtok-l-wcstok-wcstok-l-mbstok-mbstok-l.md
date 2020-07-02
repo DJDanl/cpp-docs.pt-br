@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 4/2/2020
+ms.date: 6/24/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737521"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -82,6 +82,11 @@ char *strtok_l(
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
+);
+wchar_t *wcstok(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   wchar_t **context
 );
 wchar_t *wcstok_l(
    wchar_t *strToken,
@@ -110,13 +115,18 @@ Conjunto de caracteres delimitadores.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor retornado
+*contexto*<br/>
+Aponta para a memória usada para armazenar o estado interno do analisador para que o analisador possa continuar de onde parou na próxima vez que você chamar **wcstok**.
+
+## <a name="return-value"></a>Valor Retornado
 
 Retorna um ponteiro para o próximo token encontrado em *strToken*. As funções retornam **NULL** quando não são encontrados mais tokens. Cada chamada modifica *strToken* substituindo um caractere nulo para o primeiro delimitador que ocorre após o token retornado.
 
 ## <a name="remarks"></a>Comentários
 
 A função **strtok** localiza o próximo token em *strToken*. O conjunto de caracteres em *strDelimit* Especifica possíveis delimitadores do token a serem encontrados em *strToken* na chamada atual. **wcstok** e **_mbstok** são versões de caractere largo e multibyte de **strtok**. Os argumentos e o valor de retorno de **wcstok** são cadeias de caracteres largos; os de **_mbstok** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+
+A versão de dois argumentos de **wcstok** não é padrão. Se você precisar usar essa versão, precisará definir `_CRT_NON_CONFORMING_WCSTOK` antes `#include <wchar.h>` de (ou `#include <string.h>` ).
 
 > [!IMPORTANT]
 > Essas funções acarretam uma ameaça em potencial em relação ao problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
@@ -145,6 +155,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> ou \<wchar.h>|
+|**_wcstok_l**|<tchar.h>|
 |**_mbstok**, **_mbstok_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
@@ -198,7 +209,7 @@ tokens
 ## <a name="see-also"></a>Confira também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

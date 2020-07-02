@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813603"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Walkthrough: criar um aplicativo de área de trabalho do Windows tradicional (C++)
 
@@ -389,7 +389,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
    ```
 
    `HDC`no código, há um identificador para um contexto de dispositivo, que é usado para desenhar na área do cliente da janela. Use as `BeginPaint` `EndPaint` funções e para se preparar e concluir o desenho na área do cliente. `BeginPaint`Retorna um identificador para o contexto do dispositivo de vídeo usado para desenhar na área do cliente; `EndPaint`encerra a solicitação de pintura e libera o contexto do dispositivo.
-   
+
 1. Um aplicativo normalmente lida com muitas outras mensagens. Por exemplo, [WM_CREATE](/windows/win32/winmsg/wm-create) quando uma janela é criada pela primeira vez e [WM_DESTROY](/windows/win32/winmsg/wm-destroy) quando a janela é fechada. O código a seguir mostra uma função básica, mas completa `WndProc` .
 
    ```cpp

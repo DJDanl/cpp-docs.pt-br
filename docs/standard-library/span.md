@@ -5,16 +5,16 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: ebd0a30c677ea44f95e64e2d2ba010bc99cb412b
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813529"
 ---
 # <a name="ltspangt"></a>&lt;compreende&gt;
 
-Um `span` é uma exibição em uma sequência de objetos contígua. Ele fornece acesso seguro rápido e limitado. Ao contrário de `vector` ou `array` , ele não "possui" os elementos aos quais ele fornece acesso. 
+Um `span` é uma exibição em uma sequência de objetos contígua. Ele fornece acesso seguro rápido e limitado. Ao contrário de `vector` ou `array` , ele não "possui" os elementos aos quais ele fornece acesso.
 
 Consulte [classe span](span-class.md) para obter informações detalhadas. Veja um exemplo de como um Span pode ser usado:
 
