@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: f58ba02862e9c0f0c0c0d24797be939276ca8035
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813516"
 ---
 # <a name="cfileexception-class"></a>Classe CFileException
 
 Representa uma condição de exceção relacionada a arquivo.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 class CFileException : public CException
@@ -205,11 +205,11 @@ Esse membro de dados é uma variável pública do tipo **int**. Os enumeradores 
 | `CFileException::diskFull` | 13: o disco está cheio. |
 | `CFileException::endOfFile` | 14: o fim do arquivo foi atingido. |
 
-    > [!NOTE]
-    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.
+> [!NOTE]
+> Esses enumeradores de causa de `CFileException` são diferentes dos enumeradores de causa de `CArchiveException`.
 
-    > [!NOTE]
-    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.
+> [!NOTE]
+> O `CArchiveException::generic` foi preterido. Use `genericException` em vez disso. Se **genérico** for usado em um aplicativo e compilado com/CLR, os erros de sintaxe resultantes não serão fáceis de decifrar.
 
 ### <a name="example"></a>Exemplo
 
