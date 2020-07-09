@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
 ms.openlocfilehash: 7b671cfdf5d5ce43024ac3e038c214396ac8679c
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058614"
@@ -19,7 +20,7 @@ ms.locfileid: "86058614"
 
 A diretiva **#line** informa ao pré-processador para definir os valores relatados do compilador para o número de linha e o nome de arquivo para um determinado número de linha e nome de arquivo.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 > **`#line`***sequência de dígitos* ["*filename*"]
 
@@ -72,6 +73,6 @@ Neste exemplo, a macro `ASSERT` usa as macros predefinidas `__LINE__` e `__FILE_
 __LINE__, __FILE__ );}
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
