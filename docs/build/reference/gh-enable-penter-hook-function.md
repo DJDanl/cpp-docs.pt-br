@@ -12,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
 ms.openlocfilehash: 96597d964e6a341aa25f4d52d34974949eb7b096
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058575"
@@ -105,7 +106,7 @@ In a function!
 In a function!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
