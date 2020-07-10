@@ -1,37 +1,40 @@
 ---
 title: Aviso do compilador (nível 1) C4750
-ms.date: 11/04/2016
+description: Descreve o C4750 de aviso do compilador MSVC sobre um possível estouro de pilha.
+ms.date: 07/08/2020
 f1_keywords:
 - C4750
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 9ba0a37d2c213c35002b8e09d4377869a868d401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a22bdda407b02b8723b7198d62289d39f62792d
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175162"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180962"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Aviso do compilador (nível 1) C4750
 
-' identifier ': função com _alloca () embutida em um loop
+> '*Identifier*': função com _alloca () embutida em um loop
 
-A função ' identifier ' força a expansão embutida da função [_alloca](../../c-runtime-library/reference/alloca.md) dentro de um loop, o que pode causar um estouro de pilha quando o loop é executado.
+## <a name="remarks"></a>Comentários
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+A função '*Identifier*' força a expansão embutida da [`_alloca`](../../c-runtime-library/reference/alloca.md) função dentro de um loop, o que pode causar um estouro de pilha quando o loop é executado.
 
-1. Certifique-se de que a função ' identifier ' não seja modificada com o especificador de [__forceinline](../../cpp/inline-functions-cpp.md) .
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
-1. Verifique se a função ' identifier ' não contém uma função [_alloca](../../c-runtime-library/reference/alloca.md) que esteja contida em um loop.
+1. Certifique-se de que a função '*Identifier*' não seja modificada com o [`__forceinline`](../../cpp/inline-functions-cpp.md) especificador.
 
-1. Não especifique a opção de compilação [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/Ox](../../build/reference/ox-full-optimization.md)ou [/og](../../build/reference/og-global-optimizations.md) .
+1. Certifique-se de que a função '*Identifier*' não contenha uma [`_alloca`](../../c-runtime-library/reference/alloca.md) função que esteja contida em um loop.
 
-1. Coloque a função [_alloca](../../c-runtime-library/reference/alloca.md) em uma [instrução try-Except](../../cpp/try-except-statement.md) que irá capturar um estouro de pilha.
+1. Não especifique a [`/O1`](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opção de compilação,, [`/O2`](../../build/reference/o1-o2-minimize-size-maximize-speed.md) [`/Ox`](../../build/reference/ox-full-optimization.md) ou [`/Og`](../../build/reference/og-global-optimizations.md) .
+
+1. Coloque a [`_alloca`](../../c-runtime-library/reference/alloca.md) função em uma [instrução try-Except](../../cpp/try-except-statement.md) que irá capturar um estouro de pilha.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo de código a seguir chama `MyFunction` em um loop e `MyFunction` chama a função `_alloca`. O modificador de `__forceinline` faz com que a expansão embutida da função `_alloca`.
+O exemplo de código a seguir chama `MyFunction` um loop e `MyFunction` chama a `_alloca` função. O `__forceinline` modificador faz a expansão embutida da `_alloca` função.
 
 ```cpp
 // c4750.cpp
@@ -55,6 +58,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [_alloca](../../c-runtime-library/reference/alloca.md)

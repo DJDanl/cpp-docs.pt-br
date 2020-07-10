@@ -1,33 +1,33 @@
 ---
-title: Propriedades deC++ projeto/C (Visual Studio)
-description: Guia de referência para as propriedades de páginas deC++ Propriedades do Microsoft C/Project do Visual Studio.
-ms.date: 02/09/2020
+title: Propriedades do projeto C/C++ (Visual Studio)
+description: Guia de referência para as propriedades das páginas de propriedades do projeto do Microsoft C/C++ do Visual Studio.
+ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: fdfcaaebe8394fedd160c6c02e8c938543f845e2
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 3366f6677bf976b6211dd27a8abb114765fb2abc
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257748"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180884"
 ---
-# <a name="cc-property-pages"></a>Páginas CC++ /Property
+# <a name="cc-property-pages"></a>Páginas de propriedades do C/C++
 
-As páginas de propriedades a seguir são encontradas em **Propriedades** de > de **projeto** > **Propriedades de configuração** > **C/C++** :
+As seguintes páginas de propriedades são encontradas em Propriedades do **projeto**  >  **Properties**  >  **Propriedades de configuração**  >  **C/C++**:
 
-## <a name="cc-general-properties"></a>Propriedades CC++ /General
+## <a name="cc-general-properties"></a>Propriedades gerais do C/C++
 
 ### <a name="additional-include-directories"></a>Diretórios de Inclusão Adicionais
 
-Especifica um ou mais diretórios a serem adicionados ao caminho de inclusão, separados por ponto e vírgula no caso de mais de um. Define [/i (diretórios de inclusão adicionais)](i-additional-include-directories.md).
+Especifica um ou mais diretórios a serem adicionados ao caminho de inclusão, separados por ponto e vírgula no caso de mais de um. Conjuntos [ `/I` (diretórios de inclusão adicionais)](i-additional-include-directories.md).
 
 ### <a name="additional-using-directories"></a>Diretórios #using adicionais
 
-Especifica um ou mais diretórios (nomes de diretório separados com ponto e vírgula) a serem pesquisados para resolver nomes passados para uma diretiva de #using. Define [/ai](ai-specify-metadata-directories.md).
+Especifica um ou mais diretórios (nomes de diretório separados com ponto e vírgula) a serem pesquisados para resolver nomes passados para uma diretiva de #using. Define [`/AI`](ai-specify-metadata-directories.md) .
 
 ### <a name="debug-information-format"></a>Formato de informações de depuração
 
-Especifica o tipo de informações de depuração geradas pelo compilador.  Essa propriedade requer configurações de vinculador compatíveis. Define [/Z7,/Zi,/Zi (formato de informações de depuração)](z7-zi-zi-debug-information-format.md).
+Especifica o tipo de informações de depuração geradas pelo compilador.  Essa propriedade requer configurações de vinculador compatíveis. Sets [ `/Z7` , `/Zi` , `/ZI` (formato de informações de depuração)](z7-zi-zi-debug-information-format.md).
 
 #### <a name="choices"></a>Opções
 
@@ -38,11 +38,11 @@ Especifica o tipo de informações de depuração geradas pelo compilador.  Essa
 
 ### <a name="support-just-my-code-debugging"></a>Suporte à depuração de Apenas Meu Código
 
-Adiciona o código de suporte para habilitar a depuração de [apenas meu código](/visualstudio/debugger/just-my-code) nesta unidade de compilação. Define [/JMC](jmc.md).
+Adiciona o código de suporte para habilitar a depuração de [apenas meu código](/visualstudio/debugger/just-my-code) nesta unidade de compilação. Define [`/JMC`](jmc.md) .
 
 ### <a name="common-language-runtime-support"></a>Suporte a Common Language RunTime
 
-Use o serviço de tempo de execução do .NET.  Essa opção é incompatível com algumas outras opções; consulte a documentação na família de opções do [/CLR](clr-common-language-runtime-compilation.md) para obter detalhes.
+Use o serviço de tempo de execução do .NET.  Essa opção é incompatível com algumas outras opções; consulte a documentação na [`/clr`](clr-common-language-runtime-compilation.md) família de opções para obter detalhes.
 
 #### <a name="choices"></a>Opções
 
@@ -51,9 +51,9 @@ Use o serviço de tempo de execução do .NET.  Essa opção é incompatível co
 - **Suporte a Common Language Runtime MSIL puro** – produz um arquivo de saída somente [MSIL](/dotnet/standard/managed-code)sem código executável nativo, embora possa conter tipos nativos compilados para MSIL.
 - **Suporte a Common Language Runtime do MSIL seguro** – produz um arquivo de saída MSIL-only (sem código executável nativo) e verificável.
 
-### <a name="consume-windows-runtime-extension"></a>Consumir extensão de Windows Runtime
+### <a name="consume-windows-runtime-extension"></a>Consumir a Extensão do Windows Runtime
 
-Consuma as extensões de idiomas de tempo de execução do Windows. Define [/zw](zw-windows-runtime-compilation.md).
+Consuma as extensões de idiomas de tempo de execução do Windows. Define [`/ZW`](zw-windows-runtime-compilation.md) .
 
 ### <a name="suppress-startup-banner"></a>Suprimir Faixa de Inicialização
 
@@ -61,7 +61,7 @@ Suprime a exibição da faixa de logon quando o compilador é iniciado e exibe m
 
 ### <a name="warning-level"></a>Nível de aviso
 
-Selecione o rigor que você deseja que o compilador aplique aos erros de código. Define [/W0-/W4](compiler-option-warning-level.md).
+Selecione o rigor que você deseja que o compilador aplique aos erros de código. Define [`/W0` - `/W4`](compiler-option-warning-level.md) .
 
 #### <a name="choices"></a>Opções
 
@@ -74,11 +74,11 @@ Selecione o rigor que você deseja que o compilador aplique aos erros de código
 
 ### <a name="treat-warnings-as-errors"></a>Tratar avisos como erros
 
-Trata avisos do compilador como erros. Para um novo projeto, pode ser melhor usar [/WX](wx-treat-linker-warnings-as-errors.md) em cada compilação. Resolva todos os avisos para minimizar os defeitos de código difíceis de encontrar.
+Trata avisos do compilador como erros. Para um novo projeto, pode ser melhor usar [`/WX`](wx-treat-linker-warnings-as-errors.md) em cada compilação. Resolva todos os avisos para minimizar os defeitos de código difíceis de encontrar.
 
 ### <a name="warning-version"></a>Versão de aviso
 
-Ocultar avisos introduzidos após uma versão específica do compilador. Define [/WV: xx\[. yy\[. zzzzz\]\]](wx-treat-linker-warnings-as-errors.md).
+Ocultar avisos introduzidos após uma versão específica do compilador. Define [`/Wv:xx`\[`.yy`\[`.zzzzz`\]\]](wx-treat-linker-warnings-as-errors.md) .
 
 ### <a name="diagnostics-format"></a>Formato de diagnóstico
 
@@ -92,13 +92,13 @@ Habilita o diagnóstico avançado, com informações de coluna e contexto de ori
 
 ### <a name="sdl-checks"></a>Verificações do SDL
 
-Verificações recomendadas do SDL (ciclo de vida de desenvolvimento de segurança) adicionais; inclui a habilitação de recursos adicionais de geração de código seguro e permite avisos extras relevantes de segurança como erros. Define [/SDL,/SDL-](sdl-enable-additional-security-checks.md).
+Verificações recomendadas do SDL (ciclo de vida de desenvolvimento de segurança) adicionais; inclui a habilitação de recursos adicionais de geração de código seguro e permite avisos extras relevantes de segurança como erros. Define [ `/sdl` , `/sdl-` ](sdl-enable-additional-security-checks.md).
 
 ### <a name="multi-processor-compilation"></a>Compilação de multiprocessador
 
 Compilação de multiprocessador.
 
-## <a name="cc-optimization-properties"></a>Propriedades deC++ otimização/C
+## <a name="cc-optimization-properties"></a>Propriedades de otimização do C/C++
 
 ### <a name="optimization"></a>Optimization
 
@@ -108,28 +108,28 @@ Selecione a opção para otimização de código; escolha personalizado para usa
 
 - **Personalizar** – otimização personalizada.
 - **Desabilitado** – desabilitar a otimização.
-- **Otimização máxima (favorecer tamanho)** -equivalente a/og/os/Oy/Ob2/GS/GF/GY
-- **Otimização máxima (favorecer velocidade)** -equivalente a/og/Oi/OT/Oy/Ob2/GS/GF/GY
-- **Otimizações (favorecer velocidade)** -equivalente a/og/Oi/OT/Oy/Ob2
+- **Otimização máxima (favorecer tamanho)** -equivalente a**`/Os /Oy /Ob2 /Gs /GF /Gy`**
+- **Otimização máxima (favorecer velocidade)** -equivalente a**`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
+- **Otimizações (favorecer velocidade)** -equivalente a**`/Oi /Ot /Oy /Ob2`**
 
 ### <a name="inline-function-expansion"></a>Expansão de função embutida
 
-Selecione o nível de expansão de [função embutida](../../cpp/inline-functions-cpp.md) para a compilação. Define [/Ob1,/Ob2](ob-inline-function-expansion.md).
+Selecione o nível de expansão de [função embutida](../../cpp/inline-functions-cpp.md) para a compilação. Define [`/Ob`](ob-inline-function-expansion.md) .
 
 #### <a name="choices"></a>Opções
 
 - **Padrão**
 - **Disabled-desabilita** a expansão embutida, que está ativada por padrão.
-- **Somente __inline** -expande apenas as funções marcadas como **embutidas**, `__inline`, `__forceinline`ou `__inline`. Ou, em uma C++ função de membro, definida em uma declaração de classe.
-- **Qualquer função adequada** -expande as funções marcadas como **embutidas** ou `__inline` e quaisquer outras funções que o compilador escolha. (A expansão ocorre no critério do compilador, muitas vezes conhecida como *autolinhar*.)
+- **Somente __inline** -expande apenas as funções marcadas como **`inline`** , `__forceinline` ou `__inline` . Ou, em uma função membro do C++, definida em uma declaração de classe.
+- **Any** -expande as funções marcadas como **`inline`** ou `__inline` e qualquer outra função que o compilador escolha. (A expansão ocorre no critério do compilador, muitas vezes conhecida como *autolinhar*.)
 
 ### <a name="enable-intrinsic-functions"></a>Habilitar funções intrínsecas
 
-Habilita funções intrínsecas.  O uso de funções intrínsecas gera um código mais rápido, mas possivelmente maior. Define [/Oi](oi-generate-intrinsic-functions.md).
+Habilita funções intrínsecas.  O uso de funções intrínsecas gera um código mais rápido, mas possivelmente maior. Define [`/Oi`](oi-generate-intrinsic-functions.md) .
 
 ### <a name="favor-size-or-speed"></a>Favorecer tamanho ou velocidade
 
-Se deseja favorecer o tamanho do código ou a velocidade do código; ' Otimização global ' deve estar ativada. Define [/OT,/os](os-ot-favor-small-code-favor-fast-code.md).
+Se deseja favorecer o tamanho do código ou a velocidade do código; ' Otimização global ' deve estar ativada. Define [ `/Ot` , `/Os` ](os-ot-favor-small-code-favor-fast-code.md).
 
 #### <a name="choices"></a>Opções
 
@@ -143,25 +143,25 @@ Inibe a criação de ponteiros de quadros na pilha de chamadas.
 
 ### <a name="enable-fiber-safe-optimizations"></a>Habilitar otimizações de fibra segura
 
-Habilita a otimização de espaço de memória ao usar fibras e acesso de armazenamento local de thread. Define [/gt](gt-support-fiber-safe-thread-local-storage.md).
+Habilita a otimização de espaço de memória ao usar fibras e acesso de armazenamento local de thread. Define [`/GT`](gt-support-fiber-safe-thread-local-storage.md) .
 
-### <a name="whole-program-optimization"></a>Otimização do programa inteiro
+### <a name="whole-program-optimization"></a>Otimização do Programa Inteiro
 
-Permite otimizações entre módulos atrasando a geração de código para o tempo de vinculação. Requer a opção de vinculador "geração de código do tempo de vinculação". Define [/GL](gl-whole-program-optimization.md).
+Permite otimizações entre módulos atrasando a geração de código para o tempo de vinculação. Requer a opção de vinculador "geração de código do tempo de vinculação". Define [`/GL`](gl-whole-program-optimization.md) .
 
-## <a name="cc-preprocessor-properties"></a>Propriedades deC++ C/pré-processador
+## <a name="cc-preprocessor-properties"></a>Propriedades do pré-processador C/C++
 
 ### <a name="preprocessor-definitions"></a>Definições do Pré-processador
 
 Define os símbolos de pré-processamento para o arquivo de origem.
 
-### <a name="undefine-preprocessor-definitions"></a>Excluir as definições do pré-processador
+### <a name="undefine-preprocessor-definitions"></a>Excluir definições do pré-processador
 
-Especifica uma ou mais exclusões de definição do pré-processador. Define [/u](u-u-undefine-symbols.md).
+Especifica uma ou mais exclusões de definição do pré-processador. Define [`/U`](u-u-undefine-symbols.md) .
 
 ### <a name="undefine-all-preprocessor-definitions"></a>Excluir todas as definições do pré-processador
 
-Exclua as definições de todos os valores do pré-processador definidos anteriormente. Define [/u](u-u-undefine-symbols.md).
+Exclua as definições de todos os valores do pré-processador definidos anteriormente. Define [`/u`](u-u-undefine-symbols.md) .
 
 ### <a name="ignore-standard-include-paths"></a>Ignorar caminhos de inclusão padrão
 
@@ -169,7 +169,7 @@ Impede que o compilador procure arquivos de inclusão em diretórios especificad
 
 ### <a name="preprocess-to-a-file"></a>Pré-processar para um arquivo
 
-Pré-processa arquivos C C++ e Source e grava a saída pré-processada em um arquivo. Essa opção suprime a compilação e não produz um arquivo de *`.obj`* .
+Pré-processa arquivos de origem C e C++ e grava a saída pré-processada em um arquivo. Essa opção suprime a compilação e não produz um *`.obj`* arquivo.
 
 ### <a name="preprocess-suppress-line-numbers"></a>Pré-processar suprimir números de linha
 
@@ -177,36 +177,36 @@ Pré-processar sem diretivas de #line.
 
 ### <a name="keep-comments"></a>Manter comentários
 
-Suprime a faixa de comentário do código-fonte; requer que uma das opções de ' pré-processamento ' seja definida. Define [/c](c-preserve-comments-during-preprocessing.md).
+Suprime a faixa de comentário do código-fonte; requer que uma das opções de ' pré-processamento ' seja definida. Define [`/C`](c-preserve-comments-during-preprocessing.md) .
 
-## <a name="cc-code-generation-properties"></a>Propriedades deC++ geração de código C/Code
+## <a name="cc-code-generation-properties"></a>Propriedades de geração de código C/C++
 
 ### <a name="enable-string-pooling"></a>Habilitar pool de cadeias de caracteres
 
-O compilador cria apenas uma cópia somente leitura de cadeias de caracteres idênticas na imagem do programa. Ele resulta em programas menores, uma otimização chamada *pool de cadeias de caracteres*. [/O1,/O2](o-options-optimize-code.md)e [/Zi](z7-zi-zi-debug-information-format.md) definem automaticamente a opção [/GF](gf-eliminate-duplicate-strings.md) .
+O compilador cria apenas uma cópia somente leitura de cadeias de caracteres idênticas na imagem do programa. Ele resulta em programas menores, uma otimização chamada *pool de cadeias de caracteres*. [ `/O1` , `/O2` ](o-options-optimize-code.md)e [`/ZI`](z7-zi-zi-debug-information-format.md) definem a [`/GF`](gf-eliminate-duplicate-strings.md) opção automaticamente.
 
-### <a name="enable-minimal-rebuild"></a>Habilitar recompilação mínima
+### <a name="enable-minimal-rebuild"></a>Habilitar Recompilação Mínima
 
-Habilita a recompilação mínima, que determina se os C++ arquivos de origem devem ser C++ recompilados que incluem definições de classe alteradas, armazenadas em arquivos de *`.h`* de cabeçalho.
+Habilita a recompilação mínima, que determina se os arquivos de origem C++ devem ser recompilados que incluem definições de classe C++ alteradas, armazenadas em arquivos de cabeçalho *`.h`* .
 
-### <a name="enable-c-exceptions"></a>Habilitar exceções C++
+### <a name="enable-c-exceptions"></a>Habilitar exceções do C++
 
 Especifica o modelo de tratamento de exceções a ser utilizado pelo compilador.
 
 #### <a name="choices"></a>Opções
 
-- **Sim com Exceções SEH** – o modelo de tratamento de exceções que captura exceções assíncronas (estruturadasC++) e síncronas (). Define [/EHA](eh-exception-handling-model.md).
-- **Sim** – o modelo de tratamento de exceção que captura C++ exceções apenas e informa o compilador para assumir que as funções externas do C nunca C++ lançam uma exceção. Define [/EHsc](eh-exception-handling-model.md).
-- **Sim com as funções extern C** – o modelo de tratamento de exceção C++ que captura apenas exceções e informa o compilador para assumir que as funções externas do C geram uma exceção. Define [o/EHS](eh-exception-handling-model.md).
+- **Sim com Exceções SEH** – o modelo de tratamento de exceção que captura exceções assíncronas (estruturadas) e síncronas (C++). Define [`/EHa`](eh-exception-handling-model.md) .
+- **Sim** – o modelo de tratamento de exceção que captura apenas exceções c++ e informa o compilador para assumir que as funções externas do C nunca lançam uma exceção de C++. Define [`/EHsc`](eh-exception-handling-model.md) .
+- **Sim, com as funções do C externo** – o modelo de tratamento de exceções que captura apenas exceções do C++ e instrui o compilador a assumir que as funções do C externo geram uma exceção. Define [`/EHs`](eh-exception-handling-model.md) .
 - **Não** -nenhuma manipulação de exceção.
 
 ### <a name="smaller-type-check"></a>Verificação de tipo menor
 
-Habilite a verificação de conversão para tipos menores, incompatível com qualquer tipo de otimização diferente de depuração. Define [/RTCc](rtc-run-time-error-checks.md).
+Habilite a verificação de conversão para tipos menores, incompatível com qualquer tipo de otimização diferente de depuração. Define [`/RTCc`](rtc-run-time-error-checks.md) .
 
 ### <a name="basic-runtime-checks"></a>Verificações básicas de tempo de execução
 
-Habilitar verificações de erro básicas de tempo de execução, incompatível com qualquer tipo de otimização diferente de Debug. Define [/RTCs,/RTCu,/RTC1](rtc-run-time-error-checks.md).
+Habilitar verificações de erro básicas de tempo de execução, incompatível com qualquer tipo de otimização diferente de Debug. Define [ `/RTCs` , `/RTCu` , `/RTC1` ](rtc-run-time-error-checks.md).
 
 #### <a name="choices"></a>Opções
 
@@ -217,18 +217,18 @@ Habilitar verificações de erro básicas de tempo de execução, incompatível 
 
 ### <a name="runtime-library"></a>Biblioteca em Runtime
 
-Especifique a biblioteca de runtime para vinculação. Define [/MT,/MTD,/MD,/MDD](md-mt-ld-use-run-time-library.md).
+Especifique a biblioteca de runtime para vinculação. Define [ `/MT` , `/MTd` , `/MD` , `/MDd` ](md-mt-ld-use-run-time-library.md).
 
 #### <a name="choices"></a>Opções
 
 - **Multithread** -faz com que seu aplicativo use a versão estática e multithread da biblioteca de tempo de execução.
-- **Depuração** multi-threaded-define _DEBUG e _MT. Essa opção também faz com que o compilador Coloque o nome da biblioteca *LIBCMTD. lib* no arquivo *`.obj`* para que o vinculador use *LIBCMTD. lib* para resolver símbolos externos.
-- **Dll** multi-threaded – faz com que seu aplicativo use a versão específica de MULTITHREAD e dll da biblioteca de tempo de execução. Define _MT e _DLL e faz com que o compilador Coloque o nome da biblioteca *msvcrt. lib* no arquivo *`.obj`* .
-- **Dll de depuração** multi-threaded-define _DEBUG, _MT e _DLL e faz com que seu aplicativo use a versão específica de MULTITHREAD e dll da biblioteca de tempo de execução. Ele também faz com que o compilador Coloque o nome da biblioteca *MSVCRTD. lib* no arquivo *`.obj`* .
+- **Depuração** multi-threaded-define _DEBUG e _MT. Essa opção também faz com que o compilador Coloque o nome da biblioteca *LIBCMTD. lib* no *`.obj`* arquivo para que o vinculador use *LIBCMTD. lib* para resolver símbolos externos.
+- **Dll** multi-threaded – faz com que seu aplicativo use a versão específica de MULTITHREAD e dll da biblioteca de tempo de execução. Define _MT e _DLL e faz com que o compilador Coloque o nome da biblioteca *msvcrt. lib* no *`.obj`* arquivo.
+- **Dll de depuração** multi-threaded-define _DEBUG, _MT e _DLL e faz com que seu aplicativo use a versão específica de MULTITHREAD e dll da biblioteca de tempo de execução. Ele também faz com que o compilador Coloque o nome da biblioteca *MSVCRTD. lib* no *`.obj`* arquivo.
 
 ### <a name="struct-member-alignment"></a>Alinhamento de membro de struct
 
-Especifica limites de 1, 2, 4 ou 8 bytes para alinhamento de membro de struct. Define [/ZP](zp-struct-member-alignment.md).
+Especifica limites de 1, 2, 4 ou 8 bytes para alinhamento de membro de struct. Define [`/Zp`](zp-struct-member-alignment.md) .
 
 #### <a name="choices"></a>Opções
 
@@ -245,16 +245,16 @@ A Verificação de Segurança ajuda a detectar saturações de buffer de pilha, 
 
 #### <a name="choices"></a>Opções
 
-- **Desabilitar verificação de segurança** – Desabilitar a verificação de segurança. Define [/GS-](gs-buffer-security-check.md).
-- **Habilitar verificação de segurança** – Habilitar a verificação de segurança. Define [/GS](gs-buffer-security-check.md).
+- **Desabilitar verificação de segurança** – Desabilitar a verificação de segurança. Define [`/GS-`](gs-buffer-security-check.md) .
+- **Habilitar verificação de segurança** – Habilitar a verificação de segurança. Define [`/GS`](gs-buffer-security-check.md) .
 
-### <a name="control-flow-guard"></a>Proteção de fluxo de controle
+### <a name="control-flow-guard"></a>Proteção de Fluxo de Controle
 
 A verificação de segurança de proteção ajuda a detectar tentativas de expedição para um bloco de código ilegal.
 
 #### <a name="choices"></a>Opções
 
-- **Sim** – habilite a verificação de segurança com os conjuntos de proteção [/Guard: CF](guard-enable-control-flow-guard.md).
+- **Sim** – habilite a verificação de segurança com conjuntos de proteção [`/guard:cf`](guard-enable-control-flow-guard.md) .
 - **Não**
 
 ### <a name="enable-function-level-linking"></a>Habilitar vinculação no nível da função
@@ -267,25 +267,25 @@ Permite que o compilador gere código paralelo para loops identificados usando `
 
 ### <a name="enable-enhanced-instruction-set"></a>Habilitar conjunto de instruções avançado
 
-Habilite o uso de instruções encontradas em processadores que dão suporte a conjuntos de instruções aprimoradas. Por exemplo, os aprimoramentos de SSE, SSE2, AVX e AVX2 para IA-32. E os aprimoramentos do AVX e do AVX2 para x64. Atualmente **`/arch:SSE`** e **`/arch:SSE2`** estão disponíveis apenas ao compilar para a arquitetura x86. Se nenhuma opção for especificada, o compilador usará as instruções encontradas em processadores que dão suporte a SSE2. O uso de instruções avançadas pode ser desabilitado com **`/arch:IA32`** . Para obter mais informações, consulte [/Arch (x86)](arch-x86.md), [/Arch (x64)](arch-x64.md) e [/Arch (ARM)](arch-arm.md).
+Habilite o uso de instruções encontradas em processadores que dão suporte a conjuntos de instruções aprimoradas. Por exemplo, os aprimoramentos de SSE, SSE2, AVX e AVX2 para IA-32. E os aprimoramentos do AVX e do AVX2 para x64. Atualmente **`/arch:SSE`** , e **`/arch:SSE2`** estão disponíveis apenas ao compilar para a arquitetura x86. Se nenhuma opção for especificada, o compilador usará as instruções encontradas em processadores que dão suporte a SSE2. O uso de instruções avançadas pode ser desabilitado com o **`/arch:IA32`** . Para obter mais informações, [`/arch (x86)`](arch-x86.md) consulte [`/arch (x64)`](arch-x64.md) e [`/arch (ARM)`](arch-arm.md) .
 
 #### <a name="choices"></a>Opções
 
-- **Extensões SIMD de streaming** – extensões SIMD de streaming. Define **`/arch:SSE`**
-- **Extensões SIMD de streaming 2** -Streaming SIMD Extensions 2. Define **`/arch:SSE2`**
-- **Extensões de vetor avançadas** -extensões de vetor avançadas. Define **`/arch:AVX`**
-- **Extensões de vetor avançadas 2** -extensões de vetor avançadas 2. Define **`/arch:AVX2`**
-- **Nenhuma instrução avançada** -nenhuma instrução aprimorada. Define **`/arch:IA32`**
+- **Extensões SIMD de streaming** – extensões SIMD de streaming. Defina**`/arch:SSE`**
+- **Extensões SIMD de streaming 2** -Streaming SIMD Extensions 2. Defina**`/arch:SSE2`**
+- **Extensões de vetor avançadas** -extensões de vetor avançadas. Defina**`/arch:AVX`**
+- **Extensões de vetor avançadas 2** -extensões de vetor avançadas 2. Defina**`/arch:AVX2`**
+- **Nenhuma instrução avançada** -nenhuma instrução aprimorada. Defina**`/arch:IA32`**
 - **Não definido** -não definido.
 
 ### <a name="floating-point-model"></a>Modelo de ponto flutuante
 
-Define o modelo de ponto flutuante. Define [/fp: preciso,/fp: strict,/fp: Fast](fp-specify-floating-point-behavior.md).
+Define o modelo de ponto flutuante. Define [ `/fp:precise` , `/fp:strict` , `/fp:fast` ](fp-specify-floating-point-behavior.md).
 
 #### <a name="choices"></a>Opções
 
 - **Preciso** -padrão. Melhora a consistência de testes de ponto flutuante para igualdade e desigualdade.
-- **Estrito** -o modelo de ponto flutuante mais estrito. **`/fp:strict`** faz **`fp_contract`** ficar desligadas e **`fenv_access`** ser ativadas. o **`/fp:except`** é implícito e pode ser desabilitado especificando-se explicitamente **`/fp:except-`** . Quando usado com **`/fp:except-`** , **`/fp:strict`** impõe semântica estrita de ponto flutuante, mas sem respeitar eventos excepcionais.
+- **Estrito** -o modelo de ponto flutuante mais estrito. **`/fp:strict`** faz com que **`fp_contract`** seja desativado e **`fenv_access`** esteja ligado. **`/fp:except`** é implícito e pode ser desabilitado especificando-se explicitamente **`/fp:except-`** . Quando usado com **`/fp:except-`** , o **`/fp:strict`** impõe semântica de ponto flutuante estrita, mas sem respeitar eventos excepcionais.
 - **Rápido** – cria o código mais rápido na maioria dos casos.
 
 ### <a name="enable-floating-point-exceptions"></a>Habilitar exceções de ponto flutuante
@@ -298,30 +298,30 @@ Quando HotPatching está ativado, o compilador garante que a primeira instruçã
 
 ### <a name="spectre-mitigation"></a>Mitigação de Spectre
 
-Spectre atenuações para o CVE 2017-5753. Define [/Qspectre](qspectre.md).
+Spectre atenuações para o CVE 2017-5753. Define [`/Qspectre`](qspectre.md) .
 
 #### <a name="choices"></a>Opções
 
 - **Habilitado** -habilitar o recurso de mitigação de Spectre para CVE 2017-5753
 - **Desabilitado** -não definido.
 
-## <a name="cc-language-properties"></a>Propriedades deC++ C/Language
+## <a name="cc-language-properties"></a>Propriedades da linguagem C/C++
 
 ### <a name="disable-language-extensions"></a>Desabilitar extensões de linguagem
 
-Suprime ou habilita extensões de linguagem. Define [/za](za-ze-disable-language-extensions.md).
+Suprime ou habilita extensões de linguagem. Define [`/Za`](za-ze-disable-language-extensions.md) .
 
 ### <a name="conformance-mode"></a>Modo de conformidade
 
-Habilita ou suprime o modo de conformidade. Define [/permissive-](permissive-standards-conformance.md).
+Habilita ou suprime o modo de conformidade. Define [`/permissive-`](permissive-standards-conformance.md) .
 
-### <a name="treat-wchar_t-as-built-in-type"></a>Tratar WChar_t como tipo interno
+### <a name="treat-wchar_t-as-built-in-type"></a>Tratar wchar_t como tipo interno
 
-Quando especificado, o tipo **wchar_t** se torna um tipo nativo que mapeia para `__wchar_t` da mesma forma que os **pequenos** mapas para `__int16`. [/Zc: a wchar_t](zc-wchar-t-wchar-t-is-native-type.md) está ativada por padrão.
+Quando especificado, o tipo **`wchar_t`** se torna um tipo nativo que mapeia para `__wchar_t` o da mesma maneira que **`short`** mapeia para `__int16` . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)está ativado por padrão.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>Forçar conformidade no escopo do loop for
 
-Usado para implementar o C++ comportamento padrão para a instrução for loops com extensões da Microsoft. Define [/za,/Ze (Desabilite as extensões de linguagem](za-ze-disable-language-extensions.md). [/Zc: forScope](zc-forscope-force-conformance-in-for-loop-scope.md) está ativado por padrão.
+Usado para implementar o comportamento padrão do C++ para a instrução for loops com extensões da Microsoft. Sets [ `/Za` , `/Ze` (Desabilite as extensões de linguagem](za-ze-disable-language-extensions.md). [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md)está ativado por padrão.
 
 ### <a name="remove-unreferenced-code-and-data"></a>Remover dados e código sem referência
 
@@ -333,32 +333,32 @@ Usado para identificar um tipo de referência rvalue como resultado de uma opera
 
 ### <a name="enable-run-time-type-information"></a>Habilitar informações de tipo de tempo de execução
 
-Adiciona um código para verificar os tipos de objeto C++ no runtime (informações de tipo de runtime). Define [/gr,/GR-](gr-enable-run-time-type-information.md).
+Adiciona um código para verificar os tipos de objeto C++ no runtime (informações de tipo de runtime). Define [ `/GR` , `/GR-` ](gr-enable-run-time-type-information.md).
 
 ### <a name="open-mp-support"></a>Abrir o suporte do MP
 
-Habilita extensões de linguagem OpenMP 2,0. Define [/OpenMP](openmp-enable-openmp-2-0-support.md).
+Habilita extensões de linguagem OpenMP 2,0. Define [`/openmp`](openmp-enable-openmp-2-0-support.md) .
 
 ### <a name="c-language-standard"></a>Padrão de linguagem C++
 
-Determina o C++ padrão de idioma que o compilador habilita. Use a versão mais recente quando possível. Define [/std: c++ 14,/std: c++ 17,/std: c + + mais recente](std-specify-language-standard-version.md).
+Determina o padrão de linguagem C++ que o compilador habilita. Use a versão mais recente quando possível. Define [ `/std:c++14` , `/std:c++17` , `/std:c++latest` ](std-specify-language-standard-version.md).
 
 #### <a name="choices"></a>Opções
 
 - **Padrão**
 - **Padrão ISO C++ 14**
 - **Padrão ISO C++ 17**
-- **Visualização-recursos do último C++ rascunho de trabalho**
+- **Visualização-recursos do último rascunho de trabalho do C++**
 
-### <a name="enable-c-modules-experimental"></a>Habilitar C++ módulos (experimental)
+### <a name="enable-c-modules-experimental"></a>Habilitar módulos do C++ (experimental)
 
-Suporte experimental para os C++ módulos TS e biblioteca padrão.
+Suporte experimental para os módulos de bibliotecas de TS e Standard do C++.
 
-## <a name="cc-precompiled-headers-properties"></a>Propriedades deC++ cabeçalhos C/pré-compilado
+## <a name="cc-precompiled-headers-properties"></a>Propriedades de cabeçalhos pré-compilados C/C++
 
 ### <a name="createuse-precompiled-header"></a>Criar/usar cabeçalho pré-compilado
 
-Habilita a criação ou o uso de um cabeçalho pré-compilado durante o build. Define [/YC](yc-create-precompiled-header-file.md), [/Yu](yu-use-precompiled-header-file.md).
+Habilita a criação ou o uso de um cabeçalho pré-compilado durante o build. Define [`/Yc`](yc-create-precompiled-header-file.md) , [`/Yu`](yu-use-precompiled-header-file.md) .
 
 #### <a name="choices"></a>Opções
 
@@ -368,29 +368,29 @@ Habilita a criação ou o uso de um cabeçalho pré-compilado durante o build. D
 
 ### <a name="precompiled-header-file"></a>Arquivo de cabeçalho pré-compilado
 
-Especifica o nome do arquivo de cabeçalho a ser usado ao criar ou usar um arquivo de cabeçalho pré-compilado. Define [/YC](yc-create-precompiled-header-file.md), [/Yu]] (Yu-Use-pré-compilado-header-File.MD).
+Especifica o nome do arquivo de cabeçalho a ser usado ao criar ou usar um arquivo de cabeçalho pré-compilado. Define [`/Yc`](yc-create-precompiled-header-file.md) , [`/Yu`](yu-use-precompiled-header-file.md) .
 
 ### <a name="precompiled-header-output-file"></a>Arquivo de saída de cabeçalho pré-compilado
 
-Especifica o caminho ou o nome do arquivo de cabeçalho pré-compilado gerado. Define [/FP](fp-name-dot-pch-file.md).
+Especifica o caminho ou o nome do arquivo de cabeçalho pré-compilado gerado. Define [`/Fp`](fp-name-dot-pch-file.md) .
 
-## <a name="cc-output-files-properties"></a>Propriedades deC++ arquivos de saída/C
+## <a name="cc-output-files-properties"></a>Propriedades dos arquivos de saída do C/C++
 
 ### <a name="expand-attributed-source"></a>Expandir fonte atribuída
 
-Criar arquivo de listagem com atributos expandidos injetados no arquivo de origem. Define [/FX](fx-merge-injected-code.md).
+Criar arquivo de listagem com atributos expandidos injetados no arquivo de origem. Define [`/Fx`](fx-merge-injected-code.md) .
 
 ### <a name="assembler-output"></a>Saída do Assembler
 
-Especifica o conteúdo do arquivo de saída de linguagem assembly. Define [/FA,/fac,/FAS,/FACS](fa-fa-listing-file.md).
+Especifica o conteúdo do arquivo de saída de linguagem assembly. Define [ `/FA` , `/FAc` , `/FAs` , `/FAcs` ](fa-fa-listing-file.md).
 
 #### <a name="choices"></a>Opções
 
 - **Sem listagem** -sem listagem.
-- **Listagem somente de assembly** -código de assembly; *`.asm`*
-- **Assembly com código de máquina** -código de máquina e assembly; *`.cod`*
-- **Assembly com** código-fonte de código-fonte e assembly; *`.asm`*
-- **Assembly, código do computador e origem** -assembly, código do computador e código-fonte; *`.cod`*
+- **Listagem somente de assembly** -código de assembly;*`.asm`*
+- **Assembly com código de máquina** -código de máquina e assembly;*`.cod`*
+- **Assembly com** código-fonte de código-fonte e assembly;*`.asm`*
+- **Assembly, código do computador e origem** -assembly, código do computador e código-fonte;*`.cod`*
 
 ### <a name="use-unicode-for-assembler-listing"></a>Usar Unicode para listagem do Assembler
 
@@ -398,80 +398,80 @@ Faz com que o arquivo de saída seja criado no formato UTF-8.
 
 ### <a name="asm-list-location"></a>Local da lista de ASM
 
-Especifica o caminho relativo ou o nome do arquivo de listagem ASM; pode ser um nome de arquivo ou diretório. Define [/FA](fa-fa-listing-file.md).
+Especifica o caminho relativo ou o nome do arquivo de listagem ASM; pode ser um nome de arquivo ou diretório. Define [`/Fa`](fa-fa-listing-file.md) .
 
 ### <a name="object-file-name"></a>Nome do arquivo-objeto
 
-Especifica um nome para substituir o nome do arquivo-objeto padrão. Pode ser um nome de arquivo ou de diretório. Define [/fo](fo-object-file-name.md).
+Especifica um nome para substituir o nome do arquivo-objeto padrão. Pode ser um nome de arquivo ou de diretório. Define [`/Fo`](fo-object-file-name.md) .
 
 ### <a name="program-database-file-name"></a>Nome do arquivo de banco de dados do programa
 
-Especifica um nome para um arquivo PDB gerado pelo compilador; também especifica o nome base para o arquivo IDB gerado pelo compilador necessário; pode ser um nome de arquivo ou diretório. Define [/FD](fd-program-database-file-name.md).
+Especifica um nome para um arquivo PDB gerado pelo compilador; também especifica o nome base para o arquivo IDB gerado pelo compilador necessário; pode ser um nome de arquivo ou diretório. Define [`/Fd`](fd-program-database-file-name.md) .
 
 ### <a name="generate-xml-documentation-files"></a>Gerar arquivos de documentação XML
 
-Especifica que o compilador deve gerar arquivos de comentário de documentação XML (. XDC). Define [/Doc](doc-process-documentation-comments-c-cpp.md).
+Especifica que o compilador deve gerar arquivos de comentário de documentação XML (. XDC). Define [`/doc`](doc-process-documentation-comments-c-cpp.md) .
 
 ### <a name="xml-documentation-file-name"></a>Nome do arquivo de documentação XML
 
-Especifica o nome dos arquivos de documentação XML gerados; pode ser um nome de arquivo ou diretório. Define [/doc:\<name >](doc-process-documentation-comments-c-cpp.md).
+Especifica o nome dos arquivos de documentação XML gerados; pode ser um nome de arquivo ou diretório. Define [`/doc:`\<name>](doc-process-documentation-comments-c-cpp.md) .
 
-## <a name="cc-browse-information-properties"></a>C/C++ Propriedades de informações de procura
+## <a name="cc-browse-information-properties"></a>Propriedades de informações de procura do C/C++
 
 ### <a name="enable-browse-information"></a>Habilitar informações de procura
 
-Especifica o nível de informações de procura no arquivo *`.bsc`* . Define [/fr](fr-fr-create-dot-sbr-file.md).
+Especifica o nível de informações de procura no *`.bsc`* arquivo. Define [`/FR`](fr-fr-create-dot-sbr-file.md) .
 
 ### <a name="browse-information-file"></a>Procurar arquivo de informações
 
-Especifica o nome opcional para o arquivo de informações do navegador. Define o [nome de\<de/FR >](fr-fr-create-dot-sbr-file.md).
+Especifica o nome opcional para o arquivo de informações do navegador. Define [`/FR`\<name>](fr-fr-create-dot-sbr-file.md) .
 
-## <a name="cc-advanced-properties"></a>Propriedades deC++ C/Advanced
+## <a name="cc-advanced-properties"></a>Propriedades avançadas de C/C++
 
 ### <a name="calling-convention"></a>Convenção de chamada
 
-Selecione a Convenção de chamada padrão para seu aplicativo (pode ser substituída por função). Define [/gd,/GR,/gz,/GV](gd-gr-gv-gz-calling-convention.md).
+Selecione a Convenção de chamada padrão para seu aplicativo (pode ser substituída por função). Define [ `/Gd` , `/Gr` , `/Gz` , `/Gv` ](gd-gr-gv-gz-calling-convention.md).
 
 #### <a name="choices"></a>Opções
 
-- **__cdecl** -especifica a Convenção de chamada __cdecl para todas as C++ funções, exceto funções de membro e funções marcadas __stdcall ou __fastcall.
-- **__fastcall** -especifica a Convenção de chamada __fastcall para todas as C++ funções, exceto funções de membro e funções marcadas __cdecl ou __stdcall. Todas as funções de __fastcall devem ter protótipos.
-- **__stdcall** -especifica a Convenção de chamada __stdcall para todas as C++ funções, exceto funções de membro e funções marcadas __cdecl ou __fastcall. Todas as funções de __stdcall devem ter protótipos.
-- **__vectorcall** -especifica a Convenção de chamada de __vectorcall para todas C++ as funções, exceto funções de membro e funções marcadas __cdecl, __fastcall ou __stdcall. Todas as funções de __vectorcall devem ter protótipos.
+- **__cdecl** -especifica a `__cdecl` Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas `__stdcall` ou `__fastcall` .
+- **__fastcall** -especifica a `__fastcall` Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas `__cdecl` ou `__stdcall` . Todas as funções `__fastcall` precisam ter protótipos.
+- **__stdcall** -especifica a `__stdcall` Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas `__cdecl` ou `__fastcall` . Todas as funções `__stdcall` precisam ter protótipos.
+- **__vectorcall** -especifica a `__vectorcall` Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas `__cdecl` , `__fastcall` ou `__stdcall` . Todas as funções `__vectorcall` precisam ter protótipos.
 
 ### <a name="compile-as"></a>Compilar como
 
-Selecione a opção de linguagem de compilação para arquivos de *`.c`* e *`.cpp`* . Define [/TC,/TP](tc-tp-tc-tp-specify-source-file-type.md).
+Selecione a opção de linguagem de compilação para *`.c`* *`.cpp`* arquivos e. Define [ `/TC` , `/TP` ](tc-tp-tc-tp-specify-source-file-type.md).
 
 #### <a name="choices"></a>Opções
 
 - **Padrão** – padrão.
 - **Compilar como código C** – compilar como código C.
-- **Compilar como código C++** – compilar como código C++.
+- **Compile como C++ Code** -compile como código c++.
 
 ### <a name="disable-specific-warnings"></a>Desabilitar avisos específicos
 
-Desabilitar os números de aviso especificados. Coloque os números de aviso em uma lista delimitada por ponto e vírgula. Define [/wd\<num >](compiler-option-warning-level.md).
+Desabilitar os números de aviso especificados. Coloque os números de aviso em uma lista delimitada por ponto e vírgula. Define [`/wd`\<number>](compiler-option-warning-level.md) .
 
 ### <a name="forced-include-file"></a>Arquivo de inclusão forçado
 
-um ou mais arquivos de inclusão forçados. Define o [nome de/fi\<>](fi-name-forced-include-file.md).
+um ou mais arquivos de inclusão forçados. Define [`/FI`\<name>](fi-name-forced-include-file.md) .
 
 ### <a name="forced-using-file"></a>Arquivo de #using forçado
 
-Especifica um ou mais arquivos de #using forçados. Define o [nome de\<de/FU >](fu-name-forced-hash-using-file.md).
+Especifica um ou mais arquivos de #using forçados. Define [`/FU`\<name>](fu-name-forced-hash-using-file.md) .
 
 ### <a name="show-includes"></a>Mostrar inclusões
 
-Gera uma lista de arquivos de inclusão com a saída do compilador. Define [/showIncludes](showincludes-list-include-files.md).
+Gera uma lista de arquivos de inclusão com a saída do compilador. Define [`/showIncludes`](showincludes-list-include-files.md) .
 
 ### <a name="use-full-paths"></a>Usar caminhos completos
 
-Use caminhos completos em mensagens de diagnóstico. Define [/FC](fc-full-path-of-source-code-file-in-diagnostics.md).
+Use caminhos completos em mensagens de diagnóstico. Define [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) .
 
 ### <a name="omit-default-library-name"></a>Omitir nome da biblioteca padrão
 
-Não inclui nomes de biblioteca padrão em arquivos *`.obj`* . Define [/zl](zl-omit-default-library-name.md).
+Não inclui nomes de biblioteca padrão em *`.obj`* arquivos. Define [`/Zl`](zl-omit-default-library-name.md) .
 
 ### <a name="internal-compiler-error-reporting"></a>Relatório de erros do compilador interno
 
@@ -484,4 +484,4 @@ Trata o aviso específico do compilador como um erro em que n é um aviso do com
 
 ### <a name="additional-options"></a>Opções adicionais
 
-Opções Adicionais.
+Opções adicionais.
