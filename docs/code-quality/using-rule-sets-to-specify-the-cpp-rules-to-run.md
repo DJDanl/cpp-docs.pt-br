@@ -1,15 +1,15 @@
 ---
 title: Usando conjuntos de regras para especificar as regras do C++ para execução
-ms.date: 04/28/2018
+ms.date: 07/13/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269709"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373847"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Usar conjuntos de regras para especificar as regras do C++ para execução
 
@@ -236,17 +236,19 @@ O esquema do conjunto de regras a seguir descreve o esquema XML de um arquivo Ru
 
 Detalhes do elemento de esquema:
 
-- TLocalization: informações de localização, incluindo o nome do arquivo RuleSet, a descrição do arquivo RuleSet, o nome do assembly de recurso que contém o recurso localizado e o nome de base do recurso localizado.
-- TRuleHintPaths: caminhos de arquivo usados como dicas para pesquisar arquivos RuleSet.
-- TName: nome do arquivo RuleSet atual.
-- TDescription: Descrição do arquivo RuleSet atual.
-- TInclude: caminho para um conjunto de regras incluído com ação de regra.
-- TIncludeAll: ação de regra para todas as regras.
-- TRule: ID da regra com ação de regra.
-- TRules: coleção de uma ou mais regras.
-- TRuleSet: formato de arquivo RuleSet que consiste em informações de localização, caminhos de dica de regra, incluir todas as informações, incluir informações, informações de regras, nome, descrição e informações de versão de ferramentas.
-- TRuleAction: enumeração que descreve uma ação de regra, como erro, aviso, informações, oculto ou nenhum.
-- TIncludeAction: enumeração que descreve uma ação de regra, como erro, aviso, informações, oculto, nenhum ou padrão.
-- TIncludeAllAction: enumeração que descreve uma ação de regra, como erro, aviso, informações ou oculta.
+| Elemento Schema | Descrição |
+|--------------------|--------------|
+| `TLocalization` | Informações de localização, incluindo o nome do arquivo RuleSet, a descrição do arquivo RuleSet, o nome do assembly de recurso que contém o recurso localizado e o nome de base do recurso localizado |
+| `TRuleHintPaths` | Caminhos de arquivo usados como dicas para pesquisar arquivos RuleSet |
+| `TName` | Nome do arquivo RuleSet atual |
+| `TDescription` | Descrição do arquivo RuleSet atual |
+| `TInclude` | Caminho para um conjunto de regras incluído com ação de regra |
+| `TIncludeAll` | Ação de regra para todas as regras |
+| `TRule` | ID da regra com ação de regra |
+| `TRules` | Coleção de uma ou mais regras |
+| `TRuleSet` | Formato de arquivo RuleSet que consiste em informações de localização, caminhos de dica de regra, incluir todas as informações, incluir informações, informações de regras, nome, descrição e informações de versão de ferramentas |
+| `TRuleAction` | Enumeração que descreve uma ação de regra, como erro, aviso, informações, oculto ou nenhum |
+| `TIncludeAction` | Enumeração que descreve uma ação de regra, como erro, aviso, informações, oculto, nenhum ou padrão |
+| `TIncludeAllAction` | Enumeração que descreve uma ação de regra, como erro, aviso, informações ou oculta |
 
 Para ver um exemplo de um RuleSet, consulte [para criar um conjunto de regras em um editor de texto](#to-create-a-rule-set-in-a-text-editor)ou qualquer um dos conjuntos de regras padrão armazenados no `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .
