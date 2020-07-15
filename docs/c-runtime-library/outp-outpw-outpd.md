@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825922"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373470"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>Arq, outpw, _outp, _outpw, _outpd
 
-Saídas, em uma porta, um byte (`outp`, `_outp`), uma palavra (`outpw`, `_outpw`) ou uma palavra dupla (`_outpd`).
+Saídas, em uma porta, um byte ( `outp` , `_outp` ), uma palavra ( `outpw` , `_outpw` ) ou uma palavra dupla ( `_outpd` ).
 
 > [!IMPORTANT]
 > Essas funções estão obsoletas. A partir do Visual Studio 2015, eles não estão disponíveis no CRT. \
@@ -81,7 +81,7 @@ Número da porta.
 *databyte, dataword*\
 Valores de saída.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções retornam a saída de dados. Nenhum erro é retornado.
 
@@ -89,9 +89,9 @@ As funções retornam a saída de dados. Nenhum erro é retornado.
 
 As funções `_outp`, `_outpw` e `_outpd` gravam um byte, uma palavra e uma palavra dupla, respectivamente, para a porta de saída especificada. O argumento *Port* pode ser qualquer inteiro não assinado no intervalo de 0 a 65.535; *databyte* pode ser qualquer número inteiro no intervalo de 0-255; e *dataword* podem ser qualquer valor no intervalo de um inteiro, um inteiro curto não assinado e um inteiro longo sem sinal, respectivamente.
 
-Como essas funções gravam diretamente em uma porta de E/S, não é possível usá-las no código do usuário. Para obter informações sobre o uso de portas de E/S nesses sistemas operacionais, pesquise por “Serial Communications in Win32” (Comunicação Serial no Win32) no MSDN.
+Como essas funções gravam diretamente em uma porta de e/s, elas não podem ser usadas no código do Windows no modo de usuário. Para obter informações sobre como usar portas de e/s no sistema operacional Windows, consulte [comunicações seriais](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
 
-Os `outp` nomes `outpw` e são nomes mais antigos e preteridos `_outp` para `_outpw` as funções e. Para obter mais informações, consulte [nomes de funções POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Os `outp` `outpw` nomes e são nomes mais antigos e preteridos para as `_outp` `_outpw` funções e. Para obter mais informações, consulte [nomes de funções POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Requisitos
 

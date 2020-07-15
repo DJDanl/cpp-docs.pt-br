@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: c24fdfdaef612059d5c2fbaaa58f10d83f5fe3a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8af104598f56aa6c8eb5a9a87905324700da3d37
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335238"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373665"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Instruções passo a passo: compilando um programa do C++ nativo na linha de comando
 
@@ -45,7 +45,7 @@ Antes de criar um programa C ou C++ na linha de comando, verifique se as ferrame
 
    Você também pode usar a função de pesquisa do Windows para procurar "prompt de comando do desenvolvedor" e escolher um que corresponda à versão instalada do Visual Studio. Use o atalho para abrir a janela de prompt de comando.
 
-1. Em seguida, verifique se o prompt de comando do Visual C++ Developer está configurado corretamente. Na janela do prompt de comando, `cl` Insira e verifique se a saída é semelhante a esta:
+1. Em seguida, verifique se o prompt de comando do Visual C++ Developer está configurado corretamente. Na janela do prompt de comando, insira `cl` e verifique se a saída é semelhante a esta:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -60,14 +60,14 @@ Antes de criar um programa C ou C++ na linha de comando, verifique se as ferrame
    > [!NOTE]
    > Se você receber um erro como "o CL" não é reconhecido como um comando interno ou externo, um programa ou arquivo de lote operável, "erro C1034 ou erro LNK1104 ao executar o **`cl`** comando, você não está usando um prompt de comando do desenvolvedor ou algo está errado com a instalação do Visual C++. Você deve corrigir esse problema antes de continuar.
 
-   Se você não encontrar o atalho do prompt de comando do desenvolvedor ou se receber uma mensagem de erro quando `cl`inserir, a instalação do Visual C++ poderá ter um problema. Tente reinstalar o componente de Visual C++ no Visual Studio ou reinstale as ferramentas de Build de Microsoft Visual C++. Não vá para a próxima seção até que o **`cl`** comando funcione. Para obter mais informações sobre como instalar e solucionar problemas Visual C++, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
+   Se você não encontrar o atalho do prompt de comando do desenvolvedor ou se receber uma mensagem de erro quando inserir `cl` , a instalação do Visual C++ poderá ter um problema. Tente reinstalar o componente de Visual C++ no Visual Studio ou reinstale as ferramentas de Build de Microsoft Visual C++. Não vá para a próxima seção até que o **`cl`** comando funcione. Para obter mais informações sobre como instalar e solucionar problemas Visual C++, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
    > Dependendo da versão do Windows no computador e da configuração de segurança do sistema, talvez seja necessário clicar com o botão direito do mouse para abrir o menu de atalho para o atalho do prompt de comando do desenvolvedor e escolher **Executar como administrador** para compilar e executar com êxito o programa que você criar, seguindo este passo a passos.
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>Criar um arquivo de origem Visual C++ e compilá-lo na linha de comando
 
-1. Na janela do prompt de comando do desenvolvedor `md c:\hello` , digite para criar um diretório e, `cd c:\hello` em seguida, digite para alterar para esse diretório. Esse diretório é onde o arquivo de origem e o programa compilado são criados no.
+1. Na janela do prompt de comando do desenvolvedor, digite `md c:\hello` para criar um diretório e, em seguida, digite `cd c:\hello` para alterar para esse diretório. Esse diretório é onde o arquivo de origem e o programa compilado são criados no.
 
 1. Insira `notepad hello.cpp` na janela do prompt de comando.
 
@@ -107,11 +107,11 @@ Antes de criar um programa C ou C++ na linha de comando, verifique se as ferrame
 
    ```
 
-   As datas e outros detalhes serão diferentes no seu computador. Se você não vir seu arquivo de código-fonte, *Olá. cpp*, verifique se você alterou para o diretório *\\c: Olá* que você criou. No bloco de notas, certifique-se de que você salvou o arquivo de origem nesse diretório. Além disso, certifique-se de que você salvou o *`.cpp`* código-fonte com uma extensão *`.txt`* de nome de arquivo, não uma extensão.
+   As datas e outros detalhes serão diferentes no seu computador. Se você não vir seu arquivo de código-fonte, *Olá. cpp*, verifique se você alterou para o diretório *c: \\ Olá* que você criou. No bloco de notas, certifique-se de que você salvou o arquivo de origem nesse diretório. Além disso, certifique-se de que você salvou o código-fonte com uma *`.cpp`* extensão de nome de arquivo, não uma *`.txt`* extensão.
 
-1. No prompt de comando do desenvolvedor, `cl /EHsc hello.cpp` digite para compilar seu programa.
+1. No prompt de comando do desenvolvedor, digite `cl /EHsc hello.cpp` para compilar seu programa.
 
-   O compilador CL. exe gera um arquivo. obj que contém o código compilado e, em seguida, executa o vinculador para criar um programa executável chamado Hello. exe. Esse nome aparece nas linhas de informações de saída que o compilador exibe. A saída do compilador deve ser semelhante a:
+   O compilador cl.exe gera um arquivo. obj que contém o código compilado e, em seguida, executa o vinculador para criar um programa executável chamado hello.exe. Esse nome aparece nas linhas de informações de saída que o compilador exibe. A saída do compilador deve ser semelhante a:
 
    ```Output
    c:\hello>cl /EHsc hello.cpp
@@ -130,9 +130,9 @@ Antes de criar um programa C ou C++ na linha de comando, verifique se as ferrame
    > Se você receber um erro como "' CL ' não é reconhecido como um comando interno ou externo, um programa ou arquivo de lote operável," Error C1034 ou Error LNK1104, o prompt de comando do desenvolvedor não está configurado corretamente. Para obter informações sobre como corrigir esse problema, volte para a seção **abrir um prompt de comando do desenvolvedor** .
 
    > [!NOTE]
-   > Se você obtiver um erro ou aviso do vinculador ou de um compilador diferente, examine o código-fonte para corrigir os erros, salve-o e execute o compilador novamente. Para obter informações sobre erros específicos, use a caixa de pesquisa nesta página do MSDN para procurar o número do erro.
+   > Se você obtiver um erro ou aviso do vinculador ou de um compilador diferente, examine o código-fonte para corrigir os erros, salve-o e execute o compilador novamente. Para obter informações sobre erros específicos, use a caixa de pesquisa para procurar o número do erro.
 
-1. Para executar o programa Hello. exe, no prompt de comando, digite `hello`.
+1. Para executar o programa hello.exe, no prompt de comando, digite `hello` .
 
    O programa exibe este texto e é fechado:
 
@@ -146,7 +146,7 @@ Antes de criar um programa C ou C++ na linha de comando, verifique se as ferrame
 
 Esse exemplo de "Olá, mundo" é tão simples quanto um programa em C++ pode ser obtido. Os programas do mundo real geralmente têm arquivos de cabeçalho, mais arquivos de origem e vinculam-se a bibliotecas.
 
-Você pode usar as etapas neste passo a passos para criar seu próprio código C++ em vez de digitar o código de exemplo mostrado. Essas etapas também permitem que você crie muitos programas de exemplo de código C++ que você encontrar em outro lugar. Você pode colocar seu código-fonte e criar seus aplicativos em qualquer diretório gravável. Por padrão, o IDE do Visual Studio cria projetos em sua pasta de usuário, em uma subpasta *repositórios de origem\\* . As versões mais antigas podem colocar projetos em uma pasta *documentos\\do Visual \<Studio versão>\\ *projetos *.
+Você pode usar as etapas neste passo a passos para criar seu próprio código C++ em vez de digitar o código de exemplo mostrado. Essas etapas também permitem que você crie muitos programas de exemplo de código C++ que você encontrar em outro lugar. Você pode colocar seu código-fonte e criar seus aplicativos em qualquer diretório gravável. Por padrão, o IDE do Visual Studio cria projetos em sua pasta de usuário, em uma subpasta * \\ repositórios de origem* . As versões mais antigas podem colocar projetos em uma pasta *Documents \\ Visual Studio \<version> \\ *Projects *.
 
 Para compilar um programa que tenha arquivos de código-fonte adicionais, insira todos eles na linha de comando, como:
 
@@ -154,7 +154,7 @@ Para compilar um programa que tenha arquivos de código-fonte adicionais, insira
 
 A `/EHsc` opção de linha de comando instrui o compilador a habilitar o comportamento padrão de manipulação de exceções do C++. Sem ele, as exceções geradas podem resultar em vazamentos de recursos e objetos não destruídos. Para obter mais informações, consulte [/EH (modelo de tratamento de exceção)](reference/eh-exception-handling-model.md).
 
-Quando você fornece arquivos de origem adicionais, o compilador usa o primeiro arquivo de entrada para criar o nome do programa. Nesse caso, ele gera um programa chamado arquivo1. exe. Para alterar o nome para Program1. exe, adicione uma opção de vinculador [/out](reference/out-output-file-name.md) :
+Quando você fornece arquivos de origem adicionais, o compilador usa o primeiro arquivo de entrada para criar o nome do programa. Nesse caso, ele gera um programa chamado file1.exe. Para alterar o nome para program1.exe, adicione uma opção de vinculador [/out](reference/out-output-file-name.md) :
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
@@ -162,16 +162,16 @@ E para detectar mais erros de programação automaticamente, recomendamos que vo
 
 `cl /W4 /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
-O compilador, CL. exe, tem muito mais opções. Você pode aplicá-los para compilar, otimizar, depurar e analisar seu código. Para obter uma lista rápida, `cl /?` digite no prompt de comando do desenvolvedor. Você também pode compilar e vincular separadamente e aplicar opções de vinculador em cenários de compilação mais complexos. Para obter mais informações sobre as opções e o uso do compilador e do vinculador, consulte [referência de compilação do C/C++](reference/c-cpp-building-reference.md).
+O compilador, cl.exe, tem muito mais opções. Você pode aplicá-los para compilar, otimizar, depurar e analisar seu código. Para obter uma lista rápida, digite `cl /?` no prompt de comando do desenvolvedor. Você também pode compilar e vincular separadamente e aplicar opções de vinculador em cenários de compilação mais complexos. Para obter mais informações sobre as opções e o uso do compilador e do vinculador, consulte [referência de compilação do C/C++](reference/c-cpp-building-reference.md).
 
 Você pode usar NMAKE e makefiles, arquivos MSBuild e Project, ou CMake, para configurar e compilar projetos mais complexos na linha de comando. Para obter mais informações sobre como usar essas ferramentas, consulte [NMAKE Reference](reference/nmake-reference.md), [MSBuild](msbuild-visual-cpp.md)e [CMake Projects in Visual Studio](cmake-projects-in-visual-studio.md).
 
-As linguagens C e C++ são semelhantes, mas não as mesmas. O compilador MSVC usa uma regra simples para determinar qual idioma usar ao compilar seu código. Por padrão, o compilador MSVC trata os arquivos que terminam em *`.c`* como código-fonte C e os arquivos *`.cpp`* que terminam como código-fonte C++. Para forçar o compilador a tratar todos os arquivos como C++ independentemente da extensão de nome de arquivo, use a opção de compilador [/TP](reference/tc-tp-tc-tp-specify-source-file-type.md) .
+As linguagens C e C++ são semelhantes, mas não as mesmas. O compilador MSVC usa uma regra simples para determinar qual idioma usar ao compilar seu código. Por padrão, o compilador MSVC trata os arquivos que terminam em *`.c`* como código-fonte C e os arquivos que terminam *`.cpp`* como código-fonte C++. Para forçar o compilador a tratar todos os arquivos como C++ independentemente da extensão de nome de arquivo, use a opção de compilador [/TP](reference/tc-tp-tc-tp-specify-source-file-type.md) .
 
 O compilador MSVC inclui uma biblioteca de tempo de execução C (CRT) que está de acordo com o padrão ISO C99, com exceções secundárias. O código portátil geralmente é compilado e executado conforme o esperado. Determinadas funções de biblioteca obsoletas e vários nomes de funções POSIX são preteridas pelo compilador MSVC. As funções têm suporte, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md) e [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br/>
+[Sistemas de build e projetos](projects-and-build-systems-cpp.md)<br/>
 [Opções do compilador MSVC](reference/compiler-options.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - DYNAMICBASE editbin option
 - /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-ms.openlocfilehash: ab7682c8344d6fc36ded03e7ef885c83d2f19ab7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 54644d9df546299be3b688f9745a121592938df6
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169039"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373613"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
 
 Especifica se uma imagem executável pode ser gerada aleatoriamente com base no tempo de carregamento usando o recurso ASLR (Address Space layout Randomization) do Windows que foi disponibilizado pela primeira vez no Windows Vista.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
-> **/DynamicBase**[ **: no**]
+> **/DynamicBase**[**: no**]
 
 ## <a name="remarks"></a>Comentários
 
@@ -32,4 +32,4 @@ Por padrão, o **/DynamicBase** está habilitado. Para desabilitar essa opção,
 ## <a name="see-also"></a>Confira também
 
 - [Opções de EDITBIN](editbin-options.md)
-- [Defesas de segurança de software ISV do Windows](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Defesas de segurança de software ISV do Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 66d6232ed43f9c842ebbb0e22b57c509cf610afa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170053"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373704"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (usar aleatorização do layout de espaço do endereço)
 
 Especifica se uma imagem executável pode ser gerada aleatoriamente com base no tempo de carregamento usando o recurso ASLR (Address Space layout Randomization) do Windows que foi disponibilizado pela primeira vez no Windows Vista.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
-> **/DynamicBase**[ **: no**]
+> **/DynamicBase**[**: no**]
 
 ## <a name="remarks"></a>Comentários
 
@@ -33,7 +33,7 @@ Por padrão, o **/DynamicBase** está habilitado. Para desabilitar essa opção,
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione as **Propriedades de configuração** > **vinculador** > página de propriedades **avançada** .
+1. Selecione a **Configuration Properties**  >  página de propriedade avançada do**vinculador**de propriedades de configuração  >  **Advanced** .
 
 1. Modifique a propriedade de **endereço base aleatória** .
 
@@ -44,6 +44,6 @@ Por padrão, o **/DynamicBase** está habilitado. Para desabilitar essa opção,
 ## <a name="see-also"></a>Confira também
 
 - [Referência de vinculador MSVC](linking.md)
-- [Opções de vinculador MSVC](linker-options.md)
+- [Opções do vinculador MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Defesas de segurança de software ISV do Windows](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Defesas de segurança de software ISV do Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

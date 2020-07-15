@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 0c0233ad6715a3adb7d47f021a87207f288d5139
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 5a96ffd15bb28022b3000252307c75b3383ac59c
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837027"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373743"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Como integrar ferramentas personalizar a propriedades de projeto
 
@@ -17,7 +17,7 @@ Adicione opções de ferramentas personalizadas à janela **Páginas de Propried
 
 A seção **Propriedades de Configuração** da janela **Páginas de Propriedades** exibe os grupos de configurações que são conhecidos como *regras*. Cada regra contém as configurações para uma ferramenta ou um grupo de funcionalidades. Por exemplo, a regra **Vinculador** contém as configurações para a ferramenta do vinculador. As configurações em uma regra podem ser subdivididas em *categorias*.
 
-Este documento explica como criar um arquivo em um diretório definido que contém propriedades para a ferramenta personalizada, de modo que as propriedades sejam carregadas quando o Visual Studio for iniciado. Para obter informações sobre como modificar o arquivo, confira [Extensibilidade de plataforma parte 2](https://blogs.msdn.microsoft.com/vsproject/2009/06/18/platform-extensibility-part-2/) no blog da equipe de projeto do Visual Studio.
+Este documento explica como criar um arquivo em um diretório definido que contém propriedades para a ferramenta personalizada, de modo que as propriedades sejam carregadas quando o Visual Studio for iniciado. Para obter informações sobre como modificar o arquivo, confira [Extensibilidade de plataforma parte 2](https://docs.microsoft.com/archive/blogs/vsproject/platform-extensibility-part-2) no blog da equipe de projeto do Visual Studio.
 
 ### <a name="to-add-or-change-project-properties"></a>Para adicionar ou alterar as propriedades de projeto
 

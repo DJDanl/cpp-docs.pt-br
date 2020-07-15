@@ -4,11 +4,12 @@ description: o vcpkg é um Gerenciador de pacotes de linha de comando que simpli
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2a179a25a7332a93486d42750f06f18658991b30
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058640"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373626"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: um Gerenciador de pacotes C++ para Windows, Linux e macOS
 
@@ -166,7 +167,7 @@ Execute **`vcpkg integrate install`** para configurar o Visual Studio Code no li
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Linux de destino do Windows por meio do WSL
 
-Você pode produzir binários do Linux em um computador Windows usando o subsistema do Windows para Linux ou WSL. Siga as instruções para [Configurar o WSL no Windows 10](/windows/wsl/install-win10). Em seguida, configure-o com a [extensão do Visual Studio para Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Não há problema em colocar todas as bibliotecas criadas para Windows e Linux na mesma pasta. Eles estão acessíveis tanto do Windows quanto do WSL.
+Você pode produzir binários do Linux em um computador Windows usando o subsistema do Windows para Linux ou WSL. Siga as instruções para [Configurar o WSL no Windows 10](/windows/wsl/install-win10). Em seguida, configure-o com a [extensão do Visual Studio para Linux](https://devblogs.microsoft.com/cppblog/targeting-windows-subsystem-for-linux-from-visual-studio/). Não há problema em colocar todas as bibliotecas criadas para Windows e Linux na mesma pasta. Eles estão acessíveis tanto do Windows quanto do WSL.
 
 ## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> Exportar binários compilados e cabeçalhos
 

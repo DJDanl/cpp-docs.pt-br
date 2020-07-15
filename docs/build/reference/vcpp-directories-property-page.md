@@ -13,58 +13,58 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 9b005a89156db48615ec6ea8dfc4f07a7414fc3b
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 7fc81cd5210167ee9df77605677349d6907f3e5d
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299784"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373899"
 ---
 # <a name="vc-directories-property-page-windows"></a>Página de propriedades de Diretórios do VC++ (Windows)
 
-Use esta página de propriedades para informar o Visual Studio de quais diretórios devem ser usados ao compilar o projeto atualmente selecionado. Para definir diretórios para vários projetos em uma solução, use uma folha de propriedades Personalizada, conforme descrito em [compartilhar ou reutilizar configurações de C++ projeto do Visual Studio](../create-reusable-property-configurations.md).
+Use esta página de propriedades para informar o Visual Studio de quais diretórios devem ser usados ao compilar o projeto atualmente selecionado. Para definir diretórios para vários projetos em uma solução, use uma folha de propriedades Personalizada, conforme descrito em [compartilhar ou reutilizar configurações de projeto do Visual Studio C++](../create-reusable-property-configurations.md).
 
 Para obter a versão do Linux desta página, confira [Diretórios do VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
-Para acessar a página de propriedades de **Diretórios do VC++** :
+Para acessar a página de propriedades de **Diretórios do VC++**:
 
 1. Se a janela do **Gerenciador de Soluções** não estiver visível, no menu principal, escolha **Exibir** > **Gerenciador de Soluções**.
 1. Clique com o botão direito do mouse em um nó do projeto (não na solução de nível superior) e escolha **Propriedades**.
-1. No painel esquerdo da caixa de diálogo **Páginas de Propriedades**, selecione **Propriedades de Configuração** > **Diretórios do VC++** .
+1. No painel esquerdo da caixa de diálogo **Páginas de Propriedades**, selecione **Propriedades de Configuração** > **Diretórios do VC++**.
 
 As propriedades de Diretórios do VC++ se aplicam a um projeto, não ao nó da solução de nível superior. Se as propriedades de **Diretórios do VC++** não forem exibidas em **Propriedades de Configuração**, selecione um nó do projeto do C++ na janela do **Gerenciador de Soluções**:
 
-![Selecionar o nó do projeto](../media/vcppdir.png "Selecionar o nó do projeto para ver as propriedades de Diretórios do VC++")
+![Selecionar o nó do projeto](../media/vcppdir.png "Selecione o nó do projeto para ver as propriedades dos diretórios do VC + +")
 
 Observe que a página de propriedades de **Diretórios do VC++** para projetos multiplataforma tem outra aparência. Para obter informações específicas a projetos do Linux C++, confira [Diretórios do VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
-Se você não estiver familiarizado com *as propriedades do projeto* no Visual Studio, talvez seja útil primeiro ler o [compilador C++ de conjunto e as propriedades de compilação no Visual Studio](../working-with-project-properties.md).
+Se você não estiver familiarizado com *as propriedades do projeto* no Visual Studio, talvez seja útil primeiro ler o [compilador do C++ e as propriedades de compilação no Visual Studio](../working-with-project-properties.md).
 
 As configurações padrão para as propriedades de **Diretórios do VC++** dependem do tipo de projeto. Para projetos da área de trabalho, elas incluem os locais das ferramentas do C++ de determinado Conjunto de Ferramentas da Plataforma e o local do SDK do Windows. Altere o **Conjunto de Ferramentas da Plataforma** e a **versão do SDK do Windows** na página **Propriedades de Configuração** > **Geral**.
 
 Para exibir os valores para um dos diretórios:
 
-1. Selecione uma das propriedades na página **Diretórios do VC++** . Por exemplo, escolha **Diretórios de Biblioteca**.
+1. Selecione uma das propriedades na página **Diretórios do VC++**. Por exemplo, escolha **Diretórios de Biblioteca**.
 1. Escolha o botão de seta para baixo ao final do campo de valor da propriedade.
 1. No menu suspenso, escolha **Editar**.
 
-![Editar Diretórios de Biblioteca](../media/vcppdir_libdir_edit.png "Caixa de diálogo para editar os caminhos da biblioteca")
+![Editar diretórios de biblioteca](../media/vcppdir_libdir_edit.png "Caixa de diálogo para editar caminhos de biblioteca")
 
 Agora você verá uma caixa de diálogo como esta:
 
-![Mostrar Diretórios de Biblioteca](../media/vcppdir_libdir.png "Caixa de diálogo para adicionar ou remover caminhos da biblioteca")
+![Mostrar diretórios de biblioteca](../media/vcppdir_libdir.png "Caixa de diálogo para adicionar ou remover caminhos de biblioteca")
 
-Use essa caixa de diálogo para exibir os diretórios atuais. No entanto, caso deseje alterar ou adicionar um diretório, será melhor usar o **Gerenciador de Propriedades** para criar uma folha de propriedades ou modificar a folha de propriedades do usuário padrão. Para obter mais informações, consulte [compartilhar ou reutilizar C++ configurações de projeto do Visual Studio](../create-reusable-property-configurations.md).
+Use essa caixa de diálogo para exibir os diretórios atuais. No entanto, caso deseje alterar ou adicionar um diretório, será melhor usar o **Gerenciador de Propriedades** para criar uma folha de propriedades ou modificar a folha de propriedades do usuário padrão. Para obter mais informações, consulte [compartilhar ou reutilizar configurações de projeto do Visual Studio C++](../create-reusable-property-configurations.md).
 
 Conforme mostrado acima, muitos dos caminhos herdados são fornecidos como macros.  Para examinar o valor atual de uma macro, escolha o botão **Macros** no canto inferior direito da caixa de diálogo. Observe que muitas macros dependem do tipo de configuração. Uma macro em um build de depuração pode ser avaliada como um caminho diferente comparado à mesma macro em um build de versão.
 
 Pesquise correspondências parciais ou completas na caixa de edição. A ilustração a seguir mostra todas as macros que contêm a cadeia de caracteres "WindowsSDK" e também mostra o caminho atual para o qual a macro é avaliada:
 
-![Veja os valores da macro](../media/vcppdir_libdir_macros.png "Caixa de diálogo para editar macros")
+![Ver valores de macro](../media/vcppdir_libdir_macros.png "Caixa de diálogo para editar macros")
 
-Observação: A lista é preenchida conforme você digita. Não pressione **Enter**.
+Observação: a lista é populada conforme você digita. Não pressione **Enter**.
 
-Para obter mais informações sobre macros e por que você deve usá-las em vez de caminhos embutidos em código sempre que possível, consulte [ C++ definir compilador e propriedades de compilação no Visual Studio](../working-with-project-properties.md).
+Para obter mais informações sobre macros e por que você deve usá-las em vez de caminhos embutidos em código sempre que possível, consulte [definir compilador C++ e propriedades de compilação no Visual Studio](../working-with-project-properties.md).
 
 Para obter uma lista de macros usadas com frequência, consulte [macros comuns para comandos e propriedades de compilação](common-macros-for-build-commands-and-properties.md).
 
@@ -74,7 +74,7 @@ Defina suas próprias macros de duas maneiras:
 
 - Defina macros do usuário em um arquivo .props. Para obter mais informações, confira [Macros da página de propriedades](../working-with-project-properties.md).
 
-Para obter mais informações, consulte estas postagens no blog: [Diretórios vc + +](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [propriedades herdadas e folhas de propriedades](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)e [Guia de C++ atualização de projeto do Visual Studio 2010](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
+Para obter mais informações, confira estas postagens no blog: [Diretórios do VC++](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories), [Propriedades herdadas e folha de propriedades](https://docs.microsoft.com/archive/blogs/vsproject/inherited-properties-and-property-sheets) e [Guia de Atualização de Projeto do Visual Studio 2010 C++](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Tipos de diretório
 
@@ -83,19 +83,19 @@ Você também pode especificar outros diretórios, como a seguir.
 **Diretórios Executáveis**<br/>
 Diretórios onde procurar por arquivos executáveis. Corresponde à variável de ambiente **PATH**.
 
-**Incluir Diretórios**<br/>
+**Diretórios de inclusão**<br/>
 Diretórios nos quais procurar por arquivos de inclusão que são referenciados no código-fonte. Corresponde à variável de ambiente **INCLUDE**.
 
 **Diretórios de Referência**<br/>
 Diretórios nos quais pesquisar arquivos de assembly e de módulo (metadados) referenciados no código-fonte pela diretiva [#using](../../preprocessor/hash-using-directive-cpp.md). Corresponde à variável de ambiente **LIBPATH**.
 
 **Diretórios de Biblioteca**<br/>
-Diretórios onde procurar por arquivos de bibliotecas (.lib); isso inclui as bibliotecas em tempo de execução. Corresponde à variável de ambiente **LIB**. Essa configuração não se aplica a arquivos .obj; para criar um vínculo com um arquivo .obj, na página de propriedades de **Propriedades de Configuração** > **Vinculador** > **Geral**, selecione **Dependências de Bibliotecas Adicionais** e, em seguida, especifique o caminho relativo do arquivo. Para obter mais informações, confira [Páginas de propriedades do Vinculador](linker-property-pages.md).
+Diretórios onde procurar por arquivos de bibliotecas (.lib); isso inclui as bibliotecas em tempo de execução. Corresponde à variável de ambiente **LIB**. Essa configuração não se aplica a arquivos. obj; para vincular a um arquivo. obj, na página de propriedade geral do vinculador Propriedades de **configuração**  >  **Linker**  >  **General** , selecione **dependências de biblioteca adicionais** e, em seguida, especifique o caminho relativo do arquivo. Para obter mais informações, confira [Páginas de propriedades do Vinculador](linker-property-pages.md).
 
 **Diretórios de Biblioteca WinRT**<br/>
 Diretórios nos quais pesquisar arquivos de biblioteca WinRT para uso em aplicativos UWP (Plataforma Universal do Windows).
 
-**Diretórios de Origem**<br/>
+**Diretórios de origem**<br/>
 Diretórios onde procurar por arquivos de origem para uso para o IntelliSense.
 
 **Excluir Diretórios**<br/>

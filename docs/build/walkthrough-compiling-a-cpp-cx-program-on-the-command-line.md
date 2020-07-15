@@ -2,19 +2,19 @@
 title: 'Instruções passo a passo: compilando um programa do C++/CX na linha de comando'
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 83369fc7b458463ea1f44a347bbcd0ca4eb32224
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 456373fc9009920b734243f6a6c1af3d2c0301d4
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078201"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373678"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Instruções passo a passo: compilando um programa do C++/CX na linha de comando
 
 > [!NOTE]
 > Para novos aplicativos e componentes UWP, recomendamos que você use [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), uma projeção de linguagem c++ 17 padrão para APIs de Windows Runtime. O C++/WinRT está disponível no SDK do Windows 10 da versão 1803 em diante. O C++/WinRT é implementado inteiramente em arquivos de cabeçalho e foi projetado para fornecer a você acesso de primeira classe à API moderna do Windows.
 
-O compilador do Microsoft C++ (MSVC) dá suporte a extensões de componente do C++ (C++/CX), que tem tipos e operadores adicionais para direcionar o modelo de programação de Windows Runtime. Você pode usar C++/CX para criar aplicativos para Plataforma Universal do Windows (UWP) e área de trabalho do Windows. Para obter mais informações, consulte [um tour pelo C++/CX](https://msdn.microsoft.com/magazine/dn166929.aspx) e [extensões de componente para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
+O compilador do Microsoft C++ (MSVC) dá suporte a extensões de componente do C++ (C++/CX), que tem tipos e operadores adicionais para direcionar o modelo de programação de Windows Runtime. Você pode usar C++/CX para criar aplicativos para Plataforma Universal do Windows (UWP) e área de trabalho do Windows. Para obter mais informações, consulte [um tour pelo C++/CX](https://docs.microsoft.com/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx) e [extensões de componente para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
 
 Neste passo a passo, você usa um editor de texto para criar um programa de C++/CX básico e, em seguida, o compila na linha de comandos. (Você pode usar seu próprio programa de C++/CX ao invés de digitar o que é mostrado ou, ainda, usar uma amostra de código de C++/CX de outro artigo de ajuda. Essa técnica é útil para criar e testar módulos pequenos que não têm elementos de interface do usuário.)
 
@@ -50,13 +50,13 @@ Para habilitar a compilação para C++/CX, você deve usar a opção de compilad
     }
     ```
 
-1. Na barra de menus, escolha **arquivo** > **salvar**.
+1. Na barra de menus, escolha **arquivo**  >  **salvar**.
 
    Você criou um arquivo de origem C++ que usa o namespace do Windows Runtime [Platform](../cppcx/platform-namespace-c-cx.md) namespace.
 
 1. No prompt de comando, digite **CL/EHSC/zw basiccx. cpp/link/SUBSYSTEM: console**. O compilador cl.exe compila o código-fonte em um arquivo .obj e executa o vinculador para gerar um programa executável denominado basiccx.exe. (A opção de compilador [/EHsc](reference/eh-exception-handling-model.md) especifica o modelo de manipulação de exceções do C++ e o sinalizador [/link](reference/link-pass-options-to-linker.md) especifica um aplicativo de console.)
 
-1. Para executar o programa basiccx. exe, no prompt de comando, digite **basiccx**.
+1. Para executar o programa basiccx.exe, no prompt de comando, digite **basiccx**.
 
    O programa exibe este texto e é fechado:
 
@@ -66,5 +66,5 @@ Para habilitar a compilação para C++/CX, você deve usar a opção de compilad
 
 ## <a name="see-also"></a>Confira também
 
-[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br/>
+[Sistemas de build e projetos](projects-and-build-systems-cpp.md)<br/>
 [Opções do compilador MSVC](reference/compiler-options.md)

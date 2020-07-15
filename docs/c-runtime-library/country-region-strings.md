@@ -4,27 +4,27 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 8556e005618a1b69c47498a07e218284dcb1164f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ea0ac6ab89179683d04f6b6233c6fa1996e51a1f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443441"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373561"
 ---
 # <a name="countryregion-strings"></a>Cadeias de caracteres de país/região
 
-Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para obter as listas de nomes de países e regiões compatíveis com várias versões do sistema operacional Windows, veja as colunas **Idioma**, **Localização** e **Marca de idioma** da tabela no [Apêndice A: comportamento de produto](https://msdn.microsoft.com/library/cc233982.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows. Para obter um exemplo de código que enumera os nomes de localidades disponíveis e valores relacionados, veja [NLS: exemplo de APIs com base no nome](/windows/win32/intl/nls--name-based-apis-sample).
+Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para obter listas de nomes de país e região com suporte em várias versões do sistema operacional Windows, consulte as colunas **idioma**, **local**e **marca de idioma** da tabela no [Apêndice A: comportamento do produto](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) em \[ MS-LCID]: referência do identificador de código de idioma do Windows (LCID). Para obter um exemplo de código que enumera os nomes de localidades disponíveis e valores relacionados, veja [NLS: exemplo de APIs com base no nome](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Cadeias de caracteres de país e região com suporte adicional
 
 A implementação de biblioteca em tempo de execução C da Microsoft também dá suporte às seguintes cadeias de caracteres adicionais de país/região e abreviações:
 
-|Cadeia de caracteres de país/região|Abreviação de|Nome da localidade equivalente|
+|Cadeia de caracteres de país/região|Abreviação|Nome da localidade equivalente|
 |----------------------------|------------------|----------------------------|
-|america|EUA|en-US|
+|america|EUA|pt-BR|
 |britain|GBR|en-GB|
 |china|CHN|zh-CN|
-|czech|CZE|cs-CZ|
+|tcheco|CZE|cs-CZ|
 |england|GBR|en-GB|
 |great britain|GBR|en-GB|
 |holland|NLD|nl-NL|
@@ -34,7 +34,7 @@ A implementação de biblioteca em tempo de execução C da Microsoft também d�
 |pr china|CHN|zh-CN|
 |pr-china|CHN|zh-CN|
 |puerto-rico|PRI|es-PR|
-|slovak|SVK|sk-SK|
+|eslovaco|SVK|sk-SK|
 |south africa|ZAF|af-ZA|
 |coreia do sul|KOR|ko-KR|
 |south-africa|ZAF|af-ZA|
@@ -42,12 +42,12 @@ A implementação de biblioteca em tempo de execução C da Microsoft também d�
 |trinidad & tobago|TTO|en-TT|
 |uk|GBR|en-GB|
 |united-kingdom|GBR|en-GB|
-|united-states|EUA|en-US|
-|us|EUA|en-US|
+|united-states|EUA|pt-BR|
+|us|EUA|pt-BR|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Nomes de localidades, idiomas e cadeias de caracteres de país/região](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nomes de localidade, idiomas e cadeias de país/região](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Cadeias de caracteres de idioma](../c-runtime-library/language-strings.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)
