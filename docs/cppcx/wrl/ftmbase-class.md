@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: d37cdddda8cf8894016ed80b9055fe106b1600f7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f28a850c365bc9a75d8e5b100e5e5cc0a1c5dc10
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371507"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404558"
 ---
 # <a name="ftmbase-class"></a>Classe FtmBase
 
-Representa um objeto marshaler de rosca livre.
+Representa um objeto de marshaling com thread livre.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -48,7 +48,7 @@ class FtmBase :
 
 ## <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [RuntimeClass .](runtimeclass-class.md)
+Para obter mais informações, consulte [classe RuntimeClass](runtimeclass-class.md).
 
 ## <a name="members"></a>Membros
 
@@ -56,25 +56,25 @@ Para obter mais informações, consulte [RuntimeClass .](runtimeclass-class.md)
 
 | Nome                         | Descrição                                        |
 | ---------------------------- | -------------------------------------------------- |
-| [Base de ftm::FtmBase](#ftmbase) | Inicia uma nova instância da classe `FtmBase`. |
+| [FtmBase::FtmBase](#ftmbase) | Inicializa uma nova instância da classe `FtmBase`. |
 
 ### <a name="public-methods"></a>Métodos públicos
 
 | Nome                                                               | Descrição                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | Cria uma tabela de interface global (GIT).                                                                                                                              |
-| [Base ftmBase::DisconnectObject](#disconnectobject)                     | Libera à força todas as conexões externas a um objeto. O servidor do objeto chama a implementação deste método antes de ser desligado.                |
-| [Base de ftm::GetMarshalSizeMax](#getmarshalsizemax)                   | Obtenha o limite superior no número de bytes necessários para empacotar o ponteiro de interface especificado no objeto especificado.                                                |
-| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | Obtém o CLSID que o COM usa para localizar o DLL contendo o código para o proxy correspondente. O COM carrega essa DLL para criar uma instância não inicializada do proxy. |
-| [FtmBase::MarshalInterface](#marshalinterface)                     | Grava em um fluxo os dados necessários para inicializar um objeto proxy em algum processo do cliente.                                                                          |
-| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Destrói um pacote de dados empacotado.                                                                                                                                    |
+| [FtmBase::D isconnectobject](#disconnectobject)                     | Libera forçosamente todas as conexões externas a um objeto. O servidor do objeto chama a implementação do objeto desse método antes de desligar.                |
+| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | Obtenha o limite superior do número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.                                                |
+| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | Obtém o CLSID usado pelo COM para localizar a DLL que contém o código do proxy correspondente. COM carrega essa DLL para criar uma instância não inicializada do proxy. |
+| [FtmBase::MarshalInterface](#marshalinterface)                     | Grava em um fluxo os dados necessários para inicializar um objeto proxy em algum processo cliente.                                                                          |
+| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Destrói um pacote de dados com marshaling.                                                                                                                                    |
 | [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | Inicializa um proxy recém-criado e retorna um ponteiro de interface para esse proxy.                                                                                    |
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 | Nome                                | Descrição                                       |
 | ----------------------------------- | ------------------------------------------------- |
-| [Base de ftm::marshaller_](#marshaller) | Tem uma referência ao marechal de rosca livre. |
+| [FtmBase:: marshaller_](#marshaller) | Mantém uma referência ao marshaler livre de threads. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -82,9 +82,9 @@ Para obter mais informações, consulte [RuntimeClass .](runtimeclass-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** ftm.h
+**Cabeçalho:** FTM. h
 
-**Espaço de nome:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
 ## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
 
@@ -98,20 +98,20 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Git*<br/>
-Quando esta operação for concluída, um ponteiro para uma tabela de interface global.
+*git*<br/>
+Quando essa operação é concluída, um ponteiro para uma tabela de interface global.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais `IGlobalInterfaceTable` informações, `COM Interfaces` consulte o `COM Reference` tópico no subtópico do tópico na Biblioteca MSDN.
+Para obter mais informações, consulte [`IGlobalInterfaceTable`](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
 
-## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>Base ftmBase::DisconnectObject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::D isconnectobject
 
-Libera à força todas as conexões externas a um objeto. O servidor do objeto chama a implementação deste método antes de ser desligado.
+Libera forçosamente todas as conexões externas a um objeto. O servidor do objeto chama a implementação do objeto desse método antes de desligar.
 
 ```cpp
 STDMETHODIMP DisconnectObject(
@@ -121,24 +121,24 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwReservado*<br/>
+*dwReserved*<br/>
 Reservado para uso futuro; deve ser zero.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>Base de ftm::FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase::FtmBase
 
-Inicia uma nova instância da classe `FtmBase`.
+Inicializa uma nova instância da classe `FtmBase`.
 
 ```cpp
 FtmBase();
 ```
 
-## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>Base de ftm::GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
 
-Obtenha o limite superior no número de bytes necessários para empacotar o ponteiro de interface especificado no objeto especificado.
+Obtenha o limite superior do número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.
 
 ```cpp
 STDMETHODIMP GetMarshalSizeMax(
@@ -156,32 +156,32 @@ STDMETHODIMP GetMarshalSizeMax(
 *riid*<br/>
 Referência ao identificador da interface a ser empacotada.
 
-*Pv*<br/>
-Ponteiro de interface a ser empacotado; pode ser NULO.
+*PV*<br/>
+Ponteiro de interface a ser empacotado; pode ser NULL.
 
 *dwDestContext*<br/>
-Contexto de destino onde a interface especificada deve ser desmarshaled.
+Contexto de destino em que a interface especificada deve ser desempacotada.
 
 Especifique um ou mais valores de enumeração MSHCTX.
 
-Atualmente, o desmembramento pode ocorrer em outro apartamento do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).
+Atualmente, o desempacotamento pode ocorrer em outro apartamento do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
-Reservado para uso futuro; deve ser NULO.
+Reservado para uso futuro; deve ser NULL.
 
 *mshlflags*<br/>
-Flagindicando se os dados a serem empacotados devem ser transmitidos de volta ao processo do cliente — o caso típico — ou gravados em uma tabela global, onde podem ser recuperados por vários clientes. Especifique um ou mais valores de enumeração MSHLFLAGS.
+Sinalizador que indica se os dados a serem empacotados devem ser transmitidos de volta ao processo do cliente – o caso típico — ou gravados em uma tabela global, onde eles podem ser recuperados por vários clientes. Especifique um ou mais valores de enumeração MSHLFLAGS.
 
-*Psize*<br/>
-Quando esta operação for concluída, advirto o limite superior sobre a quantidade de dados a serem gravados no fluxo de marshaling.
+*pSize*<br/>
+Quando essa operação for concluída, o ponteiro para o limite superior na quantidade de dados a ser gravado no fluxo de marshaling.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-S_OK se for bem sucedido; E_FAIL ou E_NOINTERFACE.
+S_OK se for bem-sucedido; caso contrário, E_FAIL ou E_NOINTERFACE.
 
 ## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
 
-Obtém o CLSID que o COM usa para localizar o DLL contendo o código para o proxy correspondente. O COM carrega essa DLL para criar uma instância não inicializada do proxy.
+Obtém o CLSID usado pelo COM para localizar a DLL que contém o código do proxy correspondente. COM carrega essa DLL para criar uma instância não inicializada do proxy.
 
 ```cpp
 STDMETHODIMP GetUnmarshalClass(
@@ -199,31 +199,31 @@ STDMETHODIMP GetUnmarshalClass(
 *riid*<br/>
 Referência ao identificador da interface a ser empacotada.
 
-*Pv*<br/>
-Ponteiro para a interface a ser empacotada; pode ser NULO se o chamador não tiver um ponteiro para a interface desejada.
+*PV*<br/>
+Ponteiro para a interface a ser empacotada; pode ser NULL se o chamador não tiver um ponteiro para a interface desejada.
 
 *dwDestContext*<br/>
-Contexto de destino onde a interface especificada deve ser desmarshaled.
+Contexto de destino em que a interface especificada deve ser desempacotada.
 
 Especifique um ou mais valores de enumeração MSHCTX.
 
 O desempacotamento pode ocorrer em outro apartamento do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
-Reservado para uso futuro; deve ser NULO.
+Reservado para uso futuro; deve ser NULL.
 
 *mshlflags*<br/>
-Quando esta operação for concluída, ponteiro para o CLSID para ser usado para criar um proxy no processo do cliente.
+Quando essa operação é concluída, o ponteiro para o CLSID a ser usado para criar um proxy no processo do cliente.
 
 *pCid*
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-S_OK se for bem sucedido; caso contrário, S_FALSE.
+S_OK se for bem-sucedido; caso contrário, S_FALSE.
 
 ## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase::MarshalInterface
 
-Grava em um fluxo os dados necessários para inicializar um objeto proxy em algum processo do cliente.
+Grava em um fluxo os dados necessários para inicializar um objeto proxy em algum processo cliente.
 
 ```cpp
 STDMETHODIMP MarshalInterface(
@@ -244,35 +244,35 @@ Ponteiro para o fluxo a ser usado durante o marshaling.
 *riid*<br/>
 Referência ao identificador da interface a ser empacotada. Essa interface deve ser derivada da interface `IUnknown` .
 
-*Pv*<br/>
-Ponteiro para o ponteiro de interface a ser empacotado; pode ser NULO se o chamador não tiver um ponteiro para a interface desejada.
+*PV*<br/>
+Ponteiro para o ponteiro de interface a ser empacotado; pode ser NULL se o chamador não tiver um ponteiro para a interface desejada.
 
 *dwDestContext*<br/>
-Contexto de destino onde a interface especificada deve ser desmarshaled.
+Contexto de destino em que a interface especificada deve ser desempacotada.
 
 Especifique um ou mais valores de enumeração MSHCTX.
 
-O desmembramento pode ocorrer em outro apartamento do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).
+O desempacotamento pode ocorrer em outro apartamento do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
 Reservado para uso futuro; deve ser zero.
 
 *mshlflags*<br/>
-Especifica se os dados a serem empacotados devem ser transmitidos de volta ao processo do cliente — o caso típico — ou gravados em uma tabela global, onde podem ser recuperados por vários clientes.
+Especifica se os dados a serem empacotados devem ser transmitidos de volta ao processo do cliente – o caso típico — ou gravados em uma tabela global, onde eles podem ser recuperados por vários clientes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-S_OK O ponteiro da interface foi empacotado com sucesso.
+S_OK o ponteiro de interface foi empacotado com êxito.
 
-E_NOINTERFACE A interface especificada não é suportada.
+Não há suporte para E_NOINTERFACE a interface especificada.
 
 STG_E_MEDIUMFULL o fluxo está cheio.
 
 E_FAIL a operação falhou.
 
-## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>Base de ftm::marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase:: marshaller_
 
-Tem uma referência ao marechal de rosca livre.
+Mantém uma referência ao marshaler livre de threads.
 
 ```cpp
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
@@ -280,7 +280,7 @@ Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 
 ## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
 
-Destrói um pacote de dados empacotado.
+Destrói um pacote de dados com marshaling.
 
 ```cpp
 STDMETHODIMP ReleaseMarshalData(
@@ -293,9 +293,9 @@ STDMETHODIMP ReleaseMarshalData(
 *pStm*<br/>
 Ponteiro para um fluxo que contém o pacote de dados a ser destruído.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
 ## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
 
@@ -312,14 +312,14 @@ STDMETHODIMP UnmarshalInterface(
 ### <a name="parameters"></a>Parâmetros
 
 *pStm*<br/>
-Ponteiro para o fluxo a partir do qual o ponteiro de interface deve ser desmarshaled.
+Ponteiro para o fluxo do qual o ponteiro de interface deve ser desempacotado.
 
 *riid*<br/>
-Referência ao identificador da interface a ser desmembrada.
+Referência ao identificador da interface a ser desempacotada.
 
-*Ppv*<br/>
-Quando esta operação é concluída, o endereço de uma variável ponteiro que recebe o ponteiro de interface solicitado em *riid*. Se esta operação for bem sucedida, **ppv* contém o ponteiro de interface solicitado da interface a ser desmarshaled.
+*ppv*<br/>
+Quando essa operação é concluída, o endereço de uma variável de ponteiro que recebe o ponteiro de interface solicitado em *riid*. Se essa operação for bem-sucedida, **PPV* conterá o ponteiro de interface solicitado da interface a ser desempacotado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-S_OK se for bem sucedido; E_NOINTERFACE ou E_FAIL.
+S_OK se for bem-sucedido; caso contrário, E_NOINTERFACE ou E_FAIL.

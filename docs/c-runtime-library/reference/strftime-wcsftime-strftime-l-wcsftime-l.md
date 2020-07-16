@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920015"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404314"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -101,7 +101,7 @@ estrutura de dados **TM** .
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 **strftime** retorna o número de caracteres colocados em *strDest* e **wcsftime** retorna o número correspondente de caracteres largos.
 
@@ -123,7 +123,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-O argumento de *formato* consiste em um ou mais códigos; como na **printf**, os códigos de formatação são precedidos por um sinal**%** de porcentagem (). Os caracteres que não começam com **%** são copiados inalterados para *strDest*. A categoria de **LC_TIME** da localidade atual afeta a formatação de saída de **strftime**. (Para obter mais informações sobre **LC_TIME**, consulte [setlocale](setlocale-wsetlocale.md).) As funções **strftime** e **wcsftime** usam a localidade definida no momento. As versões **_strftime_l** e **_wcsftime_l** dessas funções são idênticas, exceto pelo fato de que elas usam a localidade como um parâmetro e usam isso em vez da localidade definida no momento. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O argumento de *formato* consiste em um ou mais códigos; como na **printf**, os códigos de formatação são precedidos por um sinal de porcentagem ( **%** ). Os caracteres que não começam com **%** são copiados inalterados para *strDest*. A categoria de **LC_TIME** da localidade atual afeta a formatação de saída de **strftime**. (Para obter mais informações sobre **LC_TIME**, consulte [setlocale](setlocale-wsetlocale.md).) As funções **strftime** e **wcsftime** usam a localidade definida no momento. As versões **_strftime_l** e **_wcsftime_l** dessas funções são idênticas, exceto pelo fato de que elas usam a localidade como um parâmetro e usam isso em vez da localidade definida no momento. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 As funções **strftime** dão suporte a esses códigos de formatação:
 
@@ -179,6 +179,9 @@ Como na função **printf** , o **#** sinalizador pode prefixar qualquer código
 
 A semana ISO 8601 e o ano baseado em semana produzidos por **% V**, **% g**e **% g**usam uma semana que começa na segunda-feira, em que a semana 1 é a semana que contém 1º de Janeiro, que é a primeira semana que inclui pelo menos quatro dias do ano. Se a primeira segunda-feira do ano for a 2ª, 3ª ou 4ª, os dias anteriores serão parte da última semana do ano anterior. Para esses dias, **% V** é substituído por 53, e **% g** e **% g** são substituídos pelos dígitos do ano anterior.
 
+> [!NOTE]
+> Ao usar uma das `strftime` funções com um `tm` ponteiro retornado de `gmtime` , os valores impressos por meio dos `%Z` `%z` especificadores e não serão precisos. Isso ocorre porque a `tm` struct, conforme especificado pelo padrão C, não contém as informações de nome de fuso horário nem deslocamento. Em vez disso, as informações de fuso horário são populadas por meio das variáveis globais [ `_timezone` e `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
@@ -194,9 +197,9 @@ As funções **_strftime_l** e **_wcsftime_l** são específicas da Microsoft. P
 
 Veja o exemplo de [time](time-time32-time64.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Locale](../../c-runtime-library/locale.md) <br/>
+[Localidade](../../c-runtime-library/locale.md) <br/>
 [Gerenciamento de tempo](../../c-runtime-library/time-management.md) <br/>
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>

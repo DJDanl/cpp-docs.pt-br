@@ -8,16 +8,16 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182195"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404994"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Mensagens do vetorizador e do paralelizador
 
-Você pode usar as opções C++ de compilador da Microsoft [/Qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir a [paralelização automática e a Auto-vetorização](../../parallel/auto-parallelization-and-auto-vectorization.md) para códigos de motivo de saída e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.
+Você pode usar as opções de compilador do Microsoft C++ [/Qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir a [paralelização automática e a autoautoria](../../parallel/auto-parallelization-and-auto-vectorization.md) para códigos de motivo de saída e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Mensagens informativas
 
@@ -25,7 +25,7 @@ Dependendo do nível de relatório especificado, uma das mensagens informativas 
 
 Para obter informações sobre códigos de motivos, consulte a próxima parte deste artigo.
 
-|Mensagem informativa|DESCRIÇÃO|
+|Mensagem informativa|Descrição|
 |---------------------------|-----------------|
 |5001|`Loop vectorized.`|
 |5002|`Loop not vectorized due to reason '*description*'.`|
@@ -768,7 +768,7 @@ Os códigos de motivo de 14*XX* ocorrem quando uma opção incompatível com a v
 
 |Código de motivo|Explicação|
 |-----------------|-----------------|
-|1\.400|`#pragma loop(no_vector) is specified.`|
+|1.400|`#pragma loop(no_vector) is specified.`|
 |1401|`/kernel switch is specified when targeting x86 or ARM.`|
 |1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
 |1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
@@ -964,10 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Confira também
 
-[Erros eC++ avisos do C/compilador e ferramentas de compilação](../compiler-errors-1/c-cpp-build-errors.md)
-[a paralelização automática e a autoria de vetores](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Auto-vetorizador automático no Visual Studio 2012 – visão geral](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[Erros e avisos](../compiler-errors-1/c-cpp-build-errors.md) 
+ das ferramentas de compilação e do compilador C/C++ [Auto-paralelização e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Auto-Vetorizador automático no Visual Studio 2012 – visão geral](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
 [loop de #pragma ()](../../preprocessor/loop.md) \
 [Opções de/q (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md) \
 [/Qpar-Report (nível de relatório do paralelizador automático automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec-report (nível de relatórios do vetorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qvec-Report (nível de relatório do Vetorizador automático automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332247"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404545"
 ---
 # <a name="comptr-class"></a>Classe ComPtr
 
@@ -84,7 +84,7 @@ Uma classe à qual o atual `ComPtr` é um amigo. (O modelo que usa esse parâmet
 
 `ComPtr<>`declara um tipo que representa o ponteiro de interface subjacente. Use `ComPtr<>` para declarar uma variável e, em seguida, use a seta Member-Access Operator ( `->` ) para acessar uma função de membro de interface.
 
-Para obter mais informações sobre apontadores inteligentes, consulte a subseção "ponteiros inteligentes COM" do artigo sobre [práticas de codificação com](/windows/win32/LearnWin32/com-coding-practices) na biblioteca MSDN.
+Para obter mais informações sobre apontadores inteligentes, consulte a subseção "ponteiros inteligentes COM" do artigo [práticas de codificação de com](/windows/win32/LearnWin32/com-coding-practices) .
 
 ## <a name="members"></a>Membros
 
@@ -98,7 +98,7 @@ Nome            | Descrição
 
 Nome                             | Descrição
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
-[ComPtr:: ComPtr](#comptr)        | Inicia uma nova instância da classe `ComPtr`. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
+[ComPtr:: ComPtr](#comptr)        | Inicializa uma nova instância da classe `ComPtr`. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
 [ComPtr:: ~ ComPtr](#tilde-comptr) | Desinicializa uma instância do `ComPtr` .
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -250,7 +250,7 @@ Um tipo de interface.
 
 ## <a name="comptrcomptr"></a><a name="comptr"></a>ComPtr:: ComPtr
 
-Inicia uma nova instância da classe `ComPtr`. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
+Inicializa uma nova instância da classe `ComPtr`. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
 
 ```cpp
 WRL_NOTHROW ComPtr();
@@ -636,4 +636,4 @@ void Swap(
 ### <a name="parameters"></a>Parâmetros
 
 *r*<br/>
-Um `ComPtr`.
+Uma `ComPtr`.

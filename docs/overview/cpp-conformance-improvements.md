@@ -3,12 +3,12 @@ title: Aprimoramentos de conformidade do C++
 ms.date: 05/18/2020
 description: O Microsoft C++ no Visual Studio está progredindo em direção à plena conformidade com o padrão de linguagem C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: c7c93de8b0e4c266290b858c76e7b34fccc0cabd
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 7796728c869e39270ee9e8fe82fb5e0e9a3a8630
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630497"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405098"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Aprimoramentos de conformidade do C++ no Visual Studio
 
@@ -177,7 +177,7 @@ const char8_t* s = u8"Hello"; // C++20
 
 [Type_identity P0887R1](https://wg21.link/p0887r1). A extensão do modelo de classe `std::identity` preterido foi removida e substituída pela metafunção `std::type_identity` do C++20 e pelo objeto de função `std::identity`. Ambos estão disponíveis somente em [/std:c++latest](../build/reference/std-specify-language-standard-version.md).
 
-O exemplo a seguir produz o aviso de substituição C4996 para `std::identity` (definido em \<type_traits>) no Visual Studio 2017:
+O exemplo a seguir produz C4996 de aviso de reprovação para `std::identity` (definido em \<type_traits> ) no Visual Studio 2017:
 
 ```cpp
 #include <type_traits>
@@ -188,7 +188,7 @@ int i = 42;
 long j = std::identity<long>{}(i);
 ```
 
-O exemplo a seguir mostra como usar o novo `std::identity` (definido no \<functional>) juntamente com o novo `std::type_identity`:
+O exemplo a seguir mostra como usar o novo `std::identity` (definido em \<functional> ) junto com o novo `std::type_identity` :
 
 ```cpp
 #include <type_traits>
@@ -237,7 +237,7 @@ void f() {
 - `starts_with()` e `ends_with()` para `basic_string` e `basic_string_view`.
 - `contains()` para contêineres associativos.
 - `remove()`, `remove_if()`, e `unique()` para `list` e `forward_list` agora retornam `size_type`.
-- `shift_left()` e `shift_right()` adicionados ao \<algoritmo>.
+- `shift_left()` e `shift_right()` adicionados a \<algorithm>.
 
 ## <a name="conformance-improvements-in-162"></a><a name="improvements_162"></a>Melhorias de conformidade no 16,2
 
@@ -376,13 +376,13 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="standard-library-improvements"></a>Aprimoramentos da biblioteca padrão
 
-- \<charconv> `to_chars()` com precisão fixa/científica. (A precisão geral está atualmente planejada para 16,4.)
-- [P0020R6](https://wg21.link/p0020r6): \<> float atômico, \<> duplo atômico, \<> longo Duplo atômico
+- \<charconv>`to_chars()`com precisão fixa/científica. (A precisão geral está atualmente planejada para 16,4.)
+- [P0020R6](https://wg21.link/p0020r6): Atomic \<float> , atômico \<double> , atômico\<long double>
 - [P0463R1](https://wg21.link/p0463r1): endian
 - [P0482R6](https://wg21.link/p0482r6): suporte de biblioteca para char8_t
 - [P0600R1](https://wg21.link/p0600r1): [ \[ nodescarte]] para a STL, parte 1
 - [P0653R2](https://wg21.link/p0653r2): to_address ()
-- [P0754R2](https://wg21.link/p0754r2): \< versão>
+- [P0754R2](https://wg21.link/p0754r2):\<version>
 - [P0771R1](https://wg21.link/p0771r1): Noexcept para o construtor de movimentação std:: function
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-163"></a><a name="improvements_163"></a>Melhorias de conformidade no Visual Studio 2019 versão 16,3
@@ -456,7 +456,7 @@ Para evitar os erros no exemplo anterior, use **`bool`** em vez de `BOOL` consis
 
 ### <a name="standard-library-improvements"></a>Aprimoramentos da biblioteca padrão
 
-Os cabeçalhos não padrão \< stdexcpt. h> e \< typeInfo. h> foram removidos. O código que os inclui deve incluir os cabeçalhos padrão \< exception> e \< TypeInfo>, respectivamente.
+Os cabeçalhos não padrão \<stdexcpt.h> e foram \<typeinfo.h> removidos. O código que os inclui deve incluir os cabeçalhos padrão \<exception> e \<typeinfo> , respectivamente.
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-164"></a><a name="improvements_164"></a>Melhorias de conformidade no Visual Studio 2019 versão 16,4
 
@@ -1276,9 +1276,9 @@ int main()
 
 O recurso de depuração do iterador foi ensinado a desencapsular adequadamente o `std::move_iterator`. Por exemplo, agora `std::copy(std::move_iterator<std::vector<int>::iterator>, std::move_iterator<std::vector<int>::iterator>, int*)` pode envolver o caminho `memcpy` rápido.
 
-### <a name="fixes-for-xkeycheckh-keyword-enforcement"></a>Correções para a imposição da palavra-chave \<xkeycheck.h>
+### <a name="fixes-for-xkeycheckh-keyword-enforcement"></a>Correções para \<xkeycheck.h> imposição de palavra-chave
 
-A macro da biblioteca padrão que substitui uma imposição de palavra-chave \< xkeycheck. h> foi corrigida para emitir a palavra-chave do problema real detectada em vez de uma mensagem genérica. Ela também dá suporte a palavras-chave do C++20 e evita enganar o IntelliSense dizendo que palavras-chave são macros.
+A macro da biblioteca padrão que substitui uma imposição de palavra-chave \<xkeycheck.h> foi corrigida para emitir a palavra-chave problemática real detectada em vez de uma mensagem genérica. Ela também dá suporte a palavras-chave do C++20 e evita enganar o IntelliSense dizendo que palavras-chave são macros.
 
 ### <a name="allocator-types-no-longer-deprecated"></a>Tipos de alocador não mais preteridos
 
@@ -1288,7 +1288,7 @@ A macro da biblioteca padrão que substitui uma imposição de palavra-chave \< 
 
 Removeu um falso `static_cast` de `std::string` que não foi chamado pelo padrão e que suprimiva acidentalmente os avisos de restrição de C4244. As tentativas de chamar `std::string::string(const wchar_t*, const wchar_t*)` agora emitem corretamente o C4244 `narrowing a wchar_t into a char` .
 
-### <a name="various-filesystem-correctness-fixes"></a>Várias correções de exatidão do \<sistemadearquivos>
+### <a name="various-filesystem-correctness-fixes"></a>Várias \<filesystem> correções de correção
 
 - Correção de `std::filesystem::last_write_time` falha ao tentar alterar a hora da última gravação do diretório.
 - O construtor `std::filesystem::directory_entry` agora armazena um resultado com falha, em vez de gerar uma exceção, quando um caminho de destino não existente é fornecido.
@@ -1322,7 +1322,7 @@ Agora, a função `reserve` de contêiner não ordenada na verdade reserva N ele
 
 - Anteriormente, alguns valores temporais que eram passados para a biblioteca de simultaneidade estourariam, por exemplo, `condition_variable::wait_for(seconds::max())`. Agora corrigidos, os estouros mudaram o comportamento em um ciclo aparentemente aleatório de 29 dias (quando uint32_t milissegundos aceitos pelas APIs do Win32 subjacentes estouravam).
 
-- O \< cabeçalho de> CTime agora declara `timespec` e `timespec_get` no namespace corretamente `std` , além de declará-los no namespace global.
+- O \<ctime> cabeçalho agora declara `timespec` e `timespec_get` no namespace corretamente `std` , além de declará-los no namespace global.
 
 ### <a name="various-fixes-for-containers"></a>Várias correções de contêineres
 
@@ -1410,7 +1410,7 @@ Com suporte para o **constexpr** generalizado e a NSDMI (inicialização de memb
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++ 11: suporte ao Expression SFINAE em mais bibliotecas
 
-O compilador continua a melhorar seu suporte para o Expression SFINAE. Ele é necessário para dedução de argumento de modelo e substituição em que as expressões **decltype** e **constexpr** podem aparecer como parâmetros de modelo. Para obter mais informações, consulte [Expression SFINAE improvements in Visual Studio 2017 RC (Melhorias da expressão SFINAE no Visual Studio 2017 RC)](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3).
+O compilador continua a melhorar seu suporte para o Expression SFINAE. Ele é necessário para dedução de argumento de modelo e substituição em que as expressões **decltype** e **constexpr** podem aparecer como parâmetros de modelo. Para obter mais informações, consulte [Expression SFINAE improvements in Visual Studio 2017 RC (Melhorias da expressão SFINAE no Visual Studio 2017 RC)](https://devblogs.microsoft.com/cppblog/expression-sfinae-improvements-in-vs-2015-update-3/).
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++ 14: NSDMI para agregações
 
@@ -1542,7 +1542,7 @@ A biblioteca padrão foi atualizada em resposta às alterações do compilador C
 
 ### <a name="c17-library-fundamentals-v1"></a>Princípios básicos da biblioteca C++17 V1
 
-O [P0220R1](https://wg21.link/p0220r1) incorpora a especificação técnica dos princípios básicos da biblioteca para o C++17 no padrão. Ele aborda as atualizações para \<experimental/tuple>, \<experimental/optional>, \<experimental/functional>, \<experimental/any>, \<experimental/string_view>, \<experimental/memory>, \<experimental/memory_resource> e \<experimental/algorithm>.
+O [P0220R1](https://wg21.link/p0220r1) incorpora a especificação técnica dos princípios básicos da biblioteca para o C++17 no padrão. Aborda atualizações para,,,,,, \<experimental/tuple> \<experimental/optional> \<experimental/functional> \<experimental/any> \<experimental/string_view> \<experimental/memory> \<experimental/memory_resource> e \<experimental/algorithm> .
 
 ### <a name="c17-improving-class-template-argument-deduction-for-the-standard-library"></a>C++ 17: melhorando a dedução de argumento de modelo de classe para a biblioteca padrão
 
@@ -1698,7 +1698,7 @@ void sample(A<0> *p)
 
 ### <a name="c17-mathematical-special-functions"></a>C++ 17: funções especiais matemáticas
 
-[P0226R1](https://wg21.link/p0220r1) Adota especificações técnicas anteriores para as funções matemáticas especiais no cabeçalho \<cmath> padrão.
+[P0226R1](https://wg21.link/p0220r1) Adota especificações técnicas anteriores para funções especiais matemáticas no cabeçalho padrão \<cmath> .
 
 ### <a name="c17-deduction-guides-for-the-standard-library"></a>C++ 17: guias de dedução para a biblioteca padrão
 
@@ -1706,7 +1706,7 @@ void sample(A<0> *p)
 
 ### <a name="c17-repairing-elementary-string-conversions"></a>C++ 17: reparar conversões de cadeia de caracteres elementares
 
-[P0682R1](https://wg21.link/p0682r1) Mover as novas funções de conversão de cadeia de caracteres elementares do P0067R5 para um novo cabeçalho \<charconv> e fazer outras melhorias, incluindo alterações no tratamento de erro para usar `std::errc` em vez de `std::error_code`.
+[P0682R1](https://wg21.link/p0682r1) Mova as novas funções de conversão de cadeia de caracteres elementares do P0067R5 para um novo cabeçalho \<charconv> e faça outras melhorias, incluindo a alteração do tratamento de erro a ser usado `std::errc` em vez de `std::error_code` .
 
 ### <a name="c17-constexpr-for-char_traits-partial"></a>C++ 17: **constexpr** para `char_traits` (parcial)
 
@@ -2996,7 +2996,7 @@ struct D : B<T>
 D<int> d;
 ```
 
-Para corrigir o erro, altere a expressão de B() para B\<T>().
+Para corrigir o erro, altere a expressão B () para B \<T> ().
 
 ### <a name="constexpr-aggregate-initialization"></a>inicialização de agregação de **constexpr**
 
@@ -3166,7 +3166,7 @@ int main()
 }
 ```
 
-Para corrigir o erro, use `offsetof` conforme a definição por meio de \<cstddef>:
+Para corrigir o erro, use `offsetof` conforme definido por meio de \<cstddef> :
 
 ```cpp
 #include <cstddef>

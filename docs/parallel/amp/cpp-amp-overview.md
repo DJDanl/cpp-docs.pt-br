@@ -8,18 +8,18 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: f0b46065371b8cb70802cfc38b7365fd2db14bf5
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538640"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404841"
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 
 A C++ Accelerated Massive Parallelism (C++ AMP) acelera a execução do código C++ aproveitando o hardware de dados paralelos, como uma GPU (unidade de processamento gráfico) em uma placa gráfica discreta. Usando C++ AMP, você pode codificar algoritmos de dados multidimensionais para que a execução possa ser acelerada usando paralelismo em hardware heterogêneo. O modelo de programação do C++ AMP inclui matrizes multidimensionais, indexação, transferência de memória, agrupamento lado a lado e uma biblioteca de funções matemáticas. Você pode usar C++ AMP extensões de idioma para controlar como os dados são movidos da CPU para a GPU e de volta, para que você possa melhorar o desempenho.
 
-## <a name="system-requirements"></a>Requisitos do Sistema
+## <a name="system-requirements"></a>Requisitos de sistema
 
 - Windows 7 ou posterior
 
@@ -33,7 +33,7 @@ A C++ Accelerated Massive Parallelism (C++ AMP) acelera a execução do código 
 
 ## <a name="introduction"></a>Introdução
 
-Os dois exemplos a seguir ilustram os principais componentes do C++ AMP. Suponha que você queira adicionar os elementos correspondentes das matrizes 2 1-dimensional. Por exemplo, talvez você queira adicionar `{1, 2, 3, 4, 5}` e `{6, 7, 8, 9, 10}` obter. `{7, 9, 11, 13, 15}` Sem usar C++ AMP, você pode escrever o código a seguir para adicionar os números e exibir os resultados.
+Os dois exemplos a seguir ilustram os principais componentes do C++ AMP. Suponha que você queira adicionar os elementos correspondentes das matrizes 2 1-dimensional. Por exemplo, talvez você queira adicionar `{1, 2, 3, 4, 5}` e `{6, 7, 8, 9, 10}` obter `{7, 9, 11, 13, 15}` . Sem usar C++ AMP, você pode escrever o código a seguir para adicionar os números e exibir os resultados.
 
 ```cpp
 #include <iostream>
@@ -60,7 +60,7 @@ As partes importantes do código são as seguintes:
 
 - Dados: os dados consistem em três matrizes. Todos têm a mesma classificação (um) e comprimento (cinco).
 
-- Iteração: o `for` primeiro loop fornece um mecanismo para iterar pelos elementos nas matrizes. O código que você deseja executar para calcular as somas está contido no primeiro `for` bloco.
+- Iteração: o primeiro `for` loop fornece um mecanismo para iterar pelos elementos nas matrizes. O código que você deseja executar para calcular as somas está contido no primeiro `for` bloco.
 
 - Index: a `idx` variável acessa os elementos individuais das matrizes.
 
@@ -102,11 +102,11 @@ void CppAmpMethod() {
 
 Os mesmos elementos básicos estão presentes, mas C++ AMP construções são usadas:
 
-- Dados: você usa matrizes C++ para construir três objetos de [array_view](../../parallel/amp/reference/array-view-class.md) de C++ amp. Você fornece quatro valores para construir um `array_view` objeto: os valores de dados, a classificação, o tipo de elemento e o comprimento do `array_view` objeto em cada dimensão. A classificação e o tipo são passados como parâmetros de tipo. Os dados e o comprimento são passados como parâmetros do construtor. Neste exemplo, a matriz C++ que é passada para o construtor é unidimensional. A classificação e o comprimento são usados para construir a forma retangular dos dados no `array_view` objeto e os valores de dados são usados para preencher a matriz. A biblioteca de tempo de execução também inclui a [classe de matriz](../../parallel/amp/reference/array-class.md), que tem uma interface `array_view` que se assemelha à classe e é discutida posteriormente neste artigo.
+- Dados: você usa matrizes C++ para construir três objetos de [array_view](../../parallel/amp/reference/array-view-class.md) de C++ amp. Você fornece quatro valores para construir um `array_view` objeto: os valores de dados, a classificação, o tipo de elemento e o comprimento do `array_view` objeto em cada dimensão. A classificação e o tipo são passados como parâmetros de tipo. Os dados e o comprimento são passados como parâmetros do construtor. Neste exemplo, a matriz C++ que é passada para o construtor é unidimensional. A classificação e o comprimento são usados para construir a forma retangular dos dados no `array_view` objeto e os valores de dados são usados para preencher a matriz. A biblioteca de tempo de execução também inclui a [classe de matriz](../../parallel/amp/reference/array-class.md), que tem uma interface que se assemelha à `array_view` classe e é discutida posteriormente neste artigo.
 
-- Iteração: a [função parallel_for_each (C++ amp)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) fornece um mecanismo para iterar por meio dos elementos de dados ou do *domínio de computação*. Neste exemplo, o domínio de computação é especificado por `sum.extent`. O código que você deseja executar está contido em uma expressão lambda ou em uma *função de kernel*. O `restrict(amp)` indica que apenas o subconjunto da linguagem C++ que C++ amp pode acelerar é usado.
+- Iteração: a [função parallel_for_each (C++ amp)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) fornece um mecanismo para iterar por meio dos elementos de dados ou do *domínio de computação*. Neste exemplo, o domínio de computação é especificado por `sum.extent` . O código que você deseja executar está contido em uma expressão lambda ou em uma *função de kernel*. O `restrict(amp)` indica que apenas o subconjunto da linguagem C++ que C++ amp pode acelerar é usado.
 
-- Index: a variável de [classe](../../parallel/amp/reference/index-class.md) de `idx`índice,, é declarada com uma classificação de um para corresponder `array_view` à classificação do objeto. Usando o índice, você pode acessar os elementos individuais dos `array_view` objetos.
+- Index: a variável de [classe de índice](../../parallel/amp/reference/index-class.md) , `idx` , é declarada com uma classificação de um para corresponder à classificação do `array_view` objeto. Usando o índice, você pode acessar os elementos individuais dos `array_view` objetos.
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>Formatação e indexação de dados: índice e extensão
 
@@ -114,7 +114,7 @@ Você deve definir os valores de dados e declarar a forma dos dados antes de pod
 
 ### <a name="index-class"></a>Classe index
 
-A [classe index](../../parallel/amp/reference/index-class.md) especifica um local no objeto `array` ou `array_view` encapsulando o deslocamento da origem em cada dimensão em um objeto. Ao acessar um local na matriz, você passa um `index` objeto para o operador de indexação, `[]`, em vez de uma lista de índices inteiros. Você pode acessar os elementos em cada dimensão usando o [operador array:: Operator ()](reference/array-class.md#operator_call) ou o [operador array_view:: Operator ()](reference/array-view-class.md#operator_call).
+A [classe index](../../parallel/amp/reference/index-class.md) especifica um local no `array` objeto ou `array_view` encapsulando o deslocamento da origem em cada dimensão em um objeto. Ao acessar um local na matriz, você passa um `index` objeto para o operador de indexação, `[]` , em vez de uma lista de índices inteiros. Você pode acessar os elementos em cada dimensão usando o [operador array:: Operator ()](reference/array-class.md#operator_call) ou o [operador array_view:: Operator ()](reference/array-view-class.md#operator_call).
 
 O exemplo a seguir cria um índice unidimensional que especifica o terceiro elemento em um objeto unidimensional `array_view` . O índice é usado para imprimir o terceiro elemento no `array_view` objeto. A saída é 3.
 
@@ -128,7 +128,7 @@ std::cout << a[idx] << "\n";
 // Output: 3
 ```
 
-O exemplo a seguir cria um índice bidimensional que especifica o elemento em que a linha = 1 e a coluna = 2 em um objeto `array_view` bidimensional. O primeiro parâmetro no `index` Construtor é o componente de linha e o segundo parâmetro é o componente de coluna. A saída é 6.
+O exemplo a seguir cria um índice bidimensional que especifica o elemento em que a linha = 1 e a coluna = 2 em um objeto bidimensional `array_view` . O primeiro parâmetro no `index` Construtor é o componente de linha e o segundo parâmetro é o componente de coluna. A saída é 6.
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5, 6};
@@ -158,7 +158,7 @@ std::cout << a[idx] << "\n";
 
 ### <a name="extent-class"></a>Classe extent
 
-A [classe de extensão](../../parallel/amp/reference/extent-class.md) especifica o comprimento dos dados em cada dimensão do objeto `array` ou `array_view` . Você pode criar uma extensão e usá-la para criar `array` um `array_view` objeto ou. Você também pode recuperar a extensão de um `array` `array_view` objeto existente. O exemplo a seguir imprime o comprimento da extensão em cada dimensão de `array_view` um objeto.
+A [classe de extensão](../../parallel/amp/reference/extent-class.md) especifica o comprimento dos dados em cada dimensão do `array` objeto ou `array_view` . Você pode criar uma extensão e usá-la para criar `array` um `array_view` objeto ou. Você também pode recuperar a extensão de um `array` objeto existente `array_view` . O exemplo a seguir imprime o comprimento da extensão em cada dimensão de um `array_view` objeto.
 
 ```cpp
 int aCPP[] = {
@@ -173,7 +173,7 @@ std::cout << "The depth is " << a.extent[0] << "\n";
 std::cout << "Length in most significant dimension is " << a.extent[0] << "\n";
 ```
 
-O exemplo a seguir cria `array_view` um objeto que tem as mesmas dimensões que o objeto no exemplo anterior, mas este exemplo usa um `extent` objeto em vez de usar parâmetros explícitos `array_view` no construtor.
+O exemplo a seguir cria um `array_view` objeto que tem as mesmas dimensões que o objeto no exemplo anterior, mas este exemplo usa um `extent` objeto em vez de usar parâmetros explícitos no `array_view` Construtor.
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24};
@@ -192,7 +192,7 @@ Dois contêineres de dados usados para mover dados para o acelerador são defini
 
 ### <a name="array-class"></a>Classe array
 
-Quando um `array` objeto for construído, uma cópia profunda dos dados será criada no acelerador se você usar um construtor que inclua um ponteiro para o conjunto de dados. A função kernel modifica a cópia no acelerador. Quando a execução da função de kernel for concluída, você deverá copiar os dados de volta para a estrutura de dados de origem. O exemplo a seguir multiplica cada elemento em um vetor por 10. Depois que a função de kernel for concluída `vector conversion operator` , o será usado para copiar os dados de volta para o objeto de vetor.
+Quando um `array` objeto for construído, uma cópia profunda dos dados será criada no acelerador se você usar um construtor que inclua um ponteiro para o conjunto de dados. A função kernel modifica a cópia no acelerador. Quando a execução da função de kernel for concluída, você deverá copiar os dados de volta para a estrutura de dados de origem. O exemplo a seguir multiplica cada elemento em um vetor por 10. Depois que a função de kernel for concluída, o `vector conversion operator` será usado para copiar os dados de volta para o objeto de vetor.
 
 ```cpp
 std::vector<int> data(5);
@@ -219,11 +219,11 @@ for (int i = 0; i < 5; i++)
 
 ### <a name="array_view-class"></a>Classe array_view
 
-O `array_view` tem quase os mesmos membros que a `array` classe, mas o comportamento subjacente não é o mesmo. Os dados passados para `array_view` o construtor não são replicados na GPU como se trata de um `array` Construtor. Em vez disso, os dados são copiados para o acelerador quando a função de kernel é executada. Portanto, se você criar dois `array_view` objetos que usam os mesmos dados, ambos `array_view` os objetos referem-se ao mesmo espaço de memória. Ao fazer isso, você precisa sincronizar qualquer acesso multithread. A principal vantagem de usar a `array_view` classe é que os dados serão movidos somente se for necessário.
+O `array_view` tem quase os mesmos membros que a `array` classe, mas o comportamento subjacente não é o mesmo. Os dados passados para o `array_view` Construtor não são replicados na GPU como se trata de um `array` Construtor. Em vez disso, os dados são copiados para o acelerador quando a função de kernel é executada. Portanto, se você criar dois `array_view` objetos que usam os mesmos dados, ambos os `array_view` objetos referem-se ao mesmo espaço de memória. Ao fazer isso, você precisa sincronizar qualquer acesso multithread. A principal vantagem de usar a `array_view` classe é que os dados serão movidos somente se for necessário.
 
 ### <a name="comparison-of-array-and-array_view"></a>Comparação entre matriz e array_view
 
-A tabela a seguir resume as semelhanças e diferenças entre as `array` classes `array_view` e.
+A tabela a seguir resume as semelhanças e diferenças entre as `array` `array_view` classes e.
 
 |Descrição|Classe Array|Classe array_view|
 |-----------------|-----------------|-----------------------|
@@ -238,9 +238,9 @@ A tabela a seguir resume as semelhanças e diferenças entre as `array` classes 
 
 Memória compartilhada é a memória que pode ser acessada pela CPU e pelo acelerador. O uso da memória compartilhada elimina ou reduz significativamente a sobrecarga de copiar dados entre a CPU e o acelerador. Embora a memória seja compartilhada, ela não pode ser acessada simultaneamente pela CPU e pelo acelerador, e fazer isso causa um comportamento indefinido.
 
-`array`os objetos podem ser usados para especificar o controle refinado sobre o uso de memória compartilhada se o acelerador associado der suporte a ele. Se um acelerador dá suporte à memória compartilhada é determinado pela propriedade [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) do acelerador, que retorna **true** quando há suporte para a memória compartilhada. Se houver suporte para memória compartilhada, a [enumeração de access_type](reference/concurrency-namespace-enums-amp.md#access_type) padrão para alocações de memória no acelerador será determinada pela `default_cpu_access_type` propriedade. Por padrão, `array` e `array_view` os objetos assumem o `access_type` mesmo que o primário `accelerator`associado.
+`array`os objetos podem ser usados para especificar o controle refinado sobre o uso de memória compartilhada se o acelerador associado der suporte a ele. Se um acelerador dá suporte à memória compartilhada é determinado pela propriedade [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) do acelerador, que retorna **true** quando há suporte para a memória compartilhada. Se houver suporte para memória compartilhada, a [enumeração de access_type](reference/concurrency-namespace-enums-amp.md#access_type) padrão para alocações de memória no acelerador será determinada pela `default_cpu_access_type` propriedade. Por padrão, `array` e os `array_view` objetos assumem o mesmo `access_type` que o primário associado `accelerator` .
 
-Ao definir a propriedade [array:: Cpu_access_type data member](reference/array-class.md#cpu_access_type) de um `array` explicitamente, você pode exercitar o controle refinado sobre como a memória compartilhada é usada, para que você possa otimizar o aplicativo para as características de desempenho do hardware, com base nos padrões de acesso à memória de seus kernels de computação. Um `array_view` reflete o mesmo `cpu_access_type` `array` que está associado; ou, se o array_view for construído sem uma fonte de dados, `access_type` seu refletirá o ambiente que primeiro faz com que ele aloque o armazenamento. Ou seja, se ele for acessado pela primeira vez pelo host (CPU), ele se comporta como se fosse criado em uma fonte de dados de CPU e `access_type` compartilha o `accelerator_view` dos associados pela captura; no entanto, se ele for acessado pela primeira vez por um `accelerator_view`, ele se comportará como `array` se tivesse sido `accelerator_view` criado em um `array`criado `access_type`e compartilhará o.
+Ao definir a propriedade [array:: Cpu_access_type data member](reference/array-class.md#cpu_access_type) de um `array` explicitamente, você pode exercitar o controle refinado sobre como a memória compartilhada é usada, para que você possa otimizar o aplicativo para as características de desempenho do hardware, com base nos padrões de acesso à memória de seus kernels de computação. Um `array_view` reflete o mesmo `cpu_access_type` que o `array` que está associado; ou, se o array_view for construído sem uma fonte de dados, seu `access_type` refletirá o ambiente que primeiro faz com que ele aloque o armazenamento. Ou seja, se ele for acessado pela primeira vez pelo host (CPU), ele se comportará como se fosse criado em uma fonte de dados de CPU e compartilhará o `access_type` do `accelerator_view` associado pela captura; no entanto, se ele for acessado pela primeira vez por um `accelerator_view` , ele se comportará como se tivesse sido criado `array` em um criado `accelerator_view` e compartilhará o `array` `access_type` .
 
 O exemplo de código a seguir mostra como determinar se o acelerador padrão dá suporte à memória compartilhada e, em seguida, cria várias matrizes que têm diferentes configurações de cpu_access_type.
 
@@ -284,7 +284,7 @@ int main()
 
 ## <a name="executing-code-over-data-parallel_for_each"></a>Executando código sobre dados: parallel_for_each
 
-A função [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) define o código que você deseja executar no acelerador em relação aos dados no objeto `array` ou `array_view` . Considere o código a seguir da introdução deste tópico.
+A função [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) define o código que você deseja executar no acelerador em relação aos dados no `array` objeto ou `array_view` . Considere o código a seguir da introdução deste tópico.
 
 ```cpp
 #include <amp.h>
@@ -316,11 +316,11 @@ void AddArrays() {
 
 O `parallel_for_each` método usa dois argumentos, um domínio de computação e uma expressão lambda.
 
-O *domínio de computação* é `extent` um objeto ou `tiled_extent` um objeto que define o conjunto de threads a serem criados para execução paralela. Um thread é gerado para cada elemento no domínio de computação. Nesse caso, o `extent` objeto é unidimensional e tem cinco elementos. Portanto, cinco threads são iniciados.
+O *domínio de computação* é um `extent` objeto ou um `tiled_extent` objeto que define o conjunto de threads a serem criados para execução paralela. Um thread é gerado para cada elemento no domínio de computação. Nesse caso, o `extent` objeto é unidimensional e tem cinco elementos. Portanto, cinco threads são iniciados.
 
-A *expressão lambda* define o código a ser executado em cada thread. A cláusula Capture, `[=]`, especifica que o corpo da expressão lambda acessa todas as variáveis capturadas por valor, que nesse caso são `a`, `b`e. `sum` Neste exemplo, a lista de parâmetros cria uma variável unidimensional `index` chamada `idx`. O valor de `idx[0]` é 0 no primeiro thread e aumenta em cada thread subsequente. O `restrict(amp)` indica que apenas o subconjunto da linguagem C++ que C++ amp pode acelerar é usado.  As limitações nas funções que têm o modificador restrict são descritas em [restringir (C++ amp)](../../cpp/restrict-cpp-amp.md). Para obter mais informações, consulte [sintaxe de expressão lambda](../../cpp/lambda-expression-syntax.md).
+A *expressão lambda* define o código a ser executado em cada thread. A cláusula Capture, `[=]` , especifica que o corpo da expressão lambda acessa todas as variáveis capturadas por valor, que nesse caso são `a` , `b` e `sum` . Neste exemplo, a lista de parâmetros cria uma variável unidimensional `index` chamada `idx` . O valor de `idx[0]` é 0 no primeiro thread e aumenta em cada thread subsequente. O `restrict(amp)` indica que apenas o subconjunto da linguagem C++ que C++ amp pode acelerar é usado.  As limitações nas funções que têm o modificador restrict são descritas em [restringir (C++ amp)](../../cpp/restrict-cpp-amp.md). Para obter mais informações, consulte [sintaxe de expressão lambda](../../cpp/lambda-expression-syntax.md).
 
-A expressão lambda pode incluir o código a ser executado ou pode chamar uma função de kernel separada. A função de kernel deve incluir `restrict(amp)` o modificador. O exemplo a seguir é equivalente ao exemplo anterior, mas chama uma função de kernel separada.
+A expressão lambda pode incluir o código a ser executado ou pode chamar uma função de kernel separada. A função de kernel deve incluir o `restrict(amp)` modificador. O exemplo a seguir é equivalente ao exemplo anterior, mas chama uma função de kernel separada.
 
 ```cpp
 #include <amp.h>
@@ -360,9 +360,9 @@ void AddArraysWithFunction() {
 
 ## <a name="accelerating-code-tiles-and-barriers"></a>Acelerando o código: blocos e barreiras
 
-Você pode obter aceleração adicional usando blocos. O agrupamento divide os threads em subconjuntos ou *blocos*iguais retangulares. Você determina o tamanho do bloco apropriado com base em seu conjunto de dados e o algoritmo que está codificando. Para cada thread, você tem acesso ao local *global* de um elemento de dados em relação ao todo `array` ou `array_view` ao acesso ao local *local* em relação ao bloco. Usar o valor de índice local simplifica seu código porque você não precisa escrever o código para converter valores de índice de global para local. Para usar o disposição em cascata, chame o [método extensão:: Tile](reference/extent-class.md#tile) no domínio de `parallel_for_each` computação no método e use um [tiled_index](../../parallel/amp/reference/tiled-index-class.md) objeto na expressão lambda.
+Você pode obter aceleração adicional usando blocos. O agrupamento divide os threads em subconjuntos ou *blocos*iguais retangulares. Você determina o tamanho do bloco apropriado com base em seu conjunto de dados e o algoritmo que está codificando. Para cada thread, você tem acesso ao local *global* de um elemento de dados em relação ao todo `array` ou `array_view` ao acesso ao local *local* em relação ao bloco. Usar o valor de índice local simplifica seu código porque você não precisa escrever o código para converter valores de índice de global para local. Para usar o disposição em cascata, chame o [método extensão:: Tile](reference/extent-class.md#tile) no domínio de computação no `parallel_for_each` método e use um [tiled_index](../../parallel/amp/reference/tiled-index-class.md) objeto na expressão lambda.
 
-Em aplicativos típicos, os elementos em um bloco estão relacionados de alguma forma, e o código precisa acessar e manter o controle dos valores no bloco. Use a palavra-chave [Tile_static palavra-chave](../../cpp/tile-static-keyword.md) e o [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait) para fazer isso. Uma variável que tem a palavra-chave **tile_static** tem um escopo em todo um bloco e uma instância da variável é criada para cada bloco. Você deve lidar com a sincronização de acesso de thread de bloco para a variável. O [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait) interrompe a execução do thread atual até que todos os threads no bloco tenham atingido a chamada `tile_barrier::wait`para. Portanto, você pode acumular valores em todo o bloco usando variáveis **tile_static** . Em seguida, você pode concluir qualquer computação que exija acesso a todos os valores.
+Em aplicativos típicos, os elementos em um bloco estão relacionados de alguma forma, e o código precisa acessar e manter o controle dos valores no bloco. Use a palavra-chave [Tile_static palavra-chave](../../cpp/tile-static-keyword.md) e o [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait) para fazer isso. Uma variável que tem a palavra-chave **tile_static** tem um escopo em todo um bloco e uma instância da variável é criada para cada bloco. Você deve lidar com a sincronização de acesso de thread de bloco para a variável. O [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait) interrompe a execução do thread atual até que todos os threads no bloco tenham atingido a chamada para `tile_barrier::wait` . Portanto, você pode acumular valores em todo o bloco usando variáveis **tile_static** . Em seguida, você pode concluir qualquer computação que exija acesso a todos os valores.
 
 O diagrama a seguir representa uma matriz bidimensional de dados de amostragem que é organizada em blocos.
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Bibliotecas matemáticas
 
-C++ AMP inclui duas bibliotecas matemáticas. A biblioteca de precisão dupla no [namespace Concurrency::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) fornece suporte para funções de precisão dupla. Ele também fornece suporte para funções de precisão única, embora o suporte de precisão dupla no hardware ainda seja necessário. Ele está em conformidade com a [especificação C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). O acelerador deve oferecer suporte a precisão dupla completa. Você pode determinar se ele faz verificando o valor do [membro de dados Accelerator:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). A biblioteca de matemática rápida, no [namespace Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contém outro conjunto de funções matemáticas. Essas funções, que dão suporte `float` apenas aos operandos, são executadas mais rapidamente, mas não são tão precisas quanto aquelas na biblioteca matemática de precisão dupla. As funções estão contidas no \<arquivo de cabeçalho amp_math. h> e todas são declaradas com `restrict(amp)`. As funções no arquivo \<de cabeçalho cmath> são importadas para `fast_math` os `precise_math` namespaces e. A palavra-chave **restrict** é usada \<para distinguir a versão> do cmath e a versão C++ amp. O código a seguir calcula o logaritmo de base 10, usando o método rápido, de cada valor que está no domínio de computação.
+C++ AMP inclui duas bibliotecas matemáticas. A biblioteca de precisão dupla no [namespace Concurrency::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) fornece suporte para funções de precisão dupla. Ele também fornece suporte para funções de precisão única, embora o suporte de precisão dupla no hardware ainda seja necessário. Ele está em conformidade com a [especificação C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). O acelerador deve oferecer suporte a precisão dupla completa. Você pode determinar se ele faz verificando o valor do [membro de dados Accelerator:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). A biblioteca de matemática rápida, no [namespace Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contém outro conjunto de funções matemáticas. Essas funções, que dão suporte apenas aos `float` operandos, são executadas mais rapidamente, mas não são tão precisas quanto aquelas na biblioteca matemática de precisão dupla. As funções estão contidas no \<amp_math.h> arquivo de cabeçalho e todas são declaradas com `restrict(amp)` . As funções no \<cmath> arquivo de cabeçalho são importadas para `fast_math` os `precise_math` namespaces e. A palavra-chave **restrict** é usada para distinguir a \<cmath> versão e a versão C++ amp. O código a seguir calcula o logaritmo de base 10, usando o método rápido, de cada valor que está no domínio de computação.
 
 ```cpp
 #include <amp.h>
@@ -459,13 +459,13 @@ void MathExample() {
 
 ## <a name="graphics-library"></a>Biblioteca de gráficos
 
-O C++ AMP inclui uma biblioteca de gráficos projetada para a programação de gráficos acelerada. Essa biblioteca é usada somente em dispositivos que dão suporte à funcionalidade de gráficos nativos. Os métodos estão no [namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) e estão contidos no arquivo de \<cabeçalho amp_graphics. h>. Os principais componentes da biblioteca de gráficos são:
+O C++ AMP inclui uma biblioteca de gráficos projetada para a programação de gráficos acelerada. Essa biblioteca é usada somente em dispositivos que dão suporte à funcionalidade de gráficos nativos. Os métodos estão no [namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) e estão contidos no arquivo de \<amp_graphics.h> cabeçalho. Os principais componentes da biblioteca de gráficos são:
 
-- [classe de textura](../../parallel/amp/reference/texture-class.md): você pode usar a classe de textura para criar texturas da memória ou de um arquivo. As texturas assemelham-se às matrizes porque contêm dados e se assemelham a contêineres na biblioteca padrão C++ em relação à construção de atribuição e de cópia. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../../standard-library/stl-containers.md). Os parâmetros de modelo para `texture` a classe são o tipo de elemento e a classificação. A classificação pode ser 1, 2 ou 3. O tipo de elemento pode ser um dos tipos de vetores curtos descritos posteriormente neste artigo.
+- [classe de textura](../../parallel/amp/reference/texture-class.md): você pode usar a classe de textura para criar texturas da memória ou de um arquivo. As texturas assemelham-se às matrizes porque contêm dados e se assemelham a contêineres na biblioteca padrão C++ em relação à construção de atribuição e de cópia. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../../standard-library/stl-containers.md). Os parâmetros de modelo para a `texture` classe são o tipo de elemento e a classificação. A classificação pode ser 1, 2 ou 3. O tipo de elemento pode ser um dos tipos de vetores curtos descritos posteriormente neste artigo.
 
 - [classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): fornece acesso somente gravação a qualquer textura.
 
-- Biblioteca de vetores curta: define um conjunto de tipos de vetor curtos de comprimento 2, 3 e 4 que são **int**baseados em `uint`int,, **float**, **Double**, [normal](../../parallel/amp/reference/norm-class.md)ou [unorm](../../parallel/amp/reference/unorm-class.md).
+- Biblioteca de vetores curta: define um conjunto de tipos de vetor curtos de comprimento 2, 3 e 4 que são baseados em **int**, `uint` , **float**, **Double**, [normal](../../parallel/amp/reference/norm-class.md)ou [unorm](../../parallel/amp/reference/unorm-class.md).
 
 ## <a name="universal-windows-platform-uwp-apps"></a>Aplicativos da UWP (Plataforma Universal do Windows)
 
@@ -497,7 +497,7 @@ O Visualizador de simultaneidade inclui suporte para analisar o desempenho de C+
 
 - [Canais (exibição de threads)](/visualstudio/profiling/channels-threads-view)
 
-- [Analisando C++ AMP código com o Visualizador de simultaneidade](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+- [Analisando C++ AMP código com o Visualizador de simultaneidade](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)
 
 ## <a name="performance-recommendations"></a>Recomendações de desempenho
 
@@ -506,6 +506,6 @@ O módulo e a divisão de inteiros não assinados têm desempenho significativam
 ## <a name="see-also"></a>Confira também
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
-[Sintaxe da expressão lambda](../../cpp/lambda-expression-syntax.md)<br/>
+[Sintaxe de expressão lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Referência (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
 [Programação paralela no blog de código nativo](https://go.microsoft.com/fwlink/p/?linkid=238472)

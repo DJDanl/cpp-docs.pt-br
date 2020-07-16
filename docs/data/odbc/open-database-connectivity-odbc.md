@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 12e4c0b74caa95af4dc4ed00dc77d46e47029b59
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213077"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403797"
 ---
 # <a name="open-database-connectivity-odbc"></a>Conectividade de banco de dados aberto (ODBC)
 
 A biblioteca MFC (Microsoft Foundation Classes) fornece classes para programar com ODBC (Conectividade Aberta de Banco de Dados). A partir do Visual Studio 2015 e do SQL Server 2012, o ODBC é a maneira preferida de se conectar a fontes de dados SQL.
 
-Para obter mais informações sobre como usar a API ODBC sem MFC, consulte o SDK do [ODBC (Open Database Connectivity)](/sql/odbc/microsoft-open-database-connectivity-odbc) no msdn.
+Para obter mais informações sobre como usar a API ODBC sem MFC, consulte a documentação [ODBC (Open Database Connectivity)](/sql/odbc/microsoft-open-database-connectivity-odbc) .
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -65,7 +65,7 @@ Essas tarefas se baseiam nas classes [ODBC](odbc-basics.md) do MFC. Para obter m
 
 - [Usar formulários de banco de dados (exibições de registro) com ODBC](use-database-forms-record-views-with-odbc.md)
 
-- [Usar ODBC para trabalhar com outros usuários](use-odbc-to-work-with-other-users.md)
+- [Usar o ODBC para trabalhar com outros usuários](use-odbc-to-work-with-other-users.md)
 
 - [Trabalhar com conexões de banco de dados ODBC](work-with-odbc-database-connections.md)
 
@@ -77,4 +77,4 @@ Essas tarefas se baseiam nas classes [ODBC](odbc-basics.md) do MFC. Para obter m
 
 ## <a name="see-also"></a>Confira também
 
-[Programação de Acesso a Dados (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Programação de acesso a dados (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

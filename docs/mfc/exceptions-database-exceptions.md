@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624664"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403719"
 ---
 # <a name="exceptions-database-exceptions"></a>Exceções: exceções de banco de dados
 
@@ -38,7 +38,7 @@ A abordagem mais pragmática para capturar exceções de banco de dados é testa
 
 Além dos códigos de retorno definidos pela estrutura, que têm nomes do formulário **AFX_SQL_ERROR_XXX**, alguns [CDBExceptions](reference/cdbexception-class.md) são baseados em códigos de retorno [ODBC](../data/odbc/odbc-basics.md) . Os códigos de retorno para essas exceções têm nomes do formulário **SQL_ERROR_XXX**.
 
-Os códigos de retorno, definidos pelo Framework e definidos pelo ODBC, que as classes de banco de dados podem retornar são documentados sob o membro de dados [m_nRetCode](reference/cdbexception-class.md#m_nretcode) de classe `CDBException`. Informações adicionais sobre códigos de retorno definidos pelo ODBC estão disponíveis na *referência do programador do* ODBC SDK na biblioteca MSDN.
+Os códigos de retorno, definidos pelo Framework e definidos pelo ODBC, que as classes de banco de dados podem retornar são documentados sob o membro de dados [m_nRetCode](reference/cdbexception-class.md#m_nretcode) de classe `CDBException`. Informações adicionais sobre códigos de retorno definidos pelo ODBC estão disponíveis na [referência do programador de ODBC](/sql/odbc/reference/odbc-programmer-s-reference).
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>Códigos de erro usados para exceções do DAO
 
@@ -74,6 +74,6 @@ Para obter uma discussão sobre as informações de erro retornadas por um `CDao
 
 Quando você estiver trabalhando com bancos de dados do Microsoft Jet (. mdb) e, na maioria dos casos, quando estiver trabalhando com o ODBC, haverá apenas um objeto de erro. No caso raro, quando você estiver usando uma fonte de dados ODBC e houver vários erros, poderá executar um loop através da coleção de erros do DAO com base no número de erros retornados por [CDaoException:: GetErrorCount](reference/cdaoexception-class.md#geterrorcount). Cada vez pelo loop, chame [CDaoException:: GetErrorInfo](reference/cdaoexception-class.md#geterrorinfo) para reabastecer o `m_pErrorInfo` membro de dados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tratamento de Exceção](exception-handling-in-mfc.md)

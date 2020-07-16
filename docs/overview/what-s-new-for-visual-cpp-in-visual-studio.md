@@ -3,12 +3,12 @@ title: Novidades do C++ no Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630481"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404968"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
@@ -20,7 +20,7 @@ O Visual Studio 2019 traz muitas atualizações e correções para o ambiente do
 
 - Suporte aprimorado para recursos e correções exatas do C++17, além de suporte experimental para recursos de C++20, como módulos e corrotinas. Para obter informações detalhadas, consulte [Aprimoramentos de conformidade do C++ no Visual Studio 2019](cpp-conformance-improvements.md).
 
-- A opção `/std:c++latest` agora inclui recursos do C++20 que não são necessariamente completos, incluindo o suporte inicial para o operador do C++20 \<=> ("espaçonave") para comparação de três vias.
+- A `/std:c++latest` opção agora inclui os recursos do c++ 20 que não estão necessariamente completos, incluindo suporte inicial para o operador do c++ 20 \<=> ("espaço") para comparação de três vias.
 
 - A opção de compilador C++ `/Gm` foi preterida. Considere desabilitar a opção `/Gm` em seus scripts de build se ela estiver definida explicitamente. No entanto, você pode ignorar com segurança o aviso de substituição para `/Gm`, pois ela não é tratada como erro ao usar "Tratar avisos como erros" (`/WX`).
 
@@ -38,7 +38,7 @@ Análise aprimorada com `/Qspectre` para fornecer assistência de mitigação pa
 
 - Clang-Format aplicado aos cabeçalhos da biblioteca padrão de C++ para mais facilidade de leitura.
 
-- Como o Visual Studio agora dá suporte a Apenas Meu Código para C++, a biblioteca padrão não precisa mais fornecer maquinário personalizado para que `std::function` e `std::visit` cheguem ao mesmo efeito. A remoção desse mecanismo não tem efeitos visíveis pelo usuário. Uma exceção é a de que o compilador não produz mais diagnóstico que indique problemas na linha 15732480 ou 16707566 de \<type_traits> ou \<variant>.
+- Como o Visual Studio agora dá suporte a Apenas Meu Código para C++, a biblioteca padrão não precisa mais fornecer maquinário personalizado para que `std::function` e `std::visit` cheguem ao mesmo efeito. A remoção desse mecanismo não tem efeitos visíveis pelo usuário. Uma exceção é que o compilador não produzirá mais diagnósticos que indiquem problemas na linha 15732480 ou 16707566 do \<type_traits> ou \<variant> .
 
 ## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>Melhorias de desempenho/taxa de transferência no compilador e na biblioteca padrão
 
@@ -62,7 +62,7 @@ Análise aprimorada com `/Qspectre` para fornecer assistência de mitigação pa
 
   - Aprimorada a otimização de códigos que usam `memmove`, como as construções `std::copy` ou `std::vector` e `std::string`.
 
-- Otimizado o design físico de biblioteca padrão para evitar a compilação de partes da biblioteca padrão não incluídas diretamente. Essa alteração reduz o tempo de criação de um arquivo em branco que inclui apenas \<vector> in half. Como consequência, talvez você precise adicionar diretivas `#include` aos cabeçalhos que foram incluídos anteriormente de maneira indireta. Por exemplo, o código que usa `std::out_of_range` agora pode precisar de `#include <stdexcept>`. O código que usa um operador de inserção de fluxo agora pode precisar de `#include <ostream>`. A vantagem é que apenas as unidades de tradução que realmente usam os componentes \<stdexcept> ou \<ostream> pagam o custo da taxa de transferência para compilá-los.
+- Otimizado o design físico de biblioteca padrão para evitar a compilação de partes da biblioteca padrão não incluídas diretamente. Essa alteração reduz o tempo de compilação de um arquivo vazio que inclui apenas \<vector> na metade. Como consequência, talvez você precise adicionar diretivas `#include` aos cabeçalhos que foram incluídos anteriormente de maneira indireta. Por exemplo, o código que usa `std::out_of_range` agora pode precisar de `#include <stdexcept>`. O código que usa um operador de inserção de fluxo agora pode precisar de `#include <ostream>`. O benefício é que apenas as unidades de tradução que realmente usam \<stdexcept> ou \<ostream> componentes pagam o custo da taxa de transferência para compilá-las.
 
 - `if constexpr` foi aplicado em mais lugares na biblioteca padrão para aumento da taxa de transferência e redução do tamanho do código em operações de cópia, em permutações como reverter e girar, e na biblioteca de algoritmos paralelos.
 
@@ -221,7 +221,7 @@ O componente experimental Clang/C2 foi removido. Use o conjunto de ferramentas d
 
 - A análise de código agora é executada automaticamente em segundo plano. Avisos são exibidos como linhas irregulares verdes no editor conforme você digita. Para obter mais informações, consulte [Análise de código no editor no Visual Studio 2019 Versão Prévia 2](https://devblogs.microsoft.com/cppblog/in-editor-code-analysis-in-visual-studio-2019-preview-2/).
 
-- Novas regras de ConcurrencyCheck experimentais para tipos conhecidos de biblioteca padrão do cabeçalho \<mutex>. Para obter mais informações, consulte [Análise de código de simultaneidade no Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/).
+- Novas regras experimentais de ConcurrencyCheck para tipos de biblioteca padrão conhecidos do \<mutex> cabeçalho. Para obter mais informações, consulte [Análise de código de simultaneidade no Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/).
 
 - Uma implementação parcial atualizada do [Verificador de perfil de tempo de vida](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/), que detecta referências e ponteiros pendentes. Para obter mais informações, consulte [Atualização de perfil de tempo de vida no Visual Studio 2019 Versão Prévia 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/).
 
@@ -358,8 +358,8 @@ Há mais melhorias na biblioteca Standard no Visual Studio 2017 RTM. Para obter 
 
 ### <a name="conformance-improvements"></a>Aprimoramentos de conformidade
 
-- Adicionamos \<any\>, \<string_view\>, `apply()` e `make_from_tuple()`.
-- Adicionamos \<optional\>, \<variant\>, `shared_ptr::weak_type` e \<cstdalign\>.
+- Adicionamos \<any\> , \<string_view\> , `apply()` , `make_from_tuple()` .
+- Adicionado \<optional\> , \<variant\> , e `shared_ptr::weak_type` \<cstdalign\> .
 - O `constexpr` do C++14 foi habilitado em `min(initializer_list)`, em `max(initializer_list)`, em `minmax(initializer_list)`, em `min_element()`, em `max_element()` e em `minmax_element()`.
 
 Para obter mais informações, consulte [tabela de conformidade da linguagem Microsoft C++](../visual-cpp-language-conformance.md).
@@ -377,7 +377,7 @@ Para obter mais informações, consulte [tabela de conformidade da linguagem Mic
 - `static_assert(false, "message")` foi alterado por `#error message`. Essa alteração melhora o diagnóstico do compilador porque `#error` interrompe imediatamente a compilação.
 - A biblioteca padrão não marca mais funções como `__declspec(dllimport)`. A tecnologia moderna de vinculador não exige mais isso.
 - SFINAE extraído para argumentos de modelo padrão, o que reduzia a desordem em comparação com tipos de retorno e tipos de argumento de função.
-- As verificações de depuração em \< Random \> agora usam a maquina comum da biblioteca padrão, em vez da função interna `_Rng_abort()` , que é chamada `fputs()` de **stderr**. A implementação dessa função foi mantida para compatibilidade binária. Vamos removê-lo na próxima versão incompatível binária da biblioteca padrão.
+- As verificações de depuração no \<random\> agora usam a maquina comum da biblioteca padrão, em vez da função interna `_Rng_abort()` , que é chamada `fputs()` de **stderr**. A implementação dessa função foi mantida para compatibilidade binária. Vamos removê-lo na próxima versão incompatível binária da biblioteca padrão.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versão 15.5
 
@@ -414,7 +414,7 @@ Para obter mais informações, consulte [tabela de conformidade da linguagem Mic
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versão 15.7
 
 - Suporte a algoritmos paralelos não é mais experimental
-- Uma nova implementação de \<filesystem>
+- Uma nova implementação de\<filesystem>
 - Conversões elementares de cadeia de caracteres (parcial)
 - `std::launder()`
 - `std::byte`
@@ -454,7 +454,7 @@ Para obter mais informações, consulte [tabela de conformidade da linguagem Mic
 - O caminho de crescimento interno `basic_string` não está no caminho de `shrink_to_fit()`.
 - As operações de mutação de `basic_string` agora são fatoradas em funções de caminho rápido de não alocação e de caminho lento de alocação, aumentando a probabilidade de o caso comum de não realocação ser embutido em chamadores.
 - As `basic_string` operações de mutação agora constroem buffers realocados no estado preferencial em vez de redimensionar em vigor. Por exemplo, uma inserção no início de uma cadeia de caracteres agora move o conteúdo após a inserção exatamente uma vez. Ele é movido para baixo ou para o buffer recentemente alocado. Ele não é mais movido duas vezes no caso de realocação, primeiro ao buffer alocado recentemente e, em seguida, para baixo.
-- As operações chamando a biblioteca padrão C em \<cadeia de caracteres\> agora armazena em cache o endereço `errno` para remover interações repetidas com TLS.
+- As operações que chamam a biblioteca padrão C \<string\> agora armazenam em cache o `errno` endereço para remover a interação repetida com TLS.
 - Implementação `is_pointer` simplificada.
 - Concluída a alteração da expressão SFINAE baseada em função para baseada em `struct` e em `void_t`.
 - Os algoritmos de biblioteca padrão agora evitam iteradores de pós-incrementação.
@@ -507,7 +507,7 @@ A CPPRestSDK, uma API da Web de plataforma cruzada para o C++, foi atualizada pa
 - Vários assistentes de código e de projeto foram reescritos no estilo de caixa de diálogo de assinatura.
 - **Adicionar classe** agora inicia o assistente de adição de classe diretamente. Todos os outros itens que estavam anteriormente aqui agora estão disponíveis em **Adicionar > Novo Item**.
 - Os projetos Win32 agora estão sob a categoria **área de trabalho do Windows** na caixa de diálogo **novo projeto** .
-- Os modelos de **Console do Windows** e de **Aplicativo da Área de Trabalho** agora criam projetos sem exibir um assistente. Há um novo **Assistente de Área de Trabalho do Windows** na mesma categoria que exibe as mesmas opções que o antigo assistente **Aplicativo de Console do Win32**.
+- Agora, os modelos de **aplicativos de desktop** e de console do **Windows** criam os projetos sem exibir um assistente. Há um novo **Assistente de Área de Trabalho do Windows** na mesma categoria que exibe as mesmas opções que o antigo assistente **Aplicativo de Console do Win32**.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versão 15.5
 
@@ -598,7 +598,7 @@ As Ferramentas de Build do Visual C++ (anteriormente disponíveis como um produt
 
 ## <a name="linux-development-with-c"></a>Desenvolvimento de Linux com C++
 
-A extensão popular [Visual C++ para Desenvolvimento no Linux](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) agora faz parte do Visual Studio. Essa instalação fornece tudo o que você precisa para desenvolver e depurar aplicativos em C++, em execução em um ambiente Linux.
+A extensão popular [Visual C++ para Desenvolvimento no Linux](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.VisualCforLinuxDevelopment) agora faz parte do Visual Studio. Essa instalação fornece tudo o que você precisa para desenvolver e depurar aplicativos em C++, em execução em um ambiente Linux.
 
 ##### <a name="visual-studio-2017-version-152"></a>Visual Studio 2017 versão 15.2
 
