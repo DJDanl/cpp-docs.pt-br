@@ -4,62 +4,60 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: 7a866c0e6b772a992f5ae81dbb17646765f172e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6fa1dd3985fd5b565bcc4b4727f41960d1f4f5d0
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708334"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405124"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistente para adicionar classe de Typelib
 
 ::: moniker range="vs-2019"
 
-Este assistente não está disponível no Visual Studio de 2019 e posterior.
+Esse assistente não está disponível no Visual Studio 2019 e versões posteriores.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Use este assistente para adicionar uma classe MFC de uma biblioteca de tipos disponíveis. O assistente cria uma classe para cada interface que você adicione da biblioteca de tipo selecionado.
+Use este assistente para adicionar uma classe do MFC de uma biblioteca de tipos disponível. O assistente cria uma classe para cada interface que você adiciona da biblioteca de tipos selecionada.
 
-- **Adicione uma classe de**
+- **Adicionar classe de**
 
    Especifica o local da biblioteca de tipos, com base na qual a classe é criada.
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Registry**|A biblioteca de tipos é registrada no sistema. As bibliotecas de tipos registradas são listadas em **Bibliotecas de tipos disponíveis**.|
+   |**Registro**|A biblioteca de tipos é registrada no sistema. As bibliotecas de tipos registradas são listadas em **Bibliotecas de tipos disponíveis**.|
    |**Arquivo**|A biblioteca de tipos não está necessariamente registrada no sistema, mas está contida em um arquivo. É necessário fornecer o local do arquivo em **Local**.|
 
 - **Bibliotecas de tipos disponíveis**
 
-   Lista as bibliotecas de tipos registradas atualmente no sistema. Selecione nesta lista para exibir suas interfaces em uma biblioteca de tipos do **Interfaces** lista.
+   Lista as bibliotecas de tipos atualmente registradas no sistema. Selecione uma biblioteca de tipos nesta lista para exibir suas interfaces na lista de **interfaces** .
 
-   Consulte "Inside Distributed COM: Bibliotecas de tipos e linguagem de integração"na biblioteca MSDN para obter mais informações sobre como registrar as bibliotecas de tipos.
-
-- **Local**
+- **Localidade**
 
    Especifica o local da biblioteca de tipos. Se você clicar em **Arquivo** em **Adicionar Classe por meio de**, poderá fornecer o local do arquivo que contém a biblioteca de tipos. Para procurar o local do arquivo, clique no botão de reticências.
 
 - **Interfaces**
 
-   Lista as interfaces na biblioteca de tipos selecionada no momento a **bibliotecas de tipos disponíveis** lista.
+   Lista as interfaces na biblioteca de tipos selecionada no momento na lista **bibliotecas de tipos disponíveis** .
 
    |Botão de transferência|Descrição|
    |---------------------|-----------------|
    |**>**|Adiciona a interface atualmente selecionada na lista **Interfaces**. Esmaecido se nenhuma interface for selecionada.|
-   |**>>**|Adiciona todas as interfaces na biblioteca de tipos selecionada no momento a **bibliotecas de tipos disponíveis** lista.|
-   |**\<**|Remove a classe atualmente selecionada na lista **Classes geradas**. Esmaecido se nenhuma classe selecionado no momento a **classes geradas** lista.|
-   |**\<\<**|Remove todas as classes da lista **Classes geradas**. Esmaecido se o **classes geradas** lista está vazia.|
+   |**>>**|Adiciona todas as interfaces na biblioteca de tipos selecionada no momento na lista **bibliotecas de tipos disponíveis** .|
+   |**\<**|Remove a classe atualmente selecionada na lista **Classes geradas**. Esmaecido se nenhuma classe estiver selecionada no momento na lista de **classes geradas** .|
+   |**\<\<**|Remove todas as classes da lista **Classes geradas**. Esmaecido se a lista de **classes geradas** estiver vazia.|
 
 - **classes geradas**
 
-   Especifica os nomes de classe a serem gerados com base nas interfaces adicionadas por meio do botão **>** ou **>>**. Você pode clicar nesta caixa para selecionar uma classe e, em seguida, use as teclas ou para baixo para rolar a lista, exibindo o nome de cada classe na **classe** caixa e nome de arquivo na **arquivo** caixa que o assistente gera quando você Clique em **concluir**. Selecione apenas uma classe por vez nessa caixa.
+   Especifica os nomes de classe a serem gerados a partir das interfaces adicionadas usando o **>** **>>** botão ou. Você pode clicar nessa caixa para selecionar uma classe e, em seguida, usar as teclas para cima ou para baixo para percorrer a lista, exibindo cada nome de classe na caixa de **classe** e o nome do arquivo na caixa **arquivo** que o assistente gera quando você clica em **concluir**. Selecione apenas uma classe por vez nessa caixa.
 
-   Remova uma classe selecionando-a nessa lista e clicando em **<**. Não é necessário selecionar uma classe da caixa de classes geradas para remover todas as classes; ao clicar em **<<**, você remover todas as classes no **classes geradas** caixa.
+   Você pode remover uma classe selecionando-a na lista e clicando em **<** . Não é necessário selecionar uma classe na caixa Classes geradas para remover todas as classes; se você clicar em **<<**, todas as classes da caixa **Classes geradas** serão removidas.
 
-- **Class**
+- **Classe**
 
    Especifica o nome da classe selecionada na caixa **Classes geradas** adicionada pelo assistente quando você clica em **Concluir**. É possível editar o nome na caixa **Classe**.
 
@@ -71,7 +69,7 @@ Use este assistente para adicionar uma classe MFC de uma biblioteca de tipos dis
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe do MFC de uma biblioteca de tipos](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[Clientes de automação: usar bibliotecas de tipo](../../mfc/automation-clients-using-type-libraries.md)
+[Clientes de automação: usando bibliotecas de tipo](../../mfc/automation-clients-using-type-libraries.md)

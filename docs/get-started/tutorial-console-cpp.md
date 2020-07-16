@@ -1,27 +1,27 @@
 ---
-title: Criar um projeto de aplicativo de console C++
+title: Criar uma calculadora de console em C++
 description: Criar um aplicativo de console Olá, Mundo e um aplicativo de calculadora no Visual C++
 ms.custom: mvc
 ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b292d5b8e1db7415aed6427f2327788e08a28a20
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80079286"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404444"
 ---
-# <a name="create-a-c-console-app-project"></a>Criar um projeto de aplicativo de console C++
+# <a name="create-a-console-calculator-in-c"></a>Criar uma calculadora de console em C++
 
 ::: moniker range=">=vs-2019"
 
-O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mundo!" executado na linha de comando. É isso que você criará no Visual Studio neste artigo e, em seguida, passaremos para algo mais desafiador: um aplicativo de calculadora.
+O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mundo!" executado na linha de comando. Isso é o que você criará primeiro no Visual Studio neste artigo e, em seguida, passaremos para algo mais desafiador: um aplicativo de calculadora.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Tenha o Visual Studio com o desenvolvimento do Desktop com carga de trabalho **C++** instalada e em execução no seu computador. Se ele ainda não estiver instalado, confira [Instalar suporte para C++ no Visual Studio](../build/vscpp-step-0-installation.md).
+- Tenha o Visual Studio com o **desenvolvimento de desktop com** carga de trabalho do C++ instalada e em execução no seu computador. Se ele ainda não estiver instalado, confira [Instalar suporte para C++ no Visual Studio](../build/vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Criar seu projeto de aplicativo
 
@@ -29,20 +29,20 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 
 1. Se tiver começado a usar o Visual Studio, você verá a caixa de diálogo do Visual Studio 2019. Escolha **Criar um novo projeto** para começar.
 
-   ![O diálogo inicial do Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "O diálogo inicial do Visual Studio 2019")
+   ![A caixa de diálogo inicial do Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "A caixa de diálogo inicial do Visual Studio 2019")
 
-   Caso contrário, na barra de menus do Visual Studio, escolha **Arquivo** > **Novo** > **Projeto**. A janela **Criar um novo projeto** é aberta.
+   Caso contrário, na barra de menus no Visual Studio, escolha **arquivo**  >  **novo**  >  **projeto**. A janela **Criar um novo projeto** é aberta.
 
 1. Na lista de modelos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar**.
 
-   ![Escolha o modelo do aplicativo de console](./media/calc-vs2019-choose-console-app.png "Escolha o modelo do aplicativo de console")
+   ![Escolher o modelo de aplicativo de console](./media/calc-vs2019-choose-console-app.png "Escolher o modelo de aplicativo de console")
 
    > [!Important]
    > É preciso que você escolha a versão do C++ do modelo do **Aplicativo de Console**. Ele tem as marcas **C++**, **Windows** e **Console**, enquanto o ícone tem "++" no canto.
 
 1. Na caixa de diálogo **Configurar novo projeto**, selecione a caixa de edição **Nome do projeto**, dê ao novo projeto o nome *CalculatorTutorial* e, em seguida, escolha **Criar**.
 
-   ![Nomeie seu projeto na Configure sua nova caixa de diálogo de projeto](./media/calc-vs2019-name-your-project.png "Nomeie seu projeto na Configure sua nova caixa de diálogo de projeto")
+   ![Nomeie seu projeto na caixa de diálogo Configurar seu novo projeto](./media/calc-vs2019-name-your-project.png "Nomeie seu projeto na caixa de diálogo Configurar seu novo projeto")
 
    Um aplicativo de console do Windows C++ vazio é criado. Os aplicativos de console usam uma janela de console do Windows para exibir a saída e aceitar a entrada do usuário. No Visual Studio, uma janela do editor é aberta e mostra o código gerado:
 
@@ -75,7 +75,7 @@ O modelo para um novo aplicativo de console do Windows cria um aplicativo simple
 
 1. Para compilar o projeto, escolha **Compilar Solução** no menu **Compilar**. A janela de **Saída** mostra os resultados do processo de build.
 
-   ![Construa o projeto](./media/calc-vs2019-build-your-project.png "Compilar o projeto")
+   ![Compilar o projeto](./media/calc-vs2019-build-your-project.png "Compilar o projeto")
 
 1. Para executar o código, na barra de menus, escolha **Depurar**, **Iniciar sem depuração**.
 
@@ -122,9 +122,9 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
    > Noções básicas sobre o código:
    >
-   > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você pode ver um nome**\<** de arquivo cercado por suportes angulares ( ); outras vezes, é cercado por citações **( " "**). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
+   > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você pode ver um nome de arquivo entre colchetes angulares ( **\<\>** ); outras vezes, está entre aspas (**""**). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
    > - A linha `using namespace std;` informa ao compilador para esperar que coisas da Biblioteca Padrão C++ sejam usadas nesse arquivo. Sem essa linha, cada palavra-chave da biblioteca precisaria ser precedida por um `std::` para indicar seu escopo. Por exemplo, sem essa linha, cada referência a `cout` precisaria ser escrito como `std::cout`. A instrução `using` é adicionada para fazer com que o código tenha uma aparência mais limpa.
-   > - A palavra-chave `cout` é usada para imprimir a saída padrão em C++. O ** \< ** operador diz ao compilador para enviar o que estiver à direita dele para a saída padrão.
+   > - A palavra-chave `cout` é usada para imprimir a saída padrão em C++. O **\<\<** operador informa ao compilador para enviar o que estiver à direita dele para a saída padrão.
    > - A palavra-chave **endl** é como a tecla Enter; encerra a linha e move o cursor para a próxima linha. É uma melhor prática para colocar um `\n` dentro da cadeia de caracteres (contido por "") para fazer a mesma coisa, uma vez que `endl` sempre libera o buffer e pode prejudicar o desempenho do programa, mas já que esse é um aplicativo muito pequeno, `endl` é usado em vez disso para melhor legibilidade.
    > - Todas as instruções C++ devem terminar com ponto e vírgula e todos os aplicativos C++ devem conter uma função `main()`. Essa função é o que o programa é executado no início. Todo o código deve estar acessível de `main()` para ser usado.
 
@@ -140,15 +140,15 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 ### <a name="to-add-a-calculator-class"></a>Para adicionar uma classe de Calculadora
 
-1. Vá para o menu **Projeto** e escolha **Adicionar Classe**. Na caixa de edição **Nome de Classe**, digite *Calculadora*. Escolha **OK**. Dois novos arquivos são adicionados ao seu projeto. Para salvar todos os arquivos alterados de uma vez, pressione **Ctrl+Shift+S**. É um atalho de teclado para**Salvar todos** **os arquivos** > . Também há um botão de barra de ferramentas para **Salvar Tudo**, um ícone de dois disquetes, encontrado ao lado do botão **Salvar**. Em geral, é uma boa prática executar **Salvar Tudo** com frequência, para que você não perca nenhum arquivo ao salvar.
+1. Vá para o menu **Projeto** e escolha **Adicionar Classe**. Na caixa de edição **Nome de Classe**, digite *Calculadora*. Selecione **OK**. Dois novos arquivos são adicionados ao seu projeto. Para salvar todos os arquivos alterados de uma vez, pressione **Ctrl+Shift+S**. É um atalho de teclado para **arquivo**  >  **salvar tudo**. Também há um botão de barra de ferramentas para **Salvar Tudo**, um ícone de dois disquetes, encontrado ao lado do botão **Salvar**. Em geral, é uma boa prática executar **Salvar Tudo** com frequência, para que você não perca nenhum arquivo ao salvar.
 
-   ![Crie a classe Calculadora](./media/calc-vs2019-create-calculator-class.png "Crie a classe Calculadora")
+   ![Criar a classe de calculadora](./media/calc-vs2019-create-calculator-class.png "Criar a classe de calculadora")
 
-   Uma classe é como um blueprint para um objeto que faz algo. Nesse caso, definimos uma calculadora e como ela deve funcionar. O assistente **Adicionar Classe** usado acima criou arquivos .h e .cpp que têm o mesmo nome que a classe. Você pode ver uma lista completa de seus arquivos de projeto na janela **Solution Explorer,** visível na lateral do IDE. Se a janela não estiver visível, você pode abri-la na barra de menu: escolha **Exibir** > **explorador de soluções**.
+   Uma classe é como um blueprint para um objeto que faz algo. Nesse caso, definimos uma calculadora e como ela deve funcionar. O assistente **Adicionar Classe** usado acima criou arquivos .h e .cpp que têm o mesmo nome que a classe. Você pode ver uma lista completa dos arquivos de projeto na janela **Gerenciador de soluções** , visível no lado do IDE. Se a janela não estiver visível, você poderá abri-la na barra de menus: escolha **Exibir**  >  **Gerenciador de soluções**.
 
    ![Gerenciador de Soluções](./media/calc-vs2019-solution-explorer.png "Gerenciador de Soluções")
 
-   Agora você deve ter três guias abertas no editor: *CalculatorTutorial.cpp*, *Calculator.h*, e *Calculator.cpp*. Se você fechar acidentalmente um deles, você pode reabri-lo clicando duas vezes na janela **Solution Explorer.**
+   Agora você deve ter três guias abertas no editor: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se você fechar acidentalmente um deles, poderá reabri-lo clicando duas vezes nele na janela **Gerenciador de soluções** .
 
 1. Em **Calculator.h**, remova as linhas `Calculator();` e `~Calculator();` que foram geradas, já que você não precisa delas aqui. Em seguida, adicione a seguinte linha de código para que o arquivo agora tenha esta aparência:
 
@@ -170,7 +170,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 1. Você verá um rabisco verde aparecer sob `Calculate`. Ocorre porque ainda não definimos a função `Calculate` no arquivo .cpp. Passe o mouse sobre a palavra, clique na lâmpada (neste caso, uma chave de fenda) que aparece em pop-up e escolha **Criar uma definição de 'Calculate' em Calculator.cpp**.
 
-   ![Criar definição de Calcular](./media/calc-vs2019-create-definition.png "Criar definição de Calcular")
+   ![Criar definição de Calculate](./media/calc-vs2019-create-definition.png "Criar definição de Calculate")
 
    Um pop-up será exibido, possibilitando uma espiada na alteração de código que foi feita em outro arquivo. O código foi adicionado ao *Calculator.cpp*.
 
@@ -262,7 +262,7 @@ Agora é hora de testar o programa novamente para verificar se que tudo está fu
 
 1. Pressione **Ctrl+F5** para recompilar e iniciar o aplicativo.
 
-1. Digite `5 + 5`e **pressione Enter**. Verifique se o resultado será 10.
+1. Insira `5 + 5` e pressione **Enter**. Verifique se o resultado será 10.
 
    ![O resultado de 5 + 5](./media/calc-vs2019-five-plus-five.png "O resultado de 5 + 5")
 
@@ -274,29 +274,29 @@ Uma vez que o usuário é livre para digitar qualquer coisa na janela do console
 
 1. Defina um ponto de interrupção na linha `result = c.Calculate(x, oper, y);`, logo após o usuário ter sido solicitado a inserir a entrada. Para definir um ponto de interrupção, clique Para fazer isso, clique ao lado da linha na barra vertical cinza ao longo da borda esquerda da janela do editor. Um ponto vermelho é exibido.
 
-   ![Defina um ponto de ruptura](./media/calc-vs2019-set-breakpoint.png "Definir um ponto de interrupção")
+   ![Definir um ponto de interrupção](./media/calc-vs2019-set-breakpoint.png "Definir um ponto de interrupção")
 
    Agora quando depuramos o programa, ele sempre pausa a execução nessa linha. Já temos uma ideia superficial de que o programa funciona para casos simples. Como não queremos pausar a execução toda vez, vamos tornar o ponto de interrupção condicional.
 
 1. Clique com o botão direito do mouse no ponto vermelho que representa o ponto de interrupção e escolha **Condições**. Na caixa de edição para a condição, insira `(y == 0) && (oper == '/')`. Escolha o botão **OK** quando tiver terminado. A condição é salva automaticamente.
 
-   ![Defina um ponto de ruptura condicional](./media/calc-vs2019-conditional-breakpoint.png "Defina um ponto de ruptura condicional")
+   ![Definir um ponto de interrupção condicional](./media/calc-vs2019-conditional-breakpoint.png "Definir um ponto de interrupção condicional")
 
    Agora vamos pausar a execução no ponto de interrupção especificamente se você tentar uma divisão por 0.
 
 1. Para depurar o programa, pressione **F5** ou escolha o botão da barra de ferramentas **Depurador Local do Windows** que tem um ícone de seta verde. Em seu aplicativo de console, se você digitar algo como "0-5", o programa se comportará normalmente e continuará em execução. No entanto, se você digitar "10 / 0", ele fará uma pausa no ponto de interrupção. Você pode até mesmo colocar qualquer número de espaços entre o operador e os números. `cin` é inteligente o suficiente para analisar a entrada de modo adequado.
 
-   ![Pausa no ponto de ruptura condicional](./media/calc-vs2019-debug-breakpoint.png "Pausa no ponto de ruptura condicional")
+   ![Pausar no ponto de interrupção condicional](./media/calc-vs2019-debug-breakpoint.png "Pausar no ponto de interrupção condicional")
 
 ### <a name="useful-windows-in-the-debugger"></a>Janelas úteis no depurador
 
 Sempre que você depura seu código, pode perceber que algumas novas janelas aparecem. Essas janelas podem ajudar a sua experiência de depuração. Dê uma olhada na janela **Autos**. A janela **Autos** mostra os valores atuais das variáveis usadas pelo menos três linhas antes e até a linha atual. Para ver todas as variáveis dessa função, alterne para a janela **Locais**. Na verdade, você pode modificar os valores dessas variáveis enquanto depura para ver que efeito elas teriam sobre o programa. Neste caso, podemos deixá-las de lado.
 
-   ![A janela dos locais](./media/calc-vs2019-debug-locals.png "A janela dos locais")
+   ![A janela locais](./media/calc-vs2019-debug-locals.png "A janela locais")
 
 Também é possível apenas focalizar variáveis no código em si para ver seus valores atuais em que a execução está em pausa momento. Verifique se a janela do editor está em foco clicando nela primeiro.
 
-   ![Passar o tempo para visualizar os valores variáveis atuais](./media/calc-vs2019-hover-tooltip.png "Passar o tempo para visualizar os valores variáveis atuais")
+   ![Focalizar para exibir valores de variáveis atuais](./media/calc-vs2019-hover-tooltip.png "Focalizar para exibir valores de variáveis atuais")
 
 ### <a name="to-continue-debugging"></a>Para continuar a depuração
 
@@ -359,7 +359,7 @@ Vamos tratar da divisão por zero de modo mais simples para que um usuário poss
 
 1. Agora pressione **F5** uma vez. A execução do programa continua até ele precisar pausar para pedir entrada do usuário. Insira `10 / 0` novamente. Agora, é impressa uma mensagem mais útil. O usuário é solicitado a fornecer mais entradas e o programa continua em execução normalmente.
 
-   ![O resultado final após as mudanças](./media/calc-vs2019-final-verification.png "O resultado final após as mudanças")
+   ![O resultado final após as alterações](./media/calc-vs2019-final-verification.png "O resultado final após as alterações")
 
    > [!Note]
    > Quando você edita o código no modo de depuração, há um risco de o código se tornar obsoleto. Isso acontece quando o depurador ainda está executando seu código antigo e não ainda o atualizou com suas alterações. O depurador abre em pop-up uma caixa de diálogo para informá-lo quando isso acontece. Às vezes, pode ser necessário pressionar **F5** para atualizar o código que está sendo executado. Em particular, se você fizer uma alteração dentro de uma função enquanto o ponto de execução está dentro daquela função, precisará sair da função e voltar para ela para obter o código atualizado. Se isso não funcionar por alguma razão e você vir uma mensagem de erro, você poderá interromper a depuração clicando no quadrado vermelho na barra de ferramentas abaixo dos menus na parte superior do IDE e iniciar a depuração novamente inserindo **F5** ou escolhendo a seta " reproduzir" verde ao lado do botão Parar na barra de ferramentas.
@@ -381,7 +381,7 @@ Parabéns! Você concluiu o código para o aplicativo de calculadora e o compilo
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Saiba mais sobre o Visual Studio para C++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[Saiba mais sobre o Visual Studio para C++](https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end
 
@@ -391,19 +391,19 @@ O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mund
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Tenha o Visual Studio com o desenvolvimento do Desktop com carga de trabalho **C++** instalada e em execução no seu computador. Se ele ainda não estiver instalado, confira [Instalar suporte para C++ no Visual Studio](../build/vscpp-step-0-installation.md).
+- Tenha o Visual Studio com o **desenvolvimento de desktop com** carga de trabalho do C++ instalada e em execução no seu computador. Se ele ainda não estiver instalado, confira [Instalar suporte para C++ no Visual Studio](../build/vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Criar seu projeto de aplicativo
 
 O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as *soluções* para organizar seus projetos. Um projeto contém todas as opções, configurações e regras usadas para criar seus aplicativos. Ele também gerencia a relação entre todos os arquivos de projeto e todos os arquivos externos. Para criar seu aplicativo, primeiro, crie um novo projeto e uma nova solução.
 
-1. Na barra de menus do Visual Studio, escolha **Arquivo** > **Novo** > **Projeto**. A janela **Novo Projeto** é aberta.
+1. Na barra de menus no Visual Studio, escolha **arquivo**  >  **novo**  >  **projeto**. A janela **Novo Projeto** é aberta.
 
 2. Na barra lateral esquerda, verifique se **Visual C++** está selecionado. No centro, escolha **Aplicativo de Console do Windows**.
 
 3. Na caixa de edição **Nome** na parte inferior de edição, dê um nome ao novo projeto *CalculatorTutorial* e, em seguida, escolha **OK**.
 
-   ![O diálogo do Novo Projeto](./media/calculator-new-project-dialog.png "O diálogo do Novo Projeto")
+   ![A caixa de diálogo novo projeto](./media/calculator-new-project-dialog.png "A caixa de diálogo novo projeto")
 
    Um aplicativo de console do Windows C++ vazio é criado. Os aplicativos de console usam uma janela de console do Windows para exibir a saída e aceitar a entrada do usuário. No Visual Studio, uma janela do editor é aberta e mostra o código gerado:
 
@@ -437,7 +437,7 @@ O modelo para um novo aplicativo de console do Windows cria um aplicativo simple
 
 1. Para compilar o projeto, escolha **Compilar Solução** no menu **Compilar**. A janela de **Saída** mostra os resultados do processo de build.
 
-   ![Construa o projeto](./media/calculator-initial-build-output.png "Compilar o projeto")
+   ![Compilar o projeto](./media/calculator-initial-build-output.png "Compilar o projeto")
 
 1. Para executar o código, na barra de menus, escolha **Depurar**, **Iniciar sem depuração**.
 
@@ -485,10 +485,10 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
    > Noções básicas sobre o código:
    >
-   > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você pode ver um nome**\<** de arquivo cercado por suportes angulares ( ); outras vezes, é cercado por citações **( " "**). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
+   > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você pode ver um nome de arquivo entre colchetes angulares ( **\<\>** ); outras vezes, está entre aspas (**""**). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
    > - A linha `#include "pch.h"` (ou, no Visual Studio 2017 e versões anteriores, `#include "stdafx.h"`) faz referência a algo conhecido como cabeçalho pré-compilado. Isso costuma ser usado por programadores profissionais para melhorar os tempos de compilação, mas estão além do escopo deste tutorial.
    > - A linha `using namespace std;` informa ao compilador para esperar que coisas da Biblioteca Padrão C++ sejam usadas nesse arquivo. Sem essa linha, cada palavra-chave da biblioteca precisaria ser precedida por um `std::` para indicar seu escopo. Por exemplo, sem essa linha, cada referência a `cout` precisaria ser escrito como `std::cout`. A instrução `using` é adicionada para fazer com que o código tenha uma aparência mais limpa.
-   > - A palavra-chave `cout` é usada para imprimir a saída padrão em C++. O ** \< ** operador diz ao compilador para enviar o que estiver à direita dele para a saída padrão.
+   > - A palavra-chave `cout` é usada para imprimir a saída padrão em C++. O **\<\<** operador informa ao compilador para enviar o que estiver à direita dele para a saída padrão.
    > - A palavra-chave **endl** é como a tecla Enter; encerra a linha e move o cursor para a próxima linha. É uma melhor prática para colocar um `\n` dentro da cadeia de caracteres (contido por "") para fazer a mesma coisa, uma vez que `endl` sempre libera o buffer e pode prejudicar o desempenho do programa, mas já que esse é um aplicativo muito pequeno, `endl` é usado em vez disso para melhor legibilidade.
    > - Todas as instruções C++ devem terminar com ponto e vírgula e todos os aplicativos C++ devem conter uma função `main()`. Essa função é o que o programa é executado no início. Todo o código deve estar acessível de `main()` para ser usado.
 
@@ -496,7 +496,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 1. Para executar o aplicativo, pressione **CTRL+F5** ou vá para o menu **Depurar** e escolha **Iniciar Sem Depuração**. Se você receber um pop-up com a mensagem **Este projeto está desatualizado**, você poderá selecionar **Não mostrar esta caixa de diálogo novamente** e, em seguida, escolher **Sim** para compilar seu aplicativo. Você deve ver uma janela do console em exibição com o texto especificado no código.
 
-   ![Construa e inicie sua aplicação](./media/calculator-first-launch.gif "Construa e inicie sua aplicação")
+   ![Crie e inicie seu aplicativo](./media/calculator-first-launch.gif "Crie e inicie seu aplicativo")
 
 1. Feche a janela do console ao terminar.
 
@@ -506,15 +506,15 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 ### <a name="to-add-a-calculator-class"></a>Para adicionar uma classe de Calculadora
 
-1. Vá para o menu **Projeto** e escolha **Adicionar Classe**. Na caixa de edição **Nome de Classe**, digite *Calculadora*. Escolha **OK**. Dois novos arquivos são adicionados ao seu projeto. Para salvar todos os arquivos alterados de uma vez, pressione **Ctrl+Shift+S**. É um atalho de teclado para**Salvar todos** **os arquivos** > . Também há um botão de barra de ferramentas para **Salvar Tudo**, um ícone de dois disquetes, encontrado ao lado do botão **Salvar**. Em geral, é uma boa prática executar **Salvar Tudo** com frequência, para que você não perca nenhum arquivo ao salvar.
+1. Vá para o menu **Projeto** e escolha **Adicionar Classe**. Na caixa de edição **Nome de Classe**, digite *Calculadora*. Selecione **OK**. Dois novos arquivos são adicionados ao seu projeto. Para salvar todos os arquivos alterados de uma vez, pressione **Ctrl+Shift+S**. É um atalho de teclado para **arquivo**  >  **salvar tudo**. Também há um botão de barra de ferramentas para **Salvar Tudo**, um ícone de dois disquetes, encontrado ao lado do botão **Salvar**. Em geral, é uma boa prática executar **Salvar Tudo** com frequência, para que você não perca nenhum arquivo ao salvar.
 
-   ![Crie a classe Calculadora](./media/calculator-create-class.gif "Crie a classe Calculadora")
+   ![Criar a classe de calculadora](./media/calculator-create-class.gif "Criar a classe de calculadora")
 
-   Uma classe é como um blueprint para um objeto que faz algo. Nesse caso, definimos uma calculadora e como ela deve funcionar. O assistente **Adicionar Classe** usado acima criou arquivos .h e .cpp que têm o mesmo nome que a classe. Você pode ver uma lista completa de seus arquivos de projeto na janela **Solution Explorer,** visível na lateral do IDE. Se a janela não estiver visível, você pode abri-la na barra de menu: escolha **Exibir** > **explorador de soluções**.
+   Uma classe é como um blueprint para um objeto que faz algo. Nesse caso, definimos uma calculadora e como ela deve funcionar. O assistente **Adicionar Classe** usado acima criou arquivos .h e .cpp que têm o mesmo nome que a classe. Você pode ver uma lista completa dos arquivos de projeto na janela **Gerenciador de soluções** , visível no lado do IDE. Se a janela não estiver visível, você poderá abri-la na barra de menus: escolha **Exibir**  >  **Gerenciador de soluções**.
 
    ![Gerenciador de Soluções](./media/calculator-solution-explorer.png "Gerenciador de Soluções")
 
-   Agora você deve ter três guias abertas no editor: *CalculatorTutorial.cpp*, *Calculator.h*, e *Calculator.cpp*. Se você fechar acidentalmente um deles, você pode reabri-lo clicando duas vezes na janela **Solution Explorer.**
+   Agora você deve ter três guias abertas no editor: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se você fechar acidentalmente um deles, poderá reabri-lo clicando duas vezes nele na janela **Gerenciador de soluções** .
 
 1. Em **Calculator.h**, remova as linhas `Calculator();` e `~Calculator();` que foram geradas, já que você não precisa delas aqui. Em seguida, adicione a seguinte linha de código para que o arquivo agora tenha esta aparência:
 
@@ -536,7 +536,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 1. Você verá um rabisco verde aparecer sob `Calculate`. Ocorre porque ainda não definimos a função `Calculate` no arquivo .cpp. Passe o mouse sobre a palavra, clique na lâmpada que aparece em pop-up e escolha **criar uma definição de 'Calculate' em Calculator.cpp**. Um pop-up será exibido, possibilitando uma espiada na alteração de código que foi feita em outro arquivo. O código foi adicionado ao *Calculator.cpp*.
 
-   ![Criar definição de Calcular](./media/calculator-create-definition.gif "Criar definição de Calcular")
+   ![Criar definição de Calculate](./media/calculator-create-definition.gif "Criar definição de Calculate")
 
    Atualmente, retorna apenas 0,0. Vamos mudar isso. Pressione **Esc** para fechar o pop-up.
 
@@ -626,7 +626,7 @@ Agora é hora de testar o programa novamente para verificar se que tudo está fu
 
 1. Pressione **Ctrl+F5** para recompilar e iniciar o aplicativo.
 
-1. Digite `5 + 5`e **pressione Enter**. Verifique se o resultado será 10.
+1. Insira `5 + 5` e pressione **Enter**. Verifique se o resultado será 10.
 
    ![O resultado de 5 + 5](./media/calculator-five-plus-five.png "O resultado de 5 + 5")
 
@@ -638,33 +638,33 @@ Uma vez que o usuário é livre para digitar qualquer coisa na janela do console
 
 1. Defina um ponto de interrupção na linha `result = c.Calculate(x, oper, y);`, logo após o usuário ter sido solicitado a inserir a entrada. Para definir um ponto de interrupção, clique Para fazer isso, clique ao lado da linha na barra vertical cinza ao longo da borda esquerda da janela do editor. Um ponto vermelho é exibido.
 
-   ![Defina um ponto de ruptura](./media/calculator-set-breakpoint.gif "Definir um ponto de interrupção")
+   ![Definir um ponto de interrupção](./media/calculator-set-breakpoint.gif "Definir um ponto de interrupção")
 
    Agora quando depuramos o programa, ele sempre pausa a execução nessa linha. Já temos uma ideia superficial de que o programa funciona para casos simples. Como não queremos pausar a execução toda vez, vamos tornar o ponto de interrupção condicional.
 
 1. Clique com o botão direito do mouse no ponto vermelho que representa o ponto de interrupção e escolha **Condições**. Na caixa de edição para a condição, insira `(y == 0) && (oper == '/')`. Escolha o botão **OK** quando tiver terminado. A condição é salva automaticamente.
 
-   ![Defina um ponto de ruptura condicional](./media/calculator-conditional-breakpoint.gif "Defina um ponto de ruptura condicional")
+   ![Definir um ponto de interrupção condicional](./media/calculator-conditional-breakpoint.gif "Definir um ponto de interrupção condicional")
 
    Agora vamos pausar a execução no ponto de interrupção especificamente se você tentar uma divisão por 0.
 
 1. Para depurar o programa, pressione **F5** ou escolha o botão da barra de ferramentas **Depurador Local do Windows** que tem um ícone de seta verde. Em seu aplicativo de console, se você digitar algo como "0-5", o programa se comportará normalmente e continuará em execução. No entanto, se você digitar "10 / 0", ele fará uma pausa no ponto de interrupção. Você pode até mesmo colocar qualquer número de espaços entre o operador e os números. `cin` é inteligente o suficiente para analisar a entrada de modo adequado.
 
-   ![Pausa no ponto de ruptura condicional](./media/calculator-debug-conditional.gif "Pausa no ponto de ruptura condicional")
+   ![Pausar no ponto de interrupção condicional](./media/calculator-debug-conditional.gif "Pausar no ponto de interrupção condicional")
 
 ### <a name="useful-windows-in-the-debugger"></a>Janelas úteis no depurador
 
 Sempre que você depura seu código, pode perceber que algumas novas janelas aparecem. Essas janelas podem ajudar a sua experiência de depuração. Dê uma olhada na janela **Autos**. A janela **Autos** mostra os valores atuais das variáveis usadas pelo menos três linhas antes e até a linha atual.
 
-   ![A janela Autos](./media/calculator-autos.png "A janela Autos")
+   ![A janela automáticos](./media/calculator-autos.png "A janela automáticos")
 
 Para ver todas as variáveis dessa função, alterne para a janela **Locais**. Na verdade, você pode modificar os valores dessas variáveis enquanto depura para ver que efeito elas teriam sobre o programa. Neste caso, podemos deixá-las de lado.
 
-   ![A janela dos locais](./media/calculator-locals.png "A janela dos locais")
+   ![A janela locais](./media/calculator-locals.png "A janela locais")
 
 Também é possível apenas focalizar variáveis no código em si para ver seus valores atuais em que a execução está em pausa momento. Verifique se a janela do editor está em foco clicando nela primeiro.
 
-   ![Passar o tempo para visualizar os valores variáveis atuais](./media/calculator-hover-tooltip.gif "Passar o tempo para visualizar os valores variáveis atuais")
+   ![Focalizar para exibir valores de variáveis atuais](./media/calculator-hover-tooltip.gif "Focalizar para exibir valores de variáveis atuais")
 
 ### <a name="to-continue-debugging"></a>Para continuar a depuração
 
@@ -674,7 +674,7 @@ Também é possível apenas focalizar variáveis no código em si para ver seus 
 
 1. Continue usando **F10** para realizar a **Depuração Parcial** de cada linha até que você voltar para a função `main()` no outro arquivo e pare na linha `cout`.
 
-   ![Saia do Cálculo e verifique o resultado](./media/calculator-undefined-zero.gif "Saia do Cálculo e verifique o resultado")
+   ![Sair do cálculo e verificar o resultado](./media/calculator-undefined-zero.gif "Sair do cálculo e verificar o resultado")
 
    Parece que o programa está fazendo o que é esperado: ele usa o primeiro número e o divide pelo segundo. Na linha `cout`, focalize a variável `result` ou dê uma olhada `result` na janela **Autos**. Você verá que seu valor está listado como "inf", o que não parece correto, então vamos corrigi-lo. A linha `cout` somente gera qualquer valor que esteja armazenado em `result`, portanto, quando você avança mais uma linha usando **F10**, a janela do console exibe:
 
@@ -730,7 +730,7 @@ Vamos tratar da divisão por zero de modo mais simples para que um usuário poss
 
 1. Agora pressione **F5** uma vez. A execução do programa continua até ele precisar pausar para pedir entrada do usuário. Insira `10 / 0` novamente. Agora, é impressa uma mensagem mais útil. O usuário é solicitado a fornecer mais entradas e o programa continua em execução normalmente.
 
-   ![O resultado final após as mudanças](./media/calculator-final-verification.gif "O resultado final após as mudanças")
+   ![O resultado final após as alterações](./media/calculator-final-verification.gif "O resultado final após as alterações")
 
    > [!Note]
    > Quando você edita o código no modo de depuração, há um risco de o código se tornar obsoleto. Isso acontece quando o depurador ainda está executando seu código antigo e não ainda o atualizou com suas alterações. O depurador abre em pop-up uma caixa de diálogo para informá-lo quando isso acontece. Às vezes, pode ser necessário pressionar **F5** para atualizar o código que está sendo executado. Em particular, se você fizer uma alteração dentro de uma função enquanto o ponto de execução está dentro daquela função, precisará sair da função e voltar para ela para obter o código atualizado. Se isso não funcionar por alguma razão e você vir uma mensagem de erro, você poderá interromper a depuração clicando no quadrado vermelho na barra de ferramentas abaixo dos menus na parte superior do IDE e iniciar a depuração novamente inserindo **F5** ou escolhendo a seta " reproduzir" verde ao lado do botão Parar na barra de ferramentas.
@@ -752,6 +752,6 @@ Parabéns! Você concluiu o código para o aplicativo de calculadora e o compilo
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Saiba mais sobre o Visual Studio para C++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[Saiba mais sobre o Visual Studio para C++](https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end
