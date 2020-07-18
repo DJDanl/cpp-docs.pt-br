@@ -3,12 +3,12 @@ title: Novidades do C++ no Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404968"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446864"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
@@ -70,7 +70,7 @@ Análise aprimorada com `/Qspectre` para fornecer assistência de mitigação pa
 
 - A detecção de vinculação dinâmica do runtime para a biblioteca de algoritmos paralelos não usa mais uma página inteira para armazenar a matriz do ponteiro de função. Marcar essa memória como somente leitura deixou de ser considerado relevante para fins de segurança.
 
-- O construtor de `std::thread` não aguarda mais que o thread seja iniciado, e não insere mais tantas camadas de chamadas de função entre a biblioteca C subjacente `_beginthreadex` e o objeto fornecido que pode ser chamado. Anteriormente `std::thread` , colocamos seis funções entre `_beginthreadex` o e o objeto chamável fornecido. Esse número foi reduzido para apenas três, dois dos quais são apenas `std::invoke` . Essa alteração também resolve um bug obscuro de medição de tempo em que um construtor de `std::thread` podia ser interrompido se o relógio do sistema fosse alterado no exato momento que o `std::thread` estivesse sendo criado.
+- O construtor de `std::thread` não aguarda mais que o thread seja iniciado, e não insere mais tantas camadas de chamadas de função entre a biblioteca C subjacente `_beginthreadex` e o objeto fornecido que pode ser chamado. Anteriormente `std::thread` , colocamos seis funções entre `_beginthreadex` o e o objeto chamável fornecido. Esse número foi reduzido para apenas três, dois dos quais são apenas `std::invoke` . Essa alteração também resolve um bug de tempo obscuro, onde um `std::thread` Construtor deixaria de responder se o relógio do sistema fosse alterado no momento exato em `std::thread` que estava sendo criado.
 
 - Correção de uma regressão de desempenho em `std::hash` que introduzimos ao implementar `std::hash<std::filesystem::path>`.
 
@@ -590,7 +590,7 @@ O Visual Studio 2017 apresenta suporte ao uso de projetos CMake sem a conversão
 
 Agora, fornecemos uma experiência de instalação mais granular da carga de trabalho original do C++. Adicionamos componentes selecionáveis que permitem a instalação apenas das ferramentas das quais você precisa. Os tamanhos de instalação indicados para os componentes listados na interface do usuário do instalador estão incorretos e subestimam o tamanho total.
 
-Para criar projetos Win32 com êxito na carga de trabalho de área de trabalho C++, é necessário instalar um conjunto de ferramentas e um SDK do Windows. Instalar os componentes recomendados (selecionados) **Conjunto de ferramentas do VC++ 2017 v141 (x86, x64)** e **SDK do Windows 10 (10.0.nnnnn)** garantirá que isso funcionará. Se as ferramentas necessárias não estiverem instaladas, os projetos não serão criados com êxito e o assistente será interrompido.
+Para criar projetos Win32 com êxito na carga de trabalho de área de trabalho C++, é necessário instalar um conjunto de ferramentas e um SDK do Windows. Instalar os componentes recomendados (selecionados) **Conjunto de ferramentas do VC++ 2017 v141 (x86, x64)** e **SDK do Windows 10 (10.0.nnnnn)** garantirá que isso funcionará. Se as ferramentas necessárias não estiverem instaladas, os projetos não serão criados com êxito e o assistente deixará de responder.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versão 15.5
 
