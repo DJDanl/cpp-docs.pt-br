@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cce2c03783039a62b5cb6f60ecf8d76b23589483
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183573"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446695"
 ---
 # <a name="linker-tools-error-lnk1318"></a>Erro das Ferramentas de Vinculador LNK1318
 
@@ -24,7 +24,7 @@ Como a origem do erro é incomum, há apenas conselhos genéricos disponíveis p
 
 - Execute uma operação de limpeza em seus diretórios de compilação e, em seguida, faça uma compilação completa da sua solução.
 
-- Reinicialize o computador ou verifique se há processos MSPDBSRV. exe isolados ou desligados e elimine-os no taskmanager.
+- Reinicialize o computador ou verifique se há processos de mspdbsrv.exe isolados ou sem resposta e elimine-os no taskmanager.
 
 - Desative as verificações de antivírus em seus diretórios de projeto.
 
@@ -32,4 +32,4 @@ Como a origem do erro é incomum, há apenas conselhos genéricos disponíveis p
 
 - Tente criar usando o conjunto de ferramentas hospedados de 64 bits.
 
-- Serialize a vinculação para atenuar problemas de link paralelo, se necessário. Esse erro pode ser causado se MSPDBSRV. exe for iniciado por uma instância do link e for desligado antes que outra instância do link seja feita usando-o. A desvantagem dessa correção é que as compilações do projeto podem levar consideravelmente mais tempo para serem concluídas.
+- Serialize a vinculação para atenuar problemas de link paralelo, se necessário. Esse erro pode ser causado se mspdbsrv.exe é iniciado por uma instância do link e é desligado antes que outra instância do link seja feita usando-o. A desvantagem dessa correção é que as compilações do projeto podem levar consideravelmente mais tempo para serem concluídas.

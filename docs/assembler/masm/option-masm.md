@@ -1,17 +1,17 @@
 ---
 title: OPTION (MASM)
-ms.date: 12/17/2019
+ms.date: 07/15/2020
 f1_keywords:
 - option
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: bd50ac2e051db7f02ac077054e5856524745df54
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a614697a9d633628b02b59a7b810fa261887f859
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318742"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446431"
 ---
 # <a name="option"></a>OPTION
 
@@ -19,25 +19,30 @@ Habilita e desabilita os recursos do Assembler.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **Opção** optionlist
+> **`OPTION`***opção-lista*
 
 ## <a name="remarks"></a>Comentários
 
 As opções disponíveis incluem:
 
-|||||
-|-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|
-|**NOEMULATOR**|**EPÍLOGO**|**EXPR16**|**EXPR32**|
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**Nopalavra-chave**|**NOSIGNEXTEND**|**OFFSET**|
-|**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**PRÓLOGO**|**READONLY**|**NOREADONLY**|
-|**SCOPED**|**Sem escopo**|**SEGMENT**|**SETIF2**.|
+:::row:::
+   :::column span="":::
+      **`CASEMAP`**<br/>**`DOTNAME`**<br/>**`NODOTNAME`**<br/>**`EMULATOR`**<br/>**`NOEMULATOR`**<br/>**`EPILOGUE`**<br/>**`EXPR16`**
+   :::column-end:::
+   :::column span="":::
+      **`EXPR32`**<br/>**`LANGUAGE`**<br/>**`LJMP`**<br/>**`NOLJMP`**<br/>**`M510`**<br/>**`NOM510`**<br/>**`NOKEYWORD`**
+   :::column-end:::
+   :::column span="":::
+      **`NOSIGNEXTEND`**<br/>**`OFFSET`**<br/>**`OLDMACROS`**<br/>**`NOOLDMACROS`**<br/>**`OLDSTRUCTS`**<br/>**`NOOLDSTRUCTS`**<br/>**`PROC`**
+   :::column-end:::
+   :::column span="":::
+      **`PROLOGUE`**<br/>**`READONLY`**<br/>**`NOREADONLY`**<br/>**`SCOPED`**<br/>**`NOSCOPED`**<br/>**`SEGMENT`**<br/>**`SETIF2`**
+   :::column-end:::
+:::row-end:::
 
-A sintaxe de LANGUAGE é **language option:** <em>x</em>, em que *x* é uma das opções C, syscall, stdcall, Pascal, Fortran ou Basic.  Não há suporte para SYSCALL, PASCAL, FORTRAN e BASIC com [. MODELO](dot-model.md) simples.
+A sintaxe de Language é **`OPTION LANGUAGE:`** _`x`_ , em que *`x`* é um dos **`C`** , **`SYSCALL`** ,,, **`STDCALL`** **`PASCAL`** **`FORTRAN`** ou **`BASIC`** . **`SYSCALL`**, **`PASCAL`** , **`FORTRAN`** e **`BASIC`** não têm suporte com [`.MODEL`](dot-model.md) **`FLAT`** .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Referência de diretivas](directives-reference.md)\
 [MASM BNF Grammar](masm-bnf-grammar.md)
