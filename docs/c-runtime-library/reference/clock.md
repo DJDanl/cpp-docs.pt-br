@@ -28,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 660c97882151127cc6c1caa64bb27f5728f169fb
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 03d1a9ece92dbedfdceb89488e5d0440dc64f7ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737474"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220724"
 ---
 # <a name="clock"></a>clock
 
@@ -53,7 +53,7 @@ O tempo decorrido desde a inicialização do CRT no início do processo, medido 
 
 A função **Clock** informa quanto tempo do relógio de parede passou desde a inicialização do CRT durante o início do processo. Observe que essa função não está estritamente em conformidade com ISO C, que especifica o tempo de CPU líquido como o valor retornado. Para obter tempos de CPU, use a função Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes). Para determinar o tempo decorrido em segundos, divida o valor retornado pela função **Clock** pelo **CLOCKS_PER_SEC**de macro.
 
-Dado tempo suficiente, o valor retornado pelo **relógio** pode exceder o valor máximo positivo de **clock_t**. Quando o processo tiver sido executado mais tempo, o valor retornado pelo **relógio** será sempre `(clock_t)(-1)` , conforme especificado pelo C99 padrão ISO (7.23.2.1) e pelo padrão ISO C11 (7.27.2.1). A Microsoft implementa **clock_t** como um **longo**, um inteiro de 32 bits assinado e a macro **CLOCKS_PER_SEC** é definida como 1000. Isso fornece um valor de retorno de função de **relógio** máximo de 2147483,647 segundos ou cerca de 24,8 dias. Não confie no valor retornado pelo **relógio** em processos que foram executados por mais tempo do que esse período. Você pode usar a função de [tempo](time-time32-time64.md) de 64 bits ou a função [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) do Windows para registrar tempos decorridos do processo de muitos anos.
+Dado tempo suficiente, o valor retornado pelo **relógio** pode exceder o valor máximo positivo de **clock_t**. Quando o processo tiver sido executado mais tempo, o valor retornado pelo **relógio** será sempre `(clock_t)(-1)` , conforme especificado pelo C99 padrão ISO (7.23.2.1) e pelo padrão ISO C11 (7.27.2.1). A Microsoft implementa **clock_t** como um **`long`** , um inteiro de 32 bits assinado e a macro **CLOCKS_PER_SEC** é definida como 1000. Isso fornece um valor de retorno de função de **relógio** máximo de 2147483,647 segundos ou cerca de 24,8 dias. Não confie no valor retornado pelo **relógio** em processos que foram executados por mais tempo do que esse período. Você pode usar a função de [tempo](time-time32-time64.md) de 64 bits ou a função [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) do Windows para registrar tempos decorridos do processo de muitos anos.
 
 ## <a name="requirements"></a>Requisitos
 

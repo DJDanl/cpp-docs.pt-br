@@ -7,16 +7,16 @@ helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-ms.openlocfilehash: 7f0c6457cc0806a0f1764300cffa1c9878b8a600
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ec639004884d022fe6a827c2ec31d3201ea04657
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217367"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214211"
 ---
 # <a name="_mm_stream_sd"></a>_mm_stream_sd
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Grava dados de 64 bits em um local de memória sem poluir os caches.
 
@@ -29,31 +29,31 @@ void _mm_stream_sd(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Dest*\
 fora Um ponteiro para o local onde os dados de origem serão gravados.
 
-*Source*\
-no Um valor de 128 bits que contém `double` o valor a ser gravado em seus últimos 64 bits.
+*Original*\
+no Um valor de 128 bits que contém o **`double`** valor a ser gravado em seus últimos 64 bits.
 
 ## <a name="return-value"></a>Valor retornado
 
-nenhuma.
+Nenhum.
 
 ## <a name="requirements"></a>Requisitos
 
-|Intrínseco|Arquitetura|
+|Intrinsic|Arquitetura|
 |---------------|------------------|
 |`_mm_stream_sd`|SSE4a|
 
-**Arquivo de cabeçalho** \<> intrin. h
+**Arquivo de cabeçalho** \<intrin.h>
 
 ## <a name="remarks"></a>Comentários
 
-O intrínseco gera a `movntsd` instrução. Para determinar o suporte de hardware para essa instrução, `__cpuid` chame o `InfoType=0x80000001` intrínseco e verifique o bit `CPUInfo[2] (ECX)`6 de. Esse bit será 1 se o hardware oferecer suporte a essa instrução e 0 caso contrário.
+O intrínseco gera a `movntsd` instrução. Para determinar o suporte de hardware para essa instrução, chame o `__cpuid` intrínseco `InfoType=0x80000001` e verifique o bit 6 de `CPUInfo[2] (ECX)` . Esse bit será 1 se o hardware oferecer suporte a essa instrução e 0 caso contrário.
 
-Se você executar o código que usa `_mm_stream_sd` o intrínseco em hardware que não oferece `movntsd` suporte à instrução, os resultados serão imprevisíveis.
+Se você executar o código que usa o `_mm_stream_sd` intrínseco em hardware que não oferece suporte à `movntsd` instrução, os resultados serão imprevisíveis.
 
 ## <a name="example"></a>Exemplo
 
@@ -81,11 +81,11 @@ int main()
 d[0] = -1, d[1] = 1
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 Partes de Copyright 2007 da Advanced Micro Devices, Inc. Todos os direitos reservados. Reproduzida com a permissão da Advanced Micro Devices, Inc.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_mm_stream_ss](../intrinsics/mm-stream-ss.md)\
 [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)\

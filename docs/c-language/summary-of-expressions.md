@@ -2,12 +2,12 @@
 title: Resumo de expressões
 ms.date: 06/14/2018
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-ms.openlocfilehash: 320baa51d54f00ac4fdb6633922a8bb36cf92a94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1660690c6d36aa1dbdc025d6afe92e19ff941463
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157783"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220828"
 ---
 # <a name="summary-of-expressions"></a>Resumo de expressões
 
@@ -36,8 +36,8 @@ ms.locfileid: "62157783"
 &nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sufixo-expressão*  **[**  *expressão*  **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sufixo-expressão***(***opção de expressão de argumento-lista*<sub>opt</sub> **)**    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de sufixo*  **.**  *identificador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identificador de expressão***->***identifier* de sufixo    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão de sufixo*  **.**  *ID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **->** de sufixo *identificador* do    <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expressão de sufixo*  **++**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expressão de sufixo*  **--**
 
@@ -51,51 +51,47 @@ ms.locfileid: "62157783"
 &nbsp;&nbsp;&nbsp;&nbsp;**--**  *expressão unário*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*operador unário*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;expressão **sizeof***unário*  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`sizeof`**  *expressão unário*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *tipo-nome*  **)**
 
 *unary-operator*: one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&****&#42;** **+**&#42;**-** **!** ! **~**
+&nbsp;&nbsp;&nbsp;&nbsp;**&****&#42;** **+** **-** **~** **!**
 
 *expressão CAST*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão unário*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão-unária*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expressão CAST* **(***nome-do-tipo***)**      
 
 *multiplicativa-expressão*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **&#42;**  *cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression***/***expressão CAST* de multiplicativa-Expression    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression***%***expressão CAST* de multiplicativa-Expression    
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicativa-expressão* **/** *expressão CAST*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicativa-expressão* **%** *expressão CAST*    
 
 *additive-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression***+** expressão*multiplicativa de* expressão aditiva    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression***-** expressão*multiplicativa de* expressão aditiva    
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão aditiva* **+** *multiplicativa-expressão*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão aditiva* **-** *multiplicativa-expressão*    
 
 *expressão Shift*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expressão aditiva*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression***\<***expressão aditiva* de expressão Shift-Expression    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression***>>***expressão aditiva* de expressão Shift-Expression    
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão Shift*   * *expressão Shift-Expression * aditivo \<\<**  *additive-expression*<br/> &nbsp; &nbsp; &nbsp; &nbsp; * **>>** *additive-expression*  
 
 *expressão relacional*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression***\<***expressão de alternância* de expressão relacional    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression***>***expressão de alternância* de expressão relacional    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression***\<***expressão de alternância* de expressão relacional    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression***>=***expressão de alternância* de expressão relacional    
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* expressão relacional* \<=**  *shift-expression*<br/> &nbsp; &nbsp; - &nbsp; &nbsp; ** * \<**  *shift-expression*<br/> &nbsp; &nbsp; relacional-Expression * Shift-Expression relacional-expressão * * relacional-expressão * Shift-Expression &nbsp; &nbsp; * **>** *shift-expression* <br/> &nbsp; &nbsp; &nbsp; &nbsp;   * **>=** *shift-expression*    
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression***==***expressão relacional de* expressão de igualdade    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **==** de igualdade *expressão relacional*    <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*  **!=**  *relational-expression*
 
 *AND-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expressão de igualdade*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*AND-expression***&***Expressão de igualdade* de expressão and-Expression    
+&nbsp;&nbsp;&nbsp;&nbsp;*Expressão and* **&** *expressão de igualdade*    
 
 *exclusive-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Expressão AND*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*exclusive-OR-expression***^***expressão* or exclusiva.    
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **^** or exclusiva *Expressão and*    
 
 *expressão inclusiva ou*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expressão OR exclusiva*<br/>
@@ -103,7 +99,7 @@ ms.locfileid: "62157783"
 
 *expressão and lógica*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*inclusivo-ou-expressão*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de lógica e de expressão*  **&&**  *inclusiva*
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **&&** and lógica *inclusivo-ou-expressão*    
 
 *expressão or lógica*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expressão AND lógica*<br/>
@@ -111,4 +107,4 @@ ms.locfileid: "62157783"
 
 ## <a name="see-also"></a>Confira também
 
-- [Gramática de estrutura da frase](../c-language/phrase-structure-grammar.md)
+- [Gramática da estrutura da frase](../c-language/phrase-structure-grammar.md)

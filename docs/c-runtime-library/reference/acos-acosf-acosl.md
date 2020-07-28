@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916882"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220763"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -60,7 +60,7 @@ float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Valor entre-1 e 1, para o qual calcular o arco cosseno (o cosseno inverso).
@@ -79,7 +79,7 @@ Por padrão, se *x* for menor que-1 ou maior que 1, **acos** retornará um indef
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **acos** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **acos** sempre usa e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **acos** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, **acos** sempre usa e retorna um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -139,9 +139,9 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

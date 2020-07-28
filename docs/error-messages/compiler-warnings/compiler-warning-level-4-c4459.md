@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 4) C4459
+title: Aviso do compilador (nível 4) C4459
 ms.date: 11/04/2016
 f1_keywords:
 - C4459
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d6d0a802f9f628145fbc5910aca805a5b01b94d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214367"
 ---
-# <a name="compiler-warning-level-4-c4459"></a>Compilador aviso (nível 4) C4459
+# <a name="compiler-warning-level-4-c4459"></a>Aviso do compilador (nível 4) C4459
 
-> declaração de '*identificador*' oculta uma declaração global
+> a declaração de '*Identifier*' oculta a declaração global
 
-A declaração de *identificador* no escopo local oculta a declaração do idêntico *identificador* no escopo global. Este aviso informa que faz referência à *identificador* nesse escopo resolver para a versão declarada localmente, não a versão global, que pode ou não ser sua intenção. Em geral, recomendamos que você minimize o uso de variáveis globais como uma boa prática de engenharia. Para minimizar a poluição de namespace global, é recomendável o uso de um namespace nomeado para as variáveis globais.
+A declaração do *identificador* no escopo local oculta a declaração do *identificador* nomeado de forma idêntica no escopo global. Esse aviso informa que as referências ao *identificador* nesse escopo resolvem a versão declarada localmente, não a versão global, que pode ou não ser sua intenção. Em geral, recomendamos que você minimize o uso de variáveis globais como uma boa prática de engenharia. Para minimizar a poluição do namespace global, recomendamos o uso de um namespace nomeado para variáveis globais.
 
-Esse aviso era novo no Visual Studio 2015, no Microsoft C++ versão do compilador 18h00 Hora. Para suprimir avisos do que a versão do compilador ou posterior ao migrar seu código, use o [/wv:18](../../build/reference/compiler-option-warning-level.md) opção de compilador.
+Esse aviso foi novo no Visual Studio 2015, no compilador do Microsoft C++ versão 18, 0. Para suprimir os avisos dessa versão do compilador ou mais tarde ao migrar seu código, use a opção de compilador [/WV: 18](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Exemplo
 
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-Uma maneira de corrigir esse problema é criar um namespace para seu globais, mas não usar um `using` nomes qualificados de diretiva para trazer esse namespace para o escopo, para que todas as referências devem usar o ambígua:
+Uma maneira de corrigir esse problema é criar um namespace para seus globais, mas não usar uma **`using`** diretiva para trazer esse namespace para o escopo, de modo que todas as referências devem usar os nomes qualificados não ambíguos:
 
 ```cpp
 // C4459_namespace.cpp

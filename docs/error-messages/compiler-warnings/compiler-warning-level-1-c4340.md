@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4340
 ms.assetid: ddd5344b-5167-4c55-a318-20615052fd54
-ms.openlocfilehash: 8d790052296b8dca59d4887f20b10d27a01a021b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b3ac99673e755d4f6caea6614e2c4e48d88c017f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187265"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214458"
 ---
 # <a name="compiler-warning-level-1-c4340"></a>Aviso do compilador (nível 1) C4340
 
 ' value ': valor disposto de positivo para valor negativo
 
-O valor de `enum` é maior do que o maior `enum` valor positivo disposto em torno de um valor negativo.
+O **`enum`** valor é maior que o maior **`enum`** valor positivo disposto em torno de um valor negativo.

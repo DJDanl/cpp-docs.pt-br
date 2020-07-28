@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c1a790902af92d72eb73be7fc2321762ab01fd8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755909"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214757"
 ---
 # <a name="compiler-error-c2146"></a>Erro do compilador C2146
 
 erro de sintaxe: ' token ' ausente antes do identificador ' identifier '
 
-O compilador esperava `token` e encontrou `identifier` em vez disso.  Possíveis causas:
+O compilador esperava `token` e foi encontrado `identifier` em seu lugar.  Possíveis causas:
 
 1. Erro de ortografia ou de maiúsculas e minúsculas.
 
@@ -46,7 +46,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: palavra-chave `typename` ausente.
+Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: **`typename`** palavra-chave Missing.
 
 O exemplo a seguir é compilado no Visual Studio .NET 2002, mas falhará no Visual Studio .NET 2003:
 

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220542"
 ---
 # <a name="comptr-class"></a>Classe ComPtr
 
@@ -72,7 +72,7 @@ template<class T>
 friend class ComPtr;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 A interface que o `ComPtr` representa.
@@ -175,7 +175,7 @@ HRESULT As(
 ) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *U*<br/>
 A interface a ser representada pelo parâmetro *p*.
@@ -187,7 +187,7 @@ Um `ComPtr` objeto que representa a interface especificada pelo parâmetro *U*. 
 
 O primeiro modelo é o formulário que você deve usar em seu código. O segundo modelo é uma especialização interna e auxiliar. Ele dá suporte a recursos de linguagem C++, como a palavra-chave auto-dedução de tipo [automático](../../cpp/auto-cpp.md) .
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
@@ -202,7 +202,7 @@ WRL_NOTHROW HRESULT AsIID(
 ) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *riid*<br/>
 Uma ID de interface.
@@ -210,7 +210,7 @@ Uma ID de interface.
 *DTI*<br/>
 Se o objeto tiver uma interface cuja ID é igual a *riid*, um ponteiro de indireto duplo para a interface especificado pelo parâmetro *riid* . Caso contrário, um ponteiro para `IUnknown` .
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
@@ -224,12 +224,12 @@ HRESULT AsWeak(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWeakRef*<br/>
 Quando essa operação é concluída, um ponteiro para um objeto de referência fraca.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
@@ -243,7 +243,7 @@ void Attach(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *outros*<br/>
 Um tipo de interface.
@@ -284,7 +284,7 @@ WRL_NOTHROW ComPtr(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *U*<br/>
 O tipo do *outro* parâmetro.
@@ -292,7 +292,7 @@ O tipo do *outro* parâmetro.
 *outros*<br/>
 Um objeto do tipo *U*.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
@@ -324,7 +324,7 @@ HRESULT CopyTo(
 ) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *U*<br/>
 O nome de um tipo.
@@ -335,7 +335,7 @@ Quando essa operação for concluída, um ponteiro para a interface solicitada.
 *riid*<br/>
 Uma ID de interface.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica por que a `QueryInterface` operação implícita falhou.
 
@@ -355,7 +355,7 @@ Desassocia esse `ComPtr` objeto da interface que ele representa.
 T* Detach();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para a interface que foi representada por esse `ComPtr` objeto.
 
@@ -367,7 +367,7 @@ Recupera um ponteiro para a interface que está associada a isso `ComPtr` .
 T* Get() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Ponteiro para a interface que está associada a isso `ComPtr` .
 
@@ -380,7 +380,7 @@ T* const* GetAddressOf() const;
 T** GetAddressOf();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O endereço de uma variável.
 
@@ -418,7 +418,7 @@ Details::ComPtrRef<WeakRef> operator&()
 const Details::ComPtrRef<const WeakRef> operator&() const
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma referência fraca para a atual `ComPtr` .
 
@@ -434,13 +434,13 @@ Recupera um ponteiro para o tipo especificado pelo parâmetro de modelo atual.
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Ponteiro para o tipo especificado pelo nome do tipo de modelo atual.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função auxiliar remove a sobrecarga desnecessária causada pelo uso da macro STDMETHOD. Essa função faz `IUnknown` tipos `private` em vez de `virtual` .
+Essa função auxiliar remove a sobrecarga desnecessária causada pelo uso da macro STDMETHOD. Essa função faz `IUnknown` tipos **`private`** em vez de **`virtual`** .
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: Operator =
 
@@ -473,7 +473,7 @@ WRL_NOTHROW ComPtr& operator=(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *U*<br/>
 Uma classe.
@@ -481,7 +481,7 @@ Uma classe.
 *outros*<br/>
 Uma referência de ponteiro, referência ou rvalue para um tipo ou outro `ComPtr` .
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao atual `ComPtr` .
 
@@ -522,7 +522,7 @@ bool operator==(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *um*<br/>
 Uma referência a um objeto `ComPtr`.
@@ -530,11 +530,11 @@ Uma referência a um objeto `ComPtr`.
 *b*<br/>
 Uma referência a outro `ComPtr` objeto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-O primeiro operador produz `true` se o objeto *a* é igual a Object *b*; caso contrário, `false` .
+O primeiro operador produz **`true`** se o objeto *a* é igual a Object *b*; caso contrário, **`false`** .
 
-O segundo e o terceiro operadores produzem `true` se *o objeto a* é igual a `nullptr` ; caso contrário, `false` .
+O segundo e o terceiro operadores produzem **`true`** se *o objeto a* é igual a **`nullptr`** ; caso contrário, **`false`** .
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: Operator! =
 
@@ -557,7 +557,7 @@ bool operator!=(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *um*<br/>
 Uma referência a um objeto `ComPtr`.
@@ -565,11 +565,11 @@ Uma referência a um objeto `ComPtr`.
 *b*<br/>
 Uma referência a outro `ComPtr` objeto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-O primeiro operador produz `true` se Object *a* não é igual a Object *b*; caso contrário, `false` .
+O primeiro operador produz **`true`** se o objeto *a* não é igual a Object *b*; caso contrário, **`false`** .
 
-O segundo e o terceiro operadores produzem `true` se *o objeto a* não for igual a `nullptr` ; caso contrário, `false` .
+O segundo e o terceiro operadores produzem **`true`** se *o objeto a* não for igual a **`nullptr`** ; caso contrário, **`false`** .
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: Operator Microsoft:: WRL::D etalhes:: Booltype
 
@@ -579,9 +579,9 @@ Indica se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interfa
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-Se uma interface estiver associada a isso `ComPtr` , o endereço do membro de dados [BoolStruct:: member](boolstruct-structure.md#member) ; caso contrário, `nullptr` .
+Se uma interface estiver associada a isso `ComPtr` , o endereço do membro de dados [BoolStruct:: member](boolstruct-structure.md#member) ; caso contrário, **`nullptr`** .
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::p tr_
 
@@ -603,7 +603,7 @@ Libera a interface associada a essa `ComPtr` e, em seguida, recupera o endereço
 T** ReleaseAndGetAddressOf();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O endereço do membro de dados de [ptr_](#ptr) disso `ComPtr` .
 
@@ -615,7 +615,7 @@ Libera a interface associada a ela `ComPtr` e retorna a nova contagem de referê
 unsigned long Reset();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O número de referências restantes para a interface subjacente, se houver.
 
@@ -633,7 +633,7 @@ void Swap(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *r*<br/>
-Uma `ComPtr`.
+Um `ComPtr`.

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C3744
 ms.assetid: a447d050-80d1-406a-9a6e-f15c527d717c
-ms.openlocfilehash: 407ed4b30b55b63aa9bf36de9f8675a531d70534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8db81afc348434e9ea2f57c991962fb15dc6bf98
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227092"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220152"
 ---
 # <a name="compiler-error-c3744"></a>Erro do compilador C3744
 
-unhook deve ter pelo menos 3 argumentos para eventos gerenciados
+__unhook deve ter pelo menos 3 argumentos para eventos gerenciados
 
-O [unhook](../../cpp/unhook.md) função deve levar três parâmetros quando usado em um programa que é compilado para extensões gerenciadas do C++.
+A [`__unhook`](../../cpp/unhook.md) função deve levar três parâmetros quando usada em um programa que é compilado para Managed Extensions for C++.
 
-`__hook` e `__unhook` não são compatíveis com /clr programação. Use os operadores + = e -=.
+**`__hook`** e **`__unhook`** não são compatíveis com **`/clr`** programação. Em vez disso, use os operadores + = e-=.
 
-C3744 só está acessível usando a opção de compilador obsoletos **/CLR: oldSyntax**.
+C3744 só pode ser acessado usando a opção de compilador obsoleto **`/clr:oldSyntax`** .

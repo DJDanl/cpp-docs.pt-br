@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-ms.openlocfilehash: 7f2414a51321bf249e3ac049a7048f41b71cb856
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bf8d1ea745ed96d782fdc95d825e278e894066ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753400"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220178"
 ---
 # <a name="compiler-error-c3711"></a>Erro do compilador C3711
 
 ' method ': um método de origem de evento não gerenciado deve retornar um tipo void ou integral
 
-Você definiu um método na origem do evento que não retornou void ou um tipo integral. Para corrigir esse erro, faça com que o manipulador de eventos e evento tenha um tipo de retorno de `void` ou um tipo integral, como `int` ou `long`.
+Você definiu um método na origem do evento que não retornou void ou um tipo integral. Para corrigir esse erro, torne o manipulador de eventos e eventos um tipo de retorno **`void`** ou um tipo integral, como **`int`** ou **`long`** .
 
 O exemplo a seguir gera C3711:
 

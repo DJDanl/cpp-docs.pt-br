@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: 40d1d0744588c4b7911e84f5e57a6b40372b48cf
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 68817498d6f29ef5982b72a2fee4e64a4423ccde
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630129"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214809"
 ---
 # <a name="compiler-error-c2065"></a>Erro do compilador C2065
 
 > '*Identifier*': identificador não declarado
 
-O compilador não pode localizar a declaração para um identificador. Há muitas causas possíveis para esse erro. As causas mais comuns de C2065 são que o identificador não foi declarado, o identificador é digitado incorretamente, o cabeçalho em que o identificador é declarado não está incluído no arquivo ou o identificador não tem um qualificador de escopo, por `cout` exemplo, em vez de `std::cout`. Para obter mais informações sobre declarações C++no, consulte [declarações e definiçõesC++()](../../cpp/declarations-and-definitions-cpp.md).
+O compilador não pode localizar a declaração para um identificador. Há várias causas possíveis para esse erro. As causas mais comuns de C2065 são que o identificador não foi declarado, o identificador é digitado incorretamente, o cabeçalho em que o identificador é declarado não está incluído no arquivo ou o identificador não tem um qualificador de escopo, por exemplo, `cout` em vez de `std::cout` . Para obter mais informações sobre declarações em C++, consulte [declarações e definições (C++)](../../cpp/declarations-and-definitions-cpp.md).
 
 Aqui estão alguns problemas e soluções comuns com mais detalhes.
 
 ## <a name="the-identifier-is-undeclared"></a>O identificador não está declarado
 
-Se o identificador for uma variável ou um nome de função, você deverá declará-lo antes que possa ser usado. Uma declaração de função também deve incluir os tipos de seus parâmetros antes que a função possa ser usada. Se a variável for declarada usando `auto`, o compilador deverá ser capaz de inferir o tipo de seu inicializador.
+Se o identificador for uma variável ou um nome de função, você deverá declará-lo antes que possa ser usado. Uma declaração de função também deve incluir os tipos de seus parâmetros antes que a função possa ser usada. Se a variável for declarada usando **`auto`** , o compilador deverá ser capaz de inferir o tipo de seu inicializador.
 
-Se o identificador for um membro de uma classe ou struct, ou declarado em um namespace, ele deverá ser qualificado pelo nome de classe ou struct, ou pelo nome do namespace, quando usado fora do escopo de struct, classe ou namespace. Como alternativa, o namespace deve ser colocado no escopo por uma `using` diretiva `using namespace std;`, como, ou o nome do membro deve ser colocado no escopo por `using` `using std::string;`uma declaração, como. Caso contrário, o nome não qualificado será considerado um identificador não declarado no escopo atual.
+Se o identificador for um membro de uma classe ou struct, ou declarado em um namespace, ele deverá ser qualificado pelo nome de classe ou struct, ou pelo nome do namespace, quando usado fora do escopo de struct, classe ou namespace. Como alternativa, o namespace deve ser colocado no escopo por uma **`using`** diretiva, como `using namespace std;` , ou o nome do membro deve ser colocado no escopo por uma **`using`** declaração, como `using std::string;` . Caso contrário, o nome não qualificado será considerado um identificador não declarado no escopo atual.
 
-Se o identificador for a marca para um tipo definido pelo usuário, por exemplo, um `class` ou `struct`, o tipo da marca deverá ser declarado antes que possa ser usado. Por exemplo, a Declaração `struct SomeStruct { /*...*/ };` deve existir antes que você possa declarar uma `SomeStruct myStruct;` variável em seu código.
+Se o identificador for a marca para um tipo definido pelo usuário, por exemplo, um **`class`** ou **`struct`** , o tipo da marca deverá ser declarado antes que possa ser usado. Por exemplo, a Declaração `struct SomeStruct { /*...*/ };` deve existir antes que você possa declarar uma variável `SomeStruct myStruct;` em seu código.
 
-Se o identificador for um alias de tipo, o tipo deverá ser declarado usando uma `using` declaração ou `typedef` antes que possa ser usado. Por exemplo, você deve declarar `using my_flags = std::ios_base::fmtflags;` antes de poder usar `my_flags` como um alias de tipo `std::ios_base::fmtflags`para.
+Se o identificador for um alias de tipo, o tipo deverá ser declarado usando uma **`using`** declaração ou **`typedef`** antes que possa ser usado. Por exemplo, você deve declarar `using my_flags = std::ios_base::fmtflags;` antes de poder usar `my_flags` como um alias de tipo para `std::ios_base::fmtflags` .
 
 ## <a name="example-misspelled-identifier"></a>Exemplo: identificador com ortografia incorreta
 
@@ -51,7 +51,7 @@ int main() {
 
 ## <a name="example-use-an-unscoped-identifier"></a>Exemplo: usar um identificador sem escopo
 
-Esse erro pode ocorrer se o identificador não tiver o escopo correto. Se você vir C2065 quando usar `cout`, essa é a causa. Quando C++ funções e operadores de biblioteca padrão não são totalmente qualificados pelo namespace ou você não colocou o `std` namespace no escopo atual usando uma `using` diretiva, o compilador não consegue encontrá-los. Para corrigir esse problema, você deve qualificar totalmente os nomes de identificador ou especificar o namespace com a `using` diretiva.
+Esse erro pode ocorrer se o identificador não tiver o escopo correto. Se você vir C2065 quando usar `cout` , essa é a causa. Quando funções e operadores da biblioteca padrão do C++ não são totalmente qualificados pelo namespace ou você não colocou o `std` namespace no escopo atual usando uma **`using`** diretiva, o compilador não consegue encontrá-los. Para corrigir esse problema, você deve qualificar totalmente os nomes de identificador ou especificar o namespace com a **`using`** diretiva.
 
 Este exemplo não é compilado porque `cout` e `endl` estão definidos no `std` namespace:
 
@@ -69,13 +69,13 @@ int main() {
 }
 ```
 
-Os identificadores declarados nos `class`tipos `struct`, ou `enum class` também devem ser qualificados pelo nome de seu escopo delimitador quando você os usa fora desse escopo.
+Os identificadores declarados nos **`class`** **`struct`** tipos, ou **`enum class`** também devem ser qualificados pelo nome de seu escopo delimitador quando você os usa fora desse escopo.
 
 ## <a name="example-precompiled-header-isnt-first"></a>Exemplo: cabeçalho pré-compilado não é primeiro
 
 Esse erro pode ocorrer se você colocar quaisquer diretivas de pré-processador, como #include, #define ou #pragma, antes da #include de um arquivo de cabeçalho pré-compilado. Se o arquivo de origem usar um arquivo de cabeçalho pré-compilado (ou seja, se for compilado usando a opção de compilador **/Yu** ), todas as diretivas de pré-processador antes do arquivo de cabeçalho pré-compilado serão ignoradas.
 
-Este exemplo não é compilado porque `cout` e `endl` são definidos no cabeçalho \<de > iostream, que é ignorado porque está incluído antes do arquivo de cabeçalho pré-compilado. Para criar este exemplo, crie todos os três arquivos, compile stdafx. cpp e compile C2065_pch. cpp.
+Este exemplo não é compilado porque `cout` e `endl` são definidos no \<iostream> cabeçalho, que é ignorado porque está incluído antes do arquivo de cabeçalho pré-compilado. Para criar este exemplo, crie todos os três arquivos, compile stdafx. cpp e compile C2065_pch. cpp.
 
 ```cpp
 // pch.h (stdafx.h in Visual Studio 2017 and earlier)
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-Para corrigir esse problema, adicione o #include do \<iostream > no arquivo de cabeçalho pré-compilado ou mova-o depois que o arquivo de cabeçalho pré-compilado estiver incluído no arquivo de origem.
+Para corrigir esse problema, adicione o #include do \<iostream> ao arquivo de cabeçalho pré-compilado ou mova-o depois que o arquivo de cabeçalho pré-compilado estiver incluído no arquivo de origem.
 
 ## <a name="example-missing-header-file"></a>Exemplo: arquivo de cabeçalho ausente
 
@@ -119,7 +119,7 @@ int main() {
 }
 ```
 
-Outra causa possível é se você usar uma lista de inicializadores sem \<incluir o cabeçalho de > initializer_list.
+Outra causa possível é se você usar uma lista de inicializadores sem incluir o \<initializer_list> cabeçalho.
 
 ```cpp
 // C2065_initializer.cpp
@@ -134,7 +134,7 @@ int main() {
 }
 ```
 
-Você poderá ver esse erro nos arquivos de origem do aplicativo da área de `VC_EXTRALEAN`trabalho `WIN32_LEAN_AND_MEAN`do Windows `WIN32_EXTRA_LEAN`se definir, ou. Essas macros de pré-processador excluem alguns arquivos de cabeçalho de Windows. h\_e afxv W32. h para agilizar a compilação. Procure em Windows. h e afxv_w32. h uma descrição atualizada do que é excluído.
+Você poderá ver esse erro nos arquivos de origem do aplicativo da área de trabalho do Windows se definir `VC_EXTRALEAN` , `WIN32_LEAN_AND_MEAN` ou `WIN32_EXTRA_LEAN` . Essas macros de pré-processador excluem alguns arquivos de cabeçalho de Windows. h e afxv \_ W32. h para agilizar a compilação. Procure em Windows. h e afxv_w32. h uma descrição atualizada do que é excluído.
 
 ## <a name="example-missing-closing-quote"></a>Exemplo: ausência de aspas de fechamento
 
@@ -155,7 +155,7 @@ int main() {
 
 ## <a name="example-use-iterator-outside-for-loop-scope"></a>Exemplo: usar o iterador fora do escopo do loop
 
-Esse erro pode ocorrer se você declarar uma variável de iterador `for` em um loop e, em seguida, tentar usar essa variável `for` de iterador fora do escopo do loop. O compilador habilita a opção de compilador [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) por padrão. Consulte [debug Iterator support](../../standard-library/debug-iterator-support.md) para obter mais informações.
+Esse erro pode ocorrer se você declarar uma variável de iterador em um **`for`** loop e, em seguida, tentar usar essa variável de iterador fora do escopo do **`for`** loop. O compilador habilita a opção de compilador [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) por padrão. Consulte [debug Iterator support](../../standard-library/debug-iterator-support.md) para obter mais informações.
 
 ```cpp
 // C2065_iter.cpp
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Exemplo: C++Falha de dedução de tipo/CLI
+## <a name="example-ccli-type-deduction-failure"></a>Exemplo: falha de dedução de tipo C++/CLI
 
-Esse erro pode ocorrer ao chamar uma função genérica, se o argumento de tipo pretendido não puder ser deduzido dos parâmetros usados. Para obter mais informações, consulte [funções genéricasC++(/CLI)](../../extensions/generic-functions-cpp-cli.md).
+Esse erro pode ocorrer ao chamar uma função genérica, se o argumento de tipo pretendido não puder ser deduzido dos parâmetros usados. Para obter mais informações, consulte [funções genéricas (C++/CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,9 +220,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Exemplo: C++Parâmetros de atributo/CLI
+## <a name="example-ccli-attribute-parameters"></a>Exemplo: parâmetros de atributo C++/CLI
 
-Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: verificação de C++ parâmetros para atributos visuais.
+Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: verificação de parâmetros para atributos de Visual C++.
 
 ```cpp
 // C2065_attributes.cpp

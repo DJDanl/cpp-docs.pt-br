@@ -5,22 +5,22 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "70311938"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214237"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>novo (novo slot em vtable) (C++/CLI e C++/CX)
 
-A palavra-chave **new** indica que um membro virtual terá um novo slot em vtable.
+A **`new`** palavra-chave indica que um membro virtual receberá um novo slot na vtable.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
-(Não há comentários para esse recurso de linguagem que se apliquem a todos os tempos de execução.)
+(Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 Não é compatível com Windows Runtime.
 
@@ -28,9 +28,9 @@ Não é compatível com Windows Runtime.
 
 ### <a name="remarks"></a>Comentários
 
-Em uma compilação `/clr`, **new** indica que um membro virtual obterá um novo slot em vtable e que a função não substitui um método de classe base.
+Em uma `/clr` compilação, **`new`** indica que um membro virtual receberá um novo slot na vtable; que a função não substitui um método de classe base.
 
-**new** faz com que o modificador newslot seja adicionado ao IL da função.  Confira mais informações sobre newslot em:
+**`new`** faz com que o modificador NewSlot seja adicionado ao IL para a função.  Confira mais informações sobre newslot em:
 
 - <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
@@ -42,7 +42,7 @@ Opção do compilador: `/clr`
 
 ### <a name="examples"></a>Exemplos
 
-O exemplo a seguir mostra o efeito de **new**.
+O exemplo a seguir mostra o efeito de **`new`** .
 
 ```cpp
 // newslot.cpp
@@ -103,7 +103,7 @@ D::g() called
 E::f() called
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
-[Especificadores de substituição](override-specifiers-cpp-component-extensions.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Substituir especificadores](override-specifiers-cpp-component-extensions.md)

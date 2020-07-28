@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214026"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220490"
 ---
 # <a name="enableif-structure"></a>Estrutura EnableIf
 
@@ -38,15 +38,15 @@ Uma expressão booliana.
 
 ## <a name="remarks"></a>Comentários
 
-Define um membro de dados do tipo especificado pelo segundo parâmetro de modelo se o primeiro parâmetro de modelo for avaliado como **true**.
+Define um membro de dados do tipo especificado pelo segundo parâmetro de modelo se o primeiro parâmetro de modelo for avaliado como **`true`** .
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs Públicos
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|`type`|Se o parâmetro de modelo *b* for avaliado como **true**, a especialização parcial definirá que o membro de dados `type` ser do tipo `T`.|
+|`type`|Se o parâmetro de modelo *b* for avaliado como **`true`** , a especialização parcial definirá que o membro `type` de dados seja do tipo `T` .|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -60,4 +60,4 @@ Define um membro de dados do tipo especificado pelo segundo parâmetro de modelo
 
 ## <a name="see-also"></a>Confira também
 
-[Namespace Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Namespace Microsoft:: WRL::D etalhes](microsoft-wrl-details-namespace.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2108
 ms.assetid: c84f0b47-5e2c-47d2-8edb-427a40e17c36
-ms.openlocfilehash: 069f369627f42314cc14688a9e0c0a55808db507
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cbbfa865682ac7423fccd9de4212d901f408810f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214770"
 ---
 # <a name="compiler-error-c2108"></a>Erro do compilador C2108
 
@@ -21,7 +21,7 @@ O subscrito de matriz é uma expressão não-inteiro.
 
 ## <a name="example"></a>Exemplo
 
-C2108 pode ocorrer se você usar incorretamente o ponteiro de `this` de um tipo de valor para acessar o indexador padrão do tipo. Para obter mais informações, consulte [semântica do ponteiro](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
+C2108 pode ocorrer se você usar incorretamente o **`this`** ponteiro de um tipo de valor para acessar o indexador padrão do tipo. Para obter mais informações, consulte [semântica do ponteiro](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
 
 O exemplo a seguir gera C2108.
 

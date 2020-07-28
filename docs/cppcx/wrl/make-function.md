@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213805"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220464"
 ---
 # <a name="make-function"></a>Função Make
 
@@ -165,7 +165,7 @@ ComPtr<T> Make();
 ### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-Uma classe especificada pelo usuário que herda de `WRL::RuntimeClass`.
+Uma classe especificada pelo usuário que herda de `WRL::RuntimeClass` .
 
 *TArg1*<br/>
 Tipo de argumento 1 que é passado para a classe de tempo de execução especificada.
@@ -223,7 +223,7 @@ Argumento 9 que é passado para a classe de tempo de execução especificada.
 
 ## <a name="return-value"></a>Valor retornado
 
-Um objeto `ComPtr<T>` se for bem-sucedido; caso contrário, `nullptr`.
+Um `ComPtr<T>` objeto se for bem-sucedido; caso contrário, **`nullptr`** .
 
 ## <a name="remarks"></a>Comentários
 
@@ -237,4 +237,4 @@ Consulte [como: criar uma instância de componentes do WRL diretamente](how-to-i
 
 ## <a name="see-also"></a>Confira também
 
-[Namespace Microsoft::WRL](microsoft-wrl-namespace.md)
+[Namespace Microsoft:: WRL](microsoft-wrl-namespace.md)

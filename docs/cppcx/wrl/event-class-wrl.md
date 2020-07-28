@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 85b4c2d1f1a27e90a65e47aa749e079f4aa08739
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 27a90bb801d1b6869b2391227464bb215dd42538
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371529"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220477"
 ---
 # <a name="event-class-wrl"></a>Classe de evento (WRL)
 
@@ -34,13 +34,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 Nome                   | Descrição
 ---------------------- | ------------------------------------------------
-[Evento::Evento](#event) | Inicia uma nova instância da classe `Event`.
+[Evento:: evento](#event) | Inicializa uma nova instância da classe `Event`.
 
 ### <a name="public-operators"></a>Operadores públicos
 
 Nome                                 | Descrição
 ------------------------------------ | ------------------------------------------------------------------------
-[Evento::operador=](#operator-assign) | Atribui a referência `Event` especificada `Event` à instância atual.
+[Evento:: Operator =](#operator-assign) | Atribui a `Event` referência especificada à `Event` instância atual.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -50,13 +50,13 @@ Nome                                 | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** corewrappers.h
+**Cabeçalho:** corewrappers. h
 
-**Espaço de nome:** Microsoft::WRL::Wrappers
+**Namespace:** Microsoft:: WRL:: wrappers
 
-## <a name="eventevent"></a><a name="event"></a>Evento::Evento
+## <a name="eventevent"></a><a name="event"></a>Evento:: evento
 
-Inicia uma nova instância da classe `Event`.
+Inicializa uma nova instância da classe `Event`.
 
 ```cpp
 explicit Event(
@@ -67,14 +67,14 @@ WRL_NOTHROW Event(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*H*<br/>
-Manuseie um evento. Por padrão, *h* é `nullptr`inicializado para .
+*h*<br/>
+Identificador para um evento. Por padrão, *h* é inicializada para **`nullptr`** .
 
-## <a name="eventoperator"></a><a name="operator-assign"></a>Evento::operador=
+## <a name="eventoperator"></a><a name="operator-assign"></a>Evento:: Operator =
 
-Atribui a referência `Event` especificada `Event` à instância atual.
+Atribui a `Event` referência especificada à `Event` instância atual.
 
 ```cpp
 WRL_NOTHROW Event& operator=(
@@ -82,11 +82,11 @@ WRL_NOTHROW Event& operator=(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*H*<br/>
-Uma referência de valor `Event` a uma instância.
+*h*<br/>
+Uma referência de rvalue a uma `Event` instância.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para `Event` a instância atual.
+Um ponteiro para a `Event` instância atual.
