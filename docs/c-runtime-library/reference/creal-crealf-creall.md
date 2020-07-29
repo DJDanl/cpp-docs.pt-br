@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 14d7bc25e514a217a6ab1160d41895ce2473b409
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171210"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189344"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -68,7 +68,7 @@ A parte real do *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Creal** que usam valores **_Fcomplex** ou **_Lcomplex** e retornar valores **duplos** **float** ou Long. Em um programa C, **Creal** sempre usa um valor **_Dcomplex** e retorna um valor **Double** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Creal** que usam **_Fcomplex** ou valores de **_Lcomplex** , e retornos **`float`** ou **`long double`** valores. Em um programa C, **Creal** sempre usa um valor **_Dcomplex** e retorna um **`double`** valor.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -80,7 +80,7 @@ Os tipos **_Fcomplex**, **_Dcomplex**e **_Lcomplex** são equivalentes específi
 
 ## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
