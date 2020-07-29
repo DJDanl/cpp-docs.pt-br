@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2352
 ms.assetid: 0efad8cb-659f-4b3e-8f6f-9f8ec44d345c
-ms.openlocfilehash: 33fdaff31fc9e3fcde1a7101c7858704773ae74c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 95b3a3bae531170bf12c0e34613ad41f742304bb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759978"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218241"
 ---
 # <a name="compiler-error-c2352"></a>Erro do compilador C2352
 
 ' classe:: function ': chamada inválida de função membro não static
 
-Uma função membro `static` chamada de uma função membro não estática. Ou, uma função de membro não estática foi chamada de fora da classe como uma função estática.
+Uma **`static`** função de membro chamada de função de membro não estática. Ou, uma função de membro não estática foi chamada de fora da classe como uma função estática.
 
 O exemplo a seguir gera C2352 e mostra como corrigi-lo:
 

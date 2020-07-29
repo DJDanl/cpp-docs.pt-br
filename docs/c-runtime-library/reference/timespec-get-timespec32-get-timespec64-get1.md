@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911813"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233919"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -67,7 +67,7 @@ int _timespec64_get(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *time_spec*<br/>
 Ponteiro para um struct definido com a hora em segundos e nanossegundos desde o início da época.
@@ -85,7 +85,7 @@ As funções **timespec_get** definem a hora atual na estrutura apontada pelo ar
 
 **Específico da Microsoft**
 
-Essas funções dão suporte apenas **TIME_UTC** como o valor *base* . Isso define o valor de *time_spec* como o número de segundos e nanossegundos desde o início da época, meia-noite, 1º de janeiro de 1970, tempo universal coordenado (UTC). Em um **struct** **_timespec32**de struct, **tv_sec** é um valor **__time32_t** . Em um **struct** **_timespec64**de struct, **tv_sec** é um valor **__time64_t** . Em um **struct** **timespec**, **tv_sec** é um tipo de **time_t** , que é de 32 bits ou 64 bits de comprimento, dependendo se a macro de pré-processador _USE_32BIT_TIME_T está definida. A função **timespec_get** é uma função embutida que chama **_timespec32_get** se _USE_32BIT_TIME_T estiver definido; caso contrário, ele chama **_timespec64_get**.
+Essas funções dão suporte apenas **TIME_UTC** como o valor *base* . Isso define o valor de *time_spec* como o número de segundos e nanossegundos desde o início da época, meia-noite, 1º de janeiro de 1970, tempo universal coordenado (UTC). Em um **`struct`** **_timespec32**, **tv_sec** é um valor **__time32_t** . Em um **`struct`** **_timespec64**, **tv_sec** é um valor **__time64_t** . Em uma **`struct`** **especificação**de tempo, **tv_sec** é um tipo de **time_t** , que é de 32 bits ou 64 bits de comprimento, dependendo se a macro de pré-processador _USE_32BIT_TIME_T está definida. A função **timespec_get** é uma função embutida que chama **_timespec32_get** se _USE_32BIT_TIME_T estiver definido; caso contrário, ele chama **_timespec64_get**.
 
 **Fim da seção específica da Microsoft**
 
@@ -95,11 +95,11 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h>, C++: \<ctime> ou \<time.h>|
+|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h> , C++: \<ctime> ou\<time.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

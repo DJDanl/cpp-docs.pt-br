@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 0e3d5ceffa5adc9e9f6ba96cccb46a3fbcfca69a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919561"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234062"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -61,10 +61,10 @@ size_t mbrtoc32(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *destino*\
-Ponteiro para o **char16_t** ou **char32_t** equivalente do caractere multibyte UTF-8 a ser convertido. Se for NULL, a função não armazenará um valor.
+Ponteiro para o **`char16_t`** ou **`char32_t`** equivalente do caractere multibyte UTF-8 a ser convertido. Se for NULL, a função não armazenará um valor.
 
 *original*\
 Ponteiro para a cadeia de caracteres multibyte UTF-8 para converter.
@@ -91,7 +91,7 @@ Em caso de sucesso, retorna o valor da primeira dessas condições que se aplica
 
 A função **mbrtoc16** lê até *max_bytes* bytes da *origem* para localizar o primeiro caractere multibyte completo, válido UTF-8 e, em seguida, armazena o caractere UTF-16 equivalente no *destino*. Se o caractere exigir mais de um caractere de saída UTF-16, como um par alternativo, o valor de *estado* será definido para armazenar o próximo caractere UTF-16 no *destino* na próxima chamada para **mbrtoc16**. A função **mbrtoc32** é idêntica, mas a saída é armazenada como um caractere UTF-32.
 
-Se *a origem* for nula, essas funções retornarão o equivalente de uma chamada feita usando argumentos de **NULL** para `""` o *destino*, (uma cadeia de caracteres vazia, terminada em nulo) para a *origem*e 1 para *max_bytes*. Os valores passados de *Destination* e *max_bytes* são ignorados.
+Se a *origem* for nula, essas funções retornarão o equivalente de uma chamada feita usando argumentos de **NULL** para o *destino*, `""` (uma cadeia de caracteres vazia, terminada em nulo) para a *origem*e 1 para *max_bytes*. Os valores passados de *Destination* e *max_bytes* são ignorados.
 
 Se a *origem* não for nula, a função começará no início da cadeia de caracteres e inspecionará até *max_bytes* bytes para determinar o número de bytes necessários para concluir o próximo caractere multibyte UTF-8, incluindo quaisquer sequências de deslocamento. Se os bytes examinados contiverem um caractere de multibyte UTF-8 válido e completo, a função converterá o caractere no caractere ou caracteres equivalentes de 16 bits ou 32 bits largos. Se o *destino* não for nulo, a função armazenará o primeiro caractere de resultado (e, possivelmente, somente) no destino. Se forem necessários caracteres de saída adicionais, um valor será definido no *estado*, para que as chamadas subsequentes para a função gerem os caracteres adicionais e retornem o valor-3. Se nenhum caractere de saída for necessário, *State* será definido como o estado de deslocamento inicial.
 
@@ -107,7 +107,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de dados](../data-conversion.md)\
 [Localidade](../locale.md)\

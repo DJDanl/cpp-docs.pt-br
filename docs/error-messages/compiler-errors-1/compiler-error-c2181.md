@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2181
 ms.assetid: d52b2fe4-566a-40a9-b8e2-8dce1f287668
-ms.openlocfilehash: 64aea11924d9a1624090c2dd6f640ee2f9a037a0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e1ad2451d1530707920e2d80ab68eece516f2562
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87209949"
 ---
 # <a name="compiler-error-c2181"></a>Erro do compilador C2181
 
 senão inválido sem correspondência se
 
-Cada `else` deve ter um `if`correspondente.
+Cada **`else`** um deve ter uma correspondência **`if`** .
 
 O exemplo a seguir gera C2181:
 

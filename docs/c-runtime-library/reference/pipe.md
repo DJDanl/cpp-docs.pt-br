@@ -30,12 +30,12 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: d3805de6a591169f94926c09a4542ec01f221d1d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 692a891549e0c84d6297b108918d9d7c58495ef7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916835"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234036"
 ---
 # <a name="_pipe"></a>_pipe
 
@@ -54,10 +54,10 @@ int _pipe(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pfds*<br/>
-Ponteiro para uma matriz de dois **int** para conter descritores de arquivo de leitura e gravação.
+Ponteiro para uma matriz de dois **`int`** para conter descritores de arquivo de leitura e gravação.
 
 *psize*<br/>
 Quantidade de memória a ser reservada.
@@ -81,7 +81,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 A função **_pipe** cria um *pipe*, que é um canal de e/s artificial que um programa usa para passar informações para outros programas. Um pipe lembra um arquivo, pois ele tem um ponteiro de arquivo, um descritor de arquivo ou ambos e pode ser lido ou gravado usando as funções de entrada e saída da Biblioteca Padrão. No entanto, um pipe não representa um arquivo ou dispositivo específico. Em vez disso, ele representa o armazenamento temporário na memória que é independente da memória do próprio programa e é controlada totalmente pelo sistema operacional.
 
-**_pipe** se assemelha **_open** , mas abre o pipe para leitura e gravação e retorna dois descritores de arquivo em vez de um. O programa pode usar ambos os lados do pipe ou fechar um que não é necessário. Por exemplo, o processador de comando no Windows cria um pipe quando executa um comando como **Program1** | **PROGRAM2**.
+**_pipe** se assemelha **_open** , mas abre o pipe para leitura e gravação e retorna dois descritores de arquivo em vez de um. O programa pode usar ambos os lados do pipe ou fechar um que não é necessário. Por exemplo, o processador de comando no Windows cria um pipe quando executa um comando como **Program1**  |  **PROGRAM2**.
 
 O descritor de saída padrão de **Program1** é anexado ao descritor de gravação do pipe. O descritor de entrada padrão de **PROGRAM2** é anexado ao descritor de leitura do pipe. Isso elimina a necessidade de criar arquivos temporários para passar informações para outros programas.
 
@@ -91,7 +91,7 @@ O argumento *psize* especifica a quantidade de memória, em bytes, a ser reserva
 
 Em programas multithread, nenhum bloqueio é executado. Os descritores de arquivo retornados são abertos recentemente e não devem ser referenciados por nenhum thread até que a chamada de **_pipe** seja concluída.
 
-Para usar a função **_pipe** para se comunicar entre um processo pai e um processo filho, cada processo deve ter apenas um descritor aberto no pipe. Os descritores de deverão ser opostos: se o pai tiver um descritor de leitura aberto, o filho deve ter um descritor de gravação aberto. A maneira mais fácil de fazer isso é em que a bit**|** e () o sinalizador de **_O_NOINHERIT** com *TextMode*. Em seguida, use **_dup** ou **_dup2** para criar uma cópia herdável do descritor de pipe que você deseja passar para o filho. Feche o descritor original e gere o processo filho. No retorno da chamada de geração, feche o descritor duplicado no processo pai. Para obter mais informações, consulte o exemplo 2 mais adiante neste artigo.
+Para usar a função **_pipe** para se comunicar entre um processo pai e um processo filho, cada processo deve ter apenas um descritor aberto no pipe. Os descritores de deverão ser opostos: se o pai tiver um descritor de leitura aberto, o filho deve ter um descritor de gravação aberto. A maneira mais fácil de fazer isso é em que a bit e ( **|** ) o sinalizador de **_O_NOINHERIT** com *TextMode*. Em seguida, use **_dup** ou **_dup2** para criar uma cópia herdável do descritor de pipe que você deseja passar para o filho. Feche o descritor original e gere o processo filho. No retorno da chamada de geração, feche o descritor duplicado no processo pai. Para obter mais informações, consulte o exemplo 2 mais adiante neste artigo.
 
 No sistema operacional Windows, um pipe é destruído quando todos os seus descritores foram fechados. (Se todos os descritores de leitura no pipe tiverem sido fechados, a gravação no pipe causará um erro.) Todas as operações de leitura e gravação no pipe esperam até que haja dados suficientes ou espaço em buffer suficiente para concluir a solicitação de e/s.
 
@@ -101,7 +101,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
-|**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
+|**_pipe**|\<io.h>|\<fcntl.h>, 1 \<errno.h> 2|
 
 1 para definições de **_O_BINARY** e **_O_TEXT** .
 
@@ -347,7 +347,7 @@ This is speaker beep number 9...
 This is speaker beep number 10...
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

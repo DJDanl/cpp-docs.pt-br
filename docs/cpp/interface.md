@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ca13ed91601fa3a64071304c14d483e84c314a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178185"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233711"
 ---
 # <a name="__interface"></a>__interface
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Uma interface C++ da Microsoft pode ser definida da seguinte maneira:
+Uma interface do Microsoft C++ pode ser definida da seguinte maneira:
 
 - Ela pode herdar de zero ou mais interfaces base.
 
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>Comentários
 
-Uma C++ [classe](../cpp/class-cpp.md) ou [struct](../cpp/struct-cpp.md) pode ser implementada com essas regras, mas **__interface** as impõe.
+Uma [classe](../cpp/class-cpp.md) ou [struct](../cpp/struct-cpp.md) do C++ poderia ser implementada com essas regras, mas as **`__interface`** impõe.
 
 Por exemplo, o seguinte é uma definição de interface de exemplo:
 
@@ -58,7 +58,7 @@ Observe que você não precisa indicar explicitamente que as funções `CommitX`
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface** implica o modificador de **__declspec** [novtable](../cpp/novtable.md) .
+**`__interface`** implica o modificador [novtable](../cpp/novtable.md) **`__declspec`** .
 
 ## <a name="example"></a>Exemplo
 
@@ -142,7 +142,7 @@ p->int_data = 100
 bstr_data = Testing
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

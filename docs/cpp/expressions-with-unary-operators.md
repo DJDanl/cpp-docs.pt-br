@@ -6,12 +6,12 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-ms.openlocfilehash: 26aad64e5b9c7a496c2e6bb131b82740c06abe07
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 032ebd99041de9308d16710b2a27e0db3cddd4df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188968"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233750"
 ---
 # <a name="expressions-with-unary-operators"></a>Expressões com operadores unários
 
@@ -21,7 +21,7 @@ Os operadores unários atuam somente em um operando em uma expressão. Os operad
 
 - [Operador de endereço (&)](../cpp/address-of-operator-amp.md)
 
-- [Operador de adição unário (+)](../cpp/unary-plus-and-negation-operators-plus-and.md)
+- [Operador unário de adição (+)](../cpp/unary-plus-and-negation-operators-plus-and.md)
 
 - [Operador de negação unário (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)
 
@@ -29,21 +29,21 @@ Os operadores unários atuam somente em um operando em uma expressão. Os operad
 
 - [Operador de complemento de um (~)](../cpp/one-s-complement-operator-tilde.md)
 
-- [Operador de incremento de prefixo (+ +)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
+- [Operador de incremento de prefixo (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
 - [Operador de diminuição de prefixo (--)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
 - [Operador cast ()](../cpp/cast-operator-parens.md)
 
-- [Operador sizeof](../cpp/sizeof-operator.md)
+- [`sizeof`operador](../cpp/sizeof-operator.md)
 
-- [operador de __uuidof](../cpp/uuidof-operator.md)
+- [`__uuidof`operador](../cpp/uuidof-operator.md)
 
-- [operador de __alignof](../cpp/alignof-operator.md)
+- [`alignof`operador](../cpp/alignof-operator.md)
 
-- [novo operador](../cpp/new-operator-cpp.md)
+- [`new`operador](../cpp/new-operator-cpp.md)
 
-- [Excluir operador](../cpp/delete-operator-cpp.md)
+- [`delete`operador](../cpp/delete-operator-cpp.md)
 
 Esses operadores binários possuem associatividade da direita para a esquerda. As expressões unárias geralmente envolvem a sintaxe que precede uma expressão de sufixo ou primária.
 
@@ -51,17 +51,17 @@ As formas possíveis de expressões unárias são estas:
 
 - *postfix-expression*
 
-- `++` *expressão unário*
+- `++` *expressão-unária*
 
-- `--` *expressão unário*
+- `--` *expressão-unária*
 
 - *expressão de conversão* de *operador unário*
 
-- expressão **sizeof** *unário*
+- **`sizeof`***expressão unário*
 
-- *nome do tipo de* `sizeof(` `)`
+- `sizeof(`*nome do tipo*`)`
 
-- *expressão* de `decltype(` `)`
+- `decltype(`*expressão* de`)`
 
 - *expressão de alocação*
 
@@ -69,13 +69,13 @@ As formas possíveis de expressões unárias são estas:
 
 Qualquer *expressão de sufixo* é considerada uma *expressão unário*e, como qualquer expressão primária é considerada uma *expressão de sufixo*, todas as expressões primárias também são consideradas uma *expressão unário* . Para obter mais informações, consulte [expressões de sufixo](../cpp/postfix-expressions.md) e [expressões primárias](../cpp/primary-expressions.md).
 
-Um *operador unário* consiste em um ou mais dos seguintes símbolos: `* & + - ! ~`
+Um *operador unário* consiste em um ou mais dos seguintes símbolos:`* & + - ! ~`
 
 A *expressão CAST* é uma expressão unário com uma conversão opcional para alterar o tipo. Para obter mais informações, consulte [operador de conversão: ()](../cpp/cast-operator-parens.md).
 
 Uma *expressão* pode ser qualquer expressão. Para obter mais informações, consulte [expressões](../cpp/expressions-cpp.md).
 
-A *expressão de alocação refere-* se ao operador **New** . A *expressão de desalocação* se refere ao operador **delete** . Para obter mais informações, consulte os links anteriores deste tópico.
+A *expressão de alocação* refere-se ao **`new`** operador. A *expressão de desalocação* se refere ao **`delete`** operador. Para obter mais informações, consulte os links anteriores deste tópico.
 
 ## <a name="see-also"></a>Confira também
 

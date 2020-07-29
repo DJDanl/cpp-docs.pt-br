@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: d76b08a31cacdc4e2e367a236ce98ec5204ac3e7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 379803260492449da4985e62d36750f121b4e7fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163057"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233256"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>Aviso do compilador (nível 1) C4312
 
 'operation': conversão de 'type1' em 'type2' de tamanho maior
 
-Esse aviso detecta uma tentativa de atribuir um valor de 32 bits a um tipo de ponteiro de 64 bits, por exemplo, convertendo um `int` de 32 bits ou `long` a um ponteiro de 64 bits.
+Esse aviso detecta uma tentativa de atribuir um valor de 32 bits a um tipo de ponteiro de 64 bits, por exemplo, convertendo um de 32 bits **`int`** ou **`long`** um ponteiro de 64 bits.
 
 Isso pode ser uma conversão não segura, mesmo para valores de ponteiro que caibam em 32 bits quando a extensão de assinatura ocorrer. Se um inteiro de 32 bits negativo for atribuído a um tipo de ponteiro de 64 bits, a extensão de sinal fará com que o valor do ponteiro referencie um endereço de memória diferente do valor do inteiro.
 

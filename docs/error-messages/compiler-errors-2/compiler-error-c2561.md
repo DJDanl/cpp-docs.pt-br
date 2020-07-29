@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
-ms.openlocfilehash: b4a14be9cd32c752e2ab889417494e80b935e31b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9c42a2da662a286f3e6887f6a1dba381687136bf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755558"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206959"
 ---
 # <a name="compiler-error-c2561"></a>Erro do compilador C2561
 
 ' identifier ': a função deve retornar um valor
 
-A função foi declarada como retornando um valor, mas a definição da função não contém uma instrução `return`.
+A função foi declarada como retornando um valor, mas a definição da função não contém uma **`return`** instrução.
 
 Esse erro pode ser causado por um protótipo de função incorreto:
 
@@ -25,7 +25,7 @@ Esse erro pode ser causado por um protótipo de função incorreto:
 
 1. Verifique se todas as ramificações possíveis da função retornam um valor do tipo declarado no protótipo.
 
-1. C++as funções que contêm rotinas de assembly embutidas que armazenam o valor de retorno no registro de `AX` podem precisar de uma instrução return. Copie o valor em `AX` para uma variável temporária e retorne essa variável da função.
+1. As funções do C++ que contêm rotinas de assembly embutidas que armazenam o valor de retorno no `AX` registro podem precisar de uma instrução return. Copie o valor em `AX` para uma variável temporária e retorne essa variável da função.
 
 O exemplo a seguir gera C2561:
 

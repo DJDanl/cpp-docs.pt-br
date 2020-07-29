@@ -7,16 +7,16 @@ helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: c2af00ac32b3013820a3109783c4bf7eb42ec445
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5a90f481c33431d92f0f28405e6226863d2b3913
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623725"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205009"
 ---
 # <a name="alignment_of-class"></a>Classe alignment_of
 
-Obtém o alinhamento do tipo especificado. Este struct é implementado em termos de [alignof](../cpp/alignment-cpp-declarations.md). Use **alignof** diretamente quando precisar consultar apenas um valor de alinhamento. Use alignment_of quando precisar de uma constante integral, por exemplo, ao fazer expedição de marcação.
+Obtém o alinhamento do tipo especificado. Essa estrutura é implementada em termos de [`alignof`](../cpp/alignment-cpp-declarations.md) . Use **`alignof`** diretamente quando precisar consultar apenas um valor de alinhamento. Use `alignment_of` quando precisar de uma constante integral, por exemplo, ao fazer a expedição de marca.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ template <class Ty>
 struct alignment_of;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -40,7 +40,7 @@ A consulta de tipo contém o valor do alinhamento do tipo *Ty*.
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[<type_traits>](type-traits.md)\
-[Classe aligned_storage](aligned-storage-class.md)
+[`<type_traits>`](type-traits.md)\
+[`aligned_storage`Classes](aligned-storage-class.md)

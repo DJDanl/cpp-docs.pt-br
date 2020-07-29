@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212286"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233451"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 
-Todos os acessadores nos modelos de OLE DB derivam dessa classe. `CAccessorBase` permite que um conjunto de linhas gerencie vários acessadores. Ele também fornece Associação para parâmetros e colunas de saída.
+Todos os acessadores nos modelos de OLE DB derivam dessa classe. `CAccessorBase`permite que um conjunto de linhas gerencie vários acessadores. Ele também fornece Associação para parâmetros e colunas de saída.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -122,7 +122,7 @@ no O número de deslocamento zero para o acessador.
 
 ### <a name="return-value"></a>Valor retornado
 
-Retornará **true** se o acessador for um autoaccesser. Caso contrário, retornará **false**.
+Retorna **`true`** se o acessador é um autoacesso. Caso contrário, retornará **`false`** .
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase::ReleaseAccessors
 
@@ -137,7 +137,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>parâmetros
 
 *pUnk*<br/>
-no Um ponteiro para uma interface `IUnknown` para o objeto COM para o qual os acessadores foram criados.
+no Um ponteiro para uma `IUnknown` interface do objeto com para o qual os acessadores foram criados.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -150,5 +150,5 @@ Chamado de [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
 ## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessorBase](../../data/oledb/caccessorbase-class.md)

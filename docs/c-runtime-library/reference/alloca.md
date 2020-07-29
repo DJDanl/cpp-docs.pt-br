@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 159f474927b4aaf364ad6972450edbe513a3c0b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821428"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218735"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -45,14 +45,14 @@ void *_alloca(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *size*<br/>
 Bytes a serem alocados da pilha.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-A rotina **_alloca** retorna um ponteiro **void** para o espaço alocado, que tem a garantia de estar alinhada adequadamente para o armazenamento de qualquer tipo de objeto. Se o *tamanho* for 0, **_alloca** aloca um item de comprimento zero e retorna um ponteiro válido para esse item.
+A rotina **_alloca** retorna um **`void`** ponteiro para o espaço alocado, que tem a garantia de estar alinhada adequadamente para o armazenamento de qualquer tipo de objeto. Se o *tamanho* for 0, **_alloca** aloca um item de comprimento zero e retorna um ponteiro válido para esse item.
 
 Uma exceção de excedente de pilha será gerada se não for possível alocar o espaço. A exceção de excedente de pilha não é uma exceção de C++; ela é uma exceção estruturada. Em vez de usar o tratamento de exceções de C++, você deve usar a [SEH](../../cpp/structured-exception-handling-c-cpp.md) (Manipulação de Exceção Estruturada).
 
@@ -62,9 +62,9 @@ Uma exceção de excedente de pilha será gerada se não for possível alocar o 
 
 Há restrições para chamar explicitamente **_alloca** em um eh (manipulador de exceção). As rotinas do EH que são executadas em processadores da classe x86 operam em seu próprio quadro de memória: elas realizam suas tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função delimitadora. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar explicitamente **_alloca** em qualquer um dos cenários a seguir resulta em falha do programa durante o retorno para a rotina de chamada eh:
 
-- Expressão de filtro de exceção SEH do Windows NT: `__except ( _alloca() )`
+- Expressão de filtro de exceção SEH do Windows NT:`__except ( _alloca() )`
 
-- Manipulador de exceção final de SEH do Windows NT: `__finally { _alloca() }`
+- Manipulador de exceção final de SEH do Windows NT:`__finally { _alloca() }`
 
 - Expressão da cláusula catch do EH de C++
 
@@ -73,9 +73,9 @@ No entanto, **_alloca** pode ser chamado diretamente de dentro de uma rotina de 
 > [!IMPORTANT]
 > No Windows XP, se **_alloca** for chamado dentro de um bloco try/catch, você deverá chamar [_resetstkoflw](resetstkoflw.md) no bloco catch.
 
-Além das restrições acima, ao usar a opção[/CLR (compilação em tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) , **_alloca** não pode ser usada em blocos de **__except** . Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).
+Além das restrições acima, ao usar a opção[/CLR (compilação em tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) , **_alloca** não pode ser usada em **`__except`** blocos. Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -139,9 +139,9 @@ int main()
 Allocated 1000 bytes of stack at 0x0012FB50
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[Alocação de Memória](../../c-runtime-library/memory-allocation.md)<br/>
+[Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

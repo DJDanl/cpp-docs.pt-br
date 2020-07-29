@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: acf885c923db3fdf91119b29a78d64824384166b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913506"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234270"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -77,7 +77,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *start_address*<br/>
 Endereço inicial de uma rotina que inicia a execução de um novo thread. Por **_beginthread**, a Convenção de chamada é [__cdecl](../../cpp/cdecl.md) (para código nativo) ou [__clrcall](../../cpp/clrcall.md) (para código gerenciado); por **_beginthreadex**, ele é [__stdcall](../../cpp/stdcall.md) (para código nativo) ou [__clrcall](../../cpp/clrcall.md) (para código gerenciado).
@@ -109,13 +109,13 @@ Para obter mais informações sobre **uintptr_t**, consulte [tipos padrão](../.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_beginthread** cria um thread que inicia a execução de uma rotina em *start_address*. A rotina em *start_address* deve usar a Convenção de chamada **__cdecl** (para código nativo) ou **__clrcall** (para código gerenciado) e não deve ter nenhum valor de retorno. Quando o thread retorna dessa rotina, ele é terminado automaticamente. Para obter mais informações sobre threads, consulte [Multithreading Support for Older Code (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md) [Suporte de multithreading para código mais antigo (Visual C++)].
+A função **_beginthread** cria um thread que inicia a execução de uma rotina em *start_address*. A rotina em *start_address* deve usar a **`__cdecl`** Convenção de chamada (para código nativo) ou **__clrcall** (para código gerenciado) e não deve ter nenhum valor de retorno. Quando o thread retorna dessa rotina, ele é terminado automaticamente. Para obter mais informações sobre threads, consulte [Multithreading Support for Older Code (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md) [Suporte de multithreading para código mais antigo (Visual C++)].
 
 **_beginthreadex** assemelha-se à API [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) do Win32 mais próxima do que **_beginthread** . **_beginthreadex** difere de **_beginthread** das seguintes maneiras:
 
 - **_beginthreadex** tem três parâmetros adicionais: *initflag*, *Security*e **threadaddr**. O novo thread pode ser criado em um estado suspenso, com uma segurança especificada, e pode ser acessado usando *thrdaddr*, que é o identificador de thread.
 
-- A rotina em *start_address* que é passada para **_beginthreadex** deve usar a Convenção de chamada **__stdcall** (para código nativo) ou **__clrcall** (para código gerenciado) e deve retornar um código de saída de thread.
+- A rotina em *start_address* que é passada para **_beginthreadex** deve usar a **`__stdcall`** Convenção de chamada (para código nativo) ou **__clrcall** (para código gerenciado) e deve retornar um código de saída de thread.
 
 - **_beginthreadex** retorna 0 em caso de falha, em vez de-1L.
 
@@ -327,10 +327,10 @@ In second thread...
 Counter should be 1000000; it is-> 1000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)
+- [Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)
 - [_endthread, _endthreadex](endthread-endthreadex.md)
-- [anular](abort.md)
+- [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
 - [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

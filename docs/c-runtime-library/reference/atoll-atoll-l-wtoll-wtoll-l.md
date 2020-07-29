@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913515"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218709"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Converte uma cadeia de caracteres em um **longo** inteiro **longo** .
+Converte uma cadeia de caracteres em um **`long long`** número inteiro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -71,9 +71,9 @@ long long _wtoll_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Str*<br/>
+*str*<br/>
 Cadeia de caracteres a ser convertida.
 
 *locale*<br/>
@@ -81,7 +81,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada função retorna o **longo** valor **longo** que é produzido interpretando os caracteres de entrada como um número. O valor de retorno para **Palmira** será 0 se a entrada não puder ser convertida em um valor desse tipo.
+Cada função retorna o **`long long`** valor produzido pela interpretação dos caracteres de entrada como um número. O valor de retorno para **Palmira** será 0 se a entrada não puder ser convertida em um valor desse tipo.
 
 Para estouro com grandes valores inteiros positivos, **Palmira** retorna **LLONG_MAX**e para estouro com grandes valores inteiros negativos, ele retorna **LLONG_MIN**.
 
@@ -89,7 +89,7 @@ Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções convertem uma cadeia de caracteres em um **longo** valor inteiro **longo** .
+Essas funções convertem uma cadeia de caracteres em um **`long long`** valor inteiro.
 
 A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou '\0' L) que encerra a cadeia de caracteres.
 
@@ -170,11 +170,11 @@ Function: atoll("3336402735171707160320") = 9223372036854775807
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

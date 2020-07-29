@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: cf0c6e9e2c33887082f945f3f2200d808ac13cd2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b945853a3d32f91c821d6fa174371df39bf183b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80174252"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218150"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>Aviso do compilador (nível 2) C4146
 
@@ -21,15 +21,15 @@ Os tipos não assinados podem conter apenas valores não negativos, portanto, o 
 
 Praticamente, isso ocorre quando o programador está tentando expressar o valor inteiro mínimo, que é-2147483648. Esse valor não pode ser gravado como-2147483648 porque a expressão é processada em dois estágios:
 
-1. O número 2147483648 é avaliado. Como é maior que o valor inteiro máximo de 2147483647, o tipo de 2147483648 não é [int](../../c-language/integer-types.md), mas `unsigned int`.
+1. O número 2147483648 é avaliado. Como é maior que o valor inteiro máximo de 2147483647, o tipo de 2147483648 não é [int](../../c-language/integer-types.md), mas **`unsigned int`** .
 
 1. A subtração unário é aplicada ao valor, com um resultado não assinado, que também é 2147483648.
 
-O tipo não assinado do resultado pode causar um comportamento inesperado. Se o resultado for usado em uma comparação, uma comparação não assinada poderá ser usada, por exemplo, quando o outro operando for um `int`. Isso explica por que o programa de exemplo abaixo imprime apenas uma linha.
+O tipo não assinado do resultado pode causar um comportamento inesperado. Se o resultado for usado em uma comparação, uma comparação não assinada poderá ser usada, por exemplo, quando o outro operando for um **`int`** . Isso explica por que o programa de exemplo abaixo imprime apenas uma linha.
 
-A segunda linha esperada, `1 is greater than the most negative int`, não é impressa porque `((unsigned int)1) > 2147483648` é false.
+A segunda linha esperada, `1 is greater than the most negative int` , não é impressa porque `((unsigned int)1) > 2147483648` é false.
 
-Você pode evitar C4146 usando INT_MIN de Limits. h, que tem o tipo **assinado int**.
+Você pode evitar C4146 usando INT_MIN de Limits. h, que tem o tipo **`signed int`** .
 
 ## <a name="example"></a>Exemplo
 

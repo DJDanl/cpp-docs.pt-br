@@ -7,12 +7,12 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 168b1fc20d165c44c3230a8d1094c99b689ddbb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187317"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233542"
 ---
 # <a name="while-statement-c"></a>Instrução while (C++)
 
@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>Comentários
 
-O teste de *expressão* ocorre antes de cada execução do loop; Portanto, um loop **while** é executado zero ou mais vezes. a *expressão* deve ser de um tipo integral, um tipo de ponteiro ou um tipo de classe com uma conversão não ambígua para um tipo integral ou de ponteiro.
+O teste de *expressão* ocorre antes de cada execução do loop; Portanto, um **`while`** loop é executado zero ou mais vezes. a *expressão* deve ser de um tipo integral, um tipo de ponteiro ou um tipo de classe com uma conversão não ambígua para um tipo integral ou de ponteiro.
 
-Um loop **while** também pode terminar quando um [Break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)ou [Return](../cpp/return-statement-cpp.md) dentro do corpo da instrução é executado. Use [continuar](../cpp/continue-statement-cpp.md) para encerrar a iteração atual sem sair do loop **while** . **continuar** passa o controle para a próxima iteração do loop **while** .
+Um **`while`** loop também pode terminar quando um [Break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)ou [Return](../cpp/return-statement-cpp.md) dentro do corpo da instrução for executado. Use [continuar](../cpp/continue-statement-cpp.md) para encerrar a iteração atual sem sair do **`while`** loop. **`continue`** passa o controle para a próxima iteração do **`while`** loop.
 
-O código a seguir usa um loop **while** para cortar sublinhados à direita de uma cadeia de caracteres:
+O código a seguir usa um **`while`** loop para cortar sublinhados à direita de uma cadeia de caracteres:
 
 ```cpp
 // while_statement.cpp
@@ -68,4 +68,4 @@ A condição de término é avaliada na parte superior do loop. Se não houver u
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Instrução do-while (C++)](../cpp/do-while-statement-cpp.md)<br/>
 [Instrução for (C++)](../cpp/for-statement-cpp.md)<br/>
-[Instrução for baseada intervalo (C++)](../cpp/range-based-for-statement-cpp.md)
+[Instrução for com base em intervalo (C++)](../cpp/range-based-for-statement-cpp.md)

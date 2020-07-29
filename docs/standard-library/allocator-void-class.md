@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: af29c70dca56b1e68eef3614357269c587a77ec9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b6ca3f8b994756a21d85860fd8aff429ee38e58b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623676"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204924"
 ---
 # <a name="allocatorltvoidgt-class"></a>Classe allocator&lt;void&gt;
 
-Uma especialização do alocador de modelo de classe para digitar **void**, definindo os tipos que fazem sentido neste contexto.
+Uma especialização do alocador de modelo de classe a ser digitada **`void`** , definindo os tipos que fazem sentido neste contexto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Comentários
 
-A classe especializada explicitamente o [alocador](allocator-class.md) de modelo de classe para o tipo **void**. Seus construtores e operador de atribuição se comportam da mesma forma que para o modelo de classe, mas definem apenas os seguintes tipos:
+A classe especializada explicitamente o [alocador](allocator-class.md) de modelo de classe para o tipo **`void`** . Seus construtores e operador de atribuição se comportam da mesma forma que para o modelo de classe, mas definem apenas os seguintes tipos:
 
 - [const_pointer](allocator-class.md#const_pointer).
 

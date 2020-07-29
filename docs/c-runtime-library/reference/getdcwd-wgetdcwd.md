@@ -40,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919212"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218657"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -66,7 +66,7 @@ wchar_t *_wgetdcwd(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Dirigir*<br/>
 Um inteiro não negativo que especifica a unidade (0 = unidade padrão, 1 = A, 2 = B e assim por diante).
@@ -79,7 +79,7 @@ Local de armazenamento para o caminho ou **NULL**.
 Se **NULL** for especificado, essa função alocará um buffer de pelo menos o tamanho de *maxlen* usando **malloc**, e o valor de retorno de **_getdcwd** será um ponteiro para o buffer alocado. O buffer pode ser liberado chamando **gratuitamente** e passando o ponteiro.
 
 *maxlen*<br/>
-Um inteiro positivo diferente de zero que especifica o comprimento máximo do caminho, em caracteres: **Char** para **_getdcwd** e **wchar_t** para **_wgetdcwd**.
+Um inteiro positivo diferente de zero que especifica o comprimento máximo do caminho, em caracteres: **`char`** para **_getdcwd** e **`wchar_t`** para **_wgetdcwd**.
 
 Se *maxlen* for menor ou igual a zero, o manipulador de parâmetro inválido será invocado. Para saber mais, confira [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
 
@@ -122,7 +122,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo em [_getdrive](getdrive.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de diretório](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

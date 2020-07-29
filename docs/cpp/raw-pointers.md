@@ -5,62 +5,62 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
 no-loc:
-- void
-- nullptr
-- const
-- char
-- new
-- delete
-ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+- ':::no-loc(void):::'
+- ':::no-loc(nullptr):::'
+- ':::no-loc(const):::'
+- ':::no-loc(char):::'
+- ':::no-loc(new):::'
+- ':::no-loc(delete):::'
+ms.openlocfilehash: 53679559888191fe7f2aad7cb5a70d607974ae96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032090"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233646"
 ---
 # <a name="raw-pointers-c"></a>Ponteiros brutos (C++)
 
-Um *ponteiro* é um tipo de variável. Ele armazena o endereço de um objeto na memória, e é usado para acessar esse objeto. Um *ponteiro bruto* é um ponteiro cuja vida não é controlada por um objeto encapsulante, como um ponteiro [inteligente](smart-pointers-modern-cpp.md). Um ponteiro bruto pode ser atribuído o endereço de outra variável não-pointer, ou pode ser atribuído um valor de [nullptr](nullptr.md). Um ponteiro que não foi atribuído um valor contém dados aleatórios.
+Um *ponteiro* é um tipo de variável. Ele armazena o endereço de um objeto na memória e é usado para acessar esse objeto. Um *ponteiro bruto* é um ponteiro cujo tempo de vida não é controlado por um objeto encapsulamento, como um [ponteiro inteligente](smart-pointers-modern-cpp.md). Um ponteiro bruto pode ser atribuído ao endereço de outra variável que não seja de ponteiro ou pode ser atribuído a um valor de [:::no-loc(nullptr):::](:::no-loc(nullptr):::.md) . Um ponteiro que não tenha sido atribuído a um valor contém dados aleatórios.
 
-Um ponteiro também pode ser *desreferenciado* para recuperar o valor do objeto que ele aponta. O *operador de acesso ao membro* fornece acesso aos membros de um objeto.
+Um ponteiro também pode ser *desreferenciado* para recuperar o valor do objeto que ele aponta. O *operador de acesso de membro* fornece acesso aos membros de um objeto.
 
 ```cpp
-    int* p = nullptr; // declare pointer and initialize it
+    int* p = :::no-loc(nullptr):::; // declare pointer and initialize it
                       // so that it doesn't store a random address
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
 ```
 
-Um ponteiro pode apontar para um **void** objeto digitado ou para . Quando um programa aloca um objeto no [heap](https://wikipedia.org/wiki/Heap) na memória, ele recebe o endereço desse objeto na forma de um ponteiro. Tais ponteiros são chamados *de ponteiros próprios.* Um ponteiro de possuir (ou uma cópia dele) deve ser usado para liberar explicitamente o objeto alocado em pilha quando ele não for mais necessário. A falha em liberar a memória resulta em um vazamento de *memória*e torna o local da memória indisponível para qualquer outro programa na máquina. O uso **new** da memória alocado **delete** deve ser liberado usando (ou ** delete \[]**). Para obter mais informações, consulte [ new delete e operadores](new-and-delete-operators.md).
+Um ponteiro pode apontar para um objeto tipado ou para **`:::no-loc(void):::`** . Quando um programa aloca um objeto no [heap](https://wikipedia.org/wiki/Heap) na memória, ele recebe o endereço desse objeto na forma de um ponteiro. Tais ponteiros são chamados de *ponteiros de propriedade*. Um ponteiro de propriedade (ou uma cópia dele) deve ser usado para liberar explicitamente o objeto alocado de heap quando ele não for mais necessário. A falha na liberação da memória resulta em um *vazamento de memória*e renderiza esse local de memória indisponível para qualquer outro programa no computador. A memória alocada usando o **`:::no-loc(new):::`** deve ser liberada usando **`:::no-loc(delete):::`** (ou ** :::no-loc(delete)::: \[ ]**). Para obter mais informações, consulte [ :::no-loc(new)::: e :::no-loc(delete)::: operadores](:::no-loc(new):::-and-:::no-loc(delete):::-operators.md).
 
 ```cpp
-    MyClass* mc = new MyClass(); // allocate object on the heap
+    MyClass* mc = :::no-loc(new)::: MyClass(); // allocate object on the heap
     mc->print(); // access class member
-    delete mc; // delete object (please don't forget!)
+    :::no-loc(delete)::: mc; // :::no-loc(delete)::: object (please don't forget!)
 ```
 
-Um ponteiro (se não for **const** declarado como ) pode ser incrementado ou decretado para apontar para outro local na memória. Esta operação é chamada *de aritmética ponteiro*. É usado na programação estilo C para iterar sobre elementos em matrizes ou outras estruturas de dados. Um **const** ponteiro não pode ser feito para apontar para um local de memória diferente, e nesse sentido é semelhante a uma [referência](references-cpp.md). Para obter mais informações, consulte [ const e ponteiros voláteis](const-and-volatile-pointers.md).
+Um ponteiro (se não for declarado como **`:::no-loc(const):::`** ) pode ser incrementado ou diminuído para apontar para outro local na memória. Essa operação é chamada de *aritmética de ponteiro*. Ele é usado na programação C-Style para iterar sobre elementos em matrizes ou outras estruturas de dados. **`:::no-loc(const):::`** Não é possível estabelecer um ponteiro para apontar para um local de memória diferente e, nesse sentido, é semelhante a uma [referência](references-cpp.md). Para obter mais informações, consulte [ :::no-loc(const)::: e ponteiros voláteis](:::no-loc(const):::-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
-    const char* str = "Hello world";
+    :::no-loc(const)::: :::no-loc(char):::* str = "Hello world";
 
-    const int c = 1;
-    const int* pconst = &c; // declare a non-const pointer to const int
-    const int c2 = 2;
-    pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c;
-    // pconst2 = &c2; // Error! pconst2 is const.
+    :::no-loc(const)::: int c = 1;
+    :::no-loc(const)::: int* p:::no-loc(const)::: = &c; // declare a non-:::no-loc(const)::: pointer to :::no-loc(const)::: int
+    :::no-loc(const)::: int c2 = 2;
+    p:::no-loc(const)::: = &c2;  // OK p:::no-loc(const)::: itself isn't :::no-loc(const):::
+    :::no-loc(const)::: int* :::no-loc(const)::: p:::no-loc(const):::2 = &c;
+    // p:::no-loc(const):::2 = &c2; // Error! p:::no-loc(const):::2 is :::no-loc(const):::.
 ```
 
-Em sistemas operacionais de 64 bits, um ponteiro tem um tamanho de 64 bits. O tamanho do ponteiro de um sistema determina quanta memória endereçada ele pode ter. Todas as cópias de um ponteiro apontam para o mesmo local de memória. Ponteiros (juntamente com referências) são usados extensivamente em C++ para passar objetos maiores de e para funções. Isso porque muitas vezes é mais eficiente copiar o endereço de um objeto do que copiar todo o objeto. Ao definir uma função, **const** especifique parâmetros de ponteiro, a menos que você pretenda modificar o objeto. Em geral, **const** as referências são a maneira preferida de passar objetos para funções, a menos que o valor do objeto possa ser **nullptr**.
+Em sistemas operacionais de 64 bits, um ponteiro tem um tamanho de 64 bits. O tamanho de um ponteiro do sistema determina o quanto de memória endereçável ele pode ter. Todas as cópias de um ponteiro apontam para o mesmo local de memória. Ponteiros (juntamente com referências) são usados extensivamente em C++ para passar objetos maiores de e para funções. Isso porque geralmente é mais eficiente copiar o endereço de um objeto do que copiar o objeto inteiro. Ao definir uma função, especifique parâmetros de ponteiro como **`:::no-loc(const):::`** , a menos que você pretenda a função para modificar o objeto. Em geral, **`:::no-loc(const):::`** as referências são a maneira preferida de passar objetos para funções, a menos que o valor do objeto possivelmente possa ser **`:::no-loc(nullptr):::`** .
 
-[Ponteiros para funções](#pointers_to_functions) permitem que as funções sejam passadas para outras funções e são usadas para "retornos de chamada" na programação estilo C. O C++ moderno usa [expressões lambda](lambda-expressions-in-cpp.md) para este fim.
+[Ponteiros para funções](#pointers_to_functions) permitem que as funções sejam passadas para outras funções e são usadas para "retornos de chamada" na programação em estilo C. O C++ moderno usa [expressões lambda](lambda-expressions-in-cpp.md) para essa finalidade.
 
-## <a name="initialization-and-member-access"></a>Inicialização e acesso aos membros
+## <a name="initialization-and-member-access"></a>Inicialização e acesso de membro
 
-O exemplo a seguir mostra como declarar, inicializar e usar um ponteiro bruto. É inicializado usando **new** para apontar um objeto alocado no heap, **delete** que você deve explicitamente . O exemplo também mostra alguns dos perigos associados aos ponteiros brutos. (Lembre-se, este exemplo é programação estilo C e não C++!)
+O exemplo a seguir mostra como declarar, inicializar e usar um ponteiro bruto. Ele é inicializado usando **`:::no-loc(new):::`** para apontar um objeto alocado no heap, que você deve explicitamente **`:::no-loc(delete):::`** . O exemplo também mostra alguns dos perigos associados a ponteiros brutos. (Lembre-se, este exemplo é a programação em estilo C e não C++ moderno!)
 
 ```cpp
 #include <iostream>
@@ -71,11 +71,11 @@ class MyClass
 public:
     int num;
     std::string name;
-    void print() { std::cout << name << ":" << num << std::endl; }
+    :::no-loc(void)::: print() { std::cout << name << ":" << num << std::endl; }
 };
 
 // Accepts a MyClass pointer
-void func_A(MyClass* mc)
+:::no-loc(void)::: func_A(MyClass* mc)
 {
     // Modify the object that mc points to.
     // All copies of the pointer will point to
@@ -84,7 +84,7 @@ void func_A(MyClass* mc)
 }
 
 // Accepts a MyClass object
-void func_B(MyClass mc)
+:::no-loc(void)::: func_B(MyClass mc)
 {
     // mc here is a regular object, not a pointer.
     // Use the "." operator to access members.
@@ -98,8 +98,8 @@ void func_B(MyClass mc)
 int main()
 {
     // Use the * operator to declare a pointer type
-    // Use new to allocate and initialize memory
-    MyClass* pmc = new MyClass{ 108, "Nick" };
+    // Use :::no-loc(new)::: to allocate and initialize memory
+    MyClass* pmc = :::no-loc(new)::: MyClass{ 108, "Nick" };
 
     // Prints the memory address. Usually not what you want.
     std:: cout << pmc << std::endl;
@@ -133,24 +133,24 @@ int main()
     func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
-    delete(pmc); // don't forget to give memory back to operating system!
-   // delete(pmc2); //crash! memory location was already deleted
+    :::no-loc(delete):::(pmc); // don't forget to give memory back to operating system!
+   // :::no-loc(delete):::(pmc2); //crash! memory location was already :::no-loc(delete):::d
 }
 ```
 
 ## <a name="pointer-arithmetic-and-arrays"></a>Aritmética de ponteiro e matrizes
 
-Ponteiros e matrizes estão intimamente relacionados. Quando uma matriz é passada por valor para uma função, ela é passada como um ponteiro para o primeiro elemento. O exemplo a seguir demonstra as seguintes propriedades importantes de ponteiros e matrizes:
+Ponteiros e matrizes estão fortemente relacionados. Quando uma matriz é passada por valor para uma função, ela é passada como um ponteiro para o primeiro elemento. O exemplo a seguir demonstra as seguintes propriedades importantes de ponteiros e matrizes:
 
-- o `sizeof` operador retorna o tamanho total em bytes de uma matriz
-- para determinar o número de elementos, dividir bytes totais pelo tamanho de um elemento
-- quando uma matriz é passada para uma função, ela *decai* para um tipo de ponteiro
-- o `sizeof` operador quando aplicado a um ponteiro retorna o tamanho do ponteiro, 4 bytes em x86 ou 8 bytes em x64
+- o **`sizeof`** operador retorna o tamanho total em bytes de uma matriz
+- para determinar o número de elementos, divida o total de bytes pelo tamanho de um elemento
+- Quando uma matriz é passada para uma função, ela *decays* a um tipo de ponteiro
+- o **`sizeof`** operador quando aplicado a um ponteiro retorna o tamanho do ponteiro, 4 bytes em x86 ou 8 bytes em x64
 
 ```cpp
 #include <iostream>
 
-void func(int arr[], int length)
+:::no-loc(void)::: func(int arr[], int length)
 {
     // returns pointer size. not useful here.
     size_t test = sizeof(arr);
@@ -171,9 +171,9 @@ int main()
 }
 ```
 
-Certas operações aritméticas podemconst ser usadas em não-ponteiros para fazê-los apontar para outro local de memória. Os ponteiros são incrementados e **++** **+=** decretados usando os operadores **-=** e **--** operadores. Esta técnica pode ser usada em matrizes e é especialmente útil em buffers de dados não digitados. A ** void ** é incrementado pelo **char** tamanho de um (1 byte). Um ponteiro digitado é incrementado pelo tamanho do tipo que aponta.
+Determinadas operações aritméticas podem ser usadas em não :::no-loc(const)::: ponteiros para torná-las apontadas para outro local de memória. Os ponteiros são incrementados e decrementados usando os **++** **+=** operadores, **-=** e **--** . Essa técnica pode ser usada em matrizes e é especialmente útil em buffers de dados não tipados. Um **:::no-loc(void):::\*** é incrementado pelo tamanho de um **`:::no-loc(char):::`** (1 byte). Um ponteiro tipado é incrementado por tamanho do tipo para o qual ele aponta.
 
-O exemplo a seguir demonstra como a aritmética do ponteiro pode ser usada para acessar pixels individuais em um bitmap no Windows. Observe o **new** uso **delete** e , e o operador de desreferência.
+O exemplo a seguir demonstra como a aritmética de ponteiro pode ser usada para acessar pixels individuais em um bitmap no Windows. Observe o uso de **`:::no-loc(new):::`** e e **`:::no-loc(delete):::`** o operador de desreferência.
 
 ```cpp
 #include <Windows.h>
@@ -192,8 +192,8 @@ int main()
     header.biCompression = BI_RGB;
     header.biSize = sizeof(BITMAPINFOHEADER);
 
-    constexpr int bufferSize = 30000;
-    unsigned char* buffer = new unsigned char[bufferSize];
+    :::no-loc(const):::expr int bufferSize = 30000;
+    unsigned :::no-loc(char):::* buffer = :::no-loc(new)::: unsigned :::no-loc(char):::[bufferSize];
 
     BITMAPFILEHEADER bf;
     bf.bfType = 0x4D42;
@@ -203,11 +203,11 @@ int main()
     bf.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER); //54
 
     // Create a gray square with a 2-pixel wide outline.
-    unsigned char* begin = &buffer[0];
-    unsigned char* end = &buffer[0] + bufferSize;
-    unsigned char* p = begin;
-    constexpr int pixelWidth = 3;
-    constexpr int borderWidth = 2;
+    unsigned :::no-loc(char):::* begin = &buffer[0];
+    unsigned :::no-loc(char):::* end = &buffer[0] + bufferSize;
+    unsigned :::no-loc(char):::* p = begin;
+    :::no-loc(const):::expr int pixelWidth = 3;
+    :::no-loc(const):::expr int borderWidth = 2;
 
     while (p < end)
     {
@@ -224,32 +224,32 @@ int main()
         {
             *p = 0xC3; // Gray
         }
-        p++; // Increment one byte sizeof(unsigned char).
+        p++; // Increment one byte sizeof(unsigned :::no-loc(char):::).
     }
 
     ofstream wf(R"(box.bmp)", ios::out | ios::binary);
 
-    wf.write(reinterpret_cast<char*>(&bf), sizeof(bf));
-    wf.write(reinterpret_cast<char*>(&header), sizeof(header));
-    wf.write(reinterpret_cast<char*>(begin), bufferSize);
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(&bf), sizeof(bf));
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(&header), sizeof(header));
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(begin), bufferSize);
 
-    delete[] buffer; // Return memory to the OS.
+    :::no-loc(delete):::[] buffer; // Return memory to the OS.
     wf.close();
 }
 ```
 
-## <a name="opno-locvoid-pointers"></a>void* ponteiros
+## <a name="no-locvoid-pointers"></a>:::no-loc(void):::* ponteiros
 
-Um ponteiro **void** para simplesmente apontar para um local de memória bruta. Às vezes é necessário ** void ** usar ponteiros, por exemplo, ao passar entre as funções C++ e C.
+Um ponteiro para **`:::no-loc(void):::`** simplesmente aponta para um local de memória bruto. Às vezes, é necessário usar **:::no-loc(void):::\*** ponteiros, por exemplo, ao passar entre o código C++ e as funções C.
 
-Quando um ponteiro digitado void é lançado para um ponteiro, o conteúdo do local de memória é inalterado. No entanto, as informações do tipo são perdidas, de modo que você não pode fazer operações de incremento ou decrésia. Um local de memória pode ser `MyClass*` `void*` lançado, por `MyClass*`exemplo, de ida e volta para . Tais operações são inerentemente propensas a erros e requerem muito cuidado para evitar erros. O C++ moderno desencoraja void o uso de ponteiros em quase todas as circunstâncias.
+Quando um ponteiro tipado é convertido em um :::no-loc(void)::: ponteiro, o conteúdo do local da memória não é alterado. No entanto, as informações de tipo são perdidas, para que você não possa fazer operações de incrementar ou decrementar. Um local de memória pode ser convertido, por exemplo, de `MyClass*` para **`:::no-loc(void):::*`** e de volta para `MyClass*` . Essas operações são inerentemente propensas a erros e exigem muito cuidado com :::no-loc(void)::: erros. O C++ moderno desencoraja o uso de :::no-loc(void)::: ponteiros em quase todas as circunstâncias.
 
 ```cpp
 
 //func.c
-void func(void* data, int length)
+:::no-loc(void)::: func(:::no-loc(void):::* data, int length)
 {
-    char* c = (char*)(data);
+    :::no-loc(char):::* c = (:::no-loc(char):::*)(data);
 
     // fill in the buffer with data
     for (int i = 0; i < length; ++i)
@@ -264,7 +264,7 @@ void func(void* data, int length)
 
 extern "C"
 {
-    void func(void* data, int length);
+    :::no-loc(void)::: func(:::no-loc(void):::* data, int length);
 }
 
 class MyClass
@@ -272,35 +272,35 @@ class MyClass
 public:
     int num;
     std::string name;
-    void print() { std::cout << name << ":" << num << std::endl; }
+    :::no-loc(void)::: print() { std::cout << name << ":" << num << std::endl; }
 };
 
 int main()
 {
-    MyClass* mc = new MyClass{10, "Marian"};
-    void* p = static_cast<void*>(mc);
+    MyClass* mc = :::no-loc(new)::: MyClass{10, "Marian"};
+    :::no-loc(void):::* p = static_cast<:::no-loc(void):::*>(mc);
     MyClass* mc2 = static_cast<MyClass*>(p);
     std::cout << mc2->name << std::endl; // "Marian"
 
-    // use operator new to allocate untyped memory block
-    void* pvoid = operator new(1000);
-    char* pchar = static_cast<char*>(pvoid);
-    for(char* c = pchar; c < pchar + 1000; ++c)
+    // use operator :::no-loc(new)::: to allocate untyped memory block
+    :::no-loc(void):::* p:::no-loc(void)::: = operator :::no-loc(new):::(1000);
+    :::no-loc(char):::* p:::no-loc(char)::: = static_cast<:::no-loc(char):::*>(p:::no-loc(void):::);
+    for(:::no-loc(char):::* c = p:::no-loc(char):::; c < p:::no-loc(char)::: + 1000; ++c)
     {
         *c = 0x00;
     }
-    func(pvoid, 1000);
-    char ch = static_cast<char*>(pvoid)[0];
+    func(p:::no-loc(void):::, 1000);
+    :::no-loc(char)::: ch = static_cast<:::no-loc(char):::*>(p:::no-loc(void):::)[0];
     std::cout << ch << std::endl; // 'A'
-    operator delete(p);
+    operator :::no-loc(delete):::(p);
 }
 ```
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Ponteiros para funções
 
-Na programação estilo C, ponteiros de função são usados principalmente para passar funções para outras funções. Esta técnica permite que o chamador personalize o comportamento de uma função sem modificá-la. No C++moderno, as [expressões lambda](lambda-expressions-in-cpp.md) fornecem a mesma capacidade com maior segurança do tipo e outras vantagens.
+Na programação em estilo C, os ponteiros de função são usados principalmente para passar funções para outras funções. Essa técnica permite que o chamador Personalize o comportamento de uma função sem modificá-la. No C++ moderno, as [expressões lambda](lambda-expressions-in-cpp.md) fornecem o mesmo recurso com maior segurança de tipos e outras vantagens.
 
-Uma declaração de ponteiro de função especifica a assinatura que a função apontada para a função deve ter:
+Uma declaração de ponteiro de função especifica a assinatura que a função indicada para deve ter:
 
 ```cpp
 // Declare pointer to any function that...
@@ -309,14 +309,14 @@ Uma declaração de ponteiro de função especifica a assinatura que a função 
 string (*g)(string a);
 
 // has no return value and no parameters
-void (*x)();
+:::no-loc(void)::: (*x)();
 
 // ...returns an int and takes three parameters
 // of the specified types
 int (*i)(int i, string s, double d);
 ```
 
-O exemplo a `combine` seguir mostra uma função que toma `std::string` como parâmetro `std::string`qualquer função que aceite a e retorne a . Dependendo da função que é `combine`passada para, ou prepara ou anexa uma seqüência.
+O exemplo a seguir mostra uma função `combine` que usa como um parâmetro qualquer função que aceita um `std::string` e retorna um `std::string` . Dependendo da função que é passada para `combine` , ela precede ou acrescenta uma cadeia de caracteres.
 
 ```cpp
 #include <iostream>
@@ -350,7 +350,7 @@ int main()
 
 ## <a name="see-also"></a>Confira também
 
-[Operador](smart-pointers-modern-cpp.md)[de direção inteligente: *](indirection-operator-star.md) 
-<br/>
+[Ponteiros inteligentes](smart-pointers-modern-cpp.md) 
+ [Operador de indireção: *](indirection-operator-star.md)<br/>
 [Operador address-of: &](address-of-operator-amp.md)</br>
 [Bem-vindo de volta ao C++](welcome-back-to-cpp-modern-cpp.md)

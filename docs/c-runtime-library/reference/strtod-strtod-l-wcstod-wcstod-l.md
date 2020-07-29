@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233971"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -84,7 +84,7 @@ double wcstod_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strSource*<br/>
 Cadeia de caracteres terminada em nulo a ser convertida.
@@ -95,7 +95,7 @@ Ponteiro para o caractere que interrompe a verificação.
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor retornado
 
 **strtod** retorna o valor do número de ponto flutuante, exceto quando a representação causar um estouro; nesse caso, a função retornará +/-**HUGE_VAL**. O sinal de **HUGE_VAL** corresponde ao sinal do valor que não pode ser representado. **strtod** retornará `0` se nenhuma conversão puder ser executada ou se ocorrer um estouro negativo.
 
@@ -108,7 +108,7 @@ Para obter mais informações sobre esse e outros códigos de retorno, consulte 
 
 ## <a name="remarks"></a>Comentários
 
-Cada função converte a cadeia de caracteres de entrada *strSource* em um **Double**. A função **strtod** converte *strSource* em um valor de precisão dupla. **strtod** interrompe a leitura da cadeia de caracteres *strSource* no primeiro caractere que ela não pode reconhecer como parte de um número. Esse caractere pode ser o caractere nulo de terminação. **wcstod** é uma versão de caractere largo do **strtod**; seu argumento *strSource* é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+Cada função converte a cadeia de caracteres de entrada *strSource* em um **`double`** . A função **strtod** converte *strSource* em um valor de precisão dupla. **strtod** interrompe a leitura da cadeia de caracteres *strSource* no primeiro caractere que ela não pode reconhecer como parte de um número. Esse caractere pode ser o caractere nulo de terminação. **wcstod** é uma versão de caractere largo do **strtod**; seu argumento *strSource* é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 

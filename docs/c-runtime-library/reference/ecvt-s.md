@@ -30,16 +30,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 9ac623c6cb80c774184dcb005e6d1d631c498040
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915148"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234205"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
-Converte um número **duplo** em uma cadeia de caracteres. Trata-se de uma versão de [_ecvt](ecvt.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Converte um **`double`** número em uma cadeia de caracteres. Trata-se de uma versão de [_ecvt](ecvt.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -62,7 +62,7 @@ errno_t _ecvt_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Buffer*<br/>
 Preenchido com o ponteiro para a cadeia de caracteres de dígitos, o resultado da conversão.
@@ -92,10 +92,10 @@ No caso de um parâmetro inválido, conforme listado na tabela a seguir, essa fu
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valor retornado|Valor no *buffer*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NULO**|any|any|any|any|any|**EINVAL**|Não modificado.|
+|**NULL**|any|any|any|any|any|**EINVAL**|Não modificado.|
 |Not **NULL** (aponta para memória válida)|<=0|any|any|any|any|**EINVAL**|Não modificado.|
-|any|any|any|any|**NULO**|any|**EINVAL**|Não modificado.|
-|any|any|any|any|any|**NULO**|**EINVAL**|Não modificado.|
+|any|any|any|any|**NULL**|any|**EINVAL**|Não modificado.|
+|any|any|any|any|any|**NULL**|**EINVAL**|Não modificado.|
 
 ## <a name="security-issues"></a>Problemas de segurança
 
@@ -160,7 +160,7 @@ Converted value: 12000
 ## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt_s](fcvt-s.md)<br/>

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212245"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233477"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -64,7 +64,7 @@ Uma classe de conjunto de linhas.
 
 |||
 |-|-|
-|[Associar](#bind)|Cria associações (usadas quando `bBind` é especificado como **false** em [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[Associa](#bind)|Cria associações (usadas quando `bBind` é especificado como **`false`** em [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Construtor.|
 |[Fechar](#close)|Fecha o conjunto de linhas e todos os acessadores.|
 |[FreeRecordMemory](#freerecordmemory)|Libera Todas as colunas no registro atual que precisam ser liberadas.|
@@ -72,11 +72,11 @@ Uma classe de conjunto de linhas.
 
 ## <a name="remarks"></a>Comentários
 
-A classe `TAccessor` gerencia o acessador. A classe *TRowset* gerencia o conjunto de linhas.
+`TAccessor`A classe gerencia o acessador. A classe *TRowset* gerencia o conjunto de linhas.
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: bind
 
-Cria as associações se você especificou `bBind` como **false** em [CCommand:: Open](../../data/oledb/ccommand-open.md).
+Cria as associações se você tiver especificado `bBind` como **`false`** em [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -154,4 +154,4 @@ Para obter mais informações, consulte [IColumnsInfo:: GetColumnInfo](/previous
 ## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

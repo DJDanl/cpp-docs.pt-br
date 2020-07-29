@@ -157,12 +157,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916691"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218670"
 ---
 # <a name="floating-point-primitives"></a>Primitivos de ponto flutuante
 
@@ -180,7 +180,7 @@ short __cdecl _ldclass(long double x);
 short __cdecl _fdclass(float x);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Argumento de função de ponto flutuante.
@@ -209,7 +209,7 @@ int __cdecl _ldsign(long double x);
 int __cdecl _fdsign(float x);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Argumento de função de ponto flutuante.
@@ -228,7 +228,7 @@ int __cdecl _ldpcomp(long double x, long double y);
 int __cdecl _fdpcomp(float x, float y);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*, *y*<br/>
 Argumentos de função de ponto flutuante.
@@ -255,7 +255,7 @@ short __cdecl _ldtest(long double* px);
 short __cdecl _fdtest(float* px);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PX*<br/>
 Ponteiro para um argumento de ponto flutuante.
@@ -284,7 +284,7 @@ short __cdecl _ld_int(long double* px, short exp);
 short __cdecl _fd_int(float* px, short exp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PX*<br/>
 Ponteiro para um argumento de ponto flutuante.
@@ -306,7 +306,7 @@ short __cdecl _ldscale(long double* px, long exp);
 short __cdecl _fdscale(float* px, long exp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PX*<br/>
 Ponteiro para um argumento de ponto flutuante.
@@ -328,7 +328,7 @@ short __cdecl _ldunscale(short* pexp, long double* px);
 short __cdecl _fdunscale(short* pexp, float* px);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pexp*<br/>
 Um ponteiro para um expoente como um tipo integral.
@@ -350,7 +350,7 @@ short __cdecl _ldexp(long double* px, long double y, long exp);
 short __cdecl _fdexp(float* px, float y, long exp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Iar*<br/>
 Argumento de função de ponto flutuante.
@@ -374,14 +374,14 @@ short __cdecl _dnorm(unsigned short* ps);
 short __cdecl _fdnorm(unsigned short* ps);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *profissionais*<br/>
-Ponteiro para a representação de bit-de-vírgula de um valor de ponto flutuante expresso como uma matriz de **curto** **não assinado** .
+Ponteiro para a representação de bit-de-vírgula de um valor de ponto flutuante expresso como uma matriz de **`unsigned short`** .
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuante normalizam a parte fracionária de um valor de ponto flutuante de estouro negativo e ajustam a *característica*, ou expoente tendenciosa, para corresponder. O valor é passado como a representação bit-de-vírgula do tipo de ponto flutuante convertido em uma matriz de **curto** **não assinado** por `_ldouble_val`meio de `_float_val` `_double_val`, ou tipo punning Union declarada em Math. h. O valor de retorno é o resultado de **fpclassify** no valor de ponto flutuante de entrada, se for um Nan ou um infinito, e no valor de saída, caso contrário.
+Esses primitivos de ponto flutuante normalizam a parte fracionária de um valor de ponto flutuante de estouro negativo e ajustam a *característica*, ou expoente tendenciosa, para corresponder. O valor é passado como a representação bit-de-vírgula do tipo de ponto flutuante convertido em uma matriz de **`unsigned short`** por meio de `_double_val` , `_ldouble_val` ou `_float_val` tipo punning Union declarada em Math. h. O valor de retorno é o resultado de **fpclassify** no valor de ponto flutuante de entrada, se for um Nan ou um infinito, e no valor de saída, caso contrário.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
@@ -393,7 +393,7 @@ long double __cdecl _ldpoly(long double x, long double const* table, int n);
 float __cdecl _fdpoly(float x, _float const* table, int n);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Argumento de função de ponto flutuante.
@@ -406,7 +406,7 @@ Ordem do polinomial a ser avaliada.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuante retornam a avaliação de *x* no polinomial da ordem *n* cujos coeficientes são representados pelos valores constantes correspondentes na *tabela*. Por exemplo, se *Table*\[0] = 3,0, *tabela*\[1] = 4,0, *Table*\[2] = 5,0 e *n* = 2, ele representa o polinomial 5.0 x<sup>2</sup> + 4.0 x + 3,0. Se esse polinomial for avaliado para *x* de 2,0, o resultado será 31,0. Essas funções não são usadas internamente.
+Esses primitivos de ponto flutuante retornam a avaliação de *x* no polinomial da ordem *n* cujos coeficientes são representados pelos valores constantes correspondentes na *tabela*. Por exemplo, se *Table* \[ 0] = 3,0, *tabela* \[ 1] = 4,0, *Table* \[ 2] = 5,0 e *n* = 2, ele representa o polinomial 5.0 x<sup>2</sup> + 4.0 x + 3,0. Se esse polinomial for avaliado para *x* de 2,0, o resultado será 31,0. Essas funções não são usadas internamente.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
@@ -418,7 +418,7 @@ long double __cdecl _ldlog(long double x, int base_flag);
 float __cdecl _fdlog(float x, int base_flag);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Argumento de função de ponto flutuante.
@@ -440,13 +440,13 @@ long double __cdecl _ldsin(long double x, unsigned int quadrant);
 float __cdecl _fdsin(float x, unsigned int quadrant);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Argumento de função de ponto flutuante.
 
 *Quadrante*<br/>
-Deslocamento de quadrante de 0, 1, 2 ou 3 a ser usado `sin`para `cos`produzir `-sin`,, `-cos` e resultados.
+Deslocamento de quadrante de 0, 1, 2 ou 3 a ser usado para produzir `sin` , `cos` , e `-sin` `-cos` resultados.
 
 ### <a name="remarks"></a>Comentários
 
@@ -454,11 +454,11 @@ Esses primitivos de ponto flutuante retornam o seno de deslocamento *x* pelo mó
 
 ## <a name="requirements"></a>Requisitos
 
-Cabeçalho: \<Math. h>
+Cabeçalho: \<math.h>
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte de ponto flutuante](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

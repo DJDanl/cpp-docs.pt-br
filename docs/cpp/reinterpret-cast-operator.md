@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 34c2fcb0e1f7f4df4e207d1737afc9c42e011feb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 33da7427adeb0a0cade2a369664d7fbd34790681
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188279"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233594"
 ---
 # <a name="reinterpret_cast-operator"></a>Operador reinterpret_cast
 
@@ -25,17 +25,17 @@ reinterpret_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>Comentários
 
-O uso indevido do operador **reinterpret_cast** pode ser facilmente inseguro. A menos que a conversão desejada seja inerentemente de nível baixo, você deve usar um dos outros operadores de conversão.
+O uso indevido do **`reinterpret_cast`** operador pode ser facilmente inseguro. A menos que a conversão desejada seja inerentemente de nível baixo, você deve usar um dos outros operadores de conversão.
 
-O operador de **reinterpret_cast** pode ser usado para conversões, como `char*` para `int*`ou `One_class*` para `Unrelated_class*`, que são inerentemente inseguras.
+O **`reinterpret_cast`** operador pode ser usado para conversões, como **`char*`** para **`int*`** , ou `One_class*` para `Unrelated_class*` , que são inerentemente inseguras.
 
-O resultado de uma **reinterpret_cast** não pode ser usado com segurança para nada além de ser convertido em seu tipo original. Outros usos são, na melhor das hipóteses, não portáteis.
+O resultado de um **`reinterpret_cast`** não pode ser usado com segurança para qualquer coisa que não seja a conversão de volta para seu tipo original. Outros usos são, na melhor das hipóteses, não portáteis.
 
-O operador de **reinterpret_cast** não pode converter os atributos **const**, **volatile**ou **__unaligned** . Consulte [operador de const_cast](../cpp/const-cast-operator.md) para obter informações sobre como remover esses atributos.
+O **`reinterpret_cast`** operador não pode converter os **`const`** **`volatile`** atributos, ou **`__unaligned`** . Consulte [operador de const_cast](../cpp/const-cast-operator.md) para obter informações sobre como remover esses atributos.
 
-O operador **reinterpret_cast** converte um valor de ponteiro nulo para o valor de ponteiro nulo do tipo de destino.
+O **`reinterpret_cast`** operador converte um valor de ponteiro nulo para o valor de ponteiro nulo do tipo de destino.
 
-Um uso prático de **reinterpret_cast** está em uma função de hash, que mapeia um valor para um índice de forma que dois valores distintos raramente terminem com o mesmo índice.
+Um uso prático do **`reinterpret_cast`** é em uma função de hash, que mapeia um valor para um índice de forma que dois valores distintos raramente terminem com o mesmo índice.
 
 ```cpp
 #include <iostream>
@@ -77,7 +77,7 @@ Output:
 64829
 ```
 
-O **reinterpret_cast** permite que o ponteiro seja tratado como um tipo integral. O resultado de bit é deslocado e recebe XOR para gerar um índice exclusivo (exclusivo para um alto nível de probabilidade). O índice é truncado em seguida por uma conversão padrão do estilo C para o tipo de retorno de função.
+O **`reinterpret_cast`** permite que o ponteiro seja tratado como um tipo integral. O resultado de bit é deslocado e recebe XOR para gerar um índice exclusivo (exclusivo para um alto nível de probabilidade). O índice é truncado em seguida por uma conversão padrão do estilo C para o tipo de retorno de função.
 
 ## <a name="see-also"></a>Confira também
 

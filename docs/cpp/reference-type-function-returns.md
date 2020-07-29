@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188292"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233620"
 ---
 # <a name="reference-type-function-returns"></a>Retornos de funções de tipo de referência
 
@@ -86,7 +86,7 @@ Observe também que, em Main, o objeto Point permanece no escopo e, portanto, se
 
 As declarações de tipos de referência devem conter inicializadores, exceto nos seguintes casos:
 
-- Declaração **extern** explícita
+- **`extern`** Declaração explícita
 
 - Declaração de um membro de classe
 
@@ -108,7 +108,7 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-O compilador emite um aviso nesse caso: `warning C4172: returning address of local variable or temporary`. Em programas simples, é possível que, ocasionalmente, nenhuma violação de acesso ocorra se a referência for acessada pelo chamador antes de o local da memória ser substituído. Isso ocorre devido à simples sorte. Preste atenção ao aviso.
+O compilador emite um aviso nesse caso: `warning C4172: returning address of local variable or temporary` . Em programas simples, é possível que, ocasionalmente, nenhuma violação de acesso ocorra se a referência for acessada pelo chamador antes de o local da memória ser substituído. Isso ocorre devido à simples sorte. Preste atenção ao aviso.
 
 ## <a name="see-also"></a>Confira também
 

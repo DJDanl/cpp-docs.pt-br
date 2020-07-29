@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913968"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218540"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-Transfere o controle ao mecanismo de gerenciamento de erros caso o operador **new** não consiga alocar memória.
+Transfere o controle para o mecanismo de tratamento de erros se o **`new`** operador falhar ao alocar memória.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -47,7 +47,7 @@ Transfere o controle ao mecanismo de gerenciamento de erros caso o operador **ne
 _PNH _set_new_handler( _PNH pNewHandler );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pNewHandler*<br/>
 Ponteiro para a função de manipulação de memória fornecida pelo aplicativo. Um argumento de 0 faz com que o novo manipulador seja removido.
@@ -58,7 +58,7 @@ Retorna um ponteiro para a função de manipulação de exceção anterior regis
 
 ## <a name="remarks"></a>Comentários
 
-A função **_set_new_handler** do C++ especifica uma função de tratamento de exceção que obtém controle se o **novo** operador falhar ao alocar memória. Se o **novo** falhar, o sistema de tempo de execução chamará automaticamente a função de tratamento de exceção que foi passada como um argumento para **_set_new_handler**. **_PNH**, definido em New. h, é um ponteiro para uma função que retorna o tipo **int** e usa um argumento do tipo **size_t**. Use **size_t** para especificar a quantidade de espaço a ser alocada.
+A função **_set_new_handler** do C++ especifica uma função de tratamento de exceção que obtém controle se o **`new`** operador falhar ao alocar memória. Se **`new`** falhar, o sistema de tempo de execução chamará automaticamente a função de tratamento de exceção que foi passada como um argumento para **_set_new_handler**. **_PNH**, definido em New. h, é um ponteiro para uma função que retorna o tipo **`int`** e usa um argumento do tipo **size_t**. Use **size_t** para especificar a quantidade de espaço a ser alocada.
 
 Não há nenhum manipulador padrão.
 
@@ -95,7 +95,7 @@ Você pode salvar o endereço da função que foi passado pela última vez para 
    // . . .
 ```
 
-A função de C++ [set_new_mode](set-new-mode.md) define o novo modo do manipulador para [malloc](malloc.md). O novo modo de manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador, conforme definido por **_set_new_handler**. Por padrão, o **malloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** não alocar memória, **malloc** chame a nova rotina do manipulador da mesma maneira que o **novo** operador faz quando ele falha pelo mesmo motivo. Para substituir o padrão, chame:
+A função de C++ [set_new_mode](set-new-mode.md) define o novo modo do manipulador para [malloc](malloc.md). O novo modo de manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador, conforme definido por **_set_new_handler**. Por padrão, o **malloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** não aloca memória, **malloc** chame a nova rotina do manipulador da mesma maneira que o **`new`** operador faz quando ele falha pelo mesmo motivo. Para substituir o padrão, chame:
 
 ```cpp
 _set_new_mode(1);
@@ -103,7 +103,7 @@ _set_new_mode(1);
 
 no início de seu programa ou vincule com Newmode.obj.
 
-Se um definido pelo `operator new` usuário for fornecido, as novas funções do manipulador não serão automaticamente chamadas em caso de falha.
+Se um definido pelo usuário `operator new` for fornecido, as novas funções do manipulador não serão automaticamente chamadas em caso de falha.
 
 Para obter mais informações, consulte [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) na *Referência da linguagem C++*.
 
@@ -167,7 +167,7 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

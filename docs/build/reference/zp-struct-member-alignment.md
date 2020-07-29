@@ -11,63 +11,63 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78e670303bde68299725e18c6f588f5e410a971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315905"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234296"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (alinhamento de membro do Struct)
 
-Controla como os membros de uma estrutura são empacotados na memória e especifica o empacotamento mesmo para todas as estruturas em um módulo.
+Controla como os membros de uma estrutura são empacotados na memória e especifica o mesmo empacotamento para todas as estruturas em um módulo.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/Zp**[**1**|**2**|**4**|**8**|**16**]
+> **`/Zp`**[**`1`**|**`2`**|**`4`**|**`8`**|**`16`**]
 
 ## <a name="remarks"></a>Comentários
 
-O **/Zp**_n_ opção informa ao compilador onde armazenar cada membro da estrutura. O compilador armazena membros após o primeiro em um limite que for menor do tamanho do tipo de membro, ou um *n*-limite de bytes.
+A **`/ZpN`** opção informa ao compilador onde armazenar cada membro da estrutura. O compilador armazena os membros após o primeiro em um limite que é menor do que o tamanho do tipo de membro ou de um limite de *N*bytes.
 
-Os valores de remessa disponíveis são descritos na tabela a seguir:
+Os valores de embalagem disponíveis são descritos na tabela a seguir:
 
-|/ZP argumento|Efeito|
+|Argumento/ZP|Efeito|
 |-|-|
-|1|Empacota estruturas em limites de 1 byte. Mesmo que **/Zp**.|
+|1|Empacota estruturas em limites de 1 byte. O mesmo que **`/Zp`** .|
 |2|Empacota estruturas em limites de 2 bytes.|
 |4|Empacota estruturas em limites de 4 bytes.|
-|8|Empacota estruturas em limites de 8 bytes (o padrão para x86, ARM e ARM64).|
-|16| Empacota estruturas em limites de 16 bytes (o padrão para x64).|
+|8|Empacota estruturas em limites de 8 bytes (padrão para x86, ARM e ARM64).|
+|16| Empacota estruturas em limites de 16 bytes (padrão para x64).|
 
-Não use essa opção, a menos que você tenha requisitos de alinhamento específico.
+Não use essa opção, a menos que você tenha requisitos de alinhamento específicos.
 
 > [!WARNING]
-> Cabeçalhos de C++ no SDK do Windows definida e supor **/zp8** internamente de remessa. Memória corrupção pode ocorrer se o **/Zp** for alterada dentro os cabeçalhos do SDK do Windows. Os cabeçalhos não são afetados por qualquer **/Zp** opção definida na linha de comando.
+> Os cabeçalhos do C++ no conjunto de SDK do Windows e assumem o **`/Zp8`** empacotamento internamente. A corrupção de memória pode ocorrer se a **`/Zp`** configuração for alterada dentro dos cabeçalhos de SDK do Windows. Os cabeçalhos não são afetados por nenhuma **`/Zp`** opção definida na linha de comando.
 
-Você também pode usar [pack](../../preprocessor/pack.md) a empacotamento de estrutura de controle. Para obter mais informações sobre alinhamento, consulte:
+Você também pode usar o [`pack`](../../preprocessor/pack.md) para controlar a embalagem da estrutura. Para obter mais informações sobre alinhamento, consulte:
 
-- [align](../../cpp/align-cpp.md)
+- [`align`](../../cpp/align-cpp.md)
 
-- [Operador __alignof](../../cpp/alignof-operator.md)
+- [`alignof`Operador](../../cpp/alignof-operator.md)
 
-- [__unaligned](../../cpp/unaligned.md)
+- [`__unaligned`](../../cpp/unaligned.md)
 
-- [/ALIGN (alinhamento da seção)](align-section-alignment.md)
+- [`/ALIGN`(Alinhamento de seção)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione o **propriedades de configuração** > **C/C++** > **geração de código** página de propriedades.
+1. Selecione a página de propriedades **configuração**de  >  geração de código**C/C++**  >  **Code Generation** .
 
-1. Modificar a **alinhamento de membro de Struct** propriedade.
+1. Modifique a propriedade de **alinhamento do Membro struct** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md) \
-[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

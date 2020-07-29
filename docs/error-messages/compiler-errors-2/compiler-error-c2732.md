@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2732
 ms.assetid: 01b7ad2c-93cf-456f-a4c0-c5f2fdc7c07c
-ms.openlocfilehash: 61bac8c1b5c9e029cc5833f458669b490fed8c91
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 78be424040c7315271d0880c6678584f698b5be8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755792"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218176"
 ---
 # <a name="compiler-error-c2732"></a>Erro do compilador C2732
 
@@ -21,7 +21,7 @@ A função já está declarada com um especificador de ligação diferente.
 
 Esse erro pode ser causado por arquivos de inclusão com especificadores de ligação diferentes.
 
-Para corrigir esse erro, altere as instruções de `extern` para que as ligações concordem. Em particular, não empacote `#include` diretivas em blocos de `extern "C"`.
+Para corrigir esse erro, altere as **`extern`** instruções para que as ligações concordem. Em particular, não empacote as `#include` diretivas em `extern "C"` blocos.
 
 ## <a name="example"></a>Exemplo
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aa55392e9f58caa4292cf5f96ef97f65a53bf913
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205303"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207947"
 ---
 # <a name="compiler-error-c2441"></a>Erro do compilador C2441
 
@@ -23,7 +23,7 @@ As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Vis
 
 Por padrão, as variáveis são por domínio de aplicativo sob **/CLR: Pure**. Uma variável marcada `__declspec(process)` em **/CLR: Pure** é propenso a erros se modificada em um domínio de aplicativo e lida em outra.
 
-Portanto, o compilador impõe que as variáveis por processo sejam `const` em **/CLR: Pure**, tornando-as somente leitura em todos os domínios de aplicativo.
+Portanto, o compilador impõe que as variáveis por processo estejam **`const`** sob **/CLR: Pure**, tornando-as somente leitura em todos os domínios de aplicativo.
 
 Para obter mais informações, consulte [process](../../cpp/process.md) e [/CLR (compilação Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 

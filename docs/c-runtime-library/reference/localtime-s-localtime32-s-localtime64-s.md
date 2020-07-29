@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218605"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -66,7 +66,7 @@ errno_t _localtime64_s(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *tmDest*<br/>
 Ponteiro para a estrutura de hora a ser preenchida.
@@ -82,8 +82,8 @@ Zero se for bem-sucedido. Se houver uma falha, o valor retornado será um códig
 
 |*tmDest*|*origemtime*|Valor retornado|Valor em *tmDest*|Invoca um manipulador de parâmetro inválido|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**NULO**|any|**EINVAL**|Não modificado|Sim|
-|Not **NULL** (aponta para memória válida)|**NULO**|**EINVAL**|Todos os campos definidos como -1|Sim|
+|**NULL**|any|**EINVAL**|Não modificado|Sim|
+|Not **NULL** (aponta para memória válida)|**NULL**|**EINVAL**|Todos os campos definidos como -1|Sim|
 |Not **NULL** (aponta para memória válida)|menor que 0 ou maior que **_MAX__TIME64_T**|**EINVAL**|Todos os campos definidos como -1|Não|
 
 Caso as duas primeiras condições de erro ocorram, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EINVAL** e retornarão **EINVAL**.
@@ -101,7 +101,7 @@ o **localtime_s** é corrigido para o fuso horário local se o usuário primeiro
 
 **localtime_s** é uma função embutida que é avaliada como **_localtime64_s**e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o **time_t**de 32 bits antigo, poderá definir **_USE_32BIT_TIME_T**. Isso fará com que **localtime_s** seja avaliado para **_localtime32_s**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
 
-Os campos do tipo de estrutura [TM](../../c-runtime-library/standard-types.md) armazenam os valores a seguir, sendo que cada um é um **inteiro**.
+Os campos do tipo de estrutura [TM](../../c-runtime-library/standard-types.md) armazenam os valores a seguir, sendo que cada um deles é um **`int`** .
 
 |Campo|Descrição|
 |-|-|
@@ -123,7 +123,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|---------------------|-|
-|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<CTime> ou \<time. h>|
+|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<ctime> ou \<time.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
