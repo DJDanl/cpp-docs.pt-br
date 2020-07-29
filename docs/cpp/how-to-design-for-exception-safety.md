@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246511"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187797"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Como criar para segurança de exceção
 
@@ -85,7 +85,7 @@ public:
 
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Usar o idioma RAII para gerenciar recursos
 
-Para ser seguro de exceção, uma função deve garantir que os objetos alocados usando `malloc` ou **New** sejam destruídos, e todos os recursos, como os identificadores de arquivo, sejam fechados ou liberados, mesmo se uma exceção for gerada. O idioma de RAII ( *aquisição de recursos é inicialização* ) une o gerenciamento desses recursos ao ciclo de vida de variáveis automáticas. Quando uma função sai do escopo, retornando normalmente ou devido a uma exceção, os destruidores para todas as variáveis automáticas totalmente construídas são invocados. Um objeto wrapper RAII, como um ponteiro inteligente, chama a função Delete ou Close apropriada em seu destruidor. No código de exceção segura, é extremamente importante passar a propriedade de cada recurso imediatamente para algum tipo de objeto RAII. Observe que as classes `vector`, `string`, `make_shared`, `fstream`e semelhante lidam com a aquisição do recurso para você.  No entanto, `unique_ptr` e construções de `shared_ptr` tradicionais são especiais porque a aquisição de recursos é executada pelo usuário em vez do objeto; Portanto, eles contam como *liberação de recursos é a destruição* , mas é questionável como RAII.
+Para ser seguro de exceção, uma função deve garantir que os objetos alocados usando `malloc` ou **`new`** sejam destruídos, e todos os recursos, como os identificadores de arquivo, sejam fechados ou liberados, mesmo que uma exceção seja lançada. O idioma de RAII ( *aquisição de recursos é inicialização* ) une o gerenciamento desses recursos ao ciclo de vida de variáveis automáticas. Quando uma função sai do escopo, retornando normalmente ou devido a uma exceção, os destruidores para todas as variáveis automáticas totalmente construídas são invocados. Um objeto wrapper RAII, como um ponteiro inteligente, chama a função Delete ou Close apropriada em seu destruidor. No código de exceção segura, é extremamente importante passar a propriedade de cada recurso imediatamente para algum tipo de objeto RAII. Observe que as `vector` `string` classes,, `make_shared` , `fstream` e semelhantes manipulam a aquisição do recurso para você.  No entanto, `unique_ptr` e as `shared_ptr` construções tradicionais são especiais porque a aquisição de recursos é executada pelo usuário em vez do objeto; portanto, elas contam como *liberação de recursos é a destruição* , mas é questionável como RAII.
 
 ## <a name="the-three-exception-guarantees"></a>As três garantias de exceção
 
@@ -93,7 +93,7 @@ Normalmente, a segurança de exceção é discutida em termos das três garantia
 
 ### <a name="no-fail-guarantee"></a>Garantia sem falha
 
-A garantia sem falha (ou, "no-throw") é a garantia mais forte que uma função pode fornecer. Ele informa que a função não lançará uma exceção ou permitirá que uma seja propagada. No entanto, você não pode fornecer de forma confiável tal garantia, a menos que (a) você saiba que todas as funções que essa função chama também não têm falha, ou (b) você sabe que todas as exceções que são geradas são detectadas antes de alcançar essa função, ou (c) você sabe como capturar e manipule corretamente todas as exceções que podem alcançar essa função.
+A garantia sem falha (ou, "no-throw") é a garantia mais forte que uma função pode fornecer. Ele informa que a função não lançará uma exceção ou permitirá que uma seja propagada. No entanto, você não pode fornecer de forma confiável tal garantia, a menos que (a) você saiba que todas as funções que essa função chama também não têm falha, ou (b) você sabe que todas as exceções que são geradas são detectadas antes que elas cheguem a essa função, ou (c) você sabe como capturar e lidar corretamente com todas as exceções que possam alcançar essa
 
 Tanto a garantia forte quanto a garantia básica dependem da suposição de que os destruidores não são-falham. Todos os contêineres e tipos na biblioteca padrão garantem que seus destruidores não lançam. Também há um requisito de inverso: a biblioteca padrão requer que os tipos definidos pelo usuário que são fornecidos a ele — por exemplo, como argumentos de modelo — devem ter destruidores sem lançamento.
 
@@ -115,11 +115,11 @@ Os tipos internos são todos sem falha e os tipos de biblioteca padrão oferecem
 
 - Entenda que uma exceção gerada em um construtor de classe base não pode ser assimilada em um construtor de classe derivada. Se você quiser converter e relançar a exceção de classe base em um Construtor derivado, use um bloco try de função.
 
-- Considere a possibilidade de armazenar todo o estado da classe em um membro de dados que esteja encapsulado em um ponteiro inteligente, especialmente se uma classe tiver um conceito de "inicialização com permissão para falhar". Embora C++ o permita membros de dados não inicializados, ele não oferece suporte a instâncias de classe não inicializadas ou parcialmente iniciadas. Um construtor deve ser bem-sucedida ou falhar; nenhum objeto será criado se o construtor não for executado até a conclusão.
+- Considere a possibilidade de armazenar todo o estado da classe em um membro de dados que esteja encapsulado em um ponteiro inteligente, especialmente se uma classe tiver um conceito de "inicialização com permissão para falhar". Embora o C++ permita membros de dados não inicializados, ele não oferece suporte a instâncias de classe não inicializadas ou parcialmente iniciadas. Um construtor deve ser bem-sucedida ou falhar; nenhum objeto será criado se o construtor não for executado até a conclusão.
 
 - Não permita que nenhuma exceção escape de um destruidor. Um axioma básico do C++ é que os destruidores nunca devem permitir que uma exceção propague a pilha de chamadas. Se um destruidor precisar executar uma operação de lançamento de exceção potencialmente, ele deverá fazer isso em um bloco try catch e assimilar a exceção. A biblioteca padrão fornece essa garantia em todos os destruidores que ele define.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Práticas C++ recomendadas modernas para exceções e tratamento de erros](errors-and-exception-handling-modern-cpp.md)<br/>
-[Como realizar a interface entre códigos excepcionais e não excepcionais](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Práticas recomendadas do C++ moderno para exceções e tratamento de erros](errors-and-exception-handling-modern-cpp.md)<br/>
+[Como: interface entre códigos excepcionais e não excepcionais](how-to-interface-between-exceptional-and-non-exceptional-code.md)

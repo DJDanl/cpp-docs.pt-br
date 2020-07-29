@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3166
 ms.assetid: ec3e330d-c15d-4158-8268-09101486c566
-ms.openlocfilehash: 17efd401314e93ff710be2c1e6f187a938e388b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1915d58f73ce8d16135951b359c3f0fd48aea3ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174297"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230864"
 ---
 # <a name="compiler-error-c3166"></a>Erro do compilador C3166
 
-'ponteiro': não é possível declarar um ponteiro para um ponteiro interior GC como um membro de 'type'
+> ' pointer ': não é possível declarar um ponteiro para um ponteiro de __gc interior como membro de ' type '
 
-O compilador encontrou uma declaração de ponteiro inválido (um `__nogc` ponteiro para um `__gc` ponteiro.).
+O compilador encontrou uma declaração de ponteiro inválida (um **`__nogc`** ponteiro para um **`__gc`** ponteiro.).
 
-C3166 só está acessível usando a opção de compilador obsoletos **/CLR: oldSyntax**.
+C3166 só pode ser acessado usando a opção de compilador obsoleto **`/clr:oldSyntax`** .

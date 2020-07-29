@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ada10b5989b714ec4c75a24de1bbb101e1f51ee6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230760"
 ---
 # <a name="compiler-warning-c4957"></a>Aviso do compilador C4957
 
@@ -21,9 +21,9 @@ ms.locfileid: "80164893"
 
 Uma conversão resultará em uma imagem não verificável.
 
-Algumas conversões são seguras (por exemplo, um `static_cast` que dispara conversões definidas pelo usuário e uma `const_cast`). Uma [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) é garantida para produzir código verificável.
+Algumas conversões são seguras (por exemplo, um **`static_cast`** que dispara conversões definidas pelo usuário e a **`const_cast`** ). Uma [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) é garantida para produzir código verificável.
 
-Para obter mais informações, consulte [puro e verificável CodeC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Para obter mais informações, consulte [código puro e verificável (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 A opção de compilador **/CLR: safe** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017.
 

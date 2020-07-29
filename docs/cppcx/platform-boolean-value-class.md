@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-ms.openlocfilehash: c97ce0171fcf8f28254ce3f91b91f4d1711ad813
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9297c0062a3c64a4e830e083b515aef41416e527
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161687"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230955"
 ---
 # <a name="platformboolean-value-class"></a>Platform::classe de valor booliano
 
-Representa um valor booliano. O equivalente de `bool`.
+Representa um valor booliano. O equivalente de **`bool`** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,14 +30,14 @@ O booliano possui os métodos Equals(), GetHashCode() e ToString() derivados da 
 
 ### <a name="requirements"></a>Requisitos
 
-**Cliente com suporte mínimo:** Windows 8
+**Mínimo de cliente com suporte:** Windows 8
 
-**Servidor com suporte mínimo:** Windows Server 2012
+**Mínimo de servidor com suporte:** Windows Server 2012
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
-**Metadados:** platform.winmd
+**Metadados:** Platform. winmd
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

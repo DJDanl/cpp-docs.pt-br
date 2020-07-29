@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: 940eae39222548ec74bda8ccb38e669748ffa74f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ea7341b9c587a764c7366fa7b7c89e4fc67bc7d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738395"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230851"
 ---
 # <a name="compiler-error-c3490"></a>Erro do compilador C3490
 
 ' var ' não pode ser modificado porque está sendo acessado por meio de um objeto const
 
-Uma expressão lambda que é declarada em um método `const` não pode modificar dados de membros não mutáveis.
+Uma expressão lambda que é declarada em um **`const`** método não pode modificar dados de membros não mutáveis.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
-- Remova o modificador `const` da declaração do método.
+- Remova o **`const`** modificador da declaração do método.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3490 porque ele modifica a variável de membro `_i` em um método `const`:
+O exemplo a seguir gera C3490 porque ele modifica a variável de membro `_i` em um **`const`** método:
 
 ```cpp
 // C3490a.cpp
@@ -44,7 +44,7 @@ class C
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir resolve C3490 removendo o modificador `const` da declaração do método:
+O exemplo a seguir resolve C3490 removendo o **`const`** modificador da declaração do método:
 
 ```cpp
 // C3490b.cpp
@@ -61,6 +61,6 @@ class C
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)
