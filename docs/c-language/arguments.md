@@ -9,12 +9,12 @@ helpviewer_keywords:
 - function arguments
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
-ms.openlocfilehash: e60a7935cdddc116848b64461b064c5fd5cdd00a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1c88034044c74a542384873454f993b6bce3244
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313502"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232658"
 ---
 # <a name="arguments"></a>Argumentos
 
@@ -22,7 +22,7 @@ Os argumentos em uma chamada de função têm este formato:
 
 > *expressão* **(** *opcional de expressão-lista de expressões*<SUB>opt</SUB> **)** /* chamada de função */
 
-Em uma chamada de função, *expression-list* é uma lista de expressões (separadas por vírgula). Os valores dessas últimas expressões são os argumentos passados para a função. Se a função não utiliza argumentos, a *expression-list* deve conter a palavra-chave `void`.
+Em uma chamada de função, *expression-list* é uma lista de expressões (separadas por vírgula). Os valores dessas últimas expressões são os argumentos passados para a função. Se a função não usar argumentos, a *lista de expressões* deverá conter a palavra-chave **`void`** .
 
 Um argumento pode ser qualquer valor com fundamental, estrutura, união ou tipo de ponteiro. Todos os argumentos são passados por valor. Isso significa que uma cópia do argumento será atribuída ao parâmetro correspondente. A função não sabe o local real da memória do argumento passado. A função usará essa cópia sem afetar a variável da qual foi derivada originalmente.
 
@@ -34,7 +34,7 @@ A *expression-list* em uma chamada de função é avaliada e as conversões arit
 
 O número de expressões em *expression-list* deve corresponder ao número de parâmetros, a menos que o protótipo ou a definição da função especifique explicitamente um número variável de argumentos. Nesse caso, o compilador verifica quantos argumentos houver nos nomes de tipo na lista de parâmetros e os converte, se necessário, conforme descrito acima. Consulte [chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obter mais informações.
 
-Se a lista de parâmetros do protótipo contém apenas a palavra-chave `void`, o compilador espera zero argumentos na chamada de função e zero parâmetros na definição. Uma mensagem de diagnóstico será emitida se encontrar argumentos.
+Se a lista de parâmetros do protótipo contiver apenas a palavra-chave **`void`** , o compilador esperará zero argumentos na chamada de função e nenhum parâmetro na definição. Uma mensagem de diagnóstico será emitida se encontrar argumentos.
 
 ## <a name="example"></a>Exemplo
 
@@ -65,7 +65,7 @@ void swap( int *num1, int *num2 )
 }
 ```
 
-Neste exemplo, a função `swap` é declarada em `main` como tendo dois argumentos, respectivamente representados pelos identificadores `num1` e `num2`, ambos são ponteiros para os valores `int`. Os parâmetros `num1` e `num2` na definição de estilo do protótipo também são declarados como ponteiros para os valores do tipo `int`.
+Neste exemplo, a `swap` função é declarada em `main` para ter dois argumentos, representados respectivamente por identificadores `num1` e `num2` , ambos, são ponteiros para **`int`** valores. Os parâmetros `num1` e `num2` na definição de estilo de protótipo também são declarados como ponteiros para **`int`** valores de tipo.
 
 Na chamada de função
 
@@ -73,7 +73,7 @@ Na chamada de função
 swap( &x, &y )
 ```
 
-o endereço de `x` é armazenado em `num1`, e o endereço de `y` é armazenado em `num2`. Agora há dois nomes ou "aliases" para o mesmo local. As referências a `*num1` e a `*num2` em `swap` são efetivamente referências a `x` e a `y` em `main`. As atribuições de `swap` trocam realmente o conteúdo de `x` e `y`. Consequentemente, nenhuma instrução `return` é necessária.
+o endereço de `x` é armazenado em `num1`, e o endereço de `y` é armazenado em `num2`. Agora há dois nomes ou "aliases" para o mesmo local. As referências a `*num1` e a `*num2` em `swap` são efetivamente referências a `x` e a `y` em `main`. As atribuições de `swap` trocam realmente o conteúdo de `x` e `y`. Portanto, nenhuma **`return`** instrução é necessária.
 
 O compilador executa a verificação de tipo nos argumentos para `swap` porque o protótipo de `swap` inclui tipos de argumento para cada parâmetro. Os identificadores entre parênteses do protótipo e a definição podem ser iguais ou diferentes. O importante aqui é que os tipos dos argumentos correspondam aos das listas de parâmetros no protótipo e na definição.
 

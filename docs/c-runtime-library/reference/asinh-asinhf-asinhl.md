@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919615"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232645"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -58,7 +58,7 @@ float asinh( float x );  // C++ only
 long double asinh( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Valor de ponto flutuante.
@@ -73,7 +73,7 @@ As funções **asinh** retornam o seno hyberbolic inverso (seno hiperbólico de 
 
 ## <a name="remarks"></a>Comentários
 
-Ao usar o C++, você pode chamar sobrecargas de **asinh** que levam e retornam valores **long** **duplos** **float** ou Long. Em um programa C, **asinh** sempre leva e retorna **Double**.
+Ao usar o C++, você pode chamar sobrecargas de **asinh** que usam e retornam **`float`** **`long double`** valores. Em um programa C, **asinh** sempre leva e retorna **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -81,7 +81,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Função|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> ou \<Math. h<|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath>ou \< Math. h<|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -115,7 +115,7 @@ asinh( 0.868671 ) = 0.785398
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
