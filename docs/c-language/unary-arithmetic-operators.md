@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logical negation
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
-ms.openlocfilehash: f64bc5107cf0df55fd445d04d557e952702deaee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0acbd98e25c05fee6fb5217bf00d80287460dbeb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290658"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189916"
 ---
 # <a name="unary-arithmetic-operators"></a>Operadores aritméticos unários
 
@@ -29,7 +29,7 @@ Vários operadores do C – unário de adição, de negação aritmética, de co
 |**+**|O operador unário de adição que precede uma expressão entre parênteses força o agrupamento das operações incluídas. É usado com expressões que envolvem mais de um operador binário associativo ou comutativo. O operando deve ser do tipo aritmético. O resultado é o valor do operando. Um operando de integral passa por uma promoção de integral. O tipo do resultado é o tipo do operando promovido.|
 |**-**|O operador de negação aritmética produz o negativo (complemento de dois) do respectivo operando. O operando deve ser um valor de integral ou flutuante. Este operador executa as conversões aritméticas comuns.|
 |`~`|O operador de complemento bit a bit (ou NOT bit a bit) produz o complemento bit a bit do respectivo operando. O operando deve ser do tipo integral. Este operador executa as conversões aritméticas comuns; o resultado tem o tipo do operando após a conversão.|
-|**!**|O operador de negação lógica (NOT lógico) produz o valor 0 se o operando é verdadeiro (diferente de zero) e o valor 1 se o operando é falso (0). O resultado tem o tipo `int`. O operando deve ser um valor de ponteiro, integral ou flutuante.|
+|**!**|O operador de negação lógica (NOT lógico) produz o valor 0 se o operando é verdadeiro (diferente de zero) e o valor 1 se o operando é falso (0). O resultado tem **`int`** tipo. O operando deve ser um valor de ponteiro, integral ou flutuante.|
 
 Operações aritméticas unárias em ponteiros não são válidas.
 

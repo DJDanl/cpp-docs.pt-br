@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5e1fe80f3bc1f581c6ea05c54409b1e76eacfce7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857145"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190215"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Atributos de classe de armazenamento estendido C
 
@@ -27,17 +27,17 @@ A sintaxe de atributo estendido para a especificação de informações de class
 ## <a name="syntax"></a>Sintaxe
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-Modifier-Seq* **)**  / \* específico da Microsoft\*/
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-Modifier-Seq* **)**  / \* Específico da Microsoft\*/
 
-*Extended-decl-Modifier-Seq*:&nbsp; &nbsp; &nbsp; &nbsp; / \* específico da Microsoft\*/<br/>
+*Extended-decl-Modifier-Seq*: &nbsp; &nbsp; &nbsp; &nbsp; / \* específico da Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Extended-decl-Modifier*:&nbsp; &nbsp; &nbsp; &nbsp; / \* específico da Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**processo**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**descoberto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
+*Extended-decl-Modifier*: &nbsp; &nbsp; &nbsp; &nbsp; / \* específico da Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**
 
 O espaço em branco separa os modificadores de declaração. Observe que *extended-decl-modifier-seq* pode ser vazio; nesse caso, __declspec não tem efeito.
 

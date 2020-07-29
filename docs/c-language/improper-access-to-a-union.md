@@ -2,12 +2,12 @@
 title: Acesso inadequado a uma união
 ms.date: 11/04/2016
 ms.assetid: b273d984-62a8-4003-9a87-bf0149d3f2dd
-ms.openlocfilehash: 9fd7bdc753f6359a8760e58813f9009411c1bf44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a804ed80c8f1ac2f5dd9a24f12c67e96e199b6b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326125"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227823"
 ---
 # <a name="improper-access-to-a-union"></a>Acesso inadequado a uma união
 
@@ -15,7 +15,7 @@ ms.locfileid: "62326125"
 
 Se uma união de dois tipos é declarada e um valor é armazenado, mas a união é acessada com o outro tipo, os resultados são não confiáveis.
 
-Por exemplo, uma união de **float** e `int` é declarada. Um valor **float** é armazenado, mas o programa acessa posteriormente o valor como `int`. Nessa situação, o valor dependeria do armazenamento interno de valores **float**. O valor inteiro não seria confiável.
+Por exemplo, uma União de **`float`** e **`int`** é declarada. Um **`float`** valor é armazenado, mas o programa mais tarde acessa o valor como um **`int`** . Nessa situação, o valor dependeria do armazenamento interno de **`float`** valores. O valor inteiro não seria confiável.
 
 ## <a name="see-also"></a>Confira também
 

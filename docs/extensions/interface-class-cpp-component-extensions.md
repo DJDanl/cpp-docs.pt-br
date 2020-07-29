@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172159"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228694"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>classe de interface (C++/CLI e C++/CX)
 
@@ -32,13 +32,13 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 ### <a name="parameters"></a>parâmetros
 
 *interface_access*<br/>
-A acessibilidade de uma interface fora do assembly.  Os valores possíveis são **public** e **private**.  **private** é o padrão. Interfaces aninhadas não pode ter um especificador *interface_access*.
+A acessibilidade de uma interface fora do assembly.  Os valores possíveis são **`public`** e **`private`** .  **`private`** é o padrão. Interfaces aninhadas não pode ter um especificador *interface_access*.
 
 *name*<br/>
 O nome da interface.
 
 *inherit_access*<br/>
-A acessibilidade de *base_interface*.  A única acessibilidade permitida para uma interface base é **public** (o padrão).
+A acessibilidade de *base_interface*.  A única acessibilidade permitida para uma interface base é **`public`** (o padrão).
 
 *base_interface*<br/>
 (Opcional) Uma interface base para a interface *name*.
@@ -63,9 +63,9 @@ Confira mais informações sobre outros tipos de CLR em [Classes e structs](clas
 
 Em tempo de compilação, você pode detectar se um tipo é uma interface com `__is_interface_class(type)`. Saiba mais em [Suporte para compilador de traços de tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-No ambiente de desenvolvimento, é possível obter ajuda com F1 sobre essas palavras-chave, destacando a palavra-chave, (`interface class`, por exemplo) e pressionando F1.
+No ambiente de desenvolvimento, você pode obter ajuda F1 sobre essas palavras-chave, destacando a palavra-chave ( **`interface class`** , por exemplo) e pressionando F1.
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 ### <a name="remarks"></a>Comentários
 
@@ -220,4 +220,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -1,5 +1,5 @@
 ---
-title: '/Guard: ehcont (habilitar metadados de continuação de EH)'
+title: /guard:ehcont (habilitar os metadados de continuação de EH)
 description: 'Guia de referência para a opção de compilador/Guard: ehcont do Microsoft C++.'
 ms.date: 06/03/2020
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: e8775b331440e932efb16148ee15acf1c740cd6e
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84425534"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190514"
 ---
-# <a name="guardehcont-enable-eh-continuation-metadata"></a>/Guard: ehcont (habilitar metadados de continuação de EH)
+# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (habilitar os metadados de continuação de EH)
 
 Habilita a geração de metadados de EHCONT (continuidade de EH) pelo compilador.
 
@@ -33,7 +33,7 @@ A [tecnologia de aplicação de fluxo de controle (CET)](https://software.intel.
 
 Quando as pilhas de sombra estão disponíveis para evitar ataques de ROP, os invasores se movem para usar outras técnicas de exploração. Uma técnica que eles podem usar é corromper o valor do ponteiro de instrução dentro da estrutura de [contexto](/windows/win32/api/winnt/ns-winnt-context) . Essa estrutura é passada em chamadas do sistema que redirecionam a execução de um thread, como `NtContinue` , [`RtlRestoreContext`](/windows/win32/api/winnt/nf-winnt-rtlrestorecontext) e [`SetThreadContext`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadcontext) . A `CONTEXT` estrutura é armazenada na memória. Corromper o ponteiro de instrução que ele contém pode fazer com que as chamadas do sistema transfiram a execução para um endereço controlado pelo invasor. No momento, `NTContinue` pode ser chamado com qualquer ponto de continuação. É por isso que é essencial validar o ponteiro de instrução quando as pilhas de sombra estão habilitadas.
 
-`RtlRestoreContext`e `NtContinue` são usados durante o desenrolamento da exceção de manipulação de exceção estruturada (SEH) para desenrolar para o quadro de destino que contém o `__except` bloco. O ponteiro de instrução do `__except` bloco não deve estar na pilha de sombra, pois ele falharia na validação do ponteiro de instrução. A **`/guard:ehcont`** opção de compilador gera uma "tabela de continuação de eh". Ele contém uma lista classificada do RVAs de todos os destinos de continuação de tratamento de exceção válidos no binário. `NtContinue`Primeiro, verifica a pilha de sombra para o ponteiro de instrução fornecido pelo usuário e, se o ponteiro de instrução não for encontrado lá, ele continuará a verificar a tabela de continuação de EH a partir do binário que contém o ponteiro de instrução. Se o binário que o contém não tiver sido compilado com a tabela, então para compatibilidade com binários herdados, `NtContinue` poderá continuar. É importante distinguir entre binários herdados que não têm dados EHCONT e binários contendo dados EHCONT, mas sem entradas de tabela. O primeiro permitir todos os endereços dentro do binário como destinos de continuação válidos. O último não permite nenhum endereço dentro do binário como um destino de continuação válido.
+`RtlRestoreContext`e `NtContinue` são usados durante o desenrolamento da exceção de manipulação de exceção estruturada (SEH) para desenrolar para o quadro de destino que contém o **`__except`** bloco. O ponteiro de instrução do **`__except`** bloco não deve estar na pilha de sombra, pois ele falharia na validação do ponteiro de instrução. A **`/guard:ehcont`** opção de compilador gera uma "tabela de continuação de eh". Ele contém uma lista classificada do RVAs de todos os destinos de continuação de tratamento de exceção válidos no binário. `NtContinue`Primeiro, verifica a pilha de sombra para o ponteiro de instrução fornecido pelo usuário e, se o ponteiro de instrução não for encontrado lá, ele continuará a verificar a tabela de continuação de EH a partir do binário que contém o ponteiro de instrução. Se o binário que o contém não tiver sido compilado com a tabela, então para compatibilidade com binários herdados, `NtContinue` poderá continuar. É importante distinguir entre binários herdados que não têm dados EHCONT e binários contendo dados EHCONT, mas sem entradas de tabela. O primeiro permitir todos os endereços dentro do binário como destinos de continuação válidos. O último não permite nenhum endereço dentro do binário como um destino de continuação válido.
 
 A **`/guard:ehcont`** opção deve ser passada para o compilador e o vinculador para gerar RVAs de destino de continuação de eh para um binário. Se seu binário for criado usando um único `cl` comando, o compilador passará a opção para o vinculador. O compilador também passa a [**`/guard:cf`**](guard-enable-control-flow-guard.md) opção para o vinculador. Se você compilar e vincular separadamente, essas opções deverão ser definidas no compilador e nos comandos do vinculador.
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 23d31e1456106d5f82c4a13079c72c231b8477bd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30ca602ecc65099adff7300f730c500a31fe0ed5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190476"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227602"
 ---
 # <a name="break-statement-c"></a>Instrução break (C++)
 
-A instrução **Break** termina a execução do loop de fechamento ou da instrução condicional mais próxima na qual ele aparece. O controle passa para a instrução que segue o encerramento da instrução, se houver.
+A **`break`** instrução encerra a execução do loop delimitador ou da instrução condicional mais próxima na qual ele aparece. O controle passa para a instrução que segue o encerramento da instrução, se houver.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,17 +25,17 @@ break;
 
 ## <a name="remarks"></a>Comentários
 
-A instrução **Break** é usada com a instrução [switch](../cpp/switch-statement-cpp.md) condicional e [com as instruções](../cpp/do-while-statement-cpp.md)do loop do, [for](../cpp/for-statement-cpp.md)e [while](../cpp/while-statement-cpp.md) .
+A **`break`** instrução é usada com a instrução [switch](../cpp/switch-statement-cpp.md) condicional e com as [do](../cpp/do-while-statement-cpp.md)instruções do [for](../cpp/for-statement-cpp.md)loop do as, e [while](../cpp/while-statement-cpp.md) .
 
-Em uma instrução **switch** , a instrução **Break** faz com que o programa execute a próxima instrução fora da instrução **switch** . Sem uma instrução **Break** , todas as instruções do rótulo **Case** correspondente ao final da instrução **switch** , incluindo a cláusula **Default** , são executadas.
+Em uma **`switch`** instrução, a **`break`** instrução faz com que o programa execute a próxima instrução fora da **`switch`** instrução. Sem uma **`break`** instrução, cada instrução do rótulo correspondente **`case`** ao final da **`switch`** instrução, incluindo a **`default`** cláusula, é executada.
 
-Em loops, a instrução **Break** encerra a execução da instrução do, **for**ou **while** mais próxima de **delimitação.** O controle passa para a instrução que segue a instrução encerrada, se houver.
+Em loops, a **`break`** instrução encerra a execução da **`do`** instrução, ou, delimitadora mais próxima **`for`** **`while`** . O controle passa para a instrução que segue a instrução encerrada, se houver.
 
-Em instruções aninhadas, a instrução **Break** encerra apenas a instrução **do**, **for**, **switch**ou **while** que a imediatamente o inclui. Você pode usar uma instrução **Return** ou **goto** para transferir o controle de estruturas mais profundamente aninhadas.
+Em instruções aninhadas, a **`break`** instrução encerra apenas a **`do`** instrução,, **`for`** **`switch`** ou **`while`** que a inclui imediatamente. Você pode usar uma **`return`** **`goto`** instrução or para transferir o controle de estruturas mais profundamente aninhadas.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como usar a instrução **Break** em um loop **for** .
+O código a seguir mostra como usar a **`break`** instrução em um **`for`** loop.
 
 ```cpp
 #include <iostream>
@@ -71,7 +71,7 @@ In each case:
 3
 ```
 
-O código a seguir mostra como usar **Break** em um loop **while** e um loop **do** .
+O código a seguir mostra como usar **`break`** o em um **`while`** loop e um **`do`** loop.
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ In each case:
 0123
 ```
 
-O código a seguir mostra como usar **Break** em uma instrução switch. Você deve usar a **quebra** em todos os casos se desejar manipular cada caso separadamente; Se você não usar **Break**, a execução do código passará para o próximo caso.
+O código a seguir mostra como usar **`break`** em uma instrução switch. Você deve usar **`break`** em todos os casos se desejar manipular cada caso separadamente; se você não usar **`break`** , a execução do código passará para o próximo caso.
 
 ```cpp
 #include <iostream>
@@ -155,4 +155,4 @@ int main() {
 
 [Instruções de atalho](../cpp/jump-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[Instrução continue](../cpp/continue-statement-cpp.md)
+[Instrução Continue](../cpp/continue-statement-cpp.md)

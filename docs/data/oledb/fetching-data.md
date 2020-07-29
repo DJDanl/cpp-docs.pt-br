@@ -1,5 +1,5 @@
 ---
-title: Recuperando dados
+title: Buscar dados
 ms.date: 10/19/2018
 helpviewer_keywords:
 - data [C++], fetching
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 441f036d1677806e81bc419ec6a45e810e63a34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409053"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184638"
 ---
-# <a name="fetching-data"></a>Recuperando dados
+# <a name="fetching-data"></a>Buscar dados
 
-Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você pode buscar dados. Dependendo do tipo de acessador que você está usando, você precisará associar colunas.
+Depois de abrir a fonte de dados, a sessão e os objetos de conjunto de linhas, você pode buscar dados. Dependendo do tipo de acessador que você estiver usando, talvez seja necessário associar colunas.
 
 ## <a name="to-fetch-data"></a>Para buscar dados
 
-1. Abra o conjunto de linhas usando apropriado **abrir** comando.
+1. Abra o conjunto de linhas usando o comando **abrir** apropriado.
 
-1. Se você estiver usando `CManualAccessor`, associar as colunas de saída, se você ainda não fez isso. O exemplo a seguir é retirado do [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) exemplo. Para associar as colunas, chame `GetColumnInfo`e, em seguida, crie um acessador com as associações, conforme mostrado no exemplo a seguir:
+1. Se você estiver usando `CManualAccessor` o, associe as colunas de saída se ainda não tiver feito isso. O exemplo a seguir é extraído do exemplo [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) . Para associar as colunas, chame `GetColumnInfo` e, em seguida, crie um acessador com as associações, conforme mostrado no exemplo a seguir:
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -39,7 +39,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
     rs.Bind();
     ```
 
-1. Gravar uma **enquanto** loop para recuperar os dados. No loop, chame `MoveNext` para avançar o cursor e testar o valor de retorno com S_OK, conforme mostrado no exemplo a seguir:
+1. Escreva um **`while`** loop para recuperar os dados. No loop, chame `MoveNext` para avançar o cursor e teste o valor de retorno em relação a S_OK, conforme mostrado no exemplo a seguir:
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -49,9 +49,9 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
     }
     ```
 
-1. Dentro de **enquanto** loop, você pode buscar os dados de acordo com seu tipo de acessador.
+1. Dentro do **`while`** loop, você pode buscar os dados de acordo com o tipo de acessador.
 
-   - Se você usar o [CAccessor](../../data/oledb/caccessor-class.md) classe, você deve ter um registro de usuário que contém membros de dados. Você pode acessar seus dados usando os membros de dados, conforme mostrado no exemplo a seguir:
+   - Se você usar a classe [CAccessor](../../data/oledb/caccessor-class.md) , deverá ter um registro de usuário que contenha membros de dados. Você pode acessar seus dados usando esses membros de dados, conforme mostrado no exemplo a seguir:
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -63,7 +63,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
         }
         ```
 
-   - Se você usar o `CDynamicAccessor` ou `CDynamicParameterAccessor` classe, você pode buscar dados usando as funções de acesso `GetValue` e `GetColumn`, conforme mostrado no exemplo a seguir. Se você quiser determinar o tipo de dados você está usando, use `GetType`.
+   - Se você usar a `CDynamicAccessor` `CDynamicParameterAccessor` classe ou, poderá buscar dados usando as funções de acesso `GetValue` e `GetColumn` , conforme mostrado no exemplo a seguir. Se você quiser determinar o tipo de dados que está usando, use `GetType` .
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -78,7 +78,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
         }
         ```
 
-   - Se você usar `CManualAccessor`, você deve especificar seus próprios membros de dados, ligá-los e acessá-los diretamente, conforme mostrado no exemplo a seguir:
+   - Se você usar `CManualAccessor` o, deverá especificar seus próprios membros de dados, associá-los por conta própria e acessá-los diretamente, conforme mostrado no exemplo a seguir:
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -90,6 +90,6 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
         }
         ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[Trabalhando com modelos de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -7,24 +7,22 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bf31423cd76c838cbeffa7458bbccb89592bf43
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181519"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227615"
 ---
 # <a name="allocate"></a>allocate
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-O especificador de Declaração **ALLOCATE** nomeia um segmento de dados no qual o item de dados será alocado.
+O **`allocate`** especificador de declaração nomeia um segmento de dados no qual o item de dados será alocado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-   __declspec(allocate("segname")) declarator
-```
+> **`__declspec(allocate("`***segname* **`))`** *Declarador*
 
 ## <a name="remarks"></a>Comentários
 
@@ -38,7 +36,7 @@ O nome *segname* deve ser declarado usando um dos seguintes pragmas:
 
 - [init_seg](../preprocessor/init-seg.md)
 
-- [seção](../preprocessor/section.md)
+- [Section](../preprocessor/section.md)
 
 ## <a name="example"></a>Exemplo
 
@@ -51,9 +49,9 @@ int main() {
 }
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

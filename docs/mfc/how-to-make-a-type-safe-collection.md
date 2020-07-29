@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 6ee4603f03ef8a95c218b0fe040e9606aab99ebb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620017"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228616"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Como fazer uma coleção fortemente tipada
 
@@ -63,7 +63,7 @@ Os operadores de inserção sobrecarregados para `CArchive` chamada `CObject::Se
 
 ## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>Usando classes de coleção não modelo
 
-O MFC também dá suporte às classes de coleção introduzidas com a versão 1,0 do MFC. Essas classes não são baseadas em modelos. Eles podem ser usados para conter dados dos tipos com suporte `CObject*` , `UINT` , `DWORD` e `CString` . Você pode usar essas coleções predefinidas (como `CObList` ) para manter coleções de quaisquer objetos derivados de `CObject` . O MFC também fornece outras coleções predefinidas para manter tipos primitivos, como `UINT` ponteiros void ( `void` *). Em geral, no entanto, geralmente é útil definir suas próprias coleções de tipo seguro para manter objetos de uma classe mais específica e seus derivativos. Observe que fazer isso com as classes de coleção não baseadas em modelos é mais trabalho do que usar as classes baseadas em modelo.
+O MFC também dá suporte às classes de coleção introduzidas com a versão 1,0 do MFC. Essas classes não são baseadas em modelos. Eles podem ser usados para conter dados dos tipos com suporte `CObject*` , `UINT` , `DWORD` e `CString` . Você pode usar essas coleções predefinidas (como `CObList` ) para manter coleções de quaisquer objetos derivados de `CObject` . O MFC também fornece outras coleções predefinidas para manter tipos primitivos como, `UINT` e ponteiros void ( **`void*`** ). Em geral, no entanto, geralmente é útil definir suas próprias coleções de tipo seguro para manter objetos de uma classe mais específica e seus derivativos. Observe que fazer isso com as classes de coleção não baseadas em modelos é mais trabalho do que usar as classes baseadas em modelo.
 
 Há duas maneiras de criar coleções com segurança de tipo com as coleções de não modelo:
 
@@ -97,6 +97,6 @@ Há duas maneiras de criar coleções com segurança de tipo com as coleções d
 
    Você também pode adicionar novas funcionalidades definindo novas funções que estendem os recursos da coleção em vez de simplesmente encapsular a funcionalidade existente em wrappers de tipo seguro. Por exemplo, o artigo [excluindo todos os objetos em uma coleção CObject](deleting-all-objects-in-a-cobject-collection.md) descreve uma função para excluir todos os objetos contidos em uma lista. Essa função pode ser adicionada à classe derivada como uma função de membro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Coleções](collections.md)

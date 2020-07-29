@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 495dc3cf77df79336af364eb80ea7edf17b54400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334568"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227862"
 ---
 # <a name="function-calls"></a>Chamadas de função
 
@@ -20,7 +20,7 @@ Uma *chamada de função* é uma expressão que passa o controle e os argumentos
 
 *expressão* (<sub>opt</sub>*de lista de expressões*)
 
-em que *expression* é um nome de função ou é avaliado em um endereço de função e *expression-list* é uma lista de expressões (separadas por vírgulas). Os valores dessas últimas expressões são os argumentos passados para a função. Se a função não retorna um valor, você a declara para ser uma função que retorna `void`.
+em que *expression* é um nome de função ou é avaliado em um endereço de função e *expression-list* é uma lista de expressões (separadas por vírgulas). Os valores dessas últimas expressões são os argumentos passados para a função. Se a função não retornar um valor, você o declarará como uma função que retorna **`void`** .
 
 Se uma declaração existe antes da chamada de função, mas nenhuma informação é fornecida quanto aos parâmetros, os argumentos não declarados simplesmente passam pelas conversões aritméticas comuns.
 
@@ -31,7 +31,7 @@ O único requisito em qualquer chamada de função é que a expressão antes dos
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo ilustra as chamadas de função de uma instrução `switch`:
+Este exemplo ilustra chamadas de função chamadas de uma **`switch`** instrução:
 
 ```
 int main()
@@ -81,9 +81,9 @@ work( count, lift );
 
 passa uma variável de inteiro, `count`, e o endereço da função `lift` para a função `work`. Observe que o endereço da função é passado simplesmente fornecendo o identificador de função, pois um identificador de função é avaliado em uma expressão de ponteiro. Para usar um identificador de função dessa forma, a função deve ser declarada ou definida antes que o identificador seja usado; caso contrário, o identificador não é reconhecido. Nesse caso, um protótipo para `work` é fornecido no início da função `main`.
 
-O parâmetro `function` em `work` é declarado para ser um ponteiro para uma função usando um argumento `int` e retornando um valor **long**. Os parênteses ao redor do nome do parâmetro são necessários; sem eles, a declaração especificaria uma função que retorna um ponteiro para um valor **long**.
+O parâmetro `function` em `work` é declarado como um ponteiro para uma função que assume um **`int`** argumento e retorna um **`long`** valor. Os parênteses em volta do nome do parâmetro são obrigatórios; sem eles, a declaração especificaria uma função que retornasse um ponteiro para um **`long`** valor.
 
-A função `work` chama a função selecionada de dentro do loop **for** usando a seguinte chamada de função:
+A função `work` chama a função selecionada de dentro do **`for`** loop usando a seguinte chamada de função:
 
 ```
 ( *function )( i );
