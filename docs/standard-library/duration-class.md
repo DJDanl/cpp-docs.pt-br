@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 3669935bf094f476ca24a8170a0388dff29e0a0c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 454c03aeb1a4666543a28759d02405a512453ffc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368762"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217786"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -50,7 +50,7 @@ O argumento de modelo `Rep` descreve o tipo que é usado para manter o número d
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Duração](#duration)|Constrói um objeto `duration`.|
+|[duration](#duration)|Constrói um objeto `duration`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -58,30 +58,30 @@ O argumento de modelo `Rep` descreve o tipo que é usado para manter o número d
 |----------|-----------------|
 |[contagem](#count)|Retorna o número de tiques do relógio no intervalo de tempo.|
 |[max](#max)|Estático. Retorna o valor máximo permitido do parâmetro de modelo `Ref`.|
-|[Min](#min)|Estático. Retorna o menor valor permitido do parâmetro de modelo `Ref`.|
-|[Zero](#zero)|Estático. Na verdade, retorna `Rep`(0).|
+|[min](#min)|Estático. Retorna o menor valor permitido do parâmetro de modelo `Ref`.|
+|[zero](#zero)|Estático. Na verdade, retorna `Rep`(0).|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[duração::operador-](#operator-)|Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados.|
-|[duração::operador--](#operator--)|Diminui a contagem de tiques armazenados.|
-|[duração::operador=](#op_eq)|Reduz o módulo de contagem de tiques armazenados de um valor especificado.|
+|[Duração:: operador-](#operator-)|Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados.|
+|[Duração:: operador--](#operator--)|Diminui a contagem de tiques armazenados.|
+|[Duração:: operador =](#op_eq)|Reduz o módulo de contagem de tiques armazenados de um valor especificado.|
 |[duration::operator*=](#op_star_eq)|Multiplica de contagem de tiques armazenados por um valor especificado.|
-|[duração::operador/=](#op_div_eq)|Divide a contagem de tiques armazenados pela contagem de tiques de um objeto `duration` especificado.|
-|[duração::operador+](#op_add)|Retorna `*this`.|
-|[duração::operador++](#op_add_add)|Aumenta a contagem de tiques armazenados.|
-|[duração::operador+=](#op_add_eq)|Adiciona a contagem de tiques de um objeto `duration` especificado para a contagem de tiques armazenados.|
-|[duração::operador-=](#operator-_eq)|Subtrai a contagem de tiques de um objeto `duration` especificado da contagem de tiques armazenados.|
+|[Duração:: operador/=](#op_div_eq)|Divide a contagem de tiques armazenados pela contagem de tiques de um objeto `duration` especificado.|
+|[Duração:: operador +](#op_add)|Retorna **`*this`** .|
+|[Duração:: operador + +](#op_add_add)|Aumenta a contagem de tiques armazenados.|
+|[Duração:: operador + =](#op_add_eq)|Adiciona a contagem de tiques de um objeto `duration` especificado para a contagem de tiques armazenados.|
+|[Duração:: operador-=](#operator-_eq)|Subtrai a contagem de tiques de um objeto `duration` especificado da contagem de tiques armazenados.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<crono>
+**Cabeçalho:**\<chrono>
 
 **Namespace:** std::chrono
 
-## <a name="durationcount"></a><a name="count"></a>duração::contagem
+## <a name="durationcount"></a><a name="count"></a>Duração:: contagem
 
 Recupera o número de tiques do relógio no intervalo de tempo.
 
@@ -93,7 +93,7 @@ constexpr Rep count() const;
 
 O número de tiques do relógio no intervalo de tempo.
 
-## <a name="durationduration-constructor"></a><a name="duration"></a>duração: construtor :duration
+## <a name="durationduration-constructor"></a><a name="duration"></a>Duração::d Construtor de uração
 
 Constrói um objeto `duration`.
 
@@ -107,35 +107,35 @@ template <class Rep2, class Period2>
 constexpr duration(const duration<Rep2, Period2>& Dur);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rep2*\
 Um tipo aritmético para representar o número de tiques.
 
-*Período2*\
+*Period2*\
 Uma especialização de modelo `std::ratio` para representar o período de tiques em unidades de segundos.
 
-*R*\
+*D*\
 O número de tiques de período padrão.
 
-*Dur*\
-O número de carrapatos do período especificado pelo *Período2*.
+*Duração*\
+O número de tiques do período especificado por *Period2*.
 
 ### <a name="remarks"></a>Comentários
 
 O construtor padrão constrói um objeto que não foi inicializado. A inicialização de valor usando chaves vazias inicializa um objeto que representa um intervalo de tempo de zero tique do relógio.
 
-O segundo, um construtor de argumento de modelo, constrói *R* um objeto que representa `std::ratio<1>`um intervalo de tempo de marcadores de relógio R usando um período padrão de . Para evitar a repetição da contagem de carrapatos, é um erro construir um objeto de duração `duration::rep` a partir de um tipo de representação *Rep2* que pode ser tratado como um tipo de ponto flutuante quando não pode ser tratado como um tipo de ponto flutuante.
+O segundo, um construtor de argumento de modelo, constrói um objeto que representa um intervalo de tempo de tiques de relógio de *R* usando um período padrão de `std::ratio<1>` . Para evitar arredondamento de contagens em escala, é um erro construir um objeto Duration de um tipo de representação *Rep2* que pode ser tratado como um tipo de ponto flutuante quando `duration::rep` não pode ser tratado como um tipo de ponto flutuante.
 
-O terceiro, construtor de argumento de dois modelos, constrói um objeto que representa um intervalo de tempo cujo comprimento é o intervalo de tempo especificado por *Dur*. Para evitar o truncamento de contagens de tique, é um erro construir um objeto de duração de outro objeto de duração cujo tipo é *incomensurável* com o tipo de destino.
+O terceiro construtor de argumento de dois modelos constrói um objeto que representa um intervalo de tempo cujo comprimento é o intervalo de tempo especificado por *dur*. Para evitar o truncamento de contagens de tique, é um erro construir um objeto de duração de outro objeto de duração cujo tipo é *incomensurável* com o tipo de destino.
 
-Um tipo de duração `D1` é *incomensurável* com outro tipo de duração `D2` se `D2` não puder ser tratado como um tipo de ponto flutuante e [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) não for 1.
+Um tipo de duração `D1` é *incommensurable* com outro tipo de duração `D2` se `D2` não puder ser tratado como um tipo de ponto flutuante e [ratio_divide \<D1::period, D2::period> :: Type::d en](../standard-library/ratio.md) não for 1.
 
-A menos que *o Rep2* seja implicitamente conversível `rep` e `treat_as_floating_point<rep>` *mantenha-se verdadeiro* ou `treat_as_floating_point<Rep2>` *mantenha falso,* o segundo construtor não participa na resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
+A menos que *Rep2* seja implicitamente conversível `rep` e `treat_as_floating_point<rep>` *mantenha true* ou `treat_as_floating_point<Rep2>` *mantenha false*, o segundo construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
 
 A menos que nenhum estouro seja induzido na conversão e for `treat_as_floating_point<rep>`*verdadeiro* ou `ratio_divide<Period2, period>::den` for igual a 1 e `treat_as_floating_point<Rep2>`*falso*, o terceiro construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="durationmax"></a><a name="max"></a>duração::máx
+## <a name="durationmax"></a><a name="max"></a>Duração:: máx.
 
 O método estático que retorna o limite superior para valores de tipo de parâmetro de modelo `Ref`.
 
@@ -147,7 +147,7 @@ static constexpr duration max();
 
 Na verdade, retorna `duration(duration_values<rep>::max())`.
 
-## <a name="durationmin"></a><a name="min"></a>duração::min
+## <a name="durationmin"></a><a name="min"></a>Duração:: mín.
 
 O método estático que retorna o limite inferior para valores de tipo de parâmetro de modelo `Ref`.
 
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 Na verdade, retorna `duration(duration_values<rep>::min())`.
 
-## <a name="durationoperator-"></a><a name="operator-"></a>duração::operador-
+## <a name="durationoperator-"></a><a name="operator-"></a>Duração:: operador-
 
 Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados.
 
@@ -167,7 +167,7 @@ Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados
 constexpr duration operator-() const;
 ```
 
-## <a name="durationoperator--"></a><a name="operator--"></a>duração::operador--
+## <a name="durationoperator--"></a><a name="operator--"></a>Duração:: operador--
 
 Diminui a contagem de tiques armazenados.
 
@@ -179,11 +179,11 @@ duration operator--(int);
 
 ### <a name="return-value"></a>Valor retornado
 
-O primeiro método retorna `*this`.
+O primeiro método retorna **`*this`** .
 
-O segundo método retorna uma cópia de `*this` que é feita antes do decremento.
+O segundo método retorna uma cópia de **`*this`** que é feita antes do decréscimo.
 
-## <a name="durationoperator"></a><a name="op_eq"></a>duração::operador=
+## <a name="durationoperator"></a><a name="op_eq"></a>Duração:: operador =
 
 Reduz o módulo de contagem de tiques armazenados de um valor especificado.
 
@@ -193,16 +193,16 @@ duration& operator%=(const rep& Div);
 duration& operator%=(const duration& Div);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Div*\
-Para o primeiro método, *Div* representa uma contagem de carrapatos. Para o segundo método, `duration` *Div* é um objeto que contém uma contagem de carrapatos.
+*Marca*\
+Para o primeiro método, *div* representa uma contagem de tiques. Para o segundo método, *div* é um `duration` objeto que contém uma contagem de tiques.
 
 ### <a name="return-value"></a>Valor retornado
 
 O objeto `duration` após a operação do módulo é executado.
 
-## <a name="durationoperator"></a><a name="op_star_eq"></a>duração::operador*=
+## <a name="durationoperator"></a><a name="op_star_eq"></a>Duração:: operador * =
 
 Multiplica de contagem de tiques armazenados por um valor especificado.
 
@@ -210,7 +210,7 @@ Multiplica de contagem de tiques armazenados por um valor especificado.
 duration& operator*=(const rep& Mult);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Mult*\
 Um valor do tipo especificado por `duration::rep`.
@@ -219,7 +219,7 @@ Um valor do tipo especificado por `duration::rep`.
 
 O objeto `duration` após a multiplicação é executado.
 
-## <a name="durationoperator"></a><a name="op_div_eq"></a>duração::operador/=
+## <a name="durationoperator"></a><a name="op_div_eq"></a>Duração:: operador/=
 
 Divide a contagem de tiques armazenados por um valor especificado.
 
@@ -227,24 +227,24 @@ Divide a contagem de tiques armazenados por um valor especificado.
 duration& operator/=(const rep& Div);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Div*\
+*Marca*\
 Um valor do tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor retornado
 
 O objeto `duration` após a divisão é executado.
 
-## <a name="durationoperator"></a><a name="op_add"></a>duração::operador+
+## <a name="durationoperator"></a><a name="op_add"></a>Duração:: operador +
 
-Retorna `*this`.
+Retorna **`*this`** .
 
 ```cpp
 constexpr duration operator+() const;
 ```
 
-## <a name="durationoperator"></a><a name="op_add_add"></a>duração::operador++
+## <a name="durationoperator"></a><a name="op_add_add"></a>Duração:: operador + +
 
 Aumenta a contagem de tiques armazenados.
 
@@ -256,11 +256,11 @@ duration operator++(int);
 
 ### <a name="return-value"></a>Valor retornado
 
-O primeiro método retorna `*this`.
+O primeiro método retorna **`*this`** .
 
-O segundo método retorna uma cópia de `*this` que é feita antes do incremento.
+O segundo método retorna uma cópia de **`*this`** que é feita antes do incremento.
 
-## <a name="durationoperator"></a><a name="op_add_eq"></a>duração::operador+=
+## <a name="durationoperator"></a><a name="op_add_eq"></a>Duração:: operador + =
 
 Adiciona a contagem de tiques de um objeto `duration` especificado para a contagem de tiques armazenados.
 
@@ -268,16 +268,16 @@ Adiciona a contagem de tiques de um objeto `duration` especificado para a contag
 duration& operator+=(const duration& Dur);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dur*\
-Um objeto `duration` .
+*Duração*\
+Um objeto `duration`.
 
 ### <a name="return-value"></a>Valor retornado
 
 O objeto `duration` depois que a adição é executada.
 
-## <a name="durationoperator-"></a><a name="operator-_eq"></a>duração::operador-=
+## <a name="durationoperator-"></a><a name="operator-_eq"></a>Duração:: operador-=
 
 Subtrai a contagem de tiques de um objeto `duration` especificado da contagem de tiques armazenados.
 
@@ -285,16 +285,16 @@ Subtrai a contagem de tiques de um objeto `duration` especificado da contagem de
 duration& operator-=(const duration& Dur);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dur*\
-Um objeto `duration` .
+*Duração*\
+Um objeto `duration`.
 
 ### <a name="return-value"></a>Valor retornado
 
 O objeto `duration` depois que a subtração é executada.
 
-## <a name="durationzero"></a><a name="zero"></a>duração::zero
+## <a name="durationzero"></a><a name="zero"></a>Duração:: zero
 
 Retorna `duration(duration_values<rep>::zero())`.
 
@@ -302,7 +302,7 @@ Retorna `duration(duration_values<rep>::zero())`.
 static constexpr duration zero();
 ```
 
-## <a name="durationoperator-mod"></a><a name="op_mod_eq"></a>duração::operador mod=
+## <a name="durationoperator-mod"></a><a name="op_mod_eq"></a>Duração:: operador Mod =
 
 Reduz o módulo de contagem de tiques armazenados Div ou Div.count().
 
@@ -310,9 +310,9 @@ Reduz o módulo de contagem de tiques armazenados Div ou Div.count().
 duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Div*\
+*Marca*\
 O divisor, que é um objeto de duração ou um valor que representa as contagens de tiques.
 
 ### <a name="remarks"></a>Comentários
@@ -322,5 +322,5 @@ A primeira função de membro reduz do módulo de contagem de tiques armazenados
 ## <a name="see-also"></a>Confira também
 
 [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[\<crono>](../standard-library/chrono.md)\
+[\<chrono>](../standard-library/chrono.md)\
 [Estrutura duration_values](../standard-library/duration-values-structure.md)

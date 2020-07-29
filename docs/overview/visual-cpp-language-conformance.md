@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d4ec3036a5c4d42d9d98e91f628416b75e596d12
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630456"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213938"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabela de conformidade com a linguagem Microsoft C++
 
@@ -397,7 +397,7 @@ __VS 2019 16,6__ indica recursos com suporte no Visual Studio 2019 versão 16,6.
 
 ### <a name="notes"></a>Observações
 
-<a name="note_A"></a>__R__ no [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) modo, as especificações de exceção dinâmicas permanecem inimplementadas e `throw()` ainda são tratadas como um sinônimo para `__declspec(nothrow)` . No C++17, as especificações de exceções dinâmicas foram, em grande parte, removidas por P0003R5, deixando um vestígio: `throw()` foi preterido e obrigado a se comportar como um sinônimo de `noexcept`. No [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) modo, MSVC agora está em conformidade com o padrão, dando `throw()` o mesmo comportamento que `noexcept` , ou seja, imposição por encerramento.
+<a name="note_A"></a>__R__ no [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) modo, as especificações de exceção dinâmicas permanecem inimplementadas e `throw()` ainda são tratadas como um sinônimo para `__declspec(nothrow)` . No C++ 17, as especificações de exceção dinâmicas foram, na maioria, removidas pelo P0003R5, deixando um vestige: `throw()` é preterido e necessário se comportar como um sinônimo para **`noexcept`** . No [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) modo, MSVC agora está em conformidade com o padrão, dando `throw()` o mesmo comportamento que **`noexcept`** , ou seja, imposição por encerramento.
 
 A opção do compilador [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) solicita nosso comportamento antigo de `__declspec(nothrow)` . É provável que o `throw()` seja removido no c++ 20. Para ajudar com a migração de código em resposta a essas alterações no padrão e em nossa implementação, novos avisos do compilador para problemas de especificação de exceção foram adicionados em [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) e [`/permissive-`](../build/reference/permissive-standards-conformance.md) .
 
@@ -407,7 +407,7 @@ A opção do compilador [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttype
 
 <a name="note_D"></a>__D__ com suporte em [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) com um aviso de suppressible, [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) .
 
-<a name="note_E"></a>__E__ essa é uma implementação totalmente nova, incompatível com a versão anterior `std::experimental` , tornada necessária pelo suporte do symlink, correções de bugs e alterações no comportamento padrão requerido. Atualmente, a inclusão de \<filesystem> fornece o novo `std::filesystem` e o `std::experimental::filesystem` anterior, e a inclusão de \<experimental/filesystem> fornece somente a implementação antiga experimental. A implementação experimental será REMOVIDA na próxima versão ABI recente das bibliotecas.
+<a name="note_E"></a>__E__ essa é uma implementação totalmente nova, incompatível com a versão anterior `std::experimental` , tornada necessária pelo suporte do symlink, correções de bugs e alterações no comportamento padrão requerido. Atualmente, incluindo o \<filesystem> fornece o novo `std::filesystem` e o anterior `std::experimental::filesystem` , e incluindo \<experimental/filesystem> o fornece apenas a implementação experimental antiga. A implementação experimental será REMOVIDA na próxima versão ABI recente das bibliotecas.
 
 <a name="note_G"></a> __G__ Compatível com um compilador intrínseco.
 

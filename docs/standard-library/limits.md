@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2d0f4f96d25c91ac20fe5a1883fc61fc47d15d5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687815"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217682"
 ---
 # <a name="ltlimitsgt"></a>&lt;limites&gt;
 
@@ -20,13 +20,13 @@ Define o modelo de classe `numeric_limits` e duas enumerações relacionadas a r
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<limits>
+**Cabeçalho:**\<limits>
 
 **Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
-Especializações explícitas da classe `numeric_limits` descrevem muitas propriedades dos tipos fundamentais, incluindo o caractere, o inteiro e os tipos de ponto flutuante e **bool** que são definidos em vez de serem corrigidos pelas regras do C++ idioma. Propriedades descritas em \<limits> incluem precisão, representações de tamanho mínimo e máximo, arredondamento e erros de tipo de sinalização.
+Especializações explícitas da `numeric_limits` classe descrevem muitas propriedades dos tipos fundamentais, incluindo o caractere, o inteiro e os tipos de ponto flutuante e **`bool`** que são definidos em vez de serem corrigidos pelas regras da linguagem C++. As propriedades descritas em \<limits> incluem precisão, representações de tamanho mínimo e máximo, arredondamento e erros de tipo de sinalização.
 
 ## <a name="members"></a>Membros
 
@@ -43,7 +43,7 @@ Especializações explícitas da classe `numeric_limits` descrevem muitas propri
 |-|-|
 |[Classe numeric_limits](../standard-library/numeric-limits-class.md)|O modelo de classe descreve as propriedades aritméticas de tipos numéricos internos.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

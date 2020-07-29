@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 243c75f4726927c54989c33c1738e38938aa5f64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189475"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221673"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
-Este tópico é sobre a declaração declspec preterida específica da Microsoft. Para obter informações sobre o atributo `[[deprecated]]` do c++ 14 e orientação sobre quando usar esse atributo versus o declspec ou pragma específico da Microsoft, consulte [ C++ atributos padrão](attributes.md).
+Este tópico é sobre a declaração declspec preterida específica da Microsoft. Para obter informações sobre o atributo C++ 14 `[[deprecated]]` e orientação sobre quando usar esse atributo versus o declspec ou pragma específico da Microsoft, consulte [atributos padrão do C++](attributes.md).
 
-Com as exceções indicadas abaixo, a Declaração **preterida** oferece a mesma funcionalidade que o pragma [preterido](../preprocessor/deprecated-c-cpp.md) :
+Com as exceções indicadas abaixo, a **`deprecated`** declaração oferece a mesma funcionalidade que o pragma [preterido](../preprocessor/deprecated-c-cpp.md) :
 
-- A Declaração **preterida** permite que você especifique formas específicas de sobrecargas de função como preteridas, enquanto o formulário pragma se aplica a todas as formas sobrecarregadas de um nome de função.
+- A **`deprecated`** declaração permite que você especifique formas específicas de sobrecargas de função como preteridas, enquanto o formulário pragma se aplica a todas as formas sobrecarregadas de um nome de função.
 
-- A Declaração **preterida** permite especificar uma mensagem que será exibida no momento da compilação. O texto da mensagem pode ser de uma macro.
+- A **`deprecated`** declaração permite que você especifique uma mensagem que será exibida no momento da compilação. O texto da mensagem pode ser de uma macro.
 
-- As macros só podem ser marcadas como preteridas com o pragma **preterido** .
+- As macros só podem ser marcadas como preteridas com o **`deprecated`** pragma.
 
-Se o compilador encontrar o uso de um identificador preterido ou do atributo de [`[[deprecated]]`](attributes.md) padrão, um aviso de [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) será gerado.
+Se o compilador encontrar o uso de um identificador substituído ou o atributo padrão [`[[deprecated]]`](attributes.md) , um aviso de [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) será gerado.
 
 ## <a name="example"></a>Exemplo
 

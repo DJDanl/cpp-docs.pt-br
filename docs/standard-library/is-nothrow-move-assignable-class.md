@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
-ms.openlocfilehash: 8273be92a9c7e60e446b3c2b561a6020e70fb2f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 92e3364843b5614c9fa108d33605b35962726aa2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455889"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217734"
 ---
-# <a name="isnothrowmoveassignable-class"></a>Classe is_nothrow_move_assignable
+# <a name="is_nothrow_move_assignable-class"></a>Classe is_nothrow_move_assignable
 
-Testa se o tipo tem um operador de atribuição de movimentação **nothrow**.
+Testa se o tipo tem um **`nothrow`** operador de atribuição de movimentação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,7 +24,7 @@ template <class Ty>
 struct is_nothrow_move_assignable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -35,10 +35,10 @@ Uma instância do predicado de tipo se aplica true se o tipo *Ty* tiver um opera
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)

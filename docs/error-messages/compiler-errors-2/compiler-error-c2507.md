@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2507
 ms.assetid: f102aff5-de7d-4c3f-9cac-2ddf9ce02b14
-ms.openlocfilehash: 23433dccd7fc4f86c2e848359ac50c796fcccab0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 944eaeadb038e6466d65859f72900db164cfe34d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746793"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221153"
 ---
 # <a name="compiler-error-c2507"></a>Erro do compilador C2507
 
 ' identifier ': muitos modificadores virtuais na classe base
 
-Uma classe ou estrutura é declarada como `virtual` mais de uma vez. Somente um modificador de `virtual` pode aparecer para cada classe em uma lista de classes base.
+Uma classe ou estrutura é declarada como **`virtual`** mais de uma vez. Somente um **`virtual`** modificador pode aparecer para cada classe em uma lista de classes base.
 
 O exemplo a seguir gera C2507:
 

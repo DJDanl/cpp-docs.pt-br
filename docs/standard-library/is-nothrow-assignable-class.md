@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7130079ff58820ec5a8893fd248c5b98fc10c93c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456015"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222362"
 ---
-# <a name="isnothrowassignable-class"></a>Classe is_nothrow_assignable
+# <a name="is_nothrow_assignable-class"></a>Classe is_nothrow_assignable
 
 Testa se um valor de *do* tipo pode ser atribuído ao *tipo e* a atribuição é conhecida como não acionada.
 
@@ -24,7 +24,7 @@ template <class To, class From>
 struct is_nothrow_assignable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Para*\
 O tipo do objeto que recebe a atribuição.
@@ -34,14 +34,14 @@ O tipo do objeto que fornece o valor.
 
 ## <a name="remarks"></a>Comentários
 
-A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não efetua lançamentos. Tanto *de* e *para* devem ser tipos completos, **void**ou matrizes de associação desconhecida.
+A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não efetua lançamentos. Tanto *de* e *para* devem ser tipos completos, **`void`** , ou matrizes de associação desconhecida.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)

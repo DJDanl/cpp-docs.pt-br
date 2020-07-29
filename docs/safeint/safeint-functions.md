@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334919"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219333"
 ---
 # <a name="safeint-functions"></a>Funções (SafeInt)
 
@@ -81,7 +81,7 @@ inline bool SafeAdd (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número a adicionar. Deve ser do tipo T.
@@ -92,9 +92,9 @@ inline bool SafeAdd (
 *result*<br/>
 [out] O parâmetro em que `SafeAdd` armazena o resultado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se nenhum erro ocorrer; **false** se ocorrer um erro.
+**`true`** Se nenhum erro ocorrer; **`false`** se ocorrer um erro.
 
 ## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
@@ -108,7 +108,7 @@ inline bool SafeCast (
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *De*<br/>
 [in] O número de origem para converter. Deve ser do tipo `T`.
@@ -116,9 +116,9 @@ inline bool SafeCast (
 *Para*<br/>
 [out] Uma referência ao novo tipo de número. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se nenhum erro ocorrer; **false** se ocorrer um erro.
+**`true`** Se nenhum erro ocorrer; **`false`** se ocorrer um erro.
 
 ## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide
 
@@ -133,7 +133,7 @@ inline bool SafeDivide (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O dividendo. Deve ser do tipo T.
@@ -144,9 +144,9 @@ inline bool SafeDivide (
 *result*<br/>
 [out] O parâmetro em que `SafeDivide` armazena o resultado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se nenhum erro ocorrer; **false** se ocorrer um erro.
+**`true`** Se nenhum erro ocorrer; **`false`** se ocorrer um erro.
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
@@ -160,7 +160,7 @@ inline bool SafeEquals (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número para comparar. Deve ser do tipo T.
@@ -168,9 +168,9 @@ inline bool SafeEquals (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo U.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se *t* e *u* forem iguais, caso contrário, **false**.
+**`true`** Se *t* e *u* forem iguais; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -188,7 +188,7 @@ inline bool SafeGreaterThan (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número para comparar. Deve ser do tipo `T`.
@@ -196,9 +196,9 @@ inline bool SafeGreaterThan (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se *t* for maior que *u*; caso contrário, **false**.
+**`true`** Se *t* for maior que *u*; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -216,7 +216,7 @@ inline bool SafeGreaterThanEquals (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número para comparar. Deve ser do tipo `T`.
@@ -224,9 +224,9 @@ inline bool SafeGreaterThanEquals (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se *t* for maior que ou igual a *u*; caso contrário, **false**.
+**`true`** Se *t* for maior ou igual a *u*; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -244,7 +244,7 @@ inline bool SafeLessThan (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número. Deve ser do tipo `T`.
@@ -252,9 +252,9 @@ inline bool SafeLessThan (
 *u*<br/>
 no O segundo número. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se *t* for menor que *u*; caso contrário, **false**.
+**`true`** Se *t* for menor que *u*; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -272,7 +272,7 @@ inline bool SafeLessThanEquals (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número para comparar. Deve ser do tipo `T`.
@@ -280,9 +280,9 @@ inline bool SafeLessThanEquals (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se *t* for menor que ou igual a *u*; caso contrário, **false**.
+**`true`** Se *t* for menor ou igual a *u*; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -301,7 +301,7 @@ inline bool SafeModulus (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O divisor. Deve ser do tipo `T`.
@@ -312,9 +312,9 @@ inline bool SafeModulus (
 *result*<br/>
 [out] O parâmetro em que `SafeModulus` armazena o resultado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se nenhum erro ocorrer; **false** se ocorrer um erro.
+**`true`** Se nenhum erro ocorrer; **`false`** se ocorrer um erro.
 
 ## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
@@ -329,7 +329,7 @@ inline bool SafeMultiply (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número para multiplicar. Deve ser do tipo `T`.
@@ -340,9 +340,9 @@ inline bool SafeMultiply (
 *result*<br/>
 [out] O parâmetro em que `SafeMultiply` armazena o resultado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-`true` se não ocorrer erro; `false` se ocorrer um erro.
+**`true`** Se nenhum erro ocorrer; **`false`** se ocorrer um erro.
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
@@ -356,7 +356,7 @@ inline bool SafeNotEquals (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número para comparar. Deve ser do tipo `T`.
@@ -364,9 +364,9 @@ inline bool SafeNotEquals (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se *t* e *u* não forem iguais; caso contrário, **false**.
+**`true`** Se *t* e *u* não forem iguais; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -385,7 +385,7 @@ inline bool SafeSubtract (
 ) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *t*<br/>
 [in] O primeiro número na subtração. Deve ser do tipo `T`.
@@ -396,6 +396,6 @@ inline bool SafeSubtract (
 *result*<br/>
 [out] O parâmetro em que `SafeSubtract` armazena o resultado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se nenhum erro ocorrer; **false** se ocorrer um erro.
+**`true`** Se nenhum erro ocorrer; **`false`** se ocorrer um erro.

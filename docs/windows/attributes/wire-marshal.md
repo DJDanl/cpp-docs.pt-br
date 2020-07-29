@@ -1,17 +1,17 @@
 ---
-title: wire_marshal (C++ atributo com)
+title: wire_marshal (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: 0bf6b2ab353b8ad8866de5b2c7c79959306ee954
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ff01d20117e2f04aca96b0fee7489d7195cc7488
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215222"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213769"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -53,14 +53,14 @@ O código a seguir mostra um uso de **wire_marshal**:
 
 |||
 |-|-|
-|**Aplica-se a**|**typedef**|
+|**Aplica-se a**|**`typedef`**|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

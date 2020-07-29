@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 3eae1aca53c40a33b8d120b02fdde8f68d58b723
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0d5e4836933f1ce32f28c7fd03c81be5b7d09fd9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160419"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222076"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Como: criar uma caixa de diálogo (C++)
 
-O local e o tamanho de C++ uma caixa de diálogo e o local e o tamanho dos controles dentro dela, são medidos em unidades de diálogo. Os valores para controles individuais e a caixa de diálogo aparecem no canto inferior direito da barra de status do Visual Studio quando você os seleciona.
+O local e o tamanho de uma caixa de diálogo do C++ e o local e o tamanho dos controles dentro dela são medidos em unidades de diálogo. Os valores para controles individuais e a caixa de diálogo aparecem no canto inferior direito da barra de status do Visual Studio quando você os seleciona.
 
 > [!NOTE]
 > Se o seu projeto ainda não contiver um arquivo. rc, consulte [criando um novo arquivo de script de recurso](../windows/how-to-create-a-resource-script-file.md).
@@ -46,7 +46,7 @@ Você também pode abrir caixas de diálogo existentes no editor de caixa de di�
 
 Você pode criar uma caixa de diálogo de tempo de execução que um usuário não pode sair. Esse tipo de caixa de diálogo é útil para logons e para bloqueios de aplicativo ou de documento.
 
-1. No painel **Propriedades** da caixa de diálogo, defina a propriedade **menu do sistema** como **false**.
+1. No painel **Propriedades** da caixa de diálogo, defina a propriedade **menu do sistema** como **`false`** .
 
    Essa configuração desabilita o menu do sistema da caixa de diálogo e o botão **fechar** .
 
@@ -57,7 +57,7 @@ Você pode criar uma caixa de diálogo de tempo de execução que um usuário n�
 Para habilitar o teste desse tipo de caixa de diálogo, a função de caixa de diálogo teste detecta quando **ESC** é pressionado. A **ESC** também é conhecida como a chave virtual VK_ESCAPE. Não importa como a caixa de diálogo é projetada para se comportar no tempo de execução, você pode encerrar o modo de teste pressionando **ESC**.
 
 > [!NOTE]
-> Para aplicativos MFC, para criar uma caixa de diálogo que os usuários não podem sair, você deve substituir o comportamento padrão de `OnOK` e `OnCancel` porque, mesmo que você exclua os botões associados, a caixa de diálogo ainda pode ser descartada pressionando **Enter** ou **ESC**.
+> Para aplicativos MFC, para criar uma caixa de diálogo que os usuários não podem sair, você deve substituir o comportamento padrão de `OnOK` e, `OnCancel` como mesmo se excluir os botões associados, a caixa de diálogo ainda poderá ser descartada pressionando **Enter** ou **ESC**.
 
 ### <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>Para especificar o local e o tamanho de uma caixa de diálogo
 
@@ -69,7 +69,7 @@ Há propriedades que podem ser definidas na [janela Propriedades](/visualstudio/
 
 - As propriedades **XPos** e **YPos** que são usadas para definir explicitamente onde a caixa de diálogo será exibida.
 
-   Essas propriedades de posição são valores de deslocamento do canto superior esquerdo da área de exibição, que é definida como `{X=0, Y=0}`.
+   Essas propriedades de posição são valores de deslocamento do canto superior esquerdo da área de exibição, que é definida como `{X=0, Y=0}` .
 
 - A propriedade de **alinhamento absoluta** que afeta a posição.
 
@@ -92,7 +92,7 @@ Quando você estiver criando uma caixa de diálogo, poderá simular e testar seu
 
 Quando você testa uma caixa de diálogo, ela normalmente é exibida em um local relativo à janela do programa principal. Se você tiver definido a propriedade de **alinhamento absoluta** da caixa de diálogo como **true**, a caixa de diálogo será exibida em uma posição relativa ao canto superior esquerdo da tela.
 
-1. Quando o **Editor de caixa de diálogo** for a janela ativa, vá para **formato** de menu > caixa de **diálogo de teste**.
+1. Quando o **Editor de caixa de diálogo** for a janela ativa, vá para menu **Formatar**  >  **caixa de diálogo de teste**.
 
 1. Para encerrar a simulação, pressione **ESC** ou selecione o botão **fechar** na caixa de diálogo que você está testando.
 
@@ -102,5 +102,5 @@ Win32
 
 ## <a name="see-also"></a>Confira também
 
-[Editor de caixa de diálogo](../windows/dialog-editor.md)<br/>
+[Editor de diálogo](../windows/dialog-editor.md)<br/>
 [Como: gerenciar controles da caixa de diálogo](../windows/controls-in-dialog-boxes.md)<br/>

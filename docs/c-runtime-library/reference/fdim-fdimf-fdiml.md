@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941294"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221907"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -73,26 +73,26 @@ long double fdiml(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O primeiro valor.
 
-*y*<br/>
+*Iar*<br/>
 O segundo valor.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna a diferença positiva entre *x* e *y*:
 
-|Valor retornado|Cenário|
+|Retornar valor|Cenário|
 |------------------|--------------|
 |x-y|se x > y|
 |0|se x <= y|
 
 Caso contrário, pode retornar um dos seguintes erros:
 
-|Problema|Valor de|
+|Problema|Retorno|
 |-----------|------------|
 |Erro de intervalo de estouro|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
 |Erro de intervalo de estouro negativo|valor correto (após o arredondamento)|
@@ -102,9 +102,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **fdim** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **fdim** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **fdim** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, o **fdim** sempre pega e retorna um **`double`** .
 
-Exceto para a manipulação de NaN, essa função é equivalente `fmax(x - y, 0)`a.
+Exceto para a manipulação de NaN, essa função é equivalente a `fmax(x - y, 0)` .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -112,10 +112,10 @@ Exceto para a manipulação de NaN, essa função é equivalente `fmax(x - y, 0)
 |--------------|--------------|------------------|
 |**fdim**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

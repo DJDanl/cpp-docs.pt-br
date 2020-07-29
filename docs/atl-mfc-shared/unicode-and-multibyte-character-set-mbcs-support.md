@@ -10,90 +10,90 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: e1b93a3540cba553afd8f133c18496bddbd561b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 217690e09ed595bb9fa9572693bf774259c42412
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317431"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219021"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Suporte a Unicode e Multibyte Character Set (MBCS)
 
-Algumas línguas, por exemplo, japonesas e chinesas, têm grandes conjuntos de caracteres. Para suportar a programação para esses mercados, o Microsoft Foundation Class Library (MFC) permite duas abordagens diferentes para lidar com grandes conjuntos de caracteres:
+Alguns idiomas, por exemplo, japonês e chinês, têm grandes conjuntos de caracteres. Para dar suporte à programação para esses mercados, a biblioteca MFC (MFC) permite duas abordagens diferentes para lidar com conjuntos de caracteres grandes:
 
-- [Unicode](#mfc-support-for-unicode-strings) `wchar_t` , com base em caracteres largos e strings codificados como UTF-16.
+- [Unicode](#mfc-support-for-unicode-strings), **`wchar_t`** caracteres largos e cadeias com base codificados como UTF-16.
 
-- [Conjuntos de caracteres multibytes (MBCS)](#mfc-support-for-mbcs-strings), caracteres e strings baseados em **caracteres** de um ou dois bytes baseados em char codificados em um conjunto de caracteres específicos do local.
+- [MBCS (conjuntos de caracteres multibyte)](#mfc-support-for-mbcs-strings), **`char`** com base em caracteres únicos ou duplos de byte e cadeias codificados em um conjunto de caracteres específico à localidade.
 
-A Microsoft recomendou as bibliotecas MFC Unicode para todos os novos desenvolvimentos, e as bibliotecas MBCS foram preteridas no Visual Studio 2013 e visual studio 2015. Esse não é mais o caso. Os avisos de depreciação do MBCS foram removidos no Visual Studio 2017.
+A Microsoft recomenda as bibliotecas de MFC Unicode para todo o novo desenvolvimento, e as bibliotecas MBCS foram preteridas no Visual Studio 2013 e no Visual Studio 2015. Esse não é mais o caso. Os avisos de substituição de MBCS foram removidos do Visual Studio 2017.
 
-## <a name="mfc-support-for-unicode-strings"></a>Suporte mfc para strings Unicode
+## <a name="mfc-support-for-unicode-strings"></a>Suporte do MFC para cadeias de caracteres Unicode
 
-Toda a biblioteca de classes Do MFC está habilitada condicionalmente para caracteres Unicode e strings armazenados em caracteres largos como UTF-16. Em particular, a classe [CString](../atl-mfc-shared/reference/cstringt-class.md) é habilitada para Unicode.
+Toda a biblioteca de classes do MFC está condicionalmente habilitada para caracteres Unicode e cadeias de caracteres armazenados na largura de caractere como UTF-16. Em particular, a classe [CString](../atl-mfc-shared/reference/cstringt-class.md) é habilitada para Unicode.
 
-Esses arquivos de biblioteca, depurador e DLL são usados para suportar unicode em MFC:
+Esses arquivos de biblioteca, depurador e DLL são usados para dar suporte ao Unicode no MFC:
 
 |||||
 |-|-|-|-|
-|UAFXCW. Lib|UAFXCW. Pdb|UAFXCWD. Lib|UAFXCWD. Pdb|
-|MFC*versão*U.LIB|MFC*versão*U.PDB|MFC*versão*U.DLL|Versão*MFC*UD. Lib|
-|Versão*MFC*UD. Pdb|Versão*MFC*UD. Dll|MFCS*versão*U.LIB|MFCS*versão*U.PDB|
-|MFCS*versão*UD. Lib|MFCS*versão*UD. Pdb|MFCM*versão*U.LIB|MFCM*versão*U.PDB|
-|MFCM*versão*U.DLL|Versão*MFCM*UD. Lib|Versão*MFCM*UD. Pdb|Versão*MFCM*UD. Dll|
+|UAFXCW. LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
+|*Versão*do MFC U. lib|*Versão*do MFC U. pdb|U.DLL de*versão* do MFC|MFC*versão*UD. LIB|
+|MFC*versão*UD. PDB|UD.DLL de*versão* do MFC|MFCS*versão*U. lib|MFCS*versão*U. pdb|
+|MFCS*versão*UD. LIB|MFCS*versão*UD. PDB|MFCM*versão*U. lib|MFCM*versão*U. pdb|
+|U.DLL*versão* do MFCM|MFCM*versão*UD. LIB|MFCM*versão*UD. PDB|UD.DLL*versão* do MFCM|
 
-*(versão* representa o número da versão do arquivo; por exemplo, '140' significa versão 14.0.)
+(a*versão* representa o número de versão do arquivo; por exemplo, ' 140 ' significa a versão 14,0.)
 
-`CString`é baseado no tipo de dados TCHAR. Se o símbolo _UNICODE for definido para uma compilação `wchar_t`do seu programa, o TCHAR será definido como tipo , um tipo de codificação de caracteres de 16 bits. Caso contrário, TCHAR é definido como **char**, a codificação normal de caracteres de 8 bits. Portanto, sob Unicode, `CString` a é composta de caracteres de 16 bits. Sem unicode, ele é composto de caracteres de tipo **char**.
+`CString`baseia-se no tipo de dados TCHAR. Se o símbolo _UNICODE for definido para uma compilação do seu programa, TCHAR será definido como tipo **`wchar_t`** , um tipo de codificação de caractere de 16 bits. Caso contrário, TCHAR será definido como **`char`** , a codificação normal de caracteres de 8 bits. Portanto, em Unicode, um `CString` é composto de caracteres de 16 bits. Sem o Unicode, ele é composto por caracteres do tipo **`char`** .
 
-Para completar a programação Unicode da sua aplicação, você também deve:
+Para concluir a programação Unicode do seu aplicativo, você também deve:
 
-- Use o _T macro para codificar condicionalmente as strings literais para serem portáteis para unicode.
+- Use a macro _T para codificar condicionalmente cadeias de caracteres literais para serem portáveis para Unicode.
 
-- Quando você passar as strings, preste atenção se os argumentos de função requerem um comprimento nos caracteres ou um comprimento em bytes. A diferença é importante se você estiver usando strings Unicode.
+- Quando você passa cadeias de caracteres, preste atenção para se os argumentos da função exigem um comprimento ou um comprimento em bytes. A diferença é importante se você estiver usando cadeias de caracteres Unicode.
 
-- Use versões portáteis das funções de manuseio de strings em tempo de execução C.
+- Use versões portáteis das funções de manipulação de cadeia de caracteres de tempo de execução C.
 
-- Use os seguintes tipos de dados para caracteres e ponteiros de caracteres:
+- Use os seguintes tipos de dados para caracteres e ponteiros de caractere:
 
-  - Use TCHAR onde você usaria **char**.
+  - Use TCHAR para usar **`char`** .
 
-  - Use LPTSTR onde você usaria **char**<strong>\*</strong>.
+  - Use LPTSTR Onde você usaria **`char`** <strong>\*</strong> .
 
-  - Use LPCTSTR onde você usaria **const char**<strong>\*</strong>. `CString`fornece ao operador LPCTSTR `CString` para converter entre e LPCTSTR.
+  - Use LPCTSTR em que você usaria **Char const** <strong>\*</strong> . `CString`fornece o operador LPCTSTR para converter entre `CString` e LPCTSTR.
 
-`CString`também fornece construtores, operadores de atribuição e operadores de comparação com reconhecimento unicode.
+`CString`também fornece construtores com reconhecimento de Unicode, operadores de atribuição e operadores de comparação.
 
-A [referência de biblioteca em tempo de execução](../c-runtime-library/c-run-time-library-reference.md) define versões portáteis de todas as suas funções de manuseio de strings. Para obter mais informações, consulte a categoria [Internacionalização](../c-runtime-library/internationalization.md).
+A [referência da biblioteca de tempo de execução](../c-runtime-library/c-run-time-library-reference.md) define versões portáteis de todas as suas funções de manipulação de cadeia de caracteres. Para obter mais informações, consulte a [internacionalização](../c-runtime-library/internationalization.md)de categoria.
 
-## <a name="mfc-support-for-mbcs-strings"></a>Suporte MFC para strings MBCS
+## <a name="mfc-support-for-mbcs-strings"></a>Suporte do MFC para cadeias de caracteres MBCS
 
-A biblioteca de classes também está habilitada para conjuntos de caracteres multibytes, mas apenas para conjuntos de caracteres de byte duplo (DBCS).
+A biblioteca de classes também é habilitada para conjuntos de caracteres multibyte, mas apenas para DBCS (conjuntos de caracteres de dois bytes).
 
-Em um conjunto de caracteres multibytes, um personagem pode ter um ou dois bytes de largura. Se for de dois bytes de largura, seu primeiro byte é um "byte de chumbo" especial que é escolhido a partir de uma determinada gama, dependendo de qual página de código está em uso. Juntos, o lead e o "trail bytes" especificam uma codificação de caracteres única.
+Em um conjunto de caracteres multibyte, um caractere pode ter um ou dois bytes de largura. Se tiver dois bytes de largura, seu primeiro byte será um "byte de Lead" especial que é escolhido de um intervalo específico, dependendo de qual página de código está em uso. Em conjunto, o cliente potencial e "bytes de trilha" especificam uma codificação de caracteres exclusiva.
 
-Se o símbolo _MBCS for definido para uma compilação `CString` do seu programa, digite TCHAR, no qual se baseia, mapas para **char**. Cabe a você determinar quais bytes `CString` em um são bytes de chumbo e quais são bytes de trilha. A biblioteca c de tempo de execução fornece funções para ajudá-lo a determinar isso.
+Se o símbolo _MBCS for definido para uma compilação de seu programa, digite TCHAR, no qual `CString` é baseado, é mapeado para **`char`** . Cabe a você determinar quais bytes em um `CString` são bytes de Lead e quais são os bytes de trilha. A biblioteca de tempo de execução do C fornece funções para ajudá-lo a determinar isso.
 
-Em DBCS, uma seqüência dada pode conter todos os caracteres ANSI de byte único, todos os caracteres de byte duplo ou uma combinação dos dois. Essas possibilidades requerem cuidados especiais nas cordas de análise. Isso inclui `CString` objetos.
+Em DBCS, uma determinada cadeia de caracteres pode conter todos os caracteres ANSI de byte único, todos os caracteres de byte duplo ou uma combinação dos dois. Essas possibilidades exigem cuidados especiais na análise de cadeias de caracteres. Isso inclui `CString` objetos.
 
 > [!NOTE]
-> A serialização de seqüência de strings unicode no MFC pode ler as seqüências Unicode e MBCS, independentemente de qual versão do aplicativo você está executando. Seus arquivos de dados são portáteis entre as versões Unicode e MBCS do seu programa.
+> A serialização de cadeia de caracteres Unicode no MFC pode ler cadeias Unicode e MBCS, independentemente da versão do aplicativo que você está executando. Seus arquivos de dados são portáteis entre as versões Unicode e MBCS do seu programa.
 
-`CString`as funções de membro usam versões especiais de "texto genérico" das funções de tempo de execução C que eles chamam, ou usam funções com reconhecimento unicode. Portanto, por exemplo, `CString` se uma função `strcmp`normalmente chamaria, ela `_tcscmp` chama a função de texto genérico correspondente em vez disso. Dependendo de como os símbolos _MBCS `_tcscmp` e _UNICODE são definidos, mapeia da seguinte forma:
+`CString`as funções de membro usam versões especiais de "texto genérico" das funções de tempo de execução C que chamam, ou usam funções que reconhecem Unicode. Portanto, por exemplo, se uma `CString` função normalmente chamar `strcmp` , ele chamará a função de texto genérico correspondente `_tcscmp` em vez disso. Dependendo de como os símbolos _MBCS e _UNICODE são definidos, `_tcscmp` o mapeia da seguinte maneira:
 
 |||
 |-|-|
 |_MBCS definido|`_mbscmp`|
 |_UNICODE definido|`wcscmp`|
-|Nenhum dos símbolos definidos|`strcmp`|
+|Nenhum símbolo definido|`strcmp`|
 
 > [!NOTE]
 > Os símbolos _MBCS e _UNICODE são mutuamente exclusivos.
 
-Os mapeamentos de funções de texto genérico para todas as rotinas de manipulação de strings em tempo de execução são discutidos no [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md). Para obter uma lista, consulte [Internacionalização](../c-runtime-library/internationalization.md).
+Os mapeamentos de função de texto genérico para todas as rotinas de manipulação de cadeia de caracteres de tempo de execução são discutidos em [referência de biblioteca de tempo de execução em C](../c-runtime-library/c-run-time-library-reference.md). Para obter uma lista, consulte [internacionalização](../c-runtime-library/internationalization.md).
 
-Da mesma `CString` forma, os métodos são implementados usando mapeamentos genéricos do tipo de dados. Para habilitar tanto o MBCS quanto o Unicode, o MFC `wchar_t*`usa o TCHAR para **char** ou `wchar_t`, LPTSTR para **char** <strong>\*</strong> ou , e LPCTSTR para **const char** <strong>\*</strong> ou `const wchar_t*`. Estes garantem os mapeamentos corretos para MBCS ou Unicode.
+Da mesma forma, os `CString` métodos são implementados usando mapeamentos de tipo de dados genéricos. Para habilitar MBCS e Unicode, o MFC usa TCHAR para **`char`** ou **`wchar_t`** , LPTStr para **`char`** <strong>\*</strong> or `wchar_t*` e LPCTSTR para **const char** <strong>\*</strong> ou `const wchar_t*` . Eles garantem os mapeamentos corretos para o MBCS ou o Unicode.
 
 ## <a name="see-also"></a>Confira também
 
-[Cordas (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
-[Manipulação de cordas](../c-runtime-library/string-manipulation-crt.md)
+[Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Manipulação de cadeia de caracteres](../c-runtime-library/string-manipulation-crt.md)

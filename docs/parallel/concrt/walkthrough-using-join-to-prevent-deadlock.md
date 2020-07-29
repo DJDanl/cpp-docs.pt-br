@@ -7,12 +7,12 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 4df83e944552fd6c0d2482efa72883d87cd45f8c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 5bdd6cd81051d224714dd66d4604cbdec4ddb552
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140651"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217877"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Instruções passo a passo: usando join para Evitar Deadlock
 
@@ -20,71 +20,71 @@ Este tópico usa o problema do jantar filósofos para ilustrar como usar a class
 
 O problema do jantar filósofos é um exemplo específico do conjunto geral de problemas que podem ocorrer quando um conjunto de recursos é compartilhado entre vários processos simultâneos.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 Leia os tópicos a seguir antes de iniciar este passo a passos:
 
 - [Agentes assíncronos](../../parallel/concrt/asynchronous-agents.md)
 
-- [Instruções passo a passo: criando um aplicativo com base no agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Walkthrough: Criando um aplicativo baseado em agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
-- [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)
+- [Blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Funções de transmissão de mensagem](../../parallel/concrt/message-passing-functions.md)
+- [Funções de passagem de mensagens](../../parallel/concrt/message-passing-functions.md)
 
 - [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a>As
+## <a name="sections"></a><a name="top"></a>As
 
 Este passo a passo contém as seguintes seções:
 
-- [O problema do jantar filósofos](#problem)
+- [O Problema do Jantar dos Filósofos](#problem)
 
 - [Uma implementação ingênua](#deadlock)
 
 - [Usando Join para evitar deadlock](#solution)
 
-## <a name="problem"></a>O problema do jantar filósofos
+## <a name="the-dining-philosophers-problem"></a><a name="problem"></a>O problema do jantar filósofos
 
 O problema do jantar filósofos ilustra como o deadlock ocorre em um aplicativo. Nesse problema, cinco filósofos ficam em uma tabela redonda. Cada filósofo alterna entre o pensamento e o comer. Cada filósofo deve compartilhar um Chopstick com o vizinho à esquerda e outro Chopstick com o vizinho à direita. A ilustração a seguir mostra esse layout.
 
-![O problema do jantar filósofos](../../parallel/concrt/media/dining_philosophersproblem.png "O Problema do Jantar dos Filósofos")
+![O Problema do Jantar dos Filósofos](../../parallel/concrt/media/dining_philosophersproblem.png "O Problema do Jantar dos Filósofos")
 
 Para comer, um filósofo deve conter duas chopsticks. Se todos os filósofos contiverem apenas um chopstick e estiver esperando por outro, nenhum filósofo poderá comer e todos os demais.
 
 [[Superior](#top)]
 
-## <a name="deadlock"></a>Uma implementação ingênua
+## <a name="a-nave-implementation"></a><a name="deadlock"></a>Uma implementação ingênua
 
-O exemplo a seguir mostra uma implementação ingênua do problema do jantar filósofos. A classe `philosopher`, que deriva de [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), permite que cada filósofo atue de forma independente. O exemplo usa uma matriz compartilhada de objetos [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) para fornecer a cada objeto `philosopher` acesso exclusivo a um par de Chopsticks.
+O exemplo a seguir mostra uma implementação ingênua do problema do jantar filósofos. A `philosopher` classe, que deriva de [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), permite que cada filósofo atue de forma independente. O exemplo usa uma matriz compartilhada de objetos [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) para dar a cada `philosopher` objeto acesso exclusivo a um par de Chopsticks.
 
-Para relacionar a implementação à ilustração, a classe `philosopher` representa um filósofo. Uma variável `int` representa cada Chopstick. Os objetos `critical_section` servem como contentores nos quais o chopsticks REST. O método `run` simula a vida útil do filósofo. O método `think` simula o ato de pensar e o método `eat` simula o ato de comer.
+Para relacionar a implementação à ilustração, a `philosopher` classe representa um filósofo. Uma **`int`** variável representa cada Chopstick. Os `critical_section` objetos servem como contentores nos quais o chopsticks REST. O `run` método simula a vida útil do filósofo. O `think` método simula o ato de pensar e o `eat` método simula o ato de comer.
 
-Um objeto `philosopher` bloqueia `critical_section` objetos para simular a remoção do chopsticks dos detentores antes de chamar o método `eat`. Após a chamada para `eat`, o objeto `philosopher` retorna o chopsticks para os detentores definindo os objetos `critical_section` de volta para o estado desbloqueado.
+Um `philosopher` objeto bloqueia ambos os `critical_section` objetos para simular a remoção do chopsticks dos detentores antes de chamar o `eat` método. Após a chamada para `eat` , o `philosopher` objeto retorna o chopsticks para os contentores definindo os `critical_section` objetos de volta para o estado desbloqueado.
 
-O método `pickup_chopsticks` ilustra onde o deadlock pode ocorrer. Se cada objeto de `philosopher` obtém acesso a um dos bloqueios, nenhum objeto de `philosopher` pode continuar porque o outro bloqueio é controlado por outro objeto de `philosopher`.
+O `pickup_chopsticks` método ilustra onde o deadlock pode ocorrer. Se todos `philosopher` os objetos obtiverem acesso a um dos bloqueios, nenhum `philosopher` objeto poderá continuar porque o outro bloqueio será controlado por outro `philosopher` objeto.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]
 
-### <a name="compiling-the-code"></a>Compilando o Código
+### <a name="compiling-the-code"></a>Compilando o código
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `philosophers-deadlock.cpp` e, em seguida, execute o comando a seguir em uma janela de prompt de comando do Visual Studio.
 
-> **CL. exe/EHsc Philosophers-deadlock. cpp**
+> **cl.exe/EHsc Philosophers-deadlock. cpp**
 
 [[Superior](#top)]
 
-## <a name="solution"></a>Usando Join para evitar deadlock
+## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a>Usando Join para evitar deadlock
 
 Esta seção mostra como usar buffers de mensagens e funções de passagem de mensagens para eliminar a chance de deadlock.
 
-Para relacionar este exemplo ao anterior, a classe `philosopher` substitui cada objeto `critical_section` por meio de um objeto [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) e um objeto `join`. O objeto `join` serve como um arbitrador que fornece o chopsticks para o filósofo.
+Para relacionar este exemplo ao anterior, a `philosopher` classe substitui cada `critical_section` objeto usando um objeto [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) e um `join` objeto. O `join` objeto serve como um arbitrador que fornece o chopsticks para o filósofo.
 
-Este exemplo usa a classe `unbounded_buffer` porque quando um destino recebe uma mensagem de um objeto `unbounded_buffer`, a mensagem é removida da fila de mensagens. Isso permite que um objeto `unbounded_buffer` que contém uma mensagem para indicar que o chopstick está disponível. Um objeto `unbounded_buffer` que não contém nenhuma mensagem indica que o chopstick está sendo usado.
+Este exemplo usa a `unbounded_buffer` classe porque quando um destino recebe uma mensagem de um `unbounded_buffer` objeto, a mensagem é removida da fila de mensagens. Isso permite que um `unbounded_buffer` objeto que contém uma mensagem indique que o chopstick está disponível. Um `unbounded_buffer` objeto que não contém nenhuma mensagem indica que o chopstick está sendo usado.
 
-Este exemplo usa um objeto de `join` não-ávido porque uma junção não-alta fornece acesso a cada objeto `philosopher` para ambos os chopsticks somente quando ambos os objetos `unbounded_buffer` contêm uma mensagem. Uma junção de disponibilidade não impediria o deadlock porque uma junção de ávidos aceita mensagens assim que elas ficam disponíveis. O deadlock pode ocorrer se todas as `join` objetos receberem uma das mensagens, mas aguardar para que o outro fique disponível.
+Este exemplo usa um objeto não-ávido `join` porque uma junção não-ávido fornece a cada `philosopher` objeto acesso a ambos os chopsticks somente quando ambos os `unbounded_buffer` objetos contêm uma mensagem. Uma junção de disponibilidade não impediria o deadlock porque uma junção de ávidos aceita mensagens assim que elas ficam disponíveis. O deadlock pode ocorrer se todos os objetos ávidos `join` receberem uma das mensagens, mas aguardar para que o outro fique disponível.
 
 Para obter mais informações sobre junções de ávido e não-alto e as diferenças entre os vários tipos de buffer de mensagens, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -94,35 +94,35 @@ Para obter mais informações sobre junções de ávido e não-alto e as diferen
 
 [!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_2.cpp)]
 
-1. Altere o tipo do `_left` e `_right` membros de dados da classe `philosopher` para `unbounded_buffer`.
+1. Altere o tipo dos `_left` membros de `_right` dados e da `philosopher` classe para `unbounded_buffer` .
 
 [!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_3.cpp)]
 
-1. Modifique o Construtor `philosopher` para tirar `unbounded_buffer` objetos como seus parâmetros.
+1. Modifique o `philosopher` construtor para assumir `unbounded_buffer` objetos como seus parâmetros.
 
 [!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_4.cpp)]
 
-1. Modifique o método de `pickup_chopsticks` para usar um objeto de `join` não-ávido para receber mensagens dos buffers de mensagens para ambos os chopsticks.
+1. Modifique o `pickup_chopsticks` método para usar um objeto não-ávido `join` para receber mensagens dos buffers de mensagens para ambos os chopsticks.
 
 [!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_5.cpp)]
 
-1. Modifique o método `putdown_chopsticks` para liberar acesso ao chopsticks enviando uma mensagem para os buffers de mensagens para ambos os chopsticks.
+1. Modifique o `putdown_chopsticks` método para liberar acesso ao chopsticks enviando uma mensagem para os buffers de mensagens para ambos os chopsticks.
 
 [!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_6.cpp)]
 
-1. Modifique o método `run` para manter os resultados do método `pickup_chopsticks` e passar esses resultados para o método `putdown_chopsticks`.
+1. Modifique o `run` método para manter os resultados do `pickup_chopsticks` método e passar esses resultados para o `putdown_chopsticks` método.
 
 [!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_7.cpp)]
 
-1. Modifique a declaração da variável de `chopsticks` na função `wmain` para ser uma matriz de objetos `unbounded_buffer` que cada um tem uma mensagem.
+1. Modifique a declaração da `chopsticks` variável na `wmain` função para que ela seja uma matriz de `unbounded_buffer` objetos que cada uma delas tenha uma mensagem.
 
 [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]
 
 ### <a name="description"></a>Descrição
 
-Veja a seguir o exemplo concluído que usa objetos de `join` não-ávido para eliminar o risco de deadlock.
+Veja a seguir o exemplo concluído que usa objetos não-ávidos `join` para eliminar o risco de deadlock.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]
 
@@ -136,19 +136,19 @@ socrates ate 50 times.
 plato ate 50 times.
 ```
 
-### <a name="compiling-the-code"></a>Compilando o Código
+### <a name="compiling-the-code"></a>Compilando o código
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `philosophers-join.cpp` e, em seguida, execute o comando a seguir em uma janela de prompt de comando do Visual Studio.
 
-> **CL. exe/EHsc Philosophers-join. cpp**
+> **cl.exe/EHsc Philosophers-join. cpp**
 
 [[Superior](#top)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Instruções passo a passo do runtime de simultaneidade](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
-[Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Orientações Tempo de Execução de Simultaneidades](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
+[Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Agentes assíncronos](../../parallel/concrt/asynchronous-agents.md)<br/>
-[Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Funções de transmissão de mensagem](../../parallel/concrt/message-passing-functions.md)<br/>
+[Blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Funções de passagem de mensagens](../../parallel/concrt/message-passing-functions.md)<br/>
 [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)

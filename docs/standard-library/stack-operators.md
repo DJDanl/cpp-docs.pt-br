@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac694e517279e43a501bb8289544e5da5ddba72b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419430"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217409"
 ---
 # <a name="ltstackgt-operators"></a>Operadores &lt;stack&gt;
 
-## <a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a>operador! =
 
 Testa se o objeto stack do lado esquerdo do operador não é igual ao objeto stack do lado direito.
 
@@ -35,15 +35,15 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `stack`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `stack`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se as stacks ou stacks não forem iguais; **false** se stacks ou stacks forem iguais.
+**`true`** Se as pilhas ou pilhas não forem iguais; **`false`** se as pilhas ou pilhas forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -90,7 +90,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt">Operador </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operador&lt;
 
 Testa se o objeto stack do lado esquerdo do operador é menor que o objeto stack do lado direito.
 
@@ -100,15 +100,15 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `stack`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `stack`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a stack do lado esquerdo do operador for menor ou não for igual ao stack do lado direito do operador; caso contrário, **false**.
+**`true`** se a pilha no lado esquerdo do operador for menor que e diferente da pilha no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>= de&lt;do operador
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operador&lt;=
 
 Testa se o objeto stack do lado esquerdo do operador é menor ou igual ao objeto stack do lado direito.
 
@@ -184,15 +184,15 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `stack`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `stack`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a stack do lado esquerdo do operador for menor ou igual ao stack do lado direito do operador; caso contrário, **false**.
+**`true`** se a pilha no lado esquerdo do operador for menor ou igual à pilha no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto stack do lado esquerdo do operador é igual ao objeto stack do lado direito.
 
@@ -251,15 +251,15 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `stack`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `stack`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se as stacks ou stacks forem iguais; **false** se stacks ou stacks não forem iguais.
+**`true`** Se as pilhas ou pilhas forem iguais; **`false`** se pilhas ou pilhas não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -306,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt">Operador </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operador&gt;
 
 Testa se o objeto stack do lado esquerdo do operador é maior que o objeto stack do lado direito.
 
@@ -316,15 +316,15 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `stack`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `stack`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a stack do lado esquerdo do operador for maior ou não for igual ao stack do lado direito do operador; caso contrário, **false**.
+**`true`** se a pilha no lado esquerdo do operador for maior que e diferente da pilha no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>= de&gt;do operador
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operador&gt;=
 
 Testa se o objeto stack do lado esquerdo do operador é maior ou igual ao objeto stack do lado direito.
 
@@ -385,15 +385,15 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `stack`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `stack`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true**, se a stack à esquerda do operador for estritamente menor que a stack à direita do operador; caso contrário, **false**.
+**`true`** se a pilha no lado esquerdo do operador for estritamente menor que a pilha no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 

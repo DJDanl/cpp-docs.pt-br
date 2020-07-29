@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219346"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
@@ -31,7 +31,7 @@ template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>
 class SafeInt;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 | Modelo  |  Descrição |
 |--------|------------|
@@ -39,7 +39,7 @@ class SafeInt;
 | E         |  Um tipo de dados enumerados que define a política de tratamento de erro. |
 | U         |  O tipo de inteiro ou parâmetro booliano para o operando secundário. |
 
-| Parâmetro  |  Description |
+| Parâmetro  |  DESCRIÇÃO |
 |---------|-----------------|
 | *rhs*      |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
 | *i*        |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
@@ -49,7 +49,7 @@ class SafeInt;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-| Nome                          |  Description |
+| Nome                          |  Descrição |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Construtor padrão. |
 
@@ -187,7 +187,7 @@ Quando você faz uma comparação lógica com um objeto SafeInt, a comparação 
 
 - `((uint)~0) > -1`
 
-A primeira instrução é resolvida como **true**, mas a segunda instrução é resolvida como `false`. A negação bit a bit de 0 é 0xFFFFFFFF. Na segunda instrução, o operador de comparação padrão compara 0xFFFFFFFF a 0xFFFFFFFF e os considera iguais. O operador de comparação para a `SafeInt` classe percebe que o segundo parâmetro é negativo, mas o primeiro parâmetro não é assinado. Portanto, embora a representação de bits seja idêntica, o `SafeInt` operador lógico percebe que o inteiro sem sinal é maior que-1.
+A primeira instrução é resolvida como **`true`** , mas a segunda instrução é resolvida para **`false`** . A negação bit a bit de 0 é 0xFFFFFFFF. Na segunda instrução, o operador de comparação padrão compara 0xFFFFFFFF a 0xFFFFFFFF e os considera iguais. O operador de comparação da classe `SafeInt` percebe que o segundo parâmetro é negativo, enquanto o primeiro não tem sinal. Portanto, apesar de a representação de bits ser idêntica, o operador lógico `SafeInt` percebe que o inteiro sem sinal é maior que -1.
 
 Tenha cuidado ao usar a classe `SafeInt` junto com o operador ternário `?:`. Considere a seguinte linha de código.
 
@@ -201,7 +201,7 @@ O compilador converte isso no seguinte:
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-Se `flag` for `false`, o compilador lançará uma exceção em vez de atribuir o valor de -1 a `x`. Portanto, para evitar esse comportamento, o código correto a ser usado é a seguinte linha.
+Se `flag` for **`false`** , o compilador lançará uma exceção em vez de atribuir o valor de-1 a `x` . Portanto, para evitar esse comportamento, o código correto a ser usado é a seguinte linha.
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
@@ -266,7 +266,7 @@ I template <typename U>
 SafeInt (const U& i)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 `i`<br/>
 [in] O valor do novo objeto `SafeInt`. Este deve ser um parâmetro do tipo T ou U, dependendo do construtor.

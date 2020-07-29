@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d516f7923144f0e24bda676147ed529546def25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314683"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213756"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Usando DLLs de extensão do banco de dados, OLE e sockets do MFC em DLLs comuns do MFC
 
@@ -21,9 +21,9 @@ Ao usar uma DLL de extensão do MFC de uma DLL do MFC regular, se a DLL de exten
 
 - Uma exceção indicando que a classe inadequada pode ser lançada.
 
-- Os recursos armazenados na DLL de extensão MFC falham ao `AfxFindResourceHandle` serem carregados porque retorna **NULL** ou um identificador de recurso incorreto.
+- Os recursos armazenados na DLL de extensão MFC falham ao serem carregados porque `AfxFindResourceHandle` retorna **NULL** ou um identificador de recurso incorreto.
 
-- `DllGetClassObject`, `DllCanUnloadNow`, e as `UpdateRegistry`funções `Revoke`de `RevokeAll` `RegisterAll` membro,, e de `COleObjectFactory` falha ao localizar uma fábrica de classe definida na DLL de extensão do MFC.
+- `DllGetClassObject`, `DllCanUnloadNow` , e as `UpdateRegistry` `Revoke` `RevokeAll` funções de membro,, e `RegisterAll` de `COleObjectFactory` falha ao localizar uma fábrica de classe definida na DLL de extensão do MFC.
 
 - `AfxDoForAllClasses`Não funciona para nenhuma classe na DLL de extensão do MFC.
 
@@ -33,13 +33,13 @@ A solução para esses problemas é criar e exportar uma função de inicializa�
 
 ## <a name="mfc-ole-mfc-database-or-dao-or-mfc-sockets-support"></a>Suporte a MFC OLE, banco de dados MFC (ou DAO) ou soquetes MFC
 
-Se você estiver usando qualquer MFC OLE, banco de dados MFC (ou DAO) ou suporte a soquetes MFC em sua DLL do MFC regular, respectivamente, as DLLs de extensão MFC de depuração do MFC MFCOxxD. dll, MFCDxxD. dll e MFCNxxD. dll (em que XX é o número de versão) são vinculadas automaticamente. Você deve chamar uma função de inicialização predefinida para cada uma dessas DLLs que está usando.
+Se você estiver usando qualquer MFC OLE, banco de dados MFC (ou DAO) ou suporte a soquetes MFC em sua DLL do MFC regular, respectivamente, as DLLs de extensão MFC de depuração do MFC MFCOxxD.dll, MFCDxxD.dll e MFCNxxD.dll (em que XX é o número de versão) são vinculadas automaticamente. Você deve chamar uma função de inicialização predefinida para cada uma dessas DLLs que está usando.
 
-Para obter suporte ao banco de dados, `AfxDbInitModule` adicione uma chamada para à função `CWinApp::InitInstance` da dll do MFC regular. Certifique-se de que essa chamada ocorra antes de qualquer chamada de classe base ou qualquer código adicionado que acesse o MFCDxxD. dll. Essa função não usa parâmetros e retorna void.
+Para obter suporte ao banco de dados, adicione uma chamada para `AfxDbInitModule` à função da dll do MFC regular `CWinApp::InitInstance` . Certifique-se de que essa chamada ocorra antes de qualquer chamada de classe base ou qualquer código adicionado que acesse a MFCDxxD.dll. Essa função não usa parâmetros e retorna void.
 
-Para suporte a OLE, adicione uma chamada `AfxOleInitModule` para às suas DLLs do `CWinApp::InitInstance`MFC regulares. Observe que a função **COleControlModule InitInstance** já `AfxOleInitModule` é chamada, portanto, se você estiver criando um controle OLE e `COleControlModule`estiver usando o, não deverá adicionar essa `AfxOleInitModule`chamada para.
+Para suporte a OLE, adicione uma chamada para `AfxOleInitModule` às suas DLLs do MFC regulares `CWinApp::InitInstance` . Observe que a função **COleControlModule InitInstance** já é chamada `AfxOleInitModule` , portanto, se você estiver criando um controle OLE e estiver usando `COleControlModule` o, não deverá adicionar essa chamada para `AfxOleInitModule` .
 
-Para obter suporte a soquetes, adicione `AfxNetInitModule` uma chamada para ao seu dll `CWinApp::InitInstance`do MFC regular.
+Para obter suporte a soquetes, adicione uma chamada para `AfxNetInitModule` ao seu DLL do MFC regular `CWinApp::InitInstance` .
 
 Observe que as compilações de versão de DLLs do MFC e aplicativos não usam DLLs separadas para o suporte a banco de dados, soquetes ou OLE. No entanto, é seguro chamar essas funções de inicialização no modo de versão.
 
@@ -51,7 +51,7 @@ Como parte dessas pesquisas, o MFC verifica todas as DLLs de extensão do MFC em
 
 Para que uma DLL de extensão do MFC seja conectada a uma cadeia **CDynLinkLibrary** , ela deve criar um objeto **CDynLinkLibrary** no contexto de cada módulo que usa a DLL de extensão do MFC. Portanto, se uma DLL de extensão do MFC for usada em DLLs comuns do MFC, ela deverá fornecer uma função de inicialização exportada que cria um objeto **CDynLinkLibrary** . Cada DLL do MFC regular que usa a DLL de extensão do MFC deve chamar a função de inicialização exportada.
 
-Se uma DLL de extensão do MFC só será usada de um aplicativo MFC (. exe) e nunca de uma DLL do MFC regular, será suficiente criar o objeto **CDynLinkLibrary** nas DLLs de extensão do `DllMain`MFC. É isso que o código DLL da extensão MFC do assistente de DLL do MFC. Ao carregar uma DLL de extensão do MFC implicitamente, `DllMain` o carrega e executa antes de o aplicativo ser iniciado. Qualquer criação de **CDynLinkLibrary** é conectada a uma cadeia padrão que a DLL do MFC reserva para um aplicativo MFC.
+Se uma DLL de extensão do MFC só será usada de um aplicativo MFC (. exe) e nunca de uma DLL do MFC regular, será suficiente criar o objeto **CDynLinkLibrary** nas DLLs de extensão do MFC `DllMain` . É isso que o código DLL da extensão MFC do assistente de DLL do MFC. Ao carregar uma DLL de extensão do MFC implicitamente, `DllMain` o carrega e executa antes de o aplicativo ser iniciado. Qualquer criação de **CDynLinkLibrary** é conectada a uma cadeia padrão que a DLL do MFC reserva para um aplicativo MFC.
 
 Observe que é uma má ideia ter vários objetos **CDynLinkLibrary** de uma DLL de extensão do MFC em qualquer cadeia, especialmente se a DLL de extensão do MFC for descarregada dinamicamente da memória. Não chame a função de inicialização mais de uma vez a partir de um módulo.
 
@@ -92,7 +92,7 @@ extern "C" void WINAPI InitYourExtDLL()
 }
 ```
 
-Certifique-se de exportar a função **InitYourExtDLL** . Isso pode ser feito usando **__declspec (dllexport)** ou no arquivo. def de sua DLL da seguinte maneira:
+Certifique-se de exportar a função **InitYourExtDLL** . Isso pode ser feito usando **`__declspec(dllexport)`** ou no arquivo. def de sua DLL da seguinte maneira:
 
 ```
 // YourExtDLL.Def:
@@ -103,7 +103,7 @@ EXPORTS
     InitYourExtDLL
 ```
 
-Adicione uma chamada para o `InitInstance` membro do `CWinApp`objeto derivado em cada DLL do MFC regular usando a DLL de extensão do MFC:
+Adicione uma chamada para o `InitInstance` membro do `CWinApp` objeto derivado em cada DLL do MFC regular usando a DLL de extensão do MFC:
 
 ```
 // YourRegularDLL.cpp:
@@ -138,7 +138,7 @@ BOOL CYourRegularDLL::InitInstance()
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
-- [DLLs de extensão do MFC](extension-dlls.md)
+- [DLLs de extensão de MFC](extension-dlls.md)
 
 - [DLLs regulares do MFC vinculadas estaticamente ao MFC](regular-dlls-statically-linked-to-mfc.md)
 
@@ -150,4 +150,4 @@ BOOL CYourRegularDLL::InitInstance()
 
 ## <a name="see-also"></a>Confira também
 
-[DLLs de extensão do MFC](extension-dlls.md)
+[DLLs de extensão de MFC](extension-dlls.md)

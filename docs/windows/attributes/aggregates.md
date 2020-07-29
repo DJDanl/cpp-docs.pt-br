@@ -1,5 +1,5 @@
 ---
-title: agregações (C++ atributo com)
+title: agregações (atributo COM do C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65a166faa9380272c87af92ebaf8294c0e0b1af3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168493"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217279"
 ---
-# <a name="aggregates"></a>agregações
+# <a name="aggregates"></a>aggregates
 
 Indica que o objeto agrega o objeto especificado pelo CLSID.
 
@@ -28,17 +28,17 @@ Indica que o objeto agrega o objeto especificado pelo CLSID.
 
 ### <a name="parameters"></a>parâmetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Especifica o CLSID do objeto agregável.
 
 *variable_name*<br/>
-O nome da variável a ser inserida. Essa variável contém a `IUnknown` do objeto que está sendo agregado.
+O nome da variável a ser inserida. Essa variável contém o `IUnknown` do objeto que está sendo agregado.
 
 ## <a name="remarks"></a>Comentários
 
-Quando aplicado a um objeto, o C++ atributo de **agregações** implementa um wrapper externo para o objeto que está sendo agregado (especificado por `clsid`).
+Quando aplicado a um objeto, o atributo de **agregações** do C++ implementa um wrapper externo para o objeto que está sendo agregado (especificado por `clsid` ).
 
-Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` for aplicado, `vi_progid` e `coclass` também serão aplicadas.
+Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` é aplicado `vi_progid` e `coclass` também é aplicado.
 
 ### <a name="atl-projects"></a>Projetos da ATL
 
@@ -83,18 +83,18 @@ struct CObject : IObject
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Sim|
-|**Atributos necessários**|Um ou mais dos seguintes: `coclass`, `progid`ou `vi_progid`.|
+|**Atributos obrigatórios**|Um ou mais dos seguintes: `coclass` , `progid` ou `vi_progid` .|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Agregação](/windows/win32/com/aggregation)<br/>
 [Agregável](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

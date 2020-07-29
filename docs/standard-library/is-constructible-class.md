@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: dc0596ac7a3fc2bcbcbe49f5fa4b20a971e5e445
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a968efa5a867a3fd0e60594784cdb11122a974b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452856"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222401"
 ---
-# <a name="isconstructible-class"></a>Classe is_constructible
+# <a name="is_constructible-class"></a>Classe is_constructible
 
 Testa se um tipo pode ser construído quando os tipos de argumento especificados são usados.
 
@@ -24,7 +24,7 @@ template <class T, class... Args>
 struct is_constructible;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo a ser consultado.
@@ -34,14 +34,14 @@ Os tipos de argumento a serem correspondentes em um construtor de *T*.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo se aplica true se o tipo *T* for constructible usando os tipos de argumento em *args*, caso contrário, será false. O tipo *T* será constructible se a definição `T t(std::declval<Args>()...);` da variável for bem formada. Tanto *T* quanto todos os tipos em *args* devem ser tipos completos, **void**ou matrizes de associação desconhecida.
+Uma instância do predicado de tipo se aplica true se o tipo *T* for constructible usando os tipos de argumento em *args*, caso contrário, será false. O tipo *T* será constructible se a definição da variável `T t(std::declval<Args>()...);` for bem formada. Tanto *T* quanto todos os tipos em *args* devem ser tipos completos, **`void`** ou matrizes de associação desconhecida.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 93f56580f35ffc1f6e517905467c3deb92922f5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368231"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218007"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Operador de referência de acompanhamento (C++/CLI e C++/CX)
 
-Uma *referência de rastreamento* (`%`) comporta-se`&`como uma referência C++ comum ( ) exceto que quando um objeto é atribuído a uma referência de rastreamento, a contagem de referência do objeto é incrementada.
+Uma *referência de rastreamento* ( `%` ) se comporta como uma referência C++ comum ( `&` ), exceto que, quando um objeto é atribuído a uma referência de rastreamento, a contagem de referência do objeto é incrementada.
 
 ## <a name="all-platforms"></a>Todas as plataformas
 
@@ -31,7 +31,7 @@ Uma referência de acompanhamento possui as características a seguir.
 
 - As referências de acompanhamento são válidas para tipos de valores e identificadores (por exemplo, `String^`).
 
-- Uma referência de acompanhamento não pode receber um valor null ou **nullptr**. Uma referência de acompanhamento pode ser reatribuída a outro objeto válido quantas vezes for necessário.
+- Uma referência de rastreamento não pode ser atribuída a um valor nulo ou **`nullptr`** . Uma referência de acompanhamento pode ser reatribuída a outro objeto válido quantas vezes for necessário.
 
 - Uma referência de acompanhamento não pode ser usada como um operador take-address unário.
 
@@ -75,7 +75,7 @@ Não é possível ter uma referência de C++ nativa para um objeto no heap colet
 
 Saiba mais sobre referências de acompanhamento no C++/CLI em:
 
-- [Como usar referências de monitoramento em C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [Como: usar referências de rastreamento em C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>Exemplos
 

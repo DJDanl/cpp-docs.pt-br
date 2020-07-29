@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 89cca9ef42910d295cbae8bb677fb51927dbcdd2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6b2d3b4415b81dc5a9b7d0e36c154d9ee74b98ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988531"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221478"
 ---
 # <a name="double-thunking-c"></a>Conversão dupla (C++)
 
-A conversão dupla refere-se à perda de desempenho que você pode experimentar quando uma chamada de função em um contexto gerenciado C++ chama uma função gerenciada visual e onde a execução do programa chama o ponto de entrada nativo da função para chamar a função gerenciada. Este tópico discute onde ocorre a conversão dupla e como você pode evitá-la para melhorar o desempenho.
+A conversão dupla refere-se à perda de desempenho que você pode experimentar quando uma chamada de função em um contexto gerenciado chama um Visual C++ função gerenciada e onde a execução do programa chama o ponto de entrada nativo da função para chamar a função gerenciada. Este tópico discute onde ocorre a conversão dupla e como você pode evitá-la para melhorar o desempenho.
 
 ## <a name="remarks"></a>Comentários
 
@@ -27,13 +27,13 @@ Uma resolução é informar ao compilador para não gerar um ponto de entrada na
 
 Da mesma forma, se você exportar ([dllexport, DllImport](../cpp/dllexport-dllimport.md)) uma função gerenciada, um ponto de entrada nativo será gerado e qualquer função que importar e chamar essa função irá chamar o ponto de entrada nativo. Para evitar a conversão dupla nessa situação, não use a semântica de exportação/importação nativa; Basta referenciar os metadados via `#using` (consulte a [diretiva #using](../preprocessor/hash-using-directive-cpp.md)).
 
-O compilador foi atualizado para reduzir a conversão dupla desnecessária. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo tipo de retorno) será marcada implicitamente como `__clrcall`.
+O compilador foi atualizado para reduzir a conversão dupla desnecessária. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo tipo de retorno) será marcada implicitamente como `__clrcall` .
 
 ## <a name="example"></a>Exemplo
 
 ### <a name="description"></a>Descrição
 
-O exemplo a seguir demonstra a conversão dupla. Quando compilado nativo (sem **/CLR**), a chamada para a função virtual em `main` gera uma chamada para o construtor de cópia `T`e uma chamada para o destruidor. Um comportamento semelhante é obtido quando a função virtual é declarada com **/CLR** e `__clrcall`. No entanto, quando acabamos de ser compilado com **/CLR**, a chamada de função gera uma chamada para o construtor de cópia, mas há outra chamada para o construtor de cópia devido à conversão nativa para gerenciada.
+O exemplo a seguir demonstra a conversão dupla. Quando o nativo compilado (sem **/CLR**), a chamada para a função virtual no `main` gera uma chamada para `T` o construtor de cópia e uma chamada para o destruidor. Um comportamento semelhante é obtido quando a função virtual é declarada com **/CLR** e `__clrcall` . No entanto, quando acabamos de ser compilado com **/CLR**, a chamada de função gera uma chamada para o construtor de cópia, mas há outra chamada para o construtor de cópia devido à conversão nativa para gerenciada.
 
 ### <a name="code"></a>Código
 
@@ -74,7 +74,7 @@ int main() {
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```
 __thiscall T::T(void)
@@ -91,7 +91,7 @@ __thiscall T::~T(void)
 
 ### <a name="description"></a>Descrição
 
-O exemplo anterior demonstrou a existência de uma conversão dupla. Este exemplo mostra seu efeito. O loop de `for` chama a função virtual e o programa informa o tempo de execução. A hora mais lenta é relatada quando o programa é compilado com **/CLR**. As horas mais rápidas são relatadas durante a compilação sem **/CLR** ou se a função virtual for declarada com `__clrcall`.
+O exemplo anterior demonstrou a existência de uma conversão dupla. Este exemplo mostra seu efeito. O **`for`** loop chama a função virtual e o programa informa o tempo de execução. A hora mais lenta é relatada quando o programa é compilado com **/CLR**. As horas mais rápidas são relatadas durante a compilação sem **/CLR** ou se a função virtual for declarada com `__clrcall` .
 
 ### <a name="code"></a>Código
 
@@ -130,13 +130,13 @@ int main() {
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```
 4.2 seconds
 after calling struct S
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6fb32a593a969f93a934f251f38cd50960440b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221881"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -64,13 +64,13 @@ wchar_t *_wgetcwd(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *completo*\
 Local de armazenamento para o caminho.
 
 *maxlen*\
-Comprimento máximo do caminho em caracteres: **Char** para **_getcwd** e **wchar_t** para **_wgetcwd**.
+Comprimento máximo do caminho em caracteres: **`char`** para **_getcwd** e **`wchar_t`** para **_wgetcwd**.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -82,7 +82,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 A função **_getcwd** Obtém o caminho completo do diretório de trabalho atual para a unidade padrão e o armazena no *buffer*. O argumento Integer *maxlen* especifica o comprimento máximo para o caminho. Ocorrerá um erro se o comprimento do caminho (incluindo o caractere nulo de terminação) exceder *maxlen*. O argumento de *buffer* pode ser **nulo**; um buffer de pelo menos o tamanho *maxlen* (somente se necessário) é alocado automaticamente, usando **malloc**, para armazenar o caminho. Esse buffer pode ser liberado mais tarde chamando **gratuitamente** e passando o valor de retorno de **_getcwd** (um ponteiro para o buffer alocado).
 
-**_getcwd** retorna uma cadeia de caracteres que representa o caminho do diretório de trabalho atual. Se o diretório de trabalho atual for a raiz, a cadeia de caracteres terminará com`\`uma barra invertida (). Se o diretório de trabalho atual for um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.
+**_getcwd** retorna uma cadeia de caracteres que representa o caminho do diretório de trabalho atual. Se o diretório de trabalho atual for a raiz, a cadeia de caracteres terminará com uma barra invertida ( `\` ). Se o diretório de trabalho atual for um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.
 
 **_wgetcwd** é uma versão de caractere largo do **_getcwd**; o argumento de *buffer* e o valor de retorno de **_wgetcwd** são cadeias de caracteres largos. **_wgetcwd** e **_getcwd** se comportar de forma idêntica.
 

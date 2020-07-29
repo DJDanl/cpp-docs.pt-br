@@ -1,17 +1,17 @@
 ---
-title: ref (C++ atributo com)
+title: ref (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: bfb5cc8c785c7f62f29488a9379c2c7ed229cad8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6cf78930b19891832369e9b96c0a761d2752e4a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232736"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -49,15 +49,15 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Aplica-se a**|**typedef**, parâmetro de interface, método de interface|
+|**Aplica-se a**|**`typedef`**, parâmetro de interface, método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)

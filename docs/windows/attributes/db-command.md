@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 87043315def59bcd7cff706710d988cc0ed37876
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825424"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232775"
 ---
 # <a name="db_command"></a>db_command
 
@@ -24,9 +24,9 @@ Cria um comando OLE DB.
 ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*.*<br/>
+*command*<br/>
 Uma cadeia de caracteres de comando que contém o texto de um comando OLE DB. Um exemplo simples é:
 
 ```cpp
@@ -44,7 +44,7 @@ A sintaxe do *comando* é a seguinte:
 
 Um *bloco de parâmetro de associação* é definido da seguinte maneira:
 
-> **(\[ ** *BindType* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[,...]]] **)**
+> **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
 onde:
 
@@ -52,28 +52,28 @@ onde:
 
 - **\[***associatype* **]** é uma das seguintes cadeias de caracteres que não diferenciam maiúsculas de minúsculas:
 
-  - ** \[db_column]** associa cada uma das variáveis de membro a uma coluna em um conjunto de linhas.
+  - ** \[ db_column]** associa cada uma das variáveis de membro a uma coluna em um conjunto de linhas.
 
-  - ** \[associar]** (o mesmo que ** \[db_column]**).
+  - ** \[ associato]** (o mesmo que ** \[ db_column]**).
 
-  - ** \[em]** associa variáveis de membro como parâmetros de entrada.
+  - ** \[ in]** associa variáveis de membro como parâmetros de entrada.
 
-  - ** \[out]** associa variáveis de membro como parâmetros de saída.
+  - ** \[ out]** associa variáveis de membro como parâmetros de saída.
 
-  - entrada, saída] ** \[** associa variáveis de membro como parâmetros de entrada/saída.
+  - ** \[ in, out]** associa variáveis de membro como parâmetros de entrada/saída.
 
 - *szVarX*, *nVarX* é resolvido para uma variável de membro dentro do escopo atual.
 
 - **)** marca o final do bloco de associação de dados.
 
-Se a cadeia de caracteres de comando contiver um ou mais \[especificadores, \[como em], \[out] ou in/out], **db_command** criará um mapa de parâmetro.
+Se a cadeia de caracteres de comando contiver um ou mais especificadores, como \[ em], \[ out] ou \[ in/out], **db_command** criará um mapa de parâmetro.
 
-Se a cadeia de caracteres de comando contiver um ou \[mais parâmetros como \[db_column] ou associato], **db_command** gerará um conjunto de linhas e um mapa de acessador para atender a essas variáveis associadas. Consulte [db_accessor](db-accessor.md) para obter mais informações.
+Se a cadeia de caracteres de comando contiver um ou mais parâmetros como \[ db_column] ou \[ associato], **db_command** gerará um conjunto de linhas e um mapa de acessador para atender a essas variáveis associadas. Consulte [db_accessor](db-accessor.md) para obter mais informações.
 
 > [!NOTE]
 > \[*associatype*] a sintaxe e o parâmetro de *associações* não são válidos ao usar **db_command** no nível de classe.
 
-Aqui estão alguns exemplos de blocos de parâmetro de associação. O exemplo a seguir associa os `m_au_fname` Membros `m_au_lname` de dados e às `au_fname` colunas `au_lname` e, respectivamente, da tabela autores no banco de dados pubs:
+Aqui estão alguns exemplos de blocos de parâmetro de associação. O exemplo a seguir associa os `m_au_fname` `m_au_lname` membros de dados e às `au_fname` `au_lname` colunas e, respectivamente, da tabela autores no banco de dados pubs:
 
 ```cpp
 TCHAR m_au_fname[21];
@@ -100,32 +100,32 @@ Adicional Identifica a variável que receberá o HRESULT deste comando de banco 
 *associações*<br/>
 Adicional Permite separar os parâmetros de associação do comando OLE DB.
 
-Se você especificar um valor para *associações*, **db_command** analisará o valor associado e não analisará o \[parâmetro *BindType*]. Esse uso permite que você use OLE DB sintaxe do provedor. Para desabilitar a análise, sem parâmetros de associação, `Bindings=""`especifique.
+Se você especificar um valor para *associações*, **db_command** analisará o valor associado e não analisará o parâmetro \[ *BindType*]. Esse uso permite que você use OLE DB sintaxe do provedor. Para desabilitar a análise, sem parâmetros de associação, especifique `Bindings=""` .
 
-Se você não especificar um valor para *associações*, **db_command** analisará o bloco de parâmetro de associação, procurando por '**(**', **\[** seguido de _BindType_**]** entre colchetes, seguido por uma ou mais variáveis de membro C++ declaradas anteriormente, seguidas por '**)**'. Todo o texto entre parênteses será retirado do comando resultante, e esses parâmetros serão usados para construir associações de coluna e parâmetro para esse comando.
+Se você não especificar um valor para *associações*, **db_command** analisará o bloco de parâmetro de associação, procurando por '**(**', seguido de **\[** _BindType_**]** entre colchetes, seguido por uma ou mais variáveis de membro C++ declaradas anteriormente, seguidas por '**)**'. Todo o texto entre parênteses será retirado do comando resultante, e esses parâmetros serão usados para construir associações de coluna e parâmetro para esse comando.
 
 *bulk_fetch*<br/>
 Adicional Um valor inteiro que especifica o número de linhas a serem buscadas.
 
 O valor padrão é 1, que especifica a busca de linha única (o conjunto de linhas será do tipo [CRowset](../../data/oledb/crowset-class.md)).
 
-Um valor maior que 1 especifica a busca em massa de linha. A busca de linha em massa refere-se à capacidade de conjuntos de linhas em massa de buscar vários identificadores de linha [CBulkRowset](../../data/oledb/cbulkrowset-class.md) (o conjunto de `SetRows` linhas será do tipo CBulkRowset e chamará com o número de linhas especificado).
+Um valor maior que 1 especifica a busca em massa de linha. A busca de linha em massa refere-se à capacidade de conjuntos de linhas em massa de buscar vários identificadores de linha (o conjunto de linhas será do tipo [CBulkRowset](../../data/oledb/cbulkrowset-class.md) e chamará `SetRows` com o número de linhas especificado).
 
-Se *bulk_fetch* for menor que um, `SetRows` o retornará zero.
+Se *bulk_fetch* for menor que um, o `SetRows` retornará zero.
 
 ## <a name="remarks"></a>Comentários
 
 **db_command** cria um objeto [CCommand](../../data/oledb/ccommand-class.md) , que é usado por um consumidor de OLE DB para executar um comando.
 
-Você pode usar **db_command** com o escopo de classe ou função; a principal diferença é o escopo do `CCommand` objeto. Com o escopo da função, os dados como as associações são encerrados na função End. Os usos de escopo de classe e função envolvem a classe `CCommand<>`de modelo de consumidor OLE DB, mas os argumentos de modelo diferem para os casos de função e classe. No caso de função, as associações serão feitas em um `Accessor` que consiste em variáveis locais, enquanto o uso da classe inferirá `CAccessor`uma classe derivada como o argumento. Quando usado como um atributo de classe, **db_command** funciona em conjunto com **db_column**.
+Você pode usar **db_command** com o escopo de classe ou função; a principal diferença é o escopo do `CCommand` objeto. Com o escopo da função, os dados como as associações são encerrados na função End. Os usos de escopo de classe e função envolvem a classe de modelo de consumidor OLE DB `CCommand<>` , mas os argumentos de modelo diferem para os casos de função e classe. No caso de função, as associações serão feitas em um `Accessor` que consiste em variáveis locais, enquanto o uso da classe inferirá uma `CAccessor` classe derivada como o argumento. Quando usado como um atributo de classe, **db_command** funciona em conjunto com **db_column**.
 
 **db_command** pode ser usado para executar comandos que não retornam um conjunto de resultados.
 
-Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o compilador renomeará \_a classe como acessador *YourClassName*, em que *YourClassName* é o nome que você forneceu à classe e o compilador também criará uma classe \_chamada *YourClassName*, que deriva de acessador *YourClassName*.  Em Modo de Exibição de Classe, você verá ambas as classes.
+Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o compilador renomeará a classe como \_ acessador *YourClassName*, em que *YourClassName* é o nome que você forneceu à classe e o compilador também criará uma classe chamada *YourClassName*, que deriva de \_ acessador *YourClassName*.  Em Modo de Exibição de Classe, você verá ambas as classes.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo define um comando que seleciona o nome e o sobrenome de uma tabela em que a coluna de estado corresponde a ' AC '. **db_command** cria e lê um conjunto de linhas no qual você pode chamar funções geradas pelo assistente, como [método OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), `CRowset` bem como funções de membro como [MoveNext](../../data/oledb/crowset-movenext.md).
+Este exemplo define um comando que seleciona o nome e o sobrenome de uma tabela em que a coluna de estado corresponde a ' AC '. **db_command** cria e lê um conjunto de linhas no qual você pode chamar funções geradas pelo assistente, como [método OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), bem como `CRowset` funções de membro como [MoveNext](../../data/oledb/crowset-movenext.md).
 
 Observe que esse código exige que você forneça sua própria cadeia de conexão que se conecta ao banco de dados pubs. Para obter informações sobre como fazer isso no ambiente de desenvolvimento, consulte [como conectar-se a um banco de dados e navegar por objetos existentes](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [adicionar novas conexões](/visualstudio/data-tools/add-new-connections).
 
@@ -195,7 +195,7 @@ int main(int argc, _TCHAR* argv[]) {
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa `db_source` em uma `CMySource`classe de fonte de dados `db_command` e em classes `CCommand1` de `CCommand2`comando e.
+Este exemplo usa `db_source` em uma classe de fonte de dados `CMySource` e `db_command` em classes de comando `CCommand1` e `CCommand2` .
 
 ```cpp
 // db_command_2.cpp
@@ -242,9 +242,9 @@ int main() {
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**, membro, método, local|
+|**Aplica-se a**|**`class`**, **`struct`** , membro, método, local|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
@@ -252,4 +252,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 ## <a name="see-also"></a>Confira também
 
 [OLE DB atributos de consumidor](ole-db-consumer-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)
+[Atributos autônomos](stand-alone-attributes.md)

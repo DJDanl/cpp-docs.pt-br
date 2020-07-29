@@ -1,17 +1,17 @@
 ---
-title: RDX (C++ atributo com)
+title: RDX (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5f0981f249653b1068e2fbec3d02d3209d5f935
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214624"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232749"
 ---
 # <a name="rdx"></a>rdx
 
@@ -32,7 +32,7 @@ O nome da chave a ser criada ou aberta.
 Adicional Especifica o campo de valor a ser definido. Se um campo de valor com esse nome ainda não existir na chave, ele será adicionado.
 
 *regtype*<br/>
-O tipo de chave do registro que está sendo adicionado. Pode ser um dos seguintes: `text`, `dword`, `binary`ou `CString`.
+O tipo de chave do registro que está sendo adicionado. Pode ser um dos seguintes: `text` , `dword` , `binary` ou `CString` .
 
 ## <a name="remarks"></a>Comentários
 
@@ -46,9 +46,9 @@ Esse atributo pode ser usado em conjunto com os atributos [coclass](coclass.md),
 
 |||
 |-|-|
-|**Aplica-se a**|membro de **classe** ou **struct**|
+|**Aplica-se a**|**`class`** ou **`struct`** membro|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
@@ -78,5 +78,5 @@ public:
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

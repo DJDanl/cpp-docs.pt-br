@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 9372fa884d75e10c1a0f2ec92d6cca9caa65808e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 062a3db5c28bc463d6346a26cf1385adecd41183
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167609"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217630"
 ---
 # <a name="raw_storage_iterator-class"></a>Classe raw_storage_iterator
 
@@ -30,15 +30,15 @@ template <class OutputIterator, class Type>
 
 ### <a name="parameters"></a>parâmetros
 
-\ *OutputIterator*
+*OutputIterator*\
 Especifica o iterador de saída para o objeto que está sendo armazenado.
 
-*Tipo*\
+*Escreva*\
 O tipo de objeto para o qual o armazenamento está sendo alocado.
 
 ## <a name="remarks"></a>Comentários
 
-A classe descreve um iterador de saída que constrói objetos do tipo `Type` na sequência que ele gera. Um objeto da classe `raw_storage_iterator`\< **ForwardIterator**, **tipo**> acessa o armazenamento por meio de um objeto iterador de encaminhamento, da classe `ForwardIterator`, que você especifica ao construir o objeto. Para um objeto primeiro da classe `ForwardIterator`, a expressão **&\*primeiro** deve designar o armazenamento não construído para o próximo objeto (do tipo `Type`) na sequência gerada.
+A classe descreve um iterador de saída que constrói objetos do tipo `Type` na sequência que ele gera. Um objeto da classe `raw_storage_iterator` \< **ForwardIterator**, **Type**> acessa o armazenamento por meio de um objeto iterador de encaminhamento, da classe `ForwardIterator` , que você especifica ao construir o objeto. Para um objeto primeiro da classe `ForwardIterator` , a expressão ** & \* primeiro** deve designar o armazenamento não construído para o próximo objeto (do tipo `Type` ) na sequência gerada.
 
 Essa classe de adaptador é usada quando é necessário separar a alocação de memória e a construção de objetos. O `raw_storage_iterator` pode ser usado para copiar objetos no armazenamento não inicializado, tal como memória alocada usando a função `malloc`.
 
@@ -61,9 +61,9 @@ Essa classe de adaptador é usada quando é necessário separar a alocação de 
 
 |||
 |-|-|
-|[operator*](#op_star)|Um operador de desreferenciamento usado para implementar a expressão do iterador de saída \* `ii` = `x`.|
-|[operator=](#op_eq)|Um operador de atribuição usado para implementar a expressão do iterador de armazenamento bruto \* `i` = `x` para armazenar na memória.|
-|[operator++](#op_add_add)|Operadores pré e pós-incremento para iteradores de armazenamento brutos.|
+|[operador](#op_star)|Um operador de desreferenciamento usado para implementar a expressão do iterador de saída \* `ii`  =  `x` .|
+|[operador =](#op_eq)|Um operador de atribuição usado para implementar a expressão do iterador de armazenamento bruto \* `i`  =  `x` para armazenar na memória.|
+|[operador + +](#op_add_add)|Operadores pré e pós-incremento para iteradores de armazenamento brutos.|
 
 ### <a name="element_type"></a><a name="element_type"></a>element_type
 
@@ -75,7 +75,7 @@ typedef Type element_type;
 
 #### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o raw_storage_iterator parâmetro de modelo de classe `Type`.
+O tipo é um sinônimo para o raw_storage_iterator parâmetro de modelo de classe `Type` .
 
 ### <a name="iter_type"></a><a name="iter_type"></a>iter_type
 
@@ -89,9 +89,9 @@ typedef ForwardIterator iter_type;
 
 O tipo é um sinônimo do parâmetro de modelo `ForwardIterator`.
 
-### <a name="operator"></a><a name="op_star">Operador </a>\*
+### <a name="operator"></a><a name="op_star"></a>operador\*
 
-Um operador de desreferenciamento usado para implementar a expressão do iterador de armazenamento bruto \* *ii* = *x*.
+Um operador de desreferenciamento usado para implementar a expressão do iterador de armazenamento bruto \* *II*  =  *x*.
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator*();
@@ -103,7 +103,7 @@ Uma referência ao iterador de armazenamento bruto
 
 #### <a name="remarks"></a>Comentários
 
-Os requisitos para uma `ForwardIterator` são que o iterador de armazenamento bruto deve satisfazer exigir que apenas a expressão \* *ii* = *t* seja válida e não diz nada sobre o **operador** ou a `operator=` por conta própria. Os operadores de membro nessa implementação retornam **\*isso**, de modo que [Operator =](#op_eq)(**consttype**&) possa executar o armazenamento real em uma expressão, como \* *PTR* = `val`.
+Os requisitos para um `ForwardIterator` são que o iterador de armazenamento bruto deve satisfazer exigir que apenas a expressão \* *II*  =  *t* seja válida e que ele não diga nada sobre o **`operator`** ou o `operator=` próprio. Os operadores de membro nessa implementação retornam ** \* isso**, de forma que [Operator =](#op_eq)(**consttype**&) possa executar o armazenamento real em uma expressão, como \* *PTR*  =  `val` .
 
 #### <a name="example"></a>Exemplo
 
@@ -159,7 +159,7 @@ Constructing 5
 
 ### <a name="operator"></a><a name="op_eq"></a>operador =
 
-Operador de atribuição usado para implementar a expressão de iterador de armazenamento bruto \* *i* = *x* para armazenar na memória.
+Operador de atribuição usado para implementar a expressão de iterador de armazenamento bruto \* *i*  =  *x* para armazenar na memória.
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator=(
@@ -168,7 +168,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 #### <a name="parameters"></a>parâmetros
 
-*valor*\
+*Val*\
 O valor do objeto do tipo `Type` a ser inserido na memória.
 
 #### <a name="return-value"></a>Valor retornado
@@ -177,9 +177,9 @@ O operador insere `val` na memória e, em seguida, retorna uma referência ao it
 
 #### <a name="remarks"></a>Comentários
 
-Os requisitos para um estado de `ForwardIterator` que o iterador de armazenamento bruto deve satisfazer exigem que apenas a expressão \* *ii* = *t* seja válida e não diz nada sobre o **operador** ou a `operator=` por conta própria. Esses operadores de membros retornam **\*this**.
+Os requisitos para um `ForwardIterator` estado que o iterador de armazenamento bruto deve satisfazer exigem que apenas a expressão \* *II*  =  *t* seja válida e que ele não diga nada sobre o **`operator`** ou o `operator=` próprio. Esses operadores de membros retornam **`*this`** .
 
-O operador de atribuição constrói o próximo objeto na sequência de saída usando o valor de iterador armazenado primeiro, avaliando a nova expressão de posicionamento **New** ((`void` \*) &\* **primeiro** **) (`val`).**
+O operador de atribuição constrói o próximo objeto na sequência de saída usando o valor do iterador armazenado `first` , avaliando a nova expressão de posicionamento `new ( (void*) & *first ) Type( val )` .
 
 #### <a name="example"></a>Exemplo
 
@@ -247,11 +247,11 @@ Um iterador de armazenamento bruto ou uma referência a um iterador de armazenam
 
 #### <a name="remarks"></a>Comentários
 
-O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
+O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` a partir do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
 
-O primeiro operador pré-incremento incrementa o objeto de iterador de saída armazenado e retorna **\*this**.
+O primeiro operador de preincremento incrementa o objeto do iterador de saída armazenado e, em seguida, retorna ** \* isso**.
 
-O segundo operador pós-incremento faz uma cópia de **\*this**, incrementa o objeto de iterador de saída e retorna a cópia.
+O segundo operador de incremento faz uma cópia disso, incrementa o objeto iterador de saída armazenado e, em seguida, retorna a cópia. ** \* **
 
 O Construtor armazena `first` como o objeto de iterador de saída.
 

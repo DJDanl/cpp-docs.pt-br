@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2319
 ms.assetid: 25263e6e-f5ba-4d2c-8727-8c2d8ca2e5ce
-ms.openlocfilehash: b3da0297558a9b8281f9c4756a54a577cc78a682
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: af9c0f0395e29c384ddc06f9a029f29c921e71c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747911"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221231"
 ---
 # <a name="compiler-error-c2319"></a>Erro do compilador C2319
 
 ' try/catch ' deve ser seguido por uma instrução composta. ' {' Ausente
 
-Um bloco de `try` ou de `catch` não foi encontrado seguindo a instrução `try` ou `catch`. O bloco deve ser colocado entre chaves.
+Um **`try`** **`catch`** bloco ou não é encontrado após a **`try`** **`catch`** instrução ou. O bloco deve ser colocado entre chaves.
 
 O exemplo a seguir gera C2319:
 

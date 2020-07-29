@@ -20,22 +20,22 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: fef2eb784eca9c9eabbdcd727b051d5c2a4ccfd2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376642"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217383"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
 ||||
 |-|-|-|
-|[operador!=](#op_neq)|[Operador&gt;](#op_gt)|[Operador&gt;&gt;](#op_gt_gt)|
-|[Operador&gt;=](#op_gt_eq)|[Operador&lt;](#op_lt)|[Operador&lt;&lt;](#op_lt_lt)|
-|[Operador&lt;=](#op_lt_eq)|[operador+](#op_add)|[operador==](#op_eq_eq)|
+|[operador! =](#op_neq)|[operador&gt;](#op_gt)|[operador&gt;&gt;](#op_gt_gt)|
+|[operador&gt;=](#op_gt_eq)|[operador&lt;](#op_lt)|[operador&lt;&lt;](#op_lt_lt)|
+|[operador&lt;=](#op_lt_eq)|[operador +](#op_add)|[operador = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_add"></a>operador+
+## <a name="operator"></a><a name="op_add"></a>operador +
 
 Concatena dois objetos de cadeia de caracteres.
 
@@ -101,9 +101,9 @@ basic_string<CharType, Traits, Allocator>&& operator+(
     const basic_string<CharType, Traits, Allocator>&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
 *Certo*\
@@ -115,7 +115,7 @@ A cadeia de caracteres que é a concatenação de cadeias de caracteres de entra
 
 ### <a name="remarks"></a>Comentários
 
-As funções `operator+` de cada sobrecarga para concatenar dois objetos do modelo de classe [basic_string Classe](../standard-library/basic-string-class.md). Todos retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`efetivamente. Para obter mais informações, consulte [apêndice](../standard-library/basic-string-class.md#append).
+As funções cada sobrecarga `operator+` para concatenar dois objetos do modelo de classe [basic_string classe](../standard-library/basic-string-class.md). Efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)` . Para obter mais informações, consulte [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemplo
 
@@ -169,7 +169,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>operador!=
+## <a name="operator"></a><a name="op_neq"></a>operador! =
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é diferente do objeto da cadeia de caracteres à direita.
 
@@ -190,9 +190,9 @@ bool operator!=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 *Certo*\
@@ -200,7 +200,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é diferente do objeto da cadeia de caracteres à direita; caso contrário é **falso**.
+**`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador não for modo lexicográfico igual ao objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operador==
+## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é igual ao objeto da cadeia de caracteres à direita.
 
@@ -281,9 +281,9 @@ bool operator==(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 *Certo*\
@@ -291,7 +291,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é igual ao objeto da cadeia de caracteres à direita; caso contrário é **falso**.
+**`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico igual ao objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -351,7 +351,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Operador&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operador&lt;
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que o objeto da cadeia de caracteres à direita.
 
@@ -372,9 +372,9 @@ bool operator<(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 *Certo*\
@@ -382,7 +382,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é menor que o objeto da cadeia de caracteres à direita; caso contrário é **falso**.
+**`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico menor que o objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operador&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operador&lt;=
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que ou igual ao objeto da cadeia de caracteres à direita.
 
@@ -468,9 +468,9 @@ bool operator<=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 *Certo*\
@@ -478,7 +478,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é lexicograficamente menor ou igual ao objeto da cadeia de caracteres à direita; caso contrário é **falso**.
+**`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico menor ou igual ao objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operador&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operador&lt;&lt;
 
 Uma função de modelo que grava uma cadeia de caracteres no fluxo de saída.
 
@@ -561,7 +561,7 @@ basic_ostream<CharType, Traits>& operator<<(
     const basic_string<CharType, Traits, Allocator>& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Ostr*\
 O fluxo de saída que está sendo gravado.
@@ -571,13 +571,13 @@ A cadeia de caracteres a ser inserida no fluxo de saída.
 
 ### <a name="return-value"></a>Valor retornado
 
-Grava o valor da seqüência especificada para o fluxo de *saída _Ostr*.
+Grava o valor da cadeia de caracteres especificada no fluxo de saída *_Ostr*.
 
 ### <a name="remarks"></a>Comentários
 
-A função do modelo sobrecarrega **o operador<<** de inserir um *str* de objeto do modelo de classe [basic_string](../standard-library/basic-string-class.md) no * \_fluxo Ostr*. A função retorna `_Ostr.write( str.c_str, str.size )`efetivamente .
+A função de modelo sobrecarrega o **operador<<** para inserir um objeto *Str* do modelo de classe [basic_string](../standard-library/basic-string-class.md) no fluxo * \_ OSTR*. A função retorna efetivamente `_Ostr.write( str.c_str, str.size )` .
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Operador&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operador&gt;
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que o objeto da cadeia de caracteres à direita.
 
@@ -598,9 +598,9 @@ bool operator>(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 *Certo*\
@@ -608,7 +608,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é lexicograficamente maior que o objeto da cadeia de caracteres à direita; caso contrário é **falso**.
+**`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico maior que o objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operador&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operador&gt;=
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que ou igual ao objeto da cadeia de caracteres à direita.
 
@@ -701,9 +701,9 @@ bool operator>=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 *Certo*\
@@ -711,7 +711,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é lexicograficamente maior ou igual ao objeto da cadeia de caracteres à direita; caso contrário é **falso**.
+**`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico maior ou igual ao objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Operador&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>operador&gt;&gt;
 
 Uma função de modelo que grava uma cadeia de caracteres de um fluxo de entrada.
 
@@ -794,7 +794,7 @@ basic_istream<CharType, Traits>& operator>>(
     basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Istr*\
 O fluxo de entrada usado para extrair a sequência
@@ -804,13 +804,13 @@ A cadeia de caracteres que está sendo extraída do fluxo de entrada.
 
 ### <a name="return-value"></a>Valor retornado
 
-Lê o valor da seqüência especificada de *_Istr* e a devolve para *a direita*.
+Lê o valor da cadeia de caracteres especificada de *_Istr* e a retorna à *direita*.
 
 ### <a name="remarks"></a>Comentários
 
 O operador ignora os espaços em branco à esquerda, a menos que o sinalizador `skipws` é definido. Ele lê todos os caracteres seguintes até o próximo caractere ser um espaço em branco ou o final do arquivo for atingido.
 
-A função do modelo sobrecarrega o **operador>>** para substituir a seqüência controlada *por* uma seqüência de elementos extraídos do *fluxo _Istr*. Extração para:
+A função de modelo sobrecarrega o **operador>>** para substituir a sequência controlada pela *direita* por uma sequência de elementos extraídos do fluxo *_Istr*. Extração para:
 
 - Ao final do arquivo.
 
@@ -818,9 +818,9 @@ A função do modelo sobrecarrega o **operador>>** para substituir a seqüência
 
 Depois que a função extrai `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) elementos.
 
-- Depois que a função extrai um elemento *ch* para o qual [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> > ( `getloc`). **é**( **ctype**\< **CharType**>:: **space**, *ch*) é verdadeiro, caso em que o caractere é colocado de volta.
+- Depois que a função extrai um elemento *ch* para o qual [use_facet](../standard-library/basic-filebuf-class.md#open) <  **CType** \< **CharType**> > ( `getloc` ). **is**( **CType** \< **CharType**> :: **Space**, *ch*) é true; nesse caso, o caractere é colocado de volta.
 
-Se a função não extrair elementos,`ios_base::failbit`ela chama [setstate](../standard-library/basic-ios-class.md#setstate)(). Em qualquer caso, chama **istr**. **largura**(0) e retorna \* **isso**.
+Se a função extrair nenhum elemento, ela chamará [SetState](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit` ). Em qualquer caso, chama **istr**. **largura**(0) e retorna \* **`this`** .
 
 ### <a name="example"></a>Exemplo
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Confira também
 
-[\<>de corda](../standard-library/string.md)
+[\<string>](../standard-library/string.md)

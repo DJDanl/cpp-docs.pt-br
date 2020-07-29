@@ -6,18 +6,18 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988273"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221348"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Como capturar exceções em código nativo lançadas a partir de MSIL
 
-No código nativo, você pode capturar a C++ exceção nativa do MSIL.  Você pode capturar exceções CLR com `__try` e `__except`.
+No código nativo, você pode capturar a exceção C++ nativa do MSIL.  Você pode capturar exceções CLR com `__try` e **`__except`** .
 
-Para obter mais informações, consulte [manipulação de exceção estruturadaC++(C/)](../cpp/structured-exception-handling-c-cpp.md) e [práticas recomendadas modernas C++ para exceções e tratamento de erros](../cpp/errors-and-exception-handling-modern-cpp.md).
+Para obter mais informações, consulte as práticas recomendadas de [manipulação de exceção estruturada (C/c++)](../cpp/structured-exception-handling-c-cpp.md) e [c++ moderno para exceções e tratamento de erros](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Tratamento de Exceção](../extensions/exception-handling-cpp-component-extensions.md)
+[Tratamento de exceção](../extensions/exception-handling-cpp-component-extensions.md)

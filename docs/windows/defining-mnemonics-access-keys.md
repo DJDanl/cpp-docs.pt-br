@@ -1,5 +1,5 @@
 ---
-title: Como definir o acesso e os valores de controleC++()
+title: Como definir acesso e valores de controle (C++)
 ms.date: 02/15/2019
 helpviewer_keywords:
 - access keys [C++], adding
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: e782788832063e210356864e074c15e9ba3555f4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 91b6365334b977957ff6bd6c25278d4088961a2c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222063"
 ---
-# <a name="how-to-define-control-access-and-values-c"></a>Como definir o acesso e os valores de controleC++()
+# <a name="how-to-define-control-access-and-values-c"></a>Como definir acesso e valores de controle (C++)
 
 ## <a name="tab-order"></a>Ordem de tabulação
 
@@ -40,17 +40,17 @@ Até mesmo controles que não têm a propriedade **TabStop** definida como **tru
 > [!NOTE]
 > Se a caixa de diálogo contiver controles sobrepostos, a alteração da ordem de tabulação poderá mudar a maneira como os controles são exibidos. Os controles que são fornecidos posteriormente na ordem de tabulação são sempre exibidos na parte superior de todos os controles sobrepostos que os precedem na ordem de tabulação.
 
-- Para exibir a ordem de tabulação atual de todos os controles, vá para **formato** de menu > **ordem de tabulação**ou pressione **Ctrl** + **D**.
+- Para exibir a ordem de tabulação atual de todos os controles, vá para menu **Formatar**  >  **ordem de tabulação**ou pressione **Ctrl**  +  **D**.
 
    Um número no canto superior esquerdo de cada controle mostra seu lugar na ordem de tabulação atual.
 
-- Para alterar a ordem de tabulação de todos os controles, vá para o **formato** de menu > **ordem de tabulação** e defina a ordem de tabulação selecionando cada controle na ordem que você deseja que a tecla **Tab** siga.
+- Para alterar a ordem de tabulação de todos os controles, vá para menu **Formatar**  >  **ordem de tabulação** e defina a ordem de tabulação selecionando cada controle na ordem que você deseja que a tecla **Tab** siga.
 
-- Para alterar a ordem de tabulação de dois ou mais controles, vá para **formato** de menu > **ordem de tabulação**. Mantenha a tecla **Ctrl** pressionada e selecione o controle em que a alteração deve ser iniciada e, em seguida, solte a tecla **Ctrl** e selecione os controles na ordem que você deseja que a tecla **Tab** acompanhe a partir desse ponto.
+- Para alterar a ordem de tabulação de dois ou mais controles, vá para menu **Formatar**  >  **ordem de tabulação**. Mantenha a tecla **Ctrl** pressionada e selecione o controle em que a alteração deve ser iniciada e, em seguida, solte a tecla **Ctrl** e selecione os controles na ordem que você deseja que a tecla **Tab** acompanhe a partir desse ponto.
 
-   Por exemplo, se você quiser alterar a ordem dos controles `7` por meio de `9`, mantenha pressionada a **tecla CTRL**e, em seguida, selecione controlar `6` primeiro.
+   Por exemplo, se você quiser alterar a ordem dos controles `7` por meio de, mantenha pressionada a `9` **tecla CTRL**e, em seguida, selecione controlar `6` primeiro.
 
-- Para definir um controle específico para número `1`ou primeiro na ordem de tabulação, clique duas vezes no controle.
+- Para definir um controle específico para número `1` ou primeiro na ordem de tabulação, clique duas vezes no controle.
 
 > [!TIP]
 > Depois de inserir o modo de **ordem de tabulação** , pressione **ESC** ou **Enter** para sair do modo de **ordem de tabulação** e desabilitar a capacidade de alterar a ordem de tabulação.
@@ -63,7 +63,7 @@ Normalmente, os usuários de teclado movem o foco de entrada de um controle para
 
 1. Selecione o controle na caixa de diálogo.
 
-1. Na [janela Propriedades](/visualstudio/ide/reference/properties-window), na propriedade **legenda** , digite um novo nome para o controle, digitando um e comercial (`&`) na frente da letra que você deseja como a tecla de acesso para esse controle. Por exemplo, `&Radio1`.
+1. Na [janela Propriedades](/visualstudio/ide/reference/properties-window), na propriedade **legenda** , digite um novo nome para o controle, digitando um e comercial ( `&` ) na frente da letra que você deseja como a tecla de acesso para esse controle. Por exemplo, `&Radio1`.
 
 1. Pressione **Enter**.
 
@@ -73,12 +73,12 @@ Normalmente, os usuários de teclado movem o foco de entrada de um controle para
 
 1. Crie uma legenda para o controle usando um controle de **texto estático** na [caixa de ferramentas](/visualstudio/ide/reference/toolbox).
 
-1. Na legenda de texto estático, digite um e comercial (`&`) na frente da letra que você deseja como a tecla de acesso.
+1. Na legenda de texto estático, digite um e comercial ( `&` ) na frente da letra que você deseja como a tecla de acesso.
 
 1. Verifique se o controle de texto estático precede imediatamente o controle que ele rotula na ordem de tabulação.
 
 > [!NOTE]
-> Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas. Para verificar se há chaves de acesso duplicadas, vá para o **formato** de menu > **marque mnemônicos**.
+> Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas. Para verificar se há chaves de acesso duplicadas, vá para **formato**de menu  >  **verificar mnemônicos**.
 
 ## <a name="combo-box-values"></a>Valores da caixa de combinação
 
@@ -133,7 +133,7 @@ Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo. 
    Alterar a propriedade de **grupo** para **true** adiciona o estilo de WS_GROUP à entrada do botão no objeto de caixa de diálogo do script de recurso e impede que o usuário possa selecionar mais de um botão de opção por vez no grupo de botões (se o usuário selecionar um botão de opção, os outros no grupo serão desmarcados).
 
    > [!NOTE]
-   > Somente o primeiro botão de opção no grupo deve ter a propriedade **Group** definida como **true**. Se você tiver controles adicionais que não fazem parte do grupo de botões, defina a propriedade **Group** do primeiro controle *que está fora do grupo* como **true** também. Você pode identificar rapidamente o primeiro controle fora do grupo usando **Ctrl**+**D** para exibir a ordem de tabulação.
+   > Somente o primeiro botão de opção no grupo deve ter a propriedade **Group** definida como **true**. Se você tiver controles adicionais que não fazem parte do grupo de botões, defina a propriedade **Group** do primeiro controle *que está fora do grupo* como **true** também. Você pode identificar rapidamente o primeiro controle fora do grupo usando **Ctrl** + **D** para exibir a ordem de tabulação.
 
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Para adicionar uma variável de membro para o grupo de botões de opção
 
@@ -143,7 +143,7 @@ Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo. 
 
    - Na caixa **nome da variável** , digite um nome para a nova variável de membro.
 
-   - Na caixa de listagem **tipo de variável** , selecione **int** ou digite *int*.
+   - Na caixa de listagem **tipo de variável** , selecione **`int`** ou digite *int*.
 
    Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
 

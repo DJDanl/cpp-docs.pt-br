@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 80bca2160f2e60938e9d0c85557b11a273c23264
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b76e327c46a180c1e7ae7287ee9fe49573f3a7a6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363058"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217695"
 ---
 # <a name="istreambuf_iterator-class"></a>Classe istreambuf_iterator
 
-O modelo de classe istreambuf_iterator descreve um objeto iterador de entrada que extrai elementos de caracterede `basic_streambuf` \< um buffer de fluxo de entrada, que ele acessa através de um objeto que armazena, de ponteiro de tipo para **CharType**, **Traits**>.
+O modelo de classe istreambuf_iterator descreve um objeto de iterador de entrada que extrai elementos de caractere de um buffer de fluxo de entrada, que ele acessa por meio de um objeto que ele armazena, do tipo ponteiro para `basic_streambuf` \< **CharType**, **Traits**> .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,13 +37,13 @@ class istreambuf_iterator
 : public iterator<input_iterator_tag, CharType, typename Traits ::off_type, CharType*, CharType&>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CharType*\
 O tipo que representa o tipo de caractere para istreambuf_iterator.
 
-*Traços*\
-O tipo que representa o tipo de caractere para istreambuf_iterator. Esse argumento é opcional e o valor padrão é `char_traits`\< *CharType>.*
+*Características*\
+O tipo que representa o tipo de caractere para istreambuf_iterator. Esse argumento é opcional e o valor padrão é `char_traits` \< *CharType> . *
 
 ## <a name="remarks"></a>Comentários
 
@@ -71,23 +71,23 @@ Após construir ou incrementar um objeto da classe istreambuf_iterator com um po
 
 |Função de membro|Descrição|
 |-|-|
-|[Igual](#equal)|Testa a igualdade entre dois iteradores do buffer de fluxo de entrada.|
+|[iguais](#equal)|Testa a igualdade entre dois iteradores do buffer de fluxo de entrada.|
 
 ### <a name="operators"></a>Operadores
 
 |Operador|Descrição|
 |-|-|
-|[operador*](#op_star)|O operador de desreferenciamento retorna o próximo caractere no fluxo.|
-|[operador++](#op_add_add)|Ou retorna o próximo caracteres do fluxo de entrada, ou copia o objeto antes de incrementá-lo e retorna a cópia.|
+|[operador](#op_star)|O operador de desreferenciamento retorna o próximo caractere no fluxo.|
+|[operador + +](#op_add_add)|Ou retorna o próximo caracteres do fluxo de entrada, ou copia o objeto antes de incrementá-lo e retorna a cópia.|
 |[operador->](#op_arrow)|Retorna o valor de um membro, se houver.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<iterator>
+**Cabeçalho:**\<iterator>
 
 **Namespace:** std
 
-## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator:char_type
+## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator:: char_type
 
 Um tipo que é fornecido para o tipo de caractere do `ostreambuf_iterator`.
 
@@ -132,7 +132,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator::igual
+## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator:: igual
 
 Testa a equivalência entre dois iteradores do buffer de fluxo de entrada.
 
@@ -140,18 +140,18 @@ Testa a equivalência entre dois iteradores do buffer de fluxo de entrada.
 bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
 O iterador com relação ao qual verificar quanto à igualdade.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se os dois `istreambuf_iterator`s forem iteradores de final do fluxo ou se nenhum deles for um iterador de final do fluxo; caso contrário, **false**.
+**`true`** Se ambos os `istreambuf_iterator` s forem iteradores de fim de fluxo ou se nenhum for um iterador de fim de fluxo; caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
-Um intervalo é `istreambuf_iterator` definido pela posição atual e pelo iterador de fim de fluxo, mas como todos os `equal` iteradores de fluxo não-end-of `istreambuf_iterator`são equivalentes sob a função de membro, não é possível definir quaisquer subintervalos usando s. Os operadores `==` e `!=` têm a mesma semântica.
+Um intervalo é definido pelo `istreambuf_iterator` para a posição atual e o iterador de fim de fluxo, mas como todos os iteradores de fluxo não-end são equivalentes na `equal` função membro, não é possível definir nenhum subintervalo usando `istreambuf_iterator` s. Os operadores `==` e `!=` têm a mesma semântica.
 
 ### <a name="example"></a>Exemplo
 
@@ -181,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator:int_type
+## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator:: int_type
 
 Um tipo que fornece um tipo de inteiro para uma `istreambuf_iterator`.
 
@@ -212,7 +212,7 @@ The inttype1 = 100.
 */
 ```
 
-## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator:istream_type
+## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator:: istream_type
 
 Um tipo que é fornecido para o tipo de fluxo da `istreambuf_iterator`.
 
@@ -222,13 +222,13 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é `basic_istream` \< um sinônimo de **CharType**, **Traits**>.
+O tipo é um sinônimo para `basic_istream` \< **CharType**, **Traits**> .
 
 ### <a name="example"></a>Exemplo
 
 Consulte [istreambuf_iterator](#istreambuf_iterator) para obter um exemplo de como declarar e usar `istream_type`.
 
-## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator:istreambuf_iterator
+## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator:: istreambuf_iterator
 
 Constrói istreambuf_iterator que é inicializado para ler caracteres do fluxo de entrada.
 
@@ -237,7 +237,7 @@ istreambuf_iterator(streambuf_type* strbuf = 0) throw();
 istreambuf_iterator(istream_type& _Istr) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strbuf*\
 O buffer do fluxo de entrada ao qual o `istreambuf_iterator` está sendo anexado.
@@ -247,7 +247,7 @@ O fluxo de entrada ao qual o `istreambuf_iterator` está sendo anexado.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa o ponteiro de tampão de fluxo de entrada com *strbuf*. O segundo construtor inicializa o ponteiro de fluxo de entrada com *_Istr*. `rdbuf`, e, eventualmente, tenta extrair e `CharType`armazenar um objeto do tipo .
+O primeiro construtor inicializa o ponteiro de buffer de fluxo de entrada com *strbuf*. O segundo construtor inicializa o ponteiro de buffer de fluxo de entrada com *_Istr*. `rdbuf`e, eventualmente, tenta extrair e armazenar um objeto do tipo `CharType` .
 
 ### <a name="example"></a>Exemplo
 
@@ -281,7 +281,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator:operador*
+## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator:: Operator *
 
 O operador de desreferenciamento retorna o próximo caractere no fluxo.
 
@@ -321,7 +321,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator:operador++
+## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator:: operador + +
 
 Ou retorna o próximo caracteres do fluxo de entrada, ou copia o objeto antes de incrementá-lo e retorna a cópia.
 
@@ -336,7 +336,7 @@ Um `istreambuf_iterator` ou uma referência a um `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro operador eventualmente tenta extrair e `CharType` armazenar um objeto de tipo do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
+O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` a partir do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
 
 ### <a name="example"></a>Exemplo
 
@@ -366,7 +366,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator::operador-&gt;
+## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>operador istreambuf_iterator::&gt;
 
 Retorna o valor de um membro, se houver.
 
@@ -376,9 +376,9 @@ const Elem* operator->() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-O operador devolve ** & \* \*isso.**
+O operador retorna ** & \* \* isso**.
 
-## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator:streambuf_type
+## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator:: streambuf_type
 
 Um tipo fornece o tipo de fluxo do istreambuf_iterator.
 
@@ -388,13 +388,13 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é `basic_streambuf` \< um sinônimo de **CharType**, **Traits**>.
+O tipo é um sinônimo para `basic_streambuf` \< **CharType**, **Traits**> .
 
 ### <a name="example"></a>Exemplo
 
 Consulte [istreambuf_iterator](#istreambuf_iterator) para obter um exemplo de como declarar e usar `istreambuf_type`.
 
-## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator:traits_type
+## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator:: traits_type
 
 Um tipo que fornece o tipo de característica do caractere da `istream_iterator`.
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>Confira também
 
-[Estruturador de tempo](../standard-library/iterator-struct.md)\
-[\<>do tempo](../standard-library/iterator.md)\
-[Segurança do segmento na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[Estrutura do iterador](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

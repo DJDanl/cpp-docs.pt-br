@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: 0f833209938ccc09cbc37235788b6f719d4d12d4
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 09817372e818a05c389a083aac5f04e03b1ab0e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506865"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218943"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (Regras noexcept C++17)
 
-O padrão c++ 17 faz `throw()` um alias para `noexcept` , remove `throw(` *`type-list`* `)` e `throw(...)` e permite que determinados tipos sejam incluídos `noexcept` . Essa alteração pode causar uma série de problemas de compatibilidade de origem no código que está em conformidade com C++ 14 ou anterior. A **`/Zc:noexceptTypes`** opção especifica conformidade com o padrão c++ 17. **`/Zc:noexceptTypes-`** permite o comportamento C++ 14 e anterior quando o código é compilado no modo C++ 17.
+O padrão c++ 17 faz `throw()` um alias para **`noexcept`** , remove `throw(` *`type-list`* `)` e `throw(...)` e permite que determinados tipos sejam incluídos **`noexcept`** . Essa alteração pode causar uma série de problemas de compatibilidade de origem no código que está em conformidade com C++ 14 ou anterior. A **`/Zc:noexceptTypes`** opção especifica conformidade com o padrão c++ 17. **`/Zc:noexceptTypes-`** permite o comportamento C++ 14 e anterior quando o código é compilado no modo C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 

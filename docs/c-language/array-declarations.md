@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313518"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218917"
 ---
 # <a name="array-declarations"></a>Declarações de matriz
 
@@ -28,17 +28,17 @@ Uma "declaração de matriz" nomeia a matriz e especifica o tipo dos respectivos
 
 *init-Declarador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inicializador* de *Declarador* **=**
+&nbsp;&nbsp;&nbsp;&nbsp;*Declarador* **=** *inicializador*
 
 *Declarador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*Declarador direto*:\* /um Declarador de função\*/<br/>
+*Declarador direto*:/ \* um Declarador de função\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***[***opt-expressão de constante*<sub>opt</sub> **]**    
 
 Como *constant-expression* é opcional, a sintaxe tem dois formatos:
 
-- O primeiro formato define uma variável de matriz. O argumento *constant-expression* entre colchetes especifica o número de elementos na matriz. O *constant-expression*, se estiver presente, deve ter um tipo integral e um valor maior que zero. Cada elemento tem o tipo indicado por *type-specifier*, que pode ser qualquer tipo exceto `void`. Um elemento de matriz não pode ser um tipo de função.
+- O primeiro formato define uma variável de matriz. O argumento *constant-expression* entre colchetes especifica o número de elementos na matriz. O *constant-expression*, se estiver presente, deve ter um tipo integral e um valor maior que zero. Cada elemento tem o tipo fornecido pelo *especificador de tipo*, que pode ser qualquer tipo, exceto **`void`** . Um elemento de matriz não pode ser um tipo de função.
 
 - O segundo formato declara uma variável que foi definida em outro lugar. Ele omite o argumento *constant-expression* entre colchetes, mas não os colchetes. Você só poderá usar esse formato se tiver inicializado a matriz anteriormente, se a tiver declarado como um parâmetro ou se a tiver declarado como uma referência a uma matriz definida explicitamente em outro lugar no programa.
 
@@ -72,7 +72,7 @@ Estes exemplos ilustram declarações de matrizes:
 float matrix[10][15];
 ```
 
-A matriz bidimensional nomeada `matrix` tem 150 elementos, cada um deles com o tipo **float**.
+A matriz bidimensional chamada `matrix` tem 150 elementos, cada um com **`float`** tipo.
 
 ```C
 struct {
@@ -86,14 +86,14 @@ Essa é uma declaração de uma matriz de estruturas. Essa matriz tem 100 elemen
 extern char *name[];
 ```
 
-Essa instrução declara o tipo e o nome de uma matriz de ponteiros para `char`. A definição real de `name` ocorre em outro lugar.
+Essa instrução declara o tipo e o nome de uma matriz de ponteiros para **`char`** . A definição real de `name` ocorre em outro lugar.
 
 **Específico da Microsoft**
 
-O tipo de inteiro necessário para manter o tamanho máximo de uma matriz é o tamanho de **size_t**. Definido no arquivo de cabeçalho STDDEF.H, **size_t** é um `unsigned int` com o intervalo de 0x00000000 a 0x7CFFFFFF.
+O tipo de inteiro necessário para manter o tamanho máximo de uma matriz é o tamanho de **size_t**. Definido no arquivo de cabeçalho STDDEF. H, **size_t** é um **`unsigned int`** com o intervalo 0x00000000 a 0x7CFFFFFF.
 
 **FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
-[Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)
+[Declaradores e declarações de variáveis](../c-language/declarators-and-variable-declarations.md)

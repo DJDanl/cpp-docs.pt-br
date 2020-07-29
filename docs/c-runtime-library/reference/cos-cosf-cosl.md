@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506891"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221920"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -61,23 +61,23 @@ float cos( float x );  // C++ only
 long double cos( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Ângulo em radianos.
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor retornado
 
 O cosseno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|nenhum|**_DOMAIN**|
+|± QNAN, IND|nenhuma|**_DOMAIN**|
 |± INF|**Inválido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cos** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, o **cos** sempre usa e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cos** que usam e retornam **`float`** **`long double`** valores. Em um programa C, o **cos** sempre usa e retorna um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 

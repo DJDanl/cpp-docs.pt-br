@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912100"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221972"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -64,7 +64,7 @@ long double cbrtl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Valor de ponto flutuante
@@ -79,7 +79,7 @@ As funções **cbrt** retornam a raiz do cubo de *x*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cbrt** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **cbrt** sempre leva e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cbrt** que usam **`float`** ou **`long double`** digitam. Em um programa C, **cbrt** sempre leva e retorna **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -117,7 +117,7 @@ The cube root of -64.64 is -4.013289
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

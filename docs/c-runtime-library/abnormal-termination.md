@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a963f1059eccaddce9ec01cd53a07df668ee46c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944720"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213652"
 ---
 # <a name="_abnormal_termination"></a>_abnormal_termination
 
-Indica se o bloco `__finally` de uma [instrução try-finally](../cpp/try-finally-statement.md) é inserido enquanto o sistema está executado uma lista interna de manipuladores de término.
+Indica se o **`__finally`** bloco de uma [instrução try-finally](../cpp/try-finally-statement.md) é inserido enquanto o sistema está executando uma lista interna de manipuladores de encerramento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,9 +38,9 @@ int   _abnormal_termination(
    );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**true** se o sistema estiver *desenrolando* a pilha; caso contrário, **false**.
+**`true`** Se o sistema estiver *desenrolando* a pilha; caso contrário, **`false`** .
 
 ## <a name="remarks"></a>Comentários
 
@@ -52,6 +52,6 @@ int   _abnormal_termination(
 |-------------|---------------------|
 |_abnormal_termination|excpt. h|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Instrução try-finally](../cpp/try-finally-statement.md)
+[Instrução try – finally](../cpp/try-finally-statement.md)

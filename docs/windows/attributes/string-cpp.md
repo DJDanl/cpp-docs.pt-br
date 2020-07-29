@@ -1,21 +1,21 @@
 ---
-title: Cadeia deC++ caracteres (atributo com)
+title: Cadeia de caracteres (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 68708cce2e167c6f40b461d52861fe4ed82be867
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166153"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213808"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indica que o **caractere**unidimensional, **wchar_t**, a matriz `byte` (ou equivalente) ou o ponteiro para tal matriz deve ser tratado como uma cadeia de caracteres.
+Indica que a matriz unidimensional **`char`** , **`wchar_t`** , `byte` (ou equivalente) ou o ponteiro para tal matriz deve ser tratado como uma cadeia de caracteres.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,13 +52,13 @@ __interface IFireTabCtrl
 |-|-|
 |**Aplica-se a**|Matriz ou ponteiro para uma matriz, parâmetro de interface, método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de matriz](array-attributes.md)<br/>
-[export](export.md)
+[Export](export.md)
