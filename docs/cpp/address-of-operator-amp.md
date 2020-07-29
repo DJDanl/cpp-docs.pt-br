@@ -1,5 +1,5 @@
 ---
-title: 'Operador de endereço: &amp;'
+title: Operador de endereço:&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: 4c9ae9aedaec202c8798ab454ee5df1a68278a6d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 836802684e24c721f97dc4c5558d87b9a5e69bc8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181597"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227680"
 ---
-# <a name="address-of-operator-amp"></a>Operador de endereço: &amp;
+# <a name="address-of-operator-amp"></a>Operador de endereço:&amp;
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,11 +25,11 @@ ms.locfileid: "80181597"
 
 ## <a name="remarks"></a>Comentários
 
-O operador address-of unário ( **&** ) pega o endereço de seu operando. O operando do operador address-of pode ser um designador de função ou um l-Value que designa um objeto que não seja um campo de bits.
+O operador address-of unário ( **&** ) Obtém o endereço de seu operando. O operando do operador address-of pode ser um designador de função ou um l-Value que designa um objeto que não seja um campo de bits.
 
 O operador address-of pode ser aplicado somente a variáveis com tipos fundamentais, de estrutura, classe ou união que são declarados no nível de escopo do arquivo, ou a referências de matriz subscrita. Nessas expressões, uma expressão constante que não inclui o operador address-of pode ser adicionada ou subtraída da expressão address-of.
 
-Quando aplicado a funções ou valores l, o resultado da expressão será um tipo de ponteiro (um valor r) derivado do tipo do operando. Por exemplo, se o operando for do tipo **Char**, o resultado da expressão será do tipo ponteiro para **Char**. O operador address-of, aplicado a objetos **const** ou **volatile** , é avaliado como `const type *` ou `volatile type *`, em que **Type** é o tipo do objeto original.
+Quando aplicado a funções ou valores l, o resultado da expressão será um tipo de ponteiro (um valor r) derivado do tipo do operando. Por exemplo, se o operando for do tipo **`char`** , o resultado da expressão será do tipo ponteiro para **`char`** . O operador address-of, aplicado a **`const`** ou **`volatile`** Objects, é avaliado `const type *` como `volatile type *` ou, onde **Type** é o tipo do objeto original.
 
 Quando o operador address-of é aplicado a um nome qualificado, o resultado depende se o *nome qualificado* especifica um membro estático. Nesse caso, o resultado é um ponteiro para o tipo especificado na declaração do membro. Se o membro não for estático, o resultado será um ponteiro para o *nome* do membro da classe indicada por *nome de classe qualificado*. (Consulte as [expressões primárias](../cpp/primary-expressions.md) para obter mais informações sobre *nome de classe qualificado*.) O fragmento de código a seguir mostra como o resultado difere, dependendo se o membro é estático:
 
@@ -108,6 +108,6 @@ int main() {
 ## <a name="see-also"></a>Confira também
 
 [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)<br/>
-[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores internos C++, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Declarador de referência Lvalue: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
-[Operadores de indireção e address-of](../c-language/indirection-and-address-of-operators.md)
+[Operadores de endereço e de indireção](../c-language/indirection-and-address-of-operators.md)

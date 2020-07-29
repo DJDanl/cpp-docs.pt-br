@@ -2,16 +2,16 @@
 title: Sinal de campos de bits
 ms.date: 11/04/2016
 ms.assetid: a8895b95-5504-4e30-9ad2-2498bd5c23ed
-ms.openlocfilehash: 7142fca46ba0b900db2b0c73e433fba3a205eb43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e5533340916df18f4e7054dd416ed3dbc97c389
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227758"
 ---
 # <a name="sign-of-bit-fields"></a>Sinal de campos de bits
 
-**ANSI 3.5.2.1** Se um campo "simples" `int` for tratado como um campo de bits **signed int** ou como um campo de bits unsigned int
+**3.5.2.1 ANSI** Se um campo "simples" **`int`** é tratado como um **`signed int`** campo de bits ou como um campo de bit int não assinado
 
 Os campos de bits podem ser assinados ou não assinados. Os campos de bits simples são tratados como assinados.
 

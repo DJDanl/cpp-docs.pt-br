@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d477e33def7168d01f9c5f8a64579fed0b497eb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346100"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190059"
 ---
 # <a name="typedef-declarations"></a>Declarações typedef
 
@@ -30,18 +30,18 @@ Uma declaração de typedef é interpretada da mesma maneira que uma declaraçã
 &nbsp;&nbsp;&nbsp;&nbsp;*declaração de qualificador de tipo – aceitar especificadores*<sub>opt</sub>
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**
+&nbsp;&nbsp;&nbsp;&nbsp;**`typedef`**
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**livre**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**º**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**baixo**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**inteiro**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Longas**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**barra**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Clique**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**inteiro**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**não assinados**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`void`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`char`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`short`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`int`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`long`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`float`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`double`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`signed`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*especificador struct-ou-Union-*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*especificador de enumeração*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-Name*
@@ -49,9 +49,9 @@ Uma declaração de typedef é interpretada da mesma maneira que uma declaraçã
 *typedef-Name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ID*
 
-Observe que uma declaração de typedef não cria tipos. Ela cria sinônimos para tipos existentes ou nomes para os tipos que podem ser especificados de outras formas. Quando um nome de typedef é usado como um especificador de tipo, ele pode ser combinado com determinados especificadores de tipo, mas não outros. Os modificadores aceitáveis incluem **const** e `volatile`.
+Observe que uma declaração de typedef não cria tipos. Ela cria sinônimos para tipos existentes ou nomes para os tipos que podem ser especificados de outras formas. Quando um nome de typedef é usado como um especificador de tipo, ele pode ser combinado com determinados especificadores de tipo, mas não outros. Os modificadores aceitáveis incluem **`const`** e **`volatile`** .
 
-Os nomes de typedef compartilham o namespace com identificadores comuns (consulte [Namespaces](../c-language/name-spaces.md) para obter mais informações). Portanto, um programa pode ter um nome de typedef e um identificador de escopo local com o mesmo nome. Por exemplo: 
+Os nomes de typedef compartilham o namespace com identificadores comuns (consulte [Namespaces](../c-language/name-spaces.md) para obter mais informações). Portanto, um programa pode ter um nome de typedef e um identificador de escopo local com o mesmo nome. Por exemplo:
 
 ```C
 typedef char FlagType;

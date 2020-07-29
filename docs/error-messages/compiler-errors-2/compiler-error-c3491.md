@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 78f90ee1c44a0d42e529a027b1e7fc90a0da3cdb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f6f20d9af424fdd4254fc15e0580d62b9dfba144
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738317"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184469"
 ---
 # <a name="compiler-error-c3491"></a>Erro do compilador C3491
 
@@ -19,15 +19,15 @@ ms.locfileid: "74738317"
 
 Uma expressão lambda não mutável não pode modificar o valor de uma variável que é capturada por valor.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
-- Declare sua expressão lambda com a palavra-chave `mutable` ou
+- Declare sua expressão lambda com a **`mutable`** palavra-chave ou
 
 - Passe a variável por referência à lista de captura da expressão lambda.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3491 porque o corpo de uma expressão lambda não mutável modifica a variável de captura `m`:
+O exemplo a seguir gera C3491 porque o corpo de uma expressão lambda não mutável modifica a variável de captura `m` :
 
 ```cpp
 // C3491a.cpp
@@ -41,7 +41,7 @@ int main()
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir resolve C3491 declarando a expressão lambda com a palavra-chave `mutable`:
+O exemplo a seguir resolve C3491 declarando a expressão lambda com a **`mutable`** palavra-chave:
 
 ```cpp
 // C3491b.cpp
@@ -53,6 +53,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)

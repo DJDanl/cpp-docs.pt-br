@@ -1,20 +1,20 @@
 ---
 title: Alinhamento
-description: Como o alinhamento de dados é especificado C++em moderno.
+description: Como o alinhamento de dados é especificado no C++ moderno.
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 7f6bef061fee41389bad644d9ac5244f5644da76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227641"
 ---
 # <a name="alignment"></a>Alinhamento
 
-Um dos recursos de baixo nível do C++ é a capacidade de especificar o alinhamento preciso dos objetos na memória para tirar o máximo proveito de uma arquitetura de hardware específica. Por padrão, o compilador alinha os membros de classe e struct em seu valor de tamanho: `bool` e `char` em limites de 1 byte, `short` em limites de 2 bytes, `int`, `long`e `float` em limites de 4 bytes e `long long`, `double`e `long double` em limites de 8 bytes.
+Um dos recursos de baixo nível do C++ é a capacidade de especificar o alinhamento preciso de objetos na memória para tirar o máximo proveito de uma arquitetura de hardware específica. Por padrão, o compilador alinha os membros de classe e struct em seu valor de tamanho: **`bool`** e **`char`** em limites de 1 byte, **`short`** em limites de 2 bytes,, **`int`** **`long`** , e **`float`** em limites de 4 bytes, e **`long long`** , **`double`** e **`long double`** em limites de 8 bytes.
 
-Na maioria dos cenários, você nunca precisa se preocupar com alinhamento porque o alinhamento padrão já é o ideal. Em alguns casos, no entanto, você pode obter melhorias significativas de desempenho ou economia de memória, especificando um alinhamento personalizado para suas estruturas de dados. Antes do Visual Studio 2015, você pode usar as palavras-chave específicas da Microsoft `__alignof` e `declspec(alignas)` para especificar um alinhamento maior que o padrão. A partir do Visual Studio 2015, você deve usar as palavras-chave padrão do C++ 11 **alignof** e **alignas** para portabilidade de código máximo. As novas palavras-chave se comportam da mesma forma nos bastidores que as extensões específicas da Microsoft. A documentação para essas extensões também se aplica às novas palavras-chave. Para obter mais informações, consulte [operador de __alignof](../cpp/alignof-operator.md) e [alinhar](../cpp/align-cpp.md). O C++ padrão não especifica o comportamento de empacotamento para alinhamento em limites menores do que o padrão do compilador para a plataforma de destino, para que você ainda precise usar o [pacote](../preprocessor/pack.md) do Microsoft #pragma nesse caso.
+Na maioria dos cenários, você nunca precisa se preocupar com alinhamento porque o alinhamento padrão já é o ideal. Em alguns casos, no entanto, você pode obter melhorias significativas de desempenho ou economia de memória, especificando um alinhamento personalizado para suas estruturas de dados. Antes do Visual Studio 2015, você pode usar as palavras-chave específicas da Microsoft **`__alignof`** e **`__declspec(align)`** especificar um alinhamento maior que o padrão. A partir do Visual Studio 2015, você deve usar as palavras-chave padrão do C++ 11 **`alignof`** e **`alignas`** para portabilidade de código máxima. As novas palavras-chave se comportam da mesma forma nos bastidores que as extensões específicas da Microsoft. A documentação para essas extensões também se aplica às novas palavras-chave. Para obter mais informações, consulte [ `alignof` operador](../cpp/alignof-operator.md) e [alinhar](../cpp/align-cpp.md). O padrão C++ não especifica o comportamento de empacotamento para alinhamento em limites menores do que o padrão do compilador para a plataforma de destino, para que você ainda precise usar a Microsoft [`#pragma pack`](../preprocessor/pack.md) nesse caso.
 
 Use a [classe aligned_storage](../standard-library/aligned-storage-class.md) para a alocação de memória de estruturas de dados com alinhamentos personalizados. A [classe aligned_union](../standard-library/aligned-union-class.md) é para especificar o alinhamento de uniões com construtores ou destruidores não triviais.
 
@@ -28,7 +28,7 @@ As CPUs executam instruções que operam em dados armazenados na memória. Os da
 
 Os compiladores tentam fazer alocações de dados de forma a impedir o desalinhamento dos dados.
 
-Para tipos de dados simples, o compilador atribui endereços que são múltiplos do tamanho em bytes do tipo de dados. Por exemplo, o compilador atribui endereços a variáveis do tipo `long` que são múltiplos de 4, definindo os dois últimos bits do endereço como zero.
+Para tipos de dados simples, o compilador atribui endereços que são múltiplos do tamanho em bytes do tipo de dados. Por exemplo, o compilador atribui endereços a variáveis do tipo **`long`** que são múltiplos de 4, definindo os dois bits inferiores do endereço como zero.
 
 O compilador também ajusta as estruturas de uma forma que alinha naturalmente cada elemento da estrutura. Considere a estrutura `struct x_` no exemplo de código a seguir:
 
@@ -63,13 +63,13 @@ Ambas as declarações retornam `sizeof(struct x_)` como 12 bytes.
 
 A segunda declaração inclui dois elementos de preenchimento:
 
-1. `char _pad0[3]` alinhar o membro de `int b` em um limite de 4 bytes.
+1. `char _pad0[3]`para alinhar o `int b` membro em um limite de 4 bytes.
 
-1. `char _pad1[1]` alinhar os elementos de matriz da estrutura `struct _x bar[3];` em um limite de quatro bytes.
+1. `char _pad1[1]`para alinhar os elementos de matriz da estrutura `struct _x bar[3];` em um limite de quatro bytes.
 
-O preenchimento alinha os elementos de `bar[3]` de forma que permita o acesso natural.
+O preenchimento alinha os elementos de `bar[3]` uma maneira que permite o acesso natural.
 
-O exemplo de código a seguir mostra o layout da matriz de `bar[3]`:
+O exemplo de código a seguir mostra o `bar[3]` layout da matriz:
 
 ```Output
 adr offset   element
@@ -96,13 +96,13 @@ adr offset   element
 0x0023   char _pad1[1];
 ```
 
-## <a name="alignof-and-alignas"></a>alignof e alignas
+## <a name="alignof-and-alignas"></a>`alignof` e `alignas`
 
-O especificador de tipo **alignas** é uma C++ maneira portátil e padrão de especificar o alinhamento personalizado de variáveis e tipos definidos pelo usuário. O operador **alignof** é, da mesma forma, uma maneira portátil e padrão de obter o alinhamento de um tipo ou variável especificada.
+O **`alignas`** especificador de tipo é uma maneira portátil e C++ padrão de especificar o alinhamento personalizado de variáveis e tipos definidos pelo usuário. O **`alignof`** operador é, da mesma forma, uma maneira portátil e padrão de obter o alinhamento de um tipo ou variável especificada.
 
 ## <a name="example"></a>Exemplo
 
-Você pode usar **alignas** em uma classe, struct ou Union ou em membros individuais. Quando vários especificadores **alignas** forem encontrados, o compilador escolherá o mais estrito (aquele com o maior valor).
+Você pode usar **`alignas`** em uma classe, struct ou Union ou em membros individuais. Quando vários **`alignas`** especificadores forem encontrados, o compilador escolherá o mais estrito (aquele com o maior valor).
 
 ```cpp
 // alignas_alignof.cpp
