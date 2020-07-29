@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8caa33b3bafbaa9e537d9669aa7b60a9355475ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209307"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218293"
 ---
 # <a name="using-bookmarks"></a>Usar indicadores
 
-Antes de abrir o conjunto de linhas, você deve informar ao provedor que deseja usar indicadores. Para fazer isso, defina a propriedade `DBPROP_BOOKMARKS` como **true** em seu conjunto de propriedades. O provedor recupera indicadores como uma coluna zero, portanto, você deve usar a macro especial BOOKMARK_ENTRY e a classe `CBookmark` se estiver usando um acessador estático. `CBookmark` é uma classe de modelo em que o argumento é o comprimento em bytes do buffer de indicadores. O comprimento do buffer necessário para um indicador depende do provedor. Se você estiver usando o provedor de OLE DB ODBC, conforme mostrado no exemplo a seguir, o buffer deverá ter 4 bytes.
+Antes de abrir o conjunto de linhas, você deve informar ao provedor que deseja usar indicadores. Para fazer isso, defina a `DBPROP_BOOKMARKS` propriedade como **`true`** em seu conjunto de propriedades. O provedor recupera indicadores como uma coluna zero, portanto, você deve usar a macro especial BOOKMARK_ENTRY e a `CBookmark` classe se estiver usando um acessador estático. `CBookmark`é uma classe de modelo em que o argumento é o comprimento em bytes do buffer de indicadores. O comprimento do buffer necessário para um indicador depende do provedor. Se você estiver usando o provedor de OLE DB ODBC, conforme mostrado no exemplo a seguir, o buffer deverá ter 4 bytes.
 
 ```cpp
 class CProducts
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-Se você usar `CDynamicAccessor`, o buffer será definido dinamicamente em tempo de execução. Nesse caso, você pode usar uma versão especializada do `CBookmark` para o qual você não especifica um comprimento de buffer. Use a função `GetBookmark` para recuperar o indicador do registro atual, conforme mostrado neste exemplo de código:
+Se você usar `CDynamicAccessor` , o buffer será definido dinamicamente em tempo de execução. Nesse caso, você pode usar uma versão especializada do `CBookmark` para a qual não especifica um comprimento de buffer. Use a função `GetBookmark` para recuperar o indicador do registro atual, conforme mostrado neste exemplo de código:
 
 ```cpp
 CTable<CDynamicAccessor> product;

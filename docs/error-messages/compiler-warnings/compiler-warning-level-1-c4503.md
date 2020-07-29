@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d3af2b5629906679db46f6f669084c11a41f7ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186537"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233243"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Aviso do compilador (nível 1) C4503
 
@@ -23,7 +23,7 @@ Este aviso do compilador é obsoleto e não é gerado no Visual Studio 2017 e em
 
 O nome decorado era maior do que o limite do compilador (4096) e foi truncado. Para evitar esse aviso e o truncamento, reduza o número de argumentos ou os comprimentos de nome de identificadores usados. Nomes decorados que são maiores que o limite do compilador têm um hash aplicado e não estão em perigo de uma colisão de nome.
 
-Ao usar uma versão mais antiga do Visual Studio, esse aviso pode ser emitido quando o código contém modelos especializados em modelos repetidamente. Por exemplo, um mapa de mapas (da biblioteca C++ padrão). Nessa situação, você pode tornar seus TYPEDEFs um tipo (uma **struct**, por exemplo) que contém o mapa.
+Ao usar uma versão mais antiga do Visual Studio, esse aviso pode ser emitido quando o código contém modelos especializados em modelos repetidamente. Por exemplo, um mapa de mapas (da biblioteca C++ Standard). Nessa situação, você pode tornar seus TYPEDEFs um tipo (a **`struct`** , por exemplo) que contenham o mapa.
 
 No entanto, você pode decidir não reestruturar seu código.  É possível enviar um aplicativo que gera C4503, mas se você receber erros de tempo de link em um símbolo truncado, pode ser mais difícil determinar o tipo do símbolo no erro. A depuração também pode ser mais difícil; o depurador pode ter mapeamento difícil do nome do símbolo para o nome do tipo. No entanto, a exatidão do programa não é afetada pelo nome truncado.
 

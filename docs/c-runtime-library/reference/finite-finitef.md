@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7e15a6619e584ff52c07048fcf591835b799587f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957175"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218696"
 ---
 # <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
@@ -67,18 +67,18 @@ int _finitef(
 ); /* x64 and ARM/ARM64 only */
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor de ponto flutuante a ser testado.
 
 ## <a name="return-value"></a>Valor retornado
 
-A `isfinite` macro e as `_finite` funções `_finitef` e retornarão um valor diferente de zero se *x* for um valor finito normal ou de subnormal. Eles retornam 0 se o argumento é infinito ou um NaN. A C++ função `isfinite` de modelo embutida se comporta da mesma maneira, mas retorna **true** ou **false**.
+A `isfinite` macro e as `_finite` `_finitef` funções e retornarão um valor diferente de zero se *x* for um valor finito normal ou de subnormal. Eles retornam 0 se o argumento é infinito ou um NaN. A função de modelo embutido em C++ `isfinite` se comporta da mesma maneira, mas retorna **`true`** ou **`false`** .
 
 ## <a name="remarks"></a>Comentários
 
-`isfinite`é uma macro quando compilada como C e uma função de modelo embutida quando C++compilada como. As `_finite` funções `_finitef` e são específicas da Microsoft. A função `_finitef` só está disponível quando compilada para plataformas x86, ARM ou ARM64.
+`isfinite`é uma macro quando compilada como C e uma função de modelo embutida quando compilada como C++. As `_finite` `_finitef` funções e são específicas da Microsoft. A função `_finitef` só está disponível quando compilada para plataformas x86, ARM ou ARM64.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -89,9 +89,9 @@ A `isfinite` macro e as `_finite` funções `_finitef` e retornarão um valor di
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isinf](isinf.md)<br/>

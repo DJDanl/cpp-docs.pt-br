@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 96589d8be56b81e78ea7c474aea24803cc56ab21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180479"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233789"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Constrói um objeto **_com_ptr_t** .
 
@@ -139,30 +139,30 @@ explicit _com_ptr_t(
 Um ponteiro de interface bruto.
 
 *fAddRef*<br/>
-Se for TRUE, `AddRef` será chamado para incrementar a contagem de referência do ponteiro de interface encapsulado.
+Se **`true`** , `AddRef` é chamado para incrementar a contagem de referência do ponteiro de interface encapsulado.
 
-*cp*<br/>
+*CP*<br/>
 Um objeto **_com_ptr_t** .
 
-*p*<br/>
+*DTI*<br/>
 Um ponteiro de interface bruto, seu tipo sendo diferente do tipo de ponteiro inteligente deste **_com_ptr_t** objeto.
 
-*varSrc*<br/>
-Um objeto `_variant_t` .
+*{1&amp;gt;varSrc&amp;lt;1}*<br/>
+Um objeto `_variant_t`.
 
-*CLSID*<br/>
-A `CLSID` de uma coclass.
+*clsid*<br/>
+O `CLSID` de uma coclass.
 
 *dwClsContext*<br/>
 Contexto para execução do código executável.
 
 *lpcStr*<br/>
-Uma cadeia de caracteres multibyte que mantém um `CLSID` (começando com " **{** ") ou um `ProgID`.
+Uma cadeia de caracteres multibyte que contém um `CLSID` (começando com "**{**") ou um `ProgID` .
 
 *pOuter*<br/>
 O desconhecido externo para [agregação](/windows/win32/com/aggregation).
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

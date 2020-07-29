@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914515"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234010"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -45,7 +45,7 @@ Instala sua própria rotina de encerramento a ser chamada pelo **encerramento**.
 terminate_function set_terminate( terminate_function termFunction );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *termFunction*<br/>
 Ponteiro para uma função de encerramento que você escreve.
@@ -60,7 +60,7 @@ A função **set_terminate** instala *termFunction* como a função chamada por 
 
 Em um ambiente multithreaded, funções de encerramento são mantidas separadamente para cada thread. Cada novo thread precisa instalar sua própria função de encerramento. Portanto, cada thread é responsável por sua própria manipulação de encerramento.
 
-O tipo de **terminate_function** é definido em eh. H como um ponteiro para uma função de encerramento definida pelo usuário, *termFunction* que retorna **void**. Sua função personalizada *termFunction* pode não usar argumentos e não deve retornar ao chamador. Se tiver, [Abort](abort.md) será chamado. Uma exceção não pode ser lançada de dentro de *termFunction*.
+O tipo de **terminate_function** é definido em eh. H como um ponteiro para uma função de encerramento definida pelo usuário, *termFunction* que retorna **`void`** . Sua função personalizada *termFunction* pode não usar argumentos e não deve retornar ao chamador. Se tiver, [Abort](abort.md) será chamado. Uma exceção não pode ser lançada de dentro de *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -85,10 +85,10 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo de [terminate](terminate-crt.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Rotinas de tratamento de exceções](../../c-runtime-library/exception-handling-routines.md)<br/>
-[anular](abort.md)<br/>
+[Rotinas de manipulação de exceção](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [encerrar](terminate-crt.md)<br/>

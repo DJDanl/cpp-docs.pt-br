@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: 92f9b15f474a5aa3d063f0ccfb663f56baf8de31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4aeef07a34c04bd1ab47acf808026024faada567
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354559"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218423"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Classe Platform::Collections::InputIterator
 
-Fornece um ativador de entrada de biblioteca de modelopadrão para coleções derivadas do Tempo de execução do Windows.
+Fornece uma InputIterator de biblioteca de modelos padrão para coleções derivadas do Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ template <typename X>
 class InputIterator;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *X*<br/>
 O typename da classe de modelo de InputIterator.
@@ -46,17 +46,17 @@ O typename da classe de modelo de InputIterator.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Inseriterator::InputIterator](#ctor)|Inicializa uma nova instância da classe InputIterator.|
+|[InputIterator::InputIterator](#ctor)|Inicializa uma nova instância da classe InputIterator.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Insumator::operador!= Operador](#operator-inequality)|Indica se o InputIterator atual não é igual a um InputIterator especificado.|
+|[Operador InputIterator:: Operator! =](#operator-inequality)|Indica se o InputIterator atual não é igual a um InputIterator especificado.|
 |[Operador InputIterator::operator*](#operator-dereference)|Recupera uma referência ao elemento especificado pelo InputIterator atual.|
-|[Initerator::operador++ Operador](#operator-increment)|Incrementa o InputIterator atual.|
-|[Inseridor::operador== Operador](#operator-equality)|Indica se o InputIterator atual é igual a um InputIterator especificado.|
-|[Interator::operador > operador](#operator-arrow)|Recupera o endereço do elemento referenciado pelo InputIterator atual.|
+|[Operador InputIterator:: Operator + +](#operator-increment)|Incrementa o InputIterator atual.|
+|[Operador InputIterator:: Operator = =](#operator-equality)|Indica se o InputIterator atual é igual a um InputIterator especificado.|
+|[Operador InputIterator:: Operator->](#operator-arrow)|Recupera o endereço do elemento referenciado pelo InputIterator atual.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -68,7 +68,7 @@ O typename da classe de modelo de InputIterator.
 
 **Namespace:** Platform::Collections
 
-## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>Initerator::Construtor de entrada
+## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>Construtor InputIterator:: InputIterator
 
 Inicializa uma nova instância da classe InputIterator.
 
@@ -79,12 +79,12 @@ InputIterator();
 explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Iterador*<br/>
+*repeti*<br/>
 Um objeto do iterador.
 
-## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>Interator::operador -&gt; Operador
+## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>Operador InputIterator:: Operator &gt;
 
 Recupera o endereço do elemento especificado pelo InputIterator atual.
 
@@ -98,7 +98,7 @@ pointer operator->() const;
 
 O endereço do elemento especificado pelo InputIterator atual.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>Interator::operador\* operador
+## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>Operador InputIterator:: Operator \*
 
 Recupera uma referência ao elemento especificado pelo InputIterator atual.
 
@@ -112,7 +112,7 @@ reference operator*() const;
 
 O elemento especificado pelo InputIterator atual.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>Inseridor::operador== Operador
+## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>Operador InputIterator:: Operator = =
 
 Indica se o InputIterator atual é igual a um InputIterator especificado.
 
@@ -122,16 +122,16 @@ Indica se o InputIterator atual é igual a um InputIterator especificado.
 bool operator== (const InputIterator& other) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Outros*<br/>
+*outros*<br/>
 Outro InputIterator.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se o insumo de entrada atual for igual a *outro;* caso contrário, **falso**.
+**`true`** Se o InputIterator atual for igual a *outro*; caso contrário, **`false`** .
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>Initerator::operador++ Operador
+## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>Operador InputIterator:: Operator + +
 
 Incrementa o InputIterator atual.
 
@@ -150,9 +150,9 @@ A primeira sintaxe incrementa e, em seguida, retorna o InputIterator atual. A se
 
 A primeira sintaxe de InputIterator pré-incrementa o InputIterator atual.
 
-A segunda sintaxe pós-incrementa o InputIterator atual. O tipo `int` na segunda sintaxe indica uma operação de pós-incremento, não um operando de inteiro real.
+A segunda sintaxe pós-incrementa o InputIterator atual. O **`int`** tipo na segunda sintaxe indica uma operação de incremento, não um operando de inteiro real.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>Insumator::operador!= Operador
+## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>Operador InputIterator:: Operator! =
 
 Indica se o InputIterator atual não é igual a um InputIterator especificado.
 
@@ -162,15 +162,15 @@ Indica se o InputIterator atual não é igual a um InputIterator especificado.
 bool operator!=(const InputIterator& other) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Outros*<br/>
+*outros*<br/>
 Outro InputIterator.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se o insumo de entrada atual não for igual a *outro;* caso contrário, **falso**.
+**`true`** Se o InputIterator atual não for igual a *outro*; caso contrário, **`false`** .
 
 ## <a name="see-also"></a>Confira também
 
-[Espaço de nome da plataforma](platform-namespace-c-cx.md)
+[Namespace da plataforma](platform-namespace-c-cx.md)

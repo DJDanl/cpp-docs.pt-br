@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
-ms.openlocfilehash: dbc6142a87bee00b130589fef5ab92a44f189864
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8ea5f53f5c6039cf15836ba995df0d63bd6fcb23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233893"
 ---
 # <a name="scanf-type-field-characters"></a>Caracteres de campo de tipo scanf
 
@@ -21,19 +21,19 @@ O caractere `type` é o único campo de formato necessário; ele aparece depois 
 
 |Caractere|Tipo de entrada esperado|Tipo de argumento|Argumento de tamanho na versão segura?|
 |---------------|----------------------------|----------------------|--------------------------------------|
-|`c`|Caractere. Quando usado com funções `scanf`, especifica o caractere de byte único; quando usado com funções `wscanf`, especifica o caractere largo. Caracteres de espaço em branco que normalmente são ignorados são lidos quando `c` é especificado. Para ler o próximo caractere de byte único que não é espaço em branco, use `%1s`; para ler o próximo caractere largo que não é espaço em branco, use `%1ws`.|Ponteiro para `char` quando usado com funções `scanf`, ponteiro para `wchar_t` quando usado com funções `wscanf`.|Obrigatório. O tamanho não inclui espaço para um terminador nulo.|
-|`C`|Caractere de tamanho oposto. Quando usado com funções `scanf`, especifica o caractere largo; quando usado com funções `wscanf`, especifica o caractere de byte único. Caracteres de espaço em branco que normalmente são ignorados são lidos quando `C` é especificado. Para ler o próximo caractere de byte único que não é espaço em branco, use `%1s`; para ler o próximo caractere largo que não é espaço em branco, use `%1ws`.|Ponteiro para `wchar_t` quando usado com funções `scanf`, ponteiro para `char` quando usado com funções `wscanf`.|Obrigatório. O argumento de tamanho não inclui espaço para um terminador nulo.|
-|`d`|Inteiro decimal.|Ponteiro para `int`.|Não.|
-|`i`|Um inteiro. Hexadecimal se a cadeia de caracteres de entrada começa com "0x" ou "0X", octal se a cadeia de caracteres começa com "0", caso contrário, decimal.|Ponteiro para `int`.|Não.|
-|`o`|Inteiro octal.|Ponteiro para `int`.|Não.|
-|`p`|Um endereço de ponteiro em dígitos hexadecimais. O número máximo de dígitos de leitura depende do tamanho de um ponteiro (32 ou 64 bits), que depende da arquitetura do computador. "0x" ou "0X" são aceitos como prefixos.|Ponteiro para `void*`.|Não.|
-|`u`|Inteiro decimal sem sinal.|Ponteiro para `unsigned int`.|Não.|
-|`x`|Inteiro hexadecimal.|Ponteiro para `int`.|Não.|
-|`e`, `E`, `f`, `F`, `g`, `G`|Valor de ponto flutuante consistindo de um sinal opcional (+ ou -), de uma série de um ou mais dígitos decimais que contém o ponto decimal e também de um expoente opcional ("e" ou "E"), seguido por um valor inteiro com sinal opcionalmente.|Ponteiro para `float`.|Não.|
-|`a`, `A`|Valor de ponto flutuante que consiste em uma série de um ou mais dígitos hexadecimais com um ponto decimal opcional e um expoente ("p" ou "P") seguido de um valor decimal.|Ponteiro para `float`.|Não.|
-|`n`|Nenhuma entrada lida do fluxo ou buffer.|Ponteiro para `int`, no qual é armazenado o número de caracteres lidos com êxito do fluxo ou buffer até esse ponto na chamada atual para funções `scanf` ou funções `wscanf`.|Não.|
-|`s`|Cadeia de caracteres, até o primeiro caractere de espaço em branco (espaço, tabulação ou nova linha). Para ler cadeias de caracteres não delimitadas por caracteres de espaço, use o conjunto de colchetes (`[ ]`), conforme discutido em [Especificação de largura scanf Width](../c-runtime-library/scanf-width-specification.md).|Quando usado com funções `scanf`, significa matriz de caracteres de byte único; quando usado com funções `wscanf`, significa matriz de caracteres largos. Em ambos os casos, a matriz de caracteres deve ser grande o suficiente para o campo de entrada mais o caractere nulo de terminação, que é anexado automaticamente.|Obrigatório. O tamanho inclui espaço para um terminador nulo.|
-|`S`|Cadeia de caracteres de tamanho oposto, até o primeiro caractere de espaço em branco (espaço, tabulação ou nova linha). Para ler cadeias de caracteres não delimitadas por caracteres de espaço, use o conjunto de colchetes (`[ ]`), conforme discutido em [Especificação de largura scanf Width](../c-runtime-library/scanf-width-specification.md).|Quando usado com funções `scanf`, significa matriz de caracteres largos; quando usado com funções `wscanf`, significa matriz de caracteres de byte único. Em ambos os casos, a matriz de caracteres deve ser grande o suficiente para o campo de entrada mais o caractere nulo de terminação, que é anexado automaticamente.|Obrigatório. O tamanho inclui espaço para um terminador nulo.|
+|`c`|Caractere. Quando usado com funções `scanf`, especifica o caractere de byte único; quando usado com funções `wscanf`, especifica o caractere largo. Caracteres de espaço em branco que normalmente são ignorados são lidos quando `c` é especificado. Para ler o próximo caractere de byte único que não é espaço em branco, use `%1s`; para ler o próximo caractere largo que não é espaço em branco, use `%1ws`.|Ponteiro para **`char`** quando usado com `scanf` funções, ponteiro para **`wchar_t`** quando usado com `wscanf` funções.|Obrigatórios. O tamanho não inclui espaço para um terminador nulo.|
+|`C`|Caractere de tamanho oposto. Quando usado com funções `scanf`, especifica o caractere largo; quando usado com funções `wscanf`, especifica o caractere de byte único. Caracteres de espaço em branco que normalmente são ignorados são lidos quando `C` é especificado. Para ler o próximo caractere de byte único que não é espaço em branco, use `%1s`; para ler o próximo caractere largo que não é espaço em branco, use `%1ws`.|Ponteiro para **`wchar_t`** quando usado com `scanf` funções, ponteiro para **`char`** quando usado com `wscanf` funções.|Obrigatórios. O argumento de tamanho não inclui espaço para um terminador nulo.|
+|`d`|Inteiro decimal.|Ponteiro para **`int`** .|Não.|
+|`i`|Um inteiro. Hexadecimal se a cadeia de caracteres de entrada começa com "0x" ou "0X", octal se a cadeia de caracteres começa com "0", caso contrário, decimal.|Ponteiro para **`int`** .|Não.|
+|`o`|Inteiro octal.|Ponteiro para **`int`** .|Não.|
+|`p`|Um endereço de ponteiro em dígitos hexadecimais. O número máximo de dígitos de leitura depende do tamanho de um ponteiro (32 ou 64 bits), que depende da arquitetura do computador. "0x" ou "0X" são aceitos como prefixos.|Ponteiro para **`void*`** .|Não.|
+|`u`|Inteiro decimal sem sinal.|Ponteiro para **`unsigned int`** .|Não.|
+|`x`|Inteiro hexadecimal.|Ponteiro para **`int`** .|Não.|
+|`e`, `E`, `f`, `F`, `g`, `G`|Valor de ponto flutuante consistindo de um sinal opcional (+ ou -), de uma série de um ou mais dígitos decimais que contém o ponto decimal e também de um expoente opcional ("e" ou "E"), seguido por um valor inteiro com sinal opcionalmente.|Ponteiro para **`float`** .|Não.|
+|`a`, `A`|Valor de ponto flutuante que consiste em uma série de um ou mais dígitos hexadecimais com um ponto decimal opcional e um expoente ("p" ou "P") seguido de um valor decimal.|Ponteiro para **`float`** .|Não.|
+|`n`|Nenhuma entrada lida do fluxo ou buffer.|Ponteiro para **`int`** , em que é armazenado o número de caracteres lidos com êxito do fluxo ou do buffer até esse ponto na chamada atual para `scanf` funções ou `wscanf` funções.|Não.|
+|`s`|Cadeia de caracteres, até o primeiro caractere de espaço em branco (espaço, tabulação ou nova linha). Para ler cadeias de caracteres não delimitadas por caracteres de espaço, use o conjunto de colchetes (`[ ]`), conforme discutido em [Especificação de largura scanf Width](../c-runtime-library/scanf-width-specification.md).|Quando usado com funções `scanf`, significa matriz de caracteres de byte único; quando usado com funções `wscanf`, significa matriz de caracteres largos. Em ambos os casos, a matriz de caracteres deve ser grande o suficiente para o campo de entrada mais o caractere nulo de terminação, que é anexado automaticamente.|Obrigatórios. O tamanho inclui espaço para um terminador nulo.|
+|`S`|Cadeia de caracteres de tamanho oposto, até o primeiro caractere de espaço em branco (espaço, tabulação ou nova linha). Para ler cadeias de caracteres não delimitadas por caracteres de espaço, use o conjunto de colchetes (`[ ]`), conforme discutido em [Especificação de largura scanf Width](../c-runtime-library/scanf-width-specification.md).|Quando usado com funções `scanf`, significa matriz de caracteres largos; quando usado com funções `wscanf`, significa matriz de caracteres de byte único. Em ambos os casos, a matriz de caracteres deve ser grande o suficiente para o campo de entrada mais o caractere nulo de terminação, que é anexado automaticamente.|Obrigatórios. O tamanho inclui espaço para um terminador nulo.|
 
 Os argumentos de tamanho, se necessário, devem ser transmitidos na lista de parâmetros imediatamente após o argumento a que se aplicam. Por exemplo, o código a seguir:
 
@@ -55,6 +55,6 @@ A cadeia de caracteres de formato pode lidar com a entrada de caracteres de byte
 
 Para examinar cadeias de caracteres com funções `scanf` e funções `wscanf`, use a tabela acima com os especificadores de tipo de formato `s` e `S` em vez de `c` e `C`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)

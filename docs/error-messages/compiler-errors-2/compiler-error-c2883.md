@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2883
 ms.assetid: 5c6d689d-ed42-41ad-b5c0-e9c2e0b8c356
-ms.openlocfilehash: cb6b1043d976cfeb8cb92c8780c5b84ea9700b8b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fcd97a2f362e50ec856e53da2603c29e07595670
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760948"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233464"
 ---
 # <a name="compiler-error-c2883"></a>Erro do compilador C2883
 
 ' name ': a declaração da função está em conflito com ' identifier ' introduzido pela declaração using
 
-Você tentou definir uma função mais de uma vez. A primeira definição foi feita de um namespace com uma declaração de `using`. A segunda era uma definição local.
+Você tentou definir uma função mais de uma vez. A primeira definição foi feita de um namespace com uma **`using`** declaração. A segunda era uma definição local.
 
 O exemplo a seguir gera C2883:
 

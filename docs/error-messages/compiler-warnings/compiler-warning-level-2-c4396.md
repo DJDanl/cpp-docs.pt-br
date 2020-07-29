@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fec6875fdb2e8a60e71fe08da1ed4e8fa82e4641
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161809"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206036"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Aviso do compilador (nível 2) C4396
 
@@ -19,13 +19,13 @@ ms.locfileid: "80161809"
 
 Uma especialização de um modelo de função não pode especificar nenhum dos especificadores [embutidos](../../cpp/inline-functions-cpp.md) . O compilador emite C4396 de aviso e ignora o especificador embutido.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
-- Remova o especificador `inline`, `__inline`ou `__forceinline` da declaração de função Friend.
+- Remova o **`inline`** **`__inline`** especificador,, ou **`__forceinline`** da declaração de função Friend.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo de código a seguir mostra uma declaração de função Friend inválida com um especificador de `inline`.
+O exemplo de código a seguir mostra uma declaração de função Friend inválida com um **`inline`** especificador.
 
 ```cpp
 // C4396.cpp

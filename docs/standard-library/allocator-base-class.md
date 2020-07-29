@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: b55a7ec92787cb6b3103bf71b65d137d24ffff04
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204996"
 ---
 # <a name="allocator_base-class"></a>Classe allocator_base
 
@@ -58,7 +58,7 @@ class allocator_base
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*Tipo*|O tipo dos elementos alocados pelo alocador.|
 |*Sincronizar*|A política de sincronização do alocador, que é [Classe sync_none](sync-none-class.md), [Classe sync_per_container](sync-per-container-class.md), [Classe sync_per_thread](sync-per-thread-class.md) ou [Classe sync_shared](sync-shared-class.md).|
@@ -77,7 +77,7 @@ class allocator_base
 |[const_reference](#const_reference)|Um tipo que fornece uma referência constante ao tipo de objeto gerenciado pelo alocador.|
 |[difference_type](#difference_type)|Um tipo integral com sinal que pode representar a diferença entre os valores de ponteiros para o tipo de objeto gerenciado pelo alocador.|
 |[refere](#pointer)|Um tipo que fornece um ponteiro para o tipo de objeto gerenciado pelo alocador.|
-|[referência](#reference)|Um tipo que fornece uma referência ao tipo de objeto gerenciado pelo alocador.|
+|[reference](#reference)|Um tipo que fornece uma referência ao tipo de objeto gerenciado pelo alocador.|
 |[size_type](#size_type)|Um tipo integral não assinado que pode representar o comprimento de qualquer sequência que um objeto do tipo `allocator_base` possa alocar.|
 |[value_type](#value_type)|Um tipo que é gerenciado pelo alocador.|
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |Função de membro|Descrição|
 |-|-|
-|[_Charalloc](#charalloc)|Aloca armazenamento para uma matriz do tipo **Char**.|
-|[_Chardealloc](#chardealloc)|Libera o armazenamento para a matriz que contém elementos do tipo **Char**.|
+|[_Charalloc](#charalloc)|Aloca armazenamento para uma matriz do tipo **`char`** .|
+|[_Chardealloc](#chardealloc)|Libera o armazenamento para a matriz que contém os elementos do tipo **`char`** .|
 |[address](#address)|Localiza o endereço de um objeto cujo valor é especificado.|
 |[allocate](#allocate)|Aloca um bloco de memória grande o suficiente para armazenar pelo menos um número especificado de elementos.|
 |[construct](#construct)|Constrói um tipo específico de objeto em um endereço especificado que é inicializado com um valor especificado.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base:: _Charalloc
 
-Aloca armazenamento para uma matriz do tipo **Char**.
+Aloca armazenamento para uma matriz do tipo **`char`** .
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -110,11 +110,11 @@ char *_Charalloc(size_type count);
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*contagem*|O número de elementos na matriz a serem alocados.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto alocado.
 
@@ -124,7 +124,7 @@ Essa função de membro é usada pelos contêineres quando são compilados com u
 
 ## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base:: _Chardealloc
 
-Libera o armazenamento para a matriz que contém elementos do tipo **Char**.
+Libera o armazenamento para a matriz que contém os elementos do tipo **`char`** .
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -132,14 +132,14 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
 |*contagem*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro é usada pelos contêineres quando são compilados com um compilador que não pode compilar reassociação. Ela implementa `_Chardealloc` para o alocador definido pelo usuário ao chamar a função `deallocate` do filtro de sincronização. O ponteiro PTR deve ter sido retornado anteriormente por uma chamada para `_Charalloc` de um objeto alocador que compara como igual a `*this`, alocando um objeto de matriz dos mesmos tipo e tamanho. `_Chardealloc` nunca gera uma exceção.
+Essa função de membro é usada pelos contêineres quando são compilados com um compilador que não pode compilar reassociação. Ela implementa `_Chardealloc` para o alocador definido pelo usuário ao chamar a função `deallocate` do filtro de sincronização. O ponteiro ptr deve ter sido anteriormente retornado por uma chamada para `_Charalloc` para um objeto de alocador que compara igual a **`*this`** , alocando um objeto de matriz do mesmo tamanho e tipo. `_Chardealloc` nunca gera uma exceção.
 
 ## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base:: address
 
@@ -151,12 +151,12 @@ pointer address(reference val);
 const_pointer address(const_reference val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Val*\
 O valor const ou não const do objeto cujo endereço está sendo pesquisado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro const ou não const para o objeto localizado, de valor const ou não const, respectivamente.
 
@@ -177,12 +177,12 @@ pointer allocate(size_type _Nx);
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*_Nx*|O número de elementos na matriz a serem alocados.|
 |*_Hint*|Este parâmetro é ignorado.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto alocado.
 
@@ -299,7 +299,7 @@ Retorna o número de elementos do tipo `Type` que podem ser alocados por um obje
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O número de elementos que podem ser alocados.
 

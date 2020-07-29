@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916702"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211613"
 ---
 # <a name="_write"></a>_write
 
@@ -49,7 +49,7 @@ int _write(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *FD*<br/>
 O descritor de arquivo do arquivo em que os dados são gravados.
@@ -68,7 +68,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 Se o arquivo for aberto no modo de texto, cada caractere de alimentação de linha será substituído por um par de retorno de carro-alimentação de linha na saída. A substituição não afeta o valor de retorno.
 
-Quando o arquivo é aberto no modo de conversão Unicode — por exemplo, se *FD* é aberto usando **_open** ou **_sopen** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**, **ou _O_U8TEXT**, ou se estiver aberto usando **fopen** e um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **ccs = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode**— o*buffer* será interpretado como um ponteiro para uma matriz de **wchar_t** que contém dados **UTF-16** . Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
+Quando o arquivo é aberto no modo de conversão Unicode — por exemplo, *se fd* é aberto usando **_open** ou **_sopen** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**, **ou _O_U8TEXT**, ou se estiver aberto usando **fopen** e um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **ccs = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode**— o*buffer* será interpretado como um ponteiro para uma matriz de **`wchar_t`** que contenha dados **UTF-16** . Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -146,7 +146,7 @@ Wrote 36 bytes to file.
 
 ## <a name="see-also"></a>Confira também
 
-[E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de baixo nível](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

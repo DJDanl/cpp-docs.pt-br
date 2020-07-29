@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937699"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234218"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
@@ -67,23 +67,23 @@ lldiv_t div(
 ); /* C++ only */
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*numer*<br/>
+*número*<br/>
 O numerador.
 
 *denom*<br/>
 O denominador.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-a **div** chamada por meio de argumentos do tipo **int** retorna uma estrutura do tipo **div_t**, que compreende o quociente e o resto. O valor de retorno com argumentos do tipo **Long** é **ldiv_t**e o valor de retorno com argumentos do tipo **Long** **Long** é **lldiv_t**. **div_t**, **ldiv_t**e **lldiv_t** são definidos em \<STDLIB. h >.
+a **div** chamada usando argumentos do tipo **`int`** retorna uma estrutura do tipo **div_t**, que compreende o quociente e o resto. O valor de retorno com argumentos do tipo **`long`** é **ldiv_t**e o valor de retorno com argumentos do tipo **`long long`** é **lldiv_t**. **div_t**, **ldiv_t**e **lldiv_t** são definidos em \<stdlib.h> .
 
 ## <a name="remarks"></a>Comentários
 
-A função **div** divide *número* por *denom* e, portanto, computa o quociente e o resto. A estrutura [div_t](../../c-runtime-library/standard-types.md) contém o quociente, **quot**e o resto, **REM**. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro.
+A função **div** divide *número* por *denom* e, portanto, computa o quociente e o resto. A estrutura de [div_t](../../c-runtime-library/standard-types.md) contém o quociente, **quot**e o resto, **REM**. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador for 0, o programa será encerrado com uma mensagem de erro.
 
-As sobrecargas de **div** que usam argumentos do tipo **Long** ou **Long** **Long** estão disponíveis apenas para C++ código. Os tipos de retorno [ldiv_t](../../c-runtime-library/standard-types.md) e [lldiv_t](../../c-runtime-library/standard-types.md) contêm os membros **quot** e **REM**, que têm os mesmos significados que os membros de **div_t**.
+As sobrecargas de **div** que usam argumentos do tipo **`long`** ou **`long long`** estão disponíveis apenas para código C++. Os tipos de retorno [ldiv_t](../../c-runtime-library/standard-types.md) e [lldiv_t](../../c-runtime-library/standard-types.md) contêm os membros **quot** e **REM**, que têm os mesmos significados que os membros de **div_t**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -91,7 +91,7 @@ As sobrecargas de **div** que usam argumentos do tipo **Long** ou **Long** **Lon
 |-------------|---------------------|
 |**div**, **ldiv**, **lldiv**|\<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -131,8 +131,8 @@ x is 876, y is 13
 The quotient is 67, and the remainder is 5
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>

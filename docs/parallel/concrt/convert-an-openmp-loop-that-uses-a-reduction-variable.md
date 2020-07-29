@@ -5,22 +5,22 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: ee0a600f4234c3ebf4681ad92b5e3623be5665c3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 15ec81fb4fafd7850162a1feab28e72d469aff91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141270"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205997"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Como converter um loop OpenMP que usa uma variável de redução para usar o runtime de simultaneidade
 
 Este exemplo demonstra como converter um loop de OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) que usa a cláusula de [redução](../../parallel/openmp/reference/reduction.md) para usar o tempo de execução de simultaneidade.
 
-A cláusula de `reduction` de OpenMP permite especificar uma ou mais variáveis de thread privado que estão sujeitas a uma operação de redução no final da região paralela. O OpenMP predefine um conjunto de operadores de redução. Cada variável de redução deve ser um escalar (por exemplo, `int`, `long`e `float`). O OpenMP também define várias restrições sobre como as variáveis de redução são usadas em uma região paralela.
+A `reduction` cláusula OpenMP permite especificar uma ou mais variáveis de thread privado que estão sujeitas a uma operação de redução no final da região paralela. O OpenMP predefine um conjunto de operadores de redução. Cada variável de redução deve ser uma escala (por exemplo,, **`int`** **`long`** e **`float`** ). O OpenMP também define várias restrições sobre como as variáveis de redução são usadas em uma região paralela.
 
-A PPL (biblioteca de padrões paralelos) fornece a classe [Concurrency:: combinável](../../parallel/concrt/reference/combinable-class.md) , que fornece armazenamento reutilizável e local de thread que permite executar cálculos refinados e, em seguida, mesclar esses cálculos em um resultado final. A classe `combinable` é um modelo que atua em tipos escalares e complexos. Para usar a classe `combinable`, execute subcoleções no corpo de uma construção paralela e, em seguida, chame o método [Concurrency:: Combined:: Combine](reference/combinable-class.md#combine) ou [Concurrency:: combinável:: combine_each](reference/combinable-class.md#combine_each) para produzir o resultado final. Os métodos `combine` e `combine_each` usam uma *função combinar* que especifica como combinar cada par de elementos. Portanto, a classe `combinable` não está restrita a um conjunto fixo de operadores de redução.
+A PPL (biblioteca de padrões paralelos) fornece a classe [Concurrency:: combinável](../../parallel/concrt/reference/combinable-class.md) , que fornece armazenamento reutilizável e local de thread que permite executar cálculos refinados e, em seguida, mesclar esses cálculos em um resultado final. A `combinable` classe é um modelo que atua em tipos escalares e complexos. Para usar a `combinable` classe, execute subcoleções no corpo de uma construção paralela e, em seguida, chame o método [Concurrency:: Combining:: Combine](reference/combinable-class.md#combine) ou [Concurrency:: combinável:: combine_each](reference/combinable-class.md#combine_each) para produzir o resultado final. Os `combine` `combine_each` métodos e têm uma *função combinar* que especifica como combinar cada par de elementos. Portanto, a `combinable` classe não está restrita a um conjunto fixo de operadores de redução.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Este exemplo usa OpenMP e Tempo de Execução de Simultaneidade para calcular a soma dos primeiros 35 números de Fibonacci.
 
@@ -35,15 +35,15 @@ Using the Concurrency Runtime...
 The sum of the first 35 Fibonacci numbers is 14930351.
 ```
 
-Para obter mais informações sobre a classe `combinable`, consulte [contêineres e objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md).
+Para obter mais informações sobre a `combinable` classe, consulte [contêineres e objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md).
 
-## <a name="compiling-the-code"></a>Compilando o Código
+## <a name="compiling-the-code"></a>Compilando o código
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `concrt-omp-fibonacci-reduction.cpp` e, em seguida, execute o comando a seguir em uma janela de prompt de comando do Visual Studio.
 
-> **CL. exe/EHsc/OpenMP ConcRT-OMP-Fibonacci-reduction. cpp**
+> **cl.exe/EHsc/OpenMP ConcRT-OMP-Fibonacci-reduction. cpp**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Migrando do OpenMP para o runtime de simultaneidade](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
-[Contêineres e objetos em paralelo](../../parallel/concrt/parallel-containers-and-objects.md)
+[Migrando de OpenMP no Runtime de Simultaneidade](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
+[Contêineres e objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md)

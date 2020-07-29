@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c09832a4f27bff51cbb5bd847a3123e62c9ee8d5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 068bdb2c7c87e8fe7cd3e482f53934de098a6166
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991007"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218085"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>Aviso do compilador (nível 4) C4512
 
@@ -23,13 +23,13 @@ O fato de um operador de atribuição para a classe de base não estar acessíve
 
 Para evitar esse aviso, especifique um operador de atribuição definido pelo usuário para a classe.
 
-O compilador também gerará uma função de operador de atribuição para uma classe que não define uma. Este operador de atribuição é uma cópia de reconhecimento de membro dos membros de dados de um objeto. Como os itens de dados `const` não podem ser modificados após a inicialização, se a classe tiver um item `const`, o operador de atribuição padrão não funcionará. Outra causa do aviso C4512 é uma declaração de um membro de dados não estático do tipo de referência. Se a intenção é criar um tipo não copiado, você também deve evitar a criação de um construtor de cópia padrão.
+O compilador também gerará uma função de operador de atribuição para uma classe que não define uma. Este operador de atribuição é uma cópia de reconhecimento de membro dos membros de dados de um objeto. Como os **`const`** itens de dados não podem ser modificados após a inicialização, se a classe contiver um **`const`** Item, o operador de atribuição padrão não funcionaria. Outra causa do aviso C4512 é uma declaração de um membro de dados não estático do tipo de referência. Se a intenção é criar um tipo não copiado, você também deve evitar a criação de um construtor de cópia padrão.
 
 Você pode resolver o aviso C4512 para o código de uma destas três maneiras:
 
 - Defina explicitamente um operador de atribuição para a classe.
 
-- Remova **const** ou o operador de referência do item de dados na classe.
+- Remova **`const`** ou o operador de referência do item de dados na classe.
 
 - Use a instrução #pragma [Warning](../../preprocessor/warning.md) para suprimir o aviso.
 

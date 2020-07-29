@@ -67,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911118"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233997"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -113,9 +113,9 @@ unsigned char *_mbsset_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Str*<br/>
+*str*<br/>
 Cadeia de caracteres terminada em nulo a ser definida.
 
 *&*<br/>
@@ -130,7 +130,7 @@ Retorna um ponteiro para a cadeia de caracteres alterada.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_strset** define todos os caracteres (exceto o caractere nulo de terminação) de *Str* para *c*, convertido em **Char**. **_wcsset** e **_mbsset_l** são versões de caractere largo e multibyte de **_strset**, e os tipos de dados dos argumentos e valores de retorno variam de acordo. Caso contrário, essas funções se comportam de forma idêntica.
+A função **_strset** define todos os caracteres (exceto o caractere nulo de terminação) de *Str* para *c*, convertido em **`char`** . **_wcsset** e **_mbsset_l** são versões de caractere largo e multibyte de **_strset**, e os tipos de dados dos argumentos e valores de retorno variam de acordo. Caso contrário, essas funções se comportam de forma idêntica.
 
 **_mbsset** valida seus parâmetros. Se *Str* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_mbsset** retornará **NULL** e definirá **errno** como **EINVAL**. **_strset** e **_wcsset** não validam seus parâmetros.
 
@@ -187,7 +187,7 @@ After:  *******************************
 ## <a name="see-also"></a>Confira também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>

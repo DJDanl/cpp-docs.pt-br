@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913528"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218722"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -81,9 +81,9 @@ long _wtol_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Str*<br/>
+*str*<br/>
 Cadeia de caracteres a ser convertida.
 
 *locale*<br/>
@@ -91,7 +91,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada função retorna o valor **longo** produzido interpretando os caracteres de entrada como um número. O valor de retorno será 0L para **Atol** se a entrada não puder ser convertida em um valor desse tipo.
+Cada função retorna o **`long`** valor produzido pela interpretação dos caracteres de entrada como um número. O valor de retorno será 0L para **Atol** se a entrada não puder ser convertida em um valor desse tipo.
 
 No caso de estouro com grandes valores inteiros positivos, **Atol** retorna **LONG_MAX**; no caso de estouro com grandes valores inteiros negativos, **LONG_MIN** é retornado. Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão **errno** como **EINVAL** e retornarão 0.
 
@@ -176,11 +176,11 @@ Function: atol( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

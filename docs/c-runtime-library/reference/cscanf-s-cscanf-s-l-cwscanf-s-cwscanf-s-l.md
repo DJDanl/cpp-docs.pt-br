@@ -51,19 +51,19 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938524"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234231"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
 Lê os dados formatados do console. Estas versões mais seguras de [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md) contêm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -88,7 +88,7 @@ int _cwscanf_s_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *format*<br/>
 Cadeia de caracteres de controle de formato.
@@ -99,7 +99,7 @@ Parâmetros opcionais.
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O número de campos que foram convertidos e atribuídos com êxito. O valor retornado não inclui campos que foram lidos, mas não atribuídos. O valor de retorno é **EOF** para uma tentativa de leitura no final do arquivo. Isso pode ocorrer quando a entrada do teclado é redirecionada no nível de linha de comando do sistema operacional. Um valor retornado igual a 0 significa que nenhum campo foi atribuído.
 
@@ -107,14 +107,14 @@ Essas funções validam seus parâmetros. Se *Format* for um ponteiro NULL, essa
 
 ## <a name="remarks"></a>Comentários
 
-A função **_cscanf_s** lê dados diretamente do console do para os locais fornecidos pelo *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo no *formato*. O formato controla a interpretação dos campos de entrada e tem a mesma forma e função que o parâmetro de *formato* para a função [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Embora **_cscanf_s** normalmente Echo o caractere de entrada, ele não faz isso se a última chamada fosse **_ungetch**.
+A função **_cscanf_s** lê os dados diretamente do console do para os locais fornecidos pelo *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo no *formato*. O formato controla a interpretação dos campos de entrada e tem a mesma forma e função que o parâmetro de *formato* para a função [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Embora **_cscanf_s** normalmente ecoa o caractere de entrada, ele não faz isso se a última chamada fosse **_ungetch**.
 
-Assim como outras versões seguras do Functions na família **scanf** , **_cscanf_s** e **_cswscanf_s** exigem argumentos de tamanho para os caracteres de campo de tipo **c**, **c**, **s**, **s**e **[** . Para obter mais informações, consulte [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
+Assim como outras versões seguras do Functions na família **scanf** , **_cscanf_s** e **_cswscanf_s** exigem argumentos de tamanho para os caracteres de campo de tipo **c**, **c**, **s**, **s**e **[**. Para obter mais informações, consulte [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo não **assinado**, não **size_t**.
+> O parâmetro Size é do tipo **`unsigned`** , não **size_t**.
 
-As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -132,7 +132,7 @@ As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fa
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -171,9 +171,9 @@ int main( void )
 You entered 1 2 3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[E/S de porta e console](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de porta e de console](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

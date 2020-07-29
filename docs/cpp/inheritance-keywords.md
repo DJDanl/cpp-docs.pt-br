@@ -18,12 +18,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: f0aae655540b4d3f9130d9840d77e0abcf270cc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374097"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233724"
 ---
 # <a name="inheritance-keywords"></a>Palavras-chave de herança
 
@@ -37,7 +37,7 @@ class [__virtual_inheritance] class-name;
 
 onde:
 
-*nome de classe*<br/>
+*nome da classe*<br/>
 O nome da classe que está sendo declarada.
 
 O C++ permite que você declare um ponteiro para um membro de classe antes da definição da classe. Por exemplo:
@@ -47,15 +47,15 @@ class S;
 int S::*p;
 ```
 
-No código acima, `p` é declarado como um ponteiro para membro inteiro da classe S. No `class S` entanto, ainda não foi definido neste código; só foi declarado. Quando o compilador encontrar esse ponteiro, ele fará uma representação generalizada do ponteiro. O tamanho de representação depende do modelo de herança especificado. Há quatro maneiras de especificar um modelo de herança para o compilador:
+No código acima, `p` é declarado como um ponteiro para membro inteiro da classe S. No entanto, `class S` ainda não foi definido neste código; ele só foi declarado. Quando o compilador encontrar esse ponteiro, ele fará uma representação generalizada do ponteiro. O tamanho de representação depende do modelo de herança especificado. Há quatro maneiras de especificar um modelo de herança para o compilador:
 
-- No IDE sob **representação pointer-to-member**
+- No IDE sob **representação de ponteiro para membro**
 
-- Na linha de comando usando o interruptor [/vmg](../build/reference/vmb-vmg-representation-method.md)
+- Na linha de comando usando a opção [/VMG](../build/reference/vmb-vmg-representation-method.md)
 
-- Usando o pragma [pointers_to_members](../preprocessor/pointers-to-members.md)
+- Usando o [pointers_to_members](../preprocessor/pointers-to-members.md) pragma
 
-- Usando as palavras-chave de herança **__single_inheritance,** **__multiple_inheritance**e **__virtual_inheritance**. Essa técnica controla o modelo de herança com base em classes.
+- Usando as palavras-chave de herança **`__single_inheritance`** , **`__multiple_inheritance`** e **`__virtual_inheritance`** . Essa técnica controla o modelo de herança com base em classes.
 
     > [!NOTE]
     >  Se você sempre declara um ponteiro para um membro de uma classe depois de defini-la, você não precisa usar qualquer uma dessas opções.
@@ -74,9 +74,9 @@ independentemente das opções de linha de comando ou dos pragmas, os ponteiros 
 > [!NOTE]
 > A mesma declaração de encaminhamento de uma representação de ponteiro para membro de classe deve ocorrer em cada unidade de tradução que declarar ponteiros para membros daquela classe, e a declaração deve ocorrer antes que os ponteiros para os membros sejam declarados.
 
-Para compatibilidade com as versões anteriores, **_single_inheritance,** **_multiple_inheritance**e **_virtual_inheritance** são sinônimos de **__single_inheritance,** **__multiple_inheritance**e **__virtual_inheritance,** a menos que a opção de compilação [/Za \(Disable extensões de idioma)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
+Para compatibilidade com versões anteriores, **_single_inheritance**, **_multiple_inheritance**e **_virtual_inheritance** são sinônimos para **`__single_inheritance`** , **`__multiple_inheritance`** e **`__virtual_inheritance`** a menos que a opção do compilador [/za \( desabilitar extensões de idioma)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

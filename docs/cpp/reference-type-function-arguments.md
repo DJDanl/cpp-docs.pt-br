@@ -8,12 +8,12 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-ms.openlocfilehash: 2a0bd21023bd1c6bc14b1f587c85960cf1e8b820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a409efbe2908954d394656cb989ad6b80a9ce22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244175"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233633"
 ---
 # <a name="reference-type-function-arguments"></a>Argumentos de funções de tipo de referência
 
@@ -67,9 +67,9 @@ int main()
 }
 ```
 
-O código anterior mostra que os membros de uma estrutura passada por referência são acessados usando o operador de seleção de membros (**.**) em vez do operador de seleção de membro do ponteiro (**->**).
+O código anterior mostra que os membros de uma estrutura passada por referência são acessados usando o operador de seleção de membro (**.**) em vez do operador de seleção de membro de ponteiro ( **->** ).
 
-Embora os argumentos passados como tipos de referência observem a sintaxe de tipos de não ponteiro, eles retêm uma característica importante de tipos de ponteiro: são modificáveis a menos que declarado como **const**. Como a intenção do código anterior não é alterar o objeto `date`, um protótipo de função mais apropriado é:
+Embora os argumentos passados como tipos de referência observem a sintaxe dos tipos que não são ponteiros, eles retêm uma característica importante dos tipos de ponteiro: eles podem ser modificados, a menos que sejam declarados como **`const`** . Como a intenção do código anterior não é alterar o objeto `date`, um protótipo de função mais apropriado é:
 
 ```cpp
 long DateOfYear( const Date& date );
@@ -77,8 +77,8 @@ long DateOfYear( const Date& date );
 
 Esse protótipo garante que a função `DateOfYear` não alterará seu argumento.
 
-Qualquer função cujo protótipo é usar um tipo de referência pode aceitar um objeto do mesmo tipo em seu lugar, porque não há uma conversão padrão de *typename* à *typename* <strong>&</strong>.
+Qualquer função com protótipo como pegar um tipo de referência pode aceitar um objeto do mesmo tipo em seu lugar porque há uma conversão padrão de *TypeName* para *TypeName* <strong>&</strong> .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referências](../cpp/references-cpp.md)<br/>

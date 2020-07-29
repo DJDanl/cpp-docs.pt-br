@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234075"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -55,7 +55,7 @@ int isleadbyte( int c );
 int _isleadbyte_l( int c );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *&*<br/>
 Inteiro a ser testado.
@@ -68,7 +68,7 @@ Inteiro a ser testado.
 
 A macro **isleadbyte** retornará um valor diferente de zero se o argumento for o primeiro byte de um caractere multibyte. **isleadbyte** produz um resultado significativo para qualquer argumento inteiro de-1 (**EOF**) a **UCHAR_MAX** (0xFF), inclusive.
 
-O tipo de argumento esperado de **isleadbyte** é **int**; se um caractere assinado for passado, o compilador poderá convertê-lo em um inteiro por extensão de assinatura, gerando resultados imprevisíveis.
+O tipo de argumento esperado de **isleadbyte** é **`int`** ; se um caractere assinado for passado, o compilador poderá convertê-lo em um inteiro por extensão de assinatura, gerando resultados imprevisíveis.
 
 A versão dessa função com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa a localidade passada em vez da localidade atual para seu comportamento dependente de localidade.
 
@@ -89,8 +89,8 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Classificação de bytes](../../c-runtime-library/byte-classification.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [Rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

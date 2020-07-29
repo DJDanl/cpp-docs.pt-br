@@ -38,12 +38,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: 764a3768610d97df2eb3af4ed0425065aba4b4fa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cacc0317bf48b7f4d33027558c3dc6c739e474dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916418"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218618"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime, _localtime32, _localtime64
 
@@ -57,7 +57,7 @@ struct tm *_localtime32( const __time32_t *sourceTime );
 struct tm *_localtime64( const __time64_t *sourceTime );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *origemtime*<br/>
 Ponteiro para a hora armazenada.
@@ -76,7 +76,7 @@ Retorne um ponteiro para o resultado da estrutura, ou **NULL** se a data passada
 
 **localtime** é uma função embutida que é avaliada como **_localtime64**e **time_t** é equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o **time_t**de 32 bits antigo, poderá definir **_USE_32BIT_TIME_T**. Isso fará com que o **localtime** seja avaliado para **_localtime32**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.
 
-Os campos do tipo de estrutura [TM](../../c-runtime-library/standard-types.md) armazenam os seguintes valores, sendo que cada um é um **int**:
+Os campos do tipo de estrutura [TM](../../c-runtime-library/standard-types.md) armazenam os seguintes valores, cada um dos quais é um **`int`** :
 
 |Campo|Descrição|
 |-|-|
@@ -94,7 +94,7 @@ Se a variável de ambiente do **TZ** for definida, a biblioteca de tempo de exec
 
 ## <a name="remarks"></a>Comentários
 
-A função **localtime** converte uma hora armazenada como um valor [time_t](../../c-runtime-library/standard-types.md) e armazena o resultado em uma estrutura do tipo [TM](../../c-runtime-library/standard-types.md). O valor **longo** de *sourcetime* representa os segundos decorridos desde a meia-noite (00:00:00), 1º de janeiro de 1970, UTC. Esse valor geralmente é obtido da função [time](time-time32-time64.md) .
+A função **localtime** converte uma hora armazenada como um valor [time_t](../../c-runtime-library/standard-types.md) e armazena o resultado em uma estrutura do tipo [TM](../../c-runtime-library/standard-types.md). O **`long`** valor *sourcetime* representa os segundos decorridos desde a meia-noite (00:00:00), 1º de janeiro de 1970, UTC. Esse valor geralmente é obtido da função [time](time-time32-time64.md) .
 
 As versões de 32 bits e 64 bits de [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)e **localtime** usam uma única estrutura **TM** por thread para a conversão. Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior.
 
@@ -111,7 +111,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|---------------------|-|
-|**localtime**, **_localtime32** **_localtime64**|\<time.h>|\<CTime> ou \<time. h>|
+|**localtime**, **_localtime32** **_localtime64**|\<time.h>|\<ctime> ou \<time.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

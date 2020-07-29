@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 290faa1a227920cd46f32a4adf0dd6a6f3687c6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761537"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233360"
 ---
 # <a name="compiler-error-c3538"></a>Erro do compilador C3538
 
@@ -19,13 +19,13 @@ em uma lista de declaradores, ' auto ' deve sempre deduzir para o mesmo tipo
 
 Todas as variáveis declaradas em uma lista de declarações não são resolvidas para o mesmo tipo.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
-1. Certifique-se de que todas as declarações de `auto` na lista sejam deduzidas para o mesmo tipo.
+1. Certifique-se de que todas as **`auto`** declarações na lista sejam deduzidas para o mesmo tipo.
 
 ## <a name="example"></a>Exemplo
 
-As instruções a seguir produzem C3538. Cada instrução declara várias variáveis, mas cada uso da palavra-chave `auto` não é deduzido para o mesmo tipo.
+As instruções a seguir produzem C3538. Cada instrução declara várias variáveis, mas cada uso da **`auto`** palavra-chave não é deduzido para o mesmo tipo.
 
 ```cpp
 // C3538.cpp
@@ -45,6 +45,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Palavra-chave auto](../../cpp/auto-keyword.md)

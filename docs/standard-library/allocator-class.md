@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 5459fdbd445e7823dcc28096a7b7da3c0c5b38cf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617503"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204983"
 ---
 # <a name="allocator-class"></a>Classe allocator
 
@@ -52,7 +52,7 @@ template <class Type>
 class allocator
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Escreva*\
 O tipo de objeto para o qual o armazenamento está sendo alocado ou desalocado.
@@ -95,7 +95,7 @@ Esses `Type` s especificam o formulário que os ponteiros e as referências deve
 |[const_reference](#const_reference)|Um tipo que fornece uma referência constante ao tipo de objeto gerenciado pelo alocador.|
 |[difference_type](#difference_type)|Um tipo integral com sinal que pode representar a diferença entre os valores de ponteiros para o tipo de objeto gerenciado pelo alocador.|
 |[refere](#pointer)|Um tipo que fornece um ponteiro para o tipo de objeto gerenciado pelo alocador.|
-|[referência](#reference)|Um tipo que fornece uma referência ao tipo de objeto gerenciado pelo alocador.|
+|[reference](#reference)|Um tipo que fornece uma referência ao tipo de objeto gerenciado pelo alocador.|
 |[size_type](#size_type)|Um tipo integral não assinado que pode representar o comprimento de qualquer sequência que um objeto do tipo `allocator` possa alocar.|
 |[value_type](#value_type)|Um tipo que é gerenciado pelo alocador.|
 
@@ -126,12 +126,12 @@ pointer address(reference val) const;
 const_pointer address(const_reference val) const;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *Val*\
 O valor const ou não const do objeto cujo endereço está sendo pesquisado.
 
-#### <a name="return-value"></a>Valor Retornado
+#### <a name="return-value"></a>Valor retornado
 
 Um ponteiro const ou não const para o objeto localizado, de valor const ou não const, respectivamente.
 
@@ -191,7 +191,7 @@ Aloca um bloco de memória grande o suficiente para armazenar pelo menos um núm
 pointer allocate(size_type count, const void* _Hint);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *contar*\
 O número de elementos para os quais um armazenamento suficiente deve ser alocado.
@@ -199,7 +199,7 @@ O número de elementos para os quais um armazenamento suficiente deve ser alocad
 *_Hint*\
 Um ponteiro const que pode ajudar o objeto alocador a atender à solicitação de armazenamento, localizando o endereço de um objeto alocado antes da solicitação.
 
-#### <a name="return-value"></a>Valor Retornado
+#### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto alocado ou nulo se a memória não foi alocada.
 
@@ -254,7 +254,7 @@ template <class Other>
     allocator(const allocator<Other>& right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *Certo*\
 O objeto alocador a ser copiado.
@@ -458,7 +458,7 @@ template <class _Other>
     void construct(pointer ptr, _Other&&... val);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *PTR*\
 Um ponteiro para o local no qual o objeto deve ser construído.
@@ -468,7 +468,7 @@ O valor com o qual o objeto que está sendo construído deve ser inicializado.
 
 #### <a name="remarks"></a>Comentários
 
-A primeira função de membro é equivalente ao tipo **New** (( `void` \* ) `ptr` ) ( **Type** `val` ).
+A primeira função de membro é equivalente a `new ((void *) ptr) Type(val)` .
 
 #### <a name="example"></a>Exemplo
 
@@ -527,7 +527,7 @@ Libera um número especificado de objetos do armazenamento começando em uma pos
 void deallocate(pointer ptr, size_type count);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *PTR*\
 Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.
@@ -551,7 +551,7 @@ Chama um destruidor de objetos sem desalocar a memória na qual o objeto foi arm
 void destroy(pointer ptr);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *PTR*\
 Um ponteiro que designa o endereço do objeto a ser destruído.
@@ -678,7 +678,7 @@ Retorna o número de elementos do tipo `Type` que podem ser alocados por um obje
 size_type max_size() const;
 ```
 
-#### <a name="return-value"></a>Valor Retornado
+#### <a name="return-value"></a>Valor retornado
 
 O número de elementos que podem ser alocados.
 
@@ -748,12 +748,12 @@ template <class Other>
     allocator<Type>& operator=(const allocator<Other>& right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *Certo*\
 Um objeto alocador a ser atribuído a outro objeto desse.
 
-#### <a name="return-value"></a>Valor Retornado
+#### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto alocador
 
@@ -865,7 +865,7 @@ Uma estrutura que habilita um alocador para que objetos de um tipo aloquem armaz
 struct rebind { typedef allocator<_Other> other; };
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *outros*\
 O tipo de elemento para o qual a memória está sendo alocada.
@@ -874,7 +874,7 @@ O tipo de elemento para o qual a memória está sendo alocada.
 
 Essa estrutura é útil para alocar memória para um tipo diferente do tipo de elemento do contêiner que está sendo implementado.
 
-O modelo de classe de membro define o tipo outro. Sua única finalidade é fornecer o **alocador**de nome de tipo \<_ **Other**> , dado o **alocador**de nome de tipo \< **Type**> .
+O modelo de classe de membro define o tipo outro. Seu único propósito é fornecer o nome do tipo `allocator<_Other>` , dado o nome do tipo `allocator<Type>` .
 
 Por exemplo, dado um objeto de alocador `al` do tipo `A` , você pode alocar um objeto do tipo `_Other` com a expressão:
 

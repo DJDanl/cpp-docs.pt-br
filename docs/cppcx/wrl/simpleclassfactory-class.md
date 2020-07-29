@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 924b9d2c30f11e6f0444d9c647807f1c86dcc411
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66794789e51a2635fae646cca49e4fae8385dfe0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373559"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211145"
 ---
 # <a name="simpleclassfactory-class"></a>Classe SimpleClassFactory
 
@@ -27,16 +27,16 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Base*<br/>
+*Polybase*<br/>
 Uma classe base.
 
 ## <a name="remarks"></a>Comentários
 
 A classe base deve fornecer um construtor padrão.
 
-O exemplo de código `SimpleClassFactory` a seguir demonstra como usar com a macro [ActivatableClassWithFactoryEx.](activatableclass-macros.md)
+O exemplo de código a seguir demonstra como usar `SimpleClassFactory` o com a macro [ActivatableClassWithFactoryEx](activatableclass-macros.md) .
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -74,11 +74,11 @@ O exemplo de código `SimpleClassFactory` a seguir demonstra como usar com a mac
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** module.h
+**Cabeçalho:** Module. h
 
-**Espaço de nome:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClasseFábrica::Método de criaçãode ocorrência
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>Método SimpleClassFactory:: CreateInstance
 
 Cria uma instância da interface especificada.
 
@@ -90,23 +90,23 @@ STDMETHOD( CreateInstance )(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*Punkouter*<br/>
-Deve `nullptr`ser; caso contrário, o valor de retorno é CLASS_E_NOAGGREGATION.
+*pUnkOuter*<br/>
+Deve ser **`nullptr`** ; caso contrário, o valor de retorno será CLASS_E_NOAGGREGATION.
 
-SimpleClassFactory não suporta agregação. Se a agregação fosse suportada e o objeto que estava sendo criado fosse parte de `IUnknown` um agregado, *pUnkOuter* seria um ponteiro para a interface de controle do agregado.
+SimpleClassFactory não dá suporte à agregação. Se a agregação tiver suporte e o objeto que está sendo criado fazia parte de uma agregação, *pUnkOuter* seria um ponteiro para a `IUnknown` interface de controle da agregação.
 
 *riid*<br/>
-Interface ID do objeto a ser criado.
+ID da interface do objeto a ser criado.
 
-*Ppvobject*<br/>
-Quando esta operação for concluída, ponteiro para uma instância do objeto especificado pelo parâmetro *riid.*
+*ppvObject*<br/>
+Quando essa operação é concluída, o ponteiro para uma instância do objeto especificado pelo parâmetro *riid* .
 
 ### <a name="return-value"></a>Valor retornado
 
-S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
 ### <a name="remarks"></a>Comentários
 
-Se `__WRL_STRICT__` for definido, um erro de afirmação será emitido se a classe base especificada no parâmetro de modelo de classe não for derivada do [RuntimeClass](runtimeclass-class.md)ou não estiver configurada com o valor de enumeração ClassicCom ou WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)
+Se `__WRL_STRICT__` for definido, um erro de declaração será emitido se a classe base especificada no parâmetro de modelo de classe não for derivada de [RuntimeClass](runtimeclass-class.md)ou não estiver configurada com o valor de enumeração ClassicCom ou WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md) .

@@ -23,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-ms.openlocfilehash: 0130776ec2511aefd42d1700f950d97738e9fb14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1eb06abbda7978acf578555f966f0857dff02053
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945943"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211626"
 ---
 # <a name="__uncaught_exception"></a>__uncaught_exception
 
-Indica se uma ou mais exceções foram geradas, mas ainda não foram tratadas pelo bloco **Catch** correspondente de uma instrução [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) .
+Indica se uma ou mais exceções foram geradas, mas ainda não foram tratadas pelo bloco correspondente **`catch`** de uma instrução [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,9 +41,9 @@ bool __uncaught_exception(
    );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**verdadeiro** desde o momento em que uma exceção é lançada em um bloco **try** até que o bloco **Catch** correspondente seja inicializado; caso contrário, **false**.
+**`true`** desde o momento em que uma exceção é lançada em um **`try`** bloco até que o **`catch`** bloco correspondente seja inicializado; caso contrário, **`false`** .
 
 ## <a name="remarks"></a>Comentários
 
@@ -53,6 +53,6 @@ bool __uncaught_exception(
 |-------------|---------------------|
 |__uncaught_exception|eh.h|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções try, throw e catch (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)<br/>

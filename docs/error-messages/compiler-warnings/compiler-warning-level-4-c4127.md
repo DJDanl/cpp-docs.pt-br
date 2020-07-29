@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 9d4397c11c4d2f0f9013c7df914cbc4be9fd4e9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: afca92602aa6033c56869d3f84192ca0f029a23e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198478"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218111"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Aviso do compilador (nível 4) C4127
 
@@ -19,9 +19,9 @@ ms.locfileid: "80198478"
 
 ## <a name="remarks"></a>Comentários
 
-A expressão de controle de uma instrução **If** ou loop **while** é avaliada como uma constante. Devido ao uso comum de idiomática, a partir do Visual Studio 2015 atualização 3, constantes triviais como 1 ou **true** não disparam o aviso, a menos que sejam o resultado de uma operação em uma expressão.
+A expressão de controle de uma **`if`** instrução ou **`while`** loop é avaliada como uma constante. Devido ao uso comum de idiomática, a partir do Visual Studio 2015 atualização 3, constantes triviais como 1 ou não **`true`** disparam o aviso, a menos que sejam o resultado de uma operação em uma expressão.
 
-Se a expressão de controle de um loop **while** for uma constante porque o loop é encerrado no meio, considere substituir o loop **while** por um loop **for** . Você pode omitir a inicialização, o teste de encerramento e o incremento do loop de um loop **for** , o que faz com que o loop seja infinito, assim como `while(1)`, e você pode sair do loop do corpo da instrução **for** .
+Se a expressão de controle de um **`while`** loop for uma constante porque o loop é encerrado no meio, considere substituir o **`while`** loop por um **`for`** loop. Você pode omitir a inicialização, o teste de encerramento e o incremento do loop de um **`for`** loop, o que faz com que o loop seja infinito, assim como `while(1)` , e você pode sair do loop do corpo da **`for`** instrução.
 
 ## <a name="example"></a>Exemplo
 

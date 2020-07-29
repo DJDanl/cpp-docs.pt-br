@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aa21854f6a8c4b58a510b16e824449a53b91f329
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920096"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218527"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -46,7 +46,7 @@ Define um novo modo de manipulador para **malloc**.
 int _set_new_mode( int newhandlermode );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *newhandlermode*<br/>
 Novo modo de manipulador para **malloc**; o valor válido é 0 ou 1.
@@ -57,7 +57,7 @@ Retorna o modo de manipulador anterior definido para **malloc**. Um valor de ret
 
 ## <a name="remarks"></a>Comentários
 
-A função de C++ **set_new_mode** define o novo modo do manipulador para [malloc](malloc.md). O novo modo de manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, o **malloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** não alocar memória, **malloc** chame a nova rotina do manipulador da mesma maneira que o **novo** operador faz quando ele falha pelo mesmo motivo. Para obter mais informações, consulte os operadores [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) na *Referência da Linguagem C++*. Para substituir o padrão, chame:
+A função de C++ **set_new_mode** define o novo modo do manipulador para [malloc](malloc.md). O novo modo de manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, o **malloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** não aloca memória, **malloc** chame a nova rotina do manipulador da mesma maneira que o **`new`** operador faz quando ele falha pelo mesmo motivo. Para obter mais informações, consulte os operadores [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) na *Referência da Linguagem C++*. Para substituir o padrão, chame:
 
 ```cpp
 _set_new_mode(1);
@@ -65,7 +65,7 @@ _set_new_mode(1);
 
 no início do programa ou link com NEWMODE. obj (consulte [Opções de link](../../c-runtime-library/link-options.md)).
 
-Esta função valida seu parâmetro. Se *newhandlermode* for algo diferente de 0 ou 1, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, <strong>_set_new_mode</strong> retornará-1 e definirá `EINVAL` **errno** como.
+Esta função valida seu parâmetro. Se *newhandlermode* for algo diferente de 0 ou 1, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, <strong>_set_new_mode</strong> retornará-1 e definirá **errno** como `EINVAL` .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -77,7 +77,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

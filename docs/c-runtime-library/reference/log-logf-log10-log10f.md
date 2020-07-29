@@ -48,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507034"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218592"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -77,18 +77,18 @@ float log10( float x );  // C++ only
 long double log10( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Valor cujo logaritmos deve ser localizado.
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor retornado
 
 As funções de **log** retornam o logaritmo natural (base *e*) de *x* , se bem-sucedidas. As funções **log10** retornam o logaritmo de base 10. Se *x* for negativo, essas funções retornarão um indefinido (IND), por padrão. Se *x* for 0, eles retornarão infinito (inf).
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|nenhum|_DOMAIN|
+|± QNAN, IND|nenhuma|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
@@ -96,7 +96,7 @@ As funções de **log** retornam o logaritmo natural (base *e*) de *x* , se bem-
 
 ## <a name="remarks"></a>Comentários
 
-O C++ permite sobrecargas, de modo que você pode chamar sobrecargas de **log** e **log10** que levam e retornam valores de Double **flutuantes** ou **longos** . Em um programa C, o **log** e o **log10** sempre assumem e retornam um **Double**.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **log** e **log10** que levam e retornam **`float`** **`long double`** valores ou. Em um programa C, o **log** e o **log10** sempre assumem e retornam um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 

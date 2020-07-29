@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2174
 ms.assetid: 161d563c-76e9-47e9-9142-7812e9ea169e
-ms.openlocfilehash: 6a951cc6e31c8cc25a728e9fc1599ea9303060f0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ec3e0581a8c746ac0652da7a2790af2b44904519
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206981"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218267"
 ---
 # <a name="compiler-error-c2174"></a>Erro do compilador C2174
 
 ' function ': o parâmetro real tem o tipo ' void ': parâmetro Número1, lista de parâmetros número2
 
-O parâmetro `number1` passado para a lista de parâmetros `number2` é um parâmetro `void`. Os parâmetros não podem ter o tipo `void`. Use `void*` em vez disso.
+`number1`O parâmetro passado para a lista `number2` de parâmetros é um **`void`** parâmetro. Os parâmetros não podem ter o tipo **`void`** . Use **`void*`** em vez disso.

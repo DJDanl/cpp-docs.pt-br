@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920238"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234114"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -68,7 +68,7 @@ long double fabsl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Valor de ponto flutuante.
@@ -83,7 +83,7 @@ As funções **fabs** retornam o valor absoluto do argumento *x*. Nenhum erro é
 
 ## <a name="remarks"></a>Comentários
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **fabs** se incluir o \<cabeçalho de> cmath. Em um programa C, **fabs** sempre pega e retorna um **Double**.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **fabs** se incluir o \<cmath> cabeçalho. Em um programa C, o **fabs** sempre pega e retorna um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -99,8 +99,8 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Consulte o exemplo de [abs](abs-labs-llabs-abs64.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [_cabs](cabs.md)<br/>

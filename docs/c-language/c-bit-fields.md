@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4878a9c8c206851b13484446b436952e655e06db
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326489"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234283"
 ---
 # <a name="c-bit-fields"></a>Campos de bit C
 
@@ -22,9 +22,9 @@ Além dos declaradores para membros de uma estrutura ou união, um declarador de
 &nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*tipo de* *Declarador*de especificador<sub>opt</sub> **:** *expressão Constant*
 
-A *constant-expression* especifica a largura do campo em bits. O *type-specifier* do `declarator` deve ser `unsigned int`, **signed int** ou `int`, e a *constant-expression* deve ser um valor inteiro não negativo. Se o valor for zero, a declaração não tem nenhum `declarator`. As matrizes de campos de bits, os ponteiros para campos de bits, e as funções que retornam campos de bits não são permitidas. O `declarator` opcional nomeia o campo de bits. Os campos de bits só podem ser declarados como parte de uma estrutura. O operador address-of (**&**) não pode ser aplicado a componentes de campo de bits.
+A *constant-expression* especifica a largura do campo em bits. O *especificador de tipo* para `declarator` deve ser **`unsigned int`** , **`signed int`** , ou **`int`** , e a *expressão de constante* deve ser um valor inteiro não negativo. Se o valor for zero, a declaração não tem nenhum `declarator`. As matrizes de campos de bits, os ponteiros para campos de bits, e as funções que retornam campos de bits não são permitidas. O `declarator` opcional nomeia o campo de bits. Os campos de bits só podem ser declarados como parte de uma estrutura. O operador address-of ( **&** ) não pode ser aplicado a componentes de campo de bits.
 
-Não é possível fazer referência a campos de bits sem nome e seus conteúdos no tempo de execução são imprevisíveis. Podem ser usados como campos “fictícios”, para fins de alinhamento. Um campo de bits sem nome cuja largura for especificada como 0 garante que o armazenamento para o membro após *struct-declaration-list* comece em um limite `int`.
+Não é possível fazer referência a campos de bits sem nome e seus conteúdos no tempo de execução são imprevisíveis. Podem ser usados como campos “fictícios”, para fins de alinhamento. Um campo de bits sem nome cuja largura é especificada como 0 garante que o armazenamento do membro que o segue na *lista de declarações de struct* comece em um **`int`** limite.
 
 Os campos de bits devem também devem ser longos o bastante para conter o padrão de bits. Por exemplo, essas duas instruções não são válidas:
 
@@ -51,7 +51,7 @@ Os campos de bits têm a mesma semântica do tipo inteiro. Isso significa que um
 
 **Específico da Microsoft**
 
-Os campos de bits definidos como `int` são tratados como assinados. Uma extensão da Microsoft para o padrão ANSI C permite tipos `char` e **long** (tanto **signed** como `unsigned`) para campos de bits. Os campos de bits sem nome com o tipo de base **long**, **short** ou `char` (**signed** ou `unsigned`) forçam o alinhamento a um limite apropriado para o tipo de base.
+Os campos de bits definidos como **`int`** são tratados como **`signed`** . Uma extensão da Microsoft para o padrão ANSI C permite **`char`** e **`long`** tipos ( **`signed`** e **`unsigned`** ) para campos de bits. Campos de bits não nomeados com tipo base **`long`** , **`short`** ou **`char`** ( **`signed`** ou **`unsigned`** ) forçam o alinhamento a um limite apropriado para o tipo base.
 
 Os campos de bit são alocados em um inteiro do bit menos significativo ao bit mais significativo. No código a seguir
 
