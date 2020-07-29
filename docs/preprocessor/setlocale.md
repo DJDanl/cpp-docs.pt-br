@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9603c132610e0cfb1e8f955be48271870527105b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218170"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219372"
 ---
 # <a name="setlocale-pragma"></a>Pragma setlocale
 
@@ -29,7 +29,7 @@ Como o algoritmo para converter caracteres multibyte em caracteres largos pode v
 
 A *cadeia de caracteres de localidade* padrão é "".
 
-A localidade "C" mapeia cada caractere na cadeia de caracteres para seu valor como um **wchar_t**. Outros valores válidos para `setlocale` o são as entradas encontradas na lista de cadeias de [caracteres de idioma](../c-runtime-library/language-strings.md) . Por exemplo, você pode especificar:
+A localidade "C" mapeia cada caractere na cadeia de caracteres para seu valor como um **`wchar_t`** . Outros valores válidos para `setlocale` o são as entradas encontradas na lista de [cadeias de caracteres de idioma](../c-runtime-library/language-strings.md) . Por exemplo, você pode especificar:
 
 ```cpp
 #pragma setlocale("dutch")
@@ -37,6 +37,6 @@ A localidade "C" mapeia cada caractere na cadeia de caracteres para seu valor co
 
 A capacidade de especificar uma cadeia de caracteres de idioma depende da página de código e do suporte à ID de idioma no seu computador.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas Pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

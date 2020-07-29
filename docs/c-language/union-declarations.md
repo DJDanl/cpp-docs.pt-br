@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3414a478ec741351f1e1540a214cca38c029749f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213691"
 ---
 # <a name="union-declarations"></a>Declarações de união
 
@@ -24,8 +24,8 @@ Uma "declaração de união" especifica um conjunto de valores de variáveis e, 
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unida**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaração de struct*<br/>
@@ -44,14 +44,14 @@ O conteúdo da união é definido para ser
 &nbsp;&nbsp;&nbsp;&nbsp;*estrutura-declaradora*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-List*  **,**  *struct-declarator*
 
-Uma variável com tipo **union** armazena um dos valores definidos por esse tipo. As mesmas regras controlam declarações da estrutura e de união. Uniões também podem ter campos de bits.
+Uma variável com o **`union`** tipo armazena um dos valores definidos por esse tipo. As mesmas regras controlam declarações da estrutura e de união. Uniões também podem ter campos de bits.
 
-Os membros de uniões não podem ter um tipo incompleto, o tipo `void`, tipo de função. Portanto, os membros não podem ser uma instância de união, mas podem ser ponteiros ao tipo de união que está sendo declarado.
+Os membros de uniões não podem ter tipo, tipo **`void`** ou função incompleto. Portanto, os membros não podem ser uma instância de união, mas podem ser ponteiros ao tipo de união que está sendo declarado.
 
 Uma declaração de tipo de união é somente um modelo. A memória não é reservada até que a variável seja declarada.
 
 > [!NOTE]
-> Se uma união de dois tipos é declarada e um valor é armazenado, mas a união é acessada com o outro tipo, os resultados são não confiáveis. Por exemplo, uma união de **float** e `int` é declarada. Um valor **float** é armazenado, mas o programa acessa posteriormente o valor como `int`. Nessa situação, o valor dependeria do armazenamento interno de valores **float**. O valor inteiro não seria confiável.
+> Se uma união de dois tipos é declarada e um valor é armazenado, mas a união é acessada com o outro tipo, os resultados são não confiáveis. Por exemplo, uma União de **`float`** e **`int`** é declarada. Um **`float`** valor é armazenado, mas o programa mais tarde acessa o valor como um **`int`** . Nessa situação, o valor dependeria do armazenamento interno de **`float`** valores. O valor inteiro não seria confiável.
 
 ## <a name="examples"></a>Exemplos
 
@@ -79,7 +79,7 @@ union               /* Defines a two-dimensional */
 } screen[25][80];
 ```
 
-A matriz `screen` contém 2.000 elementos. Cada elemento da matriz é uma união individual com dois membros: `window1` e `screenval`. O membro `window1` é uma estrutura com dois membros de campos de bits, `icon` e `color`. O membro `screenval` é um `int`. Em um determinado momento, cada elemento da união mantém `int` representada por `screenval` ou a estrutura representada por `window1`.
+A matriz `screen` contém 2.000 elementos. Cada elemento da matriz é uma união individual com dois membros: `window1` e `screenval`. O membro `window1` é uma estrutura com dois membros de campos de bits, `icon` e `color`. O `screenval` membro é um **`int`** . A qualquer momento, cada elemento Union mantém o **`int`** representado por `screenval` ou a estrutura representada por `window1` .
 
 **Específico da Microsoft**
 
@@ -123,4 +123,4 @@ Consulte [Membros de estruturas e uniões](../c-language/structure-and-union-mem
 
 ## <a name="see-also"></a>Confira também
 
-[Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)
+[Declaradores e declarações de variáveis](../c-language/declarators-and-variable-declarations.md)

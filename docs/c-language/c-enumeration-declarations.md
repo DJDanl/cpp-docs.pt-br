@@ -9,26 +9,26 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d917c93ab8ef2e896f3ef09c9d9191dae49116c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213717"
 ---
 # <a name="c-enumeration-declarations"></a>Declarações de enumeração C
 
 Uma enumeração consiste em um conjunto de constantes de número inteiro nomeadas. Uma declaração do tipo enumeração fornece o nome da marca da enumeração (opcional) e define o conjunto de identificadores de número inteiro nomeados (chamados de “conjunto de enumerações”, “constantes de enumerador”, "enumeradores” ou “membros”). Uma variável do tipo enumeração armazena um dos valores do conjunto de enumerações definido por esse tipo.
 
-Variáveis do tipo `enum` podem ser usadas em expressões de indexação e como operandos de todos os operadores aritméticos e relacionais. As enumerações fornecem uma alternativa à política de pré-processador de `#define` com a vantagem de que os valores podem ser gerados para você e obedecer regras normais de escopo.
+Variáveis do **`enum`** tipo podem ser usadas em expressões de indexação e como operandos de todos os operadores aritméticos e relacionais. As enumerações fornecem uma alternativa à política de pré-processador de `#define` com a vantagem de que os valores podem ser gerados para você e obedecer regras normais de escopo.
 
-Em ANSI C, as expressões que definem o valor de uma constante de enumerador sempre têm o tipo `int`; assim, o armazenamento associado a uma variável de enumeração é o armazenamento exigido para um único valor de `int`. Uma constante de enumeração ou um valor do tipo enumerado podem ser usados em qualquer lugar em que a linguagem C permita uma expressão de inteiro.
+No ANSI C, as expressões que definem o valor de uma constante de enumerador sempre têm o **`int`** tipo; portanto, o armazenamento associado a uma variável de enumeração é o armazenamento necessário para um único **`int`** valor. Uma constante de enumeração ou um valor do tipo enumerado podem ser usados em qualquer lugar em que a linguagem C permita uma expressão de inteiro.
 
 ## <a name="syntax"></a>Sintaxe
 
 *enum-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identificador*de enumeração<sub>opt</sub> **{** *enumerador-List* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***identifier*<sub>opção</sub> de identificador **{** *enumerador-lista* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***identificador* do
 
 O *identifier* opcional nomeia o tipo de enumeração definido por *enumerator-list*. Esse identificador é geralmente chamado de a "marca" de enumeração especificada pela lista. Um especificador de tipo no formato
 
@@ -41,7 +41,7 @@ enum identifier
 
 declara que *identifier* é a marca da enumeração especificada pelo não terminal *enumerator-list*. A *enumerator-list* define o "conteúdo do enumerador". A *enumerator-list* é descrita em detalhes a seguir.
 
-Se a declaração de uma marca estiver visível, as declarações subsequentes que usam a marca, mas omitem *enumerator-list*, especificam o tipo enumerado declarado anteriormente. A marca deve se referir a um tipo definido da enumeração, e esse tipo de enumeração deve estar no escopo atual. Como o tipo de enumeração é definido em outro lugar, a *enumerator-list* não aparece nesta declaração. As declarações de tipos derivados das enumerações e as declarações `typedef` para tipos de enumeração podem usar a marca de enumeração antes que o tipo de enumeração seja definido.
+Se a declaração de uma marca estiver visível, as declarações subsequentes que usam a marca, mas omitem *enumerator-list*, especificam o tipo enumerado declarado anteriormente. A marca deve se referir a um tipo definido da enumeração, e esse tipo de enumeração deve estar no escopo atual. Como o tipo de enumeração é definido em outro lugar, a *enumerator-list* não aparece nesta declaração. Declarações de tipos derivados de enumerações e **`typedef`** declarações para tipos de enumeração podem usar a marca de enumeração antes que o tipo de enumeração seja definido.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -51,14 +51,14 @@ Se a declaração de uma marca estiver visível, as declarações subsequentes q
 
 *enumerador*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Enumeração-constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** *expressão Constant constante-* *constante*
+&nbsp;&nbsp;&nbsp;&nbsp;*Enumeração-constante* **=** *expressão de constante*
 
 *Enumeração-constante*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ID*
 
 Cada *enumeration-constant* em uma *enumeration-list* nomeia um valor do conjunto de enumerações. Por padrão, a primeira *enumeration-constant* é associada ao valor 0. A próxima *enumeration-constant* na lista é associada ao valor de (*constant-expression* + 1 ), a menos que você a associe explicitamente a outro valor. O nome de uma *enumeration-constant* é equivalente ao seu valor.
 
-Você pode usar *enumeration-constant = constant-expression* para substituir a sequência padrão dos valores. Portanto, se *enumeration-constant = constant-expression* aparece em *enumerator-list*, a *enumeration-constant* é associada ao valor especificado por *constant-expression*. A *constant-expression* deve ser do tipo `int` e pode ser negativa.
+Você pode usar *enumeration-constant = constant-expression* para substituir a sequência padrão dos valores. Portanto, se *enumeration-constant = constant-expression* aparece em *enumerator-list*, a *enumeration-constant* é associada ao valor especificado por *constant-expression*. A *expressão de constante* deve ter **`int`** tipo e pode ser negativa.
 
 As regras a seguir se aplicam aos membros de um conjunto de enumerações:
 

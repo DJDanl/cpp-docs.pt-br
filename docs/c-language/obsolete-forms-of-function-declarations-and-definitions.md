@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3311fc846ad0f4f80c2e3b61508edd626a13fbb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745876"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218787"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Formas obsoletas de declarações e definições da função
 
@@ -26,9 +26,9 @@ double alt_style( a , real )  /* Obsolete function definition */
 }
 ```
 
-As funções que retornam um inteiro ou um ponteiro com o mesmo tamanho de um `int` não precisam ter uma declaração, embora ela seja recomendada.
+As funções que retornam um inteiro ou ponteiro com o mesmo tamanho que um **`int`** não são necessárias para ter uma declaração, embora a declaração seja recomendada.
 
-Para manter a conformidade com o padrão ANSI C, as declarações de função de estilo antigo que usam reticências agora geram um erro ao compilar com a opção /Za e um aviso de nível 4 ao compilar com /Ze. Por exemplo: 
+Para manter a conformidade com o padrão ANSI C, as declarações de função de estilo antigo que usam reticências agora geram um erro ao compilar com a opção /Za e um aviso de nível 4 ao compilar com /Ze. Por exemplo:
 
 ```cpp
 void funct1( a, ... )  /* Generates a warning under /Ze or */

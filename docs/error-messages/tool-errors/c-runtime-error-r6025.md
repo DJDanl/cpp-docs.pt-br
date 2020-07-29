@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-ms.openlocfilehash: d5edb08278b7b6b9b3eb62e92fc04410f96a8f09
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6e184ba24ad535697a727276a980fd082625e082
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218046"
 ---
 # <a name="c-runtime-error-r6025"></a>Erro em runtime de C R6025
 
@@ -30,4 +30,4 @@ chamada de função virtual pura
 
 Nenhum objeto foi instanciado para manipular a chamada de função virtual pura.
 
-Esse erro é causado pela chamada de uma função virtual em uma classe base abstrata por meio de um ponteiro que é criado por uma conversão para o tipo da classe derivada, mas, na verdade, é um ponteiro para a classe base. Isso pode ocorrer ao converter de um **void** <strong>\*</strong> void para um ponteiro para uma classe quando o **void** <strong>\*</strong> void foi criado durante a construção da classe base.
+Esse erro é causado pela chamada de uma função virtual em uma classe base abstrata por meio de um ponteiro que é criado por uma conversão para o tipo da classe derivada, mas, na verdade, é um ponteiro para a classe base. Isso pode ocorrer ao converter de um **`void`** <strong>\*</strong> para um ponteiro para uma classe quando o **`void`** <strong>\*</strong> foi criado durante a construção da classe base.

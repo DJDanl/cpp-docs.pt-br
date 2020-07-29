@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-ms.openlocfilehash: 7f1ccdba11f62fcbeaf54162f80f0717feaa2fa1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 115a1b6c2157a139786c0b8762a9a614bbcd6deb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455870"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217721"
 ---
-# <a name="isnothrowmoveconstructible-class"></a>Classe is_nothrow_move_constructible
+# <a name="is_nothrow_move_constructible-class"></a>Classe is_nothrow_move_constructible
 
-Testa se o tipo tem um construtor de movimentação **nothrow**.
+Testa se o tipo tem um **`nothrow`** Construtor de movimentação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,7 +24,7 @@ template <class Ty>
 struct is_nothrow_move_constructible;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -35,10 +35,10 @@ Uma instância do predicado de tipo se aplica true se o tipo *Ty* tiver um const
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)

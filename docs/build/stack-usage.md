@@ -2,12 +2,12 @@
 title: Uso da pilha x64
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: b598c33fbdd56630ca3e5ef0da551f38a73baa26
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b1b1e0a8c30d5e24e81372912d5c488efce14841
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335528"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218930"
 ---
 # <a name="x64-stack-usage"></a>Uso da pilha x64
 
@@ -21,11 +21,11 @@ O prólogo de uma função é responsável por alocar espaço de pilha para vari
 
 A área de parâmetros é sempre na parte inferior da pilha (mesmo se `alloca` for usada), para que ela sempre seja adjacente ao endereço de retorno durante qualquer chamada de função. Ele contém pelo menos quatro entradas, mas sempre há espaço suficiente para manter todos os parâmetros necessários para qualquer função que possa ser chamada. Observe que o espaço sempre é alocado para os parâmetros de registro, mesmo que os próprios parâmetros nunca sejam hospedados na pilha; um receptor é garantido que o espaço foi alocado para todos os seus parâmetros. Os endereços residenciais são necessários para os argumentos de registro para que uma área contígua esteja disponível no caso de a função chamada precisar pegar o endereço da lista de argumentos (va_list) ou um argumento individual. Essa área também fornece um local conveniente para salvar os argumentos de registro durante a execução da conversão e como uma opção de depuração (por exemplo, torna os argumentos fáceis de encontrar durante a depuração, se forem armazenados em seus endereços residenciais no código de prólogo). Mesmo se a função chamada tiver menos de 4 parâmetros, esses quatro locais de pilha serão efetivamente pertencentes à função chamada e poderão ser usados pela função chamada para outros fins, além de salvar os valores de registro de parâmetro.  Portanto, o chamador não pode salvar informações nessa região de pilha em uma chamada de função.
 
-Se o espaço for alocado dinamicamente`alloca`() em uma função, um registro não volátil deverá ser usado como um ponteiro de quadro para marcar a base da parte fixa da pilha e esse registro deverá ser salvo e inicializado no prólogo. Observe que quando `alloca` é usado, as chamadas para o mesmo receptor do mesmo chamador podem ter endereços base diferentes para seus parâmetros de registro.
+Se o espaço for alocado dinamicamente ( `alloca` ) em uma função, um registro não volátil deverá ser usado como um ponteiro de quadro para marcar a base da parte fixa da pilha e esse registro deverá ser salvo e inicializado no prólogo. Observe que quando `alloca` é usado, as chamadas para o mesmo receptor do mesmo chamador podem ter endereços base diferentes para seus parâmetros de registro.
 
 A pilha sempre será mantida em 16 bytes alinhada, exceto no prólogo (por exemplo, depois que o endereço de retorno for enviado por push) e, exceto quando indicado em [tipos de função](#function-types) para uma determinada classe de funções de quadro.
 
-Veja a seguir um exemplo de layout de pilha em que a função A chama uma função B sem folha. A função A prólogo já alocou espaço para todos os parâmetros de registro e de pilha exigidos por B na parte inferior da pilha. A chamada envia por push o endereço de retorno e o prólogo de B aloca espaço para suas variáveis locais, registros não voláteis e o espaço necessário para que ele chame funções. Se B usar `alloca`, o espaço será alocado entre a área de salvamento de registro de variável local/não volátil e a área da pilha de parâmetros.
+Veja a seguir um exemplo de layout de pilha em que a função A chama uma função B sem folha. A função A prólogo já alocou espaço para todos os parâmetros de registro e de pilha exigidos por B na parte inferior da pilha. A chamada envia por push o endereço de retorno e o prólogo de B aloca espaço para suas variáveis locais, registros não voláteis e o espaço necessário para que ele chame funções. Se B usar `alloca` , o espaço será alocado entre a área de salvamento de registro de variável local/não volátil e a área da pilha de parâmetros.
 
 ![Exemplo de conversão AMD](../build/media/vcamd_conv_ex_5.png "Exemplo de conversão AMD")
 
@@ -47,9 +47,9 @@ Uma função folha é aquela que não requer uma entrada de tabela de função. 
 
 ## <a name="malloc-alignment"></a>alinhamento de malloc
 
-a [malloc](../c-runtime-library/reference/malloc.md) é garantida para retornar a memória que está adequadamente alinhada para armazenar qualquer objeto que tenha um alinhamento fundamental e que possa se ajustar à quantidade de memória alocada. Um *alinhamento fundamental* é um alinhamento menor ou igual ao maior alinhamento que é suportado pela implementação sem uma especificação de alinhamento. (Em Visual C++, esse é o alinhamento necessário para um `double`ou 8 bytes. No código que tem como destino plataformas de 64 bits, é 16 bytes.) Por exemplo, uma alocação de quatro bytes seria alinhada em um limite que dá suporte a qualquer objeto de quatro bytes ou menor.
+a [malloc](../c-runtime-library/reference/malloc.md) é garantida para retornar a memória que está adequadamente alinhada para armazenar qualquer objeto que tenha um alinhamento fundamental e que possa se ajustar à quantidade de memória alocada. Um *alinhamento fundamental* é um alinhamento menor ou igual ao maior alinhamento que é suportado pela implementação sem uma especificação de alinhamento. (Em Visual C++, esse é o alinhamento necessário para um **`double`** ou 8 bytes. No código que tem como destino plataformas de 64 bits, é 16 bytes.) Por exemplo, uma alocação de quatro bytes seria alinhada em um limite que dá suporte a qualquer objeto de quatro bytes ou menor.
 
-Visual C++ permite tipos com *alinhamento estendido*, que também são conhecidos como tipos *alinhados* . Por exemplo, os tipos de [__m128](../cpp/m128.md) SSE __m128 `__m256`e, e os tipos declarados `__declspec(align( n ))` usando `n` WHERE é maior que 8, têm o alinhamento estendido. O alinhamento de memória em um limite adequado para um objeto que requer o alinhamento estendido não é `malloc`garantido pelo. Para alocar memória para tipos com alinhamento excessivo, use [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) e funções relacionadas.
+Visual C++ permite tipos com *alinhamento estendido*, que também são conhecidos como tipos *alinhados* . Por exemplo, os tipos de SSE [__m128](../cpp/m128.md) e `__m256` , e os tipos declarados usando `__declspec(align( n ))` Where `n` é maior que 8, têm o alinhamento estendido. O alinhamento de memória em um limite adequado para um objeto que requer o alinhamento estendido não é garantido pelo `malloc` . Para alocar memória para tipos com alinhamento excessivo, use [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) e funções relacionadas.
 
 ## <a name="alloca"></a>alloca
 

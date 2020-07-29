@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8bb9ecef2e08e1f65a817e1a6496a421e727eb13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756000"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221114"
 ---
 # <a name="compiler-error-c2664"></a>Erro do compilador C2664
 
 ' function ': não é possível converter o argumento n de ' type1 ' em ' type2 '
 
-Esse problema de conversão de parâmetro poderá acontecer se uma instância de classe for criada e houver uma tentativa de conversão implícita em um construtor marcado com a palavra-chave `explicit`. Para obter mais informações sobre conversões explícitas, consulte [conversões de tipo definidas pelo usuário](../../cpp/user-defined-type-conversions-cpp.md).
+Esse problema de conversão de parâmetro pode ocorrer se uma instância de uma classe for criada e uma conversão implícita for tentada em um Construtor marcado com a **`explicit`** palavra-chave. Para obter mais informações sobre conversões explícitas, consulte [conversões de tipo definidas pelo usuário](../../cpp/user-defined-type-conversions-cpp.md).
 
-Se um objeto temporário é passado para uma função que usa uma referência a um objeto como parâmetro, essa referência deve ser uma referência `const`.
+Se um objeto temporário for passado para uma função que usa uma referência a um objeto como um parâmetro, essa referência deverá ser uma **`const`** referência.
 
 Se a função é passada para um parâmetro que não é do tipo que a função espera, um objeto temporário é criado usando o construtor apropriado. Em seguida, esse objeto temporário é passado para a função. Nesse caso, o objeto temporário é usado para inicializar a referência. Em versões anteriores da linguagem, todas as referências podiam ser inicializadas por objetos temporários.
 
@@ -31,7 +31,7 @@ Para corrigir o C2664,
 
 O C2664 também pode ser gerado quando uma classe oculta um membro de uma de suas classes base.
 
-Para obter mais informações, consulte [como: converter System:: String em wchar_t * ou char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Para obter mais informações, consulte [como: converter System:: String para wchar_t * ou Char \* ](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -78,7 +78,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra C2664 usando um literal de cadeia de caracteres para chamar `Test`e mostra como corrigi-lo. Como o parâmetro é uma referência `szString`, um objeto deve ser criado pelo construtor apropriado. O resultado é um objeto temporário que não pode ser usado para inicializar a referência.
+O exemplo a seguir demonstra C2664 usando um literal de cadeia de caracteres para chamar `Test` e mostra como corrigi-lo. Como o parâmetro é uma referência `szString`, um objeto deve ser criado pelo construtor apropriado. O resultado é um objeto temporário que não pode ser usado para inicializar a referência.
 
 ```cpp
 // C2664c.cpp
@@ -119,7 +119,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O compilador força os requisitos padrão C++ para aplicar `const`. Este exemplo gera C2664:
+O compilador impõe os requisitos padrão de C++ para aplicação **`const`** . Este exemplo gera C2664:
 
 ```cpp
 // C2664d.cpp
@@ -232,7 +232,7 @@ library myproj1 {
 }
 ```
 
-O C2664 também é lançado usando `wchar_t` ao mover o código do Visual C++ 6.0 para versões posteriores. No Visual C++ 6.0 e versões anteriores, `wchar_t` era `typedef` para `unsigned short` e, portanto, podia ser convertido implicitamente nesse tipo. Depois do Visual C++ 6.0, `wchar_t` é seu próprio tipo interno, conforme especificado no padrão C++, e não pode mais ser convertido implicitamente em `unsigned short`. Consulte [/Zc: wchar_t (Wchar_t é o tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2664 também é gerado usando **`wchar_t`** ao portar código do Visual C++ 6,0 para versões posteriores. No Visual C++ 6,0 e anterior, **`wchar_t`** era um **`typedef`** para **`unsigned short`** e, portanto, foi implicitamente conversível para esse tipo. Após Visual C++ 6,0, **`wchar_t`** é seu próprio tipo interno, conforme especificado no padrão C++, e não é mais implicitamente conversível para **`unsigned short`** . Consulte [/Zc: wchar_t (Wchar_t é o tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622820"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217929"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Exceções: liberando objetos em exceções
 
@@ -30,9 +30,9 @@ Exceções lançadas pela estrutura ou pelo seu aplicativo interrompe o fluxo do
 
 Há dois métodos principais para fazer isso.
 
-- Manipule exceções localmente usando as palavras-chave **try** e **Catch** e destrua todos os objetos com uma instrução.
+- Manipule exceções localmente usando as **`try`** **`catch`** palavras-chave e, em seguida, destrua todos os objetos com uma instrução.
 
-- Destrua qualquer objeto no bloco **Catch** antes de lançar a exceção fora do bloco para tratamento adicional.
+- Destrua qualquer objeto no **`catch`** bloco antes de lançar a exceção fora do bloco para tratamento adicional.
 
 Essas duas abordagens são ilustradas abaixo como soluções para o seguinte exemplo problemático:
 
@@ -50,7 +50,7 @@ Este novo exemplo configura um manipulador de exceção para capturar a exceçã
 
 ## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Lançando exceções depois de destruir objetos
 
-Outra maneira de lidar com exceções é passá-las para o próximo contexto de tratamento de exceção externo. No seu bloco **Catch** , você pode fazer uma limpeza de seus objetos alocados localmente e, em seguida, lançar a exceção em para processamento adicional.
+Outra maneira de lidar com exceções é passá-las para o próximo contexto de tratamento de exceção externo. Em seu **`catch`** bloco, você pode fazer uma limpeza de seus objetos alocados localmente e, em seguida, lançar a exceção em para processamento adicional.
 
 A função de lançamento pode ou não precisar desalocar objetos heap. Se a função sempre desalocar o objeto de heap antes de retornar no caso normal, a função também deverá desalocar o objeto de heap antes de lançar a exceção. Por outro lado, se a função normalmente não desalocar o objeto antes de retornar no caso normal, você deverá decidir caso a caso, se o objeto de heap deve ser desalocado.
 
@@ -64,6 +64,6 @@ Se você chamar funções que podem gerar exceções, poderá usar blocos **try/
 
 Para obter mais informações, consulte [exceções: capturando e excluindo exceções](exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Tratamento de Exceção](exception-handling-in-mfc.md)
+[Tratamento de exceção](exception-handling-in-mfc.md)

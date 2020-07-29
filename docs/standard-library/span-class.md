@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813503"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217448"
 ---
 # <a name="span-class-c-standard-library"></a>classe span (biblioteca C++ padrão)
 
@@ -66,7 +66,7 @@ Se, normalmente, você acessar uma sequência de objetos back-to-back usando um 
 
 O tamanho de um `span` pode ser definido em tempo de compilação, especificando-o como um argumento de modelo ou em tempo de execução, especificando `dynamic_extent` .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 ```cpp
 template<class T, size_t Extent = dynamic_extent>
@@ -86,8 +86,8 @@ class span;
 
 | **Definições de tipo** | **Descrição** |
 |-|-|
-| [const_pointer](#pointer) | O tipo de um ponteiro para um `const` elemento. |
-| [const_reference](#reference) | O tipo de uma referência a um `const` elemento. |
+| [const_pointer](#pointer) | O tipo de um ponteiro para um **`const`** elemento. |
+| [const_reference](#reference) | O tipo de uma referência a um **`const`** elemento. |
 | [difference_type](#difference_type) | O tipo de uma distância com sinal entre dois elementos. |
 | [element_type](#element_type) | O tipo de um elemento span. |
 | [repeti](#iterator) | O tipo de um iterador para um Span. |
@@ -95,9 +95,9 @@ class span;
 | [reference](#reference) | O tipo de uma referência para um elemento. |
 | [reverse_iterator](#reverse_iterator) | O tipo de um iterador reverso para um Span. |
 | [size_type](#size_type) | O tipo para o resultado da distância não assinada entre dois elementos no span. |
-| [value_type](#value_type) | O tipo de um elemento, sem `const` `volatile` qualificações ou. |
+| [value_type](#value_type) | O tipo de um elemento, sem **`const`** **`volatile`** qualificações ou. |
 | **Construtores** | **Descrição** |
-|[compreende](#span)| Construa um `span` .|
+|[compreende](#span)| Construa um `span`.|
 | **Suporte a iteradores** | **Descrição** |
 |[Comece](#begin) | Obtenha um iterador apontando para o primeiro elemento no span.|
 |[completo](#end) | Obtenha um iterador apontando para o fim da extensão. |
@@ -105,7 +105,7 @@ class span;
 |[rend](#rend) | Obter um iterador reverso apontando para a frente do span; ou seja, o final do intervalo invertido.|
 | **Elementos de acesso**| **Descrição** |
 |[Voltar](#back) | Obter o último elemento no span.|
-|[dados](#data) | Obtenha o endereço do primeiro elemento no span.|
+|[data](#data) | Obtenha o endereço do primeiro elemento no span.|
 |[dianteiro](#front) | Obter o primeiro elemento no span.|
 |[operador\[\]](#op_at) | Acessar um elemento em uma posição especificada.|
 | **Observadores** | **Descrição** |
@@ -142,7 +142,7 @@ Obter o último elemento no span.
 constexpr reference back() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao último elemento no span.
 
@@ -175,7 +175,7 @@ Obtenha um iterador que aponte para o primeiro elemento no intervalo.
 constexpr iterator begin() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Um iterador que aponta para o primeiro elemento no span.
 
@@ -209,7 +209,7 @@ Obtenha um ponteiro para o início dos dados de span.
 constexpr pointer data() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o primeiro item armazenado no span.
 
@@ -304,9 +304,9 @@ Se a extensão contém elementos.
 constexpr bool empty() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
-Retorna `true` If `this->size() == 0` . Caso contrário, `false`.
+Retorna **`true`** If `this->size() == 0` . Caso contrário **`false`** .
 
 ### <a name="example"></a>Exemplo
 
@@ -332,7 +332,7 @@ Obtenha um iterador até o fim da extensão.
 constexpr iterator end() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Um iterador que aponta muito além do fim do intervalo.
 
@@ -361,13 +361,13 @@ constexpr auto first(size_type count) const noexcept;
 template <size_t count> constexpr auto first() const noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contar*\
 O número de elementos da frente deste intervalo para colocar no subintervalo.  
 O número de elementos é especificado como um parâmetro para o modelo ou para a função, conforme ilustrado abaixo.
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Um Span que contém `count` elementos da frente desta extensão.
 
@@ -417,7 +417,7 @@ Obter o primeiro elemento no span.
 constexpr reference front() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao primeiro elemento no span.
 
@@ -486,13 +486,13 @@ constexpr span<element_type, dynamic_extent> last(const size_type count) const n
 template <size_t count> constexpr span<element_type, count> last() const noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contar*\
 O número de elementos do final desta extensão para colocar no subintervalo.
 O número pode ser especificado como um parâmetro para o modelo ou para a função, conforme ilustrado abaixo.
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Uma extensão que contém os últimos `count` elementos desta extensão.
 
@@ -542,12 +542,12 @@ Obter o elemento no intervalo em uma posição especificada.
 constexpr reference operator[](size_type offset) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *desvio*\
 Elemento baseado em zero no span para acessar.
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao elemento no *deslocamento*de posição. Se a posição for inválida, o comportamento será indefinido.
 
@@ -579,12 +579,12 @@ Atribua outro intervalo a este.
 constexpr span& operator=(const span& other) noexcept = default;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *outros*\
 O intervalo a ser atribuído a este.
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 `*this`
 
@@ -619,7 +619,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-Os tipos para um ponteiro e `const` ponteiro para um elemento span.
+Os tipos para um ponteiro e **`const`** ponteiro para um elemento span.
 
 ```cpp
 using pointer = T*;
@@ -663,7 +663,7 @@ Obtenha um iterador reverso apontando para o último elemento desta extensão.
 constexpr reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Um iterador que aponta para o início do intervalo invertido.
 
@@ -693,7 +693,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-Os tipos de uma referência, e uma `const` referência, para um elemento span.
+Os tipos de uma referência, e uma **`const`** referência, para um elemento span.
 
 ```cpp
 using reference = T&;
@@ -736,7 +736,7 @@ Obtenha um iterador de acesso aleatório que aponte apenas para além do fim do 
 constexpr reverse_iterator rend() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Um iterador reverso para o espaço reservado seguindo o último elemento no intervalo invertido; ou seja, o espaço reservado antes do primeiro elemento no intervalo não invertido.
 
@@ -802,7 +802,7 @@ Obtém o número de elementos no span.
 constexpr size_t size() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 O número de elementos no span.
 
@@ -834,7 +834,7 @@ Obtenha o tamanho dos elementos na extensão em bytes.
 constexpr size_type size_bytes() const noexcept;
 ```
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 O número de bytes que todos os elementos no span ocupam; Isto é, `sizeof(element_type)` multiplicado pelo número de elementos no span.
 
@@ -931,7 +931,7 @@ constexpr explicit(Extent != dynamic_extent && OtherExtent == dynamic_extent)
 span(const span<T, OtherExtent>& other) noexcept
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *arr*\
 Construa um intervalo de uma matriz.
@@ -1003,7 +1003,7 @@ template <size_t offset, size_t count = dynamic_extent>
 constexpr auto subspan() const noexcept
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contar*\
 O número de elementos a serem colocados no subintervalo. Se `count` for `dynamic_extent` (o valor padrão), o subintervalo será obtido de `offset` até o final deste intervalo.
@@ -1011,7 +1011,7 @@ O número de elementos a serem colocados no subintervalo. Se `count` for `dynami
 *desvio*\
 O local neste intervalo para iniciar o subintervalo.
 
-### <a name="return-value"></a>Retornar valor
+### <a name="return-value"></a>Valor retornado
 
 Uma extensão a partir `offset` desta extensão. Contém `count` elementos.
 
@@ -1058,7 +1058,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-O tipo do elemento na extensão, sem `const` ou `volatile` qualificações.
+O tipo do elemento na extensão, sem **`const`** ou **`volatile`** qualificações.
 
 ```cpp
 using value_type = std::remove_cv_t<T>;
@@ -1115,7 +1115,7 @@ template <ranges::contiguous_range Rng>
 span(Rng &&) -> span<remove_reference_t<ranges::range_reference_t<Rng>>>;
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [\<span>](../standard-library/span.md)  
 [Como usar a dedução de argumento de modelo de classe](https://devblogs.microsoft.com/cppblog/how-to-use-class-template-argument-deduction/)

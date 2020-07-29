@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::span [C++], as_writable_bytes
 - std::as_bytes [C++]
-ms.openlocfilehash: 6573ea061673091113244ada0ab0cd84bdd7db75
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: f51c99d2f2a051a07cefcb985fdb46340fefb3ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226114"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217435"
 ---
 # <a name="ltspangt-functions"></a>&lt;funções de span &gt;
 
@@ -32,7 +32,7 @@ template <class T, size_t Extent>
 auto as_bytes(span<T, Extent> s) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo dos elementos no span.
@@ -43,7 +43,7 @@ O número de elementos no span (se conhecido em tempo de compilação), caso con
 *&*\
 O intervalo para obter a representação bruta de.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um `span<const byte, S>` para o primeiro item armazenado no span onde `S` é`{reinterpret_cast<const std::byte*>(s.data()), s.size_bytes()}`
 
@@ -65,14 +65,14 @@ void main()
 
 ## <a name="as_writable_bytes"></a>`as_writable_bytes`
 
-Se `T` não estiver `const` , obtém uma exibição de leitura/gravação da representação de byte bruto dos elementos no span.
+Se `T` não estiver **`const`** , obtém uma exibição de leitura/gravação da representação de byte bruto dos elementos no span.
 
 ```cpp
 template <class T, size_t Extent>
 auto as_writable_bytes(span<T, Extent> s) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo dos elementos no span.
@@ -83,7 +83,7 @@ O número de elementos no span (se conhecido em tempo de compilação), caso con
 *&*\
 O intervalo para obter a representação bruta de.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um `span<byte, S>` para o primeiro item armazenado no span onde `S` é`{reinterpret_cast<std::byte*>(s.data()), s.size_bytes()}`
 

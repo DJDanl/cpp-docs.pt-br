@@ -1,17 +1,17 @@
 ---
-title: origem (C++ atributo com)
+title: fonte (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 274e446aecc4d0d7096211bbae88e0f170ae44a2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166218"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213821"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -25,12 +25,12 @@ Em uma classe, especifica as interfaces de origem do objeto COM para pontos de c
 
 ### <a name="parameters"></a>parâmetros
 
-*interface*<br/>
+*interfaces*<br/>
 Uma ou mais interfaces que você especifica ao aplicar o atributo de origem a uma classe. Esse parâmetro não é usado quando a origem é aplicada a uma propriedade ou um método.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo de **origem** C++ tem a mesma funcionalidade que o atributo MIDL de [origem](/windows/win32/Midl/source) .
+O atributo C++ de **origem** tem a mesma funcionalidade que o atributo MIDL de [origem](/windows/win32/Midl/source) .
 
 Você pode usar o atributo [padrão](default-cpp.md) para especificar a interface de origem padrão para um objeto.
 
@@ -74,16 +74,16 @@ class NN : public b
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**, **interface**|
+|**Aplica-se a**|**`class`**, **`struct`** , **interface**|
 |**Repetível**|Não|
-|**Atributos necessários**|`coclass` (quando aplicado à classe ou estrutura)|
+|**Atributos obrigatórios**|`coclass`(quando aplicado à classe ou estrutura)|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
 [coclass](coclass.md)
