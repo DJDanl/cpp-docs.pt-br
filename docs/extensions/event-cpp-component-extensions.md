@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8a0674defb0f5e81e0d1417bab5a282cf82b82b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172380"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195688"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI e C++/CX)
 
@@ -41,7 +41,7 @@ modifiereventdelegate^ event_name
 ### <a name="parameters"></a>parâmetros
 
 *modifier*<br/>
-Um modificador que pode ser usado na declaração de evento ou em um método de acessador de evento.  Os valores possíveis são **static** e **virtual**.
+Um modificador que pode ser usado na declaração de evento ou em um método de acessador de evento.  Os valores possíveis são **`static`** e **`virtual`** .
 
 *delegate*<br/>
 O [delegate](delegate-cpp-component-extensions.md), cuja assinatura o manipulador de eventos deve corresponder.
@@ -50,7 +50,7 @@ O [delegate](delegate-cpp-component-extensions.md), cuja assinatura o manipulado
 O nome do evento.
 
 *return_value*<br/>
-O valor retornado do método do acessador de eventos.  Para que seja verificável, o tipo de retorno deve ser **void**.
+O valor retornado do método do acessador de eventos.  Para ser verificável, o tipo de retorno deve ser **`void`** .
 
 *parameters*<br/>
 (opcional) Parâmetros para o método `raise`, que correspondem à assinatura do parâmetro *delegate*.
@@ -71,7 +71,7 @@ Use os operadores **+=** e **-=** para adicionar e remover um manipulador de eve
 
 **event** é uma palavra-chave contextual; veja mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md).
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 ### <a name="remarks"></a>Comentários
 
@@ -105,7 +105,7 @@ modifiereventdelegate^ event_name
 ### <a name="parameters"></a>parâmetros
 
 *modifier*<br/>
-Um modificador que pode ser usado na declaração de evento ou em um método de acessador de evento.  Os valores possíveis são **static** e **virtual**.
+Um modificador que pode ser usado na declaração de evento ou em um método de acessador de evento.  Os valores possíveis são **`static`** e **`virtual`** .
 
 *delegate*<br/>
 O [delegate](delegate-cpp-component-extensions.md), cuja assinatura o manipulador de eventos deve corresponder.
@@ -114,7 +114,7 @@ O [delegate](delegate-cpp-component-extensions.md), cuja assinatura o manipulado
 O nome do evento.
 
 *return_value*<br/>
-O valor retornado do método do acessador de eventos.  Para que seja verificável, o tipo de retorno deve ser **void**.
+O valor retornado do método do acessador de eventos.  Para ser verificável, o tipo de retorno deve ser **`void`** .
 
 *parameters*<br/>
 (opcional) Parâmetros para o método `raise`, que correspondem à assinatura do parâmetro *delegate*.
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-O exemplo de código a seguir demonstra a lógica usada para gerar o método `raise` de um evento trivial: se o evento tiver um ou mais assinantes, chamar o método `raise` implicitamente ou chamar explicitamente o delegado. Se o tipo de retorno do delegado não for **void** e se houver zero assinantes de evento, o método `raise` retornará o valor padrão para o tipo de delegado. Se não houver qualquer assinante de evento, chamar o método `raise` simplesmente retorna e não gera nenhuma exceção. Se o tipo de retorno delegado não for **void**, o tipo de delegado será retornado.
+O exemplo de código a seguir demonstra a lógica usada para gerar o `raise` método de um evento trivial: se o evento tiver um ou mais assinantes, chamar o `raise` método implicitamente ou explicitamente chamará o delegado. Se o tipo de retorno do delegado não for **`void`** e se houver nenhum assinante de evento, o `raise` método retornará o valor padrão para o tipo delegado. Se não houver qualquer assinante de evento, chamar o método `raise` simplesmente retorna e não gera nenhuma exceção. Se o tipo de retorno delegado não for **`void`** , o tipo delegado será retornado.
 
 ```cpp
 // trivial_events.cpp
@@ -272,4 +272,4 @@ int main() {
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

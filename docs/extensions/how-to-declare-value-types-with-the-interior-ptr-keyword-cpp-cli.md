@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172276"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195571"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Como declarar tipos de valores com a palavra-chave interior_ptr (C++/CLI)
 
@@ -22,7 +22,7 @@ Um **interior_ptr** pode ser usado com um tipo de valor.
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 O seguinte exemplo em C++/CLI mostra como usar um **interior_ptr** com um tipo de valor.
 
@@ -67,11 +67,11 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
-Em um tipo de valor, o ponteiro **this** é avaliado como interior_ptr.
+Em um tipo de valor, o **`this`** ponteiro é avaliado como um interior_ptr.
 
-No corpo de uma função de membro não estático de um tipo de valor `V`, **this** é uma expressão do tipo `interior_ptr<V>` cujo valor é o endereço do objeto para o qual a função é chamada.
+No corpo de uma função membro não estática de um tipo de valor `V` , **`this`** é uma expressão do tipo `interior_ptr<V>` cujo valor é o endereço do objeto para o qual a função é chamada.
 
 ### <a name="code"></a>Código
 
@@ -89,7 +89,7 @@ value struct V {
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 O exemplo a seguir mostra como usar o operador address-of com membros estáticos.
 
