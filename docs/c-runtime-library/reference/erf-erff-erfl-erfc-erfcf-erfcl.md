@@ -46,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 633a766684ed7485ab579157ae4c94fe209f7e73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5511e7a7d17c47deaaaf61eedf3c00eec12db119
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915021"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234179"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -92,7 +92,7 @@ long double erfcl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Um valor de ponto flutuante.
@@ -109,7 +109,7 @@ As funções **ERF** calculam a função de erro de magnetização de *x*, que �
 
 A função de erro de magnetização complementar é definida como 1-ERF (x). As funções **ERF** retornam um valor no intervalo de-1,0 a 1,0. Nenhum erro é retornado. As funções **ERFC** retornam um valor no intervalo de 0 a 2. Se *x* for muito grande para **ERFC**, a variável **errno** será definida como **ERANGE**.
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ERF** e **ERFC** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **ERF** e **ERFC** sempre assumem e retornam um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ERF** e **ERFC** que levam e retornam **`float`** e **`long double`** digitam. Em um programa C, **ERF** e **ERFC** sempre assumem e retornam um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -121,6 +121,6 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>

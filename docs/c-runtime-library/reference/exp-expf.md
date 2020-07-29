@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b6d4906212073ab8cb04a0ab77d1234d444a4c95
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909658"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234166"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -66,7 +66,7 @@ long double expl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor de ponto flutuante para exponentiate a base do logaritmo natural *e* by.
@@ -86,7 +86,7 @@ A função **exp** tem uma implementação que usa Streaming SIMD Extensions 2 (
 
 ## <a name="remarks"></a>Comentários
 
-O C++ permite sobrecarga, de modo que você pode chamar sobrecargas de **exp** que usam um ponto **flutuante** ou um **longo argumento duplo** . Em um programa C, **exp** sempre usa e retorna um **Double**.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **exp** que usam um **`float`** **`long double`** argumento ou. Em um programa C, **exp** sempre usa e retorna um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -121,6 +121,6 @@ exp( 2.302585 ) = 10.000000
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [_CIexp](../../c-runtime-library/ciexp.md)<br/>

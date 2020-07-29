@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-ms.openlocfilehash: c9dce798572a91bcb9721f022393abb669970131
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 341912b53301c3a11df4285167d66c8c1493d2fd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440450"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223987"
 ---
 # <a name="importing-data-using-__declspecdllimport"></a>Importando dados usando __declspec(dllimport)
 
-No caso de dados, o uso de **__declspec (dllimport)** é um item de conveniência que remove uma camada de indireção. Ao importar dados de uma DLL, você ainda precisa passar pela tabela de endereços de importação. Antes de **__declspec (dllimport)**, isso significava que você tinha que se lembrar de fazer um nível extra de indireção ao acessar dados exportados da dll:
+No caso dos dados, o uso do **`__declspec(dllimport)`** é um item de conveniência que remove uma camada de indireção. Ao importar dados de uma DLL, você ainda precisa passar pela tabela de endereços de importação. Antes **`__declspec(dllimport)`** disso, isso significava que você tinha de se lembrar de fazer um nível extra de indireção ao acessar dados exportados da dll:
 
 ```
 // project.h
@@ -46,7 +46,7 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Quando você marca os dados como **__declspec (dllimport)**, o compilador gera automaticamente o código de indireção para você. Você não precisa mais se preocupar com as etapas acima. Como mencionado anteriormente, não use a declaração de **__declspec (dllimport)** nos dados ao COMPILAR a dll. As funções dentro da DLL não usam a tabela de endereços de importação para acessar o objeto de dados; Portanto, você não terá o nível extra de indireção presente.
+Quando você marca os dados como **`__declspec(dllimport)`** , o compilador gera automaticamente o código de indireção para você. Você não precisa mais se preocupar com as etapas acima. Como mencionado anteriormente, não use **`__declspec(dllimport)`** a declaração nos dados ao compilar a dll. As funções dentro da DLL não usam a tabela de endereços de importação para acessar o objeto de dados; Portanto, você não terá o nível extra de indireção presente.
 
 Para exportar os dados automaticamente da DLL, use esta declaração:
 
