@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cfa03706bc6030b337009f7228466a26e242aa6b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221530"
 ---
 # <a name="mixin-structure"></a>Estrutura MixIn
 
@@ -31,14 +31,14 @@ struct MixIn;
 
 ### <a name="parameters"></a>parâmetros
 
-*Gerados*<br/>
+*Derivado*<br/>
 Um tipo derivado da estrutura [Implements](implements-structure.md) .
 
 *MixInType*<br/>
 Um tipo base.
 
 *hasImplements*<br/>
-**true** se *MixInType* for derivado da implementação atual do tipo base; caso contrário, **false** .
+**`true`** Se *MixInType* for derivado da implementação atual, o tipo base; **`false`** caso contrário.
 
 ## <a name="remarks"></a>Comentários
 
@@ -56,4 +56,4 @@ Se uma classe for derivada de Windows Runtime e de interfaces COM de classe, a l
 
 ## <a name="see-also"></a>Confira também
 
-[Namespace Microsoft::WRL](microsoft-wrl-namespace.md)
+[Namespace Microsoft:: WRL](microsoft-wrl-namespace.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777312"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232723"
 ---
 # <a name="profile-guided-optimizations"></a>Otimizações orientadas a perfil
 
@@ -68,7 +68,7 @@ As otimizações guiadas por perfil incluem essas verificações e aprimoramento
 
 - **Layout de função** – com base no grafo de chamada e no comportamento de chamador/receptor de perfil, as funções que tendem a estar ao longo do mesmo caminho de execução são colocadas na mesma seção.
 
-- **Otimização de ramificação condicional** -com as investigações de valor, as otimizações guiadas por perfil podem descobrir se um determinado valor em uma instrução switch é usado com mais frequência do que outros valores.  Esse valor pode então ser extraído da instrução switch.  O mesmo pode ser feito com `if` instruções... `else` em que o otimizador pode ordenar o `if` ... `else` para que `if` o `else` bloco ou seja colocado primeiro, dependendo de qual bloco é mais frequentemente válido.
+- **Otimização de ramificação condicional** -com as investigações de valor, as otimizações guiadas por perfil podem descobrir se um determinado valor em uma instrução switch é usado com mais frequência do que outros valores.  Esse valor pode então ser extraído da instrução switch.  O mesmo pode ser feito com **`if`** instruções... **`else`** em que o otimizador pode ordenar o **`if`** ... **`else`** para que **`if`** o **`else`** bloco ou seja colocado primeiro, dependendo de qual bloco é mais frequentemente válido.
 
 - **Separação de código inativo** -o código que não é chamado durante a criação de perfil é movido para uma seção especial que é acrescentada ao final do conjunto de seções. Isso efetivamente mantém essa seção fora das páginas usadas com frequência.
 
@@ -95,6 +95,6 @@ Um utilitário de linha de comando que adiciona dados de perfil de um ou mais `.
 [Como: mesclar vários perfis do PGO em um único perfil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
 Exemplos de uso de **pgomgr** .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Ferramentas de build adicionais do MSVC](reference/c-cpp-build-tools.md)

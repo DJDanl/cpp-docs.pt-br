@@ -5,12 +5,12 @@ f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: 8631cae146a311f1890583900b564471d5a80958
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5ddd9135749c2dcfd40cd06a9b69cff65b1a8c8d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076256"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232866"
 ---
 # <a name="ltsystem_errorgt-operators"></a>Operadores &lt;system_error&gt;
 
@@ -31,15 +31,15 @@ bool operator==(const error_condition& left,
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 O objeto a ser testado quanto à igualdade.
 
-\ *à direita*
+*Certo*\
 O objeto a ser testado quanto à igualdade.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se os objetos forem iguais; **false** se os objetos não forem iguais.
+**`true`** Se os objetos forem iguais; **`false`** se os objetos não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -58,21 +58,21 @@ bool operator!=(const error_condition& left, const error_condition& right);
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 O objeto a ser testado quanto à desigualdade.
 
-\ *à direita*
+*Certo*\
 O objeto a ser testado quanto à desigualdade.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o objeto passado para a *esquerda* não for igual ao objeto passado para a *direita*; caso contrário, **false**.
+**`true`** Se o objeto passado para a *esquerda* não for igual ao objeto passado para a *direita*; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
 Essa função retorna `!(left == right)`.
 
-## <a name="operatorlt"></a><a name="op_lt">Operador </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operador&lt;
 
 Testa se um objeto é menor que o objeto passado para comparação.
 
@@ -102,21 +102,21 @@ inline bool operator<(
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 O objeto a ser comparado.
 
-\ *à direita*
+*Certo*\
 O objeto a ser comparado.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o objeto passado para a *esquerda* for menor que o objeto passado para a *direita*; Caso contrário, **false**.
+**`true`** Se o objeto passado para a *esquerda* for menor que o objeto passado para a *direita*; Caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
 Essa função testa a ordem do erro.
 
-## <a name="operatorltlt"></a><a name="op_ostream"></a>&lt; de&lt;do operador
+## <a name="operatorltlt"></a><a name="op_ostream"></a>operador&lt;&lt;
 
 ```cpp
 template <class charT, class traits>

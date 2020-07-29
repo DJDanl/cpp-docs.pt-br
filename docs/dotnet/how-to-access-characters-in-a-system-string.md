@@ -7,22 +7,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a91f82d0377b9065c2927e61e9f2a558a49985f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988647"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221361"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Como acessar caracteres em um System::String
 
-Você pode acessar caracteres de um objeto <xref:System.String> para chamadas de alto desempenho para funções não gerenciadas que usam cadeias de caracteres `wchar_t*`. O método gera um ponteiro interior para o primeiro caractere do objeto <xref:System.String>. Esse ponteiro pode ser manipulado diretamente ou fixado e passado para uma função que espera uma cadeia de caracteres `wchar_t` comum.
+Você pode acessar os caracteres de um <xref:System.String> objeto para chamadas de alto desempenho para funções não gerenciadas que usam `wchar_t*` cadeias. O método gera um ponteiro interior para o primeiro caractere do <xref:System.String> objeto. Esse ponteiro pode ser manipulado diretamente ou fixado e passado para uma função que espera uma **`wchar_t`** cadeia de caracteres comum.
 
 ## <a name="example"></a>Exemplo
 
-`PtrToStringChars` retorna um <xref:System.Char>, que é um ponteiro interior (também conhecido como um `byref`). Assim, ele está sujeito à coleta de lixo. Você não precisa fixar esse ponteiro, a menos que você vai passá-lo para uma função nativa.
+`PtrToStringChars`Retorna um <xref:System.Char> , que é um ponteiro interior (também conhecido como um `byref` ). Assim, ele está sujeito à coleta de lixo. Você não precisa fixar esse ponteiro, a menos que você vai passá-lo para uma função nativa.
 
-Considere o código a seguir.  A fixação não é necessária porque `ppchar` é um ponteiro interior e, se o coletor de lixo mover a cadeia de caracteres para a qual aponta, ele também atualizará `ppchar`. Sem um [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), o código funcionará e não terá o possível impacto no desempenho causado pela fixação.
+Considere o código a seguir.  A fixação não é necessária porque `ppchar` é um ponteiro interior e, se o coletor de lixo mover a cadeia de caracteres para a qual aponta, ele também será atualizado `ppchar` . Sem um [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), o código funcionará e não terá o possível impacto no desempenho causado pela fixação.
 
 Se você passar `ppchar` para uma função nativa, ele deverá ser um ponteiro de fixação; o coletor de lixo não poderá atualizar nenhum ponteiro no quadro de pilha não gerenciado.
 
@@ -99,6 +99,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Usando a interoperabilidade C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 99d712d11fd47f694477029bc5c2b23fe732eb04
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456253"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233113"
 ---
-# <a name="isfundamental-class"></a>Classe is_fundamental
+# <a name="is_fundamental-class"></a>Classe is_fundamental
 
 Testa se o tipo é nulo ou aritmético.
 
@@ -25,14 +25,14 @@ template <class Ty>
 struct is_fundamental;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo fica true se o tipo *Ty* é um tipo fundamental, ou seja, **void**, um tipo integral, um tipo de ponto flutuante `cv-qualified` ou uma forma de um deles, caso contrário, ele mantém false.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é um tipo fundamental, ou seja, **`void`** um tipo integral, um tipo de ponto flutuante ou uma `cv-qualified` forma de um deles, caso contrário, ele mantém false.
 
 ## <a name="example"></a>Exemplo
 
@@ -71,11 +71,11 @@ is_fundamental<void> == true
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_compound](../standard-library/is-compound-class.md)

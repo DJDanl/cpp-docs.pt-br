@@ -1,17 +1,17 @@
 ---
-title: ArquivoDeAjuda (C++ atributo com)
+title: ArquivoDeAjuda (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 641823779346bf5417ec0db26b83083fa949e960
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166972"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222115"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -25,7 +25,7 @@ Define o nome do arquivo de ajuda para uma biblioteca de tipos.
 
 ### <a name="parameters"></a>parâmetros
 
-*filename*<br/>
+*nome do arquivo*<br/>
 O nome do arquivo que contém os tópicos da ajuda.
 
 ## <a name="remarks"></a>Comentários
@@ -42,19 +42,19 @@ Consulte o exemplo de [módulo](module-cpp.md) para obter um exemplo de como usa
 
 |||
 |-|-|
-|**Aplica-se a**|**interface**, **typedef**, **Class**, Method, **Property**|
+|**Aplica-se a**|**interface**, **`typedef`** , **`class`** , método,**`property`**|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)

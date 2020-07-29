@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943222"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221959"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -51,17 +51,17 @@ _Fcomplex _FCbuild( float real, float imaginary );
 _Lcomplex _LCbuild( long double real, long double imaginary );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *real*<br/>
 A parte real do número complexo a ser construído.
 
-*imaginary*<br/>
+*imaginar*<br/>
 A parte imaginário do número complexo a ser construído.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Uma estrutura **_Dcomplex**, **_Fcomplex**ou **_Lcomplex** que representa o número complexo (*real*, *imaginário* \* ) para valores do tipo de ponto flutuante especificado.
+Uma **_Dcomplex**, **_Fcomplex**ou **_Lcomplex** estrutura que representa o número complexo (*real*, *imaginário* \* ) para valores do tipo de ponto flutuante especificado.
 
 ## <a name="remarks"></a>Comentários
 
@@ -73,11 +73,11 @@ As funções **_Cbuild**, **_FCbuild**e **_LCbuild** simplificam a criação de 
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Essas funções são específicas da Microsoft. Os tipos **_Dcomplex**, **_Fcomplex**e **_Lcomplex** são equivalentes específicos da Microsoft aos tipos nativos C99 não implementados **Double _Complex**, **float _Complex**e **Long duplo _Complex**, respectivamente. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Essas funções são específicas da Microsoft. Os tipos **_Dcomplex**, **_Fcomplex**e **_Lcomplex** são equivalentes específicos da Microsoft aos tipos nativos C99 não implementados **`double _Complex`** , **`float _Complex`** e **`long double _Complex`** , respectivamente. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
 [_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>

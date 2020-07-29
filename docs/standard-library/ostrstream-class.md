@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: b52ba70607a5214a6aa28f04cdded0b19a56b2f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f17d8006aea6c5467f8de270318386bb12df264a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222219"
 ---
 # <a name="ostrstream-class"></a>Classe ostrstream
 
@@ -46,18 +46,18 @@ O objeto armazena um objeto da classe `strstreambuf`.
 
 |Função de membro|Descrição|
 |-|-|
-|[Congelar](#freeze)|Faz com que um buffer de fluxo esteja indisponível por meio de operações de buffer de fluxo.|
+|[Trave](#freeze)|Faz com que um buffer de fluxo esteja indisponível por meio de operações de buffer de fluxo.|
 |[pcount](#pcount)|Retorna uma contagem do número de elementos gravados na sequência controlada.|
 |[rdbuf](#rdbuf)|Retorna um ponteiro para o objeto `strstreambuf` associado do fluxo.|
-|[Str](#str)|Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.|
+|[str](#str)|Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<strstream>
+**Cabeçalho:**\<strstream>
 
 **Namespace:** std
 
-## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream::congelamento
+## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream:: Freeze
 
 Faz com que um buffer de fluxo esteja indisponível por meio de operações de buffer de fluxo.
 
@@ -65,18 +65,18 @@ Faz com que um buffer de fluxo esteja indisponível por meio de operações de b
 void freeze(bool _Freezeit = true);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Freezeit*\
-Uma **vaia** indicando se você quer que o córrego seja congelado.
+Um **`bool`** que indica se você deseja que o fluxo seja congelado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro chama [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).
+A função de membro chama [rdbuf](#rdbuf)  ->  [Freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).
 
 ### <a name="example"></a>Exemplo
 
-Veja [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) para um `freeze`exemplo que usa .
+Consulte [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) para obter um exemplo que usa `freeze` .
 
 ## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>ostrstream::ostrstream
 
@@ -90,12 +90,12 @@ ostrstream(char* ptr,
     ios_base::openmode _Mode = ios_base::out);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Ptr*\
+*PTR*\
 O buffer.
 
-*Contar*\
+*contar*\
 O tamanho do buffer em bytes.
 
 *_Mode*\
@@ -103,13 +103,13 @@ O modo de entrada e saída do buffer. Consulte [ios_base::openmode](../standard-
 
 ### <a name="remarks"></a>Comentários
 
-Ambos os construtores inicializam a classe base chamando [ostream](../standard-library/ostream-typedefs.md#ostream)**(sb),** onde `sb` está o objeto armazenado de [class strstreambuf](../standard-library/strstreambuf-class.md). O primeiro construtor também `sb` inicia `strstreambuf`chamando . O segundo construtor inicializa a classe base com uma de duas maneiras:
+Ambos os construtores inicializam a classe base chamando [ostream](../standard-library/ostream-typedefs.md#ostream)(**SB**), em que `sb` é o objeto armazenado da classe [strstreambuf](../standard-library/strstreambuf-class.md). O primeiro construtor também é inicializado `sb` chamando `strstreambuf` . O segundo construtor inicializa a classe base com uma de duas maneiras:
 
-- Se `_Mode`  &  **ios_base::app**== `ptr` 0, então deve designar `count` o primeiro elemento `strstreambuf`de`ptr` `count`uma `ptr`matriz de elementos, e as chamadas do construtor ( , ).
+- Se `_Mode`  &  **ios_base:: app**= = 0, `ptr` deverá designar o primeiro elemento de uma matriz de `count` elementos e o Construtor chamará `strstreambuf` ( `ptr` , `count` , `ptr` ).
 
-- `ptr` Caso contrário, deve designar o primeiro elemento de uma matriz de elementos `ptr`de contagem `strstreambuf`que`ptr` `count`contém `ptr`  +  `strlen`uma seqüência C cujo primeiro elemento é designado por , e o construtor chama ( , , ) `ptr`).
+- Caso contrário, `ptr` deve designar o primeiro elemento de uma matriz de elementos de contagem que contém uma cadeia de caracteres C cujo primeiro elemento é designado por `ptr` e o construtor chama `strstreambuf` ( `ptr` , `count` , `ptr`  +  `strlen` ( `ptr` )).
 
-## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream::pcontagem
+## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream: contagem de:p
 
 Retorna uma contagem do número de elementos gravados na sequência controlada.
 
@@ -123,7 +123,7 @@ O número de elementos gravados na sequência controlada.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna [a contagem rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).
+A função member retorna [rdbuf](#rdbuf)  ->  [pCount](../standard-library/strstreambuf-class.md#pcount).
 
 ### <a name="example"></a>Exemplo
 
@@ -143,13 +143,13 @@ Um ponteiro para o objeto strstreambuf associado ao fluxo.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o endereço do `pointer` buffer de fluxo armazenado do tipo para [strstreambuf](../standard-library/strstreambuf-class.md).
+A função membro retorna o endereço do buffer de fluxo armazenado do tipo `pointer` para [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Exemplo
 
 Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) para ver uma amostra que usa `rdbuf`.
 
-## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream::str
+## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream:: Str
 
 Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.
 
@@ -163,15 +163,15 @@ Um ponteiro para o início da sequência controlada.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
+A função member retorna [rdbuf](#rdbuf)  ->  [Str](../standard-library/strstreambuf-class.md#str).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [strstream::str](../standard-library/strstreambuf-class.md#str) para obter `str`uma amostra que usa .
+Consulte [strstream:: Str](../standard-library/strstreambuf-class.md#str) para obter um exemplo que usa `str` .
 
 ## <a name="see-also"></a>Confira também
 
 [ostream](../standard-library/ostream-typedefs.md#ostream)\
-[Segurança do segmento na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programação iostream](../standard-library/iostream-programming.md)\
-[Convenções iostreams](../standard-library/iostreams-conventions.md)
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programação de iostream](../standard-library/iostream-programming.md)\
+[Convenções de iostreams](../standard-library/iostreams-conventions.md)

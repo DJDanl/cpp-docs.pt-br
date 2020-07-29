@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942855"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221933"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
@@ -83,23 +83,23 @@ long double _copysignl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor de ponto flutuante retornado como a magnitude do resultado.
 
-*y*<br/>
+*Iar*<br/>
 O valor de ponto flutuante retornado como o sinal do resultado.
 
 [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **copysign** retornam um valor de ponto flutuante que combina a magnitude de *x* e o sinal de *y*. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **copysign** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **copysign** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **copysign** que usam e retornam **`float`** **`long double`** valores. Em um programa C, o **copysign** sempre pega e retorna um **`double`** .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -110,7 +110,7 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **copysign** que
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [_chgsign, _chgsignf, _chgsignl](chgsign-chgsignf-chgsignl.md)<br/>

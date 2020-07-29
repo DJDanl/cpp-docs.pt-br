@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d38307c4ae19e5f87d0dbcca8943dc1c3f239917
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376561"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232892"
 ---
 # <a name="sync_per_container-class"></a>Classe sync_per_container
 
@@ -28,7 +28,7 @@ class sync_per_container
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*Cache*|O tipo de cache associado ao filtro de sincronização. Pode ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
@@ -40,11 +40,11 @@ class sync_per_container
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<allocators>
+**Cabeçalho:**\<allocators>
 
 **Namespace:** stdext
 
-## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::iguais
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container:: Equals
 
 Compara a igualdade de dois caches.
 
@@ -54,17 +54,17 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*Cache*|O objeto de cache do filtro de sincronização.|
 |*Outros*|O objeto de cache a ser comparado quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor retornado
 
-A função do membro sempre retorna **falsa**.
+A função de membro sempre retorna **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Confira também
 
-[\<alocadores>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

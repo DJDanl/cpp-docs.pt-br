@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8c02e79e6a300f23ac31ea876c9d4576cfe5e9a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419647"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232918"
 ---
 # <a name="ltqueuegt-operators"></a>Operadores &lt;queue&gt;
 
-## <a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a>operador! =
 
 Testa se o objeto da fila do lado esquerdo do operador não é igual ao do lado direito.
 
@@ -35,15 +35,15 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `queue`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `queue`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se as filas não forem iguais; **false** se forem iguais.
+**`true`** Se as filas não forem iguais; **`false`** se as filas forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -92,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt">Operador </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operador&lt;
 
 Testa se o objeto da fila do lado esquerdo do operador é menor que o do lado direito.
 
@@ -102,15 +102,15 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `queue`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `queue`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a fila do lado esquerdo do operador for menor ou não for igual a do lado direito do operador; caso contrário, **false**.
+**`true`** se a fila no lado esquerdo do operador for menor que e diferente da fila no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>= de&lt;do operador
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operador&lt;=
 
 Testa se o objeto da fila do lado esquerdo do operador é menor ou igual ao do lado direito.
 
@@ -165,15 +165,15 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `queue`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `queue`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro**, se a fila no lado esquerdo do operador for estritamente menor que o aquela à direita do operador; caso contrário, **falso**.
+**`true`** se a fila no lado esquerdo do operador for estritamente menor que a fila no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto da fila do lado esquerdo do operador é igual ao do lado direito.
 
@@ -230,15 +230,15 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `queue`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `queue`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se as filas não forem iguais; **false** se forem iguais.
+**`true`** Se as filas não forem iguais; **`false`** se as filas forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -286,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt">Operador </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operador&gt;
 
 Testa se o objeto da fila do lado esquerdo do operador é maior que o do lado direito.
 
@@ -296,15 +296,15 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `queue`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `queue`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro**, se a fila no lado esquerdo do operador for estritamente menor que o aquela à direita do operador; caso contrário, **falso**.
+**`true`** se a fila no lado esquerdo do operador for estritamente menor que a fila no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>= de&gt;do operador
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operador&gt;=
 
 Testa se o objeto de fila do lado esquerdo do operador é maior ou igual ao do lado direito.
 
@@ -362,15 +362,15 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `queue`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `queue`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdadeiro**, se a fila no lado esquerdo do operador for estritamente menor que o aquela à direita do operador; caso contrário, **falso**.
+**`true`** se a fila no lado esquerdo do operador for estritamente menor que a fila no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 

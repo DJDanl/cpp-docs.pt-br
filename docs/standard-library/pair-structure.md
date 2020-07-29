@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: f372ae036ff4843532efa18c3d518820b5f06111
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244424"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233009"
 ---
 # <a name="pair-structure"></a>Estrutura pair
 
@@ -57,7 +57,7 @@ template<class T1, class T2>
     pair(T1, T2) -> pair<T1, T2>;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Val1*\
 O valor que inicializa o primeiro elemento de `pair`.
@@ -68,19 +68,19 @@ O valor que inicializa o segundo elemento de `pair`.
 *Certo*\
 Um par cujos valores devem ser usados para inicializar os elementos de outro par.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-O primeiro construtor (padrão) inicializa o primeiro elemento do par para o padrão do tipo `T1` e o segundo elemento para o padrão do tipo `T2`.
+O primeiro Construtor (padrão) inicializa o primeiro elemento do par para o padrão do tipo `T1` e o segundo elemento como padrão do tipo `T2` .
 
-O segundo construtor inicializa o primeiro elemento do par para *Val1* e o segundo para *Val2.*
+O segundo construtor inicializa o primeiro elemento do par para *val1* e segundo para *Val2.*
 
-O terceiro construtor (modelo) inicializa o primeiro elemento do par para `Right`. **primeiro** e segundo para `Right`. **second**.
+O terceiro construtor (modelo) inicializa o primeiro elemento do par para `Right`. **primeiro** e segundo para `Right`. **segundo**.
 
-O quarto construtor inicializa o primeiro elemento do par para *Val1* e o segundo para *Val2* usando [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+O quarto construtor inicializa o primeiro elemento do par para *val1* e segundo para *Val2* usando o [Declarador de referência rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="remarks"></a>Comentários
 
-O struct de modelo armazena um par de objetos do tipo `T1` e `T2`, respectivamente. O tipo `first_type` é o mesmo que o parâmetro de modelo `T1` e o tipo `second_type` é o mesmo que o parâmetro de modelo `T2`. `T1` e `T2` precisam fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um `struct` em vez de como uma **classe**. Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O segundo atende aos requisitos de um contêiner de par associativo e tem um tipo de valor do formulário `pair`< **const**`key_type`, `mapped_type`>.
+A estrutura de modelo armazena um par de objetos do tipo `T1` e `T2` , respectivamente. O tipo `first_type` é o mesmo que o parâmetro de modelo `T1` e o tipo `second_type` é o mesmo que o parâmetro de modelo `T2` . `T1`e `T2` cada uma delas precisa fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um **`struct`** e não como um **`class`** . Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O último satisfaz os requisitos para um contêiner associativo de par e tem um tipo de valor do formulário `pair` <  **`const`** `key_type` , `mapped_type`>.
 
 ## <a name="example"></a>Exemplo
 

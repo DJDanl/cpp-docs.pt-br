@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: 2574ba5a10bbf5eddc68d6e0265d5dfc99c6d8fc
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b3331c17fc2313cbd6146db3beb015cd8d8c1eeb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988340"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221452"
 ---
 # <a name="finally"></a>finally
 
-Além das cláusulas `try` e `catch`, a manipulação de exceção do CLR dá suporte a uma cláusula `finally`. A semântica é idêntica à `__finally` bloco no SEH (manipulação de exceção estruturada). Um bloco de `__finally` pode seguir um `try` ou `catch` bloco.
+Além das **`try`** **`catch`** cláusulas e, a manipulação de exceção do CLR dá suporte a uma **`finally`** cláusula. A semântica é idêntica ao **`__finally`** bloco no SEH (manipulação de exceção estruturada). Um **`__finally`** bloco pode seguir um **`try`** **`catch`** bloco ou.
 
 ## <a name="remarks"></a>Comentários
 
-A finalidade do bloco de `finally` é limpar todos os recursos deixados depois que a exceção ocorreu. Observe que o bloco de `finally` é sempre executado, mesmo que nenhuma exceção tenha sido lançada. O bloco de `catch` só será executado se uma exceção gerenciada for lançada dentro do bloco de `try` associado.
+A finalidade do **`finally`** bloco é limpar todos os recursos deixados depois que a exceção ocorreu. Observe que o **`finally`** bloco é sempre executado, mesmo que nenhuma exceção tenha sido lançada. O **`catch`** bloco só será executado se uma exceção gerenciada for lançada dentro do **`try`** bloco associado.
 
-`finally` é uma palavra-chave sensível ao contexto; consulte [palavras-chave sensíveis ao contexto](../extensions/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.
+`finally`é uma palavra-chave sensível ao contexto; consulte [palavras-chave sensíveis ao contexto](../extensions/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra um bloco de `finally` simples:
+O exemplo a seguir demonstra um **`finally`** bloco simples:
 
 ```cpp
 // keyword__finally.cpp
@@ -56,6 +56,6 @@ MyException
 in finally
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Tratamento de Exceção](../extensions/exception-handling-cpp-component-extensions.md)
+[Tratamento de exceção](../extensions/exception-handling-cpp-component-extensions.md)

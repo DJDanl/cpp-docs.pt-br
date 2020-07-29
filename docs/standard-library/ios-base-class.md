@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e66b3bd9f5e8058a4724746ba9ec5abd14cdae3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418968"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222454"
 ---
 # <a name="ios_base-class"></a>Classe ios_base
 
@@ -121,19 +121,19 @@ A classe descreve as funções membro e de armazenamento comuns aos fluxos de en
 
 Um objeto da classe ios_base armazena informações de formatação, que consistem em:
 
-- Os sinalizadores de formato em um objeto do tipo [`fmtflags`](#fmtflags).
+- Formatar sinalizadores em um objeto do tipo [`fmtflags`](#fmtflags) .
 
-- Uma máscara de exceção em um objeto do tipo [`iostate`](#iostate).
+- Uma máscara de exceção em um objeto do tipo [`iostate`](#iostate) .
 
-- Uma largura de campo em um objeto do tipo **int**.
+- Uma largura de campo em um objeto do tipo **`int`** .
 
-- Uma precisão de exibição em um objeto do tipo **int**.
+- Uma precisão de exibição em um objeto do tipo **`int`** .
 
-- Um objeto de localidade em um objeto do tipo `locale`.
+- Um objeto de localidade em um objeto do tipo `locale` .
 
-- Duas matrizes extensíveis, com elementos do tipo **Long** e cursor **void** .
+- Duas matrizes extensíveis, com elementos do tipo **`long`** e do **`void`** ponteiro.
 
-Um objeto da classe ios_base também armazena informações de estado do fluxo, em um objeto do tipo [`iostate`](#iostate)e uma pilha de retorno de chamada.
+Um objeto da classe ios_base também armazena informações de estado do fluxo, em um objeto do tipo [`iostate`](#iostate) e uma pilha de retorno de chamada.
 
 ## <a name="members"></a>Membros
 
@@ -153,7 +153,7 @@ Um objeto da classe ios_base também armazena informações de estado do fluxo, 
 |[openmode](#openmode)|Descreve como interagir com um fluxo.|
 |[seekdir](#seekdir)|Especifica o ponto de início para operações de deslocamento.|
 
-### <a name="enums"></a>Enums
+### <a name="enums"></a>Enumerações
 
 |||
 |-|-|
@@ -170,46 +170,46 @@ Um objeto da classe ios_base também armazena informações de estado do fluxo, 
 |[basefield](#fmtflags)|Um bitmask definido como `dec` &#124; `hex` &#124; `oct`.|
 |[beg](#seekdir)|Especifica a busca relativa ao início de uma sequência.|
 |[binary](#openmode)|Especifica que um arquivo deve ser lido como um fluxo binário, em vez de um fluxo de texto.|
-|[boolalpha](#fmtflags)|Especifica a inserção ou extração de objetos do tipo **bool** como nomes (como **true** e **false**) em vez de valores numéricos.|
+|[boolalpha](#fmtflags)|Especifica a inserção ou extração de objetos do tipo **`bool`** como nomes (como **`true`** e **`false`** ) em vez de valores numéricos.|
 |[cur](#seekdir)|Especifica a busca em relação à posição atual dentro de uma sequência.|
-|[dec](#fmtflags)|Especifica a inserção ou extração de valores inteiros em formato decimal.|
-|[end](#seekdir)|Especifica a busca relativa ao final de uma sequência.|
+|[dez](#fmtflags)|Especifica a inserção ou extração de valores inteiros em formato decimal.|
+|[completo](#seekdir)|Especifica a busca relativa ao final de uma sequência.|
 |[eofbit](#iostate)|Registra o final do arquivo durante a extração de um fluxo.|
 |[failbit](#iostate)|Registra uma falha ao extrair um campo válido de um fluxo.|
-|[fixo](#fmtflags)|Especifica a inserção de valores de ponto flutuante no formato de ponto fixo (sem nenhum campo expoente).|
+|[fixado](#fmtflags)|Especifica a inserção de valores de ponto flutuante no formato de ponto fixo (sem nenhum campo expoente).|
 |[floatfield](#fmtflags)|Um bitmask definido como `fixed` &#124; `scientific`|
 |[goodbit](#iostate)|Todos os bits de estado são limpos.|
 |[hex](#fmtflags)|Especifica a inserção ou extração de valores inteiros em formato hexadecimal.|
-|[Em](#openmode)|Especifica a extração de um fluxo.|
+|[no](#openmode)|Especifica a extração de um fluxo.|
 |[internal](#fmtflags)|Preenche uma largura de campo inserindo caracteres de preenchimento em um ponto interno de um campo numérico gerado.|
-|[left](#fmtflags)|Especifica a justificação à esquerda.|
-|[oct](#fmtflags)|Especifica a inserção ou extração de valores inteiros em formato octal.|
-|[out](#openmode)|Especifica a inserção em um fluxo.|
-|[right](#fmtflags)|Especifica a justificação à direita.|
-|[scientific](#fmtflags)|Especifica a inserção de valores de ponto flutuante no formato científico (com um campo expoente).|
+|[mantida](#fmtflags)|Especifica a justificação à esquerda.|
+|[Outubro](#fmtflags)|Especifica a inserção ou extração de valores inteiros em formato octal.|
+|[fora](#openmode)|Especifica a inserção em um fluxo.|
+|[Certo](#fmtflags)|Especifica a justificação à direita.|
+|[científica](#fmtflags)|Especifica a inserção de valores de ponto flutuante no formato científico (com um campo expoente).|
 |[showbase](#fmtflags)|Especifica a inserção de um prefixo que revela a base de um campo inteiro gerado.|
 |[showpoint](#fmtflags)|Especifica a inserção incondicional de um ponto decimal em um campo de ponto flutuante gerado.|
 |[showpos](#fmtflags)|Especifica a inserção de um sinal de adição em um campo numérico gerado não negativo.|
 |[skipws](#fmtflags)|Especifica ignorar o espaço em branco à esquerda antes de determinadas extrações.|
 |[trunc](#openmode)|Especifica excluir o conteúdo de um arquivo existente quando seu objeto de controle é criado.|
 |[unitbuf](#fmtflags)|Faz com que a saída seja liberada após cada inserção.|
-|[uppercase](#fmtflags)|Especifica a inserção de equivalentes maiúsculas de letras minúsculas em determinadas inserções.|
+|[letras maiúsculas](#fmtflags)|Especifica a inserção de equivalentes maiúsculas de letras minúsculas em determinadas inserções.|
 
 ### <a name="functions"></a>Funções
 
 |||
 |-|-|
-|[failure](#failure)|A classe Member serve como a classe base para todas as exceções geradas pela função membro [Clear](../standard-library/basic-ios-class.md#clear) no modelo de classe [basic_ios](../standard-library/basic-ios-class.md).|
+|[Failure](#failure)|A classe Member serve como a classe base para todas as exceções geradas pela função membro [Clear](../standard-library/basic-ios-class.md#clear) no modelo de classe [basic_ios](../standard-library/basic-ios-class.md).|
 |[sinalizadores](#flags)|Define ou retorna as configurações de sinalizador atuais.|
 |[getloc](#getloc)|Retorna o objeto de localidade armazenado.|
 |[imbue](#imbue)|Altera a localidade.|
-|[Init](#init)|Cria os objetos de `iostream` padrão quando construídos.|
+|[Iniciar](#init)|Cria os `iostream` objetos padrão quando construídos.|
 |[iword](#iword)|Atribui um valor a ser armazenado como um `iword`.|
 |[precisão](#precision)|Especifica o número de dígitos a serem exibidos em um número de ponto flutuante.|
 |[pword](#pword)|Atribui um valor a ser armazenado como um `pword`.|
 |[register_callback](#register_callback)|Especifica uma função de retorno de chamada.|
 |[setf](#setf)|Define os sinalizadores especificados.|
-|[sync_with_stdio](#sync_with_stdio)|Garante que as operações de biblioteca de tempo de execução `iostream` e C ocorram na ordem em que aparecem no código-fonte.|
+|[sync_with_stdio](#sync_with_stdio)|Garante que `iostream` as operações de biblioteca de tempo de execução e C ocorram na ordem em que aparecem no código-fonte.|
 |[unsetf](#unsetf)|Faz com que os sinalizadores especificados sejam desativados.|
 |[width](#width)|Define o tamanho do fluxo de saída.|
 |[xalloc](#xalloc)|Especifica que uma variável deve ser parte do fluxo.|
@@ -218,15 +218,15 @@ Um objeto da classe ios_base também armazena informações de estado do fluxo, 
 
 |||
 |-|-|
-|[operator=](#op_eq)|O operador de atribuição para objetos `ios_base`.|
+|[operador =](#op_eq)|O operador de atribuição para objetos `ios_base`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<Ios >
+**Cabeçalho:**\<ios>
 
 **Namespace:** std
 
-## <a name="event"></a>circunstância
+## <a name="event"></a>Evento <a name="event"></a>
 
 Especifica tipos de evento.
 
@@ -241,17 +241,17 @@ enum event {
 
 O tipo é um tipo enumerado que descreve um objeto que pode armazenar o evento de retorno de chamada usado como argumento para uma função registrada com [register_callback](#register_callback). Os valores de eventos distintos são:
 
-- `copyfmt_event`, para identificar um retorno de chamada que ocorre perto do final de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt), logo antes da [máscara de exceção](../standard-library/ios-base-class.md) ser copiada.
+- `copyfmt_event`, para identificar um retorno de chamada que ocorre perto do final de uma ligação para [copyfmt](../standard-library/basic-ios-class.md#copyfmt), logo antes da [máscara de exceção](../standard-library/ios-base-class.md) ser copiada.
 
-- `erase_event`, para identificar um retorno de chamada que ocorre no início de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt)ou no início de uma chamada para o destruidor para **\*isso**.
+- `erase_event`para identificar um retorno de chamada que ocorre no início de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt)ou no início de uma chamada para o destruidor para ** \* isso**.
 
-- `imbue_event`, para identificar um retorno de chamada que ocorre no final de uma chamada para [imbue](#imbue), logo antes da função retornar.
+- `imbue_event`para identificar um retorno de chamada que ocorre no final de uma chamada para [imbue](#imbue), logo antes da função retornar.
 
 ### <a name="example"></a>Exemplo
 
 Consulte [register_callback](#register_callback) para ver um exemplo.
 
-## <a name="event_callback"></a>event_callback
+## <a name="event_callback"></a><a name="event_callback"></a>event_callback
 
 Descreve uma função passada para [register_call](#register_callback).
 
@@ -281,7 +281,7 @@ O tipo descreve um ponteiro para uma função que pode ser registrada com [regis
 
 Consulte [register_call](#register_callback) para ver um exemplo que usa `event_callback`.
 
-## <a name="failure"></a>Failure
+## <a name="failure"></a><a name="failure"></a>Failure
 
 A classe `failure` define a classe base para os tipos de todos os objetos gerados como exceções, por funções na biblioteca `iostreams`, para relatar erros detectados durante operações de buffer de fluxo.
 
@@ -333,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a>flags
+## <a name="flags"></a><a name="flags"></a>flags
 
 Define ou retorna as configurações de sinalizador atuais.
 
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>parâmetros
 
-\ *fmtfl*
+*fmtfl*\
 A nova configuração `fmtflags`.
 
 ### <a name="return-value"></a>Valor retornado
@@ -379,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a>fmtflags
+## <a name="fmtflags"></a><a name="fmtflags"></a>fmtflags
 
 Constantes para especificar a aparência da saída.
 
@@ -423,13 +423,13 @@ O tipo é um tipo de bitmask que descreve um objeto que pode armazenar sinalizad
 
 - `showbase`, para inserir um prefixo que revela a base de um campo inteiro gerado.
 
-- `internal`, para preencher uma largura de campo inserindo caracteres de preenchimento em um ponto interno de um campo numérico gerado. (Para obter informações sobre como definir a largura do campo, consulte [`setw`](../standard-library/iomanip-functions.md#setw)).
+- `internal`, para preencher uma largura de campo inserindo caracteres de preenchimento em um ponto interno de um campo numérico gerado. (Para obter informações sobre como definir a largura do campo, consulte [`setw`](../standard-library/iomanip-functions.md#setw) ).
 
 - `left`, para preencher uma largura de campo, conforme necessário, inserindo caracteres de preenchimento no final de um campo gerado (justificação à esquerda).
 
 - `right`, para preencher uma largura de campo, conforme necessário, inserindo caracteres de preenchimento no início de um campo gerado (justificação à direita).
 
-- `boolalpha`, para inserir ou extrair objetos do tipo **bool** como nomes (como **true** e **false**) em vez de valores numéricos.
+- `boolalpha`, para inserir ou extrair objetos do tipo **`bool`** como nomes (como **`true`** e **`false`** ) em vez de valores numéricos.
 
 - `fixed`, para inserir valores de ponto flutuante no formato de ponto fixo (sem nenhum campo expoente).
 
@@ -453,9 +453,9 @@ Além disso, diversos valores úteis são:
 
 - `floatfield`, definido como `fixed` &#124; `scientific`
 
-Para ver exemplos de funções que modificam esses sinalizadores de formato, consulte [\<iomanip >](../standard-library/iomanip.md).
+Para obter exemplos de funções que modificam esses sinalizadores de formato, consulte [\<iomanip>](../standard-library/iomanip.md) .
 
-## <a name="getloc"></a>getloc
+## <a name="getloc"></a><a name="getloc"></a>getloc
 
 Retorna o objeto de localidade armazenado.
 
@@ -485,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a>imbue
+## <a name="imbue"></a><a name="imbue"></a>imbue
 
 Altera a localidade.
 
@@ -504,15 +504,15 @@ A localidade anterior.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro armazena *_Loc* no objeto locale e, em seguida, relata o evento de retorno de chamada e `imbue_event`. Ela retorna o valor armazenado anterior.
+A função membro armazena *_Loc* no objeto locale e, em seguida, relata o evento de retorno de chamada e `imbue_event` . Ela retorna o valor armazenado anterior.
 
 ### <a name="example"></a>Exemplo
 
 Consulte [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) para ver um exemplo.
 
-## <a name="init"></a>Iniciar
+## <a name="init"></a><a name="init"></a>Iniciar
 
-Cria os objetos de `iostream` padrão quando construídos.
+Cria os `iostream` objetos padrão quando construídos.
 
 ```cpp
 class Init { };
@@ -520,9 +520,9 @@ class Init { };
 
 ### <a name="remarks"></a>Comentários
 
-A classe aninhada descreve um objeto cuja construção garante que os objetos de `iostream` padrão sejam construídos corretamente, mesmo antes da execução de um construtor para um objeto estático arbitrário.
+A classe aninhada descreve um objeto cuja construção garante que os `iostream` objetos padrão sejam construídos corretamente, mesmo antes da execução de um construtor para um objeto estático arbitrário.
 
-## <a name="ios_base"></a>ios_base
+## <a name="ios_base"></a><a name="ios_base"></a>ios_base
 
 Constrói objetos ios_base.
 
@@ -532,9 +532,9 @@ ios_base();
 
 ### <a name="remarks"></a>Comentários
 
-O construtor (protegido) não faz nada. Uma chamada posterior para `basic_ios::`[init](../standard-library/basic-ios-class.md#init) deve inicializar o objeto antes que ele possa ser destruído com segurança. Portanto, o único uso seguro para a classe ios_base é como uma classe base para o modelo de classe [basic_ios](../standard-library/basic-ios-class.md).
+O construtor (protegido) não faz nada. Uma chamada posterior para `basic_ios::` [init](../standard-library/basic-ios-class.md#init) deve inicializar o objeto antes que ele possa ser destruído com segurança. Portanto, o único uso seguro para a classe ios_base é como uma classe base para o modelo de classe [basic_ios](../standard-library/basic-ios-class.md).
 
-## <a name="iostate"></a>iostate
+## <a name="iostate"></a><a name="iostate"></a>iostate
 
 O tipo das constantes que descrevem o estado de um fluxo.
 
@@ -560,9 +560,9 @@ O tipo é um tipo de bitmask que descreve um objeto que pode armazenar informaç
 
 - `failbit`, para registrar uma falha ao extrair um campo válido de um fluxo.
 
-Além disso, um valor útil é `goodbit`, em que nenhum dos bits mencionados anteriormente é definido (`goodbit` é garantido como zero).
+Além disso, um valor útil é `goodbit` , em que nenhum dos bits mencionados anteriormente é definido ( `goodbit` é garantido como zero).
 
-## <a name="iword"></a>iword
+## <a name="iword"></a><a name="iword"></a>iword
 
 Atribui um valor a ser armazenado como um `iword`.
 
@@ -572,22 +572,22 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>parâmetros
 
-*índ*\
+*Índ*\
 O índice do valor a ser armazenado como um `iword`.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna uma referência ao elemento *IDX* da matriz extensível com elementos do tipo **Long**. Todos os elementos estão efetivamente presentes e inicialmente armazenam o valor zero. A referência retornada é inválida após a próxima chamada para `iword` para o objeto, depois que o objeto é alterado por uma chamada para `basic_ios::`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)ou depois que o objeto é destruído.
+A função member retorna uma referência ao elemento *IDX* da matriz extensível com elementos do tipo **`long`** . Todos os elementos estão efetivamente presentes e inicialmente armazenam o valor zero. A referência retornada é inválida após a próxima chamada para `iword` para o objeto, depois que o objeto é alterado por uma chamada para `basic_ios::` [copyfmt](../standard-library/basic-ios-class.md#copyfmt)ou depois que o objeto é destruído.
 
-Se *IDX* for negativo ou se o armazenamento exclusivo não estiver disponível para o elemento, a função chamará [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` e retornará uma referência que pode não ser exclusiva.
+Se *IDX* for negativo ou se o armazenamento exclusivo não estiver disponível para o elemento, a função chamará [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` e retornará uma referência que pode não ser exclusiva.
 
-Para obter um índice exclusivo, para uso em todos os objetos do tipo `ios_base`, chame [`xalloc`](#xalloc).
+Para obter um índice exclusivo, para uso em todos os objetos do tipo `ios_base` , chame [`xalloc`](#xalloc) .
 
 ### <a name="example"></a>Exemplo
 
-Consulte [`xalloc`](#xalloc) para obter um exemplo de como usar `iword`.
+Consulte [`xalloc`](#xalloc) para obter uma amostra de como usar `iword` .
 
-## <a name="openmode"></a>OpenMode
+## <a name="openmode"></a><a name="openmode"></a>OpenMode
 
 Descreve como interagir com um fluxo.
 
@@ -605,11 +605,11 @@ public:
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um `bitmask type` que descreve um objeto que pode armazenar o modo de abertura para vários objetos `iostream`. Os valores de sinalizador (elementos) distintos são:
+O tipo é um `bitmask type` que descreve um objeto que pode armazenar o modo de abertura para vários `iostream` objetos. Os valores de sinalizador (elementos) distintos são:
 
 - `app`, para buscar até o final de um fluxo antes de cada inserção.
 
-- `ate`, para buscar até o final de um fluxo quando seu objeto de controle é criado pela primeira vez.
+- `ate`, para procurar o final de um fluxo quando seu objeto de controle é criado pela primeira vez.
 
 - `binary`, para ler um arquivo como um fluxo binário, em vez de um fluxo de texto.
 
@@ -637,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a>operador =
+## <a name="operator"></a><a name="op_eq"></a>operador =
 
 O operador de atribuição para objetos ios_base.
 
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `ios_base`.
 
 ### <a name="return-value"></a>Valor retornado
@@ -656,11 +656,11 @@ O objeto ao qual a atribuição está sendo feita.
 
 ### <a name="remarks"></a>Comentários
 
-O operador copia as informações de formatação armazenadas, fazendo uma nova cópia de qualquer matriz extensível. Ele retorna **\*this**. Observe que a pilha de retorno de chamada não é copiada.
+O operador copia as informações de formatação armazenadas, fazendo uma nova cópia de qualquer matriz extensível. Em seguida, ele retorna ** \* isso**. Observe que a pilha de retorno de chamada não é copiada.
 
 Esse operador é usado apenas por classes derivadas de `ios_base`.
 
-## <a name="precision"></a>Preciso
+## <a name="precision"></a><a name="precision"></a>Preciso
 
 Especifica o número de dígitos a serem exibidos em um número de ponto flutuante.
 
@@ -706,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a>pword
+## <a name="pword"></a><a name="pword"></a>pword
 
 Atribui um valor a ser armazenado como um `pword`.
 
@@ -716,22 +716,22 @@ void *& pword(int index);
 
 ### <a name="parameters"></a>parâmetros
 
-\ de *índice*
+*index*\
 O índice do valor a ser armazenado como `pword`.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna uma referência ao *índice* do elemento da matriz extensível com elementos do tipo ponteiro **void** . Todos os elementos estão efetivamente presentes e, inicialmente, armazenam o ponteiro nulo. A referência retornada é inválida após a próxima chamada para `pword` para o objeto, depois que o objeto é alterado por uma chamada para `basic_ios::`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)ou depois que o objeto é destruído.
+A função member retorna uma referência ao *índice* de elemento da matriz extensível com elementos do tipo **`void`** pointer. Todos os elementos estão efetivamente presentes e, inicialmente, armazenam o ponteiro nulo. A referência retornada é inválida após a próxima chamada para `pword` para o objeto, depois que o objeto é alterado por uma chamada para `basic_ios::` [copyfmt](../standard-library/basic-ios-class.md#copyfmt)ou depois que o objeto é destruído.
 
-Se o *índice* for negativo ou se o armazenamento exclusivo não estiver disponível para o elemento, a função chamará [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` e retornará uma referência que pode não ser exclusiva.
+Se o *índice* for negativo ou se o armazenamento exclusivo não estiver disponível para o elemento, a função chamará [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` e retornará uma referência que pode não ser exclusiva.
 
-Para obter um índice exclusivo, para uso em todos os objetos do tipo `ios_base`, chame [`xalloc`](#xalloc).
+Para obter um índice exclusivo, para uso em todos os objetos do tipo `ios_base` , chame [`xalloc`](#xalloc) .
 
 ### <a name="example"></a>Exemplo
 
-Consulte [`xalloc`](#xalloc) para obter um exemplo de como usar `pword`.
+Consulte [`xalloc`](#xalloc) para obter um exemplo de como usar `pword` .
 
-## <a name="register_callback"></a>register_callback
+## <a name="register_callback"></a><a name="register_callback"></a>register_callback
 
 Especifica uma função de retorno de chamada.
 
@@ -742,15 +742,15 @@ void register_callback(
 
 ### <a name="parameters"></a>parâmetros
 
-\ *PFN*
+*PFN*\
 Ponteiro para a função de retorno.
 
-*índ*\
+*Índ*\
 Um número definido pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro envia o par `{pfn, idx}` para a [pilha de retorno de chamada](../standard-library/ios-base-class.md)da pilha de retorno de chamada armazenada. Quando um evento de retorno de chamada **EV** é relatado, as funções são chamadas, na ordem inversa do registro, pela expressão `(*pfn)(ev, *this, idx)`.
+A função de membro envia o par `{pfn, idx}` para a [pilha de retorno de chamada](../standard-library/ios-base-class.md)da pilha de retorno de chamada armazenado. Quando um evento de retorno de chamada **EV** é relatado, as funções são chamadas, na ordem inversa do registro, pela expressão `(*pfn)(ev, *this, idx)` .
 
 ### <a name="example"></a>Exemplo
 
@@ -839,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a>seekdir
+## <a name="seekdir"></a><a name="seekdir"></a>seekdir
 
 Especifica o ponto de início para operações de deslocamento.
 
@@ -858,7 +858,7 @@ namespace std {
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um tipo enumerado que descreve um objeto que pode armazenar o modo de busca usado como um argumento para as funções de membro de várias classes de `iostream`. Os valores de sinalizador distintos são:
+O tipo é um tipo enumerado que descreve um objeto que pode armazenar o modo de busca usado como um argumento para as funções de membro de várias `iostream` classes. Os valores de sinalizador distintos são:
 
 - `beg`, para buscar (alterar a posição de leitura ou gravação atual) em relação ao início de uma sequência (matriz, fluxo ou arquivo).
 
@@ -888,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a>setf
+## <a name="setf"></a><a name="setf"></a>setf
 
 Define os sinalizadores especificados.
 
@@ -916,7 +916,7 @@ Os sinalizadores de formato anteriores
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro efetivamente chama [sinalizadores](#flags)`(_Mask | _Flags)` (definir bits selecionados) e, em seguida, retorna os sinalizadores de formato anteriores. A segunda função de membro efetivamente chama `flags(_Mask & fmtfl, flags & ~_Mask)` (substituir os bits selecionados em uma máscara) e retorna os sinalizadores de formato anteriores.
+A primeira função de membro efetivamente chama [sinalizadores](#flags) `(_Mask | _Flags)` (definir bits selecionados) e, em seguida, retorna os sinalizadores de formato anteriores. A segunda função de membro efetivamente chama `flags(_Mask & fmtfl, flags & ~_Mask)` (substitua os bits selecionados em uma máscara) e retorna os sinalizadores de formato anteriores.
 
 ### <a name="example"></a>Exemplo
 
@@ -942,9 +942,9 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a>sync_with_stdio
+## <a name="sync_with_stdio"></a><a name="sync_with_stdio"></a>sync_with_stdio
 
-Garante que as operações de biblioteca de tempo de execução `iostream` e C ocorram na ordem em que aparecem no código-fonte.
+Garante que `iostream` as operações de biblioteca de tempo de execução e C ocorram na ordem em que aparecem no código-fonte.
 
 ```cpp
 static bool sync_with_stdio(
@@ -955,7 +955,7 @@ static bool sync_with_stdio(
 ### <a name="parameters"></a>parâmetros
 
 *_Sync*\
-Se todos os fluxos estão em sincronia com `stdio`.
+Se todos os fluxos estão sincronizados com o `stdio` .
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -963,9 +963,9 @@ Configuração anterior para esta função.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro estático armazena um sinalizador de sincronização `stdio`, que é inicialmente **verdadeiro**. Quando **true**, esse sinalizador garante que as operações no mesmo arquivo sejam sincronizadas corretamente entre as funções [`iostreams`](../standard-library/iostreams-conventions.md) e aquelas definidas na C++ biblioteca padrão. Caso contrário, a sincronização pode ou não ser garantida, mas o desempenho pode ser melhorado. A função armazena *_Sync* no sinalizador de sincronização de `stdio` e retorna seu valor armazenado anterior. Você pode chamá-la de forma confiável somente antes de executar qualquer operação nos fluxos padrão.
+A função de membro estático armazena um `stdio` sinalizador de sincronização, que é inicialmente **`true`** . Quando **`true`** , esse sinalizador garante que as operações no mesmo arquivo sejam sincronizadas corretamente entre as [`iostreams`](../standard-library/iostreams-conventions.md) funções e aquelas definidas na biblioteca padrão C++. Caso contrário, a sincronização pode ou não ser garantida, mas o desempenho pode ser melhorado. A função armazena *_Sync* no `stdio` sinalizador de sincronização e retorna seu valor armazenado anterior. Você pode chamá-la de forma confiável somente antes de executar qualquer operação nos fluxos padrão.
 
-## <a name="unsetf"></a>unsetf
+## <a name="unsetf"></a><a name="unsetf"></a>unsetf
 
 Faz com que os sinalizadores especificados sejam desativados.
 
@@ -982,13 +982,13 @@ Os sinalizadores que você deseja desativar.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro efetivamente chama [sinalizadores](#flags)(`~` *_Mask* **sinalizadores de &** ) (limpar bits selecionados).
+A função membro efetivamente chama [sinalizadores](#flags)( `~` *_Mask* **& sinalizadores**) (limpar bits selecionados).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [ios_base:: setf](#setf) para obter uma amostra de como usar `unsetf`.
+Consulte [ios_base:: setf](#setf) para obter uma amostra de como usar `unsetf` .
 
-## <a name="width"></a>Largura
+## <a name="width"></a><a name="width"></a>Largura
 
 Define o tamanho do fluxo de saída.
 
@@ -1033,7 +1033,7 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a>xalloc
+## <a name="xalloc"></a><a name="xalloc"></a>xalloc
 
 Especifica que uma variável faz parte do fluxo.
 
@@ -1047,7 +1047,7 @@ A função membro static retorna um valor estático armazenado, que é increment
 
 ### <a name="remarks"></a>Comentários
 
-Você pode usar o valor de retorno como um argumento de índice exclusivo ao chamar as funções de membro [`iword`](#iword) ou [`pword`](#pword).
+Você pode usar o valor de retorno como um argumento de índice exclusivo ao chamar as funções de membro [`iword`](#iword) ou [`pword`](#pword) .
 
 ### <a name="example"></a>Exemplo
 
@@ -1081,6 +1081,6 @@ testing
 
 ## <a name="see-also"></a>Confira também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programação de iostream](../standard-library/iostream-programming.md)\
 [Convenções de iostreams](../standard-library/iostreams-conventions.md)

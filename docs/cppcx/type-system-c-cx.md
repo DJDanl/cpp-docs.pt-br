@@ -2,12 +2,12 @@
 title: Sistema de tipos (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404620"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221543"
 ---
 # <a name="type-system-ccx"></a>Sistema de tipos (C++/CX)
 
@@ -38,8 +38,8 @@ Se um tipo ou um método estará visível nos metadados dependerá de quais modi
 |||
 |-|-|
 |**Publicado nos metadados**|**Não publicado nos metadados**|
-|públicos|particulares|
-|protegidos|interno|
+|público|particulares|
+|protegidos|internal|
 |público protegido|privado protegido|
 
 Use o **Pesquisador de objetos** para exibir o conteúdo de arquivos .winmd. Os componentes Windows Runtime incluídos com o Windows estão no arquivo Windows. winmd. O arquivo default. winmd contém os tipos fundamentais que são usados no C++/CX, e o Platform. winmd contém tipos adicionais do namespace da plataforma. Por padrão, esses três arquivos. winmd são incluídos em cada projeto C++ para aplicativos Plataforma Universal do Windows.
@@ -63,7 +63,7 @@ Para obter mais informações, consulte [namespaces e visibilidade de tipo](../c
 
 O Windows Runtime define os seguintes tipos fundamentais: UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Char16, Boolean e String. O C++/CX dá suporte aos tipos numéricos fundamentais em seu namespace padrão como UInt16, UInt32, UInt64, Int16, Int32, Int64, float32, float64 e char16. Boolean e String também são definidos no namespace Platform.
 
-O C++/CX também define uint8, equivalente a `unsigned char` , que não tem suporte no Windows Runtime e não pode ser usado em APIs públicas.
+O C++/CX também define uint8, equivalente a **`unsigned char`** , que não tem suporte no Windows Runtime e não pode ser usado em APIs públicas.
 
 Um tipo fundamental pode ser transformado em anulável convertendo-o em uma interface [Platform::IBox Interface](../cppcx/platform-ibox-interface.md) . Para obter mais informações, consulte [Classes e estruturas de valor](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -71,7 +71,7 @@ Para obter mais informações sobre tipos fundamentais, consulte [Tipos fundamen
 
 ### <a name="strings"></a>Cadeias de caracteres
 
-Uma cadeia de caracteres Windows Runtime é uma sequência imutável de caracteres UNICODE de 16 bits. Uma cadeia de caracteres Windows Runtime é projetada como `Platform::String^` . Essa classe fornece métodos para construção, manipulação e conversão de cadeia de caracteres de e em `wchar_t`.
+Uma cadeia de caracteres Windows Runtime é uma sequência imutável de caracteres UNICODE de 16 bits. Uma cadeia de caracteres Windows Runtime é projetada como `Platform::String^` . Essa classe fornece métodos para construção, manipulação e conversão de cadeia de caracteres de e para **`wchar_t`** .
 
 Para obter mais informações, consulte [Cadeias de caracteres](../cppcx/strings-c-cx.md).
 

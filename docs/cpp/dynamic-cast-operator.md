@@ -1,18 +1,18 @@
 ---
 title: Operador dynamic_cast
-description: Visão geral do C++ operador de dynamic_cast de idioma.
+description: Visão geral do operador de dynamic_cast da linguagem C++.
 ms.date: 02/03/2020
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: d12b338b4b52d81b01097a1e1f5c83ec10eac774
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 15609aeaef815ff89ca196876e1143090c65221b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189488"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221634"
 ---
 # <a name="dynamic_cast-operator"></a>Operador dynamic_cast
 
@@ -30,11 +30,11 @@ dynamic_cast < type-id > ( expression )
 
 Consulte [static_cast](../cpp/static-cast-operator.md) para obter uma explicação da diferença entre as conversões de conversão estática e dinâmica e quando é apropriado usar cada uma delas.
 
-Há duas alterações significativas no comportamento de **dynamic_cast** no código gerenciado:
+Há duas alterações significativas no comportamento do **`dynamic_cast`** em código gerenciado:
 
-- **dynamic_cast** a um ponteiro para o tipo subjacente de uma enumeração Boxed falhará em tempo de execução, retornando 0 em vez do ponteiro convertido.
+- **`dynamic_cast`** para um ponteiro para o tipo subjacente de uma enumeração Boxed falhará em tempo de execução, retornando 0 em vez do ponteiro convertido.
 
-- **dynamic_cast** não gerará mais uma exceção quando `type-id` for um ponteiro interior para um tipo de valor, com a falha de conversão em tempo de execução.  Agora, a conversão retornará ao valor 0 do ponteiro ao invés de gerar.
+- **`dynamic_cast`** não gerará mais uma exceção quando `type-id` for um ponteiro interior para um tipo de valor, com a falha de conversão em tempo de execução.  Agora, a conversão retornará ao valor 0 do ponteiro ao invés de gerar.
 
 Se `type-id` for um ponteiro para uma classe base direta ou indireta, inequívoca e acessível de `expression`, um ponteiro para o subobjeto exclusivo do tipo `type-id` é o resultado. Por exemplo:
 
@@ -97,9 +97,9 @@ Esse tipo de conversão é chamada de "downcast", pois move um ponteiro para uma
 
 Em casos de herança múltipla, as possibilidades de ambiguidade são introduzidas. Considere a hierarquia da classe mostrada na figura a seguir.
 
-Para tipos CLR, **dynamic_cast** resultará em um não op se a conversão puder ser executada implicitamente ou uma instrução MSIL `isinst`, que executará uma verificação dinâmica e retornará **nullptr** se a conversão falhar.
+Para tipos CLR, **`dynamic_cast`** resulta em um não op se a conversão puder ser executada implicitamente ou uma `isinst` instrução MSIL, que executa uma verificação dinâmica e retorna **`nullptr`** se a conversão falhar.
 
-O exemplo a seguir usa **dynamic_cast** para determinar se uma classe é uma instância de um tipo específico:
+O exemplo a seguir usa **`dynamic_cast`** para determinar se uma classe é uma instância de um tipo específico:
 
 ```cpp
 // dynamic_cast_clr.cpp
@@ -148,14 +148,14 @@ As ambiguidades adicionais podem ser introduzidas quando você usar classes base
 ![Hierarquia de classes que mostra as classes base virtuais](../cpp/media/vc39012.gif "Hierarquia de classes que mostra as classes base virtuais") <br/>
 Hierarquia de classes que mostra as classes base virtuais
 
-Nesta hierarquia, `A` é uma classe base virtual. Dada uma instância da classe `E` e um ponteiro para o subobjeto `A`, um **dynamic_cast** a um ponteiro para `B` falhará devido à ambiguidade. Primeiro você deve converter de volta ao objeto completo `E`, então trabalhar até a hierarquia, de maneira não ambígua, para alcançar o objeto correto `B`.
+Nesta hierarquia, `A` é uma classe base virtual. Dada uma instância da classe `E` e um ponteiro para o `A` subobjeto, um **`dynamic_cast`** para um ponteiro para `B` falhará devido à ambiguidade. Primeiro você deve converter de volta ao objeto completo `E`, então trabalhar até a hierarquia, de maneira não ambígua, para alcançar o objeto correto `B`.
 
 Considere a hierarquia da classe mostrada na figura a seguir.
 
 ![Hierarquia de classes que mostra classes base duplicadas](../cpp/media/vc39013.gif "Hierarquia de classes que mostra classes base duplicadas") <br/>
 Hierarquia de classes que mostra classes base duplicadas
 
-Dado um objeto de tipo `E` e um ponteiro para o subobjeto `D`, para navegar do subobjeto `D` ao subobjeto mais à esquerda `A`, três conversões podem ser feitas. Você pode executar uma conversão de **dynamic_cast** do ponteiro de `D` para um ponteiro de `E`, em seguida, uma conversão ( **dynamic_cast** ou uma conversão implícita) de `E` para `B`e, finalmente, uma conversão implícita de `B` para `A`. Por exemplo:
+Dado um objeto de tipo `E` e um ponteiro para o subobjeto `D`, para navegar do subobjeto `D` ao subobjeto mais à esquerda `A`, três conversões podem ser feitas. Você pode executar uma **`dynamic_cast`** conversão do `D` ponteiro para um `E` ponteiro, depois uma conversão ( **`dynamic_cast`** ou uma conversão implícita) de `E` para `B` e, finalmente, uma conversão implícita de `B` para `A` . Por exemplo:
 
 ```cpp
 // dynamic_cast_5.cpp
@@ -173,7 +173,7 @@ void f(D* pd) {
 }
 ```
 
-O operador de **dynamic_cast** também pode ser usado para executar uma "conversão cruzada". Usando a mesma hierarquia da classe, é possível converter um ponteiro, por exemplo, do subobjeto `B` ao para o subobjeto `D`, contanto que o objeto completo seja do tipo `E`.
+O **`dynamic_cast`** operador também pode ser usado para executar uma "conversão cruzada". Usando a mesma hierarquia da classe, é possível converter um ponteiro, por exemplo, do subobjeto `B` ao para o subobjeto `D`, contanto que o objeto completo seja do tipo `E`.
 
 Considerando as conversões cruzadas, é realmente possível fazer a conversão de um ponteiro para `D` para um ponteiro para o subobjeto mais à esquerda de `A` em apenas duas etapas. Você pode executar uma conversão cruzada de `D` para `B`, e uma conversão implícita de `B` para `A`. Por exemplo:
 
@@ -192,7 +192,7 @@ void f(D* pd) {
 }
 ```
 
-Um valor de ponteiro nulo é convertido para o valor de ponteiro nulo do tipo de destino por **dynamic_cast**.
+Um valor de ponteiro nulo é convertido para o valor de ponteiro nulo do tipo de destino por **`dynamic_cast`** .
 
 Quando você usa `dynamic_cast < type-id > ( expression )`, se `expression` não puder ser convertido com segurança para o tipo `type-id`, a verificação de tempo de execução fará com que a conversão falhe. Por exemplo:
 
@@ -209,9 +209,9 @@ void f() {
 }
 ```
 
-O valor de uma conversão falhada para o tipo de ponteiro é o ponteiro nulo. Um tipo de referência de conversão com falha gera uma [exceção de bad_cast](../cpp/bad-cast-exception.md).   Se `expression` não apontar para ou referenciar um objeto válido, uma exceção de `__non_rtti_object` será lançada.
+O valor de uma conversão falhada para o tipo de ponteiro é o ponteiro nulo. Um tipo de referência de conversão com falha gera uma [exceção de bad_cast](../cpp/bad-cast-exception.md).   Se `expression` o não apontar para ou referenciar um objeto válido, uma `__non_rtti_object` exceção será lançada.
 
-Consulte [typeid](../cpp/typeid-operator.md) para obter uma explicação da exceção de `__non_rtti_object`.
+Consulte [typeid](../cpp/typeid-operator.md) para obter uma explicação da `__non_rtti_object` exceção.
 
 ## <a name="example"></a>Exemplo
 

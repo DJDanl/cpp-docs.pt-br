@@ -1,28 +1,28 @@
 ---
-title: 'Como: Declarar Especificadores de Substituição (C++/CLI)'
+title: 'Como: declarar especificadores de substituição (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5ed413f403fb12f116633c0e39f9e7b32b2e9f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374446"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221322"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Como declarar especificadores de substituição em compilações nativas (C++/CLI)
 
-[lacrado,](../extensions/sealed-cpp-component-extensions.md) [abstrato](../extensions/abstract-cpp-component-extensions.md)e [substituição](../extensions/override-cpp-component-extensions.md) estão disponíveis em compilações que não usam **/ZW** ou [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+[sealed](../extensions/sealed-cpp-component-extensions.md), [abstract](../extensions/abstract-cpp-component-extensions.md)e [override](../extensions/override-cpp-component-extensions.md) estão disponíveis em compilações que não usam **/zw** ou [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
-> A linguagem PADRÃO ISO C++11 tem o [identificador de substituição](../cpp/override-specifier.md) e o identificador `sealed` [final,](../cpp/final-specifier.md) e ambos são suportados no Visual Studio Use `final` em vez de em código que deve ser compilado apenas como nativo.
+> O idioma padrão ISO C++ 11 tem o identificador de [substituição](../cpp/override-specifier.md) e o identificador [final](../cpp/final-specifier.md) , e ambos têm suporte no uso do Visual Studio `final` em vez de **`sealed`** no código que deve ser compilado como somente nativo.
 
 ## <a name="example"></a>Exemplo
 
 ### <a name="description"></a>Descrição
 
-O exemplo a `sealed` seguir mostra que é válido em compilações nativas.
+O exemplo a seguir mostra que **`sealed`** é válido em compilações nativas.
 
 ### <a name="code"></a>Código
 
@@ -51,7 +51,7 @@ public:
 
 ### <a name="description"></a>Descrição
 
-O próximo exemplo `override` mostra que é válido em compilações nativas.
+O exemplo a seguir mostra que `override` é válido em compilações nativas.
 
 ### <a name="code"></a>Código
 
@@ -73,7 +73,7 @@ public:
 
 ### <a name="description"></a>Descrição
 
-Este exemplo `abstract` mostra que é válido em compilações nativas.
+Este exemplo mostra que **`abstract`** é válido em compilações nativas.
 
 ### <a name="code"></a>Código
 
@@ -88,4 +88,4 @@ int main() {
 
 ## <a name="see-also"></a>Confira também
 
-[Especificadores de substituição](../extensions/override-specifiers-cpp-component-extensions.md)
+[Substituir especificadores](../extensions/override-specifiers-cpp-component-extensions.md)

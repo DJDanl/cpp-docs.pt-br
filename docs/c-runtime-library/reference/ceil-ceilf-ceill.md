@@ -35,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507073"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221946"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -66,24 +66,24 @@ long double ceill(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor retornado
 
 As funções **Ceil** retornam um valor de ponto flutuante que representa o menor inteiro que é maior ou igual a *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **Ind**|nenhum|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
 
 o **Ceil** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Ceil** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **Ceil** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Ceil** que usam **`float`** ou **`long double`** digitam. Em um programa C, o **Ceil** sempre pega e retorna um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 

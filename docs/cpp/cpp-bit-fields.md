@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170599"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221777"
 ---
 # <a name="c-bit-fields"></a>Campos de bit C++
 
@@ -46,13 +46,13 @@ O layout de memória conceitual de um objeto do tipo `Date` é mostrado na figur
 ![Layout de memória de um objeto de data](../cpp/media/vc38uq1.png "Layout de memória de um objeto de data") <br/>
 Layout de memória de um objeto Date
 
-Observe que `nYear` tem 8 bits de comprimento e excederia o limite de palavras do tipo declarado, **sem sinal** **curto**. Portanto, ela é iniciada no início de um novo **sem sinal** **curto**. Não é necessário que todos os campos de bits caibam em um mesmo objeto do tipo subjacente; novas unidades de armazenamento são alocadas de acordo com o número de bits solicitados na declaração.
+Observe que `nYear` tem 8 bits de comprimento e excederia o limite de palavras do tipo declarado, **`unsigned short`** . Portanto, ele é iniciado no início de um novo **`unsigned short`** . Não é necessário que todos os campos de bits caibam em um mesmo objeto do tipo subjacente; novas unidades de armazenamento são alocadas de acordo com o número de bits solicitados na declaração.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 A ordenação dos dados declarados como campos de bits vai do bit inferior até o superior, como mostra a figura acima.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 Se a declaração de uma estrutura inclui um campo não nomeado de comprimento 0, como mostrado no exemplo a seguir,
 
@@ -70,12 +70,12 @@ struct Date {
 
 em seguida, o layout de memória é mostrado na figura a seguir:
 
-![Layout do objeto Date com campo&#45;de comprimento zero](../cpp/media/vc38uq2.png "Layout do objeto Date com campo&#45;de comprimento zero") <br/>
+![Layout do objeto de data com zero&#45;campo de comprimento de bits](../cpp/media/vc38uq2.png "Layout do objeto de data com zero&#45;campo de comprimento de bits") <br/>
 Layout do objeto Date com campo de bits de comprimento zero
 
 O tipo subjacente de um campo de bits deve ser um tipo integral, conforme descrito em [tipos internos](../cpp/fundamental-types-cpp.md).
 
-Se o inicializador de uma referência do tipo `const T&` for um lvalue que se refere a um campo de bits do tipo `T`, a referência não será associada diretamente ao campo de bits. Em vez disso, a referência é associada a um inicializador temporário para conter o valor do campo de bits.
+Se o inicializador de uma referência do tipo `const T&` for um lvalue que se refere a um campo de bits do tipo `T` , a referência não será associada ao campo de bits diretamente. Em vez disso, a referência é associada a um inicializador temporário para conter o valor do campo de bits.
 
 ## <a name="restrictions-on-bit-fields"></a>Restrições em campos de bits
 
@@ -83,8 +83,8 @@ A lista a seguir detalha as operações erradas em campos de bits:
 
 - Obtendo o endereço de um campo de bits.
 
-- Inicializando uma referência não**const** com um campo de bits.
+- Inicializando uma não **`const`** referência com um campo de bits.
 
 ## <a name="see-also"></a>Confira também
 
-[Classes e Structs](../cpp/classes-and-structs-cpp.md)
+[Classes e structs](../cpp/classes-and-structs-cpp.md)

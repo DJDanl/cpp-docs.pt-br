@@ -57,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 81c272187c681010e7b8560d43f2fad87e1e0fdc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910131"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221894"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -97,7 +97,7 @@ int _fstat64i32(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *FD*<br/>
 Descritor de arquivo do arquivo aberto.
@@ -132,7 +132,7 @@ Como Stat.h usa o tipo [_dev_t](../../c-runtime-library/standard-types.md), que 
 
 Variações dessas funções dão suporte a tipos de hora de 32 ou de 64 bits e a comprimentos de arquivo de 32 ou de 64 bits. O primeiro sufixo numérico (**32** ou **64**) indica o tamanho do tipo de tempo usado; o segundo sufixo é **i32** ou **i64**, indicando se o tamanho do arquivo é representado como um inteiro de 32 bits ou 64 bits.
 
-**_fstat** é equivalente a **_fstat64i32**e **struct** **_stat** contém um tempo de 64 bits. Isso é verdadeiro, a menos que **_USE_32BIT_TIME_T** seja definido, caso em que o comportamento antigo está em vigor; **_fstat** usa uma hora de 32 bits e **_stat** de **struct** contém um tempo de 32 bits. O mesmo é verdadeiro para **_fstati64**.
+**_fstat** é equivalente a **_fstat64i32**e **`struct`** **_stat** contém uma hora de 64 bits. Isso é verdadeiro, a menos que **_USE_32BIT_TIME_T** seja definido, caso em que o comportamento antigo está em vigor; **_fstat** usa uma hora de 32 bits e **`struct`** **_stat** contém um tempo de 32 bits. O mesmo é verdadeiro para **_fstati64**.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -229,7 +229,7 @@ Time modified : Wed May 07 15:25:11 2003
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
+[Manipulação de arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_filelength, _filelengthi64](filelength-filelengthi64.md)<br/>

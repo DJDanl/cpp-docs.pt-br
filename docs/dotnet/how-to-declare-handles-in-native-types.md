@@ -9,24 +9,24 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 11dbc196a89a224afe02312fbe4dff99d8467f4c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 1aca21402122a0c8641a7e57ace2a3477ff96f01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988242"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221335"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Como declarar identificadores em tipos nativos
 
-Você não pode declarar um tipo de identificador em um tipo nativo. Vcclr. h fornece o modelo wrapper de tipo seguro `gcroot` para se referir a um objeto CLR C++ a partir do heap. Esse modelo permite que você incorpore um identificador virtual em um tipo nativo e o trate como se fosse o tipo subjacente. Na maioria dos casos, você pode usar o objeto `gcroot` como o tipo inserido sem qualquer conversão. No entanto, com [for each, no](../dotnet/for-each-in.md), você precisa usar `static_cast` para recuperar a referência gerenciada subjacente.
+Você não pode declarar um tipo de identificador em um tipo nativo. Vcclr. h fornece o modelo de wrapper de tipo seguro `gcroot` para se referir a um objeto CLR do heap do C++. Esse modelo permite que você incorpore um identificador virtual em um tipo nativo e o trate como se fosse o tipo subjacente. Na maioria dos casos, você pode usar o `gcroot` objeto como o tipo inserido sem qualquer conversão. No entanto, com [for each, no](../dotnet/for-each-in.md), você precisa usar **`static_cast`** para recuperar a referência gerenciada subjacente.
 
-O modelo de `gcroot` é implementado usando os recursos da classe de valor System:: Runtime:: InteropServices:: GCHandle, que fornece "Handles" para o heap coletado por lixo. Observe que os próprios identificadores não são coletados pelo lixo e são liberados quando não são mais usados pelo destruidor na classe `gcroot` (esse destruidor não pode ser chamado manualmente). Se você criar uma instância de um objeto `gcroot` no heap nativo, deverá chamar Delete nesse recurso.
+O `gcroot` modelo é implementado usando os recursos da classe de valor System:: Runtime:: InteropServices:: GCHandle, que fornece "Handles" para o heap coletado por lixo. Observe que os próprios identificadores não são coletados pelo lixo e são liberados quando não são mais usados pelo destruidor na `gcroot` classe (esse destruidor não pode ser chamado manualmente). Se você criar uma instância de um `gcroot` objeto no heap nativo, deverá chamar Delete nesse recurso.
 
-O tempo de execução manterá uma associação entre o identificador e o objeto CLR, ao qual ele faz referência. Quando o objeto CLR for movido com o heap coletado por lixo, o identificador retornará o novo endereço do objeto. Uma variável não precisa ser fixada antes de ser atribuída a um modelo de `gcroot`.
+O tempo de execução manterá uma associação entre o identificador e o objeto CLR, ao qual ele faz referência. Quando o objeto CLR for movido com o heap coletado por lixo, o identificador retornará o novo endereço do objeto. Uma variável não precisa ser fixada antes de ser atribuída a um `gcroot` modelo.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra como criar um objeto `gcroot` na pilha nativa.
+Este exemplo mostra como criar um `gcroot` objeto na pilha nativa.
 
 ```cpp
 // mcpp_gcroot.cpp
@@ -53,7 +53,7 @@ hello
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra como criar um objeto de `gcroot` no heap nativo.
+Este exemplo mostra como criar um `gcroot` objeto no heap nativo.
 
 ```cpp
 // mcpp_gcroot_2.cpp
@@ -113,6 +113,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Usando a interoperabilidade C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

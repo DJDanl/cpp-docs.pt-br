@@ -5,16 +5,16 @@ helpviewer_keywords:
 - objects [C++], destroying
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 1e1190f49c7ccf5c312172f265d32a4b855bd878
-ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.openlocfilehash: 5da7659d2d45bca9efba21be2cd0bf581d539780
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70060142"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221660"
 ---
 # <a name="destructors-c"></a>Destruidores (C++)
 
-Um destruidor é uma função membro que é invocada automaticamente quando o objeto sai do escopo ou destruído explicitamente por uma chamada para **delete**. Um destruidor tem o mesmo nome que a classe, precedida por um til (`~`). Por exemplo, o destruidor da classe `String` é declarado: `~String()`.
+Um destruidor é uma função membro que é invocada automaticamente quando o objeto sai do escopo ou destruído explicitamente por uma chamada para **`delete`** . Um destruidor tem o mesmo nome que a classe, precedida por um til ( `~` ). Por exemplo, o destruidor da classe `String` é declarado: `~String()`.
 
 Se você não definir um destruidor, o compilador fornecerá um padrão; para muitas classes, isso é suficiente. Você só precisa definir um destruidor personalizado quando a classe armazena identificadores para recursos do sistema que precisam ser liberados ou ponteiros que possuem a memória para a qual apontam.
 
@@ -57,21 +57,21 @@ int main() {
 }
 ```
 
-No exemplo anterior, o destruidor `String::~String` usa o operador **delete** para desalocar o espaço alocado dinamicamente para armazenamento de texto.
+No exemplo anterior, o destruidor `String::~String` usa o **`delete`** operador para desalocar o espaço alocado dinamicamente para armazenamento de texto.
 
 ## <a name="declaring-destructors"></a>Declarando destruidores
 
-Os destruidores são funções com o mesmo nome da classe, mas precedidos por um`~`til ()
+Os destruidores são funções com o mesmo nome da classe, mas precedidos por um til ( `~` )
 
 Várias regras controlam a declaração de destruidores. Destruidores:
 
 - Não aceitam argumentos.
 
-- Não retornar um valor (ou **void**).
+- Não retornar um valor (ou **`void`** ).
 
-- Não pode ser declarado como **const**, **volátil**ou **estático**. No entanto, eles podem ser invocados para a destruição de objetos declarados como **const**, **volátil**ou **estático**.
+- Não pode ser declarado como **`const`** , **`volatile`** ou **`static`** . No entanto, eles podem ser invocados para a destruição de objetos declarados como **`const`** , **`volatile`** ou **`static`** .
 
-- Pode ser declarado como **virtual**. Usando destruidores virtuais, você pode destruir objetos sem conhecer o tipo deles — o destruidor correto para o objeto é invocado usando o mecanismo de função virtual. Observe que os destruidores também podem ser declarados como funções virtuais puras para classes abstratas.
+- Pode ser declarado como **`virtual`** . Usando destruidores virtuais, você pode destruir objetos sem conhecer o tipo deles — o destruidor correto para o objeto é invocado usando o mecanismo de função virtual. Observe que os destruidores também podem ser declarados como funções virtuais puras para classes abstratas.
 
 ## <a name="using-destructors"></a>Usando destruidores
 
@@ -79,7 +79,7 @@ Os destruidores são chamados quando ocorre um dos seguintes eventos:
 
 - Um objeto local (automático) com escopo de bloco sai do escopo.
 
-- Um objeto alocado usando o operador **New** é explicitamente desalocado usando **delete**.
+- Um objeto alocado usando o **`new`** operador é explicitamente desalocado usando **`delete`** .
 
 - O tempo de vida de um objeto temporário termina.
 
@@ -184,11 +184,11 @@ Para determinar a ordem de destruição das classes base virtuais de um objeto d
 
 Portanto, para a classe `E`, a ordem de destruição é:
 
-1. A classe `E`base não virtual.
+1. A classe base não virtual `E` .
 
-1. A classe `D`base não virtual.
+1. A classe base não virtual `D` .
 
-1. A classe `C`base não virtual.
+1. A classe base não virtual `C` .
 
 1. A classe base virtual `B`.
 
@@ -213,7 +213,7 @@ No exemplo anterior, o destruidor de `Base2` é chamado antes de destruidor de `
 
 ## <a name="explicit-destructor-calls"></a>Chamadas explícitas de destruidores
 
-Chamar um destruidor de forma explícita raramente é necessário. No entanto, pode ser útil realizar a limpeza dos objetos colocados em endereços absolutos. Esses objetos são normalmente alocados usando um operador **novo** definido pelo usuário que usa um argumento de posicionamento. O operador **delete** não pode desalocar esta memória porque ela não está alocada do armazenamento gratuito (para obter mais informações, consulte [os operadores New e Delete](../cpp/new-and-delete-operators.md)). Entretanto, uma chamada para o destruidor pode realizar uma limpeza apropriada. Para chamar explicitamente o destruidor de um objeto, `s`, da classe `String`, use uma das seguintes instruções:
+Chamar um destruidor de forma explícita raramente é necessário. No entanto, pode ser útil realizar a limpeza dos objetos colocados em endereços absolutos. Esses objetos são normalmente alocados usando um operador definido pelo usuário **`new`** que usa um argumento de posicionamento. O **`delete`** operador não pode desalocar esta memória porque ela não está alocada do armazenamento gratuito (para obter mais informações, consulte [os operadores New e Delete](../cpp/new-and-delete-operators.md)). Entretanto, uma chamada para o destruidor pode realizar uma limpeza apropriada. Para chamar explicitamente o destruidor de um objeto, `s`, da classe `String`, use uma das seguintes instruções:
 
 ```cpp
 s.String::~String();     // non-virtual call
@@ -231,7 +231,7 @@ Uma classe precisa de um destruidor se adquirir um recurso e gerenciar o recurso
 
 Se essas funções especiais não forem definidas pelo usuário, elas serão definidas implicitamente pelo compilador. Os construtores e operadores de atribuição gerados implicitamente executam a cópia superficial, memberwise, que é quase certamente errado se um objeto estiver gerenciando um recurso.
 
-No próximo exemplo, o construtor de cópia gerado implicitamente fará os ponteiros `str1.text` e `str2.text` se referirem à mesma memória e, quando retornamos `copy_strings()`, essa memória será excluída duas vezes, o que é um comportamento indefinido:
+No próximo exemplo, o construtor de cópia gerado implicitamente fará os ponteiros `str1.text` e `str2.text` se referirem à mesma memória e, quando retornamos `copy_strings()` , essa memória será excluída duas vezes, o que é um comportamento indefinido:
 
 ```cpp
 void copy_strings()
@@ -244,7 +244,7 @@ void copy_strings()
 
 Definir explicitamente um destruidor, um construtor de cópia ou um operador de atribuição de cópia impede a definição implícita do construtor de movimentação e o operador de atribuição de movimentação. Nesse caso, a falha ao fornecer operações de movimentação é geralmente, se a cópia for cara, uma oportunidade de otimização perdida.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Operadores de construtores de cópia e de atribuição de cópia](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)</br>
-[Operadores de construtores de movimento e de atribuição de movimento](../cpp/move-constructors-and-move-assignment-operators-cpp.md)
+[Copiar construtores e operadores de atribuição de cópia](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)</br>
+[Mover construtores e mover operadores de atribuição](../cpp/move-constructors-and-move-assignment-operators-cpp.md)
