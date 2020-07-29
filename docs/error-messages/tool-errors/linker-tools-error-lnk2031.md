@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 326886f8de8b59cce9df46eb7b0325b7cc9eb9f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194558"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225196"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Erro das Ferramentas de Vinculador LNK2031
 
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como consumir a função nativa de uma imagem pura. Observe o especificador de Convenção de chamada de **__cdecl** explícito.
+O exemplo a seguir mostra como consumir a função nativa de uma imagem pura. Observe o **`__cdecl`** especificador de Convenção de chamada explícita.
 
 ```cpp
 // LNK2031_c.cpp

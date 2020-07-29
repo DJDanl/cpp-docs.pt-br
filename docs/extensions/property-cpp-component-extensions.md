@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: b961a93628752b11cd1d147268a4947acf29f67a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fbec97a5bd30bb9bb76459ef2f7b0956ae6a264f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171970"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225131"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI e C++/CX)
 
@@ -31,7 +31,7 @@ Você deve declarar explicitamente um membro de dados para conter o valor da pro
 *propriedade indexada*<br/>
 Um bloco de propriedades que pode ser usado para obter e definir um valor de propriedade especificado por um ou mais índices.
 
-Você pode criar uma propriedade indexada que tem um nome de propriedade definido pelo usuário ou um nome de propriedade *padrão*. O nome de uma propriedade de índice padrão é o nome da classe na qual a propriedade está definida. Para declarar uma propriedade padrão, especifique a palavra-chave **default**, em vez de um nome de propriedade.
+Você pode criar uma propriedade indexada que tem um nome de propriedade definido pelo usuário ou um nome de propriedade *padrão*. O nome de uma propriedade de índice padrão é o nome da classe na qual a propriedade está definida. Para declarar uma propriedade padrão, especifique a **`default`** palavra-chave em vez de um nome de propriedade.
 
 Você deve declarar explicitamente um membro de dados para conter o valor da propriedade. Para uma propriedade indexada, o membro de dados normalmente é uma matriz ou uma coleção.
 
@@ -65,9 +65,9 @@ O tipo de dados do valor da propriedade e, consequentemente, a própria propried
 O nome da propriedade.
 
 *access-modifier*<br/>
-Um qualificador de acesso. Os qualificadores válidos são **static** e **virtual**.
+Um qualificador de acesso. Qualificadores válidos são **`static`** e **`virtual`** .
 
-Os acessadores get ou set não precisam concordar com o qualificador **virtual**, mas devem concordar com o qualificador **static**.
+Os acessadores get ou set não precisam concordar com o **`virtual`** qualificador, mas devem concordar com o **`static`** qualificador.
 
 *inheritance-modifier*<br/>
 Um qualificador de herança. Os qualificadores válidos são **abstract** e **sealed**.
@@ -81,7 +81,7 @@ O valor a ser atribuído à propriedade em uma operação set, ou recuperado em 
 *property_body*<br/>
 O corpo do método da propriedade do acessador set ou get. *property_body* pode usar *index_list* para acessar o membro de dados da propriedade subjacente, ou como parâmetros em processamento definido pelo usuário.
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 Saiba mais em [Propriedades (C++/CX)](../cppcx/properties-c-cx.md).
 
@@ -111,7 +111,7 @@ modifier property type default[index];
 ### <a name="parameters"></a>parâmetros
 
 *modifier*<br/>
-Um modificador que pode ser usado na declaração de propriedade ou em um método de acessador get/set. Os valores possíveis são **static** e **virtual**.
+Um modificador que pode ser usado na declaração de propriedade ou em um método de acessador get/set. Os valores possíveis são **`static`** e **`virtual`** .
 
 *tipo*<br/>
 O tipo do valor que é representado pela propriedade.
@@ -130,27 +130,27 @@ O segundo exemplo de sintaxe mostra um *bloco de propriedades* que declara impli
 
 O terceiro exemplo de sintaxe mostra uma *propriedade de índice* definida pelo cliente. Uma propriedade de índice usa parâmetros, além do valor a ser definido ou recuperado. Você deve especificar um nome para a propriedade. Ao contrário de uma propriedade simples, os métodos `set` e/ou `get` de uma propriedade de índice devem ser definidos explicitamente, e você deve especificar um nome para a propriedade.
 
-O quarto exemplo de sintaxe mostra uma propriedade *default* que fornece acesso de matriz a uma instância do tipo. A palavra-chave **default** serve apenas para especificar uma propriedade padrão. O nome da propriedade padrão é o nome do tipo no qual a propriedade está definida.
+O quarto exemplo de sintaxe mostra uma propriedade *default* que fornece acesso de matriz a uma instância do tipo. A palavra-chave, **`default`** , serve apenas para especificar uma propriedade padrão. O nome da propriedade padrão é o nome do tipo no qual a propriedade está definida.
 
-A palavra-chave **property** pode aparecer em uma classe, interface ou tipo de valor. Uma propriedade pode ter uma função get (somente leitura), uma função set (somente gravação) ou ambas (leitura-gravação).
+A **`property`** palavra-chave pode aparecer em uma classe, interface ou tipo de valor. Uma propriedade pode ter uma função get (somente leitura), uma função set (somente gravação) ou ambas (leitura-gravação).
 
 O nome da propriedade pode não corresponder ao nome da classe gerenciada que a contém. O tipo de retorno da função getter deve corresponder ao tipo do último parâmetro de uma função setter correspondente.
 
 Para o código do cliente, uma propriedade tem a aparência de um membro de dados comum, e pode ser gravada ou lida usando a mesma sintaxe que um membro de dados.
 
-Os métodos get e set não precisam concordar com o modificador **virtual**.
+Os métodos get e Set não precisam concordar com o **`virtual`** modificador.
 
 A acessibilidade do método get e set pode diferir.
 
 A definição de um método de propriedade pode aparecer fora do corpo de classe, assim como um método comum.
 
-Os métodos get e set de uma propriedade devem concordar com o modificador **static**.
+O método Get e Set para uma propriedade deve concordar com o **`static`** modificador.
 
 Uma propriedade será escalar se seus métodos get e set aceitarem a descrição a seguir:
 
 - O método get não tem parâmetros e tem o tipo de retorno `T`.
 
-- O método set tem um parâmetro do tipo `T` e um tipo de retorno **void**.
+- O método Set tem um parâmetro do tipo `T` e o tipo de retorno **`void`** .
 
 Deve haver apenas uma propriedade escalar declarada em um escopo com o mesmo identificador. Propriedades escalares não podem ser sobrecarregadas.
 
@@ -158,7 +158,7 @@ Quando um membro de dados de propriedade é declarado, o compilador injeta um me
 
 Há permissão para uma acessibilidade diferente nos métodos acessadores em um bloco de propriedades.  Ou seja, o método set pode ser público e o método get pode ser privado.  No entanto, é um erro um método acessador ter uma acessibilidade menos restritiva do que está na declaração da propriedade em si.
 
-**property** é uma palavra-chave contextual.  Saiba mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md).
+**`property`** é uma palavra-chave sensível ao contexto.  Saiba mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -212,4 +212,4 @@ test
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

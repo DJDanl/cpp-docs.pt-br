@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2eb09680ef6e7d1ee90b62eee8c8971fb4963212
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311954"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225118"
 ---
 # <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI e C++/CX)
 
 A operação **safe_cast** retorna a expressão especificada como o tipo especificado, se bem-sucedida; caso contrário, lança `InvalidCastException`.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
-(Não há comentários para esse recurso de linguagem que se apliquem a todos os tempos de execução.)
+(Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -30,7 +30,7 @@ A operação **safe_cast** retorna a expressão especificada como o tipo especif
 [default]:: safe_cast< type-id >( expression )
 ```
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 **safe_cast** permite alterar o tipo de uma expressão especificada. Em situações em que você espera que uma variável ou parâmetro seja conversível em um determinado tipo, é possível usar **safe_cast** sem um bloco **try-catch** para detectar erros de programação durante o desenvolvimento. Saiba mais em [Conversão (C++/CX)](../cppcx/casting-c-cx.md).
 
@@ -40,17 +40,17 @@ A operação **safe_cast** retorna a expressão especificada como o tipo especif
 [default]:: safe_cast< type-id >( expression )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*type-id*<br/>
+*ID do tipo*<br/>
 O tipo para o qual converter a *expression*. Um identificador para um tipo de referência ou de valor, um tipo de valor ou uma referência de acompanhamento para um tipo de referência ou de valor.
 
-*expression*<br/>
+*expressão*<br/>
 Uma expressão que avalia um identificador para um tipo de referência ou de valor, um tipo de valor ou uma referência de acompanhamento para um tipo de referência ou de valor.
 
 ### <a name="remarks"></a>Comentários
 
-**safe_cast** lança `InvalidCastException` se não é possível converter *expression* para o tipo especificado por *type-id*. Para capturar `InvalidCastException`, especifique a opção do compilador [/EH (modelo de tratamento de exceções)](../build/reference/eh-exception-handling-model.md) e use uma instrução **try/catch**.
+**safe_cast** gera `InvalidCastException` se não é possível converter a *expressão* para o tipo especificado por *ID de tipo*. Para detectar `InvalidCastException` , especifique a opção de compilador [/eh (modelo de tratamento de exceções)](../build/reference/eh-exception-handling-model.md) e use uma instrução **try/catch** .
 
 ### <a name="requirements"></a>Requisitos
 
@@ -100,31 +100,31 @@ Caught expected exception: InvalidCastException
 [cli]:: safe_cast< type-id >( expression )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*type-id*<br/>
+*ID do tipo*<br/>
 Um identificador para um tipo de referência ou de valor, um tipo de valor ou uma referência de acompanhamento para um tipo de referência ou de valor.
 
-*expression*<br/>
+*expressão*<br/>
 Uma expressão que avalia um identificador para um tipo de referência ou de valor, um tipo de valor ou uma referência de acompanhamento para um tipo de referência ou de valor.
 
 ### <a name="remarks"></a>Comentários
 
-A expressão `safe_cast<`*type-id*`>(`*expression*`)` converte o operando *expression* em um objeto do tipo *type-id*.
+A expressão do `safe_cast<` *tipo Expression-ID* `>(` *expression* `)` converte a *expressão* do operando em um objeto do tipo *Type-ID*.
 
-O compilador aceitará um [static_cast](../cpp/static-cast-operator.md) na maioria dos lugares que aceitará um **safe_cast**.  No entanto, **safe_cast** tem a garantia de produzir um MSIL verificável, mas um **static_cast** poderia produzir um MSIL não verificável.  Consulte [Código puro e verificável (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) e [Peverify.exe (Ferramenta PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) para saber mais sobre código verificável.
+O compilador aceitará um [static_cast](../cpp/static-cast-operator.md) na maioria dos lugares que aceitará um **safe_cast**.  No entanto, a **safe_cast** é garantida para produzir MSIL verificável, onde **`static_cast`** pode produzir MSIL não verificável.  Consulte [Código puro e verificável (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) e [Peverify.exe (Ferramenta PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) para saber mais sobre código verificável.
 
-Assim como **static_cast**, **safe_cast** chama conversões definidas pelo usuário.
+Como **`static_cast`** , **safe_cast** invoca conversões definidas pelo usuário.
 
 Saiba mais sobre conversões em [Operadores de conversão](../cpp/casting-operators.md).
 
-**safe_cast** não se aplica a **const_cast** (conversão de **const**).
+**safe_cast** não aplica uma **`const_cast`** (conversão **`const`** ).
 
 **safe_cast** está no namespace da CLI.  Saiba mais em [Namespaces da CLI, de plataforma e padrão](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
 Saiba mais sobre **safe_cast** em:
 
-- [Conversões C-Style com /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
+- [Conversões de Estilo C-Style com /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
 
 - [Como: usar safe_cast no C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
@@ -134,7 +134,7 @@ Opção do compilador: `/clr`
 
 ### <a name="examples"></a>Exemplos
 
-Um exemplo de onde o compilador não aceitará **static_cast**, mas aceitará **safe_cast** está nas conversões entre tipos de interface não relacionados.  Com **safe_cast**, o compilador não emitirá um erro de conversão e executará uma verificação em tempo de execução para ver se a conversão é possível.
+Um exemplo de onde o compilador não aceitará um **`static_cast`** , mas aceitará uma **safe_cast** é para conversões entre tipos de interface não relacionados.  Com **safe_cast**, o compilador não emitirá um erro de conversão e executará uma verificação em runtime para ver se a conversão é possível.
 
 ```cpp
 // safe_cast.cpp
@@ -164,6 +164,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

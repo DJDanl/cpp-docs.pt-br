@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 3f16ea3ad77c676695a9d5ca6e2deb10637de455
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b32dbd8e1777f11998085a90e8851b25e4298e1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621179"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224988"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX MFC: usando associação de dados em um controle ActiveX
 
@@ -93,7 +93,7 @@ Além de um método Get/Set vinculado a dados, você também pode criar uma [pro
 
 1. Digite o nome da propriedade na caixa **nome da propriedade** . Use `MyProp` para este exemplo.
 
-1. Selecione um tipo de dados na caixa de listagem suspensa **tipo de propriedade** . Use **Short** para este exemplo.
+1. Selecione um tipo de dados na caixa de listagem suspensa **tipo de propriedade** . Use **`short`** para este exemplo.
 
 1. Para **tipo de implementação**, clique em **obter/definir métodos**.
 
@@ -133,6 +133,6 @@ Além de um método Get/Set vinculado a dados, você também pode criar uma [pro
 
 Agora você pode criar o projeto, que registrará o controle. Quando você insere o controle em uma caixa de diálogo, as propriedades de **campo de dados** e **fonte de dados** foram adicionadas e agora você pode selecionar uma fonte de dados e um campo para exibir no controle.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)

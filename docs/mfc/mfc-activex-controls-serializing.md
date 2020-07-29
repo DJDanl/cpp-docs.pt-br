@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225014"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controles ActiveX MFC: serializando
 
@@ -58,13 +58,13 @@ A tabela a seguir lista as funções de troca de propriedade possíveis que voc�
 |**PX_Bool ()**|Serializa uma propriedade booliana de tipo.|
 |**PX_Color ()**|Serializa uma propriedade de cor de tipo.|
 |**PX_Currency ()**|Serializa um tipo de propriedade **CY** (Currency).|
-|**PX_Double ()**|Serializa uma propriedade **Double** de tipo.|
+|**PX_Double ()**|Serializa uma propriedade Type **`double`** .|
 |**PX_Font ()**|Serializa uma propriedade de tipo de fonte.|
-|**PX_Float ()**|Serializa uma propriedade **float** de tipo.|
+|**PX_Float ()**|Serializa uma propriedade Type **`float`** .|
 |**PX_IUnknown ()**|Serializa uma propriedade do tipo `LPUNKNOWN` .|
-|**PX_Long ()**|Serializa uma propriedade **Long** de tipo.|
+|**PX_Long ()**|Serializa uma propriedade Type **`long`** .|
 |**PX_Picture ()**|Serializa uma propriedade de imagem de tipo.|
-|**PX_Short ()**|Serializa uma propriedade de tipo **Short** .|
+|**PX_Short ()**|Serializa uma propriedade Type **`short`** .|
 |**PXstring( )**|Serializa uma propriedade Type `CString` .|
 |**PX_ULong ()**|Serializa uma propriedade **ULONG** de tipo.|
 |**PX_UShort ()**|Serializa uma propriedade **UShort** de tipo.|
@@ -93,6 +93,6 @@ No exemplo a seguir, a versão 1 deste controle de exemplo tem apenas uma propri
 
 Por padrão, um controle "converte" dados antigos no formato mais recente. Por exemplo, se a versão 2 de um controle carregar dados que foram salvos pela versão 1, ele gravará o formato da versão 2 quando ele for salvo novamente. Se você quiser que o controle salve dados no formato última leitura, passe **false** como um terceiro parâmetro ao chamar `ExchangeVersion` . Esse terceiro parâmetro é opcional e é **true** por padrão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)

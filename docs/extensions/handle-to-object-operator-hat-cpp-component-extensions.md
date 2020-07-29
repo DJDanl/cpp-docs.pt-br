@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358326"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225144"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operador Handle to Object (^) (C++/CLI e C++/CX)
 
-O *declarador da alça* (pronuncia-se`^`"chapéu"), modifica o [especificador do](../cpp/overview-of-declarators.md) tipo para significar que o objeto declarado deve ser automaticamente excluído quando o sistema determinar que o objeto não está mais acessível.
+O *Declarador de identificador* ( `^` , pronunciado "Hat"), modifica o [especificador](../cpp/overview-of-declarators.md) de tipo para significar que o objeto declarado deve ser excluído automaticamente quando o sistema determina que o objeto não está mais acessível.
 
 ## <a name="accessing-the-declared-object"></a>Acessar o objeto declarado
 
@@ -38,7 +38,7 @@ O sistema usa o mecanismo *garbage collector* do CLR para determinar se o objeto
 
 Como os ponteiros nativos de C++ (`*`) e as referências (`&`) não são referências gerenciadas, o coletor de lixo não pode atualizar automaticamente os endereços para os quais eles apontam. Para resolver esse problema, use o declarador identificador para especificar uma variável da qual o coletor de lixo esteja ciente e possa ser atualizada automaticamente.
 
-Para obter mais informações, [consulte Como: Declarar alças em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
+Para obter mais informações, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
 ### <a name="examples"></a>Exemplos
 
@@ -104,7 +104,7 @@ Not a boxed int
 100
 ```
 
-Este exemplo mostra que a linguagem comum em C++ de usar um ponteiro `void*` para apontar para um objeto arbitrário é substituída por `Object^`, que pode conter um identificador para qualquer classe de referência. Também mostra que todos os tipos, como matrizes e delegados, podem ser convertidos em um identificador de objetos.
+Este exemplo mostra que o idioma C++ comum de usar um **`void*`** ponteiro para apontar para um objeto arbitrário é substituído por `Object^` , que pode conter um identificador para qualquer classe de referência. Também mostra que todos os tipos, como matrizes e delegados, podem ser convertidos em um identificador de objetos.
 
 ```cpp
 // mcppv2_handle_3.cpp
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-Esta amostra mostra que`&`uma referência nativa ( ) não pode se ligar a um membro **int** de um tipo gerenciado, pois o **int** pode ser armazenado no monte coletado de lixo, e referências nativas não rastreiam o movimento do objeto no monte gerenciado. A correção é usar uma variável local ou alterar `&` para `%`, tornando-a uma referência de rastreamento.
+Este exemplo mostra que uma referência nativa ( `&` ) não pode se associar a um **`int`** membro de um tipo gerenciado, pois o **`int`** pode ser armazenado no heap coletado pelo lixo e as referências nativas não rastreiam a movimentação de objetos no heap gerenciado. A correção é usar uma variável local ou alterar `&` para `%`, tornando-a uma referência de rastreamento.
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -223,5 +223,5 @@ Opção do compilador: `/clr`
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
-[Operador de Referência de Acompanhamento](tracking-reference-operator-cpp-component-extensions.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Operador de referência de rastreamento](tracking-reference-operator-cpp-component-extensions.md)

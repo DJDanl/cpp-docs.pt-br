@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 25095257096efd869e237383c5cd202ae4e602c2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 72b343641b0b43d408c5820ca2a2af1de94ce327
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620166"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225053"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceções: alterações feitas em macros de exceção na versão 3.0
 
@@ -34,7 +34,7 @@ O exemplo a seguir ilustra a consequência dessa diferença entre o MFC versão 
 
 [!code-cpp[NVC_MFCExceptions#1](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-Esse código se comporta de forma diferente na versão 3,0 porque o controle sempre passa para o primeiro bloco **Catch** com uma declaração de exceção correspondente. O resultado da expressão throw
+Esse código se comporta de forma diferente na versão 3,0 porque o controle sempre passa para o primeiro **`catch`** bloco com uma declaração de exceção correspondente. O resultado da expressão throw
 
 [!code-cpp[NVC_MFCExceptions#19](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 
@@ -60,6 +60,6 @@ O uso de **throw** no bloco catch faz com que o ponteiro `e` seja excluído, par
 
 Para obter mais informações, consulte [exceções: capturando e excluindo exceções](exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Tratamento de Exceção](exception-handling-in-mfc.md)
+[Tratamento de exceção](exception-handling-in-mfc.md)

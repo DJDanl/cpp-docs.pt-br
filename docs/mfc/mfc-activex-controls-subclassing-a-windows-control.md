@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: c68a7c9764e7f52131a90d38db22d2645eed9a4f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 354cd1cac5db775ea56cb5215a8528bdfe9ac5ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625419"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225001"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: subclasses de um controle do Windows
 
@@ -43,7 +43,7 @@ Para subclasse de um controle do Windows, conclua as seguintes tarefas:
 
 ## <a name="overriding-issubclassedcontrol-and-precreatewindow"></a><a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Substituindo IsSubclassedControl e PreCreateWindow
 
-Para substituir `PreCreateWindow` e `IsSubclassedControl` Adicionar as seguintes linhas de código à seção **protegida** da declaração de classe de controle:
+Para substituir `PreCreateWindow` e `IsSubclassedControl` Adicionar as seguintes linhas de código à **`protected`** seção da declaração de classe de controle:
 
 [!code-cpp[NVC_MFC_AxSub#1](codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]
 
@@ -95,6 +95,6 @@ Para adicionar um manipulador de mensagens para uma mensagem de janela refletida
 
 Para obter um exemplo de como as mensagens refletidas são processadas, consulte o [botão](../overview/visual-cpp-samples.md)de exemplo de controles ActiveX do MFC. Ele demonstra um `OnOcmCommand` manipulador que detecta o BN_CLICKED código de notificação e responde acionando (enviando) um `Click` evento.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)
