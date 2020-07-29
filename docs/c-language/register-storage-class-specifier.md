@@ -5,18 +5,18 @@ helpviewer_keywords:
 - register variables
 - register storage class
 ms.assetid: 7577bf48-88ec-4191-873c-ef4217a4034e
-ms.openlocfilehash: 0fac6db2254a909d0ec558a7e76f7ccf32aa7ac3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 513213222ee2c598455709a0891977a0949c8555
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325241"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229552"
 ---
 # <a name="register-storage-class-specifier"></a>Especificador de classe de armazenamento de registro
 
 **Específico da Microsoft**
 
-O compilador do Microsoft C/C++ não honra as solicitações de variáveis de registro feitas pelo usuário. No entanto, para fins de portabilidade, qualquer outra semântica associada à palavra-chave **register** é honrada pelo compilador. Por exemplo, você não pode aplicar o operador address-of unário (**&**) a um objeto Register, nem a palavra-chave **Register** deve ser usada em matrizes.
+O compilador do Microsoft C/C++ não honra as solicitações de variáveis de registro feitas pelo usuário. No entanto, para portabilidade, todas as demais semânticas associadas à **`register`** palavra-chave são respeitadas pelo compilador. Por exemplo, você não pode aplicar o operador address-of unário ( **&** ) a um objeto Register, nem a **`register`** palavra-chave ser usada em matrizes.
 
 **FINAL específico da Microsoft**
 

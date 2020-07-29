@@ -4,45 +4,45 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-ms.openlocfilehash: df00bcab2f9f9e51a6f37e19670b6cd240fa5cc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91675fbe15ec6abf5aae4548990d9b4e0703e967
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233638"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229721"
 ---
 # <a name="for-statement-c"></a>Instrução for (C)
 
-A instrução **for** permite repetir uma instrução ou uma instrução composta por um número especificado de vezes. O corpo de uma instrução **for** é executado zero ou mais vezes até que uma condição opcional se torne falsa. Você pode usar expressões opcionais na instrução **for** para inicializar e alterar valores durante a execução da instrução **for**.
+A **`for`** instrução permite repetir uma instrução ou instrução composta um número especificado de vezes. O corpo de uma **`for`** instrução é executado zero ou mais vezes até que uma condição opcional se torne falsa. Você pode usar expressões opcionais dentro da **`for`** instrução para inicializar e alterar valores durante a **`for`** execução da instrução.
 
 ## <a name="syntax"></a>Sintaxe
 
 *instrução Iteration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrução* **for** **(** *init-Expression,*<sub>opt</sub> **;** *condicional-expressão*<sub>opt</sub> **;** *loop-expressão*<sub>opt</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**`for`****(** *init-expressão*<sub>opt</sub> **;** *condicional-expressão*<sub>opt</sub> **;** *instrução* *loop-expressão*<sub>opt</sub> **)**
 
-A execução de uma instrução **for** ocorre da seguinte maneira:
+A execução de uma **`for`** instrução continua da seguinte maneira:
 
 1. A *init-expression*, se houver, é avaliada. Isso especifica a inicialização do loop. Não há nenhuma restrição quanto ao tipo da *init-expression*.
 
 1. A *cond-expression*, se houver, é avaliada. Essa expressão deve ter tipo aritmético ou ponteiro. Ela é avaliada antes de cada iteração. Três resultados são possíveis:
 
-   - Se *cond-expression* é **true** (diferente de zero), *statement* é executada; em seguida, *loop-expression*, se houver, é avaliada. A *loop-expression* é avaliada após cada iteração. Não há nenhuma restrição quanto ao tipo dele. Os efeitos colaterais serão executados na ordem. Em seguida, o processo é iniciado novamente com a avaliação de *cond-expression*.
+   - Se *condicional* for **`true`** (diferente de zero), a *instrução* será executada; em seguida, *a expressão de loop*, se houver, será avaliada. A *loop-expression* é avaliada após cada iteração. Não há nenhuma restrição quanto ao tipo dele. Os efeitos colaterais serão executados na ordem. Em seguida, o processo é iniciado novamente com a avaliação de *cond-expression*.
 
-   - Se *cond-expression* está omitida, *cond-expression* é considerada true e a execução continua exatamente conforme descrita no parágrafo anterior. Uma instrução **for** sem um argumento *cond-expression* só termina quando uma instrução **break** ou **return** dentro do corpo da instrução é executada ou quando um **goto** (para uma instrução rotulada fora do corpo da instrução **for**) é executado.
+   - Se *cond-expression* está omitida, *cond-expression* é considerada true e a execução continua exatamente conforme descrita no parágrafo anterior. Uma **`for`** instrução sem um argumento *condicional* é encerrada somente quando uma **`break`** instrução ou **`return`** dentro do corpo da instrução é executada ou quando um **`goto`** (para uma instrução rotulada fora do corpo da **`for`** instrução) é executado.
 
-   - Se a *cond-expression* for **false** (0), a execução da instrução **for** será finalizada e o controle será passado para a próxima instrução no programa.
+   - Se *condicional* for **`false`** (0), a execução da instrução será **`for`** encerrada e o controle passará para a próxima instrução no programa.
 
-A instrução **for** também pode terminar quando uma instrução **break**, **goto** ou **return** for executada no corpo da instrução. A instrução **continue** em um loop **for** possibilita que a *loop-expression* seja avaliada. Quando uma instrução **break** é executada em um loop **for**, *loop-expression* não é avaliado nem executado. Esta instrução
+Uma **`for`** instrução também termina quando uma **`break`** instrução, **`goto`** ou **`return`** dentro do corpo da instrução é executada. Uma **`continue`** instrução em um **`for`** loop faz com que a *expressão de loop* seja avaliada. Quando uma **`break`** instrução é executada dentro de um **`for`** loop, a *expressão de loop* não é avaliada ou executada. Esta instrução
 
 ```C
 for( ; ; )
 ```
 
-é a maneira habitual de gerar um loop infinito que só pode ser encerrado com uma instrução **break**, **goto** ou **return**.
+é a maneira personalizada de produzir um loop infinito que só pode ser encerrado com uma **`break`** instrução, **`goto`** ou **`return`** .
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo ilustra a instrução **for**:
+Este exemplo ilustra a **`for`** instrução:
 
 ```C
 // c_for.c

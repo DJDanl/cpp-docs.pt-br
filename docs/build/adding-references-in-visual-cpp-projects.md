@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169949"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229903"
 ---
 # <a name="consuming-libraries-and-components"></a>Consumindo bibliotecas e componentes
 
@@ -26,7 +26,7 @@ Para consumir uma biblioteca que você baixou usando o Gerenciador de pacotes do
 
 Se seu projeto de biblioteca estática estiver sendo compilado na mesma solução:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>inclua os arquivos de cabeçalho da biblioteca estática usando aspas. Em uma solução típica, o caminho começará `../<library project name>`. O IntelliSense irá ajudá-lo a encontrá-lo.
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>inclua os arquivos de cabeçalho da biblioteca estática usando aspas. Em uma solução típica, o caminho começará `../<library project name>` . O IntelliSense irá ajudá-lo a encontrá-lo.
 2. Adicione uma referência ao projeto de biblioteca estática. Clique com o botão direito do mouse em **referências** no nó do projeto de aplicativo em **Gerenciador de soluções** e escolha **Adicionar referência**.
 
 Se a biblioteca estática não fizer parte da solução:
@@ -98,11 +98,11 @@ As propriedades a seguir estão disponíveis em vários tipos de referências. E
 
 - **Copiar assemblies satélite locais (C++/CLI)**
 
-   Especifica se os assemblies satélite serão copiados automaticamente do assembly referenciado para o local de destino durante um build. Usado somente se **Local da cópia** for **true**.
+   Especifica se os assemblies satélite serão copiados automaticamente do assembly referenciado para o local de destino durante um build. Usado somente se a **cópia local** for **`true`** .
 
 - **Saída do Assembly de Referência**
 
-   Especifica que esse assembly é usado no processo de build. Se for **true**, o assembly será usado na linha de comando do compilador durante o build.
+   Especifica que esse assembly é usado no processo de build. Se **`true`** , o assembly será usado na linha de comando do compilador durante a compilação.
 
 ### <a name="project-to-project-reference-properties"></a>Propriedades de referência projeto a projeto
 
@@ -158,7 +158,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
 - **Nome Forte**
 
-   `true` se o assembly referenciado tem um nome forte. Um assembly com nome forte tem uma versão exclusiva.
+   **`true`** Se o assembly referenciado tiver um nome forte. Um assembly com nome forte tem uma versão exclusiva.
 
 - **Versão**
 

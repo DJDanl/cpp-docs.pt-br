@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 441006c977b4a4249270d0f4809da0fba0163395
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688250"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230059"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-Descreve um objeto que armazena um par ordenado de objetos do tipo **float**, o primeiro que representa a parte real de um número complexo e o segundo que representa a parte imaginária.
+Descreve um objeto que armazena um par ordenado de objetos do tipo **`float`** , o primeiro que representa a parte real de um número complexo e o segundo que representa a parte imaginária.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,26 +39,26 @@ constexpr complex(
 };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_RealVal*
-O valor do tipo **float** da parte real do número complexo que está sendo construído.
+*_RealVal*\
+O valor do tipo **`float`** para a parte real do número complexo que está sendo construído.
 
-@No__t_1 *_ImagVal*
-O valor do tipo **float** da parte imaginária do número complexo que está sendo construído.
+*_ImagVal*\
+O valor do tipo **`float`** para a parte imaginário do número complexo que está sendo construído.
 
-\ *complexNum*
-O número complexo do tipo **Double** ou do tipo **Long double** cujas partes reais e imaginários são usadas para inicializar um número complexo do tipo **float** que está sendo construído.
+*complexNum*\
+O número complexo do tipo **`double`** ou do tipo **`long double`** cujas partes reais e imaginários são usadas para inicializar um número complexo de tipo **`float`** que está sendo construído.
 
 ## <a name="return-value"></a>Valor retornado
 
-Um número complexo do tipo **float**.
+Um número complexo de tipo **`float`** .
 
 ## <a name="remarks"></a>Comentários
 
-A especialização explícita do modelo de classe complexo para uma classe complexa do tipo **float** difere do modelo de classe somente nos construtores que ele define. A conversão de **float** para **Double** pode ser implícita, mas a conversão menos segura de **float** para **Long double** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
+A especialização explícita do modelo de classe complexa para uma classe complexa de tipo **`float`** difere do modelo de classe somente nos construtores que ele define. A conversão de **`float`** para pode **`double`** ser implícita, mas a conversão menos segura de **`float`** para **`long double`** é necessária para ser **`explicit`** . O uso de **`explicit`** regras para a inicialização com a conversão de tipo usando a sintaxe de atribuição.
 
-Para obter mais informações sobre o modelo de classe `complex`, consulte [classe complexa](../standard-library/complex-class.md). Para obter uma lista de membros do modelo de classe `complex`, consulte.
+Para obter mais informações sobre o modelo de classe `complex` , consulte [classe complexa](../standard-library/complex-class.md). Para obter uma lista de membros do modelo de classe `complex` , consulte.
 
 ## <a name="example"></a>Exemplo
 
@@ -118,11 +118,11 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: \<complexo>
+**Cabeçalho**:\<complex>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Classe complex](../standard-library/complex-class.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Classe complexa](../standard-library/complex-class.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

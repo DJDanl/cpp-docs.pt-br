@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2ae73ab4ca91e06e3b6cd41166a8d05ae0857e4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857093"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229695"
 ---
 # <a name="function-body"></a>Corpo da função
 
@@ -25,12 +25,12 @@ Um *corpo de função* é uma instrução composta que contém as instruções q
 
 /\**Attribute-Seq* é específico da Microsoft\*/
 
-*instrução composta*:/\* o corpo da função\*/<br/>
+*instrução composta*:/ \* o corpo da função\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{** *declaração-lista*de instruções<sub>opt</sub> *-lista*<sub>opt</sub> **}**
 
-Variáveis declaradas em um corpo da função, conhecidas como *variáveis locais*, têm a classe de armazenamento **auto**, a menos que especificado o contrário. Quando a função for chamada, o armazenamento é criado para as variáveis locais e as inicializações de local são executadas. O controle de execução passa para a primeira instrução em *compound-statement* e continua até que uma instrução **return** seja executada ou o final do corpo da função seja encontrado. O controle então retorna para o ponto no qual a função foi chamada.
+Variáveis declaradas em um corpo de função, conhecidas como *variáveis locais*, têm **`auto`** a classe de armazenamento, a menos que especificado de outra forma. Quando a função for chamada, o armazenamento é criado para as variáveis locais e as inicializações de local são executadas. O controle de execução passa para a primeira instrução na *instrução composta* e continua até que uma **`return`** instrução seja executada ou o final do corpo da função seja encontrado. O controle então retorna para o ponto no qual a função foi chamada.
 
-Uma instrução **return** que contenha uma expressão deverá ser executada se a função tiver que retornar um valor. O valor de retorno de uma função será indefinido se nenhuma instrução **return** for executada ou se a instrução **return** não incluir uma expressão.
+Uma **`return`** instrução que contém uma expressão deve ser executada se a função for retornar um valor. O valor de retorno de uma função será indefinido se nenhuma **`return`** instrução for executada ou se a **`return`** instrução não incluir uma expressão.
 
 ## <a name="see-also"></a>Confira também
 

@@ -1,5 +1,5 @@
 ---
-title: Parâmetros
+title: parâmetros
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arguments [C++], function
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 78ad91ea86d81a3b6d888335ba7b78399a1d2aea
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 57648747bbb50ffe46b199a03563757c331f088a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032064"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229565"
 ---
 # <a name="parameters"></a>parâmetros
 
@@ -25,39 +25,37 @@ Os argumentos são nomes de valores transmitidos a uma função por uma chamada 
 
 ## <a name="syntax"></a>Sintaxe
 
-*função-definição*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+*`function-definition`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`*<sub>aceitar</sub> *`attribute-seq`* <sub>aceitar</sub> *`declarator`* *`declaration-list`* <sub>aceitar</sub>*`compound-statement`*
 
-/\**Attribute-Seq* é específico da Microsoft\*/
+/\**`attribute-seq`* é específico da Microsoft\*/
 
-*Declarador*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*`declarator`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>aceitar</sub>*`direct-declarator`*
 
-*Declarador direto*:\* /um Declarador de função\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Declarador *direto***(***tipo de parâmetro-lista***)**  / \* Declarador de novo estilo      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declarador direto***(***opção identificador-lista*<sub>opt</sub> **)**  / \* Declarador de estilo obsoleto    \*/
+*`direct-declarator`*:/ \* Um Declarador de função\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`parameter-type-list`*  **`)`** /\*Declarador de novo estilo\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`identifier-list`*<sub>opt</sub> **`)`**  / aceitar \* Declarador de estilo obsoleto\*/
 
-*tipo de parâmetro-lista*:/\* a lista de parâmetros\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*lista de parâmetros* **,...**
+*`parameter-type-list`*:/ \* A lista de parâmetros\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
 
-*lista de parâmetros*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaração de parâmetro*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parâmetro-List* **,**  *declaração de parâmetro*
+*`parameter-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-declaration`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`,`**  *`parameter-declaration`*
 
-*parameter-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *abstract-declarator*<sub>opt</sub>
+*`parameter-declaration`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`* *`declarator`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`abstract-declarator`* <sub>aceitar</sub>
 
-A *parameter-type-list* é uma sequência de declarações de parâmetro separadas por vírgulas. O formulário de cada parâmetro em uma lista de parâmetros tem esta aparência:
+O *`parameter-type-list`* é uma sequência de declarações de parâmetro separadas por vírgulas. O formulário de cada parâmetro em uma lista de parâmetros tem esta aparência:
 
-```C
-[register]  type-specifier [declarator]
-```
+> **`register`**<sub>aceitar</sub> *`type-specifier`* *`declarator`* <sub>aceitar</sub>
 
-Os parâmetros de função declarados com o atributo **auto** geram erros. Os identificadores dos parâmetros são usados no corpo da função para fazer referência aos valores transmitidos à função. Você pode nomear os parâmetros em um protótipo, mas os nomes saem do escopo no final da declaração. Portanto, os nomes dos parâmetros podem ser atribuídos da mesma maneira ou de maneira diferente na definição da função. Esses identificadores não podem ser redefinidos no bloco externo do corpo da função, mas podem ser redefinidos em blocos internos e aninhados, como se a lista de parâmetros fosse um bloco delimitador.
+Parâmetros de função declarados com o **`auto`** atributo geram erros. Os identificadores dos parâmetros são usados no corpo da função para fazer referência aos valores transmitidos à função. Você pode nomear os parâmetros em um protótipo, mas os nomes saem do escopo no final da declaração. Isso significa que os nomes de parâmetros podem ser atribuídos da mesma maneira ou de forma diferente na definição da função. Esses identificadores não podem ser redefinidos no bloco mais externo do corpo da função, mas podem ser redefinidos em blocos internos e aninhados como se a lista de parâmetros fosse um bloco delimitador.
 
-Cada identificador em *parameter-type-list* deve ser precedido pelo especificador de tipo apropriado, conforme mostrado neste exemplo:
+Cada identificador em *`parameter-type-list`* deve ser precedido por seu especificador de tipo apropriado, conforme mostrado neste exemplo:
 
 ```C
 void new( double x, double y, double z )
@@ -66,13 +64,13 @@ void new( double x, double y, double z )
 }
 ```
 
-Se pelo menos um parâmetro ocorrer na lista de parâmetros, a lista poderá terminar com uma vírgula seguida de três pontos (**,...**). Essa construção, chamada de "notação de reticências", indica um número variável de argumentos para a função. (Consulte [chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obter mais informações.) No entanto, uma chamada para a função deve ter pelo menos tantos argumentos quantos houver parâmetros antes da última vírgula.
+Se pelo menos um parâmetro ocorrer na lista de parâmetros, a lista poderá terminar com uma vírgula seguida de três pontos ( **`, ...`** ). Essa construção, chamada "notação de reticências", indica um número variável de argumentos para a função. (Para obter mais informações, consulte [chamadas com um número variável de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md).) No entanto, uma chamada para a função deve ter pelo menos tantos argumentos quantos houver parâmetros antes da última vírgula.
 
-Se nenhum argumento for transmitido à função, a lista de parâmetros será substituída pela palavra-chave `void`. Esse uso de `void` é diferente do seu uso como um especificador de tipo.
+Se nenhum argumento for passado para a função, a lista de parâmetros será substituída pela palavra-chave **`void`** . Esse uso de **`void`** é diferente de seu uso como um especificador de tipo.
 
 A ordem e o tipo de parâmetros, inclusive qualquer uso da notação de reticências, devem ser iguais em todas as declarações de função (se houver) e na definição da função. Os tipos de argumentos depois das conversões aritméticas comuns devem ter atribuições compatíveis com os tipos dos parâmetros correspondentes. (Consulte [conversões aritméticas usuais](../c-language/usual-arithmetic-conversions.md) para obter informações sobre conversões aritméticas.) Os argumentos após as reticências não são verificados. Um parâmetro pode ter qualquer tipo fundamental, de estrutura, união, ponteiro ou matriz.
 
-O compilador executa as conversões aritméticas comuns independentemente em cada parâmetro e em cada argumento, se necessário. Após a conversão, nenhum parâmetro é menor que `int` e nenhum parâmetro tem o tipo **float**, a menos que o tipo de parâmetro seja especificado explicitamente como **float** no protótipo. Isso significa, por exemplo, que declarar um parâmetro como `char` tem o mesmo efeito que declará-lo o como `int`.
+O compilador executa as conversões aritméticas comuns independentemente em cada parâmetro e em cada argumento, se necessário. Após a conversão, nenhum parâmetro é menor que um **`int`** , e nenhum parâmetro tem **`float`** o tipo, a menos que o tipo de parâmetro seja explicitamente especificado como **`float`** no protótipo. Isso significa, por exemplo, que declarar um parâmetro como um **`char`** tem o mesmo efeito que declará-lo como um **`int`** .
 
 ## <a name="see-also"></a>Confira também
 

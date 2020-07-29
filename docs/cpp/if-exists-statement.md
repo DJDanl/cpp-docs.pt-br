@@ -8,16 +8,16 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 609d576c6ab3eddca569ed4f19a4024b47b6a1d2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 611fe53b960a7c8f80990240aa4fc8ac4affb606
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374148"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187394"
 ---
 # <a name="__if_exists-statement"></a>Instrução __if_exists
 
-A **declaração __if_exists** testa se o identificador especificado existe. Se o identificador especificado existir, o bloco de instrução especificado é executado.
+A **`__if_exists`** instrução testa se o identificador especificado existe. Se o identificador especificado existir, o bloco de instrução especificado é executado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,23 +31,23 @@ statements
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Identificador*|O identificador cuja existência você deseja testar.|
-|*Declarações*|Uma ou mais instruções para executar se *o identificador* existir.|
+|*ID*|O identificador cuja existência você deseja testar.|
+|*instruções*|Uma ou mais instruções para executar se o *identificador* existir.|
 
 ## <a name="remarks"></a>Comentários
 
 > [!CAUTION]
-> Para obter os resultados mais confiáveis, use a **declaração __if_exists** sob as seguintes restrições.
+> Para obter os resultados mais confiáveis, use a **`__if_exists`** instrução sob as restrições a seguir.
 
-- Aplique a **instrução __if_exists** apenas a tipos simples, não a modelos.
+- Aplique a **`__if_exists`** instrução somente a tipos simples, não a modelos.
 
-- Aplique a **__if_exists** declaração aos identificadores dentro ou fora de uma classe. Não aplique a **__if_exists** declaração às variáveis locais.
+- Aplique a **`__if_exists`** instrução aos identificadores dentro ou fora de uma classe. Não aplique a **`__if_exists`** instrução a variáveis locais.
 
-- Use a **__if_exists** declaração apenas no corpo de uma função. Fora do corpo de uma função, a **declaração __if_exists** pode testar apenas tipos totalmente definidos.
+- Use a **`__if_exists`** instrução somente no corpo de uma função. Fora do corpo de uma função, a **`__if_exists`** instrução pode testar apenas tipos totalmente definidos.
 
 - Quando você testa funções sobrecarregadas, não é possível testar um formato específico de sobrecarga.
 
-O complemento da declaração **__if_exists** é a declaração [__if_not_exists.](../cpp/if-not-exists-statement.md)
+O complemento à **`__if_exists`** instrução é a instrução [__if_not_exists](../cpp/if-not-exists-statement.md) .
 
 ## <a name="example"></a>Exemplo
 
@@ -125,4 +125,4 @@ C::f exists
 
 [Instruções de seleção](../cpp/selection-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[Declaração de __if_not_exists](../cpp/if-not-exists-statement.md)
+[Instrução __if_not_exists](../cpp/if-not-exists-statement.md)

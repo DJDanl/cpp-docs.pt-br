@@ -2,12 +2,12 @@
 title: 'Guia de portabilidade: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: f4fece07b9ea4541d8bf21dd81fd659b44f39718
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c21049a2faa8bb34ecd1ba75a5beda1db119f0fc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368452"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230279"
 ---
 # <a name="porting-guide-com-spy"></a>Guia de portabilidade: COM Spy
 
@@ -17,7 +17,7 @@ Este tópico é o segundo de uma série de artigos que demonstra o processo de a
 
 COMSpy é um programa que monitora e registra a atividade dos componentes de serviço em um computador. Os componentes de serviço são componentes COM+ que são executados em um sistema e podem ser usados por computadores na mesma rede. Eles são gerenciados pela funcionalidade Serviços de Componentes no Painel de Controle do Windows.
 
-### <a name="step-1-converting-the-project-file"></a>Etapa 1. Conversão do arquivo do projeto
+### <a name="step-1-converting-the-project-file"></a>Etapa 1. Convertendo o arquivo de projeto
 
 O arquivo de projeto é convertido facilmente e produz um relatório de migração. Há algumas entradas no relatório que nos informam sobre problemas com os quais talvez seja necessário lidar. Este é um problema reportado (observe que ao longo deste tópico, as mensagens de erro às vezes são abreviadas para facilitar a leitura, por exemplo, para remover os caminhos completos):
 
@@ -25,7 +25,7 @@ O arquivo de projeto é convertido facilmente e produz um relatório de migraç�
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-Um dos problemas frequentes na atualização de projetos é que a configuração **Linker OutputFile** na caixa de diálogo propriedades do projeto pode precisar ser revisada. Para projetos anteriores ao Visual Studio 2010, o OutputFile será uma configuração que o assistente de conversão automática com a qual o assistente tem problemas se estiver definida com um valor não padrão. Nesse caso, os caminhos para os arquivos de saída foram definidos para uma pasta não padrão, XP32_DEBUG. Para obter mais informações sobre esse erro, consultamos uma [postagem no blog](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) relacionada à atualização de projeto do Visual Studio C++ 2010, que era a atualização que envolvia a alteração do vcbuild para msbuild, uma mudança significativa. De acordo com essas informações, o valor padrão da configuração de **Arquivo de Saída** ao criar um novo projeto é `$(OutDir)$(TargetName)$(TargetExt)`, mas ele não é definido durante a conversão, pois os projetos convertidos não conseguem verificar se está tudo certo. No entanto, vamos tentar aplicar isso a OutputFile e ver se funciona.  Funciona, portanto, podemos continuar. Se não houver nenhum motivo específico para usar uma pasta de saída não padrão, será recomendável usar o local padrão. Nesse caso, escolhemos deixar o local de saída como o não padrão durante o processo de portabilidade e atualização. `$(OutDir)` é resolvido para a pasta XP32_DEBUG na configuração de **Depuração** e para a pasta ReleaseU para a configuração de **Versão**.
+Um dos problemas frequentes na atualização de projetos é que a configuração de **arquivo_de_saída do vinculador** na caixa de diálogo Propriedades do projeto pode precisar ser revisada. Para projetos anteriores ao Visual Studio 2010, o OutputFile será uma configuração que o assistente de conversão automática com a qual o assistente tem problemas se estiver definida com um valor não padrão. Nesse caso, os caminhos para os arquivos de saída foram definidos para uma pasta não padrão, XP32_DEBUG. Para obter mais informações sobre esse erro, consultamos uma [postagem no blog](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) relacionada à atualização de projeto do Visual Studio C++ 2010, que era a atualização que envolvia a alteração do vcbuild para msbuild, uma mudança significativa. De acordo com essas informações, o valor padrão da configuração de **Arquivo de Saída** ao criar um novo projeto é `$(OutDir)$(TargetName)$(TargetExt)`, mas ele não é definido durante a conversão, pois os projetos convertidos não conseguem verificar se está tudo certo. No entanto, vamos tentar aplicar isso a OutputFile e ver se funciona.  Funciona, portanto, podemos continuar. Se não houver nenhum motivo específico para usar uma pasta de saída não padrão, será recomendável usar o local padrão. Nesse caso, escolhemos deixar o local de saída como o não padrão durante o processo de portabilidade e atualização. `$(OutDir)` é resolvido para a pasta XP32_DEBUG na configuração de **Depuração** e para a pasta ReleaseU para a configuração de **Versão**.
 
 ### <a name="step-2-getting-it-to-build"></a>Etapa 2. Realização do build
 
@@ -66,7 +66,7 @@ O próximo erro lida com o registro.
 error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\ComSpyCtl\.\XP32_DEBUG\ComSpyCtl.lib"error MSB3073: echo regsvr32 exec. time > ".\XP32_DEBUG\regsvr32.trg"error MSB3073:error MSB3073: :VCEnd" exited with code 3.
 ```
 
-Esse comando pós-build não é mais necessário. Em vez disso, simplesmente removemos o comando de compilação personalizada e especificamos nas configurações **do Linker** para registrar a saída.
+Esse comando pós-build não é mais necessário. Em vez disso, simplesmente removemos o comando de Build personalizado e especificamos as configurações do **vinculador** para registrar a saída.
 
 ### <a name="dealing-with-warnings"></a>Lidando com os avisos
 
@@ -115,7 +115,7 @@ for (i=0;i<lCount;i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-O problema é que `i` é declarado como `UINT` e `lCount` é declarado como **long**, resultando na incompatibilidade de com sinal/sem sinal. Seria inconveniente alterar o tipo de `lCount` para `UINT`, pois ele obtém seu valor de `IMtsEventInfo::get_Count`, que usa o tipo **long** e não está no código do usuário. Então adicionamos uma conversão ao código. Um elenco estilo C faria para um elenco numérico como este, mas **static_cast** é o estilo recomendado.
+O problema é `i` declarado como `UINT` e `lCount` é declarado como **`long`** , portanto, a incompatibilidade de sinal/não assinado. Seria inconveniente alterar o tipo de `lCount` para `UINT` , já que ele obtém seu valor `IMtsEventInfo::get_Count` , que usa o tipo **`long`** e não está no código do usuário. Então adicionamos uma conversão ao código. Uma conversão em estilo C faria para uma conversão numérica, como esta, mas **`static_cast`** é o estilo recomendado.
 
 ```cpp
 for (i=0;i<static_cast<UINT>(lCount);i++)
@@ -143,7 +143,7 @@ virtual ~CWindowImplRoot()
 
 O `hWnd` normalmente é definido como zero na função `WindowProc`, mas isso não aconteceu porque em vez do `WindowProc` padrão, um manipulador personalizado foi chamado para a mensagem do Windows (WM_SYSCOMMAND) que fecha a janela. O manipulador personalizado não estava definindo o `hWnd` como zero. Uma observação do código semelhante na classe `CWnd` do MFC mostra que quando uma janela está sendo destruída, `OnNcDestroy` é chamado e, no MFC, a documentação recomenda que ao substituir `CWnd::OnNcDestroy`, o `NcDestroy` base deve ser chamado para garantir que as operações de limpeza certas ocorram, incluindo a separação do identificador da janela em relação à janela ou, em outras palavras, a configuração de `hWnd` para zero. Essa declaração pode ter sido disparada na versão original do exemplo também, uma vez que o mesmo código de asserção estava presente na versão antiga do atlwin.h.
 
-Para testar a funcionalidade do aplicativo, criamos um **Componente Atendido** usando o modelo de projeto ATL, optamos por adicionar suporte com+ no assistente de projeto ATL. Se você não trabalhou com componentes reparados antes, não é difícil criar um e obter um registrado e disponível no sistema ou rede para outros aplicativos usarem. O aplicativo COM Spy foi projetado para monitorar a atividade dos componentes de serviço como um auxílio de diagnóstico.
+Para testar a funcionalidade do aplicativo, criamos um **componente de serviço** usando o modelo de projeto ATL, optamos por adicionar suporte a com+ no assistente de projeto do ATL. Se você ainda não trabalhou com componentes atendidos, não é difícil criar um e obter um registrado e disponível no sistema ou na rede para que outros aplicativos usem. O aplicativo COM Spy foi projetado para monitorar a atividade dos componentes de serviço como um auxílio de diagnóstico.
 
 Em seguida, adicionamos uma classe, escolhemos o Objeto ATL e especificamos o nome do objeto como `Dog`. Em seguida, em dog.h e dog.cpp, adicionamos a implementação.
 
@@ -156,7 +156,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-Em seguida, construímos e registramos (você precisará executar o Visual Studio como administrador), e o ativamos usando o aplicativo **Serviced Component** no Painel de Controle do Windows. Criamos um projeto Windows Forms do C#, arrastamos um botão para o formulário da caixa de ferramentas e clicamos duas vezes em um manipulador de eventos de clique. Adicionamos o seguinte código para criar uma instância do componente `Dog`.
+Em seguida, nós o criamos e o registramos (você precisará executar o Visual Studio como administrador) e o ativou usando o aplicativo de **componente de serviço** no painel de controle do Windows. Criamos um projeto Windows Forms do C#, arrastamos um botão para o formulário da caixa de ferramentas e clicamos duas vezes em um manipulador de eventos de clique. Adicionamos o seguinte código para criar uma instância do componente `Dog`.
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)

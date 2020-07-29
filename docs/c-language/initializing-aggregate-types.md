@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62326073"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229617"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializando tipos agregados
 
@@ -51,7 +51,7 @@ No entanto, se você especificar o tamanho e fornecer o número incorreto de ini
 
 **Específico da Microsoft**
 
-O tamanho máximo para uma matriz é definido por **size_t**. Definido no arquivo de cabeçalho STDDEF.H, **size_t** é um `unsigned int` com o intervalo de 0x00000000 a 0x7CFFFFFF.
+O tamanho máximo para uma matriz é definido por **size_t**. Definido no arquivo de cabeçalho STDDEF. H, **size_t** é um **`unsigned int`** com o intervalo 0x00000000 a 0x7CFFFFFF.
 
 **FINAL específico da Microsoft**
 
@@ -119,7 +119,7 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 
 Nessa construção, a primeira chave deixada na linha 1 inicia a inicialização de `nlist[0]`, que é uma matriz de três estruturas. Os valores 1, 2 e 3, são atribuídos aos três membros da primeira estrutura. Quando a chave à direita seguinte é encontrada (após o valor 3), a inicialização de `nlist[0]` está concluída, e as duas estruturas restantes na matriz de três estruturas são iniciadas automaticamente como 0. Da mesma forma, `{ 4,5,6 }` inicializa a primeira estrutura na segunda linha de `nlist`. As duas estruturas de `nlist[1]` restantes são definidas como 0. Quando o compilador localizar a lista de inicializadores seguinte ( `{ 7,8,9 }` ), ele tentará inicializar `nlist[2]`. Como a `nlist` tem apenas duas linhas, essa tentativa causará um erro.
 
-Neste exemplo, os três membros de `int` de `x` são inicializados como 1, 2, e 3, respectivamente.
+Neste próximo exemplo, os três **`int`** membros de `x` são inicializados como 1, 2 e 3, respectivamente.
 
 ```C
 struct list

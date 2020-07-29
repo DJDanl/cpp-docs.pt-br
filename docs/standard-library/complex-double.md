@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 8955669f4bc6fd7b3b373751e0e5134205dd1657
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b9bf4780dd78800653804762301b36ff6bb30a92
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689786"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230072"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-Descreve um objeto que armazena um par ordenado de objetos do tipo **Double**, o primeiro que representa a parte real de um número complexo e o segundo que representa a parte imaginária.
+Descreve um objeto que armazena um par ordenado de objetos do tipo **`double`** , o primeiro que representa a parte real de um número complexo e o segundo que representa a parte imaginária.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,26 +34,26 @@ constexpr explicit complex(const complex<long double>& complexNum);
 };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *RealVal*
-O valor do tipo **double** da parte real do número complexo que está sendo construído.
+*RealVal*\
+O valor do tipo **`double`** para a parte real do número complexo que está sendo construído.
 
-@No__t_1 *ImagVal*
-O valor do tipo **double** da parte imaginária do número complexo que está sendo construído.
+*ImagVal*\
+O valor do tipo **`double`** para a parte imaginário do número complexo que está sendo construído.
 
-\ *complexNum*
-O número complexo do tipo **float** ou do tipo **Long double** cujas partes reais e imaginários são usadas para inicializar um número complexo de tipo **Double** que está sendo construído.
+*complexNum*\
+O número complexo do tipo **`float`** ou do tipo **`long double`** cujas partes reais e imaginários são usadas para inicializar um número complexo de tipo **`double`** que está sendo construído.
 
 ## <a name="return-value"></a>Valor retornado
 
-Um número complexo do tipo **double**.
+Um número complexo de tipo **`double`** .
 
 ## <a name="remarks"></a>Comentários
 
-A especialização explícita do modelo de classe complexo para uma classe complexa do tipo **Double** difere do modelo de classe somente nos construtores que ele define. A conversão de **float** para **Double** pode ser implícita, mas a conversão de **Long duplo** para **Double** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
+A especialização explícita do modelo de classe complexa para uma classe complexa de tipo **`double`** difere do modelo de classe somente nos construtores que ele define. A conversão de **`float`** para pode **`double`** ser implícita, mas a conversão de **`long double`** para **`double`** é necessária para ser **`explicit`** . O uso de **`explicit`** regras para a inicialização com a conversão de tipo usando a sintaxe de atribuição.
 
-Para obter mais informações sobre o modelo de classe `complex`, consulte [classe complexa](../standard-library/complex-class.md). Para obter uma lista de membros do modelo de classe `complex`, consulte.
+Para obter mais informações sobre o modelo de classe `complex` , consulte [classe complexa](../standard-library/complex-class.md). Para obter uma lista de membros do modelo de classe `complex` , consulte.
 
 ## <a name="example"></a>Exemplo
 
@@ -112,11 +112,11 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: \<complexo>
+**Cabeçalho**:\<complex>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Classe complex](../standard-library/complex-class.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Classe complexa](../standard-library/complex-class.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

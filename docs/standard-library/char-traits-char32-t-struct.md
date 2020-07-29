@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 9a5cf2eb7734a20d04ec5c47ae71e80180a7b29d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0daf61f641b0b68bf806bba081b3c312777c6fe7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459047"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230201"
 ---
-# <a name="chartraitsltchar32tgt-struct"></a>Struct char_traits&lt;char32_t&gt;
+# <a name="char_traitsltchar32_tgt-struct"></a>Struct char_traits&lt;char32_t&gt;
 
-Uma struct é uma especialização da struct de modelo **char_traits\<CharType>** para um elemento do tipo `char32_t`.
+Uma struct que é uma especialização da estrutura do **modelo \<CharType> char_traits** a um elemento do tipo **`char32_t`** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,15 +27,15 @@ struct char_traits<char32_t>;
 
 ## <a name="remarks"></a>Comentários
 
-A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos desse tipo `char32_t`.
+A especialização permite que a estrutura Aproveite as funções de biblioteca que manipulam objetos desse tipo **`char32_t`** .
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<string>
+**Cabeçalho:**\<string>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<string>](../standard-library/string.md)\
-[Struct char_traits](../standard-library/char-traits-struct.md)
+[char_traits struct](../standard-library/char-traits-struct.md)

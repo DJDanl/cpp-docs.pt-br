@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-ms.openlocfilehash: d83f5278c2c4f8344334bfce40946612e9ca3e56
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53a77ff993d3a99cae1ec8e48a06dd7800ce74c7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448958"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230214"
 ---
-# <a name="chartraitsltchar16tgt-struct"></a>Struct char_traits&lt;char16_t&gt;
+# <a name="char_traitsltchar16_tgt-struct"></a>Struct char_traits&lt;char16_t&gt;
 
-Uma struct é uma especialização da struct de modelo **char_traits\<CharType>** para um elemento do tipo `char16_t`.
+Uma struct que é uma especialização da estrutura do **modelo \<CharType> char_traits** a um elemento do tipo **`char16_t`** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,16 +27,16 @@ struct char_traits<char16_t>;
 
 ## <a name="remarks"></a>Comentários
 
-A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos do tipo `char16_t`.
+A especialização permite que a estrutura Aproveite as funções de biblioteca que manipulam objetos do tipo **`char16_t`** .
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<string>
+**Cabeçalho:**\<string>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<string>](../standard-library/string.md)\
-[Struct char_traits](../standard-library/char-traits-struct.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[char_traits struct](../standard-library/char-traits-struct.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

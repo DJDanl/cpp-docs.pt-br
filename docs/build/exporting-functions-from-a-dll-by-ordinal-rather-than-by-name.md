@@ -7,16 +7,16 @@ helpviewer_keywords:
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-ms.openlocfilehash: 66e99b18d181e9067e90398c35a61db2da66c301
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3229c98a0a6bbb0ebc4fa0ef055e4019bd6c7bd8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229812"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Exportando funções a partir de uma DLL por ordinal e não por nome
 
-A maneira mais simples de exportar funções de sua DLL é exportá-las por nome. Isso é o que acontece quando você usa **__declspec (dllexport)**, por exemplo. Mas, em vez disso, você pode exportar funções por ordinal. Com essa técnica, você deve usar um arquivo. def em vez de **__declspec (dllexport)**. Para especificar o valor ordinal de uma função, acrescente seu ordinal ao nome da função no arquivo. def. Para obter informações sobre como especificar ordinais, consulte [exportando de uma DLL usando arquivos. def](exporting-from-a-dll-using-def-files.md).
+A maneira mais simples de exportar funções de sua DLL é exportá-las por nome. Isso é o que acontece quando você usa **`__declspec(dllexport)`** , por exemplo. Mas, em vez disso, você pode exportar funções por ordinal. Com essa técnica, você deve usar um arquivo. def em vez de **`__declspec(dllexport)`** . Para especificar o valor ordinal de uma função, acrescente seu ordinal ao nome da função no arquivo. def. Para obter informações sobre como especificar ordinais, consulte [exportando de uma DLL usando arquivos. def](exporting-from-a-dll-using-def-files.md).
 
 > [!TIP]
 > Se você quiser otimizar o tamanho do arquivo de sua DLL, use o atributo **NoName** em cada função exportada. Com o atributo **NoName** , os ordinais são armazenados na tabela de exportação da dll em vez dos nomes de função. Isso pode ser uma economia considerável se você estiver exportando muitas funções.

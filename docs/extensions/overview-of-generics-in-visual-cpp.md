@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 875fc3334d326315890396ee02e55b5880e8692e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172068"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195558"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Visão geral de genéricos em C++/CLI
 
@@ -47,7 +47,7 @@ Uma declaração genérica contém um ou mais tipos desconhecidos, chamados de *
 
 ### <a name="type-arguments"></a>Argumentos de tipo
 
-O *argumento de tipo* é o tipo real usado no lugar do parâmetro de tipo quando o genérico é especializado para um ou mais tipos específicos. Por exemplo, **int** é o argumento de tipo em `List<int>`. Tipos de valores e tipos de identificadores são os únicos tipos permitidos em um argumento de tipo genérico.
+O *argumento de tipo* é o tipo real usado no lugar do parâmetro de tipo quando o genérico é especializado para um ou mais tipos específicos. Por exemplo, **`int`** é o argumento de tipo em `List<int>` . Tipos de valores e tipos de identificadores são os únicos tipos permitidos em um argumento de tipo genérico.
 
 ### <a name="constructed-type"></a>Tipo construído
 

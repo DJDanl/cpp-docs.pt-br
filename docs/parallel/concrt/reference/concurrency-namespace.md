@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446734"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230370"
 ---
 # <a name="concurrency-namespace"></a>Namespace Concurrency
 
@@ -83,7 +83,7 @@ namespace concurrency;
 |[Classe invalid_link_target](invalid-link-target-class.md)|Essa classe descreve uma exceção lançada quando o `link_target` método de um bloco de mensagens é chamado e o bloco de mensagens não é capaz de vincular ao destino. Isso pode ser o resultado de exceder o número de links que o bloco de mensagens é permitido ou tentar vincular um destino específico duas vezes à mesma fonte.|
 |[Classe invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)|Essa classe descreve uma exceção gerada quando um `task_handle` objeto é agendado várias vezes usando o `run` método de `task_group` um `structured_task_group` objeto ou sem uma chamada intermediária para os `wait` métodos ou `run_and_wait` .|
 |[Classe invalid_operation](invalid-operation-class.md)|Essa classe descreve uma exceção lançada quando uma operação inválida é executada e não é mais precisamente descrita por outro tipo de exceção lançado pelo Tempo de Execução de Simultaneidade.|
-|[Classe invalid_oversubscribe_operation](invalid-oversubscribe-operation-class.md)|Essa classe descreve uma exceção lançada quando o `Context::Oversubscribe` método é chamado com o `_BeginOversubscription` parâmetro definido como `false` sem uma chamada anterior ao `Context::Oversubscribe` método com o `_BeginOversubscription` parâmetro definido como `true` .|
+|[Classe invalid_oversubscribe_operation](invalid-oversubscribe-operation-class.md)|Essa classe descreve uma exceção lançada quando o `Context::Oversubscribe` método é chamado com o `_BeginOversubscription` parâmetro definido como **`false`** sem uma chamada anterior ao `Context::Oversubscribe` método com o `_BeginOversubscription` parâmetro definido como **`true`** .|
 |[Classe invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)|Essa classe descreve uma exceção lançada quando uma chave inválida ou desconhecida é passada para um `SchedulerPolicy` Construtor de objeto ou o `SetPolicyValue` método de um `SchedulerPolicy` objeto é passado para uma chave que deve ser alterada usando outros meios, como o `SetConcurrencyLimits` método.|
 |[Classe invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)|Essa classe descreve uma exceção lançada quando é feita uma tentativa de definir os limites de simultaneidade de um `SchedulerPolicy` objeto de modo que o valor da `MinConcurrency` chave seja menor que o valor da `MaxConcurrency` chave.|
 |[Classe invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)|Essa classe descreve uma exceção gerada quando uma chave de política de um `SchedulerPolicy` objeto é definida como um valor inválido para essa chave.|
@@ -179,7 +179,7 @@ namespace concurrency;
 |[Função asend](concurrency-namespace-functions.md#asend)|Sobrecarregado. Uma operação Send assíncrona, que agenda uma tarefa para propagar os dados para o bloco de destino.|
 |[Função cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Cancela a tarefa atualmente em execução. Essa função pode ser chamada de dentro do corpo de uma tarefa para interromper a execução da tarefa e fazer com que ela entre no estado `canceled`.<br /><br /> Não é um cenário com suporte para chamar essa função se você não estiver dentro do corpo de uma `task`. Isso resultará em um comportamento indefinido, como uma falha ou uma falta de resposta em seu aplicativo.|
 |[Função create_async](concurrency-namespace-functions.md#create_async)|Cria uma construção assíncrona de Windows Runtime com base em um objeto de função ou lambda fornecido pelo usuário. O tipo de retorno de `create_async` é `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` ou `IAsyncOperationWithProgress<TResult, TProgress>^` com base na assinatura do lambda passada para o método.|
-|[Função create_task](concurrency-namespace-functions.md#create_task)|Sobrecarregado. Cria um objeto de [tarefa](task-class.md) ppl. `create_task`pode ser usado em qualquer lugar em que você tenha usado um construtor de tarefa. Ele é fornecido principalmente por conveniência, pois permite o uso da `auto` palavra-chave durante a criação de tarefas.|
+|[Função create_task](concurrency-namespace-functions.md#create_task)|Sobrecarregado. Cria um objeto de [tarefa](task-class.md) ppl. `create_task`pode ser usado em qualquer lugar em que você tenha usado um construtor de tarefa. Ele é fornecido principalmente por conveniência, pois permite o uso da **`auto`** palavra-chave durante a criação de tarefas.|
 |[Função CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Retorna uma interface que representa a instância singleton do Gerenciador de recursos do Tempo de Execução de Simultaneidade. O Gerenciador de recursos é responsável por atribuir recursos a agendadores que desejam cooperar uns com os outros.|
 |[Função DisableTracing](concurrency-namespace-functions.md#disabletracing)|Desabilita o rastreamento no Tempo de Execução de Simultaneidade. Essa função é preterida porque o rastreamento ETW tem o registro cancelado por padrão.|
 |[Função EnableTracing](concurrency-namespace-functions.md#enabletracing)|Habilita o rastreamento no Tempo de Execução de Simultaneidade. Essa função foi preterida porque o rastreamento ETW agora está ativado por padrão.|
@@ -191,7 +191,7 @@ namespace concurrency;
 |[Função GetProcessorNodeCount](concurrency-namespace-functions.md#getprocessornodecount)|Retorna o número de nós NUMA ou pacotes de processador no sistema subjacente.|
 |[Função GetSchedulerId](concurrency-namespace-functions.md#getschedulerid)|Retorna um identificador exclusivo que pode ser atribuído a um Agendador que implementa a `IScheduler` interface.|
 |[Função interruption_point](concurrency-namespace-functions.md#interruption_point)|Cria um ponto de interrupção para o cancelamento. Se um cancelamento estiver em andamento no contexto em que essa função é chamada, isso gerará uma exceção interna que anula a execução do trabalho paralelo em execução no momento. Se o cancelamento não estiver em andamento, a função não fará nada.|
-|[Função is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Retorna uma indicação de se o grupo de tarefas que está atualmente em execução embutida no contexto atual está no meio de um cancelamento ativo (ou será em breve). Observe que, se não houver nenhum grupo de tarefas atualmente em execução embutido no contexto atual, `false` será retornado.|
+|[Função is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Retorna uma indicação de se o grupo de tarefas que está atualmente em execução embutida no contexto atual está no meio de um cancelamento ativo (ou será em breve). Observe que, se não houver nenhum grupo de tarefas atualmente em execução embutido no contexto atual, **`false`** será retornado.|
 |[Função make_choice](concurrency-namespace-functions.md#make_choice)|Sobrecarregado. Constrói um `choice` bloco de mensagens de um opcional `Scheduler` ou `ScheduleGroup` e duas ou mais fontes de entrada.|
 |[Função make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Sobrecarregado. Constrói um `greedy multitype_join` bloco de mensagens de um opcional `Scheduler` ou `ScheduleGroup` e duas ou mais fontes de entrada.|
 |[Função make_join](concurrency-namespace-functions.md#make_join)|Sobrecarregado. Constrói um `non_greedy multitype_join` bloco de mensagens de um opcional `Scheduler` ou `ScheduleGroup` e duas ou mais fontes de entrada.|

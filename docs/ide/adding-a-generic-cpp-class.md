@@ -10,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: 08ebe572da605e0f6d4d712bd7e48159598ba844
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: e81ea442578e69bdd28301eba8f70561f6aa76c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694134"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230539"
 ---
 # <a name="add-a-generic-c-class"></a>Adicionar uma classe C++ genérica
 
@@ -45,30 +45,30 @@ Adiciona uma classe C++ genérica a um projeto. A classe não herda da ATL ou do
 
 - **Arquivo .h**
 
-  Define o nome do arquivo de cabeçalho para a nova classe. Por padrão, esse nome baseia-se no nome fornecido em **Nome da classe**. Para salvar o arquivo de cabeçalho na localização de sua escolha ou para acrescentar a declaração de classe a um arquivo existente, selecione o botão de reticências (**...**). Se você especificar um arquivo existente e selecionar **Concluir**, o assistente solicitará que você especifique se a declaração de classe deve ser anexada ao conteúdo do arquivo. Para acrescentar a declaração, selecione **Sim**; para retornar ao assistente e especificar outro nome de arquivo, selecione **Não**.
+  Define o nome do arquivo de cabeçalho para a nova classe. Por padrão, esse nome baseia-se no nome fornecido em **Nome da classe**. Para salvar o arquivo de cabeçalho no local de sua escolha ou anexar a declaração de classe a um arquivo existente, selecione o botão de reticências (**...**). Se você especificar um arquivo existente e selecionar **concluir**, o assistente solicitará que você especifique se a declaração de classe deve ser anexada ao conteúdo do arquivo. Para acrescentar a declaração, selecione **Sim**; para retornar ao assistente e especificar outro nome de arquivo, selecione **Não**.
 
 - **Arquivo .cpp**
 
-  Define o nome do arquivo de implementação para a nova classe. Por padrão, esse nome baseia-se no nome fornecido em **Nome da classe**. Para salvar o arquivo de implementação na localização de sua escolha ou para acrescentar a definição de classe a um arquivo existente, selecione o botão de reticências (**...**). Se você especificar um arquivo existente e selecionar **Concluir**, o assistente solicitará que você especifique se a definição de classe deve ser anexada ao conteúdo do arquivo. Para acrescentar a definição, selecione **Sim**; para retornar ao assistente e especificar outro nome de arquivo, selecione **Não**.
+  Define o nome do arquivo de implementação para a nova classe. Por padrão, esse nome baseia-se no nome fornecido em **Nome da classe**. Para salvar o arquivo de implementação no local de sua escolha ou acrescentar a definição de classe a um arquivo existente, selecione o botão de reticências (**...**). Se você especificar um arquivo existente e selecionar **concluir**, o assistente solicitará que você especifique se a definição de classe deve ser anexada ao conteúdo do arquivo. Para acrescentar a definição, selecione **Sim**; para retornar ao assistente e especificar outro nome de arquivo, selecione **Não**.
 
 - **Classe base**
 
   Define a classe base para a nova classe.
 
-- **Access**
+- **Acesso**
 
-  Define o acesso aos membros da classe base para a nova classe. Modificadores de acesso são palavras-chave que especificam o nível de acesso que outras classes têm às funções de membro de classe. Para obter mais informações sobre como especificar o acesso, confira [Controle de acesso de membro](../cpp/member-access-control-cpp.md). Por padrão, o nível de acesso de classe é definido como `public`.
+  Define o acesso aos membros da classe base para a nova classe. Modificadores de acesso são palavras-chave que especificam o nível de acesso que outras classes têm às funções de membro de classe. Para obter mais informações sobre como especificar o acesso, consulte [controle de acesso de membro](../cpp/member-access-control-cpp.md). Por padrão, o nível de acesso da classe é definido como **`public`** .
 
-  - `public`
-  - `protected`
-  - `private`
+  - **`public`**
+  - **`protected`**
+  - **`private`**
   - **Padrão** (nenhum modificador de acesso é gerado.)
 
 - **Destruidor virtual**
 
   Especifica se o destruidor de classe é virtual. O uso de um destruidor virtual ajuda a garantir que o destruidor correto seja chamado quando instâncias de classes derivadas são excluídas.
 
-- **Embutida**
+- **Embutido**
 
   Gera o construtor de classe e a definição de classe como funções embutidas no arquivo de cabeçalho.
 

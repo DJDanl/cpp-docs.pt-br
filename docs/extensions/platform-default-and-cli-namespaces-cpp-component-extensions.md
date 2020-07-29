@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: df699b12404d9de1a9acaae6e9dc8c00fd2f15df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181818"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195350"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Namespaces plataforma, padrão e cli (C++/CLI e C++/CX)
 
@@ -24,7 +24,7 @@ Um namespace qualifica os nomes dos elementos da linguagem para que os nomes nã
 
 O Visual Studio fornece um namespace padrão para seu projeto quando o projeto é criado. Você pode renomear manualmente o namespace, ainda que no C++/CX o nome do arquivo .winmd deva corresponder ao nome do namespace raiz.
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 Saiba mais em [Namespaces e visibilidade do tipo (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
@@ -42,11 +42,11 @@ using namespace cli;
 
 ### <a name="remarks"></a>Comentários
 
-O C++/CLI é compatível com o namespace **cli**. Para compilar com `/clr`, a instrução **using** na seção Syntax é implícita.
+O C++/CLI é compatível com o namespace **cli**. Ao compilar com `/clr` , a **`using`** instrução na seção sintaxe é implícita.
 
 Os seguintes recursos de linguagem estão no namespace **cli**:
 
-- [Matrizes](arrays-cpp-component-extensions.md)
+- [matrizes](arrays-cpp-component-extensions.md)
 
 - [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)
 
@@ -80,4 +80,4 @@ int main() {
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

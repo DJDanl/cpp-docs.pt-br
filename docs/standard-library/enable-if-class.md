@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 6e6b8a286dca8c451e6920e7f25f07829d3b453f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1017fc315a4440350a0190cf4b40e644cda16876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454212"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230033"
 ---
-# <a name="enableif-class"></a>Classe enable_if
+# <a name="enable_if-class"></a>Classe enable_if
 
-Condicionalmente cria uma instância de um tipo para resolução de sobrecarga SFINAE. O typedef `enable_if<Condition,Type>::type` aninhado existe — e é um sinônimo `Type`para – If e only `Condition` if is **true**.
+Condicionalmente cria uma instância de um tipo para resolução de sobrecarga SFINAE. O typedef aninhado `enable_if<Condition,Type>::type` existe — e é um sinônimo para `Type` – If e only if `Condition` is **`true`** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ template <bool B, class T = void>
 struct enable_if;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *B*\
 O valor que determina a existência do tipo resultante.
@@ -50,7 +50,7 @@ Em C++, a falha de substituição de parâmetros de modelo não é um erro em si
 
 Seguem quatro cenários de exemplo:
 
-- Cenário 1: Encapsulando o tipo de retorno de uma função:
+- Cenário 1: Definindo a disposição do tipo de retorno de uma função:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Cenário 2: Adicionando um parâmetro de função que tem um argumento padrão:
+- Cenário 2: Adicionando um parâmetro de função com um argumento padrão:
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- Cenário 3: Adicionando um parâmetro de modelo que tem um argumento padrão:
+- Cenário 3: Adicionando um parâmetro de modelo com um argumento padrão:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- Cenário 4: Se sua função tiver um argumento não-modelo, você poderá encapsular seu tipo:
+- Cenário 4: Se a sua função tiver um argumento não modelado, você poderá encapsular seu tipo:
 
 ```cpp
     template <typename T>
@@ -92,7 +92,7 @@ s) {// ...
 
 O Cenário 1 não funciona com construtores e operadores de conversão porque eles não possuem tipos de retorno.
 
-O Cenário 2 deixa o parâmetro sem nome. Você poderia dizer `::type Dummy = BAR`, mas o nome `Dummy` é irrelevante, e atribuir um nome a ele provavelmente acionará um aviso de "parâmetro sem referência". Você precisa escolher um tipo de parâmetro de função `FOO` e um argumento padrão `BAR`.  Você poderia dizer **int** e `0`, mas os usuários do seu código poderiam acidentalmente passar para a função um inteiro extra que seria ignorado. Em vez disso, recomendamos que `void **` você use `0` e ou **nullptr** porque quase nada é conversível em `void **`:
+O Cenário 2 deixa o parâmetro sem nome. Você poderia dizer `::type Dummy = BAR`, mas o nome `Dummy` é irrelevante, e atribuir um nome a ele provavelmente acionará um aviso de "parâmetro sem referência". Você precisa escolher um tipo de parâmetro de função `FOO` e um argumento padrão `BAR`.  Você poderia dizer **`int`** e `0` , mas os usuários do seu código poderiam passar acidentalmente para a função um inteiro extra que seria ignorado. Em vez disso, recomendamos que você use `void **` o e `0` ou **`nullptr`** porque quase nada é conversível em `void **` :
 
 ```cpp
 template <your_stuff>
@@ -107,7 +107,7 @@ O Cenário 3 usa o nome `Dummy`, mas é opcional. Apenas "`typename = typename`"
 
 O Cenário 4 funciona em construtores que não têm tipos de retorno e, portanto, soluciona a limitação de disposição do Cenário 1.  Porém, o Cenário 4 está limitado a argumentos de função não modelados, que nem sempre estão disponíveis.  (Usar o Cenário 4 em um argumento de função modelado impede que a dedução do argumento de modelo funcione nele.)
 
-`enable_if` é eficiente, mas também perigoso de usado incorretamente.  Uma vez que seu objetivo é fazer os candidatos desaparecerem antes da resolução de sobrecarga, quando mal utilizado, seus efeitos podem ser muito confusos.  Seguem algumas recomendações:
+`enable_if` é eficiente, mas também perigoso de usado incorretamente.  Uma vez que seu objetivo é fazer os candidatos desaparecerem antes da resolução de sobrecarga, quando mal utilizado, seus efeitos podem ser muito confusos.  Veja algumas recomendações:
 
 - Não use `enable_if` para selecionar entre implementações no momento da compilação. Jamais grave um `enable_if` para `CONDITION` e outro para `!CONDITION`.  Em vez disso, use um padrão *despacho de marca*, por exemplo, um algoritmo que selecione implementações dependendo dos pontos fortes dos iteradores recebidos.
 
@@ -127,16 +127,16 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-Neste exemplo, `make_pair("foo", "bar")` retorna `pair<const char *, const char *>`. A resolução de sobrecarga precisa determinar que `func()` você deseja. `pair<A, B>` tem um construtor de conversão implícita de `pair<X, Y>`.  Isso não é novidade, tinha no C++98. Porém, no C++98/03, a assinatura do construtor de conversão implícita sempre existe, mesmo que seja `pair<int, int>(const pair<const char *, const char *>&)`.  A resolução de sobrecarga não se importa para que uma tentativa de instanciar esse `const char *` Construtor explodir terrivelmente porque não é implicitamente conversível para **int**; só está vendo assinaturas, antes que as definições de função sejam instanciadas.  Portanto, o código de exemplo é ambíguo, pois não existem assinaturas para converter `pair<const char *, const char *>` para `pair<int, int>` e `pair<string, string>`.
+Neste exemplo, `make_pair("foo", "bar")` retorna `pair<const char *, const char *>`. A resolução de sobrecarga precisa determinar que `func()` você deseja. `pair<A, B>` tem um construtor de conversão implícita de `pair<X, Y>`.  Isso não é novidade, tinha no C++98. Porém, no C++98/03, a assinatura do construtor de conversão implícita sempre existe, mesmo que seja `pair<int, int>(const pair<const char *, const char *>&)`.  A resolução de sobrecarga não importa que uma tentativa de instanciar esse construtor explodir terrivelmente porque `const char *` não é implicitamente conversível para **`int`** ; ela só está olhando para assinaturas, antes que as definições de função sejam instanciadas.  Portanto, o código de exemplo é ambíguo, pois não existem assinaturas para converter `pair<const char *, const char *>` para `pair<int, int>` e `pair<string, string>`.
 
 C++11 solucionou essa ambiguidade usando `enable_if` para garantir que `pair<A, B>(const pair<X, Y>&)` exista **apenas** quando `const X&` puder ser implicitamente convertido para `A` e `const Y&` puder ser implicitamente convertido para `B`.  Isso permite que a resolução de sobrecarga determine que `pair<const char *, const char *>` não pode ser convertido para `pair<int, int>` e que a sobrecarga que obtém `pair<string, string>` é viável.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)
