@@ -9,16 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 0f63f65fb4c10fbe2ad538852222e6468b9061d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375394"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212274"
 ---
 # <a name="ltiosgt-typedefs"></a>Typedefs &lt;ios&gt;
 
-## <a name="ios"></a><a name="ios"></a>Ios
+## <a name="ios"></a><a name="ios"></a>Cisco
 
 Dá suporte à classe ios da biblioteca iostream antiga.
 
@@ -28,7 +28,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo de modelo de classe [basic_ios,](../standard-library/basic-ios-class.md)especializado para elementos de **tipo char** com traços de caractere padrão.
+O tipo é um sinônimo para o modelo de classe [basic_ios](../standard-library/basic-ios-class.md), especializado para elementos do tipo **`char`** com características de caractere padrão.
 
 ## <a name="streamoff"></a><a name="streamoff"></a>streamoff
 
@@ -44,7 +44,7 @@ Dá suporte a operações internas.
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um inteiro com sinal que descreve um objeto que pode armazenar um deslocamento de byte envolvido em várias operações de posicionamento de fluxo. Sua representação tem pelo menos 32 bits de valor. Ela não é necessariamente grande o suficiente para representar uma posição de byte arbitrária dentro de um fluxo. O `streamoff(-1)` valor geralmente indica uma compensação errônea.
+O tipo é um inteiro com sinal que descreve um objeto que pode armazenar um deslocamento de byte envolvido em várias operações de posicionamento de fluxo. Sua representação tem pelo menos 32 bits de valor. Ela não é necessariamente grande o suficiente para representar uma posição de byte arbitrária dentro de um fluxo. O valor `streamoff(-1)` geralmente indica um deslocamento errado.
 
 ## <a name="streampos"></a><a name="streampos"></a>streampos
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>streamsize
+## <a name="streamsize"></a><a name="streamsize"></a>StreamSize
 
 Indica o tamanho do fluxo.
 
@@ -127,7 +127,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para modelo de classe [basic_ios,](../standard-library/basic-ios-class.md)especializado para elementos de tipo **wchar_t** com traços de caractere padrão.
+O tipo é um sinônimo para o modelo de classe [basic_ios](../standard-library/basic-ios-class.md), especializado para elementos do tipo **`wchar_t`** com características de caractere padrão.
 
 ## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
 

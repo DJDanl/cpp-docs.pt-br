@@ -5,18 +5,18 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-ms.openlocfilehash: 284a9cb9268c8c794379c6a5468b0f2b9092b7d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1895bf12cb195ef7b4555d400badf112d377547b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317452"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211912"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Descarregando uma DLL carregada com atraso
 
-O carregamento de atraso padrão fornecida pelo auxiliar verifica se os descritores de carregamento de atraso tem um ponteiro e uma cópia da tabela de endereço de importação original (IAT) no campo pUnloadIAT. Nesse caso, ele salvará um ponteiro em uma lista ao descritor de atraso de importação. Isso permite que a função auxiliar localizar a DLL por nome para dar suporte ao descarregamento essa DLL explicitamente.
+O auxiliar de carregamento de atraso fornecido por padrão verifica se os descritores de carga de atraso têm um ponteiro e uma cópia da tabela de endereços de importação original (IAT) no campo pUnloadIAT. Nesse caso, ele salvará um ponteiro em uma lista para o descritor de atraso de importação. Isso permite que a função auxiliar localize a DLL pelo nome para dar suporte ao descarregamento de DLL explicitamente.
 
-Aqui estão as funções para descarregando de maneira explícita uma DLL carregadas com atraso e estruturas associadas:
+Aqui estão as estruturas e funções associadas para descarregar explicitamente uma DLL carregada com atraso:
 
 ```cpp
 //
@@ -43,11 +43,11 @@ ExternC
 PUnloadInfo __puiHead;
 ```
 
-A estrutura UnloadInfo é implementada usando uma classe C++ que usa **LocalAlloc** e **LocalFree** implementações como seu operador **nova** e o operador  **Excluir** , respectivamente. Essas opções são mantidas em uma lista vinculada padrão usando __puiHead como o cabeçalho da lista.
+A estrutura UnloadInfo é implementada usando uma classe C++ que usa implementações **LocalAlloc** e **LocalFree** como operador e operador, **`new`** **`delete`** respectivamente. Essas opções são mantidas em uma lista vinculada padrão usando __puiHead como o cabeçalho da lista.
 
-Chamar __FUnloadDelayLoadedDLL tentará localizar o nome fornecem na lista de DLLs carregadas (uma correspondência exata é necessária). Se encontrado, a cópia da IAT na pUnloadIAT será copiada na parte superior da IAT em execução para restaurar os ponteiros de conversão, a biblioteca é liberada com **FreeLibrary**, a correspondência **UnloadInfo** registro é desvinculado de a lista e excluídos e TRUE será retornado.
+Chamar __FUnloadDelayLoadedDLL tentará localizar o nome fornecido na lista de DLLs carregadas (é necessária uma correspondência exata). Se for encontrado, a cópia do IAT em pUnloadIAT será copiada sobre a parte superior do IAT em execução para restaurar os ponteiros de conversão, a biblioteca será liberada com **FreeLibrary**, o registro **UnloadInfo** correspondente será desvinculado da lista e excluído e true será retornado.
 
-O argumento para a função __FUnloadDelayLoadedDLL2 diferencia maiusculas de minúsculas. Por exemplo, você especificaria:
+O argumento para a função __FUnloadDelayLoadedDLL2 diferencia maiúsculas de minúsculas. Por exemplo, você deve especificar:
 
 ```cpp
 __FUnloadDelayLoadedDLL2("user32.DLL");
@@ -59,6 +59,6 @@ e não:
 __FUnloadDelayLoadedDLL2("User32.DLL");.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Noções básicas sobre a função auxiliar](understanding-the-helper-function.md)
+[Compreendendo a função auxiliar](understanding-the-helper-function.md)

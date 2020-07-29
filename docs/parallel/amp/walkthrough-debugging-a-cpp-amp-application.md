@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 6eb93d617ac9909a67719b144a44ed461701225e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404711"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215875"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Instruções passo a passo: depurando um aplicativo C++ AMP
 
@@ -215,7 +215,7 @@ Em seguida:
 
 ## <a name="debugging-the-cpu-code"></a>Depurando o código de CPU
 
-Neste procedimento, você usará o depurador local do Windows para certificar-se de que o código de CPU neste aplicativo está correto. O segmento do código de CPU neste aplicativo que é especialmente interessante é o `for` loop na `reduction_sum_gpu_kernel` função. Ele controla a redução paralela baseada em árvore que é executada na GPU.
+Neste procedimento, você usará o depurador local do Windows para certificar-se de que o código de CPU neste aplicativo está correto. O segmento do código de CPU neste aplicativo que é especialmente interessante é o **`for`** loop na `reduction_sum_gpu_kernel` função. Ele controla a redução paralela baseada em árvore que é executada na GPU.
 
 ### <a name="to-debug-the-cpu-code"></a>Para depurar o código de CPU
 

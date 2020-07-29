@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 2fe9056996876d24fba285c0c7aaec8607b2509c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8876995f947823d046e0a3ea9a316a4249055d7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375443"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212326"
 ---
 # <a name="hash_multimap-class"></a>Classe hash_multimap
 
@@ -110,16 +110,16 @@ template <class Key,
 class hash_multimap
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+*Chaves*\
 O tipo de dados da chave a ser armazenado no hash_multimap.
 
-*Tipo*\
+*Escreva*\
 O tipo de dados do elemento a ser armazenado no hash_multimap.
 
-*Traços*\
-O tipo que inclui dois objetos de função, um dos *Traços* de classe que é capaz de comparar dois valores de elemento como chaves de classificação `size_t`para determinar sua ordem relativa e uma função hash que é um predicado não ário mapeamento valores-chave dos elementos a inteiros não assinados do tipo . Esse argumento é opcional e o `hash_compare<Key, less<Key>>` é o valor padrão.
+*Características*\
+O tipo que inclui dois objetos Function, uma das *características* de classe que é capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um predicado unário mapeando valores de chave dos elementos para inteiros não assinados do tipo `size_t` . Esse argumento é opcional e o `hash_compare<Key, less<Key>>` é o valor padrão.
 
 *Alocador*\
 O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_multimap. Esse argumento é opcional e o valor padrão é `allocator<pair <const Key, Type>>`.
@@ -138,7 +138,7 @@ O hash_multimap é:
 
 - Um contêiner de par associativo, pois seus valores de elemento são distintos de seus valores de chave.
 
-- Um modelo de classe, porque a funcionalidade que ele fornece é genérico e tão independente do tipo específico de dados contidos como elementos ou chaves. Os tipos de dados a serem usados para elementos e chaves são especificados como parâmetros no modelo de classe juntamente com o alocador e a função de comparação.
+- Um modelo de classe, porque a funcionalidade que ele fornece é genérica e, portanto, independente do tipo específico de dados contido como elementos ou chaves. Os tipos de dados a serem usados para elementos e chaves são especificados como parâmetros no modelo de classe juntamente com o alocador e a função de comparação.
 
 A principal vantagem do uso de hash em vez da classificação é a maior eficiência: um hash bem-sucedido executa inserções, exclusões e localizações em tempos médios constantes, em comparação com um tempo proporcional ao logaritmo do número de elementos no contêiner para técnicas de classificação. O valor de um elemento em um hash_multimap, mas não seu valor de chave associado, pode ser alterado diretamente. Em vez disso, os valores de chave associados aos elementos antigos devem ser excluídos e os novos valores de chave associados aos novos elementos inseridos.
 
@@ -146,9 +146,9 @@ A escolha do tipo de contêiner deve se basear, de modo geral, no tipo de pesqui
 
 O hash_multimap deve ser o contêiner associativo escolhido quando as condições que associam os valores às respectivas chaves forem atendidas pelo aplicativo. Um modelo para esse tipo de estrutura é uma lista ordenada de palavras-chave com valores de cadeia de caracteres associados que fornecem, por exemplo, definições, em que as palavras nem sempre foram definidas exclusivamente. Se, em vez disso, as palavras-chave foram definidas exclusivamente para que essas chaves fossem exclusivas, um hash_multimap seria o contêiner ideal. Se, por outro lado, apenas as listas de palavras estavam sendo armazenadas, um hash_set seria o contêiner correto. Se forem permitidas várias ocorrências das palavras, um hash_multiset seria a estrutura de contêiner apropriada.
 
-O hash_multimap ordena a sequência que controla chamando um objeto `Traits` de hash armazenado do tipo [value_compare](../standard-library/value-compare-class.md). Esse objeto armazenado pode ser acessado chamando a função membro [key_comp](../standard-library/hash-map-class.md#key_comp). Tal objeto de função deve comportar-se da mesma forma que um objeto de [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>`de classe . Especificamente, para todos os valores de `Key` do tipo `Key`, a chamada `Traits (Key)` produz uma distribuição de valores do tipo `size_t`.
+O hash_multimap ordena a sequência que controla chamando um objeto `Traits` de hash armazenado do tipo [value_compare](../standard-library/value-compare-class.md). Esse objeto armazenado pode ser acessado chamando a função membro [key_comp](../standard-library/hash-map-class.md#key_comp). Esse objeto de função deve se comportar da mesma forma que um objeto da classe [hash_compare](../standard-library/hash-compare-class.md) `<Key, less<Key>>` . Especificamente, para todos os valores de `Key` do tipo `Key`, a chamada `Traits (Key)` produz uma distribuição de valores do tipo `size_t`.
 
-De modo geral, os elementos precisam ser simplesmente menores que os comparáveis para estabelecer essa ordem: desse modo, considerando dois elementos, pode ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão. Um predicado binário f(x, y) é um `x` objeto `y` de função que tem dois objetos de argumento e um valor de retorno **de verdadeiro** ou **falso**. Uma ordem imposta a um hash_multimap é uma ordem fraca estrita se o predicado binário for irreflexivo, antissimétrico `x` `y` e transitivo e se a equivalência for transitiva, onde dois objetos e são definidos como equivalentes quando ambos f(x, y) e f(y, x) são **falsos**. Se a condição mais forte de igualdade entre as chaves substituir essa equivalência, a ordenação será total (no sentido de que todos os elementos serão ordenados um em relação ao outro) e as chaves correspondentes não poderão ser diferenciadas uma da outra.
+De modo geral, os elementos precisam ser simplesmente menores que os comparáveis para estabelecer essa ordem: desse modo, considerando dois elementos, pode ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão. Um predicado binário f (x, y) é um objeto de função que tem dois objetos Argument `x` e `y` um valor de retorno de **`true`** ou **`false`** . Uma ordenação imposta em uma hash_multimap é uma ordenação fraca estrita se o predicado binário for irreflexive, antisimétrico e transitiva e se a equivalência for transitiva, em que dois objetos `x` e `y` são definidos como equivalentes quando f (x, y) e f (y, x) forem **`false`** . Se a condição mais forte de igualdade entre as chaves substituir essa equivalência, a ordenação será total (no sentido de que todos os elementos serão ordenados um em relação ao outro) e as chaves correspondentes não poderão ser diferenciadas uma da outra.
 
 A ordem real dos elementos na sequência controlada depende da função de hash, da função de ordenação e do tamanho atual da tabela de hash armazenada no objeto de contêiner. Não é possível determinar o tamanho atual da tabela de hash, portanto, de modo geral, não é possível prever a ordem dos elementos na sequência controlada. A inserção de elementos não invalida iteradores e a remoção de elementos invalida apenas os iteradores que apontavam especificamente os elementos removidos.
 
@@ -165,48 +165,48 @@ O iterador fornecido pela classe hash_multimap é um iterador bidirecional, mas 
 |Nome do tipo|Descrição|
 |-|-|
 |[allocator_type](#allocator_type)|Um tipo que representa a classe `allocator` para o objeto `hash_multimap`.|
-|[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que pode ler um elemento `const` no `hash_multimap`.|
-|[const_pointer](#const_pointer)|Um tipo que fornece um ponteiro para `hash_multimap`um elemento **const** em um .|
-|[const_reference](#const_reference)|Um tipo que fornece uma referência a `hash_multimap` um elemento **const** armazenado em um para leitura e realização de operações de **const.**|
-|[const_reverse_iterator](#const_reverse_iterator)|Um tipo que fornece um iterador bidirecional que `hash_multimap`pode ler qualquer elemento **const** no .|
+|[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que pode ler um **`const`** elemento no `hash_multimap` .|
+|[const_pointer](#const_pointer)|Um tipo que fornece um ponteiro para um **`const`** elemento em um `hash_multimap` .|
+|[const_reference](#const_reference)|Um tipo que fornece uma referência a um **`const`** elemento armazenado em um `hash_multimap` para leitura e execução de **`const`** operações.|
+|[const_reverse_iterator](#const_reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler qualquer **`const`** elemento no `hash_multimap` .|
 |[difference_type](#difference_type)|Um tipo de inteiro com sinal que pode ser usado para representar o número de elementos de um `hash_multimap` em um intervalo entre os elementos apontado pelos iteradores.|
-|[Iterador](#iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar qualquer elemento em um `hash_multimap`.|
+|[repeti](#iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar qualquer elemento em um `hash_multimap`.|
 |[key_compare](#key_compare)|Um tipo que fornece um objeto de função que pode comparar duas chaves de classificação para determinar a ordem relativa de dois elementos no `hash_multimap`.|
 |[key_type](#key_type)|Um tipo que descreve o objeto de chave de classificação que constitui cada elemento do `hash_multimap`.|
 |[mapped_type](#mapped_type)|Um tipo que representa o tipo de dados armazenado em um `hash_multimap`.|
-|[ponteiro](#pointer)|Um tipo que fornece um ponteiro para um elemento em um `hash_multimap`.|
-|[Referência](#reference)|Um tipo que fornece uma referência a um elemento armazenado em um `hash_multimap`.|
+|[refere](#pointer)|Um tipo que fornece um ponteiro para um elemento em um `hash_multimap`.|
+|[reference](#reference)|Um tipo que fornece uma referência a um elemento armazenado em um `hash_multimap`.|
 |[reverse_iterator](#reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar um elemento em um `hash_multimap` invertido.|
 |[size_type](#size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `hash_multimap`.|
-|[Value_type](#value_type)|Um tipo que fornece um objeto de função que pode comparar dois elementos como chaves de classificação para determinar sua ordem relativa no `hash_multimap`.|
+|[value_type](#value_type)|Um tipo que fornece um objeto de função que pode comparar dois elementos como chaves de classificação para determinar sua ordem relativa no `hash_multimap`.|
 
 ### <a name="member-functions"></a>Funções de membro
 
 |Função de membro|Descrição|
 |-|-|
-|[Começar](#begin)|Retorna um iterador que trata o primeiro elemento no `hash_multimap`.|
+|[Comece](#begin)|Retorna um iterador que trata o primeiro elemento no `hash_multimap`.|
 |[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento no `hash_multimap`.|
 |[cend](#cend)|Retorna um iterador const que trata o local após o último elemento em um `hash_multimap`.|
-|[Claro](#clear)|Apaga todos os elementos de um `hash_multimap`.|
+|[formatação](#clear)|Apaga todos os elementos de um `hash_multimap`.|
 |[contagem](#count)|Retorna o número de elementos em um `hash_multimap` cuja chave corresponde a uma chave especificada pelo parâmetro.|
 |[crbegin](#crbegin)|Retorna um iterador const que trata o primeiro elemento em um `hash_multimap` invertido.|
 |[crend](#crend)|Retorna um iterador const que trata o local após o último elemento em um `hash_multimap` invertido.|
 |[emplace](#emplace)|Insere um elemento construído adequadamente em um `hash_multimap`.|
 |[emplace_hint](#emplace_hint)|Insere um elemento construído adequadamente em um `hash_multimap`, com uma dica de posicionamento.|
-|[Vazio](#empty)|Testa se `hash_multimap` está vazio.|
-|[end](#end)|Retorna um iterador que trata o local após o último elemento em um `hash_multimap`.|
-|[Equal_range](#equal_range)|Retorna um iterador que trata o local após o último elemento em um `hash_multimap`.|
+|[empty](#empty)|Testa se `hash_multimap` está vazio.|
+|[completo](#end)|Retorna um iterador que trata o local após o último elemento em um `hash_multimap`.|
+|[equal_range](#equal_range)|Retorna um iterador que trata o local após o último elemento em um `hash_multimap`.|
 |[erase](#erase)|Remove um elemento ou um intervalo de elementos em um `hash_multimap` das posições especificadas|
-|[localizar](#find)|Retorna um iterador que trata do local de um elemento em um `hash_multimap` que tem uma chave equivalente a uma chave especificada.|
+|[find](#find)|Retorna um iterador que trata do local de um elemento em um `hash_multimap` que tem uma chave equivalente a uma chave especificada.|
 |[get_allocator](#get_allocator)|Retorna uma cópia do objeto `allocator` usada para construir o `hash_multimap`.|
 |[insert](#insert)|Insere um elemento ou um intervalo de elementos no `hash_multimap` na posição especificada.|
 |[key_comp](#key_comp)|Recupera uma cópia do objeto de comparação usada para ordenar chaves em um `hash_multimap`.|
 |[lower_bound](#lower_bound)|Retorna um iterador para o primeiro elemento em um `hash_multimap` com um valor de chave que é igual ou maior que uma chave especificada.|
-|[Max_size](#max_size)|Retorna o comprimento máximo do `hash_multimap`.|
+|[max_size](#max_size)|Retorna o comprimento máximo do `hash_multimap`.|
 |[rbegin](#rbegin)|Retorna um iterador que trata o primeiro elemento em um `hash_multimap` invertido.|
 |[rend](#rend)|Retorna um iterador que trata o local após o último elemento em um `hash_multimap` invertido.|
-|[Tamanho](#size)|Especifica um novo tamanho para um `hash_multimap`.|
-|[Trocar](#swap)|Troca os elementos de dois `hash_multimap`s.|
+|[size](#size)|Especifica um novo tamanho para um `hash_multimap`.|
+|[permuta](#swap)|Troca os elementos de dois `hash_multimap`s.|
 |[upper_bound](#upper_bound)|Retorna um iterador para o primeiro elemento em um `hash_multimap` que tem um valor de chave que é maior que uma chave especificada.|
 |[value_comp](#value_comp)|Recupera uma cópia do objeto de comparação usado para ordenar valores de elemento em um `hash_multimap`.|
 
@@ -218,11 +218,11 @@ O iterador fornecido pela classe hash_multimap é um iterador bidirecional, mas 
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<hash_map>
+**Cabeçalho:**\<hash_map>
 
 **Namespace:** stdext
 
-## <a name="hash_multimapallocator_type"></a><a name="allocator_type"></a>hash_multimap:allocator_type
+## <a name="hash_multimapallocator_type"></a><a name="allocator_type"></a>hash_multimap:: allocator_type
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -243,7 +243,7 @@ Para obter mais informações sobre `Allocator`, consulte a seção Comentários
 
 Consulte o exemplo para [get_allocator](#get_allocator) para obter um exemplo do uso de `allocator_type`.
 
-## <a name="hash_multimapbegin"></a><a name="begin"></a>hash_multimap::começar
+## <a name="hash_multimapbegin"></a><a name="begin"></a>hash_multimap:: Begin
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -262,7 +262,7 @@ Um iterador bidirecional que trata do primeiro elemento no hash_multimap ou no l
 
 ### <a name="remarks"></a>Comentários
 
-Se o valor `begin` de retorno `const_iterator`for atribuído a a, os elementos no objeto hash_multimap não podem ser modificados. Se o valor `begin` de retorno `iterator`for atribuído a um , os elementos no objeto hash_multimap podem ser modificados.
+Se o valor de retorno de `begin` for atribuído a um `const_iterator` , os elementos no objeto hash_multimap não poderão ser modificados. Se o valor de retorno de `begin` for atribuído a um `iterator` , os elementos no objeto hash_multimap poderão ser modificados.
 
 ### <a name="example"></a>Exemplo
 
@@ -308,7 +308,7 @@ The first element of hm1 is 0.
 The first element of hm1 is now 1.
 ```
 
-## <a name="hash_multimapcbegin"></a><a name="cbegin"></a>hash_multimap::cbegin
+## <a name="hash_multimapcbegin"></a><a name="cbegin"></a>hash_multimap:: cbegin
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -352,7 +352,7 @@ int main( )
 The first element of hm1 is 2.
 ```
 
-## <a name="hash_multimapcend"></a><a name="cend"></a>hash_multimap::cend
+## <a name="hash_multimapcend"></a><a name="cend"></a>hash_multimap:: cend
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -403,7 +403,7 @@ int main( )
 The value of last element of hm1 is 30.
 ```
 
-## <a name="hash_multimapclear"></a><a name="clear"></a>hash_multimap::claro
+## <a name="hash_multimapclear"></a><a name="clear"></a>hash_multimap:: Clear
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -453,12 +453,12 @@ The size of the hash_multimap is initially 2.
 The size of the hash_multimap after clearing is 0.
 ```
 
-## <a name="hash_multimapconst_iterator"></a><a name="const_iterator"></a>hash_multimap:const_iterator
+## <a name="hash_multimapconst_iterator"></a><a name="const_iterator"></a>hash_multimap:: const_iterator
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
 
-Um tipo que fornece um iterador bidirecional que pode ler um elemento **const** no hash_multimap.
+Um tipo que fornece um iterador bidirecional que pode ler um **`const`** elemento no hash_multimap.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
@@ -468,22 +468,22 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Um tipo de `const_iterator` não pode ser usado para modificar o valor de um elemento.
 
-O `const_iterator` definido por hash_multimap aponta para objetos `pair<const Key, Type>`de [value_type,](#value_type)que são do tipo . O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
+O `const_iterator` definido por hash_multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair<const Key, Type>` . O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
 
-Para desreferenciar um `const_iterator` `cIter` elemento em uma `->` hash_multimap, use o operador.
+Para desreferenciar um `const_iterator` `cIter` apontando para um elemento em um hash_multimap, use o `->` operador.
 
-Para acessar o valor da chave `cIter->first`para o elemento, use, que é equivalente a `(*cIter).first`. Para acessar o valor do dado mapeado para o elemento, use, `cIter->second`que é equivalente a `(*cIter).second`.
+Para acessar o valor da chave do elemento, use `cIter->first` , que é equivalente a `(*cIter).first` . Para acessar o valor da Datum mapeada para o elemento, use `cIter->second` , que é equivalente a `(*cIter).second` .
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [begin](#begin) para obter um exemplo que usa `const_iterator`.
 
-## <a name="hash_multimapconst_pointer"></a><a name="const_pointer"></a>hash_multimap:const_pointer
+## <a name="hash_multimapconst_pointer"></a><a name="const_pointer"></a>hash_multimap:: const_pointer
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
 
-Um tipo que fornece um ponteiro para um elemento **const** em um hash_multimap.
+Um tipo que fornece um ponteiro para um **`const`** elemento em um hash_multimap.
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
@@ -495,12 +495,12 @@ Um tipo de `const_pointer` não pode ser usado para modificar o valor de um elem
 
 Na maioria dos casos, um [iterador](#iterator) deve ser usado para acessar os elementos em um objeto hash_multimap.
 
-## <a name="hash_multimapconst_reference"></a><a name="const_reference"></a>hash_multimap:const_reference
+## <a name="hash_multimapconst_reference"></a><a name="const_reference"></a>hash_multimap:: const_reference
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
 
-Um tipo que fornece uma referência a um elemento **const** armazenado em um hash_multimap para leitura e execução de operações **const**.
+Um tipo que fornece uma referência a um **`const`** elemento armazenado em um hash_multimap para leitura e execução de **`const`** operações.
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
@@ -551,12 +551,12 @@ The key of first element in the hash_multimap is 1.
 The data value of 1st element in the hash_multimap is 10.
 ```
 
-## <a name="hash_multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_multimap:const_reverse_iterator
+## <a name="hash_multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_multimap:: const_reverse_iterator
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
 
-Um tipo que fornece um iterador bidirecional que pode ler qualquer elemento **const** no hash_multimap.
+Um tipo que fornece um iterador bidirecional que pode ler qualquer **`const`** elemento na hash_multimap.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
@@ -566,17 +566,17 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Um tipo `const_reverse_iterator` não pode modificar o valor de um elemento e é usado para iterar no hash_multimap em ordem inversa.
 
-O `const_reverse_iterator` definido por hash_multimap aponta para objetos `pair<const Key, Type>`de [value_type](#value_type), que são do tipo , cujo primeiro membro é a chave para o elemento e cujo segundo membro é o dado mapeado mantido pelo elemento.
+O `const_reverse_iterator` definido por hash_multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair<const Key, Type>` , cujo primeiro membro é a chave para o elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.
 
-Para desreferenciar um `const_reverse_iterator` `crIter` elemento em uma `->` hash_multimap, use o operador.
+Para desreferenciar um `const_reverse_iterator` `crIter` apontando para um elemento em um hash_multimap, use o `->` operador.
 
-Para acessar o valor da chave `crIter->first`para o elemento, use, que é equivalente a `(*crIter).first`. Para acessar o valor do dado mapeado para o elemento, use, `crIter->second`que é equivalente a `(*crIter).second`.
+Para acessar o valor da chave do elemento, use `crIter->first` , que é equivalente a `(*crIter).first` . Para acessar o valor da Datum mapeada para o elemento, use `crIter->second` , que é equivalente a `(*crIter).second` .
 
 ### <a name="example"></a>Exemplo
 
 Veja o exemplo de [rend](#rend) para obter um exemplo de como declarar e usar o `const_reverse_iterator`.
 
-## <a name="hash_multimapcount"></a><a name="count"></a>hash_multimap::contagem
+## <a name="hash_multimapcount"></a><a name="count"></a>hash_multimap:: Count
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -587,9 +587,9 @@ Retorna o número de elementos em um hash_multimap cuja chave corresponde a uma 
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+*chaves*\
 O valor dos elementos a serem correspondidos do hash_multimap.
 
 ### <a name="return-value"></a>Valor retornado
@@ -602,7 +602,7 @@ A função membro retorna o número de elementos no intervalo
 
 **[lower_bound (** `key` **), upper_bound (** `key` **) )**
 
-que têm uma chave de *valor.*
+que têm uma *chave*de valor de chave.
 
 ### <a name="example"></a>Exemplo
 
@@ -649,7 +649,7 @@ The number of elements in hm1 with a sort key of 2 is: 2.
 The number of elements in hm1 with a sort key of 3 is: 0.
 ```
 
-## <a name="hash_multimapcrbegin"></a><a name="crbegin"></a>hash_multimap::crbegin
+## <a name="hash_multimapcrbegin"></a><a name="crbegin"></a>hash_multimap:: crbegin
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -701,7 +701,7 @@ int main( )
 The first element of the reversed hash_multimap hm1 is 3.
 ```
 
-## <a name="hash_multimapcrend"></a><a name="crend"></a>hash_multimap::crend
+## <a name="hash_multimapcrend"></a><a name="crend"></a>hash_multimap:: crend
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -756,7 +756,7 @@ int main( )
 The last element of the reversed hash_multimap hm1 is 3.
 ```
 
-## <a name="hash_multimapdifference_type"></a><a name="difference_type"></a>hash_multimap::difference_type
+## <a name="hash_multimapdifference_type"></a><a name="difference_type"></a>hash_multimap::d ifference_type
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -833,7 +833,7 @@ The keys of the mapped elements are: 1 2 2 3.
 The values of the mapped elements are: 10 20 30 20.
 ```
 
-## <a name="hash_multimapemplace"></a><a name="emplace"></a>hash_multimap::emplace
+## <a name="hash_multimapemplace"></a><a name="emplace"></a>hash_multimap:: emplace
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -888,7 +888,7 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="hash_multimapemplace_hint"></a><a name="emplace_hint"></a>hash_multimap:emplace_hint
+## <a name="hash_multimapemplace_hint"></a><a name="emplace_hint"></a>hash_multimap:: emplace_hint
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -917,7 +917,7 @@ A função membro [hash_multimap::emplace](#emplace) retorna um iterador que apo
 
 O [hash_multimap::value_type](#value_type) de um elemento é um par, de forma que o valor de um elemento será um par ordenado com o primeiro componente igual ao valor de chave e o segundo componente igual ao valor dos dados do elemento.
 
-A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmico, se o ponto de inserção seguir imediatamente *_Where*.
+A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção imediatamente seguir *_Where*.
 
 ### <a name="example"></a>Exemplo
 
@@ -948,7 +948,7 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="hash_multimapempty"></a><a name="empty"></a>hash_multimap::vazio
+## <a name="hash_multimapempty"></a><a name="empty"></a>hash_multimap:: Empty
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -961,7 +961,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o hash_multimap estiver vazio; **false** se o hash_multimap não estiver vazio.
+**`true`** Se o hash_multimap estiver vazio; **`false`** se o hash_multimap não estiver vazio.
 
 ### <a name="remarks"></a>Comentários
 
@@ -999,7 +999,7 @@ The hash_multimap hm1 is not empty.
 The hash_multimap hm2 is empty.
 ```
 
-## <a name="hash_multimapend"></a><a name="end"></a>hash_multimap::fim
+## <a name="hash_multimapend"></a><a name="end"></a>hash_multimap:: End
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1070,7 +1070,7 @@ The value of last element of hm1 is 30.
 The value of last element of hm1 is now 20.
 ```
 
-## <a name="hash_multimapequal_range"></a><a name="equal_range"></a>hash_multimap:equal_range
+## <a name="hash_multimapequal_range"></a><a name="equal_range"></a>hash_multimap:: equal_range
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1083,16 +1083,16 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+*chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
 
 Um par de iteradores em que o primeiro é o [lower_bound](#lower_bound) da chave e o segundo é o [upper_bound](#upper_bound) da chave.
 
-Para acessar o primeiro iterador de um par `pr` retornado pela função membro, use `pr`. **primeiro** e para desreferenciar o \*iterador inferior, use (. `pr` **primeiro**). Para acessar o segundo iterador de um par `pr` retornado pela função membro, use `pr`. **segundo** e para desreferenciar o \*iterador superior, use (. `pr` **segundo**).
+Para acessar o primeiro iterador de um par `pr` retornado pela função membro, use `pr`. **primeiro** e para desreferenciar o iterador de limite inferior, use \* ( `pr` . **primeiro**). Para acessar o segundo iterador de um par `pr` retornado pela função membro, use `pr`. **segundo** e para desreferenciar o iterador de limite superior, use \* ( `pr` . **segundo**).
 
 ### <a name="remarks"></a>Comentários
 
@@ -1159,7 +1159,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_multimap hm1 doesn't have an element with a key less than 4.
 ```
 
-## <a name="hash_multimaperase"></a><a name="erase"></a>hash_multimap::apagar
+## <a name="hash_multimaperase"></a><a name="erase"></a>hash_multimap:: Erase
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1174,18 +1174,18 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Where*\
 Posição do elemento a ser removido do hash_multimap.
 
-*Primeiro*\
+*primeiro*\
 Posição do primeiro elemento removido do hash_multimap.
 
-*Última*\
+*última*\
 Posição logo após o último elemento removido do hash_multimap.
 
-*Chave*\
+*chaves*\
 A chave dos elementos a serem removidos do hash_multimap.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1285,7 +1285,7 @@ After another element with a key equal to that of the
 2nd element is deleted, the hash_multimap hm3 is: 0 3.
 ```
 
-## <a name="hash_multimapfind"></a><a name="find"></a>hash_multimap::encontrar
+## <a name="hash_multimapfind"></a><a name="find"></a>hash_multimap:: localizar
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1298,9 +1298,9 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+*chaves*\
 A chave a ser correspondida pela chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1309,9 +1309,9 @@ Um iterador que trata do primeiro local de um elemento com uma chave especificad
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um ativador que aborda um `equivalent` elemento no hash_multimap cuja chave de classificação é a chave de argumento sob um predicado binário que induz um pedido baseado em uma relação menos que comparabilidade.
+A função member retorna um iterador que aborda um elemento no hash_multimap cuja chave de classificação é a `equivalent` chave de argumento em um predicado binário que induzi uma ordenação com base em uma relação menor que comparação.
 
-Se o valor retornado de `find` for atribuído a um `const_iterator`, o objeto hash_multimap não poderá ser modificado. Se o valor `find` de retorno `iterator`for atribuído a um , o objeto hash_multimap pode ser modificado.
+Se o valor retornado de `find` for atribuído a um `const_iterator`, o objeto hash_multimap não poderá ser modificado. Se o valor de retorno de `find` for atribuído a um `iterator` , o objeto hash_multimap poderá ser modificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1381,7 +1381,7 @@ that of the last element is: 20.
 This is not the last element of hash_multimap hm1.
 ```
 
-## <a name="hash_multimapget_allocator"></a><a name="get_allocator"></a>hash_multimap:get_allocator
+## <a name="hash_multimapget_allocator"></a><a name="get_allocator"></a>hash_multimap:: get_allocator
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1457,7 +1457,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multimaphash_multimap"></a><a name="hash_multimap"></a>hash_multimap:hash_multimap
+## <a name="hash_multimaphash_multimap"></a><a name="hash_multimap"></a>hash_multimap:: hash_multimap
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1515,10 +1515,10 @@ hash_multimap(
 
 |Parâmetro|Descrição|
 |-|-|
-|*Al*|A classe do alocador de armazenamento a ser usado neste objeto de hash_multimap, cujo padrão é `Allocator`.|
-|*Comp*|A função de comparação do tipo `const Traits` usada para ordenar os elementos no mapa, cujo padrão é `Traits`.|
+|*&*|A classe do alocador de armazenamento a ser usado neste objeto de hash_multimap, cujo padrão é `Allocator`.|
+|*Às*|A função de comparação do tipo `const Traits` usada para ordenar os elementos no mapa, cujo padrão é `Traits`.|
 |*Certo*|O mapa do qual o conjunto criado é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
 |*Última*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 |*IList*|A initializer_list da qual fazer a cópia.|
 
@@ -1530,7 +1530,7 @@ Todos os construtores inicializam seus hash_multimaps.
 
 Todos os construtores armazenam um objeto de função do tipo `Traits`, que é usado para estabelecer uma ordem entre as chaves do hash_multimap e que posteriormente pode ser retornado ao chamar [key_comp](#key_comp).
 
-Os três primeiros construtores especificam uma hash_multimap inicial vazia; o segundo especifica o tipo de função de comparação *(Comp)* a ser usada no estabelecimento da ordem`_Al`dos elementos e o terceiro especifica explicitamente o tipo de alocador ( ) a ser utilizado. A palavra-chave `explicit` suprime determinados tipos de conversão de tipo automática.
+Os três primeiros construtores especificam um hash_multimap inicial vazio; o segundo especifica o tipo de função de comparação (*comp*) a ser usado no estabelecimento da ordem dos elementos e o terceiro especifica explicitamente o tipo de alocador ( `_Al` ) a ser usado. A palavra-chave **`explicit`** suprime determinados tipos de conversão automática de tipo.
 
 O quarto construtor especifica uma cópia do hash_multimap `Right`.
 
@@ -1540,7 +1540,7 @@ O oitavo construtor move o hash_multimap `Right`.
 
 Os três construtores finais usam um initializer_list.
 
-## <a name="hash_multimapinsert"></a><a name="insert"></a>hash_multimap::inserção
+## <a name="hash_multimapinsert"></a><a name="insert"></a>hash_multimap:: Insert
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1576,8 +1576,8 @@ iterator insert(
 |Parâmetro|Descrição|
 |-|-|
 |*Val*|O valor de um elemento a ser inserido no hash_multimap, a menos que ele já contenha o elemento ou, de modo geral, a menos que ele já contenha um elemento cuja chave seja ordenada de maneira equivalente.|
-|*Onde*|Uma dica de onde começar a procurar pelo ponto de inserção correto.|
-|*Primeiro*|A posição do primeiro elemento a ser copiado de um mapa.|
+|*Where*|Uma dica de onde começar a procurar pelo ponto de inserção correto.|
+|*First*|A posição do primeiro elemento a ser copiado de um mapa.|
 |*Última*|A posição logo após o último elemento a ser copiado de um mapa.|
 
 ### <a name="return-value"></a>Valor retornado
@@ -1594,9 +1594,9 @@ As duas últimas funções membro `insert` se comportam da mesma forma que as du
 
 O [value_type](#value_type) de um elemento é um par, de forma que o valor de um elemento será um par ordenado com o primeiro componente igual ao valor de chave e o segundo componente igual ao valor dos dados do elemento.
 
-A inserção pode ocorrer em tempo `insert`constante amortizado para a versão de dica de , em vez de tempo logarítmico, se o ponto de inserção seguir imediatamente *onde*.
+A inserção pode ocorrer em tempo constante amortizado para a versão de dica de `insert` , em vez de tempo logarítmica, se o ponto de inserção imediatamente seguir *onde*.
 
-## <a name="hash_multimapiterator"></a><a name="iterator"></a>hash_multimap::iterator
+## <a name="hash_multimapiterator"></a><a name="iterator"></a>hash_multimap:: iterador
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1609,19 +1609,19 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Comentários
 
-O `iterator` definido por hash_multimap aponta para objetos `pair` \< de [value_type,](#value_type)que são do tipo **const Key, Type**>, cujo primeiro membro é a chave para o elemento e cujo segundo membro é o dado mapeado mantido pelo elemento.
+O `iterator` definido por hash_multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair` \< **const Key, Type**> , cujo primeiro membro é a chave para o elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.
 
-Para desreferenciar **um iterizador** `Iter` apontando para `->` um elemento em uma hash_multimap, use o operador.
+Para desreferenciar um **iterador** `Iter` apontando para um elemento em um hash_multimap, use o `->` operador.
 
 Para acessar o valor de chave do elemento, use `Iter` -> **first**, que é equivalente a (\* `Iter`). **primeiro**. Para acessar o valor dos dados mapeados do elemento, use `Iter` -> **second**, que é equivalente a (\* `Iter`). **primeiro**.
 
-Um `iterator` tipo pode ser usado para modificar o valor de um elemento.
+Um tipo `iterator` pode ser usado para modificar o valor de um elemento.
 
 ### <a name="example"></a>Exemplo
 
 Veja o exemplo de [begin](#begin) para obter um exemplo de como declarar e usar `iterator`.
 
-## <a name="hash_multimapkey_comp"></a><a name="key_comp"></a>hash_multimap:key_comp
+## <a name="hash_multimapkey_comp"></a><a name="key_comp"></a>hash_multimap:: key_comp
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1642,7 +1642,7 @@ O objeto armazenado define a função membro
 
 **operador booliano(const Key&** `left` **, const Key&** `right` **);**
 
-que retornará **true** se `left` preceder e não for igual a `right` na ordem de classificação.
+que retorna **`true`** se `left` precede e não é igual a `right` na ordem de classificação.
 
 ### <a name="example"></a>Exemplo
 
@@ -1693,7 +1693,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multimapkey_compare"></a><a name="key_compare"></a>hash_multimap:key_compare
+## <a name="hash_multimapkey_compare"></a><a name="key_compare"></a>hash_multimap:: key_compare
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1706,15 +1706,15 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Comentários
 
-`key_compare`é um sinônimo para o parâmetro de modelo *Traits*.
+`key_compare`é um sinônimo para as *características*de parâmetro de modelo.
 
-Para obter mais informações sobre *características,* consulte o tópico [hash_multimap Class.](../standard-library/hash-multimap-class.md)
+Para obter mais informações sobre *características* , consulte o tópico [hash_multimap classe](../standard-library/hash-multimap-class.md) .
 
 ### <a name="example"></a>Exemplo
 
 Veja o exemplo de [key_comp](#key_comp) que demonstra como declarar e usar `key_compare`.
 
-## <a name="hash_multimapkey_type"></a><a name="key_type"></a>hash_multimap:key_type
+## <a name="hash_multimapkey_type"></a><a name="key_type"></a>hash_multimap:: key_type
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1727,15 +1727,15 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Comentários
 
-`key_type`é um sinônimo para a *chave*de parâmetro de modelo .
+`key_type`é um sinônimo para a *chave*de parâmetro do modelo.
 
-Para obter mais informações sobre *a Tecla,* consulte a seção Observações do tópico [classe hash_multimap.](../standard-library/hash-multimap-class.md)
+Para obter mais informações sobre a *chave*, consulte a seção comentários do tópico [hash_multimap classe](../standard-library/hash-multimap-class.md) .
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [value_type](#value_type) para obter uma amostra de como declarar e usar `key_compare`.
 
-## <a name="hash_multimaplower_bound"></a><a name="lower_bound"></a>hash_multimap:lower_bound
+## <a name="hash_multimaplower_bound"></a><a name="lower_bound"></a>hash_multimap:: lower_bound
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1748,16 +1748,16 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+*chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
 
 Um [iterador](#iterator) ou [const_iterator](#const_iterator) que trata da localização de um elemento em um hash_multimap com uma chave que é maior ou igual à chave de argumento ou que trata do local que sucede o último elemento no hash_multimap, se nenhuma correspondência for encontrada para a chave.
 
-Se o valor retornado de `lower_bound` for atribuído a um `const_iterator`, o objeto hash_multimap não poderá ser modificado. Se o valor `lower_bound` de retorno `iterator`for atribuído a um , o objeto hash_multimap pode ser modificado.
+Se o valor retornado de `lower_bound` for atribuído a um `const_iterator`, o objeto hash_multimap não poderá ser modificado. Se o valor de retorno de `lower_bound` for atribuído a um `iterator` , o objeto hash_multimap poderá ser modificado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1830,7 +1830,7 @@ that of the last element is: 20.
 This is not the last element of hash_multimap hm1.
 ```
 
-## <a name="hash_multimapmapped_type"></a><a name="mapped_type"></a>hash_multimap:mapped_type
+## <a name="hash_multimapmapped_type"></a><a name="mapped_type"></a>hash_multimap:: mapped_type
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1845,13 +1845,13 @@ typedef Type mapped_type;
 
 `mapped_type` é um sinônimo do parâmetro de modelo *Type*.
 
-Para obter mais informações sobre *o Tipo,* consulte o tópico [classe hash_multimap.](../standard-library/hash-multimap-class.md)
+Para obter mais informações sobre o *tipo* , consulte o tópico [hash_multimap classe](../standard-library/hash-multimap-class.md) .
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [value_type](#value_type) para obter uma amostra de como declarar e usar `key_type`.
 
-## <a name="hash_multimapmax_size"></a><a name="max_size"></a>hash_multimap:max_size
+## <a name="hash_multimapmax_size"></a><a name="max_size"></a>hash_multimap:: max_size
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1889,7 +1889,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multimapoperator"></a><a name="op_eq"></a>hash_multimap:operador=
+## <a name="hash_multimapoperator"></a><a name="op_eq"></a>hash_multimap:: Operator =
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1910,7 +1910,7 @@ hash_multimap& operator=(hash_multimap&& right);
 
 ### <a name="remarks"></a>Comentários
 
-Depois de apagar quaisquer `hash_multimap`elementos `operator=` existentes em um , ou `hash_multimap`copia ou move o conteúdo da direita *para* o .
+Depois de apagar todos os elementos existentes em um `hash_multimap` , `operator=` o copia ou move o conteúdo do *lado* para o `hash_multimap` .
 
 ### <a name="example"></a>Exemplo
 
@@ -1950,7 +1950,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multimappointer"></a><a name="pointer"></a>hash_multimap::pointer
+## <a name="hash_multimappointer"></a><a name="pointer"></a>hash_multimap::p ointer
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -1963,11 +1963,11 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>Comentários
 
-Um `pointer` tipo pode ser usado para modificar o valor de um elemento.
+Um tipo `pointer` pode ser usado para modificar o valor de um elemento.
 
 Na maioria dos casos, um [iterador](#iterator) deve ser usado para acessar os elementos em um objeto hash_multimap.
 
-## <a name="hash_multimaprbegin"></a><a name="rbegin"></a>hash_multimap:rbegin
+## <a name="hash_multimaprbegin"></a><a name="rbegin"></a>hash_multimap:: rbegin
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2052,7 +2052,7 @@ After the erasure, the first element
 in the reversed hash_multimap is 2.
 ```
 
-## <a name="hash_multimapreference"></a><a name="reference"></a>hash_multimap::referência
+## <a name="hash_multimapreference"></a><a name="reference"></a>hash_multimap:: referência
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2115,7 +2115,7 @@ The data value of first element in the hash_multimap is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="hash_multimaprend"></a><a name="rend"></a>hash_multimap:rend
+## <a name="hash_multimaprend"></a><a name="rend"></a>hash_multimap:: rend
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2203,7 +2203,7 @@ The reversed hash_multimap is: 3 2 1 .
 After the erasure, the last element in the reversed hash_multimap is 2.
 ```
 
-## <a name="hash_multimapreverse_iterator"></a><a name="reverse_iterator"></a>hash_multimap:reverse_iterator
+## <a name="hash_multimapreverse_iterator"></a><a name="reverse_iterator"></a>hash_multimap:: reverse_iterator
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2218,13 +2218,13 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 Um tipo `reverse_iterator` é usado para iterar pelo hash_multimap em ordem inversa.
 
-O `reverse_iterator` definido pelo hash_multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair`\< **const Key, Type**>. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
+O `reverse_iterator` definido por hash_multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair` \< **const Key, Type**> . O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
 
 ### <a name="example"></a>Exemplo
 
 Veja o exemplo de [rbegin](#rbegin) que demonstra como declarar e usar `reverse_iterator`.
 
-## <a name="hash_multimapsize"></a><a name="size"></a>hash_multimap::tamanho
+## <a name="hash_multimapsize"></a><a name="size"></a>hash_multimap:: tamanho
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2274,7 +2274,7 @@ The hash_multimap length is 1.
 The hash_multimap length is now 2.
 ```
 
-## <a name="hash_multimapsize_type"></a><a name="size_type"></a>hash_multimap:size_type
+## <a name="hash_multimapsize_type"></a><a name="size_type"></a>hash_multimap:: size_type
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2291,7 +2291,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 Veja o exemplo de [size](#size) que demonstra como declarar e usar `size_type`
 
-## <a name="hash_multimapswap"></a><a name="swap"></a>hash_multimap::swap
+## <a name="hash_multimapswap"></a><a name="swap"></a>hash_multimap:: swap
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2302,7 +2302,7 @@ Troca os elementos de dois hash_multimaps.
 void swap(hash_multimap& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
 O hash_multimap que fornece os elementos a serem trocados ou o hash_multimap cujos elementos deverão ser trocados pelos do hash_multimap.
@@ -2363,7 +2363,7 @@ After swapping with hm2, hash_multimap hm1 is: 100 200.
 After swapping with hm3, hash_multimap hm1 is: 300.
 ```
 
-## <a name="hash_multimapupper_bound"></a><a name="upper_bound"></a>hash_multimap:upper_bound
+## <a name="hash_multimapupper_bound"></a><a name="upper_bound"></a>hash_multimap:: upper_bound
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2376,16 +2376,16 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+*chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
 
 Um [iterador](#iterator) ou [const_iterator](#const_iterator) que trata da localização de um elemento em um hash_multimap com uma chave que é maior que a chave de argumento ou que trata do local que sucede o último elemento no hash_multimap, se nenhuma correspondência for encontrada para a chave.
 
-Se o valor retornado de `upper_bound` for atribuído a um `const_iterator`, o objeto hash_multimap não poderá ser modificado. Se o valor `upper_bound` de retorno `iterator`for atribuído a a, o objeto hash_multimap pode ser modificado.
+Se o valor retornado de `upper_bound` for atribuído a um `const_iterator`, o objeto hash_multimap não poderá ser modificado. Se o valor de retorno de `upper_bound` for atribuído a um `iterator` , o objeto hash_multimap poderá ser modificado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2449,7 +2449,7 @@ The first element of hm1 with a key greater than
 that of the initial element of hm1 is: 20.
 ```
 
-## <a name="hash_multimapvalue_comp"></a><a name="value_comp"></a>hash_multimap:value_comp
+## <a name="hash_multimapvalue_comp"></a><a name="value_comp"></a>hash_multimap:: value_comp
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2466,11 +2466,11 @@ Retorna o objeto da função de comparação que um hash_multimap usa para orden
 
 ### <a name="remarks"></a>Comentários
 
-Para uma hash_multimap *m*, se dois elementos *e1* (*k1*, *d1*) e *e2**(k2*, *d2*) são objetos do tipo [value_type,](#value_type)onde `m.key_comp()(k1, k2)` *k1* e *k2* são suas chaves de tipo [key_type](#key_type) e *d1* e *d2* são seus dados de tipo [mapped_type,](#mapped_type)então `m.value_comp()(e1, e2)` é equivalente a . Um objeto armazenado define a função de membro
+Para um hash_multimap *m*, se dois elementos *E1* (*K1*, *D1*) e *E2*(*K2*, *D2*) são objetos do tipo [value_type](#value_type), em que *K1* e *K2* são suas chaves do [tipo KEY_TYPE](#key_type) e *D1* e *D2* são seus dados do tipo [mapped_type](#mapped_type)e, em seguida, `m.value_comp()(e1, e2)` é equivalente a `m.key_comp()(k1, k2)` . Um objeto armazenado define a função de membro
 
 `bool operator( value_type& left, value_type& right);`
 
-que retornará **true** se o valor de chave `left` preceder e for diferente do valor de chave de `right` na ordem de classificação.
+que retorna **`true`** se o valor de chave de `left` precede e não é igual ao valor de chave de `right` na ordem de classificação.
 
 ### <a name="example"></a>Exemplo
 
@@ -2519,7 +2519,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multimapvalue_type"></a><a name="value_type"></a>hash_multimap:value_type
+## <a name="hash_multimapvalue_type"></a><a name="value_type"></a>hash_multimap:: value_type
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -2532,7 +2532,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Comentários
 
-`value_type`é declarado como\<par const [key_type](#key_type),\< [mapped_type](#mapped_type)> e não parear key_type, mapped_type> porque as chaves de um recipiente associativo não podem ser alteradas usando um iterador ou referência não constante.
+`value_type`está declarado como par \<const [key_type](#key_type), [mapped_type](#mapped_type)> e não emparelhado \<key_type, mapped_type> porque as chaves de um contêiner associativo não podem ser alteradas usando um iterador ou referência não constante.
 
 ### <a name="example"></a>Exemplo
 
@@ -2595,5 +2595,5 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Confira também
 
-[Segurança do segmento na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

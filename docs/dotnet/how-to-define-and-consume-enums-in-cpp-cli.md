@@ -1,23 +1,23 @@
 ---
-title: Como definir e consumir enumerações em C++/CLI
+title: 'Como: definir e consumir enumerações no C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: cf3bb23069b2692c0ca4ce270a5b8060195becf7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09bb6e9fac30b72c3c4e0682c3d90f2ea9f8760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370170"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216408"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>Como definir e consumir enumerações em C++/CLI
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>Como: definir e consumir enumerações no C++/CLI
 
 Este tópico discute enums em C++/CLI.
 
-## <a name="specifying-the-underlying-type-of-an-enum"></a>Especificando o tipo subjacente de um enum
+## <a name="specifying-the-underlying-type-of-an-enum"></a>Especificando o tipo subjacente de uma enumeração
 
-Por padrão, o tipo subjacente de `int`uma enumeração é .  No entanto, você pode especificar o `int`tipo `short` `long`a `__int32`ser `__int64`assinado ou formas não assinadas de , , , ou .  Também é possível usar `char`.
+Por padrão, o tipo subjacente de uma enumeração é **`int`** .  No entanto, você pode especificar o tipo a ser assinado ou não assinado para formulários **`int`** , **`short`** , **`long`** , **`__int32`** ou **`__int64`** .  Você também pode usar o **`char`** .
 
 ```cpp
 // mcppv2_enum_3.cpp
@@ -49,7 +49,7 @@ sun
 
 ## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Como converter entre enumerações gerenciadas e padrão
 
-Não há conversão padrão entre um enum e um tipo integral; um gesso é necessário.
+Não há conversão padrão entre uma enumeração e um tipo integral; uma conversão é necessária.
 
 ```cpp
 // mcppv2_enum_4.cpp
@@ -75,24 +75,24 @@ int main() {
 a and day2 are the same
 ```
 
-## <a name="operators-and-enums"></a>Operadores e enums
+## <a name="operators-and-enums"></a>Operadores e enumerações
 
 Os seguintes operadores são válidos em enums em C++/CLI:
 
 |Operador|
 |--------------|
-|== == == \<  >  \<>=|
+|== != \< >\<= >=|
 |+ -|
 |&#124; ^ & ~|
 |++ --|
 |sizeof|
 
-Os operadores &#124; ^ & ~ ++ - são definidos apenas para enumerações com tipos subjacentes integrais, sem incluir bool.  Ambos os operands devem ser do tipo de enumeração.
+Operadores &#124; ^ & ~ + +--são definidos somente para enumerações com tipos subjacentes inteiros, não incluindo bool.  Ambos os operandos devem ser do tipo de enumeração.
 
-O compilador não faz verificação estática ou dinâmica do resultado de uma operação de enum; uma operação pode resultar em um valor que não esteja na faixa dos enumeradores válidos do enum.
+O compilador não faz nenhuma verificação estática ou dinâmica do resultado de uma operação de enumeração; uma operação pode resultar em um valor que não está no intervalo dos enumeradores válidos do enum.
 
 > [!NOTE]
-> C++11 introduz tipos de classe enum em código não gerenciado que são significativamente diferentes das classes de enum gerenciadas em C++/CLI. Em particular, o tipo de classe enum C++11 não suporta os mesmos operadores do tipo de classe enum gerenciado em C++/CLI, e o código fonte C++/CLI deve fornecer um especificador de acessibilidade em declarações de classe enum gerenciadas, a fim de distingui-las das declarações de classe enum não gerenciadas (C++11). Para obter mais informações sobre as classes enum em C++/CLI, C++/CX e C++11, consulte [enum class](../extensions/enum-class-cpp-component-extensions.md).
+> O C++ 11 introduz tipos de classe de enumeração em código não gerenciado, que são significativamente diferentes das classes de enumeração gerenciadas em C++/CLI. Em particular, o tipo de classe de enumeração C++ 11 não oferece suporte aos mesmos operadores que o tipo de classe enum gerenciado em C++/CLI, e o código-fonte C++/CLI deve fornecer um especificador de acessibilidade em declarações de classe de enumeração gerenciadas para diferenciá-las de declarações de classe enum não gerenciadas (C++ 11). Para obter mais informações sobre classes de enumeração em C++/CLI, C++/CX e C++ 11, consulte [classe de enumeração](../extensions/enum-class-cpp-component-extensions.md).
 
 ```cpp
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Confira também
 
-[enum class](../extensions/enum-class-cpp-component-extensions.md)
+[Classe enum](../extensions/enum-class-cpp-component-extensions.md)

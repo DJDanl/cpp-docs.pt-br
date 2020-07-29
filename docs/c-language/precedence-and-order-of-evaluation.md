@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: c1a5feb4552dd43b26263ebd3080e18adef6cb32
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861071"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211730"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedência e ordem da avaliação
 
@@ -24,8 +24,8 @@ A tabela a seguir resume a precedência e a associatividade (a ordem em que os o
 
 | Símbolo <sup>1</sup> | Tipo de operação | Capacidade de associação |
 |-------------|-----------------------|-------------------|
-| `[` `]` `(` `)` `.` `->`<br/>`++``--` (sufixo) | Expression | Da esquerda para a direita |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--` (prefixo) | Unário | Da direita para a esquerda |
+| `[` `]` `(` `)` `.` `->`<br/>`++``--`(sufixo) | Expression | Da esquerda para a direita |
+| **`sizeof`** `&` `*` `+` `-` `~` `!`<br/>`++``--`(prefixo) | Unário | Da direita para a esquerda |
 | *typecasts* | Unário | Da direita para a esquerda |
 | `*` `/` `%` | Multiplicativo | Da esquerda para a direita |
 | `+` `-` | Aditiva | Da esquerda para a direita |

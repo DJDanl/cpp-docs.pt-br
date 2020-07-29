@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: f72401d7bdc4a61a8e986c10cdbd4fad732e41ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 865fac1f1452e30b64a0ada9b115186916ff491c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368440"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212339"
 ---
 # <a name="extreme_value_distribution-class"></a>Classe extreme_value_distribution
 
@@ -69,17 +69,17 @@ public:
    };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *RealType*\
-O tipo de resultado de ponto flutuante, padrão para **dobrar**. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
+O tipo de resultado de ponto flutuante, o padrão é **`double`** . Para possíveis tipos, consulte [\<random>](../standard-library/random.md) .
 
 *URNG*\
-O motor do gerador de números aleatórios. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
+O mecanismo do gerador de número aleatório. Para possíveis tipos, consulte [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **duplo** se nenhum for fornecido, distribuído de acordo com a Distribuição de Valor Extremo. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **`double`** se nenhum for fornecido, distribuído de acordo com a distribuição de valor extremo. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ O modelo de classe descreve uma distribuição que produz valores de um tipo de 
 
 As funções de propriedade `a()` e `b()` retornam os respectivos valores para os parâmetros de distribuição armazenados `a` e `b`.
 
-Para obter mais informações sobre as aulas de distribuição e seus membros, consulte [ \<>aleatórios ](../standard-library/random.md).
+Para obter mais informações sobre classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md) .
 
 Para obter informações detalhadas sobre a distribuição Extreme Value, consulte o artigo de Wolfram MathWorld [Distribuição Extreme Value](https://go.microsoft.com/fwlink/p/?linkid=401110).
 
@@ -177,11 +177,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<random>
+**Cabeçalho:**\<random>
 
 **Namespace:** std
 
-## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution:extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution:: extreme_value_distribution
 
 Constrói a distribuição.
 
@@ -190,7 +190,7 @@ explicit extreme_value_distribution(result_type a_value = 0.0, result_type b_val
 explicit extreme_value_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *a_value*\
 O parâmetro de distribuição `a`.
@@ -209,7 +209,7 @@ O primeiro construtor constrói um objeto cujo valor `a` armazenado contém o va
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::param_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 
@@ -225,7 +225,7 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *a_value*\
 O parâmetro de distribuição `a`.
@@ -244,4 +244,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Confira também
 
-[\<>aleatório](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

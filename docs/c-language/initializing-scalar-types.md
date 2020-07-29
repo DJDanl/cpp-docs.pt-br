@@ -12,47 +12,47 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063761abcbb1541893b9cbab463e3d121684d00a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232937"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211821"
 ---
 # <a name="initializing-scalar-types"></a>Inicializando tipos escalares
 
-Ao inicializar tipos escalares, o valor de *assignment-expression* é atribuído à variável. As regras de conversão para a atribuição se aplicam. (Consulte [Conversões de tipos](../c-language/type-conversions-c.md) para obter informações sobre regras de conversão.)
+Ao inicializar tipos escalares, o valor de *`assignment-expression`* é atribuído à variável. As regras de conversão para a atribuição se aplicam. (Consulte [Conversões de tipos](../c-language/type-conversions-c.md) para obter informações sobre regras de conversão.)
 
 ## <a name="syntax"></a>Sintaxe
 
-*declaração*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *init-declarator-list*<sub>opt</sub> **;**
+*`declaration`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`init-declarator-list`* <sub>aceitar</sub>**`;`**
 
-*declaration-specifiers*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
+*`declaration-specifiers`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`storage-class-specifier`**`declaration-specifiers`* <sub>aceitar</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`type-specifier`**`declaration-specifiers`* <sub>aceitar</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier`**`declaration-specifiers`* <sub>aceitar</sub>
 
-*init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-Declarador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List* **,** *init-declarator*
+*`init-declarator-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator-list`* **`,`** *`init-declarator`*
 
-*init-Declarador*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declarador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\* *inicializador* **=**  / de *Declarador* para inicialização escalar\*/
+*`init-declarator`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`***`=`** *`initializer`* /\* Para inicialização escalar\*/
 
-*inicializador*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de atribuição*
+*`initializer`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`assignment-expression`*
 
 Você pode inicializar variáveis de qualquer tipo, desde que obedeça às seguintes regras:
 
 - Variáveis declaradas no nível de escopo de arquivo podem ser inicializadas. Se você não inicializar uma variável explicitamente no nível externo, ela será inicializada como 0 por padrão.
 
-- Uma expressão de constante pode ser usada para inicializar qualquer variável global declarada com o **static** *storage-class-specifier*. Variáveis declaradas para serem **static** são inicializadas quando a execução do programa começa. Se você não inicializar uma variável **static** global explicitamente, ela será inicializada como 0 por padrão; além disso, a cada membro que tiver o tipo ponteiro será atribuído um ponteiro nulo.
+- Uma expressão constante pode ser usada para inicializar qualquer variável global declarada com o **`static`** *`storage-class-specifier`* . Variáveis declaradas para serem **`static`** inicializadas quando a execução do programa é iniciada. Se você não inicializar explicitamente uma variável global **`static`** , ela será inicializada como 0 por padrão e todos os membros que tiverem o tipo de ponteiro receberão um ponteiro nulo.
 
-- Variáveis declaradas com o especificador de classe de armazenamento **auto** ou **register** são inicializadas cada vez que o controle da execução passa para o bloco em que são declaradas. Se você omitir um inicializador da declaração de uma variável **auto** ou **register**, o valor inicial da variável será indefinido. Para valores automáticos e de registro, o inicializador não está restrito a ser uma constante; ele pode ser qualquer expressão que envolva valores definidos anteriormente, inclusive chamadas de função.
+- Variáveis declaradas com o **`auto`** **`register`** especificador de classe de armazenamento ou são inicializadas cada vez que o controle de execução passa para o bloco no qual elas são declaradas. Se você omitir um inicializador da declaração de **`auto`** uma **`register`** variável ou, o valor inicial da variável será indefinido. Para valores automáticos e de registro, o inicializador não está restrito a ser uma constante; ele pode ser qualquer expressão que envolva valores definidos anteriormente, inclusive chamadas de função.
 
-- Os valores iniciais para declarações de variáveis externas e para todas as variáveis **static**, sejam externas ou internas, devem ser expressões de constantes. (Para obter mais informações, consulte [expressões constantes](../c-language/c-constant-expressions.md).) Como o endereço de qualquer variável estática ou declarada externamente é constante, ele pode ser usado para inicializar uma variável de ponteiro **estático** internamente declarada. No entanto, o endereço de uma variável **auto** não pode ser usado como um inicializador estático, pois pode ser diferente para cada execução do bloco. Você pode usar valores de constantes ou de variáveis para inicializar as variáveis **auto** e **register**.
+- Os valores iniciais para declarações de variáveis externas e para todas as **`static`** variáveis, sejam elas externas ou internas, devem ser expressões constantes. (Para obter mais informações, consulte [expressões constantes](../c-language/c-constant-expressions.md).) Como o endereço de qualquer variável estática ou declarada externamente é constante, ele pode ser usado para inicializar uma variável de ponteiro declarada internamente **`static`** . No entanto, o endereço de uma **`auto`** variável não pode ser usado como um inicializador estático porque pode ser diferente para cada execução do bloco. Você pode usar valores constantes ou variáveis para inicializar **`auto`** e **`register`** variáveis.
 
 - Se a declaração de um identificador tem o escopo do bloco e o identificador tem vinculação externa, a declaração não pode ter uma inicialização.
 
@@ -76,7 +76,7 @@ O ponteiro `px` é inicializado como 0, gerando um ponteiro "nulo".
 const int c = (3 * 1024);
 ```
 
-Esse exemplo usa uma expressão de constante `(3 * 1024)` para inicializar `c` como um valor constante que não pode ser modificado devido à palavra-chave **const**.
+Este exemplo usa uma expressão constante `(3 * 1024)` para inicializar `c` um valor constante que não pode ser modificado devido à **`const`** palavra-chave.
 
 ```C
 int *b = &x;
@@ -88,7 +88,7 @@ Essa instrução inicializa o ponteiro `b` com o endereço de outra variável, `
 int *const a = &z;
 ```
 
-O ponteiro `a` é inicializado com o endereço de uma variável nomeada `z`. No entanto, como é especificada para ser **const**, a variável `a` só pode ser inicializada, nunca modificada. Ela sempre aponta para o mesmo local.
+O ponteiro `a` é inicializado com o endereço de uma variável nomeada `z`. No entanto, como ele é especificado para ser um **`const`** , a variável `a` só pode ser inicializada, nunca modificada. Ela sempre aponta para o mesmo local.
 
 ```C
 int GLOBAL ;
@@ -102,7 +102,7 @@ int function( void )
 }
 ```
 
-A variável global `GLOBAL` é declarada no nível externo e, por isso, tem tempo de vida global. A variável local `LOCAL` tem a classe de armazenamento **auto** e tem apenas um endereço durante a execução da função em que é declarada. Em consequência, não é permitido tentar inicializar a variável de ponteiro **static**`lp` com o endereço de `LOCAL`. A variável de ponteiro **static**`gp` pode ser inicializada como o endereço de `GLOBAL` porque esse endereço é sempre o mesmo. Da mesma forma, `*rp` pode ser inicializada `rp` porque é uma variável local e pode ter um inicializador não constante. Cada vez que se entra no bloco, `LOCAL` tem um novo endereço, que é então atribuído a `rp`.
+A variável global `GLOBAL` é declarada no nível externo e, por isso, tem tempo de vida global. A variável local `LOCAL` tem a **`auto`** classe de armazenamento e só tem um endereço durante a execução da função na qual ela é declarada. Portanto, **`static`** não é permitido tentar inicializar a variável `lp` de ponteiro com o endereço de `LOCAL` . A **`static`** variável `gp` de ponteiro pode ser inicializada para o endereço de `GLOBAL` porque esse endereço é sempre o mesmo. Da mesma forma, `*rp` pode ser inicializado porque `rp` é uma variável local e pode ter um inicializador não constante. Cada vez que se entra no bloco, `LOCAL` tem um novo endereço, que é então atribuído a `rp`.
 
 ## <a name="see-also"></a>Confira também
 

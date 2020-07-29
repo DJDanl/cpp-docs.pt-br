@@ -1,17 +1,17 @@
 ---
-title: support_error_info (C++ atributo com)
+title: support_error_info (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.support_error_info
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f23241cf5478fa52d9d649acfb4c836b8b9d8f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166140"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211951"
 ---
 # <a name="support_error_info"></a>support_error_info
 
@@ -26,17 +26,17 @@ Implementa o suporte para retornar erros detalhados.
 ### <a name="parameters"></a>parâmetros
 
 *error_interface*<br/>
-O identificador da interface que implementa `IErrorInfo`.
+O identificador da interface que implementa `IErrorInfo` .
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **support_error_info** C++ implementa o suporte para retornar erros contextuais detalhados encontrados pelo objeto de destino para o cliente. Para que o objeto dê suporte a erros, os métodos da interface `IErrorInfo` devem ser implementados pelo objeto. Para obter mais informações, consulte [dando suporte a IDispatch e IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
+O atributo **support_error_info** C++ implementa o suporte para retornar erros contextuais detalhados encontrados pelo objeto de destino para o cliente. Para que o objeto dê suporte a erros, os métodos da `IErrorInfo` interface devem ser implementados pelo objeto. Para obter mais informações, consulte [dando suporte a IDispatch e IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
 
 Esse atributo adiciona a classe [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) como uma classe base ao objeto de destino. Isso resulta em uma implementação padrão de `ISupportErrorInfo` e pode ser usado quando uma única interface gera erros em um objeto.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir adiciona suporte padrão para a interface de `ISupportErrorInfo` para o objeto `CMyClass`.
+O código a seguir adiciona suporte padrão `ISupportErrorInfo` à interface para o `CMyClass` objeto.
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -64,14 +64,14 @@ class CMyClass
 
 |||
 |-|-|
-|**Aplica-se a**|**class**|
+|**Aplica-se a**|**`class`**|
 |**Repetível**|Sim|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)

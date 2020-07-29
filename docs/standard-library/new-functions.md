@@ -6,16 +6,16 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6b51a5bcbb9c90370cef1391d4020862d2e2cefd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419836"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212170"
 ---
 # <a name="ltnewgt-functions"></a>Funções &lt;new&gt;
 
-## <a name="get_new_handler"></a>get_new_handler
+## <a name="get_new_handler"></a><a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -23,9 +23,9 @@ new_handler get_new_handler() noexcept;
 
 ### <a name="remarks"></a>Comentários
 
-Retorna o `new_handler`atual.
+Retorna o atual `new_handler` .
 
-## <a name="launder"></a>launder
+## <a name="launder"></a><a name="launder"></a>launder
 
 ```cpp
 template <class T>
@@ -34,12 +34,12 @@ template <class T>
 
 ### <a name="parameters"></a>parâmetros
 
-\ *PTR*
+*PTR*\
 O endereço de um byte na memória que contém um objeto cujo tipo é semelhante a *T*.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor do tipo *T\** que aponta para X.
+Um valor do tipo *T \* * que aponta para X.
 
 ### <a name="remarks"></a>Comentários
 
@@ -59,9 +59,9 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a>nothrow
+## <a name="nothrow"></a><a name="nothrow"></a>nothrow
 
-Fornece um objeto a ser usado como um argumento para as versões **nothrow** de **New** e **delete**.
+Fornece um objeto a ser usado como um argumento para as **`nothrow`** versões do **`new`** e do **`delete`** .
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -75,7 +75,7 @@ O objeto é usado como um argumento de função para corresponder ao tipo de par
 
 Consulte [operador new](../standard-library/new-operators.md#op_new) e [operador new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obter exemplos de como `std::nothrow_t` é usado como um parâmetro de função.
 
-## <a name="set_new_handler"></a>set_new_handler
+## <a name="set_new_handler"></a><a name="set_new_handler"></a>set_new_handler
 
 Instala uma função de usuário que deve ser chamada quando o **novo operador** falhar em sua tentativa de alocar memória.
 
@@ -85,7 +85,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>parâmetros
 
-\ *Pnew*
+*Pnew*\
 O `new_handler` a ser instalado.
 
 ### <a name="return-value"></a>Valor retornado

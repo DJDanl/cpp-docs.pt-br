@@ -11,16 +11,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: 6c67e3d9ba1b33cb99a7d3afb2522f443003fa38
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7819c8c2ebe8a07a76e242ea2ef3c19206ab69be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376091"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211990"
 ---
 # <a name="vectorltboolgt-class"></a>Classe vector&lt;bool&gt;
 
-A `vector<bool>` classe é uma especialização parcial do [vetor](../standard-library/vector-class.md) para elementos do tipo **bool**. Ele tem um alocador para o tipo subjacente que é usado pela especialização, que fornece otimização de espaço armazenando um valor **bool** por bit.
+A `vector<bool>` classe é uma especialização parcial do [vetor](../standard-library/vector-class.md) para elementos do tipo **`bool`** . Ele tem um alocador para o tipo subjacente usado pela especialização, que fornece otimização de espaço armazenando um **`bool`** valor por bit.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,40 +33,40 @@ class vector<bool, Allocator>
 
 Essa especialização de modelo de classe se comporta como vector, exceto pelas diferenças explicadas neste artigo.
 
-As operações que lidam com o tipo **bool** correspondem a valores no armazenamento do contêiner. `allocator_traits::construct` não é usado para construir esses valores.
+As operações que lidam com o **`bool`** tipo correspondem aos valores no armazenamento de contêiner. `allocator_traits::construct` não é usado para construir esses valores.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nome do tipo|Descrição|
 |-|-|
 |[const_pointer](#const_pointer)|Um typedef para um `const_iterator` que pode funcionar como um ponteiro de constante para um elemento booliano do `vector<bool>`.|
-|[const_reference](#const_reference)|Um typedef para **bool.** Depois da inicialização, ele não observa atualizações no valor original.|
-|[ponteiro](#pointer)|Um typedef para um `iterator` que pode funcionar como um ponteiro para um elemento booliano do `vector<bool>`.|
+|[const_reference](#const_reference)|Um typedef para **`bool`** . Depois da inicialização, ele não observa atualizações no valor original.|
+|[refere](#pointer)|Um typedef para um `iterator` que pode funcionar como um ponteiro para um elemento booliano do `vector<bool>`.|
 
 ### <a name="member-functions"></a>Funções de membro
 
 |Função de membro|Descrição|
 |-|-|
 |[flip](#flip)|Inverte todos os bits no `vector<bool>`.|
-|[Trocar](#swap)|Troca os elementos de dois `vector<bool>`s.|
+|[permuta](#swap)|Troca os elementos de dois `vector<bool>`s.|
 |[operator&#91;&#93;](#op_at)|Retorna uma referência simulada para o elemento `vector<bool>` em uma posição especificada.|
-|`at`|Funciona da mesma forma que a função não especializada [vector](../standard-library/vector-class.md)::at, exceto pelo fato de que usa a classe proxy [vector\<bool>::reference](#reference_class). Consulte também [operator&#91;&#93;](#op_at).|
-|`front`|Funciona da mesma forma que a função não especializada [vector](../standard-library/vector-class.md)::front, exceto pelo fato de que usa a classe proxy [vector\<bool>::reference](#reference_class). Consulte também [operator&#91;&#93;](#op_at).|
-|`back`|Funciona da mesma forma que a função não especializada [vector](../standard-library/vector-class.md)::back, exceto pelo fato de que usa a classe proxy [vector\<bool>::reference](#reference_class). Consulte também [operator&#91;&#93;](#op_at).|
+|`at`|O funciona da mesma forma que a função [vetor](../standard-library/vector-class.md):: at não especializada, exceto pelo fato de que ele usa a classe proxy [vector \<bool> :: Reference](#reference_class). Consulte também [operator&#91;&#93;](#op_at).|
+|`front`|O funciona da mesma forma que a função [vector](../standard-library/vector-class.md):: Front não especializada, exceto pelo fato de que ela usa a classe proxy [vector \<bool> :: Reference](#reference_class). Consulte também [operator&#91;&#93;](#op_at).|
+|`back`|O funciona da mesma forma que a função [vector](../standard-library/vector-class.md):: back não especializada, exceto pelo fato de que ela usa a classe proxy [vector \<bool> :: Reference](#reference_class). Consulte também [operator&#91;&#93;](#op_at).|
 
 ### <a name="proxy-class"></a>Classe proxy
 
 |||
 |-|-|
-|[Classe vector\<bool> reference](#reference_class)|Uma classe que atua como um proxy para simular o comportamento de `bool&` e cujos objetos podem fornecer referências a elementos (bits únicos) em um objeto `vector<bool>`.|
+|[Classe de referência de vetor \<bool>](#reference_class)|Uma classe que atua como um proxy para simular o comportamento de `bool&` e cujos objetos podem fornecer referências a elementos (bits únicos) em um objeto `vector<bool>`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: \<> vetorial
+**Cabeçalho**:\<vector>
 
 **Namespace:** std
 
-## <a name="vectorboolconst_pointer"></a><a name="const_pointer"></a>vetor\<bool>::const_pointer
+## <a name="vectorboolconst_pointer"></a><a name="const_pointer"></a>vetor \<bool> :: const_pointer
 
 Um tipo que descreve um objeto que pode servir como um ponteiro de constante para um elemento booliano da sequência contida pelo objeto `vector<bool>`.
 
@@ -74,7 +74,7 @@ Um tipo que descreve um objeto que pode servir como um ponteiro de constante par
 typedef const_iterator const_pointer;
 ```
 
-## <a name="vectorboolconst_reference"></a><a name="const_reference"></a>vetor\<bool>::const_reference
+## <a name="vectorboolconst_reference"></a><a name="const_reference"></a>vetor \<bool> :: const_reference
 
 Um tipo que descreve um objeto que pode servir como uma referência de constante para um elemento booliano da sequência contida pelo objeto `vector<bool>`.
 
@@ -86,7 +86,7 @@ typedef bool const_reference;
 
 Para obter mais informações e exemplos de código, consulte [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq).
 
-## <a name="vectorboolflip"></a><a name="flip"></a>vetor\<bool>::flip
+## <a name="vectorboolflip"></a><a name="flip"></a>vetor \<bool> :: Flip
 
 Inverte todos os bits em um `vector<bool>`.
 
@@ -124,7 +124,7 @@ int main()
 }
 ```
 
-## <a name="vectorbooloperator"></a><a name="op_at"></a>vetor\<bool>::operador[]
+## <a name="vectorbooloperator"></a><a name="op_at"></a>vector \<bool> :: operator []
 
 Retorna uma referência simulada para o elemento `vector<bool>` em uma posição especificada.
 
@@ -136,23 +136,23 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*Pos*|A posição do elemento `vector<bool>`.|
 
 ### <a name="return-value"></a>Valor retornado
 
-Um objeto [vector\<bool>::reference](#reference_class) ou [vector\<bool>::const_reference](#const_reference) que contém o valor do elemento indexado.
+Um objeto [vector \<bool> :: Reference](#reference_class) ou [vector \<bool> :: const_reference](#const_reference) que contém o valor do elemento indexado.
 
 Se a posição especificada for maior ou igual ao tamanho do contêiner, o resultado será indefinido.
 
 ### <a name="remarks"></a>Comentários
 
-Se você compilar com _ITERATOR_DEBUG_LEVEL definido, um erro de tempo de execução ocorrerá se você tentar acessar um elemento fora dos limites do vetor.  Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
+Se você compilar com _ITERATOR_DEBUG_LEVEL definido, ocorrerá um erro em tempo de execução se você tentar acessar um elemento fora dos limites do vetor.  Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Exemplo
 
-Este exemplo de código `vector<bool>::operator[]` mostra o uso correto e dois erros de codificação comuns, que são comentados. Esses erros causam erros porque `vector<bool>::reference` o `vector<bool>::operator[]` endereço do objeto que retorna não pode ser tomado.
+Este exemplo de código mostra o uso correto de `vector<bool>::operator[]` e dois erros comuns de codificação, que são comentados. Esses erros causam erros porque o endereço do `vector<bool>::reference` objeto que `vector<bool>::operator[]` retorna não pode ser obtido.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="vectorboolpointer"></a><a name="pointer"></a>vetor\<bool>::pointer
+## <a name="vectorboolpointer"></a><a name="pointer"></a>vetor \<bool> ::p ointer
 
 Um tipo que descreve um objeto que pode servir como um ponteiro para um elemento booliano da sequência contida pelo objeto `vector<bool>`.
 
@@ -189,13 +189,13 @@ Um tipo que descreve um objeto que pode servir como um ponteiro para um elemento
 typedef iterator pointer;
 ```
 
-## <a name="vectorboolreference-class"></a><a name="reference_class"></a>vetor\<bool>::classe de referência
+## <a name="vectorboolreference-class"></a><a name="reference_class"></a>\<bool>classe vector:: Reference
 
-A classe `vector<bool>::reference` é uma classe proxy fornecida pela Classe [vector\<bool>](../standard-library/vector-bool-class.md) para simular `bool&`.
+A `vector<bool>::reference` classe é uma classe de proxy fornecida pela [ \<bool> classe vector](../standard-library/vector-bool-class.md) para simular `bool&` .
 
 ### <a name="remarks"></a>Comentários
 
-Uma referência simulada é necessária porque o C++ não permite nativamente referências diretas aos bits. `vector<bool>` usa apenas um bit por elemento, que pode ser referenciado usando essa classe proxy. No entanto, a simulação de referência não é concluída porque determinadas atribuições não são válidas. Por exemplo, como o endereço do objeto `vector<bool>::reference` não pode ser usado, o código a seguir que usa [vector\<bool>::operator&#91;&#93;](#op_at) não está correto:
+Uma referência simulada é necessária porque o C++ não permite nativamente referências diretas aos bits. `vector<bool>` usa apenas um bit por elemento, que pode ser referenciado usando essa classe proxy. No entanto, a simulação de referência não é concluída porque determinadas atribuições não são válidas. Por exemplo, como o endereço do `vector<bool>::reference` objeto não pode ser obtido, o código a seguir que usa [vector \<bool> :: Operator&#91;&#93;](#op_at) não está correto:
 
 ```cpp
 vector<bool> vb;
@@ -204,9 +204,9 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use
 ```
 
-### <a name="vectorboolreferenceflip"></a><a name="reference_flip"></a>vetor\<bool>::referência::flip
+### <a name="vectorboolreferenceflip"></a><a name="reference_flip"></a>vector \<bool> :: Reference:: Flip
 
-Inverte o valor booliano de um elemento [vector\<bool>](../standard-library/vector-bool-class.md) referenciado.
+Inverte o valor booliano de um elemento [de \<bool> vetor](../standard-library/vector-bool-class.md) referenciado.
 
 ```cpp
 void flip();
@@ -251,9 +251,9 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-### <a name="vectorboolreferenceoperator-bool"></a><a name="reference_operator_bool"></a>vetor\<bool>::referência::operador bool
+### <a name="vectorboolreferenceoperator-bool"></a><a name="reference_operator_bool"></a>vector \<bool> :: Reference:: Operator bool
 
-Fornece uma conversão `vector<bool>::reference` implícita de **bool**.
+Fornece uma conversão implícita de `vector<bool>::reference` para **`bool`** .
 
 ```cpp
 operator bool() const;
@@ -261,13 +261,13 @@ operator bool() const;
 
 #### <a name="return-value"></a>Valor retornado
 
-O valor booliano do elemento do objeto vector\<bool>.
+O valor booliano do elemento do objeto de vetor \<bool> .
 
 #### <a name="remarks"></a>Comentários
 
 O objeto `vector<bool>` não pode ser modificado por esse operador.
 
-### <a name="vectorboolreferenceoperator"></a><a name="reference_operator_eq"></a>vetor\<bool>::referência::operador=
+### <a name="vectorboolreferenceoperator"></a><a name="reference_operator_eq"></a>vector \<bool> :: Reference:: Operator =
 
 Atribui um valor booliano a um bit ou o valor mantido por um elemento referenciado para um bit.
 
@@ -276,7 +276,7 @@ reference& operator=(const reference& Right);
 reference& operator=(bool Val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
 A referência de elemento cujo valor deve ser atribuído ao bit.
@@ -355,9 +355,9 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="vectorboolswap"></a><a name="swap"></a>vetor\<bool>::swap
+## <a name="vectorboolswap"></a><a name="swap"></a>vetor \<bool> :: swap
 
-A função membro estática que troca dois elementos de vetores boolianos (`vector<bool>`) usando a classe de proxy [vector\<bool>::reference](#reference_class).
+Função de membro estático que troca dois elementos de vetores Boolianos ( `vector<bool>` ) usando a classe proxy [vector \<bool> :: Reference](#reference_class).
 
 ```cpp
 static void swap(
@@ -365,13 +365,13 @@ static void swap(
     reference Right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
-O elemento a ser trocado com o elemento *certo.*
+*Mantida*\
+O elemento a ser trocado pelo elemento *à direita* .
 
 *Certo*\
-O elemento a ser trocado com o elemento *esquerda.*
+O elemento a ser trocado pelo elemento *à esquerda* .
 
 ### <a name="remarks"></a>Comentários
 
@@ -379,5 +379,5 @@ Essa sobrecarga oferece suporte aos requisitos especiais de proxy do `vector<boo
 
 ## <a name="see-also"></a>Confira também
 
-[Segurança do segmento na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

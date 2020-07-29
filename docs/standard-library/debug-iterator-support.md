@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416200"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231579"
 ---
 # <a name="debug-iterator-support"></a>Suporte a Iterador de Depuração
 
@@ -126,11 +126,11 @@ int main()
 }
 ```
 
-Observe que esse exemplo usa a expressão lambda `[] (int& elem) { elem *= 2; }` em vez de um functor. Embora essa escolha não tenha efeito sobre a falha de declaração – um functor semelhante causaria a mesma falha –, lambdas são uma maneira muito útil de realizar tarefas compactas de objeto de função. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../cpp/lambda-expressions-in-cpp.md).
+Observe que esse exemplo usa a expressão lambda `[] (int& elem) { elem *= 2; }` em vez de um functor. Embora essa escolha não tenha efeito sobre a falha de declaração – um functor semelhante causaria a mesma falha –, lambdas são uma maneira muito útil de realizar tarefas compactas de objeto de função. Para obter mais informações sobre expressões lambda, consulte [expressões lambda](../cpp/lambda-expressions-in-cpp.md).
 
 ## <a name="iterators-going-out-of-scope"></a>Iteradores saindo do escopo
 
-As verificações do iterador de depuração também causam uma variável de iterador que é declarada em um loop **for** fora do escopo quando o escopo **do loop for** termina.
+As verificações do iterador de depuração também fazem com que uma variável de iterador que é declarada em um **`for`** loop esteja fora do escopo quando o **`for`** escopo do loop termina.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -173,6 +173,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)
+[Visão geral da biblioteca padrão do C++](../standard-library/cpp-standard-library-overview.md)

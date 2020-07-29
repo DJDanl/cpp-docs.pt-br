@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: df21591dec1da5861125d7e9480fb9345aaad061
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0cf4554f86f4a9275e4d96b3db519fde7fb05b22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752953"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231865"
 ---
 # <a name="cbitmapbutton-class"></a>Classe CBitmapButton
 
-Cria controles de botão rotulados com imagens bitmapapped em vez de texto.
+Cria controles de pressão rotulados com imagens de bitmap em vez de texto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,64 +43,64 @@ class CBitmapButton : public CButton
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CBitmapButton::Carga automática](#autoload)|Associa um botão em uma caixa `CBitmapButton` de diálogo com um objeto da classe, carrega os bitmap(s) pelo nome e dimensiona o botão para encaixar o bitmap.|
-|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inicializa o objeto carregando um ou mais recursos de bitmap nomeados do arquivo de recursos do aplicativo e anexando os bitmaps ao objeto.|
+|[CBitmapButton:: AutoLoad](#autoload)|Associa um botão em uma caixa de diálogo a um objeto da `CBitmapButton` classe, carrega os bitmaps por nome e dimensiona o botão para ajustá-lo ao bitmap.|
+|[CBitmapButton:: LoadBitmaps](#loadbitmaps)|Inicializa o objeto carregando um ou mais recursos de bitmap nomeados do arquivo de recursos do aplicativo e anexando os bitmaps ao objeto.|
 |[CBitmapButton::SizeToContent](#sizetocontent)|Dimensiona o botão para acomodar o bitmap.|
 
 ## <a name="remarks"></a>Comentários
 
-`CBitmapButton`objetos contêm até quatro bitmaps, que contêm imagens para os diferentes estados que um botão pode assumir: para cima (ou normal), para baixo (ou selecionado), focado e desativado. Apenas o primeiro bitmap é necessário; os outros são opcionais.
+`CBitmapButton`os objetos contêm até quatro bitmaps, que contêm imagens para os diferentes Estados que um botão pode assumir: cima (ou normal), para baixo (ou selecionado), com foco e desabilitado. Somente o primeiro bitmap é necessário; os outros são opcionais.
 
-As imagens do botão bitmap incluem a borda ao redor da imagem, bem como a própria imagem. A borda normalmente desempenha um papel em mostrar o estado do botão. Por exemplo, o bitmap para o estado focalizado geralmente é como o do estado de cima, mas com um inset retângulo tracejada da fronteira ou uma linha sólida grossa na fronteira. O bitmap para o estado desativado geralmente se assemelha ao do estado de up, mas tem contraste mais baixo (como uma seleção de menu escurecido ou acinzentado).
+Imagens de botão de bitmap incluem a borda em torno da imagem, bem como a própria imagem. A borda normalmente desempenha uma parte na exibição do estado do botão. Por exemplo, o bitmap para o estado focalizado geralmente é como aquele para o estado ativo, mas com uma margem de retângulo tracejada da borda ou uma linha sólida espessa na borda. O bitmap para o estado desabilitado geralmente se assemelha ao estado ativo, mas tem contraste inferior (como uma seleção de menu esmaecida ou cinza).
 
-Esses bitmaps podem ser de qualquer tamanho, mas todos são tratados como se fossem do mesmo tamanho do bitmap para o estado de up.
+Esses bitmaps podem ser de qualquer tamanho, mas todos são tratados como se fossem do mesmo tamanho que o bitmap para o estado ativo.
 
-Vários aplicativos exigem diferentes combinações de imagens do bitmap:
+Vários aplicativos exigem diferentes combinações de imagens de bitmap:
 
-|Para cima|Para baixo|Focalizado|Desabilitado|Aplicativo|
+|Up|Down|Focalizado|Desabilitado|Aplicativo|
 |--------|----------|-------------|--------------|-----------------|
 |×||||Bitmap|
-|×|×|||Botão sem estilo WS_TABSTOP|
-|×|×|×|×|Botão de diálogo com todos os estados|
-|×|×|×||Botão de diálogo com estilo WS_TABSTOP|
+|×|×|||Botão sem estilo de WS_TABSTOP|
+|×|×|×|×|Botão de diálogo com todos os Estados|
+|×|×|×||Botão de diálogo com estilo de WS_TABSTOP|
 
-Ao criar um controle de botão bitmap, defina o estilo BS_OWNERDRAW para especificar se o botão é desenhado pelo proprietário. Isso faz com que o Windows envie as mensagens WM_MEASUREITEM e WM_DRAWITEM para o botão; a estrutura lida com essas mensagens e gerencia a aparência do botão para você.
+Ao criar um controle de botão de bitmap, defina o estilo de BS_OWNERDRAW para especificar que o botão é desenhado pelo proprietário. Isso faz com que o Windows envie o WM_MEASUREITEM e WM_DRAWITEM mensagens para o botão; a estrutura manipula essas mensagens e gerencia a aparência do botão para você.
 
-### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Para criar um controle de botão bitmap na área cliente de uma janela
+### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Para criar um controle de botão de bitmap na área do cliente da janela
 
-1. Crie de uma a quatro imagens bitmap para o botão.
+1. Crie uma para quatro imagens de bitmap para o botão.
 
-1. Construa o objeto [CBitmapButton.](#cbitmapbutton)
+1. Construa o objeto [CBitmapButton](#cbitmapbutton) .
 
-1. Chame a função [Criar](../../mfc/reference/cbutton-class.md#create) para criar o controle `CBitmapButton` do botão do Windows e anexá-lo ao objeto.
+1. Chame a função [Create](../../mfc/reference/cbutton-class.md#create) para criar o controle de botão do Windows e anexá-lo ao `CBitmapButton` objeto.
 
-1. Ligue para a função de membro [LoadBitmaps](#loadbitmaps) para carregar os recursos do bitmap depois que o botão bitmap for construído.
+1. Chame a função de membro [LoadBitmaps](#loadbitmaps) para carregar os recursos de bitmap depois que o botão de bitmap for construído.
 
-### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>Para incluir um controle de botão bitmap em uma caixa de diálogo
+### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>Para incluir um controle de botão de bitmap em uma caixa de diálogo
 
-1. Crie de uma a quatro imagens bitmap para o botão.
+1. Crie uma para quatro imagens de bitmap para o botão.
 
-1. Crie um modelo de diálogo com um botão de desenho do proprietário posicionado onde você deseja o botão bitmap. O tamanho do botão no modelo não importa.
+1. Crie um modelo de caixa de diálogo com um botão de desenho proprietário posicionado onde você deseja o botão de bitmap. O tamanho do botão no modelo não importa.
 
-1. Defina a legenda do botão como um valor como "MYIMAGE" e defina um símbolo para o botão como IDC_MYIMAGE.
+1. Defina a legenda do botão como um valor como "MYIMAGE" e defina um símbolo para o botão, como IDC_MYIMAGE.
 
-1. No script de recursos do aplicativo, dê a cada uma das imagens criadas para o botão um ID construído anexando uma das letras "U", "D", "F" ou "X" (para cima, para baixo, focada e desativada) para a string usada para a legenda do botão na etapa 3. Para a legenda de botão " MYIMAGE", por exemplo, os IDs seriam " MYIMAGEU", " MYIMAGED", " MYIMAGEF" e " MYIMAGEX". Você **deve** especificar o ID de seus bitmaps dentro de aspas duplas. Caso contrário, o editor de recursos atribuirá um inteiro ao recurso e o MFC falhará ao carregar a imagem.
+1. No script de recurso do aplicativo, forneça a cada uma das imagens criadas para o botão uma ID construída acrescentando uma das letras "U", "D," "F" ou "X" (para cima, para baixo, com foco e desabilitado) à cadeia de caracteres usada para a legenda do botão na etapa 3. Para a legenda do botão "MYIMAGE", por exemplo, as IDs seriam "myimageexception", "MYIMAGED", "MYIMAGEF" e "MYIMAGEX". Você **deve** especificar a ID dos bitmaps entre aspas duplas. Caso contrário, o editor de recursos atribuirá um inteiro ao recurso e o MFC falhará ao carregar a imagem.
 
-1. Na classe de diálogo do aplicativo `CDialog`(derivada), adicione um `CBitmapButton` objeto membro.
+1. Na classe de diálogo do aplicativo (derivada de `CDialog` ), adicione um `CBitmapButton` objeto de membro.
 
-1. Na `CDialog` rotina [onInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) do objeto, `CBitmapButton` chame a função [AutoLoad](#autoload) do objeto, usando como `CDialog` parâmetros o ID de controle do botão e o objeto **deste** ponteiro.
+1. Na `CDialog` rotina [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) do objeto, chame a `CBitmapButton` função [AutoLoad](#autoload) do objeto, usando como parâmetros a ID de controle do botão e o `CDialog` ponteiro do objeto **`this`** .
 
-Se você quiser lidar com mensagens de notificação do Windows, como BN_CLICKED, enviadas por um `CDialog`controle de `CDialog`botão bitmap para seu pai (geralmente uma classe derivada), adicione ao objeto derivado uma entrada de mapa de mensagem e função de membro do manipulador de mensagens para cada mensagem. As notificações `CBitmapButton` enviadas por um objeto são as mesmas enviadas por um objeto [CButton.](../../mfc/reference/cbutton-class.md)
+Se você quiser manipular mensagens de notificação do Windows, como BN_CLICKED, enviadas por um controle de botão de bitmap para seu pai (geralmente uma classe derivada de `CDialog` ), adicione ao `CDialog` objeto derivado uma entrada de mapa de mensagem e uma função de membro de manipulador de mensagens para cada mensagem. As notificações enviadas por um `CBitmapButton` objeto são as mesmas enviadas por um objeto [CButton](../../mfc/reference/cbutton-class.md) .
 
-A classe [CToolBar](../../mfc/reference/ctoolbar-class.md) adota uma abordagem diferente para botões de bitmap.
+A classe [CToolBar](../../mfc/reference/ctoolbar-class.md) usa uma abordagem diferente para botões de bitmap.
 
-Para obter `CBitmapButton`mais informações sobre , consulte [Controles](../../mfc/controls-mfc.md).
+Para obter mais informações sobre o `CBitmapButton` , consulte [controles](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
@@ -110,11 +110,11 @@ Para obter `CBitmapButton`mais informações sobre , consulte [Controles](../../
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxext.h
+**Cabeçalho:** afxext. h
 
-## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton::Carga automática
+## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton:: AutoLoad
 
-Associa um botão em uma caixa `CBitmapButton` de diálogo com um objeto da classe, carrega os bitmap(s) pelo nome e dimensiona o botão para encaixar o bitmap.
+Associa um botão em uma caixa de diálogo a um objeto da `CBitmapButton` classe, carrega os bitmaps por nome e dimensiona o botão para ajustá-lo ao bitmap.
 
 ```
 BOOL AutoLoad(
@@ -122,21 +122,21 @@ BOOL AutoLoad(
     CWnd* pParent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
-O botão é o controle da iD.
+A ID de controle do botão.
 
 *pParent*<br/>
 Ponteiro para o objeto que possui o botão.
 
 ### <a name="return-value"></a>Valor retornado
 
-Não zero se bem sucedido; caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Use `AutoLoad` a função para inicializar um botão de desenho do proprietário em uma caixa de diálogo como um botão bitmap. As instruções para o uso desta `CBitmapButton` função estão nas observações da classe.
+Use a `AutoLoad` função para inicializar um botão de desenho proprietário em uma caixa de diálogo como um botão de bitmap. As instruções para usar essa função estão nos comentários para a `CBitmapButton` classe.
 
 ### <a name="example"></a>Exemplo
 
@@ -152,15 +152,15 @@ CBitmapButton();
 
 ### <a name="remarks"></a>Comentários
 
-Depois de criar `CBitmapButton` o objeto C++, chame [CButton::Criar](../../mfc/reference/cbutton-class.md#create) para `CBitmapButton` criar o controle do botão do Windows e anexá-lo ao objeto.
+Depois de criar o `CBitmapButton` objeto C++, chame [CButton:: Create](../../mfc/reference/cbutton-class.md#create) para criar o controle de botão do Windows e anexá-lo ao `CBitmapButton` objeto.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]
 
-## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps
+## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton:: LoadBitmaps
 
-Use esta função quando quiser carregar imagens de bitmap identificadas por seus `AutoLoad` nomes de recursos ou números de identificação, ou quando você não puder usar a função porque, por exemplo, você está criando um botão bitmap que não faz parte de uma caixa de diálogo.
+Use essa função quando desejar carregar imagens de bitmap identificadas por seus nomes de recursos ou números de ID, ou quando não for possível usar a `AutoLoad` função porque, por exemplo, você está criando um botão de bitmap que não faz parte de uma caixa de diálogo.
 
 ```
 BOOL LoadBitmaps(
@@ -176,35 +176,35 @@ BOOL LoadBitmaps(
     UINT nIDBitmapResourceDisabled = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszBitmapResource*<br/>
-Aponta para a seqüência de terminadas nula que contém o nome do bitmap para o estado normal ou "up" de um botão bitmap. Obrigatórios.
+Aponta para a cadeia de caracteres terminada em nulo que contém o nome do bitmap para o estado normal ou "vertical" de um botão de bitmap. Obrigatórios.
 
 *lpszBitmapResourceSel*<br/>
-Aponta para a seqüência de terminadas nula que contém o nome do bitmap para o estado selecionado ou "para baixo" de um botão bitmap. Pode ser NULO.
+Aponta para a cadeia de caracteres terminada em nulo que contém o nome do bitmap para o estado selecionado ou "inativo" do botão de bitmap. Pode ser NULL.
 
 *lpszBitmapResourceFocus*<br/>
-Aponta para a seqüência de terminadas nula que contém o nome do bitmap para o estado focado de um botão bitmap. Pode ser NULO.
+Aponta para a cadeia de caracteres terminada em nulo que contém o nome do bitmap para o estado focalizado de um botão de bitmap. Pode ser NULL.
 
 *lpszBitmapResourceDisabled*<br/>
-Aponta para a seqüência de terminadas nula que contém o nome do bitmap para o estado desativado de um botão bitmap. Pode ser NULO.
+Aponta para a cadeia de caracteres terminada em nulo que contém o nome do bitmap para o estado desabilitado de um botão de bitmap. Pode ser NULL.
 
-*nIDBitmapRecurso*<br/>
-Especifica o número de ID de recurso do recurso bitmap para o estado normal ou "up" de um botão bitmap. Obrigatórios.
+*nIDBitmapResource*<br/>
+Especifica o número de ID de recurso do recurso de bitmap para o estado normal ou "vertical" de um botão de bitmap. Obrigatórios.
 
 *nIDBitmapResourceSel*<br/>
-Especifica o número de ID de recurso do recurso bitmap para o estado selecionado ou "para baixo" de um botão bitmap. Pode ser 0.
+Especifica o número de ID de recurso do recurso de bitmap para o estado selecionado ou "inativo" do botão de bitmap. Pode ser 0.
 
 *nIDBitmapResourceFocus*<br/>
-Especifica o número de ID de recurso do recurso bitmap para o estado focado em um botão bitmap. Pode ser 0.
+Especifica o número de ID de recurso do recurso de bitmap para o estado focalizado de um botão de bitmap. Pode ser 0.
 
-*nIDBitmapRecursodesativado*<br/>
-Especifica o número de ID de recurso do recurso bitmap para o estado desativado de um botão bitmap. Pode ser 0.
+*nIDBitmapResourceDisabled*<br/>
+Especifica o número de ID de recurso do recurso de bitmap para o estado desabilitado de um botão de bitmap. Pode ser 0.
 
 ### <a name="return-value"></a>Valor retornado
 
-Não zero se bem sucedido; caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
@@ -212,7 +212,7 @@ Não zero se bem sucedido; caso contrário, 0.
 
 ## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton::SizeToContent
 
-Chame esta função para redimensionar um botão bitmap para o tamanho do bitmap.
+Chame essa função para redimensionar um botão de bitmap para o tamanho do bitmap.
 
 ```cpp
 void SizeToContent();
@@ -224,6 +224,6 @@ void SizeToContent();
 
 ## <a name="see-also"></a>Confira também
 
-[Tomografia de amostra MFC](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de CTRLTEST do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)

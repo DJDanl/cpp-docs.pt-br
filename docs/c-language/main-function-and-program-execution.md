@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123936"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211782"
 ---
 # <a name="main-function-and-program-execution"></a>Função main e execução do programa
 
@@ -28,7 +28,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>Comentários
 
-As funções do programa de origem executam uma ou mais tarefas específicas. A função **main** pode chamar essas funções para executar as respectivas tarefas. Quando **main** chama outra função, passa para ela o controle da execução; assim, a execução começa na primeira instrução da função. Uma função devolve o controle a **main** quando uma instrução `return` é executada ou quando o término da função é atingido.
+As funções do programa de origem executam uma ou mais tarefas específicas. A função **main** pode chamar essas funções para executar as respectivas tarefas. Quando **main** chama outra função, passa para ela o controle da execução; assim, a execução começa na primeira instrução da função. Uma função retorna o controle para **Main** quando uma **`return`** instrução é executada ou quando o final da função é atingido.
 
 Você pode declarar qualquer função, inclusive **main**, para ter parâmetros. O termo "parâmetro" ou "parâmetro formal" refere-se ao identificador que recebe um valor passado para uma função. Consulte [Parâmetros](../c-language/parameters.md) para obter informações sobre como passar argumentos para parâmetros. Quando uma função chama outra, a função chamada recebe valores para os respectivos parâmetros da função que chamou. Esses valores são chamados de "argumentos". É possível declarar parâmetros formais para **main** de modo que a função possa receber argumentos da linha de comando usando este formato:
 

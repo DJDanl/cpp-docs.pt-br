@@ -2,12 +2,12 @@
 title: Usando objetos accelerator e accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: e3fed4dc2a431b751d4ad50484e32b738e786d10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404171"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215888"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>Usando objetos accelerator e accelerator_view
 
@@ -94,7 +94,7 @@ void pick_with_most_memory()
 
 ## <a name="shared-memory"></a>Memória compartilhada
 
-Memória compartilhada é a memória que pode ser acessada pela CPU e pelo acelerador. O uso da memória compartilhada elimina ou reduz significativamente a sobrecarga de copiar dados entre a CPU e o acelerador. Embora a memória seja compartilhada, ela não pode ser acessada simultaneamente pela CPU e pelo acelerador, e fazer isso causa um comportamento indefinido. A propriedade Accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) retornará **true** se o acelerador der suporte à memória compartilhada e a propriedade [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) obterá a [access_type](reference/concurrency-namespace-enums-amp.md#access_type) padrão para a memória alocada no `accelerator` — por exemplo, **matrizes**s associadas aos `accelerator` `array_view` objetos ou acessados no `accelerator` .
+Memória compartilhada é a memória que pode ser acessada pela CPU e pelo acelerador. O uso da memória compartilhada elimina ou reduz significativamente a sobrecarga de copiar dados entre a CPU e o acelerador. Embora a memória seja compartilhada, ela não pode ser acessada simultaneamente pela CPU e pelo acelerador, e fazer isso causa um comportamento indefinido. A propriedade Accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) retornará **`true`** se o acelerador der suporte à memória compartilhada e a propriedade [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) obterá a [access_type](reference/concurrency-namespace-enums-amp.md#access_type) padrão para a memória alocada no `accelerator` — por exemplo, **matrizes**s associadas aos `accelerator` `array_view` objetos ou acessados no `accelerator` .
 
 O tempo de execução de C++ AMP escolhe automaticamente o melhor padrão `access_type` para cada `accelerator` , mas as características de desempenho (largura de banda e latência) da memória compartilhada podem ser piores do que aquelas da memória de acelerador dedicada (não compartilhada) ao ler da CPU, gravar da CPU ou ambos. Se a memória compartilhada for executada, bem como memória dedicada para leitura e gravação da CPU, o tempo de execução padrão será `access_type_read_write` ; caso contrário, o tempo de execução escolherá um padrão mais conservador `access_type` e permitirá que o aplicativo o substitua se os padrões de acesso à memória de seus kernels de computação se beneficiarem de um diferente `access_type` .
 
@@ -131,7 +131,7 @@ Um `accelerator_view` sempre reflete o `default_cpu_access_type` do `accelerator
 
 ## <a name="changing-the-default-accelerator"></a>Alterando o acelerador padrão
 
-Você pode alterar o acelerador padrão chamando o `accelerator::set_default` método. Você pode alterar o acelerador padrão apenas uma vez por execução de aplicativo e deve alterá-lo antes de qualquer código ser executado na GPU. Todas as chamadas de função subsequentes para alterar o acelerador retornam **false**. Se você quiser usar um acelerador diferente em uma chamada para `parallel_for_each` , leia a seção "usando vários aceleradores" neste artigo. O exemplo de código a seguir define o acelerador padrão como um que não é emulado, não está conectado a uma exibição e dá suporte à precisão dupla.
+Você pode alterar o acelerador padrão chamando o `accelerator::set_default` método. Você pode alterar o acelerador padrão apenas uma vez por execução de aplicativo e deve alterá-lo antes de qualquer código ser executado na GPU. Todas as chamadas de função subsequentes para alterar o retorno do acelerador **`false`** . Se você quiser usar um acelerador diferente em uma chamada para `parallel_for_each` , leia a seção "usando vários aceleradores" neste artigo. O exemplo de código a seguir define o acelerador padrão como um que não é emulado, não está conectado a uma exibição e dá suporte à precisão dupla.
 
 ```cpp
 bool pick_accelerator()
