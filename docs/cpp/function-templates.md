@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179738"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232281"
 ---
 # <a name="function-templates"></a>Modelos de função
 
@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-Esse código define uma família de funções que permutam os valores dos argumentos. A partir desse modelo, você pode gerar funções que trocam tipos **int** e **Long** e também tipos definidos pelo usuário. `MySwap` permutará até mesmo classes se o operador de atribuição e o construtor de cópia da classe estiverem definidos corretamente.
+Esse código define uma família de funções que permutam os valores dos argumentos. A partir desse modelo, você pode gerar funções que serão trocas **`int`** e **`long`** tipos e também tipos definidos pelo usuário. `MySwap` permutará até mesmo classes se o operador de atribuição e o construtor de cópia da classe estiverem definidos corretamente.
 
 Além disso, o modelo de função impedirá que você permutasse objetos de tipos diferentes, porque o compilador *sabe os tipos* dos parâmetros a e *b* no momento da compilação.
 
@@ -55,11 +55,11 @@ int main(int j) {
 }
 ```
 
-Quando o argumento de modelo é especificado explicitamente, as conversões implícitas normais são realizadas para converter o argumento da função no tipo dos parâmetros correspondentes do modelo de função. No exemplo acima, o compilador converterá `j` no tipo **Char**.
+Quando o argumento de modelo é especificado explicitamente, as conversões implícitas normais são realizadas para converter o argumento da função no tipo dos parâmetros correspondentes do modelo de função. No exemplo acima, o compilador converterá `j` em Type **`char`** .
 
 ## <a name="see-also"></a>Confira também
 
-[Modelos](../cpp/templates-cpp.md)<br/>
-[Instanciação do modelo de função](../cpp/function-template-instantiation.md)<br/>
+[Modelo](../cpp/templates-cpp.md)<br/>
+[Instanciação de modelo de função](../cpp/function-template-instantiation.md)<br/>
 [Instanciação explícita](../cpp/explicit-instantiation.md)<br/>
-[Especialização explícita de modelos de função](../cpp/explicit-specialization-of-function-templates.md)
+[Especialização explícita dos modelos de função](../cpp/explicit-specialization-of-function-templates.md)

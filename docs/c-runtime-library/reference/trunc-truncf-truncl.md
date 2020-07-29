@@ -33,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946003"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232385"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -57,28 +57,28 @@ long double trunc( long double x ); //C++ only
 float trunc( float x ); //C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor a ser truncado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se for bem-sucedido, retorna um valor inteiro de *x*, arredondado para zero.
 
 Caso contrário, pode retornar um dos seguintes:
 
-|Problema|Valor de|
+|Problema|Retorno|
 |-----------|------------|
-|*x* = ±INFINITY|x|
-|*x* =  ±0|x|
+|*x* = ± infinito|x|
+|*x* = ± 0|x|
 |*x* = Nan|NaN|
 
 Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **truncar** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **trunc** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **truncar** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, **trunc** sempre pega e retorna um **`double`** .
 
 Como os maiores valores de ponto flutuantes são inteiros exatos, essa função não estourará por conta própria. No entanto, você pode causar o estouro, retornando um valor para um tipo inteiro.
 
@@ -88,13 +88,13 @@ Você também pode arredondar para baixo pela conversão implícita de ponto flu
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**trunc**, **truncf**, **truncl**|\<math.h>|\<cmath>|
+|**truncar**, **truncf**, **truncl**|\<math.h>|\<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>

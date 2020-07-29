@@ -5,18 +5,18 @@ helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: c9a46ccb1cf519080c5105855e41ecd3ebc23f77
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef437d0a691ceff72485be1ff9584052f540031a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188045"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232177"
 ---
 # <a name="transfers-of-control"></a>Transferências de controle
 
-Você pode usar a instrução **goto** ou um rótulo **Case** em uma instrução **switch** para especificar um programa que ramificações após um inicializador. Esse código é inválido, a menos que a declaração que contém o inicializador esteja em um bloco delimitado pelo bloco em que a instrução de salto ocorre.
+Você pode usar a **`goto`** instrução ou um **`case`** rótulo em uma **`switch`** instrução para especificar um programa que ramificações após um inicializador. Esse código é inválido, a menos que a declaração que contém o inicializador esteja em um bloco delimitado pelo bloco em que a instrução de salto ocorre.
 
-O exemplo a seguir mostra um loop que declara e inicializa os objetos `total`, `ch` e `i`. Há também uma instrução **goto** incorreta que transfere o controle após um inicializador.
+O exemplo a seguir mostra um loop que declara e inicializa os objetos `total`, `ch` e `i`. Há também uma instrução errada **`goto`** que transfere o controle após um inicializador.
 
 ```cpp
 // transfers_of_control.cpp
@@ -48,6 +48,6 @@ int main()
 }
 ```
 
-No exemplo anterior, a instrução **goto** tenta transferir o controle após a inicialização de `i`. No entanto, se `i` tivesse sido declarado, mas não inicializado, a transferência seria válida.
+No exemplo anterior, a **`goto`** instrução tenta transferir o controle após a inicialização de `i` . No entanto, se `i` tivesse sido declarado, mas não inicializado, a transferência seria válida.
 
-Os objetos `total` e `ch`, declarados no bloco que serve como a *instrução* da instrução **while** , são destruídos quando esse bloco é encerrado usando a instrução **Break** .
+Os objetos `total` e `ch` , declarados no bloco que serve como a *instrução* da **`while`** instrução, são destruídos quando esse bloco é encerrado usando a **`break`** instrução.
