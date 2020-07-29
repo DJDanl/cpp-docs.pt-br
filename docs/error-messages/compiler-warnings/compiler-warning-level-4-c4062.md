@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 4) C4062
+title: Aviso do compilador (nível 4) C4062
 ms.date: 04/05/2019
 f1_keywords:
 - C4062
 helpviewer_keywords:
 - C4062
 ms.assetid: 36d1c6ae-c917-4b08-bf30-2eb49ee94169
-ms.openlocfilehash: 79658afc31565b708cdbd8a88f49b887cdd10cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efe021c9994e20f2630e31537bcc6099783b4308
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401404"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219996"
 ---
-# <a name="compiler-warning-level-4-c4062"></a>Compilador aviso (nível 4) C4062
+# <a name="compiler-warning-level-4-c4062"></a>Aviso do compilador (nível 4) C4062
 
-> enumerador '*identificador*'na opção de enumeração'*enumeração*' não é tratado
+> o enumerador '*Identifier*' na opção de enumeração '*Enumeration*' não é tratado
 
-O enumerador *identificador* não tem nenhum associado `case` manipulador em um `switch` instrução e não há nenhum `default` rótulo que pode capturá-la. O caso ausente pode ser uma falha e é um erro potencial em seu código. Para um aviso relacionado em enumeradores não utilizados no `switch` declarações que têm um `default` case, consulte [C4061](compiler-warning-level-4-c4061.md).
+O *identificador* do enumerador não tem nenhum `case` manipulador associado em uma **`switch`** instrução, e não há nenhum **`default`** rótulo que possa capturá-lo. O caso ausente pode ser uma supervisão e é um erro potencial em seu código. Para obter um aviso relacionado sobre enumeradores não utilizados em **`switch`** instruções que têm um **`default`** caso, consulte [C4061](compiler-warning-level-4-c4061.md).
 
-Esse aviso é desativado por padrão. Para obter mais informações sobre como habilitar os avisos são desativados por padrão, consulte [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Esse aviso está desativado por padrão. Para obter mais informações sobre como habilitar os avisos que estão desativados por padrão, consulte os [avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -43,6 +43,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Aviso do compilador (nível 4) C4061](compiler-warning-level-4-c4061.md)

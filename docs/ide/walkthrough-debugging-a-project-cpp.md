@@ -1,23 +1,23 @@
 ---
-title: 'Passo a passo: Depurando um projeto (C++)'
+title: 'Instruções passo a passo: depurando um projeto (C++)'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400973"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219671"
 ---
-# <a name="walkthrough-debugging-a-project-c"></a>Passo a passo: Depurando um projeto (C++)
+# <a name="walkthrough-debugging-a-project-c"></a>Instruções passo a passo: depurando um projeto (C++)
 
 Neste passo a passo, você modificará o programa para corrigir o problema encontrado durante o teste do projeto.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Este passo a passo pressupõe que você conheça os princípios básicos da linguagem C++.
 
@@ -27,7 +27,7 @@ Neste passo a passo, você modificará o programa para corrigir o problema encon
 
 1. Para ver o que ocorre quando um objeto `Cardgame` é destruído, exiba o destruidor da classe `Cardgame`.
 
-   Na barra de menus, escolha **Exibir** > **Modo de Exibição de Classe**.
+   Na barra de menus, escolha **Exibir**  >  **modo de exibição de classe**.
 
    Na janela **Modo de Exibição de Classe**, expanda a árvore do projeto **Game** e selecione a classe **Cardgame** para exibir os métodos e os membros da classe.
 
@@ -41,22 +41,22 @@ Neste passo a passo, você modificará o programa para corrigir o problema encon
 
    [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
-1. Na barra de menus, escolha **Compilar** > **Compilar Solução**.
+1. Na barra de menus, escolha **Compilar**compilar  >  **solução**.
 
-1. Quando o build for concluído, execute-o no modo de Depuração escolhendo **Depurar** > **Iniciar depuração** na barra de menus ou escolhendo a tecla **F5**. O programa pausa no primeiro ponto de interrupção.
+1. Quando a compilação for concluída, execute-a no modo de depuração escolhendo **depurar**  >  **Iniciar Depuração** na barra de menus ou escolhendo a tecla **F5** . O programa pausa no primeiro ponto de interrupção.
 
-1. Para executar programa em etapas, na barra de menus, escolha **Depurar** > **Depuração Parcial** ou escolha a tecla **F10**.
+1. Para percorrer o programa, na barra de menus, escolha **depurar**  >  **etapa acima**ou escolha a tecla **F10** .
 
-   Observe que, após a execução de cada construtor `Cardgame`, o valor de `totalParticipants` aumenta. Quando a função `PlayGames` é retornada, à medida que cada instância `Cardgame` sai do escopo e é excluída (e o destruidor é chamado), `totalParticipants` diminui. Logo antes da execução da instrução `return`, `totalParticipants` é igual a 0.
+   Observe que, após a execução de cada construtor `Cardgame`, o valor de `totalParticipants` aumenta. Quando a função `PlayGames` é retornada, à medida que cada instância `Cardgame` sai do escopo e é excluída (e o destruidor é chamado), `totalParticipants` diminui. Logo antes da **`return`** execução da instrução, é `totalParticipants` igual a 0.
 
-1. Continue executando o programa em etapas até que ele seja encerrado ou deixe-o em execução escolhendo **Depurar** > **Executar** na barra de menus ou escolhendo a tecla **F5**.
+1. Continue percorrendo o programa até que ele saia ou deixe-o em execução escolhendo **depurar**  >  **executar** na barra de menus ou escolhendo a tecla **F5** .
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Anterior:** [Passo a passo: Teste de um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Avançar:** [Passo a passo: Implantação do programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+**Anterior:** [Passo a passo: testando um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Próximo:** [Passo a passo: implantando seu programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Sistemas de Compilação e Projetos](../build/projects-and-build-systems-cpp.md)<br/>
+[Sistemas de build e projetos](../build/projects-and-build-systems-cpp.md)<br/>

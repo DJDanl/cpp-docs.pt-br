@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 37708bf50b28eb120af8e8a79e770c3121e6f509
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8551d41417647ee4f759e2547e2c1909c59d78cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213197"
 ---
 # <a name="static_cast-operator"></a>Operador static_cast
 
@@ -27,9 +27,9 @@ static_cast <type-id> ( expression )
 
 No padrão C++, nenhuma verificação de tipo de tempo de execução é feita para ajudar a garantir a segurança da conversão. No C++/CX, uma verificação de tempo de compilação e de runtime é executada. Para obter mais informações, consulte [Conversão](casting.md).
 
-O operador **static_cast** pode ser usado para operações como converter um ponteiro para uma classe base em um ponteiro para uma classe derivada. Essas conversões não são sempre seguras.
+O **`static_cast`** operador pode ser usado para operações como converter um ponteiro para uma classe base em um ponteiro para uma classe derivada. Essas conversões não são sempre seguras.
 
-Em geral, você usa **static_cast** quando deseja converter tipos de dados numéricos, como enums para ints ou ints como floats, e você tem certeza dos tipos de dados envolvidos na conversão. **static_cast** conversões não são tão seguras quanto **dynamic_cast** conversões, porque **static_cast** não faz verificação de tipo em tempo de execução, enquanto **dynamic_cast** . Um **dynamic_cast** a um ponteiro ambíguo falhará, enquanto um **static_cast** retornará como se nada estivesse errado; Isso pode ser perigoso. Embora **dynamic_cast** conversões sejam mais seguras, **dynamic_cast** funciona apenas em ponteiros ou referências, e a verificação de tipo em tempo de execução é uma sobrecarga. Para obter mais informações, consulte [operador de dynamic_cast](../cpp/dynamic-cast-operator.md).
+Em geral, você usa **`static_cast`** quando deseja converter tipos de dados numéricos, como enums para ints ou ints como floats, e você tem certeza dos tipos de dados envolvidos na conversão. **`static_cast`** as conversões não são tão seguras quanto as **`dynamic_cast`** conversões, pois **`static_cast`** não há verificação de tipo em tempo de execução, enquanto **`dynamic_cast`** o faz. R **`dynamic_cast`** para um ponteiro ambíguo falhará, enquanto um **`static_cast`** retorna como se nada estivesse errado, isso pode ser perigoso. Embora **`dynamic_cast`** as conversões sejam mais seguras, **`dynamic_cast`** o só funciona em ponteiros ou referências, e a verificação de tipo em tempo de execução é uma sobrecarga. Para obter mais informações, consulte [operador de dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 No exemplo a seguir, a linha `D* pd2 = static_cast<D*>(pb);` não é segura porque `D` pode ter campos e métodos que não estão em `B`. No entanto, a linha `B* pb2 = static_cast<B*>(pd);` é uma conversão segura porque `D` sempre contém tudo de `B`.
 
@@ -49,9 +49,9 @@ void f(B* pb, D* pd) {
 }
 ```
 
-Em contraste com [dynamic_cast](../cpp/dynamic-cast-operator.md), nenhuma verificação de tempo de execução é feita na conversão de **static_cast** de `pb`. O objeto apontado por `pb` não pode ser um objeto do tipo `D`, pois, nesse caso, o uso de `*pd2` seria desastroso. Por exemplo, chamar uma função que é membro da classe `D`, mas não da classe `B`, poderá resultar em uma violação de acesso.
+Em contraste com [dynamic_cast](../cpp/dynamic-cast-operator.md), nenhuma verificação de tempo de execução é feita na **`static_cast`** conversão de `pb` . O objeto apontado por `pb` não pode ser um objeto do tipo `D`, pois, nesse caso, o uso de `*pd2` seria desastroso. Por exemplo, chamar uma função que é membro da classe `D`, mas não da classe `B`, poderá resultar em uma violação de acesso.
 
-Os operadores **dynamic_cast** e **static_cast** movem um ponteiro em toda a hierarquia de classes. No entanto, **static_cast** depende exclusivamente das informações fornecidas na instrução cast e, portanto, pode não ser segura. Por exemplo:
+Os **`dynamic_cast`** **`static_cast`** operadores e movem um ponteiro em toda a hierarquia de classe. No entanto, **`static_cast`** depende exclusivamente das informações fornecidas na instrução cast e, portanto, pode não ser segura. Por exemplo:
 
 ```cpp
 // static_cast_Operator_2.cpp
@@ -70,13 +70,13 @@ void f(B* pb) {
 
 Se `pb` apontar para um objeto do tipo `D`, `pd1` e `pd2` obterão o mesmo valor. Eles também obterão o mesmo valor se `pb == 0`.
 
-Se `pb` apontar para um objeto do tipo `B` e não para a classe `D` completa, **dynamic_cast** saberá o suficiente para retornar zero. No entanto, **static_cast** se baseia na declaração do programador que `pb` aponta para um objeto do tipo `D` e simplesmente retorna um ponteiro para isso que deveria `D` objeto.
+Se `pb` apontar para um objeto do tipo `B` e não para a `D` classe completa, então **`dynamic_cast`** saberá o suficiente para retornar zero. No entanto, **`static_cast`** o se baseia na declaração do programador que `pb` aponta para um objeto do tipo `D` e simplesmente retorna um ponteiro para o `D` objeto esperado.
 
-Consequentemente, **static_cast** pode fazer o inverso de conversões implícitas; nesse caso, os resultados são indefinidos. Ele é deixado ao programador para verificar se os resultados de uma conversão de **static_cast** são seguros.
+Consequentemente, o **`static_cast`** pode fazer o inverso de conversões implícitas, caso em que os resultados são indefinidos. Ele é deixado ao programador para verificar se os resultados de uma **`static_cast`** conversão são seguros.
 
-Esse comportamento também se aplica a tipos diferentes dos tipos de classe. Por exemplo, **static_cast** pode ser usado para converter de um int em um **Char**. No entanto, o **caractere** resultante pode não ter bits suficientes para manter **todo o valor inteiro.** Novamente, é deixada para o programador verificar se os resultados de uma conversão de **static_cast** são seguros.
+Esse comportamento também se aplica a tipos diferentes dos tipos de classe. Por exemplo, **`static_cast`** pode ser usado para converter de um int para um **`char`** . No entanto, o resultado **`char`** pode não ter bits suficientes para manter o **`int`** valor inteiro. Novamente, é deixada para o programador verificar se os resultados de uma **`static_cast`** conversão são seguros.
 
-O operador de **static_cast** também pode ser usado para executar qualquer conversão implícita, incluindo conversões padrão e conversões definidas pelo usuário. Por exemplo:
+O **`static_cast`** operador também pode ser usado para executar qualquer conversão implícita, incluindo conversões padrão e conversões definidas pelo usuário. Por exemplo:
 
 ```cpp
 // static_cast_Operator_3.cpp
@@ -95,15 +95,15 @@ void f() {
 }
 ```
 
-O operador **static_cast** pode converter explicitamente um valor integral em um tipo de enumeração. Se o valor do tipo integral não estiver dentro do intervalo de valores de enumeração, o valor de enumeração resultante será indefinido.
+O **`static_cast`** operador pode converter explicitamente um valor integral em um tipo de enumeração. Se o valor do tipo integral não estiver dentro do intervalo de valores de enumeração, o valor de enumeração resultante será indefinido.
 
-O operador **static_cast** converte um valor de ponteiro nulo para o valor de ponteiro nulo do tipo de destino.
+O **`static_cast`** operador converte um valor de ponteiro nulo para o valor de ponteiro nulo do tipo de destino.
 
-Qualquer expressão pode ser convertida explicitamente para o tipo void pelo operador de **static_cast** . O tipo void de destino pode, opcionalmente, incluir o atributo **const**, **volatile**ou **__unaligned** .
+Qualquer expressão pode ser convertida explicitamente para o tipo void pelo **`static_cast`** operador. O tipo void de destino pode, opcionalmente **`const`** , incluir o **`volatile`** atributo, ou **`__unaligned`** .
 
-O operador de **static_cast** não pode converter os atributos **const**, **volatile**ou **__unaligned** . Consulte [operador de const_cast](../cpp/const-cast-operator.md) para obter informações sobre como remover esses atributos.
+O **`static_cast`** operador não pode converter os **`const`** **`volatile`** atributos, ou **`__unaligned`** . Consulte [operador de const_cast](../cpp/const-cast-operator.md) para obter informações sobre como remover esses atributos.
 
-**C++/CLI:** Devido ao perigo de executar conversões não verificadas sobre um coletor de lixo realocado, o uso de **static_cast** só deve estar no código de desempenho crítico quando você tiver certeza de que ele funcionará corretamente. Se você precisar usar **static_cast** no modo de versão, substitua-o por [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) em suas compilações de depuração para garantir o sucesso.
+**C++/CLI:** Devido ao perigo de executar conversões não verificadas sobre um coletor de lixo realocado, o uso do **`static_cast`** deve estar apenas no código de desempenho crítico quando você tiver certeza de que ele funcionará corretamente. Se você precisar usar **`static_cast`** o no modo de versão, substitua-o por [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) em suas compilações de depuração para garantir o sucesso.
 
 ## <a name="see-also"></a>Confira também
 

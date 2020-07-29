@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3afc2e8049cfcca40db389bed84baa6f42dae126
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160821"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213145"
 ---
-# <a name="__super"></a>__super
+# `__super`
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Permite que você indique explicitamente que está chamando uma implementação da classe base para uma função que está substituindo.
 
@@ -29,9 +29,9 @@ __super::member_function();
 
 Todos os métodos acessíveis da classe base são considerados durante a fase de resolução de sobrecarga e a função que fornece a melhor correspondência é a chamada.
 
-**__super** só pode aparecer dentro do corpo de uma função de membro.
+**`__super`** Só pode aparecer dentro do corpo de uma função de membro.
 
-**__super** não pode ser usada com uma declaração using. Consulte [usando a declaração](../cpp/using-declaration.md) para obter mais informações.
+**`__super`** Não pode ser usado com uma declaração using. Consulte [usando a declaração](../cpp/using-declaration.md) para obter mais informações.
 
 Com a introdução de [atributos](../windows/attributes/attributes-alphabetical-reference.md) que injetam código, seu código pode conter uma ou mais classes base cujos nomes você talvez não conheça, mas que contêm métodos que você deseja chamar.
 
@@ -58,7 +58,7 @@ struct D : B1, B2 {
 };
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

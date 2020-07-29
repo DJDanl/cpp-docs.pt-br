@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9914818520fafb707b6821ba827e867b8aea9928
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198959"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220022"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Aviso do compilador (nível 3) C4191
 
@@ -25,11 +25,11 @@ Várias operações envolvendo ponteiros de função são consideradas inseguras
 
 - Argumentos ou tipos de retorno com tamanhos diferentes, categorias de tipo ou classificações.
 
-- Comprimentos de lista de argumentos diferentes (em `__cdecl`, somente na conversão de uma lista mais longa para uma lista mais curta, mesmo se mais curto for varargs).
+- Comprimentos de lista de argumentos diferentes (on **`__cdecl`** , somente na conversão de uma lista mais longa para uma lista mais curta, mesmo se mais curto for varargs).
 
-- Ponteiro para dados (diferente de **void** <strong>\*</strong>) com alias em relação a um ponteiro para funcionar.
+- Ponteiro para dados (diferente de **`void`** <strong>\*</strong> ) com alias em relação a um ponteiro para função.
 
-- Qualquer outra diferença de tipo que produza um erro ou um aviso em um `reinterpret_cast`.
+- Qualquer outra diferença de tipo que produza um erro ou um aviso em um **`reinterpret_cast`** .
 
 Chamar essa função por meio do ponteiro de resultado pode fazer com que o programa falhe.
 

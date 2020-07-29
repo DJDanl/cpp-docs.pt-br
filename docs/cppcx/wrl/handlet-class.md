@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: bde7d7f1bd6730d96cb0f7a0d191a32eb8ed3e8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 661d3cb92b20fc929a9bae3cad7bb55740e5e096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371459"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213002"
 ---
 # <a name="handlet-class"></a>Classe HandleT
 
-Representa uma alça para um objeto.
+Representa um identificador para um objeto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,10 +45,10 @@ template <typename HandleTraits>
 class HandleT;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *HandleTraits*<br/>
-Um exemplo da estrutura [HandleTraits](handletraits-structure.md) que define características comuns de uma alça.
+Uma instância da estrutura [HandleTraits](handletraits-structure.md) que define características comuns de um identificador.
 
 ## <a name="members"></a>Membros
 
@@ -62,36 +62,36 @@ Nome     | Descrição
 
 Nome                                | Descrição
 ----------------------------------- | --------------------------------------------------
-[HandleT::HandleT](#handlet)        | Inicia uma nova instância da classe `HandleT`.
-[HandleT::~Handlet](#tilde-handlet) | Desinicializa uma instância `HandleT` da classe.
+[Identificador:: Handled](#handlet)        | Inicializa uma nova instância da classe `HandleT`.
+[Identificadort:: ~ Identificadort](#tilde-handlet) | Desinicializa uma instância da `HandleT` classe.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                         | Descrição
 ---------------------------- | ----------------------------------------------------------------------
-[HandleT::Anexar](#attach)   | Associa a alça especificada `HandleT` com o objeto atual.
-[HandleT::Fechar](#close)     | Fecha o objeto `HandleT` atual.
-[HandleT::Detach](#detach)   | Desassocia o `HandleT` objeto atual de sua alça subjacente.
-[handlet::Get](#get)         | Obtém o valor da alça subjacente.
-[handlet::isvalid](#isvalid) | Indica se `HandleT` o objeto atual representa uma alça.
+[Identificadore:: Attach](#attach)   | Associa o identificador especificado ao objeto atual `HandleT` .
+[Identificador:: fechar](#close)     | Fecha o objeto `HandleT` atual.
+[Identificadort::D Etach](#detach)   | Desassocia o objeto atual `HandleT` de seu identificador subjacente.
+[Identificador:: Get](#get)         | Obtém o valor do identificador subjacente.
+[Identificadort:: IsValid](#isvalid) | Indica se o `HandleT` objeto atual representa um identificador.
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 Nome                                     | Descrição
 ---------------------------------------- | ------------------------------------
-[handlet::InternalClose](#internalclose) | Fecha o objeto `HandleT` atual.
+[Identificadort:: InternalClose](#internalclose) | Fecha o objeto `HandleT` atual.
 
 ### <a name="public-operators"></a>Operadores públicos
 
 Nome                                   | Descrição
 -------------------------------------- | ----------------------------------------------------------------------------------
-[HandleT::operador=](#operator-assign) | Move o valor do `HandleT` objeto especificado para o objeto atual. `HandleT`
+[Identificadort:: Operator =](#operator-assign) | Move o valor do objeto especificado `HandleT` para o objeto atual `HandleT` .
 
 ### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
 Nome                        | Descrição
 --------------------------- | ----------------------------------------------------------------
-[handleT::handle_](#handle) | Contém a alça representada `HandleT` pelo objeto.
+[Identificador:: handle_](#handle) | Contém o identificador representado pelo `HandleT` objeto.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -99,21 +99,21 @@ Nome                        | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** corewrappers.h
+**Cabeçalho:** corewrappers. h
 
-**Espaço de nome:** Microsoft::WRL::Wrappers
+**Namespace:** Microsoft:: WRL:: wrappers
 
-## <a name="handlethandlet"></a><a name="tilde-handlet"></a>HandleT::~Handlet
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a>Identificadort:: ~ Identificadort
 
-Desinicializa uma instância `HandleT` da classe.
+Desinicializa uma instância da `HandleT` classe.
 
 ```cpp
 ~HandleT();
 ```
 
-## <a name="handletattach"></a><a name="attach"></a>HandleT::Anexar
+## <a name="handletattach"></a><a name="attach"></a>Identificadore:: Attach
 
-Associa a alça especificada `HandleT` com o objeto atual.
+Associa o identificador especificado ao objeto atual `HandleT` .
 
 ```cpp
 void Attach(
@@ -121,12 +121,12 @@ void Attach(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*H*<br/>
+*h*<br/>
 Um identificador.
 
-## <a name="handletclose"></a><a name="close"></a>HandleT::Fechar
+## <a name="handletclose"></a><a name="close"></a>Identificador:: fechar
 
 Fecha o objeto `HandleT` atual.
 
@@ -136,13 +136,13 @@ void Close();
 
 ### <a name="remarks"></a>Comentários
 
-A alça que sustenta `HandleT` a corrente `HandleT` está fechada, e a está definida como estado inválido.
+O identificador que se baseia na atual `HandleT` é fechado e o `HandleT` é definido como o estado inválido.
 
-Se a alça não fechar corretamente, uma exceção será levantada na linha de chamada.
+Se o identificador não fechar corretamente, uma exceção será gerada no thread de chamada.
 
-## <a name="handletdetach"></a><a name="detach"></a>HandleT::Detach
+## <a name="handletdetach"></a><a name="detach"></a>Identificadort::D Etach
 
-Desassocia o `HandleT` objeto atual de sua alça subjacente.
+Desassocia o objeto atual `HandleT` de seu identificador subjacente.
 
 ```cpp
 typename HandleTraits::Type Detach();
@@ -150,15 +150,15 @@ typename HandleTraits::Type Detach();
 
 ### <a name="return-value"></a>Valor retornado
 
-A alça subjacente.
+O identificador subjacente.
 
 ### <a name="remarks"></a>Comentários
 
-Quando esta operação é `HandleT` concluída, a corrente é definida para o estado inválido.
+Quando essa operação for concluída, a atual `HandleT` será definida como o estado inválido.
 
-## <a name="handletget"></a><a name="get"></a>handlet::Get
+## <a name="handletget"></a><a name="get"></a>Identificador:: Get
 
-Obtém o valor da alça subjacente.
+Obtém o valor do identificador subjacente.
 
 ```cpp
 typename HandleTraits::Type Get() const;
@@ -168,17 +168,17 @@ typename HandleTraits::Type Get() const;
 
 Um identificador.
 
-## <a name="handlethandle_"></a><a name="handle"></a>handleT::handle_
+## <a name="handlethandle_"></a><a name="handle"></a>Identificador:: handle_
 
-Contém a alça representada `HandleT` pelo objeto.
+Contém o identificador representado pelo `HandleT` objeto.
 
 ```cpp
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlethandlet"></a><a name="handlet"></a>HandleT::HandleT
+## <a name="handlethandlet"></a><a name="handlet"></a>Identificador:: Handled
 
-Inicia uma nova instância da classe `HandleT`.
+Inicializa uma nova instância da classe `HandleT`.
 
 ```cpp
 explicit HandleT(
@@ -191,16 +191,16 @@ HandleT(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*H*<br/>
+*h*<br/>
 Um identificador.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa `HandleT` um objeto que não é uma alça válida para um objeto. O segundo construtor cria `HandleT` um novo objeto a partir do parâmetro *h*.
+O primeiro construtor inicializa um `HandleT` objeto que não é um identificador válido para um objeto. O segundo construtor cria um novo `HandleT` objeto do parâmetro *h*.
 
-## <a name="handletinternalclose"></a><a name="internalclose"></a>handlet::InternalClose
+## <a name="handletinternalclose"></a><a name="internalclose"></a>Identificadort:: InternalClose
 
 Fecha o objeto `HandleT` atual.
 
@@ -210,15 +210,15 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se `HandleT` a corrente fechou com sucesso; caso contrário, **falso**.
+**`true`** Se o atual for `HandleT` fechado com êxito; caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
-`InternalClose()` é `protected`.
+`InternalClose()`é **`protected`** .
 
-## <a name="handletisvalid"></a><a name="isvalid"></a>handlet::isvalid
+## <a name="handletisvalid"></a><a name="isvalid"></a>Identificadort:: IsValid
 
-Indica se `HandleT` o objeto atual representa uma alça.
+Indica se o `HandleT` objeto atual representa um identificador.
 
 ```cpp
 bool IsValid() const;
@@ -226,11 +226,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se `HandleT` o representa uma alça; caso contrário, **falso**.
+**`true`** Se o `HandleT` representar um identificador; caso contrário, **`false`** .
 
-## <a name="handletoperator"></a><a name="operator-assign"></a>HandleT::operador=
+## <a name="handletoperator"></a><a name="operator-assign"></a>Identificadort:: Operator =
 
-Move o valor do `HandleT` objeto especificado para o objeto atual. `HandleT`
+Move o valor do objeto especificado `HandleT` para o objeto atual `HandleT` .
 
 ```cpp
 HandleT& operator=(
@@ -238,14 +238,14 @@ HandleT& operator=(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*H*<br/>
-Uma referência de valor a uma alça.
+*h*<br/>
+Uma referência de rvalue a um identificador.
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma referência ao `HandleT` objeto atual.
+Uma referência ao objeto atual `HandleT` .
 
 ### <a name="remarks"></a>Comentários
 

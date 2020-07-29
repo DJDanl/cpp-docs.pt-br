@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370680"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220906"
 ---
 # <a name="gamma_distribution-class"></a>Classe gamma_distribution
 
@@ -68,17 +68,17 @@ public:
 };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *RealType*\
-O tipo de resultado de ponto flutuante, padrão para **dobrar**. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
+O tipo de resultado de ponto flutuante, o padrão é **`double`** . Para possíveis tipos, consulte [\<random>](../standard-library/random.md) .
 
 *URNG*\
-O motor do gerador de números aleatórios uniforme. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
+O mecanismo do gerador de número aleatório uniforme. Para possíveis tipos, consulte [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **duplo** se nenhum for fornecido, distribuído de acordo com a Distribuição Gama. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **`double`** se nenhum for fornecido, distribuído de acordo com a distribuição gama. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ A função membro `reset()` descarta qualquer valor armazenado em cache, de form
 
 As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
 
-Para obter mais informações sobre as aulas de distribuição e seus membros, consulte [ \<>aleatórios ](../standard-library/random.md).
+Para obter mais informações sobre classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md) .
 
 Para obter informações detalhadas sobre a Distribuição Gamma, consulte o artigo da Wolfram MathWorld [Gamma Distribution](https://go.microsoft.com/fwlink/p/?linkid=401111).
 
@@ -184,11 +184,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<random>
+**Cabeçalho:**\<random>
 
 **Namespace:** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution:gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution:: gamma_distribution
 
 Constrói a distribuição.
 
@@ -197,7 +197,7 @@ explicit gamma_distribution(result_type alpha = 1.0, result_type beta = 1.0);
 explicit gamma_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Alfa*\
 O parâmetro de distribuição `alpha`.
@@ -216,7 +216,7 @@ O primeiro construtor constrói um objeto cujo valor `alpha` armazenado contém 
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::param_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 
@@ -232,7 +232,7 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Alfa*\
 O parâmetro de distribuição `alpha`.
@@ -251,4 +251,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Confira também
 
-[\<>aleatório](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

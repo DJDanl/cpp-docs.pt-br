@@ -13,16 +13,16 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-ms.openlocfilehash: c18b29cf69c2f899fbf06c7cb75ebbd2242ab427
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b79b65ab3cbf4565f31ad6717f8163c678697c9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178555"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213184"
 ---
 # <a name="static-members-c"></a>Membros estáticos (C++)
 
-As classes podem conter dados estáticos de membros e funções de membros. Quando um membro de dados é declarado como **estático**, apenas uma cópia dos dados é mantida para todos os objetos da classe.
+As classes podem conter dados estáticos de membros e funções de membros. Quando um membro de dados é declarado como **`static`** , apenas uma cópia dos dados é mantida para todos os objetos da classe.
 
 Os membros de dados estáticos não fazem parte dos objetos de um determinado tipo de classe. Como resultado, a declaração de um membro de dados estáticos não é considerada uma definição. O membro de dados é declarado no escopo da classe, mas a definição é realizada no escopo do arquivo. Esses membros estáticos têm vinculação externa. O exemplo a seguir ilustra isso:
 
@@ -63,7 +63,7 @@ Os membros de dados estáticos podem ser mencionados sem fazer referência a um 
 long nBytes = BufferedOutput::bytecount;
 ```
 
-Para que o membro estático exista, não é necessário que objetos do tipo de classe existam. Membros estáticos também podem ser acessados usando a seleção de Membros ( **.** e **->** ) operadores. Por exemplo:
+Para que o membro estático exista, não é necessário que objetos do tipo de classe existam. Membros estáticos também podem ser acessados usando a seleção de Membros (**.** **->** operadores and). Por exemplo:
 
 ```cpp
 BufferedOutput Console;
@@ -75,8 +75,8 @@ No caso anterior, a referência ao objeto (`Console`) não é avaliada. O valor 
 
 Os membros de dados estáticos estão sujeitos às regras de acesso do membro da classe. Portanto, o acesso particular aos membros de dados estáticos é permitido somente para funções de membro da classe e friends. Essas regras são descritas em [controle de acesso de membro](../cpp/member-access-control-cpp.md). A exceção é que os membros de dados estáticos devem ser definidos no escopo de arquivo, independentemente das suas restrições de acesso. Se o membro de dados for inicializado explicitamente, um inicializador deverá ser fornecido com a definição.
 
-O tipo de um membro estático não é qualificado por seu nome de classe. Portanto, o tipo de `BufferedOutput::bytecount` é **longo**.
+O tipo de um membro estático não é qualificado por seu nome de classe. Portanto, o tipo de `BufferedOutput::bytecount` é **`long`** .
 
 ## <a name="see-also"></a>Confira também
 
-[Classes e Structs](../cpp/classes-and-structs-cpp.md)
+[Classes e structs](../cpp/classes-and-structs-cpp.md)

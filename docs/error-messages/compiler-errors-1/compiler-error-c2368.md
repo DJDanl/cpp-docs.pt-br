@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2368
 ms.assetid: a824626f-9fb5-453b-a3a4-da89d1e32218
-ms.openlocfilehash: 50d93fd37bbc78f1c2c47f61e24e72e2b028cdcc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef209a0fe2ada20f681c1e7d45ac02b1582d2d15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206057"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212742"
 ---
 # <a name="compiler-error-c2368"></a>Erro do compilador C2368
 
 ' identificador ': redefinição; especificadores de alocação diferentes
 
-A declaração e a definição do símbolo especificam diferentes atributos de `__declspec`.
+A declaração e a definição do símbolo especificam **`__declspec`** atributos diferentes.

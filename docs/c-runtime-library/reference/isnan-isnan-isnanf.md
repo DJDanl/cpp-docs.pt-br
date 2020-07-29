@@ -35,12 +35,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: a0cc60fb80f8d5b78ec2947a87fde82a536b413c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5aebacd15000e0202a26f600614900390c1ba7a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953758"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213535"
 ---
 # <a name="isnan-_isnan-_isnanf"></a>isnan, _isnan, _isnanf
 
@@ -67,22 +67,22 @@ bool isnan(
 ) throw(); /* C++ only */
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor de ponto flutuante a ser testado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Em C, a macro **IsNaN** e as funções **_isnan** e **_isnanf** retornarão um valor diferente de zero se o argumento *x* for um NaN; caso contrário, eles retornam 0.
 
-No C++, a função de modelo **IsNaN** retornará **true** se o argumento *x* for um NaN; caso contrário, retornará **false**.
+Em C++, a função de modelo **IsNaN** retorna **`true`** se o argumento *x* é um NaN; caso contrário, ele retorna **`false`** .
 
 ## <a name="remarks"></a>Comentários
 
 Como um valor NaN não é comparado como igual a qualquer outro valor NaN, você deve usar uma dessas funções ou macros para detectar uma. Um NaN é gerado quando o resultado de uma operação de ponto flutuante não pode ser representado no formato de ponto flutuante do IEEE-754 para o tipo especificado. Para obter informações sobre como um NaN é representado para saída, consulte [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Quando compilado como C++, a macro **IsNaN** não é definida e uma função de modelo **IsNaN** é definida em seu lugar. Ele se comporta da mesma forma que a macro, mas retorna um valor do tipo **bool** em vez de um inteiro.
+Quando compilado como C++, a macro **IsNaN** não é definida e uma função de modelo **IsNaN** é definida em seu lugar. Ele se comporta da mesma forma que a macro, mas retorna um valor do tipo **`bool`** em vez de um inteiro.
 
 As funções **_isnan** e **_isnanf** são específicas da Microsoft. A função **_isnanf** só estará disponível quando compilada para x64.
 
@@ -90,14 +90,14 @@ As funções **_isnan** e **_isnanf** são específicas da Microsoft. A função
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------------|-------------------------------|
-|**isnan**, **_isnanf**|\<math.h>|\<math.h> ou \<cmath>|
+|**IsNaN**, **_isnanf**|\<math.h>|\<math.h> ou \<cmath>|
 |**_isnan**|\<float.h>|\<float.h> ou \<cfloat>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

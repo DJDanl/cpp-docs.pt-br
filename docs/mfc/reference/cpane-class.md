@@ -133,16 +133,16 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 4609a56c7a7bf6909c687e371b67eeb6e42ae9d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753661"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219632"
 ---
 # <a name="cpane-class"></a>Classe CPane
 
-A `CPane` classe é um aprimoramento da [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md). Se você estiver atualizando um projeto MFC `CControlBar` existente, substitua todas as ocorrências com `CPane`.
+A `CPane` classe é um aprimoramento da [classe CControlBar](../../mfc/reference/ccontrolbar-class.md). Se você estiver atualizando um projeto existente do MFC, substitua todas as ocorrências de `CControlBar` por `CPane` .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -162,109 +162,109 @@ class CPane : public CBasePane
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Painel::Ajustar tamanhoimediato](#adjustsizeimmediate)|Recalcula imediatamente o layout de um painel.|
+|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Recalcula imediatamente o layout de um painel.|
 |[CPane::AllocElements](#allocelements)|Aloca o armazenamento para uso interno.|
-|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Especifica se o painel está listado na lista de painéis gerados em tempo de execução para a aplicação.|
-|[Painel::CalcAvailableSize](#calcavailablesize)|Calcula a diferença de tamanho entre um retângulo especificado e o retângulo da janela atual.|
-|[CPane::CalcInsideRect](#calcinsiderect)|Calcula o retângulo interno de um painel, levando em conta as bordas e as pinças.|
-|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Calcula o retângulo recentemente ancorado.|
-|[Painel::CalcSize](#calcsize)|Calcula o tamanho do painel.|
+|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Especifica se o painel está listado na lista de painéis gerada pelo tempo de execução para o aplicativo.|
+|[CPane::CalcAvailableSize](#calcavailablesize)|Calcula a diferença em tamanho entre um retângulo especificado e o retângulo da janela atual.|
+|[CPane::CalcInsideRect](#calcinsiderect)|Calcula o retângulo interior de um painel, levando em conta as bordas e os garras.|
+|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Calcula o retângulo encaixado recentemente.|
+|[CPane::CalcSize](#calcsize)|Calcula o tamanho do painel.|
 |[CPane::CanBeDocked](#canbedocked)|Determina se o painel pode ser encaixado no painel de base especificado.|
 |[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Determina se o painel pode ser convertido em um documento com guias.|
-|[CPane:ConvertTo'TbedDocument](#converttotabbeddocument)|Converte um painel ancorável em um documento com guias.|
-|[CPane::CopyState](#copystate)|Copia o estado de um painel. (Substitui [cbasepane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
-|[CPane::Criar](#create)|Cria uma barra de controle `CPane` e a prende ao objeto.|
+|[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Converte um painel encaixáveis em um documento com guias.|
+|[CPane:: CopyState](#copystate)|Copia o estado de um painel. (Substitui [CBasePane:: CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
+|[CPane:: criar](#create)|Cria uma barra de controle e a anexa ao `CPane` objeto.|
 |[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Cria uma janela de mini-quadro para um painel flutuante.|
-|[CPane::CreateEx](#createex)|Cria uma barra de controle `CPane` e a prende ao objeto.|
+|[CPane::CreateEx](#createex)|Cria uma barra de controle e a anexa ao `CPane` objeto.|
 |`CPane::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
-|[CPane::DockByMouse](#dockbymouse)|Acopla um painel usando o método de acoplamento do mouse.|
-|[CPane::DockPane](#dockpane)|Acopla o painel flutuante para um painel de base.|
-|[CPane::DockPaneStandard](#dockpanestandard)|Acopla um painel usando o encaixe de contorno (padrão).|
-|[CPane::DockToFrameWindow](#docktoframewindow)|Acopla um painel dockable a uma moldura. (Substitui `CBasePane::DockToFrameWindow`.)|
-|[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Indica se você pode ancorar outro painel na mesma linha onde o painel atual está ancorado.|
+|[CPane::D ockByMouse](#dockbymouse)|Encaixa um painel usando o método de encaixe do mouse.|
+|[CPane::D ockPane](#dockpane)|Encaixa o painel flutuante em um painel de base.|
+|[CPane::D ockPaneStandard](#dockpanestandard)|Encaixa um painel usando o encaixe de estrutura de tópicos (padrão).|
+|[CPane::D ockToFrameWindow](#docktoframewindow)|Encaixa um painel encaixáveis em um quadro. (Substitui `CBasePane::DockToFrameWindow`.)|
+|[CPane::D oesAllowSiblingBars](#doesallowsiblingbars)|Indica se você pode encaixar outro painel na mesma linha em que o painel atual está encaixado.|
 |[CPane::FloatPane](#floatpane)|Flutua o painel.|
-|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Devolve a quantidade, em pixels, que o painel pode expandir.|
-|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Devolve a quantidade, em pixels, que o painel pode encolher.|
-|[CPane::GetBorders](#getborders)|Retorna a largura das bordas do painel.|
-|[CPane::GetClientHotSpot](#getclienthotspot)|Retorna o *ponto quente* para o painel.|
-|[CPane::GetDockSiteRow](#getdocksiterow)|Retorna a linha de doca em que o painel está ancorado.|
-|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Determina se o painel está no modo de linha exclusiva.|
-|[CPane::GetHotSpot](#gethotspot)|Retorna o ponto de acesso armazenado `CMFCDragFrameImpl` em um objeto subjacente.|
-|[Painel::GetMinSize](#getminsize)|Recupera o tamanho mínimo permitido para o painel.|
-|[CPane::GetPaneName](#getpanename)|Recupera o título para o painel.|
+|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Retorna o valor, em pixels, que o painel pode expandir.|
+|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Retorna o valor, em pixels, que o painel pode reduzir.|
+|[CPane:: GetBorders](#getborders)|Retorna a largura das bordas do painel.|
+|[CPane::GetClientHotSpot](#getclienthotspot)|Retorna o *ponto de acesso* do painel.|
+|[CPane::GetDockSiteRow](#getdocksiterow)|Retorna a linha de encaixe na qual o painel é encaixado.|
+|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Determina se o painel está em modo de linha exclusivo.|
+|[CPane:: gethotspot](#gethotspot)|Retorna o ponto de acesso armazenado em um objeto subjacente `CMFCDragFrameImpl` .|
+|[CPane:: getminize](#getminsize)|Recupera o tamanho mínimo permitido para o painel.|
+|[CPane:: GetPaneName](#getpanename)|Recupera o título do painel.|
 |`CPane::GetResizeStep`|Usado internamente.|
-|`CPane::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a este tipo de classe.|
+|`CPane::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a esse tipo de classe.|
 |[CPane::GetVirtualRect](#getvirtualrect)|Recupera o *retângulo virtual* do painel.|
-|[CPane::IsChangeState](#ischangestate)|À medida que o painel está sendo movido, este método analisa a posição do painel em relação a outros painéis, linhas de doca e janelas de mini-quadro, e retorna o valor AFX_CS_STATUS apropriado.|
-|[CPane::IsDragMode](#isdragmode)|Especifica se o painel está sendo arrastado.|
+|[CPane:: ischangstate](#ischangestate)|À medida que o painel está sendo movido, esse método analisa a posição do painel em relação a outros painéis, linhas de encaixe e janelas de mini quadros e retorna o valor de AFX_CS_STATUS apropriado.|
+|[CPane:: isarrastmode](#isdragmode)|Especifica se o painel está sendo arrastado.|
 |[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Especifica se o painel está em uma janela de quadro de vários painéis. (Substitui `CBasePane::IsInFloatingMultiPaneFrameWnd`.)|
-|[CPane::IsLeftOf](#isleftof)|Determina se o painel é deixado (ou acima) do retângulo especificado.|
-|[CPane::IsResizable](#isresizable)|Determina se o painel pode ser redimensionado. (Substitui [cbasepane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
-|[CPane::IsTabbed](#istabbed)|Determina se o painel foi inserido no controle da guia de uma janela com guias. (Substitui [cbasepane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|
-|[CPane::LoadState](#loadstate)|Carrega o estado do painel do registro. (Substitui [cbasepane::LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
-|[CPane::MoveByAlignment](#movebyalignment)|Move o painel e o retângulo virtual pela quantidade especificada.|
+|[CPane::IsLeftOf](#isleftof)|Determina se o painel está à esquerda (ou acima) do retângulo especificado.|
+|[CPane::IsResizable](#isresizable)|Determina se o painel pode ser redimensionado. (Substitui [CBasePane:: IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
+|[CPane:: istabed](#istabbed)|Determina se o painel foi inserido no controle guia de uma janela com guias. (Substitui [CBasePane:: Istabed](../../mfc/reference/cbasepane-class.md#istabbed).)|
+|[CPane:: LoadState](#loadstate)|Carrega o estado do painel do registro. (Substitui [CBasePane:: LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
+|[CPane::MoveByAlignment](#movebyalignment)|Move o painel e o retângulo virtual pelo valor especificado.|
 |[CPane::MovePane](#movepane)|Move o painel para o retângulo especificado.|
-|[CPane::OnAfterChangeParent](#onafterchangeparent)|Chamado pela estrutura quando o pai de um painel mudou.|
-|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Chamado pela estrutura quando o pai do painel está prestes a mudar.|
-|[CPane::OnPressCloseButton](#onpressclosebutton)|Chamado pela estrutura quando o usuário escolhe o botão Fechar na legenda para o painel.|
+|[CPane::OnAfterChangeParent](#onafterchangeparent)|Chamado pelo Framework quando o pai de um painel é alterado.|
+|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Chamado pelo Framework quando o pai do painel está prestes a ser alterado.|
+|[CPane::OnPressCloseButton](#onpressclosebutton)|Chamado pelo Framework quando o usuário escolhe o botão fechar na legenda do painel.|
 |`CPane::OnProcessDblClk`|Usado internamente.|
-|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chamado pela estrutura quando um menu de painel especial está prestes a ser exibido.|
-|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chamado pela estrutura quando um menu de painel especial está prestes a ser exibido.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chamado pelo Framework quando um menu de painel especial está prestes a ser exibido.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chamado pelo Framework quando um menu de painel especial está prestes a ser exibido.|
 |`CPane::PrepareToDock`|Usado internamente.|
-|[CPane::RecalcLayout](#recalclayout)|Recalcula as informações de layout para o painel. (Substitui [cbasepane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
-|[CPane::SaveState](#savestate)|Salva o estado do painel para o registro. (Substitui [cbasepane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
+|[CPane::RecalcLayout](#recalclayout)|Recalcula as informações de layout do painel. (Substitui [CBasePane:: RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
+|[CPane:: SaveState](#savestate)|Salva o estado do painel no registro. (Substitui [CBasePane:: SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
 |[CPane::SetActiveInGroup](#setactiveingroup)|Sinaliza um painel como ativo.|
-|[CPane::SetBorders](#setborders)|Define os valores de borda do painel.|
-|[CPane::SetClientHotSpot](#setclienthotspot)|Define o ponto quente para o painel.|
-|[CPane::SetDockState](#setdockstate)|Restaura informações do estado de acoplamento para o painel.|
-|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Ativa ou desativa o modo de linha exclusivo.|
-|[CPane::SetMiniFrameRTC](#setminiframertc)|Define as informações da classe de tempo de execução para a janela padrão do miniquadro.|
-|[Painel::SetMinSize](#setminsize)|Define o tamanho mínimo permitido para o painel.|
+|[CPane:: SetBorders](#setborders)|Define os valores de borda do painel.|
+|[CPane::SetClientHotSpot](#setclienthotspot)|Define o ponto de acesso para o painel.|
+|[CPane:: SetDockState](#setdockstate)|Restaura informações de estado de encaixe para o painel.|
+|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Habilita ou desabilita o modo de linha exclusivo.|
+|[CPane::SetMiniFrameRTC](#setminiframertc)|Define as informações de classe de tempo de execução para a janela de mini-quadro padrão.|
+|[CPane:: setminize](#setminsize)|Define o tamanho mínimo permitido para o painel.|
 |[CPane::SetVirtualRect](#setvirtualrect)|Define o *retângulo virtual* do painel.|
-|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Estica o painel vertical ou horizontalmente com base no estilo de acoplamento.|
-|[CPane::ToggleAutoHide](#toggleautohide)|Alterna o modo de ocultação automática.|
-|[CPane::UndockPane](#undockpane)|Remove o painel do local de doca, controle deslizante padrão ou janela de mini-quadro onde está atualmente ancorado. (Substitui [cbasepane::UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
+|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Alonga o painel vertical ou horizontalmente com base no estilo de encaixe.|
+|[CPane::ToggleAutoHide](#toggleautohide)|Alterna o modo ocultar automaticamente.|
+|[CPane::UndockPane](#undockpane)|Remove o painel do site de encaixe, controle deslizante padrão ou janela de mini-quadro onde está encaixado no momento. (Substitui [CBasePane:: UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
 |[CPane::UpdateVirtualRect](#updatevirtualrect)|Atualiza o retângulo virtual.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CPane::OnAfterDock](#onafterdock)|Chamado pela estrutura quando um painel foi ancorado.|
-|[CPane::OnAfterFloat](#onafterfloat)|Chamado pela estrutura quando um painel foi flutuado.|
-|[CPane::OnBeforeDock](#onbeforedock)|Chamado pela estrutura quando o painel está prestes a ser ancorado.|
-|[CPane::OnBeforeFloat](#onbeforefloat)|Chamado pela estrutura quando um painel está prestes a ser flutuado.|
+|[CPane::OnAfterDock](#onafterdock)|Chamado pelo Framework quando um painel é encaixado.|
+|[CPane::OnAfterFloat](#onafterfloat)|Chamado pelo Framework quando um painel é flutuado.|
+|[CPane::OnBeforeDock](#onbeforedock)|Chamado pelo Framework quando o painel está prestes a ser encaixado.|
+|[CPane::OnBeforeFloat](#onbeforefloat)|Chamado pelo Framework quando um painel está prestes a ser flutuado.|
 
 ### <a name="data-members"></a>Membros de dados
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Permite um manuseio consistente do tamanho mínimo para painéis.|
-|[CPane::m_recentDockInfo](#m_recentdockinfo)|Contém informações recentes de acoplamento.|
+|[CPane:: m_bHandleMinSize](#m_bhandleminsize)|Habilita o manuseio consistente do tamanho mínimo para os painéis.|
+|[CPane:: m_recentDockInfo](#m_recentdockinfo)|Contém informações recentes de encaixe.|
 
 ## <a name="remarks"></a>Comentários
 
-Normalmente, `CPane` os objetos não são instanciados diretamente. Se você precisar de um painel que tenha funcionalidade de encaixe, obtenha seu objeto do [CDockablePane](../../mfc/reference/cdockablepane-class.md). Se você precisar de funcionalidade de barra de ferramentas, obtenha seu objeto da [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
+Normalmente, os `CPane` objetos não são instanciados diretamente. Se você precisar de um painel com funcionalidade de encaixe, derive o objeto de [CDockablePane](../../mfc/reference/cdockablepane-class.md). Se você precisar da funcionalidade da barra de ferramentas, derive o objeto de [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
 
-Quando você obtém `CPane`uma classe de , ele pode ser ancorado em um [CDockSite](../../mfc/reference/cdocksite-class.md) e pode ser flutuado em um [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Quando você deriva uma classe de `CPane` , ela pode ser encaixada em um [CDockSite](../../mfc/reference/cdocksite-class.md) e pode ser flutuante em um [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cbasepane](../../mfc/reference/cbasepane-class.md)
+[CBasePane](../../mfc/reference/cbasepane-class.md)
 
-[Cpane](../../mfc/reference/cpane-class.md)
+[CPane](../../mfc/reference/cpane-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxPane.h
+**Cabeçalho:** afxPane. h
 
-## <a name="cpaneadjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>Painel::Ajustar tamanhoimediato
+## <a name="cpaneadjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate
 
 Recalcula imediatamente o layout de um painel.
 
@@ -272,14 +272,14 @@ Recalcula imediatamente o layout de um painel.
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRecalcLayout*<br/>
-[em] TRUE para recalcular automaticamente o layout do painel; caso contrário, FALSE.
+no TRUE para recalcular automaticamente o layout do painel; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chame este método quando você alterar dinamicamente o layout de um painel. Por exemplo, você pode querer chamar este método quando ocultar ou mostrar botões de barra de ferramentas.
+Chame esse método quando você alterar dinamicamente o layout de um painel. Por exemplo, talvez você queira chamar esse método ao ocultar ou Mostrar botões da barra de ferramentas.
 
 ## <a name="cpaneallocelements"></a><a name="allocelements"></a>CPane::AllocElements
 
@@ -291,21 +291,21 @@ BOOL AllocElements(
     int cbElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*nElementos*<br/>
-[em] O número de elementos para o qual alocar armazenamento.
+*nElements*<br/>
+no O número de elementos para os quais alocar armazenamento.
 
 *cbElement*<br/>
-[em] O tamanho, em bytes, de um elemento.
+no O tamanho, em bytes, de um elemento.
 
 ### <a name="return-value"></a>Valor retornado
 
-FALSO se a alocação de memória falhar; caso contrário, VERDADE.
+FALSE se a alocação de memória falhar; caso contrário, TRUE.
 
 ## <a name="cpaneallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu
 
-Especifica se o painel está listado na lista de painéis gerados em tempo de execução para a aplicação.
+Especifica se o painel está listado na lista de painéis gerada pelo tempo de execução para o aplicativo.
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -313,32 +313,32 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel for exibido na lista; caso contrário, FALSE. A implementação base sempre retorna TRUE.
+TRUE se o painel for exibido na lista; caso contrário, FALSE. A implementação de base sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-O aplicativo gerado pelo AppWizard contém uma opção de menu que lista painéis que ele contém. Este método determina se o painel é exibido na lista.
+O aplicativo gerado pelo AppWizard contém uma opção de menu que lista os painéis que ele contém. Esse método determina se o painel é exibido na lista.
 
-## <a name="cpanecalcavailablesize"></a><a name="calcavailablesize"></a>Painel::CalcAvailableSize
+## <a name="cpanecalcavailablesize"></a><a name="calcavailablesize"></a>CPane::CalcAvailableSize
 
-Calcula a diferença de tamanho entre um retângulo especificado e o retângulo da janela atual.
+Calcula a diferença em tamanho entre um retângulo especificado e o retângulo da janela atual.
 
 ```
 virtual CSize CalcAvailableSize(CRect rectRequired);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectRequired*<br/>
-[em] O retângulo necessário.
+no O retângulo necessário.
 
 ### <a name="return-value"></a>Valor retornado
 
-A diferença de largura e altura entre *rectRequired* e o retângulo da janela atual.
+A diferença na largura e na altura entre *rectRequired* e o retângulo da janela atual.
 
 ## <a name="cpanecalcinsiderect"></a><a name="calcinsiderect"></a>CPane::CalcInsideRect
 
-Calcula o retângulo interno de um painel, incluindo as bordas e pinças.
+Calcula o retângulo interior de um painel, incluindo as bordas e os garras.
 
 ```cpp
 void CalcInsideRect(
@@ -346,21 +346,21 @@ void CalcInsideRect(
     BOOL bHorz) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rect*<br/>
-[fora] Contém o tamanho e deslocamento da área do cliente do painel.
+fora Contém o tamanho e o deslocamento da área do cliente do painel.
 
-*Bhorz*<br/>
-[em] VERDADE se o painel for orientado horizontalmente; caso contrário, FALSE.
+*bHorz*<br/>
+no TRUE se o painel for orientado horizontalmente; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é chamado pela estrutura quando ele tem que recalcular o layout para um painel. O parâmetro *rect* é preenchido com o tamanho e deslocamento da área do cliente do painel. Isso inclui suas fronteiras e pinças.
+Esse método é chamado pelo Framework quando ele precisa recalcular o layout de um painel. O parâmetro *Rect* é preenchido com o tamanho e o deslocamento da área do cliente do painel. Isso inclui suas bordas e garras.
 
 ## <a name="cpanecalcrecentdockedrect"></a><a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect
 
-Calcula o retângulo recentemente ancorado.
+Calcula o retângulo encaixado recentemente.
 
 ```cpp
 void CalcRecentDockedRect();
@@ -368,9 +368,9 @@ void CalcRecentDockedRect();
 
 ### <a name="remarks"></a>Comentários
 
-Este método atualiza [CPane::m_recentDockInfo](#m_recentdockinfo).
+Esse método atualiza [CPane:: m_recentDockInfo](#m_recentdockinfo).
 
-## <a name="cpanecalcsize"></a><a name="calcsize"></a>Painel::CalcSize
+## <a name="cpanecalcsize"></a><a name="calcsize"></a>CPane::CalcSize
 
 Calcula o tamanho do painel.
 
@@ -378,18 +378,18 @@ Calcula o tamanho do painel.
 virtual CSize CalcSize(BOOL bVertDock);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bVertDock*<br/>
-[em] VERDADE se o painel está sendo ancorado verticalmente, FALSO de outra forma.
+no TRUE se o painel estiver sendo encaixado verticalmente; caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor retornado
 
-A implementação padrão deste método retorna um tamanho de (0, 0).
+A implementação padrão desse método retorna um tamanho de (0, 0).
 
 ### <a name="remarks"></a>Comentários
 
-As classes derivadas devem substituir este método.
+Classes derivadas devem substituir esse método.
 
 ## <a name="cpanecanbedocked"></a><a name="canbedocked"></a>CPane::CanBeDocked
 
@@ -399,20 +399,20 @@ Determina se o painel pode ser encaixado no painel de base especificado.
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDockBar*<br/>
-[em] Especifica o painel onde este painel deve ser ancorado.
+no Especifica o painel em que esse painel deve ser encaixado.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se este painel pode ser ancorado no painel de acoplamento especificado; caso contrário, FALSE.
+TRUE se este painel puder ser encaixado no painel de encaixe especificado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é geralmente chamado pela estrutura para determinar se um painel pode ser encaixado no painel de acoplamento especificado. Para determinar se o painel pode ser encaixado, o método avalia o alinhamento de acoplamento habilitado atualmente do painel.
+Esse método é geralmente chamado pelo Framework para determinar se um painel pode ser encaixado no painel de encaixe especificado. Para determinar se o painel pode ser encaixado, o método avalia o alinhamento de encaixe habilitado no momento no painel.
 
-Você habilita o encaixe para os vários lados da janela do quadro chamando [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Você habilita o encaixe em vários lados da janela do quadro chamando [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
 ## <a name="cpanecanbetabbeddocument"></a><a name="canbetabbeddocument"></a>CPane::CanBeTabbedDocument
 
@@ -424,30 +424,30 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-TRUE se o painel pode ser convertido em um documento com guias; caso contrário, FALSE.
+TRUE se o painel puder ser convertido em um documento com guias; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Anular este método em uma classe derivada e retornar FALSO se você quiser impedir que um painel seja convertido em um documento com guias. Um documento com guias não será listado no menu Posição da janela.
+Substitua esse método em uma classe derivada e retorne FALSE se desejar impedir que um painel seja convertido em um documento com guias. Um documento com guias não será listado no menu posição da janela.
 
-## <a name="cpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPane:ConvertTo'TbedDocument
+## <a name="cpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPane::ConvertToTabbedDocument
 
-Converte um painel ancorável em um documento com guias.
+Converte um painel encaixáveis em um documento com guias.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bActiveTabOnly*<br/>
-[em] Não usado `CPane::ConvertToTabbedDocument`em .
+no Não usado no `CPane::ConvertToTabbedDocument` .
 
 ### <a name="remarks"></a>Comentários
 
-Somente painéis ancoráveis podem ser convertidos em documentos com guias. Para obter informações, consulte [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
+Somente os painéis encaixáveis podem ser convertidos em documentos com guias. Para obter informações, consulte [CDockablePane:: ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
 
-## <a name="cpanecopystate"></a><a name="copystate"></a>CPane::CopyState
+## <a name="cpanecopystate"></a><a name="copystate"></a>CPane:: CopyState
 
 Copia o estado de um painel.
 
@@ -455,18 +455,18 @@ Copia o estado de um painel.
 virtual void CopyState(CPane* pOrgBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOrgBar*<br/>
-[em] Um ponteiro para um painel.
+no Um ponteiro para um painel.
 
 ### <a name="remarks"></a>Comentários
 
-Este método copia o estado de *pOrgBar* para o painel atual.
+Esse método copia o estado de *pOrgBar* para o painel atual.
 
-## <a name="cpanecreate"></a><a name="create"></a>CPane::Criar
+## <a name="cpanecreate"></a><a name="create"></a>CPane:: criar
 
-Cria uma barra de controle e a prende ao objeto [CPane.](../../mfc/reference/cpane-class.md)
+Cria uma barra de controle e a anexa ao objeto [CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual BOOL Create(
@@ -479,38 +479,38 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Lpszclassname*<br/>
-[em] Especifica o nome da classe Windows.
+*lpszClassName*<br/>
+no Especifica o nome da classe do Windows.
 
-*Dwstyle*<br/>
-[em] Especifica os atributos de estilo da janela. Para obter mais informações, consulte [Estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle*<br/>
+no Especifica os atributos de estilo de janela. Para obter mais informações, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *Rect*<br/>
-[em] Especifica o tamanho e a posição iniciais da janela *pParentWnd,* nas coordenadas do cliente.
+no Especifica o tamanho inicial e a posição da janela *pParentWnd* em coordenadas do cliente.
 
-*Pparentwnd*<br/>
-[dentro, fora] Especifica a janela pai deste painel.
+*pParentWnd*<br/>
+[entrada, saída] Especifica a janela pai deste painel.
 
 *nID*<br/>
-[em] Especifica o ID do painel.
+no Especifica a ID do painel.
 
 *dwControlBarStyle*<br/>
-[em] Especifica o estilo para o painel. Para obter mais informações, consulte [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+no Especifica o estilo do painel. Para obter mais informações, consulte [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[dentro, fora] Especifica o contexto de criação do painel.
+[entrada, saída] Especifica o contexto de criação do painel.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel foi criado com sucesso; caso contrário, FALSE.
+TRUE se o painel foi criado com êxito; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método cria um painel do Windows `CPane` e o anexa ao objeto.
+Esse método cria um painel do Windows e o anexa ao `CPane` objeto.
 
-Se você não tiver inicializado explicitamente [CPane::m_recentDockInfo](#m_recentdockinfo) antes de chamar, `Create`o *reto* do parâmetro será usado como retângulo ao flutuar ou acoplar o painel.
+Se você não tiver inicializado explicitamente [CPane:: m_recentDockInfo](#m_recentdockinfo) antes `Create` de chamar, o parâmetro *Rect* será usado como o retângulo ao flutuar ou encaixar o painel.
 
 ## <a name="cpanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>CPane::CreateDefaultMiniframe
 
@@ -520,24 +520,24 @@ Cria uma janela de mini-quadro para um painel flutuante.
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*rectInicial*<br/>
-[em] Especifica o tamanho e a posição iniciais, em coordenadas de tela, da janela de mini-quadro para criar.
+*rectInitial*<br/>
+no Especifica o tamanho inicial e a posição, em coordenadas da tela, da janela do mini-quadro a ser criada.
 
 ### <a name="return-value"></a>Valor retornado
 
-A recém-criada janela de mini-quadros.
+A janela de mini-frame recém-criada.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é chamado pela estrutura para criar uma janela de mini-quadro quando um painel é flutuado. A janela de mini-quadro pode ser do tipo [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) ou do tipo [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Uma janela de mini-quadro saem se o painel tiver o estilo AFX_CBRS_FLOAT_MULTI.
+Esse método é chamado pelo Framework para criar uma janela de mini-quadro quando um painel é flutuado. A janela de mini quadros pode ser do tipo [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) ou do tipo [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Uma janela de vários quadros será criada se o painel tiver o estilo de AFX_CBRS_FLOAT_MULTI.
 
-As informações da classe de tempo de execução para a janela do miniquadro são armazenadas no `CPane::m_pMiniFrameRTC` membro. Você pode usar uma classe derivada para definir este membro se decidir criar janelas de mini-quadropersonalizadas.
+As informações de classe de tempo de execução para a janela de mini-quadro são armazenadas no `CPane::m_pMiniFrameRTC` membro. Você pode usar uma classe derivada para definir esse membro se decidir criar janelas de mini-frame personalizadas.
 
 ## <a name="cpanecreateex"></a><a name="createex"></a>CPane::CreateEx
 
-Cria uma barra de controle e a prende ao objeto [CPane.](../../mfc/reference/cpane-class.md)
+Cria uma barra de controle e a anexa ao objeto [CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual BOOL CreateEx(
@@ -551,62 +551,62 @@ virtual BOOL CreateEx(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyleEx*<br/>
-[em] Especifica atributos de estilo de janela estendidos. Para obter mais informações, consulte ['Estilos de janela estendidos .](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
+no Especifica atributos de estilo de janela estendidos. Para obter mais informações, consulte [estilos de janela estendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
-*Lpszclassname*<br/>
-[em] Especifica o nome da classe Windows.
+*lpszClassName*<br/>
+no Especifica o nome da classe do Windows.
 
-*Dwstyle*<br/>
-[em] Especifica atributos de estilo de janela. Para obter mais informações, consulte [Estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle*<br/>
+no Especifica atributos de estilo de janela. Para obter mais informações, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *Rect*<br/>
-[em] Especifica o tamanho e a posição iniciais da janela *pParentWnd,* nas coordenadas do cliente.
+no Especifica o tamanho inicial e a posição da janela *pParentWnd* em coordenadas do cliente.
 
-*Pparentwnd*<br/>
-[dentro, fora] Especifica a janela pai deste painel.
+*pParentWnd*<br/>
+[entrada, saída] Especifica a janela pai deste painel.
 
 *nID*<br/>
-[em] Especifica o ID do painel.
+no Especifica a ID do painel.
 
 *dwControlBarStyle*<br/>
-[em] Especifica o estilo para o painel. Para obter mais informações, consulte [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+no Especifica o estilo do painel. Para obter mais informações, consulte [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[dentro, fora] Especifica o contexto de criação para o painel.
+[entrada, saída] Especifica o contexto de criação do painel.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel foi criado com sucesso; caso contrário, FALSE.
+TRUE se o painel foi criado com êxito; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método cria um painel do Windows `CPane` e o anexa ao objeto.
+Esse método cria um painel do Windows e o anexa ao `CPane` objeto.
 
-Se você não tiver inicializado explicitamente [CPane::m_recentDockInfo](#m_recentdockinfo) antes de chamar, `CreateEx`o *reto* do parâmetro será usado como retângulo ao flutuar ou acoplar o painel.
+Se você não tiver inicializado explicitamente [CPane:: m_recentDockInfo](#m_recentdockinfo) antes `CreateEx` de chamar, o parâmetro *Rect* será usado como o retângulo ao flutuar ou encaixar o painel.
 
-## <a name="cpanedockbymouse"></a><a name="dockbymouse"></a>CPane::DockByMouse
+## <a name="cpanedockbymouse"></a><a name="dockbymouse"></a>CPane::D ockByMouse
 
-Acopla um painel usando o mouse.
+Encaixa um painel usando o mouse.
 
 ```
 virtual BOOL DockByMouse(CBasePane* pDockBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDockBar*<br/>
-[em] Especifica o painel de base para o qual acoplar este painel.
+no Especifica o painel de base para o qual encaixar esse painel.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel foi ancorado com sucesso; caso contrário, FALSE.
+TRUE se o painel foi encaixado com êxito; caso contrário, FALSE.
 
-## <a name="cpanedockpane"></a><a name="dockpane"></a>CPane::DockPane
+## <a name="cpanedockpane"></a><a name="dockpane"></a>CPane::D ockPane
 
-Acopla o painel flutuante para um painel de base.
+Encaixa o painel flutuante em um painel de base.
 
 ```
 virtual BOOL DockPane(
@@ -615,58 +615,58 @@ virtual BOOL DockPane(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDockBar*<br/>
-[dentro, fora] Especifica o painel de base para acoplar este painel.
+[entrada, saída] Especifica o painel de base para o qual encaixar esse painel.
 
-*Lprect*<br/>
-[em] Especifica o retângulo no painel base onde este painel deve ser encaixado.
+*lpRect*<br/>
+no Especifica o retângulo no painel de base em que esse painel deve ser encaixado.
 
-*Dockmethod*<br/>
-[em] Especifica o método de acoplamento a ser usado. As opções disponíveis são as seguintes:
+*dockMethod*<br/>
+no Especifica o método de encaixe a ser usado. As opções disponíveis são as seguintes:
 
 |Opção|Descrição|
 |------------|-----------------|
-|DM_UNKNOWN|A estrutura usa essa opção quando o método de acoplamento é desconhecido. O painel não armazena sua posição flutuante mais recente. Você também pode usar esta opção para acoplar programáticamente um painel quando você não tem que armazenar a posição flutuante recente.|
+|DM_UNKNOWN|A estrutura usa essa opção quando o método de encaixe é desconhecido. O painel não armazena sua posição flutuante mais recente. Você também pode usar essa opção para encaixar programaticamente um painel quando não precisar armazenar a posição flutuante recente.|
 |DM_MOUSE|Usado internamente.|
-|DM_DBL_CLICK|Esta opção é usada quando o gripper é clicado duas vezes. O painel é reposicionado em sua posição de acoplamento mais recente. Se o painel for desencaixado clicando duas vezes, o painel será reposicionado em sua posição flutuante mais recente.|
-|DM_SHOW|Esta opção pode ser usada para acoplar programáticamente o painel. O painel armazena sua posição flutuante mais recente.|
-|DM_RECT|O painel está ancorado na região especificada pelo *lpRect*.|
+|DM_DBL_CLICK|Essa opção é usada quando o garra é clicado duas vezes. O painel é reposicionado em sua posição de encaixe mais recente. Se o painel estiver desencaixado clicando duas vezes, o painel será reposicionado em sua posição flutuante mais recente.|
+|DM_SHOW|Essa opção pode ser usada para encaixar o painel programaticamente. O painel armazena sua posição flutuante mais recente.|
+|DM_RECT|O painel é encaixado na região especificada por *lpRect*.|
 |DM_STANDARD|Quando você usa essa opção, a estrutura desenha o painel como um quadro de contorno enquanto ele está sendo movido.|
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel foi ancorado com sucesso; caso contrário, FALSE.
+TRUE se o painel foi encaixado com êxito; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método encaixa o painel no painel base especificado pelo parâmetro *pDockBar.* Primeiro, você deve habilitar o encaixe chamando [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Esse método encaixa o painel no painel base que é especificado pelo parâmetro *pDockBar* . Primeiro, você deve habilitar o encaixe chamando [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-## <a name="cpanedockpanestandard"></a><a name="dockpanestandard"></a>CPane::DockPaneStandard
+## <a name="cpanedockpanestandard"></a><a name="dockpanestandard"></a>CPane::D ockPaneStandard
 
-Acopla um painel usando o encaixe de contorno (padrão).
+Encaixa um painel usando o encaixe de estrutura de tópicos (padrão).
 
 ```
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bWasDocked*<br/>
-[em] VERDADE se o painel foi ancorado com sucesso; caso contrário, FALSE.
+no TRUE se o painel foi encaixado com êxito; caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor retornado
 
-Este método sempre retorna **este** ponteiro.
+Esse método sempre retorna o **`this`** ponteiro.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é usado apenas para painéis derivados da [classe CDockablePane](../../mfc/reference/cdockablepane-class.md). Para obter mais informações, consulte [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
+Esse método é usado somente para painéis que são derivados da [Classe CDockablePane](../../mfc/reference/cdockablepane-class.md). Para obter mais informações, consulte [CDockablePane::D ockpanestandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
 
-## <a name="cpanedocktoframewindow"></a><a name="docktoframewindow"></a>CPane::DockToFrameWindow
+## <a name="cpanedocktoframewindow"></a><a name="docktoframewindow"></a>CPane::D ockToFrameWindow
 
-Acopla um painel dockable a uma moldura.
+Encaixa um painel encaixáveis em um quadro.
 
 ```
 virtual BOOL DockToFrameWindow(
@@ -678,35 +678,35 @@ virtual BOOL DockToFrameWindow(
     BOOL bOuterEdge = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dwalignment*<br/>
-[em] O lado da moldura dos pais para o que você deseja encaixar o painel.
+*dwAlignment*<br/>
+no O lado do quadro pai ao qual você deseja encaixar o painel.
 
-*Lprect*<br/>
-[em] O tamanho especificado.
+*lpRect*<br/>
+no O tamanho especificado.
 
 *dwDockFlags*<br/>
-[em] Ignorado.
+no Aceita.
 
-*barra pRelativata*<br/>
-[em] Ignorado.
+*pRelativeBar*<br/>
+no Aceita.
 
-*nÍndice Relativo*<br/>
-[em] Ignorado.
+*nRelativeIndex*<br/>
+no Aceita.
 
 *bOuterEdge*<br/>
-[em] Se TRUE e houver outros painéis dockable ao lado especificados por *dwAlignment,* o painel está ancorado fora dos outros painéis, mais perto da borda do quadro pai. Se FALSO, o painel está ancorado mais perto do centro da área do cliente.
+no Se for TRUE e houver outros painéis encaixáveis no lado que são especificados por *dwAlignment*, o painel será encaixado fora dos outros painéis, perto da borda do quadro pai. Se for FALSE, o painel será encaixado mais perto do centro da área do cliente.
 
 ### <a name="return-value"></a>Valor retornado
 
-FALSO se um divisor de painel [(CPaneDivider Class)](../../mfc/reference/cpanedivider-class.md)não puder ser criado; caso contrário, VERDADE.
+FALSE se um divisor de painel ( [Classe CPaneDivider](../../mfc/reference/cpanedivider-class.md)) não puder ser criado; caso contrário, TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cpanedoesallowsiblingbars"></a><a name="doesallowsiblingbars"></a>CPane::DoesAllowSiblingBars
+## <a name="cpanedoesallowsiblingbars"></a><a name="doesallowsiblingbars"></a>CPane::D oesAllowSiblingBars
 
-Indica se você pode ancorar outro painel na mesma linha onde o painel atual está ancorado.
+Indica se você pode encaixar outro painel na mesma linha em que o painel atual está encaixado.
 
 ```
 virtual BOOL DoesAllowSiblingBars() const;
@@ -714,13 +714,13 @@ virtual BOOL DoesAllowSiblingBars() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se este painel pode acoplar para outro painel na mesma linha que ele mesmo; caso contrário, FALSE.
+TRUE se este painel puder encaixar em outro painel na mesma linha; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode ativar ou desativar esse comportamento ligando para [CPane::SetExclusiveRowMode](#setexclusiverowmode).
+Você pode habilitar ou desabilitar esse comportamento chamando [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
 
-Por padrão, as barras de ferramentas têm o modo de linha exclusivo desativado e a barra de menu situou o modo de linha exclusivo.
+Por padrão, as barras de ferramentas têm o modo de linha exclusivo desabilitado e a barra de menus tem o modo de linha exclusivo habilitado.
 
 ## <a name="cpanefloatpane"></a><a name="floatpane"></a>CPane::FloatPane
 
@@ -733,28 +733,28 @@ virtual BOOL FloatPane(
     bool bShow = true);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectFloat*<br/>
-[em] Especifica a localização, nas coordenadas da tela, para posicionar o painel quando ele é flutuado.
+no Especifica o local, em coordenadas da tela, para posicionar o painel quando ele é flutuado.
 
-*Dockmethod*<br/>
-[em] Especifica o método de acoplamento a ser usado quando o painel é flutuado. Para obter uma lista de valores possíveis, consulte [CPane::DockPane](#dockpane).
+*dockMethod*<br/>
+no Especifica o método de encaixe a ser usado quando o painel é flutuado. Para obter uma lista de valores possíveis, consulte [CPane::D ockpane](#dockpane).
 
-*Bshow*<br/>
-[em] VERDADE para mostrar o painel quando flutuava; caso contrário, FALSE.
+*bShow*<br/>
+no TRUE para mostrar o painel quando flutuado; caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel foi flutuado com sucesso ou se o painel não pode ser flutuado porque [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) retorna FALSO; caso contrário, FALSE.
+TRUE se o painel tiver sido flutuado com êxito ou se o painel não puder ser flutuado porque [CBasePane:: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) retorna false; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chame este método para flutuar o painel na posição especificada pelo parâmetro *rectFloat.* Este método cria automaticamente uma janela de miniquadro pai para o painel.
+Chame esse método para flutuar o painel na posição especificada pelo parâmetro *rectFloat* . Esse método cria automaticamente uma janela de mini-quadro pai para o painel.
 
 ## <a name="cpanegetavailableexpandsize"></a><a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize
 
-Devolve a quantidade, em pixels, que o painel pode expandir.
+Retorna o valor, em pixels, que o painel pode expandir.
 
 ```
 virtual int GetAvailableExpandSize() const;
@@ -762,13 +762,13 @@ virtual int GetAvailableExpandSize() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Se o painel estiver encaixado horizontalmente, o valor de retorno será a largura disponível; caso contrário, o valor de retorno é a altura disponível.
+Se o painel for encaixado horizontalmente, o valor de retorno será a largura disponível; caso contrário, o valor de retorno será a altura disponível.
 
 ### <a name="remarks"></a>Comentários
 
 ## <a name="cpanegetavailablestretchsize"></a><a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize
 
-Devolve a quantidade, em pixels, que o painel pode encolher.
+Retorna o valor, em pixels, que o painel pode reduzir.
 
 ```
 virtual int GetAvailableStretchSize() const;
@@ -776,13 +776,13 @@ virtual int GetAvailableStretchSize() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-A quantidade, em pixels, que o painel pode encolher. Se o painel estiver ancorado horizontalmente, essa quantidade será a largura disponível; caso contrário, é a altura disponível.
+A quantidade, em pixels, que o painel pode reduzir. Se o painel for encaixado horizontalmente, essa quantidade será a largura disponível; caso contrário, será a altura disponível.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho de estiramento disponível é calculado subtraindo o tamanho mínimo permitido para o painel [(CPane::GetMinSize](#getminsize)) do tamanho atual [(CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
+O tamanho de ampliação disponível é calculado com a subtração do tamanho mínimo permitido para o painel ( [CPane:: GetMinSize](#getminsize)) do tamanho atual ( [CWnd:: GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
 
-## <a name="cpanegetborders"></a><a name="getborders"></a>CPane::GetBorders
+## <a name="cpanegetborders"></a><a name="getborders"></a>CPane:: GetBorders
 
 Retorna a largura das bordas do painel.
 
@@ -792,15 +792,15 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contém a largura atual, em pixels, de cada lado do painel. Por exemplo, o `left` valor do `CRect` membro do objeto é a largura da borda esquerda.
+Um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contém a largura atual, em pixels, de cada lado do painel. Por exemplo, o valor do `left` membro do `CRect` objeto é a largura da borda esquerda.
 
 ### <a name="remarks"></a>Comentários
 
-Para definir o tamanho das fronteiras, ligue para [CPane::SetBorders](#setborders).
+Para definir o tamanho das bordas, chame [CPane:: SetBorders](#setborders).
 
 ## <a name="cpanegetclienthotspot"></a><a name="getclienthotspot"></a>CPane::GetClientHotSpot
 
-Retorna o *ponto quente* para o painel.
+Retorna o *ponto de acesso* do painel.
 
 ```
 CPoint GetClientHotSpot() const;
@@ -810,11 +810,11 @@ CPoint GetClientHotSpot() const;
 
 ### <a name="remarks"></a>Comentários
 
-O *ponto quente* é o ponto no painel que o usuário seleciona e segura para mover o painel. Um ponto quente é usado para animação suave quando o painel é movido de uma posição ancorada.
+O ponto de *acesso* é a questão no painel que o usuário seleciona e mantém para mover o painel. Um ponto de acesso é usado para uma animação suave quando o painel é movido de uma posição encaixada.
 
 ## <a name="cpanegetdocksiterow"></a><a name="getdocksiterow"></a>CPane::GetDockSiteRow
 
-Retorna a linha de doca [(CDockingPanesRow Class)](../../mfc/reference/cdockingpanesrow-class.md)na qual o painel está ancorado.
+Retorna a linha Dock ( [classe CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)) na qual o painel é encaixado.
 
 ```
 CDockingPanesRow* GetDockSiteRow() const;
@@ -822,11 +822,11 @@ CDockingPanesRow* GetDockSiteRow() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-A `CDockingPanesRow`* que aponta para a linha de doca em que o painel está ancorado, ou NULL se o painel não estiver ancorado.
+Um `CDockingPanesRow` * que aponta para a linha de encaixe na qual o painel é encaixado ou nulo se o painel não estiver encaixado.
 
 ## <a name="cpanegetexclusiverowmode"></a><a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode
 
-Determina se o painel está no modo de linha exclusiva.
+Determina se o painel está em modo de linha exclusivo.
 
 ```
 virtual BOOL GetExclusiveRowMode() const;
@@ -834,15 +834,15 @@ virtual BOOL GetExclusiveRowMode() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-TRUE se o painel estiver no modo de linha exclusiva; caso contrário, FALSE.
+TRUE se o painel estiver em modo de linha exclusivo; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o modo de linha exclusivo, consulte [CPane::SetExclusiveRowMode](#setexclusiverowmode).
+Para obter mais informações sobre o modo de linha exclusivo, consulte [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
 
-## <a name="cpanegethotspot"></a><a name="gethotspot"></a>CPane::GetHotSpot
+## <a name="cpanegethotspot"></a><a name="gethotspot"></a>CPane:: gethotspot
 
-Retorna o ponto de acesso armazenado `CMFCDragFrameImpl` em um objeto subjacente.
+Retorna o ponto de acesso armazenado em um objeto subjacente `CMFCDragFrameImpl` .
 
 ```
 CPoint GetHotSpot() const;
@@ -852,9 +852,9 @@ CPoint GetHotSpot() const;
 
 ### <a name="remarks"></a>Comentários
 
-A `CPane` classe `CMFCDragFrameImpl` contém `m_dragFrameImpl`um objeto, que é responsável por desenhar o retângulo que aparece quando o usuário move um painel no modo de acoplamento padrão. O ponto quente é usado para desenhar o retângulo em relação à posição atual do mouse à medida que o usuário move o painel.
+A `CPane` classe contém um `CMFCDragFrameImpl` objeto, `m_dragFrameImpl` , que é responsável por desenhar o retângulo que aparece quando o usuário move um painel no modo de encaixe padrão. O ponto de acesso é usado para desenhar o retângulo em relação à posição atual do mouse quando o usuário move o painel.
 
-## <a name="cpanegetminsize"></a><a name="getminsize"></a>Painel::GetMinSize
+## <a name="cpanegetminsize"></a><a name="getminsize"></a>CPane:: getminize
 
 Recupera o tamanho mínimo permitido para o painel.
 
@@ -862,29 +862,29 @@ Recupera o tamanho mínimo permitido para o painel.
 virtual void GetMinSize(CSize& size) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *size*<br/>
-[fora] Um `CSize` objeto que está preenchido com o tamanho mínimo permitido.
+fora Um `CSize` objeto que é preenchido com o tamanho mínimo permitido.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cpanegetpanename"></a><a name="getpanename"></a>CPane::GetPaneName
+## <a name="cpanegetpanename"></a><a name="getpanename"></a>CPane:: GetPaneName
 
-Recupera o título para o painel.
+Recupera o título do painel.
 
 ```
 virtual void GetPaneName(CString& strName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strName*<br/>
-[fora] Um `CString` objeto que está preenchido com o nome da legenda.
+fora Um `CString` objeto que é preenchido com o nome da legenda.
 
 ### <a name="remarks"></a>Comentários
 
-O título do painel é exibido na área da legenda quando o painel está ancorado ou flutuando. Se o painel fizer parte de um grupo com guias, o título será exibido na área da guia. Se o painel estiver no modo de ocultação automática, o título será exibido em um `CMFCAutoHideButton`.
+O título do painel é exibido na área de legenda quando o painel está encaixado ou flutuando. Se o painel fizer parte de um grupo com guias, o título será exibido na área da guia. Se o painel estiver no modo de ocultar automaticamente, o título será exibido em um `CMFCAutoHideButton` .
 
 ## <a name="cpanegetvirtualrect"></a><a name="getvirtualrect"></a>CPane::GetVirtualRect
 
@@ -894,20 +894,20 @@ Recupera o *retângulo virtual* do painel.
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectVirtual*<br/>
-[fora] Um `CRect` objeto que está preenchido com o retângulo virtual.
+fora Um `CRect` objeto que é preenchido com o retângulo virtual.
 
 ### <a name="remarks"></a>Comentários
 
 Quando um painel é movido, a estrutura armazena a posição original do painel em um retângulo virtual. A estrutura pode usar o retângulo virtual para restaurar a posição original do painel.
 
-Não chame métodos relacionados a retângulos virtuais, a menos que você esteja movendo painéis programáticamente.
+Não chame métodos relacionados a retângulos virtuais, a menos que você esteja movendo painéis programaticamente.
 
-## <a name="cpaneischangestate"></a><a name="ischangestate"></a>CPane::IsChangeState
+## <a name="cpaneischangestate"></a><a name="ischangestate"></a>CPane:: ischangstate
 
-À medida que o painel está sendo movido, este método analisa sua posição em relação a outros painéis, linhas de doca e janelas de mini-quadro, e retorna o valor AFX_CS_STATUS apropriado.
+Como o painel está sendo movido, esse método analisa sua posição em relação a outros painéis, linhas de encaixe e janelas de mini quadros e retorna o valor de AFX_CS_STATUS apropriado.
 
 ```
 virtual AFX_CS_STATUS IsChangeState(
@@ -915,26 +915,26 @@ virtual AFX_CS_STATUS IsChangeState(
     CBasePane** ppTargetBar) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nOffset*<br/>
-[em] Especifica a sensibilidade do encaixe. Por exemplo, um painel que é movido dentro de pixels *nOffset* de uma linha de doca será encaixado.
+no Especifica a sensibilidade de encaixe. Por exemplo, um painel movido dentro de *nOffset* pixels de uma linha de encaixe será encaixado.
 
 *ppTargetBar*<br/>
-[em] Quando o método retorna, *ppTargetBar* contém um ponteiro para o objeto ao qual o painel atual deve ser encaixado ou NULL se não houver acoplamento.
+no Quando o método retornar, *ppTargetBar* conterá um ponteiro para o objeto ao qual o painel atual deve ser encaixado ou nulo se nenhum encaixe precisar ocorrer.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um dos seguintes valores AFX_CS_STATUS:
+Um dos seguintes valores de AFX_CS_STATUS:
 
 |Valor|Descrição|
 |-----------|-----------------|
-|CS_NOTHING|O painel não está perto de um local de doca. A estrutura não acopla o painel.|
-|CS_DOCK_IMMEDIATELY|O painel é sobre um local de doca, e o estilo DT_IMMEDIATE está ativado. A estrutura atraca o painel imediatamente.|
-|CS_DELAY_DOCK|O painel é sobre um local de doca que é outro painel de acoplamento ou uma borda do quadro principal. A estrutura encaixa o painel quando o usuário libera o movimento.|
-|CS_DELAY_DOCK_TO_TAB|O painel é sobre um local de doca que faz com que o painel seja ancorado em uma janela com guias. Isso ocorre quando o painel está sobre a legenda de outro painel de acoplamento ou sobre a área da guia de um painel com guias. A estrutura encaixa o painel quando o usuário libera o movimento.|
+|CS_NOTHING|O painel não está próximo a um site de encaixe. A estrutura não encaixa o painel.|
+|CS_DOCK_IMMEDIATELY|O painel está sobre um site de encaixe e o estilo de DT_IMMEDIATE está habilitado. A estrutura encaixa o painel imediatamente.|
+|CS_DELAY_DOCK|O painel está sobre um site de encaixe que está em outro painel de encaixe ou em uma borda do quadro principal. A estrutura encaixa o painel quando o usuário libera a movimentação.|
+|CS_DELAY_DOCK_TO_TAB|O painel está sobre um site de encaixe que faz com que o painel seja encaixado em uma janela com guias. Isso ocorre quando o painel está sobre a legenda de outro painel de encaixe ou sobre a área de tabulação de um painel com guias. A estrutura encaixa o painel quando o usuário libera a movimentação.|
 
-## <a name="cpaneisdragmode"></a><a name="isdragmode"></a>CPane::IsDragMode
+## <a name="cpaneisdragmode"></a><a name="isdragmode"></a>CPane:: isarrastmode
 
 Especifica se o painel está sendo movido.
 
@@ -944,13 +944,13 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel está sendo movido; caso contrário, FALSE.
+TRUE se o painel estiver sendo movido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ## <a name="cpaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd
 
-Especifica se o painel está em uma janela de quadro de vários painéis [(CMultiPaneFrameWnd Class).](../../mfc/reference/cmultipaneframewnd-class.md)
+Especifica se o painel está em uma janela de quadro de vários painéis ( [classe CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -958,15 +958,15 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel estiver em uma janela de quadro de vários painéis; caso contrário, FALSE.
+TRUE se o painel estiver em uma janela de quadro de vários painéis; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Apenas painéis ancoráveis podem flutuar em uma janela de quadro de vários painéis. Portanto, `CPane::IsInFloatingMultiPaneFrameWnd` sempre retorna FALSO.
+Somente os painéis encaixáveis podem flutuar em uma janela de quadro de vários painéis. Portanto, `CPane::IsInFloatingMultiPaneFrameWnd` sempre retorna false.
 
 ## <a name="cpaneisleftof"></a><a name="isleftof"></a>CPane::IsLeftOf
 
-Determina se o painel é deixado (ou acima) do retângulo especificado.
+Determina se o painel está à esquerda (ou acima) do retângulo especificado.
 
 ```
 bool IsLeftOf(
@@ -974,23 +974,23 @@ bool IsLeftOf(
     bool bWindowRect = true) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rect*<br/>
-[em] Um `CRect` objeto que é usado para comparação.
+no Um `CRect` objeto que é usado para comparação.
 
 *bWindowRect*<br/>
-[em] Se TRUE, é assumido que o *rect* contém coordenadas de tela; se FALSE, *rect* é assumido para conter coordenadas do cliente.
+no Se for TRUE, *Rect* presumido deve conter coordenadas de tela; Se for FALSE, *Rect* será considerado para conter coordenadas de cliente.
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-Se o painel estiver ancorado horizontalmente, este método verifica se sua localização é deixada de *rect*. Caso contrário, este método verifica se o local está acima *do reto*.
+Se o painel for encaixado horizontalmente, esse método verificará se o local está à esquerda do *Rect*. Caso contrário, esse método verifica se o local está acima do *Rect*.
 
 ## <a name="cpaneisresizable"></a><a name="isresizable"></a>CPane::IsResizable
 
-Especifica se o painel é resizável.
+Especifica se o painel é redimensionável.
 
 ```
 virtual BOOL IsResizable() const;
@@ -998,19 +998,19 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel é resizável; caso contrário, FALSE.
+TRUE se o painel for redimensionável; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Objetos básicos `CPane` não são resizáveis.
+Os `CPane` objetos base não são redimensionáveis.
 
-O gerenciador de acoplamento usa a bandeira resizável para determinar o layout do painel. Os painéis não resizáveis estão sempre localizados nas bordas externas do quadro pai.
+O Gerenciador de encaixe usa o sinalizador redimensionável para determinar o layout do painel. Os painéis não redimensionáveis sempre estão localizados nas bordas externas do quadro pai.
 
-Os painéis não resizáveis não podem residir em contêineres de acoplamento.
+Os painéis não redimensionáveis não podem residir em contêineres de encaixe.
 
-## <a name="cpaneistabbed"></a><a name="istabbed"></a>CPane::IsTabbed
+## <a name="cpaneistabbed"></a><a name="istabbed"></a>CPane:: istabed
 
-Determina se o painel foi inserido no controle da guia de uma janela com guias.
+Determina se o painel foi inserido no controle guia de uma janela com guias.
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1018,13 +1018,13 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel for tabulado; caso contrário, FALSE.
+TRUE se o painel for tabulado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O estado de guias é tratado separadamente dos estados flutuantes, ancorados e auto-hide.
+O estado tabulado é tratado separadamente dos Estados flutuante, encaixado e ocultar automaticamente.
 
-## <a name="cpaneloadstate"></a><a name="loadstate"></a>CPane::LoadState
+## <a name="cpaneloadstate"></a><a name="loadstate"></a>CPane:: LoadState
 
 Carrega o estado do painel do registro.
 
@@ -1035,30 +1035,30 @@ virtual BOOL LoadState(
     UINT uiID = (UINT) -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Lpszprofilename*<br/>
-[em] Nome do perfil.
+*lpszProfileName*<br/>
+no Nome do perfil.
 
 *nIndex*<br/>
-[em] Índice de perfil.
+no Índice de perfil.
 
-*Uiid*<br/>
-[em] D.M. Pane.
+*uiID*<br/>
+no ID do painel.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o estado do painel foi carregado com sucesso; caso contrário, FALSE.
+TRUE se o estado do painel tiver sido carregado com êxito; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura chama esse método para carregar o estado do painel a partir do registro. Substituí-lo em uma classe derivada para carregar informações adicionais salvas por [CPane::SaveState](#savestate).
+A estrutura chama esse método para carregar o estado do painel do registro. Substitua-o em uma classe derivada para carregar informações adicionais que são salvas por [CPane:: SaveState](#savestate).
 
-Quando você substituir este método, também chame o método base e retorne FALSE se o método base retornar FALSO.
+Quando você substituir esse método, também chamará o método base e retornará FALSE se o método base retornar FALSE.
 
-## <a name="cpanem_bhandleminsize"></a><a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize
+## <a name="cpanem_bhandleminsize"></a><a name="m_bhandleminsize"></a>CPane:: m_bHandleMinSize
 
-Permite um manuseio consistente de tamanhos mínimos de painel.
+Permite a manipulação consistente de tamanhos mínimos de painel.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
@@ -1066,13 +1066,13 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 ### <a name="remarks"></a>Comentários
 
-Se um ou mais painéis de `GetMinSize`encaixe na substituição `SetMinSize`do aplicativo, ou se o aplicativo chamar, você pode querer definir este membro estático como TRUE, a fim de permitir que a estrutura manuseie consistentemente como os painéis são dimensionados.
+Se um ou mais painéis de encaixe no seu aplicativo forem substituídos `GetMinSize` , ou se seu aplicativo chamar, convém `SetMinSize` definir esse membro estático como true para permitir que a estrutura manipule consistentemente como os painéis são dimensionados.
 
-Se este valor for definido como TRUE, todos os painéis cujo tamanho deve ser reduzido abaixo do seu tamanho mínimo são cortados, não esticados. Como a estrutura usa regiões de janela para fins de dimensionamento de painéis, não altere o tamanho da região da janela para painéis de encaixe se esse valor for definido como TRUE.
+Se esse valor for definido como TRUE, todos os painéis cujo tamanho deve ser reduzido abaixo de seu tamanho mínimo serão recortados, não ampliados. Como a estrutura usa regiões de janela para fins de dimensionamento de painel, não altere o tamanho da região da janela para painéis de encaixe se esse valor for definido como TRUE.
 
-## <a name="cpanem_recentdockinfo"></a><a name="m_recentdockinfo"></a>CPane::m_recentDockInfo
+## <a name="cpanem_recentdockinfo"></a><a name="m_recentdockinfo"></a>CPane:: m_recentDockInfo
 
-Contém informações recentes de acoplamento.
+Contém informações recentes de encaixe.
 
 ```
 CRecentDockSiteInfo m_recentDockInfo;
@@ -1080,11 +1080,11 @@ CRecentDockSiteInfo m_recentDockInfo;
 
 ### <a name="remarks"></a>Comentários
 
-O framework armazena as últimas informações do estado de acoplamento para o painel neste membro.
+A estrutura armazena as informações de estado de encaixe mais recentes para o painel neste membro.
 
 ## <a name="cpanemovebyalignment"></a><a name="movebyalignment"></a>CPane::MoveByAlignment
 
-Move o painel e o retângulo virtual pela quantidade especificada.
+Move o painel e o retângulo virtual pelo valor especificado.
 
 ```
 BOOL MoveByAlignment(
@@ -1092,29 +1092,29 @@ BOOL MoveByAlignment(
     int nOffset);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dwalignment*<br/>
-[em] Especifica o alinhamento do painel.
+*dwAlignment*<br/>
+no Especifica o alinhamento do painel.
 
 *nOffset*<br/>
-[em] A quantidade, em pixels, pela qual mover o painel e o retângulo virtual.
+no O valor, em pixels, pelo qual mover o painel e o retângulo virtual.
 
 ### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-*DwAlignment* pode ser qualquer um dos seguintes valores:
+*dwAlignment* pode ser qualquer um dos seguintes valores:
 
 |Valor|Descrição|
 |-----------|-----------------|
-|Cbrs_align_top|Permite que o painel seja ancorado na parte superior da área do cliente de uma janela de quadro.|
-|Cbrs_align_bottom|Permite que o painel seja ancorado na parte inferior da área do cliente de uma janela de quadro.|
-|Cbrs_align_left|Permite que o painel seja ancorado no lado esquerdo da área do cliente de uma janela de quadro.|
-|Cbrs_align_right|Permite que o painel seja ancorado no lado direito da área do cliente de uma janela de quadro.|
-|Cbrs_align_any|Permite que o painel seja ancorado em qualquer lado da área do cliente de uma janela de quadro.|
+|CBRS_ALIGN_TOP|Permite que o painel seja encaixado na parte superior da área do cliente de uma janela do quadro.|
+|CBRS_ALIGN_BOTTOM|Permite que o painel seja encaixado na parte inferior da área do cliente de uma janela do quadro.|
+|CBRS_ALIGN_LEFT|Permite que o painel seja encaixado no lado esquerdo da área do cliente de uma janela do quadro.|
+|CBRS_ALIGN_RIGHT|Permite que o painel seja encaixado no lado direito da área do cliente de uma janela do quadro.|
+|CBRS_ALIGN_ANY|Permite que o painel seja encaixado em qualquer lado da área do cliente de uma janela do quadro.|
 
-Se *dwAlignment* contiver a bandeira CBRS_ALIGN_LEFT ou CBRS_ALIGN_RIGHT, o painel e o retângulo virtual serão movidos horizontalmente; caso contrário, se *dwAlignment* contiver a bandeira CBRS_ALIGN_TOP ou CBRS_ALIGN_BOTTOM, o painel e o retângulo virtual são movidos verticalmente.
+Se *dwAlignment* contiver o sinalizador CBRS_ALIGN_LEFT ou CBRS_ALIGN_RIGHT, o painel e o retângulo virtual serão movidos horizontalmente; caso contrário, se *dwAlignment* contiver o sinalizador CBRS_ALIGN_TOP ou CBRS_ALIGN_BOTTOM, o painel e o retângulo virtual serão movidos verticalmente.
 
 ## <a name="cpanemovepane"></a><a name="movepane"></a>CPane::MovePane
 
@@ -1127,45 +1127,45 @@ virtual CSize MovePane(
     HDWP& hdwp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectNew*<br/>
-[em] Especifica o novo retângulo para o painel.
+no Especifica o novo retângulo do painel.
 
 *bForceMove*<br/>
-[em] Se TRUE, este método ignora o tamanho mínimo permitido do painel [(CPane::GetMinSize);](#getminsize) caso contrário, o painel é ajustado, se necessário, para garantir que seja pelo menos o tamanho mínimo permitido.
+no Se for TRUE, esse método ignorará o tamanho mínimo permitido do painel ( [CPane:: Getminize](#getminsize)); caso contrário, o painel será ajustado, se necessário, para garantir que ele tenha pelo menos o tamanho mínimo permitido.
 
-*Hdwp*<br/>
-[em] Não usado.
+*hdwp*<br/>
+no Não usado.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um `CSize` objeto que contém as diferenças de largura e altura entre os retângulos novos e antigos (retângulo antigo - *rectNew*).
+Um `CSize` objeto que contém as diferenças de largura e altura entre os retângulos novos e antigos (retângulo antigo- *rectNew*).
 
 ### <a name="remarks"></a>Comentários
 
-Este método é usado apenas para painéis ancoráveis.
+Esse método é usado somente para painéis encaixáveis.
 
 ## <a name="cpaneonafterchangeparent"></a><a name="onafterchangeparent"></a>CPane::OnAfterChangeParent
 
-Chamado pela estrutura quando o pai de um painel mudou.
+Chamado pelo Framework quando o pai de um painel é alterado.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndOldParent*<br/>
-[dentro, fora] A janela dos pais anteriores do painel.
+[entrada, saída] A janela pai do painel anterior.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é chamado pela estrutura quando o pai de um painel mudou por causa de uma operação de encaixe ou flutuante.
+Esse método é chamado pela estrutura quando o pai de um painel é alterado devido a uma operação de encaixe ou flutuante.
 
 ## <a name="cpaneonafterdock"></a><a name="onafterdock"></a>CPane::OnAfterDock
 
-Chamado pela estrutura quando um painel foi ancorado.
+Chamado pelo Framework quando um painel é encaixado.
 
 ```
 virtual void OnAfterDock(
@@ -1174,20 +1174,20 @@ virtual void OnAfterDock(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Pbar*<br/>
-[em] Este parâmetro não é usado.
+*pBar*<br/>
+no Esse parâmetro não é usado.
 
-*Lprect*<br/>
-[em] Este parâmetro não é usado.
+*lpRect*<br/>
+no Esse parâmetro não é usado.
 
-*Dockmethod*<br/>
-[em] Este parâmetro não é usado.
+*dockMethod*<br/>
+no Esse parâmetro não é usado.
 
 ## <a name="cpaneonafterfloat"></a><a name="onafterfloat"></a>CPane::OnAfterFloat
 
-Chamado pela estrutura depois que um painel flutua.
+Chamado pelo Framework depois que um painel flutua.
 
 ```
 virtual void OnAfterFloat();
@@ -1195,11 +1195,11 @@ virtual void OnAfterFloat();
 
 ### <a name="remarks"></a>Comentários
 
-Você pode substituir este método em uma classe derivada se você quiser realizar qualquer processamento depois que um painel flutua.
+Você pode substituir esse método em uma classe derivada se desejar executar qualquer processamento depois que um painel flutuar.
 
 ## <a name="cpaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent
 
-Chamado pela estrutura quando o pai do painel está prestes a mudar.
+Chamado pelo Framework quando o pai do painel está prestes a ser alterado.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1207,23 +1207,23 @@ virtual void OnBeforeChangeParent(
     BOOL bDelay = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndNewParent*<br/>
-[dentro, fora] Especifica a nova janela pai.
+[entrada, saída] Especifica a nova janela pai.
 
-*bAtraso*<br/>
-[em] VERDADEIRO para atrasar o ajuste global do layout de encaixe; caso contrário, FALSE.
+*bDelay*<br/>
+no TRUE para atrasar o ajuste de layout de encaixe global; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é chamado pela estrutura quando o pai do painel está prestes a mudar porque o painel está sendo ancorado ou flutuado.
+Esse método é chamado pela estrutura quando o pai do painel está prestes a ser alterado, pois o painel está sendo encaixado ou flutuado.
 
-Por padrão, o painel não é registrado com o `CDockSite::RemovePane`painel de encaixe chamando .
+Por padrão, o painel tem o registro cancelado com o painel de encaixe chamando `CDockSite::RemovePane` .
 
 ## <a name="cpaneonbeforedock"></a><a name="onbeforedock"></a>CPane::OnBeforeDock
 
-Chamado pela estrutura quando o painel está prestes a atracar.
+Chamado pelo Framework quando o painel está prestes a ser encaixado.
 
 ```
 virtual BOOL OnBeforeDock(
@@ -1232,28 +1232,28 @@ virtual BOOL OnBeforeDock(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppDockBar*<br/>
-[dentro, fora] Especifica o painel para o quais este painel está encaixando.
+[entrada, saída] Especifica o painel ao qual este painel está encaixado.
 
-*Lprect*<br/>
-[em] Especifica o retângulo de acoplamento.
+*lpRect*<br/>
+no Especifica o retângulo de encaixe.
 
-*Dockmethod*<br/>
-[em] Especifica o método de acoplamento.
+*dockMethod*<br/>
+no Especifica o método de encaixe.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel pode ser ancorado. Se a função retornar FALSA, a operação de acoplamento será abortada.
+TRUE se o painel puder ser encaixado. Se a função retornar FALSE, a operação de encaixe será anulada.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é chamado pela estrutura quando um painel está prestes a ser ancorado. Você pode substituir este método em uma classe derivada se quiser realizar qualquer processamento antes que um painel seja finalmente encaixado.
+Esse método é chamado pelo Framework quando um painel está prestes a ser encaixado. Você pode substituir esse método em uma classe derivada se desejar executar qualquer processamento antes que um painel seja finalmente encaixado.
 
 ## <a name="cpaneonbeforefloat"></a><a name="onbeforefloat"></a>CPane::OnBeforeFloat
 
-Chamado pela estrutura quando um painel está prestes a flutuar.
+Chamado pelo Framework quando um painel está prestes a flutuar.
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1261,25 +1261,25 @@ virtual BOOL OnBeforeFloat(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectFloat*<br/>
-[em] Especifica a posição e o tamanho do painel quando ele está em um estado flutuante.
+no Especifica a posição e o tamanho do painel quando ele está em um estado flutuante.
 
-*Dockmethod*<br/>
-[em] Especifica o método de acoplamento do painel.
+*dockMethod*<br/>
+no Especifica o método de encaixe do painel.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o painel pode ser flutuado; caso contrário, FALSE.
+TRUE se o painel puder ser flutuado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é chamado pela estrutura quando um painel está prestes a flutuar. Você pode substituir este método em uma classe derivada se você quiser realizar qualquer processamento antes que o painel finalmente flutue.
+Esse método é chamado pelo Framework quando um painel está prestes a flutuar. Você pode substituir esse método em uma classe derivada se desejar executar qualquer processamento antes que o painel por fim flutue.
 
 ## <a name="cpaneonpressclosebutton"></a><a name="onpressclosebutton"></a>CPane::OnPressCloseButton
 
-Chamado pela estrutura quando o usuário pressiona o botão de fechamento na legenda para o painel.
+Chamado pelo Framework quando o usuário pressiona o botão fechar na legenda do painel.
 
 ```
 virtual void OnPressCloseButton();
@@ -1287,20 +1287,20 @@ virtual void OnPressCloseButton();
 
 ### <a name="remarks"></a>Comentários
 
-Este método é chamado pela estrutura quando um usuário **pressiona** o botão Fechar na legenda do painel. Para receber notificações sobre o evento **Close,** você pode substituir este método em uma classe derivada.
+Esse método é chamado pela estrutura quando um usuário pressiona o botão **fechar** na legenda do painel. Para receber notificações sobre o evento **Close** , você pode substituir esse método em uma classe derivada.
 
 ## <a name="cpaneonshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CPane::OnShowControlBarMenu
 
-Chamado pela estrutura quando um menu de painel especial está prestes a ser exibido.
+Chamado pelo Framework quando um menu de painel especial está prestes a ser exibido.
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Ponto*<br/>
-[em] Especifica a localização do menu.
+*empresas*<br/>
+no Especifica o local do menu.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -1308,11 +1308,11 @@ TRUE se o menu puder ser exibido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O menu contém vários itens que permitem especificar o comportamento do painel, a saber: **Flutuante,** **Acoplamento,** **AutoHide**e **Ocultar**. Você pode habilitar este menu para todos os painéis chamando [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+O menu contém vários itens que permitem que você especifique o comportamento do painel, ou seja: **flutuante**, **encaixe**, **AutoOcultar**e **ocultar**. Você pode habilitar esse menu para todos os painéis chamando [CDockingManager:: EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
 ## <a name="cpanerecalclayout"></a><a name="recalclayout"></a>CPane::RecalcLayout
 
-Recalcula as informações de layout para o painel.
+Recalcula as informações de layout do painel.
 
 ```
 virtual void RecalcLayout();
@@ -1320,13 +1320,13 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Comentários
 
-Se o painel estiver encaixado, este método atualizará o retângulo virtual para o painel, definindo seu tamanho para o tamanho atual do painel.
+Se o painel estiver encaixado, esse método atualizará o retângulo virtual para o painel definindo seu tamanho como o tamanho atual do painel.
 
-Se o painel estiver flutuando, este método notifica o miniquadro pai para ajustar o tamanho do painel ao tamanho do miniquadro. A estrutura garante que o miniquadro seja pelo menos o tamanho mínimo permitido para o painel [(CPane::GetMinSize)](#getminsize)e redimensione o miniquadro, se necessário.
+Se o painel estiver flutuante, esse método notificará o mini-quadro pai para ajustar o tamanho do painel ao tamanho do mini-quadro. A estrutura garante que o mini-frame tenha pelo menos o tamanho mínimo permitido para o painel ( [CPane:: GetMinSize](#getminsize)) e redimensione o mini-quadro, se necessário.
 
-## <a name="cpanesavestate"></a><a name="savestate"></a>CPane::SaveState
+## <a name="cpanesavestate"></a><a name="savestate"></a>CPane:: SaveState
 
-Salva o estado do painel para o registro.
+Salva o estado do painel no registro.
 
 ```
 virtual BOOL SaveState(
@@ -1335,26 +1335,26 @@ virtual BOOL SaveState(
     UINT uiID = (UINT) -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Lpszprofilename*<br/>
-[em] Nome do perfil.
+*lpszProfileName*<br/>
+no Nome do perfil.
 
 *nIndex*<br/>
-[em] Índice de perfil.
+no Índice de perfil.
 
-*Uiid*<br/>
-[em] D.M. Pane.
+*uiID*<br/>
+no ID do painel.
 
 ### <a name="return-value"></a>Valor retornado
 
-VERDADE se o estado foi salvo com sucesso; caso contrário, FALSE.
+TRUE se o estado foi salvo com êxito; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O framework chama esse método quando salva o estado do painel para o registro. Substituir `SaveState` em uma classe derivada para armazenar informações adicionais.
+A estrutura chama esse método quando salva o estado do painel no registro. Substituir `SaveState` em uma classe derivada para armazenar informações adicionais.
 
-Quando você substituir este método, também chame o método base e retorne FALSE se o método base retornar FALSO.
+Quando você substituir esse método, também chamará o método base e retornará FALSE se o método base retornar FALSE.
 
 ## <a name="cpanesetactiveingroup"></a><a name="setactiveingroup"></a>CPane::SetActiveInGroup
 
@@ -1364,20 +1364,20 @@ Sinaliza um painel como ativo.
 virtual void SetActiveInGroup(BOOL bActive);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bactive*<br/>
-[em] Um BOOL que especifica se o painel está sinalizado como ativo.
+*bActive*<br/>
+no Um BOOL que especifica se o painel é sinalizado como ativo.
 
 ### <a name="remarks"></a>Comentários
 
-Quando um painel dockable é mostrado ou um botão de ocultação automática é escolhido, o painel de ocultação automática correspondente é marcado como ativo.
+Quando um painel de encaixáveis é mostrado ou um botão de ocultar automaticamente é escolhido, o painel ocultar automaticamente correspondente é marcado como ativo.
 
-O aparecimento de um botão de ocultação automática associado ao painel é baseado em dois fatores. Se o painel estiver ativo `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` e o é TRUE, a estrutura exibirá o botão de ocultação automática como um ícone e uma etiqueta. Para um painel inativo, a estrutura exibe apenas o ícone de ocultação automática.
+A aparência de um botão Ocultar automaticamente que está associado ao painel baseia-se em dois fatores. Se o painel estiver ativo e o `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` for true, a estrutura exibirá o botão Ocultar automaticamente como um ícone e um rótulo. Para um painel inativo, a estrutura exibe apenas o ícone ocultar automaticamente.
 
-Se `CMFCAutoHideButton::m_bOverlappingTabs` for FALSO ou se o painel não estiver localizado em um grupo, a estrutura exibirá o botão de ocultação automática associado como um ícone e um rótulo.
+Se `CMFCAutoHideButton::m_bOverlappingTabs` for false ou se o painel não estiver localizado em um grupo, a estrutura exibirá o botão Ocultar automaticamente associado como um ícone e um rótulo.
 
-## <a name="cpanesetborders"></a><a name="setborders"></a>CPane::SetBorders
+## <a name="cpanesetborders"></a><a name="setborders"></a>CPane:: SetBorders
 
 Define os valores de borda do painel.
 
@@ -1391,83 +1391,83 @@ void SetBorders(
 void SetBorders(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cxLeft*<br/>
-[em] Especifica a largura, em pixels, da borda esquerda do painel.
+no Especifica a largura, em pixels, da borda esquerda do painel.
 
 *cyTop*<br/>
-[em] Especifica a largura, em pixels, da borda superior do painel.
+no Especifica a largura, em pixels, da borda superior do painel.
 
-*cxDireito*<br/>
-[em] Especifica a largura, em pixels, da borda direita do painel.
+*cxRight*<br/>
+no Especifica a largura, em pixels, da borda direita do painel.
 
 *cyBottom*<br/>
-[em] Especifica a largura, em pixels, da borda inferior do painel.
+no Especifica a largura, em pixels, da borda inferior do painel.
 
-*Lprect*<br/>
-[em] Um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contém a largura, em pixels, de cada borda do painel.
+*lpRect*<br/>
+no Um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contém a largura, em pixels, de cada borda do painel.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esta função para definir os tamanhos das bordas do painel.
+Chame essa função para definir os tamanhos das bordas do painel.
 
 ## <a name="cpanesetclienthotspot"></a><a name="setclienthotspot"></a>CPane::SetClientHotSpot
 
-Define o *ponto quente* para o painel.
+Define o *ponto de acesso* para o painel.
 
 ```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*ptNovo*<br/>
-[em] Um `CPoint` objeto que especifica o novo ponto de acesso.
+*ptNew*<br/>
+no Um `CPoint` objeto que especifica o novo ponto de acesso.
 
 ### <a name="remarks"></a>Comentários
 
-O *ponto quente* é o ponto no painel que o usuário seleciona e segura para mover o painel. Um ponto quente é usado para animação suave quando o painel é arrastado de uma posição ancorada.
+O ponto de *acesso* é a questão no painel que o usuário seleciona e mantém para mover o painel. Um ponto de acesso é usado para uma animação suave quando o painel é arrastado de uma posição encaixada.
 
-## <a name="cpanesetdockstate"></a><a name="setdockstate"></a>CPane::SetDockState
+## <a name="cpanesetdockstate"></a><a name="setdockstate"></a>CPane:: SetDockState
 
-Restaura informações do estado de acoplamento para o painel.
+Restaura informações de estado de encaixe para o painel.
 
 ```
 virtual void SetDockState(CDockingManager* pDockManager);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*gerente de pDock*<br/>
-[em] Ponteiro para o gerenciador de encaixe para a janela principal da moldura.
+*pDockManager*<br/>
+no Ponteiro para o Gerenciador de encaixe da janela do quadro principal.
 
 ### <a name="remarks"></a>Comentários
 
-Este método é chamado pela estrutura para restaurar as recentes informações do estado de acoplamento para o painel. Um painel armazena informações recentes do estado de acoplamento em [CPane::m_recentDockInfo](#m_recentdockinfo). Para obter mais informações, consulte a [classe CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
+Esse método é chamado pelo Framework para restaurar informações recentes de estado de encaixe para o painel. Um painel armazena informações recentes de estado de encaixe em [CPane:: m_recentDockInfo](#m_recentdockinfo). Para obter mais informações, consulte a [classe CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
 
-Você também pode chamar este método para definir o estado de acoplamento quando você carregar informações do painel de uma fonte externa.
+Você também pode chamar esse método para definir o estado de encaixe ao carregar informações do painel de uma fonte externa.
 
 ## <a name="cpanesetexclusiverowmode"></a><a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode
 
-Ativa ou desativa o modo de linha exclusivo.
+Habilita ou desabilita o modo de linha exclusivo.
 
 ```
 virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*bExclusivo*<br/>
-[em] TRUE para habilitar o modo de linha exclusivo; caso contrário, FALSE.
+*bExclusive*<br/>
+no TRUE para habilitar o modo de linha exclusivo; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chame este método para ativar ou desativar o modo de linha exclusiva. Quando um painel está no modo de linha exclusiva, ele não pode compartilhar a mesma linha com qualquer outra barra de ferramentas.
+Chame esse método para habilitar ou desabilitar o modo de linha exclusivo. Quando um painel está em modo de linha exclusivo, ele não pode compartilhar a mesma linha com nenhuma outra barra de ferramentas.
 
-Por padrão, todas as barras de ferramentas têm o modo de linha exclusivo desativado e a barra de menu situou o modo de linha exclusivo.
+Por padrão, todas as barras de ferramentas têm o modo de linha exclusivo desabilitado e a barra de menus tem o modo de linha exclusivo habilitado.
 
-## <a name="cpanesetminsize"></a><a name="setminsize"></a>Painel::SetMinSize
+## <a name="cpanesetminsize"></a><a name="setminsize"></a>CPane:: setminize
 
 Define o tamanho mínimo permitido para o painel.
 
@@ -1475,10 +1475,10 @@ Define o tamanho mínimo permitido para o painel.
 void SetMinSize(const CSize& size);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *size*<br/>
-[em] Um `CSize` objeto que contém o tamanho mínimo permitido para o painel.
+no Um `CSize` objeto que contém o tamanho mínimo permitido para o painel.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1492,40 +1492,40 @@ void SetVirtualRect(
     BOOL bMapToParent = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rect*<br/>
-[em] Um `CRect` objeto que especifica o retângulo virtual a ser definido.
+no Um `CRect` objeto que especifica o retângulo virtual a ser definido.
 
 *bMapToParent*<br/>
-[em] Especifique TRUE se *o reto* contiver pontos relativos à janela pai.
+no Especifique TRUE se *Rect* contiver pontos em relação à janela pai.
 
 ### <a name="remarks"></a>Comentários
 
-Um *retângulo virtual* armazena a posição original de um painel quando ele é movido. A estrutura pode usar o retângulo virtual para restaurar a posição original.
+Um *retângulo virtual* armazena a posição original de um painel quando movido. A estrutura pode usar o retângulo virtual para restaurar a posição original.
 
-Não chame métodos relacionados a retângulos virtuais, a menos que você esteja movendo painéis programáticamente.
+Não chame métodos relacionados a retângulos virtuais, a menos que você esteja movendo painéis programaticamente.
 
 ## <a name="cpanesetminiframertc"></a><a name="setminiframertc"></a>CPane::SetMiniFrameRTC
 
-Define as informações da classe de tempo de execução para a janela padrão do miniquadro.
+Define as informações de classe de tempo de execução para a janela de mini-quadro padrão.
 
 ```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pClass*<br/>
-[dentro, fora] Especifica as informações da classe de tempo de execução para a janela do miniquadro.
+[entrada, saída] Especifica as informações de classe de tempo de execução para a janela de mini-quadro.
 
 ### <a name="remarks"></a>Comentários
 
-Quando um painel é flutuado, ele é colocado em uma janela [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (mini-quadro). Você pode fornecer `CPaneFrameWnd`uma classe derivada personalizada que será usada quando [CPane::CreateDefaultMiniframe](#createdefaultminiframe) é chamado.
+Quando um painel é flutuado, ele é colocado em uma janela [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (mini-quadro). Você pode fornecer uma `CPaneFrameWnd` classe derivada personalizada que será usada quando [CPane:: CreateDefaultMiniframe](#createdefaultminiframe) for chamado.
 
 ## <a name="cpanestretchpanedeferwndpos"></a><a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos
 
-Estica o painel vertical ou horizontalmente com base no estilo de acoplamento.
+Alonga o painel vertical ou horizontalmente com base no estilo de encaixe.
 
 ```
 virtual int StretchPaneDeferWndPos(
@@ -1533,25 +1533,25 @@ virtual int StretchPaneDeferWndPos(
     HDWP& hdwp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*nEstriaTamanho*<br/>
-[em] A quantidade, em pixels, para esticar o painel. Use um valor negativo para encolher o painel.
+*nStretchSize*<br/>
+no A quantidade, em pixels, para alongar o painel. Use um valor negativo para reduzir o painel.
 
-*Hdwp*<br/>
-[em] Não usado.
+*hdwp*<br/>
+no Não usado.
 
 ### <a name="return-value"></a>Valor retornado
 
-A quantidade real, em pixels, que o painel foi esticado.
+O valor real, em pixels, que o painel foi alongado.
 
 ### <a name="remarks"></a>Comentários
 
-Se necessário, este método modifica *nStretchSize* para garantir que o painel não exceda os limites de tamanho. Esses limites são obtidos ligando para [CPane::GetAvailableStretchSize](#getavailablestretchsize) e [CPane::GetAvailableExpandSize](#getavailableexpandsize).
+Se necessário, esse método modifica *nStretchSize* para garantir que o painel não exceda os limites de tamanho. Esses limites são obtidos chamando [CPane:: GetAvailableStretchSize](#getavailablestretchsize) e [CPane:: GetAvailableExpandSize](#getavailableexpandsize).
 
 ## <a name="cpanetoggleautohide"></a><a name="toggleautohide"></a>CPane::ToggleAutoHide
 
-Alterna o modo de ocultação automática.
+Alterna o modo ocultar automaticamente.
 
 ```
 virtual void ToggleAutoHide();
@@ -1559,24 +1559,24 @@ virtual void ToggleAutoHide();
 
 ### <a name="remarks"></a>Comentários
 
-Chame este método para alternar o modo de ocultação automática. Um painel deve ser encaixado em uma janela principal do quadro para ser alternado para o modo de ocultação automática.
+Chame esse método para alternar o modo de ocultar automaticamente. Um painel deve ser encaixado em uma janela de quadro principal para ser alternado para o modo ocultar automaticamente.
 
 ## <a name="cpaneundockpane"></a><a name="undockpane"></a>CPane::UndockPane
 
-Remove o painel do local de doca, controle deslizante padrão ou janela de mini-quadro onde está atualmente ancorado.
+Remove o painel do site de encaixe, controle deslizante padrão ou janela de mini-quadro onde está encaixado no momento.
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*bAtraso*<br/>
-[em] Se FALSE, a estrutura chama [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) para ajustar o layout de encaixe.
+*bDelay*<br/>
+no Se for FALSE, a estrutura chamará [CBasePane:: AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) para ajustar o layout de encaixe.
 
 ### <a name="remarks"></a>Comentários
 
-Use este método para desacoplar programáticamente um painel.
+Use este método para desencaixar programaticamente um painel.
 
 ## <a name="cpaneupdatevirtualrect"></a><a name="updatevirtualrect"></a>CPane::UpdateVirtualRect
 
@@ -1588,24 +1588,24 @@ void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ptOffset*<br/>
-[em] Um `CPoint` objeto que especifica um deslocamento pelo qual deslocar o painel.
+no Um `CPoint` objeto que especifica um deslocamento pelo qual deslocar o painel.
 
-*sizeNovo*<br/>
-[em] Um `CSize` objeto que especifica um novo tamanho para o painel.
+*sizeNew*<br/>
+no Um `CSize` objeto que especifica um novo tamanho para o painel.
 
 ### <a name="remarks"></a>Comentários
 
 A primeira sobrecarga define o retângulo virtual usando a posição e o tamanho atuais do painel.
 
-A segunda sobrecarga desloca o retângulo virtual pela quantidade especificada por *ptOffset*.
+A segunda sobrecarga desloca o retângulo virtual pelo valor especificado por *ptOffset*.
 
-A terceira sobrecarga define o retângulo virtual usando a posição atual do painel e o tamanho especificado pelo *sizeNew*.
+A terceira sobrecarga define o retângulo virtual usando a posição atual do painel e o tamanho especificado por *sizeNew*.
 
 ## <a name="see-also"></a>Confira também
 
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CBasePane](../../mfc/reference/cbasepane-class.md)

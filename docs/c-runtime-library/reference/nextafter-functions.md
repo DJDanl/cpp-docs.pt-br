@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909360"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213509"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -93,7 +93,7 @@ float nexttoward( float x, long double y ); /* C++ only, requires <cmath> */
 long double nexttoward( long double x, long double y ); /* C++ only, requires <cmath> */
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor do ponto flutuante a ser iniciado.
@@ -109,7 +109,7 @@ Retorna o próximo valor de ponto flutuante reapresentável do tipo de retorno a
 
 As famílias de funções **nextafter** e **nexttoward** são equivalentes, exceto para o tipo de parâmetro de *y*. Se *x* e *y* forem iguais, o valor retornado será *y* convertido para o tipo de retorno.
 
-Como \<o C++ permite sobrecarga, se você incluir cmath> poderá chamar sobrecargas de **nextafter** e **nexttoward** que retornam tipos **float** e **Long** **Double** . Em um programa C, **nextafter** e **nexttoward** sempre retornam **Double**.
+Como o C++ permite sobrecarga, se você incluir, \<cmath> poderá chamar sobrecargas de **nextafter** e **nexttoward** que retornam **`float`** e **`long double`** tipos. Em um programa C, **nextafter** e **nexttoward** sempre retornam **`double`** .
 
 As funções **_nextafter** e **_nextafterf** são específicas da Microsoft. A função **_nextafterf** só está disponível durante a compilação para x64.
 
@@ -124,7 +124,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

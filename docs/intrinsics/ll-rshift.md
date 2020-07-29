@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217491"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219658"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Desloca um valor de 64 bits especificado pelo primeiro parâmetro para a direita, por um número de bits especificado pelo segundo parâmetro.
 
@@ -30,7 +30,7 @@ __int64 __ll_rshift(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Mascara*\
 no O valor inteiro de 64 bits a ser deslocado para a direita.
@@ -44,15 +44,15 @@ A máscara mudada por `nBit` bits.
 
 ## <a name="requirements"></a>Requisitos
 
-|Intrínseco|Arquitetura|
+|Intrinsic|Arquitetura|
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**Arquivo de cabeçalho** \<> intrin. h
+**Arquivo de cabeçalho** \<intrin.h>
 
 ## <a name="remarks"></a>Comentários
 
-Se o segundo parâmetro for maior que 64 em x64 (32 no x86), esse número será tirado do módulo 64 (32 no x86) para determinar o número de bits a serem deslocados. O `ll` prefixo indica que é uma operação em `long long`, outro nome para `__int64`, o tipo integral assinado de 64 bits.
+Se o segundo parâmetro for maior que 64 em x64 (32 no x86), esse número será tirado do módulo 64 (32 no x86) para determinar o número de bits a serem deslocados. O `ll` prefixo indica que é uma operação em **`long long`** , outro nome para **`__int64`** , o tipo integral assinado de 64 bits.
 
 ## <a name="example"></a>Exemplo
 
@@ -90,9 +90,9 @@ fffffffffffffff0
 > [!NOTE]
 > Se `_ull_rshift` tiver sido usado, o MSB do valor com SHIFT direita teria sido zero, portanto, o resultado desejado não teria sido obtido no caso de um valor negativo.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
 [__ll_lshift](../intrinsics/ll-lshift.md)\

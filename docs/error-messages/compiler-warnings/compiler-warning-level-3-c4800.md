@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: 828b38aeb184741af284f2d7722017b24f6255a3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a516be2e6e1966c3249ed21cc6d480ddea8b5ec1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198582"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220009"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>Aviso do compilador (nível 4) C4800
 
@@ -23,7 +23,7 @@ Visual Studio 2019 e posterior:
 C4800 é um aviso de nível 3 no Visual Studio 2015 e anterior:
 > '*Type*': forçando o valor para bool ' true ' ou ' false ' (aviso de desempenho)
 
-Esse aviso é gerado quando um valor é convertido implicitamente no tipo `bool`. Normalmente, essa mensagem é causada pela atribuição de variáveis `int` para `bool` variáveis em que a variável `int` contém apenas valores **true** e **false**e pode ser redeclarado como tipo `bool`. Se não for possível reescrever a expressão para usar o tipo `bool`, você poderá adicionar "`!=0`" à expressão, que fornece o tipo de expressão `bool`. A conversão da expressão no tipo `bool` não desabilita o aviso, que é por design.
+Esse aviso é gerado quando um valor é convertido implicitamente no tipo **`bool`** . Normalmente, essa mensagem é causada pela atribuição de **`int`** variáveis a **`bool`** variáveis em que a **`int`** variável contém apenas valores **`true`** e **`false`** , e pode ser redeclarada como tipo **`bool`** . Se não for possível reescrever a expressão para usar o tipo **`bool`** , você poderá adicionar " `!=0` " à expressão, que fornece o tipo de expressão **`bool`** . A conversão da expressão em tipo **`bool`** não desabilita o aviso, que é por design.
 
 ::: moniker range=">= vs-2017"
 Esse aviso não é emitido no Visual Studio 2017.

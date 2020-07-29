@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 700eeae226be48c1f6659d621f2f5c0ed397bb7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152664"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213041"
 ---
 # <a name="platformmtathreadattribute-class"></a>Classe Platform::MTAThreadAttribute
 
@@ -32,16 +32,16 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 |Nome|Descrição|
 |----------|-----------------|
-|[1 de construtor MTAThreadAttribute](#ctor) construtor|Inicializa uma nova instância da classe.|
+|Construtor do [Construtor 1 do MTAThreadAttribute](#ctor)|Inicializa uma nova instância da classe.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-O atributo MTAThreadAttribute herda [classe Platform:: Object](../cppcx/platform-object-class.md). O MTAThreadAttribute também sobrecarrega ou tem os seguintes membros:
+O atributo MTAThreadAttribute herda da [classe Platform:: Object](../cppcx/platform-object-class.md). O MTAThreadAttribute também sobrecarrega ou tem os seguintes membros:
 
 |Nome|Descrição|
 |----------|-----------------|
 |[MTAThreadAttribute::Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|
-|[MTAThreadAttribute::GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|
+|[MTAThreadAttribute::GetHashCode](#gethashcode)|Retorna o código hash para a instância.|
 |[MTAThreadAttribute::ToString](#tostring)|Retorna uma cadeia de caracteres que representa o objeto atual.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
@@ -50,11 +50,11 @@ O atributo MTAThreadAttribute herda [classe Platform:: Object](../cppcx/platform
 
 ### <a name="requirements"></a>Requisitos
 
-**Metadados:** platform.winmd
+**Metadados:** Platform. winmd
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
-## <a name="ctor"></a> Construtor MTAThreadAttribute
+## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a>Construtor MTAThreadAttribute
 
 Inicializa uma nova instância da classe MTAThreadAttribute.
 
@@ -64,7 +64,7 @@ Inicializa uma nova instância da classe MTAThreadAttribute.
 public:MTAThreadAttribute();
 ```
 
-## <a name="equals"></a> MTAThreadAttribute::Equals
+## <a name="mtathreadattributeequals"></a><a name="equals"></a>MTAThreadAttribute:: Equals
 
 Determina se o objeto especificado é igual ao objeto atual.
 
@@ -74,18 +74,18 @@ Determina se o objeto especificado é igual ao objeto atual.
 public:virtual override bool Equals( Object^ obj );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *obj*<br/>
-O objeto a ser comparado.
+O objeto a comparar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se os objetos forem iguais; caso contrário, **falso**.
+**`true`** Se os objetos forem iguais; caso contrário, **`false`** .
 
-## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
+## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a>MTAThreadAttribute:: GetHashCode
 
-Retorna o código hash para essa instância.
+Retorna o código hash para a instância.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -93,11 +93,11 @@ Retorna o código hash para essa instância.
 public:int GetHashCode();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O código hash para essa instância.
 
-## <a name="tostring"></a> MTAThreadAttribute::ToString
+## <a name="mtathreadattributetostring"></a><a name="tostring"></a>MTAThreadAttribute:: ToString
 
 Retorna uma cadeia de caracteres que representa o objeto atual.
 
@@ -107,10 +107,10 @@ Retorna uma cadeia de caracteres que representa o objeto atual.
 public:String^ ToString();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres que representa o objeto atual.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Namespace de plataforma](platform-namespace-c-cx.md)
+[Namespace da plataforma](platform-namespace-c-cx.md)

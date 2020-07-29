@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: f91eb428fcb49c81187788730128545916955790
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 52b389806f5bacac78750bc745cd77699eb59735
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127654"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212872"
 ---
 # <a name="compiler-error-c2059"></a>Erro do compilador C2059
 
@@ -19,7 +19,7 @@ erro de sintaxe: ' token '
 
 O token causou um erro de sintaxe.
 
-O exemplo a seguir gera uma mensagem de erro para a linha que declara `j`.
+O exemplo a seguir gera uma mensagem de erro para a linha que declara `j` .
 
 ```cpp
 // C2059e.cpp
@@ -31,7 +31,7 @@ O exemplo a seguir gera uma mensagem de erro para a linha que declara `j`.
 
 Para determinar a causa do erro, examine não apenas a linha listada na mensagem de erro, mas também as linhas acima dela. Se examinar as linhas não produzir nenhuma pista sobre o problema, tente comentar a linha listada na mensagem de erro e, talvez, várias linhas acima dela.
 
-Se a mensagem de erro ocorrer em um símbolo que segue imediatamente uma variável `typedef`, verifique se a variável está definida no código-fonte.
+Se a mensagem de erro ocorrer em um símbolo que segue imediatamente uma **`typedef`** variável, verifique se a variável está definida no código-fonte.
 
 C2059 é gerado quando um nome de símbolo de pré-processador é usado novamente como um identificador. No exemplo a seguir, o compilador vê `DIGITS.ONE` como o número 1, que não é válido como um nome de elemento de enumeração:
 
@@ -44,7 +44,7 @@ enum class DIGITS {
 };
 ```
 
-Você poderá obter C2059 se um símbolo for avaliado como Nothing, como pode ocorrer quando o símbolo **/d** **=** for usado para compilar.
+Você poderá obter C2059 se um símbolo for avaliado como Nothing, como pode ocorrer quando o símbolo **/d**_symbol_ **=** é usado para compilar.
 
 ```cpp
 // C2059a.cpp
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-C2059 pode ocorrer quando um operador que pode qualificar um nome (`::`, `->`e `.`) deve ser seguido pela palavra-chave `template`, conforme mostrado neste exemplo:
+C2059 pode ocorrer quando um operador que pode qualificar um nome ( `::` , `->` e `.` ) deve ser seguido pela palavra-chave **`template`** , conforme mostrado neste exemplo:
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-Por padrão, C++ pressupõe que `AY::Rebind` não é um modelo; Portanto, a `<` a seguir é interpretada como um sinal de menor que.  Você deve dizer explicitamente ao compilador que `Rebind` é um modelo para que ele possa analisar corretamente o colchete angular. Para corrigir esse erro, use a palavra-chave `template` no nome do tipo dependente, como mostrado aqui:
+Por padrão, o C++ pressupõe que `AY::Rebind` não seja um modelo; portanto, o seguinte `<` é interpretado como um sinal de menor que.  Você deve dizer explicitamente ao compilador que `Rebind` é um modelo para que ele possa analisar corretamente o colchete angular. Para corrigir esse erro, use a **`template`** palavra-chave no nome do tipo dependente, como mostrado aqui:
 
 ```cpp
 template <typename T> struct Allocator {
