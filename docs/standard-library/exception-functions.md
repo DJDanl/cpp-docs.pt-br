@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: ede3c828437aab1759c6711fc40511c69646a133
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 849f3c8406c43b0efc2d34837e00fee6ff64e52a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193777"
 ---
 # <a name="ltexceptiongt-functions"></a>Funções &lt;exception&gt;
 
@@ -49,9 +49,9 @@ Um objeto [exception_ptr](../standard-library/exception-typedefs.md#exception_pt
 
 Chame a função `current_exception` em um bloco catch. Se uma exceção estiver em voo e o bloco catch puder capturar a exceção, a função `current_exception` retornará um objeto `exception_ptr` que faz referência à exceção. Caso contrário, a função retornará um objeto `exception_ptr` nulo.
 
-A função `current_exception` captura a exceção que está em trânsito, independentemente de a instrução **Catch** especificar uma declaração [de declaração de exceção](../cpp/try-throw-and-catch-statements-cpp.md) .
+A `current_exception` função captura a exceção que está em trânsito, independentemente de a **`catch`** instrução especificar uma instrução [de declaração de exceção](../cpp/try-throw-and-catch-statements-cpp.md) .
 
-O destruidor para a exceção atual será chamado no final do bloco **Catch** se você não relançar a exceção. No entanto, mesmo que você chame a função `current_exception` no destruidor, a função retornará um objeto `exception_ptr` que faz referência à exceção atual.
+O destruidor para a exceção atual será chamado no final do **`catch`** bloco se você não relançar a exceção. No entanto, mesmo que você chame a função `current_exception` no destruidor, a função retornará um objeto `exception_ptr` que faz referência à exceção atual.
 
 As chamadas sucessivas à função `current_exception` retornam objetos `exception_ptr` que se referem a diferentes cópias da exceção atual. Consequentemente, os objetos são comparados como diferentes, pois se referem a diferentes cópias, mesmo quando as cópias têm o mesmo valor binário.
 
@@ -66,7 +66,7 @@ template <class E>
 
 ### <a name="parameters"></a>parâmetros
 
-*Exceto*\
+*Excepção*\
 A classe com a exceção a ser copiada. Normalmente, você especifica um objeto de [classe de exceção](../standard-library/exception-class.md) como o argumento para a função `make_exception_ptr`, embora qualquer objeto de classe possa ser o argumento.
 
 ### <a name="return-value"></a>Valor retornado
@@ -89,7 +89,7 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>parâmetros
 
-*P*\
+*DTI*\
 A exceção capturada para relançamento. Se *P* for um [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)nulo, a função lançará [std:: bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Comentários
@@ -114,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>parâmetros
 
-\ *fnew*
+*fnew*\
 A função a ser chamada no encerramento.
 
 ### <a name="return-value"></a>Valor retornado
@@ -182,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>parâmetros
 
-\ *fnew*
+*fnew*\
 A função a ser chamada quando uma exceção inesperada é encontrada.
 
 ### <a name="return-value"></a>Valor retornado
@@ -230,9 +230,9 @@ void terminate();
 
 ### <a name="remarks"></a>Comentários
 
-A função chama um manipulador de término, uma função do tipo **void**. Se `terminate` for chamado diretamente pelo programa, o manipulador de encerramento será aquele definido mais recentemente por uma chamada para [set_terminate](../standard-library/exception-functions.md#set_terminate). Se `terminate` for chamado para qualquer um dos vários motivos durante a avaliação de uma expressão throw, o manipulador Terminate será aquele em vigor imediatamente após avaliar a expressão throw.
+A função chama um manipulador de término, uma função do tipo **`void`** . Se `terminate` é chamado diretamente pelo programa, o manipulador de término é aquele definido mais recentemente por uma chamada para [set_terminate](../standard-library/exception-functions.md#set_terminate). Se `terminate` for chamado para qualquer um dos vários outros motivos durante a avaliação de uma expressão throw, o manipulador Terminate será aquele em vigor imediatamente após avaliar a expressão throw.
 
-Um manipulador de encerramento não pode retornar a seu chamador. Na inicialização do programa, o manipulador de encerramento é uma função que chama `abort`.
+Um manipulador de encerramento não pode retornar a seu chamador. Na inicialização do programa, o manipulador de encerramento é uma função que chama `abort` .
 
 ### <a name="example"></a>Exemplo
 
@@ -251,7 +251,7 @@ Gera uma exceção com exceções aninhadas.
 
 ## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
 
-Retornará **true** apenas se uma exceção lançada estiver sendo processada no momento.
+Retorna **`true`** somente se uma exceção gerada estiver sendo processada no momento.
 
 ```cpp
 bool uncaught_exception();
@@ -259,7 +259,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna **true** depois de concluir a avaliação de uma expressão throw e antes de concluir a inicialização da declaração de exceção no manipulador de correspondência ou chamar [inesperado](../standard-library/exception-functions.md#unexpected) como resultado da expressão throw. Em particular, `uncaught_exception` retornará **true** quando chamado de um destruidor que está sendo invocado durante um desenrolamento de exceção. Em dispositivos, `uncaught_exception` só tem suporte no Windows CE 5.00 e versões posteriores, incluindo as plataformas Windows Mobile 2005.
+Retorna **`true`** após concluir a avaliação de uma expressão throw e antes de concluir a inicialização da declaração de exceção no manipulador correspondente ou chamar [inesperado](../standard-library/exception-functions.md#unexpected) como resultado da expressão throw. Em particular, `uncaught_exception` retornará **`true`** quando chamado de um destruidor que está sendo invocado durante um desenrolamento de exceção. Em dispositivos, `uncaught_exception` só tem suporte no Windows CE 5.00 e versões posteriores, incluindo as plataformas Windows Mobile 2005.
 
 ### <a name="example"></a>Exemplo
 
@@ -326,7 +326,7 @@ void unexpected();
 
 O padrão C++ requer que `unexpected` seja chamado quando uma função lançar uma exceção que não está em sua lista de lançamento. A implementação atual não dá suporte a isso. O exemplo chama `unexpected` diretamente, que chama o manipulador inesperado.
 
-A função chama um manipulador inesperado, uma função do tipo **void**. Se `unexpected` é chamado diretamente pelo programa, o manipulador inesperado é o mais recentemente definido por uma chamada a [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+A função chama um manipulador inesperado, uma função do tipo **`void`** . Se `unexpected` é chamado diretamente pelo programa, o manipulador inesperado é o mais recentemente definido por uma chamada a [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
 
 Um manipulador inesperado não pode retornar a seu chamador. Ele pode encerrar a execução:
 
@@ -334,7 +334,7 @@ Um manipulador inesperado não pode retornar a seu chamador. Ele pode encerrar a
 
 - Lançando um objeto do tipo [bad_exception](../standard-library/bad-exception-class.md).
 
-- Chamando [Terminate](../standard-library/exception-functions.md#terminate), `abort` ou **Exit**(`int`).
+- Chamar [Terminate](../standard-library/exception-functions.md#terminate) `abort` ou `exit` .
 
 Na inicialização do programa, o manipulador inesperado é uma função que chama [terminate](../standard-library/exception-functions.md#terminate).
 

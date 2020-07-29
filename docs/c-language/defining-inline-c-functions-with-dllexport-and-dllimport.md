@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dllexport attribute [C++], inline functions
 - dllexport attribute [C++]
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
-ms.openlocfilehash: 2e43f01b495a03e4f50295de42afa9b6c6b38173
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 963e8f998e606a1b7011d58f93c927f36a263fb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234412"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226432"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>Definindo funções C embutidas com dllexport e dllimport
 
@@ -20,7 +20,7 @@ ms.locfileid: "62234412"
 
 Você pode definir como uma função embutida com o atributo `dllexport`. Nesse caso, a função sempre é instanciada e exportada, mesmo se qualquer módulo no programa fizer referência à função. Presume-se que a função seja importada por outro programa.
 
-Você também pode definir como embutida uma função declarada com o atributo **dllimport**. Nesse caso, a função pode ser expandida (sujeito à especificação da opção do compilador /Ob (embutido)), mas nunca instanciada. Em particular, se o endereço de uma função importada embutida for usado, o endereço da função que reside na DLL será retornado. Esse comportamento é o mesmo que usar o endereço de uma função importada não embutida.
+Você também pode definir como embutida uma função declarada com o **`dllimport`** atributo. Nesse caso, a função pode ser expandida (sujeito à especificação da opção do compilador /Ob (embutido)), mas nunca instanciada. Em particular, se o endereço de uma função importada embutida for usado, o endereço da função que reside na DLL será retornado. Esse comportamento é o mesmo que usar o endereço de uma função importada não embutida.
 
 Os dados locais estáticos e as cadeias de caracteres em funções embutidas mantêm as mesmas identidades entre a DLL e o cliente como em um único programa (isto é, um arquivo executável sem uma interface de DLL).
 

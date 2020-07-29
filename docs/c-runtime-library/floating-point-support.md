@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821506"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226223"
 ---
 # <a name="math-and-floating-point-support"></a>Suporte matemático e de ponto flutuante
 
@@ -21,7 +21,7 @@ A biblioteca em UCRT (Runtime C Universal) fornece muitas funções de bibliotec
 
 Muitas das funções da biblioteca de matemática de ponto flutuante têm implementações diferentes para diferentes arquiteturas de CPU. Por exemplo, o CRT x86 de 32 bits pode ter uma implementação diferente do CRT x64 de 64 bits. Além disso, algumas das funções podem ter várias implementações para uma determinada arquitetura de CPU. A implementação mais eficiente é selecionada dinamicamente em tempo de execução dependendo dos conjuntos de instruções com suporte da CPU. Por exemplo, no CRT x86 de 32 bits, algumas funções têm uma implementação x87 e uma implementação SSE2. Quando executado em uma CPU com suporte para SSE2, é usada a implementação SSE2 mais rápida. Quando executado em uma CPU sem suporte para SSE2, é usada a implementação x87 mais lenta. Uma vez que diferentes implementações das funções da biblioteca de matemática podem usar diferentes instruções de CPU e diferentes algoritmos para produzir seus resultados, as funções podem produzir resultados diferentes entre as CPUs. Na maioria dos casos, os resultados são dentro de +/-1 ulp do resultado arredondado corretamente, mas os resultados reais podem variar entre CPUs.
 
-Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ davam suporte ao tipo **long double** como um tipo de dados de ponto flutuante com precisão de 80 bits. Nas versões posteriores do Visual C++, o tipo de dados **long double** é um tipo de dados de ponto flutuante com precisão de 64 bits idêntico ao tipo **double**. O compilador trata **long double** e **double** como tipos diferentes, mas as funções **long double** são idênticas às suas contrapartes de **double**. O CRT fornece versões de **long double** das funções matemáticas para compatibilidade com o código-fonte da ISO C99, mas observe que a representação binária pode ser diferente de outros compiladores.
+As versões anteriores de 16 bits do Microsoft C/C++ e Microsoft Visual C++ suportavam o **`long double`** tipo como um tipo de dados de ponto flutuante de precisão de 80 bits. Em versões posteriores do Visual C++, o **`long double`** tipo de dados é um tipo de dados de ponto flutuante de precisão de 64 bits idêntico ao **`double`** tipo. O compilador trata **`long double`** e **`double`** como tipos distintos, mas as **`long double`** funções são idênticas às suas **`double`** contrapartes. O CRT fornece **`long double`** versões das funções matemáticas para a compatibilidade de código-fonte ISO C99, mas observe que a representação binária pode ser diferente de outros compiladores.
 
 ## <a name="supported-math-and-floating-point-routines"></a>Rotinas matemáticas de ponto flutuante compatíveis
 
@@ -34,9 +34,9 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|Calcula o arco seno hiperbólico
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Calcula o arco tangente
 [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Calcula o arco tangente hiperbólico
-[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Converte uma cadeia de caracteres específica da localidade em um **double**
-[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte uma cadeia de caracteres em um inteiro **double**
-[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Converte uma cadeia de caracteres específica da localidade em um **float** ou **long double**
+[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Converte uma cadeia de caracteres específica de localidade em um**`double`**
+[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte uma cadeia de caracteres em um**`double`**
+[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Converte uma cadeia de caracteres específica de localidade em um **`float`** ou**`long double`**
 [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Calcula a raiz cúbica
 [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Calcula o limite
 [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Calcula o inverso de aditivo
@@ -47,7 +47,7 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [cos, cosf, cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|Calcula o seno
 [cosh, coshf, coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|Calcula o seno hiperbólico
 [div, ldiv, lldiv](../c-runtime-library/reference/div.md)|Calcula o quociente e o resto de dois valores inteiros
-[_ecvt](../c-runtime-library/reference/ecvt.md), [ecvt](../c-runtime-library/reference/posix-ecvt.md)|Converte um **double** em uma cadeia de caracteres
+[_ecvt](../c-runtime-library/reference/ecvt.md), [ecvt](../c-runtime-library/reference/posix-ecvt.md)|Converte um **`double`** para uma cadeia de caracteres
 [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Versão segura de **_ecvt**
 [erf, erff, erfl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|Calcula a função de erro
 [erfc, erfcf, erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|Calcula a função de erro complementar
@@ -94,15 +94,15 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcula a função Bessel
 [ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Calcula x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Calcula o logaritmo natural do valor absoluto da função gama
-[llrint, llrintf, llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Arredonda um valor de ponto flutuante para o valor **long long** mais próximo
-[llround, llroundf, llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Arredonda um valor de ponto flutuante para o valor **long long** mais próximo
+[llrint, llrintf, llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Arredonda um valor de ponto flutuante para o valor mais próximo **`long long`**
+[llround, llroundf, llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Arredonda um valor de ponto flutuante para o valor mais próximo **`long long`**
 [log, logf, logl, log10, log10f, log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|Calcular o logaritmo natural ou de base 10
 [log1p, log1pf, log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)|Calcula o logaritmo natural de 1+x
 [log2, log2f, log2l](../c-runtime-library/reference/log2-log2f-log2l.md)|Calcula o logaritmo de base 2
 [logb, logbf, logbl, _logb, _logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|Retorna o expoente de um valor de ponto flutuante
-[lrint, lrintf, lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Arredonda um valor de ponto flutuante para o valor **long** mais próximo
+[lrint, lrintf, lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Arredonda um valor de ponto flutuante para o valor mais próximo **`long`**
 [_lrotl, _lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|Gira um valor inteiro para a esquerda ou direita
-[lround, lroundf, lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Arredonda um valor de ponto flutuante para o valor **long** mais próximo
+[lround, lroundf, lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Arredonda um valor de ponto flutuante para o valor mais próximo **`long`**
 [_matherr](../c-runtime-library/reference/matherr.md)|O manipulador de erro de matemática padrão
 [__max](../c-runtime-library/reference/max.md)|Macro que retorna o maior de dois valores
 [__min](../c-runtime-library/reference/min.md)|Macro que retorna o menor de dois valores
@@ -126,16 +126,16 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcula o seno hiperbólico
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcula a raiz quadrada
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Define a palavra de status de ponto flutuante
-[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Converte uma cadeia de caracteres em um **float**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Converte uma cadeia de caracteres em um **longo** **dobro**
+[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Converte uma cadeia de caracteres em um**`float`**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Converte uma cadeia de caracteres em um**`long double`**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Calcula a tangente
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Calcula a tangente hiperbólica
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Calcula a função gama
 [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Trunca a parte fracionária
-[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte uma cadeia de caracteres larga em um **double**
+[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte uma cadeia de caracteres larga em um**`double`**
 [_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcula a função Bessel
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Primitivos de ponto flutuante](../c-runtime-library/reference/floating-point-primitives.md)<br/>

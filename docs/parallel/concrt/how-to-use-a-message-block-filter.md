@@ -5,12 +5,12 @@ helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 074d3989ce48b0b6d69206e3f83c374a2ec65c93
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: a5814536e88add5b15f577588d571a06eda6151c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142812"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226705"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Como usar um filtro de bloco de mensagens
 
@@ -22,37 +22,37 @@ As funções de filtro são importantes porque permitem que você conecte os blo
 
 Este documento fornece um exemplo básico de como usar um filtro de mensagem. Para obter exemplos adicionais que usam filtros de mensagem e o modelo de fluxo de imagens para conectar blocos de mensagens, consulte [passo a passos: Criando um agente de fluxo](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) de [imagens e passo a passo: criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
-Considere a seguinte função, `count_primes`, que ilustra o uso básico de um bloco de mensagens que não filtra mensagens de entrada. O bloco de mensagens acrescenta números primos a um objeto [std:: vector](../../standard-library/vector-class.md) . A função `count_primes` envia vários números ao bloco de mensagens, recebe os valores de saída do bloco de mensagens e imprime esses números que são primos para o console.
+Considere a seguinte função, `count_primes` , que ilustra o uso básico de um bloco de mensagens que não filtra mensagens de entrada. O bloco de mensagens acrescenta números primos a um objeto [std:: vector](../../standard-library/vector-class.md) . A `count_primes` função envia vários números ao bloco de mensagens, recebe os valores de saída do bloco de mensagens e imprime esses números que são primos para o console.
 
 [!code-cpp[concrt-primes-filter#1](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_1.cpp)]
 
-O objeto `transformer` processa todos os valores de entrada; no entanto, ele requer apenas os valores primos. Embora o aplicativo possa ser escrito para que o remetente da mensagem envie apenas números primos, os requisitos do receptor de mensagens nem sempre são conhecidos.
+O `transformer` objeto processa todos os valores de entrada; no entanto, ele requer apenas os valores primos. Embora o aplicativo possa ser escrito para que o remetente da mensagem envie apenas números primos, os requisitos do receptor de mensagens nem sempre são conhecidos.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
-A função a seguir, `count_primes_filter`, executa a mesma tarefa que a função `count_primes`. No entanto, o objeto `transformer` nesta versão usa uma função de filtro para aceitar somente os valores que são primos. A função que executa a ação só recebe números primos; Portanto, ele não precisa chamar a função `is_prime`.
+A função a seguir, `count_primes_filter` , executa a mesma tarefa que a `count_primes` função. No entanto, o `transformer` objeto nesta versão usa uma função de filtro para aceitar somente os valores que são primos. A função que executa a ação só recebe números primos; Portanto, ele não precisa chamar a `is_prime` função.
 
-Como o objeto `transformer` recebe apenas números primos, o próprio objeto `transformer` pode conter os números primos. Em outras palavras, o objeto `transformer` neste exemplo não é necessário para adicionar os números primos ao objeto `vector`.
+Como o `transformer` objeto recebe apenas números primos, o `transformer` próprio objeto pode conter os números primos. Em outras palavras, o `transformer` objeto neste exemplo não é necessário para adicionar os números primos ao `vector` objeto.
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-O objeto `transformer` agora processa apenas os valores que são primos. No exemplo anterior, `transformer` objeto processa todas as mensagens. Portanto, o exemplo anterior deve receber o mesmo número de mensagens enviadas. Este exemplo usa o resultado da função [Concurrency:: send](reference/concurrency-namespace-functions.md#send) para determinar quantas mensagens receber do objeto `transformer`. A função `send` retorna **true** quando o buffer de mensagens aceita a mensagem e **false** quando o buffer de mensagens rejeita a mensagem. Portanto, o número de vezes que o buffer de mensagens aceita a mensagem corresponde à contagem de números primos.
+O `transformer` objeto agora processa apenas os valores que são primos. No exemplo anterior, o `transformer` objeto processa todas as mensagens. Portanto, o exemplo anterior deve receber o mesmo número de mensagens enviadas. Este exemplo usa o resultado da função [Concurrency:: send](reference/concurrency-namespace-functions.md#send) para determinar quantas mensagens receber do `transformer` objeto. A `send` função retorna **`true`** quando o buffer de mensagens aceita a mensagem e **`false`** quando o buffer de mensagens rejeita a mensagem. Portanto, o número de vezes que o buffer de mensagens aceita a mensagem corresponde à contagem de números primos.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
-O código a seguir mostra um exemplo completo. O exemplo chama a função `count_primes` e a função `count_primes_filter`.
+O código a seguir mostra um exemplo completo. O exemplo chama a `count_primes` função e a `count_primes_filter` função.
 
 [!code-cpp[concrt-primes-filter#3](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_3.cpp)]
 
-## <a name="compiling-the-code"></a>Compilando o Código
+## <a name="compiling-the-code"></a>Compilando o código
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `primes-filter.cpp` e, em seguida, execute o comando a seguir em uma janela de prompt de comando do Visual Studio.
 
-> **CL. exe/EHsc Primes-Filter. cpp**
+> **cl.exe/EHsc Primes-Filter. cpp**
 
-## <a name="robust-programming"></a>Programação Robusta
+## <a name="robust-programming"></a>Programação robusta
 
 Uma função de filtro pode ser uma função lambda, um ponteiro de função ou um objeto de função. Cada função de filtro usa um dos seguintes formulários:
 
@@ -63,9 +63,9 @@ bool (T const &)
 
 Para eliminar a cópia desnecessária de dados, use o segundo formulário quando você tiver um tipo de agregação transmitido por valor.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Instruções passo a passo: criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Instruções passo a passo: criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
-[Classe transformer](../../parallel/concrt/reference/transformer-class.md)
+[Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Walkthrough: Criando um agente de Dataflow](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Walkthrough: criando uma rede de processamento de imagens](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Classe de transformador](../../parallel/concrt/reference/transformer-class.md)

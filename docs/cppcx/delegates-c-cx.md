@@ -2,16 +2,16 @@
 title: Delegados (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: e570acafb8cce8b9496b79a062c3035015ba9811
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 4944efc10b4590f8dc682230968d9c97ef91cb5c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032467"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225768"
 ---
 # <a name="delegates-ccx"></a>Delegados (C++/CX)
 
-A `delegate` palavra-chave é usada para declarar um tipo de referência que é o equivalente ao Windows Runtime de um objeto de função no C++padrão. Uma declaração delegate semelhante a uma assinatura de função especifica o tipo de retorno e os tipos de parâmetro que sua função envolvida deve ter. Esta é uma declaração delegate definida pelo usuário:
+A **`delegate`** palavra-chave é usada para declarar um tipo de referência que é o Windows Runtime equivalente de um objeto de função no C++ padrão. Uma declaração delegate semelhante a uma assinatura de função especifica o tipo de retorno e os tipos de parâmetro que sua função envolvida deve ter. Esta é uma declaração delegate definida pelo usuário:
 
 ```cpp
 public delegate void PrimeFoundHandler(int result);
@@ -23,11 +23,11 @@ Delegados são mais comumente usados em conjunto com eventos. Um evento tem um t
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Ao declarar delegados que serão expostos aos clientes através da interface binária do aplicativo Windows Runtime, use [o Windows::Foundation::TypedEventHandler\<TSender, TResult>](/uwp/api/windows.foundation.typedeventhandler-2). Este representante possui proxy predefinido e binários stub que permitem seu consumo por clientes JavaScript.
+Ao declarar delegados que serão expostos aos clientes na interface binária do aplicativo Windows Runtime, use [Windows:: Foundation:: TypedEventHandler \<TSender, TResult> ](/uwp/api/windows.foundation.typedeventhandler-2). Este representante possui proxy predefinido e binários stub que permitem seu consumo por clientes JavaScript.
 
 ## <a name="consuming-delegates"></a>Consumindo delegados
 
-Quando você cria um aplicativo Universal Windows Platform, muitas vezes você trabalha com um delegado como o tipo de evento que uma classe de tempo de execução do Windows expõe. Para assinar um evento, crie uma instância do tipo do seu representante especificando uma função (ou lambda) que corresponda à assinatura do representante. Use o operador `+=` para passar o objeto do representante ao membro de evento na classe. Isso é conhecido como assinar o evento. Quando a instância da classe "dispara" o evento, sua função é chamada, juntamente com qualquer outro manipulador que tenha sido adicionado pelo seu objeto ou outros objetos.
+Quando você cria um aplicativo Plataforma Universal do Windows, geralmente trabalha com um delegado como o tipo de um evento que uma classe Windows Runtime expõe. Para assinar um evento, crie uma instância do tipo do seu representante especificando uma função (ou lambda) que corresponda à assinatura do representante. Use o operador `+=` para passar o objeto do representante ao membro de evento na classe. Isso é conhecido como assinar o evento. Quando a instância da classe "dispara" o evento, sua função é chamada, juntamente com qualquer outro manipulador que tenha sido adicionado pelo seu objeto ou outros objetos.
 
 > [!TIP]
 > O Visual Studio faz grande parte do trabalho para você na criação de um manipulador de eventos. Por exemplo, se você especificar um manipulador de eventos na marcação XAML, uma dica de ferramenta será exibida. Se você escolher a dica de ferramenta, o Visual Studio criará o método de manipulador de eventos automaticamente e o associará ao evento na classe de publicação.
@@ -43,9 +43,9 @@ Em app.cpp:
 [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]
 
 > [!WARNING]
-> Em geral, para um manipulador de eventos, é melhor usar uma função nomeada em vez de uma lambda, a menos que você seja muito cuidadoso a fim de evitar referências circulares. Uma função nomeada captura o ponteiro "this" por referência fraca, mas uma lambda captura-o por referência forte e cria uma referência circular. Para obter mais informações, consulte [referências fracas e ciclos de quebra](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
+> Em geral, para um manipulador de eventos, é melhor usar uma função nomeada em vez de uma lambda, a menos que você seja muito cuidadoso a fim de evitar referências circulares. Uma função nomeada captura o ponteiro "this" por referência fraca, mas uma lambda captura-o por referência forte e cria uma referência circular. Para obter mais informações, consulte [referências fracas e ciclos de interrupção](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
 
-Por convenção, os nomes de delegados que são definidos pelo Windows Runtime têm o formulário *EventHandler — por exemplo, RoutedEventHandler, SizeChangedEventHandler ou SuspendingEventHandler. Também por convenção, os delegados do manipulador de eventos têm dois parâmetros e retornar void. Em um representante que não tenha parâmetros de tipo, o primeiro parâmetro é do tipo [Platform::Object Class^](../cppcx/platform-object-class.md); ele contém uma referência para o remetente, que é o objeto que disparou o evento. Você tem que converter novamente no tipo original antes de usar o argumento no método do manipulador de eventos. Em um representante do manipulador de eventos que tenha parâmetros de tipo, o primeiro parâmetro de tipo especifica o tipo de remetente e o segundo parâmetro é um identificador para uma classe ref que contém informações sobre o evento. Por convenção, essa \*classe se chama EventArgs. Por exemplo, um delegado RoutedEventHandler tem um segundo parâmetro do tipo RoutedEventArgs^ e DragEventHander tem um segundo parâmetro do tipo DragEventArgs^.
+Por convenção, os nomes de delegado de manipulador de eventos que são definidos pelo Windows Runtime têm a forma * EventHandler — por exemplo, RoutedEventHandler, SizeChangedEventHandler ou SuspendingEventHandler. Também por convenção, os delegados do manipulador de eventos têm dois parâmetros e retornar void. Em um representante que não tenha parâmetros de tipo, o primeiro parâmetro é do tipo [Platform::Object Class^](../cppcx/platform-object-class.md); ele contém uma referência para o remetente, que é o objeto que disparou o evento. Você tem que converter novamente no tipo original antes de usar o argumento no método do manipulador de eventos. Em um representante do manipulador de eventos que tenha parâmetros de tipo, o primeiro parâmetro de tipo especifica o tipo de remetente e o segundo parâmetro é um identificador para uma classe ref que contém informações sobre o evento. Por convenção, essa classe é denominada \* EventArgs. Por exemplo, um delegado RoutedEventHandler tem um segundo parâmetro do tipo RoutedEventArgs^ e DragEventHander tem um segundo parâmetro do tipo DragEventArgs^.
 
 Por convenção, os representantes que encapsularam o código que é executado quando uma operação assíncrona é concluída são denominados *CompletedHandler. Esses representantes são definidos como propriedades na classe, e não como eventos. Desse modo, não use o operador `+=` para assiná-los; você apenas atribui um objeto de representante à propriedade.
 
@@ -54,7 +54,7 @@ Por convenção, os representantes que encapsularam o código que é executado q
 
 ## <a name="creating-custom-delegates"></a>Criando delegados personalizados
 
-Você pode definir seus próprios delegados, definir manipuladores de eventos ou permitir que os consumidores passem em funcionalidade personalizada para o seu componente Windows Runtime. Como qualquer outro tipo de Tempo de Execução do Windows, um delegado público não pode ser declarado como genérico.
+Você pode definir seus próprios delegados, para definir manipuladores de eventos ou para permitir que os consumidores transmitam funcionalidades personalizadas para seu componente Windows Runtime. Como qualquer outro tipo de Windows Runtime, um delegado público não pode ser declarado como genérico.
 
 ### <a name="declaration"></a>Declaração
 
@@ -67,9 +67,9 @@ Depois que você declarar um tipo de representante, poderá declarar membros de 
 [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]
 
 > [!NOTE]
-> Você usa o símbolo "^" quando se refere ao tipo de delegado, assim como faz com qualquer tipo de referência do Windows Runtime.
+> Você usa o símbolo "^" quando se refere ao tipo delegado, assim como faz com qualquer Windows Runtime tipo de referência.
 
-Uma declaração de evento sempre tem um tipo delegado. Este exemplo mostra uma assinatura típica do tipo de delegado no Tempo de execução do Windows:
+Uma declaração de evento sempre tem um tipo delegado. Este exemplo mostra uma assinatura de tipo delegado típica no Windows Runtime:
 
 [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]
 
@@ -83,7 +83,7 @@ Em seguida, chama a função de membro e passa o delegado. Vamos supor que `ci` 
 
 [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]
 
-No exemplo seguinte, um aplicativo cliente passa um delegado personalizado para um método público em um `Vector`componente do Windows Runtime que executa o delegado contra cada item em um :
+No próximo exemplo, um aplicativo cliente passa um delegado personalizado para um método público em um Windows Runtime componente que executa o delegado em relação a cada item em um `Vector` :
 
 [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]
 
@@ -122,7 +122,7 @@ O exemplo a seguir declara uma instância especializada do delegate dentro de um
 
 Um delegado, assim como um objeto de função, contém o código que será executado a qualquer momento no futuro. Se o código que cria e passa o delegado e a função que aceita e executa o delegado estiver sendo executado no mesmo thread, as coisas serão relativamente simples. Se esse thread for o thread de IU, o delegado poderá manipular diretamente os objetos da interface de usuário, como controles XAML.
 
-Se um aplicativo cliente carregar um componente do Windows Runtime que é executado em um apartamento encadeado e fornecer um delegado a esse componente, então, por padrão, o delegado é invocado diretamente no segmento STA. A maioria dos componentes do Windows Runtime pode ser executada em STA ou MTA.
+Se um aplicativo cliente carrega um componente Windows Runtime que é executado em um apartamento threaded e fornece um delegado para esse componente, por padrão, o delegado é invocado diretamente no thread STA. A maioria dos componentes Windows Runtime pode ser executada tanto no STA quanto no MTA.
 
 Se o código que executa o representante estiver sendo executado em um thread diferente, por exemplo, no contexto de um objeto concurrency::task, você será responsável pela sincronização do acesso aos dados compartilhados. Por exemplo, se o seu delegado contiver uma referência a um Vector, e um controle XAML tiver referência ao mesmo Vector, você deverá executar etapas para evitar deadlocks ou condições de corrida que podem ocorrer quando tanto o delegado quanto o controle XAML tentam acessar o Vector ao mesmo tempo. Você também deve tomar cuidado para que o delegado não tente capturar por referência variáveis locais que podem estar fora do escopo antes da invocação do delegado.
 
@@ -133,5 +133,5 @@ Se você estiver familiarizado com os manipuladores de eventos no .NET, sabe que
 ## <a name="see-also"></a>Confira também
 
 [Sistema de tipo](../cppcx/type-system-c-cx.md)<br/>
-[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referência de linguagem do C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916715"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226171"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -65,7 +65,7 @@ long double roundl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor do ponto flutuante a ser arredondado.
@@ -80,7 +80,7 @@ As funções **round** retornam um valor de ponto flutuante que representa o int
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **round** que levam e retornam valores float e **Long** **double** **flutuantes** . Em um programa C, **round** sempre usa e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **round** que levam e retornam **`float`** **`long double`** valores. Em um programa C, **round** sempre usa e retorna um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -130,7 +130,7 @@ roundl(-2.500000) is -3
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
