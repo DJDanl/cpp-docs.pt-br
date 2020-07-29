@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-ms.openlocfilehash: cd53aeb7f767b06c017c64caa55c916aa1e2b9c9
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: e361077a5584ba97c7efe22b99ec46567fc9ba4e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228733"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Aviso do compilador (nível 4) C4673
 
 gerando ' identificador ' os seguintes tipos não serão considerados no local de captura
 
-Um objeto throw não pode ser manipulado no bloco **Catch** . Cada tipo que não pode ser manipulado é listado na saída de erro imediatamente após a linha que contém este aviso. Cada tipo sem tratamento tem seu próprio aviso. Leia o aviso para cada tipo específico para obter mais informações.
+Um objeto throw não pode ser manipulado no **`catch`** bloco. Cada tipo que não pode ser manipulado é listado na saída de erro imediatamente após a linha que contém este aviso. Cada tipo sem tratamento tem seu próprio aviso. Leia o aviso para cada tipo específico para obter mais informações.
 
 O exemplo a seguir gera C4673:
 

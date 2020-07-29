@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228720"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref e struct ref (C++/CLI e C++/CX)
 
@@ -41,7 +41,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>parâmetros
 
 *class_access*<br/>
-(Opcional) A acessibilidade da classe ou struct fora do assembly. Os valores possíveis são **public** e **private** (**private** é o padrão). As classes aninhadas ou structs não podem ter um especificador *class_access*.
+(Opcional) A acessibilidade da classe ou struct fora do assembly. Os valores possíveis são **`public`** e **`private`** ( **`private`** é o padrão). As classes aninhadas ou structs não podem ter um especificador *class_access*.
 
 *name*<br/>
 O nome da classe ou struct.
@@ -50,7 +50,7 @@ O nome da classe ou struct.
 (Opcional) [abstract](abstract-cpp-component-extensions.md) e [sealed](sealed-cpp-component-extensions.md) são os modificadores válidos.
 
 *inherit_access*<br/>
-(Opcional) A acessibilidade de *base_type*. A única acessibilidade permitida é **public** (**public** é o padrão).
+(Opcional) A acessibilidade de *base_type*. A única acessibilidade permitida é **`public`** ( **`public`** é o padrão).
 
 *base_type*<br/>
 (Opcional) Um tipo base. No entanto, um tipo de valor não pode atuar como um tipo base.
@@ -59,9 +59,9 @@ Saiba mais nas descrições de linguagem específicas desse parâmetro nas seç�
 
 ### <a name="remarks"></a>Comentários
 
-A acessibilidade de membro padrão de um objeto declarado com **classe ref** ou **classe value** é **private**. E a acessibilidade de membro padrão de um objeto declarado com **struct ref** ou **struct value** é **public**.
+A acessibilidade de membro padrão de um objeto declarado com classe **ref** ou de **valor** é **`private`** . E a acessibilidade de membro padrão de um objeto declarado com **ref struct** ou **Value struct** é **`public`** .
 
-Quando um tipo de referência herda de outro tipo de referência, as funções virtuais na classe base devem ser substituídas explicitamente (com [override](override-cpp-component-extensions.md)) ou ocultas (com [new (novo slot em vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). As funções de classe derivada também devem ser marcadas explicitamente como **virtual**.
+Quando um tipo de referência herda de outro tipo de referência, as funções virtuais na classe base devem ser substituídas explicitamente (com [override](override-cpp-component-extensions.md)) ou ocultas (com [new (novo slot em vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). As funções de classe derivadas também devem ser explicitamente marcadas como **`virtual`** .
 
 Para detectar no tempo de compilação se um tipo é **classe ref** ou **struct ref**, ou **classe value** ou **struct value**, use `__is_ref_class (type)`, `__is_value_class (type)` ou `__is_simple_value_class (type)`. Saiba mais em [Suporte para compilador de traços de tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -69,21 +69,21 @@ Saiba mais sobre classes e structs em
 
 - [Como instanciar classes e structs](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
-- [Semântica da pilha do C++ para tipos de referência](../dotnet/cpp-stack-semantics-for-reference-types.md)
+- [Semântica de pilha C++ para tipos de referência](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
 - [Classes, structs e uniões](../cpp/classes-and-structs-cpp.md)
 
-- [Destruidores e finalizadores em How to: definem e consomem classes eC++structs (/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destruidores e finalizadores em How to: definem e consomem classes e Structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Operadores definidos pelo usuário (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
 - [Conversões definidas pelo usuário (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Como encapsular a classe nativa a ser usada por C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Como: encapsular classe nativa para uso por C #](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Classes genéricas (C++/CLI)](generic-classes-cpp-cli.md)
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 ### <a name="remarks"></a>Comentários
 
@@ -123,4 +123,4 @@ Opção do compilador: `/clr`
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

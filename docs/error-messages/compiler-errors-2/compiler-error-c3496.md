@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: b9542f1904c6797a77c88c88a37aff9348364268
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 993d391f28a59afc8926748f2e6f34ab441657dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738174"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228850"
 ---
 # <a name="compiler-error-c3496"></a>Erro do compilador C3496
 
 ' this ' é sempre capturado pelo valor: ' & ' ignorado
 
-Não é possível capturar o ponteiro de `this` por referência.
+Não é possível capturar o **`this`** ponteiro por referência.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
-- Capture o ponteiro de `this` por valor.
+- Capture o **`this`** ponteiro por valor.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3496 porque uma referência ao ponteiro `this` aparece na lista de captura de uma expressão lambda:
+O exemplo a seguir gera C3496 porque uma referência ao **`this`** ponteiro aparece na lista de captura de uma expressão lambda:
 
 ```cpp
 // C3496.cpp
@@ -40,6 +40,6 @@ class C
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)

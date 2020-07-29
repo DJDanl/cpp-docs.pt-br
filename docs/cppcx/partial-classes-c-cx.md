@@ -2,12 +2,12 @@
 title: Classes parciais (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740483"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185457"
 ---
 # <a name="partial-classes-ccx"></a>Classes parciais (C++/CX)
 
@@ -17,23 +17,23 @@ Uma classe parcial é uma construção que oferece suporte a cenários nos quais
 
 Para definir uma classe parcial, use a palavra-chave `partial` imediatamente antes da chave de classe do que de outra forma seria uma definição de classe normal. Uma palavra-chave como `partial ref class` é uma palavra-chave contextual que contém caracteres de espaço em branco. As construções a seguir oferecem suporte para as definições parciais.
 
-- `class` ou `struct`
+- **`class`** or**`struct`**
 
-- `ref class` ou `ref struct`
+- **`ref class`** or**`ref struct`**
 
-- `value class` ou `value struct`
+- **`value class`** or**`value struct`**
 
-- `enum` ou `enum class`
+- **`enum`** or**`enum class`**
 
-- `ref interface`, `interface class`, `interface struct`ou `__interface`
+- `ref interface`, **`interface class`** , **`interface struct`** ou **' __interface**
 
-- `union`
+- **`union`**
 
-Este exemplo demonstra uma `ref class`parcial:
+Este exemplo demonstra um parcial **`ref class`** :
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
-## <a name="contents"></a>Conteúdo
+## <a name="contents"></a>Sumário
 
 Uma definição de classe parcial poderá conter tudo que a definição de classe completa pode conter se a palavra-chave `partial` tiver sido omitida. Com uma exceção, isso inclui qualquer construção válida, como classes base, membros de dados, funções de membro, enums, declarações amigáveis e atributos. E definições embutidas de membros de dados estáticos são permitidas.
 
@@ -61,7 +61,7 @@ Pode haver definições de classe zero ou mais parciais para cada definição co
 
 Cada definição parcial de uma classe deve preceder lexicalmente a única definição completa de uma classe, mas não tem de preceder declarações de encaminhamento da classe. Se não houver nenhuma definição completa da classe, as declarações parciais da classe somente poderão ser declarações de encaminhamento.
 
-Todas as chaves de classe, como `class` e `struct` , devem coincidir. Por exemplo, é incorreto codificar `partial class X {}; struct X {};`.
+Todas as chaves de classe, como **`class`** e **`struct`** devem corresponder. Por exemplo, é incorreto codificar `partial class X {}; struct X {};`.
 
 O exemplo a seguir demonstra o número e a ordenação. A última declaração parcial falha porque a classe já está definida.
 
@@ -85,7 +85,7 @@ Uma classe parcial não pode ser um modelo.
 
 Uma classe parcial não pode se estender além de uma unidade de conversão.
 
-A palavra-chave `partial` tem suporte apenas em combinação com a palavra-chave `ref class` ou a palavra-chave `value class` .
+A `partial` palavra-chave tem suporte apenas em combinação com a **`ref class`** palavra-chave ou a **`value class`** palavra-chave.
 
 ### <a name="examples"></a>Exemplos
 
@@ -95,8 +95,8 @@ O exemplo a seguir define a classe `Address` em dois arquivos de código. O desi
 
 [!code-cpp[cx_partial#09](../cppcx/codesnippet/CPP/partialclassexample/address.h#09)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Sistema de tipo](../cppcx/type-system-c-cx.md)<br/>
+[Referência de linguagem do C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)
