@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: d2aa57abc6c0bcc50bcae743a50f86e5de65ab64
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404031"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231254"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Anotando parâmetros de função e valores de retorno
 
@@ -167,7 +167,7 @@ Para as anotações na tabela a seguir, quando um parâmetro de ponteiro for ano
 
      Um ponteiro para uma matriz, que é lido pela função. A matriz é de elementos de tamanho `s` , e todas devem ser válidas.
 
-     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, `char` cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o `wchar_t` faria.
+     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, **`char`** cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o **`wchar_t`** faria.
 
 - `_In_reads_z_(s)`
 
@@ -190,7 +190,7 @@ Para as anotações na tabela a seguir, quando um parâmetro de ponteiro for ano
 
      Neste exemplo, o chamador fornece um buffer de `size` elementos para `p1` . `MyStringCopy`torna alguns desses elementos válidos. O mais importante `_Null_terminated_` é que a anotação em `PWSTR` significa que `p1` é terminada em nulo no post-State. Dessa forma, o número de elementos válidos ainda é bem definido, mas uma contagem de elementos específica não é necessária.
 
-     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, `char` cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o `wchar_t` faria.
+     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, **`char`** cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o **`wchar_t`** faria.
 
 - `_Out_writes_z_(s)`
 
@@ -202,7 +202,7 @@ Para as anotações na tabela a seguir, quando um parâmetro de ponteiro for ano
 
      Um ponteiro para uma matriz, que é lido e gravado na função. É do tamanho dos `s` elementos e é válido em pré e após o estado.
 
-     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, `char` cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o `wchar_t` faria.
+     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, **`char`** cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o **`wchar_t`** faria.
 
 - `_Inout_updates_z_(s)`
 
@@ -231,7 +231,7 @@ Para as anotações na tabela a seguir, quando um parâmetro de ponteiro for ano
 
      Um ponteiro para uma matriz, que é lido e gravado pela função. Trata-se de `s` elementos de tamanho, todos os quais devem ser válidos em pré-estado e os `c` elementos devem ser válidos no pós-Estado.
 
-     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, `char` cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o `wchar_t` faria.
+     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, **`char`** cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o **`wchar_t`** faria.
 
 - `_Inout_updates_all_(s)`
 
@@ -243,7 +243,7 @@ Para as anotações na tabela a seguir, quando um parâmetro de ponteiro for ano
 
      Em outras palavras, cada elemento que existe no buffer até `s` no estado anterior é válido no pré-estado e no pós-Estado.
 
-     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, `char` cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o `wchar_t` faria.
+     A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, **`char`** cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o **`wchar_t`** faria.
 
 - `_In_reads_to_ptr_(p)`
 
