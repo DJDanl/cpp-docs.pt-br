@@ -2,22 +2,22 @@
 title: Operadores do namespace de simultaneidade (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376302"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228473"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operadores do namespace de simultaneidade (AMP)
 
 ||||
 |-|-|-|
-|[operador!=](#operator_neq)|[operador%](#operator_mod)|[operador*](#operator_star)|
-|[operador+](#operator_add)|[operador-](#operator-)|[operador/](#operator_div)|
-|[operador==](#operator_eq_eq)|
+|[operador! =](#operator_neq)|[operador](#operator_mod)|[operador](#operator_star)|
+|[operador +](#operator_add)|[operador](#operator-)|[operador](#operator_div)|
+|[operador = =](#operator_eq_eq)|
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operador==
+## <a name="operator"></a><a name="operator_eq_eq"></a>operador = =
 
 Determina se os argumentos especificados são iguais.
 
@@ -31,10 +31,10 @@ bool operator== (
     const _Tuple_type<_Rank>& _Rhs) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos tuplos.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
 Uma das tuplas para comparar.
@@ -44,9 +44,9 @@ Uma das tuplas para comparar.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se as tuplas são iguais; caso contrário, **falso**.
+**`true`** Se as tuplas forem iguais; caso contrário, **`false`** .
 
-## <a name="operator"></a><a name="operator_neq"></a>operador!=
+## <a name="operator"></a><a name="operator_neq"></a>operador! =
 
 Determina se os argumentos especificados não são iguais.
 
@@ -60,10 +60,10 @@ bool operator!= (
     const _Tuple_type<_Rank>& _Rhs) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos tuplos.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
 Uma das tuplas para comparar.
@@ -73,11 +73,11 @@ Uma das tuplas para comparar.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se as tuplas não são iguais; caso contrário, **falso**.
+**`true`** Se as tuplas não forem iguais; caso contrário, **`false`** .
 
-## <a name="operator"></a><a name="operator_add"></a>operador+
+## <a name="operator"></a><a name="operator_add"></a>operador +
 
-Calcula a soma dos argumentos especificados.
+Computa a soma de componentes dos argumentos especificados.
 
 ```cpp
 template <
@@ -105,24 +105,24 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos tuplos.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
-Um dos argumentos a acrescentar.
+Um dos argumentos a serem adicionados.
 
 *_Rhs*<br/>
-Um dos argumentos a acrescentar.
+Um dos argumentos a serem adicionados.
 
 ### <a name="return-value"></a>Valor retornado
 
-A soma em termos de componentes dos argumentos especificados.
+A soma por componente dos argumentos especificados.
 
-## <a name="operator-"></a><a name="operator-"></a>operador-
+## <a name="operator-"></a><a name="operator-"></a>operador
 
-Calcula a diferença em termos de componentes entre os argumentos especificados.
+Computa a diferença de componente entre os argumentos especificados.
 
 ```cpp
 template <
@@ -150,24 +150,24 @@ _Tuple_type<_Rank>   operator-(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos tuplos.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
 O argumento a ser subtraído.
 
 *_Rhs*<br/>
-O argumento para subtrair.
+O argumento a ser subtraído.
 
 ### <a name="return-value"></a>Valor retornado
 
-A diferença em termos de componentes entre os argumentos especificados.
+A diferença de componente entre os argumentos especificados.
 
-## <a name="operator"></a><a name="operator_star"></a>operador*
+## <a name="operator"></a><a name="operator_star"></a>operador
 
-Calcula o produto em termos de componentes dos argumentos especificados.
+Computa o produto com componente dos argumentos especificados.
 
 ```cpp
 template <
@@ -187,24 +187,24 @@ _Tuple_type<_Rank>   operator*(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp, cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos tuplos.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
-Uma das tuplas para se multiplicar.
+Uma das tuplas para multiplicar.
 
 *_Rhs*<br/>
-Uma das tuplas para se multiplicar.
+Uma das tuplas para multiplicar.
 
 ### <a name="return-value"></a>Valor retornado
 
-O produto em termos de componentes dos argumentos especificados.
+O produto por componente dos argumentos especificados.
 
-## <a name="operator"></a><a name="operator_div"></a>operador/
+## <a name="operator"></a><a name="operator_div"></a>operador
 
-Calcula o quociente em termos de componentes dos argumentos especificados.
+Computa o quociente de componente dos argumentos especificados.
 
 ```cpp
 template <
@@ -224,24 +224,24 @@ _Tuple_type<_Rank>   operator/(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos tuplos.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
-A tuple a ser dividida.
+A tupla a ser dividida.
 
 *_Rhs*<br/>
-A tuple para dividir.
+A tupla pela qual dividir.
 
 ### <a name="return-value"></a>Valor retornado
 
-O quociente em termos de componentes dos argumentos especificados.
+O quociente de componente dos argumentos especificados.
 
-## <a name="operator"></a><a name="operator_mod"></a>operador%
+## <a name="operator"></a><a name="operator_mod"></a>operador
 
-Calcula o módulo do primeiro argumento especificado pelo segundo argumento especificado.
+Computa o módulo do primeiro argumento especificado pelo segundo argumento especificado.
 
 ```cpp
 template <
@@ -261,21 +261,21 @@ _Tuple_type<_Rank>   operator%(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos tuplos.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
-A tupla da qual o modulo é calculado.
+A tupla da qual o módulo é calculado.
 
 *_Rhs*<br/>
-A tupla para modulo por.
+A tupla pela qual o módulo será analisado.
 
 ### <a name="return-value"></a>Valor retornado
 
-O resultado do primeiro argumento especificado modulus o segundo argumento especificado.
+O resultado do primeiro módulo de argumento especificado é o segundo argumento especificado.
 
 ## <a name="see-also"></a>Confira também
 
-[Namespace de concorrência](concurrency-namespace-cpp-amp.md)
+[Namespace de simultaneidade](concurrency-namespace-cpp-amp.md)

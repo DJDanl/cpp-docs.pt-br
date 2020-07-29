@@ -19,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-ms.openlocfilehash: ca5056303f77f112e18ef09d606789a5b1c92acd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0568b3abbcd5776eab4d0ab9748bcbcd79c2a84b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626309"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228603"
 ---
 # <a name="memory-management-examples"></a>Gerenciamento de memória: exemplos
 
@@ -46,13 +46,13 @@ Este artigo descreve como o MFC executa alocações de quadros e alocações de 
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>Para alocar uma matriz de bytes (ou qualquer tipo de dados primitivo) no heap
 
-1. Use o operador **New** com a sintaxe de matriz mostrada neste exemplo:
+1. Use o **`new`** operador com a sintaxe de matriz mostrada neste exemplo:
 
    [!code-cpp[NVC_MFC_Utilities#2](codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>Para desalocar as matrizes do heap
 
-1. Use o operador **delete** da seguinte maneira:
+1. Use o **`delete`** operador da seguinte maneira:
 
    [!code-cpp[NVC_MFC_Utilities#3](codesnippet/cpp/memory-management-examples_3.cpp)]
 
@@ -68,7 +68,7 @@ Este artigo descreve como o MFC executa alocações de quadros e alocações de 
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>Para alocar estruturas de dados no heap
 
-1. Use **novo** para alocar estruturas de dados no heap e **excluir** para desalocá-las, conforme mostrado nos exemplos a seguir:
+1. Use **`new`** para alocar estruturas de dados no heap e **`delete`** desalocá-las, conforme mostrado pelos exemplos a seguir:
 
    [!code-cpp[NVC_MFC_Utilities#5](codesnippet/cpp/memory-management-examples_5.cpp)]
 
@@ -84,13 +84,13 @@ Este artigo descreve como o MFC executa alocações de quadros e alocações de 
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>Para alocar um objeto no heap
 
-1. Use o **novo** operador, que retorna um ponteiro para o objeto, para alocar objetos no heap. Use o operador **delete** para excluí-los.
+1. Use o **`new`** operador, que retorna um ponteiro para o objeto, para alocar objetos no heap. Use o **`delete`** operador para excluí-los.
 
    Os exemplos de heap e de quadro a seguir pressupõem que o `CPerson` Construtor não aceite nenhum argumento.
 
    [!code-cpp[NVC_MFC_Utilities#7](codesnippet/cpp/memory-management-examples_7.cpp)]
 
-   Se o argumento do `CPerson` Construtor for um ponteiro para **Char**, a instrução para a alocação de quadros será:
+   Se o argumento para o `CPerson` Construtor for um ponteiro para **`char`** , a instrução para alocação de quadros será:
 
    [!code-cpp[NVC_MFC_Utilities#8](codesnippet/cpp/memory-management-examples_8.cpp)]
 
@@ -98,6 +98,6 @@ Este artigo descreve como o MFC executa alocações de quadros e alocações de 
 
    [!code-cpp[NVC_MFC_Utilities#9](codesnippet/cpp/memory-management-examples_9.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Gerenciamento de memória: alocação do heap](memory-management-heap-allocation.md)
+[Gerenciamento de memória: alocação de heap](memory-management-heap-allocation.md)

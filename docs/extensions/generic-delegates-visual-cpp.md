@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182026"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228707"
 ---
 # <a name="generic-delegates-ccli"></a>Delegados Genéricos (C++/CLI)
 
@@ -29,7 +29,7 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>parâmetros
 
-*atributos*<br/>
+*attributes*<br/>
 (Opcional) Informações declarativas adicionais. Saiba mais sobre atributos e classes de atributos em Atributos.
 
 *type-parameter-identifier(s)*<br/>
@@ -39,12 +39,12 @@ Lista separada por vírgula de identificadores para os parâmetros de tipo.
 Assume o formato especificado em [Restrições em parâmetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
 *accessibility-modifiers*<br/>
-(Opcional) Modificadores de acessibilidade (por exemplo, **público**, **particular**).
+Adicional Modificadores de acessibilidade (por exemplo **`public`** , **`private`** ).
 
-*result-type*<br/>
+*tipo de resultado*<br/>
 O tipo de retorno do delegado.
 
-*identifier*<br/>
+*ID*<br/>
 O nome do delegado.
 
 *formal-parameters*<br/>

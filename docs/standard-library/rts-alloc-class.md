@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 6ed84d906944a09fa355e281640e9480f3173554
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f422b171c14695a1207a30419a10d50cdfb5adf0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373420"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228122"
 ---
 # <a name="rts_alloc-class"></a>Classe rts_alloc
 
-O modelo de classe rts_alloc descreve um [filtro](../standard-library/allocators-header.md) que contém uma matriz de instâncias de cache e determina qual instância usar para alocação e desalocação em tempo de execução, em vez de em tempo de compilação.
+O modelo de classe rts_alloc descreve um [filtro](../standard-library/allocators-header.md) que contém uma matriz de instâncias de cache e determina qual instância usar para alocação e desalocação em tempo de execução em vez de em tempo de compilação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,29 +32,29 @@ class rts_alloc
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*Cache*|O tipo de instâncias de cache contidas na matriz. Pode ser [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Comentários
 
-Este modelo de classe contém várias instâncias de alocação de blocos e determina qual instância usar para alocação ou desalocação em tempo de execução, em vez de no tempo de compilação. Ele é usado com os compiladores que não podem compilar reassociação.
+Esse modelo de classe contém várias instâncias de alocador de bloco e determina qual instância usar para alocação ou desalocação em tempo de execução em vez de em tempo de compilação. Ele é usado com os compiladores que não podem compilar reassociação.
 
 ### <a name="member-functions"></a>Funções de membro
 
 |Função de membro|Descrição|
 |-|-|
-|[Alocar](#allocate)|Aloca um bloco de memória.|
-|[Desalocar](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
+|[allocate](#allocate)|Aloca um bloco de memória.|
+|[desalocar](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
 |[equals](#equals)|Compara a igualdade de dois caches.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<allocators>
+**Cabeçalho:**\<allocators>
 
 **Namespace:** stdext
 
-## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc:alocar
+## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc:: Allocate
 
 Aloca um bloco de memória.
 
@@ -64,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*contagem*|O número de elementos na matriz a serem alocados.|
 
@@ -74,9 +74,9 @@ Um ponteiro para o objeto alocado.
 
 ### <a name="remarks"></a>Comentários
 
-A função `caches[_IDX].allocate(count)`do membro `_IDX` retorna, onde o índice é determinado pela *contagem*de tamanho `operator new(count)`do bloco solicitado, ou, se a *contagem* for muito grande, ela retorna . `cache`, que representa o objeto do cache.
+A função membro retorna `caches[_IDX].allocate(count)` , em que o índice `_IDX` é determinado pela *contagem*de tamanho de bloco solicitada ou, se *Count* for muito grande, retorna `operator new(count)` . `cache`, que representa o objeto do cache.
 
-## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::deallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::d eallocate
 
 Libera um número especificado de objetos do armazenamento começando em uma posição especificada.
 
@@ -86,16 +86,16 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
-|*Ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
 |*contagem*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
-A função `caches[_IDX].deallocate(ptr, count)`do membro `_IDX` chama , quando o índice é determinado pela *contagem*de `operator delete(ptr)`tamanho do bloco solicitado , ou, se a *contagem* for muito grande, ela retorna .
+As chamadas de função de membro `caches[_IDX].deallocate(ptr, count)` , em que o índice `_IDX` é determinado pela *contagem*de tamanho de bloco solicitada ou, se *Count* for muito grande, retorna `operator delete(ptr)` .
 
-## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc::é igual
+## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc:: Equals
 
 Compara a igualdade de dois caches.
 
@@ -105,16 +105,16 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*_Cache*|O objeto de cache associado ao filtro.|
 |*_Other*|O objeto de cache a ser comparado quanto à igualdade.|
 
 ### <a name="remarks"></a>Comentários
 
-**verdade** se o `caches[0].equals(other.caches[0])`resultado de; caso contrário, **falso**. `caches` representa a matriz de objetos do cache.
+**`true`** Se for o resultado de `caches[0].equals(other.caches[0])` ; caso contrário, **`false`** . `caches` representa a matriz de objetos do cache.
 
 ## <a name="see-also"></a>Confira também
 
 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
-[\<alocadores>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

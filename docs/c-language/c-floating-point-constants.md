@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: 5e17490926ee328c3a4ca03b1de9cb6e752959a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8777f04b047516ef29ae7bf67ddaf4195e3aaf6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325670"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228018"
 ---
 # <a name="c-floating-point-constants"></a>Constantes de ponto flutuante C
 
@@ -30,7 +30,7 @@ Uma "constante de ponto flutuante" é um número decimal que representa um núme
 &nbsp;&nbsp;&nbsp;&nbsp;*aceitar sequência de dígitos*<sub>opt</sub> **.** *digit-sequence*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sequência de dígitos*  **.**
 
-*exponent-part*:<br/>
+*expoente – parte*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sequência de dígitos de* *sinal* **e** <sub>aceitação</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Sequência de dígitos de* *sinal* **E** <sub>aceitação</sub>
 
@@ -56,16 +56,16 @@ Os exemplos a seguir ilustram alguns formatos de constantes de ponto flutuante e
 25E-4     /* =  0.0025 */
 ```
 
-As constantes de ponto flutuante são positivas, a menos que sejam precedidas por**-** um sinal de subtração (). Nesse caso, o sinal de subtração é tratado como um operador aritmético unário de negação. As constantes de ponto flutuante têm o tipo `float`, `double` ou `long double`.
+As constantes de ponto flutuante são positivas, a menos que sejam precedidas por um sinal de subtração ( **-** ). Nesse caso, o sinal de subtração é tratado como um operador aritmético unário de negação. As constantes de ponto flutuante têm tipo **`float`** , **`double`** ou **`long double`** .
 
-Uma constante de ponto flutuante sem **f**, **F**, **l** ou sufixo **L** tem o tipo `double`. Se a letra **f** ou **F** for o sufixo, a constante tem o tipo `float`. Se o sufixo for a letra **l** ou **L**, tem o tipo `long double`. Por exemplo: 
+Uma constante de ponto flutuante sem um sufixo **f**, **f**, **l**ou **l** tem o tipo **`double`** . Se a letra **f** ou **f** for o sufixo, a constante terá o tipo **`float`** . Se for sufixado pela letra **l** ou **l**, ele terá o tipo **`long double`** . Por exemplo:
 
 ```C
 10.0L  /* Has type long double  */
 10.0F  /* Has type float        */
 ```
 
-Observe que o compilador Microsoft C representa internamente `long double` o mesmo tipo `double`. Consulte [armazenamento de tipos básicos](../c-language/storage-of-basic-types.md) para obter informações sobre `double`o `float`tipo, `long double`e.
+Observe que o compilador do Microsoft C representa internamente **`long double`** o mesmo que o tipo **`double`** . Consulte [armazenamento de tipos básicos](../c-language/storage-of-basic-types.md) para obter informações sobre o tipo **`double`** , **`float`** e **`long double`** .
 
 Você pode omitir a parte inteira da constante de ponto flutuante, como mostrado nos seguintes exemplos. O número .75 pode ser expressado de várias maneiras, incluindo:
 
