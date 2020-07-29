@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3e01f97c67803408c9ce5bf056e3e9ed4746d259
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245924"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229162"
 ---
 # <a name="bad_typeid-exception"></a>Exceção bad_typeid
 
-A exceção **bad_typeid** é gerada pelo [operador typeid](../cpp/typeid-operator.md) quando o operando para **typeid** é um ponteiro nulo.
+A exceção **bad_typeid** é gerada pelo [operador typeid](../cpp/typeid-operator.md) quando o operando para **`typeid`** é um ponteiro NULL.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-O exemplo a seguir mostra o operador **typeid** gerando uma exceção **bad_typeid** .
+O exemplo a seguir mostra o **`typeid`** operador que gera uma exceção de **bad_typeid** .
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -78,7 +78,7 @@ catch (bad_typeid){
 Object is NULL
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Informações de tipo em tempo de execução](../cpp/run-time-type-information.md)\
+[Informações de tipo de tempo de execução](../cpp/run-time-type-information.md)\
 [Palavras-chave](../cpp/keywords-cpp.md)

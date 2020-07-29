@@ -47,12 +47,12 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: 69d82ae1a89e58b8cefcd2c1e24f49e24379ba11
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a7cea0b2c640b7cb87d7097cea7bdf94a73abfb8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920393"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229305"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
@@ -117,9 +117,9 @@ const unsigned char *_mbschr_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Str*<br/>
+*str*<br/>
 Cadeia de caracteres de origem com terminação nula.
 
 *&*<br/>
@@ -136,11 +136,11 @@ Cada uma dessas funções retorna um ponteiro para a primeira ocorrência de *c*
 
 A `strchr` função localiza a primeira ocorrência de *c* em *Str*ou retorna NULL se *c* não for encontrado. O caractere de terminação nulo é incluído na pesquisa.
 
-`wcschr`, `_mbschr` e `_mbschr_l` são versões de caracteres largos e caracteres multibyte de `strchr`. Os argumentos e o valor retornado de `wcschr` são cadeias de caracteres largos; aqueles de `_mbschr` são cadeias de caracteres multibyte. `_mbschr` reconhece sequências de caracteres multibyte. Além disso, se a cadeia de caracteres for um ponteiro nulo, `_mbschr` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar `_mbschr` , retorna NULL e `errno` define como EINVAL. `strchr` e `wcschr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+`wcschr`, `_mbschr` e `_mbschr_l` são versões de caracteres largos e caracteres multibyte de `strchr`. Os argumentos e o valor retornado de `wcschr` são cadeias de caracteres largos; aqueles de `_mbschr` são cadeias de caracteres multibyte. `_mbschr` reconhece sequências de caracteres multibyte. Além disso, se a cadeia de caracteres for um ponteiro nulo, `_mbschr` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `_mbschr` retorna NULL e define `errno` como EINVAL. `strchr` e `wcschr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da configuração de categoria de LC_CTYPE da localidade; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Em C, essas funções assumem um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que assume um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não**const**. A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as versões **const** e não**const** dessas funções estiverem disponíveis. Se você precisar do comportamento não**const** para ambas as sobrecargas de C++, defina o símbolo _CONST_RETURN.
+Em C, essas funções assumem um **`const`** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que assume um ponteiro para **`const`** retornar um ponteiro para **`const`** ; a versão que usa um ponteiro para não **`const`** retorna um ponteiro para não- **`const`** . A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as **`const`** e não as **`const`** versões dessas funções estiverem disponíveis. Se você precisar do não **`const`** comportamento de ambas as sobrecargas de C++, defina o símbolo _CONST_RETURN.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -221,7 +221,7 @@ Result:   last r found at position 30
 ## <a name="see-also"></a>Confira também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

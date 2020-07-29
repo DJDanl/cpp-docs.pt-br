@@ -1,37 +1,36 @@
 ---
-title: 'Operador AND bit a bit: &amp;'
-ms.date: 11/04/2016
+title: Operador AND bit a bit:&amp;
+description: A sintaxe e o uso da linguagem padrão do C++ e do operador.
+ms.date: 07/23/2020
+f1_keywords:
+- bitand_cpp
 helpviewer_keywords:
 - AND operator
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-ms.openlocfilehash: b5c99d19be3461b10a1126dea3a45d308c0fc558
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7e78e4003a31ee59ebd974275df784b7a76e73ce
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181285"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229110"
 ---
-# <a name="bitwise-and-operator-amp"></a>Operador AND bit a bit: &amp;
+# <a name="bitwise-and-operator-amp"></a>Operador AND bit a bit:&amp;
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-expression & expression
-```
+> *expressão* **`&`** de *expressão* de
 
 ## <a name="remarks"></a>Comentários
 
-As expressões podem ser outras expressões E, ou (sujeito às restrições de tipo mencionadas abaixo) expressões de igualdade, expressões relacionais, expressões aditivas, expressões multiplicativas, expressões de ponteiro para membro, expressões de conversão, expressões unárias, expressões pós-fixadas ou expressões primárias.
+O operador AND e AND () AND e Operator ( **`&`** ) compara cada bit do primeiro operando com o bit correspondente do segundo operando. Se ambos os bits forem 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).
 
-O operador AND e AND de bit ( **&** ) é comparado cada bit do primeiro operando com o bit correspondente do segundo operando. Se ambos os bits forem 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).
-
-Os dois operandos do operador AND bit a bit devem ser de tipos integrais. As conversões aritméticas usuais abordadas nas [conversões padrão](standard-conversions.md)são aplicadas aos operandos.
+Ambos os operandos para o operador AND bit a bit devem ter tipos integrais. As conversões aritméticas usuais abordadas nas [conversões padrão](standard-conversions.md) são aplicadas aos operandos.
 
 ## <a name="operator-keyword-for-"></a>Palavra-chave Operator para &
 
-O operador **bitand** é o texto equivalente de **&** . Há duas maneiras de acessar o operador **bitand** em seus programas: inclua o arquivo de cabeçalho `iso646.h`ou compile com a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) (desabilitar extensões de linguagem).
+O C++ especifica **`bitand`** como uma grafia alternativa para **`&`** . Em C, a grafia alternativa é fornecida como uma macro no \<iso646.h> cabeçalho. Em C++, a grafia alternativa é uma palavra-chave; o uso do \<iso646.h> ou o equivalente em C++ \<ciso646> é preterido. No Microsoft C++, a [`/permissive-`](../build/reference/permissive-standards-conformance.md) opção ou do [`/Za`](../build/reference/za-ze-disable-language-extensions.md) compilador é necessária para habilitar a grafia alternativa.
 
 ## <a name="example"></a>Exemplo
 
@@ -51,6 +50,5 @@ int main() {
 
 ## <a name="see-also"></a>Confira também
 
-[Operadores internos, precedência e associatividade C++](cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores, precedência e Associação internos do C++](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operadores bit a bit C](../c-language/c-bitwise-operators.md)

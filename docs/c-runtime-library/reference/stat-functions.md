@@ -118,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 607a7aff3acf923e0dd62e0dc332283f66b436b1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bb9603b6a76e92561db6c28792e4644949e190d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229331"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -182,7 +182,7 @@ int _wstat64i32(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *path*<br/>
 Ponteiro para uma cadeia de caracteres contendo o caminho do arquivo ou diretório existente.
@@ -206,7 +206,7 @@ A função **_stat** Obtém informações sobre o arquivo ou diretório especifi
 
 Variações dessas funções dão suporte a tipos de hora de 32 ou 64 bits e a tamanhos de arquivo de 32 ou 64 bits. O primeiro sufixo numérico (**32** ou **64**) indica o tamanho do tipo de tempo usado; o segundo sufixo é **i32** ou **i64**, indicando se o tamanho do arquivo é representado como um inteiro de 32 bits ou 64 bits.
 
-**_stat** é equivalente a **_stat64i32**e **struct** **_stat** contém um tempo de 64 bits. Isso é verdadeiro, a menos que **_USE_32BIT_TIME_T** seja definido, caso em que o comportamento antigo está em vigor; **_stat** usa uma hora de 32 bits e **_stat** de **struct** contém um tempo de 32 bits. O mesmo é verdadeiro para **_stati64**.
+**_stat** é equivalente a **_stat64i32**e **`struct`** **_stat** contém uma hora de 64 bits. Isso é verdadeiro, a menos que **_USE_32BIT_TIME_T** seja definido, caso em que o comportamento antigo está em vigor; **_stat** usa uma hora de 32 bits e **`struct`** **_stat** contém um tempo de 32 bits. O mesmo é verdadeiro para **_stati64**.
 
 > [!NOTE]
 > **_wstat** não funciona com os links simbólicos do Windows Vista. Nesses casos, **_wstat** sempre relatará um tamanho de arquivo 0. **_stat** funciona corretamente com links simbólicos.
@@ -260,8 +260,8 @@ Se o *caminho* se refere a um dispositivo, o **st_size**, vários campos de temp
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> seguido de \<sys/stat.h>|\<errno.h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> seguido de \<sys/stat.h> ou \<wchar.h>|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h>seguido por\<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h>seguido por \<sys/stat.h> ou\<wchar.h>|\<errno.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -330,7 +330,7 @@ Time modified : Thu Feb 07 14:39:36 2002
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
+[Manipulação de arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

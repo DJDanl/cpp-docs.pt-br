@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78544424b727797158109fa3000ee2ebf8066cf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957941"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229318"
 ---
 # <a name="_static_assert-macro"></a>Macro _STATIC_ASSERT
 
@@ -40,18 +40,18 @@ _STATIC_ASSERT(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*booleanExpression*<br/>
+*valor booliano*<br/>
 Expressão (incluindo ponteiros) que é avaliada como zero (**true**) ou 0 (**false**).
 
 ## <a name="remarks"></a>Comentários
 
-Essa macro é semelhante às [macros _ASSERT e _ASSERTE](assert-asserte-assert-expr-macros.md), exceto que a *booliana* é avaliada no momento da compilação, em vez de em tempo de execução. Se *booliana* for avaliada como **false** (0), o [erro do compilador C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) será gerado.
+Essa macro é semelhante à [_ASSERT e _ASSERTE macros](assert-asserte-assert-expr-macros.md), exceto que a *booliana* é avaliada no momento da compilação, em vez de em tempo de execução. Se *booliana* for avaliada como **false** (0), o [erro do compilador C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) será gerado.
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, verificamos se o [sizeof](../../c-language/sizeof-operator-c.md) de um **int** é maior ou igual a 2 bytes e se o [sizeof](../../c-language/sizeof-operator-c.md) de um **longo** é de 1 byte. O programa não será compilado e gerará o [erro C2466 do compilador](../../error-messages/compiler-errors-1/compiler-error-c2466.md) porque um **longo** é maior que 1 byte.
+Neste exemplo, verificamos se o [sizeof](../../c-language/sizeof-operator-c.md) **`int`** é maior ou igual a 2 bytes e se o [sizeof](../../c-language/sizeof-operator-c.md) a **`long`** é 1 byte. O programa não será compilado e gerará o [erro C2466 do compilador](../../error-messages/compiler-errors-1/compiler-error-c2466.md) porque um **`long`** é maior que 1 byte.
 
 ```C
 // crt__static_assert.c
@@ -77,7 +77,7 @@ int main()
 |-----------|---------------------|
 |**_STATIC_ASSERT**|\<crtdbg.h>|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
-[Macros _ASSERT, _ASSERTE, _ASSERT_EXPR](assert-asserte-assert-expr-macros.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
+[_ASSERT, _ASSERTE, _ASSERT_EXPR macros](assert-asserte-assert-expr-macros.md)<br/>
