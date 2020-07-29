@@ -29,24 +29,24 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321183"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231501"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Extensões da Microsoft para C e C++
 
-Visual C++ estende os padrões ANSI C e C++ ANSI da seguinte maneira.
+Visual C++ estende os padrões ANSI C e ANSI C++ da seguinte maneira.
 
 ## <a name="keywords"></a>Palavras-chave
 
-Várias palavras-chave são adicionadas. Na lista na [palavras-chave](../../cpp/keywords-cpp.md), as palavras-chave que têm dois sublinhados iniciais são extensões do Visual C++.
+Várias palavras-chave são adicionadas. Na lista em [palavras-chave](../../cpp/keywords-cpp.md), as palavras-chave que têm dois sublinhados à esquerda são Visual C++ extensões.
 
-## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Fora da definição de classe de const integral (ou enum) os membros estáticos
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Definição fora de classe de membros de const integral (ou Enumeração) estáticos
 
-Sob o padrão (**/Za**), você deve fazer uma definição fora da classe para membros de dados, como mostrado aqui:
+Sob o padrão (**/za**), você deve fazer uma definição fora de classe para membros de dados, como mostrado aqui:
 
 ```cpp
 class CMyClass  {
@@ -57,9 +57,9 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-Sob **/Ze**, a definição de fora da classe é opcional para membros de dados static, const integral e const enum. Somente integrais e enumerações que são estáticos e const podem ter inicializadores em uma classe; a expressão de inicialização deve ser uma expressão de constante.
+Em **/ze**, a definição fora de classe é opcional para membros de dados de enumeração static, const integral e const. Somente os integrantes e as enumerações que são static e const podem ter inicializadores em uma classe; a expressão de inicialização deve ser uma expressão const.
 
-Para evitar erros quando uma definição fora da classe é fornecida em um cabeçalho de arquivo e o arquivo de cabeçalho é incluído em vários arquivos de origem, use [selectany](../../cpp/selectany.md). Por exemplo:
+Para evitar erros quando uma definição fora de classe é fornecida em um arquivo de cabeçalho e o arquivo de cabeçalho está incluído em vários arquivos de origem, use [selectany](../../cpp/selectany.md). Por exemplo:
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
@@ -67,9 +67,9 @@ __declspec(selectany) const int CMyClass::max = 5;
 
 ## <a name="casts"></a>Conversões
 
-O compilador C++ e o compilador C dão suporte a esses tipos de conversões de não-ANSI:
+Tanto o compilador C++ quanto o compilador C dão suporte a esses tipos de conversões não-ANSI:
 
-- Conversões de não-ANSI para produzir um l-values. Por exemplo:
+- Conversões não-ANSI para produzir valores l. Por exemplo:
 
    ```C
    char *p;
@@ -77,7 +77,7 @@ O compilador C++ e o compilador C dão suporte a esses tipos de conversões de n
    ```
 
    > [!NOTE]
-   > Esta extensão está disponível na linguagem C somente. Você pode usar o seguinte formato de padrão ANSI C em código C++ para modificar um ponteiro como se fosse um ponteiro para um tipo diferente.
+   > Essa extensão está disponível somente na linguagem C. Você pode usar o seguinte formulário padrão ANSI C no código C++ para modificar um ponteiro como se fosse um ponteiro para um tipo diferente.
 
    O exemplo anterior poderia ser reescrito da seguinte maneira para estar de acordo com o padrão ANSI C.
 
@@ -85,7 +85,7 @@ O compilador C++ e o compilador C dão suporte a esses tipos de conversões de n
    p = ( char * )(( int * )p + 1 );
    ```
 
-- Conversões de não-ANSI de um ponteiro de função para um ponteiro de dados. Por exemplo:
+- Conversões não-ANSI de um ponteiro de função para um ponteiro de dados. Por exemplo:
 
    ```C
    int ( * pfunc ) ();
@@ -93,7 +93,7 @@ O compilador C++ e o compilador C dão suporte a esses tipos de conversões de n
    pdata = ( int * ) pfunc;
    ```
 
-   Para executar a mesma conversão e também manter a compatibilidade com ANSI, você pode converter o ponteiro de função para um `uintptr_t` antes de convertê-lo em um ponteiro de dados:
+   Para executar a mesma conversão e também manter a compatibilidade com ANSI, você pode converter o ponteiro de função em um `uintptr_t` antes de convertê-lo em um ponteiro de dados:
 
    ```C
    pdata = ( int * ) (uintptr_t) pfunc;
@@ -101,7 +101,7 @@ O compilador C++ e o compilador C dão suporte a esses tipos de conversões de n
 
 ## <a name="variable-length-argument-lists"></a>Listas de argumentos de comprimento variável
 
-O compilador C++ e o compilador C dão suporte a um Declarador de função que especifica um número variável de argumentos, seguido por uma definição de função que fornece um tipo em vez disso:
+Tanto o compilador C++ quanto o compilador C dão suporte a um Declarador de função que especifica um número variável de argumentos, seguido por uma definição de função que fornece um tipo, em vez disso:
 
 ```cpp
 void myfunc( int x, ... );
@@ -109,9 +109,9 @@ void myfunc( int x, char * c )
 { }
 ```
 
-## <a name="single-line-comments"></a>Comentários de linha única
+## <a name="single-line-comments"></a>Comentários de única linha
 
-O compilador C oferece suporte a comentários de linha única, que são apresentados usando dois barra invertida (/ /) caracteres:
+O compilador C dá suporte a comentários de linha única, que são introduzidos usando dois caracteres de barra (//):
 
 ```C
 // This is a single-line comment.
@@ -119,9 +119,9 @@ O compilador C oferece suporte a comentários de linha única, que são apresent
 
 ## <a name="scope"></a>Escopo
 
-O compilador de C suporta os seguintes recursos de escopo.
+O compilador C dá suporte aos seguintes recursos relacionados ao escopo.
 
-- Redefinições de itens de extern como estática:
+- Redefinições de itens extern como estáticos:
 
    ```C
    extern int clip();
@@ -129,14 +129,14 @@ O compilador de C suporta os seguintes recursos de escopo.
    {}
    ```
 
-- Uso de redefinições de typedef benigno dentro do mesmo escopo:
+- Uso de redefinições de typedef benignos dentro do mesmo escopo:
 
    ```C
    typedef int INT;
    typedef int INT;
    ```
 
-- Declaradores de função têm escopo de arquivo:
+- Os declaradores de função têm escopo de arquivo:
 
    ```C
    void func1()
@@ -149,7 +149,7 @@ O compilador de C suporta os seguintes recursos de escopo.
    }                  //  /Za passes 4 as type int
    ```
 
-- Uso de variáveis de escopo de bloco que são inicializados usando expressões não constantes:
+- Uso de variáveis de escopo de bloco que são inicializadas usando expressões não constantes:
 
    ```C
    int clip( int );
@@ -170,15 +170,15 @@ O compilador de C suporta os seguintes recursos de escopo.
 
 ## <a name="data-declarations-and-definitions"></a>Definições e declarações de dados
 
-O compilador de C suporta os seguintes recursos de declaração e a definição de dados.
+O compilador C dá suporte à declaração de dados e aos recursos de definição a seguir.
 
-- Constantes de caractere e cadeia de caracteres mistos em um inicializador:
+- Caracteres mistos e constantes de cadeia de caracteres em um inicializador:
 
    ```C
    char arr[5] = {'a', 'b', "cde"};
    ```
 
-- Que têm tipos base diferentes de campos de bits **int sem sinal** ou **assinado int**.
+- Campos de bits que têm tipos base diferentes de **`unsigned int`** ou **`signed int`** .
 
 - Declaradores que não têm um tipo:
 
@@ -190,7 +190,7 @@ O compilador de C suporta os seguintes recursos de declaração e a definição 
    }
    ```
 
-- Matrizes sem dimensões como o último campo em estruturas e uniões:
+- Matrizes não dimensionadas como o último campo em estruturas e uniões:
 
    ```C
    struct zero
@@ -200,7 +200,7 @@ O compilador de C suporta os seguintes recursos de declaração e a definição 
    };
    ```
 
-- Estruturas (anônimas) sem nome:
+- Estruturas não nomeadas (anônimas):
 
    ```C
    struct
@@ -210,7 +210,7 @@ O compilador de C suporta os seguintes recursos de declaração e a definição 
    };
    ```
 
-- Uniões (anônimas) sem nome:
+- Unnameed (anônimo) uniões:
 
    ```C
    union
@@ -230,13 +230,13 @@ O compilador de C suporta os seguintes recursos de declaração e a definição 
    }
    ```
 
-## <a name="intrinsic-floating-point-functions"></a>Funções intrínsecas de ponto flutuantes
+## <a name="intrinsic-floating-point-functions"></a>Funções intrínsecas de ponto flutuante
 
-Ambos os x86 compilador C++ e o compilador C dão suporte à geração de embutido do `atan`, `atan2`, `cos`, `exp`, `log`, `log10`, `sin`, `sqrt`, e `tan` funções quando **/Oi** for especificado. Para o compilador C, conformidade com ANSI é perdida quando esses intrínsecos são usados, porque eles não definirem o `errno` variável.
+Tanto o compilador C++ x86 quanto o compilador C dão suporte à geração embutida das funções,,,,,,, `atan` `atan2` `cos` `exp` `log` `log10` `sin` `sqrt` e `tan` quando **/Oi** é especificado. Para o compilador C, a conformidade com ANSI é perdida quando esses intrínsecos são usados, pois eles não definem a `errno` variável.
 
 ## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Passando um parâmetro de ponteiro não const para uma função que espera uma referência a um parâmetro de ponteiro const
 
-Isso é uma extensão do C++. Esse código será compilado com **/Ze**:
+Esta é uma extensão para C++. Este código será compilado com **/ze**:
 
 ```cpp
 typedef   int   T;
@@ -260,33 +260,33 @@ void func ()
 
 ## <a name="iso646h-not-enabled"></a>ISO646. H não habilitado
 
-Sob **/Ze**, você tem que incluir lt;iso646.h&gt Se você quiser usar formas de texto dos seguintes operadores:
+Em **/ze**, você precisa incluir iso646. h se quiser usar as formas de texto dos seguintes operadores:
 
-- & & (e)
+- && (e)
 
-- & = (and_eq)
+- &= (and_eq)
 
 - & (bitand)
 
-- &#124;(bitor)
+- &#124; (BITOR)
 
 - ~ (compl)
 
-- ! (não)
+- ! válido
 
-- != (not_eq)
+- ! = (not_eq)
 
-- &#124;&#124;(ou)
+- &#124;&#124; (ou)
 
 - &#124;= (or_eq)
 
-- ^ (xor)
+- ^ (XOR)
 
-- ^= (xor_eq)
+- ^ = (xor_eq)
 
-## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>Endereço da cadeia de caracteres literal tem tipo const char [], não const char (*)]
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>O endereço do literal da cadeia de caracteres tem o tipo const char [], não const char (*) []
 
-O exemplo a seguir produzirá `char const (*)[4]` sob **/Za**, mas `char const [4]` sob **/Ze**.
+O exemplo a seguir fará a saída `char const (*)[4]` em **/za**, mas `char const [4]` em **/ze**.
 
 ```cpp
 #include <stdio.h>
@@ -298,8 +298,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [/Za, /Ze (desabilitar extensões de linguagem)](za-ze-disable-language-extensions.md)
+- [/Za,/Ze (desabilitar extensões de linguagem)](za-ze-disable-language-extensions.md)
 - [Opções do compilador MSVC](compiler-options.md)
-- [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+- [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

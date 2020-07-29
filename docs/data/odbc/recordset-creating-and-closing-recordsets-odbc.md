@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ff6f3050ff8ca0be746b91216300632323dcd85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367085"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216512"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: criando e fechando conjuntos de registros (ODBC)
 
@@ -74,10 +74,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Após chamar `Open`, use as funções de membro e membros de dados do objeto para trabalhar com os registros. Em alguns casos, talvez convenha repetir a consulta ou atualizar o conjunto de registros para incluir alterações que ocorreram na fonte de dados. Para obter mais informações, consulte [Recordset: Requerying a Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Após chamar `Open`, use as funções de membro e membros de dados do objeto para trabalhar com os registros. Em alguns casos, talvez convenha repetir a consulta ou atualizar o conjunto de registros para incluir alterações que ocorreram na fonte de dados. Para obter mais informações, consulte [conjunto de registros: reconsultando um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
-> A cadeia de conexão usada durante o desenvolvimento pode não ser a mesma cadeia de conexão de que seus usuários eventuais precisam. Para obter ideias sobre como generalizar sua aplicação nesse sentido, consulte [Fonte de Dados: Gerenciamento de Conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+> A cadeia de conexão usada durante o desenvolvimento pode não ser a mesma cadeia de conexão de que seus usuários eventuais precisam. Para obter ideias sobre como generalizar seu aplicativo nesse aspecto, consulte [fonte de dados: Gerenciando conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
 ## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Como definir opções de conjunto de registros
 
@@ -106,12 +106,12 @@ Quando você concluir seu conjunto de registros, deverá descartá-lo e desaloca
 
 1. Destrua o objeto de conjunto de registros.
 
-   Se você o declarou no registro de ativação de uma função, o objeto é destruído automaticamente quando ele sai do escopo. Caso contrário, use o operador **delete**.
+   Se você o declarou no registro de ativação de uma função, o objeto é destruído automaticamente quando ele sai do escopo. Caso contrário, use o **`delete`** operador.
 
 `Close` libera o manipulador `HSTMT` do conjunto de registros. Ele não destrói o objeto C++.
 
 ## <a name="see-also"></a>Confira também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Conjunto de registros: Rolagem (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
 [Conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

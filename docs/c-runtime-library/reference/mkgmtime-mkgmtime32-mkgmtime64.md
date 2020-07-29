@@ -43,16 +43,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cc8ccfc628a0f0c5dd649dbb5cf3bd0b552b5d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914651"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216876"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-Converte uma hora UTC representada por uma **struct** **TM** em uma hora UTC representada por um tipo de **time_t** .
+Converte uma hora UTC representada por um **`struct`** **TM** em uma hora UTC representada por um tipo de **time_t** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -68,10 +68,10 @@ __time64_t _mkgmtime64(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *timeptr*\
-Um ponteiro para a hora UTC como um **struct** **TM** a ser convertido.
+Um ponteiro para a hora UTC como um **`struct`** **TM** para converter.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -182,7 +182,7 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 t.tm_yday = 42
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gerenciamento de tempo](../../c-runtime-library/time-management.md)\
 [asctime, _wasctime](asctime-wasctime.md)\

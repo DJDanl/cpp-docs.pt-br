@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 354b354a72b5a96a190ce2322eb160b7d6bff1c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158339"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199393"
 ---
 # <a name="scope-and-visibility"></a>Escopo e visibilidade
 
@@ -27,7 +27,7 @@ Escopo de bloco O declarador ou especificador de tipo de um identificador de esc
 
 Escopo de protótipo de função O declarador ou especificador de tipo de um identificador com escopo de protótipo de função aparece na lista de declarações de parâmetro em um protótipo de função (que não parte da declaração da função). O escopo termina no final do declarador da função.
 
-As declarações apropriadas para tornar as variáveis visíveis em outros arquivos de origem são descritas em [Classes de armazenamento](../c-language/c-storage-classes.md). No entanto, as variáveis e as funções declaradas no nível externo com o especificador de classe de armazenamento **static** são visíveis apenas no arquivo de origem nas quais são definidas. Todas as funções restantes são visíveis globalmente.
+As declarações apropriadas para tornar as variáveis visíveis em outros arquivos de origem são descritas em [Classes de armazenamento](../c-language/c-storage-classes.md). No entanto, variáveis e funções declaradas no nível externo com o **`static`** especificador de classe de armazenamento são visíveis somente dentro do arquivo de origem no qual elas são definidas. Todas as funções restantes são visíveis globalmente.
 
 ## <a name="see-also"></a>Confira também
 

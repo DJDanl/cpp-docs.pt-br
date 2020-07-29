@@ -1,17 +1,17 @@
 ---
-title: requires_category (C++ atributo com)
+title: requires_category (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: 19a454a8bfc959d7d97959d765dbf68d0f766ca1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 044f868a6be8391a4b0dfafd58ff0f3178575047
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231553"
 ---
 # <a name="requires_category"></a>requires_category
 
@@ -31,7 +31,7 @@ A ID da categoria necessária.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **requires_category** C++ especifica as categorias de componente exigidas pela classe de destino. Para obter mais informações, consulte [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
+O atributo **requires_category** C++ especifica as categorias de componentes exigidas pela classe de destino. Para obter mais informações, consulte [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
 
 Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento.
 
@@ -59,14 +59,14 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|
-|**Atributos necessários**|Um ou mais dos seguintes: `coclass`, `progid`ou `vi_progid`.|
+|**Atributos obrigatórios**|Um ou mais dos seguintes: `coclass` , `progid` ou `vi_progid` .|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [implements_category](implements-category.md)

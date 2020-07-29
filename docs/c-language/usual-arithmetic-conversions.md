@@ -9,12 +9,12 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-ms.openlocfilehash: 729e173c695db3b4970490e84bedfd441e6ff6d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e28c8a234ff840a16228416720ac48763fccc76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344831"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231410"
 ---
 # <a name="usual-arithmetic-conversions"></a>Conversões aritméticas normais
 
@@ -22,23 +22,23 @@ A maioria dos operadores C executam conversões de tipos para avançar os operan
 
 As conversões aritméticas resumidas abaixo são chamadas “conversões aritméticas usuais”. Essas etapas são aplicadas apenas a operadores binários que esperam o tipo aritmético. A finalidade é gerar um tipo comum que também seja o tipo do resultado. Para determinar quais conversões ocorrem realmente, o compilador aplica o seguinte algoritmo a operações binárias à expressão. As etapas abaixo não são uma ordem de precedência.
 
-1. Se qualquer operando for do tipo `long double`, o outro operando será convertido ao tipo `long double`.
+1. Se qualquer operando for do tipo **`long double`** , o outro operando será convertido em tipo **`long double`** .
 
-1. Se a condição anterior não for atendida e qualquer operando for do tipo **double**, o outro operando será convertido ao tipo **double**.
+1. Se a condição acima não for atendida e o operando for do tipo **`double`** , o outro operando será convertido em tipo **`double`** .
 
-1. Se as duas condições anteriores não forem atendidas e qualquer operando for do tipo **double**, o outro operando será convertido ao tipo **double**.
+1. Se as duas condições acima não forem atendidas e o operando for do tipo **`float`** , o outro operando será convertido em tipo **`float`** .
 
 1. Se as três condições anteriores não forem atendidas (nenhum dos operandos é dos tipos flutuantes), as conversões integrais são executadas nos operandos como segue:
 
-   - Se qualquer operando for do tipo `unsigned long`, o outro operando será convertido ao tipo `unsigned long`.
+   - Se qualquer operando for do tipo **`unsigned long`** , o outro operando será convertido em tipo **`unsigned long`** .
 
-   - Se a condição anterior não for atendida e qualquer operando for do tipo **long** e o outro do tipo `unsigned int`, os dois operandos serão convertidos ao tipo `unsigned long`.
+   - Se a condição acima não for atendida e o operando for do tipo **`long`** e o outro do tipo **`unsigned int`** , ambos os operandos serão convertidos para o tipo **`unsigned long`** .
 
-   - Se as duas condições anteriores não forem atendidas e qualquer operando for do tipo **long**, o outro operando será convertido ao tipo **long**.
+   - Se as duas condições acima não forem atendidas e o operando for do tipo **`long`** , o outro operando será convertido em tipo **`long`** .
 
-   - Se as três condições anteriores não forem atendidas e qualquer operando for do tipo `unsigned int`, o outro operando será convertido ao tipo `unsigned int`.
+   - Se as três condições acima não forem atendidas e o operando for do tipo **`unsigned int`** , o outro operando será convertido em tipo **`unsigned int`** .
 
-   - Se nenhuma das condições anteriores forem atendidas, os dois os operandos serão convertidos ao tipo `int`.
+   - Se nenhuma das condições acima for atendida, ambos os operandos serão convertidos para o tipo **`int`** .
 
 O código a seguir ilustra essas regras de conversão:
 

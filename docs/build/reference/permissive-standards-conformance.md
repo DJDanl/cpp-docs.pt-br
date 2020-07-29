@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507021"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217201"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (conformidade com padrões)
 
@@ -40,7 +40,7 @@ A **`/permissive-`** opção define as [**`/Zc:referenceBinding`**](zc-reference
 
 Em versões do compilador a partir do Visual Studio 2017 versão 15,3, a **`/permissive-`** opção define a [**`/Zc:ternary`**](zc-ternary.md) opção. O compilador também implementa mais dos requisitos para a pesquisa de nome de duas fases. Quando a **`/permissive-`** opção é definida, o compilador analisa as definições de modelo de função e classe e identifica nomes dependentes e não dependentes usados nos modelos. Nesta versão, apenas a análise de dependência de nome é executada.
 
-As extensões específicas do ambiente e as áreas de linguagem que o padrão deixa para a implementação não são afetadas pelo **`/permissive-`** . Por exemplo, as palavras-chave específicas da Microsoft `__declspec` , de Convenção de chamada e manipulação de exceção estruturada e as diretivas pragma específicas do compilador ou atributos não são sinalizadas pelo compilador no **`/permissive-`** modo.
+As extensões específicas do ambiente e as áreas de linguagem que o padrão deixa para a implementação não são afetadas pelo **`/permissive-`** . Por exemplo, as palavras-chave específicas da Microsoft **`__declspec`** , de Convenção de chamada e manipulação de exceção estruturada e as diretivas pragma específicas do compilador ou atributos não são sinalizadas pelo compilador no **`/permissive-`** modo.
 
 A **`/permissive-`** opção usa o suporte de conformidade na versão atual do compilador para determinar quais construções de linguagem não estão em conformidade. A opção não determina se o código está em conformidade com uma versão específica do padrão C++. Para habilitar todo o suporte do compilador implementado para o padrão de rascunho mais recente, use a [**`/std:c++latest`**](std-specify-language-standard-version.md) opção. Para restringir o suporte do compilador ao padrão C++ 17 atualmente implementado, use a [**`/std:c++17`**](std-specify-language-standard-version.md) opção. Para restringir o suporte do compilador para corresponder mais próximo ao padrão do C++ 14, use a [**`/std:c++14`**](std-specify-language-standard-version.md) opção, que é o padrão.
 

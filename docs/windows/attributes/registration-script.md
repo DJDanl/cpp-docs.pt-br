@@ -1,17 +1,17 @@
 ---
-title: registration_script (C++ atributo com)
+title: registration_script (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b5cb0cb36d9d6627f16f99cbb0d142af8cee6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217214"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -25,8 +25,8 @@ Executa o script de registro personalizado especificado.
 
 ### <a name="parameters"></a>parâmetros
 
-*prescritiva*<br/>
-O caminho completo para um arquivo de script de registro personalizado (. rgs). Um valor de **nenhum**, como `script = "none"`, indica que a coclass não tem requisitos de registro.
+*script*<br/>
+O caminho completo para um arquivo de script de registro personalizado (. rgs). Um valor de **nenhum**, como `script = "none"` , indica que a coclass não tem requisitos de registro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -63,15 +63,15 @@ class CMyClass:public IFace {};
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|
-|**Atributos necessários**|Um ou mais dos seguintes: `coclass`, `progid`ou `vi_progid`.|
+|**Atributos obrigatórios**|Um ou mais dos seguintes: `coclass` , `progid` ou `vi_progid` .|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [rdx](rdx.md)

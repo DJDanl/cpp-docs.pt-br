@@ -1,17 +1,17 @@
 ---
-title: exclusivo (C++ atributo com)
+title: exclusivo (atributo COM do C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: d8c01e2fcee6b906b7f70370a0d539192e348104
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a46d607ef03fcb75fea31835726d0e2d95e71df8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214429"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201018"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,7 +25,7 @@ Especifica um ponteiro exclusivo.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **exclusivo** C++ tem a mesma funcionalidade que o atributo MIDL [exclusivo](/windows/win32/Midl/unique) .
+O atributo C++ **exclusivo** tem a mesma funcionalidade que o atributo MIDL [exclusivo](/windows/win32/Midl/unique) .
 
 ## <a name="example"></a>Exemplo
 
@@ -37,15 +37,15 @@ Consulte o exemplo [ref](ref-cpp.md) para um exemplo de uso de **exclusivo**.
 
 |||
 |-|-|
-|**Aplica-se a**|**typedef**, **struct**, **Union**, parâmetro de interface, método de interface|
+|**Aplica-se a**|**`typedef`**, **`struct`** , **`union`** , parâmetro de interface, método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: b19b66279427aa4623cff037e67067096eb6bd42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f4d5d930ebdc487c3c2bcc2f93494a25528c438
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917779"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216772"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -79,7 +79,7 @@ Quando esse tamanho de pilha máximo for excedido, o sistema executa as três a�
 
 Observe que, nesse ponto, a pilha não tem uma página de proteção. Na próxima vez que o programa aumentar totalmente a pilha até o fim, onde deveria haver uma página de proteção, o programa grava além do fim da pilha e causa uma violação de acesso.
 
-Chame **_resetstkoflw** para restaurar a página de proteção sempre que a recuperação for feita após uma exceção de estouro de pilha. Essa função pode ser chamada de dentro do corpo principal de um bloco de **__except** ou fora de um bloco de **__except** . No entanto, há algumas restrições sobre quando isso deve ser usado. **_resetstkoflw** nunca deve ser chamado de:
+Chame **_resetstkoflw** para restaurar a página de proteção sempre que a recuperação for feita após uma exceção de estouro de pilha. Essa função pode ser chamada de dentro do corpo principal de um **`__except`** bloco ou fora de um **`__except`** bloco. No entanto, há algumas restrições sobre quando isso deve ser usado. **_resetstkoflw** nunca deve ser chamado de:
 
 - Uma expressão de filtro.
 
@@ -87,17 +87,17 @@ Chame **_resetstkoflw** para restaurar a página de proteção sempre que a recu
 
 - Uma função chamada de uma função de filtro.
 
-- Um bloco **catch**.
+- Um **`catch`** bloco.
 
-- Um bloco de **__finally** .
+- Um **`__finally`** bloco.
 
 Nesses pontos, a pilha ainda não está suficientemente organizada.
 
-Exceções de estouro de pilha são geradas como exceções estruturadas, não exceções C++, portanto **_resetstkoflw** não é útil em um bloco **Catch** comum porque ele não capturará uma exceção de estouro de pilha. No entanto, se [_set_se_translator](set-se-translator.md) for usado para implementar um conversor de exceção estruturada que gera exceções C++ (como no segundo exemplo), uma exceção de excedente de pilha resulta em uma exceção C++ que pode ser manipulada por um bloco catch de C++.
+Exceções de estouro de pilha são geradas como exceções estruturadas, não exceções C++, portanto **_resetstkoflw** não é útil em um **`catch`** bloco comum porque ela não capturará uma exceção de estouro de pilha. No entanto, se [_set_se_translator](set-se-translator.md) for usado para implementar um conversor de exceção estruturada que gera exceções C++ (como no segundo exemplo), uma exceção de excedente de pilha resulta em uma exceção C++ que pode ser manipulada por um bloco catch de C++.
 
 Não é seguro chamar **_resetstkoflw** em um bloco catch de C++ que é alcançado de uma exceção gerada pela função do conversor de exceção estruturada. Nesse caso, o espaço de pilha não é liberado e o ponteiro de pilha não é redefinido até estar fora do bloco catch, embora os destruidores tenham sido chamados para todos os objetos destrutíveis antes do bloco catch. Essa função não deve ser chamada até o espaço de pilha ser liberado e o ponteiro de pilha ser redefinido. Portanto, ele deve ser chamado somente depois de sair do bloco catch. Como o menor espaço na pilha possível deve ser usado no bloco catch devido ao excedente de pilha que ocorre no bloco catch que está tentando se recuperar de um excedente de pilha anterior não é recuperável e pode fazer com que o programa pare de responder enquanto o excedente no bloco catch dispara uma exceção que é em si manipulada pelo mesmo bloco catch.
 
-Há situações em que **_resetstkoflw** pode falhar, mesmo se usado em um local correto, como em um bloco **__except**. Se, mesmo depois do desenrolamento da pilha, ainda não houver espaço de pilha suficiente para executar **_resetstkoflw** sem gravar na última página da pilha, **_resetstkoflw** não conseguirá redefinir a última página da pilha como a página de proteção e retornará 0, indicando falha. Portanto, o uso seguro desta função deve incluir a verificação do valor retornado em vez de supor que é seguro usar a pilha.
+Há situações em que **_resetstkoflw** pode falhar mesmo se usadas em um local correto, como em um **`__except`** bloco. Se, mesmo depois do desenrolamento da pilha, ainda não houver espaço de pilha suficiente para executar **_resetstkoflw** sem gravar na última página da pilha, **_resetstkoflw** não conseguirá redefinir a última página da pilha como a página de proteção e retornará 0, indicando falha. Portanto, o uso seguro desta função deve incluir a verificação do valor retornado em vez de supor que é seguro usar a pilha.
 
 A manipulação de exceção estruturada não capturará uma exceção **STATUS_STACK_OVERFLOW** quando o aplicativo for compilado com **/CLR** (consulte [/CLR (compilação do Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).
 
@@ -309,6 +309,6 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_alloca](alloca.md)<br/>

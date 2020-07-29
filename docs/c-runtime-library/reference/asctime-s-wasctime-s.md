@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909418"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217006"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -72,7 +72,7 @@ errno_t _wasctime_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *completo*<br/>
 Um ponteiro para um buffer para armazenar o resultado da cadeia de caracteres. Essa função assume um ponteiro para um local de memória válido com um tamanho especificado por *numberOfElements*.
@@ -81,7 +81,7 @@ Um ponteiro para um buffer para armazenar o resultado da cadeia de caracteres. E
 O tamanho do buffer usado para armazenar o resultado.
 
 *tmSource*<br/>
-Estrutura de hora/data. Essa função assume um ponteiro para um objeto **struct** **TM** válido.
+Estrutura de hora/data. Essa função assume um ponteiro para um objeto **`struct`** **TM** válido.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -91,10 +91,10 @@ Zero se for bem-sucedido. Se houver uma falha, o manipulador de parâmetro invá
 
 |*completo*|*numberOfElements*|*tmSource*|Retorno|Valor no *buffer*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULO**|Qualquer|Qualquer|**EINVAL**|Não modificado|
+|**NULL**|Qualquer|Qualquer|**EINVAL**|Não modificado|
 |Not **NULL** (aponta para memória válida)|0|Qualquer|**EINVAL**|Não modificado|
 |Não **nulo**|0< tamanho < 26|Qualquer|**EINVAL**|cadeia de caracteres vazia|
-|Não **nulo**|>= 26|**NULO**|**EINVAL**|cadeia de caracteres vazia|
+|Não **nulo**|>= 26|**NULL**|**EINVAL**|cadeia de caracteres vazia|
 |Não **nulo**|>= 26|Estrutura de hora inválida ou valores fora do intervalo para os componentes da hora|**EINVAL**|cadeia de caracteres vazia|
 
 > [!NOTE]
@@ -118,7 +118,7 @@ A função **asctime** converte uma hora armazenada como uma estrutura em uma ca
 
 A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) para informações sobre a configuração da hora local e a função [_tzset](tzset.md) para informações sobre a definição do ambiente de fuso horário e variáveis globais.
 
-O resultado da cadeia de caracteres produzido por **asctime_s** contém exatamente 26 caracteres e `Wed Jan 02 02:03:55 1980\n\0`tem o formulário. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menor, um código de erro, **EINVAL**, será retornado.
+O resultado da cadeia de caracteres produzido por **asctime_s** contém exatamente 26 caracteres e tem o formulário `Wed Jan 02 02:03:55 1980\n\0` . Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menor, um código de erro, **EINVAL**, será retornado.
 
 **_wasctime_s** é uma versão de caractere largo do **asctime_s**. **_wasctime_s** e **asctime_s** se comportar de forma idêntica.
 
@@ -183,7 +183,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gerenciamento de tempo](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>

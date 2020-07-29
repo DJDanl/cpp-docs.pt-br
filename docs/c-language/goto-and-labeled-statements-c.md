@@ -8,16 +8,16 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d84aa6701ef030dc494f6a40a7223d6f9bcd5073
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299111"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199978"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Instruções goto e identificadas (C)
 
-A instrução `goto` transfere o controle para um rótulo. O rótulo fornecido deve residir na mesma função e pode aparecer antes de apenas uma instrução na mesma função.
+A **`goto`** instrução transfere o controle para um rótulo. O rótulo fornecido deve residir na mesma função e pode aparecer antes de apenas uma instrução na mesma função.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,18 +26,18 @@ A instrução `goto` transfere o controle para um rótulo. O rótulo fornecido d
 &nbsp;&nbsp;&nbsp;&nbsp;*instrução de salto*
 
 *instrução de salto*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto***identificador*GoTo **;**    
+&nbsp;&nbsp;&nbsp;&nbsp;**`goto`**  *identificador*  **;**
 
 *rotulado-instrução*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificador*  **:**  *instrução*
 
-O rótulo de uma instrução é significante somente para uma instrução `goto`; em qualquer outro contexto, uma instrução rotulada é executada sem considerar o rótulo.
+Um rótulo de instrução é significativo apenas para uma **`goto`** instrução; em qualquer outro contexto, uma instrução rotulada é executada sem considerar o rótulo.
 
-Um elemento *jump-statement* deve residir na mesma função e pode aparecer antes de apenas uma instrução na mesma função. O conjunto de nomes *identifier* que segue `goto` tem seu próprio namespace para que os nomes não interfiram com outros identificadores. Os rótulos não podem ser redeclarados. Consulte [Namespaces](../c-language/name-spaces.md) para obter mais informações.
+Um elemento *jump-statement* deve residir na mesma função e pode aparecer antes de apenas uma instrução na mesma função. O conjunto de nomes de *identificadores* a seguir **`goto`** tem seu próprio espaço de nome para que os nomes não interfiram com outros identificadores. Os rótulos não podem ser redeclarados. Consulte [Namespaces](../c-language/name-spaces.md) para obter mais informações.
 
-É um bom estilo de programação para usar as instruções **break**, **continue** e `return` em vez de `goto` sempre que possível. Como a instrução **break** sai apenas de um nível do loop, um `goto` pode ser necessário para sair de um loop dentro de um loop profundamente aninhado.
+É um bom estilo de programação usar a **`break`** **`continue`** instrução, e **`return`** em preferência, **`goto`** sempre que possível. Como a **`break`** instrução só sai de um nível do loop, uma **`goto`** pode ser necessária para sair de um loop de dentro de um loop profundamente aninhado.
 
-Este exemplo demonstra a instrução `goto`:
+Este exemplo demonstra a **`goto`** instrução:
 
 ```c
 // goto.c
@@ -65,7 +65,7 @@ int main()
 }
 ```
 
-Neste exemplo, uma instrução `goto` transfere o controle para o ponto rotulado `stop` quando o valor de `i` é igual a 5.
+Neste exemplo, uma **`goto`** instrução transfere o controle para o ponto rotulado `stop` quando `i` é igual a 5.
 
 ## <a name="see-also"></a>Confira também
 

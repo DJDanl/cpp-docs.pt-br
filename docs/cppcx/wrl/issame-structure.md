@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c209d5a8d2a35f2643e90e5595d86f41519f30b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371341"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216551"
 ---
 # <a name="issame-structure"></a>Estrutura IsSame
 
-Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,7 +30,7 @@ template <typename T1>
 struct IsSame<T1, T1>;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T1*<br/>
 Um tipo.
@@ -40,7 +40,7 @@ Outro tipo.
 
 ## <a name="remarks"></a>Comentários
 
-Testa se um tipo especificado é o mesmo que outro tipo especificado.
+Testa se um tipo especificado é igual a outro tipo especificado.
 
 ## <a name="members"></a>Membros
 
@@ -48,7 +48,7 @@ Testa se um tipo especificado é o mesmo que outro tipo especificado.
 
 Nome                    | Descrição
 ----------------------- | --------------------------------------------------
-[IsSame::valor](#value) | Indica se um tipo é o mesmo que o outro.
+[Ismesmo:: valor](#value) | Indica se um tipo é igual a outro.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -56,13 +56,13 @@ Nome                    | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** internal.h
+**Cabeçalho:** Internal. h
 
-**Espaço de nome:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="issamevalue"></a><a name="value"></a>IsSame::valor
+## <a name="issamevalue"></a><a name="value"></a>Ismesmo:: valor
 
-Suporta a infra-estrutura WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 template <typename T1, typename T2>
@@ -80,6 +80,6 @@ struct IsSame<T1, T1>
 
 ### <a name="remarks"></a>Comentários
 
-Indica se um tipo é o mesmo que o outro.
+Indica se um tipo é igual a outro.
 
-`value`é **verdade** se os parâmetros do modelo forem os mesmos e **forem falsos** se os parâmetros do modelo forem diferentes.
+`value`**`true`** se os parâmetros do modelo forem iguais e **`false`** se os parâmetros do modelo forem diferentes.

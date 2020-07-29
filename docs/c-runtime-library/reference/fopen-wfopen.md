@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: d468226028928e3edfe67cc7f9b9eec06e06bd56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914884"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216954"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -62,7 +62,7 @@ FILE *_wfopen(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nome do arquivo*<br/>
 Nome do arquivo.
@@ -90,11 +90,11 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 o **fopen** dá suporte a fluxos de arquivos Unicode. Para abrir um arquivo Unicode, passe um sinalizador **CCS** que especifica a codificação desejada para **fopen**, da seguinte maneira.
 
-> **ARQUIVO \*fp = fopen ("newfile. txt", "RT +, CCS =**_Encoding_**");**
+> **Arquivo \* fp = fopen ("newfile.txt", "RT +, CCS =**_Encoding_**");**
 
 Os valores permitidos de *codificação* são **Unicode**, **UTF-8**e **UTF-16LE**.
 
-Quando um arquivo é aberto no modo Unicode, as funções de entrada convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **wchar_t**. As funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **wchar_t**. Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Uma tentativa de ler ou gravar um número ímpar de bytes no modo Unicode causa um erro de [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
+Quando um arquivo é aberto no modo Unicode, as funções de entrada convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **`wchar_t`** . As funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **`wchar_t`** . Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Uma tentativa de ler ou gravar um número ímpar de bytes no modo Unicode causa um erro de [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
 
 Se o arquivo já existir e for aberto para ler ou anexar, o BOM (Marca de ordem de byte), se presente no arquivo, determina a codificação. A codificação de BOM tem precedência sobre a codificação especificada pelo sinalizador **CCS** . A codificação **CCS** é usada somente quando nenhuma bom está presente ou o arquivo é um arquivo novo.
 
@@ -159,8 +159,8 @@ As opções a seguir podem ser acrescentadas ao *modo* para especificar comporta
 |-|-|
 | **&** | Habilite o sinalizador de confirmação para o *nome de arquivo* associado para que o conteúdo do buffer de arquivo seja gravado diretamente no disco se **fflush** ou **_flushall** for chamado. |
 | **n** | Redefina o sinalizador de confirmação para o *nome de arquivo* associado como "sem confirmação". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a COMMODE.OBJ. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a COMMODE.OBJ (consulte [Opções de vinculação](../../c-runtime-library/link-options.md)). |
-| **P** | Especifica que o arquivo não é herdado por processos filhos. |
-| **&** | Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso. |
+| **N** | Especifica que o arquivo não é herdado por processos filhos. |
+| **S** | Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso. |
 | **R** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
 | **T** | Especifica um arquivo como temporário. Se possível, ele não é liberado no disco. |
 | **D** | Especifica um arquivo como temporário. É excluído quando o último ponteiro de arquivo é fechado. |
@@ -168,25 +168,25 @@ As opções a seguir podem ser acrescentadas ao *modo* para especificar comporta
 
 Os caracteres válidos para a cadeia de caracteres de *modo* usada em **fopen** e **_fdopen** correspondem aos argumentos *oflag* usados em [_open](open-wopen.md) e [_sopen](sopen-wsopen.md), da seguinte maneira.
 
-|Caracteres no *modo* String|Valor *oflag* equivalente de oflag \_para Open\_/sopen|
+|Caracteres no *modo* String|Valor equivalente de *oflag* para \_ Open/ \_ sopen|
 |-------------------------------|----------------------------------------------------|
-|**um**|**\_O\_WRONLY** &#124; ** \_o\_Append** (geralmente ** \_O\_WRONLY** &#124; ** \_o\_cri** &#124; ** \_o\_Append**)|
-|**a +**|**\_O\_RDWR** &#124; ** \_o\_Append** (geralmente ** \_o\_RDWR** &#124; ** \_o\_Append** &#124; ** \_o\_cri** )|
-|**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (geralmente ** \_o\_WRONLY** &#124; ** \_o\_cri** &#124; ** \_o\_trunc**)|
-|**w +**|**\_O\_RDWR** (geralmente ** \_o\_RDWR** &#124; ** \_o\_cri** &#124; ** \_o\_trunc**)|
-|**b**|**\_O\_binário**|
-|**t**|**\_O\_texto**|
+|**um**|** \_ O \_ WRONLY** &#124; ** \_ o \_ Append** (geralmente ** \_ O \_ WRONLY** &#124; ** \_ o \_ cri** &#124; ** \_ o \_ Append**)|
+|**a +**|** \_ O \_ RDWR** &#124; ** \_ o \_ Append** (geralmente ** \_ o \_ RDWR** &#124; ** \_ o \_ Append** &#124; ** \_ o \_ cri** )|
+|**r**|**\_O \_ RDONLY**|
+|**r +**|**\_O \_ RDWR**|
+|**w**|** \_ O \_ WRONLY** (geralmente ** \_ o \_ WRONLY** &#124; ** \_ o \_ cri** &#124; ** \_ o \_ trunc**)|
+|**w +**|** \_ O \_ RDWR** (geralmente ** \_ o \_ RDWR** &#124; ** \_ o \_ cri** &#124; ** \_ o \_ trunc**)|
+|**b**|**\_O \_ binário**|
+|**t**|**\_O \_ texto**|
 |**&**|Nenhum|
 |**n**|Nenhum|
-|**&**|**\_O\_sequencial**|
-|**R**|**\_O\_aleatório**|
-|**T**|**\_O\_SHORTLIVED**|
-|**D**|**\_O\_temporário**|
-|**CCS = UNICODE**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_O\_UTF8**|
-|**CCS = UTF-16LE**|**\_O\_UTF16**|
+|**S**|**\_O \_ sequencial**|
+|**R**|**\_O \_ aleatório**|
+|**T**|**\_O \_ SHORTLIVED**|
+|**D**|**\_O \_ temporário**|
+|**CCS = UNICODE**|**\_O \_ WTEXT**|
+|**CCS = UTF-8**|**\_O \_ UTF8**|
+|**CCS = UTF-16LE**|**\_O \_ UTF16**|
 
 Se você estiver usando o modo **RB** , não precisará portar seu código e, se você pretende ler a maior parte de um arquivo grande ou se não estiver preocupado com o desempenho da rede, também poderá considerar se deseja usar os arquivos do Win32 mapeados na memória como uma opção.
 
@@ -312,7 +312,7 @@ int main(int argc, char** argv)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

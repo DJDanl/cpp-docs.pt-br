@@ -46,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918184"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231371"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -102,7 +102,7 @@ long double scalblnl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Valor de ponto flutuante.
@@ -112,15 +112,15 @@ Expoente inteiro.
 
 ## <a name="return-value"></a>Valor retornado
 
-As **funções scalbn** retornam o valor *de x* \* **FLT_RADIX**<sup>exp</sup> quando bem-sucedidas. No estouro (dependendo do sinal de *x*), **scalbn** retorna +/- **HUGE_VAL**; o valor **errno** é definido como **ERANGE**.
+As funções **scalbn** retornam o valor de *x* \* **FLT_RADIX**<sup>exp</sup> quando bem-sucedidas. No estouro (dependendo do sinal de *x*), **scalbn** retorna +/- **HUGE_VAL**; o valor **errno** é definido como **ERANGE**.
 
 Para obter mais informações sobre **errno** e possíveis valores de retorno de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-**FLT_RADIX** é definido em \<float. h> como a base do ponto flutuante nativo; em sistemas binários, ele tem um valor de 2 e **scalbn** é equivalente a [ldexp](ldexp.md).
+**FLT_RADIX** é definido \<float.h> como a base do ponto flutuante nativo; em sistemas binários, ele tem um valor de 2 e **scalbn** é equivalente a [ldexp](ldexp.md).
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **scalbln** que usam e retornam tipos **float** ou **Long** **duplos** . Em um programa C, **scalbn** sempre leva um **Double** e um **int** e retorna um **Double**, e **scalbln** sempre leva um **Double** e um **Long** e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **scalbln** que levam e retornam **`float`** ou **`long double`** digitam. Em um programa C, **scalbn** sempre pega um **`double`** e um **`int`** e retorna um **`double`** , e **scalbln** sempre pega um **`double`** e um e **`long`** retorna um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -156,9 +156,9 @@ int main( void )
 6.4 times FLT_RADIX to the power of 3 is 51.2
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

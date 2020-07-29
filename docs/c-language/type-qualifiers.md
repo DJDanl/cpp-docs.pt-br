@@ -10,18 +10,18 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 729e9f65fd1054b8381f45b81e5276846145ebc1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344792"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198717"
 ---
 # <a name="type-qualifiers"></a>Qualificadores de tipo
 
-Os qualificadores de tipo fornecem uma de duas propriedades a um identificador. O qualificador de tipo **const** declara um objeto como não modificável. O qualificador de tipo `volatile` declara um item cujo valor possa ser alterado legitimamente para algo além do controle do programa em que aparece como um thread de execução simultânea.
+Os qualificadores de tipo fornecem uma de duas propriedades a um identificador. O **`const`** qualificador de tipo declara um objeto que não poderá ser modificado. O **`volatile`** qualificador de tipo declara um item cujo valor pode ser alterado legitimamente por algo além do controle do programa no qual ele aparece, como um thread executando simultaneamente.
 
-Os dois qualificadores de tipo, **const** e `volatile`, podem aparecer apenas uma vez em uma declaração. Os qualificadores de tipo podem aparecer com qualquer especificador de tipo; porém, eles não podem aparecer depois da primeira vírgula em uma declaração de vários itens. Por exemplo, as seguintes declarações são aceitáveis:
+Os dois qualificadores de tipo **`const`** e **`volatile`** podem aparecer apenas uma vez em uma declaração. Os qualificadores de tipo podem aparecer com qualquer especificador de tipo; porém, eles não podem aparecer depois da primeira vírgula em uma declaração de vários itens. Por exemplo, as seguintes declarações são aceitáveis:
 
 ```
 typedef volatile int VI;
@@ -41,7 +41,7 @@ Os qualificadores de tipo são relevantes apenas ao acessar identificadores como
 
 *type-qualifier*: **constvolatile**
 
-Os exemplos abaixo são declarações **const** e `volatile` aceitáveis:
+As seguintes são as **`const`** declarações e legais **`volatile`** :
 
 ```
 int const *p_ci;       /* Pointer to constant int */
@@ -51,17 +51,17 @@ int (*const cp_i);     /* Constant pointer to int */
 int volatile vint;     /* Volatile integer        */
 ```
 
-Se a especificação de um tipo de matriz incluir qualificadores de tipo, o elemento será qualificada, não o tipo de matriz. Se a especificação de tipo de função incluir qualificadores, o comportamento será indefinido. Nem `volatile` nem **const** afetam o alcance de valores ou propriedades aritméticas do objeto.
+Se a especificação de um tipo de matriz incluir qualificadores de tipo, o elemento será qualificada, não o tipo de matriz. Se a especificação de tipo de função incluir qualificadores, o comportamento será indefinido. Nem **`volatile`** **`const`** afeta o intervalo de valores ou Propriedades aritméticas do objeto.
 
-Esta lista descreve como usar **const** e `volatile`.
+Esta lista descreve como usar o **`const`** e o **`volatile`** .
 
-- A palavra-chave **const** pode ser usada para modificar qualquer tipo fundamental ou de agregação, um ponteiro para um objeto de qualquer tipo ou um `typedef`. Se um item for declarado apenas com o qualificador de tipo **const** , seu tipo será levado para ser **const int**. Uma variável **const** pode ser inicializada ou pode ser colocada em uma região somente leitura do armazenamento. A palavra-chave **const** é útil para declarar ponteiros para **const**, pois isso requer que a função não altere o ponteiro de qualquer maneira.
+- A **`const`** palavra-chave pode ser usada para modificar qualquer tipo fundamental ou agregado, ou um ponteiro para um objeto de qualquer tipo, ou um **`typedef`** . Se um item for declarado apenas com o **`const`** qualificador de tipo, seu tipo será usado como **const int**. Uma **`const`** variável pode ser inicializada ou pode ser colocada em uma região somente leitura do armazenamento. A **`const`** palavra-chave é útil para declarar ponteiros **`const`** , pois isso requer que a função não altere o ponteiro de forma alguma.
 
-- O compilador pressupõe que, a qualquer momento no programa, uma variável de `volatile` pode ser acessada por um processo desconhecido que usa ou modifica seu valor. Portanto, independentemente das otimizações especificadas na linha de comando, o código para cada atribuição ou referência a uma variável `volatile` deve ser gerado mesmo se isso não tiver qualquer efeito aparente.
+- O compilador pressupõe que, em qualquer ponto do programa, uma **`volatile`** variável pode ser acessada por um processo desconhecido que usa ou modifica seu valor. Portanto, independentemente das otimizações especificadas na linha de comando, o código para cada atribuição ou referência de uma **`volatile`** variável deve ser gerado mesmo que pareça não ter nenhum efeito.
 
-   Se `volatile` for usado sozinho, `int` será presumido. O especificador de tipo `volatile` pode ser usado para fornecer acesso confiável aos locais especiais de memória. Use `volatile` com objetos de dados que possam ser acessados ou modificados por manipuladores de sinal, por programas de execução simultânea ou por hardware especial, como registros de controle de E/S mapeadas em memória. Você pode declarar uma variável como `volatile` para seu tempo de vida, ou você pode determinar que uma única referência seja `volatile`.
+   Se **`volatile`** for usado sozinho, **`int`** será assumido. O **`volatile`** especificador de tipo pode ser usado para fornecer acesso confiável a locais de memória especiais. Use **`volatile`** com objetos de dados que podem ser acessados ou alterados por manipuladores de sinais, executando programas simultaneamente ou por hardware especial, como registros de controle de e/s mapeados pela memória. Você pode declarar uma variável como **`volatile`** por seu tempo de vida, ou você pode converter uma única referência para ser **`volatile`** .
 
-- Um item pode ser **const** e `volatile` ao mesmo tempo. Nesse caso, ele não pode ser modificado legitimamente por seu próprio programa, mas pode ser modificado por algum processo não simultâneo.
+- Um item pode ser ambos **`const`** e **`volatile`** , nesse caso, o item não pode ser modificado de forma legítima por seu próprio programa, mas pode ser modificado por algum processo assíncrono.
 
 ## <a name="see-also"></a>Confira também
 

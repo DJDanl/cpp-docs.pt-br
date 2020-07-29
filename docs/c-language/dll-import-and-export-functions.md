@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
-ms.openlocfilehash: 8d703045773e4d2c320eaef2aa80c4ce74d23472
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 753a51fa8e2c87b77a54e5e93522e5f11585b610
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234241"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200069"
 ---
 # <a name="dll-import-and-export-functions"></a>Funções de importação e exportação de DLL
 
@@ -22,9 +22,9 @@ ms.locfileid: "62234241"
 
 As informações mais completas e atualizadas sobre este tópico podem ser encontradas em [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-Os modificadores da classe de armazenamento **dllimport** e `dllexport` são extensões específicas da Microsoft para a linguagem C. Esses modificadores definem explicitamente a interface da DLL para o cliente (o arquivo executável ou outra DLL). Declarar funções como `dllexport` elimina a necessidade de um arquivo de definição de módulo (.DEF). Você também pode usar os modificadores **dllimport** e `dllexport` com os dados e objetos.
+Os **`dllimport`** `dllexport` modificadores de classe de armazenamento e são extensões específicas da Microsoft para a linguagem C. Esses modificadores definem explicitamente a interface da DLL para o cliente (o arquivo executável ou outra DLL). Declarar funções como `dllexport` elimina a necessidade de um arquivo de definição de módulo (.DEF). Você também pode usar os **`dllimport`** `dllexport` modificadores e com dados e objetos.
 
-Os modificadores de classe de armazenamento **dllimport** e `dllexport` devem ser usados com a palavra-chave de sintaxe de atributo estendida, `__declspec`, conforme mostrado neste exemplo:
+Os **`dllimport`** `dllexport` modificadores de classe de armazenamento e devem ser usados com a palavra-chave de sintaxe de atributo estendido, **`__declspec`** , conforme mostrado neste exemplo:
 
 ```
 #define DllImport   __declspec( dllimport )

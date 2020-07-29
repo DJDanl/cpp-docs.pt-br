@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749187"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217123"
 ---
 # <a name="conditional-expression-operator"></a>Operador de expressão condicional
 
@@ -37,13 +37,13 @@ O tipo de resultado de uma operação condicional depende do tipo do operando da
 
 - Se a *expression* e a *conditional-expression* tiverem a mesma estrutura, união ou tipo de ponteiro, o tipo de resultado é a mesma estrutura, união ou tipo de ponteiro.
 
-- Se ambos os operandos tiverem o tipo `void`, o resultado tem o tipo `void`.
+- Se ambos os operandos tiverem tipo **`void`** , o resultado terá tipo **`void`** .
 
-- Se qualquer operando for um ponteiro para um objeto de qualquer tipo e o outro operando for um ponteiro para `void`, o ponteiro para o objeto será convertido em um ponteiro para `void` e o resultado será um ponteiro para `void`.
+- Se qualquer operando for um ponteiro para um objeto de qualquer tipo, e o outro operando for um ponteiro para **`void`** , o ponteiro para o objeto será convertido em um ponteiro para **`void`** e o resultado será um ponteiro para **`void`** .
 
 - Se a *expression* ou *conditional-expression* for um ponteiro e o outro operando for uma expressão constante com o valor 0, o tipo de resultado será o tipo de ponteiro.
 
-Na comparação do tipo para ponteiros, qualquer qualificador de tipo (**const** ou `volatile`) no tipo para o qual o ponteiro aponta é insignificante, mas o tipo de resultado herda os qualificadores de ambos os componentes da condicional.
+Na comparação de tipos para ponteiros, qualquer qualificador de tipo ( **`const`** ou **`volatile`** ) no tipo ao qual os pontos apontadores são insignificantes, mas o tipo de resultado herda os qualificadores de ambos os componentes do condicional.
 
 ## <a name="examples"></a>Exemplos
 

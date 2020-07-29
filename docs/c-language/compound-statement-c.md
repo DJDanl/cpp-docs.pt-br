@@ -5,16 +5,16 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93f7fd24049c744874fb0ab3bda37eedef3a139a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312552"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200576"
 ---
 # <a name="compound-statement-c"></a>Instrução composta (C)
 
-Uma instrução composta (também chamada de “bloco”) aparece geralmente como o corpo de uma outra instrução, como a instrução **if**. [Declarações e tipos](../c-language/declarations-and-types.md) descreve o formato e o significado das declarações que podem aparecer no cabeçalho de uma instrução composta.
+Uma instrução composta (também chamada de "bloquear") normalmente aparece como o corpo de outra instrução, como a **`if`** instrução. [Declarações e tipos](../c-language/declarations-and-types.md) descreve o formato e o significado das declarações que podem aparecer no cabeçalho de uma instrução composta.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,11 +31,11 @@ Uma instrução composta (também chamada de “bloco”) aparece geralmente com
 
 Se houver declarações, elas deverão vir antes de todas as instruções. O escopo de cada identificador declarado no início de uma instrução composta estende-se de seu ponto de declaração ao fim do bloco. É visível em todo o bloco a menos que uma declaração do mesmo identificador exista em um bloco interno.
 
-Os identificadores em uma instrução composta são presumidos como **auto**, a menos que declarados explicitamente de outra forma com **register**, **static** ou `extern`, exceto as funções, que só podem ser `extern`. Você pode deixar de fora o especificador `extern` em declarações de função, e a função ainda será `extern`.
+Os identificadores em uma instrução composta são presumidos, **`auto`** a menos que sejam declarados explicitamente de outra forma com **`register`** **`static`** as funções,, ou, **`extern`** exceto, que só podem ser **`extern`** . Você pode deixar o **`extern`** especificador em declarações de função e a função ainda será **`extern`** .
 
-O armazenamento não será alocado e a inicialização não será permitida se uma variável ou função for declarada em uma instrução composta com a classe de armazenamento `extern`. A declaração se refere a uma variável ou função externa definida em outro lugar.
+O armazenamento não é alocado e a inicialização não é permitida se uma variável ou função é declarada em uma instrução composta com classe de armazenamento **`extern`** . A declaração se refere a uma variável ou função externa definida em outro lugar.
 
-Variáveis declaradas em um bloco com a palavra-chave **auto** ou **register** são realocadas e, se necessário, inicializadas cada vez que a instrução composta é inserida. Essas variáveis não são definidas depois que a instrução composta é encerrada. Se uma variável declarada em um bloco tiver o atributo **static**, a variável será inicializada quando a execução do programa iniciar e manterá seu valor ao longo do programa. Consulte [Classes de armazenamento](../c-language/c-storage-classes.md) para obter informações sobre **static**.
+As variáveis declaradas em um bloco com a **`auto`** **`register`** palavra-chave ou são realocadas e, se necessário, são inicializadas sempre que a instrução composta é inserida. Essas variáveis não são definidas depois que a instrução composta é encerrada. Se uma variável declarada dentro de um bloco tiver o **`static`** atributo, a variável será inicializada quando a execução do programa for iniciada e manterá seu valor em todo o programa. Consulte [classes de armazenamento](../c-language/c-storage-classes.md) para obter informações sobre o **`static`** .
 
 Este exemplo ilustra uma instrução composta:
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 039b86eec024daf8e3473bba5d89f190507f3cfd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a2cc8062368b89e38b5f96b3134742123af24310
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335451"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231475"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Dicas para melhorar código crítico em termos de tempo
 
@@ -107,11 +107,11 @@ Há menos alternativas para as pesquisas do que para a classificação. Se o tem
 
 As MFC (Microsoft Foundation Classes) podem simplificar muito a gravação do código. Ao gravar códigos para os quais o tempo é crítico, você deve levar em consideração a sobrecarga inerente a algumas dessas classes. Avalie o código da MFC que seu código com tempo crítico usa para ver se ele atende às suas necessidades de desempenho. A lista a seguir identifica as classes e as funções de MFC que você deve conhecer:
 
-- `CString`O MFC chama a biblioteca de tempo de execução do C para alocar memória para um [CString](../atl-mfc-shared/reference/cstringt-class.md) dinamicamente. Em termos gerais, `CString` é tão eficiente quanto qualquer outra cadeia de caracteres com alocação dinâmica. Da mesma forma que na cadeia de caracteres com alocação dinâmica, há sobrecarga desse tipo de alocação e versão. Geralmente, uma matriz `char` simples na pilha pode ter a mesma finalidade e ser mais rápida. Não use um `CString` para armazenar uma cadeia de caracteres constante. Use `const char *` em vez disso. Qualquer operação executada com um objeto `CString` acarreta alguma sobrecarga. Usar as funções de cadeia de [caracteres](../c-runtime-library/string-manipulation-crt.md) da biblioteca de tempo de execução pode ser mais rápido.
+- `CString`O MFC chama a biblioteca de tempo de execução do C para alocar memória para um [CString](../atl-mfc-shared/reference/cstringt-class.md) dinamicamente. Em termos gerais, `CString` é tão eficiente quanto qualquer outra cadeia de caracteres com alocação dinâmica. Da mesma forma que na cadeia de caracteres com alocação dinâmica, há sobrecarga desse tipo de alocação e versão. Geralmente, uma **`char`** matriz simples na pilha pode atender à mesma finalidade e é mais rápida. Não use um `CString` para armazenar uma cadeia de caracteres constante. Use `const char *` em vez disso. Qualquer operação executada com um objeto `CString` acarreta alguma sobrecarga. Usar as funções de cadeia de [caracteres](../c-runtime-library/string-manipulation-crt.md) da biblioteca de tempo de execução pode ser mais rápido.
 
 - `CArray`Um [CArray](../mfc/reference/carray-class.md) fornece flexibilidade que uma matriz regular não, mas seu programa pode não precisar disso. Se conhecer os limites específicos da matriz, você pode usar uma matriz global fixa. Se usar `CArray`, use `CArray::SetSize` para estabelecer seu tamanho e especificar em quantos elementos ela cresce quando a realocação é necessária. Caso contrário, a adição de elementos pode fazer com que a matriz seja realocada e copiada com frequência, o que é ineficaz e pode fragmentar a memória. Além disso, lembre-se de que se você inserir um item em uma matriz, `CArray` move os itens subsequentes na memória e pode precisar expandir a matriz. Essas ações podem resultar em perdas no cache e falhas de página. Se verificar o código usado pela MFC, você pode ver que é possível gravar códigos mais específicos a seu cenário, para melhorar o desempenho. Como `CArray` é um modelo, você pode fornecer especializações `CArray` para tipos específicos, por exemplo.
 
-- `CList`[CList](../mfc/reference/clist-class.md) é uma lista vinculada dupla, portanto, a inserção de elemento é rápida no cabeçalho, na parte final e em uma`POSITION`posição conhecida () na lista. A verificação de elementos por valor ou índice requer uma pesquisa sequencial, mas esse tipo de pesquisa pode ser lento se a lista for longa. Se seu código não precisar de uma lista vinculada duas vezes, reconsidere o uso de `CList`. Usar uma lista vinculada uma única vez evita a sobrecarga de atualizar um ponteiro adicional para todas as operações, bem como a memória desse ponteiro. Não há muita memória adicional, mas ainda assim ela apresenta uma chance de perdas no cache ou falhas de página.
+- `CList`[CList](../mfc/reference/clist-class.md) é uma lista vinculada dupla, portanto, a inserção de elemento é rápida no cabeçalho, na parte final e em uma posição conhecida ( `POSITION` ) na lista. A verificação de elementos por valor ou índice requer uma pesquisa sequencial, mas esse tipo de pesquisa pode ser lento se a lista for longa. Se seu código não precisar de uma lista vinculada duas vezes, reconsidere o uso de `CList`. Usar uma lista vinculada uma única vez evita a sobrecarga de atualizar um ponteiro adicional para todas as operações, bem como a memória desse ponteiro. Não há muita memória adicional, mas ainda assim ela apresenta uma chance de perdas no cache ou falhas de página.
 
 - `IsKindOf`Essa função pode gerar muitas chamadas e acessar uma grande quantidade de memória em diferentes áreas de dados, levando à localidade inadequada de referência. Ela é útil para compilações de depuração (por exemplo, em uma chamada ASSERT), mas evite usá-la na compilação de versão.
 
@@ -159,4 +159,4 @@ Conjuntos de trabalho menores possibilitam a melhor localidade de referência, r
 
 ## <a name="see-also"></a>Confira também
 
-[Otimizando o código](optimizing-your-code.md)
+[Otimizando seu código](optimizing-your-code.md)

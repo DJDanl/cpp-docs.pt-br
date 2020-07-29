@@ -1,22 +1,22 @@
 ---
 title: Navegação no sistema de arquivos
-description: Como usar as APIs do sistema de arquivos de biblioteca C++ Standard para navegar pelo sistema de arquivos.
+description: Como usar as APIs de sistema de arquivos de biblioteca padrão C++ para navegar pelo sistema de arquivos.
 ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26abe2fad6cacf8959507f15e967278e85254024
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203280"
 ---
 # <a name="file-system-navigation"></a>Navegação no sistema de arquivos
 
-O cabeçalho \<filesystem > implementa a Especificação técnica para o Sistema de arquivos C++ ISO/IEC TS 18822:2015 (rascunho final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) e tem tipos e funções que permitem escrever código independente da plataforma para navegar no sistema de arquivos. Por ser multiplataforma, contém APIs que não são relevantes para sistemas Windows. Por exemplo, `is_fifo(const path&)` sempre retorna **falso** no Windows.
+O \<filesystem> cabeçalho implementa a especificação técnica do sistema de arquivos C++ ISO/IEC TS 18822:2015 (última versão: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) e tem tipos e funções que permitem escrever código independente de plataforma para navegar pelo sistema de arquivos. Como ele é de plataforma cruzada, ele contém APIs que não são relevantes para sistemas Windows. Por exemplo, `is_fifo(const path&)` sempre retorna **`false`** no Windows.
 
 ## <a name="overview"></a>Visão geral
 
-Use as APIs \<filesystem> para as seguintes tarefas:
+Use as \<filesystem> APIs para as seguintes tarefas:
 
 - iterar em arquivos e diretórios em um caminho especificado
 
@@ -34,7 +34,7 @@ Para obter mais informações sobre E/S de arquivos usando a Biblioteca Padrão,
 
 ### <a name="constructing-and-composing-paths"></a>Construindo e compondo caminhos
 
-Caminhos no Windows (desde o XP) são armazenados nativamente em Unicode. A classe [de caminho](../standard-library/path-class.md) faz automaticamente todas as conversões de string necessárias. Ele aceita argumentos de matrizes de caracteres `std::string` `std::wstring` amplas e estreitas, e ambos e tipos formatados como UTF8 ou UTF16. A classe `path` também normaliza automaticamente separadores de caminho. Você pode usar uma única barra invertida como separador de diretório em argumentos do construtor. Este separador permite que você use as mesmas strings para armazenar caminhos em ambientes Windows e UNIX:
+Caminhos no Windows (desde o XP) são armazenados nativamente em Unicode. A classe [path](../standard-library/path-class.md) faz automaticamente todas as conversões de cadeia de caracteres necessárias. Ele aceita argumentos de matrizes de caracteres largas e estreitas, e ambos os `std::string` `std::wstring` tipos formatados como UTF8 ou UTF16. A classe `path` também normaliza automaticamente separadores de caminho. Você pode usar uma única barra invertida como separador de diretório em argumentos do construtor. Esse separador permite que você use as mesmas cadeias de caracteres para armazenar caminhos em ambientes Windows e UNIX:
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -42,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Para concatenar dois caminhos, você pode usar os operadores sobrecarregados `/` e `/=`, que são análogos aos operadores `+` e `+=` em `std::string` e `std::wstring`. O `path` objeto fornecerá convenientemente os separadores se você não o fizer.
+Para concatenar dois caminhos, você pode usar os operadores sobrecarregados `/` e `/=`, que são análogos aos operadores `+` e `+=` em `std::string` e `std::wstring`. O `path` objeto fornecerá convenientemente os separadores, se você não fizer isso.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -51,7 +51,7 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>Examinando caminhos
 
-A classe de caminho tem vários métodos que retornam informações sobre várias partes do próprio caminho. Essas informações são distintas das informações sobre a entidade do sistema de arquivos a que podem se referir. Você pode obter a raiz, o caminho relativo, o nome de arquivo, a extensão de arquivo e muito mais. É possível iterar em um objeto de caminho para examinar todas as pastas na hierarquia. O exemplo a seguir mostra como iterar sobre um objeto de caminho. E, como recuperar informações sobre suas partes.
+A classe Path tem vários métodos que retornam informações sobre várias partes do próprio caminho. Essas informações são diferentes das informações sobre a entidade do sistema de arquivos à qual ela pode se referir. Você pode obter a raiz, o caminho relativo, o nome de arquivo, a extensão de arquivo e muito mais. É possível iterar em um objeto de caminho para examinar todas as pastas na hierarquia. O exemplo a seguir mostra como iterar em um objeto Path. E como recuperar informações sobre suas partes.
 
 ```cpp
 // filesystem_path_example.cpp
@@ -120,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>Comparando caminhos
 
-A classe `path` sobrecarrega os mesmos operadores de comparação que `std::string` e `std::wstring`. Quando você compara dois caminhos, você faz uma comparação de cordas depois que os separadores foram normalizados. Se uma barra (ou barra invertida) estiver faltando, ela não será adicionada, e isso afeta a comparação. O exemplo a seguir demonstra como os valores de caminho são comparados:
+A classe `path` sobrecarrega os mesmos operadores de comparação que `std::string` e `std::wstring`. Ao comparar dois caminhos, você faz uma comparação de cadeia de caracteres após os separadores terem sido normalizados. Se uma barra à direita (ou barra invertida) estiver ausente, ela não será adicionada e afetará a comparação. O exemplo a seguir demonstra como os valores de caminho são comparados:
 
 ```cpp
 wstring ComparePaths()
@@ -155,7 +155,7 @@ Para executar esse código, cole-o no exemplo completo acima, antes de `main` e 
 
 ### <a name="converting-between-path-and-string-types"></a>Convertendo entre tipos de cadeia de caracteres e caminho
 
-Um objeto `path` é conversível implicitamente para `std::wstring` ou `std::string`. Isso significa que você pode passar um caminho para funções como [wofstream::open](../standard-library/basic-ofstream-class.md#open), como mostrado neste exemplo:
+Um objeto `path` é conversível implicitamente para `std::wstring` ou `std::string`. Isso significa que você pode passar um caminho para funções como [wofstream:: Open](../standard-library/basic-ofstream-class.md#open), conforme mostrado neste exemplo:
 
 ```cpp
 // filesystem_path_conversion.cpp
@@ -208,6 +208,6 @@ Press Enter to exit
 
 ## <a name="iterating-directories-and-files"></a>Iterando diretórios e arquivos
 
-O cabeçalho \<filesystem> fornece o tipo [directory_iterator](../standard-library/directory-iterator-class.md) para iterar em diretórios únicos e a classe [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) para iterar recursivamente em um diretório e seus subdiretórios. Depois que você construir um iterador passando para ele um objeto `path`, o iterador apontará para o primeiro directory_entry no caminho. Crie o iterador final chamando o construtor padrão.
+O \<filesystem> cabeçalho fornece o tipo de [directory_iterator](../standard-library/directory-iterator-class.md) para iterar em diretórios únicos e a classe [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) para iterar recursivamente sobre um diretório e seus subdiretórios. Depois que você construir um iterador passando para ele um objeto `path`, o iterador apontará para o primeiro directory_entry no caminho. Crie o iterador final chamando o construtor padrão.
 
-Ao iterar através de um diretório, há vários tipos de itens que você pode descobrir. Esses itens incluem diretórios, arquivos, links simbólicos, arquivos de soquete e outros. O `directory_iterator` retorna seus itens como objetos [directory_entry](../standard-library/directory-entry-class.md).
+Ao iterar por meio de um diretório, há vários tipos de itens que você pode descobrir. Esses itens incluem diretórios, arquivos, links simbólicos, arquivos de soquete e outros. O `directory_iterator` retorna seus itens como objetos [directory_entry](../standard-library/directory-entry-class.md).

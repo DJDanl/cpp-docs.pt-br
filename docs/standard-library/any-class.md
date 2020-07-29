@@ -15,18 +15,18 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 050276da665ab6ed3eb53d9e65bfea06b88bcbea
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268748"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203956"
 ---
 # <a name="any-class"></a>qualquer classe
 
-Armazena uma instância de qualquer tipo que satisfaça os requisitos de construtor ou ele não tem valor, que é chamado o estado da classe de qualquer objeto.
+Armazena uma instância de qualquer tipo que satisfaça os requisitos de construtor ou não tem nenhum valor, que é chamado de estado da classe qualquer objeto.
 
-A instância armazenada é chamada o valor contido. Dois estados são os mesmos se ambos não têm nenhum valor, ou ambos têm um valor e os valores contidos são os mesmos.
+A instância armazenada é chamada de valor contido. Dois Estados são os mesmos se ambos não têm valor ou ambos têm um valor e os valores contidos são os mesmos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,25 +40,25 @@ class any
 
 |||
 |-|-|
-|[any](#any)|Constrói um objeto do tipo `any`.|
+|[outro](#any)|Constrói um objeto do tipo `any`.|
 
 ### <a name="functions"></a>Funções
 
 |||
 |-|-|
-|[emplace](#emplace)|Define um valor de qualquer.|
-|[has_value](#has_value)|Retorna **verdadeira** se qualquer uma tem um valor.|
-|[reset](#reset)|Redefine qualquer.|
-|[swap](#swap)|Troca dois objetos.|
-|[type](#type)|Retorna o tipo any.|
+|[emplace](#emplace)|Define um valor qualquer.|
+|[has_value](#has_value)|Retorna **`true`** se algum tiver um valor.|
+|[reset](#reset)|Redefine um any.|
+|[permuta](#swap)|Troca dois objetos.|
+|[tipo](#type)|Retorna o tipo any.|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[operator=](#op_eq)|Substitui a qualquer um com uma cópia de outro qualquer.|
+|[operador =](#op_eq)|Substitui o qualquer com uma cópia de outro.|
 
-## <a name="any"></a> Qualquer
+## <a name="any"></a><a name="any"></a>outro
 
 Constrói um objeto do tipo `any`. Também inclui um destruidor.
 
@@ -76,9 +76,9 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
-Define um valor de qualquer.
+Define um valor qualquer.
 
 ```cpp
 template <class T, class... Args>
@@ -87,17 +87,17 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a> has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
-Retorna **verdadeira** se qualquer uma tem um valor.
+Retorna **`true`** se algum tiver um valor.
 
 ```cpp
 bool has_value() const noexcept;
 ```
 
-## <a name="op_eq"></a> operador =
+## <a name="operator"></a><a name="op_eq"></a>operador =
 
-Substitui a qualquer um com uma cópia de outro qualquer.
+Substitui o qualquer com uma cópia de outro.
 
 ```cpp
 any& operator=(const any& right);
@@ -106,20 +106,20 @@ template <class T>
     any& operator=(T&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
-A qualquer um que está sendo copiado para quaisquer.
+O que está sendo copiado para o.
 
-## <a name="reset"></a> Redefinir
+## <a name="reset"></a><a name="reset"></a>definido
 
-Redefine qualquer.
+Redefine um any.
 
 ```cpp
 void reset() noexcept;
 ```
 
-## <a name="swap"></a> troca
+## <a name="swap"></a><a name="swap"></a>permuta
 
 Troca dois objetos.
 
@@ -127,7 +127,7 @@ Troca dois objetos.
 void swap(any& rhs) noexcept;
 ```
 
-## <a name="type"></a> Tipo
+## <a name="type"></a>Tipo<a name="type"></a>
 
 Retorna o tipo any.
 

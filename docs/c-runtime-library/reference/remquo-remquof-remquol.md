@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917828"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216785"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -58,7 +58,7 @@ float remquo( float numer, float denom, int* quo ); /* C++ only */
 long double remquo( long double numer, long double denom, int* quo ); /* C++ only */
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *número*<br/>
 O numerador.
@@ -71,13 +71,13 @@ Um ponteiro para um inteiro para armazenar um valor que tem o sinal e magnitude 
 
 ## <a name="return-value"></a>Valor retornado
 
-**remquo** retorna o restante de ponto flutuante do *x* / *y*. Se o valor de *y* for 0,0, **remquo** retornará Nan silencioso. Para obter informações sobre a representação de um NaN silencioso pela família **printf** , consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** retorna o restante de ponto flutuante do *x*  /  *y*. Se o valor de *y* for 0,0, **remquo** retornará Nan silencioso. Para obter informações sobre a representação de um NaN silencioso pela família **printf** , consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **remquo** calcula o restante do ponto flutuante *f* de *x* / *y* de forma que *x* = *i* \* *y* + *f*, onde *eu* seja um inteiro, *f* tenha o mesmo sinal que *x*e o valor absoluto de *f* seja menor que o valor absoluto de *y*.
+A função **remquo** calcula o restante do ponto flutuante *f* de *x*  /  *y* de forma que *x*  =  *i* \* *y*  +  *f*, onde *eu* seja um inteiro, *f* tenha o mesmo sinal que *x*e o valor absoluto de *f* seja menor que o valor absoluto de *y*.
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **remquo** que usam e retornam valores **long** **duplos** **float** ou Long. Em um programa C, **remquo** sempre pega dois argumentos **duplos** e retorna um **Double**.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **remquo** que usam e retornam **`float`** **`long double`** valores. Em um programa C, **remquo** sempre usa dois **`double`** argumentos e retorna um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -116,7 +116,7 @@ Approximate signed quotient is -3
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

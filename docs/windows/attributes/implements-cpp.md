@@ -1,21 +1,21 @@
 ---
-title: implementa (C++ COM atributo)
+title: implementa (atributo COM do C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217227"
 ---
 # <a name="implements-c"></a>implements (C++)
 
-Especifica as interfaces de distribuição que são forçadas para serem membros da coclass IDL.
+Especifica as interfaces de expedição que são forçadas a serem membros da coclasse IDL.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,25 +24,25 @@ Especifica as interfaces de distribuição que são forçadas para serem membros
    interfaces={interfaces}, dispinterfaces={dispinterfaces})]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *interfaces*<br/>
-Lista das interfaces que será um membro da coclass IDL separados por uma vírgula. É um método abreviado para especificar uma única interface **implementa (** *interface_name* **)**.
+Uma lista separada por vírgula das interfaces que serão membros da coclasse IDL. Um método abreviado para especificar uma única interface é **Implements (** *interface_name* **)**.
 
 *dispinterfaces*<br/>
-Lista da dispinterface que será um membro da coclass IDL separados por uma vírgula. É um método abreviado para especificar um único dispinterface **implementa (dispinterfaces =** *dispinterface_name* **)**.
+Uma lista separada por vírgulas da dispinterface que será membro da coclasse IDL. Um método abreviado para especificar uma única dispinterface é **implementações (dispinterfaces =** *dispinterface_name* **)**.
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, apenas interfaces COM que são classes de base a `coclass` são adicionados a coclass IDL. **implementa** permite que você force a outras interfaces ser IDL `coclass` membros.
+Por padrão, somente as interfaces COM que são classes base do `coclass` são adicionadas na coclasse IDL. **Implements** permite que você force outras interfaces a serem `coclass` Membros IDL.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Sim|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
@@ -51,9 +51,9 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir é realizada em três partes: um arquivo. idl e seu arquivo. h associado e um arquivo C++.
+O exemplo a seguir é em três partes: um arquivo. idl e seu arquivo. h associado e um arquivo C++.
 
-Suponha que o seguinte arquivo. idl, que estará disponível para o compilador.
+Suponha o seguinte arquivo. idl, que estará disponível para o compilador.
 
 ```
 // attr_implements.idl
@@ -101,7 +101,7 @@ library odod
 
 ## <a name="example"></a>Exemplo
 
-E o seguinte arquivo. h, que também precisa estar disponível para o compilador.
+E o arquivo. h a seguir, que também precisa estar disponível para o compilador.
 
 ```cpp
 // attr_implements.h
@@ -381,7 +381,7 @@ CBar;
 
 ## <a name="example"></a>Exemplo
 
-O seguinte programa sem implementa `IBar1`, `IBar2`, e `ISna` não estará no `coclass` no IDL gerado.
+No programa a seguir, sem Implements,, `IBar1` `IBar2` e `ISna` não estarão no `coclass` IDL gerado.
 
 ```cpp
 // attr_implements.cpp
@@ -484,7 +484,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Atributos de compilador](compiler-attributes.md)<br/>
+[Atributos do compilador](compiler-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)

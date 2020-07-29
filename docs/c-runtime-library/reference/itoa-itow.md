@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914663"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216928"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -177,7 +177,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
    int radix );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value*<br/>
 Número a ser convertido.
@@ -197,7 +197,7 @@ Cada uma dessas funções retorna um ponteiro para o *buffer*. Nenhum erro é re
 
 ## <a name="remarks"></a>Comentários
 
-As funções **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa** convertem os dígitos do argumento de *valor* fornecido em uma cadeia de caracteres terminada em nulo e armazenam o resultado (até 33 caracteres para **_itoa**, **_ltoa**e **_ultoa**e 65 para **_i64toa** e **_ui64toa**) no *buffer*. Se *Radix* for igual a 10 e o *valor* for negativo, o primeiro caractere da cadeia de caracteres armazenada**-** será o sinal de subtração (). As funções **_itow**, **_ltow**, **_ultow**, **_i64tow**e **_ui64tow** são versões de caractere largo de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa**, respectivamente.
+As funções **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa** convertem os dígitos do argumento de *valor* fornecido em uma cadeia de caracteres terminada em nulo e armazenam o resultado (até 33 caracteres para **_itoa**, **_ltoa**e **_ultoa**e 65 para **_i64toa** e **_ui64toa**) no *buffer*. Se *Radix* for igual a 10 e o *valor* for negativo, o primeiro caractere da cadeia de caracteres armazenada será o sinal de subtração ( **-** ). As funções **_itow**, **_ltow**, **_ultow**, **_i64tow**e **_ui64tow** são versões de caractere largo de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa**, respectivamente.
 
 > [!IMPORTANT]
 > Essas funções podem gravar após o final de um buffer que é muito pequeno. Para evitar saturações de buffer, verifique se o *buffer* é grande o suficiente para manter os dígitos convertidos mais o caractere nulo à direita e um caractere de sinal. O uso indevido dessas funções pode causar sérios problemas de segurança em seu código.
@@ -240,7 +240,7 @@ Para usar uma dessas macros em uma função de conversão de cadeia de caractere
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-Este exemplo usa uma macro Count de conversão para definir um buffer grande o suficiente para conter um longo longo **não assinado** na base 2:
+Este exemplo usa uma macro Count de conversão para definir um buffer grande o suficiente para conter um **`unsigned long long`** na base 2:
 
 ```cpp
 #include <wchar.h>
@@ -349,7 +349,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [_itoa_s, _itow_s funções](itoa-s-itow-s.md)<br/>
