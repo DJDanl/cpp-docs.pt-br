@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914633"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216863"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -60,7 +60,7 @@ float modf( float x, float * intptr );  // C++ only
 long double modf( long double x, long double * intptr );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Valor de ponto flutuante.
@@ -78,7 +78,7 @@ As funções **modf** dividem o valor de ponto flutuante *x* em partes fracioná
 
 o **modf** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **modf** que usam e retornam parâmetros **long** **duplos** **float** ou Long. Em um programa C, **modf** sempre usa dois valores double e retorna um valor Double.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **modf** que usam e retornam **`float`** **`long double`** parâmetros. Em um programa C, **modf** sempre usa dois valores double e retorna um valor Double.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -86,7 +86,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: , \<cmath> ou \<math.h>|
+|**modf**, **modff**, **modfl**|&\<math.h><br /><br /> C++: \<cmath> ou\<math.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -116,6 +116,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>

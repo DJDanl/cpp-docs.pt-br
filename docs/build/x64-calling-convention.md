@@ -3,11 +3,12 @@ title: Convenção de chamada x64
 description: Detalhes da Convenção de chamada x64 padrão.
 ms.date: 07/06/2020
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 9bfecd0fb154658a299d3dac7d9e45398ebe450b
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: b615d2e4473fed1d090b7411211c08b0b824bc8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058627"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200849"
 ---
 # <a name="x64-calling-convention"></a>Convenção de chamada x64
 
@@ -43,7 +44,7 @@ Os argumentos com valor inteiro nas quatro posições mais à esquerda são pass
 
 Todos os argumentos de ponto flutuante e de precisão dupla nos quatro primeiros parâmetros são passados em XMM0-XMM3, dependendo da posição. Os valores de ponto flutuante são colocados apenas no inteiro registra RCX, RDX, R8 e R9 quando há argumentos VarArgs. Para obter detalhes, consulte [varargs](#varargs). Da mesma forma, os registros XMM0-XMM3 são ignorados quando o argumento correspondente é um tipo inteiro ou ponteiro.
 
-[`__m128`](../cpp/m128.md)tipos, matrizes e cadeias de caracteres nunca são passados por valor imediato. Em vez disso, um ponteiro é passado para a memória alocada pelo chamador. Structs e Unions de tamanho 8, 16, 32 ou 64 bits e `__m64` tipos são passados como se fossem inteiros do mesmo tamanho. Structs ou Unions de outros tamanhos são passadas como um ponteiro para a memória alocada pelo chamador. Para esses tipos de agregação passados como um ponteiro, incluindo `__m128` , a memória temporária alocada para o chamador deve ser alinhada em 16 bytes.
+[`__m128`](../cpp/m128.md)tipos, matrizes e cadeias de caracteres nunca são passados por valor imediato. Em vez disso, um ponteiro é passado para a memória alocada pelo chamador. Structs e Unions de tamanho 8, 16, 32 ou 64 bits e **`__m64`** tipos são passados como se fossem inteiros do mesmo tamanho. Structs ou Unions de outros tamanhos são passadas como um ponteiro para a memória alocada pelo chamador. Para esses tipos de agregação passados como um ponteiro, incluindo **`__m128`** , a memória temporária alocada para o chamador deve ser alinhada em 16 bytes.
 
 Funções intrínsecas que não alocam espaço de pilha e não chamam outras funções, às vezes usam outros registros voláteis para passar argumentos de registro adicionais. Essa otimização é possibilitada pela Associação justa entre o compilador e a implementação da função intrínseca.
 
@@ -55,9 +56,9 @@ A tabela a seguir resume como os parâmetros são passados, por tipo e posição
 |-|-|-|-|-|-|
 | ponto flutuante | stack | XMM3 | XMM2 | XMM1 | XMM0 |
 | inteiro | stack | R9 | R8 | RDX | RCX |
-| Agregações (8, 16, 32 ou 64 bits) e`__m64` | stack | R9 | R8 | RDX | RCX |
+| Agregações (8, 16, 32 ou 64 bits) e**`__m64`** | stack | R9 | R8 | RDX | RCX |
 | Outras agregações, como ponteiros | stack | R9 | R8 | RDX | RCX |
-| `__m128`, como um ponteiro | stack | R9 | R8 | RDX | RCX |
+| **`__m128`**, como um ponteiro | stack | R9 | R8 | RDX | RCX |
 
 ### <a name="example-of-argument-passing-1---all-integers"></a>Exemplo de argumento de passagem 1-todos os inteiros
 
@@ -105,7 +106,7 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 ## <a name="return-values"></a>Valores retornados
 
-Um valor de retorno escalar que pode caber em 64 bits, incluindo o `__m64` tipo, é retornado por meio de RAX. Tipos não escalares, incluindo flutuações, duplos e tipos de vetor, como [`__m128`](../cpp/m128.md) , [`__m128i`](../cpp/m128i.md) , [`__m128d`](../cpp/m128d.md) são retornados em XMM0. O estado dos bits não utilizados no valor retornado em RAX ou XMM0 é indefinido.
+Um valor de retorno escalar que pode caber em 64 bits, incluindo o **`__m64`** tipo, é retornado por meio de RAX. Tipos não escalares, incluindo flutuações, duplos e tipos de vetor, como [`__m128`](../cpp/m128.md) , [`__m128i`](../cpp/m128i.md) , [`__m128d`](../cpp/m128d.md) são retornados em XMM0. O estado dos bits não utilizados no valor retornado em RAX ou XMM0 é indefinido.
 
 Tipos definidos pelo usuário podem ser retornados por valor de funções globais e funções membro estáticas. Para retornar um tipo definido pelo usuário por valor em RAX, ele deve ter um comprimento de 1, 2, 4, 8, 16, 32 ou 64 bits. Ele também não deve ter nenhum construtor definido pelo usuário, destruidor ou operador de atribuição de cópia. Ele não pode ter nenhum membro de dados privado ou protegido não estático e nenhum membro de dados não estático do tipo de referência. Ele não pode ter classes base ou funções virtuais. E ele só pode ter membros de dados que também atendam a esses requisitos. (Essa definição é essencialmente a mesma que um tipo de POD C++ 03. Como a definição foi alterada no padrão C++ 11, não recomendamos o uso `std::is_pod` para este teste.) Caso contrário, o chamador deve alocar memória para o valor de retorno e passar um ponteiro para ele como o primeiro argumento. Os argumentos restantes são, então, deslocados um argumento para a direita. O mesmo ponteiro deve ser retornado pelo receptor em RAX.
 
@@ -170,7 +171,7 @@ O estado de registro também inclui a palavra de controle FPU x87. A Convenção
 
 O registro do Word do controle FPU x87 é definido usando os seguintes valores padrão no início da execução do programa:
 
-| Registrar \[ bits] | Setting |
+| Registrar \[ bits] | Configuração |
 |-|-|
 | FPCSR \[ 0:6] | A exceção mascara todos os 1 (todas as exceções mascaradas) |
 | FPCSR \[ 7] | Reservado-0 |
@@ -192,7 +193,7 @@ O estado de registro também inclui MXCSR. A Convenção de chamada divide esse 
 
 A parte não volátil é definida com os seguintes valores padrão no início da execução do programa:
 
-| Registrar \[ bits] | Setting |
+| Registrar \[ bits] | Configuração |
 |-|-|
 | MXCSR \[ 6] | Os desnormals são zeros-0 |
 | MXCSR \[ 7:12] | A exceção mascara todos os 1 (todas as exceções mascaradas) |
@@ -211,10 +212,10 @@ Não faça suposições sobre o estado da parte volátil do registro MXCSR em um
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-Quando você inclui setjmpex. h ou setjmp. h, todas as chamadas para [`setjmp`](../c-runtime-library/reference/setjmp.md) ou [`longjmp`](../c-runtime-library/reference/longjmp.md) resultam em um desenrolamento que invoca destruidores e `__finally` chamadas.  Esse comportamento é diferente do x86, em que incluir setjmp. h resulta em `__finally` cláusulas e destruidores que não estão sendo invocados.
+Quando você inclui setjmpex. h ou setjmp. h, todas as chamadas para [`setjmp`](../c-runtime-library/reference/setjmp.md) ou [`longjmp`](../c-runtime-library/reference/longjmp.md) resultam em um desenrolamento que invoca destruidores e **`__finally`** chamadas.  Esse comportamento é diferente do x86, em que incluir setjmp. h resulta em **`__finally`** cláusulas e destruidores que não estão sendo invocados.
 
 Uma chamada para `setjmp` preserva o ponteiro de pilha atual, registros não voláteis e registros de MXCSR.  As chamadas para `longjmp` retornar ao site de `setjmp` chamada mais recente e redefinem o ponteiro de pilha, os registros não voláteis e os registros de MXCSR, de volta ao estado como preservado pela chamada mais recente `setjmp` .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Convenções de software x64](../build/x64-software-conventions.md)

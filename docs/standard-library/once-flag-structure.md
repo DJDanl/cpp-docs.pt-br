@@ -4,34 +4,34 @@ ms.date: 09/17/2018
 f1_keywords:
 - mutex/std::once_flag
 ms.assetid: 71bfb88d-ca8c-4082-a6e1-ff52151e8629
-ms.openlocfilehash: fb85bd48f9b1ac10ec2fefbc6738aae777f67bcf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 55c3f90f72857a4e4cd3f9075ce5bae10e14d218
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455202"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202721"
 ---
-# <a name="onceflag-structure"></a>Estrutura once_flag
+# <a name="once_flag-structure"></a>Estrutura once_flag
 
-Representa uma **struct** que é usada com a função de modelo [call_once](../standard-library/mutex-functions.md#call_once) para garantir que o código de inicialização seja chamado apenas uma vez, mesmo na presença de vários threads de execução.
+Representa um **`struct`** que é usado com a função de modelo [call_once](../standard-library/mutex-functions.md#call_once) para garantir que o código de inicialização seja chamado apenas uma vez, mesmo na presença de vários threads de execução.
 
 ## <a name="syntax"></a>Sintaxe
 
-struct once_flag { constexpr once_flag() noexcept; };
+struct once_flag {constexpr once_flag () noexcept;};
 
 ## <a name="remarks"></a>Comentários
 
-A `once_flag` **struct** tem apenas um construtor padrão.
+O `once_flag` **`struct`** tem apenas um construtor padrão.
 
 Objetos do tipo `once_flag` podem ser criados, mas não podem ser copiados.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<> mutex
+**Cabeçalho:**\<mutex>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

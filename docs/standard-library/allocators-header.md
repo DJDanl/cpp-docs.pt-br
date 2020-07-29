@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: f981b86ed8f5d3b240d9f02380a603eb4f2605bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623576"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204879"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -80,7 +80,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 aloca nós com `allocator_chunklist` e o filtro de sincronização [sync_per_thread](sync-per-thread-class.md).
 
-Um alocador de blocos é um cache ou um filtro. Um cache é um modelo de classe que usa um argumento do tipo std:: size_t. Ele define um alocador de blocos que aloca e desaloca os blocos de memória de um único tamanho. Ele deve obter a memória usando o operador **New**, mas não precisa fazer uma chamada separada para o operador **New** para cada bloco. Ele pode, por exemplo, subalocar de um bloco maior ou armazenar em cache os blocos desalocados para uma próxima realocação.
+Um alocador de blocos é um cache ou um filtro. Um cache é um modelo de classe que usa um argumento do tipo std:: size_t. Ele define um alocador de blocos que aloca e desaloca os blocos de memória de um único tamanho. Ele deve obter memória usando **`new`** o operador, mas não precisa fazer uma chamada separada para o operador **`new`** para cada bloco. Ele pode, por exemplo, subalocar de um bloco maior ou armazenar em cache os blocos desalocados para uma próxima realocação.
 
 Com um compilador que não pode reassociar o valor do argumento std:: size_t usado quando o modelo foi instanciado não é necessariamente o valor do argumento _Sz passado para as funções membro de um cache, aloque e desaloque.
 
@@ -139,7 +139,7 @@ O modelo de cache `cache_freelist` usa um argumento de classe Max, que determina
 
 ### <a name="classes"></a>Classes
 
-|Class|Descrição|
+|Classe|Descrição|
 |-|-|
 |[allocator_base](allocator-base-class.md)|Define a classe base e as funções comuns necessárias para criar um alocador definido pelo usuário de um filtro de sincronização.|
 |[allocator_chunklist](allocator-chunklist-class.md)|Descreve um objeto que gerencia a alocação de armazenamento e a liberação de objetos usando um cache do tipo [cache_chunklist](cache-chunklist-class.md).|
@@ -168,6 +168,6 @@ O modelo de cache `cache_freelist` usa um argumento de classe Max, que determina
 
 **Namespace:** stdext
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de Arquivos de Cabeçalho](cpp-standard-library-header-files.md)

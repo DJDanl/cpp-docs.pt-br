@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: c3bbb2ec8ce9a09dd17c4744a80913f95d85bd00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a518253c28d89de6eeed51e152e11bfcb8bb969
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376907"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203866"
 ---
 # <a name="back_insert_iterator-class"></a>Classe back_insert_iterator
 
@@ -28,9 +28,9 @@ template <class Container>
 class back_insert_iterator;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Recipiente*\
+*Container*\
 O tipo de contêiner na parte de trás dos elementos a serem inseridos por um `back_insert_iterator`.
 
 ## <a name="remarks"></a>Comentários
@@ -48,23 +48,23 @@ O contêiner deve atender aos requisitos de uma sequência de inserção posteri
 |Nome do tipo|Descrição|
 |-|-|
 |[container_type](#container_type)|Um tipo que fornece um contêiner para `back_insert_iterator`.|
-|[Referência](#reference)|Um tipo que fornece uma referência para `back_insert_iterator`.|
+|[reference](#reference)|Um tipo que fornece uma referência para `back_insert_iterator`.|
 
 ### <a name="operators"></a>Operadores
 
 |Operador|Descrição|
 |-|-|
-|[operador*](#op_star)|Operador de desreferencial usado para \* `i`  =  `x` implementar a expressão de iterator de saída para uma inserção de costas.|
-|[operador++](#op_add_add)|Incrementa o `back_insert_iterator` para o próximo local no qual um valor pode ser armazenado.|
-|[operador=](#op_eq)|O operador de atribuição usado \* `i`  =  `x` para implementar a expressão de iterator de saída para uma inserção de volta.|
+|[operador](#op_star)|Operador de desreferenciação usado para implementar a expressão de iterador \* `i`  =  `x` de saída para uma inserção de retorno.|
+|[operador + +](#op_add_add)|Incrementa o `back_insert_iterator` para o próximo local no qual um valor pode ser armazenado.|
+|[operador =](#op_eq)|Operador de atribuição usado para implementar a expressão de iterador de saída \* `i`  =  `x` para uma inserção de retorno.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: \<iterator>
+**Cabeçalho**:\<iterator>
 
 **Namespace:** std
 
-## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator:back_insert_iterator
+## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator:: back_insert_iterator
 
 Constrói um `back_insert_iterator` que insere elementos depois do último elemento em um contêiner.
 
@@ -72,7 +72,7 @@ Constrói um `back_insert_iterator` que insere elementos depois do último eleme
 explicit back_insert_iterator(Container& _Cont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Cont*\
 O contêiner em que o `back_insert_iterator` deve inserir um elemento.
@@ -129,7 +129,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 ```
 
-## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator:container_type
+## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator:: container_type
 
 Um tipo que fornece um contêiner para `back_insert_iterator`.
 
@@ -183,9 +183,9 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator:operador\*
+## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>operador back_insert_iterator::\*
 
-Operador de desreferencial usado para \* implementar a expressão do iterador *de* = saída i*x*.
+Operador de desreferenciação usado para implementar a expressão de iterador de saída \* *i*  =  *x*.
 
 ```cpp
 back_insert_iterator<Container>& operator*();
@@ -197,7 +197,7 @@ Uma referência ao elemento inserido na parte posterior do contêiner.
 
 ### <a name="remarks"></a>Comentários
 
-Usado para implementar o = **valor**de iter da expressão ** \*** de saída . Se **Iter** for um iterador que trata de um elemento em uma sequência, **\*Iter** = **value** substituirá esse elemento pelo valor e não alterará o número total de elementos na sequência.
+Usado para implementar o valor ** \* ITER**da expressão do iterador de saída  =  **value**. Se **Iter** for um iterador que trata de um elemento em uma sequência, **\*Iter** = **value** substituirá esse elemento pelo valor e não alterará o número total de elementos na sequência.
 
 ### <a name="example"></a>Exemplo
 
@@ -243,7 +243,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator:operador++
+## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator:: operador + +
 
 Incrementa o `back_insert_iterator` para o próximo local no qual um valor pode ser armazenado.
 
@@ -304,7 +304,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator:operador=
+## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator:: Operator =
 
 Anexa ou envia um valor para o back-end de um contêiner.
 
@@ -313,7 +313,7 @@ back_insert_iterator<Container>& operator=(typename Container::const_reference v
 back_insert_iterator<Container>& operator=(typename Container::value_type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Val*\
 O valor a ser inserido no contêiner.
@@ -326,11 +326,11 @@ Uma referência ao último elemento inserido na parte posterior do contêiner.
 
 O primeiro operador membro avalia `Container.push_back( val)`,
 
-em seguida, retorna `*this`. O segundo operador membro avalia
+em seguida, retorna **`*this`** . O segundo operador membro avalia
 
 `container->push_back((typename Container::value_type&&)val)`,
 
-em seguida, retorna `*this`.
+em seguida, retorna **`*this`** .
 
 ### <a name="example"></a>Exemplo
 
@@ -371,7 +371,7 @@ int main( )
 }
 ```
 
-## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator::referência
+## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator:: referência
 
 Um tipo que fornece uma referência para `back_insert_iterator`.
 
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>Confira também
 
-[\<>do tempo](../standard-library/iterator.md)\
-[Segurança do segmento na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

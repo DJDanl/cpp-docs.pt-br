@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957090"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216980"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -73,39 +73,39 @@ long double fminl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O primeiro valor a ser comparado.
 
-*y*<br/>
+*Iar*<br/>
 O segundo valor a ser comparado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se for bem-sucedido, retorna o menor de *x* ou *y*.
 
-|Entrada|Resultado|
+|Entrada|Result|
 |-----------|------------|
-|*x* é Nan|*y*|
+|*x* é Nan|*Iar*|
 |*y* é Nan|*x*|
 |*x* e *y* são NaN|NaN|
 
-A função não faz com que o [_matherr](matherr.md) seja invocado, cause qualquer exceção de ponto flutuante ou altere o valor de **errno**.
+A função não faz com que [_matherr](matherr.md) seja invocado, cause qualquer exceção de ponto flutuante ou altere o valor de **errno**.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Fmin** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **Fmin** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Fmin** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, o **Fmin** sempre pega e retorna um **`double`** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**fmin**, **fminf**, **fminl**|C: \<math.h><br />C++: \<math.h> ou \<cmath>|
+|**Fmin**, **fminf**, **fminl**|&\<math.h><br />C++: \<math.h> ou\<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>

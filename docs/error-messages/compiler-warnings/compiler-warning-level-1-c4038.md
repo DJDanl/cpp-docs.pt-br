@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4038
 ms.assetid: 54c7f4ed-9386-436e-b4be-bf6c338ded64
-ms.openlocfilehash: 23fad530bf0c34e6b4214c6595d3098433335cad
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 76bc29d0a8d2673213f92c591e86e3a8f984d5c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164242"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197144"
 ---
 # <a name="compiler-warning-level-1-c4038"></a>Aviso do compilador (nível 1) C4038
 
 ' Modifier ': modificador de classe de ambiente inválido
 
-Este modificador não pode ser usado para classes com atributos **DllImport** ou [dllexport](../../cpp/dllexport-dllimport.md) .
+Esse modificador não pode ser usado para classes com **`dllimport`** atributos ou [dllexport](../../cpp/dllexport-dllimport.md) .

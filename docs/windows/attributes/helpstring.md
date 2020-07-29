@@ -1,17 +1,17 @@
 ---
-title: HelpString (C++ atributo com)
+title: HelpString (atributo COM do C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 18a8dbea2387224070903aa10c812c9dd079bf96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166959"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217253"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -30,7 +30,7 @@ O texto da cadeia de caracteres da ajuda.
 
 ## <a name="remarks"></a>Comentários
 
-O **helpstring** C++ atributo HelpString tem a mesma funcionalidade que o atributo MIDL [HelpString](/windows/win32/Midl/helpstring) .
+O atributo **HelpString** C++ tem a mesma funcionalidade que o atributo MIDL [HelpString](/windows/win32/Midl/helpstring) .
 
 ## <a name="example"></a>Exemplo
 
@@ -42,19 +42,19 @@ Consulte o exemplo de [DefaultValue](defaultvalue.md) para obter um exemplo de c
 
 |||
 |-|-|
-|**Aplica-se a**|**interface**, **typedef**, **Class**, Method, Property|
+|**Aplica-se a**|**interface**, **`typedef`** , **`class`** , método, Propriedade|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
 [helpcontext](helpcontext.md)

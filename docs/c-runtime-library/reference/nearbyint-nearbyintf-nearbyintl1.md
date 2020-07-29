@@ -37,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914573"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216850"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -61,7 +61,7 @@ float nearbyint( float x ); //C++ only
 long double nearbyint( long double x ); //C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor a ser arredondado.
@@ -84,7 +84,7 @@ A principal diferença entre essa função e [rimir](rint-rintf-rintl.md) é que
 
 Como os valores máximos de ponto flutuante são inteiros exatos, essa função nunca estourará sozinha. Em vez disso, a saída pode estourar o valor retornado, dependendo da versão da função que você usar.
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **nearbyint** que usam e retornam parâmetros **long** **duplos** **float** ou Long. Em um programa C, **nearbyint** sempre usa dois valores double e retorna um valor Double.
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **nearbyint** que usam e retornam **`float`** **`long double`** parâmetros. Em um programa C, **nearbyint** sempre usa dois valores double e retorna um valor Double.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -96,7 +96,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [Suporte matemático e de ponto flutuante](../floating-point-support.md)<br/>

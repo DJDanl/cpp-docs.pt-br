@@ -27,12 +27,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: ab1e172374cd117b07cc62923d291fbd3972882e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b604819391629d057850c17466807e7c329c472d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919444"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198587"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -49,7 +49,7 @@ size_t fwrite(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *completo*<br/>
 Ponteiro para os dados a serem gravados.
@@ -71,7 +71,7 @@ Ponteiro para a estrutura **FILE**.
 
 A função **fwrite** grava até a *contagem* de itens, com *tamanho* de comprimento cada, do *buffer* para o *fluxo*de saída. O ponteiro de arquivo associado ao *fluxo* (se houver) é incrementado pelo número de bytes realmente gravados. Se o *fluxo* for aberto no modo de texto, cada alimentação de linha será substituído por um par de retorno de carro-alimentação de linha. A substituição não interfere no valor retornado.
 
-Quando *o fluxo* é aberto no modo de conversão Unicode — por exemplo, se o *fluxo* for aberto chamando **fopen** e usando um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**— o*buffer* será interpretado como um ponteiro para uma matriz de **wchar_t** que contém dados UTF-16. Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
+Quando *o fluxo* é aberto no modo de conversão Unicode — por exemplo, se o *fluxo* for aberto chamando **fopen** e usando um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**— o*buffer* será interpretado como um ponteiro para uma matriz de **`wchar_t`** que contenha dados UTF-16. Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
 
 Como essa função bloqueia o thread da chamada, ela é thread-safe. Para uma versão sem bloqueio, consulte **_fwrite_nolock**.
 
@@ -89,7 +89,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo de [thread](fread.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_setmode](setmode.md)<br/>

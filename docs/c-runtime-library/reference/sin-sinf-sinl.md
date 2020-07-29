@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216720"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -61,7 +61,7 @@ float sin(float x);  // C++ only
 long double sin(long double x);  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Ângulo em radianos.
@@ -79,7 +79,7 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **sin** sempre usa e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam **`float`** **`long double`** valores. Em um programa C, **sin** sempre usa e retorna **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 

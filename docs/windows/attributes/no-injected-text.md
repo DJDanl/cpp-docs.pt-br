@@ -1,17 +1,17 @@
 ---
-title: no_injected_text (C++ atributo com)
+title: no_injected_text (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7e5c822c45888f41e8dd849f25658d0139e6fda0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166608"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201239"
 ---
 # <a name="no_injected_text"></a>no_injected_text
 
@@ -26,7 +26,7 @@ Impede que o compilador insira código como resultado do uso do atributo.
 ### <a name="parameters"></a>parâmetros
 
 *booleano*<br/>
-Adicional **true** se você quiser que nenhum código seja injetado, **false** para permitir que o código seja injetado. **true** é o padrão.
+(Opcional) **`true`** Se você quiser que nenhum código seja injetado, **`false`** para permitir que o código seja injetado. **`true`** é o padrão.
 
 ## <a name="remarks"></a>Comentários
 
@@ -38,13 +38,13 @@ O uso mais comum do atributo **no_injected_text** C++ é pela opção de compila
 
 |||
 |-|-|
-|**Aplica-se a**|Lugares|
+|**Aplica-se a**|Qualquer lugar|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de compilador](compiler-attributes.md)
+[Atributos do compilador](compiler-attributes.md)

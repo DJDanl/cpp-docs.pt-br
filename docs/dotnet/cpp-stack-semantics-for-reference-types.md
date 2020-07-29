@@ -4,46 +4,46 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 886d0d16d8b81364078db5604ab10d8dcc3fa561
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448074"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197833"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semântica da pilha do C++ para tipos de referência
 
-Antes do Visual Studio 2005, uma instância de um tipo de referência pode apenas ser criada usando o `new` operador, que criou o objeto sobre o lixo coletado heap. No entanto, agora você pode criar uma instância de um tipo de referência usando a mesma sintaxe que você usaria para criar uma instância de um tipo nativo na pilha. Assim, você não precisará usar [gcnew de novo, ref](../extensions/ref-new-gcnew-cpp-component-extensions.md) para criar um objeto do tipo de referência. E quando o objeto sai do escopo, o compilador chama o destruidor do objeto.
+Antes do Visual Studio 2005, uma instância de um tipo de referência poderia ser criada apenas usando o **`new`** operador, que criou o objeto no heap coletado pelo lixo. No entanto, agora você pode criar uma instância de um tipo de referência usando a mesma sintaxe que você usaria para criar uma instância de um tipo nativo na pilha. Portanto, você não precisa usar [ref New, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) para criar um objeto de um tipo de referência. E quando o objeto sai do escopo, o compilador chama o destruidor do objeto.
 
 ## <a name="remarks"></a>Comentários
 
-Quando você cria uma instância de um tipo de referência usando a semântica da pilha, internamente o compilador criar a instância no heap do lixo coletado (usando `gcnew`).
+Quando você cria uma instância de um tipo de referência usando semântica de pilha, o compilador cria internamente a instância no heap coletado pelo lixo (usando **`gcnew`** ).
 
-Quando o tipo de assinatura ou retorno de uma função inclui uma instância de um tipo de referência por valor, a função será marcada nos metadados como que exigem tratamento especial (com modreq). Esse tratamento especial no momento é fornecido apenas pelos clientes do Visual C++; outras linguagens não damos suporte a funções de consumo ou dados que usam tipos de referência criados com a semântica da pilha.
+Quando a assinatura ou o tipo de retorno de uma função inclui uma instância de um tipo de referência por valor, a função será marcada nos metadados como exigindo tratamento especial (com modreq). Atualmente, esse tratamento especial só é fornecido por clientes Visual C++; outros idiomas atualmente não dão suporte ao consumo de funções ou dados que usam tipos de referência criados com semântica de pilha.
 
-Um motivo para usar `gcnew` (alocação dinâmica) em vez de pilha semântica seria se o tipo não tem nenhum destruidor. Além disso, usar tipos de referência criados com a semântica de pilha em assinaturas de função não seria possível se você quiser que suas funções a serem consumidos por idiomas diferentes do Visual C++.
+Um motivo para usar **`gcnew`** (alocação dinâmica) em vez de semântica de pilha seria se o tipo não tiver um destruidor. Além disso, usar tipos de referência criados com semânticas de pilha em assinaturas de função não seria possível se você quiser que suas funções sejam consumidas por idiomas diferentes de Visual C++.
 
-O compilador não gerará um construtor de cópia para um tipo de referência. Portanto, se você definir uma função que usa um tipo de referência por valor na assinatura, você deve definir um construtor de cópia para o tipo de referência. Um construtor de cópia para um tipo de referência tem uma assinatura da seguinte forma: `R(R%){}`.
+O compilador não irá gerar um construtor de cópia para um tipo de referência. Portanto, se você definir uma função que usa um tipo de referência por valor na assinatura, deverá definir um construtor de cópia para o tipo de referência. Um construtor de cópia para um tipo de referência tem uma assinatura do seguinte formato: `R(R%){}` .
 
-O compilador não irá gerar um operador de atribuição padrão para um tipo de referência. Um operador de atribuição permite que você crie um objeto usando a semântica da pilha e inicializá-lo com um objeto existente criado usando a semântica de pilha. Um operador de atribuição para um tipo de referência tem uma assinatura da seguinte forma: `void operator=( R% ){}`.
+O compilador não irá gerar um operador de atribuição padrão para um tipo de referência. Um operador de atribuição permite que você crie um objeto usando semânticas de pilha e inicialize-o com um objeto existente criado usando semântica de pilha. Um operador de atribuição para um tipo de referência tem uma assinatura do seguinte formato: `void operator=( R% ){}` .
 
-Se o destruidor do seu tipo libera recursos críticos e usar semântica de pilha para tipos de referência, você não precisa chamar explicitamente o destruidor (ou chamar `delete`). Para obter mais informações sobre destruidores em tipos de referência, consulte [destruidores e finalizadores em como: Definir e consumir classes e structs (C++ /CLI CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Se o destruidor do tipo liberar recursos críticos e você usar semântica de pilha para tipos de referência, não será necessário chamar explicitamente o destruidor (ou chamar **`delete`** ). Para obter mais informações sobre destruidores em tipos de referência, consulte [destruidores e finalizadores em como: definir e consumir classes e estruturas (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-Um operador de atribuição gerado pelo compilador seguirá as regras padrão de C++ comuns com as seguintes adições:
+Um operador de atribuição gerado pelo compilador seguirá as regras padrão do C++ comuns com as seguintes adições:
 
-- Todos os dados não estáticos membros cujo tipo é um identificador para um tipo de referência será copiada superficial (tratada como um membro de dados não estáticos cujo tipo é um ponteiro).
+- Quaisquer membros de dados não estáticos cujo tipo é um identificador para um tipo de referência serão copiados superficialmente (tratados como um membro de dados não estático cujo tipo é um ponteiro).
 
-- Qualquer membro de dados não estáticos cujo tipo é que um tipo de valor será superficial copiados.
+- Qualquer membro de dados não estático cujo tipo é um tipo de valor será uma cópia superficial.
 
-- Qualquer membro de dados não estáticos cujo tipo é uma instância de um tipo de referência invocará uma chamada para o construtor de cópia do tipo de referência.
+- Qualquer membro de dados não estático cujo tipo é uma instância de um tipo de referência invocará uma chamada para o construtor de cópia do tipo de referência.
 
-O compilador também fornece um `%` operador unário para converter uma instância de um tipo de referência criado usando a semântica de pilha para seu tipo de identificador subjacente.
+O compilador também fornece um `%` operador unário para converter uma instância de um tipo de referência criado usando semântica de pilha para seu tipo de identificador subjacente.
 
-Os seguintes tipos de referência não estão disponíveis para uso com a semântica de pilha:
+Os seguintes tipos de referência não estão disponíveis para uso com semântica de pilha:
 
 - [delegate (Extensões de componentes do C++)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Matrizes](../extensions/arrays-cpp-component-extensions.md)
+- [matrizes](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -51,7 +51,7 @@ Os seguintes tipos de referência não estão disponíveis para uso com a semân
 
 ### <a name="description"></a>Descrição
 
-O exemplo de código a seguir mostra como declarar as instâncias de tipos de referência com a semântica da pilha, como o operador de atribuição e funciona de construtor de cópia e como inicializar uma referência de rastreamento com o tipo de referência criado usando a semântica de pilha.
+O exemplo de código a seguir mostra como declarar instâncias de tipos de referência com semântica de pilha, como o operador de atribuição e o construtor de cópia funcionam e como inicializar uma referência de rastreamento com o tipo de referência criado usando semânticas de pilha.
 
 ### <a name="code"></a>Código
 
@@ -111,6 +111,6 @@ int main() {
 13
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
+[Classes e structs](../extensions/classes-and-structs-cpp-component-extensions.md)

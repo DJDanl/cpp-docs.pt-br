@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: a111e0368ec6f4fcf8e89383b6261ad25ca6ebcf
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4b7dbe8ae1648e4185a9eb1e1142df4a3869aa2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403810"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216538"
 ---
 # <a name="synclockwithstatust-class"></a>Classe SyncLockWithStatusT
 
@@ -33,7 +33,7 @@ template <typename SyncTraits>
 class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *SyncTraits*<br/>
 Um tipo que pode assumir a propriedade exclusiva ou compartilhada de um recurso.
@@ -91,7 +91,7 @@ O oferece suporte à infraestrutura WRL e não se destina a ser usado diretament
 DWORD GetStatus() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O resultado de uma operação de espera no objeto que é baseado na `SyncLockWithStatusT` classe, como um [mutex](mutex-class.md) ou [semáforo](semaphore-class.md). Zero (0) indica que a operação de espera retornou o estado sinalizado; caso contrário, ocorrerá outro Estado, como o valor de tempo limite decorrido.
 
@@ -113,9 +113,9 @@ bool IsLocked() const;
 
 Indica se o `SyncLockWithStatusT` objeto atual possui um recurso; ou seja, o `SyncLockWithStatusT` objeto está *bloqueado*.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se o `SyncLockWithStatusT` objeto estiver bloqueado; caso contrário, **false**.
+**`true`** Se o `SyncLockWithStatusT` objeto estiver bloqueado; caso contrário, **`false`** .
 
 ## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT:: status_
 
@@ -144,7 +144,7 @@ explicit SyncLockWithStatusT(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *outros*<br/>
 Uma referência de rvalue a outro `SyncLockWithStatusT` objeto.
@@ -159,4 +159,4 @@ O valor do membro de dados [status_](#status) do *outro* parâmetro ou do parâm
 
 Inicializa uma nova instância da classe `SyncLockWithStatusT`.
 
-O primeiro construtor inicializa o `SyncLockWithStatusT` objeto atual de outro `SyncLockWithStatusT` especificado pelo parâmetro *outro*e, em seguida, invalida o outro `SyncLockWithStatusT` objeto. O segundo construtor é `protected` e inicializa o objeto atual `SyncLockWithStatusT` para um estado inválido.
+O primeiro construtor inicializa o `SyncLockWithStatusT` objeto atual de outro `SyncLockWithStatusT` especificado pelo parâmetro *outro*e, em seguida, invalida o outro `SyncLockWithStatusT` objeto. O segundo construtor é **`protected`** e inicializa o objeto atual `SyncLockWithStatusT` para um estado inválido.

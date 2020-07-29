@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909950"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231384"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -62,7 +62,7 @@ wchar_t *_wfullpath(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *absPath*<br/>
 Ponteiro para um buffer que contém o nome do caminho absoluto ou completo, ou **NULL**.
@@ -71,7 +71,7 @@ Ponteiro para um buffer que contém o nome do caminho absoluto ou completo, ou *
 Nome de caminho relativo.
 
 *Determinado*<br/>
-Comprimento máximo do buffer de nome de caminho absoluto (*absPath*). Esse comprimento é em bytes para **_fullpath** , mas em caracteres largos (**wchar_t**) para **_wfullpath**.
+Comprimento máximo do buffer de nome de caminho absoluto (*absPath*). Esse comprimento é em bytes para **_fullpath** , mas em caracteres largos ( **`wchar_t`** ) para **_wfullpath**.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -153,7 +153,7 @@ Full path is: C:\Documents and Settings\user\test
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
+[Manipulação de arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md)<br/>
 [_makepath, _wmakepath](makepath-wmakepath.md)<br/>

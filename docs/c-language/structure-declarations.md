@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157782"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217045"
 ---
 # <a name="structure-declarations"></a>Declarações de estrutura
 
@@ -26,8 +26,8 @@ Uma "declaração de estrutura" nomeia um tipo e especifica uma sequência de va
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unida**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaração de struct*<br/>
@@ -53,7 +53,7 @@ Um *identifier* (marca) definido anteriormente pode ser usado para fazer referê
 
 A *struct-declaration-list* especifica os tipos e nomes dos membros da estrutura. Um argumento *struct-declaration-list* contém uma ou mais declarações de variável ou de campo de bits.
 
-Cada variável declarada em *struct-declaration-list* é definida como um membro do tipo de estrutura. As declarações de variáveis em *struct-declaration-list* têm o mesmo formato que outras declarações de variável abordadas nesta seção, com exceção de que as declarações não podem conter inicializadores nem especificadores de classe de armazenamento. Os membros da estrutura podem ter qualquer tipo de variável, exceto o tipo `void`, um tipo incompleto ou um tipo de função.
+Cada variável declarada em *struct-declaration-list* é definida como um membro do tipo de estrutura. As declarações de variáveis em *struct-declaration-list* têm o mesmo formato que outras declarações de variável abordadas nesta seção, com exceção de que as declarações não podem conter inicializadores nem especificadores de classe de armazenamento. Os membros da estrutura podem ter quaisquer tipos de variáveis **`void`** , exceto tipo, um tipo incompleto ou um tipo de função.
 
 Um membro não pode ser declarado para ter o tipo da estrutura em que aparece. Porém, um membro pode ser declarado como um ponteiro para o tipo de estrutura em que aparece, desde que o tipo tenha uma marca. Isso permite criar listas vinculadas de estruturas.
 
@@ -94,7 +94,7 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-A estrutura `employee` tem três membros: `name`, `id` e `class`. O membro `name` é uma matriz de 20 elementos e `id` e `class` são membros simples com o tipo `int` e **long**, respectivamente. O identificador `employee` é o identificador da estrutura.
+A estrutura `employee` tem três membros: `name`, `id` e `class`. O `name` membro é uma matriz de 20 elementos e `id` e `class` são membros simples com **`int`** and **`long`** Type, respectivamente. O identificador `employee` é o identificador da estrutura.
 
 ```C
 struct employee student, faculty, staff;
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-A estrutura `complex` tem dois membros do tipo **float**, `x` e `y`. O tipo de estrutura não tem marcas e, portanto, é não nomeado ou anônimo.
+A `complex` estrutura tem dois membros com o **`float`** tipo `x` e `y` . O tipo de estrutura não tem marcas e, portanto, é não nomeado ou anônimo.
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,9 +120,9 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-Os dois primeiros membros da estrutura são uma variável `char` e um ponteiro para um valor **float**. O terceiro membro, `next`, é declarado como um ponteiro para o tipo de estrutura que está sendo definido (`sample`).
+Os dois primeiros membros da estrutura são uma **`char`** variável e um ponteiro para um **`float`** valor. O terceiro membro, `next`, é declarado como um ponteiro para o tipo de estrutura que está sendo definido (`sample`).
 
-As estruturas anônimas podem ser úteis quando a marca nomeada não é necessária. Esse é o caso quando uma declaração define todas as instâncias da estrutura. Por exemplo: 
+As estruturas anônimas podem ser úteis quando a marca nomeada não é necessária. Esse é o caso quando uma declaração define todas as instâncias da estrutura. Por exemplo:
 
 ```C
 struct
@@ -149,9 +149,9 @@ struct somestruct
 
 O compilador permite uma matriz não dimensionada ou de tamanho zero como o último membro de uma estrutura. Isso poderá ser útil se uma matriz constante tiver tamanhos diferentes quando usada em situações variadas. A declaração de uma estrutura assim é semelhante a esta:
 
-**identificador struct** *identifier* **{** *conjunto de declarações* *tipo* <em>array-Name</em>**\[];};**
+**`struct`***identificador* **{** *conjunto de declarações* *tipo* <em>array-Name</em>** \[ ];};**
 
-As matrizes não dimensionadas só podem aparecer como o último membro de uma estrutura. As estruturas que contêm declarações de matrizes não dimensionadas podem ser aninhadas em outras estruturas, desde que nenhum membro adicional seja declarado em nenhuma das estruturas de inclusão. Matrizes dessas estruturas não são permitidas. O operador `sizeof`, quando aplicado a uma variável desse tipo ou ao próprio tipo, pressupõe 0 como o tamanho da matriz.
+As matrizes não dimensionadas só podem aparecer como o último membro de uma estrutura. As estruturas que contêm declarações de matrizes não dimensionadas podem ser aninhadas em outras estruturas, desde que nenhum membro adicional seja declarado em nenhuma das estruturas de inclusão. Matrizes dessas estruturas não são permitidas. O **`sizeof`** operador, quando aplicado a uma variável desse tipo ou ao próprio tipo, assume 0 para o tamanho da matriz.
 
 Declarações de estruturas também podem ser especificadas sem um declarador quando são membros de outra estrutura ou união. Os nomes de campos são promovidos na estrutura de inclusão. Por exemplo, uma estrutura sem nome tem aparência semelhante a esta:
 
@@ -177,4 +177,4 @@ Consulte [Membros de estruturas e uniões](../c-language/structure-and-union-mem
 
 ## <a name="see-also"></a>Confira também
 
-[Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)
+[Declaradores e declarações de variáveis](../c-language/declarators-and-variable-declarations.md)

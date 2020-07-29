@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: a21708ca090b0db561391308f347d90b77c62645
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623565"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204554"
 ---
 # <a name="ltallocatorsgt-operators"></a>Operadores &lt;alocadores&gt;
 
@@ -38,9 +38,9 @@ bool operator!=(
 |*mantida*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
 |*Certo*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se os objetos alocadores não forem iguais, **false** se eles forem iguais.
+**`true`** Se os objetos de alocador não forem iguais; **`false`** se os objetos de alocador forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -64,9 +64,9 @@ bool operator==(
 |*mantida*|Um dos objetos alocadores a serem testados quanto à igualdade.|
 |*Certo*|Um dos objetos alocadores a serem testados quanto à igualdade.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-**true** se os objetos alocadores forem iguais, **false** se eles não forem iguais.
+**`true`** Se os objetos de alocador forem iguais; **`false`** se os objetos de alocador não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 

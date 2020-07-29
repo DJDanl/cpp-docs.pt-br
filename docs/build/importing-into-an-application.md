@@ -6,20 +6,20 @@ helpviewer_keywords:
 - importing DLLs [C++], applications
 - applications [C++], importing into
 ms.assetid: 9d646466-e12e-4710-8ad9-c819c0375fcc
-ms.openlocfilehash: 8fd15212a1ca5e31198c50ac2626755ac0171ae7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b858b2ed1b07c143ba24bacbc51c6bba50e3860
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188880"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231514"
 ---
 # <a name="importing-into-an-application"></a>Importando para um aplicativo
 
 Você pode importar funções em um aplicativo usando dois métodos:
 
-- Usar as palavras-chave **__declspec (dllimport)** em uma definição de função no aplicativo principal
+- Usar as palavras-chave **`__declspec(dllimport)`** em uma definição de função no aplicativo principal
 
-- Usar um arquivo de definição de módulo (. def) junto com **__declspec (dllimport)**
+- Usar um arquivo de definição de módulo (. def) junto com**`__declspec(dllimport)`**
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 

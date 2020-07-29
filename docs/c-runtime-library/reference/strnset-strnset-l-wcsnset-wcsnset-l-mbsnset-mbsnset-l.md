@@ -73,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb23e63fa5eba7ab79fc45b8c8cb6ea350685a7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231319"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -125,9 +125,9 @@ unsigned char *_mbsnset_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Str*<br/>
+*str*<br/>
 Cadeia de caracteres a ser alterada.
 
 *&*<br/>
@@ -145,7 +145,7 @@ Retorna um ponteiro para a cadeia de caracteres alterada.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_strnset** define, no máximo, a primeira *contagem* de caracteres de *Str* para *c* (convertido em **Char**). Se *Count* for maior que o comprimento de *Str*, o comprimento de *Str* será usado em vez de *Count*.
+A função **_strnset** define, no máximo, a primeira *contagem* de caracteres de *Str* para *c* (convertido em **`char`** ). Se *Count* for maior que o comprimento de *Str*, o comprimento de *Str* será usado em vez de *Count*.
 
 **_wcsnset** e **_mbsnset** são versões de caractere largo e de vários caracteres de **_strnset**. Os argumentos de cadeia de caracteres e o valor de retorno de **_wcsnset** são cadeias de caracteres largos; os de **_mbsnset** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
@@ -201,7 +201,7 @@ After:  **** is a test
 ## <a name="see-also"></a>Confira também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

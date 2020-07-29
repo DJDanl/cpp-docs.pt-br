@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aee23f72c5b0fb955b4dcc76a3f8c51eca7be70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623510"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204229"
 ---
 # <a name="allocators"></a>Alocadores
 
@@ -28,7 +28,7 @@ A Biblioteca Padrão do C++ fornece uma implementação padrão de um alocador. 
 
 ## <a name="writing-your-own-allocator-c11"></a>Criando seu próprio alocador (C++11)
 
-O alocador padrão usa **novo** e **excluir** para alocar e desalocar memória. Se quiser usar um método de alocação de memória diferente, como usar memória compartilhada, você deverá criar seu próprio alocador. Se você estiver usando o C++11 e precisar criar um novo alocador personalizado, crie-o como um alocador mínimo, se possível. Mesmo se você já implementou um alocador do estilo antigo, considere modificá-lo para transformá-lo em um *alocador mínimo* e aproveitar o método `construct()` mais eficiente que será fornecido automaticamente.
+O alocador padrão usa **`new`** e **`delete`** para alocar e desalocar memória. Se quiser usar um método de alocação de memória diferente, como usar memória compartilhada, você deverá criar seu próprio alocador. Se você estiver usando o C++11 e precisar criar um novo alocador personalizado, crie-o como um alocador mínimo, se possível. Mesmo se você já implementou um alocador do estilo antigo, considere modificá-lo para transformá-lo em um *alocador mínimo* e aproveitar o método `construct()` mais eficiente que será fornecido automaticamente.
 
 Um alocador mínimo requer muito menos clichê e permite que você se concentre nas funções de membro `allocate` e `deallocate` que fazem todo o trabalho. Ao criar um alocador mínimo, não implemente nenhum membro, exceto os que são mostrados no exemplo a seguir:
 
@@ -121,6 +121,6 @@ Além disso, qualquer alocador usado com contêineres da Biblioteca Padrão do C
 
 Para obter mais informações sobre esses métodos e definições de tipo, consulte a [Classe allocator](allocator-class.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da biblioteca padrão do C++](cpp-standard-library-reference.md)

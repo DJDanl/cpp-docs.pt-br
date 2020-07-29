@@ -62,12 +62,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: b6d03da446e4a3bae02f662e5b106bd5de534d0a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15a2d86fcaf83c470f52c879ab6fe7525f80aec8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376892"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203943"
 ---
 # <a name="ltatomicgt-functions"></a>Funções &lt;atomic&gt;
 
@@ -102,10 +102,10 @@ inline bool atomic_compare_exchange_strong(
     Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
-Um ponteiro para um objeto *atômico* que armazena um valor do tipo `Ty`.
+*Atom*\
+Um ponteiro para um objeto *atômico* que armazena um valor do tipo `Ty` .
 
 *Exp*\
 Um ponteiro para um valor do tipo `Ty`.
@@ -115,7 +115,7 @@ Um valor do tipo `Ty`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se os valores são iguais, caso contrário **falso**.
+**`true`** Se os valores forem iguais, caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -143,9 +143,9 @@ inline bool atomic_compare_exchange_strong_explicit(
     memory_order Order2) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
 *Exp*\
@@ -154,19 +154,19 @@ Um ponteiro para um valor do tipo `Ty`.
 *Valor*\
 Um valor do tipo `Ty`.
 
-*Ordem1*\
+*Order1*\
 Primeiro argumento [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Ordem2*\
-Segundo argumento `memory_order`. O valor da *Ordem2* não pode ser `memory_order_release` ou `memory_order_acq_rel`, não pode ser mais forte do que o valor da *Ordem1*.
+*Order2*\
+Segundo argumento `memory_order`. O valor de *Order2* não pode ser `memory_order_release` ou `memory_order_acq_rel` não pode ser mais forte que o valor de *Order1*.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se os valores são iguais, caso contrário **falso**.
+**`true`** Se os valores forem iguais, caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
-Uma *operação de comparação e troca atômica* compara o valor armazenado no objeto que é apontado pelo *Átomo* com o valor que é apontado pela *Exp*. Se os valores forem iguais, o valor armazenado no objeto apontado pelo *átomo* `read-modify-write` será substituído por *Valor* usando uma operação e aplicando as restrições de ordem de memória especificadas pela *Ordem1*. Se os valores não forem iguais, a operação substitui o valor apontado pela *Exp* pelo valor armazenado no objeto que é apontado pelo *Átomo* e aplica as restrições de ordem de memória especificadas pela *Ordem2*.
+Uma *operação atômica de comparação e do Exchange* compara o valor armazenado no objeto que é apontado pelo *Atom* em relação ao valor que é apontado por *exp*. Se os valores forem iguais, o valor que é armazenado no objeto que é apontado pelo *Atom* é substituído pelo *valor* usando uma `read-modify-write` operação e aplicando as restrições de ordem de memória que são especificadas por *Order1*. Se os valores não forem iguais, a operação substituirá o valor apontado por *exp* com o valor que é armazenado no objeto que é apontado pelo *Atom* e aplica as restrições de ordem de memória que são especificadas por *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak
 
@@ -186,9 +186,9 @@ inline bool atomic_compare_exchange_strong(
     Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
 *Exp*\
@@ -199,7 +199,7 @@ Um valor do tipo `Ty`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se os valores são iguais, caso contrário **falso**.
+**`true`** Se os valores forem iguais, caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -227,9 +227,9 @@ inline bool atomic_compare_exchange_weak_explicit(
     memory_order Order2) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
 *Exp*\
@@ -238,23 +238,23 @@ Um ponteiro para um valor do tipo `Ty`.
 *Valor*\
 Um valor do tipo `Ty`.
 
-*Ordem1*\
+*Order1*\
 Primeiro argumento [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Ordem2*\
-Segundo argumento `memory_order`. O valor da *Ordem2* não pode ser `memory_order_release` ou `memory_order_acq_rel`, nem pode ser mais forte do que o valor da *Ordem1*.
+*Order2*\
+Segundo argumento `memory_order`. O valor de *Order2* não pode ser `memory_order_release` ou `memory_order_acq_rel` , nem pode ser mais forte que o valor de *Order1*.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se os valores são iguais, caso contrário **falso**.
+**`true`** Se os valores forem iguais, caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
-Tanto os sabores fortes e fracos de uma *operação de comparação atômica quanto de troca* garantem que eles não armazenem o novo valor se os valores esperados e atuais não forem iguais. O sabor forte garante que armazenará o novo valor se os valores esperados e atuais forem iguais. O sabor fraco às vezes pode retornar **falso** e não armazenar o novo valor mesmo que os valores atuais e esperados sejam iguais. Em outras palavras, a função retornará **falsa,** mas um exame posterior do valor esperado pode revelar que ele não mudou e, portanto, deveria ter comparado como igual.
+Os tipos forte e fraco de uma *operação atômica de comparação e de troca* garantem que eles não armazenem o novo valor se os valores esperado e atual não forem iguais. O tipo forte garante que ele armazenará o novo valor se os valores esperados e atuais forem iguais. Às vezes, o tipo fraco pode retornar **`false`** e não armazenar o novo valor, mesmo se os valores atuais e esperados forem iguais. Em outras palavras, a função retornará **`false`** , mas um exame posterior do valor esperado pode revelar que não foi alterado e, portanto, deve ter comparado como igual.
 
 ## <a name="atomic_exchange"></a><a name="atomic_exchange"></a>atomic_exchange
 
-Usa *valor* para substituir o valor armazenado *do Átomo*.
+Usa o *valor* para substituir o valor armazenado de *Atom*.
 
 ```cpp
 template <class T>
@@ -264,9 +264,9 @@ template <class Ty>
 inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
 *Valor*\
@@ -274,15 +274,15 @@ Um valor do tipo `Ty`.
 
 ### <a name="return-value"></a>Valor retornado
 
-O valor armazenado *do Átomo* antes da troca.
+O valor armazenado de *Atom* antes da troca.
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_exchange` função `read-modify-write` realiza uma operação para trocar o valor armazenado `memory_order_seq_cst`no *Átomo* com *valor,* usando o [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+A `atomic_exchange` função executa uma `read-modify-write` operação para trocar o valor que é armazenado em *Atom* com o *valor*, usando o `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a>atomic_exchange_explicit
 
-Substitui o valor armazenado *do Átomo pelo* *Valor*.
+Substitui o valor armazenado de *Atom* por *valor*.
 
 ```cpp
 template <class Ty>
@@ -298,24 +298,24 @@ inline Ty atomic_exchange_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
 *Valor*\
 Um valor do tipo `Ty`.
 
-*Ordem*\
+*Ordene*\
 Uma [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor retornado
 
-O valor armazenado *do Átomo* antes da troca.
+O valor armazenado de *Atom* antes da troca.
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_exchange_explicit` função `read-modify-write` realiza uma operação para trocar o valor armazenado no *Átomo* com *valor,* dentro das restrições de memória especificadas pela *Ordem*.
+A `atomic_exchange_explicit` função executa uma `read-modify-write` operação para trocar o valor que é armazenado em *Atom* com o *valor*, dentro das restrições de memória que são especificadas por *ordem*.
 
 ## <a name="atomic_fetch_add"></a><a name="atomic_fetch_add"></a>atomic_fetch_add
 
@@ -328,9 +328,9 @@ template <class T>
 T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
 
 *Valor*\
@@ -342,9 +342,9 @@ O valor do ponteiro contido pelo objeto atômico imediatamente antes de a opera�
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_add` função `read-modify-write` realiza uma operação para *adicionar* valor atomicamente `memory_order_seq_cst`ao valor armazenado no *Átomo,* usando a restrição [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+A `atomic_fetch_add` função executa uma `read-modify-write` operação para adicionar o *valor* atomicamente ao valor armazenado no *Atom*, usando a `memory_order_seq_cst` restrição [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
-Quando o tipo `atomic_address`atômico é , *O valor* tem tipo `ptrdiff_t` e a operação trata o ponteiro armazenado como um `char *`.
+Quando o tipo atômico é `atomic_address` , *Value* tem tipo `ptrdiff_t` e a operação trata o ponteiro armazenado como um `char *` .
 
 Essa operação também está sobrecarregada para tipos integrais:
 
@@ -372,9 +372,9 @@ T* atomic_fetch_add_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
 
 *Valor*\
@@ -386,7 +386,7 @@ O valor do ponteiro contido pelo objeto atômico imediatamente antes de a opera�
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_add_explicit` função `read-modify-write` realiza uma operação para adicionar atomicamente *valor* ao valor armazenado no `Order` *Átomo,* dentro das [restrições memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas por .
+A `atomic_fetch_add_explicit` função executa uma `read-modify-write` operação para adicionar o *valor* atomicamente ao valor armazenado no *Atom*, dentro das restrições de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas pelo `Order` .
 
 Quando o tipo atômico é `atomic_address`, `Value` tem tipo `ptrdiff_t` e a operação trata o ponteiro armazenado como um `char *`.
 
@@ -415,9 +415,9 @@ template <class T>
 inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
 *Valor*\
@@ -429,7 +429,7 @@ O valor contido pelo objeto atômico imediatamente antes de a operação ter sid
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_and` função `read-modify-write` realiza uma operação para substituir o valor `and` armazenado do *Átomo* por um bitwise de `memory_order_seq_cst` *Valor* e o valor atual que é armazenado no *Átomo,* usando a restrição [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+A `atomic_fetch_and` função executa uma `read-modify-write` operação para substituir o valor armazenado de *Atom* por um valor bit a bit `and` e o valor atual que é armazenado no *Atom*, usando a *Value* `memory_order_seq_cst` restrição [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ## <a name="atomic_fetch_and_explicit"></a><a name="atomic_fetch_and_explicit"></a>atomic_fetch_and_explicit
 
@@ -449,15 +449,15 @@ inline T atomic_fetch_and_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
 *Valor*\
 Um valor do tipo `T`.
 
-*Ordem*\
+*Ordene*\
 Uma [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor retornado
@@ -466,7 +466,7 @@ O valor contido pelo objeto atômico imediatamente antes de a operação ter sid
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_and_explicit` função `read-modify-write` executa uma operação para substituir o `and` valor armazenado do *Átomo* por um bitwise de *Valor* e o valor atual armazenado no *Átomo,* dentro das restrições de memória especificadas pela *Ordem*.
+A `atomic_fetch_and_explicit` função executa uma `read-modify-write` operação para substituir o valor armazenado de *Atom* por um valor bit a bit `and` e o valor atual que é armazenado em *Atom*, dentro das restrições de memória que são especificadas por *Order*. *Value*
 
 ## <a name="atomic_fetch_or"></a><a name="atomic_fetch_or"></a>atomic_fetch_or
 
@@ -479,9 +479,9 @@ template <class T>
 inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
 *Valor*\
@@ -493,7 +493,7 @@ O valor contido pelo objeto atômico imediatamente antes de a operação ter sid
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_or` função `read-modify-write` realiza uma operação para substituir o valor `or` armazenado do *Átomo* por um bitwise de `memory_order_seq_cst` *Valor* e o valor atual que é armazenado no *Átomo,* usando o [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+A `atomic_fetch_or` função executa uma `read-modify-write` operação para substituir o valor armazenado de *Atom* por um valor bit a bit `or` e o valor atual que é armazenado em *Atom*, usando o *Value* `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_or_explicit"></a><a name="atomic_fetch_or_explicit"></a>atomic_fetch_or_explicit
 
@@ -513,15 +513,15 @@ inline T atomic_fetch_or_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
 *Valor*\
 Um valor do tipo `T`.
 
-*Ordem*\
+*Ordene*\
 Uma [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor retornado
@@ -530,7 +530,7 @@ O valor contido pelo objeto atômico imediatamente antes de a operação ter sid
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_or_explicit` função `read-modify-write` executa uma operação para substituir o `or` valor armazenado do *Átomo* por um bitwise de *Valor* e o valor atual armazenado no *Átomo,* dentro das [memory_order](../standard-library/atomic-enums.md#memory_order_enum) restrições especificadas pela *Ordem*.
+A `atomic_fetch_or_explicit` função executa uma `read-modify-write` operação para substituir o valor armazenado de *Atom* por um valor bit a bit `or` e o valor atual que é armazenado em *Atom*, dentro das [memory_order](../standard-library/atomic-enums.md#memory_order_enum) restrições especificadas por *Order*. *Value*
 
 ## <a name="atomic_fetch_sub"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub
 
@@ -548,9 +548,9 @@ T* atomic_fetch_sub(
     ptrdiff_t Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
 
 *Valor*\
@@ -562,9 +562,9 @@ O valor do ponteiro contido pelo objeto atômico imediatamente antes de a opera�
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_sub` função `read-modify-write` realiza uma operação para subtrair atomicamente o `memory_order_seq_cst` *Valor* do valor armazenado no *Átomo,* usando a restrição [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+A `atomic_fetch_sub` função executa uma `read-modify-write` operação para subtrair atomicamente o *valor* do valor armazenado no *Atom*, usando a `memory_order_seq_cst` restrição [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
-Quando o tipo `atomic_address`atômico é , *O valor* tem tipo `ptrdiff_t` e a operação trata o ponteiro armazenado como um `char *`.
+Quando o tipo atômico é `atomic_address` , *Value* tem tipo `ptrdiff_t` e a operação trata o ponteiro armazenado como um `char *` .
 
 Essa operação também está sobrecarregada para tipos integrais:
 
@@ -590,9 +590,9 @@ T* atomic_fetch_sub_explicit(
     ptrdiff_t Value, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
 
 *Valor*\
@@ -604,9 +604,9 @@ O valor do ponteiro contido pelo objeto atômico imediatamente antes de a opera�
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_sub_explicit` função `read-modify-write` realiza uma operação para subtrair atomicamente o *Valor* do valor armazenado `Order`no *Átomo,* dentro das [restrições memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas por .
+A `atomic_fetch_sub_explicit` função executa uma `read-modify-write` operação para subtrair atomicamente o *valor* do valor armazenado no *Atom*, dentro das restrições de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas pelo `Order` .
 
-Quando o tipo `atomic_address`atômico é , *O valor* tem tipo `ptrdiff_t` e a operação trata o ponteiro armazenado como um `char *`.
+Quando o tipo atômico é `atomic_address` , *Value* tem tipo `ptrdiff_t` e a operação trata o ponteiro armazenado como um `char *` .
 
 Essa operação também está sobrecarregada para tipos integrais:
 
@@ -634,9 +634,9 @@ template <class T>
 inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
 *Valor*\
@@ -648,7 +648,7 @@ O valor contido pelo objeto atômico imediatamente antes de a operação ter sid
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_xor` função `read-modify-write` realiza uma operação para substituir o valor `exclusive or` armazenado do *Átomo* por um bitwise de `memory_order_seq_cst` *Valor* e o valor atual que é armazenado no *Átomo,* usando o [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+A `atomic_fetch_xor` função executa uma `read-modify-write` operação para substituir o valor armazenado de *Atom* por um valor bit a bit `exclusive or` e o valor atual que é armazenado em *Atom*, usando o *Value* `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_xor_explicit"></a><a name="atomic_fetch_xor_explicit"></a>atomic_fetch_xor_explicit
 
@@ -668,15 +668,15 @@ inline T atomic_fetch_xor_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
 *Valor*\
 Um valor do tipo `T`.
 
-*Ordem*\
+*Ordene*\
 Uma [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor retornado
@@ -685,77 +685,77 @@ O valor contido pelo objeto atômico imediatamente antes de a operação ter sid
 
 ### <a name="remarks"></a>Comentários
 
-A `atomic_fetch_xor_explicit` função `read-modify-write` executa uma operação para substituir o `exclusive or` valor armazenado do *Átomo* por um bitwise de *Valor* e o valor atual armazenado no *Átomo,* dentro das [memory_order](../standard-library/atomic-enums.md#memory_order_enum) restrições especificadas pela *Ordem*.
+A `atomic_fetch_xor_explicit` função executa uma `read-modify-write` operação para substituir o valor armazenado de *Atom* por um valor bit a bit `exclusive or` e o valor atual que é armazenado em *atom*, dentro das restrições de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas por *Order*. *Value*
 
 ## <a name="atomic_flag_clear"></a><a name="atomic_flag_clear"></a>atomic_flag_clear
 
-Coloca a bandeira **bool** em um objeto `memory_order_seq_cst` [atomic_flag](../standard-library/atomic-flag-structure.md) **falso,** dentro do [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Define o **`bool`** sinalizador em um objeto [atomic_flag](../standard-library/atomic-flag-structure.md) como **`false`** , dentro do `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
 inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bandeira*\
+*Identificar*\
 Um ponteiro para um objeto `atomic_flag`.
 
 ## <a name="atomic_flag_clear_explicit"></a><a name="atomic_flag_clear_explicit"></a>atomic_flag_clear_explicit
 
-Define a bandeira **bool** em um [objeto atomic_flag](../standard-library/atomic-flag-structure.md) **falso,** dentro das restrições [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas.
+Define o **`bool`** sinalizador em um objeto [atomic_flag](../standard-library/atomic-flag-structure.md) como **`false`** , dentro das restrições de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas.
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
 inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bandeira*\
+*Identificar*\
 Um ponteiro para um objeto `atomic_flag`.
 
-*Ordem*\
+*Ordene*\
 Uma [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a><a name="atomic_flag_test_and_set"></a>atomic_flag_test_and_set
 
-Coloca a bandeira **bool** em um [objeto atomic_flag](../standard-library/atomic-flag-structure.md) **verdadeiro,** dentro das restrições do `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Define o **`bool`** sinalizador em um objeto [atomic_flag](../standard-library/atomic-flag-structure.md) como **`true`** , dentro das restrições do `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
 inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bandeira*\
+*Identificar*\
 Um ponteiro para um objeto `atomic_flag`.
 
 ### <a name="return-value"></a>Valor retornado
 
-O valor inicial do *Flag*.
+O valor inicial do *sinalizador*.
 
 ## <a name="atomic_flag_test_and_set_explicit"></a><a name="atomic_flag_test_and_set_explicit"></a>atomic_flag_test_and_set_explicit
 
-Define a bandeira **bool** em um [objeto atomic_flag](../standard-library/atomic-flag-structure.md) **verdadeiro,** dentro das restrições [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas.
+Define o **`bool`** sinalizador em um objeto [atomic_flag](../standard-library/atomic-flag-structure.md) como **`true`** , dentro das restrições de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas.
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
 inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bandeira*\
+*Identificar*\
 Um ponteiro para um objeto `atomic_flag`.
 
-*Ordem*\
+*Ordene*\
 Uma [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor retornado
 
-O valor inicial do *Flag*.
+O valor inicial do *sinalizador*.
 
 ## <a name="atomic_init"></a><a name="atomic_init"></a>atomic_init
 
@@ -768,9 +768,9 @@ template <class Ty>
 inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
 *Valor*\
@@ -791,14 +791,14 @@ template <class T>
 inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se as operações atômicas no *Átomo* são livres de bloqueio; caso contrário, **falso**.
+**`true`** Se as operações atômicas no *Atom* forem sem bloqueio; caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -815,14 +815,14 @@ template <class Ty>
 inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que contém um valor do tipo `Ty`.
 
 ### <a name="return-value"></a>Valor retornado
 
-O valor recuperado que é armazenado no *Átomo*.
+O valor recuperado que é armazenado no *Atom*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -839,17 +839,17 @@ template <class Ty>
 inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que contém um valor do tipo `Ty`.
 
-*Ordem*\
+*Ordene*\
 Uma [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Não use `memory_order_release` nem `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Valor retornado
 
-O valor recuperado que é armazenado no *Átomo*.
+O valor recuperado que é armazenado no *Atom*.
 
 ## <a name="atomic_signal_fence"></a><a name="atomic_signal_fence"></a>atomic_signal_fence
 
@@ -859,14 +859,14 @@ Atua como um *limite* (uma primitiva de sincronização de memória que impõe o
 inline void atomic_signal_fence(memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Ordem*\
+*Ordene*\
 Uma restrição de ordenação de memória que determina o tipo de limite.
 
 ### <a name="remarks"></a>Comentários
 
-O argumento *Ordem* determina o tipo de cerca.
+O argumento *Order* determina o tipo de isolamento.
 
 |||
 |-|-|
@@ -888,9 +888,9 @@ template <class Ty>
 inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto atômico que contém um valor do tipo `Ty`.
 
 *Valor*\
@@ -898,7 +898,7 @@ Um valor do tipo `Ty`.
 
 ### <a name="remarks"></a>Comentários
 
-`atomic_store`armazena *Valor* no objeto que é apontado pelo `memory_order_seq_cst` *Átomo,* dentro [da](../standard-library/atomic-enums.md#memory_order_enum) memory_order restrição.
+`atomic_store`armazena o *valor* no objeto que é apontado pelo *Atom*, dentro da `memory_order_seq_cst` restrição de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a>atomic_store_explicit
 
@@ -918,20 +918,20 @@ inline Ty atomic_store_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Átomo*\
+*Atom*\
 Um ponteiro para um objeto `atomic` que contém um valor do tipo `Ty`.
 
 *Valor*\
 Um valor do tipo `Ty`.
 
-*Ordem*\
+*Ordene*\
 Uma [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Não use `memory_order_consume`, `memory_order_acquire` nem `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Comentários
 
-`atomic_store`armazena *Valor* no objeto que é apontado pelo `memory_order` *Átomo,* dentro do que é especificado pela *Ordem*.
+`atomic_store`armazena o *valor* no objeto que é apontado pelo *Atom*, dentro do `memory_order` que é especificado por *ordem*.
 
 ## <a name="atomic_thread_fence"></a><a name="atomic_thread_fence"></a>atomic_thread_fence
 
@@ -941,14 +941,14 @@ Atua como um *limite* (uma primitiva de sincronização de memória que impõe a
 inline void atomic_thread_fence(memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Ordem*\
+*Ordene*\
 Uma restrição de ordenação de memória que determina o tipo de limite.
 
 ### <a name="remarks"></a>Comentários
 
-O argumento *Ordem* determina o tipo de cerca.
+O argumento *Order* determina o tipo de isolamento.
 
 |||
 |-|-|
@@ -968,15 +968,15 @@ template <class Ty>
 Ty kill_dependency(Ty Arg) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Arg*\
+*ARG*\
 Um valor do tipo `Ty`.
 
 ### <a name="return-value"></a>Valor retornado
 
-O valor de retorno é *Arg*. A avaliação de *Arg* não carrega uma dependência para a chamada de função. Dividindo uma cadeia de dependências possível, a função pode permitir que o compilador gere código mais eficiente.
+O valor de retorno é *ARG*. A avaliação de *ARG* não carrega uma dependência para a chamada de função. Dividindo uma cadeia de dependências possível, a função pode permitir que o compilador gere código mais eficiente.
 
 ## <a name="see-also"></a>Confira também
 
-[\<>atômica](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

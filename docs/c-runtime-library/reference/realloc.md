@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 15c818ee6f70d02fb9b63f12deef6b1bf3698322
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 72c38021452940553bad770160ecc5db7ea546d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917935"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216811"
 ---
 # <a name="realloc"></a>realloc
 
@@ -57,7 +57,7 @@ void *realloc(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *memblock*<br/>
 Ponteiro para o bloco de memória alocado anteriormente.
@@ -67,13 +67,13 @@ Novo tamanho em bytes.
 
 ## <a name="return-value"></a>Valor retornado
 
-**realloc** retorna um ponteiro **void** para o bloco de memória realocado (e possivelmente movido).
+**realloc** retorna um **`void`** ponteiro para o bloco de memória realocado (e possivelmente movido).
 
 Se não houver memória suficiente disponível para expandir o bloco para o tamanho fornecido, o bloco original permanecerá inalterado e será retornado **NULL** .
 
 Se o *tamanho* for zero, o bloco apontado por *memblock* será liberado; o valor de retorno é **NULL**e *memblock* é deixado apontando para um bloco liberado.
 
-O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo diferente de **void**, use uma conversão de tipo no valor de retorno.
+O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo diferente de **`void`** , use uma conversão de tipo no valor de retorno.
 
 ## <a name="remarks"></a>Comentários
 
@@ -83,7 +83,7 @@ O argumento *size* fornece o novo tamanho do bloco, em bytes. O conteúdo do blo
 
 **realloc** define **errno** como **ENOMEM** se a alocação de memória falhar ou se a quantidade de memória solicitada excede **_HEAP_MAXREQ**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realloc** chama **malloc** para usar a função [_set_new_mode](set-new-mode.md) do C++ para definir o novo modo de manipulador. O novo modo de manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, o **malloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando a **realocação** falhar ao alocar memória, **malloc** chame a nova rotina do manipulador da mesma maneira que o **novo** operador faz quando ele falha pelo mesmo motivo. Para substituir o padrão, chame
+**realloc** chama **malloc** para usar a função [_set_new_mode](set-new-mode.md) do C++ para definir o novo modo de manipulador. O novo modo de manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, o **malloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando a **realocação** falhar ao alocar memória, **malloc** chame a nova rotina do manipulador da mesma maneira que o **`new`** operador faz quando ele falha pelo mesmo motivo. Para substituir o padrão, chame
 
 ```C
 _set_new_mode(1);
@@ -93,7 +93,7 @@ no início do seu programa ou vincule com NEWMODE.OBJ (consulte [Opções de vin
 
 Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução do C, a **realocação** é resolvida para [_realloc_dbg](realloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
 
-a **realocação** é marcada `__declspec(noalias)` e `__declspec(restrict)`, o que significa que a função tem a garantia de não modificar variáveis globais e que o ponteiro retornado não tem um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+a **realocação** é marcada `__declspec(noalias)` e `__declspec(restrict)` , o que significa que a função tem a garantia de não modificar variáveis globais e que o ponteiro retornado não tem um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 

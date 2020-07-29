@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914205"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231332"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -103,9 +103,9 @@ size_t _mbsnccnt_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Str*<br/>
+*str*<br/>
 Cadeia de caracteres a ser examinada.
 
 *contagem*<br/>
@@ -116,7 +116,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-**_mbsnbcnt** e **_mbsnbcnt_l** retornam o número de bytes encontrados na primeira *contagem* de caracteres multibyte de *Str*. **_mbsnccnt** e **_mbsnccnt_l** retornam o número de caracteres encontrados na primeira *contagem* de bytes de *Str*. Se for encontrado um caractere nulo antes da conclusão do exame de *Str* , eles retornarão o número de bytes ou caracteres encontrados antes do caractere nulo. Se *Str* consistir em menos de caracteres de *contagem* ou bytes, eles retornarão o número de caracteres ou bytes na cadeia de caracteres. Se *Count* for menor que zero, eles retornarão 0. Em versões anteriores, essas funções tinham um valor de retorno do tipo **int** em vez de **size_t**.
+**_mbsnbcnt** e **_mbsnbcnt_l** retornam o número de bytes encontrados na primeira *contagem* de caracteres multibyte de *Str*. **_mbsnccnt** e **_mbsnccnt_l** retornam o número de caracteres encontrados na primeira *contagem* de bytes de *Str*. Se for encontrado um caractere nulo antes da conclusão do exame de *Str* , eles retornarão o número de bytes ou caracteres encontrados antes do caractere nulo. Se *Str* consistir em menos de caracteres de *contagem* ou bytes, eles retornarão o número de caracteres ou bytes na cadeia de caracteres. Se *Count* for menor que zero, eles retornarão 0. Em versões anteriores, essas funções tinham um valor de retorno do tipo **`int`** em vez de **size_t**.
 
 **_strncnt** retorna o número de caracteres nos primeiros bytes de *contagem* do *Str*de cadeia de caracteres de byte único. **_wcsncnt** retorna o número de caracteres na primeira *contagem* de caracteres do *Seq*de cadeia de caracteres largo.
 
@@ -138,9 +138,9 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
 |**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|N/D|
-|**_wcsncnt**|N/D|N/D|**_mbsnbcnt**|
-|**_wcsncnt**|N/D|N/D|**_mbsnccnt**|
-|N/D|N/D|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_wcsncnt**|n/d|n/d|**_mbsnbcnt**|
+|**_wcsncnt**|n/d|n/d|**_mbsnccnt**|
+|n/d|n/d|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -182,9 +182,9 @@ int main( void )
 The first 10 characters are single-byte.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

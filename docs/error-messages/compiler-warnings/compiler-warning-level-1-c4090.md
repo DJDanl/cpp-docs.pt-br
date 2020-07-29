@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-ms.openlocfilehash: 551309757f5e76e230d0a275da94ac94ec30fb13
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c4cb71355b4f3dca66c56ed4b89012ca9b9e646d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163917"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197040"
 ---
 # <a name="compiler-warning-level-1-c4090"></a>Aviso do compilador (nível 1) C4090
 
@@ -19,9 +19,9 @@ ms.locfileid: "80163917"
 
 Uma variável usada em uma operação é definida com um modificador especificado que impede que ele seja modificado sem detecção pelo compilador. A expressão é compilada sem modificação.
 
-Esse aviso pode ser causado quando um ponteiro para um item **const** ou `volatile` é atribuído a um ponteiro não declarado como apontando para **const** ou `volatile`.
+Esse aviso pode ser causado quando um ponteiro para um **`const`** **`volatile`** item ou é atribuído a um ponteiro não declarado como apontar para **`const`** ou **`volatile`** .
 
-Esse aviso é emitido para programas do C. Em um C++ programa, o compilador emite um erro: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
+Esse aviso é emitido para programas do C. Em um programa C++, o compilador emite um erro: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
 
 O exemplo a seguir gera C4090:
 

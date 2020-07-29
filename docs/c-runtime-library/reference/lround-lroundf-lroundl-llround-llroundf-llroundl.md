@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911358"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216889"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -92,14 +92,14 @@ long long llroundl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor do ponto flutuante a ser arredondado.
 
 ## <a name="return-value"></a>Valor retornado
 
-As **funções Lround** e **llround** retornam o inteiro **longo ou longo Long para** **long** **long** *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
+As funções **Lround** e **llround** retornam o mais próximo **`long`** ou o **`long long`** inteiro a *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -107,7 +107,7 @@ As **funções Lround** e **llround** retornam o inteiro **longo ou longo Long p
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Lround** ou **llround** que levam e retornam valores **float** e **Long** **duplos** . Em um programa C, **Lround** e **llround** sempre assumem e retornam um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Lround** ou **llround** que levam e retornam **`float`** **`long double`** valores. Em um programa C, **Lround** e **llround** sempre pegam e retornam um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -157,7 +157,7 @@ lroundl(-3.500000) is -4
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

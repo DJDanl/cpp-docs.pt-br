@@ -5,16 +5,16 @@ helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: e227f48588c3c4f59c0d0bd28ab16178de159b58
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 77f0a5517cee5e4baeacbbdcae47bdeea2853a97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216629"
 ---
 # <a name="anonymous-class-types"></a>Tipos de classe anônima
 
-As aulas podem ser anônimas — ou seja, podem ser declaradas sem um *identificador*. Isso é útil quando você substitui um nome de classe por um nome **typedef,** como no seguinte:
+As classes podem ser anônimas, ou seja, elas podem ser declaradas sem um *identificador*. Isso é útil quando você substitui um nome de classe por um **`typedef`** nome, como no seguinte:
 
 ```cpp
 typedef struct
@@ -25,7 +25,7 @@ typedef struct
 ```
 
 > [!NOTE]
-> O uso de classes anônimas mostradas no exemplo anterior é útil para preservar a compatibilidade com o código C existente. Em alguns códigos C, o uso de **typedef** em conjunto com estruturas anônimas é prevalente.
+> O uso de classes anônimas mostradas no exemplo anterior é útil para preservar a compatibilidade com o código C existente. Em alguns códigos C, o uso de **`typedef`** em conjunto com estruturas anônimas é predominante.
 
 As classes anônimas também são úteis quando você quer que uma referência a um membro da classe apareça como se não estivesse contida em uma classe separada, como a seguir:
 
@@ -43,21 +43,21 @@ struct PTValue
 PTValue ptv;
 ```
 
-No código anterior, `iValue` pode ser acessado usando o operador de seleção de membros de objeto (**.**) da seguinte forma:
+No código anterior, `iValue` pode ser acessado usando o operador de seleção de membro de objeto (**.**) da seguinte maneira:
 
 ```cpp
 int i = ptv.iValue;
 ```
 
-As classes anônimas estão sujeitas a determinadas restrições. (Para obter mais informações sobre sindicatos anônimos, consulte [Sindicatos](../cpp/unions.md).) Aulas anônimas:
+As classes anônimas estão sujeitas a determinadas restrições. (Para obter mais informações sobre uniões anônimas, consulte [uniões](../cpp/unions.md).) Classes anônimas:
 
 - Não é possível ter um construtor ou um destruidor.
 
-- Não pode ser passado como argumentos para funções (a menos que a verificação de tipo seja derrotada usando elipse).
+- Não pode ser passado como argumentos para funções (a menos que a verificação de tipo seja derrotada usando reticências).
 
 - Não é possível ser retornado como valores de retorno de funções.
 
-## <a name="anonymous-structs"></a>Estruturas anônimas
+## <a name="anonymous-structs"></a>Structs anônimos
 
 **Específico da Microsoft**
 
@@ -92,4 +92,4 @@ int main()
 //Output: 1234567
 ```
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**

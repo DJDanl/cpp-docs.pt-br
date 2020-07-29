@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc2b6d87d6fedf8d36373c901cdb6a6ba8b5f0e7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344935"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231449"
 ---
 # <a name="type-cast-conversions"></a>Conversões de conversão de tipo
 
@@ -23,7 +23,7 @@ Você pode usar conversões de tipos em estilo "cast" para converter tipos expli
 **Sintaxe**
 
 *expressão CAST*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão unário*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expressão CAST* **(***nome-do-tipo***)**      
 
 *nome do tipo*:<br/>
@@ -37,14 +37,14 @@ O *type-name* é um tipo e *cast-expression* é um valor para ser convertido par
 |-----------------------|-----------------------|
 |Tipos integrais|Qualquer tipo de inteiro ou tipo de ponto flutuante, ou ponteiro para um objeto|
 |Ponto flutuante|Qualquer tipo aritmético|
-|Um ponteiro para um objeto ou (**void** <strong>\*</strong>)|Qualquer tipo de inteiro, (**void** <strong>\*</strong>), um ponteiro para um objeto ou um ponteiro de função|
+|Um ponteiro para um objeto ou ( **`void`** <strong>\*</strong> )|Qualquer tipo inteiro, ( **`void`** <strong>\*</strong> ), um ponteiro para um objeto ou um ponteiro de função|
 |Ponteiro de função|Qualquer tipo integral, um ponteiro para um objeto ou um ponteiro de função|
 |Uma estrutura, união ou matriz|Nenhum|
 |Tipo void|Qualquer tipo|
 
-Qualquer identificador pode ser convertido no tipo `void`. No entanto, se o tipo especificado em uma expressão de conversão de tipo não é `void`, o identificador que está sendo convertido nesse tipo não pode ser uma expressão `void`. Qualquer expressão pode ser convertida em `void`, mas uma expressão do tipo `void` não pode ser convertida em nenhum outro tipo. Por exemplo, uma função com o tipo de retorno `void` não pode ter seu retorno convertido em outro tipo.
+Qualquer identificador pode ser convertido para o **`void`** tipo. No entanto, se o tipo especificado em uma expressão de conversão de tipo não for **`void`** , o identificador que está sendo convertido para esse tipo não pode ser uma **`void`** expressão. Qualquer expressão pode ser convertida **`void`** , mas uma expressão do tipo **`void`** não pode ser convertida em nenhum outro tipo. Por exemplo, uma função com **`void`** tipo de retorno não pode ter sua conversão de retorno para outro tipo.
 
-Observe que uma expressão **void** <strong>\*</strong> tem um ponteiro de tipo `void`para, não `void`tipo. Se um objeto é convertido no tipo `void`, a expressão resultante não pode ser atribuída a nenhum item. Do mesmo modo, um objeto de conversão de tipo não é um l-value aceitável; portanto, nenhuma atribuição pode ser feita a um objeto de conversão de tipo.
+Observe que uma **`void`** <strong>\*</strong> expressão tem um ponteiro de tipo para **`void`** , não tipo **`void`** . Se um objeto for convertido para **`void`** o tipo, a expressão resultante não poderá ser atribuída a nenhum item. Do mesmo modo, um objeto de conversão de tipo não é um l-value aceitável; portanto, nenhuma atribuição pode ser feita a um objeto de conversão de tipo.
 
 **Específico da Microsoft**
 
@@ -52,7 +52,7 @@ Uma conversão de tipo pode ser uma expressão l-value, desde que o tamanho do i
 
 **FINAL específico da Microsoft**
 
-Você pode converter uma expressão no tipo `void` com uma conversão em estilo "cast", mas a expressão resultante só pode ser usada onde um valor não seja necessário. Um ponteiro de objeto convertido para **void** <strong>\*</strong> e de volta para o tipo original retornará ao seu valor original.
+Você pode converter uma expressão para tipo **`void`** com uma conversão, mas a expressão resultante só pode ser usada quando um valor não é necessário. Um ponteiro de objeto convertido para **`void`** <strong>\*</strong> e retornado para o tipo original retornará ao seu valor original.
 
 ## <a name="see-also"></a>Confira também
 

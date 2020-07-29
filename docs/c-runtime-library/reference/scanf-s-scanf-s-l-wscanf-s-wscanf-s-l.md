@@ -45,12 +45,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: e869f9e0d4fa87c87878ffea987e4b6d85a75616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8811bd0b6e4009cd6aba570e65d0687fab465614
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948869"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231358"
 ---
 # <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
@@ -79,7 +79,7 @@ int _wscanf_s_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *format*<br/>
 Cadeia de caracteres de controle de formato.
@@ -90,9 +90,9 @@ Argumentos opcionais.
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna o número de campos convertidos e atribuídos com êxito. O valor de retorno não inclui campos que foram lidos, mas não atribuídos. Um valor de retorno de 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro, ou se o caractere de fim de arquivo ou o caractere de fim de cadeia de caracteres for encontrado na primeira tentativa de ler um caractere. Se *Format* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **scanf_s** e **wscanf_s** retornará **EOF** e definir **errno** como **EINVAL**.
+Retorna o número de campos convertidos e atribuídos com êxito. O valor de retorno não inclui campos que foram lidos, mas não atribuídos. Um valor de retorno de 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro, ou se o caractere de fim de arquivo ou o caractere de fim de cadeia de caracteres for encontrado na primeira tentativa de ler um caractere. Se *Format* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **scanf_s** e **wscanf_s** retornar **EOF** e definir **errno** como **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -100,7 +100,7 @@ Para obter mais informações sobre esses e outros códigos de erro, consulte [e
 
 A função **scanf_s** lê dados do fluxo de entrada padrão, **stdin**, e grava-os em *argumento*. Cada *argumento* deve ser um ponteiro para um tipo de variável que corresponde ao especificador de tipo no *formato*. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-**wscanf_s** é uma versão de caractere largo do **scanf_s**; o argumento *Format* para **wscanf_s** é uma cadeia de caracteres largos. **wscanf_s** e **scanf_s** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. Atualmente, o **scanf_s** não dá suporte à entrada de um fluxo Unicode.
+**wscanf_s** é uma versão de caractere largo do **scanf_s**; o argumento de *formato* para **wscanf_s** é uma cadeia de caracteres largos. **wscanf_s** e **scanf_s** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. no momento, o **scanf_s** não dá suporte à entrada de um fluxo Unicode.
 
 As versões dessas funções que têm o sufixo **_L** são idênticas, exceto que usam o parâmetro *locale* em vez da localidade do thread atual.
 
@@ -114,7 +114,7 @@ scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specificat
 O tamanho do buffer inclui o terminal nulo. Você pode usar um campo de especificação de largura para garantir que o token que é lido caiba no buffer. Quando um token é grande demais para caber, nada é gravado no buffer, a menos que haja uma especificação de largura.
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo não **assinado**, não **size_t**. Use uma conversão estática para converter um valor **size_t** para **não assinado** para configurações de Build de 64 bits.
+> O parâmetro Size é do tipo **`unsigned`** , não **size_t**. Use uma conversão estática para converter um valor de **size_t** para **`unsigned`** configurações de Build de 64 bits.
 
 O parâmetro tamanho do buffer descreve o número máximo de caracteres, não bytes. Neste exemplo, a largura do tipo de buffer não corresponde à largura do especificador de formato.
 
@@ -157,7 +157,7 @@ Para obter mais informações, consulte [Campos de especificação de formato: f
 |**scanf_s**, **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**, **_wscanf_s_l**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). O fluxo padrão de **stdin**, **stdout**e **stderr** deve ser redirecionado antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). O fluxo padrão de **stdin**, **stdout**e **stderr** deve ser redirecionado antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -206,12 +206,12 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

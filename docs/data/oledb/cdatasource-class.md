@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 646d4b3548a1c5ee1bdfaf64f7823fa584abaac5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6b5182fdc451217e2f61642f96e77f679c45d37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211998"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216499"
 ---
 # <a name="cdatasource-class"></a>Classe CDataSource
 
@@ -87,7 +87,7 @@ class CDataSource
 |[Getinicializastring](#getinitializationstring)|Recupera a cadeia de caracteres de inicialização da fonte de dados que está aberta no momento.|
 |[GetProperties](#getproperties)|Obtém os valores das propriedades atualmente definidas para a fonte de dados conectada.|
 |[GetProperty](#getproperty)|Obtém o valor de uma única propriedade definida atualmente para a fonte de dados conectada.|
-|[Abrir](#open)|Cria uma conexão com um provedor (fonte de dados) usando um `CLSID`, `ProgID`ou um moniker `CEnumerator` fornecido pelo chamador.|
+|[Abrir](#open)|Cria uma conexão com um provedor (fonte de dados) usando um `CLSID` `ProgID` moniker, ou um `CEnumerator` identificador de origem fornecido pelo chamador.|
 |[OpenFromFileName](#openfromfilename)|Abre uma fonte de dados de um arquivo especificado pelo nome de arquivo fornecido pelo usuário.|
 |[OpenFromInitializationString](#openfrominitializationstring)|Abre a fonte de dados especificada por uma cadeia de caracteres de inicialização.|
 |[OpenWithPromptFileName](#openwithpromptfilename)|Permite que o usuário selecione um arquivo de link de dados criado anteriormente para abrir a fonte de dados correspondente.|
@@ -95,13 +95,13 @@ class CDataSource
 
 ## <a name="remarks"></a>Comentários
 
-Uma ou mais sessões de banco de dados podem ser criadas para uma única conexão. Essas sessões são representadas por `CSession`. Você deve chamar [CDataSource:: Open](../../data/oledb/cdatasource-open.md) para abrir a conexão antes de criar uma sessão com `CSession::Open`.
+Uma ou mais sessões de banco de dados podem ser criadas para uma única conexão. Essas sessões são representadas por `CSession` . Você deve chamar [CDataSource:: Open](../../data/oledb/cdatasource-open.md) para abrir a conexão antes de criar uma sessão com `CSession::Open` .
 
-Para obter um exemplo de como usar `CDataSource`, consulte o exemplo [CatDB](../../overview/visual-cpp-samples.md) .
+Para obter um exemplo de como usar `CDataSource` o, consulte o exemplo [CatDB](../../overview/visual-cpp-samples.md) .
 
 ## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource:: fechar
 
-Fecha a conexão liberando o ponteiro de `m_spInit`.
+Fecha a conexão liberando o `m_spInit` ponteiro.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -126,7 +126,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 fora Um ponteiro para a cadeia de inicialização.
 
 *bIncludePassword*<br/>
-no **true** se a cadeia de caracteres incluir uma senha; caso contrário, **false**.
+[in] **`true`** se a cadeia de caracteres incluir uma senha; caso contrário **`false`** .
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -194,7 +194,7 @@ Para obter várias propriedades, use [GetProperties](../../data/oledb/cdatasourc
 
 ## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource:: abrir
 
-Abre uma conexão com uma fonte de dados usando um `CLSID`, `ProgID`ou `CEnumerator` moniker ou solicita ao usuário uma caixa de diálogo do localizador.
+Abre uma conexão com uma fonte de dados usando `CLSID` um `ProgID` moniker, ou ou `CEnumerator` solicita ao usuário uma caixa de diálogo do localizador.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -239,7 +239,7 @@ HRESULT Open(LPCSTR szProgID,
 
 #### <a name="parameters"></a>parâmetros
 
-*CLSID*<br/>
+*clsid*<br/>
 no O `CLSID` do provedor de dados.
 
 *pPropSet*<br/>
@@ -263,8 +263,8 @@ no Modo de inicialização do banco de dados. Consulte [Propriedades de iniciali
 *szProgID*<br/>
 no Um identificador de programa.
 
-*enumerator*<br/>
-no Um objeto [CEnumerator](../../data/oledb/cenumerator-class.md) usado para obter um moniker para abrir a conexão quando o chamador não especifica um `CLSID`.
+*enumera*<br/>
+no Um objeto [CEnumerator](../../data/oledb/cenumerator-class.md) usado para obter um moniker para abrir a conexão quando o chamador não especifica um `CLSID` .
 
 *hWnd*<br/>
 no Manipule a janela que será o pai da caixa de diálogo. Usar a sobrecarga de função que usa o parâmetro *HWND* invocará automaticamente os componentes de serviço; consulte comentários para obter detalhes.
@@ -278,9 +278,9 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-A sobrecarga do método que usa o parâmetro *HWND* abre um objeto de fonte de dados com os componentes de serviço em oledb32. dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
+A sobrecarga do método que usa o parâmetro *HWND* abre um objeto de fonte de dados com os componentes de serviço no oledb32.dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-As sobrecargas de método que não usam o parâmetro *HWND* abrem um objeto de fonte de dados sem usar os componentes de serviço em oledb32. dll. Um objeto [CDataSource](../../data/oledb/cdatasource-class.md) aberto com essas sobrecargas de função não poderá utilizar nenhuma das funcionalidades dos componentes de serviço.
+As sobrecargas de método que não usam o parâmetro *HWND* abrem um objeto de fonte de dados sem usar os componentes de serviço no oledb32.dll. Um objeto [CDataSource](../../data/oledb/cdatasource-class.md) aberto com essas sobrecargas de função não poderá utilizar nenhuma das funcionalidades dos componentes de serviço.
 
 ### <a name="example"></a>Exemplo
 
@@ -311,7 +311,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método abre um objeto de fonte de dados usando os componentes de serviço em oledb32. dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
+Esse método abre um objeto de fonte de dados usando os componentes de serviço no oledb32.dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
 ## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource::OpenFromInitializationString
 
@@ -330,9 +330,9 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 no A cadeia de inicialização.
 
 *fPromptForInfo*<br/>
-no Se esse argumento for definido como **true**, `OpenFromInitializationString` definirá a propriedade DBPROP_INIT_PROMPT como DBPROMPT_COMPLETEREQUIRED, que especifica que o usuário será solicitado somente se mais informações forem necessárias. Isso é útil para situações em que a cadeia de inicialização especifica um banco de dados que requer uma senha, mas a cadeia de caracteres não contém a senha. O usuário será solicitado a fornecer uma senha (ou qualquer outra informação ausente) ao tentar se conectar ao banco de dados.
+no Se esse argumento for definido como **`true`** , `OpenFromInitializationString` o definirá a propriedade DBPROP_INIT_PROMPT como DBPROMPT_COMPLETEREQUIRED, que especifica que o usuário será solicitado somente se mais informações forem necessárias. Isso é útil para situações em que a cadeia de inicialização especifica um banco de dados que requer uma senha, mas a cadeia de caracteres não contém a senha. O usuário será solicitado a fornecer uma senha (ou qualquer outra informação ausente) ao tentar se conectar ao banco de dados.
 
-O valor padrão é **false**, que especifica que o usuário nunca será solicitado (define DBPROP_INIT_PROMPT como DBPROMPT_NOPROMPT).
+O valor padrão é **`false`** , que especifica que o usuário nunca será solicitado (define DBPROP_INIT_PROMPT como DBPROMPT_NOPROMPT).
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -340,7 +340,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método abre um objeto de fonte de dados usando os componentes de serviço em oledb32. dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante.
+Esse método abre um objeto de fonte de dados usando os componentes de serviço no oledb32.dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante.
 
 ## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource::OpenWithPromptFileName
 
@@ -371,11 +371,11 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método abre um objeto de fonte de dados usando os componentes de serviço em oledb32. dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
+Esse método abre um objeto de fonte de dados usando os componentes de serviço no oledb32.dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
 ## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource::OpenWithServiceComponents
 
-Abre um objeto de fonte de dados usando os componentes de serviço em oledb32. dll.
+Abre um objeto de fonte de dados usando os componentes de serviço no oledb32.dll.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -391,7 +391,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 #### <a name="parameters"></a>parâmetros
 
-*CLSID*<br/>
+*clsid*<br/>
 no O `CLSID` de um provedor de dados.
 
 *szProgID*<br/>
@@ -409,9 +409,9 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método abre um objeto de fonte de dados usando os componentes de serviço em oledb32. dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
+Esse método abre um objeto de fonte de dados usando os componentes de serviço no oledb32.dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
 ## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

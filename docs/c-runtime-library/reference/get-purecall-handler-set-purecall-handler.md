@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955670"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216941"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -58,24 +58,24 @@ _purecall_handler __cdecl _set_purecall_handler(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*function*<br/>
+*função*<br/>
 A função a ser chamada quando uma função virtual pura é chamada. Uma função **_purecall_handler** deve ter um tipo de retorno void.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-O **_purecall_handler**anterior. Retorna **nullptr** se não havia nenhum manipulador anterior.
+O **_purecall_handler**anterior. Retorna **`nullptr`** se não havia nenhum manipulador anterior.
 
 ## <a name="remarks"></a>Comentários
 
-As funções **_get_purecall_handler** e **_set_purecall_handler** são específicas da Microsoft e se aplicam C++ somente ao código.
+As funções **_get_purecall_handler** e **_set_purecall_handler** são específicas da Microsoft e se aplicam somente ao código C++.
 
 Uma chamada para uma função virtual pura é um erro porque não tem nenhuma implementação. Por padrão, o compilador gera código para invocar uma função de manipulador de erro quando uma função virtual pura é chamada, o que encerra o programa. Você pode instalar sua própria função de manipulador de erro para chamadas de função pura virtual, para capturá-las para fins de depuração ou relatório. Para usar seu próprio manipulador de erro, crie uma função que tenha a assinatura **_purecall_handler** e, em seguida, use **_set_purecall_handler** para torná-la o manipulador atual.
 
-Como há apenas um **_purecall_handler** para cada processo, quando você chama **_set_purecall_handler** , ele afeta imediatamente todos os threads. O último chamador em qualquer thread define o manipulador.
+Como há apenas um **_purecall_handler** para cada processo, quando você chama **_set_purecall_handler** ele afeta imediatamente todos os threads. O último chamador em qualquer thread define o manipulador.
 
-Para restaurar o comportamento padrão, chame **_set_purecall_handler** usando um argumento **nullptr** .
+Para restaurar o comportamento padrão, chame **_set_purecall_handler** usando um **`nullptr`** argumento.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -134,7 +134,7 @@ int _tmain(int argc, _TCHAR* argv[])
 In _purecall_handler.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tratamento de erro](../../c-runtime-library/error-handling-crt.md)<br/>
 [_purecall](purecall.md)<br/>

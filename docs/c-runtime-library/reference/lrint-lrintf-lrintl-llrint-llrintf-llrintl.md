@@ -52,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911379"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216902"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -107,7 +107,7 @@ long long int llrintl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 o valor a ser arredondado.
@@ -122,7 +122,7 @@ Se for bem-sucedido, retorna o valor integral arredondado de *x*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lrint** e **llrint** que têm tipos **float** e **Long** **duplos** . Em um programa C, **lrint** e **llrint** sempre levam um **duplo**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lrint** e **llrint** que usam **`float`** e os **`long double`** tipos. Em um programa C, **lrint** e **llrint** sempre tomam um **`double`** .
 
 Se *x* não representar o equivalente de ponto flutuante de um valor integral, essas funções aumentarão **FE_INEXACT**.
 
@@ -138,6 +138,6 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>

@@ -1,17 +1,17 @@
 ---
-title: max_is (C++ atributo com)
+title: max_is (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2e30595a549eefc6a5eecc27be98ded5221dcc16
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166751"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201304"
 ---
 # <a name="max_is"></a>max_is
 
@@ -38,9 +38,9 @@ O atributo **max_is** C++ tem a mesma funcionalidade que o atributo MIDL [max_is
 
 |||
 |-|-|
-|**Aplica-se a**|Campo em **struct** ou **Union**, parâmetro de interface, método de interface|
+|**Aplica-se a**|Campo no **`struct`** ou **`union`** , parâmetro de interface, método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|**size_is**|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
@@ -51,8 +51,8 @@ Consulte [first_is](first-is.md) para obter um exemplo de como especificar uma s
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>

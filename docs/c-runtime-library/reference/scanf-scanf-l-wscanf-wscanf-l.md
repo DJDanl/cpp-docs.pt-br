@@ -43,19 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 62f97c901bc7e6dc34a2db6ad80193cc4aaa986a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079204"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231345"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Lê dados formatados do fluxo de entrada padrão. Versões mais seguras dessas funções estão disponíveis; consulte [scanf_s, scanf_s_l, wscanf_s, wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
 > [!NOTE]
-> No Visual Studio 2015, a `printf` e a `scanf` família de funções foram declaradas como **embutidas** e movidas para os cabeçalhos `<stdio.h>` e `<conio.h>`. Se você estiver migrando um código mais antigo, poderá ver *LNK2019* em conexão com essas funções. Para obter mais informações, consulte o [histórico de alterações Visual C++ 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> No Visual Studio 2015 `printf` , a `scanf` família e as funções foram declaradas como **`inline`** e movidas para os `<stdio.h>` `<conio.h>` cabeçalhos e. Se você estiver migrando um código mais antigo, poderá ver *LNK2019* em conexão com essas funções. Para obter mais informações, consulte [Visual C++ histórico de alterações 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -104,7 +104,7 @@ Para obter informações sobre esses e outros códigos de erro, consulte [_doser
 A função **scanf** lê dados do fluxo de entrada do **stdin** padrão e grava os dados no local fornecido pelo *argumento*. Cada *argumento* deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo no *formato*. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> Ao ler uma cadeia de caracteres com **scanf**, sempre especifique uma largura para o formato **% s** (por exemplo, **"% 32s"** em vez de **"% s"** ); caso contrário, a entrada formatada incorretamente poderá facilmente causar uma saturação do buffer. Como alternativa, considere o uso de [scanf_s, scanf_s_l, wscanf_s, wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
+> Ao ler uma cadeia de caracteres com **scanf**, sempre especifique uma largura para o formato **% s** (por exemplo, **"% 32s"** em vez de **"% s"**); caso contrário, a entrada formatada incorretamente poderá facilmente causar uma saturação do buffer. Como alternativa, considere o uso de [scanf_s, scanf_s_l, wscanf_s, wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
 
 **wscanf** é uma versão de caractere largo do **scanf**; o argumento *Format* para **wscanf** é uma cadeia de caracteres largos. **wscanf** e **scanf** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. Atualmente, o **scanf** não dá suporte à entrada de um fluxo Unicode.
 
@@ -126,7 +126,7 @@ Para obter mais informações, consulte [Campos de especificação de formato �
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -168,10 +168,10 @@ The contents are: 36 92.300003 y n Wide characters
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
