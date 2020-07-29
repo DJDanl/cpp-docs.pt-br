@@ -38,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912756"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232528"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -58,13 +58,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valor retornado
 
-fgetchar retorna o caractere lido como um **int** ou retorna `EOF` para indicar um erro ou fim de arquivo. ** \_** fgetwchar retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna `WEOF` para indicar um erro ou fim de arquivo. ** \_** Para ambas as funções, use **feof** ou **referenciador** para distinguir entre um erro e uma condição de fim de arquivo.
+** \_ fgetchar** retorna o caractere lido como um **`int`** ou retorna `EOF` para indicar um erro ou fim de arquivo. ** \_ fgetwchar** retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna `WEOF` para indicar um erro ou fim de arquivo. Para ambas as funções, use **feof** ou **referenciador** para distinguir entre um erro e uma condição de fim de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
 Essas funções lêem um único caractere de **stdin**. A função, em seguida, incrementa o ponteiro de arquivo associado (se definido) para apontar para o próximo caractere. Se o fluxo estiver no fim do arquivo, o indicador de fim de arquivo para o fluxo será definido.
 
-**_fgetchar** é equivalente a `fgetc( stdin )`. Ele também é equivalente a **GetChar**, mas implementado somente como uma função, em vez de como uma função e uma macro. **_fgetwchar** é a versão de caractere largo do **_fgetchar**.
+**_fgetchar** é equivalente a `fgetc( stdin )` . Ele também é equivalente a **GetChar**, mas implementado somente como uma função, em vez de como uma função e uma macro. **_fgetwchar** é a versão de caractere largo do **_fgetchar**.
 
 Essas funções não são compatíveis com o padrão ANSI.
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954759"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232515"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -68,18 +68,18 @@ int ilogbl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor especificado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, retorna o expoente de base 2 de *x* como um valor **int** assinado.
+Se for bem-sucedido, retorna o expoente de base 2 de *x* como um **`signed int`** valor.
 
-Caso contrário, retorna um dos valores a seguir, definidos em É um dos valores a seguir, definidos em \<math.h>:
+Caso contrário, retorna um dos seguintes valores, definido em \<math.h> :
 
-|Entrada|Resultado|
+|Entrada|Result|
 |-----------|------------|
 |±0|FP_ILOGB0|
 |±inf, ±nan, indefinido|FP_ILOGBNAN|
@@ -88,9 +88,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **ilogb** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **ilogb** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ilogb** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, o **ilogb** sempre pega e retorna um **`double`** .
 
-Chamar essa função é semelhante a chamar a função **logb** equivalente e, em seguida, converter o valor de retorno em **int**.
+Chamar essa função é semelhante a chamar a função **logb** equivalente e, em seguida, converter o valor de retorno para **`int`** .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -98,10 +98,10 @@ Chamar essa função é semelhante a chamar a função **logb** equivalente e, e
 |-------------|--------------|------------------|
 |**ilogb**, **ilogbf**, **ilogbl**|\<math.h>|\<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [frexp](frexp.md)<br/>
 [logb, logbf, logbl, _logb, _logbf](logb-logbf-logbl-logb-logbf.md)<br/>

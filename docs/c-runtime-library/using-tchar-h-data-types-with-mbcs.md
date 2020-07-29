@@ -6,22 +6,22 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: b86cbc6d99cbc6969536934c1583ba5207a53629
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
-ms.translationtype: HT
+ms.openlocfilehash: d1aab0c21a348e4b1a6e85a7adb7f7f8ea1587b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57814430"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188629"
 ---
-# <a name="using-tcharh-data-types-with-mbcs"></a>Usando tipos de dados TCHAR.H com _MBCS
+# <a name="using-tcharh-data-types-with-_mbcs"></a>Usando tipos de dados TCHAR.H com _MBCS
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Como indica a tabela de mapeamentos de rotina de texto genérico (consulte [Mapeamentos de texto genérico](../c-runtime-library/generic-text-mappings.md)), quando a constante de manifesto **_MBCS** é definida, uma determinada rotina de texto genérico mapeia para um dos seguintes tipos de rotinas:
 
 - Uma rotina SBCS que lida com bytes, caracteres e cadeias de caracteres multibyte. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo **char&#42;**. Por exemplo, **_tprintf** mapeia para **printf**. Os argumentos de cadeia de caracteres para **printf** são do tipo **char&#42;**. Se você usar o tipo de dados de texto genérico **_TCHAR** para os tipos de cadeia de caracteres, os tipos de parâmetro formal e real para **printf** corresponderão porque **_TCHAR&#42;** mapeará para **char&#42;**.
 
-- Uma rotina específica do MBCS. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo __unsigned char&#42;__. Por exemplo, **_tcsrev** mapeia para **_mbsrev**, que espera e retorna uma cadeia de caracteres do tipo __unsigned char&#42;__. Novamente, se você usar o tipo de dados de texto genérico **_TCHAR** para seus tipos de cadeia de caracteres, haverá um possível conflito de tipo porque **_TCHAR** mapeará para o tipo **char**.
+- Uma rotina específica do MBCS. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo __unsigned char&#42;__. Por exemplo, **_tcsrev** mapeia para **_mbsrev**, que espera e retorna uma cadeia de caracteres do tipo __unsigned char&#42;__. Novamente, se você usar o **_TCHAR** tipo de dados de texto genérico para os tipos de cadeia de caracteres, haverá um conflito de tipo potencial porque **_TCHAR** mapeia para o tipo **`char`** .
 
 A seguir estão três soluções para evitar esse conflito de tipo (e os avisos do compilador C ou erros do compilador C++ que resultariam):
 
@@ -60,11 +60,11 @@ A seguir estão três soluções para evitar esse conflito de tipo (e os avisos 
    #define _tcschr _mbschr
    ```
 
-Quando você usar essa abordagem, você deve ter cuidado para garantir que os tipos de dados apropriados são usados para argumentos de cadeia de caracteres e valores de retorno de cadeia de caracteres. Você pode usar a conversão de tipo para garantir a correspondência do tipo correto ou pode usar o tipo de dados de texto genérico **_TXCHAR**. **_TXCHAR** mapeia para o tipo **char** no código do SBCS, mas mapeia para o tipo **unsigned char** no código do MBCS. Para saber mais sobre as macros de texto genéricas, veja [Mapeamentos de texto genéricos](../c-runtime-library/generic-text-mappings.md).
+Quando você usar essa abordagem, você deve ter cuidado para garantir que os tipos de dados apropriados são usados para argumentos de cadeia de caracteres e valores de retorno de cadeia de caracteres. Você pode usar a conversão de tipo para garantir a correspondência do tipo correto ou pode usar o tipo de dados de texto genérico **_TXCHAR**. **_TXCHAR** mapeia para tipo **`char`** no código SBCS, mas mapeia para tipo **`unsigned char`** no código MBCS. Para saber mais sobre as macros de texto genéricas, veja [Mapeamentos de texto genéricos](../c-runtime-library/generic-text-mappings.md).
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Internacionalização](../c-runtime-library/internationalization.md)<br/>
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

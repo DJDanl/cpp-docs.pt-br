@@ -26,12 +26,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4604a6e2dfb00502e3c942c9735a077e1632843
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952768"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232489"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -45,35 +45,35 @@ void *_malloca(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *size*<br/>
 Bytes a serem alocados da pilha.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-A rotina **_malloca** retorna um ponteiro **void** para o espaço alocado, que tem a garantia de estar alinhada adequadamente para o armazenamento de qualquer tipo de objeto. Se *size* for 0, **_malloca** aloca um item de comprimento zero e retorna um ponteiro válido para esse item.
+A rotina **_malloca** retorna um **`void`** ponteiro para o espaço alocado, que tem a garantia de estar alinhada adequadamente para o armazenamento de qualquer tipo de objeto. Se o *tamanho* for 0, **_malloca** aloca um item de comprimento zero e retorna um ponteiro válido para esse item.
 
-Se *size* for maior que **_ALLOCA_S_THRESHOLD**, **_malloca** tentará alocar no heap e retornará um ponteiro NULL se o espaço não puder ser alocado. Se *size* for menor ou igual a **_ALLOCA_S_THRESHOLD**, **_malloca** tentará alocar na pilha, e uma exceção de estouro de pilha será gerada se o espaço não puder ser alocado. A exceção de estouro de pilha C++ não é uma exceção; é uma exceção estruturada. Em vez de C++ usar a manipulação de exceções, você deve usar o SEH ( [manipulação de exceção estruturada](../../cpp/structured-exception-handling-c-cpp.md) ) para capturar essa exceção.
+Se o *tamanho* for maior que **_ALLOCA_S_THRESHOLD**, **_malloca** tentará alocar no heap e retornará um ponteiro nulo se o espaço não puder ser alocado. Se *size* for menor ou igual a **_ALLOCA_S_THRESHOLD**, **_malloca** tentar alocar na pilha, e uma exceção de estouro de pilha será gerada se o espaço não puder ser alocado. A exceção de estouro de pilha não é uma exceção de C++; é uma exceção estruturada. Em vez de usar a manipulação de exceções do C++, você deve usar o SEH ( [manipulação de exceção estruturada](../../cpp/structured-exception-handling-c-cpp.md) ) para capturar essa exceção.
 
 ## <a name="remarks"></a>Comentários
 
-**_malloca** aloca os bytes de *tamanho* da pilha de programa ou do heap se a solicitação exceder um determinado tamanho em bytes fornecidos por **_ALLOCA_S_THRESHOLD**. A diferença entre **_malloca** e **_alloca** é que **_alloca** sempre aloca na pilha, independentemente do tamanho. Ao contrário de **_alloca**, que não exige ou permite uma chamada **para livre para liberar a** memória, portanto alocada, **_malloca** requer o uso de [_freea](freea.md) para liberar memória. No modo de depuração, o **_malloca** sempre aloca memória a partir do heap.
+**_malloca** aloca bytes de *tamanho* da pilha de programa ou do heap se a solicitação exceder um determinado tamanho em bytes fornecidos pelo **_ALLOCA_S_THRESHOLD**. A diferença entre **_malloca** e **_alloca** é que **_alloca** sempre se aloca na pilha, independentemente do tamanho. Ao contrário de **_alloca**, que não exige ou permite uma chamada **gratuita** para liberar a memória, portanto alocada, **_malloca** requer o uso de [_freea](freea.md) para liberar memória. No modo de depuração, **_malloca** sempre aloca memória a partir do heap.
 
-Há restrições para chamar explicitamente **_malloca** em um eh (manipulador de exceção). As rotinas de EH executadas em processadores de classe x86 operam em seu próprio quadro de memória: Eles executam suas tarefas no espaço de memória que não se baseiam no local atual do ponteiro de pilha da função de circunscrição. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar explicitamente **_malloca** em qualquer um dos cenários a seguir resulta em falha do programa durante o retorno para a rotina de chamada eh:
+Há restrições para chamar explicitamente **_malloca** em um eh (manipulador de exceção). As rotinas do EH que são executadas em processadores da classe x86 operam em seu próprio quadro de memória: elas realizam suas tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função delimitadora. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar explicitamente **_malloca** em qualquer um dos cenários a seguir resulta em falha do programa durante o retorno para a rotina de chamada eh:
 
-- Expressão de filtro de exceção SEH do Windows NT`_malloca ()` : __except ()
+- Expressão de filtro de exceção SEH do Windows NT: **`__except`** ( `_malloca ()` )
 
-- Manipulador de exceção final de SEH do Windows NT`_malloca ()` : __finally {}
+- Manipulador de exceção final de SEH do Windows NT: **`__finally`** { `_malloca ()` }
 
 - Expressão da cláusula catch do EH de C++
 
-No entanto, o **_malloca** pode ser chamado diretamente de dentro de uma rotina de eh ou de um retorno de chamada fornecido pelo aplicativo que é invocado por um dos cenários de eh listados anteriormente.
+No entanto, **_malloca** pode ser chamado diretamente de dentro de uma rotina de eh ou de um retorno de chamada fornecido pelo aplicativo que é invocado por um dos cenários de eh listados anteriormente.
 
 > [!IMPORTANT]
 > No Windows XP, se **_malloca** for chamado dentro de um bloco try/catch, você deverá chamar [_resetstkoflw](resetstkoflw.md) no bloco catch.
 
-Além das restrições acima, ao usar a opção [/CLR (compilação em tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) , **_malloca** não pode ser usado em blocos **__except** . Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).
+Além das restrições acima, ao usar a opção [/CLR (compilação em tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) , **_malloca** não pode ser usada em **`__except`** blocos. Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -167,15 +167,15 @@ int main()
 1000
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 Enter the number of bytes to allocate using _malloca: 1000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Alocação de Memória](../../c-runtime-library/memory-allocation.md)<br/>
+[Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

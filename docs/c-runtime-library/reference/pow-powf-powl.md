@@ -39,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916793"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232437"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -66,7 +66,7 @@ long double pow( long double x, long double y );  // C++ only
 long double pow( long double x, int y );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Base.
@@ -90,9 +90,9 @@ Retorna o valor de *x*<sup>*y*</sup>. Nenhuma mensagem de erro é impressa em es
 
 o **pow** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Como o C++ permite sobrecarga, você pode chamar qualquer uma das várias sobrecargas de **pow**. Em um programa C, **pow** sempre usa dois valores **Double** e retorna um valor **Double** .
+Como o C++ permite sobrecarga, você pode chamar qualquer uma das várias sobrecargas de **pow**. Em um programa C, **pow** sempre pega dois **`double`** valores e retorna um **`double`** valor.
 
-A sobrecarga `pow(int, int)` não está mais disponível. Se você usar essa sobrecarga, o compilador poderá emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar esse problema, converta o primeiro parâmetro para **Double**, **float**ou **Long** **Double**.
+A sobrecarga `pow(int, int)` não está mais disponível. Se você usar essa sobrecarga, o compilador poderá emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar esse problema, converta o primeiro parâmetro para **`double`** , **`float`** ou **`long double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -127,7 +127,7 @@ int main( void )
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md) <br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md) <br/>
 [sqrt, sqrtf, sqrtl](sqrt-sqrtf-sqrtl.md) <br/>

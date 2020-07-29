@@ -74,18 +74,18 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 9a3a04046d75a4cfdbb50347259820eb727eeb38
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 95d24c9fb9e432a54705a6b8f9fa7638affad2d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813573"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195090"
 ---
 # <a name="casyncsocket-class"></a>Classe CAsyncSocket
 
 Representa um soquete do Windows — um ponto de extremidade de comunicação de rede.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 ```
 class CAsyncSocket : public CObject
@@ -95,13 +95,13 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAsyncSocket::CAsyncSocket](#casyncsocket)|Constrói um objeto `CAsyncSocket`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAsyncSocket:: aceitar](#accept)|Aceita uma conexão no soquete.|
 |[CAsyncSocket::AsyncSelect](#asyncselect)|Solicita notificação de eventos para o soquete.|
@@ -133,7 +133,7 @@ class CAsyncSocket : public CObject
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAsyncSocket:: OnAccept](#onaccept)|Notifica um soquete de escuta de que ele pode aceitar solicitações de conexão pendentes chamando `Accept` .|
 |[CAsyncSocket:: fechamento](#onclose)|Notifica um soquete de que o Soquete conectado a ele foi fechado.|
@@ -144,14 +144,14 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAsyncSocket:: Operator =](#operator_eq)|Atribui um novo valor a um `CAsyncSocket` objeto.|
 |[SOQUETE CAsyncSocket:: Operator](#operator_socket)|Use esse operador para recuperar o identificador de soquete do `CAsyncSocket` objeto.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CAsyncSocket:: m_hSocket](#m_hsocket)|Indica o identificador de soquete anexado a este `CAsyncSocket` objeto.|
 
@@ -189,7 +189,7 @@ virtual BOOL Accept(
     int* lpSockAddrLen = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rConnectedSocket*<br/>
 Uma referência que identifica um novo soquete que está disponível para conexão.
@@ -200,7 +200,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *lpSockAddrLen*<br/>
 Um ponteiro para o comprimento do endereço em *lpSockAddr* em bytes. O *lpSockAddrLen* é um parâmetro de resultado de valor: inicialmente, ele deve conter a quantidade de espaço apontada por *lpSockAddr*; em retorno, ele conterá o comprimento real (em bytes) do endereço retornado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -238,7 +238,7 @@ Chame essa função de membro para solicitar notificação de eventos para um so
 BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lEvent*<br/>
 Um bitmask que especifica uma combinação de eventos de rede em que o aplicativo está interessado.
@@ -255,7 +255,7 @@ Um bitmask que especifica uma combinação de eventos de rede em que o aplicativ
 
 - FD_CLOSE deseja receber a notificação quando um soquete tiver sido fechado por um par.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -280,7 +280,7 @@ BOOL Attach(
     SOCKET hSocket, long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hSocket*<br/>
 Contém um identificador para um soquete.
@@ -300,7 +300,7 @@ Um bitmask que especifica uma combinação de eventos de rede em que o aplicativ
 
 - FD_CLOSE deseja receber a notificação quando um soquete tiver sido fechado por um par.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida.
 
@@ -322,7 +322,7 @@ BOOL Bind (
     int nSockAddrLen);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSocketPort*<br/>
 A porta que identifica o aplicativo de soquete.
@@ -336,7 +336,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *nSockAddrLen*<br/>
 O comprimento do endereço em *lpSockAddr* em bytes.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). A lista a seguir aborda alguns dos erros que podem ser retornados. Para obter uma lista completa, consulte [códigos de erro do Windows Sockets](/windows/win32/winsock/windows-sockets-error-codes-2).
 
@@ -402,7 +402,7 @@ BOOL Connect(
     int nSockAddrLen);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszHostAddress*<br/>
 O endereço de rede do soquete ao qual esse objeto está conectado: um nome de computador, como "ftp.microsoft.com", ou um número pontilhado, como "128.56.22.8".
@@ -416,7 +416,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *nSockAddrLen*<br/>
 O comprimento do endereço em *lpSockAddr* em bytes.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Se isso indicar um código de erro de WSAEWOULDBLOCK e seu aplicativo estiver usando retornos de chamada substituíveis, seu aplicativo receberá uma `OnConnect` mensagem quando a operação de conexão for concluída. Os seguintes erros se aplicam a essa função de membro:
 
@@ -474,7 +474,7 @@ BOOL Create(
     LPCTSTR lpszSocketAddress = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSocketPort*<br/>
 Uma porta conhecida a ser usada com o soquete ou 0 se você quiser que o Windows Sockets selecione uma porta.
@@ -500,7 +500,7 @@ Um bitmask que especifica uma combinação de eventos de rede em que o aplicativ
 *lpszSockAddress*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o endereço de rede do Soquete conectado, um número pontilhado, como "128.56.22.8". Passar a cadeia de caracteres nula para esse parâmetro indica que a `CAsyncSocket` instância deve escutar a atividade do cliente em todas as interfaces de rede.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -550,7 +550,7 @@ BOOL CreateEx(
     long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pAI*<br/>
 Um ponteiro para um [ADDRINFOT](https://docs.microsoft.com/windows/win32/api/ws2def/ns-ws2def-addrinfoa) para armazenar informações de soquete, como a família e o tipo de soquete.
@@ -570,7 +570,7 @@ Um bitmask que especifica uma combinação de eventos de rede em que o aplicativ
 
 - FD_CLOSE deseja receber a notificação de fechamento do soquete.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Consulte o valor de retorno para [Create ()](#return-value-5).
 
@@ -594,12 +594,12 @@ Retorna um ponteiro para um `CAsyncSocket` objeto.
 static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hSocket*<br/>
 Contém um identificador para um soquete.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para um `CAsyncSocket` objeto ou NULL se não houver nenhum `CAsyncSocket` objeto anexado a *hSocket*.
 
@@ -615,7 +615,7 @@ Chame essa função de membro para obter o status de erro para a última operaç
 static int PASCAL GetLastError();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor de retorno indica o código de erro para a última rotina da API do Windows Sockets executada por esse thread.
 
@@ -639,7 +639,7 @@ BOOL GetPeerName(
     int* lpSockAddrLen);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rPeerAddress*<br/>
 Referência a um `CString` objeto que recebe um endereço IP de número pontilhado.
@@ -653,7 +653,7 @@ Um ponteiro para a estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que r
 *lpSockAddrLen*<br/>
 Um ponteiro para o comprimento do endereço em *lpSockAddr* em bytes. No retorno, o argumento *lpSockAddrLen* contém o tamanho real de *lpSockAddr* retornado em bytes.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -683,7 +683,7 @@ BOOL GetPeerNameEx(
     UINT& rPeerPort);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rPeerAddress*<br/>
 Referência a um `CString` objeto que recebe um endereço IP de número pontilhado.
@@ -691,7 +691,7 @@ Referência a um `CString` objeto que recebe um endereço IP de número pontilha
 *rPeerPort*<br/>
 Referência a um UINT que armazena uma porta.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -725,7 +725,7 @@ BOOL GetSockName(
     int* lpSockAddrLen);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSocketAddress*<br/>
 Referência a um `CString` objeto que recebe um endereço IP de número pontilhado.
@@ -739,7 +739,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *lpSockAddrLen*<br/>
 Um ponteiro para o comprimento do endereço em *lpSockAddr* em bytes.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -771,7 +771,7 @@ BOOL GetSockNameEx(
     UINT& rSocketPort);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSocketAddress*<br/>
 Referência a um `CString` objeto que recebe um endereço IP de número pontilhado.
@@ -779,7 +779,7 @@ Referência a um `CString` objeto que recebe um endereço IP de número pontilha
 *rSocketPort*<br/>
 Referência a um UINT que armazena uma porta.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -813,13 +813,13 @@ BOOL GetSockOpt(
     int nLevel = SOL_SOCKET);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nOptionName*<br/>
 A opção de soquete para a qual o valor deve ser recuperado.
 
 *lpOptionValue*<br/>
-Um ponteiro para o buffer no qual o valor da opção solicitada deve ser retornado. O valor associado à opção selecionada é retornado no buffer *lpOptionValue*. O inteiro apontado por *lpOptionLen* deve conter originalmente o tamanho desse buffer em bytes; e, no retorno, ele será definido como o tamanho do valor retornado. Por SO_LINGER, esse será o tamanho de uma `LINGER` estrutura; para todas as outras opções, ele será o tamanho de um bool ou **int**, dependendo da opção. Consulte a lista de opções e seus tamanhos na seção comentários.
+Um ponteiro para o buffer no qual o valor da opção solicitada deve ser retornado. O valor associado à opção selecionada é retornado no buffer *lpOptionValue*. O inteiro apontado por *lpOptionLen* deve conter originalmente o tamanho desse buffer em bytes; e, no retorno, ele será definido como o tamanho do valor retornado. Por SO_LINGER, esse será o tamanho de uma `LINGER` estrutura; para todas as outras opções, ele será o tamanho de um bool ou de um **`int`** , dependendo da opção. Consulte a lista de opções e seus tamanhos na seção comentários.
 
 *lpOptionLen*<br/>
 Um ponteiro para o tamanho do buffer *lpOptionValue* em bytes.
@@ -827,7 +827,7 @@ Um ponteiro para o tamanho do buffer *lpOptionValue* em bytes.
 *nLevel*<br/>
 O nível no qual a opção é definida; os únicos níveis com suporte são SOL_SOCKET e IPPROTO_TCP.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Se uma opção nunca foi definida com `SetSockOpt` , `GetSockOpt` o retornará o valor padrão para a opção. Os seguintes erros se aplicam a essa função de membro:
 
@@ -849,33 +849,33 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 As opções a seguir têm suporte para `GetSockOpt` . O tipo identifica o tipo de dados endereçado por *lpOptionValue*. A opção TCP_NODELAY usa IPPROTO_TCP de nível; todas as outras opções usam SOL_SOCKET de nível.
 
-|Valor|Tipo|Significado|
+|Valor|Type|Significado|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|O soquete está ouvindo.|
 |SO_BROADCAST|BOOL|O soquete está configurado para a transmissão de mensagens de difusão.|
 |SO_DEBUG|BOOL|A depuração está habilitada.|
 |SO_DONTLINGER|BOOL|Se for true, a opção SO_LINGER será desabilitada.|
 |SO_DONTROUTE|BOOL|O roteamento está desabilitado.|
-|SO_ERROR|**int**|Recupere o status de erro e desmarque.|
+|SO_ERROR|**`int`**|Recupere o status de erro e desmarque.|
 |SO_KEEPALIVE|BOOL|Os keep alives estão sendo enviados.|
 |SO_LINGER|`struct LINGER`|Retorna as opções atuais remanescentes.|
 |SO_OOBINLINE|BOOL|Os dados fora de banda estão sendo recebidos no fluxo de dados normal.|
 |SO_RCVBUF|INT|Tamanho do buffer para receives.|
 |SO_REUSEADDR|BOOL|O soquete pode ser associado a um endereço que já está em uso.|
-|SO_SNDBUF|**int**|Tamanho do buffer para envios.|
-|SO_TYPE|**int**|O tipo de soquete (por exemplo, SOCK_STREAM).|
+|SO_SNDBUF|**`int`**|Tamanho do buffer para envios.|
+|SO_TYPE|**`int`**|O tipo de soquete (por exemplo, SOCK_STREAM).|
 |TCP_NODELAY|BOOL|Desabilita o algoritmo Nagle para união de envio.|
 
 As opções do BSD (Berkeley Software Distribution) sem suporte para o `GetSockOpt` são:
 
-|Valor|Tipo|Significado|
+|Valor|Type|Significado|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**int**|Receber marca d' água baixa.|
-|SO_RCVTIMEO|**int**|Tempo limite de recebimento.|
-|SO_SNDLOWAT|**int**|Enviar marca d' água baixa.|
-|SO_SNDTIMEO|**int**|Tempo limite de envio.|
+|SO_RCVLOWAT|**`int`**|Receber marca d' água baixa.|
+|SO_RCVTIMEO|**`int`**|Tempo limite de recebimento.|
+|SO_SNDLOWAT|**`int`**|Enviar marca d' água baixa.|
+|SO_SNDTIMEO|**`int`**|Tempo limite de envio.|
 |IP_OPTIONS||Obter opções no cabeçalho IP.|
-|TCP_MAXSEG|**int**|Obter tamanho máximo de segmento TCP.|
+|TCP_MAXSEG|**`int`**|Obter tamanho máximo de segmento TCP.|
 
 Chamar `GetSockOpt` com uma opção sem suporte resultará em um código de erro de WSAENOPROTOOPT sendo retornado de `GetLastError` .
 
@@ -889,7 +889,7 @@ BOOL IOCtl(
     DWORD* lpArgument);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lCommand*<br/>
 O comando a ser executado no soquete.
@@ -897,7 +897,7 @@ O comando a ser executado no soquete.
 *lpArgument*<br/>
 Um ponteiro para um parâmetro para *lCommand*.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -931,12 +931,12 @@ Chame essa função de membro para escutar solicitações de conexão de entrada
 BOOL Listen(int nConnectionBacklog = 5);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nConnectionBacklog*<br/>
 O comprimento máximo para o qual a fila de conexões pendentes pode crescer. O intervalo válido é de 1 a 5.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -984,7 +984,7 @@ Chamado pelo Framework para notificar um soquete de escuta de que ele pode aceit
 virtual void OnAccept(int nErrorCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrorCode*<br/>
 O erro mais recente em um soquete. Os códigos de erro a seguir se aplicam à `OnAccept` função de membro:
@@ -1005,7 +1005,7 @@ Chamado pelo Framework para notificar esse soquete de que o Soquete conectado es
 virtual void OnClose(int nErrorCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrorCode*<br/>
 O erro mais recente em um soquete. Os códigos de erro a seguir se aplicam à `OnClose` função de membro:
@@ -1030,7 +1030,7 @@ Chamado pelo Framework para notificar esse soquete de conexão de que sua tentat
 virtual void OnConnect(int nErrorCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrorCode*<br/>
 O erro mais recente em um soquete. Os códigos de erro a seguir se aplicam à `OnConnect` função de membro:
@@ -1084,7 +1084,7 @@ Chamado pelo Framework para notificar o soquete de recebimento de que o soquete 
 virtual void OnOutOfBandData(int nErrorCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrorCode*<br/>
 O erro mais recente em um soquete. Os códigos de erro a seguir se aplicam à `OnOutOfBandData` função de membro:
@@ -1107,7 +1107,7 @@ Chamado pelo Framework para notificar esse soquete de que há dados no buffer qu
 virtual void OnReceive(int nErrorCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrorCode*<br/>
 O erro mais recente em um soquete. Os códigos de erro a seguir se aplicam à `OnReceive` função de membro:
@@ -1132,7 +1132,7 @@ Chamado pelo Framework para notificar o soquete de que agora ele pode enviar dad
 virtual void OnSend(int nErrorCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrorCode*<br/>
 O erro mais recente em um soquete. Os códigos de erro a seguir se aplicam à `OnSend` função de membro:
@@ -1157,7 +1157,7 @@ Atribui um novo valor a um `CAsyncSocket` objeto.
 void operator=(const CAsyncSocket& rSrc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSrc*<br/>
 Uma referência a um `CAsyncSocket` objeto existente.
@@ -1174,7 +1174,7 @@ Use esse operador para recuperar o identificador de soquete do `CAsyncSocket` ob
 operator SOCKET() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se for bem-sucedido, o identificador do objeto de soquete; caso contrário, NULL.
 
@@ -1193,7 +1193,7 @@ virtual int Receive(
     int nFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBuf*<br/>
 Um buffer para os dados de entrada.
@@ -1208,7 +1208,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB processar dados fora de banda.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se nenhum erro ocorrer, `Receive` o retornará o número de bytes recebidos. Se a conexão tiver sido fechada, ela retornará 0. Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1272,7 +1272,7 @@ int ReceiveFrom(
     int nFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBuf*<br/>
 Um buffer para os dados de entrada.
@@ -1299,7 +1299,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB processar dados fora de banda.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se nenhum erro ocorrer, `ReceiveFrom` o retornará o número de bytes recebidos. Se a conexão tiver sido fechada, ela retornará 0. Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando `GetLastError` . Os seguintes erros se aplicam a essa função de membro:
 
@@ -1356,7 +1356,7 @@ int ReceiveFromEx(
     int nFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBuf*<br/>
 Um buffer para os dados de entrada.
@@ -1377,7 +1377,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB processar dados fora de banda.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se nenhum erro ocorrer, `ReceiveFromEx` o retornará o número de bytes recebidos. Se a conexão tiver sido fechada, ela retornará 0. Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando `GetLastError` . Os seguintes erros se aplicam a essa função de membro:
 
@@ -1432,7 +1432,7 @@ virtual int Send(
     int nFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBuf*<br/>
 Um buffer que contém os dados a serem transmitidos.
@@ -1447,7 +1447,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB enviar dados fora de banda (somente SOCK_STREAM).
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se nenhum erro ocorrer, `Send` o retornará o número total de caracteres enviados. (Observe que isso pode ser menor que o número indicado por *nBufLen*.) Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1515,7 +1515,7 @@ int SendTo(
     int nFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBuf*<br/>
 Um buffer que contém os dados a serem transmitidos.
@@ -1542,7 +1542,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *nSockAddrLen*<br/>
 O comprimento do endereço em *lpSockAddr* em bytes.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se nenhum erro ocorrer, `SendTo` o retornará o número total de caracteres enviados. (Observe que isso pode ser menor que o número indicado por *nBufLen*.) Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1611,7 +1611,7 @@ int SendToEx(
     int nFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBuf*<br/>
 Um buffer que contém os dados a serem transmitidos.
@@ -1632,7 +1632,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB enviar dados fora de banda (somente SOCK_STREAM).
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se nenhum erro ocorrer, `SendToEx` o retornará o número total de caracteres enviados. (Observe que isso pode ser menor que o número indicado por *nBufLen*.) Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1700,7 +1700,7 @@ BOOL SetSockOpt(
     int nLevel = SOL_SOCKET);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nOptionName*<br/>
 A opção de soquete para a qual o valor deve ser definido.
@@ -1714,7 +1714,7 @@ O tamanho do buffer *lpOptionValue* em bytes.
 *nLevel*<br/>
 O nível no qual a opção é definida; os únicos níveis com suporte são SOL_SOCKET e IPPROTO_TCP.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1756,7 +1756,7 @@ Algumas implementações do Windows Sockets fornecem informações de depuraçã
 
 As opções a seguir têm suporte para `SetSockOpt` . O tipo identifica o tipo de dados endereçado por *lpOptionValue*.
 
-|Valor|Tipo|Significado|
+|Valor|Type|Significado|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|Permitir a transmissão de mensagens de difusão no soquete.|
 |SO_DEBUG|BOOL|Registre informações de depuração.|
@@ -1765,22 +1765,22 @@ As opções a seguir têm suporte para `SetSockOpt` . O tipo identifica o tipo d
 |SO_KEEPALIVE|BOOL|Enviar Keep Alive.|
 |SO_LINGER|`struct LINGER`|Remanescente em `Close` se os dados não enviados estiverem presentes.|
 |SO_OOBINLINE|BOOL|Receber dados fora de banda no fluxo de dados normal.|
-|SO_RCVBUF|**int**|Especifique o tamanho do buffer para receives.|
+|SO_RCVBUF|**`int`**|Especifique o tamanho do buffer para receives.|
 |SO_REUSEADDR|BOOL|Permitir que o soquete seja associado a um endereço que já está em uso. (Consulte [ligar](#bind).)|
-|SO_SNDBUF|**int**|Especifique o tamanho do buffer para envios.|
+|SO_SNDBUF|**`int`**|Especifique o tamanho do buffer para envios.|
 |TCP_NODELAY|BOOL|Desabilita o algoritmo Nagle para união de envio.|
 
 As opções do BSD (Berkeley Software Distribution) sem suporte para o `SetSockOpt` são:
 
-|Valor|Tipo|Significado|
+|Valor|Type|Significado|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|O soquete está ouvindo|
-|SO_ERROR|**int**|Obter status de erro e limpar.|
-|SO_RCVLOWAT|**int**|Receber marca d' água baixa.|
-|SO_RCVTIMEO|**int**|Tempo limite de recebimento|
-|SO_SNDLOWAT|**int**|Enviar marca d' água baixa.|
-|SO_SNDTIMEO|**int**|Tempo limite de envio.|
-|SO_TYPE|**int**|Tipo do soquete.|
+|SO_ERROR|**`int`**|Obter status de erro e limpar.|
+|SO_RCVLOWAT|**`int`**|Receber marca d' água baixa.|
+|SO_RCVTIMEO|**`int`**|Tempo limite de recebimento|
+|SO_SNDLOWAT|**`int`**|Enviar marca d' água baixa.|
+|SO_SNDTIMEO|**`int`**|Tempo limite de envio.|
+|SO_TYPE|**`int`**|Tipo do soquete.|
 |IP_OPTIONS||Definir o campo de opções no cabeçalho IP.|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket:: ShutDown
@@ -1791,7 +1791,7 @@ Chame essa função de membro para desabilitar envios, Recebimentos ou ambos no 
 BOOL ShutDown(int nHow = sends);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHow*<br/>
 Um sinalizador que descreve quais tipos de operação não serão mais permitidos, usando os seguintes valores enumerados:
@@ -1802,7 +1802,7 @@ Um sinalizador que descreve quais tipos de operação não serão mais permitido
 
 - **ambos = 2**
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1842,7 +1842,7 @@ BOOL Socket(
     int nAddressFormat = PF_INET);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSocketType*<br/>
 Especifica `SOCK_STREAM` ou `SOCK_DGRAM` .
@@ -1868,7 +1868,7 @@ Protocolo a ser usado com o soquete específico para a família de endereços in
 *nAddressFormat*<br/>
 Especificação da família de endereços.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Retorna `TRUE` em caso de êxito, `FALSE` em caso de falha.
 
@@ -1876,9 +1876,9 @@ Retorna `TRUE` em caso de êxito, `FALSE` em caso de falha.
 
 Esse método aloca um identificador de soquete. Ele não chama [CAsyncSocket:: bind](#bind) para associar o soquete a um endereço especificado, portanto, você precisará chamar `Bind` posteriormente para associar o soquete a um endereço especificado. Você pode usar [CAsyncSocket:: setsockopt](#setsockopt) para definir a opção de soquete antes que ela seja associada.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CSocket](../../mfc/reference/csocket-class.md)<br/>
 [Classe CSocketFile](../../mfc/reference/csocketfile-class.md)

@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913577"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232554"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -84,9 +84,9 @@ __int64 _wtoi64_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Str*<br/>
+*str*<br/>
 Cadeia de caracteres a ser convertida.
 
 *locale*<br/>
@@ -94,7 +94,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
-Cada função retorna o **__int64** valor produzido interpretando os caracteres de entrada como um número. O valor de retorno será 0 para **_atoi64** se a entrada não puder ser convertida em um valor desse tipo.
+Cada função retorna o **`__int64`** valor produzido pela interpretação dos caracteres de entrada como um número. O valor de retorno será 0 para **_atoi64** se a entrada não puder ser convertida em um valor desse tipo.
 
 No caso de estouro com valores inteiros positivos grandes, **_atoi64** retorna **I64_MAX** e **I64_MIN** no caso de estouro com grandes valores inteiros negativos.
 
@@ -181,11 +181,11 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506774"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232606"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -76,12 +76,12 @@ float atan2( float y, float x );  // C++ only
 long double atan2( long double y, long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*, *y*<br/>
 Quaisquer números.
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor retornado
 
 **ATAN** retorna o arco tangente de *x* no intervalo de-π/2 a π/2 radianos. **ATAN2** retorna o arco tangente de *y* / *x* no intervalo de π a π radianos. Se *x* for 0, **ATAN** retornará 0. Se ambos os parâmetros de **ATAN2** forem 0, a função retornará 0. Todos os resultados estão em radianos.
 
@@ -89,7 +89,7 @@ Quaisquer números.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **Ind**|nenhum|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
@@ -97,7 +97,7 @@ A função **ATAN** calcula o arco tangente (a função tangente inversa) de *x*
 
 **ATAN** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ATAN** e **ATAN2** que têm argumentos **duplos** **float** ou **Long** . Em um programa C, **ATAN** e **ATAN2** sempre assumem argumentos **duplos** e retornam um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ATAN** e **ATAN2** que levam **`float`** ou **`long double`** argumentos. Em um programa C, **ATAN** e **ATAN2** sempre usam **`double`** argumentos e retornam um **`double`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 

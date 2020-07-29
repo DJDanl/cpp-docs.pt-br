@@ -10,18 +10,18 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 306f5eb3624797ca48848ef0a8f69625e0f6b574
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365608"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186354"
 ---
 # <a name="single-inheritance"></a>Herança única
 
 Na “herança única”, uma forma comum de herança, as classes têm apenas uma classe base. Considere a relação lustrada na figura a seguir.
 
-![Gráfico básico de herança de&#45;única](../cpp/media/vc38xj1.gif "Gráfico básico de herança de&#45;única") <br/>
+![Grafo de herança de&#45;único básica](../cpp/media/vc38xj1.gif "Grafo de herança de&#45;único básica") <br/>
 Gráfico simples de herança única
 
 Observe a progressão de geral a específico na figura. Outro atributo comum encontrado no design da maioria das hierarquias de classes é que a classe derivada tem um “tipo de” relação com a classe base. Na figura, `Book` é um tipo de `PrintedDocument`, e `PaperbackBook` é um tipo de `book`.
@@ -44,7 +44,7 @@ class PaperbackBook : public Book {};
 
 A classe base da qual cada classe é derivada é declarada antes da declaração da classe derivada. Não é suficiente para fornecer uma declaração de referência de encaminhamento para uma classe base; deve ser uma declaração completa.
 
-No exemplo anterior, o **público** especificador de acesso é usado. O significado de herança pública, protegida e privada é descrito no [Controle de Acesso ao Membro.](../cpp/member-access-control-cpp.md)
+No exemplo anterior, o especificador de acesso **`public`** é usado. O significado de herança pública, protegida e privada é descrito em [controle de acesso de membro.](../cpp/member-access-control-cpp.md)
 
 Uma classe pode servir como a classe base para muitas aulas específicas, como ilustrado na figura a seguir.
 
@@ -154,4 +154,4 @@ No exemplo anterior, diferentes tipos são criados. No entanto, como todos esses
 Como a classe `Document` tem uma função `PrintNameOf`, ela pode imprimir o nome de cada livro na biblioteca, embora possa omitir informações específicas do tipo de documento (número de páginas de `Book`, número de bytes de `HelpFile`, e assim por diante).
 
 > [!NOTE]
-> Forçar a classe base a implementar uma função como `PrintNameOf` normalmente não é o melhor design. [As Funções Virtuais](../cpp/virtual-functions.md) oferecem outras alternativas de design.
+> Forçar a classe base a implementar uma função como `PrintNameOf` normalmente não é o melhor design. As [funções virtuais](../cpp/virtual-functions.md) oferecem outras alternativas de design.
