@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206187"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229292"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -110,13 +110,13 @@ errno_t _mbscpy_s_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dest*<br/>
 Local do buffer de cadeia de caracteres de destino.
 
 *dest_size*<br/>
-Tamanho do buffer da cadeia de caracteres de destino em unidades de **caracteres** para funções delimitadas e de vários bytes e unidades de **wchar_t** para funções amplas. Esse valor deve ser maior que zero e não maior que **RSIZE_MAX**. Verifique se esse tamanho conta para o encerramento `NULL` após a cadeia de caracteres.
+Tamanho do buffer da cadeia de caracteres de destino em **`char`** unidades para funções delimitadas e de vários bytes e **`wchar_t`** unidades para funções amplas. Esse valor deve ser maior que zero e não maior que **RSIZE_MAX**. Verifique se esse tamanho conta para o encerramento `NULL` após a cadeia de caracteres.
 
 *src*<br/>
 Buffer de cadeia de caracteres de origem com terminação nula.
@@ -124,7 +124,7 @@ Buffer de cadeia de caracteres de origem com terminação nula.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido; caso contrário, um código de erro.
 
@@ -231,7 +231,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>

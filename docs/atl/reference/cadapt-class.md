@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 1bae98663b8dc2b09efeff9139e8d028abcd862e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168810"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229994"
 ---
 # <a name="cadapt-class"></a>Classe CAdapt
 
@@ -30,7 +30,7 @@ template <class T>
 class CAdapt
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo adaptado.
@@ -47,7 +47,7 @@ O tipo adaptado.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAdapt:: Operator const T&](#operator_const_t_amp)|Retorna uma referência **const** para `m_T`.|
+|[CAdapt:: Operator const T&](#operator_const_t_amp)|Retorna uma **`const`** referência a `m_T` .|
 |[Operador CAdapt:: Operator T&](#operator_t_amp)|Retorna uma referência para `m_T`.|
 |[Operador CAdapt:: Operator <](#operator_lt)|Compara um objeto do tipo adaptado com `m_T`.|
 |[CAdapt:: Operator =](#operator_eq)|Atribui um objeto do tipo adaptado a `m_T`.|
@@ -61,7 +61,7 @@ O tipo adaptado.
 
 ## <a name="remarks"></a>Comentários
 
-`CAdapt` é um modelo simples usado para incluir classes que redefinem o operador address-of (`operator &`) para retornar algo diferente do endereço do objeto. Exemplos dessas classes incluem as classes `CComBSTR`, `CComPtr` e `CComQIPtr` do ATL, e a classe de suporte ao COM do compilador, `_com_ptr_t`. Todas essas classes redefinem o operador address-of para retornar o endereço de um de seus membros de dados (um BSTR no caso `CComBSTR`de, e um ponteiro de interface no caso das outras classes).
+`CAdapt` é um modelo simples usado para incluir classes que redefinem o operador address-of (`operator &`) para retornar algo diferente do endereço do objeto. Exemplos dessas classes incluem as classes `CComBSTR`, `CComPtr` e `CComQIPtr` do ATL, e a classe de suporte ao COM do compilador, `_com_ptr_t`. Todas essas classes redefinem o operador address-of para retornar o endereço de um de seus membros de dados (um BSTR no caso de `CComBSTR` , e um ponteiro de interface no caso das outras classes).
 
 `CAdapt`a função principal do é ocultar o operador de endereço definido pela classe *T*, mas ainda manter as características da classe adaptada. `CAdapt`fulfils essa função segurando um membro público, [m_T](#m_t), do tipo *T*e definindo operadores de conversão, operadores de comparação e um construtor de cópia para permitir que as especializações `CAdapt` sejam tratadas como se fossem objetos do tipo *T*.
 
@@ -85,7 +85,7 @@ CAdapt(T&& rSrCA);  // (Visual Studio 2017)
 CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSrc*<br/>
 Uma variável do tipo que está sendo adaptado para ser copiada para o objeto de adaptador recém-criado.
@@ -103,11 +103,11 @@ T m_T;
 
 ### <a name="remarks"></a>Comentários
 
-Esse membro de dados **público** pode ser acessado direta ou indiretamente com o [operador const T&](#operator_const_t_amp) e o [operador t&](#operator_t_amp).
+Esse **`public`** membro de dados pode ser acessado direta ou indiretamente com o [operador const T&](#operator_const_t_amp) e o [operador t&](#operator_t_amp).
 
 ## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt:: Operator const T&amp;
 
-Retorna uma referência **const** para o membro [m_T](#m_t) , permitindo que o objeto de adaptador seja tratado como se fosse um objeto do tipo *T*.
+Retorna uma **`const`** referência ao membro de [m_T](#m_t) , permitindo que o objeto de adaptador seja tratado como se fosse um objeto do tipo *T*.
 
 ```cpp
 operator const T&() const;
@@ -115,7 +115,7 @@ operator const T&() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma referência **const** para `m_T`.
+Uma **`const`** referência a `m_T` .
 
 ## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>Operador CAdapt:: Operator T&amp;
 
@@ -137,7 +137,7 @@ Compara um objeto do tipo adaptado com [m_T](#m_t).
 bool operator<(const T& rSrc) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSrc*<br/>
 Uma referência ao objeto a ser comparado.
@@ -156,7 +156,7 @@ CAdapt& operator= (T&& rSrCA); // (Visual Studio 2017)
 CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSrc*<br/>
 Uma referência a um objeto do tipo adaptado a ser copiado.
@@ -176,7 +176,7 @@ Compara um objeto do tipo adaptado com [m_T](#m_t).
 bool operator== (const T& rSrc) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSrc*<br/>
 Uma referência ao objeto a ser comparado.

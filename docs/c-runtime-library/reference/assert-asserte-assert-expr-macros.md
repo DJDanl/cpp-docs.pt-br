@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-ms.openlocfilehash: 26a1439e4de8824edd11af1afd455d2b2c31c088
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d07fbe5de7afdc62f952727660447c5e4f0b78aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443083"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232632"
 ---
 # <a name="_assert-_asserte-_assert_expr-macros"></a>Macros _ASSERT, _ASSERTE, _ASSERT_EXPR
 
@@ -48,7 +48,7 @@ _ASSERT( booleanExpression );
 _ASSERTE( booleanExpression );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor booliano*<br/>
 Uma expressão escalar (incluindo expressões de ponteiro) que é avaliada como não zero (verdadeiro) ou 0 (falso).
@@ -60,7 +60,7 @@ Uma cadeia de caracteres larga para exibir como parte do relatório.
 
 As macros **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** fornecem um aplicativo com um mecanismo limpo e simples para verificar suposições durante o processo de depuração. Elas são muito flexíveis porque não precisam ser colocadas em instruções `#ifdef` para impedi-las de serem chamadas em um build comercial de um aplicativo. Essa flexibilidade é obtida usando a macro [_DEBUG](../../c-runtime-library/debug.md). **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** estão disponíveis somente quando **_DEBUG** é definido no momento da compilação. Quando **_DEBUG** não é definido, as chamadas para essas macros são removidas durante o pré-processamento.
 
-**_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** avaliar seu argumento *booliana* e quando o resultado for **false** (0), eles imprimirão uma mensagem de diagnóstico e chamarão [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) para gerar um relatório de depuração. A macro **_ASSERT** imprime uma mensagem de diagnóstico simples, **_ASSERTE** inclui uma representação de cadeia de caracteres da expressão com falha na mensagem e **_ASSERT_EXPR** inclui a cadeia de caracteres da *mensagem* na mensagem de diagnóstico. Essas macros não fazem nada quando *booliana* é avaliada como diferente de zero.
+**_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** avaliar o argumento *booliana* e, quando o resultado for **`false`** (0), eles imprimirão uma mensagem de diagnóstico e chamarão [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) para gerar um relatório de depuração. A macro **_ASSERT** imprime uma mensagem de diagnóstico simples, **_ASSERTE** inclui uma representação de cadeia de caracteres da expressão com falha na mensagem e **_ASSERT_EXPR** inclui a cadeia de caracteres da *mensagem* na mensagem de diagnóstico. Essas macros não fazem nada quando *booliana* é avaliada como diferente de zero.
 
 **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** invocar **_CrtDbgReportW**, o que faz com que toda a saída esteja em caracteres largos. **_ASSERTE** imprime corretamente os caracteres Unicode em *booliana* e **_ASSERT_EXPR** imprime caracteres Unicode na *mensagem*.
 
@@ -78,19 +78,19 @@ Quando o destino é uma janela de mensagem de depuração e o usuário clica no 
 
 Para obter mais informações sobre o processo de geração de relatórios, consulte a função [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md). Para obter mais informações sobre como resolver falhas de declaração e usar essas macros como um mecanismo de tratamento de erro de depuração, consulte [Usando macros para verificação e relatórios](/visualstudio/debugger/macros-for-reporting).
 
-Além das macros **_ASSERT** , a macro [Assert](assert-macro-assert-wassert.md) pode ser usada para verificar a lógica do programa. Essa macro está disponível nas versões de depuração e liberação das bibliotecas. As macros de depuração [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) também estão disponíveis para gerar um relatório de depuração, mas não avaliam uma expressão. As macros **_RPT** geram um relatório simples. As macros **_RPTF** incluem o arquivo de origem e o número da linha em que a macro do relatório foi chamada no relatório gerado. As versões de caracteres largos dessas macros estão disponíveis ( **_RPTW**, **_RPTFW**). As versões de caractere largo são idênticas às versões de caractere estreito, exceto que cadeias de caracteres largos são usadas para todos os parâmetros de cadeia de caracteres e de saída.
+Além das macros **_ASSERT** , a macro [Assert](assert-macro-assert-wassert.md) pode ser usada para verificar a lógica do programa. Essa macro está disponível nas versões de depuração e liberação das bibliotecas. As macros de depuração [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) também estão disponíveis para gerar um relatório de depuração, mas não avaliam uma expressão. As macros **_RPT** geram um relatório simples. As macros **_RPTF** incluem o arquivo de origem e o número da linha em que a macro do relatório foi chamada no relatório gerado. As versões de caracteres largos dessas macros estão disponíveis (**_RPTW**, **_RPTFW**). As versões de caractere largo são idênticas às versões de caractere estreito, exceto que cadeias de caracteres largos são usadas para todos os parâmetros de cadeia de caracteres e de saída.
 
-Embora **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** sejam macros e estejam disponíveis incluindo \<CRTDBG. h >, o aplicativo deve ser vinculado a uma versão de depuração da biblioteca de tempo de execução do C quando **_DEBUG** é definido porque essas macros chamam outras funções de tempo de execução.
+Embora **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** sejam macros e estejam disponíveis incluindo \<crtdbg.h> o, o aplicativo deve ser vinculado a uma versão de depuração da biblioteca de tempo de execução do C quando **_DEBUG** é definido porque essas macros chamam outras funções de tempo de execução.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 |Macro|Cabeçalho necessário|
 |-----------|---------------------|
 |**_ASSERT_EXPR**, **_ASSERT**, **_ASSERTE**|\<crtdbg.h>|
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
-Neste programa, são feitas chamadas para as macros **_ASSERT** e **_ASSERTE** para testar a condição `string1 == string2`. Se a condição falhar, essas macros imprimirão uma mensagem de diagnóstico. O **_RPT** e o **_RPTF** grupo de macros também são exercidos neste programa, como uma alternativa à função **printf** .
+Neste programa, são feitas chamadas para as macros **_ASSERT** e **_ASSERTE** para testar a condição `string1 == string2` . Se a condição falhar, essas macros imprimirão uma mensagem de diagnóstico. O **_RPT** e o **_RPTF** grupo de macros também são exercidos neste programa, como uma alternativa à função **printf** .
 
 ```C
 // crt_ASSERT_macro.c
@@ -164,8 +164,8 @@ crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2
 'I am p1' != 'I am p2'
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Rotinas de depuração](../../c-runtime-library/debug-routines.md)<br/>
-[assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>
-[Macros _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md)<br/>
+[Macro Assert, _assert _wassert](assert-macro-assert-wassert.md)<br/>
+[_RPT, _RPTF, _RPTW _RPTFW macros](rpt-rptf-rptw-rptfw-macros.md)<br/>

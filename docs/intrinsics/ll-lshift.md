@@ -8,16 +8,16 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 158ecbf39320d70b51f1f498a0b689ba58fec363
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 988284b81c9f04ee5d7f09f8a2f173a689f9fb55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221817"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230513"
 ---
 # <a name="__ll_lshift"></a>__ll_lshift
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Desloca o valor de 64 bits fornecido para a esquerda pelo número especificado de bits.
 
@@ -30,7 +30,7 @@ unsigned __int64 __ll_lshift(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Mascara*\
 no O valor inteiro de 64 bits a ser deslocado para a esquerda.
@@ -40,21 +40,21 @@ no O número de bits a ser deslocado.
 
 ## <a name="return-value"></a>Valor retornado
 
-A máscara foi deslocada para `nBit` a esquerda por bits.
+A máscara foi deslocada para a esquerda por `nBit` bits.
 
 ## <a name="requirements"></a>Requisitos
 
-|Intrínseco|Arquitetura|
+|Intrinsic|Arquitetura|
 |---------------|------------------|
 |`__ll_lshift`|x86, x64|
 
-**Arquivo de cabeçalho** \<> intrin. h
+**Arquivo de cabeçalho** \<intrin.h>
 
 ## <a name="remarks"></a>Comentários
 
-Se você compilar seu programa para a arquitetura de 64 bits e `nBit` for maior que 63, o número de bits a serem deslocados será `nBit` o módulo 64. Se você compilar seu programa para a arquitetura de 32 bits e `nBit` for maior que 31, o número de bits a serem deslocados será `nBit` o módulo 32.
+Se você compilar seu programa para a arquitetura de 64 bits e `nBit` for maior que 63, o número de bits a serem deslocados será o `nBit` módulo 64. Se você compilar seu programa para a arquitetura de 32 bits e `nBit` for maior que 31, o número de bits a serem deslocados será o `nBit` módulo 32.
 
-O `ll` no nome indica que é uma operação em `long long` (`__int64`).
+O `ll` no nome indica que é uma operação em **`long long`** ( **`__int64`** ).
 
 ## <a name="example"></a>Exemplo
 
@@ -84,11 +84,11 @@ int main()
 ```
 
 > [!NOTE]
-> Não há nenhuma versão não assinada da operação de deslocamento à esquerda. Isso porque `__ll_lshift` o já usa um parâmetro de entrada não assinado. Ao contrário do deslocamento à direita, não há nenhuma dependência de sinal para o deslocamento à esquerda, porque o bit menos significativo no resultado é sempre definido como zero, independentemente do sinal do valor deslocado.
+> Não há nenhuma versão não assinada da operação de deslocamento à esquerda. Isso porque o `__ll_lshift` já usa um parâmetro de entrada não assinado. Ao contrário do deslocamento à direita, não há nenhuma dependência de sinal para o deslocamento à esquerda, porque o bit menos significativo no resultado é sempre definido como zero, independentemente do sinal do valor deslocado.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [__ll_rshift](../intrinsics/ll-rshift.md)\
 [__ull_rshift](../intrinsics/ull-rshift.md)\

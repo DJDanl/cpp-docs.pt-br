@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180857"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229045"
 ---
 # <a name="cleaning-up-resources"></a>Limpando recursos
 
@@ -26,7 +26,7 @@ Portanto, para garantir, você deve verificar quais recursos estão realmente ab
 
 1. No bloco de instrução **__try** , aloque recursos. Os identificadores são definidos como valores positivos conforme o recurso é alocado.
 
-1. No bloco de instrução **__finally** , libere cada recurso cuja variável identificador ou sinalizador correspondente seja diferente de zero ou não seja nulo.
+1. No **`__finally`** bloco de instruções, libere cada recurso cuja variável identificador ou sinalizador correspondente seja diferente de zero ou não seja nulo.
 
 ## <a name="example"></a>Exemplo
 
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Confira também
 
-[Escrevendo um manipulador de encerramento](../cpp/writing-a-termination-handler.md)<br/>
-[Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Escrevendo um manipulador de término](../cpp/writing-a-termination-handler.md)<br/>
+[Manipulação de exceção estruturada (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

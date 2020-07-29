@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 55a81338f1a0f9036a6d42c4bac7c99489c18d64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180271"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228993"
 ---
 # <a name="continue-statement-c"></a>Instrução continue (C++)
 
@@ -27,11 +27,11 @@ continue;
 
 As instruções restantes na iteração atual não são executadas. A próxima iteração do loop é determinada da seguinte maneira:
 
-- Em um loop **do** ou **while** , a próxima iteração começa reavaliando a expressão de controle da instrução **do ou** **while** .
+- Em um **`do`** **`while`** loop ou, a próxima iteração começa reavaliando a expressão de controle **`do`** da **`while`** instrução or.
 
-- Em um loop **for** (usando a sintaxe `for`(`init-expr`; `cond-expr`; `loop-expr`)), a cláusula `loop-expr` é executada. A cláusula `cond-expr` é reavaliada e, dependendo do resultado, o loop é encerrado ou ocorre outra iteração.
+- Em um **`for`** loop (usando a sintaxe `for( <init-expr> ; <cond-expr> ; <loop-expr> )` ), a `<loop-expr>` cláusula é executada. A cláusula `<cond-expr>` é reavaliada e, dependendo do resultado, o loop é encerrado ou ocorre outra iteração.
 
-O exemplo a seguir mostra como a instrução **continue** pode ser usada para ignorar seções de código e iniciar a próxima iteração de um loop.
+O exemplo a seguir mostra como a **`continue`** instrução pode ser usada para ignorar seções de código e começar a próxima iteração de um loop.
 
 ## <a name="example"></a>Exemplo
 

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 0b2448e66e3b86e3295cd4b318a268a113f6058b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224351"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemplo: implementando uma página de propriedades
 
@@ -51,9 +51,9 @@ Primeiro, crie um novo projeto ATL para um servidor DLL denominado `ATLPages7`. 
 
 |Item|Valor|
 |----------|-----------|
-|Title|TextDocument|
+|Título|TextDocument|
 |Doc String|Propriedades de TextDocument VCUE|
-|Helpfile|*\<>em branco*|
+|Helpfile|*\<blank>*|
 
 Os valores que você define nessa página do assistente serão retornados ao contêiner da página de propriedades quando ele chamar `IPropertyPage::GetPageInfo`. O que acontece com as cadeias de caracteres depois disso depende do contêiner, mas, normalmente, elas são usadas para identificar sua página para o usuário. Geralmente, o Título aparece em uma guia acima da sua página e o Doc String pode ser exibido em uma barra de status ou Dica de Ferramenta (embora o quadro da propriedade padrão não use essa cadeia de caracteres).
 
@@ -66,7 +66,7 @@ Clique em **OK** para que o assistente gere a página de propriedades.
 
 Agora que sua página de propriedades foi gerada, você precisará adicionar alguns controles ao recurso de caixa de diálogo que representem a página. Adicione uma caixa de edição, um controle de texto estático e uma caixa de seleção e defina as respectivas IDs, conforme mostrado abaixo:
 
-![Edição de um recurso de diálogo](../atl/media/ppgresourcelabeled.gif "Edição de um recurso de diálogo")
+![Editando um recurso de caixa de diálogo](../atl/media/ppgresourcelabeled.gif "Editando um recurso de caixa de diálogo")
 
 Esses controles serão usados para exibir o nome de arquivo do documento e seu status somente leitura.
 
@@ -90,7 +90,7 @@ Agora, adicione algumas instruções `#import` a DocProperties.h para que o comp
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-Você também precisará fazer referência à classe base `IPropertyPageImpl`; adicione o seguinte **typedef** à classe `CDocProperties`:
+Você também precisará se referir à `IPropertyPageImpl` classe base; adicione o seguinte **`typedef`** à `CDocProperties` classe:
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 
@@ -138,7 +138,7 @@ Use a [caixa de diálogo Adicionar Classe](../ide/add-class-dialog-box.md) e o [
 |Item|Valor|
 |----------|-----------|
 |Nome do método|`ShowPage`|
-|Parâmetros|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
+|parâmetros|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
 
 O parâmetro *bstrCaption* é a legenda a ser exibida como o título da caixa de diálogo. O parâmetro *bstrID* é uma cadeia de caracteres que representa uma CLSID ou ProgID da página de propriedades a ser exibida. O parâmetro *pUnk* será o ponteiro `IUnknown` do objeto cujas propriedades serão definidas pela página de propriedades.
 
@@ -173,5 +173,5 @@ Quando você executar essa macro, a página de propriedades será exibida mostra
 
 ## <a name="see-also"></a>Confira também
 
-[Páginas de propriedades](../atl/atl-com-property-pages.md)<br/>
+[Páginas de propriedade](../atl/atl-com-property-pages.md)<br/>
 [Exemplo de páginas ATL](../overview/visual-cpp-samples.md)

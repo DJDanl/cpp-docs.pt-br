@@ -1,17 +1,17 @@
 ---
-title: PTR (C++ atributo com)
+title: PTR (atributo COM do C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e45cd529562fe238f96f98cf7f91e15df34270a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224377"
 ---
 # <a name="ptr"></a>ptr
 
@@ -37,16 +37,16 @@ Consulte o exemplo de [DefaultValue](defaultvalue.md) para um exemplo de uso de 
 
 |||
 |-|-|
-|**Aplica-se a**|Parâmetro de interface, método de interface, **typedef**|
+|**Aplica-se a**|Parâmetro de interface, método de interface,**`typedef`**|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Atributos do método](method-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

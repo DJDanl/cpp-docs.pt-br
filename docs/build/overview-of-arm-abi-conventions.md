@@ -2,12 +2,12 @@
 title: Visão geral das convenções ARM ABI
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320724"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229760"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Visão geral das convenções da ABI ARM32
 
@@ -75,7 +75,7 @@ O uso de instruções de divisão de inteiros SDIV e UDIV tem suporte total, mes
 
 O processador ARM oferece suporte a 16 registros inteiros:
 
-|Registrar |Volátil?|Função|
+|Registre-se|Volátil?|Função|
 |--------------|---------------|----------|
 |r0|Volátil|Parâmetro, resultado, registro de rascunho 1|
 |r1|Volátil|Parâmetro, resultado, registro de rascunho 2|
@@ -201,7 +201,7 @@ A pilha padrão de modo kernel no Windows é de três páginas (12 KB). Tenha cu
 
 Enumerações são tipos inteiros de 32 bits, exceto quando ao menos um valor na enumeração exigir armazenamento de palavra dupla de 64 bits. Nesse caso, a enumeração é promovida para um tipo inteiro de 64 bits.
 
-`wchar_t` é definido como equivalente a `unsigned short`, para preservar a compatibilidade com outras plataformas.
+**`wchar_t`** é definido para ser equivalente a **`unsigned short`** , para preservar a compatibilidade com outras plataformas.
 
 ## <a name="stack-walking"></a>Movimentação de pilha
 

@@ -1,17 +1,17 @@
 ---
-title: Não-cri (C++ atributo com)
+title: Não-cri (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c5d51d7c5628a875f036b4e48b03b317490b37ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224390"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -25,7 +25,7 @@ Define um objeto que não pode ser instanciado por si só.
 
 ## <a name="remarks"></a>Comentários
 
-O C++ atributo não-cri tem a mesma funcionalidade que o atributo MIDL não- [cri](/windows/win32/Midl/noncreatable) e é passado automaticamente para o gerado. Arquivo IDL pelo compilador.
+O **atributo C++ não** -recriado tem a mesma funcionalidade que o atributo MIDL não- [cri](/windows/win32/Midl/noncreatable) e é passado automaticamente para o gerado. Arquivo IDL pelo compilador.
 
 Quando esse atributo é usado em um projeto que usa ATL, o comportamento do atributo é alterado. Além do comportamento acima, o atributo também injeta a macro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . Essa macro indica ao ATL que o objeto não pode ser criado externamente.
 
@@ -55,14 +55,14 @@ class CMyClass : public A
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|
-|**Atributos necessários**|**coclass**|
+|**Atributos obrigatórios**|**coclass**|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)

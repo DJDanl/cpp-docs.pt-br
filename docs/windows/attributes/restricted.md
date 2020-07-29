@@ -1,19 +1,19 @@
 ---
-title: Restricted (C++ atributo com)
+title: Restricted (atributo COM do C++)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0545c07936c59a59dd4712f4b0a2fd98a6701f2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230020"
 ---
-# <a name="restricted"></a>restrito
+# <a name="restricted"></a>restricted
 
 Especifica que um membro de um módulo, interface ou Dispinterface não pode ser chamado arbitrariamente.
 
@@ -27,12 +27,12 @@ Especifica que um membro de um módulo, interface ou Dispinterface não pode ser
 
 ### <a name="parameters"></a>parâmetros
 
-*interface*<br/>
+*interfaces*<br/>
 Uma ou mais interfaces que podem não ser chamadas arbitrariamente em um objeto COM. Esse parâmetro só é válido quando aplicado a uma classe.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **restrito** C++ tem a mesma funcionalidade que o atributo MIDL [restrito](/windows/win32/Midl/restricted) .
+O atributo C++ **restrito** tem a mesma funcionalidade que o atributo MIDL [restrito](/windows/win32/Midl/restricted) .
 
 ## <a name="example"></a>Exemplo
 
@@ -67,15 +67,15 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Aplica-se a**|Método de interface, **interface**, **classe**, **struct**|
+|**Aplica-se a**|Método de interface, **interface**, **`class`** ,**`struct`**|
 |**Repetível**|Não|
-|**Atributos necessários**|**coclass** (quando aplicado à **classe** ou **estrutura**)|
+|**Atributos obrigatórios**|**coclass** (quando aplicado a **`class`** or **`struct`** )|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
-[Atributos de método](method-attributes.md)
+[Atributos do método](method-attributes.md)

@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229799"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Suporte para Open Folder para sistemas de build do C++ no Visual Studio
 
@@ -37,7 +37,7 @@ Para usar o IDE do Visual Studio com um sistema de compilação ou conjunto de f
 |tasks.vs.json|Especifique comandos de compilação personalizados. Acessados por meio do item de menu de contexto do **Gerenciador de Soluções**, **Configurar tarefas**.|
 |launch.vs.json|Especifica argumentos de linha de comando para o depurador. Acessados por meio do item de menu de contexto do **Gerenciador de Soluções**, **Configurações de depuração e de inicialização**.|
 
-## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Configurar a navegação de código com CppProperties. JSON
+## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Configurar a navegação de código com CppProperties.jsem
 
 Para o IntelliSense e o comportamento de navegação, como **ir para definição** para funcionar corretamente, o Visual Studio precisa saber qual compilador você está usando, onde os cabeçalhos do sistema são e onde os arquivos de inclusão adicionais estão localizados se não estiverem diretamente na pasta que você abriu (a pasta do espaço de trabalho). Para especificar uma configuração, você pode escolher **gerenciar configurações** na lista suspensa na barra de ferramentas principal:
 
@@ -47,7 +47,7 @@ O Visual Studio oferece as seguintes configurações padrão:
 
 ![Configurações padrão](media/default-configurations.png)
 
-Se, por exemplo, você escolher **x64-Debug**, o Visual Studio criará um arquivo chamado *CppProperties. JSON* na pasta do projeto raiz:
+Se, por exemplo, você escolher **x64-Debug**, o Visual Studio criará um arquivo chamado *CppProperties.js* na pasta do projeto raiz:
 
 ```json
 {
@@ -76,7 +76,7 @@ Se, por exemplo, você escolher **x64-Debug**, o Visual Studio criará um arquiv
 Essa configuração herda as variáveis de ambiente do Prompt de Comando do Desenvolvedor do Visual Studio [x64](building-on-the-command-line.md). Uma dessas variáveis é `INCLUDE` e você pode consultá-la aqui usando a `${env.INCLUDE}` macro. A `includePath` propriedade informa ao Visual Studio onde procurar todas as fontes necessárias para o IntelliSense. Nesse caso, ele diz "examinar todos os diretórios especificados pela variável de ambiente INCLUDE e também todos os diretórios na árvore de pastas de trabalho atual". A `name` propriedade é o nome que aparecerá na lista suspensa e pode ser qualquer coisa que você desejar. A `defines` propriedade fornece dicas para o IntelliSense quando ele encontra blocos de compilação condicionais. A `intelliSenseMode` propriedade fornece algumas dicas adicionais com base no tipo de compilador. Várias opções estão disponíveis para MSVC, GCC e Clang.
 
 > [!NOTE]
-> Se parecer que o Visual Studio está ignorando as configurações em *CppProperties. JSON*, tente adicionar uma exceção ao arquivo *. gitignore* da `!/CppProperties.json`seguinte maneira:.
+> Se parecer que o Visual Studio está ignorando as configurações no *CppProperties.js*, tente adicionar uma exceção ao arquivo *. gitignore* da seguinte maneira: `!/CppProperties.json` .
 
 ## <a name="default-configuration-for-mingw-w64"></a>Configuração padrão para MinGW-w64
 
@@ -109,7 +109,7 @@ Se você adicionar a configuração MinGW-w64, o JSON terá a seguinte aparênci
 }
 ```
 
-Observe o `environments` bloco. Ele define as propriedades que se comportam como variáveis de ambiente e estão disponíveis não apenas no arquivo *CppProperties. JSON* , mas também na tarefa outros arquivos de configuração *. vs. JSON* e *Launch. vs. JSON*. A `Mingw64` configuração herda o `mingw_w64` ambiente e usa sua `INCLUDE` propriedade para especificar o valor para. `includePath` Você pode adicionar outros caminhos a essa propriedade de matriz, conforme necessário. '
+Observe o `environments` bloco. Ele define propriedades que se comportam como variáveis de ambiente e estão disponíveis não apenas na *CppProperties.jsno* arquivo, mas também nos outros arquivos de configuração *task.vs.js* e *launch.vs.jsem*. A `Mingw64` configuração herda o `mingw_w64` ambiente e usa sua `INCLUDE` propriedade para especificar o valor para `includePath` . Você pode adicionar outros caminhos a essa propriedade de matriz, conforme necessário. '
 
 A `intelliSenseMode` propriedade é definida com um valor apropriado para gcc. Para obter mais informações sobre todas essas propriedades, consulte [CppProperties Schema Reference](cppproperties-schema-reference.md).
 
@@ -119,11 +119,11 @@ Quando tudo estiver funcionando corretamente, você verá o IntelliSense dos cab
 
 ## <a name="enable-intellisense-diagnostics"></a>Habilitar o diagnóstico do IntelliSense
 
-Se você não estiver vendo o IntelliSense esperado, você pode solucionar problemas acessando **ferramentas** > **Opções** > **Editor** > de texto**C/C++** > **avançado** e definindo **habilitar registro em log** como **true**. Para começar, tente definir o **nível de log** para 5 e **registrar filtros em log** como 8.
+Se você não estiver vendo o IntelliSense que espera, poderá solucionar problemas acessando **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **C/C++**  >  **avançado** e definindo **habilitar registro em log** para **`true`** . Para começar, tente definir o **nível de log** para 5 e **registrar filtros em log** como 8.
 
 ![Registro de diagnóstico](media/diagnostic-logging.png)
 
-A saída é canalizada para o **janela de saída** e fica visível quando você escolhe **Mostrar saída de: Visual C++ log*. A saída contém, entre outras coisas, a lista de caminhos de inclusão reais que o IntelliSense está tentando usar. Se os caminhos não corresponderem àqueles em *CppProperties. JSON*, tente fechar a pasta e excluir a subpasta *. vs* que contém dados de navegação armazenados em cache.
+A saída é canalizada para o **janela de saída** e fica visível quando você escolhe **Mostrar saída de: Visual C++ log*. A saída contém, entre outras coisas, a lista de caminhos de inclusão reais que o IntelliSense está tentando usar. Se os caminhos não corresponderem àqueles em *CppProperties.js*, tente fechar a pasta e excluir a subpasta *. vs* que contém dados de navegação armazenados em cache.
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>Definir tarefas de build com tasks.vs.json
 
@@ -131,7 +131,7 @@ Você pode automatizar os scripts de compilação, ou quaisquer outras operaçõ
 
 ![Configurar Tarefas do recurso Abrir Pasta](media/configure-tasks.png)
 
-Isso cria (ou abre) o arquivo *Tasks. vs. JSON* na pasta. vs que o Visual Studio cria na pasta do projeto raiz. Defina qualquer tarefa arbitrária nesse arquivo e, em seguida, invoque-a no menu de contexto do **Gerenciador de Soluções**. Para continuar o exemplo de GCC, o trecho a seguir mostra um arquivo *Tasks. vs. JSON* completo com uma tarefa única que invoca o *g + +. exe* para compilar um projeto. Suponha que o projeto contenha um único arquivo chamado *Hello. cpp*.
+Isso cria (ou abre) o *tasks.vs.jsno* arquivo na pasta. vs que o Visual Studio cria na pasta do projeto raiz. Defina qualquer tarefa arbitrária nesse arquivo e, em seguida, invoque-a no menu de contexto do **Gerenciador de Soluções**. Para continuar o exemplo de GCC, o trecho a seguir mostra uma *tasks.vs.jscompleta em* arquivo com uma tarefa única que invoca o *g + +. exe* para compilar um projeto. Suponha que o projeto contenha um único arquivo chamado *Hello. cpp*.
 
 ```json
 {
@@ -154,9 +154,9 @@ Isso cria (ou abre) o arquivo *Tasks. vs. JSON* na pasta. vs que o Visual Studio
 
 ```
 
-O arquivo JSON é colocado na subpasta *. vs* . Para ver essa pasta, clique no botão **Mostrar todos os arquivos** na parte superior da **Gerenciador de soluções**. Você pode executar essa tarefa clicando com o botão direito do mouse no nó raiz em **Gerenciador de soluções** e escolhendo **criar Olá**. Quando a tarefa for concluída, você deverá ver um novo arquivo, *Olá. exe* em **Gerenciador de soluções**.
+O arquivo JSON é colocado na subpasta *. vs* . Para ver essa pasta, clique no botão **Mostrar todos os arquivos** na parte superior da **Gerenciador de soluções**. Você pode executar essa tarefa clicando com o botão direito do mouse no nó raiz em **Gerenciador de soluções** e escolhendo **criar Olá**. Quando a tarefa for concluída, você deverá ver um novo arquivo, *hello.exe* em **Gerenciador de soluções**.
 
-Você pode definir muitos tipos de tarefas. O exemplo a seguir mostra um *arquivo Tasks. vs. JSON* que define uma única tarefa. `taskLabel` define o nome exibido no menu de contexto. `appliesTo` define em quais arquivos o comando pode ser executado. A `command` Propriedade refere-se à variável de ambiente COMSPEC, que identifica o caminho para o console (*cmd. exe* no Windows). Referencie também variáveis de ambiente declaradas em CppProperties.json ou CMakeSettings.json. A propriedade `args` especifica a linha de comando a ser invocada. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo .cpp atualmente selecionado.
+Você pode definir muitos tipos de tarefas. O exemplo a seguir mostra um *tasks.vs.jsno arquivo* que define uma única tarefa. `taskLabel` define o nome exibido no menu de contexto. `appliesTo` define em quais arquivos o comando pode ser executado. A `command` Propriedade refere-se à variável de ambiente COMSPEC, que identifica o caminho para o console (*cmd.exe* no Windows). Referencie também variáveis de ambiente declaradas em CppProperties.json ou CMakeSettings.json. A propriedade `args` especifica a linha de comando a ser invocada. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo .cpp atualmente selecionado.
 
 ```json
 {
@@ -173,13 +173,13 @@ Você pode definir muitos tipos de tarefas. O exemplo a seguir mostra um *arquiv
 }
 ```
 
-Depois de salvar *as tarefas. vs. JSON*, você pode clicar com o botão direito do mouse em qualquer arquivo *. cpp* na pasta, escolher **Echo filename** no menu de contexto e ver o nome do arquivo exibido na janela de saída.
+Depois *de salvartasks.vs.jsem*, você pode clicar com o botão direito do mouse em qualquer arquivo *. cpp* na pasta, escolher **Echo filename** no menu de contexto e ver o nome do arquivo exibido na janela de saída.
 
 Para obter mais informações, confira [Referência de esquema de Tasks.vs.json](tasks-vs-json-schema-reference-cpp.md).
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurar parâmetros de depuração com launch.vs.json
 
-Para personalizar os argumentos de linha de comando do programa e as instruções de depuração, clique com o botão direito do mouse no executável em **Gerenciador de soluções** e selecione **depurar e iniciar configurações**. Isso abrirá um arquivo de *inicialização existente. vs. JSON* ou, se não houver nenhum, ele criará um novo arquivo com um conjunto de configurações de inicialização mínima. Primeiro, você terá a opção de qual tipo de sessão de depuração deseja configurar. Para depurar um projeto MinGw-W64, escolhemos a **inicialização de C/C++ para MinGW/Cygwin (gdb)**. Isso cria uma configuração de inicialização para usar o *gdb. exe* com algumas palpites instruídos sobre valores padrão. Um desses valores padrão é `MINGW_PREFIX`. Você pode substituir o caminho literal (conforme mostrado abaixo) ou pode definir uma `MINGW_PREFIX` Propriedade em *CppProperties. JSON*:
+Para personalizar os argumentos de linha de comando do programa e as instruções de depuração, clique com o botão direito do mouse no executável em **Gerenciador de soluções** e selecione **depurar e iniciar configurações**. Isso abrirá um *launch.vs.jsexistente no* arquivo ou, se não houver nenhum, ele criará um novo arquivo com um conjunto de configurações de inicialização mínima. Primeiro, você terá a opção de qual tipo de sessão de depuração deseja configurar. Para depurar um projeto MinGw-W64, escolhemos a **inicialização de C/C++ para MinGW/Cygwin (gdb)**. Isso cria uma configuração de inicialização para usar *gdb.exe* com algumas palpites instruídos sobre valores padrão. Um desses valores padrão é `MINGW_PREFIX` . Você pode substituir o caminho literal (como mostrado abaixo) ou pode definir uma `MINGW_PREFIX` propriedade no *CppProperties.jsem*:
 
 ```json
 {
@@ -207,7 +207,7 @@ Para iniciar a depuração, escolha o executável na lista suspensa depurar e cl
 
 Você deve ver a caixa de diálogo **inicializando o depurador** e uma janela de console externa que está executando seu programa.
 
-Para obter mais informações, consulte [Launch. vs. JSON Schema Reference](launch-vs-schema-reference-cpp.md).
+Para obter mais informações, consulte [launch.vs.jssobre referência de esquema](launch-vs-schema-reference-cpp.md).
 
 ## <a name="launching-other-executables"></a>Iniciando outros executáveis
 

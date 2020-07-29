@@ -6,16 +6,16 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: e8f62e82ebb7fcc18be5ac7d203df0fb46c9b635
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369849"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186965"
 ---
 # <a name="member-access-control-c"></a>Controle de acesso a membro (C++)
 
-Os controles de acesso permitem separar a interface [pública](../cpp/public-cpp.md) de uma classe dos detalhes de implementação [privada](../cpp/private-cpp.md) e dos membros [protegidos](../cpp/protected-cpp.md) que são apenas para uso por classes derivadas. O especificador de acesso se aplica a todos os membros declarados após ele até que o próximo especificador de acesso seja encontrado.
+Os controles de acesso permitem que você separe a interface [pública](../cpp/public-cpp.md) de uma classe dos detalhes de implementação [privada](../cpp/private-cpp.md) e os membros [protegidos](../cpp/protected-cpp.md) que são apenas para uso por classes derivadas. O especificador de acesso se aplica a todos os membros declarados depois dele até que o próximo especificador de acesso seja encontrado.
 
 ```cpp
 class Point
@@ -35,26 +35,26 @@ protected:      // Declare protected function for derived classes only.
 };
 ```
 
-O acesso padrão é **privado** em uma classe, e **público** em uma estrutura ou união. Os especificadores de acesso em uma classe podem ser usados várias vezes em qualquer ordem. A alocação de armazenamento para objetos de tipos de classe depende da implementação, mas é garantido que os membros receberão endereços de memória sucessivamente mais altos entre especificadores de acesso.
+O acesso padrão está **`private`** em uma classe e **`public`** em uma struct ou União. Especificadores de acesso em uma classe podem ser usados várias vezes em qualquer ordem. A alocação de armazenamento para objetos de tipos de classe depende da implementação, mas é garantido que os membros receberão endereços de memória sucessivamente mais altos entre especificadores de acesso.
 
 ## <a name="member-access-control"></a>Controle de acesso de membros
 
 |Tipo de acesso|Significado|
 |--------------------|-------------|
-|[particulares](../cpp/private-cpp.md)|Os membros da classe declarados **como privados** só podem ser usados por funções de membros e amigos (classes ou funções) da classe.|
-|[protegidos](../cpp/protected-cpp.md)|Os membros da classe declarados **como protegidos** podem ser usados por funções de membros e amigos (classes ou funções) da classe. Além disso, eles podem ser usados por classes derivadas da classe.|
-|[públicos](../cpp/public-cpp.md)|Os membros da classe declarados como **públicos** podem ser usados por qualquer função.|
+|[pessoal](../cpp/private-cpp.md)|Membros de classe declarados como **`private`** podem ser usados somente por funções de membro e amigos (classes ou funções) da classe.|
+|[protected](../cpp/protected-cpp.md)|Membros de classe declarados como **`protected`** podem ser usados por funções de membro e amigos (classes ou funções) da classe. Além disso, eles podem ser usados por classes derivadas da classe.|
+|[público](../cpp/public-cpp.md)|Membros de classe declarados como **`public`** podem ser usados por qualquer função.|
 
 O controle de acesso ajuda a evitar que você use objetos de maneiras que não sejam as destinadas a eles. Essa proteção será perdida quando as conversões de tipo explícitas (casts) forem executadas.
 
 > [!NOTE]
 > O controle de acesso é igualmente aplicável a todos os nomes: funções membro, dados de membro, classes aninhadas e enumeradores.
 
-## <a name="access-control-in-derived-classes"></a>Controle de Acesso em Classes Derivadas
+## <a name="access-control-in-derived-classes"></a>Controle de acesso em classes derivadas
 
 Dois fatores controlam quais membros de uma classe base são acessíveis em uma classe derivada; esses mesmos fatores controlam o acesso aos membros herdados na classe derivada:
 
-- Se a classe derivada declara a classe base usando o especificador de acesso **público.**
+- Se a classe derivada declara a classe base usando o **`public`** especificador de acesso.
 
 - Qual é o acesso ao membro na classe base.
 
@@ -116,7 +116,7 @@ Em `DerivedClass1`, a função de membro `PublicFunc` é um membro público e `P
 
 Em `DerivedClass2`, as funções `PublicFunc` e `ProtectedFunc` são consideradas membros particulares porque `BaseClass` é uma classe base particular. Novamente, `PrivateFunc` é particular a `BaseClass`, e inacessível a quaisquer classes derivadas.
 
-Você pode declarar uma classe derivada sem um especificador de acesso de classe base. Nesse caso, a derivação é considerada privada se a declaração de classe derivada usar a palavra-chave de **classe.** A derivação é considerada pública se a declaração de classe derivada usar a palavra-chave **de estrutura.** Por exemplo, o código a seguir:
+Você pode declarar uma classe derivada sem um especificador de acesso de classe base. Nesse caso, a derivação será considerada privada se a declaração de classe derivada usar a **`class`** palavra-chave. A derivação será considerada pública se a declaração de classe derivada usar a **`struct`** palavra-chave. Por exemplo, o código a seguir:
 
 ```cpp
 class Derived : Base
@@ -144,16 +144,16 @@ struct Derived : public Base
 ...
 ```
 
-Observe que os membros declarados como tendo acesso privado não estão acessíveis a funções ou classes derivadas, a menos que essas funções ou classes sejam declaradas usando a declaração **de amigo** na classe base.
+Observe que os membros declarados como tendo acesso privado não são acessíveis a funções ou classes derivadas, a menos que essas funções ou classes sejam declaradas usando a **`friend`** declaração na classe base.
 
-Um tipo **de sindicato** não pode ter uma classe base.
+Um **`union`** tipo não pode ter uma classe base.
 
 > [!NOTE]
-> Ao especificar uma classe de base privada, é aconselhável usar explicitamente a palavra-chave **privada** para que os usuários da classe derivada entendam o acesso ao membro.
+> Ao especificar uma classe base privada, é recomendável usar explicitamente a **`private`** palavra-chave para que os usuários da classe derivada compreendam o acesso do membro.
 
 ## <a name="access-control-and-static-members"></a>Controle de acesso e membros estáticos
 
-Quando você especifica uma classe base como **privada,** ela afeta apenas membros não estáticos. Os membros estáticos públicos ainda são acessíveis nas classes derivadas. No entanto, o acesso a membros da classe base usando ponteiros, referências ou objetos pode exigir uma conversão, quando então o controle de acesso é aplicado novamente. Considere o exemplo a seguir:
+Quando você especifica uma classe base como **`private`** , ela afeta somente membros não estáticos. Os membros estáticos públicos ainda são acessíveis nas classes derivadas. No entanto, o acesso a membros da classe base usando ponteiros, referências ou objetos pode exigir uma conversão, quando então o controle de acesso é aplicado novamente. Considere o exemplo a seguir:
 
 ```cpp
 // access_control.cpp
@@ -187,7 +187,7 @@ int Derived2::ShowCount()
 }
 ```
 
-No código acima, o controle de acesso proíbe a conversão de um ponteiro para `Derived2` em um ponteiro para `Base`. O **ponteiro deste** ponto `Derived2 *`é implicitamente do tipo . Para selecionar `CountOf` a função, **ela** deve `Base *`ser convertida em tipo . Essa conversão não é permitida porque `Base` é uma classe base indireta privada para `Derived2`. A conversão em um tipo de classe base privada é aceitável apenas no caso de ponteiros para as classes derivadas imediatas. Consequentemente, os ponteiros do tipo `Derived1 *` podem ser convertidos no tipo `Base *`.
+No código acima, o controle de acesso proíbe a conversão de um ponteiro para `Derived2` em um ponteiro para `Base`. O **`this`** ponteiro é implicitamente do tipo `Derived2 *` . Para selecionar a `CountOf` função, **`this`** é necessário convertê-la no tipo `Base *` . Essa conversão não é permitida porque `Base` é uma classe base indireta privada para `Derived2`. A conversão em um tipo de classe base privada é aceitável apenas no caso de ponteiros para as classes derivadas imediatas. Consequentemente, os ponteiros do tipo `Derived1 *` podem ser convertidos no tipo `Base *`.
 
 Observe que chamar a função `CountOf` explicitamente, sem usar um ponteiro, uma referência ou um objeto para selecioná-la, não implica em nenhuma conversão. Consequentemente, a chamada é permitida.
 
@@ -230,15 +230,15 @@ No exemplo anterior, chamar a função virtual `GetState` usando um ponteiro par
 > [!CAUTION]
 > A função virtual `GetState` pode ser chamada usando um ponteiro para a classe base `VFuncBase`. Isso não significa que a função chamada seja a versão da classe base dessa função.
 
-## <a name="access-control-with-multiple-inheritance"></a>Controle de acesso com herança múltipla
+## <a name="access-control-with-multiple-inheritance"></a>Controle de acesso com várias heranças
 
 Em células entrelaçadas de herança múltipla que envolvem classes base virtuais, um nome determinado pode ser acessado por mais de um caminho. Como o controle de acesso diferente pode ser aplicado ao longo desses caminhos diferentes, o compilador escolhe o caminho que fornece o maior acesso. Consulte a figura a seguir.
 
-![Acesso ao longo de caminhos de um gráfico de herança](../cpp/media/vc38v91.gif "Acesso ao longo de caminhos de um gráfico de herança") <br/>
-Acesso ao longo de caminhos de um gráfico de herança
+![Acessar nos caminhos de um grafo de herança](../cpp/media/vc38v91.gif "Acessar nos caminhos de um grafo de herança") <br/>
+Acessar nos caminhos de um grafo de herança
 
 Na figura, um nome declarado na classe `VBase` é sempre acessado pela classe `RightPath`. O caminho à direita é mais acessível porque `RightPath` declara `VBase` como uma classe base pública, enquanto que `LeftPath` declara `VBase` como particular.
 
 ## <a name="see-also"></a>Confira também
 
-[Referência de linguagem C++](../cpp/cpp-language-reference.md)
+[Referência da linguagem C++](../cpp/cpp-language-reference.md)

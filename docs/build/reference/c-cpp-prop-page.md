@@ -4,12 +4,12 @@ description: Guia de referência para as propriedades das páginas de propriedad
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 3366f6677bf976b6211dd27a8abb114765fb2abc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180884"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229734"
 ---
 # <a name="cc-property-pages"></a>Páginas de propriedades do C/C++
 
@@ -118,10 +118,10 @@ Selecione o nível de expansão de [função embutida](../../cpp/inline-function
 
 #### <a name="choices"></a>Opções
 
-- **Padrão**
+- **Default**
 - **Disabled-desabilita** a expansão embutida, que está ativada por padrão.
-- **Somente __inline** -expande apenas as funções marcadas como **`inline`** , `__forceinline` ou `__inline` . Ou, em uma função membro do C++, definida em uma declaração de classe.
-- **Any** -expande as funções marcadas como **`inline`** ou `__inline` e qualquer outra função que o compilador escolha. (A expansão ocorre no critério do compilador, muitas vezes conhecida como *autolinhar*.)
+- **Somente __inline** -expande apenas as funções marcadas como **`inline`** , **`__forceinline`** ou **`__inline`** . Ou, em uma função membro do C++, definida em uma declaração de classe.
+- **Any** -expande as funções marcadas como **`inline`** ou **`__inline`** e qualquer outra função que o compilador escolha. (A expansão ocorre no critério do compilador, muitas vezes conhecida como *autolinhar*.)
 
 ### <a name="enable-intrinsic-functions"></a>Habilitar funções intrínsecas
 
@@ -317,7 +317,7 @@ Habilita ou suprime o modo de conformidade. Define [`/permissive-`](permissive-s
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>Tratar wchar_t como tipo interno
 
-Quando especificado, o tipo **`wchar_t`** se torna um tipo nativo que mapeia para `__wchar_t` o da mesma maneira que **`short`** mapeia para `__int16` . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)está ativado por padrão.
+Quando especificado, o tipo **`wchar_t`** se torna um tipo nativo que mapeia para **`__wchar_t`** o da mesma maneira que **`short`** mapeia para **`__int16`** . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)está ativado por padrão.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>Forçar conformidade no escopo do loop for
 
@@ -345,7 +345,7 @@ Determina o padrão de linguagem C++ que o compilador habilita. Use a versão ma
 
 #### <a name="choices"></a>Opções
 
-- **Padrão**
+- **Default**
 - **Padrão ISO C++ 14**
 - **Padrão ISO C++ 17**
 - **Visualização-recursos do último rascunho de trabalho do C++**
@@ -434,10 +434,10 @@ Selecione a Convenção de chamada padrão para seu aplicativo (pode ser substit
 
 #### <a name="choices"></a>Opções
 
-- **__cdecl** -especifica a `__cdecl` Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas `__stdcall` ou `__fastcall` .
-- **__fastcall** -especifica a `__fastcall` Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas `__cdecl` ou `__stdcall` . Todas as funções `__fastcall` precisam ter protótipos.
-- **__stdcall** -especifica a `__stdcall` Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas `__cdecl` ou `__fastcall` . Todas as funções `__stdcall` precisam ter protótipos.
-- **__vectorcall** -especifica a `__vectorcall` Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas `__cdecl` , `__fastcall` ou `__stdcall` . Todas as funções `__vectorcall` precisam ter protótipos.
+- **`__cdecl`**-Especifica a **`__cdecl`** Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas **`__stdcall`** ou **`__fastcall`** .
+- **`__fastcall`**-Especifica a **`__fastcall`** Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas **`__cdecl`** ou **`__stdcall`** . Todas as **`__fastcall`** funções devem ter protótipos.
+- **`__stdcall`**-Especifica a **`__stdcall`** Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas **`__cdecl`** ou **`__fastcall`** . Todas as **`__stdcall`** funções devem ter protótipos.
+- **`__vectorcall`**-Especifica a **`__vectorcall`** Convenção de chamada para todas as funções, exceto funções de membro C++ e funções marcadas **`__cdecl`** , **`__fastcall`** ou **`__stdcall`** . Todas as **`__vectorcall`** funções devem ter protótipos.
 
 ### <a name="compile-as"></a>Compilar como
 

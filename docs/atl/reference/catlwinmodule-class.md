@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 5cdf13ebbb982ad8184a52dcf1a3e30d71e4e5b0
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 04dc7e5b8c0c5dd21567f23395b4bafd4ae839dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167702"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229981"
 ---
 # <a name="catlwinmodule-class"></a>Classe CAtlWinModule
 
@@ -68,17 +68,17 @@ Esse método inicializa e adiciona uma `_AtlCreateWndData` estrutura.
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pData*<br/>
 Ponteiro para a `_AtlCreateWndData` estrutura a ser inicializada e adicionada ao módulo atual.
 
 *pObject*<br/>
-Ponteiro para **o** ponteiro de um objeto.
+Ponteiro para o ponteiro de um objeto **`this`** .
 
 ### <a name="remarks"></a>Comentários
 
-Esse método chama [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que Inicializa uma estrutura de [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Essa estrutura armazenará **esse** ponteiro, usado para obter a instância de classe em procedimentos de janela.
+Esse método chama [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que Inicializa uma estrutura de [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Essa estrutura armazenará o **`this`** ponteiro, usado para obter a instância de classe em procedimentos de janela.
 
 ## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
 
@@ -114,7 +114,7 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para a `_AtlCreateWndData` estrutura adicionada anteriormente com [CAtlWinModule:: AddCreateWndData](#addcreatewnddata)ou NULL se nenhum objeto estiver disponível.
+Retorna um ponteiro para a `_AtlCreateWndData` estrutura adicionada anteriormente com [CAtlWinModule:: ADDCREATEWNDDATA](#addcreatewnddata)ou NULL se nenhum objeto estiver disponível.
 
 ## <a name="see-also"></a>Confira também
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f5b640585ec3b55e4e3d65b37ea0929a757473
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336160"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229474"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Armazenamento e alinhamento de estruturas
 
@@ -22,7 +22,7 @@ Os membros da estrutura são armazenados em sequência na ordem em que são decl
 
 Cada objeto de dados tem um *requisito de alinhamento*. Para estruturas, o requisito é o maior dos respectivos membros. Cada objeto é alocado um *deslocamento* para que
 
-*offset* `%` *alinhamento de deslocamento-requisito* `==` 0
+*deslocamento* `%` *requisito* `==` de alinhamento 0
 
 Os campos de bits adjacentes serão empacotados na mesma unidade de alocação de 1, 2, ou 4 bytes se os tipos integrais forem do mesmo tamanho e se o campo de bit seguinte se encaixar na unidade de alocação atual sem cruzar o limite imposto pelos requisitos comuns de alinhamento dos campos de bits.
 
@@ -36,7 +36,7 @@ em que *n* é o tamanho de empacotamento expresso com a opção /Zp[*n*] e *item
 
 Para usar o pragma `pack` para especificar um empacotamento que não seja aquele especificado na linha de comando para determinada estrutura, atribua o pragma `pack`, onde o tamanho de empacotamento é 1, 2, 4, 8 ou 16, antes da estrutura. Para restabelecer o empacotamento atribuído na linha de comando, especifique o pragma `pack` sem argumentos.
 
-Os campos de bits usam como padrão o tamanho **long** para o compilador de C da Microsoft. Os membros da estrutura são alinhados no tamanho do tipo ou no tamanho de /Zp[*n*], o que for menor. O tamanho padrão é 4.
+Os campos de bits assumem o tamanho padrão **`long`** para o compilador do Microsoft C. Os membros da estrutura são alinhados no tamanho do tipo ou no tamanho de /Zp[*n*], o que for menor. O tamanho padrão é 4.
 
 **FINAL específico da Microsoft**
 

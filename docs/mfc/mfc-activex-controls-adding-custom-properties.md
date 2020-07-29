@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 5014a32386a0a140f0fdc00b23a0ac24a54afcee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626141"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230487"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controles ActiveX MFC: adicionando propriedades personalizadas
 
@@ -62,7 +62,7 @@ Esse mesmo procedimento também pode ser usado para adicionar outras propriedade
 
 1. Para **tipo de implementação**, clique em **obter/definir métodos**.
 
-1. Na caixa **tipo de propriedade** , selecione **curto**.
+1. Na caixa **tipo de propriedade** , selecione **`short`** .
 
 1. Digite nomes exclusivos para suas funções Get e Set ou aceite os nomes padrão.
 
@@ -92,9 +92,9 @@ Por fim, as implementações `GetCircleOffset` das `SetCircleOffset` funções e
 
 Observe que o assistente para adicionar propriedade adiciona automaticamente uma chamada, para [SetModifiedFlag](reference/colecontrol-class.md#setmodifiedflag), ao corpo da função Set. Chamar essa função marca o controle como modificado. Se um controle tiver sido modificado, seu novo estado será salvo quando o contêiner for salvo. Essa função deve ser chamada sempre que uma propriedade, salva como parte do estado persistente do controle, altera o valor.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)<br/>
-[Controles ActiveX do MFC: propriedades](mfc-activex-controls-properties.md)<br/>
+[Controles ActiveX do MFC: Propriedades](mfc-activex-controls-properties.md)<br/>
 [Controles ActiveX do MFC: métodos](mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](reference/colecontrol-class.md)

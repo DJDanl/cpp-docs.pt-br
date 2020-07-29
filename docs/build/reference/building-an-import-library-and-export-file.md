@@ -25,47 +25,47 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cb5224b3edaf84dbcb7c0429044a647fb5ac19a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294780"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229747"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilando uma biblioteca de importação e um arquivo de exportação
 
-Para criar uma biblioteca de importação e exportação de arquivo, use a seguinte sintaxe:
+Para criar uma biblioteca de importação e um arquivo de exportação, use a seguinte sintaxe:
 
-> **LIB /DEF**[**:**<em>deffile</em>] [*opções*] [*objfiles*] [*bibliotecas*]
+> **Lib/def**[**:**<em>deffile</em>] [*Opções*] [*objfiles*] [*bibliotecas*]
 
-Quando /DEF for especificado, a biblioteca cria os arquivos de saída das especificações de exportação que são passadas no comando LIB. Há três métodos para especificação de exportações, listadas na ordem recomendada de uso:
+Quando/DEF é especificado, LIB cria os arquivos de saída das especificações de exportação que são passadas no comando LIB. Há três métodos para especificar exportações, listados na ordem recomendada de uso:
 
-1. Um **dllexport** definição de uma da *objfiles* ou *bibliotecas*
+1. Uma **`__declspec(dllexport)`** definição em um dos *objfiles* ou *bibliotecas*
 
-1. Uma especificação de /EXPORT:*nome* na linha de comando LIB
+1. Uma especificação de/EXPORT:*Name* na linha de comando lib
 
-1. Uma definição em uma **exportações** instrução em um *deffile*
+1. Uma definição em uma instrução **Exports** em um *deffile*
 
-Esses são os mesmos métodos que você use para especificar exportações ao vincular a um programa de exportação. Um programa pode usar mais de um método. Você pode especificar partes do comando LIB (como o múltiplo *objfiles* ou /EXPORT especificações) em um arquivo de comando no comando LIB, assim como você pode em um comando LINK.
+Esses são os mesmos métodos que você usa para especificar exportações ao vincular um programa de exportação. Um programa pode usar mais de um método. Você pode especificar partes do comando LIB (como várias especificações *objfiles* ou/Export) em um arquivo de comando no comando LIB, assim como você pode em um comando de link.
 
-As opções a seguir se aplicam à criação de uma biblioteca de importação e exportar o arquivo:
+As opções a seguir se aplicam à criação de uma biblioteca de importação e arquivo de exportação:
 
-> **/ Entrada saída:** *importar*
+> **/Out:** *importar*
 
-Substitui o nome de arquivo de saída padrão para o *importação* biblioteca que está sendo criada. Quando /out sobrescreve não for especificado, o nome padrão é o nome base do primeiro arquivo de objeto ou da biblioteca, o comando LIB e a extensão. lib. O arquivo de exportação recebe o mesmo nome base que a biblioteca de importação e a extensão. exp.
+Substitui o nome de arquivo de saída padrão para a biblioteca de *importação* que está sendo criada. Quando/OUT não for especificado, o nome padrão será o nome base do primeiro arquivo de objeto ou biblioteca no comando LIB e a extensão. lib. O arquivo de exportação recebe o mesmo nome base que a biblioteca de importação e a extensão. exp.
 
-> **/ EXPORTAÇÃO:** *Nome_da_entrada* \[ **=** *internalname*]\[,**\@** <em>ordinal</em>\[, **NONAME**]]\[, **dados**]
+> **/Export:** *entryname* \[ **=** *InternalName*] \[ , **\@** <em>ordinal</em> \[ , **NoName**]] \[ , **dados**]
 
-Exporta uma função do seu programa para permitir que outros programas chamar a função. Você também pode exportar dados (usando o **dados** palavra-chave). Exportações normalmente são definidas em uma DLL.
+Exporta uma função do seu programa para permitir que outros programas chamem a função. Você também pode exportar dados (usando a palavra-chave **Data** ). As exportações geralmente são definidas em uma DLL.
 
-O *Nome_da_entrada* é o nome do item de dados ou função como ele deve ser usada pelo programa de chamada. Opcionalmente, você pode especificar o *internalname* como a função conhecida no programa de definição; por padrão, *internalname* é o mesmo que *Nome_da_entrada*. O *ordinal* Especifica um índice na tabela de exportação no intervalo de 1 a 65.535; se você não especificar *ordinal*, LIB atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem uma *Nome_da_entrada*. O **dados** palavra-chave é usado para exportar objetos de dados.
+O *entryname* é o nome da função ou do item de dados, pois ele deve ser usado pelo programa de chamada. Opcionalmente, você pode especificar o *InternalName* como a função conhecida no programa de definição; Por padrão, o *InternalName* é o mesmo que *entryname*. O *ordinal* especifica um índice na tabela de exportação no intervalo de 1 a 65.535; Se você não especificar *ordinal*, lib atribuirá um. A palavra-chave **NoName** exporta a função somente como um ordinal, sem um *entryname*. A palavra-chave **Data** é usada para exportar objetos somente de dados.
 
-> **/INCLUDE:** *symbol*
+> **/Include:** *símbolo*
 
-Adiciona o *símbolo* à tabela de símbolos. Essa opção é útil para forçar o uso de um objeto de biblioteca, caso contrário, não poderia ser incluído.
+Adiciona o *símbolo* especificado à tabela de símbolos. Essa opção é útil para forçar o uso de um objeto de biblioteca que, de outra forma, não seria incluído.
 
-Observe que se você criar sua biblioteca de importação em uma etapa preliminar, antes de criar seu. dll, você deve passar o mesmo conjunto de arquivos de objeto ao criar o arquivo. dll, conforme passado ao compilar a biblioteca de importação.
+Observe que, se você criar sua biblioteca de importação em uma etapa preliminar, antes de criar o. dll, você deverá passar o mesmo conjunto de arquivos de objeto ao compilar o. dll, como você passou ao criar a biblioteca de importação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com bibliotecas de importação e arquivos de exportação](working-with-import-libraries-and-export-files.md)

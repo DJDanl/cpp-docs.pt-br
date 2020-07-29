@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422370"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224533"
 ---
 # <a name="ltvectorgt-operators"></a>Operadores &lt;vector&gt;
 
-## <a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a>operador! =
 
 Testa se o objeto à esquerda do operador é diferente do objeto à direita.
 
@@ -35,15 +35,15 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `vector`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se os vetores não forem iguais; **false** se os vetores forem iguais.
+**`true`** Se os vetores não forem iguais; **`false`** se os vetores forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -76,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt">Operador </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operador&lt;
 
 Testa se o objeto à esquerda do operador é menor do que o objeto à direita.
 
@@ -86,15 +86,15 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `vector`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true**, se o vetor no lado esquerdo do operador for menor que o vetor à direita do operador; caso contrário, **false**.
+**`true`** Se o vetor no lado esquerdo do operador for menor que o vetor no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="example"></a>Exemplo
 
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>= de&lt;do operador
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operador&lt;=
 
 Testa se o objeto à esquerda do operador é menor que ou igual ao objeto à direita.
 
@@ -137,15 +137,15 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `vector`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o vetor à esquerda do operador for menor que ou igual ao vetor à direita do operador; caso contrário, **false**.
+**`true`** Se o vetor no lado esquerdo do operador for menor ou igual ao vetor no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="example"></a>Exemplo
 
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto à esquerda do operador é igual ao objeto à direita.
 
@@ -188,15 +188,15 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `vector`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o vetor à esquerda do operador for igual ao vetor à direita do operador; caso contrário, **false**.
+**`true`** Se o vetor no lado esquerdo do operador for igual ao vetor no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -229,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt">Operador </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operador&gt;
 
 Testa se o objeto à esquerda do operador é maior do que o objeto à direita.
 
@@ -239,15 +239,15 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `vector`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o vetor à esquerda do operador for maior que o vetor à direita do operador; caso contrário, **false**.
+**`true`** Se o vetor no lado esquerdo do operador for maior que o vetor no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="example"></a>Exemplo
 
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>= de&gt;do operador
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operador&gt;=
 
 Testa se o objeto à esquerda do operador é maior que ou igual ao objeto à direita.
 
@@ -291,15 +291,15 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `vector`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o vetor à esquerda do operador for maior que ou igual ao vetor à direita do vetor; caso contrário, **false**.
+**`true`** Se o vetor no lado esquerdo do operador for maior ou igual ao vetor no lado direito do vetor; caso contrário **`false`** .
 
 ### <a name="example"></a>Exemplo
 

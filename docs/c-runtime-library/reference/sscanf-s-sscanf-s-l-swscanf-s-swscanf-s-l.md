@@ -44,12 +44,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957978"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229344"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -82,9 +82,9 @@ int _swscanf_s_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Dados armazenados
 
 *format*<br/>
@@ -96,7 +96,7 @@ Argumentos opcionais
 *locale*<br/>
 A localidade a ser usada
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão.
 
@@ -106,7 +106,7 @@ Para obter mais informações sobre esses e outros códigos de erro, consulte [e
 
 ## <a name="remarks"></a>Comentários
 
-A função **sscanf_s** lê dados do *buffer* para o local que é fornecido por cada *argumento*. Os argumentos após a cadeia de caracteres de formato especificam ponteiros para variáveis que têm um tipo que corresponde a um especificador de tipo no *formato*. Ao contrário da versão menos segura [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), um parâmetro de tamanho de buffer é necessário quando você usa os conjuntos de controles **c**, **c**, **s**, **s**ou String do campo de tipo que estão entre **[]** . O tamanho do buffer em caracteres deve ser fornecido como um parâmetro adicional imediatamente após cada parâmetro de buffer que precisa dele. Por exemplo, se você estiver lendo uma cadeia de caracteres, o tamanho do buffer para essa cadeia de caracteres será passado conforme demonstrado a seguir:
+A função **sscanf_s** lê dados do *buffer* para o local que é fornecido por cada *argumento*. Os argumentos após a cadeia de caracteres de formato especificam ponteiros para variáveis que têm um tipo que corresponde a um especificador de tipo no *formato*. Ao contrário da versão menos segura [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), um parâmetro de tamanho de buffer é necessário quando você usa os conjuntos de controles **c**, **c**, **s**, **s**ou String do campo de tipo que estão entre **[]**. O tamanho do buffer em caracteres deve ser fornecido como um parâmetro adicional imediatamente após cada parâmetro de buffer que precisa dele. Por exemplo, se você estiver lendo uma cadeia de caracteres, o tamanho do buffer para essa cadeia de caracteres será passado conforme demonstrado a seguir:
 
 ```C
 wchar_t ws[10];
@@ -132,13 +132,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 Para obter mais informações, consulte os caracteres de campo do tipo [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo não **assinado**, não **size_t**. Ao compilar para destinos de 64 bits, use uma conversão estática para converter os resultados de **_countof** ou **sizeof** no tamanho correto.
+> O parâmetro Size é do tipo **`unsigned`** , não **size_t**. Ao compilar para destinos de 64 bits, use uma conversão estática para converter **_countof** ou **`sizeof`** resultados no tamanho correto.
 
 O argumento *Format* controla a interpretação dos campos de entrada e tem a mesma forma e função que o argumento de *formato* para a função **scanf_s** . Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-**swscanf_s** é uma versão de caractere largo do **sscanf_s**; os argumentos para **swscanf_s** são cadeias de caracteres largos. **sscanf_s** não manipula caracteres hexadecimais multibyte. **swscanf_s** não manipula caracteres hexadecimais Unicode de largura inteira ou "zona de compatibilidade". Caso contrário, **swscanf_s** e **sscanf_s** se comportam de forma idêntica.
+**swscanf_s** é uma versão de caractere largo do **sscanf_s**; os argumentos para **swscanf_s** são cadeias de caracteres largos. **sscanf_s** não trata caracteres hexadecimais multibyte. **swscanf_s** não trata os caracteres hexadecimais de largura inteira Unicode ou "zona de compatibilidade". Caso contrário, **swscanf_s** e **sscanf_s** se comportam de forma idêntica.
 
-As versões dessas funções que têm o sufixo **_L** são idênticas, exceto que usam o parâmetro Locale que é passado em vez da localidade do thread atual.
+As versões dessas funções que têm o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale que é passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -154,7 +154,7 @@ As versões dessas funções que têm o sufixo **_L** são idênticas, exceto qu
 |**sscanf_s**, **_sscanf_s_l**|\<stdio.h>|
 |**swscanf_s**, **_swscanf_s_l**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -196,10 +196,10 @@ Integer:  = 15
 Real:     = 15.000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

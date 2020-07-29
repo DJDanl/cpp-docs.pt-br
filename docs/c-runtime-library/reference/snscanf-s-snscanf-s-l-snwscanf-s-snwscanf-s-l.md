@@ -52,12 +52,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947955"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229396"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
@@ -90,9 +90,9 @@ int __cdecl _snwscanf_s_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*input*<br/>
+*entrada*<br/>
 A cadeia de caracteres de entrada para examinar.
 
 *length*<br/>
@@ -107,7 +107,7 @@ A localidade a ser usada.
 *argument_list*<br/>
 Argumentos opcionais a serem atribuídos de acordo com a cadeia de caracteres de formato.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Ambas essas funções retornam o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos mas não foram atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão. Para obter mais informações, consulte [sscanf_s, _sscanf_s_l, swscanf_s e _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
@@ -119,12 +119,12 @@ Para obter informações sobre esses e outros códigos de erro, consulte [_doser
 
 Essa função é como **sscanf_s** , exceto pelo fato de que ela fornece a capacidade de especificar um número fixo de caracteres para examinar a partir da cadeia de caracteres de entrada. Para obter mais informações, consulte [sscanf_s, _sscanf_s_l, swscanf_s e _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-O parâmetro de tamanho do buffer é necessário com os caracteres de campo de tipo **c**, **c**, **s**, **s**e **[** . Para obter mais informações, consulte [Caracteres de campo de tipo scanf](../../c-runtime-library/scanf-type-field-characters.md).
+O parâmetro de tamanho do buffer é necessário com os caracteres de campo de tipo **c**, **c**, **s**, **s**e **[**. Para obter mais informações, consulte [Caracteres de campo de tipo scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo não **assinado**, não **size_t**.
+> O parâmetro Size é do tipo **`unsigned`** , não **size_t**.
 
-As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -177,6 +177,6 @@ _snscanf_s converted 2 fields: 15 and 12.000000
 _snwscanf_s converted 2 fields: 15 and 12.000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md)<br/>

@@ -6,12 +6,12 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b292d5b8e1db7415aed6427f2327788e08a28a20
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 5f448e68878e211969c89f7c4c750e3231d3a9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404444"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230578"
 ---
 # <a name="create-a-console-calculator-in-c"></a>Criar uma calculadora de console em C++
 
@@ -123,7 +123,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
    > Noções básicas sobre o código:
    >
    > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você pode ver um nome de arquivo entre colchetes angulares ( **\<\>** ); outras vezes, está entre aspas (**""**). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
-   > - A linha `using namespace std;` informa ao compilador para esperar que coisas da Biblioteca Padrão C++ sejam usadas nesse arquivo. Sem essa linha, cada palavra-chave da biblioteca precisaria ser precedida por um `std::` para indicar seu escopo. Por exemplo, sem essa linha, cada referência a `cout` precisaria ser escrito como `std::cout`. A instrução `using` é adicionada para fazer com que o código tenha uma aparência mais limpa.
+   > - A linha `using namespace std;` informa ao compilador para esperar que coisas da Biblioteca Padrão C++ sejam usadas nesse arquivo. Sem essa linha, cada palavra-chave da biblioteca precisaria ser precedida por um `std::` para indicar seu escopo. Por exemplo, sem essa linha, cada referência a `cout` precisaria ser escrito como `std::cout`. A **`using`** instrução é adicionada para tornar o código mais limpo.
    > - A palavra-chave `cout` é usada para imprimir a saída padrão em C++. O **\<\<** operador informa ao compilador para enviar o que estiver à direita dele para a saída padrão.
    > - A palavra-chave **endl** é como a tecla Enter; encerra a linha e move o cursor para a próxima linha. É uma melhor prática para colocar um `\n` dentro da cadeia de caracteres (contido por "") para fazer a mesma coisa, uma vez que `endl` sempre libera o buffer e pode prejudicar o desempenho do programa, mas já que esse é um aplicativo muito pequeno, `endl` é usado em vez disso para melhor legibilidade.
    > - Todas as instruções C++ devem terminar com ponto e vírgula e todos os aplicativos C++ devem conter uma função `main()`. Essa função é o que o programa é executado no início. Todo o código deve estar acessível de `main()` para ser usado.
@@ -205,7 +205,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
    >
    > - A função `Calculate` consome um número, um operador e um segundo número e, em seguida, executa a operação solicitada nos números.
    > - A instrução de opção verifica que operador foi fornecido e somente executa o caso que corresponde a essa operação. O padrão: caso é uma contingência se o usuário digita um operador que não é aceito, de modo que o programa não seja interrompido. Em geral, é melhor manipular uma entrada de usuário inválida de uma maneira mais elegante, mas isso está além do escopo deste tutorial.
-   > - A palavra-chave `double` denota um tipo de número que dá suporte a decimais. Dessa forma, a calculadora pode lidar com matemática decimal e de inteiros. A função `Calculate` é necessária para sempre retornar esse número devido ao `double` bem no início do código (isso denota o tipo de retorno da função), e é por isso que devemos retornar 0,0 até mesmo no caso padrão.
+   > - A **`double`** palavra-chave denota um tipo de número que dá suporte a decimais. Dessa forma, a calculadora pode lidar com matemática decimal e de inteiros. A `Calculate` função é necessária para sempre retornar um número como **`double`** esse, devido à parte inicial do código (isso denota o tipo de retorno da função), que é por isso que retornamos 0,0 mesmo no caso padrão.
    > - O arquivo .h declara a função *protótipo*, que informa ao compilador antecipadamente quais parâmetros são necessários e que tipo de retorno esperar dele. O arquivo .cpp tem todos os detalhes de implementação da função.
 
 Se você compilar e executar o código novamente neste ponto, ele ainda será encerrado depois de perguntar qual operação executar. Em seguida, você modificará a função `main` para fazer alguns cálculos.
@@ -251,7 +251,7 @@ Se você compilar e executar o código novamente neste ponto, ele ainda será en
    > - Uma vez que os programas C++ sempre começam com a função `main()`, precisamos chamar o outro código daí, portanto, uma instrução `#include` é necessária.
    > - Algumas variáveis iniciais `x`, `y`, `oper` e `result` são declaradas para armazenar o primeiro número, o segundo número, o operador e o resultado final, respectivamente. É sempre uma boa prática fornecer alguns valores iniciais para evitar um comportamento indefinido, o que é feito aqui.
    > - A linha `Calculator c;` declara um objeto chamado 'c' como uma instância da classe `Calculator`. A classe em si é apenas o blueprint para como as calculadoras funcionam; o objeto é a calculadora específica que faz os cálculos.
-   > - A instrução `while (true)` é um loop. O código dentro do loop continua sendo executado repetidamente enquanto a condição em `()` se aplicar. Uma vez que a condição é simplesmente listada como `true`, ela é sempre verdadeira, portanto, o loop é executado indefinidamente. Para fechar o programa, o usuário deve fechar manualmente a janela do console. Caso contrário, o programa sempre esperará a nova entrada.
+   > - A instrução `while (true)` é um loop. O código dentro do loop continua sendo executado repetidamente enquanto a condição em `()` se aplicar. Como a condição é simplesmente listada como **`true`** , ela é sempre verdadeira, portanto, o loop é executado para sempre. Para fechar o programa, o usuário deve fechar manualmente a janela do console. Caso contrário, o programa sempre esperará a nova entrada.
    > - A palavra-chave `cin` é usada para aceitar a entrada do usuário. Esse fluxo de entrada é inteligente o suficiente para processar uma linha de texto inserida na janela do console e colocá-la dentro de cada uma das variáveis listadas, em ordem, supondo que a entrada do usuário corresponda à especificação necessária. Você pode modificar essa linha para aceitar diferentes tipos de entrada, por exemplo, mais de dois números, embora a função `Calculate()` também precise ser atualizada para lidar com isso.
    > - A expressão `c.Calculate(x, oper, y);` chama a função `Calculate` definida anteriormente e fornece os valores de entrada inseridos. A função retorna um número que é armazenado em `result`.
    > - Por fim, `result` é impresso no console para que o usuário veja o resultado do cálculo.
@@ -487,7 +487,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
    >
    > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você pode ver um nome de arquivo entre colchetes angulares ( **\<\>** ); outras vezes, está entre aspas (**""**). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
    > - A linha `#include "pch.h"` (ou, no Visual Studio 2017 e versões anteriores, `#include "stdafx.h"`) faz referência a algo conhecido como cabeçalho pré-compilado. Isso costuma ser usado por programadores profissionais para melhorar os tempos de compilação, mas estão além do escopo deste tutorial.
-   > - A linha `using namespace std;` informa ao compilador para esperar que coisas da Biblioteca Padrão C++ sejam usadas nesse arquivo. Sem essa linha, cada palavra-chave da biblioteca precisaria ser precedida por um `std::` para indicar seu escopo. Por exemplo, sem essa linha, cada referência a `cout` precisaria ser escrito como `std::cout`. A instrução `using` é adicionada para fazer com que o código tenha uma aparência mais limpa.
+   > - A linha `using namespace std;` informa ao compilador para esperar que coisas da Biblioteca Padrão C++ sejam usadas nesse arquivo. Sem essa linha, cada palavra-chave da biblioteca precisaria ser precedida por um `std::` para indicar seu escopo. Por exemplo, sem essa linha, cada referência a `cout` precisaria ser escrito como `std::cout`. A **`using`** instrução é adicionada para tornar o código mais limpo.
    > - A palavra-chave `cout` é usada para imprimir a saída padrão em C++. O **\<\<** operador informa ao compilador para enviar o que estiver à direita dele para a saída padrão.
    > - A palavra-chave **endl** é como a tecla Enter; encerra a linha e move o cursor para a próxima linha. É uma melhor prática para colocar um `\n` dentro da cadeia de caracteres (contido por "") para fazer a mesma coisa, uma vez que `endl` sempre libera o buffer e pode prejudicar o desempenho do programa, mas já que esse é um aplicativo muito pequeno, `endl` é usado em vez disso para melhor legibilidade.
    > - Todas as instruções C++ devem terminar com ponto e vírgula e todos os aplicativos C++ devem conter uma função `main()`. Essa função é o que o programa é executado no início. Todo o código deve estar acessível de `main()` para ser usado.
@@ -568,7 +568,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
    >
    > - A função `Calculate` consome um número, um operador e um segundo número e, em seguida, executa a operação solicitada nos números.
    > - A instrução de opção verifica que operador foi fornecido e somente executa o caso que corresponde a essa operação. O padrão: caso é uma contingência se o usuário digita um operador que não é aceito, de modo que o programa não seja interrompido. Em geral, é melhor manipular uma entrada de usuário inválida de uma maneira mais elegante, mas isso está além do escopo deste tutorial.
-   > - A palavra-chave `double` denota um tipo de número que dá suporte a decimais. Dessa forma, a calculadora pode lidar com matemática decimal e de inteiros. A função `Calculate` é necessária para sempre retornar esse número devido ao `double` bem no início do código (isso denota o tipo de retorno da função), e é por isso que devemos retornar 0,0 até mesmo no caso padrão.
+   > - A **`double`** palavra-chave denota um tipo de número que dá suporte a decimais. Dessa forma, a calculadora pode lidar com matemática decimal e de inteiros. A `Calculate` função é necessária para sempre retornar um número como **`double`** esse, devido à parte inicial do código (isso denota o tipo de retorno da função), que é por isso que retornamos 0,0 mesmo no caso padrão.
    > - O arquivo .h declara a função *protótipo*, que informa ao compilador antecipadamente quais parâmetros são necessários e que tipo de retorno esperar dele. O arquivo .cpp tem todos os detalhes de implementação da função.
 
 Se você compilar e executar o código novamente neste ponto, ele ainda será encerrado depois de perguntar qual operação executar. Em seguida, você modificará a função `main` para fazer alguns cálculos.
@@ -615,7 +615,7 @@ Se você compilar e executar o código novamente neste ponto, ele ainda será en
    > - Uma vez que os programas C++ sempre começam com a função `main()`, precisamos chamar o outro código daí, portanto, uma instrução `#include` é necessária.
    > - Algumas variáveis iniciais `x`, `y`, `oper` e `result` são declaradas para armazenar o primeiro número, o segundo número, o operador e o resultado final, respectivamente. É sempre uma boa prática fornecer alguns valores iniciais para evitar um comportamento indefinido, o que é feito aqui.
    > - A linha `Calculator c;` declara um objeto chamado 'c' como uma instância da classe `Calculator`. A classe em si é apenas o blueprint para como as calculadoras funcionam; o objeto é a calculadora específica que faz os cálculos.
-   > - A instrução `while (true)` é um loop. O código dentro do loop continua sendo executado repetidamente enquanto a condição em `()` se aplicar. Uma vez que a condição é simplesmente listada como `true`, ela é sempre verdadeira, portanto, o loop é executado indefinidamente. Para fechar o programa, o usuário deve fechar manualmente a janela do console. Caso contrário, o programa sempre esperará a nova entrada.
+   > - A instrução `while (true)` é um loop. O código dentro do loop continua sendo executado repetidamente enquanto a condição em `()` se aplicar. Como a condição é simplesmente listada como **`true`** , ela é sempre verdadeira, portanto, o loop é executado para sempre. Para fechar o programa, o usuário deve fechar manualmente a janela do console. Caso contrário, o programa sempre esperará a nova entrada.
    > - A palavra-chave `cin` é usada para aceitar a entrada do usuário. Esse fluxo de entrada é inteligente o suficiente para processar uma linha de texto inserida na janela do console e colocá-la dentro de cada uma das variáveis listadas, em ordem, supondo que a entrada do usuário corresponda à especificação necessária. Você pode modificar essa linha para aceitar diferentes tipos de entrada, por exemplo, mais de dois números, embora a função `Calculate()` também precise ser atualizada para lidar com isso.
    > - A expressão `c.Calculate(x, oper, y);` chama a função `Calculate` definida anteriormente e fornece os valores de entrada inseridos. A função retorna um número que é armazenado em `result`.
    > - Por fim, `result` é impresso no console para que o usuário veja o resultado do cálculo.

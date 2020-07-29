@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4cdb353c950313396b331dc7ba01b3ea392ed0f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186952"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores SHIFT esquerda e SHIFT direita ( &gt; &gt; e &lt; &lt; )
 
@@ -176,7 +176,7 @@ int main() {
 
 As expressões em ambos os lados do operador shift devem ser tipos integrais. As promoções integrais são executadas de acordo com as regras descritas nas [conversões padrão](standard-conversions.md). O tipo do resultado é o mesmo que o tipo da *expressão Shift*promovida.
 
-No exemplo a seguir, uma variável do tipo **Char** é promovida para um **int**.
+No exemplo a seguir, uma variável do tipo **`char`** é promovida para um **`int`** .
 
 ```cpp
 #include <iostream>

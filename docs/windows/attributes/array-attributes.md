@@ -1,25 +1,25 @@
 ---
-title: Atributos de matrizC++ (com)
+title: Atributos de matriz (COM C++)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - arrays [C++], attributes
 ms.assetid: 36f80b76-7f20-41ae-a6bf-460e5379f26b
-ms.openlocfilehash: 39054035d2e9ca17ab65e81bba3e2c1a4c3a8f5a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b1841f2970ae5c68d66b37089b4da0b93ec34367
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168468"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224468"
 ---
 # <a name="array-attributes"></a>Atributos de matriz
 
-Os atributos a seguir se aplicam a matrizes ou `SAFEARRAY`s.
+Os atributos a seguir se aplicam a matrizes ou `SAFEARRAY` s.
 
-|Atributo|DESCRIÇÃO|
+|Atributo|Descrição|
 |---------------|-----------------|
 |[library_block](library-block.md)|Coloca uma construção dentro do bloco de biblioteca do arquivo. idl.|
-|[satype](satype.md)|Especifica o tipo de dados da estrutura de `SAFEARRAY`.|
-|[cadeia de caracteres](string-cpp.md)|Indica que o **caractere**unidimensional, **wchar_t**, a matriz `byte` (ou equivalente) ou o ponteiro para tal matriz deve ser tratado como uma cadeia de caracteres.|
+|[satype](satype.md)|Especifica o tipo de dados da `SAFEARRAY` estrutura.|
+|[cadeia de caracteres](string-cpp.md)|Indica que a matriz unidimensional **`char`** , **`wchar_t`** , `byte` (ou equivalente) ou o ponteiro para tal matriz deve ser tratado como uma cadeia de caracteres.|
 
 ## <a name="see-also"></a>Confira também
 

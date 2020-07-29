@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295662"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229786"
 ---
 # <a name="mutual-imports"></a>Importações mútuas
 
@@ -37,20 +37,20 @@ A solução geral para lidar com importações mútuas é:
 
 1. Depois de usar o LINK ou a LIB para compilar todas as bibliotecas de importação, volte e execute o LINK para compilar os arquivos executáveis que não foram criados na etapa anterior. Observe que o arquivo. exp correspondente deve ser especificado na linha de LINK.
 
-   Se você tiver executado o utilitário LIB anteriormente para produzir uma biblioteca de importação para DLL1, LIB teria produzido o arquivo DLL1. exp também. Você deve usar DLL1. exp como entrada para vincular ao compilar DLL1. dlll.
+   Se você tiver executado o utilitário LIB anteriormente para produzir uma biblioteca de importação para DLL1, LIB teria produzido o arquivo DLL1. exp também. Você deve usar DLL1. exp como entrada para vincular ao compilar DLL1.dlll.
 
 A ilustração a seguir mostra uma solução para duas DLLs de importação mútua, DLL1 e DLL2. A etapa 1 é executar LIB, com a opção/DEF definida, em DLL1. A etapa 1 produz DLL1. lib, uma biblioteca de importação e DLL1. exp. Na etapa 2, a biblioteca de importação é usada para criar DLL2, que, por sua vez, produz uma biblioteca de importação para símbolos DLL2's. A etapa 3 cria DLL1, usando DLL1. exp e DLL2. lib como entrada. Observe que um arquivo. exp para DLL2 não é necessário porque a LIB não foi usada para compilar a biblioteca de importação DLL2's.
 
-![Usando importações mútuas para vincular duas DLLs](media/vc37yj1.gif "usando importações mútuas para vincular duas DLLs")<br/>
+![Usando importações mútuas para vincular duas DLLs](media/vc37yj1.gif "Usando importações mútuas para vincular duas DLLs")<br/>
 Vinculando duas DLLs com importações mútuas
 
 ## <a name="limitations-of-_afxext"></a>Limitações de _AFXEXT
 
 Você pode usar o `_AFXEXT` símbolo de pré-processador para as DLLs de extensão do MFC, desde que você não tenha várias camadas de DLLs de extensão do MFC. Se você tiver DLLs de extensão do MFC que chamam ou derivam de classes em suas próprias DLLs de extensão do MFC, que derivam das classes do MFC, você deve usar seu próprio símbolo de pré-processador para evitar ambigüidade.
 
-O problema é que, no Win32, você deve declarar explicitamente quaisquer dados como **__declspec (dllexport)** se ele for exportado de uma dll e **__declspec (dllimport)** se for para ser importado de uma dll. Quando você define `_AFXEXT`, os cabeçalhos do MFC verificam se **AFX_EXT_CLASS** está definido corretamente.
+O problema é que, no Win32, você deve declarar explicitamente quaisquer dados como **`__declspec(dllexport)`** se ele fosse exportado de uma dll, e **`__declspec(dllimport)`** se for para ser importado de uma dll. Quando você define `_AFXEXT` , os cabeçalhos do MFC verificam se **AFX_EXT_CLASS** está definido corretamente.
 
-Quando você tem várias camadas, um símbolo como **AFX_EXT_CLASS** não é suficiente, porque uma DLL de extensão do MFC pode estar exportando novas classes, bem como importando outras classes de outra DLL de extensão do MFC. Para resolver esse problema, use um símbolo de pré-processador especial que indica que você está criando a DLL em si versus usando a DLL. Por exemplo, imagine duas DLLs de extensão MFC, uma. dll e B. dll. Cada uma delas exporta algumas classes em A. h e B. h, respectivamente. B. dll usa as classes de uma. dll. Os arquivos de cabeçalho teriam uma aparência semelhante a esta:
+Quando você tem várias camadas, um símbolo como **AFX_EXT_CLASS** não é suficiente, porque uma DLL de extensão do MFC pode estar exportando novas classes, bem como importando outras classes de outra DLL de extensão do MFC. Para resolver esse problema, use um símbolo de pré-processador especial que indica que você está criando a DLL em si versus usando a DLL. Por exemplo, imagine duas DLLs de extensão do MFC, A.dll e B.dll. Cada uma delas exporta algumas classes em A. h e B. h, respectivamente. B.dll usa as classes de A.dll. Os arquivos de cabeçalho teriam uma aparência semelhante a esta:
 
 ```
 /* A.H */
@@ -75,15 +75,15 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...
 ```
 
-Quando um. dll é criado, ele é criado com `/D A_IMPL` e quando B. dll é criado, ele é criado com `/D B_IMPL`. O uso de símbolos separados para cada DLL `CExampleB` é exportado e importado durante a criação de `CExampleA` B. dll. `CExampleA`é exportada ao criar uma. dll e importada quando usada pela B. dll (ou algum outro cliente).
+Quando A.dll é compilado, ele é criado com `/D A_IMPL` e quando B.dll é compilado, ele é criado com o `/D B_IMPL` . O uso de símbolos separados para cada DLL `CExampleB` é exportado e `CExampleA` importado durante a criação de B.dll. `CExampleA`é exportada ao criar A.dll e importada quando usada pelo B.dll (ou algum outro cliente).
 
-Esse tipo de disposição em camadas não pode ser feito ao usar os símbolos **AFX_EXT_CLASS** internos de `_AFXEXT` AFX_EXT_CLASS e de pré-processador. A técnica descrita acima resolve esse problema de uma maneira que não é diferente do próprio mecanismo que o MFC usa durante a criação de suas tecnologias ativas, banco de dados e DLLs de extensão do MFC de rede.
+Esse tipo de disposição em camadas não pode ser feito ao usar os símbolos internos de **AFX_EXT_CLASS** e de `_AFXEXT` pré-processador. A técnica descrita acima resolve esse problema de uma maneira que não é diferente do próprio mecanismo que o MFC usa durante a criação de suas tecnologias ativas, banco de dados e DLLs de extensão do MFC de rede.
 
 ## <a name="not-exporting-the-entire-class"></a>Não exportando toda a classe
 
 Quando você não estiver exportando uma classe inteira, precisará garantir que os itens de dados necessários criados pelas macros do MFC sejam exportados corretamente. Isso pode ser feito pela redefinição `AFX_DATA` para a macro de sua classe específica. Isso deve ser feito sempre que você não estiver exportando a classe inteira.
 
-Por exemplo: 
+Por exemplo:
 
 ```
 /* A.H */
@@ -119,7 +119,7 @@ class CExampleA : public CObject
 
 - [Exportar funções C++ para uso em executáveis de linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
+- [Determinação do método de exportação a ser usado](determining-which-exporting-method-to-use.md)
 
 - [Importação para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f31938c78e443bb53a286f79661d86b7a6e9edbc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161029"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186536"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento não padrão
 
-As seções a seguir listam alguns dos locais em que a implementação C++ da Microsoft do não está em C++ conformidade com o padrão. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).
+As seções a seguir listam alguns dos locais em que a implementação do C++ da Microsoft não está em conformidade com o padrão C++. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).
 
-A lista de limites de compilador que diferem daqueles definidos C++ no padrão é fornecida nos [limites do compilador](../cpp/compiler-limits.md).
+A lista de limites de compilador que diferem daqueles definidos no padrão C++ é fornecida nos [limites do compilador](../cpp/compiler-limits.md).
 
 ## <a name="covariant-return-types"></a>Tipos de retorno covariantes
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Associação de nomes não dependentes nos modelos
 
-No momento C++ , o compilador Microsoft não dá suporte à associação de nomes não dependentes ao analisar inicialmente um modelo. Isso não está em conformidade com a seção 14.6.3 da especificação ISO do C++. Isso pode fazer com que sobrecargas declaradas após o modelo (mas antes do modelo ser instanciado) sejam vistas.
+Atualmente, o compilador do Microsoft C++ não dá suporte à associação de nomes não dependentes ao analisar inicialmente um modelo. Isso não está em conformidade com a seção 14.6.3 da especificação ISO do C++. Isso pode fazer com que sobrecargas declaradas após o modelo (mas antes do modelo ser instanciado) sejam vistas.
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Para obter mais informações sobre especificações de exceção, consulte [esp
 
 ## <a name="char_traitseof"></a>char_traits::eof()
 
-Os C++ Estados padrão que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não devem corresponder a um valor de `char_type` válido. O compilador C++ da Microsoft impõe essa restrição para o tipo **Char**, mas não para o tipo **wchar_t**. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.
+O padrão C++ declara que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não deve corresponder a um `char_type` valor válido. O compilador do Microsoft C++ impõe essa restrição para o tipo **`char`** , mas não para o tipo **`wchar_t`** . Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Local de armazenamento de objetos
 
-O padrão C++ (seção 1.8, parágrafo 6) exige que objetos completos do C++ tenham locais exclusivos de armazenamento. No entanto C++, com a Microsoft, há casos em que os tipos sem membros de dados compartilharão um local de armazenamento com outros tipos durante o tempo de vida do objeto.
+O padrão C++ (seção 1.8, parágrafo 6) exige que objetos completos do C++ tenham locais exclusivos de armazenamento. No entanto, com o Microsoft C++, há casos em que tipos sem membros de dados compartilharão um local de armazenamento com outros tipos para o tempo de vida do objeto.

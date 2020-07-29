@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a9144229b75c09a892ddbf5bd592e67c7c2b6d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172029"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230552"
 ---
 # <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -25,7 +25,7 @@ Declara um *ponteiro de fixação*, que é usado apenas com o Common Language Ru
 
 (Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 (Esse recurso de linguagem não é compatível com o Windows Runtime.)
 
@@ -42,7 +42,7 @@ Um *ponteiro de fixação* é um ponteiro interior que impede o objeto apontado 
 ### <a name="parameters"></a>parâmetros
 
 *cv_qualifier*<br/>
-Qualificadores **const** ou **volatile**. Por padrão, um ponteiro de fixação é **volatile**. É redundante, mas não é um erro declarar um ponteiro de fixação **volatile**.
+**`const`** ou **`volatile`** qualificadores. Por padrão, um ponteiro de fixação é **`volatile`** . Ele é redundante, mas não um erro para declarar um ponteiro de fixação **`volatile`** .
 
 *tipo*<br/>
 O tipo de *inicializador*.

@@ -1,6 +1,7 @@
 ---
 title: Operadores de atribuição
-ms.date: 03/27/2019
+description: A sintaxe e o uso dos operadores de atribuição de linguagem padrão C++.
+ms.date: 07/24/2020
 f1_keywords:
 - =
 - '*='
@@ -31,59 +32,59 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91346d06c6fab4f3cd83c5318c88e738daf8d249
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184369"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229214"
 ---
 # <a name="assignment-operators"></a>Operadores de atribuição
 
 ## <a name="syntax"></a>Sintaxe
 
-*expression* *assignment-operator* *expression*
+*expression* *atribuição de expressão-* *expressão* do operador
 
-*assignment-operator* : one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
+*assignment-operator*: one of<br/>
+&emsp;**`=`**&emsp;**`*=`**&emsp;**`/=`**&emsp;**`%=`**&emsp;**`+=`**&emsp;**`-=`**&emsp;**`<<=`**&emsp;**`>>=`**&emsp;**`&=`**&emsp;**`^=`**&emsp;**`|=`**
 
 ## <a name="remarks"></a>Comentários
 
-Os operadores de atribuição armazenam um valor no objeto designado pelo operando à esquerda. Há dois tipos de operações de atribuição:
+Operadores de atribuição armazenam um valor no objeto especificado pelo operando esquerdo. Há dois tipos de operações de atribuição:
 
-1. *atribuição simples*, no qual o valor do segundo operando é armazenado no objeto especificado pelo primeiro operando.
+- *atribuição simples*, na qual o valor do segundo operando é armazenado no objeto especificado pelo primeiro operando.
 
-1. *atribuição composta*, em que uma operação bit a bit, shift ou aritmética é realizada antes de armazenar o resultado.
+- *atribuição composta*, na qual uma operação aritmética, de deslocamento ou bit-de-bits é executada antes de armazenar o resultado.
 
-Todos os operadores de atribuição na tabela a seguir, exceto o operador =, são operadores de atribuição composta.
+Todos os operadores de atribuição na tabela a seguir, exceto o **`=`** operador, são operadores de atribuição compostos.
 
 ### <a name="assignment-operators-table"></a>Tabela de operadores de atribuição
 
-|Operador|Significado|
-|--------------|-------------|
-|**=**|Armazena o valor do segundo operando no objeto especificado pelo primeiro operando (atribuição simples).|
-|**\*=**|Multiplica o valor do primeiro operando pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**/=**|Divide o valor do primeiro operando pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**%=**|Obtém o módulo do primeiro operando especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**+=**|Soma o valor do segundo operando ao valor do primeiro operando; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**-=**|Subtrai o valor do segundo operando do valor do primeiro operando; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**<\<=**|Alterna o valor do primeiro operando à esquerda do número de bits especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**>>=**|Alterna o valor do primeiro operando à direita do número de bits especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**&=**|Obtém o bit a bit AND do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**^=**|Obtém o bit a bit exclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**\|=**|Obtém o bit a bit inclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
+| Operador | Significado |
+|--|--|
+| **`=`** | Armazena o valor do segundo operando no objeto especificado pelo primeiro operando (atribuição simples). |
+| **`*=`** | Multiplica o valor do primeiro operando pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`/=`** | Divide o valor do primeiro operando pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`%=`** | Obtém o módulo do primeiro operando especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`+=`** | Soma o valor do segundo operando ao valor do primeiro operando; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`-=`** | Subtrai o valor do segundo operando do valor do primeiro operando; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`<<=`** | Alterna o valor do primeiro operando à esquerda do número de bits especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`>>=`** | Alterna o valor do primeiro operando à direita do número de bits especificado pelo valor do segundo operando; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`&=`** | Obtém o bit a bit AND do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`^=`** | Obtém o bit a bit exclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando. |
+| **`|=`** | Obtém o bit a bit inclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando. |
 
-### <a name="operator-keywords"></a>Palavras-chave de operador
+### <a name="operator-keywords"></a>Palavras-chave do operador
 
-Três dos operadores de atribuição composta têm equivalentes de texto. Elas são:
+Três dos operadores de atribuição compostos têm equivalentes de palavra-chave. Eles são:
 
-|Operador|Equivalente|
-|--------------|----------------|
-|**&=**|`and_eq`|
-|**\|=**|`or_eq`|
-|**^=**|`xor_eq`|
+| Operador | Equivalente |
+|--|--|
+| **`&=`** | **`and_eq`** |
+| **`|=`** | **`or_eq`** |
+| **`^=`** | **`xor_eq`** |
 
-Há duas maneiras para acessar essas palavras-chave de operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).
+O C++ especifica essas palavras-chave de operador como grafias alternativas para os operadores de atribuição compostos. Em C, as grafias alternativas são fornecidas como macros no \<iso646.h> cabeçalho. Em C++, as grafias alternativas são palavras-chave; o uso do \<iso646.h> ou o equivalente em C++ \<ciso646> é preterido. No Microsoft C++, a [`/permissive-`](../build/reference/permissive-standards-conformance.md) opção ou do [`/Za`](../build/reference/za-ze-disable-language-extensions.md) compilador é necessária para habilitar a grafia alternativa.
 
 ## <a name="example"></a>Exemplo
 
@@ -111,13 +112,13 @@ int main() {
 
 ## <a name="simple-assignment"></a>Atribuição simples
 
-O operador de atribuição simples (**=**) faz com que o valor do segundo operando a ser armazenado no objeto especificado pelo primeiro operando. Se os dois objetos forem de tipos aritméticos, o operando da direita será convertido no tipo da esquerda, armazenamento o valor anteriormente.
+O operador de atribuição simples ( **`=`** ) faz com que o valor do segundo operando seja armazenado no objeto especificado pelo primeiro operando. Se ambos os objetos forem de tipos aritméticos, o operando à direita será convertido no tipo da esquerda, antes de armazenar o valor.
 
-Objetos do **const** e **volátil** tipos podem ser atribuídos aos l-values dos tipos que são apenas **volátil** ou que não esteja **const** nem **volátil**.
+Os objetos **`const`** e **`volatile`** tipos podem ser atribuídos a valores l de tipos que são apenas **`volatile`** , ou que não são **`const`** ou **`volatile`** .
 
-Atribuição para objetos do tipo de classe (struct, union e tipos de classe) é executada por uma função chamada `operator=`. O comportamento padrão dessa função do operador é executar uma cópia bit a bit; no entanto, esse comportamento pode ser alterado usando operadores sobrecarregados. Ver [sobrecarga de operador](../cpp/operator-overloading.md) para obter mais informações. Além disso, os tipos de classe podem ter *copiar atribuição* e *atribuição de movimentação* operadores. Para obter mais informações, consulte [construtores de cópia e copie os operadores de atribuição](copy-constructors-and-copy-assignment-operators-cpp.md) e [construtores Move e operadores de atribuição de movimentação](move-constructors-and-move-assignment-operators-cpp.md).
+A atribuição a objetos do tipo de classe ( **`struct`** , **`union`** e **`class`** tipos) é executada por uma função chamada `operator=` . O comportamento padrão dessa função do operador é executar uma cópia bit a bit; no entanto, esse comportamento pode ser alterado usando operadores sobrecarregados. Para obter mais informações, consulte [Sobrecarga de operador](../cpp/operator-overloading.md). Os tipos de classe também podem ter operadores de atribuição de *cópia* e de *movimentação* . Para obter mais informações, consulte [copiar construtores e copiar operadores de atribuição](copy-constructors-and-copy-assignment-operators-cpp.md) e [mover construtores e mover operadores de atribuição](move-constructors-and-move-assignment-operators-cpp.md).
 
-Um objeto de qualquer classe derivada exclusiva de uma classe base pode ser atribuída a um objeto da classe base. O contrário não é válido porque existe uma conversão implícita da classe derivada para a classe base, mas não da classe base para a classe derivada. Por exemplo:
+Um objeto de qualquer classe derivada exclusiva de uma classe base pode ser atribuída a um objeto da classe base. O inverso não é verdadeiro porque há uma conversão implícita da classe derivada para a classe base, mas não da classe base para a classe derivada. Por exemplo:
 
 ```cpp
 // expre_SimpleAssignment.cpp
@@ -172,7 +173,7 @@ B = A;
 
 pode ter um dos seguintes efeitos
 
-- Chamar a função `operator=` para `UserType2`, fornecida `operator=` é fornecido com um `UserType1` argumento.
+- Chame a função `operator=` para `UserType2` , fornecida `operator=` é fornecida com um `UserType1` argumento.
 
 - Chama a função de conversão explícita `UserType1::operator UserType2`, se essa função existir.
 
@@ -180,24 +181,24 @@ pode ter um dos seguintes efeitos
 
 ## <a name="compound-assignment"></a>Atribuição composta
 
-Os operadores de atribuição composta, mostrados na [tabela de operadores de atribuição](#assignment-operators-table), são especificadas no formulário *e1* *op*= *e2*, onde *e1* é um l-value modificável não do **const** tipo e *e2* é um dos seguintes:
+Os operadores de atribuição compostos são mostrados na [tabela operadores de atribuição](#assignment-operators-table). Esses operadores têm a forma *E1* *op* =  *E2*, em que *E1* é um **`const`** l-value não modificável e *E2* é:
 
-- Um tipo aritmético
+- um tipo aritmético
 
-- Um ponteiro, se *op* é **+** ou **-**
+- um ponteiro, se *op* for **`+`** ou**`-`**
 
-O *e1* *op*= *e2* formulário se comporta como *e1* **=** *e1* *op* *e2*, mas *e1* é avaliada apenas uma vez.
+O formulário *E1* *op* =  *E2* se comporta como *E1* **`=`** *E1* *op* *E2*, mas o *E1* é avaliado apenas uma vez.
 
-A atribuição composta para um tipo enumerado gera uma mensagem de erro. Se o operando esquerdo for de um tipo ponteiro, o operando direito deverá ser do tipo ponteiro ou ser uma expressão constante avaliada como 0. Se o operando esquerdo for do tipo integral, o operando direito não deverá ser de um tipo ponteiro.
+A atribuição composta para um tipo enumerado gera uma mensagem de erro. Se o operando esquerdo for de um tipo de ponteiro, o operando à direita deverá ser de um tipo de ponteiro ou deve ser uma expressão constante que seja avaliada como 0. Quando o operando esquerdo é de um tipo integral, o operando direito não deve ser de um tipo de ponteiro.
 
-## <a name="result-of-assignment-operators"></a>Resultado dos operadores de atribuição
+## <a name="result-of-assignment-operators"></a>Resultado de operadores de atribuição
 
 Os operadores de atribuição retornam o valor do objeto especificado pelo operando esquerdo após a atribuição. O tipo resultante é o tipo do operando esquerdo. O resultado de uma expressão de atribuição é sempre um l-value. Esses operadores binários possuem associatividade da direita para a esquerda. O operando esquerdo deve ser um l-value modificável.
 
-Em ANSI C, o resultado de uma expressão de atribuição não é um l-value. Portanto, a expressão C++ válida `(a += b) += c` é inválida em C.
+No ANSI C, o resultado de uma expressão de atribuição não é um l-Value. Isso significa que a expressão de C++ legal `(a += b) += c` não é permitida em C.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)<br/>
-[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operadores de atribuição C](../c-language/c-assignment-operators.md)
+[Operadores, precedência e Associação internos do C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[operadores de atribuição C](../c-language/c-assignment-operators.md)

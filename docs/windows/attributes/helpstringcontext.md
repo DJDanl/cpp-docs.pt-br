@@ -1,17 +1,17 @@
 ---
-title: helpstringcontext (C++ atributo com)
+title: helpstringcontext (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6d4a6b4ab2381fc9ebe0f237978c92fe0f656c5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168143"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224442"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -54,17 +54,17 @@ __interface IMyI
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **interface**, método de interface|
+|**Aplica-se a**|**`class`**, **interface**, método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
-[module](module-cpp.md)
+[Atributos do método](method-attributes.md)<br/>
+[modulo](module-cpp.md)
