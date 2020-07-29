@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6a8555561fcf935b3968bd6cb6d19ec42a78563
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196736"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224013"
 ---
 # <a name="exporting-from-a-dll"></a>Exportando a partir de uma DLL
 
@@ -25,7 +25,7 @@ Você pode exportar funções de uma DLL usando dois métodos:
 
 - Crie um arquivo de definição de módulo (. def) e use o arquivo. def ao compilar a DLL. Use essa abordagem se você quiser [Exportar funções de sua DLL por ordinal em vez de por nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-- Use a palavra-chave **__declspec (dllexport)** na definição da função.
+- Use a palavra-chave **`__declspec(dllexport)`** na definição da função.
 
 Ao exportar funções com qualquer método, certifique-se de usar a Convenção de chamada [__stdcall](../cpp/stdcall.md) .
 
@@ -43,7 +43,7 @@ Ao exportar funções com qualquer método, certifique-se de usar a Convenção 
 
 - [Exportar funções de uma DLL por ordinal em vez de por nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
 
-- [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
+- [Determinação do método de exportação a ser usado](determining-which-exporting-method-to-use.md)
 
 - [Vincular um executável a uma DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 

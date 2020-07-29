@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2821
 ms.assetid: e8d71988-a968-4484-94db-e8c3bad74a4a
-ms.openlocfilehash: d099c4a0f6e1ea77a25213e3873b8a0814e28dcd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 115874724a24530e0d85256e11c3aa355aa4d6af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201989"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225391"
 ---
 # <a name="compiler-error-c2821"></a>Erro do compilador C2821
 
 o primeiro parâmetro formal para ' operator new ' deve ser ' unsigned int '
 
-O primeiro parâmetro formal do [operador New](../../standard-library/new-operators.md#op_new) deve ser um `int`não assinado.
+O primeiro parâmetro formal do [operador New](../../standard-library/new-operators.md#op_new) deve ser não assinado **`int`** .
 
 ## <a name="example"></a>Exemplo
 

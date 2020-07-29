@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
-ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872381"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224819"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para um tipo **int** que pode representar um grupo de elementos distintos de um tipo de bitmask local para a localidade de classe ou pode ser usado para representar qualquer uma das categorias de localidade C correspondentes. Os elementos são:
+O tipo é um sinônimo de um **`int`** tipo que pode representar um grupo de elementos distintos de um tipo de bitmask local para a localidade de classe ou pode ser usado para representar qualquer uma das categorias de localidade C correspondentes. Os elementos são:
 
 - `collate`, correspondente à categoria C LC_COLLATE
 
@@ -234,7 +234,7 @@ A função membro estática retorna um objeto de localidade que representa a loc
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma referência à localidade C.
 
@@ -290,12 +290,12 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *source_locale*\
 A localidade que contém a faceta a ser inserida na localidade de destino.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 A função membro retorna um objeto Locale que substitui ou adiciona a ** \* essa** faceta `Facet` listada em *source_locale*.
 
@@ -358,12 +358,12 @@ Redefine a localidade padrão do programa. Essa chamada afeta a localidade globa
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *new_default_locale*\
 A localidade a ser usada como localidade padrão pelo programa.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 A localidade anterior antes da redefinição da localidade padrão.
 
@@ -435,7 +435,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *locale_name*\
 Nome de uma localidade.
@@ -520,7 +520,7 @@ Retorna o nome da localidade armazenado.
 string name() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres que fornece o nome da localidade.
 
@@ -567,14 +567,14 @@ Testa a desigualdade de duas localidades.
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
 Uma das localidades que terá sua desigualdade testada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-Um valor booliano que será **verdadeiro** se as localidades não forem cópias da mesma localidade. Será **false** se as localidades forem cópias da mesma localidade.
+Um valor booliano que **`true`** se as localidades não são cópias da mesma localidade. É **`false`** se as localidades são cópias da mesma localidade.
 
 ### <a name="remarks"></a>Comentários
 
@@ -631,7 +631,7 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *mantida*\
 A primeira cadeia de caracteres a ser comparada.
@@ -639,9 +639,9 @@ A primeira cadeia de caracteres a ser comparada.
 *Certo*\
 A segunda cadeia de caracteres a ser comparada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-- `true`Se *Left* for modo lexicográfico menor que *Right*, caso contrário `false` .
+- **`true`** Se *Left* for modo lexicográfico menor que *Right*, caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -694,14 +694,14 @@ Testa a igualdade de duas localidades.
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
 Uma das localidades que terá sua igualdade testada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
-Um valor booliano que será **verdadeiro** se as localidades forem cópias da mesma localidade. Será **false** se as localidades não forem cópias da mesma localidade.
+Um valor booliano que **`true`** se as localidades são cópias da mesma localidade. É **`false`** se as localidades não são cópias da mesma localidade.
 
 ### <a name="remarks"></a>Comentários
 

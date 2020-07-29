@@ -4,12 +4,12 @@ description: Descreve como usar o Visual Studio para definir as configurações 
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: cc80827458ba7cb61339ec3a36f227747780a47c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630529"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224078"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurar sessões de depuração do CMake
 
@@ -33,7 +33,7 @@ Em seguida, clique com o botão direito do mouse em um executável e selecione *
 
 ## <a name="customize-debugger-settings"></a>Personalizar configurações do depurador
 
-Você pode personalizar as configurações do depurador para qualquer destino de CMake executável em seu projeto. Eles são encontrados em um arquivo de configuração chamado *Launch. vs. JSON*, localizado em uma *`.vs`* pasta na raiz do projeto. Um arquivo de configuração de inicialização é útil na maioria dos cenários de depuração, pois você pode configurar e salvar os detalhes da configuração de depuração. Há três pontos de entrada para este arquivo:
+Você pode personalizar as configurações do depurador para qualquer destino de CMake executável em seu projeto. Eles são encontrados em um arquivo de configuração chamado *launch.vs.jsem*, localizado em uma *`.vs`* pasta na raiz do projeto. Um arquivo de configuração de inicialização é útil na maioria dos cenários de depuração, pois você pode configurar e salvar os detalhes da configuração de depuração. Há três pontos de entrada para este arquivo:
 
 - **Menu Depurar:** Selecione **depurar > depurar e iniciar configurações para $ {activeDebugTarget}** no menu principal para personalizar a configuração de depuração específica para seu destino de depuração ativa. Se você não tiver um destino de depuração selecionado, essa opção estará esmaecida.
 
@@ -43,15 +43,15 @@ Você pode personalizar as configurações do depurador para qualquer destino de
 
 ![Ponto de entrada de exibição de destinos](media/cmake-targets-add-debug-configuration.png "Ponto de entrada de exibição de destinos")
 
-- **CMakeLists. txt raiz:** Clique com o botão direito do mouse em uma raiz *CMakeLists. txt* e selecione **Adicionar configuração de depuração** para abrir a caixa de diálogo **selecionar um depurador** . A caixa de diálogo permite que você adicione *qualquer* tipo de configuração de depuração, mas você deve especificar manualmente o destino CMake para invocar por meio da `projectTarget` propriedade.
+- **CMakeLists.txt raiz:** Clique com o botão direito do mouse em um *CMakeLists.txt* raiz e selecione **Adicionar configuração de depuração** para abrir a caixa de diálogo **selecionar um depurador** . A caixa de diálogo permite que você adicione *qualquer* tipo de configuração de depuração, mas você deve especificar manualmente o destino CMake para invocar por meio da `projectTarget` propriedade.
 
 ![Caixa de diálogo Selecionar um depurador](media/cmake-select-a-debugger.png "Caixa de diálogo Selecionar um depurador")
 
-Você pode editar o arquivo *Launch. vs. JSON* para criar configurações de depuração para qualquer número de destinos CMake. Quando você salva o arquivo, o Visual Studio cria uma entrada para cada nova configuração no menu suspenso **item de inicialização** .
+Você pode editar o *launch.vs.jsno* arquivo para criar configurações de depuração para qualquer número de destinos CMake. Quando você salva o arquivo, o Visual Studio cria uma entrada para cada nova configuração no menu suspenso **item de inicialização** .
 
-## <a name="reference-keys-in-cmakesettingsjson"></a>Chaves de referência em CMakeSettings. JSON
+## <a name="reference-keys-in-cmakesettingsjson"></a>Chaves de referência no CMakeSettings.jsem
 
-Para fazer referência a qualquer chave em um arquivo *CMakeSettings. JSON* , preceda `cmake.` -a na *inicialização. vs. JSON*. O exemplo a seguir mostra um arquivo de *inicialização simples. vs. JSON* que efetua pull do valor da `remoteCopySources` chave no arquivo *CMakeSettings. JSON* para a configuração selecionada no momento:
+Para fazer referência a qualquer chave em um *CMakeSettings.jsno* arquivo, preceda `cmake.` -a no *launch.vs.jsem*. O exemplo a seguir mostra um *launch.vs.jssimples no* arquivo que efetua pull do valor da `remoteCopySources` chave no *CMakeSettings.jsno* arquivo para a configuração selecionada no momento:
 
 ```json
 {
@@ -69,13 +69,13 @@ Para fazer referência a qualquer chave em um arquivo *CMakeSettings. JSON* , pr
 }
 ```
 
-As **variáveis de ambiente** definidas em *CMakeSettings. JSON* também podem ser usadas em Launch. vs. JSON usando a sintaxe `${env.VARIABLE_NAME}` . No Visual Studio 2019 versão 16,4 e posteriores, os destinos de depuração são iniciados automaticamente usando o ambiente que você especificar em *CMakeSettings. JSON*. Você pode remover uma variável de ambiente definindo-a como **NULL**.
+As **variáveis de ambiente** definidas no *CMakeSettings.json* também podem ser usadas em launch.vs.jsusando a sintaxe `${env.VARIABLE_NAME}` . No Visual Studio 2019 versão 16,4 e posteriores, os destinos de depuração são iniciados automaticamente usando o ambiente que você especifica no *CMakeSettings.js*. Você pode remover uma variável de ambiente definindo-a como **NULL**.
 
-## <a name="launchvsjson-reference"></a>Inicializar. vs. referência JSON
+## <a name="launchvsjson-reference"></a>Launch.vs.jsna referência
 
-Há muitas propriedades *Launch. vs. JSON* para dar suporte a todos os seus cenários de depuração. As propriedades a seguir são comuns a todas as configurações de depuração, remota e local:
+Há muitos *launch.vs.jsem* Propriedades para dar suporte a todos os seus cenários de depuração. As propriedades a seguir são comuns a todas as configurações de depuração, remota e local:
 
-- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *Launch. vs. JSON* no **menu Depurar** ou no **modo de exibição destinos**. Esse valor deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
+- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *launch.vs.jsno* **menu Depurar** ou no **modo de exibição destinos**. Esse valor deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
 
 - `env`: Variáveis de ambiente adicionais a serem adicionadas usando a sintaxe:
 
@@ -88,7 +88,7 @@ Há muitas propriedades *Launch. vs. JSON* para dar suporte a todos os seus cen�
 
 - `args`: Argumentos de linha de comando passados para o programa a ser depurado.
 
-## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>Inicialização. vs. JSON referência para projetos e WSL remotos
+## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>Launch.vs.jsreferência para projetos remotos e WSL
 
 No Visual Studio 2019 versão 16,6, adicionamos uma nova configuração de depuração do `type: cppgdb` para simplificar a depuração em sistemas remotos e WSL. As configurações de depuração antigas do `type: cppdbg` ainda têm suporte.
 
@@ -96,7 +96,7 @@ No Visual Studio 2019 versão 16,6, adicionamos uma nova configuração de depur
 
 - `name`: Um nome amigável para identificar a configuração no menu suspenso do **item de inicialização** .
 - `project`: Especifica o caminho relativo para o arquivo de projeto. Normalmente, você não precisa alterar esse caminho ao depurar um projeto CMake.
-- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *Launch. vs. JSON* no **menu Depurar** ou no **modo de exibição destinos**. Esse valor de destino deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
+- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *launch.vs.jsno* **menu Depurar** ou no **modo de exibição destinos**. Esse valor de destino deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
 - `debuggerConfiguration`: Indica qual conjunto de valores padrão de depuração usar. No Visual Studio 2019 versão 16,6, a única opção válida é `gdb` . O Visual Studio 2019 versão 16,7 ou posterior também dá suporte a `gdbserver` .
 - `args`: Argumentos de linha de comando passados na inicialização para o programa que está sendo depurado.
 - `env`: Variáveis de ambiente adicionais passadas para o programa que está sendo depurado. Por exemplo, `{"DISPLAY": "0.0"}`.
@@ -121,17 +121,17 @@ No Visual Studio 2019 versão 16,6, adicionamos uma nova configuração de depur
 
 #### <a name="deployment-options"></a>Opções de implantação
 
-Use as opções a seguir para separar o computador de compilação (definido em CMakeSettings. JSON) de seu computador de depuração remota.
+Use as opções a seguir para separar o computador de compilação (definido no CMakeSettings.jsem) de seu computador de depuração remota.
 
 - `remoteMachineName`: Computador de depuração remota. Necessário somente se for diferente do computador de compilação. Deve ter uma entrada existente no [Gerenciador de conexões](../linux/connect-to-your-remote-linux-computer.md). Pressione **Ctrl + espaço** para exibir uma lista de todas as conexões remotas existentes.
-- `disableDeploy`: O padrão é `false` . Indica se a separação de compilação/depuração está desabilitada. Quando `false` , essa opção permite que a compilação e a depuração ocorram em dois computadores separados.
+- `disableDeploy`: O padrão é **`false`** . Indica se a separação de compilação/depuração está desabilitada. Quando **`false`** , essa opção permite que a compilação e a depuração ocorram em dois computadores separados.
 - `deployDirectory`: Caminho completo do UNIX para o diretório no `remoteMachineName` qual o executável é copiado.
 - `deploy`: Uma matriz de configurações de implantação avançadas. Você só precisa definir essas configurações quando desejar um controle mais granular sobre o processo de implantação. Por padrão, somente os arquivos necessários para o processo de depuração são implantados no computador de depuração remota.
   - `sourceMachine`: O computador do qual o arquivo ou diretório é copiado. Pressione **Ctrl + espaço** para exibir uma lista de todas as conexões remotas armazenadas no Gerenciador de conexões. Ao compilar nativamente em WSL, essa opção é ignorada.
   - `targetMachine`: O computador no qual o arquivo ou diretório é copiado. Pressione **Ctrl + espaço** para exibir uma lista de todas as conexões remotas armazenadas no Gerenciador de conexões.
   - `sourcePath`: O local do arquivo ou diretório em `sourceMachine` .
   - `targetPath`: O local do arquivo ou diretório em `targetMachine` .
-  - `deploymentType`: Uma descrição do tipo de implantação. `LocalRemote`e `RemoteRemote` têm suporte. `LocalRemote`significa copiar do sistema de arquivos local para o sistema remoto especificado por `remoteMachineName` na *inicialização. vs. JSON*. `RemoteRemote`significa copiar do sistema de Build remoto especificado em *CMakeSettings. JSON* para o sistema remoto diferente especificado em *Launch. vs. JSON*.
+  - `deploymentType`: Uma descrição do tipo de implantação. `LocalRemote`e `RemoteRemote` têm suporte. `LocalRemote`significa copiar do sistema de arquivos local para o sistema remoto especificado por `remoteMachineName` no *launch.vs.jsem*. `RemoteRemote`significa copiar do sistema de Build remoto especificado no *CMakeSettings.js* para o sistema remoto diferente especificado em *launch.vs.jsem*.
   - `executable`: Indica se o arquivo implantado é um executável.
 
 ### <a name="execute-custom-gdb-commands"></a>Executar `gdb` comandos personalizados
@@ -150,7 +150,7 @@ As opções a seguir podem ser usadas durante a depuração em um sistema remoto
 
 - `project`: Especifica o caminho relativo para o arquivo de projeto. Normalmente, você não precisa alterar esse valor ao depurar um projeto CMake.
 
-- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *Launch. vs. JSON* no **menu Depurar** ou no **modo de exibição destinos**. Esse valor deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
+- `projectTarget`: Especifica o destino CMake a invocar ao compilar o projeto. O Visual Studio preenche automaticamente essa propriedade se você inserir *launch.vs.jsno* **menu Depurar** ou no **modo de exibição destinos**. Esse valor deve corresponder ao nome de um destino de depuração existente listado na lista suspensa **item de inicialização** .
 
 - `args`: Argumentos de linha de comando passados na inicialização para o programa que está sendo depurado.
 
@@ -162,7 +162,7 @@ As opções a seguir podem ser usadas durante a depuração em um sistema remoto
 
 - `cwd`: O padrão é `"${debugInfo.defaultWorkingDirectory}"` . Caminho completo do UNIX para o diretório no sistema remoto em que o `program` é executado. O diretório precisa existir.
 
-- `environment`: Variáveis de ambiente adicionais passadas para o programa que está sendo depurado. Por exemplo,
+- `environment`: Variáveis de ambiente adicionais passadas para o programa que está sendo depurado. Por exemplo:
 
   ```json
     "environment": [
@@ -211,7 +211,7 @@ As opções a seguir podem ser usadas durante a depuração em um sistema remoto
 
 - `visualizerFile`: Um [arquivo. natvis](/visualstudio/debugger/create-custom-views-of-native-objects) a ser usado ao depurar esse processo. Essa opção é incompatível com a `gdb` impressão de formatação. Defina também `showDisplayString` quando você definir essa propriedade.
 
-- `showDisplayString`: Um booliano que habilita a cadeia de caracteres de exibição quando um `visualizerFile` é especificado. Definir essa opção como `true` pode causar um desempenho mais lento durante a depuração.
+- `showDisplayString`: Um booliano que habilita a cadeia de caracteres de exibição quando um `visualizerFile` é especificado. Definir essa opção como **`true`** pode causar um desempenho mais lento durante a depuração.
 
 - `setupCommands`: Um ou mais `gdb` comandos a serem executados para configurar o depurador subjacente.
 

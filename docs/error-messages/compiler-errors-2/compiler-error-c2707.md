@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760433"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225417"
 ---
 # <a name="compiler-error-c2707"></a>Erro do compilador C2707
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760433"
 
 Intrínsecos de manipulação de exceção estruturados são inválidos em determinados contextos:
 
-- `_exception_code()` fora de um filtro de exceção ou bloco de `__except`
+- `_exception_code()`fora de um filtro de exceção ou **`__except`** bloco
 
-- `_exception_info()` fora de um filtro de exceção
+- `_exception_info()`fora de um filtro de exceção
 
-- `_abnormal_termination()` fora de um bloco de `__finally`
+- `_abnormal_termination()`fora de um **`__finally`** bloco
 
 Para resolver o erro, certifique-se de que os intrínsecos de manipulação de exceções sejam colocados no contexto apropriado.
 

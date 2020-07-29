@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 4b2ef093c1142b592ad2a6605a08bd8c34a643ea
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: fd2904f67d84db42d6b35aa4e505b063d6ea9a9f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224286"
 ---
 # <a name="ccomcritseclock-class"></a>Classe CComCritSecLock
 
-Esta classe fornece métodos para bloquear e desbloquear um objeto de seção crítica.
+Essa classe fornece métodos para bloquear e desbloquear um objeto de seção crítica.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,9 +27,9 @@ Esta classe fornece métodos para bloquear e desbloquear um objeto de seção cr
 template<class TLock> class CComCritSecLock
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*Rio TLock*<br/>
+*TLock*<br/>
 O objeto a ser bloqueado e desbloqueado.
 
 ## <a name="members"></a>Membros
@@ -39,22 +39,22 @@ O objeto a ser bloqueado e desbloqueado.
 |Nome|Descrição|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|O construtor.|
-|[CComCritSecLock::~CComCritSecLock](#dtor)|O destruidor.|
+|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComCritSecLock::Bloqueio](#lock)|Chame este método para bloquear o objeto da seção crítica.|
-|[CComCritSecLock::Unlock](#unlock)|Chame este método para desbloquear o objeto da seção crítica.|
+|[CComCritSecLock:: Lock](#lock)|Chame esse método para bloquear o objeto da seção crítica.|
+|[CComCritSecLock:: desbloquear](#unlock)|Chame esse método para desbloquear o objeto de seção crítica.|
 
 ## <a name="remarks"></a>Comentários
 
-Use esta classe para bloquear e desbloquear objetos de forma mais segura do que com a [Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) ou [CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md).
+Use essa classe para bloquear e desbloquear objetos de maneira mais segura do que com a classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) ou [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase.h
+**Cabeçalho:** atlbase. h
 
 ## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock
 
@@ -64,19 +64,19 @@ O construtor.
 CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Cs*<br/>
+*CS*<br/>
 O objeto da seção crítica.
 
 *bInitialLock*<br/>
-O estado inicial de bloqueio: **verdadeiro** significa bloqueado.
+O estado de bloqueio inicial: **`true`** significa bloqueado.
 
 ### <a name="remarks"></a>Comentários
 
 Inicializa o objeto da seção crítica.
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock::~CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock
 
 O destruidor.
 
@@ -88,9 +88,9 @@ O destruidor.
 
 Desbloqueia o objeto da seção crítica.
 
-## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Bloqueio
+## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock:: Lock
 
-Chame este método para bloquear o objeto da seção crítica.
+Chame esse método para bloquear o objeto da seção crítica.
 
 ```
 HRESULT Lock() throw();
@@ -98,15 +98,15 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna S_OK se o objeto tiver sido bloqueado com sucesso ou um erro HRESULT na falha.
+Retorna S_OK se o objeto foi bloqueado com êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Se o objeto já estiver bloqueado, um erro ASSERT ocorrerá em compilações de depuração.
+Se o objeto já estiver bloqueado, ocorrerá um erro de ASSERÇÃO nas compilações de depuração.
 
-## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock:: desbloquear
 
-Chame este método para desbloquear o objeto da seção crítica.
+Chame esse método para desbloquear o objeto de seção crítica.
 
 ```cpp
 void Unlock() throw();
@@ -114,7 +114,7 @@ void Unlock() throw();
 
 ### <a name="remarks"></a>Comentários
 
-Se o objeto já estiver desbloqueado, um erro ASSERT ocorrerá em compilações de depuração.
+Se o objeto já estiver desbloqueado, ocorrerá um erro de ASSERÇÃO nas compilações de depuração.
 
 ## <a name="see-also"></a>Confira também
 

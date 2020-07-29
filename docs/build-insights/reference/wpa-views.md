@@ -1,138 +1,138 @@
 ---
-title: 'Referência: Visualizações do Analisador de Desempenho do Windows'
-description: Referência para visualizações C++ Build Insights disponíveis no Analisador de Desempenho do Windows.
+title: 'Referência: exibições do analisador de desempenho do Windows'
+description: Referência dos modos de exibição de informações de Build do C++ disponíveis no analisador de desempenho do Windows.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b54b1b76d83b77ec7b8d8d3309d81ed9eb2db2d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8bbcc43ef19adfd85a3679a2136d471333a74a10
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323231"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224091"
 ---
-# <a name="reference-windows-performance-analyzer-views"></a>Referência: Visualizações do Analisador de Desempenho do Windows
+# <a name="reference-windows-performance-analyzer-views"></a>Referência: exibições do analisador de desempenho do Windows
 
 ::: moniker range="<=vs-2017"
 
-As ferramentas C++ Build Insights estão disponíveis no Visual Studio 2019. Para ver a documentação desta versão, defina o controle do seletor Visual Studio **Version** para este artigo para o Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+As ferramentas de compilação do C++ estão disponíveis no Visual Studio 2019. Para ver a documentação desta versão, defina o controle do seletor de **versão** do Visual Studio para este artigo como Visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Este artigo fornece detalhes sobre cada uma das visualizações do C++ Build Insights disponíveis no Windows Performance Analyzer (WPA). Use esta página para encontrar:
+Este artigo fornece detalhes sobre cada uma das exibições de compilação do C++ disponíveis no Windows Performance Analyzer (WPA). Use esta página para localizar:
 
-- descrições de colunas de dados; E
-- predefinições disponíveis para cada exibição, incluindo seu uso pretendido e modo de visualização preferido.
+- descrições de coluna de dados; e
+- predefinições disponíveis para cada exibição, incluindo o uso pretendido e o modo de exibição preferencial.
 
-Se você é novo no WPA, recomendamos que você primeiro se familiarize com o [básico do WPA para C++ Build Insights](/cpp/build-insights/tutorials/wpa-basics).
+Se você for novo no WPA, recomendamos que você se familiarize com os [conceitos básicos do WPA para os insights de compilação do C++](/cpp/build-insights/tutorials/wpa-basics).
 
 ## <a name="build-explorer"></a>Gerenciador de Compilação
 
-A exibição do Build Explorer está acostumada a:
+A exibição do Gerenciador de compilação é usada para:
 
-- diagnosticar questões de paralelismo,
-- determinar se o seu tempo de construção é dominado por análise, geração de código ou vinculação, e
-- identificar gargalos e atividades de construção extraordinariamente longas.
+- diagnosticar problemas de paralelismo,
+- Determine se o tempo de compilação é dominado pela análise, geração de código ou vinculação e
+- Identifique afunilamentos e atividades de compilação normalmente longas.
 
-### <a name="build-explorer-view-data-columns"></a>Criar colunas de dados de exibição do Explorer
+### <a name="build-explorer-view-data-columns"></a>Colunas de dados de exibição do Gerenciador de compilação
 
 | Nome da coluna | Descrição |
 |-|-|
-| BuildTimelineDescription | Uma descrição textual da linha do tempo em que a atividade ou propriedade atual ocorre. |
-| BuildTimelineId          | Um identificador baseado em zero para a linha do tempo em que a atividade ou propriedade atual ocorre. |
-| Componente                | O componente que está sendo compilado ou ligado quando o evento atual foi emitido. O valor desta coluna é * \<\> Invocação X Informações* quando nenhum componente está associado a este evento. X é um identificador numérico único para a invocação sendo executada no momento em que o evento foi emitido. Este identificador é o mesmo da coluna InvocaçãoId para este evento. |
-| Contagem                    | O número de atividades ou propriedades representadas por essa linha de dados. Esse valor é sempre 1, e só é útil em cenários de agregação quando várias linhas são agrupadas. |
-| EXCLUSIVOCPUTime         | A quantidade de tempo da CPU em milissegundos usado por esta atividade. O tempo gasto em atividades infantis não está incluído neste valor. |
-| Duração exclusiva        | A duração de milissegundos da atividade. A duração das atividades infantis não está incluída neste montante. |
-| InclusiveCPUTime         | A quantidade de tempo da CPU em milissegundos usado por esta atividade e todas as atividades infantis. |
-| Duração inclusiva        | A duração de milissegundos desta atividade, incluindo todas as atividades infantis. |
-| InvocaçãoDescrição    | Uma descrição textual da invocação em que este evento ocorreu. A descrição inclui se foi *cl.exe* ou *link.exe*, e um identificador de invocação numérica único. Se aplicável, inclui o caminho completo para o componente compilado ou ligado durante a invocação. Para invocações que não constroem nenhum componente ou para as que constroem vários componentes, o caminho está em branco. O identificador de invocação é o mesmo da coluna Invocação. |
-| Invocationid             | Um identificador numérico único para a invocação em que este evento ocorreu. |
-| Nome                     | O nome da atividade ou propriedade representada por este evento. |
-| Hora                     | Um carimbo de data e hora que identifica quando o evento ocorreu. |
-| Ferramenta                     | A ferramenta que executa quando este evento ocorreu. O valor desta coluna é CL ou Link. |
-| Type                     | O tipo do evento atual. Este valor é atividade ou propriedade. |
-| Valor                    | Se o evento atual for uma propriedade, esta coluna contém seu valor. Esta coluna é deixada em branco quando o evento atual é uma atividade. |
+| BuildTimelineDescription | Uma descrição textual da linha do tempo na qual a atividade ou propriedade atual ocorre. |
+| BuildTimelineId          | Um identificador de base zero para a linha do tempo em que a atividade ou propriedade atual ocorre. |
+| Componente                | O componente que está sendo compilado ou vinculado quando o evento atual foi emitido. O valor desta coluna é *\<Invocation X Info\>* quando nenhum componente está associado a este evento. X é um identificador numérico exclusivo para a invocação que está sendo executada no momento em que o evento foi emitido. Esse identificador é o mesmo da coluna invocaid para esse evento. |
+| Contagem                    | O número de atividades ou propriedades representadas por esta linha de dados. Esse valor é sempre 1 e só é útil em cenários de agregação quando várias linhas são agrupadas. |
+| ExclusiveCPUTime         | A quantidade de tempo de CPU, em milissegundos, usada por essa atividade. O tempo gasto em atividades filhas não está incluído nesse valor. |
+| ExclusiveDuration        | A duração de milissegundos da atividade. A duração das atividades filhas não está incluída nesse valor. |
+| InclusiveCPUTime         | A quantidade de tempo de CPU em milissegundos usada por essa atividade e todas as atividades filho. |
+| InclusiveDuration        | A duração de milissegundos desta atividade, incluindo todas as atividades filho. |
+| InvocationDescription    | Uma descrição textual da invocação em que esse evento ocorreu. A descrição inclui se ela foi *cl.exe* ou *link.exe*e um identificador de invocação numérica exclusivo. Se aplicável, ele inclui o caminho completo para o componente compilado ou vinculado durante a invocação. Para invocações que não criam nenhum componente ou para aqueles que criam vários componentes, o caminho fica em branco. O identificador de invocação é o mesmo da coluna invocaid. |
+| InvocationId             | Um identificador numérico exclusivo para a invocação em que esse evento ocorreu. |
+| Nome                     | O nome da atividade ou da propriedade representada por este evento. |
+| Hora                     | Um carimbo de data/hora que identifica quando o evento ocorreu. |
+| Ferramenta                     | A ferramenta que está sendo executada quando esse evento ocorreu. O valor desta coluna é CL ou link. |
+| Type                     | O tipo do evento atual. Esse valor é atividade ou propriedade. |
+| Valor                    | Se o evento atual for uma propriedade, essa coluna conterá seu valor. Essa coluna é deixada em branco quando o evento atual é uma atividade. |
 
-### <a name="build-explorer-view-presets"></a>Predefinições de visualização do Build Explorer
+### <a name="build-explorer-view-presets"></a>Predefinições de exibição do Gerenciador de compilação
 
-| Nome predefinido           | Modo de exibição preferido | Como usar |
+| Nome da predefinição           | Modo de exibição preferencial | Como usar |
 |-----------------------|---------------------|------------|
-| Estatísticas de Atividade   | Gráfico / Tabela       | Use esta preconfiguração para exibir estatísticas agregadas para todas as atividades do Build Explorer. No modo de tabela, diga rapidamente se sua compilação é dominada por análise, geração de código ou linker. As durações agregadas para cada atividade são classificadas em ordem decrescente. Faça exercícios expandindo o nó superior para encontrar facilmente quais invocações levam mais tempo para essas atividades de topo. Se você quiser, você pode ajustar as configurações wpa para mostrar médias ou outros tipos de agregações. No modo gráfico, veja quando cada atividade está ativa durante a sua compilação. |
-| Invocações           | Grafo               | Role para baixo através de uma lista de invocações na exibição de gráficos classificada sem tempo inicial. Você pode usá-lo juntamente com a exibição CPU (Sampled) para encontrar invocações que se alinhem com zonas de utilização de CPU baixas. Detectar problemas de paralelismo. |
-| Propriedades de Invocação | Tabela               | Encontre rapidamente informações-chave sobre uma determinada invocação de compilador ou linker. Determine sua versão, diretório de trabalho ou a linha de comando completa usada para invocá-la. |
-| Linhas do tempo             | Grafo               | Veja um gráfico de barras de como sua compilação foi paraleletrizada. Identifique questões de paralelismo e gargalos rapidamente. Configure o WPA para atribuir diferentes significados às barras de acordo com suas necessidades. Escolha as descrições de invocação como a última coluna agrupada para exibir um gráfico de barras codificado por cores de todas as suas invocações. Ajuda você a identificar rapidamente os culpados demorados. Em seguida, amplie e escolha o nome da atividade como a última coluna agrupada para ver as partes mais longas. |
+| Estatísticas de atividade   | Gráfico/tabela       | Use essa predefinição para exibir estatísticas agregadas para todas as atividades do Gerenciador de compilação. No modo de tabela, informe rapidamente se sua compilação é dominada pela análise, geração de código ou pelo vinculador. As durações agregadas para cada atividade são classificadas em ordem decrescente. Aprofunde-se expandindo o nó superior para descobrir facilmente quais invocações levam mais tempo para essas atividades principais. Se desejar, você pode ajustar as configurações de WPA para mostrar as médias ou outros tipos de agregações. No modo de grafo, consulte quando cada atividade está ativa durante sua compilação. |
+| Invocações           | Grafo               | Role para baixo em uma lista de invocações na exibição de gráfico classificada por hora de início. Você pode usá-lo junto com a exibição CPU (amostra) para localizar invocações que se alinham com as zonas de baixa utilização da CPU. Detectar problemas de paralelismo. |
+| Propriedades de invocação | Tabela               | Encontre rapidamente informações importantes sobre um determinado compilador ou invocação do vinculador. Determine sua versão, diretório de trabalho ou a linha de comando completa usada para chamá-la. |
+| Linhas do tempo             | Grafo               | Veja um gráfico de barras de como sua compilação foi paralelizada. Identifique problemas e afunilamentos de paralelismo em um relance. Configure o WPA para atribuir diferentes significados às barras de acordo com suas necessidades. Escolha descrições de invocação como a última coluna agrupada para exibir um grafo de barras codificado por cor de todas as suas invocações. Ele ajuda você a identificar rapidamente os culpados demorados. Em seguida, amplie e escolha o nome da atividade como a última coluna agrupada para ver as partes mais longas. |
 
 ## <a name="files"></a>Arquivos
 
-A exibição Arquivos é usada para:
+A exibição arquivos é usada para:
 
-- determinar quais cabeçalhos são incluídos com mais freqüência, e
+- Determine quais cabeçalhos serão incluídos com mais frequência e
 - ajudá-lo a decidir o que incluir em um cabeçalho pré-compilado (PCH).
 
-### <a name="files-view-data-columns"></a>Arquivos exibir colunas de dados
+### <a name="files-view-data-columns"></a>Colunas de dados de exibição de arquivos
 
 | Nome da coluna              | Descrição |
 |--------------------------|-------------|
-| ActivityName             | A atividade em andamento quando este evento de arquivo foi emitido. Atualmente, esse valor é sempre *parsing*. |
+| ActivityName             | A atividade em andamento quando esse evento de arquivo foi emitido. Atualmente, esse valor é sempre *analisando*. |
 | BuildTimelineDescription | * |
 | BuildTimelineId          | * |
 | Componente                | * |
 | Contagem                    | * |
-| Profundidade                    | A posição baseada em zero na árvore de inclusão na qual este arquivo é encontrado. A contagem começa na raiz da árvore de inclusão. Um valor de 0 normalmente corresponde a um arquivo .c/.cpp. |
-| Duração exclusiva        | * |
-| Incluído               | O caminho completo do arquivo que incluía o arquivo atual. |
-| IncluídoPath             | O caminho completo do arquivo atual. |
-| Duração inclusiva        | * |
-| Invocationid             | * |
-| StartTime                | Um carimbo de data e hora que representa o momento em que o evento de arquivo atual foi emitido. |
+| Profundidade                    | A posição de base zero na árvore de inclusão na qual esse arquivo é encontrado. A contagem começa na raiz da árvore de inclusão. Um valor 0 geralmente corresponde a um arquivo. c/. cpp. |
+| ExclusiveDuration        | * |
+| IncludedBy               | O caminho completo do arquivo que incluiu o arquivo atual. |
+| IncludedPath             | O caminho completo do arquivo atual. |
+| InclusiveDuration        | * |
+| InvocationId             | * |
+| StartTime                | Um timestamp que representa a hora em que o evento do arquivo atual foi emitido. |
 | Ferramenta                     | * |
 
-\*O valor desta coluna é o mesmo da exibição [Build Explorer.](#build-explorer-view-data-columns)
+\*O valor dessa coluna é o mesmo da exibição do [Gerenciador de compilação](#build-explorer-view-data-columns) .
 
 ### <a name="files-view-presets"></a>Predefinições de exibição de arquivos
 
-| Nome predefinido | Modo de exibição preferido | Como usar |
+| Nome da predefinição | Modo de exibição preferencial | Como usar |
 |-------------|---------------------|------------|
-| Estatísticas  | Tabela               | Veja quais arquivos tiveram o maior tempo agregado de análise, olhando para a lista em ordem decrescente. Use essas informações para ajudá-lo a reestruturar seus cabeçalhos ou decidir o que incluir em seu PCH. |
+| Estatísticas  | Tabela               | Veja quais arquivos tiveram o tempo de análise agregado mais alto examinando a lista em ordem decrescente. Use essas informações para ajudá-lo a reestruturar seus cabeçalhos ou a decidir o que incluir em PCH. |
 
 ## <a name="functions"></a>Funções
 
-A exibição Funções é usada para identificar funções com um tempo de geração de código excessivamente longo.
+O modo de exibição de funções é usado para identificar funções com um tempo de geração de código excessivamente longo.
 
-### <a name="functions-view-data-columns"></a>Funções exibir colunas de dados
+### <a name="functions-view-data-columns"></a>Colunas de dados da exibição de funções
 
 | Nome da coluna              | Descrição |
 |--------------------------|-------------|
-| ActivityName             | A atividade em andamento quando este evento de função foi emitido. Atualmente, esse valor é sempre *CodeGeneration*. |
+| ActivityName             | A atividade em andamento quando esse evento de função foi emitido. Atualmente, esse valor é sempre *CodeGeneration*. |
 | BuildTimelineDescription | * |
 | BuildTimelineId          | * |
 | Componente                | * |
 | Contagem                    | * |
 | Duration                 | A duração da atividade de geração de código para esta função. |
-| FunctionName             | O nome da função em fase de geração de código. |
-| Invocationid             | * |
-| StartTime                | Um carimbo de data e hora que representa quando o evento de função atual foi emitido. |
+| FunctionName             | O nome da função que está passando pela geração de código. |
+| InvocationId             | * |
+| StartTime                | Um carimbo de data/hora que representa quando o evento de função atual foi emitido. |
 | Ferramenta                     | * |
 
-\*O valor desta coluna é o mesmo da exibição [Build Explorer.](#build-explorer-view-data-columns)
+\*O valor dessa coluna é o mesmo da exibição do [Gerenciador de compilação](#build-explorer-view-data-columns) .
 
 ### <a name="functions-view-presets"></a>Predefinições de exibição de funções
 
-| Nome predefinido | Modo de exibição preferido | Como usar |
+| Nome da predefinição | Modo de exibição preferencial | Como usar |
 |-------------|---------------------|------------|
-| Estatísticas  | Tabela               | Veja quais funções tiveram o maior tempo agregado de geração de código, olhando para a lista em ordem decrescente. Eles podem sugerir onde seu código usa demais a **palavra-chave __forceinline,** ou que algumas funções podem ser muito grandes. |
-| Linhas do tempo   | Grafo               | Olhe para este gráfico de barras para aprender a localização e duração das funções que levam mais tempo para gerar. Veja se eles se alinham com gargalos na exibição do Build Explorer. Se o fizerem, tome as medidas apropriadas para reduzir o tempo de geração de código e beneficiar seus tempos de construção. |
+| Estatísticas  | Tabela               | Veja quais funções tiveram o tempo de geração de código agregado mais alto examinando a lista em ordem decrescente. Eles podem indicar onde seu código usa a **`__forceinline`** palavra-chave ou que algumas funções podem ser muito grandes. |
+| Linhas do tempo   | Grafo               | Examine este grafo de barras para saber o local e a duração das funções que levam mais tempo para gerar. Veja se eles se alinham com afunilamentos na exibição do Gerenciador de compilação. Se isso ocorrer, execute a ação apropriada para reduzir seu tempo de geração de código e beneficiar seus tempos de compilação. |
 
 ## <a name="see-also"></a>Confira também
 
-[Comece com c++ Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[Introdução às informações de Build do C++](/cpp/build-insights/get-started-with-cpp-build-insights)\
 [Referência: comandos vcperf](vcperf-commands.md)\
-[Tutorial: Noções básicas do Analisador de Desempenho do Windows](/cpp/build-insights/tutorials/wpa-basics)\
+[Tutorial: Noções básicas do analisador de desempenho do Windows](/cpp/build-insights/tutorials/wpa-basics)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

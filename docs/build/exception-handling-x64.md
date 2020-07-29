@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303202"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224039"
 ---
 # <a name="x64-exception-handling"></a>Tratamento de exceções x64
 
@@ -68,7 +68,7 @@ A estrutura de UNWIND_INFO deve ser alinhada em DWORD na memória. Veja o que ca
 
    Número de versão dos dados de desenrolamento, atualmente 1.
 
-- **Flags**
+- **Sinalizadores**
 
    Três sinalizadores estão definidos no momento:
 
@@ -92,7 +92,7 @@ A estrutura de UNWIND_INFO deve ser alinhada em DWORD na memória. Veja o que ca
 
 - **Deslocamento de registro de quadro (dimensionado)**
 
-   Se o campo de registro de quadro for diferente de zero, esse campo será o deslocamento dimensionado do RSP que é aplicado ao registro de FP quando ele é estabelecido. O registro de FP real é definido como RSP + \* 16 esse número, permitindo deslocamentos de 0 a 240. Esse deslocamento permite apontar o registro de FP para o meio da alocação de pilha local para quadros de pilha dinâmico, permitindo uma melhor densidade de código por meio de instruções mais curtas. (Ou seja, mais instruções podem usar o formato de deslocamento de 8 bits assinado.)
+   Se o campo de registro de quadro for diferente de zero, esse campo será o deslocamento dimensionado do RSP que é aplicado ao registro de FP quando ele é estabelecido. O registro de FP real é definido como RSP + 16 \* esse número, permitindo deslocamentos de 0 a 240. Esse deslocamento permite apontar o registro de FP para o meio da alocação de pilha local para quadros de pilha dinâmico, permitindo uma melhor densidade de código por meio de instruções mais curtas. (Ou seja, mais instruções podem usar o formato de deslocamento de 8 bits assinado.)
 
 - **Matriz de códigos de liberação**
 
@@ -128,17 +128,17 @@ Offset (do início do prólogo) do final da instrução que executa essa operaç
 
 #### <a name="unwind-operation-code"></a>Desenrolar código de operação
 
-Observação: determinados códigos de operação exigem um deslocamento não assinado para um valor no quadro de pilha local. Esse deslocamento é desde o início, ou seja, o endereço mais baixo da alocação de pilha fixa. Se o campo de registro de quadro na UNWIND_INFO for zero, esse deslocamento será de RSP. Se o campo de registro de quadro for diferente de zero, esse deslocamento será de onde o RSP estava localizado quando o registro de FP foi estabelecido. Ele é igual ao registro de FP menos o deslocamento de registro \* de FP (16 o deslocamento de registro de quadro dimensionado no UNWIND_INFO). Se um registro de FP for usado, qualquer código de desenrolar que faça um deslocamento só deverá ser usado depois que o registro de FP for estabelecido no prólogo.
+Observação: determinados códigos de operação exigem um deslocamento não assinado para um valor no quadro de pilha local. Esse deslocamento é desde o início, ou seja, o endereço mais baixo da alocação de pilha fixa. Se o campo de registro de quadro na UNWIND_INFO for zero, esse deslocamento será de RSP. Se o campo de registro de quadro for diferente de zero, esse deslocamento será de onde o RSP estava localizado quando o registro de FP foi estabelecido. Ele é igual ao registro de FP menos o deslocamento de registro de FP (16 \* o deslocamento de registro de quadro dimensionado no UNWIND_INFO). Se um registro de FP for usado, qualquer código de desenrolar que faça um deslocamento só deverá ser usado depois que o registro de FP for estabelecido no prólogo.
 
-Para todos os opcodes `UWOP_SAVE_XMM128` , `UWOP_SAVE_XMM128_FAR`exceto e, o deslocamento é sempre um múltiplo de 8, porque todos os valores de pilha de interesse são armazenados em limites de 8 bytes (a pilha em si é sempre alinhada em 16 bytes). Para os códigos de operação que usam um deslocamento curto (menos de 512K), o USHORT final nos nós para esse código contém o deslocamento dividido por 8. Para os códigos de operação que usam um deslocamento longo (512K <= offset < 4GB), os dois nós de USHORT finais desse código contêm o deslocamento (no formato little-endian).
+Para todos os opcodes, exceto `UWOP_SAVE_XMM128` e `UWOP_SAVE_XMM128_FAR` , o deslocamento é sempre um múltiplo de 8, porque todos os valores de pilha de interesse são armazenados em limites de 8 bytes (a pilha em si é sempre alinhada em 16 bytes). Para os códigos de operação que usam um deslocamento curto (menos de 512K), o USHORT final nos nós para esse código contém o deslocamento dividido por 8. Para os códigos de operação que usam um deslocamento longo (512K <= offset < 4GB), os dois nós de USHORT finais desse código contêm o deslocamento (no formato little-endian).
 
-Para os opcodes `UWOP_SAVE_XMM128` e `UWOP_SAVE_XMM128_FAR`, o deslocamento é sempre um múltiplo de 16, já que todas as operações de XMM de 128 bits devem ocorrer na memória alinhada de 16 bytes. Portanto, um fator de escala de 16 é usado `UWOP_SAVE_XMM128`para, permitindo deslocamentos de menos de 1m.
+Para os opcodes `UWOP_SAVE_XMM128` e `UWOP_SAVE_XMM128_FAR` , o deslocamento é sempre um múltiplo de 16, já que todas as operações de XMM de 128 bits devem ocorrer na memória alinhada de 16 bytes. Portanto, um fator de escala de 16 é usado para `UWOP_SAVE_XMM128` , permitindo deslocamentos de menos de 1m.
 
 O código de operação de desenrolamento é um destes valores:
 
 - `UWOP_PUSH_NONVOL`(0) 1 nó
 
-  Envie um registro inteiro não volátil, decrementando RSP por 8. As informações da operação são o número do registro. Devido às restrições em epilogs, `UWOP_PUSH_NONVOL` os códigos de liberação devem aparecer primeiro no prólogo e, por fim, por último na matriz de código de desenrolamento. Essa ordenação relativa se aplica a todos os outros `UWOP_PUSH_MACHFRAME`códigos de desenrolamento, exceto.
+  Envie um registro inteiro não volátil, decrementando RSP por 8. As informações da operação são o número do registro. Devido às restrições em epilogs, os `UWOP_PUSH_NONVOL` códigos de liberação devem aparecer primeiro no prólogo e, por fim, por último na matriz de código de desenrolamento. Essa ordenação relativa se aplica a todos os outros códigos de desenrolamento, exceto `UWOP_PUSH_MACHFRAME` .
 
 - `UWOP_ALLOC_LARGE`(1) 2 ou 3 nós
 
@@ -146,7 +146,7 @@ O código de operação de desenrolamento é um destes valores:
 
 - `UWOP_ALLOC_SMALL`(2) 1 nó
 
-  Aloque uma área de tamanho pequeno na pilha. O tamanho da alocação é o campo \* de informações da operação 8 + 8, permitindo alocações de 8 a 128 bytes.
+  Aloque uma área de tamanho pequeno na pilha. O tamanho da alocação é o campo de informações da operação \* 8 + 8, permitindo alocações de 8 a 128 bytes.
 
   O código de desenrolamento para uma alocação de pilha sempre deve usar a menor codificação possível:
 
@@ -215,7 +215,7 @@ O código de operação de desenrolamento é um destes valores:
 
   1. Código de erro de push (se as informações op forem iguais a 1)
 
-  A `UWOP_PUSH_MACHFRAME` operação simulada diminui o RSP por 40 (as informações de op são iguais a 0) ou 48 (as informações de op são iguais a 1).
+  A operação simulada `UWOP_PUSH_MACHFRAME` diminui o RSP por 40 (as informações de op são iguais a 0) ou 48 (as informações de op são iguais a 1).
 
 #### <a name="operation-info"></a>Informações da operação
 
@@ -235,7 +235,7 @@ O significado dos bits de informações da operação depende do código da oper
 
 ### <a name="chained-unwind-info-structures"></a>Estruturas de informações de desenrolamento encadeadas
 
-Se o sinalizador de UNW_FLAG_CHAININFO for definido, uma estrutura de informações de desenrolação será secundária, e o campo de endereço de manipulador de exceção compartilhado/encadeadod-info conterá as informações de desenrolação primária. Este código de exemplo recupera as informações de desenrolamento `unwindInfo` primário, supondo que seja a estrutura que tem o sinalizador UNW_FLAG_CHAININFO definido.
+Se o sinalizador de UNW_FLAG_CHAININFO for definido, uma estrutura de informações de desenrolação será secundária, e o campo de endereço de manipulador de exceção compartilhado/encadeadod-info conterá as informações de desenrolação primária. Este código de exemplo recupera as informações de desenrolamento primário, supondo que `unwindInfo` seja a estrutura que tem o sinalizador UNW_FLAG_CHAININFO definido.
 
 ```cpp
 PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
@@ -305,7 +305,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** é o valor de RIP dentro dessa função. Esse valor é um endereço de exceção ou o endereço no qual o controle deixou a função de estabelecimento. O RIP é usado para determinar se o controle está dentro de uma construção protegida dentro dessa função, por exemplo, `__try` um bloco `__try` / `__except` para `__try` / `__finally`ou.
+**ControlPc** é o valor de RIP dentro dessa função. Esse valor é um endereço de exceção ou o endereço no qual o controle deixou a função de estabelecimento. O RIP é usado para determinar se o controle está dentro de uma construção protegida dentro dessa função, por exemplo, um `__try` bloco para `__try` / **`__except`** ou `__try` / **`__finally`** .
 
 **ImageBase** é a base da imagem (endereço de carregamento) do módulo que contém essa função, a ser adicionada aos deslocamentos de 32 bits usados na entrada da função e informações de desenrolamento para registrar endereços relativos.
 
@@ -329,7 +329,7 @@ Para escrever rotinas de assembly adequadas, há um conjunto de pseudovariáveis
 
 |Pseudo operação|Descrição|
 |-|-|
-|Período \[de proc:*ehandler*]|Faz com que o MASM gere uma entrada de tabela de função em. pData e desenrola informações em. xdata para o comportamento de desenrolamento de manipulação de exceção estruturada de uma função.  Se *ehandler* estiver presente, esse proc será inserido em. xdata como o manipulador específico de idioma.<br /><br /> Quando o atributo de quadro é usado, ele deve ser seguido por um. Diretiva endprólogo.  Se a função for uma função folha (conforme definido em [tipos de função](../build/stack-usage.md#function-types)), o atributo de quadro será desnecessário, assim como o restante dessas pseudovariáveis.|
+|PERÍODO de PROC \[ :*ehandler*]|Faz com que o MASM gere uma entrada de tabela de função em. pData e desenrola informações em. xdata para o comportamento de desenrolamento de manipulação de exceção estruturada de uma função.  Se *ehandler* estiver presente, esse proc será inserido em. xdata como o manipulador específico de idioma.<br /><br /> Quando o atributo de quadro é usado, ele deve ser seguido por um. Diretiva endprólogo.  Se a função for uma função folha (conforme definido em [tipos de função](../build/stack-usage.md#function-types)), o atributo de quadro será desnecessário, assim como o restante dessas pseudovariáveis.|
 |. *Registro* de pushreg|Gera uma entrada de código de desenrolação UWOP_PUSH_NONVOL para o número de registro especificado usando o deslocamento atual no prólogo.<br /><br /> Use-o somente com registros inteiros não voláteis.  Para envios por push de registros voláteis, use um. ALLOCSTACK 8, em vez disso|
 |. *Registro*do SETFRAME, *deslocamento*|Preenche o campo de registro de quadro e o deslocamento nas informações de desenrolamento usando o registro e o deslocamento especificados. O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera uma entrada de código de desenrolação UWOP_SET_FPREG para o registro especificado usando o deslocamento de prólogo atual.|
 |. *Tamanho* do ALLOCSTACK|Gera um UWOP_ALLOC_SMALL ou um UWOP_ALLOC_LARGE com o tamanho especificado para o deslocamento atual no prólogo.<br /><br /> O operando de *tamanho* deve ser um múltiplo de 8.|
@@ -395,12 +395,12 @@ Para simplificar o uso das [pseudo operações brutas](#raw-pseudo-operations), 
 
 |Macro|Descrição|
 |-|-|
-|alloc_stack (n)|Aloca um quadro de pilha de n bytes (usando `sub rsp, n`) e emite as informações de desenrolação apropriadas (. allocstack n)|
+|alloc_stack (n)|Aloca um quadro de pilha de n bytes (usando `sub rsp, n` ) e emite as informações de desenrolação apropriadas (. allocstack n)|
 |save_reg *reg*, *Loc*|Salva um *reg* de registro não volátil na pilha em RSP offset *Loc*e emite as informações de desenrolação apropriadas. (. savereg reg, loc)|
 |*reg* push_reg|Envia por push um *reg* de registro não volátil na pilha e emite as informações de desenrolação apropriadas. (. pushreg reg)|
 |*reg* rex_push_reg|Salva um registro não volátil na pilha usando um envio por push de 2 bytes e emite as informações de desenrolação apropriadas (. pushreg reg).  Use esta macro se o push for a primeira instrução na função, para garantir que a função seja de patches de acesso.|
 |save_xmm128 *reg*, *Loc*|Salva um *reg* de registro XMM não volátil na pilha em RSP offset *Loc*e emite as informações de desenrolação apropriadas (. savexmm128 reg, loc)|
-|set_frame *reg*, *offset*|Define o registro de quadro *reg* como o RSP + *offset* (usando um `mov`ou um `lea`) e emite as informações de desenrolação apropriadas (. set_frame reg, offset)|
+|set_frame *reg*, *offset*|Define o registro de quadro *reg* como o RSP + *offset* (usando um `mov` ou um `lea` ) e emite as informações de desenrolação apropriadas (. set_frame reg, offset)|
 |push_eflags|Envia o EFLAGS com uma `pushfq` instrução e emite as informações de desenrolação apropriadas (. alloc_stack 8)|
 
 Aqui está um prólogo de função de exemplo com o uso adequado das macros:
