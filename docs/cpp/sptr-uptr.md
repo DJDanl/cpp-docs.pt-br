@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __sptr modifier
 - __uptr modifier
 ms.assetid: c7f5f3b2-9106-4a0b-a6de-d1588ab153ed
-ms.openlocfilehash: bfa468c96196c417415801239925707c43a49c4e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5aac130073a635d0bc5f537aff75c526a9f086c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178672"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225833"
 ---
 # <a name="__sptr-__uptr"></a>__sptr, __uptr
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Use o modificador **__sptr** ou **__uptr** em uma declaração de ponteiro de 32 bits para especificar como o compilador converte um ponteiro de 32 bits para um ponteiro de 64 bits. Um ponteiro de 32 bits é convertido, por exemplo, quando ele é atribuído a uma variável de ponteiro de 64 bits ou sua referência é cancelada em uma plataforma de 64 bits.
+Use o **`__sptr`** **`__uptr`** modificador ou em uma declaração de ponteiro de 32 bits para especificar como o compilador converte um ponteiro de 32 bits para um ponteiro de 64 bits. Um ponteiro de 32 bits é convertido, por exemplo, quando ele é atribuído a uma variável de ponteiro de 64 bits ou sua referência é cancelada em uma plataforma de 64 bits.
 
 A documentação da Microsoft para o suporte de plataformas de 64 bits às vezes chama o bit mais significativo de um ponteiro de 32 bits de bit de sinal. Por padrão, o compilador usa a extensão de sinal para converter um ponteiro de 32 bits em um ponteiro de 64 bits. Ou seja, os 32 bits menos significativos do ponteiro de 64 bits são definidos como o valor do ponteiro de 32 bits e os 32 bits mais significativos são definidos como o valor do bit de sinal do ponteiro de 32 bits. Essa conversão gera resultados corretos se o bit de sinal for 0, mas não se o bit de sinal for 1. Por exemplo, o endereço de 32 bits 0x7FFFFFFF produz o endereço de 64 bits 0x000000007FFFFFFF equivalente, mas o endereço de 32 bits 0x80000000 é alterado incorretamente para 0xFFFFFFFF80000000.
 
-O modificador **__sptr**, ou assinado, especifica que uma conversão de ponteiro definiu os bits mais significativos de um ponteiro de 64 bits para o bit de sinal do ponteiro de 32 bits. O modificador **__uptr**, ou não assinado, especifica que uma conversão definiu os bits mais significativos como zero. As declarações a seguir mostram os modificadores **__sptr** e **__uptr** usados com dois ponteiros não qualificados, dois ponteiros qualificados com o tipo de [__ptr32](../cpp/ptr32-ptr64.md) e um parâmetro de função.
+O **`__sptr`** modificador, ou ponteiro assinado, especifica que uma conversão de ponteiro definiu os bits mais significativos de um ponteiro de 64 bits para o bit de sinal do ponteiro de 32 bits. O **`__uptr`** modificador, ou não assinado, especifica que uma conversão definiu os bits mais significativos como zero. As declarações a seguir mostram **`__sptr`** os **`__uptr`** modificadores e usados com dois ponteiros não qualificados, dois ponteiros qualificados com o tipo de [__ptr32](../cpp/ptr32-ptr64.md) e um parâmetro de função.
 
 ```cpp
 int * __sptr psp;
@@ -37,13 +37,13 @@ int * __ptr32 __uptr pup32;
 void MyFunction(char * __uptr __ptr32 myValue);
 ```
 
-Use os modificadores **__sptr** e **__uptr** com declarações de ponteiro. Use os modificadores na posição de um [qualificador de tipo de ponteiro](../c-language/pointer-declarations.md), o que significa que o modificador deve seguir o asterisco. Você não pode usar os modificadores com [ponteiros para membros](../cpp/pointers-to-members.md). Os modificadores não afetam as declarações que não são de ponteiro.
+Use os **`__sptr`** **`__uptr`** modificadores e com declarações de ponteiro. Use os modificadores na posição de um [qualificador de tipo de ponteiro](../c-language/pointer-declarations.md), o que significa que o modificador deve seguir o asterisco. Você não pode usar os modificadores com [ponteiros para membros](../cpp/pointers-to-members.md). Os modificadores não afetam as declarações que não são de ponteiro.
 
-Para a compatibilidade com versões anteriores, **_sptr** e **_uptr** são sinônimos de **__sptr** e **__uptr** , a menos que a opção do compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
+Para compatibilidade com versões anteriores, **_sptr** e **_uptr** são sinônimos de **`__sptr`** e **`__uptr`** , a menos que a opção do compilador [/za \( desabilitar extensões de idioma)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir declara os ponteiros de 32 bits que usam os modificadores **__sptr** e **__uptr** , atribui cada ponteiro de 32 bits a uma variável de ponteiro de 64 bits e, em seguida, exibe o valor hexadecimal de cada ponteiro de 64 bits. O exemplo é criado com o compilador nativo de 64 bits e executado em uma plataforma de 64 bits.
+O exemplo a seguir declara os ponteiros de 32 bits que usam os **`__sptr`** **`__uptr`** modificadores e, atribui cada ponteiro de 32 bits a uma variável de ponteiro de 64 bits e, em seguida, exibe o valor hexadecimal de cada ponteiro de 64 bits. O exemplo é criado com o compilador nativo de 64 bits e executado em uma plataforma de 64 bits.
 
 ```cpp
 // sptr_uptr.cpp
@@ -92,7 +92,7 @@ p32s: p64 = FFFFFFFF87654321
 p32u: p64 = 0000000087654321
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 2c16713af11a915772085165ed294cba4ae337f2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 15830a30e8236a13f3911d1b84d3727d3246fc0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168040"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226666"
 ---
 # <a name="catllist-class"></a>Classe CAtlList
 
@@ -55,7 +55,7 @@ template<typename E, class ETraits = CElementTraits<E>>
 class CAtlList
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Oriental*<br/>
 O tipo de elemento.
@@ -132,7 +132,7 @@ POSITION AddHead();
 POSITION AddHead(INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *elementos*<br/>
 O novo elemento.
@@ -157,7 +157,7 @@ Chame esse método para adicionar uma lista existente ao início da lista.
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *plNew*<br/>
 A lista a ser adicionada.
@@ -179,7 +179,7 @@ POSITION AddTail();
 POSITION AddTail(INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *elementos*<br/>
 O elemento a ser adicionado.
@@ -204,7 +204,7 @@ Chame esse método para adicionar uma lista existente à parte final desta lista
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *plNew*<br/>
 A lista a ser adicionada.
@@ -241,7 +241,7 @@ O construtor.
 CAtlList(UINT nBlockSize = 10) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBlockSize*<br/>
 O tamanho do bloco.
@@ -266,7 +266,7 @@ O destruidor.
 
 Libera todos os recursos alocados, incluindo uma chamada para [CAtlList:: RemoveAll](#removeall) para remover todos os elementos da lista.
 
-Em compilações de depuração, ocorrerá uma falha de asserção se a lista ainda contiver alguns elementos `RemoveAll`após a chamada para.
+Em compilações de depuração, ocorrerá uma falha de asserção se a lista ainda contiver alguns elementos após a chamada para `RemoveAll` .
 
 ## <a name="catllistfind"></a><a name="find"></a>CAtlList:: find
 
@@ -276,7 +276,7 @@ Chame esse método para pesquisar a lista para o elemento especificado.
 POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *elementos*<br/>
 O elemento a ser encontrado na lista.
@@ -304,7 +304,7 @@ Chame esse método para obter a posição de um elemento, dado um valor de índi
 POSITION FindIndex(size_t iElement) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice de base zero do elemento de lista necessário.
@@ -332,7 +332,7 @@ E& GetAt(POSITION pos) throw();
 const E& GetAt(POSITION pos) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 O valor de posição que especifica um determinado elemento.
@@ -343,9 +343,9 @@ Uma referência a, ou cópia do elemento.
 
 ### <a name="remarks"></a>Comentários
 
-Se a lista for **const**, `GetAt` retornará uma cópia do elemento. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
+Se a lista for **`const`** , `GetAt` retornará uma cópia do elemento. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
 
-Se a lista não for **const**, `GetAt` retornará uma referência ao elemento. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
+Se a lista não for **`const`** , `GetAt` retornará uma referência ao elemento. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
 
 Em compilações de depuração, ocorrerá uma falha de asserção se o *PDV* for igual a nulo.
 
@@ -384,9 +384,9 @@ Retorna uma referência a, ou uma cópia do, do elemento no cabeçalho da lista.
 
 ### <a name="remarks"></a>Comentários
 
-Se a lista for **const**, `GetHead` retornará uma cópia do elemento no cabeçalho da lista. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
+Se a lista for **`const`** , `GetHead` retornará uma cópia do elemento no cabeçalho da lista. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
 
-Se a lista não for **const**, `GetHead` retornará uma referência ao elemento no cabeçalho da lista. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
+Se a lista não for **`const`** , `GetHead` retornará uma referência ao elemento no cabeçalho da lista. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
 
 Em compilações de depuração, ocorrerá uma falha de asserção se o cabeçalho da lista apontar para NULL.
 
@@ -423,16 +423,16 @@ E& GetNext(POSITION& pos) throw();
 const E& GetNext(POSITION& pos) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
-Um valor de posição, retornado por uma chamada anterior `GetNext`para, [CAtlList:: GetHeadPosition](#getheadposition)ou outro `CAtlList` método.
+Um valor de posição, retornado por uma chamada anterior para `GetNext` , [CAtlList:: GetHeadPosition](#getheadposition)ou outro `CAtlList` método.
 
 ### <a name="return-value"></a>Valor retornado
 
-Se a lista for **const**, `GetNext` retornará uma cópia do próximo elemento da lista. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
+Se a lista for **`const`** , `GetNext` retornará uma cópia do próximo elemento da lista. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
 
-Se a lista não for **const**, `GetNext` retornará uma referência ao próximo elemento da lista. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
+Se a lista não for **`const`** , `GetNext` retornará uma referência ao próximo elemento da lista. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
 
 ### <a name="remarks"></a>Comentários
 
@@ -451,16 +451,16 @@ E& GetPrev(POSITION& pos) throw();
 const E& GetPrev(POSITION& pos) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
-Um valor de posição, retornado por uma chamada anterior `GetPrev`para, [CAtlList:: GetTailPosition](#gettailposition)ou outro `CAtlList` método.
+Um valor de posição, retornado por uma chamada anterior para `GetPrev` , [CAtlList:: GetTailPosition](#gettailposition)ou outro `CAtlList` método.
 
 ### <a name="return-value"></a>Valor retornado
 
-Se a lista for **const**, `GetPrev` retornará uma cópia de um elemento da lista. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
+Se a lista for **`const`** , `GetPrev` retornará uma cópia de um elemento da lista. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
 
-Se a lista não for **const**, `GetPrev` retornará uma referência a um elemento da lista. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
+Se a lista não for **`const`** , `GetPrev` retornará uma referência a um elemento da lista. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
 
 ### <a name="remarks"></a>Comentários
 
@@ -485,9 +485,9 @@ Retorna uma referência a, ou uma cópia do, do elemento na parte final da lista
 
 ### <a name="remarks"></a>Comentários
 
-Se a lista for **const**, `GetTail` retornará uma cópia do elemento no cabeçalho da lista. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
+Se a lista for **`const`** , `GetTail` retornará uma cópia do elemento no cabeçalho da lista. Isso permite que o método seja usado somente no lado direito de uma instrução de atribuição e protege a lista contra modificações.
 
-Se a lista não for **const**, `GetTail` retornará uma referência ao elemento no cabeçalho da lista. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
+Se a lista não for **`const`** , `GetTail` retornará uma referência ao elemento no cabeçalho da lista. Isso permite que o método seja usado em qualquer um dos lados de uma instrução de atribuição e, portanto, permite que as entradas da lista sejam modificadas.
 
 Em compilações de depuração, ocorrerá uma falha de asserção se a parte final da lista apontar para NULL.
 
@@ -531,7 +531,7 @@ Chame esse método para inserir um novo elemento na lista após a posição espe
 POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 O valor de posição após o qual o novo elemento será inserido.
@@ -559,7 +559,7 @@ Chame esse método para inserir um novo elemento na lista antes da posição esp
 POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 O novo elemento será inserido na lista antes desse valor de posição.
@@ -603,7 +603,7 @@ Chame esse método para mover o elemento especificado para o cabeçalho da lista
 void MoveToHead(POSITION pos) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 O valor de posição do elemento a ser movido.
@@ -624,7 +624,7 @@ Chame esse método para mover o elemento especificado para a parte final da list
 void MoveToTail(POSITION pos) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 O valor de posição do elemento a ser movido.
@@ -661,7 +661,7 @@ Chame esse método para remover um único elemento da lista.
 void RemoveAt(POSITION pos) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 O valor de posição do elemento a ser removido.
@@ -756,7 +756,7 @@ Chame esse método para definir o valor do elemento em uma determinada posição
 void SetAt(POSITION pos, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 O valor de posição correspondente ao elemento a ser alterado.
@@ -780,7 +780,7 @@ Chame esse método para alternar elementos na lista.
 void SwapElements(POSITION pos1, POSITION pos2) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos1*<br/>
 O valor da primeira posição.

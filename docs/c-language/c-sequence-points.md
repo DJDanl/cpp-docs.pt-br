@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
-ms.openlocfilehash: 13d6044269f60dc426a8b0b9b03463f387dfaa10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0147f51063127cb26ce8caf70bc46eadc87b8d3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226510"
 ---
 # <a name="c-sequence-points"></a>Pontos de sequência C
 
 Entre os "pontos de sequência" consecutivos, o valor de um objeto pode ser modificado apenas uma vez por uma expressão. A linguagem C define os seguintes pontos de sequência:
 
-- Operando esquerdo do operador AND lógico (**&&**). O operando da esquerda do operador AND lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Se o operando da esquerda for avaliado como falso (0), o outro operando não será avaliado.
+- Operando esquerdo do operador AND lógico ( **&&** ). O operando da esquerda do operador AND lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Se o operando da esquerda for avaliado como falso (0), o outro operando não será avaliado.
 
 - O operando da esquerda do operador OR lógica (`||`). O operando da esquerda do operador OR lógica é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Se o operando da esquerda for avaliado como true (diferente de zero), o outro operando não será avaliado.
 
@@ -29,13 +29,13 @@ Entre os "pontos de sequência" consecutivos, o valor de um objeto pode ser modi
 
 - A expressão em uma instrução de expressão. As instruções da expressão consistem em uma expressão opcional seguida por um ponto e vírgula (**;**). A expressão é avaliada por seus efeitos colaterais e há um ponto de sequência que segue esta avaliação.
 
-- A expressão de controle em uma instrução de seleção (**if** ou `switch`). A expressão será completamente avaliada e todos os efeitos colaterais serão concluídos antes que o código dependente da seleção seja executado.
+- A expressão de controle em uma instrução Selection ( **`if`** ou **`switch`** ). A expressão será completamente avaliada e todos os efeitos colaterais serão concluídos antes que o código dependente da seleção seja executado.
 
-- A expressão de controle de uma instrução `while` ou **do**. A expressão será completamente avaliada e todos os efeitos colaterais serão concluídos antes que as instruções na próxima iteração do loop de `while` ou de **do** sejam executadas.
+- A expressão de controle de **`while`** uma **`do`** instrução ou. A expressão é completamente avaliada e todos os efeitos colaterais são concluídos antes de qualquer instrução na próxima iteração do **`while`** **`do`** loop ou ser executada.
 
-- Cada uma das três expressões de uma instrução **for**. As expressões serão completamente avaliadas e todos os efeitos colaterais serão concluídos antes que as instruções na próxima iteração do loop de **for** sejam executadas.
+- Cada uma das três expressões de uma **`for`** instrução. As expressões são completamente avaliadas e todos os efeitos colaterais são concluídos antes que qualquer instrução na próxima iteração do **`for`** loop seja executada.
 
-- A expressão em uma instrução `return`. A expressão será completamente avaliada e todos os efeitos colaterais serão concluídos antes que o controle retorne para a função de chamada.
+- A expressão em uma **`return`** instrução. A expressão será completamente avaliada e todos os efeitos colaterais serão concluídos antes que o controle retorne para a função de chamada.
 
 ## <a name="see-also"></a>Confira também
 

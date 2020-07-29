@@ -34,12 +34,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-ms.openlocfilehash: 4ce6e9aebe5d058143ad737f9c9db5bb68b30b1f
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: f57ad33fe09938e0f04d0ca2615898fa2cdbd642
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150713"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226197"
 ---
 # <a name="_open-_wopen"></a>_open, _wopen
 
@@ -60,9 +60,9 @@ int _wopen(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*filename*<br/>
+*nome do arquivo*<br/>
 Nome do arquivo.
 
 *oflag*<br/>
@@ -95,7 +95,7 @@ A função **_open** abre o arquivo especificado por *filename* e o prepara para
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_topen**|**_open**|**_open**|**_wopen**|
 
-*oflag* é uma expressão de inteiro formada por uma ou mais das constantes de manifesto a seguir ou combinações de constantes, que são definidas em \<Fcntl. h >.
+*oflag* é uma expressão de inteiro formada por uma ou mais das constantes de manifesto a seguir ou combinações de constantes, que são definidas em \<fcntl.h> .
 
 |constante *oflag*|Comportamento|
 |-|-|
@@ -104,7 +104,7 @@ A função **_open** abre o arquivo especificado por *filename* e o prepara para
 | **_O_CREAT** | Cria um arquivo e o abre para gravação. Não terá efeito se o arquivo especificado por *filename* existir. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | Cria um arquivo temporário e, se possível, não alinha com o disco. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | Cria um arquivo temporário, que é excluído quando o último descritor de arquivo é fechado. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
-| **_O_CREAT** &#124; `_O_EXCL` | Retorna um valor de erro se um arquivo especificado por *filename* existir. Aplica-se somente quando usado com **_O_CREAT**. |
+| **_O_CREAT** &#124;`_O_EXCL` | Retorna um valor de erro se um arquivo especificado por *filename* existir. Aplica-se somente quando usado com **_O_CREAT**. |
 | **_O_NOINHERIT** | Impede a criação de um descritor de arquivo compartilhado. |
 | **_O_RANDOM** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
 | **_O_RDONLY** | Abre um arquivo somente leitura. Não pode ser especificado com **_O_RDWR** ou **_O_WRONLY**. |
@@ -121,13 +121,13 @@ Para especificar o modo de acesso ao arquivo, você deve especificar **_O_RDONLY
 
 Se **_O_WTEXT** for usado para abrir um arquivo para leitura, **_open** lerá o início do arquivo e verificará se há uma marca de ordem de byte (bom). Quando há BOM, o arquivo é tratado como UTF-8 ou UTF-16LE, de acordo com a BOM identificada. Quando não há BOM, o arquivo é tratado como ANSI. Quando um arquivo é aberto para gravação usando **_O_WTEXT**, o UTF-16 é usado. Independentemente de qualquer configuração anterior ou marca de ordem de byte, se **_O_U8TEXT** for usado, o arquivo será sempre aberto como UTF-8; Se **_O_U16TEXT** for usado, o arquivo será sempre aberto como UTF-16.
 
-Quando um arquivo é aberto no modo Unicode usando **_O_WTEXT**, **_O_U8TEXT**ou **_O_U16TEXT**, as funções de entrada convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **wchar_t**. As funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **wchar_t**. Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Tentar ler ou gravar uma quantidade ímpar de bytes no modo Unicode gera um erro de validação de parâmetro. Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
+Quando um arquivo é aberto no modo Unicode usando **_O_WTEXT**, **_O_U8TEXT**ou **_O_U16TEXT**, as funções de entrada convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **`wchar_t`** . As funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **`wchar_t`** . Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Tentar ler ou gravar uma quantidade ímpar de bytes no modo Unicode gera um erro de validação de parâmetro. Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
 
-Se **_open** for chamado com **_O_WRONLY** |  **_O_APPEND** (modo de acréscimo) e **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, primeiro ele tentará abrir o arquivo para leitura e gravação, ler a bom e, em seguida, reabri-la para gravação. Se uma falha impedir de abrir o arquivo para leitura e gravação, ele será aberto somente para gravação e usará o valor padrão na configuração do modo Unicode.
+Se **_open** for chamado com **_O_WRONLY**  |  **_O_APPEND** (modo de acréscimo) e **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, primeiro ele tentará abrir o arquivo para leitura e gravação, ler a bom e, em seguida, reabri-la para gravação. Se uma falha impedir de abrir o arquivo para leitura e gravação, ele será aberto somente para gravação e usará o valor padrão na configuração do modo Unicode.
 
-Quando duas ou mais constantes de manifesto são usadas para formar o argumento *oflag* , as constantes são combinadas com o operador bit- **&#124;** a-or (). Para saber mais sobre os modos de texto e binário, consulte [E/S de arquivo nos modos de texto e binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Quando duas ou mais constantes de manifesto são usadas para formar o argumento *oflag* , as constantes são combinadas com o operador bit-a-or ( **&#124;** ). Para saber mais sobre os modos de texto e binário, consulte [E/S de arquivo nos modos de texto e binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-O argumento *pmode* é necessário somente quando **_O_CREAT** é especificado. Se o arquivo já existir, *pmode* será ignorado. Caso contrário, *pmode* especificará as configurações de permissão de arquivo, que são definidas quando o novo arquivo é fechado pela primeira vez. **_open** aplica a máscara de permissão de arquivo atual a *pmode* antes que as permissões sejam definidas. (Para obter mais informações, consulte [_umask](umask.md).) *pmode* é uma expressão de inteiro que contém uma ou ambas as seguintes constantes de manifesto, que são definidas em \<SYS\Stat.h >.
+O argumento *pmode* é necessário somente quando **_O_CREAT** é especificado. Se o arquivo já existir, *pmode* será ignorado. Caso contrário, *pmode* especificará as configurações de permissão de arquivo, que são definidas quando o novo arquivo é fechado pela primeira vez. **_open** aplica a máscara de permissão de arquivo atual a *pmode* antes que as permissões sejam definidas. (Para obter mais informações, consulte [_umask](umask.md).) *pmode* é uma expressão de inteiro que contém uma ou ambas as constantes de manifesto a seguir, que são definidas em \<sys\stat.h> .
 
 |*pmode*|Significado|
 |-|-|
@@ -135,11 +135,11 @@ O argumento *pmode* é necessário somente quando **_O_CREAT** é especificado. 
 | **_S_IWRITE** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
 | **_S_IREAD** &#124; **_S_IWRITE** | Leitura e gravação permitidas. |
 
-Quando ambas as constantes são fornecidas, elas são unidas com o operador OR bit- **&#124;** a-or (). Todos os arquivos podem ser lidos no Windows; não há permissão somente gravação. Portanto, os modos **_S_IWRITE** e **_S_IREAD** |  **_S_IWRITE** são equivalentes.
+Quando ambas as constantes são fornecidas, elas são unidas com o operador OR bit-a-OR ( **&#124;** ). Todos os arquivos podem ser lidos no Windows; não há permissão somente gravação. Portanto, os modos **_S_IWRITE** e **_S_IREAD**  |  **_S_IWRITE** são equivalentes.
 
 Se um valor diferente de uma combinação de **_S_IREAD** e **_S_IWRITE** for especificado para *pmode*— mesmo que ele especifique um *pmode* válido em outro sistema operacional — ou se qualquer valor diferente dos valores *oflag* permitidos for especificado, a função gerará uma asserção no modo de depuração e invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará-1 e definirá **errno** como **EINVAL**.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
@@ -152,7 +152,7 @@ Se um valor diferente de uma combinação de **_S_IREAD** e **_S_IWRITE** for es
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_open.c
@@ -200,9 +200,9 @@ Open succeeded on input file
 Open succeeded on output file
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de baixo nível](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

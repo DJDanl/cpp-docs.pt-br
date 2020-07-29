@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998795"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226458"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversões de tipos integrais sem sinal
 
@@ -35,7 +35,7 @@ Consulte [armazenamento de tipos básicos](../c-language/storage-of-basic-types.
 
 **Específico da Microsoft**
 
-No compilador Microsoft, os tipos **não** assinados (ou **int**. não assinados) e **longos** não assinados são distintos, mas equivalentes. A conversão de um valor **unsigned int** é realizada da mesma maneira que a conversão de um **unsigned long**.
+No compilador da Microsoft, **`unsigned`** (ou **`unsigned int`** ) e **`unsigned long`** são tipos distintos, mas equivalentes. A conversão de um **`unsigned int`** valor prossegue da mesma maneira que a conversão de um **`unsigned long`** .
 
 **FINAL específico da Microsoft**
 
@@ -45,46 +45,46 @@ A tabela a seguir resume as conversões de tipos integrais sem sinal.
 
 |De|Para|Método|
 |----------|--------|------------|
-|**unsigned char**|**char**|Preserva o padrão de bits; o bit de ordem superior torna-se o bit de sinal|
-|**unsigned char**|**short**|Extensão de zero|
-|**unsigned char**|**Longas**|Extensão de zero|
-|**unsigned char**|**long long**|Extensão de zero|
-|**unsigned char**|**unsigned short**|Extensão de zero|
-|**unsigned char**|**unsigned long**|Extensão de zero|
-|**unsigned char**|**unsigned long long**|Extensão de zero|
-|**unsigned char**|**float**|Converte em **long**; converte **long** em **float**|
-|**unsigned char**|**double**|Converte em **long**; converte **long** em **double**|
-|**unsigned char**|**longo Duplo**|Converte em **long**; converte **long** em **double**|
-|**unsigned short**|**char**|Preserva o byte de ordem inferior|
-|**unsigned short**|**short**|Preserva o padrão de bits; o bit de ordem superior torna-se o bit de sinal|
-|**unsigned short**|**Longas**|Extensão de zero|
-|**unsigned short**|**long long**|Extensão de zero|
-|**unsigned short**|**unsigned char**|Preserva o byte de ordem inferior|
-|**unsigned short**|**unsigned long**|Extensão de zero|
-|**unsigned short**|**unsigned long long**|Extensão de zero|
-|**unsigned short**|**float**|Converte em **long**; converte **long** em **float**|
-|**unsigned short**|**double**|Converte em **long**; converte **long** em **double**|
-|**unsigned short**|**longo Duplo**|Converte em **long**; converte **long** em **double**|
-|**unsigned long**|**char**|Preserva o byte de ordem inferior|
-|**unsigned long**|**short**|Preserva a palavra de ordem inferior|
-|**unsigned long**|**Longas**|Preserva o padrão de bits; o bit de ordem superior torna-se o bit de sinal|
-|**unsigned long**|**long long**|Extensão de zero|
-|**unsigned long**|**unsigned char**|Preserva o byte de ordem inferior|
-|**unsigned long**|**unsigned short**|Preserva a palavra de ordem inferior|
-|**unsigned long**|**unsigned long long**|Extensão de zero|
-|**unsigned long**|**float**|Converte em **long**; converte **long** em **float**|
-|**unsigned long**|**double**|Converter diretamente em **double**|
-|**unsigned long**|**longo Duplo**|Converte em **long**; converte **long** em **double**|
-|**unsigned long long**|**char**|Preserva o byte de ordem inferior|
-|**unsigned long long**|**short**|Preserva a palavra de ordem inferior|
-|**unsigned long long**|**Longas**|Preservar DWORD de ordem inferior|
-|**unsigned long long**|**long long**|Preserva o padrão de bits; o bit de ordem superior torna-se o bit de sinal|
-|**unsigned long long**|**unsigned char**|Preserva o byte de ordem inferior|
-|**unsigned long long**|**unsigned short**|Preserva a palavra de ordem inferior|
-|**unsigned long long**|**unsigned long**|Preservar DWORD de ordem inferior|
-|**unsigned long long**|**float**|Converte em **long**; converte **long** em **float**|
-|**unsigned long long**|**double**|Converter diretamente em **double**|
-|**unsigned long long**|**longo Duplo**|Converte em **long**; converte **long** em **double**|
+|**`unsigned char`**|**`char`**|Preserva o padrão de bits; o bit de ordem superior torna-se o bit de sinal|
+|**`unsigned char`**|**`short`**|Extensão de zero|
+|**`unsigned char`**|**`long`**|Extensão de zero|
+|**`unsigned char`**|**`long long`**|Extensão de zero|
+|**`unsigned char`**|**`unsigned short`**|Extensão de zero|
+|**`unsigned char`**|**`unsigned long`**|Extensão de zero|
+|**`unsigned char`**|**`unsigned long long`**|Extensão de zero|
+|**`unsigned char`**|**`float`**|Converter em **`long`** ; Converter **`long`** em**`float`**|
+|**`unsigned char`**|**`double`**|Converter em **`long`** ; Converter **`long`** em**`double`**|
+|**`unsigned char`**|**`long double`**|Converter em **`long`** ; Converter **`long`** em**`double`**|
+|**`unsigned short`**|**`char`**|Preserva o byte de ordem inferior|
+|**`unsigned short`**|**`short`**|Preserva o padrão de bits; o bit de ordem superior torna-se o bit de sinal|
+|**`unsigned short`**|**`long`**|Extensão de zero|
+|**`unsigned short`**|**`long long`**|Extensão de zero|
+|**`unsigned short`**|**`unsigned char`**|Preserva o byte de ordem inferior|
+|**`unsigned short`**|**`unsigned long`**|Extensão de zero|
+|**`unsigned short`**|**`unsigned long long`**|Extensão de zero|
+|**`unsigned short`**|**`float`**|Converter em **`long`** ; Converter **`long`** em**`float`**|
+|**`unsigned short`**|**`double`**|Converter em **`long`** ; Converter **`long`** em**`double`**|
+|**`unsigned short`**|**`long double`**|Converter em **`long`** ; Converter **`long`** em**`double`**|
+|**`unsigned long`**|**`char`**|Preserva o byte de ordem inferior|
+|**`unsigned long`**|**`short`**|Preserva a palavra de ordem inferior|
+|**`unsigned long`**|**`long`**|Preserva o padrão de bits; o bit de ordem superior torna-se o bit de sinal|
+|**`unsigned long`**|**`long long`**|Extensão de zero|
+|**`unsigned long`**|**`unsigned char`**|Preserva o byte de ordem inferior|
+|**`unsigned long`**|**`unsigned short`**|Preserva a palavra de ordem inferior|
+|**`unsigned long`**|**`unsigned long long`**|Extensão de zero|
+|**`unsigned long`**|**`float`**|Converter em **`long`** ; Converter **`long`** em**`float`**|
+|**`unsigned long`**|**`double`**|Converter diretamente em**`double`**|
+|**`unsigned long`**|**`long double`**|Converter em **`long`** ; Converter **`long`** em**`double`**|
+|**`unsigned long long`**|**`char`**|Preserva o byte de ordem inferior|
+|**`unsigned long long`**|**`short`**|Preserva a palavra de ordem inferior|
+|**`unsigned long long`**|**`long`**|Preservar DWORD de ordem inferior|
+|**`unsigned long long`**|**`long long`**|Preserva o padrão de bits; o bit de ordem superior torna-se o bit de sinal|
+|**`unsigned long long`**|**`unsigned char`**|Preserva o byte de ordem inferior|
+|**`unsigned long long`**|**`unsigned short`**|Preserva a palavra de ordem inferior|
+|**`unsigned long long`**|**`unsigned long`**|Preservar DWORD de ordem inferior|
+|**`unsigned long long`**|**`float`**|Converter em **`long`** ; Converter **`long`** em**`float`**|
+|**`unsigned long long`**|**`double`**|Converter diretamente em**`double`**|
+|**`unsigned long long`**|**`long double`**|Converter em **`long`** ; Converter **`long`** em**`double`**|
 
 ## <a name="see-also"></a>Confira também
 

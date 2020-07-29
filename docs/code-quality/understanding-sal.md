@@ -3,12 +3,12 @@ title: Noções básicas de SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: fe48e31e5f4390915c4f3b5b6bf9c09bbd9fffe1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403979"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226041"
 ---
 # <a name="understanding-sal"></a>Noções básicas de SAL
 
@@ -359,7 +359,7 @@ A análise de Visual Studio Code valida que essa função verifica se há NULL a
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Exemplo: a \_ anotação de sucesso \_ em combinação com \_ out\_
 
-As anotações podem ser aplicadas à maioria dos objetos.  Em particular, você pode anotar uma função inteira.  Uma das características mais óbvias de uma função é que ela pode ser bem-sucedida ou falhar. Mas, assim como a associação entre um buffer e seu tamanho, o C/C++ não pode expressar a função êxito ou falha. Usando a `_Success_` anotação, você pode dizer a aparência do sucesso de uma função.  O parâmetro para a `_Success_` anotação é apenas uma expressão que, quando for verdadeira, indica que a função foi bem-sucedida. A expressão pode ser qualquer coisa que o analisador de anotação possa manipular. Os efeitos das anotações após o retorno da função são aplicáveis somente quando a função é realizada com sucesso. Este exemplo mostra como `_Success_` interage com `_Out_` para fazer a coisa certa. Você pode usar a palavra-chave `return` para representar o valor de retorno.
+As anotações podem ser aplicadas à maioria dos objetos.  Em particular, você pode anotar uma função inteira.  Uma das características mais óbvias de uma função é que ela pode ser bem-sucedida ou falhar. Mas, assim como a associação entre um buffer e seu tamanho, o C/C++ não pode expressar a função êxito ou falha. Usando a `_Success_` anotação, você pode dizer a aparência do sucesso de uma função.  O parâmetro para a `_Success_` anotação é apenas uma expressão que, quando for verdadeira, indica que a função foi bem-sucedida. A expressão pode ser qualquer coisa que o analisador de anotação possa manipular. Os efeitos das anotações após o retorno da função são aplicáveis somente quando a função é realizada com sucesso. Este exemplo mostra como `_Success_` interage com `_Out_` para fazer a coisa certa. Você pode usar a palavra-chave **`return`** para representar o valor de retorno.
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)

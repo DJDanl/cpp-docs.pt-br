@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: af7088348cd3f52b38f0277fb7d0a973a1ca0e4b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213649"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226887"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= Operador (Microsoft::WRL)
 
@@ -55,7 +55,7 @@ WRL_NOTHROW bool operator!=(
 
 ### <a name="parameters"></a>parâmetros
 
-*a*<br/>
+*um*<br/>
 O objeto à esquerda.
 
 *b*<br/>
@@ -63,7 +63,7 @@ O objeto correto.
 
 ## <a name="return-value"></a>Valor retornado
 
-**true** se os objetos não forem iguais; caso contrário, **false**.
+**`true`** Se os objetos não forem iguais; caso contrário, **`false`** .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -73,4 +73,4 @@ O objeto correto.
 
 ## <a name="see-also"></a>Confira também
 
-[Namespace Microsoft::WRL](microsoft-wrl-namespace.md)
+[Namespace Microsoft:: WRL](microsoft-wrl-namespace.md)

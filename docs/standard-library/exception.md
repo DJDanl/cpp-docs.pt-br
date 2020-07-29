@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 681baee5ac5d19e8b3ffdf37c37599c9cb68f253
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1627ba411fd201c84daee534ea134be2dba73376
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457909"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193647"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -19,7 +19,7 @@ Define vários tipos e funções relacionados ao tratamento de exceções. O tra
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<exception>
+**Cabeçalho:**\<exception>
 
 **Namespace:** std
 
@@ -45,20 +45,20 @@ Define vários tipos e funções relacionados ao tratamento de exceções. O tra
 |[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|Converte e gera exceção se aninhada.|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|Estabelece um novo `terminate_handler` a ser chamado na finalização do programa.|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Estabelece um novo `unexpected_handler` a ser chamado quando uma exceção inesperada é encontrada.|
-|[terminate](../standard-library/exception-functions.md#terminate)|Chama um manipulador de finalização.|
+|[encerrar](../standard-library/exception-functions.md#terminate)|Chama um manipulador de finalização.|
 |[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|Gera uma exceção se aninhada.|
-|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Retornará **true** apenas se uma exceção lançada estiver sendo processada no momento.|
-|[unexpected](../standard-library/exception-functions.md#unexpected)|Chama um manipulador inesperado.|
+|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Retorna **`true`** somente se uma exceção gerada estiver sendo processada no momento.|
+|[previsto](../standard-library/exception-functions.md#unexpected)|Chama um manipulador inesperado.|
 
 ### <a name="classes"></a>Classes
 
 |||
 |-|-|
 |[Classe bad_exception](../standard-library/bad-exception-class.md)|A classe descreve uma exceção que pode ser lançada de um `unexpected_handler`.|
-|[Classe exception](../standard-library/exception-class.md)|A classe atua como a classe base de todas as exceções lançadas por determinadas expressões e pela biblioteca padrão C++.|
+|[Classe de exceção](../standard-library/exception-class.md)|A classe atua como a classe base de todas as exceções lançadas por determinadas expressões e pela biblioteca padrão C++.|
 |[Classe nested_exception](../standard-library/nested-exception-class.md)|A classe descreve uma exceção que pode ser capturada e armazenada para uso posterior.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

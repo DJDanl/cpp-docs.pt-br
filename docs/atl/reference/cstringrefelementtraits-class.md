@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: b4dd76b9592b255a1553be3ca7a249f58fb2672e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6fa8772033a5a82940cf30b2a73d6ea356269d67
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226549"
 ---
 # <a name="cstringrefelementtraits-class"></a>Classe CStringRefElementTraits
 
-Esta classe fornece funções estáticas relacionadas a strings armazenadas em objetos de classe de coleção. Os objetos de corda são tratados como referências.
+Essa classe fornece funções estáticas relacionadas a cadeias de caracteres armazenadas em objetos de classe de coleção. Os objetos de cadeia de caracteres são tratados como referências.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,10 +28,10 @@ template <typename T>
 class CStringRefElementTraits : public CElementTraitsBase<T>
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-O tipo de dados a serem armazenados na coleção.
+O tipo de dados a ser armazenado na coleção.
 
 ## <a name="members"></a>Membros
 
@@ -39,82 +39,82 @@ O tipo de dados a serem armazenados na coleção.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CStringRefElementoTraits::CompareElementos](#compareelements)|Chame esta função estática para comparar dois elementos de seqüência para igualdade.|
-|[CStringRefElementoS::CompareElementosOrdenado](#compareelementsordered)|Chame esta função estática para comparar dois elementos de seqüência.|
-|[CStringRefElementTraits::Hash](#hash)|Chame esta função estática para calcular um valor de hash para o determinado elemento de string.|
+|[CStringRefElementTraits::CompareElements](#compareelements)|Chame essa função estática para comparar dois elementos de cadeia de caracteres para igualdade.|
+|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Chame essa função estática para comparar dois elementos de cadeia de caracteres.|
+|[CStringRefElementTraits:: hash](#hash)|Chame essa função estática para calcular um valor de hash para o elemento de cadeia de caracteres fornecido.|
 
 ## <a name="remarks"></a>Comentários
 
-Esta classe fornece funções estáticas para comparar strings e para criar um valor de hash. Essas funções são úteis ao usar uma classe de coleta para armazenar dados baseados em strings. Ao contrário [de CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) e `CStringRefElementTraits` [CStringElementTraitsI,](../../atl/reference/cstringelementtraitsi-class.md)faz com que os `CString` argumentos sejam passados como referências **const.** `CString&`
+Essa classe fornece funções estáticas para comparar cadeias de caracteres e para criar um valor de hash. Essas funções são úteis ao usar uma classe de coleção para armazenar dados baseados em cadeia de caracteres. Ao contrário de [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), faz com que `CStringRefElementTraits` os `CString` argumentos sejam passados como **`const`** `CString&` referências.
 
-Para obter mais informações, consulte [ATL Collection Classes](../../atl/atl-collection-classes.md).
+Para obter mais informações, consulte [classes de coleção do ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Celementtraitsbase](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
 `CStringRefElementTraits`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcoll.h
+**Cabeçalho:** atlcoll. h
 
-## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementoTraits::CompareElementos
+## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements
 
-Chame esta função estática para comparar dois elementos de seqüência para igualdade.
+Chame essa função estática para comparar dois elementos de cadeia de caracteres para igualdade.
 
 ```
 static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*elemento1*<br/>
-O primeiro elemento de corda.
+*Element1*<br/>
+O primeiro elemento String.
 
-*elemento2*<br/>
-O segundo elemento de corda.
+*element2*<br/>
+O segundo elemento de cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna verdadeiro se os elementos são iguais, falsos de outra forma.
+Retornará true se os elementos forem iguais; caso contrário, false.
 
-## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementoS::CompareElementosOrdenado
+## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered
 
-Chame esta função estática para comparar dois elementos de seqüência.
+Chame essa função estática para comparar dois elementos de cadeia de caracteres.
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *str1*<br/>
-O primeiro elemento de corda.
+O primeiro elemento String.
 
 *str2*<br/>
-O segundo elemento de corda.
+O segundo elemento de cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor retornado
 
-Zero se as cordas forem idênticas, < 0 se *str1* for menor que *str2*, ou > 0 se *str1* for maior que *str2*. O método [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) é usado para realizar as comparações.
+Zero se as cadeias de caracteres forem idênticas, < 0 se *str1* for menor que *str2*, ou > 0 se *str1* for maior que *str2*. O método [CStringT:: Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) é usado para executar as comparações.
 
-## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits::Hash
+## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits:: hash
 
-Chame esta função estática para calcular um valor de hash para o determinado elemento de string.
+Chame essa função estática para calcular um valor de hash para o elemento de cadeia de caracteres fornecido.
 
 ```
 static ULONG Hash(INARGTYPE str) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Str*<br/>
-O elemento de cordas.
+*str*<br/>
+O elemento String.
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna um valor de hash, calculado usando o conteúdo da string.
+Retorna um valor de hash, calculado usando o conteúdo da cadeia de caracteres.
 
 ## <a name="see-also"></a>Confira também
 

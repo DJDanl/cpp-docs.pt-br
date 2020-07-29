@@ -1,43 +1,43 @@
 ---
-title: Ponteiro this
-description: O ponteiro de this é um ponteiro gerado pelo compilador para o objeto atual em funções de membro não estático.
+title: 'Ponteiro :::no-loc(this):::'
+description: 'O :::no-loc(this)::: ponteiro é um ponteiro gerado pelo compilador para o objeto atual em funções de membro não estático.'
 ms.date: 01/22/2020
 f1_keywords:
-- this_cpp
+- :::no-loc(this):::_cpp
 helpviewer_keywords:
 - nonstatic member functions [C++]
-- pointers, to class instance
-- this pointer
+- 'pointers, to :::no-loc(class)::: instance'
+- ':::no-loc(this)::: pointer'
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 no-loc:
-- this
-- class
-- struct
-- union
-- sizeof
-- const
-- volatile
-ms.openlocfilehash: 58bba2edd7a457c624b747b5a65d209995852848
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+- ':::no-loc(this):::'
+- ':::no-loc(class):::'
+- ':::no-loc(struct):::'
+- ':::no-loc(union):::'
+- ':::no-loc(sizeof):::'
+- ':::no-loc(const):::'
+- ':::no-loc(volatile):::'
+ms.openlocfilehash: c851beaba7fe1091ffd7827714f90307303058c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518329"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225820"
 ---
-# <a name="opno-locthis-pointer"></a>Ponteiro this
+# <a name="no-locthis-pointer"></a>Ponteiro :::no-loc(this):::
 
-O ponteiro de **this** é um ponteiro acessível somente dentro das funções de membro não estático de um **class** , **struct** ou tipo de **union** . Ele aponta para o objeto para o qual a função de membro é chamada. Funções membro static não têm um ponteiro **this** .
+O **`:::no-loc(this):::`** ponteiro é um ponteiro acessível somente dentro das funções de membro não estático de **`:::no-loc(class):::`** um **`:::no-loc(struct):::`** tipo, ou **`:::no-loc(union):::`** . Ele aponta para o objeto para o qual a função de membro é chamada. Funções membro static não têm um **`:::no-loc(this):::`** ponteiro.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-this
-this->member-identifier
+:::no-loc(this):::
+:::no-loc(this):::->member-identifier
 ```
 
 ## <a name="remarks"></a>Comentários
 
-O ponteiro de **this** de um objeto não faz parte do próprio objeto. Ele não é refletido no resultado de uma instrução **sizeof** no objeto. Quando uma função de membro não estático é chamada para um objeto, o compilador passa o endereço do objeto para a função como um argumento oculto. Por exemplo, a chamada de função a seguir:
+O ponteiro de um objeto **`:::no-loc(this):::`** não faz parte do próprio objeto. Ele não é refletido no resultado de uma **`:::no-loc(sizeof):::`** instrução no objeto. Quando uma função de membro não estático é chamada para um objeto, o compilador passa o endereço do objeto para a função como um argumento oculto. Por exemplo, a chamada de função a seguir:
 
 ```cpp
 myDate.setMonth( 3 );
@@ -49,39 +49,39 @@ pode ser interpretado como:
 setMonth( &myDate, 3 );
 ```
 
-O endereço do objeto está disponível de dentro da função membro como o ponteiro **this** . A maioria das **this** usos do ponteiro são implícitos. É legal, embora desnecessário, usar um **this** explícito ao fazer referência aos membros da class. Por exemplo:
+O endereço do objeto está disponível de dentro da função membro como o **`:::no-loc(this):::`** ponteiro. A maioria dos **`:::no-loc(this):::`** usos de ponteiro é implícita. É legal, embora desnecessário, usar um explícito **`:::no-loc(this):::`** ao fazer referência a membros do :::no-loc(class)::: . Por exemplo:
 
 ```cpp
 void Date::setMonth( int mn )
 {
    month = mn;            // These three statements
-   this->month = mn;      // are equivalent
-   (*this).month = mn;
+   :::no-loc(this):::->month = mn;      // are equivalent
+   (*:::no-loc(this):::).month = mn;
 }
 ```
 
-A expressão `*this` é geralmente usada para retornar o objeto atual de uma função de membro:
+A expressão **`*:::no-loc(this):::`** é normalmente usada para retornar o objeto atual de uma função de membro:
 
 ```cpp
-return *this;
+return *:::no-loc(this):::;
 ```
 
-O ponteiro de **this** também é usado para proteção contra autoreferência:
+O **`:::no-loc(this):::`** ponteiro também é usado para proteger contra autoreferência:
 
 ```cpp
-if (&Object != this) {
+if (&Object != :::no-loc(this):::) {
 // do not execute in cases of self-reference
 ```
 
 > [!NOTE]
-> Como o ponteiro de **this** não pode ser modificado, as atribuições para o ponteiro de **this** não são permitidas. Implementações anteriores C++ de atribuição permitida para **this** .
+> Como o **`:::no-loc(this):::`** ponteiro não pode ser modificado, as atribuições ao **`:::no-loc(this):::`** ponteiro não são permitidas. As implementações anteriores do C++ permitiram a atribuição **`:::no-loc(this):::`** .
 
-Ocasionalmente, o ponteiro de **this** é usado diretamente — por exemplo, para manipular estruturas de dados de autorreferência, onde o endereço do objeto atual é necessário.
+Ocasionalmente, o **`:::no-loc(this):::`** ponteiro é usado diretamente — por exemplo, para manipular Ures de dados autoreferenciais :::no-loc(struct)::: , onde o endereço do objeto atual é necessário.
 
 ## <a name="example"></a>Exemplo
 
 ```cpp
-// this_pointer.cpp
+// :::no-loc(this):::_pointer.cpp
 // compile with: /EHsc
 
 #include <iostream>
@@ -89,11 +89,11 @@ Ocasionalmente, o ponteiro de **this** é usado diretamente — por exemplo, par
 
 using namespace std;
 
-class Buf
+:::no-loc(class)::: Buf
 {
 public:
     Buf( char* szBuffer, size_t sizeOfBuffer );
-    Buf& operator=( const Buf & );
+    Buf& operator=( :::no-loc(const)::: Buf & );
     void Display() { cout << buffer << endl; }
 
 private:
@@ -113,9 +113,9 @@ Buf::Buf( char* szBuffer, size_t sizeOfBuffer )
     }
 }
 
-Buf& Buf::operator=( const Buf &otherbuf )
+Buf& Buf::operator=( :::no-loc(const)::: Buf &otherbuf )
 {
-    if( &otherbuf != this )
+    if( &otherbuf != :::no-loc(this)::: )
     {
         if (buffer)
             delete [] buffer;
@@ -124,7 +124,7 @@ Buf& Buf::operator=( const Buf &otherbuf )
         buffer = new char[sizeOfBuffer];
         strcpy_s( buffer, sizeOfBuffer, otherbuf.buffer );
     }
-    return *this;
+    return *:::no-loc(this):::;
 }
 
 int main()
@@ -148,60 +148,60 @@ my buffer
 your buffer
 ```
 
-## <a name="type-of-the-opno-locthis-pointer"></a>Tipo do ponteiro de this
+## <a name="type-of-the-no-locthis-pointer"></a>Tipo do :::no-loc(this)::: ponteiro
 
-O tipo do ponteiro de **this** pode ser modificado na declaração de função pelas palavras-chave **const** e **volatile** . Para declarar uma função que tenha qualquer um desses atributos, adicione as palavras-chave após a lista de argumentos da função.
+O **`:::no-loc(this):::`** tipo do ponteiro pode ser modificado na declaração da função pelas **`:::no-loc(const):::`** **`:::no-loc(volatile):::`** palavras-chave e. Para declarar uma função que tenha qualquer um desses atributos, adicione as palavras-chave após a lista de argumentos da função.
 
 Considere um exemplo:
 
 ```cpp
-// type_of_this_pointer1.cpp
-class Point
+// type_of_:::no-loc(this):::_pointer1.cpp
+:::no-loc(class)::: Point
 {
-    unsigned X() const;
+    unsigned X() :::no-loc(const):::;
 };
 int main()
 {
 }
 ```
 
-O código anterior declara uma função de membro, `X`, na qual o ponteiro de **this** é tratado como um ponteiro de **const** para um objeto **const** . As combinações de opções *CV-mod-List* podem ser usadas, mas sempre modificam o objeto apontado pelo ponteiro de **this** , não pelo ponteiro em si. A declaração a seguir declara a função `X`, onde o ponteiro de **this** é um ponteiro **const** para um objeto **const** :
+O código anterior declara uma função de membro, `X` , na qual o **`:::no-loc(this):::`** ponteiro é tratado como um **`:::no-loc(const):::`** ponteiro para um **`:::no-loc(const):::`** objeto. As combinações de opções *CV-mod-List* podem ser usadas, mas sempre modificam o objeto apontado pelo **`:::no-loc(this):::`** ponteiro, não pelo próprio ponteiro. A declaração a seguir declara a função `X` , onde o **`:::no-loc(this):::`** ponteiro é um **`:::no-loc(const):::`** ponteiro para um **`:::no-loc(const):::`** objeto:
 
 ```cpp
-// type_of_this_pointer2.cpp
-class Point
+// type_of_:::no-loc(this):::_pointer2.cpp
+:::no-loc(class)::: Point
 {
-    unsigned X() const;
+    unsigned X() :::no-loc(const):::;
 };
 int main()
 {
 }
 ```
 
-O tipo de **this** em uma função de membro é descrito pela sintaxe a seguir. A *lista CV-Qualifier-* é determinada do Declarador da função membro. Pode ser **const** ou **volatile** (ou ambos). *classtipo* é o nome do class:
+O tipo de **`:::no-loc(this):::`** em uma função de membro é descrito pela sintaxe a seguir. A *lista CV-Qualifier-* é determinada do Declarador da função membro. Ele pode ser **`:::no-loc(const):::`** ou **`:::no-loc(volatile):::`** (ou ambos). * :::no-loc(class)::: -Type* é o nome do :::no-loc(class)::: :
 
-[*CV-Qualifier-List*]\* *declasstipo* **const this**
+[*CV-Qualifier-List*] * :::no-loc(class)::: -tipo* ** \* :::no-loc(const)::: :::no-loc(this)::: **
 
-Em outras palavras, o ponteiro de **this** é sempre um ponteiro de const. Ele não pode ser reatribuído.  Os qualificadores **const** ou **volatile** usados na declaração da função membro se aplicam à instância de class o ponteiro de **this** aponta para o escopo dessa função.
+Em outras palavras, o **`:::no-loc(this):::`** ponteiro é sempre um :::no-loc(const)::: ponteiro. Ele não pode ser reatribuído.  Os **`:::no-loc(const):::`** **`:::no-loc(volatile):::`** qualificadores ou usados na declaração da função membro se aplicam à :::no-loc(class)::: instância **`:::no-loc(this):::`** apontada pelo ponteiro em, no escopo dessa função.
 
 A tabela a seguir explica mais sobre como esses modificadores funcionam.
 
-### <a name="semantics-of-opno-locthis-modifiers"></a>Semântica de modificadores de this
+### <a name="semantics-of-no-locthis-modifiers"></a>Semântica de :::no-loc(this)::: modificadores
 
 |Modificador|Significado|
 |--------------|-------------|
-|**const**|Não é possível alterar os dados do membro; Não é possível invocar funções de membro que não são **const** .|
-|**volatile**|Os dados do membro são carregados da memória toda vez que são acessados; desabilita determinadas otimizações.|
+|**`:::no-loc(const):::`**|Não é possível alterar os dados do membro; Não é possível invocar funções de membro que não são **`:::no-loc(const):::`** .|
+|**`:::no-loc(volatile):::`**|Os dados do membro são carregados da memória toda vez que são acessados; desabilita determinadas otimizações.|
 
-É um erro passar um objeto **const** para uma função membro que não é **const** .
+É um erro passar um **`:::no-loc(const):::`** objeto para uma função membro que não é **`:::no-loc(const):::`** .
 
-Da mesma forma, também é um erro para passar um objeto de **volatile** para uma função de membro que não é **volatile** .
+Da mesma forma, também é um erro passar um **`:::no-loc(volatile):::`** objeto para uma função de membro que não é **`:::no-loc(volatile):::`** .
 
-Funções de membro declaradas como **const** não podem alterar dados de membro — nessas funções, o ponteiro de **this** é um ponteiro para um objeto **const** .
+Funções de membro declaradas como **`:::no-loc(const):::`** não podem alterar dados de membro — nessas funções, o **`:::no-loc(this):::`** ponteiro é um ponteiro para um **`:::no-loc(const):::`** objeto.
 
 > [!NOTE]
-> Construtores e destruidores não podem ser declarados como **const** ou **volatile** . No entanto, eles podem ser invocados em objetos **const** ou **volatile** .
+> Con :::no-loc(struct)::: ORS e de :::no-loc(struct)::: ORS não podem ser declarados como **`:::no-loc(const):::`** ou **`:::no-loc(volatile):::`** . No entanto, eles podem ser invocados em **`:::no-loc(const):::`** **`:::no-loc(volatile):::`** objetos ou.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Palavras-chave](../cpp/keywords-cpp.md)

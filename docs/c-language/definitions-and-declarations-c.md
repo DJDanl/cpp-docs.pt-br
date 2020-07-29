@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - export functions
 ms.assetid: d150395a-89d4-4298-9ac4-08f84fe1261c
-ms.openlocfilehash: 8723c3f09a5e9a8eecf0e552c9f5a7fd9b7f6c68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e39832f942eb1473be913112fde1d37ddf05674
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234352"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226360"
 ---
 # <a name="definitions-and-declarations-c"></a>Definições e declarações (C)
 
 **Específico da Microsoft**
 
-A interface da DLL refere-se a todos os itens (funções e dados) que sabidamente são exportados por algum programa no sistema; ou seja, todos os itens que são declarados como **dllimport** ou `dllexport`. Todas as declarações incluídas na interface da DLL devem especificar o atributo **dllimport** ou `dllexport`. No entanto, a definição pode especificar apenas o atributo `dllexport`. Por exemplo, a definição de função a seguir gera um erro de compilador:
+A interface DLL refere-se a todos os itens (funções e dados) que são conhecidos por serem exportados por algum programa no sistema; ou seja, todos os itens que são declarados como **`dllimport`** ou `dllexport` . Todas as declarações incluídas na interface DLL devem especificar o **`dllimport`** atributo ou `dllexport` . No entanto, a definição pode especificar apenas o atributo `dllexport`. Por exemplo, a definição de função a seguir gera um erro de compilador:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -46,7 +46,7 @@ No entanto, esta é uma sintaxe correta:
 DllExport int i = 10;      /* Okay: this is an export definition. */
 ```
 
-O uso de `dllexport` implica uma definição, enquanto **dllimport** implica uma declaração. Você deve usar a palavra-chave `extern` com `dllexport` para forçar uma declaração; caso contrário, uma definição é implícita.
+O uso de `dllexport` implica uma definição, enquanto **`dllimport`** implica uma declaração. Você deve usar a **`extern`** palavra-chave WITH `dllexport` para forçar uma declaração; caso contrário, uma definição é implícita.
 
 ```
 #define DllImport   __declspec( dllimport )

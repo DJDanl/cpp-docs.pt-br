@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9e70716ad90a14bbed552d47f48d5a3317e5a62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368648"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225703"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)
 
@@ -36,7 +36,7 @@ Este tópico explica como obter resultados agregados usando as seguintes palavra
 
 - **COUNT** conta o número de registros em uma coluna de qualquer tipo de dados.
 
-Use essas funções SQL para obter informações estatísticas sobre os registros em uma fonte de dados, em vez de extrair registros da fonte de dados. O conjunto de registros criado normalmente é composto de um único registro (se todas as colunas forem agregações) que contém um valor. (Pode haver mais de um registro se você usou uma cláusula **GROUP BY.)** Este valor é o resultado do cálculo ou extração realizado pela função SQL.
+Use essas funções SQL para obter informações estatísticas sobre os registros em uma fonte de dados, em vez de extrair registros da fonte de dados. O conjunto de registros criado normalmente é composto de um único registro (se todas as colunas forem agregações) que contém um valor. (Pode haver mais de um registro se você usou uma cláusula **Group by** .) Esse valor é o resultado do cálculo ou extração executada pela função SQL.
 
 > [!TIP]
 > Para adicionar uma cláusula **GROUP BY** SQL (e, possivelmente, uma cláusula **HAVING**) à instrução SQL, acrescente-a ao final de `m_strFilter`. Por exemplo:
@@ -50,13 +50,13 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 > [!CAUTION]
 > Alguns operadores de agregação retornam um tipo de dados diferente das colunas nas quais eles estão agregando.
 
-- **SUM** e **AVG** podem retornar o próximo tipo de dados maior (por exemplo, chamar com `int` retorna **LONG** ou **duplo**).
+- **Sum** e **AVG** podem retornar o próximo tipo de dados maior (por exemplo, chamar com **`int`** retornos **Long** ou **`double`** ).
 
 - **COUNT** geralmente retorna **LONG**, independentemente do tipo de coluna de destino.
 
 - **MAX** e **MIN** retornam o mesmo tipo de dados que as colunas que calculam.
 
-     Por exemplo, o assistente **Adicionar Classe** cria `long` `m_lSales` para acomodar uma coluna Vendas, mas é necessário substituir isso por um membro de dados um `double m_dblSumSales` para acomodar o resultado da agregação. Veja os exemplos a seguir.
+     Por exemplo, o assistente para **Adicionar classe** cria **`long`** `m_lSales` para acomodar uma coluna vendas, mas você precisa substituir isso por um `double m_dblSumSales` membro de dados para acomodar o resultado agregado. Veja o exemplo a seguir.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Para obter um resultado de agregação para um conjunto de registros
 
@@ -94,4 +94,4 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ## <a name="see-also"></a>Confira também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Conjunto de registros: como os Recordsets selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

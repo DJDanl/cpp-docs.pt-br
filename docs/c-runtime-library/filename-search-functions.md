@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300295"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226236"
 ---
 # <a name="filename-search-functions"></a>Funções de pesquisa de nome de arquivo
 
@@ -88,7 +88,7 @@ Arquivo do sistema. Normalmente não visto com o comando **DIR**, a menos que a 
 
 Você pode aninhar as funções `_find`. Por exemplo, se uma chamada para `_findfirst` ou `_findnext` localizar o arquivo que é um subdiretório, uma nova pesquisa poderá ser iniciada com outra chamada para `_findfirst` ou `_findnext`.
 
-`_wfindfirst`e `_wfindnext` são versões de caractere largo de `_findfirst` e `_findnext`. O argumento da estrutura das versões de caractere largo tem o tipo de dados `_wfinddata_t`, que é definido em ES.h e em Wchar.h. Os campos desse tipo de dados são iguais àqueles do tipo de dados `_finddata_t`, exceto que no `_wfinddata_t` o campo nome é do tipo `wchar_t`, em vez do tipo `char`. Caso contrário, `_wfindfirst`, `_wfindnext` se comportarão de modo idêntico a `_findfirst` e `_findnext`.
+`_wfindfirst`e `_wfindnext` são versões de caractere largo de `_findfirst` e `_findnext`. O argumento da estrutura das versões de caractere largo tem o tipo de dados `_wfinddata_t`, que é definido em ES.h e em Wchar.h. Os campos desse tipo de dados são os mesmos que os do `_finddata_t` tipo de dados, exceto que no `_wfinddata_t` campo nome é do tipo **`wchar_t`** em vez do tipo **`char`** . Caso contrário, `_wfindfirst`, `_wfindnext` se comportarão de modo idêntico a `_findfirst` e `_findnext`.
 
 `_findfirst` e `_findnext` usam o tipo de tempo de 64 bits. Se você precisar usar o tipo de tempo de 32 bits antigo, defina `_USE_32BIT_TIME_T`. As versões dessas funções que têm o sufixo `32` em seus nomes usam o tipo de tempo de 32 bits, e aquelas com o sufixo `64` usam o tipo de tempo de 64 bits.
 
@@ -100,11 +100,11 @@ As funções `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64` e `_wfindne
 |---------------|---------------|--------------------|
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
+|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|**`__int64`**|
+|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t` é um `typedef` para `unsigned long` (32 bits).
+`_fsize_t`é um **`typedef`** para **`unsigned long`** (32 bits).
 
 ## <a name="example"></a>Exemplo
 
@@ -156,6 +156,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Chamadas do sistema](../c-runtime-library/system-calls.md)

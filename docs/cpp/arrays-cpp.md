@@ -6,20 +6,20 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 91c57a9c4ef190dcace1813dd81739ac72e6b358
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: d4689162ea38f67b81c0f78bccba557cb40e78d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188999"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226028"
 ---
 # <a name="arrays-c"></a>Matrizes (C++)
 
-Uma matriz é uma sequência de objetos do mesmo tipo que ocupam uma área contígua de memória. As matrizes tradicionais de estilo C são a fonte de muitos bugs, mas ainda são comuns, especialmente em bases de código mais antigas. No moderno C++, é altamente recomendável usar [std:: vector](../standard-library/vector-class.md) ou [std:: array](../standard-library/array-class-stl.md) em vez de matrizes de estilo C descritos nesta seção. Ambos os tipos de biblioteca padrão armazenam seus elementos como um bloco contíguo de memória, mas fornecem segurança de tipo muito maior, juntamente com iteradores que têm garantia de apontar para um local válido dentro da sequência. Para obter mais informações, consulte [contêineres C++(moderno)](containers-modern-cpp.md).
+Uma matriz é uma sequência de objetos do mesmo tipo que ocupam uma área contígua de memória. As matrizes tradicionais de estilo C são a fonte de muitos bugs, mas ainda são comuns, especialmente em bases de código mais antigas. No C++ moderno, é altamente recomendável usar [std:: vector](../standard-library/vector-class.md) ou [std:: array](../standard-library/array-class-stl.md) em vez de matrizes de estilo C descritos nesta seção. Ambos os tipos de biblioteca padrão armazenam seus elementos como um bloco contíguo de memória, mas fornecem segurança de tipo muito maior, juntamente com iteradores que têm garantia de apontar para um local válido dentro da sequência. Para obter mais informações, consulte [contêineres (C++ moderno)](containers-modern-cpp.md).
 
 ## <a name="stack-declarations"></a>Declarações de pilha
 
-Em uma C++ declaração de matriz, o tamanho da matriz é especificado após o nome da variável, não após o nome do tipo, como em algumas outras linguagens. O exemplo a seguir declara uma matriz de 1000 duplos a serem alocados na pilha. O número de elementos deve ser fornecido como um literal inteiro ou, senão, como uma expressão constante, pois o compilador precisa saber quanto espaço de pilha deve ser alocado; Ele não pode usar um valor calculado em tempo de execução. Cada elemento na matriz recebe um valor padrão de 0. Se você não atribuir um valor padrão, cada elemento conterá inicialmente quaisquer valores aleatórios que estejam nesse local.
+Em uma declaração de matriz do C++, o tamanho da matriz é especificado após o nome da variável, não após o nome do tipo, como em algumas outras linguagens. O exemplo a seguir declara uma matriz de 1000 duplos a serem alocados na pilha. O número de elementos deve ser fornecido como um literal inteiro ou, senão, como uma expressão constante, pois o compilador precisa saber quanto espaço de pilha deve ser alocado; Ele não pode usar um valor calculado em tempo de execução. Cada elemento na matriz recebe um valor padrão de 0. Se você não atribuir um valor padrão, cada elemento conterá inicialmente quaisquer valores aleatórios que estejam nesse local.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,15 +44,15 @@ Em uma C++ declaração de matriz, o tamanho da matriz é especificado após o n
     }
 ```
 
-O primeiro elemento na matriz é o elemento 0º, e o último é o elemento (*n*-1), em que *n* é o número de elementos que a matriz pode conter. O número de elementos na declaração deve ser de um tipo integral e deve ser maior que 0. É sua responsabilidade garantir que seu programa nunca passe um valor para o operador subscrito maior que `(size - 1)`.
+O primeiro elemento na matriz é o elemento 0º, e o último é o elemento (*n*-1), em que *n* é o número de elementos que a matriz pode conter. O número de elementos na declaração deve ser de um tipo integral e deve ser maior que 0. É sua responsabilidade garantir que seu programa nunca passe um valor para o operador subscrito maior que `(size - 1)` .
 
-Uma matriz de tamanho zero é válida somente quando a matriz é o último campo em uma **struct** ou **União** e quando as extensões da Microsoft (/Ze) estão habilitadas.
+Uma matriz de tamanho zero é válida somente quando a matriz é o último campo em um **`struct`** ou **`union`** e quando as extensões da Microsoft (/Ze) estão habilitadas.
 
 As matrizes baseadas em pilha são mais rápidas de alocar e acessar do que as matrizes baseadas em heap, mas o número de elementos não pode ser tão grande que usa muita memória de pilha. A quantidade de excesso de dependências do seu programa. Você pode usar ferramentas de criação de perfil para determinar se uma matriz é muito grande.
 
 ## <a name="heap-declarations"></a>Declarações de heap
 
-Se você precisar de uma matriz muito grande para ser alocada na pilha ou cujo tamanho não possa ser conhecido no momento da compilação, você poderá alocá-lo no heap com uma [nova](new-operator-cpp.md) expressão de \]de\[. O operador retorna um ponteiro para o primeiro elemento. Você pode usar o operador subscrito com a variável de ponteiro, assim como com uma matriz baseada em pilha. Você também pode usar a [aritmética de ponteiro](../c-language/pointer-arithmetic.md) para mover o ponteiro para qualquer elemento arbitrário na matriz. É sua responsabilidade garantir que:
+Se você precisar de uma matriz muito grande para ser alocada na pilha ou cujo tamanho não possa ser conhecido no momento da compilação, você poderá alocá-lo no heap com uma [nova \[ \] ](new-operator-cpp.md) expressão. O operador retorna um ponteiro para o primeiro elemento. Você pode usar o operador subscrito com a variável de ponteiro, assim como com uma matriz baseada em pilha. Você também pode usar a [aritmética de ponteiro](../c-language/pointer-arithmetic.md) para mover o ponteiro para qualquer elemento arbitrário na matriz. É sua responsabilidade garantir que:
 
 - Você sempre mantém uma cópia do endereço do ponteiro original para poder excluir a memória quando não precisar mais da matriz.
 - Você não incrementa ou Decrementa o endereço do ponteiro além dos limites da matriz.
@@ -131,9 +131,9 @@ Você pode inicializar uma matriz em um loop, um elemento por vez ou em uma úni
 
 ## <a name="passing-arrays-to-functions"></a>Passando matrizes para funções
 
-Quando uma matriz é passada para uma função, ela é passada como um ponteiro para o primeiro elemento. Isso é verdadeiro para matrizes baseadas em pilha e em heap. O ponteiro não contém informações adicionais de tamanho ou tipo. Esse comportamento é chamado de *ponteiro decaimento*. Ao passar uma matriz para uma função, você sempre deve especificar o número de elementos em um parâmetro separado. Esse comportamento também implica que os elementos da matriz não são copiados quando a matriz é passada para uma função. Para impedir que a função modifique os elementos, especifique o parâmetro como um ponteiro para elementos **const** .
+Quando uma matriz é passada para uma função, ela é passada como um ponteiro para o primeiro elemento. Isso é verdadeiro para matrizes baseadas em pilha e em heap. O ponteiro não contém informações adicionais de tamanho ou tipo. Esse comportamento é chamado de *ponteiro decaimento*. Ao passar uma matriz para uma função, você sempre deve especificar o número de elementos em um parâmetro separado. Esse comportamento também implica que os elementos da matriz não são copiados quando a matriz é passada para uma função. Para impedir que a função modifique os elementos, especifique o parâmetro como um ponteiro para **`const`** elementos.
 
-O exemplo a seguir mostra uma função que aceita uma matriz e um comprimento. O ponteiro aponta para a matriz original, não para uma cópia. Como o parâmetro não é **const**, a função pode modificar os elementos da matriz.
+O exemplo a seguir mostra uma função que aceita uma matriz e um comprimento. O ponteiro aponta para a matriz original, não para uma cópia. Como o parâmetro não é **`const`** , a função pode modificar os elementos da matriz.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -170,9 +170,9 @@ Matrizes construídas a partir de outras matrizes são matrizes multidimensionai
 int i2[5][7];
 ```
 
-Ele especifica uma matriz do tipo **int**, conceitualmente organizada em uma matriz bidimensional de cinco linhas e sete colunas, conforme mostrado na figura a seguir:
+Ele especifica uma matriz do tipo **`int`** , conceitualmente organizada em uma matriz bidimensional de cinco linhas e sete colunas, conforme mostrado na figura a seguir:
 
-![Layout conceitual de uma&#45;matriz multidimensional](../cpp/media/vc38rc1.gif "Layout conceitual de uma&#45;matriz multidimensional") <br/>
+![Layout conceitual de uma matriz dimensional de vários&#45;](../cpp/media/vc38rc1.gif "Layout conceitual de uma matriz dimensional de vários&#45;") <br/>
 Layout conceitual de uma matriz multidimensional
 
 Em declarações de matrizes multidimensionais que têm uma lista de inicializadores (conforme descrito em [inicializadores](../cpp/initializers.md)), a expressão constante que especifica os limites para a primeira dimensão pode ser omitida. Por exemplo:
@@ -283,7 +283,7 @@ int main()
 
 O primeiro elemento de `aPoint` é construído usando o construtor `Point( int, int )`; os dois elementos restantes são construídos com o construtor padrão.
 
-Matrizes de membros estáticos (se **const** ou não) podem ser inicializadas em suas definições (fora da declaração de classe). Por exemplo:
+Matrizes de membros estáticos (se **`const`** ou não) podem ser inicializadas em suas definições (fora da declaração de classe). Por exemplo:
 
 ```cpp
 // initializing_arrays2.cpp
@@ -336,11 +336,11 @@ int main() {
 }
 ```
 
-No código anterior, `multi` é uma matriz tridimensional do tipo **Double**. O ponteiro de `p2multi` aponta para uma matriz do tipo **Double** de tamanho três. Nesse exemplo, a matriz é usada com um, dois e três subscritos. Embora seja mais comum especificar todos os subscritos, como na instrução `cout`, às vezes, é útil selecionar um subconjunto específico de elementos da matriz, como mostrado nas instruções que se seguem a `cout`.
+No código anterior, `multi` é uma matriz tridimensional do tipo **`double`** . O `p2multi` ponteiro aponta para uma matriz de tipo **`double`** de tamanho três. Nesse exemplo, a matriz é usada com um, dois e três subscritos. Embora seja mais comum especificar todos os subscritos, como na instrução `cout`, às vezes, é útil selecionar um subconjunto específico de elementos da matriz, como mostrado nas instruções que se seguem a `cout`.
 
 ## <a name="overloading-subscript-operator"></a>Sobrecarregando operador subscrito
 
-Assim como outros operadores, o operador subscrito (`[]`) pode ser redefinido pelo usuário. O comportamento padrão do operador subscrito, se não sobrecarregado, é combinar o nome da matriz e o subscrito usando o seguinte método:
+Assim como outros operadores, o operador subscrito ( `[]` ) pode ser redefinido pelo usuário. O comportamento padrão do operador subscrito, se não sobrecarregado, é combinar o nome da matriz e o subscrito usando o seguinte método:
 
 `*((array_name) + (subscript))`
 
@@ -352,7 +352,7 @@ De maneira semelhante, para matrizes multidimensionais, o endereço é derivado 
 
 ## <a name="arrays-in-expressions"></a>Matrizes em expressões
 
-Quando um identificador de um tipo de matriz é exibido em uma expressão diferente de `sizeof`, address-of (`&`) ou inicialização de uma referência, ele é convertido em um ponteiro para o primeiro elemento de matriz. Por exemplo:
+Quando um identificador de um tipo de matriz é exibido em uma expressão diferente de **`sizeof`** , endereço-de ( `&` ) ou inicialização de uma referência, ele é convertido em um ponteiro para o primeiro elemento da matriz. Por exemplo:
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
@@ -365,6 +365,6 @@ O ponteiro `psz` aponta para o primeiro elemento da matriz `szError1`. As matriz
 szError1 = psz;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [std:: array](../standard-library/array-class-stl.md)
