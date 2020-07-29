@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330577"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231111"
 ---
 # <a name="struct-c"></a>struct (C++)
 
-O **struct** palavra-chave define um tipo de estrutura e/ou uma variável de um tipo de estrutura.
+A **`struct`** palavra-chave define um tipo de estrutura e/ou uma variável de um tipo de estrutura.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,46 +27,46 @@ O **struct** palavra-chave define um tipo de estrutura e/ou uma variável de um 
 [struct] tag declarators;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*template-spec*<br/>
+*modelo-especificação*<br/>
 Especificações de modelo opcionais. Para obter mais informações, consulte [especificações de modelo](templates-cpp.md).
 
 *struct*<br/>
-O **struct** palavra-chave.
+A **`struct`** palavra-chave.
 
-*ms-decl-spec*<br/>
-Especificação de classe de armazenamento opcional. Para obter mais informações, consulte o [declspec](../cpp/declspec.md) palavra-chave.
+*MS-decl-spec*<br/>
+Especificação de classe de armazenamento opcional. Para obter mais informações, consulte a palavra-chave [__declspec](../cpp/declspec.md) .
 
-*tag*<br/>
+*marcação*<br/>
 O nome do tipo dado à estrutura. A marca se torna uma palavra reservada no escopo da estrutura. A marca é opcional. Se omitida, uma estrutura anônima será definida. Para obter mais informações, consulte [tipos de classe anônima](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
-A lista opcional de classes ou estruturas de que esta estrutura derivará seus membros. Ver [Classes Base](../cpp/base-classes.md) para obter mais informações. Cada nome de classe ou estrutura de base pode ser precedido por um especificador de acesso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) e o [virtual](../cpp/virtual-cpp.md) palavra-chave. Consulte a tabela de acesso de membro [controlando o acesso a membros de classe](member-access-control-cpp.md) para obter mais informações.
+A lista opcional de classes ou estruturas de que esta estrutura derivará seus membros. Consulte [classes base](../cpp/base-classes.md) para obter mais informações. Cada classe base ou nome de estrutura pode ser precedido por um especificador de acesso ([público](../cpp/public-cpp.md), [privado](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) e a palavra-chave [virtual](../cpp/virtual-cpp.md) . Consulte a tabela de acesso de membro em [controlando o acesso a membros de classe](member-access-control-cpp.md) para obter mais informações.
 
-*member-list*<br/>
-Lista de membros da estrutura. Consulte a [visão geral de membros de classe](../cpp/class-member-overview.md) para obter mais informações. A única diferença aqui é que **struct** é usado no lugar de **classe**.
+*lista de membros*<br/>
+Lista de membros da estrutura. Consulte [visão geral de membro de classe](../cpp/class-member-overview.md) para obter mais informações. A única diferença aqui é que **`struct`** é usada no lugar de **`class`** .
 
 *declarators*<br/>
-Lista de declaradores que especificam os nomes da estrutura. As listas de declaradores declaram uma ou mais instâncias do tipo de estrutura. Os declaradores podem incluir listas de inicializadores se todos os membros de dados da estrutura são **público**. Listas de inicializadores são comuns em estruturas porque membros de dados são **pública** por padrão.  Ver [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.
+Lista de declaradores especificando os nomes da estrutura. As listas de declaradores declaram uma ou mais instâncias do tipo de estrutura. Os declaradores podem incluir listas de inicializador se todos os membros de dados da estrutura forem **`public`** . As listas de inicializadores são comuns em estruturas porque os membros de dados são **`public`** por padrão.  Consulte [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.
 
 ## <a name="remarks"></a>Comentários
 
 Um tipo de estrutura é um tipo composto definido pelo usuário. É composto de campos ou membros que podem ter tipos diferentes.
 
-No C++, uma estrutura é o mesmo que uma classe, exceto pelo fato de que seus membros são **pública** por padrão.
+Em C++, uma estrutura é igual a uma classe, exceto que seus membros são **`public`** por padrão.
 
-Para obter informações sobre classes gerenciadas e estruturas em C++/CLI, consulte [Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md).
+Para obter informações sobre classes e estruturas gerenciadas em C++/CLI, consulte [classes e estruturas](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="using-a-structure"></a>Usando uma estrutura
 
-Em C, você deve usar explicitamente o **struct** palavra-chave para declarar uma estrutura. No C++, você não precisará usar o **struct** palavra-chave depois que o tipo foi definido.
+Em C, você deve usar explicitamente a **`struct`** palavra-chave para declarar uma estrutura. Em C++, você não precisa usar a **`struct`** palavra-chave após a definição do tipo.
 
 Há também a opção de declarar variáveis quando o tipo de estrutura é definido colocando um ou vários nomes de variável separados por vírgulas entre a chave de fechamento e o ponto-e-vírgula.
 
 As variáveis de estrutura podem ser inicializadas. A inicialização de cada variável deve ser incluída entre chaves.
 
-Para obter informações relacionadas, consulte [classe](../cpp/class-cpp.md), [união](../cpp/unions.md), e [enum](../cpp/enumerations-cpp.md).
+Para obter informações relacionadas, consulte [Class](../cpp/class-cpp.md), [Union](../cpp/unions.md)e [enum](../cpp/enumerations-cpp.md).
 
 ## <a name="example"></a>Exemplo
 
