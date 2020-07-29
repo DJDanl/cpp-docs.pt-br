@@ -24,12 +24,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 4d08679d08fb5b212306cbaeec200d16803a85ef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945405"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215095"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
@@ -48,17 +48,17 @@ int vwscanf_s(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *format*<br/>
 Cadeia de caracteres de controle de formato.
 
-*arglist*<br/>
+*Arglist*<br/>
 Lista de argumentos variáveis.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro, ou se o caractere de fim de arquivo ou o caractere de fim de cadeia de caracteres for encontrado na primeira tentativa de ler um caractere. Se *Format* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **vscanf_s** e **vwscanf_s** retornará **EOF** e definir **errno** como **EINVAL**.
+Retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro, ou se o caractere de fim de arquivo ou o caractere de fim de cadeia de caracteres for encontrado na primeira tentativa de ler um caractere. Se *Format* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **vscanf_s** e **vwscanf_s** retornar **EOF** e definir **errno** como **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -66,14 +66,14 @@ Para obter mais informações sobre esses e outros códigos de erro, consulte [e
 
 A função **vscanf_s** lê dados do fluxo de entrada do **stdin** padrão e grava os dados nos locais fornecidos pela lista de argumentos *Arglist* . Cada argumento na lista deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo no *formato*. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-**vwscanf_s** é uma versão de caractere largo do **vscanf_s**; o argumento *Format* para **vwscanf_s** é uma cadeia de caracteres largos. **vwscanf_s** e **vscanf_s** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. **vscanf_s** não dá suporte à entrada de um fluxo Unicode.
+**vwscanf_s** é uma versão de caractere largo do **vscanf_s**; o argumento de *formato* para **vwscanf_s** é uma cadeia de caracteres largos. **vwscanf_s** e **vscanf_s** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. **vscanf_s** não dá suporte à entrada de um fluxo Unicode.
 
-Ao contrário de **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** exigem que o tamanho do buffer seja especificado para todos os parâmetros de entrada do tipo **c**, **c**, **s**, **s**ou conjuntos de controles de cadeia de caracteres que estão entre **[]** . O tamanho do buffer em caracteres é passado como um parâmetro adicional imediatamente após o ponteiro para o buffer ou variável. O tamanho do buffer em caracteres para uma cadeia de caracteres **wchar_t** não é igual ao tamanho em bytes.
+Ao contrário de **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** exigem que o tamanho do buffer seja especificado para todos os parâmetros de entrada do tipo **c**, **c**, **s**, **s**ou conjuntos de controles de cadeia de caracteres que estão entre **[]**. O tamanho do buffer em caracteres é passado como um parâmetro adicional imediatamente após o ponteiro para o buffer ou variável. O tamanho do buffer em caracteres para uma **`wchar_t`** cadeia de caracteres não é igual ao tamanho em bytes.
 
 O tamanho do buffer inclui o nulo de terminação. Você pode usar um campo de especificação de largura para garantir que o token lido caiba no buffer. Se nenhum campo de especificação de largura for usado e o token lido for muito grande para caber no buffer, nada será gravado no buffer.
 
 > [!NOTE]
-> O parâmetro de *tamanho* é do tipo não **assinado**, não **size_t**.
+> O parâmetro *size* é do tipo **`unsigned`** , não **size_t**.
 
 Para obter mais informações, consulte [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
 
@@ -92,7 +92,7 @@ Para obter mais informações, consulte [Campos de especificação de formato: f
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -157,9 +157,9 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

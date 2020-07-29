@@ -7,18 +7,18 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63b5e0131642692d9372c148827a583f19114fb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618751"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223155"
 ---
 # <a name="general-window-creation-sequence"></a>Sequência de criação da janela geral
 
 Quando você cria uma janela própria, como uma janela filho, a estrutura usa muito o mesmo processo descrito em [criação de documento/exibição](document-view-creation.md).
 
-Todas as classes de janela fornecidas pelo MFC empregam [a construção de dois estágios](one-stage-and-two-stage-construction-of-objects.md). Ou seja, durante uma invocação do operador **New** do c++, o Construtor aloca e inicializa um objeto C++, mas não cria uma janela correspondente do Windows. Isso é feito depois de chamar a função de membro [Create](reference/cwnd-class.md#create) do objeto Window.
+Todas as classes de janela fornecidas pelo MFC empregam [a construção de dois estágios](one-stage-and-two-stage-construction-of-objects.md). Ou seja, durante uma invocação do operador C++ **`new`** , o Construtor aloca e inicializa um objeto c++, mas não cria uma janela correspondente do Windows. Isso é feito depois de chamar a função de membro [Create](reference/cwnd-class.md#create) do objeto Window.
 
 A `Create` função de membro torna a janela do Windows e armazena sua `HWND` no membro de dados públicos do objeto C++ [m_hWnd](reference/cwnd-class.md#m_hwnd). `Create`oferece flexibilidade completa sobre os parâmetros de criação. Antes de chamar, convém `Create` registrar uma classe de janela com a função global [AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass) para definir o ícone e os estilos de classe para o quadro.
 
@@ -35,8 +35,8 @@ Para janelas de quadros, você pode usar a função de membro [LoadFrame](refere
 
 - [Destruindo objetos de janela](destroying-window-objects.md)
 
-- [Criando janelas de quadro de documento](creating-document-frame-windows.md)
+- [Criando janelas com moldura de documento](creating-document-frame-windows.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Criando janelas](creating-windows.md)
+[Criando o Windows](creating-windows.md)

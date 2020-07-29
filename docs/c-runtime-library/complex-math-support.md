@@ -7,16 +7,16 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66186087"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215173"
 ---
 # <a name="c-complex-math-support"></a>Suporte a expressões matemáticas complexas de C
 
-A Biblioteca de Tempo de Execução de C (CRT) da Microsoft fornece funções da biblioteca de expressões matemáticas complexas, incluindo todas as que são exigidas pela ISO C99. O compilador não dá suporte diretamente uma palavra-chave **complex** ou **_Complex**, portanto, a implementação da Microsoft usa tipos de estrutura para representar números complexos.
+A Biblioteca de Runtime de C (CRT) da Microsoft fornece funções da biblioteca de expressões matemáticas complexas, incluindo todas as que são exigidas pela ISO C99. O compilador não dá suporte diretamente a **`complex`** uma **`_Complex`** palavra-chave ou, portanto, a implementação da Microsoft usa tipos de estrutura para representar números complexos.
 
 Essas funções são implementadas para equilibrar o desempenho com exatidão. Uma vez que produzir o resultado arredondado corretamente pode ter um custo proibitivo, essas funções foram criadas para produzir de forma eficiente um resultado próximo ao resultado arredondado corretamente. Na maioria dos casos, o resultado produzido está dentro de +/-1 ulp do resultado arredondado corretamente, embora possa haver casos em que a imprecisão é maior.
 
@@ -28,15 +28,15 @@ A implementação da Microsoft do cabeçalho complex.h define esses tipos como e
 
 |Tipo padrão|Tipo da Microsoft|
 |-|-|
-|**float complex** ou **float _Complex**|**_Fcomplex**|
-|**double complex** ou **double _Complex**|**_Dcomplex**|
-|**long double complex** ou **long double _Complex**|**_Lcomplex**|
+|**`float complex`** or**`float _Complex`**|**_Fcomplex**|
+|**`double complex`** or**`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** or**`long double _Complex`**|**_Lcomplex**|
 
 O cabeçalho math.h define um tipo separado, **struct _complex**, usado para a função [_cabs](../c-runtime-library/reference/cabs.md). O tipo **struct _complex** não é usado pelas funções matemáticas complexas equivalentes [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Constantes e macros complexas
 
-**I** é definido como o tipo complexo de **float** **_Fcomplex** inicializado por `{ 0.0f, 1.0f }`.
+**Eu** é definido como o tipo complexo **_Fcomplex** inicializado pelo `{ 0.0f, 1.0f }` .
 
 ## <a name="trigonometric-functions"></a>Funções trigonométricas
 
@@ -97,6 +97,6 @@ Uma vez que os números complexos não são um tipo nativo no compilador da Micr
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Multiplicar dois números complexos|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Multiplicar um número complexo e um número de ponto flutuante|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-ms.openlocfilehash: aac308905a01a52a4ce5ee0fa3be03f2f33ac1cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e56ebfadea0d643ac68e2ace722a39587bd01312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153691"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223701"
 ---
 # <a name="goto-statement-c"></a>Instrução goto (C++)
 
-O **goto** incondicionalmente transfere o controle para a instrução rotulada pelo identificador especificado.
+A **`goto`** instrução transfere incondicionalmente o controle para a instrução rotulada pelo identificador especificado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,9 +27,9 @@ goto identifier;
 
 A instrução rotulada designada por `identifier` deve estar na função atual. Todos os nomes de `identifier` são membros de um namespace interno e, portanto, não interferem em outros identificadores.
 
-Rótulo de uma instrução é significante somente para um **goto** instrução; caso contrário, os rótulos de instrução são ignorados. Os rótulos não podem ser redeclarados.
+Um rótulo de instrução é significativo apenas para uma **`goto`** instrução; caso contrário, os rótulos de instrução são ignorados. Os rótulos não podem ser redeclarados.
 
-Um **goto** instrução não tem permissão para transferir o controle para um local que ignora a inicialização de qualquer variável que está no escopo nesse local. O exemplo a seguir gera C2362:
+Uma **`goto`** instrução não tem permissão para transferir o controle para um local que ignora a inicialização de qualquer variável que esteja no escopo nesse local. O exemplo a seguir gera C2362:
 
 ```cpp
 int goto_fn(bool b)
@@ -48,13 +48,13 @@ exit:
 }
 ```
 
-É um bom programação estilo a ser usado o **quebra**, **continuar**, e **retornar** instruções em vez do **goto** instrução sempre que é possível. No entanto, porque o **quebra** instrução sai de apenas um nível de um loop, você talvez precise usar um **goto** instrução para sair de um loop profundamente aninhado.
+É um bom estilo de programação usar as **`break`** **`continue`** instruções, e **`return`** em vez da **`goto`** instrução, sempre que possível. No entanto, como a **`break`** instrução sai de apenas um nível de um loop, talvez seja necessário usar uma **`goto`** instrução para sair de um loop aninhado profundamente.
 
-Para obter mais informações sobre rótulos e o **goto** instrução, consulte [instruções rotuladas](../cpp/labeled-statements.md).
+Para obter mais informações sobre rótulos e a **`goto`** instrução, consulte [instruções rotuladas](../cpp/labeled-statements.md).
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, uma **goto** transfere o controle para o ponto rotulado `stop` quando `i` é igual a 3.
+Neste exemplo, uma **`goto`** instrução transfere o controle para o ponto rotulado `stop` quando `i` é igual a 3.
 
 ```cpp
 // goto_statement.cpp
@@ -97,7 +97,7 @@ Inner loop executing. j = 0
 Jumped to stop. i = 3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções de atalho](../cpp/jump-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

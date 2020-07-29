@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b010c35f32462810cbdb008e5688d4b41254fad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620767"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214159"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Contêineres de controle ActiveX: usando controles em um contêiner que não seja da caixa de diálogo
 
@@ -55,12 +55,12 @@ A implementação desse recurso é um processo de quatro etapas.
 
 1. Adicione um `WM_CREATE` manipulador de mensagens à classe `CMyView` .
 
-1. Na função de manipulador, `CMyView::OnCreate` , faça uma chamada para a função do controle `Create` usando o **this** ponteiro como a janela pai:
+1. Na função de manipulador, `CMyView::OnCreate` , faça uma chamada para a função do controle `Create` usando o **`this`** ponteiro como a janela pai:
 
    [!code-cpp[NVC_MFC_AxCont#15](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 
 1. Recompile o projeto. Um controle Circ será criado dinamicamente sempre que a exibição do aplicativo for criada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Contêineres de controle ActiveX](activex-control-containers.md)

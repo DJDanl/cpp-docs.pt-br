@@ -6,18 +6,18 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988113"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214861"
 ---
 # <a name="stlclr-containers"></a>Contêineres STL/CLR
 
-A biblioteca STL/CLR consiste em contêineres semelhantes aos encontrados na biblioteca C++ padrão, mas é executado dentro do ambiente gerenciado do .NET Framework. Ele não é mantido atualizado com a biblioteca padrão real C++ e é mantido para suporte herdado.
+A biblioteca STL/CLR consiste em contêineres semelhantes aos encontrados na biblioteca padrão C++, mas é executado dentro do ambiente gerenciado do .NET Framework. Ela não é mantida atualizada com a biblioteca padrão C++ real e é mantida para suporte herdado.
 
-Este documento fornece uma visão geral dos contêineres na STL/CLR, como os requisitos para elementos de contêiner, os tipos de elementos que você pode inserir nos contêineres e problemas de propriedade com os elementos nos contêineres. Quando apropriado, as diferenças entre a C++ biblioteca padrão nativa e a STL/CLR são mencionadas.
+Este documento fornece uma visão geral dos contêineres na STL/CLR, como os requisitos para elementos de contêiner, os tipos de elementos que você pode inserir nos contêineres e problemas de propriedade com os elementos nos contêineres. Quando apropriado, as diferenças entre a biblioteca padrão do C++ Standard e STL/CLR são mencionadas.
 
 ## <a name="requirements-for-container-elements"></a>Requisitos dos elementos de contêiner
 
@@ -37,7 +37,7 @@ Não é possível inserir tipos de valor boxed em nenhum dos contêineres STL/CL
 
 ### <a name="handles-to-reference-types"></a>Identificadores para tipos de referência
 
-Você pode inserir um identificador para um tipo de referência em um contêiner STL/CLR. Um identificador no C++ que se destina ao CLR é análogo a um ponteiro em C++nativo. Para obter mais informações, consulte [operador de identificador para objeto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+Você pode inserir um identificador para um tipo de referência em um contêiner STL/CLR. Um identificador em C++ que tem como alvo o CLR é análogo a um ponteiro no C++ nativo. Para obter mais informações, consulte [operador de identificador para objeto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Exemplo
 
@@ -136,7 +136,7 @@ Também é possível inserir um tipo de referência (em vez de um identificador 
 
 #### <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como inserir um objeto Employee em um `cliext::set`.
+O exemplo a seguir mostra como inserir um objeto Employee em um `cliext::set` .
 
 ```cpp
 // cliext_container_valid_reference.cpp
@@ -229,11 +229,11 @@ int main()
 
 Você também pode inserir um tipo de valor unboxed em um contêiner STL/CLR. Um tipo de valor unboxed é um tipo de valor que não foi *encaixado* em um tipo de referência.
 
-Um elemento de tipo de valor pode ser um dos tipos de valor padrão, como um `int`, ou pode ser um tipo de valor definido pelo usuário, como um `value class`. Para obter mais informações, consulte [classes e structs](../extensions/classes-and-structs-cpp-component-extensions.md)
+Um elemento de tipo de valor pode ser um dos tipos de valor padrão, como um **`int`** , ou pode ser um tipo de valor definido pelo usuário, como um **`value class`** . Para obter mais informações, consulte [classes e structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Exemplo
 
-O exemplo a seguir modifica o primeiro exemplo fazendo com que a classe Employee seja um tipo Value. Esse tipo de valor é inserido em uma `cliext::set` assim como no primeiro exemplo.
+O exemplo a seguir modifica o primeiro exemplo fazendo com que a classe Employee seja um tipo Value. Esse tipo de valor é inserido em um, assim `cliext::set` como no primeiro exemplo.
 
 ```cpp
 // cliext_container_valid_valuetype.cpp
@@ -310,6 +310,6 @@ Os contêineres na STL/CLR funcionam na semântica de valor. Toda vez que você 
 
 Quando você chama o método Clear ou Erase de um contêiner de objetos Handle, os objetos aos quais os identificadores se referem não são liberados da memória. Você deve excluir explicitamente o objeto ou, como esses objetos residem no heap gerenciado, permita que o coletor de lixo libere a memória depois de determinar que o objeto não está mais sendo usado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[Referência da biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

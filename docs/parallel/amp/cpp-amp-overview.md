@@ -8,18 +8,18 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404841"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222752"
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 
 A C++ Accelerated Massive Parallelism (C++ AMP) acelera a execução do código C++ aproveitando o hardware de dados paralelos, como uma GPU (unidade de processamento gráfico) em uma placa gráfica discreta. Usando C++ AMP, você pode codificar algoritmos de dados multidimensionais para que a execução possa ser acelerada usando paralelismo em hardware heterogêneo. O modelo de programação do C++ AMP inclui matrizes multidimensionais, indexação, transferência de memória, agrupamento lado a lado e uma biblioteca de funções matemáticas. Você pode usar C++ AMP extensões de idioma para controlar como os dados são movidos da CPU para a GPU e de volta, para que você possa melhorar o desempenho.
 
-## <a name="system-requirements"></a>Requisitos de sistema
+## <a name="system-requirements"></a>Requisitos do Sistema
 
 - Windows 7 ou posterior
 
@@ -60,7 +60,7 @@ As partes importantes do código são as seguintes:
 
 - Dados: os dados consistem em três matrizes. Todos têm a mesma classificação (um) e comprimento (cinco).
 
-- Iteração: o primeiro `for` loop fornece um mecanismo para iterar pelos elementos nas matrizes. O código que você deseja executar para calcular as somas está contido no primeiro `for` bloco.
+- Iteração: o primeiro **`for`** loop fornece um mecanismo para iterar pelos elementos nas matrizes. O código que você deseja executar para calcular as somas está contido no primeiro **`for`** bloco.
 
 - Index: a `idx` variável acessa os elementos individuais das matrizes.
 
@@ -238,7 +238,7 @@ A tabela a seguir resume as semelhanças e diferenças entre as `array` `array_v
 
 Memória compartilhada é a memória que pode ser acessada pela CPU e pelo acelerador. O uso da memória compartilhada elimina ou reduz significativamente a sobrecarga de copiar dados entre a CPU e o acelerador. Embora a memória seja compartilhada, ela não pode ser acessada simultaneamente pela CPU e pelo acelerador, e fazer isso causa um comportamento indefinido.
 
-`array`os objetos podem ser usados para especificar o controle refinado sobre o uso de memória compartilhada se o acelerador associado der suporte a ele. Se um acelerador dá suporte à memória compartilhada é determinado pela propriedade [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) do acelerador, que retorna **true** quando há suporte para a memória compartilhada. Se houver suporte para memória compartilhada, a [enumeração de access_type](reference/concurrency-namespace-enums-amp.md#access_type) padrão para alocações de memória no acelerador será determinada pela `default_cpu_access_type` propriedade. Por padrão, `array` e os `array_view` objetos assumem o mesmo `access_type` que o primário associado `accelerator` .
+`array`os objetos podem ser usados para especificar o controle refinado sobre o uso de memória compartilhada se o acelerador associado der suporte a ele. Se um acelerador dá suporte à memória compartilhada é determinado pela propriedade de [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) do acelerador, que retorna **`true`** quando há suporte para a memória compartilhada. Se houver suporte para memória compartilhada, a [enumeração de access_type](reference/concurrency-namespace-enums-amp.md#access_type) padrão para alocações de memória no acelerador será determinada pela `default_cpu_access_type` propriedade. Por padrão, `array` e os `array_view` objetos assumem o mesmo `access_type` que o primário associado `accelerator` .
 
 Ao definir a propriedade [array:: Cpu_access_type data member](reference/array-class.md#cpu_access_type) de um `array` explicitamente, você pode exercitar o controle refinado sobre como a memória compartilhada é usada, para que você possa otimizar o aplicativo para as características de desempenho do hardware, com base nos padrões de acesso à memória de seus kernels de computação. Um `array_view` reflete o mesmo `cpu_access_type` que o `array` que está associado; ou, se o array_view for construído sem uma fonte de dados, seu `access_type` refletirá o ambiente que primeiro faz com que ele aloque o armazenamento. Ou seja, se ele for acessado pela primeira vez pelo host (CPU), ele se comportará como se fosse criado em uma fonte de dados de CPU e compartilhará o `access_type` do `accelerator_view` associado pela captura; no entanto, se ele for acessado pela primeira vez por um `accelerator_view` , ele se comportará como se tivesse sido criado `array` em um criado `accelerator_view` e compartilhará o `array` `access_type` .
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Bibliotecas matemáticas
 
-C++ AMP inclui duas bibliotecas matemáticas. A biblioteca de precisão dupla no [namespace Concurrency::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) fornece suporte para funções de precisão dupla. Ele também fornece suporte para funções de precisão única, embora o suporte de precisão dupla no hardware ainda seja necessário. Ele está em conformidade com a [especificação C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). O acelerador deve oferecer suporte a precisão dupla completa. Você pode determinar se ele faz verificando o valor do [membro de dados Accelerator:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). A biblioteca de matemática rápida, no [namespace Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contém outro conjunto de funções matemáticas. Essas funções, que dão suporte apenas aos `float` operandos, são executadas mais rapidamente, mas não são tão precisas quanto aquelas na biblioteca matemática de precisão dupla. As funções estão contidas no \<amp_math.h> arquivo de cabeçalho e todas são declaradas com `restrict(amp)` . As funções no \<cmath> arquivo de cabeçalho são importadas para `fast_math` os `precise_math` namespaces e. A palavra-chave **restrict** é usada para distinguir a \<cmath> versão e a versão C++ amp. O código a seguir calcula o logaritmo de base 10, usando o método rápido, de cada valor que está no domínio de computação.
+C++ AMP inclui duas bibliotecas matemáticas. A biblioteca de precisão dupla no [namespace Concurrency::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) fornece suporte para funções de precisão dupla. Ele também fornece suporte para funções de precisão única, embora o suporte de precisão dupla no hardware ainda seja necessário. Ele está em conformidade com a [especificação C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). O acelerador deve oferecer suporte a precisão dupla completa. Você pode determinar se ele faz verificando o valor do [membro de dados Accelerator:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). A biblioteca de matemática rápida, no [namespace Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contém outro conjunto de funções matemáticas. Essas funções, que dão suporte apenas aos **`float`** operandos, são executadas mais rapidamente, mas não são tão precisas quanto aquelas na biblioteca matemática de precisão dupla. As funções estão contidas no \<amp_math.h> arquivo de cabeçalho e todas são declaradas com `restrict(amp)` . As funções no \<cmath> arquivo de cabeçalho são importadas para `fast_math` os `precise_math` namespaces e. A **`restrict`** palavra-chave é usada para distinguir a \<cmath> versão e a versão C++ amp. O código a seguir calcula o logaritmo de base 10, usando o método rápido, de cada valor que está no domínio de computação.
 
 ```cpp
 #include <amp.h>
@@ -465,7 +465,7 @@ O C++ AMP inclui uma biblioteca de gráficos projetada para a programação de g
 
 - [classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): fornece acesso somente gravação a qualquer textura.
 
-- Biblioteca de vetores curta: define um conjunto de tipos de vetor curtos de comprimento 2, 3 e 4 que são baseados em **int**, `uint` , **float**, **Double**, [normal](../../parallel/amp/reference/norm-class.md)ou [unorm](../../parallel/amp/reference/unorm-class.md).
+- Biblioteca de vetores curta: define um conjunto de tipos de vetores curtos de comprimento 2, 3 e 4 que são baseados em **`int`** , `uint` , **`float`** , **`double`** , [normal](../../parallel/amp/reference/norm-class.md)ou [unorm](../../parallel/amp/reference/unorm-class.md).
 
 ## <a name="universal-windows-platform-uwp-apps"></a>Aplicativos da UWP (Plataforma Universal do Windows)
 

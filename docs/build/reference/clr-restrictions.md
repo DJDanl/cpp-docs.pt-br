@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 641e83cb85b6282e8c4c82dfed8c4b44fc4a7e8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837368"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223896"
 ---
 # <a name="clr-restrictions"></a>/clr Restrições
 
@@ -17,7 +17,7 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 
 - Em um manipulador de exceção estruturado, há restrições sobre o uso de `_alloca` durante a compilação com **/clr**. Para obter mais informações, confira [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- O uso de verificações de erro em tempo de execução não é válido com **/clr**. Para obter mais informações, confira [Como: Usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- O uso de verificações de erro em tempo de execução não é válido com **/clr**. Para saber mais, confira [Como usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Quando **/clr** é usado para compilar um programa que usa apenas a sintaxe C++ padrão, as seguintes diretrizes se aplicam ao uso do assembly embutido:
 
@@ -43,7 +43,7 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 
   - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](gm-enable-minimal-rebuild.md)
+  - [/GM](gm-enable-minimal-rebuild.md)
 
   - [/MT](md-mt-ld-use-run-time-library.md)
 
@@ -55,7 +55,7 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 
 - Ao usar **/Zi** com **/clr**, há implicações de desempenho. Para obter mais informações, confira [/Zi](z7-zi-zi-debug-information-format.md).
 
-- Passar um caractere largo para uma rotina de saída do .NET Framework sem especificar também [/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md) ou sem converter o caractere em `__wchar_t` fará com que a saída seja exibida como um `unsigned short int`. Por exemplo:
+- Passar um caractere largo para uma rotina de .NET Framework saída sem especificar também [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) ou sem converter o caractere para fará **`__wchar_t`** com que a saída apareça como um `unsigned short int` . Por exemplo:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
@@ -86,6 +86,6 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 
   - Uma função que contém referências a tipos alinhados, ou seja, tipos declarados usando `__declspec(align(...))`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [/clr (compilação do Common Language Runtime)](clr-common-language-runtime-compilation.md)
+- [/CLR (compilação do Common Language Runtime)](clr-common-language-runtime-compilation.md)

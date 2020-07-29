@@ -9,16 +9,16 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 4d3f33a64dcebfc40778f81354cb5067a5239ace
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7b3ae1cd732fe1ec234e2734ea4c6fa86db9d5af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223857"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (avaliação de constexpr de controle)
 
-Use as opções do compilador **/constexpr** para controlar parâmetros para avaliação de **constexpr** no momento da compilação.
+Use as opções do compilador **/constexpr** para controlar parâmetros para **`constexpr`** avaliação em tempo de compilação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,15 +28,15 @@ Use as opções do compilador **/constexpr** para controlar parâmetros para ava
 
 ## <a name="arguments"></a>Argumentos
 
-**profundidade**<em>N</em> limita a profundidade da invocação de função **constexpr** recursiva para *N* níveis. O padrão é 512.
+a **profundidade**<em>N</em> limita a profundidade da **`constexpr`** invocação de função recursiva para *N* níveis. O padrão é 512.
 
-o **backtrace**<em>N</em> mostra até *N* avaliações **constexpr** no diagnóstico. O padrão é 10.
+o **backtrace**<em>N</em> mostra até *N* **`constexpr`** avaliações no diagnóstico. O padrão é 10.
 
-**etapas**<em>N</em> encerrar avaliação de **constexpr** após *N* etapas. O padrão é 100.000.
+**etapas**<em>N</em> terminar **`constexpr`** avaliação após *N* etapas. O padrão é 100.000.
 
 ## <a name="remarks"></a>Comentários
 
-As opções do compilador **/constexpr** controlam a avaliação de tempo de compilação de expressões **constexpr** . As etapas de avaliação, os níveis de recursão e a profundidade de backtrace são controlados para evitar que o compilador gaste muito tempo na avaliação de **constexpr** . Para obter mais informações sobre o elemento de linguagem **constexpr** , consulte [constexpr (C++)](../../cpp/constexpr-cpp.md).
+As opções do compilador **/constexpr** controlam a avaliação de expressões em tempo de compilação **`constexpr`** . As etapas de avaliação, os níveis de recursão e a profundidade de backtrace são controlados para evitar que o compilador gaste muito tempo na **`constexpr`** avaliação. Para obter mais informações sobre o **`constexpr`** elemento Language, consulte [Constexpr (C++)](../../cpp/constexpr-cpp.md).
 
 As opções **/constexpr** estão disponíveis a partir do Visual Studio 2015.
 
@@ -55,4 +55,4 @@ As opções **/constexpr** estão disponíveis a partir do Visual Studio 2015.
 ## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

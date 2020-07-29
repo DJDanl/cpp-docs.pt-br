@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169741"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223909"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Convenções de chamada, parâmetros e tipo de retorno
 
@@ -27,9 +27,9 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>parâmetros
 
 *pidd*<br/>
-Um ponteiro de `const` para uma `ImgDelayDescr` que contém os deslocamentos de vários dados relacionados à importação, um carimbo de data/hora para informações de associação e um conjunto de atributos que fornecem mais informações sobre o conteúdo do descritor. Atualmente, há apenas um atributo, `dlattrRva`, que indica que os endereços no descritor são endereços virtuais relativos. Para obter mais informações, consulte as declarações em *delayimp. h*.
+Um **`const`** ponteiro para um `ImgDelayDescr` que contém os deslocamentos de vários dados relacionados à importação, um carimbo de data/hora para informações de associação e um conjunto de atributos que fornecem mais informações sobre o conteúdo do descritor. Atualmente, há apenas um atributo, `dlattrRva` , que indica que os endereços no descritor são endereços virtuais relativos. Para obter mais informações, consulte as declarações em *delayimp. h*.
 
-Para obter a definição da estrutura de `PCImgDelayDescr`, consulte [definições de estrutura e constantes](structure-and-constant-definitions.md).
+Para obter a definição da `PCImgDelayDescr` estrutura, consulte [definições de estrutura e constante](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
 Um ponteiro para o slot na tabela de endereços de importação de carregamento de atraso (IAT) que é atualizada com o endereço da função importada. A rotina auxiliar precisa armazenar o mesmo valor que ele retorna a esse local.
@@ -50,7 +50,7 @@ Se a função falhar, ela gerará uma exceção e retornará 0. Há três tipos 
 
 ## <a name="remarks"></a>Comentários
 
-A convenção de chamada da função do auxiliar é `__stdcall`. O tipo de valor de retorno não é relevante, portanto, FARPROC é usado. Essa função tem vínculo C.
+A Convenção de chamada para a função auxiliar é **`__stdcall`** . O tipo de valor de retorno não é relevante, portanto, FARPROC é usado. Essa função tem vínculo C.
 
 O valor retornado do auxiliar de carregamento atrasado deve ser armazenado no local do ponteiro da função apresentada, a menos que você queira que a rotina do auxiliar seja usada como gancho de notificação. Nesse caso, seu código é responsável por encontrar o indicador de função adequado para retornar. O código de conversão gerado pelo vinculador usa o valor retornado como destino real da importação e pula diretamente para ele.
 
@@ -137,4 +137,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>Confira também
 
-[Noções básicas sobre a função auxiliar](understanding-the-helper-function.md)
+[Compreendendo a função auxiliar](understanding-the-helper-function.md)

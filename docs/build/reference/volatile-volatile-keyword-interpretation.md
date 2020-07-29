@@ -13,47 +13,47 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: 02871622242930d7419fda16f4d106fccb2056f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c2c1cd477b424f56e66bd9246e7bde76ad06120
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316633"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223779"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (Interpretação da palavra-chave volatile)
 
-Especifica como o [volátil](../../cpp/volatile-cpp.md) palavra-chave deve ser interpretado.
+Especifica como a palavra-chave [volatile](../../cpp/volatile-cpp.md) deve ser interpretada.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/volatile:**{**iso**|**ms**}
+> **/volatile:**{**ISO** | **MS**}
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
-**/volatile:iso**<br/>
-Seleciona estrita `volatile` semântica conforme definido pela linguagem C++ padrão ISO. Semântica de aquisição/liberação não é garantida em acessos voláteis. Se o compilador direciona o ARM, essa é a interpretação padrão do `volatile`.
+**/volatile: ISO**<br/>
+Seleciona **`volatile`** semântica estrita, conforme definido pela linguagem de C++ ISO-Standard. A semântica de aquisição/liberação não é garantida em acessos voláteis. Se o compilador tiver como alvo o ARM, essa é a interpretação padrão do **`volatile`** .
 
-**/volatile:ms**<br/>
-Seleciona estendidas da Microsoft `volatile` semântica, que adiciona garantias além da linguagem C++ padrão ISO de ordenação de memória. Semântica de aquisição/liberação é garantida em acessos voláteis. No entanto, essa opção também força o compilador a gerar as barreiras de memória do hardware, que podem adicionar uma sobrecarga significativa no ARM e outras arquiteturas fracas de classificação de memória. Se o compilador direciona qualquer plataforma exceto o ARM, essa é a interpretação padrão do `volatile`.
+**/volatile: MS**<br/>
+Seleciona a semântica estendida da Microsoft **`volatile`** , que adiciona garantias de ordenação de memória além da linguagem C++ padrão ISO. A semântica de aquisição/liberação é garantida em acessos voláteis. No entanto, essa opção também força o compilador a gerar barreiras de memória de hardware, o que pode adicionar uma sobrecarga significativa no ARM e outras arquiteturas de ordenação de memória fracas. Se o compilador tiver como alvo qualquer plataforma, exceto ARM, essa será a interpretação padrão do **`volatile`** .
 
 ## <a name="remarks"></a>Comentários
 
-É altamente recomendável que você use **/volatile: ISO** junto com primitivos de sincronização explícitos e intrínsecos do compilador quando você está lidando com a memória que é compartilhada entre threads. Para obter mais informações, consulte [volátil](../../cpp/volatile-cpp.md).
+É altamente recomendável que você use **/volatile: ISO** juntamente com primitivos de sincronização explícitos e intrínsecos de compilador quando estiver lidando com a memória que é compartilhada entre threads. Para obter mais informações, consulte [volátil](../../cpp/volatile-cpp.md).
 
-Se você porta o código existente ou alterar essa opção no meio de um projeto, pode ser útil habilitar o aviso [C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md) para identificar os locais de código que são afetados pela diferença na semântica.
+Se você portar o código existente ou alterar essa opção no meio de um projeto, poderá ser útil habilitar o [C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md) de aviso para identificar os locais de código afetados pela diferença em semântica.
 
 Não há nenhum `#pragma` equivalente para controlar essa opção.
 
-### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>Para definir o /volatile opção de compilador no Visual Studio
+### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>Para definir a opção de compilador/volatile no Visual Studio
 
-1. Abra o **páginas de propriedade** caixa de diálogo para o projeto. Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **páginas de propriedades** do projeto. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
+1. Selecione a **Configuration Properties**  >  página de propriedade de linha de comando**C/C++** Propriedades de configuração  >  **Command Line** .
 
-1. No **opções adicionais** caixa, adicione **/volatile: ISO** ou **/volatile: MS** e, em seguida, escolha **Okey** ou **aplicar** para salvar suas alterações.
+1. Na caixa **Opções adicionais** , adicione **/volatile: ISO** ou **/volatile: MS** e, em seguida, escolha **OK** ou **aplicar** para salvar suas alterações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

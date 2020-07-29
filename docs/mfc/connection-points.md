@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620724"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214146"
 ---
 # <a name="connection-points"></a>Pontos de conexão
 
@@ -37,7 +37,7 @@ O MFC implementa esse modelo nas classes [CConnectionPoint](reference/cconnectio
 
 Para cada ponto de conexão implementado em sua classe, você deve declarar uma parte de conexão que implementa o ponto de conexão. Se você implementar um ou mais pontos de conexão, também deverá declarar um único mapa de conexão em sua classe. Um mapa de conexão é uma tabela de pontos de conexão com suporte pelo controle ActiveX.
 
-Os exemplos a seguir demonstram um mapa de conexão simples e um ponto de conexão. O primeiro exemplo declara o mapa de conexão e o ponto; o segundo exemplo implementa o mapa e o ponto. Observe que `CMyClass` deve ser uma `CCmdTarget` classe derivada. No primeiro exemplo, o código é inserido na declaração de classe, sob a seção **protegida** :
+Os exemplos a seguir demonstram um mapa de conexão simples e um ponto de conexão. O primeiro exemplo declara o mapa de conexão e o ponto; o segundo exemplo implementa o mapa e o ponto. Observe que `CMyClass` deve ser uma `CCmdTarget` classe derivada. No primeiro exemplo, o código é inserido na declaração de classe, na **`protected`** seção:
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
@@ -64,6 +64,6 @@ Normalmente, os pontos de conexão dão suporte a "multicast" — a capacidade d
 
 Este exemplo recupera o conjunto atual de conexões no `SampleConnPt` ponto de conexão com uma chamada para `CConnectionPoint::GetConnections` . Em seguida, ele faz a iteração pelas conexões e chamadas `ISampleSink::SinkFunc` em todas as conexões ativas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [MFC COM](mfc-com.md)

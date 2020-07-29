@@ -1,5 +1,5 @@
 ---
-title: padrão (C++ atributo com)
+title: padrão (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167180"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215264"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -28,7 +28,7 @@ Indica que a dispinterface ou personalizada definida em uma coclass representa a
 ### <a name="parameters"></a>parâmetros
 
 *interface1*<br/>
-A interface padrão que será disponibilizada para os ambientes de script que criam um objeto com base na classe definida com o atributo **padrão** .
+A interface padrão que será disponibilizada para os ambientes de script que criam um objeto com base na classe definida com o **`default`** atributo.
 
 Se nenhuma interface padrão for especificada, a primeira ocorrência de uma interface não-de-fonte será usada como padrão.
 
@@ -39,11 +39,11 @@ Se nenhuma interface de origem padrão for especificada, a primeira interface de
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **padrão** C++ tem a mesma funcionalidade que o atributo MIDL [padrão](/windows/win32/Midl/default) . O atributo **padrão** também é usado com o atributo [Case](case-cpp.md) .
+O **`default`** atributo C++ tem a mesma funcionalidade que o atributo MIDL [padrão](/windows/win32/Midl/default) . O **`default`** atributo também é usado com o atributo [Case](case-cpp.md) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como o **padrão** é usado na definição de uma coclass para especificar `ICustomDispatch` como a interface de programação padrão:
+O código a seguir mostra como o **`default`** é usado na definição de uma coclass para especificar `ICustomDispatch` como a interface de programação padrão:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -91,7 +91,7 @@ int main() {
 }
 ```
 
-O atributo de [origem](source-cpp.md) também tem um exemplo de como usar o **padrão**.
+O atributo de [origem](source-cpp.md) também tem um exemplo de como usar **`default`** .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -99,15 +99,15 @@ O atributo de [origem](source-cpp.md) também tem um exemplo de como usar o **pa
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **estrutura**, membro de dados|
+|**Aplica-se a**|**`class`**, **`struct`** , membro de dados|
 |**Repetível**|Não|
-|**Atributos necessários**|**coclass** (quando aplicado à **classe** ou **estrutura**)|
+|**Atributos obrigatórios**|**coclass** (quando aplicado a **`class`** or **`struct`** )|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [coclass](coclass.md)

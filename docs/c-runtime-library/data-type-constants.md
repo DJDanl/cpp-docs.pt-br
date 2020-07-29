@@ -139,12 +139,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636924"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215160"
 ---
 # <a name="data-type-constants"></a>Constantes de tipo de dados
 
@@ -159,29 +159,29 @@ Essas constantes oferecem os intervalos para os tipos de dados integrais. Para u
 ```
 
 > [!NOTE]
-> A opção do compilador [/J](../build/reference/j-default-char-type-is-unsigned.md) altera o tipo padrão **char** para **sem sinal**.
+> A [`/J`](../build/reference/j-default-char-type-is-unsigned.md) opção do compilador altera o **`char`** tipo padrão de **`signed char`** para **`unsigned char`** .
 
 |Constante|Valor|Descrição|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|O número de bits em um **char**|
-|**SCHAR_MIN**|(-128)|Valor mínimo de **char** com sinal|
-|**SCHAR_MAX**|127|Valor máximo de **char** com sinal|
-|**UCHAR_MAX**|255 (0xff)|Valor máximo de **char** **sem sinal**|
-|**CHAR_MIN**|(-128) (0 se a opção **/J** for usada)|Valor mínimo de **char**|
-|**CHAR_MAX**|127 (255 se a opção **/J** for usada)|Valor máximo de **char**|
-|**MB_LEN_MAX**|5|O número máximo de bytes em um multibyte **char**|
-|**SHRT_MIN**|-32768|Valor **short** mínimo com sinal|
-|**SHRT_MAX**|32767|Valor **short** máximo com sinal|
-|**USHRT_MAX**|65535 (0xffff)|Valor **short** máximo **sem sinal**|
-|**INT_MIN**|(-2147483647 - 1)|Valor **int** mínimo com sinal|
-|**INT_MAX**|2147483647|Valor **int** máximo com sinal|
-|**UINT_MAX**|4294967295 (0xffffffff)|Valor **int** máximo **sem sinal**|
-|**LONG_MIN**|(-2147483647L - 1)|Valor **long** mínimo com sinal|
-|**LONG_MAX**|2147483647L|Valor **long** máximo com sinal|
-|**ULONG_MAX**|4294967295UL (0xfffffffful)|Valor **long** máximo **sem sinal**|
-|**LLONG_MIN**|(-9223372036854775807LL - 1)|Valor mínimo **long** **long** ou **__int64** com sinal|
-|**LLONG_MAX**|9223372036854775807LL|Valor máximo **long** **long** ou **__int64** com sinal|
-|**ULLONG_MAX**|0xffffffffffffffffull|Valor **long** **long** máximo **sem sinal**|
+|**CHAR_BIT**|8|Número de bits em um**`char`**|
+|**SCHAR_MIN**|(-128)|**`signed char`** Valor mínimo|
+|**SCHAR_MAX**|127|**`signed char`** Valor máximo|
+|**UCHAR_MAX**|255 (0xff)|**`unsigned char`** Valor máximo|
+|**CHAR_MIN**|(-128) (0 se a **`/J`** opção for usada)|**`char`** Valor mínimo|
+|**CHAR_MAX**|127 (255 se a **`/J`** opção for usada)|**`char`** Valor máximo|
+|**MB_LEN_MAX**|5|Número máximo de bytes em multibyte**`char`**|
+|**SHRT_MIN**|-32768|**`signed short`** Valor mínimo|
+|**SHRT_MAX**|32767|**`signed short`** Valor máximo|
+|**USHRT_MAX**|65535 (0xffff)|**`unsigned short`** Valor máximo|
+|**INT_MIN**|(-2147483647 - 1)|**`signed int`** Valor mínimo|
+|**INT_MAX**|2147483647|**`signed int`** Valor máximo|
+|**UINT_MAX**|4294967295 (0xffffffff)|**`unsigned int`** Valor máximo|
+|**LONG_MIN**|(-2147483647L - 1)|**`signed long`** Valor mínimo|
+|**LONG_MAX**|2147483647L|**`signed long`** Valor máximo|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|**`unsigned long`** Valor máximo|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|**`signed long long`** Valor mínimo ou **`__int64`**|
+|**LLONG_MAX**|9223372036854775807LL|**`signed long long`** Valor máximo **`__int64`**|
+|**ULLONG_MAX**|0xffffffffffffffffull|**`unsigned long long`** Valor máximo|
 |**_I8_MIN**|(-127i8 - 1)|Valor mínimo de 8 bits com sinal|
 |**_I8_MAX**|127i8|Valor máximo de 8 bits com sinal|
 |**_UI8_MAX**|0xffui8|Valor máximo de 8 bits sem sinal|
@@ -202,7 +202,7 @@ Essas constantes oferecem os intervalos para os tipos de dados integrais. Para u
 
 ## <a name="floating-point-type-constants"></a>Constantes de tipo de ponto flutuante
 
-As constantes a seguir fornecem o intervalo e outras características dos tipos de dados **long** **double**, **double** e **float**. Para usar essas constantes, inclua o cabeçalho float.h em seu arquivo de origem:
+As constantes a seguir fornecem o intervalo e outras características dos **`long double`** **`double`** tipos de **`float`** dados e. Para usar essas constantes, inclua o cabeçalho float.h em seu arquivo de origem:
 
 ```C
 #include <float.h>
@@ -215,10 +215,10 @@ As constantes a seguir fornecem o intervalo e outras características dos tipos 
 |**DBL_EPSILON**|2.2204460492503131e-016|O menor valor, de forma que 1,0 + **DBL_EPSILON** != 1,0|
 |**DBL_HAS_SUBNORM**|1|Tipo é compatível com números subnormais (desnormalizados)|
 |**DBL_MANT_DIG**|53|n º de bits no significando (mantissa)|
-|**DBL_MAX**|1.7976931348623158e+308|Valor máximo|
+|**DBL_MAX**|1,7976931348623158e+308|Valor máximo|
 |**DBL_MAX_10_EXP**|308|Expoente decimal máximo|
 |**DBL_MAX_EXP**|1024|Expoente binário máximo|
-|**DBL_MIN**|2.2250738585072014e-308|Valor mínimo normalizado positivo|
+|**DBL_MIN**|2,2250738585072014e-308|Valor mínimo normalizado positivo|
 |**DBL_MIN_10_EXP**|(-307)|Expoente decimal mínimo|
 |**DBL_MIN_EXP**|(-1021)|Expoente binário mínimo|
 |**_DBL_RADIX**|2|Expoente base|
@@ -240,16 +240,16 @@ As constantes a seguir fornecem o intervalo e outras características dos tipos 
 |**LDBL_EPSILON**|2.2204460492503131e-016|O menor valor, de forma que 1,0 + **LDBL_EPSILON** != 1,0|
 |**LDBL_HAS_SUBNORM**|1|Tipo é compatível com números subnormais (desnormalizados)|
 |**LDBL_MANT_DIG**|53|n º de bits no significando (mantissa)|
-|**LDBL_MAX**|1.7976931348623158e+308|Valor máximo|
+|**LDBL_MAX**|1,7976931348623158e+308|Valor máximo|
 |**LDBL_MAX_10_EXP**|308|Expoente decimal máximo|
 |**LDBL_MAX_EXP**|1024|Expoente binário máximo|
-|**LDBL_MIN**|2.2250738585072014e-308|Valor mínimo normalizado positivo|
+|**LDBL_MIN**|2,2250738585072014e-308|Valor mínimo normalizado positivo|
 |**LDBL_MIN_10_EXP**|(-307)|Expoente decimal mínimo|
 |**LDBL_MIN_EXP**|(-1021)|Expoente binário mínimo|
 |**_LDBL_RADIX**|2|Expoente base|
 |**LDBL_TRUE_MIN**|4,9406564584124654e-324|Valor mínimo subnormal positivo|
 |**DECIMAL_DIG**|igual a **DBL_DECIMAL_DIG**|Padrão (duplo) de casas decimais de precisão de arredondamento|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Constantes globais](../c-runtime-library/global-constants.md)

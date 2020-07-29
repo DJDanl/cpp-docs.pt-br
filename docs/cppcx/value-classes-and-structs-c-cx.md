@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752899"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214939"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes e estruturas de valor (C++/CX)
 
-Uma classe *de struct* ou *valor* é um POD compatível com O Tempo de Execução do Windows ("estrutura de dados simples e antiga"). Ela tem um tamanho fixo e consiste somente em campos; diferentemente de uma classe ref, ela não tem propriedades.
+Uma *classe* de *valor ou struct* é um pod compatível com Windows Runtime ("estrutura de dados simples antiga"). Ela tem um tamanho fixo e consiste somente em campos; diferentemente de uma classe ref, ela não tem propriedades.
 
 Os exemplos a seguir mostram como declarar e inicializar estruturas de valor.
 
@@ -48,17 +48,17 @@ Os exemplos a seguir mostram como declarar e inicializar estruturas de valor.
     ts3.str = "Another way to init a value struct.";
 ```
 
-Quando uma variável de um tipo de valor é atribuída a outra variável, o valor é copiado para que cada uma das duas variáveis tenha sua própria cópia dos dados. Uma *estrutura de valor* é uma estrutura de tamanho fixo que contém apenas campos de dados públicos e é declarada com o uso da palavra-chave `value struct` .
+Quando uma variável de um tipo de valor é atribuída a outra variável, o valor é copiado para que cada uma das duas variáveis tenha sua própria cópia dos dados. Um *struct de valor* é uma estrutura de tamanho fixo que contém somente campos de dados públicos e é declarada usando a **`value struct`** palavra-chave.
 
-Uma *classe de valor* é como uma `value struct` , exceto pelo fato de que seus campos devem receber acessibilidade pública explicitamente. É declarada com o uso da palavra-chave `value class` .
+Uma *classe de valor* é exatamente como uma **`value struct`** , exceto que seus campos devem receber explicitamente a acessibilidade pública. Ele é declarado usando a **`value class`** palavra-chave.
 
-Uma classe de struct ou valor de valor pode conter como `Platform::String^`campos apenas tipos numéricos fundamentais, classes enum ou [Plataforma::IBox \<T>^](../cppcx/platform-ibox-interface.md) onde T é um tipo numérico ou classe enum ou classe de valor ou estruturação. Um campo `IBox<T>^` pode ter o valor `nullptr`; é assim que o C++ implementa o conceito de *tipos que permitem valor nulo*.
+Uma classe de valor ou struct pode conter como campos apenas tipos numéricos fundamentais, classes enum, `Platform::String^` ou [Platform:: iBox \<T> ^ ](../cppcx/platform-ibox-interface.md) , em que T é um tipo numérico ou classe enum ou classe de valor ou struct. Um `IBox<T>^` campo pode ter um valor de **`nullptr`** – é assim que o C++ implementa o conceito de *tipos de valores anuláveis*.
 
 Uma classe ou uma estrutura de valor que contém um tipo `Platform::String^` ou `IBox<T>^` como membro não aceita `memcpy`.
 
-Como todos os membros de uma `value class` ou `value struct` são públicos e emitidos nos metadados, os tipos C++ padrão não são permitidos como membros. Isso é diferente das classes ref, que podem conter tipos C++ padrão `private` ou `internal` .
+Como todos os membros de um **`value class`** ou **`value struct`** são públicos e são emitidos em metadados, os tipos C++ padrão não são permitidos como membros. Isso é diferente das classes ref, que podem conter **`private`** ou **`internal`** tipos C++ padrão.
 
-O fragmento de código a seguir declara os tipos `Coordinates` e `City` como estruturas de valor. Observe que um dos membros de dados `City` é um tipo `GeoCoordinates` . Uma `value struct` pode conter outras estruturas de valor como membros.
+O fragmento de código a seguir declara os tipos `Coordinates` e `City` como estruturas de valor. Observe que um dos membros de dados `City` é um tipo `GeoCoordinates` . Um **`value struct`** pode conter outras structs de valor como membros.
 
 [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]
 
@@ -90,7 +90,7 @@ Você também pode usar um símbolo de ponteiro (*) para transmitir um tipo de v
 
 ## <a name="nullable-value-types"></a>Tipos de valor anuláveis
 
-Como mencionado anteriormente, uma estrutura de valor ou classe de valor pode ter um campo de tipo [Plataforma::IBox\<T>^](../cppcx/platform-ibox-interface.md)— por exemplo, `IBox<int>^`. Esse campo pode ter qualquer valor numérico que seja válido para o tipo `int` ou pode ter o valor `nullptr`. Você pode transmitir um campo anulável como argumento para um método cujo parâmetro seja declarado como opcional ou para qualquer lugar em que um tipo de valor não precise ter um valor.
+Como mencionado anteriormente, uma classe Value ou um struct de valor pode ter um campo do tipo [Platform: \<T> ^ : iBox](../cppcx/platform-ibox-interface.md)— por exemplo, `IBox<int>^` . Esse campo pode ter qualquer valor numérico válido para o **`int`** tipo ou pode ter um valor de **`nullptr`** . Você pode transmitir um campo anulável como argumento para um método cujo parâmetro seja declarado como opcional ou para qualquer lugar em que um tipo de valor não precise ter um valor.
 
 O exemplo a seguir mostra como inicializar uma estrutura que tem um campo que permite valor nulo.
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>Confira também
 
 [Type System (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referência de linguagem do C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Classes e estruturas ref (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

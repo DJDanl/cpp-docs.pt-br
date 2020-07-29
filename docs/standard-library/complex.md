@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 071e9369cdd0469d8ddc1c6649a3801732d8e23f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2c6487370bfa4d3af6c9c7c40b7f83a252c2e01d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688213"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222570"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -20,7 +20,7 @@ Define o modelo de classe de contêiner `complex` e seus modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: \<complexo>
+**Cabeçalho**:\<complex>
 
 **Namespace:** std
 
@@ -28,21 +28,21 @@ Define o modelo de classe de contêiner `complex` e seus modelos de suporte.
 
 Um número complexo é um par ordenado de números reais. Em termos puramente geométricos, o plano complexo é o plano real bidimensional. As qualidades especiais do plano complexo que o diferencial do plano real acontecem devido a ele ter uma estrutura algébrica adicional. Essa estrutura algébrica tem duas operações fundamentais:
 
-- Adição definida como (*a*, *b*) + (*c*, *d*) = (*a*  + *c*, *b*  + *d*)
+- Adição definida como (*a*, *b*) + (*c*, *d*) = (*a*  +  *c*, *b*  +  *d*)
 
-- Multiplicação definida como (*a*, *b*) \* (*c*, *d*) = (*AC*  - *BD*, *ad*  + *BC*)
+- Multiplicação definida como (*a*, *b*) \* (*c*, *d*) = (*CA*  -  *BD*, *ad*  +  *BC*)
 
 O conjunto de números complexos com as operações de adição e multiplicação complexas é um campo no sentido algébrico padrão:
 
 - As operações de adição e multiplicação são comutativas e associativas e a multiplicação se distribui sobre a adição exatamente como ocorre com a adição e a multiplicação reais no campo de números reais.
 
-- O número complexo (0, 0) é a identidade aditiva e (1, 0) é a identidade multiplicativa.
+- O número complexo (0, 0) é a identidade de adição e (1, 0) é a identidade de multiplicação.
 
 - O inverso aditivo para um número complexo (*a*, *b*) é (-*a*,-*b*) e o inverso multiplicativa para todos esses números complexos, exceto (0, 0) é
 
-   (*a*/(*a*<sup>2</sup>  + *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  + *b*<sup>2</sup>))
+   (*a*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>))
 
-Ao representar um número complexo *z* = (*a*, *b*) no formato *z*  = *a*  + *bi*, onde *i*<sup>2</sup> =-1, as regras para a Algebra do conjunto de números reais podem ser aplicadas ao conjunto de complexos números e seus componentes. Por exemplo:
+Ao representar um número complexo *z* = (*a*, *b*) no formato *z*  =  *a*  +  *bi*, onde *i*<sup>2</sup> =-1, as regras para a Algebra do conjunto de números reais podem ser aplicadas ao conjunto de números complexos e aos seus componentes. Por exemplo:
 
    (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
 
@@ -50,11 +50,11 @@ O sistema de números complexos é um campo, mas não é um campo ordenado. Não
 
 Há três formas comuns de representar um número complexo *z*:
 
-- Cartesiano: *z*  = *a*  + *bi*
+- Cartesiano: *z*  =  *a*  +  *bi*
 
-- Polar: *z*  = *r* (cos *p*  + *i* sin *p*)
+- Polar: *z*  =  *r* (cos *p*  +  *i* sin *p*)
 
-- Exponencial: *z*  = *r* \* *e*<sup>*IP*</sup>
+- Exponencial: *z*  =  *r* \* *e*<sup>*IP*</sup>
 
 Os termos usados nessas representações padrão de um número complexo são referidas como o seguinte:
 
@@ -74,57 +74,57 @@ A menos que especificado de outra forma, as funções que podem retornar vários
 
 |||
 |-|-|
-|[abs](../standard-library/complex-functions.md#abs)|Calcula o módulo de um número complexo.|
+|[ABS](../standard-library/complex-functions.md#abs)|Calcula o módulo de um número complexo.|
 |[acos](../standard-library/complex-functions.md#acos)||
 |[acosh](../standard-library/complex-functions.md#acosh)||
-|[arg](../standard-library/complex-functions.md#arg)|Extrai o argumento de um número complexo.|
-|[asin](../standard-library/complex-functions.md#asin)||
+|[ARG](../standard-library/complex-functions.md#arg)|Extrai o argumento de um número complexo.|
+|[ASIN](../standard-library/complex-functions.md#asin)||
 |[asinh](../standard-library/complex-functions.md#asinh)||
-|[atan](../standard-library/complex-functions.md#atan)||
+|[ATAN](../standard-library/complex-functions.md#atan)||
 |[atanh](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|Retorna o conjugado complexo de um número complexo.|
-|[cos](../standard-library/complex-functions.md#cos)|Retorna o cosseno de um número complexo.|
+|[exibi](../standard-library/complex-functions.md#cos)|Retorna o cosseno de um número complexo.|
 |[cosh](../standard-library/complex-functions.md#cosh)|Retorna o cosseno hiperbólico de um número complexo.|
 |[exp](../standard-library/complex-functions.md#exp)|Retorna a função exponencial de um número complexo.|
 |[imag](../standard-library/complex-functions.md#imag)|Extrai o componente imaginário de um número complexo.|
-|[log](../standard-library/complex-functions.md#log)|Retorna o logaritmo natural de um número complexo.|
+|[Façam](../standard-library/complex-functions.md#log)|Retorna o logaritmo natural de um número complexo.|
 |[log10](../standard-library/complex-functions.md#log10)|Retorna o logaritmo de base 10 de um número complexo.|
 |[norm](../standard-library/complex-functions.md#norm)|Extrai a norma de um número complexo.|
 |[polar](../standard-library/complex-functions.md#polar)|Retorna o número complexo, que corresponde a um módulo e um argumento especificado, na forma cartesiana.|
 |[pow](../standard-library/complex-functions.md#pow)|Avalia o número complexo obtido elevando uma base que é um número complexo à potência de outro número complexo.|
 |[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|Extrai o componente real de um número complexo.|
-|[sin](../standard-library/complex-functions.md#sin)|Retorna o seno de um número complexo.|
+|[Sin](../standard-library/complex-functions.md#sin)|Retorna o seno de um número complexo.|
 |[sinh](../standard-library/complex-functions.md#sinh)|Retorna o seno hiperbólico de um número complexo.|
 |[sqrt](../standard-library/complex-functions.md#sqrt)|Retorna a raiz quadrada de um número complexo.|
-|[tan](../standard-library/complex-functions.md#tan)|Retorna a tangente de um número complexo.|
-|[tanh](../standard-library/complex-functions.md#tanh)|Retorna a tangente hiperbólica de um número complexo.|
+|[queimado](../standard-library/complex-functions.md#tan)|Retorna a tangente de um número complexo.|
+|[Tanh](../standard-library/complex-functions.md#tanh)|Retorna a tangente hiperbólica de um número complexo.|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[operator!=](../standard-library/complex-operators.md#op_neq)|Testa a desigualdade entre dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
-|[operator*](../standard-library/complex-operators.md#op_star)|Multiplica dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
-|[operator+](../standard-library/complex-operators.md#op_add)|Adiciona dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
-|[operator-](../standard-library/complex-operators.md#operator-)|Subtrai dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
-|[operator/](../standard-library/complex-operators.md#op_div)|Divide dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
-|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|Uma função de modelo que insere um número complexo no fluxo de saída.|
-|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Testa a igualdade entre dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
-|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Uma função de modelo que extrai um valor complexo do fluxo de entrada.|
+|[operador! =](../standard-library/complex-operators.md#op_neq)|Testa a desigualdade entre dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
+|[operador](../standard-library/complex-operators.md#op_star)|Multiplica dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
+|[operador +](../standard-library/complex-operators.md#op_add)|Adiciona dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
+|[operador](../standard-library/complex-operators.md#operator-)|Subtrai dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
+|[operador](../standard-library/complex-operators.md#op_div)|Divide dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
+|[<do operador\<](../standard-library/complex-operators.md#op_lt_lt)|Uma função de modelo que insere um número complexo no fluxo de saída.|
+|[operador = =](../standard-library/complex-operators.md#op_eq_eq)|Testa a igualdade entre dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
+|[>>do operador](../standard-library/complex-operators.md#op_gt_gt)|Uma função de modelo que extrai um valor complexo do fluxo de entrada.|
 
 ### <a name="classes"></a>Classes
 
 |||
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|O modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos os tipos **Double**, em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
-|[complex\<float>](../standard-library/complex-float.md)|O modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **float**, em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
-|[complex\<long double>](../standard-library/complex-long-double.md)|O modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos os dois tipos **duplos**, em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
-|[complex](../standard-library/complex-class.md)|O modelo de classe descreve um objeto usado para representar o sistema de números complexos e executar operações aritméticas complexas.|
+|[complexos\<double>](../standard-library/complex-double.md)|O modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos os tipos **`double`** , em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
+|[complexos\<float>](../standard-library/complex-float.md)|O modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos os tipos **`float`** , em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
+|[complexos\<long double>](../standard-library/complex-long-double.md)|O modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos os tipos **`long double`** , em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
+|[complexos](../standard-library/complex-class.md)|O modelo de classe descreve um objeto usado para representar o sistema de números complexos e executar operações aritméticas complexas.|
 
 ### <a name="literals"></a>Literais
 
-O cabeçalho \<complex> define os seguintes [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) que criam um número complexo com a parte real sendo zero e a parte imaginária sendo o valor do parâmetro de entrada.
+O \<complex> cabeçalho define os seguintes [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) que criam um número complexo com a parte real sendo zero e a parte imaginário é o valor do parâmetro de entrada.
 
 |||
 |-|-|
@@ -132,7 +132,7 @@ O cabeçalho \<complex> define os seguintes [literais definidos pelo usuário](.
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Retorna: `complex<double>{0.0, static_cast<double>(d)}`.|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Retorna: `complex<float>{0.0f, static_cast<float>(d)}`.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

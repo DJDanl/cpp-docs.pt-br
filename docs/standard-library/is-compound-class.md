@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae2e3c66b3abf22bbefbcb0fcd3292f0a3dbdbe2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452897"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215706"
 ---
-# <a name="iscompound-class"></a>Classe is_compound
+# <a name="is_compound-class"></a>Classe is_compound
 
 Testa se o tipo especificado não é fundamental.
 
@@ -25,14 +25,14 @@ template <class Ty>
 struct is_compound;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo é **false** se o tipo de *Ty* é um tipo fundamental (ou seja, se [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > se aplica **true**); caso contrário, ele será **true**. Assim, o predicado se aplica **true** se *Ty* for um tipo de matriz, um tipo de função, um ponteiro para **void** ou um objeto ou uma função, uma referência, uma classe, uma União, uma enumeração ou um ponteiro para um membro de classe não estático ou uma forma *qualificada por CV* de um deles.
+Uma instância de um predicado de tipo mantém **`false`** se o tipo de *Ty* é um tipo fundamental (ou seja, se [is_fundamental](../standard-library/is-fundamental-class.md) é \<Ty> mantida **`true`** ); caso contrário, ele mantém **`true`** . Assim, o predicado mantém **`true`** se *Ty* é um tipo de matriz, um tipo de função, um ponteiro para **`void`** ou um objeto ou uma função, uma referência, uma classe, uma União, uma enumeração ou um ponteiro para um membro de classe não estático ou uma forma *qualificada por CV* de um deles.
 
 ## <a name="example"></a>Exemplo
 
@@ -77,11 +77,11 @@ is_compound<int> == false
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_class](../standard-library/is-class-class.md)

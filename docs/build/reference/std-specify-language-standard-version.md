@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: ddb0fc9ad4880ed317a28d7aec5eba1669eabbc5
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507060"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223818"
 ---
-# <a name="std-specify-language-standard-version"></a>/std (Especificar versão padrão da linguagem)
+# <a name="std-specify-language-standard-version"></a>`/std`(Especifique a versão padrão do idioma)
 
 Habilite as funcionalidades da linguagem C++ compatíveis da versão especificada do padrão da linguagem C++.
 
@@ -29,9 +29,9 @@ A **`/std`** opção está disponível no Visual Studio 2017 e posterior. Ele é
 
 A **`/std:c++14`** opção padrão habilita o conjunto de recursos do c++ 14 implementados pelo compilador MSVC. Essa opção desabilita o suporte do compilador e da biblioteca padrão para recursos que são alterados ou novos em versões mais recentes do padrão de idioma. Ele não desabilita alguns recursos do C++ 17 já implementados em versões anteriores do compilador do MSVC. Para evitar alterações significativas para usuários que já fizeram dependências nos recursos disponíveis no ou antes do Visual Studio 2015 atualização 2, esses recursos permanecem habilitados quando a **`/std:c++14`** opção é especificada:
 
-- [Regras para automático com listas de inicialização entre chaves](https://wg21.link/n3922)
+- [Regras para `auto` com chaves-init-Lists](https://wg21.link/n3922)
 
-- [Nome de tipo em parâmetros de modelo do modelo](https://wg21.link/n4051)
+- [`typename`em modelo de modelo-parâmetros](https://wg21.link/n4051)
 
 - [Como remover trígrafos](https://wg21.link/n4086)
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 3ab519f612d5272b0562728917cc777f1de86b79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1f731eed2dae2721b13bb2e526992849e217f7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187239"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223194"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>Aviso do compilador (nível 1) C4346
 
 ' name ': nome dependente não é um tipo
 
-A palavra-chave [TypeName](../../cpp/typename.md) será necessária se um nome dependente for tratado como um tipo. Para o código que funciona da mesma em todas as versões C++do Visual, adicione `typename` à declaração.
+A palavra-chave [TypeName](../../cpp/typename.md) será necessária se um nome dependente for tratado como um tipo. Para o código que funciona da mesma em todas as versões do Visual C++, adicione **`typename`** à declaração.
 
 O exemplo a seguir gera C4346:
 
@@ -32,7 +32,7 @@ struct C {
 };
 ```
 
-Os exemplos a seguir mostram outros exemplos em que a palavra-chave **TypeName** é necessária:
+Os exemplos a seguir mostram outros exemplos em que a **`typename`** palavra-chave é necessária:
 
 ```cpp
 // C4346b.cpp

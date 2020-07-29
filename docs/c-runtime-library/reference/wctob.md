@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3740e4bebcc63f0f664d40b2e048f19c2aa24c99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910481"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215082"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,7 +47,7 @@ int wctob(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *WCHAR*<br/>
 A valor a ser movido.
@@ -58,7 +58,7 @@ Se **wctob** converter com êxito um caractere largo, ele retornará sua represe
 
 ## <a name="remarks"></a>Comentários
 
-A função **wctob** converte um caractere largo contido em *WCHAR* para o caractere multibyte correspondente passado pelo valor **int** de retorno, se o caractere multibyte for exatamente um byte.
+A função **wctob** converte um caractere largo contido em *WCHAR* para o caractere multibyte correspondente passado pelo valor de retorno **`int`** , se o caractere multibyte for exatamente um byte.
 
 Se **wctob** não tiver sido bem-sucedido e nenhum caractere multibyte correspondente for encontrado, a função definirá **errno** como **EILSEQ** e retornará-1.
 
@@ -106,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed413b2bcdcda8f65794b10c792b10358564420a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454070"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215732"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objetos de função na Biblioteca Padrão C++
 
@@ -47,7 +47,7 @@ A última linha da função `main` mostra como chamar o objeto de função. Essa
 
 ## <a name="function-objects-and-containers"></a>Contêineres e objetos de função
 
-A Biblioteca Padrão C++ contém vários objetos de função no arquivo de cabeçalho [\<functional>](../standard-library/functional.md). Um uso desses objetos de função é como critério de classificação para contêineres. Por exemplo, o contêiner `set` é declarado da seguinte maneira:
+A biblioteca padrão C++ contém vários objetos de função no [\<functional>](../standard-library/functional.md) arquivo de cabeçalho. Um uso desses objetos de função é como critério de classificação para contêineres. Por exemplo, o contêiner `set` é declarado da seguinte maneira:
 
 ```cpp
 template <class Key,
@@ -56,7 +56,7 @@ template <class Key,
 class set
 ```
 
-O segundo argumento de modelo é o objeto de função `less`. Esse objeto de função retornará **true** se o primeiro parâmetro for menor do que o segundo parâmetro. Como alguns contêineres classificam seus elementos, o contêiner precisa de uma maneira de comparar dois elementos. A comparação é feita usando o objeto de função. Você pode definir seus próprios critérios de classificação para contêineres criando um objeto de função e especificando-o na lista de modelos para o contêiner.
+O segundo argumento de modelo é o objeto de função `less`. Esse objeto de função retorna **`true`** se o primeiro parâmetro é menor que o segundo parâmetro. Como alguns contêineres classificam seus elementos, o contêiner precisa de uma maneira de comparar dois elementos. A comparação é feita usando o objeto de função. Você pode definir seus próprios critérios de classificação para contêineres criando um objeto de função e especificando-o na lista de modelos para o contêiner.
 
 ## <a name="function-objects-and-algorithms"></a>Algoritmos e objetos de função
 
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-O último argumento para `remove_if` é um objeto de função que retorna um valor booliano (um *predicado*). Se o resultado do objeto de função for **true**, o elemento será removido do contêiner que está sendo acessado pelos `first` iteradores `last`e. Você pode usar qualquer um dos objetos de função declarados no cabeçalho [\<functional>](../standard-library/functional.md) para o argumento `pred` ou pode criar seus próprios objetos.
+O último argumento para `remove_if` é um objeto de função que retorna um valor booliano (um *predicado*). Se o resultado do objeto de função for **`true`** , o elemento será removido do contêiner que está sendo acessado pelos iteradores `first` e `last` . Você pode usar qualquer um dos objetos de função declarados no [\<functional>](../standard-library/functional.md) cabeçalho para o argumento `pred` ou você pode criar o seu próprio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[Referência da biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

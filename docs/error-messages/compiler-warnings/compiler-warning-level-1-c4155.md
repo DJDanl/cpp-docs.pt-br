@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4155
 ms.assetid: ba233353-09e3-4195-8127-13a27ddd8d70
-ms.openlocfilehash: 3e455ad67c9a36cfa4b52711ce60ce46ef6afac2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 74369ce9eae123143caf15434506acf6e6e2e50e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176202"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223285"
 ---
 # <a name="compiler-warning-level-1-c4155"></a>Aviso do compilador (nível 1) C4155
 
 exclusão de uma expressão de matriz sem usar a forma de matriz de ' Delete '
 
-A forma de matriz de **delete** deve ser usada para excluir uma matriz. Esse aviso ocorre somente sob compatibilidade com ANSI (/Za).
+A forma de matriz de **`delete`** deve ser usada para excluir uma matriz. Esse aviso ocorre somente sob compatibilidade com ANSI (/Za).
 
 ## <a name="example"></a>Exemplo
 
