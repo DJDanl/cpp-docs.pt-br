@@ -3,12 +3,12 @@ title: enum class  (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182130"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219710"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class  (C++/CLI e C++/CX)
 
@@ -18,9 +18,9 @@ Declara uma enumeração no escopo do namespace, que é um tipo definido pelo us
 
 ### <a name="remarks"></a>Comentários
 
-C++/CX e C++/CLI são compatíveis com a **public enum class** e à **private enum class** que são semelhantes ao padrão C++ **enum class**, mas com a adição do especificador de acessibilidade. No **/clr**, o tipo **enum class** C++11 é permitido, mas vai gerar o aviso C4472, que se destina a garantir que você realmente deseja o tipo enum ISO e não o tipo C++/CX e C++/CLI. Saiba mais sobre a palavra-chave **enum** do padrão ISO C++ em [Enumerações](../cpp/enumerations-cpp.md).
+C++/CX e C++/CLI são compatíveis com a **public enum class** e à **private enum class** que são semelhantes ao padrão C++ **enum class**, mas com a adição do especificador de acessibilidade. No **/clr**, o tipo **enum class** C++11 é permitido, mas vai gerar o aviso C4472, que se destina a garantir que você realmente deseja o tipo enum ISO e não o tipo C++/CX e C++/CLI. Para obter mais informações sobre a **`enum`** palavra-chave ISO Standard C++, consulte [enumerações](../cpp/enumerations-cpp.md).
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -34,21 +34,21 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>parâmetros
 
-*access*<br/>
-A acessibilidade da enumeração, que pode ser **public** ou **private**.
+*às*<br/>
+A acessibilidade da enumeração, que pode ser **`public`** ou **`private`** .
 
 *enumeration-identifier*<br/>
 O nome da enumeração.
 
-*underlying-type*<br/>
+*tipo subjacente*<br/>
 (Opcional) O tipo subjacente da enumeração.
 
-(Opcional). Somente Windows Runtime ) O tipo subjacente da enumeração, que pode ser **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, ou `uint64`.
+(Opcional). Somente Windows Runtime) o tipo subjacente da enumeração, que pode ser,,,,,,, **`bool`** **`char`** `char16` `int16` `uint16` **`int`** `uint32` `int64` ou `uint64` .
 
-*enumerator-list*<br/>
+*enumerador-lista*<br/>
 Uma lista de nomes de enumeradores delimitada por vírgulas.
 
-O valor de cada enumerador é uma expressão constante que é definida implicitamente pelo compilador ou explicitamente pela notação, *enumerator*`=`*constant-expression*. Por padrão, o valor do primeiro enumerador é zero se estiver implicitamente definido. O valor de cada enumerador implicitamente definido subsequente é o valor do enumerador anterior + 1.
+O valor de cada enumerador é uma expressão constante que é definida implicitamente pelo compilador ou explicitamente pela *enumerator* `=` *expressão constante*Notation, enumerador. Por padrão, o valor do primeiro enumerador é zero se estiver implicitamente definido. O valor de cada enumerador implicitamente definido subsequente é o valor do enumerador anterior + 1.
 
 *var*<br/>
 (Opcional) O nome de uma variável do tipo de enumeração.
@@ -61,7 +61,7 @@ Observe que o compilador emite mensagens de erro se a expressão constante que d
 
 - Se *underlying-type* for numérico e um enumerador especificar o valor máximo para esse tipo, o valor da próxima enumeração implicitamente definida não poderá ser representado.
 
-- Se *underlying-type* for **bool**, e mais de dois enumeradores estiverem implicitamente definidos, os enumeradores após os dois primeiros não poderão ser representados.
+- Se o *tipo subjacente* for **`bool`** e mais de dois enumeradores forem definidos implicitamente, os enumeradores após os dois primeiros não poderão ser representados.
 
 - Se *underlying-type* for `char16`, e o valor de enumeração variar de 0xD800 a 0xDFFF, o valor poderá ser representado. No entanto, o valor estará logicamente incorreto, pois representa metade de um par alternativo Unicode e não deve aparecer no isolamento.
 
@@ -82,17 +82,17 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>parâmetros
 
-*access*<br/>
-A acessibilidade do enum. Pode ser **public** ou **private**.
+*às*<br/>
+A acessibilidade do enum. Pode ser **`public`** ou **`private`** .
 
-*enumerator-list*<br/>
+*enumerador-lista*<br/>
 Uma lista delimitada por vírgulas dos identificadores (enumeradores) na enumeração.
 
 *name*<br/>
 O nome da enumeração. Enumerações gerenciadas anônimas não são permitidas.
 
 *tipo*<br/>
-(Opcional) O tipo subjacente dos *identifiers*. Pode ser qualquer tipo escalar, como versões assinadas ou não assinadas de **int**, **short** ou **long**.  **bool** ou **char** também são permitidos.
+(Opcional) O tipo subjacente dos *identifiers*. Pode ser qualquer tipo escalar, como versões assinadas ou não, **`int`** **`short`** ou **`long`** .  **`bool`** ou **`char`** também é permitido.
 
 *var*<br/>
 (Opcional) O nome de uma variável do tipo de enumeração.
@@ -138,7 +138,7 @@ Os enumeradores de uma enumeração padrão são fortemente injetados no escopo 
 
 No Visual Studio 2002 e Visual Studio 2003, os enumeradores foram injetados fracamente (visíveis no escopo delimitador, a menos que houvesse outro identificador com o mesmo nome).
 
-Se uma enumeração C++ padrão for definida (sem **class** ou **struct**), compilar com `/clr` fará com que a enumeração seja compilada como uma enumeração gerenciada.  A enumeração ainda tem a semântica de uma enumeração não gerenciada.  Note que o compilador injeta um atributo `Microsoft::VisualC::NativeEnumAttribute` para identificar a intenção de um programador de que a enumeração seja uma enumeração nativa.  Outros compiladores simplesmente veem a enumeração padrão como uma enumeração gerenciada.
+Se um enum C++ padrão for definido (sem **`class`** ou **`struct`** ), compilar com `/clr` fará com que a enumeração seja compilada como uma enumeração gerenciada.  A enumeração ainda tem a semântica de uma enumeração não gerenciada.  Note que o compilador injeta um atributo `Microsoft::VisualC::NativeEnumAttribute` para identificar a intenção de um programador de que a enumeração seja uma enumeração nativa.  Outros compiladores simplesmente veem a enumeração padrão como uma enumeração gerenciada.
 
 Uma enumeração padrão nomeada compilada com `/clr` fica visível no assembly como uma enumeração gerenciada e pode ser consumida por qualquer outro compilador gerenciado.   No entanto, uma enumeração padrão sem nome não fica visível publicamente a partir do assembly.
 
@@ -221,4 +221,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

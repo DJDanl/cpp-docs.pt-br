@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213587"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -48,14 +48,14 @@ int _CrtReportBlockType(
 };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBlock*<br/>
 Ponteiro para um bloco de heap de depuração válido.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Quando passado um ponteiro Debug heap válido, a função **_CrtReportBlockType** retorna o tipo de bloco e subtipo na forma de um **int**. Ao passar um ponteiro inválido, a função retorna -1.
+Quando passado um ponteiro Debug heap válido, a função **_CrtReportBlockType** retorna o tipo de bloco e subtipo na forma de um **`int`** . Ao passar um ponteiro inválido, a função retorna -1.
 
 ## <a name="remarks"></a>Comentários
 
@@ -71,7 +71,7 @@ Para obter informações sobre os tipos de blocos de alocação e como eles são
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -115,7 +115,7 @@ int main(void)
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 Dumper found block at 00314F78: type 4, subtype 3
@@ -134,7 +134,7 @@ Data: <          > CD CD CD CD CD CD CD CD CD CD
 Object dump complete.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_CrtDoForAllClientObjects](crtdoforallclientobjects.md)<br/>
 [_CrtSetDumpClient](crtsetdumpclient.md)<br/>

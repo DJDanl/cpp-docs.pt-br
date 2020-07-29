@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: c29caf6d31df316e80b15fe6827c81e34ece8a18
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 24f89a6b2fb998ba5e5a82dbb470accb45d0fd9f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142718"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219541"
 ---
 # <a name="single_link_registry-class"></a>Classe single_link_registry
 
-O objeto `single_link_registry` é um `network_link_registry` que gerencia apenas um único bloco de origem ou de destino.
+O `single_link_registry` objeto é um `network_link_registry` que gerencia apenas um único bloco de origem ou de destino.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,29 +31,29 @@ template<class _Block>
 class single_link_registry : public network_link_registry<_Block>;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Block*<br/>
-O tipo de dados de bloco que está sendo armazenado no objeto `single_link_registry`.
+O tipo de dados de bloco que está sendo armazenado no `single_link_registry` objeto.
 
 ## <a name="members"></a>Membros
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[single_link_registry](#ctor)|Constrói um objeto `single_link_registry`.|
-|[~ single_link_registry destruidor](#dtor)|Destrói o objeto `single_link_registry`.|
+|[~ single_link_registry destruidor](#dtor)|Destrói o `single_link_registry` objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[adicionar](#add)|Adiciona um link ao objeto `single_link_registry`. (Substitui [network_link_registry:: Add](network-link-registry-class.md#add).)|
-|[begin](#begin)|Retorna um iterador para o primeiro elemento no objeto `single_link_registry`. (Substitui [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
-|[contains](#contains)|Pesquisa o objeto `single_link_registry` para um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
-|[contagem](#count)|Conta o número de itens no objeto `single_link_registry`. (Substitui [network_link_registry:: Count](network-link-registry-class.md#count).)|
-|[remove](#remove)|Remove um link do objeto `single_link_registry`. (Substitui [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
+|[add](#add)|Adiciona um link ao `single_link_registry` objeto. (Substitui [network_link_registry:: Add](network-link-registry-class.md#add).)|
+|[Comece](#begin)|Retorna um iterador para o primeiro elemento no `single_link_registry` objeto. (Substitui [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
+|[contains](#contains)|Pesquisa o `single_link_registry` objeto em busca de um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[contagem](#count)|Conta o número de itens no `single_link_registry` objeto. (Substitui [network_link_registry:: Count](network-link-registry-class.md#count).)|
+|[remove](#remove)|Remove um link do `single_link_registry` objeto. (Substitui [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -61,21 +61,21 @@ O tipo de dados de bloco que está sendo armazenado no objeto `single_link_regis
 
 `single_link_registry`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Agents. h
 
 **Namespace:** simultaneidade
 
-## <a name="add"></a>agrega
+## <a name="add"></a><a name="add"></a>agrega
 
-Adiciona um link ao objeto `single_link_registry`.
+Adiciona um link ao `single_link_registry` objeto.
 
 ```cpp
 virtual void add(_EType _Link);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Link*<br/>
 Um ponteiro para um bloco a ser adicionado.
@@ -84,9 +84,9 @@ Um ponteiro para um bloco a ser adicionado.
 
 O método gera uma exceção [invalid_link_target](invalid-link-target-class.md) se já houver um link nesse registro.
 
-## <a name="begin"></a>Comece
+## <a name="begin"></a><a name="begin"></a>Comece
 
-Retorna um iterador para o primeiro elemento no objeto `single_link_registry`.
+Retorna um iterador para o primeiro elemento no `single_link_registry` objeto.
 
 ```cpp
 virtual iterator begin();
@@ -94,32 +94,32 @@ virtual iterator begin();
 
 ### <a name="return-value"></a>Valor retornado
 
-Um iterador que aborda o primeiro elemento no objeto `single_link_registry`.
+Um iterador que aborda o primeiro elemento no `single_link_registry` objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O estado final é indicado por um link `NULL`.
+O estado final é indicado por um `NULL` link.
 
-## <a name="contains"></a>terá
+## <a name="contains"></a><a name="contains"></a>terá
 
-Pesquisa o objeto `single_link_registry` para um bloco especificado.
+Pesquisa o `single_link_registry` objeto em busca de um bloco especificado.
 
 ```cpp
 virtual bool contains(_EType _Link);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Link*<br/>
-Um ponteiro para um bloco que deve ser procurado no objeto `single_link_registry`.
+Um ponteiro para um bloco que deve ser procurado no `single_link_registry` objeto.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o link foi encontrado; caso contrário, **false** .
+**`true`** Se o link foi encontrado, **`false`** caso contrário.
 
-## <a name="count"></a>contar
+## <a name="count"></a><a name="count"></a>contar
 
-Conta o número de itens no objeto `single_link_registry`.
+Conta o número de itens no `single_link_registry` objeto.
 
 ```cpp
 virtual size_t count();
@@ -129,24 +129,24 @@ virtual size_t count();
 
 O número de itens no objeto `single_link_registry`.
 
-## <a name="remove"></a>exclu
+## <a name="remove"></a><a name="remove"></a>exclu
 
-Remove um link do objeto `single_link_registry`.
+Remove um link do `single_link_registry` objeto.
 
 ```cpp
 virtual bool remove(_EType _Link);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Link*<br/>
 Um ponteiro para um bloco a ser removido, se encontrado.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o link foi encontrado e removido; caso contrário, **false** .
+**`true`** Se o link foi encontrado e removido, **`false`** caso contrário.
 
-## <a name="ctor"></a>single_link_registry
+## <a name="single_link_registry"></a><a name="ctor"></a>single_link_registry
 
 Constrói um objeto `single_link_registry`.
 
@@ -154,9 +154,9 @@ Constrói um objeto `single_link_registry`.
 single_link_registry();
 ```
 
-## <a name="dtor"></a>~ single_link_registry
+## <a name="single_link_registry"></a><a name="dtor"></a>~ single_link_registry
 
-Destrói o objeto `single_link_registry`.
+Destrói o `single_link_registry` objeto.
 
 ```cpp
 virtual ~single_link_registry();
@@ -166,7 +166,7 @@ virtual ~single_link_registry();
 
 O método gera uma exceção [invalid_operation](invalid-operation-class.md) se for chamado antes de o link ser removido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe multi_link_registry](multi-link-registry-class.md)

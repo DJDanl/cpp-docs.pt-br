@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813516"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212443"
 ---
 # <a name="cfileexception-class"></a>Classe CFileException
 
 Representa uma condição de exceção relacionada a arquivo.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 ```
 class CFileException : public CException
@@ -45,13 +45,13 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CFileException::CFileException](#cfileexception)|Constrói um objeto `CFileException`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CFileException::ErrnoToException](#errnotoexception)|Retorna o código que corresponde a um número de erro em tempo de execução.|
 |[CFileException:: GetErrorMessage](#geterrormessage)|Recupera a mensagem que descreve uma exceção.|
@@ -61,7 +61,7 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CFileException:: m_cause](#m_cause)|Contém código portátil correspondente à causa da exceção.|
 |[CFileException:: m_lOsError](#m_loserror)|Contém o número de erro do sistema operacional relacionado.|
@@ -96,7 +96,7 @@ CFileException(
     LPCTSTR lpszArchiveName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *faz*<br/>
 Uma variável de tipo enumerada que indica o motivo da exceção. Consulte [CFileException:: m_cause](#m_cause) para obter uma lista dos valores possíveis.
@@ -122,12 +122,12 @@ Converte um determinado valor de erro de biblioteca em tempo de execução em um
 static int PASCAL ErrnoToException(int nErrno);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrno*<br/>
 Um código de erro inteiro, conforme definido no tempo de execução, inclui o arquivo ERRNO. T.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Valor enumerado que corresponde a um determinado valor de erro de biblioteca em tempo de execução.
 
@@ -150,7 +150,7 @@ virtual BOOL GetErrorMessage(
     PUINT pnHelpContext = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszError*<br/>
 [entrada, saída] Ponteiro para um buffer que recebe uma mensagem de erro.
@@ -161,7 +161,7 @@ no O número máximo de caracteres que o buffer especificado pode conter. Isso i
 *pnHelpContext*<br/>
 [entrada, saída] Ponteiro para um inteiro sem sinal que recebe a ID de contexto da ajuda. Se `NULL` , nenhuma ID será retornada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se o método foi bem-sucedido; caso contrário, FALSE.
 
@@ -185,7 +185,7 @@ int m_cause;
 
 ### <a name="remarks"></a>Comentários
 
-Esse membro de dados é uma variável pública do tipo **int**. Os enumeradores e seus significados são os seguintes:
+Esse membro de dados é uma variável pública do tipo **`int`** . Os enumeradores e seus significados são os seguintes:
 
 | Erro | Valor e significado |
 |--|--|
@@ -243,12 +243,12 @@ Retorna um enumerador que corresponde a um determinado valor de *lOsError* . Se 
 static int PASCAL OsErrorToException(LONG lOsError);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lOsError*<br/>
 Um código de erro específico do sistema operacional.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Valor enumerado que corresponde a um determinado valor de erro do sistema operacional.
 
@@ -264,7 +264,7 @@ Constrói um `CFileException` objeto correspondente a um determinado valor de *n
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrno*<br/>
 Um código de erro inteiro, conforme definido no tempo de execução, inclui o arquivo ERRNO. T.
@@ -284,7 +284,7 @@ Gera um `CFileException` correspondente a um determinado valor de *lOsError* . S
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lOsError*<br/>
 Um código de erro específico do sistema operacional.
@@ -299,5 +299,5 @@ Um ponteiro para a cadeia de caracteres que contém o nome do arquivo que causou
 ## <a name="see-also"></a>Confira também
 
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Processamento de exceção](../../mfc/reference/exception-processing.md)

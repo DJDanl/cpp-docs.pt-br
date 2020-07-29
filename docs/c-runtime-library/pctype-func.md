@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: 67447823b0322e647784cdbe0f3f7228e1c5fb34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a7972744d322cf16d056f70fff83f529a183020e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919240"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213639"
 ---
 # <a name="__pctype_func"></a>__pctype_func
 
@@ -46,7 +46,7 @@ Um ponteiro para uma matriz de informações de classificação de caracteres.
 
 ## <a name="remarks"></a>Comentários
 
-As informações na tabela de classificação de caracteres destina-se apenas a uso interno e são usadas por várias funções que classificam caracteres do tipo `char`. Para obter mais informações, consulte a seção `Remarks` de [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
+As informações na tabela de classificação de caracteres são apenas para uso interno e são usadas por várias funções que classificam os caracteres do tipo **`char`** . Para obter mais informações, consulte a seção `Remarks` de [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](global-state.md).
 
@@ -56,6 +56,6 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |-------------|---------------------|
 |__pctype_func|ctype.h|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)

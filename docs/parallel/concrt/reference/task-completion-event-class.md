@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219502"
 ---
 # <a name="task_completion_event-class"></a>Classe task_completion_event
 
@@ -31,7 +31,7 @@ template<>
 class task_completion_event<void>;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_ResultType*<br/>
 O tipo de resultado desta classe `task_completion_event`.
@@ -40,13 +40,13 @@ O tipo de resultado desta classe `task_completion_event`.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[task_completion_event](#ctor)|Constrói um objeto `task_completion_event`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[set](#set)|Sobrecarregado. Define o evento de conclusão de tarefas.|
 |[set_exception](#set_exception)|Sobrecarregado. Propaga uma exceção para todas as tarefas associadas a esse evento.|
@@ -63,13 +63,13 @@ Se o evento de conclusão de tarefas nunca foi sinalizado, todas as tarefas cria
 
 `task_completion_event`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ppltasks. h
 
 **Namespace:** simultaneidade
 
-## <a name="set"></a>Definição
+## <a name="set"></a><a name="set"></a>Definição
 
 Define o evento de conclusão de tarefas.
 
@@ -79,20 +79,20 @@ bool set(_ResultType _Result) const ;
 bool set() const ;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Result*<br/>
 O resultado para o qual definir esse evento.
 
 ### <a name="return-value"></a>Valor retornado
 
-O método retornará **true** se tiver sido bem-sucedido ao definir o evento. Retornará **false** se o evento já estiver definido.
+O método retorna **`true`** se foi bem-sucedido ao definir o evento. Ele retornará **`false`** se o evento já estiver definido.
 
 ### <a name="remarks"></a>Comentários
 
-Na presença de chamadas múltiplas ou simultâneas para `set`, somente a primeira chamada terá sucesso e seu resultado (se houver) será armazenado no evento de conclusão de tarefa. Os conjuntos restantes são ignorados e o método retornará false. Quando você define um evento de conclusão de tarefa, todas as tarefas criadas a partir desse evento serão concluídas imediatamente e suas continuaçãos, se houver, serão agendadas. Objetos de conclusão de tarefas que têm um `_ResultType` diferente de **void** passarão o valor para suas continuações.
+Na presença de chamadas múltiplas ou simultâneas para `set` , somente a primeira chamada terá sucesso e seu resultado (se houver) será armazenado no evento de conclusão de tarefa. Os conjuntos restantes são ignorados e o método retornará false. Quando você define um evento de conclusão de tarefa, todas as tarefas criadas a partir desse evento serão concluídas imediatamente e suas continuaçãos, se houver, serão agendadas. Objetos de conclusão de tarefa que têm um `_ResultType` diferente de **`void`** passarão o valor para suas continuações.
 
-## <a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a>set_exception
 
 Propaga uma exceção para todas as tarefas associadas a esse evento.
 
@@ -103,7 +103,7 @@ __declspec(noinline) bool set_exception(_E _Except) const;
 __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const ;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_E*<br/>
 O tipo de exceção.
@@ -116,7 +116,7 @@ O ponteiro de exceção a ser definido.
 
 ### <a name="return-value"></a>Valor retornado
 
-## <a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
 
 Constrói um objeto `task_completion_event`.
 
@@ -124,6 +124,6 @@ Constrói um objeto `task_completion_event`.
 task_completion_event();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

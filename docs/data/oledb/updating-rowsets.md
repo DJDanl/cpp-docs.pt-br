@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212937"
 ---
 # <a name="updating-rowsets"></a>Atualizando conjuntos de linhas
 
@@ -80,9 +80,9 @@ HRESULT hr = product.SetData();
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **false** (o valor padrão) especifica que a linha atual seja incrementada para a próxima linha (nesse caso, aponta para a linha inserida).
+- **`false`**(o valor padrão) especifica que a linha atual é incrementada para a próxima linha (nesse caso, ela aponta para a linha inserida).
 
-- **true** especifica que a linha atual fique como está.
+- **`true`** Especifica que a linha atual permanece onde está.
 
 O código a seguir define os valores de membros de dados associados às colunas da tabela `Products` e, em seguida, chama `Insert` para inserir uma nova linha com esses valores após a linha 100 do conjunto de linhas. É recomendável definir todos os valores de coluna para evitar dados indefinidos na nova linha:
 
@@ -206,8 +206,8 @@ Por exemplo, se a primeira chamada `Update` estiver ausente do código acima, a 
 
 Por fim, um motivo principal para adiar as alterações é ser capaz de desfazê-las. Chamar [CRowset::Undo](../../data/oledb/crowset-undo.md) reverte o estado do cache de alterações local para o estado em que o armazenamento de dados estava antes que todas as alterações pendentes fossem feitas. É importante observar que `Undo` não reverte o estado do cache local em uma única etapa (o estado antes da alteração mais recente); em vez disso, ele limpa o cache local para aquela linha. Além disso, `Undo` afeta somente a linha atual.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
+[Trabalhando com modelos de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)<br/>
 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

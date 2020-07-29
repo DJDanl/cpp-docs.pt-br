@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: 44b1031376abd6c50c3b9706089042995994e495
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8c3eeb47ec81f4073452c17f40eb2fec4911989f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177671"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213275"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operadores de incremento e de decremento pós-fixados: ++ e --
 
@@ -38,17 +38,17 @@ O C++ fornece operadores de incremento e decremento de prefixo e sufixo; esta se
 i++;
 ```
 
-O efeito de aplicar o operador de incremento de sufixo ( **++** ) é que o valor do operando é aumentado em uma unidade do tipo apropriado. Da mesma forma, o efeito de aplicar o operador de decréscimo de sufixo ( **--** ) é que o valor do operando é diminuído por uma unidade do tipo apropriado.
+O efeito de aplicar o operador de incremento de sufixo ( **++** ) é que o valor do operando é aumentado por uma unidade do tipo apropriado. Da mesma forma, o efeito da aplicação do operador decremento de sufixo ( **--** ) é que o valor do operando é diminuído por uma unidade do tipo apropriado.
 
 É importante observar que uma expressão de incremento ou decréscimo de sufixo é avaliada como o valor da expressão *antes* do aplicativo do respectivo operador. A operação de aumento ou diminuição ocorre *depois* que o operando é avaliado. Esse problema surge apenas quando a operação de incremento ou decremento de sufixo ocorre no contexto de uma expressão maior.
 
 Quando um operador de sufixo é aplicado a um argumento de função, o valor do argumento não tem garantia de incremento ou decremento antes de ser passada para a função.  Consulte a seção 1.9.17 no padrão C++ para obter mais informações.
 
-Aplicar o operador de incremento de sufixo a um ponteiro para uma matriz de objetos do tipo **Long** realmente adiciona quatro à representação interna do ponteiro. Esse comportamento faz com que o ponteiro, que anteriormente fazia referência ao elemento *n*th da matriz, refira-se ao elemento (*n*+ 1) th.
+Aplicar o operador de incremento de sufixo a um ponteiro para uma matriz de objetos do tipo **`long`** realmente adiciona quatro à representação interna do ponteiro. Esse comportamento faz com que o ponteiro, que anteriormente fazia referência ao elemento *n*th da matriz, refira-se ao elemento (*n*+ 1) th.
 
-Os operandos para aumentar o sufixo e os operadores de decréscimo de sufixo devem ser valores l de tipo aritmético (não **const**) de aritmética ou de ponteiro. O tipo do resultado é o mesmo da *expressão de sufixo*, mas não é mais um l-Value.
+Os operandos dos operadores sufixo e aumento de sufixo devem ser modificadores (não **`const`** ) l-valores de tipo aritmético ou de ponteiro. O tipo do resultado é o mesmo da *expressão de sufixo*, mas não é mais um l-Value.
 
-**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): o operando de um incremento de sufixo ou um operador de decréscimo não pode ser do tipo **bool**.
+**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): o operando de um incremento de sufixo ou um operador de decréscimo não pode ser do tipo **`bool`** .
 
 O código a seguir ilustra o operador de incremento de sufixo:
 
@@ -75,6 +75,6 @@ for( myCompass = North; myCompass != West; myCompass++ ) // Error
 
 ## <a name="see-also"></a>Confira também
 
-[Expressões pós-fixadas](../cpp/postfix-expressions.md)<br/>
-[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operadores de incremento e decremento pós-fixados C](../c-language/c-postfix-increment-and-decrement-operators.md)
+[Expressões de sufixo](../cpp/postfix-expressions.md)<br/>
+[Operadores internos C++, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores de aumento e diminuição de sufixo C](../c-language/c-postfix-increment-and-decrement-operators.md)

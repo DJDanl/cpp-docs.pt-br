@@ -61,12 +61,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: 1bfb4308dc76e3393eceddf8dedd6d11e73adc17
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16c79e05c6ba6f50a3e6c0d6dd5f48963be40fa8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172524"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219775"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Suporte do compilador para traços de tipo (C++/CLI e C++/CX)
 
@@ -78,13 +78,13 @@ O compilador de C++ da Microsoft é compatível com *traços de tipo* para exten
 
 Os traços de tipo são especialmente úteis para programadores que escrevem bibliotecas.
 
-A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos os traços de tipo retornam **false** se a condição especificada pelo nome do traço de tipo não for atendida.
+A lista a seguir contém os traços de tipo compatíveis com o compilador. Todas as características de tipo retornam **`false`** se a condição especificada pelo nome da característica de tipo não é atendida.
 
 (Na lista a seguir, os exemplos de código são escritos somente em C++/CLI. Mas também é compatível com o traço de tipo correspondente em C++/CX, salvo indicação em contrário. O termo "tipo de plataforma" refere-se a tipos de Windows Runtime ou tipos de common language runtime).
 
-- *tipo* de `__has_assign(` `)`
+- `__has_assign(`*tipo* de`)`
 
-   Retorna **true** se o tipo plataforma ou nativo tiver um operador de atribuição de cópia.
+   Retorna **`true`** se a plataforma ou o tipo nativo tem um operador de atribuição de cópia.
 
     ```cpp
     ref struct R {
@@ -96,9 +96,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_copy(` `)`
+- `__has_copy(`*tipo* de`)`
 
-   Retorna **true** se o tipo plataforma ou nativo tiver um construtor de cópia.
+   Retorna **`true`** se a plataforma ou o tipo nativo tem um construtor de cópia.
 
     ```cpp
     ref struct R {
@@ -110,9 +110,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_finalizer(` `)`
+- `__has_finalizer(`*tipo* de`)`
 
-   (Sem suporte em C++/CX.) Retornará **true** se o tipo CLR tiver um finalizador. Consulte [destruidores e finalizadores em como: definir e consumir classes e Structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obter mais informações.
+   (Sem suporte em C++/CX.) Retorna **`true`** se o tipo CLR tem um finalizador. Consulte [destruidores e finalizadores em como: definir e consumir classes e Structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obter mais informações.
 
     ```cpp
     using namespace System;
@@ -127,9 +127,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_nothrow_assign(` `)`
+- `__has_nothrow_assign(`*tipo* de`)`
 
-   Retorna **true** se um operador de atribuição de cópia tiver uma especificação de exceção vazia.
+   Retorna **`true`** se um operador de atribuição de cópia tem uma especificação de exceção vazia.
 
     ```cpp
     #include <stdio.h>
@@ -143,9 +143,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_nothrow_constructor(` `)`
+- `__has_nothrow_constructor(`*tipo* de`)`
 
-   Retorna **true** se um construtor padrão tiver uma especificação de exceção vazia.
+   Retorna **`true`** se o construtor padrão tem uma especificação de exceção vazia.
 
     ```cpp
     #include <stdio.h>
@@ -159,9 +159,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_nothrow_copy(` `)`
+- `__has_nothrow_copy(`*tipo* de`)`
 
-   Retorna **true** se um construtor de cópia tiver uma especificação de exceção vazia.
+   Retorna **`true`** se o construtor de cópia tem uma especificação de exceção vazia.
 
     ```cpp
     #include <stdio.h>
@@ -175,9 +175,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_trivial_assign(` `)`
+- `__has_trivial_assign(`*tipo* de`)`
 
-   Retorna **true** se o tipo tiver um operador de atribuição trivial, gerado pelo compilador.
+   Retorna **`true`** se o tipo tem um operador de atribuição trivial, gerado por compilador.
 
     ```cpp
     #include <stdio.h>
@@ -189,9 +189,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_trivial_constructor(` `)`
+- `__has_trivial_constructor(`*tipo* de`)`
 
-   Retorna **true** se o tipo tiver um construtor trivial, gerado pelo compilador.
+   Retorna **`true`** se o tipo tem um Construtor trivial, gerado por compilador.
 
     ```cpp
     #include <stdio.h>
@@ -203,9 +203,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_trivial_copy(` `)`
+- `__has_trivial_copy(`*tipo* de`)`
 
-   Retorna **true** se o tipo tiver um construtor de cópia trivial, gerado pelo compilador.
+   Retorna **`true`** se o tipo tem um construtor de cópia trivial, gerado por compilador.
 
     ```cpp
     #include <stdio.h>
@@ -217,9 +217,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_trivial_destructor(` `)`
+- `__has_trivial_destructor(`*tipo* de`)`
 
-   Retorna **true** se o tipo tiver um destruidor trivial, gerado pelo compilador.
+   Retorna **`true`** se o tipo tem um destruidor trivial, gerado por compilador.
 
     ``` cpp
     // has_trivial_destructor.cpp
@@ -232,9 +232,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_user_destructor(` `)`
+- `__has_user_destructor(`*tipo* de`)`
 
-   Retorna **true** se o tipo plataforma ou nativo tiver um destruidor declarado pelo usuário.
+   Retorna **`true`** se a plataforma ou o tipo nativo tem um destruidor declarado pelo usuário.
 
     ```cpp
     // has_user_destructor.cpp
@@ -249,9 +249,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__has_virtual_destructor(` `)`
+- `__has_virtual_destructor(`*tipo* de`)`
 
-   Retorna **true** se o tipo tiver um destruidor virtual.
+   Retorna **`true`** se o tipo tem um destruidor virtual.
 
    `__has_virtual_destructor` também funciona em tipos de plataforma, e qualquer destruidor definido pelo usuário em um tipo de plataforma é um destruidor virtual.
 
@@ -268,9 +268,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_abstract(` `)`
+- `__is_abstract(`*tipo* de`)`
 
-   Retorna **true** se o tipo for um tipo abstrato. Saiba mais sobre tipos abstratos nativos em [Classes abstratas](../cpp/abstract-classes-cpp.md).
+   Retorna **`true`** se o tipo é um tipo abstrato. Saiba mais sobre tipos abstratos nativos em [Classes abstratas](../cpp/abstract-classes-cpp.md).
 
    `__is_abstract` também funciona para tipos de plataforma. Uma interface com pelo menos um membro é um tipo abstrato, assim como um tipo de referência com pelo menos um membro abstrato. Saiba mais sobre tipos de plataforma abstratos em [abstract](abstract-cpp-component-extensions.md).
 
@@ -289,9 +289,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
 
 - `__is_base_of(` `base` `,` `derived` `)`
 
-   Retorna **true** se o primeiro tipo for uma classe base do segundo tipo, ou se os dois tipos forem iguais.
+   Retorna **`true`** se o primeiro tipo é uma classe base do segundo tipo, de se ambos os tipos são iguais.
 
-   `__is_base_of` também funciona em tipos de plataforma. Por exemplo, retornará **true** se o primeiro tipo for uma [classe de interface](interface-class-cpp-component-extensions.md), e o segundo tipo implementar a interface.
+   `__is_base_of` também funciona em tipos de plataforma. Por exemplo, retornará **`true`** se o primeiro tipo for uma classe de [interface](interface-class-cpp-component-extensions.md) e o segundo tipo implementar a interface.
 
     ```cpp
     // is_base_of.cpp
@@ -308,9 +308,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_class(` `)`
+- `__is_class(`*tipo* de`)`
 
-   Retorna **true** se o tipo for uma classe ou struct nativa.
+   Retorna **`true`** se o tipo é uma classe nativa ou struct.
 
     ```cpp
     #include <stdio.h>
@@ -322,9 +322,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- `__is_convertible_to(` `from` `,``to` `)`
+- `__is_convertible_to(` `from` `,`  `to` `)`
 
-   Retorna **true** se o primeiro tipo puder ser convertido no segundo tipo.
+   Retorna **`true`** se o primeiro tipo pode ser convertido para o segundo tipo.
 
     ```cpp
     #include <stdio.h>
@@ -340,9 +340,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_delegate(` `)`
+- `__is_delegate(`*tipo* de`)`
 
-   Retorna **true** se `type` for um delegado. Saiba mais em [delegado (C++/CLI e C++/CX)](delegate-cpp-component-extensions.md).
+   Retorna **`true`** se `type` é um delegado. Saiba mais em [delegado (C++/CLI e C++/CX)](delegate-cpp-component-extensions.md).
 
     ```cpp
     delegate void MyDel();
@@ -351,9 +351,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_empty(` `)`
+- `__is_empty(`*tipo* de`)`
 
-   Retorna **true** se o tipo não tiver membro de dados de instância.
+   Retorna **`true`** se o tipo não tem nenhum membro de dados de instância.
 
     ```cpp
     #include <stdio.h>
@@ -367,9 +367,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_enum(` `)`
+- `__is_enum(`*tipo* de`)`
 
-   Retorna **true** se o tipo for uma enumeração nativa.
+   Retorna **`true`** se o tipo é uma enumeração nativa.
 
     ```cpp
     // is_enum.cpp
@@ -389,9 +389,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_interface_class(` `)`
+- `__is_interface_class(`*tipo* de`)`
 
-   Retorna **true** se uma interface de plataforma for passada. Saiba mais em [classe de interface](interface-class-cpp-component-extensions.md).
+   Retorna **`true`** se passou por uma interface de plataforma. Saiba mais em [classe de interface](interface-class-cpp-component-extensions.md).
 
     ```cpp
     // is_interface_class.cpp
@@ -403,9 +403,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_pod(` `)`
+- `__is_pod(`*tipo* de`)`
 
-   Retorna **true** se o tipo for uma classe ou união sem construtor ou os membros não estáticos privados ou protegidos, sem classes base e sem funções virtuais. Confira o C++ padrão, seções 8.5.1/1, 9/4 e 3.9/10 para saber mais sobre PODs.
+   Retorna **`true`** se o tipo é uma classe ou Union sem nenhum construtor ou membros não estáticos protegidos ou privados, nenhuma classe base e nenhuma função virtual. Confira o C++ padrão, seções 8.5.1/1, 9/4 e 3.9/10 para saber mais sobre PODs.
 
    `__is_pod` retornará false em tipos fundamentais.
 
@@ -419,9 +419,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_polymorphic(` `)`
+- `__is_polymorphic(`*tipo* de`)`
 
-   Retorna **true** se um tipo nativo tiver funções virtuais.
+   Retorna **`true`** se um tipo nativo tem funções virtuais.
 
     ```cpp
     #include <stdio.h>
@@ -435,9 +435,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_ref_array(` `)`
+- `__is_ref_array(`*tipo* de`)`
 
-   Retorna **true** se uma matriz de plataforma for passada. Saiba mais em [Matrizes](arrays-cpp-component-extensions.md).
+   Retorna **`true`** se passou uma matriz de plataforma. Saiba mais em [Matrizes](arrays-cpp-component-extensions.md).
 
     ```cpp
     using namespace System;
@@ -447,9 +447,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_ref_class(` `)`
+- `__is_ref_class(`*tipo* de`)`
 
-   Retorna **true** se uma classe de referência for passada. Saiba mais sobre tipos de referência definidos pelo usuário em [Classes e Structs](classes-and-structs-cpp-component-extensions.md).
+   Retorna **`true`** se passou uma classe de referência. Saiba mais sobre tipos de referência definidos pelo usuário em [Classes e Structs](classes-and-structs-cpp-component-extensions.md).
 
     ```cpp
     using namespace System;
@@ -460,9 +460,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_sealed(` `)`
+- `__is_sealed(`*tipo* de`)`
 
-   Retornará **true** se uma plataforma ou tipo nativo for passado marcado como selado. Saiba mais em [selado](sealed-cpp-component-extensions.md).
+   Retorna **`true`** se passado uma plataforma ou tipo nativo marcado como Sealed. Saiba mais em [selado](sealed-cpp-component-extensions.md).
 
     ```cpp
     ref class R sealed{};
@@ -471,9 +471,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_simple_value_class(` `)`
+- `__is_simple_value_class(`*tipo* de`)`
 
-   Retorna **true** se um tipo de valor que não contém nenhuma referência for passado para o heap coletado como lixo. Saiba mais sobre tipos de valor definidos pelo usuário em [Classes e structs](classes-and-structs-cpp-component-extensions.md).
+   Retorna **`true`** se passado um tipo de valor que não contém nenhuma referência ao heap coletado por lixo. Saiba mais sobre tipos de valor definidos pelo usuário em [Classes e structs](classes-and-structs-cpp-component-extensions.md).
 
     ```cpp
     using namespace System;
@@ -489,9 +489,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_union(` `)`
+- `__is_union(`*tipo* de`)`
 
-   Retornará **true** se um tipo for uma união.
+   Retorna **`true`** se um tipo é uma Union.
 
     ```cpp
     #include <stdio.h>
@@ -506,9 +506,9 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-- *tipo* de `__is_value_class(` `)`
+- `__is_value_class(`*tipo* de`)`
 
-   Retornará **true** se um tipo de valor for passado. Saiba mais sobre tipos de valor definidos pelo usuário em [Classes e structs](classes-and-structs-cpp-component-extensions.md).
+   Retorna **`true`** se passado um tipo de valor. Saiba mais sobre tipos de valor definidos pelo usuário em [Classes e structs](classes-and-structs-cpp-component-extensions.md).
 
     ```cpp
     value struct V {};
@@ -518,11 +518,11 @@ A lista a seguir contém os traços de tipo compatíveis com o compilador. Todos
     }
     ```
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 ### <a name="remarks"></a>Comentários
 
-O traço `__has_finalizer(`*tipo*`)` não é compatível porque esta plataforma não é compatível com finalizadores.
+`__has_finalizer(` *type* `)` Não há suporte para a característica de tipo de tipo porque esta plataforma não oferece suporte a finalizadores.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -570,4 +570,4 @@ R is a ref class
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

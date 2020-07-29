@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: cfa928c84fbf6c841e3caaf51dda526a7ae184fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998658"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212651"
 ---
 # <a name="compiler-error-c2864"></a>Erro do compilador C2864
 
@@ -19,7 +19,7 @@ ms.locfileid: "71998658"
 
 ## <a name="remarks"></a>Comentários
 
-Para inicializar um membro de dados `static` que é definido como `volatile`, não `const` ou não como um tipo integral, use uma instrução de definição de membro. Eles não podem ser inicializados em uma declaração.
+Para inicializar um **`static`** membro de dados que é definido como **`volatile`** **`const`** um tipo, não, ou não integral, use uma instrução de definição de membro. Eles não podem ser inicializados em uma declaração.
 
 ## <a name="example"></a>Exemplo
 

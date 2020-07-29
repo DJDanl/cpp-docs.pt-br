@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f95e9fc55acd33705b855c7c4f0ef268d4776a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172172"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219684"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -31,7 +31,7 @@ __identifier(C++_keyword)
 
 O uso da palavra-chave **__identifier** para identificadores que não são palavras-chave é permitido, mas fortemente desaconselhado por questões de estilo.
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 ### <a name="requirements"></a>Requisitos
 
@@ -41,7 +41,7 @@ Opção do compilador: `/ZW`
 
 **Exemplo**
 
-No exemplo a seguir, uma classe chamada **template** é criada em C# e distribuída como uma DLL. No programa C++/CLI que usa a classe **template**, a palavra-chave **__identifier** esconde o fato de que **template** é uma palavra-chave padrão C++.
+No exemplo a seguir, uma classe chamada `template` é criada em C# e distribuída como uma dll. No programa C++/CLI que usa a `template` classe, a **`__identifier`** palavra-chave oculta o fato que `template` é uma palavra-chave C++ padrão.
 
 ```csharp
 // identifier_template.cs
@@ -73,7 +73,7 @@ Opção do compilador: `/clr`
 
 ### <a name="examples"></a>Exemplos
 
-No exemplo a seguir, uma classe chamada **template** é criada em C# e distribuída como uma DLL. No programa C++/CLI que usa a classe **template**, a palavra-chave **__identifier** esconde o fato de que **template** é uma palavra-chave padrão C++.
+No exemplo a seguir, uma classe chamada `template` é criada em C# e distribuída como uma dll. No programa C++/CLI que usa a `template` classe, a **`__identifier`** palavra-chave oculta o fato que `template` é uma palavra-chave C++ padrão.
 
 ```csharp
 // identifier_template.cs
@@ -96,5 +96,5 @@ int main() {
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

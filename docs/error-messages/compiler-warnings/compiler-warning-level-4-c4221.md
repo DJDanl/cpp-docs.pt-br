@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: fa948865685af4cbd6a865cfbf1d8546b29ab280
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e925f315e8506453403b0a0eda75b7c2956cc05c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161133"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219931"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>Aviso do compilador (nível 4) C4221
 
 extensão não padrão usada: ' identifier ': não pode ser inicializada usando endereço de variável automática
 
-Com as extensões padrão da Microsoft (/Ze), você pode inicializar um tipo de agregação (**matriz**, `struct`ou **União**) com o endereço de uma variável local (automática).
+Com as extensões padrão da Microsoft (/Ze), você pode inicializar um tipo de agregação (**matriz**, **`struct`** ou **`union`** ) com o endereço de uma variável local (automática).
 
 ## <a name="example"></a>Exemplo
 

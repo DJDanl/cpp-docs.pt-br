@@ -28,12 +28,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 067ce6f347f4b24ad8c85990e70fe4d79305535c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918716"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213626"
 ---
 # <a name="calloc"></a>calloc
 
@@ -48,7 +48,7 @@ void *calloc(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *number*<br/>
 Número de elementos.
@@ -58,7 +58,7 @@ O comprimento, em bytes, de cada elemento.
 
 ## <a name="return-value"></a>Valor retornado
 
-**calloc** retorna um ponteiro para o espaço alocado. O espaço de armazenamento ao qual o valor retornado apontou com certeza estará alinhado de modo adequado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo diferente de **void**, use uma conversão de tipo no valor de retorno.
+**calloc** retorna um ponteiro para o espaço alocado. O espaço de armazenamento ao qual o valor retornado apontou com certeza estará alinhado de modo adequado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo diferente de **`void`** , use uma conversão de tipo no valor de retorno.
 
 ## <a name="remarks"></a>Comentários
 
@@ -68,7 +68,7 @@ A função **calloc** aloca espaço de armazenamento para uma matriz de elemento
 
 Na implementação da Microsoft, se o *número* ou o *tamanho* for zero, **calloc** retornará um ponteiro para um bloco alocado de tamanho diferente de zero. Uma tentativa de ler ou gravar o ponteiro retornado leva a um comportamento indefinido.
 
-**calloc** usa a função [_set_new_mode](set-new-mode.md) do C++ para definir o *novo modo de manipulador*. O novo modo de manipulador indica se, em caso de falha, **calloc** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, **calloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando **calloc** falha ao alocar memória, ele chama a nova rotina do manipulador da mesma maneira que o **novo** operador faz quando ele falha pelo mesmo motivo. Para substituir o padrão, chame
+**calloc** usa a função [_set_new_mode](set-new-mode.md) do C++ para definir o *novo modo de manipulador*. O novo modo de manipulador indica se, em caso de falha, **calloc** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, **calloc** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando **calloc** falha ao alocar memória, ele chama a nova rotina de manipulador da mesma maneira que o **`new`** operador faz quando ele falha pelo mesmo motivo. Para substituir o padrão, chame
 
 ```C
 _set_new_mode(1);
@@ -78,7 +78,7 @@ no início do programa ou vincular com *NewMode. OBJ* (consulte [Opções de lin
 
 Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução do C, o **calloc** é resolvido para [_calloc_dbg](calloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
 
-**calloc** é marcado `__declspec(noalias)` como `__declspec(restrict)`e, o que significa que a função está garantida para não modificar variáveis globais e que o ponteiro retornado não tem um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**calloc** é marcado como `__declspec(noalias)` e `__declspec(restrict)` , o que significa que a função está garantida para não modificar variáveis globais e que o ponteiro retornado não tem um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 

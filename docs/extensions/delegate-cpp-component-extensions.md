@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172432"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219723"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI e C++/CX)
 
@@ -29,7 +29,7 @@ O Windows Runtime e o common language runtime dão suporte a delegados.
 
 Para detectar em tempo de compilação se um tipo é um delegado, use o traço de tipo `__is_delegate()`. Saiba mais em [Suporte para compilador de traços de tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 O C++/CX é compatível com delegados com a sintaxe a seguir.
 
@@ -47,10 +47,10 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>parâmetros
 
-*access*<br/>
-(opcional) A acessibilidade do delegado, que pode ser **public** (padrão) ou **private**. O protótipo de função também pode ser qualificado com as palavras-chaves **const** ou **volatile**.
+*às*<br/>
+adicional A acessibilidade do delegado, que pode ser **`public`** (o padrão) ou **`private`** . O protótipo de função também pode ser qualificado com **`const`** as **`volatile`** palavras-chave ou.
 
-*return-type*<br/>
+*tipo de retorno*<br/>
 O tipo de retorno do protótipo da função.
 
 *delegate-type-identifier*<br/>
@@ -81,13 +81,13 @@ function_declaration
 
 ### <a name="parameters"></a>parâmetros
 
-*access*<br/>
+*às*<br/>
 (opcional) A acessibilidade de delegate fora do assembly pode ser public ou private.  O padrão é private.  Dentro de uma classe, um delegado pode ter qualquer acessibilidade.
 
 *function_declaration*<br/>
 A assinatura da função que pode ser associada ao delegado. O tipo de retorno de um delegado pode ser qualquer tipo gerenciado. Por motivos de interoperabilidade, recomendamos que o tipo de retorno de um delegado seja do tipo CLS.
 
-Para definir um delegado não associado, o primeiro parâmetro em *function_declaration* deve ser o tipo do ponteiro **this** do objeto.
+Para definir um delegado não associado, o primeiro parâmetro em *function_declaration* deve ser o tipo do **`this`** ponteiro para o objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -119,7 +119,7 @@ Ao criar um delegado para uma função global ou estática, apenas um parâmetro
 
 Saiba mais sobre delegados em
 
-- [Como definir e usar delegados (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Como: definir e usar delegados (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
 - [Delegados genéricos (C++/CLI)](generic-delegates-visual-cpp.md)
 
@@ -202,4 +202,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

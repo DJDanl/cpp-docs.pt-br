@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183357"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213015"
 ---
 # <a name="platformstathreadattribute-class"></a>Classe Platform::STAThreadAttribute
 
@@ -38,12 +38,12 @@ public ref class STAThreadAttribute sealed : Attribute
 
 ### <a name="public-methods"></a>Métodos públicos
 
-O atributo STAThreadAttribute herda [classe Platform:: Object](../cppcx/platform-object-class.md). STAThreadAttribute também sobrecarrega ou possui os seguintes membros:
+O atributo STAThreadAttribute herda da [classe Platform:: Object](../cppcx/platform-object-class.md). STAThreadAttribute também sobrecarrega ou possui os seguintes membros:
 
 |Nome|Descrição|
 |----------|-----------------|
 |[STAThreadAttribute::Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|
-|[STAThreadAttribute::GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|
+|[STAThreadAttribute::GetHashCode](#gethashcode)|Retorna o código hash para a instância.|
 |[STAThreadAttribute::ToString](#tostring)|Retorna uma cadeia de caracteres que representa o objeto atual.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
@@ -54,9 +54,9 @@ O atributo STAThreadAttribute herda [classe Platform:: Object](../cppcx/platform
 
 **Cabeçalho:** collection.h
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
-## <a name="ctor"></a> STAThreadAttribute constructor
+## <a name="stathreadattribute-constructor"></a><a name="ctor"></a> STAThreadAttribute constructor
 
 Inicializa uma nova instância da classe STAThreadAttribute.
 
@@ -66,7 +66,7 @@ Inicializa uma nova instância da classe STAThreadAttribute.
 public:STAThreadAttribute();
 ```
 
-## <a name="equals"></a> STAThreadAttribute::Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute:: Equals
 
 Determina se o objeto especificado é igual ao objeto atual.
 
@@ -76,18 +76,18 @@ Determina se o objeto especificado é igual ao objeto atual.
 public:virtual override bool Equals( Object^ obj );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *obj*<br/>
-O objeto a ser comparado.
+O objeto a comparar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se os objetos forem iguais; caso contrário, **falso**.
+**`true`** Se os objetos forem iguais; caso contrário, **`false`** .
 
-## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute:: GetHashCode
 
-Retorna o código hash para essa instância.
+Retorna o código hash para a instância.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -95,11 +95,11 @@ Retorna o código hash para essa instância.
 public:int GetHashCode();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O código hash para essa instância.
 
-## <a name="tostring"></a> STAThreadAttribute::ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute:: ToString
 
 Retorna uma cadeia de caracteres que representa o objeto atual.
 
@@ -109,10 +109,10 @@ Retorna uma cadeia de caracteres que representa o objeto atual.
 public:String^ ToString();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres que representa o objeto atual.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Namespace de plataforma](platform-namespace-c-cx.md)
+[Namespace da plataforma](platform-namespace-c-cx.md)

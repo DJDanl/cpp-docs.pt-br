@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916226"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213548"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -69,7 +69,7 @@ errno_t _gmtime64_s(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *tmDest*<br/>
 Ponteiro para uma estrutura [TM](../../c-runtime-library/standard-types.md) . Os campos da estrutura retornada contêm o valor avaliado do argumento do *temporizador* em UTC em vez de na hora local.
@@ -85,8 +85,8 @@ Zero se for bem-sucedido. Se houver uma falha, o valor retornado será um códig
 
 |*tmDest*|*origemtime*|Retorno|Valor em *tmDest*|
 |-----------|------------|------------|--------------------|
-|**NULO**|any|**EINVAL**|Não modificado.|
-|Not **NULL** (aponta para memória válida)|**NULO**|**EINVAL**|Todos os campos definidos como -1.|
+|**NULL**|any|**EINVAL**|Não modificado.|
+|Not **NULL** (aponta para memória válida)|**NULL**|**EINVAL**|Todos os campos definidos como -1.|
 |Não **nulo**|< 0|**EINVAL**|Todos os campos definidos como -1.|
 
 Caso as duas primeiras condições de erro ocorram, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EINVAL** e retornarão **EINVAL**.
@@ -98,7 +98,7 @@ A função **_gmtime32_s** divide o valor de *sourcetime* e o armazena em uma es
 > [!NOTE]
 > O ambiente de destino deve tentar determinar se o horário de verão está em vigor. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo do horário de verão.
 
-Cada um dos campos de estrutura é do tipo **int**, conforme mostrado na tabela a seguir.
+Cada um dos campos de estrutura é do tipo **`int`** , conforme mostrado na tabela a seguir.
 
 |Campo|Descrição|
 |-|-|
@@ -122,7 +122,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|---------------------|-|
-|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<CTime> ou \<time. h>|
+|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<ctime> ou \<time.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371441"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212989"
 ---
 # <a name="handletraits-structure"></a>Estrutura HANDLETraits
 
-Define características comuns de uma alça.
+Define características comuns de um identificador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,14 +34,14 @@ struct HANDLETraits;
 
 Nome   | Descrição
 ------ | ---------------------
-`Type` | Um sinônimo de HANDLE.
+`Type` | Um sinônimo para identificador.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                                              | Descrição
 ------------------------------------------------- | -----------------------------
-[HANDLETraits::Close](#close)                     | Fecha a alça especificada.
-[HANDLETraits::GetInvalidValue](#getinvalidvalue) | Representa uma alça inválida.
+[HANDLETraits:: fechar](#close)                     | Fecha o identificador especificado.
+[HANDLETraits:: getinvalidvalue](#getinvalidvalue) | Representa um identificador inválido.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -49,13 +49,13 @@ Nome                                              | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** corewrappers.h
+**Cabeçalho:** corewrappers. h
 
-**Espaço de nome:** Microsoft::WRL::Wrappers::HandleTraits
+**Namespace:** Microsoft:: WRL:: wrappers:: HandleTraits
 
-## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits::Close
+## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits:: fechar
 
-Fecha a alça especificada.
+Fecha o identificador especificado.
 
 ```cpp
 inline static bool Close(
@@ -63,18 +63,18 @@ inline static bool Close(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*H*<br/>
-A alça para fechar.
+*h*<br/>
+O identificador a ser fechado.
 
 ### <a name="return-value"></a>Valor retornado
 
-**verdade** se a alça *h* fechado com sucesso; caso contrário, **falso**.
+**`true`** Se o identificador *h* foi fechado com êxito; caso contrário, **`false`** .
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits:: getinvalidvalue
 
-Representa uma alça inválida.
+Representa um identificador inválido.
 
 ```cpp
 inline static HANDLE GetInvalidValue();
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>Valor retornado
 
-Sempre retorna INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE é definida pelo Windows.)
+Sempre retorna INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE é definido pelo Windows.)

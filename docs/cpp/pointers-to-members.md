@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 75bd29310d64b0309ac48be053aa43cc0084aa2d
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226091"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213288"
 ---
 # <a name="pointers-to-members"></a>Ponteiros para membros
 
@@ -25,7 +25,7 @@ As declarações dos ponteiros para os membros são casos especiais de declaraç
 
    - Um especificador de classe de armazenamento opcional.
 
-   - Especificadores **const** e **volatile** opcionais.
+   - Opcional **`const`** e **`volatile`** especificadores.
 
    - O especificador de tipo: o nome de um tipo. É o tipo do membro a ser apontado, não a classe.
 
@@ -39,7 +39,7 @@ As declarações dos ponteiros para os membros são casos especiais de declaraç
 
    - O __`*`__ operador.
 
-   - Especificadores **const** e **volatile** opcionais.
+   - Opcional **`const`** e **`volatile`** especificadores.
 
    - O identificador que nomeia o ponteiro para o membro.
 
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-No exemplo anterior, `pwCaption` é um ponteiro para qualquer membro da classe `Window` que é do tipo `char*` . O tipo de `pwCaption` é `char * Window::*`. O fragmento de código a seguir declara ponteiros para as funções de membro `SetCaption` e `GetCaption`.
+No exemplo anterior, `pwCaption` é um ponteiro para qualquer membro da classe `Window` que é do tipo **`char*`** . O tipo de `pwCaption` é `char * Window::*`. O fragmento de código a seguir declara ponteiros para as funções de membro `SetCaption` e `GetCaption`.
 
 ```cpp
 const char * (Window::* pfnwGC)() = &Window::GetCaption;

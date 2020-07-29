@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f50cb27a239e794b87a15920a36e96529bd6a466
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758886"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212794"
 ---
 # <a name="compiler-error-c2249"></a>Erro do compilador C2249
 
 ' member ': nenhum caminho acessível para o membro de acesso declarado na base virtual ' class '
 
-O `member` é herdado de uma estrutura ou classe base não pública `virtual`.
+O `member` é herdado de uma **`virtual`** classe base ou estrutura não pública.
 
 ## <a name="example"></a>Exemplo
 
@@ -42,7 +42,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-C2249 também pode ocorrer se você tentar atribuir um fluxo da biblioteca C++ padrão para outro fluxo.  O exemplo a seguir gera C2249.
+C2249 também pode ocorrer se você tentar atribuir um fluxo da biblioteca padrão C++ para outro fluxo.  O exemplo a seguir gera C2249.
 
 ```cpp
 // C2249_2.cpp

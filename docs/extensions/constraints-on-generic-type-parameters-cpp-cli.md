@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172472"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219748"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restrições em parâmetros de tipo genérico (C++/CLI)
 
@@ -29,7 +29,7 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>parâmetros
 
-*type-parameter*<br/>
+*parâmetro de tipo*<br/>
 Um dos parâmetros de tipo a ser restringido.
 
 *lista de restrições*<br/>
@@ -37,13 +37,13 @@ A *lista de restrições* é uma lista separada por vírgulas das especificaçõ
 
 Ela também pode incluir uma classe. Para o argumento de tipo atender a uma restrição de classe base, ele deve ser da mesma classe que a restrição ou derivar da restrição.
 
-Você também pode especificar **gcnew()** para indicar que o argumento de tipo deve ter um construtor público sem parâmetros; ou **classe ref** para indicar que o argumento de tipo deve ser um tipo de referência, incluindo qualquer classe, interface, delegado ou tipo de matriz; ou **classe de valor** para indicar que o tipo de argumento deve ser um tipo de valor. Qualquer valor de tipo, exceto Nullable\<T>, pode ser especificado.
+Você também pode especificar **gcnew()** para indicar que o argumento de tipo deve ter um construtor público sem parâmetros; ou **classe ref** para indicar que o argumento de tipo deve ser um tipo de referência, incluindo qualquer classe, interface, delegado ou tipo de matriz; ou **classe de valor** para indicar que o tipo de argumento deve ser um tipo de valor. Qualquer tipo de valor, exceto Nullable, \<T> pode ser especificado.
 
 Você também pode especificar um parâmetro genérico como restrição. O argumento de tipo fornecido para o tipo que você está restringindo deve ser ou derivar do tipo de restrição. Isso é chamado de restrição de tipo naked.
 
 ## <a name="remarks"></a>Comentários
 
-A cláusula da restrição é composta por **where** seguido por um parâmetro de tipo, dois-pontos ( **:** ) e a restrição, que especifica a natureza da restrição no parâmetro de tipo. **where** é uma palavra-chave contextual; veja mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md). Separe várias cláusulas **where** com um espaço.
+A cláusula da restrição é composta por **where** seguido por um parâmetro de tipo, dois-pontos (**:**) e a restrição, que especifica a natureza da restrição no parâmetro de tipo. **where** é uma palavra-chave contextual; veja mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md). Separe várias cláusulas **where** com um espaço.
 
 As restrições são aplicadas aos parâmetros de tipo para colocar limitações sobre os tipos que podem ser usados como argumentos para um tipo ou método genérico.
 
@@ -64,7 +64,7 @@ Essa restrição exige que um argumento de tipo usado para `T` implemente `IComp
 
 Os métodos estáticos na classe do argumento de tipo não podem ser chamados por meio do parâmetro de tipo; eles só podem ser chamados por meio do tipo nomeado real.
 
-Uma restrição não pode ser um tipo de valor, incluindo tipos internos, como **int** ou **double**. Como os tipos de valor não podem ter classes derivadas, apenas uma classe seria capaz de atender à restrição. Nesse caso, o genérico pode ser reescrito com o parâmetro de tipo substituído pelo tipo de valor específico.
+Uma restrição não pode ser um tipo de valor, incluindo tipos internos, como **`int`** ou **`double`** . Como os tipos de valor não podem ter classes derivadas, apenas uma classe seria capaz de atender à restrição. Nesse caso, o genérico pode ser reescrito com o parâmetro de tipo substituído pelo tipo de valor específico.
 
 As restrições são necessárias em alguns casos, pois o compilador não permitirá o uso de métodos ou de outros recursos de um tipo desconhecido, a menos que as restrições indiquem que o tipo desconhecido é compatível com métodos ou interfaces.
 
