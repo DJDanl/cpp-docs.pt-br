@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 5a430154c9ad31a9776eeb2ba569fa0da33fac81
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373544"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189669"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>Nomes de localidades, idiomas e cadeias de caracteres de país–região do UCRT
 
@@ -34,7 +34,7 @@ A *página de código* é a página de código ANSI/OEM associada à localidade.
 
 Se você usar somente a página de código para especificar a localidade, serão usados o idioma e o país/região padrão do usuário, relatados por [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). Por exemplo, se você especificar `".1254"` (turco ANSI) como a localidade de um usuário que está configurado para inglês (Estados Unidos), a localidade armazenada será `English_United States.1254`. Não recomendamos essa forma, pois isso poderia resultar em comportamento inconsistente.
 
-Um valor do argumento *locale* de `C` especifica o ambiente em conformidade mínima com ANSI para a conversão em C. A localidade `C` pressupõe que cada tipo de dados **char** tem 1 byte e seu valor é sempre menor que 256. Se *locale* apontar para uma cadeia de caracteres vazia, a localidade será o ambiente nativo definido pela implementação.
+Um valor do argumento *locale* de `C` especifica o ambiente em conformidade mínima com ANSI para a conversão em C. A `C` localidade pressupõe que cada **`char`** tipo de dados é 1 byte e seu valor é sempre menor que 256. Se *locale* apontar para uma cadeia de caracteres vazia, a localidade será o ambiente nativo definido pela implementação.
 
 Você pode especificar todas as categorias de localidade ao mesmo tempo para as funções `setlocale` e `_wsetlocale` usando a categoria `LC_ALL`. Todas as categorias podem ser definidas para a mesma localidade, ou você pode definir cada categoria individualmente usando um argumento de localidade que tenha esta forma:
 

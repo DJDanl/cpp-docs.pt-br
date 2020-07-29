@@ -2,16 +2,16 @@
 title: Resolução de nome para tipos dependentes
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227303"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Resolução de nome para tipos dependentes
 
-Use **TypeName** para nomes qualificados em definições de modelo para informar ao compilador que o nome qualificado fornecido identifica um tipo. Para obter mais informações, consulte [TypeName](../cpp/typename.md).
+Use **`typename`** para nomes qualificados em definições de modelo para informar ao compilador que o nome qualificado fornecido identifica um tipo. Para obter mais informações, consulte [TypeName](../cpp/typename.md).
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-A pesquisa de nome para nomes dependentes examina nomes do contexto da definição do modelo — no exemplo a seguir, esse contexto encontrará `myFunction(char)`— e o contexto da instanciação do modelo. No exemplo a seguir, o modelo é instanciado em Main; Portanto, o `MyNamespace::myFunction` é visível a partir do ponto de instanciação e é escolhido como a melhor correspondência. Se `MyNamespace::myFunction` fosse renomeado, `myFunction(char)` seria chamado.
+A pesquisa de nome para nomes dependentes examina nomes do contexto da definição do modelo — no exemplo a seguir, esse contexto encontraria `myFunction(char)` — e o contexto da instanciação do modelo. No exemplo a seguir, o modelo é instanciado em Main; Portanto, o `MyNamespace::myFunction` é visível a partir do ponto de instanciação e é escolhido como a melhor correspondência. Se `MyNamespace::myFunction` fosse renomeado, `myFunction(char)` seria chamado.
 
 Todos os nomes são resolvidos como se fossem nomes dependentes. Entretanto, recomendamos que você use nomes totalmente qualificados se houver qualquer conflito possível.
 

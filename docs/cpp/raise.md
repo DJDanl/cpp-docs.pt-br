@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: db6ba1693e4d3144b95530646b061e9cd7a58a5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317229"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227121"
 ---
 # <a name="__raise"></a>__raise
 
@@ -26,9 +26,9 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Comentários
 
-No código gerenciado, um evento só pode ser acionado de dentro da classe em que é definido. Consulte [o evento](../extensions/event-cpp-component-extensions.md) para obter mais informações.
+No código gerenciado, um evento só pode ser acionado de dentro da classe em que é definido. Consulte o [evento](../extensions/event-cpp-component-extensions.md) para obter mais informações.
 
-A palavra-chave **__raise** faz com que um erro seja emitido se você chamar um não-evento.
+A palavra-chave **`__raise`** faz com que um erro seja emitido se você chamar um não evento.
 
 > [!NOTE]
 > Uma classe ou um struct modelo não podem conter eventos.

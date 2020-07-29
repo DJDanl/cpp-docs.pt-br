@@ -43,12 +43,12 @@ helpviewer_keywords:
 - strtoul_l function
 - tcstoul function
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
-ms.openlocfilehash: 9e0e466893aedb565fcd5852c6768ecfc620c611
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ceeb541a44d969db471cb2ba798bdc13079b5759
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912400"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189253"
 ---
 # <a name="strtoul-_strtoul_l-wcstoul-_wcstoul_l"></a>strtoul, _strtoul_l, wcstoul, _wcstoul_l
 
@@ -81,7 +81,7 @@ unsigned long _wcstoul_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strSource*<br/>
 Cadeia de caracteres terminada em nulo a ser convertida.
@@ -103,7 +103,7 @@ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/er
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções converte a cadeia de caracteres de entrada *strSource* em um **longo** **não assinado** .
+Cada uma dessas funções converte a cadeia de caracteres de entrada *strSource* em um **`unsigned long`** .
 
 **strtoul** interrompe a leitura da cadeia de caracteres *strSource* no primeiro caractere que ela não pode reconhecer como parte de um número. Esse pode ser o caractere nulo de terminação ou pode ser o primeiro caractere numérico maior ou igual à *base*. A configuração de categoria de **LC_NUMERIC** da localidade determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). **strtoul** e **wcstoul** usam a localidade atual; **_strtoul_l** e **_wcstoul_l** são idênticas, exceto pelo fato de que usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -122,9 +122,9 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 **strtoul** espera que *strSource* aponte para uma cadeia de caracteres do seguinte formato:
 
-> [*espaço em branco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*dígitos* &#124; *letras*]
+> [*espaço em branco*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*dígitos* &#124; *letras*]
 
-Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, ignorados. os *dígitos* são um ou mais dígitos decimais. as *letras* são uma ou mais das letras ' a ' por meio de ' z ' (ou ' a ' por meio de ' z '). O primeiro caractere que não é adequado a esse formato interrompe o exame. Se *base* estiver entre 2 e 36, ela será usada como a base do número. Se *base* for 0, os caracteres iniciais da cadeia de caracteres apontada por *strSource* serão usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se *base* for 0 e o primeiro caractere verificado for ' 0 ', um inteiro octal será assumido e um caractere ' 8 ' ou ' 9 ' interromperá a verificação. **strtoul** permite um prefixo de**+** sinal de mais (**-**) ou menos (); um sinal de subtração à esquerda indica que o valor de retorno é negado.
+Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, ignorados. os *dígitos* são um ou mais dígitos decimais. as *letras* são uma ou mais das letras ' a ' por meio de ' z ' (ou ' a ' por meio de ' z '). O primeiro caractere que não é adequado a esse formato interrompe o exame. Se *base* estiver entre 2 e 36, ela será usada como a base do número. Se *base* for 0, os caracteres iniciais da cadeia de caracteres apontada por *strSource* serão usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se *base* for 0 e o primeiro caractere verificado for ' 0 ', um inteiro octal será assumido e um caractere ' 8 ' ou ' 9 ' interromperá a verificação. **strtoul** permite um prefixo de sinal de adição ( **+** ) ou de subtração ( **-** ); um sinal de subtração à esquerda indica que o valor de retorno é negado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -141,13 +141,13 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Consulte o exemplo de [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Funções de valor da cadeia de caracteres para numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Cadeia de caracteres para funções de valor numérico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

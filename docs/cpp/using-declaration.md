@@ -7,16 +7,16 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187837"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227017"
 ---
 # <a name="using-declaration"></a>usando declaração
 
-A Declaração **using** apresenta um nome para a região declarativa na qual a declaração using é exibida.
+A **`using`** declaração apresenta um nome para a região declarativa na qual a declaração using é exibida.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,15 +27,15 @@ using declarator-list ;
 
 ### <a name="parameters"></a>parâmetros
 
-*especificador de nome aninhado* Uma sequência de nomes de namespace, classe ou enumeração e operadores de resolução de escopo (::), terminados por um operador de resolução de escopo. Um operador de resolução de escopo único pode ser usado para introduzir um nome do namespace global. O **TypeName** de palavra-chave é opcional e pode ser usado para resolver nomes dependentes quando introduzido em um modelo de classe de uma classe base.
+*especificador de nome aninhado* Uma sequência de nomes de namespace, classe ou enumeração e operadores de resolução de escopo (::), terminados por um operador de resolução de escopo. Um operador de resolução de escopo único pode ser usado para introduzir um nome do namespace global. A palavra-chave **`typename`** é opcional e pode ser usada para resolver nomes dependentes quando introduzido em um modelo de classe de uma classe base.
 
 *ID não qualificada* Uma expressão de ID não qualificada, que pode ser um identificador, um nome de operador sobrecarregado, um operador literal definido pelo usuário ou um nome de função de conversão, um nome de destruidor de classe ou um nome de modelo e uma lista de argumentos.
 
-*Declarador-lista* Uma lista separada por vírgulas de [**TypeName**]- *nome-especificador* - *ID não qualificado* declaradores, seguidos opcionalmente por uma elipse.
+*Declarador-lista* Uma lista separada por vírgulas de [ **`typename`** ] declaradores de *ID não qualificados* do *especificador de nome aninhado* , seguido opcionalmente por uma elipse.
 
 ## <a name="remarks"></a>Comentários
 
-Uma declaração using introduz um nome não qualificado como um sinônimo para uma entidade declarada em outro lugar. Ele permite que um único nome de um namespace específico seja usado sem qualificação explícita na região de declaração na qual ele aparece. Isso é diferente da [diretiva using](../cpp/namespaces-cpp.md#using_directives), que permite que *todos* os nomes em um namespace sejam usados sem qualificação. A palavra-chave **using** também é usada para [aliases de tipo](../cpp/aliases-and-typedefs-cpp.md).
+Uma declaração using introduz um nome não qualificado como um sinônimo para uma entidade declarada em outro lugar. Ele permite que um único nome de um namespace específico seja usado sem qualificação explícita na região de declaração na qual ele aparece. Isso é diferente da [diretiva using](../cpp/namespaces-cpp.md#using_directives), que permite que *todos* os nomes em um namespace sejam usados sem qualificação. A **`using`** palavra-chave também é usada para [aliases de tipo](../cpp/aliases-and-typedefs-cpp.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -167,7 +167,7 @@ In A::g
 
 Quando uma declaração using é feita, o sinônimo criado pela declaração se refere apenas às definições que são válidas no ponto da declaração using. As definições adicionadas a um namespace depois da declaração using são sinônimos inválidos.
 
-Um nome definido por uma declaração **using** é um alias para seu nome original. Não afeta o tipo, a vinculação ou outros atributos da declaração original.
+Um nome definido por uma **`using`** declaração é um alias para seu nome original. Não afeta o tipo, a vinculação ou outros atributos da declaração original.
 
 ```cpp
 // post_declaration_namespace_additions.cpp

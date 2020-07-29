@@ -7,22 +7,22 @@ helpviewer_keywords:
 - novtable __declspec keyword
 - __declspec keyword [C++], novtable
 ms.assetid: cfef09c5-8c1e-4b14-8a72-7d726ded4484
-ms.openlocfilehash: d101e73f2f8d476c50b1b80b8daa7994151d43af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ccf544608bcba83af17702767562ef93d775b5a9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177827"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227251"
 ---
 # <a name="novtable"></a>novtable
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Este é um **__declspec** atributo estendido.
+Este é um **`__declspec`** atributo estendido.
 
-Essa forma de **__declspec** pode ser aplicada a qualquer declaração de classe, mas só deve ser aplicada a classes de interface pura, ou seja, classes que nunca serão instanciadas por conta própria. O **__declspec** interrompe o compilador de gerar código para inicializar o vfptr no (s) Construtor (es) e no destruidor da classe. Em diversos casos, isso remove as únicas referências para vtable que estão associadas à classe. Portanto, o vinculador as removerá. O uso dessa forma de **__declspec** pode resultar em uma redução significativa no tamanho do código.
+Essa forma de **`__declspec`** pode ser aplicada a qualquer declaração de classe, mas só deve ser aplicada a classes de interface pura, ou seja, classes que nunca serão instanciadas por conta própria. O **`__declspec`** interrompe o compilador de gerar código para inicializar o vfptr no (s) Construtor (es) e no destruidor da classe. Em diversos casos, isso remove as únicas referências para vtable que estão associadas à classe. Portanto, o vinculador as removerá. O uso dessa forma de **`__declspec`** pode resultar em uma redução significativa no tamanho do código.
 
-Se você tentar criar uma instância de uma classe marcada com **novtable** e, em seguida, acessar um membro de classe, você receberá uma violação de acesso (AV).
+Se você tentar criar uma instância de uma classe marcada com **`novtable`** e, em seguida, acessar um membro de classe, receberá uma violação de acesso (AV).
 
 ## <a name="example"></a>Exemplo
 
@@ -53,9 +53,9 @@ int main() {
 In Y
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)
