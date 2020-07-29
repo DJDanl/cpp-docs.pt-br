@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: a1954cd3a69233deed053da5b5fdef0dbc183b80
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d445b8ac1d2a8487e9e1ec4f21f63cf5ef071e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141441"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224962"
 ---
 # <a name="combinable-class"></a>Classe combinable
 
-O objeto `combinable<T>` destina-se a fornecer cópias de dados de thread privado, para executar subcoleções locais de thread sem bloqueio durante algoritmos paralelos. No final da operação paralela, os subcoleções thread-Private podem ser mesclados em um resultado final. Essa classe pode ser usada em vez de uma variável compartilhada e pode resultar em uma melhoria no desempenho se, de outra forma, houvesse muita contenção nessa variável compartilhada.
+O `combinable<T>` objeto destina-se a fornecer cópias de dados de thread privado para executar subcoleções locais de thread sem bloqueio durante algoritmos paralelos. No final da operação paralela, os subcoleções thread-Private podem ser mesclados em um resultado final. Essa classe pode ser usada em vez de uma variável compartilhada e pode resultar em uma melhoria no desempenho se, de outra forma, houvesse muita contenção nessa variável compartilhada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,7 +30,7 @@ template<typename T>
 class combinable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados do resultado mesclado final. O tipo deve ter um construtor de cópia e um construtor padrão.
@@ -39,25 +39,25 @@ O tipo de dados do resultado mesclado final. O tipo deve ter um construtor de c�
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[combináveis](#ctor)|Sobrecarregado. Constrói um novo objeto `combinable`.|
+|[combinable](#ctor)|Sobrecarregado. Constrói um novo objeto `combinable`.|
 |[~ Destruidor combinável](#dtor)|Destrói um objeto `combinable`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[clear](#clear)|Limpa os resultados computacionais intermediários de um uso anterior.|
-|[combine](#combine)|Computa um valor final do conjunto de subcoleções locais de thread chamando o functor de combinação fornecido.|
+|[formatação](#clear)|Limpa os resultados computacionais intermediários de um uso anterior.|
+|[Combine](#combine)|Computa um valor final do conjunto de subcoleções locais de thread chamando o functor de combinação fornecido.|
 |[combine_each](#combine_each)|Computa um valor final do conjunto de subcoleções locais de thread chamando o functor de combinação fornecido uma vez por subcálculo local de thread. O resultado final é acumulado pelo objeto de função.|
 |[local](#local)|Sobrecarregado. Retorna uma referência para o sub-cálculo thread-Private.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[operator=](#operator_eq)|Atribui a um objeto de `combinable` de outro objeto `combinable`.|
+|[operador =](#operator_eq)|Atribui a um `combinable` objeto de outro `combinable` objeto.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -67,13 +67,13 @@ Para obter mais informações, consulte [contêineres e objetos paralelos](../..
 
 `combinable`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ppl. h
 
 **Namespace:** simultaneidade
 
-## <a name="clear"></a>formatação
+## <a name="clear"></a><a name="clear"></a>formatação
 
 Limpa os resultados computacionais intermediários de um uso anterior.
 
@@ -81,7 +81,7 @@ Limpa os resultados computacionais intermediários de um uso anterior.
 void clear();
 ```
 
-## <a name="ctor"></a>combináveis
+## <a name="combinable"></a><a name="ctor"></a>combináveis
 
 Constrói um novo objeto `combinable`.
 
@@ -94,26 +94,26 @@ explicit combinable(_Function _FnInitialize);
 combinable(const combinable& _Copy);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 O tipo do objeto de inicialização functor.
 
 *_FnInitialize*<br/>
-Uma função que será chamada para inicializar cada novo valor de thread privado do tipo `T`. Ele deve dar suporte a um operador de chamada de função com a assinatura `T ()`.
+Uma função que será chamada para inicializar cada novo valor de thread privado do tipo `T` . Ele deve dar suporte a um operador de chamada de função com a assinatura `T ()` .
 
 *_Copy*<br/>
-Um objeto de `combinable` existente a ser copiado para este.
+Um `combinable` objeto existente a ser copiado para este.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa novos elementos com o construtor padrão para o tipo `T`.
+O primeiro construtor inicializa novos elementos com o construtor padrão para o tipo `T` .
 
-O segundo construtor inicializa novos elementos usando o functor de inicialização fornecido como o parâmetro `_FnInitialize`.
+O segundo construtor inicializa novos elementos usando o functor de inicialização fornecido como o `_FnInitialize` parâmetro.
 
 O terceiro construtor é o construtor de cópia.
 
-## <a name="dtor"></a>~ combinável
+## <a name="combinable"></a><a name="dtor"></a>~ combinável
 
 Destrói um objeto `combinable`.
 
@@ -121,7 +121,7 @@ Destrói um objeto `combinable`.
 ~combinable();
 ```
 
-## <a name="combine"></a>Combine
+## <a name="combine"></a><a name="combine"></a>Combine
 
 Computa um valor final do conjunto de subcoleções locais de thread chamando o functor de combinação fornecido.
 
@@ -130,19 +130,19 @@ template<typename _Function>
 T combine(_Function _FnCombine) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 O tipo do objeto de função que será invocado para combinar dois subcoleções de local de thread.
 
 *_FnCombine*<br/>
-O functor que é usado para combinar os subcálculos. Sua assinatura é `T (T, T)` ou `T (const T&, const T&)`e deve ser associativa e comutativa.
+O functor que é usado para combinar os subcálculos. Sua assinatura é `T (T, T)` ou `T (const T&, const T&)` , e deve ser associativa e comutador.
 
 ### <a name="return-value"></a>Valor retornado
 
 O resultado final da combinação de todos os subcoleções de thread-Private.
 
-## <a name="combine_each"></a>combine_each
+## <a name="combine_each"></a><a name="combine_each"></a>combine_each
 
 Computa um valor final do conjunto de subcoleções locais de thread chamando o functor de combinação fornecido uma vez por subcálculo local de thread. O resultado final é acumulado pelo objeto de função.
 
@@ -151,15 +151,15 @@ template<typename _Function>
 void combine_each(_Function _FnCombine) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 O tipo do objeto de função que será invocado para combinar uma única subcomputação de local de thread.
 
 *_FnCombine*<br/>
-O functor que é usado para combinar um subcálculo. Sua assinatura é `void (T)` ou `void (const T&)`e deve ser associativa e comutativa.
+O functor que é usado para combinar um subcálculo. Sua assinatura é `void (T)` ou `void (const T&)` , e deve ser associativa e comutador.
 
-## <a name="local"></a>local
+## <a name="local"></a><a name="local"></a>local
 
 Retorna uma referência para o sub-cálculo thread-Private.
 
@@ -169,32 +169,32 @@ T& local();
 T& local(bool& _Exists);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Exists*<br/>
-Uma referência a um booliano. O valor booliano referenciado por esse argumento será definido como **true** se a sub-rotina já existir nesse thread e definida como **false** se esta fosse a primeira subcomputação neste thread.
+Uma referência a um booliano. O valor booliano referenciado por esse argumento será definido como **`true`** se a sub-rotina já existir nesse thread e definida como **`false`** se esta fosse a primeira subcomputação neste thread.
 
 ### <a name="return-value"></a>Valor retornado
 
 Uma referência à subcomputação thread-Private.
 
-## <a name="operator_eq"></a>operador =
+## <a name="operator"></a><a name="operator_eq"></a>operador =
 
-Atribui a um objeto de `combinable` de outro objeto `combinable`.
+Atribui a um `combinable` objeto de outro `combinable` objeto.
 
 ```cpp
 combinable& operator= (const combinable& _Copy);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Copy*<br/>
-Um objeto de `combinable` existente a ser copiado para este.
+Um `combinable` objeto existente a ser copiado para este.
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma referência a este objeto de `combinable`.
+Uma referência a este `combinable` objeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

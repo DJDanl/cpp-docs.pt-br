@@ -5,40 +5,40 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c7b219ddad939aab7d6093787dc2fe4131ccced5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172640"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225157"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>Tipos de parâmetro de atributo (C++/CLI e C++/CX)
 
 Os valores passados ​​para atributos devem ser conhecidos para o compilador no tempo de compilação.  Os parâmetros de atributos podem ser dos seguintes tipos:
 
-- **bool**
+- **`bool`**
 
-- **char**, **unsigned char**
+- **`char`**, **`unsigned char`**
 
-- **short**, **unsigned short**
+- **`short`**, **`unsigned short`**
 
-- **int**, **unsigned int**
+- **`int`**, **`unsigned int`**
 
-- **long**, **unsigned long**
+- **`long`**, **`unsigned long`**
 
-- **__int64**, **unsigned __int64**
+- **`__int64`**, **__int64 não assinado**
 
-- **float**, **double**
+- **`float`**, **`double`**
 
-- **wchar_t**
+- **`wchar_t`**
 
-- `char*` ou `wchar_t*` ou `System::String*`
+- **`char*`** ou `wchar_t*` ou`System::String*`
 
 - `System::Type ^`
 
 - `System::Object ^`
 
-- **enum**
+- **`enum`**
 
 ## <a name="example"></a>Exemplo
 
@@ -67,7 +67,7 @@ ref struct MyStruct {
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 Ao especificar atributos, todos os argumentos não nomeados (posicionais) devem preceder quaisquer argumentos nomeados.
 
@@ -101,7 +101,7 @@ ref class ClassD {};   // Positional and named
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 Parâmetros de atributos podem ser matrizes unidimensionais dos tipos anteriores.
 

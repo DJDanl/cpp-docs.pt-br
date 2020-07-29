@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - M6111
 ms.assetid: c0fc13f8-33c8-4e3f-a440-126cc623441b
-ms.openlocfilehash: e8abedf6a326a826d0c8ac513b15037c8bf89bce
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 986c0e53edcddfc47eb9ba970f3c32385e0a57d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225183"
 ---
 # <a name="math-error-m6111"></a>Erro M6111 (Math)
 
@@ -19,7 +19,7 @@ estouro negativo de pilha
 
 Uma operação de ponto flutuante resultou em um estouro negativo de pilha no coprocessador 8087/287/387 ou no emulador.
 
-Esse erro geralmente é causado por uma chamada a uma função `long double` que não retorna um valor. Por exemplo, o seguinte gera esse erro quando compilado e executado:
+Esse erro geralmente é causado por uma chamada para uma **`long double`** função que não retorna um valor. Por exemplo, o seguinte gera esse erro quando compilado e executado:
 
 ```
 long double ld() {};

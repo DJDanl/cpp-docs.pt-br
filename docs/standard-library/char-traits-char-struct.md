@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char> class
 ms.assetid: abd9373a-77db-4031-bf4b-f8ac15087581
-ms.openlocfilehash: ccb08f3e505122757080129b36558490456fc2c5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 04e3a3d067c7fd0e4513d1e1e4463ff6e9f7fe22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688318"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224884"
 ---
 # <a name="char_traitsltchargt-struct"></a>char_traits&lt;char&gt; Struct
 
-Uma struct que é uma especialização do modelo struct **char_traits \<CharType >** a um elemento do tipo **Char**.
+Uma struct que é uma especialização da estrutura do **modelo \<CharType> char_traits** a um elemento do tipo **`char`** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,8 +27,8 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>Comentários
 
-A especialização permite que a estrutura Aproveite as funções de biblioteca que manipulam objetos desse tipo **Char**.
+A especialização permite que a estrutura Aproveite as funções de biblioteca que manipulam objetos desse tipo **`char`** .
 
 ## <a name="example"></a>Exemplo
 
-Consulte as funções TYPEDEFs e Member da [classe char_traits](../standard-library/char-traits-struct.md) do modelo de classe
+Consulte as funções TYPEDEFs e member do modelo de classe [Char_traits classe](../standard-library/char-traits-struct.md)

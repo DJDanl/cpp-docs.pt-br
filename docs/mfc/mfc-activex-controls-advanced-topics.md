@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 87cc0000f74935990cb5956e0fb3afd44e01532b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624191"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225027"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX MFC: tópicos avançados
 
@@ -69,7 +69,7 @@ O procedimento a seguir adiciona uma propriedade parametrizada, chamada array, q
 
 1. Na caixa **nome da propriedade** , digite `Array` .
 
-1. Na caixa **tipo de propriedade** , selecione **curto**.
+1. Na caixa **tipo de propriedade** , selecione **`short`** .
 
 1. Para tipo de **implementação** , clique em **obter/definir métodos**.
 
@@ -97,7 +97,7 @@ Além disso, o assistente para adicionar propriedade adiciona as seguintes linha
 
 Por fim, as implementações `GetArray` das `SetArray` funções e são adicionadas ao final do. Arquivo CPP. Na maioria dos casos, você modificará a função Get para retornar o valor da propriedade. A função Set geralmente conterá o código que deve ser executado, antes ou depois da alteração da propriedade.
 
-Para que essa propriedade seja útil, você pode declarar uma variável de membro de matriz bidimensional na classe de controle, do tipo **Short**, para armazenar valores para a propriedade parametrizada. Em seguida, você poderia modificar a função Get para retornar o valor armazenado na linha e coluna adequadas, conforme indicado pelos parâmetros e modificar a função Set para atualizar o valor referenciado pelos parâmetros Row e Column.
+Para que essa propriedade seja útil, você pode declarar uma variável de membro de matriz bidimensional na classe de controle, do tipo **`short`** , para armazenar valores para a propriedade parametrizada. Em seguida, você poderia modificar a função Get para retornar o valor armazenado na linha e coluna adequadas, conforme indicado pelos parâmetros e modificar a função Set para atualizar o valor referenciado pelos parâmetros Row e Column.
 
 ## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>Tratamento de erros em seu controle ActiveX
 
@@ -180,6 +180,6 @@ Você pode criar controles de caixa de diálogo que não têm interface do usuá
 
    [!code-cpp[NVC_MFC_AxCont#19](codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)
