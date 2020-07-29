@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223766"
 ---
 # <a name="x64-software-conventions"></a>Convenções de software x64
 
@@ -18,7 +18,7 @@ Esta seção descreve a metodologia de Convenção de chamada do C++ para x64, a
 
 ## <a name="overview-of-x64-calling-conventions"></a>Visão geral das convenções de chamada x64
 
-Duas diferenças importantes entre x86 e x64 são o recurso de endereçamento de 64 bits e um conjunto simples de registros de 16 64 bits para uso geral. Considerando o conjunto de registros expandido, o x64 usa a Convenção de chamada [__fastcall](../cpp/fastcall.md) e um modelo de tratamento de exceção baseado em RISC. A `__fastcall` Convenção usa registros para os primeiros quatro argumentos e o quadro de pilha para passar argumentos adicionais. Para obter detalhes sobre a Convenção de chamada x64, incluindo o uso de registro, parâmetros de pilha, valores de retorno e desenrolamento de pilha, consulte [Convenção de chamada x64](x64-calling-convention.md).
+Duas diferenças importantes entre x86 e x64 são o recurso de endereçamento de 64 bits e um conjunto simples de registros de 16 64 bits para uso geral. Considerando o conjunto de registros expandido, o x64 usa a Convenção de chamada [__fastcall](../cpp/fastcall.md) e um modelo de tratamento de exceção baseado em RISC. A **`__fastcall`** Convenção usa registros para os primeiros quatro argumentos e o quadro de pilha para passar argumentos adicionais. Para obter detalhes sobre a Convenção de chamada x64, incluindo o uso de registro, parâmetros de pilha, valores de retorno e desenrolamento de pilha, consulte [Convenção de chamada x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Habilitar a otimização para x64
 
@@ -47,19 +47,19 @@ Embora seja possível acessar dados com qualquer alinhamento, é recomendável a
 |||||
 |-|-|-|-|
 |Tipo escalar|Tipo de dados C|Tamanho do armazenamento (em bytes)|Alinhamento recomendado|
-|**INT8**|**char**|1|Byte|
-|**UINT8**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|Word|
-|**UINT16**|**unsigned short**|2|Word|
-|**INT32**|**int**, **Long**|4|Doubleword|
+|**INT8**|**`char`**|1|Byte|
+|**UINT8**|**`unsigned char`**|1|Byte|
+|**INT16**|**`short`**|2|Word|
+|**UINT16**|**`unsigned short`**|2|Word|
+|**INT32**|**`int`**, **`long`**|4|Doubleword|
 |**UINT32**|**int não assinado, longo sem sinal**|4|Doubleword|
-|**INT64**|**__int64**|8|Quadword|
+|**INT64**|**`__int64`**|8|Quadword|
 |**UINT64**|**unsigned __int64**|8|Quadword|
-|**FP32 (precisão única)**|**float**|4|Doubleword|
-|**FP64 (precisão dupla)**|**double**|8|Quadword|
+|**FP32 (precisão única)**|**`float`**|4|Doubleword|
+|**FP64 (precisão dupla)**|**`double`**|8|Quadword|
 |**REFERE**|__\*__|8|Quadword|
-|**__m64**|**__m64 de struct**|8|Quadword|
-|**__m128**|**__m128 de struct**|16|Octaword|
+|**`__m64`**|**__m64 de struct**|8|Quadword|
+|**`__m128`**|**__m128 de struct**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agregações e uniões
 
@@ -82,19 +82,19 @@ A tabela a seguir mostra o alinhamento altamente sugerido para os membros escala
 ||||
 |-|-|-|
 |Tipo escalar|Tipo de dados C|Alinhamento necessário|
-|**INT8**|**char**|Byte|
-|**UINT8**|**unsigned char**|Byte|
-|**INT16**|**short**|Word|
-|**UINT16**|**unsigned short**|Word|
-|**INT32**|**int**, **Long**|Doubleword|
+|**INT8**|**`char`**|Byte|
+|**UINT8**|**`unsigned char`**|Byte|
+|**INT16**|**`short`**|Word|
+|**UINT16**|**`unsigned short`**|Word|
+|**INT32**|**`int`**, **`long`**|Doubleword|
 |**UINT32**|**int não assinado, longo sem sinal**|Doubleword|
-|**INT64**|**__int64**|Quadword|
+|**INT64**|**`__int64`**|Quadword|
 |**UINT64**|**unsigned __int64**|Quadword|
-|**FP32 (precisão única)**|**float**|Doubleword|
-|**FP64 (precisão dupla)**|**double**|Quadword|
+|**FP32 (precisão única)**|**`float`**|Doubleword|
+|**FP64 (precisão dupla)**|**`double`**|Quadword|
 |**REFERE**|<strong>\*</strong>|Quadword|
-|**__m64**|**__m64 de struct**|Quadword|
-|**__m128**|**__m128 de struct**|Octaword|
+|**`__m64`**|**__m64 de struct**|Quadword|
+|**`__m128`**|**__m128 de struct**|Octaword|
 
 As regras de alinhamento agregado a seguir se aplicam:
 
@@ -181,7 +181,7 @@ Trabalhar com dados não alinhados tem duas implicações.
 
 - Os locais não alinhados não podem ser usados em operações interbloqueadas.
 
-Se você precisar de um alinhamento mais estrito `__declspec(align(N))` , use em suas declarações de variável. Isso faz com que o compilador alinhe dinamicamente a pilha para atender às suas especificações. No entanto, o ajuste dinâmico da pilha em tempo de execução pode causar uma execução mais lenta do seu aplicativo.
+Se você precisar de um alinhamento mais estrito, use `__declspec(align(N))` em suas declarações de variável. Isso faz com que o compilador alinhe dinamicamente a pilha para atender às suas especificações. No entanto, o ajuste dinâmico da pilha em tempo de execução pode causar uma execução mais lenta do seu aplicativo.
 
 ## <a name="register-usage"></a>Registrar uso
 
@@ -193,7 +193,7 @@ A tabela a seguir descreve como cada registro é usado nas chamadas de função:
 
 ||||
 |-|-|-|
-|Registrar |Status|Uso|
+|Registre-se|Status|Uso|
 |RAX|Volátil|Registro de valores retornados|
 |RCX|Volátil|Primeiro argumento inteiro|
 |RDX|Volátil|Segundo argumento inteiro|
@@ -206,12 +206,12 @@ A tabela a seguir descreve como cada registro é usado nas chamadas de função:
 |RBX|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RBP|Não volátil|Pode ser usado como um ponteiro de quadro; deve ser preservado pelo receptor da chamada|
 |RSP|Não volátil|Ponteiro de pilha|
-|XMM0, YMM0|Volátil|Primeiro argumento FP; primeiro argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM1, YMM1|Volátil|Segundo argumento FP; segundo argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM2, YMM2|Volátil|Terceiro argumento FP; terceiro argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM3, YMM3|Volátil|Quarto argumento FP; quarto argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM4, YMM4|Volátil|Deve ser preservado conforme necessário pelo chamador; quinto argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM5, YMM5|Volátil|Deve ser preservado conforme necessário pelo chamador; sexto argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM0, YMM0|Volátil|Primeiro argumento FP; primeiro argumento de tipo Vector quando **`__vectorcall`** é usado|
+|XMM1, YMM1|Volátil|Segundo argumento FP; segundo argumento de tipo de vetor quando **`__vectorcall`** é usado|
+|XMM2, YMM2|Volátil|Terceiro argumento FP; terceiro argumento de tipo de vetor quando **`__vectorcall`** é usado|
+|XMM3, YMM3|Volátil|Quarto argumento FP; quarto argumento de tipo de vetor quando **`__vectorcall`** é usado|
+|XMM4, YMM4|Volátil|Deve ser preservado conforme necessário pelo chamador; quinto argumento de tipo de vetor quando **`__vectorcall`** é usado|
+|XMM5, YMM5|Volátil|Deve ser preservado conforme necessário pelo chamador; sexto argumento de tipo de vetor quando **`__vectorcall`** é usado|
 |XMM6:XMM15, YMM6:YMM15|Não volátil (XMM), Volátil (metade superior de YMM)|Deve ser preservado pelo receptor. Os registros YMM devem ser preservados conforme necessário pelo chamador.|
 
 Na função Exit e na entrada de função para chamadas da biblioteca de tempo de execução C e chamadas de sistema do Windows, o sinalizador de direção no registro de sinalizadores de CPU deve ser limpo.

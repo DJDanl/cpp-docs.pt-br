@@ -18,37 +18,37 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 61a5983eec13902ed4b0e397e3befca4860977d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5a7263ae5cac81508ab2450a530132879ed45b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222817"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funções da troca de dados da caixa de diálogo para controles OLE
 
-Este tópico lista as funções DDX_OC usadas para trocar dados entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+Este tópico lista as funções de DDX_OC usadas para trocar dados entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-### <a name="ddx_oc-functions"></a>DDX_OC funções
+### <a name="ddx_oc-functions"></a>Funções de DDX_OC
 
 |||
 |-|-|
-|[DDX_OCBool](#ddx_ocbool)|Gerencia a transferência de dados **BOOL** entre uma propriedade de um controle OLE e um membro de dados **BOOL.**|
-|[DDX_OCBoolRO](#ddx_ocboolro)|Gerencia a transferência de dados **BOOL** entre uma propriedade somente leitura de um controle OLE e um membro de dados **BOOL.**|
-|[DDX_OCColor](#ddx_occolor)|Gerencia a transferência de **dados OLE_COLOR** entre uma propriedade de um controle OLE e um membro de dados **OLE_COLOR.**|
-|[DDX_OCColorRO](#ddx_occolorro)|Gerencia a transferência de dados **OLE_COLOR** entre uma propriedade somente leitura de um controle OLE e um membro de dados **OLE_COLOR.**|
-|[DDX_OCFloat](#ddx_ocfloat)|Gerencia a transferência de dados **flutuantes** (ou **o dobro**) entre uma propriedade de um controle OLE e um membro de dados **flutuante** (ou **duplo).**|
-|[DDX_OCFloatRO](#ddx_ocfloatro)|Gerencia a transferência de dados **flutuantes** (ou **o dobro**) entre uma propriedade somente leitura de um controle OLE e um membro de dados **flutuante** (ou **duplo).**|
-|[DDX_OCInt](#ddx_ocint)|Gerencia a transferência de dados **int** (ou **longos**) entre uma propriedade de um controle OLE e um membro de dados **int** (ou **longo).**|
-|[DDX_OCIntRO](#ddx_ocintro)|Gerencia a transferência de dados **int** (ou **longos)** entre uma propriedade somente leitura de um controle OLE e um membro de dados **int** (ou **longo).**|
-|[DDX_OCShort](#ddx_ocshort)|Gerencia a transferência de dados **curtos** entre uma propriedade de um controle OLE e um membro de dados **curto.**|
-|[DDX_OCShortRO](#ddx_ocshortro)|Gerencia a transferência de dados **curtos** entre uma propriedade somente leitura de um controle OLE e um membro de dados **curto.**|
-|[DDX_OCText](#ddx_octext)|Gerencia a transferência de dados **CString** entre uma propriedade de um controle OLE e um membro de dados **CString.**|
-|[DDX_OCTextRO](#ddx_octextro)|Gerencia a transferência de dados **CString** entre uma propriedade somente leitura de um controle OLE e um membro de dados **CString.**|
+|[DDX_OCBool](#ddx_ocbool)|Gerencia a transferência de dados **bool** entre uma propriedade de um controle OLE e um membro de dados **bool** .|
+|[DDX_OCBoolRO](#ddx_ocboolro)|Gerencia a transferência de dados **bool** entre uma propriedade somente leitura de um controle OLE e um membro de dados **bool** .|
+|[DDX_OCColor](#ddx_occolor)|Gerencia a transferência de dados de **OLE_COLOR** entre uma propriedade de um controle OLE e um membro de dados **OLE_COLOR** .|
+|[DDX_OCColorRO](#ddx_occolorro)|Gerencia a transferência de dados de **OLE_COLOR** entre uma propriedade somente leitura de um controle OLE e um membro de dados **OLE_COLOR** .|
+|[DDX_OCFloat](#ddx_ocfloat)|Gerencia a transferência de **`float`** (ou **`double`** ) dados entre uma propriedade de um controle OLE e um **`float`** membro de **`double`** dados (ou).|
+|[DDX_OCFloatRO](#ddx_ocfloatro)|Gerencia a transferência de **`float`** (ou **`double`** ) dados entre uma propriedade somente leitura de um controle OLE e um **`float`** membro de dados (ou **`double`** ).|
+|[DDX_OCInt](#ddx_ocint)|Gerencia a transferência de **`int`** (ou **`long`** ) dados entre uma propriedade de um controle OLE e um **`int`** membro de **`long`** dados (ou).|
+|[DDX_OCIntRO](#ddx_ocintro)|Gerencia a transferência de **`int`** (ou **`long`** ) dados entre uma propriedade somente leitura de um controle OLE e um **`int`** membro de dados (ou **`long`** ).|
+|[DDX_OCShort](#ddx_ocshort)|Gerencia a transferência de **`short`** dados entre uma propriedade de um controle OLE e um **`short`** membro de dados.|
+|[DDX_OCShortRO](#ddx_ocshortro)|Gerencia a transferência de **`short`** dados entre uma propriedade somente leitura de um controle OLE e um **`short`** membro de dados.|
+|[DDX_OCText](#ddx_octext)|Gerencia a transferência de dados de **CString** entre uma propriedade de um controle OLE e um membro de dados **CString** .|
+|[DDX_OCTextRO](#ddx_octextro)|Gerencia a transferência de dados de **CString** entre uma propriedade somente leitura de um controle OLE e um membro de dados **CString** .|
 
 ## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool
 
-A `DDX_OCBool` função gerencia a transferência de dados **BOOL** entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados **BOOL** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCBool` função gerencia a transferência de dados **bool** entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **bool** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCBool(
@@ -58,31 +58,31 @@ void AFXAPI DDX_OCBool(
     BOOL& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho:** afxdisp.h
+  **Cabeçalho:** AFXDISP. h
 
 ## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO
 
-A `DDX_OCBoolRO` função gerencia a transferência de dados **BOOL** entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados **BOOL** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCBoolRO` função gerencia a transferência de dados **bool** entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **bool** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCBoolRO(
@@ -92,31 +92,31 @@ void AFXAPI DDX_OCBoolRO(
     BOOL& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_occolor"></a><a name="ddx_occolor"></a>DDX_OCColor
 
-A `DDX_OCColor` função gerencia a transferência de dados de OLE_COLOR entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados OLE_COLOR da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCColor` função gerencia a transferência de dados de OLE_COLOR entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados de OLE_COLOR da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCColor(
@@ -126,31 +126,31 @@ void AFXAPI DDX_OCColor(
     OLE_COLOR& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO
 
-A `DDX_OCColorRO` função gerencia a transferência de dados de OLE_COLOR entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados OLE_COLOR da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCColorRO` função gerencia a transferência de dados de OLE_COLOR entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados de OLE_COLOR da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCColorRO(
@@ -160,31 +160,31 @@ void AFXAPI DDX_OCColorRO(
     OLE_COLOR& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat
 
-A `DDX_OCFloat` função gerencia a transferência de dados **flutuantes** (ou **duplos**) entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados **flutuante** (ou **duplo)** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCFloat` função gerencia a transferência de **`float`** (ou **`double`** ) dados entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um **`float`** **`double`** membro de dados (ou) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCFloat(
@@ -200,31 +200,31 @@ void AFXAPI DDX_OCFloat(
     double& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO
 
-A `DDX_OCFloatRO` função gerencia a transferência de dados **flutuantes** (ou **duplos**) entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados **flutuante** (ou **duplo)** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCFloatRO` função gerencia a transferência de **`float`** (ou **`double`** ) dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um **`float`** **`double`** membro de dados (ou) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCFloatRO(
@@ -240,31 +240,31 @@ void AFXAPI DDX_OCFloatRO(
     double& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_ocint"></a><a name="ddx_ocint"></a>DDX_OCInt
 
-A `DDX_OCInt` função gerencia a transferência de dados **int** (ou **longos)** entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados **int** (ou **longo)** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCInt` função gerencia a transferência de **`int`** (ou **`long`** ) dados entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um **`int`** **`long`** membro de dados (ou) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCInt(
@@ -280,31 +280,31 @@ void AFXAPI DDX_OCInt(
     long& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO
 
-A `DDX_OCIntRO` função gerencia a transferência de dados **int** (ou **longos)** entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados **int** (ou **longo)** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCIntRO` função gerencia a transferência de **`int`** (ou **`long`** ) dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um **`int`** **`long`** membro de dados (ou) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCIntRO(
@@ -320,31 +320,31 @@ void AFXAPI DDX_OCIntRO(
     long& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort
 
-A `DDX_OCShort` função gerencia a transferência de dados curtos entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados curto da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCShort` função gerencia a transferência de dados curtos entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados curto da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCShort(
@@ -354,31 +354,31 @@ void AFXAPI DDX_OCShort(
     short& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO
 
-A `DDX_OCShortRO` função gerencia a transferência de dados curtos entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados curto da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCShortRO` função gerencia a transferência de dados curtos entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados curto da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCShortRO(
@@ -388,31 +388,31 @@ void AFXAPI DDX_OCShortRO(
     short& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_octext"></a><a name="ddx_octext"></a>DDX_OCText
 
-A função **DDX_OCText** gerencia a transferência de dados **CString** entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados **CString** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função **DDX_OCText** gerencia a transferência de dados de **CString** entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **CString** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCText(
@@ -422,31 +422,31 @@ void AFXAPI DDX_OCText(
     CString& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um objeto **CDataExchange.** A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto **CDataExchange** . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="ddx_octextro"></a><a name="ddx_octextro"></a>DDX_OCTextRO
 
-A `DDX_OCTextRO` função gerencia a `CString` transferência de dados entre uma propriedade somente leitura de um controle OLE `CString` em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A `DDX_OCTextRO` função gerencia a transferência de `CString` dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um `CString` membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```cpp
 void AFXAPI DDX_OCTextRO(
@@ -456,27 +456,27 @@ void AFXAPI DDX_OCTextRO(
     CString& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
-O ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A ID de um controle OLE na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
-*Dispid*<br/>
-A impropriedade de uma propriedade do controle.
+*DISPID*<br/>
+A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
-Uma referência a uma variável membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com o qual os dados são trocados.
+Uma referência a uma variável de membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre o DDX, consulte [Troca e Validação de Dados de Diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Cabeçalho** AFXDISP. h
 
 ## <a name="see-also"></a>Confira também
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: aa6e977b3aa03b5f08901cfa8b0abe1b4046e72d
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 872a014dfc7c21b46f9af810f1cb3463016c7e09
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857002"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211678"
 ---
 # <a name="storage-class"></a>Classe de armazenamento
 
-O especificador storage-class em uma definição de função fornece à função uma classe de armazenamento de `extern` ou **static**.
+O especificador de classe de armazenamento em uma definição de função fornece a função **`extern`** ou a **`static`** classe de armazenamento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,23 +33,23 @@ O especificador storage-class em uma definição de função fornece à função
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*armazenamento-classe-especificador*:\* /para definições de função\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**externo**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto-estática**
+*armazenamento-classe-especificador*:/ \* para definições de função\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`extern`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`static`**
 
-Se uma definição de função não inclui um *storage-class-specifier*, a classe de armazenamento usa `extern` como padrão. Você pode declarar explicitamente uma função como `extern`, mas isso não é necessário.
+Se uma definição de função não incluir um *especificador de classe de armazenamento*, a classe de armazenamento será padronizada como **`extern`** . Você pode declarar explicitamente uma função como **`extern`** , mas ela não é necessária.
 
-Se a declaração de uma função contiver o *storage-class-specifier* `extern`, o identificador terá a mesma vinculação de qualquer declaração visível do identificador com escopo de arquivo. Se não houver declaração visível com escopo de arquivo, o identificador terá vinculação externa. Se um identificador tiver escopo de arquivo e nenhum *storage-class-specifier*, o identificador terá vinculação externa. Vinculação externa significa que cada instância do identificador denota o mesmo objeto ou função. Consulte [Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md) para obter informações sobre vinculação e escopo de arquivo.
+Se a declaração de uma função contiver o *especificador de classe de armazenamento* **`extern`** , o identificador terá o mesmo vínculo que qualquer declaração visível do identificador com escopo de arquivo. Se não houver declaração visível com escopo de arquivo, o identificador terá vinculação externa. Se um identificador tiver escopo de arquivo e nenhum *storage-class-specifier*, o identificador terá vinculação externa. Vinculação externa significa que cada instância do identificador denota o mesmo objeto ou função. Consulte [Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md) para obter informações sobre vinculação e escopo de arquivo.
 
-As declarações de função block-scope com um especificador storage-class diferente de `extern` geram erros.
+Declarações de função de escopo de bloco com um especificador de classe de armazenamento diferente de **`extern`** gerar erros.
 
-Uma função com a classe de armazenamento **static** só é visível no arquivo de origem em que é definida. Todas as outras funções, tendo recebido a classe de armazenamento `extern` de forma explícita ou implícita, são visíveis em todos os arquivos de origem do programa. Se a classe de armazenamento **static** for desejada, ela deverá ser declarada na primeira ocorrência de uma declaração (se houver) da função e na definição da função.
+Uma função com **`static`** classe de armazenamento é visível somente no arquivo de origem no qual ela está definida. Todas as outras funções, se recebem **`extern`** uma classe de armazenamento explícita ou implicitamente, são visíveis em todos os arquivos de origem do programa. Se a **`static`** classe de armazenamento for desejada, ela deverá ser declarada na primeira ocorrência de uma declaração (se houver) da função e na definição da função.
 
 **Específico da Microsoft**
 
-Quando as extensões da Microsoft são habilitadas, uma função originalmente declarada sem uma classe de armazenamento (ou com a classe de armazenamento `extern`) receberá a classe de armazenamento **static** se a definição da função estiver no mesmo arquivo de origem e se a definição especificar explicitamente a classe de armazenamento **static**.
+Quando as extensões da Microsoft são habilitadas, uma função originalmente declarada sem uma classe de armazenamento (ou com **`extern`** classe de armazenamento) recebe **`static`** a classe de armazenamento se a definição da função estiver no mesmo arquivo de origem e se a definição especificar explicitamente a **`static`** classe de armazenamento.
 
-Ao compilar com a opção do compilador /Ze, as funções declaradas em um bloco usando a palavra-chave `extern` terão visibilidade global. Isso não ocorre na compilação com /Za. Esse recurso não deve ser usado se a portabilidade do código-fonte estiver em consideração.
+Ao compilar com a opção de compilador/ze, as funções declaradas em um bloco usando a **`extern`** palavra-chave têm visibilidade global. Isso não ocorre na compilação com /Za. Esse recurso não deve ser usado se a portabilidade do código-fonte estiver em consideração.
 
 **FINAL específico da Microsoft**
 

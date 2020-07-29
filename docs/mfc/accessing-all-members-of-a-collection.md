@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616491"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214172"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acessando todos os membros de uma coleção
 
@@ -42,11 +42,11 @@ Os procedimentos a seguir mostram como iterar nos três tipos principais de cole
 
    Este exemplo usa uma matriz de ponteiro tipado que contém ponteiros para `CPerson` objetos. A matriz é derivada da classe `CObArray` , uma das classes predefinidas não modelo. `GetAt`Retorna um ponteiro para um `CPerson` objeto. Para classes de coleção de ponteiro tipado — matrizes ou listas — o primeiro parâmetro especifica a classe base; o segundo parâmetro especifica o tipo a ser armazenado.
 
-   A `CTypedPtrArray` classe também sobrecarrega o operador **[]** para que você possa usar a sintaxe matriz-subscript personalizada para acessar os elementos de uma matriz. Uma alternativa à instrução no corpo do loop **for** acima é
+   A `CTypedPtrArray` classe também sobrecarrega o operador **[]** para que você possa usar a sintaxe matriz-subscript personalizada para acessar os elementos de uma matriz. Uma alternativa para a instrução no corpo do **`for`** loop acima é
 
    [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-   Esse operador existe em versões **const** e não**const** . A versão **const** , que é invocada para matrizes **const** , pode aparecer somente no lado direito de uma instrução de atribuição.
+   Esse operador existe nas duas **`const`** e não **`const`** nas versões. A **`const`** versão, que é invocada para **`const`** matrizes, pode aparecer somente no lado direito de uma instrução de atribuição.
 
 ### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a>Para iterar uma lista
 
@@ -73,6 +73,6 @@ Os procedimentos a seguir mostram como iterar nos três tipos principais de cole
 
 Para obter mais informações, consulte [excluindo todos os objetos em uma coleção CObject](deleting-all-objects-in-a-cobject-collection.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Coleções](collections.md)

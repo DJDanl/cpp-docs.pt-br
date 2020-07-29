@@ -1,21 +1,21 @@
 ---
-title: db_param (C++ COM atributo)
+title: db_param (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32dcceae1e4e4fbc730101381eda84b5350ffd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148088"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215303"
 ---
-# <a name="dbparam"></a>db_param
+# <a name="db_param"></a>db_param
 
-Associa a variável de membro especificado com um parâmetro de entrada ou saído e delimita a variável.
+Associa a variável de membro especificada com um parâmetro de entrada ou saída e delimita a variável.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,50 +23,50 @@ Associa a variável de membro especificado com um parâmetro de entrada ou saíd
 [ db_param(ordinal, paramtype="DBPARAMIO_INPUT", dbtype, precision, scale, status, length) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ordinal*<br/>
-O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto de linhas à qual associar dados.
+O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto de linhas ao qual associar dados.
 
-*paramtype*<br/>
-(Opcional) O tipo a ser definido para o parâmetro. Provedores dão suporte a apenas tipos de e/s parâmetros que têm suporte pela fonte de dados subjacente. O tipo é uma combinação de um ou mais valores DBPARAMIOENUM:
+*ParamType*<br/>
+Adicional O tipo a ser definido para o parâmetro. Os provedores dão suporte apenas a tipos de e/s de parâmetro que são suportados pela fonte de dados subjacente. O tipo é uma combinação de um ou mais valores de DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT um parâmetro de entrada.
 
 - DBPARAMIO_OUTPUT um parâmetro de saída.
 
-- DBPARAMIO_NOTPARAM o acessador não tem parâmetros. Definindo `eParamIO` para esse valor na linha acessadores lembra ao usuário que os parâmetros são ignorados.
+- DBPARAMIO_NOTPARAM o acessador não tem parâmetros. `eParamIO`A configuração para esse valor em acessadores de linha lembra o usuário de que os parâmetros são ignorados.
 
-*dbtype*<br/>
-(Opcional) Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) para a entrada de coluna.
+*DbType*<br/>
+Adicional Um [indicador de tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) de OLE DB para a entrada de coluna.
 
-*precision*<br/>
-(Opcional) A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
+*precisão*<br/>
+Adicional A precisão a ser usada para a entrada de coluna. Para obter detalhes, consulte a descrição do `bPrecision` elemento da [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *scale*<br/>
-(Opcional) A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
+Adicional A escala a ser usada para a entrada de coluna. Para obter detalhes, consulte a descrição do `bScale` elemento da [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-(Opcional) Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*.
+Adicional Uma variável de membro usada para manter o status desta coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como NULL. Para obter os valores possíveis, consulte [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador de OLE DB*.
 
 *length*<br/>
-(Opcional) Uma variável de membro usada para manter o tamanho da coluna em bytes.
+Adicional Uma variável de membro usada para manter o tamanho da coluna em bytes.
 
 ## <a name="remarks"></a>Comentários
 
-**db_param** define os parâmetros que você pode usar nos comandos; portanto, usá-lo com `db_command`. Por exemplo, você pode usar **db_param** para associar parâmetros em consultas SQL ou procedimentos armazenados. Parâmetros em um procedimento armazenado são indicados por pontos de interrogação (?), e você deve associar os membros de dados na ordem em que os parâmetros aparecem.
+**db_param** define os parâmetros que você usa em comandos; Portanto, você o utiliza com o `db_command` . Por exemplo, você pode usar **db_param** para associar parâmetros em consultas SQL ou procedimentos armazenados. Os parâmetros em um procedimento armazenado são indicados por pontos de interrogação (?) e você deve associar os membros de dados na ordem em que os parâmetros são exibidos.
 
-**db_param** delimita os dados de membro que podem participar de OLE DB `ICommandWithParameters`-com base em associação. Ele define o tipo de parâmetro (entrada ou saída), tipo de OLE DB, precisão, escala, status e comprimento para o parâmetro especificado. Esse atributo insere as macros de consumidor do OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Cada membro marcar com o **db_param** atributo ocupa uma entrada no mapa na forma de um COLUMN_ENTRY.
+**db_param** delimite os dados do membro que podem participar da `ICommandWithParameters` associação baseada em OLE DB. Ele define o tipo de parâmetro (entrada ou saída), OLE DB tipo, precisão, escala, status e comprimento para o parâmetro especificado. Esse atributo insere as macros OLE DB consumidor BEGIN_PARAM_MAP... END_PARAM_MAP. Cada membro marcado com o atributo **db_param** ocupará uma entrada no mapa na forma de um COLUMN_ENTRY.
 
-**db_param** é usado em conjunto com qualquer um de [db_table](db-table.md) ou [db_command](db-command.md) atributos.
+**db_param** é usado em conjunto com os atributos [db_table](db-table.md) ou [db_command](db-command.md) .
 
-Quando o provedor do consumidor de atributo se aplica a esse atributo a uma classe, o compilador renomeará a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome que você deu a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivada de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as duas classes.
+Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o compilador renomeará a classe como \_ acessador *YourClassName*, em que *YourClassName* é o nome que você forneceu à classe e o compilador também criará uma classe chamada *YourClassName*, que deriva de \_ acessador *YourClassName*.  Em Modo de Exibição de Classe, você verá ambas as classes.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir cria uma classe de comando com base no procedimento SalesbyYear armazenado no banco de dados Northwind. Associa o primeiro parâmetro no procedimento armazenado com o `m_RETURN_VALUE` variável e a define como um parâmetro de saída. Associa os últimos dois parâmetros (entrados) com `m_Beginning_Date` e `m_Ending_Date`.
+O exemplo a seguir cria uma classe de comando com base no procedimento armazenado SalesbyYear no banco de dados Northwind. Ele associa o primeiro parâmetro no procedimento armazenado à `m_RETURN_VALUE` variável e o define como um parâmetro de saída. Ele associa os dois últimos parâmetros (entrada) com `m_Beginning_Date` e `m_Ending_Date` .
 
-O exemplo a seguir associa o `nOutput` variável com um parâmetro de saída.
+O exemplo a seguir associa a `nOutput` variável a um parâmetro de saída.
 
 ```cpp
 // db_param.cpp
@@ -104,17 +104,17 @@ struct CSalesbyYear {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**, membro, o método, o local|
+|**Aplica-se a**|**`class`**, **`struct`** , membro, método, local|
 |**Repetível**|Não|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Atributos de consumidor do OLE DB](ole-db-consumer-attributes.md)
+[OLE DB atributos de consumidor](ole-db-consumer-attributes.md)

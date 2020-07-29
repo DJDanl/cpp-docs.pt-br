@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4076
 ms.assetid: 04581066-313a-4a11-bb60-721e6d038d75
-ms.openlocfilehash: 77efeae27a67ea844759fd9980801d3daf788e89
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1958aec4d6642188af1467ab4cab1ecf55c29165
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200246"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223311"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>Aviso do compilador (nível 1) C4076
 
@@ -19,11 +19,11 @@ ms.locfileid: "80200246"
 
 ## <a name="remarks"></a>Comentários
 
-Um modificador de tipo, seja **assinado** ou **não assinado,** não pode ser usado com um tipo não inteiro. o *modificador de tipo* é ignorado.
+Um modificador de tipo, seja **`signed`** ou **`unsigned`** não pode ser usado com um tipo não inteiro. o *modificador de tipo* é ignorado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C4076; para corrigi-lo, remova o modificador de tipo **não assinado** :
+O exemplo a seguir gera C4076; para corrigi-lo, remova o **`unsigned`** modificador de tipo:
 
 ```cpp
 // C4076.cpp

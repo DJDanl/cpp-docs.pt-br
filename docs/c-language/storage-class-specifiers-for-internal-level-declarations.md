@@ -5,16 +5,16 @@ helpviewer_keywords:
 - storage class specifiers, internal
 - internal linkage, storage-class specifiers
 ms.assetid: feca8ab5-23df-4b6c-921a-4d51f9be35d7
-ms.openlocfilehash: efc9a4b080f7141c8ac9404804bf43fbe54c30c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41efdd0016d10a9c96ac3bb2fbe249c5990b6df1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345156"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211704"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Especificadores de classe de armazenamento para declarações de nível interno
 
-Você pode usar qualquer um de quatro terminais de *especificador de classe de armazenamento* para declarações de variáveis no nível interno. Quando você omite o *especificador de classe de armazenamento* dessa declaração, a classe de armazenamento padrão é **auto**. Portanto, a palavra-chave **auto** é raramente vista em um programa C.
+Você pode usar qualquer um dos quatro *`storage-class-specifier`* terminais para declarações de variáveis no nível interno. Quando você omite o *`storage-class-specifier`* de tal declaração, a classe de armazenamento padrão é **`auto`** . Portanto, a palavra-chave **`auto`** raramente é vista em um programa em C.
 
 ## <a name="see-also"></a>Confira também
 

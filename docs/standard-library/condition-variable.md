@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d13b58fc05055ceecb6472003d7682c41c76e23d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457390"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222531"
 ---
 # <a name="ltcondition_variablegt"></a>&lt;condition_variable&gt;
 
 Define as classes [condition_variable](../standard-library/condition-variable-class.md) e [condition_variable_any](../standard-library/condition-variable-any-class.md) usadas para criar objetos que aguardam uma condição se tornar verdadeira.
 
-Esse cabeçalho usa ConcRT (Tempo de Execução de Simultaneidade) para que você possa usá-lo juntamente com outros mecanismos ConcRT. Para obter mais informações sobre o ConcRT, consulte [Tempo de execução de simultaneidade](../parallel/concrt/concurrency-runtime.md).
+Esse cabeçalho usa ConcRT (Runtime de Simultaneidade) para que você possa usá-lo juntamente com outros mecanismos ConcRT. Para obter mais informações sobre o ConcRT, consulte [Runtime de simultaneidade](../parallel/concrt/concurrency-runtime.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<> CONDITION_VARIABLE
+**Cabeçalho:**\<condition_variable>
 
 **Namespace:** std
 
@@ -49,9 +49,9 @@ As classes `condition_variable_any` e `condition_variable` têm, cada uma, três
 
 - `wait_for` aguarda um `time interval` especificado.
 
-Cada um desses métodos tem duas versões sobrecarregadas. Um deles apenas aguarda e pode ser ativado falsamente. O outro usa um argumento de modelo adicional que define um predicado. O método não retorna até que o predicado seja **verdadeiro**.
+Cada um desses métodos tem duas versões sobrecarregadas. Um deles apenas aguarda e pode ser ativado falsamente. O outro usa um argumento de modelo adicional que define um predicado. O método não retorna até que o predicado seja **`true`** .
 
-Cada classe também tem dois métodos que são usados para notificar uma variável de condição de que sua condição é **verdadeira**.
+Cada classe também tem dois métodos que são usados para notificar uma variável de condição de que sua condição é **`true`** .
 
 - `notify_one` ativa um dos threads que está aguardando a variável de condição.
 
@@ -65,8 +65,8 @@ void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
 enum class cv_status { no_timeout, timeout };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [Classe condition_variable](../standard-library/condition-variable-class.md)\
 [Classe condition_variable_any](../standard-library/condition-variable-any-class.md)

@@ -8,32 +8,32 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: ec2b8c8fb4c7730a78c4403606d6fa61c0ddc374
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb1a632ffe684ac0777d0089a2edfd514bf66d0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315554"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223792"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (especificadores de exceção implícitos)
 
-Quando o **/ZC: implicitnoexcept** opção for especificada, o compilador adiciona implícito [noexcept](../../cpp/noexcept-cpp.md) especificador de exceção para funções de membro especial definida pelo compilador e destruidores definidos pelo usuário e deallocators. Por padrão, **/ZC: implicitnoexcept** está habilitado em conformidade com o ISO c++11 standard. Desativação dessa opção desabilita implícita `noexcept` sobre destruidores definidos pelo usuário e dealloacators e funções de membro especial definida pelo compilador.
+Quando a opção **/Zc: implicitNoexcept** é especificada, o compilador adiciona um especificador de exceção [noexcept](../../cpp/noexcept-cpp.md) implícito às funções de membro especial definidas pelo compilador e aos destruidores e desalocadores definidos pelo usuário. Por padrão, **/Zc: implicitNoexcept** está habilitado para estar em conformidade com o padrão ISO c++ 11. Desativar essa opção desabilita o implícito **`noexcept`** em destruidores definidos pelo usuário e dealloacators e funções de membro especiais definidas pelo compilador.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/Zc:implicitNoexcept**[**-**]
+> **/Zc: implicitNoexcept**[ **-** ]
 
 ## <a name="remarks"></a>Comentários
 
-**/ZC: implicitnoexcept** informa ao compilador para siga a seção 15.4 da ISO c++11 standard. Ele adiciona implicitamente uma `noexcept` especificador de exceção para cada função de membro especial usadas como padrão explicitamente ou implicitamente declarado — o construtor padrão, copie o construtor, o construtor de movimentação, o destruidor, operador de atribuição de cópia ou atribuição de movimentação operador — e cada função definida pelo usuário o destrutor ou desalocador. Um desalocador definida pelo usuário tem implícito `noexcept(true)` especificador de exceção. Para os destruidores definidos pelo usuário, é o especificador de exceção implícitos `noexcept(true)` , a menos que uma classe de membro contido ou classe base tem um destruidor que não seja `noexcept(true)`. Para funções de membro especial gerado pelo compilador, se qualquer função invocada diretamente por essa função é efetivamente `noexcept(false)`, o especificador de exceção implícita é `noexcept(false)`. Caso contrário, o especificador de exceção implícita é `noexcept(true)`.
+**/Zc: implicitNoexcept** informa o compilador para seguir a seção 15,4 do padrão ISO c++ 11. Ele adiciona implicitamente um **`noexcept`** especificador de exceção a cada função de membro especial implicitamente declarada ou explicitamente padronizada — o construtor padrão, o construtor de cópia, o construtor de movimentação, o destruidor, o operador de atribuição de cópia ou o operador de atribuição de movimento — e cada função de desalocador ou destruidor definido pelo usuário. Um desalocador definido pelo usuário tem um `noexcept(true)` especificador de exceção implícito. Para destruidores definidos pelo usuário, o especificador de exceção implícita é `noexcept(true)` a menos que uma classe de membro independente ou classe base tenha um destruidor que não é `noexcept(true)` . Para funções de membro especiais geradas pelo compilador, se qualquer função invocada diretamente por essa função for efetivamente `noexcept(false)` , o especificador de exceção implícita será `noexcept(false)` . Caso contrário, o especificador de exceção implícita será `noexcept(true)` .
 
-O compilador não gera um especificador de exceção implícitos para funções declaradas com o uso explícito `noexcept` ou `throw` especificadores ou um `__declspec(nothrow)` atributo.
+O compilador não gera um especificador de exceção implícito para funções declaradas usando explícitos **`noexcept`** ou **`throw`** especificadores ou um `__declspec(nothrow)` atributo.
 
-Por padrão, **/ZC: implicitnoexcept** está habilitado. O [/permissive--](permissive-standards-conformance.md) opção não afeta **/ZC: implicitnoexcept**.
+Por padrão, **/Zc: implicitNoexcept** está habilitado. A opção [/permissive-](permissive-standards-conformance.md) não afeta **/Zc: implicitNoexcept**.
 
-Se a opção estiver desabilitada, especificando **/Zc:implicitNoexcept-**, sem especificadores de exceção implícitas são geradas pelo compilador. Esse comportamento é o mesmo que o Visual Studio 2013, em que os destruidores e deallocators que não tinham especificadores de exceção poderia ter `throw` instruções. Por padrão e quando **/ZC: implicitnoexcept** for especificado, se um `throw` declaração é encontrada em tempo de execução em uma função com implícito `noexcept(true)` especificador, ele faz com que uma invocação imediata do `std::terminate`, e comportamento normal de desenrolamento para manipuladores de exceção não é garantido. Para ajudar a identificar esta situação, o compilador gera [aviso do compilador (nível 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md). Se o `throw` é intencional, é recomendável que você altere sua declaração de função para ter uma explícita `noexcept(false)` especificador em vez de usar **/Zc:implicitNoexcept-**.
+Se a opção for desabilitada especificando **/Zc: implicitNoexcept-**, nenhum especificador de exceção implícito será gerado pelo compilador. Esse comportamento é o mesmo que Visual Studio 2013, onde destruidores e desalocadores que não tinham especificadores de exceção podem ter **`throw`** instruções. Por padrão, e quando **/Zc: implicitNoexcept** for especificado, se uma **`throw`** instrução for encontrada em tempo de execução em uma função com um `noexcept(true)` especificador implícito, isso causará uma invocação imediata `std::terminate` e o comportamento normal de desenrolamento para manipuladores de exceção não será garantido. Para ajudar a identificar essa situação, o compilador gera o [aviso do compilador (nível 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md). Se o **`throw`** for intencional, recomendamos que você altere sua declaração de função para ter um `noexcept(false)` especificador explícito em vez de usar **/Zc: implicitNoexcept-**.
 
-Este exemplo mostra como um destruidor definido pelo usuário que não tem nenhum especificador de exceção explícita se comporta quando o **/ZC: implicitnoexcept** opção é definida ou desabilitada. Para mostrar o comportamento quando definido, compile usando `cl /EHsc /W4 implicitNoexcept.cpp`. Para mostrar o comportamento quando desabilitado, compile usando `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`.
+Este exemplo mostra como um destruidor definido pelo usuário que não tem um especificador de exceção explícito se comporta quando a opção **/Zc: implicitNoexcept** é definida ou desabilitada. Para mostrar o comportamento quando definido, compile usando `cl /EHsc /W4 implicitNoexcept.cpp` . Para mostrar o comportamento quando desabilitado, compile usando `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp` .
 
 ```cpp
 // implicitNoexcept.cpp
@@ -109,7 +109,7 @@ int main()
 }
 ```
 
-Quando compilado usando a configuração padrão **/ZC: implicitnoexcept**, o exemplo gera esta saída:
+Quando compilado usando a configuração padrão **/Zc: implicitNoexcept**, o exemplo gera essa saída:
 
 ```Output
 ~B Exception caught
@@ -117,7 +117,7 @@ Unexpected throw caused std::terminate
 Exit returning EXIT_FAILURE
 ```
 
-Quando compilado usando a configuração **/Zc:implicitNoexcept-**, o exemplo gera esta saída:
+Quando compilado usando a configuração **/Zc: implicitNoexcept-**, o exemplo gera essa saída:
 
 ```Output
 ~B Exception caught
@@ -129,15 +129,15 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
+1. Selecione a **Configuration Properties**  >  página de propriedade de linha de comando**C/C++** Propriedades de configuração  >  **Command Line** .
 
-1. Modificar a **opções adicionais** propriedade incluir **/ZC: implicitnoexcept** ou **/Zc:implicitNoexcept-** e, em seguida, escolha **Okey**.
+1. Modifique a propriedade **Opções adicionais** para incluir **/Zc: implicitNoexcept** ou **/Zc: implicitNoexcept-** e escolha **OK**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [/Zc (conformidade)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
-[Especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md)<br/>
-[terminate](../../standard-library/exception-functions.md#terminate)<br/>
+[Especificações de exceção (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
+[encerrar](../../standard-library/exception-functions.md#terminate)<br/>

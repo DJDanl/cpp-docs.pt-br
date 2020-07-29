@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211790"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214913"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
@@ -51,12 +51,12 @@ class CEnumerator :
 |||
 |-|-|
 |[Localizar](#find)|Pesquisa por meio de provedores disponíveis (fontes de dados) procurando um com o nome especificado.|
-|[GetMoniker](#getmoniker)|Recupera a interface `IMoniker` para o registro atual.|
+|[GetMoniker](#getmoniker)|Recupera a `IMoniker` interface para o registro atual.|
 |[Abrir](#open)|Abre o enumerador.|
 
 ## <a name="remarks"></a>Comentários
 
-Você pode recuperar os dados de `ISourcesRowset` indiretamente dessa classe.
+Você pode recuperar os `ISourcesRowset` dados indiretamente dessa classe.
 
 ## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: find
 
@@ -75,11 +75,11 @@ no O nome a ser pesquisado.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o nome foi encontrado. Caso contrário, **false**.
+**`true`** Se o nome foi encontrado. Caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
-Esse nome é mapeado para o membro `SOURCES_NAME` da interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
+Esse nome é mapeado para o `SOURCES_NAME` membro da interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
 ## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
 
@@ -126,9 +126,9 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 no Um ponteiro para um moniker de um enumerador.
 
 *pClsid*<br/>
-no Um ponteiro para a `CLSID` de um enumerador.
+no Um ponteiro para o `CLSID` de um enumerador.
 
-*enumerator*<br/>
+*enumera*<br/>
 no Uma referência a um enumerador.
 
 ### <a name="return-value"></a>Valor retornado
@@ -139,4 +139,4 @@ Um HRESULT padrão.
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

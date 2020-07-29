@@ -1,5 +1,5 @@
 ---
-title: Um retrato da arquitetura de exibição de documento
+title: Uma retrato da arquitetura de exibição de documento
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214185"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Um retrato da arquitetura de documento/exibição
 
@@ -27,7 +27,7 @@ Os documentos e as exibições são emparelhados em um aplicativo típico do MFC
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>Obtendo acesso aos dados do documento da exibição
 
-A exibição acessa os dados do documento com a função [GetDocument](reference/cview-class.md#getdocument) , que retorna um ponteiro para o documento ou torna a classe View um C++ `friend` da classe Document. Em seguida, a exibição usa seu acesso aos dados para obter os dados quando estiver pronto para desenhar ou, de outra forma, manipulá-los.
+A exibição acessa os dados do documento com a função [GetDocument](reference/cview-class.md#getdocument) , que retorna um ponteiro para o documento ou torna a classe View um C++ **`friend`** da classe Document. Em seguida, a exibição usa seu acesso aos dados para obter os dados quando estiver pronto para desenhar ou, de outra forma, manipulá-los.
 
 Por exemplo, na função de membro [OnDraw](reference/cview-class.md#ondraw) da exibição, o modo de exibição usa `GetDocument` para obter um ponteiro de documento. Em seguida, ele usa esse ponteiro para acessar um `CString` membro de dados no documento. A exibição passa a cadeia de caracteres para a `TextOut` função. Para ver o código deste exemplo, consulte [desenho em uma exibição](drawing-in-a-view.md).
 
@@ -45,6 +45,6 @@ Em um aplicativo com várias exibições do mesmo documento — como uma janela 
 
 - [Alternativas para a arquitetura de documento/exibição](alternatives-to-the-document-view-architecture.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquitetura de documento/exibição](document-view-architecture.md)

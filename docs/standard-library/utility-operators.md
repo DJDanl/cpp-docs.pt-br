@@ -16,19 +16,19 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7146c31e33b514b20703b280a7194f639c387c26
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422398"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215446"
 ---
 # <a name="ltutilitygt-operators"></a>Operadores &lt;utility&gt;
 
 > [!NOTE]
-> Os operadores que usam `Type&` estão incluídos em `namespace rel_ops`.
+> Os operadores que usam `Type&` estão incluídos em `namespace rel_ops` .
 
-## <a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a>operador! =
 
 Testa se o objeto pair à esquerda do operador é diferente do objeto pair à direita.
 
@@ -42,15 +42,15 @@ template <class T, class U>
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `pair`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `pair`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se os pares forem diferentes; **false** se os pares forem iguais.
+**`true`** Se os pares não forem iguais; **`false`** se os pares forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -103,7 +103,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto pair à esquerda do operador é igual ao objeto pair à direita.
 
@@ -114,19 +114,19 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `pair`.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `pair`.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se os pares forem iguais; **false** se os `pair`s não forem iguais.
+**`true`** Se os pares forem iguais; **`false`** se os `pair` s não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
-Um par será igual a outro par se cada um dos seus respectivos elementos for igual. A função retorna `left`. **first** == `right`. **first** && `left`. **second** == `right`. **second**. Dois pares serão diferentes se o primeiro ou o segundo elemento não for igual ao elemento correspondente do outro par.
+Um par será igual a outro par se cada um dos seus respectivos elementos for igual. A função retorna `left`. **primeiro**  ==  `right` . **primeiro**  &&  `left` . **segundo**  ==  `right` . **segundo**. Dois pares serão diferentes se o primeiro ou o segundo elemento não for igual ao elemento correspondente do outro par.
 
 ### <a name="example"></a>Exemplo
 
@@ -166,7 +166,7 @@ int main( )
 }
 ```
 
-## <a name="op_lt">Operador </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operador&lt;
 
 Testa se o objeto pair à esquerda do operador é menor que o objeto pair à direita.
 
@@ -177,19 +177,19 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true**, se o `pair` à esquerda do operador for estritamente menor que o `pair` à direita do operador; caso contrário, **false**.
+**`true`** Se o `pair` no lado esquerdo do operador for estritamente menor do que o `pair` no lado direito do operador; caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
-O objeto de `pair` de `left` deve ser estritamente menor do que o objeto de `pair` de `right` se *Left* for menor que e diferente de *Right*.
+O `left` `pair` objeto deve ser estritamente menor do que o `right` `pair` objeto se *Left* for menor que e diferente de *Right*.
 
 Em uma comparação de pares, os primeiros elementos dos valores dos dois pares têm prioridade mais alta. Se eles forem diferentes, o resultado da comparação entre eles será considerado o resultado da comparação do par. Se os valores dos primeiros elementos não forem diferentes, os valores do segundo elemento serão comparados e o resultado dessa comparação será interpretado como o resultado da comparação do par.
 
@@ -240,7 +240,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="op_lt_eq"></a>= de&lt;do operador
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operador&lt;=
 
 Testa se o objeto pair à esquerda do operador é menor que ou igual ao objeto pair à direita.
 
@@ -254,15 +254,15 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a `pair` no lado esquerdo do operador for menor que ou igual à `pair` à direita do operador; caso contrário, **false**.
+**`true`** Se o `pair` no lado esquerdo do operador for menor ou igual ao `pair` no lado direito do operador; caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -325,7 +325,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="op_gt">Operador </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operador&gt;
 
 Testa se o objeto pair à esquerda do operador é maior que o objeto pair à direita.
 
@@ -339,19 +339,19 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true**, se o `pair` à esquerda do operador for estritamente maior que o `pair` à direita do operador; caso contrário, **false**.
+**`true`** Se o `pair` no lado esquerdo do operador for estritamente maior do que o `pair` no lado direito do operador; caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
-O objeto de `pair` de `left` é considerado estritamente maior do que o objeto de `pair` `right` se *Left* for maior que e diferente de *Right*.
+O `left` `pair` objeto deve ser estritamente maior do que o `right` `pair` objeto se *Left* for maior que e *right*diferente de ' right '.
 
 Em uma comparação de pares, os primeiros elementos dos valores dos dois pares têm prioridade mais alta. Se eles forem diferentes, o resultado da comparação entre eles será considerado o resultado da comparação do par. Se os valores dos primeiros elementos não forem diferentes, os valores do segundo elemento serão comparados e o resultado dessa comparação será interpretado como o resultado da comparação do par.
 
@@ -412,7 +412,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="op_gt_eq"></a>= de&gt;do operador
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operador&gt;=
 
 Testa se o objeto pair à esquerda do operador é maior que ou igual ao objeto pair à direita.
 
@@ -426,15 +426,15 @@ template <class T, class U>
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-\ *à direita*
+*Certo*\
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a `pair` no lado esquerdo do operador for maior que ou igual à `pair` à direita do operador; caso contrário, **false**.
+**`true`** Se o `pair` no lado esquerdo do operador for maior ou igual ao `pair` no lado direito do operador; caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 

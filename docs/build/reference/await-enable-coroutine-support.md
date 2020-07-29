@@ -9,24 +9,24 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: 53a6cf4b3d14ee97a324fa01f83c0d0fee61180b
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 526216ba2ae259b53bcf77691ebd09a6152b83f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373691"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223922"
 ---
 # <a name="await-enable-coroutine-support"></a>/await (habilitar suporte de corrotina)
 
 Use a opção de compilador **/Await** para habilitar o suporte do compilador para corrotinas.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 > /Await
 
 ## <a name="remarks"></a>Comentários
 
-A opção de compilador **/Await** habilita o suporte do compilador para as corotinas C++ e as palavras-chave **co_await**, **co_yield**e **co_return**. Essa opção fica desativada por padrão. Para obter informações sobre o suporte para corrotinas no Visual Studio, consulte o [blog da equipe do Visual Studio](https://devblogs.microsoft.com/cppblog/category/coroutine/). Para obter mais informações sobre a proposta padrão de corrotinas, consulte [rascunho de trabalho do N4628, especificação técnica para extensões do C++ para corrotinas](https://wg21.link/n4628).
+A opção de compilador **/Await** habilita o suporte do compilador para as corotinas C++ e as palavras-chave **`co_await`** , **`co_yield`** e **`co_return`** . Essa opção fica desativada por padrão. Para obter informações sobre o suporte para corrotinas no Visual Studio, consulte o [blog da equipe do Visual Studio](https://devblogs.microsoft.com/cppblog/category/coroutine/). Para obter mais informações sobre a proposta padrão de corrotinas, consulte [rascunho de trabalho do N4628, especificação técnica para extensões do C++ para corrotinas](https://wg21.link/n4628).
 
 A opção **/Await** está disponível a partir do Visual Studio 2015.
 

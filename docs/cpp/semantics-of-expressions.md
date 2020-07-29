@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223597"
 ---
 # <a name="semantics-of-expressions"></a>Semântica de expressões
 
-As expressões são avaliadas de acordo com a precedência e o agrupamento dos respectivos operadores. ([Precedência de operador e Associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md) em [convenções lexicais](../cpp/lexical-conventions.md), mostra as C++ relações que os operadores impõem em expressões.)
+As expressões são avaliadas de acordo com a precedência e o agrupamento dos respectivos operadores. ([Precedência de operador e Associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md) em [convenções lexicais](../cpp/lexical-conventions.md), mostra as relações que os operadores do C++ impõem em expressões.)
 
 ## <a name="order-of-evaluation"></a>Ordem de avaliação
 
@@ -52,7 +52,7 @@ A ordem na qual a expressão mostrada na figura acima é avaliada é determinada
 
 1. A adição (+) tem a precedência mais alta a seguir, de modo que `a` é adicionado ao produto de `b` vezes `c`.
 
-1. SHIFT esquerda (< <) tem a menor precedência na expressão, mas há duas ocorrências. Como o operador de deslocamento para a esquerda é agrupado da esquerda para a direita, a subexpressão à esquerda é avaliada primeiro, seguida pela subexpressão à direita.
+1. SHIFT esquerda (<<) tem a menor precedência na expressão, mas há duas ocorrências. Como o operador de deslocamento para a esquerda é agrupado da esquerda para a direita, a subexpressão à esquerda é avaliada primeiro, seguida pela subexpressão à direita.
 
 Quando são usados parênteses para agrupar as subexpressões, eles alteram a precedência e também a ordem em que a expressão é avaliada, conforme mostra a figura a seguir.
 
@@ -69,10 +69,10 @@ A linguagem C++ especifica determinadas compatibilidades ao especificar operando
 
 |Tipo esperado|Tipos permitidos|
 |-------------------|-------------------|
-|*tipo*|*tipo* de `const`<br /> *tipo* de `volatile`<br /> *tipo*&<br /> *tipo* de `const`&<br /> *tipo* de `volatile`&<br /> *tipo* de `volatile const`<br /> *tipo* de `volatile const`&|
-|*tipo* \*|*tipo* \*<br /> *tipo* de `const` \*<br /> *tipo* de `volatile` \*<br /> *tipo* de `volatile const` \*|
-|*tipo* de `const`|*tipo*<br /> *tipo* de `const`<br />*tipo* de `const`&|
-|*tipo* de `volatile`|*tipo*<br /> *tipo* de `volatile`<br /> *tipo* de `volatile`&|
+|*tipo*|**`const`***tipo* de<br /> **`volatile`***tipo* de<br /> *Escreva*&<br /> **`const`***tipo* de&<br /> **`volatile`***tipo* de&<br /> `volatile const`*tipo* de<br /> `volatile const`*tipo* de&|
+|*tipo* de\*|*tipo* de\*<br /> **`const`***tipo* de\*<br /> **`volatile`***tipo* de\*<br /> `volatile const`*tipo* de\*|
+|**`const`***tipo* de|*tipo*<br /> **`const`***tipo* de<br />**`const`***tipo* de&|
+|**`volatile`***tipo* de|*tipo*<br /> **`volatile`***tipo* de<br /> **`volatile`***tipo* de&|
 
 Como as regras acima podem sempre ser usadas em conjunto, um ponteiro const para um objeto volatile pode ser fornecido onde um ponteiro é esperado.
 
@@ -88,13 +88,13 @@ func( i, ++i );
 
 A linguagem C++ não garante a ordem de avaliação dos argumentos para uma chamada de função. Portanto, no exemplo anterior, `func` pode receber os valores 7 e 8 ou 8 e 8 para seus parâmetros, dependendo se os parâmetros são avaliados da esquerda para a direita ou da direita para a esquerda.
 
-## <a name="c-sequence-points-microsoft-specific"></a>C++pontos de sequência (específicos da Microsoft)
+## <a name="c-sequence-points-microsoft-specific"></a>Pontos de sequência do C++ (específicos da Microsoft)
 
 Uma expressão pode modificar o valor de um objeto apenas uma vez entre "pontos de sequência" consecutivos.
 
 No momento, a definição da linguagem C++ não especifica pontos de sequência. O Microsoft C++ usa os mesmos pontos de sequência que o ANSI C para qualquer expressão que envolva operadores de C e não envolva operadores sobrecarregados. Quando os operadores estão sobrecarregados, a semântica muda de sequenciamento de operadores para sequenciamento de chamada de funções. O Microsoft C++ os seguintes pontos de sequência:
 
-- Operando esquerdo do operador AND lógico (& &). O operando esquerdo do operador AND lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador AND lógico será avaliado.
+- Operando esquerdo do operador AND lógico (&&). O operando esquerdo do operador AND lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador AND lógico será avaliado.
 
 - Operando esquerdo do operador OR lógico (&#124;&#124;). O operando esquerdo do operador OR lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador OR lógico será avaliado.
 
@@ -106,7 +106,7 @@ No momento, a definição da linguagem C++ não especifica pontos de sequência.
 
 - O término de uma expressão de inicialização completa, por exemplo, o término de uma inicialização em uma instrução de declaração.
 
-- A expressão em uma instrução de expressão. As instruções da expressão consistem de uma expressão opcional seguida por um ponto e vírgula (;). A expressão é completamente avaliada em relação a seus efeitos colaterais.
+- A expressão em uma instrução de expressão. As instruções da expressão consistem em uma expressão opcional seguida por um ponto e vírgula (;). A expressão é completamente avaliada em relação a seus efeitos colaterais.
 
 - A expressão de controle em uma instrução de seleção (if ou switch). A expressão é completamente avaliada e todos os efeitos colaterais são concluídos antes que o código dependente da seleção seja executado.
 

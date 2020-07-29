@@ -3,18 +3,18 @@ title: Conversões e segurança de tipo
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: dbca9057622ab1a92b74e2958b8dfbe8d810fede
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 28adbc261b5b4376f947e00695fe66650739438d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246120"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223532"
 ---
 # <a name="type-conversions-and-type-safety"></a>Conversões e segurança de tipo
 
-Este documento identifica problemas comuns de conversão de tipos e descreve como você pode evitá- C++ los em seu código.
+Este documento identifica problemas comuns de conversão de tipos e descreve como você pode evitá-los em seu código C++.
 
-Quando você escreve um C++ programa, é importante garantir que ele seja de tipo seguro. Isso significa que cada variável, um argumento de função e um valor de retorno de função estão armazenando um tipo aceitável de dados e as operações que envolvem valores de diferentes tipos "fazem sentido" e não causam perda de dados, interpretação incorreta de padrões de bits ou corrupção de memória. Um programa que nunca converte valores explicitamente ou implicitamente de um tipo para outro é de tipo seguro por definição. No entanto, as conversões de tipo, mesmo as conversões não seguras, às vezes são necessárias. Por exemplo, talvez você precise armazenar o resultado de uma operação de ponto flutuante em uma variável do tipo **int**, ou pode ter que passar o valor em um **int** não assinado para uma função que usa um **int**assinado. Ambos os exemplos ilustram conversões não seguras porque podem causar perda de dados ou nova interpretação de um valor.
+Ao escrever um programa em C++, é importante garantir que ele seja de tipo seguro. Isso significa que cada variável, um argumento de função e um valor de retorno de função estão armazenando um tipo aceitável de dados e as operações que envolvem valores de diferentes tipos "fazem sentido" e não causam perda de dados, interpretação incorreta de padrões de bits ou corrupção de memória. Um programa que nunca converte valores explicitamente ou implicitamente de um tipo para outro é de tipo seguro por definição. No entanto, as conversões de tipo, mesmo as conversões não seguras, às vezes são necessárias. Por exemplo, talvez você precise armazenar o resultado de uma operação de ponto flutuante em uma variável de tipo **`int`** , ou pode ser necessário passar o valor em um **`unsigned int`** para uma função que usa um **`signed int`** . Ambos os exemplos ilustram conversões não seguras porque podem causar perda de dados ou nova interpretação de um valor.
 
 Quando o compilador detecta uma conversão não segura, ele emite um erro ou um aviso. Um erro para a compilação; um aviso permite que a compilação Continue, mas indica um possível erro no código. No entanto, mesmo que o programa seja compilado sem avisos, ele ainda pode conter código que leva a conversões implícitas de tipo que produzem resultados incorretos. Os erros de tipo também podem ser introduzidos por conversões explícitas, ou conversões no código.
 
@@ -26,13 +26,13 @@ Quando uma expressão contém operandos de diferentes tipos internos e nenhuma c
 
 Em uma conversão de ampliação, um valor em uma variável menor é atribuído a uma variável maior sem perda de dados. Como as conversões de alargamento são sempre seguras, o compilador as executa silenciosamente e não emite avisos. As conversões a seguir são conversões ampliadas.
 
-|De|{1&gt;Para&lt;1}|
+|De|Para|
 |----------|--------|
-|Qualquer tipo integral assinado ou não assinado, exceto **longo** ou **__int64**|**double**|
-|**bool** ou **Char**|Qualquer outro tipo interno|
-|**curto** ou **wchar_t**|**int**, **Long**, **longo longo**|
-|**int**, **Long**|**long long**|
-|**float**|**double**|
+|Qualquer **`signed`** **`unsigned`** tipo ou integral, exceto **`long long`** ou**`__int64`**|**`double`**|
+|**`bool`** or**`char`**|Qualquer outro tipo interno|
+|**`short`** or**`wchar_t`**|**`int`**, **`long`**, **`long long`**|
+|**`int`**, **`long`**|**`long long`**|
+|**`float`**|**`double`**|
 
 ### <a name="narrowing-conversions-coercion"></a>Refinando conversões (coerção)
 
@@ -57,7 +57,7 @@ int k = 7.7; // warning C4244:'initializing':conversion from 'double' to
 
 ### <a name="signed---unsigned-conversions"></a>Conversões assinadas com sinal
 
-Um tipo integral assinado e sua contraparte não assinada são sempre do mesmo tamanho, mas diferem em como o padrão de bit é interpretado para transformação de valor. O exemplo de código a seguir demonstra o que acontece quando o mesmo padrão de bit é interpretado como um valor assinado e como um valor não assinado. O padrão de bit armazenado em ambos os `num` e `num2` nunca altera o que é mostrado na ilustração anterior.
+Um tipo integral assinado e sua contraparte não assinada são sempre do mesmo tamanho, mas diferem em como o padrão de bit é interpretado para transformação de valor. O exemplo de código a seguir demonstra o que acontece quando o mesmo padrão de bit é interpretado como um valor assinado e como um valor não assinado. O padrão de bit armazenado em `num` e `num2` nunca altera o que é mostrado na ilustração anterior.
 
 ```cpp
 using namespace std;
@@ -73,7 +73,7 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
 ```
 
-Observe que os valores são reinterpretados em ambas as direções. Se o seu programa produzir resultados estranhos em que o sinal do valor pareça invertido do esperado, procure conversões implícitas entre tipos integrais assinados e não assinados. No exemplo a seguir, o resultado da expressão (0-1) é implicitamente convertido de **int** para **int não assinado** quando armazenado em `num`. Isso faz com que o padrão de bit seja reinterpretado.
+Observe que os valores são reinterpretados em ambas as direções. Se o seu programa produzir resultados estranhos em que o sinal do valor pareça invertido do esperado, procure conversões implícitas entre tipos integrais assinados e não assinados. No exemplo a seguir, o resultado da expressão (0-1) é implicitamente convertido de **`int`** para **`unsigned int`** quando ele é armazenado em `num` . Isso faz com que o padrão de bit seja reinterpretado.
 
 ```cpp
 unsigned int u3 = 0 - 1;
@@ -84,7 +84,7 @@ O compilador não avisa sobre conversões implícitas entre tipos integrais assi
 
 ### <a name="pointer-conversions"></a>Conversões de ponteiro
 
-Em muitas expressões, uma matriz C-Style é implicitamente convertida em um ponteiro para o primeiro elemento na matriz, e conversões constantes podem ocorrer silenciosamente. Embora isso seja conveniente, ele também é potencialmente propenso a erros. Por exemplo, o seguinte exemplo de código criado incorretamente parece não-e, ainda assim, será compilado e produzirá um resultado de "p". Primeiro, o literal de constante de cadeia de caracteres "Help" é convertido em um `char*` que aponta para o primeiro elemento da matriz; Esse ponteiro é então incrementado por três elementos para que agora ele aponte para o último elemento ' p '.
+Em muitas expressões, uma matriz C-Style é implicitamente convertida em um ponteiro para o primeiro elemento na matriz, e conversões constantes podem ocorrer silenciosamente. Embora isso seja conveniente, ele também é potencialmente propenso a erros. Por exemplo, o seguinte exemplo de código criado incorretamente parece não-e, ainda assim, será compilado e produzirá um resultado de "p". Primeiro, o literal de constante de cadeia de caracteres "Help" é convertido em um **`char*`** que aponta para o primeiro elemento da matriz; esse ponteiro é incrementado em três elementos para que agora aponte para o último elemento "p".
 
 ```cpp
 char* s = "Help" + 3;
@@ -92,7 +92,7 @@ char* s = "Help" + 3;
 
 ## <a name="explicit-conversions-casts"></a>Conversões explícitas (difusões)
 
-Usando uma operação de conversão, você pode instruir o compilador a converter um valor de um tipo para outro tipo. O compilador gerará um erro em alguns casos se os dois tipos estiverem completamente não relacionados, mas em outros casos ele não gerará um erro mesmo que a operação não seja de tipo seguro. Use as conversões com moderação porque qualquer conversão de um tipo para outro é uma fonte potencial de erro do programa. No entanto, às vezes as conversões são necessárias, e nem todas as conversões são igualmente perigosas. Um uso eficaz de uma conversão é quando seu código executa uma conversão de restrição e você sabe que a conversão não está fazendo com que seu programa produza resultados incorretos. Na verdade, isso informa ao compilador que você sabe o que está fazendo e para parar de incomodar com avisos sobre ele. Outro uso é para converter de uma classe de ponteiro para derivada para uma classe de ponteiro para base. Outro uso é fazer a conversão de **const**-qualidade de uma variável para passá-la para uma função que requer um argumento não**const** . A maioria dessas operações de conversão envolve alguns riscos.
+Usando uma operação de conversão, você pode instruir o compilador a converter um valor de um tipo para outro tipo. O compilador gerará um erro em alguns casos se os dois tipos estiverem completamente não relacionados, mas em outros casos ele não gerará um erro mesmo que a operação não seja de tipo seguro. Use as conversões com moderação porque qualquer conversão de um tipo para outro é uma fonte potencial de erro do programa. No entanto, às vezes as conversões são necessárias, e nem todas as conversões são igualmente perigosas. Um uso eficaz de uma conversão é quando seu código executa uma conversão de restrição e você sabe que a conversão não está fazendo com que seu programa produza resultados incorretos. Na verdade, isso informa ao compilador que você sabe o que está fazendo e para parar de incomodar com avisos sobre ele. Outro uso é para converter de uma classe de ponteiro para derivada para uma classe de ponteiro para base. Outro uso é converter o **`const`** -qualidade de uma variável para passá-la para uma função que requer um não **`const`** argumento. A maioria dessas operações de conversão envolve alguns riscos.
 
 Na programação em estilo C, o mesmo operador de conversão C-Style é usado para todos os tipos de conversões.
 
@@ -101,9 +101,9 @@ Na programação em estilo C, o mesmo operador de conversão C-Style é usado pa
 int(x); // old-style cast, functional syntax
 ```
 
-O operador de conversão C-Style é idêntico ao operador de chamada () e, portanto, é inevidente no código e fácil de ignorar. Ambos são ruins porque são difíceis de reconhecer rapidamente ou Pesquisar, e são diferentes o suficiente para invocar qualquer combinação de **static**, **const**e **reinterpret_cast**. Descobrir o que uma conversão de estilo antigo realmente pode ser difícil e propenso a erros. Por todos esses motivos, quando uma conversão é necessária, recomendamos que você use um dos seguintes C++ operadores de conversão, que, em alguns casos, são significativamente mais fortemente tipados e que expressam muito mais explicitamente a intenção de programação:
+O operador de conversão C-Style é idêntico ao operador de chamada () e, portanto, é inevidente no código e fácil de ignorar. Ambos são ruins porque são difíceis de reconhecer rapidamente ou Pesquisar, e são diferentes o suficiente para invocar qualquer combinação de **`static`** , **`const`** e **`reinterpret_cast`** . Descobrir o que uma conversão de estilo antigo realmente pode ser difícil e propenso a erros. Por todos esses motivos, quando uma conversão é necessária, recomendamos que você use um dos seguintes operadores de conversão de C++, que, em alguns casos, são significativamente mais fortemente tipados e que expressam muito mais explicitamente a intenção de programação:
 
-- **static_cast**, para conversões que são verificadas somente no momento da compilação. **static_cast** retornará um erro se o compilador detectar que você está tentando fazer a conversão entre tipos que são completamente incompatíveis. Você também pode usá-lo para converter entre ponteiro para base e ponteiro para derivado, mas o compilador nem sempre informa se essas conversões serão seguras no tempo de execução.
+- **`static_cast`**, para conversões que são verificadas somente no momento da compilação. **`static_cast`** retornará um erro se o compilador detectar que você está tentando converter entre tipos que são completamente incompatíveis. Você também pode usá-lo para converter entre ponteiro para base e ponteiro para derivado, mas o compilador nem sempre informa se essas conversões serão seguras no tempo de execução.
 
     ```cpp
     double d = 1.58947;
@@ -117,9 +117,9 @@ O operador de conversão C-Style é idêntico ao operador de chamada () e, porta
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-   Para obter mais informações, consulte [static_cast](../cpp/static-cast-operator.md).
+   Para obter mais informações, consulte [`static_cast`](../cpp/static-cast-operator.md).
 
-- **dynamic_cast**, para conversões seguras e verificadas em tempo de execução de ponteiro para base a ponteiro para derivado. Uma **dynamic_cast** é mais segura do que uma **static_cast** para downcasts, mas a verificação de tempo de execução incorre em sobrecarga.
+- **`dynamic_cast`**, para conversões seguras e verificadas em tempo de execução de ponteiro para base a ponteiro para derivado. R **`dynamic_cast`** é mais seguro do que um **`static_cast`** for downcasts, mas a verificação de tempo de execução incorre em sobrecarga.
 
     ```cpp
     Base* b = new Base();
@@ -142,9 +142,9 @@ O operador de conversão C-Style é idêntico ao operador de chamada () e, porta
     //Output: d3 is null;
     ```
 
-   Para obter mais informações, consulte [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Para obter mais informações, consulte [`dynamic_cast`](../cpp/dynamic-cast-operator.md).
 
-- **const_cast**, para a conversão de **const**-qualidade de uma variável ou a conversão de uma variável não**const** para ser **const**. A conversão de **const**-qualidade usando esse operador é tão propenso a erros quanto o uso de uma conversão em estilo C, exceto que com a **conversão const** , é menos provável que você execute a conversão acidentalmente. Às vezes, você precisa fazer a conversão de **const**-qualidade de uma variável, por exemplo, para passar uma variável **const** para uma função que usa um parâmetro não**const** . O exemplo a seguir mostra como fazer isso.
+- **`const_cast`**, para a conversão de **`const`** -qualidade de uma variável ou a conversão de uma não **`const`** variável como **`const`** . A transmissão **`const`** de qualidade usando esse operador é tão propenso a erros quanto o uso de uma conversão C-Style, exceto que com **`const_cast`** você tem menos probabilidade de executar a conversão acidentalmente. Às vezes, você precisa converter o **`const`** -qualidade de uma variável, por exemplo, para passar uma **`const`** variável para uma função que usa um não **`const`** parâmetro. O exemplo a seguir mostra como fazer isso.
 
     ```cpp
     void Func(double& d) { ... }
@@ -157,12 +157,12 @@ O operador de conversão C-Style é idêntico ao operador de chamada () e, porta
 
    Para obter mais informações, consulte [const_cast](../cpp/const-cast-operator.md).
 
-- **reinterpret_cast**, para conversões entre tipos não relacionados, como **ponteiro** para **int**.
+- **`reinterpret_cast`**, para conversões entre tipos não relacionados, como um tipo de ponteiro e um **`int`** .
 
     > [!NOTE]
     >  Esse operador cast não é usado com frequência como os outros, e não é garantido que seja portátil para outros compiladores.
 
-   O exemplo a seguir ilustra como **reinterpret_cast** difere de **static_cast**.
+   O exemplo a seguir ilustra como o **`reinterpret_cast`** difere do **`static_cast`** .
 
     ```cpp
     const char* str = "hello";
@@ -174,11 +174,11 @@ O operador de conversão C-Style é idêntico ao operador de chamada () e, porta
                                        // However, it is not 64-bit safe.
     ```
 
-   Para obter mais informações, consulte [operador de reinterpret_cast](../cpp/reinterpret-cast-operator.md).
+   Para obter mais informações, consulte [ `reinterpret_cast` operador](../cpp/reinterpret-cast-operator.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[C++sistema de tipos](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Bem-vindo de volta paraC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Sistema de tipos C++](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Bem-vindo de volta ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[Biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

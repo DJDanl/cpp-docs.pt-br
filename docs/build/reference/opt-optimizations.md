@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 5c0ab3579fcb9633c435305a8b02b0c3f73d7a6f
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 874c4b974348d1bef8c8c3837f46c1c27d6d304b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825698"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215186"
 ---
 # <a name="opt-optimizations"></a>/OPT (Otimizações)
 
@@ -30,9 +30,9 @@ Controla as otimizações que o LINK executa durante uma compilação.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/OPT:**{**ref** | **NOREF**} \
-> **/OPT:**{**ICF**[**=**_iterações_] | **NOICF**} \
-> **/OPT:**{**LBR** | **NOLBR**}
+> **/OPT:**{**ref**  |  **NOREF**} \
+> **/OPT:**{**ICF**[ **=** _iterações_] | **NOICF**} \
+> **/OPT:**{**LBR**  |  **NOLBR**}
 
 ## <a name="arguments"></a>Argumentos
 
@@ -42,22 +42,22 @@ Controla as otimizações que o LINK executa durante uma compilação.
 
 Quando/OPT: REF está habilitado, o LINK remove dados e funções empacotados não referenciados, conhecidos como *COMDATs*. Essa otimização é conhecida como eliminação COMDAT transitiva. A opção **/OPT: REF** também desabilita a vinculação incremental.
 
-Funções embutidas e funções de membro definidas dentro de uma declaração de classe são sempre COMDATs. Todas as funções em um arquivo de objeto serão feitas em COMDATs se ele for compilado usando a opção [/GY](gy-enable-function-level-linking.md) . Para inserir dados **const** em COMDATs, você deve declará-los usando `__declspec(selectany)`. Para obter informações sobre como especificar dados para remoção ou dobramento, consulte [selectany](../../cpp/selectany.md).
+Funções embutidas e funções de membro definidas dentro de uma declaração de classe são sempre COMDATs. Todas as funções em um arquivo de objeto serão feitas em COMDATs se ele for compilado usando a opção [/GY](gy-enable-function-level-linking.md) . Para inserir **`const`** dados em COMDATs, você deve declará-lo usando `__declspec(selectany)` . Para obter informações sobre como especificar dados para remoção ou dobramento, consulte [selectany](../../cpp/selectany.md).
 
 Por padrão, **/OPT: REF** é habilitado pelo vinculador, a menos que **/OPT: NOREF** ou [/debug](debug-generate-debug-info.md) seja especificado. Para substituir esse padrão e manter COMDATs não referenciados no programa, especifique **/OPT: NOREF**. Você pode usar a opção [/include](include-force-symbol-references.md) para substituir a remoção de um símbolo específico.
 
 Se [/debug](debug-generate-debug-info.md) for especificado, o padrão para **/opt** será **NOREF**e todas as funções serão preservadas na imagem. Para substituir esse padrão e otimizar uma compilação de depuração, especifique **/OPT: REF**. Isso pode reduzir o tamanho do seu executável e pode ser uma otimização útil mesmo em compilações de depuração. É recomendável que você também especifique **/OPT: NOICF** para preservar funções idênticas em compilações de depuração. Isso facilitará a leitura de rastreamentos da pilha e a definição de pontos de interrupção em funções que seriam combinadas em outros casos.
 
-**ICF**\[**=**_Iterações_do ICF] &#124; **NOICF**
+**ICF** \[ ICF **=** _iterações_] &#124; **NOICF**
 
-Use as_iterações_do **ICF**\[**=**] para executar o dobramento COMDAT idêntico. COMDATs redundantes podem ser removido da saída do vinculador. O parâmetro de *iterações* opcionais especifica o número de vezes para atravessar os símbolos para duplicatas. O número padrão de iterações é 1. As iterações adicionais podem encontrar mais duplicatas que são descobertas com a dobra na iteração anterior.
+Use **ICF**as \[ **=** _iterações_do ICF] para executar o dobramento COMDAT idêntico. COMDATs redundantes podem ser removido da saída do vinculador. O parâmetro de *iterações* opcionais especifica o número de vezes para atravessar os símbolos para duplicatas. O número padrão de iterações é 1. As iterações adicionais podem encontrar mais duplicatas que são descobertas com a dobra na iteração anterior.
 
 Por padrão, **/OPT: ICF** é habilitado pelo vinculador, a menos que **/OPT: NOICF** ou [/debug](debug-generate-debug-info.md) seja especificado. Para substituir esse padrão e impedir que COMDATs sejam dobrados no programa, especifique **/OPT: NOICF**.
 
 Em uma compilação de depuração, você deve especificar explicitamente **/OPT: ICF** para habilitar o dobramento COMDAT. No entanto, como **/OPT: ICF** pode mesclar dados ou funções idênticas, ele pode alterar os nomes de função que aparecem em rastreamentos de pilha. Ele também pode tornar impossível definir pontos de interrupção em determinadas funções ou examinar alguns dados no depurador e pode levá-lo a funções inesperadas ao percorrer seu código de forma única. O comportamento do código é idêntico, mas a apresentação do depurador pode ser muito confusa. Portanto, não recomendamos que você use **/OPT: ICF** em compilações de depuração, a menos que as vantagens de um código menor superem essas desvantagens.
 
 > [!NOTE]
-> Como **/OPT: o ICF** pode fazer com que o mesmo endereço seja atribuído a funções diferentes ou membros de dados somente leitura (ou seja, variáveis **const** quando compiladas usando **/GY**), ele pode interromper um programa que depende de endereços exclusivos para funções ou membros de dados somente leitura. Para obter mais informações, consulte [/Gy (habilitar vinculação em nível de função)](gy-enable-function-level-linking.md).
+> Como **/OPT: ICF** pode fazer com que o mesmo endereço seja atribuído a funções diferentes ou membros de dados somente leitura (ou seja, **`const`** variáveis quando compilados usando **/GY**), ele pode interromper um programa que depende de endereços exclusivos para funções ou membros de dados somente leitura. Para obter mais informações, consulte [/Gy (habilitar vinculação em nível de função)](gy-enable-function-level-linking.md).
 
 **LBR** &#124; **NOLBR**
 
@@ -83,7 +83,7 @@ Os argumentos **/opt** geralmente são definidos para projetos criados usando a 
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedade**otimização** do**vinculador** > de **Propriedades** > de configuração.
+1. Selecione a **Configuration Properties**  >  página de propriedade otimização do**vinculador**de propriedades de configuração  >  **Optimization** .
 
 1. Modifique uma destas propriedades:
 
@@ -95,7 +95,7 @@ Os argumentos **/opt** geralmente são definidos para projetos criados usando a 
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedade da**linha de comando** do**vinculador** > de **Propriedades** > de configuração.
+1. Selecione a **Configuration Properties**  >  página de propriedade da linha de comando do**vinculador**de propriedades de configuração  >  **Command Line** .
 
 1. Insira a opção em **Opções adicionais**:
 
@@ -108,4 +108,4 @@ Os argumentos **/opt** geralmente são definidos para projetos criados usando a 
 ## <a name="see-also"></a>Confira também
 
 - [Referência de vinculador MSVC](linking.md)
-- [Opções de vinculador MSVC](linker-options.md)
+- [Opções do vinculador MSVC](linker-options.md)

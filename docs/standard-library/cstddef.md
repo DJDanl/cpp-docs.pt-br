@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222518"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Inclui o cabeçalho \<de biblioteca padrão C stddef. h > e adiciona nomes associados `std` ao namespace. A inclusão desse cabeçalho garante que os nomes declarados usando vínculo externo no cabeçalho da biblioteca padrão C sejam `std` declarados no namespace.
+Inclui o cabeçalho da biblioteca padrão C \<stddef.h> e adiciona nomes associados ao `std` namespace. A inclusão desse cabeçalho garante que os nomes declarados usando vínculo externo no cabeçalho da biblioteca padrão C sejam declarados no `std` namespace.
 
 > [!NOTE]
-> \<cstddef > inclui o tipo **byte** e não inclui o tipo **wchar_t**.
+> \<cstddef>inclui o tipo **byte** e não inclui o tipo **`wchar_t`** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +40,7 @@ namespace std {
 #define offsetof(type, member-designator)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ptrdiff_t*\
 Um tipo de inteiro assinado definido por implementação que pode conter a diferença de dois subscritos em um objeto de matriz.
@@ -52,7 +52,7 @@ Um tipo de inteiro sem sinal definido pela implementação que é grande o sufic
 Um tipo de POD cujo requisito de alinhamento é, pelo menos, tão grande quanto o de cada tipo escalar, e cujo requisito de alinhamento tem suporte em cada contexto.
 
 *nullptr_t*\
-Um sinônimo para o tipo de uma expressão **nullptr** . Embora um endereço **nullptr** não possa ser obtido, o endereço de outro objeto *nullptr_t* que é um lvalue pode ser obtido.
+Um sinônimo para o tipo de uma **`nullptr`** expressão. Embora um **`nullptr`** endereço não possa ser obtido, o endereço de outro *nullptr_t* objeto que é um lvalue pode ser obtido.
 
 ## <a name="byte-class"></a>Classe de byte
 
@@ -77,8 +77,8 @@ template <class IntType>
     IntType to_integer(byte b) noexcept;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Visão geral da biblioteca padrão do C++](../standard-library/cpp-standard-library-overview.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

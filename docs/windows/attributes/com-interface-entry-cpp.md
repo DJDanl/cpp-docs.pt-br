@@ -1,17 +1,17 @@
 ---
-title: com_interface_entry (C++ atributo com)
+title: com_interface_entry (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 06df146ea47428ee782da7a93c2da7097e110324
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215342"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -33,7 +33,7 @@ Uma cadeia de caracteres que contém o texto real da entrada. Para obter uma lis
 
 O atributo **COM_INTERFACE_ENTRY** C++ insere o conteúdo Unabridged de uma cadeia de caracteres no mapa de interface com do objeto de destino. Se o atributo for aplicado uma vez ao objeto de destino, a entrada será inserida no início do mapa de interface existente. Se o atributo for aplicado repetidamente ao mesmo objeto de destino, as entradas serão inseridas no início do mapa de interface na ordem em que são recebidas.
 
-Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` for aplicado, `vi_progid` e `coclass` também serão aplicadas.
+Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` é aplicado `vi_progid` e `coclass` também é aplicado.
 
 Como o primeiro uso de **COM_INTERFACE_ENTRY** faz com que a nova interface seja inserida no início do mapa de interface, ela deve ser um dos seguintes tipos de COM_INTERFACE_ENTRY:
 
@@ -47,7 +47,7 @@ Como o primeiro uso de **COM_INTERFACE_ENTRY** faz com que a nova interface seja
 
 Usos adicionais do atributo **COM_INTERFACE_ENTRY** podem usar todos os tipos de COM_INTERFACE_ENTRY com suporte.
 
-Essa restrição é necessária porque a ATL usa a primeira entrada no mapa de interface como a identidade `IUnknown`; Portanto, a entrada deve ser uma interface válida. Por exemplo, o exemplo de código a seguir é inválido porque a primeira entrada no mapa de interface não especifica uma interface COM real.
+Essa restrição é necessária porque a ATL usa a primeira entrada no mapa de interface como a identidade `IUnknown` ; portanto, a entrada deve ser uma interface válida. Por exemplo, o exemplo de código a seguir é inválido porque a primeira entrada no mapa de interface não especifica uma interface COM real.
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ Essa restrição é necessária porque a ATL usa a primeira entrada no mapa de i
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir adiciona duas entradas ao mapa de interface COM existente do `CMyBaseClass`. A primeira é uma interface padrão e a segunda oculta a interface `IDebugTest`.
+O código a seguir adiciona duas entradas ao mapa de interface COM existente do `CMyBaseClass` . A primeira é uma interface padrão e a segunda oculta a `IDebugTest` interface.
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-O mapa de objetos COM resultante para `CMyBaseClass` é o seguinte:
+O mapa de objeto COM resultante do `CMyBaseClass` é o seguinte:
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -109,15 +109,15 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Sim|
-|**Atributos necessários**|Um ou mais dos seguintes: `coclass`, `progid`ou `vi_progid`.|
+|**Atributos obrigatórios**|Um ou mais dos seguintes: `coclass` , `progid` ou `vi_progid` .|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

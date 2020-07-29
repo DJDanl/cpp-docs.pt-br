@@ -5,12 +5,12 @@ ms.date: 07/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 571513c33a40bc13ba4d0bb0d682bfb8cc8d6071
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180858"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223870"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções de compilador listadas por categoria
 
@@ -41,7 +41,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 | [`/EH`](eh-exception-handling-model.md) | Especifica o modelo de tratamento de exceções. |
 | [`/fp`](fp-specify-floating-point-behavior.md) | Especifica o comportamento de ponto flutuante. |
 | [`/GA`](ga-optimize-for-windows-application.md) | Otimiza para aplicativos do Windows. |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Usa a convenção de chamada `__cdecl`. (apenas x86) |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Usa a **`__cdecl`** Convenção de chamada. (apenas x86) |
 | [`/Ge`](ge-enable-stack-probes.md) | Preterido. Ativa investigações de pilha. |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | Habilita pooling de cadeia de caracteres. |
 | [`/Gh`](gh-enable-penter-hook-function.md) | Chama a função de gancho `_penter`. |
@@ -49,23 +49,23 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 | [`/GL`](gl-whole-program-optimization.md) | Habilita a otimização de todo o programa. |
 | [`/Gm`](gm-enable-minimal-rebuild.md) | Preterido. Habilita recompilação mínima. |
 | [`/GR`](gr-enable-run-time-type-information.md) | Habilita RTTI (informações de tipo de tempo de execução). |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Usa a convenção de chamada `__fastcall`. (apenas x86) |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Usa a **`__fastcall`** Convenção de chamada. (apenas x86) |
 | [`/GS`](gs-buffer-security-check.md) | Verifica a segurança do buffer. |
 | [`/Gs`](gs-control-stack-checking-calls.md) | Controla investigações de pilha. |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | Dá suporte à segurança de fibra para dados alocados usando armazenamento de thread local estático. |
 | [`/guard:cf`](guard-enable-control-flow-guard.md) | Adiciona verificações de segurança de proteção de fluxo de controle. |
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | Habilita os metadados de continuação de EH. |
-| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Usa a convenção de chamada `__vectorcall`. (somente x86 e x64) |
+| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Usa a **`__vectorcall`** Convenção de chamada. (somente x86 e x64) |
 | [`/Gw`](gw-optimize-global-data.md) | Habilita a otimização de dados globais de todo o programa. |
 | [`/GX`](gx-enable-exception-handling.md) | Preterido. Habilita o tratamento síncrono de exceções. Use [`/EH`](eh-exception-handling-model.md) em vez disso. |
 | [`/Gy`](gy-enable-function-level-linking.md) | Habilita a vinculação no nível de função. |
 | [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Preterido. Habilita as verificações rápidas. (O mesmo que [`/RTC1`](rtc-run-time-error-checks.md) ) |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Usa a convenção de chamada `__stdcall`. (apenas x86) |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Usa a **`__stdcall`** Convenção de chamada. (apenas x86) |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | Força os parâmetros passados em registros a serem gravados em seus locais na pilha mediante a entrada da função. Essa opção de compilador é apenas para compiladores x64 (nativa e de compilação cruzada). |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | Cria uma imagem capaz de aplicar patches sob demanda. |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | Gera transcendentais rápidos. |
 | [`/QIfist`](qifist-suppress-ftol.md) | Preterido. Suprime a chamada da função auxiliar `_ftol` quando é necessária uma conversão de um tipo de ponto flutuante para um tipo integral. (apenas x86) |
-| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Remove comandos `fwait` dentro de blocos `try`. |
+| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Remove os `fwait` comandos dentro dos **`try`** blocos. |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | Atenua o impacto no desempenho da atualização do microcódigo da Errata do Intel JCC. |
 | [`/Qpar`](qpar-auto-parallelizer.md) | Habilita a paralelização automática de loops. |
 | [`/Qpar-report`](qpar-report-auto-parallelizer-reporting-level.md) | Habilita os níveis de relatório para paralelização automática. |
@@ -114,7 +114,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 
 | Opção | Finalidade |
 |--|--|
-| [`/constexpr`](constexpr-control-constexpr-evaluation.md) | Controle a avaliação **constexpr** no momento da compilação. |
+| [`/constexpr`](constexpr-control-constexpr-evaluation.md) | **`constexpr`** Avaliação de controle no momento da compilação. |
 | [`/openmp`](openmp-enable-openmp-2-0-support.md) | Habilita [`#pragma omp`](../../preprocessor/omp.md) no código-fonte. |
 | [`/vd`](vd-disable-construction-displacements.md) | Suprime ou habilita membros da classe `vtordisp` ocultos. |
 | [`/vmb`](vmb-vmg-representation-method.md) | Usa a melhor base de ponteiros para membros. |
@@ -164,7 +164,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | Força as gravações no arquivo PDB a serem serializadas por meio de *MSPDBSRV.EXE*. |
 | [`/H`](h-restrict-length-of-external-names.md) | Preterido. Restringe o tamanho de nomes externos (públicos). |
 | [`/HELP`](help-compiler-command-line-help.md) | Lista as opções do compilador. |
-| [`/J`](j-default-char-type-is-unsigned.md) | Altera o tipo `char` padrão. |
+| [`/J`](j-default-char-type-is-unsigned.md) | Altera o **`char`** tipo padrão. |
 | [`/JMC`](jmc.md) | Dá suporte à depuração de Apenas Meu Código do C++ nativo. |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | O compilador e o vinculador criará um binário que pode ser executado no kernel do Windows. |
 | [`/MP`](mp-build-with-multiple-processes.md) | Cria vários arquivos de origem ao mesmo tempo. |
@@ -231,7 +231,7 @@ As opções experimentais só podem ser suportadas por determinadas versões do 
 | [`/Ze`](za-ze-disable-language-extensions.md) | Preterido. Habilita extensões de linguagem. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Removido no Visual Studio 2015. Gera protótipos de função. |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Referência de compilação do C/C++](c-cpp-building-reference.md)\
 [Opções do compilador MSVC](compiler-options.md)\

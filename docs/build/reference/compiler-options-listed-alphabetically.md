@@ -4,12 +4,12 @@ description: Listagem de referência em ordem alfabética das opções de linha 
 ms.date: 07/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 41a2f6617e879a00101205f3505e70831f9efd50
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180923"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223883"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -59,7 +59,7 @@ Esta tabela contém uma lista alfabética de opções de compilador. Para obter 
 | [`/FU`](fu-name-forced-hash-using-file.md) | Força o uso de um nome de arquivo como se ele tivesse sido passado para a [`#using`](../../preprocessor/hash-using-directive-cpp.md) diretiva. |
 | [`/Fx`](fx-merge-injected-code.md) | Mescla o código injetado com o arquivo de origem. |
 | [`/GA`](ga-optimize-for-windows-application.md) | Otimiza o código do aplicativo do Windows. |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Usa a convenção de chamada `__cdecl` (somente x86). |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Usa a **`__cdecl`** Convenção de chamada (somente x86). |
 | [`/Ge`](ge-enable-stack-probes.md) | Preterido. Ativa investigações de pilha. |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | Habilita pooling de cadeia de caracteres. |
 | [`/GH`](gh-enable-pexit-hook-function.md) | Chama a função de gancho `_pexit`. |
@@ -67,24 +67,24 @@ Esta tabela contém uma lista alfabética de opções de compilador. Para obter 
 | [`/GL`](gl-whole-program-optimization.md) | Habilita a otimização de todo o programa. |
 | [`/Gm`](gm-enable-minimal-rebuild.md) | Preterido. Habilita recompilação mínima. |
 | [`/GR`](gr-enable-run-time-type-information.md) | Habilita RTTI (informações de tipo de tempo de execução). |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Usa a convenção de chamada `__fastcall` (somente x86). |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Usa a **`__fastcall`** Convenção de chamada (somente x86). |
 | [`/GS`](gs-buffer-security-check.md) | Armazena a verificação de segurança em buffer. |
 | [`/Gs`](gs-control-stack-checking-calls.md) | Controla investigações de pilha. |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | Dá suporte à segurança de fibra para dados alocados usando armazenamento de thread local estático. |
 | [`/guard:cf`](guard-enable-control-flow-guard.md) | Adiciona verificações de segurança de proteção de fluxo de controle. |
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | Habilita os metadados de continuação de EH. |
-| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Usa a convenção de chamada `__vectorcall`. (somente x86 e x64) |
+| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Usa a **`__vectorcall`** Convenção de chamada. (somente x86 e x64) |
 | [`/Gw`](gw-optimize-global-data.md) | Habilita a otimização de dados globais de todo o programa. |
 | [`/GX`](gx-enable-exception-handling.md) | Preterido. Habilita o tratamento síncrono de exceções. Use [`/EH`](eh-exception-handling-model.md) em vez disso. |
 | [`/Gy`](gy-enable-function-level-linking.md) | Habilita a vinculação no nível de função. |
 | [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Preterido. O mesmo que [`/RTC1`](rtc-run-time-error-checks.md) . |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Usa a convenção de chamada `__stdcall` (somente x86). |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Usa a **`__stdcall`** Convenção de chamada (somente x86). |
 | [`/H`](h-restrict-length-of-external-names.md) | Preterido. Restringe o tamanho de nomes externos (públicos). |
 | [`/HELP`](help-compiler-command-line-help.md) | Lista as opções do compilador. |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | Força os parâmetros passados em registros a serem gravados em seus locais na pilha mediante a entrada da função. Essa opção de compilador é apenas para compiladores x64 (nativa e de compilação cruzada). |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | Cria uma imagem com patches quentes. |
 | [`/I`](i-additional-include-directories.md) | Pesquisa um diretório para incluir arquivos. |
-| [`/J`](j-default-char-type-is-unsigned.md) | Altera o tipo `char` padrão. |
+| [`/J`](j-default-char-type-is-unsigned.md) | Altera o **`char`** tipo padrão. |
 | [`/JMC`](jmc.md) | Dá suporte à depuração de Apenas Meu Código do C++ nativo. |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | O compilador e o vinculador criará um binário que pode ser executado no kernel do Windows. |
 | [`/LD`](md-mt-ld-use-run-time-library.md) | Cria uma biblioteca de vínculo dinâmico. |
@@ -112,7 +112,7 @@ Esta tabela contém uma lista alfabética de opções de compilador. Para obter 
 | [`/permissive-`](permissive-standards-conformance.md) | Definir o modo de conformidade padrão. |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | Gera transcendentais rápidos. |
 | [`/QIfist`](qifist-suppress-ftol.md) | Preterido. Suprime `_ftol` quando é necessária uma conversão de um tipo de ponto flutuante em um tipo integral (somente x86). |
-| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Remove comandos `fwait` dentro de blocos `try`. |
+| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Remove os `fwait` comandos dentro dos **`try`** blocos. |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | Atenua o impacto no desempenho da atualização do microcódigo da Errata do Intel JCC. |
 | [/Qpar (auto-paralelizador automático)](qpar-auto-parallelizer.md) | Habilita a paralelização automática de loops que são marcados com a diretiva [loop de #pragma ()](../../preprocessor/loop.md) . |
 | [`/Qsafe_fp_loads`](qsafe-fp-loads.md) | Usa instruções de movimento de inteiro para valores de ponto flutuante e desabilita determinadas otimizações de carregamento de ponto flutuante. |
@@ -174,7 +174,7 @@ Esta tabela contém uma lista alfabética de opções de compilador. Para obter 
 | [`/Zs`](zs-syntax-check-only.md) | Verifica apenas a sintaxe. |
 | [`/ZW`](zw-windows-runtime-compilation.md) | Produz um arquivo de saída para ser executado no Windows Runtime. |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)\
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

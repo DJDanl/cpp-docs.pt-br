@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421880"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222544"
 ---
 # <a name="condition_variable-class"></a>Classe condition_variable
 
-Use a classe `condition_variable` para aguardar um evento quando você tem um `mutex` do tipo `unique_lock<mutex>`. Os objetos desse tipo talvez tenham um desempenho melhor do que os objetos do tipo [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md).
+Use a classe `condition_variable` para aguardar um evento quando você tem um `mutex` do tipo `unique_lock<mutex>`. Os objetos desse tipo podem ter um desempenho melhor do que objetos do tipo [condition_variable_any \<mutex> ><unique_lock](../standard-library/condition-variable-any-class.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.|
 |[wait_until](#wait_until)|Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.|
 
-## <a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
 
 Constrói um objeto `condition_variable`.
 
@@ -68,7 +68,7 @@ condition_variable();
 
 Se não tiver memória suficiente disponível, o construtor gerará um objeto [system_error](../standard-library/system-error-class.md) que tem um código de erro `not_enough_memory`. Se o objeto não puder ser criado porque algum outro recurso não está disponível, o construtor gerará um objeto `system_error` que tem um código de erro `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a>native_handle
 
 Retorna o tipo específico da implementação que representa o identificador condition_variable.
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` é definido como um ponteiro para estruturas de dados internas do Runtime de Simultaneidade.
 
-## <a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a>notify_all
 
 Desbloqueia todos os threads que estão aguardando o objeto `condition_variable`.
 
@@ -88,7 +88,7 @@ Desbloqueia todos os threads que estão aguardando o objeto `condition_variable`
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a>notify_one
 
 Desbloqueia um dos threads que estão aguardando o objeto `condition_variable`.
 
@@ -96,7 +96,7 @@ Desbloqueia um dos threads que estão aguardando o objeto `condition_variable`.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>esperado
+## <a name="wait"></a><a name="wait"></a>esperado
 
 Bloqueia um thread.
 
@@ -110,10 +110,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 ### <a name="parameters"></a>parâmetros
 
 *Lck*\
-Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
+Um [objeto \<mutex> unique_lock](../standard-library/unique-lock-class.md) .
 
-\ *Pred*
-Qualquer expressão que retorna **true** ou **false**.
+*Pred*\
+Qualquer expressão que retorne **`true`** ou **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a>wait_for
 
 Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.
 
@@ -146,13 +146,13 @@ bool wait_for(
 ### <a name="parameters"></a>parâmetros
 
 *Lck*\
-Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
+Um [objeto \<mutex> unique_lock](../standard-library/unique-lock-class.md) .
 
 *Rel_time*\
 Um objeto `chrono::duration` que especifica a quantidade de tempo antes que o thread seja ativado.
 
-\ *Pred*
-Qualquer expressão que retorna **true** ou **false**.
+*Pred*\
+Qualquer expressão que retorne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -162,7 +162,7 @@ O segundo método retorna o valor de *Pred*.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro método é bloqueado até que o objeto `condition_variable` seja sinalizado por uma chamada para [notify_one](#notify_one) ou [notify_all](#notify_all) ou até que o intervalo de tempo *Rel_time* tenha decorrido. Ela também pode ser ativada falsamente.
+O primeiro método é bloqueado até que o `condition_variable` objeto seja sinalizado por uma chamada para [notify_one](#notify_one) ou [notify_all](#notify_all) ou até que o intervalo de tempo *Rel_time* tenha decorrido. Ela também pode ser ativada falsamente.
 
 Na verdade, o segundo método executa o código a seguir.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a>wait_until
 
 Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.
 
@@ -204,19 +204,19 @@ bool wait_until(
 ### <a name="parameters"></a>parâmetros
 
 *Lck*\
-Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
+Um [objeto \<mutex> unique_lock](../standard-library/unique-lock-class.md) .
 
 *Abs_time*\
 Um objeto [chrono::time_point](../standard-library/time-point-class.md).
 
-\ *Pred*
-Qualquer expressão que retorna **true** ou **false**.
+*Pred*\
+Qualquer expressão que retorne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valor retornado
 
-Métodos que retornam um tipo de `cv_status` retornam `cv_status::timeout` se a espera termina quando *Abs_time* decorre. Caso contrário, os métodos retornarão `cv_status::no_timeout`.
+Métodos que retornam um `cv_status` tipo retornam `cv_status::timeout` se a espera termina quando *Abs_time* decorre. Caso contrário, os métodos retornarão `cv_status::no_timeout`.
 
-Métodos que retornam um **bool** retornam o valor de *Pred*.
+Métodos que retornam um **`bool`** retornam o valor de *Pred*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -236,5 +236,5 @@ O terceiro e o quarto métodos usam um ponteiro para um objeto do tipo `xtime` p
 
 ## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [<condition_variable>](../standard-library/condition-variable.md)

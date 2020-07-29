@@ -7,20 +7,20 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: e47f00c7e387974c7d1756cf3ee3865f892e6951
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 996458417b20533db074ce2fa13c06860c54247c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032337"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223558"
 ---
 # <a name="templates-c"></a>Modelos (C++)
 
-Os modelos são a base para a programação genérica em C++. Como uma linguagem fortemente digitada, c++ requer que todas as variáveis tenham um tipo específico, explicitamente declarado pelo programador ou deduzido pelo compilador. No entanto, muitas estruturas de dados e algoritmos parecem iguais, não importa em que tipo estejam operando. Os modelos permitem definir as operações de uma classe ou função e permitem que o usuário especifique em quais tipos de concreto essas operações devem funcionar.
+Os modelos são a base para a programação genérica em C++. Como uma linguagem fortemente tipada, o C++ requer que todas as variáveis tenham um tipo específico, explicitamente declarado pelo programador ou deduzido pelo compilador. No entanto, muitas estruturas de dados e algoritmos têm a mesma aparência, independentemente do tipo em que estão operando. Os modelos permitem que você defina as operações de uma classe ou função e permita que o usuário especifique em quais tipos concretos essas operações devem trabalhar.
 
-## <a name="defining-and-using-templates"></a>Definição e utilização de modelos
+## <a name="defining-and-using-templates"></a>Definindo e usando modelos
 
-Um modelo é um modelo que gera um tipo ou função comum no tempo de compilação com base nos argumentos que o usuário fornece para os parâmetros do modelo. Por exemplo, você pode definir um modelo de função como este:
+Um modelo é um constructo que gera um tipo ou função comum em tempo de compilação com base nos argumentos que o usuário fornece para os parâmetros de modelo. Por exemplo, você pode definir um modelo de função como este:
 
 ```cpp
 template <typename T>
@@ -30,9 +30,9 @@ T minimum(const T& lhs, const T& rhs)
 }
 ```
 
-O código acima descreve um modelo para uma função genérica com um parâmetro de tipo único *T*, cujo valor de retorno e parâmetros de chamada (lhs e rhs) são todos deste tipo. Você pode nomear um parâmetro de tipo o que quiser, mas por convenção letras maiúsculas são mais usadas. *T* é um parâmetro de modelo; a **palavra-chave tipo** diz que este parâmetro é um espaço reservado para um tipo. Quando a função é chamada, o compilador `T` substituirá todas as instâncias do argumento de tipo concreto que é especificado pelo usuário ou deduzido pelo compilador. O processo no qual o compilador gera uma classe ou função a partir de um modelo é referido como *instanciação do modelo;* `minimum<int>` é uma instanciação `minimum<T>`do modelo.
+O código acima descreve um modelo para uma função genérica com um parâmetro de tipo único *T*, cujo valor de retorno e parâmetros de chamada (LHS e RHS) são todos desse tipo. Você pode nomear um parâmetro de tipo como desejar, mas por convenção letras maiúsculas únicas são usadas com mais frequência. *T* é um parâmetro de modelo; a **`typename`** palavra-chave indica que esse parâmetro é um espaço reservado para um tipo. Quando a função é chamada, o compilador substituirá cada instância do `T` pelo argumento de tipo concreto que é especificado pelo usuário ou deduzido pelo compilador. O processo no qual o compilador gera uma classe ou função de um modelo é conhecida como *instanciação de modelo*; `minimum<int>`é uma instanciação do modelo `minimum<T>` .
 
-Em outros lugares, um usuário pode declarar uma instância do modelo especializado para int. Assuma que get_a() e get_b() são funções que retornam um int:
+Em outro lugar, um usuário pode declarar uma instância do modelo especializado para int. suponha que get_a () e get_b () sejam funções que retornam um int:
 
 ```cpp
 int a = get_a();
@@ -40,13 +40,13 @@ int b = get_b();
 int i = minimum<int>(a, b);
 ```
 
-No entanto, como este é um modelo de função `T` e o compilador pode deduzir o tipo de dos argumentos *a* e *b,* você pode chamá-lo como uma função comum:
+No entanto, como esse é um modelo de função e o compilador pode deduzir o tipo dos `T` argumentos *a* e *b*, você pode chamá-lo exatamente como uma função comum:
 
 ```cpp
 int i = minimum(a, b);
 ```
 
-Quando o compilador encontra essa última declaração, ele gera uma nova função na qual cada ocorrência de *T* no modelo é substituída por **int**:
+Quando o compilador encontra essa última instrução, ele gera uma nova função na qual cada ocorrência de *T* no modelo é substituída por **`int`** :
 
 ```cpp
 int minimum(const int& lhs, const int& rhs)
@@ -55,25 +55,25 @@ int minimum(const int& lhs, const int& rhs)
 }
 ```
 
-As regras para o desempenho do compilador em modelos de função são baseadas nas regras para funções ordinárias. Para obter mais informações, consulte [A resolução de sobrecarga das chamadas do modelo de função](../cpp/overload-resolution-of-function-template-calls.md).
+As regras de como o compilador executa a dedução de tipo nos modelos de função baseiam-se nas regras para funções comuns. Para obter mais informações, consulte [sobrecarga de chamadas de modelo de função](../cpp/overload-resolution-of-function-template-calls.md).
 
 ## <a name="type-parameters"></a><a id="type_parameters"></a>Parâmetros de tipo
 
-No `minimum` modelo acima, observe que o parâmetro de tipo *T* não é qualificado de forma alguma até que seja usado nos parâmetros de chamada de função, onde os qualificadores de const e referência são adicionados.
+No `minimum` modelo acima, observe que o parâmetro de tipo *T* não está qualificado de nenhuma forma até que seja usado nos parâmetros de chamada de função, onde os qualificadores const e Reference são adicionados.
 
-Não há limite prático para o número de parâmetros do tipo. Separe vários parâmetros por commas:
+Não há nenhum limite prático para o número de parâmetros de tipo. Separe vários parâmetros por vírgulas:
 
 ```cpp
 template <typename T, typename U, typename V> class Foo{};
 ```
 
-A **classe** de palavras-chave é equivalente ao **nome de digitação** neste contexto. Você pode expressar o exemplo anterior como:
+A palavra-chave **`class`** é equivalente a **`typename`** neste contexto. Você pode expressar o exemplo anterior como:
 
 ```cpp
 template <class T, class U, class V> class Foo{};
 ```
 
-Você pode usar o operador de elipse (...) para definir um modelo que leva um número arbitrário de parâmetros de tipo zero ou mais:
+Você pode usar o operador de reticências (...) para definir um modelo que usa um número arbitrário de zero ou mais parâmetros de tipo:
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -83,7 +83,7 @@ vtclass<int> vtinstance2;
 vtclass<float, bool> vtinstance3;
 ```
 
-Qualquer tipo integrado ou definido pelo usuário pode ser usado como um argumento de tipo. Por exemplo, você pode usar [std::vetor](../standard-library/vector-class.md) na Biblioteca Padrão para armazenar variáveis do `MyClass`tipo **int,** **duplo**, [std::string](../standard-library/basic-string-class.md), **const** `MyClass`*, `MyClass&`e assim por diante. A principal restrição ao usar modelos é que um argumento de tipo deve suportar quaisquer operações que sejam aplicadas aos parâmetros do tipo. Por exemplo, se `minimum` `MyClass` chamarmos usar como neste exemplo:
+Qualquer tipo interno ou definido pelo usuário pode ser usado como um argumento de tipo. Por exemplo, você pode usar [std:: vector](../standard-library/vector-class.md) na biblioteca padrão para armazenar variáveis do tipo **`int`** , **`double`** , [std:: String](../standard-library/basic-string-class.md), `MyClass` , **`const`** `MyClass` *, `MyClass&` e assim por diante. A restrição principal ao usar modelos é que um argumento de tipo deve dar suporte a quaisquer operações que são aplicadas aos parâmetros de tipo. Por exemplo, se chamarmos `minimum` usando `MyClass` as neste exemplo:
 
 ```cpp
 class MyClass
@@ -101,9 +101,9 @@ int main()
 }
 ```
 
-Um erro do compilador `MyClass` será gerado porque não **<** fornece uma sobrecarga para o operador.
+Um erro de compilador será gerado porque `MyClass` o não fornece uma sobrecarga para o **<** operador.
 
-Não há nenhuma exigência inerente de que os argumentos de tipo para qualquer modelo específico pertencem à mesma hierarquia de objeto, embora você possa definir um modelo que imponha tal restrição. Você pode combinar técnicas orientadas a objetos com modelos; por exemplo, você pode armazenar um\<Derivado* em uma base\* vetorial>.    Note que os argumentos devem ser ponteiros
+Não há nenhum requisito inerente de que os argumentos de tipo para qualquer modelo específico pertençam à mesma hierarquia de objetos, embora você possa definir um modelo que impõe tal restrição. Você pode combinar técnicas orientadas a objeto com modelos; por exemplo, você pode armazenar um * derivado em um vetor \<Base\*> .    Observe que os argumentos devem ser ponteiros
 
 ```cpp
 vector<MyClass*> vec;
@@ -115,11 +115,11 @@ vector<MyClass*> vec;
    vec2.push_back(make_shared<MyDerived>());
 ```
 
-Os requisitos `std::vector` básicos que e outros contêineres de biblioteca padrão impõem aos elementos são `T` que `T` sejam atribuíveis à cópia e à cópia.
+Os requisitos básicos que `std::vector` e outros contêineres de biblioteca padrão impõem em elementos `T` é que são `T` Copy-atribuíble e Copy-constructible.
 
-## <a name="non-type-parameters"></a>Parâmetros não-tipo
+## <a name="non-type-parameters"></a>Parâmetros sem tipo
 
-Ao contrário de tipos genéricos em outras línguas, como C# e Java, os modelos C++ suportam *parâmetros não-tipo,* também chamados de parâmetros de valor. Por exemplo, você pode fornecer um valor integral constante para especificar o comprimento de uma matriz, como com este exemplo que é semelhante à classe [std::array](../standard-library/array-class-stl.md) na Biblioteca Padrão:
+Ao contrário dos tipos genéricos em outras linguagens, como C# e Java, os modelos do C++ dão suporte *a parâmetros sem tipo*, também chamados de parâmetros de valor. Por exemplo, você pode fornecer um valor integral constante para especificar o comprimento de uma matriz, como com este exemplo semelhante à classe [std:: array](../standard-library/array-class-stl.md) na biblioteca padrão:
 
 ```cpp
 template<typename T, size_t L>
@@ -131,17 +131,17 @@ public:
 };
 ```
 
-Observe a sintaxe na declaração do modelo. O `size_t` valor é passado como um argumento de modelo no momento da compilação e deve ser **const** ou uma expressão **constexpr.** Você usa assim:
+Observe a sintaxe na declaração de modelo. O `size_t` valor é passado como um argumento de modelo no momento da compilação e deve ser **`const`** ou uma **`constexpr`** expressão. Você o usa da seguinte maneira:
 
 ```cpp
 MyArray<MyClass*, 10> arr;
 ```
 
-Outros tipos de valores, incluindo ponteiros e referências, podem ser passados como parâmetros não-tipo. Por exemplo, você pode passar em um ponteiro para uma função ou objeto de função para personalizar alguma operação dentro do código do modelo.
+Outros tipos de valores, incluindo ponteiros e referências, podem ser passados como parâmetros sem tipo. Por exemplo, você pode passar um ponteiro para um objeto Function ou Function para personalizar alguma operação dentro do código do modelo.
 
-### <a name="type-deduction-for-non-type-template-parameters"></a>Dedução de tipo para parâmetros de modelo não-tipo
+### <a name="type-deduction-for-non-type-template-parameters"></a>Dedução de tipo para parâmetros de modelo sem tipo
 
-No Visual Studio 2017 e posteriormente, no modo **/std:c++17,** o compilador deduz o tipo de argumento de modelo não-tipo que é declarado com **auto**:
+No Visual Studio 2017 e posterior, em **/std: modo c++ 17** o compilador deduz o tipo de um argumento de modelo não tipo declarado com **`auto`** :
 
 ```cpp
 template <auto x> constexpr auto constant = x;
@@ -153,7 +153,7 @@ auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 
 ## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>Modelos como parâmetros de modelo
 
-Um modelo pode ser um parâmetro de modelo. Neste exemplo, myClass2 tem dois parâmetros de modelo: um parâmetro de nome de digitação *T* e um parâmetro de modelo *Arr*:
+Um modelo pode ser um parâmetro de modelo. Neste exemplo, MyClass2 tem dois parâmetros de template: um typeName de parâmetro *T* e um parâmetro de template *arr*:
 
 ```cpp
 template<typename T, template<typename U, int I> class Arr>
@@ -165,7 +165,7 @@ class MyClass2
 };
 ```
 
-Como o parâmetro *Arr* em si não tem corpo, seus nomes de parâmetros não são necessários. Na verdade, é um erro se referir ao nome de digitação ou `MyClass2`parâmetro de classe de *Arr*de dentro do corpo de . Por essa razão, os nomes dos parâmetros de tipo do *Arr*podem ser omitidos, como mostrado neste exemplo:
+Como o próprio parâmetro *arr* não tem corpo, seus nomes de parâmetro não são necessários. Na verdade, é um erro fazer referência aos nomes de parâmetro de classe ou TypeName de *arr*de dentro do corpo de `MyClass2` . Por esse motivo, os nomes de parâmetro de tipo de *arr*podem ser omitidos, conforme mostrado neste exemplo:
 
 ```cpp
 template<typename T, template<typename, int> class Arr>
@@ -178,13 +178,13 @@ class MyClass2
 
 ## <a name="default-template-arguments"></a>Argumentos de modelo padrão
 
-Modelos de classe e função podem ter argumentos padrão. Quando um modelo tem um argumento padrão, você pode deixá-lo não especificado quando você o usa. Por exemplo, o modelo std::vector tem um argumento padrão para o alocador:
+Os modelos de classe e função podem ter argumentos padrão. Quando um modelo tem um argumento padrão, você pode deixá-lo não especificado ao usá-lo. Por exemplo, o modelo std:: vector tem um argumento padrão para o alocador:
 
 ```cpp
 template <class T, class Allocator = allocator<T>> class vector;
 ```
 
-Na maioria dos casos, a classe padrão de dst::alocador é aceitável, então você usa um vetor como este:
+Na maioria dos casos, a classe std:: alocador padrão é aceitável e, portanto, você usa um vetor como este:
 
 ```cpp
 vector<int> myInts;
@@ -198,7 +198,7 @@ vector<int, MyAllocator> ints;
 
 Para mais argumentos de modelo, todos os argumentos após o primeiro argumento padrão devem ter argumentos padrão.
 
-Ao usar um modelo cujos parâmetros estão todos inadimplentes, use suportes de ângulo vazios:
+Ao usar um modelo cujos parâmetros estão todos padronizados, use colchetes de ângulo vazios:
 
 ```cpp
 template<typename A = int, typename B = double>
@@ -215,7 +215,7 @@ int main()
 
 ## <a name="template-specialization"></a>Especialização de modelo
 
-Em alguns casos, não é possível ou desejável que um modelo defina exatamente o mesmo código para qualquer tipo. Por exemplo, você pode querer definir um caminho de código a ser executado apenas se o argumento de tipo for um ponteiro ou um std::wstring ou um tipo derivado de uma classe base específica.  Nesses casos, você pode definir uma *especialização* do modelo para esse tipo específico. Quando um usuário instancia o modelo com esse tipo, o compilador usa a especialização para gerar a classe, e para todos os outros tipos, o compilador escolhe o modelo mais geral. Especializações em que todos os parâmetros são especializados são *especializações completas.* Se apenas alguns dos parâmetros forem especializados, é chamada *de especialização parcial.*
+Em alguns casos, não é possível ou desejável que um modelo defina exatamente o mesmo código para qualquer tipo. Por exemplo, você pode desejar definir um caminho de código a ser executado somente se o argumento de tipo for um ponteiro ou um std:: wstring ou um tipo derivado de uma classe base específica.  Nesses casos, você pode definir uma *especialização* do modelo para esse tipo específico. Quando um usuário instancia o modelo com esse tipo, o compilador usa a especialização para gerar a classe e, para todos os outros tipos, o compilador escolhe o modelo mais geral. As especializações nas quais todos os parâmetros são especializados são *especializações completas*. Se apenas alguns dos parâmetros são especializados, ele é chamado de *especialização parcial*.
 
 ```cpp
 template <typename K, typename V>
@@ -229,6 +229,6 @@ MyMap<int, MyClass> classes; // uses original template
 MyMap<string, MyClass> classes2; // uses the partial specialization
 ```
 
-Um modelo pode ter qualquer número de especializações, desde que cada parâmetro de tipo especializado seja único. Apenas modelos de classe podem ser parcialmente especializados. Todas as especializações completas e parciais de um modelo devem ser declaradas no mesmo namespace do modelo original.
+Um modelo pode ter qualquer número de especializações, desde que cada parâmetro de tipo especializado seja exclusivo. Somente modelos de classe podem ser parcialmente especializados. Todas as especializações completas e parciais de um modelo devem ser declaradas no mesmo namespace que o modelo original.
 
-Para obter mais informações, consulte [Especialização de modelos](../cpp/template-specialization-cpp.md).
+Para obter mais informações, consulte [especialização de modelo](../cpp/template-specialization-cpp.md).

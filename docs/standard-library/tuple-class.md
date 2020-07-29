@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257098"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215537"
 ---
 # <a name="tuple-class"></a>Classe tupla
 
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>parâmetros
 
-\ *TN*
+*TN*\
 O tipo do enésimo elemento de tupla.
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe descreve um objeto que armazena N objetos de tipos `T1`, `T2`,..., `TN`, respectivamente, onde `0 <= N <= Nmax`. A extensão de uma instância de tupla `tuple<T1, T2, ..., TN>` é o número `N` de seus argumentos de modelo. O índice do argumento de modelo `Ti` e do valor armazenado correspondente desse tipo é `i - 1`. Portanto, enquanto numeramos os tipos de 1 a N nesta documentação, os valores de índice correspondentes variam de 0 a N-1.
+O modelo de classe descreve um objeto que armazena N objetos de tipos `T1` , `T2` ,...,, `TN` respectivamente, em que `0 <= N <= Nmax` . A extensão de uma instância de tupla `tuple<T1, T2, ..., TN>` é o número `N` de seus argumentos de modelo. O índice do argumento de modelo `Ti` e do valor armazenado correspondente desse tipo é `i - 1` . Portanto, enquanto numeramos os tipos de 1 a N nesta documentação, os valores de índice correspondentes variam de 0 a N-1.
 
 ## <a name="example"></a>Exemplo
 
@@ -116,7 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a>operador =
+## <a name="operator"></a><a name="op_eq"></a>operador =
 
 Atribui um objeto `tuple`.
 
@@ -137,15 +137,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>parâmetros
 
-*\*
+*ANULA*\
 O tipo do enésimo elemento de tupla copiado.
 
-\ *à direita*
+*Certo*\
 A tupla da qual copiar.
 
 ### <a name="remarks"></a>Comentários
 
-Os dois primeiros operadores de membro atribuem os elementos de *Right* aos elementos correspondentes de `*this`. O terceiro operador de membro atribui `right.first` para o elemento no índice 0 de `*this` e `right.second` para o elemento no índice 1. Todos os três operadores de membros retornam `*this`.
+Os dois primeiros operadores de membro atribuem os elementos de *Right* aos elementos correspondentes de **`*this`** . O terceiro operador de membro atribui `right.first` ao elemento no índice 0 de **`*this`** e `right.second` ao elemento no índice 1. Todos os três operadores de membros retornam **`*this`** .
 
 Os operadores de membro restantes são análogos aos anteriores, mas com o [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>permuta
+## <a name="swap"></a><a name="tuple_swap"></a>permuta
 
 Troca os elementos das duas tuplas.
 
@@ -209,17 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>parâmetros
 
-\ *à esquerda*
+*mantida*\
 Uma tupla cujos elementos devem ser trocados com os do *direito*de tupla.
 
-\ *à direita*
+*Certo*\
 Uma tupla cujos elementos devem ser trocados com os da tupla *à esquerda*.
 
 ### <a name="remarks"></a>Comentários
 
 A função executa `left.swap(right)`.
 
-## <a name="tuple"></a>serem
+## <a name="tuple"></a><a name="tuple"></a>serem
 
 Constrói um objeto `tuple`.
 
@@ -246,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>parâmetros
 
-*\*
+*ANULA*\
 O tipo do enésimo elemento de tupla copiado.
 
-\ *à direita*
+*Certo*\
 A tupla da qual copiar.
 
 ### <a name="remarks"></a>Comentários

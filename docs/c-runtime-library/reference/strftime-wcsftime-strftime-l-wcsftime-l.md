@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215134"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -84,13 +84,13 @@ size_t _wcsftime_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strDest*<br/>
 Cadeia de caracteres de saída.
 
 *MaxSize*<br/>
-Tamanho do buffer *strDest* , medido em caracteres (**Char** ou **wchar_t**).
+Tamanho do buffer *strDest* , medido em caracteres ( **`char`** ou **`wchar_t`** ).
 
 *format*<br/>
 Cadeia de caracteres de controle de formato.
@@ -101,7 +101,7 @@ estrutura de dados **TM** .
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor retornado
 
 **strftime** retorna o número de caracteres colocados em *strDest* e **wcsftime** retorna o número correspondente de caracteres largos.
 

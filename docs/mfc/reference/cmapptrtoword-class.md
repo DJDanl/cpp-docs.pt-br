@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToWord [MFC], RemoveKey
 - CMapPtrToWord [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 698e306896fd62888a84b6d6ce55fb4c9678187b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 254659a9f00ff7c0c27174cfbea4c131993150f3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442651"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223025"
 ---
 # <a name="cmapptrtoword-class"></a>Classe CMapPtrToWord
 
@@ -53,7 +53,7 @@ class CMapPtrToWord : public CObject
 
 ## <a name="members"></a>Membros
 
-As funções de membro de `CMapPtrToWord` são semelhantes às funções de membro da classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CMapStringToOb` para obter a função específica de membro. Sempre que você vir um ponteiro `CObject` como um parâmetro de função ou valor de retorno, substitua WORD. Sempre que você vir uma `CString` ou um ponteiro **const** para **Char** como um parâmetro de função ou valor de retorno, substitua um ponteiro para **void**.
+As funções de membro do `CMapPtrToWord` são semelhantes às funções de membro da classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CMapStringToOb` para obter a função específica de membro. Sempre que você vir um `CObject` ponteiro como um parâmetro de função ou valor de retorno, substitua a palavra. Sempre que você vir um `CString` ou um **`const`** ponteiro para **`char`** como um parâmetro de função ou valor de retorno, substitua um ponteiro para **`void`** .
 
 `BOOL CMapPtrToWord::Lookup( const void* <key>, WORD& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ por exemplo, traduz para
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CMapPtrToWord::CMapPtrToWord](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Construtor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[CMapPtrToWord:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retorna o número de elementos neste mapa.|
 |[CMapPtrToWord::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina o número atual de elementos na tabela de hash.|
@@ -87,19 +87,19 @@ por exemplo, traduz para
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[CMapPtrToWord:: Operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insere um elemento no mapa — substituição de operador para `SetAt`.|
+|[Operador \[ CMapPtrToWord::\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insere um elemento no mapa — substituição de operador para `SetAt` .|
 
 ## <a name="remarks"></a>Comentários
 
-`CMapWordToPtr` incorpora a macro IMPLEMENT_DYNAMIC para dar suporte ao tipo de tempo de execução e ao despejo para um objeto `CDumpContext`. Se você precisar de um despejo de elementos de mapa individuais, deverá definir a profundidade do contexto de despejo como 1 ou maior.
+`CMapWordToPtr`incorpora a macro IMPLEMENT_DYNAMIC para dar suporte ao acesso de tipo em tempo de execução e despejo a um `CDumpContext` objeto. Se você precisar de um despejo de elementos de mapa individuais, deverá definir a profundidade do contexto de despejo como 1 ou maior.
 
 Os mapas de ponteiro para palavra não podem ser serializados.
 
-Quando um objeto de `CMapPtrToWord` é excluído ou quando seus elementos são removidos, os ponteiros e as palavras são removidos. As entidades referenciadas pelos ponteiros de chave não são removidas.
+Quando um `CMapPtrToWord` objeto é excluído ou quando seus elementos são removidos, os ponteiros e as palavras são removidos. As entidades referenciadas pelos ponteiros de chave não são removidas.
 
-Para obter mais informações sobre `CMapPtrToWord`, consulte o artigo [coleções](../../mfc/collections.md).
+Para obter mais informações sobre `CMapPtrToWord` o, consulte o artigo [coleções](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -107,11 +107,11 @@ Para obter mais informações sobre `CMapPtrToWord`, consulte o artigo [coleçõ
 
 `CMapPtrToWord`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxcoll. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)

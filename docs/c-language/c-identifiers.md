@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d68eb690a19f57555d9d757a2f058692ea1a40c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325657"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223740"
 ---
 # <a name="c-identifiers"></a>Identificadores C
 
@@ -34,7 +34,7 @@ int main()
 
 Após a declaração, você pode usar o identificador em instruções de programa posteriores para fazer referência ao valor associado.
 
-Um tipo especial de identificador, chamado de rótulo da instrução, pode ser usado em instruções `goto`. (Declarações são descritas em [Declarações e tipos](../c-language/declarations-and-types.md) Rótulos de instrução são descritos em [Instruções goto e rotuladas](../c-language/goto-and-labeled-statements-c.md).)
+Um tipo especial de identificador, chamado de rótulo de instrução, pode ser usado em **`goto`** instruções. (Declarações são descritas em [Declarações e tipos](../c-language/declarations-and-types.md) Rótulos de instrução são descritos em [Instruções goto e rotuladas](../c-language/goto-and-labeled-statements-c.md).)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,7 +50,7 @@ Um tipo especial de identificador, chamado de rótulo da instrução, pode ser u
 *digit*: uma destas opções<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-O primeiro caractere do nome de identificador deve ser `nondigit` (ou seja, o primeiro caractere deve ser um sublinhado ou letra maiúscula ou minúscula). Permite seis caracteres ANSI significativos em um nome de identificador externo e 31 para nomes (dentro de uma função) de identificadores internos. Os identificadores externos (os declarados no escopo global ou declarados com a classe de armazenamento `extern`) podem estar sujeitos às restrições de nomeação adicionais, pois esses identificadores precisam ser processados por outro software, como vinculadores.
+O primeiro caractere do nome de identificador deve ser `nondigit` (ou seja, o primeiro caractere deve ser um sublinhado ou letra maiúscula ou minúscula). Permite seis caracteres ANSI significativos em um nome de identificador externo e 31 para nomes (dentro de uma função) de identificadores internos. Os identificadores externos (declarados no escopo global ou declarados com a classe de armazenamento **`extern`** ) podem estar sujeitos a restrições de nomenclatura adicionais, pois esses identificadores precisam ser processados por outros softwares, como vinculadores.
 
 **Específico da Microsoft**
 

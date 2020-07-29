@@ -16,12 +16,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: d669c58da04a1cd0ead424d93f6fad6adcd4c56c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9e97eb545dedd3ac38dd93471f82aecc382717ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622733"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223168"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Exceções: usando macros MFC e exceções do C++
 
@@ -49,12 +49,12 @@ O problema ocorre porque o `e` é excluído quando a execução passa do bloco *
 
 ## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Blocos try dentro de blocos catch
 
-Você não pode lançar novamente a exceção atual de dentro de um bloco **try** que está dentro de um bloco **Catch** . O exemplo a seguir é inválido:
+Você não pode lançar novamente a exceção atual de dentro de um **`try`** bloco que está dentro de um bloco **Catch** . O exemplo a seguir é inválido:
 
 [!code-cpp[NVC_MFCExceptions#12](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
 Para obter mais informações, consulte [exceções: examinando o conteúdo da exceção](exceptions-examining-exception-contents.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Tratamento de Exceção](exception-handling-in-mfc.md)
+[Tratamento de exceção](exception-handling-in-mfc.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: 190acd619224bdf22a5c8d35f541fa48b6664fe1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d967341cdb0197f1157ab9d253072f3d0d7aa46f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625753"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223142"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Manipuladores para mensagens do Windows padrão
 
@@ -23,7 +23,7 @@ Os manipuladores padrão para mensagens padrão do Windows (**WM_**) são predef
 
 `afx_msg void OnPaint();`
 
-A palavra-chave **afx_msg** sugere o efeito da palavra-chave **virtual** C++, diferenciando os manipuladores de outras `CWnd` funções de membro. No entanto, observe que essas funções não são realmente virtuais; em vez disso, eles são implementados por meio de mapas de mensagens. Os mapas de mensagens dependem exclusivamente das macros de pré-processador padrão, não de nenhuma extensão para a linguagem C++. A palavra-chave **afx_msg** é resolvida para o espaço em branco após o pré-processamento.
+A palavra-chave **afx_msg** sugere o efeito da **`virtual`** palavra-chave C++, diferenciando os manipuladores de outras `CWnd` funções de membro. No entanto, observe que essas funções não são realmente virtuais; em vez disso, eles são implementados por meio de mapas de mensagens. Os mapas de mensagens dependem exclusivamente das macros de pré-processador padrão, não de nenhuma extensão para a linguagem C++. A palavra-chave **afx_msg** é resolvida para o espaço em branco após o pré-processamento.
 
 Para substituir um manipulador definido em uma classe base, basta definir uma função com o mesmo protótipo em sua classe derivada e criar uma entrada de mapa de mensagem para o manipulador. Seu manipulador "substitui" qualquer manipulador de mesmo nome em qualquer uma das classes base de sua classe.
 
@@ -36,8 +36,8 @@ Como você determina a maneira apropriada de substituir uma determinada mensagem
 
 [!code-cpp[NVC_MFCMessageHandling#3](codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]
 
-Por convenção, os nomes desses manipuladores começam com o prefixo "on". Alguns desses manipuladores não usam argumentos, enquanto outros levam vários. Alguns também têm um tipo de retorno diferente de **void**. Os manipuladores padrão para todas as mensagens de **WM_** são documentados na *referência do MFC* como funções de membro da classe `CWnd` cujos nomes começam com "on". As declarações de função de membro no `CWnd` são prefixadas com **afx_msg**.
+Por convenção, os nomes desses manipuladores começam com o prefixo "on". Alguns desses manipuladores não usam argumentos, enquanto outros levam vários. Alguns também têm um tipo de retorno diferente de **`void`** . Os manipuladores padrão para todas as mensagens de **WM_** são documentados na *referência do MFC* como funções de membro da classe `CWnd` cujos nomes começam com "on". As declarações de função de membro no `CWnd` são prefixadas com **afx_msg**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarando funções de manipulador de mensagens](declaring-message-handler-functions.md)
