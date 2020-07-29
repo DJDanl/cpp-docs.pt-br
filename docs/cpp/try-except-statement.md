@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: d0471bbd50e07fccbf160e9e866de4c545cdeb7e
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 6d0ed9cfa290ab83693ee248da5bebae6f91de57
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185691"
 ---
 # <a name="try-except-statement"></a>Instrução try-except
 
@@ -40,7 +40,7 @@ A instrução **try-Except** é uma extensão da Microsoft que dá suporte à ma
 > {\
 > &nbsp;&nbsp;&nbsp;&nbsp;código protegido \
 > }\
-> Except ( *expressão* ) \ ** \_ \_**
+> ** \_ \_ Except** ( *expressão* ) \
 > {\
 > &nbsp;&nbsp;&nbsp;&nbsp;código do manipulador de exceção \
 > }
@@ -56,33 +56,33 @@ As exceções podem ser baseadas em hardware ou em software. A manipulação de 
 > [!NOTE]
 > A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, ele não foi projetado especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. Para programas em C++, recomendamos que você use as instruções de manipulação de exceção C++ nativas: [try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) .
 
-A instrução composta após a cláusula **__try** é o *corpo* ou a seção *protegida* . A expressão de **__except** também é conhecida como a expressão de *filtro* . Seu valor determina como a exceção é tratada. A instrução composta após a cláusula **__except** é o manipulador de exceção. O manipulador Especifica as ações a serem executadas se uma exceção for gerada durante a execução da seção Body. A execução procede da seguinte maneira:
+A instrução composta após a cláusula **__try** é o *corpo* ou a seção *protegida* . A **`__except`** expressão também é conhecida como a expressão de *filtro* . Seu valor determina como a exceção é tratada. A instrução composta após a **`__except`** cláusula é o manipulador de exceção. O manipulador Especifica as ações a serem executadas se uma exceção for gerada durante a execução da seção Body. A execução procede da seguinte maneira:
 
 1. A seção protegida é executada.
 
-1. Se nenhuma exceção ocorrer durante a execução da seção protegida, a execução continuará na instrução após a cláusula de **__except** .
+1. Se nenhuma exceção ocorrer durante a execução da seção protegida, a execução continuará na instrução após a **`__except`** cláusula.
 
-1. Se ocorrer uma exceção durante a execução da seção protegida ou, em qualquer rotina, a seção protegida chamar, a expressão de **__except** será avaliada. Há três valores possíveis:
+1. Se ocorrer uma exceção durante a execução da seção protegida ou, em qualquer rotina, a seção protegida chamar, a **`__except`** expressão será avaliada. Há três valores possíveis:
 
    - `EXCEPTION_CONTINUE_EXECUTION`(-1) Exceção descartada. Continue a execução no ponto onde ocorreu a exceção.
 
    - `EXCEPTION_CONTINUE_SEARCH`(0) a exceção não é reconhecida. Continue pesquisando manipuladores na pilha; primeiro os que contêm as instruções **try-except**, depois os que têm a próxima precedência mais alta.
 
-   - `EXCEPTION_EXECUTE_HANDLER`(1) a exceção é reconhecida. Transfira o controle para o manipulador de exceção executando a instrução **__except** composta e continue a execução após o bloco de **__except** .
+   - `EXCEPTION_EXECUTE_HANDLER`(1) a exceção é reconhecida. Transfira o controle para o manipulador de exceção executando a **`__except`** instrução composta e continue a execução após o **`__except`** bloco.
 
-A expressão **__except** é avaliada como uma expressão C. Ele é limitado a um único valor, ao operador de expressão condicional ou ao operador de vírgula. Se um processamento mais extenso for necessário, a expressão poderá chamar uma rotina que retorne um dos três valores listados acima.
+A **`__except`** expressão é avaliada como uma expressão C. Ele é limitado a um único valor, ao operador de expressão condicional ou ao operador de vírgula. Se um processamento mais extenso for necessário, a expressão poderá chamar uma rotina que retorne um dos três valores listados acima.
 
 Cada aplicativo pode ter seu próprio manipulador de exceção.
 
 Não é válido pular para uma instrução **__try** , mas é válido para saltar de uma. O manipulador de exceção não será chamado se um processo for encerrado no meio da execução de uma instrução **try-Except** .
 
-Para compatibilidade com versões anteriores, **_try**, **_except**e **_leave** são sinônimos de **__try**, **__except**e **__leave** , a menos que a opção do compilador [ \(/za desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
+Para compatibilidade com versões anteriores, **_try**, **_except**e **_leave** são sinônimos de **__try**, **`__except`** e **`__leave`** a menos que a opção do compilador [/za \( desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ### <a name="the-__leave-keyword"></a>A palavra-chave __leave
 
-A palavra-chave **__leave** só é válida na seção protegida de uma instrução **try-Except** e seu efeito é ir para o final da seção protegida. A execução continua na primeira instrução após o manipulador de exceção.
+A **`__leave`** palavra-chave é válida somente na seção protegida de uma instrução **try-Except** e seu efeito é ir para o final da seção protegida. A execução continua na primeira instrução após o manipulador de exceção.
 
-Uma instrução **goto** também pode sair da seção protegida e não degrada o desempenho como faz em uma instrução **try-finally** . Isso porque o desenrolamento de pilha não ocorre. No entanto, recomendamos que você use a palavra-chave **__leave** em vez de uma instrução **goto** . O motivo é que você tem menos probabilidade de fazer um erro de programação se a seção protegida for grande ou complexa.
+Uma **`goto`** instrução também pode sair da seção protegida e não degrada o desempenho como faz em uma instrução **try-finally** . Isso porque o desenrolamento de pilha não ocorre. No entanto, recomendamos que você use a **`__leave`** palavra-chave em vez de uma **`goto`** instrução. O motivo é que você tem menos probabilidade de fazer um erro de programação se a seção protegida for grande ou complexa.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Funções intrínsecas da manipulação de exceção estruturada
 
@@ -90,7 +90,7 @@ A manipulação de exceção estruturada fornece duas funções intrínsecas que
 
 `GetExceptionCode`Retorna o código (um número inteiro de 32 bits) da exceção.
 
-A função `GetExceptionInformation` intrínseca retorna um ponteiro para uma estrutura de [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers) que contém informações adicionais sobre a exceção. Por esse ponteiro, você pode acessar qual era o estado do computador no momento em que ocorreu uma exceção de hardware. A estrutura é a seguinte:
+A função intrínseca `GetExceptionInformation` retorna um ponteiro para uma estrutura de [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers) que contém informações adicionais sobre a exceção. Por esse ponteiro, você pode acessar qual era o estado do computador no momento em que ocorreu uma exceção de hardware. A estrutura é a seguinte:
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -99,13 +99,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
 ```
 
-Os tipos `PEXCEPTION_RECORD` de ponteiro `PCONTEXT` e \<são definidos no arquivo include Winnt. h> e `_EXCEPTION_RECORD` e `_CONTEXT` são definidos no arquivo \<de inclusão Excpt. h>
+Os tipos de ponteiro `PEXCEPTION_RECORD` e `PCONTEXT` são definidos no arquivo de inclusão e \<winnt.h> `_EXCEPTION_RECORD` `_CONTEXT` são definidos no arquivo de inclusão\<excpt.h>
 
-Você pode usar `GetExceptionCode` dentro do manipulador de exceção. No entanto, você `GetExceptionInformation` pode usar somente dentro da expressão de filtro de exceção. As informações apontadas são geralmente na pilha e não estão mais disponíveis quando o controle é transferido para o manipulador de exceção.
+Você pode usar `GetExceptionCode` dentro do manipulador de exceção. No entanto, você pode usar `GetExceptionInformation` somente dentro da expressão de filtro de exceção. As informações apontadas são geralmente na pilha e não estão mais disponíveis quando o controle é transferido para o manipulador de exceção.
 
 A função intrínseca [AbnormalTermination](/windows/win32/Debug/abnormaltermination) está disponível dentro de um manipulador de encerramento. Retornará 0 se o corpo da instrução **try-finally terminar em** sequência. Em todos os outros casos, retorna 1.
 
-\<Excpt. h> define alguns nomes alternativos para esses intrínsecos:
+\<excpt.h>define alguns nomes alternativos para esses intrínsecos:
 
 `GetExceptionCode` equivale a `_exception_code`
 

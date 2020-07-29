@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076937"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228746"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Aviso do compilador (nível 4) C4471
 
 '*Enumeration*': uma declaração de encaminhamento de uma enumeração sem escopo deve ter um tipo subjacente (int assumido)
 
-Foi encontrada uma declaração de encaminhamento de uma enumeração sem escopo com um especificador para o tipo subjacente. Por padrão, Visual C++ pressupõe `int` é o tipo subjacente para uma enumeração. Isso pode causar problemas se um tipo diferente for usado na definição de enumeração, por exemplo, se um tipo explícito diferente for especificado ou se um tipo diferente for definido implicitamente por um inicializador. Você também pode ter problemas de portabilidade; outros compiladores não pressupõem `int` é o tipo subjacente de uma enumeração.
+Foi encontrada uma declaração de encaminhamento de uma enumeração sem escopo com um especificador para o tipo subjacente. Por padrão, o Visual C++ pressupõe **`int`** que é o tipo subjacente para uma enumeração. Isso pode causar problemas se um tipo diferente for usado na definição de enumeração, por exemplo, se um tipo explícito diferente for especificado ou se um tipo diferente for definido implicitamente por um inicializador. Você também pode ter problemas de portabilidade; outros compiladores não pressupõem **`int`** o tipo subjacente de uma enumeração.
 
 Esse aviso está desativado por padrão; Você pode usar/Wall ou/w*N*4471 para habilitá-lo na linha de comando ou usar #pragma [aviso](../../preprocessor/warning.md) no arquivo de origem.
 

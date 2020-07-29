@@ -8,31 +8,31 @@ helpviewer_keywords:
 - __asm keyword [C++], C/C++ elements in
 - Visual C++, in __asm blocks
 ms.assetid: 0758ffdc-dfe9-41c8-a5e1-fd395bcac328
-ms.openlocfilehash: fd9f8b444d263818aca1b16260f70730d5350e7c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecdd3b6b6916a5c9585678838d8e494a58e0508c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169104"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191190"
 ---
 # <a name="using-c-or-c-symbols-in-__asm-blocks"></a>Usando símbolos de C ou C++ em blocos __asm
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Um bloco de `__asm` pode se referir a C++ qualquer C ou símbolo no escopo em que o bloco é exibido. (C e C++ Symbols são nomes de variáveis, nomes de função e rótulos; ou seja, nomes que não são constantes simbólicas ou membros de `enum`. Você não pode C++ chamar funções de membro.)
+Um **`__asm`** bloco pode se referir a qualquer símbolo C ou C++ no escopo em que o bloco é exibido. (Os símbolos C e C++ são nomes de variáveis, nomes de função e rótulos; ou seja, nomes que não são constantes ou membros simbólicos **`enum`** . Você não pode chamar funções de membro do C++.)
 
-Algumas restrições se aplicam ao uso de C e C++ Symbols:
+Algumas restrições se aplicam ao uso de símbolos C e C++:
 
-- Cada instrução de linguagem de assembly pode conter apenas um C C++ ou símbolo. Vários símbolos podem aparecer na mesma instrução de assembly somente com expressões de **comprimento**, **tipo**e **tamanho** .
+- Cada instrução de linguagem de assembly pode conter apenas um símbolo C ou C++. Vários símbolos podem aparecer na mesma instrução de assembly somente com expressões de **comprimento**, **tipo**e **tamanho** .
 
-- As funções referenciadas em um bloco de `__asm` devem ser declaradas (protótipos) anteriormente no programa. Caso contrário, o compilador não pode distinguir entre nomes de função e rótulos no bloco de `__asm`.
+- As funções referenciadas em um **`__asm`** bloco devem ser declaradas (protótipos) anteriormente no programa. Caso contrário, o compilador não pode distinguir entre nomes de função e rótulos no **`__asm`** bloco.
 
-- Um bloco de `__asm` não pode usar nenhum C++ C ou símbolo com a mesma grafia que MASM palavras reservadas (independentemente do caso). As palavras reservadas do MASM incluem nomes de instrução como **Push** e registrar nomes como, por exemplo, si.
+- Um **`__asm`** bloco não pode usar nenhum símbolo C ou C++ com a mesma grafia que MASM palavras reservadas (independentemente do caso). As palavras reservadas do MASM incluem nomes de instrução como **Push** e registrar nomes como, por exemplo, si.
 
-- As marcas de estrutura e União não são reconhecidas em blocos de `__asm`.
+- As marcas de estrutura e União não são reconhecidas em **`__asm`** blocos.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
-[Usando C ou C++ em blocos __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[Usando C ou C++ em blocos de __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

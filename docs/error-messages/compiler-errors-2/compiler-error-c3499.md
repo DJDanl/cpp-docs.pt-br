@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738005"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228837"
 ---
 # <a name="compiler-error-c3499"></a>Erro do compilador C3499
 
 um lambda que foi especificado para ter um tipo de retorno void não pode retornar um valor
 
-O compilador gera esse erro quando uma expressão lambda que especifica `void` como o tipo de retorno retorna um valor; ou quando uma expressão lambda contém mais de uma instrução e retorna um valor, mas não especifica seu tipo de retorno.
+O compilador gera esse erro quando uma expressão lambda que especifica **`void`** como o tipo de retorno retorna um valor; ou quando uma expressão lambda contém mais de uma instrução e retorna um valor, mas não especifica seu tipo de retorno.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 - Não retornar um valor da expressão lambda ou
 
@@ -60,6 +60,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)
