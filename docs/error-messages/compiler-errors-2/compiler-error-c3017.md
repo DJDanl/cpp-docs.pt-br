@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3017
 ms.assetid: 12ab2c2a-d0d2-4900-9cbf-39be0af590dd
-ms.openlocfilehash: af3f24a1a814fa79fa63b7e5bee204083006c9a2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 34347abffd91246ada080d19fee88ee09c8fce99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749734"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232060"
 ---
 # <a name="compiler-error-c3017"></a>Erro do compilador C3017
 
 o teste de encerramento na instrução de OpenMP ' for ' tem forma inadequada
 
-Um loop de `for` em uma instrução de OpenMP deve ser especificado de forma completa e explícita.
+Um **`for`** loop em uma instrução de OpenMP deve ser especificado de forma completa e explícita.
 
 O exemplo a seguir gera C3017:
 

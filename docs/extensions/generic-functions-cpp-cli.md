@@ -9,24 +9,24 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516371"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216005"
 ---
 # <a name="generic-functions-ccli"></a>Funções genéricas (C++/CLI)
 
 Uma função genérica é uma função declarada com parâmetros de tipo. Quando chamados, os tipos reais são usados, ao invés dos parâmetros de tipo.
 
-## <a name="all-platforms"></a>Todas as Plataformas
+## <a name="all-platforms"></a>Todas as plataformas
 
 ### <a name="remarks"></a>Comentários
 
 Esse recurso não se aplica a todas as plataformas.
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 ### <a name="remarks"></a>Comentários
 
@@ -51,18 +51,18 @@ return-type identifier<type-parameter identifier(s)>
 {function-body}
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Atributos*<br/>
+*attributes*<br/>
 (Opcional) Informações declarativas adicionais. Saiba mais sobre atributos e classes de atributos em Atributos.
 
-*modifiers*<br/>
-(Opcional) Um modificador para a função, como static.  **virtual** não é permitido porque métodos virtuais não podem ser genéricos.
+*modificadores*<br/>
+(Opcional) Um modificador para a função, como static.  **`virtual`** Não é permitido, pois métodos virtuais não podem ser genéricos.
 
-*return-type*<br/>
+*tipo de retorno*<br/>
 O tipo retornado pelo método. Se o valor de retorno for nulo, nenhum valor retornado será necessário.
 
-*identifier*<br/>
+*ID*<br/>
 O nome da função.
 
 *type-parameter identifier(s)*<br/>
@@ -74,7 +74,7 @@ Lista de identificadores separados por vírgulas.
 *type-parameter-constraints-clauses*<br/>
 Especifica restrições quanto aos tipos que podem ser usados como argumentos de tipo e assume o formato especificado nas [Restrições em parâmetros de tipo genéricos (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
 
-*function-body*<br/>
+*função-corpo*<br/>
 O corpo do método, que pode se referir a identificadores de parâmetro de tipo.
 
 ### <a name="remarks"></a>Comentários
@@ -181,7 +181,7 @@ My function returned an int: 2003
 My function returned a string: Hello generic functions!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Genéricos](generics-cpp-component-extensions.md)

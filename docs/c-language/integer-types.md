@@ -1,24 +1,24 @@
 ---
 title: Tipos de inteiro
-ms.date: 11/04/2016
+ms.date: 07/22/2020
 helpviewer_keywords:
 - integer data type, integer types in C++
 - integer constants
 - integer types
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
-ms.openlocfilehash: 23da055b56e2ae77fed796d9ba8e7f227e572a9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61ed64c613bc88ed5bf62999ba77fa4090c1ec4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232839"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211795"
 ---
 # <a name="integer-types"></a>Tipos de inteiro
 
-Cada constante de inteiro recebe um tipo baseado no seu valor e na forma como é expressa. Qualquer constante inteira pode ser forçada para o tipo **long** anexando a letra **l** ou **L** ao final da constante; é possível forçá-la para o tipo `unsigned` anexando **u** ou **U** ao valor. A letra minúscula **l** pode ser confundida com o dígito 1 e deve ser evitada. Estas são algumas formas de constantes de inteiro de **long**:
+Cada constante de inteiro recebe um tipo com base em seu valor e a forma como é expressa. Você pode forçar qualquer constante de inteiro para tipo **`long`** acrescentando a letra **`l`** ou **`L`** ao final da constante; você pode forçá-la a ser tipo **`unsigned`** acrescentando **`u`** ou **`U`** ao valor. A letra minúscula **`l`** pode ser confundida com o dígito 1 e deve ser evitada. Seguem algumas formas de **`long`** constantes de inteiro:
 
-```
+```C
 /* Long decimal constants */
 10L
 79L
@@ -36,17 +36,17 @@ Cada constante de inteiro recebe um tipo baseado no seu valor e na forma como é
 778866LU
 ```
 
-O tipo que você atribui a uma constante depende do valor que a constante representa. O valor de uma constante deve estar no intervalo de valores representáveis para o seu tipo. O tipo de uma constante determina quais conversões são executadas quando a constante é usada em uma expressão ou quando o sinal de subtração (**-**) é aplicado. Esta lista resume as regras de conversão para constantes de número inteiro.
+O tipo que você atribui a uma constante depende do valor que a constante representa. O valor de uma constante deve estar no intervalo de valores representáveis para o seu tipo. O tipo de uma constante determina quais conversões são executadas quando a constante é usada em uma expressão ou quando o sinal de subtração ( **`-`** ) é aplicado. Esta lista resume as regras de conversão para constantes de número inteiro.
 
-- O tipo de uma constante decimal sem um sufixo é `int`, **Long int**, ou **Long int não assinado**. O primeiro desses três tipos nos quais o valor da constante pode ser representado é o tipo atribuído à constante.
+- O tipo de uma constante decimal sem um sufixo é **`int`** , **`long int`** ou **`unsigned long int`** . O primeiro destes três tipos em que o valor da constante pode ser representado é o tipo atribuído à constante.
 
-- O tipo atribuído às constantes octais e hexadecimais sem sufixos é `int`, `unsigned int`, **long int** ou **unsigned long int**, dependendo do tamanho da constante.
+- O tipo atribuído às constantes octais e hexadecimal sem sufixos é **`int`** , **`unsigned int`** , **`long int`** ou **`unsigned long int`** dependendo do tamanho da constante.
 
-- O tipo atribuído às constantes com sufixo **u** ou **U** é **unsigned int** ou **unsigned long int**, dependendo do tamanho.
+- O tipo atribuído a constantes com um **`u`** **`U`** sufixo or é **`unsigned int`** ou **`unsigned long int`** dependendo do seu tamanho.
 
-- O tipo atribuído às constantes com sufixo **l** ou **L** é **long int** ou **unsigned long int**, dependendo do tamanho.
+- O tipo atribuído a constantes com um **`l`** **`L`** sufixo or é **`long int`** ou **`unsigned long int`** dependendo do seu tamanho.
 
-- O tipo atribuído às constantes com sufixo **u** ou **U** e **l** ou **L** é **unsigned long int**.
+- O tipo atribuído a constantes com um **`u`** or **`U`** e um **`l`** **`L`** sufixo or é **`unsigned long int`** .
 
 ## <a name="see-also"></a>Confira também
 

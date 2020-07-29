@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 3d645cc09c61402059e9a86679c10ee703ee8031
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3f2ec71083f7a7905bad5cda014baba914e31e79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443732"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215797"
 ---
 # <a name="event-class"></a>Classe event
 
@@ -32,22 +32,22 @@ class event;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[~ Destruidor de evento](#dtor)|Destrói um evento.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[reset](#reset)|Redefine o evento para um estado não sinalizado.|
 |[set](#set)|Sinaliza o evento.|
 |[esperado](#wait)|Aguarda até que o evento se torne sinalizado.|
 |[wait_for_multiple](#wait_for_multiple)|Aguarda que vários eventos sejam sinalizados.|
 
-### <a name="public-constants"></a>Constantes Públicas
+### <a name="public-constants"></a>Constantes públicas
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[timeout_infinite](#timeout_infinite)|Valor que indica que uma espera nunca deve atingir o tempo limite.|
 
@@ -59,13 +59,13 @@ Para obter mais informações, consulte [Synchronization data structures](../../
 
 `event`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-## <a name="ctor"></a>circunstância
+## <a name="event"></a>Evento <a name="ctor"></a>
 
 Constrói um novo evento.
 
@@ -75,7 +75,7 @@ _CRTIMP event();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="dtor"></a>~ evento
+## <a name="event"></a><a name="dtor"></a>~ evento
 
 Destrói um evento.
 
@@ -87,7 +87,7 @@ Destrói um evento.
 
 Espera-se que não haja threads aguardando o evento quando o destruidor for executado. Permitir que o evento seja destruido com threads ainda aguardando isso resulta em um comportamento indefinido.
 
-## <a name="reset"></a>definido
+## <a name="reset"></a><a name="reset"></a>definido
 
 Redefine o evento para um estado não sinalizado.
 
@@ -95,7 +95,7 @@ Redefine o evento para um estado não sinalizado.
 void reset();
 ```
 
-## <a name="set"></a>Definição
+## <a name="set"></a><a name="set"></a>Definição
 
 Sinaliza o evento.
 
@@ -107,7 +107,7 @@ void set();
 
 Sinalizar o evento pode causar um número arbitrário de contextos aguardando que o evento se torne executável.
 
-## <a name="timeout_infinite"></a>timeout_infinite
+## <a name="timeout_infinite"></a><a name="timeout_infinite"></a>timeout_infinite
 
 Valor que indica que uma espera nunca deve atingir o tempo limite.
 
@@ -115,7 +115,7 @@ Valor que indica que uma espera nunca deve atingir o tempo limite.
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-## <a name="wait"></a>esperado
+## <a name="wait"></a><a name="wait"></a>esperado
 
 Aguarda até que o evento se torne sinalizado.
 
@@ -123,19 +123,19 @@ Aguarda até que o evento se torne sinalizado.
 size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Timeout*<br/>
 Indica o número de milissegundos antes da espera expirar. O valor `COOPERATIVE_TIMEOUT_INFINITE` significa que não há nenhum tempo limite.
 
 ### <a name="return-value"></a>Valor retornado
 
-Se a espera tiver sido satisfeita, o valor `0` será retornado; caso contrário, o valor `COOPERATIVE_WAIT_TIMEOUT` para indicar que a espera atingiu o tempo limite sem que o evento fique sinalizado.
+Se a espera for satisfeita, o valor `0` será retornado; caso contrário, o valor `COOPERATIVE_WAIT_TIMEOUT` para indicar que a espera atingiu o tempo limite sem que o evento se torne sinalizado.
 
 > [!IMPORTANT]
-> Em um aplicativo Plataforma Universal do Windows (UWP), não chame `wait` no thread ASTA porque essa chamada pode bloquear o thread atual e pode fazer com que o aplicativo fique sem resposta.
+> Em um aplicativo Plataforma Universal do Windows (UWP), não chame `wait` no thread Asta porque essa chamada pode bloquear o thread atual e pode fazer com que o aplicativo fique sem resposta.
 
-## <a name="wait_for_multiple"></a>wait_for_multiple
+## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a>wait_for_multiple
 
 Aguarda que vários eventos sejam sinalizados.
 
@@ -147,31 +147,31 @@ static size_t __cdecl wait_for_multiple(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PPEvents*<br/>
-Uma matriz de eventos para aguardar. O número de eventos dentro da matriz é indicado pelo parâmetro `count`.
+Uma matriz de eventos para aguardar. O número de eventos dentro da matriz é indicado pelo `count` parâmetro.
 
-*count*<br/>
-A contagem de eventos dentro da matriz fornecida no parâmetro `_PPEvents`.
+*contagem*<br/>
+A contagem de eventos dentro da matriz fornecida no `_PPEvents` parâmetro.
 
 *_FWaitAll*<br/>
-Se definido como o valor **true**, o parâmetro especifica que todos os eventos dentro da matriz fornecida no parâmetro `_PPEvents` devem ser sinalizados para atender à espera. Se definido como o valor **false**, ele especifica que qualquer evento dentro da matriz fornecida no parâmetro `_PPEvents` se tornando sinalizado atenderá à espera.
+Se definido como o valor **`true`** , o parâmetro especifica que todos os eventos dentro da matriz fornecida no `_PPEvents` parâmetro devem ser sinalizados para atender à espera. Se definido como o valor **`false`** , ele especifica que qualquer evento dentro da matriz fornecida no parâmetro que está `_PPEvents` se tornando sinalizado atenderá à espera.
 
 *_Timeout*<br/>
 Indica o número de milissegundos antes da espera expirar. O valor `COOPERATIVE_TIMEOUT_INFINITE` significa que não há nenhum tempo limite.
 
 ### <a name="return-value"></a>Valor retornado
 
-Se a espera foi satisfeita, o índice na matriz fornecida no parâmetro `_PPEvents` que satisfez a condição de espera; caso contrário, o valor `COOPERATIVE_WAIT_TIMEOUT` para indicar que a espera atingiu o tempo limite sem que a condição esteja satisfeita.
+Se a espera foi satisfeita, o índice na matriz fornecida no `_PPEvents` parâmetro que satisfez a condição de espera; caso contrário, o valor `COOPERATIVE_WAIT_TIMEOUT` para indicar que a espera atingiu o tempo limite sem que a condição esteja satisfeita.
 
 ### <a name="remarks"></a>Comentários
 
-Se o parâmetro `_FWaitAll` for definido como o valor `true` para indicar que todos os eventos devem ser sinalizados para atender à espera, o índice retornado pela função não terá nenhum significado especial além do fato de que ele não é o valor `COOPERATIVE_WAIT_TIMEOUT`.
+Se o parâmetro `_FWaitAll` for definido como o valor **`true`** para indicar que todos os eventos devem ser sinalizados para atender à espera, o índice retornado pela função não terá nenhum significado especial além do fato de não ser o valor `COOPERATIVE_WAIT_TIMEOUT` .
 
 > [!IMPORTANT]
-> Em um aplicativo Plataforma Universal do Windows (UWP), não chame `wait_for_multiple` no thread ASTA porque essa chamada pode bloquear o thread atual e pode fazer com que o aplicativo fique sem resposta.
+> Em um aplicativo Plataforma Universal do Windows (UWP), não chame `wait_for_multiple` no thread Asta porque essa chamada pode bloquear o thread atual e pode fazer com que o aplicativo fique sem resposta.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

@@ -1,25 +1,25 @@
 ---
-title: '&lt;new&gt;'
+title: '&lt;novo&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <new>
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212157"
 ---
-# <a name="ltnewgt"></a>&lt;new&gt;
+# <a name="ltnewgt"></a>&lt;novo&gt;
 
 Define vários tipos e funções que controlam a alocação e a liberação de armazenamento no controle do programa. Ele também define componentes para relatórios de erros de gerenciamento de armazenamento.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<new>
+**Cabeçalho:**\<new>
 
 **Namespace:** std
 
@@ -33,7 +33,7 @@ Algumas das funções declaradas nesse cabeçalho são substituíveis. A impleme
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Fornece um objeto a ser usado como um argumento para as  versões nothrow de **New** e **delete**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Fornece um objeto a ser usado como um argumento para as **`nothrow`** versões do **`new`** e do **`delete`** .|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -55,12 +55,12 @@ Algumas das funções declaradas nesse cabeçalho são substituíveis. A impleme
 
 |||
 |-|-|
-|[operador delete](../standard-library/new-operators.md#op_delete)|A função que é chamada por uma expressão delete para desalocar o armazenamento de objetos individuais.|
+|[operador Delete](../standard-library/new-operators.md#op_delete)|A função que é chamada por uma expressão delete para desalocar o armazenamento de objetos individuais.|
 |[operador delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|A função que é chamada por uma expressão delete para desalocar o armazenamento para uma matriz de objetos.|
-|[operador new](../standard-library/new-operators.md#op_new)|A função que é chamada por uma expressão new para alocar o armazenamento de objetos individuais.|
+|[novo operador](../standard-library/new-operators.md#op_new)|A função que é chamada por uma expressão new para alocar o armazenamento de objetos individuais.|
 |[operador new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|A função que é chamada por uma expressão new para alocar o armazenamento de uma matriz de objetos.|
 
-### <a name="enums"></a>Enums
+### <a name="enums"></a>Enumerações
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ Algumas das funções declaradas nesse cabeçalho são substituíveis. A impleme
 |[Classe bad_array_new_length](../standard-library/bad-array-new-length.md)||
 |[Classe nothrow_t](../standard-library/nothrow-t-structure.md)|A classe é usada como um parâmetro de função para o operador new para indicar que a função deve retornar um ponteiro nulo para relatar uma falha de alocação, em vez de lançar uma exceção.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

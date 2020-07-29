@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 0ff9178679792929bbd6eb92bb6148cfa008dcad
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621687"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231904"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Manipuladores para intervalos de mapa da mensagem
 
@@ -143,8 +143,8 @@ Ao gravar a função do manipulador, especifique o parâmetro **uint** extra, co
 
 O `OnButtonClicked` manipulador de uma única mensagem de **BN_CLICKED** não usa parâmetros. O mesmo manipulador para um intervalo de botões recebe um **uint**. O parâmetro extra permite identificar o controle específico responsável pela geração da mensagem de **BN_CLICKED** .
 
-O código mostrado no exemplo é típico: convertendo o valor passado para um `int` dentro do intervalo de mensagens e afirmando que esse é o caso. Em seguida, você pode executar alguma ação diferente, dependendo de qual botão foi clicado.
+O código mostrado no exemplo é típico: convertendo o valor passado para um **`int`** dentro do intervalo de mensagens e afirmando que esse é o caso. Em seguida, você pode executar alguma ação diferente, dependendo de qual botão foi clicado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarando funções de manipulador de mensagens](declaring-message-handler-functions.md)

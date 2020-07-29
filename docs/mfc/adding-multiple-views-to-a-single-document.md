@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 83bb7e54567319a7af4bd3d8a6bf02256fef68fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623350"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215966"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Adicionando várias exibições a um único documento
 
@@ -65,7 +65,7 @@ Criar a nova classe View torna-se fácil usando o **novo** comando de classe dis
 
 Depois de adicionar a classe ao projeto, você precisa alterar a acessibilidade de alguns membros da classe View.
 
-Modifique *NEWVIEW. H* alterando o especificador de acesso **protegido** para **público** para o construtor e destruidor. Isso permite que a classe seja criada e destruída dinamicamente e modifique a aparência da exibição antes que ela seja visível.
+Modifique *NEWVIEW. H* alterando o especificador de acesso de **`protected`** para **`public`** para o construtor e destruidor. Isso permite que a classe seja criada e destruída dinamicamente e modifique a aparência da exibição antes que ela seja visível.
 
 Salve as alterações e continue na próxima etapa.
 
@@ -97,6 +97,6 @@ A etapa final envolve a adição de código que chama o `SwitchView` método qua
 
 Para obter mais informações sobre como adicionar novos itens de menu e funções de manipulador de comando, consulte [manipuladores para comandos e notificações de controle](handlers-for-commands-and-control-notifications.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquitetura de documento/exibição](document-view-architecture.md)

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae6fcbbcbb1a526dbba857fc9bfa2da5eb897c73
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231852"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -170,7 +170,7 @@ As entradas de mapa de mensagens em potencial são as seguintes:
 
 Se você criar um `CButton` objeto a partir de um recurso de caixa de diálogo, o `CButton` objeto será destruído automaticamente quando o usuário fechar a caixa de diálogo.
 
-Se você criar um `CButton` objeto em uma janela, talvez seja necessário destruí-lo. Se você criar o `CButton` objeto no heap usando a **nova** função, deverá chamar **delete** no objeto para destruí-lo quando o usuário fechar o controle de botão do Windows. Se você criar o `CButton` objeto na pilha ou ele estiver inserido no objeto de caixa de diálogo pai, ele será destruído automaticamente.
+Se você criar um `CButton` objeto em uma janela, talvez seja necessário destruí-lo. Se você criar o `CButton` objeto no heap usando a **`new`** função, deverá chamar **`delete`** no objeto para destruí-lo quando o usuário fechar o controle de botão do Windows. Se você criar o `CButton` objeto na pilha ou ele estiver inserido no objeto de caixa de diálogo pai, ele será destruído automaticamente.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -211,7 +211,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszCaption*<br/>
 Especifica o texto do controle de botão.
@@ -228,7 +228,7 @@ Especifica a janela pai do controle de botão, geralmente um `CDialog` . Ele nã
 *nID*<br/>
 Especifica a ID do controle de botão.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -262,7 +262,7 @@ Chamado pelo Framework quando um aspecto visual de um botão desenhado pelo prop
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpDrawItemStruct*<br/>
 Um ponteiro longo para uma estrutura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) . A estrutura contém informações sobre o item a ser desenhado e o tipo de desenho necessário.
@@ -285,7 +285,7 @@ Chame essa função de membro para obter o identificador de um bitmap, definido 
 HBITMAP GetBitmap() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um identificador para um bitmap. NULL se nenhum bitmap for especificado anteriormente.
 
@@ -301,7 +301,7 @@ Recupera informações sobre o estilo de controle de botão.
 UINT GetButtonStyle() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Retorna os estilos de botão deste `CButton` objeto. Essa função retorna apenas os valores de estilo [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) , não qualquer um dos outros estilos de janela.
 
@@ -317,7 +317,7 @@ Recupera o estado de verificação de um botão de opção ou caixa de seleção
 int GetCheck() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor de retorno de um controle de botão criado com o BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON ou BS_3STATE estilo é um dos seguintes valores:
 
@@ -341,7 +341,7 @@ Chame essa função de membro para obter o identificador de um cursor, anteriorm
 HCURSOR GetCursor();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um identificador para uma imagem de cursor. NULL se nenhum cursor for especificado anteriormente.
 
@@ -357,7 +357,7 @@ Chame essa função de membro para obter o identificador de um ícone, definido 
 HICON GetIcon() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um identificador para um ícone. NULL se nenhum ícone for especificado anteriormente.
 
@@ -373,12 +373,12 @@ Recupera o tamanho ideal para o controle de botão.
 BOOL GetIdealSize(SIZE* psize);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *psize*<br/>
 Um ponteiro para o tamanho atual do botão.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -394,12 +394,12 @@ Chame esse método para obter a lista de imagens do controle de botão.
 BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbuttonImagelist*<br/>
 Um ponteiro para a lista de imagens do `CButton` objeto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -426,7 +426,7 @@ BOOL GetNote(
 |*lpszNote*|fora Ponteiro para um buffer, que o chamador é responsável por alocar e desalocar. Se o valor de retorno for TRUE, o buffer conterá o texto de observação associado ao controle de link de comando atual; caso contrário, o buffer não será alterado.|
 |*cchNote*|[entrada, saída] Um ponteiro para uma variável de inteiro sem sinal.<br /><br /> Quando esse método é chamado, a variável contém o tamanho do buffer especificado pelo parâmetro *lpszNote* .<br /><br /> Quando esse método retornar, se o valor de retorno for TRUE, a variável conterá o tamanho da nota associada ao controle de link de comando atual. Se o valor de retorno for FALSE, a variável conterá o tamanho do buffer necessário para conter a observação.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Na primeira sobrecarga, um objeto [CString](../../atl-mfc-shared/using-cstring.md) que contém o texto de observação associado ao controle de link de comando atual.
 
@@ -448,7 +448,7 @@ Recupera o comprimento do texto da nota para o controle de link de comando atual
 UINT GetNoteLength() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O comprimento do texto da nota, em caracteres Unicode de 16 bits, para o controle de link do comando atual.
 
@@ -466,7 +466,7 @@ Recupera o glifo associado ao controle do botão de divisão atual.
 TCHAR GetSplitGlyph() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O caractere de glifo associado ao controle do botão de divisão atual.
 
@@ -486,7 +486,7 @@ Recupera a [lista de imagens](../../mfc/reference/cimagelist-class.md) do contro
 CImageList* GetSplitImageList() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para um objeto [CImageList](../../mfc/reference/cimagelist-class.md) .
 
@@ -510,7 +510,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 |---------------|-----------------|
 |*pInfo*|fora Ponteiro para uma estrutura de [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) que recebe informações sobre o controle de botão de divisão atual. O chamador é responsável por alocar a estrutura.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -534,7 +534,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 |---------------|-----------------|
 |*pSize*|fora Ponteiro para uma estrutura de [tamanho](/windows/win32/api/windef/ns-windef-size) que recebe a descrição de um retângulo.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -554,7 +554,7 @@ Recupera os estilos do botão de divisão que definem o controle do botão de di
 UINT GetSplitStyle() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma combinação de bits bit A de estilos de botão de divisão. Para obter mais informações, consulte o `uSplitStyle` membro da estrutura de [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
@@ -574,7 +574,7 @@ Recupera o estado de um controle de botão.
 UINT GetState() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um campo de bits que contém a combinação de valores que indicam o estado atual de um controle de botão. A tabela a seguir lista os valores possíveis.
 
@@ -602,12 +602,12 @@ Chame esse método para obter a margem de texto do `CButton` objeto.
 BOOL GetTextMargin(RECT* pmargin);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pmargin*<br/>
 Um ponteiro para a margem de texto do `CButton` objeto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Retorna a margem do texto.
 
@@ -627,12 +627,12 @@ Chame essa função de membro para associar um novo bitmap ao botão.
 HBITMAP SetBitmap(HBITMAP hBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hBitmap*<br/>
 O identificador de um bitmap.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O identificador de um bitmap associado anteriormente ao botão.
 
@@ -670,7 +670,7 @@ void SetButtonStyle(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStyle*<br/>
 Especifica o [estilo do botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).
@@ -694,7 +694,7 @@ Define ou redefine o estado de verificação de um botão de opção ou caixa de
 void SetCheck(int nCheck);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nVerifique*<br/>
 Especifica o estado de verificação. Esse parâmetro pode ser um dos seguintes:
@@ -721,12 +721,12 @@ Chame essa função de membro para associar um novo cursor ao botão.
 HCURSOR SetCursor(HCURSOR hCursor);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hCursor*<br/>
 O identificador de um cursor.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O identificador de um cursor associado anteriormente ao botão.
 
@@ -766,7 +766,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 |---------------|-----------------|
 |*fDropDown*|no TRUE para definir BST_DROPDOWNPUSHED estado; caso contrário, FALSE.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -802,7 +802,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 |---------------|-----------------|
 |*fElevationRequired*|no TRUE para definir o `elevation required` estado; caso contrário, false.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -820,12 +820,12 @@ Chame essa função de membro para associar um novo ícone ao botão.
 HICON SetIcon(HICON hIcon);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hIcon*<br/>
 O identificador de um ícone.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O identificador de um ícone associado anteriormente ao botão.
 
@@ -859,12 +859,12 @@ Chame esse método para definir a lista de imagens do `CButton` objeto.
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbuttonImagelist*<br/>
 Um ponteiro para a nova lista de imagens.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Retorna verdadeiro em caso de êxito, falso em caso de falha.
 
@@ -886,7 +886,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 |---------------|-----------------|
 |*lpszNote*|no Ponteiro para uma cadeia de caracteres Unicode que é definida como o texto de nota para o controle de link de comando.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -922,7 +922,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 |---------------|-----------------|
 |*chGlyph*|no Um caractere que especifica o glifo a ser usado como a seta suspensa do botão de divisão.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -948,7 +948,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 |---------------|-----------------|
 |*pSplitImageList*|no Ponteiro para um objeto [CImageList](../../mfc/reference/cimagelist-class.md) para atribuir ao controle do botão de divisão atual.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -972,7 +972,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 |---------------|-----------------|
 |*pInfo*|no Ponteiro para uma estrutura de [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) que define o controle do botão de divisão atual.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -1008,7 +1008,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 |---------------|-----------------|
 |*pSize*|no Ponteiro para uma estrutura de [tamanho](/windows/win32/api/windef/ns-windef-size) que descreve um retângulo delimitador.|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -1046,7 +1046,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 |---------------|-----------------|
 |*uSplitStyle*|no Uma combinação de bits bit A de estilos de botão de divisão. Para obter mais informações, consulte o `uSplitStyle` membro da estrutura de [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -1078,7 +1078,7 @@ Define se um controle de botão é realçado ou não.
 void SetState(BOOL bHighlight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bHighlight*<br/>
 Especifica se o botão deve ser realçado. Um valor diferente de zero realça o botão; um valor 0 remove qualquer realce.
@@ -1101,12 +1101,12 @@ Chame esse método para definir a margem de texto do `CButton` objeto.
 BOOL SetTextMargin(RECT* pmargin);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pmargin*<br/>
 Um ponteiro para a nova margem de texto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Retorna verdadeiro em caso de êxito, falso em caso de falha.
 
@@ -1117,7 +1117,7 @@ Essa função de membro emula a funcionalidade da BCM_SETTEXTMARGIN mensagem, co
 ## <a name="see-also"></a>Confira também
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [Classe CEdit](../../mfc/reference/cedit-class.md)<br/>

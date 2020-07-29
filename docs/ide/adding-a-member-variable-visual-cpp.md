@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
-ms.translationtype: HT
+ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328955"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215992"
 ---
 # <a name="add-a-member-variable"></a>Adicionar uma variável de membro
 
@@ -26,7 +26,7 @@ ms.locfileid: "58328955"
 > [!NOTE]
 > Quando está projetando e implementando uma caixa de diálogo, talvez seja mais eficiente usar o Editor de caixas de diálogo para adicionar os controles de caixa de diálogo e, em seguida, implementar as variáveis de membro dos controles.
 
-**Para adicionar uma variável de membro a um controle de caixa de diálogo em Modo de Exibição de Recursos usando o Assistente de Adição de Variável de Membro:**
+**Para adicionar uma variável de membro para um controle de caixa de diálogo no Modo de Exibição de Recursos usando o assistente para Adicionar variável de membro:**
 
 1. Em Modo de Exibição de Recursos, expanda o nó do projeto e o nó Caixa de Diálogo para exibir a lista de caixas de diálogo do projeto.
 
@@ -43,7 +43,7 @@ ms.locfileid: "58328955"
 
 1. Selecione **Concluir** para adicionar o código de definição e de implementação ao projeto e fechar o assistente.
 
-**Para adicionar uma variável de membro por meio do Modo de Exibição de Classe usando o Assistente de Adição de Variável de Membro:**
+**Para adicionar uma variável de membro de Modo de Exibição de Classe usando o assistente para Adicionar variável de membro:**
 
 1. Em [Modo de Exibição de Classe](/visualstudio/ide/viewing-the-structure-of-code), expanda o nó do projeto para exibir as classes no projeto.
 
@@ -64,13 +64,13 @@ ms.locfileid: "58328955"
 
 Este assistente adiciona uma declaração de variável de membro ao arquivo de cabeçalho. Dependendo das opções, pode adicionar código ao arquivo .cpp. Depois de adicionar a variável de membro usando o assistente, edite o código no ambiente de desenvolvimento.
 
-- **Access**
+- **Acesso**
 
-  Define o acesso à variável de membro. Modificadores de acesso são palavras-chave que especificam o acesso que outras classes têm à variável de membro. Para obter mais informações sobre como especificar o acesso, confira [controle de acesso a membro](../cpp/member-access-control-cpp.md). O nível de acesso da variável de membro é definido como `public` por padrão.
+  Define o acesso à variável de membro. Modificadores de acesso são palavras-chave que especificam o acesso que outras classes têm à variável de membro. Para obter mais informações sobre como especificar o acesso, consulte [controle de acesso de membro](../cpp/member-access-control-cpp.md). O nível de acesso variável de membro é definido como **`public`** por padrão.
 
-  - [public](../cpp/public-cpp.md)
+  - [público](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [private](../cpp/private-cpp.md)
+  - [pessoal](../cpp/private-cpp.md)
 
 - **Tipo de variável**
 
@@ -78,15 +78,15 @@ Este assistente adiciona uma declaração de variável de membro ao arquivo de c
 
   - Se estiver adicionando uma variável de membro que não é um controle de caixa de diálogo, selecione uma opção na lista de tipos disponíveis.
 
-    Para obter informações sobre os tipos, confira [tipos fundamentais](../cpp/fundamental-types-cpp.md).
+    Para obter informações sobre os tipos, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
 
     |||
     |-|-|
-    |`char`|`short`|
-    |`double`|`unsigned char`|
-    |`float`|`unsigned int`|
-    |`int`|`unsigned long`|
-    |`long`||
+    |**`char`**|**`short`**|
+    |**`double`**|**`unsigned char`**|
+    |**`float`**|**`unsigned int`**|
+    |**`int`**|**`unsigned long`**|
+    |**`long`**||
 
   - Se estiver adicionando uma variável de membro a um controle de caixa de diálogo, essa caixa será preenchida com o tipo do objeto que é retornado para um controle ou um valor. Se você selecionar **Controle**, a opção **Tipo de variável** especificará a classe base do controle selecionado na caixa **ID de Controle**. Se o controle de caixa de diálogo puder guardar um valor e você selecionar **Valor**, a opção **Tipo de variável** especificará o tipo apropriado para o valor que o controle pode guardar. Para obter mais informações, confira [controles de caixa de diálogo e tipos de variáveis](#dialog-box-controls-and-variable-types).
 
@@ -100,7 +100,7 @@ Este assistente adiciona uma declaração de variável de membro ao arquivo de c
 
   Indica que a variável de membro gerencia um controle em uma caixa de diálogo com o suporte da [troca e validação de dados](../mfc/dialog-data-exchange-and-validation.md). Para obter mais informações, confira [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange). Essa opção está disponível somente para as variáveis de membro adicionadas às classes derivadas de [CDialog](../mfc/reference/cdialog-class.md). Marque essa caixa para ativar as opções **ID de Controle** e **Tipo de controle**.
 
-- **ID de Controle**
+- **Control ID**
 
   Define a ID para a variável de controle que está sendo adicionada. Selecione na lista a ID do tipo de controle ao qual a variável de membro está sendo adicionada. A lista fica ativa somente quando a caixa **Variável de controle** está selecionada e é limitada às IDs dos controles que já foram adicionados à caixa de diálogo. Por exemplo, para o botão **OK** padrão, a ID de Controle é **IDOK**.
 
@@ -121,13 +121,13 @@ Este assistente adiciona uma declaração de variável de membro ao arquivo de c
 
   Disponível somente quando a opção **Tipo de variável** é definida como [CString](../atl-mfc-shared/reference/cstringt-class.md). Indica o número máximo de caracteres que o controle pode conter.
 
-- **Valor mín.**
+- **Valor mínimo**
 
-  Disponível apenas quando o tipo de variável é `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, [COLECurrency](../mfc/reference/colecurrency-class.md) ou [CTime](../atl-mfc-shared/reference/ctime-class.md). Indica o menor valor aceitável para uma escala ou um intervalo de datas.
+  Disponível somente quando o tipo de variável é,,,,,, `BOOL` **`int`** ,, `UINT` **`long`** `DWORD` **`float`** **`double`** `BYTE` **`short`** , [COleCurrency](../mfc/reference/colecurrency-class.md) ou [CTime](../atl-mfc-shared/reference/ctime-class.md). Indica o menor valor aceitável para uma escala ou um intervalo de datas.
 
-- **Valor máx.**
+- **Valor máximo**
 
-  Disponível apenas quando o tipo de variável é `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, `COLECurrency` ou `CTime`. Indica o maior valor aceitável para uma escala ou um intervalo de datas.
+  Disponível somente quando o tipo de variável é,,,,,,,,, `BOOL` **`int`** `UINT` **`long`** `DWORD` **`float`** **`double`** `BYTE` **`short`** `COLECurrency` ou `CTime` . Indica o maior valor aceitável para uma escala ou um intervalo de datas.
 
 - **Arquivo .h**
 
@@ -143,11 +143,11 @@ Este assistente adiciona uma declaração de variável de membro ao arquivo de c
 
 ## <a name="dialog-box-controls-and-variable-types"></a>Controles da caixa de diálogo e tipos de variável
 
-Use o [assistente de adição de variável de membro](#add-member-variable-wizard) para adicionar uma variável de membro a um controle de caixa de diálogo criado usando o MFC. O tipo de controle ao qual você adiciona a variável de membro determina as opções exibidas na caixa de diálogo.
+Você pode usar o [Assistente para Adicionar variável de membro](#add-member-variable-wizard) para adicionar uma variável de membro a um controle de caixa de diálogo criado usando o MFC. O tipo de controle ao qual você adiciona a variável de membro determina as opções exibidas na caixa de diálogo.
 
 A tabela a seguir descreve todos os tipos de controle de caixa de diálogo compatíveis com o MFC e o [Editor de caixas de diálogo](../windows/dialog-editor.md). Também exibe os tipos e valores disponíveis.
 
-|Controle|Tipo de controle|Tipo de variável de controle|Tipo de variável de valor|Valores mín./máx. (somente tipo de valor)|
+|Control|Tipo de controle|Tipo de variável de controle|Tipo de variável de valor|Valores mín./máx. (somente tipo de valor)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
 |Controle de animação|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Nenhum; somente controle|N/D|
 |Botão|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|Nenhum; somente controle|N/D|
@@ -162,8 +162,8 @@ A tabela a seguir descreve todos os tipos de controle de caixa de diálogo compa
 |Controle de progresso|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Nenhum; somente controle|N/D|
 |Controle de Rich Edit 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|Número máx. de caracteres|
 |Controle de Rich Edit|RICHEDIT|`CRichEditCtrl`|`CString`|Número máx. de caracteres|
-|Barra de rolagem (vertical ou horizontal)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Valor mín./valor máx.|
-|Controle deslizante|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valor mín./valor máx.|
+|Barra de rolagem (vertical ou horizontal)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|**`int`**|Valor mín./valor máx.|
+|Controle deslizante|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|**`int`**|Valor mín./valor máx.|
 |Controle de giro|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Nenhum; somente controle|N/D|
 |Controle guia|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Nenhum; somente controle|N/D|
 |Controle de árvore|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Nenhum; somente controle|N/D|

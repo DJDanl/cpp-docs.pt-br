@@ -7,12 +7,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31d7e30859537fed1b18f6d30302d83248e17e74
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211756"
 ---
 # <a name="pointer-declarations"></a>Declarações de ponteiro
 
@@ -40,9 +40,9 @@ Uma *declaração de ponteiro* nomeia uma variável de ponteiro e especifica o t
 
 O *type-specifier* informa o tipo de objeto, que pode ser qualquer tipo básico, de estrutura ou união. As variáveis de ponteiro também podem apontar para funções, matrizes e outros ponteiros. (Para obter informações sobre como declarar e interpretar tipos de ponteiro mais complexos, consulte [Interpretar declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md).)
 
-Ao tornar o *type-specifier* **nulo**, é possível atrasar a especificação do tipo ao qual o ponteiro se refere. Esse item é chamado de "ponteiro para **nulo**" e escrito como `void *`. Uma variável declarada como um ponteiro para *nulo* pode ser usada para apontar para um objeto de qualquer tipo. No entanto, para realizar a maioria das operações no ponteiro ou no objeto para o qual ele aponta, o tipo para o qual ele aponta deve ser explicitamente especificado para cada operação. (Variáveis do tipo **Char** <strong>\*</strong> e Type **void** <strong>\*</strong> são compatíveis com atribuição sem uma conversão de tipo.) Essa conversão pode ser realizada com uma conversão de tipo (Confira [conversões de conversão de tipo](../c-language/type-cast-conversions.md) para obter mais informações).
+Ao fazer o *especificador de tipo* **`void`** , você pode atrasar a especificação do tipo ao qual o ponteiro se refere. Esse item é conhecido como "ponteiro para **`void`** " e é escrito como `void *` . Uma variável declarada como um ponteiro para *nulo* pode ser usada para apontar para um objeto de qualquer tipo. No entanto, para realizar a maioria das operações no ponteiro ou no objeto para o qual ele aponta, o tipo para o qual ele aponta deve ser explicitamente especificado para cada operação. (Variáveis do tipo **`char`** <strong>\*</strong> e Type **`void`** <strong>\*</strong> são compatíveis com atribuição sem uma conversão de tipo.) Essa conversão pode ser realizada com uma conversão de tipo (Confira [conversões de conversão de tipo](../c-language/type-cast-conversions.md) para obter mais informações).
 
-O *type-qualifier* pode ser **const** ou **volatile** ou ambos. Eles especificam, respectivamente, que o ponteiro não pode ser modificado pelo programa em si (**const**) ou que o ponteiro pode ser legitimamente modificado por algum processo fora do controle do programa (**volatile**). (Consulte [Qualificadores de Tipo](../c-language/type-qualifiers.md) para obter mais informações sobre **const** e **volatile**.)
+O *qualificador de tipo* pode ser **`const`** ou ou **`volatile`** ambos. Eles especificam, respectivamente, que o ponteiro não pode ser modificado pelo próprio programa ( **`const`** ), ou que o ponteiro pode ser modificado legitimamente por algum processo além do controle do programa ( **`volatile`** ). (Consulte [qualificadores de tipo](../c-language/type-qualifiers.md) para obter mais informações sobre **`const`** e **`volatile`** .)
 
 O *declarator* atribui um nome à variável e pode incluir um modificador de tipo. Por exemplo, se o *declarator* representa uma matriz, o tipo do ponteiro é modificado para ser um ponteiro para uma matriz.
 
@@ -56,26 +56,26 @@ Os exemplos a seguir ilustram as declarações de ponteiro.
 char *message; /* Declares a pointer variable named message */
 ```
 
-O ponteiro *message* aponta para uma variável com tipo **char**.
+O ponteiro de *mensagem* aponta para uma variável com o **`char`** tipo.
 
 ```
 int *pointers[10];  /* Declares an array of pointers */
 ```
 
-A matriz *pointers* tem 10 elementos; cada elemento é um ponteiro para uma variável com tipo **int**.
+A matriz de *ponteiros* tem 10 elementos; cada elemento é um ponteiro para uma variável com o **`int`** tipo.
 
 ```
 int (*pointer)[10]; /* Declares a pointer to an array of 10 elements */
 ```
 
-A variável *pointer* aponta para uma matriz com 10 elementos. Cada elemento desta matriz tem o tipo **int**.
+A variável *pointer* aponta para uma matriz com 10 elementos. Cada elemento nesta matriz tem **`int`** tipo.
 
 ```
 int const *x;      /* Declares a pointer variable, x,
                       to a constant value */
 ```
 
-O ponteiro *x* pode ser modificado para apontar para outro valor **int**, mas o valor para o qual ele aponta não pode ser modificado.
+O ponteiro *x* pode ser modificado para apontar para um **`int`** valor diferente, mas o valor para o qual ele aponta não pode ser modificado.
 
 ```
 const int some_object = 5 ;
@@ -85,7 +85,7 @@ int volatile *const z = &some_object;
 int *const volatile w = &some_object;
 ```
 
-A variável *y* dessas declarações é declarada como um ponteiro constante para um valor **int**. O valor para o qual ele aponta pode ser modificado, mas o ponteiro em si deve sempre apontar para o mesmo local: o endereço de *fixed_object*. De forma semelhante, *z* é um ponteiro constante, mas também é declarado para apontar para um **int** cujo valor não pode ser modificado pelo programa. O especificador adicional **volatile** indica que, embora o valor de **const int** apontado por *z* não possa ser modificado pelo programa, pode ser modificado de modo legítimo por um processo executado simultaneamente com o programa. A declaração de *w* especifica que o programa não pode alterar o valor para o qual está apontado e que o programa não pode modificar o ponteiro.
+A variável *y* nessas declarações é declarada como um ponteiro constante para um **`int`** valor. O valor para o qual ele aponta pode ser modificado, mas o ponteiro em si deve sempre apontar para o mesmo local: o endereço de *fixed_object*. Da mesma forma, *z* é um ponteiro constante, mas também é declarado para apontar para um **`int`** cujo valor não pode ser modificado pelo programa. O especificador adicional **`volatile`** indica que, embora o valor da **const int** apontada por *z* não possa ser modificado pelo programa, ele pode ser modificado legitimamente por um processo em execução simultaneamente com o programa. A declaração de *w* especifica que o programa não pode alterar o valor para o qual está apontado e que o programa não pode modificar o ponteiro.
 
 ```
 struct list *next, *previous; /* Uses the tag for list */
@@ -102,7 +102,7 @@ struct list
 } line;
 ```
 
-A variável *line* tem o tipo de estrutura chamado *list*. O tipo da estrutura *list* tem três membros: o primeiro membro é um ponteiro para um valor **char**, o segundo é um valor **int** e o terceiro é um ponteiro para uma outra estrutura *list*.
+A variável *line* tem o tipo de estrutura chamado *list*. O tipo de estrutura de *lista* tem três membros: o primeiro membro é um ponteiro para um **`char`** valor, o segundo é um **`int`** valor e o terceiro é um ponteiro para outra estrutura de *lista* .
 
 ```
 struct id
@@ -116,4 +116,4 @@ O *registro* de variável tem a *ID*de tipo de estrutura. Observe que *pname* é
 
 ## <a name="see-also"></a>Confira também
 
-[Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)
+[Declaradores e declarações de variáveis](../c-language/declarators-and-variable-declarations.md)

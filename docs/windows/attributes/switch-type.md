@@ -1,17 +1,17 @@
 ---
-title: switch_type (C++ atributo com)
+title: switch_type (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214520"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211925"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -34,7 +34,7 @@ O tipo de comutador, pode ser um número inteiro, caractere, booliano ou tipo de
 
 O atributo **switch_type** C++ tem a mesma funcionalidade que o atributo MIDL [switch_type](/windows/win32/Midl/switch-type) .
 
-C++os atributos não dão suporte a [uniões encapsuladas](/windows/win32/Midl/encapsulated-unions). [Uniões não encapsuladas](/windows/win32/Midl/nonencapsulated-unions) têm suporte apenas no seguinte formato:
+Os atributos do C++ não dão suporte a [uniões encapsuladas](/windows/win32/Midl/encapsulated-unions). [Uniões não encapsuladas](/windows/win32/Midl/nonencapsulated-unions) têm suporte apenas no seguinte formato:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -63,15 +63,15 @@ Consulte o exemplo de [caso](case-cpp.md) para obter um exemplo de uso de **swit
 
 |||
 |-|-|
-|**Aplica-se a**|**typedef**|
+|**Aplica-se a**|**`typedef`**|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Export](export.md)

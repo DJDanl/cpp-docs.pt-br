@@ -1,17 +1,17 @@
 ---
-title: HelpContext (C++ atributo com)
+title: HelpContext (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpcontext
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 292db21e8092284a92b09ef3f889bb0475d0d886
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77c085f96e778b19886c4e6e3c8f07b43fbe8f2c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166998"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211977"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -42,19 +42,19 @@ Consulte o exemplo de [DefaultValue](defaultvalue.md) para obter um exemplo de c
 
 |||
 |-|-|
-|**Aplica-se a**|**interface**, **typedef**, **Class**, Method, Property|
+|**Aplica-se a**|**interface**, **`typedef`** , **`class`** , método, Propriedade|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
+[Atributos typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
 [helpstring](helpstring.md)

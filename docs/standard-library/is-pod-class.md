@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1398da92890072d8aa8a6f07c61920fe3bee1776
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455757"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212235"
 ---
-# <a name="ispod-class"></a>Classe is_pod
+# <a name="is_pod-class"></a>Classe is_pod
 
 Testa se o tipo é um POD.
 
@@ -25,14 +25,14 @@ template <class T>
 struct is_pod;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-`is_pod<T>::value`será **true** se o tipo *T* for um pod (dados antigos simples). Caso contrário, será **false**.
+`is_pod<T>::value`é **`true`** se o tipo *T* é um pod (dados antigos simples). Caso contrário, é **`false`** .
 
 Tipos aritméticos, tipos de enumeração, tipos de ponteiro e tipos de ponteiro para membro são POD.
 
@@ -96,10 +96,10 @@ is_pod<throws> == false
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)

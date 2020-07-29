@@ -1,5 +1,5 @@
 ---
-title: CArchiveClasse de exceção
+title: Classe CArchiveException
 ms.date: 11/04/2016
 f1_keywords:
 - CArchiveException
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-ms.openlocfilehash: ad2a9d8c5b4466a04b5a88fcce7679911bf1b81a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 68f64cfd7dc96da04fcc0945a6b996eab4101487
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377009"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231878"
 ---
-# <a name="carchiveexception-class"></a>CArchiveClasse de exceção
+# <a name="carchiveexception-class"></a>Classe CArchiveException
 
 Representa uma condição de exceção de serialização
 
@@ -41,30 +41,30 @@ class CArchiveException : public CException
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CArchiveException::m_cause](#m_cause)|Indica a causa da exceção.|
-|[CArchiveException::m_strFileName](#m_strfilename)|Especifica o nome do arquivo para esta condição de exceção.|
+|[CArchiveException:: m_cause](#m_cause)|Indica a causa da exceção.|
+|[CArchiveException:: m_strFileName](#m_strfilename)|Especifica o nome do arquivo para esta condição de exceção.|
 
 ## <a name="remarks"></a>Comentários
 
 A `CArchiveException` classe inclui um membro de dados públicos que indica a causa da exceção.
 
-`CArchiveException`objetos são construídos e jogados dentro das funções de membro [do CArchive.](../../mfc/reference/carchive-class.md) Você pode acessar esses objetos no escopo de uma expressão **CATCH.** O código de causa é independente do sistema operacional. Para obter mais informações sobre o processamento de exceções, consulte [MFC (Exception Handling, tratamento de exceção).](../../mfc/exception-handling-in-mfc.md)
+`CArchiveException`os objetos são construídos e lançados dentro de funções de membro [CArchive](../../mfc/reference/carchive-class.md) . Você pode acessar esses objetos dentro do escopo de uma expressão **Catch** . O código de causa é independente do sistema operacional. Para obter mais informações sobre o processamento de exceções, consulte [tratamento de exceção (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cexception](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 `CArchiveException`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afx.h
+**Cabeçalho:** AFX. h
 
 ## <a name="carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a>CArchiveException::CArchiveException
 
-Constrói um `CArchiveException` objeto, armazenando o valor da *causa* no objeto.
+Constrói um `CArchiveException` objeto, armazenando o valor de *causa* no objeto.
 
 ```
 CArchiveException(
@@ -72,21 +72,21 @@ CArchiveException(
     LPCTSTR lpszArchiveName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Causa*<br/>
-Uma variável de tipo enumerada que indica a razão da exceção. Para obter uma lista dos enumeradores, consulte o membro de dados [m_cause.](#m_cause)
+*faz*<br/>
+Uma variável de tipo enumerada que indica o motivo da exceção. Para obter uma lista dos enumeradores, consulte o membro de dados [m_cause](#m_cause) .
 
 *lpszArchiveName*<br/>
-Aponta para uma string contendo `CArchive` o nome do objeto causando a exceção.
+Aponta para uma cadeia de caracteres que contém o nome do `CArchive` objeto que está causando a exceção.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode `CArchiveException` criar um objeto no heap e jogá-lo você mesmo ou deixar a função global [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) lidar com ele para você.
+Você pode criar um `CArchiveException` objeto no heap e jogá-lo por conta própria ou deixar que a função global [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) tratá-lo para você.
 
-Não utilize este construtor diretamente; em vez disso, `AfxThrowArchiveException`chame a função global.
+Não use esse construtor diretamente; em vez disso, chame a função global `AfxThrowArchiveException` .
 
-## <a name="carchiveexceptionm_cause"></a><a name="m_cause"></a>CArchiveException::m_cause
+## <a name="carchiveexceptionm_cause"></a><a name="m_cause"></a>CArchiveException:: m_cause
 
 Especifica a causa da exceção.
 
@@ -96,31 +96,31 @@ int m_cause;
 
 ### <a name="remarks"></a>Comentários
 
-Este membro de dados é uma variável pública de tipo **int**. Seus valores são `CArchiveException` definidos por um tipo enumerado. Os enumeradores e seus significados são os seguintes:
+Esse membro de dados é uma variável pública do tipo **`int`** . Seus valores são definidos por um `CArchiveException` tipo enumerado. Os enumeradores e seus significados são os seguintes:
 
-- `CArchiveException::none`Nenhum erro ocorreu.
+- `CArchiveException::none`Não ocorreu nenhum erro.
 
 - `CArchiveException::genericException`Erro não especificado.
 
-- `CArchiveException::readOnly`Tentei escrever em um arquivo aberto para carregamento.
+- `CArchiveException::readOnly`Tentativa de gravar em um arquivo morto aberto para carregamento.
 
-- `CArchiveException::endOfFile`Chegou ao fim do arquivo durante a leitura de um objeto.
+- `CArchiveException::endOfFile`Fim do arquivo atingido ao ler um objeto.
 
-- `CArchiveException::writeOnly`Tentei ler de um arquivo aberto para armazenar.
+- `CArchiveException::writeOnly`Tentativa de ler de um arquivo morto aberto para armazenamento.
 
 - `CArchiveException::badIndex`Formato de arquivo inválido.
 
-- `CArchiveException::badClass`Tentou ler um objeto em um objeto do tipo errado.
+- `CArchiveException::badClass`Tentativa de ler um objeto em um objeto do tipo incorreto.
 
-- `CArchiveException::badSchema`Tentei ler um objeto com uma versão diferente da classe.
+- `CArchiveException::badSchema`Tentativa de ler um objeto com uma versão diferente da classe.
 
     > [!NOTE]
     >  Esses enumeradores de causa de `CArchiveException` são diferentes dos enumeradores de causa de `CFileException`.
 
     > [!NOTE]
-    > O `CArchiveException::generic` foi preterido. Use `genericException` em vez disso. Se **o genérico** for usado em um aplicativo e construído com /clr, haverá erros de sintaxe que não são fáceis de decifrar.
+    > O `CArchiveException::generic` foi preterido. Use `genericException` em vez disso. Se **genérico** for usado em um aplicativo e criado com/CLR, haverá erros de sintaxe que não são fáceis de decifrar.
 
-## <a name="carchiveexceptionm_strfilename"></a><a name="m_strfilename"></a>CArchiveException::m_strFileName
+## <a name="carchiveexceptionm_strfilename"></a><a name="m_strfilename"></a>CArchiveException:: m_strFileName
 
 Especifica o nome do arquivo para esta condição de exceção.
 
@@ -131,7 +131,7 @@ CString m_strFileName;
 ## <a name="see-also"></a>Confira também
 
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CArchive](../../mfc/reference/carchive-class.md)<br/>
 [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)<br/>
 [Processamento de exceção](../../mfc/reference/exception-processing.md)

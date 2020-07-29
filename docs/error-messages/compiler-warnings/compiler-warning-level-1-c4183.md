@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4183
 ms.assetid: dc48312c-4b34-44dd-80ff-eb5f11d5ca47
-ms.openlocfilehash: 4c2c7ce23cfaea5ebf31e78d84b7ff7fbdbf4c85
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cff62c18442cd6d55a9444bb86944b691145b9fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175929"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231917"
 ---
 # <a name="compiler-warning-level-1-c4183"></a>Aviso do compilador (nível 1) C4183
 
 ' identifier ': tipo de retorno ausente; considerado como uma função membro retornando ' int '
 
-A definição embutida de uma função de membro em uma classe ou estrutura não tem um tipo de retorno. Presume-se que essa função de membro tenha um tipo de retorno padrão de `int`.
+A definição embutida de uma função de membro em uma classe ou estrutura não tem um tipo de retorno. Presume-se que essa função de membro tenha um tipo de retorno padrão **`int`** .
 
 O exemplo a seguir gera C4183:
 

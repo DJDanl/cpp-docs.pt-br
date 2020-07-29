@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-ms.openlocfilehash: 28c162f6a868c8d6640ba17af875d84fef78c79a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 49fef050393f7196fe26aa172ac02792ae5c717e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458868"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212222"
 ---
-# <a name="isvoid-class"></a>Classe is_void
+# <a name="is_void-class"></a>Classe is_void
 
 Testa se o tipo é nulo.
 
@@ -25,14 +25,14 @@ template <class T>
 struct is_void;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo se manterá true se o tipo *T* for **void** ou uma forma qualificada por CV de **void**, caso contrário, ela terá false.
+Uma instância do predicado de tipo se manterá true se o tipo *T* for **`void`** ou uma forma qualificada por CV de **`void`** , caso contrário, será false.
 
 ## <a name="example"></a>Exemplo
 
@@ -68,10 +68,10 @@ is_void<void> == true
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813603"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231566"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Walkthrough: criar um aplicativo de área de trabalho do Windows tradicional (C++)
 
@@ -141,9 +141,9 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
    Para obter informações sobre os parâmetros e o valor de retorno dessa função, consulte [ponto de entrada WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Quais são as palavras adicionais, como `CALLBACK` , ou ou `HINSTANCE` `_In_` ? A API tradicional do Windows usa TYPEDEFs e macros de pré-processador extensivamente para abstrair alguns dos detalhes dos tipos e do código específico da plataforma, como convenções de chamada, declarações de **__declspec** e pragmas do compilador. No Visual Studio, você pode usar o recurso de [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) do IntelliSense para ver o que esses TYPEDEFs e macros definem. Passe o mouse sobre a palavra de interesse ou selecione-o e pressione **Ctrl** + **K**, **Ctrl** + **I** para uma pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Os parâmetros e os tipos de retorno geralmente usam *anotações sal* para ajudá-lo a detectar erros de programação. Para obter mais informações, consulte [usando anotações de sal para reduzir os defeitos de código C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Quais são as palavras adicionais, como `CALLBACK` , ou ou `HINSTANCE` `_In_` ? A API tradicional do Windows usa TYPEDEFs e macros de pré-processador extensivamente para abstrair alguns dos detalhes dos tipos e do código específico da plataforma, como convenções de chamada, **`__declspec`** declarações e pragmas do compilador. No Visual Studio, você pode usar o recurso de [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) do IntelliSense para ver o que esses TYPEDEFs e macros definem. Passe o mouse sobre a palavra de interesse ou selecione-o e pressione **Ctrl** + **K**, **Ctrl** + **I** para uma pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Os parâmetros e os tipos de retorno geralmente usam *anotações sal* para ajudá-lo a detectar erros de programação. Para obter mais informações, consulte [usando anotações de sal para reduzir os defeitos de código C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Os programas da área de trabalho do Windows exigem o &lt; Windows. h>. &lt;TCHAR. h> define a `TCHAR` macro, que é resolvida por fim para **wchar_t** se o símbolo Unicode for definido em seu projeto, caso contrário, ele será resolvido para **Char**.  Se você sempre criar com UNICODE habilitado, não precisará de TCHAR e poderá usar apenas **wchar_t** diretamente.
+1. Os programas da área de trabalho do Windows exigem o &lt; Windows. h>. &lt;TCHAR. h> define a `TCHAR` macro, que é resolvida por fim para **`wchar_t`** se o símbolo Unicode estiver definido em seu projeto, caso contrário, ele será resolvido para **`char`** .  Se você sempre criar com UNICODE habilitado, não precisará de TCHAR e poderá simplesmente usar **`wchar_t`** diretamente.
 
    ```cpp
    #include <windows.h>
@@ -590,6 +590,6 @@ Como prometido, aqui está o código completo do aplicativo de trabalho.
 
 Parabéns! Você concluiu este passo a passo e criou um aplicativo de área de trabalho tradicional do Windows.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Aplicativos da área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md)
