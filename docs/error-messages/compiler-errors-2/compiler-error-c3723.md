@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
-ms.openlocfilehash: c45eee5ead680f63b85dcdd94e4ca099dabfeefc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2948b9af50179082e61a222484053bcf3858f454
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752984"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220165"
 ---
 # <a name="compiler-error-c3723"></a>Erro do compilador C3723
 
-' function ': não foi possível resolver o evento
+> ' function ': não foi possível resolver o evento
 
-`function` não pôde resolver o evento a ser chamado.
+`function`Não foi possível resolver o evento a ser chamado.
 
 O exemplo a seguir gera C3723:
 
@@ -42,7 +42,7 @@ int main() {
 }
 ```
 
-`__hook` e `__unhook` não são compatíveis com a programação/CLR.  Em vez disso, use os operadores + = e-=.
+**`__hook`** e **`__unhook`** não são compatíveis com **`/clr`** programação.  Em vez disso, use os operadores + = e-=.
 
 O exemplo a seguir gera C3723:
 

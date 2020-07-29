@@ -1,116 +1,116 @@
 ---
-title: switchInstrução (C)
+title: :::no-loc(switch):::Instrução (C)
 ms.date: 04/25/2020
 f1_keywords:
-- switch
+- ':::no-loc(switch):::'
 helpviewer_keywords:
-- switch keyword [C]
+- ':::no-loc(switch)::: keyword [C]'
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
 no-loc:
-- switch
-- case
-- default
-- break
-ms.openlocfilehash: eb18b6244318b595e67cc45f99dfcde314866f55
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+- ':::no-loc(switch):::'
+- ':::no-loc(case):::'
+- ':::no-loc(default):::'
+- ':::no-loc(break):::'
+ms.openlocfilehash: bdd6885f67728a3c81e395f05c33191156896ad9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825672"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220776"
 ---
-# <a name="switch-statement-c"></a>`switch`Instrução (C)
+# <a name="no-locswitch-statement-c"></a>`:::no-loc(switch):::`Instrução (C)
 
-As __`switch`__ instruções __`case`__ e ajudam a controlar operações condicionais e de ramificação complexas. A __`switch`__ instrução transfere o controle para uma instrução dentro de seu corpo.
+As **`:::no-loc(switch):::`** **`:::no-loc(case):::`** instruções e ajudam a controlar operações condicionais e de ramificação complexas. A **`:::no-loc(switch):::`** instrução transfere o controle para uma instrução dentro de seu corpo.
 
 ## <a name="syntax"></a>Sintaxe
 
 > *`selection-statement`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
+> &nbsp;&nbsp;&nbsp;&nbsp; **`:::no-loc(switch)::: (`**&nbsp;*`expression`* &nbsp;**`)`**&nbsp;*`statement`*
 
 > *`labeled-statement`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
-> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
+> &nbsp;&nbsp;&nbsp;&nbsp; **`:::no-loc(case):::`**&nbsp;*`constant-expression`*&nbsp;**`:`**&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; **`:::no-loc(default):::`**&nbsp;**`:`**&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Comentários
 
-Uma __`switch`__ instrução faz com que o controle seja *`labeled-statement`* transferido para um em seu corpo de instrução, dependendo do *`expression`* valor de.
+Uma **`:::no-loc(switch):::`** instrução faz com que o controle seja transferido para um *`labeled-statement`* em seu corpo de instrução, dependendo do valor de *`expression`* .
 
 Os valores de *`expression`* e cada *`constant-expression`* devem ter um tipo integral. Um *`constant-expression`* deve ter um valor integral constante não ambíguo no tempo de compilação.
 
-O controle passa para **`case`** a instrução *`constant-expression`* cujo valor corresponde ao valor *`expression`* de. A __`switch`__ instrução pode incluir qualquer número de __`case`__ instâncias. No entanto, *`constant-expression`* dois valores dentro da __`switch`__ mesma instrução podem ter o mesmo valor. A execução do __`switch`__ corpo da instrução começa na primeira instrução no ou após a correspondência *`labeled-statement`*. A execução continua até o fim do corpo ou até que uma __`break`__ instrução transfira o controle para fora do corpo.
+O controle passa para a **`:::no-loc(case):::`** instrução cujo *`constant-expression`* valor corresponde ao valor de *`expression`* . A **`:::no-loc(switch):::`** instrução pode incluir qualquer número de **`:::no-loc(case):::`** instâncias. No entanto, dois *`constant-expression`* valores dentro da mesma **`:::no-loc(switch):::`** instrução podem ter o mesmo valor. A execução do **`:::no-loc(switch):::`** corpo da instrução começa na primeira instrução no ou após a correspondência *`labeled-statement`* . A execução continua até o fim do corpo ou até que uma **`:::no-loc(break):::`** instrução transfira o controle para fora do corpo.
 
-O __`switch`__ uso da instrução geralmente é semelhante a este:
+O uso da **`:::no-loc(switch):::`** instrução geralmente é semelhante a este:
 
 ```C
-switch ( expression )
+:::no-loc(switch)::: ( expression )
 {
     // declarations
     // . . .
-    case constant_expression:
+    :::no-loc(case)::: constant_expression:
         // statements executed if the expression equals the
         // value of this constant_expression
-        break;
-    default:
+        :::no-loc(break):::;
+    :::no-loc(default)::::
         // statements executed if expression does not equal
-        // any case constant_expression
+        // any :::no-loc(case)::: constant_expression
 }
 ```
 
-Você pode usar a __`break`__ instrução para finalizar o processamento de uma instrução rotulada em __`switch`__ particular dentro da instrução. Ele é ramificado para o final __`switch`__ da instrução. Sem __`break`__, o programa continua para a próxima instrução rotulada, executando as instruções até que __`break`__ um ou o final da instrução seja atingido. Essa continuação pode ser desejável em algumas situações.
+Você pode usar a **`:::no-loc(break):::`** instrução para finalizar o processamento de uma instrução rotulada em particular dentro da **`:::no-loc(switch):::`** instrução. Ele é ramificado para o final da **`:::no-loc(switch):::`** instrução. Sem **`:::no-loc(break):::`** , o programa continua para a próxima instrução rotulada, executando as instruções até que um **`:::no-loc(break):::`** ou o final da instrução seja atingido. Essa continuação pode ser desejável em algumas situações.
 
-A __`default`__ instrução será executada se nenhum __`case`__ *`constant-expression`* valor for igual ao valor de *`expression`*. Se não houver nenhuma __`default`__ instrução e nenhuma __`case`__ correspondência for encontrada, nenhuma das instruções no __`switch`__ corpo será executada. Pode haver no máximo uma __`default`__ instrução. A __`default`__ instrução não precisa aparecer no final. Ele pode aparecer em qualquer lugar no corpo da __`switch`__ instrução. Um __`case`__ rótulo __`default`__ ou só pode aparecer dentro de __`switch`__ uma instrução.
+A **`:::no-loc(default):::`** instrução será executada se nenhum **`:::no-loc(case):::`** *`constant-expression`* valor for igual ao valor de *`expression`* . Se não houver nenhuma **`:::no-loc(default):::`** instrução e nenhuma **`:::no-loc(case):::`** correspondência for encontrada, nenhuma das instruções no **`:::no-loc(switch):::`** corpo será executada. Pode haver no máximo uma **`:::no-loc(default):::`** instrução. A **`:::no-loc(default):::`** instrução não precisa aparecer no final. Ele pode aparecer em qualquer lugar no corpo da **`:::no-loc(switch):::`** instrução. Um **`:::no-loc(case):::`** **`:::no-loc(default):::`** rótulo ou só pode aparecer dentro de uma **`:::no-loc(switch):::`** instrução.
 
-O tipo de __`switch`__ *`expression`* e __`case`__ *`constant-expression`* deve ser integral. O valor de cada __`case`__ *`constant-expression`* deve ser exclusivo dentro do corpo da instrução.
+O tipo de **`:::no-loc(switch):::`** *`expression`* e **`:::no-loc(case):::`** *`constant-expression`* deve ser integral. O valor de cada **`:::no-loc(case):::`** *`constant-expression`* deve ser exclusivo dentro do corpo da instrução.
 
-Os __`case`__ rótulos __`default`__ e do corpo __`switch`__ da instrução são significativos apenas no teste inicial que determina onde a execução começa no corpo da instrução. __`switch`__ as instruções podem ser aninhadas. Todas as variáveis estáticas são inicializadas antes __`switch`__ de serem executadas em qualquer instrução.
+Os **`:::no-loc(case):::`** **`:::no-loc(default):::`** rótulos e do **`:::no-loc(switch):::`** corpo da instrução são significativos apenas no teste inicial que determina onde a execução começa no corpo da instrução. **`:::no-loc(switch):::`** as instruções podem ser aninhadas. Todas as variáveis estáticas são inicializadas antes de serem executadas em qualquer **`:::no-loc(switch):::`** instrução.
 
 > [!NOTE]
-> As declarações podem aparecer no início da instrução composta que formam o __`switch`__ corpo, mas as inicializações incluídas nas declarações não são executadas. A __`switch`__ instrução transfere o controle diretamente para uma instrução executável dentro do corpo, ignorando as linhas que contêm inicializações.
+> As declarações podem aparecer no início da instrução composta que formam o **`:::no-loc(switch):::`** corpo, mas as inicializações incluídas nas declarações não são executadas. A **`:::no-loc(switch):::`** instrução transfere o controle diretamente para uma instrução executável dentro do corpo, ignorando as linhas que contêm inicializações.
 
-Os exemplos a seguir __`switch`__ ilustram instruções:
+Os exemplos a seguir ilustram **`:::no-loc(switch):::`** instruções:
 
 ```C
-switch( c )
+:::no-loc(switch):::( c )
 {
-    case 'A':
+    :::no-loc(case)::: 'A':
         capital_a++;
-    case 'a':
+    :::no-loc(case)::: 'a':
         letter_a++;
-    default :
+    :::no-loc(default)::: :
         total++;
 }
 ```
 
-Todas as três instruções do __`switch`__ corpo neste exemplo `c` serão executadas se for igual a `'A'`, pois nenhuma __`break`__ instrução aparecerá antes do seguinte __`case`__. O controle de execução é transferido para a primeira instrução (`capital_a++;`) e continua em ordem pelo restante do corpo. Se `c` é igual a `'a'`, `letter_a` e `total` são incrementados. Só `total` é incrementado quando `c` não é `'A'` igual `'a'`a ou.
+Todas as três instruções do **`:::no-loc(switch):::`** corpo neste exemplo serão executadas se `c` for igual a `'A'` , pois nenhuma **`:::no-loc(break):::`** instrução aparecerá antes do seguinte **`:::no-loc(case):::`** . O controle de execução é transferido para a primeira instrução (`capital_a++;`) e continua em ordem pelo restante do corpo. Se `c` é igual a `'a'`, `letter_a` e `total` são incrementados. Só `total` é incrementado quando `c` não é igual a `'A'` ou `'a'` .
 
 ```C
-switch( i )
+:::no-loc(switch):::( i )
 {
-    case -1:
+    :::no-loc(case)::: -1:
         n++;
-        break;
-    case 0 :
+        :::no-loc(break):::;
+    :::no-loc(case)::: 0 :
         z++;
-        break;
-    case 1 :
+        :::no-loc(break):::;
+    :::no-loc(case)::: 1 :
         p++;
-        break;
+        :::no-loc(break):::;
 }
 ```
 
-Neste exemplo, uma __`break`__ instrução segue cada instrução do __`switch`__ corpo. A __`break`__ instrução força uma saída do corpo da instrução após a execução de uma instrução. Se `i` for igual a -1, apenas `n` será incrementado. A __`break`__ instrução `n++;` a seguir faz com que o controle de execução passe do corpo da instrução, ignorando as instruções restantes. Da mesma forma, se `i` é igual a 0, somente `z` será incrementado; se `i` é igual a 1, somente `p` será incrementado. A instrução __`break`__ final não é estritamente necessária, já que o controle passa do corpo no final da instrução composta. Ele está incluído para fins de consistência.
+Neste exemplo, uma **`:::no-loc(break):::`** instrução segue cada instrução do **`:::no-loc(switch):::`** corpo. A **`:::no-loc(break):::`** instrução força uma saída do corpo da instrução após a execução de uma instrução. Se `i` for igual a -1, apenas `n` será incrementado. A **`:::no-loc(break):::`** instrução a seguir `n++;` faz com que o controle de execução passe do corpo da instrução, ignorando as instruções restantes. Da mesma forma, se `i` é igual a 0, somente `z` será incrementado; se `i` é igual a 1, somente `p` será incrementado. A **`:::no-loc(break):::`** instrução final não é estritamente necessária, já que o controle passa do corpo no final da instrução composta. Ele está incluído para fins de consistência.
 
-Uma única instrução pode transportar vários __`case`__ rótulos, como mostra o exemplo a seguir:
+Uma única instrução pode transportar vários **`:::no-loc(case):::`** Rótulos, como mostra o exemplo a seguir:
 
 ```C
-switch( c )
+:::no-loc(switch):::( c )
 {
-    case 'a' :
-    case 'b' :
-    case 'c' :
-    case 'd' :
-    case 'e' :
-    case 'f' :  convert_hex(c);
+    :::no-loc(case)::: 'a' :
+    :::no-loc(case)::: 'b' :
+    :::no-loc(case)::: 'c' :
+    :::no-loc(case)::: 'd' :
+    :::no-loc(case)::: 'e' :
+    :::no-loc(case)::: 'f' :  convert_hex(c);
 }
 ```
 
@@ -118,10 +118,10 @@ Neste exemplo, se *constant-expression* for igual a qualquer letra entre `'a'` e
 
 ### <a name="microsoft-specific"></a>Específico da Microsoft
 
-O Microsoft C não limita o número __`case`__ de valores em __`switch`__ uma instrução. O número é limitado somente pela memória disponível. ANSI C requer pelo menos 257 __`case`__ rótulos serem permitidos em uma __`switch`__ instrução.
+O Microsoft C não limita o número de **`:::no-loc(case):::`** valores em uma **`:::no-loc(switch):::`** instrução. O número é limitado somente pela memória disponível. ANSI C requer pelo menos 257 **`:::no-loc(case):::`** Rótulos serem permitidos em uma **`:::no-loc(switch):::`** instrução.
 
-O default para Microsoft C é que as extensões da Microsoft estão habilitadas. Use a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) para desabilitar essas extensões.
+O :::no-loc(default)::: para Microsoft C é que as extensões da Microsoft estão habilitadas. Use a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) para desabilitar essas extensões.
 
 ## <a name="see-also"></a>Confira também
 
-[switchInstrução (C++)](../cpp/switch-statement-cpp.md)
+[:::no-loc(switch):::Instrução (C++)](../cpp/:::no-loc(switch):::-statement-cpp.md)

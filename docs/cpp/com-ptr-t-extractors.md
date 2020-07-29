@@ -21,12 +21,12 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: e7b06bb11ab34a1a1a7f6fab98d177821f60b20c
-ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
+ms.openlocfilehash: fb5441d87dc35ec6fbb495bc38d9041c1f2d2f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86127863"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220568"
 ---
 # <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`Extratores
 
@@ -57,7 +57,7 @@ operator bool( ) const throw( );
 
 - **`operator&`** Libera qualquer ponteiro de interface encapsulada, substituindo-o por NULL e retorna o endereço do ponteiro encapsulado. Esse operador permite passar o ponteiro inteligente por endereço para uma função que tem um parâmetro *out* por meio do qual ele retorna um ponteiro de interface.
 
-- **`operator bool`** Permite que um objeto de ponteiro inteligente seja usado em uma expressão condicional. Esse operador retornará TRUE se o ponteiro não for nulo.
+- **`operator bool`** Permite que um objeto de ponteiro inteligente seja usado em uma expressão condicional. Esse operador retorna **`true`** se o ponteiro não for nulo.
 
   > [!NOTE]
   > Como o **`operator bool`** não é declarado como **`explicit`** , `_com_ptr_t` é implicitamente conversível para **`bool`** , que é conversível para qualquer tipo escalar. Isso pode ter consequências inesperadas em seu código. Habilite o [aviso do compilador (nível 4) C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) para impedir o uso não intencional dessa conversão.

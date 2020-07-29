@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3824
 ms.assetid: b6c6adf1-0a29-401c-a06e-616fd50d4c37
-ms.openlocfilehash: 47363da66416c326755cad12fe4cfd448e3154e2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 78081de44a834b16d34d1f88a5dc996efb1f784c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741723"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220139"
 ---
 # <a name="compiler-error-c3824"></a>Erro do compilador C3824
 
 ' member ': este tipo não pode aparecer neste contexto (parâmetro de função, tipo de retorno ou um membro estático)
 
-Ponteiros de fixação não podem ser parâmetros de função, tipos de retorno ou `static`declarados.
+Ponteiros de fixação não podem ser parâmetros de função, tipos de retorno ou declarados **`static`** .
 
 ## <a name="example"></a>Exemplo
 

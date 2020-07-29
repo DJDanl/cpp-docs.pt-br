@@ -1,6 +1,6 @@
 ---
 title: Compilação de um programa em CLI/C++ que se destina ao CLR
-description: Use o Microsoft C++ para criar programas e bibliotecas que possam conectar código C++ nativo e programas .NET.
+description: Use o Microsoft C++ para criar programas e bibliotecas que podem conectar código C++ nativo e programas .NET.
 ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 0d661d9e77211a0e49f8695ad713b607377a236a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63996af56f03890c9a78e95743367d47416d5d48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371806"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214822"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Passo a passo: Compile um Programa C++/CLI que tem como alvo a CLR no Visual Studio
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Walkthrough: compilar um programa C++/CLI que tem como alvo o CLR no Visual Studio
 
-Usando C++/CLI, você pode criar programas C++ que usam classes .NET, bem como tipos C++ nativos. C++/CLI destina-se a ser usado em aplicativos de console e em DLLs que envolvem código C++ nativo e o tornam acessível a partir de programas .NET. Para criar uma interface de usuário do Windows baseada em .NET, use C# ou Visual Basic.
+Usando C++/CLI, você pode criar programas C++ que usam classes .NET, bem como tipos C++ nativos. O C++/CLI destina-se ao uso em aplicativos de console e em DLLs que encapsulam código C++ nativo e os tornam acessíveis a partir de programas .NET. Para criar uma interface do usuário do Windows baseada em .NET, use C# ou Visual Basic.
 
-Para este procedimento, você pode digitar seu próprio programa C++ ou usar um dos programas de amostra. O programa de exemplo que usamos neste procedimento cria um arquivo de texto chamado textfile.txt e salva-o no diretório do projeto.
+Para este procedimento, você pode digitar seu próprio programa C++ ou usar um dos programas de exemplo. O programa de exemplo que usamos neste procedimento cria um arquivo de texto chamado textfile.txt e salva-o no diretório do projeto.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma compreensão dos fundamentos da linguagem C++.
-- No Visual Studio 2017 e posterior, o suporte a C++/CLI é um componente opcional. Para instalá-lo, abra o **Visual Studio Installer** no menu Iniciar do Windows. Certifique-se de que o desenvolvimento da área de trabalho com azulejo **C++** seja verificado e, na seção **Componentes Opcionais,** verifique também o **suporte a C++/CLI**.
+- Uma compreensão dos conceitos básicos da linguagem C++.
+- No Visual Studio 2017 e posterior, o suporte a C++/CLI é um componente opcional. Para instalá-lo, abra o **instalador do Visual Studio** no menu Iniciar do Windows. Verifique se o bloco **desenvolvimento de área de trabalho com C++** está marcado e, na seção componentes **opcionais** , verifique também **suporte a C++/CLI**.
 
 ## <a name="create-a-new-project"></a>Criar um novo projeto
 
-As etapas a seguir variam dependendo da versão do Visual Studio que você está usando. Para ver a documentação da sua versão preferida do Visual Studio, use o controle do seletor **de versão.** É encontrado no topo da tabela de conteúdo nesta página.
+As etapas a seguir variam dependendo da versão do Visual Studio que você está usando. Para ver a documentação da sua versão preferida do Visual Studio, use o controle seletor de **versão** . Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Para criar um projeto C++/CLI no Visual Studio 2019
 
-1. No **Solution Explorer,** clique com o botão direito do mouse na parte superior para abrir a caixa de diálogo **Criar um novo projeto.**
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse na parte superior para abrir a caixa de diálogo **criar um novo projeto** .
 
-1. Na parte superior da caixa de diálogo, digite **CLR** na caixa de pesquisa e escolha **Projeto Vazio CLR** na lista de resultados.
+1. Na parte superior do diálogo, digite **CLR** na caixa de pesquisa e escolha projeto do **CLR vazio** na lista de resultados.
 
 1. Escolha o botão **Criar** para criar o projeto.
 
@@ -76,21 +76,21 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 1. Adicione um novo arquivo de origem ao projeto:
 
-   - Clique com o botão direito do mouse na pasta **Arquivos de origem** no Solution **Explorer,** aponte para **Adicionar**e clique em **Novo Item**.
+   - Clique com o botão direito do mouse na pasta **arquivos de origem** em **Gerenciador de soluções**, aponte para **Adicionar**e clique em **novo item**.
 
    - Clique em **Arquivo C++ (.cpp)**, digite um nome de arquivo e, em seguida, clique em **Adicionar**.
 
-   O arquivo **.cpp** aparece na pasta **Arquivos-origem** no **Solution Explorer** e uma janela de guia aparece onde você digita o código que deseja nesse arquivo.
+   O arquivo **. cpp** aparece na pasta **arquivos de origem** em **Gerenciador de soluções** e uma janela com guias aparece onde você digita o código desejado nesse arquivo.
 
 1. Clique na guia recém-criada no Visual Studio e digite um programa válido do Visual C++ ou copie e cole um dos programas de exemplo.
 
    Por exemplo, use o programa de exemplo [Como escrever um arquivo de texto (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) (no nó **Manipulação de Arquivos e E/S** do Guia de Programação).
 
-   Se você usar o programa de exemplo, observe que você usará a palavra-chave `gcnew` em vez de `new` durante a criação de um objeto .NET e que `gcnew` retorna um identificador (`^`) em vez de um ponteiro (`*`):
+   Se você usar o programa de exemplo, observe que você usa a **`gcnew`** palavra-chave em vez de **`new`** ao criar um objeto .net e que **`gcnew`** retorna um Handle ( `^` ) em vez de um ponteiro ( `*` ):
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Para obter mais informações sobre a sintaxe C++/CLI, consulte [Extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
+   Para obter mais informações sobre a sintaxe C++/CLI, consulte [extensões de componente para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. No menu **Compilar**, clique em **Compilar Solução**.
 
@@ -109,5 +109,5 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 ## <a name="see-also"></a>Confira também
 
-[Referência de linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Sistemas de Compilação e Projetos](../build/projects-and-build-systems-cpp.md)<br/>
+[Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
+[Sistemas de build e projetos](../build/projects-and-build-systems-cpp.md)<br/>

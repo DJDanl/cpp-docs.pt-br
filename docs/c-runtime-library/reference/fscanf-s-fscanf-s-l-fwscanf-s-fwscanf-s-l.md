@@ -43,12 +43,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956557"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220685"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -81,9 +81,9 @@ int _fwscanf_s_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *format*<br/>
@@ -95,7 +95,7 @@ Argumentos opcionais.
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. Se ocorrer um erro ou se o final do fluxo de arquivos for atingido antes da primeira conversão, o valor de retorno será **EOF** para **fscanf_s** e **fwscanf_s**.
 
@@ -103,14 +103,14 @@ Essas funções validam seus parâmetros. Se o *fluxo* for um ponteiro de arquiv
 
 ## <a name="remarks"></a>Comentários
 
-A função **fscanf_s** lê dados da posição atual do *fluxo* para os locais que são fornecidos pelo *argumento* (se houver). Cada *argumento* deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo no *formato*. o *formato* controla a interpretação dos campos de entrada e tem a mesma forma e função que o argumento de *formato* para **scanf_s**; consulte [Formatar campos de especificação: funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) para obter uma descrição do *formato*.  **fwscanf_s** é uma versão de caractere largo do **fscanf_s**; o argumento format para **fwscanf_s** é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, o **fscanf_s** não dá suporte à entrada de um fluxo Unicode.
+A função **fscanf_s** lê dados da posição atual do *fluxo* para os locais que são fornecidos pelo *argumento* (se houver). Cada *argumento* deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo no *formato*. o *formato* controla a interpretação dos campos de entrada e tem a mesma forma e função que o argumento de *formato* para **scanf_s**; consulte [Formatar campos de especificação: funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) para obter uma descrição do *formato*.  **fwscanf_s** é uma versão de caractere largo do **fscanf_s**; o argumento de formato para **fwscanf_s** é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. no momento, o **fscanf_s** não dá suporte à entrada de um fluxo Unicode.
 
-A principal diferença entre as funções mais seguras (que têm o sufixo **_S** ) e as outras versões é que as funções mais seguras exigem o tamanho em caracteres de cada **c**, **c**, **s**, **s**e **[** Type Field a ser passado como um argumento imediatamente após a variável. Para obter mais informações, consulte [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
+A principal diferença entre as funções mais seguras (que têm o sufixo **_S** ) e outras versões é que as funções mais seguras exigem o tamanho em caracteres de cada **c**, **c**, **s**, **s**e **[** Type Field a ser passado como um argumento imediatamente após a variável. Para obter mais informações, consulte [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo não **assinado**, não **size_t**.
+> O parâmetro Size é do tipo **`unsigned`** , não **size_t**.
 
-As versões dessas funções que têm o sufixo **_L** são idênticas, exceto que usam o parâmetro Locale que é passado em vez da localidade do thread atual.
+As versões dessas funções que têm o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale que é passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -126,7 +126,7 @@ As versões dessas funções que têm o sufixo **_L** são idênticas, exceto qu
 |**fscanf_s**, **_fscanf_s_l**|\<stdio.h>|
 |**fwscanf_s**, **_fwscanf_s_l**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -183,7 +183,7 @@ a-string
 x
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)<br/>

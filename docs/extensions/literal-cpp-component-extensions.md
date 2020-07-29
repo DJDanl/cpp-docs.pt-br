@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172133"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214250"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI e C++/CX)
 
@@ -25,7 +25,7 @@ Uma variável (membro de dados) marcada como **literal** em uma compilação **/
 
 (Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 ### <a name="remarks"></a>Comentários
 
@@ -51,7 +51,7 @@ Confira mais informações em [Static](../cpp/storage-classes-cpp.md) e [const](
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra que uma variável **literal** implica **static**.
+Este exemplo mostra que uma variável **literal** implica **`static`** .
 
 ```cpp
 // mcppv2_literal.cpp
@@ -127,4 +127,4 @@ Opção do compilador: `/clr`
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2992
 ms.assetid: 01b16447-43fe-4e91-9a5a-af884a166a31
-ms.openlocfilehash: 48d4902d34a806eeb26ef376e3b7a7b6ce843dbc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a51e87980eba90eb4e543a3d07a44c1b170334e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751489"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214549"
 ---
 # <a name="compiler-error-c2992"></a>Erro do compilador C2992
 
 ' class ': lista de parâmetros de tipo inválida ou ausente
 
-A classe é precedida por um `template` ou palavra-chave **genérica** com parâmetros ausentes ou inválidos.
+A classe é precedida por uma **`template`** palavra-chave or **genérica** com parâmetros ausentes ou inválidos.
 
 ## <a name="example"></a>Exemplo
 

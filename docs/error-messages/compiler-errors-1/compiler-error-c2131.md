@@ -1,26 +1,26 @@
 ---
-title: C2131 de erro do compilador
+title: Erro do compilador C2131
 ms.date: 02/28/2019
 f1_keywords:
 - C2131
 helpviewer_keywords:
 - C2131
-ms.openlocfilehash: 19bdf73efa82e624382446c94642ceddac00bf2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e5dc328375f720ad39ce57a3da500e0bedcb468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397582"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220412"
 ---
-# <a name="compiler-error-c2131"></a>C2131 de erro do compilador
+# <a name="compiler-error-c2131"></a>Erro do compilador C2131
 
-> expressão não foi avaliada como uma constante
+> a expressão não foi avaliada como uma constante
 
-Uma expressão é declarado como **const** ou **constexpr** não foi avaliada como uma constante em tempo de compilação. O compilador deve ser capaz de determinar o valor da expressão no ponto em que ele é usado.
+Expressão declarada como **`const`** ou **`constexpr`** não avaliada como uma constante no tempo de compilação. O compilador deve ser capaz de determinar o valor da expressão no ponto em que é usado.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra uma maneira de fazer com que o erro C2131 e como corrigi-lo.
+Este exemplo mostra uma maneira de causar o erro C2131 e como corrigi-lo.
 
 ```cpp
 // c2131.cpp
@@ -42,7 +42,7 @@ c2131.cpp(7): note: failure was caused by non-constant arguments or reference to
 c2131.cpp(7): note: see usage of 'array_size'
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [const](../../cpp/const-cpp.md)<br/>
 [constexpr](../../cpp/constexpr-cpp.md)<br/>

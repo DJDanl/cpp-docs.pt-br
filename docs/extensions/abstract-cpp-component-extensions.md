@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516161"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214289"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract (C++/CLI e C++/CX)
 
@@ -23,17 +23,17 @@ A palavra-chave **abstract** declara que:
 
 - Uma função de membro de tipo pode ser definida apenas em um tipo derivado.
 
-## <a name="all-platforms"></a>Todas as Plataformas
+## <a name="all-platforms"></a>Todas as plataformas
 
 ### <a name="syntax"></a>Sintaxe
 
 *class-declaration* *class-identifier* **abstract {}**
 
-**virtual** *return-type* *member-function-identifier* **() abstract ;**
+**`virtual`***tipo de retorno* de *membro-função-identificador* **() abstrato;**
 
 ### <a name="remarks"></a>Comentários
 
-A primeira sintaxe de exemplo declara que uma classe é abstrata. O componente *class-declaration* pode ser uma declaração C++ nativa (**class** ou **struct**), ou uma declaração de extensão C++ (**ref class** ou **ref struct**) se a opção do compilador `/ZW` ou `/clr` está especificada.
+A primeira sintaxe de exemplo declara que uma classe é abstrata. O componente *de declaração de classe* pode ser uma declaração c++ nativa (** `class` * * * * ou **`struct`** ), ou uma declaração de extensão de c++ (** ref class * * ou **ref struct**) se a `/ZW` opção de compilador ou `/clr` for especificada.
 
 A segunda sintaxe de exemplo declara que uma função de membro virtual é abstrata. Declarar uma função como abstrata é o mesmo que declarar que é uma função virtual pura. Declarar uma função de membro como abstrata também faz com que a classe delimitadora seja declarada como abstrata.
 
@@ -41,9 +41,9 @@ A palavra-chave **abstract** é compatível em código nativo e específico da p
 
 É possível detectar se um tipo é abstrato com o tipo `__is_abstract(type)` no tempo de compilação. Saiba mais em [Suporte para compilador de traços de tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-A palavra-chave **abstract** é um especificador de substituição contextual. Saiba mais sobre palavras-chave contextuais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md). Saiba mais sobre especificadores de substituição em [Como declarar especificadores de substituição em compilações nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+A palavra-chave **abstract** é um especificador de substituição contextual. Saiba mais sobre palavras-chave contextuais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md). Para obter mais informações sobre especificadores de substituição, consulte [como: declarar especificadores de substituição em compilações nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 Saiba mais em [Classes e structs ref](../cppcx/ref-classes-and-structs-c-cx.md).
 
@@ -100,6 +100,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

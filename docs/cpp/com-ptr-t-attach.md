@@ -7,12 +7,12 @@ helpviewer_keywords:
 - COM interfaces, attach pointer
 - Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
-ms.openlocfilehash: 057d784bb495aefaeec1b86697a7421f6464cbd7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: cb5950e311711dd489b3cab223714b1840773f60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745074"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220581"
 ---
 # <a name="_com_ptr_tattach"></a>_com_ptr_t::Attach
 
@@ -27,21 +27,21 @@ void Attach( Interface* pInterface ) throw( );
 void Attach( Interface* pInterface, bool fAddRef ) throw( );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *pInterface*<br/>
 Um ponteiro de interface bruto.
 
 *fAddRef*<br/>
-Se é VERDADE, `AddRef` então é chamado. Se for FALSO, `_com_ptr_t` o objeto se apropria do `AddRef`ponteiro de interface bruto sem chamar .
+Se for **`true`** , `AddRef` será chamado. Se for **`false`** , o `_com_ptr_t` objeto assumirá a propriedade do ponteiro de interface bruto sem chamar `AddRef` .
 
 ## <a name="remarks"></a>Comentários
 
-- **O attach***(pInterface)***)** `AddRef` não é chamado.     A propriedade da interface é transmitida a este objeto `_com_ptr_t`. `Release`é chamado para diminuir a contagem de referência para o ponteiro previamente encapsulado.
+- **Anexar (**  *pInterface*  **)** `AddRef` Não é chamado. A propriedade da interface é transmitida a este objeto `_com_ptr_t`. `Release`é chamado para diminuir a contagem de referência para o ponteiro encapsulado anteriormente.
 
-- **Anexar***(pInterface* **,***fAddRef)***)** Se *fAddRef* for `AddRef` TRUE, será chamada para incrementar a contagem de referência para o ponteiro de interface encapsulado.       Se *fAddRef* for `_com_ptr_t` FALSE, este objeto assumirá `AddRef`a propriedade do ponteiro de interface bruto sem chamar . `Release`é chamado para diminuir a contagem de referência para o ponteiro previamente encapsulado.
+- **Attach (**  *pInterface* **,**  *fAddRef*  **)** Se *fAddRef* for **`true`** , `AddRef` será chamado para incrementar a contagem de referência para o ponteiro de interface encapsulada. Se *fAddRef* for **`false`** , esse `_com_ptr_t` objeto assumirá a propriedade do ponteiro de interface bruto sem chamar `AddRef` . `Release`é chamado para diminuir a contagem de referência para o ponteiro encapsulado anteriormente.
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

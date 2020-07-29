@@ -21,16 +21,16 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333697"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220711"
 ---
 # <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered
 
-Determina a relação entre dois valores de ponto flutuantes de ordenação.
+Determina a relação de ordenação entre dois valores de ponto flutuante.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -104,36 +104,36 @@ inline bool isunordered(
 ) throw(); /* C++-only template function */
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*, *y*<br/>
-Os valores de ponto flutuantes a ser comparado.
+Os valores de ponto flutuante a serem comparados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Em todas as comparações, infinitos do sinal de mesmo comparam como iguais. Infinito negativo é menor do que qualquer valor finito ou infinito positivo. Infinito positivo é maior do que qualquer valor finito ou infinito negativo. Zeros são iguais, independentemente da entrada. NaNs não são menor, igual ou maior que qualquer valor, incluindo outra NaN.
+Em todas as comparações, os infinitos do mesmo sinal se comparam como iguais. Infinito negativo é menor que qualquer valor finito ou infinito positivo. Infinito positivo é maior que qualquer valor finito ou infinito negativo. Zeros são iguais, independentemente do sinal. NaNs não são menores que, iguais ou maiores que qualquer valor, incluindo outro NaN.
 
-Quando nenhum argumento for NaN, as macros de ordenação **isgreater**, **isgreaterequal**, **isless**, e **islessequal** de retorno diferente de zero valor se a relação especificada de ordenação entre *x* e *y* se aplica. Essas macros retornam 0 se um ou ambos os argumentos são NaNs ou se a relação de ordenação é false. Os formulários de função se comportam da mesma forma, mas retornam **verdadeira** ou **falso**.
+Quando nenhum argumento é NaN, **as macros**de ordenação **isgreaterequal**, **isless**e **islessequal** retornarão um valor diferente de zero se a relação de ordenação especificada entre *x* e *y* for verdadeira. Essas macros retornarão 0 se um ou ambos os argumentos forem NaNs ou se a relação de ordenação for falsa. Os formulários de função se comportam da mesma maneira, mas retornam **`true`** ou **`false`** .
 
-O **islessgreater** macro retorna um valor diferente de zero se *x* e *y* não são NaNs, e *x* é menor que ou maior que *y*. Ele retorna 0 se um ou ambos os argumentos são NaNs, ou se os valores forem iguais. O formulário de função se comporta da mesma forma, mas retorna **verdadeira** ou **falso**.
+A macro **islessgreater** retornará um valor diferente de zero se *x* e *y* não forem Nans e *x* for menor ou maior que *y*. Retornará 0 se um ou ambos os argumentos forem NaNs ou se os valores forem iguais. O formulário de função se comporta da mesma maneira, mas retorna **`true`** ou **`false`** .
 
-O **isunordered** macro retorna um valor diferente de zero se *x*, *y*, ou ambos são NaNs. Caso contrário, retorna 0. O formulário de função se comporta da mesma forma, mas retorna **verdadeira** ou **falso**.
+A macro **isunordered** retornará um valor diferente de zero se *x*, *y*ou ambos forem Nans. Caso contrário, retornará 0. O formulário de função se comporta da mesma maneira, mas retorna **`true`** ou **`false`** .
 
 ## <a name="remarks"></a>Comentários
 
-Essas operações de comparação são implementadas como macros quando compilado como C e como as funções de modelo embutidos quando compilada como C++.
+Essas operações de comparação são implementadas como macros quando compiladas como C e como funções de modelo embutidas quando compiladas como C++.
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**, **isgreaterequal**, **isless**,<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> ou \<cmath> |
+| **isexcelente**, **isgreaterequal**, **isless**,<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> ou \<cmath> |
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

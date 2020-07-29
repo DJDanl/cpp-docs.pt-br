@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299072"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220802"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Resumo de tempo de vida e visibilidade
 
@@ -20,13 +20,13 @@ A tabela a seguir é um resumo das características do tempo de vida e de visibi
 
 |Atributos:<br /><br /> Nível|Item|Storage-Class<br /><br /> Especificador|Resultado:<br /><br /> Tempo de vida|Visibilidade|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Escopo de arquivo|Definição de variável|**auto-estática**|Global|Restante do arquivo de origem no qual ocorre|
-||Declaração de variável|**extern**|Global|Restante do arquivo de origem no qual ocorre|
-||Protótipo ou definição de função|**auto-estática**|Global|Arquivo único de origem|
-||Protótipo da função|**extern**|Global|Restante do arquivo de origem|
-|Escopo de bloco|Declaração de variável|**extern**|Global|Bloquear|
-||Definição de variável|**auto-estática**|Global|Bloquear|
-||Definição de variável|**auto** ou **registrar**|Local|Bloquear|
+|Escopo de arquivo|Definição de variável|**`static`**|Global|Restante do arquivo de origem no qual ocorre|
+||Declaração de variável|**`extern`**|Global|Restante do arquivo de origem no qual ocorre|
+||Protótipo ou definição de função|**`static`**|Global|Arquivo único de origem|
+||Protótipo da função|**`extern`**|Global|Restante do arquivo de origem|
+|Escopo de bloco|Declaração de variável|**`extern`**|Global|Bloquear|
+||Definição de variável|**`static`**|Global|Bloquear|
+||Definição de variável|**`auto`** or**`register`**|Local|Bloquear|
 
 ## <a name="example"></a>Exemplo
 

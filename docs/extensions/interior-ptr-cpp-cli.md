@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: affec6dcd88290b24a92cd9035a131baee38bcf1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214263"
 ---
 # <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -24,7 +24,7 @@ Um *ponteiro interno* declara um ponteiro para dentro de um tipo de referência,
 
 (Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 (Não há comentários para esse recurso de linguagem que se apliquem somente ao Windows Runtime.)
 
@@ -45,7 +45,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="parameters"></a>parâmetros
 
 *cv_qualifier*<br/>
-Qualificadores **const** ou **volatile**.
+**`const`** ou **`volatile`** qualificadores.
 
 *tipo*<br/>
 O tipo de *inicializador*.
@@ -66,7 +66,7 @@ Um ponteiro interno só pode ser declarado na pilha.  Um ponteiro interno não p
 
 Como ponteiros internos existem somente na pilha, a opção de obter o endereço de um ponteiro interno produz um ponteiro não gerenciado.
 
-**interior_ptr** tem uma conversão implícita para **bool**, que permite seu uso em instruções condicionais.
+**interior_ptr** tem uma conversão implícita para **`bool`** , que permite seu uso em instruções condicionais.
 
 Confira em [pin_ptr](pin-ptr-cpp-cli.md) mais informações sobre como declarar um ponteiro interno que aponta para um objeto que não pode ser movido no heap obtido pelo coletor de lixo.
 
@@ -124,4 +124,4 @@ int main() {
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

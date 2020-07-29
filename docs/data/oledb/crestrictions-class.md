@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211296"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220438"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 
@@ -82,7 +82,7 @@ no Especifica um objeto de sessão existente usado para se conectar à fonte de 
 no Especifica as restrições no conjunto de linhas de esquema.
 
 *bBind*<br/>
-no Especifica se o mapa de coluna deve ser associado automaticamente. O padrão é **true**, o que faz com que o mapa de coluna seja vinculado automaticamente. Definir *bBind* como **false** impede a associação automática do mapa de coluna para que você possa associar manualmente. (A vinculação manual é de interesse particular para os usuários OLAP.)
+no Especifica se o mapa de coluna deve ser associado automaticamente. O padrão é **`true`** , que faz com que o mapa de coluna seja vinculado automaticamente. Definir *bBind* para **`false`** impedir a associação automática do mapa de coluna para que você possa associar manualmente. (A vinculação manual é de interesse particular para os usuários OLAP.)
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -97,5 +97,5 @@ Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))
 ## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Classes typedef e classes de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Classes de conjunto de linhas de esquema e classes de typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

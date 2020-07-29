@@ -5,16 +5,16 @@ helpviewer_keywords:
 - declarators, abstract
 - abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
-ms.openlocfilehash: 196eb39d901b38ab7b005b03a933827ec4288218
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 540b938e2c4121f189216942bc06630fc61ee19c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335060"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220854"
 ---
 # <a name="c-abstract-declarators"></a>Declaradores abstratos C
 
-Um declarador abstrato é um declarador sem um identificador, consistindo em um ou mais modificadores de ponteiro, matriz ou função. O modificador de<strong>\*</strong>ponteiro () sempre precede o identificador em um Declarador; os modificadores array (**[]**) e function ( **()** ) seguem o identificador. Sabendo disso, você pode determinar onde o identificador apareceria em um declarador abstrato e interpretar o declarador corretamente. Consulte [Interpretar declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md) para obter mais informações e exemplos de declaradores complexos. Geralmente, `typedef` pode ser usado para simplificar declaradores. Consulte [Declarações de Typedef](../c-language/typedef-declarations.md).
+Um declarador abstrato é um declarador sem um identificador, consistindo em um ou mais modificadores de ponteiro, matriz ou função. O modificador de ponteiro ( <strong>\*</strong> ) sempre precede o identificador em um Declarador; a matriz (**[]**) e os modificadores de função ( **()** ) seguem o identificador. Sabendo disso, você pode determinar onde o identificador apareceria em um declarador abstrato e interpretar o declarador corretamente. Consulte [Interpretar declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md) para obter mais informações e exemplos de declaradores complexos. Geralmente, **`typedef`** pode ser usado para simplificar os declaradores. Consulte [Declarações de Typedef](../c-language/typedef-declarations.md).
 
 Os declaradores abstratos podem ser complexos. Os parênteses em um declarador abstrato complexo especificam uma determinada interpretação, como fazem no caso dos declaradores complexos em declarações.
 
@@ -47,4 +47,4 @@ int (*const []) ( unsigned int, ... )
 
 ## <a name="see-also"></a>Confira também
 
-[Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)
+[Declaradores e declarações de variáveis](../c-language/declarators-and-variable-declarations.md)

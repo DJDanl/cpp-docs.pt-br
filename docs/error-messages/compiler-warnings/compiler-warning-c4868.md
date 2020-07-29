@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: 00c3e01f46bc98baff1b266bb8ee445b0f868522
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fe113a948cdf2a6e4b4fcf6b0055fe92d583f004
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165009"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220126"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>Aviso do compilador (nível 4) C4868
 
 > o compilador '_File_(*line_number*) ' não pode impor a ordem de avaliação da esquerda para a direita na lista de inicializadores de chaves
 
-Os elementos de uma lista de inicializadores entre chaves devem ser avaliados na ordem da esquerda para a direita. Há dois casos em que o compilador não pode garantir esse pedido: o primeiro é quando alguns dos elementos são objetos passados por valor; a segunda é quando se compila com `/clr` e alguns dos elementos são campos de objetos ou são elementos de matriz. Quando o compilador não pode garantir a avaliação da esquerda para a direita, ele emite o aviso C4868.
+Os elementos de uma lista de inicializadores entre chaves devem ser avaliados na ordem da esquerda para a direita. Há dois casos em que o compilador não pode garantir esse pedido: o primeiro é quando alguns dos elementos são objetos passados por valor; a segunda é quando se está compilando com `/clr` e alguns dos elementos são campos de objetos ou são elementos de matriz. Quando o compilador não pode garantir a avaliação da esquerda para a direita, ele emite o aviso C4868.
 
 Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2015 atualização 2. O código que compilou antes do Visual Studio 2015 atualização 2 agora pode gerar C4868.
 
@@ -25,7 +25,7 @@ Esse aviso está desativado por padrão. Use `/Wall` para ativar este aviso.
 
 Para resolver esse aviso, primeiro considere se a avaliação da esquerda para a direita dos elementos da lista de inicializadores é necessária, por exemplo, quando a avaliação dos elementos pode produzir efeitos colaterais dependentes de ordem. Em muitos casos, a ordem na qual os elementos são avaliados não tem um efeito observável.
 
-Se a ordem de avaliação deve ser da esquerda para a direita, considere se é possível passar os elementos por `const` referência em vez disso. Uma alteração como essa elimina o aviso no exemplo de código a seguir.
+Se a ordem de avaliação deve ser da esquerda para a direita, considere se é possível passar os elementos por **`const`** referência. Uma alteração como essa elimina o aviso no exemplo de código a seguir.
 
 ## <a name="example"></a>Exemplo
 

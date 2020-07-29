@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 13a3ebeb6e7783687abc73cd0dcc018abe827809
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c11133fbf28cfb98de1367955c00c899e8b1042
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200467"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214523"
 ---
 # <a name="compiler-error-c3646"></a>Erro do compilador C3646
 
@@ -21,7 +21,7 @@ ms.locfileid: "80200467"
 
 O compilador encontrou um token na posição em que esperava encontrar um especificador de substituição, mas o token não foi reconhecido pelo compilador.
 
-Por exemplo, se o *especificador* não reconhecido for **_NOEXCEPT**, substitua-o pela palavra-chave **noexcept**.
+Por exemplo, se o *especificador* não reconhecido for **_NOEXCEPT**, substitua-o pela palavra-chave **`noexcept`** .
 
 Para obter mais informações, consulte [especificadores de substituição](../../extensions/override-specifiers-cpp-component-extensions.md).
 

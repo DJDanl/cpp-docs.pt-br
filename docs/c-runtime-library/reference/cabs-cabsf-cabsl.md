@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939409"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220737"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -64,18 +64,18 @@ long double cabsl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *z*<br/>
 Um número complexo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor absoluto de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **cabs** que usam valores **_Fcomplex** ou **_Lcomplex** e retornar valores **duplos** **float** ou **Long** . Em um programa C, o **cabs** sempre usa um valor **_Dcomplex** e retorna um valor **duplo** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cabs** que usam **_Fcomplex** ou valores de **_Lcomplex** , e retornos **`float`** ou **`long double`** valores. Em um programa C, o **cabs** sempre usa um valor **_Dcomplex** e retorna um **`double`** valor.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -85,9 +85,9 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **cabs** que usa
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>

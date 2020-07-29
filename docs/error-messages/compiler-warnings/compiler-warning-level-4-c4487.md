@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: b83b3b33727db300367156e10f902aaa6ff4bfdb
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 33a2a4e36a2c1d3a3900b9f2f8261df7bbce9b00
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990776"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214341"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>Aviso do compilador (nível 4) C4487
 
 ' derived_class_function ': corresponde ao método não virtual herdado ' base_class_function ', mas não está marcado explicitamente como ' New '
 
-Uma função em uma classe derivada tem a mesma assinatura que uma função de classe base não virtual. C4487 lembra que a função de classe derivada não substitui a função de classe base. Marque explicitamente a função derivada da classe como `new` para resolver esse aviso.
+Uma função em uma classe derivada tem a mesma assinatura que uma função de classe base não virtual. C4487 lembra que a função de classe derivada não substitui a função de classe base. Marque explicitamente a função derivada da classe como **`new`** para resolver este aviso.
 
 Para obter mais informações, consulte [novo (novo slot em vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
 
