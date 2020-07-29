@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 672156e65e223be45c91558ed91065859566a8b9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367897"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227277"
 ---
 # <a name="nested-class-declarations"></a>Declarações de classe aninhada
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput`e `BufferedIO::BufferedOutput` são declarados dentro `BufferedIO`. Esses nomes de classe não são visíveis fora do escopo da classe `BufferedIO`. No entanto, um objeto do tipo `BufferedIO` não contém nenhum objetos dos tipos `BufferedInput` ou `BufferedOutput`.
+`BufferedIO::BufferedInput`e `BufferedIO::BufferedOutput` são declarados em `BufferedIO` . Esses nomes de classe não são visíveis fora do escopo da classe `BufferedIO`. No entanto, um objeto do tipo `BufferedIO` não contém nenhum objetos dos tipos `BufferedInput` ou `BufferedOutput`.
 
 As classes aninhadas podem usar diretamente nomes, nomes de tipo, nomes de membros estáticos e enumeradores apenas da classe delimitadora. Para usar nomes de outros membros de classe, você deve usar ponteiros, referências ou nomes de objeto.
 
@@ -94,7 +94,7 @@ int main()
 
 O aninhamento de uma classe dentro de outra não concede privilégios de acesso especiais às funções membro da classe aninhada. Da mesma forma, as funções membro da classe delimitadora não têm acesso especial a membros da classe aninhada.
 
-## <a name="member-functions-in-nested-classes"></a>Funções de membros em classes aninhadas
+## <a name="member-functions-in-nested-classes"></a>Funções de membro em classes aninhadas
 
 As funções de membro declaradas em classes aninhadas podem ser definidas no escopo do arquivo. O exemplo anterior poderia ter sido escrito:
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-No exemplo anterior, a sintaxe *de nome de tipo qualificado* é usada para declarar o nome da função. Esta declaração:
+No exemplo anterior, a sintaxe de *nome de tipo qualificado* é usada para declarar o nome da função. Esta declaração:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-significa que “a função `read`, que é um membro da classe `BufferedInput` e que está no escopo da classe `BufferedIO`”. Como esta declaração usa a sintaxe *de nome qualificado,* os construtos da seguinte forma são possíveis:
+significa que “a função `read`, que é um membro da classe `BufferedInput` e que está no escopo da classe `BufferedIO`”. Como essa declaração usa a sintaxe de *nome de tipo qualificado* , as construções do seguinte formulário são possíveis:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,9 +148,9 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-A declaração anterior é equivalente à anterior, mas usa um nome **typedef** no lugar dos nomes das classes.
+A declaração anterior é equivalente à anterior, mas usa um **`typedef`** nome no lugar dos nomes de classe.
 
-## <a name="friend-functions-in-nested-classes"></a>Funções de amigo em classes aninhadas
+## <a name="friend-functions-in-nested-classes"></a>Funções Friend em classes aninhadas
 
 As funções friend declaradas em uma classe aninhada são consideradas como pertencentes ao escopo da classe aninhada, não à classe delimitadora. Portanto, as funções friend não ganham privilégios de acesso especiais aos membros ou às funções de membro da classe delimitadora. Se você quiser usar um nome que seja declarado em uma classe aninhada em uma função friend e essa função estiver definida no escopo do arquivo, use nomes de tipos qualificados da seguinte maneira:
 

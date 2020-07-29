@@ -2,12 +2,12 @@
 title: Elementos gráficos (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 393fadbba90b135e6394cf848668b4957a6d7ce2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404828"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182805"
 ---
 # <a name="graphics-c-amp"></a>Elementos gráficos (C++ AMP)
 
@@ -21,16 +21,16 @@ C++ AMP contém várias APIs no namespace [Concurrency:: Graphics](../../paralle
 
 ## <a name="the-norm-and-unorm-types"></a>Os tipos normal e unorm
 
-Os `norm` `unorm` tipos e são tipos escalares que limitam o intervalo de valores **float** ; isso é conhecido como *fixação MSS*. Esses tipos podem ser construídos explicitamente a partir de outros tipos escalares. Na conversão, o valor é primeiro convertido para **float** e, em seguida, clamped para a respectiva região permitida por normal [-1,0, 1,0] ou unorm [0,0, 1,0]. Conversão de +/-Infinity retorna +/-1. A conversão de NaN é indefinida. Uma norma pode ser construída implicitamente a partir de um unorm e não há perda de dados. O operador de conversão implícita para float é definido nesses tipos. Os operadores binários são definidos entre esses tipos e outros tipos escalares internos, como **float** e **int**: +,-, \* ,/, = =,! =, >, \<, > =, <=. Os operadores de atribuição compostos também têm suporte: + =,-=, \* =,/=. O operador de negação unário (-) é definido para tipos normativos.
+Os `norm` `unorm` tipos e são tipos escalares que limitam o intervalo de **`float`** valores; isso é conhecido como *fixação MSS*. Esses tipos podem ser construídos explicitamente a partir de outros tipos escalares. Na conversão, o valor é primeiro convertido em **`float`** e, em seguida, clamped para a respectiva região permitida por normal [-1,0, 1,0] ou unorm [0,0, 1,0]. Conversão de +/-Infinity retorna +/-1. A conversão de NaN é indefinida. Uma norma pode ser construída implicitamente a partir de um unorm e não há perda de dados. O operador de conversão implícita para float é definido nesses tipos. Os operadores binários são definidos entre esses tipos e outros tipos escalares internos, como **`float`** e **`int`** : +,-, \* ,/, = =,! =, >, \<, > =, <=. Os operadores de atribuição compostos também têm suporte: + =,-=, \* =,/=. O operador de negação unário (-) é definido para tipos normativos.
 
 ## <a name="short-vector-library"></a>Biblioteca de vetores curta
 
-A biblioteca de vetores curta fornece algumas das funcionalidades do [tipo de vetor](https://go.microsoft.com/fwlink/p/?linkid=248500) que são definidas em HLSL e normalmente são usadas para definir texels. Um vetor curto é uma estrutura de dados que contém de um a quatro valores do mesmo tipo. Os tipos com suporte são **Double**, **float**, **int**, `norm` , `uint` e `unorm` . Os nomes de tipo são mostrados na tabela a seguir. Para cada tipo, há também um **typedef** correspondente que não tem um sublinhado no nome. Os tipos que têm os sublinhados estão no [namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Os tipos que não têm os sublinhados estão no [namespace Concurrency:: Graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que eles sejam claramente separados dos tipos fundamentais nomeados de forma semelhante, como **__int8** e **__int16**.
+A biblioteca de vetores curta fornece algumas das funcionalidades do [tipo de vetor](https://go.microsoft.com/fwlink/p/?linkid=248500) que são definidas em HLSL e normalmente são usadas para definir texels. Um vetor curto é uma estrutura de dados que contém de um a quatro valores do mesmo tipo. Os tipos com suporte são,,,, **`double`** **`float`** **`int`** `norm` `uint` e `unorm` . Os nomes de tipo são mostrados na tabela a seguir. Para cada tipo, há também um correspondente **`typedef`** que não tem um sublinhado no nome. Os tipos que têm os sublinhados estão no [namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Os tipos que não têm os sublinhados estão no [namespace Concurrency:: Graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que eles sejam claramente separados dos tipos fundamentais nomeados de forma semelhante, como **`__int8`** e **`__int16`** .
 
 ||Comprimento 2|Comprimento 3|Comprimento 4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
-|float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
+|FLOAT|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
 |INT|int_2<br /><br /> int2|int_3<br /><br /> Int3|int_4<br /><br /> int4|
 |norm|norm_2<br /><br /> norm2|norm_3<br /><br /> norm3|norm_4<br /><br /> norm4|
 |uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|
@@ -63,7 +63,7 @@ A biblioteca de vetores curta dá suporte à `vector_type.identifier` construç�
 
 Muitas GPUs têm hardware e caches otimizados para buscar pixels e texels e para renderizar imagens e texturas. A [classe \<T,N> Texture](../../parallel/amp/reference/texture-class.md) , que é uma classe de contêiner para objetos Texel, expõe a funcionalidade de textura dessas GPUs. Um Texel pode ser:
 
-- Um **int**, `uint` , **float**, **Double**, `norm` ou `unorm` escalar.
+- Um **`int`** , `uint` , **`float`** , **`double`** , `norm` ou `unorm` escalar.
 
 - Um pequeno vetor que tem dois ou quatro componentes. A única exceção é `double_4` , o que não é permitido.
 
@@ -214,7 +214,7 @@ Use o método [Texture:: Set](reference/texture-class.md#set) para gravar em `te
 
 - T tem apenas um componente escalar. (Não são permitidos vetores curtos.)
 
-- T não é **duplo**, `norm` ou `unorm` .
+- T não é **`double`** , `norm` , ou `unorm` .
 
 - A `texture::bits_per_scalar_element` propriedade é 32.
 
@@ -342,7 +342,7 @@ Observe como uma exibição de textura cujo tipo de elemento é não const e tem
 
 O tipo de elemento de a `texture_view` — seu const-qualidade e também o número de componentes que ele tem — também desempenha uma função para determinar se a exibição dá suporte à amostragem de textura e como os níveis de mipmap podem ser acessados:
 
-|Tipo|Componentes|Ler|Gravar|amostragem|Acesso mipmap|
+|Type|Componentes|Ler|Gravar|amostragem|Acesso mipmap|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N>|1, 2, 4|Sim|Não (1)|Sim|Sim, indexável. O intervalo é determinado na instanciação.|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|Sim<br /><br /> Não (2)|Sim<br /><br /> Sim|Não (1)<br /><br /> Não (1)|Sim, um nível. O nível é determinado na instanciação.<br /><br /> Sim, um nível. O nível é determinado na instanciação.|

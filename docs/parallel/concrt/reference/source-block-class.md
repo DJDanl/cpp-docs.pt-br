@@ -33,16 +33,16 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 304bc65d969fa677d67bf578021a63f628e0a1f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417078"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228434"
 ---
 # <a name="source_block-class"></a>Classe source_block
 
-A classe `source_block` é uma classe base abstrata para blocos somente de origem. A classe fornece a funcionalidade básica de gerenciamento de link, bem como verificações de erro comuns.
+A `source_block` classe é uma classe base abstrata para blocos somente de origem. A classe fornece a funcionalidade básica de gerenciamento de link, bem como verificações de erro comuns.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,52 +61,52 @@ Tipo de processador para processamento de mensagens.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs Públicos
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |`target_iterator`|O iterador para percorrer os destinos conectados.|
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[source_block](#ctor)|Constrói um objeto `source_block`.|
-|[~ source_block destruidor](#dtor)|Destrói o objeto `source_block`.|
+|[~ source_block destruidor](#dtor)|Destrói o `source_block` objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[aceitar](#accept)|Aceita uma mensagem que foi oferecida por este `source_block` objeto, transferindo a propriedade para o chamador.|
 |[acquire_ref](#acquire_ref)|Adquire uma contagem de referência neste `source_block` objeto para evitar a exclusão.|
-|[consumir](#consume)|Consome uma mensagem fornecida anteriormente por esse `source_block` objeto e reservada com êxito pelo destino, transferindo a propriedade para o chamador.|
-|[link_target](#link_target)|Vincula um bloco de destino a este objeto de `source_block`.|
-|[release](#release)|Libera uma reserva de mensagem anterior bem-sucedida.|
-|[release_ref](#release_ref)|Libera uma contagem de referência neste objeto `source_block`.|
-|[reserve](#reserve)|Reserva uma mensagem oferecida anteriormente por este `source_block` objeto.|
+|[utilização](#consume)|Consome uma mensagem fornecida anteriormente por esse `source_block` objeto e reservada com êxito pelo destino, transferindo a propriedade para o chamador.|
+|[link_target](#link_target)|Vincula um bloco de destino a este `source_block` objeto.|
+|[liberar](#release)|Libera uma reserva de mensagem anterior bem-sucedida.|
+|[release_ref](#release_ref)|Libera uma contagem de referência neste `source_block` objeto.|
+|[reservado](#reserve)|Reserva uma mensagem oferecida anteriormente por este `source_block` objeto.|
 |[unlink_target](#unlink_target)|Desvincula um bloco de destino deste `source_block` objeto.|
-|[unlink_targets](#unlink_targets)|Desvincula todos os blocos de destino deste objeto `source_block`. (Substitui [as:: unlink_targets](isource-class.md#unlink_targets).)|
+|[unlink_targets](#unlink_targets)|Desvincula todos os blocos de destino deste `source_block` objeto. (Substitui [as:: unlink_targets](isource-class.md#unlink_targets).)|
 
-### <a name="protected-methods"></a>Métodos protegidos
+### <a name="protected-methods"></a>Métodos Protegidos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
 |[accept_message](#accept_message)|Quando substituído em uma classe derivada, o aceita uma mensagem oferecida pela origem. Os blocos de mensagens devem substituir esse método para validar o `_MsgId` e retornar uma mensagem.|
 |[async_send](#async_send)|Enfileira mensagens de forma assíncrona e inicia uma tarefa de propagação, se isso ainda não tiver sido feito|
 |[consume_message](#consume_message)|Quando substituído em uma classe derivada, consome uma mensagem que foi reservada anteriormente.|
 |[enable_batched_processing](#enable_batched_processing)|Habilita o processamento em lote para este bloco.|
-|[initialize_source](#initialize_source)|Inicializa o `message_propagator` dentro deste `source_block`.|
-|[link_target_notification](#link_target_notification)|Um retorno de chamada que notifica que um novo destino foi vinculado a este objeto de `source_block`.|
+|[initialize_source](#initialize_source)|Inicializa o `message_propagator` dentro dele `source_block` .|
+|[link_target_notification](#link_target_notification)|Um retorno de chamada que notifica que um novo destino foi vinculado a esse `source_block` objeto.|
 |[process_input_messages](#process_input_messages)|Processar mensagens de entrada. Isso só é útil para blocos de propagadores, que derivam de source_block|
 |[propagate_output_messages](#propagate_output_messages)|Propagar mensagens para destinos.|
 |[propagate_to_any_targets](#propagate_to_any_targets)|Quando substituído em uma classe derivada, o propaga a mensagem determinada para qualquer um ou todos os destinos vinculados. Essa é a rotina de propagação principal para blocos de mensagens.|
 |[release_message](#release_message)|Quando substituído em uma classe derivada, libera uma reserva de mensagem anterior.|
 |[remove_targets](#remove_targets)|Remove todos os links de destino para este bloco de origem. Isso deve ser chamado a partir do destruidor.|
-|[reserve_message](#reserve_message)|Quando substituído em uma classe derivada, o reserva uma mensagem oferecida anteriormente por este `source_block` objeto.|
+|[reserve_message](#reserve_message)|Quando substituído em uma classe derivada, o reserva uma mensagem anteriormente oferecida por esse `source_block` objeto.|
 |[resume_propagation](#resume_propagation)|Quando substituído em uma classe derivada, retoma a propagação após o lançamento de uma reserva.|
 |[sync_send](#sync_send)|O enfileira as mensagens de forma síncrona e inicia uma tarefa de propagação, se isso ainda não tiver sido feito.|
-|[unlink_target_notification](#unlink_target_notification)|Um retorno de chamada que notifica que um destino foi desvinculado desse objeto `source_block`.|
+|[unlink_target_notification](#unlink_target_notification)|Um retorno de chamada que notifica que um destino foi desvinculado deste `source_block` objeto.|
 |[wait_for_outstanding_async_sends](#wait_for_outstanding_async_sends)|Aguarda a conclusão de todas as propagações assíncronas. Essa espera de rotação específica do propagador é usada em destruidores de blocos de mensagens para garantir que todas as propagações assíncronas tenham tempo para serem concluídas antes de destruir o bloco.|
 
 ## <a name="remarks"></a>Comentários
@@ -125,7 +125,7 @@ Os blocos de mensagens devem derivar desse bloco para aproveitar o gerenciamento
 
 **Namespace:** simultaneidade
 
-## <a name="accept"></a>aceitar
+## <a name="accept"></a><a name="accept"></a>aceitar
 
 Aceita uma mensagem que foi oferecida por este `source_block` objeto, transferindo a propriedade para o chamador.
 
@@ -138,22 +138,22 @@ virtual message<_Target_type>* accept(
 ### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
-O `runtime_object_identity` do objeto `message` oferecido.
+O `runtime_object_identity` do objeto oferecido `message` .
 
 *_PTarget*<br/>
-Um ponteiro para o bloco de destino que está chamando o método de `accept`.
+Um ponteiro para o bloco de destino que está chamando o `accept` método.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o objeto de `message` ao qual o chamador agora tem propriedade.
+Um ponteiro para o `message` objeto do qual o chamador agora tem propriedade.
 
 ### <a name="remarks"></a>Comentários
 
-O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` for `NULL`.
+O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` é `NULL` .
 
-O método `accept` é chamado por um destino enquanto uma mensagem está sendo oferecida por esse bloco de `ISource`. O ponteiro de mensagem retornado pode ser diferente daquele passado para o método `propagate` do bloco de `ITarget`, se essa fonte decidir fazer uma cópia da mensagem.
+O `accept` método é chamado por um destino enquanto uma mensagem está sendo oferecida por `ISource` esse bloco. O ponteiro de mensagem retornado pode ser diferente daquele passado para o `propagate` método do `ITarget` bloco, se essa fonte decidir fazer uma cópia da mensagem.
 
-## <a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a>accept_message
 
 Quando substituído em uma classe derivada, o aceita uma mensagem oferecida pela origem. Os blocos de mensagens devem substituir esse método para validar o `_MsgId` e retornar uma mensagem.
 
@@ -164,7 +164,7 @@ virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 
 ### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
-A identidade do objeto de tempo de execução do objeto `message`.
+A identidade do objeto de tempo de execução do `message` objeto.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -174,7 +174,7 @@ Um ponteiro para a mensagem da qual o chamador agora tem propriedade.
 
 Para transferir a propriedade, o ponteiro de mensagem original deve ser retornado. Para manter a propriedade, uma cópia da carga da mensagem precisa ser feita e retornada.
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
 Adquire uma contagem de referência neste `source_block` objeto para evitar a exclusão.
 
@@ -184,9 +184,9 @@ virtual void acquire_ref(_Inout_ ITarget<_Target_type> *);
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é chamado por um objeto `ITarget` que está sendo vinculado a essa fonte durante o método `link_target`.
+Esse método é chamado por um `ITarget` objeto que está sendo vinculado a essa origem durante o `link_target` método.
 
-## <a name="async_send"></a>async_send
+## <a name="async_send"></a><a name="async_send"></a>async_send
 
 Enfileira mensagens de forma assíncrona e inicia uma tarefa de propagação, se isso ainda não tiver sido feito
 
@@ -197,9 +197,9 @@ virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
 ### <a name="parameters"></a>parâmetros
 
 *_Msg*<br/>
-Um ponteiro para um objeto `message` para enviar de forma assíncrona.
+Um ponteiro para um `message` objeto a ser enviado de forma assíncrona.
 
-## <a name="consume"></a>utilização
+## <a name="consume"></a><a name="consume"></a>utilização
 
 Consome uma mensagem fornecida anteriormente por esse `source_block` objeto e reservada com êxito pelo destino, transferindo a propriedade para o chamador.
 
@@ -212,24 +212,24 @@ virtual message<_Target_type>* consume(
 ### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
-O `runtime_object_identity` do objeto `message` reservado.
+O `runtime_object_identity` do objeto reservado `message` .
 
 *_PTarget*<br/>
-Um ponteiro para o bloco de destino que está chamando o método de `consume`.
+Um ponteiro para o bloco de destino que está chamando o `consume` método.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o objeto de `message` ao qual o chamador agora tem propriedade.
+Um ponteiro para o `message` objeto do qual o chamador agora tem propriedade.
 
 ### <a name="remarks"></a>Comentários
 
-O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` for `NULL`.
+O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` é `NULL` .
 
-O método gera uma exceção [bad_target](bad-target-class.md) se o parâmetro `_PTarget` não representa o destino que chamou `reserve`.
+O método gera uma exceção [bad_target](bad-target-class.md) se o parâmetro `_PTarget` não representar o destino que chamou `reserve` .
 
-O método `consume` é semelhante a `accept`, mas deve ser sempre precedido por uma chamada para `reserve` que retornou **true**.
+O `consume` método é semelhante a `accept` , mas sempre deve ser precedido por uma chamada para `reserve` isso retornado **`true`** .
 
-## <a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a>consume_message
 
 Quando substituído em uma classe derivada, consome uma mensagem que foi reservada anteriormente.
 
@@ -240,7 +240,7 @@ virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) =
 ### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
-A `runtime_object_identity` do objeto `message` que está sendo consumido.
+O `runtime_object_identity` do `message` objeto que está sendo consumido.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -248,9 +248,9 @@ Um ponteiro para a mensagem da qual o chamador agora tem propriedade.
 
 ### <a name="remarks"></a>Comentários
 
-Semelhante a `accept`, mas é sempre precedido por uma chamada para `reserve`.
+Semelhante a `accept` , mas é sempre precedido por uma chamada para `reserve` .
 
-## <a name="enable_batched_processing"></a>enable_batched_processing
+## <a name="enable_batched_processing"></a><a name="enable_batched_processing"></a>enable_batched_processing
 
 Habilita o processamento em lote para este bloco.
 
@@ -258,9 +258,9 @@ Habilita o processamento em lote para este bloco.
 void enable_batched_processing();
 ```
 
-## <a name="initialize_source"></a>initialize_source
+## <a name="initialize_source"></a><a name="initialize_source"></a>initialize_source
 
-Inicializa o `message_propagator` dentro deste `source_block`.
+Inicializa o `message_propagator` dentro dele `source_block` .
 
 ```cpp
 void initialize_source(
@@ -276,9 +276,9 @@ O Agendador a ser usado para agendar tarefas.
 *_PScheduleGroup*<br/>
 O grupo de agendamento a ser usado para agendar tarefas.
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
-Vincula um bloco de destino a este objeto de `source_block`.
+Vincula um bloco de destino a este `source_block` objeto.
 
 ```cpp
 virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
@@ -287,21 +287,21 @@ virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ### <a name="parameters"></a>parâmetros
 
 *_PTarget*<br/>
-Um ponteiro para um bloco de `ITarget` para vincular a este objeto de `source_block`.
+Um ponteiro para um `ITarget` bloco a ser vinculado a este `source_block` objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` for `NULL`.
+O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` é `NULL` .
 
-## <a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
 
-Um retorno de chamada que notifica que um novo destino foi vinculado a este objeto de `source_block`.
+Um retorno de chamada que notifica que um novo destino foi vinculado a esse `source_block` objeto.
 
 ```cpp
 virtual void link_target_notification(_Inout_ ITarget<_Target_type> *);
 ```
 
-## <a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
 
 Processar mensagens de entrada. Isso só é útil para blocos de propagadores, que derivam de source_block
 
@@ -314,7 +314,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 *_PMessage*<br/>
 Um ponteiro para a mensagem a ser processada.
 
-## <a name="propagate_output_messages"></a>propagate_output_messages
+## <a name="propagate_output_messages"></a><a name="propagate_output_messages"></a>propagate_output_messages
 
 Propagar mensagens para destinos.
 
@@ -322,7 +322,7 @@ Propagar mensagens para destinos.
 virtual void propagate_output_messages();
 ```
 
-## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
 Quando substituído em uma classe derivada, o propaga a mensagem determinada para qualquer um ou todos os destinos vinculados. Essa é a rotina de propagação principal para blocos de mensagens.
 
@@ -335,7 +335,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessa
 *_PMessage*<br/>
 Um ponteiro para a mensagem a ser propagada.
 
-## <a name="release"></a>liberar
+## <a name="release"></a><a name="release"></a>liberar
 
 Libera uma reserva de mensagem anterior bem-sucedida.
 
@@ -348,18 +348,18 @@ virtual void release(
 ### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
-O `runtime_object_identity` do objeto `message` reservado.
+O `runtime_object_identity` do objeto reservado `message` .
 
 *_PTarget*<br/>
-Um ponteiro para o bloco de destino que está chamando o método de `release`.
+Um ponteiro para o bloco de destino que está chamando o `release` método.
 
 ### <a name="remarks"></a>Comentários
 
-O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` for `NULL`.
+O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` é `NULL` .
 
-O método gera uma exceção [bad_target](bad-target-class.md) se o parâmetro `_PTarget` não representa o destino que chamou `reserve`.
+O método gera uma exceção [bad_target](bad-target-class.md) se o parâmetro `_PTarget` não representar o destino que chamou `reserve` .
 
-## <a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a>release_message
 
 Quando substituído em uma classe derivada, libera uma reserva de mensagem anterior.
 
@@ -370,11 +370,11 @@ virtual void release_message(runtime_object_identity _MsgId) = 0;
 ### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
-O `runtime_object_identity` do objeto de `message` que está sendo liberado.
+O `runtime_object_identity` do `message` objeto que está sendo liberado.
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-Libera uma contagem de referência neste objeto `source_block`.
+Libera uma contagem de referência neste `source_block` objeto.
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
@@ -387,9 +387,9 @@ Um ponteiro para o bloco de destino que está chamando esse método.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é chamado por um objeto `ITarget` que está sendo desvinculado dessa fonte. O bloco de origem tem permissão para liberar todos os recursos reservados para o bloco de destino.
+Esse método é chamado por um `ITarget` objeto que está sendo desvinculado dessa fonte. O bloco de origem tem permissão para liberar todos os recursos reservados para o bloco de destino.
 
-## <a name="remove_targets"></a>remove_targets
+## <a name="remove_targets"></a><a name="remove_targets"></a>remove_targets
 
 Remove todos os links de destino para este bloco de origem. Isso deve ser chamado a partir do destruidor.
 
@@ -397,7 +397,7 @@ Remove todos os links de destino para este bloco de origem. Isso deve ser chamad
 void remove_targets();
 ```
 
-## <a name="reserve"></a>reservado
+## <a name="reserve"></a><a name="reserve"></a>reservado
 
 Reserva uma mensagem oferecida anteriormente por este `source_block` objeto.
 
@@ -410,24 +410,24 @@ virtual bool reserve(
 ### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
-O `runtime_object_identity` do objeto `message` oferecido.
+O `runtime_object_identity` do objeto oferecido `message` .
 
 *_PTarget*<br/>
-Um ponteiro para o bloco de destino que está chamando o método de `reserve`.
+Um ponteiro para o bloco de destino que está chamando o `reserve` método.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a mensagem tiver sido reservada com êxito; caso contrário, **false** . As reservas podem falhar por vários motivos, incluindo: a mensagem já foi reservada ou aceita por outro destino, a origem poderia negar reservas e assim por diante.
+**`true`** se a mensagem tiver sido reservada com êxito, **`false`** caso contrário. As reservas podem falhar por vários motivos, incluindo: a mensagem já foi reservada ou aceita por outro destino, a origem poderia negar reservas e assim por diante.
 
 ### <a name="remarks"></a>Comentários
 
-O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` for `NULL`.
+O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` é `NULL` .
 
-Depois de chamar `reserve`, se tiver sucesso, você deverá chamar `consume` ou `release` para tirar ou desistir da posse da mensagem, respectivamente.
+Depois de chamar `reserve` , se tiver sucesso, você deverá chamar `consume` ou `release` para obter ou desistir da posse da mensagem, respectivamente.
 
-## <a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
 
-Quando substituído em uma classe derivada, o reserva uma mensagem oferecida anteriormente por este `source_block` objeto.
+Quando substituído em uma classe derivada, o reserva uma mensagem anteriormente oferecida por esse `source_block` objeto.
 
 ```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
@@ -436,17 +436,17 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 ### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
-O `runtime_object_identity` do objeto de `message` que está sendo reservado.
+O `runtime_object_identity` do `message` objeto que está sendo reservado.
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a mensagem tiver sido reservada com êxito; caso contrário, **false** .
+**`true`** se a mensagem tiver sido reservada com êxito, **`false`** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Depois que `reserve` for chamado, se ele retornar **true**, `consume` ou `release` deverá ser chamado para tirar ou liberar a propriedade da mensagem.
+After `reserve` é chamado, se ele retornar **`true`** , `consume` ou `release` deve ser chamado para tirar ou liberar a propriedade da mensagem.
 
-## <a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
 
 Quando substituído em uma classe derivada, retoma a propagação após o lançamento de uma reserva.
 
@@ -454,7 +454,7 @@ Quando substituído em uma classe derivada, retoma a propagação após o lança
 virtual void resume_propagation() = 0;
 ```
 
-## <a name="ctor"></a>source_block
+## <a name="source_block"></a><a name="ctor"></a>source_block
 
 Constrói um objeto `source_block`.
 
@@ -462,15 +462,15 @@ Constrói um objeto `source_block`.
 source_block();
 ```
 
-## <a name="dtor"></a>~ source_block
+## <a name="source_block"></a><a name="dtor"></a>~ source_block
 
-Destrói o objeto `source_block`.
+Destrói o `source_block` objeto.
 
 ```cpp
 virtual ~source_block();
 ```
 
-## <a name="sync_send"></a>sync_send
+## <a name="sync_send"></a><a name="sync_send"></a>sync_send
 
 O enfileira as mensagens de forma síncrona e inicia uma tarefa de propagação, se isso ainda não tiver sido feito.
 
@@ -481,9 +481,9 @@ virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
 ### <a name="parameters"></a>parâmetros
 
 *_Msg*<br/>
-Um ponteiro para um objeto `message` para enviar de forma síncrona.
+Um ponteiro para um `message` objeto a ser enviado de forma síncrona.
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
 Desvincula um bloco de destino deste `source_block` objeto.
 
@@ -494,15 +494,15 @@ virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ### <a name="parameters"></a>parâmetros
 
 *_PTarget*<br/>
-Um ponteiro para um bloco de `ITarget` para desvincular deste objeto `source_block`.
+Um ponteiro para um `ITarget` bloco para desvincular deste `source_block` objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` for `NULL`.
+O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PTarget` é `NULL` .
 
-## <a name="unlink_target_notification"></a>unlink_target_notification
+## <a name="unlink_target_notification"></a><a name="unlink_target_notification"></a>unlink_target_notification
 
-Um retorno de chamada que notifica que um destino foi desvinculado desse objeto `source_block`.
+Um retorno de chamada que notifica que um destino foi desvinculado deste `source_block` objeto.
 
 ```cpp
 virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget);
@@ -511,17 +511,17 @@ virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget)
 ### <a name="parameters"></a>parâmetros
 
 *_PTarget*<br/>
-O bloco de `ITarget` que foi desvinculado.
+O `ITarget` bloco que foi desvinculado.
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-Desvincula todos os blocos de destino deste objeto `source_block`.
+Desvincula todos os blocos de destino deste `source_block` objeto.
 
 ```cpp
 virtual void unlink_targets();
 ```
 
-## <a name="wait_for_outstanding_async_sends"></a>wait_for_outstanding_async_sends
+## <a name="wait_for_outstanding_async_sends"></a><a name="wait_for_outstanding_async_sends"></a>wait_for_outstanding_async_sends
 
 Aguarda a conclusão de todas as propagações assíncronas. Essa espera de rotação específica do propagador é usada em destruidores de blocos de mensagens para garantir que todas as propagações assíncronas tenham tempo para serem concluídas antes de destruir o bloco.
 
@@ -532,4 +532,4 @@ void wait_for_outstanding_async_sends();
 ## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
-[Classe ISource](isource-class.md)
+[Classe as](isource-class.md)

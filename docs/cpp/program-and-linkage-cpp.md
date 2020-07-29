@@ -2,12 +2,12 @@
 title: Unidades de tradução e vinculação (C++)
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: e964a3c70c138caf8848e6a6366097cbfb90f548
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: 5a166efc7ae926f6b028c35007b0972d0a652d6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108384"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227186"
 ---
 # <a name="translation-units-and-linkage"></a>Unidades de tradução e vinculação
 
@@ -44,7 +44,7 @@ Em alguns casos, pode ser necessário declarar uma variável global ou uma class
 
 Uma *função gratuita* é uma função que é definida em escopo global ou de namespace. Variáveis globais não const e funções gratuitas por padrão têm *vínculo externo*; Eles são visíveis de qualquer unidade de tradução no programa. Portanto, nenhum outro objeto global pode ter esse nome. Um símbolo com *vínculo interno* ou *nenhum vínculo* é visível somente na unidade de tradução em que é declarado. Quando um nome tem ligação interna, o mesmo nome pode existir em outra unidade de tradução. Variáveis declaradas em definições de classe ou corpos de função não têm vínculos.
 
-Você pode forçar um nome global a ter um vínculo interno declarando-o explicitamente como **estático**. Isso limita sua visibilidade à mesma unidade de tradução na qual ela é declarada. Nesse contexto, **estático** significa algo diferente quando aplicado às variáveis locais.
+Você pode forçar um nome global a ter um vínculo interno declarando-o explicitamente como **`static`** . Isso limita sua visibilidade à mesma unidade de tradução na qual ela é declarada. Nesse contexto, **`static`** significa algo diferente quando aplicado a variáveis locais.
 
 Os seguintes objetos têm vínculo interno por padrão:
 
@@ -53,7 +53,7 @@ Os seguintes objetos têm vínculo interno por padrão:
 - typedefs
 - objetos estáticos no escopo do namespace
 
-Para dar um objeto const de vínculo externo, declare-o como **externo** e atribua um valor a ele:
+Para dar uma ligação externa de objeto const, declare-a como **`extern`** e atribua um valor a ela:
 
 ```cpp
 extern const int value = 42;
@@ -61,6 +61,6 @@ extern const int value = 42;
 
 Consulte [externo](extern-cpp.md) para obter mais informações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conceitos básicos](../cpp/basic-concepts-cpp.md)

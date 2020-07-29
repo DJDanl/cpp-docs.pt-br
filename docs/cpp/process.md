@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], process
 - process __declspec keyword
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
-ms.openlocfilehash: 049360dddff2b9ca2ea460b96e027e86899f1ecb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f684c9c2ddfcb0aa166e1240c5f928ee52218f45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344990"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227199"
 ---
-# <a name="process"></a>process
+# `process`
 
-Especifica que o processo de aplicativo gerenciado deve ter uma única cópia de uma determinada variável global, variável de membro estática ou variável local estática compartilhada por todos os domínios de aplicativo no processo. Isso foi destinado principalmente a ser usado ao compilar com **/clr: pure**, que é preterido no Visual Studio 2017 e sem suporte no Visual Studio 2017. Ao compilar com **/clr**, as variáveis globais e estáticas são por processo por padrão e não precisam usar **__declspec(process)**.
+Especifica que o processo de aplicativo gerenciado deve ter uma única cópia de uma determinada variável global, variável de membro estática ou variável local estática compartilhada por todos os domínios de aplicativo no processo. Isso foi projetado principalmente para ser usado durante a compilação com **`/clr:pure`** , que foi preterido no visual studio 2015 e sem suporte no visual studio 2017. Ao compilar com **`/clr`** , as variáveis global e estática são por processo por padrão e não precisam usar **`__declspec(process)`** .
 
-Somente uma variável global, uma variável de membro estático ou uma variável local estática do tipo nativo pode ser marcada com **__declspec(process)**.
+Somente uma variável global, uma variável de membro estático ou uma variável local estática do tipo nativo podem ser marcadas com **`__declspec(process)`** .
 
-**processo** só é válido ao compilar com [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+**`process`** Só é válida durante a compilação com [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) .
 
-Se você quiser que cada domínio de aplicativo tem sua própria cópia de uma variável global, use [appdomain](../cpp/appdomain.md).
+Se você quiser que cada domínio de aplicativo tenha sua própria cópia de uma variável global, use [AppDomain](../cpp/appdomain.md).
 
-Ver [domínios de aplicativo e do Visual C++](../dotnet/application-domains-and-visual-cpp.md) para obter mais informações.
+Consulte [domínios e Visual C++ do aplicativo](../dotnet/application-domains-and-visual-cpp.md) para obter mais informações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

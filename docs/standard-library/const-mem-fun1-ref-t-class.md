@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 76fae1ce29cb4c47870e45e8f946f6ff1fea1885
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f9f426b7280872846695e204f2c9843d2622fe19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228330"
 ---
 # <a name="const_mem_fun1_ref_t-class"></a>Classe const_mem_fun1_ref_t
 
-Uma classe de adaptador que permite que uma função membro **const** que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de referência. Preterido no C++ 11, removido do C++ 17.
+Uma classe de adaptador que permite que uma **`const`** função de membro que usa um único argumento seja chamada como um objeto de função binária quando inicializada com um argumento de referência. Preterido no C++ 11, removido do C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,15 +29,15 @@ template <class Result, class Type, class Arg>
 };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *PM*
+*PM*\
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
-\ *à esquerda*
-O objeto **const** no qual a função de membro *PM* é chamada.
+*mantida*\
+O **`const`** objeto no qual a função de membro *PM* é chamada.
 
-\ *à direita*
+*Certo*\
 O argumento que está sendo atribuído a *PM*.
 
 ## <a name="return-value"></a>Valor retornado
@@ -46,7 +46,7 @@ Uma função binária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe armazena uma cópia de *PM*, que deve ser um ponteiro para uma função membro da classe `Type`, em um objeto de membro privado. Ele define sua função membro `operator()` como o retorno (`left`. \* *PM*) (`right`) **const**.
+O modelo de classe armazena uma cópia de *PM*, que deve ser um ponteiro para uma função de membro da classe `Type` , em um objeto de membro privado. Ele define sua função `operator()` de membro como retornando ( `left` . \* *PM*) ( `right` ) **`const`** .
 
 ## <a name="example"></a>Exemplo
 
