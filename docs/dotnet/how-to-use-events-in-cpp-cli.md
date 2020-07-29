@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2ef9c879c160d4b27fc51afbdef0e709058bda79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225677"
 ---
 # <a name="how-to-use-events-in-ccli"></a>Como usar eventos em C++/CLI
 
@@ -476,7 +476,7 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-Um evento simples não pode ser especificado para substituir ou ocultar um evento de classe base.  Você deve definir todas as funções de acessador do evento e, em seguida, especificar a palavra-chave `new` ou `override` em cada função de acessador.
+Um evento simples não pode ser especificado para substituir ou ocultar um evento de classe base.  Você deve definir todas as funções de acessador do evento e, em seguida, especificar a **`new`** `override` palavra-chave ou em cada função de acessador.
 
 ```cpp
 // mcppv2_events5_a.cpp
@@ -647,6 +647,6 @@ hello
 hello
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [event](../extensions/event-cpp-component-extensions.md)

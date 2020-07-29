@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920251"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234140"
 ---
 # <a name="_expand"></a>_expand
 
@@ -55,7 +55,7 @@ void *_expand(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *memblock*<br/>
 Ponteiro para o bloco de memória alocado anteriormente.
@@ -71,7 +71,7 @@ Novo tamanho em bytes.
 
 Se não houver memória suficiente disponível para expandir o bloco para o tamanho especificado sem movê-lo, a função retornará **NULL**. **_expand** nunca retorna um bloco expandido para um tamanho menor que o solicitado. Se ocorrer uma falha, **errno** indica a natureza da falha. Para obter mais informações sobre **errno**, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para verificar o novo tamanho do item, use **_msize**. Para obter um ponteiro para um tipo diferente de **void**, use uma conversão de tipo no valor de retorno.
+O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para verificar o novo tamanho do item, use **_msize**. Para obter um ponteiro para um tipo diferente de **`void`** , use uma conversão de tipo no valor de retorno.
 
 ## <a name="remarks"></a>Comentários
 

@@ -7,34 +7,34 @@ helpviewer_keywords:
 - registers, inline assembly
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-ms.openlocfilehash: 97db09ac7652c00e9599a6938f4114de080906c0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 99ca0093bb27e859854dfd1ca64addea923e5a5c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318023"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191502"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>Usando e preservando registros no assembly embutido
 
 **Específico da Microsoft**
 
-Em geral, você não deve assumir que um `__asm` registro terá um determinado valor quando um bloco começar. Os valores de registro não `__asm` são garantidos para serem preservados em blocos separados. Se você terminar um bloco de código inline e começar outro, você não poderá contar com os registros do segundo bloco para reter seus valores do primeiro bloco. Um `__asm` bloco herda os valores do registro resultantes do fluxo normal de controle.
+Em geral, você não deve supor que um registro terá um determinado valor quando um **`__asm`** bloco for iniciado. Não há garantia de que os valores de registro sejam preservados em **`__asm`** blocos separados. Se você terminar um bloco de código embutido e começar outro, não poderá contar com os registros no segundo bloco para manter seus valores do primeiro bloco. Um **`__asm`** bloco herda quaisquer valores de registro resultantes do fluxo de controle normal.
 
-Se você `__fastcall` usar a convenção de chamada, o compilador passa argumentos de função em registros em vez de na pilha. Isso pode criar problemas `__asm` em funções com blocos porque uma função não tem como dizer qual parâmetro está em qual registro. Se a função receber um parâmetro no EAX e armazena imediatamente outra coisa no EAX, o parâmetro original será perdido. Além disso, você deve preservar o registro ECX em qualquer função declarada com `__fastcall`.
+Se você usar a **`__fastcall`** Convenção de chamada, o compilador passará os argumentos da função em registros em vez de na pilha. Isso pode criar problemas em funções com **`__asm`** blocos, pois uma função não tem como saber qual parâmetro é o registro. Se a função for receber um parâmetro no EAX e imediatamente armazenar outra coisa no EAX, o parâmetro original será perdido. Além disso, você deve preservar o registro de ECX em qualquer função declarada com **`__fastcall`** .
 
-Para evitar tais conflitos de registro, não use `__fastcall` a `__asm` convenção para funções que contenham um bloco. Se você `__fastcall` especificar a convenção globalmente com a opção /Gr `__asm` compilador, declare todas as funções que contenham um bloco com `__cdecl` ou `__stdcall`. (O `__cdecl` atributo diz ao compilador para usar a convenção de chamada C para essa função.) Se você não estiver compilando com /Gr, `__fastcall` evite declarar a função com o atributo.
+Para evitar esses conflitos de registro, não use a **`__fastcall`** Convenção para funções que contêm um **`__asm`** bloco. Se você especificar a **`__fastcall`** Convenção globalmente com a opção de compilador/gr, declare cada função que contém um **`__asm`** bloco com **`__cdecl`** ou **`__stdcall`** . (O **`__cdecl`** atributo informa ao compilador para usar a Convenção de chamada C para essa função.) Se você não estiver Compilando com/gr, evite declarar a função com o **`__fastcall`** atributo.
 
-Ao `__asm` usar para escrever a linguagem de montagem em funções C/C++, você não precisa preservar os registros EAX, EBX, ECX, EDX, ESI ou EDI. Por exemplo, no POWER2. Exemplo C em [Funções de escrita com conjunto inline,](../../assembler/inline/writing-functions-with-inline-assembly.md)a `power2` função não preserva o valor no registro EAX. No entanto, o uso desses registros afetará a qualidade do `__asm` código porque o alocador de registro não pode usá-los para armazenar valores entre blocos. Além disso, usando EBX, ESI ou EDI em código de montagem inline, você força o compilador a salvar e restaurar esses registros no prólogo e epílogo da função.
+Ao usar o **`__asm`** para gravar a linguagem do assembly em funções do C/C++, você não precisa preservar os registros EAX, EBX, ecx, EDX, ESI ou EDI. Por exemplo, no POWER2. O exemplo C em [gravando funções com assembly embutido](../../assembler/inline/writing-functions-with-inline-assembly.md), a `power2` função não preserva o valor no registro EAX. No entanto, o uso desses registros afetará a qualidade do código, pois o alocador de registro não pode usá-los para armazenar valores entre **`__asm`** blocos. Além disso, usando EBX, ESI ou EDI no código de assembly embutido, você força o compilador a salvar e restaurar esses registros no prólogo da função e epílogo.
 
-Você deve preservar outros registros que você usa (como Registros de DS, SS, `__asm` SP, BP e sinalizadores) para o escopo do bloco. Você deve preservar os registros ESP e EBP, a menos que você tenha alguma razão para alterá-los (para alternar pilhas, por exemplo). Veja também [a otimização da montagem inline](../../assembler/inline/optimizing-inline-assembly.md).
+Você deve preservar outros registros que usar (como registros DS, SS, SP, BP e flags) para o escopo do **`__asm`** bloco. Você deve preservar os registros ESP e EBP, a menos que tenha algum motivo para alterá-los (para alternar as pilhas, por exemplo). Consulte também [otimizando assembly embutido](../../assembler/inline/optimizing-inline-assembly.md).
 
-Alguns tipos de SSE requerem alinhamento de pilha de oito bytes, forçando o compilador a emitir código dinâmico de alinhamento de pilhas. Para poder acessar as variáveis locais e os parâmetros de função após o alinhamento, o compilador mantém dois ponteiros de quadro.  Se o compilador realizar a omissão do ponteiro de quadros (FPO), ele usará EBP e ESP.  Se o compilador não executar FPO, ele usará EBX e EBP. Para garantir que o código seja executado corretamente, não modifique o EBX no código asm se a função exigir alinhamento dinâmico da pilha, pois poderia modificar o ponteiro do quadro. Ou mova os tipos alinhados de oito bytes para fora da função ou evite usar o EBX.
+Alguns tipos de SSE exigem alinhamento de pilha de oito bytes, forçando o compilador a emitir o código de alinhamento de pilha dinâmico. Para poder acessar as variáveis locais e os parâmetros de função após o alinhamento, o compilador mantém dois ponteiros de quadro.  Se o compilador executar a omissão de ponteiros de quadro (FPO), ele usará EBP e ESP.  Se o compilador não executar FPO, ele usará EBX e EBP. Para garantir que o código seja executado corretamente, não modifique o EBX no código ASM se a função exigir alinhamento de pilha dinâmica, pois ele poderia modificar o ponteiro do quadro. Mova os tipos alinhados de oito bytes para fora da função ou Evite usar EBX.
 
 > [!NOTE]
-> Se o código de montagem em linha mudar o sinalizador de direção usando as instruções STD ou CLD, você deve restaurar o sinalizador ao seu valor original.
+> Se o código de assembly embutido alterar o sinalizador de direção usando as instruções padrão ou CLD, você deverá restaurar o sinalizador para seu valor original.
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
-[Montador Inline](../../assembler/inline/inline-assembler.md)<br/>
+[Assembler embutido](../../assembler/inline/inline-assembler.md)<br/>

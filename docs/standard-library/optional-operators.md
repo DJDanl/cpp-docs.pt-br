@@ -1,5 +1,5 @@
 ---
-title: '&lt;operadores opcionais&gt;'
+title: '&lt;operadores opcionais &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: 9bdef0669f90da7865f7652ff4528e51e584e1a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c7eca76f71f12e7f7fe0e60c0a4cfe456d54c374
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373628"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224676"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;operadores opcionais&gt;
+# <a name="ltoptionalgt-operators"></a>&lt;operadores opcionais &gt;
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operador==
+## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
 
-Teste se `optional` o objeto no lado esquerdo do `optional` operador é igual ao objeto do lado direito.
+Testa se o `optional` objeto no lado esquerdo do operador é igual ao `optional` objeto no lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator==(const optional<T>& left, const optional<U>& right);
@@ -37,17 +37,17 @@ template <class T, class U> constexpr bool operator==(const optional<T>&, const 
 template <class T, class U> constexpr bool operator==(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+*mantida*\
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 *Certo*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
-## <a name="operator"></a><a name="op_neq"></a>operador!=
+## <a name="operator"></a><a name="op_neq"></a>operador! =
 
-Teste se `optional` o objeto do lado esquerdo do `optional` operador não é igual ao objeto do lado direito.
+Testa se o `optional` objeto no lado esquerdo do operador não é igual ao `optional` objeto no lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator!=(const optional<T>&, const optional<U>&);
@@ -57,21 +57,21 @@ template <class T, class U> constexpr bool operator!=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator!=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+*mantida*\
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 *Certo*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 ### <a name="remarks"></a>Comentários
 
 Esta função do modelo retorna `!(left == right)`.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Operador&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operador&lt;
 
-Teste se `optional` o objeto do lado esquerdo do `optional` operador é menor que o objeto do lado direito.
+Testa se o `optional` objeto no lado esquerdo do operador é menor que o `optional` objeto no lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator<(const optional<T>&, const optional<U>&);
@@ -81,21 +81,21 @@ template <class T, class U> constexpr bool operator<(const optional<T>&, const U
 template <class T, class U> constexpr bool operator<(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+*mantida*\
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 *Certo*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a lista no lado esquerdo do operador for menor que ou diferente da lista à direita do operador; caso contrário, **false**.
+**`true`** se a lista no lado esquerdo do operador for menor que, mas não igual à lista no lado direito do operador; caso contrário **`false`** .
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operador&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operador&lt;=
 
-Teste se `optional` o objeto do lado esquerdo do operador `optional` é menor ou igual ao objeto do lado direito.
+Testa se o `optional` objeto no lado esquerdo do operador é menor ou igual ao `optional` objeto no lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator<=(const optional<T>&, const optional<U>&);
@@ -105,25 +105,25 @@ template <class T, class U> constexpr bool operator<=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator<=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+*mantida*\
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 *Certo*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a lista no lado esquerdo do operador for menor que ou igual à lista à direita do operador; caso contrário, **false**.
+**`true`** se a lista no lado esquerdo do operador for menor ou igual à lista no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
 Esta função do modelo retorna `!(right < left)`.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Operador&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operador&gt;
 
-Teste se `optional` o objeto do lado esquerdo do `optional` operador é maior que o objeto do lado direito.
+Testa se o `optional` objeto no lado esquerdo do operador é maior que o `optional` objeto no lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator>(const optional<T>&, const optional<U>&);
@@ -133,25 +133,25 @@ template <class T, class U> constexpr bool operator>(const optional<T>&, const U
 template <class T, class U> constexpr bool operator>(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+*mantida*\
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 *Certo*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a lista no lado esquerdo do operador for maior que a lista à direita do operador; caso contrário, **false**.
+**`true`** se a lista no lado esquerdo do operador for maior que a lista no lado direito do operador; caso contrário **`false`** .
 
 ### <a name="remarks"></a>Comentários
 
 Esta função do modelo retorna `right < left`.
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operador&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operador&gt;=
 
-Teste se `optional` o objeto do lado esquerdo do operador `optional` é maior ou igual ao objeto do lado direito.
+Testa se o `optional` objeto no lado esquerdo do operador é maior ou igual ao `optional` objeto no lado direito.
 
 ```cpp
 template <class T, class U> constexpr bool operator>=(const optional<T>&, const optional<U>&);
@@ -161,17 +161,17 @@ template <class T, class U> constexpr bool operator>=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator>=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Deixou*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+*mantida*\
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 *Certo*\
-Um objeto `optional`de `nullopt_t`tipo, ou `T`.
+Um objeto do tipo `optional` , `nullopt_t` ou `T` .
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se a `optional` no lado esquerdo do operador for maior que ou igual à `optional` à direita do operador; caso contrário, **false**.
+**`true`** Se o `optional` no lado esquerdo do operador for maior ou igual ao `optional` no lado direito do operador; caso contrário, **`false`** .
 
 ### <a name="remarks"></a>Comentários
 

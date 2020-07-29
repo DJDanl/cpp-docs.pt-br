@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444611"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231241"
 ---
 # <a name="stream-io"></a>E/S de fluxo
 
@@ -19,7 +19,7 @@ Essas funções processam os dados em diferentes tamanhos e formatos, desde cara
 
 ## <a name="stream-io-routines"></a>Rotinas de E/S de fluxo
 
-|Rotina|Use|
+|Rotina|Uso|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Limpar o indicador de erro do fluxo|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Fechar o fluxo|
@@ -51,12 +51,12 @@ Essas funções processam os dados em diferentes tamanhos e formatos, desde cara
 |[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Ler caracteres de **stdin** (versões macro de **fgetchar** e **fgetwchar**)|
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Retorna o número permitido de arquivos abertos simultaneamente no nível de E/S do fluxo.|
 |[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Ler linha de **stdin**|
-|[_getw](../c-runtime-library/reference/getw.md)|Ler binário **int** do fluxo|
+|[_getw](../c-runtime-library/reference/getw.md)|Ler binário **`int`** do fluxo|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Gravar dados formatados em **stdout**|
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Gravar caracteres em um fluxo (versões macro de **fputc** e **fputwc**)|
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Gravar caracteres em **stdout** (versões macro de **fputchar** e **fputwchar**)|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Gravar linha no fluxo|
-|[_putw](../c-runtime-library/reference/putw.md)|Gravar binário **int** em fluxo|
+|[_putw](../c-runtime-library/reference/putw.md)|Gravar binário **`int`** em fluxo|
 |[rewind](../c-runtime-library/reference/rewind.md)|Mover a posição do arquivo para o começo do fluxo|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Remover arquivos temporários criados por **tmpfile**|
 |[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Ler dados formatados de **stdin**|
@@ -64,7 +64,7 @@ Essas funções processam os dados em diferentes tamanhos e formatos, desde cara
 |[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|Definir o máximo de arquivos abertos simultaneamente no nível de E/S de fluxo.|
 |[setvbuf](../c-runtime-library/reference/setvbuf.md)|Controlar o tamanho do buffer e o buffer de fluxo|
 |[_snprintf, _snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|Gravar dados formatados de comprimento especificado na cadeia de caracteres|
-|[_snscanf, _snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|Ler os dados formatados de um comprimento especificado do fluxo de entrada padrão.|
+|[_snscanf, _snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|Leia os dados formatados de um comprimento especificado do fluxo de entrada padrão.|
 |[sprintf, swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Gravar dados formatados na cadeia de caracteres|
 |[sscanf, swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md), [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|Ler dados formatados na cadeia de caracteres|
 |[_tempnam, _wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|Gerar o nome de arquivo temporário no diretório fornecido|
@@ -93,7 +93,7 @@ Se o seu programa não fechar explicitamente um fluxo, ele será automaticamente
 
 A entrada pode seguir a saída diretamente apenas com uma chamada intermediária para **fflush** ou para uma função de posicionamento de arquivos (**fseek**, **fsetpos** ou **rewind**). A saída pode seguir a entrada sem uma chamada intermediária para uma função de posicionamento de arquivo se a operação de entrada encontrar o final do arquivo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Entrada e saída](../c-runtime-library/input-and-output.md)<br/>
 [Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

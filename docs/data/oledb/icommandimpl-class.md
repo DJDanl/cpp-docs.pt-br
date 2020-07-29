@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212156"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232151"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-Sua classe, derivada de `ICommandImpl`.
+Sua classe, derivada de `ICommandImpl` .
 
 *CommandBase*<br/>
 Uma interface de comando. O padrão é `ICommand`.
@@ -90,7 +90,7 @@ Uma interface de comando. O padrão é `ICommand`.
 |[Cancelar](#cancel)|Cancela a execução do comando atual.|
 |[CancelExecution](#cancelexecution)|Cancela a execução do comando atual.|
 |[CreateRowset](#createrowset)|Cria um objeto de conjunto de linhas.|
-|[Executar](#execute)|Executa o comando.|
+|[Executados](#execute)|Executa o comando.|
 |[GetDBSession](#getdbsession)|Retorna um ponteiro de interface para a sessão que criou o comando.|
 |[ICommandImpl](#icommandimpl)|O construtor.|
 
@@ -152,19 +152,19 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 Um membro de classe de modelo que representa a classe do conjunto de linhas do usuário. Geralmente gerado pelo assistente.
 
 *pUnkOuter*<br/>
-no Um ponteiro para a interface de `IUnknown` de controle se o conjunto de linhas está sendo criado como parte de uma agregação; caso contrário, será nulo.
+no Um ponteiro para a interface de controle `IUnknown` se o conjunto de linhas estiver sendo criado como parte de uma agregação; caso contrário, será nulo.
 
 *riid*<br/>
-no Corresponde a *riid* em `ICommand::Execute`.
+no Corresponde a *riid* in `ICommand::Execute` .
 
 *pParams*<br/>
-[entrada/saída] Corresponde a *pParams* em `ICommand::Execute`.
+[entrada/saída] Corresponde a *pParams* no `ICommand::Execute` .
 
 *pcRowsAffected*<br/>
-Corresponde a *pcRowsAffected* em `ICommand::Execute`.
+Corresponde a *pcRowsAffected* no `ICommand::Execute` .
 
 *ppRowset*<br/>
-[entrada/saída] Corresponde a *ppRowset* em `ICommand::Execute`.
+[entrada/saída] Corresponde a *ppRowset* no `ICommand::Execute` .
 
 *pRowsetObj*<br/>
 fora Um ponteiro para um objeto de conjunto de linhas. Normalmente, esse parâmetro não é usado, mas pode ser usado se você precisar executar mais trabalho no conjunto de linhas antes de passá-lo para um objeto COM. O tempo de vida de *pRowsetObj* é associado por *ppRowset*.
@@ -175,7 +175,7 @@ Um valor HRESULT padrão. Consulte `ICommand::Execute` para obter uma lista de v
 
 ### <a name="remarks"></a>Comentários
 
-Para criar mais de um conjunto de linhas ou para fornecer suas próprias condições para a criação de conjuntos de itens diferentes, coloque chamadas diferentes para `CreateRowset` de dentro `Execute`.
+Para criar mais de um conjunto de linhas ou para fornecer suas próprias condições para a criação de conjuntos de itens diferentes, coloque chamadas diferentes para `CreateRowset` de dentro `Execute` .
 
 Consulte [ICommand:: execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) na *referência do programador de OLE DB.*
 
@@ -201,7 +201,7 @@ Consulte [ICommand:: execute](/previous-versions/windows/desktop/ms718095(v=vs.8
 
 A interface de saída solicitada será uma interface adquirida do objeto de conjunto de linhas que essa função cria.
 
-`Execute` chama [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Substitua a implementação padrão para criar mais de um conjunto de linhas ou para fornecer suas próprias condições para a criação de diferentes conjuntos de linhas.
+`Execute`chama [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Substitua a implementação padrão para criar mais de um conjunto de linhas ou para fornecer suas próprias condições para a criação de diferentes conjuntos de linhas.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl::GetDBSession
 
@@ -244,7 +244,7 @@ unsigned m_bCancel:1;
 
 ### <a name="remarks"></a>Comentários
 
-Você pode recuperar essa variável no método `Execute` da sua classe de comando e cancelá-la conforme apropriado.
+Você pode recuperar essa variável no `Execute` método da sua classe de comando e cancelá-la conforme apropriado.
 
 ## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
@@ -258,7 +258,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### <a name="remarks"></a>Comentários
 
-O padrão é **true** (pode ser cancelado).
+O padrão é **`true`** (pode ser cancelado).
 
 ## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
@@ -272,9 +272,9 @@ unsigned m_bIsExecuting:1;
 
 ### <a name="remarks"></a>Comentários
 
-O método `Execute` da sua classe de comando pode definir essa variável como **true**.
+O `Execute` método da sua classe de comando pode definir essa variável como **`true`** .
 
 ## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

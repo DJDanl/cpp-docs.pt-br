@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: 1f8b79c637662d79051b72e6aabefc99c450bdc5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 024a61419129f669485944a427379dd41c385404
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160873"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231059"
 ---
 # <a name="summary-of-scope-rules"></a>Resumo das regras de escopo
 
@@ -29,7 +29,7 @@ Um nome de um objeto, função ou enumerador é global se introduzido fora de qu
 
 - Resolução do escopo (`::`)
 
-- Seleção de membros para objetos e referências ( **.** )
+- Seleção de membros para objetos e referências (**.**)
 
 - Seleção de membros para ponteiros ( **->** )
 
@@ -37,7 +37,7 @@ Um nome de um objeto, função ou enumerador é global se introduzido fora de qu
 
 Os nomes usados com o operador de resolução de escopo binário (`::`) são chamados de "nomes qualificados". O nome especificado depois do operador de resolução de escopo deve ser membro da classe especificada à esquerda do operador ou membro de sua classe base.
 
-Nomes especificados após o operador de seleção de membro ( **.** ou **->** ) devem ser membros do tipo de classe do objeto especificado à esquerda do operador ou membros de sua classe base (es). Os nomes especificados à direita do operador de seleção de membro ( **->** ) também podem ser objetos de outro tipo de classe, desde que o lado esquerdo de **->** seja um objeto de classe e que a classe defina um operador de seleção de membro sobrecarregado ( **->** ) que seja avaliado como um ponteiro para algum outro tipo de classe. (Esse provisionamento é discutido em mais detalhes em [acesso de membro de classe](../cpp/member-access.md).)
+Nomes especificados após o operador de seleção de membro (**.** or **->** ) devem ser membros do tipo de classe do objeto especificado à esquerda do operador ou membros de sua classe base (es). Os nomes especificados à direita do operador de seleção de membro ( **->** ) também podem ser objetos de outro tipo de classe, desde que o lado esquerdo de **->** seja um objeto de classe e que a classe defina um operador de seleção de membro sobrecarregado ( **->** ) que seja avaliado como um ponteiro para algum outro tipo de classe. (Esse provisionamento é discutido em mais detalhes em [acesso de membro de classe](../cpp/member-access.md).)
 
 O compilador pesquisa por nomes na seguinte ordem, parando quando o nome é encontrado:
 
@@ -57,11 +57,11 @@ No entanto, você pode modificar essa ordem de pesquisa como segue:
 
 1. Os nomes precedidos por `::` forçam a pesquisa a iniciar no escopo global.
 
-1. Os nomes precedidos pelas palavras-chave **Class**, **struct**e **Union** forçam o compilador a pesquisar somente nomes de **classe**, **struct**ou **Union** .
+1. Os nomes precedidos **`class`** pelas **`struct`** **`union`** palavras-chave, e forçam o compilador a pesquisar somente **`class`** **`struct`** nomes, ou **`union`** .
 
-1. Os nomes no lado esquerdo do operador de resolução de escopo (`::`) podem ser somente nomes de **classe**, **struct**, **namespace**ou **União** .
+1. Os nomes no lado esquerdo do operador de resolução de escopo ( `::` ) só podem ser **`class`** nomes,, **`struct`** **`namespace`** ou **`union`** .
 
-Se o nome se refere a um membro não estático, mas é usado em uma função de membro estático, uma mensagem de erro é gerada. Da mesma forma, se o nome se referir a qualquer membro não estático em uma classe delimitadora, uma mensagem de erro será gerada porque as classes embutidas não têm **a** classe delimitadora de ponteiros.
+Se o nome se refere a um membro não estático, mas é usado em uma função de membro estático, uma mensagem de erro é gerada. Da mesma forma, se o nome se referir a qualquer membro não estático em uma classe delimitadora, uma mensagem de erro será gerada porque as classes embutidas não têm ponteiros de classe delimitadores **`this`** .
 
 ## <a name="function-parameter-names"></a>Nomes de parâmetro de função
 

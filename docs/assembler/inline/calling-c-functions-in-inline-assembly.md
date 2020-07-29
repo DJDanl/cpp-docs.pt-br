@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73be1142747dc608d683e6bd847639b9df718a13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192620"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Chamando funções C no assembly embutido
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Um bloco de `__asm` pode chamar funções C, incluindo rotinas de biblioteca C. O exemplo a seguir chama a rotina de biblioteca de `printf`:
+Um **`__asm`** bloco pode chamar as funções c, incluindo as rotinas da biblioteca c. O exemplo a seguir chama a `printf` rotina de biblioteca:
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -56,9 +56,9 @@ Como os argumentos de função são passados na pilha, você simplesmente envia 
 printf( format, hello, world );
 ```
 
-o exemplo envia ponteiros para `world`, `hello`e `format`, nessa ordem, e, em seguida, chama `printf`.
+o exemplo envia ponteiros para `world` , `hello` e `format` , nessa ordem e, em seguida, chama `printf` .
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

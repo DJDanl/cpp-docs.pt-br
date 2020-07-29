@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 50f97c4360080f1271d9decc3b3460c06f3fec0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230812"
 ---
 # <a name="compiler-error-c3556"></a>Erro do compilador C3556
 
 > '*expression*': argumento incorreto para ' decltype '
 
-O compilador não pode deduzir o tipo da expressão que é o argumento para a *expressão* de `decltype(``)` especificador de tipo.
+O compilador não pode deduzir o tipo da expressão que é o argumento para o `decltype(` *expression* `)` especificador de tipo de expressão.
 
 ## <a name="example"></a>Exemplo
 
-No exemplo de código a seguir, o compilador não pode deduzir o tipo do argumento `myFunction` porque `myFunction` está sobrecarregado. Para corrigir esse problema, você pode usar `static_cast` para criar uma instância de um ponteiro para a função sobrecarregada específica para especificar na expressão `decltype`.
+No exemplo de código a seguir, o compilador não pode deduzir o tipo do `myFunction` argumento porque `myFunction` está sobrecarregado. Para corrigir esse problema, você pode usar **`static_cast`** para criar uma instância de um ponteiro para a função sobrecarregada específica para especificar na **`decltype`** expressão.
 
 ```cpp
 // C3556.cpp

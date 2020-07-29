@@ -30,12 +30,12 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-ms.openlocfilehash: 77bd44975e97cc646f7d2fd100d86b6661b8c2e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63e984f2228ac6896cd9d2ea959b491565bfb8d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941539"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234127"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 
@@ -61,18 +61,18 @@ long double expm1l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor de exponencial do ponto flutuante.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **expm1** retornam um valor de ponto flutuante que representa e<sup>x</sup> -1, se for bem-sucedido. Em Overflow, **expm1** retorna **HUGE_VAL**, **expm1f** retorna **HUGE_VALF**, **expm1l** retorna **HUGE_VALL**e **errno** é definido como **ERANGE**. Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **expm1** que levam e retornam valores **float** e **Long** **duplos** . Em um programa C, **expm1** sempre pega e retorna um **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **expm1** que usam e retornam **`float`** **`long double`** valores. Em um programa C, o **expm1** sempre pega e retorna um **`double`** .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -80,10 +80,10 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **expm1** que le
 |-------------|---------------------|
 |**expm1**, **expm1f**, **expm1l**|\<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

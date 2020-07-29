@@ -2,12 +2,12 @@
 title: Problemas de migração ARM do Visual C++
 ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 2c29b4ffa5344b309622314970ce52c47a0ebd05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 889eed2b02362f33446cd9441ef84f406817b01a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328803"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224065"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problemas de migração ARM do Visual C++
 
@@ -23,10 +23,10 @@ O *comportamento definido pela implementação* é o comportamento que o padrão
 
 O *comportamento não especificado* é o comportamento que o C++ Standard deixa intencionalmente não determinística. Embora o comportamento seja considerado não determinístico, invocações específicas de comportamento não especificado são determinadas pela implementação do compilador. No entanto, não há nenhum requisito para um fornecedor de compilador predeterminar o resultado ou garantir o comportamento consistente entre invocações comparáveis e não há nenhum requisito para a documentação. Um exemplo de comportamento não especificado é a ordem em que as subexpressãos, que incluem argumentos para uma chamada de função, são avaliadas.
 
-Outros problemas de migração podem ser atribuídos a diferenças de hardware entre arquiteturas ARM e x86 ou x64 que interagem com o padrão C++ de maneira diferente. Por exemplo, o modelo de memória forte da arquitetura x86 e x64 fornece `volatile`variáveis qualificadas algumas propriedades adicionais que foram usadas para facilitar determinados tipos de comunicação entre threads no passado. Mas o modelo de memória fraca da arquitetura ARM não dá suporte a esse uso, nem o padrão C++ exige isso.
+Outros problemas de migração podem ser atribuídos a diferenças de hardware entre arquiteturas ARM e x86 ou x64 que interagem com o padrão C++ de maneira diferente. Por exemplo, o modelo de memória forte da arquitetura x86 e x64 fornece **`volatile`** variáveis qualificadas algumas propriedades adicionais que foram usadas para facilitar determinados tipos de comunicação entre threads no passado. Mas o modelo de memória fraca da arquitetura ARM não dá suporte a esse uso, nem o padrão C++ exige isso.
 
 > [!IMPORTANT]
-> Embora `volatile` o Obtenha algumas propriedades que podem ser usadas para implementar formas limitadas de comunicação entre threads em x86 e x64, essas propriedades adicionais não são suficientes para implementar a comunicação entre threads em geral. O padrão C++ recomenda que essa comunicação seja implementada usando primitivos de sincronização apropriados em vez disso.
+> Embora o obtenha **`volatile`** algumas propriedades que podem ser usadas para implementar formas limitadas de comunicação entre threads em x86 e x64, essas propriedades adicionais não são suficientes para implementar a comunicação entre threads em geral. O padrão C++ recomenda que essa comunicação seja implementada usando primitivos de sincronização apropriados em vez disso.
 
 Como diferentes plataformas podem expressar esses tipos de comportamento de forma diferente, portar o software entre plataformas pode ser difícil e propenso a bugs se depender do comportamento de uma plataforma específica. Embora muitos desses tipos de comportamento possam ser observados e possam parecer estáveis, confiar neles é pelo menos não-portátil e, nos casos de comportamento indefinido ou não especificado, também é um erro. Até mesmo o comportamento citado neste documento não deve ser confiado e pode mudar em compiladores futuros ou implementações de CPU.
 
@@ -46,7 +46,7 @@ Essas plataformas também diferem em como elas tratam a conversão de NaN (não-
 
 A conversão de ponto flutuante só poderá ser contada se você souber que o valor está dentro do intervalo do tipo inteiro no qual ele está sendo convertido.
 
-### <a name="shift-operator---behavior"></a>Comportamento do operador\< \< Shift ( >>)
+### <a name="shift-operator---behavior"></a>Comportamento do operador SHIFT ( \<\< >>)
 
 Na arquitetura ARM, um valor pode ser deslocado para a esquerda ou para a direita até 255 bits antes de o padrão começar a ser repetido. Em arquiteturas x86 e x64, o padrão é repetido em cada múltiplo de 32, a menos que a origem do padrão seja uma variável de 64 bits; Nesse caso, o padrão se repete em cada múltiplo de 64 em x64 e em cada múltiplo de 256 em x86, em que uma implementação de software é empregada. Por exemplo, para uma variável de 32 bits que tem um valor de 1 deslocado de 32 posições, no ARM, o resultado é 0, em x86, o resultado é 1 e, em x64, o resultado também é 1. No entanto, se a origem do valor for uma variável de 64 bits, o resultado em todas as três plataformas será 4294967296, e o valor não "quebrará" até que seja deslocado 64 posições nas posições x64 ou 256 no ARM e no x86.
 
@@ -54,7 +54,7 @@ Como o resultado de uma operação de deslocamento que excede o número de bits 
 
 ### <a name="variable-arguments-varargs-behavior"></a>Comportamento de argumentos variáveis (varargs)
 
-Na arquitetura ARM, os parâmetros da lista de argumentos variáveis que são passados na pilha estão sujeitos ao alinhamento. Por exemplo, um parâmetro de 64 bits é alinhado em um limite de 64 bits. Em x86 e x64, os argumentos que são passados na pilha não estão sujeitos a alinhamento e pacote rigidamente. Essa diferença pode fazer com que uma função `printf` Variadic como ler endereços de memória que se destinam como preenchimento no ARM se o layout esperado da lista de argumentos variáveis não seja correspondido exatamente, mesmo que ele possa funcionar para um subconjunto de alguns valores nas arquiteturas x86 ou x64. Considere este exemplo:
+Na arquitetura ARM, os parâmetros da lista de argumentos variáveis que são passados na pilha estão sujeitos ao alinhamento. Por exemplo, um parâmetro de 64 bits é alinhado em um limite de 64 bits. Em x86 e x64, os argumentos que são passados na pilha não estão sujeitos a alinhamento e pacote rigidamente. Essa diferença pode fazer com que uma função Variadic como `printf` ler endereços de memória que se destinam como preenchimento no ARM se o layout esperado da lista de argumentos variáveis não seja correspondido exatamente, mesmo que ele possa funcionar para um subconjunto de alguns valores nas arquiteturas x86 ou x64. Considere este exemplo:
 
 ```C
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.
@@ -88,13 +88,13 @@ Isso aparece bem definido, mas se `->` e `*` são operadores sobrecarregados, es
 Handle::acquire(operator->(memory_handle), operator*(p));
 ```
 
-E se houver uma dependência entre `operator->(memory_handle)` e `operator*(p)`, o código poderá depender de uma ordem de avaliação específica, mesmo que o código original pareça que não há nenhuma dependência possível.
+E se houver uma dependência entre `operator->(memory_handle)` e `operator*(p)` , o código poderá depender de uma ordem de avaliação específica, mesmo que o código original pareça que não há nenhuma dependência possível.
 
 ### <a name="volatile-keyword-default-behavior"></a>comportamento padrão de palavra-chave volátil
 
-O compilador MSVC dá suporte a duas interpretações `volatile` diferentes do qualificador de armazenamento que você pode especificar usando opções de compilador. O comutador [/volatile: MS](reference/volatile-volatile-keyword-interpretation.md) seleciona a semântica volátil estendida da Microsoft que garante uma ordenação forte, como foi o caso tradicional para x86 e x64 devido ao modelo de memória forte nessas arquiteturas. O comutador [/volatile: ISO](reference/volatile-volatile-keyword-interpretation.md) seleciona a semântica volátil padrão do C++, que não garante a ordenação forte.
+O compilador MSVC dá suporte a duas interpretações diferentes do **`volatile`** qualificador de armazenamento que você pode especificar usando opções de compilador. O comutador [/volatile: MS](reference/volatile-volatile-keyword-interpretation.md) seleciona a semântica volátil estendida da Microsoft que garante uma ordenação forte, como foi o caso tradicional para x86 e x64 devido ao modelo de memória forte nessas arquiteturas. O comutador [/volatile: ISO](reference/volatile-volatile-keyword-interpretation.md) seleciona a semântica volátil padrão do C++, que não garante a ordenação forte.
 
-Na arquitetura ARM, o padrão é **/volatile: ISO** , pois os processadores ARM têm um modelo de memória de ordem fraco, e como o software ARM não tem um herdado de depender da semântica estendida de **/volatile: MS** e normalmente não tem que fazer a interface com o software que o faz. No entanto, às vezes é conveniente ou até mesmo necessário compilar um programa ARM para usar a semântica estendida. Por exemplo, pode ser muito dispendioso para portar um programa para usar a semântica ISO C++, ou o software de driver pode ter que aderir à semântica tradicional para funcionar corretamente. Nesses casos, você pode usar o comutador **/volatile: MS** ; no entanto, para recriar a semântica volátil tradicional em destinos ARM, o compilador deve inserir barreiras de memória em cada leitura ou gravação `volatile` de uma variável para impor uma ordenação forte, o que pode ter um impacto negativo no desempenho.
+Na arquitetura ARM, o padrão é **/volatile: ISO** , pois os processadores ARM têm um modelo de memória de ordem fraco, e como o software ARM não tem um herdado de depender da semântica estendida de **/volatile: MS** e normalmente não tem que fazer a interface com o software que o faz. No entanto, às vezes é conveniente ou até mesmo necessário compilar um programa ARM para usar a semântica estendida. Por exemplo, pode ser muito dispendioso para portar um programa para usar a semântica ISO C++, ou o software de driver pode ter que aderir à semântica tradicional para funcionar corretamente. Nesses casos, você pode usar o comutador **/volatile: MS** ; no entanto, para recriar a semântica volátil tradicional em destinos ARM, o compilador deve inserir barreiras de memória em cada leitura ou gravação de uma **`volatile`** variável para impor uma ordenação forte, o que pode ter um impacto negativo no desempenho.
 
 Nas arquiteturas x86 e x64, o padrão é **/volatile: MS** porque grande parte do software que já foi criado para essas arquiteturas usando o MSVC depende deles. Ao compilar programas x86 e x64, você pode especificar a opção **/volatile: ISO** para ajudar a evitar a dependência desnecessária da semântica volátil tradicional e promover a portabilidade.
 

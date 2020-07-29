@@ -1,6 +1,6 @@
 ---
 title: MakeStaticAnalyzerGroup
-description: A referência da função C++ Build Insights SDK MakeStaticAnalyzerGroup.
+description: A referência da função MakeStaticAnalyzerGroup do SDK do insights de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 72f7f5d7a408436902394451a52dd66efe1d93f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81c5654c78e086af1c33d0791768ceea52575c51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323938"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224169"
 ---
 # <a name="makestaticanalyzergroup"></a>MakeStaticAnalyzerGroup
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A `MakeStaticAnalyzerGroup` função é usada para criar um grupo analisador estático que pode ser passado para funções como [Analisar](analyze.md) ou [Relog](relog.md). Os membros de um grupo de analisadores recebem eventos um a um da esquerda para a direita, até que todos os eventos em um rastreamento sejam analisados.
+A `MakeStaticAnalyzerGroup` função é usada para criar um grupo de analisador estático que pode ser passado para funções como [`Analyze`](analyze.md) ou [`Relog`](relog.md) . Os membros de um grupo do Analyzer recebem eventos um por um da esquerda para a direita, até que todos os eventos em um rastreamento sejam analisados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,20 +34,20 @@ template <typename... TAnalyzerPtrs>
 auto MakeStaticAnalyzerGroup(TAnalyzerPtrs... analyzers);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TAnalyzerPtrs*\
-Este parâmetro é sempre deduzido.
+Esse parâmetro é sempre deduzido.
 
 *Analisadores*\
-Um pacote de parâmetros de ponteiros [IAnalyzer](../other-types/ianalyzer-class.md) incluídos no grupo analisador estático. Estes ponteiros podem `std::unique_ptr`ser `std::shared_ptr`crus, ou .
+Um pacote de parâmetros de [`IAnalyzer`](../other-types/ianalyzer-class.md) ponteiros incluídos no grupo do analisador estático. Esses ponteiros podem ser brutos, `std::unique_ptr` ou `std::shared_ptr` .
 
 ### <a name="return-value"></a>Valor retornado
 
-Um grupo de analisadores estáticos. Use a **palavra-chave automática** para capturar o valor de retorno.
+Um grupo de analisador estático. Use a **`auto`** palavra-chave para capturar o valor de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-Ao contrário dos grupos de analisadores dinâmicos, os membros de um grupo analisador estático devem ser conhecidos no momento da compilação. Além disso, um grupo de analisadores estáticos contém ponteiros [IAnalyzer](../other-types/ianalyzer-class.md) que não têm comportamento polimórfico. Ao usar um grupo de analisador estático para analisar um rastreamento de `IAnalyzer` Rastreamento de Eventos para Windows (ETW), as chamadas para a interface sempre resolvem o objeto diretamente apontado pelo membro do grupo analisador. Essa perda de flexibilidade vem com a possibilidade de tempos de processamento de eventos mais rápidos. Se os membros de um grupo analisador não puderem ser conhecidos no momento `IAnalyzer` da compilação ou se você precisar de comportamento polimórfico em seus ponteiros, considere usar um grupo analisador dinâmico. Para usar um grupo de analisadores dinâmicos, ligue para [o MakeDynamicAnalyzerGroup.](make-static-analyzer-group.md)
+Ao contrário dos grupos do analisador dinâmico, os membros de um grupo do analisador estático devem ser conhecidos no momento da compilação. Além disso, um grupo de analisador estático contém [`IAnalyzer`](../other-types/ianalyzer-class.md) ponteiros que não têm comportamento polimórfico. Ao usar um grupo do analisador estático para analisar um rastreamento do ETW (rastreamento de eventos para Windows), as chamadas para a `IAnalyzer` interface sempre são resolvidas para o objeto diretamente apontado pelo membro do grupo do Analyzer. Essa perda de flexibilidade vem com uma possibilidade de tempos de processamento mais rápidos de eventos. Se os membros de um grupo do analisador não puderem ser conhecidos no momento da compilação ou se você precisar de comportamento polimórfico em seus `IAnalyzer` ponteiros, considere usar um grupo do analisador dinâmico. Para usar um grupo do analisador dinâmico, chame [`MakeDynamicAnalyzerGroup`](make-static-analyzer-group.md) em vez disso.
 
 ::: moniker-end

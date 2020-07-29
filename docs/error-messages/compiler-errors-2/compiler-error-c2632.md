@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
-ms.openlocfilehash: f69d43bf50f5f13957e49d1e9ffa798a3db5a7b3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8ea3a106e8819bf067203f220ca51e17b87bfe46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754687"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225456"
 ---
 # <a name="compiler-error-c2632"></a>Erro do compilador C2632
 
@@ -26,7 +26,7 @@ O exemplo a seguir gera C2632:
 int float i;   // C2632
 ```
 
-Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003. `bool` agora é um tipo adequado. Nas versões anteriores, `bool` era um typedef, e você poderia criar identificadores com esse nome.
+Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003. **`bool`** Agora é um tipo adequado. Em versões anteriores, **`bool`** era um typedef, e você poderia criar identificadores com esse nome.
 
 O exemplo a seguir gera C2632:
 

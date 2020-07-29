@@ -9,20 +9,20 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0c411289745466bd6478cc82ab30e6a05be9cc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169325"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191996"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Passando para rótulos no assembly embutido
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-Como um C ou C++ rótulo comum, um rótulo em um bloco de `__asm` tem um escopo em toda a função na qual ele está definido (não apenas no bloco). As instruções de assembly e as instruções `goto` podem ir para rótulos dentro ou fora do bloco de `__asm`.
+Como um rótulo C ou C++ comum, um rótulo em um **`__asm`** bloco tem um escopo em toda a função na qual ele está definido (não apenas no bloco). Ambas as instruções de assembly e **`goto`** instruções podem ir para rótulos dentro ou fora do **`__asm`** bloco.
 
-Rótulos definidos em blocos de `__asm` não diferenciam maiúsculas de minúsculas; as instruções `goto` e instruções de assembly podem se referir a esses rótulos sem considerar maiúsculas e minúsculas. C e C++ rótulos diferenciam maiúsculas de minúsculas somente quando usados por instruções `goto`. Instruções de assembly podem ir para um C C++ ou rótulo sem considerar maiúsculas e minúsculas.
+Rótulos definidos em **`__asm`** blocos não diferenciam maiúsculas de minúsculas; ambas as instruções **`goto`** e instruções de assembly podem se referir a esses rótulos sem considerar maiúsculas e minúsculas. Os rótulos C e C++ diferenciam maiúsculas de minúsculas somente quando usados por **`goto`** instruções. Instruções de assembly podem ir para um rótulo C ou C++ sem considerar maiúsculas e minúsculas.
 
 O código a seguir mostra todas as permutas:
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-Não use nomes de função de biblioteca C como rótulos em blocos de `__asm`. Por exemplo, você pode estar tentado a usar `exit` como um rótulo, da seguinte maneira:
+Não use nomes de função de biblioteca C como rótulos em **`__asm`** blocos. Por exemplo, você pode estar tentado a usar `exit` como um rótulo, da seguinte maneira:
 
 ```cpp
 ; BAD TECHNIQUE: using library function name as label
@@ -68,7 +68,7 @@ exit:
 
 Como **Exit** é o nome de uma função da biblioteca C, esse código pode causar um salto para a função **Exit** em vez de para o local desejado.
 
-Como nos programas MASM, o símbolo de dólar (`$`) serve como o contador de local atual. É um rótulo para a instrução que está sendo montada no momento. Em blocos de `__asm`, seu principal uso é fazer saltos condicionais longos:
+Como nos programas MASM, o símbolo de dólar ( `$` ) serve como o contador de local atual. É um rótulo para a instrução que está sendo montada no momento. Em **`__asm`** blocos, seu principal uso é fazer saltos condicionais longos:
 
 ```cpp
    jne $+5 ; next instruction is 5 bytes long
@@ -79,7 +79,7 @@ Como nos programas MASM, o símbolo de dólar (`$`) serve como o contador de loc
 farlabel:
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915088"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234192"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-Converte um número **duplo** em uma cadeia de caracteres. Uma versão mais segura dessa função está disponível. Consulte [_ecvt_s](ecvt-s.md).
+Converte um **`double`** número em uma cadeia de caracteres. Uma versão mais segura dessa função está disponível. Consulte [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -51,7 +51,7 @@ char *_ecvt(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value*<br/>
 Número a ser convertido.
@@ -62,7 +62,7 @@ Número de dígitos armazenados.
 *dez*<br/>
 Posição do ponto decimal armazenada.
 
-*Assine*<br/>
+*sign*<br/>
 Sinal do número convertido.
 
 ## <a name="return-value"></a>Valor retornado
@@ -125,7 +125,7 @@ source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 ## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

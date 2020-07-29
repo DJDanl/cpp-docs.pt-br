@@ -24,12 +24,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946026"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188993"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
@@ -50,18 +50,18 @@ int vswscanf_s(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Dados armazenados
 
 *format*<br/>
 Cadeia de caracteres de controle de formato. Para obter mais informações, consulte [Campos de especificação de formato: funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*arglist*<br/>
+*Arglist*<br/>
 Lista de argumentos variáveis.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão.
 
@@ -71,18 +71,18 @@ Para obter mais informações sobre esses e outros códigos de erro, consulte [e
 
 ## <a name="remarks"></a>Comentários
 
-A função **vsscanf_s** lê dados do *buffer* para os locais que são fornecidos por cada argumento na lista de argumentos *Arglist* . Os argumentos na lista de argumentos especificam ponteiros para variáveis que têm um tipo que corresponde a um especificador de tipo no *formato*. Ao contrário da versão menos segura **vsscanf**, um parâmetro de tamanho de buffer é necessário quando você usa os caracteres de campo de tipo **c**, **c**, **s**, **s**ou conjuntos de controle de cadeia de caracteres que estão entre **[]** . O tamanho do buffer em caracteres deve ser fornecido como um parâmetro adicional imediatamente após cada parâmetro de buffer que precisa dele.
+A função **vsscanf_s** lê dados do *buffer* para os locais que são fornecidos por cada argumento na lista de argumentos *Arglist* . Os argumentos na lista de argumentos especificam ponteiros para variáveis que têm um tipo que corresponde a um especificador de tipo no *formato*. Ao contrário da versão menos segura **vsscanf**, um parâmetro de tamanho de buffer é necessário quando você usa os caracteres de campo de tipo **c**, **c**, **s**, **s**ou conjuntos de controle de cadeia de caracteres que estão entre **[]**. O tamanho do buffer em caracteres deve ser fornecido como um parâmetro adicional imediatamente após cada parâmetro de buffer que precisa dele.
 
 O tamanho do buffer inclui o nulo de terminação. Um campo de especificação de largura pode ser usado para garantir que o token lido caiba no buffer. Se nenhum campo de especificação de largura for usado e o token lido for muito grande para caber no buffer, nada será gravado no buffer.
 
 Para obter mais informações, consulte os caracteres de campo do tipo [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo não **assinado**, não **size_t**.
+> O parâmetro Size é do tipo **`unsigned`** , não **size_t**.
 
 O argumento *Format* controla a interpretação dos campos de entrada e tem a mesma forma e função que o argumento de *formato* para a função **scanf_s** . Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-**vswscanf_s** é uma versão de caractere largo do **vsscanf_s**; os argumentos para **vswscanf_s** são cadeias de caracteres largos. **vsscanf_s** não manipula caracteres hexadecimais multibyte. **vswscanf_s** não manipula caracteres hexadecimais Unicode de largura inteira ou "zona de compatibilidade". Caso contrário, **vswscanf_s** e **vsscanf_s** se comportam de forma idêntica.
+**vswscanf_s** é uma versão de caractere largo do **vsscanf_s**; os argumentos para **vswscanf_s** são cadeias de caracteres largos. **vsscanf_s** não trata caracteres hexadecimais multibyte. **vswscanf_s** não trata os caracteres hexadecimais de largura inteira Unicode ou "zona de compatibilidade". Caso contrário, **vswscanf_s** e **vsscanf_s** se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -97,7 +97,7 @@ O argumento *Format* controla a interpretação dos campos de entrada e tem a me
 |**vsscanf_s**|\<stdio.h>|
 |**vswscanf_s**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -151,11 +151,11 @@ Integer:  = 15
 Real:     = 15.000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf, vswscanf](vsscanf-vswscanf.md)<br/>

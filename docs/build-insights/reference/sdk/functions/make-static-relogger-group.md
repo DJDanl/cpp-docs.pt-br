@@ -1,6 +1,6 @@
 ---
 title: MakeStaticReloggerGroup
-description: A referência de função C++ Build Insights SDK MakeStaticReloggerGroup.
+description: A referência da função MakeStaticReloggerGroup do SDK do insights de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 75b638537cb8e0cdeeb5476a3f5277e8e90d9baf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b74ee778ffafbcb4c292b4b36b309d5ff4d66c27
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323908"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224156"
 ---
 # <a name="makestaticreloggergroup"></a>MakeStaticReloggerGroup
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A `MakeStaticReloggerGroup` função é usada para criar um grupo de relogger estático que pode ser passado para funções como [Relog](relog.md). Membros de um grupo de relogger recebem eventos um a um da esquerda para a direita até que todos os eventos em um traço tenham sido processados.
+A `MakeStaticReloggerGroup` função é usada para criar um grupo de reagente estático que pode ser passado para funções como [relog](relog.md). Os membros de um grupo de relogger recebem eventos um por um da esquerda para a direita até que todos os eventos em um rastreamento tenham sido processados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,20 +34,20 @@ template <typename... TReloggerPtrs>
 auto MakeStaticReloggerGroup(TReloggerPtrs... reloggers);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TReloggerPtrs*\
-Este parâmetro é sempre deduzido.
+Esse parâmetro é sempre deduzido.
 
-*reloggers*\
-Um pacote de parâmetros de ponteiros [IRelogger](../other-types/irelogger-class.md) incluídos no grupo relogger estático. Estes ponteiros podem `std::unique_ptr`ser `std::shared_ptr`crus, ou . Os ponteiros [IAnalyzer](../other-types/ianalyzer-class.md) também são considerados `IRelogger` ponteiros por causa de uma relação de herança.
+*reagentes*\
+Um pacote de parâmetros de [`IRelogger`](../other-types/irelogger-class.md) ponteiros que é incluído no grupo de reagente estático. Esses ponteiros podem ser brutos, `std::unique_ptr` ou `std::shared_ptr` . [`IAnalyzer`](../other-types/ianalyzer-class.md)os ponteiros também são considerados `IRelogger` ponteiros devido a uma relação de herança.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um grupo de relogger estático. Use a **palavra-chave automática** para capturar o valor de retorno.
+Um grupo de reagente estático. Use a **`auto`** palavra-chave para capturar o valor de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-Ao contrário dos grupos de relogger dinâmicos, os membros de um grupo de relogger estático devem ser conhecidos no momento da compilação. Além disso, um grupo de relogger estático contém ponteiros [IRelogger](../other-types/irelogger-class.md) que não têm comportamento polimórfico. Ao usar um grupo de relogger estático para analisar um rastreamento de `IRelogger` Rastreamento de Eventos para Windows (ETW), as chamadas para a interface sempre resolvem o objeto diretamente apontado pelo membro do grupo relogger. Essa perda de flexibilidade vem com a possibilidade de tempos de processamento de eventos mais rápidos. Se os membros de um grupo de relogger não puderem ser conhecidos no `IRelogger` momento da compilação ou se você precisar de comportamento polimórfico em seus ponteiros, considere usar um grupo de relogger dinâmico. Você pode usar um grupo de relogger dinâmico chamando [o MakeDynamicReloggerGroup](make-dynamic-relogger-group.md) em vez disso.
+Diferentemente dos grupos de relogger dinâmicos, os membros de um grupo de reagente estático devem ser conhecidos no momento da compilação. Além disso, um grupo de reagente estático contém [`IRelogger`](../other-types/irelogger-class.md) ponteiros que não têm comportamento polimórfico. Ao usar um grupo de relogger estático para analisar um rastreamento de ETW (rastreamento de eventos para Windows), as chamadas para a `IRelogger` interface sempre são resolvidas para o objeto apontado diretamente pelo membro do grupo de relogger. Essa perda de flexibilidade vem com uma possibilidade de tempos de processamento mais rápidos de eventos. Se os membros de um grupo de relogger não puderem ser conhecidos no momento da compilação ou se você precisar de comportamento polimórfico em seus `IRelogger` ponteiros, considere o uso de um grupo de reagente dinâmico. Você pode usar um grupo de relogger dinâmico chamando [`MakeDynamicReloggerGroup`](make-dynamic-relogger-group.md) em vez disso.
 
 ::: moniker-end

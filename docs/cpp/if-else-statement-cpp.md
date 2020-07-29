@@ -1,7 +1,7 @@
 ---
 title: Instrução if-else (C++)
 ms.date: 07/20/2019
-description: Use as instruções if-else C++ no para controlar a ramificação condicional.
+description: Use as instruções if-else em C++ para controlar a ramificação condicional.
 f1_keywords:
 - else_cpp
 - if_cpp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: fd2736d80d68249773c9aa6cf7cb9edffdaadac4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a9256e32c89890635c5473a85b4bb3b56bec26d4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178425"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187563"
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
 
-Controla a ramificação condicional. As instruções em *If-Block* serão executadas somente se a *expressão If* for avaliada como um valor diferente de zero (ou true). Se o valor de *expression* for diferente de zero, *instrução1* e quaisquer outras instruções no bloco serão executadas e o else-Block, se presente, será ignorado. Se o valor de *expression* for zero, o If-Block será ignorado e o else-Block, se presente, será executado. Expressões que são avaliadas como não zero são
+Controla a ramificação condicional. As instruções em *If-Block* serão executadas somente se a *expressão If* for avaliada como um valor diferente de zero (ou **`true`** ). Se o valor de *expression* for diferente de zero, *instrução1* e quaisquer outras instruções no bloco serão executadas e o else-Block, se presente, será ignorado. Se o valor de *expression* for zero, o If-Block será ignorado e o else-Block, se presente, será executado. Expressões que são avaliadas como não zero são
 
-- TRUE
+- **`true`**
 - um ponteiro não nulo,
 - qualquer valor aritmético diferente de zero ou
 - um tipo de classe que define uma conversão não ambígua para um tipo aritmético, booliano ou de ponteiro. (Para obter informações sobre conversões, consulte [conversões padrão](../cpp/standard-conversions.md).)
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>instrução If com um inicializador
 
-**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): uma instrução **If** também pode conter uma expressão que declara e Inicializa uma variável nomeada. Use essa forma da instrução If-quando a variável só for necessária dentro do escopo do bloco If.
+**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): uma **`if`** instrução também pode conter uma expressão que declara e Inicializa uma variável nomeada. Use essa forma da instrução If-quando a variável só for necessária dentro do escopo do bloco If.
 
 ## <a name="example"></a>Exemplo
 
@@ -159,11 +159,11 @@ int main()
 }
 ```
 
-Em todas as formas da instrução **If** , a *expressão*, que pode ter qualquer valor, exceto uma estrutura, é avaliada, incluindo todos os efeitos colaterais. O controle passa da instrução **If** para a próxima instrução no programa, a menos que um dos s da *instrução*contenha um [Break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md).
+Em todos os formulários da **`if`** instrução, *expressão*, que pode ter qualquer valor, exceto uma estrutura, é avaliada, incluindo todos os efeitos colaterais. O controle passa da **`if`** instrução para a próxima instrução no programa, a menos que um dos s da *instrução*contenha um [Break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md).
 
-A cláusula **else** de uma instrução `if...else` é associada à instrução **If** anterior mais próxima no mesmo escopo que não tem uma instrução **else** correspondente.
+A **`else`** cláusula de uma `if...else` instrução é associada à instrução anterior mais próxima **`if`** no mesmo escopo que não tem uma **`else`** instrução correspondente.
 
-## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> se as instruções constexpr
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">instruções constexpr If
 
 **Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): em modelos de função, você pode usar uma instrução **If constexpr** para tomar decisões de ramificação em tempo de compilação sem a necessidade de recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função que manipula o desempacotamento de parâmetro (nenhuma sobrecarga de parâmetro zero é necessária):
 

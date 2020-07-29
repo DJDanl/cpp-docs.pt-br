@@ -1,24 +1,24 @@
 ---
-title: 'Como: Usar propriedades no C++/CLI'
+title: Como usar propriedades em C++/CLI
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447317"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225664"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Como: Usar propriedades no C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>Como usar propriedades em C++/CLI
 
-Este artigo mostra como usar propriedades no C++/CLI.
+Este artigo mostra como usar propriedades em C++/CLI.
 
 ## <a name="basic-properties"></a>Propriedades básicas
 
-Para propriedades básicas — aqueles que simplesmente atribuem e recuperam um membro de dados privada — você não precisa explicitamente definir get e funções do acessador porque o compilador fornece automaticamente a eles quando é fornecido apenas o tipo de dados da propriedade. Esse código demonstra uma propriedade básica:
+Para propriedades básicas — aquelas que meramente atribuem e recuperam um membro de dados privados — você não precisa definir explicitamente as funções Get e set acessador porque o compilador as fornece automaticamente quando recebe apenas o tipo de dados da propriedade. Esse código demonstra uma propriedade básica:
 
 ```cpp
 // SimpleProperties.cpp
@@ -43,7 +43,7 @@ c->Size = 111
 
 ## <a name="static-properties"></a>Propriedades estáticas
 
-Este exemplo de código mostra como declarar e usar uma propriedade estática.  Uma propriedade estática só pode acessar os membros estáticos de sua classe.
+Este exemplo de código mostra como declarar e usar uma propriedade estática.  Uma propriedade estática só pode acessar membros estáticos de sua classe.
 
 ```cpp
 // mcppv2_property_3.cpp
@@ -84,13 +84,13 @@ int main() {
 
 ## <a name="indexed-properties"></a>Propriedades indexadas
 
-Uma propriedade indexada normalmente expõe uma estrutura de dados que é acessada por meio de um operador de subscrito.
+Uma propriedade indexada normalmente expõe uma estrutura de dados que é acessada usando um operador subscrito.
 
-Se você usar uma propriedade indexada padrão, você pode acessar a estrutura de dados simplesmente fazendo referência ao nome da classe, mas se você usar uma propriedade indexada definida pelo usuário, você deve para especificar o nome da propriedade para acessar a estrutura de dados.
+Se você usar uma propriedade indexada padrão, poderá acessar a estrutura de dados apenas referindo-se ao nome da classe, mas se você usar uma propriedade indexada definida pelo usuário, deverá especificar o nome da propriedade para acessar a estrutura de dados.
 
-Para obter informações sobre como consumir um indexador que é escrito em C#, consulte [como: Consumir um C# indexador (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Para obter informações sobre como consumir um indexador escrito em C#, consulte [como: consumir um indexador C# (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
-Este exemplo de código mostra como usar propriedades indexadas definidas pelo usuário e o padrão:
+Este exemplo de código mostra como usar as propriedades indexadas padrão e definidas pelo usuário:
 
 ```cpp
 // mcppv2_property_2.cpp
@@ -153,7 +153,7 @@ int main() {
 [ 0 2 4 6 8 ]
 ```
 
-O próximo exemplo mostra como chamar o indexador padrão usando o `this` ponteiro.
+O exemplo a seguir mostra como chamar o indexador padrão usando o **`this`** ponteiro.
 
 ```cpp
 // call_default_indexer_through_this_pointer.cpp
@@ -193,7 +193,7 @@ public ref struct Squares {
 };
 ```
 
-O exemplo a seguir consome os metadados que é criado no exemplo anterior.
+O próximo exemplo consome os metadados que são criados no exemplo anterior.
 
 ```cpp
 // consume_default_indexer.cpp
@@ -259,9 +259,9 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Propriedades abstratas e seladas
 
-Embora o [abstrata](../extensions/abstract-cpp-component-extensions.md) e [lacrado](../extensions/sealed-cpp-component-extensions.md) palavras-chave são especificadas como válidos da ECMA C++especificação /CLI, para o Microsoft C++ compilador, você não é possível especificá-los nas propriedades triviais, nem no a declaração de propriedade de uma propriedade não trivial.
+Embora as palavras-chave [abstract](../extensions/abstract-cpp-component-extensions.md) e [sealed](../extensions/sealed-cpp-component-extensions.md) sejam especificadas como válidas na especificação ECMA C++/CLI, para o compilador Microsoft C++, você não pode especificá-las em Propriedades triviais nem na declaração de propriedade de uma propriedade não trivial.
 
-Para declarar uma propriedade selada ou abstrata, você deve definir uma propriedade não trivial e, em seguida, especifique o `abstract` ou `sealed` palavra-chave em get e funções do acessador do conjunto.
+Para declarar uma propriedade sealed ou abstract, você deve definir uma propriedade não trivial e, em seguida, especificar a **`abstract`** **`sealed`** palavra-chave or nas funções Get e set do acessador.
 
 ```cpp
 // properties_abstract_sealed.cpp
@@ -326,7 +326,7 @@ int main() {
 
 ## <a name="multidimensional-properties"></a>Propriedades multidimensionais
 
-Você pode usar propriedades multidimensionais para definir métodos de acessador de propriedade que usam um número fora do padrão de parâmetros.
+Você pode usar Propriedades multidimensionais para definir métodos de acessador de propriedade que usam um número não padrão de parâmetros.
 
 ```cpp
 // mcppv2_property_5.cpp
@@ -368,9 +368,9 @@ int main() {
 1.1
 ```
 
-## <a name="overloading-property-accessors"></a>Sobrecarga de acessadores de propriedade
+## <a name="overloading-property-accessors"></a>Sobrecarregando acessadores de propriedade
 
-O exemplo a seguir mostra como sobrecarregar propriedades indexadas.
+O exemplo a seguir mostra como sobrecarregar Propriedades indexadas.
 
 ```cpp
 // mcppv2_property_6.cpp
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[propriedade](../extensions/property-cpp-component-extensions.md)
+[property](../extensions/property-cpp-component-extensions.md)

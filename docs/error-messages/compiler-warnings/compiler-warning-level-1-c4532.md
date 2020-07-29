@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: 97ef7093aa56b41b869979e09d77fc448c6cf43d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b8c7503c7d1c1b711006415a327c360731222042
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186433"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196338"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>Aviso do compilador (nível 1) C4532
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186433"
 
 O compilador encontrou uma das seguintes palavras-chave:
 
-- [continue](../../cpp/continue-statement-cpp.md)
+- [continua](../../cpp/continue-statement-cpp.md)
 
 - [break](../../cpp/break-statement-cpp.md)
 
@@ -27,9 +27,9 @@ O compilador encontrou uma das seguintes palavras-chave:
 
 fazendo com que um salto saia de um bloco de [__finally](../../cpp/try-finally-statement.md) ou [finally](../../dotnet/finally.md) durante o encerramento anormal.
 
-Se ocorrer uma exceção e enquanto a pilha estiver sendo desfeita durante a execução dos manipuladores de terminação (os blocos `__finally` ou finally) e seu código sair de um bloco de `__finally` antes de o bloco de `__finally` terminar, o comportamento será indefinido. O controle não pode retornar ao código de desenrolamento, portanto, a exceção pode não ser manipulada corretamente.
+Se ocorrer uma exceção e enquanto a pilha estiver sendo desbobinada durante a execução dos manipuladores de encerramento (os **`__finally`** blocos ou finally) e o código sair de um **`__finally`** bloco antes de o **`__finally`** bloco terminar, o comportamento será indefinido. O controle não pode retornar ao código de desenrolamento, portanto, a exceção pode não ser manipulada corretamente.
 
-Se você precisar sair de um bloco de **__finally** , verifique a conclusão anormal primeiro.
+Se você precisar sair de um **`__finally`** bloco, verifique a conclusão anormal primeiro.
 
 O exemplo a seguir gera C4532; Basta comentar as instruções de salto para resolver os avisos.
 

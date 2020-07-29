@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926096"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231033"
 ---
 # <a name="virtual-functions"></a>Funções virtuais
 
@@ -140,9 +140,9 @@ Invoked by Derived
 
 Observe que, independentemente da função `NameOf` ser chamada por um ponteiro para `Base` ou um ponteiro para `Derived`, ela chama a função para `Derived`. Ela chama a função para `Derived` porque `NameOf` é uma função virtual, e `pBase` e `pDerived` apontam para um objeto do tipo `Derived`.
 
-Como as funções virtuais são chamadas apenas para objetos de tipos de classe, você não pode declarar funções globais ou estáticas como **virtuais**.
+Como as funções virtuais são chamadas apenas para objetos de tipos de classe, você não pode declarar funções globais ou estáticas como **`virtual`** .
 
-A palavra-chave **virtual** pode ser usada ao declarar funções de substituição em uma classe derivada, mas é desnecessária; as substituições de funções virtuais são sempre virtuais.
+A **`virtual`** palavra-chave pode ser usada ao declarar funções de substituição em uma classe derivada, mas é desnecessária; as substituições de funções virtuais são sempre virtuais.
 
 As funções virtuais em uma classe base devem ser definidas, a menos que sejam declaradas usando o *especificador puro*. (Para obter mais informações sobre funções virtuais puras, consulte [classes abstratas](../cpp/abstract-classes-cpp.md).)
 

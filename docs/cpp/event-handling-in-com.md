@@ -16,35 +16,35 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: 756fb6f17aa02fda9a19d501395c39a0b1f602f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be71bd9eac44c51a2e6a7cdeb925a1ca0b8b5dfb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366313"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231202"
 ---
 # <a name="event-handling-in-com"></a>Tratamento de eventos em COM
 
-No manuseio de eventos COM, você configura uma fonte de evento e receptor de `type` = `com`eventos usando os atributos [event_source](../windows/attributes/event-source.md) e [event_receiver,](../windows/attributes/event-receiver.md) respectivamente, especificando . Esses atributos injetam o código apropriado para interfaces personalizadas, duais e de expedição a fim de permitir que as classes às quais são aplicados acionem eventos e manipulem eventos por meio de pontos de conexão COM.
+Na manipulação de eventos COM, você configura uma origem de evento e um receptor de evento usando os atributos [EVENT_SOURCE](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) , respectivamente, especificando `type` = `com` . Esses atributos injetam o código apropriado para interfaces personalizadas, duais e de expedição a fim de permitir que as classes às quais são aplicados acionem eventos e manipulem eventos por meio de pontos de conexão COM.
 
 ## <a name="declaring-events"></a>Declarando eventos
 
-Em uma classe de origem de evento, use a [palavra-chave __event](../cpp/event.md) em uma declaração de interface para declarar os métodos dessa interface como eventos. Os eventos dessa interface são acionados quando você os chama como métodos da interface. Métodos em interfaces de eventos podem ter parâmetros zero ou mais (que devem estar todos *em* parâmetros). O tipo de retorno pode ser void ou qualquer tipo integral.
+Em uma classe de origem de evento, use a palavra-chave [__event](../cpp/event.md) em uma declaração de interface para declarar os métodos da interface como eventos. Os eventos dessa interface são acionados quando você os chama como métodos da interface. Métodos em interfaces de evento podem ter zero ou mais parâmetros (que devem estar todos *em* parâmetros). O tipo de retorno pode ser void ou qualquer tipo integral.
 
 ## <a name="defining-event-handlers"></a>Definindo manipuladores de eventos
 
-Em uma classe de receptor de evento, você define manipuladores de eventos, que são métodos com assinaturas (tipos de retorno, convenções de chamada e argumentos) que correspondem ao evento que eles manipularão. Para eventos COM, as convenções de convocação não têm de combinar; consulte [Layout Dependente COM Eventos](#vcconeventhandlingincomanchorlayoutdependentcomevents) abaixo para obter detalhes.
+Em uma classe de receptor de evento, você define manipuladores de eventos, que são métodos com assinaturas (tipos de retorno, convenções de chamada e argumentos) que correspondem ao evento que eles manipularão. Para eventos COM, as convenções de chamada não precisam corresponder; consulte [eventos com dependentes de layout](#vcconeventhandlingincomanchorlayoutdependentcomevents) abaixo para obter detalhes.
 
 ## <a name="hooking-event-handlers-to-events"></a>Vinculando manipuladores de eventos a eventos
 
-Também em uma classe receptora de eventos, você usa a função intrínseca [__hook](../cpp/hook.md) para associar eventos com manipuladores de eventos e [__unhook](../cpp/unhook.md) para dissociar eventos de manipuladores de eventos. Você pode vincular diversos eventos a um manipulador ou vincular diversos manipuladores a um evento.
+Também em uma classe receptora de eventos, você usa a função intrínseca [__hook](../cpp/hook.md) para associar eventos a manipuladores de eventos e [__unhook](../cpp/unhook.md) para dissociar eventos de manipuladores de eventos. Você pode vincular diversos eventos a um manipulador ou vincular diversos manipuladores a um evento.
 
 > [!NOTE]
-> Normalmente, há duas técnicas para permitir que um receptor de evento COM acesse definições de interface de origem de evento. O primeiro, conforme mostrado abaixo, é compartilhar um arquivo de cabeçalho comum. A segunda é [#import](../preprocessor/hash-import-directive-cpp.md) usar `embedded_idl` #import com o qualificador de importação, para que a biblioteca do tipo de fonte do evento seja escrita no arquivo .tlh com o código gerado pelo atributo preservado.
+> Normalmente, há duas técnicas para permitir que um receptor de evento COM acesse definições de interface de origem de evento. O primeiro, conforme mostrado abaixo, é compartilhar um arquivo de cabeçalho comum. A segunda é usar [#import](../preprocessor/hash-import-directive-cpp.md) com o `embedded_idl` qualificador de importação, para que a biblioteca do tipo de origem do evento seja gravada no arquivo. tlh com o código gerado pelo atributo preservado.
 
 ## <a name="firing-events"></a>Acionando eventos
 
-Para disparar um evento, basta chamar um método na interface declarada com a **__event** palavra-chave na classe de origem do evento. Se houver manipuladores vinculados ao evento, eles serão chamados.
+Para acionar um evento, basta chamar um método na interface declarada com a **`__event`** palavra-chave na classe de origem do evento. Se houver manipuladores vinculados ao evento, eles serão chamados.
 
 ### <a name="com-event-code"></a>Código de evento COM
 
@@ -157,13 +157,13 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.
 ```
 
-## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Eventos com dependentes de layout
+## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Eventos COM dependentes de layout
 
 A dependência do layout só é um problema para a programação COM. Na manipulação de eventos nativos e gerenciados, as assinaturas (tipo de retorno, convenção de chamada e argumentos) dos manipuladores devem corresponder aos respectivos eventos, mas os nomes dos manipuladores não precisam corresponder aos respectivos eventos.
 
-No entanto, no manuseio de eventos COM, `event_receiver` quando você define o parâmetro *layout_dependent* de **verdade,** a correspondência de nome e assinatura é aplicada. Isso significa que os nomes e as assinaturas dos manipuladores no receptor de evento devem corresponder exatamente aos nomes e às assinaturas dos eventos aos quais estão vinculados.
+No entanto, na manipulação de eventos COM, quando você define o parâmetro *layout_dependent* de `event_receiver` como **`true`** , a correspondência de nome e assinatura é imposta. Isso significa que os nomes e as assinaturas dos manipuladores no receptor de evento devem corresponder exatamente aos nomes e às assinaturas dos eventos aos quais estão vinculados.
 
-Quando *layout_dependent* é definida como **falsa,** a convenção de chamadas e a classe de armazenamento (virtual, estática e assim por diante) podem ser misturadas e combinadas entre o método de evento de disparo e os métodos de gancho (seus delegados). É um pouco mais eficiente ter *layout_dependent*=**verdade.**
+Quando *layout_dependent* é definido como **`false`** , a Convenção de chamada e a classe de armazenamento (virtual, estática e assim por diante) podem ser misturadas e correspondidas entre o método de acionamento de evento e os métodos de conexão (seus delegados). É um pouco mais eficiente ter *layout_dependent* = **`true`** .
 
 Por exemplo, suponha que `IEventSource` esteja definido para ter os seguintes métodos:
 

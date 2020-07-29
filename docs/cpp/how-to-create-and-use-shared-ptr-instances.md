@@ -1,15 +1,15 @@
 ---
-title: Como criar e usar instâncias de shared_ptr
+title: 'Como: criar e usar instâncias shared_ptr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245826"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187953"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>Como criar e usar instâncias de shared_ptr
 
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>Exemplo 1
 
-Sempre que possível, use a função [make_shared](../standard-library/memory-functions.md#make_shared) para criar um `shared_ptr` quando o recurso de memória for criado pela primeira vez. `make_shared` é à prova de exceção. Ele usa a mesma chamada para alocar a memória para o bloco de controle e o recurso, que reduz a sobrecarga de construção. Se você não usar `make_shared`, deverá usar uma expressão `new` explícita para criar o objeto antes de passá-lo para o construtor `shared_ptr`. O exemplo a seguir mostra várias maneiras de declarar e inicializar um `shared_ptr` junto com um novo objeto.
+Sempre que possível, use a função [make_shared](../standard-library/memory-functions.md#make_shared) para criar um `shared_ptr` quando o recurso de memória for criado pela primeira vez. `make_shared` é à prova de exceção. Ele usa a mesma chamada para alocar a memória para o bloco de controle e o recurso, que reduz a sobrecarga de construção. Se você não usar `make_shared` , você precisará usar uma expressão explícita **`new`** para criar o objeto antes de passá-lo para o `shared_ptr` Construtor. O exemplo a seguir mostra várias maneiras de declarar e inicializar um `shared_ptr` junto com um novo objeto.
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -90,7 +90,7 @@ O exemplo a seguir mostra como declarar e inicializar instâncias `shared_ptr` q
 
 ## <a name="example-4"></a>Exemplo 4
 
-Você pode usar `dynamic_pointer_cast`, `static_pointer_cast` e `const_pointer_cast` para converter um `shared_ptr`. Essas funções se parecem com os operadores `dynamic_cast`, `static_cast` e `const_cast`. O exemplo a seguir mostra como testar o tipo derivado de cada elemento em um vetor de `shared_ptr` de classes base e, em seguida, copiar os elementos e exibir informações sobre eles.
+Você pode usar `dynamic_pointer_cast`, `static_pointer_cast` e `const_pointer_cast` para converter um `shared_ptr`. Essas funções são semelhantes aos **`dynamic_cast`** **`static_cast`** operadores, e **`const_cast`** . O exemplo a seguir mostra como testar o tipo derivado de cada elemento em um vetor de `shared_ptr` de classes base e, em seguida, copiar os elementos e exibir informações sobre eles.
 
 [!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
@@ -116,6 +116,6 @@ O exemplo a seguir mostra como `shared_ptr` sobrecarrega vários operadores de c
 
 [!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Ponteiros inteligentes (C++ moderno)](smart-pointers-modern-cpp.md)

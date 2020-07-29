@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988539"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230890"
 ---
 # <a name="call_in_appdomain-function"></a>Função call_in_appdomain
 
@@ -39,23 +39,23 @@ RetType call_in_appdomain(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*appdomainId*<br/>
+*AppDomainID*<br/>
 O AppDomain no qual chamar a função.
 
 *voidFunc*<br/>
-Ponteiro para uma função `void` que usa N parâmetros (0 < = N < = 15).
+Ponteiro para uma **`void`** função que usa N parâmetros (0 <= N <= 15).
 
 *nonvoidFunc*<br/>
-Ponteiro para uma função não`void` que usa N parâmetros (0 < = N < = 15).
+Ponteiro para uma não **`void`** função que usa N parâmetros (0 <= N <= 15).
 
-*arg1...argN*<br/>
+*arg1... argN*<br/>
 Zero a 15 parâmetros a serem passados para `voidFunc` ou `nonvoidFunc` no outro AppDomain.
 
 ## <a name="return-value"></a>Valor retornado
 
-O resultado da execução de `voidFunc` ou `nonvoidFunc` no domínio de aplicativo especificado.
+O resultado da execução `voidFunc` ou `nonvoidFunc` no domínio do aplicativo especificado.
 
 ## <a name="remarks"></a>Comentários
 
@@ -116,8 +116,8 @@ default appdomain id = 1
 appDomain1 id = 2
 ```
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Arquivo de cabeçalho** \<msclr\appdomain.h >
+**Arquivo de cabeçalho** \<msclr\appdomain.h>
 
 Msclr de **namespace**

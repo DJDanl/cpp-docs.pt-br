@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c827f811813091abc62d07f12ac387bc2a0a0cc5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177619"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231137"
 ---
 # <a name="primary-expressions"></a>Expressões primárias
 
@@ -28,9 +28,9 @@ name
 
 Um *literal* é uma expressão primária constante. Seu tipo depende da forma de sua especificação. Consulte [literais](../cpp/numeric-boolean-and-pointer-literals-cpp.md) para obter informações completas sobre como especificar literais.
 
-A palavra-chave **this** é um ponteiro para um objeto de classe. Ela está disponível nas funções membro não estáticas e aponta para a instância da classe para a qual a função foi invocada. A palavra-chave **this** não pode ser usada fora do corpo de uma função de membro de classe.
+A **`this`** palavra-chave é um ponteiro para um objeto de classe. Ela está disponível nas funções membro não estáticas e aponta para a instância da classe para a qual a função foi invocada. A **`this`** palavra-chave não pode ser usada fora do corpo de uma função de membro de classe.
 
-**O tipo do ponteiro é** `type` **\*const** (em que `type` é o nome da classe) dentro das funções que não modificam especificamente **o ponteiro.** O exemplo a seguir mostra declarações de função de membro e os tipos **disso:**
+O tipo do **`this`** ponteiro é `type` ** \* const** (em que `type` é o nome da classe) dentro das funções que não modificam especificamente o **`this`** ponteiro. O exemplo a seguir mostra declarações de função de membro e os tipos de **`this`** :
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-Consulte [esse ponteiro](this-pointer.md) para obter mais informações sobre como **Modificar o tipo do ponteiro.**
+Consulte [esse ponteiro](this-pointer.md) para obter mais informações sobre como modificar o tipo do **`this`** ponteiro.
 
 O operador de resolução de escopo (`::`) seguido por um nome constitui uma expressão primária.  Tais nomes devem estar no escopo global, não em nomes de membro.  O tipo dessa expressão é determinado pela declaração do nome. Será um l-value (isto é, pode aparecer à esquerda de uma expressão de operador de atribuição) se o nome declarativo for um l-value. O operador de resolução de escopo permite que um nome global seja referenciado, mesmo se esse nome estiver oculto no escopo atual. Consulte [escopo](../cpp/scope-visual-cpp.md) para obter um exemplo de como usar o operador de resolução de escopo.
 

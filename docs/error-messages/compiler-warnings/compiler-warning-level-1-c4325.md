@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: e0a13761b0657d054065358994638779817dad6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 551680bc1d24097200a1e641bc4238f883ad94dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163018"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230695"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Aviso do compilador (nível 1) C4325
 
@@ -25,13 +25,13 @@ Você não pode alterar os atributos de uma seção padrão. Por exemplo:
 #pragma section(".sdata", long)
 ```
 
-Isso substituiria a seção `.sdata` padrão que usa o tipo de dados **Short** com o tipo de dados **Long** .
+Isso substituiria a `.sdata` seção padrão que usa o **`short`** tipo de dados com o **`long`** tipo de dados.
 
 As seções padrão cujos atributos você não pode alterar incluem,
 
 - . Data
 
-- .sdata
+- . sdata
 
 - . BSS
 
@@ -43,7 +43,7 @@ As seções padrão cujos atributos você não pode alterar incluem,
 
 - .sconst
 
-- .rdata
+- . rdata
 
 - .srdata
 
@@ -51,4 +51,4 @@ Seções adicionais podem ser adicionadas posteriormente.
 
 ## <a name="see-also"></a>Confira também
 
-[seção](../../preprocessor/section.md)
+[Section](../../preprocessor/section.md)

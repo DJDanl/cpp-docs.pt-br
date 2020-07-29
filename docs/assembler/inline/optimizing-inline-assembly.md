@@ -8,20 +8,20 @@ helpviewer_keywords:
 - optimizing performance, inline assembly
 - __asm keyword [C++], optimizing
 ms.assetid: 52a7ec83-9782-4d96-94c1-53bb2ac9e8c8
-ms.openlocfilehash: 0051b16ddc19e233cfac2688c0b77e1e023f0833
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a558761ff49c2b508a5bad6172cda2283801e30e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169260"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191723"
 ---
 # <a name="optimizing-inline-assembly"></a>Otimizando o assembly embutido
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-A presença de um bloco de `__asm` em uma função afeta a otimização de várias maneiras. Primeiro, o compilador não tenta otimizar o bloco de `__asm` em si. O que você escreve na linguagem do assembly é exatamente o que você obtém. Em segundo lugar, a presença de um bloco de `__asm` afeta o armazenamento de variável de registro. O compilador evita o registro de variáveis em um bloco de `__asm` se o conteúdo do registro for alterado pelo bloco de `__asm`. Por fim, outras otimizações em toda a função serão afetadas pela inclusão da linguagem do assembly em uma função.
+A presença de um **`__asm`** bloco em uma função afeta a otimização de várias maneiras. Primeiro, o compilador não tenta otimizar o **`__asm`** próprio bloco. O que você escreve na linguagem do assembly é exatamente o que você obtém. Em segundo lugar, a presença de um **`__asm`** bloco afeta o armazenamento da variável de registro. O compilador evita o registro de variáveis em um **`__asm`** bloco se o conteúdo do registro for alterado pelo **`__asm`** bloco. Por fim, outras otimizações em toda a função serão afetadas pela inclusão da linguagem do assembly em uma função.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 

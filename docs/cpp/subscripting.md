@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2573f30b2dfee20d12afea2a1072bbdcef46228b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160886"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231072"
 ---
 # <a name="subscripting"></a>Subscrito
 
-O operador de subscrito ( **[]** ), como o operador de chamada de função, é considerado um operador binário. O operador subscrito deve ser uma função de membro não estático que usa um único argumento. Este argumento ou pode ser de qualquer tipo e designa o subscrito de matriz desejado.
+O operador de subscrito (**[]**), como o operador de chamada de função, é considerado um operador binário. O operador subscrito deve ser uma função de membro não estático que usa um único argumento. Este argumento ou pode ser de qualquer tipo e designa o subscrito de matriz desejado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar um vetor do tipo **int** que implementa a verificação de limites:
+O exemplo a seguir demonstra como criar um vetor do tipo **`int`** que implementa a verificação de limites:
 
 ```cpp
 // subscripting.cpp
@@ -97,4 +97,4 @@ Observe que o **operador function []** retorna um tipo de referência. Isso a to
 
 ## <a name="see-also"></a>Confira também
 
-[Sobrecarga de Operador](../cpp/operator-overloading.md)
+[Sobrecarga de operador](../cpp/operator-overloading.md)
