@@ -1,5 +1,5 @@
 ---
-title: Análise de código para CC++ /Warnings
+title: Análise de código para avisos C/C++
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - native code analysis
 - warnings, C/C++ analysis
 ms.assetid: 28f3fda6-35e8-485b-9755-1991aaccec3f
-ms.openlocfilehash: 781a904bed40a07a0448203b8887663f39caeed0
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 5562df8b6f0cfba6799e208acb9c1c223fb53e5e
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418924"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389968"
 ---
-# <a name="code-analysis-for-cc-warnings"></a>Análise de código para CC++ /Warnings
+# <a name="code-analysis-for-cc-warnings"></a>Análise de código para avisos C/C++
 
-Esta seção lista os avisosC++ de análise C/Code, exceto aqueles que são gerados pelos [ C++ verificadores de diretrizes principais](code-analysis-for-cpp-corecheck.md). Para obter informações sobre a análise de código, consulte [/Analyze (análise de código)](/cpp/build/reference/analyze-code-analysis) e [início rápido: análiseC++de código para C/](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Esta seção lista os avisos de análise de código do C/C++, exceto os que são gerados pelos [verificadores de diretrizes principais do C++](code-analysis-for-cpp-corecheck.md). Para obter informações sobre a análise de código, consulte [ `/analyze` (análise de código)](/cpp/build/reference/analyze-code-analysis) e [início rápido: análise de código para C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 ## <a name="see-also"></a>Confira também
 
-- [Analisando a qualidade do código do C/C++ usando a análise de código](../code-quality/code-analysis-for-c-cpp-overview.md)
+- [Como analisar a qualidade de código C/C++ usando a análise de código](../code-quality/code-analysis-for-c-cpp-overview.md)
 - [Usando anotações de SAL para reduzir defeitos de código do C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)

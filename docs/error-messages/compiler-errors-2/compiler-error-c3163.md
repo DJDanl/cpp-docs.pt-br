@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: 436fb112758dfdec9997ff7e6dd7ef8f9dcdc66e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 29f810ab1ab1608ab9c0492c9f88b8edfe042168
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761771"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390020"
 ---
 # <a name="compiler-error-c3163"></a>Erro do compilador C3163
 
-' Construct ': atributos inconsistentes com declaração anterior
+> '*Construct*': atributos inconsistentes com declaração anterior
 
 Os atributos que são aplicados a uma definição estão em conflito com os atributos que são aplicados a uma declaração.
 
 Uma maneira de resolver o C3163 é eliminar atributos na declaração de encaminhamento. Todos os atributos em uma declaração de encaminhamento devem ser menores que os atributos na definição ou, no máximo, iguais a eles.
 
-Uma possível causa do erro C3163 envolve a linguagem de anotações de código-fonte da Microsoft (SAL). As macros SAL não se expandem, a menos que você compile seu projeto usando o sinalizador **/Analyze** . Um programa que compila corretamente sem/Analyze pode gerar C3163 se você tentar recompilá-lo com a opção/Analyze. Para obter mais informações sobre SAL, consulte [anotações sal](../../c-runtime-library/sal-annotations.md).
+Uma possível causa do erro C3163 envolve a linguagem de anotações de código-fonte da Microsoft (SAL). As macros SAL não se expandem, a menos que você compile seu projeto usando o **`/analyze`** sinalizador. Um programa que compila corretamente sem **`/analyze`** o pode lançar C3163 se você tentar recompilá-lo com a **`/analyze`** opção. Para obter mais informações sobre SAL, consulte [anotações sal](../../c-runtime-library/sal-annotations.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -38,6 +38,6 @@ using namespace System;
 // [CLSCompliant(true)] void f() {}
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Anotações de SAL](../../c-runtime-library/sal-annotations.md)
