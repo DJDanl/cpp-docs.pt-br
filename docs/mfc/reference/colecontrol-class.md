@@ -334,18 +334,18 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: c0e31b44daad56da2cd0fd20bb7d591797079391
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214120"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470913"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 
 Uma classe base poderosa para o desenvolvimento de controles OLE.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 class COleControl : public CWnd
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Cria um objeto `COleControl`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Recupera a aparência atual do controle.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Retorna o valor da propriedade BackColor de ambiente.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[COleControl::D rawContent](#drawcontent)|Chamado pelo Framework quando a aparência do controle precisa ser atualizada.|
 |[COleControl::D rawMetafile](#drawmetafile)|Chamado pelo Framework quando o contexto do dispositivo de metarquivo está sendo usado.|
@@ -580,7 +580,7 @@ Retorna o valor da propriedade BackColor de ambiente.
 OLE_COLOR AmbientBackColor();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor atual da propriedade BackColor de ambiente do contêiner, se houver. Se não houver suporte para a propriedade, essa função retornará a cor do plano de fundo do Windows definida pelo sistema.
 
@@ -596,7 +596,7 @@ O nome que o contêiner atribuiu ao controle pode ser usado em mensagens de erro
 CString AmbientDisplayName();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O nome do controle OLE. O padrão é uma cadeia de caracteres de comprimento zero.
 
@@ -612,7 +612,7 @@ Retorna o valor da propriedade de fonte de ambiente.
 LPFONTDISP AmbientFont();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para a interface de expedição de fonte de ambiente do contêiner. O valor padrão é NULL. Se o retorno não for igual a NULL, você será responsável por liberar a fonte chamando sua função de membro [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) .
 
@@ -628,7 +628,7 @@ Retorna o valor da propriedade ForeColor do ambiente.
 OLE_COLOR AmbientForeColor();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor atual da propriedade ForeColor do ambiente do contêiner, se houver. Se não houver suporte, essa função retornará a cor de texto do Windows definida pelo sistema.
 
@@ -644,7 +644,7 @@ Retorna a ID de localidade do contêiner.
 LCID AmbientLocaleID();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor da Propriedade LocaleID do contêiner, se houver. Se essa propriedade não tiver suporte, essa função retornará 0.
 
@@ -660,7 +660,7 @@ Recupera a configuração de aparência atual para o objeto de controle.
 short AmbientAppearance();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A aparência do controle:
 
@@ -680,7 +680,7 @@ Retorna o tipo de unidades usadas pelo contêiner.
 CString AmbientScaleUnits();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma cadeia de caracteres que contém o ScaleUnits de ambiente do contêiner. Se não houver suporte para essa propriedade, essa função retornará uma cadeia de caracteres de comprimento zero.
 
@@ -696,7 +696,7 @@ Determina se o contêiner permite que o controle exiba alças de captura para si
 BOOL AmbientShowGrabHandles();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se as alças de captura devem ser exibidas; caso contrário, 0. Se essa propriedade não tiver suporte, essa função retornará diferente de zero.
 
@@ -712,7 +712,7 @@ Determina se o contêiner permite que o controle seja exibido com um padrão hac
 BOOL AmbientShowHatching();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o padrão hachurado deve ser mostrado; caso contrário, 0. Se essa propriedade não tiver suporte, essa função retornará diferente de zero.
 
@@ -728,7 +728,7 @@ Determina o alinhamento de texto do ambiente preferencial pelo contêiner de con
 short AmbientTextAlign();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O status da Propriedade TextAlign de ambiente do contêiner. Se essa propriedade não tiver suporte, essa função retornará 0.
 
@@ -753,7 +753,7 @@ Determina se o contêiner deseja que o controle responda às ações da interfac
 BOOL AmbientUIDead();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o controle deve responder às ações da interface do usuário; caso contrário, 0. Se essa propriedade não tiver suporte, essa função retornará 0.
 
@@ -769,7 +769,7 @@ Determina se o contêiner está no modo de design ou de usuário.
 BOOL AmbientUserMode();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o contêiner estiver no modo de usuário; caso contrário, 0 (no modo de Design). Se essa propriedade não tiver suporte, essa função retornará TRUE.
 
@@ -785,7 +785,7 @@ Sinaliza que o valor da propriedade associada foi alterado.
 void BoundPropertyChanged(DISPID dispid);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DISPID*<br/>
 A ID de expedição de uma propriedade associada do controle.
@@ -802,12 +802,12 @@ Solicita permissão da `IPropertyNotifySink` interface para alterar um valor de 
 BOOL BoundPropertyRequestEdit(DISPID dispid);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DISPID*<br/>
 A ID de expedição de uma propriedade associada do controle.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a alteração for permitida; caso contrário, 0. O valor padrão é diferente de zero.
 
@@ -825,7 +825,7 @@ virtual void ClientToParent(
     LPPOINT pPoint) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lprcBounds*<br/>
 Ponteiro para os limites do controle OLE dentro do contêiner. Não a área do cliente, mas a área do controle inteiro, incluindo bordas e barras de rolagem.
@@ -845,12 +845,12 @@ Ajusta um retângulo de cursor se ele for totalmente ou parcialmente coberto por
 BOOL ClipCaretRect(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
 Na entrada, um ponteiro para uma estrutura [Rect](/windows/win32/api/windef/ns-windef-rect) que contém a área do cursor a ser ajustada. Na saída, a área do cursor ajustado ou NULL se o retângulo do cursor for completamente coberto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -899,7 +899,7 @@ virtual void DisplayError(
     UINT nHelpID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *SCODE*<br/>
 O valor do código de status a ser relatado. Para obter uma lista completa de códigos possíveis, consulte o artigo [controles ActiveX: Tópicos avançados](../../mfc/mfc-activex-controls-advanced-topics.md).
@@ -944,7 +944,7 @@ Chamado pelo Framework ao carregar ou armazenar um controle de uma representaç�
 virtual void DoPropExchange(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pPX*<br/>
 Um ponteiro para um objeto `CPropExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de propriedades, incluindo sua direção.
@@ -965,7 +965,7 @@ void DoSuperclassPaint(
     const CRect& rcBounds);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 Um ponteiro para o contexto do dispositivo do contêiner de controle.
@@ -989,7 +989,7 @@ void DrawContent(
     CRect& rc);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 Ponteiro para o contexto do dispositivo.
@@ -1011,7 +1011,7 @@ void DrawMetafile(
     CRect& rc);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 Ponteiro para o contexto do dispositivo de metarquivo.
@@ -1039,12 +1039,12 @@ Serializa ou inicializa o estado da extensão do controle (suas dimensões em un
 BOOL ExchangeExtent(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pPX*<br/>
 Um ponteiro para um objeto [CPropExchange](../../mfc/reference/cpropexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de propriedades, incluindo sua direção.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0.
 
@@ -1060,7 +1060,7 @@ Serializa ou inicializa o estado das propriedades de ações do controle.
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pPX*<br/>
 Um ponteiro para um objeto [CPropExchange](../../mfc/reference/cpropexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de propriedades, incluindo sua direção.
@@ -1080,7 +1080,7 @@ BOOL ExchangeVersion(
     BOOL bConvert = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pPX*<br/>
 Um ponteiro para um objeto `CPropExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de propriedades, incluindo sua direção.
@@ -1091,7 +1091,7 @@ O número da versão atual do controle.
 *bConvert*<br/>
 Indica se os dados persistentes devem ser convertidos no formato mais recente quando salvos ou mantidos no mesmo formato que foi carregado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma função diferente de zero foi bem-sucedida; caso contrário, 0.
 
@@ -1140,7 +1140,7 @@ void FireError(
     UINT nHelpID = 0);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *SCODE*<br/>
 O valor do código de status a ser relatado. Para obter uma lista completa de códigos possíveis, consulte o artigo [controles ActiveX: Tópicos avançados](../../mfc/mfc-activex-controls-advanced-topics.md).
@@ -1172,7 +1172,7 @@ void AFX_CDECL FireEvent(
 ...);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DISPID*<br/>
 A ID de expedição do evento a ser acionado.
@@ -1216,7 +1216,7 @@ void FireKeyDown(
     short nShiftState);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pnChar*<br/>
 Ponteiro para o valor do código de chave virtual da tecla pressionada. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -1244,7 +1244,7 @@ Chamado pelo Framework quando uma tecla é pressionada e liberada enquanto o con
 void FireKeyPress(USHORT* pnChar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pnChar*<br/>
 Um ponteiro para o valor de caractere da tecla pressionada.
@@ -1267,7 +1267,7 @@ void FireKeyUp(
     short nShiftState);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pnChar*<br/>
 Ponteiro para o valor de código de chave virtual da chave liberada. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -1299,7 +1299,7 @@ void FireMouseDown(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Nnovo*<br/>
 O valor numérico do botão do mouse é pressionado. Ele pode conter um dos seguintes valores:
@@ -1343,7 +1343,7 @@ void FireMouseMove(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Nnovo*<br/>
 O valor numérico dos botões do mouse é pressionado. Contém uma combinação dos seguintes valores:
@@ -1387,7 +1387,7 @@ void FireMouseUp(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Nnovo*<br/>
 O valor numérico do botão do mouse liberado. Pode ter um dos seguintes valores:
@@ -1451,7 +1451,7 @@ Altera o comportamento de ativação padrão de um controle que dá suporte à `
 virtual DWORD GetActivationPolicy();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma combinação de sinalizadores da enumeração POINTERINACTIVE. Os possíveis sinalizadores são:
 
@@ -1496,7 +1496,7 @@ BOOL GetAmbientProperty(
     void* pvProp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwDispid*<br/>
 A ID de expedição da propriedade de ambiente desejada.
@@ -1520,7 +1520,7 @@ Um ponteiro para o endereço da variável que receberá o valor da propriedade o
 |VT_DISPATCH|`LPDISPATCH*`|
 |VT_FONT|`LPFONTDISP*`|
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a propriedade de ambiente tiver suporte; caso contrário, 0.
 
@@ -1538,7 +1538,7 @@ Implementa a função Get da propriedade de aparência de estoque do seu control
 short GetAppearance ();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor de retorno especifica a configuração de aparência atual como um **`short`** valor (VT_I2), se for bem-sucedido. Esse valor será zero se a aparência do controle for simples e 1 se a aparência do controle for 3D.
 
@@ -1550,7 +1550,7 @@ Implementa a função Get da propriedade BackColor de estoque do seu controle.
 OLE_COLOR GetBackColor();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor de retorno especifica a cor do plano de fundo atual como um valor OLE_COLOR, se for bem-sucedido. Esse valor pode ser convertido em um valor COLORREF com uma chamada para `TranslateColor` .
 
@@ -1562,7 +1562,7 @@ Implementa a função Get da propriedade BorderStyle de estoque do seu controle.
 short GetBorderStyle();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 1 se o controle tiver uma borda normal; 0 se o controle não tiver borda.
 
@@ -1574,7 +1574,7 @@ Determina se o `COleControl` objeto tem a captura do mouse.
 CWnd* GetCapture();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se o controle estiver ativado e sem janela, **`this`** o retornará se o controle tiver atualmente a captura do mouse (conforme determinado pelo contêiner do controle), ou NULL se não tiver a captura.
 
@@ -1592,12 +1592,12 @@ Chamado pelo Framework para recuperar a ID da classe OLE do controle.
 virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pclsid*<br/>
 Ponteiro para o local da ID de classe.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a chamada não tiver sido bem-sucedida; caso contrário, 0.
 
@@ -1613,7 +1613,7 @@ Recupera a diferença entre o canto superior esquerdo da área retangular do con
 virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pdxOffset*<br/>
 Ponteiro para o deslocamento horizontal da área do cliente do controle OLE.
@@ -1633,7 +1633,7 @@ Recupera o tamanho da área do cliente do controle.
 virtual void GetClientRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
 Ponteiro para uma `RECT` estrutura que contém as dimensões da área do cliente do controle sem janela, ou seja, o tamanho do controle menos bordas da janela, quadros, barras de rolagem e assim por diante. O parâmetro *lpRect* indica o tamanho do retângulo do cliente do controle, não sua posição.
@@ -1646,7 +1646,7 @@ Consulta um objeto para o ponteiro para o site do cliente atual em seu contêine
 LPOLECLIENTSITE GetClientSite();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para o site do cliente atual do controle em seu contêiner.
 
@@ -1662,7 +1662,7 @@ Recupera as configurações do sinalizador de controle.
 virtual DWORD GetControlFlags();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma combinação de or or dos sinalizadores na enumeração ControlFlags:
 
@@ -1702,7 +1702,7 @@ void GetControlSize(
     int* pcy);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PCX*<br/>
 Especifica a largura do controle em pixels.
@@ -1724,7 +1724,7 @@ CDC* GetDC(
     DWORD dwFlags = OLEDC_PAINTBKGND);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lprcRect*<br/>
 Um ponteiro para o retângulo que o controle sem janela deseja redesenhar, nas coordenadas de cliente do controle. NULL significa a extensão completa do objeto.
@@ -1738,7 +1738,7 @@ Atributos de desenho do contexto do dispositivo. As opções são:
 
 - OLEDC_OFFSCREEN informa o contêiner que o objeto deseja renderizar em um bitmap fora da tela que deve ser copiado para a tela. Um objeto deve usar esse sinalizador quando a operação de desenho que ele está prestes a executar gera muita cintilação. O contêiner é gratuito para honrar essa solicitação ou não. No entanto, se esse sinalizador não for definido, o contêiner deverá devolver um controlador de domínio na tela. Isso permite que os objetos executem operações de tela diretas, como mostrar uma seleção (por meio de uma operação **XOR** ).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Ponteiro para o contexto do dispositivo de vídeo para a área do cliente do contêiner `CWnd` , se for bem-sucedido; caso contrário, o valor de retorno será NULL. O contexto do dispositivo de vídeo pode ser usado em funções GDI subsequentes para desenhar na área do cliente da janela do contêiner.
 
@@ -1754,7 +1754,7 @@ Implementa a função Get da Propriedade habilitada para estoque do seu controle
 BOOL GetEnabled();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o controle estiver habilitado; caso contrário, 0.
 
@@ -1766,7 +1766,7 @@ Obtém um ponteiro para um objeto mantido pelo contêiner que representa o contr
 LPDISPATCH GetExtendedControl();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para o objeto de controle estendido do contêiner. Se não houver nenhum objeto disponível, o valor será NULL.
 
@@ -1784,7 +1784,7 @@ Determina se o `COleControl` objeto tem o foco.
 CWnd* GetFocus();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se o controle estiver ativado e sem janela, **`this`** o retornará se o controle tiver o foco do teclado (conforme determinado pelo contêiner do controle) ou nulo se ele não tiver o foco.
 
@@ -1802,7 +1802,7 @@ Implementa a função Get da propriedade Font de stock.
 LPFONTDISP GetFont();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para a interface de expedição de fonte da propriedade de fonte de estoque do controle.
 
@@ -1820,7 +1820,7 @@ void GetFontTextMetrics(
     CFontHolder& fontHolder);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lptm*<br/>
 Ponteiro para uma estrutura [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) .
@@ -1842,7 +1842,7 @@ Implementa a função Get da propriedade ForeColor do estoque.
 OLE_COLOR GetForeColor();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor de retorno especifica a cor de primeiro plano atual como um valor OLE_COLOR, se for bem-sucedido. Esse valor pode ser convertido em um valor [COLORREF](/windows/win32/gdi/colorref) com uma chamada para `TranslateColor` .
 
@@ -1854,7 +1854,7 @@ Implementa a função Get da propriedade hWnd de estoque.
 OLE_HANDLE GetHwnd();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O identificador da janela do controle OLE, se houver; caso contrário, NULL.
 
@@ -1868,7 +1868,7 @@ virtual void GetMessageString(
     CString& rMessage) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
 Uma ID de item de menu.
@@ -1900,7 +1900,7 @@ Retorna o estado de preparação do controle.
 long GetReadyState();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O estado de preparação do controle, um dos seguintes valores:
 
@@ -1924,12 +1924,12 @@ Obtém as coordenadas do retângulo do controle em relação ao contêiner, expr
 BOOL GetRectInContainer(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
 Um ponteiro para a estrutura de retângulo na qual as coordenadas do controle serão copiadas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o controle estiver ativo no local; caso contrário, 0.
 
@@ -1945,7 +1945,7 @@ Mede as métricas de texto para a propriedade de fonte de estoque do controle, q
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lptm*<br/>
 Um ponteiro para uma estrutura [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) .
@@ -1964,7 +1964,7 @@ Implementa a função Get da propriedade Text ou Caption de ações.
 BSTR GetText();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor atual da cadeia de texto de controle ou uma cadeia de caracteres de comprimento zero se nenhuma cadeia de caracteres estiver presente.
 
@@ -1983,7 +1983,7 @@ Substitua `GetWindowlessDropTarget` quando desejar que um controle sem janela se
 virtual IDropTarget* GetWindowlessDropTarget();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Ponteiro para a interface do objeto `IDropTarget` . Como ele não tem uma janela, um objeto sem janela não pode registrar uma `IDropTarget` interface. No entanto, para participar de arrastar e soltar, um objeto sem janela ainda pode implementar a interface e retorná-la `GetWindowlessDropTarget` .
 
@@ -2003,7 +2003,7 @@ void InitializeIIDs(
     const IID* piidEvents);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *piidPrimary*<br/>
 Ponteiro para a ID de interface da interface de expedição principal do controle.
@@ -2023,7 +2023,7 @@ Acessa a propriedade fonte de estoque do seu controle
 CFontHolder& InternalGetFont();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma referência a um objeto [CFontHolder](../../mfc/reference/cfontholder-class.md) que contém o objeto de fonte de estoque.
 
@@ -2035,7 +2035,7 @@ Acessa a propriedade de texto ou legenda de ações do seu controle.
 const CString& InternalGetText();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma referência à cadeia de texto de controle.
 
@@ -2047,7 +2047,7 @@ Define o estado de preparação do controle.
 void InternalSetReadyState(long lNewReadyState);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lNewReadyState*<br/>
 O estado de preparação a ser definido para o controle, um dos seguintes valores:
@@ -2074,7 +2074,7 @@ void InvalidateControl(
     BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
 Um ponteiro para a região do controle a ser invalidado.
@@ -2094,7 +2094,7 @@ Invalida a área do cliente da janela de contêiner dentro da região especifica
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pRgn*<br/>
 Um ponteiro para um objeto [CRgn](../../mfc/reference/crgn-class.md) que identifica a região de exibição do objeto OLE a ser invalidado, nas coordenadas do cliente da janela que a contém. Se esse parâmetro for nulo, a extensão será o objeto inteiro.
@@ -2116,7 +2116,7 @@ Permite o carregamento especializado de um controle OLE.
 BOOL IsConvertingVBX();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o controle estiver sendo convertido; caso contrário, 0.
 
@@ -2142,7 +2142,7 @@ Habilita a invocação de método de automação.
 BOOL IsInvokeAllowed(DISPID dispid);
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o controle tiver sido inicializado; caso contrário, 0.
 
@@ -2158,7 +2158,7 @@ Determina se o estado do controle foi modificado.
 BOOL IsModified();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o estado do controle tiver sido modificado desde que foi salvo pela última vez; caso contrário, 0.
 
@@ -2174,7 +2174,7 @@ Determina se o contêiner dá suporte ao desenho otimizado para a operação de 
 BOOL IsOptimizedDraw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se o contêiner der suporte ao desenho otimizado para a operação de desenho atual; caso contrário, FALSE.
 
@@ -2190,7 +2190,7 @@ Chamado pelo Framework para determinar se o controle subclasseia um controle do 
 virtual BOOL IsSubclassedControl();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o controle for subclasse; caso contrário, 0.
 
@@ -2206,7 +2206,7 @@ Redefine todos os dados anteriores carregados de forma assíncrona e inicia um n
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *strNewPath*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o caminho que faz referência ao local absoluto da propriedade de controle assíncrono.
@@ -2222,12 +2222,12 @@ Impede que o contêiner desative seu controle.
 BOOL LockInPlaceActive(BOOL bLock);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Impeça*<br/>
 TRUE se o estado ativo in-loco do controle for ser bloqueado; FALSE se for desbloqueado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o bloqueio tiver sido bem-sucedido; caso contrário, 0.
 
@@ -2243,7 +2243,7 @@ Chamado pelo Framework quando uma propriedade de ambiente do contêiner tem um v
 virtual void OnAmbientPropertyChange(DISPID dispid);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dispID*<br/>
 A ID de expedição da propriedade de ambiente que foi alterada ou DISPID_UNKNOWN se várias propriedades foram alteradas.
@@ -2294,7 +2294,7 @@ Chamado pelo Framework quando um botão do mouse é clicado ou o método de esto
 virtual void OnClick(USHORT iButton);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *iButton*<br/>
 Índice de um botão do mouse. Pode ter um dos seguintes valores:
@@ -2319,7 +2319,7 @@ Chamado pelo Framework quando o contêiner chama a função do controle `IOleCon
 virtual void OnClose(DWORD dwSaveOption);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwSaveOption*<br/>
 Sinalizador que indica se o objeto deve ser salvo antes do carregamento. Os valores válidos são:
@@ -2346,7 +2346,7 @@ virtual BOOL OnDoVerb(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *iVerb*<br/>
 O índice do verbo de controle a ser invocado.
@@ -2360,7 +2360,7 @@ O identificador para a janela pai do controle. Se a execução do verbo criar um
 *lpRect*<br/>
 Um ponteiro para uma estrutura RECT na qual as coordenadas do controle, em relação ao contêiner, serão copiadas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a chamada foi bem-sucedida; caso contrário, 0.
 
@@ -2381,7 +2381,7 @@ virtual void OnDraw(
     const CRect& rcInvalid);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 O contexto do dispositivo no qual o desenho ocorre.
@@ -2406,7 +2406,7 @@ virtual void OnDrawMetafile(
     const CRect& rcBounds);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 O contexto do dispositivo no qual o desenho ocorre.
@@ -2429,7 +2429,7 @@ virtual BOOL OnEdit(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpMsg*<br/>
 Um ponteiro para a mensagem do Windows que invocou o verbo.
@@ -2440,7 +2440,7 @@ Um identificador para a janela pai do controle.
 *lpRect*<br/>
 Um ponteiro para o retângulo usado pelo controle no contêiner.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a chamada for bem-sucedida; caso contrário, 0.
 
@@ -2472,12 +2472,12 @@ Chamado pelo Framework quando o contêiner chama a `IOleObject::EnumVerbs` funç
 virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *ppenumOleVerb*<br/>
 Um ponteiro para o `IEnumOLEVERB` objeto que enumera os verbos do controle.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se os verbos estiverem disponíveis; caso contrário, 0.
 
@@ -2495,7 +2495,7 @@ Chamado pelo Framework quando um manipulador de eventos está conectado ou desco
 virtual void OnEventAdvise(BOOL bAdvise);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bAdvise*<br/>
 VERDADEIRO indica que um manipulador de eventos foi conectado ao controle. FALSE indica que um manipulador de eventos foi desconectado do controle.
@@ -2540,7 +2540,7 @@ Chamado pelo Framework após o contêiner chamar `IOleControl::FreezeEvents` .
 virtual void OnFreezeEvents(BOOL bFreeze);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bFreeze*<br/>
 TRUE se a manipulação de eventos do controle estiver congelada; caso contrário, FALSE.
@@ -2562,7 +2562,7 @@ virtual BOOL OnGetColorSet(
     LPLOGPALETTE* ppColorSet);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *ptd*<br/>
 Aponta para o dispositivo de destino para o qual a imagem deve ser renderizada. Se esse valor for nulo, a imagem deverá ser renderizada para um dispositivo de destino padrão, geralmente um dispositivo de vídeo.
@@ -2573,7 +2573,7 @@ Especifica o contexto de informações no dispositivo de destino indicado por *p
 *ppColorSet*<br/>
 Um ponteiro para o local no qual o conjunto de cores que seria usado deve ser copiado. Se a função não retornar o conjunto de cores, NULL será retornado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se um conjunto de cores válido for retornado; caso contrário, 0.
 
@@ -2591,7 +2591,7 @@ Chamado pelo Framework quando o contêiner do controle solicitou informações s
 virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pControlInfo*<br/>
 Ponteiro para uma estrutura [CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo) a ser preenchida.
@@ -2612,7 +2612,7 @@ virtual BOOL OnGetDisplayString(
     CString& strValue);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DISPID*<br/>
 A ID de expedição de uma propriedade do controle.
@@ -2620,7 +2620,7 @@ A ID de expedição de uma propriedade do controle.
 *strValue*<br/>
 Uma referência a um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) por meio do qual uma cadeia de caracteres será retornada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se uma cadeia de caracteres tiver sido retornada em *bervalue;* caso contrário, 0.
 
@@ -2636,7 +2636,7 @@ Chamado pelo Framework quando o controle é ativado pela interface do usuário p
 virtual HMENU OnGetInPlaceMenu();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O identificador do menu do controle, ou nulo, se o controle tiver nenhum. A implementação padrão retorna NULL.
 
@@ -2658,7 +2658,7 @@ virtual BOOL OnGetNaturalExtent(
     LPSIZEL psizel);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwAspect*<br/>
 Especifica como o objeto deve ser representado. As representações incluem conteúdo, um ícone, uma miniatura ou um documento impresso. Os valores válidos são obtidos da enumeração [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) ou DVASPECT2.
@@ -2693,7 +2693,7 @@ O membro da estrutura `dwExtentMode` pode ter um destes dois valores:
 *psizel*<br/>
 Aponta para o dimensionamento de dados retornados pelo controle. Os dados de dimensionamento retornados são definidos como-1 para qualquer dimensão que não tenha sido ajustada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se retornar ou ajustar o tamanho com êxito; caso contrário, 0.
 
@@ -2712,7 +2712,7 @@ virtual BOOL OnGetPredefinedStrings(
     CDWordArray* pCookieArray);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DISPID*<br/>
 A ID de expedição de uma propriedade do controle.
@@ -2723,7 +2723,7 @@ Uma matriz de cadeia de caracteres a ser preenchida com valores de retorno.
 *pCookieArray*<br/>
 Uma matriz DWORD a ser preenchida com valores de retorno.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se os elementos tiverem sido adicionados a *pStringArray* e *pCookieArray*.
 
@@ -2742,7 +2742,7 @@ virtual BOOL OnGetPredefinedValue(
     VARIANT* lpvarOut);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DISPID*<br/>
 A ID de expedição de uma propriedade do controle.
@@ -2753,7 +2753,7 @@ Um valor de cookie retornado anteriormente por uma substituição de `COleContro
 *lpvarOut*<br/>
 Ponteiro para uma `VARIANT` estrutura por meio da qual um valor de propriedade será retornado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se um valor tiver sido retornado em *lpvarOut*; caso contrário, 0.
 
@@ -2769,7 +2769,7 @@ virtual BOOL OnGetViewExtent(
     LPSIZEL lpsizel);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwDrawAspect*<br/>
 DWORD que descreve qual formulário, ou aspecto, de um objeto deve ser exibido. Os valores válidos são obtidos da enumeração [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) ou DVASPECT2.
@@ -2783,7 +2783,7 @@ Aponta para a estrutura [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvt
 *lpsizel*<br/>
 Aponta para o local onde o tamanho do objeto é retornado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se as informações de extensão forem retornadas com êxito; caso contrário, 0.
 
@@ -2799,7 +2799,7 @@ Chamado pelo Framework em resposta à solicitação de um contêiner `IViewObjec
 virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwAspect*<br/>
 DWORD que descreve qual formulário, ou aspecto, de um objeto deve ser exibido. Os valores válidos são obtidos da enumeração [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) ou DVASPECT2:
@@ -2813,7 +2813,7 @@ DWORD que descreve qual formulário, ou aspecto, de um objeto deve ser exibido. 
 *pRect*<br/>
 Aponta para a estrutura [Rect](/windows/win32/api/windef/ns-windef-rectl) , especificando o retângulo no qual o objeto deve ser desenhado. Esse parâmetro controla o posicionamento e o alongamento do objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o retângulo dimensionado para o objeto for retornado com êxito; caso contrário, 0.
 
@@ -2829,7 +2829,7 @@ Chamado pelo Framework em resposta à solicitação de um contêiner `IViewObjec
 virtual DWORD OnGetViewStatus();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um dos valores da enumeração VIEWSTATUS se for bem-sucedido; caso contrário, 0. Os valores possíveis são qualquer combinação do seguinte:
 
@@ -2868,7 +2868,7 @@ virtual void OnInactiveMouseMove(
     DWORD dwKeyState);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lprcBounds*<br/>
 O retângulo delimitador de objeto, nas coordenadas de cliente da janela que a contém. Informa ao objeto sua posição e tamanho exatos na tela quando a mensagem de WM_MOUSEMOVE foi recebida.
@@ -2899,7 +2899,7 @@ virtual BOOL OnInactiveSetCursor(
     BOOL bSetAlways);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lprcBounds*<br/>
 O retângulo delimitador de objeto, nas coordenadas de cliente da janela que a contém. Informa ao objeto sua posição e tamanho exatos na tela quando a mensagem de WM_SETCURSOR foi recebida.
@@ -2916,7 +2916,7 @@ O identificador da mensagem do mouse para a qual ocorreu um WM_SETCURSOR.
 *bSetAlways*<br/>
 Especifica se o objeto deve ou não definir o cursor. Se for TRUE, o objeto deverá definir o cursor; Se for FALSE, o cursor não será obrigado a definir o cursor e deverá retornar S_FALSE nesse caso.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -2934,7 +2934,7 @@ virtual void OnKeyDownEvent(
     USHORT nShiftState);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nChar*<br/>
 O valor do código de chave virtual da tecla pressionada. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -2960,7 +2960,7 @@ Chamado pelo Framework após o evento de pressionamento de ação ser acionado.
 virtual void OnKeyPressEvent(USHORT nChar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nChar*<br/>
 Contém o valor do código de chave virtual da chave pressionada. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -2981,7 +2981,7 @@ virtual void OnKeyUpEvent(
     USHORT nShiftState);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nChar*<br/>
 O valor do código de chave virtual da tecla pressionada. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -3010,7 +3010,7 @@ virtual BOOL OnMapPropertyToPage(
     BOOL* pbPageOptional);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DISPID*<br/>
 A ID de expedição de uma propriedade do controle.
@@ -3021,7 +3021,7 @@ Ponteiro para uma `CLSID` estrutura por meio da qual uma ID de classe será reto
 *pbPageOptional*<br/>
 Retorna um indicador de se o uso da página de propriedades especificada é opcional.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se uma ID de classe tiver sido retornada em *lpClsid*; caso contrário, 0.
 
@@ -3037,7 +3037,7 @@ Chamado pelo Framework quando o contêiner detectou que uma chave mnemônico do 
 virtual void OnMnemonic(LPMSG pMsg);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pMsg*<br/>
 Ponteiro para a mensagem do Windows gerada por um pressionamento de tecla mnemônico.
@@ -3053,7 +3053,7 @@ virtual BOOL OnProperties(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpMsg*<br/>
 Um ponteiro para a mensagem do Windows que invocou o verbo.
@@ -3064,7 +3064,7 @@ Um identificador para a janela pai do controle.
 *lpRect*<br/>
 Um ponteiro para o retângulo usado pelo controle no contêiner.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a chamada for bem-sucedida; caso contrário, 0.
 
@@ -3087,7 +3087,7 @@ virtual BOOL OnQueryHitPoint(
     DWORD* pHitResult);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwAspect*<br/>
 Especifica como o objeto é representado. Os valores válidos são obtidos da enumeração [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) ou DVASPECT2.
@@ -3112,7 +3112,7 @@ Ponteiro para o resultado da consulta de clique. Um dos seguintes valores:
 
 - HITRESULT_HIT *ptlLoc* está dentro da imagem do objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se um resultado de visita for retornado com êxito; caso contrário, 0. Uma jogada é uma sobreposição com a área de exibição do controle OLE.
 
@@ -3133,7 +3133,7 @@ virtual BOOL OnQueryHitRect(
     DWORD* pHitResult);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwAspect*<br/>
 Especifica como o objeto deve ser representado. Os valores válidos são obtidos da enumeração [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) ou DVASPECT2.
@@ -3154,7 +3154,7 @@ Ponteiro para o resultado da consulta de clique. Um dos seguintes valores:
 
 - HITRESULT_HIT pelo menos um ponto no retângulo seria um impacto no objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se um resultado de visita for retornado com êxito; caso contrário, 0.
 
@@ -3172,15 +3172,15 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFormatEtc*<br/>
 Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando o formato no qual as informações são solicitadas.
 
 *lpStgMedium*<br/>
-Aponta para uma estrutura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) na qual os dados serão retornados.
+Aponta para uma estrutura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) na qual os dados serão retornados.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3204,7 +3204,7 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFormatEtc*<br/>
 Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando o formato no qual as informações são solicitadas.
@@ -3212,7 +3212,7 @@ Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatet
 *pFile*<br/>
 Aponta [para um objeto de](../../mfc/reference/cfile-class.md) retratação no qual os dados serão renderizados.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3234,7 +3234,7 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFormatEtc*<br/>
 Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando o formato no qual as informações são solicitadas.
@@ -3242,7 +3242,7 @@ Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatet
 *phGlobal*<br/>
 Aponta para um identificador para a memória global na qual os dados serão retornados. Se nenhuma memória tiver sido alocada, esse parâmetro poderá ser nulo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3295,18 +3295,18 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFormatEtc*<br/>
 Ponteiro para uma estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando o formato dos dados.
 
 *lpStgMedium*<br/>
-Ponteiro para uma estrutura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) na qual os dados residem.
+Ponteiro para uma estrutura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) na qual os dados residem.
 
 *bRelease*<br/>
 TRUE se o controle deve liberar o meio de armazenamento; FALSE se o controle não deve liberar o meio de armazenamento.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3326,12 +3326,12 @@ Chamado pelo Framework quando a extensão do controle precisa ser alterada, como
 virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpSizeL*<br/>
 Um ponteiro para a `SIZEL` estrutura que usa inteiros longos para representar a largura e a altura do controle, expressas em unidades HIMETRICs.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a alteração de tamanho tiver sido aceita; caso contrário, 0.
 
@@ -3351,7 +3351,7 @@ virtual BOOL OnSetObjectRects(
     LPCRECT lpRectClip);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpRectPos*<br/>
 Um ponteiro para uma `RECT` estrutura que indica a nova posição e o tamanho do controle em relação ao contêiner.
@@ -3359,7 +3359,7 @@ Um ponteiro para uma `RECT` estrutura que indica a nova posição e o tamanho do
 *lpRectClip*<br/>
 Um ponteiro para uma `RECT` estrutura que indica uma área retangular na qual o controle deve ser recortado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o reposicionamento for aceito; caso contrário, 0.
 
@@ -3407,7 +3407,7 @@ virtual BOOL OnWindowlessMessage(
     LRESULT* plResult);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *msg*<br/>
 Identificador de mensagem como passado pelo Windows.
@@ -3421,7 +3421,7 @@ Conforme passado pelo Windows. Especifica informações adicionais específicas 
 *plResult*<br/>
 Código de resultado do Windows. Especifica o resultado do processamento da mensagem e depende da mensagem enviada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3442,7 +3442,7 @@ virtual UINT ParentToClient(
     BOOL bHitTest = FALSE) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lprcBounds*<br/>
 Ponteiro para os limites do controle OLE dentro do contêiner. Não a área do cliente, mas a área do controle inteiro, incluindo bordas e barras de rolagem.
@@ -3453,7 +3453,7 @@ Ponteiro para o ponto pai (contêiner) a ser convertido nas coordenadas da área
 *bHitTest*<br/>
 Especifica se o teste de clique deve ou não ser feito no ponto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se *bHitTest* for false, retornará HTNOWHERE. Se *bHitTest* for true, retorna o local no qual o ponto pai (contêiner) descarregou na área do cliente do controle OLE e é um dos seguintes valores de teste de clique do mouse:
 
@@ -3517,7 +3517,7 @@ Notifica o contêiner de que uma caixa de diálogo modal foi fechada.
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hWndParent*<br/>
 Identificador para a janela pai da caixa de diálogo modal.
@@ -3534,7 +3534,7 @@ Notifica o contêiner que uma caixa de diálogo modal está prestes a ser exibid
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hWndParent*<br/>
 Identificador para a janela pai da caixa de diálogo modal.
@@ -3575,7 +3575,7 @@ Libera a captura do mouse.
 BOOL ReleaseCapture();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3591,12 +3591,12 @@ Libera o contexto do dispositivo de vídeo de um contêiner de um controle sem j
 int ReleaseDC(CDC* pDC);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 Identifica o contexto do dispositivo de contêiner a ser liberado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3614,7 +3614,7 @@ virtual void ReparentControlWindow(
     HWND hWndParent);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hWndOuter*<br/>
 O identificador da janela de controle.
@@ -3652,7 +3652,7 @@ Inicializa o número de versão para o valor especificado.
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwVersionDefault*<br/>
 O número de versão a ser atribuído ao controle.
@@ -3673,7 +3673,7 @@ void ScrollWindow(
     LPCRECT lpClipRect = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *xAmount*<br/>
 Especifica a quantidade, em unidades de dispositivo, de rolagem horizontal. Esse parâmetro deve ser um valor negativo para rolar para a esquerda.
@@ -3697,7 +3697,7 @@ CFont* SelectFontObject(
     CFontHolder& fontHolder);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 Ponteiro para um objeto de contexto de dispositivo.
@@ -3705,7 +3705,7 @@ Ponteiro para um objeto de contexto de dispositivo.
 *fontHolder*<br/>
 Referência ao objeto [CFontHolder](../../mfc/reference/cfontholder-class.md) que representa a fonte a ser selecionada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para a fonte selecionada anteriormente. Quando o chamador concluir todas as operações de desenho que usam *fontHolder,* ele deve selecionar novamente a fonte selecionada anteriormente, passando-a como um parâmetro para [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject).
 
@@ -3717,12 +3717,12 @@ Seleciona a propriedade de fonte de estoque em um contexto de dispositivo.
 CFont* SelectStockFont(CDC* pDC);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 O contexto do dispositivo no qual a fonte será selecionada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para o objeto selecionado anteriormente `CFont` . Você deve usar [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) para selecionar essa fonte de volta ao contexto do dispositivo quando terminar.
 
@@ -3734,7 +3734,7 @@ Serializa ou inicializa o estado do espaço de exibição alocado para o control
 void SerializeExtent(CArchive& ar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *multi-hop*<br/>
 Um `CArchive` objeto para o qual serializar.
@@ -3755,7 +3755,7 @@ Serializa ou inicializa o estado das propriedades de `COleControl` ações: apar
 void SerializeStockProps(CArchive& ar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *multi-hop*<br/>
 Um `CArchive` objeto para o qual serializar.
@@ -3777,7 +3777,7 @@ DWORD SerializeVersion(
     BOOL bConvert = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *multi-hop*<br/>
 Um `CArchive` objeto para o qual serializar.
@@ -3788,7 +3788,7 @@ O número da versão atual do controle.
 *bConvert*<br/>
 Indica se os dados persistentes devem ser convertidos no formato mais recente quando salvos ou mantidos no mesmo formato que tinham quando foram carregados.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O número de versão do controle. Se o arquivo especificado estiver sendo carregado, `SerializeVersion` o retornará a versão carregada desse arquivo. Caso contrário, ele retornará a versão atualmente carregada.
 
@@ -3804,7 +3804,7 @@ Define o valor da propriedade de aparência de estoque do seu controle.
 void SetAppearance (short sAppearance);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *sAppearance*<br/>
 Um **`short`** valor (VT_I2) a ser usado para a aparência do seu controle. Um valor de zero define a aparência do controle como flat e um valor de 1 define a aparência do controle como 3D.
@@ -3821,7 +3821,7 @@ Define o valor da propriedade BackColor do estoque do seu controle.
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwBackColor*<br/>
 Um valor OLE_COLOR a ser usado para desenho em segundo plano do seu controle.
@@ -3838,7 +3838,7 @@ Define o valor da propriedade BorderStyle do estoque do seu controle.
 void SetBorderStyle(short sBorderStyle);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *sBorderStyle*<br/>
 O novo estilo de borda para o controle; 0 indica que não há borda e 1 indica uma borda normal.
@@ -3855,7 +3855,7 @@ Faz com que a janela do contêiner do controle assuma a posse da captura do mous
 CWnd* SetCapture();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para o `CWnd` objeto Window que recebeu a entrada do mouse anteriormente.
 
@@ -3871,7 +3871,7 @@ Define o tamanho da janela de controle OLE e notifica o contêiner que o site de
 BOOL SetControlSize(int cx, int cy);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *CX*<br/>
 Especifica a nova largura do controle em pixels.
@@ -3879,7 +3879,7 @@ Especifica a nova largura do controle em pixels.
 *Cy*<br/>
 Especifica a nova altura do controle em pixels.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a chamada foi bem-sucedida; caso contrário, 0.
 
@@ -3897,7 +3897,7 @@ Define o valor da Propriedade habilitada para estoque do seu controle.
 void SetEnabled(BOOL bEnabled);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bEnabled*<br/>
 TRUE se o controle for habilitado; caso contrário, FALSE.
@@ -3914,7 +3914,7 @@ Faz com que a janela do contêiner do controle assuma a posse do foco de entrada
 CWnd* SetFocus();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para o `CWnd` objeto Window que anteriormente tinha o foco de entrada, ou NULL se não houver tal janela.
 
@@ -3932,7 +3932,7 @@ Define a propriedade da fonte de estoque do seu controle.
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pFontDisp*<br/>
 Um ponteiro para uma interface de expedição de fonte.
@@ -3945,7 +3945,7 @@ Define o valor da propriedade ForeColor do estoque do seu controle.
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwForeColor*<br/>
 Um valor OLE_COLOR a ser usado para o desenho em primeiro plano do seu controle.
@@ -3976,7 +3976,7 @@ void SetInitialSize(
     int cy);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *CX*<br/>
 A largura inicial do controle OLE em pixels.
@@ -3996,7 +3996,7 @@ Altera o estado modificado de um controle.
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bModified*<br/>
 O novo valor para o sinalizador modificado do controle. VERDADEIRO indica que o estado do controle foi modificado; FALSE indica que o estado do controle acabou de ser salvo.
@@ -4037,12 +4037,12 @@ Define as coordenadas do retângulo do controle em relação ao contêiner, expr
 BOOL SetRectInContainer(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
 Um ponteiro para um retângulo que contém as novas coordenadas do controle em relação ao contêiner.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a chamada foi bem-sucedida; caso contrário, 0.
 
@@ -4058,7 +4058,7 @@ Define o valor da legenda de estoque ou da propriedade de texto do seu controle.
 void SetText(LPCTSTR pszText);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pszText*<br/>
 Um ponteiro para uma cadeia de caracteres.
@@ -4083,7 +4083,7 @@ void ThrowError(
     UINT nHelpID = 0);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *SC*<br/>
 O valor do código de status a ser relatado. Para obter uma lista completa de códigos possíveis, consulte o artigo [controles ActiveX: Tópicos avançados](../../mfc/mfc-activex-controls-advanced-topics.md).
@@ -4112,7 +4112,7 @@ void TransformCoords(
     DWORD flags);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpptlHimetric*<br/>
 Ponteiro para uma `POINTL` estrutura que contém coordenadas em unidades HIMETRIC.
@@ -4145,7 +4145,7 @@ COLORREF TranslateColor(
     HPALETTE hpal = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *clrColor*<br/>
 Um tipo de dados OLE_COLOR. Para obter mais informações, consulte a função [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor) do Windows.
@@ -4153,7 +4153,7 @@ Um tipo de dados OLE_COLOR. Para obter mais informações, consulte a função [
 *hpal*<br/>
 Um identificador para uma paleta opcional; pode ser NULL.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor de cor RGB (vermelho, verde, azul) de 32 bits que define a cor sólida mais próxima do valor *clrColor* que o dispositivo pode representar.
 
@@ -4169,7 +4169,7 @@ Determina se o seu controle deve usar os valores de propriedades de ambiente com
 BOOL WillAmbientsBeValidDuringLoad();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero indica que as propriedades de ambiente serão válidas; caso contrário, as propriedades de ambiente não serão válidas.
 
@@ -4188,7 +4188,7 @@ virtual LRESULT WindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *message*<br/>
 Especifica a mensagem do Windows a ser processada.
@@ -4199,7 +4199,7 @@ Fornece informações adicionais usadas no processamento da mensagem. O valor do
 *lParam*<br/>
 Fornece informações adicionais usadas no processamento da mensagem. O valor do parâmetro depende da mensagem.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor de retorno da mensagem despachada.
 
@@ -4207,7 +4207,7 @@ O valor de retorno da mensagem despachada.
 
 Chame essa função para distribuir mensagens específicas por meio do mapa de mensagens do controle.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Exemplo de CIRC3 do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de TESTHELP do MFC](../../overview/visual-cpp-samples.md)<br/>
