@@ -3,12 +3,12 @@ title: Novidades do C++ no Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226783"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389994"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
@@ -513,12 +513,11 @@ A CPPRestSDK, uma API da Web de plataforma cruzada para o C++, foi atualizada pa
 
 Diversas operações C++ que usam o mecanismo IntelliSense para refatoração e navegação de código são executadas muito mais rápido. Os números a seguir se baseiam na solução do Visual Studio Chromium com 3500 projetos:
 
-|||
-|-|-|
-|Recurso|Melhoria de desempenho|
-|Renomear|5.3x|
-|Alterar assinatura |4.5x|
-|Localizar Todas as Referências|4.7x|
+| Recurso | Melhoria de desempenho |
+|--|--|
+| Renomear | 5.3x |
+| Alterar assinatura | 4.5x |
+| Localizar Todas as Referências | 4.7x |
 
 O C++ agora é compatível com Ctrl + Clique em **Ir para Definição**, facilitando a navegação do mouse para definições. O Visualizador de Estrutura do pacote de Ferramentas Avançadas de Produtividade agora também está incluído no produto por padrão.
 
@@ -667,7 +666,7 @@ Os verificadores principais do C++ para impor as [principais diretrizes do C++](
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versão 15.7
 
-- Suporte adicionado para [/analyze:ruleset](../build/reference/analyze-code-analysis.md), com o qual é possível especificar quais regras de análise de código são executadas.
+- Suporte adicionado para [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) , que permite especificar as regras de análise de código a serem executadas.
 - Suporte adicionado para regras de Diretrizes Principais do C++ adicionais.  Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Testes de unidade no Visual Studio 2017

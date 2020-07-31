@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: 7519706c0a8e23c56f8951647fb16c24d3f1e189
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216681"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389942"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Referência do verificador de Diretrizes Principais do C++
 
-Esta seção lista os avisos do verificador de Diretrizes Principais do C++. Para obter informações sobre a análise de código, consulte [/Analyze (análise de código)](/cpp/build/reference/analyze-code-analysis) e [início rápido: análise de código para C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Esta seção lista os avisos do verificador de Diretrizes Principais do C++. Para obter informações sobre a análise de código, consulte [ `/analyze` (análise de código)](/cpp/build/reference/analyze-code-analysis) e [início rápido: análise de código para C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Alguns avisos pertencem a mais de um grupo, e nem todos os avisos têm um tópico de referência completo.
