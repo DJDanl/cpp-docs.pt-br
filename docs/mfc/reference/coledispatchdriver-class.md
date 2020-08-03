@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 265fca7288ca2aa760fb1faffa94f9d74896a975
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27520f09506698833b1449552ce669223cc0c4c6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214094"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520636"
 ---
 # <a name="coledispatchdriver-class"></a>Classe COleDispatchDriver
 
@@ -47,13 +47,13 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[COleDispatchDriver:: COleDispatchDriver](#coledispatchdriver)|Constrói um objeto `COleDispatchDriver`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[COleDispatchDriver:: AttachDispatch](#attachdispatch)|Anexa uma `IDispatch` conexão ao `COleDispatchDriver` objeto.|
 |[COleDispatchDriver:: createexpedição](#createdispatch)|Cria uma `IDispatch` conexão e a anexa ao `COleDispatchDriver` objeto.|
@@ -65,14 +65,14 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[COleDispatchDriver:: Operator =](#operator_eq)|Copia o valor de origem no `COleDispatchDriver` objeto.|
 |[Operador COleDispatchDriver:: Operator LPDISPATCH](#operator_lpdispatch)|Acessa o ponteiro subjacente `IDispatch` .|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[COleDispatchDriver:: m_bAutoRelease](#m_bautorelease)|Especifica se é para liberar `IDispatch` a `ReleaseDispatch` destruição de durante ou de objeto.|
 |[COleDispatchDriver:: m_lpDispatch](#m_lpdispatch)|Indica o ponteiro para a `IDispatch` interface anexada a este `COleDispatchDriver` .|
@@ -109,7 +109,7 @@ void AttachDispatch(
     BOOL bAutoRelease = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpDispatch*<br/>
 Ponteiro para um `IDispatch` objeto OLE a ser anexado ao `COleDispatchDriver` objeto.
@@ -135,7 +135,7 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpDispatch*<br/>
 Ponteiro para um `IDispatch` objeto OLE a ser anexado ao `COleDispatchDriver` objeto.
@@ -148,11 +148,11 @@ Referência a um `COleDispatchDriver` objeto existente.
 
 ### <a name="remarks"></a>Comentários
 
-O formulário `COleDispatchDriver` ( `LPDISPATCH lpDispatch` , **bool** `bAutoRelease`  =  **true**) conecta a interface [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) .
+O formulário `COleDispatchDriver( LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE )` conecta a interface [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) .
 
-O formulário `COleDispatchDriver` ( **`const`** `COleDispatchDriver` &  `dispatchSrc` ) copia um `COleDispatchDriver` objeto existente e incrementa a contagem de referência.
+O formulário `COleDispatchDriver( const COleDispatchDriver& dispatchSrc )` copia um `COleDispatchDriver` objeto existente e incrementa a contagem de referência.
 
-O formulário `COleDispatchDriver` () cria um `COleDispatchDriver` objeto, mas não conecta a `IDispatch` interface. Antes `COleDispatchDriver` de usar () sem argumentos, você deve conectar um `IDispatch` a ele usando [COleDispatchDriver:: createexpedição](#createdispatch) ou [COleDispatchDriver:: AttachDispatch](#attachdispatch). Para obter mais informações, consulte [implementando a interface IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+O formulário `COleDispatchDriver( )` cria um `COleDispatchDriver` objeto, mas não conecta a `IDispatch` interface. Antes `COleDispatchDriver( )` de usar o sem argumentos, você deve conectar um `IDispatch` a ele usando [COleDispatchDriver:: createexpedição](#createdispatch) ou [COleDispatchDriver:: AttachDispatch](#attachdispatch). Para obter mais informações, consulte [implementando a interface IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="example"></a>Exemplo
 
@@ -172,7 +172,7 @@ BOOL CreateDispatch(
     COleException* pError = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *clsid*<br/>
 ID de classe do `IDispatch` objeto de conexão a ser criado.
@@ -224,7 +224,7 @@ void GetProperty(
     void* pvProp) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwDispID*<br/>
 Identifica a propriedade a ser recuperada.
@@ -252,7 +252,7 @@ void AFX_CDECL InvokeHelper(
     const BYTE* pbParamInfo, ...);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwDispID*<br/>
 Identifica o método ou a propriedade a ser invocada.
@@ -348,7 +348,7 @@ Copia o valor de origem no `COleDispatchDriver` objeto.
 const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dispatchSrc*<br/>
 Um ponteiro para um `COleDispatchDriver` objeto existente.
@@ -391,7 +391,7 @@ void AFX_CDECL SetProperty(
     VARTYPE vtProp, ...);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwDispID*<br/>
 Identifica a propriedade a ser definida.

@@ -334,18 +334,18 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: c49e71a3e43f74e0e68228c313d3198d0abd4f91
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470913"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520688"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 
 Uma classe base poderosa para o desenvolvimento de controles OLE.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 ```
 class COleControl : public CWnd
@@ -580,7 +580,7 @@ Retorna o valor da propriedade BackColor de ambiente.
 OLE_COLOR AmbientBackColor();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor atual da propriedade BackColor de ambiente do contêiner, se houver. Se não houver suporte para a propriedade, essa função retornará a cor do plano de fundo do Windows definida pelo sistema.
 
@@ -596,7 +596,7 @@ O nome que o contêiner atribuiu ao controle pode ser usado em mensagens de erro
 CString AmbientDisplayName();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O nome do controle OLE. O padrão é uma cadeia de caracteres de comprimento zero.
 
@@ -612,7 +612,7 @@ Retorna o valor da propriedade de fonte de ambiente.
 LPFONTDISP AmbientFont();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para a interface de expedição de fonte de ambiente do contêiner. O valor padrão é NULL. Se o retorno não for igual a NULL, você será responsável por liberar a fonte chamando sua função de membro [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) .
 
@@ -628,7 +628,7 @@ Retorna o valor da propriedade ForeColor do ambiente.
 OLE_COLOR AmbientForeColor();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor atual da propriedade ForeColor do ambiente do contêiner, se houver. Se não houver suporte, essa função retornará a cor de texto do Windows definida pelo sistema.
 
@@ -644,7 +644,7 @@ Retorna a ID de localidade do contêiner.
 LCID AmbientLocaleID();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor da Propriedade LocaleID do contêiner, se houver. Se essa propriedade não tiver suporte, essa função retornará 0.
 
@@ -660,7 +660,7 @@ Recupera a configuração de aparência atual para o objeto de controle.
 short AmbientAppearance();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 A aparência do controle:
 
@@ -680,7 +680,7 @@ Retorna o tipo de unidades usadas pelo contêiner.
 CString AmbientScaleUnits();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres que contém o ScaleUnits de ambiente do contêiner. Se não houver suporte para essa propriedade, essa função retornará uma cadeia de caracteres de comprimento zero.
 
@@ -696,7 +696,7 @@ Determina se o contêiner permite que o controle exiba alças de captura para si
 BOOL AmbientShowGrabHandles();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se as alças de captura devem ser exibidas; caso contrário, 0. Se essa propriedade não tiver suporte, essa função retornará diferente de zero.
 
@@ -712,7 +712,7 @@ Determina se o contêiner permite que o controle seja exibido com um padrão hac
 BOOL AmbientShowHatching();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o padrão hachurado deve ser mostrado; caso contrário, 0. Se essa propriedade não tiver suporte, essa função retornará diferente de zero.
 
@@ -728,7 +728,7 @@ Determina o alinhamento de texto do ambiente preferencial pelo contêiner de con
 short AmbientTextAlign();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O status da Propriedade TextAlign de ambiente do contêiner. Se essa propriedade não tiver suporte, essa função retornará 0.
 
@@ -753,7 +753,7 @@ Determina se o contêiner deseja que o controle responda às ações da interfac
 BOOL AmbientUIDead();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o controle deve responder às ações da interface do usuário; caso contrário, 0. Se essa propriedade não tiver suporte, essa função retornará 0.
 
@@ -769,7 +769,7 @@ Determina se o contêiner está no modo de design ou de usuário.
 BOOL AmbientUserMode();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o contêiner estiver no modo de usuário; caso contrário, 0 (no modo de Design). Se essa propriedade não tiver suporte, essa função retornará TRUE.
 
@@ -807,7 +807,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 *DISPID*<br/>
 A ID de expedição de uma propriedade associada do controle.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a alteração for permitida; caso contrário, 0. O valor padrão é diferente de zero.
 
@@ -850,7 +850,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 *lpRect*<br/>
 Na entrada, um ponteiro para uma estrutura [Rect](/windows/win32/api/windef/ns-windef-rect) que contém a área do cursor a ser ajustada. Na saída, a área do cursor ajustado ou NULL se o retângulo do cursor for completamente coberto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -1044,7 +1044,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 *pPX*<br/>
 Um ponteiro para um objeto [CPropExchange](../../mfc/reference/cpropexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de propriedades, incluindo sua direção.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0.
 
@@ -1091,7 +1091,7 @@ O número da versão atual do controle.
 *bConvert*<br/>
 Indica se os dados persistentes devem ser convertidos no formato mais recente quando salvos ou mantidos no mesmo formato que foi carregado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma função diferente de zero foi bem-sucedida; caso contrário, 0.
 
@@ -1204,7 +1204,7 @@ O argumento *pbParams* é uma lista separada por espaços de **VTS_**. Um ou mai
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
-> Constantes Variant adicionais foram definidas para todos os tipos de variante, com exceção de VTS_FONT e VTS_PICTURE, que fornecem um ponteiro para a constante de dados Variant. Essas constantes são nomeadas usando a Convenção de **VTS_P** `constantname` . Por exemplo, VTS_PCOLOR é um ponteiro para uma constante VTS_COLOR.
+> Constantes Variant adicionais foram definidas para todos os tipos de variante, com exceção de VTS_FONT e VTS_PICTURE, que fornecem um ponteiro para a constante de dados Variant. Essas constantes são nomeadas usando a \<CONSTANT-NAME> Convenção de VTS_P. Por exemplo, VTS_PCOLOR é um ponteiro para uma constante VTS_COLOR.
 
 ## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl::FireKeyDown
 
@@ -1451,7 +1451,7 @@ Altera o comportamento de ativação padrão de um controle que dá suporte à `
 virtual DWORD GetActivationPolicy();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma combinação de sinalizadores da enumeração POINTERINACTIVE. Os possíveis sinalizadores são:
 
@@ -1520,7 +1520,7 @@ Um ponteiro para o endereço da variável que receberá o valor da propriedade o
 |VT_DISPATCH|`LPDISPATCH*`|
 |VT_FONT|`LPFONTDISP*`|
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a propriedade de ambiente tiver suporte; caso contrário, 0.
 
@@ -1538,7 +1538,7 @@ Implementa a função Get da propriedade de aparência de estoque do seu control
 short GetAppearance ();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor de retorno especifica a configuração de aparência atual como um **`short`** valor (VT_I2), se for bem-sucedido. Esse valor será zero se a aparência do controle for simples e 1 se a aparência do controle for 3D.
 
@@ -1550,7 +1550,7 @@ Implementa a função Get da propriedade BackColor de estoque do seu controle.
 OLE_COLOR GetBackColor();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor de retorno especifica a cor do plano de fundo atual como um valor OLE_COLOR, se for bem-sucedido. Esse valor pode ser convertido em um valor COLORREF com uma chamada para `TranslateColor` .
 
@@ -1562,7 +1562,7 @@ Implementa a função Get da propriedade BorderStyle de estoque do seu controle.
 short GetBorderStyle();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 1 se o controle tiver uma borda normal; 0 se o controle não tiver borda.
 
@@ -1574,7 +1574,7 @@ Determina se o `COleControl` objeto tem a captura do mouse.
 CWnd* GetCapture();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se o controle estiver ativado e sem janela, **`this`** o retornará se o controle tiver atualmente a captura do mouse (conforme determinado pelo contêiner do controle), ou NULL se não tiver a captura.
 
@@ -1597,7 +1597,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 *pclsid*<br/>
 Ponteiro para o local da ID de classe.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a chamada não tiver sido bem-sucedida; caso contrário, 0.
 
@@ -1646,7 +1646,7 @@ Consulta um objeto para o ponteiro para o site do cliente atual em seu contêine
 LPOLECLIENTSITE GetClientSite();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o site do cliente atual do controle em seu contêiner.
 
@@ -1662,7 +1662,7 @@ Recupera as configurações do sinalizador de controle.
 virtual DWORD GetControlFlags();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma combinação de or or dos sinalizadores na enumeração ControlFlags:
 
@@ -1738,7 +1738,7 @@ Atributos de desenho do contexto do dispositivo. As opções são:
 
 - OLEDC_OFFSCREEN informa o contêiner que o objeto deseja renderizar em um bitmap fora da tela que deve ser copiado para a tela. Um objeto deve usar esse sinalizador quando a operação de desenho que ele está prestes a executar gera muita cintilação. O contêiner é gratuito para honrar essa solicitação ou não. No entanto, se esse sinalizador não for definido, o contêiner deverá devolver um controlador de domínio na tela. Isso permite que os objetos executem operações de tela diretas, como mostrar uma seleção (por meio de uma operação **XOR** ).
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Ponteiro para o contexto do dispositivo de vídeo para a área do cliente do contêiner `CWnd` , se for bem-sucedido; caso contrário, o valor de retorno será NULL. O contexto do dispositivo de vídeo pode ser usado em funções GDI subsequentes para desenhar na área do cliente da janela do contêiner.
 
@@ -1754,7 +1754,7 @@ Implementa a função Get da Propriedade habilitada para estoque do seu controle
 BOOL GetEnabled();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o controle estiver habilitado; caso contrário, 0.
 
@@ -1766,7 +1766,7 @@ Obtém um ponteiro para um objeto mantido pelo contêiner que representa o contr
 LPDISPATCH GetExtendedControl();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto de controle estendido do contêiner. Se não houver nenhum objeto disponível, o valor será NULL.
 
@@ -1784,7 +1784,7 @@ Determina se o `COleControl` objeto tem o foco.
 CWnd* GetFocus();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se o controle estiver ativado e sem janela, **`this`** o retornará se o controle tiver o foco do teclado (conforme determinado pelo contêiner do controle) ou nulo se ele não tiver o foco.
 
@@ -1802,7 +1802,7 @@ Implementa a função Get da propriedade Font de stock.
 LPFONTDISP GetFont();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para a interface de expedição de fonte da propriedade de fonte de estoque do controle.
 
@@ -1842,7 +1842,7 @@ Implementa a função Get da propriedade ForeColor do estoque.
 OLE_COLOR GetForeColor();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor de retorno especifica a cor de primeiro plano atual como um valor OLE_COLOR, se for bem-sucedido. Esse valor pode ser convertido em um valor [COLORREF](/windows/win32/gdi/colorref) com uma chamada para `TranslateColor` .
 
@@ -1854,7 +1854,7 @@ Implementa a função Get da propriedade hWnd de estoque.
 OLE_HANDLE GetHwnd();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O identificador da janela do controle OLE, se houver; caso contrário, NULL.
 
@@ -1900,7 +1900,7 @@ Retorna o estado de preparação do controle.
 long GetReadyState();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O estado de preparação do controle, um dos seguintes valores:
 
@@ -1929,7 +1929,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 *lpRect*<br/>
 Um ponteiro para a estrutura de retângulo na qual as coordenadas do controle serão copiadas.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o controle estiver ativo no local; caso contrário, 0.
 
@@ -1964,7 +1964,7 @@ Implementa a função Get da propriedade Text ou Caption de ações.
 BSTR GetText();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor atual da cadeia de texto de controle ou uma cadeia de caracteres de comprimento zero se nenhuma cadeia de caracteres estiver presente.
 
@@ -1983,7 +1983,7 @@ Substitua `GetWindowlessDropTarget` quando desejar que um controle sem janela se
 virtual IDropTarget* GetWindowlessDropTarget();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Ponteiro para a interface do objeto `IDropTarget` . Como ele não tem uma janela, um objeto sem janela não pode registrar uma `IDropTarget` interface. No entanto, para participar de arrastar e soltar, um objeto sem janela ainda pode implementar a interface e retorná-la `GetWindowlessDropTarget` .
 
@@ -2023,7 +2023,7 @@ Acessa a propriedade fonte de estoque do seu controle
 CFontHolder& InternalGetFont();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma referência a um objeto [CFontHolder](../../mfc/reference/cfontholder-class.md) que contém o objeto de fonte de estoque.
 
@@ -2035,7 +2035,7 @@ Acessa a propriedade de texto ou legenda de ações do seu controle.
 const CString& InternalGetText();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Uma referência à cadeia de texto de controle.
 
@@ -2116,7 +2116,7 @@ Permite o carregamento especializado de um controle OLE.
 BOOL IsConvertingVBX();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o controle estiver sendo convertido; caso contrário, 0.
 
@@ -2142,7 +2142,7 @@ Habilita a invocação de método de automação.
 BOOL IsInvokeAllowed(DISPID dispid);
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o controle tiver sido inicializado; caso contrário, 0.
 
@@ -2158,7 +2158,7 @@ Determina se o estado do controle foi modificado.
 BOOL IsModified();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o estado do controle tiver sido modificado desde que foi salvo pela última vez; caso contrário, 0.
 
@@ -2174,7 +2174,7 @@ Determina se o contêiner dá suporte ao desenho otimizado para a operação de 
 BOOL IsOptimizedDraw();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 TRUE se o contêiner der suporte ao desenho otimizado para a operação de desenho atual; caso contrário, FALSE.
 
@@ -2190,7 +2190,7 @@ Chamado pelo Framework para determinar se o controle subclasseia um controle do 
 virtual BOOL IsSubclassedControl();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o controle for subclasse; caso contrário, 0.
 
@@ -2227,7 +2227,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 *Impeça*<br/>
 TRUE se o estado ativo in-loco do controle for ser bloqueado; FALSE se for desbloqueado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o bloqueio tiver sido bem-sucedido; caso contrário, 0.
 
@@ -2360,7 +2360,7 @@ O identificador para a janela pai do controle. Se a execução do verbo criar um
 *lpRect*<br/>
 Um ponteiro para uma estrutura RECT na qual as coordenadas do controle, em relação ao contêiner, serão copiadas.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a chamada foi bem-sucedida; caso contrário, 0.
 
@@ -2440,7 +2440,7 @@ Um identificador para a janela pai do controle.
 *lpRect*<br/>
 Um ponteiro para o retângulo usado pelo controle no contêiner.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a chamada for bem-sucedida; caso contrário, 0.
 
@@ -2477,7 +2477,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 *ppenumOleVerb*<br/>
 Um ponteiro para o `IEnumOLEVERB` objeto que enumera os verbos do controle.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se os verbos estiverem disponíveis; caso contrário, 0.
 
@@ -2573,7 +2573,7 @@ Especifica o contexto de informações no dispositivo de destino indicado por *p
 *ppColorSet*<br/>
 Um ponteiro para o local no qual o conjunto de cores que seria usado deve ser copiado. Se a função não retornar o conjunto de cores, NULL será retornado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se um conjunto de cores válido for retornado; caso contrário, 0.
 
@@ -2620,7 +2620,7 @@ A ID de expedição de uma propriedade do controle.
 *strValue*<br/>
 Uma referência a um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) por meio do qual uma cadeia de caracteres será retornada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se uma cadeia de caracteres tiver sido retornada em *bervalue;* caso contrário, 0.
 
@@ -2636,7 +2636,7 @@ Chamado pelo Framework quando o controle é ativado pela interface do usuário p
 virtual HMENU OnGetInPlaceMenu();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O identificador do menu do controle, ou nulo, se o controle tiver nenhum. A implementação padrão retorna NULL.
 
@@ -2693,7 +2693,7 @@ O membro da estrutura `dwExtentMode` pode ter um destes dois valores:
 *psizel*<br/>
 Aponta para o dimensionamento de dados retornados pelo controle. Os dados de dimensionamento retornados são definidos como-1 para qualquer dimensão que não tenha sido ajustada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se retornar ou ajustar o tamanho com êxito; caso contrário, 0.
 
@@ -2723,7 +2723,7 @@ Uma matriz de cadeia de caracteres a ser preenchida com valores de retorno.
 *pCookieArray*<br/>
 Uma matriz DWORD a ser preenchida com valores de retorno.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se os elementos tiverem sido adicionados a *pStringArray* e *pCookieArray*.
 
@@ -2753,7 +2753,7 @@ Um valor de cookie retornado anteriormente por uma substituição de `COleContro
 *lpvarOut*<br/>
 Ponteiro para uma `VARIANT` estrutura por meio da qual um valor de propriedade será retornado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se um valor tiver sido retornado em *lpvarOut*; caso contrário, 0.
 
@@ -2783,7 +2783,7 @@ Aponta para a estrutura [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvt
 *lpsizel*<br/>
 Aponta para o local onde o tamanho do objeto é retornado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se as informações de extensão forem retornadas com êxito; caso contrário, 0.
 
@@ -2813,7 +2813,7 @@ DWORD que descreve qual formulário, ou aspecto, de um objeto deve ser exibido. 
 *pRect*<br/>
 Aponta para a estrutura [Rect](/windows/win32/api/windef/ns-windef-rectl) , especificando o retângulo no qual o objeto deve ser desenhado. Esse parâmetro controla o posicionamento e o alongamento do objeto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o retângulo dimensionado para o objeto for retornado com êxito; caso contrário, 0.
 
@@ -2829,7 +2829,7 @@ Chamado pelo Framework em resposta à solicitação de um contêiner `IViewObjec
 virtual DWORD OnGetViewStatus();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores da enumeração VIEWSTATUS se for bem-sucedido; caso contrário, 0. Os valores possíveis são qualquer combinação do seguinte:
 
@@ -2916,7 +2916,7 @@ O identificador da mensagem do mouse para a qual ocorreu um WM_SETCURSOR.
 *bSetAlways*<br/>
 Especifica se o objeto deve ou não definir o cursor. Se for TRUE, o objeto deverá definir o cursor; Se for FALSE, o cursor não será obrigado a definir o cursor e deverá retornar S_FALSE nesse caso.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3021,7 +3021,7 @@ Ponteiro para uma `CLSID` estrutura por meio da qual uma ID de classe será reto
 *pbPageOptional*<br/>
 Retorna um indicador de se o uso da página de propriedades especificada é opcional.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se uma ID de classe tiver sido retornada em *lpClsid*; caso contrário, 0.
 
@@ -3064,7 +3064,7 @@ Um identificador para a janela pai do controle.
 *lpRect*<br/>
 Um ponteiro para o retângulo usado pelo controle no contêiner.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a chamada for bem-sucedida; caso contrário, 0.
 
@@ -3112,7 +3112,7 @@ Ponteiro para o resultado da consulta de clique. Um dos seguintes valores:
 
 - HITRESULT_HIT *ptlLoc* está dentro da imagem do objeto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se um resultado de visita for retornado com êxito; caso contrário, 0. Uma jogada é uma sobreposição com a área de exibição do controle OLE.
 
@@ -3154,7 +3154,7 @@ Ponteiro para o resultado da consulta de clique. Um dos seguintes valores:
 
 - HITRESULT_HIT pelo menos um ponto no retângulo seria um impacto no objeto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se um resultado de visita for retornado com êxito; caso contrário, 0.
 
@@ -3180,7 +3180,7 @@ Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatet
 *lpStgMedium*<br/>
 Aponta para uma estrutura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) na qual os dados serão retornados.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3212,7 +3212,7 @@ Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatet
 *pFile*<br/>
 Aponta [para um objeto de](../../mfc/reference/cfile-class.md) retratação no qual os dados serão renderizados.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3242,7 +3242,7 @@ Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatet
 *phGlobal*<br/>
 Aponta para um identificador para a memória global na qual os dados serão retornados. Se nenhuma memória tiver sido alocada, esse parâmetro poderá ser nulo.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3306,7 +3306,7 @@ Ponteiro para uma estrutura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustg
 *bRelease*<br/>
 TRUE se o controle deve liberar o meio de armazenamento; FALSE se o controle não deve liberar o meio de armazenamento.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3331,7 +3331,7 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 *lpSizeL*<br/>
 Um ponteiro para a `SIZEL` estrutura que usa inteiros longos para representar a largura e a altura do controle, expressas em unidades HIMETRICs.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a alteração de tamanho tiver sido aceita; caso contrário, 0.
 
@@ -3359,7 +3359,7 @@ Um ponteiro para uma `RECT` estrutura que indica a nova posição e o tamanho do
 *lpRectClip*<br/>
 Um ponteiro para uma `RECT` estrutura que indica uma área retangular na qual o controle deve ser recortado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o reposicionamento for aceito; caso contrário, 0.
 
@@ -3421,7 +3421,7 @@ Conforme passado pelo Windows. Especifica informações adicionais específicas 
 *plResult*<br/>
 Código de resultado do Windows. Especifica o resultado do processamento da mensagem e depende da mensagem enviada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3453,7 +3453,7 @@ Ponteiro para o ponto pai (contêiner) a ser convertido nas coordenadas da área
 *bHitTest*<br/>
 Especifica se o teste de clique deve ou não ser feito no ponto.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Se *bHitTest* for false, retornará HTNOWHERE. Se *bHitTest* for true, retorna o local no qual o ponto pai (contêiner) descarregou na área do cliente do controle OLE e é um dos seguintes valores de teste de clique do mouse:
 
@@ -3575,7 +3575,7 @@ Libera a captura do mouse.
 BOOL ReleaseCapture();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3596,7 +3596,7 @@ int ReleaseDC(CDC* pDC);
 *Primário*<br/>
 Identifica o contexto do dispositivo de contêiner a ser liberado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -3705,7 +3705,7 @@ Ponteiro para um objeto de contexto de dispositivo.
 *fontHolder*<br/>
 Referência ao objeto [CFontHolder](../../mfc/reference/cfontholder-class.md) que representa a fonte a ser selecionada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para a fonte selecionada anteriormente. Quando o chamador concluir todas as operações de desenho que usam *fontHolder,* ele deve selecionar novamente a fonte selecionada anteriormente, passando-a como um parâmetro para [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject).
 
@@ -3722,7 +3722,7 @@ CFont* SelectStockFont(CDC* pDC);
 *Primário*<br/>
 O contexto do dispositivo no qual a fonte será selecionada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto selecionado anteriormente `CFont` . Você deve usar [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) para selecionar essa fonte de volta ao contexto do dispositivo quando terminar.
 
@@ -3788,7 +3788,7 @@ O número da versão atual do controle.
 *bConvert*<br/>
 Indica se os dados persistentes devem ser convertidos no formato mais recente quando salvos ou mantidos no mesmo formato que tinham quando foram carregados.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O número de versão do controle. Se o arquivo especificado estiver sendo carregado, `SerializeVersion` o retornará a versão carregada desse arquivo. Caso contrário, ele retornará a versão atualmente carregada.
 
@@ -3855,7 +3855,7 @@ Faz com que a janela do contêiner do controle assuma a posse da captura do mous
 CWnd* SetCapture();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o `CWnd` objeto Window que recebeu a entrada do mouse anteriormente.
 
@@ -3879,7 +3879,7 @@ Especifica a nova largura do controle em pixels.
 *Cy*<br/>
 Especifica a nova altura do controle em pixels.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a chamada foi bem-sucedida; caso contrário, 0.
 
@@ -3914,7 +3914,7 @@ Faz com que a janela do contêiner do controle assuma a posse do foco de entrada
 CWnd* SetFocus();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o `CWnd` objeto Window que anteriormente tinha o foco de entrada, ou NULL se não houver tal janela.
 
@@ -4042,7 +4042,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 *lpRect*<br/>
 Um ponteiro para um retângulo que contém as novas coordenadas do controle em relação ao contêiner.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a chamada foi bem-sucedida; caso contrário, 0.
 
@@ -4153,7 +4153,7 @@ Um tipo de dados OLE_COLOR. Para obter mais informações, consulte a função [
 *hpal*<br/>
 Um identificador para uma paleta opcional; pode ser NULL.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor de cor RGB (vermelho, verde, azul) de 32 bits que define a cor sólida mais próxima do valor *clrColor* que o dispositivo pode representar.
 
@@ -4169,7 +4169,7 @@ Determina se o seu controle deve usar os valores de propriedades de ambiente com
 BOOL WillAmbientsBeValidDuringLoad();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero indica que as propriedades de ambiente serão válidas; caso contrário, as propriedades de ambiente não serão válidas.
 
@@ -4199,7 +4199,7 @@ Fornece informações adicionais usadas no processamento da mensagem. O valor do
 *lParam*<br/>
 Fornece informações adicionais usadas no processamento da mensagem. O valor do parâmetro depende da mensagem.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 O valor de retorno da mensagem despachada.
 
@@ -4207,7 +4207,7 @@ O valor de retorno da mensagem despachada.
 
 Chame essa função para distribuir mensagens específicas por meio do mapa de mensagens do controle.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Exemplo de CIRC3 do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de TESTHELP do MFC](../../overview/visual-cpp-samples.md)<br/>
