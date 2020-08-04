@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c5a49d578e626d052aa9d132afbaee5686cb7a7
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190514"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520519"
 ---
 # <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (habilitar os metadados de continuação de EH)
 
@@ -51,9 +51,9 @@ Para informações da seção SEH encontradas em COMDATs, mas não compiladas us
 
 Se o vinculador não puder gerar metadados, ele emitirá um dos seguintes erros:
 
-- **`LNK2046`**`: module contains _local_unwind but was not compiled with /guard:ehcont`
+- `LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont`
 
-- **`LNK2047`**`: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
+- `LNK2047: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
 
 Para verificar se um binário contém dados EHCONT, procure os seguintes elementos ao despejar a configuração de carga do binário:
 
@@ -87,7 +87,7 @@ e:\>link /dump /loadconfig CETTest.exe
 
 1. No controle suspenso, escolha **Sim (/Guard: ehcont)** para habilitar os metadados de continuação de eh ou **não (/Guard: ehcont-)** para desabilitá-lo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [/Guard (habilitar proteção de fluxo de controle)](guard-enable-control-flow-guard.md)\
 [Opções do compilador MSVC](compiler-options.md)\
