@@ -7,12 +7,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 945202beca6c5deb525bd19886b947331f6f3ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228941"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521116"
 ---
 # `__declspec`
 
@@ -22,15 +22,15 @@ A sintaxe de atributo estendido para especificar informações de classe de arma
 
 ## <a name="grammar"></a>Gramática
 
-*especificador de decl*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *Extended-decl-Modifier-Seq*  **`)`**
+*`decl-specifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
-*Extended-decl-Modifier-Seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-Modifier* *Extended-decl-Modifier-Seq*
+*`extended-decl-modifier-seq`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
-*Extended-decl-Modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`** *#* **`)`**<br/>
+*`extended-decl-modifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***número* de**`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***segname***`")`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
@@ -46,7 +46,7 @@ A sintaxe de atributo estendido para especificar informações de classe de arma
 &nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get_func_name_ &#124; **`,put=`** _put_func_name_ }**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _Get-Func-Name_ &#124; **`,put=`** _Put-Func-Name_ }**`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
@@ -58,7 +58,7 @@ O espaço em branco separa a sequência modificadora de declaração. Os exemplo
 
 A gramática de atributo estendido dá suporte a esses atributos de classe de armazenamento específicos da Microsoft:,,,,,,, [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) , [`jitintrinsic`](../cpp/jitintrinsic.md) , [`naked`](../cpp/naked-cpp.md) , [`noalias`](../cpp/noalias.md) , [`noinline`](../cpp/noinline.md) , [`noreturn`](../cpp/noreturn.md) , [`nothrow`](../cpp/nothrow-cpp.md) , [`novtable`](../cpp/novtable.md) ,, [`process`](../cpp/process.md) [`restrict`](../cpp/restrict.md) , [`safebuffers`](../cpp/safebuffers.md) ,, [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) e [`thread`](../cpp/thread.md) . Ele também dá suporte a esses atributos de objeto COM: [`property`](../cpp/property-cpp.md) e [`uuid`](../cpp/uuid-cpp.md) .
 
-Os atributos,,,,,,,,, **`code_seg`** **`dllexport`** e de **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** **`uuid`** classe de armazenamento são propriedades somente da declaração do objeto ou da função à qual eles são aplicados. O **`thread`** atributo afeta somente dados e objetos. Os **`naked`** **`spectre`** atributos e afetam apenas funções. Os **`dllimport`** **`dllexport`** atributos e afetam funções, dados e objetos. Os **`property`** **`selectany`** atributos, e **UU'ID** afetam objetos com.
+Os atributos,,,,,,,,, **`code_seg`** **`dllexport`** e de **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** **`uuid`** classe de armazenamento são propriedades somente da declaração do objeto ou da função à qual eles são aplicados. O **`thread`** atributo afeta somente dados e objetos. Os **`naked`** **`spectre`** atributos e afetam apenas funções. Os **`dllimport`** **`dllexport`** atributos e afetam funções, dados e objetos. Os **`property`** **`selectany`** atributos, e **`uuid`** afetam objetos com.
 
 Para compatibilidade com versões anteriores, **`_declspec`** é um sinônimo para **`__declspec`** , a menos que a opção do compilador [/za \( desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
@@ -99,7 +99,7 @@ __declspec( thread ) int tls_i = 1;
 
 **FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Atributos de classe de armazenamento estendido C](../c-language/c-extended-storage-class-attributes.md)

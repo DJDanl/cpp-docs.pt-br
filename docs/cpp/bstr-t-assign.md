@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e11c7e6abd2d5832c57d0379473c6783128f63e3
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749715"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521142"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
 **Específico da Microsoft**
 
-Copia `BSTR` a `BSTR` no embrulhado por um **_**`bstr_t`.
+Copia um `BSTR` para o `BSTR` encapsulado por um `_bstr_t`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,12 +29,12 @@ void Assign(
 
 #### <a name="parameters"></a>Parâmetros
 
-*s*<br/>
+*&*<br/>
 Um `BSTR` a ser copiado para o `BSTR` encapsulado por um `_bstr_t`.
 
 ## <a name="remarks"></a>Comentários
 
-**A Atribuição** faz uma cópia binária, `BSTR` o que significa que toda a extensão do é copiado, independentemente do conteúdo.
+**Atribuir** uma cópia binária, o que significa que todo o comprimento do `BSTR` é copiado, independentemente do conteúdo.
 
 ## <a name="example"></a>Exemplo
 
@@ -109,8 +109,8 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**Fim específico da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classe _bstr_t](../cpp/bstr-t-class.md)

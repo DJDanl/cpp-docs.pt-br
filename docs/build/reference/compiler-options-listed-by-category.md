@@ -1,22 +1,22 @@
 ---
 title: Opções de compilador listadas por categoria
 description: Listagem de referência por categoria das opções de linha de comando do compilador C/C++ da Microsoft.
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223870"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520947"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções de compilador listadas por categoria
 
 Este artigo contém uma lista categórica de opções do compilador. Para uma lista alfabética, consulte [Opções de compilador listadas em ordem alfabética](compiler-options-listed-alphabetically.md).
 
-## <a name="optimization"></a>Optimization
+## <a name="optimization"></a>Otimização
 
 | Opção | Finalidade |
 |--|--|
@@ -110,7 +110,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 | [`/u`](u-u-undefine-symbols.md) | Remove todas as macros predefinidas. |
 | [`/X`](x-ignore-standard-include-paths.md) | Ignora o diretório de inclusão padrão. |
 
-## <a name="language"></a>Linguagem
+## <a name="language"></a>Language
 
 | Opção | Finalidade |
 |--|--|
@@ -171,6 +171,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 | [`/nologo`](nologo-suppress-startup-banner-c-cpp.md) | Suprime a exibição da faixa de logon. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Habilita os recursos e os avisos de segurança adicionais. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Exibe uma lista de todos os arquivos de inclusão durante a compilação. |
+| [`/sourceDependencies`](sourcedependencies.md) | Listar cabeçalhos, módulos e outras dependências de origem. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | Especifica um arquivo de origem do C. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Especifica que todos os arquivos de origem são C. |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | Especifica um arquivo de origem do C++. |
@@ -231,7 +232,7 @@ As opções experimentais só podem ser suportadas por determinadas versões do 
 | [`/Ze`](za-ze-disable-language-extensions.md) | Preterido. Habilita extensões de linguagem. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Removido no Visual Studio 2015. Gera protótipos de função. |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência de compilação do C/C++](c-cpp-building-reference.md)\
 [Opções do compilador MSVC](compiler-options.md)\

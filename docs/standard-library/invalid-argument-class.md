@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-ms.openlocfilehash: 1c5caa0129730750a6429d9f7fa883e9af30f225
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fb15785cbff18daa1bfa9a1198a64d018383764
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449256"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521194"
 ---
-# <a name="invalidargument-class"></a>Classe invalid_argument
+# <a name="invalid_argument-class"></a>Classe invalid_argument
 
 A classe serve como a classe base para todas as exceções geradas para relatar um argumento inválido.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-O valor retornado por [what](../standard-library/exception-class.md) é uma cópia de **message**`.`[data](../standard-library/basic-string-class.md#data).
+O valor retornado por `what()` é uma cópia de `message.data()` . Para obter mais informações, consulte [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Exemplo
 
@@ -63,11 +63,11 @@ Type class std::invalid_argument
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<stdexcept>
+**Cabeçalho:**\<stdexcept>
 
 **Namespace:** std
 
 ## <a name="see-also"></a>Consulte também
 
 [Classe logic_error](../standard-library/logic-error-class.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

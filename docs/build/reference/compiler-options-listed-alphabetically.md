@@ -1,15 +1,15 @@
 ---
 title: Opções do compilador listadas em ordem alfabética
 description: Listagem de referência em ordem alfabética das opções de linha de comando do compilador do Microsoft C/C++.
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223883"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520856"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -124,6 +124,7 @@ Esta tabela contém uma lista alfabética de opções de compilador. Para obter 
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Habilita os recursos e os avisos de segurança adicionais. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Exibe uma lista de arquivos de inclusão durante a compilação. |
 | [`/source-charset`](source-charset-set-source-character-set.md) | Definir conjunto de caracteres de origem. |
+| [`/sourceDependencies`](sourcedependencies.md) | Listar cabeçalhos, módulos e outras dependências de origem. |
 | [`/std`](std-specify-language-standard-version.md) | Seletor de compatibilidade de versão padrão do C++. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | Especifica um arquivo de origem do C. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Especifica que todos os arquivos de origem são C. |
@@ -174,7 +175,7 @@ Esta tabela contém uma lista alfabética de opções de compilador. Para obter 
 | [`/Zs`](zs-syntax-check-only.md) | Verifica apenas a sintaxe. |
 | [`/ZW`](zw-windows-runtime-compilation.md) | Produz um arquivo de saída para ser executado no Windows Runtime. |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)\
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

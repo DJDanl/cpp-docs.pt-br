@@ -1,27 +1,27 @@
 ---
-title: Instrução for (C++)
+title: instrução for (C++)
 description: Referência à instrução C++ for Standard em Microsoft Visual Studio C++.
 f1_keywords:
 - for_cpp
-ms.date: 04/14/2020
+ms.date: 07/31/2020
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: 16486fd58a9b3fec750ebef6ec6647f9d92bca3b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b32a50e376113f9f9d550d4984d05fc8c675f14d
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231176"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520843"
 ---
-# <a name="for-statement-c"></a>Instrução for (C++)
+# <a name="for-statement-c"></a>`for`instrução (C++)
 
-Executa uma instrução repetidamente até que a condição se torne falsa. Para obter informações sobre a instrução for baseada em intervalo, consulte [instrução for com base em intervalo (C++)](../cpp/range-based-for-statement-cpp.md).
+Executa uma instrução repetidamente até que a condição se torne falsa. Para obter informações sobre a instrução baseada em intervalo **`for`** , consulte [demonstrativo baseado em intervalo `for` (C++)](../cpp/range-based-for-statement-cpp.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-> **`for (`***expressão init* **`;`** *condicional-expressão* **`;`** *expressão de loop***`)`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;_privacidade_**`;`**
+> **`for (`** *`init-expression`* **`;`** *`cond-expression`* **`;`** *`loop-expression`* **`)`**\
+> &emsp;*`statement`*
 
 ## <a name="remarks"></a>Comentários
 
@@ -29,13 +29,13 @@ Use a **`for`** instrução para construir loops que devem executar um número d
 
 A **`for`** instrução consiste em três partes opcionais, conforme mostrado na tabela a seguir.
 
-### <a name="for-loop-elements"></a>Elementos loop "for"
+### <a name="for-loop-elements"></a>elementos de loop for
 
-|Nome da sintaxe|Quando executado|Descrição|
-|-----------------|-------------------|-----------------|
-|`init-expression`|Antes de qualquer outro elemento da **`for`** instrução, `init-expression` é executado apenas uma vez. O controle passa para `cond-expression`.|Muitas vezes usado para inicializar índices de loop. Ele pode conter expressões ou declarações.|
-|`cond-expression`|Antes da execução de cada iteração de `statement`, incluindo a primeira iteração. `statement` será executado apenas se `cond-expression` for avaliado como verdadeiro (diferente de zero).|Uma expressão que é avaliada para um tipo integral ou um tipo de classe que tem uma conversão ambígua para um tipo integral. Geralmente usado para testar critérios de encerramento de loop.|
-|`loop-expression`|No fim de cada iteração de `statement`. Depois que `loop-expression` é executado, `cond-expression` é avaliado.|Geralmente usado para incrementar índices de loop.|
+| Nome da sintaxe | Quando executado | Descrição |
+|--|--|--|
+| *`init-expression`* | Antes de qualquer outro elemento da **`for`** instrução, *`init-expression`* é executado apenas uma vez. Em seguida, o controle passa para *`cond-expression`* . | Muitas vezes usado para inicializar índices de loop. Ele pode conter expressões ou declarações. |
+| *`cond-expression`* | Antes da execução de cada iteração de *`statement`* , incluindo a primeira iteração. *`statement`* será executado somente se *`cond-expression`* for avaliado como true (diferente de zero). | Uma expressão que é avaliada para um tipo integral ou um tipo de classe que tem uma conversão ambígua para um tipo integral. Geralmente usado para testar critérios de encerramento de loop. |
+| *`loop-expression`* | No final de cada iteração de *`statement`* . Após *`loop-expression`* ser executado, *`cond-expression`* é avaliado. | Geralmente usado para incrementar índices de loop. |
 
 Os exemplos a seguir mostram diferentes maneiras de usar a **`for`** instrução.
 
@@ -60,11 +60,11 @@ int main() {
     while (i < 2){
         cout << i++;
     }
+    // Output: 01
 }
-    // Output: 012
 ```
 
-`init-expression` e `loop-expression` podem conter várias instruções separadas por vírgulas. Por exemplo:
+*`init-expression`* e *`loop-expression`* pode conter várias instruções separadas por vírgulas. Por exemplo:
 
 ```cpp
 #include <iostream>
@@ -82,7 +82,7 @@ int main(){
     i + j = 19
 ```
 
-`loop-expression` pode ser incrementado ou diminuído, ou modificado de outras maneiras.
+*`loop-expression`* pode ser incrementado ou diminuído ou modificado de outras maneiras.
 
 ```cpp
 #include <iostream>
@@ -99,11 +99,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-Um **`for`** loop é encerrado quando um [Break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md) (a uma instrução rotulada fora do **`for`** loop) dentro `statement` é executado. Uma instrução [continue](../cpp/continue-statement-cpp.md) em um **`for`** loop encerra apenas a iteração atual.
+Um **`for`** loop termina quando um [`break`](../cpp/break-statement-cpp.md) , [Return](../cpp/return-statement-cpp.md)ou [`goto`](../cpp/goto-statement-cpp.md) (para uma instrução rotulada fora do **`for`** loop) dentro *`statement`* é executado. Uma [`continue`](../cpp/continue-statement-cpp.md) instrução em um **`for`** loop encerra apenas a iteração atual.
 
-Se `cond-expression` for omitido, ele será considerado **`true`** e o **`for`** loop não terminará sem um **`break`** , **`return`** ou **`goto`** dentro de `statement` .
+Se *`cond-expression`* for omitido, ele será considerado **`true`** e o **`for`** loop não terminará sem um **`break`** , **`return`** ou **`goto`** dentro de *`statement`* .
 
-Embora os três campos da **`for`** instrução sejam normalmente usados para inicialização, teste para encerramento e incrementos, eles não estão restritos a esses usos. Por exemplo, o código a seguir imprime os número de 0 a 4. Nesse caso, `statement` é a instrução null:
+Embora os três campos da **`for`** instrução sejam normalmente usados para inicialização, teste para encerramento e incrementos, eles não estão restritos a esses usos. Por exemplo, o código a seguir imprime os número de 0 a 4. Nesse caso, *`statement`* é a instrução NULL:
 
 ```cpp
 #include <iostream>
@@ -118,7 +118,7 @@ int main()
 }
 ```
 
-## <a name="for-loops-and-the-c-standard"></a>para loops e o padrão C++
+## <a name="for-loops-and-the-c-standard"></a>`for`loops e o C++ padrão
 
 O padrão C++ diz que uma variável declarada em um **`for`** loop deve sair do escopo depois que o **`for`** loop termina. Por exemplo:
 
@@ -147,10 +147,10 @@ int main(){
 
 Esse comportamento imita mais de forma semelhante o comportamento padrão de uma variável declarada em um **`for`** loop, que requer variáveis declaradas em um **`for`** loop para sair do escopo após a conclusão do loop. Quando uma variável é declarada em um **`for`** loop, o compilador a promove internamente a uma variável local no **`for`** escopo de delimitação do loop. Ele é promovido mesmo que já exista uma variável local com o mesmo nome.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Instruções de iteração](../cpp/iteration-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[Instrução while (C++)](../cpp/while-statement-cpp.md)<br/>
-[Instrução do-while (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[instrução while (C++)](../cpp/while-statement-cpp.md)<br/>
+[instrução do-while (C++)](../cpp/do-while-statement-cpp.md)<br/>
 [Instrução for com base em intervalo (C++)](../cpp/range-based-for-statement-cpp.md)

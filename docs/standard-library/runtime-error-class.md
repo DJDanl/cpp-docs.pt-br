@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_error class
 ms.assetid: 4d0227bf-847b-45a2-a320-2351ebf98368
-ms.openlocfilehash: c4c4436c32f5f23c6bea119e95b165631384f583
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a860e10994934ae0e97950fddb14e573f8752833
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451117"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520895"
 ---
-# <a name="runtimeerror-class"></a>Classe runtime_error
+# <a name="runtime_error-class"></a>Classe runtime_error
 
 A classe serve como classe base para todas as exceções geradas para relatar erros supostamente detectáveis somente durante a execução do programa.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-O valor retornado pela [Classe exception](../standard-library/exception-class.md) é uma cópia de **message**`.`[data](../standard-library/basic-string-class.md#data).
+O valor retornado por `what()` é uma cópia de `message.data()` . Para obter mais informações, consulte [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Exemplo
 
@@ -63,11 +63,11 @@ Type class std::runtime_error
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<stdexcept>
+**Cabeçalho:**\<stdexcept>
 
 **Namespace:** std
 
 ## <a name="see-also"></a>Consulte também
 
 [Classe de exceção](../standard-library/exception-class.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
