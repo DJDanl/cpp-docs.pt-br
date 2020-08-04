@@ -3,12 +3,12 @@ title: Sistema do tipo C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: cbe0b4421d2e7727b919dfaf20218b8da03ea871
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228980"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521207"
 ---
 # <a name="c-type-system"></a>Sistema do tipo C++
 
@@ -51,30 +51,32 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Tipos (internos) fundamentais
 
-Ao contrário de algumas linguagens, C++ não tem tipo base universal do qual todos os outros tipos são derivados. O idioma inclui muitos *tipos fundamentais*, também conhecidos como *tipos internos*. Isso inclui tipos numéricos, como,,, **`int`** **`double`** **`long`** **`bool`** mais os **`char`** **`wchar_t`** tipos e para caracteres ASCII e Unicode, respectivamente. A maioria dos tipos fundamentais (exceto **`bool`** , **`double`** , **WC `har_t** and related types) all have unsigned versions, which modify the range of values that the variable can store. For example, an **` int `**, which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An **` sem sinal int "**, que também é armazenada como 32 bits, pode armazenar um valor de 0 a 4.294.967.295. O número total de valores possíveis em cada caso é o mesmo; somente o intervalo é diferente.
+Ao contrário de algumas linguagens, C++ não tem tipo base universal do qual todos os outros tipos são derivados. O idioma inclui muitos *tipos fundamentais*, também conhecidos como *tipos internos*. Isso inclui tipos numéricos, como,,, **`int`** **`double`** **`long`** **`bool`** mais os **`char`** **`wchar_t`** tipos e para caracteres ASCII e Unicode, respectivamente. Todos os tipos mais inteiros fundamentais (exceto **`bool`** , **`double`** , **`wchar_t`** e os tipos relacionados) têm **`unsigned`** versões, que modificam o intervalo de valores que a variável pode armazenar. Por exemplo, um **`int`** , que armazena um inteiro com sinal de 32 bits, pode representar um valor de-2.147.483.648 a 2.147.483.647. Um **`unsigned int`** , que também é armazenado como 32 bits, pode armazenar um valor de 0 a 4.294.967.295. O número total de valores possíveis em cada caso é o mesmo; somente o intervalo é diferente.
 
 Os tipos fundamentais são reconhecidos pelo compilador, que tem regras internas que controlam que operações você poderá executar neles e como eles serão convertidos em outros tipos fundamentais. Para obter uma lista completa de tipos internos e seus limites de tamanho e numérico, consulte [tipos internos](../cpp/fundamental-types-cpp.md).
 
-A ilustração a seguir mostra os tamanhos relativos dos tipos internos:
+A ilustração a seguir mostra os tamanhos relativos dos tipos internos na implementação do Microsoft C++:
 
 ![Tamanho em bytes de&#45;compilados em tipos](../cpp/media/built-intypesizes.png "Tamanho em bytes de&#45;compilados em tipos")
 
-A tabela a seguir lista os tipos fundamentais usados com mais frequência:
+A tabela a seguir lista os tipos fundamentais usados com mais frequência e seus tamanhos na implementação do Microsoft C++:
 
-|Type|Tamanho|Comentário|
-|----------|----------|-------------|
-|INT|4 bytes|A opção padrão para valores integrais.|
-|double|8 bytes|A opção padrão para valores de ponto flutuante.|
-|bool|1 byte|Representa valores que podem ser true ou false.|
-|char|1 byte|Use os caracteres ASCII em cadeias de caracteres do estilo C mais antigo ou objetos std::string que nunca precisarão ser convertidos em UNICODE.|
-|wchar_t|2 bytes|Representa os valores de caractere "largos" que podem ser codificados no formato UNICODE (UTF-16 no Windows, outros sistemas operacionais podem ser diferentes). Esse é o tipo de caractere usado em cadeias de caracteres do tipo `std::wstring`.|
-|caractere não assinado &nbsp;|1 byte|C++ não tem nenhum tipo de byte interno.  Use **`unsigned char`** para representar um valor de byte.|
-|unsigned int|4 bytes|Escolha padrão para sinalizadores de bit.|
-|long long|8 bytes|Representa valores inteiros muito grandes.|
+| Tipo | Tamanho | Comentário |
+|--|--|--|
+| **`int`** | 4 bytes | A opção padrão para valores integrais. |
+| **`double`** | 8 bytes | A opção padrão para valores de ponto flutuante. |
+| **`bool`** | 1 byte | Representa valores que podem ser true ou false. |
+| **`char`** | 1 byte | Use os caracteres ASCII em cadeias de caracteres do estilo C mais antigo ou objetos std::string que nunca precisarão ser convertidos em UNICODE. |
+| **`wchar_t`** | 2 bytes | Representa os valores de caractere "largos" que podem ser codificados no formato UNICODE (UTF-16 no Windows, outros sistemas operacionais podem ser diferentes). Esse é o tipo de caractere usado em cadeias de caracteres do tipo `std::wstring`. |
+| **`unsigned char`** | 1 byte | C++ não tem nenhum tipo de byte interno.  Use **`unsigned char`** para representar um valor de byte. |
+| **`unsigned int`** | 4 bytes | Escolha padrão para sinalizadores de bit. |
+| **`long long`** | 8 bytes | Representa valores inteiros muito grandes. |
+
+Outras implementações de C++ podem usar tamanhos diferentes para determinados tipos numéricos. Para obter mais informações sobre os tamanhos e relações de tamanho que o padrão C++ exige, consulte [tipos internos](fundamental-types-cpp.md).
 
 ## <a name="the-void-type"></a>O tipo void
 
-O **`void`** tipo é um tipo especial; não é possível declarar uma variável do tipo **`void`** , mas você pode declarar uma variável do __tipo \* void__ (ponteiro para **`void`** ), que às vezes é necessário ao alocar memória bruta (não tipada). No entanto, os ponteiros para **`void`** não são de tipo seguro e, em geral, seu uso é fortemente desencorajado no C++ moderno. Em uma declaração de função, um **`void`** valor de retorno significa que a função não retorna um valor; esse é um uso comum e aceitável do **`void`** . Enquanto a linguagem C exigia funções que têm zero parâmetros para declarar **`void`** na lista de parâmetros, por exemplo, `fou(void)` essa prática é desencorajada no C++ moderno e deve ser declarada `fou()` . Para obter mais informações, consulte [conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+O **`void`** tipo é um tipo especial; você não pode declarar uma variável do tipo **`void`** , mas pode declarar uma variável do tipo `void *` (ponteiro para **`void`** ), que às vezes é necessário ao alocar memória bruta (não tipada). No entanto, os ponteiros para **`void`** não são de tipo seguro e, em geral, seu uso é fortemente desencorajado no C++ moderno. Em uma declaração de função, um **`void`** valor de retorno significa que a função não retorna um valor; esse é um uso comum e aceitável do **`void`** . Enquanto a linguagem C exigia funções que têm zero parâmetros para declarar **`void`** na lista de parâmetros, por exemplo, `fou(void)` essa prática é desencorajada no C++ moderno e deve ser declarada `fou()` . Para obter mais informações, consulte [conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>Qualificador do tipo const
 
@@ -165,7 +167,7 @@ Descreve *tipos de valor* juntamente com problemas relacionados ao seu uso.
 [Conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md)\
 Descreve problemas de conversão de tipos comuns e mostra como evitá-los.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Bem-vindo de volta ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>

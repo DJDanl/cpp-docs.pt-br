@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 8876995f947823d046e0a3ea9a316a4249055d7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 481836b22544c7bcf35df7fe27e75aae0492af42
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212326"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521259"
 ---
 # <a name="hash_multimap-class"></a>Classe hash_multimap
 
@@ -110,7 +110,7 @@ template <class Key,
 class hash_multimap
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Chaves*\
 O tipo de dados da chave a ser armazenado no hash_multimap.
@@ -587,7 +587,7 @@ Retorna o número de elementos em um hash_multimap cuja chave corresponde a uma 
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor dos elementos a serem correspondidos do hash_multimap.
@@ -1083,7 +1083,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
@@ -1174,7 +1174,7 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Where*\
 Posição do elemento a ser removido do hash_multimap.
@@ -1298,7 +1298,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave a ser correspondida pela chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
@@ -1611,9 +1611,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 O `iterator` definido por hash_multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair` \< **const Key, Type**> , cujo primeiro membro é a chave para o elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.
 
-Para desreferenciar um **iterador** `Iter` apontando para um elemento em um hash_multimap, use o `->` operador.
+Para desreferenciar um iterador chamado `Iter` que aponta para um elemento em um hash_multimap, use o `->` operador.
 
-Para acessar o valor de chave do elemento, use `Iter` -> **first**, que é equivalente a (\* `Iter`). **primeiro**. Para acessar o valor dos dados mapeados do elemento, use `Iter` -> **second**, que é equivalente a (\* `Iter`). **primeiro**.
+Para acessar o valor da chave do elemento, use `Iter->first` , que é equivalente a `(*Iter).first` . Para acessar o valor da Datum mapeada para o elemento, use `Iter->second` , que é equivalente a `(*Iter).first` .
 
 Um tipo `iterator` pode ser usado para modificar o valor de um elemento.
 
@@ -1640,7 +1640,7 @@ Retorna o objeto de função que um hash_multimap usa para ordenar seus elemento
 
 O objeto armazenado define a função membro
 
-**operador booliano(const Key&** `left` **, const Key&** `right` **);**
+`bool operator( const Key& left, const Key& right );`
 
 que retorna **`true`** se `left` precede e não é igual a `right` na ordem de classificação.
 
@@ -1748,7 +1748,7 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
@@ -2302,7 +2302,7 @@ Troca os elementos de dois hash_multimaps.
 void swap(hash_multimap& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O hash_multimap que fornece os elementos a serem trocados ou o hash_multimap cujos elementos deverão ser trocados pelos do hash_multimap.
@@ -2376,7 +2376,7 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.

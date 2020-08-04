@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - domain_error class
 ms.assetid: a1d8245d-61c2-4d1e-973f-073bd5dd5fa3
-ms.openlocfilehash: 6eabb4ca8ed1c7b5259a8479e1a3e067de073b8e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 850615f07af022aff3ed209d9142823b0f038134
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454319"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521233"
 ---
-# <a name="domainerror-class"></a>Classe domain_error
+# <a name="domain_error-class"></a>Classe domain_error
 
 A classe serve como a classe base para todas as exceções geradas para relatar um erro de domínio.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-O valor retornado por [what](../standard-library/exception-class.md) é uma cópia de **message**`.`[data](../standard-library/basic-string-class.md#data).
+O valor retornado por `what()` é uma cópia de `message.data()` . Para obter mais informações, consulte [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Exemplo
 
@@ -62,11 +62,11 @@ Type: class std::domain_error
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<stdexcept>
+**Cabeçalho:**\<stdexcept>
 
 **Namespace:** std
 
 ## <a name="see-also"></a>Consulte também
 
 [Classe logic_error](../standard-library/logic-error-class.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

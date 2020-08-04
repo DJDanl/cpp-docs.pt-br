@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229097"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521155"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operador OR exclusivo bit a bit: ^
 
@@ -28,7 +28,7 @@ ms.locfileid: "87229097"
 
 ## <a name="remarks"></a>Comentários
 
-O operador OR exclusivo OR bit ( **`^`** ) compara cada bit de seu primeiro operando com o bit correspondente de seu segundo operando. Se o bit no primeiro operando for 0 e o outro bit for 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).
+O operador OR exclusivo OR bit ( **`^`** ) compara cada bit de seu primeiro operando com o bit correspondente de seu segundo operando. Se o bit em um dos operandos for 0 e o bit no outro operando for 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).
 
 Ambos os operandos para o operador devem ter tipos integrais. As conversões aritméticas usuais abordadas nas [conversões padrão](standard-conversions.md) são aplicadas aos operandos.
 

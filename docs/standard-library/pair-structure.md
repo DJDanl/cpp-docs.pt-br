@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233009"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520921"
 ---
 # <a name="pair-structure"></a>Estrutura pair
 
@@ -57,7 +57,7 @@ template<class T1, class T2>
     pair(T1, T2) -> pair<T1, T2>;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val1*\
 O valor que inicializa o primeiro elemento de `pair`.
@@ -80,7 +80,7 @@ O quarto construtor inicializa o primeiro elemento do par para *val1* e segundo 
 
 ## <a name="remarks"></a>Comentários
 
-A estrutura de modelo armazena um par de objetos do tipo `T1` e `T2` , respectivamente. O tipo `first_type` é o mesmo que o parâmetro de modelo `T1` e o tipo `second_type` é o mesmo que o parâmetro de modelo `T2` . `T1`e `T2` cada uma delas precisa fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um **`struct`** e não como um **`class`** . Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O último satisfaz os requisitos para um contêiner associativo de par e tem um tipo de valor do formulário `pair` <  **`const`** `key_type` , `mapped_type`>.
+A estrutura de modelo armazena um par de objetos do tipo `T1` e `T2` , respectivamente. O tipo `first_type` é o mesmo que o parâmetro de modelo `T1` e o tipo `second_type` é o mesmo que o parâmetro de modelo `T2` . `T1`e `T2` cada uma delas precisa fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um **`struct`** e não como um **`class`** . Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O último satisfaz os requisitos para um contêiner associativo de par e tem um tipo de valor do formulário `pair< const key_type, mapped_type >` .
 
 ## <a name="example"></a>Exemplo
 
