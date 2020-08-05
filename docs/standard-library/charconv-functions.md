@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 276ac2bce70ce5c4ebf8e22bb1da1ac9914db55e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87246092"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565943"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;&gt;funções charconv
 
@@ -23,9 +23,9 @@ O \<charconv> cabeçalho inclui as seguintes funções não-membro:
 |[to_chars](#to_chars) | Converta um valor inteiro ou de ponto flutuante em uma sequência de **`char`** . |
 |[from_chars](#from_chars) | Converta uma sequência de **`char`** em um valor inteiro ou de ponto flutuante. |
 
-Essas funções de conversão são ajustadas para desempenho e também oferecem suporte ao comportamento de viagem de ida e volta mais curto. O comportamento de viagem de ida e volta mais curto significa que, quando um número é convertido em caracteres, apenas precisão suficiente é gravada para habilitar a recuperação do número original ao converter esses caracteres de volta em um ponto flutuante.
+Essas funções de conversão são ajustadas para desempenho e também oferecem suporte ao comportamento de viagem de ida e volta mais curto. O comportamento de viagem de ida e volta mais curto significa que quando um número é convertido em caracteres, apenas precisão suficiente é gravada para habilitar a recuperação do número original ao converter esses caracteres de volta em um ponto flutuante.
 
-- Ao converter caracteres em um número, o valor numérico não precisa ser encerrado em nulo. Da mesma forma, ao converter um número em caracteres, o resultado não é terminada em nulo.
+- Ao converter caracteres em um número, o valor numérico não precisa ser encerrado em nulo. Da mesma forma, ao converter um número em caracteres, o resultado não é terminado em nulo.
 - As funções de conversão não alocam memória. Você possui o buffer em todos os casos.
 - As funções de conversão não são lançadas. Um resultado é retornado do qual você pode determinar se a conversão foi bem-sucedida.
 - As funções de conversão não são confidenciais no modo de arredondamento de tempo de execução.
@@ -69,7 +69,7 @@ to_chars_result to_chars(char* first, char* last, double value, chars_format fmt
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *primeiro*\
 Aponta para o início do buffer a ser preenchido.
@@ -95,15 +95,15 @@ Uma [to_chars_result](to-chars-result-structure.md) que contém o resultado da c
 
 ### <a name="remarks"></a>Comentários
 
-As funções que usam um parâmetro de [chars_format](chars-format-class.md) determinam o especificador de conversão como se estivessem usando `printf()` da seguinte maneira: o especificador de conversão é se for, `f` `fmt` `chars_format::fixed` `e` `fmt` `chars_format::scientific` `a` (sem a entrelinha "0x" no resultado) se `fmt` for e `chars_format::hex` `g` se `fmt` for `chars_format::general` . A especificação da notação fixa mais curta ainda pode resultar em uma saída longa porque pode ser a representação mais curta possível quando o valor é muito grande ou muito pequeno.
+As funções que tomam um parâmetro [chars_format](chars-format-class.md) determinam o especificador de conversão como se estivessem usando da `printf()` seguinte maneira: o especificador de conversão é se for, `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` (sem a entrelinha do `0x` resultado) se `fmt` for e `chars_format::hex` `'g'` se `fmt` for `chars_format::general` . A especificação da notação fixa mais curta ainda pode resultar em uma saída longa porque pode ser a representação mais curta possível quando o valor é muito grande ou muito pequeno.
 
-A tabela a seguir descreve o comportamento de conversão dadas diferentes combinações de `fmt` `precision` parâmetros e. O termo "ida e volta mais curto" refere-se à gravação do menor número de dígitos necessários, de modo que a análise dessa representação usando a `from_chars` função correspondente irá recuperar o valor exatamente.
+A tabela a seguir descreve o comportamento de conversão dadas diferentes combinações de `fmt` `precision` parâmetros e. O termo "comportamento de viagem de ida e volta mais curto" refere-se à gravação do menor número de dígitos necessários, de modo que a análise dessa representação usando a `from_chars` função correspondente irá recuperar o valor exatamente.
 
 | `fmt`e a `precision` combinação | Saída |
 |--|--|
 |  Nenhum | O que for uma notação fixa ou científica é menor, preferindo-se fixo como um desempate.</br>Esse comportamento não pode ser simulado por qualquer sobrecarga que usa o `fmt` parâmetro. |
 | `fmt` | O comportamento de viagem de ida e volta mais curto para o formato especificado, como o formato científico mais curto. |
-| `fmt` e `precision` | Usa a precisão fornecida, seguindo o `printf()` estilo, sem o comportamento de ida e volta mais curto. |
+| `fmt` e `precision` | Usa a precisão fornecida, seguindo o estilo, sem o comportamento de viagem de ida e volta `printf()` mais curto. |
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -169,7 +169,7 @@ from_chars_result from_chars(const char* first, const char* last, double& value,
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *primeiro*\
 Aponta para o início do buffer de caracteres a serem convertidos.
@@ -237,7 +237,16 @@ int main()
 }
 ```
 
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:**\<charconv>
+
+**Namespace:** std
+
+/std: c++ 17 ou posterior, é necessário.
+
 ## <a name="see-also"></a>Confira também
 
 [\<charconv>](charconv.md)  
-[A cadeia de caracteres decimal mais curta que as viagens de ida e volta](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/)
+[A cadeia de caracteres decimal mais curta que as viagens](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+ de ida e volta [especificadores de formato printf ()](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)
