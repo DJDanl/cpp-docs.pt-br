@@ -516,7 +516,7 @@
               items:
                 - name: Controles ActiveX MFC
                   href: mfc-activex-controls.md
-                - name: 'Controles ActiveX do MFC: Otimização'
+                - name: 'Controles ActiveX do MFC: Optimization'
                   expanded: false
                   items:
                     - name: 'Controles ActiveX do MFC: Otimização'
@@ -615,7 +615,7 @@
                   href: activex-control-containers-using-controls-in-a-non-dialog-container.md
             - name: Testando propriedades e eventos com contêiner de teste
               href: testing-properties-and-events-with-test-container.md
-        - name: Área de Transferência
+        - name: Área de transferência
           expanded: false
           items:
             - name: Área de Transferência
@@ -1144,7 +1144,7 @@
               href: menu-sample-list.md
             - name: Manipulando menus durante a execução do programa
               href: manipulating-menus-during-program-execution.md
-            - name: 'Como: Atualizar objetos de interface do usuário'
+            - name: 'Como fazer: Atualizar objetos de interface do usuário'
               expanded: false
               items:
                 - name: 'Como: Atualizar objetos de interface do usuário'
@@ -1245,7 +1245,7 @@
                   href: handling-ttn-needtext-notification-for-tool-tips.md
                 - name: Estrutura TOOLTIPTEXT
                   href: tooltiptext-structure.md
-        - name: Barras de ferramentas
+        - name: Barras de Ferramentas
           expanded: false
           items:
             - name: Barras de ferramentas
@@ -2706,6 +2706,8 @@
           href: reference/afx-messages.md
         - name: Estilos de controle de barra de ferramentas
           href: reference/toolbar-control-styles.md
+        - name: Enumeração BufferCommand
+          href: reference/buffercommand-enumeration.md
         - name: 'Enumeração CMFCImagePaintArea::IMAGE_EDIT_MODE'
           href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
         - name: Enumeração UICheckState
