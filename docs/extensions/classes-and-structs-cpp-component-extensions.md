@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228720"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807765"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref e struct ref (C++/CLI e C++/CX)
 
@@ -29,16 +29,13 @@ As extensões **classe ref** ou **struct ref** declaram uma classe ou struct cuj
 ### <a name="syntax"></a>Sintaxe
 
 ```cpp
-      class_access
-      ref class
-      name
-      modifier :  inherit_accessbase_type {};
-class_accessref structnamemodifier :  inherit_accessbase_type {};
-class_accessvalue classnamemodifier :  inherit_accessbase_type {};
-class_accessvalue structnamemodifier :  inherit_accessbase_type {};
+class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref struct name modifier : inherit_access base_type {};
+class_access value class name modifier : inherit_access base_type {};
+class_access value struct name modifier : inherit_access base_type {};
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_access*<br/>
 (Opcional) A acessibilidade da classe ou struct fora do assembly. Os valores possíveis são **`public`** e **`private`** ( **`private`** é o padrão). As classes aninhadas ou structs não podem ter um especificador *class_access*.
@@ -89,7 +86,7 @@ Saiba mais sobre classes e structs em
 
 Confira [Classes e structs ref](../cppcx/ref-classes-and-structs-c-cx.md) e [Classes e structs value](../cppcx/value-classes-and-structs-c-cx.md).
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *base_type*<br/>
 (Opcional) Um tipo base. Uma **classe ref** ou uma **struct ref** pode herdar de zero ou mais interfaces e de zero ou um tipo **ref**. Uma **classe value** ou uma **struct value** só pode herdar de mais interfaces ou de nenhuma.
@@ -108,7 +105,7 @@ Opção do compilador: `/ZW`
 
 A tabela a seguir lista as diferenças de sintaxe mostradas na seção **Todos os runtimes** que são específicas a C++/CLI.
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *base_type*<br/>
 (Opcional) Um tipo base. Um **classe ref** ou **struct ref** pode herdar de nenhuma ou mais interfaces gerenciadas e de zero ou um tipo ref. Um **classe valuee** ou **struct value** só pode herdar de nenhuma ou mais interfaces gerenciadas.
@@ -121,6 +118,6 @@ As palavras-chave **classe value** e **struct value** informam ao compilador que
 
 Opção do compilador: `/clr`
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)
