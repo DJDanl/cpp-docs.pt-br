@@ -1,24 +1,22 @@
 ---
-title: Implantar, executar e depurar seu projeto Linux em C++ no Visual Studio
-description: Descreve como compilar, executar e depurar o código no destino remoto de dentro de um projeto do Linux em C++ no Visual Studio.
-ms.date: 06/07/2019
+title: Implantar, executar e depurar seu projeto do C++ do MSBuild do Linux no Visual Studio
+description: Descreve como compilar, executar e depurar código no destino remoto de dentro de um projeto C++ do Linux baseado em MSBuild no Visual Studio.
+ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: df095d5561bea6dac94b9faa139c83c197802bbf
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404405"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043883"
 ---
-# <a name="deploy-run-and-debug-your-linux-project"></a>Implantar, executar e depurar o projeto do Linux
+# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Implantar, executar e depurar seu projeto do MSBuild do Linux
 
 ::: moniker range="vs-2015"
-
-O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
-
+O suporte ao Linux está disponível no Visual Studio 2017 e posterior. Para ver a documentação dessas versões, defina a lista suspensa **versão** localizada acima do Sumário para o **Visual Studio 2017** ou **Visual Studio 2019**.
 ::: moniker-end
 
-Depois de criar um projeto do Linux em C++ no Visual Studio e se conectar a ele usando o [Gerenciador de Conexões do Linux](connect-to-your-remote-linux-computer.md), você pode executá-lo e depurá-lo. Você compilará, executará e depurará o código no destino remoto.
+Depois de criar um projeto C++ do Linux baseado em MSBuild no Visual Studio e conectado ao projeto usando o [Gerenciador de conexões do Linux](connect-to-your-remote-linux-computer.md), você poderá executar e depurar o projeto. Você compilará, executará e depurará o código no destino remoto.
 
 ::: moniker range="vs-2019"
 
@@ -52,20 +50,20 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
    ::: moniker-end
 
-   - No modo **gdbserver**, o GDB é executado localmente, que se conecta ao gdbserver no sistema remoto.  Observe que esse é o único modo ao qual a janela do Console do Linux dá suporte.
+   - No modo **gdbserver**, o GDB é executado localmente, que se conecta ao gdbserver no sistema remoto.
 
-   - No modo **gdb**, o depurador do Visual Studio conduz o GDB no sistema remoto. Essa é uma opção melhor se a versão local do GDB não é compatível com a versão instalada no computador de destino. |
+   - No modo **gdb**, o depurador do Visual Studio conduz o GDB no sistema remoto. Essa é uma opção melhor se a versão local do GDB não for compatível com a versão instalada no computador de destino. Esse é o único modo para o qual a janela do console do Linux dá suporte.
 
    > [!NOTE]
    > Se não for possível atingir os pontos de interrupção no modo de depuração gdbserver, tente usar o gdb. O gdb precisa primeiro ser [instalado](download-install-and-setup-the-linux-development-workload.md) no destino remoto.
 
 1. Selecione o destino remoto usando a barra de ferramentas padrão **Depurar** no Visual Studio.
 
-   Quando o destino remoto estiver disponível, você o verá listados por nome ou endereço IP.
+   Quando o destino remoto estiver disponível, você o verá listado por nome ou endereço IP.
 
    ![Destino remoto](media/remote_target.png)
 
-   Se ainda não tiver se conectado ao destino remoto, você verá uma instrução para usar o [Gerenciador de Conexões do Linux](connect-to-your-remote-linux-computer.md) para se conectar a ele.
+   Se você ainda não se conectou ao destino remoto, verá uma instrução para usar o [Gerenciador de conexões do Linux](connect-to-your-remote-linux-computer.md) para se conectar ao destino remoto.
 
    ![Arquitetura Remota](media/architecture.png)
 
@@ -87,23 +85,20 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
    ![Menu do Console do Linux](media/consolemenu.png)
 
-   Esse console exibirá qualquer saída do console do computador de destino, bem como usará a entrada e a enviará ao computador de destino.
+   Esse console exibirá qualquer saída de console do computador de destino e usará a entrada e a enviará para o computador de destino.
 
    ![Janela do Console do Linux](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options-msbuild-based-projects"></a>Configurar outras opções de depuração (projetos baseados em MSBuild)
+## <a name="configure-other-debugging-options-msbuild-projects"></a>Configurar outras opções de depuração (projetos do MSBuild)
 
 - Argumentos de linha de comando podem ser passados para o executável usando o item **Argumentos do Programa** na página de propriedades **Depuração** do projeto.
+- Você pode exportar a `DISPLAY` variável de ambiente usando o **comando de pré-inicialização** nas páginas de propriedades de**depuração** do projeto. Por exemplo: `export DISPLAY=:0.0`
 
    ![Argumentos do Programa](media/settings_programarguments.png)
 
 - Opções específicas do depurador podem ser passadas para o GDB usando a entrada **Comandos adicionais do depurador**.  Por exemplo, talvez você deseje ignorar os sinais SIGILL (instrução inválida).  Seria possível usar o comando **handle** para isso, adicionando o seguinte à entrada **Comandos Adicionais do Depurador**, como mostrado acima:
 
    `handle SIGILL nostop noprint`
-
-## <a name="configure-other-debugging-options-cmake-projects"></a>Configurar outras opções de depuração (projetos do CMake)
-
-Você pode especificar argumentos de linha de comando adicionais para um projeto do CMake no arquivo launch.vs.json. Para saber mais, veja [Depurar o projeto do CMake](cmake-linux-project.md#debug_cmake_project)
 
 ## <a name="debug-with-attach-to-process"></a>Depuração com Anexar ao Processo
 
@@ -124,15 +119,13 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 </SupplementalLaunchOptions>
 ```
 
-**AttachOptionsForConnection** tem a maioria dos atributos que você poderá precisar. O exemplo acima mostra como especificar uma localização para pesquisar bibliotecas .so adicionais. O elemento filho **ServerOptions** permite anexar ao processo remoto com gdbserver. Para fazer isso, você precisará especificar um cliente local do gdb (aquele fornecido no Visual Studio 2017 é mostrado acima) e uma cópia local do binário com símbolos. O elemento **SetupCommands** permite passar comandos diretamente para o gdb. Encontre todas as opções disponíveis no [esquema LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) no GitHub.
+**AttachOptionsForConnection** tem a maioria dos atributos que você poderá precisar. O exemplo acima mostra como especificar uma localização para pesquisar bibliotecas .so adicionais. O elemento filho **ServerOptions** permite anexar ao processo remoto com gdbserver. Para fazer isso, você precisa especificar um cliente gdb local (aquele fornecido no Visual Studio 2017 é mostrado acima) e uma cópia local do binário com símbolos. O elemento **SetupCommands** permite passar comandos diretamente para o gdb. Encontre todas as opções disponíveis no [esquema LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) no GitHub.
 
 ::: moniker range="vs-2019"
 
-## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> Especificar computadores diferentes para compilação e depuração
+## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a>Especificar computadores diferentes para compilar e depurar em projetos do Linux baseados em MSBuild
 
-No Visual Studio de 2019 versão 16.1, você pode separar o computador de compilação remoto do seu computador de depuração remoto para projetos do CMake e projetos do Linux baseados no MSBuild destinados a um computador Linux remoto. Por exemplo, você pode fazer uma compilação cruzada no x64 e implantar em um dispositivo ARM ao visar cenários de IoT.
-
-### <a name="msbuild-based-projects"></a>Projetos baseados em MSBuild
+No Visual Studio 2019 versão 16,1, você pode separar o computador de compilação remota do computador de depuração remota para projetos do Linux baseados no MSBuild e projetos CMake destinados a um computador Linux remoto. Por exemplo, você pode fazer uma compilação cruzada no x64 e implantar em um dispositivo ARM ao visar cenários de IoT.
 
 Por padrão, o computador de depuração remota é o mesmo que o computador de compilação remota (**Propriedades de configuração**  >  **geral**do  >  **computador de compilação remota**). Para especificar um novo computador de depuração remoto, clique com botão direito no projeto no **Gerenciador de Soluções** e vá para **Propriedades da Configuração** > **Depuração** > **Computador de Depuração Remoto**.  
 
@@ -140,13 +133,13 @@ Por padrão, o computador de depuração remota é o mesmo que o computador de c
 
 O menu suspenso para **Computador de Depuração Remoto** é preenchido com todas as conexões remotas estabelecidas. Para adicionar uma nova conexão remota, navegue até **ferramentas**  >  **Opções**  >  Gerenciador de conexões**entre plataformas**  >  **Connection Manager** ou pesquise "Gerenciador de conexões" no **início rápido**. Você também pode especificar um novo diretório de implantação remota nas páginas de propriedades do projeto (**Propriedades de configuração**  >  **geral**do  >  **diretório de implantação remota**).
 
-Por padrão, somente os arquivos necessários para depurar o processo serão implantados no computador de depuração remoto. Você pode usar o **Gerenciador de Soluções** para configurar os arquivos de origem que serão implantados no computador de depuração remoto. Ao clicar em um arquivo de origem, você verá uma visualização de suas Propriedades de Arquivo logo abaixo do Gerenciador de Soluções.
+Por padrão, somente os arquivos necessários para depurar o processo serão implantados no computador de depuração remoto. Você pode usar o **Gerenciador de Soluções** para configurar os arquivos de origem que serão implantados no computador de depuração remoto. Ao clicar em um arquivo de origem, você verá uma visualização de suas propriedades de arquivo diretamente abaixo do Gerenciador de Soluções.
 
 ![Arquivos implantáveis do Linux](media/linux-deployable-content.png)
 
 A propriedade **Content** especifica se o arquivo será implantado no computador de depuração remoto. Você pode desabilitar a implantação inteiramente navegando até **páginas de propriedades**  >  **Configuration Manager** e desmarcando **implantar** para a configuração desejada.
 
-Em alguns casos, você pode exigir mais controle sobre a implantação do projeto. Por exemplo, alguns arquivos que você quer implantar podem estar fora da sua solução ou você quer personalizar o seu diretório de implantação remoto por arquivo ou diretório. Nesses casos, acrescente os seguintes blocos de código ao arquivo .vcxproj e substitua "example.cpp" pelos nomes de arquivo reais:
+Em alguns casos, você pode precisar de mais controle sobre a implantação do seu projeto. Por exemplo, alguns arquivos que você deseja implantar podem estar fora de sua solução ou você deseja personalizar seu diretório de implantação remota por arquivo ou diretório. Nesses casos, acrescente os seguintes blocos de código ao arquivo .vcxproj e substitua "example.cpp" pelos nomes de arquivo reais:
 
 ```xml
 
@@ -176,7 +169,6 @@ O IntelliSense sugere uma lista de todas as conexões remotas estabelecidas. Voc
 Se quiser controle completo sobre a implantação, você poderá acrescentar os seguintes blocos de código ao arquivo launch.vs.json. Lembre-se de substituir os valores do espaço reservado pelos valores reais:
 
 ```json
-
 "disableDeploy": false,
 "deployDirectory": "~\foo",
 "deploy" : [
@@ -188,7 +180,6 @@ Se quiser controle completo sobre a implantação, você poderá acrescentar os 
       "executable": "false"
    }
 ]
-
 ```
 
 ::: moniker-end
@@ -197,6 +188,6 @@ Se quiser controle completo sobre a implantação, você poderá acrescentar os 
 
 - Para depurar dispositivos ARM no Linux, consulte esta postagem no blog: [Debugging an embedded ARM device in Visual Studio](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/) (Depurando um dispositivo ARM inserido no Visual Studio).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Propriedades do depurador C++ (Linux C++)](prop-pages/debugging-linux.md)
