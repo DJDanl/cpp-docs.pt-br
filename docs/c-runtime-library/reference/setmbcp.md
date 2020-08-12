@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9a981c40b9e525ba1ffc1f2198f2b6a859fd9ac7
+ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918824"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88086962"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -48,7 +48,7 @@ int _setmbcp(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *código*<br/>
 Nova configuração de página de código para rotinas multibyte independentes da localidade.
@@ -60,16 +60,6 @@ Retorna 0 se a página de código é definida com êxito. Se um valor de página
 ## <a name="remarks"></a>Comentários
 
 A função **_setmbcp** especifica uma nova página de código multibyte. Por padrão, o sistema de tempo de execução define automaticamente a página de código multibyte para a página de código ANSI padrão do sistema. A configuração de página de código multibyte afeta todas as rotinas multibyte que não são dependentes da localidade. No entanto, é possível instruir **_setmbcp** a usar a página de código definida para a localidade atual (consulte a lista de constantes de manifesto e os resultados de comportamento associados a seguir). Para obter uma lista das rotinas de multibyte que dependem da página de código de localidade em vez da página de código multibyte, consulte [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
-
-A página de código multibyte também afeta o processamento de caracteres multibyte pelas rotinas de biblioteca em tempo de execução a seguir:
-
-||||
-|-|-|-|
-|[Funções _exec](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
-|[_fullpath](fullpath-wfullpath.md)|[Funções _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-
-Além disso, todas as rotinas de biblioteca de tempo de execução que recebem argumentos de programa *argv* ou *envp* de caractere multibyte como parâmetros (como as famílias **_exec** e **_spawn** ) processam essas cadeias de caracteres de acordo com a página de código multibyte. Portanto, essas rotinas também são afetadas por uma chamada para **_setmbcp** que altera a página de código multibyte.
 
 O argumento *CodePage* pode ser definido como qualquer um dos seguintes valores:
 
@@ -95,7 +85,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
