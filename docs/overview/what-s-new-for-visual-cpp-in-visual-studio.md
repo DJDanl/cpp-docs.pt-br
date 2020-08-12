@@ -3,12 +3,12 @@ title: Novidades do C++ no Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389994"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144172"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
@@ -46,7 +46,7 @@ Análise aprimorada com `/Qspectre` para fornecer assistência de mitigação pa
 
 - Adicionamos suporte básico para vetorização de SIMD OpenMP. Você pode habilitá-lo usando a nova opção de compilador **`/openmp:experimental`** . Esta opção permite que loops anotados com `#pragma omp simd` sejam potencialmente vetorizados. A vetorização não é garantida. Um aviso será relatado para loops anotados, mas não vetorizados. Não há suporte para cláusulas SIMD, elas são ignoradas com um aviso relatado.
 
-- Adicionada uma nova opção de linha de comando de inalinhamento **`/Ob3`** , que é uma versão mais agressiva do **`/Ob2`** . **`/O2`**(otimizar o binário para velocidade) ainda implica **`/Ob2`** por padrão. Se você achar que o compilador não está embutido agressivamente suficiente, considere a possibilidade de passar **`/O2 -Ob3`** .
+- Adicionada uma nova opção de linha de comando de inalinhamento **`/Ob3`** , que é uma versão mais agressiva do **`/Ob2`** . **`/O2`** (otimizar o binário para velocidade) ainda implica **`/Ob2`** por padrão. Se você achar que o compilador não está embutido agressivamente suficiente, considere a possibilidade de passar **`/O2 -Ob3`** .
 
 - Adicionamos suporte para funções intrínsecas de SVML (biblioteca matemática de vetores). Essas funções calculam os equivalentes do vetor de 128 bits, 256 bits ou 512 bits. Nós os adicionamos para dar suporte à vetorização à mão de loops com chamadas para funções de biblioteca de matemática e outras operações como divisão de inteiros. Consulte o [Guia intrínseco Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#!=undefined&techs=SVML) para obter definições das funções compatíveis.
 
@@ -273,7 +273,7 @@ A [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md
 
 - [ `/std:c++14` e `/std:c++latest` ](../build/reference/std-specify-language-standard-version.md): essas opções de compilador permitem que você aceite versões específicas da linguagem de programação ISO C++ em um projeto. A maioria dos novos recursos padrão de rascunho é protegida pela **`/std:c++latest`** opção.
 
-- [`/std:c++17`](../build/reference/std-specify-language-standard-version.md)habilita o conjunto de recursos C++ 17 implementados pelo compilador. Esta opção desabilita o suporte do compilador e da biblioteca padrão para recursos após C++ 17: aqueles que são alterados ou novos em versões posteriores do rascunho de trabalho e atualizações de defeito do padrão C++. Para habilitar esses recursos, use **`/std:c++latest`** .
+- [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) habilita o conjunto de recursos C++ 17 implementados pelo compilador. Esta opção desabilita o suporte do compilador e da biblioteca padrão para recursos após C++ 17: aqueles que são alterados ou novos em versões posteriores do rascunho de trabalho e atualizações de defeito do padrão C++. Para habilitar esses recursos, use **`/std:c++latest`** .
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Geração de código, segurança, diagnóstico e controle de versão
 
@@ -328,7 +328,7 @@ Há mais melhorias na biblioteca Standard no Visual Studio 2017 RTM. Para obter 
 - Os `for_each_n()` `generate_n()` algoritmos,, e `search_n()` anteriormente não puderam ser compilados se o argumento de comprimento não era um tipo integral. Agora, eles tentam converter comprimentos não-integral para os iteradores `difference_type` .
 - `normal_distribution<float>` não emite mais avisos na biblioteca padrão sobre o estreitamento de double para float.
 - Corrigidas algumas operações `basic_string` que usavam `npos` em vez de `max_size()` durante a verificação de estouro de tamanho máximo.
-- `condition_variable::wait_for(lock, relative_time, predicate)`aguardaria o tempo relativo inteiro se houvesse uma ativação falsa. Agora ele aguarda apenas um único intervalo do tempo relativo.
+- `condition_variable::wait_for(lock, relative_time, predicate)` aguardaria o tempo relativo inteiro se houvesse uma ativação falsa. Agora ele aguarda apenas um único intervalo do tempo relativo.
 - `future::get()` agora invalida o `future`, como o padrão exige.
 - `iterator_traits<void *>` era um erro de hardware porque tentava formar `void&`; agora claramente torna-se um struct vazio para permitir o uso de `iterator_traits` em condições SFINAE "is iterator".
 - Alguns avisos relatados por Clang **-wsystem-Headers** foram corrigidos.
@@ -340,7 +340,7 @@ Há mais melhorias na biblioteca Standard no Visual Studio 2017 RTM. Para obter 
 - A biblioteca padrão agora imporá o alocador de correspondência `value_type` (no modo C++17) com uma hachura de escape de recusa.
 - Corrigidas algumas condições em que self-range-insert em `basic_string` misturaria o conteúdo das cadeias de caracteres. (Observação: self-range-insert em vectors ainda é proibido pelo Standard.)
 - `basic_string::shrink_to_fit()` não é mais afetado pelo `propagate_on_container_swap` do alocador.
-- `std::decay`Agora lida com tipos de função Abominable, ou seja, tipos de função que são qualificados por CV, são qualificadas para referência ou ambos.
+- `std::decay` Agora lida com tipos de função Abominable, ou seja, tipos de função que são qualificados por CV, são qualificadas para referência ou ambos.
 - Alteradas as diretivas de inclusão para usar diferenciação adequada de maiúsculas e minúsculas e barras invertidas, melhorando a portabilidade.
 - Corrigido o aviso C4061 "enumerador '*enumerador*' na opção de enumeração '*enumeração*' não é manipulado explicitamente por um rótulo case". Esse aviso é desativado por padrão e foi corrigido como uma exceção à política geral da biblioteca padrão para avisos. (A biblioteca padrão está **`/W4`** limpa, mas não tenta ser **`/Wall`** limpa. Muitos avisos desativados por padrão são com ruído incomum e não se destinam a serem usados regularmente.)
 - Melhoria nas verificações de depuração de `std::list`. Os iteradores de lista agora verificam `operator->()` e `list::unique()` agora marca os iteradores como invalidados.
@@ -348,13 +348,13 @@ Há mais melhorias na biblioteca Standard no Visual Studio 2017 RTM. Para obter 
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versão 15.5
 
-- `std::partition`Agora chama os tempos de predicado `N` em vez de `N + 1` vezes, conforme o padrão exige.
+- `std::partition` Agora chama os tempos de predicado `N` em vez de `N + 1` vezes, conforme o padrão exige.
 - As tentativas de evitar estáticas mágicas na versão 15.3 foram reparadas na versão 15.5.
 - `std::atomic<T>` não requer mais que `T` seja construível por padrão.
 - Algoritmos de heap que levam tempo logarítmica se comportam de forma diferente quando a depuração do iterador está habilitada Eles não fazem mais uma asserção de tempo linear de que a entrada é, na verdade, um heap.
 - `__declspec(allocator)` agora é protegido apenas para C1XX a fim de evitar avisos do Clang que não entendem esse declspec.
 - `basic_string::npos` agora está disponível como uma constante de tempo de compilação.
-- `std::allocator`no modo C++ 17 agora lida corretamente com a alocação de tipos alinhados por excesso, ou seja, tipos cujo alinhamento é maior que `max_align_t` , a menos que seja desabilitado pelo **`/Zc:alignedNew-`** .  Por exemplo, vetores de objetos com alinhamento de 16 ou de 32 bytes agora serão corretamente alinhados para instruções SSE e AVX.
+- `std::allocator` no modo C++ 17 agora lida corretamente com a alocação de tipos alinhados por excesso, ou seja, tipos cujo alinhamento é maior que `max_align_t` , a menos que seja desabilitado pelo **`/Zc:alignedNew-`** .  Por exemplo, vetores de objetos com alinhamento de 16 ou de 32 bytes agora serão corretamente alinhados para instruções SSE e AVX.
 
 ### <a name="conformance-improvements"></a>Aprimoramentos de conformidade
 
@@ -414,7 +414,7 @@ Para obter mais informações, consulte [tabela de conformidade da linguagem Mic
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versão 15.7
 
 - Suporte a algoritmos paralelos não é mais experimental
-- Uma nova implementação de\<filesystem>
+- Uma nova implementação de \<filesystem>
 - Conversões elementares de cadeia de caracteres (parcial)
 - `std::launder()`
 - `std::byte`
@@ -431,7 +431,7 @@ Para obter mais informações, consulte [tabela de conformidade da linguagem Mic
 - Fez sobrecargas `basic_string::find(char)` chamar `traits::find` apenas uma vez. Anteriormente, isso era implementado como uma pesquisa de cadeia de caracteres geral para de uma cadeia de caracteres de comprimento 1.
 - `basic_string::operator==` agora verifica o tamanho da cadeia de caracteres antes de comparar o conteúdo das cadeias de caracteres.
 - Removido o acoplamento de controle em `basic_string`, que dificultava a análise do otimizador do compilador. Para todas as cadeias de caracteres curtas, chamar `reserve` ainda não tem certo custo por não fazer nada.
-- `std::vector`foi revisado quanto à exatidão e ao desempenho: a alias durante as operações de inserção e emplace agora é manipulado corretamente conforme exigido pelo padrão, a garantia de exceção forte agora é fornecida quando exigido pelo padrão por meio de `move_if_noexcept()` e outra lógica, e INSERT e emplace fazem menos operações de elementos.
+- `std::vector` foi revisado quanto à exatidão e ao desempenho: a alias durante as operações de inserção e emplace agora é manipulado corretamente conforme exigido pelo padrão, a garantia de exceção forte agora é fornecida quando exigido pelo padrão por meio de `move_if_noexcept()` e outra lógica, e INSERT e emplace fazem menos operações de elementos.
 - A biblioteca padrão do C++ agora evita desreferenciar ponteiros nulos sofisticados.
 - Desempenho de `weak_ptr::lock()` aprimorado.
 - Para aumentar a taxa de transferência do compilador, os cabeçalhos da biblioteca padrão do C++ agora evitam incluir declarações para intrínsecos do compilador que são desnecessários.
@@ -444,7 +444,7 @@ Para obter mais informações, consulte [tabela de conformidade da linguagem Mic
 - Alterado `std::try_lock()` para usar a expansão de pacote em vez de recursão.
 - O algoritmo de impedimento de deadlock `std::lock()` foi melhorado para usar operações `lock()` em vez de girar em `try_lock()` em todos os bloqueios.
 - Habilitada a otimização de valor retornado nomeado em `system_category::message()`.
-- `conjunction`e `disjunction` agora instanciam `N + 1` tipos, em vez de `2N + 2` tipos.
+- `conjunction` e `disjunction` agora instanciam `N + 1` tipos, em vez de `2N + 2` tipos.
 - `std::function` não instancia mais máquinas de suporte de alocador para cada chamável apagado por tipo, melhorando a taxa de transferência e reduzindo o tamanho de .obj em programas que passam vários lambdas distintos para `std::function`.
 - `allocator_traits<std::allocator>` contém operações `std::allocator` manualmente embutidas, o que reduz o tamanho do código que interage com `std::allocator` apenas por meio de `allocator_traits` (ou seja, no maioria dos códigos).
 - A interface de alocador mínima C++11 agora é manipulada pela biblioteca padrão chamando `allocator_traits` diretamente, em vez de encapsular o alocador em uma classe interna `_Wrap_alloc`. Isso reduz o tamanho do código gerado compatível com o alocador, melhora a capacidade do otimizador de raciocinar sobre contêineres da Biblioteca Padrão em alguns casos e fornece uma melhor experiência de depuração (porque agora você pode ver o tipo de alocador, em vez de `_Wrap_alloc<your_allocator_type>` no depurador).
@@ -636,7 +636,7 @@ Agora você tem novas opções para escrever e empacotar aplicativos C++ para o 
 
 Foi adicionado um modelo de projeto do **Projeto de Empacotamento de Aplicativo do Windows**, que simplifica muito o empacotamento de aplicativos de área de trabalho usando a Ponte de Desktop. Ele está disponível em **Arquivo | Novo | Projeto | Instalado | Visual C++ | Plataforma Universal do Windows**. Para saber mais, veja [Empacotar um aplicativo usando o Visual Studio (Ponte de Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-Ao escrever código novo, você pode usar a C++/WinRT, uma projeção de linguagem C++ padrão para o Windows Runtime implementada exclusivamente em arquivos de cabeçalho. Ele permite consumir e criar Windows Runtime APIs usando qualquer compilador C++ compatível com padrões. A C++/WinRT foi concebida para oferecer aos desenvolvedores em C++ um acesso de primeira classe à moderna API do Windows. Para obter mais informações, consulte [c++/WinRT: C++ moderno para o Windows Runtime](https://moderncpp.com/).
+Ao escrever código novo, você pode usar a C++/WinRT, uma projeção de linguagem C++ padrão para o Windows Runtime implementada exclusivamente em arquivos de cabeçalho. Ele permite consumir e criar Windows Runtime APIs usando qualquer compilador C++ compatível com padrões. A C++/WinRT foi concebida para oferecer aos desenvolvedores em C++ um acesso de primeira classe à moderna API do Windows. Para obter mais informações, consulte [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/).
 
 A partir do Build 17025 do SDK do Windows Insider Preview, o C++/WinRT está incluído na SDK do Windows. Para obter mais informações, consulte [C++/WinRT agora está incluído no SDK do Windows](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/).
 
