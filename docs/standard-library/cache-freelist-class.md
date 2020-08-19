@@ -28,7 +28,7 @@ template <std::size_t Sz, class Max>
 class cache_freelist
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Sz*\
 O número de elementos na matriz a serem alocados.
@@ -69,7 +69,7 @@ Aloca um bloco de memória.
 void *allocate(std::size_t count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O número de elementos na matriz a serem alocados.
@@ -98,7 +98,7 @@ Libera um número especificado de objetos do armazenamento começando em uma pos
 void deallocate(void* ptr, std::size_t count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.

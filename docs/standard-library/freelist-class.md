@@ -28,7 +28,7 @@ template <std::size_t Sz, class Max>
 class freelist : public Max
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Sz*\
 O número de elementos na matriz a serem alocados.
@@ -93,7 +93,7 @@ Adiciona um bloco de memória à lista.
 bool push(void* ptr);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 Um ponteiro para o bloco de memória a ser adicionado à lista livre.

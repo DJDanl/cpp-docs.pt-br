@@ -48,7 +48,7 @@ int _set_error_mode(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mode_val*<br/>
 Destino das mensagens de erro.

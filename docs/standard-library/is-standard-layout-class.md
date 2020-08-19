@@ -25,7 +25,7 @@ template <class Ty>
 struct is_standard_layout;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo a ser consultado

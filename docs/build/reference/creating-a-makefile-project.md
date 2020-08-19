@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a712b6da89433b9db6de9f2a676bf6e89d2e0e6e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169884"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560810"
 ---
 # <a name="create-a-c-makefile-project"></a>Criar um projeto de makefile C++
 
-Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. A implementação do programa *make* pela Microsoft é chamada [NMAKE](nmake-reference.md).
+Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. A implementação da Microsoft do programa *Make* é chamada de [NMAKE](nmake-reference.md).
 
 Se tiver um projeto makefile existente, você terá estas opções se desejar codificar e/ou depurá-lo no Visual Studio IDE:
 
@@ -38,7 +38,7 @@ O arquivo de saída que você especifica no projeto não tem efeito no nome que 
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Para criar um projeto de makefile no Visual Studio 2019
 
-1. No menu principal do Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** e digite "makefile" na caixa de pesquisa. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++**  > **Geral** (Visual Studio 2015) ou **Outros** (Visual Studio 2017) e, em seguida, selecione uma das duas opções, dependendo se o Windows ou o Linux será direcionado.
+1. No menu principal do Visual Studio, escolha **arquivo**  >  **novo**  >  **projeto** e digite "makefile" na caixa de pesquisa. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++** > **Geral** (Visual Studio 2015) ou **Outros** (Visual Studio 2017) e, em seguida, selecione uma das duas opções, dependendo se o Windows ou o Linux será direcionado.
 
 1. **Somente Windows**: na página **definições de configuração de depuração** , forneça as informações de comando, saída, limpar e recompilar para compilações de depuração e de varejo. Clique em **Avançar** se desejar especificar configurações diferentes para uma configuração de Versão.
 
@@ -50,7 +50,7 @@ O arquivo de saída que você especifica no projeto não tem efeito no nome que 
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Para criar um projeto de makefile no Visual Studio 2015 ou no Visual Studio 2017
 
-1. Na página inicial do Visual Studio, digite "makefile" na caixa de pesquisa **Novo projeto**. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++**  > **Geral** (Visual Studio 2015) ou **Outro** (Visual Studio 2017) e, em seguida, selecione **Projeto Makefile** no painel Modelos para abrir o assistente de projeto.
+1. Na página inicial do Visual Studio, digite "makefile" na caixa de pesquisa **Novo projeto**. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++** > **Geral** (Visual Studio 2015) ou **Outro** (Visual Studio 2017) e, em seguida, selecione **Projeto Makefile** no painel Modelos para abrir o assistente de projeto.
 
 1. Na página **Configurações de Aplicativo**, forneça as informações de comando, saída, limpeza e recompilação para builds de depuração e varejo.
 
@@ -94,7 +94,7 @@ O IntelliSense falha em projetos de makefile quando algumas configurações de p
 
    - Defina a propriedade **Assemblies de Uso Forçado** para especificar quais assemblies .NET serão processados durante o build do projeto makefile. Confira [/FU (Nomear Arquivo #using Forçado)](fu-name-forced-hash-using-file.md) para obter mais informações.
 
-   - Defina a propriedade **Opções Adicionais** para especificar as opções adicionais do compilador a serem usadas pelo IntelliSense durante a análise de arquivos do C++.
+   - Defina a propriedade **Opções adicionais** para especificar opções de compilador adicionais a serem usadas pelo IntelliSense ao analisar arquivos C++.
 
 1. Clique em **OK** para fechar as páginas de propriedades.
 
@@ -105,7 +105,7 @@ Na próxima vez que você abrir o projeto makefile no ambiente de desenvolviment
 ## <a name="see-also"></a>Confira também
 
 [Usando o IntelliSense](/visualstudio/ide/using-intellisense)<br>
-[Referência a NMAKE](nmake-reference.md)<br>
-[Como criar um C++ projeto de código existente](../how-to-create-a-cpp-project-from-existing-code.md)
-[caracteres especiais em um makefile](special-characters-in-a-makefile.md)<br/>
+[Referência de NMAKE](nmake-reference.md)<br>
+[Como criar um projeto do C++ a partir do código existente](../how-to-create-a-cpp-project-from-existing-code.md)<br>
+[Caracteres especiais em um makefile](special-characters-in-a-makefile.md)<br/>
 [Conteúdo de um makefile](contents-of-a-makefile.md)<br/>

@@ -34,7 +34,7 @@ template <std::size_t Max>
 class max_none
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Maximizar*\
 A classe max que determina o número máximo de elementos para armazenar no `freelist`.
@@ -63,7 +63,7 @@ Aumenta a contagem de blocos de memória alocada.
 void allocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Nx*\
 O valor do incremento.
@@ -80,7 +80,7 @@ Diminui a contagem de blocos de memória alocada.
 void deallocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Nx*\
 O valor do incremento.

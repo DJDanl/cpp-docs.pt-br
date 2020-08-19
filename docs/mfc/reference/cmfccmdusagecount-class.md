@@ -94,7 +94,7 @@ Incrementa por um contador que está associado ao comando fornecido.
 void AddCmd(UINT uiCmd);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *uiCmd*\
 no Especifica o contador de comando a ser incrementado.
@@ -119,7 +119,7 @@ Recupera a contagem de uso associada à ID de comando fornecida.
 UINT GetCount(UINT uiCmd) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *uiCmd*\
 no A ID do contador de comando a ser recuperado.
@@ -154,7 +154,7 @@ Determina se o comando fornecido é usado com frequência.
 BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *uiCmd*\
 no Especifica o comando a ser verificado.
@@ -189,7 +189,7 @@ Lê este objeto de um arquivo ou grava-o em um arquivo morto.
 virtual void Serialize(CArchive& ar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *multi-hop*\
 no Um `CArchive` objeto para serializar de ou para.
@@ -210,7 +210,7 @@ static BOOL __stdcall SetOptions(
     UINT nMinUsagePercentage);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nStartCount*\
 no A nova contagem inicial de todos os comandos acompanhados.

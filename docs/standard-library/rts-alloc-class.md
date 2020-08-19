@@ -30,7 +30,7 @@ template <class Cache>
 class rts_alloc
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Armazenar*\
 O tipo de instâncias de cache contidas na matriz. Pode ser [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) ou [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
@@ -61,7 +61,7 @@ Aloca um bloco de memória.
 void *allocate(std::size_t count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O número de elementos na matriz a serem alocados.
@@ -82,7 +82,7 @@ Libera um número especificado de objetos do armazenamento começando em uma pos
 void deallocate(void* ptr, std::size_t count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.
@@ -102,7 +102,7 @@ Compara a igualdade de dois caches.
 bool equals(const sync<_Cache>& _Other) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Cache*\
 O objeto de cache associado ao filtro.

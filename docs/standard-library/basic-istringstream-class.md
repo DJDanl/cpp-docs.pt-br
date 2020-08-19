@@ -32,7 +32,7 @@ template <class Elem, class Tr = char_traits<Elem>, class Alloc = allocator<Elem
 class basic_istringstream : public basic_istream<Elem, Tr>
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Alocação*\
 A classe do alocador.
@@ -64,7 +64,7 @@ O modelo de classe descreve um objeto que controla a extração de elementos e o
 |Função de membro|Descrição|
 |-|-|
 |[rdbuf](#rdbuf)|Retorna o endereço do buffer de fluxo armazenado do tipo `pointer` para [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` , `Tr` `Alloc`>.|
-|[str](#str)|Define ou obtém o texto em um buffer de cadeia de caracteres sem alterar a posição de gravação.|
+|[Str](#str)|Define ou obtém o texto em um buffer de cadeia de caracteres sem alterar a posição de gravação.|
 |[permuta](#swap)|Troca os valores nesse objeto `basic_istringstream` por aqueles do objeto fornecido.|
 
 ### <a name="operators"></a>Operadores
@@ -103,7 +103,7 @@ basic_istringstream(
     basic_istringstream&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Mode*\
 Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
@@ -130,7 +130,7 @@ Atribui os valores a esse objeto `basic_istringstream` do parâmetro de objeto.
 basic_istringstream& operator=(basic_istringstream&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Uma referência rvalue a um objeto `basic_istringstream`.
@@ -166,7 +166,7 @@ void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Newstr*\
 A nova cadeia de caracteres.
@@ -191,7 +191,7 @@ Troca os valores de dois objetos `basic_istringstream`.
 void swap(basic_istringstream& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Uma referência lvalue a um objeto `basic_istringstream`.

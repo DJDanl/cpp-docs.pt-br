@@ -362,7 +362,7 @@ constexpr auto first(size_type count) const noexcept;
 template <size_t count> constexpr auto first() const noexcept;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O número de elementos da frente deste intervalo para colocar no subintervalo.  
@@ -487,7 +487,7 @@ constexpr span<element_type, dynamic_extent> last(const size_type count) const n
 template <size_t count> constexpr span<element_type, count> last() const noexcept;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O número de elementos do final desta extensão para colocar no subintervalo.
@@ -543,7 +543,7 @@ Obter o elemento no intervalo em uma posição especificada.
 constexpr reference operator[](size_type offset) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *desvio*\
 Elemento baseado em zero no span para acessar.
@@ -580,7 +580,7 @@ Atribua outro intervalo a este.
 constexpr span& operator=(const span& other) noexcept = default;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *outros*\
 O intervalo a ser atribuído a este.
@@ -932,7 +932,7 @@ constexpr explicit(Extent != dynamic_extent && OtherExtent == dynamic_extent)
 span(const span<T, OtherExtent>& other) noexcept
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *arr*\
 Construa um intervalo de uma matriz.
@@ -1004,7 +1004,7 @@ template <size_t offset, size_t count = dynamic_extent>
 constexpr auto subspan() const noexcept
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O número de elementos a serem colocados no subintervalo. Se `count` for `dynamic_extent` (o valor padrão), o subintervalo será obtido de `offset` até o final deste intervalo.

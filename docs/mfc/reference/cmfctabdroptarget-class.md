@@ -91,7 +91,7 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pWnd*\
 no Não utilizado.
@@ -133,7 +133,7 @@ Chamado pelo Framework quando o usuário arrasta um objeto para fora da janela d
 virtual void OnDragLeave(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pWnd*\
 no Não utilizado.
@@ -154,7 +154,7 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pWnd*\
 no Não utilizado.
@@ -201,7 +201,7 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pWnd*\
 no Não utilizado.
@@ -246,7 +246,7 @@ Registra o controle como um que pode ser o destino de uma operação de arrastar
 BOOL Register(CMFCBaseTabCtrl *pOwner);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pOwner*\
 no O controle guia para se registrar como um destino de soltar.

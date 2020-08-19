@@ -68,7 +68,7 @@ void swap (
 }  // namespace std
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Referência para um objeto `sstream`.

@@ -106,7 +106,7 @@ Determina se um painel base é um objeto [CMFCAutoHideBar](../../mfc/reference/c
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pBar*\
 no O painel base que o Framework testa.
@@ -130,7 +130,7 @@ virtual void DockPane(
     LPRECT lpRect = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pWnd*\
 no O painel que a estrutura encaixa.
@@ -155,7 +155,7 @@ Recupera o tamanho do site de encaixe em coordenadas da tela.
 void GetAlignRect(CRect& rect) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Rect*\
 no Uma referência a um retângulo. O método armazena o tamanho do site de encaixe neste retângulo.
@@ -184,7 +184,7 @@ Define a margem no lado esquerdo da barra de encaixe.
 void SetOffsetLeft(int nOffset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nOffset*<br/>
 no O novo deslocamento.
@@ -201,7 +201,7 @@ Define a margem no lado direito da barra de encaixe.
 void SetOffsetRight(int nOffset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nOffset*<br/>
 no O novo deslocamento.
@@ -218,7 +218,7 @@ Redesenha os painéis no [CAutoHideDockSite](../../mfc/reference/cautohidedocksi
 virtual void RepositionPanes(CRect& rectNewClientArea);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *rectNewClientArea*\
 no Um valor reservado.
@@ -235,7 +235,7 @@ Chama [CMFCAutoHideBar:: UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pAutoHideToolbar*\
 no Um ponteiro para um painel de objeto [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) localizado no `CAutoHideDockSite` .

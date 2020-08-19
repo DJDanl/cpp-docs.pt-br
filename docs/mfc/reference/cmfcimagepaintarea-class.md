@@ -89,7 +89,7 @@ Constrói um objeto `CMFCImagePaintArea`.
 CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pParentDlg*\
 no Um ponteiro para a caixa de diálogo que é o pai do editor de imagem.
@@ -114,7 +114,7 @@ Define a imagem de bitmap para a área da imagem.
 void SetBitmap(CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pBitmap*\
 no A nova imagem de bitmap a ser exibida.
@@ -131,7 +131,7 @@ Define a cor do desenho atual.
 void SetColor(COLORREF color);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Cor*\
 no A nova cor do desenho.
@@ -150,7 +150,7 @@ Define o modo de desenho atual.
 void SetMode(IMAGE_EDIT_MODE mode);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *moda*\
 no Um valor [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) que especifica o modo de desenho atual.

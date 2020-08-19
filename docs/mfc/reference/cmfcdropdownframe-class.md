@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d99dae9d8e7eca96c736a33621f0b544f1962f0f
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752433"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560888"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 
-Fornece a funcionalidade da janela do quadro para baixo para barras de ferramentas gotas e botões de barra de ferramentas gota.
+Fornece a funcionalidade da janela de quadro suspensa para barras de ferramentas suspensas e botões da barra de ferramentas suspensas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -48,45 +48,45 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 |||
 |-|-|
 |Nome|Descrição|
-|[CMFCDropDownFrame::Criar](#create)|Cria um objeto `CMFCDropDownFrame`.|
+|[CMFCDropDownFrame:: criar](#create)|Cria um objeto `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
-|[CMFCDropDownframe::getParentmenubar](#getparentmenubar)|Recupera a barra de menu pai do quadro suspenso.|
+|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Recupera a barra de menus pai do quadro suspenso.|
 |[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Recupera o menu pop-up pai do quadro suspenso.|
-|`CMFCDropDownFrame::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a este tipo de classe.|
-|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Reposiciona o quadro de isento.|
-|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Define se a janela da barra de ferramentas suspensa da criança é destruída automaticamente.|
+|`CMFCDropDownFrame::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a esse tipo de classe.|
+|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Reposiciona o quadro suspenso.|
+|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Define se a janela da barra de ferramentas suspensa filho é destruída automaticamente.|
 
 ### <a name="remarks"></a>Comentários
 
 Essa classe não se destina a ser usada diretamente do seu código.
 
-A estrutura usa essa classe para `CMFCDropDownToolbar` `CMFCDropDownToolbarButton` fornecer comportamento de quadro para as classes e classes. Para obter mais informações sobre essas classes, consulte [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md) e [CMFCDropDownToolbarButton Class](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).
+A estrutura usa essa classe para fornecer comportamento de quadro às `CMFCDropDownToolbar` `CMFCDropDownToolbarButton` classes e. Para obter mais informações sobre essas classes, consulte [Classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) e [classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como `CMFCDropDownFrame` recuperar `CFrameWnd` um ponteiro para um objeto de uma classe e como definir a janela da barra de ferramentas suspensa para criança a ser destruída automaticamente.
+O exemplo a seguir demonstra como recuperar um ponteiro para um `CMFCDropDownFrame` objeto de uma `CFrameWnd` classe e como definir a janela da barra de ferramentas suspensa filho para ser destruída automaticamente.
 
 [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[Cminiframewnd](../../mfc/reference/cminiframewnd-class.md)
+[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
-[Cmfcdropdownframe](../../mfc/reference/cmfcdropdownframe-class.md)
+[CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdropdowntoolbar.h
+**Cabeçalho:** afxdropdowntoolbar. h
 
-## <a name="cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Criar
+## <a name="cmfcdropdownframecreate"></a><a name="create"></a> CMFCDropDownFrame:: criar
 
 Cria um objeto `CMFCDropDownFrame`.
 
@@ -100,27 +100,31 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-|||
-|-|-|
-|Parâmetro|Descrição|
-|*pWndParent*|[em] A janela dos pais do quadro de queda.|
-|*x*|[em] A coordenada de tela horizontal para a localização do quadro down-down.|
-|*Y*|[em] A coordenada de tela vertical para a localização do quadro down-down.|
-|*barra de ferramentas pWndOrigin*|[em] A barra de ferramentas que tem os botões de baixa que este método usa para preencher o novo objeto de quadro estilhaçado.|
+*pWndParent*\
+no A janela pai do quadro suspenso.
+
+*w.x.y.*\
+no A coordenada de tela horizontal para o local do quadro abaixo.
+
+*Iar*\
+no A tela vertical coordenada para o local do quadro abaixo.
+
+*pWndOriginToolbar*\
+no A barra de ferramentas que tem os botões suspensos que esse método usa para popular o novo objeto de quadro suspenso.
 
 ### <a name="return-value"></a>Valor retornado
 
-TRUE se o quadro de baixa foi criado com sucesso; caso contrário, FALSO.
+TRUE se o quadro suspenso foi criado com êxito; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método chama o método [Base CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) para criar a janela de quadro saudosa com o estilo WS_POPUP. A janela do quadro de sumário é exibida nas coordenadas de tela especificadas. Este método falha se o método [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) retornar FALSO.
+Esse método chama o método base [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) para criar a janela de quadro suspensa com o estilo de WS_POPUP. A janela do quadro suspenso é exibida nas coordenadas de tela especificadas. Esse método falhará se o método [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) retornar false.
 
-A `CMFCDropDownFrame` classe cria uma cópia `CMFCDropDownToolBar` do parâmetro fornecido. Este método copia as imagens `pWndOriginToolbar` do botão `m_pWndOriginToolbar` e os estados do botão do parâmetro para o membro de dados.
+A `CMFCDropDownFrame` classe cria uma cópia do parâmetro fornecido `CMFCDropDownToolBar` . Esse método copia as imagens de botão e os Estados de botão do `pWndOriginToolbar` parâmetro para o `m_pWndOriginToolbar` membro de dados.
 
-## <a name="cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownframe::getParentmenubar
+## <a name="cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a> CMFCDropDownFrame::GetParentMenuBar
 
-Recupera a barra de menu pai do quadro suspenso.
+Recupera a barra de menus pai do quadro suspenso.
 
 ```
 CMFCMenuBar* GetParentMenuBar() const;
@@ -128,13 +132,13 @@ CMFCMenuBar* GetParentMenuBar() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para a barra de menu pai do quadro suspenso ou NULL se o quadro não tiver pai.
+Um ponteiro para a barra de menus pai do quadro suspenso ou nulo se o quadro não tiver nenhum pai.
 
 ### <a name="remarks"></a>Comentários
 
-Este método recupera a barra de menu pai do botão pai. Este método retorna NULL se o quadro suspenso não tiver nenhum botão pai ou o botão pai não tiver barra de menu dos pais.
+Esse método recupera a barra de menus pai do botão pai. Esse método retornará nulo se o quadro suspenso não tiver nenhum botão pai ou o botão pai não tiver nenhuma barra de menus pai.
 
-## <a name="cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu
+## <a name="cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a> CMFCDropDownFrame::GetParentPopupMenu
 
 Recupera o menu pop-up pai do quadro suspenso.
 
@@ -144,15 +148,15 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o menu suspenso pai do quadro suspenso ou NULL se o quadro não tiver pai.
+Um ponteiro para o menu suspenso pai do quadro suspenso ou nulo se o quadro não tiver nenhum pai.
 
 ### <a name="remarks"></a>Comentários
 
-Este método recupera o menu pai do botão pai. Este método retorna NULL se o quadro suspenso não tiver nenhum botão pai ou o botão pai não tiver menu pai.
+Esse método recupera o menu pai do botão pai. Esse método retornará NULL se o quadro suspenso não tiver nenhum botão pai ou o botão pai não tiver nenhum menu pai.
 
-## <a name="cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout
+## <a name="cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a> CMFCDropDownFrame::RecalcLayout
 
-Reposiciona o quadro de isento.
+Reposiciona o quadro suspenso.
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -160,18 +164,16 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-|||
-|-|-|
-|Parâmetro|Descrição|
-|*bNotificar*|[em] Utilizadas.|
+*bNotify*\
+no Não utilizado.
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura chama esse método quando o quadro de saque é criado ou a janela pai é redimensionada. Este método calcula a posição e o tamanho do quadro de baixa usando a posição e o tamanho da janela pai.
+A estrutura chama esse método quando o quadro suspenso é criado ou a janela pai é redimensionada. Esse método calcula a posição e o tamanho do quadro suspenso usando a posição e o tamanho da janela pai.
 
-## <a name="cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy
+## <a name="cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a> CMFCDropDownFrame::SetAutoDestroy
 
-Define se a janela da barra de ferramentas suspensa da criança é destruída automaticamente.
+Define se a janela da barra de ferramentas suspensa filho é destruída automaticamente.
 
 ```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -180,15 +182,15 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bAutoDestroy*<br/>
-[em] True para destruir automaticamente a janela de barra de ferramentas drop-down associada; caso contrário, FALSE.
+no TRUE para destruir automaticamente a janela da barra de ferramentas suspensa associada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Se *bAutoDestroy* for TRUE, o `CMFCDropDownFrame` destruidor destruirá a janela da barra de ferramentas associada. O valor padrão é TRUE.
+Se *bAutoDestroy* for true, o `CMFCDropDownFrame` destruidor destruirá a janela da barra de ferramentas suspensa associada. O valor padrão é TRUE.
 
 ## <a name="see-also"></a>Confira também
 
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
