@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 9cde21624e3a8d4cce6db9cdc054bad427340f31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203892"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562565"
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (Biblioteca padrão C++)
 
@@ -114,12 +114,13 @@ template <class Ty, std::size_t N>
 class array;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|-|-|
-|`Ty`|O tipo de um elemento.|
-|`N`|O número de elementos.|
+`Ty`\
+O tipo de um elemento.
+
+`N`\
+O número de elementos.
 
 ## <a name="members"></a>Membros
 
@@ -166,7 +167,7 @@ class array;
 
 ## <a name="remarks"></a>Comentários
 
-O tipo tem um construtor padrão `array()` e um operador de atribuição padrão `operator=` e atende aos requisitos para um `aggregate`. Portanto, os objetos do tipo `array<Ty, N>` podem ser inicializados usando um inicializador agregado. Por exemplo:
+O tipo tem um construtor padrão `array()` e um operador de atribuição padrão `operator=` e atende aos requisitos para um `aggregate`. Portanto, os objetos do tipo `array<Ty, N>` podem ser inicializados usando um inicializador agregado. Por exemplo,
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -180,7 +181,7 @@ cria o objeto `ai` que contém quatro valores inteiros, inicializa os três prim
 
 **Namespace:** std
 
-## <a name="arrayarray"></a><a name="array"></a>matriz:: matriz
+## <a name="arrayarray"></a><a name="array"></a> matriz:: matriz
 
 Constrói um objeto de matriz.
 
@@ -239,11 +240,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayassign"></a><a name="assign"></a>matriz:: atribuir
+## <a name="arrayassign"></a><a name="assign"></a> matriz:: atribuir
 
 Obsoleto no C++ 11, substituído por [preenchimento](#fill). Substitui todos os elementos.
 
-## <a name="arrayat"></a><a name="at"></a>matriz:: at
+## <a name="arrayat"></a><a name="at"></a> matriz:: at
 
 Acessa um elemento em uma posição especificada.
 
@@ -289,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="arrayback"></a><a name="back"></a>matriz:: voltar
+## <a name="arrayback"></a><a name="back"></a> matriz:: voltar
 
 Acessa o último elemento.
 
@@ -334,7 +335,7 @@ int main()
 3
 ```
 
-## <a name="arraybegin"></a><a name="begin"></a>matriz:: início
+## <a name="arraybegin"></a><a name="begin"></a> matriz:: início
 
 Designa o início da sequência controlada.
 
@@ -379,7 +380,7 @@ int main()
 0
 ```
 
-## <a name="arraycbegin"></a><a name="cbegin"></a>matriz:: cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a> matriz:: cbegin
 
 Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 
@@ -405,7 +406,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="arraycend"></a><a name="cend"></a>matriz:: cend
+## <a name="arraycend"></a><a name="cend"></a> matriz:: cend
 
 Retorna um **`const`** iterador que aborda o local logo após o último elemento em um intervalo.
 
@@ -433,7 +434,7 @@ auto i2 = Container.cend();
 
 O valor retornado por `cend` não deve ser desreferenciado.
 
-## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>matriz:: const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a> matriz:: const_iterator
 
 O tipo de um iterador de constante para a sequência controlada.
 
@@ -481,7 +482,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>matriz:: const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a> matriz:: const_pointer
 
 O tipo de um ponteiro de constante para um elemento.
 
@@ -525,7 +526,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reference"></a><a name="const_reference"></a>matriz:: const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a> matriz:: const_reference
 
 O tipo de uma referência de constante para um elemento.
 
@@ -569,7 +570,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>matriz:: const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> matriz:: const_reverse_iterator
 
 O tipo de um iterador reverso de constante para a sequência controlada.
 
@@ -613,7 +614,7 @@ int main()
 3
 ```
 
-## <a name="arraycrbegin"></a><a name="crbegin"></a>matriz:: crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a> matriz:: crbegin
 
 Retorna um iterador const para o primeiro elemento em uma matriz invertida.
 
@@ -657,7 +658,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="arraycrend"></a><a name="crend"></a>matriz:: crend
+## <a name="arraycrend"></a><a name="crend"></a> matriz:: crend
 
 Retorna um iterador const que trata o local após o último elemento em uma matriz invertida.
 
@@ -701,7 +702,7 @@ int main( )
 1
 ```
 
-## <a name="arraydata"></a><a name="data"></a>matriz::d o ATA
+## <a name="arraydata"></a><a name="data"></a> matriz::d o ATA
 
 Obtém o endereço do primeiro elemento.
 
@@ -747,7 +748,7 @@ int main()
 0
 ```
 
-## <a name="arraydifference_type"></a><a name="difference_type"></a>matriz::d ifference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a> matriz::d ifference_type
 
 O tipo de uma distância com sinal entre dois elementos.
 
@@ -791,7 +792,7 @@ int main()
 -4
 ```
 
-## <a name="arrayempty"></a><a name="empty"></a>matriz:: vazia
+## <a name="arrayempty"></a><a name="empty"></a> matriz:: vazia
 
 Testa se nenhum elemento está presente.
 
@@ -841,7 +842,7 @@ false
 true
 ```
 
-## <a name="arrayend"></a><a name="end"></a>matriz:: fim
+## <a name="arrayend"></a><a name="end"></a> matriz:: fim
 
 Designa o fim da sequência controlada.
 
@@ -887,7 +888,7 @@ int main()
 3
 ```
 
-## <a name="arrayfill"></a><a name="fill"></a>matriz:: preenchimento
+## <a name="arrayfill"></a><a name="fill"></a> matriz:: preenchimento
 
 Apaga uma matriz e copia os elementos especificados para a matriz vazia.
 
@@ -895,11 +896,10 @@ Apaga uma matriz e copia os elementos especificados para a matriz vazia.
 void fill(const Type& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
-|-|-|
-|*Val*|O valor do elemento sendo inserido na matriz.|
+*Val*\
+O valor do elemento sendo inserido na matriz.
 
 ### <a name="remarks"></a>Comentários
 
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="arrayfront"></a><a name="front"></a>array:: front
+## <a name="arrayfront"></a><a name="front"></a> array:: front
 
 Acessa o primeiro elemento.
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="arrayiterator"></a><a name="iterator"></a>matriz:: iterador
+## <a name="arrayiterator"></a><a name="iterator"></a> matriz:: iterador
 
 O tipo de um iterador para a sequência controlada.
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arraymax_size"></a><a name="max_size"></a>matriz:: max_size
+## <a name="arraymax_size"></a><a name="max_size"></a> matriz:: max_size
 
 Conta o número de elementos.
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="arrayoperator"></a><a name="op_at"></a>array:: operator []
+## <a name="arrayoperator"></a><a name="op_at"></a> array:: operator []
 
 Acessa um elemento em uma posição especificada.
 
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="arrayoperator"></a><a name="op_eq"></a>array:: Operator =
+## <a name="arrayoperator"></a><a name="op_eq"></a> array:: Operator =
 
 Substitui a sequência controlada.
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arraypointer"></a><a name="pointer"></a>matriz::p ointer
+## <a name="arraypointer"></a><a name="pointer"></a> matriz::p ointer
 
 O tipo de um ponteiro para um elemento.
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="arrayrbegin"></a><a name="rbegin"></a>matriz:: rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a> matriz:: rbegin
 
 Designa o início da sequência controlada invertida.
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="arrayreference"></a><a name="reference"></a>matriz:: referência
+## <a name="arrayreference"></a><a name="reference"></a> matriz:: referência
 
 O tipo de uma referência para um elemento.
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="arrayrend"></a><a name="rend"></a>matriz:: rend
+## <a name="arrayrend"></a><a name="rend"></a> matriz:: rend
 
 Designa o fim da sequência controlada invertida.
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>matriz:: reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a> matriz:: reverse_iterator
 
 O tipo de um iterador inverso para a sequência controlada.
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="arraysize"></a><a name="size"></a>matriz:: tamanho
+## <a name="arraysize"></a><a name="size"></a> matriz:: tamanho
 
 Conta o número de elementos.
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="arraysize_type"></a><a name="size_type"></a>matriz:: size_type
+## <a name="arraysize_type"></a><a name="size_type"></a> matriz:: size_type
 
 O tipo de uma distância sem sinal entre dois elementos.
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="arrayswap"></a><a name="swap"></a>matriz:: permuta
+## <a name="arrayswap"></a><a name="swap"></a> matriz:: permuta
 
 Troca o conteúdo dessa matriz com outra matriz.
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayvalue_type"></a><a name="value_type"></a>matriz:: value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a> matriz:: value_type
 
 O tipo de um elemento.
 

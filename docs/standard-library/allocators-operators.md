@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d2f928ab3773ed8e0b0afdc0113db2ef5b2a3dd
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204554"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561212"
 ---
 # <a name="ltallocatorsgt-operators"></a>Operadores &lt;alocadores&gt;
 
@@ -20,7 +20,7 @@ Essas são as funções de operador de modelo global definidas em &lt; alocadore
 |-|-|
 |[operador! =](#op_neq)|[operador = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a> operador! =
 
 Testa a desigualdade entre objetos do alocador de uma classe especificada.
 
@@ -31,12 +31,13 @@ bool operator!=(
     const allocator_base<Type, Sync>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*mantida*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
-|*Certo*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
+*mantida*\
+Um dos objetos alocadores a serem testados quanto à desigualdade.
+
+*Certo*\
+Um dos objetos alocadores a serem testados quanto à desigualdade.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -46,7 +47,7 @@ bool operator!=(
 
 O operador de modelo retorna `!(left == right)`.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operador = =
 
 Testa a igualdade entre objetos do alocador de uma classe especificada.
 
@@ -57,12 +58,13 @@ bool operator==(
     const allocator_base<Type, Sync>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*mantida*|Um dos objetos alocadores a serem testados quanto à igualdade.|
-|*Certo*|Um dos objetos alocadores a serem testados quanto à igualdade.|
+*mantida*\
+Um dos objetos alocadores a serem testados quanto à igualdade.
+
+*Certo*\
+Um dos objetos alocadores a serem testados quanto à igualdade.
 
 ### <a name="return-value"></a>Valor retornado
 

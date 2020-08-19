@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: abcc18ee29e2dcb09ca15ae77219ae5dd4d74c65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228928"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561382"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -24,11 +24,10 @@ O **`decltype`** especificador de tipo produz o tipo de uma expressão especific
 
 > **`decltype(`***expressão* de**`)`**
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*expressão*|Uma expressão. Para obter mais informações, consulte [expressões](../cpp/expressions-cpp.md).|
+*expressão*\
+Uma expressão. Para obter mais informações, consulte [expressões](../cpp/expressions-cpp.md).
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -36,7 +35,7 @@ O tipo do parâmetro da *expressão* .
 
 ## <a name="remarks"></a>Comentários
 
-O **`decltype`** especificador de tipo tem suporte no Visual Studio 2010 ou em versões posteriores e pode ser usado com código nativo ou gerenciado. `decltype(auto)`(C++ 14) tem suporte no Visual Studio 2015 e posterior.
+O **`decltype`** especificador de tipo tem suporte no Visual Studio 2010 ou em versões posteriores e pode ser usado com código nativo ou gerenciado. `decltype(auto)` (C++ 14) tem suporte no Visual Studio 2015 e posterior.
 
 O compilador usa as regras a seguir para determinar o tipo do parâmetro de *expressão* .
 
@@ -204,4 +203,4 @@ static_assert(test2, "PASS2");
 
 Visual Studio 2010 ou versões posteriores.
 
-`decltype(auto)`requer o Visual Studio 2015 ou posterior.
+`decltype(auto)` requer o Visual Studio 2015 ou posterior.

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: 83432fdb90fe28214fb1faaf843556deb2f44750
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d1a521f8ac0a33dbc59d789e506ac1dd9c906e3e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367350"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562045"
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
 
-Fornece o mecanismo de comunicação entre um controle de guias e as bibliotecas OLE.
+Fornece o mecanismo de comunicação entre um controle de guia e as bibliotecas OLE.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -47,41 +47,41 @@ class CMFCTabDropTarget : public COleDropTarget
 |||
 |-|-|
 |Nome|Descrição|
-|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Chamado pela estrutura quando o usuário arrasta um objeto para uma janela de guia. (Substitui [coleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
-|[CMFCTabDroptarget::OnDragLeave](#ondragleave)|Chamado pela estrutura quando o usuário arrasta um objeto para fora da janela da guia que tem foco. (Substitui [coleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
-|[CMFCTabDropTarget::OnDragover](#ondragover)|Chamado pela estrutura quando o usuário arrasta um objeto para a janela da guia que tem foco. (Substitui [coleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
-|[CMFCTabDroptarget::OnDropEx](#ondropex)|Chamado pela estrutura quando o usuário libera o botão do mouse no final de uma operação de arrastar. (Substitui [coleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|
-|[CMFCTabDropTarget::Registro](#register)|Registra o controle como aquele que pode ser alvo de uma operação de arrasto e queda de OLE.|
+|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Chamado pelo Framework quando o usuário arrasta um objeto para uma janela de guia. (Substitui [COleDropTarget:: OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
+|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Chamado pelo Framework quando o usuário arrasta um objeto para fora da janela de guia que tem o foco. (Substitui [COleDropTarget:: OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
+|[CMFCTabDropTarget::OnDragOver](#ondragover)|Chamado pelo Framework quando o usuário arrasta um objeto para a janela de guia que tem o foco. (Substitui [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
+|[CMFCTabDropTarget::OnDropEx](#ondropex)|Chamado pelo Framework quando o usuário libera o botão do mouse no final de uma operação de arrastar. (Substitui [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|
+|[CMFCTabDropTarget:: Register](#register)|Registra o controle como um que pode ser o destino de uma operação de arrastar e soltar OLE.|
 
 ### <a name="remarks"></a>Comentários
 
-Esta classe fornece suporte de arrastar `CMFCBaseTabCtrl` e soltar para a classe. Se o aplicativo inicializar as bibliotecas OLE usando a função `CMFCBaseTabCtrl` [AfxOleInit,](ole-initialization.md#afxoleinit) os objetos se registrarão para operações de arrastar e soltar.
+Essa classe fornece suporte a arrastar e soltar para a `CMFCBaseTabCtrl` classe. Se seu aplicativo inicializar as bibliotecas OLE usando a função [AfxOleInit](ole-initialization.md#afxoleinit) , os `CMFCBaseTabCtrl` objetos se registrarão para operações de arrastar e soltar.
 
-A `CMFCTabDropTarget` classe estende sua classe base fazendo a guia que está sob o cursor quando uma operação de arrasto ocorre ativa. Para obter mais informações sobre operações de arrastar e soltar, consulte [o OLE arrastar e soltar](../../mfc/drag-and-drop-ole.md).
+A `CMFCTabDropTarget` classe estende sua classe base, tornando-se a guia sob o cursor quando uma operação de arrastar ocorrer ativa. Para obter mais informações sobre operações de arrastar e soltar, consulte [arrastar e soltar OLE](../../mfc/drag-and-drop-ole.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir `CMFCTabDropTarget` demonstra como `Register` construir um objeto e usar seu método.
+O exemplo a seguir demonstra como construir um `CMFCTabDropTarget` objeto e usar seu `Register` método.
 
 [!code-cpp[NVC_MFC_RibbonApp#39](../../mfc/reference/codesnippet/cpp/cmfctabdroptarget-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Coledroptarget](../../mfc/reference/coledroptarget-class.md)
+[COleDropTarget](../../mfc/reference/coledroptarget-class.md)
 
 [CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxbasetabctrl.h
+**Cabeçalho:** afxbasetabctrl. h
 
-## <a name="cmfctabdroptargetondragenter"></a><a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter
+## <a name="cmfctabdroptargetondragenter"></a><a name="ondragenter"></a> CMFCTabDropTarget::OnDragEnter
 
-Chamado pela estrutura quando o usuário arrasta um objeto para uma janela de guia.
+Chamado pelo Framework quando o usuário arrasta um objeto para uma janela de guia.
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -91,58 +91,60 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|||
-|-|-|
-|Parâmetro|Descrição|
-|*Pwnd*|[em] Utilizadas.|
-|*Pdataobject*|[em] Um ponteiro para o objeto que o usuário arrasta.|
-|*Dwkeystate*|[em] Contém o estado das chaves modificadoras. Esta é uma combinação de qualquer número do seguinte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|
-|*Ponto*|[em] A localização do cursor nas coordenadas dos clientes.|
+*pWnd*\
+no Não utilizado.
+
+*pDataObject*\
+no Um ponteiro para o objeto que o usuário arrasta.
+
+*dwKeyState*\
+no Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número dos seguintes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+
+*empresas*\
+no O local do cursor em coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor retornado
 
-O efeito que resulta se a queda ocorrer no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
+O efeito que resulta se a queda ocorre no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
 
-- Dropeffect_none
+- DROPEFFECT_NONE
 
-- Dropeffect_copy
+- DROPEFFECT_COPY
 
-- Dropeffect_move
+- DROPEFFECT_MOVE
 
 - DROPEFFECT_LINK
 
-- Dropeffect_scroll
+- DROPEFFECT_SCROLL
 
 ### <a name="remarks"></a>Comentários
 
-Este método retorna DROPEFFECT_NONE se a estrutura da barra de ferramentas não estiver no modo de personalização ou o formato de dados da Área de Transferência estiver indisponível. Caso contrário, ele retorna `CMFCBaseTabCtrl::OnDragEnter` o resultado da chamada com os parâmetros fornecidos.
+Esse método retornará DROPEFFECT_NONE se a estrutura da barra de ferramentas não estiver no modo de personalização ou o formato de dados da área de transferência estiver indisponível. Caso contrário, ele retornará o resultado da chamada `CMFCBaseTabCtrl::OnDragEnter` com os parâmetros fornecidos.
 
-Para obter mais informações sobre o modo de personalização, consulte [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obter mais informações sobre formatos de dados da Área de Transferência, consulte [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Para obter mais informações sobre o modo de personalização, consulte [CMFCToolBar:: Iscustommode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obter mais informações sobre os formatos de dados da área de transferência, consulte [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-## <a name="cmfctabdroptargetondragleave"></a><a name="ondragleave"></a>CMFCTabDroptarget::OnDragLeave
+## <a name="cmfctabdroptargetondragleave"></a><a name="ondragleave"></a> CMFCTabDropTarget::OnDragLeave
 
-Chamado pela estrutura quando o usuário arrasta um objeto para fora da janela da guia que tem foco.
+Chamado pelo Framework quando o usuário arrasta um objeto para fora da janela de guia que tem o foco.
 
 ```
 virtual void OnDragLeave(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|||
-|-|-|
-|Parâmetro|Descrição|
-|*Pwnd*|[em] Utilizadas.|
+*pWnd*\
+no Não utilizado.
 
 ### <a name="remarks"></a>Comentários
 
-Este método `CMFCBaseTabCtrl::OnDragLeave` chama o método para executar a operação de arrasto.
+Esse método chama o `CMFCBaseTabCtrl::OnDragLeave` método para executar a operação de arrastar.
 
-## <a name="cmfctabdroptargetondragover"></a><a name="ondragover"></a>CMFCTabDropTarget::OnDragover
+## <a name="cmfctabdroptargetondragover"></a><a name="ondragover"></a> CMFCTabDropTarget::OnDragOver
 
-Chamado pela estrutura quando o usuário arrasta um objeto para a janela da guia que tem foco.
+Chamado pelo Framework quando o usuário arrasta um objeto para a janela de guia que tem o foco.
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -152,39 +154,43 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|||
-|-|-|
-|Parâmetro|Descrição|
-|*Pwnd*|[em] Utilizadas.|
-|*Pdataobject*|[em] Um ponteiro para o objeto que o usuário arrasta.|
-|*Dwkeystate*|[em] Contém o estado das chaves modificadoras. Esta é uma combinação de qualquer número do seguinte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|
-|*Ponto*|[em] A localização do ponteiro do mouse nas coordenadas do cliente.|
+*pWnd*\
+no Não utilizado.
+
+*pDataObject*\
+no Um ponteiro para o objeto que o usuário arrasta.
+
+*dwKeyState*\
+no Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número dos seguintes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+
+*empresas*\
+no O local do ponteiro do mouse nas coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor retornado
 
-O efeito que resulta se a queda ocorrer no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
+O efeito que resulta se a queda ocorre no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
 
-- Dropeffect_none
+- DROPEFFECT_NONE
 
-- Dropeffect_copy
+- DROPEFFECT_COPY
 
-- Dropeffect_move
+- DROPEFFECT_MOVE
 
 - DROPEFFECT_LINK
 
-- Dropeffect_scroll
+- DROPEFFECT_SCROLL
 
 ### <a name="remarks"></a>Comentários
 
-Este método torna ativa a guia que está sob o cursor quando ocorre uma operação de arrasto. Ele retorna DROPEFFECT_NONE se a estrutura da barra de ferramentas não estiver no modo de personalização ou o formato de dados da Área de Transferência estiver indisponível. Caso contrário, ele retorna `CMFCBaseTabCtrl::OnDragOver` o resultado da chamada com os parâmetros fornecidos.
+Esse método torna a guia sob o cursor quando ocorre uma operação de arrastar ativa. Ele retornará DROPEFFECT_NONE se a estrutura da barra de ferramentas não estiver no modo de personalização ou o formato de dados da área de transferência estiver indisponível. Caso contrário, ele retornará o resultado da chamada `CMFCBaseTabCtrl::OnDragOver` com os parâmetros fornecidos.
 
-Para obter mais informações sobre o modo de personalização, consulte [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obter mais informações sobre formatos de dados da Área de Transferência, consulte [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Para obter mais informações sobre o modo de personalização, consulte [CMFCToolBar:: Iscustommode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obter mais informações sobre os formatos de dados da área de transferência, consulte [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-## <a name="cmfctabdroptargetondropex"></a><a name="ondropex"></a>CMFCTabDroptarget::OnDropEx
+## <a name="cmfctabdroptargetondropex"></a><a name="ondropex"></a> CMFCTabDropTarget::OnDropEx
 
-Chamado pela estrutura quando o usuário libera o botão do mouse no final de uma operação de arrastar.
+Chamado pelo Framework quando o usuário libera o botão do mouse no final de uma operação de arrastar.
 
 ```
 virtual DROPEFFECT OnDropEx(
@@ -195,62 +201,66 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|||
-|-|-|
-|Parâmetro|Descrição|
-|*Pwnd*|[em] Utilizadas.|
-|*Pdataobject*|[em] Um ponteiro para o objeto que o usuário arrasta.|
-|*Dropeffect*|[em] A operação de queda padrão.|
-|*lista de gotas*|[em] Utilizadas.|
-|*Ponto*|[em] A localização do ponteiro do mouse nas coordenadas do cliente.|
+*pWnd*\
+no Não utilizado.
+
+*pDataObject*\
+no Um ponteiro para o objeto que o usuário arrasta.
+
+*dropEffect*\
+no A operação de remoção padrão.
+
+*lista suspensa*\
+no Não utilizado.
+
+*empresas*\
+no O local do ponteiro do mouse nas coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor retornado
 
-O efeito de queda resultante. Pode ser um ou mais dos seguintes:
+O efeito de cancelamento resultante. Pode ser um ou mais dos seguintes:
 
-- Dropeffect_none
+- DROPEFFECT_NONE
 
-- Dropeffect_copy
+- DROPEFFECT_COPY
 
-- Dropeffect_move
+- DROPEFFECT_MOVE
 
 - DROPEFFECT_LINK
 
-- Dropeffect_scroll
+- DROPEFFECT_SCROLL
 
 ### <a name="remarks"></a>Comentários
 
-Este método `CMFCBaseTabCtrl::OnDrop` chama se a estrutura da barra de ferramentas estiver no modo de personalização e o formato de dados da Área de Transferência estiver disponível. Se a `CMFCBaseTabCtrl::OnDrop` chamada para retornar um valor não zero, este método reameda o efeito de queda padrão especificado pelo *dropEffect*. Caso contrário, este método retorna DROPEFFECT_NONE. Para obter mais informações sobre efeitos de queda, consulte [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).
+Esse método chama `CMFCBaseTabCtrl::OnDrop` se a estrutura da barra de ferramentas está no modo de personalização e o formato de dados da área de transferência está disponível. Se a chamada para `CMFCBaseTabCtrl::OnDrop` retornar um valor diferente de zero, esse método retornará o efeito de soltar padrão especificado por *DROPEFFECT*. Caso contrário, esse método retornará DROPEFFECT_NONE. Para obter mais informações sobre drop Effects, consulte [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).
 
-Para obter mais informações sobre o modo de personalização, consulte [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obter mais informações sobre formatos de dados da Área de Transferência, consulte [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Para obter mais informações sobre o modo de personalização, consulte [CMFCToolBar:: Iscustommode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obter mais informações sobre os formatos de dados da área de transferência, consulte [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-## <a name="cmfctabdroptargetregister"></a><a name="register"></a>CMFCTabDropTarget::Registro
+## <a name="cmfctabdroptargetregister"></a><a name="register"></a> CMFCTabDropTarget:: Register
 
-Registra o controle como aquele que pode ser alvo de uma operação de arrasto e queda de OLE.
+Registra o controle como um que pode ser o destino de uma operação de arrastar e soltar OLE.
 
 ```
 BOOL Register(CMFCBaseTabCtrl *pOwner);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|||
-|-|-|
-|Parâmetro|Descrição|
-|*pOwner*|[em] O controle da guia para registrar como um alvo de queda.|
+*pOwner*\
+no O controle guia para se registrar como um destino de soltar.
 
 ### <a name="return-value"></a>Valor retornado
 
-Não zero se o registro foi bem sucedido; caso contrário, 0.
+Diferente de zero se o registro tiver sido bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Este método chama [COleDropTarget::Registre-se](../../mfc/reference/coledroptarget-class.md#register) para registrar o controle para operações de arrastar e soltar.
+Esse método chama [COleDropTarget:: Register](../../mfc/reference/coledroptarget-class.md#register) para registrar o controle para operações de arrastar e soltar.
 
 ## <a name="see-also"></a>Confira também
 
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Arrastar e soltar do OLE](../../mfc/drag-and-drop-ole.md)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: d5afc1b05f52d73228abc1a1e102c1578eb2d2dc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0791fe6002b751906c6bc6f83dafe1ccf202bc8b
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912140"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562019"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -52,15 +52,22 @@ void _tzset( void );
 
 A função **_tzset** usa a configuração atual da variável de ambiente **TZ** para atribuir valores a três variáveis globais: **_daylight**, **_timezone**e **_tzname**. Essas variáveis são usadas pelas funções [_ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) para fazer correções do tempo universal coordenado (UTC) para a hora local e pela função [time](time-time32-time64.md) para computar o UTC da hora do sistema. Use a sintaxe a seguir para definir a variável de ambiente do **TZ** :
 
-> **set TZ =**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_SS_]] [*dzn*]
+> **set TZ =**_tzn_ \[ **+**&#124;**-** ]*hh* \[ **:**_mm_ \[ **:**_SS_]] [*dzn*]
 
-|Parâmetro|Descrição|
-|-|-|
-| *tzn* | Nome de fuso horário de três letras, como PST. Você deve especificar o deslocamento correto da hora local em UTC. |
-| *hh* | Diferença de horas entre UTC e hora local. Sinal (+) opcional para valores positivos. |
-| *mm* | Minutos. Separado de *hh* por dois-pontos (**:**). |
-| *ss* | Segundos. Separado de *mm* por dois-pontos (**:**). |
-| *dzn* | Fuso horário de verão com três letras, como PDT. Se o horário de verão nunca estiver em vigor na localidade, defina o **TZ** sem um valor para *dzn*. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão). |
+ *tzn* \
+ Nome de fuso horário de três letras, como PST. Você deve especificar o deslocamento correto da hora local em UTC.
+
+ *hh* \
+ Diferença de horas entre UTC e hora local. Sinal (+) opcional para valores positivos.
+
+ *mm* \
+ Minutos. Separado de *hh* por dois-pontos (**:**).
+
+ *II* \
+ Segundos. Separado de *mm* por dois-pontos (**:**).
+
+ *dzn* \
+ Fuso horário de verão com três letras, como PDT. Se o horário de verão nunca estiver em vigor na localidade, defina o **TZ** sem um valor para *dzn*. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão).
 
 > [!NOTE]
 > Tome cuidado ao calcular o sinal da diferença de tempo. Como a diferença de tempo é o deslocamento de hora local em UTC (e não o contrário), o sinal pode ser o oposto do que você intuitivamente poderia esperar. Para fusos horários à frente do UTC, a diferença de tempo é negativa; para aqueles antes do UTC, a diferença é positiva.

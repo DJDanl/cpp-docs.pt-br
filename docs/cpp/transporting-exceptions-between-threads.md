@@ -14,12 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: 1b3e6ffa0e98d54b047e18e4c023a8f5173470b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186094"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561356"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportando exceções entre threads
 
@@ -38,14 +38,19 @@ namespace std
 }
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*não especificado*|Uma classe interna não especificada que é usada para implementar o tipo `exception_ptr`.|
-|*DTI*|Um objeto `exception_ptr` que faz referência a uma exceção.|
-|*Oriental*|Uma classe que representa uma exceção.|
-|*Oriental*|Uma instância da classe `E` do parâmetro.|
+*não especificado*\
+Uma classe interna não especificada que é usada para implementar o tipo `exception_ptr`.
+
+*DTI*\
+Um objeto `exception_ptr` que faz referência a uma exceção.
+
+*Oriental*\
+Uma classe que representa uma exceção.
+
+*Oriental*\
+Uma instância da classe `E` do parâmetro.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -256,6 +261,6 @@ exception_ptr 1: Caught a  myException exception.
 
 ## <a name="see-also"></a>Confira também
 
-[Tratamento de exceção](../cpp/exception-handling-in-visual-cpp.md)<br/>
+[Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [/EH (modelo de tratamento de exceção)](../build/reference/eh-exception-handling-model.md)<br/>
 [/CLR (compilação do Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

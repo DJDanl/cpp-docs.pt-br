@@ -26,19 +26,19 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1bb617e0f3792f2ac41d59df13d184423d56a9e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948558"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562032"
 ---
 # <a name="_set_error_mode"></a>_set_error_mode
 
 Modifica **__error_mode** para determinar um local não padrão em que o tempo de execução C grava uma mensagem de erro para um erro que pode encerrar o programa.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -48,12 +48,12 @@ int _set_error_mode(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *mode_val*<br/>
 Destino das mensagens de erro.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retornará a configuração antiga ou -1 se ocorrer um erro.
 
@@ -63,14 +63,14 @@ Controla o coletor de saída de erro definindo o valor de **__error_mode**. Por 
 
 O parâmetro *mode_val* pode ser definido como um dos valores a seguir.
 
-|Parâmetro|Descrição|
+|Valor|Descrição|
 |---------------|-----------------|
 |**_OUT_TO_DEFAULT**|O coletor de erro é determinado por **__app_type**.|
 |**_OUT_TO_STDERR**|O coletor de erros é um erro padrão.|
 |**_OUT_TO_MSGBOX**|O coletor de erros é uma caixa de mensagem.|
 |**_REPORT_ERRMODE**|Relatar o valor de **__error_mode** atual.|
 
-Se um valor diferente dos listados for passado, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_set_error_mode** definirá **errno** como **EINVAL** e retornará-1.
+Se um valor diferente dos listados for passado, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, o **_set_error_mode** definirá **errno** como **EINVAL** e retornará-1.
 
 Quando usado com uma [declaração](assert-macro-assert-wassert.md), **_set_error_mode** exibe a instrução com falha na caixa de diálogo e oferece a opção de escolher o botão **ignorar** para que você possa continuar a executar o programa.
 
@@ -102,6 +102,6 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>
+[Macro Assert, _assert _wassert](assert-macro-assert-wassert.md)<br/>
