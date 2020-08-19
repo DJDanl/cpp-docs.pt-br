@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: 57fbd1e1f574beebff8baab014e7ab615f56333f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d36e3a301aa5b861c296b0bb4859e9442dbdb75e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754166"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560875"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Classe CMFCRibbonCustomizePropertyPage
 
-Implementa uma página personalizada para a caixa de diálogo **Personalizar** em aplicativos baseados em Fita.
+Implementa uma página personalizada para a caixa de diálogo **Personalizar** em aplicativos baseados na faixa de bits.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,7 +36,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |||
 |-|-|
 |Nome|Descrição|
-|[CMFCRibbonPersonalizePropriedadePágina::CMFCRibbonPersonalizePropriedadePage](#cmfcribboncustomizepropertypage)|Constrói um objeto `CMFCRibbonCustomizePropertyPage`.|
+|[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Constrói um objeto `CMFCRibbonCustomizePropertyPage`.|
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -44,44 +44,44 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |||
 |-|-|
 |Nome|Descrição|
-|[CMFCRibbonPersonalizePropriedadePágina::Adicionacategoria de personalizados](#addcustomcategory)|Adiciona uma categoria personalizada à caixa de combinação **Comandos.**|
+|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Adiciona uma categoria personalizada à caixa de combinação **comandos** .|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a este tipo de classe.|
-|[CMFCRibbonPersonalizePropriedadePage::OnOK](#onok)|Chamado pelo sistema quando um usuário clica **OK** na caixa de diálogo **Personalizar.**|
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a esse tipo de classe.|
+|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Chamado pelo sistema quando um usuário clica em **OK** na caixa de diálogo **Personalizar** .|
 
 ## <a name="remarks"></a>Comentários
 
-Se você quiser adicionar comandos personalizados à caixa de diálogo **Personalizar,** você deve lidar com a mensagem AFX_WM_ON_RIBBON_CUSTOMIZE. No manipulador de mensagens, instanciar um `CMFCRibbonCustomizePropertyPage` objeto na pilha. Crie uma lista de comandos `AddCustomCategory` personalizados e, em seguida, ligue para adicionar a nova página à caixa de diálogo **Personalizar.**
+Se você quiser adicionar comandos personalizados à caixa de diálogo **Personalizar** , você deve manipular a mensagem de AFX_WM_ON_RIBBON_CUSTOMIZE. No manipulador de mensagens, crie uma instância de um `CMFCRibbonCustomizePropertyPage` objeto na pilha. Crie uma lista de comandos personalizados e, em seguida, chame `AddCustomCategory` para adicionar a nova página à caixa de diálogo **Personalizar** .
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir `CMFCRibbonCustomizePropertyPage` demonstra como construir um objeto e adicionar uma categoria personalizada.
+O exemplo a seguir demonstra como construir um `CMFCRibbonCustomizePropertyPage` objeto e adicionar uma categoria personalizada.
 
 [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cdialog](../../mfc/reference/cdialog-class.md)
+[CDialog](../../mfc/reference/cdialog-class.md)
 
-[Cpropertypage](../../mfc/reference/cpropertypage-class.md)
+[CPropertyPage](../../mfc/reference/cpropertypage-class.md)
 
-[Cmfcpropertypage](../../mfc/reference/cmfcpropertypage-class.md)
+[CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)
 
-[Cmfcribboncustomizepropertypage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)
+[CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxribboncustomdialog.h
+**Cabeçalho:** afxribboncustomizedialog. h
 
-## <a name="cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonPersonalizePropriedadePágina::Adicionacategoria de personalizados
+## <a name="cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a> CMFCRibbonCustomizePropertyPage::AddCustomCategory
 
-Adiciona uma categoria personalizada à caixa de combinação **Comandos.**
+Adiciona uma categoria personalizada à caixa de combinação **comandos** .
 
 ```cpp
 void AddCustomCategory(
@@ -91,17 +91,17 @@ void AddCustomCategory(
 
 ### <a name="parameters"></a>Parâmetros
 
-|||
-|-|-|
-|Parâmetro|Descrição|
-|*lpszName*|[em] Especifica o nome da categoria personalizada.|
-|*ISTDS*|[em] Contém IDs de comando de fita a serem mostrados na categoria personalizada.|
+*lpszName*\
+no Especifica o nome da categoria personalizada.
+
+*lstIDS*\
+no Contém as IDs de comando da faixa de das para serem mostradas na categoria personalizada.
 
 ### <a name="remarks"></a>Comentários
 
-Este método adiciona uma categoria chamada *lpszName* à caixa de combinação **Comandos.** Quando o usuário seleciona a categoria, os comandos especificados no *ISTDS* aparecem na lista de comandos.
+Esse método adiciona uma categoria chamada *lpszName* à caixa de combinação **comandos** . Quando o usuário seleciona a categoria, os comandos especificados em *lstIDS* aparecem na lista de comandos.
 
-## <a name="cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonPersonalizePropriedadePágina::CMFCRibbonPersonalizePropriedadePage
+## <a name="cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a> CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
 
 Constrói um objeto `CMFCRibbonCustomizePropertyPage`.
 
@@ -112,11 +112,11 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ### <a name="parameters"></a>Parâmetros
 
 *pRibbonBar*<br/>
-[em] Um ponteiro para um controle de fita para o qual as opções para personalizar.
+no Um ponteiro para um controle Ribbon para o qual as opções são personalizadas.
 
-## <a name="cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonPersonalizePropriedadePage::OnOK
+## <a name="cmfcribboncustomizepropertypageonok"></a><a name="onok"></a> CMFCRibbonCustomizePropertyPage::OnOK
 
-Chamado pelo sistema quando um usuário clica **OK** na caixa de diálogo **Personalizar.**
+Calleld pelo sistema quando um usuário clica em **OK** na caixa de diálogo **Personalizar** .
 
 ```
 virtual void OnOK();
@@ -128,5 +128,5 @@ A implementação padrão aplica as opções selecionadas na caixa de diálogo *
 
 ## <a name="see-also"></a>Confira também
 
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

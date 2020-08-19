@@ -114,7 +114,7 @@ template <class Ty, std::size_t N>
 class array;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 `Ty`\
 O tipo de um elemento.
@@ -191,7 +191,7 @@ array();
 array(const array& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Objeto ou intervalo a inserir.
@@ -254,7 +254,7 @@ reference at(size_type off);
 constexpr const_reference at(size_type off) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *desconto*\
 Posição do elemento a acessar.
@@ -896,7 +896,7 @@ Apaga uma matriz e copia os elementos especificados para a matriz vazia.
 void fill(const Type& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor do elemento sendo inserido na matriz.
@@ -1080,7 +1080,7 @@ reference operator[](size_type off);
 constexpr const_reference operator[](size_type off) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *desconto*\
 Posição do elemento a acessar.
@@ -1131,7 +1131,7 @@ Substitui a sequência controlada.
 array<Value> operator=(array<Value> right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O contêiner a ser copiado.
@@ -1495,7 +1495,7 @@ Troca o conteúdo dessa matriz com outra matriz.
 void swap(array& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Matriz com a qual trocar conteúdo.

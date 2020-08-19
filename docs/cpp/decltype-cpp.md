@@ -24,7 +24,7 @@ O **`decltype`** especificador de tipo produz o tipo de uma expressão especific
 
 > **`decltype(`***expressão* de**`)`**
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *expressão*\
 Uma expressão. Para obter mais informações, consulte [expressões](../cpp/expressions-cpp.md).

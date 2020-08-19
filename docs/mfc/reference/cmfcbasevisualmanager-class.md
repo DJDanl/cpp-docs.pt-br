@@ -133,7 +133,7 @@ virtual BOOL DrawCheckBox(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo
@@ -182,7 +182,7 @@ virtual BOOL DrawComboBorder(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -216,7 +216,7 @@ virtual BOOL DrawComboDropButton(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*\
 no Um ponteiro para um contexto de dispositivo.
@@ -249,7 +249,7 @@ virtual BOOL DrawPushButton(
     UINT uiState);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -281,7 +281,7 @@ virtual BOOL DrawRadioButton(
     BOOL bPressed);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -322,7 +322,7 @@ virtual BOOL DrawStatusBarProgress(
     BOOL bProgressText);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -366,7 +366,7 @@ virtual void FillReBarPane(
     CRect rectClient);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.

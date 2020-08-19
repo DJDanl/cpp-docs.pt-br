@@ -112,7 +112,7 @@ template <class Key,
 class hash_map
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Chaves*\
 O tipo de dados da chave a ser armazenado no hash_map.
@@ -254,7 +254,7 @@ Type& at(const Key& key);
 const Type& at(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor de chave do elemento que deve ser encontrado.
@@ -634,7 +634,7 @@ Retorna o número de elementos em um hash_map cuja chave corresponde a uma chave
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor de chave dos elementos a serem correspondidos do hash_map.
@@ -886,7 +886,7 @@ emplace(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor usado para construir um elemento a ser inserido no [hash_map](../standard-library/hash-map-class.md), a menos que o `hash_map` já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).
@@ -944,7 +944,7 @@ iterator emplace_hint(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor usado para construir um elemento a ser inserido no [hash_map](../standard-library/hash-map-class.md), a menos que o `hash_map` já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).
@@ -1126,7 +1126,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do hash_map que está sendo pesquisado.
@@ -1215,7 +1215,7 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Where*\
 Posição do elemento a ser removido do hash_map.
@@ -1337,7 +1337,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor da chave a ser correspondido pela chave de classificação de um elemento do hash_map que está sendo pesquisado.
@@ -1530,7 +1530,7 @@ hash_map(
     const Allocator& Al
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *&*\
 A classe de alocador de armazenamento a ser usada para este hash_map objeto, cujo padrão é `Allocator` .
@@ -1597,7 +1597,7 @@ iterator insert(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor de um elemento a ser inserido no hash_map, a menos que o hash_map já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).
@@ -1893,7 +1893,7 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do hash_map que está sendo pesquisado.
@@ -2030,7 +2030,7 @@ Type& operator[](const Key& key);
 Type& operator[](Key&& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor de chave do elemento a ser inserido.
@@ -2126,7 +2126,7 @@ hash_map& operator=(const hash_map& right);
 hash_map& operator=(hash_map&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 A [Classe hash_map](../standard-library/hash-map-class.md) que está sendo copiado para o `hash_map`.
@@ -2530,7 +2530,7 @@ Troca os elementos de dois hash_maps.
 void swap(hash_map& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O hash_map do argumento que fornece os elementos a serem trocados com o hash_map de destino.
@@ -2606,7 +2606,7 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor de chave do argumento a ser comparado com o valor da chave de classificação de um elemento do hash_map que está sendo pesquisado.

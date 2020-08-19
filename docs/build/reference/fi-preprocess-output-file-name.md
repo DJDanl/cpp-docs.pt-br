@@ -24,7 +24,7 @@ Especifica o nome do arquivo de saída no qual a opção de compilador [ `/P` (p
 
 > **`/Fi`**_`pathname`_
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *`pathname`*\
 O caminho relativo ou absoluto e o nome do arquivo de saída produzido pela **`/P`** opção do compilador. Ou o caminho do diretório para os *`.i`* arquivos de saída quando mais de um arquivo de entrada é especificado. Não coloque um espaço entre a **`/Fi`** opção e *`pathname`* .

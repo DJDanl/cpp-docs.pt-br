@@ -104,7 +104,7 @@ template <class Key, class Compare =less <Key>, class Allocator =allocator <Key>
 class multiset
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Chaves*\
 O tipo de dados do elemento a ser armazenado no multiset.
@@ -469,7 +469,7 @@ Retorna o número de elementos em um multiset cuja chave corresponde a uma chave
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave dos elementos a serem correspondidos do multiset.
@@ -701,7 +701,7 @@ template <class... Args>
 iterator emplace(Args&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no multiset.
@@ -768,7 +768,7 @@ iterator emplace_hint(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no multiset.
@@ -863,7 +863,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
@@ -948,7 +948,7 @@ size_type erase(
     const key_type& Key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Posição*\
 A posição do elemento a ser removido.
@@ -982,7 +982,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor da chave a ser comparado pela chave de classificação de um elemento do multiconjunto que está sendo pesquisado.
@@ -1164,7 +1164,7 @@ void insert(
 IList);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor de um elemento a ser inserido no multiset.
@@ -1430,7 +1430,7 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
@@ -1571,7 +1571,7 @@ multiset (
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *&*\
 A classe do alocador de armazenamento a ser usado neste objeto multiset, cujo padrão é `Allocator`.
@@ -1720,7 +1720,7 @@ multiset& operator=(const multiset& right);
 multiset& operator=(multiset&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O `multiset` do qual os elementos são copiados ou movidos.
@@ -2044,7 +2044,7 @@ void swap(
     multiset<Key, Compare, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O multiset do argumento que fornece os elementos a serem trocados com o multiset de destino.
@@ -2113,7 +2113,7 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.

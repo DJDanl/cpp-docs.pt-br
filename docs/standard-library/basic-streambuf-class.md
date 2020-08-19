@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 594cec7d4898960cb78284dcbb5ad677027cd947
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c9a44f56e89baf32ba49241822bc4ba018f0701
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219203"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561824"
 ---
 # <a name="basic_streambuf-class"></a>Classe basic_streambuf
 
@@ -112,7 +112,7 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_streambuf;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Elem*\
 Um [char_type](#char_type).
@@ -212,7 +212,7 @@ Um objeto da classe `basic_streambuf`< `Elem`, `Tr`> armazena os seis ponteiros 
 |[stossc](#stossc)|Move-se além do elemento atual no fluxo.|
 |[sungetc](#sungetc)|Obtém um caractere do fluxo.|
 |[permuta](#swap)|Troca os valores nesse objeto pelos valores do parâmetro do objeto `basic_streambuf` fornecido.|
-|[sincronizá](#sync)|Uma função virtual protegida que tenta sincronizar os fluxos controlados com quaisquer fluxos externos associados.|
+|[sync](#sync)|Uma função virtual protegida que tenta sincronizar os fluxos controlados com quaisquer fluxos externos associados.|
 |[uflow](#uflow)|Função virtual protegida que extrai o elemento atual do fluxo de entrada.|
 |[underflow](#underflow)|Função virtual protegida que extrai o elemento atual do fluxo de entrada.|
 |[xsgetn](#xsgetn)|Uma função virtual protegida que extrai elementos de fluxo de entrada.|
@@ -230,7 +230,7 @@ Um objeto da classe `basic_streambuf`< `Elem`, `Tr`> armazena os seis ponteiros 
 
 **Namespace:** std
 
-## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a>basic_streambuf:: basic_streambuf
+## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a> basic_streambuf:: basic_streambuf
 
 Constrói um objeto do tipo `basic_streambuf`.
 
@@ -240,7 +240,7 @@ basic_streambuf();
 basic_streambuf(const basic_streambuf& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Uma referência lvalue para o objeto `basic_streambuf` usada para definir os valores a esse objeto `basic_streambuf`.
@@ -251,7 +251,7 @@ O primeiro construtor protegido armazena um ponteiro nulo em todos os ponteiros 
 
 O segundo construtor protegido copia os ponteiros e a localidade da *direita*.
 
-## <a name="basic_streambufchar_type"></a><a name="char_type"></a>basic_streambuf:: char_type
+## <a name="basic_streambufchar_type"></a><a name="char_type"></a> basic_streambuf:: char_type
 
 Associa um nome de tipo ao parâmetro do modelo **Elem**.
 
@@ -259,7 +259,7 @@ Associa um nome de tipo ao parâmetro do modelo **Elem**.
 typedef Elem char_type;
 ```
 
-## <a name="basic_streambufeback"></a><a name="eback"></a>basic_streambuf:: eback
+## <a name="basic_streambufeback"></a><a name="eback"></a> basic_streambuf:: eback
 
 Uma função protegida que retorna um ponteiro para o início do buffer de entrada.
 
@@ -271,7 +271,7 @@ char_type *eback() const;
 
 Um ponteiro para o início do buffer de entrada.
 
-## <a name="basic_streambufegptr"></a><a name="egptr"></a>basic_streambuf:: egptr
+## <a name="basic_streambufegptr"></a><a name="egptr"></a> basic_streambuf:: egptr
 
 Uma função protegida que retorna um ponteiro logo após o final do buffer de entrada.
 
@@ -283,7 +283,7 @@ char_type *egptr() const;
 
 Um ponteiro logo após o final do buffer de entrada.
 
-## <a name="basic_streambufepptr"></a><a name="epptr"></a>basic_streambuf:: epptr
+## <a name="basic_streambufepptr"></a><a name="epptr"></a> basic_streambuf:: epptr
 
 Uma função protegida que retorna um ponteiro logo após o final do buffer de saída.
 
@@ -295,7 +295,7 @@ char_type *epptr() const;
 
 Um ponteiro logo após o final do buffer de saída.
 
-## <a name="basic_streambufgbump"></a><a name="gbump"></a>basic_streambuf:: gbump
+## <a name="basic_streambufgbump"></a><a name="gbump"></a> basic_streambuf:: gbump
 
 Uma função protegida que adiciona a *contagem* ao próximo ponteiro para o buffer de entrada.
 
@@ -303,12 +303,12 @@ Uma função protegida que adiciona a *contagem* ao próximo ponteiro para o buf
 void gbump(int count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O valor pelo qual avançar o ponteiro.
 
-## <a name="basic_streambufgetloc"></a><a name="getloc"></a>basic_streambuf:: getloc
+## <a name="basic_streambufgetloc"></a><a name="getloc"></a> basic_streambuf:: getloc
 
 Obtém a localidade do objeto basic_streambuf.
 
@@ -342,7 +342,7 @@ int main( )
 C
 ```
 
-## <a name="basic_streambufgptr"></a><a name="gptr"></a>basic_streambuf:: GPTR
+## <a name="basic_streambufgptr"></a><a name="gptr"></a> basic_streambuf:: GPTR
 
 Uma função protegida que retorna um ponteiro para o próximo elemento do buffer de entrada.
 
@@ -354,7 +354,7 @@ char_type *gptr() const;
 
 Um ponteiro para o próximo elemento do buffer de entrada.
 
-## <a name="basic_streambufimbue"></a><a name="imbue"></a>basic_streambuf:: imbue
+## <a name="basic_streambufimbue"></a><a name="imbue"></a> basic_streambuf:: imbue
 
 Uma função virtual protegida chamada por [pubimbue](#pubimbue).
 
@@ -362,7 +362,7 @@ Uma função virtual protegida chamada por [pubimbue](#pubimbue).
 virtual void imbue(const locale& _Loc);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Loc*\
 Uma referência a uma localidade.
@@ -371,7 +371,7 @@ Uma referência a uma localidade.
 
 O comportamento padrão é não fazer nada.
 
-## <a name="basic_streambufin_avail"></a><a name="in_avail"></a>basic_streambuf:: in_avail
+## <a name="basic_streambufin_avail"></a><a name="in_avail"></a> basic_streambuf:: in_avail
 
 Retorna o número de elementos que estão prontos para serem lidos do buffer.
 
@@ -405,7 +405,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufint_type"></a><a name="int_type"></a>basic_streambuf:: int_type
+## <a name="basic_streambufint_type"></a><a name="int_type"></a> basic_streambuf:: int_type
 
 Associa um nome de tipo dentro do escopo de basic_streambuf a um dos tipos em um parâmetro de modelo.
 
@@ -413,7 +413,7 @@ Associa um nome de tipo dentro do escopo de basic_streambuf a um dos tipos em um
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_streambufoff_type"></a><a name="off_type"></a>basic_streambuf:: off_type
+## <a name="basic_streambufoff_type"></a><a name="off_type"></a> basic_streambuf:: off_type
 
 Associa um nome de tipo dentro do escopo de basic_streambuf a um dos tipos em um parâmetro de modelo.
 
@@ -421,7 +421,7 @@ Associa um nome de tipo dentro do escopo de basic_streambuf a um dos tipos em um
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_streambufoperator"></a><a name="op_eq"></a>basic_streambuf:: Operator =
+## <a name="basic_streambufoperator"></a><a name="op_eq"></a> basic_streambuf:: Operator =
 
 Atribui os valores deste objeto de outro objeto `basic_streambuf`.
 
@@ -429,7 +429,7 @@ Atribui os valores deste objeto de outro objeto `basic_streambuf`.
 basic_streambuf& operator=(const basic_streambuf& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Uma referência lvalue para o objeto `basic_streambuf` usada para atribuir valores a esse objeto.
@@ -438,7 +438,7 @@ Uma referência lvalue para o objeto `basic_streambuf` usada para atribuir valor
 
 O operador de membro protegido copia da *direita* os ponteiros que controlam o buffer de entrada e o buffer de saída. Também armazena `right.`[getloc()](#getloc) no `locale object`. Ele retorna **`*this`** .
 
-## <a name="basic_streambufoverflow"></a><a name="overflow"></a>basic_streambuf:: overflow
+## <a name="basic_streambufoverflow"></a><a name="overflow"></a> basic_streambuf:: overflow
 
 Uma função virtual protegida que pode ser chamada quando um novo caractere é inserido em um buffer cheio.
 
@@ -446,7 +446,7 @@ Uma função virtual protegida que pode ser chamada quando um novo caractere é 
 virtual int_type overflow(int_type _Meta = traits_type::eof());
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Meta*\
 O caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
@@ -473,7 +473,7 @@ A função consome os caracteres na área de put entre os ponteiros `pbase` e `p
 
 A definição de consumir varia entre as classes derivadas. Por exemplo, a classe `filebuf` grava seus caracteres em um arquivo, enquanto a classe `strstreambuf` os mantém em seu buffer e, se o buffer for designado como dinâmico, expande o buffer em resposta a uma chamada para estouro. Essa expansão é obtida liberando o buffer antigo e substituindo-o por um novo maior. Os ponteiros são ajustados conforme necessário.
 
-## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a>basic_streambuf::p failback
+## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a> basic_streambuf::p failback
 
 Uma função membro virtual protegida que tenta colocar um elemento de volta no fluxo de entrada, então torná-lo elemento atual (apontando para o ponteiro seguinte).
 
@@ -481,7 +481,7 @@ Uma função membro virtual protegida que tenta colocar um elemento de volta no 
 virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Meta*\
 O caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
@@ -500,7 +500,7 @@ Se * \_ meta* Compare for igual a **traits_type:: EOF**, o elemento a ser enviad
 
 - Para um buffer de fluxo com fluxos de entrada e saída comuns, ele pode disponibilizar uma posição de putback gravando, em algum destino externo, alguns ou todos os elementos entre os ponteiros inicial e seguintes para o buffer de saída.
 
-## <a name="basic_streambufpbase"></a><a name="pbase"></a>basic_streambuf::p base
+## <a name="basic_streambufpbase"></a><a name="pbase"></a> basic_streambuf::p base
 
 Uma função protegida que retorna um ponteiro para o início do buffer de saída.
 
@@ -512,7 +512,7 @@ char_type *pbase() const;
 
 Um ponteiro para o início do buffer de saída.
 
-## <a name="basic_streambufpbump"></a><a name="pbump"></a>basic_streambuf::p choque
+## <a name="basic_streambufpbump"></a><a name="pbump"></a> basic_streambuf::p choque
 
 Uma função protegida que adiciona a *contagem* ao próximo ponteiro para o buffer de saída.
 
@@ -520,12 +520,12 @@ Uma função protegida que adiciona a *contagem* ao próximo ponteiro para o buf
 void pbump(int count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O número de caracteres pelo qual mover a posição de gravação para frente.
 
-## <a name="basic_streambufpos_type"></a><a name="pos_type"></a>basic_streambuf::p os_type
+## <a name="basic_streambufpos_type"></a><a name="pos_type"></a> basic_streambuf::p os_type
 
 Associa um nome de tipo dentro do escopo de basic_streambuf a um dos tipos em um parâmetro de modelo.
 
@@ -533,7 +533,7 @@ Associa um nome de tipo dentro do escopo de basic_streambuf a um dos tipos em um
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_streambufpptr"></a><a name="pptr"></a>basic_streambuf::p PTR
+## <a name="basic_streambufpptr"></a><a name="pptr"></a> basic_streambuf::p PTR
 
 Uma função protegida que retorna um ponteiro para o próximo elemento do buffer de saída.
 
@@ -545,7 +545,7 @@ char_type *pptr() const;
 
 Um ponteiro para o próximo elemento do buffer de saída.
 
-## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a>basic_streambuf::p ubimbue
+## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a> basic_streambuf::p ubimbue
 
 Define a localidade do objeto basic_streambuf.
 
@@ -553,7 +553,7 @@ Define a localidade do objeto basic_streambuf.
 locale pubimbue(const locale& _Loc);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Loc*\
 Uma referência a uma localidade.
@@ -570,7 +570,7 @@ A função membro armazena _ *Loc* no objeto de localidade e chama [imbue](#imbu
 
 Consulte [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) para obter um exemplo que usa `pubimbue`.
 
-## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a>basic_streambuf::p ubseekoff
+## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a> basic_streambuf::p ubseekoff
 
 Chama [seekoff](#seekoff), uma função virtual protegida que é substituída em uma classe derivada.
 
@@ -580,7 +580,7 @@ pos_type pubseekoff(off_type _Off,
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Off*\
 A posição a ser procurada em relação a *_Way*.
@@ -599,7 +599,7 @@ Retorna a nova posição ou uma posição de fluxo inválida ( [seekoff](#seekof
 
 Move o ponteiro relativo a *_Way*.
 
-## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a>basic_streambuf::p ubseekpos
+## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a> basic_streambuf::p ubseekpos
 
 Chama [seekpos](#seekpos), uma função virtual protegida que é substituída em uma classe derivada e redefine a posição atual do ponteiro.
 
@@ -607,7 +607,7 @@ Chama [seekpos](#seekpos), uma função virtual protegida que é substituída em
 pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Sp*\
 A posição pela qual buscar.
@@ -623,7 +623,7 @@ A nova posição ou uma posição de fluxo inválida. Para determinar se a posi�
 
 A função membro retorna [seekpos](#seekpos)(_ *Sp*, `_Which`).
 
-## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a>basic_streambuf::p ubsetbuf
+## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a> basic_streambuf::p ubsetbuf
 
 Chama [setbuf](#setbuf), uma função virtual protegida que é substituída em uma classe derivada.
 
@@ -633,7 +633,7 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
     streamsize count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Buffer*\
 Um ponteiro para `char_type` para essa instanciação.
@@ -645,7 +645,7 @@ O tamanho do buffer.
 
 Retorna [setbuf](#setbuf)( `_Buffer` , `count` ).
 
-## <a name="basic_streambufpubsync"></a><a name="pubsync"></a>basic_streambuf::p ubsync
+## <a name="basic_streambufpubsync"></a><a name="pubsync"></a> basic_streambuf::p ubsync
 
 Chama a [sincronização](#sync), uma função virtual protegida que é substituída em uma classe derivada e atualiza o fluxo externo associado a esse buffer.
 
@@ -657,7 +657,7 @@ int pubsync();
 
 Retorna a [sincronização](#sync) ou-1 se houver falha.
 
-## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a>basic_streambuf:: sbumpc
+## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a> basic_streambuf:: sbumpc
 
 Lê e retorna o elemento atual, movendo o ponteiro de fluxo.
 
@@ -698,7 +698,7 @@ int main( )
 51
 ```
 
-## <a name="basic_streambufseekoff"></a><a name="seekoff"></a>basic_streambuf:: seekoff
+## <a name="basic_streambufseekoff"></a><a name="seekoff"></a> basic_streambuf:: seekoff
 
 Uma função de membro virtual protegida que tenta alterar as posições atuais para os fluxos controlados.
 
@@ -709,7 +709,7 @@ virtual pos_type seekoff(
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Off*\
 A posição a ser procurada em relação a *_Way*.
@@ -738,7 +738,7 @@ Normalmente, se **which & ios_base::in** for diferente de zero, o fluxo de entra
 
 Se a função tiver êxito em alterar a posição ou as posições do fluxo, ela retornará a posição do fluxo resultante ou uma das posições do fluxo resultantes. Caso contrário, retorna uma posição de fluxo inválida. O comportamento padrão é retornar uma posição de fluxo inválida.
 
-## <a name="basic_streambufseekpos"></a><a name="seekpos"></a>basic_streambuf:: seekpos
+## <a name="basic_streambufseekpos"></a><a name="seekpos"></a> basic_streambuf:: seekpos
 
 Uma função de membro virtual protegida que tenta alterar as posições atuais para os fluxos controlados.
 
@@ -746,7 +746,7 @@ Uma função de membro virtual protegida que tenta alterar as posições atuais 
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Sp*\
 A posição pela qual buscar.
@@ -766,7 +766,7 @@ Normalmente, se **which & ios_base::in** for diferente de zero, o fluxo de entra
 
 Se a função tiver êxito em alterar a posição ou as posições do fluxo, ela retornará a posição do fluxo resultante ou uma das posições do fluxo resultantes. Caso contrário, retorna uma posição de fluxo inválida (-1). O comportamento padrão é retornar uma posição de fluxo inválida.
 
-## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a>basic_streambuf:: setbuf
+## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a> basic_streambuf:: setbuf
 
 A função membro virtual protegida que executa uma operação específica para cada buffer de fluxo derivado.
 
@@ -776,7 +776,7 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
     streamsize count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Buffer*\
 Ponteiro para um buffer.
@@ -792,7 +792,7 @@ O comportamento padrão é retornar **`this`** .
 
 Consulte [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf` fornece uma área de memória para o objeto `streambuf` usar. Como o buffer é usado é definido nas classes derivadas.
 
-## <a name="basic_streambufsetg"></a><a name="setg"></a>basic_streambuf:: setg
+## <a name="basic_streambufsetg"></a><a name="setg"></a> basic_streambuf:: setg
 
 Uma função protegida que armazena _ *Gbeg* no ponteiro de início, `_Gnext` no próximo ponteiro e `_Gend` no ponteiro final para o buffer de entrada.
 
@@ -802,7 +802,7 @@ void setg(char_type* _Gbeg,
     char_type* _Gend);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Gbeg*\
 Um ponteiro para o início do buffer.
@@ -813,7 +813,7 @@ Um ponteiro para algum lugar no meio do buffer.
 *_Gend*\
 Um ponteiro para o fim do buffer.
 
-## <a name="basic_streambufsetp"></a><a name="setp"></a>basic_streambuf:: setp
+## <a name="basic_streambufsetp"></a><a name="setp"></a> basic_streambuf:: setp
 
 Uma função protegida que armazena *_Pbeg* no ponteiro inicial e *_Pend* no ponteiro final do buffer de saída.
 
@@ -821,7 +821,7 @@ Uma função protegida que armazena *_Pbeg* no ponteiro inicial e *_Pend* no pon
 void setp(char_type* _Pbeg, char_type* _Pend);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Pbeg*\
 Um ponteiro para o início do buffer.
@@ -829,7 +829,7 @@ Um ponteiro para o início do buffer.
 *_Pend*\
 Um ponteiro para o fim do buffer.
 
-## <a name="basic_streambufsgetc"></a><a name="sgetc"></a>basic_streambuf:: sgetc
+## <a name="basic_streambufsgetc"></a><a name="sgetc"></a> basic_streambuf:: sgetc
 
 Retorna o elemento atual sem alterar a posição no fluxo.
 
@@ -865,7 +865,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsgetn"></a><a name="sgetn"></a>basic_streambuf:: sgetn
+## <a name="basic_streambufsgetn"></a><a name="sgetn"></a> basic_streambuf:: sgetn
 
 Extrai até a *contagem* de caracteres do buffer de entrada e os armazena no *PTR*de buffer fornecido.
 
@@ -877,7 +877,7 @@ streamsize sgetn(
     streamsize count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 O buffer que deve conter os caracteres extraídos.
@@ -920,7 +920,7 @@ int main()
 }
 ```
 
-## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a>basic_streambuf:: showmanyc
+## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a> basic_streambuf:: showmanyc
 
 Uma função membro virtual protegida que retorna uma contagem do número de caracteres que pode ser extraído do fluxo de entrada e garante que o programa não esteja sujeito a uma espera indefinida.
 
@@ -932,7 +932,7 @@ virtual streamsize showmanyc();
 
 O comportamento padrão é retornar zero.
 
-## <a name="basic_streambufsnextc"></a><a name="snextc"></a>basic_streambuf:: snextc
+## <a name="basic_streambufsnextc"></a><a name="snextc"></a> basic_streambuf:: snextc
 
 Lê o elemento atual e retorna o elemento seguinte.
 
@@ -972,7 +972,7 @@ aa
 aa97
 ```
 
-## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a>basic_streambuf:: sputbackc
+## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a> basic_streambuf:: sputbackc
 
 Coloca um char_type no fluxo.
 
@@ -980,7 +980,7 @@ Coloca um char_type no fluxo.
 int_type sputbackc(char_type _Ch);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Ch*\
 O caractere.
@@ -1020,7 +1020,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsputc"></a><a name="sputc"></a>basic_streambuf:: sputc
+## <a name="basic_streambufsputc"></a><a name="sputc"></a> basic_streambuf:: sputc
 
 Coloca um caractere no fluxo.
 
@@ -1028,7 +1028,7 @@ Coloca um caractere no fluxo.
 int_type sputc(char_type _Ch);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Ch*\
 O caractere.
@@ -1063,7 +1063,7 @@ a
 a
 ```
 
-## <a name="basic_streambufsputn"></a><a name="sputn"></a>basic_streambuf:: sputn
+## <a name="basic_streambufsputn"></a><a name="sputn"></a> basic_streambuf:: sputn
 
 Coloca uma cadeia de caracteres no fluxo.
 
@@ -1071,7 +1071,7 @@ Coloca uma cadeia de caracteres no fluxo.
 streamsize sputn(const char_type* ptr, streamsize count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 A cadeia de caracteres.
@@ -1109,7 +1109,7 @@ test
 4
 ```
 
-## <a name="basic_streambufstossc"></a><a name="stossc"></a>basic_streambuf:: stossc
+## <a name="basic_streambufstossc"></a><a name="stossc"></a> basic_streambuf:: stossc
 
 Move-se além do elemento atual no fluxo.
 
@@ -1140,7 +1140,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsungetc"></a><a name="sungetc"></a>basic_streambuf:: sungetc
+## <a name="basic_streambufsungetc"></a><a name="sungetc"></a> basic_streambuf:: sungetc
 
 Obtém um caractere do fluxo.
 
@@ -1190,7 +1190,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufswap"></a><a name="swap"></a>basic_streambuf:: swap
+## <a name="basic_streambufswap"></a><a name="swap"></a> basic_streambuf:: swap
 
 Troca os valores nesse objeto pelos valores do objeto `basic_streambuf` fornecido.
 
@@ -1200,15 +1200,14 @@ void swap(basic_streambuf& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*Certo*|Uma referência lvalue para o objeto `basic_streambuf` usada para trocar valores.|
+*Certo*\
+Uma referência lvalue para o objeto `basic_streambuf` usada para trocar valores.
 
 ### <a name="remarks"></a>Comentários
 
 A função membro protegido troca com a *direita* todos os ponteiros que controlam o `input buffer` e o `output buffer` . Também troca `right.`[getloc()](#getloc) com o objeto `locale`.
 
-## <a name="basic_streambufsync"></a><a name="sync"></a>basic_streambuf:: Sync
+## <a name="basic_streambufsync"></a><a name="sync"></a> basic_streambuf:: Sync
 
 Uma função virtual protegida que tenta sincronizar os fluxos controlados com quaisquer fluxos externos associados.
 
@@ -1224,7 +1223,7 @@ Se a função não conseguir obter êxito, ela retornará -1. O comportamento pa
 
 `sync` envolve gravar quaisquer elementos entre os ponteiros inicial e seguinte para o buffer de saída. Não envolve colocar de volta nenhum elemento entre os ponteiros seguinte e final para o buffer de entrada.
 
-## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a>basic_streambuf:: traits_type
+## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a> basic_streambuf:: traits_type
 
 Associa um nome de tipo ao parâmetro de modelo **Tr**.
 
@@ -1232,7 +1231,7 @@ Associa um nome de tipo ao parâmetro de modelo **Tr**.
 typedef Tr traits_type;
 ```
 
-## <a name="basic_streambufuflow"></a><a name="uflow"></a>basic_streambuf:: uflow
+## <a name="basic_streambufuflow"></a><a name="uflow"></a> basic_streambuf:: uflow
 
 Função virtual protegida que extrai o elemento atual do fluxo de entrada.
 
@@ -1256,7 +1255,7 @@ A função membro virtual protegida tenta extrair o elemento atual **ch** do flu
 
 Se a função não puder ser realizada com sucesso, ela retornará **traits_type::**[EOF](../standard-library/char-traits-struct.md#eof)ou lançar uma exceção. Caso contrário, retornará o elemento `ch` atual no fluxo de entrada, convertido conforme descrito acima e avançará o ponteiro seguinte para o buffer de entrada. O comportamento padrão é chamar [underflow](#underflow) e, se essa função retornar **traits_type::eof**, retornar **traits_type::eof**. Caso contrário, a função retorna o elemento atual **ch** no fluxo de entrada, convertido conforme descrito anteriormente e avança o ponteiro seguinte para o buffer de entrada.
 
-## <a name="basic_streambufunderflow"></a><a name="underflow"></a>basic_streambuf:: estouro negativo
+## <a name="basic_streambufunderflow"></a><a name="underflow"></a> basic_streambuf:: estouro negativo
 
 Função virtual protegida para extrair o elemento atual do fluxo de entrada.
 
@@ -1286,7 +1285,7 @@ A função `underflow` fornece a área de get caracteres da fonte de entrada. Se
 
 Na classe `strstreambuf`, `underflow` ajusta o ponteiro [egptr](#egptr) para acessar o armazenamento alocado dinamicamente por uma chamada para `overflow`.
 
-## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a>basic_streambuf:: xsgetn
+## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a> basic_streambuf:: xsgetn
 
 Função virtual protegida para extrair elementos do fluxo de entrada.
 
@@ -1298,7 +1297,7 @@ virtual streamsize xsgetn(
     streamsize count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 O buffer que deve conter os caracteres extraídos.
@@ -1314,7 +1313,7 @@ O número de elementos extraídos.
 
 A função de membro virtual protegida extrai para elementos de *contagem* do fluxo de entrada, como se houvesse chamadas repetidas a [sbumpc](#sbumpc)e as armazena na matriz, começando em *PTR*. Retorna o número de elementos realmente extraídos.
 
-## <a name="basic_streambufxsputn"></a><a name="xsputn"></a>basic_streambuf:: xsputn
+## <a name="basic_streambufxsputn"></a><a name="xsputn"></a> basic_streambuf:: xsputn
 
 Função virtual protegida para inserir elementos no fluxo de saída.
 
@@ -1322,7 +1321,7 @@ Função virtual protegida para inserir elementos no fluxo de saída.
 virtual streamsize xsputn(const char_type* ptr, streamsize count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 Ponteiro para elementos a inserir.

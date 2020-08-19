@@ -38,7 +38,7 @@ namespace std
 }
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *não especificado*\
 Uma classe interna não especificada que é usada para implementar o tipo `exception_ptr`.

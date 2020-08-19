@@ -27,7 +27,7 @@ template <class Type>
 class allocator_variable_size;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Escreva*\
 O tipo dos elementos alocados pelo alocador.

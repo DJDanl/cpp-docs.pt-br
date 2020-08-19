@@ -196,7 +196,7 @@ Limpa o filtro de um controle de cabeçalho.
 BOOL ClearFilter(int nColumn);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 Valor da coluna que indica qual filtro deve ser limpo.
@@ -225,7 +225,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
 Especifica o estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](/windows/win32/Controls/header-control-styles) na SDK do Windows.
@@ -292,7 +292,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwExStyle*<br/>
 Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
@@ -325,7 +325,7 @@ Cria uma versão transparente da imagem de um item dentro de um controle de cabe
 CImageList* CreateDragImage(int nIndex);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
 O índice de base zero do item dentro do controle de cabeçalho. A imagem atribuída a esse item é a base para a imagem transparente.
@@ -348,7 +348,7 @@ Exclui um item de um controle de cabeçalho.
 BOOL DeleteItem(int nPos);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nPos*<br/>
 Especifica o índice de base zero do item a ser excluído.
@@ -369,7 +369,7 @@ Chamado pelo Framework quando um aspecto visual de um controle de cabeçalho de 
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
 Um ponteiro para uma estrutura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) que descreve o item a ser pintado.
@@ -396,7 +396,7 @@ BOOL EditFilter(
     BOOL bDiscardChanges);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 A coluna a ser editada.
@@ -496,7 +496,7 @@ BOOL GetItem(
     HDITEM* pHeaderItem) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nPos*<br/>
 Especifica o índice de base zero do item a ser recuperado.
@@ -538,7 +538,7 @@ BOOL GetItemDropDownRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *iItem*\
 no Índice de base zero de um item de cabeçalho cujo estilo é HDF_SPLITBUTTON. Para obter mais informações, consulte o `fmt` membro da estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) .
@@ -576,7 +576,7 @@ BOOL GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
 O índice de base zero do item de controle de cabeçalho.
@@ -602,7 +602,7 @@ BOOL GetOrderArray(
     int iCount);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *piArray*<br/>
 Um ponteiro para o endereço de um buffer que recebe os valores de índice dos itens no controle de cabeçalho, na ordem em que aparecem da esquerda para a direita.
@@ -630,7 +630,7 @@ Obtém o retângulo delimitador do botão de estouro do controle de cabeçalho a
 BOOL GetOverflowRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpRect*\
 fora Ponteiro para uma estrutura [Rect](/windows/win32/api/windef/ns-windef-rect) que recebe as informações de retângulo delimitador.
@@ -665,7 +665,7 @@ Determina qual item de cabeçalho, se houver, está localizado em um ponto espec
 int HitTest(LPHDHITTESTINFO* phdhti);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *phdhti*\
 [entrada, saída] Ponteiro para uma estrutura [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) que especifica o ponto para testar e receber os resultados do teste.
@@ -700,7 +700,7 @@ int InsertItem(
     HDITEM* phdi);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nPos*<br/>
 O índice de base zero do item a ser inserido. Se o valor for zero, o item será inserido no início do controle de cabeçalho. Se o valor for maior que o valor máximo, o item será inserido no final do controle de cabeçalho.
@@ -724,7 +724,7 @@ Recupera o tamanho e a posição de um controle de cabeçalho em um determinado 
 BOOL Layout(HDLAYOUT* pHeaderLayout);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pHeaderLayout*<br/>
 Ponteiro para uma estrutura [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) , que contém informações usadas para definir o tamanho e a posição de um controle de cabeçalho.
@@ -749,7 +749,7 @@ Recupera o valor de índice de um item com base em sua ordem no controle de cabe
 int OrderToIndex(int nOrder) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nOrder*<br/>
 A ordem baseada em zero que o item aparece no controle de cabeçalho, da esquerda para a direita.
@@ -770,7 +770,7 @@ Define a largura da margem de um bitmap em um controle de cabeçalho.
 int SetBitmapMargin(int nWidth);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nWidth*<br/>
 Largura, especificada em pixels, da margem que circunda um bitmap dentro de um controle de cabeçalho existente.
@@ -795,7 +795,7 @@ Define o intervalo de tempo limite entre a hora em que uma alteração ocorre no
 int SetFilterChangeTimeout(DWORD dwTimeOut);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwTimeOut*<br/>
 Valor de tempo limite, em milissegundos.
@@ -820,7 +820,7 @@ Define o foco para um item de cabeçalho especificado no controle de cabeçalho 
 BOOL SetFocusedItem(int iItem);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *iItem*\
 no Índice de base zero de um item de cabeçalho.
@@ -854,7 +854,7 @@ int SetHotDivider(CPoint pt);
 int SetHotDivider(int nIndex);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pt*<br/>
 A posição do ponteiro. O controle de cabeçalho realça o divisor apropriado com base na posição do ponteiro.
@@ -882,7 +882,7 @@ Atribui uma lista de imagens a um controle de cabeçalho.
 CImageList* SetImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pImageList*<br/>
 Um ponteiro para um `CImageList` objeto que contém a lista de imagens a ser atribuída ao controle de cabeçalho.
@@ -909,7 +909,7 @@ BOOL SetItem(
     HDITEM* pHeaderItem);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nPos*<br/>
 O índice de base zero do item a ser manipulado.
@@ -935,7 +935,7 @@ BOOL SetOrderArray(
     LPINT piArray);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *iCount*<br/>
 O número de itens de controle de cabeçalho.

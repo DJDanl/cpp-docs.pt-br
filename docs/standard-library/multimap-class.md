@@ -107,7 +107,7 @@ template <class Key,
 class multimap;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Chaves*\
 O tipo de dados da chave a ser armazenado no multimapa.
@@ -502,7 +502,7 @@ Retorna o número de elementos em um multimap cuja chave corresponde a uma chave
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave dos elementos a serem correspondidos do multimap.
@@ -733,7 +733,7 @@ template <class... Args>
 iterator emplace(Args&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no multimap.
@@ -802,7 +802,7 @@ iterator emplace_hint(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no multimap.
@@ -901,7 +901,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
@@ -988,7 +988,7 @@ size_type erase(
     const key_type& Key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Posição*\
 A posição do elemento a ser removido.
@@ -1022,7 +1022,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor da chave a ser comparado pela chave de classificação de um elemento do multimap que está sendo pesquisado.
@@ -1209,7 +1209,7 @@ void insert(
 IList);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor de um elemento a ser inserido no multimapa.
@@ -1481,7 +1481,7 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
@@ -1660,7 +1660,7 @@ multimap(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *&*\
 A classe do alocador de armazenamento a ser usado neste objeto multimap, cujo padrão é Allocator.
@@ -1816,7 +1816,7 @@ multimap& operator=(const multimap& right);
 multimap& operator=(multimap&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O [multimap](../standard-library/multimap-class.md) que está sendo copiado em `multimap`.
@@ -2184,7 +2184,7 @@ void swap(
     multimap<Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O multimap que fornece os elementos que serão trocados ou o multimap cujos elementos deverão ser trocados com aqueles do multimap `left`.
@@ -2254,7 +2254,7 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.

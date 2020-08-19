@@ -25,7 +25,7 @@ class wbuffer_convert
     : public std::basic_streambuf<Elem, Traits>
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Codecvt*\
 A faceta de [locale](../standard-library/locale-class.md) que representa o objeto de conversão.

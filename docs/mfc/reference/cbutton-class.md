@@ -211,7 +211,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszCaption*<br/>
 Especifica o texto do controle de botão.
@@ -262,7 +262,7 @@ Chamado pelo Framework quando um aspecto visual de um botão desenhado pelo prop
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
 Um ponteiro longo para uma estrutura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) . A estrutura contém informações sobre o item a ser desenhado e o tipo de desenho necessário.
@@ -373,7 +373,7 @@ Recupera o tamanho ideal para o controle de botão.
 BOOL GetIdealSize(SIZE* psize);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *psize*<br/>
 Um ponteiro para o tamanho atual do botão.
@@ -394,7 +394,7 @@ Chame esse método para obter a lista de imagens do controle de botão.
 BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbuttonImagelist*<br/>
 Um ponteiro para a lista de imagens do `CButton` objeto.
@@ -419,7 +419,7 @@ BOOL GetNote(
     UINT* cchNote) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszNote*\
 fora Ponteiro para um buffer, que o chamador é responsável por alocar e desalocar. Se o valor de retorno for TRUE, o buffer conterá o texto de observação associado ao controle de link de comando atual; caso contrário, o buffer não será alterado.
@@ -505,7 +505,7 @@ Recupera parâmetros que determinam como o Windows desenha o controle do botão 
 BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pInfo*\
 fora Ponteiro para uma estrutura de [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) que recebe informações sobre o controle de botão de divisão atual. O chamador é responsável por alocar a estrutura.
@@ -528,7 +528,7 @@ Recupera o retângulo delimitador do componente suspenso do controle do botão d
 BOOL GetSplitSize(LPSIZE pSize) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pSize*\
 fora Ponteiro para uma estrutura de [tamanho](/windows/win32/api/windef/ns-windef-size) que recebe a descrição de um retângulo.
@@ -601,7 +601,7 @@ Chame esse método para obter a margem de texto do `CButton` objeto.
 BOOL GetTextMargin(RECT* pmargin);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pmargin*<br/>
 Um ponteiro para a margem de texto do `CButton` objeto.
@@ -626,7 +626,7 @@ Chame essa função de membro para associar um novo bitmap ao botão.
 HBITMAP SetBitmap(HBITMAP hBitmap);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hBitmap*<br/>
 O identificador de um bitmap.
@@ -669,7 +669,7 @@ void SetButtonStyle(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nStyle*<br/>
 Especifica o [estilo do botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).
@@ -693,7 +693,7 @@ Define ou redefine o estado de verificação de um botão de opção ou caixa de
 void SetCheck(int nCheck);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nVerifique*<br/>
 Especifica o estado de verificação. Esse parâmetro pode ser um dos seguintes:
@@ -720,7 +720,7 @@ Chame essa função de membro para associar um novo cursor ao botão.
 HCURSOR SetCursor(HCURSOR hCursor);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hCursor*<br/>
 O identificador de um cursor.
@@ -759,7 +759,7 @@ Define o estado suspenso do controle do botão de divisão atual.
 BOOL SetDropDownState(BOOL fDropDown);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *fDropDown*\
 no TRUE para definir BST_DROPDOWNPUSHED estado; caso contrário, FALSE.
@@ -794,7 +794,7 @@ Define o estado do controle do botão atual como `elevation required` , que é n
 BOOL SetElevationRequired(BOOL fElevationRequired);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *fElevationRequired*\
 no TRUE para definir o `elevation required` estado; caso contrário, false.
@@ -817,7 +817,7 @@ Chame essa função de membro para associar um novo ícone ao botão.
 HICON SetIcon(HICON hIcon);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hIcon*<br/>
 O identificador de um ícone.
@@ -856,7 +856,7 @@ Chame esse método para definir a lista de imagens do `CButton` objeto.
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbuttonImagelist*<br/>
 Um ponteiro para a nova lista de imagens.
@@ -877,7 +877,7 @@ Define o texto da nota para o controle de link de comando atual.
 BOOL SetNote(LPCTSTR lpszNote);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszNote*\
 no Ponteiro para uma cadeia de caracteres Unicode que é definida como o texto de nota para o controle de link de comando.
@@ -912,7 +912,7 @@ Associa um glifo especificado ao controle do botão de divisão atual.
 BOOL SetSplitGlyph(TCHAR chGlyph);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chGlyph*\
 no Um caractere que especifica o glifo a ser usado como a seta suspensa do botão de divisão.
@@ -937,7 +937,7 @@ Associa uma [lista de imagens](../../mfc/reference/cimagelist-class.md) ao contr
 BOOL SetSplitImageList(CImageList* pSplitImageList);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pSplitImageList*\
 no Ponteiro para um objeto [CImageList](../../mfc/reference/cimagelist-class.md) para atribuir ao controle do botão de divisão atual.
@@ -960,7 +960,7 @@ Especifica os parâmetros que determinam como o Windows desenha o controle do bo
 BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pInfo*\
 no Ponteiro para uma estrutura de [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) que define o controle do botão de divisão atual.
@@ -995,7 +995,7 @@ Define o retângulo delimitador do componente suspenso do controle do botão de 
 BOOL SetSplitSize(LPSIZE pSize);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pSize*\
 no Ponteiro para uma estrutura de [tamanho](/windows/win32/api/windef/ns-windef-size) que descreve um retângulo delimitador.
@@ -1032,7 +1032,7 @@ Define o estilo do controle do botão de divisão atual.
 BOOL SetSplitStyle(UINT uSplitStyle);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *uSplitStyle*\
 no Uma combinação de bits bit A de estilos de botão de divisão. Para obter mais informações, consulte o `uSplitStyle` membro da estrutura de [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
@@ -1069,7 +1069,7 @@ Define se um controle de botão é realçado ou não.
 void SetState(BOOL bHighlight);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bHighlight*<br/>
 Especifica se o botão deve ser realçado. Um valor diferente de zero realça o botão; um valor 0 remove qualquer realce.
@@ -1092,7 +1092,7 @@ Chame esse método para definir a margem de texto do `CButton` objeto.
 BOOL SetTextMargin(RECT* pmargin);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pmargin*<br/>
 Um ponteiro para a nova margem de texto.

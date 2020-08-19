@@ -107,7 +107,7 @@ template <class Key, class Traits =hash_compare<Key, less <Key>>, class Allocato
 class hash_multiset
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Chaves*\
 O tipo de dados do elemento a ser armazenado no hash_multiset.
@@ -542,7 +542,7 @@ Retorna o número de elementos em um hash_multiset cuja chave corresponde a uma 
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor dos elementos a serem correspondidos do hash_multiset.
@@ -791,7 +791,7 @@ template <class ValTy>
 iterator insert(ValTy&& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor de um elemento a ser inserido no [hash_multiset](../standard-library/hash-multiset-class.md), a menos que o `hash_multiset` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.
@@ -842,7 +842,7 @@ iterator insert(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor de um elemento a ser inserido no [hash_multiset](../standard-library/hash-multiset-class.md), a menos que o `hash_multiset` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.
@@ -1009,7 +1009,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
@@ -1098,7 +1098,7 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *posição*\
 Posição do elemento a ser removido do hash_multiset.
@@ -1219,7 +1219,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento que deve corresponder à chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
@@ -1409,7 +1409,7 @@ hash_multiset(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *&*\
 A classe do alocador de armazenamento a ser usado para este objeto `hash_multiset`, cujo padrão é `Allocator`.
@@ -1487,7 +1487,7 @@ iterator insert(
     ValTy&& value);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *valor*\
 O valor de um elemento a ser inserido no hash_multiset, a menos que hash_multiset já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.
@@ -1670,7 +1670,7 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
@@ -1775,7 +1775,7 @@ hash_multiset& operator=(const hash_multiset& right);
 hash_multiset& operator=(hash_multiset&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O [hash_multiset](../standard-library/hash-multiset-class.md) que está sendo copiado para o `hash_multiset`.
@@ -2152,7 +2152,7 @@ Troca os elementos de dois hash_multisets.
 void swap(hash_multiset& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O hash_multiset do argumento que fornece os elementos a serem trocados com o hash_multiset de destino.
@@ -2228,7 +2228,7 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.

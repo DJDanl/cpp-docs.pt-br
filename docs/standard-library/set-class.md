@@ -106,7 +106,7 @@ template <class Key,
 class set
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Chaves*\
 O tipo de dados do elemento a ser armazenado no conjunto.
@@ -469,7 +469,7 @@ Retorna o número de elementos em um conjunto cuja chave corresponde a uma chave
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave dos elementos do set a serem correspondidos.
@@ -693,7 +693,7 @@ emplace(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no set, a menos que ele já contenha um elemento cujo valor seja ordenado de maneira equivalente.
@@ -773,7 +773,7 @@ iterator emplace_hint(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no set, a menos que o set já contenha esse elemento ou, de modo geral, que ele já contenha um elemento cujo valor seja ordenada de maneira equivalente.
@@ -912,7 +912,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
@@ -997,7 +997,7 @@ size_type erase(
     const key_type& Key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Posição*\
 A posição do elemento a ser removido.
@@ -1105,7 +1105,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 O valor da chave a ser comparado pela chave de classificação de um elemento do conjunto que está sendo pesquisado.
@@ -1293,7 +1293,7 @@ void insert(
 IList);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor de um elemento a ser inserido no conjunto, a menos que ele já contenha um elemento cujo valor seja ordenado de modo equivalente.
@@ -1573,7 +1573,7 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
@@ -1673,7 +1673,7 @@ set& operator=(const set& right);
 set& operator=(set&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O `set` fornecendo novos elementos para serem atribuídos a este `set`.
@@ -1987,7 +1987,7 @@ set(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *&*\
 A classe de alocador de armazenamento a ser usada para este objeto definido, cujo padrão é `Allocator` .
@@ -2199,7 +2199,7 @@ void swap(
     set<Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O set de argumentos que fornece os elementos a serem trocados com o set de destino.
@@ -2268,7 +2268,7 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.

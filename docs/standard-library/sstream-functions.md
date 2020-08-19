@@ -43,7 +43,7 @@ void swap(
     basic_stringstream<Elem, Tr, Alloc>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Referência para um objeto `sstream`.

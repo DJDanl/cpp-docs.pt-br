@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 411c4c386031bd44a0303e6cfeec1fbea7ea2dda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213210"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560628"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -26,12 +26,13 @@ static_assert( constant-expression, string-literal );
 static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*expressão de constante*|Uma expressão constante integral que pode ser convertida em um valor booliano.<br /><br /> Se a expressão avaliada for zero (false), o parâmetro *String-literal* será exibido e a compilação falhará com um erro. Se a expressão for diferente de zero (true), a **`static_assert`** declaração não terá nenhum efeito.|
-|*literal de cadeia de caracteres*|Uma mensagem que será exibida se o parâmetro de *expressão constante* for zero. A mensagem é uma cadeia de caracteres no [conjunto de caracteres base](../c-language/ascii-character-set.md) do compilador; ou seja, [caracteres não multibyte ou largos](../c-language/multibyte-and-wide-characters.md).|
+*expressão de constante*\
+Uma expressão constante integral que pode ser convertida em um valor booliano. Se a expressão avaliada for zero (false), o parâmetro *String-literal* será exibido e a compilação falhará com um erro. Se a expressão for diferente de zero (true), a **`static_assert`** declaração não terá nenhum efeito.
+
+*literal de cadeia de caracteres*\
+Uma mensagem que será exibida se o parâmetro de *expressão constante* for zero. A mensagem é uma cadeia de caracteres no [conjunto de caracteres base](../c-language/ascii-character-set.md) do compilador; ou seja, [caracteres não multibyte ou largos](../c-language/multibyte-and-wide-characters.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -108,6 +109,6 @@ public:
 [Asserção e mensagens fornecidas pelo usuário (C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
 [Diretiva de #error (C/C++)](../preprocessor/hash-error-directive-c-cpp.md)<br/>
 [Macro Assert, _assert _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
-[Modelo](../cpp/templates-cpp.md)<br/>
+[Modelos](../cpp/templates-cpp.md)<br/>
 [Conjunto de caracteres ASCII](../c-language/ascii-character-set.md)<br/>
 [Declarações e definições](declarations-and-definitions-cpp.md)

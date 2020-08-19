@@ -112,7 +112,7 @@ Construtor CAtlTransactionManager.
 CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bFallback*<br/>
 VERDADEIRO indica o fallback de suporte. Se a função transacionada falhar, a classe chamará automaticamente a função "não transacionada". FALSE indica que não há chamadas de "fallback".
@@ -185,7 +185,7 @@ inline HANDLE CreateFile(
     HANDLE hTemplateFile);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFileName*<br/>
 O nome de um objeto a ser criado ou aberto.
@@ -224,7 +224,7 @@ Exclui um arquivo existente como uma operação transacionada.
 inline BOOL DeleteFile(LPCTSTR lpFileName);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFileName*<br/>
 O nome do arquivo a ser excluído.
@@ -243,7 +243,7 @@ inline HANDLE FindFirstFile(
     WIN32_FIND_DATA* pNextInfo);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFileName*<br/>
 O diretório ou caminho e o nome do arquivo a ser pesquisado. Esse parâmetro pode incluir caracteres curinga, como um asterisco (*) ou um ponto de interrogação ().
@@ -267,7 +267,7 @@ Recupera atributos do sistema de arquivos para um arquivo ou diretório especifi
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFileName*<br/>
 O nome do arquivo ou diretório.
@@ -287,7 +287,7 @@ inline BOOL GetFileAttributesEx(
     LPVOID lpFileInformation);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFileName*<br/>
 O nome do arquivo ou diretório.
@@ -358,7 +358,7 @@ Move um arquivo existente ou um diretório, incluindo seus filhos, como uma oper
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpOldFileName*<br/>
 O nome atual do arquivo ou diretório existente no computador local.
@@ -387,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
     LPDWORD lpdwDisposition);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hKey*<br/>
 Um identificador para uma chave de registro aberta.
@@ -432,7 +432,7 @@ Exclui uma subchave e seus valores da exibição específica da plataforma espec
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hKey*\
 Um identificador para uma chave de registro aberta.
@@ -461,7 +461,7 @@ inline LSTATUS RegOpenKeyEx(
     PHKEY phkResult);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hKey*<br/>
 Um identificador para uma chave de registro aberta.
@@ -510,7 +510,7 @@ Define os atributos de um arquivo ou diretório como uma operação transacionad
 inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpFileName*<br/>
 O nome do arquivo ou diretório.
