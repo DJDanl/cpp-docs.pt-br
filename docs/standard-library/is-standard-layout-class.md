@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fba77be22796f3cb5495543d262dd270ac13d598
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457409"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560589"
 ---
-# <a name="isstandardlayout-class"></a>Classe is_standard_layout
+# <a name="is_standard_layout-class"></a>Classe is_standard_layout
 
 Testa se o tipo é um layout padrão.
 
@@ -25,11 +25,10 @@ template <class Ty>
 struct is_standard_layout;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*Ty*|O tipo a ser consultado|
+*Ty*\
+O tipo a ser consultado
 
 ## <a name="remarks"></a>Comentários
 
@@ -37,10 +36,10 @@ Uma instância desse predicado de tipo se aplica true se o tipo *Ty* é uma clas
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:**\<type_traits>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)

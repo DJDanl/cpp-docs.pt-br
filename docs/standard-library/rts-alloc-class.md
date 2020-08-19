@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: f422b171c14695a1207a30419a10d50cdfb5adf0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228122"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560550"
 ---
 # <a name="rts_alloc-class"></a>Classe rts_alloc
 
@@ -30,11 +30,10 @@ template <class Cache>
 class rts_alloc
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*Cache*|O tipo de instâncias de cache contidas na matriz. Pode ser [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*Armazenar*\
+O tipo de instâncias de cache contidas na matriz. Pode ser [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) ou [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ## <a name="remarks"></a>Comentários
 
@@ -44,7 +43,7 @@ Esse modelo de classe contém várias instâncias de alocador de bloco e determi
 
 |Função de membro|Descrição|
 |-|-|
-|[allocate](#allocate)|Aloca um bloco de memória.|
+|[aloca](#allocate)|Aloca um bloco de memória.|
 |[desalocar](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
 |[equals](#equals)|Compara a igualdade de dois caches.|
 
@@ -54,7 +53,7 @@ Esse modelo de classe contém várias instâncias de alocador de bloco e determi
 
 **Namespace:** stdext
 
-## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc:: Allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a> rts_alloc:: Allocate
 
 Aloca um bloco de memória.
 
@@ -62,11 +61,10 @@ Aloca um bloco de memória.
 void *allocate(std::size_t count);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*contagem*|O número de elementos na matriz a serem alocados.|
+*contar*\
+O número de elementos na matriz a serem alocados.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -76,7 +74,7 @@ Um ponteiro para o objeto alocado.
 
 A função membro retorna `caches[_IDX].allocate(count)` , em que o índice `_IDX` é determinado pela *contagem*de tamanho de bloco solicitada ou, se *Count* for muito grande, retorna `operator new(count)` . `cache`, que representa o objeto do cache.
 
-## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::d eallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc::d eallocate
 
 Libera um número especificado de objetos do armazenamento começando em uma posição especificada.
 
@@ -84,18 +82,19 @@ Libera um número especificado de objetos do armazenamento começando em uma pos
 void deallocate(void* ptr, std::size_t count);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|*contagem*|O número de objetos a serem desalocados do armazenamento.|
+*PTR*\
+Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.
+
+*contar*\
+O número de objetos a serem desalocados do armazenamento.
 
 ### <a name="remarks"></a>Comentários
 
 As chamadas de função de membro `caches[_IDX].deallocate(ptr, count)` , em que o índice `_IDX` é determinado pela *contagem*de tamanho de bloco solicitada ou, se *Count* for muito grande, retorna `operator delete(ptr)` .
 
-## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc:: Equals
+## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc:: Equals
 
 Compara a igualdade de dois caches.
 
@@ -103,12 +102,13 @@ Compara a igualdade de dois caches.
 bool equals(const sync<_Cache>& _Other) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*_Cache*|O objeto de cache associado ao filtro.|
-|*_Other*|O objeto de cache a ser comparado quanto à igualdade.|
+*_Cache*\
+O objeto de cache associado ao filtro.
+
+*_Other*\
+O objeto de cache a ser comparado quanto à igualdade.
 
 ### <a name="remarks"></a>Comentários
 

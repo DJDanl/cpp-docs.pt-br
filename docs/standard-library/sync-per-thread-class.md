@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: e7f5fb403ef020135e3dd3b85a1ad67cd435b6e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 24c5463dc9fb80703361e374efb99fae9e103e7c
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224585"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562084"
 ---
 # <a name="sync_per_thread-class"></a>Classe sync_per_thread
 
@@ -30,11 +30,10 @@ template <class Cache>
 class sync_per_thread
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*Cache*|O tipo de cache associado ao filtro de sincronização. Pode ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*Armazenar*\
+O tipo de cache associado ao filtro de sincronização. Pode ser [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) ou [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ## <a name="remarks"></a>Comentários
 
@@ -44,7 +43,7 @@ Os alocadores que usam `sync_per_thread` podem ser comparados como iguais mesmo 
 
 |Função de membro|Descrição|
 |-|-|
-|[allocate](#allocate)|Aloca um bloco de memória.|
+|[aloca](#allocate)|Aloca um bloco de memória.|
 |[desalocar](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
 |[equals](#equals)|Compara a igualdade de dois caches.|
 
@@ -54,7 +53,7 @@ Os alocadores que usam `sync_per_thread` podem ser comparados como iguais mesmo 
 
 **Namespace:** stdext
 
-## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread:: Allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a> sync_per_thread:: Allocate
 
 Aloca um bloco de memória.
 
@@ -62,17 +61,16 @@ Aloca um bloco de memória.
 void *allocate(std::size_t count);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*contagem*|O número de elementos na matriz a serem alocados.|
+*contar*\
+O número de elementos na matriz a serem alocados.
 
 ### <a name="remarks"></a>Comentários
 
 A função membro retorna o resultado de uma chamada a `cache::allocate(count)` no objeto de cache que pertence ao thread atual. Se nenhum objeto de cache tiver sido alocado para o thread atual, ele primeiro alocará um.
 
-## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d eallocate
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a> sync_per_thread::d eallocate
 
 Libera um número especificado de objetos do armazenamento começando em uma posição especificada.
 
@@ -80,18 +78,19 @@ Libera um número especificado de objetos do armazenamento começando em uma pos
 void deallocate(void* ptr, std::size_t count);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|*contagem*|O número de objetos a serem desalocados do armazenamento.|
+*PTR*\
+Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.
+
+*contar*\
+O número de objetos a serem desalocados do armazenamento.
 
 ### <a name="remarks"></a>Comentários
 
 A função membro chama `deallocate` no objeto de cache que pertence ao thread atual. Se nenhum objeto de cache tiver sido alocado para o thread atual, ele primeiro alocará um.
 
-## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread:: Equals
+## <a name="sync_per_threadequals"></a><a name="equals"></a> sync_per_thread:: Equals
 
 Compara a igualdade de dois caches.
 
@@ -99,12 +98,13 @@ Compara a igualdade de dois caches.
 bool equals(const sync<Cache>& Other) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|DESCRIÇÃO|
-|---------------|-----------------|
-|*Cache*|O objeto de cache do filtro de sincronização.|
-|*Outros*|O objeto de cache a ser comparado quanto à igualdade.|
+*Armazenar*\
+O objeto de cache do filtro de sincronização.
+
+*Outros*\
+O objeto de cache a ser comparado quanto à igualdade.
 
 ### <a name="return-value"></a>Valor retornado
 

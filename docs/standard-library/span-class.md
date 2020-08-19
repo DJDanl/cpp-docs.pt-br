@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217448"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560446"
 ---
 # <a name="span-class-c-standard-library"></a>classe span (biblioteca C++ padrão)
 
@@ -75,10 +75,11 @@ class span;
 
 ### <a name="template-parameters"></a>Parâmetros de modelo
 
-|Parâmetro|Descrição|
-|-|-|
-|`T`| O tipo dos elementos no span. |
-|`Extent`| O número de elementos no span, se especificado no momento da compilação. Caso contrário, `std::dynamic_extent` se o número de elementos for especificado em tempo de execução. |
+`T`\
+ O tipo dos elementos no span.
+
+`Extent`\
+ O número de elementos no span, se especificado no momento da compilação. Caso contrário,  `std::dynamic_extent` se o número de elementos for especificado em tempo de execução.
 
 [Guia de dedução](#deduction_guides)
 
@@ -742,7 +743,7 @@ Um iterador reverso para o espaço reservado seguindo o último elemento no inte
 
 ### <a name="remarks"></a>Comentários
 
-`rend`é usado com um Span invertido da mesma forma que [span:: End](#end) é usado com um Span. Use-o para testar se um iterador reverso atingiu o final de seu alcance.
+`rend` é usado com um Span invertido da mesma forma que [span:: End](#end) é usado com um Span. Use-o para testar se um iterador reverso atingiu o final de seu alcance.
 
 O valor retornado por `rend` não deve ser desreferenciado.
 
@@ -890,7 +891,7 @@ int main()
 
 ## <a name="spanspan"></a><a name="span"></a> `span::span`
 
-`span`construtores.
+`span` construtores.
 
 ```cpp
 constexpr span() noexcept
@@ -962,7 +963,7 @@ Um Span não libera o armazenamento de itens na extensão porque ele não possui
 |---------|---------|
 |`span()` | Construa um Span vazio. Considerado somente durante a resolução de sobrecarga quando o parâmetro de modelo `Extent` é `0` ou `dynamic_extent` .|
 |`span(It first, size_type count)` | Construa um intervalo a partir dos primeiros `count` elementos do iterador `first` .  Considerado somente durante a resolução de sobrecarga quando o parâmetro de modelo `Extent` não é `dynamic_extent` . |
-|`span(It first, End last)` | Construa um intervalo a partir dos elementos no iterador `first` até o fim `last` ser atingido. Considerado somente durante a resolução de sobrecarga quando o parâmetro de modelo `Extent` não é `dynamic_extent` . `It`deve ser um `contiguous_iterator` .  |
+|`span(It first, End last)` | Construa um intervalo a partir dos elementos no iterador `first` até o fim `last` ser atingido. Considerado somente durante a resolução de sobrecarga quando o parâmetro de modelo `Extent` não é `dynamic_extent` . `It` deve ser um `contiguous_iterator` .  |
 |`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  Construa um Span a partir de `N` elementos da matriz especificada. Considerado somente durante a resolução de sobrecarga quando o parâmetro `Extent` de modelo é `dynamic_extent` ou igual a `N` . |
 |`span(R&& r)` |  Construa uma extensão a partir de um intervalo. Somente participará na resolução de sobrecarga se o parâmetro de modelo `Extent` não estiver `dynamic_extent` .|
 |`span(const span& other)` |  O construtor de cópia gerado pelo compilador. Uma cópia superficial do ponteiro de dados é segura porque o span não aloca a memória para conter os elementos. |
@@ -1086,7 +1087,7 @@ int main()
 2
 ```
 
-## <a name="deduction-guides"></a><a name="deduction_guides"></a>Guias de dedução
+## <a name="deduction-guides"></a><a name="deduction_guides"></a> Guias de dedução
 
 Os guias de dedução a seguir são fornecidos para o span.
 
