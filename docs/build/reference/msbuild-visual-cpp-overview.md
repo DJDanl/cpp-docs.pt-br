@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c52434fa4b652d52baea70df705920db4ee68a5f
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190488"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610836"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Recursos internos do MSBuild para projetos C++
 
@@ -23,15 +23,15 @@ Por padrão, os arquivos de suporte principais do Visual Studio estão localizad
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ vc \\ *versão* \\ VCTargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ vc \\ *versão*\\
 
   Contém os arquivos de destino (.targets) e os arquivos de propriedade (.props) principais que são usados pelos destinos. Por padrão, a macro $(VCTargetsPath) referencia esse diretório. O espaço reservado de *versão* refere-se à versão do Visual Studio: V160 para visual Studio 2019, V150 para visual Studio 2017.
 
-- % VSINSTALLDIR% MSBuild \\ \\ plataforma Microsoft vc \\ *versão* \\ VCTargets \\ plataformas \\ *platform*\\
+- % VSINSTALLDIR% MSBuild \\ \\ plataforma de \\ *version* \\ plataformas de \\ *platform* versão Microsoft vc\\
 
   Contém os arquivos de destino e de propriedade específicos da plataforma que substituem os destinos e as propriedades no diretório pai. Esse diretório também contém uma DLL que define as tarefas que são usadas pelos destinos nesse diretório. O espaço reservado *plataforma* representa o subdiretório do ARM, do Win32 ou do x64.
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ vc \\ *versão* \\ VCTargets \\ plataformas \\ *plataforma* \\ PlatformToolsets \\ *conjunto de ferramentas*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ vc \\ *versão* \\ plataformas \\ *plataforma* \\ PlatformToolsets \\ *conjunto de ferramentas*\\
 
   Contém os diretórios que permitem que o build gere aplicativos C++ usando o *conjunto de ferramentas* especificado. O espaço reservado *plataforma* representa o subdiretório do ARM, do Win32 ou do x64. O espaço reservado do *conjunto de ferramentas* representa o subdiretório do conjunto de ferramentas.
 
@@ -103,7 +103,7 @@ Por padrão, as configurações específicas da plataforma para o projeto atual 
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
-### <a name="targets"></a>Targets
+### <a name="targets"></a>Destinos
 
 Há centenas de destinos nos arquivos de suporte do Visual Studio. No entanto, a maioria são destinos orientados ao sistema que o usuário pode ignorar. A maioria dos destinos de sistema são prefixados por um sublinhado ( `_` ) ou têm um nome que começa com "PrepareFor", "Compute", "Before", "After", "pre" ou "post".
 
@@ -127,7 +127,7 @@ A tabela a seguir lista vários destinos úteis orientados ao usuário.
 > [!NOTE]
 > No Visual Studio 2017 e posterior, o suporte em projetos C++ para arquivos **xsd** foi preterido. Você ainda pode usar **Microsoft.VisualC.CppCodeProvider** adicionando **CppCodeProvider.dll** manualmente ao cache de assembly global.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Referência de tarefa do MSBuild](/visualstudio/msbuild/msbuild-task-reference)\
 [Tarefa BscMake](/visualstudio/msbuild/bscmake-task)\

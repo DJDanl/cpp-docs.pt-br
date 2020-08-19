@@ -2,12 +2,12 @@
 title: Coleções (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: c8b844cd2500df7ab9069ac1586a352c639e17bd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233503"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610940"
 ---
 # <a name="collections-ccx"></a>Coleções (C++/CX)
 
@@ -39,7 +39,7 @@ Quando sua classe tiver que passar um contêiner de sequência para outro compon
 > [!IMPORTANT]
 > Se você estiver passando uma sequência no seu próprio programa, use `Vector` ou `std::vector` , pois eles são mais eficientes do que `IVector`. Use `IVector` somente ao passar o contêiner pela ABI.
 >
-> O sistema do tipo Windows Runtime não oferece suporte ao conceito de matrizes denteadas e, portanto, você não pode passar um IVector<Platform:: array \<T>> como um valor de retorno ou parâmetro de método. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
+> O sistema do tipo Windows Runtime não oferece suporte ao conceito de matrizes denteadas e, portanto, você não pode passar um `IVector<Platform::Array<T>>` como um valor de retorno ou um parâmetro de método. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
 
 `Vector<T>` fornece os métodos necessários para adição, remoção e acesso a itens na coleção e é implicitamente conversível em `IVector<T>`. Você também pode usar algoritmos STL em instâncias de `Vector<T>`. O exemplo a seguir demonstra alguns usos básicos. As funções [begin](../cppcx/begin-function.md) e [end](../cppcx/end-function.md) aqui são do namespace `Platform::Collections` , não do namespace `std` .
 
@@ -121,7 +121,7 @@ Um iterador STL que satisfaz os requisitos de um iterador de entrada STL.
 Um iterador STL que satisfaz os requisitos de um iterador de acesso aleatório mutável STL.
 
 [Classe Platform:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-Um iterador STL que cumpre os requisitos de um **`const`** iterador de acesso aleatório STL.
+Um iterador STL que cumpre os requisitos de um  **`const`** iterador de acesso aleatório STL.
 
 ### <a name="begin-and-end-functions"></a>Funções begin() e end()
 
@@ -143,7 +143,7 @@ A tabela a seguir lista os iteradores e as funções disponíveis.
 
 Os delegados [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) e [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) especificam as assinaturas dos manipuladores de eventos para eventos de alteração da coleção. A classe enum pública [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) e as classes ref `Platform::Collection::Details::MapChangedEventArgs` e `Platform::Collections::Details::VectorChangedEventArgs` armazenam os argumentos de eventos para determinar o que provocou o evento. Os `*EventArgs` tipos são definidos no `Details` namespace porque você não precisa construí-los ou consumi-los explicitamente ao usar `Map` ou `Vector` .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Sistema de tipo](../cppcx/type-system-c-cx.md)<br/>
 [Referência de linguagem do C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

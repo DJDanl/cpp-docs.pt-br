@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9755194d70774f27af4c5174151588cc03d5f97a
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223818"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610953"
 ---
-# <a name="std-specify-language-standard-version"></a>`/std`(Especifique a versão padrão do idioma)
+# <a name="std-specify-language-standard-version"></a>`/std` (Especifique a versão padrão do idioma)
 
 Habilite as funcionalidades da linguagem C++ compatíveis da versão especificada do padrão da linguagem C++.
 
@@ -21,17 +21,17 @@ Habilite as funcionalidades da linguagem C++ compatíveis da versão especificad
 
 > **`/std:c++14`**\
 > **`/std:c++17`**\
-> **`/std:c++latest`**]
+> **`/std:c++latest`**
 
 ## <a name="remarks"></a>Comentários
 
-A **`/std`** opção está disponível no Visual Studio 2017 e posterior. Ele é usado para controlar os recursos padrão de linguagem de programação ISO C++ específicos da versão habilitados durante a compilação do seu código. Essa opção permite que você desabilite o suporte para determinados novos recursos de linguagem e biblioteca: aqueles que podem dividir seu código existente em conformidade com uma versão específica do padrão de idioma. Por padrão, **`/std:c++14`** é especificado, que desabilita os recursos de biblioteca padrão e idioma encontrados em versões posteriores do padrão de linguagem C++. Use **`/std:c++17`** para habilitar o comportamento e os recursos específicos padrão do c++ 17. Para habilitar explicitamente o compilador atualmente implementado e os recursos de biblioteca padrão propostos para o próximo padrão de rascunho, use **`/std:c++latest`** . Todos os recursos do C++ 20 exigem **`/std:c++latest`** ; quando a implementação for concluída, uma nova **`/std:c++20`** opção será habilitada.
+A **`/std`** opção está disponível no Visual Studio 2017 e posterior. Ele é usado para controlar os recursos padrão de linguagem de programação ISO C++ específicos da versão habilitados durante a compilação do seu código. Essa opção permite que você desabilite o suporte para determinados novos recursos de linguagem e biblioteca: aqueles que podem dividir seu código existente em conformidade com uma versão específica do padrão de idioma. Por padrão, **`/std:c++14`** é especificado, que desabilita os recursos de biblioteca padrão e idioma encontrados em versões posteriores do padrão de linguagem C++. Use  **`/std:c++17`** para habilitar o comportamento e os recursos específicos padrão do c++ 17. Para habilitar explicitamente o compilador atualmente implementado e os recursos de biblioteca padrão propostos para o próximo padrão de rascunho, use **`/std:c++latest`** . Todos os recursos do C++ 20 exigem **`/std:c++latest`** ; quando a implementação for concluída, uma nova **`/std:c++20`** opção será habilitada.
 
 A **`/std:c++14`** opção padrão habilita o conjunto de recursos do c++ 14 implementados pelo compilador MSVC. Essa opção desabilita o suporte do compilador e da biblioteca padrão para recursos que são alterados ou novos em versões mais recentes do padrão de idioma. Ele não desabilita alguns recursos do C++ 17 já implementados em versões anteriores do compilador do MSVC. Para evitar alterações significativas para usuários que já fizeram dependências nos recursos disponíveis no ou antes do Visual Studio 2015 atualização 2, esses recursos permanecem habilitados quando a **`/std:c++14`** opção é especificada:
 
 - [Regras para `auto` com chaves-init-Lists](https://wg21.link/n3922)
 
-- [`typename`em modelo de modelo-parâmetros](https://wg21.link/n4051)
+- [`typename` em modelo de modelo-parâmetros](https://wg21.link/n4051)
 
 - [Como remover trígrafos](https://wg21.link/n4086)
 
@@ -63,7 +63,7 @@ As **`/std:c++14`** **`/std:c++latest`** Opções e estão disponíveis a partir
 
 1. Em **Padrão de Linguagem C++**, escolha o padrão de linguagem para dar suporte no controle suspenso e, em seguida, escolha **OK** ou **Aplicar** para salvar as alterações.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
