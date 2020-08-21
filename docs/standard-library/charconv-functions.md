@@ -1,18 +1,19 @@
 ---
 title: '&lt;&gt;funções charconv'
-ms.date: 07/22/2020
+description: Descreve as <charconv> funções de biblioteca que convertem valores inteiros ou de ponto flutuante para ou de caracteres
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565943"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722148"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;&gt;funções charconv
 
@@ -99,15 +100,11 @@ As funções que tomam um parâmetro [chars_format](chars-format-class.md) deter
 
 A tabela a seguir descreve o comportamento de conversão dadas diferentes combinações de `fmt` `precision` parâmetros e. O termo "comportamento de viagem de ida e volta mais curto" refere-se à gravação do menor número de dígitos necessários, de modo que a análise dessa representação usando a `from_chars` função correspondente irá recuperar o valor exatamente.
 
-| `fmt`e a `precision` combinação | Saída |
+| `fmt` e a `precision` combinação | Saída |
 |--|--|
 |  Nenhum | O que for uma notação fixa ou científica é menor, preferindo-se fixo como um desempate.</br>Esse comportamento não pode ser simulado por qualquer sobrecarga que usa o `fmt` parâmetro. |
 | `fmt` | O comportamento de viagem de ida e volta mais curto para o formato especificado, como o formato científico mais curto. |
 | `fmt` e `precision` | Usa a precisão fornecida, seguindo o estilo, sem o comportamento de viagem de ida e volta `printf()` mais curto. |
-
-### <a name="return-value"></a>Valor retornado
-
-Um [to_chars_result](to-chars-result-structure.md) que contém o resultado da conversão.
 
 ### <a name="example"></a>Exemplo
 
@@ -245,7 +242,7 @@ int main()
 
 /std: c++ 17 ou posterior, é necessário.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [\<charconv>](charconv.md)  
 [A cadeia de caracteres decimal mais curta que as viagens](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
