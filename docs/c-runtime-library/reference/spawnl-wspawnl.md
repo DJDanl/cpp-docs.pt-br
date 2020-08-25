@@ -33,12 +33,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 3ee169aac300aab6aabeeb05138d63cdbcabb580
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4b51faae4ba6f371f712e4c39374ae9717c90bed
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442770"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834369"
 ---
 # <a name="_spawnl-_wspawnl"></a>_spawnl, _wspawnl
 
@@ -68,9 +68,9 @@ intptr_t _wspawnl(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*modo*<br/>
+*mode*<br/>
 Modo de execução do processo de chamada.
 
 *cmdname*<br/>
@@ -79,12 +79,12 @@ Caminho do arquivo a ser executado.
 *arg0*, *arg1*,... *argN*<br/>
 Lista de ponteiros para os argumentos. O argumento *arg0* geralmente é um ponteiro para *cmdname*. Os argumentos *arg1* a *argN* são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. Após *argN*, deve haver um ponteiro **nulo** para marcar o final da lista de argumentos.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-O valor de retorno de um **_spawnl** síncrono ou **_wspawnl** ( **_P_WAIT** especificado para o *modo*) é o status de saída do novo processo. O valor de retorno de um **_spawnl** assíncrono ou **_wspawnl** ( **_P_NOWAIT** ou **_P_NOWAITO** especificado para o *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída como um valor diferente de zero se o processo gerado chamar especificamente a rotina de **saída** com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de-1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos valores a seguir.
+O valor de retorno de um **_spawnl** síncrono ou **_wspawnl** (**_P_WAIT** especificado para o *modo*) é o status de saída do novo processo. O valor de retorno de um **_spawnl** assíncrono ou **_wspawnl** (**_P_NOWAIT** ou **_P_NOWAITO** especificado para o *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída como um valor diferente de zero se o processo gerado chamar especificamente a rotina de **saída** com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de-1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos valores a seguir.
 
-|||
-|-|-|
+| Valor | Descrição |
+|--|--|
 | **E2BIG** | A lista de argumentos ultrapassa 1.024 bytes. |
 | **EINVAL** | argumento de *modo* inválido. |
 | **ENOENT** | Arquivo ou caminho não encontrado. |
@@ -99,7 +99,7 @@ Essas funções validam seus parâmetros. Se *cmdname* ou *arg0* for uma cadeia 
 
 Cada uma dessas funções cria e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -108,17 +108,17 @@ Cada uma dessas funções cria e executa um novo processo, passando cada argumen
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[abort](abort.md)<br/>
+[Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn, _wspawn funções](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec funções](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

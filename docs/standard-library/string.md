@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212118"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833174"
 ---
 # <a name="ltstringgt"></a>&lt;cadeia de caracteres&gt;
 
@@ -50,18 +50,18 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 |[operador +](../standard-library/string-operators.md#op_add)|Concatena dois objetos de cadeia de caracteres.|
 |[operador! =](../standard-library/string-operators.md#op_neq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é diferente do objeto da cadeia de caracteres à direita.|
 |[operador = =](../standard-library/string-operators.md#op_eq_eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é igual ao objeto da cadeia de caracteres à direita.|
-|[<do operador](../standard-library/string-operators.md#op_lt)|Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que o objeto da cadeia de caracteres à direita.|
+|[<do operador ](../standard-library/string-operators.md#op_lt)|Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que o objeto da cadeia de caracteres à direita.|
 |[<do operador =](../standard-library/string-operators.md#op_lt_eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que ou igual ao objeto da cadeia de caracteres à direita.|
-|[<do operador\<](../standard-library/string-operators.md#op_lt_lt)|Uma função de modelo que insere uma cadeia de caracteres no fluxo de saída.|
-|[>do operador](../standard-library/string-operators.md#op_gt)|Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que o objeto da cadeia de caracteres à direita.|
+|[<do operador \<](../standard-library/string-operators.md#op_lt_lt)|Uma função de modelo que insere uma cadeia de caracteres no fluxo de saída.|
+|[>do operador ](../standard-library/string-operators.md#op_gt)|Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que o objeto da cadeia de caracteres à direita.|
 |[>do operador =](../standard-library/string-operators.md#op_gt_eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que ou igual ao objeto da cadeia de caracteres à direita.|
-|[>>do operador](../standard-library/string-operators.md#op_gt_gt)|Uma função de modelo que extrai uma cadeia de caracteres do fluxo de entrada.|
+|[>>do operador ](../standard-library/string-operators.md#op_gt_gt)|Uma função de modelo que extrai uma cadeia de caracteres do fluxo de entrada.|
 
 ### <a name="specialized-template-functions"></a>Funções de Modelo Especializadas
 
-|||
+|Nome|Descrição|
 |-|-|
-|hash|Produz um hash de uma cadeia de caracteres.|
+|`hash`|Produz um hash de uma cadeia de caracteres.|
 |[permuta](../standard-library/string-functions.md#swap)|Troca as matrizes de caracteres de duas cadeias de caracteres.|
 |[stod](../standard-library/string-functions.md#stod)|Converte uma sequência de caracteres em um **`double`** .|
 |[stof](../standard-library/string-functions.md#stof)|Converte uma sequência de caracteres em um **`float`** .|
@@ -88,7 +88,7 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 
 ### <a name="specializations"></a>Especializações
 
-|||
+|Nome|Descrição|
 |-|-|
 |[char_traits \<char> struct](../standard-library/char-traits-char-struct.md)|Uma struct que é uma especialização do struct do modelo `char_traits` \<CharType> para um elemento do tipo **`char`** .|
 |[char_traits<wchar_t struct>](../standard-library/char-traits-wchar-t-struct.md)|Uma struct que é uma especialização do struct do modelo `char_traits` \<CharType> para um elemento do tipo **`wchar_t`** .|

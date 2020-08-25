@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 73b307fe0231b549a41accd48bba2a6f017486e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d16c1f7f864d52222a7fd4e1e2a5e543b8c21809
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224507"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831691"
 ---
 # <a name="weibull_distribution-class"></a>Classe weibull_distribution
 
@@ -77,10 +77,8 @@ O tipo de resultado de ponto flutuante, o padrão é **`double`** . Para possív
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **`double`** se nenhum for fornecido, distribuído de acordo com a distribuição Weibull. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|
-|`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|
+[weibull_distribution](#weibull_distribution)\
+[param_type](#param_type)|
 
 As funções de propriedade `a()` e `b()` retornam os respectivos valores para os parâmetros de distribuição armazenados *a* e *b*.
 
@@ -213,7 +211,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution:: weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a> weibull_distribution:: weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -239,7 +237,7 @@ O primeiro construtor constrói um objeto cujo valor `a` armazenado contém o va
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::p aram_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a> weibull_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 

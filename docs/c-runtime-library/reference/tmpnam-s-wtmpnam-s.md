@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2168a1bef5b8eb20a1f59460146559f4fa9f2645
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917481"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831574"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -68,7 +68,7 @@ errno_t _wtmpnam_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Str*<br/>
 Ponteiro que conterá o nome gerado.
@@ -76,17 +76,16 @@ Ponteiro que conterá o nome gerado.
 *sizeInChars*<br/>
 O tamanho do buffer em caracteres.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Ambas as funções retornarão 0 se tiverem êxito ou um número de erro em caso de falha.
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|||||
-|-|-|-|-|
-|*Str*|*sizeInChars*|**Valor retornado**|**Conteúdo de**  *Str*|
-|**NULO**|any|**EINVAL**|não modificado|
-|Not **NULL** (aponta para memória válida)|muito curto|**ERANGE**|não modificado|
+| *Str* | *sizeInChars* | **Valor de retorno** | **Conteúdo de** *Str* |
+|--|--|--|--|
+| **NULL** | any | **EINVAL** | não modificado |
+| Not **NULL** (aponta para memória válida) | muito curto | **ERANGE** | não modificado |
 
 Se *Str* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EINVAL** e retornarão **EINVAL**.
 

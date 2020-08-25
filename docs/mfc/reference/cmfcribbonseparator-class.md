@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560862"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831795"
 ---
 # <a name="cmfcribbonseparator-class"></a>Classe CMFCRibbonSeparator
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Constrói um objeto `CMFCRibbonSeparator`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Adiciona um separador à lista de **comandos** na caixa de diálogo **Personalizar** . (Substitui [CMFCRibbonBaseElement:: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
 |`CMFCRibbonSeparator::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
 |`CMFCRibbonSeparator::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a esse tipo de classe.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Um método de cópia que define as variáveis de membro de um separador de outro objeto.|
 |[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Retorna o tamanho de um separador.|
 |[CMFCRibbonSeparator:: isseparatorr](#isseparator)|Indica se este é um separador.|
@@ -108,7 +105,7 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndListBox*<br/>
 no Um ponteiro para a lista de **comandos** onde o separador é adicionado.
@@ -116,7 +113,7 @@ no Um ponteiro para a lista de **comandos** onde o separador é adicionado.
 *bDeep*<br/>
 no Aceita.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Índice de base zero para a cadeia de caracteres na caixa de listagem especificada por *pWndListBox*.
 
@@ -128,7 +125,7 @@ Constrói um objeto `CMFCRibbonSeparator`.
 CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsHoriz*<br/>
 no Se for TRUE, o separador será horizontal; Se for FALSE, o separador será vertical.
@@ -151,7 +148,7 @@ Um método de cópia que define as variáveis de membro de um separador de outro
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Orig*<br/>
 no O elemento da faixa de faixas de origem para o qual copiar.
@@ -164,12 +161,12 @@ Retorna o tamanho de um separador.
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um conteúdo de dispositivo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O tamanho do separador no contexto do dispositivo fornecido.
 
@@ -181,7 +178,7 @@ Indica se este é um separador.
 virtual BOOL IsSeparator() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre verdadeiro para esta classe.
 
@@ -193,7 +190,7 @@ Indica se esta é uma parada de tabulação.
 virtual BOOL IsTabStop() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre FALSE para esta classe.
 
@@ -209,7 +206,7 @@ Chamado pelo sistema para desenhar o separador na faixa de opções ou na barra 
 virtual void OnDraw(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -228,7 +225,7 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*\
 no Um ponteiro para um contexto de dispositivo.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 15026746f2af55b9cc153cce19cf00475e5c5d77
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561096"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834270"
 ---
 # <a name="cmfccmdusagecount-class"></a>Classe CMFCCmdUsageCount
 
@@ -41,17 +41,15 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Construtor padrão.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Incrementa por um contador que está associado ao comando fornecido.|
 |[CMFCCmdUsageCount:: GetCount](#getcount)|Recupera a contagem de uso associada à ID de comando fornecida.|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Determina se este objeto coletou a quantidade mínima de dados de controle.|
@@ -62,9 +60,8 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="data-members"></a>Membros de dados
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |`m_CmdUsage`|Um `CMap` objeto que mapeia os comandos para suas contagens de uso.|
 |`m_nMinUsagePercentage`|A porcentagem mínima de uso de um comando a ser usado com frequência.|
 |`m_nStartCount`|O contador de início que é usado para determinar se esse objeto coletou a quantidade mínima de dados de controle.|
@@ -94,7 +91,7 @@ Incrementa por um contador que está associado ao comando fornecido.
 void AddCmd(UINT uiCmd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmd*\
 no Especifica o contador de comando a ser incrementado.
@@ -119,12 +116,12 @@ Recupera a contagem de uso associada à ID de comando fornecida.
 UINT GetCount(UINT uiCmd) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmd*\
 no A ID do contador de comando a ser recuperado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A contagem de uso associada à ID de comando fornecida.
 
@@ -136,7 +133,7 @@ Determina se este objeto recebeu a quantidade mínima de dados de controle.
 BOOL HasEnoughInformation() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se esse objeto tiver recebido a quantidade mínima de dados de controle; caso contrário, 0.
 
@@ -154,12 +151,12 @@ Determina se o comando fornecido é usado com frequência.
 BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmd*\
 no Especifica o comando a ser verificado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o comando for usado com frequência; caso contrário, 0.
 
@@ -189,7 +186,7 @@ Lê este objeto de um arquivo ou grava-o em um arquivo morto.
 virtual void Serialize(CArchive& ar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *multi-hop*\
 no Um `CArchive` objeto para serializar de ou para.
@@ -210,7 +207,7 @@ static BOOL __stdcall SetOptions(
     UINT nMinUsagePercentage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStartCount*\
 no A nova contagem inicial de todos os comandos acompanhados.
@@ -218,7 +215,7 @@ no A nova contagem inicial de todos os comandos acompanhados.
 *nMinUsagePercentage*\
 no A nova porcentagem mínima de uso.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se o método tiver sucesso, FALSE se o parâmetro *nMinUsagePercentage* for maior ou igual a 100.
 

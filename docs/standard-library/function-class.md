@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182493"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831457"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -107,19 +107,19 @@ Um objeto `function` vazio não tem um objeto que pode ser chamado ou uma refer�
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[função](#function)|Constrói um wrapper que é vazio ou armazena um objeto que pode ser chamado, de tipo arbitrário com uma assinatura fixa.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[result_type](#result_type)|O tipo retornado do objeto que pode ser chamado armazenado.|
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[assign](#assign)|Atribui um objeto que pode ser chamado a esse objeto de função.|
 |[permuta](#swap)|Troca dois objetos resgatáveis.|
@@ -128,13 +128,13 @@ Um objeto `function` vazio não tem um objeto que pode ser chamado ou uma refer�
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[operador não especificado](#op_unspecified)|Testa se o objeto que pode ser chamado armazenado existe.|
 |[operador ()](#op_call)|Chama um objeto que pode ser chamado.|
 |[operador =](#op_eq)|Substitui o objeto que pode ser chamado armazenado.|
 
-## <a name="assign"></a><a name="assign"></a>Cancele
+## <a name="assign"></a><a name="assign"></a> Cancele
 
 Atribui um objeto que pode ser chamado a esse objeto de função.
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="operator-unspecified"></a><a name="op_unspecified"></a>operador não especificado
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a> operador não especificado
 
 Testa se o objeto que pode ser chamado armazenado existe.
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="operator"></a><a name="op_call"></a>operador ()
+## <a name="operator"></a><a name="op_call"></a> operador ()
 
 Chama um objeto que pode ser chamado.
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operador =
+## <a name="operator"></a><a name="op_eq"></a> operador =
 
 Substitui o objeto que pode ser chamado armazenado.
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a><a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 O tipo retornado do objeto que pode ser chamado armazenado.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a><a name="swap"></a>permuta
+## <a name="swap"></a><a name="swap"></a> permuta
 
 Troca dois objetos resgatáveis.
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a><a name="target"></a>alvo
+## <a name="target"></a><a name="target"></a> alvo
 
 Testa se o objeto pode ser chamado conforme especificado.
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a><a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a> target_type
 
 Obtém informações de tipo sobre o objeto que pode ser chamado.
 

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - _LK_RLCK constant
 - LK_LOCK constant
 ms.assetid: c3dc92c8-60e3-4d29-9f50-5d217627c8ad
-ms.openlocfilehash: d559a68e8fede6e0b6dd40505a041b14da703681
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8cfc1f933179e043f464a69f3ac5cf4ca25763e0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738494"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830820"
 ---
-# <a name="locking-constants"></a>Constantes (_locking)
+# <a name="_locking-constants"></a>Constantes (_locking)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +40,7 @@ O argumento *mode* na chamada para a função `_locking` especifica a ação de 
 
 O argumento *mode* deve ser uma das constantes de manifesto a seguir.
 
-|||
+|Valor|Descrição|
 |-|-|
 | `_LK_LOCK`  | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a função tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a função retornará um erro.  |
 | `_LK_RLCK`  | Mesmo que `_LK_LOCK`.  |
@@ -48,7 +48,7 @@ O argumento *mode* deve ser uma das constantes de manifesto a seguir.
 | `_LK_NBRLCK`  | Mesmo que `_LK_NBLCK`.  |
 | `_LK_UNLCK`  | Desbloqueia os bytes especificados. (Os bytes devem ter sido protegidos anteriormente.)  |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_locking](../c-runtime-library/reference/locking.md)<br/>
 [Constantes globais](../c-runtime-library/global-constants.md)

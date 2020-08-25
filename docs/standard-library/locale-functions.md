@@ -34,24 +34,32 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: a1e81fe28976e914f90a441ff97027f411b05738
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224806"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833238"
 ---
 # <a name="ltlocalegt-functions"></a>Funções &lt;locale&gt;
 
-||||
-|-|-|-|
-|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
-|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[IsUpper](#isupper)|[isxdigit](#isxdigit)|
-|[ToLower](#tolower)|[ToUpper](#toupper)|[use_facet](#use_facet)|
+[has_facet](#has_facet)\
+[isalnum](#isalnum)\
+[isalpha](#isalpha)\
+[iscntrl](#iscntrl)\
+[IsDigit](#isdigit)\
+[isgraph](#isgraph)\
+[islow](#islower)\
+[isprint](#isprint)\
+[ispunct](#ispunct)\
+[isspace](#isspace)\
+[IsUpper](#isupper)\
+[isxdigit](#isxdigit)\
+[ToLower](#tolower)\
+[ToUpper](#toupper)\
+[use_facet](#use_facet)
 
-## <a name="has_facet"></a><a name="has_facet"></a>has_facet
+## <a name="has_facet"></a><a name="has_facet"></a> has_facet
 
 Testa se uma determinada faceta é armazenada em uma localidade especificada.
 
@@ -65,7 +73,7 @@ bool has_facet(const locale& Loc);
 *Localização*\
 A localidade a ser testada para a presença de uma faceta.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a localidade tiver a faceta testada para; **`false`** se não tiver.
 
@@ -94,7 +102,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a><a name="isalnum"></a>isalnum
+## <a name="isalnum"></a><a name="isalnum"></a> isalnum
 
 Testa se um elemento em uma localidade é um caractere alfabético ou numérico.
 
@@ -111,7 +119,7 @@ O elemento alfanumérico a ser testado.
 *Localização*\
 A localidade que contém o elemento alfanumérico a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for alfanumérico; **`false`** se não for.
 
@@ -161,7 +169,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a><a name="isalpha"></a>isalpha
+## <a name="isalpha"></a><a name="isalpha"></a> isalpha
 
 Testa se um elemento em uma localidade é um caractere alfabético.
 
@@ -178,7 +186,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento alfabético a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for alfabético; **`false`** se não for.
 
@@ -226,7 +234,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a><a name="iscntrl"></a>iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a> iscntrl
 
 Testa se um elemento em uma localidade é um caractere de controle.
 
@@ -243,7 +251,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for um caractere de controle; **`false`** se não for.
 
@@ -291,7 +299,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a><a name="isdigit"></a>IsDigit
+## <a name="isdigit"></a><a name="isdigit"></a> IsDigit
 
 Testa se um elemento em uma localidade é um caractere numérico.
 
@@ -308,7 +316,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for um caractere numérico; **`false`** se não for.
 
@@ -356,7 +364,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a><a name="isgraph"></a>isgraph
+## <a name="isgraph"></a><a name="isgraph"></a> isgraph
 
 Testa se um elemento em uma localidade é um caractere alfanumérico ou de pontuação.
 
@@ -373,7 +381,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for um caractere alfanumérico ou de Pontuação; **`false`** se não for.
 
@@ -421,7 +429,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a><a name="islower"></a>islow
+## <a name="islower"></a><a name="islower"></a> islow
 
 Testa se um elemento em uma localidade está em letras minúsculas.
 
@@ -438,7 +446,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for um caractere minúsculo; **`false`** se não for.
 
@@ -486,7 +494,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a><a name="isprint"></a>isprint
+## <a name="isprint"></a><a name="isprint"></a> isprint
 
 Testa se um elemento em uma localidade é um caractere imprimível.
 
@@ -503,7 +511,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for impresso; **`false`** se não for.
 
@@ -550,7 +558,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a><a name="ispunct"></a>ispunct
+## <a name="ispunct"></a><a name="ispunct"></a> ispunct
 
 Testa se um elemento em uma localidade é um caractere de pontuação.
 
@@ -567,7 +575,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for um caractere de Pontuação; **`false`** se não for.
 
@@ -615,7 +623,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a><a name="isspace"></a>isspace
+## <a name="isspace"></a><a name="isspace"></a> isspace
 
 Testa se um elemento em uma localidade é um caractere de espaço em branco.
 
@@ -632,7 +640,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for um caractere de espaço em branco; **`false`** se não for.
 
@@ -680,7 +688,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a><a name="isupper"></a>IsUpper
+## <a name="isupper"></a><a name="isupper"></a> IsUpper
 
 Testa se um elemento em uma localidade está em letras maiúsculas.
 
@@ -697,7 +705,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for um caractere maiúsculo; **`false`** se não for.
 
@@ -745,7 +753,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a> isxdigit
 
 Testa se um elemento em uma localidade é um caractere usado para representar um número hexadecimal.
 
@@ -762,7 +770,7 @@ O elemento a ser testado.
 *Localização*\
 A localidade que contém o elemento a ser testado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o elemento testado for um caractere usado para representar um número hexadecimal; **`false`** se não for.
 
@@ -812,7 +820,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a><a name="tolower"></a>ToLower
+## <a name="tolower"></a><a name="tolower"></a> ToLower
 
 Converte um caractere em letra minúscula.
 
@@ -829,7 +837,7 @@ O caractere a ser convertido em letras minúsculas.
 *Localização*\
 A localidade que contém o caractere a ser convertido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O caractere convertido em letras minúsculas.
 
@@ -861,7 +869,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a><a name="toupper"></a>ToUpper
+## <a name="toupper"></a><a name="toupper"></a> ToUpper
 
 Converte um caractere em letra maiúscula.
 
@@ -878,7 +886,7 @@ O caractere a ser convertido em maiúsculas.
 *Localização*\
 A localidade que contém o caractere a ser convertido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O caractere convertido em maiúsculas.
 
@@ -910,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a><a name="use_facet"></a>use_facet
+## <a name="use_facet"></a><a name="use_facet"></a> use_facet
 
 Retorna uma referência para uma faceta de um tipo especificado armazenada em uma localidade.
 
@@ -924,7 +932,7 @@ const Facet& use_facet(const locale& Loc);
 *Localização*\
 A localidade const que contém o tipo de faceta que está sendo referenciado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma referência à faceta da classe `Facet` contida na localidade do argumento.
 

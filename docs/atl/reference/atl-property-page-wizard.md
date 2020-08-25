@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: eaf070d5a98a05dbe3102afac8317ffd59298ad2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c743b91e40c05a35bd5c4d3c0d2e70ecc645714
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321673"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833927"
 ---
 # <a name="atl-property-page-wizard"></a>Assistente de página de propriedades da ATL
 
@@ -30,7 +30,7 @@ Este assistente [adiciona uma página de propriedades a um projeto da ATL](../..
 
 A partir do Visual Studio 2008, o script de registro produzido por esse assistente registra seus componentes COM em **HKEY_CURRENT_USER**, e não em **HKEY_LOCAL_MACHINE**. Para modificar esse comportamento, defina a opção **Registrar componente para todos os usuários** do Assistente da ATL.
 
-## <a name="names"></a>Names
+## <a name="names"></a>Nomes
 
 Especifique os nomes para o objeto, a interface e as classes a ser adicionados ao seu projeto. Com a exceção de **Nome curto**, todas as outras caixas podem ser editadas independentemente. Se você alterar o texto para **Nome curto**, a alteração será refletida nos nomes de todas as outras caixas dessa página. Se você alterar o nome **Coclass** na seção COM, a alteração será refletida nas caixas **Tipo** e **ProgID**. Esse comportamento de nomenclatura foi projetado para tornar todos os nomes facilmente identificáveis à medida que você desenvolve sua página de propriedades.
 
@@ -41,9 +41,8 @@ Especifique os nomes para o objeto, a interface e as classes a ser adicionados a
 
 Fornece informações para a classe C++ criada para implementar o objeto.
 
-|||
-|-|-|
 |Termo|Definição|
+|-|-|
 |**Nome curto**|Define o nome abreviado do objeto. O nome que você fornece determina a classe e os nomes **Coclass**, os nomes de arquivo (**.cpp** e **.h**), o nome de **Tipo** e de **ProgID**, a menos que você altere esses campos individualmente.|
 |**Arquivo .h**|Define o nome do arquivo de cabeçalho para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornece em **Nome curto**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você selecionar um arquivo existente, o assistente não o salvará no local selecionado até que você clique em **Concluir**.<br /><br /> O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.|
 |**Classe**|Define o nome da classe derivada que implementa o objeto. Esse nome é baseado no nome fornecido em **Nome curto**, precedido por "C", o prefixo típico de um nome de classe.|

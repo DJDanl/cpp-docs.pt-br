@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561317"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834291"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe CMFCBaseVisualManager
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Constrói e inicializa um objeto `CMFCBaseVisualManager`.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|Desenha um controle de caixa de seleção usando o tema atual do Windows.|
 |[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|Desenha uma borda da caixa de combinação usando o tema atual do Windows.|
 |[CMFCBaseVisualManager::D rawComboDropButton](#drawcombodropbutton)|Desenha um botão suspenso de caixa de combinação usando o tema atual do Windows.|
@@ -75,9 +73,8 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Chamadas `CloseThemeData` para todos os identificadores obtidos no `UpdateSystemColors` .|
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Chamadas `OpenThemeData` para obter identificadores para desenhar vários controles: Windows, barras de ferramentas, botões e assim por diante.|
 
@@ -133,7 +130,7 @@ virtual BOOL DrawCheckBox(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo
@@ -155,7 +152,7 @@ no Especifica se a caixa de seleção está habilitada.
 *bPressed*<br/>
 no Especifica se a caixa de seleção é pressionada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a API de tema estiver habilitada; caso contrário, FALSE.
 
@@ -182,7 +179,7 @@ virtual BOOL DrawComboBorder(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -199,7 +196,7 @@ no Especifica se a borda da caixa de combinação é descartada.
 *bIsHighlighted*<br/>
 no Especifica se a borda da caixa de combinação está realçada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a API de tema estiver habilitada; caso contrário, FALSE.
 
@@ -216,7 +213,7 @@ virtual BOOL DrawComboDropButton(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*\
 no Um ponteiro para um contexto de dispositivo.
@@ -233,7 +230,7 @@ no Especifica se o botão suspenso da caixa de combinação é Descartado.
 *bIsHighlighted*\
 no Especifica se o botão suspenso da caixa de combinação está realçado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a API de tema estiver habilitada; caso contrário, FALSE.
 
@@ -249,7 +246,7 @@ virtual BOOL DrawPushButton(
     UINT uiState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -263,7 +260,7 @@ no Um ponteiro para o objeto da [classe CMFCButton](../../mfc/reference/cmfcbutt
 *uiState*<br/>
 no Aceita. O estado é obtido de *pButton*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a API de tema estiver habilitada; caso contrário, FALSE.
 
@@ -281,7 +278,7 @@ virtual BOOL DrawRadioButton(
     BOOL bPressed);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -301,7 +298,7 @@ no Especifica se o botão de opção está habilitado.
 *bPressed*<br/>
 no Especifica se o botão de opção é pressionado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a API de tema estiver habilitada; caso contrário, FALSE.
 
@@ -322,7 +319,7 @@ virtual BOOL DrawStatusBarProgress(
     BOOL bProgressText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -351,7 +348,7 @@ no Cor do texto de progresso. `CMFCBaseVisualManager` Ignora isso. A cor do text
 *bProgressText*<br/>
 no Especifica se o texto de progresso deve ser exibido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a API de tema estiver habilitada; caso contrário, FALSE.
 
@@ -366,7 +363,7 @@ virtual void FillReBarPane(
     CRect rectClient);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primário*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -377,7 +374,7 @@ no Um ponteiro para um painel cujo plano de fundo deve ser desenhado.
 *rectClient*<br/>
 no O retângulo delimitador da área a ser preenchida.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a API de tema estiver habilitada; caso contrário, FALSE.
 
@@ -389,7 +386,7 @@ Obtém o tema atual do Windows.
 virtual WinXpTheme GetStandardWindowsTheme();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A cor do tema do Windows selecionada no momento. Pode ser um dos seguintes valores enumerados:
 

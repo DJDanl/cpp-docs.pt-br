@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623458"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831678"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Como: Adicionar, editar ou excluir controles (C++)
 
@@ -166,20 +166,38 @@ Depois que você adicionar um controle comum ou um controle de edição rico a u
 
 Atualmente, o **Editor de caixa de diálogo** não adiciona automaticamente o código ao seu projeto quando você arrasta e solta os seguintes controles comuns ou controles de edição avançados em uma caixa de diálogo. Nem o Visual Studio fornece um erro ou aviso quando esse problema ocorre. Para corrigir, adicione o código para o controle manualmente.
 
-||||
-|-|-|-|
-|Controle deslizante|Controle de árvore|Seletor de data e hora|
-|Controle de rotação|Controle guia|Month Calendar|
-|Controle de progresso|Controle de animação|Controle de endereço IP|
-|Tecla de acesso|Controle de edição rico|Caixa de combinação estendida|
-|Controle de lista|Controle rich edit 2,0|Controle personalizado|
+:::row:::
+   :::column span="":::
+      Controle de animação \
+      Controle personalizado \
+      Seletor de data e hora \
+      Caixa de combinação estendida
+   :::column-end:::
+   :::column span="":::
+      Tecla de atalho \
+      Controle de endereço IP \
+      Controle de lista \
+      Month Calendar
+   :::column-end:::
+   :::column span="":::
+      Controle de progresso \
+      Controle rich edit 2,0 \
+      Controle de edição rico \
+      Controle deslizante
+   :::column-end:::
+   :::column span="":::
+      Controle de rotação \
+      Controle guia \
+      Controle de árvore
+   :::column-end:::
+:::row-end:::
 
 Para usar controles comuns em uma caixa de diálogo, você precisa chamar [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) ou `AFXInitCommonControls` antes de criar a caixa de diálogo.
 
 Para usar controles RichEdit, você deve chamar `LoadLibrary` . Para obter mais informações, consulte [sobre os controles de edição avançados](/windows/win32/Controls/about-rich-edit-controls) no SDK do Windows e [visão geral do controle de edição rico](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
-> Para usar um controle RichEdit com MFC, você deve primeiro chamar [o AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) para carregar o controle RichEdit 2,0 (Riched20. DLL) ou chame [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) para carregar o controle RichEdit 1,0 mais antigo (riched32. DLL).
+> Para usar um controle RichEdit com MFC, você deve primeiro chamar [o AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) para carregar o controle RichEdit 2,0 (RICHED20.DLL) ou chamar [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) para carregar o RICHED32.DLL (controle RichEdit 1,0 mais antigo).
 >
 > Você pode usar a classe [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) atual com o controle RichEdit 1,0 mais antigo, mas `CRichEditCtrl` é projetado apenas para dar suporte ao controle RichEdit 2,0. Como o RichEdit 1,0 e o RichEdit 2,0 são semelhantes, a maioria dos métodos funcionará. No entanto, há algumas diferenças entre os controles 1,0 e 2,0, de modo que alguns métodos podem funcionar incorretamente ou não funcionar.
 
@@ -227,7 +245,7 @@ Os controles ActiveX fornecidos por fornecedores independentes podem vir equipad
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gerenciar controles da caixa de diálogo](controls-in-dialog-boxes.md)<br/>
 [Como: controles de layout](arrangement-of-controls-on-dialog-boxes.md)<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d1a521f8ac0a33dbc59d789e506ac1dd9c906e3e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562045"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834226"
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
 
@@ -37,16 +37,14 @@ class CMFCTabDropTarget : public COleDropTarget
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|Construtor padrão.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Chamado pelo Framework quando o usuário arrasta um objeto para uma janela de guia. (Substitui [COleDropTarget:: OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
 |[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Chamado pelo Framework quando o usuário arrasta um objeto para fora da janela de guia que tem o foco. (Substitui [COleDropTarget:: OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
 |[CMFCTabDropTarget::OnDragOver](#ondragover)|Chamado pelo Framework quando o usuário arrasta um objeto para a janela de guia que tem o foco. (Substitui [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
@@ -91,7 +89,7 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*\
 no Não utilizado.
@@ -105,7 +103,7 @@ no Contém o estado das teclas modificadoras. Essa é uma combinação de qualqu
 *empresas*\
 no O local do cursor em coordenadas do cliente.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O efeito que resulta se a queda ocorre no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
 
@@ -133,7 +131,7 @@ Chamado pelo Framework quando o usuário arrasta um objeto para fora da janela d
 virtual void OnDragLeave(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*\
 no Não utilizado.
@@ -154,7 +152,7 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*\
 no Não utilizado.
@@ -168,7 +166,7 @@ no Contém o estado das teclas modificadoras. Essa é uma combinação de qualqu
 *empresas*\
 no O local do ponteiro do mouse nas coordenadas do cliente.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O efeito que resulta se a queda ocorre no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
 
@@ -201,7 +199,7 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*\
 no Não utilizado.
@@ -218,7 +216,7 @@ no Não utilizado.
 *empresas*\
 no O local do ponteiro do mouse nas coordenadas do cliente.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O efeito de cancelamento resultante. Pode ser um ou mais dos seguintes:
 
@@ -246,12 +244,12 @@ Registra o controle como um que pode ser o destino de uma operação de arrastar
 BOOL Register(CMFCBaseTabCtrl *pOwner);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOwner*\
 no O controle guia para se registrar como um destino de soltar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o registro tiver sido bem-sucedido; caso contrário, 0.
 

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: f873ec4f4eca434d0eb76df86c0891f1a99c2e2c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16f1a3f8ae9b50e43bfd67d9ac8c65507bf4f147
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210698"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834330"
 ---
 # <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
 
-Fornece uma implementação para a interface `IDBProperties`.
+Fornece uma implementação para a `IDBProperties` interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,7 +42,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-Sua classe, derivada de `IDBPropertiesImpl`.
+Sua classe, derivada de `IDBPropertiesImpl` .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -52,19 +52,19 @@ Sua classe, derivada de `IDBPropertiesImpl`.
 
 ### <a name="interface-methods"></a>Métodos de interface
 
-|||
+| Nome | Descrição |
 |-|-|
-|[GetProperties](#getproperties)|Retorna os valores das propriedades na fonte de dados, informações da fonte de dados e grupos de propriedades de inicialização que estão atualmente definidos no objeto de fonte de dados ou os valores das propriedades no grupo de propriedades de inicialização que estão atualmente definidas no enumera.|
+|[GetProperties](#getproperties)|Retorna os valores das propriedades na fonte de dados, as informações da fonte de dados e os grupos de propriedades de inicialização que estão atualmente definidos no objeto de fonte de dados ou os valores das propriedades no grupo de propriedades de inicialização que estão atualmente definidos no enumerador.|
 |[GetPropertyInfo](#getpropertyinfo)|Retorna informações sobre todas as propriedades com suporte no provedor.|
 |[SetProperties](#setproperties)|Define propriedades nos grupos de propriedades de fonte de dados e de inicialização, para objetos de fonte de dados ou para o grupo de propriedades de inicialização, para enumeradores.|
 
 ## <a name="remarks"></a>Comentários
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores. No entanto, se um enumerador expõe [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), ele deve expor `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` usando uma função estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores. No entanto, se um enumerador expõe [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), ele deve expor `IDBProperties` . `IDBPropertiesImpl` implementa `IDBProperties` usando uma função estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a>IDBPropertiesImpl:: GetProperties
+## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a> IDBPropertiesImpl:: GetProperties
 
-Retorna os valores das propriedades na fonte de dados, informações da fonte de dados e grupos de propriedades de inicialização que estão atualmente definidos no objeto de fonte de dados ou os valores das propriedades no grupo de propriedades de inicialização que estão atualmente definidas no enumera.
+Retorna os valores das propriedades na fonte de dados, as informações da fonte de dados e os grupos de propriedades de inicialização que estão atualmente definidos no objeto de fonte de dados ou os valores das propriedades no grupo de propriedades de inicialização que estão atualmente definidos no enumerador.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 Consulte [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) na *referência do programador de OLE DB*.
 
-Alguns parâmetros correspondem a parâmetros de *referência do programador OLE DB* de nomes diferentes, que são descritos em `IDBProperties::GetProperties`:
+Alguns parâmetros correspondem a parâmetros de *referência do programador OLE DB* de nomes diferentes, que são descritos em `IDBProperties::GetProperties` :
 
 |OLE DB parâmetros de modelo|Parâmetros *de referência do programador de OLE DB*|
 |--------------------------------|------------------------------------------------|
@@ -92,7 +92,7 @@ Alguns parâmetros correspondem a parâmetros de *referência do programador OLE
 
 Se o provedor for inicializado, esse método retornará os valores das propriedades no DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT grupos de propriedades que estão atualmente definidos no objeto de fonte de dados. Se o provedor não for inicializado, ele retornará apenas DBPROPSET_DBINIT Propriedades do grupo.
 
-## <a name="idbpropertiesimplgetpropertyinfo"></a><a name="getpropertyinfo"></a>IDBPropertiesImpl:: GetPropertyInfo
+## <a name="idbpropertiesimplgetpropertyinfo"></a><a name="getpropertyinfo"></a> IDBPropertiesImpl:: GetPropertyInfo
 
 Retorna informações de propriedade com suporte da fonte de dados.
 
@@ -110,7 +110,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 Consulte [IDBProperties:: GetPropertyInfo](/previous-versions/windows/desktop/ms718175(v=vs.85)) na *referência do programador de OLE DB*.
 
-Alguns parâmetros correspondem a parâmetros de *referência do programador OLE DB* de nomes diferentes, que são descritos em `IDBProperties::GetPropertyInfo`:
+Alguns parâmetros correspondem a parâmetros de *referência do programador OLE DB* de nomes diferentes, que são descritos em `IDBProperties::GetPropertyInfo` :
 
 |OLE DB parâmetros de modelo|Parâmetros *de referência do programador de OLE DB*|
 |--------------------------------|------------------------------------------------|
@@ -121,7 +121,7 @@ Alguns parâmetros correspondem a parâmetros de *referência do programador OLE
 
 Usa [IDBInitializeImpl:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) para implementar essa funcionalidade.
 
-## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a>IDBPropertiesImpl:: SetProperties
+## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a> IDBPropertiesImpl:: SetProperties
 
 Define propriedades nos grupos de propriedades de fonte de dados e de inicialização, para objetos de fonte de dados ou para o grupo de propriedades de inicialização, para enumeradores.
 
@@ -143,4 +143,4 @@ Se o provedor for inicializado, esse método definirá os valores das propriedad
 ## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
