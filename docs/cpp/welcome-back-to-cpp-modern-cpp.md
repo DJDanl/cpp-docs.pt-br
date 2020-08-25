@@ -5,10 +5,10 @@ ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
 ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 08/24/2020
 ms.locfileid: "87232190"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Bem-vindo de volta ao C++ – C++ moderno
@@ -52,7 +52,7 @@ Sempre que possível, use um ponteiro inteligente ao alocar memória heap. Se vo
 
 As cadeias de caracteres C-style são outra grande fonte de bugs. Usando o [ `std::string` e `std::wstring` ](../standard-library/basic-string-class.md)o, você pode eliminar praticamente todos os erros associados a cadeias de caracteres de estilo C. Você também tem o benefício das funções de membro para pesquisar, acrescentar, aguardar e assim por diante. Ambos são altamente otimizados para velocidade. Ao passar uma cadeia de caracteres para uma função que requer somente acesso somente leitura, no C++ 17, você pode usar [`std::string_view`](../standard-library/basic-string-view-class.md) para obter um benefício de desempenho ainda maior.
 
-## <a name="stdvector-and-other-standard-library-containers"></a>`std::vector`e outros contêineres de biblioteca padrão
+## <a name="stdvector-and-other-standard-library-containers"></a>`std::vector` e outros contêineres de biblioteca padrão
 
 Todos os contêineres de biblioteca padrão seguem o princípio de RAII. Eles fornecem iteradores para a passagem segura de elementos. E eles são altamente otimizados para desempenho e foram totalmente testados quanto à exatidão. Ao usar esses contêineres, você elimina o potencial de bugs ou ineficiências que podem ser introduzidos em estruturas de dados personalizadas. Em vez de matrizes brutas, use [`vector`](../standard-library/vector-class.md) como um contêiner sequencial em C++.
 
@@ -104,7 +104,7 @@ sort( v.begin(), v.end(), comp );
 auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
-## <a name="auto-instead-of-explicit-type-names"></a>`auto`em vez de nomes de tipo explícitos
+## <a name="auto-instead-of-explicit-type-names"></a>`auto` em vez de nomes de tipo explícitos
 
 O c++ 11 introduziu a [`auto`](auto-cpp.md) palavra-chave para uso em declarações de variáveis, funções e modelos. **`auto`** informa ao compilador para deduzir o tipo do objeto para que você não precise digitá-lo explicitamente. **`auto`** é especialmente útil quando o tipo deduzido é um modelo aninhado:
 
@@ -139,7 +139,7 @@ int main()
 }
 ```
 
-## <a name="constexpr-expressions-instead-of-macros"></a>`constexpr`expressões em vez de macros
+## <a name="constexpr-expressions-instead-of-macros"></a>`constexpr` expressões em vez de macros
 
 As macros em C e C++ são tokens que são processados pelo pré-processador antes da compilação. Cada instância de um token de macro é substituída pelo seu valor ou expressão definido antes de o arquivo ser compilado. As macros são comumente usadas na programação em estilo C para definir valores constantes de tempo de compilação. No entanto, as macros são propensas a erros e são difíceis de depurar. No C++ moderno, você deve preferir [`constexpr`](constexpr-cpp.md) variáveis para constantes de tempo de compilação:
 
@@ -150,7 +150,7 @@ constexpr int size = 10; // modern C++
 
 ### <a name="uniform-initialization"></a>Inicialização uniforme
 
-No C++ moderno, você pode usar a inicialização de chaves para qualquer tipo. Essa forma de inicialização é especialmente conveniente ao inicializar matrizes, vetores ou outros contêineres. No exemplo a seguir, `v2` é inicializado com três instâncias do `S` . `v3`é inicializado com três instâncias do `S` que são inicializadas usando chaves. O compilador infere o tipo de cada elemento com base no tipo declarado de `v3` .
+No C++ moderno, você pode usar a inicialização de chaves para qualquer tipo. Essa forma de inicialização é especialmente conveniente ao inicializar matrizes, vetores ou outros contêineres. No exemplo a seguir, `v2` é inicializado com três instâncias do `S` . `v3` é inicializado com três instâncias do `S` que são inicializadas usando chaves. O compilador infere o tipo de cada elemento com base no tipo declarado de `v3` .
 
 ```cpp
 #include <vector>
@@ -210,11 +210,11 @@ O C++ moderno enfatiza exceções em vez de códigos de erro como a melhor manei
 
 Use o struct da biblioteca padrão C++ [`std::atomic`](../standard-library/atomic-structure.md) e os tipos relacionados para mecanismos de comunicação entre threads.
 
-## <a name="stdvariant-c17"></a>`std::variant`(C++ 17)
+## <a name="stdvariant-c17"></a>`std::variant` (C++ 17)
 
 As uniões são comumente usadas na programação em estilo C para conservar a memória, permitindo que os membros de diferentes tipos ocupem o mesmo local de memória. No entanto, as uniões não são de tipo seguro e estão sujeitas a erros de programação. O c++ 17 apresenta a [`std::variant`](../standard-library/variant-class.md) classe como uma alternativa mais robusta e segura para as uniões. A [`std::visit`](../standard-library/variant-functions.md#visit) função pode ser usada para acessar os membros de um `variant` tipo de maneira segura de tipo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)\
 [Expressões lambda](../cpp/lambda-expressions-in-cpp.md)\
