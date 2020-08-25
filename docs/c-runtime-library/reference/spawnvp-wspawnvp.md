@@ -36,12 +36,12 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: 3ed6b780fb06db9e5951a943f52a556ad0f0748e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2cd1c0e464fe7efb1cce5ba969b34d040b099efa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916117"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831327"
 ---
 # <a name="_spawnvp-_wspawnvp"></a>_spawnvp, _wspawnvp
 
@@ -65,7 +65,7 @@ intptr_t _wspawnvp(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *mode*<br/>
 Modo de execução para chamar o processo.
@@ -76,11 +76,11 @@ Caminho do arquivo a ser executado.
 *argv*<br/>
 Matriz de ponteiros para os argumentos. O argumento *argv*[0] geralmente é um ponteiro para um caminho em modo real ou para o nome do programa no modo protegido e *argv*[1] a *argv*[**n**] são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. O argumento *argv*[**n** + 1] deve ser um ponteiro **nulo** para marcar o final da lista de argumentos.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 O valor de retorno de um **_spawnvp** síncrono ou **_wspawnvp** (**_P_WAIT** especificado para o *modo*) é o status de saída do novo processo. O valor de retorno de um **_spawnvp** assíncrono ou **_wspawnvp** (**_P_NOWAIT** ou **_P_NOWAITO** especificado para o *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída como um valor diferente de zero se o processo gerado usa especificamente um argumento diferente de zero para chamar a rotina de **saída** . Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de-1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos seguintes valores:
 
-|||
+| Valor | Descrição |
 |-|-|
 | **E2BIG** | A lista de argumentos ultrapassa 1.024 bytes. |
 | **EINVAL** | argumento de *modo* inválido. |
@@ -111,13 +111,13 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn, _wspawn funções](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec funções](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

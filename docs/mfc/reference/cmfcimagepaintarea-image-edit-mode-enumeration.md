@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 372a1df6500f4d7219c89d8f82425246c2236514
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410168"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831132"
 ---
-# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>Enumeração CMFCImagePaintArea::IMAGE_EDIT_MODE
+# <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>Enumeração CMFCImagePaintArea::IMAGE_EDIT_MODE
 
-Especifica um modo de desenho que você pode usar para modificar uma imagem em uma caixa de diálogo do editor de imagem.
+Especifica um modo de desenho que você usa para modificar uma imagem em uma caixa de diálogo do editor de imagens.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,30 +33,29 @@ enum IMAGE_EDIT_MODE
 
 ## <a name="members"></a>Membros
 
-|||
-|-|-|
 |Nome|Descrição|
-|IMAGE_EDIT_MODE_PEN|Usado para desenhar os pixels individuais.|
-|IMAGE_EDIT_MODE_FILL|Usado para preencher todas as áreas adjacentes que contêm a cor do local atual do cursor.|
+|-|-|
+|IMAGE_EDIT_MODE_PEN|Usado para desenhar pixels individuais.|
+|IMAGE_EDIT_MODE_FILL|Usado para preencher todas as áreas adjacentes que contêm a cor no local do cursor atual.|
 |IMAGE_EDIT_MODE_LINE|Usado para desenhar uma linha.|
 |IMAGE_EDIT_MODE_RECT|Usado para desenhar um retângulo.|
 |IMAGE_EDIT_MODE_ELLIPSE|Usado para desenhar uma elipse.|
-|IMAGE_EDIT_MODE_COLOR|Usado para definir a cor atual para a cor no local atual do cursor.|
+|IMAGE_EDIT_MODE_COLOR|Usado para definir a cor atual para a cor no local do cursor atual.|
 
 ### <a name="remarks"></a>Comentários
 
-O `CMFCImagePaintArea` e `CMFCImageEditorDialog` classes usam essa enumeração para definir o modo de desenho atual. O modo de desenho e a cor atual são usadas para modificar a área de imagem em uma caixa de diálogo do editor de imagem. Para obter mais informações sobre `CMFCImagePaintArea` e `CMFCImageEditorDialog`, consulte [classe CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) e [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
+As `CMFCImagePaintArea` `CMFCImageEditorDialog` classes e usam essa enumeração para definir o modo de desenho atual. O modo de desenho e a cor atual são usados para modificar a área da imagem em uma caixa de diálogo do editor de imagens. Para obter mais informações sobre `CMFCImagePaintArea` e `CMFCImageEditorDialog` , consulte [classe CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) e [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
 
-Quando você seleciona uma cor de uma imagem usando o modo de desenho IMAGE_EDIT_MODE_COLOR, a estrutura define o modo de desenho atual para IMAGE_EDIT_MODE_PEN.
+Quando você seleciona uma cor de uma imagem usando o modo de desenho IMAGE_EDIT_MODE_COLOR, a estrutura define o modo de desenho atual como IMAGE_EDIT_MODE_PEN.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afximagepaintarea.h
+**Cabeçalho:** afximagepaintarea. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)<br/>
 [Classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)

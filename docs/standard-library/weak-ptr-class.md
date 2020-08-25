@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: f76682b14e49e5f699144674da33b0826975e2d6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a4989b9ac29e6a35e50479343d6bcf5a39ae1b0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217331"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831730"
 ---
 # <a name="weak_ptr-class"></a>Classe weak_ptr
 
@@ -62,7 +62,7 @@ Um ciclo ocorre quando dois ou mais recursos controlados por objetos `shared_ptr
 
 ## <a name="members"></a>Membros
 
-|||
+|Nome|Descrição|
 |-|-|
 | **Construtores** | |
 |[weak_ptr](#weak_ptr)|Constrói um `weak_ptr`.|
@@ -80,7 +80,7 @@ Um ciclo ocorre quando dois ou mais recursos controlados por objetos `shared_ptr
 | **Operadores** | |
 |[operador =](#op_eq)|Substitui o recurso possuído.|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 O tipo do elemento.
 
@@ -117,7 +117,7 @@ int main()
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a><a name="expired"></a>vencer
+## <a name="expired"></a><a name="expired"></a> vencer
 
 Testa se a propriedade expirou, ou seja, se o objeto referenciado foi excluído.
 
@@ -166,7 +166,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a><a name="lock"></a>proprietário
+## <a name="lock"></a><a name="lock"></a> proprietário
 
 Obtém um `shared_ptr` que compartilha a propriedade de um recurso.
 
@@ -215,7 +215,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operador =
+## <a name="operator"></a><a name="op_eq"></a> operador =
 
 Substitui o recurso possuído.
 
@@ -273,7 +273,7 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 Retorna **`true`** se isso `weak_ptr` é ordenado antes (ou menor que) o ponteiro fornecido.
 
@@ -294,7 +294,7 @@ Uma referência lvalue para um `shared_ptr` ou um `weak_ptr` .
 
 A função de membro de modelo retorna **`true`** se **`*this`** é ordenada antes de *PTR*.
 
-## <a name="reset"></a><a name="reset"></a>definido
+## <a name="reset"></a><a name="reset"></a> definido
 
 Libera o recurso de propriedade.
 
@@ -336,7 +336,7 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a><a name="swap"></a>permuta
+## <a name="swap"></a><a name="swap"></a> permuta
 
 Troca dois objetos `weak_ptr`.
 
@@ -405,7 +405,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 Conta o número de `shared_ptr` objetos que possuem o recurso compartilhado.
 
@@ -445,7 +445,7 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a><a name="weak_ptr"></a>weak_ptr
+## <a name="weak_ptr"></a><a name="weak_ptr"></a> weak_ptr
 
 Constrói um `weak_ptr`.
 
@@ -514,7 +514,7 @@ wp0.expired() == true
 *wp2.lock() == 5
 ```
 
-## <a name="weak_ptr"></a><a name="tilde-weak_ptr"></a>~ weak_ptr
+## <a name="weak_ptr"></a><a name="tilde-weak_ptr"></a> ~ weak_ptr
 
 Destrói um `weak_ptr`.
 

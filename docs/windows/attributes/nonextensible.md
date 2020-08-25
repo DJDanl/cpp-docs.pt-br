@@ -1,21 +1,21 @@
 ---
-title: Não extensívelC++ (atributo com)
+title: Não extensível (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 01f89c4a06a8e90fd6a539fa5a5a85ebb8067d40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214638"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833030"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Especifica que a implementação de `IDispatch` inclui apenas as propriedades e os métodos listados na descrição da interface e não pode ser estendido com membros adicionais em tempo de execução.
+Especifica que a `IDispatch` implementação inclui apenas as propriedades e os métodos listados na descrição da interface e não pode ser estendido com membros adicionais em tempo de execução.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ Especifica que a implementação de `IDispatch` inclui apenas as propriedades e 
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **extensível** C++ tem a mesma funcionalidade que o atributo MIDL não [extensível](/windows/win32/Midl/nonextensible) .
+O atributo não **extensível** do C++ tem a mesma funcionalidade que o atributo MIDL não [extensível](/windows/win32/Midl/nonextensible) .
 
 O uso de **extensível** também requer o atributo [oleautomation](oleautomation.md) .
 
@@ -50,18 +50,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**interface**|
 |**Repetível**|Não|
-|**Atributos necessários**|`dual` e `oleautomation`ou `dispinterface`|
+|**Atributos obrigatórios**|`dual` e `oleautomation` , ou `dispinterface`|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)

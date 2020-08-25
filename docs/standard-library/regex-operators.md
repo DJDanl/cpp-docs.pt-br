@@ -10,22 +10,24 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f3117ce7e962468855172a463c375392930e7c81
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366414"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833225"
 ---
 # <a name="ltregexgt-operators"></a>Operadores &lt;regex&gt;
 
-||||
-|-|-|-|
-|[operador!=](#op_neq)|[Operador&gt;](#op_gt)|[Operador&gt;=](#op_gt_eq)|
-|[Operador&lt;](#op_lt)|[Operador&lt;&lt;](#op_lt_lt)|[Operador&lt;=](#op_lt_eq)|
-|[operador==](#op_eq_eq)|
+[operador! =](#op_neq)\
+[operador&gt;](#op_gt)\
+[operador&gt;=](#op_gt_eq)\
+[operador&lt;](#op_lt)\
+[operador&lt;&lt;](#op_lt_lt)\
+[operador&lt;=](#op_lt_eq)\
+[operador = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>operador!=
+## <a name="operator"></a><a name="op_neq"></a> operador! =
 
 Comparação de diferença para vários objetos.
 
@@ -64,18 +66,18 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bidit*\
+*Bidirecional*\
 O tipo de iterador.
 
 *IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Deixou*\
+*mantida*\
 O objeto à esquerda a ser comparado.
 
 *Certo*\
@@ -144,7 +146,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Operador&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operador&lt;
 
 Comparação de menor que para vários objetos.
 
@@ -179,18 +181,18 @@ bool operator<(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bidit*\
+*Bidirecional*\
 O tipo de iterador.
 
 *IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Deixou*\
+*mantida*\
 O objeto à esquerda a ser comparado.
 
 *Certo*\
@@ -198,7 +200,7 @@ O objeto à direita a ser comparado.
 
 ### <a name="remarks"></a>Comentários
 
-Cada operador de modelo converte seus argumentos em um tipo de string e retorna verdadeiro apenas se o valor convertido da *esquerda* comparar menos do que o valor convertido da *direita*.
+Cada operador de modelo converte seus argumentos em um tipo de cadeia de caracteres e retorna true somente se o valor convertido de *Left* compara menor que o valor convertido de *Right*.
 
 ### <a name="example"></a>Exemplo
 
@@ -254,7 +256,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operador&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operador&lt;&lt;
 
 Insere um sub_match em um fluxo.
 
@@ -264,7 +266,7 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
     const sub_match<BidIt>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Elem*\
 O tipo de elemento.
@@ -272,13 +274,13 @@ O tipo de elemento.
 *IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Bidit*\
+*Bidirecional*\
 O tipo de iterador.
 
-*os*\
+*sistemas*\
 O fluxo de saída.
 
 *Certo*\
@@ -314,7 +316,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operador&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operador&lt;=
 
 Comparação de menor ou igual para vários objetos.
 
@@ -349,18 +351,18 @@ bool operator<=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bidit*\
+*Bidirecional*\
 O tipo de iterador.
 
 *IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Deixou*\
+*mantida*\
 O objeto à esquerda a ser comparado.
 
 *Certo*\
@@ -424,7 +426,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operador==
+## <a name="operator"></a><a name="op_eq_eq"></a> operador = =
 
 Comparação de igualdade para vários objetos.
 
@@ -463,18 +465,18 @@ bool operator==(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bidit*\
+*Bidirecional*\
 O tipo de iterador.
 
 *IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Deixou*\
+*mantida*\
 O objeto à esquerda a ser comparado.
 
 *Certo*\
@@ -486,11 +488,11 @@ Cada operador de modelo converte cada um de seus argumentos em um tipo de cadeia
 
 Quando um operador de modelo converte seus argumentos em um tipo de cadeia de caracteres, ele usa a primeira das seguintes transformações aplicáveis:
 
-argumentos cujos tipos sejam uma `match_results` especialização do modelo de classe ou `sub_match` sejam convertidos chamando a função de `str` membro;
+argumentos cujos tipos são uma especialização de modelo de classe `match_results` ou `sub_match` são convertidos chamando a `str` função de membro;
 
-argumentos cujos tipos são uma especialização do modelo `basic_string` de classe são inalterados;
+os argumentos cujos tipos são uma especialização do modelo de classe não `basic_string` são alterados;
 
-todos os outros tipos de argumento são convertidos passando o valor do `basic_string`argumento para o construtor para uma especialização apropriada do modelo de classe .
+todos os outros tipos de argumento são convertidos passando o valor do argumento para o construtor para uma especialização apropriada do modelo de classe `basic_string` .
 
 ### <a name="example"></a>Exemplo
 
@@ -551,7 +553,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Operador&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operador&gt;
 
 Comparação de maior que para vários objetos.
 
@@ -586,18 +588,18 @@ bool operator>(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bidit*\
+*Bidirecional*\
 O tipo de iterador.
 
 *IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Deixou*\
+*mantida*\
 O objeto à esquerda a ser comparado.
 
 *Certo*\
@@ -661,7 +663,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operador&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operador&gt;=
 
 Comparação de maior ou igual para vários objetos.
 
@@ -696,18 +698,18 @@ bool operator>=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bidit*\
+*Bidirecional*\
 O tipo de iterador.
 
 *IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Deixou*\
+*mantida*\
 O objeto à esquerda a ser comparado.
 
 *Certo*\
@@ -774,10 +776,10 @@ sub >= 'a' == true
 ## <a name="see-also"></a>Confira também
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
 [Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funções de> regex](../standard-library/regex-functions.md)\
-[regex_iterator](../standard-library/regex-iterator-class.md)\
-[classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[classe regex_traits](../standard-library/regex-traits-class.md)\
-[\<> de reex](../standard-library/regex-typedefs.md)
+[\<regex> funções](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> TYPEDEFs](../standard-library/regex-typedefs.md)

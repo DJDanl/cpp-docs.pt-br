@@ -1,17 +1,17 @@
 ---
-title: includelib (C++ atributo com)
+title: includelib (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.includelib
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 4022a3f1f2d4ccaabe65c24065be8e1c846d604d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30e84a6c82ec25e07ca0eb08f64c7aa5b560e9e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214832"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830690"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -30,7 +30,7 @@ O nome do arquivo. idl que você deseja incluir como parte do arquivo. idl gerad
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **includelib** C++ faz com que um arquivo. IDL ou. h seja incluído no arquivo. idl gerado, após a instrução de `importlib`.
+O atributo **includelib** C++ faz com que um arquivo. IDL ou. h seja incluído no arquivo. idl gerado, após a `importlib` instrução.
 
 ## <a name="example"></a>Exemplo
 
@@ -45,22 +45,20 @@ O código a seguir é mostrado em um arquivo. cpp:
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
-|**Aplica-se a**|Lugares|
+|**Aplica-se a**|Qualquer lugar|
 |**Repetível**|Sim|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos autônomos](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
-[include](include-cpp.md)<br/>
+[incluir](include-cpp.md)<br/>
 [importlib](importlib.md)

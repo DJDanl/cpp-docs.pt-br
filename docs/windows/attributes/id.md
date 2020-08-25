@@ -1,17 +1,17 @@
 ---
-title: ID (C++ atributo com)
+title: ID (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f67bf21fbe0040884cba4a54ed8d2a230cb20cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168051"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830547"
 ---
 # <a name="id"></a>id
 
@@ -38,22 +38,20 @@ Consulte o exemplo de [ligável](bindable.md) para obter um exemplo de como usar
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
 [Atributos de membro de dados](data-member-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
+[ValorPadrão](defaultvalue.md)<br/>
 [Em](in-cpp.md)<br/>
-[out](out-cpp.md)
+[fora](out-cpp.md)

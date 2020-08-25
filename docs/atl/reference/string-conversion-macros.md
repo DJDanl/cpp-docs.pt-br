@@ -1,5 +1,5 @@
 ---
-title: Macros de conversão de strings
+title: Macros de conversão de cadeia de caracteres
 ms.date: 11/04/2016
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -11,24 +11,24 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 8df496b78334d26e7d3664642b2e9d93d6149843
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60cccebf4e1db8369ea5a88f04a37b96838ff49f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325846"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835149"
 ---
-# <a name="string-conversion-macros"></a>Macros de conversão de strings
+# <a name="string-conversion-macros"></a>Macros de conversão de cadeia de caracteres
 
-Essas macros fornecem recursos de conversão de strings.
+Essas macros fornecem recursos de conversão de cadeia de caracteres.
 
-## <a name="atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a>Macros de conversão de strings ATL e MFC
+## <a name="atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a> Macros de conversão de cadeia de caracteres ATL e MFC
 
-As macros de conversão de cadeia de caracteres discutidas neste documento são válidas para ATL e MFC. Para obter mais informações sobre a conversão de strings MFC, consulte [TN059: Usando macros de conversão MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [Macros e Globais MFC](../../mfc/reference/mfc-macros-and-globals.md).
+As macros de conversão de cadeia de caracteres discutidas neste documento são válidas para ATL e MFC. Para obter mais informações sobre conversão de cadeia de caracteres do MFC, consulte [TN059: usando macros de conversão do MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [macros do MFC e globais](../../mfc/reference/mfc-macros-and-globals.md).
 
-## <a name="devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a>DeVMODE e Macros de conversão de strings textmétricas
+## <a name="devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a> Macros de conversão DEVMODE e TEXTMETRIC String
 
-Essas macros criam uma cópia de uma estrutura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) ou [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) e convertem as strings dentro da nova estrutura para um novo tipo de string. As macros alocam memória na pilha para a nova estrutura e retornam um ponteiro para a nova estrutura.
+Essas macros criam uma cópia de uma estrutura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) ou [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) e convertem as cadeias de caracteres dentro da nova estrutura para um novo tipo de cadeia. As macros alocam memória na pilha para a nova estrutura e retornam um ponteiro para a nova estrutura.
 
 ```cpp
 MACRONAME( address_of_structure )
@@ -44,26 +44,26 @@ e:
 
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]
 
-Nos nomes de macro, o tipo de string na estrutura de origem está à esquerda (por exemplo, **A**) e o tipo de string na estrutura de destino está à direita (por exemplo, **W**). **A** significa LPSTR, **OLE** significa LPOLESTR, **T** significa LPTSTR, e **W** significa LPWSTR.
+Nos nomes de macro, o tipo de cadeia de caracteres na estrutura de origem está à esquerda (por exemplo, **a**) e o tipo de cadeia de caracteres na estrutura de destino está à direita (por exemplo, **W**). **Um** significa que se refere a LPStr, **OLE** significa LPOLESTR, **T** significa LPTSTR e **W** significa LPWSTR.
 
-Assim, `DEVMODE` O DEVMODEA2W copia uma estrutura `DEVMODE` com cordas LPSTR em uma estrutura com strings LPWSTR, TEXTMETRICOLE2T copia uma `TEXTMETRIC` estrutura com cordas LPOLESTR em uma `TEXTMETRIC` estrutura com strings LPTSTR, e assim por diante.
+Assim, DEVMODEA2W copia uma `DEVMODE` estrutura com cadeias de LPSTR em uma `DEVMODE` estrutura com cadeias de caracteres LPWSTR, TEXTMETRICOLE2T copia uma `TEXTMETRIC` estrutura com cadeias de caracteres LPOLESTR em uma `TEXTMETRIC` estrutura com cadeias de caracteres de LPTSTR e assim por diante.
 
-As duas cordas convertidas `DEVMODE` na estrutura são`dmDeviceName`o nome do`dmFormName`dispositivo ( ) e o nome do formulário ( ). As `DEVMODE` macros de conversão de`dmSize`strings também atualizam o tamanho da estrutura ( ).
+As duas cadeias de caracteres convertidas na `DEVMODE` estrutura são o nome do dispositivo ( `dmDeviceName` ) e o nome do formulário ( `dmFormName` ). As `DEVMODE` macros de conversão de cadeia de caracteres também atualizam o tamanho da estrutura ( `dmSize` ).
 
-As quatro cordas convertidas `TEXTMETRIC` na estrutura são`tmFirstChar`o primeiro`tmLastChar`caractere ( ),`tmDefaultChar`o último caractere`tmBreakChar`( ), o caractere padrão ( ), e o caractere de ruptura ( ).
+As quatro cadeias de caracteres convertidas na `TEXTMETRIC` estrutura são o primeiro caractere ( `tmFirstChar` ), o último caractere ( `tmLastChar` ), o caractere padrão ( `tmDefaultChar` ) e o caractere de quebra ( `tmBreakChar` ).
 
-O comportamento `DEVMODE` das `TEXTMETRIC` macros de conversão de cordas e depende da diretiva do compilador em vigor, se houver. Se os tipos de origem e de destino forem o mesmo, a conversão não ocorre. As diretivas do compilador alteram **T** e **OLE** da seguinte forma:
+O comportamento das `DEVMODE` `TEXTMETRIC` macros e de conversão de cadeia de caracteres depende da diretiva do compilador em vigor, se houver. Se os tipos de origem e de destino forem o mesmo, a conversão não ocorre. As diretivas do compilador alteram **T** e **OLE** da seguinte maneira:
 
 |Diretriz do compilador em vigor|T torna-se|OLE torna-se|
 |----------------------------------|---------------|-----------------|
-|none|**A**|**W**|
-|**\_Unicode**|**W**|**W**|
+|nenhum|**A**|**W**|
+|**\_UNICODE**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|UNICODE e **OLE2ANSI** ** \_**|**W**|**A**|
+|** \_ Unicode** e **OLE2ANSI**|**W**|**A**|
 
-A tabela a `DEVMODE` `TEXTMETRIC` seguir lista as macros e conversão de strings.
+A tabela a seguir lista `DEVMODE` as `TEXTMETRIC` macros de conversão de cadeia de caracteres e.
 
-|||
+|`DEVMODE` Ela|`TEXTMETRIC` Ela|
 |-|-|
 |DEVMODEA2W|TEXTMETRICA2W|
 |DEVMODEOLE2T|TEXTMETRICOLE2T|

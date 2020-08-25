@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 3d8bfc40c3c9e937ad5acd7228e49877af65204a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ee960b27651489ac1c196789d41a6c5ee396b260
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562149"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831145"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Classe CMFCImagePaintArea
 
@@ -37,17 +37,15 @@ class CMFCImagePaintArea : public CButton
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Constrói um objeto `CMFCImagePaintArea`.|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCImagePaintArea:: GetMode](#getmode)|Recupera o modo de desenho atual.|
 |[CMFCImagePaintArea:: SetBitmap](#setbitmap)|Define a imagem de bitmap para a área da imagem.|
 |[CMFCImagePaintArea:: setColor](#setcolor)|Define a cor do desenho atual.|
@@ -89,7 +87,7 @@ Constrói um objeto `CMFCImagePaintArea`.
 CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentDlg*\
 no Um ponteiro para a caixa de diálogo que é o pai do editor de imagem.
@@ -102,7 +100,7 @@ Recupera o modo de desenho atual.
 IMAGE_EDIT_MODE GetMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) que especifica o modo de desenho atual.
 
@@ -114,7 +112,7 @@ Define a imagem de bitmap para a área da imagem.
 void SetBitmap(CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBitmap*\
 no A nova imagem de bitmap a ser exibida.
@@ -131,7 +129,7 @@ Define a cor do desenho atual.
 void SetColor(COLORREF color);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Cor*\
 no A nova cor do desenho.
@@ -150,7 +148,7 @@ Define o modo de desenho atual.
 void SetMode(IMAGE_EDIT_MODE mode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *moda*\
 no Um valor [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) que especifica o modo de desenho atual.

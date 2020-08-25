@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: bee9c3d27ea05a40d6835d69079fc3e0a56efb86
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a617ba829999e9e5778bd7f0091cfb0d624dce71
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219047"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832003"
 ---
 # <a name="iatlstringmgr-class"></a>Classe IAtlStringMgr
 
@@ -35,7 +35,7 @@ __interface IAtlStringMgr
 
 ### <a name="methods"></a>Métodos
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Aloca](#allocate)|Chame esse método para alocar uma nova estrutura de dados de cadeia de caracteres.|
 |[Clone](#clone)|Chame esse método para retornar um ponteiro para um novo Gerenciador de cadeia de caracteres para uso com outra instância do `CSimpleStringT` .|
@@ -53,7 +53,7 @@ Você também pode usar essa classe para implementar um Gerenciador de memória 
 
 **Cabeçalho:** atlsimpstr. h
 
-## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr:: Allocate
+## <a name="iatlstringmgrallocate"></a><a name="allocate"></a> IAtlStringMgr:: Allocate
 
 Aloca uma nova estrutura de dados de cadeia de caracteres.
 
@@ -69,7 +69,7 @@ O número de caracteres no novo bloco de memória.
 *nCharSize*<br/>
 O tamanho (em bytes) do tipo de caractere usado pelo Gerenciador de cadeia de caracteres.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna um ponteiro para o bloco de memória alocado recentemente.
 
@@ -83,7 +83,7 @@ Chame [IAtlStringMgr:: Free](#free) ou [IAtlStringMgr:: realoque](#reallocate) p
 > [!NOTE]
 > Para obter exemplos de uso, consulte [Gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr:: clone
+## <a name="iatlstringmgrclone"></a><a name="clone"></a> IAtlStringMgr:: clone
 
 Retorna um ponteiro para um novo Gerenciador de cadeia de caracteres para uso com outra instância do `CSimpleStringT` .
 
@@ -91,7 +91,7 @@ Retorna um ponteiro para um novo Gerenciador de cadeia de caracteres para uso co
 IAtlStringMgr* Clone() throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna uma cópia do objeto `IAtlStringMgr`.
 
@@ -104,7 +104,7 @@ No entanto, se o Gerenciador de memória não oferecer suporte para uso por vár
 > [!NOTE]
 > Para obter exemplos de uso, consulte [Gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr:: Free
+## <a name="iatlstringmgrfree"></a><a name="free"></a> IAtlStringMgr:: Free
 
 Libera uma estrutura de dados de cadeia de caracteres.
 
@@ -124,7 +124,7 @@ Libera o bloco de memória especificado anteriormente alocado por [alocar](#allo
 > [!NOTE]
 > Para obter exemplos de uso, consulte [Gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringMgr::GetNilString
+## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a> IAtlStringMgr::GetNilString
 
 Retorna um ponteiro para uma estrutura de dados de cadeia de caracteres para uma cadeia de caracteres vazia.
 
@@ -132,7 +132,7 @@ Retorna um ponteiro para uma estrutura de dados de cadeia de caracteres para uma
 CStringData* GetNilString() throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para o `CStringData` objeto usado para representar uma cadeia de caracteres vazia.
 
@@ -146,7 +146,7 @@ Chame essa função para retornar uma representação de uma cadeia de caractere
 > [!NOTE]
 > Para obter exemplos de uso, consulte [Gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr:: realocar
+## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a> IAtlStringMgr:: realocar
 
 Realoca uma estrutura de dados de cadeia de caracteres.
 
@@ -168,7 +168,7 @@ O número de caracteres no novo bloco de memória.
 *nCharSize*<br/>
 O tamanho (em bytes) do tipo de caractere usado pelo Gerenciador de cadeia de caracteres.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna um ponteiro para o início do bloco de memória alocado recentemente.
 

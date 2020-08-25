@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: f18614f7b156a1757df9dfaac9e4a0ad4f8209eb
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: baa2bca8b2e06fd55591c3a4fa2a9752abbb5355
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404288"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830781"
 ---
 # <a name="ole-background"></a>tela de fundo OLE
 
@@ -58,15 +58,15 @@ O OLE incorpora muitos conceitos diferentes que funcionam para o objetivo da int
 
 Alguns dos tópicos mais importantes do OLE são abordados nos seguintes artigos:
 
-- [Tela de fundo OLE: vinculando e inserindo](ole-background-linking-and-embedding.md)
+- [Plano de fundo OLE: vinculação e inserção](ole-background-linking-and-embedding.md)
 
-- [Tela de fundo OLE: contêineres e servidores](ole-background-containers-and-servers.md)
+- [Plano de fundo OLE: contêineres e servidores](ole-background-containers-and-servers.md)
 
-- [Tela de fundo OLE: estratégias de implementação](ole-background-implementation-strategies.md)
+- [Plano de fundo OLE: estratégias de implementação](ole-background-implementation-strategies.md)
 
-- [tela de fundo OLE: implementação MFC](ole-background-mfc-implementation.md)
+- [Plano de fundo OLE: implementação do MFC](ole-background-mfc-implementation.md)
 
-Para obter informações gerais de OLE não encontradas nos artigos acima, [pesquise por OLE](https://docs.microsoft.com/search/?terms=ole) em Microsoft docs.
+Para obter informações gerais de OLE não encontradas nos artigos acima, [pesquise por OLE](/search/?terms=ole) em Microsoft docs.
 
 ## <a name="see-also"></a>Confira também
 

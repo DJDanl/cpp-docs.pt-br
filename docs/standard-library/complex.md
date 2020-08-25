@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 2c6487370bfa4d3af6c9c7c40b7f83a252c2e01d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222570"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831496"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -20,7 +20,7 @@ Define o modelo de classe de contêiner `complex` e seus modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**:\<complex>
+**Cabeçalho**: \<complex>
 
 **Namespace:** std
 
@@ -72,7 +72,7 @@ A menos que especificado de outra forma, as funções que podem retornar vários
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[ABS](../standard-library/complex-functions.md#abs)|Calcula o módulo de um número complexo.|
 |[acos](../standard-library/complex-functions.md#acos)||
@@ -102,20 +102,20 @@ A menos que especificado de outra forma, as funções que podem retornar vários
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[operador! =](../standard-library/complex-operators.md#op_neq)|Testa a desigualdade entre dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
 |[operador](../standard-library/complex-operators.md#op_star)|Multiplica dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
 |[operador +](../standard-library/complex-operators.md#op_add)|Adiciona dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
 |[operador](../standard-library/complex-operators.md#operator-)|Subtrai dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
 |[operador](../standard-library/complex-operators.md#op_div)|Divide dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
-|[<do operador\<](../standard-library/complex-operators.md#op_lt_lt)|Uma função de modelo que insere um número complexo no fluxo de saída.|
+|[<do operador \<](../standard-library/complex-operators.md#op_lt_lt)|Uma função de modelo que insere um número complexo no fluxo de saída.|
 |[operador = =](../standard-library/complex-operators.md#op_eq_eq)|Testa a igualdade entre dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
-|[>>do operador](../standard-library/complex-operators.md#op_gt_gt)|Uma função de modelo que extrai um valor complexo do fluxo de entrada.|
+|[>>do operador ](../standard-library/complex-operators.md#op_gt_gt)|Uma função de modelo que extrai um valor complexo do fluxo de entrada.|
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[complexos\<double>](../standard-library/complex-double.md)|O modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos os tipos **`double`** , em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
 |[complexos\<float>](../standard-library/complex-float.md)|O modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos os tipos **`float`** , em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
@@ -126,7 +126,7 @@ A menos que especificado de outra forma, as funções que podem retornar vários
 
 O \<complex> cabeçalho define os seguintes [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) que criam um número complexo com a parte real sendo zero e a parte imaginário é o valor do parâmetro de entrada.
 
-|||
+|Declaração|Descrição|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Retorna: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Retorna: `complex<double>{0.0, static_cast<double>(d)}`.|

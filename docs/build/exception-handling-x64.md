@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224039"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835045"
 ---
 # <a name="x64-exception-handling"></a>Tratamento de exceções x64
 
@@ -24,7 +24,7 @@ Várias estruturas de dados são necessárias para tratamento de exceções e su
 
 A manipulação de exceção baseada em tabela requer uma entrada de tabela para todas as funções que alocam espaço de pilha ou que chamam outra função (por exemplo, funções não-folha). As entradas da tabela de funções têm o formato:
 
-|||
+|Tamanho|Valor|
 |-|-|
 |ULONG|Endereço de início da função|
 |ULONG|Endereço final da função|
@@ -36,7 +36,7 @@ A estrutura de RUNTIME_FUNCTION deve ser alinhada em DWORD na memória. Todos os
 
 A estrutura de informações de dados de desenrolar é usada para registrar os efeitos que uma função tem no ponteiro de pilha e onde os registros não voláteis são salvos na pilha:
 
-|||
+|Tamanho|Valor|
 |-|-|
 |UBYTE: 3|Versão|
 |UBYTE: 5|Flags|
@@ -49,14 +49,14 @@ A estrutura de informações de dados de desenrolar é usada para registrar os e
 
 (1) manipulador de exceção
 
-|||
+|Tamanho|Valor|
 |-|-|
 |ULONG|Endereço do manipulador de exceção|
 |variável|Dados de manipulador específicos do idioma (opcional)|
 
 (2) informações de desenrolamento encadeadas
 
-|||
+|Tamanho|Valor|
 |-|-|
 |ULONG|Endereço de início da função|
 |ULONG|Endereço final da função|
@@ -114,7 +114,7 @@ A estrutura de UNWIND_INFO deve ser alinhada em DWORD na memória. Veja o que ca
 
 A matriz de código de desenrolamento é usada para registrar a sequência de operações no prólogo que afetam os registros não voláteis e RSP. Cada item de código tem este formato:
 
-|||
+|Tamanho|Valor|
 |-|-|
 |UBYTE|Deslocamento no prólogo|
 |UBYTE: 4|Desenrolar código de operação|
@@ -136,15 +136,15 @@ Para os opcodes `UWOP_SAVE_XMM128` e `UWOP_SAVE_XMM128_FAR` , o deslocamento é 
 
 O código de operação de desenrolamento é um destes valores:
 
-- `UWOP_PUSH_NONVOL`(0) 1 nó
+- `UWOP_PUSH_NONVOL` (0) 1 nó
 
   Envie um registro inteiro não volátil, decrementando RSP por 8. As informações da operação são o número do registro. Devido às restrições em epilogs, os `UWOP_PUSH_NONVOL` códigos de liberação devem aparecer primeiro no prólogo e, por fim, por último na matriz de código de desenrolamento. Essa ordenação relativa se aplica a todos os outros códigos de desenrolamento, exceto `UWOP_PUSH_MACHFRAME` .
 
-- `UWOP_ALLOC_LARGE`(1) 2 ou 3 nós
+- `UWOP_ALLOC_LARGE` (1) 2 ou 3 nós
 
   Aloque uma área de tamanho grande na pilha. Há dois formulários. Se as informações da operação forem iguais a 0, o tamanho da alocação dividida por 8 será registrado no próximo slot, permitindo uma alocação de até 512K-8. Se as informações da operação forem iguais a 1, o tamanho não dimensionado da alocação será registrado nos próximos dois slots no formato little-endian, permitindo alocações de até 4 GB-8.
 
-- `UWOP_ALLOC_SMALL`(2) 1 nó
+- `UWOP_ALLOC_SMALL` (2) 1 nó
 
   Aloque uma área de tamanho pequeno na pilha. O tamanho da alocação é o campo de informações da operação \* 8 + 8, permitindo alocações de 8 a 128 bytes.
 
@@ -156,31 +156,31 @@ O código de operação de desenrolamento é um destes valores:
   |136 a 512K-8 bytes|`UWOP_ALLOC_LARGE`, informações da operação = 0|
   |512K a 4G-8 bytes|`UWOP_ALLOC_LARGE`, informações da operação = 1|
 
-- `UWOP_SET_FPREG`(3) 1 nó
+- `UWOP_SET_FPREG` (3) 1 nó
 
   Estabeleça o registro do ponteiro do quadro definindo o registro para algum deslocamento do RSP atual. O deslocamento é igual ao campo deslocamento de registro de quadro (dimensionado) no UNWIND_INFO \* 16, permitindo deslocamentos de 0 a 240. O uso de um deslocamento permite o estabelecimento de um ponteiro de quadro que aponta para o meio da alocação de pilha fixa, ajudando a densidade de código, permitindo que mais acessos usem formulários de instruções curtas. O campo informações da operação é reservado e não deve ser usado.
 
-- `UWOP_SAVE_NONVOL`(4) 2 nós
+- `UWOP_SAVE_NONVOL` (4) 2 nós
 
   Salve um registro inteiro não volátil na pilha usando uma MOV em vez de um PUSH. Esse código é usado principalmente para *reduzir a disposição*, onde um registro não volátil é salvo na pilha em uma posição que foi alocada anteriormente. As informações da operação são o número do registro. O deslocamento de pilha dimensionado por 8 é registrado no próximo slot de código de operação desenrolar, conforme descrito na observação acima.
 
-- `UWOP_SAVE_NONVOL_FAR`(5) 3 nós
+- `UWOP_SAVE_NONVOL_FAR` (5) 3 nós
 
   Salve um registro inteiro não volátil na pilha com um deslocamento longo, usando um MOV em vez de um PUSH. Esse código é usado principalmente para *reduzir a disposição*, onde um registro não volátil é salvo na pilha em uma posição que foi alocada anteriormente. As informações da operação são o número do registro. O deslocamento de pilha não dimensionado é registrado nos próximos dois slots de código de operação desenrolar, conforme descrito na observação acima.
 
-- `UWOP_SAVE_XMM128`(8) 2 nós
+- `UWOP_SAVE_XMM128` (8) 2 nós
 
   Salve todos os 128 bits de um registro XMM não volátil na pilha. As informações da operação são o número do registro. O deslocamento de pilha dimensionado por 16 é registrado no próximo slot.
 
-- `UWOP_SAVE_XMM128_FAR`(9) 3 nós
+- `UWOP_SAVE_XMM128_FAR` (9) 3 nós
 
   Salve todos os 128 bits de um registro XMM não volátil na pilha com um deslocamento longo. As informações da operação são o número do registro. O deslocamento de pilha não dimensionado é registrado nos dois slots seguintes.
 
-- `UWOP_PUSH_MACHFRAME`(10) 1 nó
+- `UWOP_PUSH_MACHFRAME` (10) 1 nó
 
   Enviar por push um quadro de máquina.  Esse código de desenrolação é usado para registrar o efeito de uma interrupção ou de uma exceção de hardware. Há dois formulários. Se as informações da operação forem iguais a 0, um desses quadros será enviado por push na pilha:
 
-  |||
+  |Location|Valor|
   |-|-|
   |RSP + 32|SS|
   |RSP + 24|RSP antigo|
@@ -190,16 +190,16 @@ O código de operação de desenrolamento é um destes valores:
 
   Se as informações da operação forem iguais a 1, um desses quadros será enviado por push:
 
-  |||
+  |Location|Valor|
   |-|-|
   |RSP + 40|SS|
   |RSP + 32|RSP antigo|
   |RSP + 24|EFLAGS|
   |RSP + 16|CS|
   |RSP + 8|MÚSICA|
-  |RSP|Código do erro|
+  |RSP|Código de erro|
 
-  Esse código de desenrolação sempre aparece em um prólogo fictício, que nunca é executado de fato, mas é exibido antes do ponto de entrada real de uma rotina de interrupção e existe apenas para fornecer um local para simular o envio por push de um quadro de máquina. `UWOP_PUSH_MACHFRAME`registra essa simulação, que indica que a máquina fez essa operação conceitualmente:
+  Esse código de desenrolação sempre aparece em um prólogo fictício, que nunca é executado de fato, mas é exibido antes do ponto de entrada real de uma rotina de interrupção e existe apenas para fornecer um local para simular o envio por push de um quadro de máquina. `UWOP_PUSH_MACHFRAME` registra essa simulação, que indica que a máquina fez essa operação conceitualmente:
 
   1. Endereço de retorno de RIP pop de cima da pilha para *Temp*
   
@@ -221,7 +221,7 @@ O código de operação de desenrolamento é um destes valores:
 
 O significado dos bits de informações da operação depende do código da operação. Para codificar um registro de finalidade geral (inteiro), esse mapeamento é usado:
 
-|||
+|bit|Registre-se|
 |-|-|
 |0|RAX|
 |1|RCX|

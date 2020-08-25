@@ -7,51 +7,51 @@ helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-ms.openlocfilehash: f2f8269dcf0f59a5d0794d3f16d4c4f85d8841ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fde93415640ef7fa460bb363af4c3cb14b356061
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330143"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833446"
 ---
 # <a name="event-handling-global-functions"></a>Funções globais de manipulação de eventos
 
-Esta função fornece um manipulador de eventos.
+Essa função fornece um manipulador de eventos.
 
 > [!IMPORTANT]
-> A função listada na tabela a seguir não pode ser usada em aplicativos executados no Tempo de execução do Windows.
+> A função listada na tabela a seguir não pode ser usada em aplicativos que são executados no Windows Runtime.
 
-|||
+|Nome|Descrição|
 |-|-|
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Espera que um objeto seja sinalizado, enquanto isso, despacha mensagens de janela conforme necessário.|
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Aguarda até que um objeto seja sinalizado, ao mesmo tempo em que distribui mensagens de janela conforme necessário.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase.h
+**Cabeçalho:** atlbase. h
 
-## <a name="atlwaitwithmessageloop"></a><a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop
+## <a name="atlwaitwithmessageloop"></a><a name="atlwaitwithmessageloop"></a> AtlWaitWithMessageLoop
 
 Aguarda o objeto a ser sinalizado, enquanto despacha as mensagens da janela conforme necessário.
 
 > [!IMPORTANT]
-> Esta função não pode ser usada em aplicativos executados no Tempo de execução do Windows.
+> Essa função não pode ser usada em aplicativos que são executados no Windows Runtime.
 
 ```
 BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Hevent*<br/>
-[em] A alça do objeto para esperar.
+*hEvent*<br/>
+no O identificador do objeto a ser aguardado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna TRUE se o objeto tiver sido sinalizado.
+Retornará TRUE se o objeto tiver sido sinalizado.
 
 ### <a name="remarks"></a>Comentários
 
-Isso é útil se você quiser esperar que o evento de um objeto aconteça e ser notificado sobre o que está acontecendo, mas permita que mensagens de janela sejam enviadas enquanto espera.
+Isso será útil se você quiser aguardar o evento de um objeto ocorrer e ser notificado sobre ele que está acontecendo, mas permitir que as mensagens de janela sejam expedidas enquanto aguardam.
 
 ## <a name="see-also"></a>Confira também
 

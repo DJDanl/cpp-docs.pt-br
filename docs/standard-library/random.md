@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: e52033c68bc5bee21abed0af0e86cbb76000435d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ffbfba7a7cc4a7dfebbc2dcc074842de3c1ac
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217643"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831432"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,7 +19,7 @@ Define instalações para a geração aleatória de números, permitindo a cria�
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**:\<random>
+**Cabeçalho**: \<random>
 
 **Namespace:** std
 
@@ -225,9 +225,8 @@ As seções a seguir listam os URNGs (geradores de números aleatórios uniforme
 
 #### <a name="non-deterministic-generator"></a><a name="rd"></a> Gerador não determinístico
 
-|||
-|-|-|
-|[Classe random_device](../standard-library/random-device-class.md)|Gera uma sequência aleatória não determinista protegida por criptografia usando um dispositivo externo. Geralmente usado para propagar um mecanismo. Baixo desempenho, qualidade bastante alta. Para obter mais informações, consulte [comentários](#comments).|
+[Classe random_device](../standard-library/random-device-class.md)\
+Gera uma sequência aleatória não determinista protegida por criptografia usando um dispositivo externo. Geralmente usado para propagar um mecanismo. Baixo desempenho, qualidade bastante alta. Para obter mais informações, consulte [comentários](#comments).
 
 #### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Typedefs de Mecanismo com Parâmetros Predefinidos
 
@@ -309,7 +308,7 @@ Para mecanismos de instanciação e adaptadores de mecanismos. Para obter mais i
 
 Modelos de mecanismos são usados como URNGs independentes ou como mecanismos de base transmitidos a [adaptadores de mecanismo](#engadapt). Geralmente, eles são instanciados com um [typedef de mecanismo predefinido](#typedefs) e transmitidos a uma [distribuição](#distributions). Para obter mais informações, consulte a seção [Mecanismos e Distribuições](#engdist).
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)|Gera uma sequência aleatória usando o algoritmo congruente linear. Mais simplista e com qualidade mais baixa.|
 |[Classe mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Gera uma sequência aleatória usando o algoritmo mersenne twister. Mais complexo e de qualidade mais alta, exceto pela classe random_device. Desempenho muito rápido.|
@@ -319,7 +318,7 @@ Modelos de mecanismos são usados como URNGs independentes ou como mecanismos de
 
 Adaptadores de mecanismo são modelos que adaptam outros mecanismos (básicos). Geralmente, eles são instanciados com um [typedef de mecanismo predefinido](#typedefs) e transmitidos a uma [distribuição](#distributions). Para obter mais informações, consulte a seção [Mecanismos e Distribuições](#engdist).
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe discard_block_engine](../standard-library/discard-block-engine-class.md)|Gera uma sequência aleatória descartando valores retornados pelo mecanismo de base.|
 |[Classe independent_bits_engine](../standard-library/independent-bits-engine-class.md)|Gera uma sequência aleatória com um número especificado de bits recompactando bits dos valores retornados pelo mecanismo básico.|
@@ -333,7 +332,7 @@ As seções a seguir listam as distribuições fornecidas no cabeçalho \<random
 
 #### <a name="uniform-distributions"></a>Distribuições Uniformes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe uniform_int_distribution](../standard-library/uniform-int-distribution-class.md)|Produz uma distribuição de valor inteiro uniforme em um intervalo no intervalo fechado \[a, b] (inclusivo-inclusivo).|
 |[Classe uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)|Produz uma distribuição de valor real uniforme (ponto flutuante) em um intervalo no intervalo semiaberto [a, b) (inclusivo-exclusivo).|
@@ -343,7 +342,7 @@ As seções a seguir listam as distribuições fornecidas no cabeçalho \<random
 
 #### <a name="bernoulli-distributions"></a>Distribuições Bernoulli
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produz uma distribuição de Bernoulli de **`bool`** valores.|
 |[Classe binomial_distribution](../standard-library/binomial-distribution-class.md)|Produz uma distribuição binomial de valores inteiros.|
@@ -354,7 +353,7 @@ As seções a seguir listam as distribuições fornecidas no cabeçalho \<random
 
 #### <a name="normal-distributions"></a>Distribuições normais
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Produz uma distribuição de Cauchy de valores reais (ponto flutuante).|
 |[Classe chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Produz uma distribuição qui-quadrada de valores reais (ponto flutuante).|
@@ -367,7 +366,7 @@ As seções a seguir listam as distribuições fornecidas no cabeçalho \<random
 
 #### <a name="poisson-distributions"></a>Distribuições Poisson
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe exponential_distribution](../standard-library/exponential-distribution-class.md)|Produz uma distribuição exponencial de valores reais (ponto flutuante).|
 |[Classe extreme_value_distribution](../standard-library/extreme-value-distribution-class.md)|Produz uma distribuição de valor extremo de valores reais (ponto flutuante).|
@@ -379,7 +378,7 @@ As seções a seguir listam as distribuições fornecidas no cabeçalho \<random
 
 #### <a name="sampling-distributions"></a>Distribuições de Amostragem
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe discrete_distribution](../standard-library/discrete-distribution-class.md)|Produz uma distribuição inteira discreta.|
 |[Classe piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md)|Produz uma distribuição constante em partes de valores reais (ponto flutuante).|
@@ -391,7 +390,7 @@ As seções a seguir listam as distribuições fornecidas no cabeçalho \<random
 
 Esta seção lista as funções de utilitário gerais fornecidas no cabeçalho \<random>.
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe seed_seq](../standard-library/seed-seq-class.md)|Gera uma sequência de transmissão embaralhada e não polarizada. Usadas para evitar a replicação de transmissões variadas aleatórias. Útil quando vários URNGs são instanciados dos mecanismos.|
 
@@ -399,22 +398,22 @@ Esta seção lista as funções de utilitário gerais fornecidas no cabeçalho \
 
 Esta seção lista os operadores fornecidos no cabeçalho \<random>.
 
-|||
+|Nome|Descrição|
 |-|-|
 |`operator==`|Testa se o URNG no lado esquerdo do operador é igual ao mecanismo do lado direito.|
 |`operator!=`|Testa se o URNG no lado esquerdo do operador não é igual ao mecanismo do lado direito.|
 |`operator<<`|Grava informações de estado em uma transmissão.|
 |`operator>>`|Extrai informações de estado de uma transmissão.|
 
-## <a name="engines-and-distributions"></a><a name="engdist"></a>Mecanismos e distribuições
+## <a name="engines-and-distributions"></a><a name="engdist"></a> Mecanismos e distribuições
 
 Consulte as seções a seguir para obter informações sobre cada uma dessas categorias de modelo de classe definidas em \<random> . Ambas as categorias de modelo de classe usam um tipo como um argumento e usam nomes de parâmetro de modelo compartilhado para descrever as propriedades do tipo que são permitidas como um tipo de argumento real, da seguinte maneira:
 
-- `IntType`indica um **`short`** , **`int`** , **`long`** , **`long long`** , **`unsigned short`** , **`unsigned int`** , **`unsigned long`** ou **`unsigned long long`** .
+- `IntType` indica um **`short`** , **`int`** , **`long`** , **`long long`** , **`unsigned short`** , **`unsigned int`** , **`unsigned long`** ou **`unsigned long long`** .
 
-- `UIntType`indica **`unsigned short`** , **`unsigned int`** , **`unsigned long`** ou **`unsigned long long`** .
+- `UIntType` indica **`unsigned short`** , **`unsigned int`** , **`unsigned long`** ou **`unsigned long long`** .
 
-- `RealType`indica um **`float`** , **`double`** , ou **`long double`** .
+- `RealType` indica um **`float`** , **`double`** , ou **`long double`** .
 
 ### <a name="engines"></a>Motores
 
