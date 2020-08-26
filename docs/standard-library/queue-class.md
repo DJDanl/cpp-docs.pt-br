@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232931"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832601"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -68,13 +68,13 @@ Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Espera](#queue)|Constrói um `queue` que é vazio ou que é uma cópia de um objeto de contêiner base.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[container_type](#container_type)|Um tipo que fornece o contêiner base para ser adaptado pelo `queue`.|
 |[size_type](#size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `queue`.|
@@ -82,7 +82,7 @@ Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Voltar](#back)|Retorna uma referência para o último e recém-adicionado elemento na parte final de `queue`.|
 |[empty](#empty)|Testa se `queue` está vazio.|
@@ -91,7 +91,7 @@ Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C
 |[push](#push)|Adiciona um elemento na parte traseira do `queue`.|
 |[size](#size)|Retorna o número de elementos no `queue`.|
 
-## <a name="back"></a><a name="back"></a>Voltar
+## <a name="back"></a><a name="back"></a> Voltar
 
 Retorna uma referência para o último e recém-adicionado elemento na parte final da fila.
 
@@ -101,7 +101,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O último elemento da fila. Se a fila estiver vazia, o valor retornado será indefinido.
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Um tipo que fornece o contêiner base a ser adaptado.
 
@@ -155,7 +155,7 @@ Para obter mais informações sobre `Container`, consulte a seção Comentários
 
 Veja o exemplo de [queue](#queue) para saber como declarar e usar `container_type`.
 
-## <a name="empty"></a><a name="empty"></a>esvaziá
+## <a name="empty"></a><a name="empty"></a> esvaziá
 
 Testa se uma fila está vazia.
 
@@ -163,7 +163,7 @@ Testa se uma fila está vazia.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a fila estiver vazia; **`false`** se a fila não estiver vazia.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a><a name="front"></a>dianteiro
+## <a name="front"></a><a name="front"></a> dianteiro
 
 Retorna uma referência ao primeiro elemento na parte inicial da fila.
 
@@ -211,7 +211,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O primeiro elemento da fila. Se a fila estiver vazia, o valor retornado será indefinido.
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a><a name="pop"></a>pop
+## <a name="pop"></a><a name="pop"></a> pop
 
 Remove um elemento no início da fila.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>pressionado
+## <a name="push"></a><a name="push"></a> pressionado
 
 Adiciona um elemento na parte final da fila.
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a><a name="size"></a>tamanho
+## <a name="size"></a><a name="size"></a> tamanho
 
 Retorna o número de elementos na fila.
 
@@ -433,7 +433,7 @@ Retorna o número de elementos na fila.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O tamanho atual da fila.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Um tipo de inteiro sem sinal que pode representar o número de elementos em uma fila.
 
@@ -482,7 +482,7 @@ O tipo é um sinônimo do `size_type` do contêiner base adaptado pela fila.
 
 Veja o exemplo de [queue::front](#front) para saber como declarar e usar `size_type`.
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Um tipo que representa o tipo de objeto armazenado como um elemento em uma fila.
 

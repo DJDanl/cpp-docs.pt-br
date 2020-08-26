@@ -1,5 +1,5 @@
 ---
-title: Funções globais do ponto de conexão
+title: Funções globais de ponto de conexão
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlAdvise
@@ -8,36 +8,36 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 6474297f8b9adf04541f7d232fb88d5e52d4e88c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a648f49b0f3715fd322b1099dcebbf194f57a10
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331524"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833524"
 ---
-# <a name="connection-point-global-functions"></a>Funções globais do ponto de conexão
+# <a name="connection-point-global-functions"></a>Funções globais de ponto de conexão
 
-Essas funções fornecem suporte para pontos de conexão e mapas de afundamento.
+Essas funções fornecem suporte para pontos de conexão e mapas de coletor.
 
 > [!IMPORTANT]
-> As funções listadas na tabela a seguir não podem ser usadas em aplicativos executados no Tempo de execução do Windows.
+> As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados no Windows Runtime.
 
-|||
+|Função|Descrição|
 |-|-|
 |[AtlAdvise](#atladvise)|Cria uma conexão entre o ponto de conexão de um objeto e o coletor de um cliente.|
-|[AtlUnadvise](#atlunadvise)|Termina a conexão `AtlAdvise`estabelecida através de .|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Aconselha ou desaconselha entradas em um mapa de dissipação de eventos.|
+|[AtlUnadvise](#atlunadvise)|Encerra a conexão estabelecida por meio do `AtlAdvise` .|
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Aconselha ou informa as entradas em um mapa do coletor de eventos.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase.h
+**Cabeçalho:** atlbase. h
 
-## <a name="atladvise"></a><a name="atladvise"></a>Atladvise
+## <a name="atladvise"></a><a name="atladvise"></a> AtlAdvise
 
 Cria uma conexão entre o ponto de conexão de um objeto e o coletor de um cliente.
 
 > [!IMPORTANT]
-> Esta função não pode ser usada em aplicativos executados no Tempo de execução do Windows.
+> Essa função não pode ser usada em aplicativos que são executados no Windows Runtime.
 
 ```
 HRESULT    AtlAdvise(
@@ -47,38 +47,38 @@ HRESULT    AtlAdvise(
     LPDWORD pdw);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pUnkCP*<br/>
-[em] Um ponteiro `IUnknown` para o objeto com o que o cliente deseja conectar.
+no Um ponteiro para o `IUnknown` do objeto ao qual o cliente deseja se conectar.
 
-*Punk*<br/>
-[em] Um ponteiro para o `IUnknown`cliente.
+*pUnk*<br/>
+no Um ponteiro para o do cliente `IUnknown` .
 
-*Iid*<br/>
-[em] O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
+*IID*<br/>
+no O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
 
-*Pdw*<br/>
-[fora] Um ponteiro para o cookie que identifica exclusivamente a conexão.
+*PDW*<br/>
+fora Um ponteiro para o cookie que identifica exclusivamente a conexão.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-O dissipador implementa a interface de saída suportada pelo ponto de conexão. O cliente usa o biscoito *pdw* para remover a conexão passando-a para [atlUnadvise](#atlunadvise).
+O coletor implementa a interface de saída com suporte do ponto de conexão. O cliente usa o cookie *PDW* para remover a conexão passando-a para [AtlUnadvise](#atlunadvise).
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]
 
-## <a name="atlunadvise"></a><a name="atlunadvise"></a>Atlunadvise
+## <a name="atlunadvise"></a><a name="atlunadvise"></a> AtlUnadvise
 
-Termina a conexão estabelecida através [do AtlAdvise](#atladvise).
+Encerra a conexão estabelecida por meio de [AtlAdvise](#atladvise).
 
 > [!IMPORTANT]
-> Esta função não pode ser usada em aplicativos executados no Tempo de execução do Windows.
+> Essa função não pode ser usada em aplicativos que são executados no Windows Runtime.
 
 ```
 HRESULT    AtlUnadvise(
@@ -87,18 +87,18 @@ HRESULT    AtlUnadvise(
     DWORD dw);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pUnkCP*<br/>
-[em] Um ponteiro `IUnknown` para o objeto com o que o cliente está conectado.
+no Um ponteiro para o `IUnknown` do objeto ao qual o cliente está conectado.
 
-*Iid*<br/>
-[em] O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
+*IID*<br/>
+no O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
 
 *dw*<br/>
-[em] O cookie que identifica exclusivamente a conexão.
+no O cookie que identifica exclusivamente a conexão.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor HRESULT padrão.
 
@@ -106,26 +106,26 @@ Um valor HRESULT padrão.
 
 [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]
 
-## <a name="atladvisesinkmap"></a><a name="atladvisesinkmap"></a>AtlAdviseSinkMap
+## <a name="atladvisesinkmap"></a><a name="atladvisesinkmap"></a> AtlAdviseSinkMap
 
 Chame essa função para recomendar ou não recomendar todas as entradas no mapa de eventos do coletor do objeto.
 
 > [!IMPORTANT]
-> Esta função não pode ser usada em aplicativos executados no Tempo de execução do Windows.
+> Essa função não pode ser usada em aplicativos que são executados no Windows Runtime.
 
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pT*<br/>
-[em] Um ponteiro para o objeto que contém o mapa da pia.
+no Um ponteiro para o objeto que contém o mapa do coletor.
 
-*bAconselhar*<br/>
-[em] VERDADE se todas as entradas da pia forem aconselhadas; FALSO se todas as entradas da pia forem desaconselhadas.
+*bAdvise*<br/>
+no TRUE se todas as entradas do coletor forem recomendadas; FALSE se todas as entradas do coletor forem desaconselhadas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor HRESULT padrão.
 

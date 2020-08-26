@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224819"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833251"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -159,7 +159,7 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 
 ### <a name="static-functions"></a>Funções estáticas
 
-|||
+|Nome|Descrição|
 |-|-|
 |[clássico](#classic)|A função membro estática retorna um objeto de localidade que representa a localidade C clássica.|
 |[geral](#global)|Redefine o local padrão do programa.|
@@ -177,7 +177,7 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 
 |Classe|Descrição|
 |-|-|
-|[facet](#facet_class)|Uma classe que serve como a classe base para todas as facetas de localidade.|
+|[particular](#facet_class)|Uma classe que serve como a classe base para todas as facetas de localidade.|
 |[`id`](#id_class)|A classe do membro fornece uma identificação exclusiva da faceta usada como um índice para procurar facetas em uma localidade.|
 
 ## <a name="requirements"></a>Requisitos
@@ -186,7 +186,7 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 
 **Namespace:** std
 
-## <a name="localecategory"></a><a name="category"></a>Localidade:: categoria
+## <a name="localecategory"></a><a name="category"></a> Localidade:: categoria
 
 Um tipo de inteiro que fornece valores de bitmask para denotar famílias padrão de facetas.
 
@@ -226,7 +226,7 @@ Dois valores mais úteis são:
 
 Você pode representar um grupo arbitrário de categorias usando `OR` com essas constantes, como em `monetary` &#124; `time` .
 
-## <a name="localeclassic"></a><a name="classic"></a>Localidade:: clássico
+## <a name="localeclassic"></a><a name="classic"></a> Localidade:: clássico
 
 A função membro estática retorna um objeto de localidade que representa a localidade C clássica.
 
@@ -234,7 +234,7 @@ A função membro estática retorna um objeto de localidade que representa a loc
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma referência à localidade C.
 
@@ -281,7 +281,7 @@ The previous locale was classic.
 The current locale is not classic.
 ```
 
-## <a name="localecombine"></a><a name="combine"></a>Localidade:: combinar
+## <a name="localecombine"></a><a name="combine"></a> Localidade:: combinar
 
 Insere uma faceta de uma localidade especificada em uma localidade de destino.
 
@@ -295,7 +295,7 @@ locale combine(const locale& source_locale) const;
 *source_locale*\
 A localidade que contém a faceta a ser inserida na localidade de destino.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A função membro retorna um objeto Locale que substitui ou adiciona a ** \* essa** faceta `Facet` listada em *source_locale*.
 
@@ -329,7 +329,7 @@ int main() {
 }
 ```
 
-## <a name="facet-class"></a><a name="facet_class"></a>Classe de faceta
+## <a name="facet-class"></a><a name="facet_class"></a> Classe de faceta
 
 Uma classe que serve como a classe base para todas as facetas de localidade.
 
@@ -346,11 +346,11 @@ private:
 
 ### <a name="remarks"></a>Comentários
 
-Você não pode copiar ou atribuir um objeto de classe `facet` . É possível construir e destruir objetos derivados da classe `locale::facet`, mas não objetos da classe base correta. Normalmente, você constrói um objeto `_Myfac` derivado de `facet` quando você constrói um `locale` , como em`locale loc(locale::classic(), new _Myfac);`
+Você não pode copiar ou atribuir um objeto de classe `facet` . É possível construir e destruir objetos derivados da classe `locale::facet`, mas não objetos da classe base correta. Normalmente, você constrói um objeto `_Myfac` derivado de `facet` quando você constrói um `locale` , como em `locale loc(locale::classic(), new _Myfac);`
 
 Nesses casos, o construtor para a classe base `facet` deve ter um argumento de *referências* zero. Quando o objeto não for mais necessário, ele será excluído, de modo que você só fornecerá um argumento de *referências* sem zero nesses casos raros em que você assumirá a responsabilidade pelo tempo de vida do objeto.
 
-## <a name="localeglobal"></a><a name="global"></a>Localidade:: global
+## <a name="localeglobal"></a><a name="global"></a> Localidade:: global
 
 Redefine a localidade padrão do programa. Essa chamada afeta a localidade global para C e C++.
 
@@ -363,7 +363,7 @@ static locale global(const locale& new_default_locale);
 *new_default_locale*\
 A localidade a ser usada como localidade padrão pelo programa.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A localidade anterior antes da redefinição da localidade padrão.
 
@@ -399,7 +399,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C
 ```
 
-## <a name="id-class"></a><a name="id_class"></a>Classe de ID
+## <a name="id-class"></a><a name="id_class"></a> Classe de ID
 
 A classe do membro fornece uma identificação exclusiva da faceta usada como um índice para procurar facetas em uma localidade.
 
@@ -416,7 +416,7 @@ class id
 
 A classe membro descreve o objeto de membro estático exigido por cada faceta de localidade exclusiva. Você não pode copiar ou atribuir um objeto de classe `id` .
 
-## <a name="localelocale"></a><a name="locale"></a>Localidade:: localidade
+## <a name="localelocale"></a><a name="locale"></a> Localidade:: localidade
 
 Cria uma localidade, ou uma cópia de uma localidade, ou uma cópia da localidade em que uma faceta ou uma categoria foi substituída por uma faceta ou categoria de outra localidade. Também inclui um destruidor.
 
@@ -512,7 +512,7 @@ int main( ) {
 }
 ```
 
-## <a name="localename"></a><a name="name"></a>Localidade:: nome
+## <a name="localename"></a><a name="name"></a> Localidade:: nome
 
 Retorna o nome da localidade armazenado.
 
@@ -520,7 +520,7 @@ Retorna o nome da localidade armazenado.
 string name() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma cadeia de caracteres que fornece o nome da localidade.
 
@@ -551,7 +551,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="localeoperator"></a><a name="op_eq"></a>Localidade:: operador =
+## <a name="localeoperator"></a><a name="op_eq"></a> Localidade:: operador =
 
 Atribui uma localidade.
 
@@ -559,7 +559,7 @@ Atribui uma localidade.
 const locale& operator=(const locale& other) noexcept;
 ```
 
-## <a name="localeoperator"></a><a name="op_neq"></a>Localidade:: operador! =
+## <a name="localeoperator"></a><a name="op_neq"></a> Localidade:: operador! =
 
 Testa a desigualdade de duas localidades.
 
@@ -572,7 +572,7 @@ bool operator!=(const locale& right) const;
 *Certo*\
 Uma das localidades que terá sua desigualdade testada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor booliano que **`true`** se as localidades não são cópias da mesma localidade. É **`false`** se as localidades são cópias da mesma localidade.
 
@@ -620,7 +620,7 @@ locales loc1 (German_Germany.1252) and
 loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="localeoperator"></a><a name="op_call"></a>locale:: Operator ()
+## <a name="localeoperator"></a><a name="op_call"></a> locale:: Operator ()
 
 Compara dois `basic_string` objetos de acordo com as regras de comparação de lexicográfica definidas pela faceta std:: COLLATE deste local <charT> .
 
@@ -639,7 +639,7 @@ A primeira cadeia de caracteres a ser comparada.
 *Certo*\
 A segunda cadeia de caracteres a ser comparada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 - **`true`** Se *Left* for modo lexicográfico menor que *Right*, caso contrário **`false`** .
 
@@ -686,7 +686,7 @@ int main( )
 0
 ```
 
-## <a name="localeoperator"></a><a name="op_eq_eq"></a>Localidade:: operador = =
+## <a name="localeoperator"></a><a name="op_eq_eq"></a> Localidade:: operador = =
 
 Testa a igualdade de duas localidades.
 
@@ -699,7 +699,7 @@ bool operator==(const locale& right) const;
 *Certo*\
 Uma das localidades que terá sua igualdade testada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor booliano que **`true`** se as localidades são cópias da mesma localidade. É **`false`** se as localidades não são cópias da mesma localidade.
 

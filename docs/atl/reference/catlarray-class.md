@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 5928a9bf8af12b2ce15a386871b845ef86cc7a2d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168756"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833836"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -43,7 +43,7 @@ template<typename E, class ETraits = CElementTraits<E>>
 class CAtlArray
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Oriental*<br/>
 O tipo de dados a serem armazenados na matriz.
@@ -55,10 +55,10 @@ O código usado para copiar ou mover elementos.
 
 ### <a name="methods"></a>Métodos
 
-|||
+|Função|Descrição|
 |-|-|
 |[Adicionar](#add)|Chame esse método para adicionar um elemento ao objeto de matriz.|
-|[Anexar](#append)|Chame esse método para adicionar o conteúdo de uma matriz ao final de outra.|
+|[Append](#append)|Chame esse método para adicionar o conteúdo de uma matriz ao final de outra.|
 |[AssertValid](#assertvalid)|Chame esse método para confirmar que o objeto de matriz é válido.|
 |[CAtlArray](#catlarray)|O construtor.|
 |[~ CAtlArray](#dtor)|O destruidor.|
@@ -78,24 +78,24 @@ O código usado para copiar ou mover elementos.
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Operador|Descrição|
 |-|-|
-|[ &#91;&#93;do operador](#operator_at)|Chame esse operador para retornar uma referência a um elemento na matriz.|
+|[ &#91;&#93;do operador ](#operator_at)|Chame esse operador para retornar uma referência a um elemento na matriz.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Typedef|Descrição|
 |-|-|
 |[INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos à matriz.|
 |[OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar elementos da matriz.|
 
 ## <a name="remarks"></a>Comentários
 
-`CAtlArray`fornece métodos para criar e gerenciar uma matriz de elementos de um tipo definido pelo usuário. Embora seja semelhante às matrizes padrão C `CAtlArray` , o objeto pode reduzir e aumentar dinamicamente conforme necessário. O índice de matriz sempre começa na posição 0, e o limite superior pode ser corrigido ou ter permissão para expandir à medida que novos elementos são adicionados.
+`CAtlArray` fornece métodos para criar e gerenciar uma matriz de elementos de um tipo definido pelo usuário. Embora seja semelhante às matrizes padrão C, o `CAtlArray` objeto pode reduzir e aumentar dinamicamente conforme necessário. O índice de matriz sempre começa na posição 0, e o limite superior pode ser corrigido ou ter permissão para expandir à medida que novos elementos são adicionados.
 
 Para matrizes com um pequeno número de elementos, a classe ATL [CSimpleArray](../../atl/reference/csimplearray-class.md) pode ser usada.
 
-`CAtlArray`está fortemente relacionado à classe do `CArray` MFC e funcionará em um projeto do MFC, embora sem suporte de serialização.
+`CAtlArray` está fortemente relacionado à classe do MFC `CArray` e funcionará em um projeto do MFC, embora sem suporte de serialização.
 
 Para obter mais informações, consulte [classes de coleção do ATL](../../atl/atl-collection-classes.md).
 
@@ -103,7 +103,7 @@ Para obter mais informações, consulte [classes de coleção do ATL](../../atl/
 
 **Cabeçalho:** atlcoll. h
 
-## <a name="catlarrayadd"></a><a name="add"></a>CAtlArray:: Adicionar
+## <a name="catlarrayadd"></a><a name="add"></a> CAtlArray:: Adicionar
 
 Chame esse método para adicionar um elemento ao objeto de matriz.
 
@@ -112,12 +112,12 @@ size_t Add(INARGTYPE element);
 size_t Add();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *elementos*<br/>
 O elemento a ser adicionado à matriz.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o índice do elemento adicionado.
 
@@ -129,7 +129,7 @@ O novo elemento é adicionado ao final da matriz. Se nenhum elemento for forneci
 
 [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]
 
-## <a name="catlarrayappend"></a><a name="append"></a>CAtlArray:: Append
+## <a name="catlarrayappend"></a><a name="append"></a> CAtlArray:: Append
 
 Chame esse método para adicionar o conteúdo de uma matriz ao final de outra.
 
@@ -137,12 +137,12 @@ Chame esse método para adicionar o conteúdo de uma matriz ao final de outra.
 size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *aSrc*<br/>
 A matriz a ser acrescentada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o índice do primeiro elemento acrescentado.
 
@@ -152,13 +152,13 @@ Os elementos na matriz fornecida são adicionados ao final da matriz existente. 
 
 As matrizes devem ser do mesmo tipo e não é possível acrescentar uma matriz a ela mesma.
 
-Em compilações de depuração, um ATLASSERT será gerado se `CAtlArray` o argumento não for uma matriz válida ou se *ASRC* se referir ao mesmo objeto. Em builds de versão, argumentos inválidos podem levar a um comportamento imprevisível.
+Em compilações de depuração, um ATLASSERT será gerado se o `CAtlArray` argumento não for uma matriz válida ou se *ASRC* se referir ao mesmo objeto. Em builds de versão, argumentos inválidos podem levar a um comportamento imprevisível.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]
 
-## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a>CAtlArray::AssertValid
+## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a> CAtlArray::AssertValid
 
 Chame esse método para confirmar que o objeto de matriz é válido.
 
@@ -174,7 +174,7 @@ Se o objeto de matriz não for válido, ATLASSERT gerará uma asserção. Esse m
 
 [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="catlarray"></a>CAtlArray::CAtlArray
+## <a name="catlarraycatlarray"></a><a name="catlarray"></a> CAtlArray::CAtlArray
 
 O construtor.
 
@@ -190,7 +190,7 @@ Inicializa o objeto de matriz.
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="dtor"></a>CAtlArray:: ~ CAtlArray
+## <a name="catlarraycatlarray"></a><a name="dtor"></a> CAtlArray:: ~ CAtlArray
 
 O destruidor.
 
@@ -202,7 +202,7 @@ O destruidor.
 
 Libera todos os recursos usados pelo objeto de matriz.
 
-## <a name="catlarraycopy"></a><a name="copy"></a>CAtlArray:: copiar
+## <a name="catlarraycopy"></a><a name="copy"></a> CAtlArray:: copiar
 
 Chame esse método para copiar os elementos de uma matriz para outra.
 
@@ -210,7 +210,7 @@ Chame esse método para copiar os elementos de uma matriz para outra.
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *aSrc*<br/>
 A origem dos elementos a serem copiados para uma matriz.
@@ -224,13 +224,13 @@ Se o conteúdo existente da matriz for ser retido, use [CAtlArray:: Append](#app
 Em compilações de depuração, um ATLASSERT será gerado se o `CAtlArray` objeto existente não for válido ou se *ASRC* se referir ao mesmo objeto. Em builds de versão, argumentos inválidos podem levar a um comportamento imprevisível.
 
 > [!NOTE]
-> `CAtlArray::Copy`não oferece suporte a matrizes que consistem em elementos criados com a classe [CAutoPtr](../../atl/reference/cautoptr-class.md) .
+> `CAtlArray::Copy` não oferece suporte a matrizes que consistem em elementos criados com a classe [CAutoPtr](../../atl/reference/cautoptr-class.md) .
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]
 
-## <a name="catlarrayfreeextra"></a><a name="freeextra"></a>CAtlArray::FreeExtra
+## <a name="catlarrayfreeextra"></a><a name="freeextra"></a> CAtlArray::FreeExtra
 
 Chame esse método para remover quaisquer elementos vazios da matriz.
 
@@ -244,7 +244,7 @@ Todos os elementos vazios são removidos, mas o tamanho e o limite superior da m
 
 Em compilações de depuração, um ATLASSERT será gerado se o objeto CAtlArray não for válido ou se a matriz exceder seu tamanho máximo.
 
-## <a name="catlarraygetat"></a><a name="getat"></a>CAtlArray::GetAt
+## <a name="catlarraygetat"></a><a name="getat"></a> CAtlArray::GetAt
 
 Chame esse método para recuperar um único elemento do objeto de matriz.
 
@@ -253,12 +253,12 @@ const E& GetAt(size_t iElement) const throw();
 E& GetAt(size_t iElement) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O valor de índice do elemento de matriz a ser retornado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna uma referência para o elemento de matriz necessário.
 
@@ -270,7 +270,7 @@ Em compilações de depuração, um ATLASSERT será gerado se *ielemento* excede
 
 [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]
 
-## <a name="catlarraygetcount"></a><a name="getcount"></a>CAtlArray:: GetCount
+## <a name="catlarraygetcount"></a><a name="getcount"></a> CAtlArray:: GetCount
 
 Chame esse método para retornar o número de elementos armazenados na matriz.
 
@@ -278,7 +278,7 @@ Chame esse método para retornar o número de elementos armazenados na matriz.
 size_t GetCount() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o número de elementos armazenados na matriz.
 
@@ -290,7 +290,7 @@ Como o primeiro elemento na matriz está na posição 0, o valor retornado por `
 
 Consulte o exemplo de [CAtlArray:: GetAt](#getat).
 
-## <a name="catlarraygetdata"></a><a name="getdata"></a>CAtlArray:: GetData
+## <a name="catlarraygetdata"></a><a name="getdata"></a> CAtlArray:: GetData
 
 Chame esse método para retornar um ponteiro para o primeiro elemento na matriz.
 
@@ -299,7 +299,7 @@ E* GetData() throw();
 const E* GetData() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna um ponteiro para o local da memória que armazena o primeiro elemento na matriz. Se nenhum elemento estiver disponível, NULL será retornado.
 
@@ -307,7 +307,7 @@ Retorna um ponteiro para o local da memória que armazena o primeiro elemento na
 
 [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]
 
-## <a name="catlarrayinargtype"></a><a name="inargtype"></a>CAtlArray::INARGTYPE
+## <a name="catlarrayinargtype"></a><a name="inargtype"></a> CAtlArray::INARGTYPE
 
 O tipo de dados a ser usado para adicionar elementos à matriz.
 
@@ -315,7 +315,7 @@ O tipo de dados a ser usado para adicionar elementos à matriz.
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a>CAtlArray::InsertArrayAt
+## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a> CAtlArray::InsertArrayAt
 
 Chame esse método para inserir uma matriz em outra.
 
@@ -323,7 +323,7 @@ Chame esse método para inserir uma matriz em outra.
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *isniciar*<br/>
 O índice no qual a matriz deve ser inserida.
@@ -335,16 +335,16 @@ A matriz a ser inserida.
 
 Os elementos da matriz *paNew* são copiados para o objeto de matriz, começando no elemento *isniciar*. Os elementos de matriz existentes são movidos para evitar que sejam substituídos.
 
-Em compilações de depuração, um ATLASSERT será gerado se `CAtlArray` o objeto não for válido ou se o ponteiro *paNew* for nulo ou inválido.
+Em compilações de depuração, um ATLASSERT será gerado se o `CAtlArray` objeto não for válido ou se o ponteiro *PANEW* for nulo ou inválido.
 
 > [!NOTE]
-> `CAtlArray::InsertArrayAt`não oferece suporte a matrizes que consistem em elementos criados com a classe [CAutoPtr](../../atl/reference/cautoptr-class.md) .
+> `CAtlArray::InsertArrayAt` não oferece suporte a matrizes que consistem em elementos criados com a classe [CAutoPtr](../../atl/reference/cautoptr-class.md) .
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]
 
-## <a name="catlarrayinsertat"></a><a name="insertat"></a>CAtlArray::InsertAt
+## <a name="catlarrayinsertat"></a><a name="insertat"></a> CAtlArray::InsertAt
 
 Chame esse método para inserir um novo elemento (ou várias cópias de um elemento) no objeto de matriz.
 
@@ -352,7 +352,7 @@ Chame esse método para inserir um novo elemento (ou várias cópias de um eleme
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice em que o elemento ou os elementos devem ser inseridos.
@@ -367,13 +367,13 @@ O número de elementos a serem adicionados.
 
 Insere um ou mais elementos na matriz, começando no índice *ielemento*. Os elementos existentes são movidos para evitar que sejam substituídos.
 
-Em compilações de depuração, um ATLASSERT será gerado se `CAtlArray` o objeto for inválido, o número de elementos a serem adicionados é zero ou o número combinado de elementos é muito grande para a matriz conter. Em compilações de varejo, passar parâmetros inválidos pode causar resultados imprevisíveis.
+Em compilações de depuração, um ATLASSERT será gerado se o `CAtlArray` objeto for inválido, o número de elementos a serem adicionados é zero ou o número combinado de elementos é muito grande para a matriz conter. Em compilações de varejo, passar parâmetros inválidos pode causar resultados imprevisíveis.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]
 
-## <a name="catlarrayisempty"></a><a name="isempty"></a>CAtlArray:: IsEmpty
+## <a name="catlarrayisempty"></a><a name="isempty"></a> CAtlArray:: IsEmpty
 
 Chame esse método para testar se a matriz está vazia.
 
@@ -381,7 +381,7 @@ Chame esse método para testar se a matriz está vazia.
 bool IsEmpty() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna true se a matriz estiver vazia; caso contrário, false.
 
@@ -393,7 +393,7 @@ A matriz será considerada vazia se não contiver nenhum elemento. Portanto, mes
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-## <a name="catlarrayoperator-"></a><a name="operator_at"></a>CAtlArray:: operator []
+## <a name="catlarrayoperator-"></a><a name="operator_at"></a> CAtlArray:: operator []
 
 Chame esse operador para retornar uma referência a um elemento na matriz.
 
@@ -402,12 +402,12 @@ E& operator[](size_t ielement) throw();
 const E& operator[](size_t ielement) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O valor de índice do elemento de matriz a ser retornado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna uma referência para o elemento de matriz necessário.
 
@@ -417,7 +417,7 @@ Executa uma função semelhante a [CAtlArray:: GetAt](#getat). Ao contrário da 
 
 Em compilações de depuração, um ATLASSERT será gerado se *ielemento* exceder o número total de elementos na matriz. Em compilações de varejo, um parâmetro inválido pode causar resultados imprevisíveis.
 
-## <a name="catlarrayoutargtype"></a><a name="outargtype"></a>CAtlArray::OUTARGTYPE
+## <a name="catlarrayoutargtype"></a><a name="outargtype"></a> CAtlArray::OUTARGTYPE
 
 O tipo de dados a ser usado para recuperar elementos da matriz.
 
@@ -425,7 +425,7 @@ O tipo de dados a ser usado para recuperar elementos da matriz.
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```
 
-## <a name="catlarrayremoveall"></a><a name="removeall"></a>CAtlArray:: RemoveAll
+## <a name="catlarrayremoveall"></a><a name="removeall"></a> CAtlArray:: RemoveAll
 
 Chame esse método para remover todos os elementos do objeto de matriz.
 
@@ -443,7 +443,7 @@ Esse método chama [CAtlArray:: SetCount](#setcount) para redimensionar a matriz
 
 Consulte o exemplo de [CAtlArray:: IsEmpty](#isempty).
 
-## <a name="catlarrayremoveat"></a><a name="removeat"></a>CAtlArray:: RemoveAt
+## <a name="catlarrayremoveat"></a><a name="removeat"></a> CAtlArray:: RemoveAt
 
 Chame esse método para remover um ou mais elementos da matriz.
 
@@ -451,7 +451,7 @@ Chame esse método para remover um ou mais elementos da matriz.
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice do primeiro elemento a ser removido.
@@ -463,13 +463,13 @@ O número de elementos a serem removidos.
 
 Remove um ou mais elementos da matriz. Todos os elementos restantes são deslocados para baixo. O limite superior é diminuído, mas a memória não é liberada até que uma chamada para [CAtlArray:: FreeExtra](#freeextra) seja feita.
 
-Em compilações de depuração, um ATLASSERT será gerado se `CAtlArray` o objeto não for válido ou se o total combinado de *ielemento* e *nCount* exceder o número total de elementos na matriz. Em compilações de varejo, parâmetros inválidos podem causar resultados imprevisíveis.
+Em compilações de depuração, um ATLASSERT será gerado se o `CAtlArray` objeto não for válido ou se o total combinado de *ielemento* e *nCount* exceder o número total de elementos na matriz. Em compilações de varejo, parâmetros inválidos podem causar resultados imprevisíveis.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]
 
-## <a name="catlarraysetat"></a><a name="setat"></a>CAtlArray::SetAt
+## <a name="catlarraysetat"></a><a name="setat"></a> CAtlArray::SetAt
 
 Chame esse método para definir o valor de um elemento no objeto de matriz.
 
@@ -477,7 +477,7 @@ Chame esse método para definir o valor de um elemento no objeto de matriz.
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice que aponta para o elemento de matriz a ser definido.
@@ -493,7 +493,7 @@ Em compilações de depuração, um ATLASSERT será gerado se *ielemento* excede
 
 Consulte o exemplo de [CAtlArray:: GetAt](#getat).
 
-## <a name="catlarraysetcount"></a><a name="setcount"></a>CAtlArray:: SetCount
+## <a name="catlarraysetcount"></a><a name="setcount"></a> CAtlArray:: SetCount
 
 Chame esse método para definir o tamanho do objeto da matriz.
 
@@ -501,7 +501,7 @@ Chame esse método para definir o tamanho do objeto da matriz.
 bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nNewSize*<br/>
 O tamanho necessário da matriz.
@@ -509,7 +509,7 @@ O tamanho necessário da matriz.
 *nGrowBy*<br/>
 Um valor usado para determinar o tamanho do buffer que será grande. Um valor de-1 faz com que um valor calculado internamente seja usado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retornará true se a matriz for redimensionada com êxito; caso contrário, false.
 
@@ -523,7 +523,7 @@ Use este método para definir o tamanho da matriz antes de usá-la. Se `SetCount
 
 Consulte o exemplo de [CAtlArray:: GetData](#getdata).
 
-## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a>CAtlArray::SetAtGrow
+## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a> CAtlArray::SetAtGrow
 
 Chame esse método para definir o valor de um elemento no objeto de matriz, expandindo a matriz conforme necessário.
 
@@ -531,7 +531,7 @@ Chame esse método para definir o valor de um elemento no objeto de matriz, expa
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice que aponta para o elemento de matriz a ser definido.
@@ -541,7 +541,7 @@ O novo valor do elemento especificado.
 
 ### <a name="remarks"></a>Comentários
 
-Substitui o valor do elemento apontado pelo índice. Se *ielemento* for maior que o tamanho atual da matriz, a matriz será aumentada automaticamente usando uma chamada para [CAtlArray:: SetCount](#setcount). Em compilações de depuração, um ATLASSERT será gerado se `CAtlArray` o objeto não for válido. Em compilações de varejo, parâmetros inválidos podem causar resultados imprevisíveis.
+Substitui o valor do elemento apontado pelo índice. Se *ielemento* for maior que o tamanho atual da matriz, a matriz será aumentada automaticamente usando uma chamada para [CAtlArray:: SetCount](#setcount). Em compilações de depuração, um ATLASSERT será gerado se o `CAtlArray` objeto não for válido. Em compilações de varejo, parâmetros inválidos podem causar resultados imprevisíveis.
 
 ### <a name="example"></a>Exemplo
 

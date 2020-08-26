@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 14c9298758e9d55445affaf5a65c81910a9ab151
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224221"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833472"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuração e relatório de erros
 
 Essas macros fornecem recursos úteis de depuração e rastreamento.
 
-|||
+|Nome|Descrição|
 |-|-|
 |[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Grava, na janela saída, qualquer vazamento de interface detectado quando `_Module.Term` é chamado.|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|Grava todas as chamadas para `QueryInterface` na janela de saída.|
@@ -32,7 +32,7 @@ Essas macros fornecem recursos úteis de depuração e rastreamento.
 |[ATLTRACE](#atltrace)|Relata avisos para um dispositivo de saída, como a janela do depurador, de acordo com os sinalizadores e os níveis indicados. Incluído para compatibilidade com versões anteriores.|
 |[ATLTRACE2](#atltrace2)|Relata avisos para um dispositivo de saída, como a janela do depurador, de acordo com os sinalizadores e os níveis indicados.|
 
-## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
+## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a> _ATL_DEBUG_INTERFACES
 
 Defina essa macro antes de incluir qualquer arquivo de cabeçalho da ATL para rastrear todas as `AddRef` `Release` chamadas e suas interfaces de componentes para a janela de saída.
 
@@ -63,7 +63,7 @@ As informações fornecidas aqui são mapeadas diretamente para as informações
 > [!NOTE]
 > _ATL_DEBUG_INTERFACES pode ser usado em compilações de varejo.
 
-## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
+## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a> _ATL_DEBUG_QI
 
 Grava todas as chamadas para `QueryInterface` na janela de saída.
 
@@ -77,7 +77,7 @@ Se uma chamada a `QueryInterface` falhar, a janela de saída será exibida:
 
 *nome da interface* - `failed`
 
-## <a name="atlassert"></a><a name="atlassert"></a>ATLASSERT
+## <a name="atlassert"></a><a name="atlassert"></a> ATLASSERT
 
 A macro ATLASSERT executa a mesma funcionalidade que a macro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) encontrada na biblioteca de tempo de execução do C.
 
@@ -98,7 +98,7 @@ Em builds de depuração, ATLASSERT avalia a *booliana* e gera um relatório de 
 
 **Cabeçalho:** atldef. h
 
-## <a name="atlensure"></a><a name="atlensure"></a>ATLENSURE
+## <a name="atlensure"></a><a name="atlensure"></a> ATLENSURE
 
 Essa macro é usada para validar os parâmetros passados para uma função.
 
@@ -135,7 +135,7 @@ A diferença entre ATLENSURE e ATLASSERT é que o ATLENSURE gera uma exceção e
 
 **Cabeçalho:** AFX. h
 
-## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a>ATLTRACENOTIMPL
+## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a> ATLTRACENOTIMPL
 
 Nas compilações de depuração da ATL, o envia a cadeia de caracteres " *FuncName* não é implementado" para o dispositivo de despejo e retorna E_NOTIMPL.
 
@@ -160,7 +160,7 @@ Em builds de versão, simplesmente retorna E_NOTIMPL.
 
 **Cabeçalho:** ATLTRACE. h
 
-## <a name="atltrace"></a><a name="atltrace"></a>ATLTRACE
+## <a name="atltrace"></a><a name="atltrace"></a> ATLTRACE
 
 Relata avisos para um dispositivo de saída, como a janela do depurador, de acordo com os sinalizadores e os níveis indicados. Incluído para compatibilidade com versões anteriores.
 
@@ -181,7 +181,7 @@ no A cadeia de caracteres e as variáveis a serem enviadas à janela de saída o
 *category*<br/>
 no Tipo de evento ou método no qual relatar. Consulte os comentários para obter uma lista de categorias.
 
-*geral*<br/>
+*nível*<br/>
 no O nível de rastreamento a ser relatado. Consulte os comentários para obter detalhes.
 
 *lpszFormat*<br/>
@@ -191,7 +191,7 @@ no A cadeia de caracteres formatada a ser enviada ao dispositivo de despejo.
 
 Consulte [ATLTRACE2](#atltrace2) para obter uma descrição de ATLTRACE. ATLTRACE e ATLTRACE2 têm o mesmo comportamento, ATLTRACE está incluído para compatibilidade com versões anteriores.
 
-## <a name="atltrace2"></a><a name="atltrace2"></a>ATLTRACE2
+## <a name="atltrace2"></a><a name="atltrace2"></a> ATLTRACE2
 
 Relata avisos para um dispositivo de saída, como a janela do depurador, de acordo com os sinalizadores e os níveis indicados.
 
@@ -212,7 +212,7 @@ no A cadeia de caracteres a ser enviada à janela de saída ou a qualquer aplica
 *category*<br/>
 no Tipo de evento ou método no qual relatar. Consulte os comentários para obter uma lista de categorias.
 
-*geral*<br/>
+*nível*<br/>
 no O nível de rastreamento a ser relatado. Consulte os comentários para obter detalhes.
 
 *lpszFormat*<br/>
