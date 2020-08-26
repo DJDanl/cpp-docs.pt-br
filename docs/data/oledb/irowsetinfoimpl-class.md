@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210438"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840382"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
 
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-Sua classe, derivada de `IRowsetInfoImpl`.
+Sua classe, derivada de `IRowsetInfoImpl` .
 
 *PropClass*<br/>
 Uma classe de propriedade definida pelo usuário que assume como padrão *T*.
@@ -61,7 +61,7 @@ Uma classe de propriedade definida pelo usuário que assume como padrão *T*.
 
 ### <a name="interface-methods"></a>Métodos de interface
 
-|||
+| Nome | Descrição |
 |-|-|
 |[GetProperties](#getproperties)|Retorna as configurações atuais de todas as propriedades compatíveis com o conjunto de linhas.|
 |[GetReferencedRowset](#getreferencedrowset)|Retorna um ponteiro de interface para o conjunto de linhas ao qual um indicador se aplica.|
@@ -71,9 +71,9 @@ Uma classe de propriedade definida pelo usuário que assume como padrão *T*.
 
 Uma interface obrigatória em conjuntos de linhas. Essa classe implementa as propriedades do conjunto de linhas usando o [mapa de conjunto de propriedades](../../data/oledb/begin-propset-map.md) definido em sua classe de comando. Embora a classe Rowset pareça estar usando os conjuntos de propriedades da classe Command, o conjunto de linhas é fornecido com sua própria cópia das propriedades de tempo de execução, quando ele é criado por um comando ou objeto de sessão.
 
-## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl:: GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl:: GetProperties
 
-Retorna as configurações atuais das propriedades no grupo de `DBPROPSET_ROWSET`.
+Retorna as configurações atuais das propriedades no `DBPROPSET_ROWSET` grupo.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -88,7 +88,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 Consulte [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl::GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
 Retorna um ponteiro de interface para o conjunto de linhas ao qual um indicador se aplica.
 
@@ -104,7 +104,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 Consulte [IRowsetInfo:: GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) na *referência do programador de OLE DB*. O parâmetro *iOrdinal* deve ser uma coluna de indicador.
 
-## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl:: getespecificion
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a> IRowsetInfoImpl:: getespecificion
 
 Retorna um ponteiro de interface no objeto (comando ou sessão) que criou esse conjunto de linhas.
 
@@ -126,4 +126,4 @@ Use esse método com [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-cl
 ## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

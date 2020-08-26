@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: d99dae9d8e7eca96c736a33621f0b544f1962f0f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62bab0fbde364406f35edb959abb6e55a9125504
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560888"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840733"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 
@@ -37,17 +37,15 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Construtor padrão.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CMFCDropDownFrame:: criar](#create)|Cria um objeto `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
 |[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Recupera a barra de menus pai do quadro suspenso.|
@@ -98,7 +96,7 @@ virtual BOOL Create(
     CMFCDropDownToolBar* pWndOriginToolbar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndParent*\
 no A janela pai do quadro suspenso.
@@ -112,7 +110,7 @@ no A tela vertical coordenada para o local do quadro abaixo.
 *pWndOriginToolbar*\
 no A barra de ferramentas que tem os botões suspensos que esse método usa para popular o novo objeto de quadro suspenso.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se o quadro suspenso foi criado com êxito; caso contrário, FALSE.
 
@@ -130,7 +128,7 @@ Recupera a barra de menus pai do quadro suspenso.
 CMFCMenuBar* GetParentMenuBar() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para a barra de menus pai do quadro suspenso ou nulo se o quadro não tiver nenhum pai.
 
@@ -146,7 +144,7 @@ Recupera o menu pop-up pai do quadro suspenso.
 CMFCDropDownFrame* GetParentPopupMenu() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para o menu suspenso pai do quadro suspenso ou nulo se o quadro não tiver nenhum pai.
 
@@ -162,7 +160,7 @@ Reposiciona o quadro suspenso.
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bNotify*\
 no Não utilizado.
@@ -179,7 +177,7 @@ Define se a janela da barra de ferramentas suspensa filho é destruída automati
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bAutoDestroy*<br/>
 no TRUE para destruir automaticamente a janela da barra de ferramentas suspensa associada; caso contrário, FALSE.

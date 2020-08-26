@@ -2,12 +2,12 @@
 title: Visão geral de possíveis problemas de atualização (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231631"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839667"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Visão geral de possíveis problemas de atualização (Visual C++)
 
@@ -98,9 +98,8 @@ Os projetos que usam essa opção apresentam um problema durante a atualização
 
 A tabela a seguir mostra as bibliotecas cujo conteúdo foi alterado começando com o Visual Studio 2015. Para atualizar, é necessário adicionar os novos nomes da biblioteca na segunda coluna às bibliotecas na primeira coluna. Algumas dessas bibliotecas são bibliotecas de importação, mas isso não deve ser importante.
 
-|||
-|-|-|
 |Se você estiver usando:|É necessário usar estas bibliotecas:|
+|-|-|
 |libcmt.lib|libcmt.lib, libucrt.lib, libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib, libucrtd.lib, libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib, ucrt.lib, vcruntime.lib|

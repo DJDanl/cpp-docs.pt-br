@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230240"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846505"
 ---
 # <a name="binomial_distribution-class"></a>Classe binomial_distribution
 
@@ -81,10 +81,8 @@ O mecanismo do gerador de número aleatório uniforme. Para possíveis tipos, co
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **`int`** se nenhum for fornecido, distribuído de acordo com a função de probabilidade discreta de distribuição binomial. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
+[binomial_distribution](#binomial_distribution)\
+[param_type](#param_type)
 
 Os membros da propriedade `t()` e `p()` retornam os valores de parâmetro de distribuição atualmente armazenados *t* e *p* , respectivamente.
 
@@ -231,7 +229,7 @@ Histogram for 100 samples:
 
 **Namespace:** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution:: binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a> binomial_distribution:: binomial_distribution
 
 Constrói a distribuição.
 
@@ -259,7 +257,7 @@ O primeiro construtor constrói um objeto cujo valor de *p* armazenado contém o
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a> binomial_distribution::p aram_type
 
 Armazena todos os parâmetros da distribuição.
 

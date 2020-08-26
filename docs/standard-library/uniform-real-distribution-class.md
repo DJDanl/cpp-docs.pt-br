@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: fc003ebe9301c3648b47c796910d20096e7ef23d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ba2ec419e524ca571120fe82c7cbf63c1a97eaaa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217357"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839589"
 ---
 # <a name="uniform_real_distribution-class"></a>Classe uniform_real_distribution
 
@@ -78,10 +78,8 @@ O tipo de resultado de ponto flutuante, o padrão é **`double`** . Para possív
 
 O modelo de classe descreve uma distribuição inclusiva exclusiva que produz valores de um tipo de ponto flutuante de integral especificado pelo usuário com uma distribuição para que cada valor seja igualmente provável. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
-|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
+[uniform_real_distribution](#uniform_real_distribution)\
+[param_type](#param_type)|
 
 O membro da propriedade `a()` retorna o limite mínimo armazenado no momento da distribuição e `b()` retorna o limite máximo armazenado no momento. Para essa classe de distribuição, esses valores mínimo e máximo são os mesmos retornados pelas funções de propriedade comuns `min()` e `max()` descritos no [\<random>](../standard-library/random.md) tópico.
 
@@ -178,7 +176,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution:: uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a> uniform_real_distribution:: uniform_real_distribution
 
 Constrói a distribuição.
 
@@ -206,7 +204,7 @@ O primeiro construtor *constrói um objeto cujo valor armazenado contém* o valo
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::p aram_type
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a> uniform_real_distribution::p aram_type
 
 Armazena todos os parâmetros da distribuição.
 

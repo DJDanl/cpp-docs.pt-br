@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
-ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
+ms.openlocfilehash: 3727777c6abd3ae5ba19f147e2b6fbe559251813
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712668"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836603"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos de compilador desativados por padrão
 
-O compilador dá suporte a avisos desativados por padrão, porque a maioria dos desenvolvedores não os acha úteis. Em alguns casos, eles avisam sobre uma escolha estilístico ou sobre linguagens comuns em código mais antigo. Outros avisos são sobre o uso de uma extensão da Microsoft para o idioma. Alguns avisos indicam uma área em que os programadores geralmente fazem suposições incorretas, o que pode levar a um comportamento inesperado ou indefinido. Se todos esses avisos estiverem habilitados, alguns deles poderão aparecer muitas vezes em cabeçalhos de biblioteca. As bibliotecas de tempo de execução C++ C e as bibliotecas padrão destinam-se a emitir somente avisos no nível de aviso [/W4](../build/reference/compiler-option-warning-level.md).
+O compilador dá suporte a avisos desativados por padrão, porque a maioria dos desenvolvedores não os acha úteis. Em alguns casos, eles avisam sobre uma escolha estilístico ou sobre linguagens comuns em código mais antigo. Outros avisos são sobre o uso de uma extensão da Microsoft para o idioma. Alguns avisos indicam uma área em que os programadores geralmente fazem suposições incorretas, o que pode levar a um comportamento inesperado ou indefinido. Se todos esses avisos estiverem habilitados, alguns deles poderão aparecer muitas vezes em cabeçalhos de biblioteca. As bibliotecas de tempo de execução C e as bibliotecas C++ Standard devem emitir apenas avisos no nível de aviso [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Habilitar avisos que estão desativados por padrão
 
@@ -24,13 +24,13 @@ Você pode habilitar os avisos que normalmente estão desativados por padrão us
 
    O aviso especificado (*warning_number*) está habilitado em seu nível padrão. A documentação para o aviso contém o nível padrão do aviso.
 
-- **#pragma warning(** *warning_level* **:** *warning_number* **)**
+- **aviso de #pragma (** *warning_level* **:** *warning_number* **)**
 
    O aviso especificado (*warning_number*) está habilitado no nível especificado (*warning_level*).
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` habilita todos os avisos que estão desativados por padrão. Se você usar essa opção, poderá desativar os avisos individuais usando a opção [/WD](../build/reference/compiler-option-warning-level.md) .
+   `/Wall` habilita todos os avisos que são desativados por padrão. Se você usar essa opção, poderá desativar os avisos individuais usando a opção [/WD](../build/reference/compiler-option-warning-level.md) .
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
@@ -40,7 +40,7 @@ Você pode habilitar os avisos que normalmente estão desativados por padrão us
 
 Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões posteriores:
 
-|||
+|Aviso|Mensagem|
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (nível 4)|o enumerador '*Identifier*' em uma opção de enumeração '*Enumeration*' não é manipulado explicitamente por um rótulo case|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (nível 4)|o enumerador '*Identifier*' em uma opção de enumeração '*Enumeration*' não é tratado|
@@ -64,7 +64,7 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |C4370 (nível 3)|layout da classe foi alterado de uma versão anterior do compilador devido a empacotamento melhor|
 |[C4371](../error-messages/compiler-warnings/c4371.md) (nível 3)|'*ClassName*': o layout da classe pode ter mudado de uma versão anterior do compilador devido ao melhor empacotamento do membro '*Member*'|
 |C4388 (nível 4)|incompatibilidade de signed/unsigned|
-|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (nível 2)|'*Function*': assinatura de função contém tipo '*Type*'; C++ os objetos não são seguros para passar entre o código puro e o misto ou nativo|
+|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (nível 2)|'*Function*': assinatura de função contém tipo '*Type*'; Os objetos C++ não são seguros para passar entre o código puro e o misto ou nativo|
 |C4426 (nível 1)|os sinalizadores de otimização foram alterados após incluir o cabeçalho, pode ser devido a #pragma Optimize () <sup>14,1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (nível 4)|'*Class1*': o layout de objeto em/vd2 será alterado devido à base virtual '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (nível 4)|dynamic_cast da base virtual '*Class1*' para '*class2*' poderia falhar em alguns contextos|
@@ -81,7 +81,7 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (nível 1)|'*operator1*': o operador antes da vírgula não tem efeito; Você pretendia '*operator2*'?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (nível 1)|expressão não tem efeito; expressão esperada com efeito colateral|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (nível 3)|' __assume ' contém efeito '*Effect*'|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (nível 4)|informação: a semântica catch (...) foi alterada desde o C++ Visual 7,1; as exceções estruturadas (SEH) não são mais detectadas|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (nível 4)|informação: a semântica catch (...) foi alterada desde Visual C++ 7,1; as exceções estruturadas (SEH) não são mais detectadas|
 |C4574 (nível 4)|'*Identifier*' está definido como ' 0 ': você quis dizer usar ' #if *Identifier*'?|
 |C4577 (nível 1)|' noexcept ' usado sem modo de tratamento de exceção especificado; a rescisão na exceção não é garantida. Especificar/EHsc|
 |C4582 (nível 4)|'*Type*': o construtor não é chamado implicitamente|
@@ -99,16 +99,16 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (nível 4)|'derived class': operador de atribuição não pôde ser gerado porque o operador de atribuição de uma classe base está inacessível|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (nível 1)|dígrafos não suportados com -Ze. Sequência de caracteres '*dígrafo*' não interpretada como token alternativo para '*Char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (nível 3)|'*Instance*': construção de objeto estático local não é thread-safe|
-| C4643 (nível 4) | O C++ '*identificador*' de declaração de encaminhamento no namespace std não é permitido pelo padrão. <sup>15.8</sup> |
+| C4643 (nível 4) | O '*identificador*' de declaração de encaminhamento no namespace std não é permitido pelo padrão C++. <sup>15.8</sup> |
 |C4647 (nível 3)|alteração de comportamento: __is_pod (*tipo*) tem um valor diferente em versões anteriores|
-|C4654 (nível 4)|O código colocado antes da inclusão da linha de cabeçalho pré-compilado será ignorado. Adicione código ao cabeçalho pré-compilado. <sup>14.1</sup>|
+|C4654 (nível 4)|O código colocado antes da inclusão da linha de cabeçalho pré-compilado será ignorado. Adicione código ao cabeçalho pré-compilado. <sup>14,1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (nível 4)|'*Symbol*' não está definido como uma macro de pré-processador, substituindo por ' 0 ' para '*diretivas*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (nível 4)|'*Symbol*': nenhum atributo de parâmetro direcional especificado, padronizando para [in]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (nível 3)|'*tipo definido pelo usuário*': possível alteração no comportamento, alteração na Convenção de chamada de retorno UDT|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (nível 1)|'*Function*': assinatura de membro não privado contém tipo nativo de assembly privado '*native_type*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (nível 4)|'*Function*': função não embutida|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (nível 3)|armazenando o resultado float de 32 bits na memória, possível perda de desempenho|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|o acesso volátil de '*expression*' está sujeito a/volatile:\<&#124;ISO MS > Setting; Considere usar __iso_volatile_load funções intrínsecas/Store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|o acesso volátil de '*expression*' está sujeito a/volatile: \<iso&#124;ms> Setting; considere usar funções intrínsecas de/Store __iso_volatile_load|
 |C4749 (nível 4)|com suporte condicional: offsetof aplicado ao tipo de layout não padrão '*Type*'|
 |C4767 (nível 4)|o nome da seção '*Symbol*' tem mais de 8 caracteres e será truncado pelo vinculador|
 |C4768 (nível 3)|atributos de __declspec antes da especificação de vinculação serem ignorados|
@@ -139,7 +139,7 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |C5025 (nível 4)|'*Type*': o operador de atribuição de movimento foi implicitamente definido como excluído|
 |C5026 (nível 1 e nível 4)|'*Type*': o construtor de movimentação foi implicitamente definido como excluído|
 |C5027 (nível 1 e nível 4)|'*Type*': o operador de atribuição de movimento foi implicitamente definido como excluído|
-|C5029 (nível 4)|extensão não padrão usada: atributos de alinhamento C++ em aplicar a variáveis, membros de dados e tipos de marca somente|
+|C5029 (nível 4)|extensão não padrão usada: os atributos de alinhamento em C++ se aplicam somente a variáveis, membros de dados e tipos de marca|
 |C5031 (nível 4)|aviso de #pragma (pop): provável incompatibilidade, estado de aviso de pop-up enviado por push em um arquivo diferente <sup>14,1</sup>|
 |C5032 (nível 4)|detectado #pragma Aviso (push) sem aviso de #pragma correspondente (pop) <sup>14,1</sup>|
 |C5034|o uso de intrínseco '*intrínseco*' faz com que o *nome da função* de função seja compilado como código de convidado <sup>15,3</sup>|
@@ -147,23 +147,23 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |C5036 (nível 1)|conversão de ponteiro de função varargs ao compilar com/Hybrid: x86arm64 '*type1*' para '*type2*' <sup>15,3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (nível 4)|o membro de dados '*member1*' será inicializado após o membro de dados '*membro2*' <sup>15,3</sup>|
 |C5039 (nível 4)|'*Function*': ponteiro ou referência para gerar potencialmente a função passada para a função C externa em-EHc. O comportamento indefinido poderá ocorrer se essa função lançar uma exceção. <sup>15,5</sup>|
-|C5042 (nível 3)|'*Function*': declarações de função em escopo de bloco não podem ser especificadas ' inline C++' no Standard; remover especificador ' inline ' <sup>15,5</sup>|
+|C5042 (nível 3)|'*Function*': declarações de função em escopo de bloco não podem ser especificadas ' inline ' no C++ padrão; remover especificador ' inline ' <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|O compilador irá inserir a mitigação de Spectre para a carga de memória se a opção/Qspectre especificou <sup>15,7</sup>|
 
-<sup>14,1</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 1.\
-<sup>14,3</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 3.\
-<sup>15,3</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,3.\
-<sup>15,5</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,5.\
-<sup>15,7</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,7.\
-<sup>15,8</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,8.\
-<sup>16,0</sup> este aviso está disponível a partir do Visual Studio 2019 RTM.\
+<sup>14,1</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 1. \
+<sup>14,3</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 3.
+<sup>15,3</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,3. \
+<sup>15,5</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,5. \
+<sup>15,7</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,7. \
+<sup>15,8</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,8. \
+<sup>16,0</sup> este aviso está disponível a partir do Visual Studio 2019 RTM. \
 <sup>Perm</sup> Esse aviso será desativado, a menos que a opção de compilador [/permissive-](../build/reference/permissive-standards-conformance.md) esteja definida.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avisos desativados por padrão em versões anteriores
 
 Esses avisos estavam desativados por padrão nas versões do compilador antes do Visual Studio 2015:
 
-|||
+|Aviso|Mensagem|
 |-|-|
 |[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md) (nível 2)|'*Conversion*': truncamento de '*type1*' para '*type2*'|
 |[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md) (nível 1)|'*Variable*': truncamento de ponteiro de '*Type*' para '*Type*'|
@@ -172,10 +172,10 @@ Esses avisos estavam desativados por padrão nas versões do compilador antes do
 
 Esse aviso foi desativado por padrão nas versões do compilador antes do Visual Studio 2012:
 
-|||
+|Aviso|Mensagem|
 |-|-|
 |[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (nível 4)|faltando especificador de tipo - int assumido. Observação: C não suporta mais default-int|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[aviso](../preprocessor/warning.md)
+[warning](../preprocessor/warning.md)

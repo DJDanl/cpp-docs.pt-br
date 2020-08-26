@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182945"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846544"
 ---
 # <a name="platformvaluetype-class"></a>Classe Platform::ValueType
 
@@ -26,9 +26,9 @@ public ref class ValueType : Object
 
 ## <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
-|[ValueType::ToString](#tostring)|Retorna uma representação de cadeia de caracteres do objeto. Herdado de [Platform:: Object](../cppcx/platform-object-class.md).|
+| Nome | Descrição |
+|--|--|
+| [ValueType:: ToString](#tostring) | Retorna uma representação de cadeia de caracteres do objeto. Herdado de [Platform:: Object](../cppcx/platform-object-class.md). |
 
 ### <a name="remarks"></a>Comentários
 
@@ -36,15 +36,15 @@ A classe ValueType é usada para construir os tipos de valor. ValueType é deriv
 
 ### <a name="requirements"></a>Requisitos
 
-**Cliente com suporte mínimo:** Windows 8
+**Mínimo de cliente com suporte:** Windows 8
 
-**Servidor com suporte mínimo:** Windows Server 2012
+**Mínimo de servidor com suporte:** Windows Server 2012
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
-**Metadados:** platform.winmd
+**Metadados:** Platform. winmd
 
-## <a name="tostring"></a> Método ValueType:: ToString
+## <a name="valuetypetostring-method"></a><a name="tostring"></a> Método ValueType:: ToString
 
 Retorna uma representação de cadeia de caracteres do objeto.
 
@@ -54,10 +54,10 @@ Retorna uma representação de cadeia de caracteres do objeto.
 Platform::String ToString();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um Platform:: String que representa o valor.
+Uma plataforma:: cadeia de caracteres que representa o valor.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

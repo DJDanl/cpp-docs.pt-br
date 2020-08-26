@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: e017cad251f57cb477b0bf711cdd6243d7fd9893
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 55b34e7c042a12ad4b125a3263d1a9242456cb91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689922"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846492"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
@@ -20,7 +20,7 @@ Define o modelo de classe conjunto e duas funções de modelo de suporte para re
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<bitset>
+**Cabeçalho:**\<bitset>
 
 **Namespace:** std
 
@@ -28,21 +28,21 @@ Define o modelo de classe conjunto e duas funções de modelo de suporte para re
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
-|[operator&](../standard-library/bitset-operators.md#op_amp)|Executa um AND bit a bit entre dois bitsets.|
-|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|Insere uma representação de texto da sequência de bits no fluxo de saída padrão.|
-|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Insere uma representação de texto da sequência de bits no fluxo de entrada padrão.|
-|[operator^](../standard-library/bitset-operators.md#op_xor)|Executa um EXCLUSIVE-OR bit a bit entre dois bitsets.|
-|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Executa um OR bit a bit entre dois bitsets.|
+|[&do operador ](../standard-library/bitset-operators.md#op_amp)|Executa um AND bit a bit entre dois bitsets.|
+|[<do operador \<](../standard-library/bitset-operators.md#op_lt_lt)|Insere uma representação de texto da sequência de bits no fluxo de saída padrão.|
+|[>>do operador ](../standard-library/bitset-operators.md#op_gt_gt)|Insere uma representação de texto da sequência de bits no fluxo de entrada padrão.|
+|[operador ^](../standard-library/bitset-operators.md#op_xor)|Executa um EXCLUSIVE-OR bit a bit entre dois bitsets.|
+|[&#124;do operador ](../standard-library/bitset-operators.md#op_or)|Executa um OR bit a bit entre dois bitsets.|
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[bitset](../standard-library/bitset-class.md)|O modelo de classe descreve um tipo de objeto que armazena uma sequência que consiste em um número fixo de bits que fornecem uma maneira compacta de manter os sinalizadores para um conjunto de itens ou condições.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

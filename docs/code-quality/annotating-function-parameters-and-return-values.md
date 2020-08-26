@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b1831a2a504bb12473f564cd914340bc429fab8d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231254"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836668"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Anotando parâmetros de função e valores de retorno
 
@@ -188,7 +188,7 @@ Para as anotações na tabela a seguir, quando um parâmetro de ponteiro for ano
      void MyStringCopy(_Out_writes_(size) PWSTR p1, _In_ size_t size, _In_ PWSTR p2);
      ```
 
-     Neste exemplo, o chamador fornece um buffer de `size` elementos para `p1` . `MyStringCopy`torna alguns desses elementos válidos. O mais importante `_Null_terminated_` é que a anotação em `PWSTR` significa que `p1` é terminada em nulo no post-State. Dessa forma, o número de elementos válidos ainda é bem definido, mas uma contagem de elementos específica não é necessária.
+     Neste exemplo, o chamador fornece um buffer de `size` elementos para `p1` . `MyStringCopy` torna alguns desses elementos válidos. O mais importante `_Null_terminated_` é que a anotação em `PWSTR` significa que `p1` é terminada em nulo no post-State. Dessa forma, o número de elementos válidos ainda é bem definido, mas uma contagem de elementos específica não é necessária.
 
      A `_bytes_` variante fornece o tamanho em bytes em vez de elementos. Use essa variante somente quando o tamanho não puder ser expresso como elementos. Por exemplo, **`char`** cadeias de caracteres usarão a `_bytes_` variante somente se uma função semelhante que usa o **`wchar_t`** faria.
 
@@ -272,15 +272,37 @@ Para as anotações na tabela a seguir, quando um parâmetro de ponteiro for ano
 Quando uma anotação de parâmetro de ponteiro inclui `_opt_` , ela indica que o parâmetro pode ser nulo. Caso contrário, a anotação se comporta da mesma forma que a versão que não inclui `_opt_` . Aqui está uma lista das `_opt_` variantes das anotações de parâmetro de ponteiro:
 
 :::row:::
-    :::column:::
-        `_In_opt_`<br /><br /> `_Out_opt_`<br /><br /> `_Inout_opt_`<br /><br /> `_In_opt_z_`<br /><br /> `_Inout_opt_z_`<br /><br /> `_In_reads_opt_`<br /><br /> `_In_reads_bytes_opt_`<br /><br /> `_In_reads_opt_z_`
-    :::column-end:::
-    :::column:::
-        `_Out_writes_opt_`<br /><br /> `_Out_writes_opt_z_`<br /><br /> `_Inout_updates_opt_`<br /><br /> `_Inout_updates_bytes_opt_`<br /><br /> `_Inout_updates_opt_z_`<br /><br /> `_Out_writes_to_opt_`<br /><br /> `_Out_writes_bytes_to_opt_`<br /><br /> `_Out_writes_all_opt_`<br /><br /> `_Out_writes_bytes_all_opt_`
-    :::column-end:::
-    :::column:::
-        `_Inout_updates_to_opt_`<br /><br /> `_Inout_updates_bytes_to_opt_`<br /><br /> `_Inout_updates_all_opt_`<br /><br /> `_Inout_updates_bytes_all_opt_`<br /><br /> `_In_reads_to_ptr_opt_`<br /><br /> `_In_reads_to_ptr_opt_z_`<br /><br /> `_Out_writes_to_ptr_opt_`<br /><br /> `_Out_writes_to_ptr_opt_z_`
-    :::column-end:::
+   :::column:::
+      `_In_opt_`\
+      `_Out_opt_`\
+      `_Inout_opt_`\
+      `_In_opt_z_`\
+      `_Inout_opt_z_`\
+      `_In_reads_opt_`\
+      `_In_reads_bytes_opt_`\
+      `_In_reads_opt_z_`
+   :::column-end:::
+   :::column:::
+      `_Out_writes_opt_`\
+      `_Out_writes_opt_z_`\
+      `_Inout_updates_opt_`\
+      `_Inout_updates_bytes_opt_`\
+      `_Inout_updates_opt_z_`\
+      `_Out_writes_to_opt_`\
+      `_Out_writes_bytes_to_opt_`\
+      `_Out_writes_all_opt_`\
+      `_Out_writes_bytes_all_opt_`
+   :::column-end:::
+   :::column:::
+      `_Inout_updates_to_opt_`\
+      `_Inout_updates_bytes_to_opt_`\
+      `_Inout_updates_all_opt_`\
+      `_Inout_updates_bytes_all_opt_`\
+      `_In_reads_to_ptr_opt_`\
+      `_In_reads_to_ptr_opt_z_`\
+      `_Out_writes_to_ptr_opt_`\
+      `_Out_writes_to_ptr_opt_z_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="output-pointer-parameters"></a>Parâmetros de ponteiro de saída
@@ -439,17 +461,30 @@ Um uso comum do parâmetro de referência é para parâmetros de saída. Para pa
 O valor de retorno de uma função é semelhante `_Out_` a um parâmetro, mas está em um nível diferente de de referência, e você não precisa considerar o conceito do ponteiro para o resultado. Para as seguintes anotações, o valor de retorno é o objeto anotado — um escalar, um ponteiro para uma struct ou um ponteiro para um buffer. Essas anotações têm a mesma semântica que a `_Out_` anotação correspondente.
 
 :::row:::
-    :::column:::
-        `_Ret_z_`<br /><br /> `_Ret_writes_(s)`<br /><br /> `_Ret_writes_bytes_(s)`<br /><br /> `_Ret_writes_z_(s)`<br /><br /> `_Ret_writes_to_(s,c)`<br /><br /> `_Ret_writes_maybenull_(s)`<br /><br /> `_Ret_writes_to_maybenull_(s)`<br /><br /> `_Ret_writes_maybenull_z_(s)`
-    :::column-end:::
-    :::column:::
-        `_Ret_maybenull_`<br /><br /> `_Ret_maybenull_z_`<br /><br /> `_Ret_null_`<br /><br /> `_Ret_notnull_`<br /><br /> `_Ret_writes_bytes_to_`<br /><br /> `_Ret_writes_bytes_maybenull_`<br /><br /> `_Ret_writes_bytes_to_maybenull_`
-    :::column-end:::
+   :::column:::
+      `_Ret_z_`\
+      `_Ret_writes_(s)`\
+      `_Ret_writes_bytes_(s)`\
+      `_Ret_writes_z_(s)`\
+      `_Ret_writes_to_(s,c)`\
+      `_Ret_writes_maybenull_(s)`\
+      `_Ret_writes_to_maybenull_(s)`\
+      `_Ret_writes_maybenull_z_(s)`
+   :::column-end:::
+   :::column:::
+      `_Ret_maybenull_`\
+      `_Ret_maybenull_z_`\
+      `_Ret_null_`\
+      `_Ret_notnull_`\
+      `_Ret_writes_bytes_to_`\
+      `_Ret_writes_bytes_maybenull_`\
+      `_Ret_writes_bytes_to_maybenull_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="format-string-parameters"></a>Parâmetros de cadeia de caracteres de formato
 
-- `_Printf_format_string_`Indica que o parâmetro é uma cadeia de caracteres de formato para uso em uma `printf` expressão.
+- `_Printf_format_string_` Indica que o parâmetro é uma cadeia de caracteres de formato para uso em uma `printf` expressão.
 
      **Exemplo**
 
@@ -464,7 +499,7 @@ O valor de retorno de uma função é semelhante `_Out_` a um parâmetro, mas es
     }
     ```
 
-- `_Scanf_format_string_`Indica que o parâmetro é uma cadeia de caracteres de formato para uso em uma `scanf` expressão.
+- `_Scanf_format_string_` Indica que o parâmetro é uma cadeia de caracteres de formato para uso em uma `scanf` expressão.
 
      **Exemplo**
 
@@ -479,7 +514,7 @@ O valor de retorno de uma função é semelhante `_Out_` a um parâmetro, mas es
     }
     ```
 
-- `_Scanf_s_format_string_`Indica que o parâmetro é uma cadeia de caracteres de formato para uso em uma `scanf_s` expressão.
+- `_Scanf_s_format_string_` Indica que o parâmetro é uma cadeia de caracteres de formato para uso em uma `scanf_s` expressão.
 
      **Exemplo**
 

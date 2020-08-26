@@ -1,17 +1,17 @@
 ---
-title: propget (C++ atributo com)
+title: propget (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propget
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: d2c0ebab1630634ddd4fc81e7c9c8364f7fad46f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2627213d1d1dc74edb33d70ac45f3b7bbd38ba6b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166453"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839966"
 ---
 # <a name="propget"></a>propget
 
@@ -33,20 +33,18 @@ Consulte o exemplo de [ligável](bindable.md) para obter um exemplo de uso de **
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Método|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|`propput`, `propputref`|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
 [propput](propput.md)<br/>
 [propputref](propputref.md)
