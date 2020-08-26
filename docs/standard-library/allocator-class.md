@@ -52,7 +52,7 @@ template <class Type>
 class allocator
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Escreva*\
 O tipo de objeto para o qual o armazenamento está sendo alocado ou desalocado.
@@ -126,7 +126,7 @@ pointer address(reference val) const;
 const_pointer address(const_reference val) const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor const ou não const do objeto cujo endereço está sendo pesquisado.
@@ -191,7 +191,7 @@ Aloca um bloco de memória grande o suficiente para armazenar pelo menos um núm
 pointer allocate(size_type count, const void* _Hint);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O número de elementos para os quais um armazenamento suficiente deve ser alocado.
@@ -254,7 +254,7 @@ template <class Other>
     allocator(const allocator<Other>& right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O objeto alocador a ser copiado.
@@ -458,7 +458,7 @@ template <class _Other>
     void construct(pointer ptr, _Other&&... val);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 Um ponteiro para o local no qual o objeto deve ser construído.
@@ -527,7 +527,7 @@ Libera um número especificado de objetos do armazenamento começando em uma pos
 void deallocate(pointer ptr, size_type count);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.
@@ -551,7 +551,7 @@ Chama um destruidor de objetos sem desalocar a memória na qual o objeto foi arm
 void destroy(pointer ptr);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 Um ponteiro que designa o endereço do objeto a ser destruído.
@@ -748,7 +748,7 @@ template <class Other>
     allocator<Type>& operator=(const allocator<Other>& right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Um objeto alocador a ser atribuído a outro objeto desse.
@@ -865,7 +865,7 @@ Uma estrutura que habilita um alocador para que objetos de um tipo aloquem armaz
 struct rebind { typedef allocator<_Other> other; };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *outros*\
 O tipo de elemento para o qual a memória está sendo alocada.

@@ -23,7 +23,7 @@ Associa a variável de membro especificada com um parâmetro de entrada ou saíd
 [ db_param(ordinal, paramtype="DBPARAMIO_INPUT", dbtype, precision, scale, status, length) ]
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *ordinal*<br/>
 O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto de linhas ao qual associar dados.

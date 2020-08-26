@@ -43,7 +43,7 @@ Marca o início do mapa de propriedades do objeto.
 BEGIN_PROP_MAP(theClass)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Classe*<br/>
 no Especifica a classe que contém o mapa de propriedade.
@@ -68,7 +68,7 @@ Indica a extensão, ou dimensões, de um controle ActiveX.
 PROP_DATA_ENTRY( szDesc, member, vt)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *szDesc*<br/>
 no A descrição da propriedade.
@@ -101,7 +101,7 @@ Use esta macro para inserir uma descrição de propriedade, uma propriedade DISP
 PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *szDesc*<br/>
 no A descrição da propriedade.
@@ -133,7 +133,7 @@ Semelhante a [PROP_ENTRY_TYPE](#prop_entry_type), mas permite que você ESPECIFI
 PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *szDesc*<br/>
 no A descrição da propriedade.
@@ -170,7 +170,7 @@ Use esta macro para inserir um CLSID de página de propriedades no mapa de propr
 PROP_PAGE(clsid)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *clsid*<br/>
 no O CLSID de uma página de propriedades.

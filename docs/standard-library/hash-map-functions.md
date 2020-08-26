@@ -30,7 +30,7 @@ void swap(
     hash_map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O hash_map cujos elementos devem ser trocados por aqueles do mapa *à esquerda*.
@@ -55,7 +55,7 @@ void swap(
     hash_multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O hash_multimap cujos elementos devem ser trocados por aqueles do mapa *à esquerda*.

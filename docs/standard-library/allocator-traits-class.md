@@ -100,7 +100,7 @@ static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *&*\
 Um objeto alocador.
@@ -128,7 +128,7 @@ template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *&*\
 Um objeto alocador.
@@ -153,7 +153,7 @@ static void deallocate(Alloc al,
     size_type count);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *&*\
 Um objeto alocador.
@@ -179,7 +179,7 @@ template <class Uty>
     static void destroy(Alloc& al, Uty* ptr);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *&*\
 Um objeto alocador.
@@ -199,7 +199,7 @@ Método estático que usa um alocador especificado para determinar o número má
 static size_type max_size(const Alloc& al);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *&*\
 Um objeto alocador.
@@ -216,7 +216,7 @@ Método estático que chama `select_on_container_copy_construction` no alocador 
 static Alloc select_on_container_copy_construction(const Alloc& al);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *&*\
 Um objeto alocador.

@@ -37,7 +37,7 @@ Marca o início do mapa do serviço.
 BEGIN_SERVICE_MAP(theClass)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Classe*<br/>
 no Especifica a classe que contém o mapa do serviço.
@@ -74,7 +74,7 @@ Indica que o objeto dá suporte à ID de serviço especificada pelo *Sid*.
 SERVICE_ENTRY( SID )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *SID*<br/>
 A ID do serviço.
@@ -91,7 +91,7 @@ Instrui o [IServiceProviderImpl:: QueryService](#queryservice) ao encadeamento c
 SERVICE_ENTRY_CHAIN( punk )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *punk*<br/>
 Um ponteiro para a interface **IUnknown** a ser encadeada.
@@ -111,7 +111,7 @@ STDMETHOD(QueryService)(
     void** ppvObject);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *guidService*<br/>
 no Ponteiro para um identificador de serviço (SID).

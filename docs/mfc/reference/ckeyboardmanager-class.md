@@ -131,7 +131,7 @@ static BOOL FindDefaultAccelerator(
     BOOL bIsDefaultFrame);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *uiCmd*<br/>
 no A ID do comando.
@@ -165,7 +165,7 @@ static BOOL __stdcall IsKeyHandled(
     BOOL bIsDefaultFrame);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nKey*\
 no A chave a ser verificada.
@@ -195,7 +195,7 @@ Indica se um caractere é imprimível.
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nChar*\
 no O caractere que esse método verifica.
@@ -234,7 +234,7 @@ BOOL LoadState(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszProfileName*<br/>
 no O caminho do registro em que os `CKeyboardManager` dados são salvos.
@@ -274,7 +274,7 @@ BOOL SaveState(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszProfileName*<br/>
 no O caminho do registro para salvar o `CKeyboardManager` estado.
@@ -302,7 +302,7 @@ static void ShowAllAccelerators(
     LPCTSTR lpszDelimiter = _afxDefaultAcceleratorDelimiter);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bShowAll*<br/>
 no Se for TRUE, todas as teclas de atalho serão exibidas. Se for FALSE, somente a primeira tecla de atalho será exibida.
@@ -324,7 +324,7 @@ Converte um caractere em seu registro superior.
 static UINT TranslateCharToUpper(const UINT nChar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nChar*<br/>
 no O caractere a ser convertido.
@@ -350,7 +350,7 @@ BOOL UpdateAccelTable(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pTemplate*<br/>
 no Um ponteiro para um modelo de documento.

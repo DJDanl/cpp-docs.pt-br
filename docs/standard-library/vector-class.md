@@ -105,7 +105,7 @@ template <class Type, class Allocator = allocator<Type>>
 class vector
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Escreva*\
 O tipo de dados do elemento a ser armazenado no vetor
@@ -217,7 +217,7 @@ template <class InputIterator>
 void assign(InputIterator first, InputIterator last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *primeiro*\
 A posição do primeiro elemento no intervalo de elementos a ser copiado.
@@ -295,7 +295,7 @@ reference at(size_type position);
 const_reference at(size_type position) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *propostas*\
 O número da posição ou subscrito do elemento para referência no vetor.
@@ -889,7 +889,7 @@ iterator emplace(
     Types&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *propostas*\
 A posição no [vetor](../standard-library/vector-class.md) em que o primeiro elemento é inserido.
@@ -956,7 +956,7 @@ template <class... Types>
 void emplace_back(Types&&... args);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *argumento*\
 Argumentos de construtor. A função infere qual sobrecarga de construtor deve ser invocada com base nos argumentos fornecidos.
@@ -1072,7 +1072,7 @@ iterator erase(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *propostas*\
 Posição do elemento a ser removido do vetor.
@@ -1242,7 +1242,7 @@ void insert(
     InputIterator last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *propostas*\
 A posição no vetor em que o primeiro elemento é inserido.
@@ -1388,7 +1388,7 @@ reference operator[](size_type position);
 const_reference operator[](size_type position) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *propostas*\
 A posição do elemento de vetor.
@@ -1434,7 +1434,7 @@ vector& operator=(const vector& right);
 vector& operator=(vector&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O [vetor](../standard-library/vector-class.md) sendo copiado para o `vector`.
@@ -1548,7 +1548,7 @@ void push_back(const T& value);
 void push_back(T&& value);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *valor*\
 O valor a ser atribuído ao elemento adicionado ao final do vetor.
@@ -1713,7 +1713,7 @@ Reserva um tamanho mínimo de armazenamento para um objeto vector alocando espa�
 void reserve(size_type count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O tamanho mínimo de armazenamento a ser alocado para o vetor.
@@ -1755,7 +1755,7 @@ void resize(size_type new_size);
 void resize(size_type new_size, Type value);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *new_size*\
 O novo tamanho do vetor.
@@ -1997,7 +1997,7 @@ friend void swap(
     vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Um vetor que fornece os elementos a serem trocados. Ou, um vetor cujos elementos devem ser trocados com os elementos no vetor *à esquerda*.
@@ -2098,7 +2098,7 @@ template <class InputIterator>
 vector(InputIterator first, InputIterator last, const Allocator& allocator);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *alocador*\
 A classe de alocador a ser usada com esse objeto. [get_allocator](#get_allocator) retorna a classe allocator do objeto.

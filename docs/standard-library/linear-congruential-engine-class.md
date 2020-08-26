@@ -43,7 +43,7 @@ class linear_congruential_engine{
    };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *UInttype*\
 O tipo de resultado inteiro sem sinal. Para possíveis tipos, consulte [\<random>](../standard-library/random.md) .

@@ -52,7 +52,7 @@ template <size_t N>
 class bitset
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *P*\
 Especifica o número de bits no objeto conjunto com um inteiro diferente de zero do tipo `size_t` que deve ser conhecido no momento da compilação.
@@ -228,7 +228,7 @@ explicit bitset(
     CharType _One = CharType ('1'));
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O inteiro sem sinal cuja representação de base dois é usada para inicializar os bits no bitset que está sendo construído.
@@ -461,7 +461,7 @@ bitset\<N>& flip();
 bitset\<N>& flip(size_t _Pos);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 A posição do bit cujo valor deve ser invertido.
@@ -597,7 +597,7 @@ Testa um conjunto de bits de destino quanto à desigualdade em relação a um bi
 bool operator!=(const bitset\<N>& right) const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O bitset a ser comparado com o bitset de destino quanto à desigualdade.
@@ -659,7 +659,7 @@ Executa uma combinação bit a bit de bitsets com a operação lógica `AND`.
 bitset\<N>& operator&=(const bitset\<N>& right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O bitset que deve ser combinado bit a bit com o bitset de destino.
@@ -726,7 +726,7 @@ Desloca os bits em um bitset um número especificado de posições à esquerda e
 bitset\<N> operator<<(size_t _Pos) const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 O número de posições à esquerda que os bits no bitset devem ser deslocados.
@@ -778,7 +778,7 @@ Desloca os bits em um bitset um número especificado de posições à esquerda e
 bitset\<N>& operator<<=(size_t _Pos);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 O número de posições para a esquerda que os bits no bitset devem ser deslocados.
@@ -825,7 +825,7 @@ Testa um bitset de destino quanto à igualdade com um bitset especificado.
 bool operator==(const bitset\<N>& right) const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O bitset a ser comparado com o bitset de destino quanto à igualdade.
@@ -886,7 +886,7 @@ Desloca os bits em um bitset um número especificado de posições à direita e 
 bitset\<N> operator>>(size_t _Pos) const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 O número de posições à direita que os bits no bitset devem ser deslocados.
@@ -939,7 +939,7 @@ Desloca os bits em um bitset para a direita um número especificado de posiçõe
 bitset\<N>& operator>>=(size_t _Pos);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 O número de posições à direita que os bits no bitset devem ser deslocados.
@@ -988,7 +988,7 @@ bool operator[](size_t _Pos) const;
 reference operator[](size_t _Pos);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 A posição que localiza o bit dentro do bitset.
@@ -1031,7 +1031,7 @@ Executa uma combinação bit a bit de bitsets com a operação `OR` exclusiva.
 bitset\<N>& operator^=(const bitset\<N>& right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O bitset que deve ser combinado bit a bit com o bitset de destino.
@@ -1097,7 +1097,7 @@ Executa uma combinação bit a bit de bitsets com a operação `OR` inclusiva.
 bitset\<N>& operator|=(const bitset\<N>& right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O bitset que deve ser combinado bit a bit com o bitset de destino.
@@ -1217,7 +1217,7 @@ public:
 };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O valor do objeto do tipo **`bool`** a ser atribuído a um bit em um conjunto.
@@ -1332,7 +1332,7 @@ bitset\<N>& reset();
 bitset\<N>& reset(size_t _Pos);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 A posição do bit no bitset a ser redefinido como 0.
@@ -1395,7 +1395,7 @@ bitset\<N>& set(
     bool val = true);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 A posição do bit no bitset a ser definida como um valor atribuído.
@@ -1499,7 +1499,7 @@ Testa se o bit em uma posição especificada em um bitset é definido como 1.
 bool test(size_t _Pos) const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *_Pos*\
 A posição do bit no bitset a ser testado quanto ao seu valor.

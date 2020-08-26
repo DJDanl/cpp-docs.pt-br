@@ -74,7 +74,7 @@ Chame essa função para obter o valor numérico de um dígito hexadecimal.
 inline char AtlGetHexValue(char chIn) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chIn*<br/>
 O caractere hexadecimal ' 0 '-' 9 ', ' a-'F ' ou ' a-'F '.
@@ -91,7 +91,7 @@ Chame essa função para obter a versão da biblioteca do ATL que você está us
 ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Preservação*<br/>
 Um ponteiro reservado.
@@ -122,7 +122,7 @@ inline BOOL AtlHexDecode(
    int* pnDestLen) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pSrcData*<br/>
 A cadeia de caracteres que contém os dados a serem decodificados.
@@ -148,7 +148,7 @@ Chame essa função para obter o tamanho em bytes de um buffer que pode conter o
 inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nSrcLen*<br/>
 O número de caracteres na cadeia de caracteres codificada.
@@ -169,7 +169,7 @@ inline BOOL AtlHexEncode(
 int * pnDestLen) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbSrcData*<br/>
 O buffer que contém os dados a serem codificados.
@@ -199,7 +199,7 @@ Chame essa função para obter o tamanho em caracteres de um buffer que pode con
 inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nSrcLen*<br/>
 O número de bytes de dados a serem codificados.
@@ -216,7 +216,7 @@ Chame essa função para obter o valor numérico de um dígito hexadecimal.
 inline short AtlHexValue(char chIn) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chIn*<br/>
 O caractere hexadecimal ' 0 '-' 9 ', ' a-'F ' ou ' a-'F '.
@@ -237,7 +237,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
    int nDest) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *wszSrc*<br/>
 A cadeia de caracteres Unicode a ser convertida
@@ -272,7 +272,7 @@ inline BOOL BEncode(
    LPCSTR pszCharSet) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbSrcData*<br/>
 O buffer que contém os dados a serem codificados.
@@ -305,7 +305,7 @@ Chame essa função para obter o tamanho em caracteres de um buffer que pode con
 inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nSrcLen*<br/>
 O número de bytes de dados a serem codificados.
@@ -334,7 +334,7 @@ inline int EscapeXML(
    DWORD dwFlags = ATL_ESC_FLAG_NONE) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *szIn*<br/>
 A cadeia de caracteres a ser convertida.
@@ -378,7 +378,7 @@ Chame essa função para obter o número de caracteres estendidos em uma cadeia 
 inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *szSrc*<br/>
 A cadeia de caracteres a ser analisada.
@@ -398,7 +398,7 @@ Chame essa função para descobrir se um determinado caractere é um caractere e
 inline int IsExtendedChar(char ch) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *CH*<br/>
 O caractere a ser testado
@@ -421,7 +421,7 @@ inline BOOL QEncode(
    int* pnNumEncoded = NULL) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbSrcData*<br/>
 O buffer que contém os dados a serem codificados.
@@ -457,7 +457,7 @@ Chame essa função para obter o tamanho em caracteres de um buffer que pode con
 inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nSrcLen*<br/>
 O número de bytes de dados a serem codificados.
@@ -486,7 +486,7 @@ inline BOOL QPDecode(
    DWORD dwFlags = 0) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbSrcData*<br/>
 no O buffer que contém os dados a serem decodificados.
@@ -519,7 +519,7 @@ Chame essa função para obter o tamanho em bytes de um buffer que pode conter o
 inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nSrcLen*<br/>
 O número de caracteres na cadeia de caracteres codificada.
@@ -545,7 +545,7 @@ inline BOOL QPEncode(
    DWORD dwFlags = 0) throw ();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbSrcData*<br/>
 O buffer que contém os dados a serem codificados.
@@ -584,7 +584,7 @@ Chame essa função para obter o tamanho em caracteres de um buffer que pode con
 inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nSrcLen*<br/>
 O número de bytes de dados a serem codificados.
@@ -609,7 +609,7 @@ inline BOOL UUDecode(
    int* pnDestLen) throw ();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbSrcData*<br/>
 A cadeia de caracteres que contém os dados a serem decodificados.
@@ -639,7 +639,7 @@ Chame essa função para obter o tamanho em bytes de um buffer que pode conter o
 inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nSrcLen*<br/>
 O número de caracteres na cadeia de caracteres codificada.
@@ -666,7 +666,7 @@ inline BOOL UUEncode(
    DWORD dwFlags = 0) throw ();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbSrcData*<br/>
 O buffer que contém os dados a serem codificados.
@@ -708,7 +708,7 @@ Chame essa função para obter o tamanho em caracteres de um buffer que pode con
 inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nSrcLen*<br/>
 O número de bytes de dados a serem codificados.

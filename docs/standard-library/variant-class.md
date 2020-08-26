@@ -114,7 +114,7 @@ template <class Alloc, size_t I, class U, class... Args>
 ~variant();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *&*\
 A classe de alocador a ser usada com esse objeto.

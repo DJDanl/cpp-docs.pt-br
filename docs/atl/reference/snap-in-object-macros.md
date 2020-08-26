@@ -45,7 +45,7 @@ Marca o início do mapa de classes de dados de extensão do snap-in.
 BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *ClassName*<br/>
 no O nome da classe de dados de extensão do snap-in.
@@ -66,7 +66,7 @@ Declara o início do mapa de ID da barra de ferramentas para o objeto de snap-in
 BEGIN_SNAPINTOOLBARID_MAP(_class)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_class*<br/>
 no Especifica a classe de objeto do snap-in.
@@ -99,7 +99,7 @@ Declara o final do mapa da ID da barra de ferramentas para o objeto do snap-in.
 END_SNAPINTOOLBARID_MAP( _class )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_class*<br/>
 no Especifica a classe de objeto do snap-in.
@@ -116,7 +116,7 @@ Adiciona um membro de dados à classe de dados de extensão do snap-in para uma 
 EXTENSION_SNAPIN_DATACLASS(dataClass )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dataClass*<br/>
 no A classe de dados da extensão do snap-in.
@@ -137,7 +137,7 @@ Adiciona uma classe de dados de extensão do snap-in ao mapa da classe de dados 
 EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dataClass*<br/>
 no A classe de dados da extensão do snap-in.
@@ -158,7 +158,7 @@ Use esta macro para declarar o recurso de menu de contexto do objeto de snap-in.
 SNAPINMENUID( id )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *id*<br/>
 no Identifica o menu de contexto do objeto de snap-in.
@@ -171,7 +171,7 @@ Use esta macro para inserir uma ID da barra de ferramentas no mapa da ID da barr
 SNAPINTOOLBARID_ENTRY( id )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *id*<br/>
 no Identifica o controle ToolBar.

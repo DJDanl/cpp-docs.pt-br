@@ -111,7 +111,7 @@ Marca o início de um conjunto de propriedades em um mapa de conjunto de proprie
 BEGIN_PROPERTY_SET(guid)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 no O GUID da propriedade.
@@ -130,7 +130,7 @@ Marca o início de um conjunto de propriedades em um mapa de conjunto de proprie
 BEGIN_PROPERTY_SET_EX(guid, flags)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 no O GUID da propriedade.
@@ -152,7 +152,7 @@ Marca o início das entradas do mapa do conjunto de propriedades.
 BEGIN_PROPSET_MAP(Class)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Classe*<br/>
 no A classe na qual esse conjunto de propriedades é especificado. Um conjunto de propriedades pode ser especificado nos seguintes objetos de OLE DB:
@@ -179,7 +179,7 @@ Esta macro encadeia grupos de Propriedades juntos.
 CHAIN_PROPERTY_SET(ChainClass)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ChainClass*<br/>
 no O nome da classe para a qual as propriedades de cadeia são encadeados. Essa é uma classe gerada pelo assistente de projeto do ATL que já contém um mapa (como uma sessão, um comando ou uma classe de objeto de fonte de dados).
@@ -201,7 +201,7 @@ Marca o final de um conjunto de propriedades.
 END_PROPERTY_SET(guid)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 no O GUID da propriedade.
@@ -234,7 +234,7 @@ Representa uma propriedade específica em um conjunto de propriedades.
 PROPERTY_INFO_ENTRY(dwPropID)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *dwPropID*<br/>
 no Um valor [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) que pode ser usado em conjunto com o GUID do conjunto de propriedades para identificar uma propriedade.
@@ -257,7 +257,7 @@ Representa uma propriedade específica em um conjunto de propriedades.
 PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *dwPropID*<br/>
 no Um valor [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) que pode ser usado em conjunto com o GUID do conjunto de propriedades para identificar uma propriedade.
@@ -292,7 +292,7 @@ Representa uma propriedade específica em um conjunto de propriedades.
 PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *dwPropID*<br/>
 no Um valor [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) que pode ser usado em conjunto com o GUID do conjunto de propriedades para identificar uma propriedade.
@@ -318,7 +318,7 @@ Marca o início das entradas de mapa da coluna do provedor.
 BEGIN_PROVIDER_COLUMN_MAP(theClass)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Classe*<br/>
 no O nome da classe à qual este mapa pertence.
@@ -353,7 +353,7 @@ Representa uma coluna específica à qual o provedor dá suporte.
 PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *name*<br/>
 no O nome da coluna.
@@ -374,7 +374,7 @@ Representa uma coluna específica à qual o provedor dá suporte.
 PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *name*<br/>
 no O nome da coluna.
@@ -406,7 +406,7 @@ Representa uma coluna específica à qual o provedor dá suporte.
 PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scale, guid)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *name*<br/>
 no O nome da coluna.
@@ -446,7 +446,7 @@ Representa uma coluna específica à qual o provedor dá suporte.
 PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *name*<br/>
 no O nome da coluna.
@@ -478,7 +478,7 @@ Representa uma coluna específica à qual o provedor dá suporte.
 PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *name*<br/>
 no O nome da coluna.
@@ -507,7 +507,7 @@ Representa uma coluna específica à qual o provedor dá suporte.
 PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *name*<br/>
 no O nome da coluna.
@@ -538,7 +538,7 @@ Representa uma coluna específica à qual o provedor dá suporte.
 PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *name*<br/>
 no O nome da coluna.
@@ -563,7 +563,7 @@ Denota o início de um mapa de esquema.
 BEGIN_SCHEMA_MAP(SchemaClass);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *SchemaClass*<br/>
 A classe que contém o mapa. Normalmente, essa será a classe de sessão.
@@ -597,7 +597,7 @@ SCHEMA_ENTRY(guid,
    rowsetClass);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 Um GUID de conjunto de linhas de esquema. Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) na *referência do programador de OLE DB* para obter uma lista de conjuntos de linhas de esquema e seus GUIDs.

@@ -97,7 +97,7 @@ Compara duas linhas para ver se elas se referem à mesma instância de linha.
 HRESULT Compare(CSimpleRow* pRow);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pRow*<br/>
 Um ponteiro para um objeto `CSimpleRow`.
@@ -116,7 +116,7 @@ O construtor.
 CSimpleRow(DBCOUNTITEM iRowsetCur);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *iRowsetCur*<br/>
 no Índice para o conjunto de linhas atual.

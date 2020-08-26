@@ -100,7 +100,7 @@ Cria uma janela para o controle ToolTip.
 BOOL Create(CWnd* pWndParent);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pWndParent*<br/>
 no Um ponteiro para a janela pai.
@@ -129,7 +129,7 @@ Retorna as coordenadas da última posição do controle ToolTip.
 void GetLastRect(CRect& rect) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Rect*<br/>
 fora Contém a última posição do controle ToolTip.
@@ -150,7 +150,7 @@ Define o espaçamento entre o texto da dica de ferramenta e a borda da janela de
 void SetTextMargin(int nTextMargin);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nTextMargin*<br/>
 no Especifica o espaçamento entre o texto de controle de dica de ferramenta e a borda da janela de dica de ferramenta. O valor padrão é 10 pixels.
@@ -165,7 +165,7 @@ void Track(
     const CString& strText);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Rect*<br/>
 no Especifica a posição e o tamanho do controle ToolTip.
