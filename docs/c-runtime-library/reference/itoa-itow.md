@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216928"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843489"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -191,7 +191,7 @@ A base a ser usada para a conversão de *valor*, que deve estar no intervalo de 
 *size*<br/>
 Comprimento do buffer em unidades do tipo de caractere. Esse parâmetro é inferido do argumento *buffer* em C++.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Cada uma dessas funções retorna um ponteiro para o *buffer*. Nenhum erro é retornado.
 
@@ -231,9 +231,8 @@ Para ajudá-lo a criar buffers seguros para conversões, o CRT inclui algumas ma
 
 Para usar uma dessas macros em uma função de conversão de cadeia de caracteres, declare o buffer de conversão do tipo de caractere apropriado e use o valor da macro para o tipo inteiro e base como a dimensão de buffer. Esta tabela lista as macros apropriadas para cada função para as bases listadas:
 
-||||
-|-|-|-|
 |Funções|radix|Macros|
+|-|-|-|
 |**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|

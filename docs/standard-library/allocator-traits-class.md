@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617409"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844802"
 ---
 # <a name="allocator_traits-class"></a>Classe allocator_traits
 
@@ -62,7 +62,7 @@ template <class Alloc>
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |`allocator_type`|Esse tipo é um sinônimo do parâmetro de modelo `Alloc`.|
 |`const_pointer`|Esse tipo será `Alloc::const_pointer`, se aquele tipo for bem formado, caso contrário, será `pointer_traits<pointer>::rebind<const value_type>`.|
@@ -80,16 +80,16 @@ template <class Alloc>
 
 Os seguintes métodos estáticos chamam o método correspondente em um parâmetro alocador determinado.
 
-|||
+|Nome|Descrição|
 |-|-|
-|[allocate](#allocate)|Método estático que aloca memória usando o parâmetro alocador determinado.|
+|[aloca](#allocate)|Método estático que aloca memória usando o parâmetro alocador determinado.|
 |[construct](#construct)|Método estático que usa um alocador especificado para construir um objeto.|
 |[desalocar](#deallocate)|Método estático que usa um alocador especificado para desalocar um número especificado de objetos.|
 |[destruir](#destroy)|Método estático que usa um alocador especificado para chamar o destruidor em um objeto sem desalocar sua memória.|
 |[max_size](#max_size)|Método estático que usa um alocador especificado para determinar o número máximo de objetos que podem ser alocados.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Método estático que chama `select_on_container_copy_construction` no alocador especificado.|
 
-### <a name="allocate"></a><a name="allocate"></a>aloca
+### <a name="allocate"></a><a name="allocate"></a> aloca
 
 Método estático que aloca memória usando o parâmetro alocador determinado.
 
@@ -100,7 +100,7 @@ static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *&*\
 Um objeto alocador.
@@ -119,7 +119,7 @@ O primeiro método estático retorna `al.allocate(count)`.
 
 O segundo método retornará `al.allocate(count, hint)`, se essa expressão for bem formada, caso contrário, retornará `al.allocate(count)`.
 
-### <a name="construct"></a><a name="construct"></a>construir
+### <a name="construct"></a><a name="construct"></a> construir
 
 Método estático que usa um alocador especificado para construir um objeto.
 
@@ -128,7 +128,7 @@ template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *&*\
 Um objeto alocador.
@@ -143,7 +143,7 @@ Uma lista de argumentos que é passada ao construtor de objetos.
 
 A função de membro estática chamará `al.construct(ptr, args...)`, se essa expressão for bem formada, caso contrário, será avaliada como `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-### <a name="deallocate"></a><a name="deallocate"></a>desalocar
+### <a name="deallocate"></a><a name="deallocate"></a> desalocar
 
 Método estático que usa um alocador especificado para desalocar um número especificado de objetos.
 
@@ -153,7 +153,7 @@ static void deallocate(Alloc al,
     size_type count);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *&*\
 Um objeto alocador.
@@ -170,7 +170,7 @@ Esse método chama `al.deallocate(ptr, count)`.
 
 Esse método não gera nada.
 
-### <a name="destroy"></a><a name="destroy"></a>destruir
+### <a name="destroy"></a><a name="destroy"></a> destruir
 
 Método estático que usa um alocador especificado para chamar o destruidor em um objeto sem desalocar sua memória.
 
@@ -179,7 +179,7 @@ template <class Uty>
     static void destroy(Alloc& al, Uty* ptr);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *&*\
 Um objeto alocador.
@@ -191,7 +191,7 @@ Um ponteiro para o local do objeto.
 
 Esse método chamará `al.destroy(ptr)`, se essa expressão for bem formada, caso contrário, será avaliado como `ptr->~Uty()`.
 
-### <a name="max_size"></a><a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a> max_size
 
 Método estático que usa um alocador especificado para determinar o número máximo de objetos que podem ser alocados.
 
@@ -199,7 +199,7 @@ Método estático que usa um alocador especificado para determinar o número má
 static size_type max_size(const Alloc& al);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *&*\
 Um objeto alocador.
@@ -208,7 +208,7 @@ Um objeto alocador.
 
 Esse método retornará `al.max_size()`, se essa expressão for bem formada, caso contrário, retornará `numeric_limits<size_type>::max()`.
 
-### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
 
 Método estático que chama `select_on_container_copy_construction` no alocador especificado.
 
@@ -216,7 +216,7 @@ Método estático que chama `select_on_container_copy_construction` no alocador 
 static Alloc select_on_container_copy_construction(const Alloc& al);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *&*\
 Um objeto alocador.

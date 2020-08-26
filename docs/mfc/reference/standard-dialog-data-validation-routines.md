@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 2511e2ec6dbd4e27c0e12e35bdc1cd671bf72eaa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213977"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844477"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rotinas de validação dos dados da caixa de diálogo padrão
 
@@ -20,7 +20,7 @@ Este tópico lista as rotinas de validação de dados de diálogo padrão (DDV) 
 
 ### <a name="ddv-functions"></a>Funções DDV
 
-|||
+|Nome|Descrição|
 |-|-|
 |[DDV_MaxChars](#ddv_maxchars)|Verifica se o número de caracteres em um determinado valor de controle não excede um determinado máximo.|
 |[DDV_MinMaxByte](#ddv_minmaxbyte)|Verifica se um determinado valor de controle não excede um determinado intervalo de **bytes** .|
@@ -38,7 +38,7 @@ Este tópico lista as rotinas de validação de dados de diálogo padrão (DDV) 
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Verifica se um determinado valor de controle cai entre dois valores especificados.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Verifica se um determinado valor de controle não excede um determinado intervalo de **ULONGLONG** .|
 
-## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a>DDV_MaxChars
+## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a> DDV_MaxChars
 
 Chame `DDV_MaxChars` para verificar se a quantidade de caracteres no controle associado ao *valor* não excede *nchar*.
 
@@ -68,7 +68,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a>DDV_MinMaxByte
+## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a> DDV_MinMaxByte
 
 Chame `DDV_MinMaxByte` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -102,7 +102,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime
+## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a> DDV_MinMaxDateTime
 
 Chame `DDV_MinMaxDateTime` para verificar se o valor de hora/data no controle do seletor de data e hora ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) associado a *refValue* cai entre *refMinRange* e *refMaxRange*.
 
@@ -142,7 +142,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble
+## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a> DDV_MinMaxDouble
 
 Chame `DDV_MinMaxDouble` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -176,7 +176,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a>DDV_MinMaxDWord
+## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a> DDV_MinMaxDWord
 
 Chame `DDV_MinMaxDWord` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -210,7 +210,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat
+## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a> DDV_MinMaxFloat
 
 Chame `DDV_MinMaxFloat` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -244,7 +244,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a>DDV_MinMaxInt
+## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a> DDV_MinMaxInt
 
 Chame `DDV_MinMaxInt` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -278,7 +278,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a>DDV_MinMaxLong
+## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a> DDV_MinMaxLong
 
 Chame `DDV_MinMaxLong` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -312,7 +312,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong
+## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a> DDV_MinMaxLongLong
 
 Chame `DDV_MinMaxLongLong` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -346,7 +346,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth
+## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a> DDV_MinMaxMonth
 
 Chame `DDV_MinMaxMonth` para verificar se o valor de data/hora no controle de calendário mensal ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) associado a *refValue* cai entre *refMinRange* e *refMaxRange*.
 
@@ -386,7 +386,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a>DDV_MinMaxShort
+## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a> DDV_MinMaxShort
 
 Chame `DDV_MinMaxShort` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -420,7 +420,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a>DDV_MinMaxSlider
+## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a> DDV_MinMaxSlider
 
 Chame `DDV_MinMaxSlider` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -454,7 +454,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a>DDV_MinMaxUInt
+## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a> DDV_MinMaxUInt
 
 Chame `DDV_MinMaxUInt` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 
@@ -488,7 +488,7 @@ Para obter mais informações sobre o DDV, consulte a [caixa de diálogo troca d
 
   Afxdd_ de **cabeçalho** . h
 
-## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong
+## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a> DDV_MinMaxULongLong
 
 Chame `DDV_MinMaxULongLong` para verificar se o valor no controle associado ao *valor* cai entre *minVal* e *maxVal*.
 

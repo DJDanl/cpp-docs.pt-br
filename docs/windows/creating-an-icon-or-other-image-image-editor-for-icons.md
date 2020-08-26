@@ -79,12 +79,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 931d84f16b46ea8fe21ecc0a63d20dac958ce960
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a331e310f031462c903546a2896317aae0c0d719
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160432"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843359"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Como: criar um ícone ou outra imagem
 
@@ -94,11 +94,11 @@ Você pode criar uma nova imagem, bitmap, ícone, cursor ou barra de ferramentas
 
 Ícones e cursores são recursos gráficos que podem conter várias imagens em diferentes tamanhos e esquemas de cores para diferentes tipos de dispositivos de vídeo. Um cursor também tem um ponto de acesso, o local que o Windows usa para controlar sua posição. Os ícones e cursores são criados e editados usando o **Editor de imagem**, assim como bitmaps e outras imagens.
 
-Quando você cria um novo ícone ou cursor, o **Editor de imagem** primeiro cria uma imagem de um tipo padrão. A imagem é inicialmente preenchida com a cor da tela (transparente). Se a imagem for um cursor, o ponto de acesso será inicialmente o canto superior esquerdo com coordenadas `0,0`.
+Quando você cria um novo ícone ou cursor, o **Editor de imagem** primeiro cria uma imagem de um tipo padrão. A imagem é inicialmente preenchida com a cor da tela (transparente). Se a imagem for um cursor, o ponto de acesso será inicialmente o canto superior esquerdo com coordenadas `0,0` .
 
 Por padrão, o **Editor de imagem** dá suporte à criação de imagens adicionais para os dispositivos mostrados na tabela a seguir. Você pode criar imagens para outros dispositivos digitando largura, altura e parâmetros de contagem de cores na caixa de diálogo **imagem personalizada** .
 
-|Color|Largura (pixels)|Altura (pixels)|
+|Cor|Largura (pixels)|Altura (pixels)|
 |-----------|----------------------|-----------------------|
 |Monocromático|16|16|
 |Monocromático|32|32|
@@ -125,18 +125,33 @@ Quando você abre o ícone ou o recurso de cursor no [Editor de imagem](../windo
 > [!NOTE]
 > Se o seu projeto ainda não contiver um arquivo. rc, consulte [criando um novo arquivo de script de recurso](../windows/how-to-create-a-resource-script-file.md).
 
-A caixa de diálogo **novo tipo de imagem do dispositivo de &lt;&gt;** permite que você crie uma nova imagem de dispositivo de um tipo especificado. Para abrir a caixa de diálogo **novo \<dispositivo > imagem** , vá para **imagem** do menu > **novo tipo de imagem**. As seguintes propriedades incluídas são **tipo de imagem de destino** e **personalizado**.
+A caixa de diálogo **novo &lt; tipo de &gt; imagem de dispositivo** permite que você crie uma nova imagem de dispositivo de um tipo especificado. Para abrir a caixa de diálogo **nova \<Device> imagem** , vá para menu **imagem**  >  **novo tipo de imagem**. As seguintes propriedades incluídas são **tipo de imagem de destino** e **personalizado**.
 
 A propriedade **tipo de imagem de destino** lista os tipos de imagem disponíveis onde você seleciona o tipo de imagem que deseja abrir:
 
-||||
-|-|-|-|
-|-16 x 16, 16 cores|-48 x 48, 16 cores|-96 x 96, 16 cores|
-|-16 x 16, 256 cores|-48 x 48, 256 cores|-96 x 96, 256 cores|
-|-16 x 16, monocromático|-48 x 48, monocromático|-96 x 96, monocromático|
-|-32 x 32, 16 cores|-64 x 64, 16 cores||
-|-32 x 32, 256 cores|-64 x 64, 256 cores||
-|-32 x 32, monocromático|-64 x 64, monocromático||
+:::row:::
+   :::column span="":::
+      16 x 16, 16 cores \
+      32 x 32, 16 cores \
+      48 x 48, 16 cores \
+      64 x 64, 16 cores \
+      96 x 96, 16 cores
+   :::column-end:::
+   :::column span="":::
+      16 x 16, 256 cores \
+      32 x 32, 256 cores \
+      48 x 48, 256 cores \
+      64 x 64, 256 cores \
+      96 x 96, 256 cores
+   :::column-end:::
+   :::column span="":::
+      16 x 16, monocromático \
+      32 x 32, monocromático \
+      48 x 48, monocromático \
+      64 x 64, monocromático \
+      96 x 96, monocromático
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > Todas as imagens existentes não serão exibidas nesta lista.
@@ -145,15 +160,15 @@ A propriedade **personalizada** abre a caixa de diálogo **imagem personalizada*
 
 A caixa de diálogo **imagem personalizada** permite que você crie uma nova imagem com um tamanho personalizado e um número de cores. As seguintes propriedades incluídas são:
 
-|Propriedade|DESCRIÇÃO|
+|Propriedade|Descrição|
 |---|---|
-|**Width**|Fornece um espaço para inserir a largura da imagem personalizada em pixels (1-512, limite de 2048).|
-|**Height**|Fornece um espaço para inserir a altura da imagem personalizada em pixels (1-512, limite de 2048).|
+|**Largura**|Fornece um espaço para inserir a largura da imagem personalizada em pixels (1-512, limite de 2048).|
+|**Altura**|Fornece um espaço para inserir a altura da imagem personalizada em pixels (1-512, limite de 2048).|
 |**Cores**|Fornece um espaço para você escolher o número de cores para a imagem personalizada: 2, 16 ou 256.|
 
-Use a caixa de diálogo **abrir &lt;dispositivo&gt; imagem** para abrir imagens de C++ dispositivo em projetos. Ele lista as imagens de dispositivo existentes no recurso atual (imagens que fazem parte do recurso atual). A seguinte propriedade incluída é:
+Use a caixa de diálogo **abrir &lt; &gt; imagem do dispositivo** para abrir imagens de dispositivo em projetos C++. Ele lista as imagens de dispositivo existentes no recurso atual (imagens que fazem parte do recurso atual). A seguinte propriedade incluída é:
 
-|Propriedade|DESCRIÇÃO|
+|Propriedade|Descrição|
 |---|---|
 |**Imagens atuais**|Lista as imagens incluídas no recurso. Selecione o tipo de imagem que você deseja abrir.|
 
@@ -167,26 +182,26 @@ Use a caixa de diálogo **abrir &lt;dispositivo&gt; imagem** para abrir imagens 
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Para adicionar uma imagem para um dispositivo de vídeo diferente
 
-1. Vá para **imagem** do menu > **nova imagem do dispositivo**ou clique com o botão direito do mouse no painel do editor de **imagens** e escolha **nova imagem do dispositivo**.
+1. Vá para **imagem**do menu  >  **nova imagem do dispositivo**ou clique com o botão direito do mouse no painel do editor de **imagens** e escolha **nova imagem do dispositivo**.
 
 1. Selecione o tipo de imagem que você deseja adicionar. Você também pode selecionar **personalizado** para criar um ícone cujo tamanho não esteja disponível na lista padrão.
 
 ### <a name="to-copy-a-device-image"></a>Para copiar uma imagem de dispositivo
 
-1. Vá para a **imagem** do menu > **abra a imagem do dispositivo** e escolha uma imagem na lista imagens atuais. Por exemplo, escolha a versão 32 × 32, 16 cores de um ícone.
+1. Vá para **imagem**  >  do menu**abrir imagem do dispositivo** e escolha uma imagem na lista imagens atuais. Por exemplo, escolha a versão 32 × 32, 16 cores de um ícone.
 
-1. Copiar a imagem de ícone exibida no momento (**Ctrl**+**C**).
+1. Copie a imagem de ícone exibida no momento (**Ctrl** + **C**).
 
 1. Abra uma imagem diferente do ícone em outra janela do **Editor de imagens** . Por exemplo, abra a versão 16 × 16, 16 cores do ícone.
 
-1. Cole a imagem do ícone (**Ctrl**+**V**) de uma janela do **Editor de imagem** para a outra. Se estiver colando um tamanho maior em um tamanho menor, você poderá usar as alças de ícone para redimensionar a imagem.
+1. Cole a imagem do ícone (**Ctrl** + **V**) de uma janela do **Editor de imagem** para a outra. Se estiver colando um tamanho maior em um tamanho menor, você poderá usar as alças de ícone para redimensionar a imagem.
 
 ### <a name="to-delete-a-device-image"></a>Para excluir uma imagem de dispositivo
 
-Enquanto a imagem do ícone é exibida no **Editor de imagem**, vá para **imagem** do menu > **excluir imagem do dispositivo**. Quando você exclui a imagem do último ícone no recurso, o recurso também é excluído.
+Enquanto a imagem do ícone é exibida no **Editor de imagem**, vá para menu **imagem**  >  **excluir imagem do dispositivo**. Quando você exclui a imagem do último ícone no recurso, o recurso também é excluído.
 
 > [!NOTE]
-> Quando você pressiona a tecla **del** , as imagens e cores que você desenhou em um ícone são excluídas, mas o ícone permanece e agora você pode recriá-la. Se você pressionar **del** por engano, pressione **Ctrl**+**Z** para desfazer a ação.
+> Quando você pressiona a tecla **del** , as imagens e cores que você desenhou em um ícone são excluídas, mas o ícone permanece e agora você pode recriá-la. Se você pressionar **del** por engano, pressione **Ctrl** + **Z** para desfazer a ação.
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Para criar regiões transparentes ou inversas em imagens de dispositivos
 
@@ -195,7 +210,7 @@ No [Editor de imagem](../windows/image-editor-for-icons.md), o ícone inicial ou
 A tela e as cores inversas que você aplica a ícones e cursores forma e cor a imagem derivada ou atribui regiões inversas. As cores indicam partes da imagem que têm esses atributos. Você pode alterar as cores que representam os atributos cor da tela e cor inversa na edição. Essas alterações não afetam a aparência do ícone ou cursor em seu aplicativo.
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu vistos podem ser diferentes daqueles descritos na **Ajuda**, dependendo da edição ou das configurações ativas. Para alterar as configurações, vá até **ferramentas** de menu > **configurações de importação e exportação**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes daqueles descritos na **ajuda** , dependendo de suas configurações ativas ou edição. Para alterar as configurações, vá para menu **ferramentas**  >  **importar e exportar configurações**. Para obter mais informações, consulte [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 #### <a name="to-create-transparent-or-inverse-regions"></a>Para criar regiões transparentes ou inversas
 
@@ -224,7 +239,7 @@ Usando o **Editor de imagem**, ícones e cursores podem ser dimensionados grande
 
 1. Na [caixa de diálogo Inserir recurso](../windows/add-resource-dialog-box.md), selecione **ícone** ou **cursor** e escolha **novo**.
 
-1. Vá para a **imagem** do menu > **nova imagem do dispositivo** e selecione o estilo de imagem 256-cor desejado.
+1. Vá para a **imagem**do menu  >  **nova imagem do dispositivo** e selecione o estilo de imagem 256-cor desejado.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Para escolher uma cor da paleta de cores 256 para ícones grandes
 
@@ -237,11 +252,11 @@ Para desenhar com uma seleção da paleta de cores 256, você precisa selecionar
    A cor selecionada se tornará a cor atual na paleta **cores** na janela **cores** .
 
    > [!NOTE]
-   > A paleta inicial usada para imagens de cor de 256 corresponde à paleta retornada pela API do Windows `CreateHalftonePalette`. Todos os ícones destinados ao shell do Windows devem usar essa paleta para evitar cintilações durante a realização da paleta.
+   > A paleta inicial usada para imagens de cor de 256 corresponde à paleta retornada pela `CreateHalftonePalette` API do Windows. Todos os ícones destinados ao shell do Windows devem usar essa paleta para evitar cintilações durante a realização da paleta.
 
 ### <a name="to-set-a-cursors-hot-spot"></a>Para definir o ponto de acesso de um cursor
 
-O ponto de acesso de um cursor é o ponto para o qual o Windows se refere ao controle da posição do cursor. Por padrão, o ponto de acesso é definido como o canto superior esquerdo do cursor com coordenadas `0,0`. A propriedade **hotspot** na [janela Propriedades](/visualstudio/ide/reference/properties-window) mostra as coordenadas de ponto de acesso.
+O ponto de acesso de um cursor é o ponto para o qual o Windows se refere ao controle da posição do cursor. Por padrão, o ponto de acesso é definido como o canto superior esquerdo do cursor com coordenadas `0,0` . A propriedade **hotspot** na [janela Propriedades](/visualstudio/ide/reference/properties-window) mostra as coordenadas de ponto de acesso.
 
 1. Na [barra de ferramentas do editor de imagem](../windows/toolbar-image-editor-for-icons.md), escolha a ferramenta **definir hotspot** .
 
@@ -256,22 +271,22 @@ Quando você cria um bitmap, a imagem é criada no formato de bitmap (. bmp). Vo
 > [!NOTE]
 > Esse processo não se aplica a ícones e cursores.
 
-1. Vá até o **arquivo** de menu > **abrir**e, em seguida, selecione **arquivo**.
+1. Vá para menu **arquivo**  >  **abrir**e, em seguida, selecione **arquivo**.
 
-1. Na **caixa de diálogo novo arquivo**, escolha a **pasta C++ Visual** e, em seguida, selecione **arquivo de bitmap (. bmp)** na caixa **modelos** e selecione **abrir**.
+1. Na **caixa de diálogo novo arquivo**, escolha a pasta **Visual C++** e, em seguida, selecione **arquivo de bitmap (. bmp)** na caixa **modelos** e selecione **abrir**.
 
    O bitmap é aberto no **Editor de imagem**.
 
 1. Faça alterações no novo bitmap, conforme necessário.
 
-1. Com o bitmap ainda aberto no **Editor de imagens**, vá para o menu **arquivo** > **Salvar *filename*. bmp como**.
+1. Com o bitmap ainda aberto no **Editor de imagens**, vá para menu **arquivo**  >  **Salvar *filename*. bmp como**.
 
-1. Na caixa de diálogo **salvar arquivo como** , digite o nome que você deseja dar ao arquivo e a extensão que denota o formato de arquivo desejado na caixa nome do **arquivo** . Por exemplo, *MyFile. gif*.
+1. Na caixa de diálogo **salvar arquivo como** , digite o nome que você deseja dar ao arquivo e a extensão que denota o formato de arquivo desejado na caixa nome do **arquivo** . Por exemplo, *myfile.gif*.
 
    > [!NOTE]
    > Você deve criar ou abrir o bitmap fora do seu projeto para salvá-lo como outro formato de arquivo. Se você criar ou abri-lo em seu projeto, o comando **salvar como** não estará disponível. Para obter mais informações, consulte [exibindo recursos em um arquivo de script de recurso fora de um projeto (autônomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
-1. Clique em **Salvar**.
+1. Selecione **Salvar**.
 
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>Para converter uma imagem de um formato para outro
 
@@ -279,13 +294,13 @@ Você pode abrir imagens GIF ou JPEG no **Editor de imagens** e salvá-las como 
 
 1. Abra a imagem no **Editor de imagem**.
 
-1. Vá para o **arquivo** de menu > **salvar o *nome de arquivo* como**.
+1. Vá para o menu **arquivo**  >  **Salvar *nome* de arquivo como**.
 
 1. Na caixa de diálogo **salvar arquivo como** , na caixa **nome do arquivo** , digite o nome do arquivo e a extensão que denota o formato desejado.
 
-1. Clique em **Salvar**.
+1. Selecione **Salvar**.
 
-### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Para adicionar um novo recurso de imagem a um C++ projeto não gerenciado
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Para adicionar um novo recurso de imagem a um projeto C++ não gerenciado
 
 1. Em [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources), clique com o botão direito do mouse no arquivo *. rc* e escolha **Inserir recurso**. Se você já tiver um recurso de imagem existente no arquivo *. rc* , como um cursor, poderá simplesmente clicar com o botão direito do mouse na pasta **cursor** e selecionar **Insert cursor**.
 
@@ -311,7 +326,7 @@ Nenhum
 
 ## <a name="see-also"></a>Confira também
 
-[Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
+[Editor de imagem para ícones](../windows/image-editor-for-icons.md)<br/>
 [Como: editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
 [Como: usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Como trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md)<br/>

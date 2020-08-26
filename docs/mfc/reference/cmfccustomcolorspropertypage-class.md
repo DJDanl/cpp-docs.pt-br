@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: d4bdd1524f71bfba33e9090058fce26763a862bf
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 07b369e8c47419db31bed3e49e159e3e7925d5ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561122"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844529"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>Classe CMFCCustomColorsPropertyPage
 
@@ -29,16 +29,14 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|Construtor padrão.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |`CMFCCustomColorsPropertyPage::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
 |`CMFCCustomColorsPropertyPage::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a esse tipo de classe.|
 |[CMFCCustomColorsPropertyPage:: instalação](#setup)|Define os componentes de cor da página de propriedades.|
@@ -82,7 +80,7 @@ void Setup(
     BYTE B);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *D*\
 no O componente vermelho do valor RGB.

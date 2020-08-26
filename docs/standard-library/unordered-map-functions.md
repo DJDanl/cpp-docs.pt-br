@@ -8,20 +8,19 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e572e4ba8cb4c6cb15329342a7947c35ece7270
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373133"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844256"
 ---
 # <a name="ltunordered_mapgt-functions"></a>Funções &lt;unordered_map&gt;
 
-|||
-|-|-|
-|[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
+[trocar (unordered_map)](#swap) 
+ [trocar (unordered_multimap)](#swap_function_multimap)
 
-## <a name="swap-unordered_map"></a><a name="swap"></a>swap (unordered_map)
+## <a name="swap-unordered_map"></a><a name="swap"></a> trocar (unordered_map)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -32,24 +31,24 @@ void swap(
     unordered_map <Key, Ty, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+*Chaves*\
 O tipo principal.
 
 *Ty*\
 O tipo mapeado.
 
-*Hash*\
+*Tralha*\
 O tipo de objeto da função de hash.
 
 *Pred*\
 O tipo de objeto da função de comparação de igualdade.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Deixou*\
+*mantida*\
 O primeiro contêiner para alternância.
 
 *Certo*\
@@ -57,7 +56,7 @@ O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
 
-A função modelo `left.`executa [unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.
+A função de modelo executa `left.` [unordered_map:: swap](../standard-library/unordered-map-class.md#swap) `(right)` .
 
 ### <a name="example"></a>Exemplo
 
@@ -114,7 +113,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>swap (unordered_multimap)
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a> trocar (unordered_multimap)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -125,24 +124,24 @@ void swap(
     unordered_multimap <Key, Ty, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+*Chaves*\
 O tipo principal.
 
 *Ty*\
 O tipo mapeado.
 
-*Hash*\
+*Tralha*\
 O tipo de objeto da função de hash.
 
 *Pred*\
 O tipo de objeto da função de comparação de igualdade.
 
-*Alloc*\
+*Alocação*\
 A classe do alocador.
 
-*Deixou*\
+*mantida*\
 O primeiro contêiner para alternância.
 
 *Certo*\
@@ -150,7 +149,7 @@ O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
 
-A função modelo `left.`executa [unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
+A função de modelo executa `left.` [unordered_multimap:: swap](../standard-library/unordered-multimap-class.md#swap) `(right)` .
 
 ### <a name="example"></a>Exemplo
 

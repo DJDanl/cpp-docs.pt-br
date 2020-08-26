@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 72d18eb50f8d85fb10d5af3ffce08c5b74947531
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ff8888c26945d7f118e71002e3b3290217b463c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222089"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843034"
 ---
 # <a name="uuid-c-attributes"></a>uuid (atributos C++)
 
@@ -44,9 +44,7 @@ Consulte o exemplo [acoplável](bindable.md) para um exemplo de uso de `uuid` .
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|`class`, `struct`, `interface`, `union`, `enum`|
 |**Repetível**|Não|

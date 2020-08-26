@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 9fbe4a4079fcbb8414e09d0f7dd814a3957e0822
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d0f86c2588eed506bc9b8408e01bccdb6d1aad9d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910668"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844061"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -49,7 +49,7 @@ int _open_osfhandle (
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *osfhandle*<br/>
 Identificador de arquivo do sistema operacional.
@@ -57,22 +57,22 @@ Identificador de arquivo do sistema operacional.
 *sinalizadores*<br/>
 Tipos de operações permitidas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, **_open_osfhandle** retornará um descritor de arquivo de tempo de execução C. Caso contrário, ele retornará -1.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_open_osfhandle** aloca um descritor de arquivo em tempo de execução C. Ele associa este descritor de arquivo ao identificador de arquivo do sistema operacional especificado por *osfhandle*. Para evitar um aviso do compilador, converta o argumento *osfhandle* de **HANDLE** para **intptr_t**. O argumento *flags* é uma expressão inteira formada por uma ou mais constantes de manifesto definidas em \<fcntl.h>. Você pode usar o operador-OR-bit-a-OR ( **&#124;** ) para combinar duas ou mais constantes de manifesto para formar o argumento *flags* .
+A função **_open_osfhandle** aloca um descritor de arquivo em tempo de execução C. Ele associa este descritor de arquivo ao identificador de arquivo do sistema operacional especificado por *osfhandle*. Para evitar um aviso do compilador, converta o argumento *osfhandle* de **HANDLE** para **intptr_t**. O argumento *flags* é uma expressão de número inteiro formada por uma ou mais das constantes de manifesto definidas em \<fcntl.h> . Você pode usar o operador-OR-bit-a-OR ( **&#124;** ) para combinar duas ou mais constantes de manifesto para formar o argumento *flags* .
 
-As constantes de manifesto são definidas em \<fcntl.h>:
+Essas constantes de manifesto são definidas em \<fcntl.h> :
 
-|||
-|-|-|
-| **\_O\_Append** | Posiciona um ponteiro de arquivo no final do arquivo, antes de cada operação de gravação. |
-| **\_O\_RDONLY** | Abre o arquivo para somente leitura. |
-| **\_O\_texto** | Abre o arquivo no modo de texto (convertido). |
-| **\_O\_WTEXT** | Abre o arquivo no modo Unicode (convertido em UTF-16). |
+| Constante | DESCRIÇÃO |
+|--|--|
+| **\_O \_ Append** | Posiciona um ponteiro de arquivo no final do arquivo, antes de cada operação de gravação. |
+| **\_O \_ RDONLY** | Abre o arquivo para somente leitura. |
+| **\_O \_ texto** | Abre o arquivo no modo de texto (convertido). |
+| **\_O \_ WTEXT** | Abre o arquivo no modo Unicode (convertido em UTF-16). |
 
 A chamada **_open_osfhandle** transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto usando **_open_osfhandle**, chame [\_close](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **_close**. Não chame a função **CloseHandle** do Win32 no identificador original. Se o descritor de arquivo pertencer a um **arquivo &#42;** Stream, uma chamada para [fclose](fclose-fcloseall.md) fechará o descritor de arquivo e o identificador subjacente. Nesse caso, não chame **_close** no descritor de arquivo ou **CloseHandle** no identificador original.
 
@@ -86,7 +86,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
+[Manipulação de arquivos](../../c-runtime-library/file-handling.md)<br/>
 [\_get_osfhandle](get-osfhandle.md)
