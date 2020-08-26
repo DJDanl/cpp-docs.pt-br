@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: c23298b931e751a8020883bfb3cf687e35ba3276
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 23ded8704e1e29dabddadfdc0a1ced3644374ad9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202006"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840954"
 ---
 # <a name="student_t_distribution-class"></a>Classe student_t_distribution
 
@@ -71,10 +71,8 @@ O tipo de resultado de ponto flutuante, o padrão é **`double`** . Para possív
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **`double`** se nenhum for fornecido, distribuído de acordo com a distribuição *t*do aluno. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|
-|`student_t_distribution::operator()`||[param_type](#param_type)|
+[student_t_distribution](#student_t_distribution)\
+[param_type](#param_type)
 
 A função de propriedade `n()` retorna o valor para o parâmetro de distribuição armazenado `n`.
 
@@ -163,7 +161,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution:: student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a> student_t_distribution:: student_t_distribution
 
 Constrói a distribuição.
 
@@ -188,7 +186,7 @@ O primeiro construtor constrói um objeto cujo valor `n` armazenado contém o va
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution::p aram_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a> student_t_distribution::p aram_type
 
 Armazena todos os parâmetros da distribuição.
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 95d24c9fb9e432a54705a6b8f9fa7638affad2d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cac3a95734a60252f241ab3080c05c65a9e04723
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195090"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841643"
 ---
 # <a name="casyncsocket-class"></a>Classe CAsyncSocket
 
@@ -178,7 +178,7 @@ Para obter mais informações, consulte [Windows Sockets: usando a classe CAsync
 
 **Cabeçalho:** AfxSock. h
 
-## <a name="casyncsocketaccept"></a><a name="accept"></a>CAsyncSocket:: aceitar
+## <a name="casyncsocketaccept"></a><a name="accept"></a> CAsyncSocket:: aceitar
 
 Chame essa função de membro para aceitar uma conexão em um soquete.
 
@@ -200,7 +200,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *lpSockAddrLen*<br/>
 Um ponteiro para o comprimento do endereço em *lpSockAddr* em bytes. O *lpSockAddrLen* é um parâmetro de resultado de valor: inicialmente, ele deve conter a quantidade de espaço apontada por *lpSockAddr*; em retorno, ele conterá o comprimento real (em bytes) do endereço retornado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -228,9 +228,9 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 Essa rotina extrai a primeira conexão na fila de conexões pendentes, cria um novo soquete com as mesmas propriedades que esse soquete e anexa-o a *rConnectedSocket*. Se nenhuma conexão pendente estiver presente na fila, `Accept` retornará zero e `GetLastError` retornará um erro. O soquete aceito ( *rConnectedSocket)* não pode ser usado para aceitar mais conexões. O soquete original permanece aberto e ouvindo.
 
-O argumento *lpSockAddr* é um parâmetro de resultado que é preenchido com o endereço do soquete de conexão, como conhecido pela camada de comunicação. `Accept`é usado com tipos de soquete com base em conexão, como SOCK_STREAM.
+O argumento *lpSockAddr* é um parâmetro de resultado que é preenchido com o endereço do soquete de conexão, como conhecido pela camada de comunicação. `Accept` é usado com tipos de soquete com base em conexão, como SOCK_STREAM.
 
-## <a name="casyncsocketasyncselect"></a><a name="asyncselect"></a>CAsyncSocket::AsyncSelect
+## <a name="casyncsocketasyncselect"></a><a name="asyncselect"></a> CAsyncSocket::AsyncSelect
 
 Chame essa função de membro para solicitar notificação de eventos para um soquete.
 
@@ -255,7 +255,7 @@ Um bitmask que especifica uma combinação de eventos de rede em que o aplicativ
 
 - FD_CLOSE deseja receber a notificação quando um soquete tiver sido fechado por um par.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -269,9 +269,9 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 ### <a name="remarks"></a>Comentários
 
-Essa função é usada para especificar quais funções de notificação de retorno de chamada MFC serão chamadas para o soquete. `AsyncSelect`define automaticamente este Soquete para o modo de não bloqueio. Para obter mais informações, consulte o artigo [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).
+Essa função é usada para especificar quais funções de notificação de retorno de chamada MFC serão chamadas para o soquete. `AsyncSelect` define automaticamente este Soquete para o modo de não bloqueio. Para obter mais informações, consulte o artigo [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).
 
-## <a name="casyncsocketattach"></a><a name="attach"></a>CAsyncSocket:: Attach
+## <a name="casyncsocketattach"></a><a name="attach"></a> CAsyncSocket:: Attach
 
 Chame essa função de membro para anexar o identificador *hSocket* a um `CAsyncSocket` objeto.
 
@@ -300,7 +300,7 @@ Um bitmask que especifica uma combinação de eventos de rede em que o aplicativ
 
 - FD_CLOSE deseja receber a notificação quando um soquete tiver sido fechado por um par.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida.
 
@@ -308,7 +308,7 @@ Diferente de zero se a função for bem-sucedida.
 
 O identificador de soquete é armazenado no membro de dados de [m_hSocket](#m_hsocket) do objeto.
 
-## <a name="casyncsocketbind"></a><a name="bind"></a>CAsyncSocket:: bind
+## <a name="casyncsocketbind"></a><a name="bind"></a> CAsyncSocket:: bind
 
 Chame essa função de membro para associar um endereço local ao soquete.
 
@@ -336,7 +336,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *nSockAddrLen*<br/>
 O comprimento do endereço em *lpSockAddr* em bytes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). A lista a seguir aborda alguns dos erros que podem ser retornados. Para obter uma lista completa, consulte [códigos de erro do Windows Sockets](/windows/win32/winsock/windows-sockets-error-codes-2).
 
@@ -360,9 +360,9 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 ### <a name="remarks"></a>Comentários
 
-Essa rotina é usada em um datagrama ou soquete de fluxo não conectado, antes das chamadas subsequentes `Connect` ou `Listen` . Antes que possa aceitar solicitações de conexão, um soquete de servidor de escuta deve selecionar um número de porta e torná-lo conhecido para Windows Sockets chamando `Bind` . `Bind`estabelece a associação local (número da porta/endereço do host) do soquete atribuindo um nome local a um soquete sem nome.
+Essa rotina é usada em um datagrama ou soquete de fluxo não conectado, antes das chamadas subsequentes `Connect` ou `Listen` . Antes que possa aceitar solicitações de conexão, um soquete de servidor de escuta deve selecionar um número de porta e torná-lo conhecido para Windows Sockets chamando `Bind` . `Bind` estabelece a associação local (número da porta/endereço do host) do soquete atribuindo um nome local a um soquete sem nome.
 
-## <a name="casyncsocketcasyncsocket"></a><a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket
+## <a name="casyncsocketcasyncsocket"></a><a name="casyncsocket"></a> CAsyncSocket::CAsyncSocket
 
 Constrói um objeto de soquete em branco.
 
@@ -374,7 +374,7 @@ CAsyncSocket();
 
 Depois de construir o objeto, você deve chamar sua `Create` função de membro para criar a estrutura de dados de soquete e associar seu endereço. (No lado do servidor de uma comunicação do Windows Sockets, quando o soquete de escuta cria um soquete para usar na `Accept` chamada, você não chama `Create` esse soquete.)
 
-## <a name="casyncsocketclose"></a><a name="close"></a>CAsyncSocket:: fechar
+## <a name="casyncsocketclose"></a><a name="close"></a> CAsyncSocket:: fechar
 
 Fecha o soquete.
 
@@ -388,7 +388,7 @@ Essa função libera o descritor de soquete para que outras referências a ele f
 
 Para `CAsyncSocket` , mas não para `CSocket` , a semântica de `Close` é afetada pelas opções de soquete SO_LINGER e SO_DONTLINGER. Para obter mais informações, consulte função de membro `GetSockOpt` .
 
-## <a name="casyncsocketconnect"></a><a name="connect"></a>CAsyncSocket:: conectar
+## <a name="casyncsocketconnect"></a><a name="connect"></a> CAsyncSocket:: conectar
 
 Chame essa função de membro para estabelecer uma conexão com um fluxo não conectado ou um soquete de datagrama.
 
@@ -416,7 +416,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *nSockAddrLen*<br/>
 O comprimento do endereço em *lpSockAddr* em bytes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Se isso indicar um código de erro de WSAEWOULDBLOCK e seu aplicativo estiver usando retornos de chamada substituíveis, seu aplicativo receberá uma `OnConnect` mensagem quando a operação de conexão for concluída. Os seguintes erros se aplicam a essa função de membro:
 
@@ -462,7 +462,7 @@ Para soquetes de fluxo (tipo SOCK_STREAM), uma conexão ativa é iniciada para o
 
 Para um soquete de datagrama (tipo SOCK_DGRAM), um destino padrão é definido, que será usado nas `Send` chamadas subsequentes e `Receive` .
 
-## <a name="casyncsocketcreate"></a><a name="create"></a>CAsyncSocket:: criar
+## <a name="casyncsocketcreate"></a><a name="create"></a> CAsyncSocket:: criar
 
 Chame a `Create` função de membro depois de construir um objeto de soquete para criar o soquete do Windows e anexá-lo.
 
@@ -500,7 +500,7 @@ Um bitmask que especifica uma combinação de eventos de rede em que o aplicativ
 *lpszSockAddress*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o endereço de rede do Soquete conectado, um número pontilhado, como "128.56.22.8". Passar a cadeia de caracteres nula para esse parâmetro indica que a `CAsyncSocket` instância deve escutar a atividade do cliente em todas as interfaces de rede.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -524,7 +524,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 ### <a name="remarks"></a>Comentários
 
-`Create`chama o [soquete](#socket) e, se for bem-sucedido, ele chamará a [ligação](#bind) para associar o soquete ao endereço especificado. Há suporte para os seguintes tipos de soquete:
+`Create` chama o [soquete](#socket) e, se for bem-sucedido, ele chamará a [ligação](#bind) para associar o soquete ao endereço especificado. Há suporte para os seguintes tipos de soquete:
 
 - O SOCK_STREAM fornece fluxos de bytes seqüenciais, confiáveis, completos e baseados em conexões. Usa o protocolo TCP para a família de endereços da Internet.
 
@@ -538,7 +538,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 Para obter mais informações sobre Stream e soquetes de datagrama, consulte os artigos [Windows Sockets: Background](../../mfc/windows-sockets-background.md) and [Windows Sockets: portas and socket Addresses](../../mfc/windows-sockets-ports-and-socket-addresses.md) e [Windows Sockets 2 API](/windows/win32/WinSock/windows-sockets-start-page-2).
 
-## <a name="casyncsocketcreateex"></a><a name="createex"></a>CAsyncSocket::CreateEx
+## <a name="casyncsocketcreateex"></a><a name="createex"></a> CAsyncSocket::CreateEx
 
 Chame a `CreateEx` função de membro depois de construir um objeto de soquete para criar o soquete do Windows e anexá-lo.
 
@@ -553,7 +553,7 @@ BOOL CreateEx(
 ### <a name="parameters"></a>parâmetros
 
 *pAI*<br/>
-Um ponteiro para um [ADDRINFOT](https://docs.microsoft.com/windows/win32/api/ws2def/ns-ws2def-addrinfoa) para armazenar informações de soquete, como a família e o tipo de soquete.
+Um ponteiro para um [ADDRINFOT](/windows/win32/api/ws2def/ns-ws2def-addrinfoa) para armazenar informações de soquete, como a família e o tipo de soquete.
 
 *lEvent*<br/>
 Um bitmask que especifica uma combinação de eventos de rede em que o aplicativo está interessado.
@@ -570,7 +570,7 @@ Um bitmask que especifica uma combinação de eventos de rede em que o aplicativ
 
 - FD_CLOSE deseja receber a notificação de fechamento do soquete.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Consulte o valor de retorno para [Create ()](#return-value-5).
 
@@ -578,7 +578,7 @@ Consulte o valor de retorno para [Create ()](#return-value-5).
 
 Consulte os comentários para [Create ()](#remarks-8).
 
-## <a name="casyncsocketdetach"></a><a name="detach"></a>CAsyncSocket::D Etach
+## <a name="casyncsocketdetach"></a><a name="detach"></a> CAsyncSocket::D Etach
 
 Chame essa função de membro para desanexar o identificador de soquete no membro de dados *m_hSocket* do `CAsyncSocket` objeto e defina *m_hSocket* como nulo.
 
@@ -586,7 +586,7 @@ Chame essa função de membro para desanexar o identificador de soquete no membr
 SOCKET Detach();
 ```
 
-## <a name="casyncsocketfromhandle"></a><a name="fromhandle"></a>CAsyncSocket:: FromHandle
+## <a name="casyncsocketfromhandle"></a><a name="fromhandle"></a> CAsyncSocket:: FromHandle
 
 Retorna um ponteiro para um `CAsyncSocket` objeto.
 
@@ -599,7 +599,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 *hSocket*<br/>
 Contém um identificador para um soquete.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para um `CAsyncSocket` objeto ou NULL se não houver nenhum `CAsyncSocket` objeto anexado a *hSocket*.
 
@@ -607,7 +607,7 @@ Um ponteiro para um `CAsyncSocket` objeto ou NULL se não houver nenhum `CAsyncS
 
 Quando um identificador de soquete é fornecido, se um `CAsyncSocket` objeto não estiver anexado ao identificador, a função de membro retornará NULL.
 
-## <a name="casyncsocketgetlasterror"></a><a name="getlasterror"></a>CAsyncSocket:: GetLastError
+## <a name="casyncsocketgetlasterror"></a><a name="getlasterror"></a> CAsyncSocket:: GetLastError
 
 Chame essa função de membro para obter o status de erro para a última operação que falhou.
 
@@ -615,7 +615,7 @@ Chame essa função de membro para obter o status de erro para a última operaç
 static int PASCAL GetLastError();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor de retorno indica o código de erro para a última rotina da API do Windows Sockets executada por esse thread.
 
@@ -625,7 +625,7 @@ Quando uma determinada função de membro indica que ocorreu um erro, `GetLastEr
 
 Para obter mais informações sobre os códigos de erro, consulte [API do Windows Sockets 2](/windows/win32/WinSock/windows-sockets-start-page-2).
 
-## <a name="casyncsocketgetpeername"></a><a name="getpeername"></a>CAsyncSocket:: getemparelhaname
+## <a name="casyncsocketgetpeername"></a><a name="getpeername"></a> CAsyncSocket:: getemparelhaname
 
 Chame essa função de membro para obter o endereço do soquete par ao qual esse soquete está conectado.
 
@@ -653,7 +653,7 @@ Um ponteiro para a estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que r
 *lpSockAddrLen*<br/>
 Um ponteiro para o comprimento do endereço em *lpSockAddr* em bytes. No retorno, o argumento *lpSockAddrLen* contém o tamanho real de *lpSockAddr* retornado em bytes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -673,7 +673,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 Para manipular endereços IPv6, use [CAsyncSocket:: GetPeerNameEx](#getpeernameex).
 
-## <a name="casyncsocketgetpeernameex"></a><a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx
+## <a name="casyncsocketgetpeernameex"></a><a name="getpeernameex"></a> CAsyncSocket::GetPeerNameEx
 
 Chame essa função de membro para obter o endereço do soquete par ao qual esse soquete está conectado (manipula endereços IPv6).
 
@@ -691,7 +691,7 @@ Referência a um `CString` objeto que recebe um endereço IP de número pontilha
 *rPeerPort*<br/>
 Referência a um UINT que armazena uma porta.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -711,7 +711,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 Essa função é igual a [CAsyncSocket:: Getemparelhaname](#getpeername) , exceto pelo fato de tratar endereços IPv6, bem como protocolos mais antigos.
 
-## <a name="casyncsocketgetsockname"></a><a name="getsockname"></a>CAsyncSocket::GetSockName
+## <a name="casyncsocketgetsockname"></a><a name="getsockname"></a> CAsyncSocket::GetSockName
 
 Chame essa função de membro para obter o nome local de um soquete.
 
@@ -739,7 +739,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *lpSockAddrLen*<br/>
 Um ponteiro para o comprimento do endereço em *lpSockAddr* em bytes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -761,7 +761,7 @@ Essa chamada é especialmente útil quando uma `Connect` chamada foi feita sem f
 
 Para manipular endereços IPv6, use [CAsyncSocket:: GetSockNameEx](#getsocknameex)
 
-## <a name="casyncsocketgetsocknameex"></a><a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx
+## <a name="casyncsocketgetsocknameex"></a><a name="getsocknameex"></a> CAsyncSocket::GetSockNameEx
 
 Chame essa função de membro para obter o nome local de um soquete (manipula endereços IPv6).
 
@@ -779,7 +779,7 @@ Referência a um `CString` objeto que recebe um endereço IP de número pontilha
 *rSocketPort*<br/>
 Referência a um UINT que armazena uma porta.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -801,7 +801,7 @@ Essa chamada é a mesma que [CAsyncSocket:: getsockname](#getsockname) , exceto 
 
 Essa chamada é especialmente útil quando uma `Connect` chamada foi feita sem fazer a `Bind` primeira; essa chamada fornece o único meio pelo qual você pode determinar a associação local que foi definida pelo sistema.
 
-## <a name="casyncsocketgetsockopt"></a><a name="getsockopt"></a>CAsyncSocket::GetSockOpt
+## <a name="casyncsocketgetsockopt"></a><a name="getsockopt"></a> CAsyncSocket::GetSockOpt
 
 Chame essa função de membro para recuperar uma opção de soquete.
 
@@ -827,7 +827,7 @@ Um ponteiro para o tamanho do buffer *lpOptionValue* em bytes.
 *nLevel*<br/>
 O nível no qual a opção é definida; os únicos níveis com suporte são SOL_SOCKET e IPPROTO_TCP.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Se uma opção nunca foi definida com `SetSockOpt` , `GetSockOpt` o retornará o valor padrão para a opção. Os seguintes erros se aplicam a essa função de membro:
 
@@ -845,7 +845,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 ### <a name="remarks"></a>Comentários
 
-`GetSockOpt`Recupera o valor atual para uma opção de soquete associada a um soquete de qualquer tipo, em qualquer Estado, e armazena o resultado em *lpOptionValue*. As opções afetam as operações de soquete, como o roteamento de pacotes, transferência de dados fora de banda e assim por diante.
+`GetSockOpt` Recupera o valor atual para uma opção de soquete associada a um soquete de qualquer tipo, em qualquer Estado, e armazena o resultado em *lpOptionValue*. As opções afetam as operações de soquete, como o roteamento de pacotes, transferência de dados fora de banda e assim por diante.
 
 As opções a seguir têm suporte para `GetSockOpt` . O tipo identifica o tipo de dados endereçado por *lpOptionValue*. A opção TCP_NODELAY usa IPPROTO_TCP de nível; todas as outras opções usam SOL_SOCKET de nível.
 
@@ -879,7 +879,7 @@ As opções do BSD (Berkeley Software Distribution) sem suporte para o `GetSockO
 
 Chamar `GetSockOpt` com uma opção sem suporte resultará em um código de erro de WSAENOPROTOOPT sendo retornado de `GetLastError` .
 
-## <a name="casyncsocketioctl"></a><a name="ioctl"></a>CAsyncSocket:: IOCtl
+## <a name="casyncsocketioctl"></a><a name="ioctl"></a> CAsyncSocket:: IOCtl
 
 Chame essa função de membro para controlar o modo de um soquete.
 
@@ -897,7 +897,7 @@ O comando a ser executado no soquete.
 *lpArgument*<br/>
 Um ponteiro para um parâmetro para *lCommand*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -923,7 +923,7 @@ Essa rotina pode ser usada em qualquer soquete em qualquer Estado. Ele é usado 
 
 Essa função é um subconjunto do `ioctl()` , conforme usado em Berkeley Sockets. Em particular, não há nenhum comando que seja equivalente a FIOASYNC, enquanto SIOCATMARK é o único comando de nível de soquete com suporte.
 
-## <a name="casyncsocketlisten"></a><a name="listen"></a>CAsyncSocket:: escutar
+## <a name="casyncsocketlisten"></a><a name="listen"></a> CAsyncSocket:: escutar
 
 Chame essa função de membro para escutar solicitações de conexão de entrada.
 
@@ -936,7 +936,7 @@ BOOL Listen(int nConnectionBacklog = 5);
 *nConnectionBacklog*<br/>
 O comprimento máximo para o qual a fila de conexões pendentes pode crescer. O intervalo válido é de 1 a 5.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -962,13 +962,13 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 ### <a name="remarks"></a>Comentários
 
-Para aceitar conexões, o soquete é criado primeiro com o `Create` , uma lista de pendências para conexões de entrada é especificada com `Listen` o e, em seguida, as conexões são aceitas com o `Accept` . `Listen`aplica-se somente a soquetes que dão suporte a conexões, ou seja, as do tipo SOCK_STREAM. Esse soquete é colocado no modo "passivo" em que as conexões de entrada são confirmadas e a aceitação pendente na fila pelo processo.
+Para aceitar conexões, o soquete é criado primeiro com o `Create` , uma lista de pendências para conexões de entrada é especificada com `Listen` o e, em seguida, as conexões são aceitas com o `Accept` . `Listen` aplica-se somente a soquetes que dão suporte a conexões, ou seja, as do tipo SOCK_STREAM. Esse soquete é colocado no modo "passivo" em que as conexões de entrada são confirmadas e a aceitação pendente na fila pelo processo.
 
 Essa função é normalmente usada por servidores (ou qualquer aplicativo que queira aceitar conexões) que poderiam ter mais de uma solicitação de conexão por vez: se uma solicitação de conexão chegar à fila cheia, o cliente receberá um erro com uma indicação de WSAECONNREFUSED.
 
-`Listen`Tenta continuar a funcionar de modo racional quando não há portas disponíveis (descritores). Ele aceitará conexões até que a fila seja esvaziada. Se as portas forem disponibilizadas, uma chamada posterior para `Listen` ou `Accept` irá reabastecer a fila para a "pendência" atual ou mais recente, se possível, e retomar a escuta de conexões de entrada.
+`Listen` Tenta continuar a funcionar de modo racional quando não há portas disponíveis (descritores). Ele aceitará conexões até que a fila seja esvaziada. Se as portas forem disponibilizadas, uma chamada posterior para `Listen` ou `Accept` irá reabastecer a fila para a "pendência" atual ou mais recente, se possível, e retomar a escuta de conexões de entrada.
 
-## <a name="casyncsocketm_hsocket"></a><a name="m_hsocket"></a>CAsyncSocket:: m_hSocket
+## <a name="casyncsocketm_hsocket"></a><a name="m_hsocket"></a> CAsyncSocket:: m_hSocket
 
 Contém o identificador de soquete para o soquete encapsulado por esse `CAsyncSocket` objeto.
 
@@ -976,7 +976,7 @@ Contém o identificador de soquete para o soquete encapsulado por esse `CAsyncSo
 SOCKET m_hSocket;
 ```
 
-## <a name="casyncsocketonaccept"></a><a name="onaccept"></a>CAsyncSocket:: OnAccept
+## <a name="casyncsocketonaccept"></a><a name="onaccept"></a> CAsyncSocket:: OnAccept
 
 Chamado pelo Framework para notificar um soquete de escuta de que ele pode aceitar solicitações de conexão pendentes chamando a função de membro [Accept](#accept) .
 
@@ -997,7 +997,7 @@ O erro mais recente em um soquete. Os códigos de erro a seguir se aplicam à `O
 
 Para obter mais informações, consulte [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).
 
-## <a name="casyncsocketonclose"></a><a name="onclose"></a>CAsyncSocket:: fechamento
+## <a name="casyncsocketonclose"></a><a name="onclose"></a> CAsyncSocket:: fechamento
 
 Chamado pelo Framework para notificar esse soquete de que o Soquete conectado está fechado por seu processo.
 
@@ -1022,7 +1022,7 @@ O erro mais recente em um soquete. Os códigos de erro a seguir se aplicam à `O
 
 Para obter mais informações, consulte [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).
 
-## <a name="casyncsocketonconnect"></a><a name="onconnect"></a>CAsyncSocket:: OnConnect
+## <a name="casyncsocketonconnect"></a><a name="onconnect"></a> CAsyncSocket:: OnConnect
 
 Chamado pelo Framework para notificar esse soquete de conexão de que sua tentativa de conexão foi concluída, seja com êxito ou com erro.
 
@@ -1076,7 +1076,7 @@ Para obter mais informações, consulte [Windows Sockets: Socket Notifications](
 
 [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]
 
-## <a name="casyncsocketonoutofbanddata"></a><a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData
+## <a name="casyncsocketonoutofbanddata"></a><a name="onoutofbanddata"></a> CAsyncSocket::OnOutOfBandData
 
 Chamado pelo Framework para notificar o soquete de recebimento de que o soquete de envio tem dados fora de banda a serem enviados.
 
@@ -1099,7 +1099,7 @@ Os dados fora de banda são um canal logicamente independente associado a cada p
 
 O MFC dá suporte a dados fora de banda, mas os usuários da classe não `CAsyncSocket` são incentivados a usá-los. A maneira mais fácil é criar um segundo soquete para passar esses dados. Para obter mais informações sobre dados fora de banda, consulte [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).
 
-## <a name="casyncsocketonreceive"></a><a name="onreceive"></a>CAsyncSocket:: OnReceive
+## <a name="casyncsocketonreceive"></a><a name="onreceive"></a> CAsyncSocket:: OnReceive
 
 Chamado pelo Framework para notificar esse soquete de que há dados no buffer que podem ser recuperados chamando a `Receive` função de membro.
 
@@ -1124,7 +1124,7 @@ Para obter mais informações, consulte [Windows Sockets: Socket Notifications](
 
 [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]
 
-## <a name="casyncsocketonsend"></a><a name="onsend"></a>CAsyncSocket:: OnSend
+## <a name="casyncsocketonsend"></a><a name="onsend"></a> CAsyncSocket:: OnSend
 
 Chamado pelo Framework para notificar o soquete de que agora ele pode enviar dados chamando a `Send` função de membro.
 
@@ -1149,7 +1149,7 @@ Para obter mais informações, consulte [Windows Sockets: Socket Notifications](
 
 [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]
 
-## <a name="casyncsocketoperator-"></a><a name="operator_eq"></a>CAsyncSocket:: Operator =
+## <a name="casyncsocketoperator-"></a><a name="operator_eq"></a> CAsyncSocket:: Operator =
 
 Atribui um novo valor a um `CAsyncSocket` objeto.
 
@@ -1166,7 +1166,7 @@ Uma referência a um `CAsyncSocket` objeto existente.
 
 Chame essa função para copiar um `CAsyncSocket` objeto existente para outro `CAsyncSocket` objeto.
 
-## <a name="casyncsocketoperator-socket"></a><a name="operator_socket"></a>SOQUETE CAsyncSocket:: Operator
+## <a name="casyncsocketoperator-socket"></a><a name="operator_socket"></a> SOQUETE CAsyncSocket:: Operator
 
 Use esse operador para recuperar o identificador de soquete do `CAsyncSocket` objeto.
 
@@ -1174,7 +1174,7 @@ Use esse operador para recuperar o identificador de soquete do `CAsyncSocket` ob
 operator SOCKET() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, o identificador do objeto de soquete; caso contrário, NULL.
 
@@ -1182,7 +1182,7 @@ Se for bem-sucedido, o identificador do objeto de soquete; caso contrário, NULL
 
 Você pode usar a alça para chamar as APIs do Windows diretamente.
 
-## <a name="casyncsocketreceive"></a><a name="receive"></a>CAsyncSocket:: receber
+## <a name="casyncsocketreceive"></a><a name="receive"></a> CAsyncSocket:: receber
 
 Chame essa função de membro para receber dados de um soquete.
 
@@ -1208,7 +1208,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB processar dados fora de banda.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se nenhum erro ocorrer, `Receive` o retornará o número de bytes recebidos. Se a conexão tiver sido fechada, ela retornará 0. Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1246,13 +1246,13 @@ Para soquetes de datagramas, os dados são extraídos do primeiro datagrama enfi
 
 Se o soquete for do tipo SOCK_STREAM e o lado remoto desligar a conexão normalmente, um `Receive` será concluído imediatamente com 0 bytes recebidos. Se a conexão tiver sido redefinida, um `Receive` falhará com o erro WSAECONNRESET.
 
-`Receive`deve ser chamado apenas uma vez para cada vez que [CAsyncSocket:: OnReceive](#onreceive) é chamado.
+`Receive` deve ser chamado apenas uma vez para cada vez que [CAsyncSocket:: OnReceive](#onreceive) é chamado.
 
 ### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CAsyncSocket:: OnReceive](#onreceive).
 
-## <a name="casyncsocketreceivefrom"></a><a name="receivefrom"></a>CAsyncSocket::ReceiveFrom
+## <a name="casyncsocketreceivefrom"></a><a name="receivefrom"></a> CAsyncSocket::ReceiveFrom
 
 Chame essa função de membro para receber um datagrama e armazenar o endereço de origem na estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) ou em *rSocketAddress*.
 
@@ -1299,7 +1299,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB processar dados fora de banda.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se nenhum erro ocorrer, `ReceiveFrom` o retornará o número de bytes recebidos. Se a conexão tiver sido fechada, ela retornará 0. Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando `GetLastError` . Os seguintes erros se aplicam a essa função de membro:
 
@@ -1343,7 +1343,7 @@ Se *lpSockAddr* for diferente de zero e o soquete for do tipo SOCK_DGRAM, o ende
 
 Se o soquete for do tipo SOCK_STREAM e o lado remoto desligar a conexão normalmente, um `ReceiveFrom` será concluído imediatamente com 0 bytes recebidos.
 
-## <a name="casyncsocketreceivefromex"></a><a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx
+## <a name="casyncsocketreceivefromex"></a><a name="receivefromex"></a> CAsyncSocket::ReceiveFromEx
 
 Chame essa função de membro para receber um datagrama e armazenar o endereço de origem na estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) ou em *rSocketAddress* (manipula endereços IPv6).
 
@@ -1377,7 +1377,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB processar dados fora de banda.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se nenhum erro ocorrer, `ReceiveFromEx` o retornará o número de bytes recebidos. Se a conexão tiver sido fechada, ela retornará 0. Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando `GetLastError` . Os seguintes erros se aplicam a essa função de membro:
 
@@ -1421,7 +1421,7 @@ Se *lpSockAddr* for diferente de zero e o soquete for do tipo SOCK_DGRAM, o ende
 
 Se o soquete for do tipo SOCK_STREAM e o lado remoto desligar a conexão normalmente, um `ReceiveFromEx` será concluído imediatamente com 0 bytes recebidos.
 
-## <a name="casyncsocketsend"></a><a name="send"></a>CAsyncSocket:: enviar
+## <a name="casyncsocketsend"></a><a name="send"></a> CAsyncSocket:: enviar
 
 Chame essa função de membro para enviar dados em um Soquete conectado.
 
@@ -1447,7 +1447,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB enviar dados fora de banda (somente SOCK_STREAM).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se nenhum erro ocorrer, `Send` o retornará o número total de caracteres enviados. (Observe que isso pode ser menor que o número indicado por *nBufLen*.) Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1485,7 +1485,7 @@ Se nenhum erro ocorrer, `Send` o retornará o número total de caracteres enviad
 
 ### <a name="remarks"></a>Comentários
 
-`Send`é usado para gravar dados de saída no fluxo ou soquetes de datagramas conectados. Para soquetes de datagramas, deve-se ter cuidado para não exceder o tamanho máximo do pacote IP das sub-redes subjacentes, que é fornecido pelo `iMaxUdpDg` elemento na estrutura [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata) retornada por `AfxSocketInit` . Se os dados forem muito longos para serem passados atomicamente por meio do protocolo subjacente, o Erro WSAEMSGSIZE será retornado via `GetLastError` e nenhum dado será transmitido.
+`Send` é usado para gravar dados de saída no fluxo ou soquetes de datagramas conectados. Para soquetes de datagramas, deve-se ter cuidado para não exceder o tamanho máximo do pacote IP das sub-redes subjacentes, que é fornecido pelo `iMaxUdpDg` elemento na estrutura [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata) retornada por `AfxSocketInit` . Se os dados forem muito longos para serem passados atomicamente por meio do protocolo subjacente, o Erro WSAEMSGSIZE será retornado via `GetLastError` e nenhum dado será transmitido.
 
 Observe que, para um soquete de datagrama, a conclusão bem-sucedida de a `Send` não indica que os dados foram entregues com êxito.
 
@@ -1495,7 +1495,7 @@ Em `CAsyncSocket` objetos do tipo SOCK_STREAM, o número de bytes gravados pode 
 
   Consulte o exemplo de [CAsyncSocket:: OnSend](#onsend).
 
-## <a name="casyncsocketsendto"></a><a name="sendto"></a>CAsyncSocket:: SendTo
+## <a name="casyncsocketsendto"></a><a name="sendto"></a> CAsyncSocket:: SendTo
 
 Chame essa função de membro para enviar dados a um destino específico.
 
@@ -1542,7 +1542,7 @@ Um ponteiro para uma estrutura [SOCKADDR](/windows/win32/winsock/sockaddr-2) que
 *nSockAddrLen*<br/>
 O comprimento do endereço em *lpSockAddr* em bytes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se nenhum erro ocorrer, `SendTo` o retornará o número total de caracteres enviados. (Observe que isso pode ser menor que o número indicado por *nBufLen*.) Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1588,17 +1588,17 @@ Se nenhum erro ocorrer, `SendTo` o retornará o número total de caracteres envi
 
 ### <a name="remarks"></a>Comentários
 
-`SendTo`é usado em soquetes de datagrama ou fluxo e é usado para gravar dados de saída em um soquete. Para soquetes de datagramas, deve-se ter cuidado para não exceder o tamanho máximo do pacote IP das sub-redes subjacentes, que é fornecido pelo `iMaxUdpDg` elemento na estrutura [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata) preenchida por [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Se os dados forem muito longos para serem passados atomicamente por meio do protocolo subjacente, o Erro WSAEMSGSIZE será retornado e nenhum dado será transmitido.
+`SendTo` é usado em soquetes de datagrama ou fluxo e é usado para gravar dados de saída em um soquete. Para soquetes de datagramas, deve-se ter cuidado para não exceder o tamanho máximo do pacote IP das sub-redes subjacentes, que é fornecido pelo `iMaxUdpDg` elemento na estrutura [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata) preenchida por [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Se os dados forem muito longos para serem passados atomicamente por meio do protocolo subjacente, o Erro WSAEMSGSIZE será retornado e nenhum dado será transmitido.
 
 Observe que a conclusão bem-sucedida de um não `SendTo` indica que os dados foram entregues com êxito.
 
-`SendTo`é usado apenas em um soquete de SOCK_DGRAM para enviar um datagrama para um soquete específico identificado pelo parâmetro *lpSockAddr* .
+`SendTo` é usado apenas em um soquete de SOCK_DGRAM para enviar um datagrama para um soquete específico identificado pelo parâmetro *lpSockAddr* .
 
 Para enviar uma difusão (somente em um SOCK_DGRAM), o endereço no parâmetro *lpSockAddr* deve ser construído usando o endereço IP especial INADDR_BROADCAST (definido no arquivo de cabeçalho do Windows Sockets WINSOCK. H) junto com o número da porta pretendida. Ou, se o parâmetro *lpszHostAddress* for NULL, o Soquete será configurado para difusão. Geralmente, é inaconselhável que um datagrama de difusão exceda o tamanho no qual a fragmentação pode ocorrer, o que implica que a parte de dados do datagrama (excluindo cabeçalhos) não deve exceder 512 bytes.
 
 Para manipular endereços IPv6, use [CAsyncSocket:: SendToEx](#sendtoex).
 
-## <a name="casyncsocketsendtoex"></a><a name="sendtoex"></a>CAsyncSocket::SendToEx
+## <a name="casyncsocketsendtoex"></a><a name="sendtoex"></a> CAsyncSocket::SendToEx
 
 Chame essa função de membro para enviar dados a um destino específico (manipula endereços IPv6).
 
@@ -1632,7 +1632,7 @@ Especifica a maneira como a chamada é feita. A semântica dessa função é det
 
 - MSG_OOB enviar dados fora de banda (somente SOCK_STREAM).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se nenhum erro ocorrer, `SendToEx` o retornará o número total de caracteres enviados. (Observe que isso pode ser menor que o número indicado por *nBufLen*.) Caso contrário, um valor de SOCKET_ERROR será retornado e um código de erro específico poderá ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1680,15 +1680,15 @@ Se nenhum erro ocorrer, `SendToEx` o retornará o número total de caracteres en
 
 Esse método é o mesmo que [CAsyncSocket:: SendTo](#sendto) , exceto pelo fato de ele tratar endereços IPv6, bem como protocolos mais antigos.
 
-`SendToEx`é usado em soquetes de datagrama ou fluxo e é usado para gravar dados de saída em um soquete. Para soquetes de datagramas, deve-se ter cuidado para não exceder o tamanho máximo do pacote IP das sub-redes subjacentes, que é fornecido pelo `iMaxUdpDg` elemento na estrutura [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata) preenchida por [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Se os dados forem muito longos para serem passados atomicamente por meio do protocolo subjacente, o Erro WSAEMSGSIZE será retornado e nenhum dado será transmitido.
+`SendToEx` é usado em soquetes de datagrama ou fluxo e é usado para gravar dados de saída em um soquete. Para soquetes de datagramas, deve-se ter cuidado para não exceder o tamanho máximo do pacote IP das sub-redes subjacentes, que é fornecido pelo `iMaxUdpDg` elemento na estrutura [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata) preenchida por [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Se os dados forem muito longos para serem passados atomicamente por meio do protocolo subjacente, o Erro WSAEMSGSIZE será retornado e nenhum dado será transmitido.
 
 Observe que a conclusão bem-sucedida de um não `SendToEx` indica que os dados foram entregues com êxito.
 
-`SendToEx`é usado apenas em um soquete de SOCK_DGRAM para enviar um datagrama para um soquete específico identificado pelo parâmetro *lpSockAddr* .
+`SendToEx` é usado apenas em um soquete de SOCK_DGRAM para enviar um datagrama para um soquete específico identificado pelo parâmetro *lpSockAddr* .
 
 Para enviar uma difusão (somente em um SOCK_DGRAM), o endereço no parâmetro *lpSockAddr* deve ser construído usando o endereço IP especial INADDR_BROADCAST (definido no arquivo de cabeçalho do Windows Sockets WINSOCK. H) junto com o número da porta pretendida. Ou, se o parâmetro *lpszHostAddress* for NULL, o Soquete será configurado para difusão. Geralmente, é inaconselhável que um datagrama de difusão exceda o tamanho no qual a fragmentação pode ocorrer, o que implica que a parte de dados do datagrama (excluindo cabeçalhos) não deve exceder 512 bytes.
 
-## <a name="casyncsocketsetsockopt"></a><a name="setsockopt"></a>CAsyncSocket::SetSockOpt
+## <a name="casyncsocketsetsockopt"></a><a name="setsockopt"></a> CAsyncSocket::SetSockOpt
 
 Chame essa função de membro para definir uma opção de soquete.
 
@@ -1714,7 +1714,7 @@ O tamanho do buffer *lpOptionValue* em bytes.
 *nLevel*<br/>
 O nível no qual a opção é definida; os únicos níveis com suporte são SOL_SOCKET e IPPROTO_TCP.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1738,7 +1738,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 ### <a name="remarks"></a>Comentários
 
-`SetSockOpt`define o valor atual para uma opção de soquete associada a um soquete de qualquer tipo, em qualquer Estado. Embora as opções possam existir em vários níveis de protocolo, essa especificação só define opções que existem no nível de "soquete" superior. As opções afetam as operações de soquete, como se os dados acelerados são recebidos no fluxo de dados normal, se as mensagens de difusão podem ser enviadas no soquete e assim por diante.
+`SetSockOpt` define o valor atual para uma opção de soquete associada a um soquete de qualquer tipo, em qualquer Estado. Embora as opções possam existir em vários níveis de protocolo, essa especificação só define opções que existem no nível de "soquete" superior. As opções afetam as operações de soquete, como se os dados acelerados são recebidos no fluxo de dados normal, se as mensagens de difusão podem ser enviadas no soquete e assim por diante.
 
 Há dois tipos de opções de soquete: opções boolianas que habilitam ou desabilitam um recurso ou comportamento e opções que exigem um valor ou uma estrutura de número inteiro. Para habilitar uma opção booliana, *lpOptionValue* aponta para um número inteiro diferente de zero. Para desabilitar a opção *lpOptionValue* aponta para um número inteiro igual a zero. *nOptionLen* deve ser igual a `sizeof(BOOL)` para opções boolianas. Para outras opções, *lpOptionValue* aponta para o inteiro ou a estrutura que contém o valor desejado para a opção e *nOptionLen* é o comprimento do inteiro ou da estrutura.
 
@@ -1783,7 +1783,7 @@ As opções do BSD (Berkeley Software Distribution) sem suporte para o `SetSockO
 |SO_TYPE|**`int`**|Tipo do soquete.|
 |IP_OPTIONS||Definir o campo de opções no cabeçalho IP.|
 
-## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket:: ShutDown
+## <a name="casyncsocketshutdown"></a><a name="shutdown"></a> CAsyncSocket:: ShutDown
 
 Chame essa função de membro para desabilitar envios, Recebimentos ou ambos no soquete.
 
@@ -1802,7 +1802,7 @@ Um sinalizador que descreve quais tipos de operação não serão mais permitido
 
 - **ambos = 2**
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um código de erro específico pode ser recuperado chamando [GetLastError](#getlasterror). Os seguintes erros se aplicam a essa função de membro:
 
@@ -1820,7 +1820,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0, e um códi
 
 ### <a name="remarks"></a>Comentários
 
-`ShutDown`é usado em todos os tipos de soquetes para desabilitar a recepção, a transmissão ou ambos. Se *Nhow* for 0, os recebimentos subsequentes no soquete não serão permitidos. Isso não tem nenhum efeito sobre as camadas de protocolo inferior.
+`ShutDown` é usado em todos os tipos de soquetes para desabilitar a recepção, a transmissão ou ambos. Se *Nhow* for 0, os recebimentos subsequentes no soquete não serão permitidos. Isso não tem nenhum efeito sobre as camadas de protocolo inferior.
 
 Para o protocolo TCP, a janela TCP não é alterada e os dados de entrada serão aceitos (mas não confirmados) até que a janela seja esgotada. Para UDP (User Datagram Protocol), os datagramas de entrada são aceitos e enfileirados. Em nenhum caso, um pacote de erro ICMP será gerado. Se *Nhow* for 1, os envios subsequentes não serão permitidos. Para Soquetes TCP, um FIN será enviado. A definição de *Nhow* como 2 desabilita tanto o envio quanto o recebimento, conforme descrito acima.
 
@@ -1830,7 +1830,7 @@ Observe que `ShutDown` o não fecha o soquete, e os recursos anexados ao soquete
 
   Consulte o exemplo de [CAsyncSocket:: OnReceive](#onreceive).
 
-## <a name="casyncsocketsocket"></a><a name="socket"></a>CASyncSocket:: Socket
+## <a name="casyncsocketsocket"></a><a name="socket"></a> CASyncSocket:: Socket
 
 Aloca um identificador de soquete.
 
@@ -1868,7 +1868,7 @@ Protocolo a ser usado com o soquete específico para a família de endereços in
 *nAddressFormat*<br/>
 Especificação da família de endereços.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna `TRUE` em caso de êxito, `FALSE` em caso de falha.
 

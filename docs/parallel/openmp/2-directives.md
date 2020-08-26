@@ -2,12 +2,12 @@
 title: 2. Diretivas
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: c3aadcf34e013c66dec81ca4b09dce4144294ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228395"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841968"
 ---
 # <a name="2-directives"></a>2. Diretivas
 
@@ -21,7 +21,7 @@ A sintaxe de uma diretiva de OpenMP é formalmente especificada pela gramática 
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-Cada diretiva começa com `#pragma omp` , para reduzir o potencial de conflito com outras diretivas de pragma (extensões não OpenMP ou de fornecedor para OpenMP) com os mesmos nomes. O restante da diretiva segue as convenções dos padrões C e C++ para diretivas de compilador. Em particular, o espaço em branco pode ser usado antes e depois do e `#` , às vezes, o espaço em branco deve ser usado para separar as palavras em uma diretiva. Os tokens de pré-processamento após o `#pragma omp` estão sujeitos à substituição de macro.
+Cada diretiva começa com  `#pragma omp` , para reduzir o potencial de conflito com outras diretivas de pragma (extensões não OpenMP ou de fornecedor para OpenMP) com os mesmos nomes. O restante da diretiva segue as convenções dos padrões C e C++ para diretivas de compilador. Em particular, o espaço em branco pode ser usado antes e depois do e `#` , às vezes, o espaço em branco deve ser usado para separar as palavras em uma diretiva. Os tokens de pré-processamento após o `#pragma omp` estão sujeitos à substituição de macro.
 
 As diretivas diferenciam maiúsculas de minúsculas. A ordem na qual as cláusulas aparecem nas diretivas não é significativa. As cláusulas nas diretivas podem ser repetidas conforme necessário, sujeitas às restrições listadas na descrição de cada cláusula. Se *a lista de variáveis* for exibida em uma cláusula, ela deverá especificar apenas variáveis. Somente um *nome de diretiva* pode ser especificado por diretiva.  Por exemplo, a diretiva a seguir não é permitida:
 
@@ -191,12 +191,12 @@ A `schedule` cláusula especifica como as iterações do `for` loop são dividid
 
 Tabela 2-1: `schedule` valores de *tipo* de cláusula
 
-|||
+|Valor|Descrição|
 |-|-|
 |static|Quando `schedule(static,` *chunk_size* `)` é especificado, as iterações são divididas em partes de um tamanho especificado por *chunk_size*. As partes são atribuídas estaticamente a threads na equipe em um modo Round Robin na ordem do número do thread. Quando nenhum *chunk_size* é especificado, o espaço de iteração é dividido em partes que são aproximadamente iguais em tamanho, com uma parte atribuída a cada thread.|
 |dinâmico|Quando `schedule(dynamic,` *chunk_size* `)` é especificado, as iterações são divididas em uma série de partes, cada uma contendo *chunk_size* iterações. Cada parte é atribuída a um thread que está aguardando uma atribuição. O thread executa o bloco de iterações e aguarda sua próxima atribuição, até que nenhuma parte permaneça atribuída. A última parte a ser atribuída pode ter um número menor de iterações. Quando nenhum *chunk_size* é especificado, o padrão é 1.|
 |conduzi|Quando `schedule(guided,` *chunk_size* `)` é especificado, as iterações são atribuídas a threads em partes com tamanhos decrescentes. Quando um thread conclui sua parte atribuída de iterações, ele é atribuído dinamicamente a outra parte, até que None seja deixado. Para um *chunk_size* de 1, o tamanho de cada parte é aproximadamente o número de iterações não atribuídas dividida pelo número de threads. Esses tamanhos diminuem de maneira quase exponencial para 1. Para um *chunk_size* com valor *k* maior que 1, os tamanhos diminuem quase exponencialmente para *k*, exceto que a última parte pode ter menos de *k* iterações. Quando nenhum *chunk_size* é especificado, o padrão é 1.|
-|runtime|Quando `schedule(runtime)` é especificado, a decisão sobre o agendamento é adiada até o tempo de execução. O *tipo* e o tamanho da agenda das partes podem ser escolhidos em tempo de execução, definindo a variável de ambiente `OMP_SCHEDULE` . Se essa variável de ambiente não estiver definida, a agenda resultante será definida como implementação. Quando `schedule(runtime)` é especificado, *chunk_size* não deve ser especificado.|
+|runtime|Quando `schedule(runtime)` é especificado, a decisão sobre o agendamento é adiada até o tempo de execução. O *tipo* e o tamanho da agenda das partes podem ser escolhidos em tempo de execução, definindo a variável de ambiente `OMP_SCHEDULE` . Se essa variável de ambiente não estiver definida, a agenda resultante será definida como implementação. Quando  `schedule(runtime)` é especificado, *chunk_size* não deve ser especificado.|
 
 Na ausência de uma cláusula definida explicitamente `schedule` , o padrão `schedule` é definido pela implementação.
 
@@ -407,9 +407,9 @@ A `atomic` diretiva garante que um local de memória específico seja atualizado
 A instrução de expressão deve ter um dos seguintes formatos:
 
 - *x binop* `=` *expr*
-- *x* `++`
+- *x*`++`
 - `++` *x*
-- *x* `--`
+- *x*`--`
 - `--` *x*
 
 Nas expressões anteriores:
@@ -462,21 +462,21 @@ Se os objetos que exigem sincronização puderem ser designados por variáveis, 
 Uma `flush` diretiva sem uma *lista de variáveis* sincroniza todos os objetos compartilhados, exceto objetos inacessíveis com duração de armazenamento automática. (É provável que isso tenha mais sobrecarga do que uma `flush` com uma *lista de variáveis*.) Uma `flush` diretiva sem uma *lista de variáveis* é implícita para as seguintes diretivas:
 
 - `barrier`
-- Na entrada e saída de`critical`
-- Na entrada e saída de`ordered`
-- Na entrada e saída de`parallel`
-- Ao sair de`for`
-- Ao sair de`sections`
-- Ao sair de`single`
-- Na entrada e saída de`parallel for`
-- Na entrada e saída de`parallel sections`
+- Na entrada e saída de `critical`
+- Na entrada e saída de `ordered`
+- Na entrada e saída de `parallel`
+- Ao sair de `for`
+- Ao sair de `sections`
+- Ao sair de `single`
+- Na entrada e saída de `parallel for`
+- Na entrada e saída de `parallel sections`
 
 A diretiva não estará implícita se uma `nowait` cláusula estiver presente. Deve-se observar que a `flush` diretiva não está implícita para qualquer um dos seguintes:
 
-- Na entrada para`for`
-- Na entrada ou saída de`master`
-- Na entrada para`sections`
-- Na entrada para`single`
+- Na entrada para `for`
+- Na entrada ou saída de `master`
+- Na entrada para `sections`
+- Na entrada para `single`
 
 Uma referência que acessa o valor de um objeto com um tipo qualificado como volátil se comporta como se houvesse uma `flush` diretiva especificando esse objeto no ponto de sequência anterior. Uma referência que modifica o valor de um objeto com um tipo qualificado como volátil se comporta como se houvesse uma `flush` diretiva especificando esse objeto no ponto de sequência subsequente.
 
@@ -601,7 +601,7 @@ As seções a seguir descrevem as cláusulas de atributo de compartilhamento de 
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
 - [compartilhado](#2724-shared)
-- [os](#2725-default)
+- [default](#2725-default)
 - [redução](#2726-reduction)
 - [copyin](#2727-copyin)
 - [copyprivate](#2728-copyprivate)
@@ -717,10 +717,10 @@ Uma redução normalmente é especificada para uma instrução com uma das segui
 
 - *x* `=` *expr* de *op* x *x*
 - *expr x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* (exceto para subtração)
-- *x* `++`
+- *x* `=` *expr* *op* *x*  (exceto para subtração)
+- *x*`++`
 - `++` *x*
-- *x* `--`
+- *x*`--`
 - `--` *x*
 
 onde:
@@ -860,14 +860,14 @@ O aninhamento dinâmico de diretivas deve aderir às seguintes regras:
 
 - `for``sections` `single` as diretivas, e que se associam ao mesmo `parallel` não podem ser aninhadas umas nas outras.
 
-- `critical`diretivas com o mesmo nome não podem ser aninhadas umas nas outras. Observe que essa restrição não é suficiente para impedir o deadlock.
+- `critical` diretivas com o mesmo nome não podem ser aninhadas umas nas outras. Observe que essa restrição não é suficiente para impedir o deadlock.
 
 - `for``sections` `single` as diretivas, e não são permitidas na extensão dinâmica `critical` das `ordered` regiões, e `master` se as diretivas se associarem ao mesmo `parallel` que as regiões.
 
-- `barrier`as diretivas não são permitidas na extensão dinâmica das regiões,,,, `for` `ordered` `sections` `single` `master` e `critical` se as diretivas se associarem ao mesmo `parallel` que as regiões.
+- `barrier` as diretivas não são permitidas na extensão dinâmica das regiões,,,, `for` `ordered` `sections` `single` `master` e `critical` se as diretivas se associarem ao mesmo `parallel` que as regiões.
 
-- `master`as diretivas não são permitidas na extensão dinâmica de `for` `sections` diretivas, e `single` se as `master` diretivas se associarem ao mesmo `parallel` que as diretivas de compartilhamento de trabalho.
+- `master` as diretivas não são permitidas na extensão dinâmica de `for` `sections` diretivas, e `single` se as `master` diretivas se associarem ao mesmo `parallel` que as diretivas de compartilhamento de trabalho.
 
-- `ordered`as diretivas não são permitidas na extensão dinâmica de `critical` regiões se as diretivas se associarem ao mesmo `parallel` que as regiões.
+- `ordered` as diretivas não são permitidas na extensão dinâmica de `critical` regiões se as diretivas se associarem ao mesmo `parallel` que as regiões.
 
 - Qualquer diretiva permitida quando executada dinamicamente dentro de uma região paralela também é permitida quando executada fora de uma região paralela. Quando executado dinamicamente fora de uma região paralela especificada pelo usuário, a diretiva é executada por uma equipe composta apenas pelo thread mestre.

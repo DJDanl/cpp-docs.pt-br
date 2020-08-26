@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: d0b9faf0bd11892c05e25e981e8cd729cb623dd4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219320"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842449"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Diretrizes para desenvolvedores do C++ para canais laterais de execução especulativa
 
@@ -21,7 +21,7 @@ Este artigo contém orientações para os desenvolvedores auxiliarem na identifi
 
 As diretrizes fornecidas por este artigo estão relacionadas às classes de vulnerabilidades representadas por:
 
-1. CVE-2017-5753, também conhecido como Spectre Variant 1. Essa classe de vulnerabilidade de hardware está relacionada a canais laterais que podem surgir devido à execução especulativa que ocorre como resultado de uma previsão incorreta da ramificação condicional. O compilador do Microsoft C++ no Visual Studio 2017 (a partir da versão 15.5.5) inclui suporte para o `/Qspectre` comutador que fornece uma mitigação em tempo de compilação para um conjunto limitado de padrões de codificação potencialmente vulneráveis relacionados ao CVE-2017-5753. A `/Qspectre` opção também está disponível no Visual Studio 2015 atualização 3 a [KB 4338871](https://support.microsoft.com/help/4338871). A documentação do sinalizador [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) fornece mais informações sobre seus efeitos e uso.
+1. CVE-2017-5753, também conhecido como Spectre Variant 1. Essa classe de vulnerabilidade de hardware está relacionada a canais laterais que podem surgir devido à execução especulativa que ocorre como resultado de uma previsão incorreta da ramificação condicional. O compilador do Microsoft C++ no Visual Studio 2017 (a partir da versão 15.5.5) inclui suporte para o `/Qspectre` comutador que fornece uma mitigação em tempo de compilação para um conjunto limitado de padrões de codificação potencialmente vulneráveis relacionados ao CVE-2017-5753. A `/Qspectre` opção também está disponível no Visual Studio 2015 atualização 3 a [KB 4338871](https://support.microsoft.com/help/4338871). A documentação do [`/Qspectre`](../build/reference/qspectre.md) sinalizador fornece mais informações sobre seus efeitos e uso.
 
 2. CVE-2018-3639, também conhecido como [bypass do armazenamento especulativo (SSB)](https://aka.ms/sescsrdssb). Essa classe de vulnerabilidade de hardware está relacionada a canais laterais que podem surgir devido à execução especulativa de uma carga antecipada de um armazenamento dependente como resultado de uma previsão incorreta de acesso à memória.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Deve-se observar que esses dois exemplos envolvem a modificação especulativa de ponteiros de ramificação indiretos alocados para pilha. É possível que a modificação especulativa também possa ocorrer para variáveis globais, memória alocada para heap e até mesmo memória somente leitura em algumas CPUs. Para a memória alocada para pilha, o compilador do Microsoft C++ já usa etapas para tornar mais difícil modificar de forma especulativa os destinos de ramificação indiretos alocados na pilha, como reordenar variáveis locais, de forma que os buffers sejam colocados adjacentes a um cookie de segurança como parte do recurso de segurança do compilador [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) .
+Deve-se observar que esses dois exemplos envolvem a modificação especulativa de ponteiros de ramificação indiretos alocados para pilha. É possível que a modificação especulativa também possa ocorrer para variáveis globais, memória alocada para heap e até mesmo memória somente leitura em algumas CPUs. Para a memória alocada para pilha, o compilador do Microsoft C++ já usa etapas para tornar mais difícil modificar de forma especulativa os destinos de ramificação indiretos alocados na pilha, como reordenar variáveis locais, de forma que os buffers sejam colocados adjacentes a um cookie de segurança como parte do [`/GS`](../build/reference/gs-buffer-security-check.md) recurso de segurança do compilador.
 
 ## <a name="speculative-type-confusion"></a>Confusão de tipo especulativo
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barreira de especulação por meio de instrumentação de tempo de compilador
 
-O compilador do Microsoft C++ no Visual Studio 2017 (a partir da versão 15.5.5) inclui suporte para o `/Qspectre` comutador que insere automaticamente uma barreira de especulação para um conjunto limitado de padrões de codificação potencialmente vulneráveis relacionados ao CVE-2017-5753. A documentação do sinalizador [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) fornece mais informações sobre seus efeitos e uso. É importante observar que esse sinalizador não cobre todos os padrões de codificação potencialmente vulneráveis e, como tal, os desenvolvedores não devem confiar nele como uma mitigação abrangente para essa classe de vulnerabilidades.
+O compilador do Microsoft C++ no Visual Studio 2017 (a partir da versão 15.5.5) inclui suporte para o `/Qspectre` comutador que insere automaticamente uma barreira de especulação para um conjunto limitado de padrões de codificação potencialmente vulneráveis relacionados ao CVE-2017-5753. A documentação do [`/Qspectre`](../build/reference/qspectre.md) sinalizador fornece mais informações sobre seus efeitos e uso. É importante observar que esse sinalizador não cobre todos os padrões de codificação potencialmente vulneráveis e, como tal, os desenvolvedores não devem confiar nele como uma mitigação abrangente para essa classe de vulnerabilidades.
 
 ### <a name="masking-array-indices"></a>Mascarando índices de matriz
 

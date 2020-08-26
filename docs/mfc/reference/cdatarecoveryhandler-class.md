@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: c796f24ad37b3bae11314e2885bf25e25f85aba6
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561967"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842917"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Classe CDataRecoveryHandler
 
@@ -83,13 +83,13 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[CDataRecoveryHandler::CDataRecoveryHandler](#cdatarecoveryhandler)|Constrói um objeto `CDataRecoveryHandler`.|
 
 ### <a name="methods"></a>Métodos
 
-|||
+|Nome|Descrição|
 |-|-|
 |[CDataRecoveryHandler::AutosaveAllDocumentInfo](#autosavealldocumentinfo)|Salva o salvamento de cada arquivo registrado com a `CDataRecoveryHandler` classe.|
 |[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)|Salva o documento especificado.|
@@ -121,7 +121,7 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="data-members"></a>Membros de dados
 
-|||
+|Nome|Descrição|
 |-|-|
 |m_bRestoringPreviousOpenDocs|Indica se o manipulador de recuperação de dados reabrirá documentos abertos anteriormente.|
 |m_bSaveDocumentInfoOnIdle|Indica se o manipulador de recuperação de dados salva os documentos de novo no próximo loop ocioso.|
@@ -160,7 +160,7 @@ Salva o salvamento de cada arquivo registrado com a `CDataRecoveryHandler` class
 virtual BOOL AutosaveAllDocumentInfo();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se o `CDataRecoveryHandler` salvar todos os documentos; FALSE se algum documento não tiver sido salvo.
 
@@ -180,7 +180,7 @@ virtual BOOL AutosaveDocumentInfo(
     BOOL bResetModifiedFlag = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocument*\
 no Um ponteiro para o `CDocument` a ser salvo.
@@ -188,7 +188,7 @@ no Um ponteiro para o `CDocument` a ser salvo.
 *bResetModifiedFlag*\
 no VERDADEIRO indica que o `CDataRecoveryHandler` considera *pDocument* a ser modificado; FALSE indica que a estrutura considera *pDocument* como não modificado. Consulte a seção comentários para obter mais informações sobre o efeito desse sinalizador.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se os sinalizadores apropriados forem definidos e *pDocument* for um `CDocument` objeto válido.
 
@@ -213,7 +213,7 @@ CDataRecoveryHandler(
     int nAutosaveInterval);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwRestartManagerSupportFlags*\
 no Indica quais opções do Gerenciador de reinicialização têm suporte.
@@ -233,12 +233,12 @@ Adiciona um documento à lista de documentos abertos.
 virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocument*\
 no Um ponteiro para um `CDocument` . Esse método cria as informações do documento para isso `CDocument` .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A implementação padrão retorna TRUE.
 
@@ -256,7 +256,7 @@ Exclui todos os arquivos autosalvos atuais.
 virtual BOOL DeleteAllAutosavedFiles();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A implementação padrão sempre retorna TRUE.
 
@@ -268,12 +268,12 @@ Exclui o arquivo autosalvo especificado.
 virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strAutosavedFile*\
 no Uma cadeia de caracteres que contém o nome do arquivo salvo novamente.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A implementação padrão sempre retorna TRUE.
 
@@ -289,12 +289,12 @@ Gera o nome de um arquivo de salvamento automático associado ao nome de arquivo
 virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strDocumentName*<br/>
 no Uma cadeia de caracteres que contém o nome do documento. `GenerateAutosaveFileName` usa este nome de documento para gerar um nome de arquivo de salvamento automático correspondente.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O nome do arquivo de salvamento automático gerado a partir de *strDocumentName*.
 
@@ -310,7 +310,7 @@ Retorna o intervalo entre as tentativas de salvamento automático.
 virtual int GetAutosaveInterval() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O número de milissegundos entre as tentativas de salvamento automático.
 
@@ -322,7 +322,7 @@ Retorna o caminho dos arquivos salvos novamente.
 virtual CString GetAutosavePath() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O local onde os documentos salvos novamente são armazenados.
 
@@ -334,12 +334,12 @@ Recupera o nome do documento de um `CDocument` objeto.
 virtual CString GetDocumentListName(CDocument* pDocument) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocument*\
 no Um ponteiro para um `CDocument` . `GetDocumentListName` Recupera o nome do documento a partir deste `CDocument` .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O nome do documento de *pDocument*.
 
@@ -355,12 +355,12 @@ Recupera o título normal do documento especificado.
 virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocument*\
 no Um ponteiro para um `CDocument` .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O título normal do documento especificado.
 
@@ -376,12 +376,12 @@ Cria e retorna o título do documento recuperado.
 virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strDocumentTitle*<br/>
 no O título normal do documento.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O título do documento recuperado.
 
@@ -397,7 +397,7 @@ Recupera o identificador de reinicialização exclusivo para o aplicativo.
 virtual CString GetRestartIdentifier() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O identificador de reinicialização exclusivo.
 
@@ -415,7 +415,7 @@ Indica se o `CDataRecoveryHandler` executa um salvamento automático no loop oci
 virtual BOOL GetSaveDocumentInfoOnIdle() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica as `CDataRecoveryHandler` salvações simultâneas no loop ocioso atual; FALSE indica que ele não faz isso.
 
@@ -427,7 +427,7 @@ Indica se o Gerenciador de reinicialização fez com que o aplicativo fosse ence
 virtual BOOL GetShutdownByRestartManager() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica que o Gerenciador de reinicialização fez com que o aplicativo fosse encerrado; FALSE indica que não foi.
 
@@ -439,7 +439,7 @@ Inicializa o `CDataRecoveryHandler`.
 virtual BOOL Initialize();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a inicialização for bem-sucedida; caso contrário, FALSE.
 
@@ -473,7 +473,7 @@ Carrega a lista de documentos abertos do registro.
 virtual BOOL ReadOpenDocumentList();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica que `ReadOpenDocumentList` o carregou as informações de pelo menos um documento do registro; FALSE indica que nenhuma informação de documento foi carregada.
 
@@ -491,12 +491,12 @@ Remove o documento fornecido da lista de documentos abertos.
 virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocument*\
 no Um ponteiro para o documento a ser removido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se *pDocument* tiver sido removido da lista; FALSE se ocorreu um erro.
 
@@ -516,7 +516,7 @@ Abre os documentos abertos anteriormente.
 virtual BOOL ReopenPreviousDocuments();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se pelo menos um documento foi aberto; caso contrário, FALSE.
 
@@ -536,7 +536,7 @@ Restaura os documentos salvos novamente com base na entrada do usuário.
 virtual BOOL RestoreAutosavedDocuments();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se esse método restaurar com êxito os documentos.
 
@@ -554,7 +554,7 @@ Salva a lista atual de documentos abertos no registro do Windows.
 virtual BOOL SaveOpenDocumentList();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se não houver nenhum documento aberto para salvar ou se eles tiverem sido salvos com êxito. FALSE se houver documentos a serem salvos no registro, mas eles não foram salvos porque ocorreu um erro.
 
@@ -572,7 +572,7 @@ Define o tempo entre os ciclos de salvamento automático em milissegundos.
 Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nAutosaveInterval*<br/>
 no O novo intervalo de salvamento automático em milissegundos.
@@ -585,7 +585,7 @@ Define o diretório onde os arquivos salvos novamente são armazenados.
 virtual void SetAutosavePath(const CString& strAutosavePath);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strAutosavePath*\
 no O caminho em que os arquivos de salvamento automático são armazenados.
@@ -602,7 +602,7 @@ Define o identificador de reinicialização exclusivo para esta instância do `C
 virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *strRestartIdentifier*\
 no O identificador exclusivo para o Gerenciador de reinicialização.
@@ -619,7 +619,7 @@ Define se o `CDataRecoveryHandler` salva as informações do documento aberto no
 virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bSaveOnIdle*\
 no TRUE para salvar as informações do documento durante o ciclo ocioso atual; FALSE para não executar um salvamento.
@@ -632,7 +632,7 @@ Define se a saída anterior do aplicativo foi causada pelo Gerenciador de reinic
 virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShutdownByRestartManager*\
 no TRUE para indicar que o Gerenciador de reinicialização fez com que o aplicativo fosse encerrado; FALSE para indicar que o aplicativo foi encerrado por outro motivo.
@@ -649,12 +649,12 @@ Atualiza as informações de um documento porque o usuário o salvou.
 virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocument*\
 no Um ponteiro para o documento salvo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se esse método tiver excluído o documento salvo novamente e atualizado as informações do documento; FALSE se ocorreu um erro.
 
