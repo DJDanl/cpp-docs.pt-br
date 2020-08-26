@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: fb17eaa5d94636cedd650eb1bfb393d7c09e4fcc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7280729a9ae3a054468e1f11bdcc4a563b32effe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217266"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845283"
 ---
 # <a name="event_receiver"></a>event_receiver
 
@@ -35,9 +35,9 @@ Cria um receptor de eventos (coletor).
 *tipo*<br/>
 Uma enumeração de um dos seguintes valores:
 
-- `native`para código C/C++ não gerenciado (padrão para classes nativas).
+- `native` para código C/C++ não gerenciado (padrão para classes nativas).
 
-- `com`para o código COM. Esse valor requer que você inclua os seguintes arquivos de cabeçalho:
+- `com` para o código COM. Esse valor requer que você inclua os seguintes arquivos de cabeçalho:
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -50,7 +50,7 @@ Especifique *layout_dependent* somente se `type` = **com**. *layout_dependent* �
 
 - **`true`** significa que a assinatura dos delegados no receptor de eventos deve corresponder exatamente àqueles aos quais eles são conectados na origem do evento. Os nomes do manipulador do receptor de eventos devem corresponder aos nomes especificados na interface de origem do evento relevante. Você deve usar `coclass` quando *layout_dependent* é **`true`** . É um pouco mais eficiente especificar **`true`** .
 
-- **`false`**(padrão) significa que a Convenção de chamada e a classe de armazenamento (virtual, estática e outras) não precisam corresponder ao método de evento e aos manipuladores; Nem os nomes dos manipuladores precisam corresponder aos nomes do método de interface de origem do evento.
+- **`false`** (padrão) significa que a Convenção de chamada e a classe de armazenamento (virtual, estática e outras) não precisam corresponder ao método de evento e aos manipuladores; Nem os nomes dos manipuladores precisam corresponder aos nomes do método de interface de origem do evento.
 
 ## <a name="remarks"></a>Comentários
 
@@ -65,13 +65,11 @@ O atributo **event_receiver** C++ especifica que a classe ou estrutura à qual e
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|`coclass`Quando *layout_dependent*=**`true`**|
+|**Atributos obrigatórios**|`coclass` Quando *layout_dependent*=**`true`**|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).

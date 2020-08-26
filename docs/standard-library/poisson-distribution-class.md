@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: fe59c58659252f5d799339fdd83237e56f81a2ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf5cd289ab0ee02d6c9e09e95d01008191899cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232957"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832640"
 ---
 # <a name="poisson_distribution-class"></a>Classe poisson_distribution
 
@@ -74,10 +74,8 @@ O tipo de resultado inteiro, o padrão é **`int`** . Para possíveis tipos, con
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário com uma distribuição Poisson. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
-|`poisson_distribution::operator()`||[param_type](#param_type)|
+[poisson_distribution](#poisson_distribution)\
+[param_type](#param_type)
 
 A função de propriedade `mean()` retorna o valor do parâmetro de distribuição armazenado *mean*.
 
@@ -196,7 +194,7 @@ Distribution for 100 samples:
 
 **Namespace:** std
 
-## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution::p oisson_distribution
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a> poisson_distribution::p oisson_distribution
 
 Constrói a distribuição.
 
@@ -221,7 +219,7 @@ O primeiro construtor cria um objeto cujo valor `mean` armazenado contém o valo
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution::p aram_type
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a> poisson_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 21d3660661e3987d1b9477bb6298373033946c06
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228109"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846258"
 ---
 # <a name="sample-container-members"></a>Exemplos de Membros de Recipiente
 
@@ -20,7 +20,7 @@ ms.locfileid: "87228109"
 
 ## <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|Descreve um objeto que pode servir como um iterador constante para a sequência controlada.|
 |[const_reference](../standard-library/container-class-const-reference.md)|Descreve um objeto que pode servir como uma referência constante para um elemento da sequência controlada.|
@@ -34,7 +34,7 @@ ms.locfileid: "87228109"
 
 ## <a name="member-functions"></a>Funções de membro
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Comece](../standard-library/container-class-begin.md)|Retorna um iterador que aponta para o primeiro elemento da sequência (ou imediatamente após o fim de uma sequência vazia).|
 |[formatação](../standard-library/container-class-clear.md)|Chama [erase](../standard-library/container-class-erase.md)( [begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)).|

@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c66710fe31b5a657a4976bea7f0aa52aac3e3825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404054"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837080"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>Arq, outpw, _outp, _outpw, _outpd
 
@@ -73,7 +73,7 @@ unsigned long _outpd(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Porto*\
 Número da porta.
@@ -91,7 +91,7 @@ As funções `_outp`, `_outpw` e `_outpd` gravam um byte, uma palavra e uma pala
 
 Como essas funções gravam diretamente em uma porta de e/s, elas não podem ser usadas no código do Windows no modo de usuário.
 
-Para obter informações sobre como usar portas de e/s no sistema operacional Windows, consulte [comunicações seriais](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
+Para obter informações sobre como usar portas de e/s no sistema operacional Windows, consulte [comunicações seriais](/previous-versions/ff802693(v=msdn.10)).
 
 Os `outp` `outpw` nomes e são nomes mais antigos e preteridos para as `_outp` `_outpw` funções e. Para obter mais informações, consulte [nomes de funções POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 

@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1ed8d61a52c11ab48fe6f762ff342ea88d107b14
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687134"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832692"
 ---
 # <a name="pointer_traits-struct"></a>Struct pointer_traits
 
-Fornece informações necessárias para um objeto do tipo `allocator_traits` para descrever um alocador com tipo de ponteiro `Ptr`.
+Fornece informações necessárias para um objeto do tipo `allocator_traits` para descrever um alocador com tipo de ponteiro `Ptr` .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,25 +52,25 @@ struct Ptr
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |`typedef T2 difference_type`|O tipo `T2` é `Ptr::difference_type` se esse tipo de existir, caso contrário, `ptrdiff_t`. Se `Ptr` for um ponteiro bruto, o tipo será `ptrdiff_t`.|
 |`typedef T1 element_type`|O tipo `T1` é `Ptr::element_type` se esse tipo de existir, caso contrário, `Ty`. Se `Ptr` for um ponteiro bruto, o tipo será `Ty`.|
 |`typedef Ptr pointer`|O tipo é `Ptr`.|
 
-### <a name="structs"></a>Structs
+### <a name="structs"></a>Estruturas
 
-|||
+|Nome|Descrição|
 |-|-|
 |`rebind`|Tenta converter o tipo de ponteiro subjacente em um tipo especificado.|
 
 ### <a name="methods"></a>Métodos
 
-|Name|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Converte uma referência arbitrária em um objeto da classe `Ptr`.|
 
-### <a name="pointer_to"></a>pointer_to
+### <a name="pointer_to"></a><a name="pointer_to"></a> pointer_to
 
 O método estático que retorna `Ptr::pointer_to(obj)`, se essa função existir. Caso contrário, não é possível converter uma referência arbitrária para um objeto da classe `Ptr`. Se `Ptr` for um ponteiro bruto, esse método retornará `addressof(obj)`.
 

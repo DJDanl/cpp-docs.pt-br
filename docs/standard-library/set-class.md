@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 80e7c2258fc1fbeabeb8174df18d5cb46aa682bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e879e7ffd9f674769e32548195f5017e27e64576
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560523"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846232"
 ---
 # <a name="set-class"></a>Classe set
 
@@ -106,7 +106,7 @@ template <class Key,
 class set
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Chaves*\
 O tipo de dados do elemento a ser armazenado no conjunto.
@@ -145,13 +145,13 @@ O iterador fornecido pela classe set é um iterador bidirecional, mas as funçõ
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[set](#set)|Constrói um conjunto que está vazio ou que é uma cópia de todo ou parte de algum outro conjunto.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[allocator_type](#allocator_type)|Um tipo que representa a classe `allocator` para o objeto de conjunto.|
 |[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que pode ler um **`const`** elemento no conjunto.|
@@ -171,7 +171,7 @@ O iterador fornecido pela classe set é um iterador bidirecional, mas as funçõ
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Comece](#begin)|Retorna um iterador que trata o primeiro elemento no conjunto.|
 |[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento no conjunto.|
@@ -201,7 +201,7 @@ O iterador fornecido pela classe set é um iterador bidirecional, mas as funçõ
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[operador =](#op_eq)|Substitui os elementos de um conjunto por uma cópia de outro conjunto.|
 
@@ -235,7 +235,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional que trata o primeiro elemento no set ou o local após um set vazio.
 
@@ -290,7 +290,7 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`const`** iterador de acesso bidirecional que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()` ).
 
@@ -316,7 +316,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`const`** iterador de acesso bidirecional que aponta muito além do fim do intervalo.
 
@@ -469,12 +469,12 @@ Retorna o número de elementos em um conjunto cuja chave corresponde a uma chave
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chaves*\
 A chave dos elementos do set a serem correspondidos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 1 se o set contém um elemento cuja chave de classificação corresponde à chave de parâmetro. 0 se o set não contiver um elemento com uma chave correspondente.
 
@@ -527,7 +527,7 @@ Retorna um iterador const que trata o primeiro elemento em um conjunto invertido
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional invertido const que trata do primeiro elemento em um set invertido ou que trata do que foi o último elemento do set não invertido.
 
@@ -573,7 +573,7 @@ Retorna um iterador const que trata o local após o último elemento em um conju
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador const bidirecional inverso que aborda a localização que vem após o último elemento em um set invertido (o local que precedeu o primeiro elemento no set não invertido).
 
@@ -693,12 +693,12 @@ emplace(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no set, a menos que ele já contenha um elemento cujo valor seja ordenado de maneira equivalente.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um [par](../standard-library/pair-structure.md) cujo componente bool retornará true se uma inserção tiver sido feita e false se o map já contiver um elemento cujo valor tinha um valor equivalente na ordenação. O componente de iterador do par de valores retornado retorna o endereço em que um novo elemento foi inserido (se o componente bool é true) ou em que o elemento já estava localizado (se o componente bool é false).
 
@@ -773,7 +773,7 @@ iterator emplace_hint(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no set, a menos que o set já contenha esse elemento ou, de modo geral, que ele já contenha um elemento cujo valor seja ordenada de maneira equivalente.
@@ -781,7 +781,7 @@ Os argumentos encaminhados para construir um elemento a ser inserido no set, a m
 *posição*\
 O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador para o elemento recém-inserido.
 
@@ -845,7 +845,7 @@ Testa se um conjunto está vazio.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o conjunto estiver vazio; **`false`** se o conjunto não estiver vazio.
 
@@ -890,7 +890,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O iterador que ultrapassa o fim. Se o conjunto estiver vazio, então, `set::end() == set::begin()`.
 
@@ -912,12 +912,12 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um par de iteradores em que o primeiro é o [lower_bound](#lower_bound) e o segundo é o [upper_bound](#upper_bound) da chave.
 
@@ -997,7 +997,7 @@ size_type erase(
     const key_type& Key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Posição*\
 A posição do elemento a ser removido.
@@ -1011,7 +1011,7 @@ A posição logo após o último elemento a ser removido.
 *Chaves*\
 O valor de chave dos elementos a serem removidos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Para as duas primeiras funções membro, é um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou, se esse elemento não existe, é um elemento que é o final do set.
 
@@ -1105,12 +1105,12 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chaves*\
 O valor da chave a ser comparado pela chave de classificação de um elemento do conjunto que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador que se refere ao local de um elemento com uma chave especificada ou o local que substitui o último elemento no conjunto (`set::end()`) se nenhuma correspondência for encontrada para a chave.
 
@@ -1189,7 +1189,7 @@ Retorna uma cópia do objeto alocador usado para construir o set.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O alocador usado pelo set para gerenciar a memória, que é o parâmetro de modelo `Allocator`.
 
@@ -1293,7 +1293,7 @@ void insert(
 IList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Val*\
 O valor de um elemento a ser inserido no conjunto, a menos que ele já contenha um elemento cujo valor seja ordenado de modo equivalente.
@@ -1316,7 +1316,7 @@ Argumento da função de modelo que atende aos requisitos de um [iterador de ent
 *IList*\
 O [initializer_list](../standard-library/initializer-list.md) do qual copiar os elementos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 As funções de membro de elemento único, (1) e (2), retornam um [par](../standard-library/pair-structure.md) cujo **`bool`** componente é true se uma inserção foi feita e false se o conjunto já continha um elemento de valor equivalente na ordenação. O componente do iterador do par de valor de retorno aponta para o elemento inserido recentemente se o **`bool`** componente for verdadeiro ou para o elemento existente se o **`bool`** componente for false.
 
@@ -1456,7 +1456,7 @@ Recupera uma cópia do objeto de comparação usada para ordenar chaves em um co
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o objeto de função que um set usa para ordenar seus elementos, que é o parâmetro de modelo `Traits`.
 
@@ -1573,12 +1573,12 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador ou `const_iterator` que tratará a localização de um elemento em um set com uma chave, que é igual ou maior que a chave de argumento ou que tratará o local após o último elemento no set se nenhuma correspondência for encontrada para a chave.
 
@@ -1639,7 +1639,7 @@ Retorna o comprimento máximo do conjunto.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O comprimento máximo possível do set.
 
@@ -1673,7 +1673,7 @@ set& operator=(const set& right);
 set& operator=(set&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
 O `set` fornecendo novos elementos para serem atribuídos a este `set`.
@@ -1747,7 +1747,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional invertido que trata do primeiro elemento em um set invertido ou que trata do que foi o último elemento do set não invertido.
 
@@ -1859,7 +1859,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional inverso que aborda a localização que vem após o último elemento em um set invertido (o local que precedeu o primeiro elemento no set não invertido).
 
@@ -1987,7 +1987,7 @@ set(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *&*\
 A classe de alocador de armazenamento a ser usada para este objeto definido, cujo padrão é `Allocator` .
@@ -2145,7 +2145,7 @@ Retorna o número de elementos no conjunto.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O comprimento atual do set.
 
@@ -2199,7 +2199,7 @@ void swap(
     set<Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
 O set de argumentos que fornece os elementos a serem trocados com o set de destino.
@@ -2268,12 +2268,12 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um `iterator` ou `const_iterator` que aborda o local de um elemento em um conjunto com uma chave maior que a chave de argumento, ou que resolve o local com sucesso no último elemento no conjunto, se nenhuma correspondência for encontrada para a chave.
 
@@ -2334,7 +2334,7 @@ Recupera uma cópia do objeto de comparação usada para ordenar valores de elem
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o objeto de função que um set usa para ordenar seus elementos, que é o parâmetro de modelo `Traits`.
 

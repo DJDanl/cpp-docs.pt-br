@@ -7,19 +7,19 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 8e662e4c13012f31014817489b61ee3ed6bc36e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 083209f0121ac38d8adf81975577257e4e23a393
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202292"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845426"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedefs
 
-||||
-|-|-|-|
-|[cadeia de caracteres](#string)|[u16string](#u16string)|[u32string](#u32string)|
-|[wstring](#wstring)|
+[Strings](#string)\
+[u16string](#u16string)\
+[u32string](#u32string)\
+[wstring](#wstring)
 
 ## <a name="string"></a>Cadeia de caracteres <a name="string"></a>
 
@@ -43,7 +43,7 @@ basic_string<char> str("");
 
 Para obter uma lista de construtores de cadeia de caracteres, consulte [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="u16string"></a><a name="u16string"></a>u16string
+## <a name="u16string"></a><a name="u16string"></a> u16string
 
 Um tipo que descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) com elementos do tipo **`char16_t`** .
 
@@ -57,7 +57,7 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 
 Para obter uma lista de construtores de cadeia de caracteres, consulte [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="u32string"></a><a name="u32string"></a>u32string
+## <a name="u32string"></a><a name="u32string"></a> u32string
 
 Um tipo que descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) com elementos do tipo **`char32_t`** .
 
@@ -71,7 +71,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 Para obter uma lista de construtores de cadeia de caracteres, consulte [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="wstring"></a><a name="wstring"></a>wstring
+## <a name="wstring"></a><a name="wstring"></a> wstring
 
 Um tipo que descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) com elementos do tipo **`wchar_t`** .
 

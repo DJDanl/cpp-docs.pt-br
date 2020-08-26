@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403862"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837782"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: associando dinamicamente colunas de dados (ODBC)
 
@@ -92,12 +92,12 @@ Associar dinamicamente as colunas adicionadas em tempo de execução requer as s
 
 As quatro listas necessárias com as quais trabalhar são mostradas na tabela a seguir.
 
-|||
-|-|-|
-|**Current-Table-Columns**| (Lista 1 na ilustração) Uma lista das colunas atualmente na tabela na fonte de dados. Essa lista pode corresponder à lista de colunas atualmente associadas em seu conjunto de registros.|
-|**Bound-Recordset-Columns**| (Lista 2 na ilustração) Uma lista das colunas associadas em seu conjunto de registros. Essas colunas já têm instruções RFX em sua função `DoFieldExchange`.|
-|**Columns-To-Bind-Dynamically**| (Lista 3 na ilustração) Uma lista de colunas na tabela, mas não em seu conjunto de registros. Essas são as colunas que você deseja associar dinamicamente.|
-|**Dynamic-Column-Values**| (Lista 4 na ilustração) Uma lista que contém armazenamento para os valores recuperados das colunas que você associa dinamicamente. Os elementos dessa lista correspondem aos de Columns-to-Bind-Dynamically, um a um.|
+| Lista | Descrição |
+|--|--|
+| **Current-Table-Columns** | (Lista 1 na ilustração) Uma lista das colunas atualmente na tabela na fonte de dados. Essa lista pode corresponder à lista de colunas atualmente associadas em seu conjunto de registros. |
+| **Bound-Recordset-Columns** | (Lista 2 na ilustração) Uma lista das colunas associadas em seu conjunto de registros. Essas colunas já têm instruções RFX em sua função `DoFieldExchange`. |
+| **Columns-To-Bind-Dynamically** | (Lista 3 na ilustração) Uma lista de colunas na tabela, mas não em seu conjunto de registros. Essas são as colunas que você deseja associar dinamicamente. |
+| **Dynamic-Column-Values** | (Lista 4 na ilustração) Uma lista que contém armazenamento para os valores recuperados das colunas que você associa dinamicamente. Os elementos dessa lista correspondem aos de Columns-to-Bind-Dynamically, um a um. |
 
 ### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> Como criar suas listas
 

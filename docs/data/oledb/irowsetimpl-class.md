@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: f440bb891c30033962208c3e89648bd05ba3f81b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 470755744783272245ca3aa8e4b57e2943db5fae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840395"
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 
@@ -134,7 +134,7 @@ Unidade de armazenamento para todos os identificadores de linha mantidos pelo pr
 
 ### <a name="methods"></a>Métodos
 
-|||
+| Nome | Descrição |
 |-|-|
 |[AddRefRows](#addrefrows)|Adiciona uma contagem de referência em um identificador de linha existente.|
 |[CreateRow](#createrow)|Chamado por [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) para alocar um novo `HROW` . Não chamado diretamente pelo usuário.|
@@ -149,7 +149,7 @@ Unidade de armazenamento para todos os identificadores de linha mantidos pelo pr
 
 ### <a name="data-members"></a>Membros de dados
 
-|||
+| Nome | Descrição |
 |-|-|
 |[m_bCanFetchBack](#bcanfetchback)|Indica se um provedor dá suporte à busca retroativa.|
 |[m_bCanScrollBack](#bcanscrollback)|Indica se um provedor pode fazer com que o cursor faça a rolagem para trás.|
@@ -161,7 +161,7 @@ Unidade de armazenamento para todos os identificadores de linha mantidos pelo pr
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) é a interface base do conjunto de linhas.
 
-## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a>IRowsetImpl::AddRefRows
+## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
 Adiciona uma contagem de referência em um identificador de linha existente.
 
@@ -178,7 +178,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 Consulte [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="irowsetimplcreaterow"></a><a name="createrow"></a>IRowsetImpl::CreateRow
+## <a name="irowsetimplcreaterow"></a><a name="createrow"></a> IRowsetImpl::CreateRow
 
 Um método auxiliar chamado por [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) para alocar um novo `HROW` .
 
@@ -205,7 +205,7 @@ Uma matriz de `HROW` s retornada ao chamador com os identificadores de linha rec
 
 Se a linha existir, esse método chamará [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) e retornará. Caso contrário, ele aloca uma nova instância da variável de modelo de classe e a adiciona ao [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).
 
-## <a name="irowsetimplgetdata"></a><a name="getdata"></a>IRowsetImpl:: GetData
+## <a name="irowsetimplgetdata"></a><a name="getdata"></a> IRowsetImpl:: GetData
 
 Recupera dados da cópia do conjunto de linhas da linha.
 
@@ -231,7 +231,7 @@ Alguns parâmetros correspondem a parâmetros de *referência do programador OLE
 
 Também manipula a conversão de dados usando a DLL de conversão de dados OLE DB.
 
-## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a>IRowsetImpl::GetDBStatus
+## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a> IRowsetImpl::GetDBStatus
 
 Retorna os sinalizadores de status DBSTATUS para o campo especificado.
 
@@ -250,11 +250,11 @@ no A linha atual.
 *columnNames*<br/>
 no A coluna para a qual o status está sendo solicitado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Os sinalizadores [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) para a coluna.
 
-## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a>IRowsetImpl:: GetNextRows
+## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a> IRowsetImpl:: GetNextRows
 
 Busca linhas sequencialmente, lembrando da posição anterior.
 
@@ -272,7 +272,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 Consulte [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a>IRowsetImpl::IRowsetImpl
+## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
 O construtor.
 
@@ -286,7 +286,7 @@ IRowsetImpl();
 
 Normalmente, você não precisa chamar esse método diretamente.
 
-## <a name="irowsetimplrefrows"></a><a name="refrows"></a>IRowsetImpl::RefRows
+## <a name="irowsetimplrefrows"></a><a name="refrows"></a> IRowsetImpl::RefRows
 
 Chamado por [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) e [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) para incrementar ou liberar uma contagem de referência para um identificador de linha existente.
 
@@ -304,11 +304,11 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 Consulte [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor HRESULT padrão.
 
-## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a>IRowsetImpl:: ReleaseRows
+## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a> IRowsetImpl:: ReleaseRows
 
 Libera linhas.
 
@@ -326,7 +326,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 Consulte [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a>IRowsetImpl:: RestartPosition
+## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a> IRowsetImpl:: RestartPosition
 
 Reposiciona a próxima posição de busca em sua posição inicial; ou seja, sua posição quando o conjunto de linhas foi criado pela primeira vez.
 
@@ -344,7 +344,7 @@ Consulte [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877
 
 A posição do conjunto de linhas é indefinida até que `GetNextRow` seja chamado. Você pode mover para trás em um rowet chamando `RestartPosition` e, em seguida, buscando ou rolando para trás.
 
-## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a>IRowsetImpl::SetDBStatus
+## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a> IRowsetImpl::SetDBStatus
 
 Define os sinalizadores de status de DBSTATUS para o campo especificado.
 
@@ -367,7 +367,7 @@ A linha atual.
 *columnInfo*<br/>
 A coluna para a qual o status está sendo definido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor HRESULT padrão.
 
@@ -375,7 +375,7 @@ Um valor HRESULT padrão.
 
 O provedor substitui essa função para fornecer processamento especial para DBSTATUS_S_ISNULL e DBSTATUS_S_DEFAULT.
 
-## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a>IRowsetImpl:: m_bCanFetchBack
+## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a> IRowsetImpl:: m_bCanFetchBack
 
 Indica se um provedor dá suporte à busca retroativa.
 
@@ -389,7 +389,7 @@ unsigned m_bCanFetchBack:1;
 
 Vinculado à `DBPROP_CANFETCHBACKWARDS` propriedade no `DBPROPSET_ROWSET` grupo. O provedor deve oferecer suporte `DBPROP_CANFETCHBACKWARDS` para `m_bCanFetchBackwards` ser **`true`** .
 
-## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a>IRowsetImpl:: m_bCanScrollBack
+## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a> IRowsetImpl:: m_bCanScrollBack
 
 Indica se um provedor pode fazer com que o cursor faça a rolagem para trás.
 
@@ -403,7 +403,7 @@ unsigned  m_bCanScrollBack:1;
 
 Vinculado à `DBPROP_CANSCROLLBACKWARDS` propriedade no `DBPROPSET_ROWSET` grupo. O provedor deve oferecer suporte `DBPROP_CANSCROLLBACKWARDS` para `m_bCanFetchBackwards` ser **`true`** .
 
-## <a name="irowsetimplm_breset"></a><a name="breset"></a>IRowsetImpl:: m_bReset
+## <a name="irowsetimplm_breset"></a><a name="breset"></a> IRowsetImpl:: m_bReset
 
 Um sinalizador de bit usado para determinar se a posição do cursor está definida no conjunto de linhas.
 
@@ -417,7 +417,7 @@ unsigned m_bReset:1;
 
 Se o consumidor chamar [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) com um negativo `lOffset` ou *galinha* e `m_bReset` for verdadeiro, o `GetNextRows` passará para o final do conjunto de linhas. Se `m_bReset` for false, o consumidor receberá um código de erro, em conformidade com a especificação de OLE DB. O `m_bReset` sinalizador é definido como **`true`** quando o conjunto de linhas é criado pela primeira vez e quando o consumidor chama [IRowsetImpl:: RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Ele é definido como **`false`** quando você chama `GetNextRows` .
 
-## <a name="irowsetimplm_irowset"></a><a name="irowset"></a>IRowsetImpl:: m_iRowset
+## <a name="irowsetimplm_irowset"></a><a name="irowset"></a> IRowsetImpl:: m_iRowset
 
 Um índice para o conjunto de linhas que representa o cursor.
 
@@ -427,7 +427,7 @@ Um índice para o conjunto de linhas que representa o cursor.
 DBROWOFFSET m_iRowset;
 ```
 
-## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a>IRowsetImpl:: m_rgRowHandles
+## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a> IRowsetImpl:: m_rgRowHandles
 
 Um mapa de identificadores de linha atualmente contidos pelo provedor em resposta a `GetNextRows` .
 

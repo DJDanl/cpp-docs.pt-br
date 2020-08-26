@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331955"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845049"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants namespace
 
@@ -107,7 +107,7 @@ namespace regex_constants {
 
 O namespace `regex_constants` encapsula vários tipos de sinalizador e seus valores de sinalizador associados.
 
-|||
+|Nome|Descrição|
 |-|-|
 |[error_type](#error_type)|Sinalizadores para relatar erros de sintaxe de expressão regular.|
 |[match_flag_type](#match_flag_type)|Sinalizadores para opções de correspondência de expressões regulares.|
@@ -115,11 +115,11 @@ O namespace `regex_constants` encapsula vários tipos de sinalizador e seus valo
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<regex>
+**Cabeçalho:**\<regex>
 
 **Namespace:** std
 
-## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants:error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a> regex_constants:: error_type
 
 Sinalizadores para relatar erros de sintaxe de expressão regular.
 
@@ -180,7 +180,7 @@ O tipo é um tipo enumerado que descreve um objeto que pode conter sinalizadores
 
 `error_backref` -- a expressão continha uma referência inversa inválida
 
-## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants:match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a> regex_constants:: match_flag_type
 
 Sinalizadores para opções de correspondência de expressões regulares.
 
@@ -238,7 +238,7 @@ Os sinalizadores de formato são:
 
 `format_first_only` -- não pesquise correspondências depois da primeira
 
-## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants:syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a> regex_constants:: syntax_option_type
 
 Sinalizadores para a seleção de opções de sintaxe.
 
@@ -292,9 +292,9 @@ Os modificadores de sintaxe são:
 
 [\<regex>](../standard-library/regex.md)\
 [Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funções de> regex](../standard-library/regex-functions.md)\
-[regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operadores de> regex](../standard-library/regex-operators.md)\
-[classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[classe regex_traits](../standard-library/regex-traits-class.md)\
-[\<> de reex](../standard-library/regex-typedefs.md)
+[\<regex> funções](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<regex> operações](../standard-library/regex-operators.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> TYPEDEFs](../standard-library/regex-typedefs.md)

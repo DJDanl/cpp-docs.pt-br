@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215134"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846570"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -101,7 +101,7 @@ estrutura de dados **TM** .
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 **strftime** retorna o número de caracteres colocados em *strDest* e **wcsftime** retorna o número correspondente de caracteres largos.
 
@@ -127,9 +127,8 @@ O argumento de *formato* consiste em um ou mais códigos; como na **printf**, os
 
 As funções **strftime** dão suporte a esses códigos de formatação:
 
-|||
-|-|-|
 |Código|Cadeia de caracteres de substituição|
+|-|-|
 |**% a**|Nome abreviado do dia da semana na localidade|
 |**% A**|Nome completo do dia da semana na localidade|
 |**% b**|Nome do mês abreviado na localidade|
@@ -172,7 +171,7 @@ Como na função **printf** , o **#** sinalizador pode prefixar qualquer código
 
 |Código de formatação|Significado|
 |-----------------|-------------|
-|**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **% #h**, **% #n**, **% #p**, **% #t**, **% #u**, **% #w**, **% #X**, **% #z**, **% #Z**,**%#%**|**#** sinalizador ignorado.|
+|**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **% #h**, **% #n**, **% #p**, **% #t**, **% #u**, **% #w**, **% #X**, **% #z**, **% #Z**, **%#%**|**#** sinalizador ignorado.|
 |**% #c**|Representação de data e hora por extenso, apropriada para a localidade. Por exemplo: "Terça-feira, 14 de março de 1995, 12:41:29".|
 |**% #x**|Representação de data por extenso, apropriada para a localidade. Por exemplo: "Terça-feira, 14 de março de 1995".|
 |**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **% #I**, **% #j**, **% #m**, **% #M**, **% #r**, **% #R**, **% #S**, **% #T**, **% #U**, **% #V**, **% #W**, **% #y**, **% #Y**|Remover zeros à esquerda ou espaços (se houver).|

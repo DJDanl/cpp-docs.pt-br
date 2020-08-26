@@ -20,22 +20,26 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217383"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832536"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
-||||
-|-|-|-|
-|[operador! =](#op_neq)|[operador&gt;](#op_gt)|[operador&gt;&gt;](#op_gt_gt)|
-|[operador&gt;=](#op_gt_eq)|[operador&lt;](#op_lt)|[operador&lt;&lt;](#op_lt_lt)|
-|[operador&lt;=](#op_lt_eq)|[operador +](#op_add)|[operador = =](#op_eq_eq)|
+[operador! =](#op_neq)\
+[operador&gt;](#op_gt)\
+[operador&gt;&gt;](#op_gt_gt)\
+[operador&gt;=](#op_gt_eq)\
+[operador&lt;](#op_lt)\
+[operador&lt;&lt;](#op_lt_lt)\
+[operador&lt;=](#op_lt_eq)\
+[operador +](#op_add)\
+[operador = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_add"></a>operador +
+## <a name="operator"></a><a name="op_add"></a> operador +
 
 Concatena dois objetos de cadeia de caracteres.
 
@@ -109,7 +113,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 *Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A cadeia de caracteres que é a concatenação de cadeias de caracteres de entrada.
 
@@ -169,7 +173,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a> operador! =
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é diferente do objeto da cadeia de caracteres à direita.
 
@@ -198,7 +202,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 *Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador não for modo lexicográfico igual ao objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
@@ -260,7 +264,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operador = =
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é igual ao objeto da cadeia de caracteres à direita.
 
@@ -289,7 +293,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 *Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico igual ao objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
@@ -351,7 +355,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operador&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operador&lt;
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que o objeto da cadeia de caracteres à direita.
 
@@ -380,7 +384,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 *Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico menor que o objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
@@ -447,7 +451,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operador&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operador&lt;=
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que ou igual ao objeto da cadeia de caracteres à direita.
 
@@ -476,7 +480,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 *Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico menor ou igual ao objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
@@ -550,7 +554,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operador&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operador&lt;&lt;
 
 Uma função de modelo que grava uma cadeia de caracteres no fluxo de saída.
 
@@ -569,7 +573,7 @@ O fluxo de saída que está sendo gravado.
 *Str*\
 A cadeia de caracteres a ser inserida no fluxo de saída.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Grava o valor da cadeia de caracteres especificada no fluxo de saída *_Ostr*.
 
@@ -577,7 +581,7 @@ Grava o valor da cadeia de caracteres especificada no fluxo de saída *_Ostr*.
 
 A função de modelo sobrecarrega o **operador<<** para inserir um objeto *Str* do modelo de classe [basic_string](../standard-library/basic-string-class.md) no fluxo * \_ OSTR*. A função retorna efetivamente `_Ostr.write( str.c_str, str.size )` .
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operador&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operador&gt;
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que o objeto da cadeia de caracteres à direita.
 
@@ -606,7 +610,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 *Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico maior que o objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
@@ -680,7 +684,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operador&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operador&gt;=
 
 Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que ou igual ao objeto da cadeia de caracteres à direita.
 
@@ -709,7 +713,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 *Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o objeto de cadeia de caracteres no lado esquerdo do operador for modo lexicográfico maior ou igual ao objeto de cadeia de caracteres no lado direito; caso contrário **`false`** .
 
@@ -783,7 +787,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>operador&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> operador&gt;&gt;
 
 Uma função de modelo que grava uma cadeia de caracteres de um fluxo de entrada.
 
@@ -802,7 +806,7 @@ O fluxo de entrada usado para extrair a sequência
 *Certo*\
 A cadeia de caracteres que está sendo extraída do fluxo de entrada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Lê o valor da cadeia de caracteres especificada de *_Istr* e a retorna à *direita*.
 

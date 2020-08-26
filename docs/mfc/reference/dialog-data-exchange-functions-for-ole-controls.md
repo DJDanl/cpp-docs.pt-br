@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: b5a7263ae5cac81508ab2450a530132879ed45b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9133c30dd1ac069145862d4bf61ba0bc0d504838
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222817"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837353"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funções da troca de dados da caixa de diálogo para controles OLE
 
@@ -31,7 +31,7 @@ Este tópico lista as funções de DDX_OC usadas para trocar dados entre uma pro
 
 ### <a name="ddx_oc-functions"></a>Funções de DDX_OC
 
-|||
+|Nome|Descrição|
 |-|-|
 |[DDX_OCBool](#ddx_ocbool)|Gerencia a transferência de dados **bool** entre uma propriedade de um controle OLE e um membro de dados **bool** .|
 |[DDX_OCBoolRO](#ddx_ocboolro)|Gerencia a transferência de dados **bool** entre uma propriedade somente leitura de um controle OLE e um membro de dados **bool** .|
@@ -46,7 +46,7 @@ Este tópico lista as funções de DDX_OC usadas para trocar dados entre uma pro
 |[DDX_OCText](#ddx_octext)|Gerencia a transferência de dados de **CString** entre uma propriedade de um controle OLE e um membro de dados **CString** .|
 |[DDX_OCTextRO](#ddx_octextro)|Gerencia a transferência de dados de **CString** entre uma propriedade somente leitura de um controle OLE e um membro de dados **CString** .|
 
-## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool
+## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a> DDX_OCBool
 
 A `DDX_OCBool` função gerencia a transferência de dados **bool** entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **bool** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -80,7 +80,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho:** AFXDISP. h
 
-## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO
+## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a> DDX_OCBoolRO
 
 A `DDX_OCBoolRO` função gerencia a transferência de dados **bool** entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **bool** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -114,7 +114,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_occolor"></a><a name="ddx_occolor"></a>DDX_OCColor
+## <a name="ddx_occolor"></a><a name="ddx_occolor"></a> DDX_OCColor
 
 A `DDX_OCColor` função gerencia a transferência de dados de OLE_COLOR entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados de OLE_COLOR da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -148,7 +148,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO
+## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a> DDX_OCColorRO
 
 A `DDX_OCColorRO` função gerencia a transferência de dados de OLE_COLOR entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados de OLE_COLOR da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -182,7 +182,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat
+## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a> DDX_OCFloat
 
 A `DDX_OCFloat` função gerencia a transferência de **`float`** (ou **`double`** ) dados entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um **`float`** **`double`** membro de dados (ou) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -222,7 +222,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO
+## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a> DDX_OCFloatRO
 
 A `DDX_OCFloatRO` função gerencia a transferência de **`float`** (ou **`double`** ) dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um **`float`** **`double`** membro de dados (ou) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -262,7 +262,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_ocint"></a><a name="ddx_ocint"></a>DDX_OCInt
+## <a name="ddx_ocint"></a><a name="ddx_ocint"></a> DDX_OCInt
 
 A `DDX_OCInt` função gerencia a transferência de **`int`** (ou **`long`** ) dados entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um **`int`** **`long`** membro de dados (ou) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -302,7 +302,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO
+## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a> DDX_OCIntRO
 
 A `DDX_OCIntRO` função gerencia a transferência de **`int`** (ou **`long`** ) dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um **`int`** **`long`** membro de dados (ou) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -342,7 +342,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort
+## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a> DDX_OCShort
 
 A `DDX_OCShort` função gerencia a transferência de dados curtos entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados curto da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -376,7 +376,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO
+## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a> DDX_OCShortRO
 
 A `DDX_OCShortRO` função gerencia a transferência de dados curtos entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados curto da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -410,7 +410,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_octext"></a><a name="ddx_octext"></a>DDX_OCText
+## <a name="ddx_octext"></a><a name="ddx_octext"></a> DDX_OCText
 
 A função **DDX_OCText** gerencia a transferência de dados de **CString** entre uma propriedade de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **CString** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
@@ -444,7 +444,7 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="ddx_octextro"></a><a name="ddx_octextro"></a>DDX_OCTextRO
+## <a name="ddx_octextro"></a><a name="ddx_octextro"></a> DDX_OCTextRO
 
 A `DDX_OCTextRO` função gerencia a transferência de `CString` dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um `CString` membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 

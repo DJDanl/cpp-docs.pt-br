@@ -1,19 +1,19 @@
 ---
-title: pragma (C++ atributo com)
+title: pragma (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 56b1aa4bf445095b86a1ea6792bfc78f45266e9a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5683a6f52eccf9eae7c29010849a148e506b286
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166478"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836163"
 ---
-# <a name="pragma"></a>(pragma)
+# <a name="pragma"></a>pragma
 
 Emite a cadeia de caracteres especificada no arquivo. idl gerado sem o uso de aspas.
 
@@ -50,19 +50,17 @@ __interface A
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
-|**Aplica-se a**|Lugares|
+|**Aplica-se a**|Qualquer lugar|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos autônomos](stand-alone-attributes.md)<br/>
 [pack](../../preprocessor/pack.md)

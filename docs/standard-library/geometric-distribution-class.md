@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 6a9e2c55da7278c50d43a63a4cce79d2a21f573c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98ecbc96d104a900d222c660de7f16563f566a9c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233178"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837873"
 ---
 # <a name="geometric_distribution-class"></a>Classe geometric_distribution
 
@@ -76,10 +76,8 @@ O mecanismo do gerador de número aleatório uniforme. Para possíveis tipos, co
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário com uma distribuição geométrica. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
-|`geometric_distribution::operator()`||[param_type](#param_type)|
+[geometric_distribution](#geometric_distribution)\
+[param_type](#param_type)
 
 A função de propriedade `p()` retorna o valor do parâmetro de distribuição armazenado `p`.
 
@@ -209,7 +207,7 @@ Distribution for 100 samples:
 
 **Namespace:** std
 
-## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution:: geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a> geometric_distribution:: geometric_distribution
 
 Constrói a distribuição.
 
@@ -234,7 +232,7 @@ o primeiro construtor constrói um objeto cujo valor `p` armazenado contém o va
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::p aram_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a> geometric_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 

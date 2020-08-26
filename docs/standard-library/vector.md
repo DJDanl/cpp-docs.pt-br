@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 4e9f3e4a35cd772897e326fafedf359062e6128b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cecff1e5e0014c4f1a4294a5c6ba25c5d38da67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224520"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840005"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -93,24 +93,24 @@ O segundo vetor (à direita) em uma operação de comparação.
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[operador! =](../standard-library/vector-operators.md#op_neq)|Testa se o objeto vector do lado esquerdo do operador não é igual ao objeto vector do lado direito.|
-|[<do operador](../standard-library/vector-operators.md#op_lt)|Testa se o objeto vector do lado esquerdo do operador é menor que o objeto vector do lado direito.|
+|[<do operador ](../standard-library/vector-operators.md#op_lt)|Testa se o objeto vector do lado esquerdo do operador é menor que o objeto vector do lado direito.|
 |[operador\<=](../standard-library/vector-operators.md#op_gt_eq)|Testa se o objeto vector do lado esquerdo do operador é menor ou igual ao objeto vector do lado direito.|
 |[operador = =](../standard-library/vector-operators.md#op_eq_eq)|Testa se o objeto vector do lado esquerdo do operador é igual ao objeto vector do lado direito.|
-|[>do operador](../standard-library/vector-operators.md#op_gt)|Testa se o objeto vector do lado esquerdo do operador é maior que o objeto vector do lado direito.|
+|[>do operador ](../standard-library/vector-operators.md#op_gt)|Testa se o objeto vector do lado esquerdo do operador é maior que o objeto vector do lado direito.|
 |[>do operador =](../standard-library/vector-operators.md#op_gt_eq)|Testa se o objeto vector do lado esquerdo do operador é maior ou igual ao objeto vector do lado direito.|
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe vector](../standard-library/vector-class.md)|Um modelo de classe de contêineres de sequência que organizam elementos de um determinado tipo em uma organização linear e permitem acesso aleatório rápido a qualquer elemento.|
 
 ### <a name="specializations"></a>Especializações
 
-|||
+|Nome|Descrição|
 |-|-|
 |hash|Retorna um hash do vetor.|
 |[\<bool>classe vector](../standard-library/vector-bool-class.md)|Uma especialização completa do vetor de modelo de classe para elementos do tipo **`bool`** com um alocador para o tipo subjacente usado pela especialização.|

@@ -232,16 +232,16 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 18f158bd9e984c750769742c43c4dd3b65e5e731
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752476"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836628"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 
-A `CMFCRibbonBaseElement` classe é a classe base para todos os elementos que você pode adicionar a uma [barra de fita](../../mfc/reference/cmfcribbonbar-class.md). Exemplos de elementos de fita são botões de fita, caixas de seleção de fita e caixas de combinação de fita.
+A `CMFCRibbonBaseElement` classe é a classe base para todos os elementos que você pode adicionar a uma [barra de faixa de faixas](../../mfc/reference/cmfcribbonbar-class.md). Exemplos de elementos de faixa de lista são botões de faixa de, caixas de seleção de faixa de quadros e caixas de combinação de faixa de
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -261,175 +261,175 @@ class CMFCRibbonBaseElement : public CObject
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonBaseElement::AddToKeylist](#addtokeylist)|Adiciona uma dica-chave para o elemento de fita a uma matriz de dicas de tecla.|
-|[CMFCRibbonBaseElement::AddtolistBox](#addtolistbox)|Adiciona um elemento de fita à caixa de lista de comandos de fita especificada.|
-|[CMFCRibbonBaseElement::canbeaddedtoQuickAccesstoolbar](#canbeaddedtoquickaccesstoolbar)|Indica se o elemento de fita pode ser adicionado à barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indica se o tamanho do elemento da fita pode ser compacto.|
-|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indica se a altura do elemento da fita pode aumentar verticalmente até a altura de uma linha de fita.|
-|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indica se a largura do elemento de fita pode mudar.|
-|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Limpa as configurações de dimensão do elemento da fita.|
-|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Fecha o menu pop-up para o elemento fita.|
-|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copia o estado do `CMFCRibbonBaseElement` especificado para o objeto atual.|
-|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Destrói o elemento da fita.|
-|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Desenha a imagem para o elemento da fita.|
-|[CMFCRibbonBaseElement::Encontrar](#find)|Retorna o ponteiro especificado para o elemento de fita se ele apontar para o objeto atual.|
-|[CMFCRibbonBaseElement::FindbyData](#findbydata)|Recupera um ponteiro para o elemento de fita se ele contiver os dados especificados.|
-|[CMFCRibbonBaseelement::Findbyid](#findbyid)|Recupera um ponteiro para o elemento de fita se esse elemento for identificado pelo ID de comando especificado.|
-|[CMFCRibbonBaseelement::FindbyOriginal](#findbyoriginal)|Recupera um ponteiro para o elemento de fita se o elemento de fita original corresponder ao elemento de fita especificado.|
-|[CMFCRibbonBaseelement::getCompactSize](#getcompactsize)|Retorna o tamanho compacto do elemento da fita.|
-|[CMFCRibbonBaseelement::getData](#getdata)|Recupera os dados definidos pelo usuário associados ao elemento fita.|
-|[CMFCRibbonBaseElement::GetDescription](#getdescription)|Retorna a descrição do elemento fita.|
-|[CMFCRibbonBaseElement::GetD roppedDown](#getdroppeddown)|Recupera um ponteiro para o elemento de fita se seu menu pop-up for derrubado.|
-|[CMFCRibbonBaseElement::GetElements](#getelements)|Adiciona o elemento de fita atual à matriz especificada.|
-|[CMFCRibbonBaseelement::getelementsbyid](#getelementsbyid)|Adiciona o elemento de fita atual à matriz especificada se o elemento de fita atual contiver o ID de comando especificado.|
-|[CMFCRibbonBaseelement::gethighlighted](#gethighlighted)|Recupera um ponteiro para o elemento de fita se ele for destacado.|
-|[CMFCRibbonBaseelement::getid](#getid)|Retorna o ID de comando do elemento de fita.|
-|[CMFCRibbonBaseElement::getImageSize](#getimagesize)|Retorna o tamanho da imagem do elemento da fita.|
-|[CMFCRibbonBaseelement::getIntermediateSize](#getintermediatesize)|Retorna o tamanho do elemento de fita em seu estado intermediário.|
-|[CMFCRibbonBaseelement::GetKeys](#getkeys)|Retorna a dica de tecla associada ao elemento da fita.|
-|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Recupera o retângulo de limite da ponta de chave para o elemento da fita.|
-|[CMFCRibbonBaseelement::getkeytipsize](#getkeytipsize)|Recupera o tamanho do texto da dica-chave.|
-|[CMFCRibbonBaseelement::getLocationInGroup](#getlocationingroup)|Indica a localização do display do elemento fita em um grupo de fita.|
-|[CMFCRibbonBaseelement::getMenuKeys](#getmenukeys)|Retorna as teclas associadas a um botão.|
-|[CMFCRibbonBaseelement::getnotifyid](#getnotifyid)|Recupera o ID do comando de notificação para o elemento de fita.|
-|[CMFCRibbonBaseelement::GetOriginal](#getoriginal)|Recupera o elemento de fita original.|
-|[CMFCRibbonBaseelement::getParentcategory](#getparentcategory)|Recupera a categoria de fita para o elemento de fita.|
-|[CMFCRibbonBaseElement::getParentPanel](#getparentpanel)|Recupera o painel de fita que contém o elemento da fita.|
-|[CMFCRibbonBaseelement::getParentribbonbar](#getparentribbonbar)|Recupera a barra de fita dos pais para o elemento da fita.|
-|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Recupera a janela pai para o elemento da fita.|
-|[CMFCRibbonBaseelement::getpressed](#getpressed)|Recupera um ponteiro para o elemento de fita se o usuário pressioná-lo no momento.|
-|[CMFCRibbonBaseElement::getQuickAccesstoolbariD](#getquickaccesstoolbarid)|Recupera o ID de comando do elemento de fita quando ele está localizado na barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBaseElement::GetRect](#getrect)|Retorna o retângulo delimitador do elemento da fita.|
-|[CMFCRibbonBaseelement::getRegularsize](#getregularsize)|Retorna o tamanho regular do elemento da fita.|
-|[CMFCRibbonBaseElement::getsize](#getsize)|Retorna o tamanho atual do elemento de fita.|
-|[CMFCRibbonBaseElement::getText](#gettext)|Retorna o texto associado ao elemento fita.|
-|[CMFCRibbonBaseelement::GettoolTipText](#gettooltiptext)|Retorna texto da dica de ferramenta do elemento fita.|
-|[CMFCRibbonBaseelement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Recupera a barra de fita de nível superior para o elemento da fita.|
-|[CMFCRibbonBaseElement::Hascompactmode](#hascompactmode)|Especifica se o elemento de fita tem um modo compacto.|
-|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indica se o elemento pai tem foco no teclado.|
-|[CMFCRibbonBaseElement::Hasintermediatemode](#hasintermediatemode)|Especifica se o elemento de fita tem um modo intermediário.|
-|[CMFCRibbonBaseElement::Haslargemode](#haslargemode)|Especifica se o elemento de fita tem um modo grande.|
-|[CMFCRibbonBaseElement::Hasmenu](#hasmenu)|Indica se o elemento de fita tem um menu.|
-|[CMFCRibbonBaseElement::HitTest](#hittest)|Recupera um ponteiro para o elemento de fita se o ponto especificado estiver localizado nele.|
-|[CMFCRibbonBaseElement::IsalignbyColumn](#isalignbycolumn)|Indica se o elemento da fita está alinhado verticalmente com outros elementos de fita.|
-|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indica se o tamanho da imagem do elemento de fita é sempre grande.|
-|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indica se o elemento de fita está no modo de repetição automática.|
-|[CMFCRibbonBaseElement::isChecked](#ischecked)|Especifica se o elemento da fita é verificado.|
-|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Especifica se o elemento de fita está em um modo compacto.|
-|[CMFCRibbonBaseElement::IsDefaultMenu](#isdefaultmenulook)||
-|[CMFCRibbonBaseElement::isDisabled](#isdisabled)|Especifica se o elemento da fita está desativado.|
-|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determina se o elemento de fita exibe um menu pop-up e é descartado.|
-|[CMFCRibbonBaseElement::IsFocused](#isfocused)|Especifica se o elemento de fita tem o foco.|
-|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Indica se o elemento da fita está contido em uma galeria de fitas.|
-|[CMFCRibbonBaseElement::ishighlighted](#ishighlighted)|Especifica se o elemento da fita está destacado.|
-|[CMFCRibbonBaseElement::IsIntermediatemode](#isintermediatemode)|Indica se a imagem atual do elemento de fita é de tamanho intermediário.|
-|[CMFCRibbonBaseElement::IsLargemode](#islargemode)|Indica se a imagem atual do elemento de fita é de grande porte.|
-|[CMFCRibbonBaseElement::ismenumode](#ismenumode)|Indica se o elemento da fita está contido em um menu.|
-|[CMFCRibbonBaseElement::ispressed](#ispressed)|Indica se o usuário clicou no elemento fita.|
-|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indica se o elemento da fita está contido na barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|Indica se o elemento da fita é um separador de tela.|
-|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indica se o elemento da fita está contido em um grupo que exibe uma borda comum.|
-|[CMFCRibbonBaseelement::IsshowtooltiponBottom](#isshowtooltiponbottom)|Indica se a ponta da ferramenta é exibida sob o elemento fita.|
-|[CMFCRibbonBaseElement::IstabStop](#istabstop)|Indica se o elemento de fita pode ser selecionado com o teclado.|
-|[CMFCRibbonBaseElement::isTextAlwaysonRight](#istextalwaysonright)|Indica se o texto para o elemento de fita é exibido à direita.|
-|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Indica se o elemento de fita está atualmente exibido.|
-|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indica se o heigth de exibição do elemento de fita é o mesmo que a altura do display do painel de fita que o contém.|
-|[CMFCRibbonBaseElement::Notificarcomando](#notifycommand)|Envia uma notificação de comando para a janela pai do elemento fita.|
-|[CMFCRibbonBaseElement::NotificarDestaqueListItem](#notifyhighlightlistitem)|Notifica a janela pai da barra de fita quando um usuário destaca um elemento de fita que está localizado em uma lista.|
-|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Adiciona o elemento de fita à barra de ferramentas de acesso rápido especificada.|
-|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Atualiza a dica de ferramenta para o elemento de fita.|
-|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Atualiza o elemento fita em resposta à entrada sustentada do usuário.|
-|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calcula o tamanho do texto para o elemento da fita.|
-|[CMFCRibbonBaseelement::OnchangeMenuHighlight](#onchangemenuhighlight)|Chamado pelo framework quando o destaque muda para um elemento de fita que está localizado em um menu.|
-|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Chamado pela estrutura para desenhar o elemento da fita.|
-|[CMFCRibbonBaseelement::OnDrawKeytip](#ondrawkeytip)|Chamado pelo framework para desenhar a dica-chave para o elemento da fita.|
-|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Chamado pela estrutura quando a imagem do menu para o elemento de fita é desenhada.|
-|[CMFCRibbonBaseelement::Ondrawonlist](#ondrawonlist)|Chamado pela estrutura para desenhar o elemento de fita em uma caixa de lista de comandos.|
-|[CMFCRibbonBaseElement::Onkey](#onkey)|Chamado pelo framework quando o usuário pressiona uma dica de tecla e o elemento de fita tem o foco.|
-|[CMFCRibbonBaseelement::Onmenukey](#onmenukey)||
-|[CMFCRibbonBaseelement::OnRTLChanged](#onrtlchanged)|Chamado pelo framework quando o layout muda de direção.|
-|[CMFCRibbonBaseelement::OnShow](#onshow)|Chamado pela estrutura para mostrar ou ocultar o elemento da fita.|
-|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Chamado pela estrutura quando o elemento de fita vai exibir um menu pop-up.|
-|[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||
-|[CMFCRibbonBaseElement::Redesenhar](#redraw)|Atualiza o display para o elemento fita.|
-|[CMFCRibbonBaseElement::setACCData](#setaccdata)|Define os dados de acessibilidade para o elemento de fita.|
-|[CMFCRibbonBaseElement::setCompactMode](#setcompactmode)|Define o tamanho do display para o elemento da fita.|
-|[CMFCRibbonBaseElement::setData](#setdata)|Associa um item de dados com o elemento fita.|
-|[CMFCRibbonBaseelement::setDefaultMenu](#setdefaultmenulook)||
-|[CMFCRibbonBaseElement::SetDescription](#setdescription)|Define a descrição do elemento da fita.|
-|[CMFCRibbonBaseelement::setID](#setid)|Define o ID de comando do elemento de fita.|
-|[CMFCRibbonBaseElement::setInitialMode](#setinitialmode)|Define o tamanho inicial do display para o elemento da fita.|
-|[CMFCRibbonBaseElement::setKeys](#setkeys)|Define uma dica-chave para o elemento da fita.|
-|[CMFCRibbonBaseElement::setOriginal](#setoriginal)|Define o elemento de fita original para o elemento da fita.|
-|[CMFCRibbonBaseElement::setParentcategory](#setparentcategory)|Define a categoria pai para o elemento de fita.|
-|[CMFCRibbonBaseelement::setParentmenu](#setparentmenu)|Define o recipiente do menu pai para o elemento de fita.|
-|[CMFCRibbonBaseelement::setParentribbonbar](#setparentribbonbar)|Define a barra de fita dos pais para o elemento da fita.|
-|[CMFCRibbonBaseElement::SetRect](#setrect)|Define as dimensões do fot que ele exibe retângulo para o elemento da fita.|
-|[CMFCRibbonBaseElement::setText](#settext)|Define o texto para o elemento da fita.|
-|[CMFCRibbonBaseelement::setTextAlwaysonright](#settextalwaysonright)|Define o texto para que o elemento de fita seja exibido à direita.|
-|[CMFCRibbonBaseElement::settoolTipText](#settooltiptext)|Define o texto da dica de ferramenta para o elemento da fita.|
-|[CMFCRibbonBaseElement::setVisible](#setvisible)|Define o estado de visibilidade do elemento da fita.|
-|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Estica a largura do elemento da fita.|
-|[CMFCRibbonBaseelement::StretchToWholerow](#stretchtowholerow)|Altera a altura do display do elemento da fita para a altura da linha especificada.|
-|[CMFCRibbonBaseElement::UpdatetooltipInfo](#updatetooltipinfo)|Atualiza o texto da dica de ferramenta usando o recurso de comando para o elemento de fita.|
+|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Adiciona um KeyTip para o elemento Ribbon a uma matriz de keytips.|
+|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Adiciona um elemento da faixa de faixas à caixa de listagem de comandos da faixa de lista especificada.|
+|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indica se o elemento da faixa de faixas pode ser adicionado à barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indica se o tamanho do elemento da faixa de faixas pode ser compacto.|
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indica se a altura do elemento da faixa de faixas pode aumentar verticalmente para a altura de uma linha da faixa de faixas.|
+|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indica se a largura do elemento da faixa de faixas pode ser alterada.|
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Limpa as configurações de dimensão do elemento da faixa de opções.|
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Fecha o menu pop-up do elemento Ribbon.|
+|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copia o estado do especificado `CMFCRibbonBaseElement` para o objeto atual.|
+|[CMFCRibbonBaseElement::D estroyCtrl](#destroyctrl)|Destrói o elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::D rawImage](#drawimage)|Desenha a imagem para o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: find](#find)|Retorna o ponteiro especificado para o elemento Ribbon se ele apontar para o objeto atual.|
+|[CMFCRibbonBaseElement::FindByData](#findbydata)|Recupera um ponteiro para o elemento Ribbon se ele contiver os dados especificados.|
+|[CMFCRibbonBaseElement:: FindByID](#findbyid)|Recupera um ponteiro para o elemento Ribbon se esse elemento é identificado pela ID de comando especificada.|
+|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Recupera um ponteiro para o elemento Ribbon se seu elemento Ribbon original corresponde ao elemento Ribbon especificado.|
+|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Retorna o tamanho compacto do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement:: GetData](#getdata)|Recupera os dados definidos pelo usuário associados ao elemento Ribbon.|
+|[CMFCRibbonBaseElement:: GetDescription](#getdescription)|Retorna a descrição do elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Recupera um ponteiro para o elemento Ribbon se o menu pop-up é Descartado.|
+|[CMFCRibbonBaseElement:: GetElements](#getelements)|Adiciona o elemento da faixa de faixas atual à matriz especificada.|
+|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Adiciona o elemento da faixa de faixas atual à matriz especificada se o elemento da faixa de tempo atual contiver a ID de comando especificada.|
+|[CMFCRibbonBaseElement:: realce](#gethighlighted)|Recupera um ponteiro para o elemento Ribbon se ele estiver realçado.|
+|[CMFCRibbonBaseElement:: GetID](#getid)|Retorna a ID de comando do elemento Ribbon.|
+|[CMFCRibbonBaseElement:: getimageize](#getimagesize)|Retorna o tamanho da imagem do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Retorna o tamanho do elemento da faixa de faixas em seu estado intermediário.|
+|[CMFCRibbonBaseElement:: getkeys](#getkeys)|Retorna o KeyTip associado ao elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Recupera o retângulo de limite KeyTip para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Recupera o tamanho do texto KeyTip.|
+|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|Indica o local de exibição do elemento Ribbon em um grupo de faixa de faixas.|
+|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Retorna os keytips associados a um botão.|
+|[CMFCRibbonBaseElement:: getnotificaid](#getnotifyid)|Recupera a ID do comando de notificação para o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: getoriginal](#getoriginal)|Recupera o elemento da faixa de faixas original.|
+|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|Recupera a categoria da faixa de faixas para o elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Recupera o painel da faixa de faixas que contém o elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|Recupera a barra de faixa de faixas pai para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Recupera a janela pai do elemento Ribbon.|
+|[CMFCRibbonBaseElement:: getpressioned](#getpressed)|Recupera um ponteiro para o elemento Ribbon se o usuário o pressiona no momento.|
+|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Recupera a ID de comando do elemento Ribbon quando ele está localizado na barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBaseElement:: GetRect](#getrect)|Retorna o retângulo delimitador do elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Retorna o tamanho regular do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetSize](#getsize)|Retorna o tamanho atual do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement:: gettext](#gettext)|Retorna o texto associado ao elemento Ribbon.|
+|[CMFCRibbonBaseElement:: GetToolTipText](#gettooltiptext)|Retorna o texto da dica de ferramenta do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Recupera a barra de faixa de faixas de nível superior para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Especifica se o elemento Ribbon tem um modo compacto.|
+|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indica se o elemento pai tem o foco do teclado.|
+|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Especifica se o elemento Ribbon tem um modo intermediário.|
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Especifica se o elemento Ribbon tem um modo grande.|
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Indica se o elemento Ribbon tem um menu.|
+|[CMFCRibbonBaseElement:: HitTest](#hittest)|Recupera um ponteiro para o elemento Ribbon se o ponto especificado estiver localizado nele.|
+|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Indica se o elemento da faixa de faixas está alinhado verticalmente com outros elementos da faixa de tipos.|
+|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indica se o tamanho da imagem do elemento da faixa de faixas é sempre grande.|
+|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indica se o elemento da faixa de faixas está no modo de repetição automática.|
+|[CMFCRibbonBaseElement:: IsChecked](#ischecked)|Especifica se o elemento da faixa de opção está marcado.|
+|[CMFCRibbonBaseElement:: iscompactmode](#iscompactmode)|Especifica se o elemento da faixa de faixas está em um modo compacto.|
+|[CMFCRibbonBaseElement::IsDefaultMenuLook](#isdefaultmenulook)||
+|[CMFCRibbonBaseElement:: isdesabilitoud](#isdisabled)|Especifica se o elemento da faixa de faixas está desabilitado.|
+|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determina se o elemento da faixa de faixas exibe um menu pop-up e é Descartado.|
+|[CMFCRibbonBaseElement:: IsFocused](#isfocused)|Especifica se o elemento da faixa de faixas tem o foco.|
+|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Indica se o elemento da faixa de faixas está contido em uma galeria de faixa de uma.|
+|[CMFCRibbonBaseElement:: realce](#ishighlighted)|Especifica se o elemento da faixa de faixas está realçado.|
+|[CMFCRibbonBaseElement:: isintermediáriamode](#isintermediatemode)|Indica se a imagem atual do elemento da faixa de faixas é de tamanho intermediário.|
+|[CMFCRibbonBaseElement:: islargemode](#islargemode)|Indica se a imagem atual do elemento da faixa de faixas é tamanho grande.|
+|[CMFCRibbonBaseElement:: ismenumode](#ismenumode)|Indica se o elemento Ribbon está contido em um menu.|
+|[CMFCRibbonBaseElement:: ispressioned](#ispressed)|Indica se o usuário clicou no elemento Ribbon.|
+|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indica se o elemento da faixa de faixas está contido na barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBaseElement:: isseparatorr](#isseparator)|Indica se o elemento Ribbon é um separador de exibição.|
+|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indica se o elemento Ribbon está contido em um grupo que exibe uma borda comum.|
+|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|Indica se a dica de ferramenta é exibida sob o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: IsTabStop](#istabstop)|Indica se o elemento da faixa de faixas pode ser selecionado com o teclado.|
+|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|Indica se o texto do elemento da faixa de faixas é exibido à direita.|
+|[CMFCRibbonBaseElement:: IsVisible](#isvisible)|Indica se o elemento da faixa de faixas está sendo exibido no momento.|
+|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indica se o heigth de exibição do elemento da faixa de faixas é o mesmo da altura de exibição do painel da faixa de faixas que o contém.|
+|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Envia uma notificação de comando para a janela pai do elemento Ribbon.|
+|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Notifica a janela pai da barra da faixa de forma quando um usuário realça um elemento Ribbon que está localizado em uma lista.|
+|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Adiciona o elemento da faixa de faixas à barra de ferramentas de acesso rápido especificada.|
+|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Atualiza a dica de ferramenta para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Atualiza o elemento da faixa de faixas em resposta à entrada de usuário sustentada.|
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calcula o tamanho do texto para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Chamado pelo Framework quando o realce é alterado para um elemento Ribbon que está localizado em um menu.|
+|[CMFCRibbonBaseElement:: OnDraw](#ondraw)|Chamado pelo Framework para desenhar o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Chamado pelo Framework para desenhar o KeyTip para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Chamado pelo Framework quando a imagem de menu para o elemento Ribbon é desenhada.|
+|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Chamado pelo Framework para desenhar o elemento da faixa de faixas em uma caixa de listagem de comandos.|
+|[CMFCRibbonBaseElement::OnKey](#onkey)|Chamado pelo Framework quando o usuário pressiona um KeyTip e o elemento Ribbon tem o foco.|
+|[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||
+|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|Chamado pelo Framework quando o layout muda de direção.|
+|[CMFCRibbonBaseElement:: OnShow](#onshow)|Chamado pelo Framework para mostrar ou ocultar o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Chamado pelo Framework quando o elemento Ribbon exibirá um menu pop-up.|
+|[CMFCRibbonBaseElement::P ostMenuCommand](#postmenucommand)||
+|[CMFCRibbonBaseElement:: redesenhar](#redraw)|Atualiza a exibição para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Define os dados de acessibilidade para o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: setcompactmode](#setcompactmode)|Define o tamanho de exibição para o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: SetData](#setdata)|Associa um item de dados com o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||
+|[CMFCRibbonBaseElement:: SetDescription](#setdescription)|Define a descrição para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetID](#setid)|Define a ID de comando do elemento Ribbon.|
+|[CMFCRibbonBaseElement:: setinitializemode](#setinitialmode)|Define o tamanho de exibição inicial para o elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement:: SETKEYs](#setkeys)|Define um KeyTip para o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: setoriginal](#setoriginal)|Define o elemento da faixa de faixas original para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Define a categoria pai para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Define o contêiner de menu pai para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Define a barra de faixa de faixas pai para o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: SetRect](#setrect)|Define as dimensões Database que ele exibe Rectangle para o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: SetText](#settext)|Define o texto para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Define o texto para o elemento da faixa de faixas a ser exibido à direita.|
+|[CMFCRibbonBaseElement:: settooltiptext](#settooltiptext)|Define o texto de dica de ferramenta para o elemento Ribbon.|
+|[CMFCRibbonBaseElement:: setVisible](#setvisible)|Define o estado de visibilidade do elemento Ribbon.|
+|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Amplia a largura do elemento Ribbon.|
+|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Altera a altura de exibição do elemento da faixa de faixas para a altura da linha especificada.|
+|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Atualiza o texto da dica de ferramenta usando o recurso de comando para o elemento Ribbon.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Chamado pelo framework quando o usuário pressiona uma tecla de atalho.|
-|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Chamado pela estrutura quando um elemento de fita recebe ou perde o foco de entrada.|
+|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Chamado pelo Framework quando o usuário pressiona uma tecla de atalho.|
+|[CMFCRibbonBaseElement:: OnSetFocus](#onsetfocus)|Chamado pelo Framework quando um elemento Ribbon recebe ou perde o foco de entrada.|
 
 ## <a name="remarks"></a>Comentários
 
-A `CMFCRibbonBaseElement` classe define as propriedades comuns a todos os elementos de fita que incluem ID de comando, etiqueta de texto, texto de dica de ferramenta, descrição do elemento e estado (que pode ser focado, destacado, pressionado, desativado, verificado ou descartado).
+A `CMFCRibbonBaseElement` classe define as propriedades que são comuns a todos os elementos da faixa de opção que incluem a ID de comando, o rótulo de texto, o texto da dica de ferramenta, a descrição do elemento e o estado (que pode ser focalizado, realçado, pressionado, desabilitado, marcado ou descartado).
 
-O tamanho da imagem de um `RibbonImageType` elemento de fita é definido pelo membro, que pode ser um dos seguintes valores:
+O tamanho da imagem de um elemento da faixa de opções é definido pelo `RibbonImageType` membro, que pode ser um dos seguintes valores:
 
 - `RibbonImageLarge`
 
 - `RibbonImageSmall`
 
-Dependendo do seu tamanho, um elemento de fita exibe uma imagem pequena ou grande.
+Dependendo de seu tamanho, um elemento da faixa de opções exibe uma imagem pequena ou grande.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como `CMFCRibbonBaseElement` usar vários métodos na classe. O exemplo mostra como `CMFCRibbonBaseElement` obter `CMFCRibbonStatusBar` um objeto de uma classe, definir a descrição para o elemento de fita, definir o texto, definir uma dica de tecla e definir o texto da dica de ferramenta para o elemento de fita. Este trecho de código faz parte da [amostra Draw Client](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos na `CMFCRibbonBaseElement` classe. O exemplo mostra como obter um `CMFCRibbonBaseElement` objeto de uma `CMFCRibbonStatusBar` classe, definir a descrição para o elemento Ribbon, definir o texto, definir um KeyTip e definir o texto da dica de ferramenta para o elemento Ribbon. Este trecho de código faz parte do [exemplo de cliente de desenho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonbaseelement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxbaseribbonelement.h
+**Cabeçalho:** afxbaseribbonelement. h
 
-## <a name="cmfcribbonbaseelementaddtokeylist"></a><a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeylist
+## <a name="cmfcribbonbaseelementaddtokeylist"></a><a name="addtokeylist"></a> CMFCRibbonBaseElement::AddToKeyList
 
-Adiciona uma dica-chave para o elemento de fita a uma matriz de dicas de tecla.
+Adiciona um KeyTip para o elemento Ribbon a uma matriz de keytips.
 
 ```
 virtual void AddToKeyList(
     CArray<CMFCRibbonKeyTip*, CMFCRibbonKeyTip*>& arElems);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *arElems*<br/>
-[em] Referência a um [CArray](../../mfc/reference/carray-class.md) de dicas-chave.
+no Referência a um [CArray](../../mfc/reference/carray-class.md) de keytips.
 
 ### <a name="remarks"></a>Comentários
 
-Quando o recurso de teclas de fita está ativado, a estrutura exibe as pontas das teclas da fita quando o usuário pressiona a tecla ALT ou a tecla F10.
+Quando o recurso keytips da faixa de faixas está habilitado, a estrutura exibe dicas de faixa de faixas quando o usuário pressiona a tecla ALT ou a tecla F10.
 
-## <a name="cmfcribbonbaseelementaddtolistbox"></a><a name="addtolistbox"></a>CMFCRibbonBaseElement::AddtolistBox
+## <a name="cmfcribbonbaseelementaddtolistbox"></a><a name="addtolistbox"></a> CMFCRibbonBaseElement::AddToListBox
 
-Adiciona um elemento de fita à caixa de lista de comandos de fita especificada.
+Adiciona um elemento da faixa de faixas à caixa de listagem de comandos da faixa de lista especificada.
 
 ```
 virtual int AddToListBox(
@@ -437,87 +437,87 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndListBox*<br/>
-[em] Ponteiro para uma caixa de lista de comandos.
+no Ponteiro para uma caixa de listagem de comandos.
 
-*Bdeep*<br/>
-[em] Este parâmetro não é usado.
+*bDeep*<br/>
+no Esse parâmetro não é usado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O índice baseado em zero do elemento de fita adicionada.
+O índice de base zero do elemento da faixa de bits adicionado.
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura adiciona elementos de fita a uma caixa de lista de comandos para permitir que o usuário personalize a interface do usuário.
+A estrutura adiciona elementos da faixa de lista a uma caixa de listagem de comandos para permitir que o usuário personalize a interface do usuário.
 
-## <a name="cmfcribbonbaseelementcanbeaddedtoquickaccesstoolbar"></a><a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::canbeaddedtoQuickAccesstoolbar
+## <a name="cmfcribbonbaseelementcanbeaddedtoquickaccesstoolbar"></a><a name="canbeaddedtoquickaccesstoolbar"></a> CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar
 
-Indica se o elemento de fita pode ser adicionado à barra de ferramentas de acesso rápido.
+Indica se o elemento da faixa de faixas pode ser adicionado à barra de ferramentas de acesso rápido.
 
 ```
 virtual BOOL CanBeAddedToQuickAccessToolBar() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADEIRO se o elemento puder ser adicionado; caso contrário, FALSE.
+TRUE se o elemento puder ser adicionado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementcanbecompacted"></a><a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted
+## <a name="cmfcribbonbaseelementcanbecompacted"></a><a name="canbecompacted"></a> CMFCRibbonBaseElement::CanBeCompacted
 
-Indica se o tamanho do elemento da fita pode ser compacto.
+Indica se o tamanho do elemento da faixa de faixas pode ser compacto.
 
 ```
 virtual BOOL CanBeCompacted() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se o tamanho do elemento da fita pode ser compacto; caso contrário, FALSE.
+TRUE se o tamanho do elemento da faixa de faixas puder ser compactado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho de um elemento de fita pode ser compacto, intermediário ou grande.
+O tamanho de um elemento da faixa de faixas pode ser compacto, intermediário ou grande.
 
-## <a name="cmfcribbonbaseelementcanbestretched"></a><a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched
+## <a name="cmfcribbonbaseelementcanbestretched"></a><a name="canbestretched"></a> CMFCRibbonBaseElement::CanBeStretched
 
-Indica se a altura do elemento da fita pode aumentar verticalmente até a altura de uma linha de fita.
+Indica se a altura do elemento da faixa de faixas pode aumentar verticalmente para a altura de uma linha da faixa de faixas.
 
 ```
 virtual BOOL CanBeStretched();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna TRUE. Anular este método para indicar se a altura do elemento da fita pode aumentar verticalmente até a altura de uma linha de fita.
+Por padrão, esse método sempre retorna TRUE. Substitua esse método para indicar se a altura do elemento da faixa de faixas pode aumentar verticalmente para a altura de uma linha da faixa de uma.
 
-## <a name="cmfcribbonbaseelementcanbestretchedhorizontally"></a><a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally
+## <a name="cmfcribbonbaseelementcanbestretchedhorizontally"></a><a name="canbestretchedhorizontally"></a> CMFCRibbonBaseElement::CanBeStretchedHorizontally
 
-Indica se a largura do elemento de fita pode mudar.
+Indica se a largura do elemento da faixa de faixas pode ser alterada.
 
 ```
 virtual BOOL CanBeStretchedHorizontally();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna FALSO. Anular este método para indicar se a largura do elemento de fita pode mudar.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para indicar se a largura do elemento da faixa de faixas pode ser alterada.
 
-## <a name="cmfcribbonbaseelementcleanupsizes"></a><a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes
+## <a name="cmfcribbonbaseelementcleanupsizes"></a><a name="cleanupsizes"></a> CMFCRibbonBaseElement::CleanUpSizes
 
-Limpa as configurações de dimensão do elemento da fita.
+Limpa as configurações de dimensão do elemento da faixa de opções.
 
 ```
 virtual void CleanUpSizes();
@@ -525,11 +525,11 @@ virtual void CleanUpSizes();
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método não faz nada. Anular este método em uma classe derivada para redefinir as configurações de dimensão para o elemento da fita.
+Por padrão, esse método não faz nada. Substitua esse método em uma classe derivada para redefinir as configurações de dimensão para o elemento da faixa de opções.
 
-## <a name="cmfcribbonbaseelementclosepopupmenu"></a><a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu
+## <a name="cmfcribbonbaseelementclosepopupmenu"></a><a name="closepopupmenu"></a> CMFCRibbonBaseElement::ClosePopupMenu
 
-Fecha o menu pop-up para o elemento fita.
+Fecha o menu pop-up do elemento Ribbon.
 
 ```
 virtual void ClosePopupMenu();
@@ -537,7 +537,7 @@ virtual void ClosePopupMenu();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom
+## <a name="cmfcribbonbaseelementcopyfrom"></a><a name="copyfrom"></a> CMFCRibbonBaseElement::CopyFrom
 
 Copia o estado do [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) especificado para o objeto atual.
 
@@ -545,16 +545,16 @@ Copia o estado do [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelem
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *src*<br/>
-[em] O objeto [CMFCRibbonBaseElement de](../../mfc/reference/cmfcribbonbaseelement-class.md) origem.
+no O objeto [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) de origem.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementdestroyctrl"></a><a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl
+## <a name="cmfcribbonbaseelementdestroyctrl"></a><a name="destroyctrl"></a> CMFCRibbonBaseElement::D estroyCtrl
 
-Destrói o elemento da fita.
+Destrói o elemento da faixa de faixas.
 
 ```
 virtual void DestroyCtrl();
@@ -562,11 +562,11 @@ virtual void DestroyCtrl();
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método não faz nada. Anular este método em uma classe derivada para destruir o elemento da fita.
+Por padrão, esse método não faz nada. Substitua esse método em uma classe derivada para destruir o elemento Ribbon.
 
-## <a name="cmfcribbonbaseelementdrawimage"></a><a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage
+## <a name="cmfcribbonbaseelementdrawimage"></a><a name="drawimage"></a> CMFCRibbonBaseElement::D rawImage
 
-Desenha a imagem para o elemento da fita.
+Desenha a imagem para o elemento Ribbon.
 
 ```
 virtual void DrawImage(
@@ -575,29 +575,29 @@ virtual void DrawImage(
     CRect rectImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Ponteiro para um contexto de dispositivo.
 
 *tipo*<br/>
-[em] Um tipo de imagem enumerado valor. Consulte a seção Observações para obter uma lista de valores possíveis.
+no Um valor enumerado de tipo de imagem. Consulte a seção comentários para obter uma lista de valores possíveis.
 
 *rectImage*<br/>
-[em] O retângulo da imagem.
+no O retângulo da imagem.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método não faz nada. Anular este método em uma classe derivada para desenhar a imagem para o elemento de fita.
+Por padrão, esse método não faz nada. Substitua esse método em uma classe derivada para desenhar a imagem para o elemento Ribbon.
 
-A tabela a seguir lista os valores possíveis para o parâmetro *de tipo:*
+A tabela a seguir lista os valores possíveis para o parâmetro de *tipo* :
 
-|||
+|Valor|Descrição|
 |-|-|
-| `RibbonImageLarge`  | Grande tamanho de imagem de 32x32 pixels.  |
-| `RibbonImageSmall`  | Pequeno tamanho de imagem de 16x16 pixels.  |
+| `RibbonImageLarge`  | Tamanho da imagem em pixels de grande 32x32.  |
+| `RibbonImageSmall`  | Tamanho de imagem pequeno de 16x16 pixels.  |
 
-## <a name="cmfcribbonbaseelementfind"></a><a name="find"></a>CMFCRibbonBaseElement::Encontrar
+## <a name="cmfcribbonbaseelementfind"></a><a name="find"></a> CMFCRibbonBaseElement:: find
 
 Retorna o ponteiro especificado se ele apontar para o objeto atual.
 
@@ -605,153 +605,153 @@ Retorna o ponteiro especificado se ele apontar para o objeto atual.
 virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pElement*<br/>
-[em] Ponteiro para um elemento de fita.
+no Ponteiro para um elemento da faixa de faixas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita se *pElement* apontar para o objeto atual; caso contrário, NULL.
+Um ponteiro para o elemento Ribbon se *pElement* aponta para o objeto atual; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementfindbydata"></a><a name="findbydata"></a>CMFCRibbonBaseElement::FindbyData
+## <a name="cmfcribbonbaseelementfindbydata"></a><a name="findbydata"></a> CMFCRibbonBaseElement::FindByData
 
-Recupera um ponteiro para o elemento de fita se ele contiver os dados especificados.
+Recupera um ponteiro para o elemento Ribbon se ele contiver os dados especificados.
 
 ```
 virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dwdata*<br/>
-[em] Os dados associados a um elemento de fita.
+*dwData*<br/>
+no Os dados associados a um elemento Ribbon.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita se ele contiver os dados especificados; caso contrário, NULL.
+Um ponteiro para o elemento da faixa de faixas se ele contém os dados especificados; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementfindbyid"></a><a name="findbyid"></a>CMFCRibbonBaseelement::Findbyid
+## <a name="cmfcribbonbaseelementfindbyid"></a><a name="findbyid"></a> CMFCRibbonBaseElement:: FindByID
 
-Recupera um ponteiro para o elemento de fita se esse elemento for identificado pelo ID de comando especificado.
+Recupera um ponteiro para o elemento Ribbon se esse elemento é identificado pela ID de comando especificada.
 
 ```
 virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdID*<br/>
-[em] ID de comando para um elemento de fita.
+no ID de comando para um elemento da faixa de faixas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita se esse elemento for identificado pelo ID de comando especificado; caso contrário, NULL.
+Um ponteiro para o elemento da faixa de faixas se esse elemento é identificado pela ID de comando especificada; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementfindbyoriginal"></a><a name="findbyoriginal"></a>CMFCRibbonBaseelement::FindbyOriginal
+## <a name="cmfcribbonbaseelementfindbyoriginal"></a><a name="findbyoriginal"></a> CMFCRibbonBaseElement::FindByOriginal
 
-Recupera um ponteiro para o elemento de fita atual se o elemento de fita original corresponder ao elemento de fita especificado.
+Recupera um ponteiro para o elemento Ribbon atual se seu elemento da faixa de faixas original corresponde ao elemento Ribbon especificado.
 
 ```
 virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOriginal*<br/>
-[em] Ponteiro para um elemento de fita.
+no Ponteiro para um elemento da faixa de faixas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita se o elemento de fita original corresponder ao elemento de fita especificado; caso contrário, NULL.
+Um ponteiro para o elemento Ribbon se seu elemento Ribbon original corresponde ao elemento Ribbon especificado; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Os elementos de fita copiados para outro recipiente retêm um ponteiro para o elemento de fita original.
+Os elementos da faixa de faixas que são copiados para outro contêiner retêm um ponteiro para o elemento Ribbon original.
 
-## <a name="cmfcribbonbaseelementgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonBaseelement::getCompactSize
+## <a name="cmfcribbonbaseelementgetcompactsize"></a><a name="getcompactsize"></a> CMFCRibbonBaseElement::GetCompactSize
 
-Retorna o tamanho compacto do elemento da fita.
+Retorna o tamanho compacto do elemento da faixa de faixas.
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Um ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Um ponteiro para um contexto de dispositivo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O tamanho compacto de um elemento de fita.
+O tamanho compacto de um elemento da faixa de faixas.
 
 > [!NOTE]
-> O tamanho compacto significa que o elemento da fita é truncado (exibe uma imagem pequena, ou uma imagem sem texto).
+> O tamanho do Compact significa que o elemento da faixa de faixas está truncado (ele exibe uma imagem pequena ou uma imagem sem um texto).
 
-## <a name="cmfcribbonbaseelementgetdata"></a><a name="getdata"></a>CMFCRibbonBaseelement::getData
+## <a name="cmfcribbonbaseelementgetdata"></a><a name="getdata"></a> CMFCRibbonBaseElement:: GetData
 
-Recupera os dados definidos pelo usuário associados ao elemento fita.
+Recupera os dados definidos pelo usuário associados ao elemento Ribbon.
 
 ```
 DWORD_PTR GetData() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Os dados definidos pelo usuário associados ao elemento fita.
+Os dados definidos pelo usuário associados ao elemento Ribbon.
 
-## <a name="cmfcribbonbaseelementgetdescription"></a><a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription
+## <a name="cmfcribbonbaseelementgetdescription"></a><a name="getdescription"></a> CMFCRibbonBaseElement:: GetDescription
 
-Retorna a descrição do elemento fita.
+Retorna a descrição do elemento Ribbon.
 
 ```
 virtual CString GetDescription() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A descrição do elemento da fita. A descrição é exibida na barra de status ou em uma dica de ferramenta, ou sob o botão de menu se o elemento de fita estiver localizado na [classe CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).
+A descrição do elemento da faixa de faixas. A descrição será exibida na barra de status ou em uma dica de ferramenta ou sob o botão de menu se o elemento da faixa de opções estiver localizado na [Classe CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).
 
-## <a name="cmfcribbonbaseelementgetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetD roppedDown
+## <a name="cmfcribbonbaseelementgetdroppeddown"></a><a name="getdroppeddown"></a> CMFCRibbonBaseElement::GetDroppedDown
 
-Recupera um ponteiro para o elemento de fita se seu menu pop-up for derrubado.
+Recupera um ponteiro para o elemento Ribbon se o menu pop-up é Descartado.
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita se seu menu pop-up for derrubado; caso contrário, NULL.
+Um ponteiro para o elemento da faixa de faixas se o menu pop-up for descartado; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetelements"></a><a name="getelements"></a>CMFCRibbonBaseElement::GetElements
+## <a name="cmfcribbonbaseelementgetelements"></a><a name="getelements"></a> CMFCRibbonBaseElement:: GetElements
 
-Adiciona o elemento de fita atual à matriz especificada.
+Adiciona o elemento da faixa de faixas atual à matriz especificada.
 
 ```
 virtual void GetElements(
     CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *arElements*<br/>
-[dentro, fora] Uma série de elementos de fita.
+[entrada, saída] Uma matriz de elementos da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonBaseelement::getelementsbyid
+## <a name="cmfcribbonbaseelementgetelementsbyid"></a><a name="getelementsbyid"></a> CMFCRibbonBaseElement::GetElementsByID
 
-Adiciona o elemento de fita atual à matriz especificada se o elemento de fita atual contiver o ID de comando especificado.
+Adiciona o elemento da faixa de faixas atual à matriz especificada se o elemento da faixa de tempo atual contiver a ID de comando especificada.
 
 ```
 virtual void GetElementsByID(
@@ -759,86 +759,86 @@ virtual void GetElementsByID(
     CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdID*<br/>
-[em] ID de comando de um elemento de fita.
+no ID de comando de um elemento da faixa de faixas.
 
 *arElements*<br/>
-[em] Uma série de elementos de fita.
+no Uma matriz de elementos da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgethighlighted"></a><a name="gethighlighted"></a>CMFCRibbonBaseelement::gethighlighted
+## <a name="cmfcribbonbaseelementgethighlighted"></a><a name="gethighlighted"></a> CMFCRibbonBaseElement:: realce
 
-Recupera um ponteiro para o elemento de fita se ele for destacado.
+Recupera um ponteiro para o elemento Ribbon se ele estiver realçado.
 
 ```
 virtual CMFCRibbonBaseElement* GetHighlighted();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento da fita se ele for destacado; caso contrário, NULL.
+Um ponteiro para o elemento da faixa de faixas se ele estiver realçado; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetid"></a><a name="getid"></a>CMFCRibbonBaseelement::getid
+## <a name="cmfcribbonbaseelementgetid"></a><a name="getid"></a> CMFCRibbonBaseElement:: GetID
 
-Retorna o ID de comando do elemento de fita.
+Retorna a ID de comando do elemento Ribbon.
 
 ```
 UINT GetID() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O id de comando do elemento fita.
+A ID de comando do elemento da faixa de faixas.
 
-## <a name="cmfcribbonbaseelementgetimagesize"></a><a name="getimagesize"></a>CMFCRibbonBaseElement::getImageSize
+## <a name="cmfcribbonbaseelementgetimagesize"></a><a name="getimagesize"></a> CMFCRibbonBaseElement:: getimageize
 
-Retorna o tamanho da imagem do elemento da fita.
+Retorna o tamanho da imagem do elemento da faixa de faixas.
 
 ```
 virtual CSize GetImageSize(RibbonImageType R) const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O tamanho da imagem do elemento da fita.
+O tamanho da imagem do elemento da faixa de faixas.
 
-## <a name="cmfcribbonbaseelementgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonBaseelement::getIntermediateSize
+## <a name="cmfcribbonbaseelementgetintermediatesize"></a><a name="getintermediatesize"></a> CMFCRibbonBaseElement::GetIntermediateSize
 
-Retorna o tamanho do elemento de fita em seu estado intermediário.
+Retorna o tamanho do elemento da faixa de faixas em seu estado intermediário.
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Um ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Um ponteiro para um contexto de dispositivo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O tamanho do elemento de fita em seu estado intermediário.
+O tamanho do elemento da faixa de faixas em seu estado intermediário.
 
-## <a name="cmfcribbonbaseelementgetkeys"></a><a name="getkeys"></a>CMFCRibbonBaseelement::GetKeys
+## <a name="cmfcribbonbaseelementgetkeys"></a><a name="getkeys"></a> CMFCRibbonBaseElement:: getkeys
 
-Retorna a dica de tecla associada ao elemento da fita.
+Retorna o KeyTip associado ao elemento Ribbon.
 
 ```
 LPCTSTR GetKeys() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Uma dica-chave associada ao elemento da fita.
+Um KeyTip associado ao elemento Ribbon.
 
-## <a name="cmfcribbonbaseelementgetkeytiprect"></a><a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect
+## <a name="cmfcribbonbaseelementgetkeytiprect"></a><a name="getkeytiprect"></a> CMFCRibbonBaseElement::GetKeyTipRect
 
-Recupera o retângulo de limite da ponta de chave para o elemento da fita.
+Recupera o retângulo de limite KeyTip para o elemento Ribbon.
 
 ```
 virtual CRect GetKeyTipRect(
@@ -846,847 +846,847 @@ virtual CRect GetKeyTipRect(
     BOOL bIsMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Ponteiro para um contexto de dispositivo.
 
 *bIsMenu*<br/>
-[em] TRUE se o elemento fita exibir um menu pop-up; caso contrário, FALSO.
+no TRUE se o elemento Ribbon exibir um menu pop-up; caso contrário, FALSE.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre retorna um retângulo com 0 valores.
 
 ### <a name="remarks"></a>Comentários
 
-Anular este método em uma classe derivada para retornar o retângulo de limite de tecla.
+Substitua esse método em uma classe derivada para retornar o retângulo de limite KeyTip.
 
-## <a name="cmfcribbonbaseelementgetkeytipsize"></a><a name="getkeytipsize"></a>CMFCRibbonBaseelement::getkeytipsize
+## <a name="cmfcribbonbaseelementgetkeytipsize"></a><a name="getkeytipsize"></a> CMFCRibbonBaseElement::GetKeyTipSize
 
-Recupera o tamanho do texto da dica-chave.
+Recupera o tamanho do texto KeyTip.
 
 ```
 virtual CSize GetKeyTipSize(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Ponteiro para um contexto de dispositivo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O tamanho do texto da dica-chave.
+O tamanho do texto KeyTip.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetlocationingroup"></a><a name="getlocationingroup"></a>CMFCRibbonBaseelement::getLocationInGroup
+## <a name="cmfcribbonbaseelementgetlocationingroup"></a><a name="getlocationingroup"></a> CMFCRibbonBaseElement::GetLocationInGroup
 
-Indica a localização do display do elemento fita em um grupo de fita.
+Indica o local de exibição do elemento Ribbon em um grupo de faixa de faixas.
 
 ```
 RibbonElementLocation GetLocationInGroup() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um valor enumerado de `RibbonElementLocation`. A tabela a seguir lista possíveis valores.
+Um valor enumerado de `RibbonElementLocation`. A tabela a seguir lista os valores possíveis.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`RibbonElementNotInGroup`|O elemento da fita não está contido em um grupo de fita.|
-|`RibbonElementSingleInGroup`|O elemento de fita é exibido como o único item em um grupo de fita.|
-|`RibbonElementFirstInGroup`|O elemento de fita é exibido na extremidade esquerda de um grupo de fita.|
-|`RibbonElementLastInGroup`|O elemento de fita é exibido na extremidade direita de um grupo de fita.|
-|`RibbonElementMiddleInGroup`|O elemento de fita não é exibido em nenhuma das extremidades de um grupo de fita.|
+|`RibbonElementNotInGroup`|O elemento da faixa de faixas não está contido em um grupo de faixa de faixas.|
+|`RibbonElementSingleInGroup`|O elemento Ribbon é exibido como o único item em um grupo de faixa de faixas.|
+|`RibbonElementFirstInGroup`|O elemento Ribbon é exibido na extremidade esquerda de um grupo de faixa de faixas.|
+|`RibbonElementLastInGroup`|O elemento Ribbon é exibido na extremidade direita de um grupo de faixa de faixas.|
+|`RibbonElementMiddleInGroup`|O elemento da faixa de opções não é exibido em nenhuma das extremidades de um grupo de faixa de opções.|
 
 ### <a name="remarks"></a>Comentários
 
-Os grupos de elementos da fita estão alinhados apenas horizontalmente.
+Os grupos de elementos da faixa de faixas são alinhados horizontalmente.
 
-## <a name="cmfcribbonbaseelementgetmenukeys"></a><a name="getmenukeys"></a>CMFCRibbonBaseelement::getMenuKeys
+## <a name="cmfcribbonbaseelementgetmenukeys"></a><a name="getmenukeys"></a> CMFCRibbonBaseElement::GetMenuKeys
 
-Retorna a dica do menu para o elemento da fita.
+Retorna o menu KeyTip para o elemento Ribbon.
 
 ```
 LPCTSTR GetMenuKeys() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A dica de tecla do menu associada ao elemento fita.
+O menu KeyTip associado ao elemento Ribbon.
 
 ### <a name="remarks"></a>Comentários
 
-Quando invocado, uma dica de tecla do menu exibe um menu pop-up.
+Quando invocado, um menu KeyTip exibe um menu pop-up.
 
-## <a name="cmfcribbonbaseelementgetnotifyid"></a><a name="getnotifyid"></a>CMFCRibbonBaseelement::getnotifyid
+## <a name="cmfcribbonbaseelementgetnotifyid"></a><a name="getnotifyid"></a> CMFCRibbonBaseElement:: getnotificaid
 
-Recupera o ID do comando de notificação para o elemento de fita.
+Recupera a ID do comando de notificação para o elemento Ribbon.
 
 ```
 virtual UINT GetNotifyID();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O iD do comando de notificação.
+A ID do comando de notificação.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetoriginal"></a><a name="getoriginal"></a>CMFCRibbonBaseelement::GetOriginal
+## <a name="cmfcribbonbaseelementgetoriginal"></a><a name="getoriginal"></a> CMFCRibbonBaseElement:: getoriginal
 
-Recupera o elemento de fita original.
+Recupera o elemento da faixa de faixas original.
 
 ```
 CMFCRibbonBaseElement* GetOriginal() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita original.
+Um ponteiro para o elemento Ribbon original.
 
 ### <a name="remarks"></a>Comentários
 
-Os elementos de fita copiados para outro recipiente retêm um ponteiro para o elemento de fita original.
+Os elementos da faixa de faixas que são copiados para outro contêiner retêm um ponteiro para o elemento Ribbon original.
 
-## <a name="cmfcribbonbaseelementgetparentcategory"></a><a name="getparentcategory"></a>CMFCRibbonBaseelement::getParentcategory
+## <a name="cmfcribbonbaseelementgetparentcategory"></a><a name="getparentcategory"></a> CMFCRibbonBaseElement::GetParentCategory
 
-Recupera a categoria de fita para o elemento de fita.
+Recupera a categoria da faixa de faixas para o elemento da faixa de faixas.
 
 ```
 CMFCRibbonCategory* GetParentCategory() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a categoria de fita.
+Um ponteiro para a categoria da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetparentpanel"></a><a name="getparentpanel"></a>CMFCRibbonBaseElement::getParentPanel
+## <a name="cmfcribbonbaseelementgetparentpanel"></a><a name="getparentpanel"></a> CMFCRibbonBaseElement::GetParentPanel
 
-Recupera o painel de fita que contém o elemento da fita.
+Recupera o painel da faixa de faixas que contém o elemento da faixa de faixas.
 
 ```
 virtual CMFCRibbonPanel* GetParentPanel() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o painel de fita que contém o elemento da fita.
+Um ponteiro para o painel da faixa de das faixas que contém o elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetparentribbonbar"></a><a name="getparentribbonbar"></a>CMFCRibbonBaseelement::getParentribbonbar
+## <a name="cmfcribbonbaseelementgetparentribbonbar"></a><a name="getparentribbonbar"></a> CMFCRibbonBaseElement::GetParentRibbonBar
 
-Recupera a barra de fita dos pais para o elemento da fita.
+Recupera a barra de faixa de faixas pai para o elemento Ribbon.
 
 ```
 CMFCRibbonBar* GetParentRibbonBar() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a barra de fita dos pais para o elemento da fita.
+Um ponteiro para a barra de faixa de faixas pai do elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetparentwnd"></a><a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd
+## <a name="cmfcribbonbaseelementgetparentwnd"></a><a name="getparentwnd"></a> CMFCRibbonBaseElement::GetParentWnd
 
-Recupera a janela pai para o elemento da fita.
+Recupera a janela pai do elemento Ribbon.
 
 ```
 virtual CWnd* GetParentWnd() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a janela pai para o elemento de fita se o método foi bem sucedido; caso contrário, NULL.
+Um ponteiro para a janela pai do elemento Ribbon se o método foi bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-A janela pai para um elemento de fita é uma [Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ou uma [CMFCRibbonPanelMenuBar](internal-classes.md).
+A janela pai de um elemento Ribbon é uma [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ou um [CMFCRibbonPanelMenuBar](internal-classes.md).
 
-## <a name="cmfcribbonbaseelementgetpressed"></a><a name="getpressed"></a>CMFCRibbonBaseelement::getpressed
+## <a name="cmfcribbonbaseelementgetpressed"></a><a name="getpressed"></a> CMFCRibbonBaseElement:: getpressioned
 
-Recupera um ponteiro para o elemento de fita se o usuário pressioná-lo no momento.
+Recupera um ponteiro para o elemento Ribbon se o usuário o pressiona no momento.
 
 ```
 virtual CMFCRibbonBaseElement* GetPressed();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita se o usuário pressioná-lo no momento; caso contrário, NULL.
+Um ponteiro para o elemento Ribbon se o usuário o pressiona no momento; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetquickaccesstoolbarid"></a><a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::getQuickAccesstoolbariD
+## <a name="cmfcribbonbaseelementgetquickaccesstoolbarid"></a><a name="getquickaccesstoolbarid"></a> CMFCRibbonBaseElement::GetQuickAccessToolBarID
 
-Recupera o ID de comando do elemento de fita quando ele está localizado na barra de ferramentas de acesso rápido.
+Recupera a ID de comando do elemento Ribbon quando ele está localizado na barra de ferramentas de acesso rápido.
 
 ```
 virtual UINT GetQuickAccessToolBarID() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O id de comando do elemento de fita quando ele está localizado na barra de ferramentas de acesso rápido.
+A ID de comando do elemento da faixa de faixas quando ela está localizada na barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementgetrect"></a><a name="getrect"></a>CMFCRibbonBaseElement::GetRect
+## <a name="cmfcribbonbaseelementgetrect"></a><a name="getrect"></a> CMFCRibbonBaseElement:: GetRect
 
-Retorna o retângulo delimitador do elemento da fita.
+Retorna o retângulo delimitador do elemento Ribbon.
 
 ```
 CRect GetRect() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O retângulo delimitador do elemento da fita. A posição do retângulo está nas coordenadas do controle da fita dos pais.
+O retângulo delimitador do elemento Ribbon. A posição do retângulo está nas coordenadas do controle da faixa de forma pai.
 
-## <a name="cmfcribbonbaseelementgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonBaseelement::getRegularsize
+## <a name="cmfcribbonbaseelementgetregularsize"></a><a name="getregularsize"></a> CMFCRibbonBaseElement::GetRegularSize
 
-Retorna o tamanho regular do elemento da fita.
+Retorna o tamanho regular do elemento da faixa de faixas.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Um ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Um ponteiro para um contexto de dispositivo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O tamanho regular do elemento da fita.
+O tamanho regular do elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> O tamanho regular é o tamanho máximo possível do elemento da fita.
+> O tamanho regular é o máximo possível de tamanho do elemento da faixa de faixas.
 
-## <a name="cmfcribbonbaseelementgetsize"></a><a name="getsize"></a>CMFCRibbonBaseElement::getsize
+## <a name="cmfcribbonbaseelementgetsize"></a><a name="getsize"></a> CMFCRibbonBaseElement::GetSize
 
-Retorna o tamanho atual do elemento de fita.
+Retorna o tamanho atual do elemento da faixa de faixas.
 
 ```
 virtual CSize GetSize(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Um ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Um ponteiro para um contexto de dispositivo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O tamanho atual do elemento da fita.
+O tamanho atual do elemento da faixa de faixas.
 
-## <a name="cmfcribbonbaseelementgettext"></a><a name="gettext"></a>CMFCRibbonBaseElement::getText
+## <a name="cmfcribbonbaseelementgettext"></a><a name="gettext"></a> CMFCRibbonBaseElement:: gettext
 
-Retorna o texto associado ao elemento fita.
+Retorna o texto associado ao elemento Ribbon.
 
 ```
 LPCTSTR GetText() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O texto associado ao elemento fita.
+O texto associado ao elemento da faixa de faixas.
 
-## <a name="cmfcribbonbaseelementgettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonBaseelement::GettoolTipText
+## <a name="cmfcribbonbaseelementgettooltiptext"></a><a name="gettooltiptext"></a> CMFCRibbonBaseElement:: GetToolTipText
 
-Retorna texto da dica de ferramenta do elemento fita.
+Retorna o texto da dica de ferramenta do elemento da faixa de faixas.
 
 ```
 virtual CString GetToolTipText() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O texto da dica de ferramenta do elemento fita.
+O texto da dica de ferramenta do elemento da faixa de faixas.
 
-## <a name="cmfcribbonbaseelementgettoplevelribbonbar"></a><a name="gettoplevelribbonbar"></a>CMFCRibbonBaseelement::GetTopLevelRibbonBar
+## <a name="cmfcribbonbaseelementgettoplevelribbonbar"></a><a name="gettoplevelribbonbar"></a> CMFCRibbonBaseElement::GetTopLevelRibbonBar
 
-Recupera a barra de fita de nível superior para o elemento da fita.
+Recupera a barra de faixa de faixas de nível superior para o elemento Ribbon.
 
 ```
 CMFCRibbonBar* GetTopLevelRibbonBar() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a barra de fita de nível superior para o elemento de fita se o método foi bem sucedido; caso contrário, NULL.
+Um ponteiro para a barra da faixa de faixas de nível superior do elemento da faixa de faixas se o método foi bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementhascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonBaseElement::Hascompactmode
+## <a name="cmfcribbonbaseelementhascompactmode"></a><a name="hascompactmode"></a> CMFCRibbonBaseElement::HasCompactMode
 
-Especifica se o elemento de fita tem um modo compacto.
+Especifica se o elemento Ribbon tem um modo compacto.
 
 ```
 virtual BOOL HasCompactMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita tiver um modo compacto. FALSO de outra forma.
+TRUE se o elemento Ribbon tiver um modo compacto. Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> No modo compacto, um elemento exibe apenas uma pequena imagem.
+> No modo compacto, um elemento exibe apenas uma imagem pequena.
 
-## <a name="cmfcribbonbaseelementhasintermediatemode"></a><a name="hasintermediatemode"></a>CMFCRibbonBaseElement::Hasintermediatemode
+## <a name="cmfcribbonbaseelementhasintermediatemode"></a><a name="hasintermediatemode"></a> CMFCRibbonBaseElement::HasIntermediateMode
 
-Especifica se o elemento de fita tem um modo intermediário.
+Especifica se o elemento Ribbon tem um modo intermediário.
 
 ```
 virtual BOOL HasIntermediateMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita tiver um modo intermediário, FALSO de outra forma. No modo intermediário, um elemento exibe uma pequena imagem e texto à direita da imagem.
+TRUE se o elemento Ribbon tiver um modo intermediário; caso contrário, FALSE. No modo intermediário, um elemento exibe uma imagem pequena e o texto à direita da imagem.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementhaslargemode"></a><a name="haslargemode"></a>CMFCRibbonBaseElement::Haslargemode
+## <a name="cmfcribbonbaseelementhaslargemode"></a><a name="haslargemode"></a> CMFCRibbonBaseElement::HasLargeMode
 
-Determina se o elemento da fita tem um modo grande.
+Determina se o elemento Ribbon tem um modo grande.
 
 ```
 virtual BOOL HasLargeMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita tiver um modo grande. FALSO de outra forma.
+TRUE se o elemento Ribbon tiver um modo grande. Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-No modo grande, um elemento pode tomar a altura total do painel pai.
+No modo grande, um elemento pode assumir a altura total do painel pai.
 
-## <a name="cmfcribbonbaseelementhasmenu"></a><a name="hasmenu"></a>CMFCRibbonBaseElement::Hasmenu
+## <a name="cmfcribbonbaseelementhasmenu"></a><a name="hasmenu"></a> CMFCRibbonBaseElement::HasMenu
 
-Indica se o elemento de fita tem um menu.
+Indica se o elemento Ribbon tem um menu.
 
 ```
 virtual BOOL HasMenu() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna FALSO. Anular este método em uma classe derivada para indicar se o elemento de fita tem um menu.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método em uma classe derivada para indicar se o elemento Ribbon tem um menu.
 
-## <a name="cmfcribbonbaseelementhittest"></a><a name="hittest"></a>CMFCRibbonBaseElement::HitTest
+## <a name="cmfcribbonbaseelementhittest"></a><a name="hittest"></a> CMFCRibbonBaseElement:: HitTest
 
-Recupera um ponteiro para o elemento de fita se o ponto especificado estiver localizado nele.
+Recupera um ponteiro para o elemento Ribbon se o ponto especificado estiver localizado nele.
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Ponto*<br/>
-[em] Este parâmetro não é usado.
+*empresas*<br/>
+no Esse parâmetro não é usado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita se ele existir; caso contrário, FALSO.
+Um ponteiro para o elemento da faixa de faixas, se existir; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna um ponteiro válido para o elemento de fita quando ele existe. Anular este método para indicar se o ponto reside no elemento da fita.
+Por padrão, esse método sempre retorna um ponteiro válido para o elemento Ribbon quando ele existe. Substitua esse método para indicar se o ponto reside no elemento Ribbon.
 
-## <a name="cmfcribbonbaseelementisalignbycolumn"></a><a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsalignbyColumn
+## <a name="cmfcribbonbaseelementisalignbycolumn"></a><a name="isalignbycolumn"></a> CMFCRibbonBaseElement::IsAlignByColumn
 
-Indica se o elemento da fita está alinhado verticalmente com outros elementos de fita.
+Indica se o elemento da faixa de faixas está alinhado verticalmente com outros elementos da faixa de tipos.
 
 ```
 virtual BOOL IsAlignByColumn() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna TRUE. Anular este método em uma classe derivada para indicar se o elemento de fita derivada está alinhado verticalmente com outros elementos de fita.
+Por padrão, esse método sempre retorna TRUE. Substitua esse método em uma classe derivada para indicar se o elemento da faixa de tipos derivado está alinhado verticalmente com outros elementos da faixa de faixas.
 
-## <a name="cmfcribbonbaseelementisalwayslargeimage"></a><a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage
+## <a name="cmfcribbonbaseelementisalwayslargeimage"></a><a name="isalwayslargeimage"></a> CMFCRibbonBaseElement::IsAlwaysLargeImage
 
-Indica se o tamanho da imagem do elemento de fita é sempre grande.
+Indica se o tamanho da imagem do elemento da faixa de faixas é sempre grande.
 
 ```
 virtual BOOL IsAlwaysLargeImage() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se o tamanho da imagem do elemento de fita for sempre grande; caso contrário, FALSO.
+TRUE se o tamanho da imagem do elemento da faixa de faixas for sempre grande; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho da imagem grande é de 32 x 32 pixels.
+O tamanho da imagem grande é 32 x 32 pixels.
 
-## <a name="cmfcribbonbaseelementisautorepeatmode"></a><a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode
+## <a name="cmfcribbonbaseelementisautorepeatmode"></a><a name="isautorepeatmode"></a> CMFCRibbonBaseElement::IsAutoRepeatMode
 
-Indica se o elemento de fita está no modo de repetição automática.
+Indica se o elemento da faixa de faixas está no modo de repetição automática.
 
 ```
 virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*nAtraso*<br/>
-[em] Este parâmetro não é usado.
+*nDelay*<br/>
+no Esse parâmetro não é usado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna FALSO. Anular este método para indicar se o elemento de fita está no modo de repetição automática.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para indicar se o elemento da faixa de faixas está no modo de repetição automática.
 
-No modo de repetição automática, o elemento de fita responde em um intervalo definido, medido em milissegundos, para a entrada sustentada do usuário.
+No modo de repetição automática, o elemento da faixa de faixas responde em um intervalo definido, medido em milissegundos, para a entrada de usuário sustentada.
 
-## <a name="cmfcribbonbaseelementischecked"></a><a name="ischecked"></a>CMFCRibbonBaseElement::isChecked
+## <a name="cmfcribbonbaseelementischecked"></a><a name="ischecked"></a> CMFCRibbonBaseElement:: IsChecked
 
-Especifica se o elemento da fita é verificado.
+Especifica se o elemento da faixa de opção está marcado.
 
 ```
 virtual BOOL IsChecked() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADEIRO se o elemento da fita for verificado; caso contrário, FALSO.
+TRUE se o elemento da faixa de opção estiver marcado; caso contrário, FALSE.
 
-## <a name="cmfcribbonbaseelementiscompactmode"></a><a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode
+## <a name="cmfcribbonbaseelementiscompactmode"></a><a name="iscompactmode"></a> CMFCRibbonBaseElement:: iscompactmode
 
-Especifica se o elemento de fita está em um modo compacto.
+Especifica se o elemento da faixa de faixas está em um modo compacto.
 
 ```
 BOOL IsCompactMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita estiver em um modo compacto; caso contrário, FALSO.
+TRUE se o elemento Ribbon estiver em um modo compacto; caso contrário, FALSE.
 
-## <a name="cmfcribbonbaseelementisdefaultmenulook"></a><a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenu
+## <a name="cmfcribbonbaseelementisdefaultmenulook"></a><a name="isdefaultmenulook"></a> CMFCRibbonBaseElement::IsDefaultMenuLook
 
-Indica se o elemento de fita está definido para aparecer como um comando pop-up.
+Indica se o elemento Ribbon está definido para aparecer como um comando pop-up.
 
 ```
 BOOL IsDefaultMenuLook() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita estiver definido para aparecer como um comando pop-up; caso contrário, FALSO.
+TRUE se o elemento Ribbon estiver definido para aparecer como um comando pop-up; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementisdisabled"></a><a name="isdisabled"></a>CMFCRibbonBaseElement::isDisabled
+## <a name="cmfcribbonbaseelementisdisabled"></a><a name="isdisabled"></a> CMFCRibbonBaseElement:: isdesabilitoud
 
-Especifica se o elemento da fita está desativado.
+Especifica se o elemento da faixa de faixas está desabilitado.
 
 ```
 virtual BOOL IsDisabled() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento da fita estiver desativado; caso contrário, FALSO.
+TRUE se o elemento Ribbon estiver desabilitado; caso contrário, FALSE.
 
-## <a name="cmfcribbonbaseelementisdroppeddown"></a><a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown
+## <a name="cmfcribbonbaseelementisdroppeddown"></a><a name="isdroppeddown"></a> CMFCRibbonBaseElement::IsDroppedDown
 
-Especifica se o elemento de fita exibe um menu pop-up e é descartado.
+Especifica se o elemento da faixa de faixas exibe um menu pop-up e é Descartado.
 
 ```
 virtual BOOL IsDroppedDown() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita for derrubado e exibir um menu pop-up; caso contrário, FALSO.
+TRUE se o elemento Ribbon for descartado e exibir um menu pop-up; caso contrário, FALSE.
 
-## <a name="cmfcribbonbaseelementisfocused"></a><a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused
+## <a name="cmfcribbonbaseelementisfocused"></a><a name="isfocused"></a> CMFCRibbonBaseElement:: IsFocused
 
-Especifica se o elemento de fita tem o foco.
+Especifica se o elemento da faixa de faixas tem o foco.
 
 ```
 virtual BOOL IsFocused() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se o elemento de fita tiver o foco; caso contrário, FALSO.
+TRUE se o elemento Ribbon tiver o foco; caso contrário, FALSE.
 
-## <a name="cmfcribbonbaseelementisgalleryicon"></a><a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon
+## <a name="cmfcribbonbaseelementisgalleryicon"></a><a name="isgalleryicon"></a> CMFCRibbonBaseElement::IsGalleryIcon
 
-Indica se o elemento da fita está contido em uma galeria de fitas.
+Indica se o elemento da faixa de faixas está contido em uma galeria de faixa de uma.
 
 ```
 virtual BOOL IsGalleryIcon() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna FALSO. Anular este método em uma classe derivada para indicar se o elemento da fita está contido em uma galeria de fita.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método em uma classe derivada para indicar se o elemento da faixa de faixas está contido em uma galeria de faixas de uma.
 
-## <a name="cmfcribbonbaseelementishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonBaseElement::ishighlighted
+## <a name="cmfcribbonbaseelementishighlighted"></a><a name="ishighlighted"></a> CMFCRibbonBaseElement:: realce
 
-Especifica se o elemento da fita está destacado.
+Especifica se o elemento da faixa de faixas está realçado.
 
 ```
 virtual BOOL IsHighlighted() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADEIRO se o elemento de fita for destacado; caso contrário, FALSO.
+TRUE se o elemento Ribbon for realçado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementisintermediatemode"></a><a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediatemode
+## <a name="cmfcribbonbaseelementisintermediatemode"></a><a name="isintermediatemode"></a> CMFCRibbonBaseElement:: isintermediáriamode
 
-Indica se a imagem atual do elemento de fita é de tamanho intermediário.
+Indica se a imagem atual do elemento da faixa de faixas é de tamanho intermediário.
 
 ```
 BOOL IsIntermediateMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a imagem para o elemento de fita for de tamanho intermediário; caso contrário, FALSO.
+TRUE se a imagem do elemento da faixa de faixas for de tamanho intermediário; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho da imagem intermediária é de 16 x 16 pixels.
+O tamanho da imagem intermediária é 16 x 16 pixels.
 
-## <a name="cmfcribbonbaseelementislargemode"></a><a name="islargemode"></a>CMFCRibbonBaseElement::IsLargemode
+## <a name="cmfcribbonbaseelementislargemode"></a><a name="islargemode"></a> CMFCRibbonBaseElement:: islargemode
 
-Indica se a imagem atual do elemento de fita é de tamanho grande.
+Indica se a imagem atual do elemento da faixa de faixas é de tamanho grande.
 
 ```
 BOOL IsLargeMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a imagem para o elemento de fita for de tamanho grande; caso contrário, FALSO.
+TRUE se a imagem do elemento da faixa de faixas for tamanho grande; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho da imagem grande é de 32 x 32 pixels.
+O tamanho da imagem grande é 32 x 32 pixels.
 
-## <a name="cmfcribbonbaseelementismenumode"></a><a name="ismenumode"></a>CMFCRibbonBaseElement::ismenumode
+## <a name="cmfcribbonbaseelementismenumode"></a><a name="ismenumode"></a> CMFCRibbonBaseElement:: ismenumode
 
-Indica se o elemento da fita está contido em um menu.
+Indica se o elemento Ribbon está contido em um menu.
 
 ```
 BOOL IsMenuMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita estiver contido em um menu; caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver contido em um menu; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementispressed"></a><a name="ispressed"></a>CMFCRibbonBaseElement::ispressed
+## <a name="cmfcribbonbaseelementispressed"></a><a name="ispressed"></a> CMFCRibbonBaseElement:: ispressioned
 
-Indica se o usuário clicou no elemento fita.
+Indica se o usuário clicou no elemento Ribbon.
 
 ```
 virtual BOOL IsPressed() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o usuário clicou no elemento fita; caso contrário, FALSO.
+TRUE se o usuário tiver clicado no elemento Ribbon; caso contrário, FALSE.
 
-## <a name="cmfcribbonbaseelementisqatmode"></a><a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode
+## <a name="cmfcribbonbaseelementisqatmode"></a><a name="isqatmode"></a> CMFCRibbonBaseElement::IsQATMode
 
-Indica se o elemento da fita está contido na barra de ferramentas de acesso rápido.
+Indica se o elemento da faixa de faixas está contido na barra de ferramentas de acesso rápido.
 
 ```
 BOOL IsQATMode() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita estiver contido na barra de ferramentas de acesso rápido; caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver contido na barra de ferramentas de acesso rápido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementisseparator"></a><a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator
+## <a name="cmfcribbonbaseelementisseparator"></a><a name="isseparator"></a> CMFCRibbonBaseElement:: isseparatorr
 
-Indica se o elemento da fita é um separador de tela.
+Indica se o elemento Ribbon é um separador de exibição.
 
 ```
 virtual BOOL IsSeparator() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita for um separador de tela; caso contrário, FALSO.
+TRUE se o elemento Ribbon for um separador de exibição; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementisshowgroupborder"></a><a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder
+## <a name="cmfcribbonbaseelementisshowgroupborder"></a><a name="isshowgroupborder"></a> CMFCRibbonBaseElement::IsShowGroupBorder
 
-Indica se o elemento da fita está contido em um grupo que exibe uma borda comum.
+Indica se o elemento Ribbon está contido em um grupo que exibe uma borda comum.
 
 ```
 BOOL IsShowGroupBorder() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se o elemento da fita estiver contido em um grupo que exibe uma borda comum; caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver contido em um grupo que exibe uma borda comum; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementisshowtooltiponbottom"></a><a name="isshowtooltiponbottom"></a>CMFCRibbonBaseelement::IsshowtooltiponBottom
+## <a name="cmfcribbonbaseelementisshowtooltiponbottom"></a><a name="isshowtooltiponbottom"></a> CMFCRibbonBaseElement::IsShowTooltipOnBottom
 
-Indica se a ponta da ferramenta é exibida sob o elemento fita.
+Indica se a dica de ferramenta é exibida sob o elemento Ribbon.
 
 ```
 virtual BOOL IsShowTooltipOnBottom() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a ponta da ferramenta for exibida sob o elemento fita; FALSO se a dica de ferramenta for exibida perto do ponteiro.
+TRUE se a dica de ferramenta for exibida sob o elemento Ribbon; FALSE se a dica de ferramenta for exibida perto do ponteiro.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementistabstop"></a><a name="istabstop"></a>CMFCRibbonBaseElement::IstabStop
+## <a name="cmfcribbonbaseelementistabstop"></a><a name="istabstop"></a> CMFCRibbonBaseElement:: IsTabStop
 
-Indica se o elemento de fita pode ser selecionado com o teclado.
+Indica se o elemento da faixa de faixas pode ser selecionado com o teclado.
 
 ```
 virtual BOOL IsTabStop() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna TRUE. Anular este método para indicar se o elemento de fita pode ser selecionado com o teclado.
+Por padrão, esse método sempre retorna TRUE. Substitua esse método para indicar se o elemento da faixa de faixas pode ser selecionado com o teclado.
 
-## <a name="cmfcribbonbaseelementistextalwaysonright"></a><a name="istextalwaysonright"></a>CMFCRibbonBaseElement::isTextAlwaysonRight
+## <a name="cmfcribbonbaseelementistextalwaysonright"></a><a name="istextalwaysonright"></a> CMFCRibbonBaseElement::IsTextAlwaysOnRight
 
-Indica se o texto para o elemento de fita é exibido à direita.
+Indica se o texto do elemento da faixa de faixas é exibido à direita.
 
 ```
 BOOL IsTextAlwaysOnRight() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se o texto para o elemento de fita for exibido à direita; caso contrário, FALSE.
+TRUE se o texto do elemento Ribbon for exibido à direita; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementisvisible"></a><a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible
+## <a name="cmfcribbonbaseelementisvisible"></a><a name="isvisible"></a> CMFCRibbonBaseElement:: IsVisible
 
-Indica se o elemento de fita está atualmente exibido.
+Indica se o elemento da faixa de faixas está sendo exibido no momento.
 
 ```
 BOOL IsVisible() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o elemento de fita for exibido no momento; caso contrário, FALSE.
+TRUE se o elemento Ribbon for exibido no momento; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementiswholerowheight"></a><a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight
+## <a name="cmfcribbonbaseelementiswholerowheight"></a><a name="iswholerowheight"></a> CMFCRibbonBaseElement::IsWholeRowHeight
 
-Indica se a altura do display do elemento de fita é a mesma que a altura do display do painel de fita que o contém.
+Indica se a altura de exibição do elemento da faixa de faixas é a mesma que a altura de exibição do painel da faixa de faixas que o contém.
 
 ```
 virtual BOOL IsWholeRowHeight() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna FALSO. Anular este método para indicar se a altura do display do elemento da fita é a mesma que a altura do display do painel de fita que o contém.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para indicar se a altura de exibição do elemento da faixa de faixas é igual à altura de exibição do painel da faixa de faixas que o contém.
 
-## <a name="cmfcribbonbaseelementnotifycommand"></a><a name="notifycommand"></a>CMFCRibbonBaseElement::Notificarcomando
+## <a name="cmfcribbonbaseelementnotifycommand"></a><a name="notifycommand"></a> CMFCRibbonBaseElement::NotifyCommand
 
-Envia uma notificação de comando para a janela pai do elemento fita.
+Envia uma notificação de comando para a janela pai do elemento Ribbon.
 
 ```
 BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*bComatraso*<br/>
-[em] TRUE para adicionar a notificação de comando à fila de mensagens da janela pai; FALSO para enviar a mensagem imediatamente para a janela dos pais.
+*bWithDelay*<br/>
+no TRUE para adicionar a notificação de comando à fila de mensagens da janela pai; FALSE para enviar a mensagem imediatamente para a janela pai.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a mensagem foi enviada; caso contrário, FALSE.
+TRUE se a mensagem foi enviada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementnotifyhighlightlistitem"></a><a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotificarDestaqueListItem
+## <a name="cmfcribbonbaseelementnotifyhighlightlistitem"></a><a name="notifyhighlightlistitem"></a> CMFCRibbonBaseElement::NotifyHighlightListItem
 
-Notifica a janela pai da barra de fita quando um usuário destaca um elemento de fita que está localizado em uma lista.
+Notifica a janela pai da barra da faixa de forma quando um usuário realça um elemento Ribbon que está localizado em uma lista.
 
 ```
 virtual void NotifyHighlightListItem(int nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
-[em] O índice do elemento de fita na lista.
+no O índice do elemento da faixa de faixas na lista.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementonaddtoqatoolbar"></a><a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar
+## <a name="cmfcribbonbaseelementonaddtoqatoolbar"></a><a name="onaddtoqatoolbar"></a> CMFCRibbonBaseElement::OnAddToQAToolbar
 
-Adiciona o elemento de fita à barra de ferramentas de acesso rápido especificada.
+Adiciona o elemento da faixa de faixas à barra de ferramentas de acesso rápido especificada.
 
 ```
 virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Khat*<br/>
-[em] A barra de ferramentas de acesso rápido.
+*qat*<br/>
+no A barra de ferramentas de acesso rápido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna TRUE indicando que o elemento da fita foi adicionado à barra de ferramentas de acesso rápido.
+Sempre retorna TRUE indicando que o elemento Ribbon foi adicionado à barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementonafterchangerect"></a><a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect
+## <a name="cmfcribbonbaseelementonafterchangerect"></a><a name="onafterchangerect"></a> CMFCRibbonBaseElement::OnAfterChangeRect
 
-Atualiza a dica de ferramenta para o elemento de fita.
+Atualiza a dica de ferramenta para o elemento Ribbon.
 
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Este parâmetro não é usado.
+*Primário*<br/>
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método atualiza a dica de ferramenta para o elemento de fita. Anular este método para atualizar o elemento de fita depois que seu retângulo de exibição foi alterado.
+Por padrão, esse método atualiza a dica de ferramenta para o elemento Ribbon. Substitua esse método para atualizar o elemento da faixa de faixas depois que seu retângulo de exibição for alterado.
 
-## <a name="cmfcribbonbaseelementonautorepeat"></a><a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat
+## <a name="cmfcribbonbaseelementonautorepeat"></a><a name="onautorepeat"></a> CMFCRibbonBaseElement::OnAutoRepeat
 
-Atualiza o elemento fita em resposta à entrada sustentada do usuário.
+Atualiza o elemento da faixa de faixas em resposta à entrada de usuário sustentada.
 
 ```
 virtual BOOL OnAutoRepeat();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna FALSO. Anular este método para processar a entrada sustentada do usuário.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para processar a entrada de usuário sustentada.
 
-## <a name="cmfcribbonbaseelementoncalctextsize"></a><a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize
+## <a name="cmfcribbonbaseelementoncalctextsize"></a><a name="oncalctextsize"></a> CMFCRibbonBaseElement::OnCalcTextSize
 
-Calcula o tamanho do texto para o elemento da fita.
+Calcula o tamanho do texto para o elemento Ribbon.
 
 ```
 virtual void OnCalcTextSize(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Este parâmetro não é usado.
+*Primário*<br/>
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método não faz nada. Anular este método para calcular o tamanho do texto para o elemento da fita.
+Por padrão, esse método não faz nada. Substitua esse método para calcular o tamanho do texto para o elemento Ribbon.
 
-## <a name="cmfcribbonbaseelementonchangemenuhighlight"></a><a name="onchangemenuhighlight"></a>CMFCRibbonBaseelement::OnchangeMenuHighlight
+## <a name="cmfcribbonbaseelementonchangemenuhighlight"></a><a name="onchangemenuhighlight"></a> CMFCRibbonBaseElement::OnChangeMenuHighlight
 
-Chamado pelo framework quando o destaque muda para um elemento de fita que está localizado em um menu.
+Chamado pelo Framework quando o realce é alterado para um elemento Ribbon que está localizado em um menu.
 
 ```
 virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
     CMFCRibbonBaseElement* pHot);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPanelMenuBar*<br/>
-[em] Este parâmetro não é usado.
+no Esse parâmetro não é usado.
 
-*Phot*<br/>
-[em] Este parâmetro não é usado.
+*pHot*<br/>
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método não faz nada. Substituir este método para atualizar um elemento de fita que está localizado em um menu quando o destaque muda.
+Por padrão, esse método não faz nada. Substitua esse método para atualizar um elemento da faixa de faixas que está localizado em um menu quando o realce é alterado.
 
-## <a name="cmfcribbonbaseelementondraw"></a><a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw
+## <a name="cmfcribbonbaseelementondraw"></a><a name="ondraw"></a> CMFCRibbonBaseElement:: OnDraw
 
-Chamado pela estrutura para desenhar o elemento da fita.
+Chamado pelo Framework para desenhar o elemento Ribbon.
 
 ```
 virtual void OnDraw(CDC* pDC) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Um ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Um ponteiro para um contexto de dispositivo.
 
 ### <a name="remarks"></a>Comentários
 
-Anular este método em uma classe derivada se você quiser personalizar o desenho de um elemento de fita específico.
+Substitua esse método em uma classe derivada se desejar personalizar o desenho de um elemento da faixa de particular específico.
 
-## <a name="cmfcribbonbaseelementondrawkeytip"></a><a name="ondrawkeytip"></a>CMFCRibbonBaseelement::OnDrawKeytip
+## <a name="cmfcribbonbaseelementondrawkeytip"></a><a name="ondrawkeytip"></a> CMFCRibbonBaseElement::OnDrawKeyTip
 
-Chamado pelo framework para desenhar a dica-chave para o elemento da fita.
+Chamado pelo Framework para desenhar o KeyTip para o elemento Ribbon.
 
 ```
 virtual void OnDrawKeyTip(
@@ -1695,22 +1695,22 @@ virtual void OnDrawKeyTip(
     BOOL bIsMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Ponteiro para um contexto de dispositivo.
 
 *Rect*<br/>
-[em] Retângulo de limite para a ponta de chave.
+no Retângulo de limite para o KeyTip.
 
 *bIsMenu*<br/>
-[em] TRUE se a dica for para um botão de menu pop-up; caso contrário, FALSE.
+no TRUE se o KeyTip for para um botão de menu pop-up; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage
+## <a name="cmfcribbonbaseelementondrawmenuimage"></a><a name="ondrawmenuimage"></a> CMFCRibbonBaseElement::OnDrawMenuImage
 
-Chamado pela estrutura quando a imagem do menu para o elemento de fita é desenhada.
+Chamado pelo Framework quando a imagem de menu para o elemento Ribbon é desenhada.
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -1718,23 +1718,23 @@ virtual BOOL OnDrawMenuImage(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Ponteiro para um contexto de dispositivo.
+*Primário*<br/>
+no Ponteiro para um contexto de dispositivo.
 
 *Rect*<br/>
-[em] Retângulo de imagem do menu.
+no Retângulo da imagem do menu.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre retorna TRUE para indicar que a imagem foi desenhada.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonBaseelement::Ondrawonlist
+## <a name="cmfcribbonbaseelementondrawonlist"></a><a name="ondrawonlist"></a> CMFCRibbonBaseElement::OnDrawOnList
 
-Chamado pela estrutura para desenhar o elemento de fita em uma caixa de lista de comandos.
+Chamado pelo Framework para desenhar o elemento da faixa de faixas em uma caixa de listagem de comandos.
 
 ```
 virtual void OnDrawOnList(
@@ -1746,111 +1746,111 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Ponteiro para um contexto de dispositivo para o elemento de fita.
+*Primário*<br/>
+no Ponteiro para um contexto de dispositivo para o elemento Ribbon.
 
 *strText*<br/>
-[em] O texto de exibição.
+no O texto de exibição.
 
 *nTextOffset*<br/>
-[em] Distância, em pixels, do lado esquerdo da caixa de lista para o texto de exibição.
+no Distância, em pixels, do lado esquerdo da caixa de listagem até o texto de exibição.
 
 *Rect*<br/>
-[em] O retângulo do display para o elemento da fita.
+no O retângulo de exibição do elemento da faixa de faixas.
 
 *bIsSelected*<br/>
-[em] Este parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 *bHighlighted*<br/>
-[em] Este parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-A caixa de lista de comandos exibe elementos de fita para permitir que os usuários personalizem a barra de ferramentas de acesso rápido.
+A caixa de listagem comandos exibe os elementos da faixa de lista para permitir que os usuários personalizem a barra de ferramentas de acesso rápido.
 
-## <a name="cmfcribbonbaseelementonkey"></a><a name="onkey"></a>CMFCRibbonBaseElement::Onkey
+## <a name="cmfcribbonbaseelementonkey"></a><a name="onkey"></a> CMFCRibbonBaseElement::OnKey
 
-Chamado pelo framework quando o usuário pressiona uma dica de tecla e o elemento de fita tem o foco.
+Chamado pelo Framework quando o usuário pressiona um KeyTip e o elemento Ribbon tem o foco.
 
 ```
 virtual BOOL OnKey(BOOL bIsMenuKey);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*bIsMenukey*<br/>
-[em] TRUE se a dica de chave exibir um menu pop-up; caso contrário, FALSE.
+*bIsMenuKey*<br/>
+no TRUE se o KeyTip exibir um menu pop-up; caso contrário, FALSE.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se o evento foi tratado; caso contrário, FALSO.
+TRUE se o evento foi tratado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementonmenukey"></a><a name="onmenukey"></a>CMFCRibbonBaseelement::Onmenukey
+## <a name="cmfcribbonbaseelementonmenukey"></a><a name="onmenukey"></a> CMFCRibbonBaseElement::OnMenuKey
 
-Chamado pelo framework quando o usuário pressiona uma tecla de menu no painel principal.
+Chamado pelo Framework quando o usuário pressiona um menu KeyTip no painel principal.
 
 ```
 virtual BOOL OnMenuKey(UINT nUpperChar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nUpperChar*<br/>
-[em] Este parâmetro não é usado.
+no Esse parâmetro não é usado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna FALSO. Anular este método para responder quando um usuário pressiona uma tecla de menu no painel principal.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para responder quando um usuário pressionar um menu KeyTip no painel principal.
 
-## <a name="cmfcribbonbaseelementonprocesskey"></a><a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey
+## <a name="cmfcribbonbaseelementonprocesskey"></a><a name="onprocesskey"></a> CMFCRibbonBaseElement::OnProcessKey
 
-Chamado pelo framework quando o usuário pressiona uma tecla de atalho.
+Chamado pelo Framework quando o usuário pressiona uma tecla de atalho.
 
 ```
 virtual BOOL OnProcessKey(UINT nChar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Nchar*<br/>
-[em] Este parâmetro não é usado.
+*nChar*<br/>
+no Esse parâmetro não é usado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Anular este método se você quiser que o elemento de fita processe uma tecla de atalho.
+Substitua esse método se desejar que o elemento da faixa de faixas processe uma tecla de atalho.
 
-## <a name="cmfcribbonbaseelementonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonBaseelement::OnRTLChanged
+## <a name="cmfcribbonbaseelementonrtlchanged"></a><a name="onrtlchanged"></a> CMFCRibbonBaseElement::OnRTLChanged
 
-Chamado pelo framework quando o layout muda de direção.
+Chamado pelo Framework quando o layout muda de direção.
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsRTL*<br/>
-[em] Este parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método não faz nada. Anular este método para ajustar o elemento da fita quando o layout muda de direção. A direção padrão do layout é da esquerda para a direita.
+Por padrão, esse método não faz nada. Substitua esse método para ajustar o elemento da faixa de opção quando o layout alterar a direção. A direção do layout padrão é da esquerda para a direita.
 
-## <a name="cmfcribbonbaseelementonsetfocus"></a><a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus
+## <a name="cmfcribbonbaseelementonsetfocus"></a><a name="onsetfocus"></a> CMFCRibbonBaseElement:: OnSetFocus
 
-Chamado pela estrutura quando um elemento de fita recebe ou perde o foco de entrada.
+Chamado pelo Framework quando um elemento Ribbon recebe ou perde o foco de entrada.
 
 ```
 virtual void OnSetFocus(BOOL B);
@@ -1858,28 +1858,28 @@ virtual void OnSetFocus(BOOL B);
 
 ### <a name="remarks"></a>Comentários
 
-Anular este método em uma classe derivada se você quiser que seu aplicativo manuseie uma mudança no foco de um elemento de fita.
+Substitua esse método em uma classe derivada se desejar que seu aplicativo manipule uma alteração no foco de um elemento da faixa de uma.
 
-## <a name="cmfcribbonbaseelementonshow"></a><a name="onshow"></a>CMFCRibbonBaseelement::OnShow
+## <a name="cmfcribbonbaseelementonshow"></a><a name="onshow"></a> CMFCRibbonBaseElement:: OnShow
 
-Chamado pela estrutura para mostrar ou ocultar o elemento da fita.
+Chamado pelo Framework para mostrar ou ocultar o elemento Ribbon.
 
 ```
 virtual void OnShow(BOOL bShow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bshow*<br/>
-[em] Este parâmetro não é usado.
+*bShow*<br/>
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método não faz nada. Anular este método para mostrar ou ocultar o elemento da fita.
+Por padrão, esse método não faz nada. Substitua esse método para mostrar ou ocultar o elemento Ribbon.
 
-## <a name="cmfcribbonbaseelementonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu
+## <a name="cmfcribbonbaseelementonshowpopupmenu"></a><a name="onshowpopupmenu"></a> CMFCRibbonBaseElement::OnShowPopupMenu
 
-Chamado pela estrutura antes que o elemento de fita mostre um menu pop-up.
+Chamado pelo Framework antes de o elemento Ribbon mostrar um menu pop-up.
 
 ```
 virtual void OnShowPopupMenu();
@@ -1887,28 +1887,28 @@ virtual void OnShowPopupMenu();
 
 ### <a name="remarks"></a>Comentários
 
-Este método notifica a janela pai da barra de fita que o elemento fita mostrará um menu pop-up.
+Esse método notifica a janela pai da barra da faixa de que o elemento Ribbon mostrará um menu pop-up.
 
-## <a name="cmfcribbonbaseelementpostmenucommand"></a><a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand
+## <a name="cmfcribbonbaseelementpostmenucommand"></a><a name="postmenucommand"></a> CMFCRibbonBaseElement::P ostMenuCommand
 
-Fecha o menu pop-up para o elemento fita e envia uma mensagem próxima ao menu pai.
+Fecha o menu pop-up do elemento Ribbon e envia uma mensagem de fechamento para o menu pai.
 
 ```cpp
 void PostMenuCommand(UINT uiCmdId);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdId*<br/>
-[em] O parâmetro não é usado.
+no O parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-A mensagem de fechamento só é enviada se o elemento de fita estiver localizado em um menu pop-up.
+A mensagem de fechamento só será enviada se o elemento da faixa de faixas estiver localizado em um menu pop-up.
 
-## <a name="cmfcribbonbaseelementredraw"></a><a name="redraw"></a>CMFCRibbonBaseElement::Redesenhar
+## <a name="cmfcribbonbaseelementredraw"></a><a name="redraw"></a> CMFCRibbonBaseElement:: redesenhar
 
-Atualiza o display para o elemento fita.
+Atualiza a exibição para o elemento Ribbon.
 
 ```
 virtual void Redraw();
@@ -1916,11 +1916,11 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>Comentários
 
-Este método redesenha o retângulo de exibição para o elemento de fita, chamando [CWnd::RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) com o conjunto de bandeiras RDW_INVALIDATE, RDW_ERASE e RDW_UPDATENOW definidos.
+Esse método redesenha o retângulo de exibição para o elemento Ribbon chamando [CWnd:: RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) com os sinalizadores RDW_INVALIDATE, RDW_ERASE e RDW_UPDATENOW definidos.
 
-## <a name="cmfcribbonbaseelementsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonBaseElement::setACCData
+## <a name="cmfcribbonbaseelementsetaccdata"></a><a name="setaccdata"></a> CMFCRibbonBaseElement::SetACCData
 
-Define os dados de acessibilidade para o elemento de fita.
+Define os dados de acessibilidade para o elemento Ribbon.
 
 ```
 virtual BOOL SetACCData(
@@ -1928,124 +1928,124 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParent*<br/>
-A janela dos pais para o elemento da fita.
+A janela pai do elemento Ribbon.
 
-*dados*<br/>
-Os dados de acessibilidade para o elemento fita.
+*data*<br/>
+Os dados de acessibilidade para o elemento Ribbon.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método define os dados de acessibilidade para o elemento fita e sempre retorna TRUE. Substituir este método para definir os dados de acessibilidade e retornar um valor que indique sucesso ou falha.
+Por padrão, esse método define os dados de acessibilidade para o elemento Ribbon e sempre retorna TRUE. Substitua esse método para definir os dados de acessibilidade e retornar um valor que indique êxito ou falha.
 
-## <a name="cmfcribbonbaseelementsetcompactmode"></a><a name="setcompactmode"></a>CMFCRibbonBaseElement::setCompactMode
+## <a name="cmfcribbonbaseelementsetcompactmode"></a><a name="setcompactmode"></a> CMFCRibbonBaseElement:: setcompactmode
 
-Define o tamanho do display para o elemento da fita.
+Define o tamanho de exibição para o elemento Ribbon.
 
 ```
 virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bCompactMode*<br/>
-[em] TRUE para reduzir o tamanho do display do elemento fita; FALSE para aumentar o tamanho do display do elemento fita.
+no TRUE para reduzir o tamanho de exibição do elemento da faixa de faixas; FALSE para aumentar o tamanho de exibição do elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-A tabela a seguir resume a lógica para este método.
+A tabela a seguir resume a lógica para esse método.
 
-|*bCompactMode*|Tamanho do elemento da fita atual|Novo tamanho do elemento de fita|
+|*bCompactMode*|Tamanho do elemento da faixa de tempo atual|Tamanho do novo elemento da faixa de faixas|
 |--------------------|---------------------------------|-----------------------------|
-|TRUE|Compacto|Sem alteração.|
-|TRUE|Intermediário|Compacto se for possível.|
-|TRUE|grande|Intermediário, se for possível.|
-|FALSE|Compacto|Intermediário se for possível; caso contrário grande.|
+|TRUE|Compacto|Nenhuma alteração.|
+|TRUE|Intermediário|Compacte se for possível.|
+|TRUE|Grande|Intermediário se possível.|
+|FALSE|Compacto|Intermediário se for possível; do contrário, grande.|
 
-## <a name="cmfcribbonbaseelementsetdata"></a><a name="setdata"></a>CMFCRibbonBaseElement::setData
+## <a name="cmfcribbonbaseelementsetdata"></a><a name="setdata"></a> CMFCRibbonBaseElement:: SetData
 
-Associa um item de dados com o elemento fita.
+Associa um item de dados com o elemento Ribbon.
 
 ```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dwdata*<br/>
-[em] O valor dos dados.
+*dwData*<br/>
+no O valor dos dados.
 
-## <a name="cmfcribbonbaseelementsetdefaultmenulook"></a><a name="setdefaultmenulook"></a>CMFCRibbonBaseelement::setDefaultMenu
+## <a name="cmfcribbonbaseelementsetdefaultmenulook"></a><a name="setdefaultmenulook"></a> CMFCRibbonBaseElement::SetDefaultMenuLook
 
-Define o elemento de fita para aparecer como um comando pop-up.
+Define o elemento da faixa de faixas como um comando pop-up.
 
 ```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsDefaultMenuLook*<br/>
-[em] TRUE para definir o elemento de fita para aparecer como um comando pop-up; caso contrário, FALSO.
+no TRUE para definir que o elemento da faixa de faixas apareça como um comando pop-up; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementsetdescription"></a><a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription
+## <a name="cmfcribbonbaseelementsetdescription"></a><a name="setdescription"></a> CMFCRibbonBaseElement:: SetDescription
 
-Define a descrição do elemento da fita.
+Define a descrição para o elemento Ribbon.
 
 ```
 virtual void SetDescription(LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
-[em] A descrição do elemento fita.
+no A descrição do elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura exibe a nova descrição na barra de status, ou na dica de ferramenta ou sob o botão menu.
+A estrutura exibe a nova descrição na barra de status ou na dica de ferramenta ou sob o botão de menu.
 
-## <a name="cmfcribbonbaseelementsetid"></a><a name="setid"></a>CMFCRibbonBaseelement::setID
+## <a name="cmfcribbonbaseelementsetid"></a><a name="setid"></a> CMFCRibbonBaseElement::SetID
 
-Define o ID de comando do elemento de fita.
+Define a ID de comando do elemento Ribbon.
 
 ```
 virtual void SetID(UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
-[em] O id de comando.
+no A ID do comando.
 
-## <a name="cmfcribbonbaseelementsetinitialmode"></a><a name="setinitialmode"></a>CMFCRibbonBaseElement::setInitialMode
+## <a name="cmfcribbonbaseelementsetinitialmode"></a><a name="setinitialmode"></a> CMFCRibbonBaseElement:: setinitializemode
 
-Define o tamanho inicial do display para o elemento da fita.
+Define o tamanho de exibição inicial para o elemento da faixa de faixas.
 
 ```
 virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bOneRow*<br/>
-[em] TRUE para limitar o tamanho do display para o elemento de fita para compacto ou intermediário; caso contrário, FALSE.
+no TRUE para limitar o tamanho de exibição do elemento da faixa de faixas para compactar ou intermediário; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho do display dos elementos da fita pode ser compacto, intermediário ou grande.
+O tamanho de exibição dos elementos da faixa de faixas pode ser compacto, intermediário ou grande.
 
-## <a name="cmfcribbonbaseelementsetkeys"></a><a name="setkeys"></a>CMFCRibbonBaseElement::setKeys
+## <a name="cmfcribbonbaseelementsetkeys"></a><a name="setkeys"></a> CMFCRibbonBaseElement:: SETKEYs
 
-Defina as pontas-chave para o elemento da fita.
+Define o KeyTips para o elemento Ribbon.
 
 ```
 virtual void SetKeys(
@@ -2053,109 +2053,109 @@ virtual void SetKeys(
     LPCTSTR lpszMenuKeys=NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszKeys*<br/>
-[em] A dica para o elemento da fita.
+no O KeyTip para o elemento Ribbon.
 
 *lpszMenuKeys*<br/>
-[em] A dica-chave para o menu pop-up do elemento fita.
+no O KeyTip para o menu pop-up do elemento Ribbon.
 
-## <a name="cmfcribbonbaseelementsetoriginal"></a><a name="setoriginal"></a>CMFCRibbonBaseElement::setOriginal
+## <a name="cmfcribbonbaseelementsetoriginal"></a><a name="setoriginal"></a> CMFCRibbonBaseElement:: setoriginal
 
-Define o elemento de fita original para o elemento da fita.
+Define o elemento da faixa de faixas original para o elemento Ribbon.
 
 ```
 virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOriginal*<br/>
-[em] Ponteiro para um elemento de fita.
+no Ponteiro para um elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-Os elementos de fita copiados para outro recipiente retêm um ponteiro para o elemento de fita original.
+Os elementos da faixa de faixas que são copiados para outro contêiner retêm um ponteiro para o elemento Ribbon original.
 
-## <a name="cmfcribbonbaseelementsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonBaseElement::setParentcategory
+## <a name="cmfcribbonbaseelementsetparentcategory"></a><a name="setparentcategory"></a> CMFCRibbonBaseElement::SetParentCategory
 
-Define a categoria pai para o elemento de fita.
+Define a categoria pai para o elemento Ribbon.
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParent*<br/>
-[em] Ponteiro para uma categoria de fita.
+no Ponteiro para uma categoria da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-Os grupos com guias nos controles de fita são chamados categorias.
+Os grupos com guias nos controles da faixa são chamados de categorias.
 
-## <a name="cmfcribbonbaseelementsetparentmenu"></a><a name="setparentmenu"></a>CMFCRibbonBaseelement::setParentmenu
+## <a name="cmfcribbonbaseelementsetparentmenu"></a><a name="setparentmenu"></a> CMFCRibbonBaseElement::SetParentMenu
 
-Define o recipiente do menu pai para o elemento de fita.
+Define o contêiner de menu pai para o elemento Ribbon.
 
 ```
 virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenuBar*<br/>
-[em] O menu dos pais.
+no O menu pai.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementsetparentribbonbar"></a><a name="setparentribbonbar"></a>CMFCRibbonBaseelement::setParentribbonbar
+## <a name="cmfcribbonbaseelementsetparentribbonbar"></a><a name="setparentribbonbar"></a> CMFCRibbonBaseElement::SetParentRibbonBar
 
-Define a barra de fita dos pais para o elemento da fita.
+Define a barra de faixa de faixas pai para o elemento Ribbon.
 
 ```
 virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRibbonBar*<br/>
-[em] Ponteiro para a barra de fita dos pais.
+no Ponteiro para a barra de faixa de faixas pai.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementsetrect"></a><a name="setrect"></a>CMFCRibbonBaseElement::SetRect
+## <a name="cmfcribbonbaseelementsetrect"></a><a name="setrect"></a> CMFCRibbonBaseElement:: SetRect
 
-Define as dimensões do retângulo do display para o elemento da fita.
+Define as dimensões do retângulo de exibição para o elemento Ribbon.
 
 ```cpp
 void SetRect(CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rect*<br/>
-[em] As dimensões do retângulo.
+no As dimensões do retângulo.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementsettext"></a><a name="settext"></a>CMFCRibbonBaseElement::setText
+## <a name="cmfcribbonbaseelementsettext"></a><a name="settext"></a> CMFCRibbonBaseElement:: SetText
 
-Define o texto e a dica-chave para o elemento da fita.
+Define o texto e KeyTip para o elemento Ribbon.
 
 ```
 virtual void SetText(LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
-[em] O texto e a dica-chave para o elemento da fita.
+no O Text e KeyTip para o elemento Ribbon.
 
 ### <a name="remarks"></a>Comentários
 
-Para definir a dica-chave para o elemento de fita, apromete a seqüência de escape newline seguida dos caracteres keytip para *lpszText*.
+Para definir o KeyTip para o elemento Ribbon, acrescente a seqüência de escape de nova linha seguida pelos caracteres KeyTip a *lpszText*.
 
 ### <a name="example"></a>Exemplo
 
@@ -2168,52 +2168,52 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))
 ```
 
-## <a name="cmfcribbonbaseelementsettextalwaysonright"></a><a name="settextalwaysonright"></a>CMFCRibbonBaseelement::setTextAlwaysonright
+## <a name="cmfcribbonbaseelementsettextalwaysonright"></a><a name="settextalwaysonright"></a> CMFCRibbonBaseElement::SetTextAlwaysOnRight
 
-Define o texto para que o elemento de fita seja exibido à direita.
+Define o texto para o elemento da faixa de faixas a ser exibido à direita.
 
 ```
 virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bSet*<br/>
-[em] TRUE para exibir o texto à direita; caso contrário, FALSO.
+no TRUE para exibir o texto à direita; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementsettooltiptext"></a><a name="settooltiptext"></a>CMFCRibbonBaseElement::settoolTipText
+## <a name="cmfcribbonbaseelementsettooltiptext"></a><a name="settooltiptext"></a> CMFCRibbonBaseElement:: settooltiptext
 
-Define o texto da dica de ferramenta para o elemento da fita.
+Define o texto de dica de ferramenta para o elemento Ribbon.
 
 ```
 virtual void SetToolTipText(LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
-[em] O texto da dica de ferramenta.
+no O texto da dica de ferramenta.
 
-## <a name="cmfcribbonbaseelementsetvisible"></a><a name="setvisible"></a>CMFCRibbonBaseElement::setVisible
+## <a name="cmfcribbonbaseelementsetvisible"></a><a name="setvisible"></a> CMFCRibbonBaseElement:: setVisible
 
-Define a visibilidade do elemento da fita.
+Define a visibilidade do elemento Ribbon.
 
 ```cpp
 void SetVisible(BOOL bIsVisible);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsVisible*<br/>
-[em] VERDADEIRO para exibir o elemento da fita; FALSE para esconder o elemento da fita.
+no TRUE para exibir o elemento da faixa de faixas; FALSE para ocultar o elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementstretchhorizontally"></a><a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally
+## <a name="cmfcribbonbaseelementstretchhorizontally"></a><a name="stretchhorizontally"></a> CMFCRibbonBaseElement::StretchHorizontally
 
-Estica a largura do elemento da fita.
+Amplia a largura do elemento Ribbon.
 
 ```
 virtual void StretchHorizontally();
@@ -2221,11 +2221,11 @@ virtual void StretchHorizontally();
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método gera uma falha de afirmação em compilações de depuração e, portanto, não deve ser chamado. Anular este método para esticar a largura do elemento da fita.
+Por padrão, esse método gera uma falha de asserção em compilações de depuração e, portanto, não deve ser chamado. Substitua esse método para alongar a largura do elemento da faixa de faixas.
 
-## <a name="cmfcribbonbaseelementstretchtowholerow"></a><a name="stretchtowholerow"></a>CMFCRibbonBaseelement::StretchToWholerow
+## <a name="cmfcribbonbaseelementstretchtowholerow"></a><a name="stretchtowholerow"></a> CMFCRibbonBaseElement::StretchToWholeRow
 
-Altera a altura do display do elemento da fita para a altura da linha especificada.
+Altera a altura de exibição do elemento da faixa de faixas para a altura da linha especificada.
 
 ```
 virtual BOOL StretchToWholeRow(
@@ -2233,25 +2233,25 @@ virtual BOOL StretchToWholeRow(
     int nHeight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Este parâmetro não é usado.
+*Primário*<br/>
+no Esse parâmetro não é usado.
 
-*Nheight*<br/>
-[em] A altura da linha.
+*nHeight*<br/>
+no A altura da linha.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se a altura do display foi definida; caso contrário, FALSE.
+TRUE se a altura de exibição tiver sido definida; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substituir este método para alterar a altura do display do elemento de fita para a altura da linha especificada.
+Substitua esse método para alterar a altura de exibição do elemento da faixa de faixas para a altura da linha especificada.
 
-## <a name="cmfcribbonbaseelementupdatetooltipinfo"></a><a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdatetooltipInfo
+## <a name="cmfcribbonbaseelementupdatetooltipinfo"></a><a name="updatetooltipinfo"></a> CMFCRibbonBaseElement::UpdateTooltipInfo
 
-Atualiza o texto da dica de ferramenta usando o recurso de comando para o elemento de fita.
+Atualiza o texto da dica de ferramenta usando o recurso de comando para o elemento Ribbon.
 
 ```
 virtual void UpdateTooltipInfo();
@@ -2259,21 +2259,21 @@ virtual void UpdateTooltipInfo();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaseelementhasfocus"></a><a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus
+## <a name="cmfcribbonbaseelementhasfocus"></a><a name="hasfocus"></a> CMFCRibbonBaseElement::HasFocus
 
-Indica se o elemento pai tem foco no teclado.
+Indica se o elemento pai tem o foco do teclado.
 
 ```
 virtual BOOL HasFocus() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADEIRO se o elemento de fita estiver focado; caso contrário, FALSO.
+TRUE se o elemento da faixa de faixas estiver focalizado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Confira também
 
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

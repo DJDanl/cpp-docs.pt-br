@@ -5,22 +5,35 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 6cef9304be17dd39e0f0b020133abd08f07fba7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97553276a7c4ff687dd8bea4627f943d5666b2e9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194375"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836005"
 ---
 # <a name="concurrency-namespace-operators"></a>Operadores do namespace de simultaneidade
 
-||||
-|-|-|-|
-|[operador! =](#operator_neq)|[operador&amp;&amp;](#operator_amp_amp)|[operador&gt;](#operator_gt)|
-|[operador&gt;=](#operator_gt_eq)|[operador&lt;](#operator_lt)|[operador&lt;=](#operator_lt_eq)|
-|[operador = =](#operator_eq_eq)|[&#124;&#124;do operador](#operator_lor)| |
+:::row:::
+   :::column span="":::
+      [`operator||`](#operator_lor)\
+      [`operator&&`](#operator_amp_amp)
+   :::column-end:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator<`](#operator_lt)\
+      [`operator<=`](#operator_lt_eq)
+   :::column-end:::
+   :::column span="":::
+      [`operator>`](#operator_gt)\
+      [`operator>=`](#operator_gt_eq)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator124124-operator"></a><a name="operator_lor"></a>Operador de&#124;&#124; de operador
+## <a name="operator124124-operator"></a><a name="operator_lor"></a> Operador de&#124;&#124; de operador
 
 Cria uma tarefa que será concluída com êxito quando uma das tarefas fornecidas como argumentos for concluída com êxito.
 
@@ -56,7 +69,7 @@ A primeira tarefa a combinar na tarefa resultante.
 *rhs*<br/>
 A segunda tarefa a combinar na tarefa resultante.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma tarefa que é concluída com êxito quando uma das tarefas de entrada é concluída com êxito. Se as tarefas de entrada forem do tipo `T`, a saída dessa função será um `task<std::vector<T>`. Se as tarefas de entrada forem do tipo **`void`** , a tarefa de saída também será um `task<void>` .
 
@@ -105,7 +118,7 @@ A primeira tarefa a combinar na tarefa resultante.
 *rhs*<br/>
 A segunda tarefa a combinar na tarefa resultante.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma tarefa que foi concluída com êxito quando ambas as tarefas de entrada foram concluídas com êxito. Se as tarefas de entrada forem do tipo `T`, a saída dessa função será um `task<std::vector<T>>`. Se as tarefas de entrada forem do tipo **`void`** , a tarefa de saída também será um `task<void>` .
 
@@ -113,7 +126,7 @@ Uma tarefa que foi concluída com êxito quando ambas as tarefas de entrada fora
 
 Se uma das tarefas for cancelada ou lançar uma exceção, a tarefa retornada será concluída antecipadamente, no estado cancelado, e a exceção, se ocorrer, será gerada se você chamar `get()` ou `wait()` nessa tarefa.
 
-## <a name="operator-operator"></a><a name="operator_eq_eq"></a>operador = = operador
+## <a name="operator-operator"></a><a name="operator_eq_eq"></a> operador = = operador
 
 Testa se o `concurrent_vector` objeto no lado esquerdo do operador é igual ao `concurrent_vector` objeto no lado direito.
 
@@ -141,7 +154,7 @@ Um objeto do tipo `concurrent_vector`.
 *_B*<br/>
 Um objeto do tipo `concurrent_vector`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o vetor simultâneo no lado esquerdo do operador for igual ao vetor simultâneo no lado direito do operador;. caso contrário **`false`** .
 
@@ -151,7 +164,7 @@ Dois vetores simultâneos são iguais se tiverem o mesmo número de elementos e 
 
 Esse método não é seguro para simultaneidade em relação a outros métodos que podem modificar qualquer vetor simultâneo `_A` ou `_B` .
 
-## <a name="operator-operator"></a><a name="operator_neq"></a>operador! = operador
+## <a name="operator-operator"></a><a name="operator_neq"></a> operador! = operador
 
 Testa se o `concurrent_vector` objeto no lado esquerdo do operador não é igual ao `concurrent_vector` objeto no lado direito.
 
@@ -179,7 +192,7 @@ Um objeto do tipo `concurrent_vector`.
 *_B*<br/>
 Um objeto do tipo `concurrent_vector`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se os vetores simultâneos não forem iguais; **`false`** se os vetores simultâneos forem iguais.
 
@@ -217,7 +230,7 @@ Um objeto do tipo `concurrent_vector`.
 *_B*<br/>
 Um objeto do tipo `concurrent_vector`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o vetor simultâneo no lado esquerdo do operador for menor que o vetor simultâneo no lado direito do operador; caso contrário **`false`** .
 
@@ -227,7 +240,7 @@ O comportamento desse operador é idêntico ao operador equivalente para a `vect
 
 Esse método não é seguro para simultaneidade em relação a outros métodos que podem modificar qualquer vetor simultâneo `_A` ou `_B` .
 
-## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a>operador &lt; = operador
+## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a> operador &lt; = operador
 
 Testa se o `concurrent_vector` objeto no lado esquerdo do operador é menor ou igual ao `concurrent_vector` objeto no lado direito.
 
@@ -255,7 +268,7 @@ Um objeto do tipo `concurrent_vector`.
 *_B*<br/>
 Um objeto do tipo `concurrent_vector`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o vetor simultâneo no lado esquerdo do operador for menor que ou igual ao vetor simultâneo no lado direito do operador;. caso contrário **`false`** .
 
@@ -293,7 +306,7 @@ Um objeto do tipo `concurrent_vector`.
 *_B*<br/>
 Um objeto do tipo `concurrent_vector`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o vetor simultâneo no lado esquerdo do operador for maior que o vetor simultâneo no lado direito do operador; caso contrário **`false`** .
 
@@ -303,7 +316,7 @@ O comportamento desse operador é idêntico ao operador equivalente para a `vect
 
 Esse método não é seguro para simultaneidade em relação a outros métodos que podem modificar qualquer vetor simultâneo `_A` ou `_B` .
 
-## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a>operador &gt; = operador
+## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a> operador &gt; = operador
 
 Testa se o `concurrent_vector` objeto no lado esquerdo do operador é maior ou igual ao `concurrent_vector` objeto no lado direito.
 
@@ -331,7 +344,7 @@ Um objeto do tipo `concurrent_vector`.
 *_B*<br/>
 Um objeto do tipo `concurrent_vector`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o vetor simultâneo no lado esquerdo do operador for maior que ou igual ao vetor simultâneo no lado direito do operador;. caso contrário **`false`** .
 

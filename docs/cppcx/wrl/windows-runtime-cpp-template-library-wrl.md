@@ -3,12 +3,12 @@ title: Biblioteca de Modelos C++ do Windows Runtime  (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: b03dc98212bbc822ddc44871632fda73d1be8740
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404906"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840525"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de Modelos C++ do Windows Runtime  (WRL)
 
@@ -17,9 +17,9 @@ A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma bibli
 > [!NOTE]
 > O WRL agora é substituído por C++/WinRT, uma projeção de linguagem C++ 17 padrão para APIs de Windows Runtime. O C++/WinRT está disponível no SDK do Windows 10 da versão 1803 em diante. O C++/WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer a você acesso de primeira classe à API moderna do Windows.
 >
-> Com o C++/WinRT, você pode consumir e criar Windows Runtime APIs usando qualquer compilador C++ 17 compatível com padrões. O C++/WinRT normalmente apresenta melhor e produz binários menores do que qualquer outra opção de idioma para o Windows Runtime. Continuaremos a dar suporte a C++/CX e WRL, mas recomendamos que os novos aplicativos usem o C++/WinRT. Para obter mais informações, consulte [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Com o C++/WinRT, você pode consumir e criar Windows Runtime APIs usando qualquer compilador C++ 17 compatível com padrões. O C++/WinRT normalmente apresenta melhor e produz binários menores do que qualquer outra opção de idioma para o Windows Runtime. Continuaremos a dar suporte a C++/CX e WRL, mas recomendamos que os novos aplicativos usem o C++/WinRT. Para obter mais informações, consulte [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
-## <a name="benefits"></a>Benefícios
+## <a name="benefits"></a>Vantagens
 
 A Windows Runtime biblioteca de modelos C++ permite que você implemente e consuma com mais facilidade os componentes de Component Object Model (COM). Ele fornece técnicas de manutenção como a contagem de referências para gerenciar o tempo de vida de objetos e testar valores HRESULT para determinar se uma operação teve êxito ou falhou. Para usar a biblioteca de modelos do Windows Runtime C++ com êxito, você deve seguir cuidadosamente essas regras e técnicas.
 
@@ -73,7 +73,7 @@ Usa a `HttpRequest` classe que é definida em [Walkthrough: conectando usando ta
 [Criando um componente DLL Windows Runtime com C++ de exemplo](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples)<br/>
 Mostra como usar a biblioteca de modelos do Windows Runtime C++ para criar um componente de DLL em processo e consumi-lo do C++/CX, JavaScript e C#.
 
-[Exemplo de jogo de labirinto de mármore DirectX](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
+[Exemplo de jogo de labirinto de mármore DirectX](/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Demonstra como usar a biblioteca de modelos do Windows Runtime C++ para gerenciar o tempo de vida de componentes COM, como DirectX e Media Foundation no contexto de um jogo 3D completo.
 
 [Notificações do sistema a partir de aplicativos da área de trabalho](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
@@ -109,7 +109,7 @@ Windows Runtime biblioteca de modelos C++ fornece tipos que representam alguns c
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) é um tipo de *ponteiro inteligente* que representa a interface que é especificada pelo parâmetro de modelo. Use `ComPtr` para declarar uma variável que pode acessar os membros de um objeto derivado da interface. `ComPtr`mantém automaticamente uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.
+[ComPtr](comptr-class.md) é um tipo de *ponteiro inteligente* que representa a interface que é especificada pelo parâmetro de modelo. Use `ComPtr` para declarar uma variável que pode acessar os membros de um objeto derivado da interface. `ComPtr` mantém automaticamente uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
@@ -133,7 +133,7 @@ O [AsyncBase](asyncbase-class.md) fornece métodos virtuais que representam o mo
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) representa um objeto de marshaling com thread livre. `FtmBase`Cria uma tabela de interface global (GIT) e ajuda a gerenciar objetos de marshaling e proxy.
+[FtmBase](ftmbase-class.md) representa um objeto de marshaling com thread livre. `FtmBase` Cria uma tabela de interface global (GIT) e ajuda a gerenciar objetos de marshaling e proxy.
 
 ### <a name="weakref"></a>WeakRef
 
@@ -141,11 +141,16 @@ O [AsyncBase](asyncbase-class.md) fornece métodos virtuais que representam o mo
 
 Um `WeakRef` objeto normalmente representa um objeto cuja existência é controlada por um thread ou aplicativo externo. Por exemplo, um `WeakRef` objeto pode fazer referência a um objeto de arquivo. Quando o arquivo é aberto, o `WeakRef` é válido e o arquivo referenciado é acessível. Mas quando o arquivo é fechado, o `WeakRef` é inválido e o arquivo não está acessível.
 
-## <a name="related-topics"></a>Tópicos Relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-|||
-|-|-|
-|[APIs de chave por categoria](key-wrl-apis-by-category.md)|Realça os tipos de biblioteca de modelos do C++ Windows Runtime, funções e macros primários.|
-|[Referência](wrl-reference.md)|Contém informações de referência para a biblioteca de modelos do Windows Runtime C++.|
-|[Referência rápida (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Descreve brevemente os recursos do C++/CX que dão suporte ao Windows Runtime.|
-|[Usando componentes de Windows Runtime no Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Mostra como usar C++/CX para criar um componente Windows Runtime básico.|
+[Principais APIs por categoria](key-wrl-apis-by-category.md)\
+Realça os tipos de biblioteca de modelos do C++ Windows Runtime, funções e macros primários.
+
+[Referência](wrl-reference.md)\
+Contém informações de referência para a biblioteca de modelos do Windows Runtime C++.
+
+[Referência rápida (C++/CX)](../../cppcx/quick-reference-c-cx.md)\
+Descreve brevemente os recursos do C++/CX que dão suporte ao Windows Runtime.
+
+[Usando componentes de Windows Runtime no Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)\
+Mostra como usar C++/CX para criar um componente Windows Runtime básico.

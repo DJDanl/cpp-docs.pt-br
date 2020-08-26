@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bf6cb4a620243f35886835e996eb34bc7b0e6960
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28ecadfce3e52d9541358d8aa9f68b2e0857661b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224780"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839602"
 ---
 # <a name="lognormal_distribution-class"></a>Classe lognormal_distribution
 
@@ -75,10 +75,8 @@ O tipo de resultado de ponto flutuante, o padrão é **`double`** . Para possív
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **`double`** se nenhum for fornecido, distribuído de acordo com a distribuição normal de log. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|
+[lognormal_distribution](#lognormal_distribution)\
+[param_type](#param_type)
 
 As funções de propriedade `m()` e `s()` retornam os valores para os parâmetros de distribuição armazenados *m* e *s*, respectivamente.
 
@@ -184,7 +182,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution:: lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a> lognormal_distribution:: lognormal_distribution
 
 Constrói a distribuição.
 
@@ -212,7 +210,7 @@ O primeiro construtor constrói um objeto cujo valor `m` armazenado contém o va
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::p aram_type
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a> lognormal_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 

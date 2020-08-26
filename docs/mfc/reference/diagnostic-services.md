@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4e57e0ec175abca5453c6f2ad1c05ab5a53f125e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 931545e6a79ecaa59d147e48265649ef20466fbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222843"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837392"
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
 
@@ -47,7 +47,7 @@ Além disso, a biblioteca de tempo de execução do C também dá suporte a um c
 
 ### <a name="mfc-general-diagnostic-macros"></a>Macros de diagnóstico geral do MFC
 
-|||
+|Nome|Descrição|
 |-|-|
 |[DECLARAR](#assert)|Imprime uma mensagem e, em seguida, anula o programa se a expressão especificada for avaliada como FALSE na versão de depuração da biblioteca.|
 |[ASSERT_KINDOF](#assert_kindof)|Testa se um objeto é um objeto da classe especificada ou de uma classe derivada da classe especificada.|
@@ -61,7 +61,7 @@ Além disso, a biblioteca de tempo de execução do C também dá suporte a um c
 
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>Variáveis e funções de diagnóstico geral do MFC
 
-|||
+|Nome|Descrição|
 |-|-|
 |[afxDump](#afxdump)|Variável global que envia informações de [CDumpContext](../../mfc/reference/cdumpcontext-class.md) para a janela de saída do depurador ou para o terminal de depuração.|
 |[afxMemDF](#afxmemdf)|Variável global que controla o comportamento do alocador de memória de depuração.|
@@ -80,18 +80,18 @@ Além disso, a biblioteca de tempo de execução do C também dá suporte a um c
 
 ### <a name="mfc-object-diagnostic-functions"></a>Funções de diagnóstico de objeto MFC
 
-|||
+|Nome|Descrição|
 |-|-|
 |[AfxDoForAllClasses](#afxdoforallclasses)|Executa uma função especificada em todas as `CObject` classes derivadas que dão suporte à verificação de tipo em tempo de execução.|
 |[AfxDoForAllObjects](#afxdoforallobjects)|Executa uma função especificada em todos os `CObject` objetos derivados que foram alocados com o **`new`** .|
 
 ### <a name="mfc-compilation-macros"></a>Macros de compilação do MFC
 
-|||
+|Nome|Descrição|
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Suprime avisos do compilador para o uso de funções do MFC preteridas.|
 
-## <a name="_afx_secure_no_warnings"></a><a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+## <a name="_afx_secure_no_warnings"></a><a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Suprime avisos do compilador para o uso de funções do MFC preteridas.
 
@@ -118,7 +118,7 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a><a name="afxdebugbreak"></a>AfxDebugBreak
+## <a name="afxdebugbreak"></a><a name="afxdebugbreak"></a> AfxDebugBreak
 
 Chame essa função para causar uma interrupção (no local da chamada para `AfxDebugBreak` ) na execução da versão de depuração do seu aplicativo MFC.
 
@@ -130,13 +130,13 @@ void AfxDebugBreak( );
 
 ### <a name="remarks"></a>Comentários
 
-`AfxDebugBreak`Não tem nenhum efeito nas versões de lançamento de um aplicativo MFC e deve ser removido. Essa função só deve ser usada em aplicativos MFC. Use a versão da API do Win32, `DebugBreak` , para causar uma interrupção em aplicativos não MFC.
+`AfxDebugBreak` Não tem nenhum efeito nas versões de lançamento de um aplicativo MFC e deve ser removido. Essa função só deve ser usada em aplicativos MFC. Use a versão da API do Win32, `DebugBreak` , para causar uma interrupção em aplicativos não MFC.
 
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxver_. h
 
-## <a name="assert"></a><a name="assert"></a>DECLARAR
+## <a name="assert"></a><a name="assert"></a> DECLARAR
 
 Avalia seu argumento.
 
@@ -172,7 +172,7 @@ Na versão de lançamento do MFC, ASSERT não avalia a expressão e, portanto, n
 
 **Cabeçalho:** AFX. h
 
-## <a name="assert_kindof"></a><a name="assert_kindof"></a>ASSERT_KINDOF
+## <a name="assert_kindof"></a><a name="assert_kindof"></a> ASSERT_KINDOF
 
 Essa macro declara que o objeto apontado é um objeto da classe especificada ou é um objeto de uma classe derivada da classe especificada.
 
@@ -207,7 +207,7 @@ Essa função funciona somente para classes declaradas com a macro [DECLARE_DYNA
 
 **Cabeçalho:** AFX. h
 
-## <a name="assert_valid"></a><a name="assert_valid"></a>ASSERT_VALID
+## <a name="assert_valid"></a><a name="assert_valid"></a> ASSERT_VALID
 
 Use para testar suas suposições sobre a validade do estado interno de um objeto.
 
@@ -239,7 +239,7 @@ Para obter mais informações e exemplos, consulte [DEBUGGING MFC Applications](
 
 **Cabeçalho:** AFX. h
 
-## <a name="debug_new"></a><a name="debug_new"></a>DEBUG_NEW
+## <a name="debug_new"></a><a name="debug_new"></a> DEBUG_NEW
 
 Ajuda na localização de vazamentos de memória.
 
@@ -266,7 +266,7 @@ Depois de inserir essa diretiva, o pré-processador inserirá DEBUG_NEW sempre q
 
 **Cabeçalho:** AFX. h
 
-## <a name="debug_only"></a><a name="debug_only"></a>DEBUG_ONLY
+## <a name="debug_only"></a><a name="debug_only"></a> DEBUG_ONLY
 
 No modo de depuração (quando o símbolo de **_DEBUG** é definido), DEBUG_ONLY avalia seu argumento.
 
@@ -288,7 +288,7 @@ A macro DEBUG_ONLY é equivalente à *expressão* ao redor com `#ifdef _DEBUG` a
 
 **Cabeçalho:** AFX. h
 
-### <a name="ensure-and-ensure_valid"></a><a name="ensure"></a>GARANTIR e ENSURE_VALID
+### <a name="ensure-and-ensure_valid"></a><a name="ensure"></a> GARANTIR e ENSURE_VALID
 
 Use para validar a exatidão dos dados.
 
@@ -320,7 +320,7 @@ Se qualquer um desses testes falhar, uma mensagem de alerta será exibida da mes
 
 **Cabeçalho:** AFX. h
 
-## <a name="this_file"></a><a name="this_file"></a>THIS_FILE
+## <a name="this_file"></a><a name="this_file"></a> THIS_FILE
 
 Expande para o nome do arquivo que está sendo compilado.
 
@@ -350,7 +350,7 @@ static char THIS_FILE[] = __FILE__;
 
 **Cabeçalho:** AFX. h
 
-## <a name="trace"></a><a name="trace"></a>RASTREOU
+## <a name="trace"></a><a name="trace"></a> RASTREOU
 
 Envia a cadeia de caracteres especificada para o depurador do aplicativo atual.
 
@@ -371,7 +371,7 @@ Para obter mais informações, consulte [DEBUGGING MFC Applications](/visualstud
 
 **Cabeçalho:** AFX. h
 
-## <a name="verify"></a><a name="verify"></a>Confirme
+## <a name="verify"></a><a name="verify"></a> Confirme
 
 Na versão de depuração do MFC, o avalia seu argumento.
 
@@ -404,7 +404,7 @@ Na versão de lançamento do MFC, a verificação avalia a expressão, mas não 
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxdump-cdumpcontext-in-mfc"></a><a name="cdumpcontext_in_mfc"></a>afxDump (CDumpContext na MFC)
+## <a name="afxdump-cdumpcontext-in-mfc"></a><a name="cdumpcontext_in_mfc"></a> afxDump (CDumpContext na MFC)
 
 Fornece a funcionalidade básica de despejo de objeto em seu aplicativo.
 
@@ -414,7 +414,7 @@ CDumpContext  afxDump;
 
 ### <a name="remarks"></a>Comentários
 
-`afxDump`é um objeto [CDumpContext](../../mfc/reference/cdumpcontext-class.md) predefinido que permite que você envie `CDumpContext` informações para a janela de saída do depurador ou para um terminal de depuração. Normalmente, você fornece `afxDump` como um parâmetro para `CObject::Dump` .
+`afxDump` é um objeto [CDumpContext](../../mfc/reference/cdumpcontext-class.md) predefinido que permite que você envie `CDumpContext` informações para a janela de saída do depurador ou para um terminal de depuração. Normalmente, você fornece `afxDump` como um parâmetro para `CObject::Dump` .
 
 No Windows NT e em todas as versões do Windows, a `afxDump` saída é enviada para a janela de depuração de saída do Visual C++ quando você depura seu aplicativo.
 
@@ -428,7 +428,7 @@ Essa variável é definida somente na versão de depuração do MFC. Para obter 
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxdump-internal"></a><a name="afxdump"></a>AfxDump (interno)
+## <a name="afxdump-internal"></a><a name="afxdump"></a> AfxDump (interno)
 
 Função interna que o MFC usa para despejar o estado de um objeto durante a depuração.
 
@@ -445,7 +445,7 @@ Um ponteiro para um objeto de uma classe derivada de `CObject` .
 
 ### <a name="remarks"></a>Comentários
 
-`AfxDump`chama a função de membro de um objeto `Dump` e envia as informações para o local especificado pela `afxDump` variável. `AfxDump`está disponível somente na versão de depuração do MFC.
+`AfxDump` chama a função de membro de um objeto `Dump` e envia as informações para o local especificado pela `afxDump` variável. `AfxDump` está disponível somente na versão de depuração do MFC.
 
 O código do programa não deve chamar `AfxDump` , mas, em vez disso, deve chamar a `Dump` função de membro do objeto apropriado.
 
@@ -453,7 +453,7 @@ O código do programa não deve chamar `AfxDump` , mas, em vez disso, deve chama
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxmemdf"></a><a name="afxmemdf"></a>afxMemDF
+## <a name="afxmemdf"></a><a name="afxmemdf"></a> afxMemDF
 
 Essa variável pode ser acessada de um depurador ou seu programa e permite que você ajuste o diagnóstico de alocação.
 
@@ -463,13 +463,13 @@ int  afxMemDF;
 
 ### <a name="remarks"></a>Comentários
 
-`afxMemDF`pode ter os seguintes valores, conforme especificado pela enumeração `afxMemDF` :
+`afxMemDF` pode ter os seguintes valores, conforme especificado pela enumeração `afxMemDF` :
 
-- `allocMemDF`Ativa a depuração de alocador (configuração padrão na biblioteca de depuração).
+- `allocMemDF` Ativa a depuração de alocador (configuração padrão na biblioteca de depuração).
 
-- `delayFreeMemDF`Atrasa a memória livre. Enquanto o programa libera um bloco de memória, o alocador não retorna essa memória para o sistema operacional subjacente. Isso irá posicionar o máximo de estresse de memória em seu programa.
+- `delayFreeMemDF` Atrasa a memória livre. Enquanto o programa libera um bloco de memória, o alocador não retorna essa memória para o sistema operacional subjacente. Isso irá posicionar o máximo de estresse de memória em seu programa.
 
-- `checkAlwaysMemDF`Chama `AfxCheckMemory` toda vez que a memória é alocada ou liberada. Isso irá reduzir significativamente as alocações de memória e desalocações.
+- `checkAlwaysMemDF` Chama `AfxCheckMemory` toda vez que a memória é alocada ou liberada. Isso irá reduzir significativamente as alocações de memória e desalocações.
 
 ### <a name="example"></a>Exemplo
 
@@ -479,7 +479,7 @@ int  afxMemDF;
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxcheckerror"></a><a name="afxcheckerror"></a>AfxCheckError
+## <a name="afxcheckerror"></a><a name="afxcheckerror"></a> AfxCheckError
 
 Essa função testa o SCODE passado para ver se é um erro.
 
@@ -506,7 +506,7 @@ Essa função pode ser usada para verificar os valores de retorno de chamadas pa
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxcheckmemory"></a><a name="afxcheckmemory"></a>AfxCheckMemory
+## <a name="afxcheckmemory"></a><a name="afxcheckmemory"></a> AfxCheckMemory
 
 Essa função valida o pool de memória livre e imprime mensagens de erro conforme necessário.
 
@@ -514,7 +514,7 @@ Essa função valida o pool de memória livre e imprime mensagens de erro confor
 BOOL  AfxCheckMemory();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se não houver erros de memória; caso contrário, 0.
 
@@ -543,7 +543,7 @@ Essa função funciona apenas na versão de depuração do MFC.
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxdump-mfc"></a><a name="afxdump"></a>AfxDump (MFC)
+## <a name="afxdump-mfc"></a><a name="afxdump"></a> AfxDump (MFC)
 
 Chame essa função enquanto estiver no depurador para despejar o estado de um objeto durante a depuração.
 
@@ -558,7 +558,7 @@ Um ponteiro para um objeto de uma classe derivada de `CObject` .
 
 ### <a name="remarks"></a>Comentários
 
-`AfxDump`chama a função de membro de um objeto `Dump` e envia as informações para o local especificado pela `afxDump` variável. `AfxDump`está disponível somente na versão de depuração do MFC.
+`AfxDump` chama a função de membro de um objeto `Dump` e envia as informações para o local especificado pela `afxDump` variável. `AfxDump` está disponível somente na versão de depuração do MFC.
 
 O código do programa não deve chamar `AfxDump` , mas, em vez disso, deve chamar a `Dump` função de membro do objeto apropriado.
 
@@ -566,7 +566,7 @@ O código do programa não deve chamar `AfxDump` , mas, em vez disso, deve chama
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxdumpstack"></a><a name="afxdumpstack"></a>AfxDumpStack
+## <a name="afxdumpstack"></a><a name="afxdumpstack"></a> AfxDumpStack
 
 Essa função global pode ser usada para gerar uma imagem da pilha atual.
 
@@ -630,7 +630,7 @@ Por exemplo, a tabela a seguir descreve a primeira linha da saída acima:
 |`void AfxDumpStack(unsigned long)`|O protótipo de função chamado.|
 |`+ 181 bytes`|O deslocamento em bytes do endereço do protótipo de função (nesse caso, `void AfxDumpStack(unsigned long)` ) para o endereço de retorno (nesse caso, `00427D55` ).|
 
-`AfxDumpStack`está disponível em versões de depuração e não-depuração das bibliotecas do MFC; no entanto, a função é sempre vinculada estaticamente, mesmo quando o arquivo executável usa MFC em uma DLL compartilhada. Em implementações de biblioteca compartilhada, a função é encontrada no MFCS42. Biblioteca LIB (e suas variantes).
+`AfxDumpStack` está disponível em versões de depuração e não-depuração das bibliotecas do MFC; no entanto, a função é sempre vinculada estaticamente, mesmo quando o arquivo executável usa MFC em uma DLL compartilhada. Em implementações de biblioteca compartilhada, a função é encontrada no MFCS42. Biblioteca LIB (e suas variantes).
 
 Para usar essa função com êxito:
 
@@ -642,7 +642,7 @@ Para usar essa função com êxito:
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxenablememoryleakdump"></a><a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump
+## <a name="afxenablememoryleakdump"></a><a name="afxenablememoryleakdump"></a> AfxEnableMemoryLeakDump
 
 Habilita e desabilita o despejo de vazamento de memória no destruidor AFX_DEBUG_STATE.
 
@@ -655,7 +655,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 *bDump*<br/>
 no VERDADEIRO indica que o despejo de vazamento de memória está habilitado; FALSO indica que o despejo de vazamento de memória está desabilitado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor anterior desse sinalizador.
 
@@ -672,7 +672,7 @@ Se seu aplicativo carregar outra biblioteca antes da biblioteca do MFC, algumas 
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxenablememorytracking"></a><a name="afxenablememorytracking"></a>AfxEnableMemoryTracking
+## <a name="afxenablememorytracking"></a><a name="afxenablememorytracking"></a> AfxEnableMemoryTracking
 
 O rastreamento de memória de diagnóstico normalmente é habilitado na versão de depuração do MFC.
 
@@ -685,7 +685,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 *bTrack*<br/>
 Definir esse valor como TRUE ativa o controle de memória; FALSE desativa-o.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A configuração anterior do sinalizador de habilitação de rastreamento.
 
@@ -706,7 +706,7 @@ Para obter mais informações sobre o `AfxEnableMemoryTracking` , consulte [Debu
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxismemoryblock"></a><a name="afxismemoryblock"></a>AfxIsMemoryBlock
+## <a name="afxismemoryblock"></a><a name="afxismemoryblock"></a> AfxIsMemoryBlock
 
 Testa um endereço de memória para se certificar de que ele representa um bloco de memória atualmente ativo que foi alocado pela versão de diagnóstico do **`new`** .
 
@@ -728,7 +728,7 @@ Contém o comprimento do bloco de memória em bytes.
 *plRequestNumber*<br/>
 Aponta para um **`long`** número inteiro que será preenchido com o número de sequência de alocação do bloco de memória, ou zero se não representar um bloco de memória ativo no momento.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o bloco de memória estiver alocado no momento e o comprimento estiver correto; caso contrário, 0.
 
@@ -744,7 +744,7 @@ Ele também verifica o tamanho especificado em relação ao tamanho alocado orig
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxisvalidaddress"></a><a name="afxisvalidaddress"></a>AfxIsValidAddress
+## <a name="afxisvalidaddress"></a><a name="afxisvalidaddress"></a> AfxIsValidAddress
 
 Testa qualquer endereço de memória para garantir que ele esteja totalmente contido no espaço de memória do programa.
 
@@ -766,7 +766,7 @@ Contém o número de bytes de memória a serem testados.
 *bReadWrite*<br/>
 Especifica se a memória é para leitura e gravação (TRUE) ou apenas leitura (FALSE).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Em compilações de depuração, é diferente de zero se o bloco de memória especificado estiver inteiramente contido dentro do espaço de memória do programa; caso contrário, 0.
 
@@ -784,7 +784,7 @@ O endereço não está restrito a blocos alocados pelo **`new`** .
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxisvalidstring"></a><a name="afxisvalidstring"></a>AfxIsValidString
+## <a name="afxisvalidstring"></a><a name="afxisvalidstring"></a> AfxIsValidString
 
 Use essa função para determinar se um ponteiro para uma cadeia de caracteres é válido.
 
@@ -802,7 +802,7 @@ O ponteiro a ser testado.
 *nLength*<br/>
 Especifica o comprimento da cadeia de caracteres a ser testada, em bytes. Um valor de-1 indica que a cadeia de caracteres será terminada em nulo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Em compilações de depuração, diferente de zero se o ponteiro especificado aponta para uma cadeia de caracteres do tamanho especificado; caso contrário, 0.
 
@@ -816,7 +816,7 @@ Em compilações não depuradas, diferente de zero se *lpsz* não for nulo; caso
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxsetallochook"></a><a name="afxsetallochook"></a>AfxSetAllocHook
+## <a name="afxsetallochook"></a><a name="afxsetallochook"></a> AfxSetAllocHook
 
 Define um gancho que habilita a chamada da função especificada antes de cada bloco de memória ser alocado.
 
@@ -829,7 +829,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 *pfnAllocHook*<br/>
 Especifica o nome da função a ser chamada. Consulte os comentários para o protótipo de uma função de alocação.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se você quiser permitir a alocação; caso contrário, 0.
 
@@ -854,7 +854,7 @@ Observe que a Convenção de chamada AFXAPI implica que o receptor deve remover 
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxdoforallclasses"></a><a name="afxdoforallclasses"></a>AfxDoForAllClasses
+## <a name="afxdoforallclasses"></a><a name="afxdoforallclasses"></a> AfxDoForAllClasses
 
 Chama a função de iteração especificada para todas as `CObject` classes derivadas de Serializable no espaço de memória do aplicativo.
 
@@ -890,7 +890,7 @@ Aponta para dados opcionais que o chamador pode fornecer à função de iteraç�
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxdoforallobjects"></a><a name="afxdoforallobjects"></a>AfxDoForAllObjects
+## <a name="afxdoforallobjects"></a><a name="afxdoforallobjects"></a> AfxDoForAllObjects
 
 Executa a função de iteração especificada para todos os objetos derivados de `CObject` que foram alocados com **`new`** .
 

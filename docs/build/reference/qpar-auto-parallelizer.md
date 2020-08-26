@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: 18aaa1dc678ca2c73f9fad6c016aa40cfa95982b
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: effe1ad7799022ea85184513de1dc48c72d6bfcb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373795"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839433"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (paralelizador automático)
 
@@ -48,4 +48,4 @@ Para obter informações sobre como habilitar mensagens de saída para o paralel
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [loop de #pragma ()](../../preprocessor/loop.md)<br/>
-[Vetorização de código nativo no Visual Studio](https://docs.microsoft.com/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)
+[Vetorização de código nativo no Visual Studio](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 59ff0d1a9538bd43cc2164306e6a37a3b307067d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212261"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845478"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,7 +20,7 @@ Define vários tipos e funções básicas para a operação de iostreams. Esse c
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**:\<ios>
+**Cabeçalho**: \<ios>
 
 **Namespace:** std
 
@@ -43,7 +43,7 @@ chama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Cisco](../standard-library/ios-typedefs.md#ios)|Dá suporte à classe ios da biblioteca iostream antiga.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Dá suporte a operações internas.|
@@ -54,7 +54,7 @@ chama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="manipulators"></a>Manipuladores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Especifica que variáveis do tipo [bool](../cpp/bool-cpp.md) aparecem como **`true`** ou **`false`** no fluxo.|
 |[dez](../standard-library/ios-functions.md#dec)|Especifica que variáveis inteiras aparecem em notação de base 10.|
@@ -62,7 +62,7 @@ chama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[fixado](../standard-library/ios-functions.md#fixed)|Especifica que um número de ponto flutuante é exibido em notação de decimal fixo.|
 |[hex](../standard-library/ios-functions.md#hex)|Especifica que variáveis inteiras aparecem em notação de base 16.|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
-|[internal](../standard-library/ios-functions.md#internal)|Faz com que o sinal de um número seja justificado à esquerda e o número seja justificado à direita.|
+|[interno](../standard-library/ios-functions.md#internal)|Faz com que o sinal de um número seja justificado à esquerda e o número seja justificado à direita.|
 |[mantida](../standard-library/ios-functions.md#left)|Faz com que um texto que não é tão largo quanto a largura de saída apareça no fluxo alinhado à margem esquerda.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Especifica que variáveis do tipo [bool](../cpp/bool-cpp.md) apareçam como 1 ou 0 no fluxo.|
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|Desativa a indicação da base da notação em que um número é exibido.|
@@ -83,7 +83,7 @@ chama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="error-reporting"></a>Relatório de Erros
 
-|||
+|Nome|Descrição|
 |-|-|
 |[io_errc](../standard-library/ios-functions.md#io_errc)||
 |[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
@@ -93,7 +93,7 @@ chama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|O modelo de classe descreve as funções de armazenamento e membro comuns a fluxos de entrada (do modelo de classe [basic_istream](../standard-library/basic-istream-class.md)) e fluxos de saída (do modelo de classe [basic_ostream](../standard-library/basic-ostream-class.md)) que dependem dos parâmetros do modelo.|
 |[fpos](../standard-library/fpos-class.md)|O modelo de classe descreve um objeto que pode armazenar todas as informações necessárias para restaurar um indicador de posição de arquivo arbitrário dentro de qualquer fluxo.|

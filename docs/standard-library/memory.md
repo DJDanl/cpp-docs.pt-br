@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202955"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836459"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -28,10 +28,10 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[AddressOf](../standard-library/memory-functions.md#addressof)|Obtém o endereço verdadeiro de um objeto.|
-|[alinha](../standard-library/memory-functions.md#align)|Retorna um ponteiro para um intervalo de um determinado tamanho, com base no endereço de início e alinhamento fornecidos.|
+|[align](../standard-library/memory-functions.md#align)|Retorna um ponteiro para um intervalo de um determinado tamanho, com base no endereço de início e alinhamento fornecidos.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Cria um `shared_ptr` para objetos atribuídos e construídos para um determinado tipo com um alocador especificado.|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
 |[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
@@ -77,19 +77,19 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[operador! =](../standard-library/memory-operators.md#op_neq)|Testa a desigualdade entre objetos do alocador de uma classe especificada.|
 |[operador = =](../standard-library/memory-operators.md#op_eq_eq)|Testa a igualdade entre objetos do alocador de uma classe especificada.|
 |[>do operador =](../standard-library/memory-operators.md#op_gt_eq)|Testa um objeto do alocador que é maior ou igual a um segundo objeto do alocador de uma classe especificada.|
-|[<do operador](../standard-library/memory-operators.md#op_lt)|Testa um objeto que é menor que um segundo objeto de uma classe especificada.|
+|[<do operador ](../standard-library/memory-operators.md#op_lt)|Testa um objeto que é menor que um segundo objeto de uma classe especificada.|
 |[operador\<=](../standard-library/memory-operators.md#op_gt_eq)|Testa um objeto que é menor ou igual a um segundo objeto de uma classe especificada.|
-|[>do operador](../standard-library/memory-operators.md#op_gt)|Testa um objeto que é maior que um segundo objeto de uma classe especificada.|
-|[<<do operador](../standard-library/memory-operators.md#op_lt_lt)|Inserção de `shared_ptr`.|
+|[>do operador ](../standard-library/memory-operators.md#op_gt)|Testa um objeto que é maior que um segundo objeto de uma classe especificada.|
+|[<<do operador ](../standard-library/memory-operators.md#op_lt_lt)|Inserção de `shared_ptr`.|
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|O modelo de classe descreve um objeto que gerencia a alocação de armazenamento e libera para matrizes de objetos **do tipo Type.**|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Descreve um objeto que determina todas as informações necessárias a um contêiner habilitado para alocador.|
@@ -104,7 +104,7 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 
 ### <a name="structures"></a>Estruturas
 
-|||
+|Nome|Descrição|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -114,7 +114,7 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 
 ### <a name="specializations"></a>Especializações
 
-|||
+|Nome|Descrição|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|Uma especialização do alocador de modelo de classe a ser digitada **`void`** , definindo somente os tipos de membro que fazem sentido nesse contexto especializado.|
 

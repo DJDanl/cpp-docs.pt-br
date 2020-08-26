@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 0b951fc76635f67115f4a832ed316d66b6de7497
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376286"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836693"
 ---
 # <a name="translation-mode-constants"></a>Constantes do modo de translação
 
@@ -38,7 +38,7 @@ As constantes de manifesto `_O_BINARY` e `_O_TEXT` determinam o modo de transla�
 
 Os valores permitidos são:
 
-|||
+|Valor|Descrição|
 |-|-|
 `_O_TEXT`  | Abre um arquivo no modo de texto (movido). Combinações CR-LF (retorno de carro–alimentação de linha) são convertidas para uma única LF (alimentação de linha) na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura e para leitura e gravação, `fopen` verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar as funções `fseek` e `ftell` para movimentação dentro de um arquivo que termina com CTRL+Z poderá fazer o `fseek` se comportar incorretamente perto do fim do arquivo.
 `_O_BINARY`  | Abre um arquivo no modo binário (não convertido). As translações acima são suprimidas.
@@ -46,7 +46,7 @@ Os valores permitidos são:
 
 Para obter mais informações, consulte [E/S de arquivo nos modos de texto e binário](../c-runtime-library/text-and-binary-mode-file-i-o.md) e [Translação de arquivo](../c-runtime-library/file-translation-constants.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_pipe](../c-runtime-library/reference/pipe.md)<br/>

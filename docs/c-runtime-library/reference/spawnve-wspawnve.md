@@ -36,12 +36,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: f57d959e9aaefe1f86c110d3c3e945abf6d268da
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dc6a6195987c1d5b323a86671de09dc28df84665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916048"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836111"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve, _wspawnve
 
@@ -67,7 +67,7 @@ intptr_t _wspawnve(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *mode*<br/>
 Modo de execução de um processo de chamada.
@@ -81,11 +81,11 @@ Matriz de ponteiros para os argumentos. O argumento *argv*[0] geralmente é um p
 *envp*<br/>
 Matriz de ponteiros para as configurações de ambiente.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 O valor de retorno de um **_spawnve** síncrono ou **_wspawnve** (**_P_WAIT** especificado para o *modo*) é o status de saída do novo processo. O valor de retorno de um **_spawnve** assíncrono ou **_wspawnve** (**_P_NOWAIT** ou **_P_NOWAITO** especificado para o *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída como um valor diferente de zero se o processo gerado chamar especificamente a rotina de **saída** com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de-1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos valores a seguir.
 
-|||
+| Valor | Descrição |
 |-|-|
 | **E2BIG** | A lista de argumentos ultrapassa 1.024 bytes. |
 | **EINVAL** | argumento de *modo* inválido. |
@@ -116,13 +116,13 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn, _wspawn funções](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [anular](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec funções](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

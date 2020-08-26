@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211140"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845634"
 ---
 # <a name="ctable-class"></a>Classe CTable
 
@@ -49,7 +49,7 @@ Uma classe de conjunto de linhas.
 
 ### <a name="methods"></a>Métodos
 
-|||
+| Nome | Descrição |
 |-|-|
 |[Abrir](#open)|Abre a tabela.|
 
@@ -57,7 +57,7 @@ Uma classe de conjunto de linhas.
 
 Consulte [CCommand](../../data/oledb/ccommand-class.md) para obter informações sobre como executar um comando para acessar um conjunto de linhas.
 
-## <a name="ctableopen"></a><a name="open"></a>CTable:: abrir
+## <a name="ctableopen"></a><a name="open"></a> CTable:: abrir
 
 Abre a tabela.
 
@@ -91,7 +91,7 @@ no O nome da tabela a ser aberta, passada como uma cadeia de caracteres Unicode.
 *szTableName*<br/>
 no O nome da tabela a ser aberta, passada como uma cadeia de caracteres ANSI.
 
-*dbid*<br/>
+*DBID*<br/>
 no A `DBID` da tabela a ser aberta.
 
 *pPropSet*<br/>
@@ -100,7 +100,7 @@ no Um ponteiro para uma matriz de estruturas [DBPROPSET](/previous-versions/wind
 *ulPropSets*<br/>
 no O número de estruturas [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passadas no argumento *pPropSet* .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -111,4 +111,4 @@ Para obter mais detalhes, consulte [IOpenRowset:: OPENROWSET](/previous-versions
 ## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

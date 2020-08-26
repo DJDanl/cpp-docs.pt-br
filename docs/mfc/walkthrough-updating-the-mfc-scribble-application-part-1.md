@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 9fc2903180a055c18c6f3779b1da55ee347d2535
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9eda80fbabf939b9e3a5f8a0ef5b76e46656740
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230422"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840252"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Walkthrough: atualizando o aplicativo de rabisco do MFC (parte 1)
 
@@ -26,7 +26,7 @@ Este passo a passos modifica o exemplo do MFC de rabisco 1,0 do Classic que perm
 
 O [exemplo do MFC do rabisco 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obter ajuda sobre como converter para o Visual Studio 2017 ou posterior, consulte [Guia de portabilidade: rabisco do MFC](../porting/porting-guide-mfc-scribble.md).
 
-## <a name="sections"></a><a name="top"></a>As
+## <a name="sections"></a><a name="top"></a> As
 
 Esta parte do passo a passos tem as seguintes seções:
 
@@ -42,7 +42,7 @@ Esta parte do passo a passos tem as seguintes seções:
 
 - [Configurando a aparência do aplicativo](#setlook)
 
-## <a name="replacing-the-base-classes"></a><a name="replaceclass"></a>Substituindo as classes base
+## <a name="replacing-the-base-classes"></a><a name="replaceclass"></a> Substituindo as classes base
 
 Para converter um aplicativo que dá suporte a um menu para um aplicativo que dá suporte a uma faixa de ferramentas, você deve derivar as classes de aplicativo, janela de quadro e barra de barras de classes base atualizadas. (Sugerimos que você não modifique o exemplo de rabisco original. Em vez disso, limpe o projeto de rabisco, copie-o para outro diretório e, em seguida, modifique a cópia.)
 
@@ -103,11 +103,11 @@ Para converter um aplicativo que dá suporte a um menu para um aplicativo que d�
 
 1. Salve as alterações e, em seguida, compile e execute o aplicativo.
 
-## <a name="adding-bitmaps-to-the-project"></a><a name="addbitmap"></a>Adicionando bitmaps ao projeto
+## <a name="adding-bitmaps-to-the-project"></a><a name="addbitmap"></a> Adicionando bitmaps ao projeto
 
 As próximas quatro etapas deste passo a passos exigem recursos de bitmap. Você pode obter os bitmaps apropriados de várias maneiras:
 
-- Use os [editores de recursos](../windows/resource-editors.md) para inventar seus próprios bitmaps. Ou use os editores de recursos para montar bitmaps das imagens do Portable Network Graphics (. png) que estão incluídas com o Visual Studio e que podem ser baixadas na [biblioteca de imagens do Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Use os [editores de recursos](../windows/resource-editors.md) para inventar seus próprios bitmaps. Ou use os editores de recursos para montar bitmaps das imagens do Portable Network Graphics (. png) que estão incluídas com o Visual Studio e que podem ser baixadas na [biblioteca de imagens do Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
 
     No entanto, a interface do usuário da **faixa de faixas** requer que determinados bitmaps suportem imagens transparentes. Os bitmaps transparentes usam pixels de 32 bits, em que 24 bits especificam os componentes vermelho, verde e azul da cor, e 8 bits definem um *canal alfa* que especifica a transparência da cor. Os editores de recursos atuais podem exibir, mas não modificar bitmaps com pixels de 32 bits. Consequentemente, use um editor de imagem externa em vez dos editores de recursos para manipular bitmaps transparentes.
 
@@ -153,7 +153,7 @@ Este passo a passos copia arquivos de recursos do exemplo criado em [passo a pas
    > [!NOTE]
    > Como precisamos apenas das primeiras quatro imagens de 16x16 (16X64), você pode, opcionalmente, cortar a largura do lado direito desse bitmap de 128 para 64.
 
-## <a name="adding-a-ribbon-resource-to-the-project"></a><a name="addribbon"></a>Adicionando um recurso de faixa de uma ao projeto
+## <a name="adding-a-ribbon-resource-to-the-project"></a><a name="addribbon"></a> Adicionando um recurso de faixa de uma ao projeto
 
 Quando você converte um aplicativo que usa menus para um aplicativo que usa uma faixa de faixas, não é necessário remover ou desabilitar os menus existentes. Basta criar um recurso da faixa de forma, adicionar botões da faixa de medida e associar os novos botões aos itens de menu existentes. Embora os menus não fiquem mais visíveis, as mensagens da barra da faixa de faixas são roteadas pelos menus e atalhos de menu continuam funcionando.
 
@@ -206,7 +206,7 @@ Uma faixa consiste no botão do **aplicativo** , que é o botão grande no lado 
 
    1. Você modificou os **botões**. Clique em **fechar** para sair do **Editor de itens**.
 
-## <a name="creating-an-instance-of-the-ribbon-bar"></a><a name="createinstance"></a>Criando uma instância da barra da faixa de faixas
+## <a name="creating-an-instance-of-the-ribbon-bar"></a><a name="createinstance"></a> Criando uma instância da barra da faixa de faixas
 
 As etapas a seguir mostram como criar uma instância da barra da faixa de opções quando seu aplicativo é iniciado. Para adicionar uma barra de faixa de faixas a um aplicativo, declare a barra da faixa de faixas no arquivo MainFrm. h. Em seguida, no arquivo MainFrm. cpp, escreva o código para carregar o recurso da faixa de faixas.
 
@@ -230,7 +230,7 @@ As etapas a seguir mostram como criar uma instância da barra da faixa de opçõ
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
     ```
 
-## <a name="customizing-the-ribbon-resource"></a><a name="addcategory"></a>Personalizando o recurso da faixa de faixas
+## <a name="customizing-the-ribbon-resource"></a><a name="addcategory"></a> Personalizando o recurso da faixa de faixas
 
 Agora que você criou o botão **aplicativo** , é possível adicionar elementos à faixa de faixas.
 
@@ -247,7 +247,7 @@ Agora que você criou o botão **aplicativo** , é possível adicionar elementos
 
 1. Salve as alterações e, em seguida, compile e execute o aplicativo. O aplicativo de rabisco deve ser exibido e deve ter uma barra de faixa de faixas na parte superior da janela, em vez de uma barra de menus. A barra da faixa de faixas deve ter uma categoria, **página inicial**e **casa** deve ter um painel, **Editar**. Os botões da faixa de faixas que você adicionou devem ser associados aos manipuladores de eventos existentes e os botões **abrir**, **fechar**, **salvar**, **Imprimir**e **limpar todos** devem funcionar conforme o esperado.
 
-## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a>Configurando a aparência do aplicativo
+## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a> Configurando a aparência do aplicativo
 
 Um *Gerenciador visual* é um objeto global que controla todo o desenho de um aplicativo. Como o aplicativo Rabisco original usa o estilo de interface do usuário do Office 2000, o aplicativo pode parecer antigo. Você pode redefinir o aplicativo para usar o Gerenciador visual do Office 2007 para que seja semelhante a um aplicativo do Office 2007.
 

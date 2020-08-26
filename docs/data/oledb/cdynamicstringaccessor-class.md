@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211855"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838159"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
 
@@ -38,24 +38,24 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ### <a name="methods"></a>Métodos
 
-|||
+| Nome | Descrição |
 |-|-|
 |[GetString](#getstring)|Recupera os dados da coluna especificada como uma cadeia de caracteres.|
 |[SetString](#setstring)|Define os dados da coluna especificada como uma cadeia de caracteres.|
 
 ## <a name="remarks"></a>Comentários
 
-Embora o [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) solicite dados no formato nativo relatado pelo provedor, `CDynamicStringAccessor` solicita que o provedor busque todos os dados acessados do armazenamento de dados como dados de cadeia de caracteres. Isso é especialmente útil para tarefas simples que não exigem o cálculo de valores no armazenamento de dados, como exibir ou imprimir o conteúdo do armazenamento de dados.
+Embora o [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) solicite dados no formato nativo relatado pelo provedor, `CDynamicStringAccessor` o solicita que o provedor busque todos os dados acessados do armazenamento de dados como dados de cadeia de caracteres. Isso é especialmente útil para tarefas simples que não exigem o cálculo de valores no armazenamento de dados, como exibir ou imprimir o conteúdo do armazenamento de dados.
 
 O tipo nativo de dados de coluna no repositório de dados não importa; desde que o provedor possa dar suporte à conversão de dados, ele fornecerá os dados no formato de cadeia de caracteres. Se o provedor não oferecer suporte à conversão do tipo de dados nativo em uma cadeia de caracteres (o que não é comum), a chamada solicitante retornará o valor de êxito DB_S_ERRORSOCCURED e o status da coluna correspondente indicará um problema de conversão com DBSTATUS_E_CANTCONVERTVALUE.
 
-Use os métodos `CDynamicStringAccessor` para obter informações de coluna. Use essas informações de coluna para criar um acessador dinamicamente em tempo de execução.
+Use `CDynamicStringAccessor` métodos para obter informações de coluna. Use essas informações de coluna para criar um acessador dinamicamente em tempo de execução.
 
 As informações de coluna são armazenadas em um buffer criado e gerenciado por essa classe. Obtenha dados do buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)ou armazene-os no buffer usando [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
 Para obter uma discussão e exemplos de como usar as classes de acessador dinâmico, consulte [usando acessadores dinâmicos](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a> CDynamicStringAccessor:: GetString
 
 Recupera os dados da coluna especificada como uma cadeia de caracteres.
 
@@ -77,15 +77,15 @@ no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se r
 *pColumnName*<br/>
 no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o valor da cadeia de caracteres recuperado da coluna especificada. O valor é do tipo `BaseType`, que será **Char** ou **WCHAR** , dependendo se _UNICODE é definido ou não. Retornará NULL se a coluna especificada não for encontrada.
+Um ponteiro para o valor da cadeia de caracteres recuperado da coluna especificada. O valor é do tipo `BaseType` , que será **Char** ou **WCHAR** , dependendo se _UNICODE é definido ou não. Retornará NULL se a coluna especificada não for encontrada.
 
 ### <a name="remarks"></a>Comentários
 
 O segundo formulário de substituição usa o nome da coluna como uma cadeia de caracteres ANSI. O terceiro formulário de substituição usa o nome da coluna como uma cadeia de caracteres Unicode.
 
-## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a> CDynamicStringAccessor:: SetString
 
 Define os dados da coluna especificada como uma cadeia de caracteres.
 
@@ -113,9 +113,9 @@ no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 *data*<br/>
 no Um ponteiro para os dados de cadeia de caracteres a serem gravados na coluna especificada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o valor da cadeia de caracteres para o qual definir a coluna especificada. O valor é do tipo `BaseType`, que será **Char** ou **WCHAR** , dependendo se _UNICODE é definido ou não.
+Um ponteiro para o valor da cadeia de caracteres para o qual definir a coluna especificada. O valor é do tipo `BaseType` , que será **Char** ou **WCHAR** , dependendo se _UNICODE é definido ou não.
 
 ### <a name="remarks"></a>Comentários
 
@@ -126,7 +126,7 @@ Se _SECURE_ATL for definido para ter um valor diferente de zero, uma falha de as
 ## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>

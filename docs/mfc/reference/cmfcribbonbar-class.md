@@ -188,18 +188,18 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 26f130206a84c81120dce090ce65971f01a2dade
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749754"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836641"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
-A `CMFCRibbonBar` classe implementa uma barra de fita semelhante à usada no Office 2007.
+A `CMFCRibbonBar` classe implementa uma barra de faixa de forma semelhante àquela usada no Office 2007.
 
-Para obter mais detalhes, consulte o código-fonte localizado na pasta **VC\\atlmfc\\src\\mfc** da instalação do Visual Studio.
+Para obter mais detalhes, consulte o código-fonte localizado na pasta **vc \\ atlmfc \\ src \\ MFC** da instalação do Visual Studio.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -219,127 +219,127 @@ class CMFCRibbonBar : public CPane
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonBar::Ativarcategoriacontexto](#activatecontextcategory)|Ativa uma categoria de contexto que já está visível.|
-|[CMFCRibbonBar::AddCategory](#addcategory)|Adiciona uma nova categoria de fita à fita.|
-|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Adiciona uma categoria de contexto.|
-|[CMFCRibbonbar::AddmainCategory](#addmaincategory)|Adiciona uma nova categoria de fita principal.|
-|[CMFCRibbonBar::AddprintPreviewcategory](#addprintpreviewcategory)||
-|[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
-|[CMFCRibbonBar::AddToTabs](#addtotabs)|Adicione um elemento de fita ao lado direito de uma barra de fita.|
-|[CMFCRibbonbar::CreateEx](#createex)|Cria uma barra de controle e a prende ao objeto [CPane.](../../mfc/reference/cpane-class.md) (Substitui [cpane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|
-|[CMFCRibbonBar::Criar](#create)|Cria um controle de barra de fita e anexa-o a uma barra de fita.|
-|[CMFCRibbonBar::DeactivateKeyboardFocus](#deactivatekeyboardfocus)||
-|[CMFCRibbonBar::DrawMenuImage](#drawmenuimage)||
-|[CMFCRibbonBar::DAcomposição wmchanged](#dwmcompositionchanged)||
-|[CMFCRibbonBar::Habilitardicas de tecla](#enablekeytips)|Habilite ou desative as principais dicas para o controle da fita.|
-|[CMFCRibbonBar::Ativarvisualização de impressão](#enableprintpreview)|Habilite a guia **Visualização de impressão.**|
-|[CMFCRibbonBar::Habilitardicas de ferramentas](#enabletooltips)|Ativa ou desativa dicas de ferramentas e descrições de pontas de ferramentas na barra de fita.|
-|[CMFCRibbonBar::FindbyData](#findbydata)|Encontre um elemento de fita usando dados que um usuário especifica.|
-|[CMFCRibbonbar::Findbyid](#findbyid)|Encontra um elemento de fita que tem o id de comando especificado.|
-|[CMFCRibbonBar::FindcategoryIndexByData](#findcategoryindexbydata)|Encontra o índice da categoria de fita que contém os dados definidos pelo usuário.|
-|[CMFCRibbonBar::ForceRecalcLayout](#forcerecalclayout)||
-|[CMFCRibbonBar::GetActiveCategory](#getactivecategory)|Obtém um ponteiro para uma categoria ativa.|
-|[CMFCRibbonBar::GetcaptionHeight](#getcaptionheight)|Retorna a altura da legenda. (Substitui [cbasepane::GetCaptionHeight](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|
-|[CMFCRibbonBar::GetCategory](#getcategory)|Obtém o ponteiro para uma categoria localizada em um índice especificado.|
-|[CMFCRibbonBar::GetCategoryCount](#getcategorycount)|Obtém o número das categorias de fita na barra de fita.|
-|[CMFCRibbonBar::GetCategoryHeight](#getcategoryheight)||
-|[CMFCRibbonBar::GetCategoryIndex](#getcategoryindex)|Retorna o índice de uma categoria de fita.|
-|[CMFCRibbonBar::GetContextName](#getcontextname)|Recupera o nome da legenda de categoria de contexto que você especifica usando um ID.|
-|[CMFCRibbonBar::GetD roppedDown](#getdroppeddown)||
-|[CMFCRibbonbar::getelementsbyid](#getelementsbyid)|Obtém uma matriz que contém os ponteiros para todos os elementos de fita que têm o ID especificado.|
-|[CMFCRibbonBar::GetApplicationButton](#getapplicationbutton)|Recebe um ponteiro para um botão de fita.|
-|[CMFCRibbonBar::GetFocus](#getfocused)|Retorna um elemento focado.|
-|[CMFCRibbonBar::GetHideFlags](#gethideflags)||
-|[CMFCRibbonBar::GetItemIDsList](#getitemidslist)||
-|[CMFCRibbonBar::GetKeyboardNavigationLevel](#getkeyboardnavigationlevel)||
-|[CMFCRibbonBar::GetKeyboardNavLevelCurrent](#getkeyboardnavlevelcurrent)||
-|[CMFCRibbonBar::GetKeyboardNavLevelParent](#getkeyboardnavlevelparent)||
-|[CMFCRibbonBar::GetMainCategory](#getmaincategory)|Retorna um ponteiro para a categoria de fita que está atualmente selecionada.|
-|[CMFCRibbonBar::GetQATCommandsLocalização](#getqatcommandslocation)||
-|[CMFCRibbonBar::GetQATD roppedDown](#getqatdroppeddown)||
-|[CMFCRibbonBar::GetQuickAccessCommands](#getquickaccesscommands)|Preenche uma lista que contém os IDs de comando de todos os elementos que aparecem na barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBar::GetQuickAccessToolbarLocalização](#getquickaccesstoolbarlocation)||
-|[CMFCRibbonBar::GetTabTrancateRatio](#gettabtrancateratio)||
-|[CMFCRibbonBar::GettooltipFixedWidthLargeImage](#gettooltipfixedwidthlargeimage)||
-|[CMFCRibbonBar::GettooltipFixedWidthRegular](#gettooltipfixedwidthregular)||
-|[CMFCRibbonbar::GetVisibleCategoryCount](#getvisiblecategorycount)||
-|[CMFCRibbonBar::HideAllContextCategories](#hideallcontextcategories)|Esconde todas as categorias que estão ativas e visíveis.|
-|[CMFCRibbonBar::HidekeyTips](#hidekeytips)||
-|[CMFCRibbonBar::HitTest](#hittest)|Encontra um ponteiro para o elemento de fita que está localizado no ponto especificado nas coordenadas do cliente da barra de fita.|
-|[CMFCRibbonBar::IsKeyTipEnabled](#iskeytipenabled)|Determina se as dicas de tecla estão habilitadas.|
-|[CMFCRibbonbar::Ismainribbonbar](#ismainribbonbar)||
-|[CMFCRibbonBar::IsPrintPreviewAtivado](#isprintpreviewenabled)|Determina se a guia **Visualização de impressão** está ativada.|
-|[CMFCRibbonBar::IsQATEmpty](#isqatempty)||
-|[CMFCRibbonBar::IsQuickAccessToolbarOnTop](#isquickaccesstoolbarontop)|Especifica se a barra de ferramentas de acesso rápido está localizada acima da barra de fita.|
-|[CMFCRibbonbar::IsreplaceFramecaption](#isreplaceframecaption)|Determina se a barra de fita substitui a legenda do quadro principal ou se é adicionada abaixo da legenda do quadro.|
-|[CMFCRibbonBar::IsShowGroupBorder](#isshowgroupborder)||
-|[CMFCRibbonBar::IsToolTipDescrAtivado](#istooltipdescrenabled)|Determina se as descrições da dica da ferramenta estão habilitadas.|
-|[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|Determina se as pontas das ferramentas da barra de fita estão habilitadas.|
-|[CMFCRibbonBar::isTransparentcaption](#istransparentcaption)||
-|[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|Indica se a fita tem aparência de Windows 7 (pequeno botão de aplicativo retangular).|
-|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|Sobrecarregado. Carrega uma barra de fita dos recursos do aplicativo.|
-|[CMFCRibbonbar::OnClickButton](#onclickbutton)||
-|[CMFCRibbonBar::OnEditContextmenu](#oneditcontextmenu)||
-|[CMFCRibbonbar::OnRTLChanged](#onrtlchanged)|(Substitui `CPane::OnRTLChanged`.)|
-|[CMFCRibbonbar::OnSetAccdata](#onsetaccdata)|(Substitui [cbasepane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
-|[CMFCRibbonBar::OnShowRibbonContextmenu](#onshowribboncontextmenu)||
-|[CMFCRibbonbar::OnShowRibbonQATMenu](#onshowribbonqatmenu)||
-|[CMFCRibbonBar::OnSysKeyDown](#onsyskeydown)||
-|[CMFCRibbonBar::OnSysKeyUp](#onsyskeyup)||
-|[CMFCRibbonBar::PopTooltip](#poptooltip)||
-|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|(Substitui `CBasePane::PreTranslateMessage`.)|
-|[CMFCRibbonBar::RecalcLayout](#recalclayout)|(Substitui [cpane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
-|[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|Remove todas as categorias de fita da barra de fita.|
-|[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|Remove todos os elementos da fita da área da guia.|
-|[CMFCRibbonBar::RemoveCategory](#removecategory)|Remove a categoria de fita localizada no índice especificado.|
-|[CMFCRibbonBar::SaveToXMLBuffer](#savetoxmlbuffer)|Salva a barra de fita em um buffer.|
-|[CMFCRibbonBar::SaveToXMLFile](#savetoxmlfile)|Salva a barra de fita no arquivo XML.|
-|[CMFCRibbonBar::setActiveCategory](#setactivecategory)|Define uma categoria de fita especificada como ativa.|
-|[CMFCRibbonBar::setActiveMDIChild](#setactivemdichild)||
-|[CMFCRibbonBar::setElementElementKeys](#setelementkeys)|Define as dicas de tecla especificadas para todos os elementos de fita que tenham o ID de comando especificado.|
-|[CMFCRibbonBar::SetApplicationButton](#setapplicationbutton)|Atribui um botão de fita de aplicação à barra de fita.|
-|[CMFCRibbonBar::setKeyboardNavigationLevel](#setkeyboardnavigationlevel)||
-|[CMFCRibbonBar::SetMaximizeMode](#setmaximizemode)||
-|[CMFCRibbonBar::SetQuickAccessCommands](#setquickaccesscommands)|Adiciona um ou mais elementos de fita à barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBar::setQuickAccessDefaultState](#setquickaccessdefaultstate)|Especifica o estado padrão da barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBar::SetQuickAccessToolbarOnTop](#setquickaccesstoolbarontop)|Posiciona a barra de ferramentas de acesso rápido (QAT) acima ou abaixo da barra de fita.|
-|[CMFCRibbonBar::SettooltipSetWidth](#settooltipfixedwidth)||
-|[CMFCRibbonBar::setWindows7Look](#setwindows7look)|Ativar/desativar a fita De estilo Windows 7 (pequeno botão de aplicativo retangular)|
-|[CMFCRibbonBar::ShowCategory](#showcategory)|Mostra ou oculta a categoria de fita especificada.|
-|[CMFCRibbonBar::ShowContextCategorias](#showcontextcategories)|Mostra ou oculta as categorias de contexto que possuem o ID especificado.|
-|[CMFCRibbonBar::Dicas de showkey](#showkeytips)||
-|[CMFCRibbonBar::ToggleMimimizeState](#togglemimimizestate)|Alterna a barra de fita entre os estados minimizados e maximizados..|
-|[CMFCRibbonbar::TranslateChar](#translatechar)||
+|[CMFCRibbonBar:: ActivateContextCategory](#activatecontextcategory)|Ativa uma categoria de contexto que já está visível.|
+|[CMFCRibbonBar:: AddCategory](#addcategory)|Adiciona uma nova categoria da faixa de faixas à faixa de faixas.|
+|[CMFCRibbonBar:: AddContextCategory](#addcontextcategory)|Adiciona uma categoria de contexto.|
+|[CMFCRibbonBar:: AddMainCategory](#addmaincategory)|Adiciona uma nova categoria da faixa de faixas principal.|
+|[CMFCRibbonBar:: AddPrintPreviewCategory](#addprintpreviewcategory)||
+|[CMFCRibbonBar:: AddQATOnlyCategory](#addqatonlycategory)||
+|[CMFCRibbonBar:: AddToTabs](#addtotabs)|Adicione um elemento da faixa de faixas ao lado direito de uma barra da faixa de uma.|
+|[CMFCRibbonBar:: CreateEx](#createex)|Cria uma barra de controle e a anexa ao objeto [CPane](../../mfc/reference/cpane-class.md) . (Substitui [CPane:: CreateEx](../../mfc/reference/cpane-class.md#createex).)|
+|[CMFCRibbonBar:: criar](#create)|Cria um controle de barra de faixa de faixas e o anexa a uma barra de faixa de faixas.|
+|[CMFCRibbonBar::D eactivateKeyboardFocus](#deactivatekeyboardfocus)||
+|[CMFCRibbonBar::D rawMenuImage](#drawmenuimage)||
+|[CMFCRibbonBar::D WMCompositionChanged](#dwmcompositionchanged)||
+|[CMFCRibbonBar:: EnableKeyTips](#enablekeytips)|Habilitar ou desabilitar dicas de tecla para o controle da faixa de faixas.|
+|[CMFCRibbonBar:: EnablePrintPreview](#enableprintpreview)|Habilite a guia **visualização de impressão** .|
+|[CMFCRibbonBar:: EnableToolTips](#enabletooltips)|Habilita ou desabilita dicas de ferramentas e descrições de dica de ferramenta na barra da faixa de ferramentas.|
+|[CMFCRibbonBar:: FindByData](#findbydata)|Localize um elemento da faixa de faixas usando os dados que um usuário especifica.|
+|[CMFCRibbonBar:: FindByID](#findbyid)|Localiza um elemento da faixa de faixas que tem a ID de comando especificada.|
+|[CMFCRibbonBar:: FindCategoryIndexByData](#findcategoryindexbydata)|Localiza o índice da categoria da faixa de faixas que contém os dados definidos pelo usuário.|
+|[CMFCRibbonBar:: ForceRecalcLayout](#forcerecalclayout)||
+|[CMFCRibbonBar:: GetActiveCategory](#getactivecategory)|Obtém um ponteiro para uma categoria ativa.|
+|[CMFCRibbonBar:: GetCaptionHeight](#getcaptionheight)|Retorna a altura da legenda. (Substitui [CBasePane:: GetCaptionHeight](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|
+|[CMFCRibbonBar:: getcategory](#getcategory)|Obtém o ponteiro para uma categoria localizada em um índice especificado.|
+|[CMFCRibbonBar:: GetCategoryCount](#getcategorycount)|Obtém o número das categorias da faixa de faixas na barra da faixa de faixas.|
+|[CMFCRibbonBar:: GetCategoryHeight](#getcategoryheight)||
+|[CMFCRibbonBar:: GetCategoryIndex](#getcategoryindex)|Retorna o índice de uma categoria da faixa de faixas.|
+|[CMFCRibbonBar:: getcontextname](#getcontextname)|Recupera o nome da legenda da categoria de contexto que você especifica usando uma ID.|
+|[CMFCRibbonBar:: GetDroppedDown](#getdroppeddown)||
+|[CMFCRibbonBar:: GetElementsByID](#getelementsbyid)|Obtém uma matriz que contém os ponteiros para todos os elementos da faixa de faixas que têm a ID especificada.|
+|[CMFCRibbonBar:: GetApplicationButton](#getapplicationbutton)|Obtém um ponteiro para um botão da faixa de medida.|
+|[CMFCRibbonBar:: GetFocused](#getfocused)|Retorna um elemento focalizado.|
+|[CMFCRibbonBar:: GetHideFlags](#gethideflags)||
+|[CMFCRibbonBar:: GetItemIDsList](#getitemidslist)||
+|[CMFCRibbonBar:: GetKeyboardNavigationLevel](#getkeyboardnavigationlevel)||
+|[CMFCRibbonBar:: GetKeyboardNavLevelCurrent](#getkeyboardnavlevelcurrent)||
+|[CMFCRibbonBar:: GetKeyboardNavLevelParent](#getkeyboardnavlevelparent)||
+|[CMFCRibbonBar:: GetMainCategory](#getmaincategory)|Retorna um ponteiro para a categoria da faixa de faixas selecionada no momento.|
+|[CMFCRibbonBar:: GetQATCommandsLocation](#getqatcommandslocation)||
+|[CMFCRibbonBar:: GetQATDroppedDown](#getqatdroppeddown)||
+|[CMFCRibbonBar:: GetQuickAccessCommands](#getquickaccesscommands)|Preenche uma lista que contém as IDs de comando de todos os elementos que aparecem na barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBar:: GetQuickAccessToolbarLocation](#getquickaccesstoolbarlocation)||
+|[CMFCRibbonBar:: GetTabTrancateRatio](#gettabtrancateratio)||
+|[CMFCRibbonBar:: GetTooltipFixedWidthLargeImage](#gettooltipfixedwidthlargeimage)||
+|[CMFCRibbonBar:: GetTooltipFixedWidthRegular](#gettooltipfixedwidthregular)||
+|[CMFCRibbonBar:: GetVisibleCategoryCount](#getvisiblecategorycount)||
+|[CMFCRibbonBar:: HideAllContextCategories](#hideallcontextcategories)|Oculta todas as categorias que estão ativas e visíveis.|
+|[CMFCRibbonBar:: HideKeyTips](#hidekeytips)||
+|[CMFCRibbonBar:: HitTest](#hittest)|Localiza um ponteiro para o elemento Ribbon que está localizado no ponto especificado nas coordenadas do cliente da barra de faixa de das.|
+|[CMFCRibbonBar:: IsKeyTipEnabled](#iskeytipenabled)|Determina se as dicas de keyestão habilitadas.|
+|[CMFCRibbonBar:: IsMainRibbonBar](#ismainribbonbar)||
+|[CMFCRibbonBar:: IsPrintPreviewEnabled](#isprintpreviewenabled)|Determina se a guia **visualização de impressão** está habilitada.|
+|[CMFCRibbonBar:: IsQATEmpty](#isqatempty)||
+|[CMFCRibbonBar:: IsQuickAccessToolbarOnTop](#isquickaccesstoolbarontop)|Especifica se a barra de ferramentas de acesso rápido está localizada acima da barra da faixa de opções.|
+|[CMFCRibbonBar:: IsReplaceFrameCaption](#isreplaceframecaption)|Determina se a barra da faixa de faixas substitui a legenda do quadro principal ou é adicionada abaixo da legenda do quadro.|
+|[CMFCRibbonBar:: IsShowGroupBorder](#isshowgroupborder)||
+|[CMFCRibbonBar:: IsToolTipDescrEnabled](#istooltipdescrenabled)|Determina se as descrições da dica de ferramenta estão habilitadas.|
+|[CMFCRibbonBar:: IsToolTipEnabled](#istooltipenabled)|Determina se as dicas de ferramenta da barra da faixa de ferramentas estão habilitadas.|
+|[CMFCRibbonBar:: IsTransparentCaption](#istransparentcaption)||
+|[CMFCRibbonBar:: IsWindows7Look](#iswindows7look)|Indica se a faixa de Ribbon tem aparência no estilo do Windows 7 (botão pequeno do aplicativo retangular).|
+|[CMFCRibbonBar:: LoadFromResource](#loadfromresource)|Sobrecarregado. Carrega uma barra de faixa de das recursos do aplicativo.|
+|[CMFCRibbonBar:: OnClickButton](#onclickbutton)||
+|[CMFCRibbonBar:: OnEditContextMenu](#oneditcontextmenu)||
+|[CMFCRibbonBar:: OnRTLChanged](#onrtlchanged)|(Substitui `CPane::OnRTLChanged`.)|
+|[CMFCRibbonBar:: OnSetAccData](#onsetaccdata)|(Substitui [CBasePane:: OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
+|[CMFCRibbonBar:: OnShowRibbonContextMenu](#onshowribboncontextmenu)||
+|[CMFCRibbonBar:: OnShowRibbonQATMenu](#onshowribbonqatmenu)||
+|[CMFCRibbonBar:: OnSysKeyDown](#onsyskeydown)||
+|[CMFCRibbonBar:: OnSysKeyUp](#onsyskeyup)||
+|[CMFCRibbonBar::P opTooltip](#poptooltip)||
+|[CMFCRibbonBar::P reTranslateMessage](#pretranslatemessage)|(Substitui `CBasePane::PreTranslateMessage`.)|
+|[CMFCRibbonBar:: RecalcLayout](#recalclayout)|(Substitui [CPane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
+|[CMFCRibbonBar:: RemoveAllCategories](#removeallcategories)|Remove todas as categorias de faixa de faixas da barra da faixa de faixas.|
+|[CMFCRibbonBar:: RemoveAllFromTabs](#removeallfromtabs)|Remove todos os elementos da faixa de faixas da área da guia.|
+|[CMFCRibbonBar:: RemoveCategory](#removecategory)|Remove a categoria da faixa de faixas que está localizada no índice especificado.|
+|[CMFCRibbonBar:: SaveToXMLBuffer](#savetoxmlbuffer)|Salva a barra da faixa de faixas em um buffer.|
+|[CMFCRibbonBar:: SaveToXMLFile](#savetoxmlfile)|Salva a barra da faixa de faixas em um arquivo XML.|
+|[CMFCRibbonBar:: SetActiveCategory](#setactivecategory)|Define uma categoria de faixa de modo especificada como ativa.|
+|[CMFCRibbonBar:: SetActiveMDIChild](#setactivemdichild)||
+|[CMFCRibbonBar:: SetElementKeys](#setelementkeys)|Define as keytips especificadas para todos os elementos da faixa de faixas que têm a ID de comando especificada.|
+|[CMFCRibbonBar:: SetApplicationButton](#setapplicationbutton)|Atribui um botão de faixa de de aplicativo à barra da faixa de faixas.|
+|[CMFCRibbonBar:: SetKeyboardNavigationLevel](#setkeyboardnavigationlevel)||
+|[CMFCRibbonBar:: setmaximmode](#setmaximizemode)||
+|[CMFCRibbonBar:: SetQuickAccessCommands](#setquickaccesscommands)|Adiciona um ou mais elementos da faixa de faixas à barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBar:: SetQuickAccessDefaultState](#setquickaccessdefaultstate)|Especifica o estado padrão da barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBar:: SetQuickAccessToolbarOnTop](#setquickaccesstoolbarontop)|Posiciona a barra de ferramentas de acesso rápido (QAT) acima ou abaixo da barra da faixa de opções.|
+|[CMFCRibbonBar:: SetTooltipFixedWidth](#settooltipfixedwidth)||
+|[CMFCRibbonBar:: SetWindows7Look](#setwindows7look)|Habilitar/desabilitar a faixa de visão do Windows 7-aparência do estilo (botão pequeno do aplicativo retangular)|
+|[CMFCRibbonBar:: imcategory](#showcategory)|Mostra ou oculta a categoria da faixa de faixas especificada.|
+|[CMFCRibbonBar:: ShowContextCategories](#showcontextcategories)|Mostra ou oculta as categorias de contexto que têm a ID especificada.|
+|[CMFCRibbonBar:: ShowKeyTips](#showkeytips)||
+|[CMFCRibbonBar:: ToggleMimimizeState](#togglemimimizestate)|Alterna a barra da faixa de opção entre os Estados minimizado e maximizado.|
+|[CMFCRibbonBar:: TranslateChar](#translatechar)||
 
 ## <a name="remarks"></a>Comentários
 
-A Microsoft introduziu o Office Fluent Ribbon quando lançou simultaneamente o Microsoft Office 2007. Esta barra de fita não é apenas um novo controle. Representa um novo paradigma de interface de usuário. A fita é um painel que contém um conjunto de guias chamadas categorias. Cada categoria é logicamente dividida em painéis de fita e cada painel pode conter vários controles e botões de comando.
+A Microsoft introduziu a faixa de forma fluente do Office quando lançou simultaneamente Microsoft Office 2007. Essa barra de faixa não é apenas um novo controle. Ele representa um novo paradigma de interface do usuário. A faixa de faixas é um painel que contém um conjunto de guias chamado categorias. Cada categoria é dividida logicamente em painéis de faixa de das faixas e cada painel pode conter vários controles e botões de comando.
 
-Os elementos que aparecem na barra de fita se expandem e se contraem para fazer o melhor uso do espaço disponível. Por exemplo, se um painel de fita tem espaço insuficiente para exibir seus elementos, ele se torna um botão de menu que exibe subitens em um menu pop-up. A barra de fita se comporta como uma barra de controle estática (não flutuante) e pode ser encaixada na parte superior de um quadro.
+Os elementos que aparecem na barra de faixa de faixas se expandem e contratam para fazer o melhor uso do espaço disponível. Por exemplo, se um painel da faixa de faixas não tiver espaço suficiente para exibir seus elementos, ele se tornará um botão de menu que exibe subitens em um menu pop-up. A barra da faixa de quadros se comporta como uma barra de controle estática (não flutuante) e pode ser encaixada na parte superior de um quadro.
 
-Você pode `CMFCRibbonStatusBar` usar a classe para implementar uma barra de status semelhante à usada no Office 2007. Uma categoria de fita contém (e exibe) um grupo de [painéis](../../mfc/reference/cmfcribbonpanel-class.md)de fita . Cada painel de fita contém um ou mais elementos de fita, que são derivados do [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
+Você pode usar a `CMFCRibbonStatusBar` classe para implementar uma barra de status semelhante à usada no Office 2007. Uma categoria da faixa de faixas contém (e exibe) um grupo de [painéis da faixa de faixas](../../mfc/reference/cmfcribbonpanel-class.md). Cada painel da faixa de lista contém um ou mais elementos da faixa de faixas, que são derivados de [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Para obter informações sobre como adicionar uma barra de fita ao aplicativo MFC existente, consulte [Passo a Passo: Atualizando o aplicativo de rabisco scribble do MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Para obter informações sobre como adicionar uma barra de faixa de faixas ao seu aplicativo existente do MFC, consulte [Walkthrough: atualizando o aplicativo de rabisco do MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cbasepane](../../mfc/reference/cbasepane-class.md)
+[CBasePane](../../mfc/reference/cbasepane-class.md)
 
-[Cpane](../../mfc/reference/cpane-class.md)
+[CPane](../../mfc/reference/cpane-class.md)
 
 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxribbonbar.h
+**Cabeçalho:** afxRibbonBar. h
 
-## <a name="cmfcribbonbaractivatecontextcategory"></a><a name="activatecontextcategory"></a>CMFCRibbonBar::Ativarcategoriacontexto
+## <a name="cmfcribbonbaractivatecontextcategory"></a><a name="activatecontextcategory"></a> CMFCRibbonBar:: ActivateContextCategory
 
 Ativa uma categoria de contexto que já está visível.
 
@@ -347,18 +347,18 @@ Ativa uma categoria de contexto que já está visível.
 BOOL ActivateContextCategory(UINT uiContextID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiContextID*<br/>
-[em] O ID da categoria de contexto.
+no A ID da categoria de contexto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se uma categoria de contexto com *uiContextID* for encontrada e ativada; caso contrário, FALSO.
+TRUE se uma categoria de contexto com *uiContextID* for encontrada e ativada; caso contrário, FALSE.
 
-## <a name="cmfcribbonbaraddcategory"></a><a name="addcategory"></a>CMFCRibbonBar::AddCategory
+## <a name="cmfcribbonbaraddcategory"></a><a name="addcategory"></a> CMFCRibbonBar:: AddCategory
 
-Cria e inicia uma nova categoria de fita para a barra de fita.
+Cria e Inicializa uma nova categoria de faixa de faixas para a barra da faixa de faixas.
 
 ```
 CMFCRibbonCategory* AddCategory(
@@ -373,46 +373,46 @@ CMFCRibbonCategory* AddCategory(
     CRuntimeClass* pRTI= NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
-[em] Nome da categoria fita.
+no Nome da categoria da faixa de faixas.
 
 *uiSmallImagesResID*<br/>
-[em] ID de recurso da pequena lista de imagens para a categoria fita.
+no ID de recurso da lista de imagens pequena para a categoria da faixa de faixas.
 
 *uiLargeImagesResID*<br/>
-[em] ID de recurso da lista de imagens grandes para a categoria fita.
+no ID de recurso da lista de imagens grandes para a categoria da faixa de faixas.
 
 *sizeSmallImage*<br/>
-[em] Especifica o tamanho de pequenas imagens para a categoria fita.
+no Especifica o tamanho de imagens pequenas para a categoria da faixa de faixas.
 
 *sizeLargeImage*<br/>
-[em] Especifica o tamanho de imagens grandes para a categoria fita.
+no Especifica o tamanho de imagens grandes para a categoria da faixa de faixas.
 
 *nInsertAt*<br/>
-[em] Índice baseado em zero da localização da categoria.
+no Índice baseado em zero do local da categoria.
 
 *pRTI*<br/>
-[em] Ponteiro para uma classe de tempo de execução [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) class para criar dinamicamente uma categoria de fita em tempo de execução.
+no Ponteiro para uma classe de tempo de execução de [classe CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) para criar dinamicamente uma categoria de faixa de bits em tempo de execução.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a nova categoria de fita se o método foi bem sucedido; caso contrário, NULL.
+Um ponteiro para a nova categoria da faixa de faixas se o método foi bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Se o parâmetro *pRTI* não for NULO, a nova categoria de fita será criada dinamicamente usando a classe tempo de execução.
+Se o parâmetro *pRTI* não for nulo, a nova categoria da faixa de faixas será criada dinamicamente usando a classe de tempo de execução.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir `AddCategory` demonstra como `CMFCRibbonBar` usar o método na classe.
+O exemplo a seguir demonstra como usar o `AddCategory` método na `CMFCRibbonBar` classe.
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-## <a name="cmfcribbonbaraddcontextcategory"></a><a name="addcontextcategory"></a>CMFCRibbonBar::AddContextCategory
+## <a name="cmfcribbonbaraddcontextcategory"></a><a name="addcontextcategory"></a> CMFCRibbonBar:: AddContextCategory
 
-Cria e inicia uma nova categoria de contexto para a barra de fita.
+Cria e Inicializa uma nova categoria de contexto para a barra da faixa de faixas.
 
 ```
 CMFCRibbonCategory* AddContextCategory(
@@ -429,42 +429,42 @@ CMFCRibbonCategory* AddContextCategory(
     CRuntimeClass* pRTI = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
-[em] Nome da categoria.
+no Nome da categoria.
 
 *lpszContextName*<br/>
-[em] Nome da legenda da categoria de contexto.
+no Nome da legenda da categoria de contexto.
 
 *uiContextID*<br/>
-[em] ID de contexto.
+no ID de contexto.
 
 *clrContext*<br/>
-[em] Cor da legenda da categoria de contexto.
+no Cor da legenda da categoria de contexto.
 
 *uiSmallImagesResID*<br/>
-[em] ID de recursos da pequena imagem de uma categoria de contexto.
+no ID de recurso da imagem pequena de uma categoria de contexto.
 
 *uiLargeImagesResID*<br/>
-[em] ID de recursos da imagem grande de uma categoria de contexto.
+no ID de recurso da imagem grande de uma categoria de contexto.
 
 *sizeSmallImage*<br/>
-[em] Tamanho de uma pequena imagem.
+no Tamanho de uma imagem pequena.
 
 *sizeLargeImage*<br/>
-[em] Tamanho de uma imagem grande.
+no Tamanho de uma imagem grande.
 
 *pRTI*<br/>
-[em] Ponteiro para uma aula de tempo de execução.
+no Ponteiro para uma classe de tempo de execução.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a categoria recém-criada `CreateObject` ou NULL se o método do *pRTI* não puder criar a categoria especificada.
+Um ponteiro para a categoria recém-criada, ou NULL se o `CreateObject` método de *pRTI* não puder criar a categoria especificada.
 
 ### <a name="remarks"></a>Comentários
 
-Use esta função para adicionar uma categoria de contexto. As categorias de contexto são um tipo especial de categoria que pode ser mostrada ou oculta em tempo de execução, dependendo do contexto atual do aplicativo. Por exemplo, quando o usuário seleciona um objeto, você pode exibir guias especiais com categorias de contexto que você usa para alterar o objeto selecionado específico.
+Use esta função para adicionar uma categoria de contexto. As categorias de contexto são um tipo especial de categoria que pode ser mostrado ou oculto no tempo de execução, dependendo do contexto do aplicativo atual. Por exemplo, quando o usuário seleciona um objeto, você pode exibir guias especiais com categorias de contexto que você usa para alterar o objeto selecionado específico.
 
 A cor de uma categoria de contexto pode ser um dos seguintes valores:
 
@@ -484,9 +484,9 @@ A cor de uma categoria de contexto pode ser um dos seguintes valores:
 
 - AFX_CategoryColor_Violet
 
-## <a name="cmfcribbonbaraddmaincategory"></a><a name="addmaincategory"></a>CMFCRibbonbar::AddmainCategory
+## <a name="cmfcribbonbaraddmaincategory"></a><a name="addmaincategory"></a> CMFCRibbonBar:: AddMainCategory
 
-Cria uma nova categoria de fita principal para a barra de fita.
+Cria uma nova categoria de faixa de faixas principal para a barra da faixa de faixas.
 
 ```
 CMFCRibbonMainPanel* AddMainCategory(
@@ -499,56 +499,56 @@ CMFCRibbonMainPanel* AddMainCategory(
     32));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
-[em] Nome da categoria de fita principal.
+no Nome da categoria da faixa de faixas principal.
 
 *uiSmallImagesResID*<br/>
-[em] ID de recursos de pequenas imagens.
+no ID de recurso de imagens pequenas.
 
 *uiLargeImagesResID*<br/>
-[em] ID de recursos de imagens grandes.
+no ID de recurso de imagens grandes.
 
 *sizeSmallImage*<br/>
-[em] O tamanho de pequenas imagens.
+no O tamanho das imagens pequenas.
 
 *sizeLargeImage*<br/>
-[em] O tamanho de imagens grandes.
+no O tamanho de imagens grandes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Ponteiro para a nova categoria de fita principal se o método foi bem sucedido; caso contrário, NULL.
+Ponteiro para a nova categoria da faixa de faixas principal se o método foi bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Se uma categoria de fita principal já existir, ela será excluída.
+Se uma categoria da faixa de faixas principal já existir, ela será excluída.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir `AddMainCategory` demonstra como `CMFCRibbonBar` usar o método na classe.
+O exemplo a seguir demonstra como usar o `AddMainCategory` método na `CMFCRibbonBar` classe.
 
 [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]
 
-## <a name="cmfcribbonbaraddprintpreviewcategory"></a><a name="addprintpreviewcategory"></a>CMFCRibbonBar::AddprintPreviewcategory
+## <a name="cmfcribbonbaraddprintpreviewcategory"></a><a name="addprintpreviewcategory"></a> CMFCRibbonBar:: AddPrintPreviewCategory
 
-Cria uma categoria de visualização de impressão na barra de fita.
+Cria uma categoria de visualização de impressão na barra da faixa de faixas.
 
 ```
 CMFCRibbonCategory* AddPrintPreviewCategory();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a nova categoria de fita se o método foi bem sucedido; caso contrário, NULL.
+Um ponteiro para a nova categoria da faixa de faixas se o método foi bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Este método cria uma categoria de fita e os controles necessários para fornecer uma visualização de impressão.
+Esse método cria uma categoria de faixa de faixas e os controles necessários para fornecer uma visualização de impressão.
 
-## <a name="cmfcribbonbaraddqatonlycategory"></a><a name="addqatonlycategory"></a>CMFCRibbonBar::AddQATOnlyCategory
+## <a name="cmfcribbonbaraddqatonlycategory"></a><a name="addqatonlycategory"></a> CMFCRibbonBar:: AddQATOnlyCategory
 
-Cria uma categoria de fita de barra de ferramentas de acesso rápido.
+Cria uma categoria da faixa de ferramentas de acesso rápido.
 
 ```
 CMFCRibbonCategory* AddQATOnlyCategory(
@@ -558,60 +558,60 @@ CMFCRibbonCategory* AddQATOnlyCategory(
     16));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
-[em] Nome da categoria.
+no Nome da categoria.
 
 *uiSmallImagesResID*<br/>
-[em] ID de recurso da lista de imagens para a categoria.
+no ID de recurso da lista de imagens da categoria.
 
 *sizeSmallImage*<br/>
-[em] Tamanho das imagens para elementos de fita na categoria.
+no Tamanho das imagens para elementos da faixa de faixas na categoria.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a nova categoria se o método foi bem sucedido; caso contrário, NULL.
+Um ponteiro para a nova categoria se o método foi bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-A categoria fita de barra de ferramentas de acesso rápido só é usada na caixa de diálogo de personalização da barra de ferramentas de acesso rápido.
+A categoria da faixa de ferramentas de acesso rápido é usada somente na caixa de diálogo personalização da barra de ferramentas de acesso rápido.
 
-## <a name="cmfcribbonbaraddtotabs"></a><a name="addtotabs"></a>CMFCRibbonBar::AddToTabs
+## <a name="cmfcribbonbaraddtotabs"></a><a name="addtotabs"></a> CMFCRibbonBar:: AddToTabs
 
-Adiciona o elemento de fita especificado à linha de guias da barra de fita.
+Adiciona o elemento Ribbon especificado à linha Tabs da barra da faixa de faixas.
 
 ```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pElement*<br/>
-[em] Ponteiro para um elemento de fita.
+no Ponteiro para um elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-O elemento de fita é posicionado antes de qualquer botão do sistema.
+O elemento Ribbon é posicionado antes de qualquer botão do sistema.
 
-## <a name="cmfcribbonbarcmfcribbonbar"></a><a name="cmfcribbonbar"></a>CMFCRibbonBar::CMFCRibbonBar
+## <a name="cmfcribbonbarcmfcribbonbar"></a><a name="cmfcribbonbar"></a> CMFCRibbonBar:: CMFCRibbonBar
 
-Constrói e inicializa um objeto [CMFCRibbonBar.](../../mfc/reference/cmfcribbonbar-class.md)
+Constrói e inicializa um objeto [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) .
 
 ```
 CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bReplaceFrameCaption*<br/>
-[em] TRUE para a barra de fita para substituir a legenda da janela do quadro principal; FALSE para localizar a barra de fita sob a legenda da janela principal da moldura.
+no TRUE para a barra da faixa de quadros substituir a legenda da janela do quadro principal; FALSE para localizar a barra da faixa de faixas sob a legenda da janela do quadro principal.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarcreate"></a><a name="create"></a>CMFCRibbonBar::Criar
+## <a name="cmfcribbonbarcreate"></a><a name="create"></a> CMFCRibbonBar:: criar
 
-Cria uma janela para a barra de fita.
+Cria uma janela para a barra da faixa de faixas.
 
 ```
 BOOL Create(
@@ -620,32 +620,32 @@ BOOL Create(
     UINT nID = AFX_IDW_RIBBON_BAR);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Pparentwnd*<br/>
-[em] Ponteiro para a janela dos pais para a barra de fita.
+*pParentWnd*<br/>
+no Ponteiro para a janela pai da barra da faixa de forma.
 
-*Dwstyle*<br/>
-[em] Uma combinação lógica de estilos para a nova janela.
+*dwStyle*<br/>
+no Uma combinação lógica de estilos para a nova janela.
 
 *nID*<br/>
-[em] ID da nova janela.
+no ID da nova janela.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a janela foi criada; caso contrário, FALSO.
+TRUE se a janela foi criada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir `Create` demonstra como `CMFCRibbonBar` usar o método da classe.
+O exemplo a seguir demonstra como usar o `Create` método da `CMFCRibbonBar` classe.
 
 [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]
 
-## <a name="cmfcribbonbarcreateex"></a><a name="createex"></a>CMFCRibbonbar::CreateEx
+## <a name="cmfcribbonbarcreateex"></a><a name="createex"></a> CMFCRibbonBar:: CreateEx
 
-Cria uma janela para a barra de fita.
+Cria uma janela para a barra da faixa de faixas.
 
 ```
 BOOL CreateEx(
@@ -655,42 +655,42 @@ BOOL CreateEx(
     UINT nID = AFX_IDW_RIBBON_BAR);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Pparentwnd*<br/>
-[em] Ponteiro para a janela dos pais para a barra de fita.
+*pParentWnd*<br/>
+no Ponteiro para a janela pai da barra da faixa de forma.
 
 *dwCtrlStyle*<br/>
-[em] Este parâmetro não é usado.
+no Esse parâmetro não é usado.
 
-*Dwstyle*<br/>
-[em] Uma combinação lógica de estilos para a nova janela.
+*dwStyle*<br/>
+no Uma combinação lógica de estilos para a nova janela.
 
 *nID*<br/>
-[em] ID da nova janela.
+no ID da nova janela.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a janela foi criada; caso contrário, FALSO.
+TRUE se a janela foi criada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbardeactivatekeyboardfocus"></a><a name="deactivatekeyboardfocus"></a>CMFCRibbonBar::DeactivateKeyboardFocus
+## <a name="cmfcribbonbardeactivatekeyboardfocus"></a><a name="deactivatekeyboardfocus"></a> CMFCRibbonBar::D eactivateKeyboardFocus
 
-Fecha todos os controles de ponta de chave na barra de fita.
+Fecha todos os controles KeyTip na barra da faixa de faixas.
 
 ```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bSetFocus*<br/>
-[em] TRUE para definir o foco para a janela dos pais da barra de fita.
+no TRUE para definir o foco para a janela pai da barra da faixa de forma.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbardrawmenuimage"></a><a name="drawmenuimage"></a>CMFCRibbonBar::DrawMenuImage
+## <a name="cmfcribbonbardrawmenuimage"></a><a name="drawmenuimage"></a> CMFCRibbonBar::D rawMenuImage
 
 Desenha a imagem para um botão de menu.
 
@@ -701,26 +701,26 @@ BOOL DrawMenuImage(
     const CRect& rectImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*pDC*<br/>
-[em] Ponteiro para um contexto do dispositivo para o botão de menu.
+*Primário*<br/>
+no Ponteiro para um contexto de dispositivo para o botão de menu.
 
 *pMenuItem*<br/>
-[em] Pointer para um botão de menu da barra de ferramentas.
+no Ponteiro para um botão de menu da barra de ferramentas.
 
 *rectImage*<br/>
-[em] O retângulo do display para um botão de menu.
+no O retângulo de exibição de um botão de menu.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a imagem foi desenhada; caso contrário, FALSO.
+TRUE se a imagem foi desenhada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbardwmcompositionchanged"></a><a name="dwmcompositionchanged"></a>CMFCRibbonBar::DAcomposição wmchanged
+## <a name="cmfcribbonbardwmcompositionchanged"></a><a name="dwmcompositionchanged"></a> CMFCRibbonBar::D WMCompositionChanged
 
-Ajusta o visor da barra de fita quando a composição do DWM (Desktop Window Manager) está ativada ou desativada.
+Ajusta a exibição da barra da faixa de faixas quando a composição de Gerenciador de Janelas da Área de Trabalho (DWM) é habilitada ou desabilitada.
 
 ```
 virtual void DWMCompositionChanged();
@@ -728,45 +728,45 @@ virtual void DWMCompositionChanged();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarenablekeytips"></a><a name="enablekeytips"></a>CMFCRibbonBar::Habilitardicas de tecla
+## <a name="cmfcribbonbarenablekeytips"></a><a name="enablekeytips"></a> CMFCRibbonBar:: EnableKeyTips
 
-Ativa ou desativa o recurso keytip para a barra de fita.
+Habilita ou desabilita o recurso KeyTip para a barra da faixa de faixas.
 
 ```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Benable*<br/>
-[em] TRUE para habilitar o recurso keytips; FALSE para desativar o recurso keytips.
+*bEnable*<br/>
+no TRUE para habilitar o recurso keytips; FALSE para desabilitar o recurso keytips.
 
 ### <a name="remarks"></a>Comentários
 
-Quando você habilita esse recurso, as principais dicas são exibidas quando o usuário pressiona o botão ALT ou F10. Quando o usuário pressiona a tecla ALT, as principais dicas são exibidas com um atraso de 200 milissegundos. Esse atraso permite que atalhos sejam executados para que a tecla ALT pressionada não interfira com outras combinações que incluem a tecla ALT.
+Quando você habilita esse recurso, as dicas de tecla são exibidas quando o usuário pressiona o botão ALT ou F10. Quando o usuário pressiona a tecla ALT, as dicas de tecla são exibidas com um atraso de 200 milissegundos. Esse atraso permite que atalhos sejam executados para que a tecla ALT pressionada não interfira em outras combinações que incluam a tecla ALT.
 
-## <a name="cmfcribbonbarenableprintpreview"></a><a name="enableprintpreview"></a>CMFCRibbonBar::Ativarvisualização de impressão
+## <a name="cmfcribbonbarenableprintpreview"></a><a name="enableprintpreview"></a> CMFCRibbonBar:: EnablePrintPreview
 
-Ativa ou desativa o recurso **Visualização de impressão.**
+Habilita ou desabilita o recurso de **visualização de impressão** .
 
 ```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Benable*<br/>
-[em] TRUE para habilitar o recurso **Visualização de impressão;** FALSO para desativar o recurso **Devisualização de Impressão.**
+*bEnable*<br/>
+no TRUE para habilitar o recurso de **visualização de impressão** ; FALSE para desabilitar o recurso de **visualização de impressão** .
 
 ### <a name="remarks"></a>Comentários
 
-Se *bEnable* for FALSE e existir uma categoria de visualização de impressão, ele será excluído.
+Se *bEnable* for false e existir uma categoria de visualização de impressão, ela será excluída.
 
-Por padrão, o recurso **Visualização de impressão** está ativado.
+Por padrão, o recurso de **visualização de impressão** está habilitado.
 
-## <a name="cmfcribbonbarenabletooltips"></a><a name="enabletooltips"></a>CMFCRibbonBar::Habilitardicas de ferramentas
+## <a name="cmfcribbonbarenabletooltips"></a><a name="enabletooltips"></a> CMFCRibbonBar:: EnableToolTips
 
-Ativa ou desativa dicas de ferramentas e descrições opcionais de ponta de ferramenta na barra de fita.
+Habilita ou desabilita dicas de ferramentas e descrições de dica de ferramenta opcionais na barra da faixa de ferramentas.
 
 ```cpp
 void EnableToolTips(
@@ -774,21 +774,21 @@ void EnableToolTips(
     BOOL bEnableDescr = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Benable*<br/>
-[em] TRUE para habilitar as pontas das ferramentas na barra de fita; FALSE para desativar as pontas das ferramentas na barra de fita.
+*bEnable*<br/>
+no TRUE para habilitar dicas de ferramenta na barra da faixa de ferramentas; FALSE para desabilitar as dicas de ferramenta na barra da faixa de ferramentas.
 
 *bEnableDescr*<br/>
-[em] TRUE para habilitar descrições de dica de ferramenta na dica de ferramenta; FALSO para desativar descrições de dica de ferramenta na dica da ferramenta.
+no TRUE para habilitar descrições da dica de ferramenta na dica de ferramenta; FALSE para desabilitar descrições da dica de ferramenta na dica de ferramenta.
 
 ### <a name="remarks"></a>Comentários
 
-O parâmetro *bEnable* determina se as pontas das ferramentas são exibidas quando o mouse paira sobre um elemento de fita. O parâmetro *bEnableDescr* determina se o texto descritivo adicional aparece com o texto da dica de ferramenta.
+O parâmetro *bEnable* determina se tooltips são exibidas quando o mouse passa sobre um elemento Ribbon. O parâmetro *bEnableDescr* determina se um texto descritivo adicional é exibido com o texto da dica de ferramenta.
 
-## <a name="cmfcribbonbarfindbydata"></a><a name="findbydata"></a>CMFCRibbonBar::FindbyData
+## <a name="cmfcribbonbarfindbydata"></a><a name="findbydata"></a> CMFCRibbonBar:: FindByData
 
-Recupera um ponteiro para um elemento de fita se ele tiver os dados e a visibilidade especificados.
+Recupera um ponteiro para um elemento Ribbon se ele tiver os dados e a visibilidade especificados.
 
 ```
 CMFCRibbonBaseElement* FindByData(
@@ -796,25 +796,25 @@ CMFCRibbonBaseElement* FindByData(
     BOOL bVisibleOnly = TRUE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dwdata*<br/>
-[em] Os dados associados a um elemento de fita.
+*dwData*<br/>
+no Os dados associados a um elemento Ribbon.
 
 *bVisibleOnly*<br/>
-[em] VERDADEIRO para pesquisar apenas elementos de fita visível; FALSE para pesquisar todos os elementos da fita.
+no TRUE para pesquisar somente elementos de faixa de faixas visíveis; FALSE para pesquisar todos os elementos da faixa de faixas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para um elemento de fita se ele tiver os dados e a visibilidade especificados; caso contrário, NULL.
+Um ponteiro para um elemento da faixa de faixas se ele tiver os dados e a visibilidade especificados; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Um elemento de fita é qualquer controle que você pode adicionar à fita, como um botão de fita, ou uma categoria de fita, ou um controle deslizante de fita.
+Um elemento Ribbon é qualquer controle que você pode adicionar à faixa de faixas, como um botão de faixa de forma ou uma categoria de faixa de faixas, ou um controle deslizante da faixa de faixas.
 
-## <a name="cmfcribbonbarfindbyid"></a><a name="findbyid"></a>CMFCRibbonbar::Findbyid
+## <a name="cmfcribbonbarfindbyid"></a><a name="findbyid"></a> CMFCRibbonBar:: FindByID
 
-Recupera um ponteiro para o elemento de fita que tem o ID de comando especificado e os valores de pesquisa.
+Recupera um ponteiro para o elemento Ribbon que tem a ID de comando e os valores de pesquisa especificados.
 
 ```
 CMFCRibbonBaseElement* FindByID(
@@ -823,47 +823,47 @@ CMFCRibbonBaseElement* FindByID(
     BOOL bExcludeQAT = FALSE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdID*<br/>
-[em] ID de comando para um elemento de fita.
+no ID de comando para um elemento da faixa de faixas.
 
 *bVisibleOnly*<br/>
-[em] VERDADEIRO para pesquisar apenas elementos de fita visível; FALSE para pesquisar todos os elementos da fita.
+no TRUE para pesquisar somente elementos de faixa de faixas visíveis; FALSE para pesquisar todos os elementos da faixa de faixas.
 
-*bExcluQAT*<br/>
-[em] TRUE excluir elementos da barra de ferramentas de acesso rápido da pesquisa; caso contrário, FALSE.
+*bExcludeQAT*<br/>
+no TRUE para excluir elementos da barra de ferramentas de acesso rápido da pesquisa; caso contrário, FALSE.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para um elemento de fita se ele tiver o ID de comando especificado e os valores de pesquisa; caso contrário, NULL.
+Um ponteiro para um elemento da faixa de faixas se tiver a ID de comando e os valores de pesquisa especificados; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Um elemento de fita é qualquer controle de fita que pode ser adicionado à fita, como um botão de fita, ou uma categoria de fita, ou um controle deslizante de fita.
+Um elemento da faixa de faixas é qualquer controle da faixa de forma que possa ser adicionado à faixa de forma, como um botão da faixa de forma ou uma categoria da faixa de faixas, ou um Slider.
 
-Em geral, pode haver mais de um elemento de fita que tem o mesmo ID de comando. Se você quiser obter ponteiros para todos os elementos de fita que usam um ID de comando especificado, use o método [CMFCRibbonBar::GetElementsByID.](#getelementsbyid)
+Em geral, pode haver mais de um elemento Ribbon que tenha a mesma ID de comando. Se você quiser obter ponteiros para todos os elementos da faixa de faixas que usam uma ID de comando especificada, use o método [CMFCRibbonBar:: GetElementsByID](#getelementsbyid) .
 
-## <a name="cmfcribbonbarfindcategoryindexbydata"></a><a name="findcategoryindexbydata"></a>CMFCRibbonBar::FindcategoryIndexByData
+## <a name="cmfcribbonbarfindcategoryindexbydata"></a><a name="findcategoryindexbydata"></a> CMFCRibbonBar:: FindCategoryIndexByData
 
-Recupera o índice da categoria de fita que contém os dados especificados.
+Recupera o índice da categoria da faixa de faixas que contém os dados especificados.
 
 ```
 int FindCategoryIndexByData(DWORD dwData) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dwdata*<br/>
-[em] Os dados associados a uma categoria de fita.
+*dwData*<br/>
+no Os dados associados a uma categoria da faixa de faixas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O índice baseado em zero de uma categoria de fita se o método foi bem sucedido; caso contrário -1.
+O índice de base zero de uma categoria da faixa de faixas se o método foi bem-sucedido; caso contrário,-1.
 
-## <a name="cmfcribbonbarforcerecalclayout"></a><a name="forcerecalclayout"></a>CMFCRibbonBar::ForceRecalcLayout
+## <a name="cmfcribbonbarforcerecalclayout"></a><a name="forcerecalclayout"></a> CMFCRibbonBar:: ForceRecalcLayout
 
-Ajusta o layout de todos os itens na barra de fita e na janela dos pais e redesenha toda a janela.
+Ajusta o layout de todos os itens na barra da faixa de opção e na janela pai e redesenha toda a janela.
 
 ```cpp
 void ForceRecalcLayout();
@@ -871,80 +871,80 @@ void ForceRecalcLayout();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbargetactivecategory"></a><a name="getactivecategory"></a>CMFCRibbonBar::GetActiveCategory
+## <a name="cmfcribbonbargetactivecategory"></a><a name="getactivecategory"></a> CMFCRibbonBar:: GetActiveCategory
 
-Recupera um ponteiro para a categoria de fita ativa.
+Recupera um ponteiro para a categoria da faixa de modo ativa.
 
 ```
 CMFCRibbonCategory* GetActiveCategory() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a categoria de fita ativa; ou NULL se nenhuma categoria estiver ativa.
+Um ponteiro para a categoria da faixa de medida ativa; ou NULL se nenhuma categoria estiver ativa.
 
 ### <a name="remarks"></a>Comentários
 
-Uma categoria está ativa se tiver o foco. Por padrão, a categoria ativa é a primeira categoria no lado esquerdo da barra de fita.
+Uma categoria estará ativa se tiver o foco. Por padrão, a categoria ativa é a primeira categoria no lado esquerdo da barra da faixa de faixas.
 
 A categoria principal é exibida quando o usuário pressiona o botão do aplicativo e não pode ser a categoria ativa.
 
-## <a name="cmfcribbonbargetapplicationbutton"></a><a name="getapplicationbutton"></a>CMFCRibbonBar::GetApplicationButton
+## <a name="cmfcribbonbargetapplicationbutton"></a><a name="getapplicationbutton"></a> CMFCRibbonBar:: GetApplicationButton
 
-Recupera um ponteiro para o botão de aplicação.
+Recupera um ponteiro para o botão do aplicativo.
 
 ```
 CMFCRibbonApplicationButton* GetApplicationButton() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o botão de aplicação; ou NULO se o botão não tiver sido definido.
+Um ponteiro para o botão do aplicativo; ou NULL se o botão não tiver sido definido.
 
-## <a name="cmfcribbonbargetcaptionheight"></a><a name="getcaptionheight"></a>CMFCRibbonBar::GetcaptionHeight
+## <a name="cmfcribbonbargetcaptionheight"></a><a name="getcaptionheight"></a> CMFCRibbonBar:: GetCaptionHeight
 
-Recupera a altura da área de legenda para a barra de fita.
+Recupera a altura da área de legenda da barra da faixa de faixas.
 
 ```
 int GetCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A altura, em pixels, da área de legenda para a barra de fita.
+A altura, em pixels, da área de legenda da barra da faixa de para.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbargetcategory"></a><a name="getcategory"></a>CMFCRibbonBar::GetCategory
+## <a name="cmfcribbonbargetcategory"></a><a name="getcategory"></a> CMFCRibbonBar:: getcategory
 
-Recupera um ponteiro para a categoria de fita no índice especificado.
+Recupera um ponteiro para a categoria da faixa de faixas no índice especificado.
 
 ```
 CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
-[em] O índice baseado em zero de uma categoria de fita na lista de categorias de fita contida sinuosa.
+no O índice de base zero de uma categoria da faixa de bits na lista de categorias da faixa de bits contida na barra da faixa de faixas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a categoria de fita no índice especificado; caso contrário, NULL se *nIndex* estava fora de alcance.
+Um ponteiro para a categoria da faixa de faixas no índice especificado; caso contrário, NULL se *nIndex* estava fora do intervalo.
 
-## <a name="cmfcribbonbargetcategorycount"></a><a name="getcategorycount"></a>CMFCRibbonBar::GetCategoryCount
+## <a name="cmfcribbonbargetcategorycount"></a><a name="getcategorycount"></a> CMFCRibbonBar:: GetCategoryCount
 
-Recupera o número de categorias de fita na barra de fita.
+Recupera o número de categorias da faixa de faixas na barra da faixa de Ribbon.
 
 ```
 int GetCategoryCount() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O número das categorias de fita na barra de fita.
+O número de categorias da faixa de faixas na barra da faixa de faixas.
 
-## <a name="cmfcribbonbargetcategoryheight"></a><a name="getcategoryheight"></a>CMFCRibbonBar::GetCategoryHeight
+## <a name="cmfcribbonbargetcategoryheight"></a><a name="getcategoryheight"></a> CMFCRibbonBar:: GetCategoryHeight
 
 Recupera a altura da categoria.
 
@@ -952,34 +952,34 @@ Recupera a altura da categoria.
 int GetCategoryHeight() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A altura da categoria.
 
 ### <a name="remarks"></a>Comentários
 
-A altura da categoria inclui a altura da guia de categoria.
+A altura da categoria inclui a altura da guia Categoria.
 
-## <a name="cmfcribbonbargetcategoryindex"></a><a name="getcategoryindex"></a>CMFCRibbonBar::GetCategoryIndex
+## <a name="cmfcribbonbargetcategoryindex"></a><a name="getcategoryindex"></a> CMFCRibbonBar:: GetCategoryIndex
 
-Recupera o índice da categoria de fita especificada.
+Recupera o índice da categoria da faixa de faixas especificada.
 
 ```
 int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Pcategory*<br/>
-[em] Ponteiro para uma categoria de fita.
+*pCategory*<br/>
+no Ponteiro para uma categoria da faixa de faixas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O índice baseado em zero de uma categoria de fita especificada por *pCategory*; ou -1 se a categoria de fita não for encontrada.
+O índice de base zero de uma categoria da faixa de bits especificada por *pCategory*; ou-1 se a categoria da faixa de bits não for encontrada.
 
-## <a name="cmfcribbonbargetcontextname"></a><a name="getcontextname"></a>CMFCRibbonBar::GetContextName
+## <a name="cmfcribbonbargetcontextname"></a><a name="getcontextname"></a> CMFCRibbonBar:: getcontextname
 
-Recupera o nome da legenda da categoria de contexto especificada por um ID de contexto.
+Recupera o nome da legenda da categoria de contexto especificada por uma ID de contexto.
 
 ```
 BOOL GetContextName(
@@ -987,35 +987,35 @@ BOOL GetContextName(
     CString& strName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiContextID*<br/>
-[em] Um ID de contexto de categoria de fita.
+no Uma ID de contexto de categoria da faixa de faixas.
 
 *strName*<br/>
-[fora] O nome de uma legenda de categoria de contexto.
+fora O nome de uma legenda de categoria de contexto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADEIRO se o método foi bem sucedido; caso contrário, FALSE se *uiContextID* era zero ou a legenda da categoria de contexto não foi encontrada.
+TRUE se o método foi bem-sucedido; caso contrário, FALSE se *uiContextID* fosse zero ou a legenda da categoria de contexto não foi encontrada.
 
-## <a name="cmfcribbonbargetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonBar::GetD roppedDown
+## <a name="cmfcribbonbargetdroppeddown"></a><a name="getdroppeddown"></a> CMFCRibbonBar:: GetDroppedDown
 
-Recupera o elemento de fita que está atualmente descartado.
+Recupera o elemento Ribbon que está atualmente desconectado.
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O elemento de fita que está atualmente caiu; ou NULL se nenhum elemento de fita for atualmente descartado.
+O elemento da faixa de faixas que está atualmente desconectado; ou NULL se nenhum elemento de faixa de fita estiver atualmente desconectado.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbargetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonbar::getelementsbyid
+## <a name="cmfcribbonbargetelementsbyid"></a><a name="getelementsbyid"></a> CMFCRibbonBar:: GetElementsByID
 
-Recupera uma matriz de ponteiros para todos os elementos de fita que têm um ID de comando específico.
+Recupera uma matriz de ponteiros para todos os elementos da faixa de faixas que têm uma ID de comando específica.
 
 ```cpp
 void GetElementsByID(
@@ -1023,268 +1023,268 @@ void GetElementsByID(
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdID*<br/>
-[em] ID de comando de um elemento de fita.
+no ID de comando de um elemento da faixa de faixas.
 
-*arBotões*<br/>
-[fora] Uma matriz de ponteiros para elementos de fita.
+*arButtons*<br/>
+fora Uma matriz de ponteiros para elementos da faixa de uma.
 
 ### <a name="remarks"></a>Comentários
 
-Vários elementos de fita podem ter o mesmo ID de comando porque alguns elementos de fita podem ser copiados para a barra de ferramentas de acesso rápido.
+Vários elementos da faixa de faixas podem ter a mesma ID de comando porque alguns elementos da faixa de faixas podem ser copiados para a barra de ferramentas de acesso rápido.
 
-## <a name="cmfcribbonbargethideflags"></a><a name="gethideflags"></a>CMFCRibbonBar::GetHideFlags
+## <a name="cmfcribbonbargethideflags"></a><a name="gethideflags"></a> CMFCRibbonBar:: GetHideFlags
 
-Recupera as bandeiras que indicam quanto da barra de fita é visível.
+Recupera os sinalizadores que indicam a quantidade visível da barra de faixa de faixas.
 
 ```
 DWORD GetHideFlags() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-As bandeiras que indicam quanto da barra de fita é visível.
+Os sinalizadores que indicam o quanto da barra da faixa de faixas está visível.
 
 ### <a name="remarks"></a>Comentários
 
 A tabela a seguir lista a possível combinação de sinalizadores para o valor de retorno:
 
-|||
+|Sinalizador|Descrição|
 |-|-|
-|AFX_RIBBONBAR_HIDE_ELEMENTS|A barra de fita é minimizada verticalmente e apenas as guias de categoria, o botão principal e a barra de ferramentas de acesso rápido são visíveis.  |
-|AFX_RIBBONBAR_HIDE_ALL|A largura da barra de fita é menor que a largura mínima e está completamente escondida.  |
+|AFX_RIBBONBAR_HIDE_ELEMENTS|A barra da faixa de faixas é minimizada verticalmente e apenas as guias categoria, botão principal e barra de ferramentas de acesso rápido são visíveis.  |
+|AFX_RIBBONBAR_HIDE_ALL|A largura da barra da faixa de faixas é menor que a largura mínima e é completamente ocultada.  |
 
-## <a name="cmfcribbonbargetitemidslist"></a><a name="getitemidslist"></a>CMFCRibbonBar::GetItemIDsList
+## <a name="cmfcribbonbargetitemidslist"></a><a name="getitemidslist"></a> CMFCRibbonBar:: GetItemIDsList
 
-Recupera os IDs de comando para a coleção especificada de elementos de fita na barra de fita.
+Recupera as IDs de comando para a coleção especificada de elementos da faixa de faixas na barra da faixa de uma.
 
 ```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*LstItems*<br/>
-[fora] A lista de IDs de comando para elementos de fita que estão contidos na barra de fita.
+*lstItems*<br/>
+fora A lista de IDs de comando para elementos da faixa de faixas que estão contidos na barra da faixa de faixas.
 
 *bHiddenOnly*<br/>
-[em] VERDADEIRO para excluir elementos de fita que são exibidos; FALSE para incluir todos os elementos da fita na barra de fita.
+no TRUE para excluir elementos da faixa de faixas que são exibidos; FALSE para incluir todos os elementos da faixa de faixas na barra da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbargetkeyboardnavigationlevel"></a><a name="getkeyboardnavigationlevel"></a>CMFCRibbonBar::GetKeyboardNavigationLevel
+## <a name="cmfcribbonbargetkeyboardnavigationlevel"></a><a name="getkeyboardnavigationlevel"></a> CMFCRibbonBar:: GetKeyboardNavigationLevel
 
-Recupera o nível de navegação atual à medida que o usuário pressiona as teclas contidas na barra de fita.
+Recupera o nível de navegação atual, pois o usuário pressiona as teclas de atalho que estão contidas na barra da faixa de etapas.
 
 ```
 int GetKeyboardNavigationLevel() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O nível de navegação atual à medida que o usuário pressiona as teclas contidas na barra de fita. A tabela a seguir lista possíveis valores de retorno:
+O nível de navegação atual como o usuário pressiona as teclas de atalho que estão contidas na barra da faixa de etapas. A tabela a seguir lista os possíveis valores de retorno:
 
-|||
+|Valor|Descrição|
 |-|-|
-|-1|As teclas não são exibidas.|
-|0|As teclas são exibidas.|
-|1|O usuário pressionou uma dica de chave exibida.|
+|-1|As keytips não são exibidas.|
+|0|As keytips são exibidas.|
+|1|O usuário pressionou um KeyTip exibido.|
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbargetkeyboardnavlevelcurrent"></a><a name="getkeyboardnavlevelcurrent"></a>CMFCRibbonBar::GetKeyboardNavLevelCurrent
+## <a name="cmfcribbonbargetkeyboardnavlevelcurrent"></a><a name="getkeyboardnavlevelcurrent"></a> CMFCRibbonBar:: GetKeyboardNavLevelCurrent
 
-Recupera o objeto de navegação atual do teclado na barra de fita.
+Recupera o objeto de navegação do teclado atual na barra da faixa de faixas.
 
 ```
 CObject* GetKeyboardNavLevelCurrent() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O objeto de navegação do teclado atual na barra de fita; caso contrário, NULL se nenhum objeto exibir atualmente dicas de teclas.
+O objeto de navegação do teclado atual na barra da faixa de faixas; caso contrário, NULL se nenhum objeto exibir o keytips no momento.
 
 ### <a name="remarks"></a>Comentários
 
-O objeto que está exibindo dicas de teclas no momento é o objeto de navegação do teclado atual.
+O objeto que está exibindo keytips no momento é o atual objeto de navegação do teclado.
 
-## <a name="cmfcribbonbargetkeyboardnavlevelparent"></a><a name="getkeyboardnavlevelparent"></a>CMFCRibbonBar::GetKeyboardNavLevelParent
+## <a name="cmfcribbonbargetkeyboardnavlevelparent"></a><a name="getkeyboardnavlevelparent"></a> CMFCRibbonBar:: GetKeyboardNavLevelParent
 
-Recupera o objeto de navegação do teclado pai na barra de fita.
+Recupera o objeto de navegação do teclado pai na barra da faixa de faixas.
 
 ```
 CObject* GetKeyboardNavLevelParent() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O objeto de navegação do teclado pai na barra de fita; caso contrário, NULL.
+O objeto de navegação do teclado pai na barra da faixa de faixas; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Quando o usuário pressiona uma tecla na barra de fita, o objeto de navegação do teclado atual torna-se o objeto de navegação do teclado pai.
+Quando o usuário pressiona um KeyTip na barra da faixa de faixas, o objeto de navegação do teclado atual torna-se o objeto de navegação do teclado pai.
 
-## <a name="cmfcribbonbargetmaincategory"></a><a name="getmaincategory"></a>CMFCRibbonBar::GetMainCategory
+## <a name="cmfcribbonbargetmaincategory"></a><a name="getmaincategory"></a> CMFCRibbonBar:: GetMainCategory
 
-Recupera um ponteiro para a categoria de fita principal.
+Recupera um ponteiro para a categoria da faixa de faixas principal.
 
 ```
 CMFCRibbonCategory* GetMainCategory() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para a categoria de fita principal.
+Um ponteiro para a categoria da faixa de faixas principal.
 
 ### <a name="remarks"></a>Comentários
 
-A categoria de fita principal contém o painel principal da fita.
+A categoria da faixa de faixas principal contém o painel principal da faixa de faixas.
 
-## <a name="cmfcribbonbargetqatcommandslocation"></a><a name="getqatcommandslocation"></a>CMFCRibbonBar::GetQATCommandsLocalização
+## <a name="cmfcribbonbargetqatcommandslocation"></a><a name="getqatcommandslocation"></a> CMFCRibbonBar:: GetQATCommandsLocation
 
-Recupera o retângulo de exibição para a seção de comandos da barra de ferramentas de acesso rápido.
+Recupera o retângulo de exibição da seção comandos da barra de ferramentas de acesso rápido.
 
 ```
 CRect GetQATCommandsLocation() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O retângulo de exibição para a seção de comandos da barra de ferramentas de acesso rápido.
+O retângulo de exibição da seção comandos da barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
 
-A seção de comandos do retângulo do display não inclui o botão de personalização.
+A seção comandos do retângulo de exibição não inclui o botão de personalização.
 
-## <a name="cmfcribbonbargetqatdroppeddown"></a><a name="getqatdroppeddown"></a>CMFCRibbonBar::GetQATD roppedDown
+## <a name="cmfcribbonbargetqatdroppeddown"></a><a name="getqatdroppeddown"></a> CMFCRibbonBar:: GetQATDroppedDown
 
-Recupera um ponteiro para o elemento de fita na barra de ferramentas de acesso rápido que tem seu menu pop-up derrubado.
+Recupera um ponteiro para o elemento Ribbon na barra de ferramentas de acesso rápido que tem seu menu pop-up Descartado.
 
 ```
 CMFCRibbonBaseElement* GetQATDroppedDown();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita na barra de ferramentas de acesso rápido que tem seu menu pop-up derrubado.
+Um ponteiro para o elemento Ribbon na barra de ferramentas de acesso rápido que tem seu menu pop-up Descartado.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbargetquickaccesscommands"></a><a name="getquickaccesscommands"></a>CMFCRibbonBar::GetQuickAccessCommands
+## <a name="cmfcribbonbargetquickaccesscommands"></a><a name="getquickaccesscommands"></a> CMFCRibbonBar:: GetQuickAccessCommands
 
-Recupera uma lista de IDs de comando para os elementos da fita na barra de ferramentas de acesso rápido.
+Recupera uma lista de IDs de comando para os elementos da faixa de guia na barra de ferramentas de acesso rápido.
 
 ```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lstCommands*<br/>
-[fora] A lista de IDs de comando para os elementos da fita na barra de ferramentas de acesso rápido.
+fora A lista de IDs de comando para os elementos da faixa de faixas na barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
 
-A lista não contém elementos de fita que são separadores de controle.
+A lista não contém elementos da faixa de faixas que são separadores de controle.
 
-## <a name="cmfcribbonbargetquickaccesstoolbarlocation"></a><a name="getquickaccesstoolbarlocation"></a>CMFCRibbonBar::GetQuickAccessToolbarLocalização
+## <a name="cmfcribbonbargetquickaccesstoolbarlocation"></a><a name="getquickaccesstoolbarlocation"></a> CMFCRibbonBar:: GetQuickAccessToolbarLocation
 
-Recupera o retângulo do display para a barra de ferramentas de acesso rápido.
+Recupera o retângulo de exibição para a barra de ferramentas de acesso rápido.
 
 ```
 CRect GetQuickAccessToolbarLocation() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O retângulo do display para a barra de ferramentas de acesso rápido.
+O retângulo de exibição da barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbargettabtrancateratio"></a><a name="gettabtrancateratio"></a>CMFCRibbonBar::GetTabTrancateRatio
+## <a name="cmfcribbonbargettabtrancateratio"></a><a name="gettabtrancateratio"></a> CMFCRibbonBar:: GetTabTrancateRatio
 
-Recupera a redução percentual de tamanho na largura de exibição das guias de categoria.
+Recupera a redução de tamanho percentual na largura de exibição das guias de categoria.
 
 ```
 int GetTabTrancateRatio() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A redução percentual de tamanho na largura de exibição das guias da categoria.
+A redução de tamanho percentual na largura de exibição das guias de categoria.
 
 ### <a name="remarks"></a>Comentários
 
-As guias de categoria são reduzidas em largura quando não há largura suficiente na barra de fita.
+As guias de categoria são reduzidas em largura quando não há largura suficiente na barra da faixa de bits.
 
-## <a name="cmfcribbonbargettooltipfixedwidthlargeimage"></a><a name="gettooltipfixedwidthlargeimage"></a>CMFCRibbonBar::GettooltipFixedWidthLargeImage
+## <a name="cmfcribbonbargettooltipfixedwidthlargeimage"></a><a name="gettooltipfixedwidthlargeimage"></a> CMFCRibbonBar:: GetTooltipFixedWidthLargeImage
 
-Recupera o grande tamanho da largura da ponta da ferramenta para a barra de fita.
+Recupera o tamanho grande da largura da dica de ferramenta para a barra da faixa de ferramentas.
 
 ```
 int GetTooltipFixedWidthLargeImage() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O grande tamanho da largura da ponta de ferramenta em pixels.
+O tamanho grande da largura da dica de ferramenta em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Se o tamanho grande da largura da ponta da ferramenta for 0, a largura varia.
+Se o tamanho grande da largura da dica de ferramenta for 0, a largura varia.
 
-## <a name="cmfcribbonbargettooltipfixedwidthregular"></a><a name="gettooltipfixedwidthregular"></a>CMFCRibbonBar::GettooltipFixedWidthRegular
+## <a name="cmfcribbonbargettooltipfixedwidthregular"></a><a name="gettooltipfixedwidthregular"></a> CMFCRibbonBar:: GetTooltipFixedWidthRegular
 
-Recupera o tamanho regular da largura da ponta da ferramenta para a barra de fita.
+Recupera o tamanho regular da largura da dica de ferramenta para a barra da faixa de ferramentas.
 
 ```
 int GetTooltipFixedWidthRegular() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O tamanho regular da largura da ponta de ferramenta em pixels.
+O tamanho regular da largura da dica de ferramenta em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Se o tamanho regular da largura da ponta da ferramenta for 0, a largura varia.
+Se o tamanho regular da largura da dica de ferramenta for 0, a largura varia.
 
-## <a name="cmfcribbonbargetvisiblecategorycount"></a><a name="getvisiblecategorycount"></a>CMFCRibbonbar::GetVisibleCategoryCount
+## <a name="cmfcribbonbargetvisiblecategorycount"></a><a name="getvisiblecategorycount"></a> CMFCRibbonBar:: GetVisibleCategoryCount
 
-Recupera o número de categorias visíveis na barra de fita.
+Recupera o número de categorias visíveis na barra da faixa de faixas.
 
 ```
 int GetVisibleCategoryCount() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O número de categorias visíveis na barra de fita.
+O número de categorias visíveis na barra da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarhideallcontextcategories"></a><a name="hideallcontextcategories"></a>CMFCRibbonBar::HideAllContextCategories
+## <a name="cmfcribbonbarhideallcontextcategories"></a><a name="hideallcontextcategories"></a> CMFCRibbonBar:: HideAllContextCategories
 
-Esconde todas as categorias de contexto na barra de fita.
+Oculta todas as categorias de contexto na barra da faixa de faixas.
 
 ```
 BOOL HideAllContextCategories();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se pelo menos uma categoria de contexto estivesse oculta; caso contrário, FALSE.
+TRUE se pelo menos uma categoria de contexto estava oculta; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 Se uma categoria de contexto estiver ativa, a categoria ativa será redefinida para a primeira categoria visível na lista de categorias.
 
-## <a name="cmfcribbonbarhidekeytips"></a><a name="hidekeytips"></a>CMFCRibbonBar::HidekeyTips
+## <a name="cmfcribbonbarhidekeytips"></a><a name="hidekeytips"></a> CMFCRibbonBar:: HideKeyTips
 
-Esconde todas as dicas de tecla na barra de fita.
+Oculta todas as keytips na barra da faixa de faixas.
 
 ```cpp
 void HideKeyTips();
@@ -1292,9 +1292,9 @@ void HideKeyTips();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarhittest"></a><a name="hittest"></a>CMFCRibbonBar::HitTest
+## <a name="cmfcribbonbarhittest"></a><a name="hittest"></a> CMFCRibbonBar:: HitTest
 
-Recupera um ponteiro para o elemento de fita especificado pela localização do ponto.
+Recupera um ponteiro para o elemento Ribbon especificado pelo local do ponto.
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(
@@ -1303,66 +1303,66 @@ virtual CMFCRibbonBaseElement* HitTest(
     BOOL bCheckPanelCaption= FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Ponto*<br/>
-[em] Localização do ponto nas coordenadas da barra de fita.
+*empresas*<br/>
+no Local do ponto nas coordenadas da barra da faixa de faixas.
 
 *bCheckActiveCategory*<br/>
-[em] TRUE para pesquisar a categoria ativa; FALSO para não pesquisar na categoria ativa.
+no TRUE para pesquisar a categoria ativa; FALSE não pesquisa a categoria ativa.
 
 *bCheckPanelCaption*<br/>
-[em] TRUE para testar a legenda do painel de fita com o ponto localizado nele; FALSO não testar a legenda do painel de fita com o ponto localizado nele. Para obter mais informações, consulte a seção Comentários.
+no TRUE para testar a legenda do painel da faixa de faixas com o ponto localizado nele; FALSE não testar a legenda do painel da faixa de das faixas com o ponto localizado nele. Consulte a seção Comentários para obter mais informações.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o elemento de fita localizado no ponto especificado; caso contrário, NULL se o ponto não estiver localizado em um elemento de fita.
+Um ponteiro para o elemento Ribbon localizado no ponto especificado; caso contrário, NULL se o ponto não estiver localizado em um elemento Ribbon.
 
 ### <a name="remarks"></a>Comentários
 
-A legenda do painel de fita com o ponto localizado nele não é testada a menos que o parâmetro *bCheckActiveCategory* seja VERDADEIRO.
+A legenda do painel da faixa de opção com o ponto localizado em ele não será testada, a menos que o parâmetro *bCheckActiveCategory* seja true.
 
-## <a name="cmfcribbonbariskeytipenabled"></a><a name="iskeytipenabled"></a>CMFCRibbonBar::IsKeyTipEnabled
+## <a name="cmfcribbonbariskeytipenabled"></a><a name="iskeytipenabled"></a> CMFCRibbonBar:: IsKeyTipEnabled
 
-Indica se o recurso keytips está ativado.
+Indica se o recurso keytips está habilitado.
 
 ```
 BOOL IsKeyTipEnabled() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o recurso keytips estiver ativado; caso contrário, FALSO.
+TRUE se o recurso keytips estiver habilitado; caso contrário, FALSE.
 
-## <a name="cmfcribbonbarismainribbonbar"></a><a name="ismainribbonbar"></a>CMFCRibbonbar::Ismainribbonbar
+## <a name="cmfcribbonbarismainribbonbar"></a><a name="ismainribbonbar"></a> CMFCRibbonBar:: IsMainRibbonBar
 
-Indica se a barra de fita é a barra de fita principal.
+Indica se a barra de faixa de faixas é a barra de faixa de faixas primária.
 
 ```
 virtual BOOL IsMainRibbonBar() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna TRUE. Anular este método para indicar se a barra de fita é a barra de fita principal.
+Por padrão, esse método sempre retorna TRUE. Substitua esse método para indicar se a barra de faixa de faixas é a barra de faixa de forma primária.
 
-## <a name="cmfcribbonbarisprintpreviewenabled"></a><a name="isprintpreviewenabled"></a>CMFCRibbonBar::IsPrintPreviewAtivado
+## <a name="cmfcribbonbarisprintpreviewenabled"></a><a name="isprintpreviewenabled"></a> CMFCRibbonBar:: IsPrintPreviewEnabled
 
-Indica se o recurso **Visualização de impressão** está habilitado.
+Indica se o recurso de **visualização de impressão** está habilitado.
 
 ```
 BOOL IsPrintPreviewEnabled() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o recurso **Devisualização de impressão** estiver habilitado; caso contrário, FALSO.
+TRUE se o recurso de **visualização de impressão** estiver habilitado; caso contrário, FALSE.
 
-## <a name="cmfcribbonbarisqatempty"></a><a name="isqatempty"></a>CMFCRibbonBar::IsQATEmpty
+## <a name="cmfcribbonbarisqatempty"></a><a name="isqatempty"></a> CMFCRibbonBar:: IsQATEmpty
 
 Indica se a barra de ferramentas de acesso rápido contém botões de comando.
 
@@ -1370,58 +1370,58 @@ Indica se a barra de ferramentas de acesso rápido contém botões de comando.
 BOOL IsQATEmpty() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se a barra de ferramentas de acesso rápido contiver botões de comando; caso contrário, FALSO.
+TRUE se a barra de ferramentas de acesso rápido contiver botões de comando; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarisquickaccesstoolbarontop"></a><a name="isquickaccesstoolbarontop"></a>CMFCRibbonBar::IsQuickAccessToolbarOnTop
+## <a name="cmfcribbonbarisquickaccesstoolbarontop"></a><a name="isquickaccesstoolbarontop"></a> CMFCRibbonBar:: IsQuickAccessToolbarOnTop
 
-Indica se a barra de ferramentas de acesso rápido está localizada sobre ou sob a barra de fita.
+Indica se a barra de ferramentas de acesso rápido está localizada acima ou abaixo da barra da faixa de faixas.
 
 ```
 BOOL IsQuickAccessToolbarOnTop() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a barra de ferramentas de acesso rápido estiver localizada sobre a barra de fita; FALSO se a barra de ferramentas de acesso rápido estiver localizada sob a barra de fita.
+TRUE se a barra de ferramentas de acesso rápido estiver localizada na barra da faixa de faixas; FALSE se a barra de ferramentas de acesso rápido estiver localizada na barra da faixa de faixas.
 
-## <a name="cmfcribbonbarisreplaceframecaption"></a><a name="isreplaceframecaption"></a>CMFCRibbonbar::IsreplaceFramecaption
+## <a name="cmfcribbonbarisreplaceframecaption"></a><a name="isreplaceframecaption"></a> CMFCRibbonBar:: IsReplaceFrameCaption
 
-Indica se a barra de fita substitui ou está sob a legenda da janela principal do quadro.
+Indica se a barra da faixa de faixas substitui ou está sob a legenda da janela do quadro principal.
 
 ```
 BOOL IsReplaceFrameCaption() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a barra de fita substituir a legenda da janela principal do quadro; FALSE se a barra de fita estiver sob a legenda da janela principal do quadro.
+TRUE se a barra de faixa de faixas substituir a legenda da janela do quadro principal; FALSE se a barra da faixa de das faixas estiver sob a legenda da janela do quadro principal.
 
-## <a name="cmfcribbonbarisshowgroupborder"></a><a name="isshowgroupborder"></a>CMFCRibbonBar::IsShowGroupBorder
+## <a name="cmfcribbonbarisshowgroupborder"></a><a name="isshowgroupborder"></a> CMFCRibbonBar:: IsShowGroupBorder
 
-Indica se os grupos de botões localizados na barra de fita exibem uma borda de grupo.
+Indica se os grupos de botões localizados na barra da faixa de faixas exibem uma borda do grupo.
 
 ```
 virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pGroup*<br/>
-[em] Este parâmetro não é usado.
+no Esse parâmetro não é usado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Sempre retorna FALSO.
+Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, este método sempre retorna FALSO. Substituir este método para indicar se os grupos de botões localizados na barra de fita exibem uma borda de grupo.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para indicar se os grupos de botões localizados na barra da faixa de faixas exibem uma borda de grupo.
 
-## <a name="cmfcribbonbaristooltipdescrenabled"></a><a name="istooltipdescrenabled"></a>CMFCRibbonBar::IsToolTipDescrAtivado
+## <a name="cmfcribbonbaristooltipdescrenabled"></a><a name="istooltipdescrenabled"></a> CMFCRibbonBar:: IsToolTipDescrEnabled
 
 Indica se as descrições da dica de ferramenta estão habilitadas.
 
@@ -1429,43 +1429,43 @@ Indica se as descrições da dica de ferramenta estão habilitadas.
 BOOL IsToolTipDescrEnabled() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se as descrições da dica de ferramenta estiverem habilitadas; FALSO se as descrições da dica da ferramenta estiverem desativadas.
+TRUE se as descrições da dica de ferramenta estiverem habilitadas; FALSE se as descrições da dica de ferramenta estiverem desabilitadas.
 
 ### <a name="remarks"></a>Comentários
 
-As descrições da dica de ferramenta são textos descritivos adicionais exibidos com o texto da dica de ferramenta.
+Descrições de dica de ferramenta são texto descritivo adicional exibido com o texto da dica de ferramenta.
 
-## <a name="cmfcribbonbaristooltipenabled"></a><a name="istooltipenabled"></a>CMFCRibbonBar::IsToolTipEnabled
+## <a name="cmfcribbonbaristooltipenabled"></a><a name="istooltipenabled"></a> CMFCRibbonBar:: IsToolTipEnabled
 
-Indica se as pontas das ferramentas estão habilitadas ou desativadas para a barra de fita.
+Indica se as dicas de ferramenta estão habilitadas ou desabilitadas para a barra da faixa de ferramentas.
 
 ```
 BOOL IsToolTipEnabled() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se as pontas das ferramentas estiverem habilitadas; FALSE se as pontas das ferramentas estiverem desativadas.
+TRUE se as dicas de ferramenta estiverem habilitadas; FALSE se as dicas de ferramentas estiverem desabilitadas.
 
-## <a name="cmfcribbonbaristransparentcaption"></a><a name="istransparentcaption"></a>CMFCRibbonBar::isTransparentcaption
+## <a name="cmfcribbonbaristransparentcaption"></a><a name="istransparentcaption"></a> CMFCRibbonBar:: IsTransparentCaption
 
-Indica se o display está definido para o esquema de cores do Windows Aero.
+Indica se a exibição está definida para o esquema de cores Aero do Windows.
 
 ```
 BOOL IsTransparentCaption() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o esquema de cores for Windows Aero; caso contrário, FALSO.
+TRUE se o esquema de cores for Windows Aero; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaronclickbutton"></a><a name="onclickbutton"></a>CMFCRibbonbar::OnClickButton
+## <a name="cmfcribbonbaronclickbutton"></a><a name="onclickbutton"></a> CMFCRibbonBar:: OnClickButton
 
-Este método é mantido para compatibilidade retrógrada com aplicações existentes e não deve ser usado para novos desenvolvimentos.
+Esse método é mantido para compatibilidade com versões anteriores com aplicativos existentes e não deve ser usado para um novo desenvolvimento.
 
 ```
 virtual void OnClickButton(
@@ -1473,17 +1473,17 @@ virtual void OnClickButton(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Pbutton*<br/>
-[em] Ponteiro para o botão que foi clicado.
+*pButton*<br/>
+no Ponteiro para o botão que foi clicado.
 
-*Ponto*<br/>
-[em] Este parâmetro não é usado.
+*empresas*<br/>
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaroneditcontextmenu"></a><a name="oneditcontextmenu"></a>CMFCRibbonBar::OnEditContextmenu
+## <a name="cmfcribbonbaroneditcontextmenu"></a><a name="oneditcontextmenu"></a> CMFCRibbonBar:: OnEditContextMenu
 
 ```
 virtual void OnEditContextMenu(
@@ -1491,49 +1491,49 @@ virtual void OnEditContextMenu(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-[em] *pEdit*<br/>
-[em] *ponto*<br/>
+no *pEdit*<br/>
+no *ponto*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaronrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonbar::OnRTLChanged
+## <a name="cmfcribbonbaronrtlchanged"></a><a name="onrtlchanged"></a> CMFCRibbonBar:: OnRTLChanged
 
-Chamado pelo framework quando o layout muda de direção.
+Chamado pelo Framework quando o layout muda de direção.
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsRTL*<br/>
-[em] TRUE se o layout for da direita para a esquerda; FALSO se o layout estiver da esquerda para a direita.
+no TRUE se o layout for da direita para a esquerda; FALSE se o layout for da esquerda para a direita.
 
 ### <a name="remarks"></a>Comentários
 
-Este método ajusta o layout de todos os controles na barra de fita para a nova direção do layout.
+Esse método ajusta o layout de todos os controles na barra da faixa de opção para a nova direção do layout.
 
-## <a name="cmfcribbonbaronsetaccdata"></a><a name="onsetaccdata"></a>CMFCRibbonbar::OnSetAccdata
+## <a name="cmfcribbonbaronsetaccdata"></a><a name="onsetaccdata"></a> CMFCRibbonBar:: OnSetAccData
 
-Este método é interno do Framework e não se destina a ser chamado a partir do código do usuário.
+Esse método é interno à estrutura e não se destina a ser chamado a partir do código do usuário.
 
 ```
 BOOL OnSetAccData(long lVal);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*lVal* longo O índice do objeto acessível.
+Long *lVal* o índice do objeto acessível.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-S_OK se for bem sucedido; caso contrário, FALSO ou S_FALSE.
+S_OK se for bem-sucedido; caso contrário, FALSE ou S_FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaronshowribboncontextmenu"></a><a name="onshowribboncontextmenu"></a>CMFCRibbonBar::OnShowRibbonContextmenu
+## <a name="cmfcribbonbaronshowribboncontextmenu"></a><a name="onshowribboncontextmenu"></a> CMFCRibbonBar:: OnShowRibbonContextMenu
 
 ```
 virtual BOOL OnShowRibbonContextMenu(
@@ -1543,18 +1543,18 @@ virtual BOOL OnShowRibbonContextMenu(
     CMFCRibbonBaseElement* pHit);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-[em] *pWnd*<br/>
-[em] *x*<br/>
-[em] *y*<br/>
-[em] *pHit*<br/>
+no *pWnd*<br/>
+no *x*<br/>
+no *s*<br/>
+no *pHit*<br/>
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaronshowribbonqatmenu"></a><a name="onshowribbonqatmenu"></a>CMFCRibbonbar::OnShowRibbonQATMenu
+## <a name="cmfcribbonbaronshowribbonqatmenu"></a><a name="onshowribbonqatmenu"></a> CMFCRibbonBar:: OnShowRibbonQATMenu
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1564,20 +1564,20 @@ virtual BOOL OnShowRibbonQATMenu(
     CMFCRibbonBaseElement* pHit);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-[em] *pWnd*<br/>
-[em] *x*<br/>
-[em] *y*<br/>
-[em] *pHit*<br/>
+no *pWnd*<br/>
+no *x*<br/>
+no *s*<br/>
+no *pHit*<br/>
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaronsyskeydown"></a><a name="onsyskeydown"></a>CMFCRibbonBar::OnSysKeyDown
+## <a name="cmfcribbonbaronsyskeydown"></a><a name="onsyskeydown"></a> CMFCRibbonBar:: OnSysKeyDown
 
-Chamado pelo framework quando o usuário pressiona a tecla F10 ou mantém a tecla ALT e, em seguida, pressiona outra tecla.
+Chamado pelo Framework quando o usuário pressiona a tecla F10 ou mantém a tecla ALT pressionada e, em seguida, pressiona outra tecla.
 
 ```
 BOOL OnSysKeyDown(
@@ -1586,26 +1586,26 @@ BOOL OnSysKeyDown(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrameWnd*<br/>
-[em] Ponteiro para a janela principal da moldura principal da barra de fita.
+no Ponteiro para a janela do quadro principal pai da barra da faixa de quadros.
 
 *wParam*<br/>
-[em] Código de chave virtual da chave sendo pressionada.
+no Código de chave virtual da tecla que está sendo pressionada.
 
 *lParam*<br/>
-[em] O estado do teclado sinaliza quando a tecla foi pressionada.
+no Sinalizadores de estado do teclado quando a tecla foi pressionada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o evento de digitação foi processado; caso contrário, FALSO.
+TRUE se o evento de pressionamento de tecla tiver sido processado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbaronsyskeyup"></a><a name="onsyskeyup"></a>CMFCRibbonBar::OnSysKeyUp
+## <a name="cmfcribbonbaronsyskeyup"></a><a name="onsyskeyup"></a> CMFCRibbonBar:: OnSysKeyUp
 
-Chamada pela estrutura quando o usuário libera a tecla F10, a tecla ALT ou uma tecla que foi pressionada quando a tecla ALT foi mantida para baixo.
+Chamado pelo Framework quando o usuário libera a tecla F10, a tecla ALT ou uma tecla que foi pressionada quando a tecla ALT era mantida pressionada.
 
 ```
 BOOL OnSysKeyUp(
@@ -1614,26 +1614,26 @@ BOOL OnSysKeyUp(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrameWnd*<br/>
-[em] Ponteiro para a janela principal da moldura principal da barra de fita.
+no Ponteiro para a janela do quadro principal pai da barra da faixa de quadros.
 
 *wParam*<br/>
-[em] Código-chave virtual da chave sendo lançada.
+no Código de chave virtual da chave que está sendo liberada.
 
 *lParam*<br/>
-[em] Este parâmetro não é usado.
+no Esse parâmetro não é usado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se o evento de digitação foi processado; caso contrário, FALSO.
+TRUE se o evento de pressionamento de tecla tiver sido processado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarpoptooltip"></a><a name="poptooltip"></a>CMFCRibbonBar::PopTooltip
+## <a name="cmfcribbonbarpoptooltip"></a><a name="poptooltip"></a> CMFCRibbonBar::P opTooltip
 
-Remove uma dica de ferramenta da vista.
+Remove uma dica de ferramenta da exibição.
 
 ```cpp
 void PopTooltip();
@@ -1641,28 +1641,28 @@ void PopTooltip();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCRibbonBar::PreTranslateMessage
+## <a name="cmfcribbonbarpretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCRibbonBar::P reTranslateMessage
 
-Determina se a mensagem especificada é processada pela barra de fita.
+Determina se a mensagem especificada é processada pela barra da faixa de faixas.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
-[em] Ponteiro para uma mensagem.
+no Ponteiro para uma mensagem.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a mensagem foi processada pela barra de fita; caso contrário, FALSO.
+TRUE se a mensagem tiver sido processada pela barra da faixa de faixas; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarrecalclayout"></a><a name="recalclayout"></a>CMFCRibbonBar::RecalcLayout
+## <a name="cmfcribbonbarrecalclayout"></a><a name="recalclayout"></a> CMFCRibbonBar:: RecalcLayout
 
-Ajusta o layout de todos os controles na barra de fita.
+Ajusta o layout de todos os controles na barra da faixa de opção.
 
 ```
 virtual void RecalcLayout();
@@ -1670,11 +1670,11 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Comentários
 
-Após o ajuste do layout, o visor da barra de fita é atualizado.
+Após o ajuste de layout, a exibição da barra da faixa de opção é atualizada.
 
-## <a name="cmfcribbonbarremoveallcategories"></a><a name="removeallcategories"></a>CMFCRibbonBar::RemoveAllCategories
+## <a name="cmfcribbonbarremoveallcategories"></a><a name="removeallcategories"></a> CMFCRibbonBar:: RemoveAllCategories
 
-Exclui todas as categorias de fita da barra de fita.
+Exclui todas as categorias de faixa de faixas da barra da faixa de faixas.
 
 ```cpp
 void RemoveAllCategories();
@@ -1682,11 +1682,11 @@ void RemoveAllCategories();
 
 ### <a name="remarks"></a>Comentários
 
-Este método exclui todas as categorias de fita da memória e da lista de categorias.
+Esse método exclui todas as categorias da faixa de da memória e da lista Categoria.
 
-## <a name="cmfcribbonbarremoveallfromtabs"></a><a name="removeallfromtabs"></a>CMFCRibbonBar::RemoveAllFromTabs
+## <a name="cmfcribbonbarremoveallfromtabs"></a><a name="removeallfromtabs"></a> CMFCRibbonBar:: RemoveAllFromTabs
 
-Remove todos os elementos da fita da área da guia.
+Remove todos os elementos da faixa de faixas da área da guia.
 
 ```cpp
 void RemoveAllFromTabs();
@@ -1694,32 +1694,32 @@ void RemoveAllFromTabs();
 
 ### <a name="remarks"></a>Comentários
 
-Use esta função se quiser remover todos os elementos adicionados à área da guia usando o método [CMFCRibbonBar::AddToTabs.](#addtotabs)
+Use essa função se desejar remover todos os elementos que você adicionou à área da guia usando o método [CMFCRibbonBar:: AddToTabs](#addtotabs) .
 
-## <a name="cmfcribbonbarremovecategory"></a><a name="removecategory"></a>CMFCRibbonBar::RemoveCategory
+## <a name="cmfcribbonbarremovecategory"></a><a name="removecategory"></a> CMFCRibbonBar:: RemoveCategory
 
-Exclui a categoria de fita especificada da barra de fita.
+Exclui a categoria de faixa de faixas especificada da barra da faixa de faixas.
 
 ```
 BOOL RemoveCategory(int nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
-[em] O índice baseado em zero de uma categoria na lista de categorias de fita que está contida na barra de fita.
+no O índice de base zero de uma categoria na lista de categorias da faixa de bits contida na barra da faixa de faixas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se a categoria de fita especificada foi excluída; caso contrário, FALSO.
+TRUE se a categoria da faixa de faixas especificada foi excluída; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-A categoria de fita especificada é excluída da memória e da lista de categorias.
+A categoria da faixa de faixas especificada é excluída da memória e da lista de categorias.
 
-## <a name="cmfcribbonbarsetactivecategory"></a><a name="setactivecategory"></a>CMFCRibbonBar::setActiveCategory
+## <a name="cmfcribbonbarsetactivecategory"></a><a name="setactivecategory"></a> CMFCRibbonBar:: SetActiveCategory
 
-Define a categoria de fita especificada como a categoria ativa.
+Define a categoria da faixa de faixas especificada como a categoria ativa.
 
 ```
 BOOL SetActiveCategory(
@@ -1727,42 +1727,42 @@ BOOL SetActiveCategory(
     BOOL bForceRestore= FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Pcategory*<br/>
-[em] Uma categoria de fita que está contida na barra de fita.
+*pCategory*<br/>
+no Uma categoria da faixa de faixas que está contida na barra da faixa de faixas.
 
 *bForceRestore*<br/>
-[em] TRUE para maximizar a barra de fita se for minimizada; FALSE para exibir a categoria ativa em uma janela pop-up se a barra de fita for minimizada.
+no TRUE para maximizar a barra de faixa de faixas se ela for minimizada; FALSE para exibir a categoria ativa em uma janela pop-up se a barra da faixa de faixas for minimizada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se a categoria especificada foi definida como a categoria ativa; caso contrário, FALSO.
+TRUE se a categoria especificada tiver sido definida como a categoria ativa; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-A categoria de fita principal não pode ser a categoria ativa.
+A categoria da faixa de faixas principal não pode ser a categoria ativa.
 
 Se a categoria especificada por *pCategory* não for exibida, ela não poderá ser definida como a categoria ativa.
 
-## <a name="cmfcribbonbarsetactivemdichild"></a><a name="setactivemdichild"></a>CMFCRibbonBar::setActiveMDIChild
+## <a name="cmfcribbonbarsetactivemdichild"></a><a name="setactivemdichild"></a> CMFCRibbonBar:: SetActiveMDIChild
 
-Associa os botões do sistema na barra de fita que pertencem a uma janela de criança de interface de vários documentos (MDI) à janela de criança MDI especificada.
+Associa os botões do sistema na barra da faixa de faixas que pertencem a uma janela filho MDI (interface de vários documentos) à janela filho MDI especificada.
 
 ```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Pwnd*<br/>
-[em] Ponteiro para uma janela de criança MDI.
+*pWnd*<br/>
+no Ponteiro para uma janela filho MDI.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarsetapplicationbutton"></a><a name="setapplicationbutton"></a>CMFCRibbonBar::SetApplicationButton
+## <a name="cmfcribbonbarsetapplicationbutton"></a><a name="setapplicationbutton"></a> CMFCRibbonBar:: SetApplicationButton
 
-Atribui um botão de fita de aplicação à barra de fita.
+Atribui um botão de faixa de de aplicativo à barra da faixa de faixas.
 
 ```cpp
 void SetApplicationButton(
@@ -1770,27 +1770,27 @@ void SetApplicationButton(
     CSize sizeButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Pbutton*<br/>
-[em] Um ponteiro para o botão da fita de aplicação.
+*pButton*<br/>
+no Um ponteiro para o botão da faixa de de do aplicativo.
 
-*Sizebutton*<br/>
-[em] O tamanho do botão da fita de aplicação.
+*sizeButton*<br/>
+no O tamanho do botão da faixa de de um aplicativo.
 
 ### <a name="remarks"></a>Comentários
 
-O botão de fita de aplicação é um grande botão arredondado localizado no canto superior esquerdo do controle Ribbon.
+O botão de faixa de forma do aplicativo é um grande botão arredondado localizado no canto superior esquerdo do controle da faixa de forma.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir `SetApplicationButton` demonstra como `CMFCRibbonBar` usar o método na classe.
+O exemplo a seguir demonstra como usar o `SetApplicationButton` método na `CMFCRibbonBar` classe.
 
 [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]
 
-## <a name="cmfcribbonbarsetelementkeys"></a><a name="setelementkeys"></a>CMFCRibbonBar::setElementElementKeys
+## <a name="cmfcribbonbarsetelementkeys"></a><a name="setelementkeys"></a> CMFCRibbonBar:: SetElementKeys
 
-Define as dicas de tecla para todos os elementos de fita que possuem o ID de comando especificado.
+Define as KeyTips para todos os elementos da faixa de faixas que têm a ID de comando especificada.
 
 ```
 BOOL SetElementKeys(
@@ -1799,28 +1799,28 @@ BOOL SetElementKeys(
     LPCTSTR lpszMenuKeys= NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdID*<br/>
-[em] O id de comando de um elemento de fita.
+no A ID de comando de um elemento da faixa de faixas.
 
 *lpszKeys*<br/>
-[em] A dica chave.
+no O KeyTip.
 
 *lpszMenuKeys*<br/>
-[em] A dica do menu.
+no O menu KeyTip.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se as pontas-de-chave de pelo menos um elemento de fita forem definidas; caso contrário, FALSO.
+TRUE se as dicas de atalho de pelo menos um elemento da faixa de etapas forem definidas; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-A dica de chave do menu opcional é para elementos de fita com um botão split que abre um menu pop-up.
+O menu opcional KeyTip é para elementos da faixa de faixas com um botão de divisão que abre um menu pop-up.
 
-## <a name="cmfcribbonbarsetkeyboardnavigationlevel"></a><a name="setkeyboardnavigationlevel"></a>CMFCRibbonBar::setKeyboardNavigationLevel
+## <a name="cmfcribbonbarsetkeyboardnavigationlevel"></a><a name="setkeyboardnavigationlevel"></a> CMFCRibbonBar:: SetKeyboardNavigationLevel
 
-Define o nível de navegação do teclado à medida que o usuário pressiona as teclas contidas na barra de fita.
+Define o nível de navegação do teclado, pois o usuário pressiona as teclas de atalho que estão contidas na barra da faixa de etapas.
 
 ```cpp
 void SetKeyboardNavigationLevel(
@@ -1828,21 +1828,21 @@ void SetKeyboardNavigationLevel(
     BOOL bSetFocus = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pLevel*<br/>
-[em] Ponteiro para o objeto de navegação do teclado atual.
+no Ponteiro para o objeto de navegação do teclado atual.
 
 *bSetFocus*<br/>
-[em] TRUE para definir o foco do teclado na barra de fita.
+no TRUE para definir o foco do teclado para a barra da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-A navegação do teclado da barra de fita começa quando o usuário pressiona a tecla ALT ou F10. O usuário seleciona o próximo nível de navegação pressionando uma tecla na barra de fita. O usuário pode retornar ao nível de navegação anterior pressionando a tecla de escape.
+A navegação por teclado da barra da faixa de faixas é iniciada quando o usuário pressiona a tecla ALT ou F10. O usuário seleciona o próximo nível de navegação pressionando um KeyTip na barra da faixa de faixas. O usuário pode retornar ao nível de navegação anterior pressionando a tecla escape.
 
-## <a name="cmfcribbonbarsetmaximizemode"></a><a name="setmaximizemode"></a>CMFCRibbonBar::SetMaximizeMode
+## <a name="cmfcribbonbarsetmaximizemode"></a><a name="setmaximizemode"></a> CMFCRibbonBar:: setmaximmode
 
-Ajusta a barra de fita quando o tamanho da janela de uma janela de criança de interface de vários documentos (MDI) entra ou deixa o estado maximizado.
+Ajusta a barra da faixa de faixas quando o tamanho da janela de uma janela filho MDI (interface de vários documentos) entra ou sai do estado maximizado.
 
 ```cpp
 void SetMaximizeMode(
@@ -1850,21 +1850,21 @@ void SetMaximizeMode(
     CWnd* pWnd = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bMax*<br/>
-[em] TRUE para exibir os botões do sistema para uma janela de criança MDI na barra de fita; FALSO para remover os botões do sistema para uma janela de criança MDI da barra de fita.
+no TRUE para exibir os botões do sistema para uma janela filho MDI na barra da faixa de faixas; FALSE para remover os botões do sistema de uma janela filho MDI da barra da faixa de faixas.
 
-*Pwnd*<br/>
-[em] Ponteiro para a janela do quadro principal para a barra de fita.
+*pWnd*<br/>
+no Ponteiro para a janela do quadro principal da barra da faixa de quadros.
 
 ### <a name="remarks"></a>Comentários
 
-A barra de fita exibe os botões do sistema para uma janela de criança MDI na linha de guias quando uma janela de criança MDI é maximizada.
+A barra de faixa de faixas exibe botões do sistema para uma janela filho MDI na linha da guia quando uma janela filho MDI é maximizada.
 
-## <a name="cmfcribbonbarsetquickaccesscommands"></a><a name="setquickaccesscommands"></a>CMFCRibbonBar::SetQuickAccessCommands
+## <a name="cmfcribbonbarsetquickaccesscommands"></a><a name="setquickaccesscommands"></a> CMFCRibbonBar:: SetQuickAccessCommands
 
-Adiciona um ou mais elementos de fita à barra de ferramentas de acesso rápido.
+Adiciona um ou mais elementos da faixa de faixas à barra de ferramentas de acesso rápido.
 
 ```cpp
 void SetQuickAccessCommands(
@@ -1872,32 +1872,32 @@ void SetQuickAccessCommands(
     BOOL bRecalcLayout=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lstCommands*<br/>
-[em] A lista de comandos a serem colocados na barra de ferramentas de acesso rápido.
+no A lista de comandos a serem colocados na barra de ferramentas de acesso rápido.
 
 *bRecalcLayout*<br/>
-[em] TRUE se quiser redesenhar a fita depois de adicionar os elementos da fita; FALSO de outra forma.
+no TRUE se desejar redesenhar a faixa de faixas depois de adicionar os elementos da faixa de faixas; Caso contrário, FALSE.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir `SetQuickAccessCommands` demonstra como `CMFCRibbonBar` usar o método na classe.
+O exemplo a seguir demonstra como usar o `SetQuickAccessCommands` método na `CMFCRibbonBar` classe.
 
 [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]
 
-## <a name="cmfcribbonbarsetquickaccessdefaultstate"></a><a name="setquickaccessdefaultstate"></a>CMFCRibbonBar::setQuickAccessDefaultState
+## <a name="cmfcribbonbarsetquickaccessdefaultstate"></a><a name="setquickaccessdefaultstate"></a> CMFCRibbonBar:: SetQuickAccessDefaultState
 
-Define a barra de ferramentas de acesso rápido ao estado padrão.
+Define a barra de ferramentas de acesso rápido para o estado padrão.
 
 ```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *state*<br/>
-[em] O estado padrão da barra de ferramentas de acesso rápido.
+no O estado padrão da barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1905,26 +1905,26 @@ O estado da barra de ferramentas de acesso rápido inclui uma lista de comandos 
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir `SetQuickAccessDefaultState` demonstra como `CMFCRibbonBar` usar o método na classe.
+O exemplo a seguir demonstra como usar o `SetQuickAccessDefaultState` método na `CMFCRibbonBar` classe.
 
 [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]
 
-## <a name="cmfcribbonbarsetquickaccesstoolbarontop"></a><a name="setquickaccesstoolbarontop"></a>CMFCRibbonBar::SetQuickAccessToolbarOnTop
+## <a name="cmfcribbonbarsetquickaccesstoolbarontop"></a><a name="setquickaccesstoolbarontop"></a> CMFCRibbonBar:: SetQuickAccessToolbarOnTop
 
-Posiciona a barra de ferramentas de acesso rápido acima ou abaixo da barra de fita.
+Posiciona a barra de ferramentas de acesso rápido acima ou abaixo da barra da faixa de opções.
 
 ```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Bontop*<br/>
-[em] FIEL para posicionar a barra de ferramentas de acesso rápido acima da barra de fita; FALSO para posicionar a barra de ferramentas de acesso rápido abaixo da barra de fita.
+*bOnTop*<br/>
+no TRUE para posicionar a barra de ferramentas de acesso rápido acima da barra da faixa de opções; FALSE para posicionar a barra de ferramentas de acesso rápido abaixo da barra da faixa de faixas.
 
-## <a name="cmfcribbonbarsettooltipfixedwidth"></a><a name="settooltipfixedwidth"></a>CMFCRibbonBar::SettooltipSetWidth
+## <a name="cmfcribbonbarsettooltipfixedwidth"></a><a name="settooltipfixedwidth"></a> CMFCRibbonBar:: SetTooltipFixedWidth
 
-Define os tamanhos regulares e grandes das larguras fixas da ponta da ferramenta para a barra de fita.
+Define os tamanhos regulares e grandes das larguras fixas da dica de ferramenta para a barra da faixa de ferramentas.
 
 ```cpp
 void SetTooltipFixedWidth(
@@ -1932,21 +1932,21 @@ void SetTooltipFixedWidth(
     int nWidthLargeImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nWidthRegular*<br/>
-[em] A largura, em pixels, de uma ponta de ferramenta de tamanho fixo regular.
+no A largura, em pixels, de uma dica de ferramenta de tamanho fixo regular.
 
-*nLarguragrandeImagem*<br/>
-[em] A largura, em pixels, de uma grande ponta de ferramenta de tamanho fixo.
+*nWidthLargeImage*<br/>
+no A largura, em pixels, de uma dica de ferramenta de tamanho fixo grande.
 
 ### <a name="remarks"></a>Comentários
 
-Definir um parâmetro para 0 faz com que a largura correspondente varie.
+Definir um parâmetro como 0 faz com que a largura correspondente varie.
 
-## <a name="cmfcribbonbarshowcategory"></a><a name="showcategory"></a>CMFCRibbonBar::ShowCategory
+## <a name="cmfcribbonbarshowcategory"></a><a name="showcategory"></a> CMFCRibbonBar:: imcategory
 
-Mostra ou oculta a categoria de fita especificada.
+Mostra ou oculta a categoria da faixa de faixas especificada.
 
 ```cpp
 void ShowCategory(
@@ -1954,17 +1954,17 @@ void ShowCategory(
     BOOL bShow=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
-[em] O índice da categoria fita.
+no O índice da categoria da faixa de faixas.
 
-*Bshow*<br/>
-[em] Se TRUE, mostre a categoria fita; caso contrário, esconda a categoria de fita.
+*bShow*<br/>
+no Se for TRUE, mostrará a categoria da faixa de faixas; caso contrário, oculte a categoria da faixa de faixas.
 
-## <a name="cmfcribbonbarshowcontextcategories"></a><a name="showcontextcategories"></a>CMFCRibbonBar::ShowContextCategorias
+## <a name="cmfcribbonbarshowcontextcategories"></a><a name="showcontextcategories"></a> CMFCRibbonBar:: ShowContextCategories
 
-Mostra ou oculta as categorias de contexto que possuem o ID especificado.
+Mostra ou oculta as categorias de contexto que têm a ID especificada.
 
 ```cpp
 void ShowContextCategories(
@@ -1972,17 +1972,17 @@ void ShowContextCategories(
     BOOL bShow=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiContextID*<br/>
-[em] O ID da categoria de contexto.
+no A ID da categoria de contexto.
 
-*Bshow*<br/>
-[em] Se TRUE, mostre as categorias que possuem o ID especificado; caso contrário, ocultar as categorias que possuem o ID especificado.
+*bShow*<br/>
+no Se for TRUE, mostrará as categorias que têm a ID especificada; caso contrário, oculte as categorias que têm a ID especificada.
 
-## <a name="cmfcribbonbarshowkeytips"></a><a name="showkeytips"></a>CMFCRibbonBar::Dicas de showkey
+## <a name="cmfcribbonbarshowkeytips"></a><a name="showkeytips"></a> CMFCRibbonBar:: ShowKeyTips
 
-Mostra as pontas-chave de cada elemento de fita na barra de fita.
+Mostra as dicas de barra para cada elemento da faixa de da faixa.
 
 ```cpp
 void ShowKeyTips();
@@ -1990,9 +1990,9 @@ void ShowKeyTips();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbartogglemimimizestate"></a><a name="togglemimimizestate"></a>CMFCRibbonBar::ToggleMimimizeState
+## <a name="cmfcribbonbartogglemimimizestate"></a><a name="togglemimimizestate"></a> CMFCRibbonBar:: ToggleMimimizeState
 
-Alterna a barra de fita entre os estados minimizados e maximizados.
+Alterna a barra da faixa de opção entre os Estados minimizado e maximizado.
 
 ```cpp
 void ToggleMimimizeState();
@@ -2002,60 +2002,60 @@ void ToggleMimimizeState();
 
 O erro de ortografia no nome do método é um problema conhecido.
 
-No estado minimizado, o controle da fita está oculto e apenas as guias são exibidas. Quando o usuário clica em uma guia, o controle de fita é exibido como uma janela pop-up. A janela fecha quando o usuário clica ou executa um comando.
+No estado minimizado, o controle da faixa de faixas fica oculto e apenas as guias são exibidas. Quando o usuário clica em uma guia, o controle da faixa de faixas é exibido como uma janela pop-up. A janela é fechada quando o usuário clica em fora ou executa um comando.
 
-## <a name="cmfcribbonbartranslatechar"></a><a name="translatechar"></a>CMFCRibbonbar::TranslateChar
+## <a name="cmfcribbonbartranslatechar"></a><a name="translatechar"></a> CMFCRibbonBar:: TranslateChar
 
-Determina se o código de caractere de tecla especificado é processado pela barra de fita.
+Determina se o código de caractere de pressionamento de tecla especificado é processado pela barra da faixa de faixas.
 
 ```
 virtual BOOL TranslateChar(UINT nChar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Nchar*<br/>
-[em] Um código de caractere de tecla do usuário.
+*nChar*<br/>
+no Um código de caractere de pressionamento de tecla.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADEIRO se o código de caractere foi processado pela barra de fita; caso contrário, FALSO.
+TRUE se o código de caractere tiver sido processado pela barra da faixa de faixas; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O recurso keytips permite que os usuários naveguem na barra de fita usando o teclado.
+O recurso keytips permite que os usuários naveguem pela barra de faixa de faixas usando o teclado.
 
-## <a name="cmfcribbonbargetfocused"></a><a name="getfocused"></a>CMFCRibbonBar::GetFocus
+## <a name="cmfcribbonbargetfocused"></a><a name="getfocused"></a> CMFCRibbonBar:: GetFocused
 
-Retorna um elemento focado.
+Retorna um elemento focalizado.
 
 ```
 virtual CMFCRibbonBaseElement* GetFocused();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para um elemento focado ou NULL.
+Um ponteiro para um elemento focalizado ou nulo.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbariswindows7look"></a><a name="iswindows7look"></a>CMFCRibbonBar::IsWindows7Look
+## <a name="cmfcribbonbariswindows7look"></a><a name="iswindows7look"></a> CMFCRibbonBar:: IsWindows7Look
 
-Indica se a fita tem aparência do Windows 7 (pequeno botão de aplicação retangular).
+Indica se a faixa de Ribbon tem a aparência do Windows 7 (botão pequeno do aplicativo retangular).
 
 ```
 BOOL IsWindows7Look() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se a fita tiver visual do Windows 7; caso contrário, FALSO.
+TRUE se a faixa de Ribbon tiver a aparência do Windows 7; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarloadfromresource"></a><a name="loadfromresource"></a>CMFCRibbonBar::LoadFromResource
+## <a name="cmfcribbonbarloadfromresource"></a><a name="loadfromresource"></a> CMFCRibbonBar:: LoadFromResource
 
-Sobrecarregado. Carrega uma barra de fita dos recursos do aplicativo.
+Sobrecarregado. Carrega uma barra de faixa de das recursos do aplicativo.
 
 ```
 virtual BOOL LoadFromResource(
@@ -2069,67 +2069,67 @@ virtual BOOL LoadFromResource(
     HINSTANCE hInstance = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiXMLResID*<br/>
-Especifica o ID de recurso da seqüência XML com informações da Barra de Fita.
+Especifica a ID de recurso da cadeia de caracteres XML com informações da barra de faixa de faixas.
 
 *lpszResType*<br/>
 Especifica o tipo do recurso localizado em *uiXMLResID*.
 
 *hInstance*<br/>
-Manuseie o módulo cujo arquivo executável contenha o recurso. Se *hInstance* for NULL, o sistema carregará o recurso do módulo usado para criar o processo atual.
+Identificador para o módulo cujo arquivo executável contém o recurso. Se *HINSTANCE* for NULL, o sistema carregará o recurso do módulo que foi usado para criar o processo atual.
 
 *lpszXMLResID*<br/>
-Especifica o ID de recurso (em forma de string) com informações da Barra de Fita.
+Especifica a ID do recurso (na forma de cadeia de caracteres) com informações da barra de faixa
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-TRUE se a carga for bem sucedida; caso contrário, FALSO.
+TRUE se o carregamento for executado com sucesso; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarsavetoxmlbuffer"></a><a name="savetoxmlbuffer"></a>CMFCRibbonBar::SaveToXMLBuffer
+## <a name="cmfcribbonbarsavetoxmlbuffer"></a><a name="savetoxmlbuffer"></a> CMFCRibbonBar:: SaveToXMLBuffer
 
-Salva a barra de fita em um buffer.
+Salva a barra da faixa de faixas em um buffer.
 
 ```
 UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppBuffer*<br/>
-Quando esta função retorna, *ppBuffer* aponta para um buffer alocado por este método e contém informações da Barra de Fita no formato XML.
+Quando essa função retorna, *ppBuffer* aponta para um buffer alocado por esse método e contém informações da barra de faixa de faixas no formato XML.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se bem sucedido; caso contrário, FALSO.
+Verdadeiro se for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarsavetoxmlfile"></a><a name="savetoxmlfile"></a>CMFCRibbonBar::SaveToXMLFile
+## <a name="cmfcribbonbarsavetoxmlfile"></a><a name="savetoxmlfile"></a> CMFCRibbonBar:: SaveToXMLFile
 
-Salva a barra de fita em um arquivo XML.
+Salva a barra da faixa de faixas em um arquivo XML.
 
 ```
 BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFilePath*<br/>
 Especifica o arquivo de saída.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-VERDADE se bem sucedido; caso contrário, FALSO.
+Verdadeiro se for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cmfcribbonbarsetwindows7look"></a><a name="setwindows7look"></a>CMFCRibbonBar::setWindows7Look
+## <a name="cmfcribbonbarsetwindows7look"></a><a name="setwindows7look"></a> CMFCRibbonBar:: SetWindows7Look
 
-Ativa ou desativa o visual do Windows 7 (pequeno botão de aplicativo retangular) para a Fita.
+Habilita ou desabilita a aparência do Windows 7 (botão pequeno do aplicativo retangular) para a faixa de faixas.
 
 ```cpp
 void SetWindows7Look(
@@ -2137,22 +2137,22 @@ void SetWindows7Look(
     BOOL bRecalc = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bWindows7Look*<br/>
-TRUE define o visual do Windows 7; FALSO de outra forma.
+TRUE define a aparência do Windows 7; Caso contrário, FALSE.
 
 *bRecalc*<br/>
-TRUE recalcula o layout da fita; FALSO de outra forma.
+TRUE recalcula o layout da faixa de opção; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Confira também
 
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Gráfico de hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CPane](../../mfc/reference/cpane-class.md)<br/>
 [Classe CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [Classe CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[Passo a passo: Atualizando o aplicativo de rabisco scribble do MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[Walkthrough: atualizando o aplicativo de rabisco do MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

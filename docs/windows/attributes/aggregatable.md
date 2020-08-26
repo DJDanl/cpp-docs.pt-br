@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224481"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836368"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,11 +28,11 @@ Indica que a classe oferece suporte à agregação.
 *value*<br/>
 Adicional Um parâmetro para indicar quando o objeto COM pode ser agregado:
 
-- `never`O objeto COM não pode ser agregado.
+- `never` O objeto COM não pode ser agregado.
 
-- `allowed`O objeto COM pode ser criado diretamente ou pode ser agregado. Esse é o padrão.
+- `allowed` O objeto COM pode ser criado diretamente ou pode ser agregado. Esse é o padrão.
 
-- `always`O objeto COM não pode ser criado diretamente e só pode ser agregado. Ao chamar `CoCreateInstance` esse objeto, você deve especificar a interface do objeto de agregação `IUnknown` (o controle `IUnknown` ).
+- `always` O objeto COM não pode ser criado diretamente e só pode ser agregado. Ao chamar `CoCreateInstance` esse objeto, você deve especificar a interface do objeto de agregação `IUnknown` (o controle `IUnknown` ).
 
 ## <a name="remarks"></a>Comentários
 
@@ -44,7 +44,7 @@ Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou
 
 Se esse atributo for usado em um projeto que usa ATL, o comportamento do atributo será alterado. Além do comportamento descrito anteriormente, o atributo também adiciona uma das seguintes macros à classe de destino:
 
-|Valor de parâmetro|Macro inserida|
+|Valor do parâmetro|Macro inserida|
 |---------------------|--------------------|
 |`Never`|[DECLARE_NOT_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|
 |`Allowed`|[DECLARE_POLY_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|
@@ -68,9 +68,7 @@ class CMyClass {};
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|

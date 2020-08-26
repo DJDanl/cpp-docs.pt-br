@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: 3092111236afe1e1360a2814c3091ab0de4ff6ea
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 136c651ec92c78339c2f701804a6a409523dd30f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213847"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839992"
 ---
 # <a name="progid"></a>progid
 
@@ -36,7 +36,7 @@ O `progid` atributo C++ permite especificar o ProgID para um objeto com. Um Prog
 
 Se um bloco de atributos que `progid` o usa também não usar `uuid` , o compilador verificará o registro para ver se `uuid` existe um para o especificado `progid` . Se `progid` não for especificado, a versão (e o nome da coclasse, se criar uma coclass) serão usadas para gerar um `progid` .
 
-`progid`implica o `coclass` atributo, ou seja, se você especificar `progid` , será a mesma coisa que especificar os `coclass` atributos e `progid` .
+`progid` implica o `coclass` atributo, ou seja, se você especificar `progid` , será a mesma coisa que especificar os `coclass` atributos e `progid` .
 
 O `progid` atributo faz com que uma classe seja automaticamente registrada sob o nome especificado. O arquivo. idl gerado não exibirá o `progid` valor.
 
@@ -48,9 +48,7 @@ Consulte o exemplo de [coclass](coclass.md) para obter um exemplo de uso de `pro
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|`class`, `struct`|
 |**Repetível**|Não|

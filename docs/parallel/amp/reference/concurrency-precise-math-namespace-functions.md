@@ -90,66 +90,160 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ee6ab2313fbdc288ebba1b3fdacf192b7b578eb6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 770946769c60f3dd689f5cd2defd6d4c6f6ed6b5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321842"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836914"
 ---
 # <a name="concurrencyprecise_math-namespace-functions"></a>Funções do namespace Concurrency::precise_math
 
-||||
-|-|-|-|
-|[Acos](#acos)|[acosf](#acosf)|[acosh](#acosh)|
-|[acoshf](#acoshf)|[Asin](#asin)|[asinf](#asinf)|
-|[asinh](#asinh)|[asinhf](#asinhf)|[Atan](#atan)|
-|[atan2](#atan2)|[atan2f](#atan2f)|[atanf](#atanf)|
-|[atanh](#atanh)|[atanhf](#atanhf)|[cbrt](#cbrt)|
-|[cbrtf](#cbrtf)|[ceil](#ceil)|[ceilf](#ceilf)|
-|[copiar sinal](#copysign)|[copysignf](#copysignf)|[Porque](#cos)|
-|[cosf](#cosf)|[cosh](#cosh)|[coshf](#coshf)|
-|[cospi](#cospi)|[cospif](#cospif)|[erf](#erf)|
-|[erfc](#erfc)|[erfcf](#erfcf)|[erfcinv](#erfcinv)|
-|[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv](#erfinv)|
-|[erfinvf](#erfinvf)|[Exp](#exp)|[exp10](#exp10)|
-|[exp10f](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|
-|[expf](#expf)|[expm1](#expm1)|[expm1f](#expm1f)|
-|[fabs](#fabs)|[fabsf](#fabsf)|[Chão](#floor)|
-|[fdim](#fdim)|[fdimf](#fdimf)||
-|[floorf](#floorf)|[fma](#fma)|[fmaf](#fmaf)|
-[fmax](#fmax)|[fmaxf](#fmaxf)||
-|[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|
-|[fmodf](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|
-|[frexpf](#frexpf)|[hiponta](#hypot)|[hipotf](#hypotf)|
-|[ilogb](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|
-|[isinf](#isinf)|[Isnan](#isnan)|[isnormal](#isnormal)|
-|[ldexp](#ldexp)|[Ldexpf](#ldexpf)|[lgamma](#lgamma)|
-|[lgammaf](#lgammaf)|[Log](#log)|[log10](#log10)|
-|[log10f](#log10f)|[log1p](#log1p)|[log1pf](#log1pf)|
-|[log2](#log2)|[log2f](#log2f)|[logb](#logb)|
-|[logbf](#logbf)|[logf](#logf)|[modf](#modf)|
-|[modff](#modff)|[nan](#nan)|[nanf](#nanf)|
-|[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|
-|[nextafterf](#nextafterf)|[Phi](#phi)|[phif](#phif)|
-|[pow](#pow)|[powf](#powf)|[probit](#probit)|
-|[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|
-|[remainder](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|
-|[remquof](#remquof)|[Rodada](#round)|[roundf](#roundf)|
-|[rsqrt](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb](#scalb)|
-|[scalbf](#scalbf)|[scalbn](#scalbn)|[scalbnf](#scalbnf)|
-|[signbit](#signbit)|[signbitf](#signbitf)|[Pecado](#sin)|
-|[sincos](#sincos)|[sincosf](#sincosf)|[sinf](#sinf)|
-|[sinh](#sinh)|[sinhf](#sinhf)|[sinpi](#sinpi)|
-|[sinpif](#sinpif)|[Sqrt](#sqrt)|[sqrtf](#sqrtf)|
-|[Tan](#tan)|[tanf](#tanf)|[Tanh](#tanh)|
-|[tanhf](#tanhf)|[tanpi](#tanpi)|[tanpif](#tanpif)|
-|[tgamma](#tgamma)|[tgammaf](#tgammaf)|[Trunc](#trunc)|
-|[truncf](#truncf)|
+:::row:::
+   :::column span="":::
+      [`acos`](#acos)\
+      [`acosf`](#acosf)\
+      [`acosh`](#acosh)\
+      [`acoshf`](#acoshf)\
+      [`asin`](#asin)\
+      [`asinf`](#asinf)\
+      [`asinh`](#asinh)\
+      [`asinhf`](#asinhf)\
+      [`atan`](#atan)\
+      [`atan2`](#atan2)\
+      [`atan2f`](#atan2f)\
+      [`atanf`](#atanf)\
+      [`atanh`](#atanh)\
+      [`atanhf`](#atanhf)\
+      [`cbrt`](#cbrt)\
+      [`cbrtf`](#cbrtf)\
+      [`ceil`](#ceil)\
+      [`ceilf`](#ceilf)\
+      [`copysign`](#copysign)\
+      [`copysignf`](#copysignf)\
+      [`cos`](#cos)\
+      [`cosf`](#cosf)\
+      [`cosh`](#cosh)\
+      [`coshf`](#coshf)\
+      [`cospi`](#cospi)\
+      [`cospif`](#cospif)\
+      [`erf`](#erf)\
+      [`erfc`](#erfc)\
+      [`erfcf`](#erfcf)\
+      [`erfcinv`](#erfcinv)\
+      [`erfcinvf`](#erfcinvf)\
+      [`erff`](#erff)\
+      [`erfinv`](#erfinv)
+   :::column-end:::
+   :::column span="":::
+      [`erfinvf`](#erfinvf)\
+      [`exp`](#exp)\
+      [`exp10`](#exp10)\
+      [`exp10f`](#exp10f)\
+      [`exp2`](#exp2)\
+      [`exp2f`](#exp2f)\
+      [`expf`](#expf)\
+      [`expm1`](#expm1)\
+      [`expm1f`](#expm1f)\
+      [`fabs`](#fabs)\
+      [`fabsf`](#fabsf)\
+      [`floor`](#floor)\
+      [`fdim`](#fdim)\
+      [`fdimf`](#fdimf)|\
+      [`floorf`](#floorf)\
+      [`fma`](#fma)\
+      [`fmaf`](#fmaf)\
+      [`fmax`](#fmax)\
+      [`fmaxf`](#fmaxf)\
+      [`fmin`](#fmin)\
+      [`fminf`](#fminf)\
+      [`fmod`](#fmod)\
+      [`fmodf`](#fmodf)\
+      [`fpclassify`](#fpclassify)\
+      [`frexp`](#frexp)\
+      [`frexpf`](#frexpf)\
+      [`hypot`](#hypot)\
+      [`hypotf`](#hypotf)\
+      [`ilogb`](#ilogb)\
+      [`ilogbf`](#ilogbf)\
+      [`isfinite`](#isfinite)\
+      [`isinf`](#isinf)\
+      [`isnan`](#isnan)
+   :::column-end:::
+   :::column span="":::
+      [`isnormal`](#isnormal)\
+      [`ldexp`](#ldexp)\
+      [`ldexpf`](#ldexpf)\
+      [`lgamma`](#lgamma)\
+      [`lgammaf`](#lgammaf)\
+      [`log`](#log)\
+      [`log10`](#log10)\
+      [`log10f`](#log10f)\
+      [`log1p`](#log1p)\
+      [`log1pf`](#log1pf)\
+      [`log2`](#log2)\
+      [`log2f`](#log2f)\
+      [`logb`](#logb)\
+      [`logbf`](#logbf)\
+      [`logf`](#logf)\
+      [`modf`](#modf)\
+      [`modff`](#modff)\
+      [`nan`](#nan)\
+      [`nanf`](#nanf)\
+      [`nearbyint`](#nearbyint)\
+      [`nearbyintf`](#nearbyintf)\
+      [`nextafter`](#nextafter)\
+      [`nextafterf`](#nextafterf)\
+      [`phi`](#phi)\
+      [`phif`](#phif)\
+      [`pow`](#pow)\
+      [`powf`](#powf)\
+      [`probit`](#probit)\
+      [`probitf`](#probitf)\
+      [`rcbrt`](#rcbrt)\
+      [`rcbrtf`](#rcbrtf)\
+      [`remainder`](#remainder)\
+      [`remainderf`](#remainderf)
+   :::column-end:::
+   :::column span="":::
+      [`remquo`](#remquo)\
+      [`remquof`](#remquof)\
+      [`round`](#round)\
+      [`roundf`](#roundf)\
+      [`rsqrt`](#rsqrt)\
+      [`rsqrtf`](#rsqrtf)\
+      [`scalb`](#scalb)\
+      [`scalbf`](#scalbf)\
+      [`scalbn`](#scalbn)\
+      [`scalbnf`](#scalbnf)\
+      [`signbit`](#signbit)\
+      [`signbitf`](#signbitf)\
+      [`sin`](#sin)\
+      [`sincos`](#sincos)\
+      [`sincosf`](#sincosf)\
+      [`sinf`](#sinf)\
+      [`sinh`](#sinh)\
+      [`sinhf`](#sinhf)\
+      [`sinpi`](#sinpi)\
+      [`sinpif`](#sinpif)\
+      [`sqrt`](#sqrt)\
+      [`sqrtf`](#sqrtf)\
+      [`tan`](#tan)\
+      [`tanf`](#tanf)\
+      [`tanh`](#tanh)\
+      [`tanhf`](#tanhf)\
+      [`tanpi`](#tanpi)\
+      [`tanpif`](#tanpif)\
+      [`tgamma`](#tgamma)\
+      [`tgammaf`](#tgammaf)\
+      [`trunc`](#trunc)\
+      [`truncf`](#truncf)
+   :::column-end:::
+:::row-end:::
 
-## <a name="acos"></a><a name="acos"></a>Acos
+## <a name="acos"></a><a name="acos"></a> acos
 
-Calcula o arccosine do argumento
+Calcula o arco cosseno do argumento
 
 ```cpp
 inline float acos(float _X) restrict(amp);
@@ -157,33 +251,33 @@ inline float acos(float _X) restrict(amp);
 inline double acos(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor arccosine do argumento
+Retorna o valor do arco cosseno do argumento
 
-## <a name="acosf"></a><a name="acosf"></a>acosf
+## <a name="acosf"></a><a name="acosf"></a> acosf
 
-Calcula o arccosine do argumento
+Calcula o arco cosseno do argumento
 
 ```cpp
 inline float acosf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor arccosine do argumento
+Retorna o valor do arco cosseno do argumento
 
-## <a name="acosh"></a><a name="acosh"></a>acosh
+## <a name="acosh"></a><a name="acosh"></a> acosh
 
 Calcula o cosseno hiperbólico inverso do argumento
 
@@ -193,16 +287,16 @@ inline float acosh(float _X) restrict(amp);
 inline double acosh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor do cosseno hiperbólico inverso do argumento
+Retorna o valor cosseno hiperbólico inverso do argumento
 
-## <a name="acoshf"></a><a name="acoshf"></a>acoshf
+## <a name="acoshf"></a><a name="acoshf"></a> acoshf
 
 Calcula o cosseno hiperbólico inverso do argumento
 
@@ -210,18 +304,18 @@ Calcula o cosseno hiperbólico inverso do argumento
 inline float acoshf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor do cosseno hiperbólico inverso do argumento
+Retorna o valor cosseno hiperbólico inverso do argumento
 
-## <a name="asin"></a><a name="asin"></a>Asin
+## <a name="asin"></a><a name="asin"></a> ASIN
 
-Calcula o arco do argumento
+Calcula o arco seno do argumento
 
 ```cpp
 inline float asin(float _X) restrict(amp);
@@ -229,33 +323,33 @@ inline float asin(float _X) restrict(amp);
 inline double asin(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor arcsine do argumento
+Retorna o valor do arco seno do argumento
 
-## <a name="asinf"></a><a name="asinf"></a>Asinf
+## <a name="asinf"></a><a name="asinf"></a> asinf
 
-Calcula o arco do argumento
+Calcula o arco seno do argumento
 
 ```cpp
 inline float asinf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor arcsine do argumento
+Retorna o valor do arco seno do argumento
 
-## <a name="asinh"></a><a name="asinh"></a>asinh
+## <a name="asinh"></a><a name="asinh"></a> asinh
 
 Calcula o seno hiperbólico inverso do argumento
 
@@ -265,16 +359,16 @@ inline float asinh(float _X) restrict(amp);
 inline double asinh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor do seno hiperbólico inverso do argumento
+Retorna o valor seno hiperbólico inverso do argumento
 
-## <a name="asinhf"></a><a name="asinhf"></a>asinhf
+## <a name="asinhf"></a><a name="asinhf"></a> asinhf
 
 Calcula o seno hiperbólico inverso do argumento
 
@@ -282,16 +376,16 @@ Calcula o seno hiperbólico inverso do argumento
 inline float asinhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor do seno hiperbólico inverso do argumento
+Retorna o valor seno hiperbólico inverso do argumento
 
-## <a name="atan"></a><a name="atan"></a>Atan
+## <a name="atan"></a><a name="atan"></a> ATAN
 
 Calcula o tangente do arco do argumento
 
@@ -301,18 +395,18 @@ inline float atan(float _X) restrict(amp);
 inline double atan(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor arctangente do argumento
+Retorna o valor do arco tangente do argumento
 
-## <a name="atan2"></a><a name="atan2"></a>atan2
+## <a name="atan2"></a><a name="atan2"></a> atan2
 
-Calcula o arcotangent de _Y/_X
+Calcula o arco tangente de _Y/_X
 
 ```cpp
 inline float atan2(
@@ -324,7 +418,7 @@ inline double atan2(
     double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Y*<br/>
 Valor de ponto flutuante
@@ -332,13 +426,13 @@ Valor de ponto flutuante
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor arctangente de _Y/_X
+Retorna o valor do arco tangente de _Y/_X
 
-## <a name="atan2f"></a><a name="atan2f"></a>atan2f
+## <a name="atan2f"></a><a name="atan2f"></a> atan2f
 
-Calcula o arcotangent de _Y/_X
+Calcula o arco tangente de _Y/_X
 
 ```cpp
 inline float atan2f(
@@ -346,7 +440,7 @@ inline float atan2f(
     float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Y*<br/>
 Valor de ponto flutuante
@@ -354,11 +448,11 @@ Valor de ponto flutuante
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor arctangente de _Y/_X
+Retorna o valor do arco tangente de _Y/_X
 
-## <a name="atanf"></a><a name="atanf"></a>atanf
+## <a name="atanf"></a><a name="atanf"></a> atanf
 
 Calcula o tangente do arco do argumento
 
@@ -366,16 +460,16 @@ Calcula o tangente do arco do argumento
 inline float atanf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor arctangente do argumento
+Retorna o valor do arco tangente do argumento
 
-## <a name="atanh"></a><a name="atanh"></a>atanh
+## <a name="atanh"></a><a name="atanh"></a> atanh
 
 Calcula a tangente hiperbólica inversa do argumento
 
@@ -385,16 +479,16 @@ inline float atanh(float _X) restrict(amp);
 inline double atanh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor da tangente hiperbólica inversa do argumento
+Retorna o valor tangente hiperbólico inverso do argumento
 
-## <a name="atanhf"></a><a name="atanhf"></a>atanhf
+## <a name="atanhf"></a><a name="atanhf"></a> atanhf
 
 Calcula a tangente hiperbólica inversa do argumento
 
@@ -402,18 +496,18 @@ Calcula a tangente hiperbólica inversa do argumento
 inline float atanhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor da tangente hiperbólica inversa do argumento
+Retorna o valor tangente hiperbólico inverso do argumento
 
-## <a name="cbrt"></a><a name="cbrt"></a>cbrt
+## <a name="cbrt"></a><a name="cbrt"></a> cbrt
 
-Calcula a verdadeira raiz do cubo do argumento
+Computa a raiz do cubo real do argumento
 
 ```cpp
 inline float cbrt(float _X) restrict(amp);
@@ -421,33 +515,33 @@ inline float cbrt(float _X) restrict(amp);
 inline double cbrt(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a raiz real do cubo do argumento
+Retorna a raiz do cubo real do argumento
 
-## <a name="cbrtf"></a><a name="cbrtf"></a>cbrtf
+## <a name="cbrtf"></a><a name="cbrtf"></a> cbrtf
 
-Calcula a verdadeira raiz do cubo do argumento
+Computa a raiz do cubo real do argumento
 
 ```cpp
 inline float cbrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a raiz real do cubo do argumento
+Retorna a raiz do cubo real do argumento
 
-## <a name="ceil"></a><a name="ceil"></a>Ceil
+## <a name="ceil"></a><a name="ceil"></a> ceil
 
 Calcula o teto do argumento
 
@@ -457,16 +551,16 @@ inline float ceil(float _X) restrict(amp);
 inline double ceil(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o teto do argumento
+Retorna o teto do argumento
 
-## <a name="ceilf"></a><a name="ceilf"></a>ceilf
+## <a name="ceilf"></a><a name="ceilf"></a> ceilf
 
 Calcula o teto do argumento
 
@@ -474,18 +568,18 @@ Calcula o teto do argumento
 inline float ceilf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o teto do argumento
+Retorna o teto do argumento
 
-## <a name="copysign"></a><a name="copysign"></a>copiar sinal
+## <a name="copysign"></a><a name="copysign"></a> copysign
 
-Produz um valor com a magnitude da _X e o sinal de _Y
+Produz um valor com a magnitude de _X e o sinal de _Y
 
 ```cpp
 inline float copysign(
@@ -497,7 +591,7 @@ inline double copysign(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -505,13 +599,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna um valor com a magnitude de _X e o sinal de _Y
 
-## <a name="copysignf"></a><a name="copysignf"></a>copysignf
+## <a name="copysignf"></a><a name="copysignf"></a> copysignf
 
-Produz um valor com a magnitude da _X e o sinal de _Y
+Produz um valor com a magnitude de _X e o sinal de _Y
 
 ```cpp
 inline float copysignf(
@@ -519,7 +613,7 @@ inline float copysignf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -527,11 +621,11 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna um valor com a magnitude de _X e o sinal de _Y
 
-## <a name="cos"></a><a name="cos"></a>Porque
+## <a name="cos"></a><a name="cos"></a> exibi
 
 Calcula o cosseno do argumento
 
@@ -541,16 +635,16 @@ inline float cos(float _X) restrict(amp);
 inline double cos(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o valor cosseno do argumento
+Retorna o valor cosseno do argumento
 
-## <a name="cosf"></a><a name="cosf"></a>cosf
+## <a name="cosf"></a><a name="cosf"></a> cosf
 
 Calcula o cosseno do argumento
 
@@ -558,18 +652,18 @@ Calcula o cosseno do argumento
 inline float cosf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o valor cosseno do argumento
+Retorna o valor cosseno do argumento
 
-## <a name="cosh"></a><a name="cosh"></a>Cosh
+## <a name="cosh"></a><a name="cosh"></a> cosh
 
-Calcula o valor do cosseno hiperbólico do argumento
+Calcula o valor cosseno hiperbólico do argumento
 
 ```cpp
 inline float cosh(float _X) restrict(amp);
@@ -577,35 +671,35 @@ inline float cosh(float _X) restrict(amp);
 inline double cosh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor do cosseno hiperbólico do argumento
+Retorna o valor cosseno hiperbólico do argumento
 
-## <a name="coshf"></a><a name="coshf"></a>coshf
+## <a name="coshf"></a><a name="coshf"></a> coshf
 
-Calcula o valor do cosseno hiperbólico do argumento
+Calcula o valor cosseno hiperbólico do argumento
 
 ```cpp
 inline float coshf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor do cosseno hiperbólico do argumento
+Retorna o valor cosseno hiperbólico do argumento
 
-## <a name="cospi"></a><a name="cospi"></a>cospi
+## <a name="cospi"></a><a name="cospi"></a> cospi
 
-Calcula o valor do cosseno de pi \* _X
+Calcula o valor do cosseno de PI \* _X
 
 ```cpp
 inline float cospi(float _X) restrict(amp);
@@ -613,35 +707,35 @@ inline float cospi(float _X) restrict(amp);
 inline double cospi(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor cosseno de pi \* _X
+Retorna o valor do cosseno de PI \* _X
 
-## <a name="cospif"></a><a name="cospif"></a>cospif
+## <a name="cospif"></a><a name="cospif"></a> cospif
 
-Calcula o valor do cosseno de pi \* _X
+Calcula o valor do cosseno de PI \* _X
 
 ```cpp
 inline float cospif(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor cosseno de pi \* _X
+Retorna o valor do cosseno de PI \* _X
 
-## <a name="erf"></a><a name="erf"></a>Erf
+## <a name="erf"></a><a name="erf"></a> ERF
 
-Calcula a função de erro do _X
+Computa a função Error de _X
 
 ```cpp
 inline float erf(float _X) restrict(amp);
@@ -649,18 +743,18 @@ inline float erf(float _X) restrict(amp);
 inline double erf(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de erro de _X
 
-## <a name="erfc"></a><a name="erfc"></a>erfc
+## <a name="erfc"></a><a name="erfc"></a> ERFC
 
-Calcula a função de erro complementar de _X
+Computa a função de erro complementar do _X
 
 ```cpp
 inline float erfc(float _X) restrict(amp);
@@ -668,35 +762,35 @@ inline float erfc(float _X) restrict(amp);
 inline double erfc(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de erro complementar de _X
 
-## <a name="erfcf"></a><a name="erfcf"></a>erfcf
+## <a name="erfcf"></a><a name="erfcf"></a> erfcf
 
-Calcula a função de erro complementar de _X
+Computa a função de erro complementar do _X
 
 ```cpp
 inline float erfcf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de erro complementar de _X
 
-## <a name="erfcinv"></a><a name="erfcinv"></a>erfcinv
+## <a name="erfcinv"></a><a name="erfcinv"></a> erfcinv
 
-Calcula a função de erro complementar inverso de _X
+Computa a função de erro complementar inverso de _X
 
 ```cpp
 inline float erfcinv(float _X) restrict(amp);
@@ -704,50 +798,50 @@ inline float erfcinv(float _X) restrict(amp);
 inline double erfcinv(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de erro complementar inverso de _X
 
-## <a name="erfcinvf"></a><a name="erfcinvf"></a>erfcinvf
+## <a name="erfcinvf"></a><a name="erfcinvf"></a> erfcinvf
 
-Calcula a função de erro complementar inverso de _X
+Computa a função de erro complementar inverso de _X
 
 ```cpp
 inline float erfcinvf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de erro complementar inverso de _X
 
-## <a name="erff"></a><a name="erff"></a>erff
+## <a name="erff"></a><a name="erff"></a> erff
 
-Calcula a função de erro do _X
+Computa a função Error de _X
 
 ```cpp
 inline float erff(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de erro de _X
 
-## <a name="erfinv"></a><a name="erfinv"></a>erfinv
+## <a name="erfinv"></a><a name="erfinv"></a> erfinv
 
 Calcula a função de erro inverso de _X
 
@@ -757,16 +851,16 @@ inline float erfinv(float _X) restrict(amp);
 inline double erfinv(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de erro inverso de _X
 
-## <a name="erfinvf"></a><a name="erfinvf"></a>erfinvf
+## <a name="erfinvf"></a><a name="erfinvf"></a> erfinvf
 
 Calcula a função de erro inverso de _X
 
@@ -774,18 +868,18 @@ Calcula a função de erro inverso de _X
 inline float erfinvf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de erro inverso de _X
 
-## <a name="exp10"></a><a name="exp10"></a>exp10
+## <a name="exp10"></a><a name="exp10"></a> exp10
 
-Calcula a base-10 exponencial do argumento
+Calcula o exponencial de base 10 do argumento
 
 ```cpp
 inline float exp10(float _X) restrict(amp);
@@ -793,33 +887,33 @@ inline float exp10(float _X) restrict(amp);
 inline double exp10(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a base-10 exponencial do argumento
+Retorna o exponencial de base 10 do argumento
 
-## <a name="exp10f"></a><a name="exp10f"></a>exp10f
+## <a name="exp10f"></a><a name="exp10f"></a> exp10f
 
-Calcula a base-10 exponencial do argumento
+Calcula o exponencial de base 10 do argumento
 
 ```cpp
 inline float exp10f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a base-10 exponencial do argumento
+Retorna o exponencial de base 10 do argumento
 
-## <a name="expm1"></a><a name="expm1"></a>expm1
+## <a name="expm1"></a><a name="expm1"></a> expm1
 
 Calcula a exponencial de base e do argumento, menos 1
 
@@ -829,16 +923,16 @@ inline float expm1(float exponent) restrict(amp);
 inline double expm1(double exponent) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Expoente*<br/>
-O termo exponencial *n* `e`da expressão `e` matemática <sup>n</sup>, onde está a base do logaritmo natural.
+*lado*<br/>
+O termo exponencial *n* da expressão matemática `e` <sup>n</sup>, em que `e` é a base do logaritmo natural.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a exponencial de base e do argumento, menos 1
 
-## <a name="expm1f"></a><a name="expm1f"></a>expm1f
+## <a name="expm1f"></a><a name="expm1f"></a> expm1f
 
 Calcula a exponencial de base e do argumento, menos 1
 
@@ -846,18 +940,18 @@ Calcula a exponencial de base e do argumento, menos 1
 inline float expm1f(float exponent) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Expoente*<br/>
-O termo exponencial *n* `e`da expressão `e` matemática <sup>n</sup>, onde está a base do logaritmo natural.
+*lado*<br/>
+O termo exponencial *n* da expressão matemática `e` <sup>n</sup>, em que `e` é a base do logaritmo natural.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a exponencial de base e do argumento, menos 1
 
-## <a name="exp"></a><a name="exp"></a>Exp
+## <a name="exp"></a><a name="exp"></a> exp
 
-Calcula a base-e exponencial do argumento
+Calcula o exponencial de base e do argumento
 
 ```cpp
 inline float exp(float _X) restrict(amp);
@@ -865,35 +959,35 @@ inline float exp(float _X) restrict(amp);
 inline double exp(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a base-e exponencial do argumento
+Retorna o exponencial de base e do argumento
 
-## <a name="expf"></a><a name="expf"></a>expf
+## <a name="expf"></a><a name="expf"></a> expf
 
-Calcula a base-e exponencial do argumento
+Calcula o exponencial de base e do argumento
 
 ```cpp
 inline float expf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a base-e exponencial do argumento
+Retorna o exponencial de base e do argumento
 
-## <a name="exp2"></a><a name="exp2"></a>exp2
+## <a name="exp2"></a><a name="exp2"></a> exp2
 
-Calcula a base 2 exponencial do argumento
+Calcula o exponencial de base 2 do argumento
 
 ```cpp
 inline float exp2(float _X) restrict(amp);
@@ -901,35 +995,35 @@ inline float exp2(float _X) restrict(amp);
 inline double exp2(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o exponencial 2 base do argumento
 
-## <a name="exp2f"></a><a name="exp2f"></a>exp2f
+## <a name="exp2f"></a><a name="exp2f"></a> exp2f
 
-Calcula a base 2 exponencial do argumento
+Calcula o exponencial de base 2 do argumento
 
 ```cpp
 inline float exp2f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o exponencial 2 base do argumento
 
-## <a name="fabs"></a><a name="fabs"></a>Fabs
+## <a name="fabs"></a><a name="fabs"></a> fabs
 
-Devolve o valor absoluto do argumento
+Retorna o valor absoluto do argumento
 
 ```cpp
 inline float fabs(float _X) restrict(amp);
@@ -937,35 +1031,35 @@ inline float fabs(float _X) restrict(amp);
 inline double fabs(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o valor absoluto do argumento
+Retorna o valor absoluto do argumento
 
-## <a name="fabsf"></a><a name="fabsf"></a>fabsf
+## <a name="fabsf"></a><a name="fabsf"></a> fabsf
 
-Devolve o valor absoluto do argumento
+Retorna o valor absoluto do argumento
 
 ```cpp
 inline float fabsf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o valor absoluto do argumento
+Retorna o valor absoluto do argumento
 
-## <a name="fdim"></a><a name="fdim"></a>fdim
+## <a name="fdim"></a><a name="fdim"></a> fdim
 
-Calcula a diferença positiva entre os argumentos.
+Computa a diferença positiva entre os argumentos.
 
 ```cpp
 inline float fdim(
@@ -978,19 +1072,19 @@ inline double fdim(
 ) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
-_Y de *valor* de ponto flutuante<br/>
+*_Y* de valor de ponto flutuante<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A diferença entre _X e _Y se _X for maior que _Y; caso contrário, +0.
+A diferença entre _X e _Y se _X for maior que _Y; caso contrário, + 0.
 
-## <a name="fdimf"></a><a name="fdimf"></a>fdimf
+## <a name="fdimf"></a><a name="fdimf"></a> fdimf
 
-Calcula a diferença positiva entre os argumentos.
+Computa a diferença positiva entre os argumentos.
 
 ```cpp
 inline float fdimf(
@@ -999,17 +1093,17 @@ inline float fdimf(
 ) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
-_Y de *valor* de ponto flutuante<br/>
+*_Y* de valor de ponto flutuante<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A diferença entre _X e _Y se _X for maior que _Y; caso contrário, +0.
+A diferença entre _X e _Y se _X for maior que _Y; caso contrário, + 0.
 
-## <a name="floor"></a><a name="floor"></a>Chão
+## <a name="floor"></a><a name="floor"></a> Floor
 
 Calcula o piso do argumento
 
@@ -1019,16 +1113,16 @@ inline float floor(float _X) restrict(amp);
 inline double floor(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve a palavra do argumento
+Retorna o piso do argumento
 
-## <a name="floorf"></a><a name="floorf"></a>piso
+## <a name="floorf"></a><a name="floorf"></a> floorf
 
 Calcula o piso do argumento
 
@@ -1036,18 +1130,18 @@ Calcula o piso do argumento
 inline float floorf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve a palavra do argumento
+Retorna o piso do argumento
 
-## <a name="a-namefma-fma"></a><a name="fma">Fma
+## <a name="a-namefma-fma"></a><a name="fma"> FMA
 
-Calcula o produto do primeiro e segundo argumentos especificados e, em seguida, adiciona o terceiro argumento especificado ao resultado; toda a computação é realizada como uma única operação.
+Computa o produto do primeiro e segundo argumentos especificados, em seguida, adiciona o terceiro argumento especificado ao resultado; todo o cálculo é executado como uma única operação.
 
 ```cpp
 inline float fma(
@@ -1063,7 +1157,7 @@ inline double fma(
 ) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -1072,13 +1166,13 @@ O segundo argumento de ponto flutuante.
 *_Z*<br/>
 O terceiro argumento de ponto flutuante.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Resultado da expressão (_X \* _Y) + _Z. Toda a computação é realizada como uma única operação; ou seja, as subexpressões são calculadas com precisão infinita, e apenas o resultado final é arredondado.
+O resultado da expressão (_X \* _Y) + _Z. Todo o cálculo é executado como uma única operação; ou seja, as subexpressão são calculadas para precisão infinita e apenas o resultado final é arredondado.
 
-## <a name="fmaf"></a><a name="fmaf"></a>fmaf
+## <a name="fmaf"></a><a name="fmaf"></a> fmaf
 
-Calcula o produto do primeiro e segundo argumentos especificados e, em seguida, adiciona o terceiro argumento especificado ao resultado; toda a computação é realizada como uma única operação.
+Computa o produto do primeiro e segundo argumentos especificados, em seguida, adiciona o terceiro argumento especificado ao resultado; todo o cálculo é executado como uma única operação.
 
 ```cpp
 inline float fmaf(
@@ -1088,7 +1182,7 @@ inline float fmaf(
 ) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -1097,13 +1191,13 @@ O segundo argumento de ponto flutuante.
 *_Z*<br/>
 O terceiro argumento de ponto flutuante.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Resultado da expressão (_X \* _Y) + _Z. Toda a computação é realizada como uma única operação; ou seja, as subexpressões são calculadas com precisão infinita, e apenas o resultado final é arredondado.
+O resultado da expressão (_X \* _Y) + _Z. Todo o cálculo é executado como uma única operação; ou seja, as subexpressão são calculadas para precisão infinita e apenas o resultado final é arredondado.
 
-## <a name="fmax"></a><a name="fmax"></a>fmax
+## <a name="fmax"></a><a name="fmax"></a> fmax
 
-Determine o valor nuémero máximo dos argumentos
+Determinar o valor numérico máximo dos argumentos
 
 ```cpp
 inline float fmax(
@@ -1115,7 +1209,7 @@ inline double fmax(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1123,13 +1217,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolva o valor numérico máximo dos argumentos
+Retornar o valor numérico máximo dos argumentos
 
-## <a name="fmaxf"></a><a name="fmaxf"></a>fmaxf
+## <a name="fmaxf"></a><a name="fmaxf"></a> fmaxf
 
-Determine o valor nuémero máximo dos argumentos
+Determinar o valor numérico máximo dos argumentos
 
 ```cpp
 inline float fmaxf(
@@ -1137,7 +1231,7 @@ inline float fmaxf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1145,13 +1239,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolva o valor numérico máximo dos argumentos
+Retornar o valor numérico máximo dos argumentos
 
-## <a name="fmin"></a><a name="fmin"></a>fmin
+## <a name="fmin"></a><a name="fmin"></a> fmin
 
-Determine o valor numérico mínimo dos argumentos
+Determinar o valor numérico mínimo dos argumentos
 
 ```cpp
 inline float fmin(
@@ -1163,7 +1257,7 @@ inline double fmin(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1171,13 +1265,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolva o valor numérico mínimo dos argumentos
+Retornar o valor numérico mínimo dos argumentos
 
-## <a name="fminf"></a><a name="fminf"></a>fminf
+## <a name="fminf"></a><a name="fminf"></a> fminf
 
-Determine o valor numérico mínimo dos argumentos
+Determinar o valor numérico mínimo dos argumentos
 
 ```cpp
 inline float fminf(
@@ -1185,7 +1279,7 @@ inline float fminf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1193,13 +1287,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolva o valor numérico mínimo dos argumentos
+Retornar o valor numérico mínimo dos argumentos
 
-## <a name="fmod-function-c-amp"></a><a name="fmod"></a>Função fmod (C++ AMP)
+## <a name="fmod-function-c-amp"></a><a name="fmod"></a> Função fmod (C++ AMP)
 
-Calcula o restante do primeiro argumento especificado dividido pelo segundo argumento especificado.
+Computa o restante do primeiro argumento especificado dividido pelo segundo argumento especificado.
 
 ```cpp
 inline float fmod(
@@ -1211,7 +1305,7 @@ inline double fmod(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -1219,13 +1313,13 @@ O primeiro argumento de ponto flutuante.
 *_Y*<br/>
 O segundo argumento de ponto flutuante.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O restante `_X` dividido `_Y`por; ou seja, o `_X`  -  `_Y`valor de *n*, onde *n* é `_X`  -  `_Y`um inteiro inteiro tal `_Y`que a magnitude de *n* é menor do que a magnitude de .
+O restante de `_X` dividido por `_Y` ; ou seja, o valor de `_X`  -  `_Y` *n*, em que *n* é um inteiro, de modo que a magnitude de `_X`  -  `_Y` *n* seja menor que a magnitude de `_Y` .
 
-## <a name="fmodf"></a><a name="fmodf"></a>fmodf
+## <a name="fmodf"></a><a name="fmodf"></a> fmodf
 
-Calcula o restante do primeiro argumento especificado dividido pelo segundo argumento especificado.
+Computa o restante do primeiro argumento especificado dividido pelo segundo argumento especificado.
 
 ```cpp
 inline float fmodf(
@@ -1233,7 +1327,7 @@ inline float fmodf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -1241,11 +1335,11 @@ O primeiro argumento de ponto flutuante.
 *_Y*<br/>
 O segundo argumento de ponto flutuante.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O restante `_X` dividido `_Y`por; ou seja, o `_X`  -  `_Y`valor de *n*, onde *n* é `_X`  -  `_Y`um inteiro inteiro tal `_Y`que a magnitude de *n* é menor do que a magnitude de .
+O restante de `_X` dividido por `_Y` ; ou seja, o valor de `_X`  -  `_Y` *n*, em que *n* é um inteiro, de modo que a magnitude de `_X`  -  `_Y` *n* seja menor que a magnitude de `_Y` .
 
-## <a name="fpclassify"></a><a name="fpclassify"></a>fpclassificar
+## <a name="fpclassify"></a><a name="fpclassify"></a> fpclassify
 
 Classifica o valor do argumento como NaN, infinito, normal, subnormal, zero
 
@@ -1255,18 +1349,18 @@ inline int fpclassify(float _X) restrict(amp);
 inline int fpclassify(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor da macro de classificação numérica adequada ao valor do argumento.
+Retorna o valor da macro de classificação de número apropriada ao valor do argumento.
 
-## <a name="frexp"></a><a name="frexp"></a>Frexp
+## <a name="frexp"></a><a name="frexp"></a> frexp
 
-Fica a louva-a-lo caantisa e expoente da _X
+Obtém o mantissa e o expoente de _X
 
 ```cpp
 inline float frexp(
@@ -1278,21 +1372,21 @@ inline double frexp(
     _Out_ int* _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
 *_Exp*<br/>
-Devolve o expoente inteiro de _X em valor de ponto flutuante
+Retorna o expoente inteiro de _X no valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o _X de mantissa
+Retorna o _X mantissa
 
-## <a name="frexpf"></a><a name="frexpf"></a>frexpf
+## <a name="frexpf"></a><a name="frexpf"></a> frexpf
 
-Fica a louva-a-lo caantisa e expoente da _X
+Obtém o mantissa e o expoente de _X
 
 ```cpp
 inline float frexpf(
@@ -1300,21 +1394,21 @@ inline float frexpf(
     _Out_ int* _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
 *_Exp*<br/>
-Devolve o expoente inteiro de _X em valor de ponto flutuante
+Retorna o expoente inteiro de _X no valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o _X de mantissa
+Retorna o _X mantissa
 
-## <a name="hypot"></a><a name="hypot"></a>hiponta
+## <a name="hypot"></a><a name="hypot"></a> hypot
 
-Calcula a raiz quadrada da soma dos quadrados de _X e _Y
+Computa a raiz quadrada da soma dos quadrados de _X e _Y
 
 ```cpp
 inline float hypot(
@@ -1326,7 +1420,7 @@ inline double hypot(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1334,13 +1428,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a raiz quadrada da soma dos quadrados de _X e _Y
 
-## <a name="hypotf"></a><a name="hypotf"></a>hipotf
+## <a name="hypotf"></a><a name="hypotf"></a> hypotf
 
-Calcula a raiz quadrada da soma dos quadrados de _X e _Y
+Computa a raiz quadrada da soma dos quadrados de _X e _Y
 
 ```cpp
 inline float hypotf(
@@ -1348,7 +1442,7 @@ inline float hypotf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1356,13 +1450,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a raiz quadrada da soma dos quadrados de _X e _Y
 
-## <a name="ilogb"></a><a name="ilogb"></a>ilogb
+## <a name="ilogb"></a><a name="ilogb"></a> ilogb
 
-Extrair o expoente da _X como um valor int assinado
+Extrair o expoente de _X como um valor int assinado
 
 ```cpp
 inline int ilogb(float _X) restrict(amp);
@@ -1370,33 +1464,33 @@ inline int ilogb(float _X) restrict(amp);
 inline int ilogb(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o expoente do _X como um valor int assinado
+Retorna o expoente de _X como um valor int assinado
 
-## <a name="ilogbf"></a><a name="ilogbf"></a>ilogbf
+## <a name="ilogbf"></a><a name="ilogbf"></a> ilogbf
 
-Extrair o expoente da _X como um valor int assinado
+Extrair o expoente de _X como um valor int assinado
 
 ```cpp
 inline int ilogbf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o expoente do _X como um valor int assinado
+Retorna o expoente de _X como um valor int assinado
 
-## <a name="isfinite"></a><a name="isfinite"></a>isfinite
+## <a name="isfinite"></a><a name="isfinite"></a> isfinito
 
 Determina se o argumento tem um valor finito
 
@@ -1406,16 +1500,16 @@ inline int isfinite(float _X) restrict(amp);
 inline int isfinite(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna um valor não zero se e somente se o argumento tiver um valor finito
+Retorna um valor diferente de zero se e somente se o argumento tiver um valor finito
 
-## <a name="isinf"></a><a name="isinf"></a>isinf
+## <a name="isinf"></a><a name="isinf"></a> isinf
 
 Determina se o argumento é um infinito
 
@@ -1425,16 +1519,16 @@ inline int isinf(float _X) restrict(amp);
 inline int isinf(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna um valor não zero se e somente se o argumento tiver um valor infinito
+Retorna um valor diferente de zero se e somente se o argumento tiver um valor infinito
 
-## <a name="isnan"></a><a name="isnan"></a>Isnan
+## <a name="isnan"></a><a name="isnan"></a> IsNaN
 
 Determina se o argumento é um NaN
 
@@ -1444,18 +1538,18 @@ inline int isnan(float _X) restrict(amp);
 inline int isnan(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna um valor não zero se e somente se o argumento tiver um valor NaN
+Retorna um valor diferente de zero se e somente se o argumento tiver um valor NaN
 
-## <a name="isnormal"></a><a name="isnormal"></a>isnormal
+## <a name="isnormal"></a><a name="isnormal"></a> IsNormal
 
-Determina se o argumento é normal
+Determina se o argumento é um normal
 
 ```cpp
 inline int isnormal(float _X) restrict(amp);
@@ -1463,18 +1557,18 @@ inline int isnormal(float _X) restrict(amp);
 inline int isnormal(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna um valor não zero se e somente se o argumento tiver um valor normal
+Retorna um valor diferente de zero se e somente se o argumento tiver um valor normal
 
-## <a name="ldexp"></a><a name="ldexp"></a>Ldexp
+## <a name="ldexp"></a><a name="ldexp"></a> ldexp
 
-Calcula um número real do mantissa especificado e expoente.
+Computa um número real do mantissa e do expoente especificados.
 
 ```cpp
 inline float ldexp(
@@ -1486,21 +1580,21 @@ inline double ldexp(
     double _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
-Valor de ponto flutuante, louva-a-lo
+Valor de ponto flutuante, mantissa
 
 *_Exp*<br/>
 Valor inteiro, expoente
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorno \* si _X 2^_Exp
+Retorna _X \* 2 ^ _Exp
 
-## <a name="ldexpf"></a><a name="ldexpf"></a>Ldexpf
+## <a name="ldexpf"></a><a name="ldexpf"></a> ldexpf
 
-Calcula um número real do mantissa especificado e expoente.
+Computa um número real do mantissa e do expoente especificados.
 
 ```cpp
 inline float ldexpf(
@@ -1508,21 +1602,21 @@ inline float ldexpf(
     int _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
-Valor de ponto flutuante, louva-a-lo
+Valor de ponto flutuante, mantissa
 
 *_Exp*<br/>
 Valor inteiro, expoente
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorno \* si _X 2^_Exp
+Retorna _X \* 2 ^ _Exp
 
-## <a name="lgamma"></a><a name="lgamma"></a>Lgamma
+## <a name="lgamma"></a><a name="lgamma"></a> lgamma
 
-Calcula o logaritmo natural do valor absoluto da gama do argumento
+Computa o logaritmo natural do valor absoluto do gama do argumento
 
 ```cpp
 inline float lgamma(
@@ -1534,7 +1628,7 @@ inline double lgamma(
     _Out_ int* _Sign) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1542,13 +1636,13 @@ Valor de ponto flutuante
 *_Sign*<br/>
 Retorna o sinal
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo natural do valor absoluto da gama do argumento
+Retorna o logaritmo natural do valor absoluto do gama do argumento
 
-## <a name="lgammaf"></a><a name="lgammaf"></a>lgammaf
+## <a name="lgammaf"></a><a name="lgammaf"></a> lgammaf
 
-Calcula o logaritmo natural do valor absoluto da gama do argumento
+Computa o logaritmo natural do valor absoluto do gama do argumento
 
 ```cpp
 inline float lgammaf(
@@ -1556,7 +1650,7 @@ inline float lgammaf(
     _Out_ int* _Sign) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1564,13 +1658,13 @@ Valor de ponto flutuante
 *_Sign*<br/>
 Retorna o sinal
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo natural do valor absoluto da gama do argumento
+Retorna o logaritmo natural do valor absoluto do gama do argumento
 
-## <a name="log"></a><a name="log"></a>Log
+## <a name="log"></a><a name="log"></a> Façam
 
-Calcula o logaritmo base-e do argumento
+Calcula o logaritmo de base-e do argumento
 
 ```cpp
 inline float log(float _X) restrict(amp);
@@ -1578,18 +1672,18 @@ inline float log(float _X) restrict(amp);
 inline double log(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo base-e do argumento
+Retorna o logaritmo de base-e do argumento
 
-## <a name="log10"></a><a name="log10"></a>log10
+## <a name="log10"></a><a name="log10"></a> log10
 
-Calcula o logaritmo base-10 do argumento
+Calcula o logaritmo de base 10 do argumento
 
 ```cpp
 inline float log10(float _X) restrict(amp);
@@ -1597,35 +1691,35 @@ inline float log10(float _X) restrict(amp);
 inline double log10(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo base-10 do argumento
+Retorna o logaritmo de base 10 do argumento
 
-## <a name="log10f"></a><a name="log10f"></a>log10f
+## <a name="log10f"></a><a name="log10f"></a> log10f
 
-Calcula o logaritmo base-10 do argumento
+Calcula o logaritmo de base 10 do argumento
 
 ```cpp
 inline float log10f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo base-10 do argumento
+Retorna o logaritmo de base 10 do argumento
 
-## <a name="log1p"></a><a name="log1p"></a>log1p
+## <a name="log1p"></a><a name="log1p"></a> log1p
 
-Calcula o logaritmo base-e de 1 mais o argumento
+Calcula o logaritmo de base e de 1 mais o argumento
 
 ```cpp
 inline float log1p(float _X) restrict(amp);
@@ -1633,35 +1727,35 @@ inline float log1p(float _X) restrict(amp);
 inline double log1p(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo base-e de 1 mais o argumento
+Retorna o logaritmo de base e de 1 mais o argumento
 
-## <a name="log1pf"></a><a name="log1pf"></a>log1pf
+## <a name="log1pf"></a><a name="log1pf"></a> log1pf
 
-Calcula o logaritmo base-e de 1 mais o argumento
+Calcula o logaritmo de base e de 1 mais o argumento
 
 ```cpp
 inline float log1pf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo base-e de 1 mais o argumento
+Retorna o logaritmo de base e de 1 mais o argumento
 
-## <a name="log2"></a><a name="log2"></a>log2
+## <a name="log2"></a><a name="log2"></a> log2
 
-Calcula o logaritmo base-2 do argumento
+Calcula o logaritmo de base 2 do argumento
 
 ```cpp
 inline float log2(float _X) restrict(amp);
@@ -1669,35 +1763,35 @@ inline float log2(float _X) restrict(amp);
 inline double log2(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo base-10 do argumento
+Retorna o logaritmo de base 10 do argumento
 
-## <a name="log2f"></a><a name="log2f"></a>log2f
+## <a name="log2f"></a><a name="log2f"></a> log2f
 
-Calcula o logaritmo base-2 do argumento
+Calcula o logaritmo de base 2 do argumento
 
 ```cpp
 inline float log2f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo base-10 do argumento
+Retorna o logaritmo de base 10 do argumento
 
-## <a name="logb"></a><a name="logb"></a>logb
+## <a name="logb"></a><a name="logb"></a> logb
 
-Extrai o expoente do _X, como um valor inteiro assinado em formato de ponto flutuante
+Extrai o expoente de _X, como um valor inteiro assinado no formato de ponto flutuante
 
 ```cpp
 inline float logb(float _X) restrict(amp);
@@ -1705,52 +1799,52 @@ inline float logb(float _X) restrict(amp);
 inline double logb(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o expoente assinado de _X
+Retorna o expoente assinado de _X
 
-## <a name="logbf"></a><a name="logbf"></a>logbf
+## <a name="logbf"></a><a name="logbf"></a> logbf
 
-Extrai o expoente do _X, como um valor inteiro assinado em formato de ponto flutuante
+Extrai o expoente de _X, como um valor inteiro assinado no formato de ponto flutuante
 
 ```cpp
 inline float logbf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o expoente assinado de _X
+Retorna o expoente assinado de _X
 
-## <a name="logf"></a><a name="logf"></a>logf
+## <a name="logf"></a><a name="logf"></a> logf
 
-Calcula o logaritmo base-e do argumento
+Calcula o logaritmo de base-e do argumento
 
 ```cpp
 inline float logf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o logaritmo base-e do argumento
+Retorna o logaritmo de base-e do argumento
 
-## <a name="modf"></a><a name="modf"></a>modf
+## <a name="modf"></a><a name="modf"></a> modf
 
-Divide o argumento especificado em partes fracionárias e inteiras.
+Divide o argumento especificado em partes fracionárias e de números inteiros.
 
 ```cpp
 inline float modf(
@@ -1762,21 +1856,21 @@ inline double modf(
     _Out_ double* _Iptr) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
 *_Iptr*<br/>
-[fora] A porção inteira `_X`de , como um valor de ponto flutuante.
+fora A parte inteira de `_X` , como um valor de ponto flutuante.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A parte fracionada `_X`assinada de .
+A parte fracionária assinada do `_X` .
 
-## <a name="modff"></a><a name="modff"></a>modff
+## <a name="modff"></a><a name="modff"></a> modff
 
-Divide o argumento especificado em partes fracionárias e inteiras.
+Divide o argumento especificado em partes fracionárias e de números inteiros.
 
 ```cpp
 inline float modff(
@@ -1784,55 +1878,55 @@ inline float modff(
     _Out_ float* _Iptr) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
 *_Iptr*<br/>
-A porção inteira `_X`de , como um valor de ponto flutuante.
+A parte inteira de `_X` , como um valor de ponto flutuante.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve a parte fracionada assinada de `_X`.
+Retorna a parte fracionária assinada de `_X` .
 
-## <a name="nan"></a><a name="nan"></a>Nan
+## <a name="nan"></a><a name="nan"></a> Nan
 
-Retorna uma NaN tranquila
+Retorna um NaN silencioso
 
 ```cpp
 inline double nan(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna uma NaN tranquila, se disponível, com o conteúdo indicado em _X
+Retorna um NaN silencioso, se disponível, com o conteúdo indicado em _X
 
-## <a name="nanf"></a><a name="nanf"></a>nanf
+## <a name="nanf"></a><a name="nanf"></a> nanf
 
-Retorna uma NaN tranquila
+Retorna um NaN silencioso
 
 ```cpp
 inline float nanf(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna uma NaN tranquila, se disponível, com o conteúdo indicado em _X
+Retorna um NaN silencioso, se disponível, com o conteúdo indicado em _X
 
-## <a name="nearbyint"></a><a name="nearbyint"></a>nearbyint
+## <a name="nearbyint"></a><a name="nearbyint"></a> nearbyint
 
-Arredonda o argumento para um valor inteiro em formato de ponto flutuante, usando a direção de arredondamento atual.
+Arredonda o argumento para um valor inteiro no formato de ponto flutuante, usando a direção de arredondamento atual.
 
 ```cpp
 inline float nearbyint(float _X) restrict(amp);
@@ -1840,35 +1934,35 @@ inline float nearbyint(float _X) restrict(amp);
 inline double nearbyint(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o valor inteiro arredondado.
+Retorna o valor inteiro arredondado.
 
-## <a name="nearbyintf"></a><a name="nearbyintf"></a>nearbyintf
+## <a name="nearbyintf"></a><a name="nearbyintf"></a> nearbyintf
 
-Arredonda o argumento para um valor inteiro em formato de ponto flutuante, usando a direção de arredondamento atual.
+Arredonda o argumento para um valor inteiro no formato de ponto flutuante, usando a direção de arredondamento atual.
 
 ```cpp
 inline float nearbyintf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o valor inteiro arredondado.
+Retorna o valor inteiro arredondado.
 
-## <a name="nextafter"></a><a name="nextafter"></a>nextafter
+## <a name="nextafter"></a><a name="nextafter"></a> nextafter
 
-Determine o próximo valor representando, no tipo de função, após _X na direção de _Y
+Determina o próximo valor representável, no tipo da função, após _X na direção de _Y
 
 ```cpp
 inline float nextafter(
@@ -1880,7 +1974,7 @@ inline double nextafter(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1888,13 +1982,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o próximo valor representável, no tipo de função, após _X na direção de _Y
+Retorna o próximo valor representável, no tipo da função, depois de _X na direção de _Y
 
-## <a name="nextafterf"></a><a name="nextafterf"></a>nextafterf
+## <a name="nextafterf"></a><a name="nextafterf"></a> nextafterf
 
-Determine o próximo valor representando, no tipo de função, após _X na direção de _Y
+Determina o próximo valor representável, no tipo da função, após _X na direção de _Y
 
 ```cpp
 inline float nextafterf(
@@ -1902,7 +1996,7 @@ inline float nextafterf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1910,11 +2004,11 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o próximo valor representável, no tipo de função, após _X na direção de _Y
+Retorna o próximo valor representável, no tipo da função, depois de _X na direção de _Y
 
-## <a name="phi"></a><a name="phi"></a>Phi
+## <a name="phi"></a><a name="phi"></a> PI
 
 Retorna a função de distribuição cumulativa do argumento
 
@@ -1924,16 +2018,16 @@ inline float phi(float _X) restrict(amp);
 inline double phi(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de distribuição cumulativa do argumento
 
-## <a name="phif"></a><a name="phif"></a>phif
+## <a name="phif"></a><a name="phif"></a> phif
 
 Retorna a função de distribuição cumulativa do argumento
 
@@ -1941,18 +2035,18 @@ Retorna a função de distribuição cumulativa do argumento
 inline float phif(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de distribuição cumulativa do argumento
 
-## <a name="pow"></a><a name="pow"></a>Pow
+## <a name="pow"></a><a name="pow"></a> pow
 
-Calcula _X elevado ao poder da _Y
+Calcula _X elevado à potência de _Y
 
 ```cpp
 inline float pow(
@@ -1964,7 +2058,7 @@ inline double pow(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante, base
@@ -1972,11 +2066,11 @@ Valor de ponto flutuante, base
 *_Y*<br/>
 Valor de ponto flutuante, expoente
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-## <a name="powf"></a><a name="powf"></a>powf
+## <a name="powf"></a><a name="powf"></a> powf
 
-Calcula _X elevado ao poder da _Y
+Calcula _X elevado à potência de _Y
 
 ```cpp
 inline float powf(
@@ -1984,7 +2078,7 @@ inline float powf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante, base
@@ -1992,9 +2086,9 @@ Valor de ponto flutuante, base
 *_Y*<br/>
 Valor de ponto flutuante, expoente
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-## <a name="probit"></a><a name="probit"></a>probit
+## <a name="probit"></a><a name="probit"></a> probit
 
 Retorna a função de distribuição cumulativa inversa do argumento
 
@@ -2004,16 +2098,16 @@ inline float probit(float _X) restrict(amp);
 inline double probit(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de distribuição cumulativa inversa do argumento
 
-## <a name="probitf"></a><a name="probitf"></a>probitf
+## <a name="probitf"></a><a name="probitf"></a> probitf
 
 Retorna a função de distribuição cumulativa inversa do argumento
 
@@ -2021,18 +2115,18 @@ Retorna a função de distribuição cumulativa inversa do argumento
 inline float probitf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna a função de distribuição cumulativa inversa do argumento
 
-## <a name="rcbrt"></a><a name="rcbrt"></a>rcbrt
+## <a name="rcbrt"></a><a name="rcbrt"></a> rcbrt
 
-Retorna a recíproca da raiz cubo do argumento
+Retorna o recíproco da raiz do cubo do argumento
 
 ```cpp
 inline float rcbrt(float _X) restrict(amp);
@@ -2040,35 +2134,35 @@ inline float rcbrt(float _X) restrict(amp);
 inline double rcbrt(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a recíproca da raiz cubo do argumento
+Retorna o recíproco da raiz do cubo do argumento
 
-## <a name="rcbrtf"></a><a name="rcbrtf"></a>rcbrtf
+## <a name="rcbrtf"></a><a name="rcbrtf"></a> rcbrtf
 
-Retorna a recíproca da raiz cubo do argumento
+Retorna o recíproco da raiz do cubo do argumento
 
 ```cpp
 inline float rcbrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a recíproca da raiz cubo do argumento
+Retorna o recíproco da raiz do cubo do argumento
 
-## <a name="remainder"></a><a name="remainder"></a>Restante
+## <a name="remainder"></a><a name="remainder"></a> final
 
-Calcula o restante: _X rem _Y
+Calcula o restante: _X REM _Y
 
 ```cpp
 inline float remainder(
@@ -2080,7 +2174,7 @@ inline double remainder(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2088,13 +2182,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retornos _X _Y REM
+Retorna _X REM _Y
 
-## <a name="remainderf"></a><a name="remainderf"></a>restantef
+## <a name="remainderf"></a><a name="remainderf"></a> remainderf
 
-Calcula o restante: _X rem _Y
+Calcula o restante: _X REM _Y
 
 ```cpp
 inline float remainderf(
@@ -2102,7 +2196,7 @@ inline float remainderf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2110,13 +2204,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retornos _X _Y REM
+Retorna _X REM _Y
 
-## <a name="remquo"></a><a name="remquo"></a>remquo
+## <a name="remquo"></a><a name="remquo"></a> remquo
 
-Calcula o restante do primeiro argumento especificado dividido pelo segundo argumento especificado. Também calcula o quociente do significíe do primeiro argumento especificado dividido pelo significe do segundo argumento especificado, e retorna o quociente usando o local especificado no terceiro argumento.
+Computa o restante do primeiro argumento especificado dividido pelo segundo argumento especificado. Também computa o quociente do significante do primeiro argumento especificado dividido pelo significante do segundo argumento especificado e retorna o quociente usando o local especificado no terceiro argumento.
 
 ```cpp
 inline float remquo(
@@ -2130,7 +2224,7 @@ inline double remquo(
     _Out_ int* _Quo) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -2139,15 +2233,15 @@ O primeiro argumento de ponto flutuante.
 O segundo argumento de ponto flutuante.
 
 *_Quo*<br/>
-[fora] O endereço de um inteiro que é usado para devolver o quociente `_X` dos bits fracionados de divididos pelos bits fracionados de `_Y`.
+fora O endereço de um inteiro que é usado para retornar o quociente dos bits fracionários de `_X` dividido pelos bits fracionários de `_Y` .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o `_X` restante `_Y`dividido por .
+Retorna o restante de `_X` dividido por `_Y` .
 
-## <a name="remquof"></a><a name="remquof"></a>remquof
+## <a name="remquof"></a><a name="remquof"></a> remquof
 
-Calcula o restante do primeiro argumento especificado dividido pelo segundo argumento especificado. Também calcula o quociente do significíe do primeiro argumento especificado dividido pelo significe do segundo argumento especificado, e retorna o quociente usando o local especificado no terceiro argumento.
+Computa o restante do primeiro argumento especificado dividido pelo segundo argumento especificado. Também computa o quociente do significante do primeiro argumento especificado dividido pelo significante do segundo argumento especificado e retorna o quociente usando o local especificado no terceiro argumento.
 
 ```cpp
 inline float remquof(
@@ -2156,7 +2250,7 @@ inline float remquof(
     _Out_ int* _Quo) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -2165,15 +2259,15 @@ O primeiro argumento de ponto flutuante.
 O segundo argumento de ponto flutuante.
 
 *_Quo*<br/>
-[fora] O endereço de um inteiro que é usado para devolver o quociente `_X` dos bits fracionados de divididos pelos bits fracionados de `_Y`.
+fora O endereço de um inteiro que é usado para retornar o quociente dos bits fracionários de `_X` dividido pelos bits fracionários de `_Y` .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o `_X` restante `_Y`dividido por .
+Retorna o restante de `_X` dividido por `_Y` .
 
-## <a name="round"></a><a name="round"></a>Rodada
+## <a name="round"></a><a name="round"></a> idas
 
-Rondas _X para o inteiro mais próximo
+Arredonda _X para o número inteiro mais próximo
 
 ```cpp
 inline float round(float _X) restrict(amp);
@@ -2181,35 +2275,35 @@ inline float round(float _X) restrict(amp);
 inline double round(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o inteiro mais próximo de _X
+Retorna o número inteiro mais próximo de _X
 
-## <a name="roundf"></a><a name="roundf"></a>roundf
+## <a name="roundf"></a><a name="roundf"></a> roundf
 
-Rondas _X para o inteiro mais próximo
+Arredonda _X para o número inteiro mais próximo
 
 ```cpp
 inline float roundf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o inteiro mais próximo de _X
+Retorna o número inteiro mais próximo de _X
 
-## <a name="rsqrt"></a><a name="rsqrt"></a>rsqrt
+## <a name="rsqrt"></a><a name="rsqrt"></a> rsqrt
 
-Retorna a recíproca da raiz quadrada do argumento
+Retorna o recíproco da raiz quadrada do argumento
 
 ```cpp
 inline float rsqrt(float _X) restrict(amp);
@@ -2217,35 +2311,35 @@ inline float rsqrt(float _X) restrict(amp);
 inline double rsqrt(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a recíproca da raiz quadrada do argumento
+Retorna o recíproco da raiz quadrada do argumento
 
-## <a name="rsqrtf"></a><a name="rsqrtf"></a>rsqrtf
+## <a name="rsqrtf"></a><a name="rsqrtf"></a> rsqrtf
 
-Retorna a recíproca da raiz quadrada do argumento
+Retorna o recíproco da raiz quadrada do argumento
 
 ```cpp
 inline float rsqrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a recíproca da raiz quadrada do argumento
+Retorna o recíproco da raiz quadrada do argumento
 
-## <a name="scalb"></a><a name="scalb"></a>scalb
+## <a name="scalb"></a><a name="scalb"></a> scalb
 
-Multiplica _X por FLT_RADIX ao _Y do poder
+Multiplica _X por FLT_RADIX à potência _Y
 
 ```cpp
 inline float scalb(
@@ -2257,7 +2351,7 @@ inline double scalb(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2265,13 +2359,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retornos \* _X (FLT_RADIX ^ _Y)
+Retorna _X \* (FLT_RADIX ^ _Y)
 
-## <a name="scalbf"></a><a name="scalbf"></a>scalbf
+## <a name="scalbf"></a><a name="scalbf"></a> scalbf
 
-Multiplica _X por FLT_RADIX ao _Y do poder
+Multiplica _X por FLT_RADIX à potência _Y
 
 ```cpp
 inline float scalbf(
@@ -2279,7 +2373,7 @@ inline float scalbf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2287,13 +2381,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retornos \* _X (FLT_RADIX ^ _Y)
+Retorna _X \* (FLT_RADIX ^ _Y)
 
-## <a name="scalbn"></a><a name="scalbn"></a>scalbn
+## <a name="scalbn"></a><a name="scalbn"></a> scalbn
 
-Multiplica _X por FLT_RADIX ao _Y do poder
+Multiplica _X por FLT_RADIX à potência _Y
 
 ```cpp
 inline float scalbn(
@@ -2305,7 +2399,7 @@ inline double scalbn(
     int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2313,13 +2407,13 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor inteiro
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retornos \* _X (FLT_RADIX ^ _Y)
+Retorna _X \* (FLT_RADIX ^ _Y)
 
-## <a name="scalbnf"></a><a name="scalbnf"></a>scalbnf
+## <a name="scalbnf"></a><a name="scalbnf"></a> scalbnf
 
-Multiplica _X por FLT_RADIX ao _Y do poder
+Multiplica _X por FLT_RADIX à potência _Y
 
 ```cpp
 inline float scalbnf(
@@ -2327,7 +2421,7 @@ inline float scalbnf(
     int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2335,11 +2429,11 @@ Valor de ponto flutuante
 *_Y*<br/>
 Valor inteiro
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retornos \* _X (FLT_RADIX ^ _Y)
+Retorna _X \* (FLT_RADIX ^ _Y)
 
-## <a name="signbit"></a><a name="signbit"></a>signo
+## <a name="signbit"></a><a name="signbit"></a> signbit
 
 Determina se o sinal de _X é negativo
 
@@ -2349,16 +2443,16 @@ inline int signbit(float _X) restrict(amp);
 inline int signbit(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna um valor não zero se e somente se o sinal de _X for negativo
+Retorna um valor diferente de zero se e somente se o sinal de _X for negativo
 
-## <a name="signbitf"></a><a name="signbitf"></a>signbitf
+## <a name="signbitf"></a><a name="signbitf"></a> signbitf
 
 Determina se o sinal de _X é negativo
 
@@ -2366,16 +2460,16 @@ Determina se o sinal de _X é negativo
 inline int signbitf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna um valor não zero se e somente se o sinal de _X for negativo
+Retorna um valor diferente de zero se e somente se o sinal de _X for negativo
 
-## <a name="sin"></a><a name="sin"></a>Pecado
+## <a name="sin"></a><a name="sin"></a> Sin
 
 Calcula o valor do seno do argumento
 
@@ -2385,16 +2479,16 @@ inline float sin(float _X) restrict(amp);
 inline double sin(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o valor seno do argumento
+Retorna o valor do seno do argumento
 
-## <a name="sinf"></a><a name="sinf"></a>sinf
+## <a name="sinf"></a><a name="sinf"></a> sinf
 
 Calcula o valor do seno do argumento
 
@@ -2402,18 +2496,18 @@ Calcula o valor do seno do argumento
 inline float sinf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Devolve o valor seno do argumento
+Retorna o valor do seno do argumento
 
-## <a name="sincos"></a><a name="sincos"></a>sincos
+## <a name="sincos"></a><a name="sincos"></a> sincos
 
-Calcula valor do seno e do cosseno de _X
+Calcula o valor do seno e do cosseno de _X
 
 ```cpp
 inline void sincos(
@@ -2427,7 +2521,7 @@ inline void sincos(
     _Out_ double* _C) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2438,9 +2532,9 @@ Retorna o valor do seno de _X
 *_C*<br/>
 Retorna o valor do cosseno de _X
 
-## <a name="sincosf"></a><a name="sincosf"></a>sincosf
+## <a name="sincosf"></a><a name="sincosf"></a> sincosf
 
-Calcula valor do seno e do cosseno de _X
+Calcula o valor do seno e do cosseno de _X
 
 ```cpp
 inline void sincosf(
@@ -2449,7 +2543,7 @@ inline void sincosf(
     _Out_ float* _C) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2460,9 +2554,9 @@ Retorna o valor do seno de _X
 *_C*<br/>
 Retorna o valor do cosseno de _X
 
-## <a name="sinh"></a><a name="sinh"></a>Sinh
+## <a name="sinh"></a><a name="sinh"></a> sinh
 
-Calcula o valor do seno hiperbólico do argumento
+Calcula o valor seno hiperbólico do argumento
 
 ```cpp
 inline float sinh(float _X) restrict(amp);
@@ -2470,35 +2564,35 @@ inline float sinh(float _X) restrict(amp);
 inline double sinh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o valor seno hiperbólico do argumento
 
-## <a name="sinhf"></a><a name="sinhf"></a>sinhf
+## <a name="sinhf"></a><a name="sinhf"></a> sinhf
 
-Calcula o valor do seno hiperbólico do argumento
+Calcula o valor seno hiperbólico do argumento
 
 ```cpp
 inline float sinhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o valor seno hiperbólico do argumento
 
-## <a name="sinpi"></a><a name="sinpi"></a>sinpi
+## <a name="sinpi"></a><a name="sinpi"></a> sinpi
 
-Calcula o valor do \* seno de pi _X
+Calcula o valor do seno de PI \* _X
 
 ```cpp
 inline float sinpi(float _X) restrict(amp);
@@ -2506,35 +2600,35 @@ inline float sinpi(float _X) restrict(amp);
 inline double sinpi(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor seno \* de pi _X
+Retorna o valor do seno de PI \* _X
 
-## <a name="sinpif"></a><a name="sinpif"></a>sinpif
+## <a name="sinpif"></a><a name="sinpif"></a> sinpif
 
-Calcula o valor do \* seno de pi _X
+Calcula o valor do seno de PI \* _X
 
 ```cpp
 inline float sinpif(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor seno \* de pi _X
+Retorna o valor do seno de PI \* _X
 
-## <a name="sqrt"></a><a name="sqrt"></a>Sqrt
+## <a name="sqrt"></a><a name="sqrt"></a> sqrt
 
-Calcula a raiz de agachamento do argumento
+Calcula a raiz squre do argumento
 
 ```cpp
 inline float sqrt(float _X) restrict(amp);
@@ -2542,35 +2636,35 @@ inline float sqrt(float _X) restrict(amp);
 inline double sqrt(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a raiz de agachamento do argumento
+Retorna a raiz squre do argumento
 
-## <a name="sqrtf"></a><a name="sqrtf"></a>sqrtf
+## <a name="sqrtf"></a><a name="sqrtf"></a> sqrtf
 
-Calcula a raiz de agachamento do argumento
+Calcula a raiz squre do argumento
 
 ```cpp
 inline float sqrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna a raiz de agachamento do argumento
+Retorna a raiz squre do argumento
 
-## <a name="tan"></a><a name="tan"></a>Tan
+## <a name="tan"></a><a name="tan"></a> queimado
 
-Calcula o valor tangente do argumento
+Calcula o valor da tangente do argumento
 
 ```cpp
 inline float tan(float _X) restrict(amp);
@@ -2578,35 +2672,35 @@ inline float tan(float _X) restrict(amp);
 inline double tan(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor tangente do argumento
+Retorna o valor da tangente do argumento
 
-## <a name="tanf"></a><a name="tanf"></a>tanf
+## <a name="tanf"></a><a name="tanf"></a> tanf
 
-Calcula o valor tangente do argumento
+Calcula o valor da tangente do argumento
 
 ```cpp
 inline float tanf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor tangente do argumento
+Retorna o valor da tangente do argumento
 
-## <a name="tanh"></a><a name="tanh"></a>Tanh
+## <a name="tanh"></a><a name="tanh"></a> Tanh
 
-Calcula o valor da tangente hiperbólica do argumento
+Calcula o valor tangente hiperbólico do argumento
 
 ```cpp
 inline float tanh(float _X) restrict(amp);
@@ -2614,35 +2708,35 @@ inline float tanh(float _X) restrict(amp);
 inline double tanh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor da tangente hiperbólica do argumento
+Retorna o valor tangente hiperbólico do argumento
 
-## <a name="tanhf"></a><a name="tanhf"></a>tanhf
+## <a name="tanhf"></a><a name="tanhf"></a> tanhf
 
-Calcula o valor da tangente hiperbólica do argumento
+Calcula o valor tangente hiperbólico do argumento
 
 ```cpp
 inline float tanhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor da tangente hiperbólica do argumento
+Retorna o valor tangente hiperbólico do argumento
 
-## <a name="tanpi"></a><a name="tanpi"></a>tanpi
+## <a name="tanpi"></a><a name="tanpi"></a> tanpi
 
-Calcula o valor tangente de pi \* _X
+Calcula o valor da tangente de PI \* _X
 
 ```cpp
 inline float tanpi(float _X) restrict(amp);
@@ -2650,35 +2744,35 @@ inline float tanpi(float _X) restrict(amp);
 inline double tanpi(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor tangente de pi \* _X
+Retorna o valor da tangente de PI \* _X
 
-## <a name="tanpif"></a><a name="tanpif"></a>tanpif
+## <a name="tanpif"></a><a name="tanpif"></a> tanpif
 
-Calcula o valor tangente de pi \* _X
+Calcula o valor da tangente de PI \* _X
 
 ```cpp
 inline float tanpif(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o valor tangente de pi \* _X
+Retorna o valor da tangente de PI \* _X
 
-## <a name="tgamma"></a><a name="tgamma"></a>tgamma
+## <a name="tgamma"></a><a name="tgamma"></a> tgamma
 
-Calcula a função gama de _X
+Computa a função gama do _X
 
 ```cpp
 inline float tgamma(float _X) restrict(amp);
@@ -2686,35 +2780,35 @@ inline float tgamma(float _X) restrict(amp);
 inline double tgamma(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o resultado da função gama de _X
+Retorna o resultado da função gama do _X
 
-## <a name="tgammaf"></a><a name="tgammaf"></a>tgammaf
+## <a name="tgammaf"></a><a name="tgammaf"></a> tgammaf
 
-Calcula a função gama de _X
+Computa a função gama do _X
 
 ```cpp
 inline float tgammaf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o resultado da função gama de _X
+Retorna o resultado da função gama do _X
 
-## <a name="trunc"></a><a name="trunc"></a>Trunc
+## <a name="trunc"></a><a name="trunc"></a> trunc
 
-Trunca o argumento para o componente inteiro
+Trunca o argumento para o componente de inteiro
 
 ```cpp
 inline float trunc(float _X) restrict(amp);
@@ -2722,32 +2816,32 @@ inline float trunc(float _X) restrict(amp);
 inline double trunc(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o componente inteiro do argumento
+Retorna o componente de inteiro do argumento
 
-## <a name="truncf"></a><a name="truncf"></a>truncf
+## <a name="truncf"></a><a name="truncf"></a> truncf
 
-Trunca o argumento para o componente inteiro
+Trunca o argumento para o componente de inteiro
 
 ```cpp
 inline float truncf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Retorna o componente inteiro do argumento
+Retorna o componente de inteiro do argumento
 
 ## <a name="see-also"></a>Confira também
 
-[Namespace Concurrency::precise_math](concurrency-precise-math-namespace.md)
+[Simultaneidade: namespace de recise_math de:p](concurrency-precise-math-namespace.md)

@@ -1,17 +1,17 @@
 ---
-title: intervalo (C++ atributo com)
+title: Range (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214611"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839472"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,15 +25,15 @@ Especifica um intervalo de valores permitidos para argumentos ou campos cujos va
 
 ### <a name="parameters"></a>parâmetros
 
-*low*<br/>
+*pequena*<br/>
 O valor de intervalo baixo.
 
-*high*<br/>
+*elevada*<br/>
 O valor de intervalo alto.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **Range** C++ tem a mesma funcionalidade que o atributo MIDL do [intervalo](/windows/win32/Midl/range) .
+O atributo **intervalo** de C++ tem a mesma funcionalidade que o atributo MIDL de [intervalo](/windows/win32/Midl/range) .
 
 ## <a name="example"></a>Exemplo
 
@@ -53,20 +53,18 @@ __interface ICustom {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Método de interface, parâmetro de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [Atributos de membro de dados](data-member-attributes.md)

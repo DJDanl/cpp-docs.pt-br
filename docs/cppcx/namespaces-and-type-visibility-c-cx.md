@@ -2,12 +2,12 @@
 title: Namespaces e visibilidade do tipo (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: cbfbd8c27065121eb176d9a62662eab7e1f4271b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230968"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837795"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Namespaces e visibilidade do tipo (C++/CX)
 
@@ -28,15 +28,14 @@ Em um representante, uma interface ou uma classe ref privada, nenhum membro é e
 
 Use os modificadores de acesso a seguir para controlar a visibilidade dos metadados e a acessibilidade do código-fonte.
 
-||||
-|-|-|-|
-|Modificador|Significado|Emitido para metadados?|
-|particulares|A acessibilidade padrão. Mesmo significado que em C++ padrão.|Não|
-|protected|Mesmo significado que em C++ padrão, dentro do aplicativo ou componente e nos metadados.|Sim|
-|público|Mesmo significado que em C++ padrão.|Sim|
-|`public protected` - ou - `protected public`|Acessibilidade protegida nos metadados, público no aplicativo ou componente.|Sim|
-|`protected private` ou `private protected`|Não visível nos metadados; acessibilidade protegida no aplicativo ou componente.||
-|`internal` ou `private public`|O membro é público no aplicativo ou componente, mas não é visível nos metadados.|Não|
+| Modificador | Significado | Emitido para metadados? |
+|--|--|--|
+| **`private`** | A acessibilidade padrão. Mesmo significado que em C++ padrão. | Não |
+| **`protected`** | Mesmo significado que em C++ padrão, dentro do aplicativo ou componente e nos metadados. | Sim |
+| **`public`** | Mesmo significado que em C++ padrão. | Sim |
+| **`public protected`** or **`protected public`** | Acessibilidade protegida nos metadados, público no aplicativo ou componente. | Sim |
+| **`protected private`** or **`private protected`** | Não visível nos metadados; acessibilidade protegida no aplicativo ou componente. |  |
+| **`internal`** or **`private public`** | O membro é público no aplicativo ou componente, mas não é visível nos metadados. | Não |
 
 ## <a name="windows-runtime-namespaces"></a>Namespaces de Windows Runtime
 
@@ -46,13 +45,12 @@ A API do Windows consiste em tipos que são declarados nos namespaces Windows:: 
 
 O C++/CX define certos tipos nesses namespaces como parte da projeção do sistema de tipos de Windows Runtime.
 
-|||
-|-|-|
-|**Namespace**|**Descrição**|
-|padrão|Contém tipos numéricos e char16 internos. Esses tipos estão no escopo em cada namespace e uma **`using`** instrução nunca é necessária.|
-|Plataforma|Contém principalmente tipos públicos que correspondem a tipos de Windows Runtime como `Array<T>` , `String` , `Guid` e `Boolean` . Também inclui tipos auxiliares especializados, como `Platform::Agile<T>` e `Platform::Box<T>`.|
-|Platform::Collections|Contém as classes de coleção concreta que implementam as interfaces de coleção de Windows Runtime `IVector` , `IMap` , e assim por diante. Esses tipos são definidos em um arquivo de cabeçalho, collection.h, não em platform.winmd.|
-|Platform::Details|Contém tipos que são usados pelo compilador e não devem ser usados para consumo público.|
+| Namespace | Descrição |
+|--|--|
+| default | Contém tipos numéricos e char16 internos. Esses tipos estão no escopo em cada namespace e uma **`using`** instrução nunca é necessária. |
+| `Platform` | Contém principalmente tipos públicos que correspondem a tipos de Windows Runtime como `Array<T>` , `String` , `Guid` e `Boolean` . Também inclui tipos auxiliares especializados, como `Platform::Agile<T>` e `Platform::Box<T>`. |
+| `Platform::Collections` | Contém as classes de coleção concreta que implementam as interfaces de coleção de Windows Runtime `IVector` , `IMap` , e assim por diante. Esses tipos são definidos em um arquivo de cabeçalho, collection.h, não em platform.winmd. |
+| `Platform::Details` | Contém tipos que são usados pelo compilador e não devem ser usados para consumo público. |
 
 ## <a name="see-also"></a>Confira também
 

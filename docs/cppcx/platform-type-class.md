@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 2c73967d287ade86e2657af70592845d2cc2085e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185028"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846557"
 ---
 # <a name="platformtype-class"></a>Classe Platform::Type
 
@@ -33,23 +33,23 @@ A `Type` classe é útil em aplicativos que devem processar o processamento dire
 
 ## <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
-|[Método Type::GetTypeCode](#gettypecode)|Retorna um valor de [Enumeração Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) para o objeto.|
-|[Método Type:: ToString](#tostring)|Retorna o nome do tipo conforme especificado em seus metadados.|
+| Nome | Descrição |
+|--|--|
+| [Método Type::GetTypeCode](#gettypecode) | Retorna um valor de [Enumeração Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) para o objeto. |
+| [Método Type:: ToString](#tostring) | Retorna o nome do tipo conforme especificado em seus metadados. |
 
 ## <a name="public-properties"></a>Propriedades públicas
 
-|||
-|-|-|
-|[Tipo:: FullName](#fullname)|Retorna uma [Classe Platform::String](../cppcx/platform-string-class.md)^ que representa o nome totalmente qualificado do tipo e usa . (ponto) como um separador, não:: (dois-pontos duplo) — por exemplo, `MyNamespace.MyClass` .|
+| Nome | Descrição |
+|--|--|
+| [Tipo:: FullName](#fullname) | Retorna uma [Classe Platform::String](../cppcx/platform-string-class.md)^ que representa o nome totalmente qualificado do tipo e usa . (ponto) como um separador, não:: (dois-pontos duplo) — por exemplo, `MyNamespace.MyClass` . |
 
 ## <a name="conversion-operators"></a>Operadores de conversão
 
-|||
-|-|-|
-|[Tipo de operador ^](../cppcx/operator-type-hat.md)|Permite a conversão de `Windows::UI::Xaml::Interop::TypeName` em `Platform::Type`.|
-|[operador Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Permite a conversão de `Platform::Type` em `Windows::UI::Xaml::Interop::TypeName`.|
+| Nome | Descrição |
+|--|--|
+| [Tipo de operador ^](../cppcx/operator-type-hat.md) | Permite a conversão de `Windows::UI::Xaml::Interop::TypeName` em `Platform::Type`. |
+| [operador Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md) | Permite a conversão de `Platform::Type` em `Windows::UI::Xaml::Interop::TypeName`. |
 
 ### <a name="requirements"></a>Requisitos
 
@@ -61,7 +61,7 @@ A `Type` classe é útil em aplicativos que devem processar o processamento dire
 
 **Metadados:** Platform. winmd
 
-## <a name="typefullname-property"></a><a name="fullname"></a>Propriedade Type:: FullName
+## <a name="typefullname-property"></a><a name="fullname"></a> Propriedade Type:: FullName
 
 Recupera o nome totalmente qualificado do tipo atual no formulário `Namespace.Type` .
 
@@ -88,7 +88,7 @@ MainPage::MainPage()
 }
 ```
 
-## <a name="typegettypecode-method"></a><a name="gettypecode"></a>Método Type:: GetTypeCode
+## <a name="typegettypecode-method"></a><a name="gettypecode"></a> Método Type:: GetTypeCode
 
 Recupera uma categoria de tipo numérico de tipos internos.
 
@@ -106,7 +106,7 @@ Um dos valores enumerados de Platform::TypeCode.
 
 O equivalente do método de membro GetTypeCode () é a **`typeid`** propriedade.
 
-## <a name="typetostring-method"></a><a name="tostring"></a>Método Type:: ToString
+## <a name="typetostring-method"></a><a name="tostring"></a> Método Type:: ToString
 
 Recupera o nome do tipo.
 

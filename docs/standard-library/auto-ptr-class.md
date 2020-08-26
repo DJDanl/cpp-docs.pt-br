@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 1f2c8cce234910fbf69a35c8f8ef2fb0fe2a41c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203865"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834772"
 ---
 # <a name="auto_ptr-class"></a>Classe auto_ptr
 
@@ -71,19 +71,19 @@ Você pode passar um objeto `auto_ptr<Type>` por valor como um argumento para um
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[auto_ptr](#auto_ptr)|O construtor para objetos do tipo `auto_ptr`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[element_type](#element_type)|O tipo é um sinônimo do parâmetro de modelo `Type`.|
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[get](#get)|A função membro retorna o ponteiro armazenado `myptr`.|
 |[liberar](#release)|O membro substitui o ponteiro armazenado `myptr` por um ponteiro nulo e retorna o ponteiro armazenado anteriormente.|
@@ -91,7 +91,7 @@ Você pode passar um objeto `auto_ptr<Type>` por valor como um argumento para um
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[operador =](#op_eq)|Um operador de atribuição que transfere a propriedade de um objeto `auto_ptr` para outro.|
 |[operador](#op_star)|O operador de desreferenciamento para objetos do tipo `auto_ptr`.|
@@ -99,7 +99,7 @@ Você pode passar um objeto `auto_ptr<Type>` por valor como um argumento para um
 |[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Converte de um tipo de `auto_ptr` para outro tipo de `auto_ptr`.|
 |[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Converte de um `auto_ptr` para um `auto_ptr_ref`.|
 
-### <a name="auto_ptr"></a><a name="auto_ptr"></a>auto_ptr
+### <a name="auto_ptr"></a><a name="auto_ptr"></a> auto_ptr
 
 O construtor para objetos do tipo `auto_ptr`.
 
@@ -126,7 +126,7 @@ O `auto_ptr` objeto a ser copiada pelo construtor.
 
 O primeiro Construtor armazena *PTR* no `myptr` , o ponteiro armazenado para o objeto alocado. O segundo Construtor transfere a propriedade do ponteiro armazenado à *direita*, armazenando o *direito*. [lançamento](#release) no `myptr` .
 
-O terceiro construtor se comporta da mesma forma que o segundo, exceto pelo fato de que ele armazena `right` . `ref`. `release`em `myptr` , em que `ref` é a referência armazenada no `right` .
+O terceiro construtor se comporta da mesma forma que o segundo, exceto pelo fato de que ele armazena `right` . `ref`. `release` em `myptr` , em que `ref` é a referência armazenada no `right` .
 
 O construtor de modelo se comporta da mesma forma que o segundo construtor, desde que um ponteiro `Other` possa ser convertido implicitamente em um ponteiro para `Type` .
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 O tipo é um sinônimo do parâmetro de modelo `Type`.
 
@@ -197,7 +197,7 @@ O tipo é um sinônimo do parâmetro de modelo `Type`.
 typedef Type element  _type;
 ```
 
-### <a name="get"></a><a name="get"></a>Obter
+### <a name="get"></a><a name="get"></a> Obter
 
 A função membro retorna o ponteiro armazenado `myptr`.
 
@@ -205,7 +205,7 @@ A função membro retorna o ponteiro armazenado `myptr`.
 Type *get() const throw();
 ```
 
-#### <a name="return-value"></a>Valor retornado
+#### <a name="return-value"></a>Valor Retornado
 
 O ponteiro armazenado `myptr` .
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>operador =
+### <a name="operator"></a><a name="op_eq"></a> operador =
 
 Um operador de atribuição que transfere a propriedade de um objeto `auto_ptr` para outro.
 
@@ -272,7 +272,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 *Certo*\
 Um objeto do tipo `auto_ptr`.
 
-#### <a name="return-value"></a>Valor retornado
+#### <a name="return-value"></a>Valor Retornado
 
 Referência a um objeto do tipo `auto_ptr<Type>`.
 
@@ -284,7 +284,7 @@ A atribuição avalia a expressão `delete myptr` , mas somente se o ponteiro ar
 
 Para obter um exemplo do uso do operador member, consulte [auto_ptr](#auto_ptr).
 
-### <a name="operator"></a><a name="op_star"></a>operador
+### <a name="operator"></a><a name="op_star"></a> operador
 
 O operador de desreferenciamento para objetos do tipo `auto_ptr`.
 
@@ -292,7 +292,7 @@ O operador de desreferenciamento para objetos do tipo `auto_ptr`.
 Type& operator*() const throw();
 ```
 
-#### <a name="return-value"></a>Valor retornado
+#### <a name="return-value"></a>Valor Retornado
 
 Uma referência a um objeto do tipo `Type` que o ponteiro possui.
 
@@ -304,7 +304,7 @@ O operador de indireção retorna `*`[get](#get). Portanto, o ponteiro armazenad
 
 Para obter um exemplo de como usar a função de membro, consulte [auto_ptr](#auto_ptr).
 
-### <a name="operator-gt"></a><a name="op_arrow"></a>operador&gt;
+### <a name="operator-gt"></a><a name="op_arrow"></a> operador&gt;
 
 O operador para permitir o acesso de membro.
 
@@ -312,7 +312,7 @@ O operador para permitir o acesso de membro.
 Type * operator->() const throw();
 ```
 
-#### <a name="return-value"></a>Valor retornado
+#### <a name="return-value"></a>Valor Retornado
 
 Um membro do objeto que `auto_ptr` possui.
 
@@ -324,7 +324,7 @@ O operador Selection retorna [Get](#get) `( )` , de modo que o membro da express
 
 Para obter um exemplo de como usar a função de membro, consulte [auto_ptr](#auto_ptr).
 
-### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a>operador auto_ptr &lt; outros&gt;
+### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a> operador auto_ptr &lt; outros&gt;
 
 Converte de um tipo de `auto_ptr` para outro tipo de `auto_ptr`.
 
@@ -333,7 +333,7 @@ template <class Other>
 operator auto _ptr<Other>() throw();
 ```
 
-#### <a name="return-value"></a>Valor retornado
+#### <a name="return-value"></a>Valor Retornado
 
 O operador Type Cast retorna `auto_ptr` \< **Other**> ( ** \* isso**).
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a>operador auto_ptr_ref &lt; outros&gt;
+### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a> operador auto_ptr_ref &lt; outros&gt;
 
 Converte de um `auto_ptr` para um `auto_ptr_ref`.
 
@@ -363,7 +363,7 @@ template <class Other>
 operator auto _ptr  _ref<Other>() throw();
 ```
 
-#### <a name="return-value"></a>Valor retornado
+#### <a name="return-value"></a>Valor Retornado
 
 O operador Type Cast retorna **auto_ptr_ref** \< **Other**> ( ** \* this**).
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a><a name="release"></a>liberar
+### <a name="release"></a><a name="release"></a> liberar
 
 O membro substitui o ponteiro armazenado `myptr` por um ponteiro nulo e retorna o ponteiro armazenado anteriormente.
 
@@ -423,7 +423,7 @@ O membro substitui o ponteiro armazenado `myptr` por um ponteiro nulo e retorna 
 Type *release() throw();
 ```
 
-#### <a name="return-value"></a>Valor retornado
+#### <a name="return-value"></a>Valor Retornado
 
 O ponteiro armazenado anteriormente.
 
@@ -477,7 +477,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a><a name="reset"></a>definido
+### <a name="reset"></a><a name="reset"></a> definido
 
 A função membro avalia a expressão `delete myptr` , mas somente se o valor do ponteiro armazenado `myptr` for alterado como resultado de uma chamada de função. Ele substitui o ponteiro armazenado por `ptr`.
 

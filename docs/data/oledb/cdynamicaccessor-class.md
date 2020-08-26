@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 6182d66b49647758bf17ab160d536e39b97b8c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ecbc332fcdb7fee8f748a02b2f111d4d1abf3c0b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216473"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838198"
 ---
 # <a name="cdynamicaccessor-class"></a>Classe CDynamicAccessor
 
@@ -149,7 +149,7 @@ class CDynamicAccessor : public CAccessorBase
 
 ### <a name="methods"></a>Métodos
 
-|||
+| Nome | Descrição |
 |-|-|
 |[AddBindEntry](#addbindentry)|Adiciona uma entrada de associação às colunas de saída ao substituir o acessador padrão.|
 |[CDynamicAccessor](#cdynamicaccessor)|Cria uma instância e inicializa o `CDynamicAccessor` objeto.|
@@ -180,7 +180,7 @@ As informações de coluna são armazenadas em um buffer que é criado e gerenci
 
 Para obter uma discussão e exemplos de como usar as classes de acessador dinâmico, consulte [usando acessadores dinâmicos](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="cdynamicaccessoraddbindentry"></a><a name="addbindentry"></a>CDynamicAccessor::AddBindEntry
+## <a name="cdynamicaccessoraddbindentry"></a><a name="addbindentry"></a> CDynamicAccessor::AddBindEntry
 
 Adiciona uma entrada de associação às colunas de saída.
 
@@ -195,7 +195,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 *detalhes*<br/>
 no Uma `DBCOLUMNINFO` estrutura que contém informações de coluna. Consulte "estruturas DBCOLUMNINFO" em [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -203,7 +203,7 @@ Um dos valores de HRESULT padrão.
 
 Use esse método ao substituir o acessador padrão criado com `CDynamicAccessor` (consulte [como posso buscar dados?](../../data/oledb/fetching-data.md)).
 
-## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a>CDynamicAccessor::CDynamicAccessor
+## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a> CDynamicAccessor::CDynamicAccessor
 
 Cria uma instância e inicializa o `CDynamicAccessor` objeto.
 
@@ -228,7 +228,7 @@ Se você usar o construtor para inicializar o `CDynamicAccessor` objeto, será p
 
 Você também pode especificar como o `CDynamicAccessor` trata os dados da coluna que se qualificam como dados de blob: ele pode manipular dados de BLOB da maneira padrão; ele pode ignorar (não associa) dados de BLOB; ou pode associar dados de blob na memória alocada pelo provedor.
 
-## <a name="cdynamicaccessorclose"></a><a name="close"></a>CDynamicAccessor:: fechar
+## <a name="cdynamicaccessorclose"></a><a name="close"></a> CDynamicAccessor:: fechar
 
 Desassocia todas as colunas, libera a memória alocada e libera o ponteiro de interface [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) na classe.
 
@@ -238,7 +238,7 @@ Desassocia todas as colunas, libera a memória alocada e libera o ponteiro de in
 void Close() throw();
 ```
 
-## <a name="cdynamicaccessorgetblobhandling"></a><a name="getblobhandling"></a>CDynamicAccessor::GetBlobHandling
+## <a name="cdynamicaccessorgetblobhandling"></a><a name="getblobhandling"></a> CDynamicAccessor::GetBlobHandling
 
 Recupera o valor de manipulação de BLOB para a linha atual.
 
@@ -252,7 +252,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 Retorna o valor de manipulação de BLOB *eBlobHandling* conforme definido por [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).
 
-## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a>CDynamicAccessor::GetBlobSizeLimit
+## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a> CDynamicAccessor::GetBlobSizeLimit
 
 Recupera o tamanho máximo do BLOB em bytes.
 
@@ -266,7 +266,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 Retorna o valor de manipulação de BLOB *nBlobSize* conforme definido por [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
 
-## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a>CDynamicAccessor:: GetBookmark
+## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a> CDynamicAccessor:: GetBookmark
 
 Recupera o indicador para a linha atual.
 
@@ -281,7 +281,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 *pBookmark*<br/>
 fora Um ponteiro para o objeto [CBookmark](../../data/oledb/cbookmark-class.md) .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -289,7 +289,7 @@ Um dos valores de HRESULT padrão.
 
 Você precisa definir `DBPROP_IRowsetLocate` como VARIANT_TRUE para recuperar um indicador.
 
-## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a>CDynamicAccessor:: GetColumnCount
+## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a> CDynamicAccessor:: GetColumnCount
 
 Recupera o número de colunas.
 
@@ -303,7 +303,7 @@ DBORDINAL GetColumnCount() const throw();
 
 O número de colunas recuperadas.
 
-## <a name="cdynamicaccessorgetcolumnflags"></a><a name="getcolumnflags"></a>CDynamicAccessor::GetColumnFlags
+## <a name="cdynamicaccessorgetcolumnflags"></a><a name="getcolumnflags"></a> CDynamicAccessor::GetColumnFlags
 
 Recupera as características da coluna.
 
@@ -322,7 +322,7 @@ no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se r
 *pFlags*<br/>
 fora Um ponteiro para uma bitmask que descreve as características da coluna. Consulte "DBCOLUMNFLAGS enumerated Type" em [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna **`true`** se as características da coluna forem recuperadas com êxito. Caso contrário, retornará **`false`** .
 
@@ -330,7 +330,7 @@ Retorna **`true`** se as características da coluna forem recuperadas com êxito
 
 O número da coluna é deslocado de um. A coluna zero é um caso especial; é o indicador, se disponível.
 
-## <a name="cdynamicaccessorgetcolumninfo"></a><a name="getcolumninfo"></a>CDynamicAccessor:: GetColumnInfo
+## <a name="cdynamicaccessorgetcolumninfo"></a><a name="getcolumninfo"></a> CDynamicAccessor:: GetColumnInfo
 
 Retorna os metadados de coluna necessários para a maioria dos consumidores.
 
@@ -357,7 +357,7 @@ fora Um ponteiro para a memória na qual retornar uma matriz de `DBCOLUMNINFO` e
 *ppStringsBuffer*<br/>
 fora Um ponteiro para a memória no qual retornar um ponteiro para o armazenamento para todos os valores de cadeia de caracteres (nomes usados dentro de *columnid* ou *pwszName*) em um único bloco de alocação.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -365,7 +365,7 @@ Um dos valores de HRESULT padrão.
 
 Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador de OLE DB* para obter informações sobre os tipos de dados `DBORDINAL` , `DBCOLUMNINFO` e `OLECHAR` .
 
-## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a>CDynamicAccessor:: getColumnName
+## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a> CDynamicAccessor:: getColumnName
 
 Recupera o nome da coluna especificada.
 
@@ -380,11 +380,11 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O nome da coluna especificada.
 
-## <a name="cdynamicaccessorgetcolumntype"></a><a name="getcolumntype"></a>CDynamicAccessor:: getColumnType
+## <a name="cdynamicaccessorgetcolumntype"></a><a name="getcolumntype"></a> CDynamicAccessor:: getColumnType
 
 Recupera o tipo de dados de uma coluna especificada.
 
@@ -403,11 +403,11 @@ no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se r
 *pType*<br/>
 fora Um ponteiro para o tipo de dados da coluna especificada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna **`true`** em caso de êxito ou **`false`** falha.
 
-## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a>CDynamicAccessor::GetLength
+## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a> CDynamicAccessor::GetLength
 
 Recupera o comprimento da coluna especificada.
 
@@ -435,7 +435,7 @@ no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 *pLength*<br/>
 fora Um ponteiro para o inteiro que contém o comprimento da coluna em bytes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna **`true`** se a coluna especificada é encontrada. Caso contrário, essa função retornará **`false`** .
 
@@ -443,7 +443,7 @@ Retorna **`true`** se a coluna especificada é encontrada. Caso contrário, essa
 
 A primeira substituição usa o número da coluna, e a segunda e terceira substitui o nome da coluna no formato ANSI ou Unicode, respectivamente.
 
-## <a name="cdynamicaccessorgetordinal"></a><a name="getordinal"></a>CDynamicAccessor:: GetOrdinal
+## <a name="cdynamicaccessorgetordinal"></a><a name="getordinal"></a> CDynamicAccessor:: GetOrdinal
 
 Recupera o número da coluna de acordo com um nome de coluna.
 
@@ -465,11 +465,11 @@ no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 *pOrdinal*<br/>
 fora Um ponteiro para o número da coluna.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna **`true`** se uma coluna com o nome especificado é encontrada. Caso contrário, essa função retornará **`false`** .
 
-## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a>CDynamicAccessor:: GetStatus
+## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a> CDynamicAccessor:: GetStatus
 
 Recupera o status da coluna especificada.
 
@@ -497,11 +497,11 @@ no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 *pStatus*<br/>
 fora Um ponteiro para a variável que contém o status da coluna. Consulte [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador de OLE DB* para obter mais informações.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna **`true`** se a coluna especificada é encontrada. Caso contrário, essa função retornará **`false`** .
 
-## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a>CDynamicAccessor:: GetValue
+## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a> CDynamicAccessor:: GetValue
 
 Recupera os dados de uma coluna especificada.
 
@@ -527,7 +527,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 #### <a name="parameters"></a>parâmetros
 
 *ctype*<br/>
-no Um parâmetro de modelo que manipula qualquer tipo de dados, exceto os tipos de cadeia de caracteres ( `CHAR*` , `WCHAR*` ), que exigem tratamento especial. `GetValue`usa o tipo de dados apropriado com base no que você especificar aqui.
+no Um parâmetro de modelo que manipula qualquer tipo de dados, exceto os tipos de cadeia de caracteres ( `CHAR*` , `WCHAR*` ), que exigem tratamento especial. `GetValue` usa o tipo de dados apropriado com base no que você especificar aqui.
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -538,7 +538,7 @@ no O nome da coluna.
 *pData*<br/>
 fora O ponteiro para o conteúdo da coluna especificada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se você quiser passar dados de cadeia de caracteres, use as versões não modeladas do `GetValue` . As versões não modeladas desse método retornam **`void*`** , que aponta para a parte do buffer que contém os dados de coluna especificados. Retornará NULL se a coluna não for encontrada.
 
@@ -550,7 +550,7 @@ Use as versões não modeladas para retornar colunas que contêm cadeias de cara
 
 No modo de depuração, você receberá uma asserção se o tamanho de *pData* for diferente do tamanho da coluna para a qual ele aponta.
 
-## <a name="cdynamicaccessorsetblobhandling"></a><a name="setblobhandling"></a>CDynamicAccessor::SetBlobHandling
+## <a name="cdynamicaccessorsetblobhandling"></a><a name="setblobhandling"></a> CDynamicAccessor::SetBlobHandling
 
 Define o valor de manipulação de BLOB para a linha atual.
 
@@ -577,7 +577,7 @@ Você deve chamar `SetBlobHandling` antes de chamar `Open`.
 
 O método de construtor [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) define o valor de manipulação de BLOB para DBBLOBHANDLING_DEFAULT.
 
-## <a name="cdynamicaccessorsetblobsizelimit"></a><a name="setblobsizelimit"></a>CDynamicAccessor::SetBlobSizeLimit
+## <a name="cdynamicaccessorsetblobsizelimit"></a><a name="setblobsizelimit"></a> CDynamicAccessor::SetBlobSizeLimit
 
 Define o tamanho máximo do BLOB em bytes.
 
@@ -598,7 +598,7 @@ Define o tamanho máximo do BLOB em bytes; os dados de coluna maiores que esse v
 
 O método do construtor [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) define o tamanho máximo do blob para um valor padrão de 8.000 bytes.
 
-## <a name="cdynamicaccessorsetlength"></a><a name="setlength"></a>CDynamicAccessor:: SetLength
+## <a name="cdynamicaccessorsetlength"></a><a name="setlength"></a> CDynamicAccessor:: SetLength
 
 Define o comprimento da coluna especificada.
 
@@ -626,11 +626,11 @@ no O comprimento da coluna em bytes.
 *pColumnName*<br/>
 no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna **`true`** se o comprimento da coluna especificada é definido com êxito. Caso contrário, essa função retornará **`false`** .
 
-## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a>CDynamicAccessor:: SetStatus
+## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a> CDynamicAccessor:: SetStatus
 
 Define o status da coluna especificada.
 
@@ -658,11 +658,11 @@ no O status da coluna. Consulte [DBSTATUS](/previous-versions/windows/desktop/ms
 *pColumnName*<br/>
 no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna **`true`** se o status da coluna especificada é definido com êxito. Caso contrário, essa função retornará **`false`** .
 
-## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a>CDynamicAccessor:: SetValue
+## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a> CDynamicAccessor:: SetValue
 
 Armazena dados em uma coluna especificada.
 
@@ -688,7 +688,7 @@ bool SetValue(
 #### <a name="parameters"></a>parâmetros
 
 *ctype*<br/>
-no Um parâmetro de modelo que manipula qualquer tipo de dados, exceto os tipos de cadeia de caracteres ( `CHAR*` , `WCHAR*` ), que exigem tratamento especial. `GetValue`usa o tipo de dados apropriado com base no que você especificar aqui.
+no Um parâmetro de modelo que manipula qualquer tipo de dados, exceto os tipos de cadeia de caracteres ( `CHAR*` , `WCHAR*` ), que exigem tratamento especial. `GetValue` usa o tipo de dados apropriado com base no que você especificar aqui.
 
 *pColumnName*<br/>
 no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
@@ -699,7 +699,7 @@ no O ponteiro para a memória que contém os dados.
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se você quiser definir dados de cadeia de caracteres, use as versões não modeladas do `GetValue` . As versões não modeladas desse método retornam **`void*`** , que aponta para a parte do buffer que contém os dados de coluna especificados. Retornará NULL se a coluna não for encontrada.
 

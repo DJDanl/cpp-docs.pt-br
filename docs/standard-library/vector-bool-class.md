@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: b91167a331423ccd43ba2158c1a9d8bfce666361
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562436"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845413"
 ---
 # <a name="vectorltboolgt-class"></a>Classe vector&lt;bool&gt;
 
@@ -56,7 +56,7 @@ As operações que lidam com o **`bool`** tipo correspondem aos valores no armaz
 
 ### <a name="proxy-class"></a>Classe proxy
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe de referência de vetor \<bool>](#reference_class)|Uma classe que atua como um proxy para simular o comportamento de `bool&` e cujos objetos podem fornecer referências a elementos (bits únicos) em um objeto `vector<bool>`.|
 
@@ -134,12 +134,12 @@ vector<bool>::reference operator[](size_type Pos);
 vector&<bool&>::const_reference operator[](size_type Pos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Pos*\
 A posição do elemento `vector<bool>`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um objeto [vector \<bool> :: Reference](#reference_class) ou [vector \<bool> :: const_reference](#const_reference) que contém o valor do elemento indexado.
 
@@ -258,7 +258,7 @@ Fornece uma conversão implícita de `vector<bool>::reference` para **`bool`** .
 operator bool() const;
 ```
 
-#### <a name="return-value"></a>Valor retornado
+#### <a name="return-value"></a>Valor Retornado
 
 O valor booliano do elemento do objeto de vetor \<bool> .
 
@@ -275,7 +275,7 @@ reference& operator=(const reference& Right);
 reference& operator=(bool Val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Certo*\
 A referência de elemento cujo valor deve ser atribuído ao bit.
@@ -364,7 +364,7 @@ static void swap(
     reference Right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Mantida*\
 O elemento a ser trocado pelo elemento *à direita* .

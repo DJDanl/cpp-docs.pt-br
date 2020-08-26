@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: eb782b0d16c4bc826da4ea9291756f34ca0eaf29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215407"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840135"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -34,7 +34,7 @@ Esses modelos e funções de classe são permitidos latitude incomum no interess
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[ABS](../standard-library/valarray-functions.md#abs)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao valor absoluto dos elementos da valarray de entrada.|
 |[acos](../standard-library/valarray-functions.md#acos)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao arco cosseno dos elementos da valarray de entrada.|
@@ -58,30 +58,30 @@ Esses modelos e funções de classe são permitidos latitude incomum no interess
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[operador! =](../standard-library/valarray-operators.md#op_neq)|Testa se os elementos correspondentes de duas valarrays de tamanhos iguais são diferentes ou se todos os elementos de uma valarray são diferentes de um valor especificado do tipo de elemento da valarray.|
 |[operador](../standard-library/valarray-operators.md#op_mod)|Obtém o resto da divisão dos elementos correspondentes de duas valarrays de tamanhos iguais, da divisão de uma valarray por um valor especificado do tipo de elemento da valarray ou da divisão de um valor especificado por uma valarray.|
-|[&do operador](../standard-library/valarray-operators.md#op_amp)|Obtém o `AND` bit a bit entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|
-|[&&do operador](../standard-library/valarray-operators.md#op_amp_amp)|Obtém o `AND` lógico entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento da valarray.|
-|[>do operador](../standard-library/valarray-operators.md#op_gt)|Testa se os elementos de uma valarray são maiores que os elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores ou menores que um valor especificado do tipo de elemento da valarray.|
+|[&do operador ](../standard-library/valarray-operators.md#op_amp)|Obtém o `AND` bit a bit entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|
+|[&&do operador ](../standard-library/valarray-operators.md#op_amp_amp)|Obtém o `AND` lógico entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento da valarray.|
+|[>do operador ](../standard-library/valarray-operators.md#op_gt)|Testa se os elementos de uma valarray são maiores que os elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores ou menores que um valor especificado do tipo de elemento da valarray.|
 |[>do operador =](../standard-library/valarray-operators.md#op_gt_eq)|Testa se os elementos de uma valarray são maiores ou iguais aos elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores, menores ou iguais a um valor especificado.|
-|[>>do operador](../standard-library/valarray-operators.md#op_gt_gt)|Desloca para a direita os bits de cada elemento de uma valarray por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.|
-|[<do operador](../standard-library/valarray-operators.md#op_lt)|Testa se os elementos de uma valarray são menores que os elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores ou menores que um valor especificado.|
+|[>>do operador ](../standard-library/valarray-operators.md#op_gt_gt)|Desloca para a direita os bits de cada elemento de uma valarray por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.|
+|[<do operador ](../standard-library/valarray-operators.md#op_lt)|Testa se os elementos de uma valarray são menores que os elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores ou menores que um valor especificado.|
 |[<do operador =](../standard-library/valarray-operators.md#op_lt_eq)|Testa se os elementos de uma valarray são menores ou iguais aos elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores, menores ou iguais a um valor especificado.|
-|[<<do operador](../standard-library/valarray-operators.md#op_lt_lt)|Desloca para a esquerda os bits de cada elemento de uma valarray por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.|
+|[<<do operador ](../standard-library/valarray-operators.md#op_lt_lt)|Desloca para a esquerda os bits de cada elemento de uma valarray por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.|
 |[operador](../standard-library/valarray-operators.md#op_star)|Obtém o produto elemento a elemento entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray de um valor especificado do tipo de elemento da valarray.|
 |[operador +](../standard-library/valarray-operators.md#op_add)|Obtém a soma elemento a elemento entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray de um valor especificado do tipo de elemento da valarray.|
 |[operador](../standard-library/valarray-operators.md#operator-)|Obtém a subtração elemento a elemento entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray de um valor especificado do tipo de elemento da valarray.|
 |[operador](../standard-library/valarray-operators.md#op_div)|Obtém o quociente elemento a elemento entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray de um valor especificado do tipo de elemento da valarray.|
 |[operador = =](../standard-library/valarray-operators.md#op_eq_eq)|Testa se os elementos correspondentes de duas valarrays de tamanhos iguais são iguais ou se todos os elementos de uma valarray são iguais a um valor especificado do tipo de elemento da valarray.|
 |[operador ^](../standard-library/valarray-operators.md#op_xor)|Obtém o bit a bit exclusivo `OR` entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|
-|[&#124;do operador](../standard-library/valarray-operators.md#op_or)|Obtém o `OR` bit a bit entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|
-|[&#124;&#124;do operador](../standard-library/valarray-operators.md#op_lor)|Obtém o `OR` lógico entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento da valarray.|
+|[&#124;do operador ](../standard-library/valarray-operators.md#op_or)|Obtém o `OR` bit a bit entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|
+|[&#124;&#124;do operador ](../standard-library/valarray-operators.md#op_lor)|Obtém o `OR` lógico entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento da valarray.|
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe GSlice](../standard-library/gslice-class.md)|Uma classe de utilitário para valarray usada para definir fatias multidimensionais de um valarray.|
 |[Classe gslice_array](../standard-library/gslice-array-class.md)|Um modelo de classe auxiliar interno que dá suporte a objetos de fatia geral, fornecendo operações entre as matrizes de subconjuntos definidas pela fatia geral de um valarray.|
@@ -93,7 +93,7 @@ Esses modelos e funções de classe são permitidos latitude incomum no interess
 
 ### <a name="specializations"></a>Especializações
 
-|||
+|Nome|Descrição|
 |-|-|
 |[\<bool>classe valarray](../standard-library/valarray-bool-class.md)|Uma versão especializada do modelo de classe valarray \<**Type**> para elementos do tipo **`bool`** .|
 

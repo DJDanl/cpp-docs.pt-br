@@ -20,25 +20,35 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b8828018040b8b6b7b13c88c08599333dc1124d0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944537"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839368"
 ---
 # <a name="_ismbb-routines"></a>Rotinas _ismbb
 
 Testa o valor inteiro dado `c` para uma determinada condição, usando a localidade atual ou uma categoria de estado de conversão LC_CTYPE especificada.
 
-|||
-|-|-|
-|[_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|[_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|
-|[_ismbbalpha, _ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|
-|[_ismbbblank, _ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|
-|[_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|
-|[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|
-|[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|
+:::row:::
+   :::column span="":::
+      [_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)\
+      [_ismbbalpha, _ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)\
+      [_ismbbblank, _ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)\
+      [_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)\
+      [_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)\
+      [_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)\
+   :::column-end:::
+   :::column span="":::
+      [_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)\
+      [_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)\
+      [_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)\
+      [_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)\
+      [_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)\
+      [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)\
+   :::column-end:::
+:::row-end:::
 
 ## <a name="remarks"></a>Comentários
 
@@ -56,7 +66,7 @@ As rotinas na família `_ismbb` testam o inteiro dado `c` da seguinte maneira.
 |[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Mesmo que `_ismbbprint`, mas `_ismbbgraph` não inclui o caractere de espaço (0x20).|
 |[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Símbolo de texto não ASCII que não seja de pontuação. Por exemplo, na página de código 932 somente, `_ismbbkalnum` testa se é katakana alfanumérico.|
 |[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1 – 0xDF). Específico para a página de código 932.|
-|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Texto não ASCII ou símbolo de pontuação não ASCII. Por exemplo, somente na página de código 932, `_ismbbkprint` testa se há pontuação katakana ou caracteres alfanuméricos katakana (intervalo: 0xA1 a 0xDF).|
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Texto não ASCII ou símbolo de pontuação não ASCII. Por exemplo, somente na página de código 932, `_ismbbkprint` testa se há pontuação katakana ou caracteres alfanuméricos katakana (intervalo: 0xA1 – 0xDF).|
 |[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Pontuação não ASCII. Por exemplo, na página de código 932 somente, `_ismbbkpunct` testa se é uma pontuação katakana.|
 |[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Byte inicial do caractere multibyte. Por exemplo, somente na página de código 932, os intervalos válidos são 0x81 a 0x9F e 0xE0 a 0xFC.|
 |[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint** inclui o caractere de espaço (0x20).|
@@ -65,7 +75,7 @@ As rotinas na família `_ismbb` testam o inteiro dado `c` da seguinte maneira.
 
 A tabela a seguir mostra os valores ORed que compõem as condições de teste para essas rotinas. As constantes de manifesto `_BLANK`, `_DIGIT`, `_LOWER`, `_PUNCT` e `_UPPER` são definidas em Ctype.h.
 
-|Rotina|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Não<br /><br /> ASCII<br /><br /> texto|Não<br /><br /> ASCII<br /><br /> punct|
+|Rotina|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Não<br /><br /> ASCII<br /><br /> text|Não<br /><br /> ASCII<br /><br /> punct|
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|
 |`_ismbbalnum`|—|x|x|—|x|x|—|
 |`_ismbbalpha`|—|—|x|—|x|x|—|
@@ -79,9 +89,9 @@ A tabela a seguir mostra os valores ORed que compõem as condições de teste pa
 
 As rotinas `_ismbb` são implementadas como funções e macros. Para obter informações sobre como escolher a implementação, consulte [Recomendações para escolher entre funções e macros](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Classificação de byte](../c-runtime-library/byte-classification.md)<br/>
-[Rotinas is, isw](../c-runtime-library/is-isw-routines.md)<br/>
+[Classificação de bytes](../c-runtime-library/byte-classification.md)<br/>
+[é, rotinas de isw](../c-runtime-library/is-isw-routines.md)<br/>
 [_mbbtombc, _mbbtombc_l](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)<br/>
 [_mbctombb, _mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)

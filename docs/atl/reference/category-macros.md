@@ -7,18 +7,18 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 2b677ac6e7dac4eed5fc920ece064d94119ceb97
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 0db32c9550cd76fbc8e1f6776b8ecf4cceffebd7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168430"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833888"
 ---
 # <a name="category-macros"></a>Macros de categoria
 
 Essas macros definem mapas de categorias.
 
-|||
+|Macro|Descrição|
 |-|-|
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Marca o início do mapa de categoria.|
 |[END_CATEGORY_MAP](#end_category_map)|Marca o final do mapa de categoria.|
@@ -29,7 +29,7 @@ Essas macros definem mapas de categorias.
 
 **Cabeçalho:** atlcom. h
 
-## <a name="begin_category_map"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a><a name="begin_category_map"></a> BEGIN_CATEGORY_MAP
 
 Marca o início do mapa de categoria.
 
@@ -37,7 +37,7 @@ Marca o início do mapa de categoria.
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Classe*<br/>
 no O nome da classe que contém o mapa de categoria.
@@ -59,7 +59,7 @@ Para obter mais informações sobre categorias de componentes, consulte [o que s
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-## <a name="end_category_map"></a><a name="end_category_map"></a>END_CATEGORY_MAP
+## <a name="end_category_map"></a><a name="end_category_map"></a> END_CATEGORY_MAP
 
 Marca o final do mapa de categoria.
 
@@ -71,7 +71,7 @@ END_CATEGORY_MAP()
 
 Consulte o exemplo para [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-## <a name="implemented_category"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a><a name="implemented_category"></a> IMPLEMENTED_CATEGORY
 
 Adicione uma macro IMPLEMENTED_CATEGORY ao [mapa de categoria](#begin_category_map) do componente para especificar que ele deve ser registrado como implementando a categoria identificada pelo parâmetro *CATID* .
 
@@ -79,7 +79,7 @@ Adicione uma macro IMPLEMENTED_CATEGORY ao [mapa de categoria](#begin_category_m
 IMPLEMENTED_CATEGORY(catID)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *catID*<br/>
 no Uma constante de CATID ou variável que contém o GUID (identificador global exclusivo) da categoria implementada. O endereço do *CATID* será obtido e adicionado ao mapa. Consulte a tabela abaixo para obter uma seleção de categorias de estoque.
@@ -108,7 +108,7 @@ Para obter mais informações sobre categorias de componentes, consulte [o que s
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-## <a name="required_category"></a><a name="required_category"></a>REQUIRED_CATEGORY
+## <a name="required_category"></a><a name="required_category"></a> REQUIRED_CATEGORY
 
 Adicione uma macro REQUIRED_CATEGORY ao [mapa de categoria](#begin_category_map) do componente para especificar que ele deve ser registrado como exigindo a categoria identificada pelo parâmetro *CATID* .
 
@@ -116,7 +116,7 @@ Adicione uma macro REQUIRED_CATEGORY ao [mapa de categoria](#begin_category_map)
 REQUIRED_CATEGORY( catID )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *catID*<br/>
 no Uma constante de CATID ou variável que contém o GUID (identificador global exclusivo) da categoria necessária. O endereço do *CATID* será obtido e adicionado ao mapa. Consulte a tabela abaixo para obter uma seleção de categorias de estoque.

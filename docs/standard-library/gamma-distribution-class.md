@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37b4661cf14fe4302d50557472ce03c120eb2741
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220906"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837914"
 ---
 # <a name="gamma_distribution-class"></a>Classe gamma_distribution
 
@@ -80,10 +80,8 @@ O mecanismo do gerador de número aleatório uniforme. Para possíveis tipos, co
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **`double`** se nenhum for fornecido, distribuído de acordo com a distribuição gama. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
+[gamma_distribution](#gamma_distribution)\
+[param_type](#param_type)
 
 As funções de propriedade `alpha()` e `beta()` retornam seus respectivos valores para os parâmetros de distribuição armazenados *alpha* e *beta*.
 
@@ -188,7 +186,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution:: gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a> gamma_distribution:: gamma_distribution
 
 Constrói a distribuição.
 
@@ -216,7 +214,7 @@ O primeiro construtor constrói um objeto cujo valor `alpha` armazenado contém 
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::p aram_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a> gamma_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 

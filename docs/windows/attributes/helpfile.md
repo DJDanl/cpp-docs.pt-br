@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 641823779346bf5417ec0db26b83083fa949e960
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 385c6da6a432f0954e62c9f16a22f0b70b73b317
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222115"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845231"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -38,11 +38,9 @@ Consulte o exemplo de [módulo](module-cpp.md) para obter um exemplo de como usa
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
-|**Aplica-se a**|**interface**, **`typedef`** , **`class`** , método,**`property`**|
+|**Aplica-se a**|**interface**, **`typedef`** , **`class`** , método, **`property`**|
 |**Repetível**|Não|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|

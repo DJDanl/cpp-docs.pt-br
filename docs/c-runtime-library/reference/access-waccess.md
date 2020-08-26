@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920264"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846583"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -61,7 +61,7 @@ int _waccess(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *path*<br/>
 Caminho do arquivo ou do diretório.
@@ -69,15 +69,15 @@ Caminho do arquivo ou do diretório.
 *mode*<br/>
 Atributo de leitura/gravação.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Cada função retorna 0 se o arquivo tem o modo determinado. A função retornará-1 se o arquivo nomeado não existir ou não tiver o modo fornecido; Nesse caso, `errno` é definido como mostrado na tabela a seguir.
 
-|||
-|-|-|
-`EACCES`|Acesso negado: a configuração de permissão do arquivo não permite o acesso especificado.
-`ENOENT`|Nome ou caminho do arquivo não encontrado.
-`EINVAL`|Parâmetro inválido.
+| Valor | Descrição |
+|--|--|
+| `EACCES` | Acesso negado: a configuração de permissão do arquivo não permite o acesso especificado. |
+| `ENOENT` | Nome ou caminho do arquivo não encontrado. |
+| `EINVAL` | Parâmetro inválido. |
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -147,9 +147,9 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
+[Manipulação de arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

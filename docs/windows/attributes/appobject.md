@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: ae3547a32e6d5984a9ef95e495ba119c3a2ed385
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6562702a93273e4fc24ba138a1eb20b1ab6b076e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222154"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836342"
 ---
 # <a name="appobject"></a>appobject
 
@@ -48,9 +48,7 @@ class A : public ICustom {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|

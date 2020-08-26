@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 724df913400abb6d33c333f0a16c20fb982769bc
-ms.sourcegitcommit: 98139766b548c55181ff5ec5ad3bfd9db2bf5c89
+ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865046"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833394"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Tutorial: vcperf e analisador de desempenho do Windows
 
@@ -23,7 +23,7 @@ As ferramentas de compilação do C++ estão disponíveis no Visual Studio 2019.
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Neste tutorial, você aprenderá a usar o *vcperf. exe* para coletar um rastreamento de sua compilação em C++. Você também aprenderá a exibir esse rastreamento no analisador de desempenho do Windows.
+Neste tutorial, você aprenderá a usar *vcperf.exe* para coletar um rastreamento de sua compilação em C++. Você também aprenderá a exibir esse rastreamento no analisador de desempenho do Windows.
 
 ## <a name="step-1-install-and-configure-windows-performance-analyzer"></a>Etapa 1: instalar e configurar o analisador de desempenho do Windows
 
@@ -35,7 +35,7 @@ Uma versão do WPA que dá suporte a informações de compilação C++ está dis
 
 Observação: o Windows 8 ou superior é necessário para instalar o analisador de desempenho do Windows.
 
-1. Navegue até a página de [Download](https://docs.microsoft.com/windows-hardware/get-started/adk-install)do Windows ADK.
+1. Navegue até a página de [Download](/windows-hardware/get-started/adk-install)do Windows ADK.
 
 1. Baixe e instale a versão mais recente do Windows ADK.
 
@@ -43,7 +43,7 @@ Observação: o Windows 8 ou superior é necessário para instalar o analisador 
 
    ![A tela de seleção de recursos do instalador do analisador de desempenho do Windows](media/wpa-installation.png)
 
-### <a name="to-configure-wpa"></a><a name="configuration-steps"></a>Para configurar o WPA
+### <a name="to-configure-wpa"></a><a name="configuration-steps"></a> Para configurar o WPA
 
 A exibição de rastreamentos de informações de Build do C++ no WPA requer um suplemento especial. Siga estas etapas para instalá-lo:
 
@@ -55,14 +55,14 @@ A exibição de rastreamentos de informações de Build do C++ no WPA requer um 
     1. No Visual Studio 2019 versão 16,6 e posterior, esse arquivo está localizado aqui: `C:\Program Files (x86)\Microsoft Visual Studio\2019\{Edition}\VC\Tools\MSVC\{Version}\bin\Host{Architecture}\{Architecture}` .
     1. No pacote NuGet do insights do Build do C++, este arquivo está localizado aqui: `wpa\{Architecture}` .
     1. Nos caminhos acima, substitua as variáveis entre chaves da seguinte maneira:
-        1. `{Edition}`é a edição do Visual Studio 2019, como Comunidade, Professional ou Enterprise.
-        1. `{Version}`é sua versão do MSVC. Escolha a mais alta disponível.
+        1. `{Edition}` é a edição do Visual Studio 2019, como Comunidade, Professional ou Enterprise.
+        1. `{Version}` é sua versão do MSVC. Escolha a mais alta disponível.
         1. `{Architecture}`: escolha `x64` se você tem uma versão de 64 bits do Windows. Caso contrário, escolha `x86` .
     1. O diretório de instalação do WPA normalmente é: `C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit` .
 
 1. No diretório de instalação do WPA, abra o `perfcore.ini` arquivo e adicione uma entrada para `perf_msvcbuildinsights.dll` .
 
-## <a name="step-2-trace-your-build-with-vcperfexe"></a>Etapa 2: rastrear sua compilação com o vcperf. exe
+## <a name="step-2-trace-your-build-with-vcperfexe"></a>Etapa 2: rastrear sua compilação com o vcperf.exe
 
 Para exibir dados de informações de compilação do C++, primeiro colete-os em um arquivo de rastreamento seguindo estas etapas:
 
@@ -71,7 +71,7 @@ Para exibir dados de informações de compilação do C++, primeiro colete-os em
 
 1. Na janela do prompt de comando, digite este comando:
 
-   **vcperf. exe/start _SessionName_**
+   **vcperf.exe/Start _SessionName_**
 
    Escolha um nome de sessão que você se lembrará de *SessionName*.
 
@@ -79,29 +79,29 @@ Para exibir dados de informações de compilação do C++, primeiro colete-os em
 
 1. Na janela do prompt de comando, digite este comando:
 
-   **vcperf. exe/Stop _SessionName_ _TraceFile. etl_**
+   **vcperf.exe/Stop _SessionName_ _TraceFile. etl_**
 
    Use o mesmo nome de sessão escolhido para *SessionName* antes de. Escolha um nome apropriado para o arquivo de rastreamento *TraceFile. etl* .
 
-Veja a aparência de uma seqüência de comandos *vcperf. exe* típica em uma janela de prompt de comando do desenvolvedor:
+Esta é a aparência de uma seqüência de comandos típica *vcperf.exe* em uma janela de prompt de comando do desenvolvedor:
 
-![Um cenário de uso simples do vcperf. exe](media/vcperf-simple-usage.png)
+![Um cenário de uso simples de vcperf.exe](media/vcperf-simple-usage.png)
 
-### <a name="important-notes-about-vcperfexe"></a>Observações importantes sobre o vcperf. exe
+### <a name="important-notes-about-vcperfexe"></a>Observações importantes sobre vcperf.exe
 
-- São necessários privilégios de administrador para iniciar ou parar um rastreamento *vcperf. exe* . Use uma janela de prompt de comando do desenvolvedor que você abrir usando **Executar como administrador**.
+- São necessários privilégios de administrador para iniciar ou parar um rastreamento de *vcperf.exe* . Use uma janela de prompt de comando do desenvolvedor que você abrir usando **Executar como administrador**.
 
 - Somente uma sessão de rastreamento por vez pode ser executada em um computador.
 
 - Lembre-se de lembrar o nome da sessão que você usou para iniciar o rastreamento. Pode ser difícil parar uma sessão em execução sem saber seu nome.
 
-- Assim como o *CL. exe* e o *link. exe*, o utilitário de linha de comando *vcperf. exe* é incluído em uma instalação do MSVC. Nenhuma etapa adicional é necessária para obter esse componente.
+- Assim como *cl.exe* e *link.exe*, o utilitário de linha de comando *vcperf.exe* está incluído em uma instalação do MSVC. Nenhuma etapa adicional é necessária para obter esse componente.
 
-- o *vcperf. exe* coleta informações sobre todas as ferramentas do MSVC em execução no seu sistema. Como resultado, você não precisa iniciar sua compilação no mesmo prompt de comando usado para coletar o rastreamento. Você pode criar seu projeto por meio de um prompt de comando diferente ou até mesmo no Visual Studio.
+- *vcperf.exe* coleta informações sobre todas as ferramentas do MSVC em execução no seu sistema. Como resultado, você não precisa iniciar sua compilação no mesmo prompt de comando usado para coletar o rastreamento. Você pode criar seu projeto por meio de um prompt de comando diferente ou até mesmo no Visual Studio.
 
-### <a name="vcperfexe-is-open-source"></a>o vcperf. exe é de código-fonte aberto
+### <a name="vcperfexe-is-open-source"></a>O vcperf.exe está em código-fonte aberto
 
-Se você quiser compilar e executar sua própria versão do *vcperf. exe*, sinta-se à vontade para cloná-la do [repositório GitHub do vcperf](https://github.com/microsoft/vcperf).
+Se você quiser criar e executar sua própria versão do *vcperf.exe*, sinta-se à vontade para cloná-la do [repositório GitHub do vcperf](https://github.com/microsoft/vcperf).
 
 ## <a name="step-3-view-your-trace-in-windows-performance-analyzer"></a>Etapa 3: exibir seu rastreamento no analisador de desempenho do Windows
 
@@ -124,7 +124,7 @@ Outras exibições estão disponíveis no painel Gerenciador de gráficos. Arras
 Saiba mais sobre as operações WPA comuns que podem ajudá-lo a analisar os rastreamentos de Build.
 
 [Referência: comandos vcperf](/cpp/build-insights/reference/vcperf-commands)\
-A referência de comando *vcperf. exe* lista todas as opções de comando disponíveis.
+A referência de comando *vcperf.exe* lista todas as opções de comando disponíveis.
 
 [Referência: exibições do analisador de desempenho do Windows](/cpp/build-insights/reference/wpa-views)\
 Consulte este artigo para obter detalhes sobre os modos de exibição de informações de compilação do C++ no WPA.

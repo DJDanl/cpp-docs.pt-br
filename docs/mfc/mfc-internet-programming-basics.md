@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b41ce97a9b5efe6ad84c543f5c49dd091557b3a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405020"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846310"
 ---
 # <a name="mfc-internet-programming-basics"></a>Noções básicas de programação da Internet MFC
 
@@ -36,7 +36,7 @@ O MFC fornece classes que dão suporte à programação na Internet. Você pode 
 
 ## <a name="in-this-section"></a>Nesta seção
 
-- [Classes MFC relacionadas à Internet](internet-related-mfc-classes.md)
+- [Classes do MFC relacionadas à Internet](internet-related-mfc-classes.md)
 
 - [Informações da Internet por tópico](internet-information-by-topic.md)
 
@@ -44,7 +44,7 @@ O MFC fornece classes que dão suporte à programação na Internet. Você pode 
 
 - [Tecnologia ativa na Internet](active-technology-on-the-internet.md)
 
-- [Noções básicas de WinInet](wininet-basics.md)
+- [Noções básicas do WinInet](wininet-basics.md)
 
 - [Noções básicas de HTML](html-basics.md)
 
@@ -54,26 +54,26 @@ O MFC fornece classes que dão suporte à programação na Internet. Você pode 
 
 - [Monikers assíncronos na Internet](asynchronous-monikers-on-the-internet.md)
 
-- [Extensões da Internet Win32 (WinInet)](win32-internet-extensions-wininet.md)
+- [WinInet (extensões de Internet do Win32)](win32-internet-extensions-wininet.md)
 
-- [Tarefas de programação da Internet no MFC](mfc-internet-programming-tasks.md)
+- [Tarefas de programação da Internet do MFC](mfc-internet-programming-tasks.md)
 
-- [Opções de design do aplicativo](application-design-choices.md)
+- [Opções de design de aplicativo](application-design-choices.md)
 
-- [Escrevendo aplicativos MFC](writing-mfc-applications.md)
+- [Gravando aplicativos MFC](writing-mfc-applications.md)
 
-- [Testando aplicativos da Internet](testing-internet-applications.md)
+- [Testando aplicativos de Internet](testing-internet-applications.md)
 
 - [Segurança da Internet](internet-security-cpp.md)
 
-- [Suporte do ATL para controles DHTML](../atl/atl-support-for-dhtml-controls.md)
+- [Suporte ATL para controles DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Sites para obter mais informações
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a> Sites para obter mais informações
 
-Para obter mais informações sobre a tecnologia de Internet da Microsoft, consulte [Microsoft docs](https://docs.microsoft.com/).
+Para obter mais informações sobre a tecnologia de Internet da Microsoft, consulte [Networking and Internet](/windows/win32/networking).
 
 O [World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) publica especificações para HTML, http, CGI e outras tecnologias de World Wide Web.
 
-## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>Mais ajuda da Internet
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a> Mais ajuda da Internet
 
 A seção OLE do SDK do Windows contém informações adicionais sobre a programação OLE. Essas informações fornecem detalhes sobre como usar as funções do Win32 WinInet diretamente, em vez das classes do MFC. Ele também contém informações gerais sobre tecnologias de Internet.

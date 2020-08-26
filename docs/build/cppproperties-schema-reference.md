@@ -3,12 +3,12 @@ title: CppProperties.jsna referência
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224052"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837899"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.jsna referência
 
@@ -18,7 +18,7 @@ Abra pastas projetos que não usam CMake podem armazenar definições de configu
 
 Uma configuração pode ter uma das seguintes propriedades:
 
-|||
+|Nome|Descrição|
 |-|-|
 |`inheritEnvironments`| Especifica quais ambientes se aplicam a essa configuração.|
 |`name`|O nome da configuração que aparecerá no menu suspenso de configuração do C++|
@@ -83,7 +83,7 @@ Quando a carga de trabalho do Linux é instalada, os seguintes ambientes ficam d
 |linux_x64|Direcionar ao Linux x64 remotamente|
 |linux_arm|Direcionar ao ARM Linux remotamente|
 
-## <a name="user-defined-environments"></a><a name="user_defined_environments"></a>Ambientes definidos pelo usuário
+## <a name="user-defined-environments"></a><a name="user_defined_environments"></a> Ambientes definidos pelo usuário
 
 Opcionalmente, você pode usar a `environments` propriedade para definir conjuntos de variáveis no *CppProperties.js* de forma global ou por configuração. Essas variáveis se comportam como variáveis de ambiente no contexto de um projeto de pasta aberta e podem ser acessadas com o $ {env. \<VARIABLE> } a sintaxe de *tasks.vs.jsno* e *launch.vs.jsem depois de* definidos aqui. No entanto, eles não são necessariamente definidos como variáveis de ambiente reais em qualquer prompt de comando que o Visual Studio usa internamente.
 
@@ -125,7 +125,7 @@ Quando você define uma propriedade de **ambientes** dentro de uma configuraçã
 
 Você tem acesso às seguintes macros internas dentro do *CppProperties.jsem*:
 
-|||
+|Macro|Descrição|
 |-|-|
 |`${workspaceRoot}`| O caminho completo para a pasta do espaço de trabalho|
 |`${projectRoot}`| O caminho completo para a pasta onde *CppProperties.jsem* é colocado|

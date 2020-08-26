@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 7b1cea29a782f291f1e85f7a143730825958d91b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229773"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833342"
 ---
 # <a name="optimization-best-practices"></a>Melhores práticas de otimização
 
@@ -40,7 +40,7 @@ Também é altamente recomendável gerar símbolos de depuração, mesmo com com
 
 A **`/Op`** opção do compilador foi removida e as quatro opções de compilador a seguir que lidam com otimizações de ponto flutuante foram adicionadas:
 
-|||
+|Opção|Descrição|
 |-|-|
 |**`/fp:precise`**|Essa é a recomendação padrão e deve ser usada na maioria dos casos.|
 |**`/fp:fast`**|Recomendado se o desempenho for o máximo de importância, por exemplo, em jogos. Isso resultará no desempenho mais rápido.|
@@ -53,7 +53,7 @@ Para obter mais informações, consulte [ `/fp` (especificar comportamento de po
 
 Nesta seção, veremos dois declspecs que podem ser usados em programas para ajudar o desempenho: `__declspec(restrict)` e `__declspec(noalias)` .
 
-O `restrict` declspec só pode ser aplicado a declarações de função que retornam um ponteiro, como`__declspec(restrict) void *malloc(size_t size);`
+O `restrict` declspec só pode ser aplicado a declarações de função que retornam um ponteiro, como `__declspec(restrict) void *malloc(size_t size);`
 
 O `restrict` declspec é usado em funções que retornam ponteiros sem alias. Essa palavra-chave é usada para a implementação da biblioteca em tempo de execução do C `malloc` , pois ela nunca retornará um valor de ponteiro que já esteja em uso no programa atual (a menos que você esteja fazendo algo ilegal, como o uso da memória após sua liberação).
 
@@ -87,7 +87,7 @@ Para obter mais informações, consulte [`optimize`](../preprocessor/optimize.md
 
 A inalinhamento é uma das otimizações mais importantes que o compilador executa e aqui falamos sobre alguns dos pragmas que ajudam a modificar esse comportamento.
 
-`#pragma inline_recursion`é útil para especificar se você deseja ou não que o aplicativo seja capaz de embutir em linha uma chamada recursiva. Por padrão, ele está desativado. Para recursão superficial de pequenas funções, você pode ativar essa opção. Para obter mais informações, consulte [`inline_recursion`](../preprocessor/inline-recursion.md).
+`#pragma inline_recursion` é útil para especificar se você deseja ou não que o aplicativo seja capaz de embutir em linha uma chamada recursiva. Por padrão, ele está desativado. Para recursão superficial de pequenas funções, você pode ativar essa opção. Para obter mais informações, consulte [`inline_recursion`](../preprocessor/inline-recursion.md).
 
 Outro pragma útil para limitar a profundidade de inalinhamento é `#pragma inline_depth` . Isso é normalmente útil em situações em que você está tentando limitar o tamanho de um programa ou função. Para obter mais informações, consulte [`inline_depth`](../preprocessor/inline-depth.md).
 
