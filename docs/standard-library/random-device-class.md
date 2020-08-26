@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320269"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843541"
 ---
 # <a name="random_device-class"></a>Classe random_device
 
@@ -51,10 +51,9 @@ public:
 
 ## <a name="members"></a>Membros
 
-|||
-|-|-|
-|[random_device](#random_device)|[Entropia](#entropy)|
-|[random_device::operator()](#op_call)||
+[random_device](#random_device)\
+[entropia](#entropy)\
+[random_device::operator()](#op_call)
 
 ## <a name="remarks"></a>Comentários
 
@@ -64,7 +63,7 @@ Os resultados de `random_device` são distribuídos de maneira uniforme no inter
 
 O `random_device` não tem garantia de resultar em uma chamada sem bloqueio.
 
-Em geral, o `random_device` é usado para semear outros geradores criados com mecanismos ou adaptadores de mecanismo. Para obter mais informações, consulte [ \<>aleatórios ](../standard-library/random.md).
+Em geral, o `random_device` é usado para semear outros geradores criados com mecanismos ou adaptadores de mecanismo. Para obter mais informações, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -100,15 +99,15 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-Este exemplo é simplista e não representa o caso de uso geral desse gerador. Para obter um exemplo de código mais representativo, consulte [ \<>aleatórios ](../standard-library/random.md).
+Este exemplo é simplista e não representa o caso de uso geral desse gerador. Para obter um exemplo de código mais representativo, consulte [\<random>](../standard-library/random.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<random>
+**Cabeçalho:**\<random>
 
 **Namespace:** std
 
-## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device:random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a> random_device:: random_device
 
 Constrói o gerador.
 
@@ -120,7 +119,7 @@ random_device(const std::string& = "");
 
 O construtor inicia o gerador quando necessário, ignorando o parâmetro da cadeia de caracteres. Gera um valor de um tipo definido de implementação derivado de [exception](../standard-library/exception-class.md) se não foi possível iniciar `random_device`.
 
-## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device::entropia
+## <a name="random_deviceentropy"></a><a name="entropy"></a> random_device:: entropia
 
 Estima a aleatoriedade da origem.
 
@@ -132,7 +131,7 @@ double entropy() const noexcept;
 
 A função do membro retorna uma estimativa da aleatoriedade da origem, em bits.
 
-## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device:operador()
+## <a name="random_deviceoperator"></a><a name="op_call"></a> random_device:: Operator ()
 
 Retorna um valor aleatório.
 
@@ -146,4 +145,4 @@ Retorna valores distribuídos uniformemente no intervalo fechado [ `min, max`] c
 
 ## <a name="see-also"></a>Confira também
 
-[\<>aleatório](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

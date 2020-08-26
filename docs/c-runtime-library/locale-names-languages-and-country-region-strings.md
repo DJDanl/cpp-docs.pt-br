@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 95557c824aafb1092cc7711f19708cd7782683a9
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88087001"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842943"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>Nomes de localidades, idiomas e cadeias de caracteres de país–região do UCRT
 
@@ -26,7 +26,7 @@ O argumento *locale* para as funções [setlocale, \_wsetlocale](../c-runtime-li
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
-O formato *locale-name* é uma cadeia de caracteres curta padronizada pelo IETF; por exemplo, `en-US` para inglês (Estados Unidos) ou `bs-Cyrl-BA` para bósnio (cirílico, Bósnia e Herzegovina). Esses formatos são preferenciais. Para obter uma lista de nomes de localidade com suporte pela versão do sistema operacional Windows, consulte a coluna de **marca de idioma** da tabela no [Apêndice a: comportamento do produto](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) em \[ MS-LCID]: referência do identificador de código de idioma do Windows (LCID). Esse recurso lista o idioma, o script e as partes da região com suporte dos nomes de localidade. Para obter informações sobre os nomes de localidades com suporte que têm ordens de classificação não padrão, consulte a coluna **Nome da localidade** em [Identificadores da ordem de classificação](/windows/win32/Intl/sort-order-identifiers). No Windows 10 ou posterior, os nomes de localidade que correspondem a marcas de idioma [bcp-47](https://tools.ietf.org/html/bcp47) válidos são permitidos. Por exemplo, `jp-US` é uma marca BCP-47 válida, mas é eficaz somente `US` para a funcionalidade de localidade.
+O formato *locale-name* é uma cadeia de caracteres curta padronizada pelo IETF; por exemplo, `en-US` para inglês (Estados Unidos) ou `bs-Cyrl-BA` para bósnio (cirílico, Bósnia e Herzegovina). Esses formatos são preferenciais. Para obter uma lista de nomes de localidade com suporte pela versão do sistema operacional Windows, consulte a coluna de **marca de idioma** da tabela no [Apêndice a: comportamento do produto](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) em \[ MS-LCID]: referência do identificador de código de idioma do Windows (LCID). Esse recurso lista o idioma, o script e as partes da região com suporte dos nomes de localidade. Para obter informações sobre os nomes de localidades com suporte que têm ordens de classificação não padrão, consulte a coluna **Nome da localidade** em [Identificadores da ordem de classificação](/windows/win32/Intl/sort-order-identifiers). No Windows 10 ou posterior, os nomes de localidade que correspondem a marcas de idioma [bcp-47](https://tools.ietf.org/html/bcp47) válidos são permitidos. Por exemplo, `jp-US` é uma marca BCP-47 válida, mas é eficaz somente `US` para a funcionalidade de localidade.
 
 O *idioma* \[ **\_** _país-região_ \[ __.__ *página de código*]] o formulário é armazenado na configuração de localidade para uma categoria quando uma cadeia de caracteres de idioma, ou cadeia de caracteres de idioma e país ou cadeia de caracteres de região, é usada para criar a localidade. O conjunto de cadeias de caracteres de idioma com suporte é descrito em [Cadeias de caracteres de idioma](../c-runtime-library/language-strings.md), enquanto a lista de cadeias de caracteres de paí e região com suporte é listada em [Cadeias de caracteres de país/região](../c-runtime-library/country-region-strings.md). Se o idioma especificado não for associado ao país ou região especificado, o idioma padrão do país ou região especificado será armazenado na configuração de localidade. Não recomendamos esse formato para cadeias de caracteres de localidade inseridas no código ou serializadas para armazenamento, pois essas cadeias de caracteres são mais prováveis de serem modificadas por uma atualização do sistema operacional do que o formato do nome da localidade.
 

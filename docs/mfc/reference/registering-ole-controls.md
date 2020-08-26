@@ -5,12 +5,12 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 0471bad0793779d0bc13a2bee41957381f56389f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5468f3d4b730cc0b81a6ab814d495b061d292f20
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214016"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843567"
 ---
 # <a name="registering-ole-controls"></a>Registrando controles OLE
 
@@ -20,7 +20,7 @@ As funções a seguir permitem adicionar e remover a classe do controle, as pág
 
 ### <a name="registering-ole-controls"></a>Registrando controles OLE
 
-|||
+|Nome|Descrição|
 |-|-|
 |[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Adiciona a classe do controle ao banco de dados de registro.|
 |[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Adiciona uma página de propriedades de controle ao banco de dados de registro.|
@@ -28,9 +28,9 @@ As funções a seguir permitem adicionar e remover a classe do controle, as pág
 |[AfxOleUnregisterClass](#afxoleunregisterclass)|Remove uma classe de controle ou uma classe de página de propriedades do banco de dados de registro.|
 |[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Remove a biblioteca de tipos do controle do banco de dados de registro.|
 
-`AfxOleRegisterTypeLib`é normalmente chamado em uma implementação de DLL de controle de `DllRegisterServer` . Da mesma forma, `AfxOleUnregisterTypeLib` é chamado por `DllUnregisterServer` . `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass` e `AfxOleUnregisterClass` são normalmente chamados pela `UpdateRegistry` função membro da fábrica de classes ou da página de propriedades de um controle.
+`AfxOleRegisterTypeLib` é normalmente chamado em uma implementação de DLL de controle de `DllRegisterServer` . Da mesma forma, `AfxOleUnregisterTypeLib` é chamado por `DllUnregisterServer` . `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass` e `AfxOleUnregisterClass` são normalmente chamados pela `UpdateRegistry` função membro da fábrica de classes ou da página de propriedades de um controle.
 
-## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass
+## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a> AfxOleRegisterControlClass
 
 Registra a classe de controle com o banco de dados de registro do Windows.
 
@@ -68,11 +68,11 @@ A ID de recurso do bitmap usado para representar o controle OLE em uma barra de 
 *nRegFlags*<br/>
 Contém um ou mais dos seguintes sinalizadores:
 
-- `afxRegInsertable`Permite que o controle apareça na caixa de diálogo Inserir objeto para objetos OLE.
+- `afxRegInsertable` Permite que o controle apareça na caixa de diálogo Inserir objeto para objetos OLE.
 
-- `afxRegApartmentThreading`Define o modelo de threading no registro como ThreadingModel = Apartment.
+- `afxRegApartmentThreading` Define o modelo de threading no registro como ThreadingModel = Apartment.
 
-- `afxRegFreeThreading`Define o modelo de threading no registro como ThreadingModel = Free.
+- `afxRegFreeThreading` Define o modelo de threading no registro como ThreadingModel = Free.
 
    Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` definir ThreadingModel = ambos. Consulte [InprocServer32](/windows/win32/com/inprocserver32) no SDK do Windows para obter mais informações sobre o registro do modelo de Threading.
 
@@ -129,13 +129,13 @@ O número de versão principal da classe de controle.
 *wVerMinor*<br/>
 O número de versão secundária da classe de controle.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a classe de controle foi registrada; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Isso permite que o controle seja usado por contêineres que reconhecem o controle OLE. `AfxOleRegisterControlClass`atualiza o registro com o nome e o local do controle no sistema e também define o modelo de Threading ao qual o controle dá suporte no registro. Para obter mais informações, consulte a [Observação técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading de modelo de apartamento em controles OLE" e [sobre processos e threads](/windows/win32/ProcThread/about-processes-and-threads) no SDK do Windows.
+Isso permite que o controle seja usado por contêineres que reconhecem o controle OLE. `AfxOleRegisterControlClass` atualiza o registro com o nome e o local do controle no sistema e também define o modelo de Threading ao qual o controle dá suporte no registro. Para obter mais informações, consulte a [Observação técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading de modelo de apartamento em controles OLE" e [sobre processos e threads](/windows/win32/ProcThread/about-processes-and-threads) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -151,7 +151,7 @@ O controle será exibido na caixa de diálogo Inserir objeto para contêineres h
 
   **Cabeçalho** afxctl. h
 
-## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass
+## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a> AfxOleRegisterPropertyPageClass
 
 Registra a classe de página de propriedades com o banco de dados de registro do Windows.
 
@@ -177,24 +177,24 @@ A ID de recurso da cadeia de caracteres que contém um nome legível pelo usuár
 *nRegFlags*<br/>
 Pode conter o sinalizador:
 
-- `afxRegApartmentThreading`Define o modelo de threading no registro como ThreadingModel = Apartment.
+- `afxRegApartmentThreading` Define o modelo de threading no registro como ThreadingModel = Apartment.
 
 > [!NOTE]
 > Nas versões do MFC anteriores ao MFC 4,2, o **`int`** parâmetro *nRegFlags* não estava disponível. Observe também que o `afxRegInsertable` sinalizador não é uma opção válida para páginas de propriedades e causará uma declaração no MFC, se estiver definido
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a classe de controle foi registrada; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Isso permite que a página de propriedades seja usada por contêineres que reconhecem o controle OLE. `AfxOleRegisterPropertyPageClass`atualiza o registro com o nome da página de propriedades e sua localização no sistema e também define o modelo de Threading ao qual o controle dá suporte no registro. Para obter mais informações, consulte a [Observação técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading de modelo de apartamento em controles OLE" e [sobre processos e threads](/windows/win32/ProcThread/about-processes-and-threads) no SDK do Windows.
+Isso permite que a página de propriedades seja usada por contêineres que reconhecem o controle OLE. `AfxOleRegisterPropertyPageClass` atualiza o registro com o nome da página de propriedades e sua localização no sistema e também define o modelo de Threading ao qual o controle dá suporte no registro. Para obter mais informações, consulte a [Observação técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading de modelo de apartamento em controles OLE" e [sobre processos e threads](/windows/win32/ProcThread/about-processes-and-threads) no SDK do Windows.
 
 ### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** afxctl. h
 
-## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib
+## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a> AfxOleRegisterTypeLib
 
 Registra a biblioteca de tipos com o banco de dados de registro do Windows e permite que a biblioteca de tipos seja usada por outros contêineres com reconhecimento de controle OLE.
 
@@ -220,7 +220,7 @@ Aponta para o nome de arquivo opcional de uma biblioteca de tipos localizada (. 
 *pszHelpDir*<br/>
 O nome do diretório em que o arquivo de ajuda para a biblioteca de tipos pode ser encontrado. Se for NULL, o arquivo de ajuda será considerado no mesmo diretório que a própria biblioteca de tipos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a biblioteca de tipos foi registrada; caso contrário, 0.
 
@@ -238,7 +238,7 @@ Essa função atualiza o registro com o nome da biblioteca de tipos e sua locali
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a>AfxOleUnregisterClass
+## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a> AfxOleUnregisterClass
 
 Remove a entrada de classe de página de controle ou de Propriedade do banco de dados de registro do Windows.
 
@@ -254,7 +254,7 @@ A ID de classe exclusiva da página de controle ou de propriedade.
 *pszProgID*<br/>
 A ID de programa exclusiva da página de controle ou de propriedade.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a classe do controle ou da página de propriedades tiver sido cancelada com êxito; caso contrário, 0.
 
@@ -262,7 +262,7 @@ Diferente de zero se a classe do controle ou da página de propriedades tiver si
 
   **Cabeçalho** afxctl. h
 
-## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib
+## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a> AfxOleUnregisterTypeLib
 
 Chame essa função para remover a entrada da biblioteca de tipos do banco de dados de registro do Windows.
 
@@ -275,7 +275,7 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 *tlID*<br/>
 A ID exclusiva da biblioteca de tipos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a biblioteca de tipos tiver sido desregistrada com êxito; caso contrário, 0.
 

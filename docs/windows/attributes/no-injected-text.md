@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 7e5c822c45888f41e8dd849f25658d0139e6fda0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ab718376d5da7214813d5ab2e0caaa7bbccd077b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201239"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844074"
 ---
 # <a name="no_injected_text"></a>no_injected_text
 
@@ -34,9 +34,7 @@ O uso mais comum do atributo **no_injected_text** C++ é pela opção de compila
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Qualquer lugar|
 |**Repetível**|Não|

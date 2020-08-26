@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224624"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844295"
 ---
 # <a name="stack-class"></a>Classe de pilha
 
@@ -64,13 +64,13 @@ Os objetos de pilha são comparáveis de igualdade se e somente se os elementos 
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[sobreposta](#stack)|Constrói um `stack` que é vazio ou que é uma cópia de um objeto de contêiner base.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[container_type](#container_type)|Um tipo que fornece o contêiner base para ser adaptado por um `stack`.|
 |[size_type](#size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `stack`.|
@@ -78,7 +78,7 @@ Os objetos de pilha são comparáveis de igualdade se e somente se os elementos 
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[empty](#empty)|Testa se `stack` está vazio.|
 |[pop](#pop)|Remove o elemento da parte superior do `stack`.|
@@ -86,7 +86,7 @@ Os objetos de pilha são comparáveis de igualdade se e somente se os elementos 
 |[size](#size)|Retorna o número de elementos no `stack`.|
 |[início](#top)|Retorna uma referência a um elemento na parte superior do `stack`.|
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Um tipo que fornece o contêiner base a ser adaptado.
 
@@ -104,7 +104,7 @@ Para obter mais informações sobre `Container`, consulte a seção Comentários
 
 Veja o exemplo de [stack::stack](#stack) para obter um exemplo de como declarar e usar `container_type`.
 
-## <a name="empty"></a><a name="empty"></a>esvaziá
+## <a name="empty"></a><a name="empty"></a> esvaziá
 
 Testa se uma stack está vazia.
 
@@ -112,7 +112,7 @@ Testa se uma stack está vazia.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a pilha estiver vazia; **`false`** se a pilha não estiver vazia.
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a><a name="pop"></a>pop
+## <a name="pop"></a><a name="pop"></a> pop
 
 Remove o elemento da parte superior da stack.
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>pressionado
+## <a name="push"></a><a name="push"></a> pressionado
 
 Adiciona um elemento à parte superior da pilha.
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a><a name="size"></a>tamanho
+## <a name="size"></a><a name="size"></a> tamanho
 
 Retorna o número de elementos na stack.
 
@@ -262,7 +262,7 @@ Retorna o número de elementos na stack.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O comprimento atual da stack.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Um tipo de inteiro sem sinal que pode representar o número de elementos em uma stack.
 
@@ -311,7 +311,7 @@ O tipo é um sinônimo de `size_type` do contêiner base adaptado pela stack.
 
 Veja o exemplo de [size](#size) que demonstra como declarar e usar `size_type`.
 
-## <a name="stack"></a><a name="stack"></a>sobreposta
+## <a name="stack"></a><a name="stack"></a> sobreposta
 
 Constrói uma stack que é vazia ou que é uma cópia de uma classe de contêiner base.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a><a name="top"></a>Início
+## <a name="top"></a><a name="top"></a> Início
 
 Retorna uma referência a um elemento na parte superior da stack.
 
@@ -375,7 +375,7 @@ reference top();
 const_reference top() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma referência ao último elemento no contêiner na parte superior da stack.
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Um tipo que representa o tipo de objeto armazenado como um elemento em uma stack.
 

@@ -10,22 +10,21 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3389ba769d6b61a363e8cbfcf5f6a4e9ec679469
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364934"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844698"
 ---
 # <a name="ltarraygt-functions"></a>Funções &lt;array&gt;
 
-O \<cabeçalho de> de matriz `get` `swap`inclui duas funções não-membros e, que operam em objetos **de matriz.**
+O \<array> cabeçalho inclui duas funções não-membro `get` e `swap` , que operam em objetos de **matriz** .
 
-|||
-|-|-|
-|[get](#get)|[Trocar](#swap)|
+[Obter](#get)\
+[permuta](#swap)
 
-## <a name="get"></a><a name="get"></a>Obter
+## <a name="get"></a><a name="get"></a> Obter
 
 Retorna uma referência ao elemento especificado da matriz.
 
@@ -40,18 +39,18 @@ template <int Index, class T, size_t N>
 constexpr T&& get(array<T, N>&& arr) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Índice*\
+*Index*\
 O deslocamento do elemento.
 
 *T*\
 O tipo de um elemento.
 
-*N*\
+*P*\
 O número de elementos na matriz.
 
-*Arr*\
+*arr*\
 A matriz da qual selecionar.
 
 ### <a name="example"></a>Exemplo
@@ -86,24 +85,24 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a><a name="swap"></a>Trocar
+## <a name="swap"></a><a name="swap"></a> permuta
 
-Uma especialização de modelo `std::swap` não-membro que troca dois objetos **de matriz.**
+Uma especialização de modelo não membro do `std::swap` que permuta dois objetos de **matriz** .
 
 ```cpp
 template <class Ty, std::size_t N>
 void swap(array<Ty, N>& left, array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo de um elemento.
 
-*N*\
+*P*\
 O tamanho da matriz.
 
-*Deixou*\
+*mantida*\
 A primeira matriz a trocar.
 
 *Certo*\
@@ -161,4 +160,4 @@ int main()
 
 ## <a name="see-also"></a>Confira também
 
-[\<matriz>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

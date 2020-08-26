@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 59f1a6d1ad940f79693f9c5e37c1fe6527da3805
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14ceb3ce51396efefe77404e8f18a36a7d7a4825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224455"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844152"
 ---
-# <a name="control"></a>Controle
+# <a name="control"></a>controle
 
 Especifica que o tipo definido pelo usuário é um controle.
 
@@ -46,9 +46,7 @@ class CTest : public ICustom {};
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|

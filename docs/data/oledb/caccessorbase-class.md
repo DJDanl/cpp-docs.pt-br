@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233451"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843294"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 
-Todos os acessadores nos modelos de OLE DB derivam dessa classe. `CAccessorBase`permite que um conjunto de linhas gerencie vários acessadores. Ele também fornece Associação para parâmetros e colunas de saída.
+Todos os acessadores nos modelos de OLE DB derivam dessa classe. `CAccessorBase` permite que um conjunto de linhas gerencie vários acessadores. Ele também fornece Associação para parâmetros e colunas de saída.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,19 +46,19 @@ Todos os acessadores nos modelos de OLE DB derivam dessa classe. `CAccessorBase`
 
 ### <a name="methods"></a>Métodos
 
-|||
-|-|-|
-|[Fechar](#close)|Fecha os acessadores.|
-|[GetHAccessor](#geth)|Recupera o identificador de acessador.|
-|[GetNumAccessors](#getnum)|Recupera o número de acessadores criados pela classe.|
-|[IsAutoAccessor](#isauto)|Testa se o acessador especificado é um autoacesso.|
-|[ReleaseAccessors](#release)|Libera os acessadores.|
+| Nome | Descrição |
+|--|--|
+| [Fechar](#close) | Fecha os acessadores. |
+| [GetHAccessor](#geth) | Recupera o identificador de acessador. |
+| [GetNumAccessors](#getnum) | Recupera o número de acessadores criados pela classe. |
+| [IsAutoAccessor](#isauto) | Testa se o acessador especificado é um autoacesso. |
+| [ReleaseAccessors](#release) | Libera os acessadores. |
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldbcli. h
 
-## <a name="caccessorbaseclose"></a><a name="close"></a>CAccessorBase:: fechar
+## <a name="caccessorbaseclose"></a><a name="close"></a> CAccessorBase:: fechar
 
 Fecha os acessadores.
 
@@ -72,7 +72,7 @@ void Close();
 
 Você deve chamar [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) primeiro.
 
-## <a name="caccessorbasegethaccessor"></a><a name="geth"></a>CAccessorBase::GetHAccessor
+## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase::GetHAccessor
 
 Recupera o identificador de acessador de um acessador especificado.
 
@@ -87,11 +87,11 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 *nAccessor*<br/>
 no O número de deslocamento zero para o acessador.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O identificador do acessador.
 
-## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a>CAccessorBase::GetNumAccessors
+## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a> CAccessorBase::GetNumAccessors
 
 Recupera o número de acessadores criados pela classe.
 
@@ -105,7 +105,7 @@ ULONG GetNumAccessors() const;
 
 O número de acessadores criados pela classe.
 
-## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a>CAccessorBase::IsAutoAccessor
+## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a> CAccessorBase::IsAutoAccessor
 
 Retornará true se os dados forem recuperados automaticamente para o acessador durante uma operação de movimentação.
 
@@ -120,11 +120,11 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 *nAccessor*<br/>
 no O número de deslocamento zero para o acessador.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna **`true`** se o acessador é um autoacesso. Caso contrário, retornará **`false`** .
 
-## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase::ReleaseAccessors
+## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a> CAccessorBase::ReleaseAccessors
 
 Libera os acessadores criados pela classe.
 
@@ -139,7 +139,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 *pUnk*<br/>
 no Um ponteiro para uma `IUnknown` interface do objeto com para o qual os acessadores foram criados.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: f28a850c365bc9a75d8e5b100e5e5cc0a1c5dc10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b28b7ee0038e4f828f43fcc3f0d49a2d9e092315
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404558"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844035"
 ---
 # <a name="ftmbase-class"></a>Classe FtmBase
 
@@ -86,7 +86,7 @@ Para obter mais informações, consulte [classe RuntimeClass](runtimeclass-class
 
 **Namespace:** Microsoft:: WRL
 
-## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a> FtmBase::CreateGlobalInterfaceTable
 
 Cria uma tabela de interface global (GIT).
 
@@ -96,7 +96,7 @@ static HRESULT CreateGlobalInterfaceTable(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *git*<br/>
 Quando essa operação é concluída, um ponteiro para uma tabela de interface global.
@@ -107,9 +107,9 @@ S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [`IGlobalInterfaceTable`](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
+Para obter mais informações, consulte [`IGlobalInterfaceTable`](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
 
-## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::D isconnectobject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a> FtmBase::D isconnectobject
 
 Libera forçosamente todas as conexões externas a um objeto. O servidor do objeto chama a implementação do objeto desse método antes de desligar.
 
@@ -119,7 +119,7 @@ STDMETHODIMP DisconnectObject(
 ) override;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwReserved*<br/>
 Reservado para uso futuro; deve ser zero.
@@ -128,7 +128,7 @@ Reservado para uso futuro; deve ser zero.
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase::FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a> FtmBase::FtmBase
 
 Inicializa uma nova instância da classe `FtmBase`.
 
@@ -136,7 +136,7 @@ Inicializa uma nova instância da classe `FtmBase`.
 FtmBase();
 ```
 
-## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a> FtmBase::GetMarshalSizeMax
 
 Obtenha o limite superior do número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.
 
@@ -151,7 +151,7 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *riid*<br/>
 Referência ao identificador da interface a ser empacotada.
@@ -179,7 +179,7 @@ Quando essa operação for concluída, o ponteiro para o limite superior na quan
 
 S_OK se for bem-sucedido; caso contrário, E_FAIL ou E_NOINTERFACE.
 
-## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a> FtmBase::GetUnmarshalClass
 
 Obtém o CLSID usado pelo COM para localizar a DLL que contém o código do proxy correspondente. COM carrega essa DLL para criar uma instância não inicializada do proxy.
 
@@ -194,7 +194,7 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *riid*<br/>
 Referência ao identificador da interface a ser empacotada.
@@ -221,7 +221,7 @@ Quando essa operação é concluída, o ponteiro para o CLSID a ser usado para c
 
 S_OK se for bem-sucedido; caso contrário, S_FALSE.
 
-## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase::MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a> FtmBase::MarshalInterface
 
 Grava em um fluxo os dados necessários para inicializar um objeto proxy em algum processo cliente.
 
@@ -236,7 +236,7 @@ STDMETHODIMP MarshalInterface(
 ) override;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pStm*<br/>
 Ponteiro para o fluxo a ser usado durante o marshaling.
@@ -270,7 +270,7 @@ STG_E_MEDIUMFULL o fluxo está cheio.
 
 E_FAIL a operação falhou.
 
-## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase:: marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a> FtmBase:: marshaller_
 
 Mantém uma referência ao marshaler livre de threads.
 
@@ -278,7 +278,7 @@ Mantém uma referência ao marshaler livre de threads.
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a> FtmBase::ReleaseMarshalData
 
 Destrói um pacote de dados com marshaling.
 
@@ -288,7 +288,7 @@ STDMETHODIMP ReleaseMarshalData(
 ) override;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pStm*<br/>
 Ponteiro para um fluxo que contém o pacote de dados a ser destruído.
@@ -297,7 +297,7 @@ Ponteiro para um fluxo que contém o pacote de dados a ser destruído.
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a> FtmBase::UnmarshalInterface
 
 Inicializa um proxy recém-criado e retorna um ponteiro de interface para esse proxy.
 
@@ -309,7 +309,7 @@ STDMETHODIMP UnmarshalInterface(
 ) override;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pStm*<br/>
 Ponteiro para o fluxo do qual o ponteiro de interface deve ser desempacotado.

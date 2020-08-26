@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212258"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843242"
 ---
 # <a name="carrayrowset-class"></a>Classe CArrayRowset
 
@@ -75,24 +75,24 @@ O tipo de classe de acessador que você deseja que o conjunto de linhas use.
 
 ### <a name="methods"></a>Métodos
 
-|||
-|-|-|
-|[CArrayRowset](#carrayrowset)|Construtor.|
-|[Instantâneo](#snapshot)|Lê todo o conjunto de linhas na memória.|
+| Nome | Descrição |
+|--|--|
+| [CArrayRowset](#carrayrowset) | Construtor. |
+| [Instantâneo](#snapshot) | Lê todo o conjunto de linhas na memória. |
 
 ### <a name="operators"></a>Operadores
 
-|||
-|-|-|
-|[Operador&#91;&#93;](#operator)|Acessa um elemento do conjunto de linhas.|
+| Nome | Descrição |
+|--|--|
+| [&#91;&#93;do operador ](#operator) | Acessa um elemento do conjunto de linhas. |
 
 ### <a name="data-members"></a>Membros de dados
 
-|||
-|-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|O número de linhas já lidas.|
+| Nome | Descrição |
+|--|--|
+| [CArrayRowset::m_nRowsRead](#nrowsread) | O número de linhas já lidas. |
 
-## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset::CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
 Cria um novo objeto `CArrayRowset`.
 
@@ -107,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *Nmáx*<br/>
 no Número máximo de linhas no conjunto de linhas.
 
-## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: instantâneo
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a> CArrayRowset:: instantâneo
 
 Lê todo o conjunto de linhas na memória, criando uma imagem ou um instantâneo dele.
 
@@ -117,7 +117,7 @@ Lê todo o conjunto de linhas na memória, criando uma imagem ou um instantâneo
 HRESULT Snapshot() throw();
 ```
 
-## <a name="carrayrowsetoperator"></a><a name="operator"></a>Operador CArrayRowset::
+## <a name="carrayrowsetoperator"></a><a name="operator"></a> Operador CArrayRowset::
 
 Fornece sintaxe semelhante à matriz para acessar uma linha no conjunto de linhas.
 
@@ -135,7 +135,7 @@ Um parâmetro de modelo que especifica o tipo de acessador armazenado no conjunt
 *nRow*<br/>
 no Número da linha (elemento de matriz) que você deseja acessar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O conteúdo da linha solicitada.
 
@@ -143,7 +143,7 @@ O conteúdo da linha solicitada.
 
 Se *nrow* exceder o número de linhas no conjunto de linhas, uma exceção será lançada.
 
-## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a> CArrayRowset:: m_nRowsRead
 
 Contém o número de linhas no conjunto de linhas que já foram lidas.
 
@@ -156,5 +156,5 @@ ULONG m_nRowsRead;
 ## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)

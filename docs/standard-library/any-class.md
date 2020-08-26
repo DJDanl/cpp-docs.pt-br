@@ -15,12 +15,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203956"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844737"
 ---
 # <a name="any-class"></a>qualquer classe
 
@@ -38,13 +38,13 @@ class any
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[outro](#any)|Constrói um objeto do tipo `any`.|
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[emplace](#emplace)|Define um valor qualquer.|
 |[has_value](#has_value)|Retorna **`true`** se algum tiver um valor.|
@@ -54,11 +54,11 @@ class any
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[operador =](#op_eq)|Substitui o qualquer com uma cópia de outro.|
 
-## <a name="any"></a><a name="any"></a>outro
+## <a name="any"></a><a name="any"></a> outro
 
 Constrói um objeto do tipo `any`. Também inclui um destruidor.
 
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Define um valor qualquer.
 
@@ -87,7 +87,7 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 Retorna **`true`** se algum tiver um valor.
 
@@ -95,7 +95,7 @@ Retorna **`true`** se algum tiver um valor.
 bool has_value() const noexcept;
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operador =
+## <a name="operator"></a><a name="op_eq"></a> operador =
 
 Substitui o qualquer com uma cópia de outro.
 
@@ -111,7 +111,7 @@ template <class T>
 *Certo*\
 O que está sendo copiado para o.
 
-## <a name="reset"></a><a name="reset"></a>definido
+## <a name="reset"></a><a name="reset"></a> definido
 
 Redefine um any.
 
@@ -119,7 +119,7 @@ Redefine um any.
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>permuta
+## <a name="swap"></a><a name="swap"></a> permuta
 
 Troca dois objetos.
 

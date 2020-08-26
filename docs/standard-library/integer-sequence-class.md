@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: 3de64f7855b5158f1565580d305e2a6eeaf3e76f
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 4d927be4fdd41ab75ca78a0e0e7ab0282e4fbf6a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82031466"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843866"
 ---
 # <a name="integer_sequence-class"></a>Classe integer_sequence
 
-Representa uma sequência de inteiros. Pode ser usada para deduzir e expandir pacotes de parâmetros em tipos variadic, como std::tuple\<T...>, que são passados como argumentos para uma função.
+Representa uma sequência de inteiros. Pode ser usado para deduzir e expandir pacotes de parâmetros em tipos Variadic como std:: tupla \<T...> que são passados como argumentos para uma função.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,7 +32,7 @@ template <class T, T... Vals>
 struct integer_sequence
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo dos valores; deve ser um tipo integral: bool, char, char16_t, char32_t, wchar_t, ou tipos inteiros com sinal ou sem sinal.
@@ -42,7 +42,7 @@ Um pacote de parâmetro que não são de tipo e que representa uma sequência de
 
 ## <a name="members"></a>Membros
 
-|||
+|Nome|Descrição|
 |-|-|
 |`static size_t size() noexcept`|O número de elementos na sequência.|
 |`typedef T value_type`|O tipo de cada elemento na sequência. Deve ser um tipo integral.|
@@ -57,7 +57,7 @@ O exemplo a seguir é baseado na proposta [N3658](https://wg21.link/n3658) origi
 
 Na função `a2t`, um `index_sequence` é um alias de `integer_sequence` com base no tipo integral `size_t`. `make_index_sequence` é um alias que, em tempo de compilação, cria `index_sequence` baseado em zero com o mesmo número de elementos da matriz que é passado pelo chamador. `a2t` passa o `index_sequence`, por valor, para `a2t_`, em que a expressão `a[I]...` desempacota `I` e, então, os elementos são alimentados para `make_tuple`, que os consome como argumentos individuais. Por exemplo, se a sequência contiver três elementos, `make_tuple` será chamado como make_tuple(a[0], a[1], a[2]). Os próprios elementos da matriz podem, claro, ser de qualquer tipo.
 
-A função aplicar aceita um [std::tuple](../standard-library/tuple-class.md) `integer_sequence` , e `tuple_size` produz um usando a classe auxiliar. Observe que [std::decay_t](../standard-library/decay-class.md) é necessário porque [tuple_size](../standard-library/tuple-size-class-tuple.md) não funciona com tipos de referência. A função `apply_` desempacota os membros da tupla e os encaminha como argumentos separados para uma chamada de função. Neste exemplo, a função é uma expressão lambda simples que imprime os valores.
+A função Apply aceita um [std:: tupla](../standard-library/tuple-class.md)e produz um `integer_sequence` usando a `tuple_size` classe auxiliar. Observe que o [std::d ecay_t](../standard-library/decay-class.md) é necessário porque [tuple_size](../standard-library/tuple-size-class-tuple.md) não funciona com tipos de referência. A função `apply_` desempacota os membros da tupla e os encaminha como argumentos separados para uma chamada de função. Neste exemplo, a função é uma expressão lambda simples que imprime os valores.
 
 ```cpp
 #include <stddef.h>
@@ -115,7 +115,7 @@ int main()
 }
 ```
 
-Para fazer um `index_sequence` para um pacote de parâmetro, use `index_sequence_for`\<T...>, que é um alias para `make_index_sequence`\<sizeof...(T)>
+Para criar um `index_sequence` para um pacote de parâmetros, use `index_sequence_for` \<T...> um alias para`make_index_sequence`\<sizeof...(T)>
 
 ## <a name="requirements"></a>Requisitos
 
@@ -125,4 +125,4 @@ Namepace: std
 
 ## <a name="see-also"></a>Confira também
 
-[Elipse e Modelos Variadic](../cpp/ellipses-and-variadic-templates.md)
+[Reticências e modelos Variadic](../cpp/ellipses-and-variadic-templates.md)

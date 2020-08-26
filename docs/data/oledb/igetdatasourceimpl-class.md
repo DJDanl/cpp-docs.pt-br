@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4c8af66f41724c5a99dfe271a7dd8babc3a993a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843957"
 ---
 # <a name="igetdatasourceimpl-class"></a>Classe IGetDataSourceImpl
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-Sua classe, derivada de `IGetDataSourceImpl`.
+Sua classe, derivada de `IGetDataSourceImpl` .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -45,7 +45,7 @@ Sua classe, derivada de `IGetDataSourceImpl`.
 
 ### <a name="interface-methods"></a>Métodos de interface
 
-|||
+| Nome | Descrição |
 |-|-|
 |[GetDataSource](#getdatasource)|Retorna um ponteiro de interface no objeto de fonte de dados que criou a sessão.|
 
@@ -53,7 +53,7 @@ Sua classe, derivada de `IGetDataSourceImpl`.
 
 Essa é uma interface obrigatória na sessão para obter um ponteiro de interface para o objeto de fonte de dados.
 
-## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>IGetDataSourceImpl:: getdataname
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a> IGetDataSourceImpl:: getdataname
 
 Retorna um ponteiro de interface no objeto de fonte de dados que criou a sessão.
 
@@ -75,4 +75,4 @@ Consulte [IGetDataSource:: Getdataname](/previous-versions/windows/desktop/ms725
 ## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

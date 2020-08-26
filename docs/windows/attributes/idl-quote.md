@@ -1,21 +1,21 @@
 ---
-title: idl_quote (C++ atributo com)
+title: idl_quote (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d0aa80f64593ed347720b84e4059a0c32dce4be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168023"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844230"
 ---
 # <a name="idl_quote"></a>idl_quote
 
-Permite que você use construções IDL que não têm suporte na versão atual do Visual C++ e que elas passem pelo arquivo. idl gerado.
+Permite que você use construções IDL que não têm suporte na versão atual do Visual C++ e que eles passem para o arquivo. idl gerado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,7 +26,7 @@ Permite que você use construções IDL que não têm suporte na versão atual d
 ### <a name="parameters"></a>parâmetros
 
 *text*<br/>
-O nome do atributo que você pretende que C++ o compilador da Microsoft passe para o arquivo. idl gerado sem retornar um erro do compilador.
+O nome do atributo que você pretende que o compilador do Microsoft C++ passe para o arquivo. idl gerado sem retornar um erro do compilador.
 
 ## <a name="remarks"></a>Comentários
 
@@ -73,18 +73,16 @@ Esse código faz com que `MYFLOT` e `MYDUB` e a entrada de *texto* seja colocada
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
-|**Aplica-se a**|Lugares|
+|**Aplica-se a**|Qualquer lugar|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos autônomos](stand-alone-attributes.md)

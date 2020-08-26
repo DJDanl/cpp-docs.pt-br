@@ -10,48 +10,48 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293102"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842969"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (driver de modo Kernel do Windows NT)
 
->/DRIVER[:UPONLY |:WDM]
+>/DRIVER [: UPSOMENTE |: WDM]
 
 ## <a name="remarks"></a>Comentários
 
-Use o **/DRIVER** opção de vinculador para criar um driver de modo de kernel do Windows NT.
+Use a opção de vinculador **/Driver** para criar um driver de modo kernel do Windows NT.
 
-**/Driver: uponly** faz com que o vinculador adicionar o **image_file_up_system_only nas** bit características no cabeçalho de saída para especificar que ele é um uniprocessador (UP) do driver. O sistema operacional irá recusar carregar um driver UP em um sistema de multiprocessador (MP).
+**/Driver:** faz com que o vinculador adicione o **IMAGE_FILE_UP_SYSTEM_ONLY** bit às características no cabeçalho de saída para especificar que ele é um driver uniprocessador (up). O sistema operacional se recusará a carregar um driver ativo em um sistema de multiprocessador (MP).
 
-**/Driver: WDM** faz com que o vinculador defina o **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit no campo DllCharacteristics do cabeçalho opcional.
+**/Driver: WDM** faz com que o vinculador defina o **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit no campo DLLCHARACTERISTICS do cabeçalho opcional.
 
-Se **/DRIVER** não for especificado, esses bits não são definidos pelo vinculador.
+Se **/Driver** não for especificado, esses bits não serão definidos pelo vinculador.
 
-Se **/DRIVER** for especificado:
+Se **/Driver** for especificado:
 
-- **/Fixed: no** está em vigor. Para obter mais informações, consulte [/FIXED (Endereço Básico Fixo)](fixed-fixed-base-address.md).
+- **/Fixed: não** está em vigor. Para obter mais informações, consulte [/Fixed (endereço base fixo)](fixed-fixed-base-address.md).
 
-- A extensão do arquivo de saída é definida como. sys. Use **/out** para alterar o nome de arquivo padrão e a extensão. Para obter mais informações, consulte [/OUT (Nome do Arquivo de Saída)](out-output-file-name.md).
+- A extensão do arquivo de saída é definida como. sys. Use **/out** para alterar o nome de arquivo e a extensão padrão. Para obter mais informações, consulte [/out (nome do arquivo de saída)](out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Clique o **vinculador** pasta.
+1. Clique na pasta **Vinculador**.
 
-1. Clique o **sistema** página de propriedades.
+1. Clique na página de propriedades do **sistema** .
 
-1. Modificar a **Driver** propriedade.
+1. Modifique a propriedade do **Driver** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
-- Ver [VCLinkerTool.driver propriedade](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+- Consulte a [Propriedade VCLinkerTool. Driver](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções de vinculador MSVC](linker-options.md)
+[Opções do vinculador MSVC](linker-options.md)
