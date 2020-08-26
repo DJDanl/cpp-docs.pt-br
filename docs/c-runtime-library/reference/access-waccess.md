@@ -61,7 +61,7 @@ int _waccess(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *path*<br/>
 Caminho do arquivo ou do diretório.

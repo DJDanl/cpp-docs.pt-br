@@ -52,7 +52,7 @@ void *bsearch_s(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *chaves*\
 Ponteiro para a chave a ser pesquisada.

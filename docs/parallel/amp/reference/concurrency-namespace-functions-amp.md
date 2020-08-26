@@ -62,7 +62,7 @@ Bloqueia a execução de todos os threads em um bloco até que todos os acessos 
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Barrier*<br/>
 Um objeto `tile_barrier`.
@@ -93,7 +93,7 @@ inline bool atomic_compare_exchange(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 O local do qual um dos valores a serem comparados é lido e para o qual o novo valor, se houver, deve ser armazenado.
@@ -129,7 +129,7 @@ inline float atomic_exchange(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local de destino.
@@ -157,7 +157,7 @@ inline unsigned int atomic_fetch_add(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local da memória.
@@ -185,7 +185,7 @@ inline unsigned int atomic_fetch_and(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local da memória.
@@ -208,7 +208,7 @@ inline int atomic_fetch_dec(_Inout_ int* _Dest
 inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 O local na memória do valor a ser decrementado.
@@ -227,7 +227,7 @@ inline int atomic_fetch_inc(_Inout_ int* _Dest) restrict(amp);
 inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 O local na memória do valor a ser incrementado.
@@ -252,7 +252,7 @@ inline unsigned int atomic_fetch_max(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 O local do qual um dos valores a serem comparados é lido e para o qual o máximo dos dois valores deve ser armazenado.
@@ -280,7 +280,7 @@ inline unsigned int atomic_fetch_min(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 O local do qual um dos valores a serem comparados é lido e para o qual o mínimo dos dois valores deve ser armazenado.
@@ -308,7 +308,7 @@ inline unsigned int atomic_fetch_or(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local da memória.
@@ -336,7 +336,7 @@ inline unsigned int atomic_fetch_sub(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local de destino.
@@ -364,7 +364,7 @@ inline unsigned int atomic_fetch_xor(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local da memória.
@@ -444,7 +444,7 @@ void copy(
     OutputIterator _DestIter);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 O objeto para o qual copiar.
@@ -533,7 +533,7 @@ concurrency::completion_future copy_async(
     const array_view<value_type, _Rank>& _Src, OutputIterator _DestIter);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
 O objeto para o qual copiar.
@@ -602,7 +602,7 @@ Bloqueia a execução de todos os threads em um bloco até que todos os acessos 
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Barrier*<br/>
 Um objeto tile_barrier
@@ -657,7 +657,7 @@ void parallel_for_each(
     const _Kernel_type& _Kernel);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Accl_view*<br/>
 O `accelerator_view` objeto no qual executar a computação paralela.
@@ -691,7 +691,7 @@ Bloqueia a execução de todos os threads em um bloco até que todos os `tile_st
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Barrier*<br/>
 Um objeto tile_barrier.

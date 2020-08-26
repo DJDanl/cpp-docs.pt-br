@@ -64,7 +64,7 @@ public:
 };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *IntType*\
 O tipo de resultado inteiro, o padrão é **`int`** . Para possíveis tipos, consulte [\<random>](../standard-library/random.md) .
@@ -216,7 +216,7 @@ explicit geometric_distribution(double p = 0.5);
 explicit geometric_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DTI*\
 O parâmetro de distribuição `p`.
@@ -247,7 +247,7 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DTI*\
 O parâmetro de distribuição `p`.

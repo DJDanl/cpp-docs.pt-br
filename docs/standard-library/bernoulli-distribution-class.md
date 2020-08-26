@@ -64,7 +64,7 @@ public:
    };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *URNG*\
 O mecanismo do gerador de número aleatório uniforme. Para possíveis tipos, consulte [\<random>](../standard-library/random.md) .
@@ -165,7 +165,7 @@ explicit bernoulli_distribution(double p = 0.5);
 explicit bernoulli_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DTI*\
 O parâmetro de distribuição `p` armazenado.
@@ -189,7 +189,7 @@ struct param_type {typedef bernoulli_distribution distribution_type; param_type 
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *DTI*\
 O parâmetro de distribuição `p` armazenado.

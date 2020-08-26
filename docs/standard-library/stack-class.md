@@ -38,7 +38,7 @@ template <class Type, class Container= deque <Type>>
 class stack
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Escreva*\
 O tipo de dados do elemento a ser armazenado na stack.
@@ -213,7 +213,7 @@ Adiciona um elemento à parte superior da pilha.
 void push(const Type& val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Val*\
 O elemento adicionado à parte superior da stack.
@@ -321,7 +321,7 @@ stack();
 explicit stack(const container_type& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O contêiner do qual a stack construída será uma cópia.

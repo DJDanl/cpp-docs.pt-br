@@ -43,7 +43,7 @@ CompareElements(
     const ARG_TYPE* pElement2);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TYPE*<br/>
 O tipo do primeiro elemento a ser comparado.
@@ -85,7 +85,7 @@ void AFXAPI CopyElements(
     INT_PTR nCount);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TYPE*<br/>
 Parâmetro de modelo que especifica o tipo de elementos a serem copiados.
@@ -121,7 +121,7 @@ void  AFXAPI DumpElements(
     INT_PTR nCount);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *origem*<br/>
 Contexto de despejo para despejar elementos.
@@ -154,7 +154,7 @@ template<class ARG_KEY>
 AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *ARG_KEY*<br/>
 Parâmetro de modelo que especifica o tipo de dados usado para acessar as chaves de mapa.
@@ -196,7 +196,7 @@ template<class TYPE>
 void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TYPE*<br/>
 Parâmetro de modelo que especifica o tipo dos elementos.

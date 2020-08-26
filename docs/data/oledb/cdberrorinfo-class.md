@@ -91,7 +91,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
    BSTR* pbstrHelpFile = NULL) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ulRecordNum*<br/>
 no O número de base zero do registro para o qual retornar informações de erro.
@@ -137,7 +137,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
    ERRORINFO* pErrorInfo) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -156,7 +156,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
    REFIID riid,IUnknown** ppObject) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -175,7 +175,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
    LCID lcid,IErrorInfo** ppErrorInfo) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -194,7 +194,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
    DISPPARAMS* pdispparams) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: Geterroparameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -216,7 +216,7 @@ HRESULT GetErrorRecords(IUnknown* pUnk,
 HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pUnk*<br/>
 no Interface para o objeto para o qual obter registros de erro.

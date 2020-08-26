@@ -126,7 +126,7 @@ CDataConnection();
 CDataConnection(const CDataConnection &ds);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *AD*<br/>
 no Uma referência a uma conexão de dados existente.
@@ -147,7 +147,7 @@ Cria uma cópia de uma conexão de dados existente.
 CDataConnection& Copy(const CDataConnection & ds) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *AD*<br/>
 no Uma referência a uma conexão de dados existente a ser copiada.
@@ -162,7 +162,7 @@ Abre uma conexão com uma fonte de dados usando uma cadeia de inicialização.
 HRESULT Open(LPCOLESTR szInitString) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *szInitString*<br/>
 no A cadeia de inicialização da fonte de dados.
@@ -181,7 +181,7 @@ Abre uma nova sessão usando a fonte de dados do objeto de conexão atual.
 HRESULT OpenNewSession(CSession & session) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *sessão*<br/>
 [entrada/saída] Uma referência ao novo objeto de sessão.

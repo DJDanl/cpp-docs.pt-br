@@ -80,7 +80,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
    void* pStatus = NULL) throw ();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -121,7 +121,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
    DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -162,7 +162,7 @@ HRESULT CreateAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nBindEntries*<br/>
 no Número de colunas. Esse número deve corresponder ao número de chamadas para a função [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) .
@@ -193,7 +193,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nBindEntries*<br/>
 no Número de colunas.

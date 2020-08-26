@@ -96,7 +96,7 @@ virtual BOOL Create(
     CMFCDropDownToolBar* pWndOriginToolbar);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pWndParent*\
 no A janela pai do quadro suspenso.
@@ -160,7 +160,7 @@ Reposiciona o quadro suspenso.
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bNotify*\
 no Não utilizado.
@@ -177,7 +177,7 @@ Define se a janela da barra de ferramentas suspensa filho é destruída automati
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bAutoDestroy*<br/>
 no TRUE para destruir automaticamente a janela da barra de ferramentas suspensa associada; caso contrário, FALSE.

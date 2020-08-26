@@ -31,7 +31,7 @@ Usado em controles ActiveX do ATL para definir os sinalizadores OLEMISC.
 DECLARE_OLEMISC_STATUS( miscstatus )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *miscstatus*<br/>
 Todos os sinalizadores OLEMISC aplicáveis.

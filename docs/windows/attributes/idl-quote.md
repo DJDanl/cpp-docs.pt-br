@@ -23,7 +23,7 @@ Permite que você use construções IDL que não têm suporte na versão atual d
 [ idl_quote(text) ]
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *text*<br/>
 O nome do atributo que você pretende que o compilador do Microsoft C++ passe para o arquivo. idl gerado sem retornar um erro do compilador.

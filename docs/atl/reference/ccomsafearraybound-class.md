@@ -66,7 +66,7 @@ O construtor.
 CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *ulCount*<br/>
 O número de elementos na matriz.
@@ -131,7 +131,7 @@ CComSafeArrayBound& operator= (const CComSafeArrayBound& bound) throw();
 CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *limita*<br/>
 Um objeto `CComSafeArrayBound`.
@@ -155,7 +155,7 @@ Chame esse método para definir o número de elementos.
 ULONG SetCount(ULONG ulCount) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *ulCount*<br/>
 O número de elementos.
@@ -172,7 +172,7 @@ Chame esse método para definir o limite inferior.
 LONG SetLowerBound(LONG lLowerBound) throw();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lLowerBound*<br/>
 O limite inferior.

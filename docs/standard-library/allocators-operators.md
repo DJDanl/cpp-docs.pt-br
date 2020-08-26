@@ -30,7 +30,7 @@ bool operator!=(
     const allocator_base<Type, Sync>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Um dos objetos alocadores a serem testados quanto à desigualdade.
@@ -57,7 +57,7 @@ bool operator==(
     const allocator_base<Type, Sync>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Um dos objetos alocadores a serem testados quanto à igualdade.
