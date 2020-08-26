@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229890"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838796"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Usar o conjunto de ferramentas do Microsoft C++ na linha de comando
 
@@ -172,7 +172,7 @@ Use **-vcvars_ver = 14,1 x. yyyy** para especificar uma versão específica do c
 
 Use **-vcvars_ver = 14.0** para especificar o conjunto de ferramentas do compilador do Visual Studio 2015.
 
-#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a>Para configurar o ambiente de compilação em uma janela de prompt de comando existente
+#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a> Para configurar o ambiente de compilação em uma janela de prompt de comando existente
 
 1. No prompt de comando, use o comando CD para alterar para o diretório de instalação do Visual Studio. Em seguida, use CD novamente para alterar para a subpasta que contém os arquivos de comando específicos da configuração. Para o Visual Studio 2019 e o Visual Studio 2017, use o subdiretório de * \\ \\ compilação auxiliar do vc* . Para o Visual Studio 2015, use o subdiretório *vc* .
 
@@ -237,7 +237,7 @@ Use o vinculador (link.exe) para vincular arquivos de objetos compilados e bibli
 [NMAKE](reference/nmake-reference.md)<br/>
 Use o NMAKE (nmake.exe) no Windows para compilar projetos C++ baseados em um makefile tradicional.
 
-Quando você cria na linha de comando, o comando F1 não está disponível para ajuda instantânea. Em vez disso, você pode usar um mecanismo de pesquisa para obter informações sobre avisos, erros e mensagens. Você também pode baixar e usar os arquivos de ajuda offline. Para usar a pesquisa no [docs.Microsoft.com](https://docs.microsoft.com/cpp/), insira sua consulta na caixa de pesquisa na parte superior de qualquer artigo.
+Quando você cria na linha de comando, o comando F1 não está disponível para ajuda instantânea. Em vez disso, você pode usar um mecanismo de pesquisa para obter informações sobre avisos, erros e mensagens. Você também pode baixar e usar os arquivos de ajuda offline. Para usar a pesquisa no docs.microsoft.com, insira sua consulta na caixa de pesquisa na parte superior de qualquer artigo.
 
 ## <a name="command-line-project-management-tools"></a>Ferramentas de gerenciamento de projeto de linha de comando
 

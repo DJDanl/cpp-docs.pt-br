@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610901"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839134"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -36,7 +36,7 @@ template <
 ref class Map sealed;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *C*<br/>
 O tipo de chave em pares chave-valor.
@@ -90,10 +90,9 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 ### <a name="events"></a>Eventos
 
-|||
-|-|-|
-|Nome|Descrição|
-|Evento [map:: MapChanged](#mapchanged)|Ocorre quando o Map é alterado.|
+| Nome | Descrição |
+|--|--|
+| Evento [map:: MapChanged](#mapchanged) | Ocorre quando o Map é alterado. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -158,12 +157,12 @@ Determina se o Map atual contém a chave especificada.
 bool HasKey(K key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chave*<br/>
 A chave usada para localizar o elemento Map. O tipo de *chave* é TypeName *K*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a chave for encontrada; caso contrário, **`false`** .
 
@@ -177,7 +176,7 @@ Adiciona os pares chave-valor especificados ao objeto Map atual.
 virtual bool Insert(K key, V value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chave*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é TypeName *K*.
@@ -185,7 +184,7 @@ A porção de chave do par chave-valor. O tipo de *chave* é TypeName *K*.
 *value*<br/>
 A porção de valor do par chave-valor. O tipo de *valor* é TypeName *V*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a chave de um elemento existente no mapa atual corresponder à *chave* e a parte de valor desse elemento for definida como *valor*. **`false`** Se nenhum elemento existente no mapa atual corresponder à *chave* , os parâmetros de *chave* e *valor* serão feitos em um par chave-valor e, em seguida, adicionados ao mapa atual.
 
@@ -199,12 +198,12 @@ Recupera o valor do tipo V que está associado à chave especificada do tipo K, 
 V Lookup(K key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chave*<br/>
 A chave usada para localizar um elemento em Map. O tipo de *chave* é TypeName *K*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor que é emparelhado com a *chave*. O tipo do valor de retorno é TypeName *V*.
 
@@ -229,7 +228,7 @@ Map(
    const C& comp = C());
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Iniciar*<br/>
 O typename do Map atual.
@@ -274,7 +273,7 @@ Exclui os pares chave-valor especificados do objeto Map atual.
 virtual void Remove(K key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chave*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é TypeName *K*.
@@ -293,7 +292,7 @@ virtual property unsigned int Size;
 
 O número de elementos em Map.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Coleções (C++/CX)](collections-c-cx.md)<br/>
 [Namespace da plataforma](platform-namespace-c-cx.md)<br/>

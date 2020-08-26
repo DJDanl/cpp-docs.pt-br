@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: 3c95f4a982e23d757b330ecadcae5cfbfd6fd531
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213067"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839121"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -79,10 +79,9 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 ### <a name="events"></a>Eventos
 
-|||
-|-|-|
-|Nome|Descrição|
-|Evento [map:: MapChanged](#mapchanged)|Ocorre quando o Map é alterado.|
+| Nome | Descrição |
+|--|--|
+| Evento [map:: MapChanged](#mapchanged) | Ocorre quando o Map é alterado. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -94,7 +93,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 **Namespace:** Platform::Collections
 
-## <a name="unorderedmapclear-method"></a><a name="clear"></a>Método UnorderedMap:: Clear
+## <a name="unorderedmapclear-method"></a><a name="clear"></a> Método UnorderedMap:: Clear
 
 Remove todos os pares chave-valor do objeto UnorderedMap atual.
 
@@ -104,7 +103,7 @@ Remove todos os pares chave-valor do objeto UnorderedMap atual.
 virtual void Clear();
 ```
 
-## <a name="unorderedmapfirst-method"></a><a name="first"></a>Método UnorderedMap:: First
+## <a name="unorderedmapfirst-method"></a><a name="first"></a> Método UnorderedMap:: First
 
 Retorna um iterador que especifica o primeiro elemento [Windows:: Foundation:: Collections: \<K,V> : IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) no mapa não ordenado.
 
@@ -124,7 +123,7 @@ Um iterador que especifica o primeiro elemento no mapa.
 
 Uma maneira conveniente de manter o iterador retornado pelo primeiro () é atribuir o valor de retorno a uma variável que é declarada com a **`auto`** palavra-chave de dedução de tipo. Por exemplo, `auto x = myUnorderedMap->First();`.
 
-## <a name="unorderedmapgetview-method"></a><a name="getview"></a>Método UnorderedMap:: GetView
+## <a name="unorderedmapgetview-method"></a><a name="getview"></a> Método UnorderedMap:: GetView
 
 Retorna uma exibição somente leitura do UnorderedMap atual; ou seja, uma [classe Platform:: Collections:: UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md) que implementa a interface [Windows:: Foundation:: Collections:: IMapView:: IMapView](/uwp/api/windows.foundation.collections.imapview-2) .
 
@@ -138,7 +137,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Um objeto `UnorderedMapView`.
 
-## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a>Método UnorderedMap:: HasKey
+## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a> Método UnorderedMap:: HasKey
 
 Determina se o UnorderedMap atual contém a chave especificada.
 
@@ -155,11 +154,11 @@ bool HasKey(
 *chave*<br/>
 A chave usada para localizar o elemento UnorderedMap. O tipo de *chave* é TypeName *K*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a chave for encontrada; caso contrário, **`false`** .
 
-## <a name="unorderedmapinsert-method"></a><a name="insert"></a>Método UnorderedMap:: Insert
+## <a name="unorderedmapinsert-method"></a><a name="insert"></a> Método UnorderedMap:: Insert
 
 Adiciona o par chave-valor especificado ao objeto UnorderedMap atual.
 
@@ -180,11 +179,11 @@ A porção de chave do par chave-valor. O tipo de *chave* é TypeName *K*.
 *value*<br/>
 A porção de valor do par chave-valor. O tipo de *valor* é TypeName *V*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a chave de um elemento existente no mapa atual corresponder à *chave* e a parte de valor desse elemento for definida como *valor*. **`false`** Se nenhum elemento existente no mapa atual corresponder à *chave* , os parâmetros de *chave* e *valor* serão feitos em um par chave-valor e, em seguida, adicionados ao UnorderedMap atual.
 
-## <a name="unorderedmaplookup-method"></a><a name="lookup"></a>Método UnorderedMap:: Lookup
+## <a name="unorderedmaplookup-method"></a><a name="lookup"></a> Método UnorderedMap:: Lookup
 
 Recupera o valor do tipo V que está associado à chave especificada do tipo K.
 
@@ -201,11 +200,11 @@ V Lookup(
 *chave*<br/>
 A chave usada para localizar um elemento em UnorderedMap. O tipo de *chave* é TypeName *K*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor que é emparelhado com a *chave*. O tipo do valor de retorno é TypeName *V*.
 
-## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a>UnorderedMap::MapChanged
+## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a> UnorderedMap::MapChanged
 
 Gerado quando um item é inserido no mapa ou removido dele.
 
@@ -223,7 +222,7 @@ Um [MapChangedEventHandler \<K,V> ](/uwp/api/windows.foundation.collections.mapc
 
 Windows Runtime aplicativos nos quais C# ou Visual Basic projeto IMap \<K,V> como IDictionary \<K,V> .
 
-## <a name="unorderedmapremove-method"></a><a name="remove"></a>Método UnorderedMap:: Remove
+## <a name="unorderedmapremove-method"></a><a name="remove"></a> Método UnorderedMap:: Remove
 
 Exclui os pares de chave-valor especificados do objeto UnorderedMap.
 
@@ -239,7 +238,7 @@ virtual void Remove(
 *chave*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é TypeName *K*.
 
-## <a name="unorderedmapsize-method"></a><a name="size"></a>Método UnorderedMap:: Size
+## <a name="unorderedmapsize-method"></a><a name="size"></a> Método UnorderedMap:: Size
 
 Retorna o número de elementos [Windows:: Foundation:: Collections:: \<K,V> IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) no UnorderedMap.
 
@@ -253,7 +252,7 @@ virtual property unsigned int Size;
 
 O número de elementos no mapa não ordenado.
 
-## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a>Construtor UnorderedMap:: UnorderedMap
+## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a> Construtor UnorderedMap:: UnorderedMap
 
 Inicializa uma nova instância da classe UnorderedMap.
 
@@ -346,7 +345,7 @@ O typename da UnorderedMap atual.
 *P*<br/>
 Um objeto de função que pode comparar duas chaves para determinar se são iguais. O padrão desse parâmetro é [std:: equal_to \<K> ](../standard-library/equal-to-struct.md).
 
-*T*<br/>
+*H*<br/>
 Um objeto de função que gera um valor de hash para uma chave. Esse parâmetro assume como padrão a [classe 1 de hash](../standard-library/hash-class.md) para os tipos de chave aos quais a classe dá suporte.
 
 *d*<br/>

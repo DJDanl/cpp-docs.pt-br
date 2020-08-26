@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c47ec86e80b50bb2b313a2c84a3f375681e2870
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223766"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838822"
 ---
 # <a name="x64-software-conventions"></a>Convenções de software x64
 
@@ -44,22 +44,21 @@ Embora seja possível acessar dados com qualquer alinhamento, é recomendável a
 
 - Octaword-128 bits
 
-|||||
-|-|-|-|-|
 |Tipo escalar|Tipo de dados C|Tamanho do armazenamento (em bytes)|Alinhamento recomendado|
-|**INT8**|**`char`**|1|Byte|
-|**UINT8**|**`unsigned char`**|1|Byte|
-|**INT16**|**`short`**|2|Word|
-|**UINT16**|**`unsigned short`**|2|Word|
-|**INT32**|**`int`**, **`long`**|4|Doubleword|
-|**UINT32**|**int não assinado, longo sem sinal**|4|Doubleword|
-|**INT64**|**`__int64`**|8|Quadword|
-|**UINT64**|**unsigned __int64**|8|Quadword|
-|**FP32 (precisão única)**|**`float`**|4|Doubleword|
-|**FP64 (precisão dupla)**|**`double`**|8|Quadword|
-|**REFERE**|__\*__|8|Quadword|
-|**`__m64`**|**__m64 de struct**|8|Quadword|
-|**`__m128`**|**__m128 de struct**|16|Octaword|
+|-|-|-|-|
+|**`INT8`**|**`char`**|1|Byte|
+|**`UINT8`**|**`unsigned char`**|1|Byte|
+|**`INT16`**|**`short`**|2|Word|
+|**`UINT16`**|**`unsigned short`**|2|Word|
+|**`INT32`**|**`int`**, **`long`**|4|Doubleword|
+|**`UINT32`**|**`unsigned int`**, **`unsigned long`**|4|Doubleword|
+|**`INT64`**|**`__int64`**|8|Quadword|
+|**`UINT64`**|**`unsigned __int64`**|8|Quadword|
+|**`FP32`** (precisão única)|**`float`**|4|Doubleword|
+|**`FP64`** (precisão dupla)|**`double`**|8|Quadword|
+|**`POINTER`**|__\*__|8|Quadword|
+|**`__m64`**|**`struct __m64`**|8|Quadword|
+|**`__m128`**|**`struct __m128`**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agregações e uniões
 
@@ -79,22 +78,21 @@ Outros tipos, como matrizes, structs e uniões, têm requisitos de alinhamento m
 
 A tabela a seguir mostra o alinhamento altamente sugerido para os membros escalares de uniões e estruturas.
 
-||||
-|-|-|-|
 |Tipo escalar|Tipo de dados C|Alinhamento necessário|
-|**INT8**|**`char`**|Byte|
-|**UINT8**|**`unsigned char`**|Byte|
-|**INT16**|**`short`**|Word|
-|**UINT16**|**`unsigned short`**|Word|
-|**INT32**|**`int`**, **`long`**|Doubleword|
-|**UINT32**|**int não assinado, longo sem sinal**|Doubleword|
-|**INT64**|**`__int64`**|Quadword|
-|**UINT64**|**unsigned __int64**|Quadword|
-|**FP32 (precisão única)**|**`float`**|Doubleword|
-|**FP64 (precisão dupla)**|**`double`**|Quadword|
-|**REFERE**|<strong>\*</strong>|Quadword|
-|**`__m64`**|**__m64 de struct**|Quadword|
-|**`__m128`**|**__m128 de struct**|Octaword|
+|-|-|-|
+|**`INT8`**|**`char`**|Byte|
+|**`UINT8`**|**`unsigned char`**|Byte|
+|**`INT16`**|**`short`**|Word|
+|**`UINT16`**|**`unsigned short`**|Word|
+|**`INT32`**|**`int`**, **`long`**|Doubleword|
+|**`UINT32`**|**`unsigned int`**, **`unsigned long`**|Doubleword|
+|**`INT64`**|**`__int64`**|Quadword|
+|**`UINT64`**|**`unsigned __int64`**|Quadword|
+|**`FP32`** (precisão única)|**`float`**|Doubleword|
+|**`FP64`** (precisão dupla)|**`double`**|Quadword|
+|**`POINTER`**|<strong>\*</strong>|Quadword|
+|**`__m64`**|**`struct __m64`**|Quadword|
+|**`__m128`**|**`struct __m128`**|Octaword|
 
 As regras de alinhamento agregado a seguir se aplicam:
 
@@ -191,9 +189,8 @@ A arquitetura x64 fornece para 16 registros de uso geral (em seguida chamados de
 
 A tabela a seguir descreve como cada registro é usado nas chamadas de função:
 
-||||
-|-|-|-|
 |Registre-se|Status|Uso|
+|-|-|-|
 |RAX|Volátil|Registro de valores retornados|
 |RCX|Volátil|Primeiro argumento inteiro|
 |RDX|Volátil|Segundo argumento inteiro|

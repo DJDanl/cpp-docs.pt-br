@@ -2,16 +2,16 @@
 title: namespace padrão
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5696730bcef08ad11be4a2b689e95eb3c13e11eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740510"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845699"
 ---
 # <a name="default-namespace"></a>namespace padrão
 
-Os `default` escopos de namespace são os tipos internos com suporte do C++/CX.
+Os `default` escopos de namespace são os tipos internos com suporte no C++/CX.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,12 +23,12 @@ namespace default;
 
 Todos os tipos internos herdam os membros a seguir.
 
-|||
-|-|-|
-|[default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md)|Determina se o objeto especificado é igual ao objeto atual.|
-|[default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Retorna o código hash para essa instância.|
-|[default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md)|Retorna uma cadeia de caracteres que representa o tipo atual.|
-|[default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md)|Retorna uma cadeia de caracteres que representa o tipo atual.|
+| Nome | Descrição |
+|--|--|
+| [default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md) | Determina se o objeto especificado é igual ao objeto atual. |
+| [default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md) | Retorna o código hash para a instância. |
+| [default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md) | Retorna uma cadeia de caracteres que representa o tipo atual. |
+| [default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md) | Retorna uma cadeia de caracteres que representa o tipo atual. |
 
 ### <a name="built-in-types"></a>Tipos internos
 
@@ -41,7 +41,7 @@ Todos os tipos internos herdam os membros a seguir.
 |`int32`|Um inteiro com sinal de 32 bits.|
 |`int64`|Um inteiro com sinal de 64 bits.|
 |`int8`|Um valor numérico com sinal de 8 bits.|
-|`uint16`|Um inteiro de 16 bits sem sinal.|
+|`uint16`|Um inteiro sem sinal de 16 bits.|
 |`uint32`|Um inteiro sem sinal de 32 bits.|
 |`uint64`|Um inteiro sem sinal de 64 bits.|
 |`uint8`|Um valor numérico sem sinal de 8 bits.|
@@ -50,6 +50,6 @@ Todos os tipos internos herdam os membros a seguir.
 
 **Cabeçalho:** vccorlib.h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)
+[Referência de linguagem do C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

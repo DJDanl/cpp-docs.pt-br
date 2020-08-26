@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 12f7af195f2282955cb16c1f38d4e512ca0f86cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232788"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838874"
 ---
 # <a name="coclass"></a>coclass
 
@@ -53,15 +53,15 @@ Finalmente, qualquer interface dupla que não esteja definida usando IDL inserid
 
 O atributo **coclass** também torna as seguintes funções disponíveis por meio de código injetado, ou no caso de `GetObjectCLSID` , como um método estático na classe base `CComCoClass` :
 
-- `UpdateRegistry`registra as fábricas de classe da classe de destino.
+- `UpdateRegistry` registra as fábricas de classe da classe de destino.
 
 - `GetObjectCLSID`, que está relacionado ao registro, também pode ser usado para obter o CLSID da classe de destino.
 
-- `GetObjectFriendlyName`Por padrão, retorna uma cadeia de caracteres do formato " \<*target class name*> `Object` ". Se essa função já estiver presente, ela não será adicionada. Adicione essa função à classe de destino para retornar um nome mais amigável do que aquela gerada automaticamente.
+- `GetObjectFriendlyName` Por padrão, retorna uma cadeia de caracteres do formato " \<*target class name*> `Object` ". Se essa função já estiver presente, ela não será adicionada. Adicione essa função à classe de destino para retornar um nome mais amigável do que aquela gerada automaticamente.
 
 - `GetProgID`, que está relacionado ao registro, retorna a cadeia de caracteres especificada com o atributo [ProgID](progid.md) .
 
-- `GetVersionIndependentProgID`tem a mesma funcionalidade que `GetProgID` , mas retorna a cadeia de caracteres especificada com [vi_progid](vi-progid.md).
+- `GetVersionIndependentProgID` tem a mesma funcionalidade que `GetProgID` , mas retorna a cadeia de caracteres especificada com [vi_progid](vi-progid.md).
 
 As seguintes alterações, que estão relacionadas ao mapa COM, são feitas na classe de destino:
 
@@ -127,9 +127,7 @@ public:
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|

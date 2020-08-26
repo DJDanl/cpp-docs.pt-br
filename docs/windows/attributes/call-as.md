@@ -1,17 +1,17 @@
 ---
-title: call_as (C++ atributo com)
+title: call_as (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ae620ed6f2b01cc52e4a9c76217f044db925f11
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167323"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838914"
 ---
 # <a name="call_as"></a>call_as
 
@@ -34,7 +34,7 @@ O atributo **call_as** C++ tem a mesma funcionalidade que o atributo MIDL [call_
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como você pode usar **call_as** para mapear uma função não remotable (`f1`) para uma função remota (`Remf1`):
+O código a seguir mostra como você pode usar **call_as** para mapear uma função não remotable ( `f1` ) para uma função remota ( `Remf1` ):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -50,19 +50,17 @@ __interface IMInterface {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
 [local](local-cpp.md)
