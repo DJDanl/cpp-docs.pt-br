@@ -1,19 +1,19 @@
 ---
-title: Declarador de referência rvalue:&amp;&amp;
+title: 'Declarador de referência rvalue: &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 65eec84447043b89ff94b77b7aed22b1b06f58e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 953aafe79115ad32a172c878eb910dd06b81e3f4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227095"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842033"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referência rvalue:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referência rvalue: &amp;&amp;
 
 Contém uma referência a uma expressão rvalue.
 
@@ -391,13 +391,12 @@ Esta versão da função `print_type_and_value` encaminha seu parâmetro para a 
 
 A tabela a seguir resume as regras de recolhimento de referência para dedução do tipo de argumento de modelo:
 
-|||
-|-|-|
-|Tipo expandido|Tipo recolhido|
-|`T& &`|`T&`|
-|`T& &&`|`T&`|
-|`T&& &`|`T&`|
-|`T&& &&`|`T&&`|
+| Tipo expandido | Tipo recolhido |
+|--|--|
+| `T& &` | `T&` |
+| `T& &&` | `T&` |
+| `T&& &` | `T&` |
+| `T&& &&` | `T&&` |
 
 A dedução do argumento do modelo é um elemento importante para a implementação do encaminhamento perfeito. A seção Encaminhamento perfeito apresentada anteriormente neste tópico descreve o encaminhamento perfeito com mais detalhes.
 

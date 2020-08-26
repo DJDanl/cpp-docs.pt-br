@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 02bc5c5a7c1766c97d9a834c8b6b4dfb2a26ae82
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231787"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841422"
 ---
 # <a name="collection-class-helpers"></a>Auxiliares da classe de coleção
 
@@ -23,7 +23,7 @@ O biblioteca MFC fornece as seguintes funções globais em afxtempl. h para ajud
 
 ### <a name="collection-class-helpers"></a>Auxiliares da classe de coleção
 
-|||
+|Nome|Descrição|
 |-|-|
 |[CompareElements](#compareelements)|Indica se os elementos são iguais.|
 |[CopyElements](#copyelements)|Copia elementos de uma matriz para outra.|
@@ -31,7 +31,7 @@ O biblioteca MFC fornece as seguintes funções globais em afxtempl. h para ajud
 |[HashKey](#hashkey)|Calcula uma chave de hash.|
 |[SerializeElements](#serializeelements)|Armazena ou recupera elementos de ou para um arquivo morto.|
 
-## <a name="compareelements"></a><a name="compareelements"></a>CompareElements
+## <a name="compareelements"></a><a name="compareelements"></a> CompareElements
 
 Chamado diretamente por [CList:: find] (CList-Class. MD # not_found. MD # clist__find e indiretamente por [cmap__lookup](cmap-class.md#lookup) e [cmap__operator &#91;&#93;](cmap-class.md#operator_at).
 
@@ -57,7 +57,7 @@ O tipo do segundo elemento a ser comparado.
 *pElement2*<br/>
 Ponteiro para o segundo elemento a ser comparado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o objeto apontado por *pElement1* for igual ao objeto apontado por *pElement2*; caso contrário, 0.
 
@@ -73,7 +73,7 @@ A linguagem C++ define o operador de comparação ( `==` ) para tipos simples ( 
 
    **Cabeçalho:** afxtempl. h
 
-## <a name="copyelements"></a><a name="copyelements"></a>CopyElements
+## <a name="copyelements"></a><a name="copyelements"></a> CopyElements
 
 Essa função é chamada diretamente por [CArray:: Append](carray-class.md#append) e [CArray:: Copy](carray-class.md#copy).
 
@@ -109,7 +109,7 @@ Para obter informações sobre como implementar essa e outras funções auxiliar
 
   **Cabeçalho** afxtempl. h
 
-## <a name="dumpelements"></a><a name="dumpelements"></a>DumpElements
+## <a name="dumpelements"></a><a name="dumpelements"></a> DumpElements
 
 Fornece saída de diagnóstico orientado a fluxo na forma de texto para os elementos da sua coleção quando substituídos.
 
@@ -145,7 +145,7 @@ A implementação padrão não faz nada. Se os elementos da coleção forem deri
 
   **Cabeçalho** afxtempl. h
 
-## <a name="hashkey"></a><a name="hashkey"></a>HashKey
+## <a name="hashkey"></a><a name="hashkey"></a> HashKey
 
 Calcula um valor de hash para a chave fornecida.
 
@@ -162,7 +162,7 @@ Parâmetro de modelo que especifica o tipo de dados usado para acessar as chaves
 *chave*<br/>
 A chave cujo valor de hash deve ser calculado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor de hash da chave.
 
@@ -187,7 +187,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 
   **Cabeçalho** afxtempl. h
 
-## <a name="serializeelements"></a><a name="serializeelements"></a>SerializeElements
+## <a name="serializeelements"></a><a name="serializeelements"></a> SerializeElements
 
 [CArray](carray-class.md), [CList](clist-class.md)e [CMap](cmap-class.md) chamam essa função para serializar elementos.
 

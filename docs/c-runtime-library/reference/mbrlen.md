@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920310"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842111"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -47,7 +47,7 @@ size_t mbrlen(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Str*<br/>
 O ponteiro para o próximo byte a ser inspecionado em uma cadeia de caracteres multibyte.
@@ -58,20 +58,20 @@ O número máximo de bytes a serem inspecionados.
 *mbstate*<br/>
 Aponta para o estado atual de deslocamento do byte inicial de *Str*.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Um dos seguintes valores:
 
-|||
-|-|-|
-0|A próxima *contagem* ou menos bytes concluirá o caractere multibyte que representa o caractere nulo largo.
-1 para *contagem*, inclusivo|A próxima *contagem* ou menos bytes concluirá um caractere multibyte válido. O valor retornado é o número de bytes que completa os caracteres multibyte.
-(size_t)(-2)|Os bytes de *contagem* seguinte contribuem para um caractere multibyte incompleto, mas potencialmente válido, e todos os bytes de *contagem* foram processados.
-(size_t)(-1)|Erro de codificação. A próxima *contagem* ou menos bytes não contribuirá para um caractere multibyte completo e válido. Nesse caso, **errno** é definido como EILSEQ e o estado de conversão em *mbstate* não é especificado.
+| Valor | Descrição |
+|--|--|
+| 0 | A próxima *contagem* ou menos bytes concluirá o caractere multibyte que representa o caractere nulo largo. |
+| 1 para *contagem*, inclusivo | A próxima *contagem* ou menos bytes concluirá um caractere multibyte válido. O valor retornado é o número de bytes que completa os caracteres multibyte. |
+| (size_t)(-2) | Os bytes de *contagem* seguinte contribuem para um caractere multibyte incompleto, mas potencialmente válido, e todos os bytes de *contagem* foram processados. |
+| (size_t)(-1) | Erro de codificação. A próxima *contagem* ou menos bytes não contribuirá para um caractere multibyte completo e válido. Nesse caso, **errno** é definido como EILSEQ e o estado de conversão em *mbstate* não é especificado. |
 
 ## <a name="remarks"></a>Comentários
 
-A função **mbrlen** inspeciona no máximo bytes de *contagem* começando com o byte apontado por *Str* para determinar o número de bytes necessários para concluir o próximo caractere multibyte, incluindo quaisquer sequências de deslocamento. É equivalente à chamada `mbrtowc(NULL, str, count, &mbstate)` , em que *mbstate* é um objeto de **mbstate_t** fornecido pelo usuário ou um objeto interno estático fornecido pela biblioteca.
+A função **mbrlen** inspeciona no máximo bytes de *contagem* começando com o byte apontado por *Str* para determinar o número de bytes necessários para concluir o próximo caractere multibyte, incluindo quaisquer sequências de deslocamento. É equivalente à chamada, `mbrtowc(NULL, str, count, &mbstate)` em que *mbstate* é um objeto de **mbstate_t** fornecido pelo usuário ou um objeto interno estático fornecido pela biblioteca.
 
 A função **mbrlen** salva e usa o estado de deslocamento de um caractere multibyte incompleto no parâmetro *mbstate* . Isso dá ao **mbrlen** a capacidade de reiniciar no meio de um caractere multibyte, se necessário, examinando no máximo os bytes de *contagem* . Se *mbstate* for um ponteiro nulo, **mbrlen** usará um objeto de **mbstate_t** estático interno para armazenar o estado de deslocamento. Como o objeto de **mbstate_t** interno não é thread-safe, é recomendável que você sempre aloque e transmita seu próprio parâmetro *mbstate* .
 
@@ -155,7 +155,7 @@ Code page: 932
 Character count: 25
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>

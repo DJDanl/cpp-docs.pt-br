@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222544"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842423"
 ---
 # <a name="condition_variable-class"></a>Classe condition_variable
 
@@ -41,13 +41,13 @@ class condition_variable;
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[condition_variable](#condition_variable)|Constrói um objeto `condition_variable`.|
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[native_handle](#native_handle)|Retorna o tipo específico da implementação que representa o identificador condition_variable.|
 |[notify_all](#notify_all)|Desbloqueia todos os threads que estão aguardando o objeto `condition_variable`.|
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.|
 |[wait_until](#wait_until)|Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.|
 
-## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a> condition_variable
 
 Constrói um objeto `condition_variable`.
 
@@ -68,7 +68,7 @@ condition_variable();
 
 Se não tiver memória suficiente disponível, o construtor gerará um objeto [system_error](../standard-library/system-error-class.md) que tem um código de erro `not_enough_memory`. Se o objeto não puder ser criado porque algum outro recurso não está disponível, o construtor gerará um objeto `system_error` que tem um código de erro `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a><a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a> native_handle
 
 Retorna o tipo específico da implementação que representa o identificador condition_variable.
 
@@ -76,11 +76,11 @@ Retorna o tipo específico da implementação que representa o identificador con
 native_handle_type native_handle();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 `native_handle_type` é definido como um ponteiro para estruturas de dados internas do Runtime de Simultaneidade.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 Desbloqueia todos os threads que estão aguardando o objeto `condition_variable`.
 
@@ -88,7 +88,7 @@ Desbloqueia todos os threads que estão aguardando o objeto `condition_variable`
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 Desbloqueia um dos threads que estão aguardando o objeto `condition_variable`.
 
@@ -96,7 +96,7 @@ Desbloqueia um dos threads que estão aguardando o objeto `condition_variable`.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>esperado
+## <a name="wait"></a><a name="wait"></a> esperado
 
 Bloqueia um thread.
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.
 
@@ -154,7 +154,7 @@ Um objeto `chrono::duration` que especifica a quantidade de tempo antes que o th
 *Pred*\
 Qualquer expressão que retorne **`true`** ou **`false`** .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O primeiro método retornará `cv_status::timeout` se a espera for encerrada quando *Rel_time* tiver decorrido. Do contrário, o método retorna `cv_status::no_timeout`.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.
 
@@ -212,7 +212,7 @@ Um objeto [chrono::time_point](../standard-library/time-point-class.md).
 *Pred*\
 Qualquer expressão que retorne **`true`** ou **`false`** .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Métodos que retornam um `cv_status` tipo retornam `cv_status::timeout` se a espera termina quando *Abs_time* decorre. Caso contrário, os métodos retornarão `cv_status::no_timeout`.
 

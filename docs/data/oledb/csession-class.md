@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 72797411b100480a06e27b71b000264070e57e32
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211127"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841097"
 ---
 # <a name="csession-class"></a>Classe CSession
 
@@ -65,7 +65,7 @@ class CSession
 
 ### <a name="methods"></a>Métodos
 
-|||
+| Nome | Descrição |
 |-|-|
 |[Anular](#abort)|Cancela (encerra) a transação.|
 |[Fechar](#close)|Fecha a sessão.|
@@ -76,9 +76,9 @@ class CSession
 
 ## <a name="remarks"></a>Comentários
 
-Uma ou mais sessões podem ser associadas a cada conexão de provedor (fonte de dados), que é representada por um objeto [CDataSource](../../data/oledb/cdatasource-class.md) . Para criar um novo `CSession` para um `CDataSource`, chame [CSession:: Open](../../data/oledb/csession-open.md). Para iniciar uma transação de banco de dados, `CSession` fornece o método `StartTransaction`. Depois que uma transação é iniciada, você pode confirmá-la usando o método `Commit` ou cancelá-la usando o método `Abort`.
+Uma ou mais sessões podem ser associadas a cada conexão de provedor (fonte de dados), que é representada por um objeto [CDataSource](../../data/oledb/cdatasource-class.md) . Para criar um novo `CSession` para um `CDataSource` , chame [CSession:: Open](../../data/oledb/csession-open.md). Para iniciar uma transação de banco de dados, `CSession` o fornece o `StartTransaction` método. Depois que uma transação é iniciada, você pode confirmá-la usando o `Commit` método ou cancelá-la usando o `Abort` método.
 
-## <a name="csessionabort"></a><a name="abort"></a>CSession:: Abort
+## <a name="csessionabort"></a><a name="abort"></a> CSession:: Abort
 
 Encerra a transação.
 
@@ -94,11 +94,11 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 Consulte [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
-## <a name="csessionclose"></a><a name="close"></a>CSession:: fechar
+## <a name="csessionclose"></a><a name="close"></a> CSession:: fechar
 
 Fecha a sessão, que foi aberta por [CSession:: Open](../../data/oledb/csession-open.md).
 
@@ -110,9 +110,9 @@ void Close() throw();
 
 ### <a name="remarks"></a>Comentários
 
-Libera o ponteiro `m_spOpenRowset`.
+Libera o `m_spOpenRowset` ponteiro.
 
-## <a name="csessioncommit"></a><a name="commit"></a>CSession:: Commit
+## <a name="csessioncommit"></a><a name="commit"></a> CSession:: Commit
 
 Confirma a transação.
 
@@ -128,7 +128,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 Consulte [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -136,7 +136,7 @@ Um HRESULT padrão.
 
 Para obter mais informações, consulte [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
-## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a>CSession:: GetTransactionInfo
+## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a> CSession:: GetTransactionInfo
 
 Retorna informações sobre uma transação.
 
@@ -150,7 +150,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 Consulte [ITransaction:: GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -158,7 +158,7 @@ Um HRESULT padrão.
 
 Para obter mais informações, consulte [ITransaction:: GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="csessionopen"></a><a name="open"></a>CSession:: abrir
+## <a name="csessionopen"></a><a name="open"></a> CSession:: abrir
 
 Abre uma nova sessão para o objeto de fonte de dados.
 
@@ -181,15 +181,15 @@ no Um ponteiro para uma matriz de estruturas [DBPROPSET](/previous-versions/wind
 *ulPropSets*<br/>
 no O número de estruturas [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passadas no argumento *pPropSet* .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Você deve abrir o objeto de fonte de dados usando [CDataSource:: Open](../../data/oledb/cdatasource-open.md) antes de passá-lo para `CSession::Open`.
+Você deve abrir o objeto de fonte de dados usando [CDataSource:: Open](../../data/oledb/cdatasource-open.md) antes de passá-lo para `CSession::Open` .
 
-## <a name="csessionstarttransaction"></a><a name="starttransaction"></a>CSession:: StartTransaction
+## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession:: StartTransaction
 
 Inicia uma nova transação para esta sessão.
 
@@ -206,7 +206,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 Consulte [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -218,4 +218,4 @@ Para obter mais informações, consulte [ITransactionLocal:: StartTransaction](/
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

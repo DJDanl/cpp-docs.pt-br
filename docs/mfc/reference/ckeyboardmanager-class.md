@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: a2d2ae8133310f3a93b6eefc30c67045a47cd94f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561460"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841487"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
@@ -51,16 +51,14 @@ class CKeyboardManager : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Constrói um objeto `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|||
-|-|-|
 |Nome|Descrição|
+|-|-|
 |[CKeyboardManager:: CleanUp](#cleanup)|Limpa as tabelas de teclas de atalho.|
 |[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Recupera a tecla de atalho padrão para o comando e a janela especificados.|
 |[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determina se uma chave é manipulada pela tabela do acelerador.|
@@ -133,7 +131,7 @@ static BOOL FindDefaultAccelerator(
     BOOL bIsDefaultFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmd*<br/>
 no A ID do comando.
@@ -147,7 +145,7 @@ no Um ponteiro para uma janela de quadro.
 *bIsDefaultFrame*<br/>
 no Especifica se a janela do quadro é a janela de quadro padrão.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o atalho for encontrado; caso contrário, 0.
 
@@ -167,7 +165,7 @@ static BOOL __stdcall IsKeyHandled(
     BOOL bIsDefaultFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nKey*\
 no A chave a ser verificada.
@@ -181,7 +179,7 @@ no Uma janela do quadro. Esse método determina se uma tecla de atalho é manipu
 *bIsDefaultFrame*\
 no Um parâmetro booliano que indica se *pWndFrame* é a janela de quadro padrão.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se a tecla de atalho for manipulada. FALSE se a chave não for manipulada ou se *pWndFrame* for nulo.
 
@@ -197,12 +195,12 @@ Indica se um caractere é imprimível.
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*\
 no O caractere que esse método verifica.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o caractere for imprimível, zero se não for.
 
@@ -218,7 +216,7 @@ Indica se os menus mostram todas as teclas de atalho associadas a comandos de me
 static BOOL IsShowAllAccelerators();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o aplicativo listar todas as teclas de atalho para comandos de menu; 0 se o aplicativo exibir apenas as teclas de atalho padrão.
 
@@ -236,7 +234,7 @@ BOOL LoadState(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no O caminho do registro em que os `CKeyboardManager` dados são salvos.
@@ -244,7 +242,7 @@ no O caminho do registro em que os `CKeyboardManager` dados são salvos.
 *pDefaultFrame*<br/>
 no Um ponteiro para uma janela de quadro a ser usado como a janela padrão.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o estado foi carregado com êxito ou 0 caso contrário.
 
@@ -276,7 +274,7 @@ BOOL SaveState(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no O caminho do registro para salvar o `CKeyboardManager` estado.
@@ -284,7 +282,7 @@ no O caminho do registro para salvar o `CKeyboardManager` estado.
 *pDefaultFrame*<br/>
 no Um ponteiro para uma janela de quadro que se torna a janela padrão.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o estado do Gerenciador de teclado foi salvo com êxito ou 0 caso contrário.
 
@@ -304,7 +302,7 @@ static void ShowAllAccelerators(
     LPCTSTR lpszDelimiter = _afxDefaultAcceleratorDelimiter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShowAll*<br/>
 no Se for TRUE, todas as teclas de atalho serão exibidas. Se for FALSE, somente a primeira tecla de atalho será exibida.
@@ -326,12 +324,12 @@ Converte um caractere em seu registro superior.
 static UINT TranslateCharToUpper(const UINT nChar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 no O caractere a ser convertido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O caractere que é o registro superior do parâmetro de entrada.
 
@@ -352,7 +350,7 @@ BOOL UpdateAccelTable(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTemplate*<br/>
 no Um ponteiro para um modelo de documento.
@@ -369,7 +367,7 @@ no Um ponteiro para a janela do quadro padrão.
 *hAccelNew*<br/>
 no Um identificador para a nova tabela de atalho.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o método for bem-sucedido; caso contrário, 0.
 

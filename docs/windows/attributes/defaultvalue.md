@@ -1,17 +1,17 @@
 ---
-title: DefaultValue (C++ atributo com)
+title: DefaultValue (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b6a50bd7156eb9d6873e5ef08f6d75508fa3e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214833"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841682"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -26,7 +26,7 @@ Permite a especificação de um valor padrão para um parâmetro opcional tipado
 ### <a name="parameters"></a>parâmetros
 
 *value*<br/>
-O valor padrão para o parâmetro.
+O valor padrão do parâmetro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -56,22 +56,20 @@ __interface IFireTabCtrl : IDispatch {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Parâmetro de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
-[out](out-cpp.md)<br/>
+[fora](out-cpp.md)<br/>
 [retval](retval.md)<br/>
 [Em](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>

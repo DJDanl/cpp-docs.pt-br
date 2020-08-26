@@ -1,17 +1,17 @@
 ---
-title: importidl (C++ atributo com)
+title: importidl (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f3c2c5c67ac216d096d1082814c561698f3f732
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166816"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842241"
 ---
 # <a name="importidl"></a>importidl
 
@@ -45,22 +45,20 @@ Talvez você queira usar **importidl**, por exemplo, se quiser usar um arquivo. 
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
-|**Aplica-se a**|Lugares|
+|**Aplica-se a**|Qualquer lugar|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de compilador](compiler-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)<br/>
+[Atributos do compilador](compiler-attributes.md)<br/>
+[Atributos autônomos](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importlib](importlib.md)<br/>
-[include](include-cpp.md)<br/>
+[incluir](include-cpp.md)<br/>
 [includelib](includelib-cpp.md)

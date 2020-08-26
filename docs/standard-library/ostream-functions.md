@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419703"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842631"
 ---
 # <a name="ltostreamgt-functions"></a>Funções &lt;ostream&gt;
 
-Essas são as funções de modelo globais definidas em &lt;ostream&gt;. Para funções de membro, consulte a documentação da [classe basic_ostream](basic-ostream-class.md) .
+Essas são as funções de modelo globais definidas em &lt; ostream &gt; . Para funções de membro, consulte a documentação da [classe basic_ostream](basic-ostream-class.md) .
 
-||||
-|-|-|-|
-|[endl](#endl)|[ends](#ends)|[flush](#flush)|
-|[swap](#swap)|
+[endl](#endl)\
+[lados](#ends)\
+[Libere](#flush)\
+[permuta](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -40,16 +40,16 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>parâmetros
 
-\ *elem*
+*Elem*\
 O tipo de elemento.
 
-\ *OSTR*
+*Ostr*\
 Um objeto do tipo **basic_ostream**.
 
-*Tr*\
+*TR*\
 Características de caractere.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um objeto do tipo **basic_ostream**.
 
@@ -87,16 +87,16 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>parâmetros
 
-\ *elem*
+*Elem*\
 O tipo de elemento.
 
-\ *OSTR*
+*Ostr*\
 Um objeto do tipo `basic_ostream`.
 
-*Tr*\
+*TR*\
 Características de caractere.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um objeto do tipo `basic_ostream`.
 
@@ -136,16 +136,16 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>parâmetros
 
-\ *elem*
+*Elem*\
 O tipo de elemento.
 
-\ *OSTR*
+*Ostr*\
 Um objeto do tipo `basic_ostream`.
 
-*Tr*\
+*TR*\
 Características de caractere.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um objeto do tipo `basic_ostream`.
 
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>parâmetros
 
-\ *elem*
+*Elem*\
 O tipo de elemento.
 
-*Tr*\
+*TR*\
 Características de caractere.
 
-\ *à esquerda*
+*mantida*\
 Uma referência lvalue a um objeto `basic_ostream`.
 
-\ *à direita*
+*Certo*\
 Uma referência lvalue a um objeto `basic_ostream`.
 
 ### <a name="remarks"></a>Comentários
