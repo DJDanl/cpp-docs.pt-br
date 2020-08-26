@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913389"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845166"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -52,7 +52,7 @@ void *bsearch_s(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chaves*\
 Ponteiro para a chave a ser pesquisada.
@@ -72,7 +72,7 @@ Função de retorno de chamada que compara dois elementos. O primeiro argumento 
 *noticioso*\
 Um ponteiro para um objeto que pode ser acessado na função de comparação.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
 
 **bsearch_s** retorna um ponteiro para uma ocorrência de *Key* na matriz apontada por *base*. Se a *chave* não for encontrada, a função retornará **NULL**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
 
@@ -80,13 +80,12 @@ Se parâmetros inválidos forem passados para a função, ele invocará o manipu
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|||||||
+|*chave*|*base*|*comparar*|*number*|*width*|**`errno`**|
 |-|-|-|-|-|-|
-|*chave*|*base*|*comparar*|*number*|*width*|**errno**|
-|**NULO**|any|any|any|any|**EINVAL**|
-|any|**NULO**|any|!= 0|any|**EINVAL**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|= 0|**EINVAL**|
-|any|any|**NULO**|an|any|**EINVAL**|
+|any|any|**NULL**|an|any|**EINVAL**|
 
 ## <a name="remarks"></a>Comentários
 
@@ -196,7 +195,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Pesquisa e classificação](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

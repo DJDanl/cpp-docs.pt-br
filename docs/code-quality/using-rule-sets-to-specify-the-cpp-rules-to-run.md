@@ -4,12 +4,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389812"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845153"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Usar conjuntos de regras para especificar as regras do C++ para execução
 
@@ -114,7 +114,7 @@ O exemplo a seguir mostra um arquivo de conjunto de regras básico que você pod
 
 ## <a name="ruleset-schema"></a>Esquema do RuleSet
 
-O esquema do conjunto de regras a seguir descreve o esquema XML de um arquivo RuleSet. O esquema do conjunto de regras é armazenado no *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Você pode usá-lo para criar seus próprios RuleSets programaticamente ou para validar se os RuleSets personalizados aderem ao formato correto. Para obter mais informações, consulte [como: criar um documento XML com base em um esquema XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+O esquema do conjunto de regras a seguir descreve o esquema XML de um arquivo RuleSet. O esquema do conjunto de regras é armazenado no *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Você pode usá-lo para criar seus próprios RuleSets programaticamente ou para validar se os RuleSets personalizados aderem ao formato correto. Para obter mais informações, consulte [como: criar um documento XML com base em um esquema XSD](/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

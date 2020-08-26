@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222791"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837340"
 ---
 # <a name="event-maps"></a>Mapas de evento
 
@@ -29,7 +29,7 @@ Para dar suporte a mapas de eventos, o MFC fornece as seguintes macros:
 
 ### <a name="event-map-declaration-and-demarcation"></a>Declaração e demarcador do mapa de eventos
 
-|||
+|Nome|Descrição|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|Declara que um mapa de eventos será usado em uma classe para mapear eventos para funções de acionamento de eventos (deve ser usado na declaração de classe).|
 |[BEGIN_EVENT_MAP](#begin_event_map)|Inicia a definição de um mapa de eventos (deve ser usado na implementação da classe).|
@@ -37,19 +37,19 @@ Para dar suporte a mapas de eventos, o MFC fornece as seguintes macros:
 
 ### <a name="event-mapping-macros"></a>Macros de mapeamento de eventos
 
-|||
+|Nome|Descrição|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|Indica qual função de acionamento de evento acionará o evento especificado.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Indica qual função de acionamento de evento acionará o evento especificado, com uma ID de expedição designada.|
 
 ### <a name="message-mapping-macros"></a>Macros de mapeamento de mensagens
 
-|||
+|Nome|Descrição|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|Indica um verbo personalizado manipulado pelo controle OLE.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Substitui um mapeamento de verbo padrão do controle OLE.|
 
-## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
 Cada `COleControl` classe derivada em seu programa pode fornecer um mapa de eventos para especificar os eventos que seu controle irá disparar.
 
@@ -67,7 +67,7 @@ Para obter mais informações sobre mapas de eventos, consulte o artigo [control
 
 **Cabeçalho** afxctl. h
 
-## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 Inicia a definição do seu mapa de eventos.
 
@@ -93,7 +93,7 @@ Para obter mais informações sobre mapas de eventos e a macro BEGIN_EVENT_MAP, 
 
 **Cabeçalho** afxctl. h
 
-## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a> END_EVENT_MAP
 
 Use a macro END_EVENT_MAP para encerrar a definição do seu mapa de eventos.
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 **Cabeçalho** afxctl. h
 
-## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a> EVENT_CUSTOM
 
 Define uma entrada de mapa de eventos para um evento personalizado.
 
@@ -171,7 +171,7 @@ As `VTS_` constantes e seus significados são os seguintes:
 
 **Cabeçalho** afxctl. h
 
-## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
 Define uma função de acionamento de evento para um evento personalizado que pertence à ID de expedição especificada por *DISPID*.
 
@@ -211,7 +211,7 @@ Para obter uma lista das `VTS_` constantes, consulte [EVENT_CUSTOM](#event_custo
 
 **Cabeçalho** afxctl. h
 
-## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a> ON_OLEVERB
 
 Essa macro define uma entrada de mapa de mensagem que mapeia um verbo personalizado para uma função de membro específica do seu controle.
 
@@ -246,7 +246,7 @@ Os valores dos parâmetros *lpMsg*, *hwndParent*e *lpRect* são obtidos dos par�
 
 **Cabeçalho** Afxole. h
 
-## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 Use esta macro para substituir o comportamento padrão de um verbo padrão.
 

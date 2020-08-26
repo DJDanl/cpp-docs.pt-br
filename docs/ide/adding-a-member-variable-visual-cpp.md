@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215992"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845127"
 ---
 # <a name="add-a-member-variable"></a>Adicionar uma variável de membro
 
@@ -68,8 +68,8 @@ Este assistente adiciona uma declaração de variável de membro ao arquivo de c
 
   Define o acesso à variável de membro. Modificadores de acesso são palavras-chave que especificam o acesso que outras classes têm à variável de membro. Para obter mais informações sobre como especificar o acesso, consulte [controle de acesso de membro](../cpp/member-access-control-cpp.md). O nível de acesso variável de membro é definido como **`public`** por padrão.
 
-  - [público](../cpp/public-cpp.md)
-  - [protected](../cpp/protected-cpp.md)
+  - [public](../cpp/public-cpp.md)
+  - [protegidos](../cpp/protected-cpp.md)
   - [pessoal](../cpp/private-cpp.md)
 
 - **Tipo de variável**
@@ -80,13 +80,15 @@ Este assistente adiciona uma declaração de variável de membro ao arquivo de c
 
     Para obter informações sobre os tipos, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
 
-    |||
-    |-|-|
-    |**`char`**|**`short`**|
-    |**`double`**|**`unsigned char`**|
-    |**`float`**|**`unsigned int`**|
-    |**`int`**|**`unsigned long`**|
-    |**`long`**||
+    - **`char`**
+    - **`double`**
+    - **`float`**
+    - **`int`**
+    - **`long`**
+    - **`short`**
+    - **`unsigned char`**
+    - **`unsigned int`**
+    - **`unsigned long`**
 
   - Se estiver adicionando uma variável de membro a um controle de caixa de diálogo, essa caixa será preenchida com o tipo do objeto que é retornado para um controle ou um valor. Se você selecionar **Controle**, a opção **Tipo de variável** especificará a classe base do controle selecionado na caixa **ID de Controle**. Se o controle de caixa de diálogo puder guardar um valor e você selecionar **Valor**, a opção **Tipo de variável** especificará o tipo apropriado para o valor que o controle pode guardar. Para obter mais informações, confira [controles de caixa de diálogo e tipos de variáveis](#dialog-box-controls-and-variable-types).
 
@@ -100,7 +102,7 @@ Este assistente adiciona uma declaração de variável de membro ao arquivo de c
 
   Indica que a variável de membro gerencia um controle em uma caixa de diálogo com o suporte da [troca e validação de dados](../mfc/dialog-data-exchange-and-validation.md). Para obter mais informações, confira [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange). Essa opção está disponível somente para as variáveis de membro adicionadas às classes derivadas de [CDialog](../mfc/reference/cdialog-class.md). Marque essa caixa para ativar as opções **ID de Controle** e **Tipo de controle**.
 
-- **Control ID**
+- **ID do controle**
 
   Define a ID para a variável de controle que está sendo adicionada. Selecione na lista a ID do tipo de controle ao qual a variável de membro está sendo adicionada. A lista fica ativa somente quando a caixa **Variável de controle** está selecionada e é limitada às IDs dos controles que já foram adicionados à caixa de diálogo. Por exemplo, para o botão **OK** padrão, a ID de Controle é **IDOK**.
 

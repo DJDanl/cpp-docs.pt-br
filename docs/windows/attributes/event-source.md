@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: a7231b01cd341bbc04bcccd3c2198d1a76dd5e39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bea90020c3ec570149e11db95ff6d6f8fd0a5507
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232762"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845296"
 ---
 # <a name="event_source"></a>origem do evento
 
@@ -33,9 +33,9 @@ Cria uma origem de evento.
 *tipo*<br/>
 Uma enumeração de um dos seguintes valores:
 
-- `native`para código C/C++ não gerenciado (padrão para classes não gerenciadas).
+- `native` para código C/C++ não gerenciado (padrão para classes não gerenciadas).
 
-- `com`para o código COM. Você deve usar `coclass` quando `type` = `com` . Esse valor requer que você inclua os seguintes arquivos de cabeçalho:
+- `com` para o código COM. Você deve usar `coclass` quando `type` = `com` . Esse valor requer que você inclua os seguintes arquivos de cabeçalho:
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -60,13 +60,11 @@ O atributo **EVENT_SOURCE** C++ especifica que a classe ou estrutura à qual ele
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|**coclass** quando`type`=`com`|
+|**Atributos obrigatórios**|**coclass** quando `type`=`com`|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).

@@ -1,17 +1,17 @@
 ---
-title: dual (C++ atributo com)
+title: dual (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168207"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845400"
 ---
 # <a name="dual"></a>dual
 
@@ -25,7 +25,7 @@ Coloca uma interface no arquivo. idl como uma interface dupla.
 
 ## <a name="remarks"></a>Comentários
 
-Quando o atributo **Dual** C++ precede uma interface, ele faz com que a interface seja colocada dentro do bloco de biblioteca no arquivo. idl gerado.
+Quando o atributo C++ **duplo** precede uma interface, ele faz com que a interface seja colocada dentro do bloco de biblioteca no arquivo. idl gerado.
 
 ## <a name="example"></a>Exemplo
 
@@ -55,22 +55,20 @@ __interface IStatic : IDispatch
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**interface**|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|`dispinterface`|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos por uso](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[Personalizar](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

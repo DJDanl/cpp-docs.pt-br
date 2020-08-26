@@ -1,21 +1,21 @@
 ---
-title: Ferramentas e recursos do C++ em edições do Visual Studio
+title: Ferramentas e funcionalidades do C++ em edições do Visual Studio
 ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366791"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845348"
 ---
-# <a name="c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e recursos do C++ em edições do Visual Studio
+# <a name="c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e funcionalidades do C++ em edições do Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos que seja declarado o contrário, todos os recursos estão disponíveis em todas as edições: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alguns recursos exigem cargas de trabalho específicas ou componentes opcionais, que você pode instalar com o Instalador do Visual Studio.
+Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos que declarado de outra forma, todos os recursos estão disponíveis em todas as edições: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alguns recursos exigem cargas de trabalho específicas ou componentes opcionais, que você pode instalar com o Instalador do Visual Studio.
 
 ## <a name="platforms"></a>Plataformas
 
@@ -38,7 +38,7 @@ Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos q
 
 O Visual Studio inclui as seguintes cargas de trabalho para desenvolvimento do C++. É possível instalar qualquer uma ou todas elas juntamente com outras cargas de trabalho como Desenvolvimento para Desktop do .NET, Desenvolvimento do Python, Desenvolvimento do Azure, Desenvolvimento de Extensão do Visual Studio e outros.
 
-### <a name="desktop-development-with-c"></a>Desenvolvimento para desktop com C++
+### <a name="desktop-development-with-c"></a>Desenvolvimento de área de trabalho com o C++
 
 Incluído:
 
@@ -80,7 +80,7 @@ Componentes opcionais:
 - Ferramentas CMake do C++ para Linux
 - Ferramentas de desenvolvimento inseridas e de IoT
 
-### <a name="universal-windows-platform-development"></a>Desenvolvimento na Plataforma Universal do Windows
+### <a name="universal-windows-platform-development"></a>Desenvolvimento para a Plataforma Universal do Windows
 
 Incluído:
 
@@ -183,10 +183,10 @@ Os seguintes modelos de projeto estão disponíveis dependendo de quais cargas d
 
 Área de trabalho do Windows:
 
-- Projeto Vazio
-- Aplicativo de console
-- Assistente da Área de Trabalho do Windows
-- Aplicativo da Área de Trabalho do Windows
+- Projeto em branco
+- Aplicativo de Console
+- Assistente de Área de Trabalho do Windows
+- Aplicativos da Área de Trabalho do Windows
 - Projeto Itens Compartilhados
 - Aplicativo do MFC
 - Biblioteca de vínculo dinâmico
@@ -204,7 +204,7 @@ Os seguintes modelos de projeto estão disponíveis dependendo de quais cargas d
 
 Plataforma Universal do Windows (C++/CX):
 
-- Aplicativo em Branco
+- Aplicativo em branco
 - Aplicativo DirectX 11 e XAML
 - Aplicativo DirectX 11
 - Aplicativo DirectX 12
@@ -212,7 +212,7 @@ Plataforma Universal do Windows (C++/CX):
 - DLL
 - componente do Windows Runtime
 - Biblioteca Estática
-- Projeto de Empacotamento de Aplicativos do Windows
+- Projeto de Empacotamento de Aplicativo do Windows
 
 Linux:
 
@@ -247,7 +247,7 @@ Linux:
 - Depuração gerenciada
 - Uso de GPU
 - Uso de memória
-- Depuração Remota
+- Depuração remota
 - Depuração SQL
 - Análise de código estático
 
@@ -258,7 +258,7 @@ Linux:
 - Designer/Editor de HTML
 - Editor de XML
 - Editor de Código-fonte
-- Características de produtividade: Refatoração, motor EDG IntelliSense, Formatação de Código C++
+- Recursos de produtividade: refatoração, mecanismo IntelliSense EDG, formatação de código C++
 - Designer de Formulários do Windows
 - Designer de dados
 - Editor de Recurso Nativo (arquivos .rc)
@@ -315,9 +315,8 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 
 ## <a name="platforms"></a>Plataformas
 
-||||||
-|-|-|-|-|-|
 |Plataforma|Visual Studio Express para Windows 10|Visual Studio Express para Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
+|-|-|-|-|-|
 |Área de Trabalho do Windows||X|X|X|
 |Plataforma Universal do Windows (telefone, tablet, computador, Xbox, IoT e HoloLens)|X||X|X|
 |Linux|X|X|
@@ -362,7 +361,7 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 |Aplicativo de Console CLR||X|X|X|
 |Projeto CLR Vazio||X|X|X|
 |Assistente personalizado|||X|X|
-|Projeto Vazio||X|X|X|
+|Projeto em branco||X|X|X|
 |Projeto Makefile||X|X|X|
 |Controle ActiveX do MFC|||X|X|
 |Aplicativo MFC|||X|X|
@@ -403,7 +402,7 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 |Depuração gerenciada||X|X|X|
 |Uso de GPU|X||X|X|
 |Uso de memória|X||X|X|
-|Depuração Remota|X|X|X|X|
+|Depuração remota|X|X|X|X|
 |Depuração SQL|||X|X|
 |Análise de código estático|Limitado|Limitado|X|X|
 
@@ -457,9 +456,8 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 
 ## <a name="application-lifecycle-management-tools"></a>Ferramentas de gerenciamento de ciclo de vida do aplicativo
 
-||||||
-|-|-|-|-|-|
 |Ferramenta|Visual Studio Express para Windows|Visual Studio Express para Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
+|-|-|-|-|-|
 |Teste de unidade (estrutura nativa)|X|X|X|X|
 |Teste de unidade (estrutura gerenciada)||X|X|X|
 |Cobertura de código||||X|

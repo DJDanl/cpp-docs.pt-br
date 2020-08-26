@@ -18,14 +18,14 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240267"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845062"
 ---
-# <a name="referencewrapper-class"></a>Classe reference_wrapper
+# <a name="reference_wrapper-class"></a>Classe reference_wrapper
 
 Encapsula uma referência.
 
@@ -59,31 +59,31 @@ As funções auxiliares [std::ref](functional-functions.md#ref) e [std::cref](fu
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Constrói um `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[result_type](#result_type)|O tipo de resultado fraco da referência encapsulada.|
-|[type](#type)|O tipo da referência encapsulada.|
+|[tipo](#type)|O tipo da referência encapsulada.|
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[get](#get)|Obtém a referência encapsulada.|
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
-|[operador Operator Ty&amp;](#op_ty_amp)|Obtém um ponteiro para a referência encapsulada.|
-|[operator()](#op_call)|Chama a referência encapsulada.|
+|[operador Ty&amp;](#op_ty_amp)|Obtém um ponteiro para a referência encapsulada.|
+|[operador ()](#op_call)|Chama a referência encapsulada.|
 
-## <a name="get"></a> Obter
+## <a name="get"></a><a name="get"></a> Obter
 
 Obtém a referência encapsulada.
 
@@ -122,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> operador Operator Ty&amp;
+## <a name="operator-tyamp"></a><a name="op_ty_amp"></a> operador Ty&amp;
 
 Obtém a referência encapsulada.
 
@@ -158,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> Operator)
+## <a name="operator"></a><a name="op_call"></a> operador ()
 
 Chama a referência encapsulada.
 
@@ -167,12 +167,12 @@ template <class... Types>
 auto operator()(Types&&... args);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Tipos*\
+*Digita*\
 Os tipos da lista de argumentos.
 
-*args*\
+*argumento*\
 A lista de argumentos.
 
 ### <a name="remarks"></a>Comentários
@@ -204,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper
+## <a name="reference_wrapper"></a><a name="reference_wrapper"></a> reference_wrapper
 
 Constrói um `reference_wrapper`.
 
@@ -212,7 +212,7 @@ Constrói um `reference_wrapper`.
 reference_wrapper(Ty& val) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser encapsulado.
@@ -255,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 O tipo de resultado fraco da referência encapsulada.
 
@@ -294,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> Tipo
+## <a name="type"></a>Tipo<a name="type"></a>
 
 O tipo da referência encapsulada.
 

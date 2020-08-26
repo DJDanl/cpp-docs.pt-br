@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 3c1824eb22ed97e65e0556bc63b374f705f5c591
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8701570787275e853543e723f6461b8ad460f96f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689447"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845439"
 ---
 # <a name="linear_congruential_engine-class"></a>Classe linear_congruential_engine
 
@@ -43,38 +43,40 @@ class linear_congruential_engine{
    };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 de *UIntType*
-O tipo de resultado inteiro sem sinal. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*UInttype*\
+O tipo de resultado inteiro sem sinal. Para possíveis tipos, consulte [\<random>](../standard-library/random.md) .
 
-*Um* \
+*Um*\
 **Multiplicador**. **Pré-condição**: consulte a seção Comentários.
 
-@No__t_1 de *C*
+*&*\
 **Incremento**. **Pré-condição**: consulte a seção Comentários.
 
-*M* \
+*D*\
 **Módulo**. **Pré-condição**: consulte os comentários.
 
 ## <a name="members"></a>Membros
 
-||||
-|-|-|-|
-|`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|
-|`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|
+`linear_congruential_engine::linear_congruential_engine`
+`linear_congruential_engine::discard`\
+`linear_congruential_engine::max`\
+`linear_congruential_engine::min`\
+`linear_congruential_engine::operator()`\
+`linear_congruential_engine::seed`
 
 `default_seed` é um membro constante, definido como `1u`, usado como valor padrão do parâmetro `linear_congruential_engine::seed` e construtor de valor único.
 
-Para obter mais informações sobre membros do mecanismo, consulte [\<random>](../standard-library/random.md).
+Para obter mais informações sobre membros do mecanismo, consulte [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe de `linear_congruential_engine` é o mecanismo gerador mais simples, mas não a qualidade mais rápida ou mais alta. Uma melhoria em relação a esse mecanismo é o [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Nenhum desses mecanismos é tão rápido nem tem resultados de qualidade tão altos quanto o [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+O `linear_congruential_engine` modelo de classe é o mecanismo gerador mais simples, mas não a qualidade mais rápida ou mais alta. Uma melhoria em relação a esse mecanismo é o [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Nenhum desses mecanismos é tão rápido nem tem resultados de qualidade tão altos quanto o [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Esse mecanismo produz valores de um tipo integral não assinado especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (A * x(i-1) + C) mod M`.
+Esse mecanismo produz valores de um tipo integral não assinado especificado pelo usuário usando a relação de recorrência ( *período*) `x(i) = (A * x(i-1) + C) mod M` .
 
-Se *M* for zero, o valor usado para essa operação de módulo será `numeric_limits<result_type>::max() + 1`. O estado do mecanismo é o último valor retornado ou o valor semente, se nenhuma chamada tiver sido feita a `operator()`.
+Se *M* for zero, o valor usado para essa operação de módulo será `numeric_limits<result_type>::max() + 1` . O estado do mecanismo é o último valor retornado ou o valor semente, se nenhuma chamada tiver sido feita a `operator()`.
 
 Se *M* não for zero, os valores dos argumentos de modelo *a* e *C* devem ser menores que *M*.
 
@@ -96,10 +98,10 @@ Para obter informações detalhadas sobre o algoritmo de mecanismo congruente li
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<random>
+**Cabeçalho:**\<random>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<random>](../standard-library/random.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210802"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845569"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
@@ -49,7 +49,7 @@ Sua classe Properties.
 
 ### <a name="interface-methods"></a>Métodos de interface
 
-|||
+| Nome | Descrição |
 |-|-|
 |[GetProperties](#getproperties)|Retorna a lista de propriedades no grupo de propriedades de conjunto de linhas que são solicitadas no momento para o conjunto de linhas.|
 |[SetProperties](#setproperties)|Define propriedades no grupo de propriedades Rowset.|
@@ -58,7 +58,7 @@ Sua classe Properties.
 
 Isso é obrigatório em comandos. A implementação é fornecida por uma função estática definida pela macro [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) .
 
-## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> ICommandPropertiesImpl:: GetProperties
 
 Retorna todos os conjuntos de propriedades solicitados usando o mapa de propriedades do comando.
 
@@ -79,7 +79,7 @@ Consulte [ICommandProperties:: GetProperties](/previous-versions/windows/desktop
 
 Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl:: SetProperties
 
 Define propriedades para o objeto de comando.
 
@@ -97,4 +97,4 @@ Consulte [ICommandProperties:: SetProperties](/previous-versions/windows/desktop
 ## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

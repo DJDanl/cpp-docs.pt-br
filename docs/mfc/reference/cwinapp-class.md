@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 515307bd79059c22b5b40cd8b47ce8809ede8f04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560849"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837600"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -381,7 +381,7 @@ Chame essa função de membro para adicionar um modelo de documento à lista de 
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTemplate*<br/>
 Um ponteiro para o `CDocTemplate` a ser adicionado.
@@ -402,7 +402,7 @@ Chame essa função de membro para adicionar *lpszPathName* à lista de arquivos
 virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPathName*<br/>
 O caminho do arquivo.
@@ -425,12 +425,12 @@ Chamado pelo Framework quando o aplicativo é encerrado inesperadamente.
 virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpvParam*<br/>
 no Reservado para uso futuro.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 0 se esse método for bem-sucedido; diferente de zero se ocorrer um erro.
 
@@ -450,7 +450,7 @@ Chame essa função de membro para fechar todos os documentos abertos antes de s
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEndSession*<br/>
 Especifica se a sessão do Windows está sendo finalizada ou não. Será verdadeiro se a sessão estiver sendo encerrada; caso contrário, FALSE.
@@ -467,12 +467,12 @@ Chame essa função de membro para criar um DC (contexto de dispositivo de impre
 BOOL CreatePrinterDC(CDC& dc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *origem*<br/>
 Uma referência a um contexto de dispositivo de impressora.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o contexto do dispositivo de impressora for criado com êxito; caso contrário, 0.
 
@@ -490,7 +490,7 @@ Constrói um `CWinApp` objeto e passa *lpszAppName* para ser armazenado como o n
 CWinApp(LPCTSTR lpszAppName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszAppName*<br/>
 Uma cadeia de caracteres terminada em nulo que contém o nome do aplicativo que o Windows usa. Se esse argumento não for fornecido ou for nulo, `CWinApp` o usará a cadeia de caracteres de recurso AFX_IDS_APP_TITLE ou o nome do arquivo executável.
@@ -514,7 +514,7 @@ LONG DelRegTree(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hParentKey*<br/>
 Identificador para uma chave do registro.
@@ -525,7 +525,7 @@ O nome da chave do registro a ser excluída.
 *pTM*<br/>
 Ponteiro para objeto CAtlTransactionManager.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se a função for realizada com sucesso, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno será um código de erro diferente de zero definido em Winerror. h.
 
@@ -544,7 +544,7 @@ virtual int DoMessageBox(
     UINT nIDPrompt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPrompt*<br/>
 Endereço do texto na caixa de mensagem.
@@ -555,7 +555,7 @@ O [estilo](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)da caixa
 *nIDPrompt*<br/>
 Um índice para uma cadeia de caracteres de contexto de ajuda.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna os mesmos valores de `AfxMessageBox` .
 
@@ -573,7 +573,7 @@ Essa função de membro é chamada pelo Framework para implementar [CWaitCursor]
 virtual void DoWaitCursor(int nCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nCode*<br/>
 Se esse parâmetro for 1, um cursor de espera será exibido. Se for 0, o cursor de espera será restaurado sem incrementar a contagem de referência. Se-1, o cursor de espera terminará.
@@ -602,7 +602,7 @@ BOOL EnableD2DSupport(
     DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *d2dFactoryType*<br/>
 O modelo de Threading da fábrica D2D e os recursos que ele cria.
@@ -610,7 +610,7 @@ O modelo de Threading da fábrica D2D e os recursos que ele cria.
 *writeFactoryType*<br/>
 Um valor que especifica se o objeto de fábrica de gravação será compartilhado ou isolado
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna TRUE se o suporte a D2D foi habilitado; caso contrário, FALSE
 
@@ -648,12 +648,12 @@ Habilita a interação da barra de tarefas.
 BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 Especifica se a interação com a barra de tarefas do Windows 7 deve ser habilitada (TRUE) ou desabilitada (FALSE).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retornará TRUE se a interação da barra de tarefas puder ser habilitada ou desabilitada.
 
@@ -669,7 +669,7 @@ Chamado pelo Framework de dentro da `Run` função de membro para sair desta ins
 virtual int ExitInstance();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O código de saída do aplicativo; 0 indica que não há erros e valores maiores que 0 indicam um erro. Esse valor é usado como o valor de retorno de `WinMain` .
 
@@ -691,7 +691,7 @@ Recupera o parâmetro de entrada para o método de recuperação do aplicativo.
 virtual LPVOID GetApplicationRecoveryParameter();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O parâmetro de entrada padrão para o método de recuperação do aplicativo.
 
@@ -709,7 +709,7 @@ Retorna o período de tempo que o Gerenciador de reinicialização aguarda para 
 virtual DWORD GetApplicationRecoveryPingInterval();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O período de tempo em milissegundos.
 
@@ -727,7 +727,7 @@ Retorna os sinalizadores para o Gerenciador de reinicialização.
 virtual DWORD GetApplicationRestartFlags();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Os sinalizadores para o Gerenciador de reinicialização. A implementação padrão retorna 0.
 
@@ -755,12 +755,12 @@ Retorna a chave para HKEY_CURRENT_USER \\ "software" \RegistryKey\ProfileName.
 HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTM*<br/>
 Ponteiro para um `CAtlTransactionManager` objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Chave do aplicativo se a função tiver sucesso; caso contrário, NULL.
 
@@ -774,7 +774,7 @@ Obtém o manipulador de recuperação de dados para esta instância do aplicativ
 virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O manipulador de recuperação de dados para esta instância do aplicativo.
 
@@ -794,7 +794,7 @@ Obtém a posição do primeiro modelo de documento no aplicativo.
 POSITION GetFirstDocTemplatePosition() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor de posição que pode ser usado para a recuperação do ponteiro de objeto ou iteração; NULL se a lista estiver vazia.
 
@@ -810,7 +810,7 @@ Recupera o tipo de ajuda usado pelo aplicativo.
 AFX_HELP_TYPE GetHelpMode();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O tipo de ajuda usado pelo aplicativo. Consulte [CWinApp:: m_eHelpType](#m_ehelptype) para obter mais informações.
 
@@ -822,12 +822,12 @@ Obtém o modelo de documento identificado pelo *PDV*e, em seguida, define *pos* 
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 Uma referência a um valor de posição retornado por uma chamada anterior para `GetNextDocTemplate` ou [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). O valor é atualizado para a próxima posição por essa chamada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para um objeto [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) .
 
@@ -847,12 +847,12 @@ Chame essa função de membro para preparar um contexto de dispositivo de impres
 BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPrintDlg*<br/>
 Um ponteiro para uma estrutura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -876,7 +876,7 @@ BOOL GetProfileBinary(
     UINT* pBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada.
@@ -890,7 +890,7 @@ Aponta para um ponteiro que receberá o endereço dos dados.
 *pBytes*<br/>
 Aponta para um UINT que receberá o tamanho dos dados (em bytes).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -921,7 +921,7 @@ UINT GetProfileInt(
     int nDefault);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada.
@@ -932,7 +932,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que contém a entrada cuj
 *nDefault*<br/>
 Especifica o valor padrão a ser retornado se a estrutura não conseguir localizar a entrada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor inteiro da cadeia de caracteres que segue a entrada especificada se a função for bem-sucedida. O valor de retorno é o valor do parâmetro *nDefault* se a função não encontrar a entrada. O valor de retorno será 0 se o valor que corresponde à entrada especificada não for um inteiro.
 
@@ -962,7 +962,7 @@ CString GetProfileString(
     LPCTSTR lpszDefault = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada.
@@ -973,7 +973,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que contém a entrada cuj
 *lpszDefault*<br/>
 Aponta para o valor de cadeia de caracteres padrão para a entrada fornecida se a entrada não puder ser encontrada no arquivo de inicialização.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor de retorno é a cadeia de caracteres do aplicativo. Arquivo INI ou *lpszDefault* se a cadeia de caracteres não puder ser encontrada. O comprimento máximo de cadeia de caracteres suportado pelo Framework é _MAX_PATH. Se *lpszDefault* for NULL, o valor de retorno será uma cadeia de caracteres vazia.
 
@@ -998,7 +998,7 @@ HKEY GetSectionKey(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 O nome da chave a ser obtida.
@@ -1006,7 +1006,7 @@ O nome da chave a ser obtida.
 *pTM*<br/>
 Ponteiro para um `CAtlTransactionManager` objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Chave de seção se a função for realizada com sucesso; caso contrário, NULL.
 
@@ -1030,7 +1030,7 @@ virtual void HtmlHelp(
     UINT nCmd = 0x000F);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 Especifica dados adicionais. O valor usado depende do valor do parâmetro *nCmd* . O padrão é `0x000F` o que significa [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
@@ -1052,7 +1052,7 @@ O Windows permite que várias cópias do mesmo programa sejam executadas ao mesm
 virtual BOOL InitInstance();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a inicialização for bem-sucedida; caso contrário, 0.
 
@@ -1077,7 +1077,7 @@ Informa se a interação da barra de tarefas do Windows 7 está habilitada.
 virtual BOOL IsTaskbarInteractionEnabled();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retornará TRUE se `EnableTaskbarInteraction` tiver sido chamado e o sistema operacional for Windows 7 ou superior.
 
@@ -1093,7 +1093,7 @@ Carrega o recurso de cursor chamado por *lpszResourceName* ou especificado pelo 
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do recurso de cursor. Você pode usar um `CString` para este argumento.
@@ -1101,7 +1101,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do rec
 *nIDResource*<br/>
 ID do recurso de cursor. Para obter uma lista de recursos, consulte [LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) na SDK do Windows.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um identificador para um cursor se for bem-sucedido; caso contrário, NULL.
 
@@ -1123,7 +1123,7 @@ Carrega o recurso de ícone nomeado por *lpszResourceName* ou especificado pelo 
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do recurso de ícone. Você também pode usar um `CString` para esse argumento.
@@ -1131,7 +1131,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do rec
 *nIDResource*<br/>
 Número de ID do recurso de ícone.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um identificador para um ícone se for bem-sucedido; caso contrário, NULL.
 
@@ -1152,12 +1152,12 @@ Carrega o recurso de cursor predefinido do Windows especificado por *nIDCursor*.
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDCursor*<br/>
 Um identificador de constante de manifesto **OCR_** que especifica um cursor do Windows predefinido. Você deve ter `#define OEMRESOURCE` antes `#include \<afxwin.h>` de obter acesso às constantes de **OCR_** no Windows. T.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um identificador para um cursor se for bem-sucedido; caso contrário, NULL.
 
@@ -1179,12 +1179,12 @@ Carrega o recurso de ícone predefinido do Windows especificado por *nIDIcon*.
 HICON LoadOEMIcon(UINT nIDIcon) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDIcon*<br/>
 Um identificador de constante de manifesto **OIC_** que especifica um ícone predefinido do Windows. Você deve ter `#define OEMRESOURCE` antes `#include \<afxwin.h>` de acessar as constantes de **OIC_** no Windows. T.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um identificador para um ícone se for bem-sucedido; caso contrário, NULL.
 
@@ -1200,7 +1200,7 @@ Carrega o recurso de cursor predefinido do Windows que o *lpszCursorName* especi
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszCursorName*<br/>
 Um identificador de constante de manifesto **IDC_** que especifica um cursor do Windows predefinido. Esses identificadores são definidos no WINDOWS. T. A lista a seguir mostra os possíveis valores predefinidos e significados para *lpszCursorName*:
@@ -1229,7 +1229,7 @@ Um identificador de constante de manifesto **IDC_** que especifica um cursor do 
 
 - Seta de duas pontas vertical IDC_SIZENS
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um identificador para um cursor se for bem-sucedido; caso contrário, NULL.
 
@@ -1249,12 +1249,12 @@ Carrega o recurso de ícone predefinido do Windows que o *lpszIconName* especifi
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszIconName*<br/>
 Um identificador de constante de manifesto que especifica um ícone predefinido do Windows. Esses identificadores são definidos no WINDOWS. T. Para obter uma lista dos possíveis valores predefinidos e suas descrições, consulte o parâmetro *lpIconName* em [loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw) na SDK do Windows.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um identificador para um ícone se for bem-sucedido; caso contrário, NULL.
 
@@ -1270,7 +1270,7 @@ Chame essa função de membro de dentro da função de membro [InitInstance](#in
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nMaxMRU*<br/>
 O número de arquivos usados recentemente a serem controlados.
@@ -1303,9 +1303,8 @@ DWORD m_dwRestartManagerSupportFlags;
 
 Para habilitar o Gerenciador de reinicialização, defina `m_dwRestartManagerSupportFlags` para o comportamento desejado. A tabela a seguir mostra os sinalizadores que estão disponíveis.
 
-|||
-|-|-|
 |Sinalizador|Descrição|
+|-|-|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|O aplicativo é registrado usando [CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager). O Gerenciador de reinicialização é responsável por reiniciar o aplicativo se ele for encerrado inesperadamente.|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|O aplicativo é registrado com o Gerenciador de reinicialização e o Gerenciador de reinicialização chama a função de retorno de chamada de recuperação quando reinicia o aplicativo. A função de retorno de chamada de recuperação padrão é [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|O salvamento automático está habilitado e o Gerenciador de reinicialização salva automaticamente todos os documentos abertos quando o aplicativo é reiniciado.|
@@ -1546,12 +1545,12 @@ Chamado pelo Framework quando a janela do quadro principal recebe uma mensagem d
 virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszCommand*<br/>
 Aponta para uma cadeia de caracteres de comando DDE recebida pelo aplicativo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o comando for manipulado; caso contrário, 0.
 
@@ -1685,12 +1684,12 @@ Substitua essa função de membro para executar o processamento em tempo ocioso.
 virtual BOOL OnIdle(LONG lCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lCount*<br/>
 Um contador incrementado A cada vez `OnIdle` é chamado quando a fila de mensagens do aplicativo está vazia. Essa contagem é redefinida como 0 sempre que uma nova mensagem é processada. Você pode usar o parâmetro *lCount* para determinar o período de tempo relativo que o aplicativo esteve ocioso sem processar uma mensagem.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero para receber mais tempo de processamento ocioso; 0 se não for necessário mais tempo ocioso.
 
@@ -1733,7 +1732,7 @@ virtual CDocument* OpenDocumentFile(
     BOOL bAddToMRU = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFileName*<br/>
 no O nome do arquivo a ser aberto.
@@ -1741,7 +1740,7 @@ no O nome do arquivo a ser aberto.
 *bAddToMRU*<br/>
 no VERDADEIRO indica que o documento é um dos arquivos mais recentes; FALSE indica que o documento não é um dos arquivos mais recentes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para um `CDocument` se for bem-sucedido; caso contrário, NULL.
 
@@ -1761,7 +1760,7 @@ Chame essa função de membro para analisar a linha de comando e enviar os parâ
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rCmdInfo*<br/>
 Uma referência a um objeto [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) .
@@ -1790,12 +1789,12 @@ Substitua essa função para filtrar as mensagens de janela antes que elas sejam
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
 Um ponteiro para uma estrutura de [msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem a ser processada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a mensagem foi totalmente processada em `PreTranslateMessage` e não deve ser processada ainda mais. Zero se a mensagem deve ser processada da maneira normal.
 
@@ -1809,7 +1808,7 @@ virtual BOOL ProcessMessageFilter(
     LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *code*<br/>
 Especifica um código de gancho. Essa função de membro usa o código para determinar como processar *lpMsg.*
@@ -1817,7 +1816,7 @@ Especifica um código de gancho. Essa função de membro usa o código para dete
 *lpMsg*<br/>
 Um ponteiro para um trutura de [msg](/windows/win32/api/winuser/ns-winuser-msg)do Windows.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a mensagem for processada; caso contrário, 0.
 
@@ -1835,12 +1834,12 @@ Essa função de membro é chamada por [InitInstance](#initinstance) para aceita
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rCmdInfo*<br/>
 Uma referência a um objeto [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se o comando do Shell for processado com êxito. Se for 0, retornará FALSE de [InitInstance](#initinstance).
 
@@ -1880,7 +1879,7 @@ virtual LRESULT ProcessWndProcException(
     const MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Oriental*<br/>
 Um ponteiro para uma exceção não percebida.
@@ -1888,7 +1887,7 @@ Um ponteiro para uma exceção não percebida.
 *pMsg*<br/>
 Uma [msg](/windows/win32/api/winuser/ns-winuser-msg)trutura que contém informações sobre a mensagem do Windows que fez com que a estrutura lançasse uma exceção.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor que deve ser retornado para o Windows. Normalmente, isso é 0L para mensagens do Windows, 1L (TRUE) para mensagens de comando.
 
@@ -1908,7 +1907,7 @@ Executa qualquer tarefa de registro não tratada pelo `RegisterShellFileTypes` .
 virtual BOOL Register();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero em caso de êxito; caso contrário, 0.
 
@@ -1924,7 +1923,7 @@ Chame essa função de membro para registrar todos os tipos de documento do seu 
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bCompat*<br/>
 no VERDADEIRO adiciona entradas de registro para comandos do Shell imprimir e imprimir no, permitindo que um usuário imprima arquivos diretamente do Shell ou arrastando o arquivo para um objeto de impressora. Ele também adiciona uma tecla DefaultIcon. Por padrão, esse parâmetro é FALSE para compatibilidade com versões anteriores.
@@ -1958,7 +1957,7 @@ virtual HRESULT RegisterWithRestartManager(
     DWORD dwCallbackFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRegisterRecoveryCallback*\
 no VERDADEIRO indica que essa instância do aplicativo usa uma função de retorno de chamada de recuperação; FALSE indica que ele não faz isso. A estrutura chama a função de retorno de chamada de recuperação quando o aplicativo sai inesperadamente. Para obter mais informações, consulte [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback).
@@ -1984,7 +1983,7 @@ no O período de tempo que o Gerenciador de reinicialização aguarda pela funç
 *dwCallbackFlags*\
 no Sinalizadores passados para a função de retorno de chamada de recuperação. Reservado para uso futuro.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 S_OK se o método for bem-sucedido; caso contrário, um código de erro.
 
@@ -2016,7 +2015,7 @@ Determina se o Gerenciador de reinicialização reabrirá os arquivos que estava
 virtual BOOL ReopenPreviousFilesAtRestart() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica que o Gerenciador de reinicialização reabrirá os arquivos abertos anteriormente; FALSO indica que o Gerenciador de reinicialização não faz isso.
 
@@ -2028,7 +2027,7 @@ Manipula uma reinicialização do aplicativo iniciada pelo Gerenciador de reinic
 virtual BOOL CWinApp::RestartInstance();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se o manipulador de recuperação de dados abrir documentos abertos anteriormente; FALSE se o manipulador de recuperação de dados tiver um erro ou se não houver nenhum documento aberto anteriormente.
 
@@ -2046,7 +2045,7 @@ Determina se o Gerenciador de reinicialização restaura os arquivos salvos nova
 virtual BOOL RestoreAutosavedFilesAtRestart() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica que o Gerenciador de reinicialização restaura arquivos salvos novamente; FALSO indica que o Gerenciador de reinicialização não faz isso.
 
@@ -2058,7 +2057,7 @@ Fornece um loop de mensagem padrão.
 virtual int Run();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`int`** valor que é retornado por `WinMain` .
 
@@ -2076,7 +2075,7 @@ Chame essa função para determinar se a opção " **/Automation**" ou " **-Auto
 BOOL RunAutomated();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a opção foi encontrada; caso contrário, 0.
 
@@ -2092,7 +2091,7 @@ Chame essa função para determinar se a opção " **/Embedding**" ou " **-incor
 BOOL RunEmbedded();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a opção foi encontrada; caso contrário, 0.
 
@@ -2108,7 +2107,7 @@ Chamado pelo Framework para salvar todos os documentos quando a janela do quadro
 virtual BOOL SaveAllModified();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for seguro para encerrar o aplicativo; 0 se não for seguro encerrar o aplicativo.
 
@@ -2127,7 +2126,7 @@ void SelectPrinter(
     BOOL bFreeOld = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hDevNames*<br/>
 Um identificador para um [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)trutura que identifica o driver, o dispositivo e os nomes de porta de saída de uma impressora específica.
@@ -2150,7 +2149,7 @@ Define o tipo de ajuda do aplicativo.
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *eHelpType*<br/>
 Especifica o tipo de ajuda a ser usado. Consulte [CWinApp:: m_eHelpType](#m_ehelptype) para obter mais informações.
@@ -2170,7 +2169,7 @@ void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszRegistryKey*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome da chave.
@@ -2190,7 +2189,7 @@ Determina se o Gerenciador de reinicialização recupera um aplicativo que foi e
 virtual BOOL SupportsApplicationRecovery() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica que o Gerenciador de reinicializações recupera o aplicativo; FALSO indica que o Gerenciador de reinicialização não faz isso.
 
@@ -2202,7 +2201,7 @@ Determina se o Gerenciador de reinicialização salva novamente os documentos ab
 virtual BOOL SupportsAutosaveAtInterval() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica que o Gerenciador de reinicialização salva novamente os documentos abertos; FALSO indica que o Gerenciador de reinicialização não faz isso.
 
@@ -2214,7 +2213,7 @@ Determina se o Gerenciador de reinicialização salva o salvamento automática d
 virtual BOOL SupportsAutosaveAtRestart() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica que o Gerenciador de reinicialização salva novamente os documentos abertos quando o aplicativo é reiniciado; FALSO indica que o Gerenciador de reinicialização não faz isso.
 
@@ -2226,7 +2225,7 @@ Determina se o aplicativo dá suporte ao Gerenciador de reinicialização.
 virtual BOOL SupportsRestartManager() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 VERDADEIRO indica que o aplicativo dá suporte ao Gerenciador de reinicialização; FALSE indica que o aplicativo não.
 
@@ -2238,7 +2237,7 @@ Cancela o registro de todos os arquivos registrados pelo objeto de aplicativo.
 virtual BOOL Unregister();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero em caso de êxito; caso contrário, 0.
 
@@ -2266,7 +2265,7 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 Especifica dados adicionais. O valor usado depende do valor do parâmetro *nCmd* .
@@ -2296,7 +2295,7 @@ BOOL WriteProfileBinary(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada. Se a seção não existir, ela será criada. O nome da seção diferencia maiúsculas de minúsculas; a cadeia de caracteres pode ser qualquer combinação de letras maiúsculas e minúsculas.
@@ -2310,7 +2309,7 @@ Aponta para os dados a serem gravados.
 *nBytes*<br/>
 Contém o número de bytes a serem gravados.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -2333,7 +2332,7 @@ BOOL WriteProfileInt(
     int nValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada. Se a seção não existir, ela será criada. O nome da seção diferencia maiúsculas de minúsculas; a cadeia de caracteres pode ser qualquer combinação de letras maiúsculas e minúsculas.
@@ -2344,7 +2343,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que contém a entrada na 
 *nvalor*<br/>
 Contém o valor a ser gravado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -2367,7 +2366,7 @@ BOOL WriteProfileString(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada. Se a seção não existir, ela será criada. O nome da seção diferencia maiúsculas de minúsculas; a cadeia de caracteres pode ser qualquer combinação de letras maiúsculas e minúsculas.
@@ -2378,7 +2377,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que contém a entrada na 
 *lpszValue*<br/>
 Aponta para a cadeia de caracteres a ser gravada. Se esse parâmetro for NULL, a entrada especificada pelo parâmetro *lpszEntry* será excluída.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -2396,7 +2395,7 @@ Define explicitamente a ID do modelo de usuário do aplicativo para o aplicativo
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpcszAppID*<br/>
 Especifica a ID do modelo de usuário do aplicativo.

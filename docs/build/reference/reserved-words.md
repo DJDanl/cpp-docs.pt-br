@@ -17,39 +17,86 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 16caacb77e052eebc8e2cd101990ee373535bd6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62893d4af1633bc2c89d2d6a0fa71309a0411ad5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171145"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836836"
 ---
 # <a name="reserved-words"></a>Palavras reservadas
 
 As palavras a seguir são reservadas pelo vinculador. Esses nomes podem ser usados como argumentos em [instruções de definição de módulo](module-definition-dot-def-files.md) somente se o nome estiver entre aspas duplas ("").
 
-||||
-|-|-|-|
-|**Apploader**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**CARREGAMENTO**|
-|**POLYBASE**|**IOPL**|**PESSOAL**|
-|**AUTO-completar**|**Biblioteca**<sup>1</sup>|**Protmode**<sup>2</sup>|
-|**EM conformidade com**|**LOADONCALL**<sup>1</sup>|**Puro**<sup>1</sup>|
-|**DADO**|**Longnames**<sup>2</sup>|**LEITURA**|
-|**DESCRIPTION**|**Móvel**<sup>1</sup>|**READWRITE**|
-|**DEV386**|**Móvel**<sup>1</sup>|**Realmode**<sup>1</sup>|
-|**Descartado**|**VÁRIOS**|**Ponteiro**|
-|**DINÂMICO**|**NOME**|**Resident**<sup>1</sup>|
-|**SOMENTE EXECUÇÃO**|**NewFiles**<sup>2</sup>|**AS**|
-|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**RETO**|
-|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**COMPARTILHADO**|
-|**EXETYPE**|**NONAME**|**EXCLUSIVO**|
-|**EXPORTS**|Não **conforme**<sup>1</sup>|**STACKSIZE**|
-|**Corrigido**em<sup>1</sup>|**Não DESCARTÁvel**|**STUB**|
-|**Funções**<sup>2</sup>|**NONE**|**VERSION**|
-|**HEAPSIZE**|**Não compartilhado**|**WINDOWAPI**|
-|**IMPORTAR**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
-|**Impuro**<sup>1</sup>|**OBJETO**|**WINDOWS**|
-|**Incluir**<sup>2</sup>|**Antigo**<sup>1</sup>||
+:::row:::
+   :::column span="":::
+      **`APPLOADER`**<sup>uma</sup>\
+      **`BASE`**\
+      **`CODE`**\
+      **`CONFORMING`**\
+      **`DATA`**\
+      **`DESCRIPTION`**\
+      **`DEV386`**\
+      **`DISCARDABLE`**\
+      **`DYNAMIC`**\
+      **`EXECUTE-ONLY`**\
+      **`EXECUTEONLY`**\
+      **`EXECUTEREAD`**\
+      **`EXETYPE`**\
+      **`EXPORTS`**\
+      **`FIXED`**<sup>uma</sup>
+   :::column-end:::
+   :::column span="":::
+      **`FUNCTIONS`**<sup>2</sup>\
+      **`HEAPSIZE`**\
+      **`IMPORTS`**\
+      **`IMPURE`**<sup>uma</sup>\
+      **`INCLUDE`**<sup>2</sup>\
+      **`INITINSTANCE`**<sup>2</sup>\
+      **`IOPL`**\
+      **`LIBRARY`**<sup>uma</sup>\
+      **`LOADONCALL`**<sup>uma</sup>\
+      **`LONGNAMES`**<sup>2</sup>\
+      **`MOVABLE`**<sup>uma</sup>\
+      **`MOVEABLE`**<sup>uma</sup>\
+      **`MULTIPLE`**\
+      **`NAME`**\
+      **`NEWFILES`**<sup>2</sup>
+   :::column-end:::
+   :::column span="":::
+      **`NODATA`**<sup>uma</sup>\
+      **`NOIOPL`**<sup>uma</sup>\
+      **`NONAME`**\
+      **`NONCONFORMING`**<sup>uma</sup>\
+      **`NONDISCARDABLE`**\
+      **`NONE`**\
+      **`NONSHARED`**\
+      **`NOTWINDOWCOMPAT`**<sup>uma</sup>\
+      **`OBJECTS`**\
+      **`OLD`**<sup>uma</sup>\
+      **`PRELOAD`**\
+      **`PRIVATE`**\
+      **`PROTMODE`**<sup>2</sup>\
+      **`PURE`**<sup>uma</sup>\
+      **`READONLY`**
+   :::column-end:::
+   :::column span="":::
+      **`READWRITE`**\
+      **`REALMODE`**<sup>uma</sup>\
+      **`RESIDENT`**\
+      **`RESIDENTNAME`**<sup>uma</sup>\
+      **`SECTIONS`**\
+      **`SEGMENTS`**\
+      **`SHARED`**\
+      **`SINGLE`**\
+      **`STACKSIZE`**\
+      **`STUB`**\
+      **`VERSION`**\
+      **`WINDOWAPI`**\
+      **`WINDOWCOMPAT`**\
+      **`WINDOWS`**
+   :::column-end:::
+:::row-end:::
 
 <sup>1</sup> o vinculador emite um aviso ("ignorado") quando encontra esse termo. No entanto, a palavra ainda está reservada.
 
@@ -58,4 +105,4 @@ As palavras a seguir são reservadas pelo vinculador. Esses nomes podem ser usad
 ## <a name="see-also"></a>Confira também
 
 - [Referência de vinculador MSVC](linking.md)
-- [Opções de vinculador MSVC](linker-options.md)
+- [Opções do vinculador MSVC](linker-options.md)

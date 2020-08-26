@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210711"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845543"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
@@ -33,7 +33,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-O objeto de sessão derivado de `IDBCreateCommandImpl`.
+O objeto de sessão derivado de `IDBCreateCommandImpl` .
 
 *CommandClass*<br/>
 Sua classe de comando.
@@ -46,7 +46,7 @@ Sua classe de comando.
 
 ### <a name="interface-methods"></a>Métodos de interface
 
-|||
+| Nome | Descrição |
 |-|-|
 |[CreateCommand](#createcommand)|Cria um novo comando.|
 
@@ -54,7 +54,7 @@ Sua classe de comando.
 
 Uma interface opcional no objeto de sessão para obter um novo comando.
 
-## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a> IDBCreateCommandImpl:: CreateCommand
 
 Cria um novo comando e retorna a interface solicitada.
 
@@ -70,7 +70,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 Consulte [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) na *referência do programador de OLE DB*.
 
-Alguns parâmetros correspondem a parâmetros de *referência do programador OLE DB* de nomes diferentes, que são descritos em `IDBCreateCommand::CreateCommand`:
+Alguns parâmetros correspondem a parâmetros de *referência do programador OLE DB* de nomes diferentes, que são descritos em `IDBCreateCommand::CreateCommand` :
 
 |OLE DB parâmetros de modelo|Parâmetros *de referência do programador de OLE DB*|
 |--------------------------------|------------------------------------------------|
@@ -79,4 +79,4 @@ Alguns parâmetros correspondem a parâmetros de *referência do programador OLE
 ## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912386"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844971"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -60,16 +60,16 @@ int _wsystem(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*.*<br/>
+*command*<br/>
 O comando a ser executado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se o *comando* for **nulo** e o interpretador de comandos for encontrado, retornará um valor diferente de zero. Se o interpretador de comandos não for encontrado, retornará 0 e definirá **errno** como **ENOENT**. Se o *comando* não for **nulo**, o **sistema** retornará o valor retornado pelo interpretador de comando. Retornará o valor 0 somente se o interpretador de comandos retornar o valor 0. Um valor de retorno de-1 indica um erro e **errno** é definido como um dos seguintes valores:
 
-|||
+| Valor | Descrição |
 |-|-|
 | **E2BIG** | A lista de argumentos (que é dependente do sistema) é muito grande. |
 | **ENOENT** | Não foi possível encontrar o interpretador de comandos. |
@@ -80,7 +80,7 @@ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/er
 
 ## <a name="remarks"></a>Comentários
 
-A função do **sistema** passa o *comando* para o interpretador de comandos, que executa a cadeia de caracteres como um comando do sistema operacional. o **sistema** usa as variáveis de ambiente **COMSPEC** e **Path** para localizar o arquivo do interpretador de comando cmd. exe. Se o *comando* for **nulo**, a função apenas verificará se o interpretador de comando existe.
+A função do **sistema** passa o *comando* para o interpretador de comandos, que executa a cadeia de caracteres como um comando do sistema operacional. o **sistema** usa as variáveis de ambiente **COMSPEC** e **Path** para localizar o arquivo de intérprete de comando CMD.exe. Se o *comando* for **nulo**, a função apenas verificará se o interpretador de comando existe.
 
 Você deve liberar explicitamente, usando [fflush](fflush.md) ou [_flushall](flushall.md), ou fechar qualquer fluxo antes de chamar o **sistema**.
 
@@ -99,7 +99,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**sistema**|\<process.h> ou \<stdlib.h>|
-|**_wsystem**|\<process.h>, \<stdlib.h> ou \<wchar.h>|
+|**_wsystem**|\<process.h> ou \<stdlib.h> ou \<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -132,10 +132,10 @@ Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, _wexec funções](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
-[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn funções](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
