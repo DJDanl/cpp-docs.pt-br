@@ -25,12 +25,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5bf27ac8287e785b1c799565781842db54edee4d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351270"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837821"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -47,16 +47,16 @@ int _heapset(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*Preencher*<br/>
+*ficar*<br/>
 Caractere de preenchimento.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 `_heapset` retorna uma das seguintes constantes de manifesto de inteiro definidas em Malloc.h.
 
-|||
+|Valor|Descrição|
 |-|-|
 | `_HEAPBADBEGIN`  | As informações do cabeçalho inicial são inválidas ou não foram encontradas.  |
 | `_HEAPBADNODE`  | Heap danificado ou nó inválido encontrado.  |

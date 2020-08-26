@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4ddf71c385414a28c2b616b359a93a637abc24aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 32362f287320e69d1680cbe07ca050143b507514
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222128"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846323"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ Um desses valores possíveis:,,,, **`true`** **`false`** `forced` `restricted` `
 
 - Se `forced` , substitui um `restricted` atributo subsequente, que exige que um arquivo tenha um `module` atributo se houver atributos IDL no arquivo.
 
-- `push`permite salvar as configurações de **emitidl** atuais em uma pilha **emitidl** interna e `pop` permite que você defina **emitidl** como qualquer valor na parte superior da pilha **emitidl** interna.
+- `push` permite salvar as configurações de **emitidl** atuais em uma pilha **emitidl** interna e `pop` permite que você defina **emitidl** como qualquer valor na parte superior da pilha **emitidl** interna.
 
 `defaultimports=`*valor booleano* \( adicional
 
@@ -54,9 +54,7 @@ Cada vez que o compilador encontra um novo arquivo, **emitidl** é implicitament
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Qualquer lugar|
 |**Repetível**|Não|

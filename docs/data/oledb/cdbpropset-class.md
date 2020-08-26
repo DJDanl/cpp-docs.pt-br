@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216486"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838251"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
@@ -57,7 +57,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="methods"></a>Métodos
 
-|||
+| Nome | Descrição |
 |-|-|
 |[AddProperty](#addproperty)|Adiciona uma propriedade ao conjunto de propriedades.|
 |[CDBPropSet](#cdbpropset)|Construtor.|
@@ -65,7 +65,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="operators"></a>Operadores
 
-|||
+| Nome | Descrição |
 |-|-|
 |[operador =](#op_equal)|Atribui o conteúdo de um conjunto de propriedades para outro.|
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 Os provedores de OLE DB e os consumidores usam `DBPROPSET` estruturas para passar matrizes de `DBPROP` estruturas. Cada `DBPROP` estrutura representa uma única propriedade que pode ser definida.
 
-## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a> CDBPropSet:: AddProperty
 
 Adiciona uma propriedade ao conjunto de propriedades.
 
@@ -120,11 +120,11 @@ no Um valor de ponto flutuante de precisão dupla usado para inicializar o valor
 *cyValue*<br/>
 no Um valor de moeda CY usado para inicializar o valor da propriedade para a `DBPROP` estrutura adicionada ao conjunto de propriedades.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a propriedade tiver sido adicionada com êxito. Caso contrário, **`false`** .
 
-## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet::CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a> CDBPropSet::CDBPropSet
 
 O construtor. Inicializa os `rgProperties` `cProperties` campos, e `guidPropertySet` da estrutura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -146,7 +146,7 @@ no Um GUID usado para inicializar o `guidPropertySet` campo.
 *propset*<br/>
 no Outro `CDBPropSet` objeto para a construção da cópia.
 
-## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a> CDBPropSet:: SetGUID
 
 Define o `guidPropertySet` campo na `DBPROPSET` estrutura.
 
@@ -165,7 +165,7 @@ no Um GUID usado para definir o `guidPropertySet` campo da estrutura [DBPROPSET]
 
 Esse campo também pode ser definido pelo [Construtor](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: Operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet:: Operator =
 
 Atribui o conteúdo de um conjunto de propriedades a outro conjunto de propriedades.
 

@@ -1,36 +1,36 @@
 ---
-title: Marshaling Funções Globais
+title: Marshaling de funções globais
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: b839e93b6251a09ce79df60a49b4054d1af76cc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79b19b613fbae49c0f8338dcadd2225e092fb371
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326258"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835318"
 ---
-# <a name="marshaling-global-functions"></a>Marshaling Funções Globais
+# <a name="marshaling-global-functions"></a>Marshaling de funções globais
 
-Essas funções fornecem suporte para empacotar e converter dados de empacotamento em ponteiros de interface.
+Essas funções fornecem suporte para marshaling e conversão de dados de marshaling em ponteiros de interface.
 
 > [!IMPORTANT]
-> As funções listadas na tabela a seguir não podem ser usadas em aplicativos executados no Tempo de execução do Windows.
+> As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados no Windows Runtime.
 
-|||
+|Nome|Descrição|
 |-|-|
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|Libera os dados do `IStream` marechal e o ponteiro.|
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Cria um novo objeto de fluxo e empacota o ponteiro de interface especificado.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Converte os dados de empacotamento de um fluxo em um ponteiro de interface.|
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|Libera os dados de marshaling e o `IStream` ponteiro.|
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Cria um novo objeto de fluxo e realiza marshaling do ponteiro de interface especificado.|
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Converte os dados de marshaling de um fluxo em um ponteiro de interface.|
 
 ## <a name="requirements"></a>Requisitos:
 
-**Cabeçalho:** atlbase.h
+**Cabeçalho:** atlbase. h
 
-## <a name="atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>AtlFreeMarshalStream
+## <a name="atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a> AtlFreeMarshalStream
 
 Libera os dados de marshaling no fluxo e depois libera o ponteiro de fluxo.
 
@@ -38,16 +38,16 @@ Libera os dados de marshaling no fluxo e depois libera o ponteiro de fluxo.
 HRESULT AtlFreeMarshalStream(IStream* pStream);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pStream*<br/>
-[em] Um ponteiro `IStream` para a interface no fluxo usado para empacotar.
+no Um ponteiro para a `IStream` interface no fluxo usado para marshaling.
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo [de AtlMarshalPtrInProc](#atlmarshalptrinproc).
+Consulte o exemplo de [AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
-## <a name="atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc
+## <a name="atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a> AtlMarshalPtrInProc
 
 Cria um novo objeto de fluxo, grava o CLSID do proxy no fluxo e realiza o marshaling do ponteiro de interface especificado gravando os dados necessários para inicializar o proxy no fluxo.
 
@@ -58,34 +58,34 @@ HRESULT AtlMarshalPtrInProc(
     IStream** ppStream);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Punk*<br/>
-[em] Um ponteiro para a interface a ser empacotada.
+*pUnk*<br/>
+no Um ponteiro para a interface a ser empacotada.
 
-*Iid*<br/>
-[em] O GUID da interface que está sendo empacotada.
+*IID*<br/>
+no O GUID da interface que está sendo empacotada.
 
 *ppStream*<br/>
-[fora] Um ponteiro `IStream` para a interface no novo objeto de fluxo usado para empacotar.
+fora Um ponteiro para a `IStream` interface no novo objeto de fluxo usado para marshaling.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-A bandeira MSHLFLAGS_TABLESTRONG é definida para que o ponteiro possa ser empacotado para vários fluxos. O ponteiro também pode ser desmembrado várias vezes.
+O sinalizador MSHLFLAGS_TABLESTRONG é definido para que o ponteiro possa ser empacotado para vários fluxos. O ponteiro também pode ser desempacotado várias vezes.
 
 Se o marshaling falhar, o ponteiro de fluxo será liberado.
 
-`AtlMarshalPtrInProc`só pode ser usado em um ponteiro para um objeto em processo.
+`AtlMarshalPtrInProc` Só pode ser usado em um ponteiro para um objeto em processo.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]
 
-## <a name="atlunmarshalptr"></a><a name="atlunmarshalptr"></a>AtlUnmarshalPtr
+## <a name="atlunmarshalptr"></a><a name="atlunmarshalptr"></a> AtlUnmarshalPtr
 
 Converte os dados de marshaling do fluxo em um ponteiro de interface que pode ser usado pelo cliente.
 
@@ -96,24 +96,24 @@ HRESULT AtlUnmarshalPtr(
     IUnknown** ppUnk);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pStream*<br/>
-[em] Um ponteiro para o córrego sendo desmarshaled.
+no Um ponteiro para o fluxo que está sendo desempacotado.
 
-*Iid*<br/>
-[em] O GUID da interface sendo desmarshaled.
+*IID*<br/>
+no O GUID da interface que está sendo desempacotada.
 
 *ppUnk*<br/>
-[fora] Um ponteiro para a interface desmembrada.
+fora Um ponteiro para a interface não empacotada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor HRESULT padrão.
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo [de AtlMarshalPtrInProc](#atlmarshalptrinproc).
+Consulte o exemplo de [AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
 ## <a name="see-also"></a>Confira também
 

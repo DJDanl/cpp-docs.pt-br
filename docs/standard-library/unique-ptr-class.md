@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: 694ea94ac0e9dcd31d89a3a83bd3400bac3e8e4f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e6c7d8dd9835545c4aaa677a39f5e3149743d14
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222180"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835669"
 ---
 # <a name="unique_ptr-class"></a>Classe unique_ptr
 
@@ -125,13 +125,13 @@ O ponteiro armazenado para um recurso possuído, `stored_ptr` tem o tipo `pointe
 
 ### <a name="constructors"></a>Construtores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[unique_ptr](#unique_ptr)|Há sete construtores para `unique_ptr`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[deleter_type](#deleter_type)|Um sinônimo para o parâmetro de modelo `Del`.|
 |[element_type](#element_type)|Um sinônimo para o parâmetro de modelo `T`.|
@@ -139,7 +139,7 @@ O ponteiro armazenado para um recurso possuído, `stored_ptr` tem o tipo `pointe
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[get](#get)|Retorna `stored_ptr`.|
 |[get_deleter](#get_deleter)|Retorna uma referência para `stored_deleter`.|
@@ -149,14 +149,14 @@ O ponteiro armazenado para um recurso possuído, `stored_ptr` tem o tipo `pointe
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|-|
 |**booliano de operador**|O operador retorna um valor de um tipo que é conversível para **`bool`** . O resultado da conversão em **`bool`** é **`true`** quando `get() != pointer()` , caso contrário, **`false`** .|
 |`operator->`|A função membro retorna `stored_ptr`.|
 |`operator*`|A função membro retorna `*stored_ptr`.|
 |[operador =](#unique_ptr_operator_eq)|Atribui o valor de um `unique_ptr`(ou um `pointer-type`) para o `unique_ptr` atual.|
 
-### <a name="deleter_type"></a><a name="deleter_type"></a>deleter_type
+### <a name="deleter_type"></a><a name="deleter_type"></a> deleter_type
 
 O tipo é um sinônimo do parâmetro de modelo `Del`.
 
@@ -168,7 +168,7 @@ typedef Del deleter_type;
 
 O tipo é um sinônimo do parâmetro de modelo `Del`.
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 O tipo é um sinônimo do parâmetro de modelo `Type`.
 
@@ -180,7 +180,7 @@ typedef Type element_type;
 
 O tipo é um sinônimo do parâmetro de modelo `Ty`.
 
-### <a name="get"></a><a name="get"></a>Obter
+### <a name="get"></a><a name="get"></a> Obter
 
 Retorna `stored_ptr`.
 
@@ -192,7 +192,7 @@ pointer get() const;
 
 A função membro retorna `stored_ptr`.
 
-### <a name="get_deleter"></a><a name="get_deleter"></a>get_deleter
+### <a name="get_deleter"></a><a name="get_deleter"></a> get_deleter
 
 Retorna uma referência para `stored_deleter`.
 
@@ -206,7 +206,7 @@ const Del& get_deleter() const;
 
 A função membro retorna a referência para `stored_deleter`.
 
-### <a name="operator"></a><a name="unique_ptr_operator_eq"></a>operador =
+### <a name="operator"></a><a name="unique_ptr_operator_eq"></a> operador =
 
 Atribui o endereço das `unique_ptr` fornecidas para a atual.
 
@@ -237,7 +237,7 @@ typedef T1 pointer;
 
 O tipo de sinônimo para `Del::pointer` se definido, caso contrário `Type *`.
 
-### <a name="release"></a><a name="release"></a>liberar
+### <a name="release"></a><a name="release"></a> liberar
 
 Libera a propriedade do ponteiro armazenado retornado para o chamador e define o valor do ponteiro armazenado para **`nullptr`** .
 
@@ -297,7 +297,7 @@ Deleting Sample(42)
 Deleting Sample(3)
 ```
 
-### <a name="reset"></a><a name="reset"></a>definido
+### <a name="reset"></a><a name="reset"></a> definido
 
 Apropria-se do parâmetro de ponteiro e, em seguida, exclui o ponteiro armazenado original. Se o novo ponteiro for o mesmo que o ponteiro armazenado original, o `reset` excluirá o ponteiro e definirá o ponteiro armazenado para **`nullptr`** .
 
@@ -317,7 +317,7 @@ Use `reset` para alterar o [ponteiro](#pointer) armazenado de propriedade de `un
 
 Como o `reset` primeiro armazena o novo ponteiro *PTR*e, em seguida, exclui o ponteiro armazenado original, é possível `reset` excluir imediatamente o *PTR* se for o mesmo que o ponteiro armazenado original.
 
-### <a name="swap"></a><a name="swap"></a>permuta
+### <a name="swap"></a><a name="swap"></a> permuta
 
 Troca os valores de dois objetos de `unique_ptr`.
 
@@ -334,7 +334,7 @@ Um `unique_ptr` usado para a troca de ponteiros.
 
 A função membro alterna `stored_ptr` com `right.stored_ptr` e `stored_deleter` com `right.stored_deleter`.
 
-### <a name="unique_ptr"></a><a name="unique_ptr"></a>unique_ptr
+### <a name="unique_ptr"></a><a name="unique_ptr"></a> unique_ptr
 
 Há sete construtores para `unique_ptr`.
 
@@ -374,7 +374,7 @@ Os primeiros dois construtores constroem um objeto que não gerencia nenhum recu
 
 O quinto Construtor armazena *PTR* in `stored_ptr` e passa `deleter` para `stored_deleter` . O sexto e sétimo construtores armazenam `right.release()` em `stored_ptr` e move `right.get_deleter()` em `stored_deleter`.
 
-### <a name="unique_ptr"></a><a name="dtorunique_ptr"></a>~ unique_ptr
+### <a name="unique_ptr"></a><a name="dtorunique_ptr"></a> ~ unique_ptr
 
 O destruidor de `unique_ptr`, destrói um objeto `unique_ptr`.
 

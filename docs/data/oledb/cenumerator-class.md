@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214913"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838146"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
@@ -48,7 +48,7 @@ class CEnumerator :
 
 ### <a name="methods"></a>Métodos
 
-|||
+| Nome | Descrição |
 |-|-|
 |[Localizar](#find)|Pesquisa por meio de provedores disponíveis (fontes de dados) procurando um com o nome especificado.|
 |[GetMoniker](#getmoniker)|Recupera a `IMoniker` interface para o registro atual.|
@@ -58,7 +58,7 @@ class CEnumerator :
 
 Você pode recuperar os `ISourcesRowset` dados indiretamente dessa classe.
 
-## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: find
+## <a name="cenumeratorfind"></a><a name="find"></a> CEnumerator:: find
 
 Procura um nome especificado entre os provedores disponíveis.
 
@@ -73,7 +73,7 @@ bool Find(TCHAR* szSearchName) throw();
 *szSearchName*<br/>
 no O nome a ser pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o nome foi encontrado. Caso contrário, **`false`** .
 
@@ -81,7 +81,7 @@ no O nome a ser pesquisado.
 
 Esse nome é mapeado para o `SOURCES_NAME` membro da interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a> CEnumerator:: GetMoniker
 
 Analisa o nome de exibição para extrair o componente da cadeia de caracteres que pode ser convertida em um moniker.
 
@@ -102,11 +102,11 @@ fora O moniker analisado a partir do nome de exibição ([CEnumeratorAccessor:: 
 *lpszDisplayName*<br/>
 no O nome de exibição a ser analisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
-## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: abrir
+## <a name="cenumeratoropen"></a><a name="open"></a> CEnumerator:: abrir
 
 Associa o moniker para o enumerador, se um for especificado, recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
@@ -131,7 +131,7 @@ no Um ponteiro para o `CLSID` de um enumerador.
 *enumera*<br/>
 no Uma referência a um enumerador.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 

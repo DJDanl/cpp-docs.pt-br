@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 37642cbcbe57fba54f071a8fc94af53c97684a36
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffcb6c7b2f95b0b62659f6080c9ed0d1f111237c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228135"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846388"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -34,7 +34,7 @@ Define o modelo de classe [basic_ostream](../standard-library/basic-ostream-clas
 
 ### <a name="manipulators"></a>Manipuladores
 
-|||
+|Nome|Descrição|
 |-|-|
 |[endl](../standard-library/ostream-functions.md#endl)|Termina uma linha e libera o buffer.|
 |[lados](../standard-library/ostream-functions.md#ends)|Termina uma cadeia de caracteres.|
@@ -45,7 +45,7 @@ Define o modelo de classe [basic_ostream](../standard-library/basic-ostream-clas
 
 |Operador|Descrição|
 |-|-|
-|[<<do operador](../standard-library/ostream-operators.md#op_lt_lt)|Grava vários tipos no fluxo.|
+|[<<do operador ](../standard-library/ostream-operators.md#op_lt_lt)|Grava vários tipos no fluxo.|
 
 ### <a name="classes"></a>Classes
 

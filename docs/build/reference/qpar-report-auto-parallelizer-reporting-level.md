@@ -2,12 +2,12 @@
 title: /Qpar-report (nível de relatórios do paralelizador automático)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: ea3e430dec61d35b8540792773b5519e64cedaef
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 3a154bdf50e951ee932173cdb65f9e1514011245
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373782"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839407"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (nível de relatórios do paralelizador automático)
 
@@ -46,4 +46,4 @@ As mensagens são relatadas para stdout. Se nenhuma mensagem informativa for rel
 [Opções de/q (operações de nível baixo)](q-options-low-level-operations.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
-[Vetorização de código nativo no Visual Studio](https://docs.microsoft.com/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)
+[Vetorização de código nativo no Visual Studio](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

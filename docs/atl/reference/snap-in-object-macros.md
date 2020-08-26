@@ -1,5 +1,5 @@
 ---
-title: Macros do objeto Snap-In
+title: Macros do objeto de snap-in
 ms.date: 11/04/2016
 f1_keywords:
 - atlsnap/ATL::BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
@@ -11,73 +11,73 @@ f1_keywords:
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-ms.openlocfilehash: 6a57cdb3c9b6a4448bc954ff754ac9b18fa0b393
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e006a17ad480ea79f6aeec224278815c8c3f164
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325865"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835188"
 ---
-# <a name="snap-in-object-macros"></a>Macros do objeto Snap-In
+# <a name="snap-in-object-macros"></a>Macros do objeto de snap-in
 
-Essas macros fornecem suporte para extensões snap-in.
+Essas macros oferecem suporte para extensões de snap-in.
 
-|||
+|Nome|Descrição|
 |-|-|
-|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|Marca o início do mapa da classe de dados de extensão snap-in para um objeto Snap-In.|
-|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|Marca o início do mapa da barra de ferramentas para um objeto Snap-In.|
-|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|Marca o fim do mapa de classe de dados de extensão snap-in para um objeto Snap-In.|
-|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|Marca o fim do mapa da barra de ferramentas para um objeto Snap-In.|
-|[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Cria um membro de dados para a classe de dados da extensão snap-in.|
-|[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Insere uma classe de dados de extensão snap-in no mapa da classe de dados de extensão snap-in do objeto Snap-In.|
-|[SNAPINMENUID](#snapinmenuid)|Declara o ID do menu de contexto usado pelo objeto Snap-In.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Insere uma barra de ferramentas no mapa da barra de ferramentas do objeto Snap-In.|
+|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|Marca o início do mapa de classes de dados de extensão do snap-in para um objeto de snap-in.|
+|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|Marca o início do mapa da barra de ferramentas para um objeto de snap-in.|
+|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|Marca o final do mapa de classes de dados de extensão do snap-in para um objeto de snap-in.|
+|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|Marca o final do mapa da barra de ferramentas para um objeto de snap-in.|
+|[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Cria um membro de dados para a classe de dados da extensão do snap-in.|
+|[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Insere uma classe de dados de extensão do snap-in no mapa da classe de dados de extensão do snap-in do objeto do snap-in.|
+|[SNAPINMENUID](#snapinmenuid)|Declara a ID do menu de contexto usado pelo objeto de snap-in.|
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Insere uma barra de ferramentas no mapa da barra de ferramentas do objeto do snap-in.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsnap.h
+**Cabeçalho:** atlsnap. h
 
-## <a name="begin_extension_snapin_nodeinfo_map"></a><a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
+## <a name="begin_extension_snapin_nodeinfo_map"></a><a name="begin_extension_snapin_nodeinfo_map"></a> BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
 
-Marca o início do mapa de classe de dados de extensão snap-in.
+Marca o início do mapa de classes de dados de extensão do snap-in.
 
 ```
 BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Classname*<br/>
-[em] O nome da classe de dados de extensão snap-in.
+*ClassName*<br/>
+no O nome da classe de dados de extensão do snap-in.
 
 ### <a name="remarks"></a>Comentários
 
-Inicie seu mapa de extensão snap-in com a macro BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP, adicione entradas para cada um dos seus tipos de dados de extensão snap-in com a [macro EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) e complete o mapa com a [macro END_EXTENSION_SNAPIN_NODEINFO_MAP.](#end_extension_snapin_nodeinfo_map)
+Inicie o mapa de extensão do snap-in com a macro BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP, adicione entradas para cada um dos tipos de dados de extensão do snap-in com a macro [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) e conclua o mapa com a macro [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) .
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]
 
-## <a name="begin_snapintoolbarid_map"></a><a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP
+## <a name="begin_snapintoolbarid_map"></a><a name="begin_snapintoolbarid_map"></a> BEGIN_SNAPINTOOLBARID_MAP
 
-Declara o início do mapa de ID da barra de ferramentas para o objeto Snap-In.
+Declara o início do mapa de ID da barra de ferramentas para o objeto de snap-in.
 
 ```
 BEGIN_SNAPINTOOLBARID_MAP(_class)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_class*<br/>
-[em] Especifica a classe de objeto Snap-In.
+no Especifica a classe de objeto do snap-in.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#106](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]
 
-## <a name="end_extension_snapin_nodeinfo_map"></a><a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP
+## <a name="end_extension_snapin_nodeinfo_map"></a><a name="end_extension_snapin_nodeinfo_map"></a> END_EXTENSION_SNAPIN_NODEINFO_MAP
 
-Marca o fim do mapa de classe de dados de extensão snap-in.
+Marca o final do mapa de classes de dados de extensão do snap-in.
 
 ```
 END_EXTENSION_SNAPIN_NODEINFO_MAP()
@@ -85,104 +85,104 @@ END_EXTENSION_SNAPIN_NODEINFO_MAP()
 
 ### <a name="remarks"></a>Comentários
 
-Inicie seu mapa de extensão snap-in com a macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP,](#begin_extension_snapin_nodeinfo_map) adicione entradas para cada um dos tipos de dados de extensão com a [macro EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) e complete o mapa com a macro END_EXTENSION_SNAPIN_NODEINFO_MAP.
+Inicie o mapa de extensão do snap-in com a macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) , adicione entradas para cada um dos tipos de dados de snap-in de extensão com a macro [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) e conclua o mapa com a macro END_EXTENSION_SNAPIN_NODEINFO_MAP.
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo [de BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
+Consulte o exemplo para [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
 
-## <a name="end_snapintoolbarid_map"></a><a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP
+## <a name="end_snapintoolbarid_map"></a><a name="end_snapintoolbarid_map"></a> END_SNAPINTOOLBARID_MAP
 
-Declara o fim do mapa de ID da barra de ferramentas para o objeto Snap-In.
+Declara o final do mapa da ID da barra de ferramentas para o objeto do snap-in.
 
 ```
 END_SNAPINTOOLBARID_MAP( _class )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_class*<br/>
-[em] Especifica a classe de objeto Snap-In.
+no Especifica a classe de objeto do snap-in.
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo [de BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
+Consulte o exemplo para [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
 
-## <a name="extension_snapin_dataclass"></a><a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS
+## <a name="extension_snapin_dataclass"></a><a name="extension_snapin_dataclass"></a> EXTENSION_SNAPIN_DATACLASS
 
-Adiciona um membro de dados à classe de dados de extensão snap-in para uma classe derivada do **ISnapInItemImpl.**
+Adiciona um membro de dados à classe de dados de extensão do snap-in para uma classe derivada de **ISnapInItemImpl**.
 
 ```
 EXTENSION_SNAPIN_DATACLASS(dataClass )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dataclass*<br/>
-[em] A classe de dados da extensão snap-in.
+*dataClass*<br/>
+no A classe de dados da extensão do snap-in.
 
 ### <a name="remarks"></a>Comentários
 
-Essa classe também deve ser inserida em um mapa de classe de dados de extensão snap-in. Inicie o mapa da classe de dados de extensão snap-in com a macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP,](#begin_extension_snapin_nodeinfo_map) adicione entradas para cada um dos seus tipos de dados de extensão snap-in com a [macro EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) e complete o mapa com a macro [END_EXTENSION_SNAPIN_NODEINFO_MAP.](#end_extension_snapin_nodeinfo_map)
+Essa classe também deve ser inserida em um mapa de classe de dados de extensão de snap-in. Inicie o mapa de classes de dados de extensão do snap-in com a macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) , adicione entradas para cada um dos tipos de dados de extensão do snap-in com a macro [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) e conclua o mapa com a macro [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) .
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]
 
-## <a name="extension_snapin_nodeinfo_entry"></a><a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY
+## <a name="extension_snapin_nodeinfo_entry"></a><a name="extension_snapin_nodeinfo_entry"></a> EXTENSION_SNAPIN_NODEINFO_ENTRY
 
-Adiciona uma classe de dados de extensão snap-in ao mapa da classe de dados de extensão snap-in.
+Adiciona uma classe de dados de extensão do snap-in ao mapa da classe de dados de extensão do snap-in.
 
 ```
 EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dataclass*<br/>
-[em] A classe de dados da extensão snap-in.
+*dataClass*<br/>
+no A classe de dados da extensão do snap-in.
 
 ### <a name="remarks"></a>Comentários
 
-Inicie o mapa da classe de dados de extensão snap-in com a macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP,](#begin_extension_snapin_nodeinfo_map) adicione entradas para cada um dos seus tipos de dados de extensão snap-in com a macro EXTENSION_SNAPIN_NODEINFO_ENTRY e complete o mapa com a [macro END_EXTENSION_SNAPIN_NODEINFO_MAP.](#end_extension_snapin_nodeinfo_map)
+Inicie o mapa de classes de dados de extensão do snap-in com a macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) , adicione entradas para cada um dos tipos de dados de extensão do snap-in com a macro EXTENSION_SNAPIN_NODEINFO_ENTRY e conclua o mapa com a macro [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) .
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo [de BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
+Consulte o exemplo para [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
 
-## <a name="snapinmenuid"></a><a name="snapinmenuid"></a>SNAPINMENUID
+## <a name="snapinmenuid"></a><a name="snapinmenuid"></a> SNAPINMENUID
 
-Use esta macro para declarar o recurso de menu de contexto do objeto Snap-In.
+Use esta macro para declarar o recurso de menu de contexto do objeto de snap-in.
 
 ```
 SNAPINMENUID( id )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
-[em] Identifica o menu de contexto do objeto Snap-In.
+no Identifica o menu de contexto do objeto de snap-in.
 
-## <a name="snapintoolbarid_entry"></a><a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY
+## <a name="snapintoolbarid_entry"></a><a name="snapintoolbarid_entry"></a> SNAPINTOOLBARID_ENTRY
 
-Use esta macro para inserir um ID da barra de ferramentas no mapa id da barra de ferramentas do objeto Snap-In.
+Use esta macro para inserir uma ID da barra de ferramentas no mapa da ID da barra de ferramentas do objeto do snap-in.
 
 ```
 SNAPINTOOLBARID_ENTRY( id )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
-[em] Identifica o controle da barra de ferramentas.
+no Identifica o controle ToolBar.
 
 ### <a name="remarks"></a>Comentários
 
-A [macro BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) marca o início do mapa de identificação da barra de ferramentas; a [macro END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) marca o fim.
+A macro [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) marca o início do mapa de ID da barra de ferramentas; a macro [END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) marca o final.
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo [de BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
+Consulte o exemplo para [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
 
 ## <a name="see-also"></a>Confira também
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 1627ba411fd201c84daee534ea134be2dba73376
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1533e8238b40f6ca5dc6faaef35a65db9020defd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193647"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835963"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -27,7 +27,7 @@ Define vários tipos e funções relacionados ao tratamento de exceções. O tra
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nome|Descrição|
 |-|-|
 |[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|Um tipo que descreve um ponteiro para uma exceção.|
 |[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|Um tipo que descreve um ponteiro para uma função adequada para uso como um `terminate_handler`.|
@@ -35,7 +35,7 @@ Define vários tipos e funções relacionados ao tratamento de exceções. O tra
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[current_exception](../standard-library/exception-functions.md#current_exception)|Obtém um ponteiro para a exceção atual.|
 |[get_terminate](../standard-library/exception-functions.md#get_terminate)|Obtém a função `terminate_handler` atual.|
@@ -52,7 +52,7 @@ Define vários tipos e funções relacionados ao tratamento de exceções. O tra
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe bad_exception](../standard-library/bad-exception-class.md)|A classe descreve uma exceção que pode ser lançada de um `unexpected_handler`.|
 |[Classe de exceção](../standard-library/exception-class.md)|A classe atua como a classe base de todas as exceções lançadas por determinadas expressões e pela biblioteca padrão C++.|

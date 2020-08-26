@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: db176bef55455c0553e5865e268c4e4e8fed089d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dbb8425047d9076343922dfbcf5c6162b6054c3b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212352"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835903"
 ---
 # <a name="exponential_distribution-class"></a>Classe exponential_distribution
 
@@ -77,10 +77,8 @@ O mecanismo do gerador de número aleatório. Para possíveis tipos, consulte [\
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **`double`** se nenhum for fornecido, distribuído de acordo com a distribuição exponencial. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
-|`exponential_distribution::operator()`||[param_type](#param_type)|
+[exponential_distribution](#exponential_distribution)\
+[param_type](#param_type)
 
 A função membro de propriedade `lambda()` retorna o valor para o parâmetro de distribuição armazenado `lambda`.
 
@@ -171,7 +169,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution:: exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a> exponential_distribution:: exponential_distribution
 
 Constrói a distribuição.
 
@@ -196,7 +194,7 @@ O primeiro construtor constrói um objeto cujo valor `lambda` armazenado contém
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::p aram_type
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a> exponential_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 

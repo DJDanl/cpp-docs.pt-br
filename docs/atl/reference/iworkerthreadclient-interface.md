@@ -1,5 +1,5 @@
 ---
-title: Interface do cliente do iWorkerThread
+title: Interface IWorkerThreadClient
 ms.date: 11/04/2016
 f1_keywords:
 - IWorkerThreadClient
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 6a68f25f153a0ad2cf42ebfaa374ff63c5746fcd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aa72f090a006d6936339582a919b0faf5cab6b03
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326306"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835344"
 ---
-# <a name="iworkerthreadclient-interface"></a>Interface do cliente do iWorkerThread
+# <a name="iworkerthreadclient-interface"></a>Interface IWorkerThreadClient
 
-`IWorkerThreadClient`é a interface implementada pelos clientes da classe [CWorkerThread.](../../atl/reference/cworkerthread-class.md)
+`IWorkerThreadClient` é a interface implementada por clientes da classe [CWorkerThread](../../atl/reference/cworkerthread-class.md) .
 
 > [!IMPORTANT]
-> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
+> Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,77 +33,77 @@ __interface IWorkerThreadClient
 
 ### <a name="methods"></a>Métodos
 
-|||
+|Nome|Descrição|
 |-|-|
-|[Closehandle](#closehandle)|Implemente este método para fechar a alça associada a este objeto.|
-|[Executar](#execute)|Implemente este método para executar o código quando a alça associada a este objeto for sinalizada.|
+|[CloseHandle](#closehandle)|Implemente este método para fechar o identificador associado a este objeto.|
+|[Executar](#execute)|Implemente esse método para executar o código quando o identificador associado a esse objeto for sinalizado.|
 
 ## <a name="remarks"></a>Comentários
 
-Implemente essa interface quando você tiver um código que precisa ser executado em um segmento de trabalhador em resposta a uma alça que está sendo sinalizada.
+Implemente essa interface quando tiver um código que precisa ser executado em um thread de trabalho em resposta a um identificador que se torna sinalizado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlutil.h
+**Cabeçalho:** atlutil. h
 
-## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a>iWorkerThreadClient::CloseHandle
+## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a> IWorkerThreadClient:: CloseHandle
 
-Implemente este método para fechar a alça associada a este objeto.
+Implemente este método para fechar o identificador associado a este objeto.
 
 ```
 HRESULT CloseHandle(HANDLE  hHandle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Hhandle*<br/>
-A alça será fechada.
+*hHandle*<br/>
+O identificador a ser fechado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O retorno S_OK no sucesso ou um erro HRESULT no fracasso.
+Retorne S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-A alça passada para este método foi anteriormente associada a este objeto por uma chamada para [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+O identificador passado para esse método foi anteriormente associado a esse objeto por uma chamada para [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Exemplo
 
-O código a seguir `IWorkerThreadClient::CloseHandle`mostra uma implementação simples de .
+O código a seguir mostra uma implementação simples do `IWorkerThreadClient::CloseHandle` .
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]
 
-## <a name="iworkerthreadclientexecute"></a><a name="execute"></a>iWorkerThreadClient::execute
+## <a name="iworkerthreadclientexecute"></a><a name="execute"></a> IWorkerThreadClient:: execute
 
-Implemente este método para executar o código quando a alça associada a este objeto for sinalizada.
+Implemente esse método para executar o código quando o identificador associado a esse objeto for sinalizado.
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Dwparam*<br/>
-O parâmetro do usuário.
+*dwParam*<br/>
+O parâmetro User.
 
-*Hobject*<br/>
-A alça que se tornou sinalizada.
+*hObject*<br/>
+O identificador que se tornou sinalizado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O retorno S_OK no sucesso ou um erro HRESULT no fracasso.
+Retorne S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-A alça e o DWORD/ponteiro passados para este método foram previamente associados a este objeto por uma chamada para [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+O identificador e o DWORD/ponteiro passados para esse método foram associados anteriormente a esse objeto por uma chamada para [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Exemplo
 
-O código a seguir `IWorkerThreadClient::Execute`mostra uma implementação simples de .
+O código a seguir mostra uma implementação simples do `IWorkerThreadClient::Execute` .
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 
 ## <a name="see-also"></a>Confira também
 
 [Classes](../../atl/reference/atl-classes.md)<br/>
-[Classe CworkerThread](../../atl/reference/cworkerthread-class.md)
+[Classe CWorkerThread](../../atl/reference/cworkerthread-class.md)

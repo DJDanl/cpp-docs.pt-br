@@ -5,12 +5,12 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813529"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846180"
 ---
 # <a name="ltspangt"></a>&lt;compreende&gt;
 
@@ -56,30 +56,30 @@ int main()
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|:-|
 |[compreende](span-class.md)| Fornece uma exibição sobre uma sequência de objetos contígua. |
 
 ### <a name="operators"></a>Operadores
 
-|||
+|Nome|Descrição|
 |-|:-|
 |[operador =](span-class.md#op_eq)| Atribuição de span |
 |[operador\[\]](span-class.md#op_at)| Acesso a elemento |
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| Obtenha os bytes subjacentes somente leitura da extensão. |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | Obter os bytes subjacentes da extensão. |
 
 ### <a name="constants"></a>Constantes
 
-|||
+|Nome|Descrição|
 |-|:-|
 | **dynamic_extent** | Indica que o tamanho do span é determinado em tempo de execução em vez de tempo de compilação. Quando o número de elementos no span é conhecido no momento da compilação, ele é especificado como o `Extent` parâmetro de modelo. Quando o número não for conhecido até o tempo de execução, especifique `dynamic_extent` em vez disso. |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

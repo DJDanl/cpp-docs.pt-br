@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f8c60b5f4523caf19e432ff853d49ad57fd277a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219125"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835799"
 ---
 # <a name="fisher_f_distribution-class"></a>Classe fisher_f_distribution
 
@@ -79,10 +79,8 @@ O mecanismo do gerador de número aleatório uniforme. Para possíveis tipos, co
 
 O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **`double`** se nenhum for fornecido, distribuído de acordo com a distribuição F de Fisher. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
-||||
-|-|-|-|
-|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
+[fisher_f_distribution](#fisher_f_distribution)\
+[param_type](#param_type)
 
 As funções de propriedade `m()` e `n()` retornam os valores para os parâmetros de distribuição armazenados `m` e `n`, respectivamente.
 
@@ -237,7 +235,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution:: fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a> fisher_f_distribution:: fisher_f_distribution
 
 Constrói a distribuição.
 
@@ -265,7 +263,7 @@ O primeiro construtor constrói um objeto cujo valor `m` armazenado contém o va
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::p aram_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a> fisher_f_distribution::p aram_type
 
 Armazena os parâmetros da distribuição.
 

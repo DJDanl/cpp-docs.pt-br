@@ -29,29 +29,29 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 472200d6941867387d99ab52c08a70467f802f62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219112"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838081"
 ---
 # <a name="ltfunctionalgt-functions"></a>Funções &lt;funcionais&gt;
 
 Essas funções são preteridas no C++ 11 e removidas no C++ 17:
 
-||||
-|-|-|-|
-|[bind1st](#bind1st) |[bind2nd](#bind2nd)|[mem_fun](#mem_fun)|
-|[mem_fun_ref](#mem_fun_ref)|[ptr_fun](#ptr_fun)||
+[bind1st](#bind1st)\
+[bind2nd](#bind2nd)\
+[mem_fun](#mem_fun)\
+[mem_fun_ref](#mem_fun_ref)\
+[ptr_fun](#ptr_fun)
 
 Essas funções são preteridas no C++ 17:
 
-|||
-|-|-|
-|[not1](#not1)|[not2](#not2)|
+[not1](#not1)\
+[not2](#not2)
 
-## <a name="bind"></a><a name="bind"></a>associa
+## <a name="bind"></a><a name="bind"></a> associa
 
 Associa argumentos a um objeto que pode ser chamado.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a><a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a> bind1st
 
 Uma função de modelo auxiliar que cria um adaptador para converter um objeto de função binária em um objeto de função unário. Ele associa o primeiro argumento da função Binary a um valor especificado. Preterido no C++ 11, removido do C++ 17.
 
@@ -169,7 +169,7 @@ O objeto de função binária a ser convertido em um objeto de função unária.
 *mantida*\
 O valor ao qual o primeiro argumento do objeto de função binária deve ser associado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O objeto de função unário que resulta da associação do primeiro argumento do objeto de função binária ao valor *restante*.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a> bind2nd
 
 Uma função de modelo auxiliar que cria um adaptador para converter um objeto de função binária em um objeto de função unário. Ele associa o segundo argumento da função Binary a um valor especificado. Preterido no C++ 11, removido do C++ 17.
 
@@ -263,7 +263,7 @@ O objeto de função binária a ser convertido em um objeto de função unária.
 *Certo*\
 O valor ao qual o segundo argumento do objeto de função binária deve ser associado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O objeto de função unário resultante da associação do segundo argumento do objeto de função Binary à *direita*.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a><a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a> bit_and
 
 Um objeto de função predefinido que faz uma operação AND bit a bit (Binary `operator&` ) em seus argumentos.
 
@@ -373,7 +373,7 @@ O operando esquerdo da operação bit a bit AND. O modelo não especializado usa
 *Certo*\
 O operando direito da operação bit a bit AND. O modelo não especializado usa um argumento de referência lvalue *do tipo Type.* O modelo especializado faz o encaminhamento perfeito de argumentos de referência lvalue e rvalue do tipo inferido *U*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O resultado de `Left & Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator&`.
 
@@ -381,7 +381,7 @@ O resultado de `Left & Right`. O modelo especializado realiza o encaminhamento p
 
 O functor `bit_and` é restrito a tipos integrais para os tipos de dados básicos ou a tipos definidos pelo usuário que implementam o `operator&` binário.
 
-## <a name="bit_not"></a><a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a> bit_not
 
 Um objeto de função predefinido que faz uma operação complementar (não) de um complemento de bits (unário `operator~` ) em seu argumento. Adicionado em C++ 14.
 
@@ -409,7 +409,7 @@ Um tipo que dá suporte a um `operator~` unário.
 *Certo*\
 O operando da operação complementar bit a bit. O modelo não especializado usa um argumento de referência lvalue *do tipo Type.* O modelo especializado faz o encaminhamento perfeito de um argumento de referência lvalue ou rvalue do *tipo*de tipo inferido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O resultado de `~ Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator~`.
 
@@ -417,7 +417,7 @@ O resultado de `~ Right`. O modelo especializado realiza o encaminhamento perfei
 
 O functor `bit_not` é restrito a tipos integrais para os tipos de dados básicos ou a tipos definidos pelo usuário que implementam o `operator~` binário.
 
-## <a name="bit_or"></a><a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a> bit_or
 
 Um objeto de função predefinido que faz uma operação OR bit a bit ( `operator|` ) em seus argumentos.
 
@@ -450,7 +450,7 @@ O operando esquerdo da operação bit a bit OR. O modelo não especializado usa 
 *Certo*\
 O operando direito da operação bit a bit OR. O modelo não especializado usa um argumento de referência lvalue *do tipo Type.* O modelo especializado faz o encaminhamento perfeito de argumentos de referência lvalue e rvalue do tipo inferido *U*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O resultado de `Left | Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator|`.
 
@@ -458,7 +458,7 @@ O resultado de `Left | Right`. O modelo especializado realiza o encaminhamento p
 
 O functor `bit_or` é restrito a tipos integrais para os tipos de dados básicos ou a tipos definidos pelo usuário que implementam `operator|`.
 
-## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a> bit_xor
 
 Um objeto de função predefinido que faz uma operação XOR (binário `operator^` ) de um bit em diante em seus argumentos.
 
@@ -491,7 +491,7 @@ O operando esquerdo da operação bit a bit XOR. O modelo não especializado usa
 *Certo*\
 O operando direito da operação bit a bit XOR. O modelo não especializado usa um argumento de referência lvalue *do tipo Type.* O modelo especializado faz o encaminhamento perfeito de argumentos de referência lvalue e rvalue do tipo inferido *U*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O resultado de `Left ^ Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator^`.
 
@@ -499,7 +499,7 @@ O resultado de `Left ^ Right`. O modelo especializado realiza o encaminhamento p
 
 O functor `bit_xor` é restrito a tipos integrais para os tipos de dados básicos ou a tipos definidos pelo usuário que implementam o `operator^` binário.
 
-## <a name="cref"></a><a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a> cref
 
 Constrói uma constante `reference_wrapper` de um argumento.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a><a name="invoke"></a>Chame
+## <a name="invoke"></a><a name="invoke"></a> Chame
 
 Invoca qualquer objeto que possa ser chamado com os argumentos fornecidos. Adicionado em C++ 17.
 
@@ -588,15 +588,15 @@ Invoca o objeto não chamado *FN* usando os *argumentos*de parâmetros. Efetivam
 
 - `(t1.*f)(t2, ..., tN)` quando `f` é um ponteiro para uma função membro da classe `T` e `t1` é um objeto do tipo `T` ou uma referência a um objeto do tipo `T` ou uma referência a um objeto de um tipo derivado de `T`. Ou seja, quando `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` é verdadeiro.
 
-- `(t1.get().*f)(t2, ..., tN)`Quando `f` é um ponteiro para a função membro da classe `T` e `std::decay_t<decltype(t1)>` é uma especialização de `std::reference_wrapper` .
+- `(t1.get().*f)(t2, ..., tN)` Quando `f` é um ponteiro para a função membro da classe `T` e `std::decay_t<decltype(t1)>` é uma especialização de `std::reference_wrapper` .
 
-- `((*t1).*f)(t2, ..., tN)`Quando `f` é um ponteiro para a função membro da classe `T` e `t1` não é um dos tipos anteriores.
+- `((*t1).*f)(t2, ..., tN)` Quando `f` é um ponteiro para a função membro da classe `T` e `t1` não é um dos tipos anteriores.
 
 - `t1.*f` quando N == 1 e `f` é um ponteiro para dados de membro de uma classe `T` e `t1` é um objeto do tipo `T` ou uma referência a um objeto do tipo `T` ou uma referência a um objeto de um tipo derivado de `T`.  Ou seja, quando `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` é verdadeiro.
 
-- `t1.get().*f`Quando N = = 1 e `f` é um ponteiro para dados de membro de uma classe `T` e `std::decay_t<decltype(t1)>` é uma especialização de `std::reference_wrapper` .
+- `t1.get().*f` Quando N = = 1 e `f` é um ponteiro para dados de membro de uma classe `T` e `std::decay_t<decltype(t1)>` é uma especialização de `std::reference_wrapper` .
 
-- `(*t1).*f`Quando N = = 1 e `f` é um ponteiro para dados de membro de uma classe `T` e `t1` não é um dos tipos anteriores.
+- `(*t1).*f` Quando N = = 1 e `f` é um ponteiro para dados de membro de uma classe `T` e `t1` não é um dos tipos anteriores.
 
 - `f(t1, t2, ..., tN)` em todos os outros casos.
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a> mem_fn
 
 Gera um wrapper de chamada simples.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a> mem_fun
 
 Funções de modelo auxiliares usadas para construir adaptadores de objeto de função para funções membro, quando inicializadas com argumentos de ponteiro. Preterido no C++ 11 para [mem_fn](#mem_fn) e para [ligar](#bind)e removido em c++ 17.
 
@@ -762,7 +762,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 *pMem*\
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`const`** ou **non_const** objeto de função do tipo `mem_fun_t` ou `mem_fun1_t` .
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a> mem_fun_ref
 
 Funções de modelo auxiliares usadas para construir adaptadores de objeto de função para funções membro, quando inicializadas usando argumentos de referência. Preterido no C++ 11, removido do C++ 17.
 
@@ -849,7 +849,7 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 *pMem*\
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`const`** `non_const` objeto de função ou do tipo `mem_fun_ref_t` ou `mem_fun1_ref_t` .
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a><a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a> not1
 
 Retorna o complemento de um predicado unário. Preterido por [not_fn](#not_fn) em c++ 17.
 
@@ -945,7 +945,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 *predicado*\
 O predicado unário a ser negado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um predicado unário que é a negação do predicado unário modificado.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a><a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a> not2
 
 Retorna o complemento de um predicado binário. Preterido por [not_fn](#not_fn) em c++ 17.
 
@@ -1017,7 +1017,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 *Func*\
 O predicado binário a ser negado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um predicado binário que é a negação do predicado binário modificado.
 
@@ -1079,9 +1079,9 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a><a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a> not_fn
 
-O `not_fn` modelo de função usa um objeto que possa ser chamado e retorna um objeto que possa ser chamado. Quando o objeto chamável retornado for invocado posteriormente com alguns argumentos, ele os passa para o objeto original callable e, logicamente, nega o resultado. Preserva o comportamento de qualificação const e categoria de valor do objeto callable Wrapped. `not_fn`é novo no c++ 17 e substitui os preteridos `std::not1` , `std::not2` , `std::unary_negate` e `std::binary_negate` .
+O `not_fn` modelo de função usa um objeto que possa ser chamado e retorna um objeto que possa ser chamado. Quando o objeto chamável retornado for invocado posteriormente com alguns argumentos, ele os passa para o objeto original callable e, logicamente, nega o resultado. Preserva o comportamento de qualificação const e categoria de valor do objeto callable Wrapped. `not_fn` é novo no c++ 17 e substitui os preteridos `std::not1` , `std::not2` , `std::unary_negate` e `std::binary_negate` .
 
 ```cpp
 template <class Callable>
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a> ptr_fun
 
 Funções de modelo auxiliares usadas para converter ponteiros de funções unárias e binárias, respectivamente, em funções adaptáveis unárias e binárias. Preterido no C++ 11, removido do C++ 17.
 
@@ -1196,7 +1196,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 *pfunc*\
 O ponteiro de função unária ou binária a ser convertido em uma função adaptável.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A primeira função de modelo retorna a função unário [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg` , **Result**> ( \* `pfunc` ).
 
@@ -1210,7 +1210,7 @@ Um ponteiro de função é um objeto de função. Ele pode ser passado para qual
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a><a name="ref"></a>referência
+## <a name="ref"></a><a name="ref"></a> referência
 
 Constrói um `reference_wrapper` de um argumento.
 
@@ -1222,7 +1222,7 @@ template <class Ty>
     reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma referência para `arg`; especificamente, `reference_wrapper<Ty>(arg)`.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a><a name="swap"></a>permuta
+## <a name="swap"></a><a name="swap"></a> permuta
 
 Troca dois objetos `function`.
 

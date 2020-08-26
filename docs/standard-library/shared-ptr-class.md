@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217461"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846206"
 ---
 # <a name="shared_ptr-class"></a>Classe shared_ptr
 
@@ -127,7 +127,7 @@ Vários threads podem ler e gravar simultaneamente objetos `shared_ptr` diferent
 
 ## <a name="members"></a>Membros
 
-|||
+|Nome|Descrição|
 |-|-|
 | **Construtores** | |
 |[shared_ptr](#shared_ptr)|Constrói um `shared_ptr`.|
@@ -148,7 +148,7 @@ Vários threads podem ler e gravar simultaneamente objetos `shared_ptr` diferent
 |[operador =](#op_eq)|Substitui o recurso possuído.|
 |[operador&gt;](#op_arrow)|Obtém um ponteiro para o valor designado.|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 O tipo de um elemento.
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a><a name="get"></a>Obter
+## <a name="get"></a><a name="get"></a> Obter
 
 Obtém o endereço do recurso possuído.
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>booliano de operador
+## <a name="operator-bool"></a><a name="op_bool"></a> booliano de operador
 
 Testa se um recurso possuído existe.
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_star"></a>operador
+## <a name="operator"></a><a name="op_star"></a> operador
 
 Obtém o valor designado.
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operador =
+## <a name="operator"></a><a name="op_eq"></a> operador =
 
 Substitui o recurso possuído.
 
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="operator-"></a><a name="op_arrow"></a>operador->
+## <a name="operator-"></a><a name="op_arrow"></a> operador->
 
 Obtém um ponteiro para o valor designado.
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 Retornará true se este `shared_ptr` estiver ordenado antes do (ou for inferior ao) ponteiro fornecido.
 
@@ -425,7 +425,7 @@ Uma referência lvalue para um `shared_ptr` ou um `weak_ptr` .
 
 A função de membro de modelo retornará true se **`*this`** for ordenada antes `ptr` .
 
-## <a name="reset"></a><a name="reset"></a>definido
+## <a name="reset"></a><a name="reset"></a> definido
 
 Substitua o recurso possuído.
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a> shared_ptr
 
 Constrói um `shared_ptr`.
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> ~ shared_ptr
 
 Destrói um `shared_ptr`.
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a><a name="swap"></a>permuta
+## <a name="swap"></a><a name="swap"></a> permuta
 
 Troca dois objetos `shared_ptr`.
 
@@ -783,7 +783,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a><a name="unique"></a>diferente
+## <a name="unique"></a><a name="unique"></a> diferente
 
 Testa se o recurso possuído é exclusivo. Essa função foi preterida em C++ 17 e foi removida em C++ 20.
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 Conta números de proprietários de recurso.
 
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a><a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a> weak_type
 
 O tipo de um ponteiro fraco para um elemento.
 
