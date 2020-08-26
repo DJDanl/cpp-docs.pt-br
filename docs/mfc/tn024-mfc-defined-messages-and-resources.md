@@ -7,41 +7,41 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 24bcacd46b839babe9c9c89facb1cc56d18c0ee5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ad6827e4a46bb9f2ff3b02986a01737772e0858
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370359"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839212"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: mensagens e recursos definidos pelo MFC
 
 > [!NOTE]
-> A nota técnica a seguir não foi atualizada desde que foi incluída pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizados ou incorretos. Para as últimas informações, recomenda-se que você pesquise o tópico de interesse no índice de documentação on-line.
+> A observação técnica a seguir não foi atualizada desde que foi incluída pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizados ou incorretos. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice de documentação online.
 
-Esta nota descreve as mensagens internas do Windows e os formatos de recursos usados pelo MFC. Essas informações explicam a implementação do framework e o ajudarão a depurar seu aplicativo. Para os aventureiros, mesmo que todas essas informações não tenham suporte oficial, você pode usar algumas dessas informações para implementações avançadas.
+Esta observação descreve as mensagens internas do Windows e os formatos de recursos usados pelo MFC. Essas informações explicam a implementação da estrutura e ajudarão você a depurar seu aplicativo. Para o aventuraram, mesmo que todas essas informações não sejam oficialmente suportadas, você pode usar algumas dessas informações para implementações avançadas.
 
-Esta nota contém detalhes de implementação privada do MFC; todos os conteúdos estão sujeitos a alterações no futuro. As mensagens privadas do Windows mfc têm significado no escopo de apenas um aplicativo, mas mudarão no futuro para conter mensagens em todo o sistema.
+Esta nota contém detalhes de implementação privada do MFC; todo o conteúdo está sujeito a alterações no futuro. As mensagens do Windows privadas do MFC têm significado no escopo de um aplicativo somente, mas serão alteradas no futuro para conter mensagens de todo o sistema.
 
-The range of MFC private Windows messages and resource types are in the reserved "system" range set aside by Microsoft Windows. Atualmente, nem todos os números nas faixas são usados e, no futuro, novos números na faixa podem ser usados. Os números usados atualmente podem ser alterados.
+O intervalo de mensagens do Windows privadas do MFC e os tipos de recursos estão no intervalo de "sistema" reservado, separados pelo Microsoft Windows. Atualmente, nem todos os números nos intervalos são usados e, no futuro, podem ser usados novos números no intervalo. Os números usados no momento podem ser alterados.
 
-As mensagens privadas do Windows MFC estão no intervalo 0x360->0x37F.
+As mensagens do Windows privadas do MFC estão no intervalo 0x360->0x37F.
 
-Os tipos de recursos privados MFC estão na faixa 0xF0->0xFF.
+Os tipos de recurso privados do MFC estão no intervalo 0xF0->0xFF.
 
-**Mensagens privadas do Windows Do MFC**
+**Mensagens do Windows privadas do MFC**
 
-Essas mensagens do Windows são usadas no lugar de funções virtuais C++, onde é necessário um acoplamento relativamente solto entre objetos de janela e onde uma função virtual C++ não seria apropriada.
+Essas mensagens do Windows são usadas no lugar de funções virtuais do C++ em que o acoplamento relativamente flexível é necessário entre os objetos do Windows e onde uma função virtual do C++ não seria apropriada.
 
-Essas mensagens privadas do Windows e estruturas de parâmetros associados são declaradas no cabeçalho privado MFC 'AFXPRIV. H'. Esteja avisado de que qualquer um de seus códigos que inclua este cabeçalho pode estar confiando em comportamento não documentado e provavelmente quebrará em versões futuras do MFC.
+Essas mensagens particulares do Windows e as estruturas de parâmetros associadas são declaradas no cabeçalho privado do MFC ' AFXPRIV. H '. Seja avisado de que qualquer código que inclua esse cabeçalho pode estar contando com comportamento não documentado e provavelmente será interrompido em versões futuras do MFC.
 
-No caso raro de precisar lidar com uma dessas mensagens, você deve usar a macro do mapa de ON_MESSAGE e manusear a mensagem no formato genérico LRESULT/WPARAM/LPARAM.
+No caso raro de precisar lidar com uma dessas mensagens, você deve usar a macro ON_MESSAGE mapa de mensagens e manipular a mensagem no formato genérico LRESULT/WPARAM/LPARAM.
 
 **WM_QUERYAFXWNDPROC**
 
-Esta mensagem é enviada para uma janela que está sendo criada. Isso é enviado muito cedo no processo de criação como um método de determinar se o WndProc é **AfxWndProc. AfxWndProc** retorna 1.
+Essa mensagem é enviada para uma janela que está sendo criada. Isso é enviado muito cedo no processo de criação como um método de determinar se o WndProc é **AfxWndProc. AfxWndProc** retorna 1.
 
-|||
+| Parâmetros e valor de retorno | Descrição |
 |-|-|
 |wParam|Não usado|
 |lParam|Não usado|
@@ -49,130 +49,130 @@ Esta mensagem é enviada para uma janela que está sendo criada. Isso é enviado
 
 **WM_SIZEPARENT**
 
-Esta mensagem é enviada por uma janela de`CFrameWnd::OnSize` quadro `CFrameWnd::RecalcLayout` para `CWnd::RepositionBars`seus filhos imediatos durante o redimensionamento ( chamadas que chama ) para reposicionar as barras de controle ao redor da lateral do quadro. A estrutura AFX_SIZEPARENTPARAMS contém o retângulo de cliente disponível atual do pai e `DeferWindowPos` um HDWP (que pode ser NULO) com o qual chamar para minimizar a repintura.
+Essa mensagem é enviada por uma janela de quadro para seus filhos imediatos durante o redimensionamento ( `CFrameWnd::OnSize` chama `CFrameWnd::RecalcLayout` quais chamadas `CWnd::RepositionBars` ) para reposicionar as barras de controle ao lado do quadro. A estrutura de AFX_SIZEPARENTPARAMS contém o retângulo de cliente atual disponível do pai e um HDWP (que pode ser nulo) com o qual chamar `DeferWindowPos` para minimizar a repintura.
 
-|||
+| Parâmetros e valor de retorno | Descrição |
 |-|-|
 |wParam|Não usado|
-|lParam|Endereço de uma estrutura AFX_SIZEPARENTPARAMS|
-|retorna|Não utilizado (0)|
+|lParam|Endereço de uma estrutura de AFX_SIZEPARENTPARAMS|
+|retorna|Não usado (0)|
 
 Ignorar a mensagem indica que a janela não faz parte do layout.
 
 **WM_SETMESSAGESTRING**
 
-Esta mensagem é enviada para uma janela de quadro para pedir que atualize a linha de mensagem na barra de status. Um ID de seqüência ou um LPCSTR podem ser especificados (mas não ambos).
+Essa mensagem é enviada para uma janela do quadro para solicitar que ela atualize a linha da mensagem na barra de status. Uma ID de cadeia de caracteres ou um LPCSTR pode ser especificado (mas não ambos).
 
-|||
+| Parâmetros e valor de retorno | Descrição |
 |-|-|
-|wParam|ID de string (ou zero)|
-|lParam|LPCSTR para a seqüência (ou NULL)|
-|retorna|Não utilizado (0)|
+|wParam|ID da cadeia de caracteres (ou zero)|
+|lParam|LPCSTR para a cadeia de caracteres (ou NULL)|
+|retorna|Não usado (0)|
 
-**Wm_idleupdatecmdui**
+**WM_IDLEUPDATECMDUI**
 
-Esta mensagem é enviada em tempo ocioso para implementar a atualização em tempo ocioso dos manipuladores de iu de comando de atualização. Se a janela (geralmente uma barra de controle) `CCmdUI` manuseie a mensagem, ela `CCmdUI::DoUpdate` criará um objeto (ou um objeto de uma classe derivada) e chamará cada um dos "itens" da janela. Isso, por sua vez, verificará se há um manipulador ON_UPDATE_COMMAND_UI para os objetos na cadeia de comando-handler.
+Essa mensagem é enviada em tempo ocioso para implementar a atualização de tempo ocioso de manipuladores de interface do usuário de atualização/comando. Se a janela (geralmente uma barra de controle) tratar a mensagem, ela criará um `CCmdUI` objeto (ou um objeto de uma classe derivada) e chamará `CCmdUI::DoUpdate` cada um dos "itens" na janela. Isso, por sua vez, verificará um manipulador de ON_UPDATE_COMMAND_UI para os objetos na cadeia de manipuladores de comandos.
 
-|||
+| Parâmetros e valor de retorno | Descrição |
 |-|-|
-|wParam|BOOL bDisableIfNoHandler|
-|lParam|Não utilizado (0)|
-|retorna|Não utilizado (0)|
+|wParam|BDisableIfNoHandler BOOL|
+|lParam|Não usado (0)|
+|retorna|Não usado (0)|
 
-*bDisableIfNoHandler* não é zero para desativar o objeto de ia de urna se não houver nem um manipulador de ON_UPDATE_COMMAND_UI nem ON_COMMAND.
+*bDisableIfNoHandler* é diferente de zero para desabilitar o objeto de interface do usuário se não houver um ON_UPDATE_COMMAND_UI nem um manipulador de ON_COMMAND.
 
 **WM_EXITHELPMODE**
 
-Esta mensagem é `CFrameWnd` postada em um modo de ajuda sensível ao contexto. O recebimento desta mensagem encerra o `CFrameWnd::OnContextHelp`ciclo modal iniciado por .
+Esta mensagem é postada para `CFrameWnd` sair do modo de ajuda contextual. O recebimento dessa mensagem encerra o loop modal iniciado pelo `CFrameWnd::OnContextHelp` .
 
-|||
+| Parâmetro e valor de retorno | Descrição |
 |-|-|
-|wParam|Não utilizado (0)|
-|lParam|Não utilizado (0)|
+|wParam|Não usado (0)|
+|lParam|Não usado (0)|
 |retorna|Não usado|
 
 **WM_INITIALUPDATE**
 
-Esta mensagem é enviada pelo modelo de documento para todos os descendentes de uma janela de quadro quando é seguro para eles fazerem sua atualização inicial. Ele mapeia `CView::OnInitialUpdate` para uma chamada, mas pode ser usado em outras `CWnd`classes derivadas para outra atualização de um tiro.
+Essa mensagem é enviada pelo modelo de documento para todos os descendentes de uma janela de quadro quando é seguro para que eles façam sua atualização inicial. Ele é mapeado para uma chamada para `CView::OnInitialUpdate` , mas pode ser usado em outras `CWnd` classes derivadas para outras atualizações de uma só imagem.
 
-|||
+| Parâmetros e valor de retorno | Descrição |
 |-|-|
-|wParam|Não utilizado (0)|
-|lParam|Não utilizado (0)|
-|retorna|Não utilizado (0)|
+|wParam|Não usado (0)|
+|lParam|Não usado (0)|
+|retorna|Não usado (0)|
 
 **WM_RECALCPARENT**
 
-Esta mensagem é enviada por uma exibição `GetParent`à janela pai (obtida via ) `RecalcLayout`para forçar um recálculo de layout (geralmente, o pai ligará ). Isso é usado em aplicativos de servidor OLE onde é necessário que o quadro cresça em tamanho à medida que o tamanho total da visualização cresce.
+Essa mensagem é enviada por uma exibição para sua janela pai (obtida via `GetParent` ) para forçar um recálculo de layout (normalmente, o pai chamará `RecalcLayout` ). Isso é usado em aplicativos de servidor OLE, onde é necessário que o quadro cresça em tamanho conforme o tamanho total da exibição aumenta.
 
-Se a janela pai processa essa mensagem, ela deve retornar TRUE e preencher o RECT passado em iParam com o novo tamanho da área do cliente. Isso é `CScrollView` usado para manusear corretamente o scrollbars (coloque então na parte externa da janela quando eles forem adicionados) quando um objeto de servidor estiver ativado no local.
+Se a janela pai processar essa mensagem, ela deverá retornar TRUE e preencher o RECT passado em lParam com o novo tamanho da área do cliente. Isso é usado no `CScrollView` para lidar corretamente com as barras de rolagem (Coloque-as fora da janela quando elas são adicionadas) quando um objeto de servidor é ativado no local.
 
-|||
+| Parâmetros e valor de retorno | Descrição |
 |-|-|
-|wParam|Não utilizado (0)|
-|lParam|Rect LPRECTClient, pode ser NULO|
-|retorna|VERDADE se o novo retângulo do cliente retornou, FALSO de outra forma|
+|wParam|Não usado (0)|
+|lParam|LPRECT rectClient, pode ser nulo|
+|retorna|TRUE se o novo retângulo do cliente for retornado; caso contrário, FALSE|
 
 **WM_SIZECHILD**
 
-Esta mensagem `COleResizeBar` é enviada para `GetOwner`a janela do proprietário (via ) quando o usuário redimensiona a barra de redimensionamento com as alças de redimensionamento. `COleIPFrameWnd`responde a esta mensagem tentando reposicionar a janela do quadro como o usuário solicitou.
+Essa mensagem é enviada pelo `COleResizeBar` para sua janela de proprietário (via `GetOwner` ) quando o usuário redimensiona a barra de redimensionamento com as alças de redimensionamento. `COleIPFrameWnd` responde a essa mensagem ao tentar reposicionar a janela do quadro conforme solicitado pelo usuário.
 
-O novo retângulo, dado nas coordenadas do cliente em relação à janela do quadro que contém a barra de redimensionamento, é apontado por lParam.
+O novo retângulo, fornecido em coordenadas do cliente em relação à janela do quadro que contém a barra de redimensionamento, é apontado por lParam.
 
-|||
+| Parâmetros e valor de retorno | Descrição |
 |-|-|
-|wParam|Não utilizado (0)|
-|lParam|Rect LPRECTNovo|
-|retorna|Não utilizado (0)|
+|wParam|Não usado (0)|
+|lParam|LPRECT rectNew|
+|retorna|Não usado (0)|
 
 **WM_DISABLEMODAL**
 
-Esta mensagem é enviada para todas as janelas pop-up de propriedade de uma janela de quadro que está sendo desativada. A janela do quadro usa o resultado para determinar se desabilita ou não a janela pop-up.
+Essa mensagem é enviada a todas as janelas pop-up pertencentes a uma janela de quadro que está sendo desativada. A janela do quadro usa o resultado para determinar se deseja ou não desabilitar a janela pop-up.
 
-Você pode usar isso para realizar processamento especial em sua janela pop-up quando o quadro entra em um estado modal ou para evitar que certas janelas pop-up fiquem desativadas. As dicas de ferramentas usam essa mensagem para se destruir quando a janela do quadro entra em estado modal, por exemplo.
+Você pode usar isso para executar o processamento especial na janela pop-up quando o quadro entra em um estado modal ou para impedir que determinadas janelas pop-up sejam desabilitadas. As dicas de ferramenta usam essa mensagem para se destruir quando a janela do quadro entra em um estado modal, por exemplo.
 
-|||
+| Parâmetros e valor de retorno | Descrição |
 |-|-|
-|wParam|Não utilizado (0)|
-|lParam|Não utilizado (0)|
-|retorna|Não-zero para **NÃO** desativar a janela, 0 indica que a janela será desativada|
+|wParam|Não usado (0)|
+|lParam|Não usado (0)|
+|retorna|Diferente de zero para **não** desabilitar a janela, 0 indica que a janela será desabilitada|
 
 **WM_FLOATSTATUS**
 
-Esta mensagem é enviada para todas as janelas pop-up de propriedade de uma janela de quadro quando o quadro é ativado ou desativado por outra janela de quadro de nível superior. Isso é usado pela implementação de MFS_SYNCACTIVE em `CMiniFrameWnd`, para manter a ativação dessas janelas pop-up em sincronia com a ativação da janela de quadro de nível superior.
+Essa mensagem é enviada a todas as janelas pop-up pertencentes a uma janela de quadro quando o quadro é ativado ou desativado por outra janela de quadro de nível superior. Isso é usado pela implementação de MFS_SYNCACTIVE no `CMiniFrameWnd` , para manter a ativação dessas janelas pop-up em sincronia com a ativação da janela de quadro de nível superior.
 
-|||
+| Parâmetros | Descrição |
 |-|-|
 |wParam|É um dos seguintes valores:<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|
-|lParam|Não utilizado (0)|
+|lParam|Não usado (0)|
 
-O valor de retorno não deve ser zero se FS_SYNCACTIVE estiver definido e a janela sincronizar sua ativação com o quadro pai. `CMiniFrameWnd`retorna não-zero quando o estilo é definido como MFS_SYNCACTIVE.
+O valor de retorno deverá ser diferente de zero se FS_SYNCACTIVE estiver definido e a janela syncronizes sua ativação com o quadro pai. `CMiniFrameWnd` Retorna um valor diferente de zero quando o estilo é definido como MFS_SYNCACTIVE.
 
-Para obter mais informações, `CMiniFrameWnd`consulte a implementação de .
+Para obter mais informações, consulte a implementação de `CMiniFrameWnd` .
 
 ## <a name="wm_activatetoplevel"></a>WM_ACTIVATETOPLEVEL
 
-Esta mensagem é enviada para uma janela de nível superior quando uma janela em seu "grupo de alto nível" é ativada ou desativada. Uma janela faz parte de um grupo de alto nível se for uma janela de alto nível (sem pai ou proprietário), ou se for propriedade de tal janela. Esta mensagem é semelhante em uso para WM_ACTIVATEAPP, mas funciona em situações em que janelas pertencentes a diferentes processos são misturadas em uma única hierarquia de janelas (comum em aplicações OLE).
+Essa mensagem é enviada para uma janela de nível superior quando uma janela em seu "grupo de nível superior" é ativada ou desativada. Uma janela faz parte de um grupo de nível superior se é uma janela de nível superior (sem pai ou proprietário) ou pertence a tal janela. Essa mensagem é semelhante em uso para WM_ACTIVATEAPP, mas funciona em situações em que as janelas que pertencem a diferentes processos são misturadas em uma única hierarquia de janela (comum em aplicativos OLE).
 
-## <a name="wm_commandhelp-wm_helphittest-wm_exithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST WM_EXITHELPMODE
+## <a name="wm_commandhelp-wm_helphittest-wm_exithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE
 
-Essas mensagens são usadas na implementação de ajuda sensível ao contexto. Consulte a [Nota Técnica 28](../mfc/tn028-context-sensitive-help-support.md) para obter mais informações.
+Essas mensagens são usadas na implementação de ajuda contextual. Veja a [Observação técnica 28](../mfc/tn028-context-sensitive-help-support.md) para obter mais informações.
 
-## <a name="mfc-private-resource-formats"></a>Formatos de recursos privados do MFC
+## <a name="mfc-private-resource-formats"></a>Formatos de recurso privados do MFC
 
 Atualmente, o MFC define dois formatos de recursos privados: RT_TOOLBAR e RT_DLGINIT.
 
-## <a name="rt_toolbar-resource-format"></a>formato de recurso RT_TOOLBAR
+## <a name="rt_toolbar-resource-format"></a>Formato de recurso RT_TOOLBAR
 
-A barra de ferramentas padrão fornecida pelo AppWizard é baseada em um recurso personalizado RT_TOOLBAR, que foi introduzido no MFC 4.0. Você pode editar este recurso usando o editor da barra de ferramentas.
+A barra de ferramentas padrão fornecida pelo AppWizard é baseada em um RT_TOOLBAR recurso personalizado, que foi introduzido no MFC 4,0. Você pode editar esse recurso usando o editor de barra de ferramentas.
 
-## <a name="rt_dlginit-resource-format"></a>formato de recurso RT_DLGINIT
+## <a name="rt_dlginit-resource-format"></a>Formato de recurso RT_DLGINIT
 
-Um formato de recurso privado do MFC é usado para armazenar informações extras de inicialização de diálogo. Isso inclui as seqüências iniciais armazenadas em uma caixa de combinação. O formato deste recurso não foi projetado para ser editado manualmente, mas é manuseado pelo Visual C++.
+Um formato de recurso privado do MFC é usado para armazenar informações adicionais de inicialização da caixa de diálogo. Isso inclui as cadeias de caracteres iniciais armazenadas em uma caixa de combinação. O formato desse recurso não foi projetado para ser editado manualmente, mas é manipulado pelo Visual C++.
 
-O Visual C++ e este recurso RT_DLGINIT não são necessários para usar os recursos relacionados do MFC, uma vez que existem alternativas de API para usar as informações no recurso. O uso do Visual C++ torna muito mais fácil escrever, manter e traduzir sua aplicação a longo prazo.
+Visual C++ e esse RT_DLGINIT recurso não são necessários para usar os recursos relacionados do MFC, pois há uma alternativa de API ao uso das informações no recurso. O uso de Visual C++ torna muito mais fácil escrever, manter e traduzir seu aplicativo a longo prazo.
 
-A estrutura básica de um recurso RT_DLGINIT é a seguinte:
+A estrutura básica de um recurso de RT_DLGINIT é a seguinte:
 
 ```
 +---------------+    \
@@ -189,15 +189,15 @@ A estrutura básica de um recurso RT_DLGINIT é a seguinte:
 +---------------+
 ```
 
-Uma seção repetida contém o ID de controle para enviar a mensagem, a mensagem # para enviar (uma mensagem normal do Windows) e um comprimento variável de dados. A mensagem do Windows é enviada em um formulário:
+Uma seção repetida contém a ID de controle para a qual enviar a mensagem, a mensagem # a enviar (uma mensagem normal do Windows) e um comprimento variável de dados. A mensagem do Windows é enviada em um formato:
 
 ```
 SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```
 
-Este é um formato muito geral, permitindo qualquer mensagem do Windows e conteúdo de dados. O editor de recursos Visual C++ e o MFC só suportam um subconjunto limitado de mensagens do Windows: CB_ADDSTRING para as opções iniciais de lista para caixas de combinação (os dados são uma seqüência de texto).
+Esse é um formato muito geral, permitindo qualquer mensagem do Windows e conteúdo de dados. O editor de recursos Visual C++ e o MFC só dão suporte a um subconjunto limitado de mensagens do Windows: CB_ADDSTRING para a lista inicial – opções para caixas de combinação (os dados são uma cadeia de caracteres de texto).
 
 ## <a name="see-also"></a>Confira também
 
-[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
-[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoria](../mfc/technical-notes-by-category.md)

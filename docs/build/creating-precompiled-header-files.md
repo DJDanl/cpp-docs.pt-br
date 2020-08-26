@@ -7,16 +7,16 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 158301ec3caacced1663892071b17ef2b8f8e741
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c68de0ee8e6376731254adf965fb9a81f10f2861
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328665"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838848"
 ---
 # <a name="precompiled-header-files"></a>Arquivos de cabeçalho pré-compilado
 
-Quando você cria um novo projeto no Visual Studio, um *arquivo de cabeçalho pré-compilado* chamado *PCH. h* é adicionado ao projeto. (No Visual Studio 2017 e anterior, o arquivo foi chamado de *stdafx. h*.) A finalidade do arquivo é acelerar o processo de compilação. Todos os arquivos de cabeçalho estáveis, por exemplo, cabeçalhos de `<vector>`biblioteca padrão, como, devem ser incluídos aqui. O cabeçalho pré-compilado é compilado somente quando ele ou qualquer arquivo que ele inclui, são modificados. Se você fizer alterações apenas no código-fonte do projeto, a compilação ignorará a compilação para o cabeçalho pré-compilado.
+Quando você cria um novo projeto no Visual Studio, um *arquivo de cabeçalho pré-compilado* chamado *PCH. h* é adicionado ao projeto. (No Visual Studio 2017 e anterior, o arquivo foi chamado de *stdafx. h*.) A finalidade do arquivo é acelerar o processo de compilação. Todos os arquivos de cabeçalho estáveis, por exemplo, cabeçalhos de biblioteca padrão, como `<vector>` , devem ser incluídos aqui. O cabeçalho pré-compilado é compilado somente quando ele ou qualquer arquivo que ele inclui, são modificados. Se você fizer alterações apenas no código-fonte do projeto, a compilação ignorará a compilação para o cabeçalho pré-compilado.
 
 As opções do compilador para cabeçalhos pré-compilados são [/y](reference/y-precompiled-headers.md). Nas páginas de propriedades do projeto, as opções estão localizadas em **Propriedades de configuração > C/C++ > cabeçalhos pré-compilados**. Você pode optar por não usar cabeçalhos pré-compilados e pode especificar o nome do arquivo de cabeçalho e o nome e o caminho do arquivo de saída.
 
@@ -87,26 +87,58 @@ Quando você especifica a opção usar arquivo de cabeçalho pré-compilado (/Yu
 
 ### <a name="pragma-consistency"></a>Consistência de pragma
 
-Os Pragmas processados durante a criação de um arquivo PCH geralmente afetam o arquivo com o qual o arquivo PCH é usado posteriormente. Os `comment` pragmas e `message` não afetam o restante da compilação.
+Os Pragmas processados durante a criação de um arquivo PCH geralmente afetam o arquivo com o qual o arquivo PCH é usado posteriormente. Os `comment` `message` pragmas e não afetam o restante da compilação.
 
 Esses pragmas afetam apenas o código dentro do arquivo PCH; Eles não afetam o código que utiliza subseqüentemente o arquivo PCH:
 
-||||
-|-|-|-|
-|`comment`|`page`|`subtitle`|
-|`linesize`|`pagesize`|`title`|
-|`message`|`skip`||
+:::row:::
+   :::column span="":::
+      `comment`\
+      `linesize`
+   :::column-end:::
+   :::column span="":::
+      `message`\
+      `page`
+   :::column-end:::
+   :::column span="":::
+      `pagesize`\
+      `skip`
+   :::column-end:::
+   :::column span="":::
+      `subtitle`\
+      `title`
+   :::column-end:::
+:::row-end:::
 
 Esses pragmas são mantidos como parte de um cabeçalho pré-compilado e afetam o restante de uma compilação que usa o cabeçalho pré-compilado:
 
-||||
-|-|-|-|
-|`alloc_text`|`include_alias`|`pack`|
-|`auto_inline`|`init_seg`|`pointers_to_members`|
-|`check_stack`|`inline_depth`|`setlocale`|
-|`code_seg`|`inline_recursion`|`vtordisp`|
-|`data_seg`|`intrinsic`|`warning`|
-|`function`|`optimize`||
+:::row:::
+   :::column span="":::
+      `alloc_text`\
+      `auto_inline`\
+      `check_stack`\
+      `code_seg`\
+      `data_seg`
+   :::column-end:::
+   :::column span="":::
+      `function`\
+      `include_alias`\
+      `init_seg`\
+      `inline_depth`
+   :::column-end:::
+   :::column span="":::
+      `inline_recursion`\
+      `intrinsic`\
+      `optimize`\
+      `pack`
+   :::column-end:::
+   :::column span="":::
+      `pointers_to_members`\
+      `setlocale`\
+      `vtordisp`\
+      `warning`
+   :::column-end:::
+:::row-end:::
 
 ## <a name="consistency-rules-for-yc-and-yu"></a>Regras de consistência para /Yc e /Yu
 
@@ -154,7 +186,7 @@ Continuando o diagrama, o APPLIB. obj representa o código de suporte usado em s
 
 MYAPP. obj representa seu aplicativo final. Ele é criado a partir de MYAPP. cpp, os arquivos listados na macro UNSTABLEHDRS e o código pré-compilado do cabeçalho pré-compilado.
 
-Por fim, o arquivo executável (MYAPP. EXE) é criado vinculando-se os arquivos listados na macro OBJS TIVESSEM (APPLIB. obj e MYAPP. obj).
+Por fim, o arquivo executável (MYAPP.EXE) é criado vinculando os arquivos listados na macro OBJS TIVESSEM (APPLIB. obj e MYAPP. obj).
 
 ## <a name="sample-makefile-for-pch"></a>Makefile de exemplo para PCH
 

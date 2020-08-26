@@ -1,17 +1,17 @@
 ---
-title: requestedit (C++ atributo com)
+title: requestedit (atributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requestedit
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: ec9e516157f2b6ea2a64875f30d2b03412c6eb46
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5cf2bb8fab75c64d74a2f28964b3019200dad51
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214559"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846011"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -33,21 +33,19 @@ Consulte o exemplo de [ligável](bindable.md) para obter um exemplo de uso de **
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
 [Atributos de membro de dados](data-member-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>

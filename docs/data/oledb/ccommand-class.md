@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 73b02f0ffb9d9b98a17933cc3b17c8627121e3ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228915"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838432"
 ---
 # <a name="ccommand-class"></a>Classe CCommand
 
@@ -91,7 +91,7 @@ Para usar um comando OLE DB que pode retornar vários resultados, especifique [C
 
 ### <a name="methods"></a>Métodos
 
-|||
+| Nome | Descrição |
 |-|-|
 |[Fechar](#close)|Fecha o comando atual.|
 |[GetNextResult](#getnextresult)|Busca o próximo resultado ao usar vários conjuntos de resultados.|
@@ -99,12 +99,12 @@ Para usar um comando OLE DB que pode retornar vários resultados, especifique [C
 
 ### <a name="inherited-methods"></a>Métodos herdados
 
-|||
+| Nome | Descrição |
 |-|-|
 |[Criar](#create)|Cria um novo comando para a sessão especificada e, em seguida, define o texto do comando.|
 |[CreateCommand](#createcommand)|Cria um novo comando.|
 |[GetParameterInfo](#getparameterinfo)|Obtém uma lista dos parâmetros do comando, seus nomes e seus tipos.|
-|[Preparar](#prepare)|Valida e otimiza o comando atual.|
+|[Deixar](#prepare)|Valida e otimiza o comando atual.|
 |[ReleaseCommand](#releasecommand)|Libera o acessador de parâmetro, se necessário, e libera o comando.|
 |[SetParameterInfo](#setparameterinfo)|Especifica o tipo nativo de cada parâmetro de comando.|
 |[Unprepare](#unprepare)|Descarta o plano de execução do comando atual.|
@@ -117,7 +117,7 @@ A classe acessador que você está usando determina o método de vinculação de
 
 Observe que você não pode usar procedimentos armazenados com o provedor de OLE DB para Jet, pois esse provedor não oferece suporte a procedimentos armazenados (somente constantes são permitidas em cadeias de caracteres de consulta).
 
-## <a name="ccommandclose"></a><a name="close"></a>CCommand:: fechar
+## <a name="ccommandclose"></a><a name="close"></a> CCommand:: fechar
 
 Libera o conjunto de linhas de acessador associado ao comando.
 
@@ -141,7 +141,7 @@ O exemplo a seguir mostra como você pode chamar `Close` e `ReleaseCommand` quan
 
 [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]
 
-## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a>CCommand::GetNextResult
+## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a> CCommand::GetNextResult
 
 Busca o próximo conjunto de resultados, se houver um disponível.
 
@@ -160,7 +160,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 *bBind*<br/>
 no Especifica se o comando deve ser associado automaticamente após ser executado. O padrão é **`true`** , que faz com que o comando seja vinculado automaticamente. Definir *bBind* para **`false`** impedir a associação automática do comando para que você possa associar manualmente. (A vinculação manual é de interesse particular para os usuários OLAP.)
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -170,7 +170,7 @@ Se um conjunto de resultados tiver sido previamente buscado, essa função liber
 
 Você deve chamar essa função somente se tiver especificado vários resultados definindo o parâmetro de `CCommand` modelo *TMultiple* = `CMultipleResults` .
 
-## <a name="ccommandopen"></a><a name="open"></a>CCommand:: abrir
+## <a name="ccommandopen"></a><a name="open"></a> CCommand:: abrir
 
 Executa e, opcionalmente, associa o comando.
 
@@ -239,7 +239,7 @@ no Especifica se o comando deve ser associado automaticamente após ser executad
 *ulPropSets*<br/>
 no O número de estruturas [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passadas no argumento *pPropSet* .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -256,9 +256,9 @@ A terceira forma de `Open` permite que a cadeia de caracteres de comando seja nu
 Use a quarta forma de `Open` quando você já criou um comando e deseja executar uma única [preparação](../../data/oledb/ccommand-prepare.md) e várias execuções.
 
 > [!NOTE]
-> `Open`chamadas `Execute` que, por sua vez, chamam `GetNextResult` .
+> `Open` chamadas `Execute` que, por sua vez, chamam `GetNextResult` .
 
-## <a name="ccommandcreate"></a><a name="create"></a>CCommand:: criar
+## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: criar
 
 Chama [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) para criar um comando para a sessão especificada e, em seguida, chama [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) para especificar o texto do comando.
 
@@ -288,7 +288,7 @@ no Um ponteiro para o texto ANSI da cadeia de caracteres de comando.
 *guidCommand*<br/>
 no Um GUID que especifica a sintaxe e as regras gerais para o provedor usar na análise do texto do comando. Para obter uma descrição de dialetos, consulte [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -296,7 +296,7 @@ Um HRESULT padrão.
 
 A primeira forma de `Create` usa uma cadeia de caracteres de comando Unicode. A segunda forma de `Create` usa uma cadeia de caracteres de comando ANSI (fornecida para compatibilidade com versões anteriores com os aplicativos ANSI existentes).
 
-## <a name="ccommandcreatecommand"></a><a name="createcommand"></a>CCommand:: CreateCommand
+## <a name="ccommandcreatecommand"></a><a name="createcommand"></a> CCommand:: CreateCommand
 
 Cria um novo comando.
 
@@ -311,7 +311,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 *sessão*<br/>
 no Um `CSession` objeto a ser associado ao novo comando.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -319,7 +319,7 @@ Um HRESULT padrão.
 
 Esse método cria um comando usando o objeto de sessão especificado.
 
-## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a>CCommand:: GetParameterInfo
+## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a> CCommand:: GetParameterInfo
 
 Obtém uma lista dos parâmetros do comando, seus nomes e seus tipos.
 
@@ -335,11 +335,11 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 Consulte [ICommandWithParameters:: GetParameterInfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
-## <a name="ccommandprepare"></a><a name="prepare"></a>CCommand::P reparênteses
+## <a name="ccommandprepare"></a><a name="prepare"></a> CCommand::P reparênteses
 
 Valida e otimiza o comando atual.
 
@@ -354,7 +354,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 *cExpectedRuns*<br/>
 no O número de vezes que você espera executar o comando.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
@@ -362,7 +362,7 @@ Um HRESULT padrão.
 
 Esse método encapsula o método OLE DB [ICommandPrepare::P reparênteses](/previous-versions/windows/desktop/ms718370(v=vs.85)).
 
-## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a>CCommand::ReleaseCommand
+## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a> CCommand::ReleaseCommand
 
 Libera o acessador de parâmetro e, em seguida, libera o próprio comando.
 
@@ -374,9 +374,9 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Comentários
 
-`ReleaseCommand`é usado em conjunto com `Close` . Consulte [fechar](../../data/oledb/ccommand-close.md) para obter detalhes de uso.
+`ReleaseCommand` é usado em conjunto com `Close` . Consulte [fechar](../../data/oledb/ccommand-close.md) para obter detalhes de uso.
 
-## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a>CCommand:: SetParameterInfo
+## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: SetParameterInfo
 
 Especifica o tipo nativo de cada parâmetro de comando.
 
@@ -392,11 +392,11 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 Consulte [ICommandWithParameters:: SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) na *referência do programador de OLE DB*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um HRESULT padrão.
 
-## <a name="ccommandunprepare"></a><a name="unprepare"></a>CCommand:: despreparar
+## <a name="ccommandunprepare"></a><a name="unprepare"></a> CCommand:: despreparar
 
 Descarta o plano de execução do comando atual.
 

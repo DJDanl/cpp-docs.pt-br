@@ -5,21 +5,21 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 1769519d3bc92f329c347f083e64ba1f35a719db
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b662ea260ca650fc51b17c804594fe25434f61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212300"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845779"
 ---
 # <a name="lthash_setgt-operators"></a>Operadores &lt;hash_set&gt;
 
-||||
-|-|-|-|
-|[operador! =](#op_neq)|[operador! = (hash_multiset)](#op_neq_hash_multiset)|[operador = =](#op_eq_eq)|
-|[Operator = = (hash_multiset)](#op_eq_eq_hash_multiset)|
+[operador! =](#op_neq)\
+[operador! = (hash_multiset)](#op_neq_hash_multiset)\
+[operador = =](#op_eq_eq)\
+[Operator = = (hash_multiset)](#op_eq_eq_hash_multiset)
 
-## <a name="operator"></a><a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a> operador! =
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
@@ -38,7 +38,7 @@ Um objeto do tipo `hash_set`.
 *Certo*\
 Um objeto do tipo `hash_set`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se os hash_sets não forem iguais; **`false`** se hash_sets forem iguais.
 
@@ -46,7 +46,7 @@ Um objeto do tipo `hash_set`.
 
 A comparação entre os objetos hash_set é baseada em uma comparação de paridade de seus elementos. Dois hash_sets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-Os membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set](../standard-library/hash-set.md)>estão no [namespace stdext](../standard-library/stdext-namespace.md).
+Os membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set ](../standard-library/hash-set.md)>estão no [namespace stdext](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -87,7 +87,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operador = =
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
@@ -106,7 +106,7 @@ Um objeto do tipo `hash_set`.
 *Certo*\
 Um objeto do tipo `hash_set`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a hash_set no lado esquerdo do operador for igual à hash_set no lado direito do operador; caso contrário **`false`** .
 
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>operador! = (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a> operador! = (hash_multiset)
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
@@ -172,7 +172,7 @@ Um objeto do tipo `hash_multiset`.
 *Certo*\
 Um objeto do tipo `hash_multiset`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se os hash_multisets não forem iguais; **`false`** se hash_multisets forem iguais.
 
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>Operator = = (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a> Operator = = (hash_multiset)
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
@@ -238,7 +238,7 @@ Um objeto do tipo `hash_multiset`.
 *Certo*\
 Um objeto do tipo `hash_multiset`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** se a hash_multiset no lado esquerdo do operador for igual à hash_multiset no lado direito do operador; caso contrário **`false`** .
 

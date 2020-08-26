@@ -1,17 +1,17 @@
 ---
-title: vinculávelC++ (atributo com)
+title: vinculável (atributo COM do C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167349"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838965"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,7 +25,7 @@ Indica que a propriedade dá suporte à associação de dados.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **acoplável** C++ tem a mesma funcionalidade que o atributo MIDL [acoplável](/windows/win32/Midl/bindable) . Você pode usá-lo em propriedades definidas com os atributos [propget](propget.md), [propput](propput.md)ou [propputref](propputref.md) , ou pode definir manualmente um método vinculável.
+O atributo de C++ **acoplável** tem a mesma funcionalidade que o atributo MIDL [acoplável](/windows/win32/Midl/bindable) . Você pode usá-lo em propriedades definidas com os atributos [propget](propget.md), [propput](propput.md)ou [propputref](propputref.md) , ou pode definir manualmente um método vinculável.
 
 Os seguintes exemplos de MFC mostram o uso de **Bindable**:
 
@@ -60,21 +60,19 @@ __interface IPropDemo : IDispatch {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Contexto de atributo
-
-|||
+| Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|Método de interface|
 |**Repetível**|Não|
-|**Atributos necessários**|Nenhum|
+|**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Confira também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de método](method-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos do método](method-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>

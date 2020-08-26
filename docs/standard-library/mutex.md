@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: e17488023d8de6eb5d341c719be8f1b36c14ffcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228174"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838537"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -51,7 +51,7 @@ Um tipo mutex é também conhecido como um *tipo bloqueável*. Se ele não forne
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Classe lock_guard](../standard-library/lock-guard-class.md)|Representa um modelo que pode ser instanciado para criar um objeto cujo destruidor desbloqueia um `mutex`.|
 |[Classe Mutex (biblioteca C++ padrão)](../standard-library/mutex-class-stl.md)|Representa um tipo mutex. Use objetos desse tipo para impor a exclusão mútua dentro de um programa.|
@@ -63,7 +63,7 @@ Um tipo mutex é também conhecido como um *tipo bloqueável*. Se ele não forne
 
 ### <a name="functions"></a>Funções
 
-|||
+|Nome|Descrição|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Fornece um mecanismo para chamar um objeto especificado que pode ser chamado apenas uma vez durante a execução.|
 |[proprietário](../standard-library/mutex-functions.md#lock)|Tenta bloquear todos os argumentos sem deadlock.|
@@ -72,16 +72,16 @@ Um tipo mutex é também conhecido como um *tipo bloqueável*. Se ele não forne
 
 ### <a name="structs"></a>Estruturas
 
-|||
+|Nome|Descrição|
 |-|-|
 |[Estrutura adopt_lock_t](../standard-library/adopt-lock-t-structure.md)|Representa um tipo que é usado para definir um `adopt_lock`.|
 |[Estrutura defer_lock_t](../standard-library/defer-lock-t-structure.md)|Representa um tipo que define um objeto `defer_lock` que é usado para selecionar um dos construtores sobrecarregados de `unique_lock`.|
 |[Estrutura once_flag](../standard-library/once-flag-structure.md)|Representa um **`struct`** que é usado com a função de modelo `call_once` para garantir que o código de inicialização seja chamado apenas uma vez, mesmo na presença de vários threads de execução.|
 |[Estrutura try_to_lock_t](../standard-library/try-to-lock-t-structure.md)|Representa um **`struct`** que define um `try_to_lock` objeto e é usado para selecionar um dos construtores sobrecarregados de `unique_lock` .|
 
-### <a name="variables"></a>variáveis
+### <a name="variables"></a>Variáveis
 
-|||
+|Nome|Descrição|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Representa um objeto que pode ser passado para construtores para `lock_guard` e `unique_lock` para indicar que o objeto mutex que também está sendo passado para o construtor está bloqueado.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Representa um objeto que pode ser passado para construtores para `unique_lock` para indicar que o construtor não deve bloquear o objeto mutex que também está sendo passado para ele.|
