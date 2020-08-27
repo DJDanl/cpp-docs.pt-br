@@ -1,25 +1,26 @@
 ---
-title: Como capturar exceções em código nativo lançadas a partir de MSIL
+title: 'Como: capturar exceções em código nativo lançadas pela MSIL'
+description: Exemplos de como capturar exceções no código nativo lançado do MSIL.
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68a771d27e091f86331703b55bc2eb52dfbb41b
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221348"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898574"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Como capturar exceções em código nativo lançadas a partir de MSIL
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Como: capturar exceções em código nativo lançadas pela MSIL
 
-No código nativo, você pode capturar a exceção C++ nativa do MSIL.  Você pode capturar exceções CLR com `__try` e **`__except`** .
+No código nativo, você pode capturar a exceção C++ nativa do MSIL.  Você pode capturar exceções CLR com **`__try`** e **`__except`** .
 
 Para obter mais informações, consulte as práticas recomendadas de [manipulação de exceção estruturada (C/c++)](../cpp/structured-exception-handling-c-cpp.md) e [c++ moderno para exceções e tratamento de erros](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-1"></a>Exemplo 1
 
 O exemplo a seguir define um módulo com duas funções, uma que gera uma exceção nativa e outra que gera uma exceção MSIL.
 
@@ -35,7 +36,7 @@ void Test2() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-2"></a>Exemplo 2
 
 O exemplo a seguir define um módulo que captura uma exceção nativa e MSIL.
 
