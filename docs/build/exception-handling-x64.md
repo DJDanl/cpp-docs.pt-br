@@ -1,16 +1,17 @@
 ---
 title: Tratamento de exceções x64
+description: Visão geral das convenções de manipulação de exceções do Microsoft C++ em x64.
 ms.date: 10/14/2019
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1c55ecf8755e208b2f47acdfda185123ee0255e2
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835045"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898561"
 ---
 # <a name="x64-exception-handling"></a>Tratamento de exceções x64
 
@@ -180,7 +181,7 @@ O código de operação de desenrolamento é um destes valores:
 
   Enviar por push um quadro de máquina.  Esse código de desenrolação é usado para registrar o efeito de uma interrupção ou de uma exceção de hardware. Há dois formulários. Se as informações da operação forem iguais a 0, um desses quadros será enviado por push na pilha:
 
-  |Location|Valor|
+  |Localização|Valor|
   |-|-|
   |RSP + 32|SS|
   |RSP + 24|RSP antigo|
@@ -190,7 +191,7 @@ O código de operação de desenrolamento é um destes valores:
 
   Se as informações da operação forem iguais a 1, um desses quadros será enviado por push:
 
-  |Location|Valor|
+  |Localização|Valor|
   |-|-|
   |RSP + 40|SS|
   |RSP + 32|RSP antigo|
@@ -305,7 +306,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** é o valor de RIP dentro dessa função. Esse valor é um endereço de exceção ou o endereço no qual o controle deixou a função de estabelecimento. O RIP é usado para determinar se o controle está dentro de uma construção protegida dentro dessa função, por exemplo, um `__try` bloco para `__try` / **`__except`** ou `__try` / **`__finally`** .
+**ControlPc** é o valor de RIP dentro dessa função. Esse valor é um endereço de exceção ou o endereço no qual o controle deixou a função de estabelecimento. O RIP é usado para determinar se o controle está dentro de uma construção protegida dentro dessa função, por exemplo, um **`__try`** bloco para **`__try`** / **`__except`** ou **`__try`** / **`__finally`** .
 
 **ImageBase** é a base da imagem (endereço de carregamento) do módulo que contém essa função, a ser adicionada aos deslocamentos de 32 bits usados na entrada da função e informações de desenrolamento para registrar endereços relativos.
 

@@ -1,6 +1,7 @@
 ---
 title: Limpando recursos
-ms.date: 11/04/2016
+description: Como liberar recursos durante um manipulador de encerramento para manipulação de exceção estruturada.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - termination handlers [C++], cleaning up resources
 - exception handling [C++], cleaning up resources
@@ -9,28 +10,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dae92a515db25b9985a890d7d08cc213f88ecfea
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229045"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898440"
 ---
 # <a name="cleaning-up-resources"></a>Limpando recursos
 
-Durante a execução do manipulador de término, talvez você não saiba quais recursos foram realmente alocados antes que o manipulador de término seja chamado. É possível que o bloco de instrução de **__try** tenha sido interrompido antes de todos os recursos serem alocados, para que nem todos os recursos fossem abertos.
+Durante a execução do manipulador de encerramento, talvez você não saiba quais recursos foram adquiridos antes de o manipulador de encerramento ser chamado. É possível que o **`__try`** bloco de instruções tenha sido interrompido antes de todos os recursos serem adquiridos, para que nem todos os recursos fossem abertos.
 
-Portanto, para garantir, você deve verificar quais recursos estão realmente abertos antes de continuar com a limpeza da manipulação de término. Um procedimento recomendado é fazer o seguinte:
+Para ser seguro, você deve verificar para ver quais recursos estão abertos antes de prosseguir com a limpeza do tratamento de encerramento. Um procedimento recomendado é fazer o seguinte:
 
 1. Inicialize os identificadores como NULL.
 
-1. No bloco de instrução **__try** , aloque recursos. Os identificadores são definidos como valores positivos conforme o recurso é alocado.
+1. No **`__try`** bloco de instruções, adquira recursos. Os identificadores são definidos como valores positivos conforme o recurso é adquirido.
 
 1. No **`__finally`** bloco de instruções, libere cada recurso cuja variável identificador ou sinalizador correspondente seja diferente de zero ou não seja nulo.
 
 ## <a name="example"></a>Exemplo
 
-Por exemplo, o código a seguir usa um manipulador de encerramento para fechar três arquivos e um bloco de memória que foram alocados no bloco de instrução **__try** . Antes de limpar um recurso, o código primeiro verifica se o recurso foi alocado.
+Por exemplo, o código a seguir usa um manipulador de encerramento para fechar três arquivos e liberar um bloco de memória. Esses recursos foram adquiridos no **`__try`** bloco de instruções. Antes de limpar um recurso, o código verifica primeiro se o recurso foi adquirido.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp

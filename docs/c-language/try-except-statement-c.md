@@ -1,6 +1,7 @@
 ---
 title: Instrução try-except (C)
-ms.date: 11/04/2016
+description: O Microsoft C/C++ implementa o tratamento de exceção estruturado (SEH) usando uma extensão de linguagem de instrução try-Except.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - try-except keyword [C]
 - structured exception handling, try-except
@@ -10,92 +11,88 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 77b6bea8c7793522f5e1fa47e09a9b4a7e5c0f10
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e327150431fef3384f2b98940939444b2e6d96ea
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218774"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898718"
 ---
 # <a name="try-except-statement-c"></a>Instrução try-except (C)
 
 **Específico da Microsoft**
 
-A instrução **try-except** é uma extensão da Microsoft para a linguagem C que permite que os aplicativos assumam o controle de um programa quando ocorrerem eventos que normalmente interrompem a execução. Esses eventos são denominados exceções, e o mecanismo que lida com exceções é chamado de manipulação de exceção estruturada.
+A `try-except` instrução é uma extensão da Microsoft para a linguagem C que permite aos aplicativos obter o controle de um programa quando os eventos que normalmente terminam a execução ocorrem. Esses eventos são denominados exceções, e o mecanismo que lida com exceções é chamado de manipulação de exceção estruturada.
 
-As exceções podem ser baseadas em hardware ou software. Mesmo quando os aplicativos não podem se recuperar completamente das exceções de hardware ou software, a manipulação de exceção estruturada permite exibir informações de erro e interceptar o estado interno do aplicativo para ajudar a diagnosticar o problema. Isso é especialmente útil para os problemas intermitentes que não podem ser reproduzidos facilmente.
+As exceções podem ser baseadas em hardware ou software. Mesmo quando os aplicativos não conseguem se recuperar completamente de exceções de hardware ou software, a manipulação de exceção estruturada torna possível registrar e exibir informações de erro. É útil interceptar o estado interno do aplicativo para ajudar a diagnosticar o problema. Em particular, é útil para problemas intermitentes que não são fáceis de reproduzir.
 
 ## <a name="syntax"></a>Sintaxe
 
-*try-except-statement*: **__try**  *compound-statement*
+> *`try-except-statement`*:\
+> &emsp;**`__try`** *`compound-statement`* **`__except (`**  *`expression`*  **`)`** *`compound-statement`*
 
-*instrução composta de* **__except (***expressão***)**      
-
-A instrução composta após a cláusula `__try` é a seção protegida. A instrução composta após a **`__except`** cláusula é o manipulador de exceção. O manipulador especifica um conjunto de ações a ser executado se uma exceção for gerada durante a execução da seção protegida. A execução procede da seguinte maneira:
+A instrução composta após a **`__try`** cláusula é a *seção protegida*. A instrução composta após a **`__except`** cláusula é o *manipulador de exceção*. O manipulador Especifica um conjunto de ações a serem executadas se uma exceção for gerada durante a execução da seção protegida. A execução procede da seguinte maneira:
 
 1. A seção protegida é executada.
 
 1. Se nenhuma exceção ocorrer durante a execução da seção protegida, a execução continuará na instrução após a **`__except`** cláusula.
 
-1. Se ocorrer uma exceção durante a execução da seção protegida ou em qualquer rotina chamada de seção protegida, a **`__except`** expressão será avaliada e o valor retornado determinará como a exceção será tratada. Há três valores:
+1. Se ocorrer uma exceção durante a execução da seção protegida ou, em qualquer rotina, a seção protegida chamar, a **`__except`** expressão será avaliada. O valor retornado determina como a exceção é tratada. Há três valores possíveis:
 
-   `EXCEPTION_CONTINUE_SEARCH` A exceção não é reconhecida. Continue pesquisando manipuladores na pilha; primeiro os que contêm as instruções **try-except**, depois os que têm a próxima precedência mais alta.
+   - `EXCEPTION_CONTINUE_SEARCH`: A exceção não é reconhecida. Continue pesquisando a pilha para obter um manipulador, primeiro para as instruções de contenção `try-except` , em seguida, para os manipuladores com a próxima precedência mais alta.
 
-   `EXCEPTION_CONTINUE_EXECUTION` A exceção é reconhecida, mas ignorada. Continue a execução no ponto onde ocorreu a exceção.
+   - `EXCEPTION_CONTINUE_EXECUTION`: A exceção é reconhecida, mas ignorada. Continue a execução no ponto onde ocorreu a exceção.
 
-   `EXCEPTION_EXECUTE_HANDLER` A exceção é reconhecida. Transfira o controle para o manipulador de exceção executando a **`__except`** instrução composta e continue a execução no ponto em que ocorreu a exceção.
+   - `EXCEPTION_EXECUTE_HANDLER` A exceção é reconhecida. Transfira o controle para o manipulador de exceção executando a **`__except`** instrução composta e continue a execução no ponto em que ocorreu a exceção.
 
 Como a **`__except`** expressão é avaliada como uma expressão C, ela é limitada a um único valor, ao operador de expressão condicional ou ao operador de vírgula. Se um processamento mais extenso for necessário, a expressão poderá chamar uma rotina que retorne um dos três valores listados acima.
 
 > [!NOTE]
-> A manipulação de exceção estruturada funciona com arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, o mecanismo de tratamento de exceções de C++ é muito mais flexível, pois pode tratar exceções de qualquer tipo.
+> A manipulação de exceção estruturada funciona com arquivos de código-fonte em C e C++. No entanto, ele não foi projetado especificamente para C++. Para programas Portable C++, a manipulação de exceção do C++ deve ser usada em vez de manipulação de exceção estruturada. Além disso, o mecanismo de tratamento de exceções de C++ é muito mais flexível, pois pode tratar exceções de qualquer tipo. Para obter mais informações, consulte [tratamento de exceção](../cpp/exception-handling-in-visual-cpp.md) na referência da *linguagem C++*.
 
-> [!NOTE]
-> Para programas C++, o tratamento de exceção de C++ deve ser usado em vez de manipulação de exceção estruturada. Para obter mais informações, consulte [Tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md) na *Referência da linguagem C++*.
+Cada rotina em um aplicativo pode ter seu próprio manipulador de exceção. A **`__except`** expressão é executada no escopo do **`__try`** corpo. Ele tem acesso a qualquer variável local declarada lá.
 
-Cada rotina em um aplicativo pode ter seu próprio manipulador de exceção. A **`__except`** expressão é executada no escopo do `__try` corpo. Isso significa que ela tem acesso a todas as variáveis locais declarados lá.
+A **`__leave`** palavra-chave é válida dentro de um `try-except` bloco de instruções. O efeito de **`__leave`** é saltar para o final do `try-except` bloco. A execução é retomada após o término do manipulador de exceção. Embora uma **`goto`** instrução possa ser usada para atingir o mesmo resultado, uma **`goto`** instrução causa o desenrolamento da pilha. A **`__leave`** instrução é mais eficiente porque não envolve o desenrolamento de pilha.
 
-O ** `__leave** keyword is valid within a **try-except** statement block. The effect of **` __leave** é ir para o final do bloco **try-Except** . A execução é retomada após o término do manipulador de exceção. Embora uma **`goto`** instrução possa ser usada para atingir o mesmo resultado, uma **`goto`** instrução causa o desenrolamento da pilha. A instrução **' __leave** é mais eficiente porque não envolve o desenrolamento de pilha.
-
-Sair de uma instrução **try-except** usando a função de tempo de execução `longjmp` é considerado um término anormal. Não é permitido ir para uma instrução `__try`, mas é permitido sair de uma. O manipulador de exceção não será chamado se um processo for interrompido no meio da execução de uma instrução **try-except**.
+Sair de uma `try-except` instrução usando a `longjmp` função de tempo de execução é considerado encerramento anormal. Não é legal pular para uma **`__try`** instrução, mas é legal pular de uma. O manipulador de exceção não será chamado se um processo for eliminado no meio da execução de uma `try-except` instrução.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir é um manipulador de exceções e um manipulador de término. Consulte [A instrução try-finally](../c-language/try-finally-statement-c.md) para obter mais informações sobre manipuladores de término.
+Aqui está um exemplo de um manipulador de exceção e um manipulador de terminação. Para obter mais informações sobre manipuladores de terminação, consulte [ `try-finally` Statement (C)](../c-language/try-finally-statement-c.md).
 
-```
+```C
 .
 .
 .
 puts("hello");
-__try{
+__try {
    puts("in try");
-   __try{
+   __try {
       puts("in try");
       RAISE_AN_EXCEPTION();
-   }__finally{
+   } __finally {
       puts("in finally");
    }
-}__except( puts("in filter"), EXCEPTION_EXECUTE_HANDLER ){
+} __except( puts("in filter"), EXCEPTION_EXECUTE_HANDLER ) {
    puts("in except");
 }
 puts("world");
 ```
 
-Este é o resultado do exemplo, com o comentário adicionado à direita:
+Aqui está a saída do exemplo, com comentários adicionados à direita:
 
-```
+```Output
 hello
-in try              /* fall into try                     */
-in try              /* fall into nested try                */
+in try              /* fall into try                        */
+in try              /* fall into nested try                 */
 in filter           /* execute filter; returns 1 so accept  */
 in finally          /* unwind nested finally                */
 in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**FINAL específico da Microsoft**
+**ENCERRAR específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
-[Instrução try-Except](../cpp/try-except-statement.md)
+[`try-except` instrução (C++)](../cpp/try-except-statement.md)

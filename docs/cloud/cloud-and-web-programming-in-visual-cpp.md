@@ -3,12 +3,12 @@ title: Nuvem e programação da Web no Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274637"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898671"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Nuvem e programação da Web no Visual C++
 
@@ -30,7 +30,7 @@ No C++ há várias opções para conectar-se com a Web e com a nuvem.
 
 - [OneDrive e SharePoint no Microsoft Graph](https://dev.onedrive.com/README.htm)
 
-  A API do OneDrive fornece um conjunto de serviços HTTP para conectar seu aplicativo a arquivos e pastas no Office 365 e no SharePoint Server 2016.
+  A API do OneDrive fornece um conjunto de serviços HTTP para conectar seu aplicativo a arquivos e pastas no Microsoft 365 e no SharePoint Server 2016.
 
 ## <a name="windows-and-cross-platform-networking-apis"></a>APIs de rede do Windows e de multiplataforma
 
@@ -51,13 +51,13 @@ No C++ há várias opções para conectar-se com a Web e com a nuvem.
 
 - [Interface IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  Oferece uma internet COM nativa que pode ser usada em aplicativos do Windows Runtime ou de área de trabalho do Windows para se conectar à Internet por HTTP e emitir comandos GET, PUT e outros comandos HTTP. Para obter mais informações, confira [Passo a passo: como conectar usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
+  Oferece uma internet COM nativa que pode ser usada em aplicativos do Windows Runtime ou de área de trabalho do Windows para se conectar à Internet por HTTP e emitir comandos GET, PUT e outros comandos HTTP. Para obter mais informações, consulte [Walkthrough: conectando usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
 - [WinInet (Windows Internet)](/windows/win32/WinInet/portal)
 
   A API do Windows que pode ser usada em aplicativos de área de trabalho do Windows para se conectar à Internet.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [C++ no Visual Studio](../overview/visual-cpp-in-visual-studio.md) <br/>
 [Central de Desenvolvedores do Microsoft Azure C e C++](https://azure.microsoft.com/develop/cpp/) <br/>

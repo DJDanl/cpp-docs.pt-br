@@ -1,20 +1,21 @@
 ---
 title: Restrições em manipuladores de exceção
-ms.date: 11/04/2016
+description: Descreve as restrições de salto em blocos de manipulação de exceção estruturada.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - restrictions, exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 31d63524-0e8c-419f-b87c-061f4c0ea470
-ms.openlocfilehash: 1f80cb1574cbfef0783c7e55dcd198dfb822f566
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c4182f065789533bf7599621d8d2829b2d52d6ed
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225898"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898446"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restrições em manipuladores de exceção
 
-A principal limitação de usar manipuladores de exceção no código é que você não pode usar uma **`goto`** instrução para saltar para um bloco de instrução **__try** . Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. Você pode saltar de um bloco de instrução **__try** e aninhar manipuladores de exceção conforme escolher.
+A principal limitação do uso de manipuladores de exceção no código é que você não pode usar uma **`goto`** instrução para saltar para um **`__try`** bloco de instruções. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. Você pode saltar para fora de um **`__try`** bloco de instrução e pode aninhar manipuladores de exceção conforme escolher.
 
 ## <a name="see-also"></a>Confira também
 
