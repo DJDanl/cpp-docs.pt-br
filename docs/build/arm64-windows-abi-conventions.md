@@ -1,12 +1,12 @@
 ---
 title: Visão geral das convenções ARM64 ABI
 ms.date: 03/27/2019
-ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
+ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303260"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972667"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções ARM64 ABI
 
@@ -71,7 +71,7 @@ Alinhamento de layout padrão para globais e estáticos:
 
 A arquitetura AArch64 dá suporte a registros de inteiro 32:
 
-| Registrar  | Volátil? | Função |
+| Registre-se | Volátil? | Função |
 | - | - | - |
 | x0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
 | X1-120 | Volátil | Parâmetro/Registro transitório 2-8 |
@@ -94,7 +94,7 @@ O ponteiro de quadro (x29) é necessário para compatibilidade com movimentaçã
 
 A arquitetura AArch64 também dá suporte a 32 registros de ponto flutuante/SIMD, resumidos abaixo:
 
-| Registrar  | Volátil? | Função |
+| Registre-se | Volátil? | Função |
 | - | - | - |
 | V0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
 | v1-v7 | Volátil | O parâmetro/os registros de rascunho 2-8 |
@@ -117,7 +117,7 @@ O FPCR (registro de controle de ponto flutuante) tem determinados requisitos em 
 
 Assim como o AArch32, a especificação AArch64 fornece três registros "thread ID" controlados pelo sistema:
 
-| Registrar  | Função |
+| Registre-se | Função |
 | - | - |
 | TPIDR_EL0 | Reservado. |
 | TPIDRRO_EL0 | Contém o número de CPU para o processador atual. |
@@ -157,7 +157,7 @@ Para cada argumento na lista, a primeira regra de correspondência da lista a se
 
 Para cada argumento na lista, as regras a seguir são aplicadas por vez até que o argumento tenha sido alocado. Quando um argumento é atribuído a um registro, todos os bits não utilizados no registro têm um valor não especificado. Se um argumento for atribuído a um slot de pilha, os bytes de preenchimento não utilizados terão um valor não especificado.
 
-1. Se o argumento for um tipo de ponto flutuante de uma ou de vetor de precisão simples ou de quatro pontos, e o NSRN for menor que 8, o argumento será alocado para os bits menos significativos de Register v\[NSRN]. O NSRN é incrementado em um. O argumento agora foi alocado.
+1. Se o argumento for um tipo de ponto flutuante de uma ou de vetor de precisão simples ou de quatro pontos, e o NSRN for menor que 8, o argumento será alocado para os bits menos significativos de Register v \[ NSRN]. O NSRN é incrementado em um. O argumento agora foi alocado.
 
 1. Se o argumento for um HFA ou um HVA, e houver registros de ponto flutuante e SIMD não alocados suficientes (NSRN + número de membros ≤ 8), o argumento será alocado para os registros SIMD e de ponto flutuante, um registrador por membro de HFA ou HVA. O NSRN é incrementado pelo número de registros usados. O argumento agora foi alocado.
 
@@ -169,13 +169,13 @@ Para cada argumento na lista, as regras a seguir são aplicadas por vez até que
 
 1. Se o argumento for um HFA, um HVA, um ponto flutuante meio-, um único, um duplo ou um tipo de vetor curto, o argumento será copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento agora foi alocado.
 
-1. Se o argumento for um tipo integral ou de ponteiro, o tamanho do argumento será menor ou igual a 8 bytes, e o NGRN será menor que 8, o argumento será copiado para os bits menos significativos em x\[NGRN]. O NGRN é incrementado em um. O argumento agora foi alocado.
+1. Se o argumento for um tipo integral ou de ponteiro, o tamanho do argumento será menor ou igual a 8 bytes, e o NGRN será menor que 8, o argumento será copiado para os bits menos significativos em x \[ NGRN]. O NGRN é incrementado em um. O argumento agora foi alocado.
 
 1. Se o argumento tiver um alinhamento de 16, o NGRN será arredondado para o próximo número par.
 
-1. Se o argumento for um tipo integral, o tamanho do argumento será igual a 16 e o NGRN será menor que 7, o argumento será copiado para x\[NGRN] e x\[NGRN + 1]. x\[NGRN] deve conter a palavra-chave mais baixa abordada da representação de memória do argumento. O NGRN é incrementado em dois. O argumento agora foi alocado.
+1. Se o argumento for um tipo integral, o tamanho do argumento será igual a 16 e o NGRN será menor que 7, o argumento será copiado para x \[ NGRN] e x \[ NGRN + 1]. x \[ NGRN] deve conter a palavra-chave mais baixa abordada da representação de memória do argumento. O NGRN é incrementado em dois. O argumento agora foi alocado.
 
-1. Se o argumento for um tipo composto e o tamanho em palavras duplas do argumento não for maior que 8 menos NGRN, o argumento será copiado em registros de uso geral consecutivos, começando em x\[NGRN]. O argumento é passado como se tivesse sido carregado nos registros de um endereço alinhado em palavras duplas, com uma sequência apropriada de instruções de LDR que carregam registros consecutivos da memória. O conteúdo de qualquer parte não utilizada dos registros não é especificado por esse padrão. O NGRN é incrementado pelo número de registros usados. O argumento agora foi alocado.
+1. Se o argumento for um tipo composto e o tamanho em palavras duplas do argumento não for maior que 8 menos NGRN, o argumento será copiado em registros de uso geral consecutivos, começando em x \[ NGRN]. O argumento é passado como se tivesse sido carregado nos registros de um endereço alinhado em palavras duplas, com uma sequência apropriada de instruções de LDR que carregam registros consecutivos da memória. O conteúdo de qualquer parte não utilizada dos registros não é especificado por esse padrão. O NGRN é incrementado pelo número de registros usados. O argumento agora foi alocado.
 
 1. O NGRN é definido como 8.
 
@@ -205,13 +205,13 @@ Valores de ponto flutuante são retornados em S0, D0 ou V0, conforme apropriado.
 
 Os valores HFA e HVA são retornados em S0-S3, D0-D3 ou V0-v3, conforme apropriado.
 
-Os tipos retornados pelo valor são tratados de forma diferente, dependendo se eles têm determinadas propriedades. Tipos que têm todas essas propriedades,
+Os tipos retornados pelo valor são tratados de forma diferente, dependendo se eles têm determinadas propriedades e se a função é uma função membro não estática. Tipos que têm todas essas propriedades,
 
 - Eles são *agregados* pela definição padrão de c++ 14, ou seja, eles não têm construtores fornecidos pelo usuário, nenhum membro de dados não estático privado ou protegido, nenhuma classe base e nenhuma função virtual e
 - Eles têm um operador de atribuição de cópia trivial e
 - Eles têm um destruidor trivial,
 
-Use o seguinte estilo de retorno:
+e são retornados por funções não membro ou funções membro estáticas, use o seguinte estilo de retorno:
 
 - Tipos menores ou iguais a 8 bytes são retornados em x0.
 - Tipos menores ou iguais a 16 bytes são retornados em x0 e X1, com x0 que contém os 8 bytes de ordem inferior.
@@ -245,15 +245,15 @@ O desenrolamento durante a manipulação de exceção é assistido pelo uso de c
 
 O EABI ARM também especifica um modelo de desenrolamento de exceção que usa códigos de liberação. No entanto, a especificação como apresentada é insuficiente para o desenrolamento no Windows, que deve lidar com casos em que o PC está no meio de um prólogo de função ou epílogo.
 
-O código gerado dinamicamente deve ser descrito com tabelas de função dinâmicas `RtlAddFunctionTable` via e funções associadas, para que o código gerado possa participar da manipulação de exceção.
+O código gerado dinamicamente deve ser descrito com tabelas de função dinâmicas via `RtlAddFunctionTable` e funções associadas, para que o código gerado possa participar da manipulação de exceção.
 
 ## <a name="cycle-counter"></a>Contador de ciclo
 
-Todas as CPUs ARMv8 são necessárias para dar suporte a um registro de contador de ciclo, um registro de 64 bits que o Windows configura para ser legível em qualquer nível de exceção, incluindo o modo de usuário. Ele pode ser acessado por meio do registro de PMCCNTR_EL0 especial, usando o opcode de MSR no `_ReadStatusReg` código do assembly ou o intrínseco no código C/C++.
+Todas as CPUs ARMv8 são necessárias para dar suporte a um registro de contador de ciclo, um registro de 64 bits que o Windows configura para ser legível em qualquer nível de exceção, incluindo o modo de usuário. Ele pode ser acessado por meio do registro de PMCCNTR_EL0 especial, usando o opcode de MSR no código do assembly ou o `_ReadStatusReg` intrínseco no código C/C++.
 
-O contador de ciclo aqui é um contador de ciclo verdadeiro, não um relógio de parede. A frequência de contagem vai variar com a frequência do processador. Se você sentir que deve saber a frequência do contador de ciclo, você não deve estar usando o contador de ciclo. Em vez disso, você deseja medir o tempo do relógio de parede, para `QueryPerformanceCounter`o qual você deve usar.
+O contador de ciclo aqui é um contador de ciclo verdadeiro, não um relógio de parede. A frequência de contagem vai variar com a frequência do processador. Se você sentir que deve saber a frequência do contador de ciclo, você não deve estar usando o contador de ciclo. Em vez disso, você deseja medir o tempo do relógio de parede, para o qual você deve usar `QueryPerformanceCounter` .
 
 ## <a name="see-also"></a>Confira também
 
 [Problemas de migração ARM do Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
-[Manipulação de exceção do ARM64](arm64-exception-handling.md)
+[Tratamento de exceção do ARM64](arm64-exception-handling.md)
