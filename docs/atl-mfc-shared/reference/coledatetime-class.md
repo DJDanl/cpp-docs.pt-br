@@ -1,6 +1,7 @@
 ---
 title: Classe COleDateTime
-ms.date: 03/27/2019
+description: Referência de API para a classe MFC COleDateTime que encapsula o `DATE` tipo de dados usado na automação OLE.
+ms.date: 08/27/2020
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,18 +35,18 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 5cbc131a81afef1ee94069f39e79f22ce7addfcb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9ebbab02860daaeb57c24d3e0901666861adfc2b
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562461"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062147"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
 Encapsula o `DATE` tipo de dados que é usado na automação OLE.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 class COleDateTime
@@ -112,7 +113,7 @@ O `DATE` tipo é implementado como um valor de ponto flutuante. Os dias são med
 |----------|-----------|
 |29 de dezembro de 1899, meia-noite|-1,0|
 |29 de dezembro de 1899, 6 A. M|-1,25|
-|30 de dezembro de 1899, meia-noite|0.0|
+|30 de dezembro de 1899, meia-noite|0,0|
 |31 de dezembro de 1899, meia-noite|1.0|
 |1º de janeiro de 1900, 18h|2.25|
 
@@ -313,7 +314,7 @@ Uma cadeia de caracteres de formatação semelhante à `printf` cadeia de caract
 *nFormatID*<br/>
 A ID de recurso para a cadeia de caracteres de controle de formato.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma `CString` que contém o valor de data/hora formatado.
 
@@ -349,7 +350,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 *Estampa*<br/>
 Uma referência a uma estrutura [DBTIMESTAMP](/dotnet/api/system.data.oledb.oledbtype) .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -374,7 +375,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 *sysTime*<br/>
 Uma referência a uma estrutura [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) para receber o valor de data/hora convertido do `COleDateTime` objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retornará TRUE se for bem-sucedido; FALSE se a conversão falhar ou se o `COleDateTime` objeto for nulo ou inválido.
 
@@ -397,7 +398,7 @@ bool GetAsUDATE(UDATE& uDate) const throw();
 *uDate*<br/>
 Uma referência a uma `UDATE` estrutura para receber o valor de data/hora convertido do `COleDateTime` objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retornará TRUE se for bem-sucedido; FALSE se a conversão falhar ou se o `COleDateTime` objeto for nulo ou inválido.
 
@@ -425,7 +426,7 @@ Obtém o dia do mês representado por esse valor de data/hora.
 int GetDay() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O dia do mês representado pelo valor deste `COleDateTime` objeto ou `COleDateTime::error` se o dia não pôde ser obtido.
 
@@ -455,13 +456,13 @@ Para obter informações sobre outras funções de membro que consultam o valor 
 
 ## <a name="coledatetimegetdayofweek"></a><a name="getdayofweek"></a> COleDateTime:: GetDayOfWeek
 
-Obtém o dia do mês representado por esse valor de data/hora.
+Obtém o dia da semana representado por esse valor de data/hora.
 
 ```
 int GetDayOfWeek() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O dia da semana representado pelo valor deste `COleDateTime` objeto ou `COleDateTime::error` se o dia da semana não pôde ser obtido.
 
@@ -497,7 +498,7 @@ Obtém o dia do ano representado por esse valor de data/hora.
 int GetDayOfYear() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O dia do ano representado pelo valor deste `COleDateTime` objeto ou `COleDateTime::error` se o dia do ano não pôde ser obtido.
 
@@ -533,7 +534,7 @@ Obtém a hora representada por esse valor de data/hora.
 int GetHour() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A hora representada pelo valor deste `COleDateTime` objeto ou `COleDateTime::error` se a hora não pôde ser obtida.
 
@@ -569,7 +570,7 @@ Obtém o minuto representado por esse valor de data/hora.
 int GetMinute() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O minuto representado pelo valor deste `COleDateTime` objeto ou `COleDateTime::error` se o minuto não puder ser obtido.
 
@@ -605,7 +606,7 @@ Obtém o mês representado por esse valor de data/hora.
 int GetMonth() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O mês representado pelo valor deste `COleDateTime` objeto ou `COleDateTime::error` se o mês não pôde ser obtido.
 
@@ -641,7 +642,7 @@ Obtém o segundo representado por esse valor de data/hora.
 int GetSecond() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O segundo é representado pelo valor desse `COleDateTime` objeto ou `COleDateTime::error` se o segundo não pôde ser obtido.
 
@@ -682,7 +683,7 @@ Obtém o status (validade) de um determinado `COleDateTime` objeto.
 DateTimeStatus GetStatus() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o status desse `COleDateTime` valor. Se você chamar `GetStatus` em um `COleDateTime` objeto construído com o padrão, ele retornará válido. Se você chamar `GetStatus` em um `COleDateTime` objeto inicializado com o Construtor definido como NULL, `GetStatus` retornará NULL.
 
@@ -748,7 +749,7 @@ Obtém o ano representado por esse valor de data/hora.
 int GetYear() const throw();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O ano representado pelo valor deste `COleDateTime` objeto ou `COleDateTime::error` se o ano não pôde ser obtido.
 
@@ -943,7 +944,7 @@ Indica sinalizadores para configurações de localidade e análise. Um ou mais d
 *lcid*<br/>
 Indica a ID de localidade a ser usada para a conversão.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retornará TRUE se a cadeia de caracteres tiver sido convertida com êxito em um valor de data/hora, caso contrário, FALSE.
 
@@ -998,7 +999,7 @@ Indica o mês a ser copiado para esse `COleDateTime` objeto.
 *Ndia*\
 Indica o dia para copiar nesse `COleDateTime` objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Zero se o valor deste `COleDateTime` objeto foi definido com êxito; caso contrário, 1. Esse valor de retorno é baseado no `DateTimeStatus` tipo enumerado. Para obter mais informações, consulte a função de membro [SetStatus](#setstatus) .
 
@@ -1072,7 +1073,7 @@ int SetDateTime(
 *nYear*, *nMonth*, *ndia*, *nhora*, *nmín*, *NSEC*<br/>
 Indique os componentes de data e hora a serem copiados para esse `COleDateTime` objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Zero se o valor deste `COleDateTime` objeto foi definido com êxito; caso contrário, 1. Esse valor de retorno é baseado no `DateTimeStatus` tipo enumerado. Para obter mais informações, consulte a função de membro [SetStatus](#setstatus) .
 
@@ -1177,7 +1178,7 @@ int SetTime(
 *nhora*, *nmín*, *NSEC*<br/>
 Indique os componentes de tempo a serem copiados para esse `COleDateTime` objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Zero se o valor deste `COleDateTime` objeto foi definido com êxito; caso contrário, 1. Esse valor de retorno é baseado no `DateTimeStatus` tipo enumerado. Para obter mais informações, consulte a função de membro [SetStatus](#setstatus) .
 
