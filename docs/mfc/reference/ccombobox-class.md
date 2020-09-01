@@ -1,6 +1,7 @@
 ---
 title: Classe CComboBox
-ms.date: 11/04/2016
+description: Referência de API para a classe da caixa de combinação do Windows do MFC CComboBox
+ms.date: 08/27/2020
 f1_keywords:
 - CComboBox
 - AFXWIN/CComboBox
@@ -108,18 +109,18 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 515a079ca4f6c3896733bbebec424f63455fb979
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561668"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062178"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
 Fornece a funcionalidade de uma caixa de combinação do Windows.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 class CComboBox : public CWnd
@@ -275,7 +276,7 @@ int AddString(LPCTSTR lpszString);
 *lpszString*<br/>
 Aponta para a cadeia de caracteres terminada em nulo que deve ser adicionada.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se o valor de retorno for maior ou igual a 0, ele será o índice de base zero para a cadeia de caracteres na caixa de listagem. O valor de retorno será CB_ERR se ocorrer um erro; o valor de retorno será CB_ERRSPACE se houver espaço insuficiente disponível para armazenar a nova cadeia de caracteres.
 
@@ -333,7 +334,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 *lpCompareItemStruct*<br/>
 Um ponteiro longo para uma estrutura [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Indica a posição relativa dos dois itens descritos na `COMPAREITEMSTRUCT` estrutura. Pode ser qualquer um dos seguintes valores:
 
@@ -391,7 +392,7 @@ Especifica a janela pai da caixa de combinação (geralmente um `CDialog` ). Ele
 *nID*<br/>
 Especifica a ID de controle da caixa de combinação.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
@@ -473,7 +474,7 @@ int DeleteString(UINT nIndex);
 *nIndex*<br/>
 Especifica o índice para a cadeia de caracteres a ser excluída.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se o valor de retorno for maior ou igual a 0, será uma contagem das cadeias de caracteres restantes na lista. O valor de retorno será CB_ERR se *nIndex* especificar um índice maior que o número de itens na lista.
 
@@ -519,7 +520,7 @@ Pode ser qualquer combinação dos **`enum`** valores descritos em [CFile:: GetS
 *lpszWildCard*<br/>
 Aponta para uma cadeia de caracteres de especificação de arquivo. A cadeia de caracteres pode conter curingas (por exemplo, *. \* ).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se o valor de retorno for maior ou igual a 0, ele será o índice de base zero do último nome de arquivo adicionado à lista. O valor de retorno será CB_ERR se ocorrer um erro; o valor de retorno será CB_ERRSPACE se houver espaço insuficiente disponível para armazenar as novas cadeias de caracteres.
 
@@ -572,7 +573,7 @@ Contém o índice de base zero do item antes do primeiro item a ser pesquisado. 
 *lpszString*<br/>
 Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa diferencia maiúsculas de minúsculas, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se o valor de retorno for maior ou igual a 0, ele será o índice de base zero do item correspondente. É CB_ERR se a pesquisa não foi bem-sucedida.
 
@@ -602,7 +603,7 @@ Especifica o índice de base zero do item antes do primeiro item a ser pesquisad
 *lpszFind*<br/>
 Aponta para a cadeia de caracteres terminada em nulo a ser pesquisada. Essa cadeia de caracteres pode conter um nome de arquivo completo, incluindo a extensão. A pesquisa não diferencia maiúsculas de minúsculas, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O índice de base zero do item correspondente ou CB_ERR se a pesquisa não foi bem-sucedida.
 
@@ -627,7 +628,7 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 *pcbi*<br/>
 Um ponteiro para a estrutura [COMBOBOXINFO](/windows/win32/api/winuser/ns-winuser-comboboxinfo) .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna verdadeiro em caso de êxito, falso em caso de falha.
 
@@ -643,7 +644,7 @@ Chame essa função de membro para recuperar o número de itens na parte da caix
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O número de itens. A contagem retornada é uma maior que o valor de índice do último item (o índice é baseado em zero). É CB_ERR se ocorrer um erro.
 
@@ -671,11 +672,11 @@ fora Ponteiro para um buffer que recebe o texto da faixa de indicação.
 *cchText*\
 no Tamanho do buffer ao qual o parâmetro *lpszText* aponta.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Na primeira sobrecarga, um objeto [CString](../../atl-mfc-shared/using-cstring.md) que contém o texto da faixa de indicação, se existir; caso contrário, um `CString` objeto que tem comprimento zero.
 
--ou-
+- ou -
 
 Na segunda sobrecarga, TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -693,7 +694,7 @@ Chame essa função de membro para determinar qual item na caixa de combinação
 int GetCurSel() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O índice de base zero do item selecionado no momento na caixa de listagem de uma caixa de combinação ou CB_ERR se nenhum item for selecionado.
 
@@ -730,7 +731,7 @@ Chame a `GetDroppedState` função de membro para determinar se a caixa de lista
 BOOL GetDroppedState() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a caixa de listagem estiver visível; caso contrário, 0.
 
@@ -746,7 +747,7 @@ Chame essa função para recuperar a largura mínima permitida, em pixels, da ca
 int GetDroppedWidth() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, a largura mínima permitida, em pixels; caso contrário, CB_ERR.
 
@@ -768,7 +769,7 @@ Obtém as posições de caractere inicial e final da seleção atual no controle
 DWORD GetEditSel() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um valor de 32 bits que contém a posição inicial na palavra de ordem inferior e a posição do primeiro caractere não selecionado após o final da seleção na palavra de ordem superior. Se essa função for usada em uma caixa de combinação sem um controle de edição, CB_ERR será retornada.
 
@@ -784,7 +785,7 @@ Chame a `GetExtendedUI` função de membro para determinar se uma caixa de combi
 BOOL GetExtendedUI() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a caixa de combinação tiver a interface do usuário estendida; caso contrário, 0.
 
@@ -810,7 +811,7 @@ Recupera da caixa de combinação a largura em pixels pela qual a parte da caixa
 UINT GetHorizontalExtent() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A largura rolável da parte da caixa de listagem da caixa de combinação, em pixels.
 
@@ -835,7 +836,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 *nIndex*<br/>
 Contém o índice de base zero de um item na caixa de listagem da caixa de combinação.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor de 32 bits associado ao item, ou CB_ERR se ocorrer um erro.
 
@@ -860,7 +861,7 @@ void* GetItemDataPtr(int nIndex) const;
 *nIndex*<br/>
 Contém o índice de base zero de um item na caixa de listagem da caixa de combinação.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Recupera um ponteiro ou-1 se ocorrer um erro.
 
@@ -881,7 +882,7 @@ int GetItemHeight(int nIndex) const;
 *nIndex*<br/>
 Especifica o componente da caixa de combinação cuja altura deve ser recuperada. Se o parâmetro *nIndex* for-1, a altura da parte de controle de edição (ou texto estático) da caixa de combinação será recuperada. Se a caixa de combinação tiver o estilo de [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , *nIndex* especificará o índice de base zero do item de lista cuja altura deve ser recuperada. Caso contrário, *nIndex* deverá ser definido como 0.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A altura, em pixels, do item especificado em uma caixa de combinação. O valor de retorno será CB_ERR se ocorrer um erro.
 
@@ -914,13 +915,14 @@ Aponta para um buffer que deve receber a cadeia de caracteres. O buffer deve ter
 *rString*<br/>
 Uma referência a um `CString`.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O comprimento (em bytes) da cadeia de caracteres, excluindo o caractere nulo de terminação. Se *nIndex* não especificar um índice válido, o valor de retorno será CB_ERR.
 
 ### <a name="remarks"></a>Comentários
 
 A segunda forma dessa função de membro preenche um `CString` objeto com o texto do item.
+Se *nIndex* for inválido, essa função lançará uma `E_INVALIDARG` exceção (código de erro: `-2147024809` , `0x80070057` ).
 
 ### <a name="example"></a>Exemplo
 
@@ -939,7 +941,7 @@ int GetLBTextLen(int nIndex) const;
 *nIndex*<br/>
 Contém o índice de base zero da cadeia de caracteres da caixa de listagem.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O comprimento da cadeia de caracteres em bytes, excluindo o caractere nulo de terminação. Se *nIndex* não especificar um índice válido, o valor de retorno será CB_ERR.
 
@@ -955,7 +957,7 @@ Recupera a localidade usada pela caixa de combinação.
 LCID GetLocale() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor do identificador de localidade (LCID) para as cadeias de caracteres na caixa de combinação.
 
@@ -975,7 +977,7 @@ Obtém o número mínimo de itens visíveis na lista suspensa do controle da cai
 int GetMinVisible() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O número mínimo de itens visíveis na lista suspensa atual.
 
@@ -991,7 +993,7 @@ Recupera o índice de base zero do primeiro item visível na parte da caixa de l
 int GetTopIndex() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O índice de base zero do primeiro item visível na parte de caixa de listagem da caixa de combinação, se for bem-sucedido, CB_ERR caso contrário.
 
@@ -1021,7 +1023,7 @@ Especifica o número de itens a serem adicionados.
 *nBytes*<br/>
 Especifica a quantidade de memória, em bytes, a ser alocada para cadeias de caracteres de item.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se obtiver êxito, o número máximo de itens que a parte da caixa de combinação do box pode armazenar antes de uma realocação de memória ser necessária, caso contrário CB_ERRSPACE, o que significa que não há memória suficiente disponível.
 
@@ -1055,7 +1057,7 @@ Contém o índice de base zero para a posição na caixa de listagem que receber
 *lpszString*<br/>
 Aponta para a cadeia de caracteres terminada em nulo que deve ser inserida.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O índice de base zero da posição na qual a cadeia de caracteres foi inserida. O valor de retorno será CB_ERR se ocorrer um erro. O valor de retorno será CB_ERRSPACE se houver espaço insuficiente disponível para armazenar a nova cadeia de caracteres.
 
@@ -1083,7 +1085,7 @@ BOOL LimitText(int nMaxChars);
 *nMaxChars*<br/>
 Especifica o comprimento (em bytes) do texto que o usuário pode inserir. Se esse parâmetro for 0, o tamanho do texto será definido como 65.535 bytes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero, se for bem-sucedido. Se for chamado para uma caixa de combinação com o estilo [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou para uma caixa de combinação sem um controle de edição, o valor de retorno será CB_ERR.
 
@@ -1168,7 +1170,7 @@ Contém o índice de base zero do item antes do primeiro item a ser pesquisado. 
 *lpszString*<br/>
 Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa diferencia maiúsculas de minúsculas, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O índice de base zero do item selecionado se a cadeia de caracteres foi encontrada. Se a pesquisa não tiver sido bem-sucedida, o valor de retorno será CB_ERR e a seleção atual não será alterada.
 
@@ -1195,7 +1197,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 *lpszText*\
 no Ponteiro para um buffer com terminação nula que contém o texto de indicação.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se o método for bem-sucedido; caso contrário, FALSE.
 
@@ -1230,7 +1232,7 @@ int SetCurSel(int nSelect);
 *nSelecionar*<br/>
 Especifica o índice de base zero da cadeia de caracteres a ser selecionada. Se-1, qualquer seleção atual na caixa de listagem será removida e o controle de edição será limpo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O índice de base zero do item selecionado se a mensagem for bem-sucedida. O valor de retorno será CB_ERR se *nSelecionar* for maior que o número de itens na lista ou se *nSelecionar* for definido como-1, o que limpará a seleção.
 
@@ -1255,7 +1257,7 @@ int SetDroppedWidth(UINT nWidth);
 *nWidth*<br/>
 A largura mínima permitida da parte da caixa de listagem da caixa de combinação, em pixels.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedida, a nova largura da caixa de listagem, caso contrário CB_ERR.
 
@@ -1287,7 +1289,7 @@ Especifica a posição inicial. Se a posição inicial for definida como-1, qual
 *nEndChar*<br/>
 Especifica a posição final. Se a posição final for definida como-1, todo o texto da posição inicial para o último caractere no controle de edição será selecionado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Diferente de zero se a função de membro for bem-sucedida; caso contrário, 0. Será CB_ERR se `CComboBox` o tiver o estilo de [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou não tiver uma caixa de listagem.
 
@@ -1315,7 +1317,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 *Bo*<br/>
 Especifica se a caixa de combinação deve usar a interface do usuário estendida ou a interface do usuário padrão. Um valor TRUE seleciona a interface do usuário estendida; um valor FALSE seleciona a interface do usuário padrão.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 CB_OKAY se a operação for bem-sucedida ou CB_ERR se ocorrer um erro.
 
@@ -1372,7 +1374,7 @@ Contém um índice de base zero para o item a ser definido.
 *dwItemData*<br/>
 Contém o novo valor a ser associado ao item.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 CB_ERR se ocorrer um erro.
 
@@ -1402,7 +1404,7 @@ Contém um índice de base zero para o item.
 *pData*<br/>
 Contém o ponteiro a ser associado ao item.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 CB_ERR se ocorrer um erro.
 
@@ -1436,7 +1438,7 @@ Se *nIndex* for-1, a altura da parte do controle de edição ou do texto estáti
 *cyItemHeight*<br/>
 Especifica a altura, em pixels, do componente de caixa de combinação identificado por *nIndex*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 CB_ERR se o índice ou a altura for inválido; caso contrário, 0.
 
@@ -1461,7 +1463,7 @@ LCID SetLocale(LCID nNewLocale);
 *nNewLocale*<br/>
 O novo valor de LCID (identificador de localidade) a ser definido para a caixa de combinação.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor do LCID (identificador de localidade) anterior desta caixa de combinação.
 
@@ -1486,7 +1488,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 *ininvisível*\
 no Especifica o número mínimo de itens visíveis.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -1519,7 +1521,7 @@ int SetTopIndex(int nIndex);
 *nIndex*<br/>
 Especifica o índice de base zero do item da caixa de listagem.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Zero se for bem-sucedido ou CB_ERR se ocorrer um erro.
 

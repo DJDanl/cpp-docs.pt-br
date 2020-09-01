@@ -1,6 +1,7 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
-ms.date: 11/04/2016
+description: Referência de API para snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_, que gravam dados formatados em uma cadeia de caracteres.
+ms.date: 08/27/2020
 api_name:
 - _snwprintf
 - _snprintf
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4d8865d5297afe3d48f2bb48cc85a0d10535dfd
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947997"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062192"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -131,10 +132,10 @@ int _snwprintf_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento para a saída.
 
-*count*<br/>
+*contagem*<br/>
 O número máximo de caracteres a ser armazenado.
 
 *format*<br/>
@@ -148,15 +149,15 @@ A localidade a ser usada.
 
 Para obter mais informações, consulte [Sintaxe de especificação de formato: funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
-Let **Len** é o comprimento da cadeia de caracteres de dados formatado, não incluindo o nulo de terminação. Tanto **Len** quanto *Count* estão em bytes para **snprintf** e **_snprintf**, caracteres largos para **_snwprintf**.
+Let **Len** é o comprimento da cadeia de caracteres de dados formatado, não incluindo o nulo de terminação. **Len** e **Count** são o número de caracteres para **snprintf** e **_snprintf**e o número de caracteres largos para **_snwprintf**.
 
-Para todas as funções, se **Len** < *Count*, **Len** caracteres são armazenados no *buffer*, um terminador nulo é anexado e **Len** é retornado.
+Para todas as funções, se **Len**  <  *Count*, **Len** caracteres são armazenados no *buffer*, um terminador nulo é anexado e **Len** é retornado.
 
-A função **snprintf** trunca a saída quando **Len** é maior ou igual à *contagem*, colocando um terminador nulo em `buffer[count-1]`. O valor retornado é **Len**, o número de caracteres que teriam sido exibidos se *Count* fosse grande o suficiente. A função **snprintf** retornará um valor negativo se ocorrer um erro de codificação.
+A função **snprintf** trunca a saída quando **Len** é maior ou igual à *contagem*, colocando um terminador nulo em `buffer[count-1]` . O valor retornado é **Len**, o número de caracteres que teriam sido exibidos se *Count* fosse grande o suficiente. A função **snprintf** retornará um valor negativo se ocorrer um erro de codificação.
 
-Para todas as funções que não sejam **snprintf**, se **Len** = *Count*, **Len** caracteres são armazenados no *buffer*, nenhum terminador NULL é acrescentado e **Len** é retornado. Se a*contagem* **Len** > , os caracteres de *contagem* são armazenados no *buffer*, nenhum terminador nulo é acrescentado e um valor negativo é retornado.
+Para todas as funções que não sejam **snprintf**, se **Len**  =  *Count*, **Len** caracteres são armazenados no *buffer*, nenhum terminador NULL é acrescentado e **Len** é retornado. Se **len**  >  a*contagem*Len, os caracteres de *contagem* são armazenados no *buffer*, nenhum terminador nulo é acrescentado e um valor negativo é retornado.
 
 Se o *buffer* for um ponteiro nulo e a *contagem* for zero, **Len** será retornado como a contagem de caracteres necessários para formatar a saída, não incluindo o nulo de terminação. Para fazer uma chamada bem-sucedida com os mesmos parâmetros de *argumento* e *localidade* , aloque um buffer que contém pelo menos **Len** + 1 caracteres.
 
@@ -166,14 +167,14 @@ Para obter mais informações sobre esses e outros códigos de erro, consulte [e
 
 ## <a name="remarks"></a>Comentários
 
-A função **snprintf** e a família **_snprintf** do formato de funções e a *contagem* de lojas ou menos caracteres no *buffer*. A função **snprintf** sempre armazena um caractere nulo de terminação, truncando a saída, se necessário. A família de funções **_snprintf** acrescentará apenas um caractere nulo de terminação se o comprimento da cadeia de caracteres formatada for estritamente menor do que a *contagem* de caracteres. Cada *argumento* (se houver) é convertido e é apresentado de acordo com a especificação de formato correspondente no *formato*. O formato consiste em caracteres comuns e tem a mesma forma e função que o argumento de *formato* para [printf](printf-printf-l-wprintf-wprintf-l.md). Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+A função **snprintf** e a família de **_snprintf** do formato de funções e a *contagem* de lojas ou menos caracteres no *buffer*. A função **snprintf** sempre armazena um caractere nulo de terminação, truncando a saída, se necessário. A família de funções **_snprintf** acrescenta apenas um caractere nulo de terminação se o comprimento da cadeia de caracteres formatada for estritamente menor do que a *contagem* de caracteres. Cada *argumento* (se houver) é convertido e é apresentado de acordo com a especificação de formato correspondente no *formato*. O formato consiste em caracteres comuns e tem a mesma forma e função que o argumento de *formato* para [printf](printf-printf-l-wprintf-wprintf-l.md). Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Como as funções **_snprintf** não garantem terminação nula – em particular, quando o valor de retorno é *contagem*, certifique-se de que elas sejam seguidas pelo código que adiciona o terminador nulo. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Como as funções de **_snprintf** não garantem terminação nula – em particular, quando o valor de retorno é *contagem*, certifique-se de que elas sejam seguidas pelo código que adiciona o terminador nulo. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 A partir do UCRT no Visual Studio 2015 e no Windows 10, o **snprintf** não é mais idêntico ao **_snprintf**. O comportamento da função **snprintf** agora é compatível com C99 Standard.
 
-**_snwprintf** é uma versão de caractere largo do **_snprintf**; os argumentos de ponteiro para **_snwprintf** são cadeias de caracteres largos. A detecção de erros de codificação em **_snwprintf** pode ser diferente daquela em **_snprintf**. **_snwprintf**, assim como **swprintf**, grava a saída em uma cadeia de caracteres em vez de um destino do tipo **arquivo**.
+**_snwprintf** é uma versão de caractere largo do **_snprintf**; os argumentos de ponteiro para **_snwprintf** são cadeias de caracteres largos. A detecção de erros de codificação no **_snwprintf** pode ser diferente daquela em **_snprintf**. **_snwprintf**, assim como **swprintf**, grava a saída em uma cadeia de caracteres em vez de um destino do tipo **File**.
 
 As versões dessas funções que têm o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
@@ -308,10 +309,10 @@ Output:
 character count = 69
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

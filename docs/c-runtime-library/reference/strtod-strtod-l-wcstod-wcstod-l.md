@@ -1,6 +1,7 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
-ms.date: 4/2/2020
+description: Referência de API para strtod, _strtod_l, wcstod, _wcstod_l, que convertem cadeias de caracteres em um valor de precisão dupla.
+ms.date: 08/27/2020
 api_name:
 - wcstod
 - _wcstod_l
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a9c7fd36b28b0a709c2e21a5e23d8a71d5f8a15
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233971"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062166"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -84,7 +85,7 @@ double wcstod_l(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *strSource*<br/>
 Cadeia de caracteres terminada em nulo a ser convertida.
@@ -95,7 +96,7 @@ Ponteiro para o caractere que interrompe a verificação.
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 **strtod** retorna o valor do número de ponto flutuante, exceto quando a representação causar um estouro; nesse caso, a função retornará +/-**HUGE_VAL**. O sinal de **HUGE_VAL** corresponde ao sinal do valor que não pode ser representado. **strtod** retornará `0` se nenhuma conversão puder ser executada ou se ocorrer um estouro negativo.
 
@@ -125,9 +126,24 @@ Se *endptr* não for **NULL**, um ponteiro para o caractere que parou a verifica
 
 **strtod** espera que *strSource* aponte para uma cadeia de caracteres de uma das seguintes formas:
 
-[*espaço em branco*] [*assinar*] {*digits* [ *dígitos**fracionários* ] &#124; *dígitos* *fracionários* } [{**e** &#124; **e**} [*Sign*] *dígitos*] [*espaço em branco*] [*sinal*] {**0x** &#124; **0x**} {*hexdigits* [*Radix* *hexdigits*] &#124; *Radix* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *hexdigits*] [*espaço em branco*] [*Sign*] {**inf** &#124; **infinityy**} [*espaço em branco*] [*Sign*] **Nan** [*Sequence*]
+[*espaço em branco*] [*assinar*] {*digits* [ *dígitos**fracionários* ] &#124; *dígitos* *fracionários* } [{**e** &#124; **e**} [*Sign*] *dígitos*] [*Whitespace*] [*sinal*] {**0x** &#124; **0x**} {*hexdigits* [*Radix* *hexdigits*] &#124; *Radix* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *dígitos*] [*espaço em branco*] [*Sign*] {**inf** &#124; **Infinity**} [*espaço em branco*] [*Sign*] **Nan** [*Sequence*]
 
-O espaço em *branco* à esquerda opcional pode consistir em caracteres de espaço e tabulação, ignorados; o *sinal* é mais (+) ou menos (-); os *dígitos* são um ou mais dígitos decimais; *hexdigits* são um ou mais dígitos hexadecimais; *Radix* é o caractere de ponto fracionário, um ponto (.) na localidade padrão "C" ou o valor específico de localidade se a localidade atual for diferente ou quando a *localidade* for especificada; uma *sequência* é uma sequência de caracteres alfanuméricos ou de sublinhado. Nos formatos de número decimal e hexadecimal, se nenhum dígito aparecer antes do caractere de ponto de base, pelo menos um deve aparecer após o caractere de ponto de base. Na forma decimal, os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e** ou **e**) e um inteiro assinado opcionalmente. Na forma hexadecimal, os dígitos hexadecimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**p** ou **p**) e um inteiro hexadecimal, opcionalmente assinado, que representa o expoente como uma potência de 2. Em qualquer forma, se não houver uma parte exponencial ou um caractere de ponto de base, um caractere de ponto fracionário será considerado para seguir o último dígito na cadeia de caracteres. O caso é ignorado nos formulários **inf** e **Nan** . O primeiro caractere que não se ajusta a um desses formulários interrompe a verificação.
+O espaço em *branco* à esquerda opcional pode consistir em caracteres de espaço e tabulação, ignorados. \
+o *sinal* é mais (+) ou menos (-). \
+os *dígitos* são um ou mais dígitos decimais. \
+*hexdigits* são um ou mais dígitos hexadecimais. \
+*Radix* é o caractere de ponto fracionário, um ponto (.) na localidade padrão "C" ou o valor específico de localidade se a localidade atual for diferente ou quando a *localidade* for especificada. \
+ Uma *sequência* é uma sequência de caracteres alfanuméricos ou de sublinhado.
+
+Nos formatos de número decimal e hexadecimal, se nenhum dígito aparecer antes do caractere de ponto de base, pelo menos um deve aparecer após o caractere de ponto de base. 
+
+Na forma decimal, os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e** ou **e**) e um inteiro assinado opcionalmente. 
+
+Na forma hexadecimal, os dígitos hexadecimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**p** ou **p**) e um inteiro decimal assinado opcionalmente que representa o expoente como uma potência de 2.
+
+Em qualquer forma, se não houver uma parte exponencial ou um caractere de ponto de base, um caractere de ponto fracionário será considerado para seguir o último dígito na cadeia de caracteres.
+
+O caso é ignorado nos formulários **inf** e **Nan** . O primeiro caractere que não se ajusta a um desses formulários interrompe a verificação.
 
 As versões UCRT dessas funções não dão suporte à conversão de letras de expoente de estilo Fortran (**d** ou **d**). Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código. As versões do UCRT dão suporte a cadeias de caracteres hexadecimais e a ida e volta de valores INF e NAN, que não eram compatíveis com versões anteriores. Isso também pode causar alterações significativas em seu código. Por exemplo, a cadeia de caracteres "0x1A" seria interpretada por **strtod** como 0,0 em versões anteriores, mas como 26,0 na versão UCRT.
 
