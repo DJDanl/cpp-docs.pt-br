@@ -1,17 +1,17 @@
 ---
 title: /CETCOMPAT (compatível com pilha de sombra CET)
-ms.date: 06/30/2020
+ms.date: 09/01/2020
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 35078ac9e6177e34562db14b30f4ef8f987d98bc
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813557"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281816"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (compatível com pilha de sombra CET)
 
@@ -45,7 +45,7 @@ A partir do Visual Studio 2019 versão 16,7:
 
 1. Selecione a propriedade **compatível com pilha de sombra CET** .
 
-1. No controle suspenso, escolha **`Yes (/CETCOMPAT)`** habilitar metadados de continuação de eh ou **`No (/CETCOMPAT:NO)`** para desabilitá-lo.
+1. No controle suspenso, escolha **`Yes (/CETCOMPAT)`** marcar o binário como compatível com pilha de sombra CET ou **`No (/CETCOMPAT:NO)`** para marcá-lo como não compatível.
 
 Em versões anteriores do Visual Studio 2019:
 
@@ -53,12 +53,12 @@ Em versões anteriores do Visual Studio 2019:
 
 1. Selecione a **Configuration Properties**  >  página de propriedade da linha de comando do**vinculador**de propriedades de configuração  >  **Command Line** .
 
-1. No controle de edição de **Opções adicionais** , adicione *`/CETCOMPAT`* para habilitar os metadados de continuação de eh ou *`/CETCOMPAT:NO`* desabilitá-lo explicitamente.
+1. No controle de edição de **Opções adicionais** , adicione *`/CETCOMPAT`* para marcar o binário como compatível com a pilha de sombra CET ou *`/CETCOMPAT:NO`* marcá-la explicitamente como não compatível.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
 Essa opção não tem um equivalente programático.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Opções do vinculador](linker-options.md)

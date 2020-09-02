@@ -1,7 +1,7 @@
 ---
 title: Opções do vinculador MSVC
 description: Uma lista das opções com suporte pelo vinculador de LINK da Microsoft.
-ms.date: 02/09/2020
+ms.date: 09/01/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 0d85361b8d4b5896d9ed7beae0d310fe28dc98e9
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257540"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281790"
 ---
 # <a name="linker-options"></a>Opções do vinculador
 
@@ -23,11 +23,11 @@ LINK.exe vincula arquivos de objeto e bibliotecas de formato COFF (Common Object
 
 A tabela a seguir lista opções para LINK.exe. Para obter mais informações sobre LINK, consulte:
 
-- [Opções de LINK controladas pelo compilador](compiler-controlled-link-options.md)
+- [Opções de LINK controladas por compilador](compiler-controlled-link-options.md)
 
 - [Arquivos de entrada de LINK](link-input-files.md)
 
-- [Saída de LINK](link-output.md)
+- [Saída do LINK](link-output.md)
 
 - [Palavras reservadas](reserved-words.md)
 
@@ -49,6 +49,7 @@ Você pode usar o [Comentário](../../preprocessor/comment-c-cpp.md) pragma para
 |[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)|Especifica que um módulo MSIL (Microsoft Intermediate Language) deve ser importado para o assembly.|
 |[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)|Insere um arquivo de recurso gerenciado em um assembly.|
 |[/BASE](base-base-address.md)|Define um endereço básico para o programa.|
+|[/CETCOMPAT](cetcompat.md)|Marca o binário como compatível com a pilha de sombra CET.|
 |[/CGTHREADS](cgthreads-compiler-threads.md)|Define o número de threads cl.exe a serem usados na otimização e na geração do código quando a geração do código de tempo de vinculação é especificada.|
 |[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md)|Define o tipo (IJW, puro ou seguro) de uma imagem do CLR.|
 |[/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Preserva o código de erro mais recente de funções chamadas por meio do mecanismo P/Invoke.|
@@ -72,13 +73,13 @@ Você pode usar o [Comentário](../../preprocessor/comment-c-cpp.md) pragma para
 |[/FIXED](fixed-fixed-base-address.md)|Cria um programa que só pode ser carregado em seu endereço básico preferido.|
 |[/FORCE](force-force-file-output.md)|Força a conclusão de um link mesmo com símbolos não resolvidos ou símbolos definidos mais de uma vez.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Cria uma imagem que pode receber um hotpatch.|
-|[/GENPROFILE,/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Essas duas opções especificam a geração de um arquivo de *`.pgd`* pelo vinculador para dar suporte à otimização guiada por perfil (PGO). /GENPROFILE e/FASTGENPROFILE usam parâmetros padrão diferentes.|
+|[/GENPROFILE,/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Essas duas opções especificam a geração de um *`.pgd`* arquivo pelo vinculador para dar suporte à otimização guiada por perfil (PGO). /GENPROFILE e/FASTGENPROFILE usam parâmetros padrão diferentes.|
 |[/GUARD](guard-enable-guard-checks.md)|Habilita a proteção do protetor de fluxo de controle.|
 |[/HEAP](heap-set-heap-size.md)|Define o tamanho do heap, em bytes.|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|Especifica o suporte para ASLR (Address Space Layout Randomization) de 64 bits de alta entropia.|
-|[/IDLOUT](idlout-name-midl-output-files.md)|Especifica o nome do arquivo de *`.idl`* e outros arquivos de saída de MIDL.|
+|[/IDLOUT](idlout-name-midl-output-files.md)|Especifica o nome do *`.idl`* arquivo e outros arquivos de saída de MIDL.|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|Suprime a saída de avisos do vinculador especificado.|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Impede o processamento de informações de atributo em um arquivo de *`.idl`* .|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Impede o processamento de informações de atributo em um *`.idl`* arquivo.|
 |[/IMPLIB](implib-name-import-library.md)|Substitui o nome da biblioteca de importação padrão.|
 |[/INCLUDE](include-force-symbol-references.md)|Força referências de símbolo.|
 |[/INCREMENTAL](incremental-link-incrementally.md)|Controla a vinculação incremental.|
@@ -92,7 +93,7 @@ Você pode usar o [Comentário](../../preprocessor/comment-c-cpp.md) pragma para
 |[/LTCG](ltcg-link-time-code-generation.md)|Especifica a geração do código de tempo de vinculação.|
 |[/MACHINE](machine-specify-target-platform.md)|Especifica a plataforma de destino.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Cria um arquivo de manifesto lado a lado e, como opção, o insere no binário.|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Especifica uma seção \<dependentAssembly > no arquivo de manifesto.|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Especifica uma \<dependentAssembly> seção no arquivo de manifesto.|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|Altera o nome padrão do arquivo de manifesto.|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|Especifica um arquivo de entrada do manifesto para o vinculador processar e inserir no binário. É possível usar essa opção várias vezes para especificar mais de um arquivo de entrada do manifesto.|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Especifica se as informações do UAC (Controle de Conta de Usuário) estão inseridas no manifesto do programa.|
@@ -112,19 +113,19 @@ Você pode usar o [Comentário](../../preprocessor/comment-c-cpp.md) pragma para
 |[/PDB](pdb-use-program-database.md)|Cria um arquivo PDB.|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Usa um local alternativo para salvar um arquivo PDB.|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Cria um arquivo PDB que não tem nenhum símbolo privado.|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Especifica um arquivo de *`.pgd`* para otimizações guiadas por perfil.|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Especifica um *`.pgd`* arquivo para otimizações guiadas por perfil.|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Obsoleto** Cria uma compilação instrumentada PGO thread-safe.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferramentas de desempenho.|
-|[/RELEASE](release-set-the-checksum.md)|Define a soma de verificação no cabeçalho *`.exe`* .|
+|[/RELEASE](release-set-the-checksum.md)|Define a soma de verificação no *`.exe`* cabeçalho.|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Especifica que a imagem conterá uma tabela de manipuladores de exceção segura.|
 |[/SECTION](section-specify-section-attributes.md)|Substitui os atributos de uma seção.|
 |[/SOURCELINK](sourcelink.md)|Especifica um arquivo funcionalidade sourcelink a ser adicionado ao PDB.|
 |[/STACK](stack-stack-allocations.md)|Define o tamanho da pilha, em bytes.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Anexa um programa stub MS-DOS a um programa Win32.|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Informa ao sistema operacional como executar o arquivo de *`.exe`* .|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Informa ao sistema operacional como executar o *`.exe`* arquivo.|
 |[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Instrui o sistema operacional a copiar a saída do vinculador para um arquivo de permuta antes de ser executado.|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Especifica a ID de recurso da biblioteca de tipos gerada pelo vinculador.|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Especifica o nome do arquivo de *`.tlb`* e outros arquivos de saída de MIDL.|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Especifica o nome do *`.tlb`* arquivo e outros arquivos de saída de MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Cria um aplicativo projetado especialmente para ser executado no Terminal Server.|
 |[/USEPROFILE](useprofile.md)|Usa dados de treinamento de Otimização Guiada por perfil para criar uma imagem otimizada.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Imprime mensagens de andamento do vinculador.|
@@ -141,5 +142,5 @@ Você pode usar o [Comentário](../../preprocessor/comment-c-cpp.md) pragma para
 
 ## <a name="see-also"></a>Confira também
 
-[Referência de build do C/C++](c-cpp-building-reference.md)\
+[Referência de compilação do C/C++](c-cpp-building-reference.md)\
 [Referência de vinculador MSVC](linking.md)
