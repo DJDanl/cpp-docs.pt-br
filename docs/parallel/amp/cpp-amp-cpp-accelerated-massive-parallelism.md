@@ -5,18 +5,18 @@ helpviewer_keywords:
 - C++ AMP (see C++ Accelerated Massive Parallelism)
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
-ms.openlocfilehash: 516b69a0371ceb9365e79d5465879711289076c0
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 243c476b6536278eb09b26b24becb65276d6e48a
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404854"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427628"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 
 C++ AMP (C++ Accelerated Massive Parallelism) acelera a execução do seu código C++ aproveitando o hardware paralelo de dados que normalmente está presente como uma GPU (unidade de processamento gráfico) em uma placa gráfica discreta. O modelo de programação de C++ AMP inclui suporte para matrizes multidimensionais, indexação, transferência de memória e colocação em blocos. Ele também inclui uma biblioteca de funções matemáticas. Você pode usar C++ AMP extensões de idioma para controlar como os dados são movidos da CPU para a GPU e de volta.
 
-## <a name="related-topics"></a>Tópicos Relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 |Título|Descrição|
 |-----------|-----------------|
@@ -37,6 +37,6 @@ C++ AMP (C++ Accelerated Massive Parallelism) acelera a execução do seu códig
 
 ## <a name="other-resources"></a>Outros recursos
 
-[Programação paralela no blog de código nativo](https://go.microsoft.com/fwlink/p/?linkid=238472)<br/>
-[C++ AMP projetos de exemplo para download](https://go.microsoft.com/fwlink/p/?linkid=248508)<br/>
+[Programação paralela no blog de código nativo](/archive/blogs/nativeconcurrency/)<br/>
+[C++ AMP projetos de exemplo para download](/archive/blogs/nativeconcurrency/c-amp-sample-projects-for-download)<br/>
 [Analisando C++ AMP código com o Visualizador de simultaneidade](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)

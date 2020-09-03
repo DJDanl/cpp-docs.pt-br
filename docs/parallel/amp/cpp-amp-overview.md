@@ -8,18 +8,18 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222752"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427719"
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 
 A C++ Accelerated Massive Parallelism (C++ AMP) acelera a execução do código C++ aproveitando o hardware de dados paralelos, como uma GPU (unidade de processamento gráfico) em uma placa gráfica discreta. Usando C++ AMP, você pode codificar algoritmos de dados multidimensionais para que a execução possa ser acelerada usando paralelismo em hardware heterogêneo. O modelo de programação do C++ AMP inclui matrizes multidimensionais, indexação, transferência de memória, agrupamento lado a lado e uma biblioteca de funções matemáticas. Você pode usar C++ AMP extensões de idioma para controlar como os dados são movidos da CPU para a GPU e de volta, para que você possa melhorar o desempenho.
 
-## <a name="system-requirements"></a>Requisitos do Sistema
+## <a name="system-requirements"></a>Requisitos de sistema
 
 - Windows 7 ou posterior
 
@@ -238,7 +238,7 @@ A tabela a seguir resume as semelhanças e diferenças entre as `array` `array_v
 
 Memória compartilhada é a memória que pode ser acessada pela CPU e pelo acelerador. O uso da memória compartilhada elimina ou reduz significativamente a sobrecarga de copiar dados entre a CPU e o acelerador. Embora a memória seja compartilhada, ela não pode ser acessada simultaneamente pela CPU e pelo acelerador, e fazer isso causa um comportamento indefinido.
 
-`array`os objetos podem ser usados para especificar o controle refinado sobre o uso de memória compartilhada se o acelerador associado der suporte a ele. Se um acelerador dá suporte à memória compartilhada é determinado pela propriedade de [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) do acelerador, que retorna **`true`** quando há suporte para a memória compartilhada. Se houver suporte para memória compartilhada, a [enumeração de access_type](reference/concurrency-namespace-enums-amp.md#access_type) padrão para alocações de memória no acelerador será determinada pela `default_cpu_access_type` propriedade. Por padrão, `array` e os `array_view` objetos assumem o mesmo `access_type` que o primário associado `accelerator` .
+`array` os objetos podem ser usados para especificar o controle refinado sobre o uso de memória compartilhada se o acelerador associado der suporte a ele. Se um acelerador dá suporte à memória compartilhada é determinado pela propriedade de [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) do acelerador, que retorna **`true`** quando há suporte para a memória compartilhada. Se houver suporte para memória compartilhada, a [enumeração de access_type](reference/concurrency-namespace-enums-amp.md#access_type) padrão para alocações de memória no acelerador será determinada pela `default_cpu_access_type` propriedade. Por padrão, `array` e os `array_view` objetos assumem o mesmo `access_type` que o primário associado `accelerator` .
 
 Ao definir a propriedade [array:: Cpu_access_type data member](reference/array-class.md#cpu_access_type) de um `array` explicitamente, você pode exercitar o controle refinado sobre como a memória compartilhada é usada, para que você possa otimizar o aplicativo para as características de desempenho do hardware, com base nos padrões de acesso à memória de seus kernels de computação. Um `array_view` reflete o mesmo `cpu_access_type` que o `array` que está associado; ou, se o array_view for construído sem uma fonte de dados, seu `access_type` refletirá o ambiente que primeiro faz com que ele aloque o armazenamento. Ou seja, se ele for acessado pela primeira vez pelo host (CPU), ele se comportará como se fosse criado em uma fonte de dados de CPU e compartilhará o `access_type` do `accelerator_view` associado pela captura; no entanto, se ele for acessado pela primeira vez por um `accelerator_view` , ele se comportará como se tivesse sido criado `array` em um criado `accelerator_view` e compartilhará o `array` `access_type` .
 
@@ -503,9 +503,9 @@ O Visualizador de simultaneidade inclui suporte para analisar o desempenho de C+
 
 O módulo e a divisão de inteiros não assinados têm desempenho significativamente melhor do que o módulo e a divisão de inteiros assinados. É recomendável que você use inteiros sem sinal quando possível.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Sintaxe de expressão lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Referência (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Programação paralela no blog de código nativo](https://go.microsoft.com/fwlink/p/?linkid=238472)
+[Programação paralela no blog de código nativo](/archive/blogs/nativeconcurrency/)
