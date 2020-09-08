@@ -1,5 +1,6 @@
 ---
 title: modf, modff, modfl
+description: Referência de API para modf, modff e modfl; que divide um valor de ponto flutuante em partes fracionárias e de inteiros.
 ms.date: 4/2/2020
 api_name:
 - modff
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216863"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556756"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -60,7 +61,7 @@ float modf( float x, float * intptr );  // C++ only
 long double modf( long double x, long double * intptr );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
 Valor de ponto flutuante.
@@ -68,9 +69,9 @@ Valor de ponto flutuante.
 *IntPtr*<br/>
 Ponteiro para a parte inteira armazenada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-Esta função retorna a parte fracionária com sinal de *x*. Nenhum erro é retornado.
+Esta função retorna a parte fracionária com sinal de *x*. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -86,7 +87,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|&\<math.h><br /><br /> C++: \<cmath> ou\<math.h>|
+|**modf**, **modff**, **modfl**|& \<math.h><br /><br /> C++: \<cmath> ou \<math.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

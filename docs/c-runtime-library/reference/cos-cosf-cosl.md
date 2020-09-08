@@ -1,6 +1,7 @@
 ---
 title: cos, cosf, cosl
-ms.date: 6/5/2020
+description: Referência de API para cos, cosf e COSL; que calculam o valor do cosseno de um número de ponto flutuante.
+ms.date: 08/31/2020
 api_name:
 - cos
 - cosf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0e723708076067cf4d2ed896542ac08406a87ee
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221920"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556795"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -54,30 +55,31 @@ Calcula o cosseno.
 double cos( double x );
 float cosf( float x );
 long double cosl( long double x );
-```
+#define cos(X) // Requires C11 or higher
 
-```cpp
 float cos( float x );  // C++ only
 long double cos( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Ângulo em radianos.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 O cosseno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|nenhuma|**_DOMAIN**|
+|± QNAN, IND|nenhum|**_DOMAIN**|
 |± INF|**Inválido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cos** que usam e retornam **`float`** **`long double`** valores. Em um programa C, o **cos** sempre usa e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cos** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, o **cos** sempre toma e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `cos()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|---------------------|-|
 |**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **cos ()** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
