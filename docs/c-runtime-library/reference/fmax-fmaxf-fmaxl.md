@@ -1,6 +1,7 @@
 ---
 title: fmax, fmaxf, fmaxl
-ms.date: 04/05/2018
+description: Referência de API para FMAX, fmaxf e fmaxl; que determina o maior de dois valores numéricos.
+ms.date: 9/1/2020
 api_name:
 - fmax
 - fmaxf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-ms.openlocfilehash: 27b495e9344ca7e2e3e061b19fee696ce2bdceb2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4f38db64b30598e7cfb4eb4d0f57dccf257dabc5
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957111"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556678"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 
@@ -71,23 +72,25 @@ long double fmaxl(
    long double x,
    long double y
 );
+
+#define fmax(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O primeiro valor a ser comparado.
 
-*y*<br/>
+*Iar*\
 O segundo valor a ser comparado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, retorna o maior de *x* ou *y*. O valor retornado é exato e não depende de nenhuma forma de arredondamento.
 
 Caso contrário, pode retornar um dos seguintes valores:
 
-|Problema|Valor de|
+|Problema|Retorno|
 |-----------|------------|
 |*x* = Nan|*y*|
 |*y* = Nan|*x*|
@@ -97,17 +100,20 @@ Essa função não usa os erros especificados em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Uma vez que C++ permite sobrecargas, é possível chamar sobrecargas de fmax que utilizam e retornam tipos double flutuantes e longos. Em um programa C, fmax sempre usa e retorna um double.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de Fmax que usam e retornam `float` `long double` tipos. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, o `fmax` sempre usa e retorna um Double.
+
+Se você usar a \<tgmath.h> `fmax()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**fmax**, **fmaxf**, **fmaxl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Fmax**, **fmaxf**, **fmaxl**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **Fmax** | \<tgmath.h> ||
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [fmin, fminf, fminl](fmin-fminf-fminl.md)<br/>

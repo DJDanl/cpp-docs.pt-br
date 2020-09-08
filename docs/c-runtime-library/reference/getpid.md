@@ -1,5 +1,6 @@
 ---
 title: _getpid
+description: Referência de API para _getpid, que obtém a identificação do processo.
 ms.date: 11/04/2016
 api_name:
 - _getpid
@@ -26,19 +27,19 @@ helpviewer_keywords:
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-ms.openlocfilehash: b0848e5eb01f39c009fcdc650ea551f18e23c6fb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc2de8e0b6e87d04bd9ae29ce3a945c048af00e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954994"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556483"
 ---
 # <a name="_getpid"></a>_getpid
 
 Obtém a identificação do processo.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,9 +47,9 @@ Obtém a identificação do processo.
 int _getpid( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna a ID do processo obtida do sistema. Nenhum erro é retornado.
+Retorna a ID do processo obtida do sistema. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -85,7 +86,7 @@ int main( void )
 Process id: 3584
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_mktemp, _wmktemp](mktemp-wmktemp.md)<br/>

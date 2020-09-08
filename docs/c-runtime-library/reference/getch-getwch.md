@@ -1,5 +1,6 @@
 ---
 title: _getch, _getwch
+description: Referência de API para _getch e _getwch; que obtém um caractere do console sem eco.
 ms.date: 4/2/2020
 api_name:
 - _getch
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 39954cdbe507baad05055770df5db8859737b9d1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919628"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555847"
 ---
 # <a name="_getch-_getwch"></a>_getch, _getwch
 
@@ -58,7 +59,7 @@ wint_t _getwch( void );
 
 ## <a name="return-value"></a>Valor retornado
 
-Retorna o caractere lido. Nenhum erro é retornado.
+Retorna o caractere lido. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 

@@ -1,5 +1,6 @@
 ---
 title: Funcionalidades da biblioteca CRT
+description: Esses vários arquivos. lib que compõem as bibliotecas de tempo de execução do Microsoft C, bem como suas opções de compilador e diretivas de pré-processador associadas.
 ms.date: 08/20/2018
 helpviewer_keywords:
 - MSVCR71.dll
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: a350e2c45d9ccf83fb09a76f43b63a6b17273cff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 20261b542f64f565421cc34dfa0bfbe01e8fa53d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438536"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555560"
 ---
 # <a name="crt-library-features"></a>Funcionalidades da biblioteca CRT
 
@@ -35,7 +36,7 @@ A partir do Visual Studio 2015, o CRT foi refatorado em novos binários. O UCRT 
 
 A tabela a seguir lista as bibliotecas que implementam o UCRT.
 
-|Biblioteca|DLL associada|Características|{1&gt;Opção&lt;1}|Diretivas do pré-processador|
+|Biblioteca|DLL associada|Características|Opção|Diretivas do pré-processador|
 |-------------|--------------------|---------------------|------------|-----------------------------|
 |libucrt.lib|Nenhum|Vincula estaticamente o UCRT no código.|**/MT**|_MT|
 |libucrtd.lib|Nenhum|Versão de depuração do UCRT para vinculação estática. Não redistribuível.|**/MTd**|_DEBUG, _MT|
@@ -46,12 +47,12 @@ A biblioteca vcruntime contém códigos específicos à implementação do CRT n
 
 Esta tabela lista as bibliotecas que implementam a biblioteca vcruntime.
 
-|Biblioteca|DLL associada|Características|{1&gt;Opção&lt;1}|Diretivas do pré-processador|
+|Biblioteca|DLL associada|Características|Opção|Diretivas do pré-processador|
 |-------------|--------------------|---------------------|------------|-----------------------------|
 |libvcruntime.lib|Nenhum|Vinculada estaticamente no código.|**/MT**|_MT|
 |libvcruntimed.lib|Nenhum|Versão de depuração para vinculação estática. Não redistribuível.|**/MTd**|_MT, _DEBUG|
-|vcruntime.lib|vcruntime\<version>.dll|Biblioteca de importação de DLL do vcruntime.|**/MD**|_MT, _DLL|
-|vcruntimed.lib|vcruntime\<version>d.dll|Biblioteca de importação de DLL do vcruntime de Depuração. Não redistribuível.|**/MDd**|_DEBUG, _MT, _DLL|
+|vcruntime.lib|vcruntime \<version> . dll|Biblioteca de importação de DLL do vcruntime.|**/MD**|_MT, _DLL|
+|vcruntimed.lib|\<version>d.dll vcruntime|Biblioteca de importação de DLL do vcruntime de Depuração. Não redistribuível.|**/MDd**|_DEBUG, _MT, _DLL|
 
 > [!NOTE]
 > Quando a refatoração do UCRT ocorreu, as funções do Runtime de Simultaneidade foram movidas para concrt140.dll, que foi adicionado ao pacote redistribuível do C++. Essa DLL é necessária para os contêineres e algoritmos paralelos do C++, como `concurrency::parallel_for`. Além disso, a Biblioteca padrão do C++ requer que essa DLL no Windows XP dê suporte a primitivas de sincronização, porque o Windows XP não tem variáveis de condição.
@@ -60,14 +61,14 @@ O código que inicializa o CRT está em uma das várias bibliotecas, com base no
 
 Esta tabela lista as bibliotecas que implementam a inicialização e o encerramento do CRT.
 
-|Biblioteca|Características|{1&gt;Opção&lt;1}|Diretivas do pré-processador|
+|Biblioteca|Características|Opção|Diretivas do pré-processador|
 |-------------|---------------------|------------|-----------------------------|
 |libcmt.lib|Vincula estaticamente a inicialização nativa do CRT no código.|**/MT**|_MT|
 |libcmtd.lib|Vincula estaticamente a versão de Depuração da inicialização nativa do CRT. Não redistribuível.|**/MTd**|_DEBUG, _MT|
 |msvcrt.lib|Biblioteca estática da inicialização nativa do CRT para uso com o UCRT e o vcruntime da DLL.|**/MD**|_MT, _DLL|
 |msvcrtd.lib|Biblioteca estática da versão de Depuração da inicialização nativa do CRT para uso com o UCRT e o vcruntime da DLL. Não redistribuível.|**/MDd**|_DEBUG, _MT, _DLL|
-|msvcmrt.lib|Biblioteca estática da inicialização nativa e gerenciada mista do CRT para uso com o UCRT e o vcruntime da DLL.|**/clr**||
-|msvcmrtd.lib|Biblioteca estática da versão de Depuração da inicialização nativa e gerenciada mista do CRT para uso com o UCRT e o vcruntime da DLL. Não redistribuível.|**/clr**||
+|msvcmrt.lib|Biblioteca estática da inicialização nativa e gerenciada mista do CRT para uso com o UCRT e o vcruntime da DLL.|**/CLR**||
+|msvcmrtd.lib|Biblioteca estática da versão de Depuração da inicialização nativa e gerenciada mista do CRT para uso com o UCRT e o vcruntime da DLL. Não redistribuível.|**/CLR**||
 |msvcurt.lib|Biblioteca estática **Preterida** para CRT gerenciado puro.|**/clr:pure**||
 |msvcurtd.lib|Biblioteca estática **Preterida** para a versão de Depuração do CRT gerenciado puro. Não redistribuível.|**/clr:pure**||
 
@@ -77,22 +78,22 @@ O uso do CRT vinculado estaticamente indica que todas as informações de estado
 
 Como uma DLL compilada por meio da vinculação a um CRT estático terá seu próprio estado de CRT, não é recomendável vincular estaticamente ao CRT em uma DLL, a menos que as consequências dessa ação sejam especificamente desejadas e compreendidas. Por exemplo, se você chamar [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) em um executável que carrega a DLL vinculada a seu próprio CRT estático, as exceções de hardware geradas pelo código na DLL não serão capturadas pelo conversor, mas as exceções de hardware geradas pelo código no executável principal serão capturadas.
 
-Se estiver usando a opção **/clr** do compilador, o código será vinculado a uma biblioteca estática, msvcmrt.lib. A biblioteca estática fornece um proxy entre o código gerenciado e o CRT nativo. Não é possível usar o CRT vinculado estaticamente (opções **/MT** ou **/MTd**) com **/clr**. Em vez disso, use as bibliotecas vinculadas dinamicamente ( **/MD** ou **/MDd**). As bibliotecas de CRT gerenciado puro são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+Se estiver usando a opção **/clr** do compilador, o código será vinculado a uma biblioteca estática, msvcmrt.lib. A biblioteca estática fornece um proxy entre o código gerenciado e o CRT nativo. Não é possível usar o CRT vinculado estaticamente (opções **/MT** ou **/MTd**) com **/clr**. Em vez disso, use as bibliotecas vinculadas dinamicamente (**/MD** ou **/MDd**). As bibliotecas de CRT gerenciado puro são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 Para obter mais informações sobre o uso do CRT com **/clr**, confira [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md).
 
 Para compilar uma versão de depuração de seu aplicativo, o sinalizador [_DEBUG](../c-runtime-library/debug.md) deve estar definido e o aplicativo deve estar vinculado a uma versão de depuração de uma dessas bibliotecas. Para obter mais informações sobre como usar as versões de depuração dos arquivos de biblioteca, consulte [Técnicas de depuração do CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-Essa versão do CRT não está em conformidade total com o padrão C99. Especificamente, não há suporte para o cabeçalho \<tgmath.h> nem para as macros de pragma CX_LIMITED_RANGE/FP_CONTRACT. Alguns elementos, como o significado dos especificadores de parâmetro em funções de E/S padrão, usam interpretações herdadas por padrão. É possível usar as opções de conformidade do compilador /Zc e especificar as opções do vinculador para controlar alguns aspectos de conformidade da biblioteca,
+Essa versão do CRT não está em conformidade total com o padrão C99. Em particular, \<tgmath.h> não há suporte para o cabeçalho e as macros de pragma CX_LIMITED_RANGE/FP_CONTRACT. Alguns elementos, como o significado dos especificadores de parâmetro em funções de E/S padrão, usam interpretações herdadas por padrão. Você pode usar as opções de conformidade do compilador do/Zc e especificar as opções do vinculador para controlar alguns aspectos da conformidade da biblioteca.
 
 ## <a name="c-standard-library"></a>Biblioteca Padrão C++
 
-|Biblioteca Padrão C++|Características|{1&gt;Opção&lt;1}|Diretivas do pré-processador|
+|Biblioteca Padrão C++|Características|Opção|Diretivas do pré-processador|
 |----------------------------|---------------------|------------|-----------------------------|
 |libcpmt.lib|Multi-threaded, vínculo estático|**/MT**|_MT|
-|msvcprt.lib|Multi-threaded, vínculo dinâmico (biblioteca de importação para MSVCP*versão*.dll)|**/MD**|_MT, _DLL|
+|msvcprt.lib|Link dinâmico multithread (biblioteca de importação para MSVCP*version*. dll)|**/MD**|_MT, _DLL|
 |libcpmtd.lib|Multi-threaded, vínculo estático|**/MTd**|_DEBUG, _MT|
-|msvcprtd.lib|Multi-threaded, vínculo dinâmico (biblioteca de importação para MSVCP*versão*D.DLL)|**/MDd**|_DEBUG, _MT, _DLL|
+|msvcprtd.lib|Link dinâmico multithread (biblioteca de importação para*versão* MSVCPD.DLL)|**/MDd**|_DEBUG, _MT, _DLL|
 
 Ao compilar uma versão de lançamento do projeto, uma das bibliotecas básicas em tempo de execução C (libcmt.lib, msvcmrt.lib, msvcrt.lib) é vinculada por padrão, dependendo da opção do compilador escolhida (multi-threaded, DLL, /clr). Quando você inclui um dos [arquivos de cabeçalho da Biblioteca Padrão C++](../standard-library/cpp-standard-library-header-files.md) no código, uma Biblioteca Padrão C++ é vinculada automaticamente pelo Visual C++ em tempo de compilação. Por exemplo:
 
@@ -112,6 +113,6 @@ Também é possível evitar alguns desses problemas, se todas as imagens em seu 
 
 É necessário tomar algum cuidado caso o seu programa transmita determinados recursos do CRT (como identificadores de arquivos, localidades e variáveis de ambiente) em limites DLL, mesmo ao usar a mesma versão do CRT. Para obter mais informações sobre os problemas envolvidos e como resolvê-los, consulte [Erros potenciais ao passar objetos do CRT em limites da DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)
+- [Referência da biblioteca de tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)

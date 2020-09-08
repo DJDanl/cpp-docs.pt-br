@@ -1,6 +1,7 @@
 ---
 title: _InterlockedDecrement funções intrínsecas
-ms.date: 09/02/2019
+description: Funções intrínsecas do compilador C/C++ da Microsoft para decremento intercadeado.
+ms.date: 09/03/2020
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,70 +45,68 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b3ca624ba54f70750ecc303fb44f4fa242b4edc2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857912"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556328"
 ---
-# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement funções intrínsecas
+# <a name="_interlockeddecrement-intrinsic-functions"></a>`_InterlockedDecrement` funções intrínsecas
 
-**Seção específica da Microsoft**
-
-Fornece suporte intrínseco do compilador para a função [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) do Win32 SDK do Windows.
+Fornece suporte intrínseco do compilador para a função [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) do Win32 SDK do Windows. As `_InterlockedDecrement` funções intrínsecas são **específicas da Microsoft**.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```C
 long _InterlockedDecrement(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_acq(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_rel(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_nf(
-   long * lpAddend
+   long volatile * lpAddend
 );
 short _InterlockedDecrement16(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_acq(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_rel(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_nf(
-   short * lpAddend
+   short volatile * lpAddend
 );
 __int64 _InterlockedDecrement64(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_acq(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_rel(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_nf(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *lpAddend*
-[entrada, saída] Ponteiro para a variável a ser decrementada.
+*lpAddend*\
+[entrada, saída] Ponteiro volátil para a variável a ser decrementada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
 
 O valor retornado é o valor diminuído resultante.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Intrinsic|Arquitetura|
 |---------------|------------------|
@@ -115,7 +114,7 @@ O valor retornado é o valor diminuído resultante.
 |`_InterlockedDecrement64`|ARM, x64, ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<intrin.h>
 
 ## <a name="remarks"></a>Comentários
 
@@ -123,7 +122,7 @@ Há diversas variações em `_InterlockedDecrement` que têm base no tipo de dad
 
 Enquanto a função `_InterlockedDecrement` opera nos valores inteiros de 32 bits, `_InterlockedDecrement16` opera em valores inteiros de 16 bits `_InterlockedDecrement64` opera em valores inteiros de 64 bits.
 
-Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos com um sufixo de `_nf` ("sem limite") não agem como uma barreira de memória.
+Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos com um `_nf` sufixo ("sem limite") não agem como uma barreira de memória.
 
 A variável apontada para o parâmetro `lpAddend` deve estar alinhada em um limite de 32 bits; caso contrário, essa função falhará em sistemas de multiprocessor x86 e em qualquer sistema não x86. Para obter mais informações, consulte [alinhar](../cpp/align-cpp.md).
 
@@ -197,10 +196,8 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
-**Fim da seção específica da Microsoft**
+## <a name="see-also"></a>Confira também
 
-## <a name="see-also"></a>Consulte também
-
-\ [intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
-\ [palavras-chave](../cpp/keywords-cpp.md)
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
+[Palavras-chave](../cpp/keywords-cpp.md)\
 [conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

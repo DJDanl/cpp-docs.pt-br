@@ -1,5 +1,6 @@
 ---
 title: imaxabs
+description: Referência de API para imaxabs, que calcula o valor absoluto de um inteiro de qualquer tamanho.
 ms.date: 04/05/2018
 api_name:
 - imaxabs
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 599e8a0cb20f24bda24201be40fa1acc0ade993c
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954685"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555495"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -48,9 +49,9 @@ intmax_t imaxabs(
 *n*<br/>
 Valor inteiro.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
-A função **imaxabs** retorna o valor absoluto do argumento. Nenhum erro é retornado.
+A função **imaxabs** retorna o valor absoluto do argumento. Não há nenhum retorno de erro.
 
 > [!NOTE]
 > Como o intervalo de inteiros negativos que podem ser representados usando **intmax_t** é maior do que o intervalo de inteiros positivos que podem ser representados, é possível fornecer um argumento para **imaxabs** que não pode ser convertido. Se o valor absoluto do argumento não puder ser representado pelo tipo de retorno, o comportamento de **imaxabs** será indefinido.
@@ -61,9 +62,9 @@ A função **imaxabs** retorna o valor absoluto do argumento. Nenhum erro é ret
 |-------------|---------------------|
 |**imaxabs**|\<inttypes.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -91,10 +92,10 @@ int main(int argc, char *argv[])
 The absolute value of -9223372036854775806 is 9223372036854775806
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [_cabs](cabs.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>

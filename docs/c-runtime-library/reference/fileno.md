@@ -1,5 +1,6 @@
 ---
 title: _fileno
+description: Referência de API para _fileno; que obtém o descritor de arquivo associado a um fluxo.
 ms.date: 4/2/2020
 api_name:
 - _fileno
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c07f446cc3c5c29fb102a74b2b095957589eab46
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919471"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554845"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -53,9 +54,9 @@ int _fileno(
 *fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-**_fileno** retorna o descritor de arquivo. Nenhum erro é retornado. O resultado será indefinido se o *fluxo* não especificar um arquivo aberto. Se o fluxo for **nulo**, **_fileno** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor -1 e definirá **errno** como **EINVAL**.
+**_fileno** retorna o descritor de arquivo. Não há nenhum retorno de erro. O resultado será indefinido se o *fluxo* não especificar um arquivo aberto. Se o fluxo for **nulo**, **_fileno** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor -1 e definirá **errno** como **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

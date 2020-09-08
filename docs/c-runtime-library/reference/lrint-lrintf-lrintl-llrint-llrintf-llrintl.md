@@ -1,6 +1,7 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 4/2/2020
+description: Referência de API para lrint (), lrintf (), lrintl (), llrint (), llrintf () e llrintl (); que arredonda o valor de ponto flutuante especificado para o valor integral mais próximo, usando o modo de arredondamento e a direção atuais.
+ms.date: 9/1/2020
 api_name:
 - lrint
 - lrintl
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f208c183400aac7a110bb6fd87398d4377fe8f06
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216902"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555014"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -105,14 +106,16 @@ long long int llrintf(
 long long int llrintl(
    long double x
 );
+
+#define lrint(X) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
-o valor a ser arredondado.
+*w.x.y.*\
+O valor a ser arredondado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, retorna o valor integral arredondado de *x*.
 
@@ -122,7 +125,9 @@ Se for bem-sucedido, retorna o valor integral arredondado de *x*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lrint** e **llrint** que usam **`float`** e os **`long double`** tipos. Em um programa C, **lrint** e **llrint** sempre tomam um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lrint** e **llrint** que usam **`float`** e os **`long double`** tipos. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **lrint** e **llrint** sempre tomam um **`double`** .
+
+Se você usar a \<tgmath.h> `llrint()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Se *x* não representar o equivalente de ponto flutuante de um valor integral, essas funções aumentarão **FE_INEXACT**.
 
@@ -135,9 +140,10 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+|macro **lrint** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Confira também
 
-[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)

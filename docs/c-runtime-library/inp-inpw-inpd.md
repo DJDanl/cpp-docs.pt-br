@@ -36,16 +36,16 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: aafcd633b2ee04c9ced1520d4ecd1520475d0fea
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825823"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556470"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>inp, _inp, inpw, _inpw, _inpd
 
-Entradas, de uma porta, um byte (`inp`, `_inp`), uma palavra (`inpw`, `_inpw`) ou uma palavra dupla (`_inpd`).
+Entradas, de uma porta, um byte ( `inp` , `_inp` ), uma palavra ( `inpw` , `_inpw` ) ou uma palavra dupla ( `_inpd` ).
 
 > [!IMPORTANT]
 > Essas funções estão obsoletas. A partir do Visual Studio 2015, eles não estão disponíveis no CRT. \
@@ -70,9 +70,9 @@ unsigned long _inpd(
 *Porto*\
 Número da porta de E/S.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-As funções retornam o byte, a palavra, ou as palavras duplas lidas de `port`. Nenhum erro é retornado.
+As funções retornam o byte, a palavra, ou as palavras duplas lidas de `port`. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -80,7 +80,7 @@ As funções `_inp`, `_inpw` e `_inpd` leem um byte, uma palavra e uma palavra d
 
 Como essas funções leem diretamente de uma porta de E/S, não é possível usá-las no código do usuário.
 
-Os `inp` nomes `inpw` e são nomes mais antigos e preteridos `_inp` para `_inpw` as funções e. Para obter mais informações, consulte [nomes de funções POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Os `inp` `inpw` nomes e são nomes mais antigos e preteridos para as `_inp` `_inpw` funções e. Para obter mais informações, consulte [nomes de funções POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Requisitos
 

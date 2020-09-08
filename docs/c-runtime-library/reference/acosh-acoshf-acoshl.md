@@ -1,6 +1,7 @@
 ---
 title: acosh, acoshf, acoshl
-ms.date: 4/2/2020
+description: Referência de API para ACOSH, acoshf e acoshl; que calculam o cosseno hiperbólico inverso de um valor de ponto flutuante.
+ms.date: 08/31/2020
 api_name:
 - acoshf
 - acosh
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef6d47ca07f96be84962303c13162b154086e5f2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220750"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555105"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -54,30 +55,31 @@ Calcula o cosseno hiperbólico inverso.
 double acosh( double x );
 float acoshf( float x );
 long double acoshl( long double x );
-```
+#define acosh(X) // Requires C11 or higher
 
-```cpp
 float acosh( float x );  // C++ only
 long double acosh( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **ACOSH** retornam o cosseno hyberbolic inverso (arco hiperbólico cosseno) de *x*. Essas funções são válidas no domínio *x* ≥ 1. Se *x* for menor que 1, `errno` será definido como `EDOM` e o resultado será um NaN silencioso. Se *x* for um erro Nan, indefinido ou infinito, o mesmo valor será retornado.
 
 |Entrada|Exceção SEH|Exceção `_matherr`|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|nenhuma|nenhuma|
-|*x* < 1|nenhuma|nenhuma|
+|± QNAN, IND, INF|nenhum|nenhum|
+|*x* < 1|nenhum|nenhum|
 
 ## <a name="remarks"></a>Comentários
 
-Ao usar o C++, você pode chamar sobrecargas de **ACOSH** que usam e retornam **`float`** **`long double`** valores. Em um programa C, **ACOSH** sempre leva e retorna **`double`** .
+Ao usar o C++, você pode chamar sobrecargas de **ACOSH** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **ACOSH** sempre leva e retorna **`double`** .
+
+Se você usar a \<tgmath.h> `acosh()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**ACOSH**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|macro **ACOSH ()** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

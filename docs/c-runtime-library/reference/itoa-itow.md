@@ -1,5 +1,6 @@
 ---
 title: _itoa, _itow funções
+description: Referência de API para _itoa e _itow; que converte um inteiro em uma cadeia de caracteres.
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +114,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c8d64dcc1efdb9371feb98d8674a7a2c41c7ab3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843489"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555457"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Converte um inteiro em uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [_itoa_s, _itow_s Functions](itoa-s-itow-s.md).
+Converte um inteiro em uma cadeia de caracteres. As versões mais seguras dessas funções estão disponíveis, consulte [_itoa_s _itow_s funções](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -177,7 +178,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
    int radix );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *value*<br/>
 Número a ser convertido.
@@ -193,7 +194,7 @@ Comprimento do buffer em unidades do tipo de caractere. Esse parâmetro é infer
 
 ## <a name="return-value"></a>Valor Retornado
 
-Cada uma dessas funções retorna um ponteiro para o *buffer*. Nenhum erro é retornado.
+Cada uma dessas funções retorna um ponteiro para o *buffer*. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 

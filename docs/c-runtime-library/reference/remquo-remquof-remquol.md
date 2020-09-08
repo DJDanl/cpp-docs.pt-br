@@ -1,6 +1,7 @@
 ---
 title: remquo, remquof, remquol
-ms.date: 4/2/2020
+description: Referência de API para remquo, remquof e remquol; que calculam o restante de dois valores inteiros e armazena um valor inteiro com o sinal e a magnitude aproximada do quociente em um local especificado em um parâmetro.
+ms.date: 9/1/2020
 api_name:
 - remquof
 - remquo
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d99204ad9a80c6320869cbb72aee905981a5224d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216785"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554962"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -51,25 +52,24 @@ Calcula o restante dos dois valores inteiros e armazena um valor inteiro com sin
 double remquo( double numer, double denom, int* quo );
 float remquof( float numer, float denom, int* quo );
 long double remquol( long double numer, long double denom, int* quo );
-```
+#define remquo(X, Y, INT_PTR) // Requires C11 or higher
 
-```cpp
 float remquo( float numer, float denom, int* quo ); /* C++ only */
 long double remquo( long double numer, long double denom, int* quo ); /* C++ only */
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*número*<br/>
+*número*\
 O numerador.
 
-*denom*<br/>
+*denom*\
 O denominador.
 
-*situação*<br/>
+*situação*\
 Um ponteiro para um inteiro para armazenar um valor que tem o sinal e magnitude aproximada do quociente.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 **remquo** retorna o restante de ponto flutuante do *x*  /  *y*. Se o valor de *y* for 0,0, **remquo** retornará Nan silencioso. Para obter informações sobre a representação de um NaN silencioso pela família **printf** , consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
@@ -77,7 +77,9 @@ Um ponteiro para um inteiro para armazenar um valor que tem o sinal e magnitude 
 
 A função **remquo** calcula o restante do ponto flutuante *f* de *x*  /  *y* de forma que *x*  =  *i* \* *y*  +  *f*, onde *eu* seja um inteiro, *f* tenha o mesmo sinal que *x*e o valor absoluto de *f* seja menor que o valor absoluto de *y*.
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **remquo** que usam e retornam **`float`** **`long double`** valores. Em um programa C, **remquo** sempre usa dois **`double`** argumentos e retorna um **`double`** .
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **remquo** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **remquo** sempre usa dois **`double`** argumentos e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `remquo()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |--------------|---------------------|-|
 |**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **remquo** | \<tgmath.h> ||
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
