@@ -1,6 +1,7 @@
 ---
 title: exp, expf, expl
-ms.date: 4/2/2020
+description: Referência de API para exp, expf e sol; que calculam o exponencial.
+ms.date: 08/31/2020
 api_name:
 - expf
 - expl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44652e5d06d842bd2eb2e280409a1e55fc66f582
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234166"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555885"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,14 +65,15 @@ float expf(
 long double expl(
    long double x
 );
+#define exp(z) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O valor de ponto flutuante para exponentiate a base do logaritmo natural *e* by.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **exp** retornam o valor exponencial do parâmetro de ponto flutuante, *x*, se for bem-sucedido. Ou seja, o resultado é *e*<sup>*x*</sup>, em que *e* é a base do logaritmo natural. No estouro, a função retorna INF (infinito) e no estouro negativo, **exp** retorna 0.
 
@@ -86,7 +88,9 @@ A função **exp** tem uma implementação que usa Streaming SIMD Extensions 2 (
 
 ## <a name="remarks"></a>Comentários
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **exp** que usam um **`float`** **`long double`** argumento ou. Em um programa C, **exp** sempre usa e retorna um **`double`** .
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **exp** que usam um **`float`** **`long double`** argumento ou. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **exp** sempre usa e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `exp()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -95,6 +99,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |--------------|---------------------|---|
 |**exp**, **expf**, **sol**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **exp**| \<tgmath.h> || 
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

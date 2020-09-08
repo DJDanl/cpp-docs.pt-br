@@ -1,6 +1,7 @@
 ---
 title: floor, floorf, floorl
-ms.date: 6/5/2020
+description: Referência de API para Floor, floorf e piso; que calcula o piso de um valor.
+ms.date: 9/1/2020
 api_name:
 - floorf
 - floorl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218671"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556730"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -64,26 +65,29 @@ float floorf(
 long double floorl(
    long double x
 );
+#define floor(X) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-As funções **Floor** retornam um valor de ponto flutuante que representa o maior inteiro que é menor ou igual a *x*. Nenhum erro é retornado.
+As funções **Floor** retornam um valor de ponto flutuante que representa o maior inteiro que é menor ou igual a *x*. Não há nenhum retorno de erro.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|nenhuma|_DOMAIN|
+|± QNAN,IND|nenhum|_DOMAIN|
 
 o **Floor** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **piso** que levam e retornam **`float`** **`long double`** valores. Em um programa C, o **Floor** sempre pega e retorna um **`double`** .
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **piso** que levam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, o **Floor** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `floor()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -92,6 +96,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
 |**piso**, **floorf**, **piso**|\<math.h>|
+|macro de **piso** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,6 @@
 ---
 title: setjmp
+description: Referência de API para setjmp; que salva o estado atual do programa.
 ms.date: 08/14/2018
 api_name:
 - setjmp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: beaf56a03c1bd157257d604bfd0ebefb219d0225
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3ea08e5379433e313e08870f735322b7d985aa64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226145"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555599"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -45,14 +46,14 @@ int setjmp(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *variável*<br/>
 Variável em que o ambiente é armazenado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-Retorna 0 depois de salvar o ambiente de pilha. Se **setjmp** retornar como resultado de uma `longjmp` chamada, ele retornará o argumento de *valor* de `longjmp` , ou se o argumento de *valor* de `longjmp` for 0, **setjmp** retornará 1. Nenhum erro é retornado.
+Retorna 0 depois de salvar o ambiente de pilha. Se **setjmp** retornar como resultado de uma `longjmp` chamada, ele retornará o argumento de *valor* de `longjmp` , ou se o argumento de *valor* de `longjmp` for 0, **setjmp** retornará 1. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 

@@ -1,5 +1,6 @@
 ---
 title: rand
+description: Referência de API para Rand, que gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente reproduzível.
 ms.date: 4/2/2020
 api_name:
 - rand
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 50c4f921c81ecad00abb19e6ce50158d450b170e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919523"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555326"
 ---
 # <a name="rand"></a>rand
 
-Gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente reproduzível. Uma versão mais programaticamente segura dessa função está disponível; consulte [rand_s](rand-s.md). Os números gerados por **Rand** não são criptograficamente seguros. Para uma geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções declaradas na biblioteca padrão C++ em [ \<>aleatórias ](../../standard-library/random.md).
+Gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente reproduzível. Uma versão mais programaticamente segura dessa função está disponível; consulte [rand_s](rand-s.md). Os números gerados por **Rand** não são criptograficamente seguros. Para geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções declaradas na biblioteca C++ Standard no [\<random>](../../standard-library/random.md) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,13 +51,13 @@ int rand( void );
 
 ## <a name="return-value"></a>Valor retornado
 
-**Rand** retorna um número pseudoaleatória, conforme descrito acima. Nenhum erro é retornado.
+**Rand** retorna um número pseudoaleatória, conforme descrito acima. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 
 A função **Rand** retorna um número inteiro pseudoaleatória no intervalo de 0 a **RAND_MAX** (32767). Use a função [srand](srand.md) para propagar o gerador de número de pseudoaleatória antes de chamar **Rand**.
 
-A função **Rand** gera uma sequência bem conhecida e não é apropriada para uso como uma função criptográfica. Para uma geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções declaradas na biblioteca padrão C++ em [ \<>aleatórias ](../../standard-library/random.md). Para obter informações sobre o que há **rand** de errado com \<rand e como o> aleatório resolve essas deficiências, consulte este vídeo intitulado [Rand considerado prejudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+A função **Rand** gera uma sequência bem conhecida e não é apropriada para uso como uma função criptográfica. Para geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções declaradas na biblioteca C++ Standard no [\<random>](../../standard-library/random.md) . Para obter informações sobre o que há de errado com **Rand** e como o \<random> resolve essas deficiências, consulte este vídeo intitulado [Rand considerado prejudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -64,7 +65,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**Rand**|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -140,6 +141,6 @@ int main( void )
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>
 [rand_s](rand-s.md)<br/>

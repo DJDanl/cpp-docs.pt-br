@@ -1,6 +1,7 @@
 ---
 title: fmod, fmodf, fmodl
-ms.date: 4/2/2020
+description: Referência de API para fmod, fmodf e fmodl; que calcula o restante do ponto flutuante.
+ms.date: 9/1/2020
 api_name:
 - fmod
 - fmodf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216967"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556080"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -68,14 +69,16 @@ long double fmodl(
    long double x,
    long double y
 );
+
+#define fmod(X, Y) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*, *y*<br/>
+*x*, *y*\
 Valores de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 **fmod** retorna o restante de ponto flutuante do *x*  /  *y*. Se o valor de *y* for 0,0, **fmod** retornará Nan silencioso. Para obter informações sobre a representação de um NaN silencioso pela família **printf** , consulte [printf](printf-printf-l-wprintf-wprintf-l.md).
 
@@ -83,7 +86,9 @@ Valores de ponto flutuante.
 
 A função **fmod** calcula o restante do ponto flutuante *f* de *x*  /  *y* de forma que *x*  =  *i* \* *y*  +  *f*, onde *eu* seja um inteiro, *f* tenha o mesmo sinal que *x*e o valor absoluto de *f* seja menor que o valor absoluto de *y*.
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **fmod** que levam e retornam **`float`** **`long double`** valores. Em um programa C, **fmod** sempre usa dois **`double`** argumentos e retorna um **`double`** .
+O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **fmod** que levam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **fmod** sempre usa dois **`double`** argumentos e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `fmod()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -92,6 +97,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
 |**fmod**, **fmodf**, **fmodl**|\<math.h>|
+|macro **fmod** | \<tgmath.h> |
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

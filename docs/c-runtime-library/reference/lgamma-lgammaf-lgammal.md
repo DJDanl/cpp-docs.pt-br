@@ -1,6 +1,7 @@
 ---
 title: lgamma, lgammaf, lgammal
-ms.date: 4/2/2020
+description: Referência de API para lGamma, lgammaf e lgammal; que determina o logaritmo natural do valor absoluto da função gama do valor especificado.
+ms.date: 9/1/2020
 api_name:
 - lgamma
 - lgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 202250f3575f61fcef1cf29a687b8fdf36e6db33
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218644"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555391"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -54,19 +55,18 @@ Determina o logaritmo natural do valor absoluto da função gama do valor especi
 double lgamma( double x );
 float lgammaf( float x );
 long double lgammal( long double x );
-```
+#define lgammal(X) // Requires C11 or higher
 
-```cpp
 float lgamma( float x ); //C++ only
 long double lgamma( long double x ); //C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O valor a ser computado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, retorna o logaritmo natural do valor absoluto da função gama de *x*.
 
@@ -83,7 +83,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lGamma** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, o **lGamma** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lGamma** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **lGamma** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `lgamma()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Se x for um número racional, essa função retornará o logaritmo do fatorial de (x-1).
 
@@ -94,6 +96,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**lGamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
+|macro **lGamma** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

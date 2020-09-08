@@ -1,6 +1,7 @@
 ---
 title: asin, asinf, asinl
-ms.date: 4/2/2020
+description: Referência de API para Asen, asinf e asenl; que calcula o arco seno de um valor de ponto flutuante.
+ms.date: 08/31/2020
 api_name:
 - asinf
 - asinl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7167debcfb605ab05720d9441943439ea9982324
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189435"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556652"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -51,19 +52,18 @@ Calcula o arco seno.
 double asin( double x );
 float asinf ( float x );
 long double asinl( long double x );
-```
+#define asin(X) // Requires C11 or higher
 
-```cpp
 float asin( float x );  // C++ only
 long double asin( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Valor cujo arco seno é calculado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 A função **Asen** retorna o arco seno (a função de seno inversa) de *x* no intervalo de-π/2 a π/2 radianos.
 
@@ -72,12 +72,14 @@ Por padrão, se *x* for menor que-1 ou maior que 1, **Asen** retornará um indef
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|**Inválido**|**_DOMAIN**|
-|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhum|**_DOMAIN**|
 |&#124;x&#124;>1|**Inválido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Asen** com **`float`** valores e **`long double`** . Em um programa C, **Asen** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Asen** com **`float`** valores e **`long double`** . Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **Asen** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `asin()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------|-|
 |**Asen**, **asinf**, **asenl**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **Asen ()** | \<tgmath.h> ||
 
 ## <a name="example"></a>Exemplo
 

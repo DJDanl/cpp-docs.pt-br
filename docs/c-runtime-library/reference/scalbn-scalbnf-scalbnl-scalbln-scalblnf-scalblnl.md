@@ -1,6 +1,7 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
-ms.date: 4/2/2020
+description: Referência de API para scalbn, scalbnf, scalbnl, scalbln, scalblnf e scalblnl; que multiplica um número de ponto flutuante por uma potência integral de `FLT_RADIX` .
+ms.date: 9/1/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a01811e5fcfb28c0557e0232d76649c867748b1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231371"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556665"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -80,18 +81,14 @@ long double scalbnl(
    long double x,
    int exp
 );
+
+#define scalbn(X, INT) // Requires C11 or higher
+
 double scalbln(
    double x,
    long exp
 );
-float scalbln(
-   float x,
-   long exp
-);  // C++ only
-long double scalbln(
-   long double x,
-   long exp
-);  // C++ only
+
 float scalblnf(
    float x,
    long exp
@@ -100,17 +97,28 @@ long double scalblnl(
    long double x,
    long exp
 );
+
+#define scalbln(X, LONG) // Requires C11 or higher
+
+float scalbln(
+   float x,
+   long exp
+);  // C++ only
+long double scalbln(
+   long double x,
+   long exp
+);  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Valor de ponto flutuante.
 
-*exp*<br/>
+*exp*\
 Expoente inteiro.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **scalbn** retornam o valor de *x* \* **FLT_RADIX**<sup>exp</sup> quando bem-sucedidas. No estouro (dependendo do sinal de *x*), **scalbn** retorna +/- **HUGE_VAL**; o valor **errno** é definido como **ERANGE**.
 
@@ -120,7 +128,9 @@ Para obter mais informações sobre **errno** e possíveis valores de retorno de
 
 **FLT_RADIX** é definido \<float.h> como a base do ponto flutuante nativo; em sistemas binários, ele tem um valor de 2 e **scalbn** é equivalente a [ldexp](ldexp.md).
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **scalbln** que levam e retornam **`float`** ou **`long double`** digitam. Em um programa C, **scalbn** sempre pega um **`double`** e um **`int`** e retorna um **`double`** , e **scalbln** sempre pega um **`double`** e um e **`long`** retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **scalbln** que levam e retornam **`float`** ou **`long double`** digitam. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **scalbn** sempre pega um **`double`** e um **`int`** e retorna um **`double`** , e **scalbln** sempre pega um **`double`** e um e **`long`** retorna um **`double`** .
+
+Se você usar as \<tgmath.h> `scalbn()` `scalbln` macros ou, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -129,6 +139,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
+|macro **scalbn () ou scalbln** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -1,6 +1,7 @@
 ---
 title: rint, rintf, rintl
-ms.date: 4/2/2020
+description: Referência de API para rimir, rintf e rintl; que arredondam um valor de ponto flutuante para o número inteiro mais próximo no formato de ponto flutuante.
+ms.date: 9/1/2020
 api_name:
 - rintf
 - rintl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 009f56de506b50f81502a2aad7632244b069d09a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ed1fa279694d3df75db5963e5a571d58299e415
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216759"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555339"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -51,30 +52,31 @@ Arredonda um valor de ponto flutuante para o inteiro mais próximo no formato de
 double rint( double x );
 float rintf( float x );
 long double rintl( long double x );
-```
+#define rint(X) // Requires C11 or higher
 
-```cpp
 float rint( float x );  // C++ only
 long double rint( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O valor do ponto flutuante a ser arredondado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-As funções **rimir** retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores intermediários são arredondados de acordo com a configuração atual do modo de arredondamento de ponto flutuante, o mesmo que as funções **nearbyint** . Ao contrário das funções **nearbyint** , as funções **rimir** podem gerar a **FE_INEXACT** exceção de ponto flutuante se o resultado for diferente no valor do argumento. Nenhum erro é retornado.
+As funções **rimir** retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores intermediários são arredondados de acordo com a configuração atual do modo de arredondamento de ponto flutuante, o mesmo que as funções **nearbyint** . Ao contrário das funções **nearbyint** , as funções **rimir** podem gerar a **FE_INEXACT** exceção de ponto flutuante se o resultado for diferente no valor do argumento. Não há nenhum retorno de erro.
 
 |Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|nenhuma|nenhuma|
-|Desnormalizado|EXCEPTION_FLT_UNDERFLOW|nenhuma|
+|± ∞, QNAN, IND|nenhum|nenhum|
+|Desnormalizado|EXCEPTION_FLT_UNDERFLOW|nenhum|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **rimir** que usam e retornam **`float`** **`long double`** valores. Em um programa C, o **rimir** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **rimir** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **rimir** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `rint()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -83,6 +85,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**rimir**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|macro **rimir** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

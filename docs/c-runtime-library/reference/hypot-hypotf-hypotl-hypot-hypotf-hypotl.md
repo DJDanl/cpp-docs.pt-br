@@ -1,6 +1,7 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 4/2/2020
+description: Referência de API para hypot, hypotf, hypotl, _hypot, _hypotf e _hypotl; que calculam o hipotenusa.
+ms.date: 9/1/2020
 api_name:
 - _hypotf
 - hypot
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 199e330dcd78c372a0279cac9f0e96cb47c561e8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919839"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556444"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -82,14 +83,15 @@ long double _hypotl(
    long double x,
    long double y
 );
+#define hypotf(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*, *y*<br/>
+*x*, *y*\
 Valores de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, **hypot** retornará o comprimento do hipotenusa; em Overflow, **hypot** retorna INF (infinito) e a variável **errno** é definida como **ERANGE**. Você pode usar **_matherr** para modificar o tratamento de erros.
 
@@ -97,9 +99,11 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-As funções **hypot** calculam o comprimento do hipotenusa de um triângulo à direita, considerando o comprimento dos dois lados *x* e *y* (em outras palavras, a raiz quadrada *de x*<sup>2</sup> + *y*<sup>2</sup>).
+As funções **hypot** calculam o comprimento do hipotenusa de um triângulo à direita, considerando o comprimento dos dois lados *x* e *y* (em outras palavras, a raiz quadrada de *x*<sup>2</sup>  +  *y*<sup>2</sup>).
 
 As versões das funções que têm sublinhados iniciais são fornecidas para compatibilidade com os padrões anteriores. Seu comportamento é idêntico ao das versões que não têm sublinhados iniciais. É recomendável usar as versões sem sublinhados iniciais para o novo código.
+
+Se você usar a \<tgmath.h> `hypot()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -108,6 +112,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|macro **hypot** | \<tgmath.h> |
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -135,6 +140,6 @@ If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [_matherr](matherr.md)<br/>

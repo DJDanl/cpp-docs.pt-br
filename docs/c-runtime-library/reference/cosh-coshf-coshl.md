@@ -1,6 +1,7 @@
 ---
 title: cosh, coshf, coshl
-ms.date: 4/2/2020
+description: Referência de API para cosh, coshf e coshl; que calcula o cosseno hiperbólico de um valor de ponto flutuante.
+ms.date: 08/31/2020
 api_name:
 - cosh
 - coshf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: fb171d622d5bc187342054a74e8aa19f83c3c560
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ea4a5b77850e196c29519ac49b589a0c2b6c9a7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213600"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555521"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -50,19 +51,18 @@ Calcula o cosseno hiperbólico.
 double cosh( double x );
 float coshf( float x );
 long double coshl( long double x );
-```
+#define cosh(X) // Requires C11 or higher
 
-```cpp
 float cosh( float x );  // C++ only
 long double cosh( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Ângulo em radianos.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 O cosseno hiperbólico de *x*.
 
@@ -70,12 +70,14 @@ Por padrão, se o resultado for muito grande em uma chamada **cosh**, **coshf**o
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhum|**_DOMAIN**|
 |*x* ≥ 7.104760 e + 002|**INexato** + **Estouro**|**CONTRA**|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cosh** que usam e retornam **`float`** **`long double`** valores. Em um programa C, o **cosh** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cosh** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **cosh** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `cosh()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -84,6 +86,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------|-|
 |**coshf**, **COSL**, **coshl**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **coshf ()** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,6 @@
 ---
 title: _chgsign, _chgsignf, _chgsignl
+description: Referência de API para _chgsign, _chgsignf e _chgsignl; que reverte o sinal de um argumento de ponto flutuante.
 ms.date: 04/05/2018
 api_name:
 - _chgsignl
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc934f3c2d22cc36abe5f31f7d64e0674ccdd3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943132"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555191"
 ---
 # <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
@@ -62,9 +63,9 @@ long double _chgsignl(
 *x*<br/>
 O valor de ponto flutuante a ser alterado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
-As funções **_chgsign** retornam um valor que é igual ao argumento de ponto flutuante *x*, mas com seu sinal invertido. Nenhum erro é retornado.
+As funções **_chgsign** retornam um valor que é igual ao argumento de ponto flutuante *x*, mas com seu sinal invertido. Não há nenhum retorno de erro.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,8 +76,8 @@ As funções **_chgsign** retornam um valor que é igual ao argumento de ponto f
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)<br/>

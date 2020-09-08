@@ -1,6 +1,7 @@
 ---
-title: Funções intrínsecas _InterlockedIncrement
-ms.date: 09/02/2019
+title: _InterlockedIncrement funções intrínsecas
+description: Funções intrínsecas do compilador C/C++ da Microsoft para incremento intercadeado.
+ms.date: 09/03/2020
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,57 +45,55 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2148ae31f3eb03e398372db3bf15fc64e4857dd1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221988"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556315"
 ---
-# <a name="_interlockedincrement-intrinsic-functions"></a>Funções intrínsecas _InterlockedIncrement
+# <a name="_interlockedincrement-intrinsic-functions"></a>`_InterlockedIncrement` funções intrínsecas
 
-**Seção específica da Microsoft**
-
-Forneça suporte intrínseco ao compilador para a função [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement) do Win32 SDK do Windows.
+Forneça suporte intrínseco ao compilador para a função [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement) do Win32 SDK do Windows. As `_InterlockedIncrement` funções intrínsecas são **específicas da Microsoft**.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```C
 long _InterlockedIncrement(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_acq(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_rel(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_nf(
-   long * lpAddend
+   long volatile * lpAddend
 );
 short _InterlockedIncrement16(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_acq(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_rel(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_nf (
-   short * lpAddend
+   short volatile * lpAddend
 );
 __int64 _InterlockedIncrement64(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_acq(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_rel(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_nf(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 ```
 
@@ -103,13 +102,13 @@ __int64 _InterlockedIncrement64_nf(
 *lpAddend*\
 [entrada, saída] Ponteiro para a variável a ser incrementada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
 
 O valor retornado é o valor incrementado resultante.
 
 ## <a name="requirements"></a>Requisitos
 
-|Intrínseco|Arquitetura|Cabeçalho|
+|Intrinsic|Arquitetura|Cabeçalho|
 |---------------|------------------|------------|
 |`_InterlockedIncrement`, `_InterlockedIncrement16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedIncrement64`|ARM, x64, ARM64|\<intrin.h>|
@@ -131,11 +130,9 @@ Essas rotinas somente estão disponíveis como intrínsecos.
 
 ## <a name="example"></a>Exemplo
 
-Para obter uma amostra de como usar `_InterlockedIncrement`o, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Para obter uma amostra de como usar o `_InterlockedIncrement` , consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**Fim da seção específica da Microsoft**
-
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
 [Palavras-chave](../cpp/keywords-cpp.md)\

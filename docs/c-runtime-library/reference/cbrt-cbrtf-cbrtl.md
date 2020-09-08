@@ -1,6 +1,7 @@
 ---
 title: cbrt, cbrtf, cbrtl
-ms.date: 4/2/2020
+description: Referência de API para cbrt, cbrtf e cbrtl; que calculam uma raiz de cubo
+ms.date: 9/1/2020
 api_name:
 - cbrt
 - cbrtf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c63a3cb0c8acdec8ef66999994ab1f3c5ea21d47
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221972"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555300"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -62,24 +63,27 @@ float cbrtf(
 long double cbrtl(
    long double x
 );
+#define cbrt(X) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Valor de ponto flutuante
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **cbrt** retornam a raiz do cubo de *x*.
 
 |Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|nenhuma|nenhuma|
+|± ∞, QNAN, IND|nenhum|nenhum|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cbrt** que usam **`float`** ou **`long double`** digitam. Em um programa C, **cbrt** sempre leva e retorna **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cbrt** que usam **`float`** ou **`long double`** digitam. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **cbrt** sempre leva e retorna **`double`** .
+
+Se você usar a \<tgmath.h> `cbrt()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -88,6 +92,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
+|macro **cbrt** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -1,6 +1,7 @@
 ---
 title: ilogb, ilogbf, ilogbl2
-ms.date: 04/05/2018
+description: Referência de API para ilogb, ilogbf e ilogbl2; que recupera um inteiro que representa o expoente de base 2 não polarizada do valor especificado.
+ms.date: 9/1/2020
 api_name:
 - ilogb
 - ilogbf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b27c329cca1edb9d30bb6b9b641f94d174c9c406
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232515"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556366"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -66,14 +67,16 @@ int ilogbf(
 int ilogbl(
    long double x
 );
+
+#define ilogbl(X) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O valor especificado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, retorna o expoente de base 2 de *x* como um **`signed int`** valor.
 
@@ -88,7 +91,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ilogb** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, o **ilogb** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ilogb** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **ilogb** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `ilogb()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Chamar essa função é semelhante a chamar a função **logb** equivalente e, em seguida, converter o valor de retorno para **`int`** .
 
@@ -97,6 +102,7 @@ Chamar essa função é semelhante a chamar a função **logb** equivalente e, e
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
 |**ilogb**, **ilogbf**, **ilogbl**|\<math.h>|\<cmath>|
+|macro **ilogb** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

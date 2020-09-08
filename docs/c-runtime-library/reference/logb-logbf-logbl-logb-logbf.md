@@ -1,6 +1,7 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
-ms.date: 4/2/2020
+description: Referência de API para logb, logbf, logbl, _logb e _logbf; que extrai o valor de expoente de um argumento de ponto flutuante.
+ms.date: 9/1/2020
 api_name:
 - logb
 - _logb
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1131fda94e4748d2fb2f2197f68966aaacc11d05
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218566"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556208"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -82,14 +83,15 @@ double _logb(
 float _logbf(
    float x
 );
+#define logb(X) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Um valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 **logb** retorna o valor de expoente não polarizado de *x* como um inteiro assinado representado como um valor de ponto flutuante.
 
@@ -97,7 +99,9 @@ Um valor de ponto flutuante.
 
 As funções **logb** extraem o valor exponencial do argumento de ponto flutuante *x*, como se *x* fosse representado com um intervalo infinito. Se o argumento *x* for desnormalizado, ele será tratado como se fosse normalizado.
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **logb** que usam e retornam **`float`** **`long double`** valores. Em um programa C, o **logb** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **logb** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **logb** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `logb()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -112,6 +116,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb**, **logbf**, **logbl**, **_logbf**|\<math.h>|
+|macro **logb** | \<tgmath.h> |
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,6 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
+description: Referência de API para _rotl, _rotl64, _rotr e _rotr64; que gira bits à esquerda (_rotl) ou à direita (_rotr).
 ms.date: 04/05/2018
 api_name:
 - _rotr64
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2fb6b2674ed7d50cff63ae45f22af63b0120597
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949143"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556587"
 ---
 # <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Gira bits para a esquerda ( **_rotl**) ou direita ( **_rotr**).
+Gira bits para a esquerda (**_rotl**) ou para a direita (**_rotr**).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -84,9 +85,9 @@ O valor a ser girado.
 *shift*<br/>
 O número de bits a deslocar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
-O valor girado. Nenhum erro é retornado.
+O valor girado. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -101,7 +102,7 @@ As funções **_rotl** e **_rotr** giram o *valor* não assinado por bits de *de
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -141,7 +142,7 @@ int main( void )
 101010101010101 rotated right four times is 1010101010101010
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [_lrotl, _lrotr](lrotl-lrotr.md)<br/>

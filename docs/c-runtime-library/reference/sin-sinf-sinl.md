@@ -1,6 +1,7 @@
 ---
 title: sin, sinf, sinl
-ms.date: 6/5/2020
+description: Referência de API para Sin, sinf e sinl; que calcula o seno de um valor de ponto flutuante.
+ms.date: 08/31/2020
 api_name:
 - sinl
 - sinf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d1921dd4537c9dcc955c264a36992d86defada8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216720"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556185"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -54,6 +55,7 @@ Calcula o seno de um valor de ponto flutuante.
 double sin(double x);
 float sinf(float x);
 long double sinl(long double x);
+#define sin(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -61,12 +63,12 @@ float sin(float x);  // C++ only
 long double sin(long double x);  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Ângulo em radianos.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
 
 As funções **sin** retornam o seno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
 
@@ -79,7 +81,9 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam **`float`** **`long double`** valores. Em um programa C, **sin** sempre usa e retorna **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **sin** sempre usa e retorna **`double`** .
+
+Se você usar a \<tgmath.h> `sin()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -88,6 +92,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-|-|-|
 |**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **sin ()** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

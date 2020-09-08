@@ -1,6 +1,7 @@
 ---
 title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
-ms.date: 04/05/2018
+description: Referência de API para retornar um valor que tem a magnitude de um argumento e o sinal de outro usando copysign ()
+ms.date: 9/1/2020
 api_name:
 - copysignf
 - copysignl
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f9ffe56e82f6a82da15fde3f8efea60fc1c0f9f
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221933"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554858"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
@@ -81,25 +82,28 @@ long double _copysignl(
    long double x,
    long double y
 );
+#define copysign(X, Y) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O valor de ponto flutuante retornado como a magnitude do resultado.
 
-*Iar*<br/>
+*Iar*\
 O valor de ponto flutuante retornado como o sinal do resultado.
 
 [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-As funções **copysign** retornam um valor de ponto flutuante que combina a magnitude de *x* e o sinal de *y*. Nenhum erro é retornado.
+As funções **copysign** retornam um valor de ponto flutuante que combina a magnitude de *x* e o sinal de *y*. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **copysign** que usam e retornam **`float`** **`long double`** valores. Em um programa C, o **copysign** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **copysign** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **copysign** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `copysign()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -107,6 +111,7 @@ Como o C++ permite sobrecarga, você pode chamar sobrecargas de **copysign** que
 |-------------|---------------------|
 |**_copysign**|\<float.h>|
 |**copysign**, **copysignf**, **copysignl**, **_copysignf**, **_copysignl**|\<math.h>|
+|macro **copysign** | \<tgmath.h> |
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

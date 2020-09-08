@@ -1,5 +1,6 @@
 ---
 title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
+description: Referência de API para _set_invalid_parameter_handler e _set_thread_local_invalid_parameter_handler; que definem uma função a ser chamada quando o CRT detecta um argumento inválido.
 ms.date: 4/2/2020
 api_name:
 - _set_invalid_parameter_handler
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 404a865cceb5e4014969b15e9877761187af777b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a965bd71af18a57c31d3cfef927be02005c407c0
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914001"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555612"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -60,7 +61,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 *pNew*<br/>
 O ponteiro de função para o novo manipulador de parâmetro inválido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para o manipulador de parâmetro inválido antes da chamada.
 
@@ -68,7 +69,7 @@ Um ponteiro para o manipulador de parâmetro inválido antes da chamada.
 
 Muitas funções em runtime C verificam a validade dos argumentos passados para elas. Se um argumento inválido for passado, a função poderá definir o número de erro **errno** ou retornar um código de erro. Nesses casos, o manipulador de parâmetro inválido também é chamado. O runtime C fornece um manipulador de parâmetro inválido global padrão que encerra o programa e exibe uma mensagem de erro de runtime. Você pode usar a **_set_invalid_parameter_handler** para definir sua própria função como o manipulador de parâmetro global inválido. O runtime C também dá suporte a um manipulador de parâmetro inválido local de thread. Se um manipulador de parâmetro de local de thread for definido em um thread usando **_set_thread_local_invalid_parameter_handler**, as funções de tempo de execução C chamadas do thread usarão esse manipulador em vez do manipulador global. Apenas uma função por vez pode ser especificada como o manipulador de argumento inválido global. Apenas uma função por thread pode ser especificada como o manipulador de argumento inválido local de thread, mas threads diferentes podem ter diferentes manipuladores locais de thread. Isso permite que você altere o manipulador usado em uma parte do seu código sem afetar o comportamento de outros threads.
 
-Quando o runtime chama a função de parâmetro inválido, isso normalmente significa que ocorreu um erro irrecuperável. A função de manipulador de parâmetro inválido fornecida por você deve salvar todos os dados que puder e, em seguida, anular. Ela não deve retornar o controle para a função principal a menos que você tenha certeza de que o erro é recuperável.
+Quando o runtime chama a função de parâmetro inválido, isso normalmente significa que ocorreu um erro irrecuperável. A função de manipulador de parâmetro inválido fornecida por você deve salvar todos os dados que puder e, em seguida, anular. Ele não deve retornar o controle para a função main, a menos que você tenha certeza de que o erro é recuperável.
 
 A função de manipulador de parâmetro inválido deve ter o seguinte protótipo:
 
@@ -90,7 +91,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> ou \<stdlib.h>|
+|**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|& \<stdlib.h><br /><br /> C++: \<cstdlib> ou \<stdlib.h>|
 
 As funções **_set_invalid_parameter_handler** e **_set_thread_local_invalid_parameter_handler** são específicas da Microsoft. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -140,8 +141,8 @@ Invalid parameter detected in function common_vfprintf. File: minkernel\crts\ucr
 Expression: format != nullptr
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>
-[Versões de funções CRT com segurança aprimorada](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>
+[Versões aprimoradas de segurança das funções do CRT](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

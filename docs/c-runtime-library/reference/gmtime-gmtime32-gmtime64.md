@@ -1,5 +1,6 @@
 ---
 title: gmtime, _gmtime32, _gmtime64
+description: Referência de API para gmtime, _gmtime32 e _gmtime64; que converte um valor de time_t em uma estrutura TM.
 ms.date: 4/2/2020
 api_name:
 - _gmtime32
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b3dd09e828b972f05a4c45c30ebc3e5edb68f551
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234101"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556457"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
@@ -56,12 +57,12 @@ struct tm *_gmtime32( const __time32_t *sourceTime );
 struct tm *_gmtime64( const __time64_t *sourceTime );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *origemtime*<br/>
 Ponteiro para a hora armazenada. A hora é representada como os segundos transcorridos desde a meia-noite (00:00:00) de 1º de janeiro de 1970, no horário UTC (Tempo Universal Coordenado).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Um ponteiro para uma estrutura do tipo [tm](../../c-runtime-library/standard-types.md). Os campos da estrutura retornada contêm o valor avaliado do argumento *sourcetime* em UTC em vez de na hora local. Cada um dos campos de estrutura é do tipo **`int`** , da seguinte maneira:
 
@@ -77,7 +78,7 @@ Um ponteiro para uma estrutura do tipo [tm](../../c-runtime-library/standard-typ
 |**tm_yday**|Dia do ano (0-365; 1 de janeiro = 0).|
 |**tm_isdst**|Sempre 0 para **gmtime**.|
 
-As versões de 32 bits e 64 bits de **gmtime**, [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)e [localtime](localtime-localtime32-localtime64.md) usam uma estrutura Common **TM** por thread para a conversão. Cada chamada para uma dessas funções destrói o resultado de qualquer chamada anterior. Se *sourcetime* representar uma data antes da meia-noite, 1º de janeiro de 1970, **gmtime** retornará **NULL**. Nenhum erro é retornado.
+As versões de 32 bits e 64 bits de **gmtime**, [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)e [localtime](localtime-localtime32-localtime64.md) usam uma estrutura Common **TM** por thread para a conversão. Cada chamada para uma dessas funções destrói o resultado de qualquer chamada anterior. Se *sourcetime* representar uma data antes da meia-noite, 1º de janeiro de 1970, **gmtime** retornará **NULL**. Não há nenhum retorno de erro.
 
 **_gmtime64**, que usa a estrutura de **__time64_t** , permite que as datas sejam expressadas até 23:59:59, 31 de dezembro de 3000, UTC, enquanto **_gmtime32** só representam datas até 23:59:59 de 18 de janeiro de 2038, UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para ambas as funções.
 
@@ -87,7 +88,7 @@ Essas funções validam seus parâmetros. Se *sourcetime* for um ponteiro NULL o
 
 ## <a name="remarks"></a>Comentários
 
-A função **_gmtime32** divide o valor de *sourcetime* e o armazena em uma estrutura alocada estaticamente do tipo **TM**, definido no tempo. T. O valor de *sourcetime* normalmente é obtido de uma chamada para a função [time](time-time32-time64.md) .
+A função **_gmtime32** divide o valor de *sourcetime* e o armazena em uma estrutura alocada estaticamente do tipo **TM**, definida em time. H. O valor de *sourcetime* normalmente é obtido de uma chamada para a função [time](time-time32-time64.md) .
 
 > [!NOTE]
 > Na maioria dos casos, o ambiente de destino tenta determinar se o horário de verão está em vigor. A biblioteca em tempo de execução C presume que serão usadas as regras dos Estados Unidos para implementar o cálculo do DST (horário de verão).

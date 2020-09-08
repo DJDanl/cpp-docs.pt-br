@@ -1,6 +1,7 @@
 ---
 title: atanh, atanhf, atanhl
-ms.date: 4/2/2020
+description: Referência de API para ATANH, atanhf e atanhl; que calcula a tangente hiperbólica inversa de um valor de ponto flutuante.
+ms.date: 08/31/2020
 api_name:
 - atanhl
 - atanhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0a8e06963519553144c7e49d26e61dbbde51c21
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232593"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555586"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -51,30 +52,31 @@ Calcula a tangente hiperbólica inversa.
 double atanh( double x );
 float atanhf( float x );
 long double atanhl( long double x );
-```
+#define atanh(X) // Requires C11 or higher
 
-```cpp
 float atanh( float x );  // C++ only
 long double atanh( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **ATANH** retornam a tangente inversa hyberbolic (tangente hiperbólica do arco) de *x*. Se *x* for maior que 1 ou menor que-1, **errno** será definido como **Edom** e o resultado será um NaN silencioso. Se *x* for igual a 1 ou-1, um infinito positivo ou negativo será retornado, respectivamente, e **errno** será definido como **ERANGE**.
 
 |Entrada|Exceção SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|nenhuma|nenhuma|
-|*X* ≥ 1; *x* ≤-1|nenhuma|nenhuma|
+|± QNAN,IND|nenhum|nenhum|
+|*X* ≥ 1; *x* ≤-1|nenhum|nenhum|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ATANH** que usam e retornam **`float`** **`long double`** valores. Em um programa C, **ATANH** sempre leva e retorna **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ATANH** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **ATANH** sempre leva e retorna **`double`** .
+
+Se você usar a \<tgmath.h> `atanh()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -83,6 +85,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**ATANH**, **atanhf**, **atanhl**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **ATANH ()** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,6 @@
 ---
 title: _umask
+description: Referência de API para _umask; que define a máscara de permissão de arquivo padrão.
 ms.date: 4/2/2020
 api_name:
 - _umask
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3735ecd7ba194009945d3717982d7828ecee3c1e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913839"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554923"
 ---
 # <a name="_umask"></a>_umask
 
-Define a máscara de permissão de arquivo padrão. Uma versão mais segura dessa função está disponível. Consulte [_umask_s](umask-s.md).
+Define a máscara de permissão de arquivo padrão. Consulte [_umask_s](umask-s.md) para obter uma versão mais segura dessa função. "
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,9 +54,9 @@ int _umask( int pmode );
 *pmode*<br/>
 Configuração de permissão padrão.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-**_umask** retorna o valor anterior de *pmode*. Nenhum erro é retornado.
+**_umask** retorna o valor anterior de *pmode*. Não há nenhum retorno de erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -118,8 +119,8 @@ Oldmask = 0x0000
 
 ## <a name="see-also"></a>Confira também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
-[E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
+[Manipulação de arquivos](../../c-runtime-library/file-handling.md)<br/>
+[E/s de baixo nível](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

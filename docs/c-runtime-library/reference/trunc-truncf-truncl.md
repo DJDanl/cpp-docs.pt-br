@@ -1,6 +1,7 @@
 ---
 title: trunc, truncf, truncl
-ms.date: 04/05/2018
+description: Referência de API para truncamento, truncf, truncl; que determinam o número inteiro mais próximo que é menor ou igual ao valor de ponto flutuante especificado.
+ms.date: 9/1/2020
 api_name:
 - trunc
 - truncf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1f2fde95bb944aa461bb95a9ad30fac204552b9
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232385"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556626"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -48,21 +49,19 @@ Determina o inteiro mais próximo que é menor ou igual ao valor de ponto flutua
 
 ```C
 double trunc( double x );
-float trunc( float x ); //C++ only
 long double truncl( long double x );
-```
+#define trunc(X) // Requires C11 or higher
 
-```cpp
 long double trunc( long double x ); //C++ only
 float trunc( float x ); //C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O valor a ser truncado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, retorna um valor inteiro de *x*, arredondado para zero.
 
@@ -78,7 +77,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **truncar** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, **trunc** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **truncar** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **trunc** sempre pega e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `trunc()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Como os maiores valores de ponto flutuantes são inteiros exatos, essa função não estourará por conta própria. No entanto, você pode causar o estouro, retornando um valor para um tipo inteiro.
 
@@ -89,6 +90,7 @@ Você também pode arredondar para baixo pela conversão implícita de ponto flu
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**truncar**, **truncf**, **truncl**|\<math.h>|\<cmath>|
+|macro **truncar** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

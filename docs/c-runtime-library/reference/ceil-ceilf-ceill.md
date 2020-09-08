@@ -1,6 +1,7 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 6/5/2020
+description: Referência de API para calcuating o teto de um valor com ceil ().
+ms.date: 9/1/2020
 api_name:
 - ceilf
 - ceil
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3079f52c79d6d888923025357bb21adc782aa5cd
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221946"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555237"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -64,26 +65,29 @@ float ceilf(
 long double ceill(
    long double x
 );
+#define ceil(X) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
-As funções **Ceil** retornam um valor de ponto flutuante que representa o menor inteiro que é maior ou igual a *x*. Nenhum erro é retornado.
+As funções **Ceil** retornam um valor de ponto flutuante que representa o menor inteiro que é maior ou igual a *x*. Não há nenhum retorno de erro.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **Ind**|nenhuma|**_DOMAIN**|
+|± **QNAN**, **Ind**|nenhum|**_DOMAIN**|
 
 o **Ceil** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Ceil** que usam **`float`** ou **`long double`** digitam. Em um programa C, o **Ceil** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **Ceil** que usam **`float`** ou **`long double`** digitam. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **Ceil** sempre pega e retorna um **`double`** .
+
+f você usa a macro <tgmath. h> `ceil()` , o tipo do argumento determina qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -92,6 +96,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**Ceil**, **ceilf**, **ceill**|\<math.h>|
+|macro **Ceil** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

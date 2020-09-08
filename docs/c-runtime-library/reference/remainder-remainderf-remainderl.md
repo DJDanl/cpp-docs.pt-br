@@ -1,6 +1,7 @@
 ---
 title: remainder, remainderf, remainderl
-ms.date: 4/2/2020
+description: Referência de API para resto, remainderf e restoal; que calcula o restante do quociente de dois valores de ponto flutuante, arredondado para o valor integral mais próximo.
+ms.date: 9/1/2020
 api_name:
 - remainderl
 - remainder
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216798"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556003"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -51,22 +52,21 @@ Calcula o restante do quociente de dois valores de ponto flutuantes, arredondado
 double remainder( double x, double y );
 float remainderf( float x, float y );
 long double remainderl( long double x, long double y );
-```
+#define remainder(X, Y) // Requires C11 or higher
 
-```cpp
 float remainder( float x, float y ); /* C++ only */
 long double remainder( long double x, long double y ); /* C++ only */
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O numerador.
 
-*Iar*<br/>
+*Iar*\
 O denominador.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 O restante de ponto flutuante de *x*  /  *y*. Se o valor de *y* for 0,0, **resto** retornará um NaN silencioso. Para obter informações sobre a representação de um NaN silencioso pela família **printf** , consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
@@ -74,7 +74,9 @@ O restante de ponto flutuante de *x*  /  *y*. Se o valor de *y* for 0,0, **resto
 
 As **funções restantes** calculam o *r* restante de ponto flutuante *de x*  /  *y* de forma que *x*  =  *n* \* *y*  +  *r*, em que *n*é o inteiro mais próximo no valor para *x*  /  *y* e *n*é mesmo sempre que &#124; *n*  -  *x*  /  *y* &#124; = 1/2. Quando *r* = 0, *r* tem o mesmo sinal que *x*.
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **pendências** que levam e retornam **`float`** **`long double`** valores. Em um programa C, **resto** sempre usa dois **`double`** argumentos e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **pendências** que levam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **resto** sempre usa dois **`double`** argumentos e retorna um **`double`** .
+
+Se você usar a \<tgmath.h> `remainder()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -83,6 +85,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |--------------|---------------------|-|
 |**resto**, **remainderf**, **restantel**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **restante** | \<tgmath.h> ||
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -110,8 +113,8 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Confira também
 
-[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
-[imaxdiv](imaxdiv.md)<br/>
-[fmod, fmodf](fmod-fmodf.md)<br/>
-[remquo, remquof, remquol](remquo-remquof-remquol.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)\
+[ldiv, lldiv](ldiv-lldiv.md)\
+[imaxdiv](imaxdiv.md)\
+[fmod, fmodf](fmod-fmodf.md)\
+[remquo, remquof, remquol](remquo-remquof-remquol.md)

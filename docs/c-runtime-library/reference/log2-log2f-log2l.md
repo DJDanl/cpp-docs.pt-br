@@ -1,6 +1,7 @@
 ---
 title: log2, log2f, log2l
-ms.date: 4/2/2020
+description: Referência de API para log2, log2f e log2l; que determinam o logaritmo binário (base-2) do valor especificado.
+ms.date: 9/1/2020
 api_name:
 - log2
 - log2l
@@ -26,12 +27,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 37319560891dbd64030495750aaf347d9dedd7e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911410"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555352"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -59,14 +60,16 @@ float log2f(
 long double log2l(
    long double x
 );
+
+#define log2(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O valor para determinar o logaritmo de base 2.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Em caso de sucesso, retorna o retorno de log2 *x*.
 
@@ -86,7 +89,7 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Se x for um número inteiro, essa função retornará, basicamente, o índice de base zero do *x*mais significativo de 1 bit.
+Se *x* for um número inteiro, essa função retornará, basicamente, o índice de base zero do *x*mais significativo de 1 bit.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -95,11 +98,12 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
+|macro **log2** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

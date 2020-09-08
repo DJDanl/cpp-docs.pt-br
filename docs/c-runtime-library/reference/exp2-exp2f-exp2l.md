@@ -1,6 +1,7 @@
 ---
 title: exp2, exp2f, exp2l
-ms.date: 4/2/2020
+description: A referência de API para exp2 (), exp2f () e exp2l () que a computação 2 aumentou para o valor especificado.
+ms.date: 9/1/2020
 api_name:
 - exp2
 - exp2f
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 518525a38ef575583fde3b7732561f2fa553dd18
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234153"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556613"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -70,14 +71,15 @@ float exp2f(
 long double exp2l(
    long double x
 );
+#define exp2(X) // Requires C11 or higher
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*w.x.y.*\
 O valor do expoente.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedido, retorna o expoente de base 2 de *x*, ou seja, 2<sup>x</sup>. Caso contrário, ele retorna um dos seguintes valores:
 
@@ -94,7 +96,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **exp2** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, o **exp2** sempre pega e retorna um **`double`** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **exp2** que usam e retornam **`float`** **`long double`** tipos. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **exp2** sempre pega e retorna um **`double`** , a menos que você use a macro em <tgmath. h>.
+
+Se você usar a \<tgmath.h> `exp2()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -102,7 +106,8 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**exp**, **expf**, **sol**|\<math.h>|\<cmath>|
+|**exp2**, **expf2**, **expl2**|\<math.h>|\<cmath>|
+|macro **exp2** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

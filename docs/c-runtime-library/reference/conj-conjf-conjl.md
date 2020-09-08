@@ -1,6 +1,7 @@
 ---
 title: conj, conjf, conjl
-ms.date: 11/04/2016
+description: Referência de API para conj, conjf e conjl; que recupera o conjugado complexo de um número complexo.
+ms.date: 9/2/2020
 api_name:
 - conj
 - conjf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-ms.openlocfilehash: cb87e502d3fa927f10675796bae0b1d37115b2a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b779eb2d92893b204a73b2fa4f5c89928933ffeb
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939037"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556347"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -62,32 +63,36 @@ _Fcomplex conjf(
 _Lcomplex conjl(
    _Lcomplex z
 );
+#define conj(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*z*<br/>
+*z*\
 Um número complexo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
 O conjugado complexo de *z*.  O resultado tem a mesma parte real e imaginátório que *z*, mas com o sinal oposto.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **conj** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, **conj** sempre pega e retorna um valor **_Dcomplex** .
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **conj** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **conj** sempre pega e retorna um valor **_Dcomplex** .
+
+Se você usar a \<tgmath.h> `conj()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**conj**,               **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+|**conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+|macro **conj** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
+[Referência de função alfabética](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
