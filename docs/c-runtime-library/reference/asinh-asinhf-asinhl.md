@@ -1,6 +1,7 @@
 ---
 title: asinh, asinhf, asinhl
-ms.date: 4/2/2020
+description: Referência de API para asinh, asinhf e asinhl; que calcula o seno hiperbólico inverso de um valor de ponto flutuante.
+ms.date: 08/31/2020
 api_name:
 - asinh
 - asinhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232645"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556782"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -51,29 +52,31 @@ Calcula o seno hiperbólico inverso.
 double asinh( double x );
 float asinhf( float x );
 long double asinhl( long double x );
-```
+#define asinh(X) // Requires C11 or higher
 
-```cpp
 float asinh( float x );  // C++ only
 long double asinh( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
 Valor de ponto flutuante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 As funções **asinh** retornam o seno hyberbolic inverso (seno hiperbólico de arco) de *x*. Essa função é válida no domínio de ponto flutuante. Se *x* for um erro Nan, indefinido ou infinito, o mesmo valor será retornado.
 
 |Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|nenhuma|nenhuma|
+|± QNAN, IND, INF|nenhum|nenhum|
 
 ## <a name="remarks"></a>Comentários
 
-Ao usar o C++, você pode chamar sobrecargas de **asinh** que usam e retornam **`float`** **`long double`** valores. Em um programa C, **asinh** sempre leva e retorna **`double`** .
+Ao usar o C++, você pode chamar sobrecargas de **asinh** que usam e retornam **`float`** **`long double`** valores. Em um programa C, a menos que você esteja usando a \<tgmath.h> macro para chamar essa função, **asinh** sempre leva e retorna **`double`** .
+
+Se você usar a \<tgmath.h> `asinh()` macro, o tipo do argumento determinará qual versão da função está selecionada. Consulte [tipo-matemática genérica](../../c-runtime-library/tgmath.md) para obter detalhes.
+
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -81,7 +84,8 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Função|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath>ou \< Math. h<|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> ou \<math.h>|
+|macro **asinh ()** | \<tgmath.h> ||
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
