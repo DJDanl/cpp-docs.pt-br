@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: aa6f40c91f9be906e3f51df5788483410f6077a3
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
+ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554949"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89933821"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -120,7 +120,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-A configuração de categoria de **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere de ponto de base em *strSource*. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo **_L** usam a localidade atual; o **_strtod_l** é idêntico ao **_strtod_l** , exceto pelo fato de usar a *localidade* passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A configuração de categoria de **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere de ponto de base em *strSource*. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo **_L** usam a localidade atual; o **_strtod_l** é idêntico ao **_strtod** , exceto pelo fato de que o primeiro usa a *localidade* passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Se *endptr* não for **NULL**, um ponteiro para o caractere que parou a verificação será armazenado no local apontado por *endptr*. Se nenhuma conversão puder ser executada (nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* será armazenado no local apontado por *endptr*.
 
