@@ -64,6 +64,8 @@
       href: ../c-runtime-library/crt-initialization.md
     - name: Estado global no CRT
       href: ../c-runtime-library/global-state.md
+    - name: Matemática do tipo genérico
+      href: ../c-runtime-library/tgmath.md
 - name: Rotinas de runtime C universais por categoria
   expanded: false
   items:
