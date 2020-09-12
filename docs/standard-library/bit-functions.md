@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: f06e181a4fe6683adb0cc63c016cbd879f2fc574
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281803"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039801"
 ---
 # <a name="ltbitgt-functions"></a>&lt;funções de bit &gt;
 
@@ -111,7 +111,7 @@ Em vez de usar `reinterpret_cast` o, ou `memcpy()` , `bit_cast()` é uma maneira
 
 Essa sobrecarga só participará da resolução de sobrecarga se:
 -  `sizeof(To) == sizeof(From)`
-- `To` e `From` são [is_trivially_copyable](https://docs.microsoft.com/cpp/standard-library/is-trivially-copyable-class?view=vs-2019`).
+- `To` e `From` são [is_trivially_copyable](is-trivially-copyable-class.md).
 
 Esse modelo de função é `constexpr` se e somente se `To` , e `From` os tipos de seus subobjetos forem:
 - Não é um tipo de União ou ponteiro
@@ -730,7 +730,7 @@ Esta função de modelo só participará da resolução de sobrecarga se `T` for
 
 **Namespace:** std
 
-`/std:c++latest` é necessário
+[/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) é necessário.
 
 ## <a name="see-also"></a>Confira também
 

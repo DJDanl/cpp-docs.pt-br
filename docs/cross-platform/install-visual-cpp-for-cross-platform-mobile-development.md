@@ -2,12 +2,12 @@
 title: Instalar desenvolvimento de tecnologia móvel multiplataforma com C++
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: 935e427710d55120055be476a5cfb5fbcf73641b
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 6a573b0f7ba261b97af9de24e67f733acac0532f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609178"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041946"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Instalar desenvolvimento de tecnologia móvel multiplataforma com C++
 
@@ -60,7 +60,7 @@ O Instalador do Visual Studio inclui um **desenvolvimento móvel com carga de** 
 - As ferramentas de desenvolvimento c++ do iOS são necessárias para criar código C++ direcionado para a plataforma iOS.
 
 > [!NOTE]
-> Se estiver usando o Visual Studio 2015, confira [Instalar Visual C++ para Desenvolvimento Móvel Multiplataforma (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015)
+> Se estiver usando o Visual Studio 2015, confira [Instalar Visual C++ para Desenvolvimento Móvel Multiplataforma (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015&preserve-view=true)
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>Instalação da carga de trabalho Desenvolvimento Mobile com C++
 

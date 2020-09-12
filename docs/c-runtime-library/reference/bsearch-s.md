@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 348638b2a6b5a97491d9929b22a983b43794da9a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845166"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041621"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -72,7 +72,7 @@ Função de retorno de chamada que compara dois elementos. O primeiro argumento 
 *noticioso*\
 Um ponteiro para um objeto que pode ser acessado na função de comparação.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
 
 **bsearch_s** retorna um ponteiro para uma ocorrência de *Key* na matriz apontada por *base*. Se a *chave* não for encontrada, a função retornará **NULL**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
 
@@ -80,7 +80,7 @@ Se parâmetros inválidos forem passados para a função, ele invocará o manipu
 
 ### <a name="error-conditions"></a>Condições de erro
 
-|*chave*|*base*|*comparar*|*number*|*width*|**`errno`**|
+|*chave*|*base*|*comparar*|*number*|*width*|**`errno`** valor|
 |-|-|-|-|-|-|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|

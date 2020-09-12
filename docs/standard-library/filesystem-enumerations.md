@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c94ec899f0ea7abf71530f6aca44638fdb216c9
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368421"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041933"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerações de &lt;filesystem&gt;
 
@@ -24,11 +24,11 @@ Este tópico documenta as enumerações no cabeçalho filesystem.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<experimental/filesystem>
+**Cabeçalho:**\<experimental/filesystem>
 
 **Namespace:** std::experimental::filesystem
 
-## <a name="copy_options"></a><a name="copy_options"></a>copy_options
+## <a name="copy_options"></a><a name="copy_options"></a> copy_options
 
 Uma enumeração de valores de bitmask que é usada com as funções [copy](filesystem-functions.md#copy) e [copy_file](filesystem-functions.md#copy_file) para especificar o comportamento.
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Valores
 
-|`Name`|Descrição|
+| Nome | Descrição |
 |------------|-----------------|
 |`none`|Executa o comportamento padrão da operação.|
 |`skip_existing`|Não copia se o arquivo já existir, não relata um erro.|
@@ -84,9 +84,9 @@ enum class directory_options {
 |`none`|Comportamento padrão: ignorar links simbólicos para diretórios. A permissão negada é um erro.|
 |`follow_directory_symlink`|Tratar links simbólicos para diretórios como diretórios reais.|
 
-## <a name="file_type"></a><a name="file_type"></a>file_type
+## <a name="file_type"></a><a name="file_type"></a> file_type
 
-Uma enumeração de tipos de arquivo. Os valores suportados são regulares, diretório, not_found e desconhecidos.
+Uma enumeração de tipos de arquivo. Os valores com suporte são regular, Directory, not_found e Unknown.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|Representa um soquete em sistemas baseados em UNIX. (Sem suporte.)|
 |`unknown`|8|Representa um arquivo cujo status não pode ser determinado.|
 
-## <a name="perm_options"></a><a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a> perm_options
 
-Inclui `replace`valores, `add` `remove`e `nofollow`.
+Inclui valores `replace` , `add` , `remove` e `nofollow` .
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a><a name="perms"></a>Perms
+## <a name="perms"></a><a name="perms"></a> perms
 
-Sinalizadores de permissões de arquivo. Os valores suportados são essencialmente "somente leitura" e tudo mais. Para um arquivo somente leitura, nenhum dos bits *_write é definido. Caso contrário, o bit `all` (0x0777) é definido.
+Sinalizadores de permissões de arquivo. Os valores com suporte são essencialmente "ReadOnly" e todos. Para um arquivo somente leitura, nenhum dos bits *_write é definido. Caso contrário, o bit `all` (0x0777) é definido.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -164,4 +164,4 @@ enum class perms {// names for permissions
 ## <a name="see-also"></a>Confira também
 
 [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[\<>do sistema de arquivos](../standard-library/filesystem.md)
+[\<filesystem>](../standard-library/filesystem.md)

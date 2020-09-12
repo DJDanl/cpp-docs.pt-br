@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520921"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042050"
 ---
 # <a name="pair-structure"></a>Estrutura pair
 
@@ -68,19 +68,20 @@ O valor que inicializa o segundo elemento de `pair`.
 *Certo*\
 Um par cujos valores devem ser usados para inicializar os elementos de outro par.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 
-O primeiro Construtor (padrão) inicializa o primeiro elemento do par para o padrão do tipo `T1` e o segundo elemento como padrão do tipo `T2` .
+O primeiro Construtor (padrão) inicializa o primeiro elemento do par para o padrão do tipo `T1` e o segundo elemento como padrão do tipo `T2` .  Ele será definido se ambos os tipos forem default-constructible.
 
-O segundo construtor inicializa o primeiro elemento do par para *val1* e segundo para *Val2.*
+O segundo construtor inicializa o primeiro elemento do par para *val1* e o segundo para *Val2.*  Ele será definido se ambos os tipos forem Copy-constructible.
 
-O terceiro construtor (modelo) inicializa o primeiro elemento do par para `Right`. **primeiro** e segundo para `Right`. **segundo**.
+O terceiro Construtor (modelo) inicializa o primeiro elemento do par para `Right` . **primeiro** e o segundo a `Right` . **segundo**.  Ele será definido se ambos os tipos do par forem constructible dos tipos de valor fornecidos.
 
-O quarto construtor inicializa o primeiro elemento do par para *val1* e segundo para *Val2* usando o [Declarador de referência rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+O quarto construtor inicializa o primeiro elemento do par para *val1* e o segundo a *Val2* usando o [Declarador de referência rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).  Ele será definido se ambos os tipos do par forem constructible dos tipos de valor fornecidos.
 
 ## <a name="remarks"></a>Comentários
 
-A estrutura de modelo armazena um par de objetos do tipo `T1` e `T2` , respectivamente. O tipo `first_type` é o mesmo que o parâmetro de modelo `T1` e o tipo `second_type` é o mesmo que o parâmetro de modelo `T2` . `T1`e `T2` cada uma delas precisa fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um **`struct`** e não como um **`class`** . Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O último satisfaz os requisitos para um contêiner associativo de par e tem um tipo de valor do formulário `pair< const key_type, mapped_type >` .
+A estrutura de modelo armazena um par de objetos do tipo `T1` e `T2` , respectivamente. O tipo `first_type` é o mesmo que o parâmetro de modelo `T1` e o tipo `second_type` é o mesmo que o parâmetro de modelo `T2` . `T1` e `T2` cada uma delas precisa fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um **`struct`** e não como um **`class`** . Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O último satisfaz os requisitos para um contêiner associativo de par e tem um tipo de valor do formulário `pair< const key_type, mapped_type >` .
 
 ## <a name="example"></a>Exemplo
 

@@ -2,12 +2,12 @@
 title: Elementos gráficos (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182805"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041452"
 ---
 # <a name="graphics-c-amp"></a>Elementos gráficos (C++ AMP)
 
@@ -27,7 +27,7 @@ Os `norm` `unorm` tipos e são tipos escalares que limitam o intervalo de **`flo
 
 A biblioteca de vetores curta fornece algumas das funcionalidades do [tipo de vetor](https://go.microsoft.com/fwlink/p/?linkid=248500) que são definidas em HLSL e normalmente são usadas para definir texels. Um vetor curto é uma estrutura de dados que contém de um a quatro valores do mesmo tipo. Os tipos com suporte são,,,, **`double`** **`float`** **`int`** `norm` `uint` e `unorm` . Os nomes de tipo são mostrados na tabela a seguir. Para cada tipo, há também um correspondente **`typedef`** que não tem um sublinhado no nome. Os tipos que têm os sublinhados estão no [namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Os tipos que não têm os sublinhados estão no [namespace Concurrency:: Graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que eles sejam claramente separados dos tipos fundamentais nomeados de forma semelhante, como **`__int8`** e **`__int16`** .
 
-||Comprimento 2|Comprimento 3|Comprimento 4|
+|Type|Comprimento 2|Comprimento 3|Comprimento 4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |FLOAT|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|

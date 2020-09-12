@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3a6083f39e12182ae512f5327b5f7d8d89deb2a2
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913377"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039541"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -78,9 +78,9 @@ A função **bsearch** executa uma pesquisa binária de uma matriz classificada 
 
 |Valor retornado pela rotina de *comparação*|Descrição|
 |-----------------------------------------|-----------------|
-|\< 0|A chave é menor que o elemento da matriz.|
-|0|A chave é igual ao elemento da matriz.|
-|> 0|A chave é maior que o elemento da matriz.|
+|`< 0`|A chave é menor que o elemento da matriz.|
+|`0`|A chave é igual ao elemento da matriz.|
+|`> 0`|A chave é maior que o elemento da matriz.|
 
 Essa função valida seus parâmetros. Se a *comparação*, a *chave* ou o *número* for **nulo**ou se *base* for **nulo** e o *número* for diferente de zero, ou se a *largura* for zero, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como `EINVAL` e a função retornará **NULL**.
 
@@ -139,7 +139,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Pesquisa e classificação](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

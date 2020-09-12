@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: c5423cfb8e2ea1b39001ec512c9c7f460d6a1a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228681"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040776"
 ---
 # <a name="add-a-member-function"></a>Adicionar uma função de membro
 
@@ -44,12 +44,25 @@ Depois de adicionar a função de membro usando o assistente, edite o código no
 
   Define o tipo de retorno da função de membro que está sendo adicionada. Forneça seu próprio tipo de retorno ou selecione um na lista de tipos disponíveis. Para obter informações sobre os tipos, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned int`** |
-  | **`double`** | **`long`** | **`unsigned long`** |
-  | **`float`** | **`short`** | **`void`** |
-  | `HRESULT` | **`unsigned char`** | |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**\
+      **`int`**
+   :::column-end:::
+   :::column span="":::
+      **`long`**\
+      **`short`**\
+      **`unsigned char`**\
+      **`unsigned int`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned long`**\
+      **`void`**\
+      `HRESULT`
+   :::column-end:::
+:::row-end:::
 
 - **Nome da função**
 
@@ -59,11 +72,23 @@ Depois de adicionar a função de membro usando o assistente, edite o código no
 
   Define o tipo de parâmetro que está sendo adicionado à função de membro, caso a função de membro tenha parâmetros. Forneça seu próprio tipo de parâmetro ou selecione um na lista de tipos disponíveis.
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned char`** |
-  | **`double`** | **`long`** | **`unsigned int`** |
-  | **`float`** | **`short`** | **`unsigned long`** |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**
+   :::column-end:::
+   :::column span="":::
+      **`int`**\
+      **`long`**\
+      **`short`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned char`**\
+      **`unsigned int`**\
+      **`unsigned long`**
+   :::column-end:::
+:::row-end:::
 
 - **Nome do parâmetro**
 
@@ -77,16 +102,16 @@ Depois de adicionar a função de membro usando o assistente, edite o código no
 
   Define o acesso à função de membro. Modificadores de acesso são palavras-chave que especificam o acesso que outras classes têm à função de membro. Para obter mais informações sobre como especificar o acesso, confira [Controle de acesso a membro](../cpp/member-access-control-cpp.md). O nível de acesso da função de membro é definido como **`public`** por padrão.
 
-  - [público](../cpp/public-cpp.md)
-  - [protected](../cpp/protected-cpp.md)
-  - [pessoal](../cpp/private-cpp.md)
+  - [public](../cpp/public-cpp.md)
+  - [protegidos](../cpp/protected-cpp.md)
+  - [particulares](../cpp/private-cpp.md)
 
   Verifique se a nova função de membro é estática ou virtual e se ela é embutida ou pura. Se você definir a função de membro para que ela seja pura, a caixa de seleção **Virtual** será marcada e a caixa de seleção **Embutida** não ficará disponível. O padrão é uma função de membro não estática e não virtual.
 
   | Opção | Descrição |
   |--------|-------------|
   | [Estático](../cpp/storage-classes-cpp.md) |  Especifica que a função atua como uma função global e pode ser chamada fora da classe, mesmo sem nenhuma instanciação de classe. A função de membro não tem acesso a membros não estáticos. Uma função de membro especificada como `Static` não pode ser virtual. |
-  | [Virtual](../cpp/virtual-cpp.md) | Assegura que a função de membro correta seja chamada para um objeto, seja qual for a expressão usada para fazer a chamada à função de membro. Uma função de membro especificada como `Virtual` não pode ser estática. |
+  | [VirtuaisLUNs](../cpp/virtual-cpp.md) | Assegura que a função de membro correta seja chamada para um objeto, seja qual for a expressão usada para fazer a chamada à função de membro. Uma função de membro especificada como `Virtual` não pode ser estática. |
   | **Mero** | Indica que nenhuma implementação é fornecida para a função de membro virtual que está sendo declarada. **Pura** pode ser especificada apenas em funções de membro virtual. Uma classe que contém, pelo menos, uma função de membro virtual pura é considerada uma classe abstrata. Classes derivadas da classe abstrata precisam implementar a função de membro virtual pura, ou também serão classes abstratas. |
   | [Embutido](../cpp/inline-functions-cpp.md) | Instrui o compilador a inserir uma cópia do corpo da função de membro em cada local em que a função de membro é chamada. Uma função de membro especificada como **Embutida** não pode ser pura. |
 

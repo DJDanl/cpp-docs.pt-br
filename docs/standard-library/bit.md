@@ -6,12 +6,12 @@ f1_keywords:
 - <bit>
 helpviewer_keywords:
 - bit header
-ms.openlocfilehash: 7a87071d30756714e19c971281f642ce16f09d61
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: 5652d0af767520710ee08b1827e0df27c477ee6d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194531"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040048"
 ---
 # <a name="ltbitgt"></a>&lt;bit&gt;
 
@@ -25,13 +25,13 @@ Por exemplo, há funções para girar bits, localizar o número de bits definido
 
 **Namespace:** std
 
-`/std:c++latest` é necessário
+[/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) é necessário.
 
 ## <a name="members"></a>Membros
 
 ### <a name="types"></a>Tipos
 
-| Tipo | Descrição |
+| Type | Descrição |
 |--------|----------|
 | [extremidade](bit-enum.md) | Especifica a endian de tipos escalares. |
 
@@ -52,6 +52,6 @@ Por exemplo, há funções para girar bits, localizar o número de bits definido
 |[rotl](bit-functions.md#rotl) | Computar o resultado de uma rotação de um bit à esquerda. |
 |[rotr](bit-functions.md#rotr) | Computar o resultado de uma rotação para a direita. |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Referência de Arquivos de Cabeçalho](cpp-standard-library-header-files.md)

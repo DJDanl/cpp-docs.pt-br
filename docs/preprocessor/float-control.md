@@ -1,5 +1,5 @@
 ---
-title: float_control (pragma)
+title: Pragma float_control
 description: Descreve o uso e os efeitos da diretiva pragma float_control. A diretiva float_control controla o estado da semântica precisa de ponto flutuante e semântica de exceção em tempo de execução.
 ms.date: 11/18/2019
 f1_keywords:
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 02a8e8d80616623693fff04aca02355c505b4c3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166778"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041920"
 ---
-# <a name="float_control-pragma"></a>float_control (pragma)
+# <a name="float_control-pragma"></a>Pragma float_control
 
 Especifica o comportamento de ponto flutuante para uma função.
 
 ## <a name="syntax"></a>Sintaxe
 
 > **#pragma float_control**\
-> **#pragma float_control (preciso,** { **on** | **off** } [ **, push** ] **)** \
-> **#pragma float_control (exceto,** { **on** | **off** } [ **, push** ] **)** \
-> **float_control de #pragma (** { **Push** | **pop** } **)**
+> **#pragma float_control (preciso,** { **on**  |  **off** } [ **, push** ] **)**\
+> **#pragma float_control (exceto,** { **on**  |  **off** } [ **, push** ] **)**\
+> **#pragma float_control (** { **Push**  |  **pop** } **)**
 
 ## <a name="options"></a>Opções
 
-**preciso**, **em** | **desligado**, **envie**\
+**preciso**, **on**  |  **off**, **Push**\
 Especifica se deve habilitar (**ativado**) ou desabilitar (**desativado**) a semântica de ponto flutuante preciso. Para obter informações sobre diferenças com a opção de compilador **/fp: preciso** , consulte a seção comentários. O token **Push** opcional envia por push a configuração atual para **float_control** na pilha interna do compilador.
 
-**exceto** |  **desativado**, **envie**\
-Especifica se a semântica deexceção de ponto flutuante deve ser habilitada ou desabilitada (**desativada**). O token **Push** opcional envia por push a configuração atual para **float_control** na pilha interna do compilador.
+**exceto**, **on**  |  **off**, **Push**\
+Especifica se a semântica de**on**exceção de ponto flutuante deve ser habilitada ou desabilitada (**desativada**). O token **Push** opcional envia por push a configuração atual para **float_control** na pilha interna do compilador.
 
 **Except** só pode ser definido como **on** quando **preciso** também for definido como **on**.
 
-\ **Push**
+**pressionado**\
 Envia por push a configuração de **float_control** atual para a pilha interna do compilador.
 
-\ **pop**
+**pop**\
 Remove a configuração de **float_control** da parte superior da pilha interna do compilador e faz com que a nova configuração de **float_control** .
 
 ## <a name="remarks"></a>Comentários
 
 O **float_control** pragma não tem o mesmo comportamento que a opção de compilador [/FP](../build/reference/fp-specify-floating-point-behavior.md) . O **float_control** pragma controla apenas parte do comportamento de ponto flutuante. Ele deve ser combinado com [fp_contract](../preprocessor/fp-contract.md) e [fenv_access](../preprocessor/fenv-access.md) pragmas para recriar as opções do compilador **/FP** . A tabela a seguir mostra as configurações de pragma equivalentes para cada opção de compilador:
 
-| | float_control (preciso, \*) | float_control (exceto \*) | fp_contract (\*) | fenv_access (\*) |
+| Opção | float_control (preciso \* ) | float_control (exceto, \* ) | fp_contract ( \* ) | fenv_access ( \* ) |
 |-|-|-|-|-|
-| /fp:strict             | em  | em  | Desligar | em  |
-| /fp:precise            | em  | Desligar | em  | Desligar |
-| /fp:fast               | Desligar | Desligar | em  | Desligar |
+| /fp: estrito             | on  | em  | Desligar | on  |
+| /fp: preciso            | em  | Desligar | em  | Desligar |
+| /fp: rápido               | Desligar | Desligar | em  | Desligar |
 
 Em outras palavras, talvez seja necessário usar vários pragmas em combinação para emular as opções de linha de comando **/fp: Fast**, **/fp: preciso**e **/fp: strict** .
 
@@ -129,6 +129,6 @@ Pass
 
 ## <a name="see-also"></a>Confira também
 
-[As diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [fenv_access](../preprocessor/fenv-access.md)\
 [fp_contract](../preprocessor/fp-contract.md)

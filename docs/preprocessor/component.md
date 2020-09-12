@@ -8,12 +8,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 578c590bdb4223f173e0249c18d0eea4e78a18db
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 73b308fdc426be9b403b808d4e638b4f5c1e9149
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220468"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040724"
 ---
 # <a name="component-pragma"></a>Pragma component
 
@@ -21,9 +21,9 @@ Controla a coleção de informações de procura ou informações de dependênci
 
 ## <a name="syntax"></a>Sintaxe
 
-> **componente #pragma (navegador,** { **on** | **off** } [ **,** **References** [ **,** *Name* ]] **)**  \
-> **componente #pragma (minrebuild,** { **on** | **off** } **)**  \
-> **componente #pragma (MinTypeInfo,** { **on** | **off** } **)**
+> **componente #pragma (navegador,** { **on** \| **off** } \[ **,** **References** \[ **,** *Name* ]] **)** \
+> **componente #pragma (minrebuild,** { **on** \| **off** } **)** \
+> **componente #pragma (MinTypeInfo,** { **on** \| **off** } **)**
 
 ## <a name="remarks"></a>Comentários
 
@@ -42,7 +42,7 @@ interrompe a coleta de informações de navegação pelo compilador.
 > [!NOTE]
 > Para ativar a coleta de informações de procura com este pragma, [as informações de procura devem ser habilitadas primeiro](../build/reference/building-browse-information-files-overview.md).
 
-A opção References pode ser usada com ou sem o argumento *Name* . O uso de **referências** sem *nome* ativa ou desativa a coleta de referências (outras informações de procura continuam sendo coletadas, no entanto). Por exemplo:
+A opção **References** pode ser usada com ou sem o argumento *Name* . O uso de **referências** sem *nome* ativa ou desativa a coleta de referências (outras informações de procura continuam sendo coletadas, no entanto). Por exemplo:
 
 ```cpp
 #pragma component(browser, off, references)
@@ -72,7 +72,7 @@ Para impedir que o pré-processador expanda o *nome* (como expandir nulo para 0)
 
 ### <a name="minimal-rebuild"></a>Recompilação mínima
 
-O recurso preterido [/GM (habilitar recompilação mínima)](../build/reference/gm-enable-minimal-rebuild.md) requer que o compilador crie C++ e armazene informações de dependência de classe, que ocupam espaço em disco. Para economizar espaço em disco, você pode `#pragma component( minrebuild, off )` usar sempre que não precisar coletar informações de dependência, por exemplo, em arquivos de cabeçalho inalterados. Inserir `#pragma component( minrebuild, on )` depois de alterar as classes para ativar novamente a coleção de dependências.
+O recurso preterido [/GM (habilitar recompilação mínima)](../build/reference/gm-enable-minimal-rebuild.md) requer que o compilador crie e armazene informações de dependência de classe C++, que ocupam espaço em disco. Para economizar espaço em disco, você pode usar `#pragma component( minrebuild, off )` sempre que não precisar coletar informações de dependência, por exemplo, em arquivos de cabeçalho inalterados. Inserir `#pragma component( minrebuild, on )` depois de alterar as classes para ativar novamente a coleção de dependências.
 
 ### <a name="reduce-type-information"></a>Reduzir informações de tipo
 
@@ -82,8 +82,8 @@ A `mintypeinfo` opção reduz as informações de depuração para a região esp
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information
 ```
 
-Para obter mais informações, consulte a opção de compilador [/GM (Enable minima REBUILD)](../build/reference/gm-enable-minimal-rebuild.md) .
+Para obter mais informações, consulte a opção de compilador [/GM (Enable minima REBUILD)](../build/reference/gm-enable-minimal-rebuild.md)  .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas Pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

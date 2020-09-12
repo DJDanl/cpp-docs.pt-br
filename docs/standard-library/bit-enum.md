@@ -6,18 +6,18 @@ f1_keywords:
 - bit/std::endian
 helpviewer_keywords:
 - std::endian
-ms.openlocfilehash: 78df181e20d0e5d72508bd0fc86118528a312d6b
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: b535bc009fbdc0b047444a6bc2ca36eed7a6d1cb
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194530"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040074"
 ---
 # <a name="endian-enum"></a>Enumeração endian
 
 Indica a endian de todos os tipos escalares.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 ```cpp
 enum class endian {
@@ -44,7 +44,7 @@ Todos os tipos escalares nativos são little-endian para as plataformas que Micr
 
 **Namespace:** std
 
-`/std:c++latest` é necessário
+[/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) é necessário.
 
 ## <a name="see-also"></a>Confira também
 

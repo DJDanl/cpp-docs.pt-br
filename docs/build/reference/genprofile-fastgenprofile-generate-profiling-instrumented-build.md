@@ -10,12 +10,12 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: 19ddf56d92cc2d8fbbfaf635c8e1602443e35b5b
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: a0d1678cd400801f4cb809ec3e93d333fbc6416a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825777"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041192"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE,/FASTGENPROFILE (gerar criação de perfil instrumentada de criação)
 
@@ -23,12 +23,12 @@ Especifica a geração de um arquivo. pgd pelo vinculador para dar suporte à ot
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ |**NOEXACT**exexactly Exact] | **EXACT** **MEMMAX =**_#_|**MEMMIN =**_#_| [**caminho**|**nopath** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}] \
-> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ |**NOEXACT**exexactly Exact] | **EXACT** **MEMMAX =**_#_|**MEMMIN =**_#_| [**caminho**|**nopath** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]
+> **/GENPROFILE** \[ **:**{ \[ **COUNTER32** \| **COUNTER64**] \| \[ **EXACT** \| **exexact**] \| **MEMMAX =** _#_ \| **MEMMIN =** _#_ \| \[ **caminho** \| **nopath**] \| \[ **TRACKEH** \| **NOTRACKEH** ] \| **PGD =**_filename_}] \
+> **/FASTGENPROFILE** \[ **:**{ \[ **COUNTER32** \| **COUNTER64**] \| \[ **exactly** \| **Exact**] \| **MEMMAX =** _#_ \| **MEMMIN =** _#_ \| [**caminho** \| **nopath** ] \| \[ **TRACKEH** \| **NOTRACKEH** ] \| **PGD =**_filename_}]
 
 ### <a name="arguments"></a>Argumentos
 
-Qualquer um dos argumentos a seguir pode ser especificado para **/GENPROFILE** ou **/FASTGENPROFILE**. Os argumentos listados aqui separados por um caractere**|** de pipe () são mutuamente exclusivos. Use um caractere de vírgula (**,**) para separar as opções.
+Qualquer um dos argumentos a seguir pode ser especificado para **/GENPROFILE** ou **/FASTGENPROFILE**. Os argumentos listados aqui separados por um caractere de pipe ( **|** ) são mutuamente exclusivos. Use um caractere de vírgula (**,**) para separar as opções.
 
 **COUNTER32** &#124; **COUNTER64**<br/>
 Use **COUNTER32** para especificar o uso de contadores de investigação de 32 bits e **COUNTER64** para especificar contadores de investigação de 64 bits. Quando você especifica **/GENPROFILE**, o padrão é **COUNTER64**. Quando você especifica **/FASTGENPROFILE**, o padrão é **COUNTER32**.
@@ -36,16 +36,16 @@ Use **COUNTER32** para especificar o uso de contadores de investigação de 32 b
 **Exato** &#124; **noexact**<br/>
 Use **Exact** para especificar incrementos intercadeados com segurança de thread para investigações. **Noexact** especifica operações de incremento desprotegidas para investigações. O padrão é **noexact**.
 
-**MEMMAX**=*Valor*de MEMMAX,*valor* de **MEMMIN**=<br/>
+**MEMMAX** = *valor*, **MEMMIN** = *valor* MEMMIN<br/>
 Use **MEMMAX** e **MEMMIN** para especificar os tamanhos máximo e mínimo de reserva para dados de treinamento na memória. O valor é a quantidade de memória a ser reservada em bytes. Por padrão, esses valores são determinados por um heurístico interno.
 
-**Caminho** &#124; **nopath** <br/>
-Use **path** para especificar um conjunto separado de contadores PGO para cada caminho exclusivo para uma função. Use **nopath** para especificar apenas um conjunto de contadores para cada função. Quando você especifica **/GENPROFILE**, o padrão é **caminho** . Quando você especifica **/FASTGENPROFILE**, o padrão é **nopath** .
+**Caminho**  &#124; **nopath** <br/>
+Use **path**  para especificar um conjunto separado de contadores PGO para cada caminho exclusivo para uma função. Use **nopath**  para especificar apenas um conjunto de contadores para cada função. Quando você especifica **/GENPROFILE**, o padrão é **caminho** . Quando você especifica **/FASTGENPROFILE**, o padrão é **nopath** .
 
-**TRACKEH** &#124; **NOTRACKEH** <br/>
-Especifica se os contadores extras devem ser usados para manter uma contagem precisa quando as exceções são lançadas durante o treinamento. Use **TRACKEH** para especificar contadores extras para uma contagem exata. Use **NOTRACKEH** para especificar contadores únicos para código que não usa manipulação de exceção ou que não encontre exceções em seus cenários de treinamento.  Quando você especifica **/GENPROFILE**, o padrão é **TRACKEH** . Quando você especifica **/FASTGENPROFILE**, o padrão é **NOTRACKEH** .
+**TRACKEH**  &#124; **NOTRACKEH** <br/>
+Especifica se os contadores extras devem ser usados para manter uma contagem precisa quando as exceções são lançadas durante o treinamento. Use **TRACKEH**  para especificar contadores extras para uma contagem exata. Use **NOTRACKEH**  para especificar contadores únicos para código que não usa manipulação de exceção ou que não encontre exceções em seus cenários de treinamento.  Quando você especifica **/GENPROFILE**, o padrão é **TRACKEH** . Quando você especifica **/FASTGENPROFILE**, o padrão é **NOTRACKEH** .
 
-**PGD**=*Nome de arquivo* de PGD<br/>
+**PGD** = *nome do arquivo*<br/>
 Especifica um nome de arquivo base para o arquivo. pgd. Por padrão, o vinculador usa o nome do arquivo de imagem executável de base com uma extensão. pgd.
 
 ## <a name="remarks"></a>Comentários
@@ -60,7 +60,7 @@ Você também deve especificar **/LTCG** ao especificar **/GENPROFILE** ou **/FA
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedade da**linha de comando** do**vinculador** > de **Propriedades** > de configuração.
+1. Selecione a **Configuration Properties**  >  página de propriedade da linha de comando do**vinculador**de propriedades de configuração  >  **Command Line** .
 
 1. Insira as opções e os argumentos **/GENPROFILE** ou **/FASTGENPROFILE** na caixa **Opções adicionais** . Escolha **OK** para salvar suas alterações.
 
@@ -71,5 +71,5 @@ Você também deve especificar **/LTCG** ao especificar **/GENPROFILE** ou **/FA
 ## <a name="see-also"></a>Confira também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções de vinculador MSVC](linker-options.md)<br/>
-[/LTCG (geração de código do tempo de vinculação)](ltcg-link-time-code-generation.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)<br/>
+[/LTCG (geração de código de tempo de vinculação)](ltcg-link-time-code-generation.md)<br/>

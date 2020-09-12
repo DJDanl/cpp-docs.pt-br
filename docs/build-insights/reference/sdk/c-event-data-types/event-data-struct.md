@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ccba320a8bb9279b874fae2484c71af913253148
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 468fc30d337e5cfc5ab90f7558904fc90588c3df
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229916"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041816"
 ---
 # <a name="event_data-structure"></a>Estrutura de EVENT_DATA
 
@@ -58,7 +58,7 @@ typedef struct EVENT_DATA_TAG
 
 ## <a name="members"></a>Membros
 
-|  |  |
+| Nome | Descrição |
 |--|--|
 | `EventId` | Um número que identifica o evento. Para obter uma lista de identificadores de eventos, consulte [EVENT_ID](event-id-enum.md). |
 | `EventInstanceId` | Um número que identifica exclusivamente o evento atual dentro de um rastreamento. Esse valor não é alterado ao analisar ou refazer o log do mesmo rastreamento várias vezes. Use esse campo para identificar o mesmo evento em várias análises ou o novo registro em log passa pelo mesmo rastreamento. |
@@ -79,11 +79,11 @@ typedef struct EVENT_DATA_TAG
 
 ## <a name="remarks"></a>Comentários
 
-Muitos campos no `EVENT_DATA` contêm contagens em escala. As informações de Build do C++ usam o contador de desempenho da janela como uma fonte de tiques. Uma contagem em escala deve ser usada com o `TickFrequency` campo para convertê-la em uma unidade de tempo apropriada, como segundos. Consulte o exemplo abaixo para executar essa conversão. `EVENT_DATA`Não contém um campo para a contagem de tiques regulares de uma atividade. Para obter esse valor, subtraia `StartTimestamp` de `StopTimestamp` . `EVENT_DATA`é uma estrutura que deve ser usada por usuários da API C. Para usuários da API do C++, as classes como o [evento](../cpp-event-data-types/event.md) fazem conversões de tempo automaticamente.
+Muitos campos no `EVENT_DATA` contêm contagens em escala. As informações de Build do C++ usam o contador de desempenho da janela como uma fonte de tiques. Uma contagem em escala deve ser usada com o `TickFrequency` campo para convertê-la em uma unidade de tempo apropriada, como segundos. Consulte o exemplo abaixo para executar essa conversão. `EVENT_DATA` Não contém um campo para a contagem de tiques regulares de uma atividade. Para obter esse valor, subtraia `StartTimestamp` de `StopTimestamp` . `EVENT_DATA` é uma estrutura que deve ser usada por usuários da API C. Para usuários da API do C++, as classes como o [evento](../cpp-event-data-types/event.md) fazem conversões de tempo automaticamente.
 
 O valor do `EVENT_DATA` `Data` campo depende do valor de seu `EventId` campo. O valor de `Data` é descrito na tabela a seguir. Alguns identificadores de entidade podem estar ausentes na tabela a seguir. Nesse caso, o `Data` campo é definido como **`nullptr`** ou zero.
 
-| `EventId` valor | Tipo apontado por`Data` |
+| `EventId` valor | Tipo apontado por `Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |

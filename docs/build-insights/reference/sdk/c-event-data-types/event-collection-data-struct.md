@@ -1,6 +1,6 @@
 ---
-title: EVENT_COLLECTION_DATA estrutura
-description: O C++ Build Insights SDK EVENT_COLLECTION_DATA referência de estrutura.
+title: Estrutura de EVENT_COLLECTION_DATA
+description: A referência de estrutura do SDK do insights de compilação do C++ EVENT_COLLECTION_DATA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 88ba39ede8c86f47c2e6458332ae005eddc06fda
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58be46d31af154bfe7ecef5c440092eaafdcbb0f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325686"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039593"
 ---
-# <a name="event_collection_data-structure"></a>EVENT_COLLECTION_DATA estrutura
+# <a name="event_collection_data-structure"></a>Estrutura de EVENT_COLLECTION_DATA
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A `EVENT_COLLECTION_DATA` estrutura descreve uma série de elementos [EVENT_DATA.](event-data-struct.md)
+A `EVENT_COLLECTION_DATA` estrutura descreve uma matriz de elementos de [EVENT_DATA](event-data-struct.md) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,9 +40,9 @@ typedef struct EVENT_COLLECTION_DATA_TAG
 
 ## <a name="members"></a>Membros
 
-|  |  |
+| Nome | Descrição |
 |--|--|
-| `Count` | O número `EVENT_DATA` de elementos na matriz. |
-| `Elements` | Ponteiro para `EVENT_DATA` o primeiro elemento na matriz. |
+| `Count` | O número de `EVENT_DATA` elementos na matriz. |
+| `Elements` | Ponteiro para o primeiro `EVENT_DATA` elemento na matriz. |
 
 ::: moniker-end

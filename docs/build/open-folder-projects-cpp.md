@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d9f59817a499f4d529363c88adc57154268c0bc
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229799"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039580"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Suporte para Open Folder para sistemas de build do C++ no Visual Studio
 
@@ -31,7 +31,7 @@ O CMake é integrado no IDE do Visual Studio como um componente da carga de trab
 
 Para usar o IDE do Visual Studio com um sistema de compilação ou conjunto de ferramentas de compilador que não tem suporte direto no menu principal, selecione **arquivo | Abrir | Pasta** ou pressione **Ctrl + Shift + Alt + O**. Navegue até a pasta que contém os arquivos de código-fonte. Para compilar o projeto, configurar o IntelliSense e definir parâmetros de depuração, você adiciona três arquivos JSON:
 
-| | |
+| Arquivo | Descrição |
 |-|-|
 |CppProperties.json|Especifica informações de configuração personalizada para navegação. Crie esse arquivo, se necessário, na pasta raiz do projeto. (Não usado em projetos do CMake.)|
 |tasks.vs.json|Especifique comandos de compilação personalizados. Acessados por meio do item de menu de contexto do **Gerenciador de Soluções**, **Configurar tarefas**.|
@@ -173,7 +173,7 @@ Você pode definir muitos tipos de tarefas. O exemplo a seguir mostra um *tasks.
 }
 ```
 
-Depois *de salvartasks.vs.jsem*, você pode clicar com o botão direito do mouse em qualquer arquivo *. cpp* na pasta, escolher **Echo filename** no menu de contexto e ver o nome do arquivo exibido na janela de saída.
+Depois * de salvartasks.vs.jsem*, você pode clicar com o botão direito do mouse em qualquer arquivo *. cpp* na pasta, escolher **Echo filename** no menu de contexto e ver o nome do arquivo exibido na janela de saída.
 
 Para obter mais informações, confira [Referência de esquema de Tasks.vs.json](tasks-vs-json-schema-reference-cpp.md).
 

@@ -1,6 +1,6 @@
 ---
-title: TRACING_SESSION_STATISTICS estrutura
-description: O C++ Build Insights SDK TRACING_SESSION_OPTIONS referência de estrutura.
+title: Estrutura de TRACING_SESSION_STATISTICS
+description: A referência de estrutura do SDK do insights de compilação do C++ TRACING_SESSION_OPTIONS.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 96cff3a231fd515ec1c52a048b8350a63ba46a39
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5f6126fb469dc13b814b91942fe9f7bc480ba3f1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323376"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041179"
 ---
-# <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS estrutura
+# <a name="tracing_session_statistics-structure"></a>Estrutura de TRACING_SESSION_STATISTICS
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A `TRACING_SESSION_STATISTICS` estrutura descreve estatísticas de um vestígio coletado. Seus campos são definidos ao parar uma sessão de rastreamento.
+A `TRACING_SESSION_STATISTICS` estrutura descreve as estatísticas em um rastreamento que foi coletado. Seus campos são definidos ao interromper uma sessão de rastreamento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,16 +42,16 @@ typedef struct TRACING_SESSION_STATISTICS_TAG
 
 ## <a name="members"></a>Membros
 
-|  |  |
+| Nome | Descrição |
 |--|--|
-| `MSVCEventsLost` | O número de eventos de MSVC que foram descartados. |
+| `MSVCEventsLost` | O número de eventos MSVC que foram descartados. |
 | `MSVCBuffersLost` | O número de buffers de eventos MSVC que foram descartados. |
 | `SystemEventsLost` | O número de eventos do sistema que foram descartados. |
 | `SystemBuffersLost` | O número de buffers de eventos do sistema que foram descartados. |
 
 ## <a name="remarks"></a>Comentários
 
-Esta estrutura é preenchida ao chamar as seguintes funções:
+Essa estrutura é populada ao chamar as seguintes funções:
 
 - [StopTracingSession](../functions/stop-tracing-session.md)
 - [StopTracingSessionA](../functions/stop-tracing-session-a.md)

@@ -1,6 +1,6 @@
 ---
 title: RELOG_RETENTION_SYSTEM_EVENT_FLAGS constantes
-description: O C++ Build Insights SDK RELOG_RETENTION_SYSTEM_EVENT_FLAGS referência de constantes.
+description: O SDK de informações de compilação do C++ RELOG_RETENTION_SYSTEM_EVENT_FLAGS referência de constantes.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7110f809a819357b31951c203c1fa6ac9fb9f42e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5444c1a6b8799b1de8eea228211a5f2d6de638f8
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323464"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041400"
 ---
 # <a name="relog_retention_system_event_flags-constants"></a>RELOG_RETENTION_SYSTEM_EVENT_FLAGS constantes
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-As `RELOG_RETENTION_SYSTEM_EVENT_FLAGS` constantes são usadas para descrever quais eventos do sistema manter em um traço relocou. Use-os para inicializar o `SystemEventsRetentionFlags` campo da [estrutura RELOG_DESCRIPTOR.](relog-descriptor-struct.md)
+As `RELOG_RETENTION_SYSTEM_EVENT_FLAGS` constantes são usadas para descrever quais eventos do sistema devem ser mantidos em um rastreamento reregistrado. Use-os para inicializar o campo da estrutura de [RELOG_DESCRIPTOR](relog-descriptor-struct.md) `SystemEventsRetentionFlags` .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,10 +39,10 @@ static const unsigned long long
 
 ## <a name="members"></a>Membros
 
-|  |  |
+| Nome | Descrição |
 |--|--|
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Mantenha os eventos do sistema de amostra da CPU em um rastreamento relocou. |
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | Mantenha todos os eventos do sistema em um rastro relogado. |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Mantenha os eventos do sistema de exemplo da CPU em um rastreamento reregistrado. |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | Manter todos os eventos do sistema em um rastreamento reregistrado. |
 
 ## <a name="remarks"></a>Comentários
 

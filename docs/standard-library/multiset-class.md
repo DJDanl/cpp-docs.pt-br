@@ -1,6 +1,7 @@
 ---
 title: Classe multiset
-ms.date: 11/04/2016
+description: Referência de API para a classe STL (biblioteca de modelos padrão) C++ `multiset` , que é usada para o armazenamento e a recuperação de dados de uma coleção na qual os valores dos elementos contidos não precisam ser exclusivos e nos quais servem como valores de chave de acordo com os quais os dados são ordenados automaticamente.
+ms.date: 9/9/2020
 f1_keywords:
 - set/std::multiset
 - set/std::multiset::allocator_type
@@ -22,6 +23,7 @@ f1_keywords:
 - set/std::multiset::cbegin
 - set/std::multiset::cend
 - set/std::multiset::clear
+- set/std::multiset::contains
 - set/std::multiset::count
 - set/std::multiset::crbegin
 - set/std::multiset::crend
@@ -64,6 +66,7 @@ helpviewer_keywords:
 - std::multiset [C++], cbegin
 - std::multiset [C++], cend
 - std::multiset [C++], clear
+- std::multiset [C++], contains
 - std::multiset [C++], count
 - std::multiset [C++], crbegin
 - std::multiset [C++], crend
@@ -86,16 +89,16 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 69a884a2b60e7838154586dd0dcc8c1d54681b53
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e857a4f6369b9aa939b5dcba17e02efaf81600b0
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561161"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040945"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
-A classe multiset da biblioteca padrão C++ é usada para o armazenamento e a recuperação de dados de uma coleção na qual os valores dos elementos contidos não precisam ser exclusivos e na qual eles atuam como valores de chave, de acordo com os quais os dados são automaticamente ordenados. O valor de chave de um elemento em um multiset não pode ser alterado diretamente. Em vez disso, os valores antigos devem ser excluídos e os elementos com novos valores inseridos.
+A classe multiset da biblioteca padrão C++ é usada para o armazenamento e a recuperação de dados de uma coleção na qual os valores dos elementos contidos não precisam ser exclusivos e na qual eles atuam como valores de chave, de acordo com os quais os dados são automaticamente ordenados. O valor de chave de um elemento em um `multiset` pode não ser alterado diretamente. Em vez disso, os valores antigos devem ser excluídos e os elementos com novos valores inseridos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -107,19 +110,19 @@ class multiset
 ### <a name="parameters"></a>Parâmetros
 
 *Chaves*\
-O tipo de dados do elemento a ser armazenado no multiset.
+O tipo de dados do elemento a ser armazenado no `multiset`.
 
 *Comparar*\
-O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multiset. O predicado binário **less** \<Key> é o valor padrão.
+O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no `multiset` . O predicado binário **less** \<Key> é o valor padrão.
 
-No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
+No C++ 14, você pode habilitar a pesquisa heterogênea especificando o `std::less<>` `std::greater<>` predicado ou que não tem nenhum parâmetro de tipo. Consulte [pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers) para obter mais informações.
 
 *Alocador*\
-O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do multiset da memória. O valor padrão é `allocator<Key>`.
+O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a `multiset` alocação e a desalocação da memória do. O valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
 
-A classe multiset da biblioteca padrão C++ é:
+A classe de biblioteca padrão C++ `multiset` é:
 
 - Um contêiner associativo, que é um contêiner de tamanho variável que oferece suporte à recuperação eficiente dos valores de elemento com base em um valor de chave associado.
 
@@ -127,21 +130,21 @@ A classe multiset da biblioteca padrão C++ é:
 
 - Classificada, pois seus elementos são ordenados por valores de chave no contêiner, de acordo com uma função de comparação especificada.
 
-- Múltipla no sentido de que seus elementos não precisam ter chaves exclusivas para que um valor de chave possa ter muitos valores de elemento associados a ele.
+- Vários no sentido de que seus elementos não precisam ter chaves exclusivas, de modo que um valor de chave possa ter muitos valores de elemento associados a ele.
 
 - Um contêiner associativo simples, pois seus valores de elemento são seus valores de chave.
 
 - Um modelo de classe, porque a funcionalidade que ele fornece é genérica e, portanto, independente do tipo específico de dados contido como elementos. O tipo de dados a ser usado é especificado como um parâmetro no modelo de classe juntamente com a função de comparação e o alocador.
 
-O iterador fornecido pela classe multiset é um iterador bidirecional, mas as funções membro de classe [insert](#insert) e [multiset](#multiset) têm versões que usam como parâmetros de modelo um iterador de entrada mais fraco, cujos requisitos de funcionalidade são mais minimalistas do que os garantidos pela classe de iteradores bidirecionais. Os conceitos de iterador diferente formam uma família relacionada por refinamentos em sua funcionalidade. Cada conceito de iterador tem seu próprio conjunto de requisitos e os algoritmos que funcionam com eles devem limitar suas suposições para os requisitos fornecidos por esse tipo de iterador. Pode ser pressuposto que um iterador de entrada possa ser desreferenciado para fazer referência a algum objeto e que possa ser incrementado para o próximo iterador na sequência. Esse é um conjunto mínimo de funcionalidade, mas é suficiente para poder expressar de forma significativa um intervalo de iteradores [ `First`, `Last`) no contexto de funções membro da classe.
+O iterador fornecido pela `multiset` classe é um iterador bidirecional, mas as funções de membro de classe [Insert](#insert) e [MultiSet](#multiset) têm versões que tomam como parâmetros de modelo um iterador de entrada mais fraco, cujos requisitos de funcionalidade são mais mínimos que aqueles garantidos pela classe de iteradores bidirecionais. Os conceitos de iterador diferente formam uma família relacionada por refinamentos em sua funcionalidade. Cada conceito de iterador tem seu próprio conjunto de requisitos e os algoritmos que funcionam com eles devem limitar suas suposições para os requisitos fornecidos por esse tipo de iterador. Pode ser pressuposto que um iterador de entrada possa ser desreferenciado para fazer referência a algum objeto e que possa ser incrementado para o próximo iterador na sequência. Esse é um conjunto mínimo de funcionalidade, mas é suficiente para poder expressar de forma significativa um intervalo de iteradores [ `First`, `Last`) no contexto de funções membro da classe.
 
-A escolha do tipo de contêiner deve se basear, de modo geral, no tipo de pesquisa e inserção exigido pelo aplicativo. Os contêineres associativos são otimizados para as operações de pesquisa, inserção e remoção. As funções membro que oferecem suporte explicitamente a essas operações são eficientes, executando-as em um tempo que está na média proporcional para o logaritmo do número de elementos no contêiner. A inserção de elementos não invalida iteradores e a remoção de elementos invalida apenas os iteradores que apontavam especificamente os elementos removidos.
+A escolha do tipo de contêiner deve se basear, de modo geral, no tipo de pesquisa e inserção exigido pelo aplicativo. Os contêineres associativos são otimizados para as operações de pesquisa, inserção e remoção. As funções de membro que dão suporte explicitamente a essas operações são eficientes, fazendo-as em uma hora que está em média proporcional ao logaritmo do número de elementos no contêiner. A inserção de elementos invalida nenhum iterador e a remoção de elementos invalida apenas os iteradores que tenham apontado nos elementos removidos.
 
-O multiset deve ser o contêiner associativo escolhido quando as condições que associam os valores às respectivas chaves forem atendidas pelo aplicativo. Os elementos de um multiset podem ser múltiplos e atuar como suas próprias chaves de classificação, de modo que as chaves não são exclusivas. Um modelo para esse tipo de estrutura é uma lista ordenada de palavras, por exemplo, na qual as palavras podem ocorrer mais de uma vez. Não tendo sido permitidas as várias ocorrências das palavras, um conjunto seria a estrutura de contêiner apropriada. Se as definições exclusivas fossem anexadas como valores à lista de palavras-chave exclusivas, um mapa seria uma estrutura apropriada para conter esses dados. Se, em vez disso, as definições não fossem exclusivas, um multimapa seria o contêiner ideal.
+O `multiset` deve ser o contêiner associativo de escolha quando as condições que associam os valores com suas chaves forem cumpridas pelo aplicativo. Os elementos de a `multiset` podem ser múltiplos e servir como suas próprias chaves de classificação, portanto, as chaves não são exclusivas. Um modelo para esse tipo de estrutura é uma lista ordenada de palavras, por exemplo, na qual as palavras podem ocorrer mais de uma vez. Não tendo sido permitidas as várias ocorrências das palavras, um conjunto seria a estrutura de contêiner apropriada. Se as definições exclusivas fossem anexadas como valores à lista de palavras-chave exclusivas, um mapa seria uma estrutura apropriada para conter esses dados. Se, em vez disso, as definições não fossem exclusivas, um `multimap` seria o contêiner de escolha.
 
-O multiconjunto ordena a seqüência que ele controla chamando um objeto de função armazenado do tipo *Compare*. Esse objeto armazenado é uma função de comparação que pode ser acessada chamando a função membro [key_comp](#key_comp). De modo geral, os elementos precisam ser simplesmente menores que os comparáveis para estabelecer essa ordem: desse modo, considerando dois elementos, pode ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão. Um predicado binário *f*( *x*, *y*) é um objeto de função que tem dois objetos de argumento *x* e *y* e um valor de retorno de **`true`** ou **`false`** . Uma ordenação imposta em um conjunto será uma ordenação fraca restrita se o predicado binário for irreflexivo, antissimétrico e transitivo e se a equivalência for transitiva, em que dois objetos x e y são definidos para serem equivalentes quando ambos *f*( *x,y*) e *f*( *y,x*) são falsos. Se a condição mais forte de igualdade entre as chaves substituir essa equivalência, a ordenação será total (no sentido de que todos os elementos serão ordenados um em relação ao outro) e as chaves correspondentes não poderão ser diferenciadas uma da outra.
+Os `multiset` pedidos que a sequência controla ao chamar um objeto de função armazenado do tipo *Compare*. Esse objeto armazenado é uma função de comparação que pode ser acessada chamando a função membro [key_comp](#key_comp). Em geral, os elementos precisam ser meramente menores que comparáveis para estabelecer essa ordem: de forma que, considerando quaisquer dois elementos, pode ser determinado que eles são equivalentes (no sentido de que nenhum é menor do que o outro) ou que um é menor do que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão. Um predicado binário *f*(*x*, *y*) é um objeto de função que tem dois objetos de argumento *x* e *y* e um valor de retorno de **`true`** ou **`false`** . Uma ordenação imposta em um conjunto é uma ordenação fraca estrita se o predicado binário for irreflexive, antisimétrico e transitiva e se a equivalência for transitiva, onde dois objetos x e y são definidos como equivalentes quando *f*(*x, y*) e *f*(*y, x*) forem false. Se a condição mais forte de igualdade entre as chaves substituir essa equivalência, a ordenação será total (no sentido de que todos os elementos serão ordenados um em relação ao outro) e as chaves correspondentes não poderão ser diferenciadas uma da outra.
 
-No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
+No C++ 14, você pode habilitar a pesquisa heterogênea especificando o `std::less<>` `std::greater<>` predicado ou que não tem nenhum parâmetro de tipo. Consulte [pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers) para obter mais informações.
 
 ### <a name="constructors"></a>Construtores
 
@@ -177,9 +180,10 @@ No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predica
 |[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento no `multiset`.|
 |[cend](#cend)|Retorna um iterador const que trata o local após o último elemento em um `multiset`.|
 |[formatação](#clear)|Apaga todos os elementos de um `multiset`.|
+|[contém](#contains)<sup>c++ 20</sup>|Verifique se há um elemento com a chave especificada no `multiset` .|
 |[contagem](#count)|Retorna o número de elementos em um `multiset` cuja chave corresponde à chave especificada como um parâmetro.|
-|[crbegin](#crbegin)|Retorna um iterador const que trata o primeiro elemento em um conjunto invertido.|
-|[crend](#crend)|Retorna um iterador const que trata o local após o último elemento em um conjunto invertido.|
+|[crbegin](#crbegin)|Retorna um iterador const que trata o primeiro elemento em um `multiset` invertido.|
+|[crend](#crend)|Retorna um iterador const que trata o local após o último elemento em um `multiset` invertido.|
 |[emplace](#emplace)|Insere um elemento construído adequadamente em um `multiset`.|
 |[emplace_hint](#emplace_hint)|Insere um elemento construído adequadamente em um `multiset`, com uma dica de posicionamento.|
 |[empty](#empty)|Testa se `multiset` está vazio.|
@@ -239,7 +243,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador bidirecional que trata do primeiro elemento no multiset ou do local que sucede um multiset vazio.
 
@@ -290,13 +294,13 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **`const`** iterador de acesso bidirecional que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()` ).
 
 ### <a name="remarks"></a>Comentários
 
-Com o valor de retorno `cbegin`, os elementos do intervalo não podem ser modificados.
+Com o valor de retorno de `cbegin` , os elementos no intervalo não podem ser modificados.
 
 Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` ser um contêiner modificável (não **`const`** ) de qualquer tipo que dê suporte a `begin()` e `cbegin()` .
 
@@ -316,7 +320,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **`const`** iterador de acesso bidirecional que aponta muito além do fim do intervalo.
 
@@ -384,7 +388,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-Um tipo de `const_iterator` não pode ser usado para modificar o valor de um elemento.
+Um tipo `const_iterator` não pode ser usado para modificar o valor de um elemento.
 
 ### <a name="example"></a>Exemplo
 
@@ -400,7 +404,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Comentários
 
-Um tipo de `const_pointer` não pode ser usado para modificar o valor de um elemento.
+Um tipo `const_pointer` não pode ser usado para modificar o valor de um elemento.
 
 Na maioria dos casos, um [iterador](#iterator) deve ser usado para acessar os elementos em um objeto multiset.
 
@@ -436,7 +440,7 @@ int main( )
         << Ref1 << "." << endl;
 
    // The following line would cause an error because the
-   // const_reference cannot be used to modify the multiset
+   // const_reference can't be used to modify the multiset
    // Ref1 = Ref1 + 5;
 }
 ```
@@ -455,11 +459,62 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-Um tipo `const_reverse_iterator` não pode modificar o valor de um elemento e é usado para iterar no multiset em ordem inversa.
+Um tipo `const_reverse_iterator` não pode modificar o valor de um elemento e é usado para iterar por meio de multiconjunto na ordem inversa.
 
 ### <a name="example"></a>Exemplo
 
 Veja o exemplo de [rend](#rend) para obter um exemplo de como declarar e usar o `const_reverse_iterator`.
+
+## <a name="multisetcontains"></a><a name="contains"></a> multiconjunto:: contém
+
+Verifique se há um elemento com a chave especificada no `multiset` .
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*C*\
+Tipo da chave.
+
+*chaves*\
+O valor de chave do elemento a ser pesquisado.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` Se o elemento for encontrado no contêiner; `false` caso contrário.
+
+### <a name="remarks"></a>Comentários
+
+`contains()` é novo no C++ 20. Para usá-lo, especifique a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) .
+
+`template<class K> bool contains(const K& key) const` só participará da resolução de sobrecarga se `key_compare` for transparente. Consulte [pesquisa heterogênea em contêineres associativos](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) para obter mais informações.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+// Requires /std:c++latest
+#include <set>
+#include <iostream>
+
+int main()
+{
+    std::multiset<int> theMultiSet = {1, 2};
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theMultiSet.contains(2) << '\n';
+    std::cout << theMultiSet.contains(3) << '\n';
+    
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
 
 ## <a name="multisetcount"></a><a name="count"></a> multiconjunto:: contagem
 
@@ -474,7 +529,7 @@ size_type count(const Key& key) const;
 *chaves*\
 A chave dos elementos a serem correspondidos do multiset.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O número de elementos no multiset cuja chave de classificação corresponde à chave de parâmetro.
 
@@ -504,7 +559,7 @@ int main()
     ms1.insert(1);
     ms1.insert(2);
 
-    // Elements do not need to be unique in multiset,
+    // Elements don't need to be unique in multiset,
     // so duplicates are allowed and counted.
     i = ms1.count(1);
     cout << "The number of elements in ms1 with a sort key of 1 is: "
@@ -534,7 +589,7 @@ Retorna um iterador const que trata o primeiro elemento em um multiset invertido
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador bidirecional invertido const que trata do primeiro elemento em um multiset invertido ou que trata do que foi o último elemento do multiset não invertido.
 
@@ -542,7 +597,7 @@ Um iterador bidirecional invertido const que trata do primeiro elemento em um mu
 
 `crbegin` é usado com um multiset invertido, assim como begin é usado com um multiset.
 
-Com o valor retornado de `crbegin`, o objeto multiset não pode ser modificado.
+Com o valor de retorno de `crbegin` , o objeto multiconjunto não pode ser modificado.
 
 `crbegin` pode ser usado para iterar em um multiset no sentido reverso.
 
@@ -582,7 +637,7 @@ Retorna um iterador const que trata o local após o último elemento em um multi
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador bidirecional inverso const que trata da localização que vem após o último elemento em um multiset invertido (o local que precedeu o primeiro elemento no multiset não invertido).
 
@@ -590,7 +645,7 @@ Um iterador bidirecional inverso const que trata da localização que vem após 
 
 `crend` é usado com um multiset invertido, assim como [end](#end) é usado com um multiset.
 
-Com o valor retornado de `crend`, o objeto multiset não pode ser modificado.
+Com o valor de retorno de `crend` , o objeto multiconjunto não pode ser modificado.
 
 `crend` pode ser usado para testar se um iterador inverso alcançou o final de seu multiset.
 
@@ -632,7 +687,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
 
-Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte dos contêineres reversíveis, como um conjunto, a subtração entre iteradores só tem suporte dos iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como um vetor.
+Embora o `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte de contêineres reversível como Set, a subtração entre iteradores só tem suporte de iteradores de acesso aleatórios fornecidos por um contêiner de acesso aleatório, como o vetor.
 
 ### <a name="example"></a>Exemplo
 
@@ -663,7 +718,7 @@ int main( )
    df_typ10 = count( ms1_bIter, ms1_eIter, 10 );
    df_typ20 = count( ms1_bIter, ms1_eIter, 20 );
 
-   // The keys, and hence the elements, of a multiset are not unique
+   // The keys, and hence the elements, of a multiset aren't unique
    cout << "The number '5' occurs " << df_typ5
         << " times in multiset ms1.\n";
    cout << "The number '10' occurs " << df_typ10
@@ -706,7 +761,7 @@ iterator emplace(Args&&... args);
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no multiset.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador para o elemento recém-inserido.
 
@@ -714,7 +769,7 @@ Um iterador para o elemento recém-inserido.
 
 Nenhuma referência a elementos de contêiner é invalidada por essa função, mas ela pode invalidar todos os iteradores no contêiner.
 
-Durante o posicionamento, se uma exceção for lançada, o estado do contêiner não será modificado.
+Durante a emplacement, se uma exceção for lançada, o estado do contêiner não será modificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -776,7 +831,7 @@ Os argumentos encaminhados para construir um elemento a ser inserido no multiset
 *posição*\
 O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador para o elemento recém-inserido.
 
@@ -784,7 +839,7 @@ Um iterador para o elemento recém-inserido.
 
 Nenhuma referência a elementos de contêiner é invalidada por essa função, mas ela pode invalidar todos os iteradores no contêiner.
 
-Durante o posicionamento, se uma exceção for lançada, o estado do contêiner não será modificado.
+Durante a emplacement, se uma exceção for lançada, o estado do contêiner não será modificado.
 
 Para obter um exemplo de código, consulte [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
@@ -796,7 +851,7 @@ Testa se um multiset está vazio.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 **`true`** Se o MultiSet estiver vazio; **`false`** se MultiSet não estiver vazio.
 
@@ -808,7 +863,7 @@ bool empty() const;
 #include <set>
 #include <iostream>
 
-int main( )
+int main()
 {
    using namespace std;
    multiset <int> ms1, ms2;
@@ -841,7 +896,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O iterador que ultrapassa o fim. Se o multiconjunto estiver vazio, então, `multiset::end() == multiset::begin()`.
 
@@ -868,7 +923,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um par de iteradores em que o primeiro é o [lower_bound](#lower_bound) da chave e o segundo é o [upper_bound](#upper_bound) da chave.
 
@@ -962,7 +1017,7 @@ A posição logo após o último elemento a ser removido.
 *Chaves*\
 O valor de chave dos elementos a serem removidos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Para as duas primeiras funções membro, um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou um elemento que será o final do multiset, se esse elemento não existir.
 
@@ -987,7 +1042,7 @@ const_iterator find(const Key& key) const;
 *chaves*\
 O valor da chave a ser comparado pela chave de classificação de um elemento do multiconjunto que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador que se refere ao local de um elemento com uma chave especificada ou o local após o último elemento no multiset (`multiset::end()`) se nenhuma correspondência for encontrada para a chave.
 
@@ -1066,7 +1121,7 @@ Retorna uma cópia do objeto alocador usado para construir o multiset.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O alocador usado pelo multiset.
 
@@ -1187,7 +1242,7 @@ Argumento da função de modelo que atende aos requisitos de um [iterador de ent
 *IList*\
 O [initializer_list](../standard-library/initializer-list.md) do qual copiar os elementos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 As funções do membro de inserir elemento único, (1) e (2), retornam um iterador para a posição em que o novo elemento foi inserido no multiset.
 
@@ -1317,7 +1372,7 @@ Recupera uma cópia do objeto de comparação usada para ordenar chaves em um mu
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Retorna o objeto de função que um multiset usa para ordenar seus elementos, que é o parâmetro de modelo `Compare`.
 
@@ -1331,7 +1386,7 @@ O objeto armazenado define a função membro:
 
 que retornará true se *x* preceder estritamente *y* na ordem de classificação.
 
-Observe que [key_compare](#key_compare) e [value_compare](#value_compare) são sinônimos do parâmetro de modelo `Compare`. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
+Tanto [key_compare](#key_compare) quanto [value_compare](#value_compare) são sinônimos para o parâmetro de modelo `Compare` . Ambos os tipos são fornecidos para as classes definidas e multiconjunto, onde são idênticos, para compatibilidade com as classes Map e Multimap, onde são distintas.
 
 ### <a name="example"></a>Exemplo
 
@@ -1435,7 +1490,7 @@ iterator lower_bound(const Key& key);
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um `iterator` ou `const_iterator` que aborda o local de um elemento em um multiconjunto que tem uma chave que é igual ou maior que a chave de argumento, ou que resolve o local com sucesso do último elemento no MultiSet, se nenhuma correspondência for encontrada para a chave.
 
@@ -1496,7 +1551,7 @@ Retorna o comprimento máximo do multiset.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O comprimento máximo possível do multiset.
 
@@ -1605,7 +1660,7 @@ O quarto construtor Especifica uma cópia do *direito*de multiconjunto.
 
 O quinto Construtor especifica uma cópia do multiconjunto movendo-se para a *direita*.
 
-O sexto, sétimo e oitavo construtores especificam um initializer_list da qual os elementos são copiados.
+Os construtores 6º, 7ª e oitavo especificam um initializer_list do qual copiar os elementos.
 
 Os próximos três construtores copiam o intervalo `[First, Last)` de um multiset com clareza crescente para especificar o tipo de função de comparação e do alocador.
 
@@ -1790,7 +1845,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador bidirecional invertido que trata do primeiro elemento em um multiset invertido ou que trata do que foi o último elemento do multiset não invertido.
 
@@ -1798,7 +1853,7 @@ Um iterador bidirecional invertido que trata do primeiro elemento em um multiset
 
 `rbegin` é usado com um multiset invertido, assim como rbegin é usado com um multiset.
 
-Se o valor retornado de `rbegin` for atribuído a `const_reverse_iterator`, o objeto multiset não poderá ser modificado. Se o valor retornado de `rbegin` for atribuído a `reverse_iterator`, o objeto multiset poderá ser modificado.
+Se o valor de retorno de `rbegin` for atribuído a um `const_reverse_iterator` , o objeto multiconjunto não poderá ser modificado. Se o valor retornado de `rbegin` for atribuído a `reverse_iterator`, o objeto multiset poderá ser modificado.
 
 `rbegin` pode ser usado para iterar em um multiset no sentido reverso.
 
@@ -1903,7 +1958,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador bidirecional inverso que trata da localização que vem após o último elemento em um multiset invertido (o local que precedeu o primeiro elemento no multiset não invertido).
 
@@ -1911,7 +1966,7 @@ Um iterador bidirecional inverso que trata da localização que vem após o últ
 
 `rend` é usado com um multiset invertido, assim como [end](#end) é usado com um multiset.
 
-Se o valor retornado de `rend` for atribuído a `const_reverse_iterator`, o objeto multiset não poderá ser modificado. Se o valor retornado de `rend` for atribuído a `reverse_iterator`, o objeto multiset poderá ser modificado.
+Se o valor de retorno de `rend` for atribuído a um `const_reverse_iterator` , o objeto multiconjunto não poderá ser modificado. Se o valor retornado de `rend` for atribuído a `reverse_iterator`, o objeto multiset poderá ser modificado.
 
 `rend` pode ser usado para testar se um iterador inverso alcançou o final de seu multiset.
 
@@ -1976,7 +2031,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-Um tipo `reverse_iterator` é usado para iterar pelo multiset em ordem inversa.
+Um tipo `reverse_iterator` é usado para iterar por meio de multiconjunto na ordem inversa.
 
 ### <a name="example"></a>Exemplo
 
@@ -1990,7 +2045,7 @@ Retorna o número de elementos no multiset.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O comprimento atual do multiset.
 
@@ -2118,7 +2173,7 @@ iterator upper_bound(const Key& key);
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **iterador** ou `const_iterator` que tratará a localização de um elemento em um multiset com uma chave, que é maior que a chave de argumento ou que tratará o local após o último elemento no multiset se nenhuma correspondência for encontrada para a chave.
 
@@ -2179,7 +2234,7 @@ Recupera uma cópia do objeto de comparação usada para ordenar valores de elem
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Retorna o objeto de função que um multiset usa para ordenar seus elementos, que é o parâmetro de modelo `Compare`.
 
@@ -2191,9 +2246,9 @@ O objeto armazenado define a função membro:
 
 **bool operator**( **const Key&**`_xVal`, **const Key&**`_yVal`);
 
-que retornará true se `_xVal` preceder e não for igual a `_yVal` na ordem de classificação.
+que retorna true se `_xVal` precede e não é igual a `_yVal` na ordem de classificação.
 
-Observe que [key_compare](#key_compare) e [value_compare](#value_compare) são sinônimos do parâmetro de modelo `Compare`. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
+Tanto [key_compare](#key_compare) quanto [value_compare](#value_compare) são sinônimos para o parâmetro de modelo `Compare` . Ambos os tipos são fornecidos para as classes definidas e multiconjunto, onde são idênticos, para compatibilidade com as classes Map e Multimap, onde são distintas.
 
 ### <a name="example"></a>Exemplo
 
@@ -2258,7 +2313,7 @@ typedef key_compare value_compare;
 
 `value_compare` é um sinônimo do parâmetro de modelo `Compare`.
 
-Observe que ambos os [key_compare](#key_compare) e `value_compare` são sinônimos para o parâmetro de modelo `Compare` . Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
+Ambos [key_compare](#key_compare) e `value_compare` são sinônimos para o parâmetro de modelo `Compare` . Ambos os tipos são fornecidos para as classes definidas e multiconjunto, onde são idênticos, para compatibilidade com as classes Map e Multimap, onde são distintas.
 
 Para obter mais informações sobre `Compare`, consulte a seção Comentários do tópico [Classe multiset](../standard-library/multiset-class.md).
 
@@ -2278,7 +2333,7 @@ typedef Key value_type;
 
 `value_type` é um sinônimo do parâmetro de modelo `Key`.
 
-Observe que ambos os [KEY_TYPE](#key_type) e `value_type` são sinônimos para o parâmetro de modelo `Key` . Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
+Ambos [KEY_TYPE](#key_type) e `value_type` são sinônimos para o parâmetro de modelo `Key` . Ambos os tipos são fornecidos para as classes definidas e multiconjunto, onde são idênticos, para compatibilidade com as classes Map e Multimap, onde são distintas.
 
 Para obter mais informações sobre `Key`, consulte a seção Comentários do tópico.
 

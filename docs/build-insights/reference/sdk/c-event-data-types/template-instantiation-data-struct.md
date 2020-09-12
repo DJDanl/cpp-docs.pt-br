@@ -1,6 +1,6 @@
 ---
-title: estrutura TEMPLATE_INSTANTIATION_DATA
-description: O C++ Build Insights SDK TEMPLATE_INSTANTIATION_DATA referência de estrutura.
+title: Estrutura de TEMPLATE_INSTANTIATION_DATA
+description: A referência de estrutura do SDK do insights de compilação do C++ TEMPLATE_INSTANTIATION_DATA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a38d19368e7c0a9912907f1da6e7a2e31ffe8d90
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15bbb25c3abac339201179e763bffd916dba0480
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325328"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040867"
 ---
-# <a name="template_instantiation_data-structure"></a>estrutura TEMPLATE_INSTANTIATION_DATA
+# <a name="template_instantiation_data-structure"></a>Estrutura de TEMPLATE_INSTANTIATION_DATA
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -41,14 +41,14 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 
 ## <a name="members"></a>Membros
 
-|  |  |
+| Nome | Descrição |
 |--|--|
-| `SpecializationSymbolKey` | A chave para o tipo de especialização do modelo. Esse valor é único dentro do traço que está sendo analisado. |
-| `PrimaryTemplateSymbolKey` | A chave para o tipo de modelo primário que foi especializado. Esse valor é único dentro do traço que está sendo analisado. |
-| `KindCode` | O tipo de instanciação do modelo. Para obter mais informações, consulte [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
+| `SpecializationSymbolKey` | A chave para o tipo da especialização do modelo. Esse valor é exclusivo dentro do rastreamento que está sendo analisado. |
+| `PrimaryTemplateSymbolKey` | A chave para o tipo de modelo primário que era especializado. Esse valor é exclusivo dentro do rastreamento que está sendo analisado. |
+| `KindCode` | O tipo da instanciação de modelo. Para obter mais informações, consulte [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
 
 ## <a name="remarks"></a>Comentários
 
-As chaves `TEMPLATE_INSTANTIATION_DATA` da estrutura são únicas dentro do traço que está sendo analisado. No entanto, duas teclas diferentes provenientes de passes front-end de compilador diferentes podem apontar para dois tipos idênticos. Ao `TEMPLATE_INSTANTIATION_DATA` consumir informações de vários passes front-end do compilador, use os eventos [SYMBOL_NAME](../event-table.md#symbol-name) para determinar se dois tipos são os mesmos. `SymbolName`eventos são emitidos no final de um passe front-end do compilador, depois de todas as instanciações do modelo terem ocorrido.
+As chaves na `TEMPLATE_INSTANTIATION_DATA` estrutura são exclusivas dentro do rastreamento que está sendo analisado. No entanto, duas chaves diferentes provenientes de diferentes passagens de front-end do compilador podem apontar para dois tipos idênticos. Ao consumir `TEMPLATE_INSTANTIATION_DATA` informações de vários passos de front-end do compilador, use os eventos [SYMBOL_NAME](../event-table.md#symbol-name) para determinar se dois tipos são os mesmos. `SymbolName` os eventos são emitidos no final de uma passagem de front-end do compilador, após a ocorrência de todas as instanciações de modelo.
 
 ::: moniker-end
